@@ -1,0 +1,123 @@
+{
+  "title": "3. Transportation by Wind",
+  "order": 159,
+  "blocks": [
+    {
+      "id": "pusppsu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Suspension</p>",
+            "<p>Fine dust carried thousands of kilometers.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Saltation</p>",
+            "<p>Sand-sized particles bounce along the ground.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Surface Creep</p>",
+            "<p>Large grains roll forward due to impact.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Saltation is the primary mechanism of wind transportation, accounting for up to 75 percent of the total sediment movement.",
+      "id": "y2kvbnv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Transport Mode",
+        "Particle Size Range",
+        "Movement Mechanism",
+        "Share of Total Transport"
+      ],
+      "rows": [
+        [
+          "Suspension",
+          "< 0.1 mm (Silt & Clay)",
+          "Carried high in turbulent air currents",
+          "5–15%"
+        ],
+        [
+          "Saltation",
+          "0.1 mm – 0.5 mm (Fine/Medium Sand)",
+          "Bounces along the surface in short hops",
+          "50–75%"
+        ],
+        [
+          "Surface Creep",
+          "> 0.5 mm (Coarse Sand & Gravel)",
+          "Rolls or slides along the ground by grain impact",
+          "7–25%"
+        ]
+      ],
+      "id": "3lbeb6d"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Modes of Transport",
+          "value": "3 Mechanisms",
+          "icon": "info"
+        },
+        {
+          "label": "Dominant Mechanism",
+          "value": "Saltation (50–75%)",
+          "icon": "check"
+        },
+        {
+          "label": "Suspension Particle Size",
+          "value": "< 0.1 mm",
+          "icon": "book"
+        },
+        {
+          "label": "Surface Creep Size",
+          "value": "> 0.5 mm",
+          "icon": "award"
+        }
+      ],
+      "id": "jagwvhz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently test the grain size ranges associated with each transport mode: Suspension (<0.1 mm), Saltation (0.1–0.5 mm), and Creep (>0.5 mm).",
+        "Mushroom rocks (pedestal rocks) form due to intense wind abrasion concentrated in the saltation zone, usually within 1 to 2 meters above the ground surface.",
+        "Loess deposits are massive wind-blown deposits formed entirely from fine silt particles transported via suspension over long distances."
+      ],
+      "id": "23asg2z"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Aeolian transportation occurs through three primary mechanisms: suspension, saltation, and surface creep (traction).",
+        "Saltation is the dominant mode of wind transportation, moving medium-sized sand grains (0.1–0.5 mm) in a series of low, bouncing leaps.",
+        "Suspension carries extremely fine particles like silt and clay (< 0.1 mm) high into the atmosphere, transporting them over thousands of kilometers.",
+        "Surface creep involves the rolling and sliding of coarse sand particles (> 0.5 mm) along the ground, driven primarily by the impact energy of saltating grains.",
+        "Wind transport velocity, surface roughness, vegetation cover, and soil moisture are the critical factors controlling wind erosion rates."
+      ],
+      "id": "j34vfpx"
+    }
+  ],
+  "enriched": true
+}

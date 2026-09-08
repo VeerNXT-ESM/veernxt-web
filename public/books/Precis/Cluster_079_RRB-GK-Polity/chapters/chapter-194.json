@@ -1,0 +1,131 @@
+{
+  "title": "Appointment and Service Conditions",
+  "order": 194,
+  "blocks": [
+    {
+      "id": "whin0ul",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Provision</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appointing Authority</p>",
+            "<p>President of India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Service Conditions</p>",
+            "<p>Determined by the President</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reappointment</p>",
+            "<p>Chairman not eligible for further employment under Government</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Protection</p>",
+            "<p>Service conditions cannot be varied to disadvantage</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The conditions of service of a member shall not be varied to his disadvantage after his appointment.",
+      "id": "zoydvt7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "UPSC Chairman / Member",
+        "SPSC Chairman / Member"
+      ],
+      "rows": [
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Tenure & Retirement Age",
+          "6 Years / 65 Years",
+          "6 Years / 62 Years"
+        ],
+        [
+          "Removal Authority",
+          "President of India",
+          "President of India"
+        ],
+        [
+          "Resignation Submitted To",
+          "President of India",
+          "Governor of the State"
+        ]
+      ],
+      "id": "rhdmmi0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Appointing Authority",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "Tenure Length",
+          "value": "6 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Upper Age Limit",
+          "value": "65 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Removal Authority",
+          "value": "President",
+          "icon": "check"
+        }
+      ],
+      "id": "zayzpfg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "State Public Service Commission (SPSC) members are appointed by the Governor but can ONLY be removed by the President of India.",
+        "Salaries, allowances, and pensions of constitutional appointees are charged upon the Consolidated Fund of India and are non-votable.",
+        "A retiring UPSC member is eligible for appointment as the Chairman of UPSC or SPSC, but is strictly barred from any other government employment."
+      ],
+      "id": "ubzbslr"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Appointments to key constitutional bodies are made directly by the President of India by warrant under hand and seal.",
+        "The standard tenure of office is fixed for a period of six years or until attaining the age of 65 years, whichever is earlier.",
+        "Conditions of service determined prior to appointment cannot be varied to the appointee's disadvantage during their term.",
+        "To ensure independence and impartiality, officers are ineligible for further employment under the Central or State governments after demitting office.",
+        "Removal from office can only occur on constitutional grounds such as proved misbehaviour or incapacity following an inquiry by the Supreme Court."
+      ],
+      "id": "4vy8jen"
+    }
+  ],
+  "enriched": true
+}

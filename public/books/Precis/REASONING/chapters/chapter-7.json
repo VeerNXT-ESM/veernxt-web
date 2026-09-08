@@ -1,0 +1,261 @@
+{
+  "id": "tp9yjn7",
+  "title": "Ranking & Order",
+  "order": 7,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "76t1x34",
+      "content": "<strong>CHAPTER  07\tRANKING &amp; ORDER</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "wfygi5b",
+      "content": "<em>Rank from Top/Bottom | Position in Row | Double Lineup</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e49thuc",
+      "content": "<strong>7.1  Rank Formula</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "jdzuw0o",
+      "content": "Ranking problems give information about a person's position from two ends of a row or class, and ask you to find either the total number of persons or someone else's position."
+    },
+    {
+      "id": "9e5am6i",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>MASTER FORMULA</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Total = (Rank from Top) + (Rank from Bottom) − 1</p><p>Rank from Top = Total − Rank from Bottom + 1</p><p>Rank from Bottom = Total − Rank from Top + 1</p><p>FOR ROWS: Position from Left + Position from Right − 1 = Total persons</p><p>BETWEEN two persons:</p><p>  Number of persons between A and B = |Rank A − Rank B| − 1</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2smngmo",
+      "content": "<strong>7.2  Solved Examples</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "sx1wnq1",
+      "content": "<strong>Ex.1 </strong>In a class of 40 students, Ravi ranks 15th from the top. What is his rank from the bottom?"
+    },
+    {
+      "type": "paragraph",
+      "id": "kjwbsfa",
+      "content": "<strong>Sol. </strong><em>Rank from bottom = 40 − 15 + 1 = 26. Ans: 26th</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "tp9nhme",
+      "content": "<strong>Ex.2 </strong>In a row, Amit is 8th from the left and 12th from the right. How many persons are in the row?"
+    },
+    {
+      "type": "paragraph",
+      "id": "2za3vpv",
+      "content": "<strong>Sol. </strong><em>Total = 8 + 12 − 1 = 19. Ans: 19 persons</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "hj2w0hu",
+      "content": "<strong>Ex.3 </strong>In a class, Priya is 15th from top and 25th from bottom. How many students are in the class?"
+    },
+    {
+      "type": "paragraph",
+      "id": "htqe22r",
+      "content": "<strong>Sol. </strong><em>Total = 15 + 25 − 1 = 39. Ans: 39 students</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "yj0q5ge",
+      "content": "<strong>Ex.4 </strong>In a row of students, Rohan is 10th from the left. Rajan is 12th from the right. If they interchange, Rohan becomes 15th from the left. How many students are in the row?"
+    },
+    {
+      "type": "paragraph",
+      "id": "huzro7y",
+      "content": "<strong>Sol. </strong><em>After interchange: Rohan is at 15th from left = Rajan's original position from left. So Rajan was 15th from left. Total = 15 + 12 − 1 = 26. Ans: 26</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "uftnglz",
+      "content": "<strong>Ex.5 </strong>In a queue of 20 persons, Sita is 7th from the back. What is her position from the front?"
+    },
+    {
+      "type": "paragraph",
+      "id": "ytxudsb",
+      "content": "<strong>Sol. </strong><em>Position from front = 20 − 7 + 1 = 14. Ans: 14th</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "mgwhj6z",
+      "content": "<strong>Ex.6 </strong>How many persons are sitting between A and B if A ranks 5th and B ranks 12th in a row?"
+    },
+    {
+      "type": "paragraph",
+      "id": "a3yynwt",
+      "content": "<strong>Sol. </strong><em>Persons between = 12 − 5 − 1 = 6. Ans: 6 persons</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xvzzxuu",
+      "content": "<strong>7.3  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "p7maw9z",
+      "content": "<strong>Q.33  </strong>In a class of 35 students, Aman stands 7th from the top. What is his rank from the bottom?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nremjzx",
+      "content": "<strong>  (a)  </strong>27"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xstx26u",
+      "content": "<strong>  (b)  </strong>28"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Introduction",
+      "id": "ypm2apj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7ay5udk",
+      "content": "<strong>  (c)  </strong>29"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2bkyjf5",
+      "content": "<strong>  (d)  </strong>30"
+    },
+    {
+      "type": "paragraph",
+      "id": "4y9n6gj",
+      "content": "<strong>  Ans: (c) 29  Hint: </strong><em>35−7+1=29.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "fsb9kln",
+      "content": "<strong>Q.34  </strong>In a row, Shyam is 12th from left and 10th from right. How many are in the row?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pe2t453",
+      "content": "<strong>  (a)  </strong>20"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4i3r4py",
+      "content": "<strong>  (b)  </strong>21"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kssoxyy",
+      "content": "<strong>  (c)  </strong>22"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "snrdnb6",
+      "content": "<strong>  (d)  </strong>23"
+    },
+    {
+      "type": "paragraph",
+      "id": "sjh87j8",
+      "content": "<strong>  Ans: (b) 21  Hint: </strong><em>12+10−1=21.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "n1w5lsz",
+      "content": "<strong>Q.35  </strong>Meena ranks 16th in a class of 40. What is her rank from the bottom?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5sai46j",
+      "content": "<strong>  (a)  </strong>24"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jorq18x",
+      "content": "<strong>  (b)  </strong>25"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1sdaf7t",
+      "content": "<strong>  (c)  </strong>26"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0rl5129",
+      "content": "<strong>  (d)  </strong>23"
+    },
+    {
+      "type": "paragraph",
+      "id": "x6lncxv",
+      "content": "<strong>  Ans: (b) 25  Hint: </strong><em>40−16+1=25.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "4wm5q1t",
+      "content": "<strong>Q.36  </strong>A is 8th from left, B is 9th from right in a row of 20. How many persons sit between A and B?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0rq3aab",
+      "content": "<strong>  (a)  </strong>2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "afwb591",
+      "content": "<strong>  (b)  </strong>3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "62c6fgm",
+      "content": "<strong>  (c)  </strong>4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2i95m5i",
+      "content": "<strong>  (d)  </strong>5"
+    },
+    {
+      "type": "paragraph",
+      "id": "oankfan",
+      "content": "<strong>  Ans: (b) 3  Hint: </strong><em>A from left=8. B from left=20−9+1=12. Between = 12−8−1=3.</em>"
+    }
+  ],
+  "enriched": true
+}

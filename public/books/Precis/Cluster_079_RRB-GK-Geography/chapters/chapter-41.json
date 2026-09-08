@@ -1,0 +1,56 @@
+{
+  "title": "Greenwich Mean Time (GMT)",
+  "order": 41,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "GMT is the mean solar time at the Prime Meridian and serves as the global reference for time calculation.",
+      "id": "qq6gl0w"
+    },
+    {
+      "type": "pullQuote",
+      "content": "GMT is the mean solar time at the Prime Meridian and serves as the global reference for time calculation.",
+      "id": "ll395xb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Reference Meridian",
+          "value": "Prime Meridian",
+          "icon": "info"
+        },
+        {
+          "label": "Time Basis",
+          "value": "Mean Solar Time",
+          "icon": "clock"
+        },
+        {
+          "label": "Primary Function",
+          "value": "Global Time Reference",
+          "icon": "check"
+        }
+      ],
+      "id": "4bj4akx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exam questions frequently test the location of GMT calculation: it is strictly measured at the Prime Meridian (0° Longitude).",
+        "Remember that GMT is fundamentally defined as 'mean solar time' for standard global reference."
+      ],
+      "id": "cxlum3v"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "GMT stands for Greenwich Mean Time and is measured as mean solar time.",
+        "The Prime Meridian acts as the official geographic baseline for GMT.",
+        "GMT functions as the benchmark reference point for global time zone calculations."
+      ],
+      "id": "ve19qbp"
+    }
+  ],
+  "enriched": true
+}

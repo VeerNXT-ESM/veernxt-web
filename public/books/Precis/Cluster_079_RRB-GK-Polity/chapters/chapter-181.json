@@ -1,0 +1,119 @@
+{
+  "title": "Appointment and Service Conditions",
+  "order": 181,
+  "blocks": [
+    {
+      "id": "3a83gha",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Provision</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appointing Authority</p>",
+            "<p>President of India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Service Conditions</p>",
+            "<p>Determined by Parliament</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Protection</p>",
+            "<p>Cannot be varied to their disadvantage after appointment</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "No person who is a member of a civil service of the Union or an all-India service or a civil service of a State or holds a civil post under the Union or a State shall be dismissed or removed by an authority subordinate to that by which he was appointed.",
+      "id": "j7lh5bx"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Article 310 (Doctrine of Pleasure)",
+        "Article 311 (Constitutional Safeguards)"
+      ],
+      "rows": [
+        [
+          "Core Principle",
+          "Civil servants hold office during the pleasure of the President or Governor",
+          "Protects civil servants from arbitrary dismissal, removal, or reduction in rank"
+        ],
+        [
+          "Scope of Coverage",
+          "Applies to both defense personnel and civil servants",
+          "Applies exclusively to civil servants holding civil posts"
+        ],
+        [
+          "Key Exceptions",
+          "Subject to specific constitutional tenure rules (e.g., Supreme Court Judges, CAG, CEC)",
+          "Inquiry can be waived for criminal conviction, impracticality, or national security"
+        ]
+      ],
+      "id": "tt7ufga"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Recruitment & Conditions",
+          "value": "Article 309",
+          "icon": "book"
+        },
+        {
+          "label": "Doctrine of Pleasure",
+          "value": "Article 310",
+          "icon": "clock"
+        },
+        {
+          "label": "Dismissal Safeguards",
+          "value": "Article 311",
+          "icon": "check"
+        },
+        {
+          "label": "All India Services",
+          "value": "Article 312",
+          "icon": "award"
+        }
+      ],
+      "id": "nt8xdof"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 311 protections apply strictly to civil servants and do not extend to defense personnel.",
+        "Departmental inquiry under Article 311 can be dispensed with on grounds of national security by the President or Governor.",
+        "Creation of new All India Services under Article 312 requires an initial resolution by the Rajya Sabha supported by at least two-thirds of members present and voting."
+      ],
+      "id": "edhq2x7"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 309 empowers Parliament and state legislatures to regulate the recruitment and conditions of service of public servants.",
+        "Article 310 incorporates the 'Doctrine of Pleasure', specifying that members of the civil service hold office during the pleasure of the President or Governor.",
+        "Article 311 provides constitutional protection to civil servants against arbitrary dismissal, removal, or reduction in rank.",
+        "A civil servant cannot be dismissed or removed by an authority subordinate to the appointing authority.",
+        "Rajya Sabha holds the special power under Article 312 to pass a resolution creating new All India Services by a two-thirds majority."
+      ],
+      "id": "8601j1s"
+    }
+  ],
+  "enriched": true
+}

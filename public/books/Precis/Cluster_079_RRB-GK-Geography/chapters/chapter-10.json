@@ -1,0 +1,73 @@
+{
+  "title": "7. Earth's Moon",
+  "order": 10,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Only natural satellite of Earth.",
+      "id": "hodd526"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Satellite Status",
+          "value": "Only Natural",
+          "icon": "check"
+        },
+        {
+          "label": "Average Distance",
+          "value": "384,400 km",
+          "icon": "info"
+        },
+        {
+          "label": "Atmosphere",
+          "value": "None",
+          "icon": "info"
+        }
+      ],
+      "id": "5cunoou"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Only natural satellite of Earth.",
+      "id": "ykw59tj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Moon is the sole natural satellite orbiting Earth.",
+        "The mean distance from Earth to the Moon is approximately 384,400 km.",
+        "The Moon lacks an atmosphere.",
+        "Ocean tides on Earth are primarily caused by the gravitational attraction of the Moon."
+      ],
+      "id": "6vmqx2v"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Average distance: 384,400 km.",
+      "id": "px1ll9k"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The exact average distance of 384,400 km is a common numerical question in general science papers.",
+        "Exams frequently test the cause of Earth's ocean tides: the gravitational pull of the Moon.",
+        "Remember that the Moon has no atmosphere, which distinguishes its surface environment from Earth's."
+      ],
+      "id": "iwnfza0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• No atmosphere.",
+      "id": "azq9k3q"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Gravitational pull causes tides.",
+      "id": "g2fsmg6"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,81 @@
+{
+  "title": "MOST IMPORTANT EXAM POINTS",
+  "order": 49,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Equator is the longest latitude.<br/>• Distance between latitudes ≈111 km.<br/>• All longitudes are equal in length.<br/>• IST based on 82.5°E.<br/>• Tropics mark limits of overhead Sun.<br/>• Arctic/Antarctic circles mark polar day/night.",
+      "id": "w1w95sz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Equator is the longest latitude.",
+      "id": "nwcw9rw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitudes",
+        "Longitudes"
+      ],
+      "rows": [
+        [
+          "Length",
+          "Varies (Equator is the longest)",
+          "All longitudes are equal in length"
+        ],
+        [
+          "Key Reference / Functions",
+          "Tropics mark overhead Sun limits; Circles mark polar day/night",
+          "82.5°E serves as the basis for IST"
+        ]
+      ],
+      "id": "vq4p24h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Latitude Distance",
+          "value": "≈111 km",
+          "icon": "info"
+        },
+        {
+          "label": "IST Meridian",
+          "value": "82.5°E",
+          "icon": "clock"
+        },
+        {
+          "label": "Longest Latitude",
+          "value": "Equator",
+          "icon": "check"
+        }
+      ],
+      "id": "ftd5cck"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Indian Standard Time (IST) meridian (82.5°E) is a very frequent question in geography sections.",
+        "Remember the key figure: Distance between latitudes is approximately 111 km.",
+        "Do not confuse latitude and longitude lengths: latitudes vary (Equator is longest), whereas all longitudes are equal."
+      ],
+      "id": "vhnd06q"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Equator is the longest latitude line on Earth.",
+        "The approximate distance between consecutive latitudes is 111 km.",
+        "Unlike latitudes, all lines of longitude are equal in length.",
+        "Indian Standard Time (IST) is determined based on the 82.5°E longitude meridian.",
+        "The Tropics define the geographic limits of the overhead Sun.",
+        "Polar day and night phenomena occur beyond the Arctic and Antarctic circles."
+      ],
+      "id": "l9h2c0r"
+    }
+  ],
+  "enriched": true
+}

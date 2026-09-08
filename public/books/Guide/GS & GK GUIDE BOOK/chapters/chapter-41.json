@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "rzntarg"
+      "id": "rzntarg",
+      "content": "Economics is the social science that studies how individuals, businesses and governments make choices about allocating scarce resources to satisfy unlimited human wants. It helps us understand production, consumption, distribution and exchange of goods and services."
     },
     {
       "type": "statStrip",
@@ -53,15 +54,18 @@
     },
     {
       "type": "paragraph",
-      "id": "qx6vj5z"
+      "id": "qx6vj5z",
+      "content": "• Economics studies how scarce resources are used to satisfy unlimited human wants."
     },
     {
       "type": "paragraph",
-      "id": "6tbd4q9"
+      "id": "6tbd4q9",
+      "content": "• It explains how goods and services are produced, distributed and consumed."
     },
     {
       "type": "paragraph",
-      "id": "kfm3ah6"
+      "id": "kfm3ah6",
+      "content": "• The word Economics is derived from the Greek words 'Oikos' (house) and 'Nomos' (management)."
     },
     {
       "id": "z1pgjig",
@@ -76,29 +80,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Economist</strong></p>",
+            "<p><strong>Definition</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Adam Smith</p>",
+            "<p>Economics is the study of wealth.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Alfred Marshall</p>",
+            "<p>Economics is the study of mankind in the ordinary business of life.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lionel Robbins</p>",
+            "<p>Economics is the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses.</p>"
           ]
         }
       ]
@@ -116,29 +120,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p>Microeconomics</p>",
+            "<p>Macroeconomics</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Study of individual units such as households and firms</p>",
+            "<p>Study of the economy as a whole</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Focuses on price determination</p>",
+            "<p>Focuses on national income and inflation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Example: demand and supply</p>",
+            "<p>Example: GDP, unemployment</p>"
           ]
         }
       ]
@@ -156,11 +160,13 @@
     },
     {
       "type": "paragraph",
-      "id": "9to267w"
+      "id": "9to267w",
+      "content": "Goods: Physical items that satisfy human wants (e.g., food, clothes, cars)."
     },
     {
       "type": "paragraph",
-      "id": "864s8k0"
+      "id": "864s8k0",
+      "content": "Services: Activities performed for others (e.g., education, banking, transport)."
     },
     {
       "id": "t29nwcz",
@@ -175,41 +181,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Meaning</strong></p>",
+            "<p><strong>Reward</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Land</p>",
+            "<p>Natural resources such as soil, minerals and water</p>",
+            "<p>Rent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Labour</p>",
+            "<p>Human effort used in production</p>",
+            "<p>Wages</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Capital</p>",
+            "<p>Machines, tools and money used for production</p>",
+            "<p>Interest</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Entrepreneur</p>",
+            "<p>Person who organizes production and takes risk</p>",
+            "<p>Profit</p>"
           ]
         }
       ]
@@ -248,15 +254,18 @@
     },
     {
       "type": "paragraph",
-      "id": "38t3wgf"
+      "id": "38t3wgf",
+      "content": "• Resources such as land, labour and capital are limited."
     },
     {
       "type": "paragraph",
-      "id": "inrykqj"
+      "id": "inrykqj",
+      "content": "• Human wants are unlimited."
     },
     {
       "type": "paragraph",
-      "id": "ow61s4m"
+      "id": "ow61s4m",
+      "content": "• Because of scarcity, people must make choices about how to use resources."
     },
     {
       "id": "n6dvcwc",
@@ -266,7 +275,8 @@
     },
     {
       "type": "paragraph",
-      "id": "d9ny2q8"
+      "id": "d9ny2q8",
+      "content": "Opportunity cost is the value of the next best alternative that is sacrificed when a choice is made. For example, if a farmer uses land to grow wheat instead of rice, the lost rice production is the opportunity cost."
     },
     {
       "id": "d65903w",
@@ -281,36 +291,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Activity</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Production</p>",
+            "<p>Manufacturing goods in factories</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Consumption</p>",
+            "<p>Using goods and services</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Distribution</p>",
+            "<p>Transport and selling of goods</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Exchange</p>",
+            "<p>Buying and selling in markets</p>"
           ]
         }
       ]
@@ -332,19 +342,23 @@
     },
     {
       "type": "paragraph",
-      "id": "gf052kx"
+      "id": "gf052kx",
+      "content": "• Adam Smith is called the Father of Economics."
     },
     {
       "type": "paragraph",
-      "id": "1su8pjv"
+      "id": "1su8pjv",
+      "content": "• Microeconomics studies individual economic units."
     },
     {
       "type": "paragraph",
-      "id": "n7fvcze"
+      "id": "n7fvcze",
+      "content": "• Macroeconomics studies the economy as a whole."
     },
     {
       "type": "paragraph",
-      "id": "o9g3y3f"
+      "id": "o9g3y3f",
+      "content": "• There are four main factors of production: land, labour, capital and entrepreneur."
     }
   ],
   "enriched": true

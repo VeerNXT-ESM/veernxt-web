@@ -1,0 +1,90 @@
+{
+  "title": "Complete List of Indian Rivers and Their Tributaries",
+  "order": 231,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "The Ganga river system is the largest river basin in India, sustaining millions of lives across northern and eastern plains.",
+      "id": "ss8rzju"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Himalayan Rivers",
+        "Peninsular Rivers"
+      ],
+      "rows": [
+        [
+          "Origin",
+          "Himalayan Glaciers & Mountain Ranges",
+          "Peninsular Plateau & Western Ghats"
+        ],
+        [
+          "Nature of Flow",
+          "Perennial (Fed by ice melt & rain)",
+          "Seasonal (Rain-fed)"
+        ],
+        [
+          "Valleys & Courses",
+          "Deep V-shaped valleys and gorges",
+          "Broad, shallow valleys"
+        ],
+        [
+          "Drainage Features",
+          "Form large meanders and extensive deltas",
+          "Shorter courses; East-flowing form deltas, West-flowing form estuaries"
+        ]
+      ],
+      "id": "4cjfibm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major River Systems",
+          "value": "8 Main Systems",
+          "icon": "book"
+        },
+        {
+          "label": "Longest River in India",
+          "value": "Ganga (2,525 km)",
+          "icon": "award"
+        },
+        {
+          "label": "Largest Peninsular River",
+          "value": "Godavari (1,465 km)",
+          "icon": "check"
+        },
+        {
+          "label": "Major West-Flowing Rivers",
+          "value": "Narmada & Tapti",
+          "icon": "info"
+        }
+      ],
+      "id": "1gd335w"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Memorize the Panch Prayag confluences on the Alaknanda River: Vishnuprayag (Dhauliganga), Nandaprayag (Nandakini), Karnaprayag (Pindar), Rudraprayag (Mandakini), and Devprayag (Bhagirathi).",
+        "Differentiate between East-flowing Peninsular rivers (Mahanadi, Godavari, Krishna, Cauvery forming deltas) and West-flowing Peninsular rivers (Narmada, Tapti forming estuaries).",
+        "Identify Indus tributaries flowing through India: Jhelum, Chenab, Ravi, Beas, and Sutlej, along with the Indus Waters Treaty allocation rules."
+      ],
+      "id": "f5fg0ik"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Ganga is the longest river in India, originating from the Gangotri Glacier as Bhagirathi and joining the Alaknanda at Devprayag.",
+        "Himalayan rivers are perennial and fed by both melting glaciers and rainfall, whereas Peninsular rivers are seasonal and primarily rain-fed.",
+        "The Godavari is the largest Peninsular river system and is commonly referred to as 'Dakshin Ganga' or 'Vridha Ganga'.",
+        "Major right-bank tributaries of the Ganga include the Yamuna and Son, while left-bank tributaries include the Ramganga, Gomti, Ghaghara, Gandak, and Kosi.",
+        "Narmada and Tapti flow westward through rift valleys between the Vindhya and Satpura ranges and drain into the Arabian Sea, forming estuaries instead of deltas."
+      ],
+      "id": "mrwm6rx"
+    }
+  ],
+  "enriched": true
+}

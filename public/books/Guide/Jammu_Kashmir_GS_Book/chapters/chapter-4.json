@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "f900nxc"
+      "id": "f900nxc",
+      "content": "Beyond the mountain ranges themselves, J&amp;K's valleys and mountain passes are individually significant enough to be tested by name - this chapter catalogues the most important ones, along with the region's glacier systems."
     },
     {
       "type": "statStrip",
@@ -52,11 +53,13 @@
     },
     {
       "type": "paragraph",
-      "id": "5oy8uiu"
+      "id": "5oy8uiu",
+      "content": "The Kashmir Valley (also called the Vale of Kashmir) is the geographic and cultural heart of the Kashmir division - an oval, bowl-shaped intermontane valley roughly 135 km long and 32 km wide, lying between the Pir Panjal Range (south/west) and the Great Himalayan/Zanskar Range (north/east), at an average elevation of about 1,600 m."
     },
     {
       "type": "paragraph",
-      "id": "ndalv36"
+      "id": "ndalv36",
+      "content": "Geologically, the Valley is believed to have once been the bed of a large lake, whose gradual draining left behind the fertile, terraced plateau deposits known as 'karewas' (locally 'wudar'), extensively used today for saffron cultivation, orchards and other high-value agriculture."
     },
     {
       "type": "pullQuote",
@@ -65,11 +68,13 @@
     },
     {
       "type": "paragraph",
-      "id": "dnciej4"
+      "id": "dnciej4",
+      "content": "The Valley is drained by the Jhelum River, which flows through it in a distinctively slow, meandering course before entering a gorge near Baramulla and exiting towards Pakistan-administered territory."
     },
     {
       "type": "paragraph",
-      "id": "kpw2csv"
+      "id": "kpw2csv",
+      "content": "<strong>★ EXAM POINT: </strong><em>'Karewa' land formations (ancient lake-bed terraces) are a distinctive Kashmir Valley geomorphological feature, famous for saffron cultivation, particularly around Pampore - a frequently tested geography-cum-economy crossover fact (see also Chapter 18, Economy).</em>"
     },
     {
       "id": "c4rer64",
@@ -115,57 +120,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Valley</strong></p>",
+            "<p><strong>Location / River</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lolab Valley</p>",
+            "<p>Kupwara district, Kashmir division</p>",
+            "<p>Known for its dense forests and scenic meadows; a lesser-visited but ecologically rich valley</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gurez Valley</p>",
+            "<p>Bandipora district, near the LoC</p>",
+            "<p>Remote, high-altitude valley along the Kishanganga (Neelum) River, historically on the old Silk Route/Gilgit trade axis; opened to wider tourism only in recent years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sind Valley</p>",
+            "<p>Ganderbal district, drained by the Sind River (a Jhelum tributary)</p>",
+            "<p>Route towards Sonamarg and the Zoji La approach; important for both agriculture and tourism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lidder Valley</p>",
+            "<p>Anantnag district, drained by the Lidder River (a Jhelum tributary)</p>",
+            "<p>Route towards Pahalgam and the Amarnath Yatra base camps</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chenab Valley</p>",
+            "<p>Doda, Kishtwar, Ramban districts, Jammu division</p>",
+            "<p>Rugged, mountainous valley of the Chenab River; includes the world's highest railway bridge</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Poonch and Rajouri valleys</p>",
+            "<p>Pir Panjal foothills, Jammu division, near the LoC</p>",
+            "<p>Border valleys of significant strategic and historical importance, including as former princely jagirs</p>"
           ]
         }
       ]
@@ -183,53 +188,54 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Pass</strong></p>",
+            "<p><strong>Connects</strong></p>",
+            "<p><strong>Elevation (approx.)</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Banihal Pass</p>",
+            "<p>Jammu region to Kashmir Valley</p>",
+            "<p>approx 2,832 m</p>",
+            "<p>Historic road route; now largely bypassed at road level by the Jawahar Tunnel/newer tunnels beneath it</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Zoji La</p>",
+            "<p>Kashmir Valley (Sonamarg) to Ladakh (Dras/Kargil)</p>",
+            "<p>approx 3,528 m</p>",
+            "<p>Historically snow-closed in winter; under-construction Zoji La Tunnel aims for all-weather connectivity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Pir Panjal Pass</p>",
+            "<p>Jammu (Poonch side) to Kashmir Valley (Shopian side)</p>",
+            "<p>approx 3,490 m</p>",
+            "<p>Historic Mughal-era route ('Mughal Road'), revived as a modern seasonal road</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sinthan Top</p>",
+            "<p>Kashmir Valley (Anantnag) to Kishtwar (Jammu division)</p>",
+            "<p>approx 3,748 m</p>",
+            "<p>Alternative high-altitude link road between the two divisions</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "47lwk1b"
+      "id": "47lwk1b",
+      "content": "<strong>★ EXAM POINT: </strong><em>Note the functional overlap: several of these passes (Banihal, Pir Panjal, Sinthan) all connect the JAMMU and KASHMIR divisions to each other, while Zoji La uniquely connects the KASHMIR division to LADAKH - a distinction commonly tested when questions ask 'which pass connects X to Y'.</em>"
     },
     {
       "id": "302l4fn",
@@ -251,10 +257,10 @@
       "id": "z3myhep",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Kolahoi Glacier - the largest glacier of the Kashmir Valley proper, located in the Great Himalayan/Zanskar Range near Sonamarg/Pahalgam, and the principal source of the Lidder River; it has been observed to be retreating in recent decades, a subject of ongoing glaciological and climate-change research.",
+        "Thajiwas Glacier - a smaller, more easily accessible glacier near Sonamarg, popular as a tourist attraction rather than a major hydrological feature.",
+        "Machoi Glacier - located near the Zoji La Pass, feeding into both the Sind River (Kashmir side) and, on the other side of the pass, contributing to Ladakh's drainage.",
+        "While the largest and most strategically significant glaciers of the wider region (such as Siachen) lie within Ladakh UT rather than J&amp;K proper, the Kashmir Valley's own glacier systems remain critical to sustaining its rivers, particularly during the pre-monsoon and dry-season months."
       ]
     },
     {
@@ -267,11 +273,11 @@
       "id": "g3xpaal",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Kashmir Valley: bowl-shaped, ~135 km x 32 km, average elevation ~1,600 m, drained by the Jhelum; famous 'karewa' terraces used for saffron cultivation.",
+        "Key valleys: Lolab, Gurez, Sind, Lidder (Kashmir division); Chenab, Poonch/Rajouri valleys (Jammu division).",
+        "Key passes: Banihal (Jammu-Kashmir), Zoji La (Kashmir-Ladakh), Pir Panjal Pass/Mughal Road (Jammu-Kashmir), Sinthan Top (Kashmir-Kishtwar).",
+        "Kolahoi Glacier = largest glacier of the Kashmir Valley proper, source of the Lidder River; observed to be retreating.",
+        "Siachen Glacier (world's highest battlefield) lies in Ladakh UT, not J&amp;K proper - but is frequently studied alongside J&amp;K's Himalayan geography given the shared former-princely-state context."
       ]
     }
   ],

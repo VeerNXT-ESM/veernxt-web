@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "x5d3qb0"
+      "id": "x5d3qb0",
+      "content": "Environmental awareness refers to understanding the importance of protecting the natural environment and minimizing the harmful effects of human activities. Industrial activities such as manufacturing, mining, construction, and power generation can affect air, water, soil, and living organisms. Therefore, workers in industries must follow practices that reduce pollution and protect natural resources."
     },
     {
       "type": "paragraph",
-      "id": "igdxjpv"
+      "id": "igdxjpv",
+      "content": "In technical trades, environmental awareness helps workers use materials responsibly, dispose of waste properly, and follow sustainable industrial practices."
     },
     {
       "id": "mvln8m4",
@@ -65,11 +67,11 @@
       "id": "ouerwcj",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Protects natural resources such as water, air, and soil",
+        "Reduces pollution caused by industrial activities",
+        "Maintains ecological balance",
+        "Ensures sustainable development",
+        "Protects human health and wildlife"
       ]
     },
     {
@@ -90,49 +92,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type of Pollution</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Air Pollution</p>",
+            "<p>Contamination of air by harmful gases and particles</p>",
+            "<p>Smoke from factories, vehicle emissions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Water Pollution</p>",
+            "<p>Contamination of water bodies by industrial waste</p>",
+            "<p>Chemical discharge into rivers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Soil Pollution</p>",
+            "<p>Degradation of soil due to harmful chemicals</p>",
+            "<p>Industrial waste dumping</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Noise Pollution</p>",
+            "<p>Excessive noise from machines and equipment</p>",
+            "<p>Heavy machinery, generators</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Thermal Pollution</p>",
+            "<p>Increase in water temperature due to industrial processes</p>",
+            "<p>Hot water discharge from power plants</p>"
           ]
         }
       ]
@@ -150,36 +152,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Waste</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Solid Waste</p>",
+            "<p>Metal scrap, plastic, packaging materials</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Liquid Waste</p>",
+            "<p>Chemical effluents, wastewater</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hazardous Waste</p>",
+            "<p>Toxic chemicals, oils, solvents</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Electronic Waste</p>",
+            "<p>Old electronic components and batteries</p>"
           ]
         }
       ]
@@ -220,11 +222,11 @@
       "id": "0nkdmqz",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Installing pollution control equipment such as filters and scrubbers",
+        "Treating industrial wastewater before discharge",
+        "Reducing emissions from factories",
+        "Using eco-friendly materials and processes",
+        "Proper disposal and recycling of industrial waste"
       ]
     },
     {
@@ -240,36 +242,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Practice</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Reduce</p>",
+            "<p>Minimize waste generation by efficient use of resources</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Reuse</p>",
+            "<p>Use materials again whenever possible</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Recycle</p>",
+            "<p>Convert waste materials into new products</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Safe Disposal</p>",
+            "<p>Dispose hazardous waste using approved methods</p>"
           ]
         }
       ]
@@ -284,11 +286,11 @@
       "id": "qrbibk2",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Use materials efficiently to reduce waste",
+        "Follow proper waste disposal procedures",
+        "Report pollution hazards immediately",
+        "Participate in environmental safety programs",
+        "Maintain cleanliness in the workplace"
       ]
     },
     {
@@ -308,7 +310,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xy0w2a0"
+      "id": "xy0w2a0",
+      "content": "Sustainable industrial practices aim to meet present industrial needs without harming the environment for future generations. Industries adopt energy-efficient technologies, renewable energy sources, and environmentally friendly production methods."
     },
     {
       "id": "5k5cfro",
@@ -320,10 +323,10 @@
       "id": "v1gifg5",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Environmental awareness helps reduce industrial pollution.",
+        "Major types of pollution include air, water, soil, and noise pollution.",
+        "The 3R principle stands for Reduce, Reuse, and Recycle.",
+        "Industries must treat waste before releasing it into the environment."
       ]
     }
   ],

@@ -1,0 +1,159 @@
+{
+  "title": "Composition of NITI Aayog",
+  "order": 239,
+  "blocks": [
+    {
+      "id": "ddgccdg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Held By</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>Prime Minister of India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vice-Chairperson</p>",
+            "<p>Appointed by the Prime Minister</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Governing Council</p>",
+            "<p>Chief Ministers of all states and Lt. Governors of Union Territories</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regional Councils</p>",
+            "<p>Formed for specific regional issues</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Full-Time Members</p>",
+            "<p>Experts in various fields</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Part-Time Members</p>",
+            "<p>Leading specialists from universities and institutions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ex-Officio Members</p>",
+            "<p>Union Ministers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>CEO</p>",
+            "<p>Appointed by the Prime Minister</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Chairperson of NITI Aayog is the Prime Minister of India.",
+      "id": "52d27p2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Position",
+        "Appointment / Selection",
+        "Rank / Status"
+      ],
+      "rows": [
+        [
+          "Chairperson",
+          "Ex-Officio (PM of India)",
+          "Head of Government"
+        ],
+        [
+          "Vice-Chairperson",
+          "Appointed by PM",
+          "Cabinet Minister"
+        ],
+        [
+          "Full-Time Members",
+          "Appointed by PM",
+          "Minister of State"
+        ],
+        [
+          "Ex-Officio Members",
+          "Nominated by PM (Max 4)",
+          "Union Cabinet Ministers"
+        ]
+      ],
+      "id": "sjubdyr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chairperson",
+          "value": "Prime Minister",
+          "icon": "award"
+        },
+        {
+          "label": "Established",
+          "value": "1 Jan 2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "Ex-Officio Members",
+          "value": "Max 4",
+          "icon": "check"
+        },
+        {
+          "label": "Part-Time Members",
+          "value": "Max 2",
+          "icon": "info"
+        }
+      ],
+      "id": "89737se"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NITI Aayog is an extra-constitutional, non-statutory body created through an executive resolution of the Union Cabinet.",
+        "The Vice-Chairperson holds the rank of a Cabinet Minister, while Full-Time Members enjoy the rank of Minister of State.",
+        "Part-Time Members are a maximum of 2, drawn from leading universities and research institutes on an ex-officio basis."
+      ],
+      "id": "bfx5v5v"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Prime Minister of India serves as the Ex-Officio Chairperson of NITI Aayog.",
+        "The Governing Council consists of Chief Ministers of all States and UTs with legislatures, along with Lt. Governors of other UTs.",
+        "Regional Councils are created to address specific multi-state issues and are chaired by the Prime Minister or a nominee.",
+        "The Vice-Chairperson is appointed by the Prime Minister and holds the rank of a Cabinet Minister.",
+        "The organizational structure includes Full-time Members, Part-time Members (max 2), Ex-Officio Members (max 4), and a CEO."
+      ],
+      "id": "4j80hgy"
+    }
+  ],
+  "enriched": true
+}

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "g8y1ppa"
+      "id": "g8y1ppa",
+      "content": "The Constitution does not fix the number of members of the Commission. The President determines its composition."
     },
     {
       "type": "statStrip",
@@ -92,36 +93,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Role</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chief Election Commissioner (CEC)</p>",
+            "<p>Head of the Commission</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Election Commissioners</p>",
+            "<p>Assist the CEC; all members have equal powers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Regional Commissioners</p>",
+            "<p>Appointed by the President when required</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "i09yzat"
+      "id": "i09yzat",
+      "content": "Originally, the Election Commission was a single-member body. Since 1989, it has been functioning as a multi-member body. Decisions are taken by majority vote."
     }
   ],
   "enriched": true

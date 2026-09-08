@@ -5,7 +5,20 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "2p9r4id"
+      "id": "2p9r4id",
+      "content": "The climate of India is described as a Tropical Monsoon Climate. It is primarily governed by seasonal reversal of winds known as the monsoon system. However, the Indian climate is not controlled by monsoon alone; several geographical, atmospheric and oceanic factors together shape the seasonal pattern of temperature and rainfall across the country."
+    },
+    {
+      "id": "rhe1ns3",
+      "type": "image",
+      "imageId": "rvy4ne1",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_rvy4ne1.png"
+    },
+    {
+      "id": "eyox19f",
+      "type": "image",
+      "imageId": "ltic4lw",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_ltic4lw.jpeg"
     },
     {
       "type": "statStrip",
@@ -53,7 +66,8 @@
     },
     {
       "type": "paragraph",
-      "id": "7vp404i"
+      "id": "7vp404i",
+      "content": "India’s climate is influenced by its latitudinal position, relief, altitude, distance from sea, pressure systems and jet streams. These factors operate together to produce extreme regional diversity in temperature and rainfall."
     },
     {
       "id": "ignbqix",
@@ -62,57 +76,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Explanation</strong></p>",
+            "<p><strong>Exam Relevance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Latitude</p>",
+            "<p>Tropic of Cancer divides India into tropical south and subtropical north.</p>",
+            "<p>Conceptual question</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Altitude</p>",
+            "<p>Temperature decreases with height; hill stations are cooler.</p>",
+            "<p>Reason-based MCQ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Distance from Sea</p>",
+            "<p>Coastal regions show equable climate; interiors show extremes.</p>",
+            "<p>Continentality</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Himalayas</p>",
+            "<p>Block cold winds; cause orographic rainfall.</p>",
+            "<p>Very important</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pressure &amp; Winds</p>",
+            "<p>Seasonal pressure reversal drives monsoon.</p>",
+            "<p>Core concept</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Jet Streams</p>",
+            "<p>Subtropical jet influences onset of monsoon.</p>",
+            "<p>Advanced question</p>"
           ]
         }
       ]
@@ -125,11 +139,13 @@
     },
     {
       "type": "paragraph",
-      "id": "21g3htb"
+      "id": "21g3htb",
+      "content": "The Indian monsoon originates due to differential heating between the Indian landmass and surrounding oceans. In summer, the land heats rapidly creating a low-pressure area, while the Indian Ocean remains relatively cooler. This pressure difference draws moisture-laden winds toward India."
     },
     {
       "type": "paragraph",
-      "id": "pj683nq"
+      "id": "pj683nq",
+      "content": "The monsoon mechanism is strengthened by the northward shift of the Inter-Tropical Convergence Zone (ITCZ), intense heating of the Tibetan Plateau, and changes in upper air circulation."
     },
     {
       "id": "ua7320v",
@@ -138,57 +154,52 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Role in Monsoon</strong></p>",
+            "<p><strong>Importance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ITCZ</p>",
+            "<p>Shifts north in summer pulling moist winds.</p>",
+            "<p>Foundation concept</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tibetan Plateau</p>",
+            "<p>Intense heating creates strong low pressure.</p>",
+            "<p>Frequently asked</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Subtropical Jet Stream</p>",
+            "<p>Moves north allowing monsoon onset.</p>",
+            "<p>Advanced concept</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mascarene High</p>",
+            "<p>High pressure pushes winds toward India.</p>",
+            "<p>Rare but scoring</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Somali Jet</p>",
+            "<p>Strong cross-equatorial current.</p>",
+            "<p>Map-based question</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Mechanism of Indian Monsoon",
-      "id": "39ghghh"
     },
     {
       "id": "8sapm34",
@@ -197,8 +208,15 @@
       "content": "3. Seasons of India"
     },
     {
+      "id": "gv9qkzg",
+      "type": "image",
+      "imageId": "n2nio6b",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_n2nio6b.png"
+    },
+    {
       "type": "paragraph",
-      "id": "z7panh2"
+      "id": "z7panh2",
+      "content": "India experiences four main seasons due to monsoonal wind reversal. These seasons differ in temperature, wind pattern and rainfall distribution. <img></img>"
     },
     {
       "id": "xleqgm3",
@@ -207,46 +225,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Season</strong></p>",
+            "<p><strong>Months</strong></p>",
+            "<p><strong>Wind Pattern</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cold Weather Season</p>",
+            "<p>Dec–Feb</p>",
+            "<p>Northeast trade winds</p>",
+            "<p>Clear skies; western disturbances bring rain in north.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hot Weather Season</p>",
+            "<p>Mar–May</p>",
+            "<p>Local winds</p>",
+            "<p>High temperature; Loo in north; Mango showers in south.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Southwest Monsoon</p>",
+            "<p>Jun–Sep</p>",
+            "<p>Moist SW winds</p>",
+            "<p>Main rainy season; 75% rainfall.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Retreating Monsoon</p>",
+            "<p>Oct–Nov</p>",
+            "<p>Northeast winds</p>",
+            "<p>Cyclones on east coast; rain in Tamil Nadu.</p>"
           ]
         }
       ]
@@ -259,7 +277,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5shxil6"
+      "id": "5shxil6",
+      "content": "The southwest monsoon splits into two branches after striking the Indian peninsula due to topography."
     },
     {
       "type": "comparisonTable",
@@ -294,25 +313,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Branch</strong></p>",
+            "<p><strong>Path</strong></p>",
+            "<p><strong>Rainfall Impact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Arabian Sea Branch</p>",
+            "<p>Hits Western Ghats first.</p>",
+            "<p>Heavy rainfall on west coast; rain shadow in Deccan.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bay of Bengal Branch</p>",
+            "<p>Moves toward northeast then westward.</p>",
+            "<p>Extreme rainfall in Meghalaya.</p>"
           ]
         }
       ]
@@ -325,7 +344,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wgogcic"
+      "id": "wgogcic",
+      "content": "Rainfall in India occurs through multiple mechanisms including orographic uplift, convection and cyclonic activity."
     },
     {
       "id": "e3cytu5",
@@ -334,33 +354,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Orographic</p>",
+            "<p>Air forced upward by mountains.</p>",
+            "<p>Western Ghats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Convectional</p>",
+            "<p>Surface heating causes uplift.</p>",
+            "<p>Pre-monsoon storms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cyclonic</p>",
+            "<p>Low pressure systems.</p>",
+            "<p>Winter rain in Punjab</p>"
           ]
         }
       ]
@@ -373,7 +393,8 @@
     },
     {
       "type": "paragraph",
-      "id": "s0ta3jd"
+      "id": "s0ta3jd",
+      "content": "El Niño refers to abnormal warming of eastern Pacific waters, which weakens the Indian monsoon. La Niña represents cooling and usually strengthens the monsoon."
     },
     {
       "id": "i6wl79z",
@@ -382,25 +403,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Phenomenon</strong></p>",
+            "<p><strong>Pacific Condition</strong></p>",
+            "<p><strong>Indian Effect</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>El Niño</p>",
+            "<p>Warm eastern Pacific</p>",
+            "<p>Weak monsoon; drought risk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>La Niña</p>",
+            "<p>Cold eastern Pacific</p>",
+            "<p>Strong monsoon; flood risk</p>"
           ]
         }
       ]
@@ -422,7 +443,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ceg4p9c"
+      "id": "ceg4p9c",
+      "content": "Rainfall in India is highly uneven. The western coast and northeastern states receive heavy rainfall, while Rajasthan and parts of Ladakh receive very little. "
     },
     {
       "id": "4wl9kkj",
@@ -431,36 +453,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Rainfall Range</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Western Coast &amp; Northeast</p>",
+            "<p>&gt;200 cm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ganga Plains</p>",
+            "<p>100–200 cm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deccan Interior</p>",
+            "<p>50–100 cm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Western Rajasthan</p>",
+            "<p>&lt;50 cm</p>"
           ]
         }
       ]
@@ -478,36 +500,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Topic</strong></p>",
+            "<p><strong>Remember</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Main climate driver</p>",
+            "<p>Monsoon winds</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wettest place</p>",
+            "<p>Mawsynram</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rain shadow example</p>",
+            "<p>Deccan Plateau</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Retreating monsoon rain</p>",
+            "<p>Tamil Nadu</p>"
           ]
         }
       ]

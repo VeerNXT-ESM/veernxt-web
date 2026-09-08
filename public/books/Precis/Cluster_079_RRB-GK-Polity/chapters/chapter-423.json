@@ -1,0 +1,124 @@
+{
+  "title": "Organizational Structure",
+  "order": 423,
+  "blocks": [
+    {
+      "id": "fsuexi7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Role</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairman &amp; Managing Director</p>",
+            "<p>Head of FCI</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Board of Directors</p>",
+            "<p>Policy decisions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Zonal Offices</p>",
+            "<p>North, South, East, West, North-East</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Organizational structure determines the allocation of responsibilities, authority relationships, and channels of communication across an enterprise.",
+      "id": "t4egch3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Line Organization",
+        "Functional Organization"
+      ],
+      "rows": [
+        [
+          "Chain of Command",
+          "Direct and vertical from top to bottom",
+          "Specialized functional authority across departments"
+        ],
+        [
+          "Unity of Command",
+          "Strictly maintained",
+          "Violated as workers report to multiple functional specialists"
+        ],
+        [
+          "Specialization",
+          "Low degree of specialization",
+          "High degree of functional specialization"
+        ],
+        [
+          "Suitability",
+          "Small enterprises with simple operational flows",
+          "Large enterprises requiring expert division of labor"
+        ]
+      ],
+      "id": "qded32o"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Models",
+          "value": "4 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Core Principle",
+          "value": "Scalar Chain",
+          "icon": "award"
+        },
+        {
+          "label": "Span Types",
+          "value": "Tall vs Flat",
+          "icon": "info"
+        },
+        {
+          "label": "Key Theorist",
+          "value": "Max Weber",
+          "icon": "calendar"
+        }
+      ],
+      "id": "fvyq4ow"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Principle of Unity of Command is explicitly violated in a Matrix Organizational Structure due to dual reporting lines.",
+        "Line-and-Staff structures frequently generate conflict between operational line managers and specialized staff advisors.",
+        "Flat structures are characterized by a wide span of control and fewer management levels, whereas tall structures feature narrow spans and multiple hierarchical tiers."
+      ],
+      "id": "j18pttj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Organizational structure defines how tasks are allocated, coordinated, and supervised to achieve organizational goals.",
+        "Line organization is the oldest and simplest structural form, characterized by direct vertical flow of authority.",
+        "Functional structure groups employees based on specialized roles and expertise, promoting operational efficiency.",
+        "Matrix organization integrates functional and divisional structures, resulting in a dual chain of command.",
+        "Span of control determines the number of direct subordinates a supervisor can manage effectively."
+      ],
+      "id": "wp7we6q"
+    }
+  ],
+  "enriched": true
+}

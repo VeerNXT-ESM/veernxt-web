@@ -1,0 +1,124 @@
+{
+  "title": "FCI vs CACP",
+  "order": 427,
+  "blocks": [
+    {
+      "id": "dixsp6d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>FCI</strong></p>",
+            "<p><strong>CACP</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Procures food grains</p>",
+            "<p>Recommends MSP</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Implements policy</p>",
+            "<p>Advisory body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Handles storage &amp; distribution</p>",
+            "<p>Analyzes cost of production</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "While CACP recommends Minimum Support Prices, FCI is the operational agency responsible for procuring and distributing foodgrains across India.",
+      "id": "1dxgjy5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "FCI (Food Corporation of India)",
+        "CACP (Commission for Agricultural Costs & Prices)"
+      ],
+      "rows": [
+        [
+          "Nature of Body",
+          "Statutory Body (Food Corporation Act, 1964)",
+          "Attached Office / Advisory Body"
+        ],
+        [
+          "Parent Ministry",
+          "Ministry of Consumer Affairs, Food & Public Distribution",
+          "Ministry of Agriculture & Farmers Welfare"
+        ],
+        [
+          "Primary Function",
+          "Procurement, storage, transport, and distribution of food grains",
+          "Recommending Minimum Support Prices (MSP)"
+        ],
+        [
+          "Key Output",
+          "Operational implementation of national food security and PDS",
+          "Price policy reports and MSP recommendations for 22 crops"
+        ]
+      ],
+      "id": "k1zueap"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "FCI Established",
+          "value": "1965",
+          "icon": "calendar"
+        },
+        {
+          "label": "CACP Renamed",
+          "value": "1985",
+          "icon": "clock"
+        },
+        {
+          "label": "Mandated MSP Crops",
+          "value": "22",
+          "icon": "book"
+        },
+        {
+          "label": "Governing Act",
+          "value": "1964 Act",
+          "icon": "info"
+        }
+      ],
+      "id": "h3uascx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CACP only recommends MSPs; the final decision is made by the Cabinet Committee on Economic Affairs (CCEA) chaired by the Prime Minister.",
+        "FCI comes under the Ministry of Consumer Affairs, Food and Public Distribution, whereas CACP comes under the Ministry of Agriculture & Farmers Welfare.",
+        "CACP was originally formed as the Agricultural Prices Commission in 1965 and was renamed to CACP in 1985."
+      ],
+      "id": "52o0xr9"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "FCI (Food Corporation of India) is a statutory corporation established under the Food Corporation Act, 1964.",
+        "CACP (Commission for Agricultural Costs and Prices) is an attached office of the Ministry of Agriculture & Farmers Welfare.",
+        "CACP recommends Minimum Support Prices (MSP) for 22 mandated crops and Fair & Remunerative Price (FRP) for sugarcane.",
+        "FCI functions as the main operational agency responsible for procurement, storage, buffer stocking, and public distribution of foodgrains.",
+        "Final MSP decisions based on CACP recommendations are approved by the Cabinet Committee on Economic Affairs (CCEA)."
+      ],
+      "id": "o0lj8pk"
+    }
+  ],
+  "enriched": true
+}

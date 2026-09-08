@@ -1,0 +1,114 @@
+{
+  "title": "1. Soil as a Dynamic System",
+  "order": 180,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Soil consists of four major components: mineral matter (about 45%), organic matter (about 5%), water (25%) and air (25%). The proportions vary depending on climate and location.",
+      "id": "c5ylvdz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Mineral Matter",
+          "value": "45%",
+          "icon": "info"
+        },
+        {
+          "label": "Soil Water",
+          "value": "25%",
+          "icon": "check"
+        },
+        {
+          "label": "Soil Air",
+          "value": "25%",
+          "icon": "clock"
+        },
+        {
+          "label": "Organic Matter",
+          "value": "5%",
+          "icon": "award"
+        }
+      ],
+      "id": "73pru03"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Soil consists of four major components: mineral matter (about 45%), organic matter (about 5%), water (25%) and air (25%).",
+      "id": "jioe3e6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Soil is composed of four major components: mineral matter, organic matter, water, and air.",
+        "Mineral matter forms the largest proportion (45%) and originates from weathered parent rock.",
+        "Organic matter, also known as humus, accounts for 5% of soil and comprises decomposed plant and animal remains.",
+        "Water and air each occupy 25% of the pore spaces, essential for nutrient transport and supplying oxygen to roots respectively."
+      ],
+      "id": "dspw317"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Component",
+        "Proportion",
+        "Source / Key Role"
+      ],
+      "rows": [
+        [
+          "Mineral Matter",
+          "45%",
+          "Derived from weathered parent rock"
+        ],
+        [
+          "Organic Matter (Humus)",
+          "5%",
+          "Decomposed plant and animal remains"
+        ],
+        [
+          "Soil Water",
+          "25%",
+          "Occupies pore spaces; essential for nutrient transport"
+        ],
+        [
+          "Soil Air",
+          "25%",
+          "Fills remaining pore spaces; supplies oxygen to roots"
+        ]
+      ],
+      "id": "jko8ioi"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mineral Matter: Derived from weathered parent rock.",
+      "id": "9kb6z95"
+    },
+    {
+      "type": "paragraph",
+      "content": "Organic Matter (Humus): Decomposed plant and animal remains.",
+      "id": "pjp9vv9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exam questions frequently test the specific breakdown of soil volume: 45% mineral, 5% organic, 25% water, and 25% air.",
+        "Remember that soil water facilitates nutrient transport, whereas soil air supplies oxygen to roots.",
+        "Proportions of soil components are not static; they vary based on climate and location."
+      ],
+      "id": "wyd94r8"
+    },
+    {
+      "type": "paragraph",
+      "content": "Soil Water: Occupies pore spaces; essential for nutrient transport.",
+      "id": "jsdllmc"
+    },
+    {
+      "type": "paragraph",
+      "content": "Soil Air: Fills remaining pore spaces; supplies oxygen to roots.",
+      "id": "fheb14y"
+    }
+  ],
+  "enriched": true
+}

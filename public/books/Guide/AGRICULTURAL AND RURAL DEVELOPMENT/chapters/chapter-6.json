@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ex32dqr"
+      "id": "ex32dqr",
+      "content": "Animal husbandry is the management, breeding, and care of farm animals including cattle, buffalo, goat, sheep, poultry, pig, fish, and honeybees. It accounts for about 4% of India's GDP and 26% of agricultural GDP. India has the world's largest cattle and buffalo population."
     },
     {
       "type": "pullQuote",
@@ -68,118 +69,118 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Breed</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>State of Origin</strong></p>",
+            "<p><strong>Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Gir</p>",
+            "<p>Milch</p>",
+            "<p>Gujarat</p>",
+            "<p>One of best milch breeds; 2000–3000 L/lactation; high Surti fat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sahiwal</p>",
+            "<p>Milch</p>",
+            "<p>Punjab/Rajasthan</p>",
+            "<p>Best Indian milch breed; 2000–3500 L; tick-resistant</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Red Sindhi</p>",
+            "<p>Milch</p>",
+            "<p>Sindh (Pakistan/India)</p>",
+            "<p>2000–3000 L/lactation; good for heat-stress areas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tharparkar</p>",
+            "<p>Dual Purpose</p>",
+            "<p>Rajasthan (Thar)</p>",
+            "<p>Tolerates arid conditions; 1800–2500 L</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ongole</p>",
+            "<p>Dual Purpose</p>",
+            "<p>Andhra Pradesh</p>",
+            "<p>Heavy draught breed; used globally for beef/draught</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kankrej</p>",
+            "<p>Dual Purpose</p>",
+            "<p>Gujarat/Rajasthan</p>",
+            "<p>Best draught breed of India; fast walker; heavy build</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hariana</p>",
+            "<p>Dual Purpose</p>",
+            "<p>Haryana, UP</p>",
+            "<p>Good for agriculture; moderate milk 1000–1500 L</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Nagpuri (Punganur)</p>",
+            "<p>Draught</p>",
+            "<p>Maharashtra/AP</p>",
+            "<p>Strong draught; difficult terrain</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hallikar</p>",
+            "<p>Draught</p>",
+            "<p>Karnataka</p>",
+            "<p>Known for long-distance walking; tight draft</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Holstein Friesian (HF)</p>",
+            "<p>Exotic Milch</p>",
+            "<p>Netherlands/Germany</p>",
+            "<p>Highest milk yield globally; 6000–8000 L/lactation; black-white</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Jersey</p>",
+            "<p>Exotic Milch</p>",
+            "<p>Jersey Island (UK)</p>",
+            "<p>High fat % (5.5%); 4000–6000 L; brown with white spots; heat-tolerant</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Brown Swiss</p>",
+            "<p>Exotic Dual</p>",
+            "<p>Switzerland</p>",
+            "<p>Moderate milk with high protein; hardy; good for crossbreeding</p>"
           ]
         }
       ]
@@ -197,92 +198,92 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lactation Period</p>",
+            "<p>Period from parturition (calving) to drying off; 305 days standard</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dry Period</p>",
+            "<p>Period between lactation and next calving; ~60 days; needed for udder rest</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Calving Interval</p>",
+            "<p>Time between two consecutive calvings; ideal is 12–13 months</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SNF (Solids Not Fat)</p>",
+            "<p>Protein + lactose + minerals in milk; indicator of milk quality; min 8.5% in cow milk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fat %</p>",
+            "<p>Cow milk: 3.5–4.5%; Buffalo milk: 7–8%; Jersey: 5.5%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Crossbreeding</p>",
+            "<p>HF x Sahiwal = Karan Fries; Jersey x Red Sindhi = Karan Swiss (NDRI crosses)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Operation Flood</p>",
+            "<p>White Revolution; Dr. Verghese Kurien; NDDB; 1970; made India largest milk producer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NDDB</p>",
+            "<p>National Dairy Development Board; HQ Anand (Gujarat); cooperative model (Amul)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NDRI</p>",
+            "<p>National Dairy Research Institute; Karnal, Haryana; research and breed development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Colostrum</p>",
+            "<p>First milk after calving; rich in immunoglobulins; must be fed to calf for 3 days</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Milk Fever (Hypocalcaemia)</p>",
+            "<p>Drop in blood calcium at calving; treated with IV calcium borogluconate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Foot and Mouth Disease (FMD)</p>",
+            "<p>Viral; affects cloven-hoofed animals; vesicles on mouth/feet; vaccination mandatory</p>"
           ]
         }
       ]
@@ -300,78 +301,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Broiler Breeds</p>",
+            "<p>Cobb-400, Ross-308, Hubbard Classic; reach 2 kg in 6 weeks; FCR &lt; 2.0</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Layer Breeds</p>",
+            "<p>BV-300, Lohmann Brown, Hy-Line; 300+ eggs/year; eggs at 18 weeks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Indigenous Breeds</p>",
+            "<p>Aseel, Kadaknath (Jhabua, MP), Chittagong, Busra; low egg yield but quality meat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kadaknath</p>",
+            "<p>Black meat due to melanin; medicinal value; GI tag for Jhabua, MP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Housing Systems</p>",
+            "<p>Deep litter system; Cage system (Battery cage); Semi-intensive; Backyard</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Brooding</p>",
+            "<p>Care of chicks in first 4 weeks; temperature 35°C at week 1, reducing by 3°C/week</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>FCR (Feed Conversion Ratio)</p>",
+            "<p>Feed consumed / Body weight gained; lower is better; broiler FCR target &lt;1.8</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Diseases</p>",
+            "<p>Newcastle Disease (Ranikhet), Marek's Disease, Gumboro (IBD), Avian Influenza (H5N1)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Newcastle Disease</p>",
+            "<p>Viral; torticollis, nervous signs; highly contagious; vaccination with Lasota vaccine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Avian Influenza</p>",
+            "<p>H5N1 strain; zoonotic risk; affected birds culled; notifiable disease</p>"
           ]
         }
       ]
@@ -398,71 +399,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Capture Fisheries</p>",
+            "<p>Fishing from natural water bodies (sea, rivers, lakes); EEZ — 200 nautical miles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Aquaculture (Culture Fisheries)</p>",
+            "<p>Controlled rearing of fish, shrimp in ponds/tanks/cages; fastest growing food sector</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major Freshwater Fish</p>",
+            "<p>Rohu (Labeo rohita), Catla (Catla catla), Mrigal, Common Carp, Grass Carp, Silver Carp</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major Marine Fish</p>",
+            "<p>Hilsa, Bombay Duck, Pomfret, Prawns, Tuna, Sardine, Mackerel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Composite Fish Culture</p>",
+            "<p>Polyculture of 5–6 compatible species in same pond (Catla + Rohu + Mrigal + Carps)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Shrimp Culture</p>",
+            "<p>Penaeus monodon (Tiger shrimp), P. vannamei (White leg shrimp) most cultured</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Blue Revolution</p>",
+            "<p>Increase fish production; launched 1985–90; PM Matsya Sampada Yojana (2020) current scheme</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ICAR-CIFA</p>",
+            "<p>Central Institute of Freshwater Aquaculture, Bhubaneswar; freshwater fish research</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MPEDA</p>",
+            "<p>Marine Products Export Development Authority; promotes marine product exports</p>"
           ]
         }
       ]

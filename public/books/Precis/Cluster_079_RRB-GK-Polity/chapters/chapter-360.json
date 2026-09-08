@@ -1,0 +1,141 @@
+{
+  "title": "Comparison: PFRDA vs RBI vs SEBI vs IRDAI",
+  "order": 360,
+  "blocks": [
+    {
+      "id": "a42rlm5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>PFRDA</strong></p>",
+            "<p><strong>RBI</strong></p>",
+            "<p><strong>SEBI</strong></p>",
+            "<p><strong>IRDAI</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sector</p>",
+            "<p>Pension</p>",
+            "<p>Banking</p>",
+            "<p>Capital Market</p>",
+            "<p>Insurance</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Act</p>",
+            "<p>2013</p>",
+            "<p>1934</p>",
+            "<p>1992</p>",
+            "<p>1999</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Primary Role</p>",
+            "<p>Retirement Security</p>",
+            "<p>Monetary Stability</p>",
+            "<p>Investor Protection</p>",
+            "<p>Policyholder Protection</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Each regulatory body plays a distinct and crucial role in maintaining financial stability and consumer protection across India's financial ecosystem.",
+      "id": "z5uezwa"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Regulator",
+        "Sector Regulated",
+        "Governing Act",
+        "Headquarters"
+      ],
+      "rows": [
+        [
+          "RBI",
+          "Banking & Money Market",
+          "RBI Act, 1934",
+          "Mumbai"
+        ],
+        [
+          "SEBI",
+          "Capital & Securities Market",
+          "SEBI Act, 1992",
+          "Mumbai"
+        ],
+        [
+          "IRDAI",
+          "Insurance Sector",
+          "IRDA Act, 1999",
+          "Hyderabad"
+        ],
+        [
+          "PFRDA",
+          "Pension Sector",
+          "PFRDA Act, 2013",
+          "New Delhi"
+        ]
+      ],
+      "id": "fvmoivu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "RBI Established",
+          "value": "1935",
+          "icon": "calendar"
+        },
+        {
+          "label": "SEBI Statutory Act",
+          "value": "1992",
+          "icon": "award"
+        },
+        {
+          "label": "IRDAI Headquarters",
+          "value": "Hyderabad",
+          "icon": "info"
+        },
+        {
+          "label": "PFRDA Act Passed",
+          "value": "2013",
+          "icon": "book"
+        }
+      ],
+      "id": "ugg6bex"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Headquarters trap: RBI and SEBI are based in Mumbai, whereas IRDAI is in Hyderabad and PFRDA is in New Delhi.",
+        "SEBI was initially established as a non-statutory body in 1988 before receiving statutory powers through the SEBI Act, 1992.",
+        "PFRDA was established by an executive order in 2003, but its governing act was officially notified later in 2013."
+      ],
+      "id": "hm5eqyl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "RBI oversees monetary policy, currency issuance, and banking operations under the RBI Act, 1934.",
+        "SEBI regulates stock exchanges, securities transactions, and investor protection via the SEBI Act, 1992.",
+        "IRDAI enforces regulations across life and general insurance companies under the IRDA Act, 1999.",
+        "PFRDA regulates the National Pension System (NPS) and the pension market in India under the PFRDA Act, 2013.",
+        "All four regulatory heads are members of the Financial Stability and Development Council (FSDC) chaired by the Union Finance Minister."
+      ],
+      "id": "9ckwq78"
+    }
+  ],
+  "enriched": true
+}

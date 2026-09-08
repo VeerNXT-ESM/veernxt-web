@@ -10,43 +10,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Established</p>",
+            "<p>1999</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Act</p>",
+            "<p>Insurance Regulatory and Development Authority Act, 1999</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Type</p>",
+            "<p>Statutory Regulatory Body</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Headquarters</p>",
+            "<p>Hyderabad</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Came into Operation</p>",
+            "<p>2000</p>"
           ]
         }
       ]
@@ -131,7 +131,8 @@
     },
     {
       "type": "paragraph",
-      "id": "spsfayc"
+      "id": "spsfayc",
+      "content": "IRDAI was created following the recommendations of the Malhotra Committee (1993) to open the insurance sector to private companies and improve competition."
     }
   ],
   "enriched": true

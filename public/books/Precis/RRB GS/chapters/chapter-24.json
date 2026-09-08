@@ -51,10 +51,10 @@
       "id": "2ls4d7h",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Atomic number of Carbon = 6.",
+        " Valency of Carbon = 4.",
+        "Carbon shows catenation (self-linking property).",
+        "Carbon forms covalent bonds."
       ]
     },
     {
@@ -70,41 +70,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Allotrope</strong></p>",
+            "<p><strong>Structure</strong></p>",
+            "<p><strong>Key Property</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Diamond</p>",
+            "<p>Each carbon bonded to 4 carbons</p>",
+            "<p>Hardest natural substance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Graphite</p>",
+            "<p>Layers of hexagonal rings</p>",
+            "<p>Good conductor of electricity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fullerene (C60)</p>",
+            "<p>Spherical structure</p>",
+            "<p>Used in nanotechnology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Coal</p>",
+            "<p>Amorphous form</p>",
+            "<p>Fuel</p>"
           ]
         }
       ]
@@ -117,15 +117,36 @@
     },
     {
       "type": "paragraph",
-      "id": "m63bxpq"
+      "id": "m63bxpq",
+      "content": "Covalent bond is formed by sharing of electrons."
+    },
+    {
+      "id": "jp9dskd",
+      "type": "image",
+      "imageId": "x5g7bo9",
+      "src": "/books/Precis/RRB GS/images/image_x5g7bo9.png"
+    },
+    {
+      "id": "za5i5v3",
+      "type": "image",
+      "imageId": "4wntkor",
+      "src": "/books/Precis/RRB GS/images/image_4wntkor.png"
+    },
+    {
+      "id": "ia73t73",
+      "type": "image",
+      "imageId": "u5jn516",
+      "src": "/books/Precis/RRB GS/images/image_u5jn516.png"
     },
     {
       "type": "paragraph",
-      "id": "as0dg98"
+      "id": "as0dg98",
+      "content": "Covalent compounds have low melting and boiling points."
     },
     {
       "type": "paragraph",
-      "id": "amklxre"
+      "id": "amklxre",
+      "content": "They are poor conductors of electricity."
     },
     {
       "id": "1a40f3b",
@@ -135,7 +156,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fyd8dwg"
+      "id": "fyd8dwg",
+      "content": "Hydrocarbons are compounds containing only carbon and hydrogen."
     },
     {
       "id": "cafjcnn",
@@ -144,55 +166,59 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Bond Type</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alkane</p>",
+            "<p>Single bond</p>",
+            "<p>Methane (CH4)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alkene</p>",
+            "<p>Double bond</p>",
+            "<p>Ethene (C2H4)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alkyne</p>",
+            "<p>Triple bond</p>",
+            "<p>Ethyne (C2H2)</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "w916gte"
+      "id": "w916gte",
+      "content": "General formula:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9qjksjj"
+      "id": "9qjksjj",
+      "content": "Alkane = CnH2n+2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xxtdmk5"
+      "id": "xxtdmk5",
+      "content": "Alkene = CnH2n"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "aydj9k2"
+      "id": "aydj9k2",
+      "content": "Alkyne = CnH2n-2"
     },
     {
       "id": "if1hfnk",
@@ -202,11 +228,13 @@
     },
     {
       "type": "paragraph",
-      "id": "l1qqvvb"
+      "id": "l1qqvvb",
+      "content": "Series of compounds with same functional group and similar chemical properties."
     },
     {
       "type": "paragraph",
-      "id": "1o34upv"
+      "id": "1o34upv",
+      "content": "Successive members differ by –CH2 group."
     },
     {
       "id": "ysvh8sf",
@@ -221,49 +249,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Functional Group</strong></p>",
+            "<p><strong>Suffix</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>–OH (Alcohol)</p>",
+            "<p>-ol</p>",
+            "<p>Ethanol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>–COOH (Carboxylic acid)</p>",
+            "<p>-oic acid</p>",
+            "<p>Ethanoic acid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>–CHO (Aldehyde)</p>",
+            "<p>-al</p>",
+            "<p>Ethanal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>–CO– (Ketone)</p>",
+            "<p>-one</p>",
+            "<p>Propanone</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>–X (Halogen)</p>",
+            "<p>Halo</p>",
+            "<p>Chloroethane</p>"
           ]
         }
       ]
@@ -276,15 +304,18 @@
     },
     {
       "type": "paragraph",
-      "id": "26cs0k9"
+      "id": "26cs0k9",
+      "content": "Ethanol: Used as fuel, solvent, antiseptic."
     },
     {
       "type": "paragraph",
-      "id": "5yqvgtl"
+      "id": "5yqvgtl",
+      "content": "Ethanoic acid (Acetic acid): Present in vinegar."
     },
     {
       "type": "paragraph",
-      "id": "0f5mdvg"
+      "id": "0f5mdvg",
+      "content": "Esterification: Ethanoic acid + Alcohol → Ester (pleasant smell)."
     },
     {
       "id": "j8q5awl",
@@ -294,7 +325,8 @@
     },
     {
       "type": "paragraph",
-      "id": "co2ttq3"
+      "id": "co2ttq3",
+      "content": "Soap: Sodium or potassium salt of fatty acid."
     },
     {
       "type": "pullQuote",
@@ -303,15 +335,18 @@
     },
     {
       "type": "paragraph",
-      "id": "nc7rgke"
+      "id": "nc7rgke",
+      "content": "Soap forms micelle in water."
     },
     {
       "type": "paragraph",
-      "id": "6z3x7pv"
+      "id": "6z3x7pv",
+      "content": "Hard water reduces effectiveness of soap."
     },
     {
       "type": "paragraph",
-      "id": "twpyq32"
+      "id": "twpyq32",
+      "content": "Detergents work in hard water."
     },
     {
       "id": "i74g3a1",
@@ -321,19 +356,23 @@
     },
     {
       "type": "paragraph",
-      "id": "kd5wfuv"
+      "id": "kd5wfuv",
+      "content": "Combustion: Carbon compounds burn to form CO2 and water."
     },
     {
       "type": "paragraph",
-      "id": "gq5ogzg"
+      "id": "gq5ogzg",
+      "content": "Oxidation: Addition of oxygen."
     },
     {
       "type": "paragraph",
-      "id": "9ufgek8"
+      "id": "9ufgek8",
+      "content": "Substitution reaction common in alkanes."
     },
     {
       "type": "paragraph",
-      "id": "tu1scik"
+      "id": "tu1scik",
+      "content": "Addition reaction common in alkenes and alkynes."
     },
     {
       "id": "4h5w36l",
@@ -348,49 +387,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Carbon Atoms</strong></p>",
+            "<p><strong>Prefix</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1</p>",
+            "<p>Meth-</p>",
+            "<p>Methane</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2</p>",
+            "<p>Eth-</p>",
+            "<p>Ethane</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>3</p>",
+            "<p>Prop-</p>",
+            "<p>Propane</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>4</p>",
+            "<p>But-</p>",
+            "<p>Butane</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>5</p>",
+            "<p>Pent-</p>",
+            "<p>Pentane</p>"
           ]
         }
       ]
@@ -408,32 +447,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Bond Type</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Saturated</p>",
+            "<p>Single bond only</p>",
+            "<p>Ethane</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Unsaturated</p>",
+            "<p>Double/Triple bond</p>",
+            "<p>Ethene, Ethyne</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "0kk7p87"
+      "id": "0kk7p87",
+      "content": "Unsaturated hydrocarbons undergo addition reactions."
     },
     {
       "type": "comparisonTable",
@@ -468,7 +508,8 @@
     },
     {
       "type": "paragraph",
-      "id": "f7ovkra"
+      "id": "f7ovkra",
+      "content": "Saturated hydrocarbons undergo substitution reactions."
     },
     {
       "id": "6uwgz14",
@@ -483,49 +524,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Compound</strong></p>",
+            "<p><strong>Formula</strong></p>",
+            "<p><strong>Important Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Methane</p>",
+            "<p>CH4</p>",
+            "<p>Fuel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ethanol</p>",
+            "<p>C2H5OH</p>",
+            "<p>Fuel, antiseptic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ethanoic Acid</p>",
+            "<p>CH3COOH</p>",
+            "<p>Vinegar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Glucose</p>",
+            "<p>C6H12O6</p>",
+            "<p>Energy source</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Benzene</p>",
+            "<p>C6H6</p>",
+            "<p>Industrial solvent</p>"
           ]
         }
       ]
@@ -538,15 +579,18 @@
     },
     {
       "type": "paragraph",
-      "id": "imlq809"
+      "id": "imlq809",
+      "content": "Soap molecules have hydrophilic head and hydrophobic tail."
     },
     {
       "type": "paragraph",
-      "id": "6hi0n1m"
+      "id": "6hi0n1m",
+      "content": "Soap forms micelle in water trapping dirt particles."
     },
     {
       "type": "paragraph",
-      "id": "iuwgek3"
+      "id": "iuwgek3",
+      "content": "Hard water contains Ca2+ and Mg2+ ions which reduce soap efficiency."
     },
     {
       "id": "6wigkst",
@@ -556,15 +600,18 @@
     },
     {
       "type": "paragraph",
-      "id": "h10p119"
+      "id": "h10p119",
+      "content": "Cracking: Breaking of large hydrocarbons into smaller ones."
     },
     {
       "type": "paragraph",
-      "id": "5incuvb"
+      "id": "5incuvb",
+      "content": "Polymerisation: Joining of small molecules to form large polymer."
     },
     {
       "type": "paragraph",
-      "id": "4w28gah"
+      "id": "4w28gah",
+      "content": "Example: Ethene → Polyethene."
     },
     {
       "id": "4l65nx1",
@@ -574,15 +621,18 @@
     },
     {
       "type": "paragraph",
-      "id": "dojo8vo"
+      "id": "dojo8vo",
+      "content": "CO2 is a greenhouse gas."
     },
     {
       "type": "paragraph",
-      "id": "37prm2l"
+      "id": "37prm2l",
+      "content": "Excess CO2 leads to global warming."
     },
     {
       "type": "paragraph",
-      "id": "u1c9cp7"
+      "id": "u1c9cp7",
+      "content": "Burning of fossil fuels increases CO2 level."
     },
     {
       "id": "tjqtpx7",
@@ -592,11 +642,13 @@
     },
     {
       "type": "paragraph",
-      "id": "y2ptip7"
+      "id": "y2ptip7",
+      "content": "1. Meth-, Eth-, Prop- prefixes are frequently asked."
     },
     {
       "type": "paragraph",
-      "id": "5oe0kg3"
+      "id": "5oe0kg3",
+      "content": "2. Unsaturated compounds give addition reactions."
     },
     {
       "type": "examAlert",
@@ -609,47 +661,64 @@
     },
     {
       "type": "paragraph",
-      "id": "lkxzj7z"
+      "id": "lkxzj7z",
+      "content": "3. Soap forms micelle."
     },
     {
       "type": "paragraph",
-      "id": "yxz52rg"
+      "id": "yxz52rg",
+      "content": "4. CO2 contributes to greenhouse effect."
     },
     {
       "type": "paragraph",
-      "id": "4w5h50t"
+      "id": "4w5h50t",
+      "content": "5. Polymerisation forms plastics."
     },
     {
       "type": "paragraph",
-      "id": "mto3yae"
+      "id": "mto3yae",
+      "content": "6. Carbon valency = 4."
     },
     {
       "type": "paragraph",
-      "id": "1y6mwfi"
+      "id": "1y6mwfi",
+      "content": "7. Diamond is hardest; Graphite conducts electricity."
     },
     {
       "type": "paragraph",
-      "id": "w8v4brt"
+      "id": "w8v4brt",
+      "content": "8. Alkane formula = CnH2n+2."
     },
     {
       "type": "paragraph",
-      "id": "m6dhwcv"
+      "id": "m6dhwcv",
+      "content": "9. Functional groups determine properties."
     },
     {
       "type": "paragraph",
-      "id": "96q0o6q"
+      "id": "96q0o6q",
+      "content": "10. Soap does not work well in hard water."
     },
     {
       "type": "paragraph",
-      "id": "334tsz8"
+      "id": "334tsz8",
+      "content": "11. Ethanol used as fuel."
     },
     {
       "type": "paragraph",
-      "id": "j87r7az"
+      "id": "j87r7az",
+      "content": "12. Ester formation gives fruity smell."
     },
     {
       "type": "paragraph",
-      "id": "vz18zy8"
+      "id": "vz18zy8",
+      "content": "13. Catenation is property of carbon."
+    },
+    {
+      "id": "tw9hpri",
+      "type": "image",
+      "imageId": "9jlf2ar",
+      "src": "/books/Precis/RRB GS/images/image_9jlf2ar.png"
     }
   ],
   "enriched": true

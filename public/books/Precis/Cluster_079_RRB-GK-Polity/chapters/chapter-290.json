@@ -1,0 +1,137 @@
+{
+  "title": "Status and Establishment",
+  "order": 290,
+  "blocks": [
+    {
+      "id": "43chhac",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Act</p>",
+            "<p>Lokpal and Lokayuktas Act, 2013</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type</p>",
+            "<p>Statutory Body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nature</p>",
+            "<p>Anti-corruption Ombudsman</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>First Lokpal</p>",
+            "<p>Justice Pinaki Chandra Ghose (2019)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Applies To</p>",
+            "<p>Public servants including PM, Ministers, MPs, and officials</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Constitutional bodies derive their powers, status, and authority directly from the Constitution of India.",
+      "id": "f3n3tw9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category",
+        "Source of Authority",
+        "Key Examples",
+        "Modification / Abolition"
+      ],
+      "rows": [
+        [
+          "Constitutional Body",
+          "Directly from the Constitution of India",
+          "Election Commission, UPSC, Finance Commission, CAG",
+          "Requires Constitutional Amendment under Article 368"
+        ],
+        [
+          "Statutory Body",
+          "Enacted by an Act of Parliament or State Legislature",
+          "NHRC, SEBI, NGT, Central Vigilance Commission",
+          "Requires ordinary legislative amendment or repeal"
+        ],
+        [
+          "Executive Body",
+          "Cabinet Resolution or Executive Notification",
+          "NITI Aayog, Law Commission of India",
+          "Can be created or dissolved by executive decision alone"
+        ]
+      ],
+      "id": "twqpjdc"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Election Commission",
+          "value": "Article 324",
+          "icon": "book"
+        },
+        {
+          "label": "Finance Commission",
+          "value": "Article 280",
+          "icon": "calendar"
+        },
+        {
+          "label": "UPSC & SPSCs",
+          "value": "Article 315",
+          "icon": "award"
+        },
+        {
+          "label": "CAG of India",
+          "value": "Article 148",
+          "icon": "check"
+        }
+      ],
+      "id": "4qc785k"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Match the Constitutional Body with its correct Article (e.g., CAG: Art 148, Finance Commission: Art 280, UPSC: Art 315, Election Commission: Art 324).",
+        "Distinguish between Constitutional bodies (enumerated in text), Statutory bodies (created by Parliamentary Act), and Executive bodies (created by Cabinet resolution).",
+        "Pay attention to the appointing authority and security of tenure guaranteed to constitutional heads by the President of India."
+      ],
+      "id": "jf9vshw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional bodies derive their authority directly from specific articles of the Constitution of India.",
+        "Article 324 establishes the Election Commission of India to superintend, direct, and control elections.",
+        "Article 280 mandates the President of India to constitute a Finance Commission every fifth year.",
+        "Article 315 provides for the establishment of the Union Public Service Commission and State Public Service Commissions.",
+        "Article 148 creates the independent office of the Comptroller and Auditor General of India as the custodian of public funds."
+      ],
+      "id": "kw99r23"
+    }
+  ],
+  "enriched": true
+}

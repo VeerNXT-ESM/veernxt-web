@@ -1,12 +1,37 @@
 {
-  "id": "cvgfedd",
-  "title": "Introduction",
+  "id": "rdzb3su",
+  "title": "Dc Circuits",
   "order": 1,
   "blocks": [
     {
+      "id": "0wc0s8x",
+      "type": "image",
+      "imageId": "wgtxtah",
+      "src": "/books/Guide/ELECTRICAL ENGINEERING/images/image_wgtxtah.png"
+    },
+    {
       "type": "heading",
       "level": 4,
-      "id": "p22fvz5"
+      "id": "p22fvz5",
+      "content": "<strong>DISCIPLINE GUIDE BOOK</strong>"
+    },
+    {
+      "id": "nzohnh9",
+      "type": "image",
+      "imageId": "8t7brzm",
+      "src": "/books/Guide/ELECTRICAL ENGINEERING/images/image_8t7brzm.png"
+    },
+    {
+      "id": "gaaua8b",
+      "type": "image",
+      "imageId": "n1ppzu5",
+      "src": "/books/Guide/ELECTRICAL ENGINEERING/images/image_n1ppzu5.png"
+    },
+    {
+      "id": "puuouxg",
+      "type": "image",
+      "imageId": "2ka1fbi",
+      "src": "/books/Guide/ELECTRICAL ENGINEERING/images/image_2ka1fbi.png"
     },
     {
       "type": "statStrip",
@@ -47,38 +72,58 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "7h9x6hf"
+      "id": "7h9x6hf",
+      "content": "<strong>ELECTRICAL ENGINEERING</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4qmaxgt"
+      "id": "4qmaxgt",
+      "content": "<strong>PSU NAVRATNA</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "th6milt"
+      "id": "th6milt",
+      "content": "<strong>2026</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6yap7u2"
+      "id": "6yap7u2",
+      "content": "<strong>PREFACE</strong>"
     },
     {
       "type": "paragraph",
-      "id": "pxre69n"
+      "id": "pxre69n",
+      "content": "This Electrical Engineering Guide Book is part of the VeerNXT PSU Navratna Series. It is written specifically for engineers appearing in recruitment examinations conducted by BEL, NALCO, NLC India, NHPC, SJVN, RINL, NBCC, SECI, IRCON, RVNL, RITES, Mazagon Dock, and other PSUs that test Electrical Engineering knowledge in their Computer Based Tests (CBTs)."
+    },
+    {
+      "id": "ufuibr7",
+      "type": "image",
+      "imageId": "c36qz9w",
+      "src": "/books/Guide/ELECTRICAL ENGINEERING/images/image_c36qz9w.png"
+    },
+    {
+      "id": "usgejc1",
+      "type": "image",
+      "imageId": "ylieop8",
+      "src": "/books/Guide/ELECTRICAL ENGINEERING/images/image_ylieop8.png"
     },
     {
       "type": "paragraph",
-      "id": "czuzuor"
+      "id": "czuzuor",
+      "content": "The book is structured into ten chapters covering the complete technical syllabus: DC Circuits, AC Circuits, Network Analysis, Electrical Machines, Transformers, Power Systems, Control Systems, Measurements, Power Electronics, and Analog &amp; Digital Electronics. Each chapter contains comprehensive theory with derivations, circuit diagrams, formula tables, worked examples, and practice MCQs."
     },
     {
       "type": "paragraph",
-      "id": "y7hgij5"
+      "id": "y7hgij5",
+      "content": "Every concept is explained from first principles so that the student can answer both straightforward formula-based questions and complex application-based questions. Special attention has been given to topics with the highest frequency in PSU exams — Transformers, Induction Motors, Power Factor, Network Theorems, Measuring Instruments, and Power Electronics."
     },
     {
       "type": "paragraph",
-      "id": "c4rmfhb"
+      "id": "c4rmfhb",
+      "content": "<strong>Exam Coverage:</strong>"
     },
     {
       "id": "9cen46g",
@@ -87,89 +132,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>PSU</strong></p>",
+            "<p><strong>Key Electrical Topics Tested</strong></p>",
+            "<p><strong>Exam Mode</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>BEL</p>",
+            "<p>Electronics, Digital, Analog, Power Electronics, Measurements</p>",
+            "<p>CBT + Interview</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NALCO</p>",
+            "<p>Power Systems, Machines, Transformers, Control</p>",
+            "<p>GATE Score + Interview</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NLC India</p>",
+            "<p>Power Generation, Transmission, Machines, Protection</p>",
+            "<p>GATE + NLC CBT</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NHPC</p>",
+            "<p>Hydro Power, Machines, Switchgear, Protection</p>",
+            "<p>GATE Score + DV</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SJVN</p>",
+            "<p>Power Plants, Machines, Control Systems</p>",
+            "<p>CBT + DV</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RINL</p>",
+            "<p>Steel Plant Electrical: Drives, Transformers, HV</p>",
+            "<p>GATE + Interview</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NBCC</p>",
+            "<p>Building Electrical, LT/HT, Earthing</p>",
+            "<p>CBT + Interview</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>MDL</p>",
+            "<p>Ship Electrical, Propulsion, Electronics</p>",
+            "<p>CBT + Interview</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RITES</p>",
+            "<p>Railway Electrification, Traction, Signalling</p>",
+            "<p>CBT + Interview</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RVNL</p>",
+            "<p>Railway Electrification, OHE, Power Supply</p>",
+            "<p>CBT + DV</p>"
           ]
         }
       ]
@@ -177,7 +222,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "hct96yn"
+      "id": "hct96yn",
+      "content": "<strong>TABLE OF CONTENTS</strong>"
     },
     {
       "id": "y59mewp",
@@ -186,100 +232,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Chapter</strong></p>",
+            "<p><strong>Title</strong></p>",
+            "<p><strong>Topics Covered</strong></p>",
+            "<p><strong>Page</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>1</p>",
+            "<p>DC Circuits</p>",
+            "<p>Ohm's Law, KVL, KCL, Network Theorems, Mesh &amp; Node Analysis</p>",
+            "<p>4</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>2</p>",
+            "<p>AC Circuits &amp; Phasors</p>",
+            "<p>RLC Circuits, Impedance, Resonance, Power Factor</p>",
+            "<p>14</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>3</p>",
+            "<p>Network Analysis</p>",
+            "<p>Thevenin, Norton, Superposition, Maximum Power Transfer</p>",
+            "<p>24</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>4</p>",
+            "<p>Transformers</p>",
+            "<p>Construction, EMF Equation, Equivalent Circuit, Losses, Efficiency</p>",
+            "<p>32</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>5</p>",
+            "<p>DC Machines</p>",
+            "<p>DC Motors &amp; Generators — Construction, Characteristics, Speed Control</p>",
+            "<p>44</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>6</p>",
+            "<p>AC Machines</p>",
+            "<p>Induction Motor, Synchronous Machine — Theory &amp; Characteristics</p>",
+            "<p>54</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>7</p>",
+            "<p>Power Systems</p>",
+            "<p>Generation, Transmission, Distribution, Protection, Load Flow</p>",
+            "<p>66</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>8</p>",
+            "<p>Measurements</p>",
+            "<p>PMMC, MI, Dynamometer, Energy Meter, CT, PT, Bridges</p>",
+            "<p>76</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>9</p>",
+            "<p>Power Electronics</p>",
+            "<p>Diodes, Thyristors, Choppers, Inverters, Rectifiers, Drives</p>",
+            "<p>84</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>10</p>",
+            "<p>Control Systems</p>",
+            "<p>TF, Block Diagram, Signal Flow, Stability, Bode, Nyquist</p>",
+            "<p>94</p>"
           ]
         }
       ]
@@ -287,20 +333,24 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "av98nxo"
+      "id": "av98nxo",
+      "content": "<strong>CHAPTER 1 — DC CIRCUITS</strong>"
     },
     {
       "type": "paragraph",
-      "id": "3vcbt4h"
+      "id": "3vcbt4h",
+      "content": "Direct Current (DC) circuits are the foundation of all electrical engineering. A DC circuit carries current in only one direction. Understanding DC circuit laws and theorems is essential not only for circuit analysis but also as a basis for understanding AC circuits and electrical machines. This chapter covers Ohm's Law, Kirchhoff's Laws, methods of circuit analysis, and the most important network theorems."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uazbmah"
+      "id": "uazbmah",
+      "content": "<strong>1.1  Ohm's Law</strong>"
     },
     {
       "type": "paragraph",
-      "id": "gttfvyh"
+      "id": "gttfvyh",
+      "content": "Ohm's Law states that the voltage across a conductor is directly proportional to the current flowing through it, provided the physical conditions (temperature, material) remain constant."
     },
     {
       "id": "3jk072j",
@@ -309,19 +359,21 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>V = I × R        where V = Voltage (Volts), I = Current (Amperes), R = Resistance (Ohms Ω)</strong></p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "pokzuwl"
+      "id": "pokzuwl",
+      "content": "Rearranging: I = V/R and R = V/I. Ohm's Law applies only to linear, bilateral elements. Non-linear elements like diodes and transistors do not obey Ohm's Law."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j2bm8y9"
+      "id": "j2bm8y9",
+      "content": "<strong>Power Relationships</strong>"
     },
     {
       "id": "73j6x7o",
@@ -330,7 +382,7 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>P = VI = I²R = V²/R        (Power dissipated in a resistor)</strong></p>"
           ]
         }
       ]
@@ -342,82 +394,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Quantity</strong></p>",
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>SI Unit</strong></p>",
+            "<p><strong>Unit Symbol</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Voltage / EMF</p>",
+            "<p>V or E</p>",
+            "<p>Volt</p>",
+            "<p>V</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Current</p>",
+            "<p>I</p>",
+            "<p>Ampere</p>",
+            "<p>A</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Resistance</p>",
+            "<p>R</p>",
+            "<p>Ohm</p>",
+            "<p>Ω</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Power</p>",
+            "<p>P</p>",
+            "<p>Watt</p>",
+            "<p>W</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Energy</p>",
+            "<p>W</p>",
+            "<p>Joule</p>",
+            "<p>J</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Conductance</p>",
+            "<p>G = 1/R</p>",
+            "<p>Siemens</p>",
+            "<p>S</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Resistivity</p>",
+            "<p>ρ</p>",
+            "<p>Ohm-metre</p>",
+            "<p>Ω·m</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Charge</p>",
+            "<p>Q = It</p>",
+            "<p>Coulomb</p>",
+            "<p>C</p>"
           ]
         }
       ]
@@ -425,11 +477,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "3uwpxww"
+      "id": "3uwpxww",
+      "content": "<strong>Effect of Temperature on Resistance</strong>"
     },
     {
       "type": "paragraph",
-      "id": "50b9g76"
+      "id": "50b9g76",
+      "content": "Resistance of a conductor changes with temperature. For most metals (positive temperature coefficient), resistance increases with temperature."
     },
     {
       "id": "3smgxmj",
@@ -438,7 +492,7 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>R_T = R₀ (1 + α·T)        where α = temperature coefficient of resistance, T = temperature rise (°C)</strong></p>"
           ]
         }
       ]
@@ -450,81 +504,84 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Material</strong></p>",
+            "<p><strong>Temperature Coefficient α (per °C)</strong></p>",
+            "<p><strong>Nature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Copper</p>",
+            "<p>0.00393</p>",
+            "<p>Positive — resistance increases with temp</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Aluminium</p>",
+            "<p>0.00403</p>",
+            "<p>Positive</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Silver</p>",
+            "<p>0.0038</p>",
+            "<p>Positive</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Carbon / Graphite</p>",
+            "<p>−0.0005</p>",
+            "<p>Negative — resistance decreases with temp</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nichrome</p>",
+            "<p>0.00015</p>",
+            "<p>Very low — used for heating elements</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Silicon (semiconductor)</p>",
+            "<p>Negative</p>",
+            "<p>NTC — thermistor applications</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Germanium</p>",
+            "<p>Negative</p>",
+            "<p>NTC semiconductor</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "f967j9o"
+      "id": "f967j9o",
+      "content": "<strong>1.2  Series and Parallel Resistor Combinations</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e2vwu2n"
+      "id": "e2vwu2n",
+      "content": "<strong>Series Connection</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ponb4ry"
+      "id": "ponb4ry",
+      "content": "In a series circuit, the same current flows through all components. The total resistance is the sum of individual resistances."
     },
     {
       "id": "n95zeil",
@@ -533,19 +590,19 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>R_total = R₁ + R₂ + R₃ + … + Rn</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
+            "<p><strong>V_total = V₁ + V₂ + V₃       (Voltage Divider)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
+            "<p><strong>V_k = V_total × (R_k / R_total)       (Voltage across k-th resistor)</strong></p>"
           ]
         }
       ]
@@ -553,11 +610,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "79m3u0t"
+      "id": "79m3u0t",
+      "content": "<strong>Parallel Connection</strong>"
     },
     {
       "type": "paragraph",
-      "id": "kf127wi"
+      "id": "kf127wi",
+      "content": "In a parallel circuit, the same voltage appears across all branches. The total current is the sum of branch currents."
     },
     {
       "id": "1i8et0w",
@@ -566,19 +625,19 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + …</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
+            "<p><strong>For two resistors: R_total = (R₁ × R₂) / (R₁ + R₂)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
+            "<p><strong>I_k = I_total × (R_total / R_k)       (Current Divider Rule)</strong></p>"
           ]
         }
       ]
@@ -586,20 +645,24 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "g7a6s6x"
+      "id": "g7a6s6x",
+      "content": "<strong>1.3  Kirchhoff's Laws</strong>"
     },
     {
       "type": "paragraph",
-      "id": "87tg9be"
+      "id": "87tg9be",
+      "content": "Kirchhoff's Laws are fundamental to circuit analysis. They apply to any network, regardless of the types of elements (linear or non-linear, active or passive)."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "k4r3ch0"
+      "id": "k4r3ch0",
+      "content": "<strong>Kirchhoff's Current Law (KCL)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "8wx70bg"
+      "id": "8wx70bg",
+      "content": "The algebraic sum of all currents entering and leaving any node (junction) in a circuit is zero. This is based on the principle of conservation of electric charge."
     },
     {
       "id": "3872z7x",
@@ -608,23 +671,26 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>ΣI_entering = ΣI_leaving        OR        ΣI = 0 at a node</strong></p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "1z28aya"
+      "id": "1z28aya",
+      "content": "Example: At a node, if three currents enter (I₁ = 3A, I₂ = 2A) and two currents leave (I₃ = ? and I₄ = 1A): By KCL: 3 + 2 = I₃ + 1, therefore I₃ = 4A."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vw5fohr"
+      "id": "vw5fohr",
+      "content": "<strong>Kirchhoff's Voltage Law (KVL)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "8r5g8ad"
+      "id": "8r5g8ad",
+      "content": "The algebraic sum of all voltages around any closed loop in a circuit is zero. This is based on the principle of conservation of energy."
     },
     {
       "id": "e7ub4a0",
@@ -633,48 +699,57 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>ΣV = 0 around any closed loop</strong></p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "dlfq2jc"
+      "id": "dlfq2jc",
+      "content": "Sign Convention: While traversing a loop, if you pass through a resistor in the direction of assumed current, voltage drop is negative. If you pass through a voltage source from − to +, it is a voltage rise (positive)."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "krgaafc"
+      "id": "krgaafc",
+      "content": "<strong>Mesh Analysis (Loop Current Method)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "jyblhod"
+      "id": "jyblhod",
+      "content": "Mesh Analysis applies KVL to each independent loop (mesh) in a planar circuit. Assign a mesh current to each mesh (usually clockwise). Write KVL for each mesh. Solve the simultaneous equations to find mesh currents. Branch currents are then calculated from mesh currents."
     },
     {
       "type": "paragraph",
-      "id": "xmt5nwd"
+      "id": "xmt5nwd",
+      "content": "For a circuit with n meshes: n simultaneous equations of the form [R][I] = [V] are set up and solved. In matrix form: R·I = V, where R is the resistance matrix, I is the column vector of mesh currents, and V is the column vector of source voltages."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "423bn8x"
+      "id": "423bn8x",
+      "content": "<strong>Node Analysis (Node Voltage Method)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "av5opri"
+      "id": "av5opri",
+      "content": "Node Analysis applies KCL at each node. Choose a reference node (ground, 0V). Assign node voltages V₁, V₂, … at other nodes. Write KCL at each node in terms of node voltages. Solve simultaneous equations. More efficient than mesh analysis when the number of nodes is less than the number of meshes."
     },
     {
       "type": "paragraph",
-      "id": "90m6iij"
+      "id": "90m6iij",
+      "content": "<strong>1.4  Star (Y) and Delta (Δ) Networks</strong>"
     },
     {
       "type": "paragraph",
-      "id": "fr27zkm"
+      "id": "fr27zkm",
+      "content": "Three-terminal resistive networks can be connected in Star (Y) or Delta (Δ) configuration. Conversion between the two is essential for solving complex three-phase circuits and bridge networks."
     },
     {
       "type": "paragraph",
-      "id": "znahs85"
+      "id": "znahs85",
+      "content": "<strong>Delta to Star (Δ → Y) Conversion</strong>"
     },
     {
       "id": "w8wn0f1",
@@ -683,26 +758,27 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>R_A = (R_AB × R_CA) / (R_AB + R_BC + R_CA)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
+            "<p><strong>R_B = (R_AB × R_BC) / (R_AB + R_BC + R_CA)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
+            "<p><strong>R_C = (R_BC × R_CA) / (R_AB + R_BC + R_CA)</strong></p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "y653bdp"
+      "id": "y653bdp",
+      "content": "<strong>Star to Delta (Y → Δ) Conversion</strong>"
     },
     {
       "id": "whc1u6i",
@@ -711,7188 +787,556 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>R_AB = R_A + R_B + (R_A·R_B)/R_C</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
+            "<p><strong>R_BC = R_B + R_C + (R_B·R_C)/R_A</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
+            "<p><strong>R_CA = R_C + R_A + (R_C·R_A)/R_B</strong></p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "a295zvs"
+      "id": "a295zvs",
+      "content": "Special Case: When all three resistors in a delta are equal (R_Δ), each star resistor R_Y = R_Δ/3. Conversely, if all star resistors are equal R_Y, each delta resistor R_Δ = 3·R_Y."
     },
     {
       "type": "paragraph",
-      "id": "wa5a07e"
+      "id": "wa5a07e",
+      "content": "<strong>1.5  Practice MCQs — DC Circuits</strong>"
     },
     {
       "type": "paragraph",
-      "id": "cwa2n9b"
+      "id": "cwa2n9b",
+      "content": "<strong>Q1.  </strong>Three resistors of 6Ω, 3Ω, and 2Ω are connected in parallel. What is the equivalent resistance?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cnrbdgi"
+      "id": "cnrbdgi",
+      "content": "        (A)  1 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cqcd8tl"
+      "id": "cqcd8tl",
+      "content": "        (B)  11 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3x4ib3f"
+      "id": "3x4ib3f",
+      "content": "        (C)  1.5 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6qofezr"
+      "id": "6qofezr",
+      "content": "        (D)  3 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nr452gr"
+      "id": "nr452gr",
+      "content": "<strong>Answer: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "hytua66"
+      "id": "hytua66",
+      "content": "<strong>Q2.  </strong>A 12V battery is connected to a series circuit of 2Ω and 4Ω. What is the current in the circuit?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2hgwxoo"
+      "id": "2hgwxoo",
+      "content": "        (A)  2 A"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8sv619b"
+      "id": "8sv619b",
+      "content": "        (B)  3 A"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yt7404t"
+      "id": "yt7404t",
+      "content": "        (C)  1 A"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2j3jbw4"
+      "id": "2j3jbw4",
+      "content": "        (D)  6 A"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e1ktblu"
+      "id": "e1ktblu",
+      "content": "<strong>Answer: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "jw6r9rq"
+      "id": "jw6r9rq",
+      "content": "<strong>Q3.  </strong>A wire of resistance R is stretched to double its original length. What is the new resistance?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4c5nnas"
+      "id": "4c5nnas",
+      "content": "        (A)  R/2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "t65wxe0"
+      "id": "t65wxe0",
+      "content": "        (B)  2R"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yx9a7a6"
+      "id": "yx9a7a6",
+      "content": "        (C)  4R"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ka229xr"
+      "id": "ka229xr",
+      "content": "        (D)  R/4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jfolx9r"
+      "id": "jfolx9r",
+      "content": "<strong>Answer: </strong>(C)"
     },
     {
       "type": "paragraph",
-      "id": "vgkza6m"
+      "id": "vgkza6m",
+      "content": "<strong>Q4.  </strong>In a parallel circuit, which quantity remains the same across all branches?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zhs13j2"
+      "id": "zhs13j2",
+      "content": "        (A)  Current"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "25qjnys"
+      "id": "25qjnys",
+      "content": "        (B)  Resistance"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d1ktbzw"
+      "id": "d1ktbzw",
+      "content": "        (C)  Voltage"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "prbo2ot"
+      "id": "prbo2ot",
+      "content": "        (D)  Power"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "s3nie9z"
+      "id": "s3nie9z",
+      "content": "<strong>Answer: </strong>(C)"
     },
     {
       "type": "paragraph",
-      "id": "upuvlhi"
+      "id": "upuvlhi",
+      "content": "<strong>Q5.  </strong>The temperature coefficient of resistance is negative for:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fzrtb2p"
+      "id": "fzrtb2p",
+      "content": "        (A)  Copper"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3ry89ew"
+      "id": "3ry89ew",
+      "content": "        (B)  Aluminium"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1tskgbf"
+      "id": "1tskgbf",
+      "content": "        (C)  Carbon"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "khh1owo"
+      "id": "khh1owo",
+      "content": "        (D)  Nichrome"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wnlupk0"
+      "id": "wnlupk0",
+      "content": "<strong>Answer: </strong>(C)"
     },
     {
       "type": "paragraph",
-      "id": "2ycocc7"
+      "id": "2ycocc7",
+      "content": "<strong>Q6.  </strong>In mesh analysis, the number of mesh equations equals:"
     },
     {
       "type": "paragraph",
-      "id": "4fo262v"
+      "id": "4fo262v",
+      "content": "        (A)  Number of nodes − 1"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zkfbmkl"
+      "id": "zkfbmkl",
+      "content": "        (B)  Number of branches"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2pxeqci"
+      "id": "2pxeqci",
+      "content": "        (C)  Number of independent loops"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jzor9if"
+      "id": "jzor9if",
+      "content": "        (D)  Number of sources"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f6fnqct"
+      "id": "f6fnqct",
+      "content": "<strong>Answer: </strong>(C)"
     },
     {
       "type": "paragraph",
-      "id": "q5nlbhp"
+      "id": "q5nlbhp",
+      "content": "<strong>Q7.  </strong>Two resistors 4Ω and 6Ω are connected in parallel. The equivalent resistance is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lerzbon"
+      "id": "lerzbon",
+      "content": "        (A)  10 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "olqzu31"
+      "id": "olqzu31",
+      "content": "        (B)  2.4 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qu7m8u7"
+      "id": "qu7m8u7",
+      "content": "        (C)  5 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "acltx3m"
+      "id": "acltx3m",
+      "content": "        (D)  1.5 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lb91zlp"
+      "id": "lb91zlp",
+      "content": "<strong>Answer: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "1mdp3pv"
+      "id": "1mdp3pv",
+      "content": "<strong>Q8.  </strong>Power consumed in a 10Ω resistor carrying 3A current is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jeozx2j"
+      "id": "jeozx2j",
+      "content": "        (A)  30 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rgyugdb"
+      "id": "rgyugdb",
+      "content": "        (B)  90 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8yb8tqk"
+      "id": "8yb8tqk",
+      "content": "        (C)  300 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3t4d0ji"
+      "id": "3t4d0ji",
+      "content": "        (D)  3 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nuiomqx"
+      "id": "nuiomqx",
+      "content": "<strong>Answer: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "cf6qg6k"
+      "id": "cf6qg6k",
+      "content": "<strong>Q9.  </strong>KCL is based on the principle of conservation of:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "519xjg3"
+      "id": "519xjg3",
+      "content": "        (A)  Energy"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2u33b4l"
+      "id": "2u33b4l",
+      "content": "        (B)  Momentum"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "s35m81c"
+      "id": "s35m81c",
+      "content": "        (C)  Charge"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jax5uun"
+      "id": "jax5uun",
+      "content": "        (D)  Mass"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xmmgj2i"
+      "id": "xmmgj2i",
+      "content": "<strong>Answer: </strong>(C)"
     },
     {
       "type": "paragraph",
-      "id": "1al0kvf"
+      "id": "1al0kvf",
+      "content": "<strong>Q10.  </strong>In a star-connected network with each resistor 9Ω, the equivalent delta resistance of each arm is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nno161d"
+      "id": "nno161d",
+      "content": "        (A)  3 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z91wvrv"
+      "id": "z91wvrv",
+      "content": "        (B)  27 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "oouluse"
+      "id": "oouluse",
+      "content": "        (C)  81 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "htp8mkp"
+      "id": "htp8mkp",
+      "content": "        (D)  1 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2ifrjnr"
+      "id": "2ifrjnr",
+      "content": "<strong>Answer: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "bg23d67"
+      "id": "bg23d67",
+      "content": "<strong>Q11.  </strong>A 100W, 220V lamp has a resistance of:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "t26rjxi"
+      "id": "t26rjxi",
+      "content": "        (A)  484 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "37d3l3s"
+      "id": "37d3l3s",
+      "content": "        (B)  220 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "083m6iw"
+      "id": "083m6iw",
+      "content": "        (C)  100 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "26uy39k"
+      "id": "26uy39k",
+      "content": "        (D)  2.2 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bmm9dmv"
+      "id": "bmm9dmv",
+      "content": "<strong>Answer: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "9hrhl7x"
+      "id": "9hrhl7x",
+      "content": "<strong>Q12.  </strong>Resistivity of a conductor depends on:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jskt4a4"
+      "id": "jskt4a4",
+      "content": "        (A)  Length"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pcfy1g4"
+      "id": "pcfy1g4",
+      "content": "        (B)  Cross-sectional area"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "na06uxg"
+      "id": "na06uxg",
+      "content": "        (C)  Both length and area"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qw367uw"
+      "id": "qw367uw",
+      "content": "        (D)  Material and temperature"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4zjwwie"
+      "id": "4zjwwie",
+      "content": "<strong>Answer: </strong>(D)"
     },
     {
       "type": "paragraph",
-      "id": "jyxgozh"
+      "id": "jyxgozh",
+      "content": "<strong>Q13.  </strong>In a voltage divider, output voltage is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1hcw4jq"
+      "id": "1hcw4jq",
+      "content": "        (A)  Greater than input"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nj7zfp8"
+      "id": "nj7zfp8",
+      "content": "        (B)  Equal to input"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "oa9tclw"
+      "id": "oa9tclw",
+      "content": "        (C)  A fraction of input"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zr2fc25"
+      "id": "zr2fc25",
+      "content": "        (D)  Independent of input"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "99uj7kv"
+      "id": "99uj7kv",
+      "content": "<strong>Answer: </strong>(C)"
     },
     {
       "type": "paragraph",
-      "id": "izoolur"
+      "id": "izoolur",
+      "content": "<strong>Q14.  </strong>The unit of conductance is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rca0r1j"
+      "id": "rca0r1j",
+      "content": "        (A)  Ohm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vgju7b5"
+      "id": "vgju7b5",
+      "content": "        (B)  Mho (Siemens)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y47kp39"
+      "id": "y47kp39",
+      "content": "        (C)  Farad"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xxy54n2"
+      "id": "xxy54n2",
+      "content": "        (D)  Henry"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "larxc0w"
+      "id": "larxc0w",
+      "content": "<strong>Answer: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "sz524au"
+      "id": "sz524au",
+      "content": "<strong>Q15.  </strong>A circuit has 4 nodes and 6 branches. The number of independent mesh equations is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "583cfrk"
+      "id": "583cfrk",
+      "content": "        (A)  3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "furf7xd"
+      "id": "furf7xd",
+      "content": "        (B)  4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6l77m9w"
+      "id": "6l77m9w",
+      "content": "        (C)  5"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tilhqnh"
+      "id": "tilhqnh",
+      "content": "        (D)  2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "b7gbvla"
-    },
-    {
-      "type": "paragraph",
-      "id": "hbhlcm5"
-    },
-    {
-      "type": "paragraph",
-      "id": "kpys4pq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "15lnzhl"
-    },
-    {
-      "type": "paragraph",
-      "id": "av155dy"
-    },
-    {
-      "id": "x1l46u4",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "otn12rf"
-    },
-    {
-      "type": "paragraph",
-      "id": "o03f9dl"
-    },
-    {
-      "id": "okx2nh6",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qlmoc82"
-    },
-    {
-      "type": "paragraph",
-      "id": "am0h2h0"
-    },
-    {
-      "id": "k54c0uz",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p8m18je"
-    },
-    {
-      "type": "paragraph",
-      "id": "to5dxit"
-    },
-    {
-      "id": "tjrmvo4",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "03e65sk"
-    },
-    {
-      "type": "paragraph",
-      "id": "f6qhiv6"
-    },
-    {
-      "id": "ydvpyy9",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bi4j3mw"
-    },
-    {
-      "type": "paragraph",
-      "id": "pq60f4b"
-    },
-    {
-      "id": "y5wum54",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ukse6dj"
-    },
-    {
-      "type": "paragraph",
-      "id": "7441dwb"
-    },
-    {
-      "id": "fm2tici",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "sh96rgg"
-    },
-    {
-      "type": "paragraph",
-      "id": "st909dh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iw2jdmk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7gt5mkc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mkv6szq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8qufr3k"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rvgtgri"
-    },
-    {
-      "type": "paragraph",
-      "id": "ui4ulm5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n4pijfm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ysv8275"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "i44bzkw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ti7wlu6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "y4ivhvq"
-    },
-    {
-      "type": "paragraph",
-      "id": "3vgimfd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "csj1q7p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pmlxzx4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0d3t55t"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n0tlj44"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "aso6pv8"
-    },
-    {
-      "type": "paragraph",
-      "id": "gtmq6rh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z0kx6g6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "unqm8ed"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1zn8d08"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3y5trax"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4e6ufvu"
-    },
-    {
-      "type": "paragraph",
-      "id": "dcdp24h"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3yelty6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lxbojps"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3kv1vwd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "shhp1o5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "aa4x5rv"
-    },
-    {
-      "type": "paragraph",
-      "id": "0801li2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hasoee2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "88aa50c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oho3y5r"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5rlclcb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6dr0d5q"
-    },
-    {
-      "type": "paragraph",
-      "id": "c1aj0pt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wg01mh0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "khp8582"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ej3vgcd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r26xg3u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ebgttq3"
-    },
-    {
-      "type": "paragraph",
-      "id": "ymzem7b"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n1ti0az"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8f712pn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1xx1x26"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dvjpo2w"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tu37kmk"
-    },
-    {
-      "type": "paragraph",
-      "id": "qx6v3na"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0p6xb7u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iqepng4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fuckvue"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9g9wqdl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bbv5grk"
-    },
-    {
-      "type": "paragraph",
-      "id": "4rujfnn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vpd2h3z"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fab14sg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0zximod"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8i4s5gk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "61yjerr"
-    },
-    {
-      "type": "paragraph",
-      "id": "xpcddfr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z8hu8sy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8whupln"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1cq6l39"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rmz0rp4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "eip4kpn"
-    },
-    {
-      "type": "paragraph",
-      "id": "weu290m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jvyxkaj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9fdvbja"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "11zj31a"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3mllkon"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "h0pxb78"
-    },
-    {
-      "type": "paragraph",
-      "id": "vztn5ln"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nmffjkp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ghtn8w8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n5lbdl9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tekwzlr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f6qjski"
-    },
-    {
-      "type": "paragraph",
-      "id": "f2slzd7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "liic1hb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k1rp4mu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rmruups"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zfi3z6q"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "aenh4qd"
-    },
-    {
-      "type": "paragraph",
-      "id": "wcch0v1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8zwvzi2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ky6fgrw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "eaxb8q9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "81ia4za"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ma9386u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5ojk3js"
-    },
-    {
-      "type": "paragraph",
-      "id": "5z5d7mc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "q3vfsau"
-    },
-    {
-      "type": "paragraph",
-      "id": "5okeyur"
-    },
-    {
-      "id": "hhhpbxr",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "q9fnk03"
-    },
-    {
-      "type": "paragraph",
-      "id": "o60zfg0"
-    },
-    {
-      "type": "paragraph",
-      "id": "wijwmf4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nfqv3zo"
-    },
-    {
-      "type": "paragraph",
-      "id": "t8ua2ud"
-    },
-    {
-      "id": "5xwh4ah",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zuwarg2"
-    },
-    {
-      "type": "paragraph",
-      "id": "88hxsap"
-    },
-    {
-      "type": "paragraph",
-      "id": "wndfidy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k2j7mbb"
-    },
-    {
-      "type": "paragraph",
-      "id": "bz0gnwp"
-    },
-    {
-      "id": "r4gxyfe",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "qqgnw63",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k9dbbs5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ei1uydg"
-    },
-    {
-      "type": "paragraph",
-      "id": "0urbckq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l7cee8z"
-    },
-    {
-      "type": "paragraph",
-      "id": "00jmicv"
-    },
-    {
-      "id": "4coxqy3",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "wq8z9ty"
-    },
-    {
-      "type": "paragraph",
-      "id": "o4cdk0m"
-    },
-    {
-      "type": "paragraph",
-      "id": "wilj0vq"
-    },
-    {
-      "type": "paragraph",
-      "id": "jushs5s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vjwkaii"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1wvrrh2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zvq7dbn"
-    },
-    {
-      "type": "paragraph",
-      "id": "vnr20t7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "d4h5a8u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fqanxpx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3hfulc3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r17ewlz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "odzva85"
-    },
-    {
-      "type": "paragraph",
-      "id": "npdejws"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1moy7d4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "54b4456"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5nyg4vr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ucl51cp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "npf2c0v"
-    },
-    {
-      "type": "paragraph",
-      "id": "02o0ec2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fdd886c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5imwt75"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rhywdgz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1ermleq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ai2zcui"
-    },
-    {
-      "type": "paragraph",
-      "id": "jue57j0"
-    },
-    {
-      "type": "paragraph",
-      "id": "6vl3ow8"
-    },
-    {
-      "type": "paragraph",
-      "id": "o6nzj2u"
-    },
-    {
-      "type": "paragraph",
-      "id": "ug20dzv"
-    },
-    {
-      "type": "paragraph",
-      "id": "is87us2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "w44bvmo"
-    },
-    {
-      "type": "paragraph",
-      "id": "1exeiyv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dgeq7ou"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z8cu4o2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5djztsy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7nvyuud"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zfgqkff"
-    },
-    {
-      "type": "paragraph",
-      "id": "z5bglc8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cv8oswn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xsynxlm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ln3e9hd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0pk8ne6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9guklqi"
-    },
-    {
-      "type": "paragraph",
-      "id": "jfiu9to"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "593fl9c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7e6aead"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cpq8xnf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2ghq1uk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k1rf69c"
-    },
-    {
-      "type": "paragraph",
-      "id": "83mk0bg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "94cpygc"
-    },
-    {
-      "type": "paragraph",
-      "id": "wq75bj5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s990map"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dvvqccs"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oxz8tm6"
-    },
-    {
-      "type": "paragraph",
-      "id": "zjh3ojx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z8wzcqy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v6kt9xm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a45acy0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2i968j6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6rt59h3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "978cuhj"
-    },
-    {
-      "type": "paragraph",
-      "id": "akljdkj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "e28no2m"
-    },
-    {
-      "type": "paragraph",
-      "id": "74u18qf"
-    },
-    {
-      "id": "oiph2t7",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "3knmd4m"
-    },
-    {
-      "type": "paragraph",
-      "id": "ceqztaj"
-    },
-    {
-      "id": "bqtmgt5",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "dl69q1l"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v0jhv8l"
-    },
-    {
-      "type": "paragraph",
-      "id": "ifj3y8t"
-    },
-    {
-      "id": "qysketm",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "fcbt0mg",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8o2xd5a"
-    },
-    {
-      "id": "im0bjcf",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "agm4wd3"
-    },
-    {
-      "type": "paragraph",
-      "id": "7z79lqe"
-    },
-    {
-      "id": "bm6fhlg",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "eyy06vd"
-    },
-    {
-      "type": "paragraph",
-      "id": "jkvhh4i"
-    },
-    {
-      "id": "qp33pw8",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "snfa9dn"
-    },
-    {
-      "type": "paragraph",
-      "id": "q91iye2"
-    },
-    {
-      "id": "1f957rf",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "na6tme1",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "623mb2b"
-    },
-    {
-      "id": "g30nrjj",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9ffyzth"
-    },
-    {
-      "type": "paragraph",
-      "id": "pkp94aa"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gymioz6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kt41b6m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oyqvled"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "841ci1g"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qf8v3qw"
-    },
-    {
-      "type": "paragraph",
-      "id": "8uhohtd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4rjzw9o"
-    },
-    {
-      "type": "paragraph",
-      "id": "73jxl2x"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jdemjeq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1ax7xex"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Building a strong conceptual foundation in the introductory phase is crucial for tackling complex examination problems.",
-      "id": "zv56exm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3klboqr"
-    },
-    {
-      "type": "paragraph",
-      "id": "4wie1tr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3n0xr1p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tjeveiq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2ttymje"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ipuz1wz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fae8q6d"
-    },
-    {
-      "type": "paragraph",
-      "id": "mhbp3t4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "orclyq9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8pepqdh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iskmdee"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vgtkyib"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9zd03zm"
-    },
-    {
-      "type": "paragraph",
-      "id": "3tz46n7"
-    },
-    {
-      "type": "paragraph",
-      "id": "98v1ryq"
-    },
-    {
-      "type": "paragraph",
-      "id": "4ydpu8b"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4gwkaoc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tw6vham"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nxaw2e7"
-    },
-    {
-      "type": "paragraph",
-      "id": "y58qj14"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "grxjf61"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0mydus3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k1jwwur"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "svzg13v"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7aif0aq"
-    },
-    {
-      "type": "paragraph",
-      "id": "c3znfis"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r0zbd37"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7elg7u4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "19uy15z"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "d4ept4m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mgslea1"
-    },
-    {
-      "type": "paragraph",
-      "id": "mx7s491"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2vkaew3"
-    },
-    {
-      "type": "paragraph",
-      "id": "nqnnwgi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tce6n8m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3ks5pxm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3kan3gq"
-    },
-    {
-      "type": "paragraph",
-      "id": "xgbcyuj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4rykq4z"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s7jt28i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l3y2xo2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wq5qw3q"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6b5ximt"
-    },
-    {
-      "type": "paragraph",
-      "id": "kyi2xvj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tp0w3v9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ehdbbrj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kowr33q"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zf2x8ef"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pa61e0i"
-    },
-    {
-      "type": "paragraph",
-      "id": "sr2q3pf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k7yauuw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zitn8pj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3k6guha"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "un87v7r"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s3slbrr"
-    },
-    {
-      "type": "paragraph",
-      "id": "f87clo0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rkw9mr3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "i2k4675"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "q8qocpz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ertkfyf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "e4uwr7w"
-    },
-    {
-      "type": "paragraph",
-      "id": "8pqbfdy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s5sa6xr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "eqnnedi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pn6furk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uaobvnz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zu2r2e0"
-    },
-    {
-      "type": "paragraph",
-      "id": "danhcp4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cewrgdn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sdhcw32"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x35fu2l"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4v8ccaa"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "j5iwcl7"
-    },
-    {
-      "type": "paragraph",
-      "id": "jwgo3s1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k5ed8tl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4qprrn9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "leoida2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5td0jjj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u7zi7yu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4r3dgse"
-    },
-    {
-      "type": "paragraph",
-      "id": "04pt36k"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hgva3wc"
-    },
-    {
-      "id": "6pbl7n6",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "tudajig"
-    },
-    {
-      "id": "9f3xtwo",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "u5lghwa"
-    },
-    {
-      "type": "paragraph",
-      "id": "1r3prc0"
-    },
-    {
-      "type": "paragraph",
-      "id": "y49ktmq"
-    },
-    {
-      "id": "olr5e7e",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "elmwzfz"
-    },
-    {
-      "type": "paragraph",
-      "id": "gvcyqt3"
-    },
-    {
-      "id": "pvghgwl",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "52pb1g7"
-    },
-    {
-      "type": "paragraph",
-      "id": "ywjo7p8"
-    },
-    {
-      "id": "r71p4gl",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "7fm7zso",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "nc9aahw"
-    },
-    {
-      "id": "xvwgn39",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "mqk5wj9"
-    },
-    {
-      "id": "ib0j9km",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "phguemx",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "iowhqov"
-    },
-    {
-      "type": "paragraph",
-      "id": "5kkizvl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "195wr2c"
-    },
-    {
-      "type": "paragraph",
-      "id": "2min7hd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p7dqvm6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5ucnzeq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0ws11ah"
-    },
-    {
-      "type": "paragraph",
-      "id": "94ipw6a"
-    },
-    {
-      "type": "paragraph",
-      "id": "nk953c4"
-    },
-    {
-      "type": "paragraph",
-      "id": "7dxmae3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p9f45ev"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ol4ugj3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jnfd6m2"
-    },
-    {
-      "type": "paragraph",
-      "id": "9nj8odx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jfphu59"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qi0u0g6"
-    },
-    {
-      "type": "paragraph",
-      "id": "e678n1b"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "aj7fbbq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s7vxwzi"
-    },
-    {
-      "type": "paragraph",
-      "id": "suxeaio"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ddsrbvm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wrpqx3i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6xwfzrm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gceofdc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zhl9190"
-    },
-    {
-      "type": "paragraph",
-      "id": "4rocod5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "op50rpc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uku1l7p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0qd4104"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ke7h9tf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qqrzcnx"
-    },
-    {
-      "type": "paragraph",
-      "id": "f0qbuuo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m6fmcmn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m613scq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3b7hv9k"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7roi5xp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5zq8ceo"
-    },
-    {
-      "type": "paragraph",
-      "id": "m0qiv7d"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ggnwnzl"
-    },
-    {
-      "type": "paragraph",
-      "id": "gobnfmy"
-    },
-    {
-      "type": "paragraph",
-      "id": "ks9oa0s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u1dxxkn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5xmuk6i"
-    },
-    {
-      "type": "paragraph",
-      "id": "dnwacd4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6pxrq5j"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cuanyv7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pd6l6ch"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6hvet4c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "guemzjo"
-    },
-    {
-      "type": "paragraph",
-      "id": "v5kxju0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "e7k0in2"
-    },
-    {
-      "type": "paragraph",
-      "id": "7fy76h1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "epefhgp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "w0n476n"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n32q1kl"
-    },
-    {
-      "type": "paragraph",
-      "id": "4jlqfb8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ljfu3sm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "llx3xl4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wd8afhs"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rs6hqjn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "35rzcq4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uvjhs0s"
-    },
-    {
-      "type": "paragraph",
-      "id": "gq7dt16"
-    },
-    {
-      "type": "paragraph",
-      "id": "1ju2qv5"
-    },
-    {
-      "id": "8jbwvve",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3u342vq"
-    },
-    {
-      "type": "paragraph",
-      "id": "uxzdjbv"
-    },
-    {
-      "id": "d09u7jp",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "3g6y97w",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oi4vmj8"
-    },
-    {
-      "type": "paragraph",
-      "id": "3hbyc5o"
-    },
-    {
-      "id": "if92jb6",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q4nklwi",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "xyk9tbf"
-    },
-    {
-      "id": "e8swtby",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "31rk5co"
-    },
-    {
-      "type": "paragraph",
-      "id": "b00vj1q"
-    },
-    {
-      "id": "shf4ss2",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2r8fddb"
-    },
-    {
-      "type": "paragraph",
-      "id": "rym4me7"
-    },
-    {
-      "id": "sexc2bf",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "fcojekk"
-    },
-    {
-      "type": "paragraph",
-      "id": "9xqpazr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oexza5i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "j7m7fm9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oy8ioze"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8ngra4r"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "al9b93d"
-    },
-    {
-      "type": "paragraph",
-      "id": "zmyouq2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bay688z"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "99c9u78"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2m0ifbq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nch14v0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ahluyh3"
-    },
-    {
-      "type": "paragraph",
-      "id": "9qotqud"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t06qvaz"
-    },
-    {
-      "type": "paragraph",
-      "id": "48qfdeh"
-    },
-    {
-      "type": "paragraph",
-      "id": "jjdi0i5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fmuiq6q"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ij0qhdb"
-    },
-    {
-      "type": "paragraph",
-      "id": "9urgasy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f332dnp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pcntzeq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t8t7qk4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nbcovni"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z7gksnc"
-    },
-    {
-      "type": "paragraph",
-      "id": "r6evaqh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lmszxgd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3dlrlq0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x22o1qv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v8p4fru"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fb3p16a"
-    },
-    {
-      "type": "paragraph",
-      "id": "9lwb00x"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1txztla"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0y6un0a"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rt1omb9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tjmwk6w"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m26gl0e"
-    },
-    {
-      "type": "paragraph",
-      "id": "c7bll6p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3j5ou2o"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tul19sh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ehi00vq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "j5ym6kk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zvrxu6u"
-    },
-    {
-      "type": "paragraph",
-      "id": "kyn69ec"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7okd4wm"
-    },
-    {
-      "type": "paragraph",
-      "id": "bx16it3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ws12e3a"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "j9jw0z1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m0qxs3t"
-    },
-    {
-      "type": "paragraph",
-      "id": "hg7qczw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ftkh2f7"
-    },
-    {
-      "type": "paragraph",
-      "id": "y8x26vm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nrmz560"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ct2lrhv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zllyz7l"
-    },
-    {
-      "type": "paragraph",
-      "id": "ivhn1z3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "b6v1x02"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jh1yejk"
-    },
-    {
-      "type": "paragraph",
-      "id": "pynt4ab"
-    },
-    {
-      "type": "paragraph",
-      "id": "0ku2aqh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kx2geus"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t5djdl6"
-    },
-    {
-      "type": "paragraph",
-      "id": "1rccuws"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bggjf22"
-    },
-    {
-      "id": "9ladglp",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "96rg4ee"
-    },
-    {
-      "type": "paragraph",
-      "id": "ggm0q3s"
-    },
-    {
-      "id": "5uzyuhg",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "h6h8vmk"
-    },
-    {
-      "id": "v7jj0wm",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "q8afinb"
-    },
-    {
-      "id": "qkxlchp",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cmxyody"
-    },
-    {
-      "id": "90ikvsj",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "n1jci4x"
-    },
-    {
-      "type": "paragraph",
-      "id": "z79mf52"
-    },
-    {
-      "id": "4ss9gm2",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "buhab2w"
-    },
-    {
-      "id": "mlou5t5",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "aa5e08c"
-    },
-    {
-      "id": "h2zrv7l",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "qzgnbqy"
-    },
-    {
-      "type": "paragraph",
-      "id": "lxdxjix"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4czfiim"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jj7uivz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "y8ldspw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ofpmgrd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ed5usn1"
-    },
-    {
-      "type": "paragraph",
-      "id": "ab92kkw"
-    },
-    {
-      "type": "paragraph",
-      "id": "xwkbph5"
-    },
-    {
-      "type": "paragraph",
-      "id": "ihl6k07"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1r4ikjp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ndorjul"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ur88k08"
-    },
-    {
-      "type": "paragraph",
-      "id": "8mgrgu6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vakg6j1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4xipu46"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rpph0s3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uv8bysr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pncyflo"
-    },
-    {
-      "type": "paragraph",
-      "id": "k5rb8lz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7ptpbf3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iso0y8c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u4pqmye"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qdblfkp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7v4wxt4"
-    },
-    {
-      "type": "paragraph",
-      "id": "jc0fzgi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "j5ue7hc"
-    },
-    {
-      "type": "paragraph",
-      "id": "k864p5p"
-    },
-    {
-      "type": "paragraph",
-      "id": "x1f1shx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4dlsve0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "euzp4uk"
-    },
-    {
-      "type": "paragraph",
-      "id": "edvl0bs"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n88ivua"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2lqtzsi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p80lh6t"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ke1k0d8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "d2o6aka"
-    },
-    {
-      "type": "paragraph",
-      "id": "bdvdn65"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ldrdwa6"
-    },
-    {
-      "type": "paragraph",
-      "id": "ydnmd49"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oplgwg0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "szwg7tu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jjf2zox"
-    },
-    {
-      "type": "paragraph",
-      "id": "03sxev4"
-    },
-    {
-      "type": "paragraph",
-      "id": "vxirrq8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0yu3wet"
-    },
-    {
-      "type": "paragraph",
-      "id": "r0qj3ue"
-    },
-    {
-      "type": "paragraph",
-      "id": "xr6pyah"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8lsr522"
-    },
-    {
-      "type": "paragraph",
-      "id": "gmpghrw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6hl7q1d"
-    },
-    {
-      "type": "paragraph",
-      "id": "dnp4dfx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3zlnrs7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wedig0v"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2bqtsnr"
-    },
-    {
-      "type": "paragraph",
-      "id": "5n5hxew"
-    },
-    {
-      "type": "paragraph",
-      "id": "hiioi0t"
-    },
-    {
-      "type": "paragraph",
-      "id": "elztaux"
-    },
-    {
-      "type": "paragraph",
-      "id": "fccsaac"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dgo4q0y"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nkmjdkw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qbv6di7"
-    },
-    {
-      "type": "paragraph",
-      "id": "1rkjxp2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yar04ey"
-    },
-    {
-      "id": "vyiecua",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "nnbh52r"
-    },
-    {
-      "id": "v227f4v",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "hb1lj86",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "owlp7h0"
-    },
-    {
-      "type": "paragraph",
-      "id": "9utwkpx"
-    },
-    {
-      "id": "56pyatv",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "txvu46w"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kf4vfzp"
-    },
-    {
-      "id": "7kgicj1",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9ffaj0c"
-    },
-    {
-      "type": "paragraph",
-      "id": "xipee7t"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "61fcbnw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3drrkha"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0ng8irv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cxocqxr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f0yd650"
-    },
-    {
-      "type": "paragraph",
-      "id": "l3f3zut"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "w1i9qlm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "an2z7mc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ry292rh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "q2k7d1x"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2b0p8m0"
-    },
-    {
-      "type": "paragraph",
-      "id": "yjixrpj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "11r85zv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uoqa1p1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ocezdbr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m973wye"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gttazmc"
-    },
-    {
-      "type": "paragraph",
-      "id": "ydgs9gf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lopc73m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r8sckys"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "e53pmb7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l9rddfe"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0cz4jzw"
-    },
-    {
-      "type": "paragraph",
-      "id": "bul2pbe"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dt0ec47"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r9f0cwn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dty2tay"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "92sx9wr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xmhh5tm"
-    },
-    {
-      "type": "paragraph",
-      "id": "vs0kauo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kiui49e"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nv49614"
-    },
-    {
-      "type": "paragraph",
-      "id": "rqrkbl4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ukmo5w1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6084pf4"
-    },
-    {
-      "type": "paragraph",
-      "id": "w62pbim"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pphh8g7"
-    },
-    {
-      "type": "paragraph",
-      "id": "58xcg9z"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ymefs1x"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "orbojvf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7vpae7a"
-    },
-    {
-      "type": "paragraph",
-      "id": "8n3zaty"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "c2x9sy2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "id87x33"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gluwms7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "giqgn4x"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gnn6lw3"
-    },
-    {
-      "type": "paragraph",
-      "id": "lgrjp00"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9ezzgjw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "11aea1b"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uq3i4zt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0zt4ihk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "o7u0o80"
-    },
-    {
-      "type": "paragraph",
-      "id": "epg69i1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gnkvd1q"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tek4os6"
-    },
-    {
-      "type": "paragraph",
-      "id": "b444fus"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t91vxr5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ikl949u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "okuhegh"
-    },
-    {
-      "type": "paragraph",
-      "id": "bcmoegi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v55gna4"
-    },
-    {
-      "id": "qvwtnwg",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "g0ixqmt"
-    },
-    {
-      "id": "di6i00o",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "nrcimpb",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "ygd34ff"
-    },
-    {
-      "type": "paragraph",
-      "id": "egh71k1"
-    },
-    {
-      "id": "jpxtd2z",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "hchjy0t"
-    },
-    {
-      "type": "paragraph",
-      "id": "3odjhee"
-    },
-    {
-      "id": "c3kj4my",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "stvazfq",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "r6a3g87"
-    },
-    {
-      "type": "paragraph",
-      "id": "zsk23yv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0lpue4o"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u0q6kew"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vh4oqnb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "j8ns6m0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "00n17bi"
-    },
-    {
-      "type": "paragraph",
-      "id": "n06dej9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bwl5o6r"
-    },
-    {
-      "type": "paragraph",
-      "id": "dult556"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zzw1e9n"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "aawyqsi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wibkyf9"
-    },
-    {
-      "type": "paragraph",
-      "id": "8rn2hry"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "aeu20sk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m8zw0tx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "e184g2k"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yoyxgpg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hw49ibz"
-    },
-    {
-      "type": "paragraph",
-      "id": "2msj2yg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sibixjt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "i85yt0q"
-    },
-    {
-      "type": "examAlert",
-      "items": [
-        "Direct questions on fundamental definitions and core terminology frequently appear in preliminary examinations.",
-        "Pay special attention to basic classification schemes and foundational frameworks emphasized in the introductory section."
-      ],
-      "id": "a5syhg6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "o4o5jbb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u51btr1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5dv18ts"
-    },
-    {
-      "type": "paragraph",
-      "id": "p9m3glo"
-    },
-    {
-      "type": "paragraph",
-      "id": "imdsj8a"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "e57krz5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wwzi4wy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "o6q1e1r"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "o92zlg8"
-    },
-    {
-      "type": "paragraph",
-      "id": "aktkimh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ybwarei"
-    },
-    {
-      "type": "paragraph",
-      "id": "ati2jbg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jlszc31"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tae0ulb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fhgd36x"
-    },
-    {
-      "type": "paragraph",
-      "id": "hyuanoo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sn2p4ec"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gzcnznd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ejpf2xy"
-    },
-    {
-      "type": "paragraph",
-      "id": "b3j6o75"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dt6e74a"
-    },
-    {
-      "type": "paragraph",
-      "id": "x136vnu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fbese2w"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "795xozg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "d0xjur2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "40m8vrr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8yo1cog"
-    },
-    {
-      "type": "paragraph",
-      "id": "ri0wbmo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0w2uoq0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7rk5twh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rb0che5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "33j0suw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uylwnsw"
-    },
-    {
-      "type": "paragraph",
-      "id": "c5nu2cl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5x3j0lk"
-    },
-    {
-      "type": "paragraph",
-      "id": "peywe69"
-    },
-    {
-      "type": "paragraph",
-      "id": "emrikuh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3ociet1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x2wgal4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4fi7c93"
-    },
-    {
-      "type": "paragraph",
-      "id": "f3do75d"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "do2d305"
-    },
-    {
-      "id": "uci6bgv",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s0jfwf2"
-    },
-    {
-      "type": "paragraph",
-      "id": "svhn846"
-    },
-    {
-      "id": "gl1hm13",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "od43bhl",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ky3yyph"
-    },
-    {
-      "id": "grbvd5v",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0jp867c"
-    },
-    {
-      "type": "paragraph",
-      "id": "4orv62n"
-    },
-    {
-      "id": "fhn8zil",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "i1maxg6",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gpf8u4w"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "j5af1wj"
-    },
-    {
-      "type": "paragraph",
-      "id": "h1grfcb"
-    },
-    {
-      "type": "paragraph",
-      "id": "jgxio0u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x43iqpo"
-    },
-    {
-      "type": "paragraph",
-      "id": "sodxlpf"
-    },
-    {
-      "id": "w9f61c8",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "iqz0k6z"
-    },
-    {
-      "type": "paragraph",
-      "id": "4phleb4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8yqtac1"
-    },
-    {
-      "type": "paragraph",
-      "id": "nk99gsk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2i6fivd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fhq1t56"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7anhdvz"
-    },
-    {
-      "type": "paragraph",
-      "id": "g92uv2v"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8yv8hm3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nkpxwuh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7o0pehe"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ky76n0s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "adbwaic"
-    },
-    {
-      "type": "paragraph",
-      "id": "t1jxbwj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1xd0huo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mcg9ka4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "999hwlp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jb7422j"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bh1f2k1"
-    },
-    {
-      "type": "paragraph",
-      "id": "luqb1f7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dqh94m8"
-    },
-    {
-      "type": "paragraph",
-      "id": "8kpi03c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ayamrke"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3gpxl8i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oostdpi"
-    },
-    {
-      "type": "paragraph",
-      "id": "019t044"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "66j06fh"
-    },
-    {
-      "type": "paragraph",
-      "id": "mvdj24b"
-    },
-    {
-      "type": "paragraph",
-      "id": "ssjmsvy"
-    },
-    {
-      "type": "paragraph",
-      "id": "aywl2hm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p072hdn"
-    },
-    {
-      "type": "paragraph",
-      "id": "gsq4g91"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "eecp7sp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tfz6y6t"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "j0ws6vm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f9hv9d8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2hscu9t"
-    },
-    {
-      "type": "paragraph",
-      "id": "iap81gv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z4665oy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5coxjcg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ztaq11q"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7vyv261"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "03fwdvm"
-    },
-    {
-      "type": "paragraph",
-      "id": "lv6s6ly"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rkvcdr7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "25qrpap"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6dv86lv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xs7uy0m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "w5265ie"
-    },
-    {
-      "type": "paragraph",
-      "id": "afal1v5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lm9zvg7"
-    },
-    {
-      "type": "paragraph",
-      "id": "ty9v5dt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ct2drr6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pxpe9m7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "o82tlqc"
-    },
-    {
-      "type": "paragraph",
-      "id": "at4fgmc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3i1d86q"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zd7qfiv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vza2uxr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l3a6ry8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jj8zcup"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ra5rf9f"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "em0ain0"
-    },
-    {
-      "id": "mofwtis",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3d8nl0z"
-    },
-    {
-      "id": "9ou73hn",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "itgtn2r"
-    },
-    {
-      "id": "8rt7122",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7h5wk0o"
-    },
-    {
-      "id": "vrkbd3g",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "b6wv2jf"
-    },
-    {
-      "id": "vesbsi1",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1c8cpil"
-    },
-    {
-      "id": "dx1jw3z",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kp6wnu2"
-    },
-    {
-      "id": "whp7795",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5ljcux7"
-    },
-    {
-      "id": "6affk8b",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tbb2y03"
-    },
-    {
-      "id": "aazif8i",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kvp46rx"
-    },
-    {
-      "id": "hnqueva",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "1u2vkic"
-    },
-    {
-      "type": "paragraph",
-      "id": "tp9opin"
-    },
-    {
-      "type": "paragraph",
-      "id": "3vf2y3e"
+      "id": "b7gbvla",
+      "content": "<strong>Answer: </strong>(A)"
     }
   ],
   "enriched": true

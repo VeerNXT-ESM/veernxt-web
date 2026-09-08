@@ -1,0 +1,146 @@
+{
+  "title": "8. IUCN Red List Categories",
+  "order": 209,
+  "blocks": [
+    {
+      "id": "f0ui9g6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Extinct (EX)</p>",
+            "<p>No surviving individuals.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Extinct in the Wild (EW)</p>",
+            "<p>Survive only in captivity.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Critically Endangered (CR)</p>",
+            "<p>Extremely high risk of extinction.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Endangered (EN)</p>",
+            "<p>Very high risk of extinction.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vulnerable (VU)</p>",
+            "<p>High risk of endangerment.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Near Threatened (NT)</p>",
+            "<p>Likely to become endangered.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Least Concern (LC)</p>",
+            "<p>Lowest risk category.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The IUCN Red List is the world's most comprehensive inventory of the global conservation status of biological species.",
+      "id": "bynsilb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category",
+        "Risk Level",
+        "Population Reduction Criterion (10 yrs/3 gen)"
+      ],
+      "rows": [
+        [
+          "Critically Endangered (CR)",
+          "Extremely High Risk of Extinction",
+          "≥ 90% decline"
+        ],
+        [
+          "Endangered (EN)",
+          "Very High Risk of Extinction",
+          "≥ 70% decline"
+        ],
+        [
+          "Vulnerable (VU)",
+          "High Risk of Extinction",
+          "≥ 50% decline"
+        ]
+      ],
+      "id": "p80sfla"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "1964",
+          "icon": "calendar"
+        },
+        {
+          "label": "Total Categories",
+          "value": "9 Categories",
+          "icon": "book"
+        },
+        {
+          "label": "Headquarters",
+          "value": "Gland, Switzerland",
+          "icon": "info"
+        },
+        {
+          "label": "Threatened Groups",
+          "value": "CR, EN, VU",
+          "icon": "award"
+        }
+      ],
+      "id": "gxpqknw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Critically Endangered (CR) status requires a population reduction of ≥90% over 10 years or three generations, or fewer than 50 mature individuals.",
+        "Pink Pages in the Red Data Book publish critically endangered species, whereas Green Pages represent species that were formerly endangered but have recovered.",
+        "Questions frequently test the specific criteria distinguishing Critically Endangered, Endangered, and Vulnerable categories."
+      ],
+      "id": "5w83ksg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The IUCN Red List evaluates the extinction risk of thousands of species and subspecies worldwide.",
+        "The 9 official IUCN Red List Categories are Extinct (EX), Extinct in the Wild (EW), Critically Endangered (CR), Endangered (EN), Vulnerable (VU), Near Threatened (NT), Least Concern (LC), Data Deficient (DD), and Not Evaluated (NE).",
+        "Species classified under Critically Endangered (CR), Endangered (EN), and Vulnerable (VU) are collectively categorized as 'Threatened'.",
+        "Assessment criteria involve population reduction rate, geographic range, small population size, and quantitative extinction probability."
+      ],
+      "id": "53yr87f"
+    }
+  ],
+  "enriched": true
+}

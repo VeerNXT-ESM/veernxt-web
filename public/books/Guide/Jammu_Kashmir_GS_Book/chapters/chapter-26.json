@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "98hr421"
+      "id": "98hr421",
+      "content": "J&amp;K's local self-government institutions have undergone a significant post-2019 transformation, moving from a system where Panchayati Raj elections had lapsed for long periods under the old state framework to a more actively empowered structure under the new UT administration — a distinct governance-layer topic worth its own dedicated treatment."
     },
     {
       "type": "statStrip",
@@ -51,20 +52,18 @@
     },
     {
       "type": "paragraph",
-      "id": "ikyru9l"
-    },
-    {
-      "type": "pullQuote",
-      "content": "The Three-Tier Panchayati Raj System",
-      "id": "n5x9rbv"
+      "id": "ikyru9l",
+      "content": "Under the old state-era legal framework, J&amp;K had its own separate Panchayati Raj Act (1989), distinct from the 73rd Constitutional Amendment that governs Panchayati Raj institutions in the rest of India, since the 73rd Amendment itself — like most central constitutional provisions — did not automatically apply to J&amp;K under the pre-2019 Article 370 framework (Chapter 9)."
     },
     {
       "type": "paragraph",
-      "id": "hy8n6kt"
+      "id": "hy8n6kt",
+      "content": "Following the 2019 reorganisation, the 73rd and 74th Constitutional Amendments (governing rural Panchayati Raj and urban local bodies respectively) were extended to apply fully to J&amp;K UT, bringing its local-governance framework formally in line with the rest of India for the first time and setting in motion a more structured three-tier system: Halqa (Village) Panchayats at the base, Block Development Councils (BDCs) at the intermediate level, and District Development Councils (DDCs) at the apex district level."
     },
     {
       "type": "paragraph",
-      "id": "pt2visa"
+      "id": "pt2visa",
+      "content": "District Development Council (DDC) elections — the first-ever such elections held in J&amp;K, introducing an entirely new tier of elected local governance — were conducted in November-December 2020, representing the first major electoral exercise in the UT following the 2019 reorganisation and preceding the 2024 Assembly elections by several years."
     },
     {
       "type": "comparisonTable",
@@ -94,40 +93,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Tier</strong></p>",
+            "<p><strong>Level</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Halqa Panchayat</p>",
+            "<p>Village level</p>",
+            "<p>Base tier; elected Panchs and a Sarpanch, functioning as in the standard Indian Panchayati Raj model</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Block Development Council (BDC)</p>",
+            "<p>Block/intermediate level</p>",
+            "<p>Chairpersons indirectly elected by Panchayat members within the block</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>District Development Council (DDC)</p>",
+            "<p>District level (new, post-2019)</p>",
+            "<p>First elected in Nov-Dec 2020; a genuinely new tier of local governance introduced specifically for J&amp;K UT, not present under the old state framework</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "4wyblb0"
+      "id": "4wyblb0",
+      "content": "<strong>★ EXAM POINT: </strong><em>DDC (District Development Council) elections of November-December 2020 were the FIRST major post-reorganisation electoral exercise in J&amp;K, well before the 2024 Assembly elections (Chapter 16) — a frequently tested sequencing fact showing that local-body elections preceded the restoration of Assembly-level elected government.</em>"
     },
     {
       "id": "sptvqor",
@@ -148,8 +148,8 @@
       "id": "io5x05w",
       "type": "list",
       "items": [
-        null,
-        null
+        "Urban areas of J&amp;K are governed through Municipal Corporations (Srinagar and Jammu each have their own Municipal Corporation, given their status as the summer and winter capitals respectively) and smaller Municipal Councils/Committees for other towns, functioning under the extended 74th Amendment framework.",
+        "Urban local body elections, alongside the Panchayat and DDC elections, have been periodically conducted as part of the UT administration's stated emphasis on strengthening grassroots democratic institutions across all tiers of governance in the post-2019 period."
       ]
     },
     {
@@ -162,11 +162,11 @@
       "id": "75fvgtd",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Old state-era framework: J&amp;K's own separate Panchayati Raj Act, 1989 (73rd/74th Amendments did not automatically apply pre-2019).",
+        "Post-2019: 73rd &amp; 74th Constitutional Amendments extended fully to J&amp;K UT.",
+        "District Development Councils (DDCs) = a genuinely NEW local-governance tier introduced post-2019; first elected Nov-Dec 2020.",
+        "Three-tier system: Halqa Panchayat (village) -&gt; Block Development Council -&gt; District Development Council.",
+        "Srinagar and Jammu each have their own Municipal Corporation."
       ]
     }
   ],

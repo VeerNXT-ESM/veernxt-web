@@ -1,0 +1,261 @@
+{
+  "title": "CHAPTER 8: BLOOD, CIRCULATORY AND LYMPHATIC SYSTEM",
+  "order": 7,
+  "blocks": [
+    {
+      "id": "aikv1vl",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Circulatory System – Introduction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Blood is a fluid connective tissue composed of plasma and formed elements (RBCs, WBCs, and platelets).",
+        "Red Blood Cells (erythrocytes) carry oxygen via hemoglobin, lack a nucleus in humans, and have a 120-day lifespan.",
+        "The human heart is a four-chambered organ operating via double circulation to separate oxygenated and deoxygenated blood.",
+        "Blood vessels comprise arteries (carrying blood away from heart), veins (carrying blood toward heart), and capillaries (material exchange).",
+        "The lymphatic system consists of colorless fluid (lymph) rich in WBCs that transports absorbed fats and maintains fluid balance."
+      ],
+      "id": "jj19kpb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "RBC Lifespan",
+          "value": "120 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Heart Chambers",
+          "value": "4",
+          "icon": "info"
+        },
+        {
+          "label": "Platelet Lifespan",
+          "value": "7–10 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "ABO Discovery",
+          "value": "Karl Landsteiner",
+          "icon": "award"
+        }
+      ],
+      "id": "smcs3nx"
+    },
+    {
+      "type": "paragraph",
+      "content": "The circulatory system is responsible for the transport of substances throughout the body.<br/>It carries oxygen, nutrients, hormones, and waste products from one part of the body to another.<br/>The circulatory system maintains internal balance and helps in regulation of body temperature.<br/>In humans, the circulatory system is a closed type of system.<br/>It works in coordination with respiratory, digestive, and excretory systems.",
+      "id": "y20bz4e"
+    },
+    {
+      "id": "a2f8d3f",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Components of Circulatory System"
+    },
+    {
+      "type": "paragraph",
+      "content": "The circulatory system consists of three main components: heart, blood, and blood vessels.<br/>The heart acts as a pumping organ.<br/>Blood is the fluid connective tissue.<br/>Blood vessels form a network of tubes.<br/>These components together ensure proper circulation of blood throughout the body.",
+      "id": "6c374fp"
+    },
+    {
+      "id": "kyjxco5",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Blood – Definition and Functions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Blood is a fluid connective tissue that circulates throughout the body.<br/>It transports oxygen, carbon dioxide, nutrients, hormones, and waste materials.<br/>Blood helps in regulation of body temperature.<br/>It plays an important role in immunity.<br/>Blood also helps in clotting to prevent blood loss.",
+      "id": "3oorvpi"
+    },
+    {
+      "id": "w6nfber",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Composition of Blood"
+    },
+    {
+      "type": "paragraph",
+      "content": "Blood consists of plasma and formed elements.<br/>Plasma is the liquid part of blood.<br/>Formed elements include red blood cells, white blood cells, and platelets.<br/>Plasma contains water, proteins, salts, nutrients, and hormones.<br/>Formed elements perform specific functions.",
+      "id": "ti5lf3r"
+    },
+    {
+      "id": "nv37oe2",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Red Blood Cells (RBCs)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Red blood cells are also called erythrocytes.<br/>They contain hemoglobin which helps in transport of oxygen.<br/>RBCs are biconcave in shape.<br/>In humans, RBCs do not have a nucleus.<br/>The lifespan of RBCs is about 120 days.<br/>They are formed in bone marrow.",
+      "id": "2i0f96y"
+    },
+    {
+      "type": "pullQuote",
+      "content": "In humans, the circulatory system is a closed type of system.",
+      "id": "hcflspi"
+    },
+    {
+      "id": "us78kdh",
+      "type": "heading",
+      "level": 2,
+      "content": "6. White Blood Cells (WBCs)"
+    },
+    {
+      "type": "paragraph",
+      "content": "White blood cells are also called leukocytes.<br/>They protect the body against infections.<br/>WBCs are nucleated cells.<br/>They are of two main types: granulocytes and agranulocytes.<br/>WBCs play an important role in immunity.",
+      "id": "70mq9vl"
+    },
+    {
+      "id": "3wg5op7",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Platelets"
+    },
+    {
+      "type": "paragraph",
+      "content": "Platelets are also called thrombocytes.<br/>They help in blood clotting.<br/>Platelets prevent excessive blood loss during injury.<br/>They are produced in bone marrow.<br/>Their lifespan is about 7–10 days.",
+      "id": "u42777e"
+    },
+    {
+      "id": "4msgdyk",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Blood Groups"
+    },
+    {
+      "type": "paragraph",
+      "content": "Blood groups are determined by the presence or absence of antigens.<br/>The ABO blood group system was discovered by Karl Landsteiner.<br/>The four main blood groups are A, B, AB, and O.<br/>Rh factor determines positive and negative blood groups.<br/>Blood transfusion must be done carefully to avoid reactions.",
+      "id": "7yi55h6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Red Blood Cells (RBCs)",
+        "White Blood Cells (WBCs)",
+        "Platelets"
+      ],
+      "rows": [
+        [
+          "Alternate Name",
+          "Erythrocytes",
+          "Leukocytes",
+          "Thrombocytes"
+        ],
+        [
+          "Primary Function",
+          "Transport of oxygen via hemoglobin",
+          "Immunity and defense against infections",
+          "Blood clotting to prevent blood loss"
+        ],
+        [
+          "Presence of Nucleus",
+          "Non-nucleated (in humans)",
+          "Nucleated",
+          "Non-nucleated fragments"
+        ],
+        [
+          "Lifespan",
+          "About 120 days",
+          "Varies",
+          "About 7–10 days"
+        ]
+      ],
+      "id": "8br5bfe"
+    },
+    {
+      "id": "zhxu6gc",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Heart – Structure"
+    },
+    {
+      "type": "paragraph",
+      "content": "The heart is a muscular organ located in the chest cavity.<br/>It is protected by ribs and sternum.<br/>The heart is divided into four chambers: two atria and two ventricles.<br/>The heart pumps blood throughout the body.<br/>Valves prevent backflow of blood. ",
+      "id": "9v73axm"
+    },
+    {
+      "id": "yickn05",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Working of Heart"
+    },
+    {
+      "type": "paragraph",
+      "content": "The heart works continuously to circulate blood.<br/>The right side of heart pumps deoxygenated blood to lungs.<br/>The left side pumps oxygenated blood to the body.<br/>This circulation is known as double circulation.<br/>Double circulation ensures efficient oxygen supply.",
+      "id": "a2gptd6"
+    },
+    {
+      "id": "8xooq73",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Blood Vessels"
+    },
+    {
+      "type": "paragraph",
+      "content": "Blood vessels are of three types: arteries, veins, and capillaries.<br/>Arteries carry blood away from the heart.<br/>Veins carry blood towards the heart.<br/>Capillaries connect arteries and veins.<br/>Capillaries allow exchange of materials.",
+      "id": "76f4q8m"
+    },
+    {
+      "id": "vd5x682",
+      "type": "heading",
+      "level": 2,
+      "content": "12. Lymphatic System – Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "The lymphatic system consists of lymph, lymph vessels, and lymph nodes.<br/>Lymph is a colorless fluid.<br/>It helps in removal of waste products.<br/>The lymphatic system plays an important role in immunity.<br/>It maintains fluid balance in the body.",
+      "id": "1z5z02c"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Karl Landsteiner discovered the ABO blood group system.",
+        "Humans exhibit double circulation, where the right side of the heart pumps deoxygenated blood to the lungs and the left side pumps oxygenated blood to the body.",
+        "Anemia is caused by a deficiency of hemoglobin, whereas Leukemia is cancer of the blood cells.",
+        "Lymph lacks Red Blood Cells (RBCs) but contains White Blood Cells (WBCs)."
+      ],
+      "id": "lhc0kmv"
+    },
+    {
+      "id": "0tc792b",
+      "type": "heading",
+      "level": 2,
+      "content": "13. Lymph"
+    },
+    {
+      "type": "paragraph",
+      "content": "Lymph is a fluid connective tissue.<br/>It lacks RBCs but contains WBCs.<br/>Lymph transports absorbed fats from intestine.<br/>It returns tissue fluid back to blood.<br/>Lymph helps in defense against infections.",
+      "id": "rmj1ak0"
+    },
+    {
+      "id": "6iwgr02",
+      "type": "heading",
+      "level": 2,
+      "content": "14. Disorders of Circulatory System"
+    },
+    {
+      "type": "paragraph",
+      "content": "Several disorders affect the circulatory system.<br/>Anemia occurs due to deficiency of hemoglobin.<br/>Leukemia is cancer of blood cells.<br/>Hypertension is high blood pressure.<br/>Heart attack occurs due to blockage of coronary arteries.",
+      "id": "5l2kh06"
+    },
+    {
+      "id": "2y2zoqx",
+      "type": "heading",
+      "level": 2,
+      "content": "15. IMPORTANT FACTS – SSC FOCUS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Blood is a connective tissue.<br/>• RBCs contain hemoglobin.<br/>• Lifespan of RBC is 120 days.<br/>• Platelets help in clotting.<br/>• ABO blood group was discovered by Karl Landsteiner.<br/>• Heart has four chambers.<br/>• Humans have double circulation.<br/>• Arteries carry blood away from heart.<br/>• Lymph lacks RBCs.<br/>• Anemia is caused by hemoglobin deficiency.",
+      "id": "su6bxh2"
+    }
+  ],
+  "enriched": true
+}

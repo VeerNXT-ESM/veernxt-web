@@ -1,0 +1,65 @@
+{
+  "title": "MOST IMPORTANT EXAM POINTS",
+  "order": 63,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• S-waves do not travel through liquid.<br/>• Mantle is thickest layer.<br/>• Core composed of NIFE.<br/>• Moho separates crust and mantle.<br/>• Asthenosphere enables plate tectonics.<br/>• Outer core generates magnetic field.",
+      "id": "obsvl49"
+    },
+    {
+      "type": "pullQuote",
+      "content": "S-waves do not travel through liquid.",
+      "id": "joeh3qy"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Thickest Layer",
+          "value": "Mantle",
+          "icon": "award"
+        },
+        {
+          "label": "Core Composition",
+          "value": "NIFE",
+          "icon": "book"
+        },
+        {
+          "label": "S-Wave Travel",
+          "value": "No Liquid",
+          "icon": "check"
+        },
+        {
+          "label": "Crust-Mantle Boundary",
+          "value": "Moho",
+          "icon": "info"
+        }
+      ],
+      "id": "0ft2d9i"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Seismic wave properties are heavily tested: S-waves cannot pass through liquids, proving the outer core is liquid.",
+        "Moho discontinuity specifically separates the crust from the mantle.",
+        "Remember NIFE stands for Nickel (Ni) and Iron (Fe) when asked about core composition."
+      ],
+      "id": "4ouf1m5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "S-waves are seismic waves that cannot travel through liquid layers.",
+        "The mantle constitutes the thickest structural layer of the Earth.",
+        "The core's chemical composition is mainly Nickel and Iron (NIFE).",
+        "The Mohorovičić (Moho) discontinuity separates the Earth's crust and mantle.",
+        "The asthenosphere provides the fluid-like layer that enables plate tectonics.",
+        "Convection currents in the outer core generate Earth's magnetic field."
+      ],
+      "id": "lhj8qug"
+    }
+  ],
+  "enriched": true
+}

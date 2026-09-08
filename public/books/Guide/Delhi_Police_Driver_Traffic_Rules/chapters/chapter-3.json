@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "f5v1yxy"
+      "id": "f5v1yxy",
+      "content": "The Rules of the Road Regulations, 1989 and the Motor Vehicles (Driving) Regulations, 2017 set out the basic rules every driver must follow."
     },
     {
       "type": "statStrip",
@@ -51,40 +52,43 @@
     },
     {
       "type": "paragraph",
-      "id": "wnpap7v"
+      "id": "wnpap7v",
+      "content": "<strong>Keep Left: </strong>Always drive as close to the left side of the road as possible. Allow traffic coming from the opposite direction to pass on your right."
     },
     {
       "type": "paragraph",
-      "id": "63pmya8"
-    },
-    {
-      "type": "pullQuote",
-      "content": "When You Must NOT Overtake",
-      "id": "8pkdg83"
+      "id": "63pmya8",
+      "content": "<strong>Turning Left: </strong>When turning left, drive close to the left side of the road you are leaving and the road you are entering."
     },
     {
       "type": "paragraph",
-      "id": "u1vmmp6"
+      "id": "u1vmmp6",
+      "content": "<strong>Turning Right: </strong>When turning right, move towards the centre of the road, then turn and keep to the left side of the road you enter."
     },
     {
       "type": "paragraph",
-      "id": "43cudg3"
+      "id": "43cudg3",
+      "content": "<strong>Overtaking: </strong>Overtake from the RIGHT side only. Do not overtake from the left except when the vehicle ahead is turning right and there is space on the left."
     },
     {
       "type": "paragraph",
-      "id": "8efe993"
+      "id": "8efe993",
+      "content": "<strong>Lane Discipline: </strong>Drive within your lane. Change lanes only after giving a proper signal. Do not weave between lanes."
     },
     {
       "type": "paragraph",
-      "id": "iq01xnl"
+      "id": "iq01xnl",
+      "content": "<strong>Right of Way: </strong>At a STOP sign — stop completely before the stop line. At a GIVE WAY sign — slow down and give way to traffic on the main road."
     },
     {
       "type": "paragraph",
-      "id": "wriz0k8"
+      "id": "wriz0k8",
+      "content": "<strong>Pedestrian Crossing: </strong>Slow down before a pedestrian crossing. Give way to pedestrians crossing the road. Do not park near a pedestrian crossing."
     },
     {
       "type": "paragraph",
-      "id": "wioc4a2"
+      "id": "wioc4a2",
+      "content": "<strong>Both Hands on Wheel: </strong>A driver must hold the steering wheel with both hands at all times except when signalling."
     },
     {
       "id": "lpjvxms",
@@ -104,13 +108,13 @@
       "id": "3m6c5sh",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "If overtaking may cause danger or inconvenience to other traffic",
+        "Near a bend, corner, hill, or any place where the road ahead is not clearly visible",
+        "When the driver behind you has already started to overtake you",
+        "When the driver ahead has not signalled that you may overtake",
+        "At a pedestrian crossing",
+        "At a road intersection or junction",
+        "When a school bus is stopped and children are getting on/off"
       ]
     },
     {
@@ -123,13 +127,13 @@
       "id": "nykuu4n",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Maintain a good lookout and concentrate on the road",
+        "Avoid any activity that distracts attention (e.g. using mobile phone)",
+        "Take special care of pedestrians, cyclists, children, the elderly, and differently-abled persons",
+        "Ensure the vehicle does not block or cause inconvenience to other road users",
+        "Ensure your view is not blocked by passengers, animals, or load in the vehicle",
+        "Ensure all occupants wear seat belts",
+        "If a technical defect is found while driving, take the vehicle off the road immediately"
       ]
     }
   ],

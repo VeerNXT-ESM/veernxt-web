@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "pzeoa02"
+      "id": "pzeoa02",
+      "content": "Cyber Security refers to the protection of computer systems, networks, and digital data from unauthorized access, cyber attacks, and damage. As the use of the Internet and digital technologies increases, cyber security has become an essential aspect of modern computing."
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0r8emr0"
+      "id": "0r8emr0",
+      "content": "Cyber security involves technologies, processes, and practices designed to protect computers, networks, and data from cyber threats such as viruses, malware, hacking, and phishing attacks."
     },
     {
       "id": "7eucyti",
@@ -65,11 +67,11 @@
       "id": "c4587gc",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Protects sensitive information from unauthorized access.",
+        "Prevents data theft and financial fraud.",
+        "Ensures privacy and confidentiality.",
+        "Maintains the integrity of computer systems.",
+        "Protects against cyber attacks."
       ]
     },
     {
@@ -80,7 +82,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dite4le"
+      "id": "dite4le",
+      "content": "A computer virus is a malicious program that attaches itself to a legitimate program and spreads from one computer to another, causing damage to files and system operations."
     },
     {
       "id": "ccomqnp",
@@ -92,10 +95,10 @@
       "id": "cvwhzfx",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Self-replicating program.",
+        "Spreads through infected files and software.",
+        "Can damage files and operating systems.",
+        "May slow down system performance."
       ]
     },
     {
@@ -111,36 +114,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Virus Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Boot Sector Virus</p>",
+            "<p>Infects the boot sector of storage devices.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>File Virus</p>",
+            "<p>Attaches itself to executable files.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Macro Virus</p>",
+            "<p>Infects documents created in applications such as MS Word.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Polymorphic Virus</p>",
+            "<p>Changes its code to avoid detection.</p>"
           ]
         }
       ]
@@ -158,7 +161,8 @@
     },
     {
       "type": "paragraph",
-      "id": "o9ojiuu"
+      "id": "o9ojiuu",
+      "content": "Malware is malicious software designed to harm, disrupt, or gain unauthorized access to computer systems."
     },
     {
       "id": "evfg13r",
@@ -173,43 +177,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Malware Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Virus</p>",
+            "<p>Malicious program that spreads by attaching to files.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Worm</p>",
+            "<p>Self-replicating program that spreads through networks.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Trojan Horse</p>",
+            "<p>Malicious program disguised as legitimate software.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Spyware</p>",
+            "<p>Collects user information secretly.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ransomware</p>",
+            "<p>Locks user data and demands payment.</p>"
           ]
         }
       ]
@@ -222,7 +226,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4u0ss52"
+      "id": "4u0ss52",
+      "content": "A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predefined security rules."
     },
     {
       "type": "comparisonTable",
@@ -252,7 +257,8 @@
     },
     {
       "type": "paragraph",
-      "id": "v23cke6"
+      "id": "v23cke6",
+      "content": "It acts as a barrier between a trusted internal network and untrusted external networks such as the Internet."
     },
     {
       "id": "ptk8mhg",
@@ -262,7 +268,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zbj4cge"
+      "id": "zbj4cge",
+      "content": "Antivirus software is a program designed to detect, prevent, and remove computer viruses and other types of malware."
     },
     {
       "id": "4cp7bf5",
@@ -274,10 +281,10 @@
       "id": "wi43e2g",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Scans files and programs for malicious code.",
+        "Detects and removes viruses and malware.",
+        "Provides real-time protection.",
+        "Prevents unauthorized access."
       ]
     },
     {
@@ -294,7 +301,8 @@
     },
     {
       "type": "paragraph",
-      "id": "frvbeil"
+      "id": "frvbeil",
+      "content": "Phishing is a cyber attack in which attackers attempt to trick users into providing sensitive information such as passwords, credit card numbers, or personal data."
     },
     {
       "type": "examAlert",
@@ -313,7 +321,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jq0gl93"
+      "id": "jq0gl93",
+      "content": "Hacking refers to unauthorized access to computer systems or networks in order to steal data, manipulate systems, or cause damage."
     },
     {
       "id": "vmndtst",
@@ -325,11 +334,11 @@
       "id": "txm0x3r",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Use strong and unique passwords.",
+        "Avoid clicking on suspicious links.",
+        "Install and update antivirus software.",
+        "Keep operating systems and applications updated.",
+        "Do not share personal information online."
       ]
     },
     {
@@ -342,11 +351,11 @@
       "id": "noxfwo0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Virus is a malicious program that spreads by attaching to files.",
+        "Malware includes viruses, worms, trojans, and spyware.",
+        "Firewall monitors network traffic.",
+        "Antivirus protects systems from viruses and malware.",
+        "Phishing is used to steal sensitive information."
       ]
     }
   ],

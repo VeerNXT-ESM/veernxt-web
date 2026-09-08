@@ -1,0 +1,187 @@
+{
+  "title": "Neolithic Age (New Stone Age)",
+  "order": 4,
+  "blocks": [
+    {
+      "id": "3cow2bi",
+      "type": "heading",
+      "level": 3,
+      "content": "Time Period"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Time Span",
+          "value": "6,000 BC - 1,000 BC",
+          "icon": "calendar"
+        },
+        {
+          "label": "Major Beginnings",
+          "value": "Agriculture",
+          "icon": "check"
+        },
+        {
+          "label": "Tool Type",
+          "value": "Polished Stone",
+          "icon": "info"
+        },
+        {
+          "label": "Clothing Materials",
+          "value": "Cotton & Wool",
+          "icon": "award"
+        }
+      ],
+      "id": "6x8btt3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Neolithic Age marked the transition to agriculture, animal domestication, and permanent settlements.",
+        "Tools were made of polished stone for sharper edges and higher durability, primarily used for farming and clearing forests.",
+        "People lived in permanent villages with mud and brick houses and stored grains for future usage.",
+        "Cows, goats, sheep, and dogs were domesticated during this period.",
+        "Pottery usage became common, and humans began wearing clothes made from cotton and wool."
+      ],
+      "id": "s0soed0"
+    },
+    {
+      "type": "paragraph",
+      "content": "<img src=\"/books/Precis/Cluster_014_SSC-GK-History/images/image_8yiv77c.jpeg\"/>The Neolithic Age generally extended from <strong>6,000 BC to 1,000 BC</strong>, though the exact time varies from region to region.",
+      "id": "ep6fc0b"
+    },
+    {
+      "id": "76qe21z",
+      "type": "heading",
+      "level": 3,
+      "content": "Neolithic Revolution"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Neolithic Age marked a major transformation in human life, often referred to as the <strong>Neolithic Revolution</strong>. During this period: - Humans began <strong>agriculture</strong>. - Animals were <strong>domesticated</strong>. - People started living in <strong>permanent settlements</strong>.",
+      "id": "rcmd635"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Neolithic Age marked a major transformation in human life, often referred to as the Neolithic Revolution.",
+      "id": "f3r251d"
+    },
+    {
+      "type": "paragraph",
+      "content": "SSC Highlight: <em>Agriculture began in the Neolithic Age.</em>",
+      "id": "erbar8h"
+    },
+    {
+      "id": "g9lir5x",
+      "type": "heading",
+      "level": 3,
+      "content": "Tools"
+    },
+    {
+      "id": "ie9ps15",
+      "type": "list",
+      "items": [
+        "Tools were made of <strong>polished stone</strong>, making them sharper and more durable.",
+        "These tools were mainly used for farming and clearing forests."
+      ]
+    },
+    {
+      "id": "zq4tzoc",
+      "type": "heading",
+      "level": 3,
+      "content": "Settlement Pattern"
+    },
+    {
+      "id": "iztzz3y",
+      "type": "list",
+      "items": [
+        "Humans lived in permanent villages.",
+        "Houses were made of mud and bricks.",
+        "Grains were stored for future use."
+      ]
+    },
+    {
+      "id": "5bhtzir",
+      "type": "heading",
+      "level": 3,
+      "content": "Domestication of Animals"
+    },
+    {
+      "type": "paragraph",
+      "content": "Commonly domesticated animals included: - Cow - Goat - Sheep - Dog",
+      "id": "tqbleq1"
+    },
+    {
+      "id": "qtd55ok",
+      "type": "heading",
+      "level": 3,
+      "content": "Pottery and Clothing"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Agriculture began in the Neolithic Age (frequently tested in SSC exams).",
+        "Neolithic tools are distinguished by being made of polished stone rather than raw/unpolished stone.",
+        "Invention and common usage of pottery and cotton/wool clothing began in this era."
+      ],
+      "id": "qmsib1o"
+    },
+    {
+      "id": "eum3gon",
+      "type": "list",
+      "items": [
+        "Pottery became common.",
+        "Humans started wearing clothes made from cotton and wool."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Important Neolithic Sites in India",
+      "id": "wzhyg5u"
+    },
+    {
+      "id": "7sze28c",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Site</strong></p>",
+            "<p><strong>Region</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mehrgarh</p>",
+            "<p>Pakistan</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Burzahom</p>",
+            "<p>Kashmir</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Koldihwa</p>",
+            "<p>Uttar Pradesh</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Daojali Hading</p>",
+            "<p>Assam</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

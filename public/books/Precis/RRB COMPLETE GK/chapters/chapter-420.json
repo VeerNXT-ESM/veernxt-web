@@ -10,28 +10,28 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Post</strong></p>",
+            "<p><strong>Tenure</strong></p>",
+            "<p><strong>Removal</strong></p>",
+            "<p><strong>Resignation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Chief Election Commissioner</p>",
+            "<p>6 years or 65 years</p>",
+            "<p>Same as Supreme Court Judge</p>",
+            "<p>To President</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Election Commissioner</p>",
+            "<p>6 years or 65 years</p>",
+            "<p>On recommendation of CEC</p>",
+            "<p>To President</p>"
           ]
         }
       ]
@@ -127,7 +127,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rqleb66"
+      "id": "rqleb66",
+      "content": "The CEC can only be removed through impeachment similar to a Supreme Court judge, ensuring independence."
     }
   ],
   "enriched": true

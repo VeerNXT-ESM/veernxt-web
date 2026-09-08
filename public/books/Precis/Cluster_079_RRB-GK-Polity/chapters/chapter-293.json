@@ -1,0 +1,131 @@
+{
+  "title": "Composition of Lokpal",
+  "order": 293,
+  "blocks": [
+    {
+      "id": "jnmwkji",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>Former CJI / Supreme Court Judge / Eminent person</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Members</p>",
+            "<p>Maximum 8</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Judicial Members</p>",
+            "<p>At least 50%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Social Representation</p>",
+            "<p>50% from SC/ST/OBC/Minorities/Women</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Lokpal is a multi-member body, consisting of a chairperson and a maximum of eight members.",
+      "id": "j6g6kqx"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Member Category",
+        "Eligibility Criteria",
+        "Mandatory Quota"
+      ],
+      "rows": [
+        [
+          "Chairperson",
+          "Former CJI, former Supreme Court Judge, or Eminent Person with 25+ years expertise",
+          "1 Position"
+        ],
+        [
+          "Judicial Members",
+          "Former Supreme Court Judge or former Chief Justice of a High Court",
+          "Minimum 50% of total members"
+        ],
+        [
+          "Non-Judicial Members",
+          "Eminent person with 25+ years expertise in anti-corruption, public administration, or finance",
+          "Maximum 50% of total members"
+        ],
+        [
+          "Representational Quota",
+          "Belonging to SCs, STs, OBCs, Minorities, and Women",
+          "Minimum 50% of total members"
+        ]
+      ],
+      "id": "zmxec7r"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Max Members",
+          "value": "1 + 8",
+          "icon": "book"
+        },
+        {
+          "label": "Judicial Share",
+          "value": "50%",
+          "icon": "check"
+        },
+        {
+          "label": "Reserved Share",
+          "value": "50%",
+          "icon": "award"
+        },
+        {
+          "label": "Tenure / Max Age",
+          "value": "5 Yrs / 70 Yrs",
+          "icon": "calendar"
+        }
+      ],
+      "id": "e269xcu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crucial percentage rules: Exactly 50% of members must be Judicial Members, and at least 50% must be reserved for SC/ST/OBC/Minorities/Women.",
+        "Selection Committee Composition: Prime Minister (Chairperson), Speaker of Lok Sabha, Leader of Opposition in Lok Sabha, CJI (or nominee), and an Eminent Jurist.",
+        "Tenure limit is 5 years or up to 70 years of age, whichever is earlier."
+      ],
+      "id": "ynmi6wl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Lokpal is a multi-member body consisting of a Chairperson and a maximum of 8 members.",
+        "50% of the members must be Judicial Members (former Supreme Court Judge or former High Court Chief Justice).",
+        "A minimum of 50% of the members must be from SCs, STs, OBCs, Minorities, and Women.",
+        "The Chairperson and members hold office for a term of 5 years or until attaining the age of 70 years.",
+        "Appointments are made by the President on the recommendation of a Selection Committee headed by the Prime Minister."
+      ],
+      "id": "ad945xk"
+    }
+  ],
+  "enriched": true
+}

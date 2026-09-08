@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "14chv4m"
+      "id": "14chv4m",
+      "content": "Sources are classified into Direct and Indirect sources."
     },
     {
       "type": "statStrip",
@@ -87,43 +88,44 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Direct Sources</strong></p>",
+            "<p><strong>Indirect Sources</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mining (deepest mines ~4 km)</p>",
+            "<p>Seismic waves</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deep drilling (Kola Superdeep Borehole ~12 km)</p>",
+            "<p>Meteorites</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Volcanic lava</p>",
+            "<p>Gravity studies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rock samples</p>",
+            "<p>Magnetic field studies</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "5qzo5h1"
+      "id": "5qzo5h1",
+      "content": "Since the Earth's radius is about 6,371 km, direct evidence covers less than 1% of the interior. Therefore, seismic wave analysis is the most important method."
     }
   ],
   "enriched": true

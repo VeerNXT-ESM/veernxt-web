@@ -1,0 +1,90 @@
+{
+  "title": "ULTRA QUICK REVISION",
+  "order": 126,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Volcano → magma eruption<br/>Types → shield, composite, cinder<br/>Eruptions → Hawaiian to Plinian<br/>Hazards → lava, ash, lahars<br/>Benefits → fertile soil, geothermal",
+      "id": "ec9efrm"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Volcano → magma eruption",
+      "id": "22rhj9p"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Details"
+      ],
+      "rows": [
+        [
+          "Types",
+          "Shield, composite, cinder"
+        ],
+        [
+          "Eruptions",
+          "Hawaiian to Plinian"
+        ],
+        [
+          "Hazards",
+          "Lava, ash, lahars"
+        ],
+        [
+          "Benefits",
+          "Fertile soil, geothermal"
+        ]
+      ],
+      "id": "ejmr7uk"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Volcano Types",
+          "value": "3 Types",
+          "icon": "info"
+        },
+        {
+          "label": "Eruption Range",
+          "value": "Hawaiian to Plinian",
+          "icon": "clock"
+        },
+        {
+          "label": "Hazards",
+          "value": "Lava, Ash, Lahars",
+          "icon": "check"
+        },
+        {
+          "label": "Benefits",
+          "value": "Soil & Geothermal",
+          "icon": "award"
+        }
+      ],
+      "id": "5xnlvrf"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember the three volcano types: shield, composite, and cinder.",
+        "Note the full eruption spectrum ranging from Hawaiian to Plinian.",
+        "Distinguish volcanic hazards (lava, ash, lahars) from benefits (fertile soil, geothermal)."
+      ],
+      "id": "ygh65uz"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Volcanoes involve the eruption of magma.",
+        "The primary types of volcanoes are shield, composite, and cinder.",
+        "Eruption scale spans from Hawaiian to Plinian types.",
+        "Major hazards associated with eruptions are lava, ash, and lahars.",
+        "Volcanoes offer positive benefits including fertile soil and geothermal energy."
+      ],
+      "id": "e94l6kw"
+    }
+  ],
+  "enriched": true
+}

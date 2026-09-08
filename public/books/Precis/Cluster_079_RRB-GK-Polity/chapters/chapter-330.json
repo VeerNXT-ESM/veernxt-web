@@ -1,0 +1,124 @@
+{
+  "title": "Types of Insurance Regulated by IRDAI",
+  "order": 330,
+  "blocks": [
+    {
+      "id": "5ujguw6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Life Insurance</p>",
+            "<p>Provides financial support after death or retirement.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>General Insurance</p>",
+            "<p>Covers health, motor, travel, property etc.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reinsurance</p>",
+            "<p>Insurance for insurance companies.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Insurance Regulatory and Development Authority of India (IRDAI) is a statutory body formed under the Insurance Regulatory and Development Authority Act, 1999.",
+      "id": "6s70zsn"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Life Insurance",
+        "General Insurance"
+      ],
+      "rows": [
+        [
+          "Primary Object",
+          "Protection against loss of life / Long-term investment",
+          "Indemnity against loss of property, asset, or health"
+        ],
+        [
+          "Contract Tenure",
+          "Long-term (Multi-year, up to whole life)",
+          "Short-term (Usually 1 year, renewable annually)"
+        ],
+        [
+          "Principle of Indemnity",
+          "Not applicable (Human life value cannot be precisely measured)",
+          "Strictly applicable (Compensation limited to actual loss)"
+        ],
+        [
+          "Insurable Interest",
+          "Must exist at the time of policy inception",
+          "Must exist both at inception and at the time of loss (except Marine)"
+        ]
+      ],
+      "id": "x76d6zx"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "IRDAI Act",
+          "value": "1999",
+          "icon": "calendar"
+        },
+        {
+          "label": "Primary Sectors",
+          "value": "2 Categories",
+          "icon": "book"
+        },
+        {
+          "label": "Free-Look Period",
+          "value": "15-30 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Regulatory Mandate",
+          "value": "Policyholder Protection",
+          "icon": "award"
+        }
+      ],
+      "id": "1fz9dfe"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "IRDAI was constituted based on the recommendations of the Malhotra Committee Report (1994).",
+        "Life insurance contracts are not contracts of strict indemnity, whereas general insurance contracts are strictly governed by the Principle of Indemnity.",
+        "Standard free-look period for offline policies is 15 days, whereas distance marketing/electronic policies carry a 30-day free-look period."
+      ],
+      "id": "onz1nzd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "IRDAI regulates both Life Insurance and General (Non-Life) Insurance sectors in India to ensure orderly growth and financial stability.",
+        "Life Insurance covers the risk of loss of life and functions primarily as a long-term savings and protection product.",
+        "General Insurance includes Motor, Health, Marine, Fire, and Property insurance, operating strictly on the Principle of Indemnity.",
+        "Health Insurance operates under specialized IRDAI regulations offering standalone coverages, family floaters, and critical illness policies.",
+        "Reinsurance operations, including domestic reinsurer GIC Re and foreign reinsurance branches (FRBs), are regulated by IRDAI."
+      ],
+      "id": "0uhkafx"
+    }
+  ],
+  "enriched": true
+}

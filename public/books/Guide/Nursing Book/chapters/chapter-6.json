@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lrml6jr"
+      "id": "lrml6jr",
+      "content": "Genetics is the branch of biology that studies heredity and variation in living organisms. It explains how traits are transmitted from parents to offspring through genes. In nursing examinations such as RRB Nursing, important topics include DNA structure, chromosomes, Mendelian inheritance, genetic disorders, mutations, and basic genetic terminology."
     },
     {
       "id": "f9nvmdj",
@@ -64,64 +65,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Definition</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gene</p>",
+            "<p>Basic unit of heredity located on chromosomes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Allele</p>",
+            "<p>Alternative form of a gene</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Genotype</p>",
+            "<p>Genetic makeup of an individual</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Phenotype</p>",
+            "<p>Observable characteristics of an individual</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Homozygous</p>",
+            "<p>Two identical alleles for a trait</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heterozygous</p>",
+            "<p>Two different alleles for a trait</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dominant gene</p>",
+            "<p>Gene that expresses its effect even if only one copy is present</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Recessive gene</p>",
+            "<p>Gene expressed only when two copies are present</p>"
           ]
         }
       ]
@@ -134,7 +135,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tddn6l2"
+      "id": "tddn6l2",
+      "content": "Chromosomes are thread-like structures located in the nucleus of cells. They are made of DNA and proteins and carry genetic information."
     },
     {
       "id": "pptez52",
@@ -143,22 +145,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Chromosome Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Autosomes</p>",
+            "<p>22 pairs of chromosomes controlling body traits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sex chromosomes</p>",
+            "<p>1 pair determining sex (XX in females, XY in males)</p>"
           ]
         }
       ]
@@ -181,49 +183,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>DNA</strong></p>",
+            "<p><strong>RNA</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Full Name</p>",
+            "<p>Deoxyribonucleic Acid</p>",
+            "<p>Ribonucleic Acid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Structure</p>",
+            "<p>Double helix</p>",
+            "<p>Single strand</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Function</p>",
+            "<p>Stores genetic information</p>",
+            "<p>Protein synthesis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sugar</p>",
+            "<p>Deoxyribose</p>",
+            "<p>Ribose</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bases</p>",
+            "<p>A, T, G, C</p>",
+            "<p>A, U, G, C</p>"
           ]
         }
       ]
@@ -236,7 +238,8 @@
     },
     {
       "type": "paragraph",
-      "id": "swg8dxi"
+      "id": "swg8dxi",
+      "content": "Gregor Mendel is known as the father of genetics. His experiments on pea plants led to the formulation of basic laws of inheritance."
     },
     {
       "id": "zdx0k4f",
@@ -245,29 +248,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Law</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Law of Dominance</p>",
+            "<p>Dominant allele masks the effect of recessive allele</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Law of Segregation</p>",
+            "<p>Alleles separate during gamete formation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Law of Independent Assortment</p>",
+            "<p>Genes of different traits assort independently</p>"
           ]
         }
       ]
@@ -316,36 +319,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Inheritance Pattern</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Autosomal Dominant</p>",
+            "<p>Huntington disease</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Autosomal Recessive</p>",
+            "<p>Sickle cell anemia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>X-linked Recessive</p>",
+            "<p>Hemophilia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>X-linked Dominant</p>",
+            "<p>Vitamin D resistant rickets</p>"
           ]
         }
       ]
@@ -358,7 +361,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vd37tcy"
+      "id": "vd37tcy",
+      "content": "Mutation is a permanent change in the DNA sequence that can lead to genetic disorders."
     },
     {
       "id": "x3l71ab",
@@ -367,36 +371,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Mutation</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Point mutation</p>",
+            "<p>Change in a single nucleotide</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Insertion</p>",
+            "<p>Addition of nucleotide sequence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deletion</p>",
+            "<p>Loss of nucleotide sequence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chromosomal mutation</p>",
+            "<p>Change in chromosome structure or number</p>"
           ]
         }
       ]
@@ -414,43 +418,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Disorder</strong></p>",
+            "<p><strong>Cause</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Down syndrome</p>",
+            "<p>Extra copy of chromosome 21 (Trisomy 21)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Turner syndrome</p>",
+            "<p>Missing one X chromosome (XO)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Klinefelter syndrome</p>",
+            "<p>Extra X chromosome in males (XXY)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sickle cell anemia</p>",
+            "<p>Mutation in hemoglobin gene</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hemophilia</p>",
+            "<p>Defect in clotting factor genes</p>"
           ]
         }
       ]
@@ -472,7 +476,8 @@
     },
     {
       "type": "paragraph",
-      "id": "w3u5kwj"
+      "id": "w3u5kwj",
+      "content": "Genetic testing identifies inherited disorders, while genetic counseling helps families understand genetic risks and make informed health decisions."
     },
     {
       "id": "p6dpbko",
@@ -481,29 +486,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Test</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prenatal testing</p>",
+            "<p>Detect genetic abnormalities before birth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Carrier screening</p>",
+            "<p>Identify individuals carrying recessive genes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Newborn screening</p>",
+            "<p>Detect genetic diseases early in infants</p>"
           ]
         }
       ]
@@ -521,50 +526,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Topic</strong></p>",
+            "<p><strong>Key Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Father of genetics</p>",
+            "<p>Gregor Mendel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Human chromosome number</p>",
+            "<p>46</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Autosome pairs</p>",
+            "<p>22 pairs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sex chromosomes</p>",
+            "<p>1 pair</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Down syndrome cause</p>",
+            "<p>Trisomy 21</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hemophilia inheritance</p>",
+            "<p>X-linked recessive</p>"
           ]
         }
       ]

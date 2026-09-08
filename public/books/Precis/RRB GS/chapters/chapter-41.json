@@ -42,140 +42,171 @@
     },
     {
       "type": "paragraph",
-      "id": "23yplbw"
+      "id": "23yplbw",
+      "content": "An object is placed 20 cm in front of a concave mirror of focal length 10 cm. Find the image distance."
     },
     {
       "type": "paragraph",
-      "id": "i45qbvl"
+      "id": "i45qbvl",
+      "content": "Options:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d2zqmm6"
+      "id": "d2zqmm6",
+      "content": "A) 10 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rk1kpzv"
+      "id": "rk1kpzv",
+      "content": "B) 15 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hfdr8on"
+      "id": "hfdr8on",
+      "content": "C) 20 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y91wuip"
+      "id": "y91wuip",
+      "content": "D) 30 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "46r8s2x"
+      "id": "46r8s2x",
+      "content": "<br></br>Correct Answer: C (20 cm)"
     },
     {
       "type": "paragraph",
-      "id": "0ir6vdo"
+      "id": "0ir6vdo",
+      "content": "<br></br>Step 1: Write mirror formula."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pn6hyxu"
+      "id": "pn6hyxu",
+      "content": "1/f = 1/v + 1/u"
     },
     {
       "type": "paragraph",
-      "id": "dn3604m"
+      "id": "dn3604m",
+      "content": "<br></br>Step 2: Apply sign convention (VERY IMPORTANT IN RRB)."
     },
     {
       "type": "paragraph",
-      "id": "9g53b67"
+      "id": "9g53b67",
+      "content": "For concave mirror:"
     },
     {
       "type": "paragraph",
-      "id": "fxs46dk"
+      "id": "fxs46dk",
+      "content": "• Focal length (f) is negative."
     },
     {
       "type": "paragraph",
-      "id": "j8afvw8"
+      "id": "j8afvw8",
+      "content": "• Object distance (u) is always negative (object in front)."
     },
     {
       "type": "paragraph",
-      "id": "s651fp5"
+      "id": "s651fp5",
+      "content": "Given:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3pad3nm"
+      "id": "3pad3nm",
+      "content": "f = -10 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f45rrca"
+      "id": "f45rrca",
+      "content": "u = -20 cm"
     },
     {
       "type": "paragraph",
-      "id": "z0hd6v0"
+      "id": "z0hd6v0",
+      "content": "<br></br>Step 3: Substitute values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lbcbndf"
+      "id": "lbcbndf",
+      "content": "1/(-10) = 1/v + 1/(-20)"
     },
     {
       "type": "paragraph",
-      "id": "tlzmqhr"
+      "id": "tlzmqhr",
+      "content": "⇒ -1/10 = 1/v - 1/20"
     },
     {
       "type": "paragraph",
-      "id": "jvphiz8"
+      "id": "jvphiz8",
+      "content": "<br></br>Step 4: Take LCM to simplify."
     },
     {
       "type": "paragraph",
-      "id": "g9ffded"
+      "id": "g9ffded",
+      "content": "Multiply entire equation by 20:"
     },
     {
       "type": "paragraph",
-      "id": "64uddoo"
+      "id": "64uddoo",
+      "content": "20 × (-1/10) = 20 × (1/v - 1/20)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "taa4za3"
+      "id": "taa4za3",
+      "content": "-2 = 20/v - 1"
     },
     {
       "type": "paragraph",
-      "id": "gmx5rqp"
+      "id": "gmx5rqp",
+      "content": "<br></br>Step 5: Rearrange equation."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qc5pz1w"
+      "id": "qc5pz1w",
+      "content": "-2 + 1 = 20/v"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jx2l0iz"
+      "id": "jx2l0iz",
+      "content": "-1 = 20/v"
     },
     {
       "type": "paragraph",
-      "id": "567o7gi"
+      "id": "567o7gi",
+      "content": "<br></br>Step 6: Solve for v."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1srf6yq"
+      "id": "1srf6yq",
+      "content": "v = -20 cm"
     },
     {
       "type": "paragraph",
-      "id": "o2fisf6"
+      "id": "o2fisf6",
+      "content": "<br></br>Step 7: Interpretation."
     },
     {
       "type": "paragraph",
-      "id": "ahbvqme"
+      "id": "ahbvqme",
+      "content": "Negative v → Image formed in front of mirror."
     },
     {
       "type": "paragraph",
-      "id": "gpmmxpd"
+      "id": "gpmmxpd",
+      "content": "Therefore, image distance = 20 cm (real image)."
     },
     {
       "id": "mckdzg0",
@@ -185,45 +216,54 @@
     },
     {
       "type": "paragraph",
-      "id": "20l732b"
+      "id": "20l732b",
+      "content": "Using above data, find magnification."
     },
     {
       "type": "paragraph",
-      "id": "kazux29"
+      "id": "kazux29",
+      "content": "Options:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "awc4961"
+      "id": "awc4961",
+      "content": "A) 1"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j0s1txz"
+      "id": "j0s1txz",
+      "content": "B) -1"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ip5q8jm"
+      "id": "ip5q8jm",
+      "content": "C) 2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4kjpcmy"
+      "id": "4kjpcmy",
+      "content": "D) -2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pma3jd5"
+      "id": "pma3jd5",
+      "content": "<br></br>Correct Answer: B (-1)"
     },
     {
       "type": "paragraph",
-      "id": "64xa2uo"
+      "id": "64xa2uo",
+      "content": "<br></br>Step 1: Use magnification formula for mirror."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mb7lh8j"
+      "id": "mb7lh8j",
+      "content": "m = -v/u"
     },
     {
       "type": "pullQuote",
@@ -232,48 +272,58 @@
     },
     {
       "type": "paragraph",
-      "id": "aey2o3c"
+      "id": "aey2o3c",
+      "content": "<br></br>Step 2: Substitute values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "41pu5mk"
+      "id": "41pu5mk",
+      "content": "v = -20 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d88rcfg"
+      "id": "d88rcfg",
+      "content": "u = -20 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "utx54f1"
+      "id": "utx54f1",
+      "content": "m = -(-20)/(-20)"
     },
     {
       "type": "paragraph",
-      "id": "r2ogyz2"
+      "id": "r2ogyz2",
+      "content": "<br></br>Step 3: Simplify carefully."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y7x6pte"
+      "id": "y7x6pte",
+      "content": "m = 20 / (-20)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rwybk6f"
+      "id": "rwybk6f",
+      "content": "m = -1"
     },
     {
       "type": "paragraph",
-      "id": "683mztd"
+      "id": "683mztd",
+      "content": "<br></br>Step 4: Interpretation."
     },
     {
       "type": "paragraph",
-      "id": "hhvumz1"
+      "id": "hhvumz1",
+      "content": "Negative sign → Image is inverted."
     },
     {
       "type": "paragraph",
-      "id": "lqkaur6"
+      "id": "lqkaur6",
+      "content": "Magnitude = 1 → Image size = Object size."
     },
     {
       "id": "dk17oej",
@@ -283,108 +333,131 @@
     },
     {
       "type": "paragraph",
-      "id": "eudwucm"
+      "id": "eudwucm",
+      "content": "An object is placed 30 cm from a convex lens of focal length 15 cm. Find image distance."
     },
     {
       "type": "paragraph",
-      "id": "2unqolr"
+      "id": "2unqolr",
+      "content": "Options:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hmsfw2x"
+      "id": "hmsfw2x",
+      "content": "A) 10 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6h9itp7"
+      "id": "6h9itp7",
+      "content": "B) 15 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wu5ebtc"
+      "id": "wu5ebtc",
+      "content": "C) 20 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "moytnxj"
+      "id": "moytnxj",
+      "content": "D) 30 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y9nwfek"
+      "id": "y9nwfek",
+      "content": "<br></br>Correct Answer: D (30 cm)"
     },
     {
       "type": "paragraph",
-      "id": "pilvjal"
+      "id": "pilvjal",
+      "content": "<br></br>Step 1: Write lens formula."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "p4p7tf9"
+      "id": "p4p7tf9",
+      "content": "1/f = 1/v - 1/u"
     },
     {
       "type": "paragraph",
-      "id": "vdxi0rc"
+      "id": "vdxi0rc",
+      "content": "<br></br>Step 2: Apply sign convention."
     },
     {
       "type": "paragraph",
-      "id": "ud8dr6o"
+      "id": "ud8dr6o",
+      "content": "For convex lens:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "atjwvgx"
+      "id": "atjwvgx",
+      "content": "f = +15 cm"
     },
     {
       "type": "paragraph",
-      "id": "mgm0dgm"
+      "id": "mgm0dgm",
+      "content": "u = -30 cm (object always negative)"
     },
     {
       "type": "paragraph",
-      "id": "iwkk2r7"
+      "id": "iwkk2r7",
+      "content": "<br></br>Step 3: Substitute."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8027ajw"
+      "id": "8027ajw",
+      "content": "1/15 = 1/v - (-1/30)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ld0ujak"
+      "id": "ld0ujak",
+      "content": "1/15 = 1/v + 1/30"
     },
     {
       "type": "paragraph",
-      "id": "n3e3h6r"
+      "id": "n3e3h6r",
+      "content": "<br></br>Step 4: Take LCM 30."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "617eijw"
+      "id": "617eijw",
+      "content": "2/30 = 1/v + 1/30"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yzi4uzq"
+      "id": "yzi4uzq",
+      "content": "2/30 - 1/30 = 1/v"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4ptjl0f"
+      "id": "4ptjl0f",
+      "content": "1/30 = 1/v"
     },
     {
       "type": "paragraph",
-      "id": "1bjk9ak"
+      "id": "1bjk9ak",
+      "content": "<br></br>Step 5: Solve."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6zrcmgw"
+      "id": "6zrcmgw",
+      "content": "v = 30 cm"
     },
     {
       "type": "paragraph",
-      "id": "w1bsmfa"
+      "id": "w1bsmfa",
+      "content": "Positive v → Image formed on opposite side (real image)."
     },
     {
       "id": "1lnin5b",
@@ -394,66 +467,80 @@
     },
     {
       "type": "paragraph",
-      "id": "zgafeku"
+      "id": "zgafeku",
+      "content": "Focal length of lens = 0.5 m. Find power."
     },
     {
       "type": "paragraph",
-      "id": "y3nvbbq"
+      "id": "y3nvbbq",
+      "content": "Options:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e4djsi3"
+      "id": "e4djsi3",
+      "content": "A) 0.5 D"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "orak24i"
+      "id": "orak24i",
+      "content": "B) 1 D"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "84ulupq"
+      "id": "84ulupq",
+      "content": "C) 2 D"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "008bg1a"
+      "id": "008bg1a",
+      "content": "D) 4 D"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "er1zisd"
+      "id": "er1zisd",
+      "content": "<br></br>Correct Answer: C (2 D)"
     },
     {
       "type": "paragraph",
-      "id": "v20cyu8"
+      "id": "v20cyu8",
+      "content": "<br></br>Step 1: Formula of power."
     },
     {
       "type": "paragraph",
-      "id": "cg8dkux"
+      "id": "cg8dkux",
+      "content": "P = 1/f (f in metre)"
     },
     {
       "type": "paragraph",
-      "id": "awpy0b6"
+      "id": "awpy0b6",
+      "content": "<br></br>Step 2: Substitute."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pok2s32"
+      "id": "pok2s32",
+      "content": "P = 1 / 0.5"
     },
     {
       "type": "paragraph",
-      "id": "1ob85bf"
+      "id": "1ob85bf",
+      "content": "<br></br>Step 3: Calculate."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cqj0fae"
+      "id": "cqj0fae",
+      "content": "P = 2 Dioptre"
     },
     {
       "type": "paragraph",
-      "id": "t89ygsl"
+      "id": "t89ygsl",
+      "content": "Since focal length positive → Convex lens."
     },
     {
       "type": "examAlert",
@@ -471,76 +558,92 @@
     },
     {
       "type": "paragraph",
-      "id": "228gz34"
+      "id": "228gz34",
+      "content": "Refractive index of glass = 1.5. Find critical angle."
     },
     {
       "type": "paragraph",
-      "id": "29cltnz"
+      "id": "29cltnz",
+      "content": "Options:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l1rl5nr"
+      "id": "l1rl5nr",
+      "content": "A) 30°"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7m38zhn"
+      "id": "7m38zhn",
+      "content": "B) 42°"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rkysq84"
+      "id": "rkysq84",
+      "content": "C) 60°"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5vp3m5t"
+      "id": "5vp3m5t",
+      "content": "D) 75°"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "co9tw2m"
+      "id": "co9tw2m",
+      "content": "<br></br>Correct Answer: B (≈42°)"
     },
     {
       "type": "paragraph",
-      "id": "ktwebx6"
+      "id": "ktwebx6",
+      "content": "<br></br>Step 1: Formula for critical angle."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gylcv3y"
+      "id": "gylcv3y",
+      "content": "sin C = 1/n"
     },
     {
       "type": "paragraph",
-      "id": "gx0cbme"
+      "id": "gx0cbme",
+      "content": "<br></br>Step 2: Substitute."
     },
     {
       "type": "paragraph",
-      "id": "i0h8stt"
+      "id": "i0h8stt",
+      "content": "sin C = 1 / 1.5"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ahz117p"
+      "id": "ahz117p",
+      "content": "sin C = 0.67"
     },
     {
       "type": "paragraph",
-      "id": "gyrei7w"
+      "id": "gyrei7w",
+      "content": "<br></br>Step 3: Take inverse sine."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jjdwi5a"
+      "id": "jjdwi5a",
+      "content": "C = sin⁻¹(0.67)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y1rb4jx"
+      "id": "y1rb4jx",
+      "content": "C ≈ 42°"
     },
     {
       "type": "paragraph",
-      "id": "arjzjhl"
+      "id": "arjzjhl",
+      "content": "If angle of incidence &gt; 42°, total internal reflection occurs."
     }
   ],
   "enriched": true

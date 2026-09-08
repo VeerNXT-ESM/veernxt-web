@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "s2mm1at"
+      "id": "s2mm1at",
+      "content": "J&amp;K's economy chapter is distinctive for its heavy reliance on a small number of specialised, geography-dependent sectors — horticulture (notably apples and saffron), tourism, and traditional handicrafts — each individually significant enough to be tested by name."
     },
     {
       "type": "statStrip",
@@ -52,20 +53,18 @@
     },
     {
       "type": "paragraph",
-      "id": "41xw3p9"
+      "id": "41xw3p9",
+      "content": "Horticulture is one of the mainstays of the Kashmir Valley's economy, with apple cultivation being by far the single most significant crop — J&amp;K (predominantly the Kashmir Valley) is India's largest apple-producing state/UT, with the industry supporting a very large share of the Valley's rural livelihoods either directly or through the associated transport, packaging and trading supply chain."
     },
     {
       "type": "paragraph",
-      "id": "5xuslwu"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Horticulture: Apples, Saffron & Dry Fruits",
-      "id": "9j0fr8g"
+      "id": "5xuslwu",
+      "content": "Saffron cultivation, concentrated on the karewa terraces of the Pampore area near Srinagar (see Chapter 3), produces Kashmir's world-renowned high-quality saffron ('Kesar'), which received Geographical Indication (GI) tag recognition, protecting the name 'Kashmir Saffron' for produce genuinely grown in this specific region."
     },
     {
       "type": "paragraph",
-      "id": "13xvmd8"
+      "id": "13xvmd8",
+      "content": "Other significant horticultural products include walnuts, almonds, cherries, and a range of temperate fruits, alongside the Jammu division's own distinct agricultural profile (more oriented toward staple grain cultivation, given its plains/sub-tropical character)."
     },
     {
       "id": "i2mm6dm",
@@ -74,48 +73,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Product</strong></p>",
+            "<p><strong>Key Area</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Apples</p>",
+            "<p>Kashmir Valley (Shopian, Baramulla, Sopore, Anantnag)</p>",
+            "<p>J&amp;K is India's largest apple-producing state/UT; a cornerstone of the Valley's rural economy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Saffron</p>",
+            "<p>Pampore (karewa terraces)</p>",
+            "<p>GI-tagged 'Kashmir Saffron'; among the world's most prized saffron varieties</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Walnuts &amp; almonds</p>",
+            "<p>Across the Kashmir Valley</p>",
+            "<p>Significant export and domestic dry-fruit trade</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cherries &amp; other temperate fruits</p>",
+            "<p>Kashmir Valley</p>",
+            "<p>Growing horticultural diversification</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "9dq1m4f"
+      "id": "9dq1m4f",
+      "content": "<strong>★ EXAM POINT: </strong><em>'Kashmir Saffron' holds a Geographical Indication (GI) tag — a frequently tested economy-cum-intellectual-property crossover fact, alongside similar GI-protected Kashmiri products such as Kashmir Pashmina (see Chapter 20, Culture).</em>"
     },
     {
       "type": "comparisonTable",
@@ -153,9 +153,9 @@
       "id": "1e2p1y0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Kashmiri handicrafts — most notably Pashmina shawls, hand-knotted carpets, papier-mache work, and walnut-wood carving — represent a historically significant export and livelihood sector tracing back to the Sultanate-era patronage described in Chapter 6 (particularly under Zain-ul-Abidin).",
+        "Pashmina wool (from the underfur of specific high-altitude goats, historically sourced substantially from Ladakh's Changthang plateau and processed/woven in the Kashmir Valley) and Kashmiri hand-knotted carpets are both internationally recognised as premium, GI-protected products.",
+        "The handicrafts sector has faced periodic challenges from competition with machine-made imitations, fluctuating tourism-linked demand, and disruption during periods of security instability, prompting various government promotion and certification schemes (see Chapter 22) aimed at protecting authentic Kashmiri craftsmanship."
       ]
     },
     {
@@ -166,11 +166,13 @@
     },
     {
       "type": "paragraph",
-      "id": "lbysqe6"
+      "id": "lbysqe6",
+      "content": "Tourism is a major and highly visible economic sector, anchored around the Kashmir Valley's scenic hill destinations (Gulmarg, Pahalgam, Sonamarg — see Chapter 24) and religious pilgrimage circuits (see Chapter 21), though tourist footfall has historically fluctuated significantly in response to the security situation, recovering strongly in several recent years following periods of relative stability."
     },
     {
       "type": "paragraph",
-      "id": "83xxxen"
+      "id": "83xxxen",
+      "content": "Hydropower generation is a significant and growing sector given J&amp;K's steep, fast-flowing rivers (particularly the Chenab), though the full harnessing of this potential has historically been complicated by the terms of the Indus Waters Treaty (Chapter 4) and by the practical challenges of high-altitude infrastructure construction."
     },
     {
       "type": "examAlert",
@@ -183,7 +185,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lqepwrt"
+      "id": "lqepwrt",
+      "content": "The services sector, government employment, and a modest but growing IT/emerging-industries presence (supported by recent industrial policy incentives, see Chapter 22) round out the broader economic picture, alongside traditional trade and transport activity linked to the region's role as a gateway between the plains and the high Himalaya/Ladakh."
     },
     {
       "id": "u3rx2rt",
@@ -195,11 +198,11 @@
       "id": "m6ps2i6",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "J&amp;K (mainly Kashmir Valley) = India's largest apple-producing state/UT.",
+        "Kashmir Saffron (Pampore karewas) and Kashmir Pashmina both hold GI tags.",
+        "Key handicrafts: Pashmina shawls, hand-knotted carpets, papier-mache, walnut-wood carving.",
+        "Hydropower potential (especially on the Chenab) is significant but shaped by Indus Waters Treaty constraints.",
+        "Tourism footfall has historically fluctuated with the security situation, recovering in stable periods."
       ]
     }
   ],

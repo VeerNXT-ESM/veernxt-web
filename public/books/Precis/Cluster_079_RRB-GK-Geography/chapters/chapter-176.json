@@ -1,0 +1,62 @@
+{
+  "title": "9. Sea-Level Changes",
+  "order": 176,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Sea level may change due to glacial melting, tectonic uplift, subsidence, or thermal expansion.",
+      "id": "midt6yt"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Sea level may change due to glacial melting, tectonic uplift, subsidence, or thermal expansion.",
+      "id": "ub4f71p"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Causes",
+          "value": "4 Factors",
+          "icon": "info"
+        },
+        {
+          "label": "Melting Factors",
+          "value": "Glacial",
+          "icon": "check"
+        },
+        {
+          "label": "Tectonic Actions",
+          "value": "Uplift & Subsidence",
+          "icon": "award"
+        },
+        {
+          "label": "Temperature Effect",
+          "value": "Thermal Expansion",
+          "icon": "clock"
+        }
+      ],
+      "id": "ofgz2ir"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Memorize the 4 core causes of sea-level change: glacial melting, tectonic uplift, subsidence, and thermal expansion.",
+        "Note the distinction between land movement causes (tectonic uplift/subsidence) and water volume causes (glacial melting/thermal expansion)."
+      ],
+      "id": "ozjcqg2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Sea-level changes occur through both climate-driven and tectonic mechanisms.",
+        "Glacial melting adds water volume directly into ocean basins.",
+        "Tectonic forces alter relative sea level through land uplift and land subsidence.",
+        "Thermal expansion causes sea water volume to increase as temperature rises."
+      ],
+      "id": "4kam17u"
+    }
+  ],
+  "enriched": true
+}

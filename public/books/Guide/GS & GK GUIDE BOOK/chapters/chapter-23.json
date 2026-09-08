@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "sa1mc9s"
+      "id": "sa1mc9s",
+      "content": "The Parliament of India is the supreme legislative body of the country. It represents the will of the people and makes laws for the nation. The Indian Parliament follows a bicameral system consisting of two houses: the Lok Sabha (House of the People) and the Rajya Sabha (Council of States), along with the President of India."
     },
     {
       "type": "statStrip",
@@ -58,92 +59,92 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 79</p>",
+            "<p>Constitution of Parliament</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 80</p>",
+            "<p>Composition of Rajya Sabha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 81</p>",
+            "<p>Composition of Lok Sabha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 83</p>",
+            "<p>Duration of Houses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 85</p>",
+            "<p>Sessions of Parliament</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 86</p>",
+            "<p>President’s Address</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 100</p>",
+            "<p>Voting in Houses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 105</p>",
+            "<p>Powers and privileges of Parliament</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 107</p>",
+            "<p>Introduction and passing of bills</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 108</p>",
+            "<p>Joint sitting of Parliament</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 110</p>",
+            "<p>Money Bills</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 111</p>",
+            "<p>President’s assent to Bills</p>"
           ]
         }
       ]
@@ -161,29 +162,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>President</p>",
+            "<p>Part of Parliament; gives assent to bills</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lok Sabha</p>",
+            "<p>Lower House representing the people</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rajya Sabha</p>",
+            "<p>Upper House representing the states</p>"
           ]
         }
       ]
@@ -196,19 +197,23 @@
     },
     {
       "type": "paragraph",
-      "id": "kev4t0t"
+      "id": "kev4t0t",
+      "content": "• Maximum strength: 552 members."
     },
     {
       "type": "paragraph",
-      "id": "3zmnlm6"
+      "id": "3zmnlm6",
+      "content": "• Members are directly elected by the people."
     },
     {
       "type": "paragraph",
-      "id": "x248wqd"
+      "id": "x248wqd",
+      "content": "• Term of Lok Sabha: 5 years."
     },
     {
       "type": "paragraph",
-      "id": "s4n421x"
+      "id": "s4n421x",
+      "content": "• The Speaker presides over the Lok Sabha."
     },
     {
       "id": "vj9ae37",
@@ -218,23 +223,28 @@
     },
     {
       "type": "paragraph",
-      "id": "3gsm1y3"
+      "id": "3gsm1y3",
+      "content": "• Maximum strength: 250 members."
     },
     {
       "type": "paragraph",
-      "id": "t4pkz1u"
+      "id": "t4pkz1u",
+      "content": "• Members are elected by State Legislative Assemblies."
     },
     {
       "type": "paragraph",
-      "id": "8xs1c1j"
+      "id": "8xs1c1j",
+      "content": "• 12 members are nominated by the President."
     },
     {
       "type": "paragraph",
-      "id": "pdx1cp5"
+      "id": "pdx1cp5",
+      "content": "• It is a permanent house and cannot be dissolved."
     },
     {
       "type": "paragraph",
-      "id": "110q0tq"
+      "id": "110q0tq",
+      "content": "• One-third members retire every two years."
     },
     {
       "id": "xxs760u",
@@ -245,22 +255,20 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "6oekryh"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Lok Sabha (House of the People)",
-      "id": "63j12v3"
+      "id": "6oekryh",
+      "content": "• Budget Session (February–May)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "clmy00r"
+      "id": "clmy00r",
+      "content": "• Monsoon Session (July–September)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "c9cacie"
+      "id": "c9cacie",
+      "content": "• Winter Session (November–December)"
     },
     {
       "id": "d83y07p",
@@ -275,36 +283,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Bill</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ordinary Bill</p>",
+            "<p>Can be introduced in either House</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Money Bill</p>",
+            "<p>Can be introduced only in Lok Sabha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Financial Bill</p>",
+            "<p>Related to financial matters</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Constitution Amendment Bill</p>",
+            "<p>Used to amend the Constitution</p>"
           ]
         }
       ]
@@ -317,23 +325,28 @@
     },
     {
       "type": "paragraph",
-      "id": "004au2q"
+      "id": "004au2q",
+      "content": "• First Reading – Introduction of the bill."
     },
     {
       "type": "paragraph",
-      "id": "hq60551"
+      "id": "hq60551",
+      "content": "• Second Reading – Detailed discussion and committee stage."
     },
     {
       "type": "paragraph",
-      "id": "vw50l93"
+      "id": "vw50l93",
+      "content": "• Third Reading – Final voting."
     },
     {
       "type": "paragraph",
-      "id": "qv4ubb4"
+      "id": "qv4ubb4",
+      "content": "• Bill sent to the other House."
     },
     {
       "type": "paragraph",
-      "id": "kdrl06f"
+      "id": "kdrl06f",
+      "content": "• President’s assent required for law."
     },
     {
       "type": "comparisonTable",
@@ -374,7 +387,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qosmc1w"
+      "id": "qosmc1w",
+      "content": "A joint sitting of both Houses may be called by the President when there is a deadlock between Lok Sabha and Rajya Sabha over a bill. It is presided over by the Speaker of Lok Sabha."
     },
     {
       "id": "yn0ddtg",
@@ -390,12 +404,14 @@
     },
     {
       "type": "paragraph",
-      "id": "3k6jknt"
+      "id": "3k6jknt",
+      "content": "• Makes laws for the country"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j6g552j"
+      "id": "j6g552j",
+      "content": "• Amends the Constitution"
     },
     {
       "id": "hxuvusf",
@@ -406,12 +422,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "0oi9ev5"
+      "id": "0oi9ev5",
+      "content": "• Approves the Union Budget"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l7hst21"
+      "id": "l7hst21",
+      "content": "• Controls public expenditure"
     },
     {
       "id": "7idgxzz",
@@ -421,11 +439,13 @@
     },
     {
       "type": "paragraph",
-      "id": "jzsidj8"
+      "id": "jzsidj8",
+      "content": "• Council of Ministers responsible to Lok Sabha"
     },
     {
       "type": "paragraph",
-      "id": "3oyohcr"
+      "id": "3oyohcr",
+      "content": "• Parliament can remove government through no-confidence motion"
     },
     {
       "id": "m7ltm4h",
@@ -445,11 +465,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ymd6jck"
+      "id": "ymd6jck",
+      "content": "• Impeachment of President"
     },
     {
       "type": "paragraph",
-      "id": "3pnnnqd"
+      "id": "3pnnnqd",
+      "content": "• Removal of judges of Supreme Court and High Courts"
     },
     {
       "id": "ir4hbwl",
@@ -459,23 +481,28 @@
     },
     {
       "type": "paragraph",
-      "id": "4davmsn"
+      "id": "4davmsn",
+      "content": "• Parliament consists of President, Lok Sabha and Rajya Sabha."
     },
     {
       "type": "paragraph",
-      "id": "vzxopn5"
+      "id": "vzxopn5",
+      "content": "• Lok Sabha maximum strength 552."
     },
     {
       "type": "paragraph",
-      "id": "48j4qip"
+      "id": "48j4qip",
+      "content": "• Rajya Sabha maximum strength 250."
     },
     {
       "type": "paragraph",
-      "id": "nhqtbit"
+      "id": "nhqtbit",
+      "content": "• Money Bill introduced only in Lok Sabha."
     },
     {
       "type": "paragraph",
-      "id": "ofagase"
+      "id": "ofagase",
+      "content": "• Joint sitting presided by Speaker of Lok Sabha."
     }
   ],
   "enriched": true

@@ -4,8 +4,21 @@
   "order": 14,
   "blocks": [
     {
+      "id": "1br8l66",
+      "type": "image",
+      "imageId": "eazt8m5",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_eazt8m5.png"
+    },
+    {
       "type": "paragraph",
-      "id": "bwn75et"
+      "id": "bwn75et",
+      "content": "Earth is the largest terrestrial planet and the fifth largest in the solar system. Its size is crucial because it determines gravitational strength, atmospheric retention, and the ability to support liquid water — all necessary for life. <img></img>"
+    },
+    {
+      "id": "wi2n3hx",
+      "type": "image",
+      "imageId": "bk55qgw",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_bk55qgw.jpeg"
     },
     {
       "type": "statStrip",
@@ -40,65 +53,60 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Value</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Equatorial Radius</p>",
+            "<p>6,378 km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Polar Radius</p>",
+            "<p>6,357 km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Difference</p>",
+            "<p>≈21 km (proof of flattening)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Circumference</p>",
+            "<p>~40,075 km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Surface Area</p>",
+            "<p>510 million sq km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Water Coverage</p>",
+            "<p>71%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Land Coverage</p>",
+            "<p>29%</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Why Earth's Size Supports Life",
-      "id": "mrd0t0h"
     },
     {
       "id": "tqeh7ls",
@@ -145,7 +153,8 @@
     },
     {
       "type": "paragraph",
-      "id": "e2192ga"
+      "id": "e2192ga",
+      "content": "• Strong gravity prevents atmospheric escape."
     },
     {
       "type": "examAlert",
@@ -158,11 +167,13 @@
     },
     {
       "type": "paragraph",
-      "id": "x3uu1iw"
+      "id": "x3uu1iw",
+      "content": "• Moderate size prevents crushing pressure like gas giants."
     },
     {
       "type": "paragraph",
-      "id": "j8l2z05"
+      "id": "j8l2z05",
+      "content": "• Allows stable temperatures.<img></img>"
     }
   ],
   "enriched": true

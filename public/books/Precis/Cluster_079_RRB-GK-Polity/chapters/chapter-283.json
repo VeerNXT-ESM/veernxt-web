@@ -1,0 +1,77 @@
+{
+  "title": "7. Relationship Between CBI and CVC",
+  "order": 283,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The Central Vigilance Commission exercises superintendence over the CBI in corruption cases. While the CBI investigates offenses, the CVC acts as the anti-corruption watchdog.",
+      "id": "u7r8v2s"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Central Vigilance Commission exercises superintendence over the CBI in corruption cases.",
+      "id": "ajxbqpf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Organization",
+        "Primary Role",
+        "Supervisory Relationship"
+      ],
+      "rows": [
+        [
+          "CBI",
+          "Investigates offenses",
+          "Under CVC superintendence in corruption cases"
+        ],
+        [
+          "CVC",
+          "Anti-corruption watchdog",
+          "Exercises superintendence over CBI in corruption cases"
+        ]
+      ],
+      "id": "t0ge5mj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Superintendence Area",
+          "value": "Corruption Cases",
+          "icon": "check"
+        },
+        {
+          "label": "CBI Function",
+          "value": "Investigates Offenses",
+          "icon": "book"
+        },
+        {
+          "label": "CVC Function",
+          "value": "Anti-Corruption Watchdog",
+          "icon": "info"
+        }
+      ],
+      "id": "0dufdnt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CVC's superintendence over the CBI is specific to corruption cases.",
+        "Distinguish clearly between CBI's role (investigating offenses) and CVC's role (acting as anti-corruption watchdog)."
+      ],
+      "id": "6qyfo44"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Vigilance Commission exercises superintendence over the CBI in corruption cases.",
+        "The CBI is responsible for investigating offenses.",
+        "The CVC serves as the anti-corruption watchdog."
+      ],
+      "id": "qrvbcps"
+    }
+  ],
+  "enriched": true
+}

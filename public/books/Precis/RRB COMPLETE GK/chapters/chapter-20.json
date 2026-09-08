@@ -10,22 +10,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Perihelion</p>",
+            "<p>Closest (~3 Jan)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Aphelion</p>",
+            "<p>Farthest (~4 July)</p>"
           ]
         }
       ]
@@ -120,7 +120,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ym7on0t"
+      "id": "ym7on0t",
+      "content": "IMPORTANT: Northern Hemisphere winter occurs near perihelion , proving distance does NOT cause seasons."
     }
   ],
   "enriched": true

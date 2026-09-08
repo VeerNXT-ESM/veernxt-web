@@ -1,0 +1,84 @@
+{
+  "title": "8. Limitations and Exceptions",
+  "order": 186,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Elections to Panchayats and Municipalities are conducted by the State Election Commission (Article 243K).<br/>• Delimitation of constituencies is done by the Delimitation Commission.<br/>• The Commission cannot cancel an election result unless challenged through an election petition.<br/>",
+      "id": "qwcqmc2"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Commission cannot cancel an election result unless challenged through an election petition.",
+      "id": "6z5pqh7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Authority / Mechanism",
+        "Scope & Responsibility"
+      ],
+      "rows": [
+        [
+          "State Election Commission (Article 243K)",
+          "Conducting elections to Panchayats and Municipalities"
+        ],
+        [
+          "Delimitation Commission",
+          "Delimitation and demarcation of constituencies"
+        ],
+        [
+          "Election Petition",
+          "Exclusive legal remedy required to challenge and potentially cancel an election result"
+        ]
+      ],
+      "id": "syfck8w"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SEC Article",
+          "value": "Article 243K",
+          "icon": "book"
+        },
+        {
+          "label": "Local Body Elections",
+          "value": "State Election Commission",
+          "icon": "check"
+        },
+        {
+          "label": "Boundary Authority",
+          "value": "Delimitation Commission",
+          "icon": "info"
+        },
+        {
+          "label": "Result Challenge",
+          "value": "Election Petition",
+          "icon": "award"
+        }
+      ],
+      "id": "u82ak4a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 243K specifically governs elections to Panchayats and Municipalities by the State Election Commission, not the Election Commission of India.",
+        "Delimitation of constituencies is carried out by the Delimitation Commission.",
+        "An election result cannot be directly voided by the Commission without an election petition."
+      ],
+      "id": "9aduq89"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Elections to local bodies (Panchayats and Municipalities) are conducted by the State Election Commission as mandated by Article 243K.",
+        "The delimitation of electoral constituencies is performed by the dedicated Delimitation Commission.",
+        "The Election Commission lacks the power to unilaterally cancel an election result unless it is challenged through a formal election petition."
+      ],
+      "id": "x2fbugz"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,298 @@
+{
+  "id": "75i57er",
+  "title": "Direction & Distance",
+  "order": 6,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wkvsit9",
+      "content": "<strong>CHAPTER  06\tDIRECTION &amp; DISTANCE</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "0tpd485",
+      "content": "<em>8-Direction Sense | Shadow Problems | Distance Calculation</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s360oj0",
+      "content": "<strong>6.1  The 8-Direction Compass</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "7wisaes",
+      "content": "Direction problems test whether you can track a person's movement across multiple turns and calculate their final position or displacement from the starting point. SSC CGL asks 1–2 such questions per exam."
+    },
+    {
+      "id": "4o7t9f0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>THE 8 DIRECTIONS</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>NORTH (N)        SOUTH (S)        EAST (E)         WEST (W)</p><p>NORTH-EAST (NE)  NORTH-WEST (NW)  SOUTH-EAST (SE)  SOUTH-WEST (SW)</p><p>KEY TURNING RULES:</p><p>Facing North → Turn Left → Now facing West</p><p>Facing North → Turn Right → Now facing East</p><p>Facing South → Turn Left → Now facing East</p><p>Facing South → Turn Right → Now facing West</p><p>Facing East  → Turn Left → Now facing North</p><p>Facing East  → Turn Right → Now facing South</p><p>Facing West  → Turn Left → Now facing South</p><p>Facing West  → Turn Right → Now facing North</p><p>Any direction → U-Turn (180°) → Opposite direction</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1g76bdw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>DISTANCE FORMULA (Pythagoras)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>When path forms a right angle: Displacement = √(horizontal² + vertical²)</p><p>Example: 3 km East + 4 km North → Displacement = √(3²+4²) = √(9+16) = √25 = 5 km</p><p>Common Pythagorean triplets: (3,4,5) | (5,12,13) | (8,15,17) | (7,24,25)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "42nb02l",
+      "content": "<strong>6.2  Solved Examples</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "zaq21e9",
+      "content": "<strong>Ex.1 </strong>A person walks 5 km North, turns right and walks 3 km, then turns right again and walks 5 km. How far is he from the starting point?"
+    },
+    {
+      "type": "paragraph",
+      "id": "ypkgjjk",
+      "content": "<strong>Sol. </strong><em>N:5km → Turn right → E:3km → Turn right → S:5km. Net N-S: 5−5=0. Net E-W: 3 km East. Distance from start = 3 km East. Ans: 3 km</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ufwhofp",
+      "content": "<strong>Ex.2 </strong>Facing North, Rahul walks 10 m, turns left 10 m, turns left 10 m. What direction is he facing now?"
+    },
+    {
+      "type": "paragraph",
+      "id": "v68ulwk",
+      "content": "<strong>Sol. </strong><em>Start: North. Turn left → West. Turn left again → South. Ans: South</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "dai4pox",
+      "content": "<strong>Ex.3 </strong>A man starts from point P, walks 4 km South, turns East walks 3 km. What is the straight-line distance from P?"
+    },
+    {
+      "type": "paragraph",
+      "id": "rvd1hw8",
+      "content": "<strong>Sol. </strong><em>Pythagoras: √(4²+3²) = √(16+9) = √25 = 5 km. Ans: 5 km</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "p6itq2u",
+      "content": "<strong>Ex.4 </strong>Arjun walks 6 km North, then turns right and walks 4 km, then turns right and walks 6 km, then turns left and walks 4 km. How far is he from the start and in what direction?"
+    },
+    {
+      "type": "paragraph",
+      "id": "5v5tj78",
+      "content": "<strong>Sol. </strong><em>N:6 → E:4 → S:6 → E:4. Net N-S: 6−6=0. Net E-W: 4+4=8 km East. Ans: 8 km East</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "sq8ffqr",
+      "content": "<strong>6.3  Shadow-Based Direction Problems</strong>"
+    },
+    {
+      "id": "jdwv8rv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>SHADOW RULES</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Morning (before noon): Shadow falls towards WEST (sun rises in East)</p><p>Evening (after noon): Shadow falls towards EAST (sun sets in West)</p><p>12 noon: Shadow falls directly SOUTH in India (Northern hemisphere)</p><p>If shadow falls to the LEFT of a person → person is facing NORTH (morning)</p><p>If shadow falls to the RIGHT of a person → person is facing SOUTH (morning)</p><p>If shadow falls IN FRONT of a person → person is facing EAST (evening) / WEST (morning)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "lstdk81",
+      "content": "<strong>Ex.5 </strong>At 7 AM, Ravi's shadow falls to his right. Which direction is he facing?"
+    },
+    {
+      "type": "paragraph",
+      "id": "rejj7wx",
+      "content": "<strong>Sol. </strong><em>Morning → sun in East → shadow falls West. Shadow to the right = West is to the right → facing South. Ans: South</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "gd415nv",
+      "content": "<strong>Ex.6 </strong>During morning, two friends A and B are standing facing each other. A's shadow falls to his left. Which direction is B facing?"
+    },
+    {
+      "type": "paragraph",
+      "id": "81zwly8",
+      "content": "<strong>Sol. </strong><em>Morning shadow → West. A's shadow to his left means West is to his left → A faces North. B faces A, so B faces South. Ans: South</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zhgv90p",
+      "content": "<strong>6.4  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "yzqffqw",
+      "content": "<strong>Q.29  </strong>Ram walks 10 m South, then 6 m East, then 10 m North. How far is he from start?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kfzpqjy",
+      "content": "<strong>  (a)  </strong>4 m"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1jy9nw1",
+      "content": "<strong>  (b)  </strong>6 m"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t2jm13i",
+      "content": "<strong>  (c)  </strong>10 m"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iu99a09",
+      "content": "<strong>  (d)  </strong>26 m"
+    },
+    {
+      "type": "paragraph",
+      "id": "8s6cnlp",
+      "content": "<strong>  Ans: (b) 6 m  Hint: </strong><em>N-S cancel (10S and 10N). Net = 6 m East. Distance = 6 m.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "jd4ig3i",
+      "content": "<strong>Q.30  </strong>A man facing West turns 90° clockwise. Which direction is he now facing?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h86ppd4",
+      "content": "<strong>  (a)  </strong>East"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "emwqbhu",
+      "content": "<strong>  (b)  </strong>South"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q49nr0u",
+      "content": "<strong>  (c)  </strong>North"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "22ljm7l",
+      "content": "<strong>  (d)  </strong>West"
+    },
+    {
+      "type": "paragraph",
+      "id": "bstq5po",
+      "content": "<strong>  Ans: (c) North  Hint: </strong><em>West + 90° clockwise = North.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "a9duygu",
+      "content": "<strong>Q.31  </strong>P walks 5 km West, turns South and walks 3 km. What is straight-line distance from start?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "o3mzl8e",
+      "content": "<strong>  (a)  </strong>√34 km"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "optk4wr",
+      "content": "<strong>  (b)  </strong>8 km"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "duysmsu",
+      "content": "<strong>  (c)  </strong>4 km"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8dkbsqt",
+      "content": "<strong>  (d)  </strong>√17 km"
+    },
+    {
+      "type": "paragraph",
+      "id": "hoyzpim",
+      "content": "<strong>  Ans: (a) √34 km  Hint: </strong><em>√(5²+3²)=√(25+9)=√34.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "9egu5ga",
+      "content": "<strong>Q.32  </strong>In the morning, if a man's shadow falls behind him, in which direction is he walking?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "c3kxl0n",
+      "content": "<strong>  (a)  </strong>North"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a8h2hbg",
+      "content": "<strong>  (b)  </strong>South"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d73awo5",
+      "content": "<strong>  (c)  </strong>East"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x0y2psw",
+      "content": "<strong>  (d)  </strong>West"
+    },
+    {
+      "type": "paragraph",
+      "id": "i1ompdr",
+      "content": "<strong>  Ans: (c) East  Hint: </strong><em>Morning sun in East. Shadow behind = sun in front → facing East.</em>"
+    }
+  ],
+  "enriched": true
+}

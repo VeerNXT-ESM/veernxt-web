@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "h6l6yd4"
+      "id": "h6l6yd4",
+      "content": "Waves are generated mainly by wind. Their erosional power depends on height, frequency, and fetch (distance over which wind blows)."
     },
     {
       "type": "statStrip",
@@ -35,22 +36,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Wave Type</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Constructive Waves</p>",
+            "<p>Low height, long wavelength; deposit sediments.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Destructive Waves</p>",
+            "<p>High, steep waves; strong backwash causing erosion.</p>"
           ]
         }
       ]
@@ -105,11 +106,13 @@
     },
     {
       "type": "paragraph",
-      "id": "j0sfwed"
+      "id": "j0sfwed",
+      "content": "• Swash – forward movement of water onto shore."
     },
     {
       "type": "paragraph",
-      "id": "rnn4l1w"
+      "id": "rnn4l1w",
+      "content": "• Backwash – return flow of water to sea."
     },
     {
       "type": "examAlert",
@@ -122,11 +125,13 @@
     },
     {
       "type": "paragraph",
-      "id": "gzduivt"
+      "id": "gzduivt",
+      "content": "• Fetch – distance wind travels over water."
     },
     {
       "type": "paragraph",
-      "id": "r5j6dve"
+      "id": "r5j6dve",
+      "content": "• Longshore Drift – zigzag movement of sediments along the coast."
     }
   ],
   "enriched": true

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "cv937t5"
+      "id": "cv937t5",
+      "content": "A computer system works through the interaction of several components. The major components of a computer system are Hardware, Software, Firmware, and Humanware. Each component performs a specific role in the functioning of a computer."
     },
     {
       "type": "statStrip",
@@ -52,7 +53,8 @@
     },
     {
       "type": "paragraph",
-      "id": "7rauvf9"
+      "id": "7rauvf9",
+      "content": "Hardware refers to the physical components of a computer that can be seen and touched."
     },
     {
       "id": "bdhhyou",
@@ -64,10 +66,10 @@
       "id": "k69hs5n",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Input Devices – Keyboard, Mouse, Scanner, Microphone",
+        "Output Devices – Monitor, Printer, Speakers, Plotter",
+        "Processing Devices – CPU, Motherboard",
+        "Storage Devices – Hard Disk, SSD, Pen Drive, CD/DVD"
       ]
     },
     {
@@ -80,12 +82,12 @@
       "id": "cr6mb0i",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Keyboard",
+        "Mouse",
+        "Monitor",
+        "Printer",
+        "Hard Disk",
+        "CPU"
       ]
     },
     {
@@ -98,9 +100,9 @@
       "id": "lgm8t1j",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Hardware is the physical part of a computer system.",
+        "CPU is the main processing component.",
+        "Hardware requires software to function."
       ]
     },
     {
@@ -111,7 +113,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vejajip"
+      "id": "vejajip",
+      "content": "Software is a collection of programs and instructions that tell the computer how to perform tasks."
     },
     {
       "id": "3sm1zsv",
@@ -128,9 +131,9 @@
       "id": "iazi44o",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "System Software – Operating systems like Windows and Linux.",
+        "Application Software – Programs like MS Word, Excel, and browsers.",
+        "Utility Software – Antivirus, backup tools, disk cleanup."
       ]
     },
     {
@@ -143,11 +146,11 @@
       "id": "6n8h56c",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Windows OS",
+        "Linux",
+        "MS Word",
+        "MS Excel",
+        "Google Chrome"
       ]
     },
     {
@@ -160,9 +163,9 @@
       "id": "dy195fl",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Software provides instructions to hardware.",
+        "Operating System is the most important system software.",
+        "Without software, hardware cannot perform tasks."
       ]
     },
     {
@@ -209,7 +212,8 @@
     },
     {
       "type": "paragraph",
-      "id": "k4iiiic"
+      "id": "k4iiiic",
+      "content": "Firmware is specialized software embedded into hardware devices that provides low-level control."
     },
     {
       "id": "1x3hn40",
@@ -221,9 +225,9 @@
       "id": "xebrrgl",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Stored in ROM or Flash memory.",
+        "Provides instructions for hardware devices.",
+        "Usually permanent but can sometimes be updated."
       ]
     },
     {
@@ -236,10 +240,10 @@
       "id": "7s5y144",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "BIOS",
+        "Router firmware",
+        "Printer firmware",
+        "Smartphone firmware"
       ]
     },
     {
@@ -252,8 +256,8 @@
       "id": "lcevu71",
       "type": "list",
       "items": [
-        null,
-        null
+        "Firmware acts as a bridge between hardware and software.",
+        "BIOS is the most commonly asked firmware example."
       ]
     },
     {
@@ -264,7 +268,8 @@
     },
     {
       "type": "paragraph",
-      "id": "veedz3z"
+      "id": "veedz3z",
+      "content": "Humanware refers to the people involved in designing, operating, and maintaining computer systems."
     },
     {
       "type": "examAlert",
@@ -285,10 +290,10 @@
       "id": "m7q0wt8",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "End Users – People who use computers for daily activities.",
+        "Programmers – People who write computer programs.",
+        "System Analysts – Professionals who design computer systems.",
+        "Network Administrators – Manage computer networks."
       ]
     },
     {
@@ -301,9 +306,9 @@
       "id": "n532trv",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Operates computer systems.",
+        "Develops software.",
+        "Maintains computer networks."
       ]
     },
     {
@@ -316,8 +321,8 @@
       "id": "guxhn7c",
       "type": "list",
       "items": [
-        null,
-        null
+        "Humanware refers to the human component of a computer system.",
+        "It includes users, programmers, and administrators."
       ]
     }
   ],

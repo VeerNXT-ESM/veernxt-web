@@ -4,8 +4,15 @@
   "order": 24,
   "blocks": [
     {
+      "id": "8sovrb2",
+      "type": "image",
+      "imageId": "m348zuo",
+      "src": "/books/Guide/GEN AWARENESS/images/image_m348zuo.png"
+    },
+    {
       "type": "paragraph",
-      "id": "382gt53"
+      "id": "382gt53",
+      "content": "The Supreme Court of India is the highest judicial authority in the country. It acts as the guardian of the Constitution and protector of Fundamental Rights. The provisions related to the Supreme Court are given in Part V, Chapter IV of the Constitution (Articles 124–147)."
     },
     {
       "type": "statStrip",
@@ -58,134 +65,134 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 124</p>",
+            "<p>Establishment and constitution of Supreme Court</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 125</p>",
+            "<p>Salaries of judges</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 126</p>",
+            "<p>Appointment of Acting Chief Justice</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 127</p>",
+            "<p>Appointment of ad hoc judges</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 128</p>",
+            "<p>Attendance of retired judges</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 129</p>",
+            "<p>Supreme Court as a Court of Record</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 130</p>",
+            "<p>Seat of the Supreme Court</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 131</p>",
+            "<p>Original jurisdiction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 132</p>",
+            "<p>Appellate jurisdiction in constitutional cases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 133</p>",
+            "<p>Appellate jurisdiction in civil cases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 134</p>",
+            "<p>Appellate jurisdiction in criminal cases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 136</p>",
+            "<p>Special Leave Petition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 137</p>",
+            "<p>Review of judgments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 141</p>",
+            "<p>Law declared by Supreme Court binding on all courts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 143</p>",
+            "<p>Advisory jurisdiction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 145</p>",
+            "<p>Rules of Court</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 146</p>",
+            "<p>Officers and servants of the court</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 147</p>",
+            "<p>Interpretation</p>"
           ]
         }
       ]
@@ -198,15 +205,18 @@
     },
     {
       "type": "paragraph",
-      "id": "7wq7l4w"
+      "id": "7wq7l4w",
+      "content": "• The Supreme Court consists of the Chief Justice of India and other judges."
     },
     {
       "type": "paragraph",
-      "id": "d35q1qk"
+      "id": "d35q1qk",
+      "content": "• Originally the Constitution provided for 1 Chief Justice and 7 judges."
     },
     {
       "type": "paragraph",
-      "id": "38qqqh7"
+      "id": "38qqqh7",
+      "content": "• At present the sanctioned strength is 34 judges including the Chief Justice."
     },
     {
       "id": "q196eh8",
@@ -216,15 +226,18 @@
     },
     {
       "type": "paragraph",
-      "id": "0csmmyx"
+      "id": "0csmmyx",
+      "content": "• The judges of the Supreme Court are appointed by the President of India."
     },
     {
       "type": "paragraph",
-      "id": "sry7dcf"
+      "id": "sry7dcf",
+      "content": "• The Chief Justice is appointed by the President."
     },
     {
       "type": "paragraph",
-      "id": "8sscg0x"
+      "id": "8sscg0x",
+      "content": "• The collegium system plays an important role in the appointment process."
     },
     {
       "id": "x8yd8v9",
@@ -234,11 +247,13 @@
     },
     {
       "type": "paragraph",
-      "id": "wp8rnm7"
+      "id": "wp8rnm7",
+      "content": "• Must be a citizen of India."
     },
     {
       "type": "paragraph",
-      "id": "pka3xsy"
+      "id": "pka3xsy",
+      "content": "• Must have been a judge of a High Court for at least 5 years."
     },
     {
       "type": "pullQuote",
@@ -247,11 +262,13 @@
     },
     {
       "type": "paragraph",
-      "id": "q7by2pt"
+      "id": "q7by2pt",
+      "content": "• OR must have been an advocate of a High Court for at least 10 years."
     },
     {
       "type": "paragraph",
-      "id": "hhu1c58"
+      "id": "hhu1c58",
+      "content": "• OR must be a distinguished jurist."
     },
     {
       "id": "fa5w4fk",
@@ -261,15 +278,18 @@
     },
     {
       "type": "paragraph",
-      "id": "qfftrk6"
+      "id": "qfftrk6",
+      "content": "• Supreme Court judges hold office until the age of 65 years."
     },
     {
       "type": "paragraph",
-      "id": "xnun24p"
+      "id": "xnun24p",
+      "content": "• They can resign by writing to the President."
     },
     {
       "type": "paragraph",
-      "id": "1c3zsq0"
+      "id": "1c3zsq0",
+      "content": "• They can be removed through impeachment."
     },
     {
       "id": "s814zy1",
@@ -279,7 +299,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ihx3ug3"
+      "id": "ihx3ug3",
+      "content": "• Judges can be removed only by impeachment."
     },
     {
       "type": "comparisonTable",
@@ -314,11 +335,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8z4nm9s"
+      "id": "8z4nm9s",
+      "content": "• Impeachment requires a special majority in both Houses of Parliament."
     },
     {
       "type": "paragraph",
-      "id": "9sf7c9r"
+      "id": "9sf7c9r",
+      "content": "• The grounds for removal are proved misbehavior or incapacity."
     },
     {
       "id": "w3uc929",
@@ -334,7 +357,8 @@
     },
     {
       "type": "paragraph",
-      "id": "oih75go"
+      "id": "oih75go",
+      "content": "Disputes between the Union and States or between States."
     },
     {
       "id": "bqz1f3d",
@@ -344,7 +368,8 @@
     },
     {
       "type": "paragraph",
-      "id": "t3cnzf7"
+      "id": "t3cnzf7",
+      "content": "Appeals from High Courts in constitutional, civil and criminal matters."
     },
     {
       "id": "h1zi24s",
@@ -354,7 +379,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ukvgny9"
+      "id": "ukvgny9",
+      "content": "The President can seek the opinion of the Supreme Court."
     },
     {
       "id": "5hl24d2",
@@ -373,7 +399,8 @@
     },
     {
       "type": "paragraph",
-      "id": "w8eof77"
+      "id": "w8eof77",
+      "content": "The Supreme Court can issue writs under Article 32 for enforcement of Fundamental Rights."
     },
     {
       "id": "oqodm3o",
@@ -382,43 +409,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Writ</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Habeas Corpus</p>",
+            "<p>Produce a person illegally detained</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mandamus</p>",
+            "<p>Order to perform public duty</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prohibition</p>",
+            "<p>Prevent lower court from exceeding jurisdiction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Certiorari</p>",
+            "<p>Transfer case from lower court to higher court</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Quo Warranto</p>",
+            "<p>Question authority of public office holder</p>"
           ]
         }
       ]
@@ -431,19 +458,23 @@
     },
     {
       "type": "paragraph",
-      "id": "qpxawbh"
+      "id": "qpxawbh",
+      "content": "• Supreme Court established in 1950."
     },
     {
       "type": "paragraph",
-      "id": "jsw03hx"
+      "id": "jsw03hx",
+      "content": "• Chief Justice of India is the head of the judiciary."
     },
     {
       "type": "paragraph",
-      "id": "utx5l35"
+      "id": "utx5l35",
+      "content": "• Judges retire at age 65."
     },
     {
       "type": "paragraph",
-      "id": "wadh0j9"
+      "id": "wadh0j9",
+      "content": "• Article 32 is called the heart and soul of the Constitution."
     }
   ],
   "enriched": true

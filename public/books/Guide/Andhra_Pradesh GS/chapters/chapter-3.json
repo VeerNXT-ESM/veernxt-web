@@ -5,7 +5,20 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "tug4v9w"
+      "id": "tug4v9w",
+      "content": "Andhra Pradesh presents a diverse geographical landscape encompassing coastal plains, river deltas, plateaus, and hill ranges. The state's geography has shaped its agriculture, economy, culture, and settlement patterns."
+    },
+    {
+      "id": "8lgtimz",
+      "type": "image",
+      "imageId": "yr3s523",
+      "src": "/books/Guide/Andhra_Pradesh GS/images/image_yr3s523.jpeg"
+    },
+    {
+      "id": "mmopb93",
+      "type": "image",
+      "imageId": "u1g4f86",
+      "src": "/books/Guide/Andhra_Pradesh GS/images/image_u1g4f86.jpeg"
     },
     {
       "type": "statStrip",
@@ -54,7 +67,8 @@
     },
     {
       "type": "paragraph",
-      "id": "2hneq2v"
+      "id": "2hneq2v",
+      "content": "Andhra Pradesh lies between 12°41' N to 19°07' N latitude and 76°46' E to 84°46' E longitude. It is bounded by the Bay of Bengal in the east, Tamil Nadu in the south, Karnataka in the west, and Telangana and Odisha in the north. The state spans approximately 700 km from north to south and 300-500 km from east to west."
     },
     {
       "id": "k592f3c",
@@ -64,20 +78,24 @@
     },
     {
       "type": "paragraph",
-      "id": "aaalu72"
+      "id": "aaalu72",
+      "content": "The state can be divided into three major physiographic regions:"
     },
     {
       "type": "paragraph",
-      "id": "dirgufc"
+      "id": "dirgufc",
+      "content": "<strong>(a) The Eastern Ghats and Hill Ranges</strong>"
     },
     {
       "type": "paragraph",
-      "id": "vnw8dge"
+      "id": "vnw8dge",
+      "content": "The Eastern Ghats run through the state in a northeast-southwest direction, forming a discontinuous chain of hills. Major hill ranges include the Nallamala Hills (in Kurnool and Prakasam districts), the Erramalai Hills, the Velikonda Range, the Palakonda Range, and the Anantagiri Hills near Araku Valley. The highest peak in Andhra Pradesh is Arma Konda (also called Sitamma Konda) at 1680 m in Visakhapatnam district, in the Nallamala-Eastern Ghat range."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dhvezkj"
+      "id": "dhvezkj",
+      "content": "<strong>(b) The Deccan Plateau</strong> "
     },
     {
       "type": "pullQuote",
@@ -86,16 +104,19 @@
     },
     {
       "type": "paragraph",
-      "id": "iaw25zz"
+      "id": "iaw25zz",
+      "content": "The western and southwestern parts of Andhra Pradesh form part of the Deccan Plateau, including the Rayalaseema region (comprising Kurnool, Kadapa, Anantapur, and Chittoor districts). This region is relatively arid with poor soils. Anantapur district receives the lowest rainfall in the state. The plateau is drained by tributaries of the Krishna River."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4o45qiy"
+      "id": "4o45qiy",
+      "content": "<strong>(c) The Coastal Plains</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ijzifut"
+      "id": "ijzifut",
+      "content": "The coastal plains along the Bay of Bengal constitute the most fertile and densely populated part of Andhra Pradesh. The plains are wider in the delta regions of the Krishna and Godavari rivers (collectively called the 'Rice Bowl of India'). The coast includes beaches, estuaries, lagoons, and mangrove forests."
     },
     {
       "id": "4zj2xbe",
@@ -105,7 +126,8 @@
     },
     {
       "type": "paragraph",
-      "id": "op90gcs"
+      "id": "op90gcs",
+      "content": "Andhra Pradesh is well-watered by several major rivers. The two principal rivers are the Godavari and the Krishna."
     },
     {
       "id": "yv85hva",
@@ -114,89 +136,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>River</strong></p>",
+            "<p><strong>Length in AP (approx.)</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Godavari</p>",
+            "<p>~480 km</p>",
+            "<p>Longest river in peninsular India; originates in Trimbakeshwar, Maharashtra; called 'Dakshina Ganga'; drains into Bay of Bengal through large delta at Rajamahendravaram</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Krishna</p>",
+            "<p>~480 km</p>",
+            "<p>Originates in Mahabaleshwar, Maharashtra; second-largest river in peninsular India; Nagarjunasagar Dam is on this river; drains into Bay of Bengal near Machilipatnam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tungabhadra</p>",
+            "<p>~300 km</p>",
+            "<p>Tributary of Krishna; Srisailam and Tungabhadra dams; forms part of border with Karnataka</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vamsadhara</p>",
+            "<p>~250 km</p>",
+            "<p>Flows through Srikakulam district; Vamsadhara Project</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nagavali</p>",
+            "<p>~165 km</p>",
+            "<p>Flows through Vizianagaram and Srikakulam; drains into Bay of Bengal near Srikakulam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pennar (Penneru)</p>",
+            "<p>~355 km (in AP)</p>",
+            "<p>Originates in Chikkaballapur, Karnataka; drains into Bay of Bengal near Nellore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Papagni</p>",
+            "<p>~250 km</p>",
+            "<p>Tributary of Pennar; originates in Andhra Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sarada (Sarda)</p>",
+            "<p>~170 km</p>",
+            "<p>Flows through Visakhapatnam district; also called Eleru</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cheyyeru (Gundlakamma)</p>",
+            "<p>~160 km</p>",
+            "<p>Flows through Prakasam; seasonal river</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gosthani</p>",
+            "<p>~100 km</p>",
+            "<p>Flows through Visakhapatnam and Bheemunipatnam area</p>"
           ]
         }
       ]
@@ -214,105 +236,105 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Project/Dam</strong></p>",
+            "<p><strong>River</strong></p>",
+            "<p><strong>Districts Benefited</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nagarjunasagar Dam</p>",
+            "<p>Krishna</p>",
+            "<p>Guntur, Krishna, Nalgonda (Telangana)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Srisailam Dam</p>",
+            "<p>Krishna</p>",
+            "<p>Kurnool, Nandyal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pulichintala Project</p>",
+            "<p>Krishna</p>",
+            "<p>Guntur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pothireddypadu Head Regulator</p>",
+            "<p>Krishna</p>",
+            "<p>Kurnool, Kadapa, Nellore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Prakasam Barrage</p>",
+            "<p>Krishna</p>",
+            "<p>Krishna, Guntur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Godavari Barrage (Dowleswaram)</p>",
+            "<p>Godavari</p>",
+            "<p>East Godavari, West Godavari</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Polavaram Project (National Project)</p>",
+            "<p>Godavari</p>",
+            "<p>West Godavari, East Godavari, Visakhapatnam, Krishna</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>GNSS (Godavari-Nagarjunasagar-Srisailam)</p>",
+            "<p>Godavari-Krishna link</p>",
+            "<p>Multiple districts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tungabhadra Dam</p>",
+            "<p>Tungabhadra</p>",
+            "<p>Kurnool, Anantapur (partly Karnataka)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Somasila Dam</p>",
+            "<p>Pennar (Penneru)</p>",
+            "<p>Nellore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vamsadhara Project</p>",
+            "<p>Vamsadhara</p>",
+            "<p>Srikakulam, Vizianagaram</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Yeleru Reservoir</p>",
+            "<p>Yeleru (Sarada)</p>",
+            "<p>East Godavari</p>"
           ]
         }
       ]
@@ -325,7 +347,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xv7vbuj"
+      "id": "xv7vbuj",
+      "content": "Andhra Pradesh has a tropical climate with three main seasons – summer (March to May), the southwest monsoon (June to September), and winter (November to February). The state receives rainfall from both the southwest monsoon and the northeast monsoon (October–December), particularly the coastal and Rayalaseema districts."
     },
     {
       "id": "nhl1waf",
@@ -334,57 +357,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Climate Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Average Annual Rainfall</p>",
+            "<p>900 mm (varies widely: 600 mm in Anantapur to 1200+ mm in coastal areas)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Highest Rainfall District</p>",
+            "<p>Visakhapatnam / West Godavari (1200+ mm)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lowest Rainfall District</p>",
+            "<p>Anantapur (~550 mm; among the driest regions in India)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cyclone-Prone Coastline</p>",
+            "<p>Yes – especially October–December; major cyclones hit regularly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Summer Temperature (Peak)</p>",
+            "<p>45°C+ in Rayalaseema region</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Winter Temperature</p>",
+            "<p>12-16°C in Rayalaseema hills; mild in coastal areas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Northeast Monsoon Contribution</p>",
+            "<p>Significant for Rayalaseema and southern coastal districts</p>"
           ]
         }
       ]
@@ -406,7 +429,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vompx34"
+      "id": "vompx34",
+      "content": "After the bifurcation of Andhra Pradesh in 2014, the state had 13 districts. In 2022, the government reorganized and expanded to 26 districts. The original 13 districts (pre-2022) are important for exam purposes."
     },
     {
       "id": "jodhgmd",
@@ -415,113 +439,113 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Original 13 Districts (Pre-2022)</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Headquarters</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Srikakulam</p>",
+            "<p>Uttarandhra</p>",
+            "<p>Srikakulam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vizianagaram</p>",
+            "<p>Uttarandhra</p>",
+            "<p>Vizianagaram</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Visakhapatnam</p>",
+            "<p>Uttarandhra</p>",
+            "<p>Visakhapatnam (Vizag)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>East Godavari</p>",
+            "<p>Godavari</p>",
+            "<p>Rajamahendravaram (Rajahmundry)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>West Godavari</p>",
+            "<p>Godavari</p>",
+            "<p>Eluru</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Krishna</p>",
+            "<p>Krishna-Godavari Delta</p>",
+            "<p>Machilipatnam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Guntur</p>",
+            "<p>Krishna-Godavari Delta</p>",
+            "<p>Guntur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Prakasam</p>",
+            "<p>Nellore-Prakasam</p>",
+            "<p>Ongole</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sri Potti Sriramulu Nellore</p>",
+            "<p>Nellore-Prakasam</p>",
+            "<p>Nellore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kurnool</p>",
+            "<p>Rayalaseema</p>",
+            "<p>Kurnool</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kadapa (Y.S.R. Kadapa)</p>",
+            "<p>Rayalaseema</p>",
+            "<p>Kadapa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Anantapur</p>",
+            "<p>Rayalaseema</p>",
+            "<p>Anantapur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chittoor</p>",
+            "<p>Rayalaseema</p>",
+            "<p>Chittoor</p>"
           ]
         }
       ]
@@ -534,7 +558,8 @@
     },
     {
       "type": "paragraph",
-      "id": "983k01d"
+      "id": "983k01d",
+      "content": "About 23% of Andhra Pradesh's area is under forest cover. The forests range from tropical moist deciduous forests along river valleys to scrub forests in Rayalaseema."
     },
     {
       "id": "7lc3mnq",
@@ -543,92 +568,98 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>National Park / Sanctuary</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Known For</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sri Venkateswara National Park</p>",
+            "<p>Chittoor (Tirupati area)</p>",
+            "<p>Elephant, Sloth Bear, Cheetah Panther</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Papikondalu Wildlife Sanctuary</p>",
+            "<p>East &amp; West Godavari</p>",
+            "<p>Biodiversity; river gorge; Tiger Reserve</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nagarjunasagar-Srisailam Tiger Reserve</p>",
+            "<p>Kurnool, Nandyal, Guntur, Nalgonda</p>",
+            "<p>Largest Tiger Reserve in India by area</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Coringa Wildlife Sanctuary</p>",
+            "<p>East Godavari (Kakinada)</p>",
+            "<p>Mangrove forests; 2nd largest mangrove area in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Krishna Wildlife Sanctuary</p>",
+            "<p>Krishna (Machilipatnam area)</p>",
+            "<p>Blackbuck, migratory birds; near Kolleru Lake</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kambalakonda Wildlife Sanctuary</p>",
+            "<p>Visakhapatnam</p>",
+            "<p>Leopard, Sloth Bear, diverse birds</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kolleru Lake Bird Sanctuary</p>",
+            "<p>Krishna/West Godavari</p>",
+            "<p>Ramsar site; migratory birds</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rollapadu Wildlife Sanctuary</p>",
+            "<p>Kurnool</p>",
+            "<p>Great Indian Bustard</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gundla Brahmeswara Wildlife Sanctuary</p>",
+            "<p>Kurnool</p>",
+            "<p>Part of Nagarjunasagar Tiger Reserve buffer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nelapattu Bird Sanctuary</p>",
+            "<p>Nellore</p>",
+            "<p>Pelicans; migratory birds</p>"
           ]
         }
       ]
+    },
+    {
+      "id": "pqdcz0n",
+      "type": "image",
+      "imageId": "x5x3552",
+      "src": "/books/Guide/Andhra_Pradesh GS/images/image_x5x3552.jpeg"
     }
   ],
   "enriched": true

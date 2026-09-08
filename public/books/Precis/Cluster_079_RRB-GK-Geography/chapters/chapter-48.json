@@ -1,0 +1,55 @@
+{
+  "title": "9. Longitude and Navigation",
+  "order": 48,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Accurate longitude measurement became possible after the invention of the marine chronometer, which allowed sailors to compare local time with GMT.",
+      "id": "j9d01z9"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Accurate longitude measurement became possible after the invention of the marine chronometer, which allowed sailors to compare local time with GMT.",
+      "id": "vv0xuc1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Key Instrument",
+          "value": "Marine Chronometer",
+          "icon": "clock"
+        },
+        {
+          "label": "Time Reference",
+          "value": "GMT",
+          "icon": "calendar"
+        },
+        {
+          "label": "Primary Application",
+          "value": "Longitude Measurement",
+          "icon": "check"
+        }
+      ],
+      "id": "885ehz2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The marine chronometer is the essential device invented for precise longitude determination.",
+        "Comparing local time against Greenwich Mean Time (GMT) is the fundamental method used to calculate longitude."
+      ],
+      "id": "zwjmi7n"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The invention of the marine chronometer enabled accurate measurement of longitude at sea.",
+        "Navigators determine longitude by comparing their local time with Greenwich Mean Time (GMT)."
+      ],
+      "id": "upjvc04"
+    }
+  ],
+  "enriched": true
+}

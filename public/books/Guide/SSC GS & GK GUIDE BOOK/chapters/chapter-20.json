@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "p63v6mw"
+      "id": "p63v6mw",
+      "content": "The President of India is the constitutional head of the country and the first citizen of India. All executive actions of the Government of India are carried out in the name of the President. The office of the President is described in Part V of the Constitution (Articles 52–62)."
     },
     {
       "type": "statStrip",
@@ -58,85 +59,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 52</p>",
+            "<p>Office of the President</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 53</p>",
+            "<p>Executive power of the Union</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 54</p>",
+            "<p>Election of the President</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 55</p>",
+            "<p>Manner of election</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 56</p>",
+            "<p>Term of office (5 years)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 57</p>",
+            "<p>Eligibility for re-election</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 58</p>",
+            "<p>Qualifications for election</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 59</p>",
+            "<p>Conditions of office</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 60</p>",
+            "<p>Oath of office</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 61</p>",
+            "<p>Impeachment procedure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 62</p>",
+            "<p>Election to fill vacancy</p>"
           ]
         }
       ]
@@ -149,19 +150,23 @@
     },
     {
       "type": "paragraph",
-      "id": "zynahgo"
+      "id": "zynahgo",
+      "content": "• The President is elected indirectly."
     },
     {
       "type": "paragraph",
-      "id": "6w6xtg4"
+      "id": "6w6xtg4",
+      "content": "• Members of an Electoral College elect the President."
     },
     {
       "type": "paragraph",
-      "id": "jky5kvs"
+      "id": "jky5kvs",
+      "content": "• Electoral College consists of elected members of Parliament and elected members of State Legislative Assemblies."
     },
     {
       "type": "paragraph",
-      "id": "gsqwc5n"
+      "id": "gsqwc5n",
+      "content": "• The election uses proportional representation by means of single transferable vote."
     },
     {
       "id": "7txu2u8",
@@ -171,19 +176,23 @@
     },
     {
       "type": "paragraph",
-      "id": "1crkqn0"
+      "id": "1crkqn0",
+      "content": "• Must be a citizen of India"
     },
     {
       "type": "paragraph",
-      "id": "z5fnh7n"
+      "id": "z5fnh7n",
+      "content": "• Must be at least 35 years old"
     },
     {
       "type": "paragraph",
-      "id": "rv0szli"
+      "id": "rv0szli",
+      "content": "• Must be qualified for election as a member of Lok Sabha"
     },
     {
       "type": "paragraph",
-      "id": "olj8bnu"
+      "id": "olj8bnu",
+      "content": "• Must not hold any office of profit"
     },
     {
       "id": "fzqel39",
@@ -204,15 +213,18 @@
     },
     {
       "type": "paragraph",
-      "id": "qocmj5t"
+      "id": "qocmj5t",
+      "content": "• Appoints Prime Minister and Council of Ministers"
     },
     {
       "type": "paragraph",
-      "id": "s0l1dfk"
+      "id": "s0l1dfk",
+      "content": "• Appoints Governors, Judges of Supreme Court and High Courts"
     },
     {
       "type": "paragraph",
-      "id": "rrzauko"
+      "id": "rrzauko",
+      "content": "• Appoints Attorney General and Comptroller and Auditor General"
     },
     {
       "id": "uo8tobo",
@@ -223,21 +235,25 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ixjn5k0"
+      "id": "ixjn5k0",
+      "content": "• Summons and prorogues Parliament"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gytk2z5"
+      "id": "gytk2z5",
+      "content": "• Addresses Parliament"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dlles0y"
+      "id": "dlles0y",
+      "content": "• Gives assent to bills"
     },
     {
       "type": "paragraph",
-      "id": "mvn3vwy"
+      "id": "mvn3vwy",
+      "content": "• Can promulgate ordinances under Article 123"
     },
     {
       "id": "yqqpaau",
@@ -273,11 +289,13 @@
     },
     {
       "type": "paragraph",
-      "id": "q8e4tyr"
+      "id": "q8e4tyr",
+      "content": "• No money bill can be introduced without President's recommendation"
     },
     {
       "type": "paragraph",
-      "id": "cj5p34n"
+      "id": "cj5p34n",
+      "content": "• President causes the Union Budget to be presented in Parliament"
     },
     {
       "id": "56atvkj",
@@ -287,7 +305,8 @@
     },
     {
       "type": "paragraph",
-      "id": "7p4ur67"
+      "id": "7p4ur67",
+      "content": "• Can grant pardon, reprieve, respite, remission and commutation of punishment under Article 72"
     },
     {
       "id": "miazdvg",
@@ -298,16 +317,19 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "3jyr5vf"
+      "id": "3jyr5vf",
+      "content": "• National Emergency (Article 352)"
     },
     {
       "type": "paragraph",
-      "id": "low3h8h"
+      "id": "low3h8h",
+      "content": "• President's Rule in states (Article 356)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8r6to3j"
+      "id": "8r6to3j",
+      "content": "• Financial Emergency (Article 360)"
     },
     {
       "id": "e7cstal",
@@ -317,11 +339,13 @@
     },
     {
       "type": "paragraph",
-      "id": "iwurli7"
+      "id": "iwurli7",
+      "content": "• The President can be removed for violation of the Constitution."
     },
     {
       "type": "paragraph",
-      "id": "vpigs7d"
+      "id": "vpigs7d",
+      "content": "• The impeachment process can be initiated in either House of Parliament."
     },
     {
       "type": "examAlert",
@@ -334,7 +358,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rzooach"
+      "id": "rzooach",
+      "content": "• A two-thirds majority is required."
     },
     {
       "id": "5x3gp57",
@@ -344,24 +369,29 @@
     },
     {
       "type": "paragraph",
-      "id": "724rnag"
+      "id": "724rnag",
+      "content": "• First President of India – Dr. Rajendra Prasad"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tzv2fd8"
+      "id": "tzv2fd8",
+      "content": "• President is elected indirectly"
     },
     {
       "type": "paragraph",
-      "id": "lzuiynt"
+      "id": "lzuiynt",
+      "content": "• Term of President – 5 years"
     },
     {
       "type": "paragraph",
-      "id": "azqjnz9"
+      "id": "azqjnz9",
+      "content": "• Oath administered by Chief Justice of India"
     },
     {
       "type": "paragraph",
-      "id": "uinp5cv"
+      "id": "uinp5cv",
+      "content": "• Article 72 deals with pardoning power"
     }
   ],
   "enriched": true

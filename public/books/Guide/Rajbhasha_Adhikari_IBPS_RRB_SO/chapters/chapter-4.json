@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ii1ich4"
+      "id": "ii1ich4",
+      "content": "Hindi is written in Devanagari script. The Devanagari script is an abugida :each consonant has an inherent vowel 'a' that is suppressed by adding a halant or by a different vowel matra. Hindi has 52 characters in standard varnamala."
     },
     {
       "id": "gt342ow",
@@ -58,49 +59,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Characters</strong></p>",
+            "<p><strong>Count</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Swar (Vowels :स्वर)</p>",
+            "<p>अ, आ, इ, ई, उ, ऊ, ऋ, ए, ऐ, ओ, औ, अं (anusvar), अः (visarg)</p>",
+            "<p>11 main vowels + 2 additional marks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vyanjan (Consonants :व्यंजन)</p>",
+            "<p>क, ख, ग, घ, ङ (kanthya); च, छ, ज, झ, ञ (talavya); ट, ठ, ड, ढ, ण (murdhanya); त, थ, द, ध, न (dantya); प, फ, ब, भ, म (oshthya); य, र, ल, व (antastha); श, ष, स (ushma); ह (swar-sandhi vyanjan)</p>",
+            "<p>33 main consonants + 4 combined forms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sanyukt Vyanjan (Combined :संयुक्त व्यंजन)</p>",
+            "<p>क्ष, त्र, ज्ञ, श्र</p>",
+            "<p>4 combined consonants</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Anusvaar and Visarg</p>",
+            "<p>अं (bindu/anusvar :nasalisation); अः (visarg :breath sound)</p>",
+            "<p>2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Matra (Vowel Marks)</p>",
+            "<p>ा, ि, ी, ु, ू, ृ, े, ै, ो, ौ</p>",
+            "<p>10 matras (written forms of vowels when following consonant)</p>"
           ]
         }
       ]
@@ -118,73 +119,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Shabda Category</strong></p>",
+            "<p><strong>Sub-type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Origin-based Classification</p>",
+            "<p>Tatsam (तत्सम)</p>",
+            "<p>Directly from Sanskrit without modification; formal register</p>",
+            "<p>राजनीति, आकाश, पुस्तक, विद्यालय, कार्यालय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Origin-based Classification</p>",
+            "<p>Tadbhav (तद्भव)</p>",
+            "<p>Modified Sanskrit words; changed over time in popular use</p>",
+            "<p>हाथ (from हस्त), आग (from अग्नि), घर (from गृह), काम (from कर्म)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Origin-based Classification</p>",
+            "<p>Deshaj (देशज)</p>",
+            "<p>Words from indigenous non-Sanskrit sources; regional origin</p>",
+            "<p>पेट, खिड़की, लड़का, ढोल, जूता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Origin-based Classification</p>",
+            "<p>Videshi (विदेशी)</p>",
+            "<p>Foreign loanwords; Arabic, Persian, English, Portuguese origin</p>",
+            "<p>किताब, कागज़, कलम (Arabic); बाजार, दुकान (Persian); स्कूल, कॉलेज (English)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Structure-based Classification</p>",
+            "<p>Roodhi Shabda (रूढ़ि)</p>",
+            "<p>Simple root word; no analysis possible; primary words</p>",
+            "<p>पानी, आम, घर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Structure-based Classification</p>",
+            "<p>Yaugik Shabda (यौगिक)</p>",
+            "<p>Formed by combining morphemes; analysable into parts</p>",
+            "<p>राजभाषा = राज + भाषा; पाठशाला = पाठ + शाला</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Structure-based Classification</p>",
+            "<p>Yogrudhi Shabda (योगरूढ़ि)</p>",
+            "<p>Compound word but meaning beyond sum of parts; fixed idiom meaning</p>",
+            "<p>पंकज (कमल) = पंक + ज; लम्बोदर = गणेश</p>"
           ]
         }
       ]
@@ -202,63 +203,58 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Hindi</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vyakti Vachhak Sangya</p>",
+            "<p>व्यक्तिवाचक संज्ञा</p>",
+            "<p>Proper noun; names of specific persons, places, things</p>",
+            "<p>राम, गंगा, हिमालय, भारत, दिल्ली</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Jati Vachhak Sangya</p>",
+            "<p>जातिवाचक संज्ञा</p>",
+            "<p>Common noun; names of class or category</p>",
+            "<p>लड़का, शहर, नदी, पहाड़, कर्मचारी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bhav Vachhak Sangya</p>",
+            "<p>भाववाचक संज्ञा</p>",
+            "<p>Abstract noun; names of feelings, qualities, states</p>",
+            "<p>प्रेम, सुंदरता, ईमानदारी, आजादी, कठिनाई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Samuh Vachhak Sangya</p>",
+            "<p>समूहवाचक संज्ञा</p>",
+            "<p>Collective noun; names of groups or collections</p>",
+            "<p>सेना, झुंड, कक्षा, दल, समिति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dravya Vachhak Sangya</p>",
+            "<p>द्रव्यवाचक संज्ञा</p>",
+            "<p>Material noun; names of substances</p>",
+            "<p>सोना, चांदी, लोहा, पानी, आटा</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "4.9 Muhavare (Idioms :मुहावरे) :Important for Exam",
-      "id": "zttkd3u"
     },
     {
       "id": "80xapxf",
@@ -273,57 +269,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Hindi</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Purush Vachhak Sarvanam</p>",
+            "<p>पुरुषवाचक सर्वनाम</p>",
+            "<p>मैं, तुम, वह, हम, आप, वे (I, you, he/she, we, you-formal, they)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nishchay Vachhak Sarvanam</p>",
+            "<p>निश्चयवाचक सर्वनाम</p>",
+            "<p>यह, वह, ये, वे (this, that, these, those)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Anishchay Vachhak Sarvanam</p>",
+            "<p>अनिश्चयवाचक सर्वनाम</p>",
+            "<p>कोई, कुछ (someone/anyone, something/anything)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sambandh Vachhak Sarvanam</p>",
+            "<p>संबंधवाचक सर्वनाम</p>",
+            "<p>जो, सो; जो पढ़ेगा, सो पास होगा (who/which/that)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Prashna Vachhak Sarvanam</p>",
+            "<p>प्रश्नवाचक सर्वनाम</p>",
+            "<p>कौन, क्या, किसे, किसका (who, what, whom, whose)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nij Vachhak Sarvanam</p>",
+            "<p>निजवाचक सर्वनाम</p>",
+            "<p>आप :used for oneself; 'मैं आप ही करूंगा'</p>"
           ]
         }
       ]
@@ -341,41 +337,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Hindi</strong></p>",
+            "<p><strong>Description / Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gunvachhak</p>",
+            "<p>गुणवाचक</p>",
+            "<p>Describes quality: अच्छा, बुरा, काला, लाल, लम्बा, ईमानदार, परिश्रमी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Parimaan Vachhak</p>",
+            "<p>परिमाणवाचक</p>",
+            "<p>Describes quantity/amount: थोड़ा, बहुत, कम, अधिक, पर्याप्त, सारा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sankhya Vachhak</p>",
+            "<p>संख्यावाचक</p>",
+            "<p>Describes number: एक, दो, पहला, दूसरा, कई, कुछ, हर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sanket Vachhak / Sarvananik</p>",
+            "<p>संकेतवाचक</p>",
+            "<p>Demonstrative adjective derived from pronouns: यह, वह, ये, वे (as adjective before noun)</p>"
           ]
         }
       ]
@@ -393,37 +389,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Tense Category</strong></p>",
+            "<p><strong>Hindi</strong></p>",
+            "<p><strong>Sub-types</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vartaman Kaal</p>",
+            "<p>वर्तमान काल (Present)</p>",
+            "<p>Samaanya (Simple), Tatkalik (Continuous), Poorn (Perfect)</p>",
+            "<p>वह जाता है / जा रहा है / जा चुका है</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bhoot Kaal</p>",
+            "<p>भूत काल (Past)</p>",
+            "<p>Samaanya, Tatkalik, Poorn, Poorntatkalik, Asanna, Sambhavana</p>",
+            "<p>वह गया / जा रहा था / जा चुका था / गया था</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bhavishy Kaal</p>",
+            "<p>भविष्यत् काल (Future)</p>",
+            "<p>Samaanya (Simple), Sambhavana (Conditional/Probable)</p>",
+            "<p>वह जाएगा / जाता होगा / शायद जाए</p>"
           ]
         }
       ]
@@ -441,37 +437,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Type of Sandhi</strong></p>",
+            "<p><strong>Hindi</strong></p>",
+            "<p><strong>Rule</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Swar Sandhi</p>",
+            "<p>स्वर संधि</p>",
+            "<p>When two vowels come together; 5 sub-types: Dirgha, Guna, Vriddhi, Yan, Ayadi</p>",
+            "<p>विद्या + आलय = विद्यालय; महा + ईश = महेश; सत् + ईव = सदैव</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vyanjan Sandhi</p>",
+            "<p>व्यंजन संधि</p>",
+            "<p>When consonant follows vowel or consonant; various rules</p>",
+            "<p>जगत् + नाथ = जगन्नाथ; सत् + जन = सज्जन; उत् + लास = उल्लास</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Visarg Sandhi</p>",
+            "<p>विसर्ग संधि</p>",
+            "<p>When visarg (ः) meets a vowel or consonant; becomes 'r', 'o', 'sh', 's' etc.</p>",
+            "<p>मनः + रथ = मनोरथ; निः + छल = निश्छल; दुः + तर = दुस्तर</p>"
           ]
         }
       ]
@@ -489,64 +485,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Hindi</strong></p>",
+            "<p><strong>Rule</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Avyayibhav Samas</p>",
+            "<p>अव्ययीभाव समास</p>",
+            "<p>First word is avyaya (indeclinable); whole compound becomes avyaya; usually prepositional</p>",
+            "<p>प्रतिदिन (every day), यथाशक्ति (as per ability), आजन्म (for lifetime), निर्भय (fearless)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tatpurusha Samas</p>",
+            "<p>तत्पुरुष समास</p>",
+            "<p>Second word dominant; first word shows relationship (in, of, for, from, by); many sub-types</p>",
+            "<p>राजपुत्र (king's son), देशभक्त (devoted to nation), पर्वतारोही (mountain climber)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Karmadharaya Samas</p>",
+            "<p>कर्मधारय समास</p>",
+            "<p>Sub-type of Tatpurusha; one word qualifies other; adjective + noun or metaphor</p>",
+            "<p>नीलकमल (blue lotus), महाकवि (great poet), चन्द्रमुख (moon-face)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dvandva Samas</p>",
+            "<p>द्वंद्व समास</p>",
+            "<p>Both words equally important; joined by 'and' relationship; reversible</p>",
+            "<p>माता-पिता (mother-father), राम-कृष्ण, नर-नारी, आगम-निगम, दिन-रात</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dvigu Samas</p>",
+            "<p>द्विगु समास</p>",
+            "<p>First word is numeral; whole compound represents collection or measurement</p>",
+            "<p>त्रिलोक (three worlds), सप्ताह (seven days), नवरत्न (nine gems), पंचतंत्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bahuvrihi Samas</p>",
+            "<p>बहुव्रीहि समास</p>",
+            "<p>Neither word dominant; compound refers to a third entity beyond both; metaphorical</p>",
+            "<p>दशानन = दश (ten) + आनन (faces) = Ravana; लम्बोदर = गणेश; नीलकंठ = शिव</p>"
           ]
         }
       ]
@@ -573,148 +569,148 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Muhavara</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अक्ल का दुश्मन होना</p>",
+            "<p>Extremely foolish</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>आसमान सिर पर उठाना</p>",
+            "<p>Create huge uproar; make a lot of noise</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>कान भरना</p>",
+            "<p>Instigate; poison someone's mind against another</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>खून पसीना एक करना</p>",
+            "<p>Work very hard; put in maximum effort</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>गागर में सागर भरना</p>",
+            "<p>Express a lot in few words; concise expression</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>घर का भेदी लंका ढाए</p>",
+            "<p>Insider betrayal is most dangerous</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>चिकना घड़ा होना</p>",
+            "<p>Shameless; nothing affects; Teflon-like unaffected</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>टेढ़ी खीर होना</p>",
+            "<p>Very difficult task</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>दाल में काला होना</p>",
+            "<p>Something suspicious; something fishy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>नमक मिर्च लगाना</p>",
+            "<p>Exaggerate; add spice to news</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पानी पानी होना</p>",
+            "<p>Feel extremely ashamed; embarrassed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>बात का धनी होना</p>",
+            "<p>Person who keeps their word; reliable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>मुंह में पानी आना</p>",
+            "<p>Mouth watering; eager desire</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>राई का पहाड़ बनाना</p>",
+            "<p>Make a mountain out of a molehill; exaggerate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>लोहे के चने चबाना</p>",
+            "<p>Face extremely difficult task</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>हाथ पर हाथ धरे बैठना</p>",
+            "<p>Sit idle; do nothing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>आँखें खुलना</p>",
+            "<p>To realise; to become aware of reality</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>कमर कसना</p>",
+            "<p>Prepare fully for a task; brace oneself</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>नाक में दम करना</p>",
+            "<p>Cause great trouble; irritate constantly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पत्थर पर दूब उगाना</p>",
+            "<p>Achieve impossible task</p>"
           ]
         }
       ]
@@ -732,113 +728,113 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Lokokti</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अकेला चना भाड़ नहीं फोड़ता</p>",
+            "<p>One person cannot accomplish big task alone</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अब पछताए होत क्या जब चिड़ियाँ चुग गईं खेत</p>",
+            "<p>No point regretting after harm is done</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>आ बैल मुझे मार</p>",
+            "<p>Inviting trouble willingly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अंधे के आगे रोए, दोनों आँखें खोए</p>",
+            "<p>Wasting time on insensitive or unworthy person</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ऊँचे दुकान, फीकी पकवान</p>",
+            "<p>High reputation but inferior product/service</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>एक और एक ग्यारह होते हैं</p>",
+            "<p>Unity is strength; united we are stronger</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>कहीं की ईंट कहीं का रोड़ा, भानुमती ने कुनबा जोड़ा</p>",
+            "<p>Mismatched combination assembled without logic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>खग जाने खग की भाषा</p>",
+            "<p>Like knows like; birds of a feather</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>चोर की दाढ़ी में तिनका</p>",
+            "<p>Guilty person becomes nervous at slightest mention</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>जिस थाली में खाना उसी में छेद करना</p>",
+            "<p>Harm the one who feeds you; betray benefactor</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>नाच न जाने आँगन टेढ़ा</p>",
+            "<p>Blame circumstances for own incompetence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>बंदर क्या जाने अदरक का स्वाद</p>",
+            "<p>Cannot appreciate what one has no experience of</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>मन चंगा तो कठौती में गंगा</p>",
+            "<p>If heart is pure, God is everywhere; faith matters</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>सौ सुनार की, एक लुहार की</p>",
+            "<p>One strong blow is worth a hundred weak ones</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>हाथ कंगन को आरसी क्या</p>",
+            "<p>Self-evident truth needs no proof</p>"
           ]
         }
       ]

@@ -1,0 +1,134 @@
+{
+  "title": "Writs – Types and Meaning",
+  "order": 41,
+  "blocks": [
+    {
+      "id": "2rk2b8x",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Writ</strong></p>",
+            "<p><strong>Purpose</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Habeas Corpus</p>",
+            "<p>Produce the detained person before the court</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mandamus</p>",
+            "<p>Command a public authority to perform its duty</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Prohibition</p>",
+            "<p>Stop a lower court from exceeding jurisdiction</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Certiorari</p>",
+            "<p>Transfer a case from lower court to higher court</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Quo Warranto</p>",
+            "<p>Question the legality of a person's claim to public office</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Article 32 is the very soul of the Constitution and the very heart of it.",
+      "id": "tbt7ja9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Article 32 (Supreme Court)",
+        "Article 226 (High Court)"
+      ],
+      "rows": [
+        [
+          "Jurisdiction Scope",
+          "Narrower: Only for Fundamental Rights",
+          "Wider: For Fundamental Rights and other legal rights"
+        ],
+        [
+          "Nature of Remedy",
+          "Fundamental Right itself (SC cannot refuse)",
+          "Discretionary Power (HC may refuse remedy)"
+        ],
+        [
+          "Territorial Reach",
+          "Extends across the entire territory of India",
+          "Restricted to the state or territory under its jurisdiction"
+        ]
+      ],
+      "id": "lrsl2ax"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Article 32",
+          "value": "Supreme Court",
+          "icon": "award"
+        },
+        {
+          "label": "Article 226",
+          "value": "High Court",
+          "icon": "book"
+        },
+        {
+          "label": "Total Writs",
+          "value": "5 Types",
+          "icon": "check"
+        },
+        {
+          "label": "Origin",
+          "value": "English Law",
+          "icon": "info"
+        }
+      ],
+      "id": "dwi1h23"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The High Court's writ jurisdiction under Article 226 is wider than the Supreme Court's under Article 32, as High Courts can issue writs for ordinary legal rights as well as Fundamental Rights.",
+        "Mandamus cannot be issued against a private individual, private company, the President of India, or State Governors.",
+        "Quo-Warranto is the only writ that can be sought by any interested person, even if they are not personally aggrieved.",
+        "Habeas Corpus can be issued against both public authorities and private individuals."
+      ],
+      "id": "2jeg2mf"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Habeas Corpus literally means 'to have the body of' and protects against arbitrary and illegal detention.",
+        "Mandamus means 'we command' and directs a public official to perform an official legal duty they have failed to perform.",
+        "Prohibition is issued by a higher court to a lower court to prevent it from exceeding its jurisdiction (preventive in nature).",
+        "Certiorari is issued to quash an order passed by a lower court or quasi-judicial body without jurisdiction (both preventive and curative).",
+        "Quo-Warranto means 'by what authority' and prevents illegal usurpation of a public office."
+      ],
+      "id": "ks4mgwk"
+    }
+  ],
+  "enriched": true
+}

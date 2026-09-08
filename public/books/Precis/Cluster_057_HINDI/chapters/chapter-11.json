@@ -1,0 +1,2121 @@
+{
+  "id": "bxts9g5",
+  "title": "अध्याय 11- अंग्रेज़ी व्याकरण की मूल बातें",
+  "order": 11,
+  "blocks": [
+    {
+      "id": "3i4k1bg",
+      "type": "heading",
+      "level": 2,
+      "content": "11.1  परिचय"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "अंग्रेज़ी व्याकरण में शब्दों को उनके कार्य के आधार पर Parts of Speech (शब्द-भेद) में विभाजित किया जाता है।",
+        "संज्ञा (Noun) के मुख्य पाँच भेद (Proper, Common, Collective, Material, Abstract) होते हैं।",
+        "काल (Tenses) मुख्य रूप से तीन प्रकार के होते हैं: Present, Past, और Future Tense।",
+        "Subject-Verb Agreement के अनुसार वाक्य में Verb हमेशा Subject के Number और Person के अनुरूप होनी चाहिए।",
+        "Articles में 'A' और 'An' Indefinite Articles हैं, जबकि 'The' Definite Article है।"
+      ],
+      "id": "wm36d3t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Parts of Speech",
+          "value": "8 भेद",
+          "icon": "book"
+        },
+        {
+          "label": "Noun के प्रकार",
+          "value": "5 भेद",
+          "icon": "check"
+        },
+        {
+          "label": "Tenses (काल)",
+          "value": "3 प्रकार",
+          "icon": "clock"
+        },
+        {
+          "label": "Articles",
+          "value": "A, An, The",
+          "icon": "info"
+        }
+      ],
+      "id": "amwde9b"
+    },
+    {
+      "type": "paragraph",
+      "id": "ao7475p",
+      "content": "SSC JHT परीक्षा में Paper 1 के General English भाग के लिए अंग्रेज़ी व्याकरण की ठोस जानकारी आवश्यक है। इस अध्याय में Parts of Speech, Tenses, Active/Passive Voice और Direct/Indirect Speech को हिंदी में सरल भाषा में समझाया गया है ताकि अनुवाद के समय इनका सही प्रयोग किया जा सके।"
+    },
+    {
+      "id": "g5eha10",
+      "type": "heading",
+      "level": 2,
+      "content": "11.2  Parts of Speech (शब्द-भेद)"
+    },
+    {
+      "type": "paragraph",
+      "id": "3df6q03",
+      "content": "अंग्रेज़ी में आठ Parts of Speech होते हैं। प्रत्येक शब्द वाक्य में किसी न किसी भूमिका निभाता है:"
+    },
+    {
+      "id": "4sxl1b7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Part of Speech</strong></p>",
+            "<p><strong>हिंदी नाम</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Noun</p>",
+            "<p>संज्ञा</p>",
+            "<p>किसी व्यक्ति, स्थान, वस्तु का नाम</p>",
+            "<p>Ram, Delhi, book, honesty</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pronoun</p>",
+            "<p>सर्वनाम</p>",
+            "<p>संज्ञा के स्थान पर प्रयुक्त</p>",
+            "<p>I, he, she, they, it, we</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Adjective</p>",
+            "<p>विशेषण</p>",
+            "<p>संज्ञा/सर्वनाम की विशेषता</p>",
+            "<p>beautiful, five, good, tall</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Verb</p>",
+            "<p>क्रिया</p>",
+            "<p>कार्य या अवस्था का बोध</p>",
+            "<p>run, eat, is, has, write</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Adverb</p>",
+            "<p>क्रियाविशेषण</p>",
+            "<p>क्रिया/विशेषण की विशेषता</p>",
+            "<p>quickly, very, here, always</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Preposition</p>",
+            "<p>संबंधबोधक</p>",
+            "<p>संज्ञा का अन्य शब्द से संबंध</p>",
+            "<p>in, on, at, by, from, with</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Conjunction</p>",
+            "<p>समुच्चयबोधक</p>",
+            "<p>शब्दों/वाक्यों को जोड़ना</p>",
+            "<p>and, but, or, because, if</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Interjection</p>",
+            "<p>विस्मयादिबोधक</p>",
+            "<p>भावना व्यक्त करना</p>",
+            "<p>Oh!, Alas!, Hurrah!, Wow!</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vpjl6yx",
+      "type": "heading",
+      "level": 2,
+      "content": "11.3  Noun (संज्ञा) के प्रकार"
+    },
+    {
+      "id": "71itdb7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>प्रकार</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Proper Noun</p>",
+            "<p>विशेष व्यक्ति/स्थान का नाम</p>",
+            "<p>Ram, India, Ganga, Delhi</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Common Noun</p>",
+            "<p>सामान्य जाति का नाम</p>",
+            "<p>boy, city, river, book</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Collective Noun</p>",
+            "<p>समूह का नाम</p>",
+            "<p>army, class, team, bunch</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Abstract Noun</p>",
+            "<p>भाव/गुण/अवस्था</p>",
+            "<p>honesty, beauty, childhood</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Material Noun</p>",
+            "<p>द्रव्य / पदार्थ</p>",
+            "<p>gold, water, milk, wood</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Countable</p>",
+            "<p>गिना जा सके</p>",
+            "<p>pen, book, boy (one/two)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Uncountable</p>",
+            "<p>नहीं गिना जा सके</p>",
+            "<p>water, rice, air, advice</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jaxmobd",
+      "type": "heading",
+      "level": 2,
+      "content": "11.4  Tenses (काल)"
+    },
+    {
+      "type": "paragraph",
+      "id": "l656vt7",
+      "content": "अंग्रेज़ी में तीन मुख्य Tenses हैं : Present, Past और Future। प्रत्येक के चार रूप होते हैं। अनुवाद के लिए इन्हें पहचानना अत्यंत आवश्यक है।"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6u4clk0",
+      "content": "<strong>(क) Present Tense (वर्तमान काल)</strong>"
+    },
+    {
+      "id": "wgba7h0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>भेद</strong></p>",
+            "<p><strong>रूप</strong></p>",
+            "<p><strong>उदाहरण</strong></p>",
+            "<p><strong>हिंदी अनुवाद</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Present</p>",
+            "<p>V1 / V1+s/es</p>",
+            "<p>He reads a book.</p>",
+            "<p>वह पुस्तक पढ़ता है।</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Present Continuous</p>",
+            "<p>am/is/are + V1+ing</p>",
+            "<p>He is reading a book.</p>",
+            "<p>वह पुस्तक पढ़ रहा है।</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Present Perfect</p>",
+            "<p>has/have + V3</p>",
+            "<p>He has read the book.</p>",
+            "<p>उसने पुस्तक पढ़ी है।</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Present Perfect Continuous</p>",
+            "<p>has/have been + V1+ing + since/for</p>",
+            "<p>He has been reading for 2 hours.</p>",
+            "<p>वह 2 घंटे से पढ़ रहा है।</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qgyq9b9",
+      "content": "<strong>(ख) Past Tense (भूतकाल)</strong>"
+    },
+    {
+      "id": "otk9j26",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>भेद</strong></p>",
+            "<p><strong>रूप</strong></p>",
+            "<p><strong>उदाहरण</strong></p>",
+            "<p><strong>हिंदी अनुवाद</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Past</p>",
+            "<p>V2</p>",
+            "<p>He read a book.</p>",
+            "<p>उसने पुस्तक पढ़ी।</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Past Continuous</p>",
+            "<p>was/were + V1+ing</p>",
+            "<p>He was reading a book.</p>",
+            "<p>वह पुस्तक पढ़ रहा था।</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Past Perfect</p>",
+            "<p>had + V3</p>",
+            "<p>He had read the book.</p>",
+            "<p>उसने पुस्तक पढ़ ली थी।</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Past Perfect Continuous</p>",
+            "<p>had been + V1+ing + since/for</p>",
+            "<p>He had been reading for 2 hours.</p>",
+            "<p>वह 2 घंटे से पढ़ रहा था।</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "idpxyt0",
+      "content": "<strong>(ग) Future Tense (भविष्यत् काल)</strong>"
+    },
+    {
+      "id": "wmsilid",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>भेद</strong></p>",
+            "<p><strong>रूप</strong></p>",
+            "<p><strong>उदाहरण</strong></p>",
+            "<p><strong>हिंदी अनुवाद</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Future</p>",
+            "<p>will/shall + V1</p>",
+            "<p>He will read a book.</p>",
+            "<p>वह पुस्तक पढ़ेगा।</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Future Continuous</p>",
+            "<p>will/shall be + V1+ing</p>",
+            "<p>He will be reading a book.</p>",
+            "<p>वह पुस्तक पढ़ रहा होगा।</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Future Perfect</p>",
+            "<p>will/shall have + V3</p>",
+            "<p>He will have read the book.</p>",
+            "<p>वह पुस्तक पढ़ चुकेगा।</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Future Perfect Continuous</p>",
+            "<p>will have been + V1+ing</p>",
+            "<p>He will have been reading for 2 hours.</p>",
+            "<p>वह 2 घंटे से पढ़ता रहेगा।</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "8inai2i",
+      "content": "V1 = base form (go), V2 = past form (went), V3 = past participle (gone). Irregular verbs must be memorised separately."
+    },
+    {
+      "id": "6d3pojl",
+      "type": "heading",
+      "level": 2,
+      "content": "11.5  महत्त्वपूर्ण Irregular Verbs"
+    },
+    {
+      "type": "paragraph",
+      "id": "ou6fkly",
+      "content": "इन क्रियाओं के V2 और V3 रूप अनियमित होते हैं : इन्हें याद करना आवश्यक है:"
+    },
+    {
+      "id": "vifrqlf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>V1 (Base)</strong></p>",
+            "<p><strong>V2 (Past)</strong></p>",
+            "<p><strong>V3 (Past Participle)</strong></p>",
+            "<p><strong>हिंदी अर्थ</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>arise</p>",
+            "<p>arose</p>",
+            "<p>arisen</p>",
+            "<p>उठना / उत्पन्न होना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>bear</p>",
+            "<p>bore</p>",
+            "<p>borne</p>",
+            "<p>सहना / वहन करना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>begin</p>",
+            "<p>began</p>",
+            "<p>begun</p>",
+            "<p>शुरू करना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>break</p>",
+            "<p>broke</p>",
+            "<p>broken</p>",
+            "<p>तोड़ना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>bring</p>",
+            "<p>brought</p>",
+            "<p>brought</p>",
+            "<p>लाना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>buy</p>",
+            "<p>bought</p>",
+            "<p>bought</p>",
+            "<p>खरीदना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>choose</p>",
+            "<p>chose</p>",
+            "<p>chosen</p>",
+            "<p>चुनना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>come</p>",
+            "<p>came</p>",
+            "<p>come</p>",
+            "<p>आना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>do</p>",
+            "<p>did</p>",
+            "<p>done</p>",
+            "<p>करना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>draw</p>",
+            "<p>drew</p>",
+            "<p>drawn</p>",
+            "<p>खींचना / बनाना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>drink</p>",
+            "<p>drank</p>",
+            "<p>drunk</p>",
+            "<p>पीना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>drive</p>",
+            "<p>drove</p>",
+            "<p>driven</p>",
+            "<p>चलाना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>eat</p>",
+            "<p>ate</p>",
+            "<p>eaten</p>",
+            "<p>खाना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>fall</p>",
+            "<p>fell</p>",
+            "<p>fallen</p>",
+            "<p>गिरना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>fly</p>",
+            "<p>flew</p>",
+            "<p>flown</p>",
+            "<p>उड़ना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>forget</p>",
+            "<p>forgot</p>",
+            "<p>forgotten</p>",
+            "<p>भूलना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>get</p>",
+            "<p>got</p>",
+            "<p>got/gotten</p>",
+            "<p>पाना / होना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>give</p>",
+            "<p>gave</p>",
+            "<p>given</p>",
+            "<p>देना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>go</p>",
+            "<p>went</p>",
+            "<p>gone</p>",
+            "<p>जाना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>grow</p>",
+            "<p>grew</p>",
+            "<p>grown</p>",
+            "<p>बढ़ना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>hide</p>",
+            "<p>hid</p>",
+            "<p>hidden</p>",
+            "<p>छिपाना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>know</p>",
+            "<p>knew</p>",
+            "<p>known</p>",
+            "<p>जानना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>lay</p>",
+            "<p>laid</p>",
+            "<p>laid</p>",
+            "<p>रखना / बिछाना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>lead</p>",
+            "<p>led</p>",
+            "<p>led</p>",
+            "<p>नेतृत्व करना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>lie</p>",
+            "<p>lay</p>",
+            "<p>lain</p>",
+            "<p>लेटना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>lose</p>",
+            "<p>lost</p>",
+            "<p>lost</p>",
+            "<p>खोना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>make</p>",
+            "<p>made</p>",
+            "<p>made</p>",
+            "<p>बनाना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>meet</p>",
+            "<p>met</p>",
+            "<p>met</p>",
+            "<p>मिलना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>pay</p>",
+            "<p>paid</p>",
+            "<p>paid</p>",
+            "<p>भुगतान करना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>read</p>",
+            "<p>read</p>",
+            "<p>read</p>",
+            "<p>पढ़ना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>ride</p>",
+            "<p>rode</p>",
+            "<p>ridden</p>",
+            "<p>सवारी करना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>rise</p>",
+            "<p>rose</p>",
+            "<p>risen</p>",
+            "<p>उठना / चढ़ना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>run</p>",
+            "<p>ran</p>",
+            "<p>run</p>",
+            "<p>दौड़ना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>say</p>",
+            "<p>said</p>",
+            "<p>said</p>",
+            "<p>कहना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>see</p>",
+            "<p>saw</p>",
+            "<p>seen</p>",
+            "<p>देखना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>seek</p>",
+            "<p>sought</p>",
+            "<p>sought</p>",
+            "<p>ढूँढना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>send</p>",
+            "<p>sent</p>",
+            "<p>sent</p>",
+            "<p>भेजना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>speak</p>",
+            "<p>spoke</p>",
+            "<p>spoken</p>",
+            "<p>बोलना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>steal</p>",
+            "<p>stole</p>",
+            "<p>stolen</p>",
+            "<p>चुराना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>swim</p>",
+            "<p>swam</p>",
+            "<p>swum</p>",
+            "<p>तैरना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>take</p>",
+            "<p>took</p>",
+            "<p>taken</p>",
+            "<p>लेना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>teach</p>",
+            "<p>taught</p>",
+            "<p>taught</p>",
+            "<p>पढ़ाना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>tell</p>",
+            "<p>told</p>",
+            "<p>told</p>",
+            "<p>बताना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>think</p>",
+            "<p>thought</p>",
+            "<p>thought</p>",
+            "<p>सोचना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>throw</p>",
+            "<p>threw</p>",
+            "<p>thrown</p>",
+            "<p>फेंकना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>understand</p>",
+            "<p>understood</p>",
+            "<p>understood</p>",
+            "<p>समझना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>wake</p>",
+            "<p>woke</p>",
+            "<p>woken</p>",
+            "<p>जागना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>wear</p>",
+            "<p>wore</p>",
+            "<p>worn</p>",
+            "<p>पहनना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>win</p>",
+            "<p>won</p>",
+            "<p>won</p>",
+            "<p>जीतना</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>write</p>",
+            "<p>wrote</p>",
+            "<p>written</p>",
+            "<p>लिखना</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "o8v334m",
+      "type": "heading",
+      "level": 2,
+      "content": "11.6  Active and Passive Voice (कर्तृवाच्य और कर्मवाच्य)"
+    },
+    {
+      "type": "paragraph",
+      "id": "izar5ld",
+      "content": "Active Voice में कर्ता (Subject) क्रिया करता है। Passive Voice में कर्म (Object) प्रधान होता है और कर्ता गौण हो जाता है।"
+    },
+    {
+      "type": "paragraph",
+      "id": "rjx0amz",
+      "content": "Passive Voice का सूत्र: Object + Helping Verb (be) + V3 + by + Subject"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "y62jkmh",
+      "content": "<strong>(क) Tense-wise Active to Passive</strong>"
+    },
+    {
+      "id": "i9jdvpo",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Tense</strong></p>",
+            "<p><strong>Active Voice</strong></p>",
+            "<p><strong>Passive Voice</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Present</p>",
+            "<p>She writes a letter.</p>",
+            "<p>A letter is written by her.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Present Continuous</p>",
+            "<p>She is writing a letter.</p>",
+            "<p>A letter is being written by her.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Present Perfect</p>",
+            "<p>She has written a letter.</p>",
+            "<p>A letter has been written by her.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Past</p>",
+            "<p>She wrote a letter.</p>",
+            "<p>A letter was written by her.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Past Continuous</p>",
+            "<p>She was writing a letter.</p>",
+            "<p>A letter was being written by her.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Past Perfect</p>",
+            "<p>She had written a letter.</p>",
+            "<p>A letter had been written by her.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Future</p>",
+            "<p>She will write a letter.</p>",
+            "<p>A letter will be written by her.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Future Perfect</p>",
+            "<p>She will have written a letter.</p>",
+            "<p>A letter will have been written by her.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Active and Passive Voice (कर्तृवाच्य और कर्मवाच्य)",
+      "id": "snttxmo"
+    },
+    {
+      "type": "paragraph",
+      "id": "wh9k2d5",
+      "content": "<strong>(ख) Passive Voice के अतिरिक्त नियम</strong>"
+    },
+    {
+      "id": "pgmt9e5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>स्थिति</strong></p>",
+            "<p><strong>नियम</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Modal Verbs के साथ</p>",
+            "<p>Modal + be + V3</p>",
+            "<p>He can do it. → It can be done by him.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Imperative Sentence</p>",
+            "<p>Let + Object + be + V3</p>",
+            "<p>Open the door. → Let the door be opened.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Intransitive Verbs</p>",
+            "<p>Passive नहीं बनता</p>",
+            "<p>She laughed. → No passive form.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pronoun बदलाव</p>",
+            "<p>I→me, he→him, she→her, they→them, we→us</p>",
+            "<p>I wrote it. → It was written by me.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hzaxnpj",
+      "type": "heading",
+      "level": 2,
+      "content": "11.7  Direct and Indirect Speech (प्रत्यक्ष और परोक्ष कथन)"
+    },
+    {
+      "type": "paragraph",
+      "id": "w6w60un",
+      "content": "Direct Speech में किसी के वास्तविक शब्द inverted commas में लिखे जाते हैं। Indirect Speech में उसका भाव अपने शब्दों में व्यक्त किया जाता है।"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "drdppi4",
+      "content": "<strong>(क) Tense बदलाव के नियम</strong>"
+    },
+    {
+      "id": "qg15uv5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Direct Speech (Reporting Verb Past में)</strong></p>",
+            "<p><strong>Indirect Speech</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Present → </p>",
+            "<p>Simple Past</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Present Continuous → </p>",
+            "<p>Past Continuous</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Present Perfect → </p>",
+            "<p>Past Perfect</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Past → </p>",
+            "<p>Past Perfect</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Past Perfect → </p>",
+            "<p>Past Perfect (अपरिवर्तित)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>will → </p>",
+            "<p>would</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>can → </p>",
+            "<p>could</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>may → </p>",
+            "<p>might</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>shall → </p>",
+            "<p>should</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>must → </p>",
+            "<p>had to / must (अपरिवर्तित)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i81p191",
+      "content": "<strong>(ख) Pronoun और Time/Place बदलाव</strong>"
+    },
+    {
+      "id": "fe32sa9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Direct</strong></p>",
+            "<p><strong>Indirect</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>I</p>",
+            "<p>he / she (वक्ता के अनुसार)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>we</p>",
+            "<p>they</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>my</p>",
+            "<p>his / her</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>our</p>",
+            "<p>their</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>you</p>",
+            "<p>he/she/they (श्रोता के अनुसार)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>your</p>",
+            "<p>his/her/their</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>this</p>",
+            "<p>that</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>these</p>",
+            "<p>those</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>here</p>",
+            "<p>there</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>now</p>",
+            "<p>then</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>today</p>",
+            "<p>that day</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>yesterday</p>",
+            "<p>the previous day / the day before</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>tomorrow</p>",
+            "<p>the next day / the following day</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>last night</p>",
+            "<p>the previous night</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>ago</p>",
+            "<p>before</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "ejhriig",
+      "content": "<strong>(ग) Sentence Type के अनुसार Indirect Speech</strong>"
+    },
+    {
+      "id": "eqpun54",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>वाक्य प्रकार</strong></p>",
+            "<p><strong>Reporting Verb</strong></p>",
+            "<p><strong>Conjunction</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Assertive</p>",
+            "<p>said / told</p>",
+            "<p>that</p>",
+            "<p>He said, \"I am tired.\" → He said that he was tired.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Interrogative (Yes/No)</p>",
+            "<p>asked</p>",
+            "<p>if / whether</p>",
+            "<p>She asked, \"Are you well?\" → She asked if he was well.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Interrogative (Wh-)</p>",
+            "<p>asked</p>",
+            "<p>wh-word</p>",
+            "<p>He asked, \"Where do you live?\" → He asked where she lived.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Imperative</p>",
+            "<p>ordered/requested/advised</p>",
+            "<p>to/not to</p>",
+            "<p>He said, \"Sit down.\" → He ordered him to sit down.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Exclamatory</p>",
+            "<p>exclaimed</p>",
+            "<p>that</p>",
+            "<p>She said, \"What a beautiful flower!\" → She exclaimed that it was a very beautiful flower.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ggt20oe",
+      "type": "heading",
+      "level": 2,
+      "content": "11.8  Articles : A, An, The"
+    },
+    {
+      "type": "paragraph",
+      "id": "dxuinwv",
+      "content": "Articles अंग्रेज़ी की एक महत्त्वपूर्ण विशेषता है। हिंदी में Articles नहीं होते, इसलिए अनुवादक को इन पर विशेष ध्यान देना पड़ता है।"
+    },
+    {
+      "id": "cguk5mv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Article</strong></p>",
+            "<p><strong>प्रयोग</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A</p>",
+            "<p>Consonant sound से शुरू Singular Countable Noun</p>",
+            "<p>a book, a university, a European</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>An</p>",
+            "<p>Vowel sound से शुरू Singular Countable Noun</p>",
+            "<p>an apple, an hour, an honest man</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>The</p>",
+            "<p>निश्चित / पहले से ज्ञात / अद्वितीय वस्तु</p>",
+            "<p>The Sun, the Ganga, the book I gave you</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "विशेषता",
+        "Active Voice (कर्तृवाच्य)",
+        "Passive Voice (कर्मवाच्य)"
+      ],
+      "rows": [
+        [
+          "मुख्य ध्यान (Focus)",
+          "कर्ता (Subject) पर",
+          "कर्म (Object) पर"
+        ],
+        [
+          "सामान्य संरचना",
+          "Subject + Verb + Object",
+          "Object + Helping Verb + V3 + by + Subject"
+        ]
+      ],
+      "id": "0mkz8or"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vkxbnbe",
+      "content": "<strong>The का विशेष प्रयोग</strong>"
+    },
+    {
+      "id": "5lpndge",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>स्थिति</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>नदियाँ, सागर, पहाड़ी श्रृंखलाएँ</p>",
+            "<p>the Ganga, the Pacific, the Himalayas</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>समाचार-पत्र, पुस्तकें (प्रसिद्ध)</p>",
+            "<p>The Hindu, The Times of India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Superlative degree से पहले</p>",
+            "<p>He is the best student.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ordinal numbers से पहले</p>",
+            "<p>the first, the second, the last</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>National groups</p>",
+            "<p>the Indians, the French, the British</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Musical instruments</p>",
+            "<p>She plays the sitar.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Unique things</p>",
+            "<p>the Sun, the Moon, the Earth</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "5kf2bzm",
+      "content": "No Article: proper nouns (Ram, India), abstract nouns in general (Honesty is the best policy), plural nouns in general (Books are useful), meals (have breakfast), languages (She speaks Hindi)."
+    },
+    {
+      "id": "rmw5m86",
+      "type": "heading",
+      "level": 2,
+      "content": "11.9  Prepositions (संबंधबोधक अव्यय)"
+    },
+    {
+      "type": "paragraph",
+      "id": "aic1r6m",
+      "content": "Preposition संज्ञा / सर्वनाम का अन्य शब्द से संबंध दर्शाता है। अनुवाद में Preposition की सही पहचान अत्यंत आवश्यक है।"
+    },
+    {
+      "id": "10uss34",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Preposition</strong></p>",
+            "<p><strong>प्रयोग / अर्थ</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>in</p>",
+            "<p>भीतर / समयावधि (month, year, century)</p>",
+            "<p>He lives in Delhi. / in 2024</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>on</p>",
+            "<p>ऊपर (संपर्क) / दिन / तिथि</p>",
+            "<p>The book is on the table. / on Monday</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>at</p>",
+            "<p>बिंदु / समय / छोटे स्थान</p>",
+            "<p>He is at home. / at 5 PM / at the corner</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>by</p>",
+            "<p>तक / के पास / द्वारा</p>",
+            "<p>by Monday / standing by me / written by him</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>from</p>",
+            "<p>से (उद्गम स्थान)</p>",
+            "<p>He came from Delhi.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>to</p>",
+            "<p>की ओर / तक</p>",
+            "<p>He went to school.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>for</p>",
+            "<p>के लिए / अवधि</p>",
+            "<p>This is for you. / for two hours</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>since</p>",
+            "<p>से (निश्चित बिंदु)</p>",
+            "<p>He has been here since morning.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>of</p>",
+            "<p>का / की / के (संबंध)</p>",
+            "<p>the pages of the book</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>with</p>",
+            "<p>के साथ / साधन</p>",
+            "<p>He came with me. / cut with a knife</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>about</p>",
+            "<p>के बारे में / लगभग</p>",
+            "<p>Tell me about it. / about 10 km</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>between</p>",
+            "<p>दो के बीच</p>",
+            "<p>between Ram and Shyam</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>among</p>",
+            "<p>दो से अधिक के बीच</p>",
+            "<p>among the students</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>into</p>",
+            "<p>भीतर (गति)</p>",
+            "<p>He jumped into the river.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>out of</p>",
+            "<p>बाहर (गति)</p>",
+            "<p>He came out of the room.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quqqaz3",
+      "type": "heading",
+      "level": 2,
+      "content": "11.10  Conjunctions (समुच्चयबोधक)"
+    },
+    {
+      "id": "8v1euqq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Conjunction</strong></p>",
+            "<p><strong>अर्थ / प्रयोग</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>and</p>",
+            "<p>और (जोड़ना)</p>",
+            "<p>Ram and Shyam came.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>but</p>",
+            "<p>लेकिन / परंतु</p>",
+            "<p>He is poor but honest.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>or</p>",
+            "<p>या / अथवा</p>",
+            "<p>Tea or coffee?</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>nor</p>",
+            "<p>न ही</p>",
+            "<p>He neither eats nor sleeps.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>so</p>",
+            "<p>इसलिए</p>",
+            "<p>It rained so I stayed.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>yet</p>",
+            "<p>फिर भी</p>",
+            "<p>He is old yet active.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>because</p>",
+            "<p>क्योंकि</p>",
+            "<p>He passed because he worked hard.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>since</p>",
+            "<p>चूँकि / जब से</p>",
+            "<p>Since he was ill he stayed.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>although</p>",
+            "<p>यद्यपि / हालाँकि</p>",
+            "<p>Although tired he worked.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>though</p>",
+            "<p>यद्यपि (बोलचाल)</p>",
+            "<p>He came though it rained.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>if</p>",
+            "<p>यदि</p>",
+            "<p>If you work you will pass.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>unless</p>",
+            "<p>जब तक नहीं</p>",
+            "<p>Unless you study you will fail.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>until</p>",
+            "<p>जब तक (समय)</p>",
+            "<p>Wait until he comes.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>while</p>",
+            "<p>जबकि / जिस समय</p>",
+            "<p>While I read he slept.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>that</p>",
+            "<p>कि</p>",
+            "<p>He said that he was tired.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c8mgn22",
+      "type": "heading",
+      "level": 2,
+      "content": "11.11  Subject-Verb Agreement (कर्ता-क्रिया सामंजस्य)"
+    },
+    {
+      "type": "paragraph",
+      "id": "uf09jh7",
+      "content": "Subject और Verb के बीच Number और Person में सामंजस्य आवश्यक है। यह परीक्षा का एक महत्त्वपूर्ण भाग है।"
+    },
+    {
+      "id": "q5bl76t",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>नियम</strong></p>",
+            "<p><strong>उदाहरण (सही)</strong></p>",
+            "<p><strong>उदाहरण (गलत)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Singular Subject → Singular Verb</p>",
+            "<p>He runs fast.</p>",
+            "<p>He run fast.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Plural Subject → Plural Verb</p>",
+            "<p>They run fast.</p>",
+            "<p>They runs fast.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Two Subjects joined by 'and' → Plural</p>",
+            "<p>Ram and Shyam are friends.</p>",
+            "<p>Ram and Shyam is friends.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Either/Neither + or/nor → Nearest Subject</p>",
+            "<p>Either he or they are wrong.</p>",
+            "<p>Either he or they is wrong.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Each/Every/One → Singular</p>",
+            "<p>Each student is present.</p>",
+            "<p>Each student are present.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Collective Noun → Singular (unit)</p>",
+            "<p>The team is playing well.</p>",
+            "<p>The team are playing well.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>News/Mathematics/Physics → Singular</p>",
+            "<p>The news is good.</p>",
+            "<p>The news are good.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A lot of + Plural → Plural</p>",
+            "<p>A lot of students were absent.</p>",
+            "<p>A lot of students was absent.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "km9hksn",
+      "type": "heading",
+      "level": 2,
+      "content": "11.12  अनुवाद में उपयोगी अंग्रेज़ी वाक्यांश"
+    },
+    {
+      "type": "paragraph",
+      "id": "zv9tgf0",
+      "content": "हिंदी से अंग्रेज़ी अनुवाद में निम्नलिखित वाक्यांश और संरचनाएँ बार-बार काम आती हैं:"
+    },
+    {
+      "id": "2g85gl0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>हिंदी भाव</strong></p>",
+            "<p><strong>अंग्रेज़ी संरचना</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>चाहिए</p>",
+            "<p>should / ought to / must</p>",
+            "<p>You should work hard.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>पड़ना (विवशता)</p>",
+            "<p>have to / had to</p>",
+            "<p>I had to go there.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>सकना (संभावना)</p>",
+            "<p>can / could / may / might</p>",
+            "<p>He can swim.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>की संभावना है</p>",
+            "<p>is likely to / may</p>",
+            "<p>It is likely to rain.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>के बावजूद</p>",
+            "<p>in spite of / despite</p>",
+            "<p>Despite difficulties he succeeded.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>जैसे ही</p>",
+            "<p>as soon as / no sooner…than</p>",
+            "<p>As soon as he came it rained.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>न केवल…बल्कि</p>",
+            "<p>not only…but also</p>",
+            "<p>He is not only kind but also wise.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>न तो…न ही</p>",
+            "<p>neither…nor</p>",
+            "<p>He is neither honest nor hardworking.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>या तो…या</p>",
+            "<p>either…or</p>",
+            "<p>Either work or leave.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>जितना…उतना</p>",
+            "<p>the more…the more</p>",
+            "<p>The more you read the more you learn.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>मानो</p>",
+            "<p>as if / as though</p>",
+            "<p>He acts as if he owns the place.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>ताकि</p>",
+            "<p>so that / in order that</p>",
+            "<p>He works hard so that he may pass.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>जब से</p>",
+            "<p>since / ever since</p>",
+            "<p>Since he left things have changed.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>जब तक नहीं</p>",
+            "<p>unless</p>",
+            "<p>Unless you study you will fail.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>फलस्वरूप</p>",
+            "<p>as a result / consequently</p>",
+            "<p>Consequently he was punished.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ljylxrj",
+      "type": "heading",
+      "level": 2,
+      "content": "11.13  अभ्यास प्रश्न"
+    },
+    {
+      "id": "pe0oalq",
+      "type": "numberedList",
+      "items": [
+        "निम्नलिखित वाक्यों में Tense पहचानकर हिंदी अनुवाद कीजिए:"
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Subject-Verb Agreement से संबंधित Spotting Errors के प्रश्न प्रतियोगी परीक्षाओं में बार-बार पूछे जाते हैं।",
+        "Direct to Indirect Speech में बदलते समय Tense और Pronoun में होने वाले परिवर्तनों के नियमों पर विशेष ध्यान दें।",
+        "Irregular Verbs के तीनों रूप (V1, V2, V3) याद रखें, ये Sentence Improvement में अत्यंत उपयोगी होते हैं।"
+      ],
+      "id": "5bgluih"
+    },
+    {
+      "id": "mk7dc02",
+      "type": "list",
+      "items": [
+        "She has been teaching for twenty years.",
+        "He had left before I arrived.",
+        "They will have completed the project by Friday.",
+        "The minister was addressing the gathering when the lights went out."
+      ]
+    },
+    {
+      "id": "mksg0p4",
+      "type": "numberedList",
+      "items": [
+        "निम्नलिखित वाक्यों को Active से Passive में बदलिए:"
+      ]
+    },
+    {
+      "id": "pz4916b",
+      "type": "list",
+      "items": [
+        "The teacher teaches the students.",
+        "They were building a new bridge.",
+        "She has written a beautiful poem.",
+        "The government will announce the results tomorrow."
+      ]
+    },
+    {
+      "id": "o4xivqs",
+      "type": "numberedList",
+      "items": [
+        "निम्नलिखित Direct Speech को Indirect Speech में बदलिए:"
+      ]
+    },
+    {
+      "id": "7doarwz",
+      "type": "list",
+      "items": [
+        "He said, \"I am going to Delhi tomorrow.\"",
+        "She asked me, \"Have you finished your work?\"",
+        "The teacher said, \"Open your books.\"",
+        "He exclaimed, \"What a wonderful sight!\""
+      ]
+    },
+    {
+      "id": "u0bbl1u",
+      "type": "numberedList",
+      "items": [
+        "रिक्त स्थानों में उचित Article (a / an / the / no article) भरिए:"
+      ]
+    },
+    {
+      "id": "x5tfug5",
+      "type": "list",
+      "items": [
+        "_____ Ganga is a sacred river.",
+        "He is _____ honest man.",
+        "She plays _____ violin beautifully.",
+        "_____ gold is found in this region."
+      ]
+    },
+    {
+      "id": "0z3mjv3",
+      "type": "numberedList",
+      "items": [
+        "निम्नलिखित में से सही वाक्य चुनिए:"
+      ]
+    },
+    {
+      "id": "knho2xn",
+      "type": "list",
+      "items": [
+        "(a) Each of the boys are present.  (b) Each of the boys is present.",
+        "(a) The news are good.  (b) The news is good.",
+        "(a) Neither he nor I am wrong.  (b) Neither he nor I are wrong."
+      ]
+    },
+    {
+      "id": "39ymbwj",
+      "type": "heading",
+      "level": 2,
+      "content": "11.14  स्मरणीय बिंदु"
+    },
+    {
+      "id": "g96gd5k",
+      "type": "list",
+      "items": [
+        "अंग्रेज़ी में 8 Parts of Speech हैं : Noun, Pronoun, Adjective, Verb, Adverb, Preposition, Conjunction, Interjection।",
+        "Tenses 3 हैं : Present, Past, Future; प्रत्येक के 4 रूप।",
+        "Passive Voice: Object + be (सही रूप) + V3 + by + Subject।",
+        "Indirect Speech में Reporting Verb Past होने पर सभी Tenses एक पीछे हटते हैं।",
+        "'a' : consonant sound से पहले; 'an' : vowel sound से पहले।",
+        "'The' : निश्चित, अद्वितीय, पहले से ज्ञात; नदियों, पर्वत-श्रृंखलाओं, देशों (plural) के साथ।",
+        "'since' : निश्चित बिंदु (since morning); 'for' : अवधि (for two hours)।",
+        "Each, Every, One + Singular Verb।",
+        "Neither…nor / Either…or : निकटतम Subject के अनुसार Verb।"
+      ]
+    }
+  ],
+  "enriched": true
+}

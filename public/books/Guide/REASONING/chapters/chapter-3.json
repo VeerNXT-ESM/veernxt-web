@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "f32q4ta"
+      "id": "f32q4ta",
+      "content": "<br></br>REASONING – PART 3<br></br>(Blood Relations &amp; Syllogism )<br></br>"
     },
     {
       "type": "statStrip",
@@ -48,17 +49,13 @@
       "id": "9xg5e3u",
       "type": "list",
       "items": [
-        null
+        "Concept:<br></br>Blood relation questions test the ability to understand family relationships based on given information."
       ]
     },
     {
       "type": "paragraph",
-      "id": "etvk2vv"
-    },
-    {
-      "type": "pullQuote",
-      "content": "7. SYLLOGISM (Basic – Venn Diagram Method)",
-      "id": "0ou6e4x"
+      "id": "etvk2vv",
+      "content": "In SSC, blood relation questions are:<br></br>• Direct<br></br>• Mostly one family at a time<br></br>• No complex puzzles<br></br>"
     },
     {
       "id": "7yt99dk",
@@ -73,87 +70,92 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p>Relation Given</p>",
+            "<p>Actual Meaning</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Father’s son</p>",
+            "<p>Brother</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mother’s daughter</p>",
+            "<p>Sister</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Brother’s son</p>",
+            "<p>Nephew</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sister’s daughter</p>",
+            "<p>Niece</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Father’s brother</p>",
+            "<p>Uncle</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mother’s sister</p>",
+            "<p>Aunt</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Father’s father</p>",
+            "<p>Grandfather</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mother’s mother</p>",
+            "<p>Grandmother</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "5ykojs8"
+      "id": "5ykojs8",
+      "content": "Method to Solve:<br></br>1. Identify the starting person<br></br>2. Move step-by-step<br></br>3. Draw a simple family tree if needed<br></br>4. Read the question carefully till the end<br></br>"
     },
     {
       "type": "paragraph",
-      "id": "us1pl5k"
+      "id": "us1pl5k",
+      "content": "<br></br><strong>Solved Examples:</strong><br></br><br></br>Example 1:<br></br>A is the father of B. B is the sister of C.<br></br>How is A related to C?"
     },
     {
       "type": "paragraph",
-      "id": "q5qy1ee"
+      "id": "q5qy1ee",
+      "content": "Logic:<br></br>A → father of B<br></br>B → sister of C<br></br>So A is also father of C<br></br>Answer: Father"
     },
     {
       "type": "paragraph",
-      "id": "rhndsbh"
+      "id": "rhndsbh",
+      "content": "<br></br>Example 2:<br></br>P is the brother of Q. Q is the mother of R.<br></br>How is P related to R?<br></br>Logic:<br></br>P → brother of mother<br></br>So P is maternal uncle<br></br>Answer: Uncle<br></br>"
     },
     {
       "type": "paragraph",
-      "id": "iixzvb4"
+      "id": "iixzvb4",
+      "content": "<strong>Practice Questions (Blood Relations):</strong><br></br>Q1. A is the son of B. B is the sister of C.<br></br>How is C related to A?<br></br>A. Uncle<br></br>B. Aunt<br></br>C. Father<br></br>D. Mother<br></br><br></br>Q2. X is the father of Y. Y is the brother of Z.<br></br>How is X related to Z?<br></br>A. Father<br></br>B. Uncle<br></br>C. Brother<br></br>D. Grandfather<br></br><br></br>Q3. P is the sister of Q. Q is the father of R.<br></br>How is P related to R?<br></br>A. Mother<br></br>B. Aunt<br></br>C. Sister<br></br>D. Grandmother<br></br>"
     },
     {
       "id": "31hybnz",
@@ -171,16 +173,19 @@
     },
     {
       "type": "paragraph",
-      "id": "9okdh1j"
+      "id": "9okdh1j",
+      "content": "<br></br>Concept:<br></br>Syllogism tests the ability to draw logical conclusions from given statements.<br></br><br></br>In SSC, syllogism questions are:<br></br>• Basic<br></br>• Mostly definite conclusions<br></br>• Best solved using Venn diagrams<br></br><br></br>Standard Statements:<br></br>1)All A are B"
     },
     {
       "type": "paragraph",
-      "id": "ib7oyfk"
+      "id": "ib7oyfk",
+      "content": "2)Some A are B<br></br>3)No A is B"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ydxlrfe"
+      "id": "ydxlrfe",
+      "content": "4)Some A are not B"
     }
   ],
   "enriched": true

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "fgyn5xx"
+      "id": "fgyn5xx",
+      "content": "• Floodplains – flat fertile land beside rivers."
     },
     {
       "type": "statStrip",
@@ -35,20 +36,18 @@
     },
     {
       "type": "paragraph",
-      "id": "1f1bz81"
+      "id": "1f1bz81",
+      "content": "• Natural Levees – raised banks formed during floods."
     },
     {
       "type": "paragraph",
-      "id": "gva3alk"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Types of Deltas",
-      "id": "zj58f3h"
+      "id": "gva3alk",
+      "content": "• Meanders – looping bends in river."
     },
     {
       "type": "paragraph",
-      "id": "g40qn7d"
+      "id": "g40qn7d",
+      "content": "• Oxbow Lakes – cut-off meander loops."
     },
     {
       "type": "comparisonTable",
@@ -83,11 +82,13 @@
     },
     {
       "type": "paragraph",
-      "id": "0qy3e0p"
+      "id": "0qy3e0p",
+      "content": "• Alluvial Fans – cone-shaped deposits at foothills."
     },
     {
       "type": "paragraph",
-      "id": "8hga5ax"
+      "id": "8hga5ax",
+      "content": "• Deltas – triangular deposits at river mouth."
     },
     {
       "id": "rc2xgf3",
@@ -124,33 +125,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Shape</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Arcuate</p>",
+            "<p>Fan-shaped</p>",
+            "<p>Nile Delta</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bird's Foot</p>",
+            "<p>Finger-like projections</p>",
+            "<p>Mississippi Delta</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cuspate</p>",
+            "<p>Tooth-shaped</p>",
+            "<p>Tiber Delta</p>"
           ]
         }
       ]

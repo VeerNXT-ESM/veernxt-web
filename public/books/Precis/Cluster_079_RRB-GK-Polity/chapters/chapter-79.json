@@ -1,0 +1,63 @@
+{
+  "title": "4. Rajya Sabha – Council of States",
+  "order": 79,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Rajya Sabha is the upper house and represents the states.<br/>Composition:<br/>• Maximum strength – 250 members<br/>• 238 elected members<br/>• 12 members nominated by the President<br/><br/>Rajya Sabha is a permanent house and cannot be dissolved. ",
+      "id": "78ycz61"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Rajya Sabha is a permanent house and cannot be dissolved.",
+      "id": "fy39sa5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Max Strength",
+          "value": "250",
+          "icon": "info"
+        },
+        {
+          "label": "Elected Members",
+          "value": "238",
+          "icon": "check"
+        },
+        {
+          "label": "Nominated Members",
+          "value": "12",
+          "icon": "award"
+        },
+        {
+          "label": "House Status",
+          "value": "Permanent",
+          "icon": "clock"
+        }
+      ],
+      "id": "6irye3p"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The exact number of members nominated by the President is 12.",
+        "The break-up of maximum strength: 238 elected + 12 nominated = 250 total.",
+        "Rajya Sabha is a permanent house and is NOT subject to dissolution."
+      ],
+      "id": "1mle3jk"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Rajya Sabha is the upper house of the Indian Parliament and represents the states.",
+        "The maximum strength of the Rajya Sabha is capped at 250 members.",
+        "The house consists of 238 elected representatives and 12 members nominated by the President.",
+        "Unlike Lok Sabha, Rajya Sabha is a permanent house and cannot be dissolved."
+      ],
+      "id": "9rmp81c"
+    }
+  ],
+  "enriched": true
+}

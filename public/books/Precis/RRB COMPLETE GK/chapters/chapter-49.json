@@ -10,37 +10,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Layer</strong></p>",
+            "<p><strong>Depth (km)</strong></p>",
+            "<p><strong>Composition</strong></p>",
+            "<p><strong>Density</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Crust</p>",
+            "<p>0–35</p>",
+            "<p>Silica + Aluminium (SIAL)</p>",
+            "<p>Lowest</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mantle</p>",
+            "<p>35–2900</p>",
+            "<p>Silica + Magnesium (SIMA)</p>",
+            "<p>Moderate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Core</p>",
+            "<p>2900–6371</p>",
+            "<p>Nickel + Iron (NIFE)</p>",
+            "<p>Highest</p>"
           ]
         }
       ]

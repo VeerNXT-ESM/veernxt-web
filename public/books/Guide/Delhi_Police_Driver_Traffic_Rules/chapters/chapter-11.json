@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "svmehvn"
+      "id": "svmehvn",
+      "content": "A driver is responsible for ensuring the vehicle is in good condition before driving. A poorly maintained vehicle is dangerous and can lead to accidents."
     },
     {
       "type": "statStrip",
@@ -52,20 +53,18 @@
     },
     {
       "type": "paragraph",
-      "id": "7xsd4mw"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Daily Pre-Drive Checks (POWER Check)",
-      "id": "0zgbd0w"
+      "id": "7xsd4mw",
+      "content": "<strong>P — Petrol / Fuel — </strong>Ensure adequate fuel level"
     },
     {
       "type": "paragraph",
-      "id": "ra0x8aj"
+      "id": "ra0x8aj",
+      "content": "<strong>O — Oil — </strong>Check engine oil level"
     },
     {
       "type": "paragraph",
-      "id": "a7l4g7o"
+      "id": "a7l4g7o",
+      "content": "<strong>W — Water — </strong>Check radiator coolant and windshield washer water"
     },
     {
       "type": "comparisonTable",
@@ -95,11 +94,13 @@
     },
     {
       "type": "paragraph",
-      "id": "4cj9xi6"
+      "id": "4cj9xi6",
+      "content": "<strong>E — Electrics — </strong>Check headlights, brake lights, indicators, horn"
     },
     {
       "type": "paragraph",
-      "id": "5962lpq"
+      "id": "5962lpq",
+      "content": "<strong>R — Rubber / Tyres — </strong>Check tyre pressure and tread depth"
     },
     {
       "id": "r42dqn5",
@@ -123,78 +124,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>What to Check</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Brakes</p>",
+            "<p>Brake fluid level, brake response, no unusual noise</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Steering</p>",
+            "<p>Smooth movement, no play, no vibration</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tyres</p>",
+            "<p>Correct pressure, no cuts/bulges, adequate tread (min 1.6mm)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lights</p>",
+            "<p>Headlights, brake lights, indicators, reverse lights all working</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Windshield Wipers</p>",
+            "<p>Working properly, no streaking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Horn</p>",
+            "<p>Audible and working</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mirrors</p>",
+            "<p>Clean and properly adjusted (rear view + both side mirrors)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Seat Belt</p>",
+            "<p>Working, not frayed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fuel &amp; Coolant</p>",
+            "<p>Adequate levels, no leaks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Engine</p>",
+            "<p>No unusual sounds, smoke, or leaks</p>"
           ]
         }
       ]
@@ -209,11 +210,11 @@
       "id": "i1tkzg0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "All vehicles must have a valid PUC (Pollution Under Control) certificate",
+        "New vehicle: PUC required after 1 year",
+        "PUC renewal: Every 6 months for old vehicles",
+        "Driving without valid PUC: Fine Rs.10,000",
+        "PUC tests measure exhaust emission levels"
       ]
     }
   ],

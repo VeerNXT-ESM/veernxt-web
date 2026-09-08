@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "88guylu"
+      "id": "88guylu",
+      "content": "Medical‑Surgical Nursing focuses on the care of adult patients with medical conditions or those undergoing surgical procedures. It covers assessment, diagnosis, treatment, and nursing management of disorders affecting major body systems. In competitive nursing examinations such as RRB Nursing, questions frequently appear from cardiovascular, respiratory, gastrointestinal, renal, neurological, and endocrine disorders along with nursing care principles."
     },
     {
       "id": "rxrdqbv",
@@ -63,43 +64,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Responsibility</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Assessment</p>",
+            "<p>Monitoring vital signs, symptoms, and patient history</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Medication administration</p>",
+            "<p>Providing drugs safely according to prescription</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Patient education</p>",
+            "<p>Teaching patients about disease management</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Postoperative care</p>",
+            "<p>Monitoring recovery after surgery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Documentation</p>",
+            "<p>Recording patient condition and treatments</p>"
           ]
         }
       ]
@@ -117,41 +118,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Key Nursing Care</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hypertension</p>",
+            "<p>High blood pressure</p>",
+            "<p>Monitor BP, reduce salt intake</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Coronary artery disease</p>",
+            "<p>Narrowing of coronary arteries</p>",
+            "<p>Administer nitrates, monitor ECG</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Heart failure</p>",
+            "<p>Heart unable to pump effectively</p>",
+            "<p>Fluid restriction, oxygen therapy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Myocardial infarction</p>",
+            "<p>Heart attack due to blocked artery</p>",
+            "<p>Emergency treatment, ECG monitoring</p>"
           ]
         }
       ]
@@ -163,52 +164,47 @@
       "content": "Respiratory Disorders"
     },
     {
-      "type": "pullQuote",
-      "content": "Role of the Medical‑Surgical Nurse",
-      "id": "8q7dwk9"
-    },
-    {
       "id": "uz4ybw1",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Cause / Description</strong></p>",
+            "<p><strong>Nursing Care</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Asthma</p>",
+            "<p>Airway inflammation causing breathing difficulty</p>",
+            "<p>Administer bronchodilators</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pneumonia</p>",
+            "<p>Infection of lung tissue</p>",
+            "<p>Antibiotics, oxygen therapy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tuberculosis</p>",
+            "<p>Bacterial lung infection</p>",
+            "<p>Isolation precautions, medication adherence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chronic obstructive pulmonary disease (COPD)</p>",
+            "<p>Chronic airway obstruction</p>",
+            "<p>Oxygen therapy, breathing exercises</p>"
           ]
         }
       ]
@@ -226,41 +222,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Nursing Care</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gastritis</p>",
+            "<p>Inflammation of stomach lining</p>",
+            "<p>Antacids, diet modification</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Peptic ulcer</p>",
+            "<p>Ulcer in stomach or duodenum</p>",
+            "<p>Avoid NSAIDs, give proton pump inhibitors</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hepatitis</p>",
+            "<p>Inflammation of liver</p>",
+            "<p>Monitor liver function tests</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cirrhosis</p>",
+            "<p>Chronic liver damage</p>",
+            "<p>Monitor ascites and nutrition</p>"
           ]
         }
       ]
@@ -278,33 +274,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Nursing Care</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Acute kidney injury</p>",
+            "<p>Sudden decline in kidney function</p>",
+            "<p>Monitor urine output</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chronic kidney disease</p>",
+            "<p>Long‑term kidney damage</p>",
+            "<p>Diet control, dialysis preparation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Urinary tract infection</p>",
+            "<p>Bacterial infection of urinary tract</p>",
+            "<p>Encourage fluids, antibiotics</p>"
           ]
         }
       ]
@@ -340,33 +336,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Nursing Care</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Stroke</p>",
+            "<p>Loss of brain function due to interrupted blood flow</p>",
+            "<p>Monitor neurological status</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Epilepsy</p>",
+            "<p>Seizure disorder</p>",
+            "<p>Ensure safety during seizures</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Meningitis</p>",
+            "<p>Inflammation of meninges</p>",
+            "<p>Antibiotics, infection control</p>"
           ]
         }
       ]
@@ -384,33 +380,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Nursing Care</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Diabetes mellitus</p>",
+            "<p>High blood glucose levels</p>",
+            "<p>Insulin administration, glucose monitoring</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hypothyroidism</p>",
+            "<p>Low thyroid hormone production</p>",
+            "<p>Thyroxine therapy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hyperthyroidism</p>",
+            "<p>Excess thyroid hormone</p>",
+            "<p>Monitor heart rate and weight</p>"
           ]
         }
       ]
@@ -428,36 +424,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Step</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Patient assessment</p>",
+            "<p>Evaluate medical history and vital signs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Informed consent</p>",
+            "<p>Ensure patient understands surgery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fasting</p>",
+            "<p>Prevent aspiration during anesthesia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Preoperative medications</p>",
+            "<p>Reduce anxiety and infection risk</p>"
           ]
         }
       ]
@@ -484,36 +480,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Care</strong></p>",
+            "<p><strong>Importance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Airway monitoring</p>",
+            "<p>Ensure proper breathing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pain management</p>",
+            "<p>Provide analgesics</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wound care</p>",
+            "<p>Prevent infection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Early mobilization</p>",
+            "<p>Prevent complications such as thrombosis</p>"
           ]
         }
       ]
@@ -531,50 +527,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Topic</strong></p>",
+            "<p><strong>Key Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hypertension definition</p>",
+            "<p>BP ≥ 140/90 mmHg</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heart attack term</p>",
+            "<p>Myocardial infarction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Most common cause of COPD</p>",
+            "<p>Smoking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dialysis purpose</p>",
+            "<p>Remove waste when kidneys fail</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Airborne disease</p>",
+            "<p>Tuberculosis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Insulin use</p>",
+            "<p>Treatment of diabetes mellitus</p>"
           ]
         }
       ]

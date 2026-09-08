@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "il67d0c"
+      "id": "il67d0c",
+      "content": "• Phaneritic – large crystals due to slow cooling."
     },
     {
       "type": "statStrip",
@@ -100,7 +101,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jbf8mxq"
+      "id": "jbf8mxq",
+      "content": "• Aphanitic – fine crystals due to rapid cooling."
     },
     {
       "type": "examAlert",
@@ -113,11 +115,13 @@
     },
     {
       "type": "paragraph",
-      "id": "ha16c3v"
+      "id": "ha16c3v",
+      "content": "• Glassy – no crystals (obsidian)."
     },
     {
       "type": "paragraph",
-      "id": "pswt9q5"
+      "id": "pswt9q5",
+      "content": "• Vesicular – contains gas bubbles (pumice)."
     }
   ],
   "enriched": true

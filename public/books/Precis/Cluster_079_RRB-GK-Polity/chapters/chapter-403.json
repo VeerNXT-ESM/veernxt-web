@@ -1,0 +1,123 @@
+{
+  "title": "Tenure and Salary",
+  "order": 403,
+  "blocks": [
+    {
+      "id": "x1nqeka",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Provision</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tenure</p>",
+            "<p>3 years or 65 years of age (whichever is earlier)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reappointment</p>",
+            "<p>Not eligible</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Salary</p>",
+            "<p>Determined by Central Government</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The salaries and conditions of service of constitutional post-holders are protected to ensure independent and impartial functioning.",
+      "id": "ynuidq0"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Authority",
+        "Tenure / Retirement Age",
+        "Salary Charged Upon"
+      ],
+      "rows": [
+        [
+          "UPSC Chairman & Members",
+          "6 Years / 65 Years",
+          "Consolidated Fund of India"
+        ],
+        [
+          "Comptroller & Auditor General (CAG)",
+          "6 Years / 65 Years",
+          "Consolidated Fund of India"
+        ],
+        [
+          "State PSC Chairman & Members",
+          "6 Years / 62 Years",
+          "Consolidated Fund of State"
+        ],
+        [
+          "Supreme Court Judge",
+          "Until Age 65",
+          "Consolidated Fund of India"
+        ]
+      ],
+      "id": "ai2hfcu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Standard Tenure",
+          "value": "6 Years / 65 Yrs Age",
+          "icon": "calendar"
+        },
+        {
+          "label": "Salary Source",
+          "value": "Consolidated Fund of India",
+          "icon": "award"
+        },
+        {
+          "label": "Parliamentary Vote",
+          "value": "Not Subject to Vote",
+          "icon": "check"
+        },
+        {
+          "label": "Variation Rule",
+          "value": "Cannot be Disadvantaged",
+          "icon": "info"
+        }
+      ],
+      "id": "esu3qnw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Expenditure 'charged upon' the Consolidated Fund of India can be discussed by Parliament but is NOT subject to voting.",
+        "Differentiate retirement ages carefully: UPSC/CAG/SC Judges retire at 65, while SPSC members and High Court Judges retire at 62.",
+        "Financial Emergency (Article 360) is the only instance where salaries of constitutional office-bearers can be reduced."
+      ],
+      "id": "25wk0jw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Tenure for major constitutional heads like the CAG and UPSC members is 6 years or until 65 years of age, whichever is earlier.",
+        "Salaries and allowances of constitutional dignitaries are charged upon the Consolidated Fund of India to ensure financial independence.",
+        "Conditions of service and salary cannot be varied to their disadvantage after their appointment, except during a Financial Emergency.",
+        "Upon retirement, key constitutional post-holders like the CAG and UPSC Chairman are ineligible for further employment under the Government of India or any State."
+      ],
+      "id": "ajaxelu"
+    }
+  ],
+  "enriched": true
+}

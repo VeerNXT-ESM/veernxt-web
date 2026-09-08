@@ -1,0 +1,138 @@
+{
+  "title": "Powers of the Governor",
+  "order": 128,
+  "blocks": [
+    {
+      "id": "6k59zsx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Power</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Executive</p>",
+            "<p>Appoints CM, Ministers, Advocate General, State Election Commissioner</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "",
+            ""
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Financial</p>",
+            "<p>Money Bill introduced only with Governor’s recommendation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Judicial</p>",
+            "<p>Pardoning power for state laws (Article 161)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Discretionary</p>",
+            "<p>President’s Rule recommendation, reserving bills</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The executive power of the State shall be vested in the Governor and shall be exercised by him either directly or through officers subordinate to him in accordance with this Constitution.",
+      "id": "5qr0nys"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "President of India",
+        "Governor of a State"
+      ],
+      "rows": [
+        [
+          "Pardon of Death Sentence",
+          "Can grant a full pardon for death sentences (Article 72)",
+          "Cannot pardon death sentence; can only suspend, remit, or commute (Article 161)"
+        ],
+        [
+          "Court-Martial Verdicts",
+          "Has pardoning power over military Court-Martial sentences",
+          "Has no jurisdiction over Court-Martial sentences"
+        ],
+        [
+          "Ordinance Power Article",
+          "Promulgates ordinances under Article 123",
+          "Promulgates ordinances under Article 213"
+        ],
+        [
+          "Explicit Discretion",
+          "No explicit constitutional discretion mentioned",
+          "Express constitutional discretion granted under Article 163"
+        ]
+      ],
+      "id": "q4y2zyc"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Executive Head",
+          "value": "Article 153",
+          "icon": "book"
+        },
+        {
+          "label": "Pardoning Power",
+          "value": "Article 161",
+          "icon": "award"
+        },
+        {
+          "label": "Ordinance Power",
+          "value": "Article 213",
+          "icon": "info"
+        },
+        {
+          "label": "Normal Tenure",
+          "value": "5 Years",
+          "icon": "calendar"
+        }
+      ],
+      "id": "1e4vuni"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crucial Distinction: The Governor cannot pardon a death sentence or sentences awarded by a Court-Martial, which remains exclusive to the President under Article 72.",
+        "An ordinance issued under Article 213 must be approved by the state legislature within 6 weeks from its reassembly.",
+        "Reserving a bill for the President's consideration under Article 200 is compulsory if it threatens the constitutional position of the State High Court."
+      ],
+      "id": "ck1rq9i"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Governor acts as both the constitutional executive head of the state and an representative agent of the Central Government.",
+        "Under Article 200, the Governor has the authority to assent, withhold assent, return, or reserve a state bill for the consideration of the President.",
+        "The Governor can promulgate ordinances under Article 213 when the state legislature is not in session.",
+        "Article 161 empowers the Governor to suspend, remit, or commute sentences, but excludes full pardoning of a death sentence.",
+        "Unlike the President, the Governor possesses explicit constitutional discretionary powers under Article 163."
+      ],
+      "id": "dtpszzz"
+    }
+  ],
+  "enriched": true
+}

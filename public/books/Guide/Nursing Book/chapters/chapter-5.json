@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "t78r5k8"
+      "id": "t78r5k8",
+      "content": "Pathology is the study of diseases, their causes, mechanisms, structural changes, and functional consequences. In nursing competitive examinations such as RRB Nursing, pathology questions commonly come from cell injury, inflammation, degeneration, tumors, blood disorders, and immune disorders. Understanding pathology helps nurses recognize disease processes and provide appropriate patient care."
     },
     {
       "id": "iy48my0",
@@ -64,50 +65,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Etiology</p>",
+            "<p>Cause of a disease</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pathogenesis</p>",
+            "<p>Mechanism of development of disease</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lesion</p>",
+            "<p>Structural change in tissue due to disease</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Diagnosis</p>",
+            "<p>Identification of disease by examination and tests</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prognosis</p>",
+            "<p>Prediction of outcome of disease</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Complication</p>",
+            "<p>Secondary condition that worsens the disease</p>"
           ]
         }
       ]
@@ -120,7 +121,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0yqd3vh"
+      "id": "0yqd3vh",
+      "content": "Cell injury occurs when cells are exposed to harmful stimuli such as toxins, infections, or lack of oxygen. Cell injury may be reversible or irreversible."
     },
     {
       "id": "hy0hhb5",
@@ -129,49 +131,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type of Injury</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hypoxia</p>",
+            "<p>Lack of oxygen</p>",
+            "<p>Heart attack</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chemical injury</p>",
+            "<p>Toxins or drugs</p>",
+            "<p>Poisoning</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Physical injury</p>",
+            "<p>Trauma, radiation</p>",
+            "<p>Burns</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Infection</p>",
+            "<p>Bacteria, viruses</p>",
+            "<p>Tuberculosis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Immune reactions</p>",
+            "<p>Autoimmune disorders</p>",
+            "<p>Rheumatoid arthritis</p>"
           ]
         }
       ]
@@ -189,41 +191,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Adaptation</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Atrophy</p>",
+            "<p>Decrease in cell size</p>",
+            "<p>Muscle wasting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hypertrophy</p>",
+            "<p>Increase in cell size</p>",
+            "<p>Enlarged heart muscle</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hyperplasia</p>",
+            "<p>Increase in number of cells</p>",
+            "<p>Endometrial thickening</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Metaplasia</p>",
+            "<p>Replacement of one cell type by another</p>",
+            "<p>Smoking-related airway change</p>"
           ]
         }
       ]
@@ -246,22 +248,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Necrosis</p>",
+            "<p>Uncontrolled cell death due to injury</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Apoptosis</p>",
+            "<p>Programmed cell death occurring naturally</p>"
           ]
         }
       ]
@@ -274,7 +276,8 @@
     },
     {
       "type": "paragraph",
-      "id": "n3zi6k4"
+      "id": "n3zi6k4",
+      "content": "Inflammation is the body's protective response to injury or infection. It involves immune cells, blood vessels, and chemical mediators."
     },
     {
       "id": "pnrjckq",
@@ -283,43 +286,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Sign of Inflammation</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Redness (Rubor)</p>",
+            "<p>Increased blood flow</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heat (Calor)</p>",
+            "<p>Raised temperature in affected area</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Swelling (Tumor)</p>",
+            "<p>Fluid accumulation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pain (Dolor)</p>",
+            "<p>Stimulation of nerve endings</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Loss of function</p>",
+            "<p>Reduced ability of affected tissue</p>"
           ]
         }
       ]
@@ -373,22 +376,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Acute inflammation</p>",
+            "<p>Short duration, rapid onset</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chronic inflammation</p>",
+            "<p>Long duration, tissue destruction</p>"
           ]
         }
       ]
@@ -406,29 +409,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fatty degeneration</p>",
+            "<p>Fat accumulation in cells</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hyaline degeneration</p>",
+            "<p>Protein accumulation in tissues</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mucoid degeneration</p>",
+            "<p>Accumulation of mucopolysaccharides</p>"
           ]
         }
       ]
@@ -441,7 +444,8 @@
     },
     {
       "type": "paragraph",
-      "id": "t4pklm9"
+      "id": "t4pklm9",
+      "content": "A tumor is an abnormal mass of tissue caused by uncontrolled cell growth."
     },
     {
       "id": "1jnv0dc",
@@ -450,25 +454,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Benign tumor</p>",
+            "<p>Slow growing, non-invasive</p>",
+            "<p>Lipoma</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Malignant tumor</p>",
+            "<p>Cancerous, invasive</p>",
+            "<p>Carcinoma</p>"
           ]
         }
       ]
@@ -496,36 +500,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Disorder</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Anemia</p>",
+            "<p>Reduced hemoglobin or RBC count</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Leukemia</p>",
+            "<p>Cancer of white blood cells</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hemophilia</p>",
+            "<p>Genetic disorder causing impaired clotting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thrombocytopenia</p>",
+            "<p>Low platelet count leading to bleeding</p>"
           ]
         }
       ]
@@ -543,29 +547,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Disorder</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Autoimmune disease</p>",
+            "<p>Immune system attacks body tissues</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Allergy</p>",
+            "<p>Hypersensitive immune response</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Immunodeficiency</p>",
+            "<p>Weak immune system leading to infections</p>"
           ]
         }
       ]
@@ -583,50 +587,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Topic</strong></p>",
+            "<p><strong>Key Exam Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Five signs of inflammation</p>",
+            "<p>Redness, heat, swelling, pain, loss of function</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cancer term</p>",
+            "<p>Malignant tumor</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Programmed cell death</p>",
+            "<p>Apoptosis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Uncontrolled cell death</p>",
+            "<p>Necrosis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Low hemoglobin condition</p>",
+            "<p>Anemia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cancer of white blood cells</p>",
+            "<p>Leukemia</p>"
           ]
         }
       ]

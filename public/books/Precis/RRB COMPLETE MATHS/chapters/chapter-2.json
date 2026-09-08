@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "swebawc"
+      "id": "swebawc",
+      "content": "The number system is the foundation of quantitative aptitude. It helps students understand how numbers behave, how they can be manipulated, and how patterns can be identified quickly."
     },
     {
       "type": "paragraph",
-      "id": "u0imkkc"
+      "id": "u0imkkc",
+      "content": "A strong command over the number system improves speed in simplification, algebra, percentages, and data interpretation.This chapter must be mastered conceptually rather than memorized superficially."
     },
     {
       "id": "xs2aqj3",
@@ -63,28 +65,31 @@
     },
     {
       "type": "paragraph",
-      "id": "agzl53n"
+      "id": "agzl53n",
+      "content": "Numbers are broadly classified as follows:"
     },
     {
       "id": "ztaiukd",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Natural Numbers: Counting numbers starting from 1.</li><li>Whole Numbers: Natural numbers including zero.</li><li>Integers: Positive numbers, negative numbers, and zero.</li><li>Rational Numbers: Numbers expressible as p/q where q ≠ 0.</li><li>Irrational Numbers: Numbers that cannot be expressed as fractions (√2, π).</li><li>Real Numbers: Combination of rational and irrational numbers.</li></ul>",
+        "Natural Numbers: Counting numbers starting from 1.",
+        "Whole Numbers: Natural numbers including zero.",
+        "Integers: Positive numbers, negative numbers, and zero.",
+        "Rational Numbers: Numbers expressible as p/q where q ≠ 0.",
+        "Irrational Numbers: Numbers that cannot be expressed as fractions (√2, π).",
+        "Real Numbers: Combination of rational and irrational numbers."
       ]
     },
     {
       "type": "paragraph",
-      "id": "rbngxab"
+      "id": "rbngxab",
+      "content": "Exam Tip:"
     },
     {
       "type": "paragraph",
-      "id": "zk38akm"
+      "id": "zk38akm",
+      "content": "Every integer is rational, but not every rational number is an integer."
     },
     {
       "id": "ilub9tu",
@@ -94,24 +99,27 @@
     },
     {
       "type": "paragraph",
-      "id": "dtcfek8"
+      "id": "dtcfek8",
+      "content": "Prime numbers have exactly two factors — 1 and itself. Examples: 2, 3, 5, 7, 11."
     },
     {
       "type": "paragraph",
-      "id": "opasz0v"
+      "id": "opasz0v",
+      "content": "Important Facts:"
     },
     {
       "id": "puompb3",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "2 is the only even prime.",
+        "1 is neither prime nor composite.",
+        "Every prime greater than 3 is of the form 6n ± 1."
       ]
     },
     {
       "type": "paragraph",
-      "id": "hre13dr"
+      "id": "hre13dr",
+      "content": "<em>Trick:To check if a number is prime, test divisibility only up to its square root.</em>"
     },
     {
       "id": "hw60jfu",
@@ -121,31 +129,38 @@
     },
     {
       "type": "paragraph",
-      "id": "8ghc47z"
+      "id": "8ghc47z",
+      "content": "Divisible by 2 → Last digit even."
     },
     {
       "type": "paragraph",
-      "id": "4rzn2vn"
+      "id": "4rzn2vn",
+      "content": "Divisible by 3 → Sum of digits divisible by 3. Divisible by 4 → Last two digits divisible by 4. Divisible by 5 → Ends in 0 or 5."
     },
     {
       "type": "paragraph",
-      "id": "bwtuae8"
+      "id": "bwtuae8",
+      "content": "Divisible by 6 → Divisible by both 2 and 3."
     },
     {
       "type": "paragraph",
-      "id": "h7sez48"
+      "id": "h7sez48",
+      "content": "Divisible by 8 → Last three digits divisible by 8."
     },
     {
       "type": "paragraph",
-      "id": "6td1odl"
+      "id": "6td1odl",
+      "content": "Divisible by 9 → Sum of digits divisible by 9."
     },
     {
       "type": "paragraph",
-      "id": "ees4r2w"
+      "id": "ees4r2w",
+      "content": "Divisible by 11 → Difference between alternate digit sums is 0 or multiple of 11."
     },
     {
       "type": "paragraph",
-      "id": "v226t5d"
+      "id": "v226t5d",
+      "content": "<em>Speed Trick: Always check divisibility before attempting long division.</em>"
     },
     {
       "id": "qr06ge3",
@@ -155,29 +170,35 @@
     },
     {
       "type": "paragraph",
-      "id": "aducw2v"
+      "id": "aducw2v",
+      "content": "A factor divides a number exactly, while multiples are generated through multiplication. Formula for number of factors:"
     },
     {
       "type": "paragraph",
-      "id": "0ixkv5n"
+      "id": "0ixkv5n",
+      "content": "If N = p^a × q^b × r^c"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "iruh9ll"
+      "id": "iruh9ll",
+      "content": "Total factors = (a+1)(b+1)(c+1)"
     },
     {
       "type": "paragraph",
-      "id": "sid34hb"
+      "id": "sid34hb",
+      "content": "Example:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xlj7xpo"
+      "id": "xlj7xpo",
+      "content": "36 = 2² × 3²"
     },
     {
       "type": "paragraph",
-      "id": "vyqj0qd"
+      "id": "vyqj0qd",
+      "content": "Number of factors = (2+1)(2+1) = 9."
     },
     {
       "id": "n9crilr",
@@ -187,15 +208,18 @@
     },
     {
       "type": "paragraph",
-      "id": "byw19bl"
+      "id": "byw19bl",
+      "content": "HCF is the greatest number dividing two or more numbers exactly. Formula: For two numbers,"
     },
     {
       "type": "paragraph",
-      "id": "teb4l48"
+      "id": "teb4l48",
+      "content": "HCF × LCM = Product of numbers."
     },
     {
       "type": "paragraph",
-      "id": "a8in16o"
+      "id": "a8in16o",
+      "content": "<em>Trick:Use the division method for large numbers — it is faster than listing factors.</em>"
     },
     {
       "id": "j3gd3fi",
@@ -205,30 +229,30 @@
     },
     {
       "type": "paragraph",
-      "id": "1624fn4"
+      "id": "1624fn4",
+      "content": "LCM is the smallest number that is a multiple of given numbers. Method: Take the highest power of each prime factor."
     },
     {
       "type": "paragraph",
-      "id": "wupxp1s"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Divisibility Rules (Must Memorize)",
-      "id": "z7fxz51"
+      "id": "wupxp1s",
+      "content": "Example:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pvg16qx"
+      "id": "pvg16qx",
+      "content": "12 = 2² × 3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g9dopaj"
+      "id": "g9dopaj",
+      "content": "18 = 2 × 3²"
     },
     {
       "type": "paragraph",
-      "id": "6138wvt"
+      "id": "6138wvt",
+      "content": "LCM = 2² × 3² = 36."
     },
     {
       "id": "xau8iq5",
@@ -238,15 +262,18 @@
     },
     {
       "type": "paragraph",
-      "id": "xne05jn"
+      "id": "xne05jn",
+      "content": "Two numbers are co-prime if their HCF is 1. Example:"
     },
     {
       "type": "paragraph",
-      "id": "zabjgi8"
+      "id": "zabjgi8",
+      "content": "14 and 15."
     },
     {
       "type": "paragraph",
-      "id": "9o39oef"
+      "id": "9o39oef",
+      "content": "<em>Important:Co-primes need not be prime individually.</em>"
     },
     {
       "id": "nanhpc2",
@@ -256,41 +283,50 @@
     },
     {
       "type": "paragraph",
-      "id": "hu0e64u"
+      "id": "hu0e64u",
+      "content": "If a number N is divided by D:"
     },
     {
       "type": "paragraph",
-      "id": "32zildb"
+      "id": "32zildb",
+      "content": "N = D × Quotient + Remainder Condition: Remainder &lt; Divisor."
     },
     {
       "type": "paragraph",
-      "id": "hr2vs05"
+      "id": "hr2vs05",
+      "content": "Shortcut for powers:"
     },
     {
       "type": "paragraph",
-      "id": "9yezqqm"
+      "id": "9yezqqm",
+      "content": "Find pattern using modulus."
     },
     {
       "type": "paragraph",
-      "id": "fm89huc"
+      "id": "fm89huc",
+      "content": "Example:"
     },
     {
       "type": "paragraph",
-      "id": "urwjuf2"
+      "id": "urwjuf2",
+      "content": "Find remainder when 2^10 is divided by 3."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fhmf2c0"
+      "id": "fhmf2c0",
+      "content": "2 ≡ -1 (mod 3)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "55f5y4z"
+      "id": "55f5y4z",
+      "content": "(-1)^10 = 1(mod 3)"
     },
     {
       "type": "paragraph",
-      "id": "pzsbu72"
+      "id": "pzsbu72",
+      "content": "Remainder = 1."
     },
     {
       "id": "vsrkrvm",
@@ -300,7 +336,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lldno4l"
+      "id": "lldno4l",
+      "content": "Many numbers repeat unit digits in cycles."
     },
     {
       "type": "comparisonTable",
@@ -330,39 +367,47 @@
     },
     {
       "type": "paragraph",
-      "id": "815qxas"
+      "id": "815qxas",
+      "content": "Example pattern for 7:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "c85p6mz"
+      "id": "c85p6mz",
+      "content": "7¹ = 7"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "al6xmms"
+      "id": "al6xmms",
+      "content": "7² = 9"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fguvnum"
+      "id": "fguvnum",
+      "content": "7³ = 3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "461pz3z"
+      "id": "461pz3z",
+      "content": "7⁴ = 1"
     },
     {
       "type": "paragraph",
-      "id": "g7l3g2u"
+      "id": "g7l3g2u",
+      "content": "Cycle length = 4."
     },
     {
       "type": "paragraph",
-      "id": "86vqi3x"
+      "id": "86vqi3x",
+      "content": "To find unit digit of 7^100:"
     },
     {
       "type": "paragraph",
-      "id": "ur7jr6v"
+      "id": "ur7jr6v",
+      "content": "100 mod 4 = 0 → use last number in cycle → 1."
     },
     {
       "id": "ow8xqgt",
@@ -372,20 +417,22 @@
     },
     {
       "type": "paragraph",
-      "id": "y38z848"
+      "id": "y38z848",
+      "content": "Properties:"
     },
     {
       "id": "7v22n74",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "A perfect square has odd number of factors.",
+        "Unit digit must be 0, 1, 4, 5, 6, or 9.",
+        "Number of trailing zeros must be even."
       ]
     },
     {
       "type": "paragraph",
-      "id": "cou8i0u"
+      "id": "cou8i0u",
+      "content": "<em>Trick: If a number ends in 2, 3, 7, or 8 — it cannot be a perfect square.</em>"
     },
     {
       "id": "7opp5gy",
@@ -395,19 +442,21 @@
     },
     {
       "type": "paragraph",
-      "id": "wiwzo5o"
+      "id": "wiwzo5o",
+      "content": "Properties:"
     },
     {
       "id": "dy4ai22",
       "type": "list",
       "items": [
-        null,
-        null
+        "Cube roots are integers.",
+        "Unit digit of cube determines cube root unit digit. Example:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "2969rqp"
+      "id": "2969rqp",
+      "content": "If cube ends in 7 → cube root ends in 3."
     },
     {
       "id": "im7mv04",
@@ -417,19 +466,23 @@
     },
     {
       "type": "paragraph",
-      "id": "gb8qyy2"
+      "id": "gb8qyy2",
+      "content": "A surd is an irrational root. Simplification Trick:"
     },
     {
       "type": "paragraph",
-      "id": "mz9z4ck"
+      "id": "mz9z4ck",
+      "content": "Break into perfect square × remainder."
     },
     {
       "type": "paragraph",
-      "id": "hras0o8"
+      "id": "hras0o8",
+      "content": "Example:"
     },
     {
       "type": "paragraph",
-      "id": "xvzr4ua"
+      "id": "xvzr4ua",
+      "content": "√72 = √(36×2) = 6√2."
     },
     {
       "id": "w1tnv22",
@@ -439,7 +492,8 @@
     },
     {
       "type": "paragraph",
-      "id": "c04wbja"
+      "id": "c04wbja",
+      "content": "Used to verify calculations quickly."
     },
     {
       "type": "examAlert",
@@ -453,15 +507,18 @@
     },
     {
       "type": "paragraph",
-      "id": "v9h3f4z"
+      "id": "v9h3f4z",
+      "content": "Steps: Add digits repeatedly until one digit remains. Example:"
     },
     {
       "type": "paragraph",
-      "id": "qcccnoj"
+      "id": "qcccnoj",
+      "content": "4587 → 4+5+8+7 = 24 → 2+4 = 6."
     },
     {
       "type": "paragraph",
-      "id": "1teion9"
+      "id": "1teion9",
+      "content": "Both sides of an equation must have the same digital root."
     },
     {
       "id": "spuqicx",
@@ -471,19 +528,23 @@
     },
     {
       "type": "paragraph",
-      "id": "foueziv"
+      "id": "foueziv",
+      "content": "Numbers are not restricted to base 10. Example:"
     },
     {
       "type": "paragraph",
-      "id": "m1is5un"
+      "id": "m1is5un",
+      "content": "(101)₂ = 1×2² + 0×2¹ + 1×2⁰ = <strong>5</strong>"
     },
     {
       "type": "paragraph",
-      "id": "o6x6q4a"
+      "id": "o6x6q4a",
+      "content": "Binary is base 2. Octal is base 8."
     },
     {
       "type": "paragraph",
-      "id": "ght9nbt"
+      "id": "ght9nbt",
+      "content": "Hexadecimal is base 16."
     },
     {
       "id": "ou9knn0",
@@ -493,21 +554,25 @@
     },
     {
       "type": "paragraph",
-      "id": "ot8ajvh"
+      "id": "ot8ajvh",
+      "content": "The greatest integer function returns the largest integer less than or equal to a number. Examples:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f41jxdx"
+      "id": "f41jxdx",
+      "content": "[4.9] = 4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "646efep"
+      "id": "646efep",
+      "content": "[-2.3] = -3"
     },
     {
       "type": "paragraph",
-      "id": "geb6pqo"
+      "id": "geb6pqo",
+      "content": "Important for advanced RRB questions."
     },
     {
       "id": "fjw31po",
@@ -519,11 +584,11 @@
       "id": "gh2vlws",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Memorize primes up to 50.",
+        "Learn divisibility rules.",
+        "Recognize unit digit cycles.",
+        "Factorize quickly.",
+        "Use digital root to verify answers."
       ]
     }
   ],

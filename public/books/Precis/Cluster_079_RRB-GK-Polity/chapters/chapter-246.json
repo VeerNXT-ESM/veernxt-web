@@ -1,0 +1,132 @@
+{
+  "title": "Important Initiatives by NITI Aayog",
+  "order": 246,
+  "blocks": [
+    {
+      "id": "7lbp1kc",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Initiative</strong></p>",
+            "<p><strong>Purpose</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Aspirational Districts Programme</p>",
+            "<p>Rapid development of backward districts</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Atal Innovation Mission</p>",
+            "<p>Promote innovation and startups</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>SDG India Index</p>",
+            "<p>Measure progress on Sustainable Development Goals</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>School Education Quality Index</p>",
+            "<p>Evaluate education outcomes</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "NITI Aayog serves as the premier policy Think Tank of the Government of India, providing both directional and policy inputs while fostering cooperative federalism.",
+      "id": "17p0drr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Planning Commission",
+        "NITI Aayog"
+      ],
+      "rows": [
+        [
+          "Approach",
+          "Top-down planning (Center decides for states)",
+          "Bottom-up planning (Cooperative Federalism)"
+        ],
+        [
+          "Financial Powers",
+          "Empowered to allocate funds to ministries and state governments",
+          "Advisory body only; fund allocation power lies with Finance Ministry"
+        ],
+        [
+          "State Representation",
+          "Limited engagement through National Development Council",
+          "Direct participation in Governing Council (CMs & Lt. Governors)"
+        ],
+        [
+          "Body Type",
+          "Non-statutory body (Executive Resolution)",
+          "Non-statutory, extra-constitutional body (Cabinet Resolution)"
+        ]
+      ],
+      "id": "e200lou"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established Year",
+          "value": "2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "Aspirational Districts",
+          "value": "112",
+          "icon": "check"
+        },
+        {
+          "label": "Flagship Program",
+          "value": "Atal Innovation Mission",
+          "icon": "award"
+        },
+        {
+          "label": "Core Mandate",
+          "value": "Cooperative Federalism",
+          "icon": "info"
+        }
+      ],
+      "id": "5bmpqrf"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NITI Aayog is an extra-constitutional, non-statutory body created via an executive Cabinet resolution, not by an Act of Parliament.",
+        "The Prime Minister serves as the ex-officio Chairperson, while the Governing Council comprises all State Chief Ministers and Lt. Governors of UTs.",
+        "Unlike the former Planning Commission, NITI Aayog has no power to allocate financial funds to state governments or central ministries.",
+        "The SDG India Index score ranges between 0 and 100, categorizing entities into Achiever (100), Front Runner (65-99), Performer (50-64), and Aspirant (0-49)."
+      ],
+      "id": "xlr4197"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "NITI Aayog (National Institution for Transforming India) replaced the 65-year-old Planning Commission on January 1, 2015, shifting from a top-down to a bottom-up policy approach.",
+        "The Aspirational Districts Programme (ADP) launched in 2018 focuses on rapidly transforming 112 of India's most developmentally challenged districts based on 49 Key Performance Indicators.",
+        "Atal Innovation Mission (AIM) promotes innovation and entrepreneurship by establishing Atal Tinkering Labs (ATLs) in schools and Atal Incubation Centres (AICs) for startups.",
+        "The SDG India Index comprehensively tracks and ranks the progress of all States and Union Territories toward achieving the United Nations 17 Sustainable Development Goals.",
+        "Project SATH (Sustainable Action for Transforming Human Capital) aims to initiate systemic transformation in Education (SATH-E) and Health (SATH-H) across partner states."
+      ],
+      "id": "qm6191w"
+    }
+  ],
+  "enriched": true
+}

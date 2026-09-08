@@ -1,0 +1,140 @@
+{
+  "title": "Powers and Functions",
+  "order": 183,
+  "blocks": [
+    {
+      "id": "70duq2h",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Power</strong></p>",
+            "<p><strong>Functions</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Administrative</p>",
+            "<p>Conduct elections for Lok Sabha, Rajya Sabha, State Legislatures, President, Vice-President</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Advisory</p>",
+            "<p>Advise President on disqualification of MPs and Governor on MLAs</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Quasi-Judicial</p>",
+            "<p>Settle disputes regarding recognition of political parties</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regulatory</p>",
+            "<p>Enforce Model Code of Conduct</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Operational</p>",
+            "<p>Prepare electoral rolls and allot election symbols</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Supervisory</p>",
+            "<p>Monitor election machinery nationwide</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The President shall have the power to grant pardons, reprieves, respites or remissions of punishment or to suspend, remit or commute the sentence of any person convicted of any offence.",
+      "id": "c5beux2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "President (Article 72)",
+        "Governor (Article 161)"
+      ],
+      "rows": [
+        [
+          "Death Sentence",
+          "Can fully pardon, commute, suspend, or remit a death sentence",
+          "Cannot pardon a death sentence, but can suspend, remit, or commute it"
+        ],
+        [
+          "Court Martial",
+          "Can grant pardon or remission for sentences passed by a Military Court",
+          "Has no power regarding sentences passed by a Court Martial"
+        ],
+        [
+          "Jurisdiction",
+          "Extends to offences against Union Laws",
+          "Extends to offences against State Laws"
+        ]
+      ],
+      "id": "aq2dnwp"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Ordinance Power",
+          "value": "Article 123",
+          "icon": "book"
+        },
+        {
+          "label": "Pardoning Power",
+          "value": "Article 72",
+          "icon": "award"
+        },
+        {
+          "label": "Max Ordinance Life",
+          "value": "6 Months 6 Weeks",
+          "icon": "clock"
+        },
+        {
+          "label": "Emergency Types",
+          "value": "3 Provisions",
+          "icon": "info"
+        }
+      ],
+      "id": "wd9ff0g"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "An ordinance issued under Article 123 must be laid before Parliament and ceases to operate 6 weeks from its reassembly.",
+        "Unlike the President, the Governor under Article 161 has no power to pardon a death sentence.",
+        "Financial Emergency under Article 360 has never been declared in India to date."
+      ],
+      "id": "6v6wyls"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "All executive actions of the Government of India are formally taken in the name of the President.",
+        "The President can promulgate ordinances under Article 123 when both Houses of Parliament are not in session.",
+        "Money Bills can be introduced in Parliament only with the prior recommendation of the President.",
+        "Under Article 72, the President possesses judicial powers to grant pardons, reprieves, respites, or remissions of punishment.",
+        "The Constitution vests three types of emergency powers in the President: National Emergency (Art 352), President's Rule (Art 356/365), and Financial Emergency (Art 360)."
+      ],
+      "id": "nu9kkwk"
+    }
+  ],
+  "enriched": true
+}

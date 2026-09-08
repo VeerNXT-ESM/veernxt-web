@@ -54,64 +54,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Location</p>",
+            "<p>Northwestern India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Latitude</p>",
+            "<p>29°30'N to 32°32'N</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Longitude</p>",
+            "<p>73°55'E to 76°50'E</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Area</p>",
+            "<p>50,362 sq km (1.6% of India's total area)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rank by Area</p>",
+            "<p>19th largest state in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Borders</p>",
+            "<p>North: Jammu &amp; Kashmir and Himachal Pradesh; East: Himachal Pradesh and Haryana; South: Haryana and Rajasthan; West: Pakistan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Capital</p>",
+            "<p>Chandigarh (shared with Haryana)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Districts</p>",
+            "<p>23 districts (as of 2023)</p>"
           ]
         }
       ]
@@ -135,65 +135,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Division</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Districts/Areas</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shivalik Hills (Sub-Himalayan)</p>",
+            "<p>Foothills in the NE; elevation 300–900m; dense forests; prone to erosion</p>",
+            "<p>Ropar, Hoshiarpur, Gurdaspur, Pathankot</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bist Doab (Upland)</p>",
+            "<p>Between Beas and Sutlej rivers; fertile undulating plain</p>",
+            "<p>Hoshiarpur, Nawanshahr (SBS Nagar), Jalandhar (partly)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Upper Bari Doab</p>",
+            "<p>Between Ravi and Beas; fertile; well-irrigated</p>",
+            "<p>Gurdaspur, Amritsar, Tarn Taran</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Central Plain / Main Punjab Plain</p>",
+            "<p>Core agricultural zone; flat alluvial plain</p>",
+            "<p>Ludhiana, Sangrur, Fatehgarh Sahib, Patiala</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Malwa Region</p>",
+            "<p>South and SE Punjab; fertile; cotton and wheat</p>",
+            "<p>Ludhiana, Firozpur, Mansa, Bathinda, Muktsar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Puadh (Ambala region)</p>",
+            "<p>Southeast; transition to Haryana; semi-arid</p>",
+            "<p>Parts of Ropar, Fatehgarh Sahib</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Floodplains (Khadar/Bet)</p>",
+            "<p>Along riverbanks; seasonally flooded; very fertile</p>",
+            "<p>Along all major rivers</p>"
           ]
         }
       ]
@@ -206,7 +206,8 @@
     },
     {
       "type": "paragraph",
-      "id": "hvtkbe1"
+      "id": "hvtkbe1",
+      "content": "Punjab's name comes from its five rivers. However, after the 1947 partition, three rivers (Jhelum, Chenab, Ravi) largely flow through Pakistan. Indian Punjab is irrigated mainly by the Beas and Sutlej."
     },
     {
       "id": "022kc7c",
@@ -215,55 +216,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>River</strong></p>",
+            "<p><strong>Origin</strong></p>",
+            "<p><strong>Length in Punjab</strong></p>",
+            "<p><strong>Key Facts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sutlej</p>",
+            "<p>Mansarovar Lake, Tibet (Rakas Tal)</p>",
+            "<p>~600 km in India</p>",
+            "<p>Largest river of Punjab; enters Punjab at Ropar; joins Chenab in Pakistan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Beas</p>",
+            "<p>Beas Kund, near Rohtang Pass, Himachal Pradesh</p>",
+            "<p>~290 km</p>",
+            "<p>Joins Sutlej near Harike (Firozpur district); Harike Wetland/Bird Sanctuary here</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ravi</p>",
+            "<p>Bara Bangahal, Chamba district, HP</p>",
+            "<p>~80 km in Indian Punjab</p>",
+            "<p>Flows along India-Pakistan border; Ravi-Beas waters part of Indus Waters Treaty</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Chenab</p>",
+            "<p>Bara Lacha Pass, Himachal Pradesh</p>",
+            "<p>Mostly in Pakistan</p>",
+            "<p>Flows through J&amp;K; enters Pakistan; part of Indus Waters Treaty</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Jhelum</p>",
+            "<p>Verinag spring, Kashmir Valley</p>",
+            "<p>Mostly in J&amp;K/Pakistan</p>",
+            "<p>Part of Indus Waters Treaty; assigned to Pakistan</p>"
           ]
         }
       ]
@@ -286,49 +287,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Doab</strong></p>",
+            "<p><strong>Between Rivers</strong></p>",
+            "<p><strong>Key Districts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bist Jalandhar Doab (Bist Doab)</p>",
+            "<p>Beas and Sutlej</p>",
+            "<p>Hoshiarpur, Nawanshahr, Jalandhar, Kapurthala</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bari Doab</p>",
+            "<p>Beas and Ravi</p>",
+            "<p>Amritsar, Gurdaspur, Tarn Taran</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rechna Doab</p>",
+            "<p>Ravi and Chenab</p>",
+            "<p>Partly in Pakistan; Gujranwala region</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chaj Doab</p>",
+            "<p>Chenab and Jhelum</p>",
+            "<p>Mainly in Pakistan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sindh Sagar Doab</p>",
+            "<p>Jhelum and Indus</p>",
+            "<p>Mainly in Pakistan</p>"
           ]
         }
       ]
@@ -346,36 +347,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Season</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Summer (April–June)</p>",
+            "<p>Hot and dry; temperatures up to 45°C in plains; Loo (hot dusty wind) blows; maximum temperature at Bathinda, Firozpur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Monsoon (July–September)</p>",
+            "<p>SW monsoon brings 60–70% of annual rainfall; average annual rainfall 300–700 mm; Shivaliks get more rain (1000mm+)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Post-Monsoon/Autumn (Oct–Nov)</p>",
+            "<p>Retreating monsoon; dry and cool; beginning of Rabi crop sowing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Winter (December–February)</p>",
+            "<p>Cold; temperature drops to near 0°C in some areas; fog common in plains; snowfall in Shivalik foothills; Western disturbances bring winter rain beneficial for wheat</p>"
           ]
         }
       ]
@@ -419,49 +420,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Soil Type</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alluvial Soil (Khadar &amp; Bhangar)</p>",
+            "<p>River plains :majority of Punjab</p>",
+            "<p>Most fertile; sandy loam to clay; ideal for wheat, rice, sugarcane</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sandy / Sandy Loam</p>",
+            "<p>Malwa region (SW Punjab)</p>",
+            "<p>Less fertile; good for cotton, bajra; needs irrigation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shivalik/Hilly Soil</p>",
+            "<p>Foothills :Hoshiarpur, Gurdaspur, Pathankot</p>",
+            "<p>Red-yellow; stony; prone to erosion; supports fruit orchards</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Saline/Alkaline (Usar/Thur)</p>",
+            "<p>Parts of Sangrur, Bathinda, Fatehgarh Sahib</p>",
+            "<p>Poor fertility; waterlogging and salinity problems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sandy Desert Soil</p>",
+            "<p>Extreme SW (bordering Rajasthan)</p>",
+            "<p>Very poor; wind erosion; not suitable for cultivation without irrigation</p>"
           ]
         }
       ]
@@ -480,7 +481,8 @@
     },
     {
       "type": "paragraph",
-      "id": "7wrdlro"
+      "id": "7wrdlro",
+      "content": "Punjab has very limited forest cover :approximately 6.1% of its total area (as per Forest Survey of India). This is well below the national average of 21.7%. The state is predominantly agricultural."
     },
     {
       "id": "8q36ogf",
@@ -495,57 +497,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Name</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Key Species / Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Harike Wetland &amp; Bird Sanctuary</p>",
+            "<p>Firozpur / Tarn Taran</p>",
+            "<p>India's largest wetland in NW India; confluence of Beas and Sutlej; Ramsar site (1990); migratory birds including Siberian cranes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bir Moti Bagh Wildlife Sanctuary</p>",
+            "<p>Patiala</p>",
+            "<p>Deer, nilgai, wild boar; established 1952</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bir Bунdelkund Wildlife Sanctuary</p>",
+            "<p>Patiala</p>",
+            "<p>Small sanctuary</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Abohar Wildlife Sanctuary</p>",
+            "<p>Fazilka</p>",
+            "<p>Blackbuck (Indian antelope); bishnoi community protects wildlife</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ropar Wetland</p>",
+            "<p>Rupnagar</p>",
+            "<p>Ramsar site (2002); migratory birds</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nangal Wildlife Sanctuary</p>",
+            "<p>Rupnagar (near Bhakra Nangal)</p>",
+            "<p>Established 2009; migratory birds; along Sutlej</p>"
           ]
         }
       ]
@@ -567,7 +569,8 @@
     },
     {
       "type": "paragraph",
-      "id": "u5c6zft"
+      "id": "u5c6zft",
+      "content": "Punjab is one of the most irrigated states in India. Canal irrigation is the backbone of Punjab's agriculture. Key irrigation projects:"
     },
     {
       "id": "kbvws6n",
@@ -576,73 +579,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Project/Canal</strong></p>",
+            "<p><strong>River</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bhakra-Nangal Dam</p>",
+            "<p>Sutlej</p>",
+            "<p>One of India's highest gravity dams (226m); Gobind Sagar reservoir; serves Punjab, Haryana, Rajasthan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Beas Project (Pandoh Dam)</p>",
+            "<p>Beas</p>",
+            "<p>Diverts Beas waters to Sutlej via Pandoh-Sundernagar tunnel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ranjit Sagar Dam (Thein Dam)</p>",
+            "<p>Ravi</p>",
+            "<p>Located in J&amp;K near Pathankot border; serves Punjab for irrigation and power</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Harike Barrage (Ferozepur)</p>",
+            "<p>Beas-Sutlej confluence</p>",
+            "<p>Feeds Bikaner Canal and Rajasthan Canal; Harike Wetland formed here</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sirhind Canal</p>",
+            "<p>Sutlej (from Rupar headworks)</p>",
+            "<p>Oldest major canal; irrigates Ludhiana, Patiala, Sangrur, Fatehgarh Sahib</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Upper Bari Doab Canal (UBDC)</p>",
+            "<p>Ravi (from Madhopur headworks)</p>",
+            "<p>Irrigates Gurdaspur, Amritsar, Tarn Taran</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SYL Canal (Sutlej-Yamuna Link)</p>",
+            "<p>Sutlej to Yamuna</p>",
+            "<p>Proposed; highly contentious between Punjab and Haryana; not yet completed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Indus Waters Treaty (1960)</p>",
+            "<p>All Punjab rivers</p>",
+            "<p>Treaty between India and Pakistan; eastern rivers (Beas, Ravi, Sutlej) to India; western rivers (Indus, Jhelum, Chenab) to Pakistan</p>"
           ]
         }
       ]
@@ -655,7 +658,8 @@
     },
     {
       "type": "paragraph",
-      "id": "u8v8d1q"
+      "id": "u8v8d1q",
+      "content": "Punjab has 23 districts (after the creation of Sri Muktsar Sahib, Sahibzada Ajit Singh Nagar, Fatehgarh Sahib, Barjala, Malerkotla etc.). The districts are organized into 5 divisions:"
     },
     {
       "id": "utvpipw",
@@ -664,58 +668,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Division</strong></p>",
+            "<p><strong>Districts</strong></p>",
+            "<p><strong>Headquarters</strong></p>",
+            "<p><strong>Key Feature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Amritsar Division</p>",
+            "<p>Amritsar, Tarn Taran, Gurdaspur, Pathankot</p>",
+            "<p>Amritsar</p>",
+            "<p>Golden Temple, international border with Pakistan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Jalandhar Division</p>",
+            "<p>Jalandhar, Kapurthala, SBS Nagar (Nawanshahr), Hoshiarpur</p>",
+            "<p>Jalandhar</p>",
+            "<p>Sports goods manufacturing (Jalandhar), NRI hub</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Patiala Division</p>",
+            "<p>Patiala, Fatehgarh Sahib, Rupnagar, SAS Nagar (Mohali), Malerkotla</p>",
+            "<p>Patiala</p>",
+            "<p>Bhakra Dam, IT hub (Mohali)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ferozepur Division</p>",
+            "<p>Firozpur, Muktsar, Fazilka, Faridkot, Moga</p>",
+            "<p>Ferozepur</p>",
+            "<p>Border districts, agriculture</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bathinda Division</p>",
+            "<p>Bathinda, Barnala, Mansa, Sangrur</p>",
+            "<p>Bathinda</p>",
+            "<p>Thermal power, cotton, oil refinery</p>"
           ]
         }
       ]
+    },
+    {
+      "id": "0xtuxoa",
+      "type": "image",
+      "imageId": "0fjtglm",
+      "src": "/books/Guide/punjab si guide book/images/image_0fjtglm.jpeg"
     }
   ],
   "enriched": true

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "y7yu4i3"
+      "id": "y7yu4i3",
+      "content": "Erosion involves detachment, transportation, and removal of weathered material by natural agents."
     },
     {
       "type": "statStrip",
@@ -53,41 +54,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Agent</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Landforms</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Running Water</p>",
+            "<p>Humid</p>",
+            "<p>V-shaped valleys, floodplains</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wind</p>",
+            "<p>Arid</p>",
+            "<p>Sand dunes, loess</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Glaciers</p>",
+            "<p>Cold</p>",
+            "<p>U-shaped valleys, moraines</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sea Waves</p>",
+            "<p>Coastal</p>",
+            "<p>Cliffs, beaches</p>"
           ]
         }
       ]
@@ -101,27 +102,26 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ichxx7k"
+      "id": "ichxx7k",
+      "content": "• Hydraulic Action"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fb8pjil"
+      "id": "fb8pjil",
+      "content": "• Abrasion"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ll7ydn7"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Weathering vs Mass Wasting vs Erosion (Comparison)",
-      "id": "tbsfm57"
+      "id": "ll7ydn7",
+      "content": "• Attrition"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7pgc44z"
+      "id": "7pgc44z",
+      "content": "• Solution (Corrosion)"
     },
     {
       "id": "oevfvjr",
@@ -131,11 +131,13 @@
     },
     {
       "type": "paragraph",
-      "id": "3iv6quq"
+      "id": "3iv6quq",
+      "content": "• Vertical Erosion – deepening of valleys (youth stage)."
     },
     {
       "type": "paragraph",
-      "id": "l25z9bl"
+      "id": "l25z9bl",
+      "content": "• Lateral Erosion – widening of valleys (mature stage)."
     },
     {
       "type": "comparisonTable",
@@ -169,7 +171,8 @@
     },
     {
       "type": "paragraph",
-      "id": "df1a15l"
+      "id": "df1a15l",
+      "content": "• Headward Erosion – backward cutting at river source."
     },
     {
       "id": "yyy8om3",
@@ -179,19 +182,23 @@
     },
     {
       "type": "paragraph",
-      "id": "8wplb7m"
+      "id": "8wplb7m",
+      "content": "• Traction – rolling of large particles."
     },
     {
       "type": "paragraph",
-      "id": "lrxkkhq"
+      "id": "lrxkkhq",
+      "content": "• Saltation – bouncing movement."
     },
     {
       "type": "paragraph",
-      "id": "3r8emgr"
+      "id": "3r8emgr",
+      "content": "• Suspension – fine particles carried within water."
     },
     {
       "type": "paragraph",
-      "id": "9m2dlvs"
+      "id": "9m2dlvs",
+      "content": "• Solution – dissolved load."
     },
     {
       "type": "examAlert",
@@ -210,7 +217,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gk0hzzm"
+      "id": "gk0hzzm",
+      "content": "Base level refers to the lowest level to which erosion can occur. Sea level is the ultimate base level."
     },
     {
       "id": "i98y5uk",
@@ -225,25 +233,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Weathering</strong></p>",
+            "<p><strong>Mass Wasting</strong></p>",
+            "<p><strong>Erosion</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>In-situ breakdown</p>",
+            "<p>Gravity-driven movement</p>",
+            "<p>Agent-driven transport</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>No transport</p>",
+            "<p>Limited transport</p>",
+            "<p>Active transport</p>"
           ]
         }
       ]

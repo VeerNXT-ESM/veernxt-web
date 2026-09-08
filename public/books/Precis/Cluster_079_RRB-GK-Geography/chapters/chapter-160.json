@@ -1,0 +1,173 @@
+{
+  "title": "4. Depositional Landforms",
+  "order": 160,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Major depositional features formed when wind velocity decreases:",
+      "id": "e6bpxw1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Cause",
+          "value": "Decreased Wind Velocity",
+          "icon": "info"
+        },
+        {
+          "label": "Key Landforms",
+          "value": "4 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Fertile Deposit",
+          "value": "Loess Silt",
+          "icon": "check"
+        }
+      ],
+      "id": "jj7ru0r"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Sand Dunes – hills of sand formed by deposition.",
+      "id": "cyv6jk7"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Loess – thick deposits of fine silt; extremely fertile.",
+      "id": "mys1xbp"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Loess – thick deposits of fine silt; extremely fertile.",
+      "id": "ziial2f"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Sand Sheets – wide flat sandy surfaces.",
+      "id": "sdqt71j"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Landform",
+        "Key Characteristics"
+      ],
+      "rows": [
+        [
+          "Sand Dunes",
+          "Hills of sand formed by deposition"
+        ],
+        [
+          "Loess",
+          "Thick deposits of fine silt; extremely fertile"
+        ],
+        [
+          "Sand Sheets",
+          "Wide flat sandy surfaces"
+        ],
+        [
+          "Nebkhas",
+          "Small dunes anchored by vegetation"
+        ]
+      ],
+      "id": "jkczl0j"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Nebkhas – small dunes anchored by vegetation.",
+      "id": "326024t"
+    },
+    {
+      "id": "x2aoxme",
+      "type": "heading",
+      "level": 2,
+      "content": "Types of Sand Dunes"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Loess is frequently tested for its composition (fine silt) and high fertility.",
+        "Nebkhas are specifically identified in questions as dunes anchored by vegetation.",
+        "Remember that wind velocity reduction is the primary requirement for these landforms to form."
+      ],
+      "id": "kuqnix5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Wind deposition occurs primarily when wind velocity decreases.",
+        "Sand dunes represent hills of sand created by deposition.",
+        "Loess consists of thick, extremely fertile deposits of fine silt.",
+        "Sand sheets form wide, flat sandy surfaces.",
+        "Nebkhas are small dunes that are anchored and stabilized by vegetation."
+      ],
+      "id": "u8mhxsz"
+    },
+    {
+      "id": "nedmliy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Dune Type</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Wind Pattern</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Barchan</p>",
+            "<p>Crescent-shaped with horns pointing downwind</p>",
+            "<p>Unidirectional winds</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Barchanoid</p>",
+            "<p>Linked barchans forming wavy ridges</p>",
+            "<p>Consistent winds with more sand</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Transverse</p>",
+            "<p>Long ridges perpendicular to wind</p>",
+            "<p>Strong steady winds</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Longitudinal (Seif)</p>",
+            "<p>Parallel ridges</p>",
+            "<p>Bidirectional winds</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Parabolic</p>",
+            "<p>U-shaped; anchored by vegetation</p>",
+            "<p>Coastal deserts</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Star Dunes</p>",
+            "<p>Pyramidal with multiple arms</p>",
+            "<p>Multidirectional winds</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

@@ -48,57 +48,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Paradigm</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Languages</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Procedural</p>",
+            "<p>Step-by-step instructions; functions/procedures; top-down</p>",
+            "<p>C, Pascal, Fortran, COBOL</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Object-Oriented (OOP)</p>",
+            "<p>Objects encapsulate data + behaviour; classes; inheritance</p>",
+            "<p>Java, C++, Python, C#, Ruby, Kotlin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Functional</p>",
+            "<p>Functions as first-class citizens; immutability; higher-order functions</p>",
+            "<p>Haskell, Lisp, Erlang, Scala, F#; Python (partial), JavaScript (partial)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Logic (Declarative)</p>",
+            "<p>State what to compute, not how; inference engine</p>",
+            "<p>Prolog, Datalog</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Event-Driven</p>",
+            "<p>Program flow determined by events (clicks, messages)</p>",
+            "<p>JavaScript, Visual Basic, Node.js</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Concurrent/Parallel</p>",
+            "<p>Multiple computations simultaneously</p>",
+            "<p>Go, Erlang, Rust, Java (threads)</p>"
           ]
         }
       ]
@@ -121,81 +121,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>OOP Concept</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Class</p>",
+            "<p>Blueprint/template for creating objects; defines attributes and methods</p>",
+            "<p>class Car { String brand; void drive() }</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Object</p>",
+            "<p>Instance of a class; has state (attributes) and behaviour (methods)</p>",
+            "<p>Car myCar = new Car(); myCar.brand = 'Toyota';</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Encapsulation</p>",
+            "<p>Bundle data and methods; hide internal state; access via getters/setters</p>",
+            "<p>private int salary; public int getSalary()</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inheritance</p>",
+            "<p>Child class inherits properties and methods from parent class; promotes reuse</p>",
+            "<p>class ElectricCar extends Car { int batteryCapacity; }</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Polymorphism</p>",
+            "<p>Same interface, different implementations; method overloading and overriding</p>",
+            "<p>Animal.sound() — Dog says 'Woof', Cat says 'Meow'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Abstraction</p>",
+            "<p>Hide complex implementation; expose only essential features</p>",
+            "<p>abstract class Shape { abstract double area(); }</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Interface</p>",
+            "<p>Contract defining what methods a class must implement; no implementation</p>",
+            "<p>interface Drawable { void draw(); void resize(); }</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Overloading</p>",
+            "<p>Same method name, different parameters in same class (compile-time)</p>",
+            "<p>add(int,int) and add(double,double)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Overriding</p>",
+            "<p>Child class redefines parent's method (run-time polymorphism)</p>",
+            "<p>Dog.sound() overrides Animal.sound()</p>"
           ]
         }
       ]
@@ -213,55 +213,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Principle</strong></p>",
+            "<p><strong>Letter</strong></p>",
+            "<p><strong>Meaning</strong></p>",
+            "<p><strong>Violation Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Single Responsibility</p>",
+            "<p>S</p>",
+            "<p>A class should have only one reason to change</p>",
+            "<p>Class handles both user data and PDF generation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Open/Closed</p>",
+            "<p>O</p>",
+            "<p>Open for extension, closed for modification</p>",
+            "<p>If-else chain for each new shape type</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Liskov Substitution</p>",
+            "<p>L</p>",
+            "<p>Subtypes must be substitutable for base types</p>",
+            "<p>Square extends Rectangle but breaks setWidth invariant</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Interface Segregation</p>",
+            "<p>I</p>",
+            "<p>Don't force clients to implement unused methods</p>",
+            "<p>Fat interface with 20 methods; class needs only 2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dependency Inversion</p>",
+            "<p>D</p>",
+            "<p>Depend on abstractions, not concretions</p>",
+            "<p>High-level module directly creates low-level MySQL class</p>"
           ]
         }
       ]
@@ -288,100 +288,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Language</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Key Features</strong></p>",
+            "<p><strong>Banking/IT Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Java</p>",
+            "<p>OOP, Compiled to bytecode (JVM)</p>",
+            "<p>Platform-independent; strong typing; garbage collection; multithreading</p>",
+            "<p>Core banking systems, Android, enterprise apps</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Python</p>",
+            "<p>OOP + Functional, Interpreted</p>",
+            "<p>Dynamic typing; readable; huge libraries (NumPy, Pandas, TensorFlow)</p>",
+            "<p>Data analytics, AI/ML, scripting, automation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>C</p>",
+            "<p>Procedural, Compiled</p>",
+            "<p>Low-level; direct memory access; pointers; fast; OS development</p>",
+            "<p>Embedded systems, OS kernels, device drivers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>C++</p>",
+            "<p>OOP + Procedural, Compiled</p>",
+            "<p>C + OOP; templates; STL; manual memory management</p>",
+            "<p>High-frequency trading, game engines, real-time systems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>JavaScript</p>",
+            "<p>Event-driven, Interpreted</p>",
+            "<p>Runs in browser and Node.js; asynchronous; dynamic</p>",
+            "<p>Web frontend, Node.js backend, mobile (React Native)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>SQL</p>",
+            "<p>Declarative</p>",
+            "<p>Data querying and manipulation; ANSI standard</p>",
+            "<p>Database operations in all banking systems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Go</p>",
+            "<p>Compiled, Concurrent</p>",
+            "<p>Goroutines; fast compile; static typing; built-in concurrency</p>",
+            "<p>Microservices, cloud infrastructure (Docker, Kubernetes written in Go)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Rust</p>",
+            "<p>Systems, Compiled</p>",
+            "<p>Memory safety without GC; ownership model; no null pointers</p>",
+            "<p>WebAssembly, systems programming, secure banking libs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kotlin</p>",
+            "<p>OOP + Functional, JVM</p>",
+            "<p>Null-safe; interoperable with Java; concise syntax</p>",
+            "<p>Android development; server-side (Spring Boot)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Swift</p>",
+            "<p>OOP + Functional, Compiled</p>",
+            "<p>iOS/macOS development; safe; fast; Optionals for null safety</p>",
+            "<p>Banking iOS apps; Apple ecosystem</p>"
           ]
         }
       ]

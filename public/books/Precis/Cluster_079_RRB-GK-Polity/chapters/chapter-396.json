@@ -1,0 +1,64 @@
+{
+  "title": "RRB Quick Revision Box",
+  "order": 396,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Act: 2010<br/>Type: Statutory Tribunal<br/>HQ: New Delhi<br/>Appeal: Supreme Court<br/>Case Limit: 6 Months<br/>Key Principles: Polluter Pays, Precautionary, Sustainable Development",
+      "id": "8iya559"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Key Principles: Polluter Pays, Precautionary, Sustainable Development",
+      "id": "j78dq07"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Act Year",
+          "value": "2010",
+          "icon": "calendar"
+        },
+        {
+          "label": "Headquarters",
+          "value": "New Delhi",
+          "icon": "info"
+        },
+        {
+          "label": "Case Limit",
+          "value": "6 Months",
+          "icon": "clock"
+        },
+        {
+          "label": "Appeal To",
+          "value": "Supreme Court",
+          "icon": "award"
+        }
+      ],
+      "id": "8nbf7bd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Note that it is a Statutory Tribunal established in 2010.",
+        "Appeals against decisions lie with the Supreme Court.",
+        "The mandated case disposal limit is strictly 6 Months."
+      ],
+      "id": "tk5kyrg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The body was established as a Statutory Tribunal under the Act of 2010.",
+        "It is headquartered in New Delhi.",
+        "Appeals against its decisions are made directly to the Supreme Court.",
+        "Cases brought before it must be resolved within a 6-month limit.",
+        "Core operational principles include Polluter Pays, Precautionary, and Sustainable Development."
+      ],
+      "id": "35vsw8t"
+    }
+  ],
+  "enriched": true
+}

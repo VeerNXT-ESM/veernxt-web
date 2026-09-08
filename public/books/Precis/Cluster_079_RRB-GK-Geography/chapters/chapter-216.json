@@ -1,0 +1,516 @@
+{
+  "title": "Chapter 19: Temperature – Controls, Distribution, Inversion and Global Patterns",
+  "order": 216,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Temperature refers to the degree of hotness or coldness of the air. It is one of the most important elements of weather and climate because it directly influences atmospheric pressure, wind systems, humidity, and precipitation. Temperature variations across the Earth are primarily controlled by insolation, but several geographic factors modify it.",
+      "id": "rlcrdvw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Normal Lapse Rate",
+          "value": "6.5°C / 1000m",
+          "icon": "info"
+        },
+        {
+          "label": "Measurement Tool",
+          "value": "Stevenson Screen",
+          "icon": "book"
+        },
+        {
+          "label": "Highest Avg Temp",
+          "value": "Subtropical Deserts",
+          "icon": "award"
+        },
+        {
+          "label": "Highest Diurnal Range",
+          "value": "Deserts",
+          "icon": "calendar"
+        }
+      ],
+      "id": "bni1unv"
+    },
+    {
+      "id": "fivqjam",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Measurement of Temperature"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Air temperature is measured with thermometers inside a Stevenson Screen to prevent exposure to direct solar radiation and precipitation.",
+        "Isotherms represent horizontal temperature distribution; they bend poleward over oceans and equatorward over continents in winter.",
+        "The Normal Lapse Rate is the average temperature decrease of 6.5°C per 1000 meters of altitude in the troposphere.",
+        "Temperature Inversion occurs when warm air overlies cold air, leading to fog formation and pollutant entrapment.",
+        "Continental areas experience greater diurnal and annual temperature ranges compared to coastal regions."
+      ],
+      "id": "krzekm3"
+    },
+    {
+      "type": "paragraph",
+      "content": "Air temperature is measured using thermometers placed inside a Stevenson Screen to protect them from direct solar radiation and precipitation.",
+      "id": "9erqrt5"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Units: Celsius (°C), Fahrenheit (°F), and Kelvin (K).",
+      "id": "qfiye3n"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Daily Maximum Temperature – highest temperature recorded in a 24-hour period.",
+      "id": "u8ygzuz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Daily Minimum Temperature – lowest temperature recorded in a 24-hour period.",
+      "id": "f8uigsl"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Mean Daily Temperature = (Maximum + Minimum) / 2.",
+      "id": "8tfuwzk"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Annual Temperature Range – difference between the warmest and coldest months.",
+      "id": "3d6161w"
+    },
+    {
+      "id": "jm09bff",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Factors Controlling Temperature"
+    },
+    {
+      "id": "vqgxa1d",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "id": "tna37u2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Latitude</p>",
+            "<p>Regions near the equator receive vertical sun rays and are warmer, while polar regions receive slanting rays.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Altitude</p>",
+            "<p>Temperature decreases with height due to thinner air and lower heat retention.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Distance from the Sea (Continentality)</p>",
+            "<p>Water heats and cools slowly, moderating coastal climates.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ocean Currents</p>",
+            "<p>Warm currents raise coastal temperatures; cold currents lower them.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Prevailing Winds</p>",
+            "<p>Winds transport heat from one region to another.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cloud Cover</p>",
+            "<p>Clouds reduce daytime heating but prevent nighttime heat loss.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Slope and Aspect</p>",
+            "<p>Sun-facing slopes are warmer than shaded slopes.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vegetation</p>",
+            "<p>Forests moderate temperature by providing shade and releasing moisture.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lgccafi",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Horizontal Distribution of Temperature"
+    },
+    {
+      "type": "paragraph",
+      "content": "The horizontal distribution of temperature is represented by isotherms — imaginary lines connecting places with equal temperature.",
+      "id": "anfl9yc"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Isotherms generally run parallel to latitudes.",
+      "id": "ybg0wz0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• They bend toward the poles over oceans due to warm currents.",
+      "id": "17lqohi"
+    },
+    {
+      "type": "paragraph",
+      "content": "• They bend toward the equator over continents during winter.",
+      "id": "4ru1y5o"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Temperature contrasts are greater in the Northern Hemisphere because of larger landmass.",
+      "id": "f1xd01y"
+    },
+    {
+      "id": "qqshqb8",
+      "type": "heading",
+      "level": 3,
+      "content": "Major Temperature Zones of the Earth"
+    },
+    {
+      "id": "kq21sct",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "id": "2mhb5l4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Zone</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Torrid Zone</p>",
+            "<p>Between Tropic of Cancer and Tropic of Capricorn; receives maximum insolation.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Temperate Zone</p>",
+            "<p>Moderate temperatures with distinct seasons.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Frigid Zone</p>",
+            "<p>Very low temperatures due to slanting solar rays.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9zw70tx",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Vertical Distribution of Temperature"
+    },
+    {
+      "type": "paragraph",
+      "content": "Temperature decreases with altitude in the troposphere because the atmosphere is heated from below.",
+      "id": "szarxwo"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Temperature inversion is a reversal of the normal temperature pattern where temperature increases with altitude instead of decreasing.",
+      "id": "ipcxis3"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Normal Lapse Rate – average decrease of 6.5°C per 1000 meters.",
+      "id": "3vy3a1m"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Environmental Lapse Rate – actual observed rate at a given time.",
+      "id": "ka0s5bi"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Adiabatic Lapse Rate – rate of temperature change in rising or sinking air.",
+      "id": "jwujfx7"
+    },
+    {
+      "id": "avap173",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Adiabatic Lapse Rate"
+    },
+    {
+      "id": "6xshikd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Rate</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dry Adiabatic Lapse Rate (DALR)</p>",
+            "<p>≈10°C per 1000 m</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Saturated Adiabatic Lapse Rate (SALR)</p>",
+            "<p>≈4–6°C per 1000 m</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j38bji8",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Temperature Inversion"
+    },
+    {
+      "type": "paragraph",
+      "content": "Temperature inversion is a reversal of the normal temperature pattern where temperature increases with altitude instead of decreasing.",
+      "id": "p5jm2aq"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Occurs during clear winter nights when the ground loses heat rapidly.",
+      "id": "1pnyzeo"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Cold, dense air settles near the surface while warmer air lies above.",
+      "id": "75d0whp"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Common in valleys and basins.",
+      "id": "1x0uc0c"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Leads to fog formation and accumulation of pollutants.",
+      "id": "c2434kk"
+    },
+    {
+      "id": "30lwnt8",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Temperature Inversion"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Continental Regions",
+        "Coastal Regions"
+      ],
+      "rows": [
+        [
+          "Temperature Range",
+          "Higher diurnal and annual ranges",
+          "Lower diurnal and annual ranges"
+        ],
+        [
+          "Winter Isotherm Behavior",
+          "Bends toward the equator",
+          "Bends toward the poles"
+        ],
+        [
+          "Heating & Cooling Rate",
+          "Heats and cools rapidly",
+          "Heats and cools slowly due to water body moderating effect"
+        ]
+      ],
+      "id": "kdjkcgs"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Radiation Inversion – caused by nighttime cooling of Earth's surface.",
+      "id": "lu47nt8"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Valley Inversion – cold air drains into valleys.",
+      "id": "455zk07"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Frontal Inversion – occurs when warm air overrides cold air.",
+      "id": "zi63tyq"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Subsidence Inversion – caused by sinking air in high-pressure systems.",
+      "id": "ebsu2by"
+    },
+    {
+      "id": "3mttqht",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Temperature Range"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Diurnal Range – difference between day and night temperatures.",
+      "id": "g4z08h9"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Annual Range – difference between temperatures of the warmest and coldest months.",
+      "id": "prcx4a2"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Continental areas have higher ranges than coastal areas.",
+      "id": "bf04ahp"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Deserts exhibit high diurnal range due to lack of moisture.",
+      "id": "0mf0y0r"
+    },
+    {
+      "id": "aza40iy",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Global Temperature Patterns"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Highest average temperatures occur in subtropical deserts.",
+      "id": "yrd3av0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Land areas heat faster than oceans.",
+      "id": "fmw15qb"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Southern Hemisphere shows less variation due to ocean dominance.",
+      "id": "7i4fdqt"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Urban areas experience higher temperatures (Urban Heat Island effect).",
+      "id": "9sexcxu"
+    },
+    {
+      "id": "uqe96lr",
+      "type": "heading",
+      "level": 3,
+      "content": "Urban Heat Island Effect"
+    },
+    {
+      "type": "paragraph",
+      "content": "Urban regions often record higher temperatures than surrounding rural areas because concrete and asphalt absorb heat, vegetation is limited, and human activities generate additional warmth.",
+      "id": "eywsbzd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Normal lapse rate is about 6.5°C per km decrease in temperature with height.",
+        "Dry Adiabatic Lapse Rate (DALR) is higher than Saturated Adiabatic Lapse Rate (SALR).",
+        "Temperature inversion traps pollutants near the surface and causes fog formation.",
+        "Coastal areas have a significantly lower temperature range than continental interiors."
+      ],
+      "id": "wxtaxrh"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Increases energy demand for cooling.",
+      "id": "ck9zotj"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Worsens air pollution.",
+      "id": "r1rj645"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Raises nighttime temperatures.",
+      "id": "w613mh6"
+    },
+    {
+      "id": "nif2qjm",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Importance of Temperature"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Controls atmospheric pressure and wind circulation.",
+      "id": "wifs6wj"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Determines climate zones.",
+      "id": "zb2gaw2"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Influences agriculture and vegetation patterns.",
+      "id": "wjru7l1"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Affects human comfort and settlement patterns.",
+      "id": "jy4073x"
+    },
+    {
+      "id": "omfbv99",
+      "type": "heading",
+      "level": 2,
+      "content": "MOST IMPORTANT EXAM CONCEPTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Normal lapse rate is about 6.5°C per km.<br/>• DALR is higher than SALR.<br/>• Coastal areas have lower temperature range.<br/>• Temperature inversion traps pollutants.<br/>• Isotherms connect places of equal temperature.<br/>• Urban heat island raises city temperatures.",
+      "id": "fa9z0lt"
+    }
+  ],
+  "enriched": true
+}

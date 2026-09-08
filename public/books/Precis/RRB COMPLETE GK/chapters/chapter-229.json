@@ -43,11 +43,13 @@
     },
     {
       "type": "paragraph",
-      "id": "7sahx45"
+      "id": "7sahx45",
+      "content": "Fiscal Policy refers to the use of government revenue (taxation) and expenditure to influence the economy. It is formulated by the Ministry of Finance."
     },
     {
       "type": "paragraph",
-      "id": "1aw1o3g"
+      "id": "1aw1o3g",
+      "content": "Objectives include economic growth, price stability, employment generation, income redistribution and economic stability."
     },
     {
       "id": "qyvo9i8",
@@ -57,7 +59,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4k46m06"
+      "id": "4k46m06",
+      "content": "• Expansionary Fiscal Policy – Increase in government expenditure or reduction in taxes to boost demand during recession.<br></br>• Contractionary Fiscal Policy – Reduction in expenditure or increase in taxes to control inflation."
     },
     {
       "id": "xrqwza4",
@@ -72,43 +75,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Objective</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Economic Growth</p>",
+            "<p>Increase GDP and national income</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Price Stability</p>",
+            "<p>Control inflation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Employment</p>",
+            "<p>Generate job opportunities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Income Equality</p>",
+            "<p>Reduce inequality through taxation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Resource Allocation</p>",
+            "<p>Efficient allocation of public funds</p>"
           ]
         }
       ]
@@ -121,11 +124,13 @@
     },
     {
       "type": "paragraph",
-      "id": "9eifwh3"
+      "id": "9eifwh3",
+      "content": "Budget is an annual financial statement of estimated receipts and expenditures of the government."
     },
     {
       "type": "paragraph",
-      "id": "krb4vbt"
+      "id": "krb4vbt",
+      "content": "Presented annually by the Finance Minister in Parliament."
     },
     {
       "id": "91za09r",
@@ -140,36 +145,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Revenue Receipts</p>",
+            "<p>Tax + Non-tax revenue</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Capital Receipts</p>",
+            "<p>Borrowings, disinvestment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Revenue Expenditure</p>",
+            "<p>Salaries, subsidies, interest payments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Capital Expenditure</p>",
+            "<p>Infrastructure, asset creation</p>"
           ]
         }
       ]
@@ -181,47 +186,42 @@
       "content": "6. TYPES OF DEFICITS"
     },
     {
-      "type": "pullQuote",
-      "content": "FRBM ACT (2003)",
-      "id": "j5jgw7u"
-    },
-    {
       "id": "f67wyt9",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Deficit Type</strong></p>",
+            "<p><strong>Formula</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Revenue Deficit</p>",
+            "<p>Revenue Expenditure – Revenue Receipts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fiscal Deficit</p>",
+            "<p>Total Expenditure – Total Receipts (excluding borrowings)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Primary Deficit</p>",
+            "<p>Fiscal Deficit – Interest Payments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Budget Deficit</p>",
+            "<p>Total Expenditure – Total Receipts</p>"
           ]
         }
       ]
@@ -234,11 +234,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8mqovbz"
+      "id": "8mqovbz",
+      "content": "Fiscal Responsibility and Budget Management (FRBM) Act aims to ensure fiscal discipline by limiting fiscal deficit and public debt."
     },
     {
       "type": "paragraph",
-      "id": "28jkd0n"
+      "id": "28jkd0n",
+      "content": "It targets reduction of fiscal deficit to sustainable levels."
     },
     {
       "id": "k3t3k3n",
@@ -253,33 +255,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Direct Tax</strong></p>",
+            "<p><strong>Indirect Tax</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example</p>",
+            "<p>Income Tax</p>",
+            "<p>GST</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Burden</p>",
+            "<p>Cannot be shifted</p>",
+            "<p>Can be shifted</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Impact</p>",
+            "<p>Reduces inequality</p>",
+            "<p>May increase prices</p>"
           ]
         }
       ]
@@ -292,7 +294,8 @@
     },
     {
       "type": "paragraph",
-      "id": "j81qjhz"
+      "id": "j81qjhz",
+      "content": "Public Debt refers to total borrowings of the government to finance fiscal deficit."
     },
     {
       "type": "comparisonTable",
@@ -317,12 +320,14 @@
     },
     {
       "type": "paragraph",
-      "id": "yry8dxa"
+      "id": "yry8dxa",
+      "content": "• Internal Debt – Borrowing within country<br></br>• External Debt – Borrowing from foreign sources"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y0nxmzc"
+      "id": "y0nxmzc",
+      "content": "<strong>10.ADVANCED FISCAL CONCEPTS</strong>"
     },
     {
       "id": "ghwt0zq",
@@ -332,7 +337,8 @@
     },
     {
       "type": "paragraph",
-      "id": "e421m7b"
+      "id": "e421m7b",
+      "content": "The Fiscal Responsibility and Budget Management (FRBM) Act was enacted in 2003 to ensure fiscal discipline and reduce fiscal deficit and public debt."
     },
     {
       "id": "wk0vz2r",
@@ -341,49 +347,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Year/Amendment</strong></p>",
+            "<p><strong>Target</strong></p>",
+            "<p><strong>Remarks</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2003 (Original Act)</p>",
+            "<p>Fiscal Deficit ≤ 3% of GDP</p>",
+            "<p>Eliminate revenue deficit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2008-09</p>",
+            "<p>Targets relaxed</p>",
+            "<p>Global financial crisis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2012 Amendment</p>",
+            "<p>Revised consolidation path</p>",
+            "<p>Focus on effective revenue deficit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2018 Amendment</p>",
+            "<p>Debt target 60% of GDP (40% Centre)</p>",
+            "<p>FRBM Review Committee</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Post-COVID (2020-23)</p>",
+            "<p>Targets temporarily relaxed</p>",
+            "<p>Pandemic impact</p>"
           ]
         }
       ]
@@ -401,33 +407,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Meaning</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Progressive Tax</p>",
+            "<p>Tax rate increases with income</p>",
+            "<p>Income Tax</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Regressive Tax</p>",
+            "<p>Tax rate decreases as income rises</p>",
+            "<p>Indirect taxes impact</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Proportional Tax</p>",
+            "<p>Same rate for all income levels</p>",
+            "<p>Flat tax system</p>"
           ]
         }
       ]
@@ -440,7 +446,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vmbmdg4"
+      "id": "vmbmdg4",
+      "content": "GST (Goods and Services Tax) was implemented on 1 July 2017."
     },
     {
       "type": "examAlert",
@@ -457,40 +464,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Collected By</strong></p>",
+            "<p><strong>Applicable On</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CGST</p>",
+            "<p>Central Government</p>",
+            "<p>Intra-state supply</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SGST</p>",
+            "<p>State Government</p>",
+            "<p>Intra-state supply</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IGST</p>",
+            "<p>Central Government</p>",
+            "<p>Inter-state supply</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "933w1tt"
+      "id": "933w1tt",
+      "content": "Example: If goods sold within same state → CGST + SGST.<br></br>If goods sold between two states → IGST."
     },
     {
       "id": "8u8q1vw",
@@ -505,41 +513,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Deficit Type</strong></p>",
+            "<p><strong>Formula</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Revenue Deficit</p>",
+            "<p>Revenue Expenditure – Revenue Receipts</p>",
+            "<p>If RE=100 &amp; RR=80 → RD=20</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fiscal Deficit</p>",
+            "<p>Total Expenditure – Total Receipts (excl. borrowings)</p>",
+            "<p>If TE=200 &amp; TR=150 → FD=50</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Primary Deficit</p>",
+            "<p>Fiscal Deficit – Interest Payments</p>",
+            "<p>If FD=50 &amp; Interest=20 → PD=30</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Budget Deficit</p>",
+            "<p>Total Expenditure – Total Receipts</p>",
+            "<p>TE=200 &amp; TR=170 → BD=30</p>"
           ]
         }
       ]
@@ -552,11 +560,13 @@
     },
     {
       "type": "paragraph",
-      "id": "v7zdhqs"
+      "id": "v7zdhqs",
+      "content": "• FRBM limits fiscal deficit to 3% of GDP.<br></br>• Progressive tax reduces inequality.<br></br>• GST has CGST, SGST &amp; IGST.<br></br>• Primary Deficit excludes interest payments."
     },
     {
       "type": "paragraph",
-      "id": "5vo2h63"
+      "id": "5vo2h63",
+      "content": "• Fiscal Deficit = Total Expenditure – Total Receipts (excluding borrowings)<br></br>• Revenue Deficit shows dissaving of government<br></br>• FRBM Act enacted in 2003<br></br>• Expansionary policy used during recession<br></br>"
     }
   ],
   "enriched": true

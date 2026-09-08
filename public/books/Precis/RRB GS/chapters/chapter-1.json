@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "bkiodgt"
+      "id": "bkiodgt",
+      "content": "<a></a><strong>CHAPTER 1- BIOLOGY BASICS AND IMPORTANT INVENTIONS<br></br>1. Meaning and Scope of Biology</strong>"
     },
     {
       "type": "statStrip",
@@ -35,44 +36,54 @@
     },
     {
       "type": "paragraph",
-      "id": "4ptamv1"
+      "id": "4ptamv1",
+      "content": "Biology is the branch of science that deals with the study of living organisms, their structure, function, growth, origin, evolution and interaction with the environment."
     },
     {
       "type": "paragraph",
-      "id": "hgy0cx0"
+      "id": "hgy0cx0",
+      "content": "- Nutrition – Obtaining and utilizing food."
     },
     {
       "type": "paragraph",
-      "id": "t1bv3py"
+      "id": "t1bv3py",
+      "content": "- Respiration – Release of energy from food."
     },
     {
       "type": "paragraph",
-      "id": "ihtoajy"
+      "id": "ihtoajy",
+      "content": "- Growth – Increase in size and number of cells."
     },
     {
       "type": "paragraph",
-      "id": "5bjc98t"
+      "id": "5bjc98t",
+      "content": "- Reproduction – Production of new individuals."
     },
     {
       "type": "paragraph",
-      "id": "m0zr6q0"
+      "id": "m0zr6q0",
+      "content": "- Excretion – Removal of metabolic waste."
     },
     {
       "type": "paragraph",
-      "id": "oe0t2vd"
+      "id": "oe0t2vd",
+      "content": "- Response to Stimuli – Reaction to environmental changes."
     },
     {
       "type": "paragraph",
-      "id": "di65ppa"
+      "id": "di65ppa",
+      "content": "- Metabolism – All chemical reactions inside the body."
     },
     {
       "type": "paragraph",
-      "id": "oblyzaz"
+      "id": "oblyzaz",
+      "content": "- Adaptation – Adjustment for survival."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x0smxbz"
+      "id": "x0smxbz",
+      "content": "<strong><br></br>2. Major Branches of Biology</strong>"
     },
     {
       "id": "hs8z44k",
@@ -81,85 +92,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Branch</strong></p>",
+            "<p><strong>Definition</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Botany</p>",
+            "<p>Study of plants</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Zoology</p>",
+            "<p>Study of animals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Microbiology</p>",
+            "<p>Study of microorganisms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Genetics</p>",
+            "<p>Study of heredity and variation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ecology</p>",
+            "<p>Study of environment interaction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Anatomy</p>",
+            "<p>Study of structure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Physiology</p>",
+            "<p>Study of functions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Taxonomy</p>",
+            "<p>Classification of organisms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cytology</p>",
+            "<p>Study of cells</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Histology</p>",
+            "<p>Study of tissues</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Biotechnology</p>",
+            "<p>Application of biology in technology</p>"
           ]
         }
       ]
@@ -167,7 +178,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "qd1p345"
+      "id": "qd1p345",
+      "content": "<strong><br></br>3. Important Discoveries and Scientists</strong>"
     },
     {
       "id": "l0dphhy",
@@ -176,99 +188,99 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Discovery</strong></p>",
+            "<p><strong>Scientist</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cell</p>",
+            "<p>Robert Hooke (1665)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cell Nucleus</p>",
+            "<p>Robert Brown</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Blood Circulation</p>",
+            "<p>William Harvey</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Blood Groups</p>",
+            "<p>Karl Landsteiner</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Theory of Evolution</p>",
+            "<p>Charles Darwin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Laws of Heredity</p>",
+            "<p>Gregor Mendel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Structure of DNA</p>",
+            "<p>Watson and Crick</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Penicillin</p>",
+            "<p>Alexander Fleming</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Smallpox Vaccine</p>",
+            "<p>Edward Jenner</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rabies Vaccine</p>",
+            "<p>Louis Pasteur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Insulin</p>",
+            "<p>Frederick Banting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Polio Vaccine</p>",
+            "<p>Jonas Salk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vitamins</p>",
+            "<p>Casimir Funk</p>"
           ]
         }
       ]
@@ -276,7 +288,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "2gy52g4"
+      "id": "2gy52g4",
+      "content": "<strong><br></br>4. Important Biological Terms</strong>"
     },
     {
       "id": "2t0k6b8",
@@ -285,71 +298,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prokaryotic Cell</p>",
+            "<p>Cell without true nucleus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Eukaryotic Cell</p>",
+            "<p>Cell with true nucleus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Autotroph</p>",
+            "<p>Organism that makes its own food</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heterotroph</p>",
+            "<p>Organism dependent on others</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Unicellular</p>",
+            "<p>Single-celled organism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Multicellular</p>",
+            "<p>Many-celled organism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Biodiversity</p>",
+            "<p>Variety of life in an area</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Endemic Species</p>",
+            "<p>Species found only in one region</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Binomial Nomenclature</p>",
+            "<p>Two-name scientific naming system</p>"
           ]
         }
       ]
@@ -357,97 +370,114 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "kf1a4y7"
+      "id": "kf1a4y7",
+      "content": "<strong><br></br>5. High Probability Exam Facts</strong>"
     },
     {
       "type": "paragraph",
-      "id": "uj902rk"
+      "id": "uj902rk",
+      "content": "- Father of Taxonomy – Carolus Linnaeus"
     },
     {
       "type": "paragraph",
-      "id": "bbs8hly"
+      "id": "bbs8hly",
+      "content": "- Father of Genetics – Gregor Mendel"
     },
     {
       "type": "paragraph",
-      "id": "wc7ng3j"
+      "id": "wc7ng3j",
+      "content": "- Father of Microbiology – Louis Pasteur"
     },
     {
       "type": "paragraph",
-      "id": "57a9vgs"
+      "id": "57a9vgs",
+      "content": "- Metal in Chlorophyll – Magnesium"
     },
     {
       "type": "paragraph",
-      "id": "994j8ne"
+      "id": "994j8ne",
+      "content": "- Powerhouse of the Cell – Mitochondria"
     },
     {
       "type": "paragraph",
-      "id": "hjn5plq"
+      "id": "hjn5plq",
+      "content": "- Suicide Bags of Cell – Lysosomes"
     },
     {
       "type": "paragraph",
-      "id": "oqne03i"
+      "id": "oqne03i",
+      "content": "- Universal Donor – O negative"
     },
     {
       "type": "paragraph",
-      "id": "15nr9lk"
+      "id": "15nr9lk",
+      "content": "- Universal Receiver – AB positive"
     },
     {
       "type": "paragraph",
-      "id": "vhe6t3k"
+      "id": "vhe6t3k",
+      "content": "- Human Chromosomes – 46 (23 pairs)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kox5xcn"
+      "id": "kox5xcn",
+      "content": "<strong>Levels of Biological Organization</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ujlwugw"
+      "id": "ujlwugw",
+      "content": "Living organisms are organized into different hierarchical levels. These levels help in understanding the complexity of life forms."
     },
     {
       "type": "paragraph",
-      "id": "drciapq"
+      "id": "drciapq",
+      "content": "- Cell – Basic structural and functional unit of life."
     },
     {
       "type": "paragraph",
-      "id": "h8zo9sc"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Revision Points",
-      "id": "0zqkp0s"
+      "id": "h8zo9sc",
+      "content": "- Tissue – Group of similar cells performing a common function."
     },
     {
       "type": "paragraph",
-      "id": "s6qcfdl"
+      "id": "s6qcfdl",
+      "content": "- Organ – Group of tissues working together."
     },
     {
       "type": "paragraph",
-      "id": "oekgupl"
+      "id": "oekgupl",
+      "content": "- Organ System – Group of organs performing major body functions."
     },
     {
       "type": "paragraph",
-      "id": "nwzfor7"
+      "id": "nwzfor7",
+      "content": "- Organism – Complete living individual."
     },
     {
       "type": "paragraph",
-      "id": "qn9240b"
+      "id": "qn9240b",
+      "content": "- Population – Group of same species living in an area."
     },
     {
       "type": "paragraph",
-      "id": "39chj25"
+      "id": "39chj25",
+      "content": "- Community – Different populations living together."
     },
     {
       "type": "paragraph",
-      "id": "3kz9vg0"
+      "id": "3kz9vg0",
+      "content": "- Ecosystem – Interaction between living and non-living components."
     },
     {
       "type": "paragraph",
-      "id": "pmxa7in"
+      "id": "pmxa7in",
+      "content": "- Biosphere – Sum total of all ecosystems on Earth."
     },
     {
       "type": "paragraph",
-      "id": "yt4fe7l"
+      "id": "yt4fe7l",
+      "content": "<strong><br></br>7. Difference Between Living and Non-Living Things</strong>"
     },
     {
       "id": "4c206o7",
@@ -456,63 +486,69 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Living Things</strong></p>",
+            "<p><strong>Non-Living Things</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Show growth and reproduction</p>",
+            "<p>Do not grow or reproduce</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Require food and energy</p>",
+            "<p>Do not require food</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Respond to stimuli</p>",
+            "<p>No response to stimuli</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Perform metabolism</p>",
+            "<p>No metabolic activity</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "81zb1a6"
+      "id": "81zb1a6",
+      "content": "<strong><br></br>8. Important Biological Laws and Concepts</strong>"
     },
     {
       "type": "paragraph",
-      "id": "5ecavjr"
+      "id": "5ecavjr",
+      "content": "- Cell Theory – Proposed by Schleiden and Schwann. States that all living organisms are made up of cells and cells are basic units of life."
     },
     {
       "type": "paragraph",
-      "id": "noe4pjr"
+      "id": "noe4pjr",
+      "content": "- Theory of Spontaneous Generation – Disproved by Louis Pasteur."
     },
     {
       "type": "paragraph",
-      "id": "h6qh7p7"
+      "id": "h6qh7p7",
+      "content": "- Biogenesis – Life arises from pre-existing life."
     },
     {
       "type": "paragraph",
-      "id": "hayqxs2"
+      "id": "hayqxs2",
+      "content": "- Homeostasis – Maintenance of stable internal environment."
     },
     {
       "type": "paragraph",
-      "id": "xj807uq"
+      "id": "xj807uq",
+      "content": "- Use and Disuse Theory – Proposed by Lamarck."
     },
     {
       "type": "comparisonTable",
@@ -543,81 +579,100 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "cd51tqs"
+      "id": "cd51tqs",
+      "content": "<strong><br></br>9. Rules of Binomial Nomenclature</strong>"
     },
     {
       "type": "paragraph",
-      "id": "b7dvmrm"
+      "id": "b7dvmrm",
+      "content": "- Introduced by Carolus Linnaeus."
     },
     {
       "type": "paragraph",
-      "id": "l9x5ha5"
+      "id": "l9x5ha5",
+      "content": "- Each organism has two names – Genus and Species."
     },
     {
       "type": "paragraph",
-      "id": "17jd04b"
+      "id": "17jd04b",
+      "content": "- Genus name starts with capital letter."
     },
     {
       "type": "paragraph",
-      "id": "hdbg81r"
+      "id": "hdbg81r",
+      "content": "- Species name starts with small letter."
     },
     {
       "type": "paragraph",
-      "id": "0hc00vq"
+      "id": "0hc00vq",
+      "content": "- Names are written in italics when printed."
     },
     {
       "type": "paragraph",
-      "id": "p88tke8"
+      "id": "p88tke8",
+      "content": "- Names are underlined separately when handwritten."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "edvb5hd"
+      "id": "edvb5hd",
+      "content": "<strong>10. Biological Measurement Units</strong>"
     },
     {
       "type": "paragraph",
-      "id": "pvcqv3m"
+      "id": "pvcqv3m",
+      "content": "- 1 millimeter (mm) = 10^-3 meter"
     },
     {
       "type": "paragraph",
-      "id": "49zu285"
+      "id": "49zu285",
+      "content": "- 1 micrometer (µm) = 10^-6 meter"
     },
     {
       "type": "paragraph",
-      "id": "ash787l"
+      "id": "ash787l",
+      "content": "- 1 nanometer (nm) = 10^-9 meter"
     },
     {
       "type": "paragraph",
-      "id": "cc5on4m"
+      "id": "cc5on4m",
+      "content": "- Size of bacteria: 0.5 – 5 µm"
     },
     {
       "type": "paragraph",
-      "id": "1oi9ux6"
+      "id": "1oi9ux6",
+      "content": "- Size of virus: 20 – 300 nm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tklth4q"
+      "id": "tklth4q",
+      "content": "<strong>11. Viruses – Basic Concept</strong>"
     },
     {
       "type": "paragraph",
-      "id": "fdh4dek"
+      "id": "fdh4dek",
+      "content": "Viruses are non-cellular infectious agents that can reproduce only inside a living host cell. They show characteristics of both living and non-living things."
     },
     {
       "type": "paragraph",
-      "id": "7g6jbg0"
+      "id": "7g6jbg0",
+      "content": "- Composed of genetic material (DNA or RNA) and protein coat."
     },
     {
       "type": "paragraph",
-      "id": "k52i0su"
+      "id": "k52i0su",
+      "content": "- Outside host – inactive (non-living nature)."
     },
     {
       "type": "paragraph",
-      "id": "143gk1e"
+      "id": "143gk1e",
+      "content": "- Inside host – active and reproduce (living nature)."
     },
     {
       "type": "paragraph",
-      "id": "uu84wwt"
+      "id": "uu84wwt",
+      "content": "- Example: HIV, Influenza virus, Coronavirus."
     },
     {
       "id": "kj7edne",
@@ -647,47 +702,58 @@
     },
     {
       "type": "paragraph",
-      "id": "w0zuhzt"
+      "id": "w0zuhzt",
+      "content": "1.Robert Brown discovered the nucleus."
     },
     {
       "type": "paragraph",
-      "id": "ypmb3yo"
+      "id": "ypmb3yo",
+      "content": "2.William Harvey discovered blood circulation."
     },
     {
       "type": "paragraph",
-      "id": "h2yhziu"
+      "id": "h2yhziu",
+      "content": "3.Karl Landsteiner discovered blood groups."
     },
     {
       "type": "paragraph",
-      "id": "2gq9tlv"
+      "id": "2gq9tlv",
+      "content": "4.Charles Darwin proposed the theory of evolution."
     },
     {
       "type": "paragraph",
-      "id": "v3c3b22"
+      "id": "v3c3b22",
+      "content": "5.Gregor Mendel is known as the Father of Genetics."
     },
     {
       "type": "paragraph",
-      "id": "klbkvv4"
+      "id": "klbkvv4",
+      "content": "6.Watson and Crick discovered the structure of DNA in 1953."
     },
     {
       "type": "paragraph",
-      "id": "fhi4b9r"
+      "id": "fhi4b9r",
+      "content": "7.Alexander Fleming discovered penicillin."
     },
     {
       "type": "paragraph",
-      "id": "4jb46mf"
+      "id": "4jb46mf",
+      "content": "8. Edward Jenner developed the smallpox vaccine."
     },
     {
       "type": "paragraph",
-      "id": "1a75zia"
+      "id": "1a75zia",
+      "content": "9. Louis Pasteur developed the rabies vaccine."
     },
     {
       "type": "paragraph",
-      "id": "cl46mcv"
+      "id": "cl46mcv",
+      "content": "10.Casimir Funk discovered vitamins."
     },
     {
       "type": "paragraph",
-      "id": "2fxckqj"
+      "id": "2fxckqj",
+      "content": "11.Carolus Linnaeus introduced binomial nomenclature."
     }
   ],
   "enriched": true

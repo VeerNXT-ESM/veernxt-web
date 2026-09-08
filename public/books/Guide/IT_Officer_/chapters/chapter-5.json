@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qedycxn"
+      "id": "qedycxn",
+      "content": "The Software Development Life Cycle (SDLC) is a structured process for planning, creating, testing, and deploying software. It ensures systematic development and quality assurance."
     },
     {
       "id": "qwq8qyw",
@@ -58,65 +59,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Phase</strong></p>",
+            "<p><strong>Activities</strong></p>",
+            "<p><strong>Deliverables</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Planning</p>",
+            "<p>Feasibility study; resource allocation; project scheduling; risk analysis</p>",
+            "<p>Project plan, feasibility report, schedule</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Requirements Analysis</p>",
+            "<p>Gather and analyse user requirements; functional and non-functional</p>",
+            "<p>SRS (Software Requirements Specification) document</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>System Design</p>",
+            "<p>Architecture design; database design; UI/UX design; module design</p>",
+            "<p>HLD (High-Level Design), LLD (Low-Level Design) documents</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Implementation (Coding)</p>",
+            "<p>Convert design into source code; follow coding standards</p>",
+            "<p>Source code, unit test results</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Testing</p>",
+            "<p>Verify software meets requirements; find and fix bugs; different levels</p>",
+            "<p>Test plan, test cases, defect reports</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Deployment</p>",
+            "<p>Release to production environment; user training</p>",
+            "<p>Deployed software, user manuals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Maintenance</p>",
+            "<p>Bug fixes, enhancements, performance improvements after release</p>",
+            "<p>Updated software, maintenance logs</p>"
           ]
         }
       ]
@@ -128,122 +129,117 @@
       "content": "5.2 SDLC Models"
     },
     {
-      "type": "pullQuote",
-      "content": "Black Box vs White Box vs Grey Box Testing",
-      "id": "i6lha43"
-    },
-    {
       "id": "vd9n81v",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Model</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Key Feature</strong></p>",
+            "<p><strong>Best For</strong></p>",
+            "<p><strong>Limitation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Waterfall</p>",
+            "<p>Sequential</p>",
+            "<p>Rigid, phase-by-phase; no overlap</p>",
+            "<p>Well-defined, stable requirements</p>",
+            "<p>No flexibility; late discovery of defects</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>V-Model</p>",
+            "<p>Sequential</p>",
+            "<p>Testing phase for each development phase (verification &amp; validation)</p>",
+            "<p>Safety-critical systems (aviation, medical)</p>",
+            "<p>Same rigidity as Waterfall</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Prototype</p>",
+            "<p>Iterative</p>",
+            "<p>Build working prototype; refine based on feedback</p>",
+            "<p>UI-heavy or vague requirements</p>",
+            "<p>Can become final product if not managed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Incremental</p>",
+            "<p>Iterative</p>",
+            "<p>Deliver working software in increments</p>",
+            "<p>Long projects needing early delivery</p>",
+            "<p>Integration issues between increments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Spiral</p>",
+            "<p>Risk-driven iterative</p>",
+            "<p>Risk assessment at each cycle; combines Waterfall + Prototype</p>",
+            "<p>Large, complex, high-risk projects</p>",
+            "<p>Expensive; requires risk expertise</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>RAD (Rapid Application Dev)</p>",
+            "<p>Fast iterative</p>",
+            "<p>Reuse components; parallel development; timeboxed</p>",
+            "<p>Business apps with short timelines</p>",
+            "<p>Not for all types; needs skilled team</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Agile</p>",
+            "<p>Iterative + Incremental</p>",
+            "<p>Short sprints; adaptive; customer collaboration; working software over docs</p>",
+            "<p>Dynamic requirements; modern projects</p>",
+            "<p>Poor documentation; needs active customer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Scrum (Agile framework)</p>",
+            "<p>Iterative</p>",
+            "<p>Sprints (2–4 weeks); daily standup; Sprint Review, Retrospective</p>",
+            "<p>Most common Agile framework</p>",
+            "<p>Scope creep; difficult to scale</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Kanban (Agile)</p>",
+            "<p>Flow-based</p>",
+            "<p>Visual board; WIP limits; continuous flow</p>",
+            "<p>Maintenance, support teams</p>",
+            "<p>No explicit iterations or time boxes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>XP (Extreme Programming)</p>",
+            "<p>Agile practice</p>",
+            "<p>TDD, pair programming, continuous integration, refactoring</p>",
+            "<p>High-quality code focused teams</p>",
+            "<p>Intense; needs experienced developers</p>"
           ]
         }
       ]
@@ -287,73 +283,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Testing Level</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Tools/Techniques</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Unit Testing</p>",
+            "<p>Test individual functions/modules in isolation</p>",
+            "<p>JUnit, NUnit, pytest, Jest; white-box</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Integration Testing</p>",
+            "<p>Test interaction between modules</p>",
+            "<p>Big Bang, Top-Down, Bottom-Up, Sandwich; stubs/drivers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>System Testing</p>",
+            "<p>Test complete integrated system against requirements</p>",
+            "<p>Manual and automated; functional + non-functional</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Acceptance Testing</p>",
+            "<p>Validate against user requirements; UAT</p>",
+            "<p>Alpha testing (internal), Beta testing (external users)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Regression Testing</p>",
+            "<p>Ensure new changes don't break existing functionality</p>",
+            "<p>Automation essential; Selenium, Jenkins CI/CD</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Performance Testing</p>",
+            "<p>Test speed, scalability, stability under load</p>",
+            "<p>Load testing, Stress testing, Spike testing; JMeter, Gatling</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Security Testing</p>",
+            "<p>Find vulnerabilities, weaknesses</p>",
+            "<p>Penetration testing; OWASP Top 10; Burp Suite, Nessus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Usability Testing</p>",
+            "<p>Evaluate ease of use from user perspective</p>",
+            "<p>User interviews, heatmaps, A/B testing</p>"
           ]
         }
       ]
@@ -371,37 +367,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Testing Type</strong></p>",
+            "<p><strong>Tester's Knowledge</strong></p>",
+            "<p><strong>Technique</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Black Box</p>",
+            "<p>No internal knowledge; tests external behaviour</p>",
+            "<p>Equivalence partitioning, Boundary value analysis, Decision tables</p>",
+            "<p>Functional testing, UAT, System testing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>White Box (Glass Box)</p>",
+            "<p>Full internal knowledge; tests code structure</p>",
+            "<p>Statement coverage, Branch coverage, Path coverage, Mutation testing</p>",
+            "<p>Unit testing, code review, security audit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Grey Box</p>",
+            "<p>Partial knowledge; combines both approaches</p>",
+            "<p>Focuses on integration points; penetration testing approaches</p>",
+            "<p>Integration testing, API testing</p>"
           ]
         }
       ]
@@ -428,81 +424,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Metric</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Formula / Value</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>LOC (Lines of Code)</p>",
+            "<p>Simplest size metric; counts source lines</p>",
+            "<p>Delivered LOC; functional LOC</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Function Points (FP)</p>",
+            "<p>Measure software size from user's perspective; independent of language</p>",
+            "<p>Counts inputs, outputs, queries, files, interfaces</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cyclomatic Complexity</p>",
+            "<p>Measure of code complexity based on control flow graph; V(G)</p>",
+            "<p>V(G) = E − N + 2P; E=edges, N=nodes, P=components</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Defect Density</p>",
+            "<p>Number of defects per unit size of software</p>",
+            "<p>Defects / KLOC (Kilo Lines of Code)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Code Coverage</p>",
+            "<p>Percentage of code exercised by tests</p>",
+            "<p>Covered lines / Total lines × 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>MTBF (Mean Time Between Failures)</p>",
+            "<p>Average time between failures of a system</p>",
+            "<p>Total operating time / Number of failures</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>MTTF (Mean Time To Failure)</p>",
+            "<p>Average time to first failure for new system</p>",
+            "<p>For non-repairable components</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>MTTR (Mean Time To Repair)</p>",
+            "<p>Average time to restore service after failure</p>",
+            "<p>Total downtime / Number of failures</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Availability</p>",
+            "<p>Proportion of time system is operational</p>",
+            "<p>MTBF / (MTBF + MTTR) × 100%</p>"
           ]
         }
       ]
@@ -520,145 +516,145 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Pattern Category</strong></p>",
+            "<p><strong>Pattern Name</strong></p>",
+            "<p><strong>Purpose</strong></p>",
+            "<p><strong>Example Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Creational</p>",
+            "<p>Singleton</p>",
+            "<p>One instance of class throughout application</p>",
+            "<p>Logger, database connection pool</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Creational</p>",
+            "<p>Factory Method</p>",
+            "<p>Creates objects without specifying exact class</p>",
+            "<p>GUI toolkit: createButton()</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Creational</p>",
+            "<p>Abstract Factory</p>",
+            "<p>Creates families of related objects</p>",
+            "<p>Cross-platform UI widgets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Creational</p>",
+            "<p>Builder</p>",
+            "<p>Construct complex objects step-by-step</p>",
+            "<p>SQL query builder, document builder</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Creational</p>",
+            "<p>Prototype</p>",
+            "<p>Clone existing objects</p>",
+            "<p>Game characters with similar properties</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Structural</p>",
+            "<p>Adapter</p>",
+            "<p>Convert interface of one class to another</p>",
+            "<p>Legacy system integration</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Structural</p>",
+            "<p>Decorator</p>",
+            "<p>Add behaviour to object dynamically without subclassing</p>",
+            "<p>Java I/O streams, middleware</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Structural</p>",
+            "<p>Facade</p>",
+            "<p>Simplified interface to complex subsystem</p>",
+            "<p>Library, payment gateway SDK</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Structural</p>",
+            "<p>Proxy</p>",
+            "<p>Placeholder/substitute for another object</p>",
+            "<p>Lazy loading, access control, caching</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Structural</p>",
+            "<p>Composite</p>",
+            "<p>Tree structure of objects; treat leaf/composite uniformly</p>",
+            "<p>File system, UI component hierarchy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Behavioural</p>",
+            "<p>Observer</p>",
+            "<p>Object notifies dependents of state changes (publish-subscribe)</p>",
+            "<p>Event systems, MVC, React state</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Behavioural</p>",
+            "<p>Strategy</p>",
+            "<p>Define family of algorithms; make them interchangeable</p>",
+            "<p>Sorting strategies, payment methods</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Behavioural</p>",
+            "<p>Command</p>",
+            "<p>Encapsulate request as object; undo/redo support</p>",
+            "<p>Text editor actions, transaction systems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Behavioural</p>",
+            "<p>Iterator</p>",
+            "<p>Sequential access to elements without exposing structure</p>",
+            "<p>Java Iterator, Python generators</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Behavioural</p>",
+            "<p>MVC</p>",
+            "<p>Model-View-Controller architectural pattern</p>",
+            "<p>Web frameworks: Django, Rails, Spring MVC</p>"
           ]
         }
       ]

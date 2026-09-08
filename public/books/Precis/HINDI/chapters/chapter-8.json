@@ -6,7 +6,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "j02mdh4"
+      "id": "j02mdh4",
+      "content": "<strong>भाग क:संधि</strong>"
     },
     {
       "type": "statStrip",
@@ -53,15 +54,18 @@
     },
     {
       "type": "paragraph",
-      "id": "pwhc0lg"
+      "id": "pwhc0lg",
+      "content": "दो वर्णों के परस्पर मेल से जो विकार (परिवर्तन) उत्पन्न होता है, उसे संधि कहते हैं। संधि शब्द का अर्थ है:मेल या जोड़।"
     },
     {
       "type": "paragraph",
-      "id": "max6fws"
+      "id": "max6fws",
+      "content": "उदाहरण: देव + आलय = देवालय। यहाँ 'व' का 'अ' और 'आ' मिलकर 'आ' बन गया।"
     },
     {
       "type": "paragraph",
-      "id": "csw4lim"
+      "id": "csw4lim",
+      "content": "संधि को तोड़ने की प्रक्रिया को 'संधि-विच्छेद' कहते हैं। SSC JHT में संधि और संधि-विच्छेद दोनों से प्रश्न पूछे जाते हैं।"
     },
     {
       "id": "g89ndtu",
@@ -70,33 +74,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>संधि के प्रकार</strong></p>",
+            "<p><strong>आधार</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>स्वर संधि</p>",
+            "<p>दो स्वरों का मेल</p>",
+            "<p>राम + अवतार = रामावतार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>व्यंजन संधि</p>",
+            "<p>व्यंजन + स्वर या व्यंजन का मेल</p>",
+            "<p>जगत् + नाथ = जगन्नाथ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>विसर्ग संधि</p>",
+            "<p>विसर्ग (:) का अन्य वर्णों से मेल</p>",
+            "<p>मनः + रथ = मनोरथ</p>"
           ]
         }
       ]
@@ -109,16 +113,19 @@
     },
     {
       "type": "paragraph",
-      "id": "4slzidx"
+      "id": "4slzidx",
+      "content": "स्वर संधि में दो स्वरों का मेल होता है। इसके पाँच भेद हैं:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pduqymv"
+      "id": "pduqymv",
+      "content": "<strong>(क) दीर्घ संधि</strong>"
     },
     {
       "type": "paragraph",
-      "id": "tsfu2in"
+      "id": "tsfu2in",
+      "content": "नियम: अ/आ + अ/आ = आ  |  इ/ई + इ/ई = ई  |  उ/ऊ + उ/ऊ = ऊ"
     },
     {
       "id": "k0huy9c",
@@ -127,64 +134,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>पहला शब्द</strong></p>",
+            "<p><strong>दूसरा शब्द</strong></p>",
+            "<p><strong>संधि</strong></p>",
+            "<p><strong>नियम</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>राम (अ)</p>",
+            "<p>अवतार (अ)</p>",
+            "<p>रामावतार</p>",
+            "<p>अ + अ = आ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>विद्या (आ)</p>",
+            "<p>आलय (आ)</p>",
+            "<p>विद्यालय</p>",
+            "<p>आ + आ = आ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>कवि (इ)</p>",
+            "<p>इंद्र (इ)</p>",
+            "<p>कवींद्र</p>",
+            "<p>इ + इ = ई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मही (ई)</p>",
+            "<p>ईश (ई)</p>",
+            "<p>महीश</p>",
+            "<p>ई + ई = ई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>गुरु (उ)</p>",
+            "<p>उपदेश (उ)</p>",
+            "<p>गुरूपदेश</p>",
+            "<p>उ + उ = ऊ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>भू (ऊ)</p>",
+            "<p>ऊर्जा (ऊ)</p>",
+            "<p>भूर्जा</p>",
+            "<p>ऊ + ऊ = ऊ</p>"
           ]
         }
       ]
@@ -192,11 +199,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "j0qagkz"
+      "id": "j0qagkz",
+      "content": "<strong>(ख) गुण संधि</strong>"
     },
     {
       "type": "paragraph",
-      "id": "yrbbhan"
+      "id": "yrbbhan",
+      "content": "नियम: अ/आ + इ/ई = ए  |  अ/आ + उ/ऊ = ओ  |  अ/आ + ऋ = अर्"
     },
     {
       "id": "wa4ltyy",
@@ -205,64 +214,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>पहला शब्द</strong></p>",
+            "<p><strong>दूसरा शब्द</strong></p>",
+            "<p><strong>संधि</strong></p>",
+            "<p><strong>नियम</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>देव (अ)</p>",
+            "<p>इंद्र (इ)</p>",
+            "<p>देवेंद्र</p>",
+            "<p>अ + इ = ए</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>महा (आ)</p>",
+            "<p>ईश (ई)</p>",
+            "<p>महेश</p>",
+            "<p>आ + ई = ए</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>वर (अ)</p>",
+            "<p>उपदेश (उ)</p>",
+            "<p>वरोपदेश</p>",
+            "<p>अ + उ = ओ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>महा (आ)</p>",
+            "<p>उत्सव (उ)</p>",
+            "<p>महोत्सव</p>",
+            "<p>आ + उ = ओ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>देव (अ)</p>",
+            "<p>ऋषि (ऋ)</p>",
+            "<p>देवर्षि</p>",
+            "<p>अ + ऋ = अर्</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>महा (आ)</p>",
+            "<p>ऋद्धि (ऋ)</p>",
+            "<p>महर्द्धि</p>",
+            "<p>आ + ऋ = अर्</p>"
           ]
         }
       ]
@@ -270,11 +279,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "wwbtk9b"
+      "id": "wwbtk9b",
+      "content": "<strong>(ग) वृद्धि संधि</strong>"
     },
     {
       "type": "paragraph",
-      "id": "0xvy54x"
+      "id": "0xvy54x",
+      "content": "नियम: अ/आ + ए/ऐ = ऐ  |  अ/आ + ओ/औ = औ"
     },
     {
       "id": "6l6u9b6",
@@ -283,46 +294,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>पहला शब्द</strong></p>",
+            "<p><strong>दूसरा शब्द</strong></p>",
+            "<p><strong>संधि</strong></p>",
+            "<p><strong>नियम</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>एक (अ)</p>",
+            "<p>एक (ए)</p>",
+            "<p>एकैक</p>",
+            "<p>अ + ए = ऐ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>महा (आ)</p>",
+            "<p>ऐश्वर्य</p>",
+            "<p>महैश्वर्य</p>",
+            "<p>आ + ऐ = ऐ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>वन (अ)</p>",
+            "<p>औषधि (औ)</p>",
+            "<p>वनौषधि</p>",
+            "<p>अ + औ = औ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>महा (आ)</p>",
+            "<p>ओज (ओ)</p>",
+            "<p>महौज</p>",
+            "<p>आ + ओ = औ</p>"
           ]
         }
       ]
@@ -330,11 +341,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "cntgrsr"
+      "id": "cntgrsr",
+      "content": "<strong>(घ) यण संधि</strong>"
     },
     {
       "type": "paragraph",
-      "id": "4tm6uik"
+      "id": "4tm6uik",
+      "content": "नियम: इ/ई + असमान स्वर = य्  |  उ/ऊ + असमान स्वर = व्  |  ऋ + असमान स्वर = र्"
     },
     {
       "id": "lujgaad",
@@ -343,55 +356,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>पहला शब्द</strong></p>",
+            "<p><strong>दूसरा शब्द</strong></p>",
+            "<p><strong>संधि</strong></p>",
+            "<p><strong>नियम</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>यदि (इ)</p>",
+            "<p>अपि (अ)</p>",
+            "<p>यद्यपि</p>",
+            "<p>इ + अ = य्</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अति (इ)</p>",
+            "<p>आवश्यक</p>",
+            "<p>अत्यावश्यक</p>",
+            "<p>इ + आ = य्</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>सु (उ)</p>",
+            "<p>अागत (आ)</p>",
+            "<p>स्वागत</p>",
+            "<p>उ + आ = व्</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अनु (उ)</p>",
+            "<p>एषण (ए)</p>",
+            "<p>अन्वेषण</p>",
+            "<p>उ + ए = व्</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>पितृ (ऋ)</p>",
+            "<p>आज्ञा (आ)</p>",
+            "<p>पित्राज्ञा</p>",
+            "<p>ऋ + आ = र्</p>"
           ]
         }
       ]
@@ -399,11 +412,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "m0o73mi"
+      "id": "m0o73mi",
+      "content": "<strong>(ङ) अयादि संधि</strong>"
     },
     {
       "type": "paragraph",
-      "id": "tzrcvos"
+      "id": "tzrcvos",
+      "content": "नियम: ए/ऐ/ओ/औ + कोई स्वर = अय्/आय्/अव्/आव्"
     },
     {
       "id": "8nrblip",
@@ -412,46 +427,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>पहला शब्द</strong></p>",
+            "<p><strong>दूसरा शब्द</strong></p>",
+            "<p><strong>संधि</strong></p>",
+            "<p><strong>नियम</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ने (ए)</p>",
+            "<p>अन (अ)</p>",
+            "<p>नयन</p>",
+            "<p>ए + अ = अय्</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>शै (ऐ)</p>",
+            "<p>अल (अ)</p>",
+            "<p>शायल</p>",
+            "<p>ऐ + अ = आय्</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>भो (ओ)</p>",
+            "<p>अन (अ)</p>",
+            "<p>भवन</p>",
+            "<p>ओ + अ = अव्</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>पौ (औ)</p>",
+            "<p>अन (अ)</p>",
+            "<p>पावन</p>",
+            "<p>औ + अ = आव्</p>"
           ]
         }
       ]
@@ -469,73 +484,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>नियम</strong></p>",
+            "<p><strong>विवरण</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वर्ग का पहला → तीसरा</p>",
+            "<p>क्/च्/ट्/त्/प् + स्वर/नासिक्य → ग/ज/ड/द/ब</p>",
+            "<p>वाक् + ईश = वागीश, जगत् + नाथ = जगन्नाथ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>त् + च/छ = च्च/च्छ</p>",
+            "<p>त् के बाद च/छ</p>",
+            "<p>उत् + चारण = उच्चारण, सत् + छात्र = सच्छात्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>त् + ज/झ = ज्ज/ज्झ</p>",
+            "<p>त् के बाद ज/झ</p>",
+            "<p>उत् + ज्वल = उज्ज्वल, सत् + जन = सज्जन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>त् + ट/ठ = ट्ट/ट्ठ</p>",
+            "<p>त् के बाद ट/ठ</p>",
+            "<p>उत् + टंक = उट्टंक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>त् + ड/ढ = ड्ड</p>",
+            "<p>त् के बाद ड/ढ</p>",
+            "<p>उत् + डयन = उड्डयन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>त् + ल = ल्ल</p>",
+            "<p>त् के बाद ल</p>",
+            "<p>उत् + लेख = उल्लेख, तत् + लीन = तल्लीन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>त् + श = च्छ</p>",
+            "<p>त् के बाद श</p>",
+            "<p>उत् + श्वास = उच्छ्वास, सत् + शास्त्र = सच्छास्त्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>म् + व्यंजन = अनुस्वार</p>",
+            "<p>म् के बाद कोई व्यंजन</p>",
+            "<p>सम् + गम = संगम, सम् + कल्प = संकल्प</p>"
           ]
         }
       ]
@@ -553,64 +568,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>नियम</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>विसर्ग + च/छ = श्च / श्छ</p>",
+            "<p>निः + चल = निश्चल, दुः + चरित्र = दुश्चरित्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>विसर्ग + ट/ठ = ष्ट / ष्ठ</p>",
+            "<p>धनुः + टंकार = धनुष्टंकार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>विसर्ग + त/थ = स्त / स्थ</p>",
+            "<p>निः + तार = निस्तार, दुः + तर = दुस्तर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अः + अ = ओ</p>",
+            "<p>मनः + अनुकूल = मनोनुकूल, यशः + अर्थी = यशोर्थी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अः + घोष व्यंजन = ओ</p>",
+            "<p>मनः + रंजन = मनोरंजन, तपः + वन = तपोवन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अः + अ (कर्ता अः) = अ</p>",
+            "<p>रजः + अंधकार = रजोंधकार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>इः / उः + स्वर = र्</p>",
+            "<p>निः + आशा = निराशा, दुः + आत्मा = दुरात्मा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>आः + घोष = आर्</p>",
+            "<p>पुनः + अवलोकन = पुनरवलोकन</p>"
           ]
         }
       ]
@@ -618,7 +633,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "4djudjn"
+      "id": "4djudjn",
+      "content": "<strong>भाग ख:समास</strong>"
     },
     {
       "id": "eqxl2ly",
@@ -633,15 +649,18 @@
     },
     {
       "type": "paragraph",
-      "id": "77d6ryt"
+      "id": "77d6ryt",
+      "content": "दो या अधिक शब्दों के मेल से बने नए शब्द को समास कहते हैं। समास में विभक्ति और संयोजक शब्दों का लोप हो जाता है।"
     },
     {
       "type": "paragraph",
-      "id": "tykr3ia"
+      "id": "tykr3ia",
+      "content": "उदाहरण: राजा का पुत्र = राजपुत्र। यहाँ 'का' का लोप हो गया।"
     },
     {
       "type": "paragraph",
-      "id": "insr9im"
+      "id": "insr9im",
+      "content": "समास को तोड़ने की प्रक्रिया को 'समास-विग्रह' कहते हैं।"
     },
     {
       "id": "o77n9v7",
@@ -650,57 +669,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>समास के भेद</strong></p>",
+            "<p><strong>पहचान</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अव्ययीभाव</p>",
+            "<p>पहला पद प्रधान, अव्यय पद से शुरू</p>",
+            "<p>प्रतिदिन, यथाशक्ति, भरपेट</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>तत्पुरुष</p>",
+            "<p>दूसरा पद प्रधान, विभक्ति का लोप</p>",
+            "<p>राजपुत्र, हस्तलिखित, देशभक्त</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>कर्मधारय</p>",
+            "<p>तत्पुरुष का उपभेद, विशेषण-विशेष्य</p>",
+            "<p>महापुरुष, नीलकमल, चंद्रमुख</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>द्विगु</p>",
+            "<p>पहला पद संख्यावाचक, समूह का बोध</p>",
+            "<p>त्रिभुवन, सप्ताह, नवरात्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>द्वंद्व</p>",
+            "<p>दोनों पद प्रधान, 'और' से जुड़े</p>",
+            "<p>माता-पिता, राम-लक्ष्मण, रात-दिन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>बहुव्रीहि</p>",
+            "<p>दोनों पद अप्रधान, तीसरे का बोध</p>",
+            "<p>लंबोदर, नीलकंठ, चतुर्भुज</p>"
           ]
         }
       ]
@@ -714,11 +733,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "mmgxymr"
+      "id": "mmgxymr",
+      "content": "<strong>(क) अव्ययीभाव समास</strong>"
     },
     {
       "type": "paragraph",
-      "id": "3jjmr6l"
+      "id": "3jjmr6l",
+      "content": "पहला पद अव्यय (प्रति, यथा, आ, भर, हर, उप आदि) होता है और समस्त पद अव्यय की तरह प्रयुक्त होता है।"
     },
     {
       "id": "otkwdnl",
@@ -727,73 +748,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>समस्त पद</strong></p>",
+            "<p><strong>विग्रह</strong></p>",
+            "<p><strong>अव्यय</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>प्रतिदिन</p>",
+            "<p>प्रत्येक दिन</p>",
+            "<p>प्रति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>यथाशक्ति</p>",
+            "<p>शक्ति के अनुसार</p>",
+            "<p>यथा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आजन्म</p>",
+            "<p>जन्म से लेकर</p>",
+            "<p>आ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>भरपेट</p>",
+            "<p>पेट भरकर</p>",
+            "<p>भर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>हर-घर</p>",
+            "<p>हर एक घर</p>",
+            "<p>हर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>निर्भय</p>",
+            "<p>बिना भय के</p>",
+            "<p>निर्</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>यथासंभव</p>",
+            "<p>जितना संभव हो</p>",
+            "<p>यथा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>बेकाम</p>",
+            "<p>बिना काम के</p>",
+            "<p>बे</p>"
           ]
         }
       ]
@@ -801,11 +822,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "e968vp0"
+      "id": "e968vp0",
+      "content": "<strong>(ख) तत्पुरुष समास</strong>"
     },
     {
       "type": "paragraph",
-      "id": "pc2yajc"
+      "id": "pc2yajc",
+      "content": "दूसरा पद प्रधान होता है। पहले और दूसरे पद के बीच की विभक्ति का लोप होता है।"
     },
     {
       "id": "avgk4oo",
@@ -814,64 +837,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>उपभेद</strong></p>",
+            "<p><strong>लुप्त विभक्ति</strong></p>",
+            "<p><strong>उदाहरण</strong></p>",
+            "<p><strong>विग्रह</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>कर्म तत्पुरुष</p>",
+            "<p>को</p>",
+            "<p>ग्रामगत</p>",
+            "<p>ग्राम को गया हुआ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>करण तत्पुरुष</p>",
+            "<p>से/द्वारा</p>",
+            "<p>हस्तलिखित</p>",
+            "<p>हाथ से लिखा हुआ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>संप्रदान तत्पुरुष</p>",
+            "<p>के लिए</p>",
+            "<p>देशभक्त</p>",
+            "<p>देश के लिए भक्त</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अपादान तत्पुरुष</p>",
+            "<p>से (अलगाव)</p>",
+            "<p>पथभ्रष्ट</p>",
+            "<p>पथ से भ्रष्ट</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>संबंध तत्पुरुष</p>",
+            "<p>का/की/के</p>",
+            "<p>राजपुत्र</p>",
+            "<p>राजा का पुत्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अधिकरण तत्पुरुष</p>",
+            "<p>में/पर</p>",
+            "<p>घुड़सवार</p>",
+            "<p>घोड़े पर सवार</p>"
           ]
         }
       ]
@@ -879,11 +902,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "jb49k8h"
+      "id": "jb49k8h",
+      "content": "<strong>(ग) कर्मधारय समास</strong>"
     },
     {
       "type": "paragraph",
-      "id": "wf0khjd"
+      "id": "wf0khjd",
+      "content": "पहला पद विशेषण और दूसरा पद विशेष्य होता है:या दोनों में उपमा का भाव हो।"
     },
     {
       "id": "ct979s4",
@@ -892,65 +917,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>समस्त पद</strong></p>",
+            "<p><strong>विग्रह</strong></p>",
+            "<p><strong>प्रकार</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>महापुरुष</p>",
+            "<p>महान है जो पुरुष</p>",
+            "<p>विशेषण-विशेष्य</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>नीलकमल</p>",
+            "<p>नीला है जो कमल</p>",
+            "<p>विशेषण-विशेष्य</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>चंद्रमुख</p>",
+            "<p>चंद्रमा जैसा मुख</p>",
+            "<p>उपमान-उपमेय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मृगनयन</p>",
+            "<p>मृग जैसे नयन</p>",
+            "<p>उपमान-उपमेय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>लालमिर्च</p>",
+            "<p>लाल है जो मिर्च</p>",
+            "<p>विशेषण-विशेष्य</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>परमानंद</p>",
+            "<p>परम है जो आनंद</p>",
+            "<p>विशेषण-विशेष्य</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>घनश्याम</p>",
+            "<p>घन (बादल) जैसा श्याम</p>",
+            "<p>उपमान-उपमेय</p>"
           ]
         }
       ]
@@ -958,11 +983,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "xczj6h1"
+      "id": "xczj6h1",
+      "content": "<strong>(घ) द्विगु समास</strong>"
     },
     {
       "type": "paragraph",
-      "id": "myuv9a2"
+      "id": "myuv9a2",
+      "content": "पहला पद संख्यावाचक और पूरा समास किसी समूह का बोध कराता है।"
     },
     {
       "type": "comparisonTable",
@@ -997,46 +1024,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>समस्त पद</strong></p>",
+            "<p><strong>विग्रह</strong></p>",
+            "<p><strong>समस्त पद</strong></p>",
+            "<p><strong>विग्रह</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>त्रिभुवन</p>",
+            "<p>तीन भुवनों का समूह</p>",
+            "<p>सप्ताह</p>",
+            "<p>सात दिनों का समूह</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>नवरात्र</p>",
+            "<p>नौ रात्रियों का समूह</p>",
+            "<p>त्रिकाल</p>",
+            "<p>तीन कालों का समूह</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>पंचवटी</p>",
+            "<p>पाँच वटों का समूह</p>",
+            "<p>चतुर्भुज</p>",
+            "<p>चार भुजाओं का समूह</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>द्विगु</p>",
+            "<p>दो गायों का समूह</p>",
+            "<p>षड्दर्शन</p>",
+            "<p>छः दर्शनों का समूह</p>"
           ]
         }
       ]
@@ -1044,11 +1071,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "mh0n4ds"
+      "id": "mh0n4ds",
+      "content": "<strong>(ङ) द्वंद्व समास</strong>"
     },
     {
       "type": "paragraph",
-      "id": "qaq0exc"
+      "id": "qaq0exc",
+      "content": "दोनों पद प्रधान होते हैं। इन्हें 'और', 'या', 'अथवा' से जोड़कर विग्रह किया जाता है।"
     },
     {
       "id": "li6xt18",
@@ -1057,46 +1086,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>समस्त पद</strong></p>",
+            "<p><strong>विग्रह</strong></p>",
+            "<p><strong>समस्त पद</strong></p>",
+            "<p><strong>विग्रह</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>माता-पिता</p>",
+            "<p>माता और पिता</p>",
+            "<p>राम-कृष्ण</p>",
+            "<p>राम और कृष्ण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>रात-दिन</p>",
+            "<p>रात और दिन</p>",
+            "<p>देश-विदेश</p>",
+            "<p>देश और विदेश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>सुख-दुःख</p>",
+            "<p>सुख और दुःख</p>",
+            "<p>पाप-पुण्य</p>",
+            "<p>पाप और पुण्य</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अन्न-जल</p>",
+            "<p>अन्न और जल</p>",
+            "<p>भाई-बहन</p>",
+            "<p>भाई और बहन</p>"
           ]
         }
       ]
@@ -1104,11 +1133,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "j2z03fj"
+      "id": "j2z03fj",
+      "content": "<strong>(च) बहुव्रीहि समास</strong>"
     },
     {
       "type": "paragraph",
-      "id": "a60rhp5"
+      "id": "a60rhp5",
+      "content": "दोनों पद मिलकर किसी तीसरे (अन्य) व्यक्ति/वस्तु की विशेषता बताते हैं।"
     },
     {
       "id": "uwbgq1f",
@@ -1117,69 +1148,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>समस्त पद</strong></p>",
+            "<p><strong>विग्रह (तीसरा अर्थ)</strong></p>",
+            "<p><strong>किसका विशेषण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>लंबोदर</p>",
+            "<p>लंबा है उदर जिसका:गणेश</p>",
+            "<p>गणेश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>नीलकंठ</p>",
+            "<p>नीला है कंठ जिसका:शिव</p>",
+            "<p>शिव</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>चतुर्भुज</p>",
+            "<p>चार हैं भुजाएँ जिसकी:विष्णु</p>",
+            "<p>विष्णु</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>पीतांबर</p>",
+            "<p>पीला है अंबर जिसका:कृष्ण</p>",
+            "<p>कृष्ण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>गिरिधर</p>",
+            "<p>गिरि को धारण करने वाला:कृष्ण</p>",
+            "<p>कृष्ण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>त्रिनेत्र</p>",
+            "<p>तीन हैं नेत्र जिसके:शिव</p>",
+            "<p>शिव</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "u84t0ce"
+      "id": "u84t0ce",
+      "content": "कर्मधारय और बहुव्रीहि में अंतर: 'नीलकमल' = नीला कमल (कर्मधारय:विशेषण कमल का)। 'नीलकंठ' = नीले कंठ वाला शिव (बहुव्रीहि:तीसरे का बोध)।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "h2x751e"
+      "id": "h2x751e",
+      "content": "<strong>भाग ग:उपसर्ग</strong>"
     },
     {
       "id": "68vkt8v",
@@ -1189,7 +1222,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lgrwjq9"
+      "id": "lgrwjq9",
+      "content": "शब्द के आरंभ में जुड़कर अर्थ को बदलने या विशेष अर्थ देने वाले शब्दांश को उपसर्ग कहते हैं।"
     },
     {
       "id": "klmfhca",
@@ -1198,211 +1232,211 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>उपसर्ग</strong></p>",
+            "<p><strong>अर्थ</strong></p>",
+            "<p><strong>उदाहरण 1</strong></p>",
+            "<p><strong>उदाहरण 2</strong></p>",
+            "<p><strong>उदाहरण 3</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>अ / अन्</p>",
+            "<p>नहीं / अभाव</p>",
+            "<p>अज्ञान</p>",
+            "<p>अनादर</p>",
+            "<p>अनपढ़</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>अधि</p>",
+            "<p>ऊपर / श्रेष्ठ</p>",
+            "<p>अधिकार</p>",
+            "<p>अध्यक्ष</p>",
+            "<p>अधीन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>अनु</p>",
+            "<p>पीछे / अनुसार</p>",
+            "<p>अनुकरण</p>",
+            "<p>अनुवाद</p>",
+            "<p>अनुसार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>अप</p>",
+            "<p>बुरा / दूर</p>",
+            "<p>अपमान</p>",
+            "<p>अपकार</p>",
+            "<p>अपवाद</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>अभि</p>",
+            "<p>ओर / सामने</p>",
+            "<p>अभिनय</p>",
+            "<p>अभिमान</p>",
+            "<p>अभिलाषा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>अव</p>",
+            "<p>नीचे / हीन</p>",
+            "<p>अवगुण</p>",
+            "<p>अवकाश</p>",
+            "<p>अवनति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>आ</p>",
+            "<p>तक / ओर</p>",
+            "<p>आगमन</p>",
+            "<p>आजन्म</p>",
+            "<p>आकर्षण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>उत् / उद्</p>",
+            "<p>ऊपर / श्रेष्ठ</p>",
+            "<p>उत्कर्ष</p>",
+            "<p>उदय</p>",
+            "<p>उन्नति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>उप</p>",
+            "<p>पास / छोटा</p>",
+            "<p>उपकार</p>",
+            "<p>उपसर्ग</p>",
+            "<p>उपाध्यक्ष</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>दुर् / दुस्</p>",
+            "<p>बुरा / कठिन</p>",
+            "<p>दुर्गम</p>",
+            "<p>दुर्भाग्य</p>",
+            "<p>दुस्साहस</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>नि</p>",
+            "<p>नीचे / भीतर</p>",
+            "<p>निवास</p>",
+            "<p>निपात</p>",
+            "<p>निर्भय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>निर् / निस्</p>",
+            "<p>बिना / बाहर</p>",
+            "<p>निर्भय</p>",
+            "<p>निर्जन</p>",
+            "<p>निस्तेज</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>परा</p>",
+            "<p>उल्टा / पीछे</p>",
+            "<p>पराजय</p>",
+            "<p>पराक्रम</p>",
+            "<p>परावर्तन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>परि</p>",
+            "<p>चारों ओर / पूर्ण</p>",
+            "<p>परिक्रमा</p>",
+            "<p>परिवार</p>",
+            "<p>परिश्रम</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>प्र</p>",
+            "<p>आगे / अधिक</p>",
+            "<p>प्रगति</p>",
+            "<p>प्रकाश</p>",
+            "<p>प्रयास</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>प्रति</p>",
+            "<p>विरुद्ध / प्रत्येक</p>",
+            "<p>प्रतिदिन</p>",
+            "<p>प्रतिकार</p>",
+            "<p>प्रतिकूल</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>वि</p>",
+            "<p>विशेष / बिना</p>",
+            "<p>विकास</p>",
+            "<p>विज्ञान</p>",
+            "<p>विदेश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>सम्</p>",
+            "<p>साथ / पूर्ण</p>",
+            "<p>संगम</p>",
+            "<p>संस्कार</p>",
+            "<p>संपूर्ण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>सु</p>",
+            "<p>अच्छा / सरल</p>",
+            "<p>सुगम</p>",
+            "<p>सुविचार</p>",
+            "<p>सुफल</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>सत्</p>",
+            "<p>सच्चा / अच्छा</p>",
+            "<p>सज्जन</p>",
+            "<p>सदाचार</p>",
+            "<p>सत्कर्म</p>"
           ]
         }
       ]
@@ -1410,7 +1444,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "qfxaljj"
+      "id": "qfxaljj",
+      "content": "<strong>भाग घ:प्रत्यय</strong>"
     },
     {
       "id": "dtlm7sb",
@@ -1420,7 +1455,8 @@
     },
     {
       "type": "paragraph",
-      "id": "r8zuz20"
+      "id": "r8zuz20",
+      "content": "शब्द के अंत में जुड़कर नया शब्द बनाने वाले शब्दांश को प्रत्यय कहते हैं। हिंदी में दो प्रकार के प्रत्यय होते हैं:"
     },
     {
       "id": "4t7naq3",
@@ -1429,25 +1465,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>प्रत्यय का प्रकार</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>कृत् प्रत्यय</p>",
+            "<p>क्रिया की धातु से जुड़कर संज्ञा/विशेषण बनाए</p>",
+            "<p>पढ़ + आई = पढ़ाई, लिख + आवट = लिखावट</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>तद्धित प्रत्यय</p>",
+            "<p>संज्ञा/विशेषण से जुड़कर नया शब्द बनाए</p>",
+            "<p>इंसान + इयत = इंसानियत, सोना + आर = सुनार</p>"
           ]
         }
       ]
@@ -1455,7 +1491,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "il0f705"
+      "id": "il0f705",
+      "content": "<strong>(क) प्रमुख कृत् प्रत्यय</strong>"
     },
     {
       "id": "hnym6a9",
@@ -1464,89 +1501,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>प्रत्यय</strong></p>",
+            "<p><strong>प्रयोग</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अन / अना</p>",
+            "<p>क्रिया से संज्ञा</p>",
+            "<p>पढ़ + अन = पठन, उड़ + अन = उड़ान</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आई</p>",
+            "<p>कार्य/भाव/पेशा</p>",
+            "<p>पढ़ + आई = पढ़ाई, लिख + आई = लिखाई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आन</p>",
+            "<p>क्रिया से संज्ञा</p>",
+            "<p>उड़ + आन = उड़ान, मिल + आन = मिलान</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आप</p>",
+            "<p>भाव वाचक</p>",
+            "<p>मिल + आप = मिलाप, सड़ + आप = सड़ाँध</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आव / आवा</p>",
+            "<p>क्रिया से संज्ञा</p>",
+            "<p>चढ़ + आव = चढ़ाव, दिख + आवा = दिखावा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आवट</p>",
+            "<p>विकार / क्रिया का भाव</p>",
+            "<p>लिख + आवट = लिखावट, सज + आवट = सजावट</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आहट</p>",
+            "<p>भाव / ध्वनि</p>",
+            "<p>घबर + आहट = घबराहट, चिल्ल + आहट = चिल्लाहट</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>इया</p>",
+            "<p>क्रिया से विशेषण</p>",
+            "<p>रेत + इया = रेतिया, मिट्टी + इया = मिट्टिया</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वाला</p>",
+            "<p>कर्ता / संबंध</p>",
+            "<p>पढ़ + वाला = पढ़नेवाला, दूध + वाला = दूधवाला</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>हार</p>",
+            "<p>कर्ता वाचक</p>",
+            "<p>होन + हार = होनहार, खेव + हार = खेवनहार</p>"
           ]
         }
       ]
@@ -1554,7 +1591,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "6sa2tu2"
+      "id": "6sa2tu2",
+      "content": "<strong>(ख) प्रमुख तद्धित प्रत्यय</strong>"
     },
     {
       "type": "examAlert",
@@ -1572,81 +1610,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>प्रत्यय</strong></p>",
+            "<p><strong>प्रयोग</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आर / आरा</p>",
+            "<p>पेशा वाचक</p>",
+            "<p>लोहा + आर = लुहार, सोना + आर = सुनार, मछली + आरा = मछुआरा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>इक</p>",
+            "<p>संबंध वाचक विशेषण</p>",
+            "<p>इतिहास + इक = ऐतिहासिक, समाज + इक = सामाजिक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>इत</p>",
+            "<p>युक्त / से संपन्न</p>",
+            "<p>पुष्प + इत = पुष्पित, पल्लव + इत = पल्लवित</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ई</p>",
+            "<p>संबंध / स्वामित्व</p>",
+            "<p>देश + ई = देशी, घर + ई = घरेलू</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ईय</p>",
+            "<p>संबंध वाचक</p>",
+            "<p>भारत + ईय = भारतीय, राष्ट्र + ईय = राष्ट्रीय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ता / त्व</p>",
+            "<p>भाव वाचक संज्ञा</p>",
+            "<p>सुंदर + ता = सुंदरता, मानव + त्व = मानवत्व</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>पन</p>",
+            "<p>भाव / अवस्था</p>",
+            "<p>बच्चा + पन = बचपन, लड़का + पन = लड़कपन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वान / मान</p>",
+            "<p>गुण युक्त</p>",
+            "<p>धन + वान = धनवान, बल + वान = बलवान</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>हीन</p>",
+            "<p>रहित / बिना</p>",
+            "<p>बुद्धि + हीन = बुद्धिहीन, धन + हीन = धनहीन</p>"
           ]
         }
       ]
@@ -1661,66 +1699,66 @@
       "id": "wokyl9p",
       "type": "numberedList",
       "items": [
-        null
+        "निम्नलिखित शब्दों का संधि-विच्छेद कीजिए:"
       ]
     },
     {
       "id": "aj0nu3p",
       "type": "list",
       "items": [
-        null
+        "देवालय, महेश, उच्चारण, तल्लीन, मनोरथ, निराशा, जगन्नाथ, संगम"
       ]
     },
     {
       "id": "737e5jq",
       "type": "numberedList",
       "items": [
-        null
+        "निम्नलिखित की संधि कीजिए:"
       ]
     },
     {
       "id": "t8fhpku",
       "type": "list",
       "items": [
-        null
+        "राम + अवतार, देव + इंद्र, उत् + लेख, मनः + रंजन"
       ]
     },
     {
       "id": "1dlkw3q",
       "type": "numberedList",
       "items": [
-        null
+        "निम्नलिखित समस्त पदों का विग्रह कीजिए और भेद बताइए:"
       ]
     },
     {
       "id": "z69j6k1",
       "type": "list",
       "items": [
-        null
+        "प्रतिदिन, राजपुत्र, नीलकमल, सप्ताह, माता-पिता, लंबोदर"
       ]
     },
     {
       "id": "5eje4nu",
       "type": "numberedList",
       "items": [
-        null
+        "निम्नलिखित विग्रहों का समास बनाइए और उनका भेद बताइए:"
       ]
     },
     {
       "id": "6zq654h",
       "type": "list",
       "items": [
-        null
+        "राजा का पुत्र, शक्ति के अनुसार, नीला है जो कमल, तीन भुवनों का समूह, सुख और दुःख"
       ]
     },
     {
       "id": "81928sf",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "उपसर्ग अलग कीजिए और मूल शब्द लिखिए: अध्यक्ष, परिक्रमा, विदेश, प्रकाश, सुविचार",
+        "प्रत्यय अलग कीजिए और मूल शब्द लिखिए: पढ़ाई, लिखावट, सुनार, ऐतिहासिक, बचपन, भारतीय",
+        "कर्मधारय और बहुव्रीहि में अंतर उदाहरण सहित स्पष्ट कीजिए।",
+        "'सम्' उपसर्ग से पाँच शब्द बनाइए।"
       ]
     },
     {
@@ -1733,14 +1771,14 @@
       "id": "v119dxb",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "संधि:वर्णों का मेल; तीन प्रकार:स्वर, व्यंजन, विसर्ग।",
+        "स्वर संधि के पाँच भेद:दीर्घ, गुण, वृद्धि, यण, अयादि।",
+        "समास:शब्दों का मेल, विभक्ति का लोप; छः भेद।",
+        "अव्ययीभाव:पहला पद प्रधान। तत्पुरुष:दूसरा पद प्रधान।",
+        "कर्मधारय:विशेषण-विशेष्य। द्विगु:संख्यावाचक पहला पद।",
+        "द्वंद्व:दोनों पद प्रधान। बहुव्रीहि:तीसरे का बोध।",
+        "उपसर्ग:शब्द के आगे लगता है; अर्थ बदलता है।",
+        "प्रत्यय:शब्द के पीछे लगता है; कृत् और तद्धित दो प्रकार।"
       ]
     }
   ],

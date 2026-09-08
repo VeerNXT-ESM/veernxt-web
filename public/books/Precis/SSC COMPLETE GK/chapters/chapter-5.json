@@ -5,7 +5,14 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "xtgl032"
+      "id": "xtgl032",
+      "content": "The interior of the Earth refers to the internal structure that lies beneath the Earth’s surface. Although humans live on the surface of the Earth, most geological processes such as earthquakes, volcanoes, mountain building, and plate movements originate deep inside the Earth. Since it is impossible to directly observe the deep interior, scientists rely on indirect methods to study it."
+    },
+    {
+      "id": "znmcobt",
+      "type": "image",
+      "imageId": "36yee5z",
+      "src": "/books/Precis/SSC COMPLETE GK/images/image_36yee5z.jpeg"
     },
     {
       "type": "statStrip",
@@ -48,7 +55,8 @@
     },
     {
       "type": "paragraph",
-      "id": "pvmx561"
+      "id": "pvmx561",
+      "content": "This chapter is extremely important for SSC examinations because many questions are asked from Earth’s layers, seismic waves, composition, and physical state of different layers. <img></img>"
     },
     {
       "id": "1rmh1zl",
@@ -58,7 +66,8 @@
     },
     {
       "type": "paragraph",
-      "id": "o262j06"
+      "id": "o262j06",
+      "content": "Our knowledge about the Earth’s interior comes from two types of sources: direct and indirect. Each source provides different kinds of information and has its own limitations."
     },
     {
       "id": "etf6vo0",
@@ -68,11 +77,13 @@
     },
     {
       "type": "paragraph",
-      "id": "522qisi"
+      "id": "522qisi",
+      "content": "Direct sources include deep mining operations, drilling projects, and volcanic eruptions. Mining activities allow humans to study rocks found beneath the surface, but only up to a limited depth. The deepest mines and boreholes extend only a few kilometres below the surface, which is negligible when compared to the Earth’s radius of about 6371 km. Volcanic eruptions bring"
     },
     {
       "type": "paragraph",
-      "id": "fhxjdfi"
+      "id": "fhxjdfi",
+      "content": "molten magma from the Earth’s interior to the surface, providing valuable information about the composition of deeper layers. However, these sources cannot give complete information about the mantle and core."
     },
     {
       "id": "0tx9spi",
@@ -82,7 +93,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5n5glt0"
+      "id": "5n5glt0",
+      "content": "Indirect sources are the most important means of studying the Earth’s interior. The behaviour of seismic waves during earthquakes is the most reliable indirect source. Other indirect evidences include meteorites, variations in gravity, and the Earth’s magnetic field. These sources help scientists estimate the density, composition, and physical state of different layers."
     },
     {
       "id": "3eq8fry",
@@ -92,7 +104,8 @@
     },
     {
       "type": "paragraph",
-      "id": "cpo32k1"
+      "id": "cpo32k1",
+      "content": "Seismic waves are vibrations produced due to earthquakes, volcanic eruptions, or explosions. These waves travel through the Earth in all directions. By recording the speed, path, and refraction of seismic waves, scientists can determine the internal structure of the Earth."
     },
     {
       "id": "q24mvvr",
@@ -102,60 +115,69 @@
     },
     {
       "type": "paragraph",
-      "id": "mnq0ezn"
+      "id": "mnq0ezn",
+      "content": "Seismic waves are broadly classified into body waves and surface waves based on their path of travel."
     },
     {
       "id": "87v3wdx",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "<ul><li><ul><li>Body Waves</li></ul></li></ul>",
+        "<ul><li>Body Waves</li></ul>",
+        "Body Waves"
       ]
     },
     {
       "type": "paragraph",
-      "id": "r93mdfw"
+      "id": "r93mdfw",
+      "content": "Body waves travel through the interior of the Earth and originate from the earthquake focus. They are of two types: P-waves and S-waves."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uvrf49u"
+      "id": "uvrf49u",
+      "content": "<em>P-Waves (Primary Waves)</em> "
+    },
+    {
+      "id": "jpok4ro",
+      "type": "image",
+      "imageId": "v0th78r",
+      "src": "/books/Precis/SSC COMPLETE GK/images/image_v0th78r.jpeg"
     },
     {
       "type": "paragraph",
-      "id": "wzvljjj"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Sources of Information About Earth’s Interior",
-      "id": "7zb6ev8"
+      "id": "wzvljjj",
+      "content": "P-waves are the fastest seismic waves and therefore reach seismic stations first. They are compressional waves in which particles move parallel to the direction of wave travel. P-waves"
     },
     {
       "type": "paragraph",
-      "id": "7s3hfhu"
+      "id": "7s3hfhu",
+      "content": "can pass through solids, liquids, and gases. Their ability to travel through liquid layers indicates that some parts of the Earth’s interior are liquid."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "myled9e"
+      "id": "myled9e",
+      "content": "<em>S-Waves (Secondary Waves)</em>"
     },
     {
       "type": "paragraph",
-      "id": "aaj696b"
+      "id": "aaj696b",
+      "content": "<em><img></img></em>S-waves are slower than P-waves and are transverse waves in which particles move perpendicular to the direction of wave travel. S-waves can travel only through solid materials and cannot pass through liquids. The disappearance of S-waves beyond the mantle provides strong evidence that the outer core of the Earth is liquid."
     },
     {
       "id": "09wsgyd",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "<ul><li><ul><li>Surface Waves</li></ul></li></ul>",
+        "<ul><li>Surface Waves</li></ul>",
+        "Surface Waves"
       ]
     },
     {
       "type": "paragraph",
-      "id": "x9e26rt"
+      "id": "x9e26rt",
+      "content": "Surface waves travel along the Earth’s surface and have the largest amplitude. They are slower than body waves but cause maximum destruction during earthquakes because their energy is concentrated near the surface."
     },
     {
       "id": "i1ddw26",
@@ -164,8 +186,15 @@
       "content": "Layers of the Earth"
     },
     {
+      "id": "l8dmulb",
+      "type": "image",
+      "imageId": "rj3udtz",
+      "src": "/books/Precis/SSC COMPLETE GK/images/image_rj3udtz.png"
+    },
+    {
       "type": "paragraph",
-      "id": "1lxoyu0"
+      "id": "1lxoyu0",
+      "content": "<img></img>Based on chemical composition, density, and physical condition, the Earth is divided into three main concentric layers: crust, mantle, and core. "
     },
     {
       "id": "8ieoff7",
@@ -175,7 +204,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6bn7kqb"
+      "id": "6bn7kqb",
+      "content": "The crust is the outermost and thinnest layer of the Earth. It forms the continents and ocean floor on which humans live. The thickness of the crust varies significantly from place to place. Under the oceans, the crust is about 5 km thick, whereas under continents it can be as thick as 35–40 km."
     },
     {
       "type": "comparisonTable",
@@ -216,7 +246,8 @@
     },
     {
       "type": "paragraph",
-      "id": "risr3mt"
+      "id": "risr3mt",
+      "content": "The continental crust is mainly composed of silica and aluminium and is therefore called SIAL. It is lighter and thicker than oceanic crust. The oceanic crust is composed mainly of silica and magnesium and is known as SIMA. Oceanic crust is denser and thinner than continental crust, which explains why ocean basins are lower than continental regions."
     },
     {
       "id": "70zgzw7",
@@ -226,7 +257,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lugoh7c"
+      "id": "lugoh7c",
+      "content": "The mantle lies below the crust and extends up to a depth of about 2900 km. It is the thickest layer of the Earth and constitutes nearly 84 percent of the Earth’s total volume. The mantle is composed mainly of silicate minerals rich in iron and magnesium."
     },
     {
       "id": "9oo61rn",
@@ -236,7 +268,8 @@
     },
     {
       "type": "paragraph",
-      "id": "t8g4lt9"
+      "id": "t8g4lt9",
+      "content": "The upper mantle includes a special zone called the asthenosphere. The asthenosphere is semi- molten and has plastic properties, which means it can flow slowly under pressure. Tectonic plates of the lithosphere float and move over the asthenosphere, making it responsible for plate tectonic movements."
     },
     {
       "id": "s3wbdny",
@@ -246,7 +279,8 @@
     },
     {
       "type": "paragraph",
-      "id": "pvamumr"
+      "id": "pvamumr",
+      "content": "The core is the innermost layer of the Earth and is extremely dense and hot. It is composed mainly of iron and nickel and is therefore referred to as NIFE. The temperature of the core may reach several thousand degrees Celsius."
     },
     {
       "id": "aqbp5di",
@@ -256,7 +290,8 @@
     },
     {
       "type": "paragraph",
-      "id": "thcxngw"
+      "id": "thcxngw",
+      "content": "The outer core is in a liquid state due to extremely high temperatures. The movement of molten iron in the outer core generates the Earth’s magnetic field, which protects the Earth from harmful solar radiation."
     },
     {
       "id": "l0ukpq9",
@@ -266,7 +301,8 @@
     },
     {
       "type": "paragraph",
-      "id": "k95ksio"
+      "id": "k95ksio",
+      "content": "The inner core is solid despite very high temperatures because of immense pressure. It is believed to be one of the densest parts of the Earth."
     },
     {
       "type": "examAlert",
@@ -285,7 +321,8 @@
     },
     {
       "type": "paragraph",
-      "id": "u7p19yn"
+      "id": "u7p19yn",
+      "content": "The lithosphere is the rigid outer shell of the Earth consisting of the crust and the uppermost mantle. It is broken into tectonic plates of varying sizes. Below the lithosphere lies the asthenosphere, which is semi-molten and allows these plates to move."
     },
     {
       "id": "nenbx0h",
@@ -295,7 +332,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tmnivu1"
+      "id": "tmnivu1",
+      "content": "As we move deeper inside the Earth, temperature, pressure, and density increase continuously. This gradual increase explains the change in physical state of Earth’s materials from solid crust to semi-molten mantle and liquid outer core."
     },
     {
       "id": "d8fmnff",
@@ -305,7 +343,8 @@
     },
     {
       "type": "paragraph",
-      "id": "l4clg1r"
+      "id": "l4clg1r",
+      "content": "The study of the Earth’s interior helps us understand earthquakes, volcanoes, plate tectonics, mountain building, and the Earth’s magnetic field. It also explains the distribution of minerals and energy resources."
     },
     {
       "id": "qmfbne4",
@@ -317,15 +356,15 @@
       "id": "c2lpdc1",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Crust – outermost and thinnest layer",
+        "Mantle – thickest layer, maximum volume",
+        "Core – innermost and heaviest layer",
+        "SIAL – continental crust",
+        "SIMA – oceanic crust",
+        "P-waves – travel through solids, liquids, gases",
+        "S-waves – travel only through solids",
+        "Outer core – liquid (magnetic field)",
+        "Inner core – solid (high pressure)"
       ]
     }
   ],

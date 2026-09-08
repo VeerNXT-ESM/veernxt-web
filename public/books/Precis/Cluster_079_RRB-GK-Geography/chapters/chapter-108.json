@@ -1,0 +1,141 @@
+{
+  "title": "10. Earthquake Zones of India",
+  "order": 108,
+  "blocks": [
+    {
+      "id": "7dmf04o",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Zone</strong></p>",
+            "<p><strong>Risk</strong></p>",
+            "<p><strong>Regions</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Zone V</p>",
+            "<p>Very High</p>",
+            "<p>Himalayas, Northeast, Andaman &amp; Nicobar</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Zone IV</p>",
+            "<p>High</p>",
+            "<p>Delhi, Bihar, Gujarat</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Zone III</p>",
+            "<p>Moderate</p>",
+            "<p>Central India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Zone II</p>",
+            "<p>Low</p>",
+            "<p>Stable peninsular region</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "About 59 percent of the land area of India is liable to seismic hazard damage of moderate to very high intensity.",
+      "id": "wvsopq2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Seismic Zone",
+        "Risk Level",
+        "Intensity (MMI Scale)",
+        "Major Regions Covered"
+      ],
+      "rows": [
+        [
+          "Zone II",
+          "Low Damage Risk",
+          "VI or less",
+          "Deccan Plateau, parts of Rajasthan, Karnataka, Madhya Pradesh"
+        ],
+        [
+          "Zone III",
+          "Moderate Damage Risk",
+          "VII",
+          "Kerala, Goa, Lakshadweep, parts of Uttar Pradesh, Maharashtra"
+        ],
+        [
+          "Zone IV",
+          "High Damage Risk",
+          "VIII",
+          "Delhi-NCR, Jammu & Kashmir, Sikkim, Northern Bihar, parts of Maharashtra"
+        ],
+        [
+          "Zone V",
+          "Very High Damage Risk",
+          "IX and above",
+          "North-East India, Uttarakhand, Himachal Pradesh, Rann of Kutch, A&N Islands"
+        ]
+      ],
+      "id": "flcx8uu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Active Seismic Zones",
+          "value": "4 (II to V)",
+          "icon": "map"
+        },
+        {
+          "label": "Vulnerable Land Area",
+          "value": "~59%",
+          "icon": "info"
+        },
+        {
+          "label": "Highest Risk Category",
+          "value": "Zone V",
+          "icon": "alert"
+        },
+        {
+          "label": "Standardizing Body",
+          "value": "BIS",
+          "icon": "check"
+        }
+      ],
+      "id": "qe7furu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Zone I is no longer used in the official BIS seismic map; Zone II is now the lowest risk zone.",
+        "Delhi-NCR falls under Zone IV (High Damage Risk Zone), while the entire North-Eastern region lies in Zone V.",
+        "The Bureau of Indian Standards (BIS) code IS 1893 is the official standard for earthquake-resistant design of structures."
+      ],
+      "id": "g9s81qc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "India is categorized into four seismic hazard zones by the Bureau of Indian Standards (BIS): Zone II, III, IV, and V.",
+        "Zone I was phased out and merged into Zone II in the updated IS 1893 seismic code.",
+        "Nearly 59% of India's total landmass is vulnerable to moderate to severe earthquake hazard.",
+        "Zone V represents the highest risk area, encompassing North-East India, the Himalayan belt, Rann of Kutch, and Andaman & Nicobar Islands.",
+        "Seismic intensity is mapped using the Modified Mercalli Intensity (MMI) scale alongside the Medvedev-Sponheuer-Karnik (MSK) scale."
+      ],
+      "id": "y3jz2mn"
+    }
+  ],
+  "enriched": true
+}

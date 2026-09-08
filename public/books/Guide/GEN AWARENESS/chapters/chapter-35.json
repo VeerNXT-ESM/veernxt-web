@@ -5,7 +5,14 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "79cmh9r"
+      "id": "79cmh9r",
+      "content": "India experiences a monsoon type of climate characterized by seasonal reversal of winds, distinct wet and dry seasons, and large regional variations in temperature and rainfall. The climate of India is influenced by latitude, altitude, pressure systems, distance from the sea, and the Himalayan mountain range."
+    },
+    {
+      "id": "gnj9bed",
+      "type": "image",
+      "imageId": "el7pe0q",
+      "src": "/books/Guide/GEN AWARENESS/images/image_el7pe0q.jpeg"
     },
     {
       "type": "statStrip",
@@ -52,23 +59,28 @@
     },
     {
       "type": "paragraph",
-      "id": "0p5xkze"
+      "id": "0p5xkze",
+      "content": "• Latitude – India lies between 8°4′N and 37°6′N. Tropic of Cancer divides the country into tropical and subtropical parts."
     },
     {
       "type": "paragraph",
-      "id": "ae9ks0x"
+      "id": "ae9ks0x",
+      "content": "• Altitude – High altitude regions such as Himalayas experience colder climates."
     },
     {
       "type": "paragraph",
-      "id": "f7g1n56"
+      "id": "f7g1n56",
+      "content": "• Distance from Sea – Coastal areas have moderate climate while interior regions have extreme climate."
     },
     {
       "type": "paragraph",
-      "id": "7iwxm75"
+      "id": "7iwxm75",
+      "content": "• Relief – Himalayas act as a barrier preventing cold winds from Central Asia."
     },
     {
       "type": "paragraph",
-      "id": "mygm9aw"
+      "id": "mygm9aw",
+      "content": "• Monsoon Winds – Seasonal reversal of winds largely controls rainfall."
     },
     {
       "id": "vzd59wj",
@@ -83,41 +95,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Season</strong></p>",
+            "<p><strong>Months</strong></p>",
+            "<p><strong>Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Winter Season</p>",
+            "<p>December – February</p>",
+            "<p>Cool temperatures, clear skies, western disturbances bring rainfall to north India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Summer Season</p>",
+            "<p>March – May</p>",
+            "<p>High temperatures, formation of low pressure areas, dust storms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>South-West Monsoon</p>",
+            "<p>June – September</p>",
+            "<p>Heavy rainfall due to moisture-laden winds from Arabian Sea and Bay of Bengal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Retreating Monsoon</p>",
+            "<p>October – November</p>",
+            "<p>Withdrawal of monsoon winds; rainfall in Tamil Nadu</p>"
           ]
         }
       ]
@@ -130,24 +142,23 @@
     },
     {
       "type": "paragraph",
-      "id": "sw5ruii"
+      "id": "sw5ruii",
+      "content": "• During summer, intense heating of land creates low pressure over northern India."
     },
     {
       "type": "paragraph",
-      "id": "r92fim7"
-    },
-    {
-      "type": "pullQuote",
-      "content": "El Niño and La Niña Effect",
-      "id": "42q81vi"
+      "id": "r92fim7",
+      "content": "• The Indian Ocean remains relatively cooler creating high pressure."
     },
     {
       "type": "paragraph",
-      "id": "fv7mgbx"
+      "id": "fv7mgbx",
+      "content": "• Moist winds blow from sea to land bringing rainfall."
     },
     {
       "type": "paragraph",
-      "id": "4fibp13"
+      "id": "4fibp13",
+      "content": "• The monsoon winds split into two branches: Arabian Sea branch and Bay of Bengal branch."
     },
     {
       "id": "3aln98s",
@@ -162,22 +173,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Branch</strong></p>",
+            "<p><strong>Path</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Arabian Sea Branch</p>",
+            "<p>Strikes Western Ghats causing heavy rainfall in Kerala, Karnataka and Maharashtra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bay of Bengal Branch</p>",
+            "<p>Moves toward northeast India and spreads across the Ganga plains</p>"
           ]
         }
       ]
@@ -190,11 +201,13 @@
     },
     {
       "type": "paragraph",
-      "id": "ter2fke"
+      "id": "ter2fke",
+      "content": "• Western Ghats and northeastern states receive very heavy rainfall."
     },
     {
       "type": "paragraph",
-      "id": "h5x8c1t"
+      "id": "h5x8c1t",
+      "content": "• Regions like Rajasthan and Ladakh receive very low rainfall."
     },
     {
       "type": "comparisonTable",
@@ -224,11 +237,13 @@
     },
     {
       "type": "paragraph",
-      "id": "k23a4p3"
+      "id": "k23a4p3",
+      "content": "• Most rainfall occurs during the southwest monsoon season."
     },
     {
       "type": "paragraph",
-      "id": "upehmut"
+      "id": "upehmut",
+      "content": "• Cherrapunji and Mawsynram in Meghalaya are among the wettest places in the world."
     },
     {
       "id": "60dt6xt",
@@ -243,36 +258,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tropical Wet Climate</p>",
+            "<p>Heavy rainfall throughout the year; found in Western Ghats and Northeast</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tropical Dry Climate</p>",
+            "<p>Low rainfall; found in Rajasthan and parts of Deccan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Subtropical Humid Climate</p>",
+            "<p>Hot summers and cold winters; found in northern plains</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mountain Climate</p>",
+            "<p>Cold climate with snowfall; found in Himalayan region</p>"
           ]
         }
       ]
@@ -285,15 +300,18 @@
     },
     {
       "type": "paragraph",
-      "id": "zogwoej"
+      "id": "zogwoej",
+      "content": "• Loo – Hot dry winds blowing in northern India during summer."
     },
     {
       "type": "paragraph",
-      "id": "8805i25"
+      "id": "8805i25",
+      "content": "• Kal Baisakhi – Violent thunderstorms in eastern India."
     },
     {
       "type": "paragraph",
-      "id": "sxoxa1q"
+      "id": "sxoxa1q",
+      "content": "• Mango Showers – Pre-monsoon showers in Kerala and Karnataka that help ripening of mangoes."
     },
     {
       "id": "3g67ajt",
@@ -312,7 +330,8 @@
     },
     {
       "type": "paragraph",
-      "id": "itubon0"
+      "id": "itubon0",
+      "content": "El Niño refers to warming of surface waters in the Pacific Ocean which weakens the Indian monsoon and may cause drought conditions. La Niña refers to cooling of Pacific waters and often strengthens the monsoon."
     },
     {
       "id": "e2on12s",
@@ -322,19 +341,23 @@
     },
     {
       "type": "paragraph",
-      "id": "y46la9p"
+      "id": "y46la9p",
+      "content": "• Tropic of Cancer divides India into tropical and subtropical regions."
     },
     {
       "type": "paragraph",
-      "id": "na4ryn0"
+      "id": "na4ryn0",
+      "content": "• Southwest monsoon brings most of India's rainfall."
     },
     {
       "type": "paragraph",
-      "id": "q3kol7i"
+      "id": "q3kol7i",
+      "content": "• Mawsynram in Meghalaya receives the highest rainfall in the world."
     },
     {
       "type": "paragraph",
-      "id": "latu05h"
+      "id": "latu05h",
+      "content": "• Loo winds occur during summer in northern India."
     }
   ],
   "enriched": true

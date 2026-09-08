@@ -1,0 +1,216 @@
+{
+  "id": "k47czok",
+  "title": "PART 4",
+  "order": 3,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7dsh012",
+      "content": "RATIO &amp; PROPORTION <br></br>"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Subject",
+          "value": "Ratio & Proportion",
+          "icon": "book"
+        },
+        {
+          "label": "Key Sections",
+          "value": "9 Core Modules",
+          "icon": "list"
+        },
+        {
+          "label": "Focus Areas",
+          "value": "Distribution & Compound Ratio",
+          "icon": "target"
+        }
+      ],
+      "id": "5ikivd2"
+    },
+    {
+      "id": "ankq9rq",
+      "type": "heading",
+      "level": 2,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Ratio represents a quantitative comparison between two quantities of the same unit.",
+        "Ratio in fractions requires clearing denominators by finding their LCM to simplify into whole numbers.",
+        "Proportion establishes the equality of two ratios, where the product of means equals the product of extremes.",
+        "Compound ratio is calculated by multiplying the antecedent terms together and consequent terms together.",
+        "Distribution problems involve dividing a total quantity into parts directly proportional to given ratios."
+      ],
+      "id": "svffzox"
+    },
+    {
+      "type": "paragraph",
+      "id": "yu797iw",
+      "content": "Ratio:"
+    },
+    {
+      "id": "834ogh3",
+      "type": "list",
+      "items": [
+        "A ratio is a comparison of two quantities of the same kind.",
+        "Ratio of a and b = a : b<br></br><strong>Example:</strong><br></br>Ratio of 10 and 20 = 10 : 20 = 1 : 2"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "cv840yh",
+      "content": "Proportion:"
+    },
+    {
+      "id": "kcg2fdm",
+      "type": "list",
+      "items": [
+        "When two ratios are equal, they form a proportion.",
+        "a : b = c : d<br></br>This can also be written as:<br></br>a × d = b × c<br></br>",
+        "In SSC examination, questions from this topic are:<br></br>• Direct<br></br>• Formula-based<br></br>• Mostly numerical"
+      ]
+    },
+    {
+      "id": "yczksgf",
+      "type": "heading",
+      "level": 2,
+      "content": "2. IMPORTANT PROPERTIES OF RATIO"
+    },
+    {
+      "type": "paragraph",
+      "id": "a4kaxfk",
+      "content": "• Ratio has no unit.<br></br>• Both terms must be of the same unit.<br></br>• Ratio can be simplified like fractions.<br></br>• Ratio remains same if both terms are multiplied or divided by the same number."
+    },
+    {
+      "id": "vc8wo23",
+      "type": "heading",
+      "level": 2,
+      "content": "3. TYPES OF RATIO QUESTIONS"
+    },
+    {
+      "id": "yyxdhuh",
+      "type": "heading",
+      "level": 3,
+      "content": "(A) SIMPLE RATIO QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "h9ej71x",
+      "content": "<strong>Example 1:</strong><br></br>Find the ratio of 45 minutes to 1.5 hours.<br></br><strong>Solution:<br></br></strong>1.5 hours = 90 minutes<br></br>45 : 90 = 1 : 2<br></br>Answer: 1 : 2"
+    },
+    {
+      "id": "gfrk6yr",
+      "type": "heading",
+      "level": 3,
+      "content": "(B) RATIO IN FRACTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "9hkk576",
+      "content": "<strong>Example 2:</strong><br></br>Find the ratio of 3/4 and 5/6.<br></br>Solution:<br></br>(3/4) : (5/6) = (3/4) × (6/5) = 18/20 = 9 : 10<br></br>Answer: 9 : 10"
+    },
+    {
+      "id": "yydr6a9",
+      "type": "heading",
+      "level": 2,
+      "content": "4. PROPORTION BASED QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "7vvy9pe",
+      "content": "If a : b = c : d, then:<br></br>a × d = b × c"
+    },
+    {
+      "type": "paragraph",
+      "id": "m6b3ze8",
+      "content": "<strong>Example 3:</strong><br></br>If 4 : 7 = x : 28, find x.<br></br><strong>Solution:</strong><br></br>4 × 28 = 7 × x<br></br>x = 16<br></br>Answer: 16"
+    },
+    {
+      "id": "38d88k5",
+      "type": "heading",
+      "level": 2,
+      "content": "5. COMPOUND RATIO"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ntcmt2",
+      "content": "Compound ratio is the ratio obtained by multiplying corresponding terms of two or more ratios."
+    },
+    {
+      "type": "paragraph",
+      "id": "nv4zr1k",
+      "content": "<strong>Example 4:</strong><br></br>Find the compound ratio of 2 : 3 and 4 : 5.<br></br>Solution:<br></br>(2 × 4) : (3 × 5) = 8 : 15<br></br>Answer: 8 : 15"
+    },
+    {
+      "id": "h7hbaw5",
+      "type": "heading",
+      "level": 2,
+      "content": "6. RATIO IN DISTRIBUTION PROBLEMS"
+    },
+    {
+      "type": "paragraph",
+      "id": "87i8bz7",
+      "content": "<strong>Example 5:</strong><br></br>Divide ₹600 between A and B in the ratio 2 : 3.<br></br>Solution:<br></br>Total parts = 2 + 3 = 5<br></br>A’s share = (2/5) × 600 = 240<br></br>B’s share = (3/5) × 600 = 360<br></br>Answer: A = ₹240, B = ₹360"
+    },
+    {
+      "id": "s4au0jr",
+      "type": "heading",
+      "level": 2,
+      "content": "7. IMPORTANT POINTS TO REMEMBER"
+    },
+    {
+      "type": "paragraph",
+      "id": "zubtb88",
+      "content": "• Convert all quantities to the same unit.<br></br>• Simplify ratios to lowest form.<br></br>• Use proportion formula carefully.<br></br>• Ratio questions are often combined with percentage."
+    },
+    {
+      "id": "yqy941i",
+      "type": "heading",
+      "level": 2,
+      "content": "8. SOLVED EXAMPLES"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions on Compound Ratio and Proportion are frequently tested in tier-1 competitive exams.",
+        "Pay special attention to Ratio in Distribution Problems as they are key to solving partnership and age-related questions.",
+        "Always simplify fractional ratios into standard whole number ratios before applying distribution formulas."
+      ],
+      "id": "mxa7m1h"
+    },
+    {
+      "type": "paragraph",
+      "id": "3aaxcnl",
+      "content": "<strong>Example 6:</strong><br></br>The ratio of boys to girls in a class is 3 : 2. If there are 30 boys, find the number of girls.<br></br>Solution:<br></br>3 : 2 = 30 : x<br></br>x = 20<br></br>Answer: 20<br></br><br></br><strong>Example 7:</strong><br></br>If a : b = 5 : 7 and b : c = 14 : 15, find a : c.<br></br>Solution:<br></br>a : b = 10 : 14<br></br>b : c = 14 : 15<br></br>a : c = 10 : 15 = 2 : 3<br></br>Answer: 2 : 3"
+    },
+    {
+      "id": "oid48ki",
+      "type": "heading",
+      "level": 2,
+      "content": "9. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "iis9pdd",
+      "content": "Q1. Find the ratio of 500 g to 2 kg.<br></br>A. 1 : 4   B. 1 : 2   C. 1 : 3   D. 1 : 5<br></br><br></br>Q2. If x : y = 7 : 9 and y : z = 3 : 5, find x : z.<br></br>A. 7 : 15   B. 21 : 45   C. 21 : 35   D. 35 : 45<br></br><br></br>Q3. Divide ₹840 between A and B in the ratio 4 : 3.<br></br>A. ₹480, ₹360   B. ₹420, ₹420   C. ₹360, ₹480   D. ₹560, ₹280"
+    },
+    {
+      "id": "q9vbbmh",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mamgjrv",
+      "content": "Q1. B<br></br>Q2. C<br></br>Q3. A"
+    }
+  ],
+  "enriched": true
+}

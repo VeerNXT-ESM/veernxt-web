@@ -10,71 +10,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Landform</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Terminal Moraine</p>",
+            "<p>Marks furthest glacier advance.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lateral Moraine</p>",
+            "<p>Deposits along sides.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Medial Moraine</p>",
+            "<p>Formed by merging glaciers.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ground Moraine</p>",
+            "<p>Till deposited beneath glacier.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Drumlin</p>",
+            "<p>Streamlined hill indicating ice flow.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Esker</p>",
+            "<p>Winding ridge formed by subglacial streams.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kame</p>",
+            "<p>Mound formed by meltwater.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Outwash Plain</p>",
+            "<p>Deposited sediments beyond glacier.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kettle Lake</p>",
+            "<p>Depression formed by melting ice block.</p>"
           ]
         }
       ]
@@ -99,11 +99,6 @@
         }
       ],
       "id": "20g9jhn"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Glacial Deposits: Till",
-      "id": "ymppmed"
     },
     {
       "id": "dtiz0vw",
@@ -131,7 +126,8 @@
     },
     {
       "type": "paragraph",
-      "id": "kmgqwnn"
+      "id": "kmgqwnn",
+      "content": "Till is unsorted, unstratified glacial sediment deposited directly by ice."
     }
   ],
   "enriched": true

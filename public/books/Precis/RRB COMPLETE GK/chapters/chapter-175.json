@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "rdvqq4a"
+      "id": "rdvqq4a",
+      "content": "Soil erosion removes the fertile top layer, reducing productivity. Water erosion is dominant in humid regions, while wind erosion is common in dry regions."
     },
     {
       "type": "statStrip",
@@ -83,11 +84,13 @@
     },
     {
       "type": "paragraph",
-      "id": "a3ea6l9"
+      "id": "a3ea6l9",
+      "content": "Sheet Erosion: Thin uniform removal of topsoil."
     },
     {
       "type": "paragraph",
-      "id": "0mjm96y"
+      "id": "0mjm96y",
+      "content": "Rill Erosion: Small channels formed by runoff."
     },
     {
       "type": "examAlert",
@@ -100,11 +103,13 @@
     },
     {
       "type": "paragraph",
-      "id": "58xhufm"
+      "id": "58xhufm",
+      "content": "Gully Erosion: Deep channels creating badlands."
     },
     {
       "type": "paragraph",
-      "id": "zojk84q"
+      "id": "zojk84q",
+      "content": "Wind Erosion: Removal of loose dry soil particles."
     }
   ],
   "enriched": true

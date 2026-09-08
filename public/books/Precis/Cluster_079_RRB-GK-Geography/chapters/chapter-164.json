@@ -1,0 +1,133 @@
+{
+  "title": "Wind vs River vs Glacier",
+  "order": 164,
+  "blocks": [
+    {
+      "id": "quig2t6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Wind</strong></p>",
+            "<p><strong>River</strong></p>",
+            "<p><strong>Glacier</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dominant in arid regions</p>",
+            "<p>Humid regions</p>",
+            "<p>Cold regions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Better at erosion than deposition</p>",
+            "<p>Balanced erosion &amp; deposition</p>",
+            "<p>Powerful erosion</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Forms dunes and loess</p>",
+            "<p>Forms floodplains &amp; deltas</p>",
+            "<p>Forms moraines</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Erosional and depositional landforms created by running water, wind, and glaciers reflect the distinct physical properties and kinetic energy of each geomorphic agent.",
+      "id": "nni3u9k"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "River (Fluvial)",
+        "Wind (Aeolian)",
+        "Glacier (Glacial)"
+      ],
+      "rows": [
+        [
+          "Dominant Climate",
+          "Humid and sub-humid regions",
+          "Arid and semi-arid deserts",
+          "High altitude and high latitude cold regions"
+        ],
+        [
+          "Valley Shape",
+          "V-shaped valleys and gorges",
+          "No true valleys (creates deflation hollows)",
+          "U-shaped valleys and hanging valleys"
+        ],
+        [
+          "Erosional Features",
+          "Waterfalls, plunge pools, meanders",
+          "Mushroom rocks, yardangs, zeugen",
+          "Cirques, arêtes, horns, glacial troughs"
+        ],
+        [
+          "Depositional Features",
+          "Alluvial fans, floodplains, deltas",
+          "Barchans, transverse dunes, loess",
+          "Moraines, drumlins, eskers, kames"
+        ]
+      ],
+      "id": "76m7p5h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Arid Agent",
+          "value": "Wind (Aeolian)",
+          "icon": "info"
+        },
+        {
+          "label": "Humid Agent",
+          "value": "River (Fluvial)",
+          "icon": "check"
+        },
+        {
+          "label": "Cold Region Agent",
+          "value": "Glacier",
+          "icon": "award"
+        },
+        {
+          "label": "Core Subject",
+          "value": "Geomorphology",
+          "icon": "book"
+        }
+      ],
+      "id": "plejub5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "V-shaped valleys are formed by rivers, whereas U-shaped valleys and hanging valleys are formed by glaciers.",
+        "Barchans (crescent-shaped dunes) and Loess are major wind depositional features frequently tested in competitive exams.",
+        "Cirques, Horns, and Aretes are classic glacial erosional landforms; Moraines, Drumlins, and Eskers are glacial depositional features.",
+        "Deltas, Ox-bow lakes, and Natural Levees develop in the lower/mature stages of river flow."
+      ],
+      "id": "u9ffiam"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Running water is the most dominant geomorphic agent in humid regions, sculpting V-shaped valleys and expansive deltas.",
+        "Wind action decisionally predominates in arid regions, forming erosional features like yardangs and depositional landforms like barchans.",
+        "Glaciers shape high-altitude landscapes through plucking and abrasion, carving U-shaped valleys, cirques, and moraines.",
+        "Understanding the distinction between erosional and depositional landforms for each agent is essential for geography MCQs."
+      ],
+      "id": "r8trg52"
+    }
+  ],
+  "enriched": true
+}

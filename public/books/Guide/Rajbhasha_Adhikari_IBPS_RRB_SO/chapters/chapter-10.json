@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fix5zny"
+      "id": "fix5zny",
+      "content": "Good Hindi letter writing requires: correct grammar and spelling, appropriate vocabulary, formal or informal tone as needed, clear structure (beginning, middle, end), use of salutation and complimentary close appropriate to context, and avoidance of literal translations from English."
     },
     {
       "id": "thgxq8t",
@@ -60,22 +61,17 @@
       "id": "qsco7zt",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "संख्या एवं दिनांक (Number and Date) :top left",
+        "प्रेषक (From) :sender's designation and address",
+        "सेवा में (To) :recipient's designation and address",
+        "विषय (Subject) :underlined; brief and specific",
+        "संदर्भ (Reference) :if replying to earlier letter",
+        "महोदय / महोदया (Salutation)",
+        "मुख्य विषय (Body) :2-3 paragraphs; first para: reference context; second: main matter; third: expected action/conclusion",
+        "धन्यवाद (Concluding line)",
+        "भवदीय / आपका (Complimentary close)",
+        "हस्ताक्षर, नाम, पदनाम (Signature, Name, Designation)"
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Topics Important for Rajbhasha Adhikari Exam",
-      "id": "bamkysp"
     },
     {
       "id": "ub3on0j",
@@ -90,41 +86,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vichaaratmak Nibandh</p>",
+            "<p>विचारात्मक :philosophical, abstract ideas</p>",
+            "<p>समय का महत्व; सत्य की जीत; ईमानदारी सर्वोत्तम नीति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Varnatmak Nibandh</p>",
+            "<p>वर्णनात्मक :describe a person, place, event, season</p>",
+            "<p>हमारा विद्यालय; वर्षा ऋतु; मेरा गाँव; दीपावली</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vivechanatmak Nibandh</p>",
+            "<p>विवेचनात्मक :analyse social issues, problems</p>",
+            "<p>भ्रष्टाचार की समस्या; बेरोज़गारी; महँगाई; डिजिटल इंडिया</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Atmanivedanatmak Nibandh</p>",
+            "<p>आत्मनिवेदनात्मक :first person; personal experience</p>",
+            "<p>मेरे जीवन की एक स्मरणीय घटना; मेरे आदर्श व्यक्ति</p>"
           ]
         }
       ]
@@ -139,15 +135,15 @@
       "id": "62erqcs",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "हिंदी की महत्ता एवं प्रचार-प्रसार (Importance and promotion of Hindi)",
+        "राजभाषा हिंदी और बैंकिंग क्षेत्र (Official Language Hindi and banking sector)",
+        "भारत में भाषा वैविध्य (Linguistic diversity in India)",
+        "हिंदी की वर्तमान स्थिति और चुनौतियाँ (Current state and challenges of Hindi)",
+        "डिजिटल युग में हिंदी (Hindi in the digital age)",
+        "सूचना प्रौद्योगिकी और हिंदी (Information Technology and Hindi)",
+        "बैंकिंग और हिंदी (Banking and Hindi)",
+        "हिंदी दिवस (Hindi Day :14 September)",
+        "राजभाषा नीति का कार्यान्वयन (Implementation of Rajbhasha policy)"
       ]
     },
     {
@@ -158,7 +154,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wirb89m"
+      "id": "wirb89m",
+      "content": "Saar Lekhan (Precis writing) is the art of expressing the main ideas of a passage in one's own words, concisely, without losing the essential meaning. It should be about 1/3rd the length of the original. For official Hindi exams, this tests comprehension and expression skills."
     },
     {
       "type": "examAlert",
@@ -173,13 +170,13 @@
       "id": "elztp9e",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Read the passage carefully twice",
+        "Identify the central theme and key points",
+        "Write in third person (avoid using 'I' or 'you')",
+        "Use past tense in precis writing",
+        "Do not add personal opinion; stick to the passage",
+        "Give an appropriate title that captures the theme",
+        "Length: approximately 1/3rd of original; count words"
       ]
     },
     {
@@ -195,82 +192,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Alankar</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Anupras Alankar (अनुप्रास)</p>",
+            "<p>Shabdalankar (Sound)</p>",
+            "<p>Same consonant sound repeated in close succession</p>",
+            "<p>कानन कठिन भयंकर भारी :'क' repeated; तरनि तनूजा तट तमाल तरुवर बहु छाए</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Yamak Alankar (यमक)</p>",
+            "<p>Shabdalankar</p>",
+            "<p>Same word repeated with different meanings</p>",
+            "<p>काली घटा का घमंड घटा :'घटा' means cloud AND diminished</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Shlesh Alankar (श्लेष)</p>",
+            "<p>Shabdalankar</p>",
+            "<p>One word with two or more meanings simultaneously</p>",
+            "<p>जो रहीम गति दीप की :दीप means lamp AND generous person</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Upama Alankar (उपमा)</p>",
+            "<p>Arthalankar (Meaning)</p>",
+            "<p>Comparison using like/as (सा, सी, सम, जैसा); four parts: Upamey, Upaman, Sadharan Dharm, Vachak Shabd</p>",
+            "<p>मुख चंद्रमा सा सुंदर है :(upamey: मुख, upaman: चंद्रमा)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Rupak Alankar (रूपक)</p>",
+            "<p>Arthalankar</p>",
+            "<p>Direct identification; no 'like/as'; identity of upamey and upaman</p>",
+            "<p>मुख चंद्रमा है :direct identity; not comparison</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Utpreksha Alankar (उत्प्रेक्षा)</p>",
+            "<p>Arthalankar</p>",
+            "<p>Imagination/fancy; 'as if', 'seems like' (मानो, जनु, जैसे)</p>",
+            "<p>मानो मदमाती मृग-मन उर अनंग उर धारत :'मानो' signals utpreksha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Atishyokti Alankar (अतिशयोक्ति)</p>",
+            "<p>Arthalankar</p>",
+            "<p>Deliberate exaggeration for effect; hyperbole</p>",
+            "<p>आगे नदियाँ पड़ी अपार, घोड़ा कैसे उतरे पार :exaggeration of river</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Manvikaran (मानवीकरण)</p>",
+            "<p>Arthalankar</p>",
+            "<p>Personification; attributing human qualities to non-human</p>",
+            "<p>बादल गरजते हैं, बिजली नाचती है</p>"
           ]
         }
       ]

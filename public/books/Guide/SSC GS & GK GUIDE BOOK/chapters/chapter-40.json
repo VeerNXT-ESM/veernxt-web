@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "xyoi3pc"
+      "id": "xyoi3pc",
+      "content": "Minerals are naturally occurring inorganic substances found in the Earth's crust. They have a definite chemical composition and physical properties. Minerals are very important for industrial development, energy production, transportation and infrastructure. India possesses a wide variety of mineral resources due to its diverse geological structure."
     },
     {
       "type": "statStrip",
@@ -53,15 +54,18 @@
     },
     {
       "type": "paragraph",
-      "id": "97902nw"
+      "id": "97902nw",
+      "content": "• Minerals are natural substances found in rocks."
     },
     {
       "type": "paragraph",
-      "id": "own3vfc"
+      "id": "own3vfc",
+      "content": "• They are formed through geological processes over millions of years."
     },
     {
       "type": "paragraph",
-      "id": "ie34haz"
+      "id": "ie34haz",
+      "content": "• Minerals are essential raw materials for industries."
     },
     {
       "id": "01bkkl5",
@@ -76,29 +80,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Mineral</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Metallic Minerals</p>",
+            "<p>Iron, Copper, Bauxite, Manganese, Zinc</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Non-Metallic Minerals</p>",
+            "<p>Mica, Limestone, Gypsum, Dolomite</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Energy Minerals</p>",
+            "<p>Coal, Petroleum, Natural Gas, Uranium</p>"
           ]
         }
       ]
@@ -116,55 +120,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Mineral</strong></p>",
+            "<p><strong>Major Producing States</strong></p>",
+            "<p><strong>Uses</strong></p>",
+            "<p><strong>Special Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Iron Ore</p>",
+            "<p>Odisha, Chhattisgarh, Jharkhand, Karnataka</p>",
+            "<p>Steel production</p>",
+            "<p>India is among top iron ore producers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bauxite</p>",
+            "<p>Odisha, Gujarat, Maharashtra, Madhya Pradesh</p>",
+            "<p>Aluminium manufacturing</p>",
+            "<p>Main ore of aluminium</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Manganese</p>",
+            "<p>Odisha, Karnataka, Madhya Pradesh, Maharashtra</p>",
+            "<p>Steel alloys and batteries</p>",
+            "<p>Important alloy metal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Copper</p>",
+            "<p>Rajasthan, Jharkhand, Madhya Pradesh</p>",
+            "<p>Electrical wires and electronics</p>",
+            "<p>Excellent conductor</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Zinc</p>",
+            "<p>Rajasthan</p>",
+            "<p>Galvanizing steel</p>",
+            "<p>Protects metals from corrosion</p>"
           ]
         }
       ]
@@ -182,41 +186,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Mineral</strong></p>",
+            "<p><strong>Major Areas</strong></p>",
+            "<p><strong>Uses</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mica</p>",
+            "<p>Jharkhand, Bihar</p>",
+            "<p>Electrical and electronic equipment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Limestone</p>",
+            "<p>Rajasthan, Madhya Pradesh, Andhra Pradesh</p>",
+            "<p>Cement manufacturing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gypsum</p>",
+            "<p>Rajasthan</p>",
+            "<p>Fertilizer and cement production</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dolomite</p>",
+            "<p>Chhattisgarh, Odisha</p>",
+            "<p>Iron and steel industry</p>"
           ]
         }
       ]
@@ -234,41 +238,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Resource</strong></p>",
+            "<p><strong>Major Regions</strong></p>",
+            "<p><strong>Uses</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Coal</p>",
+            "<p>Jharkhand, Odisha, Chhattisgarh, West Bengal</p>",
+            "<p>Electricity generation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Petroleum</p>",
+            "<p>Assam, Gujarat, Mumbai High offshore field</p>",
+            "<p>Fuel, petrochemicals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Natural Gas</p>",
+            "<p>Assam, Gujarat, Krishna-Godavari Basin</p>",
+            "<p>Energy, fertilizers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Uranium</p>",
+            "<p>Jharkhand, Andhra Pradesh</p>",
+            "<p>Nuclear energy production</p>"
           ]
         }
       ]
@@ -281,24 +285,23 @@
     },
     {
       "type": "paragraph",
-      "id": "luv3nvu"
+      "id": "luv3nvu",
+      "content": "• North-Eastern Plateau Region – Chota Nagpur Plateau rich in coal, iron, manganese and mica."
     },
     {
       "type": "paragraph",
-      "id": "e6918p3"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Conservation of Mineral Resources",
-      "id": "q83npdr"
+      "id": "e6918p3",
+      "content": "• South-Western Plateau Region – Karnataka and Tamil Nadu rich in iron ore and bauxite."
     },
     {
       "type": "paragraph",
-      "id": "w1htpvo"
+      "id": "w1htpvo",
+      "content": "• North-Western Region – Rajasthan rich in copper and zinc."
     },
     {
       "type": "paragraph",
-      "id": "1nopcs7"
+      "id": "1nopcs7",
+      "content": "• Central Belt – Madhya Pradesh and Chhattisgarh rich in minerals."
     },
     {
       "id": "q7ndmg4",
@@ -309,25 +312,30 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "85s2c29"
+      "id": "85s2c29",
+      "content": "• Jharia Coalfield – Jharkhand"
     },
     {
       "type": "paragraph",
-      "id": "0dx08te"
+      "id": "0dx08te",
+      "content": "• Raniganj Coalfield – West Bengal"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "au7oh7a"
+      "id": "au7oh7a",
+      "content": "• Bokaro Coalfield – Jharkhand"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1gpbhq6"
+      "id": "1gpbhq6",
+      "content": "• Talcher Coalfield – Odisha"
     },
     {
       "type": "paragraph",
-      "id": "qor65p9"
+      "id": "qor65p9",
+      "content": "• Neyveli Lignite Field – Tamil Nadu"
     },
     {
       "id": "zw0v8tk",
@@ -368,19 +376,23 @@
     },
     {
       "type": "paragraph",
-      "id": "1tp7hvx"
+      "id": "1tp7hvx",
+      "content": "• Mumbai High – Offshore field in Arabian Sea."
     },
     {
       "type": "paragraph",
-      "id": "gf4yl6k"
+      "id": "gf4yl6k",
+      "content": "• Digboi – Assam (oldest oil field in India)."
     },
     {
       "type": "paragraph",
-      "id": "0tp6plm"
+      "id": "0tp6plm",
+      "content": "• Ankleshwar – Gujarat."
     },
     {
       "type": "paragraph",
-      "id": "j4h2r6z"
+      "id": "j4h2r6z",
+      "content": "• Krishna-Godavari Basin – Andhra Pradesh."
     },
     {
       "id": "m0iw2vk",
@@ -390,19 +402,23 @@
     },
     {
       "type": "paragraph",
-      "id": "miha8xp"
+      "id": "miha8xp",
+      "content": "• Provide raw materials for industries."
     },
     {
       "type": "paragraph",
-      "id": "1mld049"
+      "id": "1mld049",
+      "content": "• Promote economic development."
     },
     {
       "type": "paragraph",
-      "id": "uysmko3"
+      "id": "uysmko3",
+      "content": "• Create employment opportunities."
     },
     {
       "type": "paragraph",
-      "id": "t58f44a"
+      "id": "t58f44a",
+      "content": "• Support infrastructure development."
     },
     {
       "id": "f4k2aez",
@@ -412,7 +428,8 @@
     },
     {
       "type": "paragraph",
-      "id": "snpg5u2"
+      "id": "snpg5u2",
+      "content": "• Use minerals efficiently."
     },
     {
       "type": "examAlert",
@@ -425,15 +442,18 @@
     },
     {
       "type": "paragraph",
-      "id": "44axxeg"
+      "id": "44axxeg",
+      "content": "• Recycle metals and materials."
     },
     {
       "type": "paragraph",
-      "id": "xmyjxti"
+      "id": "xmyjxti",
+      "content": "• Promote sustainable mining practices."
     },
     {
       "type": "paragraph",
-      "id": "w2jbu4o"
+      "id": "w2jbu4o",
+      "content": "• Develop alternative energy sources."
     },
     {
       "id": "k2nv1h9",
@@ -443,19 +463,23 @@
     },
     {
       "type": "paragraph",
-      "id": "13x0msy"
+      "id": "13x0msy",
+      "content": "• Chota Nagpur Plateau is called the mineral heartland of India."
     },
     {
       "type": "paragraph",
-      "id": "quwv7h2"
+      "id": "quwv7h2",
+      "content": "• Odisha is the largest producer of iron ore in India."
     },
     {
       "type": "paragraph",
-      "id": "tv11hhf"
+      "id": "tv11hhf",
+      "content": "• Digboi oil field is the oldest petroleum field in India."
     },
     {
       "type": "paragraph",
-      "id": "ah1ay7i"
+      "id": "ah1ay7i",
+      "content": "• Coal is the most important energy resource in India."
     }
   ],
   "enriched": true

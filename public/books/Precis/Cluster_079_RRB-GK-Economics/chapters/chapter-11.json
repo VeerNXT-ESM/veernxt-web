@@ -1,0 +1,345 @@
+{
+  "title": "13.EXCHANGE RATE & TRADE",
+  "order": 11,
+  "blocks": [
+    {
+      "id": "sp6davt",
+      "type": "heading",
+      "level": 2,
+      "content": "1. EXCHANGE RATE DETERMINATION (DEMAND–SUPPLY THEORY)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "In a flexible exchange rate system, currency value is determined by the market forces of demand and supply of foreign exchange.",
+        "An increase in demand for foreign currency causes the Rupee to depreciate, whereas an increase in supply leads to Rupee appreciation.",
+        "India practices a managed floating exchange rate system, with foreign exchange reserves maintained by the Reserve Bank of India (RBI).",
+        "The Balance of Payments (BoP) comprises Current and Capital Accounts, where a Current Account Deficit (CAD) occurs when imports exceed exports.",
+        "The USA is India's major export partner, while China is the top import source, and crude oil constitutes India's largest import item."
+      ],
+      "id": "3eiluty"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Exchange System",
+          "value": "Managed Floating",
+          "icon": "check"
+        },
+        {
+          "label": "Top Export Market",
+          "value": "USA",
+          "icon": "award"
+        },
+        {
+          "label": "Top Import Source",
+          "value": "China",
+          "icon": "info"
+        },
+        {
+          "label": "Largest Import Item",
+          "value": "Crude Oil",
+          "icon": "book"
+        },
+        {
+          "label": "Forex Custodian",
+          "value": "RBI",
+          "icon": "award"
+        }
+      ],
+      "id": "b8sdwl2"
+    },
+    {
+      "type": "paragraph",
+      "content": "Under a flexible exchange rate system, the value of a currency is determined by the demand and supply of foreign exchange in the forex market.",
+      "id": "mtjb6cj"
+    },
+    {
+      "type": "paragraph",
+      "content": "A. Demand for Foreign Exchange arises due to:",
+      "id": "dyhyq6k"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Imports of goods and services<br/>• Foreign travel, education and medical expenses<br/>• Interest and dividend payments abroad<br/>• Capital outflows and investment abroad",
+      "id": "xct4ow2"
+    },
+    {
+      "type": "paragraph",
+      "content": "B. Supply of Foreign Exchange arises due to:",
+      "id": "ww2y34q"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Under a flexible exchange rate system, the value of a currency is determined by the demand and supply of foreign exchange in the forex market.",
+      "id": "jhjmuaw"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Exports of goods and services<br/>• Remittances from NRIs<br/>• Foreign Direct Investment (FDI)<br/>• Foreign Portfolio Investment (FPI)<br/>• External borrowings",
+      "id": "xkdr1wm"
+    },
+    {
+      "type": "paragraph",
+      "content": "Equilibrium exchange rate is determined at the intersection point of demand and supply curves. If demand for dollars increases, rupee depreciates. If supply increases, rupee appreciates.",
+      "id": "3p9d1ud"
+    },
+    {
+      "id": "2ih8fn0",
+      "type": "heading",
+      "level": 2,
+      "content": "2. RUPEE DEPRECIATION vs APPRECIATION – EFFECTS TABLE"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Factor",
+        "Demand for Foreign Exchange",
+        "Supply of Foreign Exchange"
+      ],
+      "rows": [
+        [
+          "Key Drivers",
+          "Imports of goods/services, foreign travel, education, and medical expenses",
+          "Exports of goods/services, remittances from NRIs"
+        ],
+        [
+          "Capital Movement",
+          "Capital outflows and investment abroad",
+          "Foreign Direct Investment (FDI), Foreign Portfolio Investment (FPI), external borrowings"
+        ],
+        [
+          "Obligations",
+          "Interest and dividend payments abroad",
+          "Inflow of foreign currency into the domestic economy"
+        ],
+        [
+          "Impact on Rupee",
+          "Increase in demand causes Rupee to depreciate",
+          "Increase in supply causes Rupee to appreciate"
+        ]
+      ],
+      "id": "94rx57s"
+    },
+    {
+      "id": "s5jz3ew",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>Rupee Depreciation</strong></p>",
+            "<p><strong>Rupee Appreciation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Exports</p>",
+            "<p>Cheaper → Increase</p>",
+            "<p>Costlier → Decrease</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Imports</p>",
+            "<p>Costlier → Decrease</p>",
+            "<p>Cheaper → Increase</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Trade Balance</p>",
+            "<p>May Improve</p>",
+            "<p>May Worsen</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Inflation</p>",
+            "<p>Imported inflation may rise</p>",
+            "<p>Inflation may reduce</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>External Debt</p>",
+            "<p>Debt burden increases</p>",
+            "<p>Debt burden decreases</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>FDI Inflows</p>",
+            "<p>May increase (cheaper assets)</p>",
+            "<p>May reduce</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Current Account</p>",
+            "<p>Deficit may reduce</p>",
+            "<p>Deficit may increase</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3n42lnx",
+      "type": "heading",
+      "level": 2,
+      "content": "3. INDIA’S MAJOR TRADE PARTNERS"
+    },
+    {
+      "id": "doa7q1g",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Country/Region</strong></p>",
+            "<p><strong>Trade Nature</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>USA</p>",
+            "<p>Largest export destination</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>UAE</p>",
+            "<p>Major export &amp; oil partner</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>China</p>",
+            "<p>Largest import source</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>European Union</p>",
+            "<p>Major export market</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Saudi Arabia</p>",
+            "<p>Crude oil supplier</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Russia</p>",
+            "<p>Energy &amp; defence imports</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wwor07w",
+      "type": "heading",
+      "level": 2,
+      "content": "4. INDIA’S EXPORT-IMPORT COMPOSITION"
+    },
+    {
+      "id": "rdwddh2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Major Exports</strong></p>",
+            "<p><strong>Major Imports</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Energy</p>",
+            "<p>Petroleum products</p>",
+            "<p>Crude oil</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Manufacturing</p>",
+            "<p>Engineering goods</p>",
+            "<p>Machinery</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Precious Items</p>",
+            "<p>Gems &amp; Jewellery</p>",
+            "<p>Gold</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Technology</p>",
+            "<p>IT Services</p>",
+            "<p>Electronics</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pharma &amp; Chemicals</p>",
+            "<p>Pharmaceuticals</p>",
+            "<p>Chemical inputs</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Currency depreciation boosts export competitiveness but increases total import costs.",
+        "India's managed floating exchange rate system and Forex reserves are regulated and maintained by the RBI.",
+        "Crude oil is India's largest import item; USA is the top export partner, and China is the major import source.",
+        "A Current Account Deficit (CAD) is triggered specifically when overall imports exceed exports."
+      ],
+      "id": "wv97mk8"
+    },
+    {
+      "id": "2imuj0d",
+      "type": "heading",
+      "level": 2,
+      "content": "RRB HIGH-VALUE EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Exchange rate determined by demand &amp; supply in flexible system.<br/>• Depreciation boosts exports but increases import cost.<br/>• USA is major export partner; China major import source.<br/>• Crude oil is India’s largest import item.",
+      "id": "hmpu4cs"
+    },
+    {
+      "type": "paragraph",
+      "content": "• BoP consists of Current and Capital Accounts.<br/>• CAD occurs when imports exceed exports.<br/>• India follows managed floating exchange rate.<br/>• Depreciation increases export competitiveness.<br/>• Forex reserves maintained by RBI.<br/>",
+      "id": "82emynl"
+    }
+  ],
+  "enriched": true
+}

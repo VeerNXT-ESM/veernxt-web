@@ -4,8 +4,15 @@
   "order": 27,
   "blocks": [
     {
+      "id": "p47aic6",
+      "type": "image",
+      "imageId": "7gcj8hs",
+      "src": "/books/Guide/GEN AWARENESS/images/image_7gcj8hs.png"
+    },
+    {
       "type": "paragraph",
-      "id": "1dtafdz"
+      "id": "1dtafdz",
+      "content": "<img></img>The Panchayati Raj System represents rural local self-government in India. It aims to decentralize power and ensure people's participation in governance at the grassroots level. The system received constitutional status through the 73rd Constitutional Amendment Act, 1992."
     },
     {
       "type": "statStrip",
@@ -52,19 +59,23 @@
     },
     {
       "type": "paragraph",
-      "id": "02f55ja"
+      "id": "02f55ja",
+      "content": "• Village self-government existed in ancient India."
     },
     {
       "type": "paragraph",
-      "id": "2far7rq"
+      "id": "2far7rq",
+      "content": "• The Balwant Rai Mehta Committee (1957) recommended democratic decentralization."
     },
     {
       "type": "paragraph",
-      "id": "kvm0ct2"
+      "id": "kvm0ct2",
+      "content": "• The committee suggested a three-tier Panchayati Raj system."
     },
     {
       "type": "paragraph",
-      "id": "26na9o7"
+      "id": "26na9o7",
+      "content": "• The 73rd Constitutional Amendment Act, 1992 gave constitutional status to Panchayats."
     },
     {
       "id": "koi1nyo",
@@ -79,85 +90,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243</p>",
+            "<p>Definitions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243A</p>",
+            "<p>Gram Sabha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243B</p>",
+            "<p>Constitution of Panchayats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243C</p>",
+            "<p>Composition of Panchayats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243D</p>",
+            "<p>Reservation of seats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243E</p>",
+            "<p>Duration of Panchayats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243F</p>",
+            "<p>Disqualification of members</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243G</p>",
+            "<p>Powers and responsibilities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243H</p>",
+            "<p>Power to impose taxes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243I</p>",
+            "<p>State Finance Commission</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243K</p>",
+            "<p>State Election Commission</p>"
           ]
         }
       ]
@@ -175,29 +186,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Level</strong></p>",
+            "<p><strong>Institution</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Village Level</p>",
+            "<p>Gram Panchayat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Intermediate/Block Level</p>",
+            "<p>Panchayat Samiti</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>District Level</p>",
+            "<p>Zila Parishad</p>"
           ]
         }
       ]
@@ -210,20 +221,18 @@
     },
     {
       "type": "paragraph",
-      "id": "861rrjb"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Constitutional Provisions (Part IX)",
-      "id": "p71dz7u"
+      "id": "861rrjb",
+      "content": "• Consists of all registered voters in the village."
     },
     {
       "type": "paragraph",
-      "id": "65oqb12"
+      "id": "65oqb12",
+      "content": "• Acts as the foundation of the Panchayati Raj system."
     },
     {
       "type": "paragraph",
-      "id": "yvv8pxk"
+      "id": "yvv8pxk",
+      "content": "• Approves plans and budgets of the Gram Panchayat."
     },
     {
       "id": "3ht7uzv",
@@ -233,15 +242,18 @@
     },
     {
       "type": "paragraph",
-      "id": "lf14xl2"
+      "id": "lf14xl2",
+      "content": "• Executive body at village level."
     },
     {
       "type": "paragraph",
-      "id": "lbkst3h"
+      "id": "lbkst3h",
+      "content": "• Members elected directly by villagers."
     },
     {
       "type": "paragraph",
-      "id": "unkjoro"
+      "id": "unkjoro",
+      "content": "• The head is called Sarpanch or Pradhan."
     },
     {
       "id": "ei4rg4d",
@@ -277,11 +289,13 @@
     },
     {
       "type": "paragraph",
-      "id": "x05yn38"
+      "id": "x05yn38",
+      "content": "• Works at block level."
     },
     {
       "type": "paragraph",
-      "id": "93hm9e0"
+      "id": "93hm9e0",
+      "content": "• Coordinates activities of Gram Panchayats."
     },
     {
       "id": "8vbzp0d",
@@ -291,11 +305,13 @@
     },
     {
       "type": "paragraph",
-      "id": "5l6xyhr"
+      "id": "5l6xyhr",
+      "content": "• Functions at district level."
     },
     {
       "type": "paragraph",
-      "id": "3q87ems"
+      "id": "3q87ems",
+      "content": "• Supervises Panchayat Samitis."
     },
     {
       "id": "llptjft",
@@ -305,19 +321,23 @@
     },
     {
       "type": "paragraph",
-      "id": "ht3pilo"
+      "id": "ht3pilo",
+      "content": "• Three-tier structure of governance."
     },
     {
       "type": "paragraph",
-      "id": "ice4e5p"
+      "id": "ice4e5p",
+      "content": "• Regular elections every five years."
     },
     {
       "type": "paragraph",
-      "id": "fltdqiw"
+      "id": "fltdqiw",
+      "content": "• Reservation for SC, ST and women."
     },
     {
       "type": "paragraph",
-      "id": "5yryi0m"
+      "id": "5yryi0m",
+      "content": "• State Election Commission for conducting elections."
     },
     {
       "type": "examAlert",
@@ -330,7 +350,8 @@
     },
     {
       "type": "paragraph",
-      "id": "x2zv90p"
+      "id": "x2zv90p",
+      "content": "• State Finance Commission for financial review."
     },
     {
       "id": "6ucoosw",
@@ -340,19 +361,23 @@
     },
     {
       "type": "paragraph",
-      "id": "me1lveb"
+      "id": "me1lveb",
+      "content": "• 73rd Constitutional Amendment Act (1992) introduced Panchayati Raj."
     },
     {
       "type": "paragraph",
-      "id": "9ix5ubc"
+      "id": "9ix5ubc",
+      "content": "• Gram Sabha is the basic unit of rural democracy."
     },
     {
       "type": "paragraph",
-      "id": "dfqr04b"
+      "id": "dfqr04b",
+      "content": "• At least one-third seats reserved for women."
     },
     {
       "type": "paragraph",
-      "id": "1psic2u"
+      "id": "1psic2u",
+      "content": "• Panchayat elections are held every 5 years."
     }
   ],
   "enriched": true

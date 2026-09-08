@@ -1,0 +1,83 @@
+{
+  "title": "ULTRA QUICK REVISION",
+  "order": 81,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Igneous — cooling magma<br/>Sedimentary — compressed sediments<br/>Metamorphic — heat &amp; pressure",
+      "id": "pxuz2cy"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Metamorphic — heat & pressure",
+      "id": "ft1d5zs"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Rock Type",
+        "Primary Formation Process"
+      ],
+      "rows": [
+        [
+          "Igneous",
+          "Cooling magma"
+        ],
+        [
+          "Sedimentary",
+          "Compressed sediments"
+        ],
+        [
+          "Metamorphic",
+          "Heat & pressure"
+        ]
+      ],
+      "id": "g0cnak9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Rock Types",
+          "value": "3",
+          "icon": "book"
+        },
+        {
+          "label": "Igneous Origin",
+          "value": "Cooling Magma",
+          "icon": "info"
+        },
+        {
+          "label": "Sedimentary Origin",
+          "value": "Compressed Sediments",
+          "icon": "check"
+        },
+        {
+          "label": "Metamorphic Origin",
+          "value": "Heat & Pressure",
+          "icon": "clock"
+        }
+      ],
+      "id": "mc4b79u"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently test the primary agent of formation: Igneous (magma cooling) vs. Metamorphic (heat & pressure).",
+        "Remember that Sedimentary rock formation specifically requires the compression of accumulated sediments."
+      ],
+      "id": "hlniq5f"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks are formed through the cooling and solidification of molten magma.",
+        "Sedimentary rocks result from the accumulation, compaction, and compression of mineral sediments.",
+        "Metamorphic rocks are created when existing rock types undergo transformation due to extreme heat and high pressure."
+      ],
+      "id": "4asuqhf"
+    }
+  ],
+  "enriched": true
+}

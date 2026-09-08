@@ -1,0 +1,120 @@
+{
+  "title": "10. Soil Conservation",
+  "order": 189,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Contour Ploughing: Ploughing along slope contours to reduce runoff.",
+      "id": "9vj5ayj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Methods Covered",
+          "value": "5 Techniques",
+          "icon": "book"
+        },
+        {
+          "label": "Main Goal",
+          "value": "Reduce Erosion",
+          "icon": "check"
+        },
+        {
+          "label": "Wind Protection",
+          "value": "Shelter Belts",
+          "icon": "info"
+        },
+        {
+          "label": "Soil Binding",
+          "value": "Afforestation",
+          "icon": "award"
+        }
+      ],
+      "id": "57wevd5"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Ploughing along slope contours to reduce runoff.",
+      "id": "gmyxpgm"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Contour Ploughing involves ploughing along slope contours to effectively reduce runoff.",
+        "Terracing prevents erosion by creating steps on steep slopes.",
+        "Afforestation focuses on planting trees to securely bind the soil.",
+        "Strip Cropping minimizes soil erosion by alternating strips of different crops.",
+        "Shelter Belts reduce wind speed through strategically planted rows of trees."
+      ],
+      "id": "p8poqby"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Conservation Method",
+        "Technique / Action",
+        "Primary Purpose"
+      ],
+      "rows": [
+        [
+          "Contour Ploughing",
+          "Ploughing along slope contours",
+          "Reduce runoff"
+        ],
+        [
+          "Terracing",
+          "Creating steps on slopes",
+          "Erosion control on slopes"
+        ],
+        [
+          "Afforestation",
+          "Planting trees",
+          "Bind soil"
+        ],
+        [
+          "Strip Cropping",
+          "Alternating crop strips",
+          "Reduce erosion"
+        ],
+        [
+          "Shelter Belts",
+          "Planting rows of trees",
+          "Reduce wind speed"
+        ]
+      ],
+      "id": "73akrhb"
+    },
+    {
+      "type": "paragraph",
+      "content": "Terracing: Creating steps on slopes.",
+      "id": "jv4ham8"
+    },
+    {
+      "type": "paragraph",
+      "content": "Afforestation: Planting trees to bind soil.",
+      "id": "pojbpx8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Shelter Belts (reduces wind speed) and Afforestation (binds soil using trees).",
+        "Contour Ploughing and Terracing are both slope-based techniques, but Terracing specifically involves creating steps.",
+        "Strip Cropping relies on alternating crop layouts to combat soil erosion."
+      ],
+      "id": "agmbxeg"
+    },
+    {
+      "type": "paragraph",
+      "content": "Strip Cropping: Alternating crop strips to reduce erosion.",
+      "id": "tnmtz1n"
+    },
+    {
+      "type": "paragraph",
+      "content": "Shelter Belts: Rows of trees to reduce wind speed.",
+      "id": "dw29d05"
+    }
+  ],
+  "enriched": true
+}

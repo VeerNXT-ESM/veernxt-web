@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "whhorw6"
+      "id": "whhorw6",
+      "content": "Originally:<br></br>• 395 Articles<br></br>• 22 Parts<br></br>• 8 Schedules<br></br><br></br>Present:<br></br>• 450+ Articles<br></br>• 25 Parts"
     },
     {
       "type": "statStrip",
@@ -79,11 +80,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "xj2bkk0"
+      "id": "xj2bkk0",
+      "content": "• 12 Schedules"
     },
     {
       "type": "paragraph",
-      "id": "h5jqrxq"
+      "id": "h5jqrxq",
+      "content": "<br></br>VERY IMPORTANT: Frequently asked in RRB exams."
     },
     {
       "type": "examAlert",
@@ -97,7 +100,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "pi47gq8"
+      "id": "pi47gq8",
+      "content": "<strong>Sources of the Indian Constitution</strong>"
     },
     {
       "id": "z7ylggt",
@@ -106,71 +110,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Country</strong></p>",
+            "<p><strong>Features Borrowed</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Britain</p>",
+            "<p>Parliamentary System, Rule of Law, Single Citizenship</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>USA</p>",
+            "<p>Fundamental Rights, Judicial Review, Independence of Judiciary</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ireland</p>",
+            "<p>Directive Principles of State Policy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Canada</p>",
+            "<p>Federal System with Strong Centre</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Australia</p>",
+            "<p>Concurrent List, Freedom of Trade</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Germany</p>",
+            "<p>Emergency Provisions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>USSR (Russia)</p>",
+            "<p>Fundamental Duties</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>France</p>",
+            "<p>Republic and ideals of Liberty, Equality, Fraternity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Japan</p>",
+            "<p>Procedure Established by Law</p>"
           ]
         }
       ]

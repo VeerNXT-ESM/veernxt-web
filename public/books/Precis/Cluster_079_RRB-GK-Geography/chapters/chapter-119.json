@@ -1,0 +1,89 @@
+{
+  "title": "7. Hazards of Volcanoes",
+  "order": 119,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "Pyroclastic flows are among the most lethal of all volcanic hazards due to their extreme temperatures and extraordinary speeds.",
+      "id": "uz5646o"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Hazard Type",
+        "Primary Composition",
+        "Movement & Velocity",
+        "Major Impact Area"
+      ],
+      "rows": [
+        [
+          "Pyroclastic Flow",
+          "Incandescent ash, pumice, and toxic gases",
+          "Extremely rapid (up to 700 km/h) gravity-driven flows",
+          "Immediate surrounding slopes and proximal valleys"
+        ],
+        [
+          "Lahar",
+          "Volcanic ash, mud, water, and debris",
+          "High-velocity fluid mudflows following river valleys",
+          "Downstream river channels and low-lying plains"
+        ],
+        [
+          "Tephra / Ash Fall",
+          "Pulverized rock fragments and glass particles",
+          "Atmospheric dispersion via wind currents",
+          "Widespread regional airspace, farmlands, and urban roofs"
+        ]
+      ],
+      "id": "7qginpv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Pacific Ring of Fire",
+          "value": "75% Active Volcanoes",
+          "icon": "info"
+        },
+        {
+          "label": "VEI Scale Range",
+          "value": "0 to 8 Logarithmic",
+          "icon": "clock"
+        },
+        {
+          "label": "India Active Volcano",
+          "value": "Barren Island",
+          "icon": "check"
+        },
+        {
+          "label": "Lethal Volcanic Hazard",
+          "value": "Pyroclastic Flow",
+          "icon": "award"
+        }
+      ],
+      "id": "fx8ctrv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: Distinction between Pyroclastic Flows (high-temperature dry gas/ash) and Lahars (water-saturated volcanic mudflows).",
+        "Barren Island in the Andaman Sea is India's only active volcano, whereas Narcondam is considered a dormant/extinct volcanic island.",
+        "Sulfur dioxide released into the stratosphere forms sulfate aerosols that reflect solar radiation, leading to global volcanic winter effects."
+      ],
+      "id": "kih2ce4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways: Volcanic Hazards",
+      "items": [
+        "Pyroclastic flows are high-density mixtures of scorching gas, ash, and volcanic rock moving at speeds exceeding several hundred kilometers per hour.",
+        "Lahars are catastrophic volcanic mudflows formed when volcanic debris mixes with heavy rainfall, river water, or melted snow and ice.",
+        "Volcanic ash consists of microscopic pulverized rock and glass, posing severe hazards to commercial aviation, public health, and electrical grids.",
+        "Volcanic gas emissions contain sulfur dioxide, carbon dioxide, and hydrogen fluoride, contributing to acid rain and localized asphyxiation.",
+        "The Volcanic Explosivity Index (VEI) measures eruption magnitude from 0 (non-explosive) to 8 (mega-colossal super-eruptions)."
+      ],
+      "id": "s55hiyp"
+    }
+  ],
+  "enriched": true
+}

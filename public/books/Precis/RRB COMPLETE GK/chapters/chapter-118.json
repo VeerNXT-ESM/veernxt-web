@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "tzfukmv"
+      "id": "tzfukmv",
+      "content": "Weathering refers to the in-situ disintegration and decomposition of rocks at or near the Earth's surface without transportation. It is the first step in soil formation and sediment production."
     },
     {
       "type": "statStrip",
@@ -35,6 +36,12 @@
       "content": "Types of Weathering"
     },
     {
+      "id": "6768bv6",
+      "type": "image",
+      "imageId": "7hmh95t",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_7hmh95t.png"
+    },
+    {
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
@@ -53,33 +60,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Nature</strong></p>",
+            "<p><strong>Dominant Climate</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mechanical (Physical)</p>",
+            "<p>Breakdown without chemical change</p>",
+            "<p>Cold &amp; arid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chemical</p>",
+            "<p>Mineral alteration</p>",
+            "<p>Hot &amp; humid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Biological</p>",
+            "<p>Caused by organisms</p>",
+            "<p>Humid vegetated areas</p>"
           ]
         }
       ]
@@ -93,32 +100,38 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ltca9p5"
+      "id": "ltca9p5",
+      "content": "• Freeze–Thaw (Frost Wedging)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qdid6yf"
+      "id": "qdid6yf",
+      "content": "• Exfoliation (Onion Peeling)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "r1d0rkx"
+      "id": "r1d0rkx",
+      "content": "• Thermal Expansion and Contraction"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4ca3bgm"
+      "id": "4ca3bgm",
+      "content": "• Salt Crystallization"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qr30fx6"
+      "id": "qr30fx6",
+      "content": "• Pressure Release (Unloading)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q9d9hq9"
+      "id": "q9d9hq9",
+      "content": "• Block Disintegration"
     },
     {
       "type": "pullQuote",
@@ -128,7 +141,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ku6m2sw"
+      "id": "ku6m2sw",
+      "content": "• Granular Disintegration"
     },
     {
       "id": "pncnt4b",
@@ -138,15 +152,18 @@
     },
     {
       "type": "paragraph",
-      "id": "x8xq5oa"
+      "id": "x8xq5oa",
+      "content": "• Oxidation – reaction with oxygen (iron-rich rocks)."
     },
     {
       "type": "paragraph",
-      "id": "p7nea8l"
+      "id": "p7nea8l",
+      "content": "• Carbonation – carbonic acid dissolves limestone (karst landscapes)."
     },
     {
       "type": "paragraph",
-      "id": "jlh43ka"
+      "id": "jlh43ka",
+      "content": "• Hydrolysis – formation of clay minerals."
     },
     {
       "type": "comparisonTable",
@@ -176,11 +193,13 @@
     },
     {
       "type": "paragraph",
-      "id": "h86rebz"
+      "id": "h86rebz",
+      "content": "• Hydration – absorption of water causing expansion."
     },
     {
       "type": "paragraph",
-      "id": "dusq805"
+      "id": "dusq805",
+      "content": "• Solution – complete dissolution of soluble minerals."
     },
     {
       "id": "8sll7nw",
@@ -190,15 +209,18 @@
     },
     {
       "type": "paragraph",
-      "id": "8772rz5"
+      "id": "8772rz5",
+      "content": "• Spheroidal Weathering – rounded rock forms due to chemical attack at corners."
     },
     {
       "type": "paragraph",
-      "id": "cldme02"
+      "id": "cldme02",
+      "content": "• Laterization – intense leaching in tropical climates forming laterite soils."
     },
     {
       "type": "paragraph",
-      "id": "16xu910"
+      "id": "16xu910",
+      "content": "• Differential Weathering – softer rocks weather faster than hard rocks."
     },
     {
       "id": "3swkry7",
@@ -209,7 +231,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "8xgzqmw"
+      "id": "8xgzqmw",
+      "content": "• Climate (temperature &amp; rainfall)"
     },
     {
       "type": "examAlert",
@@ -222,26 +245,31 @@
     },
     {
       "type": "paragraph",
-      "id": "rgrx3oq"
+      "id": "rgrx3oq",
+      "content": "• Rock type &amp; mineral composition"
     },
     {
       "type": "paragraph",
-      "id": "dl28ebr"
+      "id": "dl28ebr",
+      "content": "• Rock structure (joints &amp; fractures)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rxhv8p9"
+      "id": "rxhv8p9",
+      "content": "• Relief &amp; slope"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7sjf6p9"
+      "id": "7sjf6p9",
+      "content": "• Vegetation"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "35fhs9s"
+      "id": "35fhs9s",
+      "content": "• Time duration"
     }
   ],
   "enriched": true

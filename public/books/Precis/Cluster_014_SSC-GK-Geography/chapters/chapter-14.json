@@ -1,0 +1,342 @@
+{
+  "title": "CHAPTER 12: ATMOSPHERE",
+  "order": 14,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The atmosphere is a dynamic, multi-layered envelope of gases surrounding the Earth, held by gravitational force. It is not just a static blanket of air but a continuously changing system that controls weather, climate, energy balance, and life-support systems. Almost every physical geography question in SSC has a direct or indirect link with the atmosphere. Therefore, this chapter demands very deep conceptual clarity.",
+      "id": "55vpmob"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Nitrogen Content",
+          "value": "78%",
+          "icon": "info"
+        },
+        {
+          "label": "Oxygen Content",
+          "value": "21%",
+          "icon": "check"
+        },
+        {
+          "label": "Carbon Dioxide",
+          "value": "< 0.04%",
+          "icon": "info"
+        },
+        {
+          "label": "Tropospheric Mass",
+          "value": "75%",
+          "icon": "book"
+        },
+        {
+          "label": "Water Vapour Range",
+          "value": "0–4%",
+          "icon": "clock"
+        }
+      ],
+      "id": "xi40xfh"
+    },
+    {
+      "id": "o0bakwp",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: COMPOSITION OF THE ATMOSPHERE (IN-DEPTH)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Nitrogen (78%) and Oxygen (21%) make up the majority of atmospheric gases, while Carbon Dioxide (<0.04%) drives the greenhouse effect by absorbing terrestrial radiation.",
+        "The Troposphere holds 75% of atmospheric mass and almost all water vapour, making it the primary seat of all weather phenomena.",
+        "Dust particles act as crucial condensation nuclei without which cloud formation and precipitation cannot occur efficiently.",
+        "Vertical movement of air via convection is the primary heat transfer mechanism responsible for cloud formation and rainfall.",
+        "Global wind systems flow from high to low pressure regions and are deflected by Earth's rotation via the Coriolis force."
+      ],
+      "id": "4yytsir"
+    },
+    {
+      "id": "hpwwuey",
+      "type": "heading",
+      "level": 3,
+      "content": "Gaseous Composition"
+    },
+    {
+      "type": "paragraph",
+      "content": "Nitrogen (78%) is chemically inert and regulates combustion. Oxygen (21%) supports respiration and oxidation processes. Argon and other noble gases form about 1%. Carbon dioxide, though less than 0.04%, is extremely important because it absorbs terrestrial radiation and helps maintain Earth’s temperature (greenhouse effect).",
+      "id": "7lxezhh"
+    },
+    {
+      "id": "pnjd5rw",
+      "type": "heading",
+      "level": 3,
+      "content": "Variable Components"
+    },
+    {
+      "type": "paragraph",
+      "content": "Water vapour varies from 0–4% and controls humidity, cloud formation, and rainfall. Dust particles act as condensation nuclei and are essential for precipitation. Without dust particles, clouds and rain would not form efficiently.",
+      "id": "oh0684x"
+    },
+    {
+      "id": "uo6qz2g",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: STRUCTURE OF THE ATMOSPHERE (VERY DEEP)"
+    },
+    {
+      "id": "rscgru4",
+      "type": "heading",
+      "level": 3,
+      "content": "Troposphere"
+    },
+    {
+      "type": "paragraph",
+      "content": "The troposphere is the lowest and most important layer for humans. It contains about 75% of atmospheric mass and almost all water vapour and dust. Temperature decreases with height due to decreasing air density and indirect heating.",
+      "id": "v92e3ce"
+    },
+    {
+      "id": "r031p14",
+      "type": "heading",
+      "level": 3,
+      "content": "Temperature Inversion"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sometimes temperature increases with height instead of decreasing. This phenomenon is called temperature inversion. It traps pollutants near the surface and causes smog, especially in winter in urban and valley regions.",
+      "id": "z8x2lcl"
+    },
+    {
+      "id": "eqce309",
+      "type": "heading",
+      "level": 3,
+      "content": "Stratosphere"
+    },
+    {
+      "type": "paragraph",
+      "content": "The stratosphere is a stable layer with almost no vertical air movement. The ozone layer absorbs ultraviolet radiation and prevents skin cancer, eye damage, and genetic mutations. This stability makes the stratosphere suitable for jet aircraft.",
+      "id": "zc2wpvi"
+    },
+    {
+      "id": "rub262d",
+      "type": "heading",
+      "level": 3,
+      "content": "Mesosphere"
+    },
+    {
+      "type": "paragraph",
+      "content": "The mesosphere is the coldest layer of the atmosphere. Meteors entering Earth’s atmosphere burn up in this layer due to friction, protecting the Earth’s surface.",
+      "id": "2qhtlx1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The troposphere is the lowest and most important layer for humans.",
+      "id": "t9gswl8"
+    },
+    {
+      "id": "sxdj12o",
+      "type": "heading",
+      "level": 3,
+      "content": "Thermosphere & Ionosphere"
+    },
+    {
+      "type": "paragraph",
+      "content": "The thermosphere has extremely high temperatures due to absorption of solar energy. The ionosphere reflects radio waves, enabling long-distance communication.",
+      "id": "z2kqz37"
+    },
+    {
+      "id": "swc22yi",
+      "type": "heading",
+      "level": 3,
+      "content": "Exosphere"
+    },
+    {
+      "type": "paragraph",
+      "content": "The exosphere is the outermost layer where gases gradually escape into space. Satellites orbit in this region.",
+      "id": "6yzi2t0"
+    },
+    {
+      "id": "taeshwe",
+      "type": "heading",
+      "level": 2,
+      "content": "PART C: HEATING OF THE ATMOSPHERE (CONCEPTUAL CORE)"
+    },
+    {
+      "id": "k342vr3",
+      "type": "heading",
+      "level": 3,
+      "content": "Insolation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Insolation is the incoming solar radiation received by the Earth. It varies with latitude, season, time of day, and atmospheric conditions.",
+      "id": "t67znik"
+    },
+    {
+      "id": "b7y9vnt",
+      "type": "heading",
+      "level": 3,
+      "content": "Heat Transfer Processes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Radiation transfers heat without a medium. Conduction transfers heat through contact (limited near surface). Convection transfers heat through vertical movement of air and is the main reason for cloud formation and rainfall.",
+      "id": "xq0j8w6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Atmospheric Layer",
+        "Key Features",
+        "Exam Significance"
+      ],
+      "rows": [
+        [
+          "Troposphere",
+          "Contains 75% atmospheric mass, water vapour, and dust particles",
+          "Site of weather events and temperature inversion"
+        ],
+        [
+          "Stratosphere",
+          "Stable layer with ozone gas and minimal vertical air movement",
+          "Absorbs harmful UV radiation; preferred layer for flying jet aircraft"
+        ],
+        [
+          "Mesosphere",
+          "Coldest layer of the atmosphere",
+          "Meteors burn up due to friction upon entering"
+        ],
+        [
+          "Thermosphere / Ionosphere",
+          "Extremely high temperatures with electrically charged ions",
+          "Reflects radio waves for long-distance wireless communication"
+        ],
+        [
+          "Exosphere",
+          "Outermost atmospheric layer where gases escape to space",
+          "Region where satellites orbit Earth"
+        ]
+      ],
+      "id": "jlimd9g"
+    },
+    {
+      "id": "18dflcy",
+      "type": "heading",
+      "level": 2,
+      "content": "PART D: AIR PRESSURE & WINDS (LINKED EXPLANATION)"
+    },
+    {
+      "id": "5mer7vv",
+      "type": "heading",
+      "level": 3,
+      "content": "Air Pressure"
+    },
+    {
+      "type": "paragraph",
+      "content": "Air pressure is highest at sea level and decreases with height. Unequal heating creates pressure differences which generate winds.",
+      "id": "8nvgw18"
+    },
+    {
+      "id": "e1knb0y",
+      "type": "heading",
+      "level": 3,
+      "content": "Pressure Belts (CAUSE–EFFECT)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Equatorial low pressure forms due to intense heating and rising air. Subtropical high pressure forms due to descending air. These pressure belts control global wind circulation.",
+      "id": "5v7ru0x"
+    },
+    {
+      "id": "1ogf0rw",
+      "type": "heading",
+      "level": 3,
+      "content": "Winds"
+    },
+    {
+      "type": "paragraph",
+      "content": "Winds always move from high pressure to low pressure but are deflected due to Earth’s rotation (Coriolis force). This explains trade winds, westerlies, and polar easterlies.",
+      "id": "mjj6cb4"
+    },
+    {
+      "id": "dam7edk",
+      "type": "heading",
+      "level": 2,
+      "content": "PART E: HUMIDITY, CLOUDS & PRECIPITATION"
+    },
+    {
+      "id": "siqdg0i",
+      "type": "heading",
+      "level": 3,
+      "content": "Humidity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Humidity refers to the amount of water vapour present in air. High humidity reduces evaporation and causes discomfort.",
+      "id": "9fj6h0w"
+    },
+    {
+      "id": "k541blt",
+      "type": "heading",
+      "level": 3,
+      "content": "Clouds"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Troposphere: Contains 75% atmospheric mass, hosts weather processes, and experiences temperature inversion trapping smog.",
+        "Stratosphere: Contains the ozone layer absorbing UV rays; free from vertical air movement, making it ideal for jet aircraft.",
+        "Mesosphere & Ionosphere: Meteors burn up in the cold Mesosphere; Ionosphere reflects radio waves enabling communication.",
+        "Convection: Vertical air movement identified as the main driver for cloud formation and rainfall."
+      ],
+      "id": "bzl2vdv"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clouds are formed when moist air rises, cools, and condenses. Major cloud types include cirrus, cumulus, and stratus.",
+      "id": "bd6vukf"
+    },
+    {
+      "id": "w2i50n6",
+      "type": "heading",
+      "level": 3,
+      "content": "Precipitation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Precipitation occurs when cloud particles become heavy and fall. Major types include rainfall, snowfall, sleet, and hail. Convectional, orographic, and cyclonic rainfall are important for exams.",
+      "id": "a8ofayw"
+    },
+    {
+      "id": "joeqj6d",
+      "type": "heading",
+      "level": 2,
+      "content": "PART F: IMPORTANCE OF ATMOSPHERE (COMPLETE)"
+    },
+    {
+      "type": "paragraph",
+      "content": "The atmosphere makes Earth habitable, regulates temperature, protects from harmful radiation and meteors, and supports the hydrological cycle.",
+      "id": "9c5i9jz"
+    },
+    {
+      "id": "imz7nbq",
+      "type": "heading",
+      "level": 3,
+      "content": "Ultra Revision Points (SSC)"
+    },
+    {
+      "id": "6i7uy16",
+      "type": "list",
+      "items": [
+        "<ol><li>Troposphere – weather + inversion</li><li>Stratosphere – ozone + jets</li><li>Mesosphere – meteors</li><li>Ionosphere – radio waves</li><li>CO₂ – greenhouse gas</li><li>Convection – rainfall</li></ol>",
+        "Troposphere – weather + inversion",
+        "Stratosphere – ozone + jets",
+        "Mesosphere – meteors",
+        "Ionosphere – radio waves",
+        "CO₂ – greenhouse gas",
+        "Convection – rainfall"
+      ]
+    }
+  ],
+  "enriched": true
+}

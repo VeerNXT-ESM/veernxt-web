@@ -1,0 +1,133 @@
+{
+  "title": "Duties and Powers of CAG",
+  "order": 227,
+  "blocks": [
+    {
+      "id": "svifz5n",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Audit of Union Accounts</p>",
+            "<p>Audits receipts and expenditure of the Central Government</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Audit of State Accounts</p>",
+            "<p>Audits financial transactions of State Governments</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Audit of Government Companies</p>",
+            "<p>Examines companies owned or funded by government</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Audit of Public Corporations</p>",
+            "<p>Reviews financial statements of statutory corporations</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ensure Legal Spending</p>",
+            "<p>Checks that public money is spent legally and efficiently</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The CAG is the guardian of the public purse and controls the entire financial system of the country at both the levels—the Centre and the state.",
+      "id": "im06r5g"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "CAG of India",
+        "CAG of Great Britain"
+      ],
+      "rows": [
+        [
+          "Scope of Authority",
+          "Acts purely as an Auditor General; money can be withdrawn from the treasury without CAG consent.",
+          "Acts as both Comptroller and Auditor General; executive cannot withdraw money without CAG authorization."
+        ],
+        [
+          "Parliamentary Membership",
+          "Not a member of Parliament and does not attend parliamentary debates.",
+          "Is an official who acts directly as an officer of the House of Commons."
+        ],
+        [
+          "Timing of Control",
+          "Ex-post audit (audits expenditure after money has already been spent).",
+          "Ex-ante and ex-post control (controls issue of public money prior to expenditure as well as post-audit)."
+        ]
+      ],
+      "id": "zwlhhyf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 148-151",
+          "icon": "book"
+        },
+        {
+          "label": "Tenure Limit",
+          "value": "6 Years / 65 Age",
+          "icon": "clock"
+        },
+        {
+          "label": "Enacting Act",
+          "value": "CAG DPA Act 1971",
+          "icon": "calendar"
+        },
+        {
+          "label": "Audit Reports",
+          "value": "3 Annual Reports",
+          "icon": "info"
+        }
+      ],
+      "id": "bsmmk8j"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CAG of India acts only as an Auditor General (ex-post audit) and not as a Comptroller, meaning executive authorities can draw money from the Consolidated Fund without CAG's prior approval.",
+        "Administrative expenses of the CAG office, including salaries, allowances, and pensions of persons serving in that office, are charged upon the Consolidated Fund of India and are non-votable.",
+        "CAG is not eligible for further office either under the Government of India or under the Government of any State after ceasing to hold office."
+      ],
+      "id": "3x5tm64"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The CAG derives authority and powers from Article 149 of the Constitution and the CAG's (Duties, Powers and Conditions of Service) Act, 1971.",
+        "Audits all expenditure from the Consolidated Fund of India, Consolidated Funds of States, and UTs having a Legislative Assembly.",
+        "Audits accounts related to the Contingency Fund of India and the Public Account of India, as well as state-level contingency funds and public accounts.",
+        "Submits three annual audit reports to the President (Appropriation Accounts, Finance Accounts, and Public Undertakings), who lays them before Parliament.",
+        "Functions as an agent of Parliament and acts as a guide, friend, and philosopher to the Public Accounts Committee (PAC)."
+      ],
+      "id": "5gnc4iv"
+    }
+  ],
+  "enriched": true
+}

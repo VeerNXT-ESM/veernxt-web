@@ -1,0 +1,86 @@
+{
+  "title": "ULTRA QUICK REVISION",
+  "order": 95,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Pangaea → Laurasia + Gondwanaland<br/>Lithosphere over asthenosphere<br/>Divergent → new crust<br/>Convergent → subduction<br/>Transform → earthquakes",
+      "id": "la89n6o"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Lithosphere over asthenosphere",
+      "id": "1kk1mmj"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Plate Boundary Type",
+        "Geological Process / Feature"
+      ],
+      "rows": [
+        [
+          "Divergent",
+          "New crust"
+        ],
+        [
+          "Convergent",
+          "Subduction"
+        ],
+        [
+          "Transform",
+          "Earthquakes"
+        ]
+      ],
+      "id": "032e409"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Original Supercontinent",
+          "value": "Pangaea",
+          "icon": "info"
+        },
+        {
+          "label": "Major Split Regions",
+          "value": "2 (Laurasia & Gondwanaland)",
+          "icon": "check"
+        },
+        {
+          "label": "Boundary Types",
+          "value": "3 Major Types",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Seismic Trigger",
+          "value": "Transform Boundaries",
+          "icon": "clock"
+        }
+      ],
+      "id": "x83z97a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Divergent boundaries construct new crust, whereas convergent boundaries involve subduction.",
+        "Transform boundaries are distinctly associated with causing earthquakes.",
+        "Pangaea divided into Laurasia and Gondwanaland."
+      ],
+      "id": "m31duj2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Pangaea originally split into two major landmasses: Laurasia and Gondwanaland.",
+        "The rigid lithosphere lies directly over the semi-fluid asthenosphere.",
+        "Divergent plate movements lead to the creation of new crust.",
+        "Convergent plate movements result in subduction processes.",
+        "Transform boundary interactions generate seismic activity resulting in earthquakes."
+      ],
+      "id": "6jr6zob"
+    }
+  ],
+  "enriched": true
+}

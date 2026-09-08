@@ -1,0 +1,169 @@
+{
+  "id": "en5frgn",
+  "title": "Puzzles",
+  "order": 14,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hiwdb1c",
+      "content": "<strong>CHAPTER  14\tPUZZLES</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "h3vr8us",
+      "content": "<em>Floor Puzzle | Box/Stack Puzzle | Days/Months Scheduling</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7moa512",
+      "content": "<strong>14.1  Introduction</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "my2ho98",
+      "content": "Puzzle questions provide a set of conditions and ask you to arrange people/objects in a specific order (floors, boxes, days, etc.). These are high-weightage questions in  CGL Tier 2 and also appear in Tier 1 as 2–3 question sets."
+    },
+    {
+      "id": "of3f1iy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>STEP-BY-STEP APPROACH TO SOLVE PUZZLES</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Step 1: Read ALL clues once before attempting.</p><p>Step 2: Identify the type: floor/box/days/months/year.</p><p>Step 3: Note definite placements first (e.g., 'A lives on top floor').</p><p>Step 4: Use elimination: if A is confirmed somewhere, remove A from other positions.</p><p>Step 5: Use relative clues (above/below, before/after) to narrow down.</p><p>Step 6: Try the most constrained clue first — the one with fewest options.</p><p>Step 7: Make a table/grid. Rows = positions, Columns = attributes.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "6iblc9l",
+      "content": "<strong>14.2  Floor Puzzle — Solved Example</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "y6o8ljg",
+      "content": "7 people A, B, C, D, E, F, G live on 7 floors (Floor 1 = bottom, Floor 7 = top). Conditions: (i) A lives on floor 4. (ii) B lives immediately above C. (iii) D lives on an odd-numbered floor. (iv) F lives below E. (v) G lives on floor 6. (vi) D lives above A. (vii) C does not live on floor 1."
+    },
+    {
+      "type": "paragraph",
+      "id": "kwjxhiu",
+      "content": "<strong>Sol. </strong><em>Fixed: A=4, G=6. D on odd floor, above A(4) → D = 5 or 7. G=6, so D=5 or 7. B immediately above C, C not on floor 1. Remaining floors: 1,2,3,5,7 for B,C,D,E,F. D=5 or 7. If D=5: remaining 1,2,3,7 for B,C,E,F. B above C, C≠1. C can be 2,3 → B=3,4? A=4, so B=3 if C=2. Remaining 1,7 for E,F. F below E → F=1, E=7. Check: F(1)&lt;E(7)✓. Final: C=2,B=3,A=4,D=5,G=6,E=7,F=1. ✓ All conditions satisfied.</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kb760ag",
+      "content": "<strong>14.3  Box/Stack Puzzle</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "aw42f4o",
+      "content": "5 boxes P, Q, R, S, T are stacked one over the other. Conditions: (i) T is immediately above S. (ii) P is at the top. (iii) Q is between S and P. (iv) R is above T."
+    },
+    {
+      "type": "paragraph",
+      "id": "r5jqbxv",
+      "content": "<strong>Sol. </strong><em>P is at top = position 5. T immediately above S. R above T. Order from bottom: S, T, R below some positions. R above T, so R &gt; T &gt; S. Q between S and P: S &lt; Q &lt; P(5). So Q is at 4 (just below P). Remaining positions for R,T,S: 1,2,3. T immediately above S: if S=1,T=2. R above T: R=3. Final from bottom to top: S(1), T(2), R(3), Q(4), P(5). Ans: Bottom to Top: S−T−R−Q−P</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ocxuvht",
+      "content": "<strong>14.4  Days/Months Scheduling Puzzle</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "byp07bd",
+      "content": "6 people A,B,C,D,E,F have their birthdays in 6 different months: Jan, Mar, May, Jul, Sep, Nov. (i) A's birthday is in May. (ii) B's birthday is 2 months before E's. (iii) C's birthday is in a month before A's. (iv) D's birthday is after F's. (v) E's birthday is not in the last month."
+    },
+    {
+      "type": "paragraph",
+      "id": "q5qdt4z",
+      "content": "<strong>Sol. </strong><em>A=May. C before A → C=Jan or Mar. B is 2 months before E. Options: B=Jan,E=Mar | B=Mar,E=May(taken) | B=Jul,E=Sep | B=Sep,E=Nov. E not in last month(Nov) → E≠Nov → B=Jul,E=Sep works. B=Jan,E=Mar: C must be before May, C≠Jan(B) → C=Mar=E? No conflict if E=Mar. Let's try B=Jul,E=Sep. Remaining Jan,Mar,Nov for C,D,F. C before A(May) → C=Jan or Mar. D after F. If C=Jan: D,F from Mar,Nov. D&gt;F → F=Mar,D=Nov. Final: C=Jan,F=Mar,A=May,B=Jul,E=Sep,D=Nov. ✓</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8v0uosb",
+      "content": "<strong>14.5  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "npew3ek",
+      "content": "<strong>Q.55  </strong>5 books are stacked. Maths is above Science but below English. Hindi is at the bottom. Computers is above English. What is the order from bottom to top?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6iqo9td",
+      "content": "<strong>  (a)  </strong>Hindi-Science-Maths-English-Computers"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xoa2pfm",
+      "content": "<strong>  (b)  </strong>Science-Hindi-Maths-English-Computers"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gue8j0q",
+      "content": "<strong>  (c)  </strong>Hindi-Maths-Science-English-Computers"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rhm9tpr",
+      "content": "<strong>  (d)  </strong>Hindi-Science-English-Maths-Computers"
+    },
+    {
+      "type": "paragraph",
+      "id": "j7pbbuj",
+      "content": "<strong>  Ans: (a) Hindi-Science-Maths-English-Computers  Hint: </strong><em>Hindi(1)&lt;Science&lt;Maths&lt;English&lt;Computers(5). Only option (a) satisfies all.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "6ii3gi9",
+      "content": "<strong>Q.56  </strong>7 people sit on 7 floors. A is on 3rd floor. B is on a floor below C which is on 5th floor. D is on top floor. E is immediately below D. Where is B?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i4y6nxe",
+      "content": "<strong>  (a)  </strong>2nd"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p1pfvf0",
+      "content": "<strong>  (b)  </strong>4th"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f49i8hy",
+      "content": "<strong>  (c)  </strong>1st"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nopg44v",
+      "content": "<strong>  (d)  </strong>6th"
+    },
+    {
+      "type": "paragraph",
+      "id": "n6mcgwe",
+      "content": "<strong>  Ans: (b) 4th  Hint: </strong><em>D=7th, E=6th, C=5th. B below C → B=4th or below. A=3rd. B≠3rd. B=4th works with remaining. Ans: 4th.</em>"
+    }
+  ],
+  "enriched": true
+}

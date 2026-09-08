@@ -53,85 +53,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Area</strong></p>",
+            "<p>3,07,713 sq km (3rd largest state in India)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Population</strong></p>",
+            "<p>11.24 crore (2011 Census) – 2nd most populous</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Location</strong></p>",
+            "<p>Western and Central India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Latitude</strong></p>",
+            "<p>15°35'N to 22°02'N</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Longitude</strong></p>",
+            "<p>72°36'E to 80°54'E</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Boundary (North)</strong></p>",
+            "<p>Madhya Pradesh and Chhattisgarh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Boundary (East)</strong></p>",
+            "<p>Chhattisgarh and Telangana</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Boundary (South)</strong></p>",
+            "<p>Karnataka and Goa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Boundary (West)</strong></p>",
+            "<p>Arabian Sea and Gujarat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Coastline</strong></p>",
+            "<p>720 km (3rd longest coastline in India)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Capital</strong></p>",
+            "<p>Mumbai (also known as the Financial Capital of India)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Language</strong></p>",
+            "<p>Marathi</p>"
           ]
         }
       ]
@@ -144,7 +144,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4ip2yco"
+      "id": "4ip2yco",
+      "content": "Maharashtra can be divided into four major physiographic regions based on relief, drainage, and climate."
     },
     {
       "id": "93218qx",
@@ -154,18 +155,19 @@
     },
     {
       "type": "paragraph",
-      "id": "tcaxkee"
+      "id": "tcaxkee",
+      "content": "The Sahyadri mountain range, also called the Western Ghats, runs along the western edge of Maharashtra from north to south for about 800 km. It is the backbone of Maharashtra's geography."
     },
     {
       "id": "diy2dch",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Average height: 1000–1300 metres",
+        "Highest peak in Maharashtra: Kalsubai (1646 m) in Ahmednagar district",
+        "Other important peaks: Salher (1567 m), Harishchandragad (1424 m), Rajgad",
+        "The ghats receive heavy rainfall (3000–5000 mm annually)",
+        "Source of all major rivers of Maharashtra",
+        "Declared a UNESCO World Heritage Site in 2012 (as part of Western Ghats)"
       ]
     },
     {
@@ -181,29 +183,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Thal Ghat</strong></p>",
+            "<p>Mumbai–Nashik (Kasara) railway line passes through this</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Bhor Ghat</strong></p>",
+            "<p>Mumbai–Pune railway and highway pass through this</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Amba Ghat</strong></p>",
+            "<p>Ratnagiri–Kolhapur road</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Amboli Ghat</strong></p>",
+            "<p>Sindhudurg–Belgaum road</p>"
           ]
         }
       ]
@@ -216,17 +218,18 @@
     },
     {
       "type": "paragraph",
-      "id": "mq5c1v3"
+      "id": "mq5c1v3",
+      "content": "The Konkan region lies between the Sahyadri range and the Arabian Sea. It is a narrow coastal strip running north to south."
     },
     {
       "id": "6jm8msv",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Districts: Thane, Raigad, Ratnagiri, Sindhudurg (and Mumbai City &amp; Suburban)",
+        "Fertile area with major crops: paddy, coconut, mango, cashew, Alphonso mango",
+        "Heavy rainfall (2500–3500 mm per year)",
+        "Known for scenic beaches, backwaters, and sea-forts",
+        "Konkan Railway (built 1990–1998) connects Mumbai to Goa/Mangalore"
       ]
     },
     {
@@ -237,22 +240,18 @@
     },
     {
       "type": "paragraph",
-      "id": "6vj4wg1"
-    },
-    {
-      "type": "pullQuote",
-      "content": "The Deccan Plateau (Maharashtra Plateau)",
-      "id": "ljdem2i"
+      "id": "6vj4wg1",
+      "content": "The Deccan Plateau constitutes the largest part of Maharashtra lying east of the Sahyadri. It slopes from west to east."
     },
     {
       "id": "vtpni8j",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Altitude: 300–900 metres",
+        "Formed of volcanic Deccan basalt (trap) rock",
+        "Divided into Nashik Plateau, Marathwada Plateau, and Vidarbha Plateau",
+        "Black cotton soil (Regur) – ideal for cotton cultivation",
+        "Semi-arid climate; rainfall 500–1000 mm"
       ]
     },
     {
@@ -263,16 +262,17 @@
     },
     {
       "type": "paragraph",
-      "id": "hgyu28y"
+      "id": "hgyu28y",
+      "content": "Vidarbha is the eastern part of Maharashtra, comprising Amravati and Nagpur divisions. It was formerly part of the Central Provinces."
     },
     {
       "id": "xvkrl3q",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Districts: Nagpur, Amravati, Wardha, Yavatmal, Chandrapur, Gadchiroli, Akola, Washim, Buldhana, Gondia, Bhandara",
+        "Known for: Cotton and orange cultivation; coal mines (Chandrapur, Yavatmal, Wardha)",
+        "Tadoba-Andhari Tiger Reserve: Famous tiger reserve in Chandrapur",
+        "Nagpur: Orange City; geographical centre of India; Winter capital of Maharashtra"
       ]
     },
     {
@@ -283,7 +283,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0j58jvg"
+      "id": "0j58jvg",
+      "content": "Most rivers of Maharashtra originate in the Sahyadri (Western Ghats) and flow either westward into the Arabian Sea (short swift rivers) or eastward into the Bay of Bengal (longer rivers)."
     },
     {
       "id": "2g56heo",
@@ -298,49 +299,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>River</strong></p>",
+            "<p><strong>Origin</strong></p>",
+            "<p><strong>Key Districts / Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ulhas</p>",
+            "<p>Sahyadri near Khopoli</p>",
+            "<p>Flows through Thane; Ulhas Valley</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Savitri</p>",
+            "<p>Mahabaleshwar</p>",
+            "<p>Raigad; Bankot estuary</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vashishti</p>",
+            "<p>Sahyadri</p>",
+            "<p>Ratnagiri; Chiplun</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shastri</p>",
+            "<p>Sahyadri</p>",
+            "<p>Ratnagiri; Jaigad port</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Terekhol</p>",
+            "<p>Sahyadri</p>",
+            "<p>Sindhudurg-Goa border</p>"
           ]
         }
       ]
@@ -384,89 +385,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>River</strong></p>",
+            "<p><strong>Origin</strong></p>",
+            "<p><strong>Districts Covered</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Godavari</p>",
+            "<p>Trimbakeshwar, Nashik (721 m)</p>",
+            "<p>Nashik, Aurangabad, Nanded; enters Telangana; 2nd longest river of India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pravara</p>",
+            "<p>Ratanwadi near Akola, Ahmednagar</p>",
+            "<p>Tributary of Godavari; Ahmednagar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mula</p>",
+            "<p>Harishchandragad, Ahmednagar</p>",
+            "<p>Pune; joins Mutha at Pune city</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mutha</p>",
+            "<p>Mulshi, Pune district</p>",
+            "<p>Pune; Khadakwasla Dam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bhima</p>",
+            "<p>Bhimashankar, Pune</p>",
+            "<p>Pune, Solapur, Osmanabad; joins Krishna in Karnataka</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Krishna</p>",
+            "<p>Mahabaleshwar (1337 m)</p>",
+            "<p>Satara, Sangli, Kolhapur; enters Karnataka</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Koyna</p>",
+            "<p>Sahyadri, Mahabaleshwar region</p>",
+            "<p>Satara; Koyna Dam (largest in Maharashtra)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wardha</p>",
+            "<p>Multai, Betul (MP)</p>",
+            "<p>Amravati, Wardha, Yavatmal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wainganga</p>",
+            "<p>Seoni (MP)</p>",
+            "<p>Nagpur, Bhandara, Chandrapur, Gadchiroli</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Penganga</p>",
+            "<p>Payathana, Buldhana dist.</p>",
+            "<p>Yavatmal, Nanded</p>"
           ]
         }
       ]
@@ -484,71 +485,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Koyna Dam (Jawaharlal Nehru)</strong></p>",
+            "<p>Koyna River, Satara; largest dam in Maharashtra; 105.25 m height; major hydro power</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Ujani Dam</strong></p>",
+            "<p>Bhima River, Solapur; largest reservoir by water storage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Jayakwadi Dam</strong></p>",
+            "<p>Godavari River, Aurangabad (Paithan); major irrigation project</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Bhandardara Dam</strong></p>",
+            "<p>Pravara River, Ahmednagar; Arthur Lake</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Panshet Dam</strong></p>",
+            "<p>Ambi River (Mutha tributary), Pune</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Khadakwasla Dam</strong></p>",
+            "<p>Mutha River, Pune; water supply to Pune city</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Gangapur Dam</strong></p>",
+            "<p>Godavari, Nashik; water supply to Nashik</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Upper Wardha Dam</strong></p>",
+            "<p>Wardha River, Amravati</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Irai Dam</strong></p>",
+            "<p>Irai River, Chandrapur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Totladoh (Pench) Dam</strong></p>",
+            "<p>Pench River, Nagpur</p>"
           ]
         }
       ]
@@ -561,7 +562,8 @@
     },
     {
       "type": "paragraph",
-      "id": "47qued4"
+      "id": "47qued4",
+      "content": "Maharashtra experiences a tropical monsoon climate. The climate varies significantly between the coastal Konkan region and the inland Deccan plateau."
     },
     {
       "id": "hapenvt",
@@ -570,49 +572,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Rainfall</strong></p>",
+            "<p><strong>Climate Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Konkan (West of Sahyadri)</p>",
+            "<p>2000–4000 mm</p>",
+            "<p>Hot and humid; heavy monsoon June–September</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Western Ghats slopes</p>",
+            "<p>3000–6000 mm</p>",
+            "<p>Heaviest rainfall; Mahabaleshwar receives ~6250 mm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Deccan Plateau</p>",
+            "<p>500–1000 mm</p>",
+            "<p>Semi-arid; hot summers, mild winters</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vidarbha</p>",
+            "<p>900–1200 mm</p>",
+            "<p>Continental climate; extreme temperatures</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Marathwada</p>",
+            "<p>600–900 mm</p>",
+            "<p>Drought-prone; irregular monsoon</p>"
           ]
         }
       ]
@@ -627,10 +629,10 @@
       "id": "xnmdvhz",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Mahabaleshwar (Satara): Highest rainfall in Maharashtra (~6250 mm annually); also highest in India among non-Meghalaya stations",
+        "Amboli (Sindhudurg): ~7000 mm",
+        "Trimbakeshwar (Nashik): High rainfall area",
+        "Lowest rainfall: Solapur (~600 mm)"
       ]
     },
     {
@@ -650,7 +652,8 @@
     },
     {
       "type": "paragraph",
-      "id": "h88x70e"
+      "id": "h88x70e",
+      "content": "Maharashtra has 6 revenue divisions and 36 districts."
     },
     {
       "id": "s8cl0d7",
@@ -665,43 +668,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Konkan Division</strong></p>",
+            "<p>Mumbai City, Mumbai Suburban, Thane, Raigad, Ratnagiri, Sindhudurg (6 districts)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nashik Division</strong></p>",
+            "<p>Nashik, Dhule, Nandurbar, Jalgaon, Ahmednagar (5 districts)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Pune Division</strong></p>",
+            "<p>Pune, Satara, Sangli, Solapur, Kolhapur (5 districts)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Aurangabad Division (Marathwada)</strong></p>",
+            "<p>Aurangabad, Jalna, Beed, Osmanabad, Latur, Nanded, Hingoli, Parbhani (8 districts)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Amravati Division (Vidarbha-West)</strong></p>",
+            "<p>Amravati, Yavatmal, Akola, Washim, Buldhana (5 districts)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nagpur Division (Vidarbha-East)</strong></p>",
+            "<p>Nagpur, Wardha, Chandrapur, Gadchiroli, Gondia, Bhandara (6 districts)</p>"
           ]
         }
       ]
@@ -719,64 +722,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Mumbai</strong></p>",
+            "<p>Capital; Financial capital of India; Largest city; Dharavi (Asia's largest slum); Gateway of India; SEBI, BSE, RBI headquarters</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Pune</strong></p>",
+            "<p>Second largest city; IT Hub; Oxford of the East; Deccan Queen train; CSIR-NCL, IISER, Symbiosis University</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nagpur</strong></p>",
+            "<p>Winter capital; Orange city; Central location; High Court bench; National Highway junction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nashik</strong></p>",
+            "<p>Wine capital of India; Grapes and onion cultivation; Kumbh Mela (Simhastha); Panchavati; Godavari origin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Aurangabad</strong></p>",
+            "<p>Tourism capital; Ajanta and Ellora caves nearby; Bibi Ka Maqbara</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Solapur</strong></p>",
+            "<p>Textile industry (Solapuri chaddars); Bhima River; Semi-arid region</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Kolhapur</strong></p>",
+            "<p>Cultural capital; Mahalakshmi temple; Kolhapuri chappal; Panhala fort</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Amravati</strong></p>",
+            "<p>Vidarbha sub-capital; Ambadevi temple; Famous for oranges</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Latur</strong></p>",
+            "<p>1993 earthquake (30 September); Osmanabad District; Now separate district</p>"
           ]
         }
       ]
@@ -794,50 +797,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Total Forest Cover</strong></p>",
+            "<p>Approximately 20.1% of state area (~61,939 sq km as per FSI 2019)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Dense Forests</strong></p>",
+            "<p>Mainly in Gadchiroli, Chandrapur, Gondia, Bhandara (Vidarbha) and Konkan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Major Minerals</strong></p>",
+            "<p>Coal (Chandrapur, Yavatmal), Manganese (Nagpur, Bhandara), Bauxite (Kolhapur, Ratnagiri), Limestone, Iron ore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Coal Districts</strong></p>",
+            "<p>Chandrapur (Wardha Valley coalfield), Yavatmal, Wardha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Manganese</strong></p>",
+            "<p>Maharashtra is 3rd largest manganese producer in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Tiger Reserves</strong></p>",
+            "<p>Melghat (Amravati), Tadoba-Andhari (Chandrapur), Sahyadri (Satara/Kolhapur), Navegaon-Nagzira (Gondia/Bhandara), Bor (Wardha), Pench (Nagpur)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>National Parks</strong></p>",
+            "<p>Tadoba (Chandrapur), Gugamal (Amravati), Nawegaon (Gondia), Sanjay Gandhi (Mumbai)</p>"
           ]
         }
       ]

@@ -1,0 +1,128 @@
+{
+  "title": "CCI vs MRTP Commission",
+  "order": 376,
+  "blocks": [
+    {
+      "id": "j1hsv8g",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>CCI</strong></p>",
+            "<p><strong>MRTP</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Promotes competition</p>",
+            "<p>Focused on controlling monopolies</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Modern framework</p>",
+            "<p>Outdated after liberalization</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regulates mergers</p>",
+            "<p>Limited authority</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Competition Act, 2002 shifted the regulatory paradigm from curbing monopolies under the MRTP Act to promoting free and fair market competition.",
+      "id": "s2jau26"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "MRTP Commission (MRTP Act, 1969)",
+        "Competition Commission of India (Competition Act, 2002)"
+      ],
+      "rows": [
+        [
+          "Primary Philosophy",
+          "Curbing concentration of economic power and monopolies",
+          "Promoting market competition and protecting consumer interest"
+        ],
+        [
+          "Basis of Intervention",
+          "Firm size and asset threshold (Structural approach)",
+          "Market conduct and anti-competitive behavior (Behavioral approach)"
+        ],
+        [
+          "Dominance Concept",
+          "Dominance itself was considered harmful",
+          "Only the 'abuse' of dominance is illegal, not dominance per se"
+        ],
+        [
+          "Registration of Agreements",
+          "Mandatory registration of restrictive trade agreements required",
+          "No registration needed; anti-competitive agreements are void per se"
+        ],
+        [
+          "Penal Powers",
+          "Limited powers; primarily issued cease-and-desist orders",
+          "Heavy financial penalties up to 10% of average turnover"
+        ]
+      ],
+      "id": "uh9s964"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "MRTP Act Enacted",
+          "value": "1969",
+          "icon": "calendar"
+        },
+        {
+          "label": "Competition Act Enacted",
+          "value": "2002",
+          "icon": "calendar"
+        },
+        {
+          "label": "Key Committee",
+          "value": "Raghavan Committee",
+          "icon": "award"
+        },
+        {
+          "label": "Appellate Body",
+          "value": "NCLAT",
+          "icon": "info"
+        }
+      ],
+      "id": "x3xozo0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Raghavan Committee (1999) is frequently asked as the advisory panel that recommended replacing the MRTP Act with a modern competition law framework.",
+        "MRTP Act targeted firm size and asset thresholds, whereas the Competition Act strictly targets the abuse of dominant position rather than dominance itself.",
+        "Appeals against orders passed by the CCI were originally heard by COMPAT, but are now heard by the National Company Law Appellate Tribunal (NCLAT)."
+      ],
+      "id": "cif2ugn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Monopolies and Restrictive Trade Practices (MRTP) Act, 1969 was repealed and replaced by the Competition Act, 2002 based on the recommendations of the S.V.S. Raghavan Committee.",
+        "The Competition Commission of India (CCI) was established in 2003 as a quasi-judicial regulatory body to ensure fair competition in Indian markets.",
+        "While the MRTP Act focused on curbing monopolies based on asset size, the Competition Act focuses on market behavior and anti-competitive practices.",
+        "The Competition Act covers three main pillars: prohibition of anti-competitive agreements, prohibition of abuse of dominant position, and regulation of combinations (mergers and acquisitions)."
+      ],
+      "id": "o5wl0ts"
+    }
+  ],
+  "enriched": true
+}

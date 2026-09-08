@@ -1,0 +1,74 @@
+{
+  "title": "7. River Capture (Stream Piracy)",
+  "order": 140,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "River capture occurs when a stronger river diverts the headwaters of a weaker river through headward erosion.",
+      "id": "wlnt7sr"
+    },
+    {
+      "type": "pullQuote",
+      "content": "River capture occurs when a stronger river diverts the headwaters of a weaker river through headward erosion.",
+      "id": "qcynvv1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Stronger River",
+        "Weaker River"
+      ],
+      "rows": [
+        [
+          "Performs headward erosion",
+          "Loses its original headwaters"
+        ],
+        [
+          "Diverts adjacent streams",
+          "Has its waters diverted"
+        ]
+      ],
+      "id": "f04o4gq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Process",
+          "value": "Headward Erosion",
+          "icon": "info"
+        },
+        {
+          "label": "Alternate Name",
+          "value": "Stream Piracy",
+          "icon": "book"
+        },
+        {
+          "label": "Key Action",
+          "value": "Headwater Diversion",
+          "icon": "check"
+        }
+      ],
+      "id": "mjgw01v"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Headward erosion is frequently tested as the specific mechanism causing stream piracy.",
+        "In river capture, the stronger river diverts the flow from the headwaters of the weaker river."
+      ],
+      "id": "6ycu57u"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "River capture is also referred to as stream piracy.",
+        "The process involves a stronger river diverting the headwaters of a weaker river.",
+        "Headward erosion is the main geological mechanism behind river capture."
+      ],
+      "id": "tc12pep"
+    }
+  ],
+  "enriched": true
+}

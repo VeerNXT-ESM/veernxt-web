@@ -1,0 +1,539 @@
+{
+  "title": "CHAPTER 5: BANKING IN INDIA",
+  "order": 3,
+  "blocks": [
+    {
+      "id": "n7el8o6",
+      "type": "heading",
+      "level": 2,
+      "content": "1. INTRODUCTION TO BANKING"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Reserve Bank of India (RBI) regulates the banking system under the Banking Regulation Act, 1949.",
+        "Bank nationalisation occurred in two major phases: 14 banks in 1969 and 6 banks in 1980.",
+        "A loan asset becomes a Non-Performing Asset (NPA) when interest or principal remains overdue for over 90 days.",
+        "Domestic commercial banks are mandated to allocate 40% of Adjusted Net Bank Credit (ANBC) to Priority Sector Lending.",
+        "Marginal Cost of Funds Based Lending Rate (MCLR) was introduced in 2016, replacing the Base Rate system to improve monetary policy transmission."
+      ],
+      "id": "jy8er09"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Regulation Act",
+          "value": "1949",
+          "icon": "book"
+        },
+        {
+          "label": "First Nationalisation",
+          "value": "1969 (14 Banks)",
+          "icon": "calendar"
+        },
+        {
+          "label": "NPA Threshold",
+          "value": "90 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "PSL Target",
+          "value": "40% ANBC",
+          "icon": "award"
+        },
+        {
+          "label": "Min CAR (Basel III)",
+          "value": "9%",
+          "icon": "info"
+        }
+      ],
+      "id": "3wmi8ew"
+    },
+    {
+      "type": "paragraph",
+      "content": "Banking refers to the activity of accepting deposits from the public and providing loans and advances. Banks act as financial intermediaries between savers and borrowers.",
+      "id": "vkszjjw"
+    },
+    {
+      "type": "paragraph",
+      "content": "Banking system in India is regulated by the Reserve Bank of India (RBI) under the Banking Regulation Act, 1949.",
+      "id": "cfxndrf"
+    },
+    {
+      "id": "3sdyadg",
+      "type": "heading",
+      "level": 2,
+      "content": "2. TYPES OF BANKS IN INDIA"
+    },
+    {
+      "id": "xvm5op0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Bank</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Commercial Banks</p>",
+            "<p>Accept deposits and provide loans</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Public Sector Banks</p>",
+            "<p>Majority owned by Government of India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Private Sector Banks</p>",
+            "<p>Owned by private shareholders</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regional Rural Banks (RRBs)</p>",
+            "<p>Operate in rural areas</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cooperative Banks</p>",
+            "<p>Member-owned banks</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Small Finance Banks</p>",
+            "<p>Serve small borrowers and MSMEs</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5b0os39",
+      "type": "heading",
+      "level": 2,
+      "content": "3. FUNCTIONS OF COMMERCIAL BANKS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Primary Functions:",
+      "id": "ke78977"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Accepting Deposits (Savings, Current, Fixed, Recurring)<br/>• Granting Loans and Advances",
+      "id": "femv3fu"
+    },
+    {
+      "type": "paragraph",
+      "content": "Secondary Functions:",
+      "id": "9r93dpz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Agency Functions (collection of cheques, payment of bills)<br/>• Utility Services (ATM, internet banking, debit cards)",
+      "id": "hqka2nv"
+    },
+    {
+      "id": "uurqf3z",
+      "type": "heading",
+      "level": 2,
+      "content": "4. TYPES OF DEPOSITS"
+    },
+    {
+      "id": "fc9sfet",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Deposit Type</strong></p>",
+            "<p><strong>Interest Rate</strong></p>",
+            "<p><strong>Features</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Savings Account</p>",
+            "<p>Moderate</p>",
+            "<p>For individuals</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Current Account</p>",
+            "<p>Low/None</p>",
+            "<p>For businesses</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fixed Deposit</p>",
+            "<p>High</p>",
+            "<p>Fixed tenure</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Recurring Deposit</p>",
+            "<p>Moderate</p>",
+            "<p>Monthly savings</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rkzzduw",
+      "type": "heading",
+      "level": 2,
+      "content": "5. CREDIT CREATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Banks create credit by lending out a portion of deposits while keeping required reserves.",
+      "id": "d8147yo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Credit Multiplier = 1 / CRR",
+      "id": "zkqs6hi"
+    },
+    {
+      "id": "adg7o05",
+      "type": "heading",
+      "level": 2,
+      "content": "6. NATIONALISATION OF BANKS"
+    },
+    {
+      "type": "paragraph",
+      "content": "In 1969, 14 major banks were nationalised.<br/>In 1980, 6 more banks were nationalised.",
+      "id": "x2rgg0v"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Banks act as financial intermediaries between savers and borrowers.",
+      "id": "utaxczd"
+    },
+    {
+      "type": "paragraph",
+      "content": "Objective was to expand banking in rural areas and support priority sectors.",
+      "id": "6i2hge4"
+    },
+    {
+      "id": "5wdrfhq",
+      "type": "heading",
+      "level": 2,
+      "content": "7. NON-PERFORMING ASSETS (NPA)"
+    },
+    {
+      "type": "paragraph",
+      "content": "A loan becomes NPA when interest or principal remains overdue for more than 90 days.",
+      "id": "bjgxddo"
+    },
+    {
+      "type": "paragraph",
+      "content": "High NPAs affect bank profitability and capital adequacy.",
+      "id": "7oe79ve"
+    },
+    {
+      "id": "l4gpdqf",
+      "type": "heading",
+      "level": 2,
+      "content": "8. FINANCIAL INCLUSION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Financial inclusion aims to provide affordable banking services to all citizens.",
+      "id": "b6sf5lt"
+    },
+    {
+      "type": "paragraph",
+      "content": "Major initiatives include Jan Dhan Yojana, Direct Benefit Transfer (DBT), and digital payments.",
+      "id": "385u5qp"
+    },
+    {
+      "id": "aprli3e",
+      "type": "heading",
+      "level": 2,
+      "content": "9.PRIORITY SECTOR LENDING (PSL)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Priority Sector Lending (PSL) is an RBI policy that mandates banks to lend a specified portion of their total credit to key sectors of the economy.",
+      "id": "ksflka2"
+    },
+    {
+      "type": "paragraph",
+      "content": "Target: 40% of Adjusted Net Bank Credit (ANBC) for domestic commercial banks.",
+      "id": "r1z03vg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Function Category",
+        "Core Activities & Services"
+      ],
+      "rows": [
+        [
+          "Primary Functions",
+          "Accepting Deposits (Savings, Current, Fixed, Recurring) and Granting Loans/Advances"
+        ],
+        [
+          "Secondary Functions",
+          "Agency Functions (cheque collection, bill payment) and Utility Services (ATM, internet banking, debit cards)"
+        ]
+      ],
+      "id": "2c7sk1c"
+    },
+    {
+      "id": "rmv9y23",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Sector</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Agriculture</p>",
+            "<p>Crop loans, allied activities</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>MSMEs</p>",
+            "<p>Small business loans</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Education</p>",
+            "<p>Student loans</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Housing</p>",
+            "<p>Affordable housing loans</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Weaker Sections</p>",
+            "<p>SC/ST, small farmers</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l9707zv",
+      "type": "heading",
+      "level": 2,
+      "content": "10. CAPITAL ADEQUACY RATIO (CAR)"
+    },
+    {
+      "type": "paragraph",
+      "content": "CAR measures a bank’s capital relative to its risk-weighted assets.",
+      "id": "2v7rxh1"
+    },
+    {
+      "type": "paragraph",
+      "content": "Formula: CAR = (Tier 1 Capital + Tier 2 Capital) / Risk Weighted Assets × 100",
+      "id": "coftrdr"
+    },
+    {
+      "type": "paragraph",
+      "content": "Minimum requirement in India: 9% (as per RBI, Basel III norms).",
+      "id": "wnny8eg"
+    },
+    {
+      "id": "95rn0r2",
+      "type": "heading",
+      "level": 2,
+      "content": "11. BASEL NORMS LINKAGE"
+    },
+    {
+      "type": "paragraph",
+      "content": "Basel norms are international banking regulations issued by the Basel Committee on Banking Supervision.",
+      "id": "bc8mxij"
+    },
+    {
+      "id": "z3cc8tx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Basel Accord</strong></p>",
+            "<p><strong>Focus</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Basel I</p>",
+            "<p>Capital adequacy</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Basel II</p>",
+            "<p>Risk management</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Basel III</p>",
+            "<p>Stronger capital &amp; liquidity norms</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "India follows Basel III norms.",
+      "id": "o6obw6d"
+    },
+    {
+      "id": "3jzncg2",
+      "type": "heading",
+      "level": 2,
+      "content": "12. TYPES OF LOANS"
+    },
+    {
+      "id": "vo528oj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Loan Type</strong></p>",
+            "<p><strong>Purpose</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Term Loan</p>",
+            "<p>Long-term investment</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cash Credit</p>",
+            "<p>Working capital</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Overdraft</p>",
+            "<p>Short-term borrowing</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Home Loan</p>",
+            "<p>Purchase of house</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Education Loan</p>",
+            "<p>Higher studies</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zr6zj6s",
+      "type": "heading",
+      "level": 2,
+      "content": "13. MCLR (MARGINAL COST OF FUNDS BASED LENDING RATE)"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Credit Multiplier formula: 1 / CRR.",
+        "Minimum CAR requirement in India under RBI/Basel III norms is 9%.",
+        "MCLR replaced the Base Rate system in 2016.",
+        "14 banks were nationalised in 1969 and 6 more banks in 1980."
+      ],
+      "id": "v9pfakv"
+    },
+    {
+      "type": "paragraph",
+      "content": "MCLR is the minimum interest rate below which banks cannot lend (except special cases).",
+      "id": "qyrgx11"
+    },
+    {
+      "type": "paragraph",
+      "content": "Introduced in 2016 to improve monetary policy transmission.",
+      "id": "xbsewgg"
+    },
+    {
+      "type": "paragraph",
+      "content": "It replaced the Base Rate system.",
+      "id": "uhbf77y"
+    },
+    {
+      "id": "9j0256b",
+      "type": "heading",
+      "level": 2,
+      "content": "14. MAJOR BANKING REFORMS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Bank Nationalisation (1969 &amp; 1980)<br/>• Narasimham Committee Reforms (1991 &amp; 1998)<br/>• Basel III Implementation<br/>• Insolvency and Bankruptcy Code (2016)<br/>• Bank mergers and recapitalisation<br/>",
+      "id": "9lrv02l"
+    },
+    {
+      "type": "paragraph",
+      "content": "Objective: Strengthen banks and reduce NPAs.",
+      "id": "583ndoq"
+    },
+    {
+      "id": "diyxtid",
+      "type": "heading",
+      "level": 2,
+      "content": "15. RRB IMPORTANT ONE-LINERS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Banking Regulation Act – 1949<br/>• 14 banks nationalised in 1969<br/>• NPA overdue period – 90 days<br/>• Credit Multiplier = 1/CRR<br/>• RBI regulates banking system<br/>",
+      "id": "m0ybnht"
+    }
+  ],
+  "enriched": true
+}

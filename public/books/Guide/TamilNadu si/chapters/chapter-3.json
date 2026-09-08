@@ -50,7 +50,8 @@
     },
     {
       "type": "paragraph",
-      "id": "q0kaeav"
+      "id": "q0kaeav",
+      "content": "Tamil Nadu is a state in the Indian Union governed according to the Constitution of India. The Governor is the constitutional head of the state and is appointed by the President of India. The Chief Minister heads the Council of Ministers and is the executive head."
     },
     {
       "id": "yzq4ho2",
@@ -60,17 +61,18 @@
     },
     {
       "type": "paragraph",
-      "id": "v3ijckt"
+      "id": "v3ijckt",
+      "content": "Tamil Nadu has a unicameral legislature – the Tamil Nadu Legislative Assembly (Vidhan Sabha). There are 234 constituencies. Members are elected by direct popular vote for a term of 5 years. The Legislative Council (Vidhan Parishad) was abolished in 1986."
     },
     {
       "id": "mv8dncf",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Total Assembly seats: 234",
+        "Lok Sabha seats: 39",
+        "Rajya Sabha seats: 18",
+        "Reserved SC seats in Assembly: 44",
+        "Reserved ST seats in Assembly: 2"
       ]
     },
     {
@@ -81,7 +83,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xwrmsrb"
+      "id": "xwrmsrb",
+      "content": "The Madras High Court is one of the oldest High Courts in India, established in 1862. It has jurisdiction over Tamil Nadu and Puducherry. It has a Principal Bench at Chennai and a Madurai Bench established in 2004."
     },
     {
       "id": "ytxa75u",
@@ -107,33 +110,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Number (approx.)</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Municipal Corporations</p>",
+            "<p>21</p>",
+            "<p>Greater Chennai Corporation is the largest</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Municipalities</p>",
+            "<p>138</p>",
+            "<p>Grade-I and Grade-II municipalities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Town Panchayats</p>",
+            "<p>528</p>",
+            "<p>Transitional urban bodies</p>"
           ]
         }
       ]
@@ -148,9 +151,9 @@
       "id": "thiouf9",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "District Panchayats (Maavar Panchayat): 1 per district",
+        "Panchayat Unions (Block Panchayat): 385",
+        "Village Panchayats (Gram Panchayat): 12,524"
       ]
     },
     {
@@ -161,17 +164,18 @@
     },
     {
       "type": "paragraph",
-      "id": "42zhhnr"
+      "id": "42zhhnr",
+      "content": "Tamil Nadu is divided into Revenue Divisions, Taluks, and Revenue Villages for administrative purposes. The District Collector heads each district and is the representative of the state government. Specific administrative hierarchy:"
     },
     {
       "id": "3bj6pgu",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "State → Districts (38) → Revenue Divisions → Taluks → Firkas → Revenue Villages",
+        "District Collector: IAS officer; chief executive of district",
+        "Revenue Divisional Officer (RDO): Sub-district level",
+        "Tehsildar / Taluk Tahsildar: Taluk level; land records, revenue",
+        "Village Administrative Officer (VAO): Village level (formerly Karnam)"
       ]
     },
     {
@@ -200,7 +204,8 @@
     },
     {
       "type": "paragraph",
-      "id": "hkxh74b"
+      "id": "hkxh74b",
+      "content": "The Tamil Nadu Public Service Commission (TNPSC) is a constitutional body established under Article 315 of the Indian Constitution. It recruits candidates for various state government services. Key TNPSC examinations include:"
     },
     {
       "id": "g3f105v",
@@ -209,57 +214,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Exam</strong></p>",
+            "<p><strong>Post</strong></p>",
+            "<p><strong>Group</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Combined Civil Services Exam I</p>",
+            "<p>Deputy Collector, DSP, etc.</p>",
+            "<p>Group-I</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Combined Civil Services Exam II-A</p>",
+            "<p>Assistant Section Officer, etc.</p>",
+            "<p>Group-II-A</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Combined Civil Services Exam II</p>",
+            "<p>Sub-Registrar, Probation Officer, etc.</p>",
+            "<p>Group-II</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Combined Civil Services Exam IV</p>",
+            "<p>Junior Assistant, Typist, etc.</p>",
+            "<p>Group-IV</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>VAO Exam</p>",
+            "<p>Village Administrative Officer</p>",
+            "<p>Group-VIII</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Combined Engineering Services</p>",
+            "<p>Assistant Engineer, AE (Civil/Mech/EE)</p>",
+            "<p>Engineering</p>"
           ]
         }
       ]
@@ -278,7 +283,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tu06nkd"
+      "id": "tu06nkd",
+      "content": "The Tamil Nadu Police is headed by the Director General of Police (DGP). The state is divided into Police Zones, Ranges, and Districts for policing purposes."
     },
     {
       "id": "v95tgp8",
@@ -287,97 +293,97 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Rank</strong></p>",
+            "<p><strong>Abbreviation</strong></p>",
+            "<p><strong>Level</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Director General of Police</p>",
+            "<p>DGP</p>",
+            "<p>State Head</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Additional Director General of Police</p>",
+            "<p>ADGP</p>",
+            "<p>Zone/Specialised Force</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inspector General of Police</p>",
+            "<p>IGP</p>",
+            "<p>Range Head</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Deputy Inspector General of Police</p>",
+            "<p>DIG</p>",
+            "<p>Range/District</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Superintendent of Police</p>",
+            "<p>SP</p>",
+            "<p>District Head (non-commissionerate)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Additional Superintendent of Police</p>",
+            "<p>Addl. SP</p>",
+            "<p>Sub-Division</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Deputy Superintendent of Police</p>",
+            "<p>DSP / Dy. SP</p>",
+            "<p>Sub-Division</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inspector of Police</p>",
+            "<p>IP</p>",
+            "<p>Circle / Station Head</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sub-Inspector of Police</p>",
+            "<p>SI</p>",
+            "<p>Station (uniformed)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Assistant Sub-Inspector</p>",
+            "<p>ASI</p>",
+            "<p>Station</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Grade I Police Constable / Head Constable</p>",
+            "<p>PC / HC</p>",
+            "<p>Beat/Patrol</p>"
           ]
         }
       ]
@@ -399,16 +405,17 @@
     },
     {
       "type": "paragraph",
-      "id": "022py28"
+      "id": "022py28",
+      "content": "Sub-Inspector of Police (SI) recruitment in Tamil Nadu is conducted by the Tamil Nadu Uniformed Services Recruitment Board (TNUSRB). Candidates must pass a Written Examination, Physical Measurement Test (PMT), Physical Efficiency Test (PET), and Medical Examination."
     },
     {
       "id": "deke6xp",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Written Exam: General Knowledge, Current Affairs, Mental Ability, General Science",
+        "Physical Standards: Height, Weight, Chest (for male) measurements required",
+        "PET: Running, long jump, high jump",
+        "Training: Selected candidates undergo training at Tamil Nadu Police Academy, Ashok Nagar"
       ]
     },
     {
@@ -424,81 +431,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Scheme</strong></p>",
+            "<p><strong>Launched By</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Amma Unavagam</p>",
+            "<p>Jayalalithaa Govt.</p>",
+            "<p>Subsidized food canteens</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kalaignar's Insurance Scheme for Life Saving Treatments</p>",
+            "<p>Karunanidhi Govt.</p>",
+            "<p>Healthcare coverage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chief Minister's Health Insurance Scheme (CMCHIS)</p>",
+            "<p>TN Govt.</p>",
+            "<p>Cashless health coverage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Green Tamil Nadu Mission</p>",
+            "<p>TN Govt.</p>",
+            "<p>Tree planting / afforestation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Makkalai Thedi Maruthuvam</p>",
+            "<p>TN Govt.</p>",
+            "<p>Doorstep healthcare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Illam Thedi Kalvi</p>",
+            "<p>TN Govt.</p>",
+            "<p>Evening tuition for school students</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Naan Mudhalvan</p>",
+            "<p>TN Govt.</p>",
+            "<p>Skill training and employment for youth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Uyarndha Thenizhai Scheme</p>",
+            "<p>TN Govt.</p>",
+            "<p>Support for weavers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tamilnadu Startup and Innovation Policy</p>",
+            "<p>TN Govt.</p>",
+            "<p>Entrepreneurship ecosystem</p>"
           ]
         }
       ]

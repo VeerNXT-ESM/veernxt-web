@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "r8zdom5"
+      "id": "r8zdom5",
+      "content": "Contour Ploughing: Ploughing along slope contours to reduce runoff."
     },
     {
       "type": "statStrip",
@@ -83,11 +84,13 @@
     },
     {
       "type": "paragraph",
-      "id": "dqvhfvn"
+      "id": "dqvhfvn",
+      "content": "Terracing: Creating steps on slopes."
     },
     {
       "type": "paragraph",
-      "id": "lzaqid7"
+      "id": "lzaqid7",
+      "content": "Afforestation: Planting trees to bind soil."
     },
     {
       "type": "examAlert",
@@ -101,11 +104,13 @@
     },
     {
       "type": "paragraph",
-      "id": "5mpd2d8"
+      "id": "5mpd2d8",
+      "content": "Strip Cropping: Alternating crop strips to reduce erosion."
     },
     {
       "type": "paragraph",
-      "id": "5oj4hoh"
+      "id": "5oj4hoh",
+      "content": "Shelter Belts: Rows of trees to reduce wind speed."
     }
   ],
   "enriched": true

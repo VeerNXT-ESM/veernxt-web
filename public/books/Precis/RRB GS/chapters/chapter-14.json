@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "bfn4276"
+      "id": "bfn4276",
+      "content": "1. Communicable diseases spread through air, water, contact or vectors."
     },
     {
       "type": "statStrip",
@@ -51,15 +52,18 @@
     },
     {
       "type": "paragraph",
-      "id": "5loi1zo"
+      "id": "5loi1zo",
+      "content": "2. Tuberculosis is caused by Mycobacterium tuberculosis and spreads through air."
     },
     {
       "type": "paragraph",
-      "id": "gtjyr99"
+      "id": "gtjyr99",
+      "content": "3. Malaria is caused by Plasmodium and transmitted by female Anopheles mosquito."
     },
     {
       "type": "paragraph",
-      "id": "4dejqsb"
+      "id": "4dejqsb",
+      "content": "4. Antibiotics are effective against bacteria but not against viruses."
     },
     {
       "type": "examAlert",
@@ -72,11 +76,13 @@
     },
     {
       "type": "paragraph",
-      "id": "g6mhns9"
+      "id": "g6mhns9",
+      "content": "5. Vaccines provide active immunity by stimulating antibody production."
     },
     {
       "type": "paragraph",
-      "id": "4xut8li"
+      "id": "4xut8li",
+      "content": "6. Vitamin C deficiency causes scurvy, leading to bleeding gums."
     }
   ],
   "enriched": true

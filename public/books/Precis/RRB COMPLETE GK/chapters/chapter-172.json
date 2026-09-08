@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "58xozdb"
+      "id": "58xozdb",
+      "content": "Soil texture refers to the proportion of sand, silt and clay particles. It affects drainage, aeration and fertility."
     },
     {
       "type": "pullQuote",
@@ -97,41 +98,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Soil Type</strong></p>",
+            "<p><strong>Water Holding Capacity</strong></p>",
+            "<p><strong>Agricultural Suitability</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sandy</p>",
+            "<p>Low</p>",
+            "<p>Good for drainage; low fertility</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Clayey</p>",
+            "<p>High</p>",
+            "<p>Retains water; prone to waterlogging</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Silty</p>",
+            "<p>Moderate</p>",
+            "<p>Fertile and smooth texture</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Loamy</p>",
+            "<p>Balanced</p>",
+            "<p>Ideal for most crops</p>"
           ]
         }
       ]

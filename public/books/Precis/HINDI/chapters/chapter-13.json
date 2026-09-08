@@ -43,15 +43,18 @@
     },
     {
       "type": "paragraph",
-      "id": "l4z1hnh"
+      "id": "l4z1hnh",
+      "content": "अनुवाद का शाब्दिक अर्थ है : एक भाषा में कही गई बात को दूसरी भाषा में कहना। 'अनुवाद' शब्द संस्कृत के 'अनु' (पश्चात्) और 'वाद' (कथन) से बना है : अर्थात् किसी कथन के पश्चात् किया गया कथन।"
     },
     {
       "type": "paragraph",
-      "id": "3ktuxn6"
+      "id": "3ktuxn6",
+      "content": "अनुवाद केवल शब्दों का प्रतिस्थापन नहीं है : यह दो भाषाओं, दो संस्कृतियों और दो विचार-प्रणालियों के बीच सेतु का काम करता है। एक अच्छा अनुवादक दोनों भाषाओं का गहरा ज्ञाता होता है।"
     },
     {
       "type": "paragraph",
-      "id": "p2d69f4"
+      "id": "p2d69f4",
+      "content": "अनुवाद की सटीक परिभाषा: मूल पाठ (Source Text) के विचारों, भावों और शैली को लक्ष्य भाषा (Target Language) में यथासंभव समतुल्य रूप में प्रस्तुत करना।"
     },
     {
       "id": "1zzmyiu",
@@ -61,7 +64,8 @@
     },
     {
       "type": "paragraph",
-      "id": "con2nxo"
+      "id": "con2nxo",
+      "content": "अनुवाद की कई विधियाँ और प्रकार हैं। SSC JHT में मुख्यतः तीन प्रकार के अनुवाद की आवश्यकता होती है:"
     },
     {
       "id": "f3lxgi6",
@@ -70,37 +74,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>प्रकार</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उपयोग</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>शाब्दिक अनुवाद (Literal / Word-for-word)</p>",
+            "<p>प्रत्येक शब्द का उसके समकक्ष शब्द से अनुवाद</p>",
+            "<p>तकनीकी / कानूनी दस्तावेज़</p>",
+            "<p>He is my friend. → वह मेरा मित्र है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>भावानुवाद (Free / Sense Translation)</p>",
+            "<p>शब्दों की नहीं, भाव की अभिव्यक्ति</p>",
+            "<p>साहित्य / कविता / भाषण</p>",
+            "<p>Idioms और metaphors का भाव-अनुवाद</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>विश्वस्त अनुवाद (Faithful Translation)</p>",
+            "<p>मूल के भाव और शैली दोनों की रक्षा</p>",
+            "<p>सरकारी पत्र / सटीक अनुवाद</p>",
+            "<p>SSC JHT Paper 2 में यही अपेक्षित</p>"
           ]
         }
       ]
@@ -113,7 +117,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6l0j2cy"
+      "id": "6l0j2cy",
+      "content": "एक श्रेष्ठ अनुवाद के लिए निम्नलिखित सिद्धांतों का पालन आवश्यक है:"
     },
     {
       "id": "qkls91w",
@@ -122,64 +127,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>सिद्धांत</strong></p>",
+            "<p><strong>विवरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>शुद्धता (Accuracy)</p>",
+            "<p>मूल पाठ का अर्थ बदलना नहीं चाहिए। न कुछ जोड़ना, न घटाना।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>स्वाभाविकता (Naturalness)</p>",
+            "<p>अनुवाद लक्ष्य भाषा की प्रकृति के अनुसार होना चाहिए।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>सुबोधता (Clarity)</p>",
+            "<p>अनुवाद स्पष्ट और सुगम होना चाहिए : पाठक को समझने में कठिनाई न हो।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>सुसंगति (Coherence)</p>",
+            "<p>अनुवाद में वाक्यों का आपसी संबंध बना रहना चाहिए।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>उचित शब्द चयन</p>",
+            "<p>लक्ष्य भाषा में सर्वोचित शब्द चुनें : पर्याय यांत्रिक रूप से न थोपें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>शैली की रक्षा</p>",
+            "<p>यदि मूल पाठ औपचारिक है तो अनुवाद भी औपचारिक होना चाहिए।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>सांस्कृतिक संवेदनशीलता</p>",
+            "<p>एक भाषा के सांस्कृतिक संदर्भों को लक्ष्य भाषा में उचित रूप में प्रस्तुत करें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>मुहावरों का भावानुवाद</p>",
+            "<p>मुहावरों का शाब्दिक अनुवाद न करके उनके समकक्ष मुहावरे/भाव दें।</p>"
           ]
         }
       ]
@@ -192,7 +197,8 @@
     },
     {
       "type": "paragraph",
-      "id": "oxbd33z"
+      "id": "oxbd33z",
+      "content": "SSC JHT Paper 2 में अनुवाद के प्रश्न हल करते समय निम्नलिखित चरणों का पालन करें:"
     },
     {
       "id": "b8lwgax",
@@ -201,50 +207,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>चरण</strong></p>",
+            "<p><strong>क्या करें</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1. मूल पाठ को ध्यान से पढ़ें</p>",
+            "<p>पूरे गद्यांश को एक-दो बार पढ़कर उसका मुख्य विचार और स्वर (Tone) समझें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>2. कठिन शब्द / वाक्यांश पहचानें</p>",
+            "<p>जो शब्द / मुहावरे / technical terms हैं उन्हें पहले अलग करें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>3. वाक्य-संरचना समझें</p>",
+            "<p>मूल भाषा की वाक्य-संरचना और लक्ष्य भाषा की वाक्य-संरचना में अंतर पहचानें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>4. पहला Draft बनाएँ</p>",
+            "<p>पूरे गद्यांश का स्वाभाविक अनुवाद करें : अटकें नहीं, प्रवाह बनाए रखें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>5. Revision करें</p>",
+            "<p>Draft को पुनः पढ़ें : क्या भाव सही है? क्या भाषा प्राकृतिक लग रही है?</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>6. अंतिम रूप दें</p>",
+            "<p>व्याकरण, वर्तनी, विराम-चिह्न जाँचें और Final Copy लिखें।</p>"
           ]
         }
       ]
@@ -262,73 +268,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>कठिनाई</strong></p>",
+            "<p><strong>कारण</strong></p>",
+            "<p><strong>समाधान</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मुहावरों का अनुवाद</p>",
+            "<p>शाब्दिक अनुवाद अर्थहीन हो जाता है</p>",
+            "<p>समकक्ष मुहावरा या भावानुवाद दें</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tense का निर्वाह</p>",
+            "<p>हिंदी और अंग्रेज़ी के Tense भिन्न हैं</p>",
+            "<p>मूल का काल पहचानकर समकक्ष काल दें</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Passive Voice</p>",
+            "<p>हिंदी में Passive कम प्रयुक्त होता है</p>",
+            "<p>Active में बदलकर प्राकृतिक बनाएँ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Articles (a/an/the)</p>",
+            "<p>हिंदी में Articles नहीं होते</p>",
+            "<p>हिंदी में इनका अनुवाद नहीं होता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cultural references</p>",
+            "<p>एक भाषा में विशिष्ट सांस्कृतिक संदर्भ</p>",
+            "<p>Footnote दें या समकक्ष दें</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Technical terms</p>",
+            "<p>पारिभाषिक शब्दों का सीधा अनुवाद नहीं होता</p>",
+            "<p>स्थापित हिंदी पारिभाषिक शब्द दें</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Untranslatable words</p>",
+            "<p>कुछ शब्दों का समकक्ष दूसरी भाषा में नहीं</p>",
+            "<p>भाव स्पष्ट करें, मूल शब्द रखें</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Compound sentences</p>",
+            "<p>लंबे compound sentences अटपटे लगते हैं</p>",
+            "<p>दो सरल वाक्यों में तोड़ सकते हैं</p>"
           ]
         }
       ]
@@ -341,7 +347,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9t89w56"
+      "id": "9t89w56",
+      "content": "अनुवाद करते समय दोनों भाषाओं की मूलभूत संरचनात्मक भिन्नताओं को समझना आवश्यक है:"
     },
     {
       "id": "1nqjmht",
@@ -350,82 +357,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>भिन्नता</strong></p>",
+            "<p><strong>हिंदी</strong></p>",
+            "<p><strong>अंग्रेज़ी</strong></p>",
+            "<p><strong>अनुवाद का प्रभाव</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>शब्द क्रम</p>",
+            "<p>कर्ता → कर्म → क्रिया (SOV)</p>",
+            "<p>कर्ता → क्रिया → कर्म (SVO)</p>",
+            "<p>क्रम बदलना होगा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Articles</p>",
+            "<p>नहीं होते</p>",
+            "<p>A, An, The अनिवार्य</p>",
+            "<p>अनुवाद में जोड़ने होंगे</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>लिंग</p>",
+            "<p>सभी संज्ञाओं का लिंग होता है</p>",
+            "<p>केवल जीवित प्राणियों का</p>",
+            "<p>हिंदी में सावधानी ज़रूरी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tense</p>",
+            "<p>काल के साथ आदर भाव भी</p>",
+            "<p>Tense अधिक systematic</p>",
+            "<p>आदर के लिए plural verb</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Passive Voice</p>",
+            "<p>कम प्रयुक्त</p>",
+            "<p>अधिक प्रयुक्त</p>",
+            "<p>Active में बदलना बेहतर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sentence length</p>",
+            "<p>लंबे compound sentences</p>",
+            "<p>छोटे, स्पष्ट वाक्य</p>",
+            "<p>तोड़कर लिखें</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Postpositions</p>",
+            "<p>क्रिया के बाद परसर्ग (में, पर, से)</p>",
+            "<p>Preposition + Noun</p>",
+            "<p>क्रम उलटा होगा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Honorifics</p>",
+            "<p>आप/आपका : आदर के लिए plural</p>",
+            "<p>You : एकवचन भी बहुवचन भी</p>",
+            "<p>Tone का ध्यान रखें</p>"
           ]
         }
       ]
@@ -438,12 +445,14 @@
     },
     {
       "type": "paragraph",
-      "id": "kkvap8u"
+      "id": "kkvap8u",
+      "content": "सरकारी और आधिकारिक अनुवाद में निम्नलिखित पारिभाषिक शब्दों का प्रयोग होता है। इन्हें याद करना आवश्यक है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dq0z9n1"
+      "id": "dq0z9n1",
+      "content": "<strong>(क) प्रशासनिक शब्द</strong>"
     },
     {
       "id": "rda7ut8",
@@ -452,190 +461,190 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>अंग्रेज़ी शब्द</strong></p>",
+            "<p><strong>हिंदी पारिभाषिक शब्द</strong></p>",
+            "<p><strong>अंग्रेज़ी शब्द</strong></p>",
+            "<p><strong>हिंदी पारिभाषिक शब्द</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Act</p>",
+            "<p>अधिनियम</p>",
+            "<p>Agenda</p>",
+            "<p>कार्यसूची</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Amendment</p>",
+            "<p>संशोधन</p>",
+            "<p>Appeal</p>",
+            "<p>अपील</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Budget</p>",
+            "<p>बजट</p>",
+            "<p>Cabinet</p>",
+            "<p>मंत्रिमंडल</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Census</p>",
+            "<p>जनगणना</p>",
+            "<p>Circular</p>",
+            "<p>परिपत्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Committee</p>",
+            "<p>समिति</p>",
+            "<p>Complaint</p>",
+            "<p>शिकायत</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Constitution</p>",
+            "<p>संविधान</p>",
+            "<p>Court</p>",
+            "<p>न्यायालय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Decree</p>",
+            "<p>फरमान / आदेश</p>",
+            "<p>Delegation</p>",
+            "<p>प्रतिनिधिमंडल</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Department</p>",
+            "<p>विभाग</p>",
+            "<p>Deputy</p>",
+            "<p>उपाध्यक्ष</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Election</p>",
+            "<p>चुनाव / निर्वाचन</p>",
+            "<p>Embassy</p>",
+            "<p>दूतावास</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Establishment</p>",
+            "<p>स्थापना</p>",
+            "<p>Estimate</p>",
+            "<p>आकलन / प्राक्कलन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Gazette</p>",
+            "<p>राजपत्र</p>",
+            "<p>Grant</p>",
+            "<p>अनुदान</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Headquarters</p>",
+            "<p>मुख्यालय</p>",
+            "<p>Inquiry</p>",
+            "<p>जाँच</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Legislature</p>",
+            "<p>विधानमंडल</p>",
+            "<p>Ministry</p>",
+            "<p>मंत्रालय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Notification</p>",
+            "<p>अधिसूचना</p>",
+            "<p>Order</p>",
+            "<p>आदेश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Parliament</p>",
+            "<p>संसद</p>",
+            "<p>Petition</p>",
+            "<p>याचिका</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Policy</p>",
+            "<p>नीति</p>",
+            "<p>Proclamation</p>",
+            "<p>उद्घोषणा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Regulation</p>",
+            "<p>विनियम</p>",
+            "<p>Report</p>",
+            "<p>प्रतिवेदन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Resolution</p>",
+            "<p>संकल्प</p>",
+            "<p>Revenue</p>",
+            "<p>राजस्व</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Scheme</p>",
+            "<p>योजना</p>",
+            "<p>Secretary</p>",
+            "<p>सचिव</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tribunal</p>",
+            "<p>अधिकरण</p>",
+            "<p>Welfare</p>",
+            "<p>कल्याण</p>"
           ]
         }
       ]
@@ -643,7 +652,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ey55ryj"
+      "id": "ey55ryj",
+      "content": "<strong>(ख) कानूनी और न्यायिक शब्द</strong>"
     },
     {
       "id": "ci6rfua",
@@ -652,100 +662,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>अंग्रेज़ी शब्द</strong></p>",
+            "<p><strong>हिंदी पारिभाषिक शब्द</strong></p>",
+            "<p><strong>अंग्रेज़ी शब्द</strong></p>",
+            "<p><strong>हिंदी पारिभाषिक शब्द</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Accused</p>",
+            "<p>अभियुक्त</p>",
+            "<p>Acquittal</p>",
+            "<p>दोषमुक्ति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Affidavit</p>",
+            "<p>शपथपत्र</p>",
+            "<p>Allegation</p>",
+            "<p>आरोप</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bail</p>",
+            "<p>जमानत</p>",
+            "<p>Charge</p>",
+            "<p>आरोप</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Conviction</p>",
+            "<p>दोषसिद्धि</p>",
+            "<p>Defendant</p>",
+            "<p>प्रतिवादी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Evidence</p>",
+            "<p>साक्ष्य</p>",
+            "<p>Fine</p>",
+            "<p>जुर्माना</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Judgement</p>",
+            "<p>निर्णय</p>",
+            "<p>Jurisdiction</p>",
+            "<p>अधिकारिता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Penalty</p>",
+            "<p>दंड</p>",
+            "<p>Plaintiff</p>",
+            "<p>वादी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Prosecution</p>",
+            "<p>अभियोजन</p>",
+            "<p>Verdict</p>",
+            "<p>निर्णय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Warrant</p>",
+            "<p>वारंट</p>",
+            "<p>Witness</p>",
+            "<p>साक्षी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Writ</p>",
+            "<p>रिट / आदेशपत्र</p>",
+            "<p>Injunction</p>",
+            "<p>व्यादेश</p>"
           ]
         }
       ]
@@ -753,7 +763,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "aepfevf"
+      "id": "aepfevf",
+      "content": "<strong>(ग) बैंकिंग और वित्तीय शब्द</strong>"
     },
     {
       "id": "tjrxpa2",
@@ -762,100 +773,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>अंग्रेज़ी शब्द</strong></p>",
+            "<p><strong>हिंदी पारिभाषिक शब्द</strong></p>",
+            "<p><strong>अंग्रेज़ी शब्द</strong></p>",
+            "<p><strong>हिंदी पारिभाषिक शब्द</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Account</p>",
+            "<p>खाता</p>",
+            "<p>Assets</p>",
+            "<p>परिसंपत्ति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Audit</p>",
+            "<p>लेखापरीक्षा</p>",
+            "<p>Balance Sheet</p>",
+            "<p>तुलन-पत्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Capital</p>",
+            "<p>पूँजी</p>",
+            "<p>Credit</p>",
+            "<p>जमा / साख</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Debit</p>",
+            "<p>नामे / डेबिट</p>",
+            "<p>Deposit</p>",
+            "<p>जमा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dividend</p>",
+            "<p>लाभांश</p>",
+            "<p>Finance</p>",
+            "<p>वित्त</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Insurance</p>",
+            "<p>बीमा</p>",
+            "<p>Interest</p>",
+            "<p>ब्याज</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Investment</p>",
+            "<p>निवेश</p>",
+            "<p>Liability</p>",
+            "<p>देयता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Loan</p>",
+            "<p>ऋण</p>",
+            "<p>Profit</p>",
+            "<p>लाभ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Reserve</p>",
+            "<p>आरक्षित निधि</p>",
+            "<p>Share</p>",
+            "<p>अंश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tax</p>",
+            "<p>कर</p>",
+            "<p>Withdrawal</p>",
+            "<p>निकासी</p>"
           ]
         }
       ]
@@ -868,11 +879,13 @@
     },
     {
       "type": "paragraph",
-      "id": "nqx6p21"
+      "id": "nqx6p21",
+      "content": "नीचे कुछ नमूना अनुवाद दिए गए हैं जिनमें सही और गलत दोनों प्रकार के अनुवाद दिखाए गए हैं:"
     },
     {
       "type": "paragraph",
-      "id": "7wq7y4y"
+      "id": "7wq7y4y",
+      "content": "<strong>नमूना 1 : मुहावरे का अनुवाद</strong>"
     },
     {
       "id": "e5lz3pb",
@@ -881,44 +894,45 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>मूल (अंग्रेज़ी)</strong></p>",
+            "<p><strong>गलत अनुवाद</strong></p>",
+            "<p><strong>सही अनुवाद</strong></p>",
+            "<p><strong>कारण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>He kicked the bucket.</p>",
+            "<p>उसने बाल्टी को लात मारी।</p>",
+            "<p>उसकी मृत्यु हो गई।</p>",
+            "<p>'Kick the bucket' = मरना : भावानुवाद ज़रूरी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>It's raining cats and dogs.</p>",
+            "<p>बिल्लियाँ और कुत्ते बरस रहे हैं।</p>",
+            "<p>मूसलाधार बारिश हो रही है।</p>",
+            "<p>मुहावरे का शाब्दिक अनुवाद नहीं करते</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Once in a blue moon.</p>",
+            "<p>एक नीले चाँद में एक बार।</p>",
+            "<p>कभी-कभी / बहुत कम।</p>",
+            "<p>अंग्रेज़ी मुहावरे का हिंदी भावार्थ दें</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "stlxtdh"
+      "id": "stlxtdh",
+      "content": "<strong>नमूना 2 : Passive Voice का अनुवाद</strong>"
     },
     {
       "id": "g1llv57",
@@ -927,88 +941,101 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>मूल (अंग्रेज़ी)</strong></p>",
+            "<p><strong>शाब्दिक अनुवाद</strong></p>",
+            "<p><strong>प्राकृतिक हिंदी अनुवाद</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>The letter was written by him.</p>",
+            "<p>पत्र उसके द्वारा लिखा गया था।</p>",
+            "<p>उसने पत्र लिखा था।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>It is said that honesty is the best policy.</p>",
+            "<p>यह कहा जाता है कि ईमानदारी सर्वोत्तम नीति है।</p>",
+            "<p>कहते हैं कि ईमानदारी सबसे अच्छी नीति है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>The prize was awarded to the best student.</p>",
+            "<p>पुरस्कार सर्वश्रेष्ठ छात्र को प्रदान किया गया।</p>",
+            "<p>सर्वश्रेष्ठ छात्र को पुरस्कार दिया गया।</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "rjmx78u"
+      "id": "rjmx78u",
+      "content": "<strong>नमूना 3 : औपचारिक गद्यांश का अनुवाद</strong>"
     },
     {
       "type": "paragraph",
-      "id": "sj013bv"
+      "id": "sj013bv",
+      "content": "मूल (अंग्रेज़ी):"
     },
     {
       "type": "paragraph",
-      "id": "1b7vtkw"
+      "id": "1b7vtkw",
+      "content": "The Government of India has launched a new scheme for the welfare of farmers. Under this scheme, financial assistance will be provided to small and marginal farmers. The scheme will be implemented through state governments."
     },
     {
       "type": "paragraph",
-      "id": "iw5rv45"
+      "id": "iw5rv45",
+      "content": "शाब्दिक अनुवाद (अशुद्ध):"
     },
     {
       "type": "paragraph",
-      "id": "uyato43"
+      "id": "uyato43",
+      "content": "भारत की सरकार ने किसानों के कल्याण के लिए एक नई योजना प्रारंभ की है। इस योजना के अंतर्गत छोटे और सीमांत किसानों को वित्तीय सहायता प्रदान की जाएगी। योजना राज्य सरकारों के माध्यम से कार्यान्वित की जाएगी।"
     },
     {
       "type": "paragraph",
-      "id": "4gjzjjf"
+      "id": "4gjzjjf",
+      "content": "विश्वस्त अनुवाद (शुद्ध):"
     },
     {
       "type": "paragraph",
-      "id": "q50l07b"
+      "id": "q50l07b",
+      "content": "भारत सरकार ने किसानों के कल्याण हेतु एक नई योजना शुरू की है। इस योजना के तहत लघु एवं सीमांत किसानों को आर्थिक सहायता दी जाएगी। इस योजना का क्रियान्वयन राज्य सरकारों के माध्यम से होगा।"
     },
     {
       "type": "paragraph",
-      "id": "fs8kz74"
+      "id": "fs8kz74",
+      "content": "अंतर: 'Government of India' = 'भारत सरकार' (न कि 'भारत की सरकार')। 'Financial' = 'आर्थिक' अधिक प्राकृतिक। 'Implemented' = 'क्रियान्वित' या 'लागू'।"
     },
     {
       "type": "paragraph",
-      "id": "hofctnj"
+      "id": "hofctnj",
+      "content": "<strong>नमूना 4 : हिंदी से अंग्रेज़ी अनुवाद</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ym0gq8u"
+      "id": "ym0gq8u",
+      "content": "मूल (हिंदी):"
     },
     {
       "type": "paragraph",
-      "id": "lidbc09"
+      "id": "lidbc09",
+      "content": "भारत एक विशाल देश है। यहाँ अनेक भाषाएँ बोली जाती हैं। हिंदी भारत की राजभाषा है और यह उत्तर भारत में सर्वाधिक बोली जाती है। स्वतंत्रता के पश्चात् हिंदी को राजभाषा का दर्जा दिया गया।"
     },
     {
       "type": "paragraph",
-      "id": "s3vy1bk"
+      "id": "s3vy1bk",
+      "content": "अनुवाद (अंग्रेज़ी):"
     },
     {
       "type": "paragraph",
-      "id": "xyy1r18"
+      "id": "xyy1r18",
+      "content": "India is a vast country. Many languages are spoken here. Hindi is the official language of India and it is spoken widely in northern India. After independence, Hindi was accorded the status of the official language."
     },
     {
       "id": "591vyhx",
@@ -1018,7 +1045,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wdemy48"
+      "id": "wdemy48",
+      "content": "अनुवाद में सबसे बड़ी चुनौती सही शब्द चुनना है। कई बार एक ही अंग्रेज़ी शब्द के अनेक हिंदी अनुवाद होते हैं और संदर्भ के अनुसार सही शब्द चुनना पड़ता है:"
     },
     {
       "id": "trseh6t",
@@ -1027,82 +1055,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>अंग्रेज़ी शब्द</strong></p>",
+            "<p><strong>संदर्भ 1</strong></p>",
+            "<p><strong>संदर्भ 2</strong></p>",
+            "<p><strong>संदर्भ 3</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Break</p>",
+            "<p>अवकाश (lunch break)</p>",
+            "<p>तोड़ना (break the glass)</p>",
+            "<p>अवरोध (break in talks)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Light</p>",
+            "<p>प्रकाश (bright light)</p>",
+            "<p>हल्का (light weight)</p>",
+            "<p>जलाना (light a candle)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Run</p>",
+            "<p>दौड़ (run a race)</p>",
+            "<p>चलाना (run a company)</p>",
+            "<p>बहना (river runs)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Set</p>",
+            "<p>सेट / समूह (a set)</p>",
+            "<p>अस्त होना (sun sets)</p>",
+            "<p>तय करना (set a goal)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Work</p>",
+            "<p>काम (hard work)</p>",
+            "<p>काम करना (work hard)</p>",
+            "<p>कार्य (work of art)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Address</p>",
+            "<p>पता (postal address)</p>",
+            "<p>भाषण (address the gathering)</p>",
+            "<p>संबोधित करना</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Interest</p>",
+            "<p>रुचि (take interest)</p>",
+            "<p>ब्याज (rate of interest)</p>",
+            "<p>हित (public interest)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Order</p>",
+            "<p>आदेश (court order)</p>",
+            "<p>क्रम (in order)</p>",
+            "<p>मँगाना (order food)</p>"
           ]
         }
       ]
@@ -1117,25 +1145,25 @@
       "id": "sj6euce",
       "type": "numberedList",
       "items": [
-        null,
-        null
+        "अनुवाद की परिभाषा लिखिए और शाब्दिक अनुवाद तथा भावानुवाद में अंतर उदाहरण सहित स्पष्ट कीजिए।",
+        "निम्नलिखित अंग्रेज़ी मुहावरों का भावानुवाद हिंदी में कीजिए:"
       ]
     },
     {
       "id": "i55rov8",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "To burn the midnight oil",
+        "It's a blessing in disguise",
+        "He has an axe to grind",
+        "She let the cat out of the bag"
       ]
     },
     {
       "id": "klfzykl",
       "type": "numberedList",
       "items": [
-        null
+        "निम्नलिखित अंग्रेज़ी गद्यांश का हिंदी में अनुवाद कीजिए:"
       ]
     },
     {
@@ -1145,24 +1173,26 @@
     },
     {
       "type": "paragraph",
-      "id": "eapt2hl"
+      "id": "eapt2hl",
+      "content": "Education is the most powerful weapon which you can use to change the world. The value of an education is not the learning of many facts, but the training of the mind to think. A good education helps people to lead a meaningful and productive life."
     },
     {
       "id": "45clai9",
       "type": "numberedList",
       "items": [
-        null
+        "निम्नलिखित हिंदी गद्यांश का अंग्रेज़ी में अनुवाद कीजिए:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "crkf6u0"
+      "id": "crkf6u0",
+      "content": "पर्यावरण प्रदूषण आज की सबसे बड़ी समस्या बन चुकी है। नदियों में कल-कारखानों का कचरा बहाया जा रहा है। वायु में ज़हरीली गैसें घुल रही हैं। यदि हम अभी नहीं चेते तो आने वाली पीढ़ियों के लिए यह धरती रहने योग्य नहीं रहेगी।"
     },
     {
       "id": "g0zvnl2",
       "type": "numberedList",
       "items": [
-        null
+        "निम्नलिखित अंग्रेज़ी पारिभाषिक शब्दों के हिंदी समकक्ष लिखिए: Constitution, Ministry, Affidavit, Dividend, Notification"
       ]
     },
     {
@@ -1175,30 +1205,33 @@
       "id": "kfuve9n",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "अनुवाद = मूल पाठ के भाव को लक्ष्य भाषा में समतुल्य रूप में व्यक्त करना।",
+        "तीन प्रकार : शाब्दिक, भावानुवाद, विश्वस्त; SSC JHT में विश्वस्त अनुवाद अपेक्षित।",
+        "मुहावरों का शाब्दिक अनुवाद नहीं : भाव दें या समकक्ष मुहावरा दें।",
+        "Passive Voice को हिंदी में Active में बदलना अधिक प्राकृतिक लगता है।",
+        "'Government of India' = 'भारत सरकार' न कि 'भारत की सरकार'।",
+        "हिंदी और अंग्रेज़ी का शब्द-क्रम भिन्न है : SOV बनाम SVO।",
+        "पारिभाषिक शब्द (Technical Terms) याद करें : प्रशासनिक, कानूनी, वित्तीय।",
+        "अनुवाद में शुद्धता, स्वाभाविकता और सुबोधता : तीनों ज़रूरी हैं।"
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "98tdo6s"
+      "id": "98tdo6s",
+      "content": "अध्याय 14"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mo49mrt"
+      "id": "mo49mrt",
+      "content": "<strong>हिंदी → अंग्रेज़ी अनुवाद</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zx7ocnj"
+      "id": "zx7ocnj",
+      "content": "Hindi to English Translation"
     },
     {
       "id": "6dsa69o",
@@ -1208,7 +1241,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4qiefj3"
+      "id": "4qiefj3",
+      "content": "SSC JHT Paper 2 में हिंदी से अंग्रेज़ी अनुवाद का एक गद्यांश दिया जाता है। इस अध्याय में हिंदी से अंग्रेज़ी अनुवाद की विधि, महत्त्वपूर्ण नियम और 10 क्रमबद्ध अभ्यास गद्यांश दिए गए हैं : प्रत्येक के साथ आदर्श अनुवाद भी है।"
     },
     {
       "id": "z32a8wz",
@@ -1223,65 +1257,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>चरण</strong></p>",
+            "<p><strong>क्या करें</strong></p>",
+            "<p><strong>क्यों ज़रूरी है</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1. पाठ समझें</p>",
+            "<p>पूरा गद्यांश पढ़कर विषय और भाव ग्रहण करें</p>",
+            "<p>बिना समझे अनुवाद यांत्रिक होगा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2. काल पहचानें</p>",
+            "<p>हिंदी के काल को अंग्रेज़ी Tense से जोड़ें</p>",
+            "<p>गलत Tense से अर्थ बदल जाता है</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>3. शब्द-क्रम बदलें</p>",
+            "<p>हिंदी SOV → अंग्रेज़ी SVO क्रम में लिखें</p>",
+            "<p>अंग्रेज़ी की प्रकृति के अनुसार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>4. Article जोड़ें</p>",
+            "<p>a/an/the जहाँ आवश्यक हो, लगाएँ</p>",
+            "<p>अंग्रेज़ी में Article अनिवार्य</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>5. मुहावरे बदलें</p>",
+            "<p>हिंदी मुहावरे का अंग्रेज़ी समकक्ष या भाव दें</p>",
+            "<p>शाब्दिक अनुवाद हास्यास्पद लगेगा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>6. Passive बनाएँ</p>",
+            "<p>जहाँ हिंदी में कर्ता छिपा हो वहाँ Passive दें</p>",
+            "<p>जैसे: 'कहा जाता है' = It is said that</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>7. Review करें</p>",
+            "<p>अंग्रेज़ी पाठक को स्वाभाविक लगे : जाँचें</p>",
+            "<p>प्रवाह और स्पष्टता सुनिश्चित होगी</p>"
           ]
         }
       ]
@@ -1299,129 +1333,129 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>हिंदी संरचना</strong></p>",
+            "<p><strong>अंग्रेज़ी अनुवाद</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'ने' वाले वाक्य (भूत)</p>",
+            "<p>Subject + V2 + Object</p>",
+            "<p>राम ने पत्र लिखा → Ram wrote a letter.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'को' वाले वाक्य</p>",
+            "<p>Object + needs / wants / is given</p>",
+            "<p>उसे बुखार है → He has fever.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'से' वाले वाक्य</p>",
+            "<p>With / From / By</p>",
+            "<p>वह कलम से लिखता है → He writes with a pen.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'के लिए' वाले वाक्य</p>",
+            "<p>For + Object</p>",
+            "<p>यह तुम्हारे लिए है → This is for you.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'चाहिए' वाले वाक्य</p>",
+            "<p>Should / Must / Ought to</p>",
+            "<p>तुम्हें पढ़ना चाहिए → You should study.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'पड़ना' (विवशता)</p>",
+            "<p>Have to / Had to</p>",
+            "<p>मुझे जाना पड़ा → I had to go.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'सकना'</p>",
+            "<p>Can / Could / May</p>",
+            "<p>वह तैर सकता है → He can swim.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'कहा जाता है'</p>",
+            "<p>It is said that</p>",
+            "<p>कहा जाता है कि → It is said that</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'माना जाता है'</p>",
+            "<p>It is believed / considered that</p>",
+            "<p>माना जाता है कि → It is believed that</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'जितना...उतना'</p>",
+            "<p>The more...the more</p>",
+            "<p>जितना पढ़ोगे उतना जानोगे → The more you read, the more you know.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'यदि...तो'</p>",
+            "<p>If...then</p>",
+            "<p>यदि मेहनत करोगे तो सफल होगे → If you work hard, you will succeed.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'न...न'</p>",
+            "<p>Neither...nor</p>",
+            "<p>न वह आया न गया → He neither came nor went.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'न केवल...बल्कि'</p>",
+            "<p>Not only...but also</p>",
+            "<p>न केवल होशियार बल्कि मेहनती → Not only intelligent but also hardworking.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'जैसे ही'</p>",
+            "<p>As soon as / No sooner...than</p>",
+            "<p>जैसे ही वह आया बारिश हुई → As soon as he came, it rained.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>'हालाँकि'</p>",
+            "<p>Although / Though / Even though</p>",
+            "<p>हालाँकि थका था फिर भी काम किया → Although tired, he worked.</p>"
           ]
         }
       ]
@@ -1434,47 +1468,58 @@
     },
     {
       "type": "paragraph",
-      "id": "iv79ym6"
+      "id": "iv79ym6",
+      "content": "नीचे 10 क्रमबद्ध गद्यांश दिए गए हैं : सरल से कठिन की ओर। प्रत्येक के साथ आदर्श अनुवाद दिया गया है। पहले स्वयं अनुवाद करें, फिर आदर्श से मिलाएँ।"
     },
     {
       "type": "paragraph",
-      "id": "yvbr6r5"
+      "id": "yvbr6r5",
+      "content": "<strong>गद्यांश 1 : सरल (विषय: प्रकृति)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "cqw37i8"
+      "id": "cqw37i8",
+      "content": "भारत एक सुंदर देश है। यहाँ ऊँचे-ऊँचे पहाड़, घने जंगल और बहती नदियाँ हैं। प्रकृति ने इस देश को अनेक प्रकार से सँवारा है। यहाँ की हरी-भरी घाटियाँ और झरने मन को मोह लेते हैं।"
     },
     {
       "type": "paragraph",
-      "id": "fpa4fu4"
+      "id": "fpa4fu4",
+      "content": "<strong>आदर्श अनुवाद:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "4tb75gt"
+      "id": "4tb75gt",
+      "content": "India is a beautiful country. It has tall mountains, dense forests and flowing rivers. Nature has adorned this country in many ways. The green valleys and waterfalls here captivate the mind."
     },
     {
       "type": "paragraph",
-      "id": "5fi9281"
+      "id": "5fi9281",
+      "content": "ध्यान दें: 'यहाँ की हरी-भरी घाटियाँ' = 'The green valleys here' : 'The' लगाना आवश्यक (specific)।"
     },
     {
       "type": "paragraph",
-      "id": "c15sts9"
+      "id": "c15sts9",
+      "content": "<strong>गद्यांश 2 : सरल (विषय: शिक्षा)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "le5sxof"
+      "id": "le5sxof",
+      "content": "शिक्षा मनुष्य का सबसे बड़ा आभूषण है। यह व्यक्ति को न केवल ज्ञान देती है बल्कि उसे एक अच्छा नागरिक भी बनाती है। शिक्षित समाज ही प्रगति कर सकता है। इसीलिए सरकार शिक्षा पर विशेष ध्यान देती है।"
     },
     {
       "type": "paragraph",
-      "id": "clw8x4v"
+      "id": "clw8x4v",
+      "content": "<strong>आदर्श अनुवाद:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "e6sdrh1"
+      "id": "e6sdrh1",
+      "content": "Education is the greatest ornament of a human being. It not only imparts knowledge to a person but also makes him a good citizen. Only an educated society can make progress. That is why the government pays special attention to education."
     },
     {
       "type": "paragraph",
-      "id": "8nm4anx"
+      "id": "8nm4anx",
+      "content": "'न केवल...बल्कि' = 'not only...but also' | 'इसीलिए' = 'That is why'"
     },
     {
       "type": "comparisonTable",
@@ -1496,139 +1541,173 @@
     },
     {
       "type": "paragraph",
-      "id": "9uo79bq"
+      "id": "9uo79bq",
+      "content": "<strong>गद्यांश 3 : मध्यम (विषय: स्वास्थ्य)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "vcfpsow"
+      "id": "vcfpsow",
+      "content": "स्वास्थ्य ही सबसे बड़ा धन है। जो व्यक्ति स्वस्थ है, वह जीवन का भरपूर आनंद उठा सकता है। अच्छे स्वास्थ्य के लिए नियमित व्यायाम, संतुलित आहार और पर्याप्त नींद आवश्यक है। आजकल की भागदौड़ भरी ज़िंदगी में लोग अपने स्वास्थ्य की अनदेखी करने लगे हैं, जो एक चिंताजनक प्रवृत्ति है।"
     },
     {
       "type": "paragraph",
-      "id": "x2skwoh"
+      "id": "x2skwoh",
+      "content": "<strong>आदर्श अनुवाद:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "zpsiu2t"
+      "id": "zpsiu2t",
+      "content": "Health is the greatest wealth. A person who is healthy can enjoy life to the fullest. Regular exercise, a balanced diet and adequate sleep are essential for good health. In today's fast-paced life, people have started neglecting their health, which is a worrying trend."
     },
     {
       "type": "paragraph",
-      "id": "c9alpco"
+      "id": "c9alpco",
+      "content": "'भागदौड़ भरी ज़िंदगी' = 'fast-paced life' : भावानुवाद | 'अनदेखी करने लगे हैं' = 'have started neglecting'"
     },
     {
       "type": "paragraph",
-      "id": "2t2takb"
+      "id": "2t2takb",
+      "content": "<strong>गद्यांश 4 : मध्यम (विषय: पर्यावरण)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "sjbzzrf"
+      "id": "sjbzzrf",
+      "content": "पर्यावरण प्रदूषण आज की सबसे गंभीर समस्याओं में से एक है। कारखानों से निकलने वाला धुआँ और रसायन नदियों तथा वायु को दूषित कर रहे हैं। वनों की अंधाधुंध कटाई से जलवायु परिवर्तन हो रहा है। यदि हम अभी नहीं चेते तो आने वाली पीढ़ियों को इसके गंभीर परिणाम भुगतने पड़ेंगे।"
     },
     {
       "type": "paragraph",
-      "id": "1pr3fk1"
+      "id": "1pr3fk1",
+      "content": "<strong>आदर्श अनुवाद:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ip6h9ab"
+      "id": "ip6h9ab",
+      "content": "Environmental pollution is one of the most serious problems of today. Smoke and chemicals from factories are polluting rivers and the air. Indiscriminate felling of forests is causing climate change. If we do not wake up now, future generations will have to face severe consequences."
     },
     {
       "type": "paragraph",
-      "id": "pyv7rcf"
+      "id": "pyv7rcf",
+      "content": "'अंधाधुंध कटाई' = 'indiscriminate felling' | 'चेते' = 'wake up / take heed' | 'भुगतने पड़ेंगे' = 'will have to face / suffer'"
     },
     {
       "type": "paragraph",
-      "id": "9mrgrm6"
+      "id": "9mrgrm6",
+      "content": "<strong>गद्यांश 5 : मध्यम (विषय: महिला सशक्तिकरण)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "a9dp2oq"
+      "id": "a9dp2oq",
+      "content": "महिला सशक्तिकरण का अर्थ है महिलाओं को समाज में समान अधिकार और अवसर देना। आज की महिला हर क्षेत्र में पुरुषों के साथ कंधे से कंधा मिलाकर चल रही है। चाहे विज्ञान हो, राजनीति हो या खेल : महिलाओं ने अपनी प्रतिभा का लोहा मनवाया है। एक सशक्त महिला न केवल परिवार बल्कि पूरे राष्ट्र को सशक्त बनाती है।"
     },
     {
       "type": "paragraph",
-      "id": "asrqxe0"
+      "id": "asrqxe0",
+      "content": "<strong>आदर्श अनुवाद:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "4g0qj0d"
+      "id": "4g0qj0d",
+      "content": "Women empowerment means giving women equal rights and opportunities in society. Today, women are walking shoulder to shoulder with men in every field. Whether it is science, politics or sports : women have proved their mettle. An empowered woman strengthens not only her family but the entire nation."
     },
     {
       "type": "paragraph",
-      "id": "zr1e1b4"
+      "id": "zr1e1b4",
+      "content": "'कंधे से कंधा मिलाकर' = 'shoulder to shoulder' : हिंदी मुहावरे का अंग्रेज़ी समकक्ष | 'लोहा मनवाना' = 'prove one's mettle'"
     },
     {
       "type": "paragraph",
-      "id": "sok3cp0"
+      "id": "sok3cp0",
+      "content": "<strong>गद्यांश 6 : मध्यम-कठिन (विषय: राष्ट्रीय एकता)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "k5gq6en"
+      "id": "k5gq6en",
+      "content": "भारत विविधताओं का देश है। यहाँ अनेक धर्म, जाति, भाषा और संस्कृतियाँ एक साथ फलती-फूलती हैं। यही भारत की सबसे बड़ी शक्ति है। हमारे स्वतंत्रता सेनानियों ने एक होकर विदेशी शासन से मुक्ति पाई थी। आज भी राष्ट्र की प्रगति के लिए हमें एकजुट रहना होगा क्योंकि एकता में ही शक्ति है।"
     },
     {
       "type": "paragraph",
-      "id": "87httzg"
+      "id": "87httzg",
+      "content": "<strong>आदर्श अनुवाद:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "fm5hhfw"
+      "id": "fm5hhfw",
+      "content": "India is a land of diversity. Here, many religions, castes, languages and cultures thrive together. This is India's greatest strength. Our freedom fighters united and gained independence from foreign rule. Even today, for the progress of the nation, we must remain united because there is strength in unity."
     },
     {
       "type": "paragraph",
-      "id": "zzh2kby"
+      "id": "zzh2kby",
+      "content": "'विविधताओं का देश' = 'land of diversity' | 'फलती-फूलती हैं' = 'thrive' | 'विदेशी शासन से मुक्ति' = 'independence from foreign rule'"
     },
     {
       "type": "paragraph",
-      "id": "ftmelwo"
+      "id": "ftmelwo",
+      "content": "<strong>गद्यांश 7 : कठिन (विषय: विज्ञान और प्रौद्योगिकी)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "e3wmszd"
+      "id": "e3wmszd",
+      "content": "विज्ञान और प्रौद्योगिकी ने मानव जीवन में क्रांतिकारी परिवर्तन लाए हैं। चिकित्सा के क्षेत्र में नई खोजों ने असाध्य रोगों को साध्य बना दिया है। संचार क्रांति ने विश्व को एक वैश्विक ग्राम में बदल दिया है। परंतु प्रौद्योगिकी के अत्यधिक उपयोग से नई समस्याएँ भी उत्पन्न हो रही हैं। अतः विज्ञान का उपयोग मानवता के कल्याण के लिए ही होना चाहिए।"
     },
     {
       "type": "paragraph",
-      "id": "cj6y6kg"
+      "id": "cj6y6kg",
+      "content": "<strong>आदर्श अनुवाद:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "cceao5r"
+      "id": "cceao5r",
+      "content": "Science and technology have brought about revolutionary changes in human life. New discoveries in the field of medicine have made incurable diseases curable. The communication revolution has transformed the world into a global village. However, excessive use of technology is also giving rise to new problems. Therefore, science should be used only for the welfare of humanity."
     },
     {
       "type": "paragraph",
-      "id": "r3xrim7"
+      "id": "r3xrim7",
+      "content": "'असाध्य रोगों को साध्य बनाना' = 'making incurable diseases curable' | 'वैश्विक ग्राम' = 'global village' | 'अतः' = 'Therefore'"
     },
     {
       "type": "paragraph",
-      "id": "waf5msr"
+      "id": "waf5msr",
+      "content": "<strong>गद्यांश 8 : कठिन (विषय: लोकतंत्र)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "5y8irmu"
+      "id": "5y8irmu",
+      "content": "लोकतंत्र शासन की सर्वश्रेष्ठ प्रणाली मानी जाती है। इसमें जनता को अपनी सरकार चुनने का अधिकार होता है। भारत विश्व का सबसे बड़ा लोकतांत्रिक देश है। यहाँ नागरिकों को अभिव्यक्ति की स्वतंत्रता, समानता का अधिकार और न्याय का अधिकार संविधान द्वारा प्रदान किए गए हैं। एक सफल लोकतंत्र के लिए जागरूक और शिक्षित नागरिक अपरिहार्य हैं।"
     },
     {
       "type": "paragraph",
-      "id": "a5q53jo"
+      "id": "a5q53jo",
+      "content": "<strong>आदर्श अनुवाद:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "3lbuqof"
+      "id": "3lbuqof",
+      "content": "Democracy is considered the best system of governance. In this system, people have the right to elect their own government. India is the largest democratic country in the world. Here, citizens are provided with freedom of expression, the right to equality and the right to justice by the Constitution. For a successful democracy, aware and educated citizens are indispensable."
     },
     {
       "type": "paragraph",
-      "id": "pe5a7og"
+      "id": "pe5a7og",
+      "content": "'अभिव्यक्ति की स्वतंत्रता' = 'freedom of expression' | 'अपरिहार्य' = 'indispensable' | 'संविधान द्वारा प्रदान' = 'provided by the Constitution'"
     },
     {
       "type": "paragraph",
-      "id": "95vu6oy"
+      "id": "95vu6oy",
+      "content": "<strong>गद्यांश 9 : कठिन (विषय: सामाजिक मुद्दे)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ryizb59"
+      "id": "ryizb59",
+      "content": "भ्रष्टाचार समाज के लिए एक भयंकर व्याधि है। यह सरकारी तंत्र को खोखला कर देता है और आम आदमी के अधिकारों का हरण करता है। भ्रष्टाचार के कारण योजनाओं का लाभ उन लोगों तक नहीं पहुँचता जिनके लिए वे बनाई जाती हैं। इस बुराई से लड़ने के लिए केवल कानून पर्याप्त नहीं है : समाज में नैतिक जागृति भी आवश्यक है।"
     },
     {
       "type": "paragraph",
-      "id": "5c52s8u"
+      "id": "5c52s8u",
+      "content": "<strong>आदर्श अनुवाद:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "vn1g64y"
+      "id": "vn1g64y",
+      "content": "Corruption is a dreadful malady for society. It hollows out the government machinery and robs the common man of his rights. Because of corruption, the benefits of schemes do not reach those for whom they are designed. To fight this evil, laws alone are not enough : moral awakening in society is also necessary."
     },
     {
       "type": "examAlert",
@@ -1640,27 +1719,33 @@
     },
     {
       "type": "paragraph",
-      "id": "5drr7uq"
+      "id": "5drr7uq",
+      "content": "'व्याधि' = 'malady / disease' | 'खोखला कर देता है' = 'hollows out' | 'अधिकारों का हरण' = 'robs of rights' | 'नैतिक जागृति' = 'moral awakening'"
     },
     {
       "type": "paragraph",
-      "id": "59g83q2"
+      "id": "59g83q2",
+      "content": "<strong>गद्यांश 10 : अत्यधिक कठिन (विषय: संस्कृति और सभ्यता)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "4pzi3ml"
+      "id": "4pzi3ml",
+      "content": "संस्कृति किसी भी राष्ट्र की आत्मा होती है। यह पीढ़ी-दर-पीढ़ी हस्तांतरित होती है और समाज की मूल्य-व्यवस्था का आधार बनती है। भारतीय संस्कृति अपनी समृद्धि, विविधता और सहनशीलता के लिए विश्वप्रसिद्ध है। वसुधैव कुटुंबकम् की अवधारणा, जो संपूर्ण विश्व को एक परिवार मानती है, भारतीय दर्शन की अनमोल देन है। आज जब विश्व में संघर्ष और विद्वेष बढ़ रहा है, तब भारतीय संस्कृति के ये मूल्य और भी प्रासंगिक हो उठे हैं।"
     },
     {
       "type": "paragraph",
-      "id": "ku8b5aa"
+      "id": "ku8b5aa",
+      "content": "<strong>आदर्श अनुवाद:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "gdjl3rq"
+      "id": "gdjl3rq",
+      "content": "Culture is the soul of any nation. It is transmitted from generation to generation and forms the foundation of society's value system. Indian culture is world-renowned for its richness, diversity and tolerance. The concept of Vasudhaiva Kutumbakam, which regards the entire world as one family, is a priceless contribution of Indian philosophy. Today, when conflict and hatred are increasing in the world, these values of Indian culture have become all the more relevant."
     },
     {
       "type": "paragraph",
-      "id": "fiz5zeh"
+      "id": "fiz5zeh",
+      "content": "'पीढ़ी-दर-पीढ़ी हस्तांतरित' = 'transmitted from generation to generation' | 'वसुधैव कुटुंबकम्' : मूल शब्द रखें | 'अनमोल देन' = 'priceless contribution' | 'प्रासंगिक' = 'relevant'"
     },
     {
       "id": "xj9ch5o",
@@ -1670,7 +1755,8 @@
     },
     {
       "type": "paragraph",
-      "id": "iowp0gp"
+      "id": "iowp0gp",
+      "content": "निम्नलिखित हिंदी वाक्यों का अंग्रेज़ी में अनुवाद करें। आदर्श अनुवाद कोष्ठक में दिया गया है:"
     },
     {
       "id": "nzohm6b",
@@ -1679,113 +1765,113 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>हिंदी वाक्य</strong></p>",
+            "<p><strong>अंग्रेज़ी अनुवाद</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>उसने मेहनत की इसलिए सफल हुआ।</p>",
+            "<p>He worked hard, therefore he succeeded.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>यदि तुम समय पर आते तो काम होता।</p>",
+            "<p>If you had come on time, the work would have been done.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>जैसे ही वह पहुँचा, बैठक शुरू हुई।</p>",
+            "<p>As soon as he arrived, the meeting began.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>कहा जाता है कि ईमानदारी सबसे अच्छी नीति है।</p>",
+            "<p>It is said that honesty is the best policy.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>न केवल वह होशियार है बल्कि मेहनती भी है।</p>",
+            "<p>He is not only intelligent but also hardworking.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>मुझे कल दिल्ली जाना पड़ेगा।</p>",
+            "<p>I will have to go to Delhi tomorrow.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>हालाँकि वह बीमार था फिर भी वह स्कूल गया।</p>",
+            "<p>Although he was ill, he went to school.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>जितना अधिक पढ़ोगे उतना अधिक जानोगे।</p>",
+            "<p>The more you read, the more you will know.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>उसके आते ही सब शांत हो गए।</p>",
+            "<p>As soon as he arrived, everyone became quiet.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>भारत में अनेक भाषाएँ बोली जाती हैं।</p>",
+            "<p>Many languages are spoken in India.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>सरकार ने एक नई योजना की घोषणा की।</p>",
+            "<p>The government announced a new scheme.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>इस समस्या का समाधान तुरंत किया जाना चाहिए।</p>",
+            "<p>This problem should be solved immediately.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>वह न तो खाना खाता है न पानी पीता है।</p>",
+            "<p>He neither eats food nor drinks water.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>मेरे विचार से यह निर्णय गलत है।</p>",
+            "<p>In my opinion, this decision is wrong.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>बच्चों को अच्छे संस्कार देना माता-पिता का कर्तव्य है।</p>",
+            "<p>It is the duty of parents to inculcate good values in children.</p>"
           ]
         }
       ]
@@ -1803,64 +1889,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>टिप</strong></p>",
+            "<p><strong>विवरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>गद्यांश दो बार पढ़ें</p>",
+            "<p>पहले बार : विषय समझें; दूसरी बार : कठिन शब्द/वाक्यांश पहचानें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tense का सही प्रयोग</p>",
+            "<p>भूत में V2, वर्तमान में V1/is-am-are, भविष्य में will/shall।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article का ध्यान रखें</p>",
+            "<p>Proper Noun से पहले No Article | Common Noun से पहले a/an/the।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Passive का उचित प्रयोग</p>",
+            "<p>जहाँ कर्ता अज्ञात या अनावश्यक हो वहाँ Passive लिखें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>मुहावरों का भावानुवाद</p>",
+            "<p>शाब्दिक अनुवाद कभी न करें; अंग्रेज़ी में समकक्ष मुहावरा दें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पारिभाषिक शब्द सही लिखें</p>",
+            "<p>Constitution, Parliament, Legislature आदि की spelling याद करें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>वाक्य न तोड़ें</p>",
+            "<p>मूल गद्यांश के वाक्यों की संख्या अनुवाद में बनाए रखें।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पठनीय लिखावट</p>",
+            "<p>SSC JHT Paper 2 में उत्तर हाथ से लिखना होता है।</p>"
           ]
         }
       ]
@@ -1873,40 +1959,44 @@
     },
     {
       "type": "paragraph",
-      "id": "of0ob8u"
+      "id": "of0ob8u",
+      "content": "निम्नलिखित गद्यांशों का अंग्रेज़ी में अनुवाद कीजिए (आदर्श अनुवाद इस बार नहीं दिया गया : स्वयं करें):"
     },
     {
       "id": "srx7ewk",
       "type": "numberedList",
       "items": [
-        null
+        "गद्यांश 1:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "1dwyn7x"
+      "id": "1dwyn7x",
+      "content": "गाँधीजी का जीवन सत्य और अहिंसा के सिद्धांतों पर आधारित था। उन्होंने बिना हथियार उठाए अंग्रेज़ों से लोहा लिया और भारत को स्वतंत्र कराया। उनका मानना था कि अहिंसा केवल कमज़ोरों का हथियार नहीं बल्कि सबसे बड़ी ताकत है।"
     },
     {
       "id": "5n6cdgj",
       "type": "numberedList",
       "items": [
-        null
+        "गद्यांश 2:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "s8k3ppz"
+      "id": "s8k3ppz",
+      "content": "आज का युग सूचना प्रौद्योगिकी का युग है। इंटरनेट ने संचार, व्यापार और शिक्षा के क्षेत्र में क्रांति ला दी है। परंतु इसके साथ ही साइबर अपराध, गोपनीयता के उल्लंघन और गलत सूचनाओं के प्रसार जैसी चुनौतियाँ भी सामने आई हैं।"
     },
     {
       "id": "v8ixsts",
       "type": "numberedList",
       "items": [
-        null
+        "गद्यांश 3:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "hfcn3of"
+      "id": "hfcn3of",
+      "content": "युवा किसी भी देश की सबसे बड़ी शक्ति होते हैं। यदि इस शक्ति को सही दिशा दी जाए तो राष्ट्र की काया पलट सकती है। आज के युवाओं को न केवल व्यावसायिक दक्षता की आवश्यकता है बल्कि नैतिक मूल्यों और सामाजिक उत्तरदायित्व की समझ भी अपेक्षित है।"
     },
     {
       "id": "dgiofi4",
@@ -1918,14 +2008,14 @@
       "id": "6s2z75c",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "हिंदी SOV → अंग्रेज़ी SVO : शब्द-क्रम बदलना आवश्यक।",
+        "'ने' वाले भूतकाल वाक्य → Subject + V2 + Object।",
+        "'चाहिए' = Should/Must | 'पड़ना' = Have to | 'सकना' = Can/May।",
+        "मुहावरे का शाब्दिक अनुवाद न करें : भाव या समकक्ष अंग्रेज़ी मुहावरा दें।",
+        "Article (a/an/the) हिंदी में नहीं होते : अनुवाद में स्वयं जोड़ने होंगे।",
+        "'कहा जाता है' = It is said that | 'माना जाता है' = It is believed that।",
+        "'यदि...तो' = If...then | 'जैसे ही' = As soon as।",
+        "Passive Voice: 'लिखा जाता है' = is written | 'लिखा गया' = was written।"
       ]
     }
   ],

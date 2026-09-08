@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "4p701iw"
+      "id": "4p701iw",
+      "content": "The mantle is the thickest layer and forms about 83% of Earth's volume."
     },
     {
       "type": "statStrip",
@@ -35,7 +36,8 @@
     },
     {
       "type": "paragraph",
-      "id": "k5p98w7"
+      "id": "k5p98w7",
+      "content": "• Extends from 35 km to 2900 km."
     },
     {
       "type": "pullQuote",
@@ -44,11 +46,13 @@
     },
     {
       "type": "paragraph",
-      "id": "dovh0dc"
+      "id": "dovh0dc",
+      "content": "• Upper mantle includes lithosphere and asthenosphere."
     },
     {
       "type": "paragraph",
-      "id": "6qacics"
+      "id": "6qacics",
+      "content": "• Asthenosphere (100–350 km) is partially molten."
     },
     {
       "type": "comparisonTable",
@@ -83,7 +87,8 @@
     },
     {
       "type": "paragraph",
-      "id": "88yzkzk"
+      "id": "88yzkzk",
+      "content": "• Convection currents in mantle cause plate movement."
     },
     {
       "id": "lq0o0dj",
@@ -118,29 +123,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Lithosphere</strong></p>",
+            "<p><strong>Asthenosphere</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rigid</p>",
+            "<p>Plastic and semi-molten</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Includes crust + uppermost mantle</p>",
+            "<p>Below lithosphere</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Forms tectonic plates</p>",
+            "<p>Allows plate movement</p>"
           ]
         }
       ]

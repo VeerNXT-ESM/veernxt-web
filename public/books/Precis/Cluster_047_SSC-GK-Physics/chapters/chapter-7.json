@@ -1,0 +1,504 @@
+{
+  "title": "CHAPTER 7 : SOUND",
+  "order": 7,
+  "blocks": [
+    {
+      "id": "hi6jxjr",
+      "type": "heading",
+      "level": 2,
+      "content": "INTRODUCTION TO SOUND"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Sound is a mechanical longitudinal wave produced by vibrations and requires a medium to travel.",
+        "Loudness is determined by amplitude (measured in decibels), whereas pitch is determined by frequency (measured in Hertz).",
+        "Sound travels fastest in solids, followed by liquids, and slowest in gases; it cannot travel in a vacuum.",
+        "An echo requires a minimum reflecting distance of 17 metres and a time gap of 0.1 second.",
+        "SONAR stands for Sound Navigation And Ranging and uses ultrasonic waves for underwater applications."
+      ],
+      "id": "0dngi3r"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Speed in Air",
+          "value": "343 m/s",
+          "icon": "info"
+        },
+        {
+          "label": "Speed in Steel",
+          "value": "5000 m/s",
+          "icon": "award"
+        },
+        {
+          "label": "Audible Range",
+          "value": "20 Hz - 20,000 Hz",
+          "icon": "check"
+        },
+        {
+          "label": "Min Distance for Echo",
+          "value": "17 metres",
+          "icon": "clock"
+        }
+      ],
+      "id": "acjf88o"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sound is a form of energy that produces the sensation of hearing. Sound is produced due to vibration of objects.",
+      "id": "ow1ll55"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sound always requires a medium to travel and cannot travel in vacuum.",
+      "id": "kp40fb6"
+    },
+    {
+      "id": "8t2q3nl",
+      "type": "heading",
+      "level": 2,
+      "content": "PRODUCTION OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sound is produced when an object vibrates.",
+      "id": "plnbf4g"
+    },
+    {
+      "type": "paragraph",
+      "content": "These vibrations produce sound waves which travel through a medium.",
+      "id": "bg6d9e0"
+    },
+    {
+      "type": "paragraph",
+      "content": "Examples:",
+      "id": "zll15ci"
+    },
+    {
+      "id": "87tl4mj",
+      "type": "list",
+      "items": [
+        "<ul><li>Vibrating guitar string</li><li>Ringing of bell</li><li>Human vocal cords</li></ul>",
+        "Vibrating guitar string",
+        "Ringing of bell",
+        "Human vocal cords"
+      ]
+    },
+    {
+      "id": "y4y9mvu",
+      "type": "heading",
+      "level": 2,
+      "content": "SOUND WAVES"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sound travels in the form of waves called sound waves. Sound waves are: <img alt=\"What are Longitudinal and Transverse Waves? - Difference, Diagram\" src=\"/books/Precis/Cluster_014_SSC-GK-Physics/images/image_awk88e6.jpeg\"/>",
+      "id": "qqrllgd"
+    },
+    {
+      "id": "80rcdon",
+      "type": "list",
+      "items": [
+        "<ul><li>Mechanical waves</li><li>Longitudinal waves</li></ul>",
+        "Mechanical waves",
+        "Longitudinal waves"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Sound cannot travel in vacuum because particles are required for transmission.",
+      "id": "itsx5zx"
+    },
+    {
+      "id": "yy33flq",
+      "type": "heading",
+      "level": 2,
+      "content": "LONGITUDINAL WAVES"
+    },
+    {
+      "type": "paragraph",
+      "content": "In longitudinal waves, particles of the medium vibrate back and forth in the same direction as the wave travels.",
+      "id": "koqu02a"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sound waves consist of:",
+      "id": "fkg7tw8"
+    },
+    {
+      "id": "1tpctw8",
+      "type": "list",
+      "items": [
+        "<ul><li>Compression – region of high pressure</li><li>Rarefaction – region of low pressure</li></ul>",
+        "Compression – region of high pressure",
+        "Rarefaction – region of low pressure"
+      ]
+    },
+    {
+      "id": "rgxt33r",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT TERMS OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "content": "Wavelength (λ):",
+      "id": "mih7bbn"
+    },
+    {
+      "type": "paragraph",
+      "content": "Distance between two consecutive compressions or rarefactions.",
+      "id": "mclmrac"
+    },
+    {
+      "type": "paragraph",
+      "content": "Frequency (f):",
+      "id": "vskcm6i"
+    },
+    {
+      "type": "paragraph",
+      "content": "Number of vibrations per second. Unit = Hertz (Hz)",
+      "id": "2tnshdd"
+    },
+    {
+      "type": "paragraph",
+      "content": "Time Period (T):",
+      "id": "tf7hwlg"
+    },
+    {
+      "type": "paragraph",
+      "content": "Time taken to complete one vibration.",
+      "id": "oxry72b"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "T = 1 /f",
+      "id": "a2q71gc"
+    },
+    {
+      "type": "paragraph",
+      "content": "Amplitude:",
+      "id": "uzgdxbw"
+    },
+    {
+      "type": "paragraph",
+      "content": "Maximum displacement of particles. Loudness depends on amplitude.",
+      "id": "uhvyv72"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Sound travels fastest in solids and slowest in gases.",
+      "id": "uogixki"
+    },
+    {
+      "id": "dpc97jd",
+      "type": "heading",
+      "level": 2,
+      "content": "SPEED OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "content": "Speed of sound depends on:",
+      "id": "8re6q5q"
+    },
+    {
+      "id": "4chvlun",
+      "type": "list",
+      "items": [
+        "<ul><li>Medium</li><li>Temperature</li><li>Humidity</li></ul>",
+        "Medium",
+        "Temperature",
+        "Humidity"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Speed of sound:",
+      "id": "0mrap0y"
+    },
+    {
+      "type": "paragraph",
+      "content": "Air – 343 m/s Water – 1500 m/s Steel – 5000 m/s",
+      "id": "1n8xf1k"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sound travels fastest in solids and slowest in gases.",
+      "id": "m0hlinx"
+    },
+    {
+      "id": "4i1bea0",
+      "type": "heading",
+      "level": 2,
+      "content": "CHARACTERISTICS OF SOUND"
+    },
+    {
+      "type": "paragraph",
+      "content": "Loudness:",
+      "id": "7dz2hkq"
+    },
+    {
+      "type": "paragraph",
+      "content": "<img src=\"/books/Precis/Cluster_014_SSC-GK-Physics/images/image_2j5oz6n.png\"/>Depends on amplitude and measured in decibel (dB). ",
+      "id": "ldeskly"
+    },
+    {
+      "type": "paragraph",
+      "content": "Pitch:",
+      "id": "s9pkarf"
+    },
+    {
+      "type": "paragraph",
+      "content": "Depends on frequency.",
+      "id": "i4lyb82"
+    },
+    {
+      "type": "paragraph",
+      "content": "Higher frequency → higher pitch.",
+      "id": "wnubos9"
+    },
+    {
+      "type": "paragraph",
+      "content": "Quality:",
+      "id": "uts9qti"
+    },
+    {
+      "type": "paragraph",
+      "content": "Helps to differentiate between sounds of same pitch and loudness.",
+      "id": "9xsbh8p"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Medium",
+        "Speed of Sound",
+        "Relative Speed Rank"
+      ],
+      "rows": [
+        [
+          "Air",
+          "343 m/s",
+          "Slowest (Gas)"
+        ],
+        [
+          "Water",
+          "1500 m/s",
+          "Intermediate (Liquid)"
+        ],
+        [
+          "Steel",
+          "5000 m/s",
+          "Fastest (Solid)"
+        ]
+      ],
+      "id": "dx8qfdk"
+    },
+    {
+      "id": "70ucq0m",
+      "type": "heading",
+      "level": 2,
+      "content": "AUDIBLE RANGE"
+    },
+    {
+      "type": "paragraph",
+      "content": "Human ear can hear sound between 20 Hz to 20,000 Hz. Below 20 Hz – Infrasonic",
+      "id": "414d7n4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Above 20,000 Hz – Ultrasonic",
+      "id": "sil4rsw"
+    },
+    {
+      "id": "88k6vk0",
+      "type": "heading",
+      "level": 2,
+      "content": "ECHO"
+    },
+    {
+      "type": "paragraph",
+      "content": "Echo is repetition of sound caused by reflection. Conditions for echo:",
+      "id": "wyfwoc9"
+    },
+    {
+      "id": "z9r19i3",
+      "type": "list",
+      "items": [
+        "<ul><li>Minimum distance = 17 metres</li><li>Time gap = 0.1 second</li></ul>",
+        "Minimum distance = 17 metres",
+        "Time gap = 0.1 second"
+      ]
+    },
+    {
+      "id": "t5psdi1",
+      "type": "heading",
+      "level": 2,
+      "content": "SONAR"
+    },
+    {
+      "type": "paragraph",
+      "content": "SONAR stands for Sound Navigation And Ranging. Uses:",
+      "id": "8n79hza"
+    },
+    {
+      "id": "wuvj9jb",
+      "type": "list",
+      "items": [
+        "<ul><li>Measuring sea depth</li><li>Detecting submarines</li><li><img alt=\"Explain the structure of middle and internal ear with the help of diagram.\" src=\"/books/Precis/Cluster_014_SSC-GK-Physics/images/image_aikddkr.jpeg\"/>Locating underwater objects</li></ul>",
+        "Measuring sea depth",
+        "Detecting submarines",
+        "<img alt=\"Explain the structure of middle and internal ear with the help of diagram.\" src=\"/books/Precis/Cluster_014_SSC-GK-Physics/images/image_aikddkr.jpeg\"/>Locating underwater objects"
+      ]
+    },
+    {
+      "id": "nopsc4t",
+      "type": "heading",
+      "level": 2,
+      "content": "HUMAN EAR"
+    },
+    {
+      "type": "paragraph",
+      "content": "The human ear has three parts:",
+      "id": "m6u620s"
+    },
+    {
+      "id": "yubi85m",
+      "type": "list",
+      "items": [
+        "<ul><li>Outer ear – collects sound</li><li>Middle ear – amplifies vibrations</li><li>Inner ear – converts vibrations into nerve signals</li></ul>",
+        "Outer ear – collects sound",
+        "Middle ear – amplifies vibrations",
+        "Inner ear – converts vibrations into nerve signals"
+      ]
+    },
+    {
+      "id": "1tds936",
+      "type": "heading",
+      "level": 2,
+      "content": "NOISE POLLUTION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Noise is unwanted or unpleasant sound.",
+      "id": "ncc7mdt"
+    },
+    {
+      "type": "paragraph",
+      "content": "Causes:",
+      "id": "hql8m2q"
+    },
+    {
+      "id": "g0it1vm",
+      "type": "list",
+      "items": [
+        "<ul><li>Vehicles</li><li>Machines</li><li>Loudspeakers</li></ul>",
+        "Vehicles",
+        "Machines",
+        "Loudspeakers"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Effects:",
+      "id": "1lutz2e"
+    },
+    {
+      "id": "yclgoge",
+      "type": "list",
+      "items": [
+        "<ul><li>Hearing loss</li><li>Stress</li><li>High blood pressure</li></ul>",
+        "Hearing loss",
+        "Stress",
+        "High blood pressure"
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequency is measured in Hertz (Hz), while loudness is measured in decibel (dB).",
+        "Human audible range is strictly 20 Hz to 20,000 Hz (Infrasonic < 20 Hz, Ultrasonic > 20,000 Hz).",
+        "Full form of SONAR is Sound Navigation And Ranging, which utilizes ultrasonic waves.",
+        "Echo conditions frequently asked: Minimum distance must be 17 metres and time gap must be 0.1 second."
+      ],
+      "id": "ckdtu65"
+    },
+    {
+      "type": "paragraph",
+      "content": "Control:",
+      "id": "74e8jhb"
+    },
+    {
+      "id": "edm3qiu",
+      "type": "list",
+      "items": [
+        "<ul><li>Use of silencers</li><li>Plantation</li><li>Soundproofing</li></ul>",
+        "Use of silencers",
+        "Plantation",
+        "Soundproofing"
+      ]
+    },
+    {
+      "id": "g3tcynj",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT SSC QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q1. Unit of frequency?",
+      "id": "56ic9i4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Ans: Hertz",
+      "id": "6nv0i96"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q2. Sound travels fastest in? Ans: Solids",
+      "id": "4vr1j65"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q3. Audible range of human ear? Ans: 20 Hz – 20,000 Hz",
+      "id": "rwd42eo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q4. Full form of SONAR?",
+      "id": "kzbjyo4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Ans: Sound Navigation And Ranging",
+      "id": "sq6vtwy"
+    },
+    {
+      "id": "r4hovv9",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION"
+    },
+    {
+      "id": "0308syt",
+      "type": "list",
+      "items": [
+        "<ul><li>Sound is produced by vibration</li><li>Sound needs medium</li><li>Speed depends on medium</li><li>Loudness depends on amplitude</li><li>Pitch depends on frequency</li><li>SONAR uses ultrasonic waves</li></ul>",
+        "Sound is produced by vibration",
+        "Sound needs medium",
+        "Speed depends on medium",
+        "Loudness depends on amplitude",
+        "Pitch depends on frequency",
+        "SONAR uses ultrasonic waves"
+      ]
+    }
+  ],
+  "enriched": true
+}

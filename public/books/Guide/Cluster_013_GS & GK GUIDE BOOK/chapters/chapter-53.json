@@ -1,0 +1,315 @@
+{
+  "id": "6gqeowi",
+  "title": "Chapter 4: Heat",
+  "order": 53,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ea5k4ql",
+      "content": "Heat is a form of energy that flows from a body at higher temperature to a body at lower temperature. The study of heat and temperature is known as thermodynamics. Heat plays an important role in daily life, industrial processes and natural phenomena."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Heat",
+          "value": "Joule (J)",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit of Temp",
+          "value": "Kelvin (K)",
+          "icon": "award"
+        },
+        {
+          "label": "Modes of Transfer",
+          "value": "3 Modes",
+          "icon": "check"
+        },
+        {
+          "label": "Absolute Zero",
+          "value": "-273.15 °C",
+          "icon": "clock"
+        }
+      ],
+      "id": "6vpy8wf"
+    },
+    {
+      "id": "knq7p6d",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Heat"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Heat is a form of energy that flows from a higher temperature region to a lower temperature region.",
+        "Temperature is the measure of the degree of hotness or coldness of a body.",
+        "Conduction is the transfer of heat in solids without the actual movement of particles.",
+        "Convection is the transfer of heat in fluids (liquids and gases) via actual molecular movement.",
+        "Radiation transfers heat through electromagnetic waves and requires no material medium."
+      ],
+      "id": "5sv2zdy"
+    },
+    {
+      "type": "paragraph",
+      "id": "efkarwl",
+      "content": "• Heat is a form of energy that produces the sensation of warmth."
+    },
+    {
+      "type": "paragraph",
+      "id": "z6l0euq",
+      "content": "• It flows from a hotter object to a colder object."
+    },
+    {
+      "type": "paragraph",
+      "id": "j7rxejo",
+      "content": "• The SI unit of heat is Joule (J)."
+    },
+    {
+      "type": "paragraph",
+      "id": "v2x1agz",
+      "content": "• Heat is a form of energy transfer."
+    },
+    {
+      "id": "7jpb8bm",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Temperature"
+    },
+    {
+      "type": "paragraph",
+      "id": "95nazjs",
+      "content": "• Temperature is the degree of hotness or coldness of a body."
+    },
+    {
+      "type": "paragraph",
+      "id": "9swyi6d",
+      "content": "• It determines the direction of heat flow."
+    },
+    {
+      "type": "paragraph",
+      "id": "pglmrde",
+      "content": "• Common temperature scales are Celsius, Fahrenheit and Kelvin."
+    },
+    {
+      "id": "rl5rrs5",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Temperature Scales"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Modes of Heat Transfer: Conduction, Convection, and Radiation.",
+      "id": "7nj8ldj"
+    },
+    {
+      "id": "rahsvom",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Scale</strong></p>",
+            "<p><strong>Freezing / Boiling Point of Water</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Celsius Scale</p>",
+            "<p>0°C / 100°C</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fahrenheit Scale</p>",
+            "<p>32°F / 212°F</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Kelvin Scale</p>",
+            "<p>273 K / 373 K</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "831c9ls",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Modes of Heat Transfer"
+    },
+    {
+      "id": "jvsxlp9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Mode</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Conduction</p>",
+            "<p>Transfer of heat through solids without movement of particles</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Convection</p>",
+            "<p>Transfer of heat through liquids and gases by movement of particles</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Radiation</p>",
+            "<p>Transfer of heat through electromagnetic waves without medium</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a4xz8ug",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Conduction"
+    },
+    {
+      "type": "paragraph",
+      "id": "f0ykoa1",
+      "content": "Conduction occurs mainly in solids where heat energy is transferred from one particle to another without the movement of the particles themselves."
+    },
+    {
+      "id": "remeqz1",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Convection"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Conduction",
+        "Convection",
+        "Radiation"
+      ],
+      "rows": [
+        [
+          "Medium Required",
+          "Yes (Solids)",
+          "Yes (Fluids)",
+          "No (Vacuum)"
+        ],
+        [
+          "Particle Movement",
+          "No actual movement",
+          "Actual bulk movement",
+          "No particles involved"
+        ],
+        [
+          "Relative Speed",
+          "Slowest",
+          "Moderate",
+          "Fastest (Speed of Light)"
+        ]
+      ],
+      "id": "8crpgzk"
+    },
+    {
+      "type": "paragraph",
+      "id": "5g5yg9s",
+      "content": "Convection occurs in liquids and gases where heated particles move from one place to another carrying heat energy."
+    },
+    {
+      "id": "rxx77n8",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Radiation"
+    },
+    {
+      "type": "paragraph",
+      "id": "8x7yb8s",
+      "content": "Radiation is the transfer of heat in the form of electromagnetic waves. It does not require any material medium."
+    },
+    {
+      "id": "nderl66",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Effects of Heat"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "250ihoy",
+      "content": "• Expansion of substances"
+    },
+    {
+      "type": "paragraph",
+      "id": "ny639cm",
+      "content": "• Change of state (solid, liquid, gas)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d4w3mse",
+      "content": "• Increase in temperature"
+    },
+    {
+      "id": "2u70yit",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Expansion due to Heat"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Clinical thermometers have a specific range from 35°C to 42°C, whereas laboratory thermometers typically range from -10°C to 110°C.",
+        "Land breeze and sea breeze occur due to convection currents set up in air near coastal regions.",
+        "Thermal radiation travels at the speed of light and can pass through a vacuum."
+      ],
+      "id": "nbefwp9"
+    },
+    {
+      "type": "paragraph",
+      "id": "ahn2esy",
+      "content": "When substances are heated, they expand. Expansion can occur in solids, liquids and gases."
+    },
+    {
+      "id": "m027bwc",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "xfz1xfs",
+      "content": "• Heat flows from higher temperature to lower temperature."
+    },
+    {
+      "type": "paragraph",
+      "id": "l4o1vd9",
+      "content": "• SI unit of heat is Joule."
+    },
+    {
+      "type": "paragraph",
+      "id": "vtr1hw9",
+      "content": "• There are three modes of heat transfer: conduction, convection and radiation."
+    },
+    {
+      "type": "paragraph",
+      "id": "u0xqd1v",
+      "content": "• Radiation does not require a medium."
+    }
+  ],
+  "enriched": true
+}

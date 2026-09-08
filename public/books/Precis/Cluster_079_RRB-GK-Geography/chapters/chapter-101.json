@@ -1,0 +1,68 @@
+{
+  "title": "Intraplate Earthquakes",
+  "order": 101,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "These occur within plate interiors due to the reactivation of ancient faults or stress transmission. Although less frequent, they can cause severe destruction because affected regions are often unprepared.",
+      "id": "qvo0lmv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Although less frequent, they can cause severe destruction because affected regions are often unprepared.",
+      "id": "1wu7wzi"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Example Event",
+          "value": "Bhuj (2001)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Location",
+          "value": "Plate Interiors",
+          "icon": "info"
+        },
+        {
+          "label": "Frequency",
+          "value": "Less Frequent",
+          "icon": "clock"
+        },
+        {
+          "label": "Impact Level",
+          "value": "Severe Destruction",
+          "icon": "award"
+        }
+      ],
+      "id": "ivk3cm7"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Intraplate earthquakes originate within the interior of tectonic plates rather than at boundaries.",
+        "They are driven by stress transmission or the reactivation of ancient fault lines.",
+        "Because affected areas rarely prepare for seismic activity, these events often result in severe destruction.",
+        "The 2001 Bhuj earthquake serves as a primary example of an intraplate earthquake."
+      ],
+      "id": "ztumbd2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that intraplate earthquakes occur WITHIN plate interiors, not along plate margins.",
+        "Reactivation of ancient faults and stress transmission are key causative mechanisms tested in geography exams.",
+        "The 2001 Bhuj earthquake is a crucial Indian case study for intraplate seismic hazards."
+      ],
+      "id": "mmish3z"
+    },
+    {
+      "type": "paragraph",
+      "content": "Example: Bhuj earthquake, 2001.",
+      "id": "mey1l43"
+    }
+  ],
+  "enriched": true
+}

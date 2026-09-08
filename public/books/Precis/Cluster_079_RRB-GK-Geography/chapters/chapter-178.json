@@ -1,0 +1,82 @@
+{
+  "title": "MOST IMPORTANT EXAM POINTS",
+  "order": 178,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Longshore drift transports sediments along coast.<br/>• Stack forms after arch collapse.<br/>• Tombolo connects island to mainland.<br/>• Barrier reefs have lagoons.<br/>• Constructive waves deposit; destructive waves erode.",
+      "id": "9cjs2wu"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Constructive waves deposit; destructive waves erode.",
+      "id": "ngyou0w"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Wave Type",
+        "Primary Action"
+      ],
+      "rows": [
+        [
+          "Constructive Waves",
+          "Deposit"
+        ],
+        [
+          "Destructive Waves",
+          "Erode"
+        ]
+      ],
+      "id": "zmf86t4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Sediment Transport",
+          "value": "Longshore Drift",
+          "icon": "info"
+        },
+        {
+          "label": "Island Connector",
+          "value": "Tombolo",
+          "icon": "check"
+        },
+        {
+          "label": "Arch Collapse Result",
+          "value": "Stack",
+          "icon": "book"
+        },
+        {
+          "label": "Reef Feature",
+          "value": "Lagoon",
+          "icon": "award"
+        }
+      ],
+      "id": "g9xokkd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: A Tombolo connects an island to the mainland, not two mainlands.",
+        "Sequence of coastal erosion landforms: Sea arches collapse to form Stacks.",
+        "Wave Action Rule: Constructive waves deposit sediments, while destructive waves erode the coastline."
+      ],
+      "id": "xrzu6t6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Longshore drift transports sediments along the coast.",
+        "A stack is formed following the collapse of an arch.",
+        "A tombolo is a landform that connects an island to the mainland.",
+        "Barrier reefs are characterized by the presence of lagoons.",
+        "Constructive waves build up land by depositing sediments, whereas destructive waves break down land through erosion."
+      ],
+      "id": "gse4kwv"
+    }
+  ],
+  "enriched": true
+}

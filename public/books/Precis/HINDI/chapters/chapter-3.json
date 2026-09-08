@@ -44,11 +44,13 @@
     },
     {
       "type": "paragraph",
-      "id": "nudxnqw"
+      "id": "nudxnqw",
+      "content": "ध्वनियों के सार्थक समूह को शब्द कहते हैं। जब दो या अधिक वर्ण मिलकर कोई अर्थ व्यक्त करते हैं, तो वे शब्द बनाते हैं। उदाहरण के लिए:'फ', 'ल', 'ू' मिलकर 'फूल' बनाते हैं, जिसका अर्थ है:पुष्प।"
     },
     {
       "type": "paragraph",
-      "id": "epgu09h"
+      "id": "epgu09h",
+      "content": "हिंदी में शब्द भंडार बहुत विशाल है। इसमें संस्कृत, अरबी, फारसी, तुर्की, पुर्तगाली और अंग्रेज़ी:सभी भाषाओं के शब्द समाए हुए हैं। इसीलिए हिंदी को एक समृद्ध और लचीली भाषा माना जाता है।"
     },
     {
       "id": "vf8fdpg",
@@ -58,7 +60,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4oo7gyf"
+      "id": "4oo7gyf",
+      "content": "हिंदी के शब्दों को उनके उद्गम (मूल स्रोत) के आधार पर चार वर्गों में बाँटा जाता है:"
     },
     {
       "id": "m8i6lgo",
@@ -67,41 +70,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>वर्ग</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>तत्सम</p>",
+            "<p>सीधे संस्कृत से लिए गए शब्द, जिनका रूप नहीं बदला</p>",
+            "<p>अग्नि, वायु, नेत्र, पुष्प, कर्म</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>तद्भव</p>",
+            "<p>संस्कृत से बिगड़कर बने हिंदी शब्द</p>",
+            "<p>आग, हवा, आँख, फूल, काम</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>देशज</p>",
+            "<p>भारत की स्थानीय बोलियों से आए शब्द</p>",
+            "<p>खिड़की, लोटा, ठेठ, झाड़ू, गड्ढा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>विदेशज</p>",
+            "<p>विदेशी भाषाओं से आए शब्द</p>",
+            "<p>कमीज़, स्कूल, रेडियो, अदालत, कमरा</p>"
           ]
         }
       ]
@@ -114,12 +117,14 @@
     },
     {
       "type": "paragraph",
-      "id": "qc2kj3w"
+      "id": "qc2kj3w",
+      "content": "SSC JHT परीक्षा में तत्सम-तद्भव से प्रश्न अवश्य पूछे जाते हैं। नीचे दी गई तालिका को भली-भाँति याद कीजिए:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wakprar"
+      "id": "wakprar",
+      "content": "<strong>(क) प्रमुख तत्सम-तद्भव युग्म:भाग 1</strong>"
     },
     {
       "id": "f3byg1y",
@@ -128,100 +133,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>तत्सम</strong></p>",
+            "<p><strong>तद्भव</strong></p>",
+            "<p><strong>तत्सम</strong></p>",
+            "<p><strong>तद्भव</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अग्नि</p>",
+            "<p>आग</p>",
+            "<p>अश्रु</p>",
+            "<p>आँसू</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अक्षि</p>",
+            "<p>आँख</p>",
+            "<p>अर्द्ध</p>",
+            "<p>आधा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अष्ट</p>",
+            "<p>आठ</p>",
+            "<p>अमूल्य</p>",
+            "<p>अमोल</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>आम्र</p>",
+            "<p>आम</p>",
+            "<p>इक्षु</p>",
+            "<p>ईख</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>उष्ट्र</p>",
+            "<p>ऊँट</p>",
+            "<p>कर्ण</p>",
+            "<p>कान</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>कार्य</p>",
+            "<p>काम</p>",
+            "<p>क्षीर</p>",
+            "<p>खीर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>क्षेत्र</p>",
+            "<p>खेत</p>",
+            "<p>गृह</p>",
+            "<p>घर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ग्राम</p>",
+            "<p>गाँव</p>",
+            "<p>चंद्र</p>",
+            "<p>चाँद</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>चतुर्दश</p>",
+            "<p>चौदह</p>",
+            "<p>चतुष्पद</p>",
+            "<p>चौपाया</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>दधि</p>",
+            "<p>दही</p>",
+            "<p>दंत</p>",
+            "<p>दाँत</p>"
           ]
         }
       ]
@@ -229,7 +234,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "xbs3fgw"
+      "id": "xbs3fgw",
+      "content": "<strong>(ख) प्रमुख तत्सम-तद्भव युग्म:भाग 2</strong>"
     },
     {
       "id": "k6b3vf2",
@@ -238,100 +244,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>तत्सम</strong></p>",
+            "<p><strong>तद्भव</strong></p>",
+            "<p><strong>तत्सम</strong></p>",
+            "<p><strong>तद्भव</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>नयन</p>",
+            "<p>नैन</p>",
+            "<p>नासिका</p>",
+            "<p>नाक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>पाद</p>",
+            "<p>पाँव</p>",
+            "<p>पुष्प</p>",
+            "<p>फूल</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>पत्र</p>",
+            "<p>पत्ता</p>",
+            "<p>पक्षी</p>",
+            "<p>पंछी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मस्तक</p>",
+            "<p>माथा</p>",
+            "<p>मुख</p>",
+            "<p>मुँह</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>रात्रि</p>",
+            "<p>रात</p>",
+            "<p>राजा</p>",
+            "<p>राजा / राय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>वायु</p>",
+            "<p>हवा</p>",
+            "<p>वर्षा</p>",
+            "<p>बारिश / बरसात</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>शिर</p>",
+            "<p>सिर</p>",
+            "<p>सप्त</p>",
+            "<p>सात</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>स्वर्ण</p>",
+            "<p>सोना</p>",
+            "<p>हस्त</p>",
+            "<p>हाथ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>क्षण</p>",
+            "<p>छिन</p>",
+            "<p>त्वरित</p>",
+            "<p>तुरंत</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>नव</p>",
+            "<p>नौ</p>",
+            "<p>दश</p>",
+            "<p>दस</p>"
           ]
         }
       ]
@@ -344,7 +350,8 @@
     },
     {
       "type": "paragraph",
-      "id": "v7rkgtk"
+      "id": "v7rkgtk",
+      "content": "हिंदी में विभिन्न विदेशी भाषाओं के शब्द घुल-मिल गए हैं। इनकी पहचान करना परीक्षा की दृष्टि से महत्त्वपूर्ण है:"
     },
     {
       "id": "fv5815u",
@@ -353,50 +360,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>भाषा</strong></p>",
+            "<p><strong>प्रमुख शब्द</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अरबी</p>",
+            "<p>अदालत, औरत, किताब, दुकान, मशहूर, वकील, तारीख, इनाम, कानून, मालिक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>फारसी</p>",
+            "<p>आराम, आवाज़, कमरा, खुशी, दरवाज़ा, नमक, बागीचा, रोज़, शादी, ज़मीन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>तुर्की</p>",
+            "<p>कैंची, तोप, चाकू, बहादुर, लाश, सौगात, काबू, तमगा, बेगम</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पुर्तगाली</p>",
+            "<p>अलमारी, कमीज़, गमला, तौलिया, बालटी, साबुन, फीता, मेज़</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अंग्रेज़ी</p>",
+            "<p>स्कूल, रेडियो, टेलीफोन, डॉक्टर, बस, ट्रेन, कंप्यूटर, मोबाइल</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>फ्रेंच</p>",
+            "<p>कारतूस, रेस्तराँ, बुफे, ब्यूरो, काफे</p>"
           ]
         }
       ]
@@ -414,7 +421,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rrx8jwr"
+      "id": "rrx8jwr",
+      "content": "पर्यायवाची वे शब्द होते हैं जिनके अर्थ समान या मिलते-जुलते होते हैं। परंतु प्रत्येक पर्याय का प्रयोग हर संदर्भ में नहीं होता। SSC JHT में पर्यायवाची से नियमित प्रश्न पूछे जाते हैं।"
     },
     {
       "id": "172qqf9",
@@ -423,113 +431,113 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>मूल शब्द</strong></p>",
+            "<p><strong>पर्यायवाची शब्द</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अग्नि / आग</p>",
+            "<p>अनल, पावक, वह्नि, दहन, हुताशन, कृशानु</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>आकाश</p>",
+            "<p>नभ, गगन, व्योम, अंबर, आसमान, शून्य, अंतरिक्ष</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>इंद्र</p>",
+            "<p>सुरेश, देवेंद्र, पुरंदर, शक्र, महेंद्र, वासव</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ईश्वर</p>",
+            "<p>परमेश्वर, परमात्मा, भगवान, जगदीश, विधाता, प्रभु</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>जल / पानी</p>",
+            "<p>नीर, वारि, तोय, अंबु, सलिल, जीवन, पय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>नदी</p>",
+            "<p>सरिता, तटिनी, तरंगिणी, निर्झरिणी, कूलंकषा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पृथ्वी</p>",
+            "<p>धरा, वसुधा, भूमि, धरती, अवनि, मेदिनी, क्षिति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पुष्प / फूल</p>",
+            "<p>कुसुम, सुमन, प्रसून, मंजरी, बुक्का, पहुप</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>वायु / हवा</p>",
+            "<p>पवन, समीर, अनिल, मारुत, बयार, वात</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>सूर्य</p>",
+            "<p>रवि, सूरज, भानु, दिनकर, दिवाकर, प्रभाकर, आदित्य</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>चंद्रमा</p>",
+            "<p>चाँद, शशि, इंदु, राकेश, हिमांशु, सुधांशु</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>रात</p>",
+            "<p>रात्रि, निशा, यामिनी, रजनी, तमिस्रा, विभावरी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>घर</p>",
+            "<p>गृह, निवास, भवन, सदन, आवास, आलय, धाम</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>राजा</p>",
+            "<p>नृप, भूपति, महीपाल, नरेश, भूपाल, नरपति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>सोना</p>",
+            "<p>स्वर्ण, कनक, हेम, हिरण्य, कांचन, जातरूप</p>"
           ]
         }
       ]
@@ -542,7 +550,8 @@
     },
     {
       "type": "paragraph",
-      "id": "d193tx2"
+      "id": "d193tx2",
+      "content": "विलोम शब्द वे होते हैं जिनका अर्थ परस्पर विरोधी होता है। SSC JHT में विलोम शब्द से सीधे प्रश्न पूछे जाते हैं।"
     },
     {
       "id": "k17nfbl",
@@ -551,122 +560,122 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>शब्द</strong></p>",
+            "<p><strong>विलोम</strong></p>",
+            "<p><strong>शब्द</strong></p>",
+            "<p><strong>विलोम</strong></p>",
+            "<p><strong>शब्द</strong></p>",
+            "<p><strong>विलोम</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>आदि</p>",
+            "<p>अंत</p>",
+            "<p>आकाश</p>",
+            "<p>पाताल</p>",
+            "<p>आशा</p>",
+            "<p>निराशा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>उचित</p>",
+            "<p>अनुचित</p>",
+            "<p>उपकार</p>",
+            "<p>अपकार</p>",
+            "<p>उत्थान</p>",
+            "<p>पतन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>एकता</p>",
+            "<p>अनेकता</p>",
+            "<p>कठोर</p>",
+            "<p>कोमल</p>",
+            "<p>क्रोध</p>",
+            "<p>शांति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>गुण</p>",
+            "<p>दोष</p>",
+            "<p>ज्ञान</p>",
+            "<p>अज्ञान</p>",
+            "<p>जीवन</p>",
+            "<p>मृत्यु</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>दिन</p>",
+            "<p>रात</p>",
+            "<p>धर्म</p>",
+            "<p>अधर्म</p>",
+            "<p>न्याय</p>",
+            "<p>अन्याय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>पाप</p>",
+            "<p>पुण्य</p>",
+            "<p>प्रेम</p>",
+            "<p>घृणा</p>",
+            "<p>बंधन</p>",
+            "<p>मुक्ति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>सफलता</p>",
+            "<p>विफलता</p>",
+            "<p>सत्य</p>",
+            "<p>असत्य</p>",
+            "<p>स्वदेश</p>",
+            "<p>विदेश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>हर्ष</p>",
+            "<p>विषाद</p>",
+            "<p>हिंसा</p>",
+            "<p>अहिंसा</p>",
+            "<p>लाभ</p>",
+            "<p>हानि</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>विद्वान</p>",
+            "<p>मूर्ख</p>",
+            "<p>श्रद्धा</p>",
+            "<p>अश्रद्धा</p>",
+            "<p>साकार</p>",
+            "<p>निराकार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>आगमन</p>",
+            "<p>प्रस्थान</p>",
+            "<p>स्वर्ग</p>",
+            "<p>नरक</p>",
+            "<p>यश</p>",
+            "<p>अपयश</p>"
           ]
         }
       ]
@@ -679,7 +688,8 @@
     },
     {
       "type": "paragraph",
-      "id": "i94chgr"
+      "id": "i94chgr",
+      "content": "अनेकार्थी शब्द वे होते हैं जिनके एक से अधिक अर्थ होते हैं। संदर्भ के अनुसार इनका अर्थ बदलता रहता है। परीक्षा में इनसे प्रश्न पूछे जाते हैं।"
     },
     {
       "id": "qtvvnhh",
@@ -688,100 +698,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>शब्द</strong></p>",
+            "<p><strong>अर्थ 1</strong></p>",
+            "<p><strong>अर्थ 2</strong></p>",
+            "<p><strong>अर्थ 3</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अंबर</p>",
+            "<p>आकाश</p>",
+            "<p>वस्त्र</p>",
+            "<p>एक सुगंधित द्रव्य</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>कनक</p>",
+            "<p>सोना</p>",
+            "<p>धतूरा</p>",
+            "<p>गेहूँ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>कर</p>",
+            "<p>हाथ</p>",
+            "<p>किरण</p>",
+            "<p>टैक्स / कर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>काल</p>",
+            "<p>समय</p>",
+            "<p>मृत्यु</p>",
+            "<p>यमराज</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>गुरु</p>",
+            "<p>शिक्षक</p>",
+            "<p>भारी / बड़ा</p>",
+            "<p>बृहस्पति ग्रह</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>घन</p>",
+            "<p>बादल</p>",
+            "<p>हथौड़ा</p>",
+            "<p>ठोस / घना</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>जलज</p>",
+            "<p>कमल</p>",
+            "<p>मछली</p>",
+            "<p>मोती</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>पत्र</p>",
+            "<p>पत्ता</p>",
+            "<p>चिट्ठी</p>",
+            "<p>समाचार-पत्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>फल</p>",
+            "<p>फल (fruit)</p>",
+            "<p>परिणाम</p>",
+            "<p>पुरस्कार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मधु</p>",
+            "<p>शहद</p>",
+            "<p>मदिरा</p>",
+            "<p>वसंत ऋतु</p>"
           ]
         }
       ]
@@ -825,7 +835,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fjx4qll"
+      "id": "fjx4qll",
+      "content": "ये शब्द सुनने में एक जैसे लगते हैं परंतु इनके अर्थ में अंतर होता है। अनुवाद करते समय इनकी सही पहचान अत्यंत आवश्यक है।"
     },
     {
       "id": "aspgi9z",
@@ -834,100 +845,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>शब्द 1</strong></p>",
+            "<p><strong>अर्थ</strong></p>",
+            "<p><strong>शब्द 2</strong></p>",
+            "<p><strong>अर्थ</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अंस</p>",
+            "<p>कंधा</p>",
+            "<p>अंश</p>",
+            "<p>हिस्सा / भाग</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अभिराम</p>",
+            "<p>सुंदर</p>",
+            "<p>अविराम</p>",
+            "<p>बिना रुके / लगातार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अनु</p>",
+            "<p>पीछे / उपसर्ग</p>",
+            "<p>अणु</p>",
+            "<p>परमाणु</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>कुल</p>",
+            "<p>वंश / परिवार</p>",
+            "<p>कूल</p>",
+            "<p>नदी का किनारा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>तरणि</p>",
+            "<p>नाव</p>",
+            "<p>तरणी</p>",
+            "<p>सूर्य / नौका</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>दिन</p>",
+            "<p>दिन (day)</p>",
+            "<p>दीन</p>",
+            "<p>गरीब / दयनीय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>नीर</p>",
+            "<p>जल / पानी</p>",
+            "<p>नीड़</p>",
+            "<p>घोंसला</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>परिणाम</p>",
+            "<p>नतीजा</p>",
+            "<p>परिमाण</p>",
+            "<p>मात्रा / नाप</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मेघ</p>",
+            "<p>बादल</p>",
+            "<p>मेध</p>",
+            "<p>यज्ञ / बलिदान</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>शर</p>",
+            "<p>बाण / तीर</p>",
+            "<p>सर</p>",
+            "<p>सरोवर / तालाब</p>"
           ]
         }
       ]
@@ -940,7 +951,8 @@
     },
     {
       "type": "paragraph",
-      "id": "muolg3b"
+      "id": "muolg3b",
+      "content": "हिंदी में नए शब्द बनाने के कई तरीके हैं। इनमें उपसर्ग, प्रत्यय, समास और संधि प्रमुख हैं। इन्हें अगले अध्यायों में विस्तार से पढ़ेंगे। यहाँ एक संक्षिप्त परिचय दिया जा रहा है:"
     },
     {
       "id": "vydokmq",
@@ -949,49 +961,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>विधि</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>उपसर्ग जोड़कर</p>",
+            "<p>मूल शब्द से पहले उपसर्ग लगाना</p>",
+            "<p>सु + विचार = सुविचार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>प्रत्यय जोड़कर</p>",
+            "<p>मूल शब्द के बाद प्रत्यय लगाना</p>",
+            "<p>पढ़ + आई = पढ़ाई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>समास द्वारा</p>",
+            "<p>दो शब्दों को मिलाकर एक बनाना</p>",
+            "<p>राज + पुत्र = राजपुत्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>संधि द्वारा</p>",
+            "<p>दो वर्णों का मेल / परिवर्तन</p>",
+            "<p>देव + आलय = देवालय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>द्विरुक्ति</p>",
+            "<p>शब्द की पुनरावृत्ति</p>",
+            "<p>धीरे-धीरे, रात-रात, घर-घर</p>"
           ]
         }
       ]
@@ -1004,12 +1016,14 @@
     },
     {
       "type": "paragraph",
-      "id": "vwiiz49"
+      "id": "vwiiz49",
+      "content": "उपसर्ग शब्द के आरंभ में जुड़कर उसका अर्थ बदल देते हैं। हिंदी में तीन स्रोतों से उपसर्ग आते हैं:संस्कृत, हिंदी और उर्दू/फारसी।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7zf39l1"
+      "id": "7zf39l1",
+      "content": "<strong>(क) संस्कृत उपसर्ग</strong>"
     },
     {
       "id": "f7bgru2",
@@ -1018,129 +1032,129 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>उपसर्ग</strong></p>",
+            "<p><strong>अर्थ</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अ / अन्</p>",
+            "<p>नहीं / अभाव</p>",
+            "<p>अज्ञान, अनादर, अनपढ़</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अधि</p>",
+            "<p>ऊपर / श्रेष्ठ</p>",
+            "<p>अधिकार, अध्यक्ष, अधीन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अनु</p>",
+            "<p>पीछे / अनुसार</p>",
+            "<p>अनुकरण, अनुवाद, अनुसार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अप</p>",
+            "<p>बुरा / दूर</p>",
+            "<p>अपमान, अपकार, अपवाद</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अभि</p>",
+            "<p>ओर / सामने</p>",
+            "<p>अभिनय, अभिमान, अभिलाषा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अव</p>",
+            "<p>नीचे / बुरा</p>",
+            "<p>अवगुण, अवकाश, अवनति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आ</p>",
+            "<p>ओर / तक</p>",
+            "<p>आगमन, आजन्म, आकर्षण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>उत् / उद्</p>",
+            "<p>ऊपर / श्रेष्ठ</p>",
+            "<p>उत्कर्ष, उदय, उन्नति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>उप</p>",
+            "<p>पास / सहायक</p>",
+            "<p>उपकार, उपस्थित, उपाध्यक्ष</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>परि</p>",
+            "<p>चारों ओर / पूर्ण</p>",
+            "<p>परिक्रमा, परिवार, परिश्रम</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>प्र</p>",
+            "<p>आगे / अधिक</p>",
+            "<p>प्रगति, प्रकाश, प्रयास</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>प्रति</p>",
+            "<p>विरुद्ध / प्रत्येक</p>",
+            "<p>प्रतिदिन, प्रतिकार, प्रतिकूल</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वि</p>",
+            "<p>विशेष / बिना</p>",
+            "<p>विकास, विज्ञान, विदेश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>सम्</p>",
+            "<p>साथ / पूर्ण</p>",
+            "<p>संगम, संस्कार, संपूर्ण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>सु</p>",
+            "<p>अच्छा / सरल</p>",
+            "<p>सुगम, सुविचार, सुफल</p>"
           ]
         }
       ]
@@ -1148,7 +1162,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "jqyveug"
+      "id": "jqyveug",
+      "content": "<strong>(ख) उर्दू / फारसी उपसर्ग</strong>"
     },
     {
       "type": "examAlert",
@@ -1166,65 +1181,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>उपसर्ग</strong></p>",
+            "<p><strong>अर्थ</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ब</p>",
+            "<p>में / के साथ</p>",
+            "<p>बनाम, बदौलत, बमुश्किल</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>बे</p>",
+            "<p>बिना / रहित</p>",
+            "<p>बेकाम, बेईमान, बेवफा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ना</p>",
+            "<p>नहीं / अभाव</p>",
+            "<p>नाकाम, नालायक, नाराज़</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>बद</p>",
+            "<p>बुरा</p>",
+            "<p>बदनाम, बदकिस्मत, बदमाश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>खुश</p>",
+            "<p>अच्छा / प्रसन्न</p>",
+            "<p>खुशबू, खुशहाल, खुशनुमा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>हम</p>",
+            "<p>साथी / समान</p>",
+            "<p>हमदर्द, हमसफर, हमउम्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ला</p>",
+            "<p>नहीं / बिना</p>",
+            "<p>लाजवाब, लाचार, लापरवाह</p>"
           ]
         }
       ]
@@ -1237,7 +1252,8 @@
     },
     {
       "type": "paragraph",
-      "id": "pj5y6kt"
+      "id": "pj5y6kt",
+      "content": "प्रत्यय शब्द के अंत में जुड़कर उसका अर्थ या रूप बदल देते हैं। इनसे संज्ञा, विशेषण, क्रिया और भाव वाचक शब्द बनते हैं।"
     },
     {
       "id": "qowg3ju",
@@ -1246,89 +1262,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>प्रत्यय</strong></p>",
+            "<p><strong>अर्थ / प्रभाव</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आई</p>",
+            "<p>भाव / कार्य वाचक</p>",
+            "<p>पढ़ाई, लिखाई, सिलाई, मिठाई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आन</p>",
+            "<p>क्रिया से संज्ञा</p>",
+            "<p>उड़ान, मिलान, चुनान</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आर</p>",
+            "<p>कर्ता / पेशा</p>",
+            "<p>लुहार, सुनार, कुम्हार, चमार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आरा</p>",
+            "<p>कर्ता / व्यवसाय</p>",
+            "<p>लकड़हारा, भिखारा, मछुआरा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>इक</p>",
+            "<p>संबंध वाचक</p>",
+            "<p>ऐतिहासिक, धार्मिक, सामाजिक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>इया</p>",
+            "<p>संबंध / लघु</p>",
+            "<p>रसिया, मुनिया, डिबिया</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ई</p>",
+            "<p>विशेषण / संज्ञा</p>",
+            "<p>सच्ची, अच्छी, गर्मी, सर्दी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ता / त्व</p>",
+            "<p>भाव वाचक</p>",
+            "<p>सुंदरता, महानता, कर्तव्य</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वाला</p>",
+            "<p>कर्ता / संबंध</p>",
+            "<p>दूधवाला, घरवाला, पानीवाला</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>हार</p>",
+            "<p>कर्ता</p>",
+            "<p>होनहार, खेवनहार, पालनहार</p>"
           ]
         }
       ]
@@ -1343,14 +1359,14 @@
       "id": "8t2j5ln",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "निम्नलिखित शब्दों के तत्सम रूप लिखिए: आग, आँख, पाँव, दाँत, हाथ, रात, घर, फूल",
+        "निम्नलिखित तत्सम शब्दों के तद्भव रूप लिखिए: वायु, नेत्र, पुष्प, कर्ण, ग्राम, चंद्र, सप्त, दश",
+        "'जल' के पाँच पर्यायवाची शब्द लिखिए।",
+        "'सत्य' और 'आकाश' के विलोम शब्द लिखिए।",
+        "'कर' शब्द के तीन अलग-अलग अर्थ वाक्यों में लिखकर समझाइए।",
+        "'दिन' और 'दीन' में अंतर स्पष्ट कीजिए।",
+        "उपसर्ग 'अ', 'सु', 'वि' और 'प्र' से दो-दो शब्द बनाइए।",
+        "प्रत्यय 'आई', 'ता' और 'वाला' से दो-दो शब्द बनाइए।"
       ]
     },
     {
@@ -1363,14 +1379,14 @@
       "id": "m90e5x2",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "हिंदी शब्द चार वर्गों में आते हैं:तत्सम, तद्भव, देशज, विदेशज।",
+        "तत्सम = संस्कृत मूल शब्द ज्यों-का-त्यों।",
+        "तद्भव = संस्कृत से बिगड़कर बने हिंदी शब्द।",
+        "पर्यायवाची = समान अर्थ, पर संदर्भ के अनुसार प्रयोग अलग।",
+        "विलोम = विपरीत अर्थ।",
+        "अनेकार्थी = एक शब्द, अनेक अर्थ।",
+        "श्रुतिसमभिन्नार्थक = समान उच्चारण, अलग अर्थ।",
+        "उपसर्ग शब्द के आगे, प्रत्यय शब्द के पीछे लगता है।"
       ]
     }
   ],

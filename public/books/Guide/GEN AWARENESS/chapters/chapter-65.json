@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "i42uik9"
+      "id": "i42uik9",
+      "content": "Nutrition is the process by which living organisms obtain food and use it for energy, growth, repair and maintenance of the body. Proper nutrition is essential for maintaining health, preventing diseases and ensuring proper development of the body."
     },
     {
       "type": "statStrip",
@@ -53,15 +54,18 @@
     },
     {
       "type": "paragraph",
-      "id": "2firyv5"
+      "id": "2firyv5",
+      "content": "• Nutrition is the process of obtaining food and utilizing it for energy and body functions."
     },
     {
       "type": "paragraph",
-      "id": "v74qsuw"
+      "id": "v74qsuw",
+      "content": "• It includes ingestion, digestion, absorption, assimilation and excretion."
     },
     {
       "type": "paragraph",
-      "id": "basijig"
+      "id": "basijig",
+      "content": "• Good nutrition helps maintain physical and mental health."
     },
     {
       "id": "8x3opcq",
@@ -71,23 +75,28 @@
     },
     {
       "type": "paragraph",
-      "id": "uehusrb"
+      "id": "uehusrb",
+      "content": "• Ingestion – Taking food into the body."
     },
     {
       "type": "paragraph",
-      "id": "tin8cap"
+      "id": "tin8cap",
+      "content": "• Digestion – Breaking down complex food into simple molecules."
     },
     {
       "type": "paragraph",
-      "id": "2pxekbw"
+      "id": "2pxekbw",
+      "content": "• Absorption – Nutrients enter the bloodstream through the intestine."
     },
     {
       "type": "paragraph",
-      "id": "09jjp9m"
+      "id": "09jjp9m",
+      "content": "• Assimilation – Nutrients used by cells for energy and growth."
     },
     {
       "type": "paragraph",
-      "id": "3lb3meo"
+      "id": "3lb3meo",
+      "content": "• Egestion – Removal of undigested waste."
     },
     {
       "id": "0siqig4",
@@ -102,73 +111,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Nutrient</strong></p>",
+            "<p><strong>Main Function</strong></p>",
+            "<p><strong>Sources</strong></p>",
+            "<p><strong>Deficiency Effects</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Carbohydrates</p>",
+            "<p>Energy source</p>",
+            "<p>Rice, wheat, potatoes</p>",
+            "<p>Weakness, fatigue</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Proteins</p>",
+            "<p>Body building</p>",
+            "<p>Eggs, meat, pulses</p>",
+            "<p>Poor growth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Fats</p>",
+            "<p>Energy storage</p>",
+            "<p>Butter, oils, nuts</p>",
+            "<p>Weight loss</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vitamins</p>",
+            "<p>Protective nutrients</p>",
+            "<p>Fruits, vegetables</p>",
+            "<p>Deficiency diseases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Minerals</p>",
+            "<p>Body regulation</p>",
+            "<p>Milk, green vegetables</p>",
+            "<p>Various disorders</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Water</p>",
+            "<p>Transport and metabolism</p>",
+            "<p>Water, fruits</p>",
+            "<p>Dehydration</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Fiber</p>",
+            "<p>Digestion</p>",
+            "<p>Whole grains</p>",
+            "<p>Constipation</p>"
           ]
         }
       ]
@@ -181,15 +190,18 @@
     },
     {
       "type": "paragraph",
-      "id": "kw6jofd"
+      "id": "kw6jofd",
+      "content": "• Carbohydrates are the main source of energy."
     },
     {
       "type": "paragraph",
-      "id": "vkxnqfa"
+      "id": "vkxnqfa",
+      "content": "• They are broken down into glucose."
     },
     {
       "type": "paragraph",
-      "id": "2yyzn17"
+      "id": "2yyzn17",
+      "content": "• Stored in the liver and muscles as glycogen."
     },
     {
       "type": "pullQuote",
@@ -204,15 +216,18 @@
     },
     {
       "type": "paragraph",
-      "id": "smnny5a"
+      "id": "smnny5a",
+      "content": "• Proteins are essential for growth and repair of tissues."
     },
     {
       "type": "paragraph",
-      "id": "smu76au"
+      "id": "smu76au",
+      "content": "• They are composed of amino acids."
     },
     {
       "type": "paragraph",
-      "id": "0k6dhvg"
+      "id": "0k6dhvg",
+      "content": "• Important for enzymes and hormones."
     },
     {
       "id": "2xmn68n",
@@ -222,15 +237,18 @@
     },
     {
       "type": "paragraph",
-      "id": "a4ok52b"
+      "id": "a4ok52b",
+      "content": "• Fats provide twice as much energy as carbohydrates."
     },
     {
       "type": "paragraph",
-      "id": "6u02h0f"
+      "id": "6u02h0f",
+      "content": "• They help in absorption of vitamins A, D, E and K."
     },
     {
       "type": "paragraph",
-      "id": "jrm3dk4"
+      "id": "jrm3dk4",
+      "content": "• They protect internal organs."
     },
     {
       "id": "zoht17k",
@@ -266,64 +284,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Vitamin</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Deficiency Disease</strong></p>",
+            "<p><strong>Sources</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vitamin A</p>",
+            "<p>Vision</p>",
+            "<p>Night blindness</p>",
+            "<p>Carrot, milk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vitamin B1</p>",
+            "<p>Energy metabolism</p>",
+            "<p>Beriberi</p>",
+            "<p>Whole grains</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vitamin B12</p>",
+            "<p>Red blood cells</p>",
+            "<p>Anemia</p>",
+            "<p>Meat, eggs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vitamin C</p>",
+            "<p>Immunity</p>",
+            "<p>Scurvy</p>",
+            "<p>Citrus fruits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vitamin D</p>",
+            "<p>Bone health</p>",
+            "<p>Rickets</p>",
+            "<p>Sunlight, milk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vitamin K</p>",
+            "<p>Blood clotting</p>",
+            "<p>Bleeding disorders</p>",
+            "<p>Green vegetables</p>"
           ]
         }
       ]
@@ -341,49 +359,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Mineral</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Deficiency</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Calcium</p>",
+            "<p>Bones and teeth</p>",
+            "<p>Weak bones</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Iron</p>",
+            "<p>Hemoglobin formation</p>",
+            "<p>Anemia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Iodine</p>",
+            "<p>Thyroid hormone</p>",
+            "<p>Goitre</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Phosphorus</p>",
+            "<p>Bone development</p>",
+            "<p>Weak bones</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Potassium</p>",
+            "<p>Nerve function</p>",
+            "<p>Muscle weakness</p>"
           ]
         }
       ]
@@ -396,15 +414,18 @@
     },
     {
       "type": "paragraph",
-      "id": "mxfaaa4"
+      "id": "mxfaaa4",
+      "content": "• A balanced diet contains all nutrients in correct proportions."
     },
     {
       "type": "paragraph",
-      "id": "hrcksy3"
+      "id": "hrcksy3",
+      "content": "• It includes cereals, fruits, vegetables, milk, proteins and fats."
     },
     {
       "type": "paragraph",
-      "id": "ivv6g83"
+      "id": "ivv6g83",
+      "content": "• It is essential for maintaining health."
     },
     {
       "id": "8jdp26a",
@@ -414,11 +435,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8wm8cyu"
+      "id": "8wm8cyu",
+      "content": "• Malnutrition occurs due to lack of proper nutrients."
     },
     {
       "type": "paragraph",
-      "id": "ghocvx3"
+      "id": "ghocvx3",
+      "content": "• It may result from undernutrition or overnutrition."
     },
     {
       "id": "lyrouur",
@@ -433,41 +456,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Symptoms</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kwashiorkor</p>",
+            "<p>Protein deficiency</p>",
+            "<p>Swollen abdomen</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Marasmus</p>",
+            "<p>Calorie deficiency</p>",
+            "<p>Severe weight loss</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Obesity</p>",
+            "<p>Excess calories</p>",
+            "<p>Excess body fat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Anemia</p>",
+            "<p>Iron deficiency</p>",
+            "<p>Fatigue and weakness</p>"
           ]
         }
       ]
@@ -489,31 +512,38 @@
     },
     {
       "type": "paragraph",
-      "id": "14smcc8"
+      "id": "14smcc8",
+      "content": "• Carbohydrates are the main source of energy."
     },
     {
       "type": "paragraph",
-      "id": "8u7qjf7"
+      "id": "8u7qjf7",
+      "content": "• Proteins are body-building nutrients."
     },
     {
       "type": "paragraph",
-      "id": "yiqdw2m"
+      "id": "yiqdw2m",
+      "content": "• Vitamin D deficiency causes rickets."
     },
     {
       "type": "paragraph",
-      "id": "u9zxaxc"
+      "id": "u9zxaxc",
+      "content": "• Iron deficiency causes anemia."
     },
     {
       "type": "paragraph",
-      "id": "42at3ly"
+      "id": "42at3ly",
+      "content": "• Iodine deficiency causes goitre."
     },
     {
       "type": "paragraph",
-      "id": "ripeqyw"
+      "id": "ripeqyw",
+      "content": "• Protein deficiency causes kwashiorkor."
     },
     {
       "type": "paragraph",
-      "id": "weanupf"
+      "id": "weanupf",
+      "content": "• Vitamin C deficiency causes scurvy."
     }
   ],
   "enriched": true

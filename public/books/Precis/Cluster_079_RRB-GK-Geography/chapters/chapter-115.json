@@ -1,0 +1,105 @@
+{
+  "title": "Untitled Chapter",
+  "order": 115,
+  "blocks": [
+    {
+      "id": "r7tge9o",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Shield</p>",
+            "<p>Broad with gentle slopes; fluid basaltic lava.</p>",
+            "<p>Mauna Loa</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Composite/Stratovolcano</p>",
+            "<p>Steep; alternating layers; explosive.</p>",
+            "<p>Mount Fuji</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cinder Cone</p>",
+            "<p>Small and steep; built from pyroclastic fragments.</p>",
+            "<p>Parícutin</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Caldera</p>",
+            "<p>Large collapse crater after eruption.</p>",
+            "<p>Crater Lake</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lava Dome</p>",
+            "<p>Dome-shaped due to viscous lava.</p>",
+            "<p>Mount Unzen</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Ensure systematic revision of essential subject facts prior to competitive examinations.",
+      "id": "knpwxhi"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter Status",
+          "value": "Untitled",
+          "icon": "book"
+        },
+        {
+          "label": "Section",
+          "value": "General",
+          "icon": "info"
+        },
+        {
+          "label": "Relevance",
+          "value": "High",
+          "icon": "award"
+        }
+      ],
+      "id": "uiifjd0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Cross-reference chapter topics with previous years' question papers to identify high-yield areas.",
+        "Pay close attention to key definitions, formulas, and landmark dates commonly tested in competitive exams."
+      ],
+      "id": "tx94h3s"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Review official exam syllabus guidelines for detailed topic coverage.",
+        "Focus on core concepts, fundamental definitions, and key historical or analytical data.",
+        "Ensure systematic revision of essential subject facts prior to competitive examinations."
+      ],
+      "id": "cvhhvsg"
+    }
+  ],
+  "enriched": true
+}

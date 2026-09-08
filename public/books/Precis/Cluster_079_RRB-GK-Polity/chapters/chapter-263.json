@@ -1,0 +1,136 @@
+{
+  "title": "Status and Establishment",
+  "order": 263,
+  "blocks": [
+    {
+      "id": "a9ylp50",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Established</p>",
+            "<p>1964 (on recommendation of Santhanam Committee)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Statutory Status</p>",
+            "<p>Central Vigilance Commission Act, 2003</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type</p>",
+            "<p>Statutory Body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Objective</p>",
+            "<p>Prevent corruption and promote integrity</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Headquarters</p>",
+            "<p>New Delhi</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Constitutional status accords independent authority and safeguards to a body, ensuring its autonomy from executive interference.",
+      "id": "ata4nfb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constitutional Bodies",
+        "Statutory Bodies",
+        "Executive Bodies"
+      ],
+      "rows": [
+        [
+          "Source of Power",
+          "Directly from the Constitution",
+          "Act of Parliament / State Legislature",
+          "Executive Resolution of Cabinet"
+        ],
+        [
+          "Modifications",
+          "Requires Constitutional Amendment under Art. 368",
+          "Requires ordinary legislative amendment",
+          "Requires a simple cabinet decision"
+        ],
+        [
+          "Key Examples",
+          "UPSC, Election Commission, CAG, Finance Commission",
+          "NHRC, SEBI, CVC, NGT",
+          "NITI Aayog, Law Commission"
+        ]
+      ],
+      "id": "hfoh3u3"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 315-323",
+          "icon": "book"
+        },
+        {
+          "label": "First Establishment",
+          "value": "1926",
+          "icon": "calendar"
+        },
+        {
+          "label": "Standard Tenure",
+          "value": "6 Years / 65 Age",
+          "icon": "clock"
+        },
+        {
+          "label": "Financial Safeguard",
+          "value": "Charged Expenditure",
+          "icon": "award"
+        }
+      ],
+      "id": "bn7m6me"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always verify whether a body is Constitutional, Statutory, or Executive, as this is a frequent source of preliminary exam trap questions.",
+        "Expenses of major constitutional posts are charged on the Consolidated Fund of India, meaning they cannot be subjected to a parliamentary vote.",
+        "NITI Aayog and the National Development Council are classic examples of non-constitutional, extra-statutory executive bodies."
+      ],
+      "id": "2ra3jsd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional bodies derive their powers, status, and authority directly from specific articles of the Constitution of India.",
+        "Statutory bodies are established by an Act passed by Parliament or a State Legislature and can be modified or abolished by simple legislation.",
+        "Executive bodies are created through an executive resolution of the Cabinet and possess neither constitutional nor statutory backing.",
+        "Expenses and salaries of key constitutional bodies are charged upon the Consolidated Fund of India and are non-votable by Parliament."
+      ],
+      "id": "8iezywi"
+    }
+  ],
+  "enriched": true
+}

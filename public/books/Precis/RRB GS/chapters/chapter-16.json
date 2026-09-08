@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rb2g4s5"
+      "id": "rb2g4s5",
+      "content": "Food provides energy, growth materials and regulatory substances required for proper functioning of the body. The major components of food include carbohydrates, proteins, fats, vitamins and minerals."
     },
     {
       "id": "av6gdyi",
@@ -65,7 +66,8 @@
     },
     {
       "type": "paragraph",
-      "id": "x7ogj5y"
+      "id": "x7ogj5y",
+      "content": "Carbohydrates are the primary source of energy. They are composed of carbon, hydrogen and oxygen."
     },
     {
       "id": "pp2z1r9",
@@ -74,37 +76,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Example</strong></p>",
+            "<p><strong>Main Source</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Monosaccharide</p>",
+            "<p>Glucose</p>",
+            "<p>Fruits</p>",
+            "<p>Instant energy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Disaccharide</p>",
+            "<p>Sucrose</p>",
+            "<p>Sugar</p>",
+            "<p>Energy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Polysaccharide</p>",
+            "<p>Starch</p>",
+            "<p>Rice, Wheat</p>",
+            "<p>Energy storage</p>"
           ]
         }
       ]
@@ -117,7 +119,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lrjd0eg"
+      "id": "lrjd0eg",
+      "content": "Proteins are body-building nutrients composed of amino acids. They help in growth, repair and enzyme formation."
     },
     {
       "id": "shc4rry",
@@ -126,37 +129,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Deficiency</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Essential Amino Acids</p>",
+            "<p>Egg, Milk</p>",
+            "<p>Growth</p>",
+            "<p>Poor growth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Complete Protein</p>",
+            "<p>Animal food</p>",
+            "<p>Body building</p>",
+            "<p>Muscle wasting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Incomplete Protein</p>",
+            "<p>Pulses</p>",
+            "<p>Repair</p>",
+            "<p>Weakness</p>"
           ]
         }
       ]
@@ -169,7 +172,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0u1zr0n"
+      "id": "0u1zr0n",
+      "content": "Fats provide concentrated energy and help in absorption of fat-soluble vitamins. "
     },
     {
       "id": "ttb83he",
@@ -178,37 +182,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Excess Effect</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Saturated</p>",
+            "<p>Butter</p>",
+            "<p>Energy</p>",
+            "<p>Heart disease risk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Unsaturated</p>",
+            "<p>Vegetable oil</p>",
+            "<p>Healthy fats</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Trans fat</p>",
+            "<p>Processed food</p>",
+            "<p>Energy</p>",
+            "<p>High cholesterol</p>"
           ]
         }
       ]
@@ -221,7 +225,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wih1tws"
+      "id": "wih1tws",
+      "content": "Vitamins and minerals regulate body processes such as immunity, bone formation and blood production."
     },
     {
       "type": "pullQuote",
@@ -236,7 +241,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4fdlowp"
+      "id": "4fdlowp",
+      "content": "A balanced diet contains adequate amounts of carbohydrates, proteins, fats, vitamins, minerals, water and roughage in proper proportion. "
     },
     {
       "id": "ljak8t3",
@@ -245,33 +251,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Percentage of Energy</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Carbohydrates</p>",
+            "<p>50-60%</p>",
+            "<p>Rice</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Proteins</p>",
+            "<p>10-15%</p>",
+            "<p>Pulses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fats</p>",
+            "<p>20-30%</p>",
+            "<p>Oil</p>"
           ]
         }
       ]
@@ -284,7 +290,8 @@
     },
     {
       "type": "paragraph",
-      "id": "untjtxt"
+      "id": "untjtxt",
+      "content": "Malnutrition occurs when the body does not get adequate nutrients."
     },
     {
       "id": "yh4qrj3",
@@ -293,28 +300,28 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Symptoms</strong></p>",
+            "<p><strong>Affected Group</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kwashiorkor</p>",
+            "<p>Protein deficiency</p>",
+            "<p>Swollen belly</p>",
+            "<p>Children</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Marasmus</p>",
+            "<p>Protein + calorie deficiency</p>",
+            "<p>Severe wasting</p>",
+            "<p>Infants</p>"
           ]
         }
       ]
@@ -363,35 +370,43 @@
     },
     {
       "type": "paragraph",
-      "id": "01lybuo"
+      "id": "01lybuo",
+      "content": "1. Roughage (dietary fiber) helps in proper bowel movement and prevents constipation."
     },
     {
       "type": "paragraph",
-      "id": "ufo0q6q"
+      "id": "ufo0q6q",
+      "content": "2. Water is an essential nutrient that regulates body temperature and transports nutrients."
     },
     {
       "type": "paragraph",
-      "id": "itvny64"
+      "id": "itvny64",
+      "content": "3. Glycogen is the storage form of carbohydrates in animals."
     },
     {
       "type": "paragraph",
-      "id": "2eiwjaq"
+      "id": "2eiwjaq",
+      "content": "4. Essential amino acids cannot be synthesized by the body and must be obtained from diet."
     },
     {
       "type": "paragraph",
-      "id": "zlook4f"
+      "id": "zlook4f",
+      "content": "5. Omega-3 fatty acids are beneficial for heart health."
     },
     {
       "type": "paragraph",
-      "id": "c6wkpe8"
+      "id": "c6wkpe8",
+      "content": "6. Basal Metabolic Rate (BMR) is the minimum energy required at rest."
     },
     {
       "type": "paragraph",
-      "id": "60wxkko"
+      "id": "60wxkko",
+      "content": "7. BMI (Body Mass Index) is used to assess underweight and obesity."
     },
     {
       "type": "paragraph",
-      "id": "pnnr3ij"
+      "id": "pnnr3ij",
+      "content": "8. Overnutrition can lead to obesity, diabetes and cardiovascular diseases."
     },
     {
       "id": "ygngdm3",
@@ -406,97 +421,97 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Nutrient</strong></p>",
+            "<p><strong>Energy Value</strong></p>",
+            "<p><strong>Main Function</strong></p>",
+            "<p><strong>Major Source</strong></p>",
+            "<p><strong>Deficiency</strong></p>",
+            "<p><strong>Excess Effect</strong></p>",
+            "<p><strong>Special Note</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Carbohydrates</p>",
+            "<p>4 kcal/g</p>",
+            "<p>Energy</p>",
+            "<p>Rice, Wheat</p>",
+            "<p>Weakness</p>",
+            "<p>Obesity</p>",
+            "<p>Stored as glycogen</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Proteins</p>",
+            "<p>4 kcal/g</p>",
+            "<p>Growth &amp; repair</p>",
+            "<p>Egg, Pulses</p>",
+            "<p>Kwashiorkor</p>",
+            "<p>Kidney strain</p>",
+            "<p>Made of amino acids</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Fats</p>",
+            "<p>9 kcal/g</p>",
+            "<p>Concentrated energy</p>",
+            "<p>Oil, Butter</p>",
+            "<p>Dry skin</p>",
+            "<p>Heart disease</p>",
+            "<p>Absorb A, D, E, K</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Vitamins</p>",
+            "<p>No energy</p>",
+            "<p>Regulatory</p>",
+            "<p>Fruits, Veg</p>",
+            "<p>Deficiency diseases</p>",
+            "<p>Hypervitaminosis (fat-soluble)</p>",
+            "<p>Micronutrients</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Minerals</p>",
+            "<p>No energy</p>",
+            "<p>Structural &amp; regulatory</p>",
+            "<p>Milk, Salt</p>",
+            "<p>Anaemia, Goitre</p>",
+            "<p>Toxicity</p>",
+            "<p>Inorganic nutrients</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Water</p>",
+            "<p>0 kcal</p>",
+            "<p>Transport &amp; temperature</p>",
+            "<p>Drinking water</p>",
+            "<p>Dehydration</p>",
+            "<p>Water intoxication</p>",
+            "<p>60-70% body weight</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Roughage</p>",
+            "<p>0 kcal</p>",
+            "<p>Digestive health</p>",
+            "<p>Vegetables</p>",
+            "<p>Constipation</p>",
+            "<p>None</p>",
+            "<p>Non-digestible fiber</p>"
           ]
         }
       ]
@@ -519,27 +534,33 @@
     },
     {
       "type": "paragraph",
-      "id": "dbxidma"
+      "id": "dbxidma",
+      "content": "1. Carbohydrates are the main energy source."
     },
     {
       "type": "paragraph",
-      "id": "y6r0gzr"
+      "id": "y6r0gzr",
+      "content": "2. Proteins are body-building nutrients."
     },
     {
       "type": "paragraph",
-      "id": "sdfnqlc"
+      "id": "sdfnqlc",
+      "content": "3. Fats help absorb fat-soluble vitamins."
     },
     {
       "type": "paragraph",
-      "id": "0l1feiw"
+      "id": "0l1feiw",
+      "content": "4. Balanced diet includes all nutrients in proper ratio."
     },
     {
       "type": "paragraph",
-      "id": "2mx7xbn"
+      "id": "2mx7xbn",
+      "content": "5. Kwashiorkor is due to protein deficiency."
     },
     {
       "type": "paragraph",
-      "id": "dhe4d9u"
+      "id": "dhe4d9u",
+      "content": "6. Marasmus is due to protein and calorie deficiency."
     }
   ],
   "enriched": true

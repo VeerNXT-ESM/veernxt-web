@@ -1,0 +1,95 @@
+{
+  "title": "3. Types of Volcanoes",
+  "order": 114,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "Calderas are the most explosive of the earth's volcanoes and tend to collapse on themselves rather than building any tall structure.",
+      "id": "bgblpgt"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Volcano Type",
+        "Lava Viscosity",
+        "Eruption Style",
+        "Key Feature / Example"
+      ],
+      "rows": [
+        [
+          "Shield Volcano",
+          "Low (Highly Fluid)",
+          "Gentle, Non-explosive",
+          "Broad dome; Hawaii volcanoes"
+        ],
+        [
+          "Composite Volcano",
+          "High (Viscous)",
+          "Explosive with Ash",
+          "Layered cone; Mt. Fuji"
+        ],
+        [
+          "Caldera",
+          "Extremely High",
+          "Highly Explosive",
+          "Collapsed depression; Krakatoa"
+        ],
+        [
+          "Flood Basalt Province",
+          "Very Low (Fluid)",
+          "Effusive Mass Flow",
+          "Vast basalt sheets; Deccan Traps"
+        ]
+      ],
+      "id": "mxvt75p"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Shield Volcanoes",
+          "value": "Largest Area",
+          "icon": "info"
+        },
+        {
+          "label": "Calderas",
+          "value": "Most Explosive",
+          "icon": "award"
+        },
+        {
+          "label": "Deccan Traps",
+          "value": "Flood Basalt",
+          "icon": "book"
+        },
+        {
+          "label": "Mid-Ocean Ridge",
+          "value": "> 70,000 km",
+          "icon": "check"
+        }
+      ],
+      "id": "b0dlqbe"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Deccan Traps of India are a classic example of a Flood Basalt Province, frequently tested in UPSC Preliminary and Mains exams.",
+        "Shield volcanoes are non-explosive under normal conditions but become explosive if water enters the central vent.",
+        "Questions often contrast basaltic lava (low viscosity, fluid) of shield volcanoes with andesitic lava (high viscosity, explosive) of composite volcanoes."
+      ],
+      "id": "ghcct8v"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Shield volcanoes are predominantly composed of fluid basalt lava, creating broad, low-sloped structures.",
+        "Composite volcanoes erupt cooler, highly viscous lava along with pyroclastic debris, building tall, layered cones.",
+        "Calderas are extremely explosive volcanic depressions that collapse inward post-eruption rather than building elevated cones.",
+        "Flood Basalt Provinces release vast quantities of highly fluid lava covering thousands of square kilometers, exemplified by the Deccan Traps.",
+        "Mid-Ocean Ridge Volcanoes occur along oceanic spreading ridges extending over a global network of oceanic basins."
+      ],
+      "id": "3peldg8"
+    }
+  ],
+  "enriched": true
+}

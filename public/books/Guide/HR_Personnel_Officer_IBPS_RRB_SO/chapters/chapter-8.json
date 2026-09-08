@@ -53,41 +53,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Bank Type</strong></p>",
+            "<p><strong>HR Governance</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Public Sector Banks (PSBs)</p>",
+            "<p>Board HR Committee; HR Department at Head Office; Circle/Zone HRM; Branch HR support</p>",
+            "<p>IBA wage settlements; DFS guidelines; bank unions; transfer/posting policies; IBPS recruitment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Private Sector Banks</p>",
+            "<p>CHRO at top; HR Business Partners; COE (Centre of Excellence) model; HR Shared Services</p>",
+            "<p>Market-linked compensation; talent management focus; performance culture; employer branding</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RRBs (Regional Rural Banks)</p>",
+            "<p>HR managed centrally; IBPS for recruitment (CRP-RRBs); NABARD guidance; sponsor bank HR norms</p>",
+            "<p>Scale wages; allowances as per RRB pay revision; limited career growth compared to PSBs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cooperative Banks</p>",
+            "<p>State-level cooperative department oversight; dual regulation (RBI + Registrar of Cooperatives)</p>",
+            "<p>Members as employees in some cases; governance challenges; state-specific rules</p>"
           ]
         }
       ]
@@ -110,64 +110,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IBPS (Institute of Banking Personnel Selection)</p>",
+            "<p>Set up in 1975; autonomous body; conducts CWE for PSBs; headquartered in Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IBPS CWE :Post-wise Exams</p>",
+            "<p>CWE PO/MT (Probationary Officers); CWE Clerical (Clerks/Office Assistants); CWE SO (Specialist Officers); CWE RRB (Officer Scale I/II/III and Office Assistants)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SBI Recruitment</p>",
+            "<p>SBI conducts its own exam (not through IBPS) for PO, Clerical, and specialist posts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RBI Recruitment</p>",
+            "<p>RBI Grade A and Grade B through separate RBI examination; IBPS not involved</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NABARD Recruitment</p>",
+            "<p>NABARD Grade A and Grade B exam; Development Assistants; own examination</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Probationary Period</p>",
+            "<p>Generally 2 years for banking POs; confirmed after satisfactory performance and passing internal tests</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lateral Recruitment</p>",
+            "<p>Banks now hire specialists (IT, risk, data science) directly at market-linked CTC, outside IBPS framework</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Contract Employees</p>",
+            "<p>Banks hire contract staff for IT, marketing, operations; separate from regular staff; outsourcing increasing</p>"
           ]
         }
       ]
@@ -211,56 +211,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Bipartite Settlement</strong></p>",
+            "<p><strong>Period</strong></p>",
+            "<p><strong>Key Outcomes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1st Bipartite Settlement</p>",
+            "<p>1946</p>",
+            "<p>First structured wage settlement for bank employees</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>10th Bipartite Settlement</p>",
+            "<p>2010–2012</p>",
+            "<p>Significant wage revision; work-life balance provisions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>11th Bipartite Settlement</p>",
+            "<p>2015–2017</p>",
+            "<p>Wage revision with special allowance; performance-linked incentive introduced</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>12th Bipartite Settlement</p>",
+            "<p>2022 (effective Nov 2020)</p>",
+            "<p>15% wage revision on basic pay + DA; 5-day week discussions; improved leave provisions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>5-Day Work Week</p>",
+            "<p>Under discussion</p>",
+            "<p>Banks currently work 6 days; demand for 5-day week; partial implementation in progress</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "ej8evg2"
+      "id": "ej8evg2",
+      "content": "<strong>Important: </strong><em>IBA (Indian Banks' Association) negotiates on behalf of management with employee unions (AIBEA, AIBOA, INBEF, etc.). Settlements are bipartite and generally apply to all member banks.</em>"
     },
     {
       "type": "examAlert",
@@ -284,89 +285,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Metric</strong></p>",
+            "<p><strong>Formula / Description</strong></p>",
+            "<p><strong>Significance in Banking</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cost Per Hire</p>",
+            "<p>Total Recruitment Cost / Number of Hires</p>",
+            "<p>Measure recruitment efficiency; IBPS reduces CpH for PSBs through common recruitment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Time to Fill</p>",
+            "<p>Days from job requisition to offer acceptance</p>",
+            "<p>Operational efficiency; digital hiring reduces time to fill</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Attrition Rate</p>",
+            "<p>(Number of separations / Average headcount) × 100</p>",
+            "<p>Critical in private banks; high attrition in sales roles; benchmark: &lt;15% good</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Retention Rate</p>",
+            "<p>((Employees at end :new hires) / Employees at start) × 100</p>",
+            "<p>Complement of attrition; focus on high performers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Training Effectiveness (ROI)</p>",
+            "<p>((Benefits of training :Cost of training) / Cost of training) × 100</p>",
+            "<p>Justifies training spend; Kirkpatrick Level 4</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Revenue Per Employee</p>",
+            "<p>Total Revenue / Total Employees</p>",
+            "<p>Productivity measure; banks compare across branches</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Absenteeism Rate</p>",
+            "<p>(Days absent / Total available days) × 100</p>",
+            "<p>Indicator of engagement and wellness; benchmark: &lt;3% manageable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Internal Mobility Rate</p>",
+            "<p>Internal fills / Total vacancies × 100</p>",
+            "<p>Career development culture; succession health</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>HR to Employee Ratio</p>",
+            "<p>HR staff / Total employees</p>",
+            "<p>HR department sizing; typically 1:100 in large banks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Diversity Index</p>",
+            "<p>% of women, minorities, PWD in workforce</p>",
+            "<p>DEI monitoring; RBI/IBA guidance on diversity hiring</p>"
           ]
         }
       ]

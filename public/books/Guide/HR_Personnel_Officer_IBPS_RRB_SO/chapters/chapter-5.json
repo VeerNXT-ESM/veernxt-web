@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jdemo74"
+      "id": "jdemo74",
+      "content": "Compensation is the total of all rewards provided to employees in return for their services. It includes both financial and non-financial rewards. Effective compensation management attracts, retains, and motivates employees while managing labour costs."
     },
     {
       "type": "pullQuote",
@@ -63,89 +64,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Basic Pay / Base Salary</p>",
+            "<p>Direct Financial</p>",
+            "<p>Core salary for the role; basis for most other calculations; fixed and guaranteed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dearness Allowance (DA)</p>",
+            "<p>Direct Financial</p>",
+            "<p>Compensates for inflation; linked to Consumer Price Index (CPI); mandatory under law for certain sectors; major component in PSB salaries</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>House Rent Allowance (HRA)</p>",
+            "<p>Direct Financial</p>",
+            "<p>For accommodation; partially tax-exempt (Income Tax Act); depends on city classification</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Special Allowance</p>",
+            "<p>Direct Financial</p>",
+            "<p>Industry/employer-specific allowances; transport, medical, telephone, education allowances</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Variable Pay / Bonus</p>",
+            "<p>Direct Financial (Variable)</p>",
+            "<p>Performance-linked; incentive pay; annual bonus; quarterly incentive; profit sharing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Stock Options (ESOPs)</p>",
+            "<p>Direct Financial (Deferred)</p>",
+            "<p>Right to buy company shares at predetermined price; long-term retention tool; common in private banks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Provident Fund (PF)</p>",
+            "<p>Indirect / Benefits</p>",
+            "<p>12% employer contribution + 12% employee contribution; retirement savings; EPF Act 1952</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gratuity</p>",
+            "<p>Indirect / Benefits</p>",
+            "<p>15 days salary per year of service; payable after 5 years; Payment of Gratuity Act 1972; max Rs.20 lakh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Group Insurance</p>",
+            "<p>Indirect / Benefits</p>",
+            "<p>Life, health, accident insurance; ESIC for lower salary employees; employer-provided group medical</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Leave Entitlements</p>",
+            "<p>Non-financial</p>",
+            "<p>Casual Leave, Earned Leave, Sick Leave, Maternity Leave; governed by Factories Act, Maternity Benefit Act, and service rules</p>"
           ]
         }
       ]
@@ -189,7 +190,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rw299eb"
+      "id": "rw299eb",
+      "content": "Job Evaluation is a systematic process to assess the relative worth of jobs within an organisation, primarily to establish an equitable pay structure. It analyses the job :not the job holder."
     },
     {
       "id": "x5l6374",
@@ -198,46 +200,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Merits / Limitations</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ranking Method</p>",
+            "<p>Non-Analytical / Qualitative</p>",
+            "<p>Rank jobs from most to least important; simplest method; no factor analysis</p>",
+            "<p>Simple and quick; subjective; not appropriate for many jobs or large organisations</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Job Classification / Grading Method</p>",
+            "<p>Non-Analytical</p>",
+            "<p>Pre-define grades/classes; slot jobs into appropriate grades based on overall assessment</p>",
+            "<p>Easy to understand; suitable for government; may be arbitrary in classifications</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Factor Comparison Method</p>",
+            "<p>Analytical / Quantitative</p>",
+            "<p>Benchmark jobs compared on 5 factors (skill, mental effort, physical effort, responsibility, working conditions); assign money values to factors</p>",
+            "<p>Precise and consistent; complex to develop; difficult to explain to employees</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Point Rating Method</p>",
+            "<p>Analytical / Quantitative</p>",
+            "<p>Identify factors (skill, effort, responsibility, conditions); assign points to degree levels within each factor; total points determine grade</p>",
+            "<p>Most widely used; objective; transparent; used in government and PSBs; Hay Group method is a variation</p>"
           ]
         }
       ]
@@ -264,57 +266,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pay Grade / Bands</p>",
+            "<p>Group jobs of similar value into grades; salary range (minimum-midpoint-maximum) for each grade; overlap between grades</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Salary Range</p>",
+            "<p>Minimum and maximum pay for a job grade; allows progression within grade based on performance and experience</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Broadbanding</p>",
+            "<p>Fewer, wider pay bands compared to traditional narrow grades; more flexibility; horizontal career moves rewarded</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pay for Performance (P4P)</p>",
+            "<p>Variable pay linked to performance ratings or outcomes; merit increase; short-term incentive (STI); long-term incentive (LTI)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Total Rewards Strategy</p>",
+            "<p>Encompasses all direct and indirect compensation + non-financial rewards (career, recognition, work environment)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Compa-Ratio</p>",
+            "<p>Employee's current salary / midpoint of pay grade × 100; 100 = at midpoint; above 100 = overpaid relative to market; below 100 = underpaid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pay Equity</p>",
+            "<p>Internal equity (fairness across jobs within organisation); External equity (market competitiveness); Individual equity (fairness among individuals in same job)</p>"
           ]
         }
       ]
@@ -332,65 +334,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Benefit</strong></p>",
+            "<p><strong>Act / Authority</strong></p>",
+            "<p><strong>Key Provisions</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Provident Fund</p>",
+            "<p>EPF &amp; MP Act 1952; EPFO</p>",
+            "<p>12% employee + 12% employer (8.33% to EPS-95; 3.67% to EPF); for establishments with 20+ employees; wages up to Rs.15,000 mandatory</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gratuity</p>",
+            "<p>Payment of Gratuity Act 1972</p>",
+            "<p>15 days salary per year; minimum 5 years continuous service; max Rs.20 lakh; death/disability no 5-year rule</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bonus</p>",
+            "<p>Payment of Bonus Act 1965</p>",
+            "<p>Min 8.33%; max 20% of annual wages; for employees earning up to Rs.21,000/month; must have profit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Maternity Benefit</p>",
+            "<p>Maternity Benefit Act 1961 (amended 2017)</p>",
+            "<p>26 weeks paid leave (extended from 12 weeks) for first 2 children; 12 weeks for 3rd child; crèche facility for 50+ employees; work from home option</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ESIC / Health Insurance</p>",
+            "<p>ESI Act 1948</p>",
+            "<p>Medical, sickness, maternity, disability, dependants' benefits; employee 0.75% + employer 3.25%; for wages up to Rs.21,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Earned Leave (EL)</p>",
+            "<p>Service Rules / Factories Act</p>",
+            "<p>30 days EL per year (banks); encashable; carry forward limits apply; accumulated leave encashable at retirement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gratuity for Bank Employees</p>",
+            "<p>Bank-specific rules + Gratuity Act</p>",
+            "<p>Banks covered under Payment of Gratuity Act; some banks offer enhanced gratuity; SBI Act has specific provisions</p>"
           ]
         }
       ]

@@ -1,0 +1,96 @@
+{
+  "title": "International Date Line (IDL)",
+  "order": 42,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The International Date Line roughly follows 180° longitude in the Pacific Ocean.",
+      "id": "9kvb4ow"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Longitude",
+          "value": "180°",
+          "icon": "info"
+        },
+        {
+          "label": "Location",
+          "value": "Pacific Ocean",
+          "icon": "info"
+        },
+        {
+          "label": "Cross West",
+          "value": "+1 Day",
+          "icon": "calendar"
+        },
+        {
+          "label": "Cross East",
+          "value": "-1 Day",
+          "icon": "clock"
+        }
+      ],
+      "id": "suabazb"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The International Date Line roughly follows 180° longitude in the Pacific Ocean.",
+      "id": "sfpi0sy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The International Date Line roughly follows the 180° meridian in the Pacific Ocean.",
+        "Crossing the line towards the west adds one calendar day.",
+        "Crossing the line towards the east subtracts one calendar day.",
+        "The line intentionally deviates from a straight path to keep unified dates across countries and island nations."
+      ],
+      "id": "7nyipa4"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Crossing Direction",
+        "Date Change"
+      ],
+      "rows": [
+        [
+          "Crossing West",
+          "Add one day"
+        ],
+        [
+          "Crossing East",
+          "Subtract one day"
+        ]
+      ],
+      "id": "tf3ecdp"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Crossing west → add one day.",
+      "id": "mvsy1oy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested rule: Crossing West = Add 1 day; Crossing East = Subtract 1 day.",
+        "The IDL is located in the Pacific Ocean (180° longitude), not the Atlantic or Prime Meridian (0°).",
+        "Remember that the IDL is not a straight line because it zigzags/deviates to avoid splitting countries and islands."
+      ],
+      "id": "dszcy46"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Crossing east → subtract one day.",
+      "id": "dqwhx37"
+    },
+    {
+      "type": "paragraph",
+      "content": "• It deviates to avoid splitting countries and islands.",
+      "id": "mpz2xm7"
+    }
+  ],
+  "enriched": true
+}

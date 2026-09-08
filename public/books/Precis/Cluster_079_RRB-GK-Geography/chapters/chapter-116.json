@@ -1,0 +1,150 @@
+{
+  "title": "4. Types of Volcanic Eruptions",
+  "order": 116,
+  "blocks": [
+    {
+      "id": "a7cbb0d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Eruption Type</strong></p>",
+            "<p><strong>Key Features</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Icelandic</p>",
+            "<p>Gentle lava outpouring.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Hawaiian</p>",
+            "<p>Low explosivity; continuous lava flow.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Strombolian</p>",
+            "<p>Moderate bursts.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vulcanian</p>",
+            "<p>Short violent explosions.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pelean</p>",
+            "<p>Dominated by pyroclastic flows.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Plinian</p>",
+            "<p>Extremely explosive; tall ash columns.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Calderas are the most explosive of the earth’s volcanoes and tend to collapse on themselves rather than build structure.",
+      "id": "8eni1hf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Volcano Type",
+        "Lava Viscosity",
+        "Explosivity Level",
+        "Key Feature / Example"
+      ],
+      "rows": [
+        [
+          "Shield Volcano",
+          "Low (Basaltic, highly fluid)",
+          "Low (Explosive if water present)",
+          "Broad, gentle slope; Hawaiian Volcanoes"
+        ],
+        [
+          "Composite Volcano",
+          "High (Cooler, silicic lava)",
+          "High (Erupts pyroclastics & ash)",
+          "Steep, layered cone structure; Mount Fuji"
+        ],
+        [
+          "Caldera",
+          "Very High (Gas-rich)",
+          "Extremely High",
+          "Collapses inward into depression"
+        ],
+        [
+          "Flood Basalt",
+          "Extremely Low (Fluid basalt)",
+          "Moderate to Low",
+          "Covers vast geographical area; Deccan Traps"
+        ]
+      ],
+      "id": "56rhrwm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Types",
+          "value": "5 Volcano Categories",
+          "icon": "layers"
+        },
+        {
+          "label": "Most Explosive",
+          "value": "Caldera",
+          "icon": "zap"
+        },
+        {
+          "label": "Indian Example",
+          "value": "Deccan Traps",
+          "icon": "map"
+        },
+        {
+          "label": "Ocean Ridge System",
+          "value": "> 70,000 km",
+          "icon": "info"
+        }
+      ],
+      "id": "zyl1vjq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Deccan Traps of Maharashtra are frequently cited in exams as a classic example of Flood Basalt Province volcanism.",
+        "Questions often contrast Shield Volcanoes (basaltic, low viscosity) with Composite Volcanoes (viscous lava, pyroclastic layers).",
+        "Calderas are distinguished in MCQs as collapsed volcanic depressions formed by the most violent eruptions."
+      ],
+      "id": "kqi2oy1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Shield volcanoes are predominantly composed of basaltic lava, creating gentle slopes and exhibiting low explosivity unless water enters the vent.",
+        "Composite volcanoes are characterized by eruptions of cooler, more viscous lava along with pyroclastic material and ash.",
+        "Calderas are the most explosive volcanic structures, often collapsing inward during an eruption to form deep depressions.",
+        "Flood Basalt Provinces release huge volumes of highly fluid lava that spread across thousands of square kilometers, such as India's Deccan Traps.",
+        "Mid-Ocean Ridge Volcanoes occur underwater along a global ocean ridge network spanning more than 70,000 kilometers."
+      ],
+      "id": "zozwhg6"
+    }
+  ],
+  "enriched": true
+}

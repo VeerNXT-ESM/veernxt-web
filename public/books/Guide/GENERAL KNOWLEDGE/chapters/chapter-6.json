@@ -4,8 +4,21 @@
   "order": 6,
   "blocks": [
     {
+      "id": "8f10dx3",
+      "type": "image",
+      "imageId": "cqwlox1",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_cqwlox1.jpeg"
+    },
+    {
       "type": "paragraph",
-      "id": "1i90mbq"
+      "id": "1i90mbq",
+      "content": "Rocks are naturally occurring solid masses that make up the Earth’s crust. They are composed of one or more minerals and form the foundation of all landforms on Earth. The study of rocks is known as petrology. Rocks play a vital role in shaping relief features, soil formation, availability of minerals, and understanding the geological history of the Earth. In  and other competitive examinations, questions from this chapter are asked both directly and indirectly, especially from rock types, characteristics, examples, and the rock cycle. <img></img>"
+    },
+    {
+      "id": "lcvp9vq",
+      "type": "image",
+      "imageId": "iqmqvt0",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_iqmqvt0.png"
     },
     {
       "type": "statStrip",
@@ -52,7 +65,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lwxbdy6"
+      "id": "lwxbdy6",
+      "content": "Minerals are naturally occurring inorganic substances with a definite chemical composition and a specific crystalline structure. They are the basic building blocks of rocks. Examples of minerals include quartz, feldspar, mica, and calcite. Rocks, on the other hand, are aggregates of one or more minerals. For example, granite is a rock composed of quartz, feldspar, and mica."
     },
     {
       "id": "3jhsc9n",
@@ -62,7 +76,8 @@
     },
     {
       "type": "paragraph",
-      "id": "349n0rj"
+      "id": "349n0rj",
+      "content": "On the basis of origin and mode of formation, rocks are classified into three main types: Igneous rocks, Sedimentary rocks, and Metamorphic rocks. This classification is universal and forms the basis of geological studies."
     },
     {
       "id": "ua8i751",
@@ -72,7 +87,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dupv5c1"
+      "id": "dupv5c1",
+      "content": "Igneous rocks are formed by the cooling and solidification of molten magma or lava. They are known as primary rocks because they are the first rocks to be formed during the solidification of the Earth. All other types of rocks are derived from igneous rocks."
     },
     {
       "id": "fsna1pg",
@@ -82,7 +98,8 @@
     },
     {
       "type": "paragraph",
-      "id": "7kwjxxk"
+      "id": "7kwjxxk",
+      "content": "When molten magma rises from the Earth’s interior and cools down, it solidifies to form igneous rocks. If the cooling occurs beneath the Earth’s surface, intrusive igneous rocks are formed. If the cooling occurs on the Earth’s surface after volcanic eruption, extrusive igneous rocks are formed."
     },
     {
       "id": "2jy0o0e",
@@ -92,7 +109,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6egna4s"
+      "id": "6egna4s",
+      "content": "Intrusive igneous rocks cool slowly beneath the Earth’s surface, resulting in large and visible crystals. Granite is the most common intrusive igneous rock. Extrusive igneous rocks cool rapidly on the surface, leading to fine-grained structure. Basalt is the most common extrusive igneous rock and forms extensive lava plateaus such as the Deccan Plateau."
     },
     {
       "id": "r6p6e3v",
@@ -101,13 +119,9 @@
       "content": "Characteristics of Igneous Rocks"
     },
     {
-      "type": "pullQuote",
-      "content": "Igneous Rocks (Primary Rocks)",
-      "id": "kk47m5a"
-    },
-    {
       "type": "paragraph",
-      "id": "r0je0sw"
+      "id": "r0je0sw",
+      "content": "Igneous rocks are hard, compact, and crystalline in nature. They are massive and do not occur in layers. Fossils are absent in igneous rocks. They are highly resistant to weathering and erosion."
     },
     {
       "id": "ysl4qfl",
@@ -117,7 +131,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tt8bju1"
+      "id": "tt8bju1",
+      "content": "Sedimentary rocks are formed from sediments obtained by the weathering of pre-existing rocks. These sediments are transported by agents such as rivers, wind, glaciers, and sea waves, and are deposited in layers over long periods of time."
     },
     {
       "id": "5sjvgge",
@@ -127,7 +142,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1su4ysm"
+      "id": "1su4ysm",
+      "content": "The formation of sedimentary rocks involves a sequence of processes: weathering, erosion, transportation, deposition, compaction, and cementation. Over time, loose sediments are converted into solid rocks."
     },
     {
       "id": "p7y5ox7",
@@ -137,7 +153,8 @@
     },
     {
       "type": "paragraph",
-      "id": "aecckw4"
+      "id": "aecckw4",
+      "content": "Mechanically formed sedimentary rocks are formed from mechanically transported sediments, such as sandstone and conglomerate. Organically formed sedimentary rocks are formed from the remains of plants and animals, such as limestone and coal. Chemically formed sedimentary rocks are formed due to evaporation of water, such as rock salt and gypsum."
     },
     {
       "type": "comparisonTable",
@@ -173,7 +190,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jizbw57"
+      "id": "jizbw57",
+      "content": "Sedimentary rocks are generally stratified or layered. They are comparatively softer than igneous rocks. Fossils are found only in sedimentary rocks, making them very important for studying the history of life on Earth."
     },
     {
       "id": "or3fly7",
@@ -183,7 +201,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9oogkmr"
+      "id": "9oogkmr",
+      "content": "Metamorphic rocks are formed when existing igneous or sedimentary rocks undergo changes due to intense heat, pressure, or chemical action. The word metamorphic means ‘change of form’."
     },
     {
       "id": "ehm76du",
@@ -193,7 +212,8 @@
     },
     {
       "type": "paragraph",
-      "id": "an9jplp"
+      "id": "an9jplp",
+      "content": "The main agents responsible for metamorphism are heat, pressure, and chemically active fluids. These agents cause recrystallisation of minerals and changes in texture and composition."
     },
     {
       "id": "rker0jt",
@@ -203,7 +223,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bl5fc1c"
+      "id": "bl5fc1c",
+      "content": "Limestone changes into marble, sandstone into quartzite, coal into graphite, and granite into gneiss under metamorphic conditions."
     },
     {
       "id": "hmn69dl",
@@ -213,7 +234,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dad6bv8"
+      "id": "dad6bv8",
+      "content": "Metamorphic rocks are generally harder and denser than the original rocks. They may show foliation or banding due to pressure."
     },
     {
       "type": "examAlert",
@@ -232,7 +254,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ix0rrk3"
+      "id": "ix0rrk3",
+      "content": "The rock cycle describes the continuous transformation of rocks from one type to another. Igneous rocks weather and form sediments, which turn into sedimentary rocks. Sedimentary rocks under heat and pressure form metamorphic rocks. Metamorphic rocks melt to form magma, which solidifies again into igneous rocks. The rock cycle has no fixed beginning or end."
     },
     {
       "id": "f5tchos",
@@ -242,7 +265,8 @@
     },
     {
       "type": "paragraph",
-      "id": "b52ldvc"
+      "id": "b52ldvc",
+      "content": "Rocks help in understanding the geological history of the Earth, formation of landforms, soil development, and distribution of minerals and fuels. The rock cycle explains how Earth’s materials are continuously recycled."
     },
     {
       "id": "x7jwxif",
@@ -254,13 +278,13 @@
       "id": "rqovalv",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Igneous – formed from magma/lava",
+        "Sedimentary – layered and fossil-bearing",
+        "Metamorphic – changed by heat and pressure",
+        "Granite – intrusive igneous",
+        "Basalt – extrusive igneous",
+        "Marble – metamorphosed limestone",
+        "Rock cycle – continuous process"
       ]
     }
   ],

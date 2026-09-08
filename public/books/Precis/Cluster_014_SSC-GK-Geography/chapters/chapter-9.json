@@ -1,0 +1,344 @@
+{
+  "title": "CHAPTER 7: EARTHQUAKES & VOLCANOES",
+  "order": 9,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Earthquakes and volcanoes are powerful endogenic forces originating from within the Earth. They are direct outcomes of plate tectonic movements and provide vital evidence about the Earth’s interior, crustal structure, and dynamic nature of the planet. This chapter is extremely important for SSC examinations because questions are asked from definitions, causes, terminology, types, global distribution, effects, and preventive measures.",
+      "id": "pcyterd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "P-Waves",
+          "value": "Fastest (All Mediums)",
+          "icon": "clock"
+        },
+        {
+          "label": "S-Waves",
+          "value": "Solids Only",
+          "icon": "check"
+        },
+        {
+          "label": "Ring of Fire",
+          "value": "Most Active Belt",
+          "icon": "award"
+        },
+        {
+          "label": "Richter Scale",
+          "value": "Magnitude / Energy",
+          "icon": "info"
+        }
+      ],
+      "id": "knxe82t"
+    },
+    {
+      "id": "1d5jmcj",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: EARTHQUAKES"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The focus (hypocentre) is the point of earthquake origin inside the Earth, while the epicentre is the surface point directly above it.",
+        "P-waves travel through solids, liquids, and gases, whereas S-waves travel through solids only, which proves the outer core is liquid.",
+        "The Richter Scale measures earthquake magnitude (energy released), while the Mercalli Scale measures intensity based on damage.",
+        "The Circum-Pacific Belt, known as the Ring of Fire, contains the highest concentration of seismic and volcanic activity.",
+        "Volcanoes are classified by activity (active, dormant, extinct) and by shape (shield, composite, cinder cone)."
+      ],
+      "id": "duqma1b"
+    },
+    {
+      "id": "bb0dxag",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Earthquake"
+    },
+    {
+      "type": "paragraph",
+      "content": "An earthquake is a sudden shaking or vibration of the Earth’s surface caused by the release of stored energy in the Earth’s crust. This energy accumulates due to continuous movement of tectonic plates. When stress exceeds the strength of rocks, the rocks break along fault lines, releasing energy in the form of seismic waves.",
+      "id": "kf2jfhu"
+    },
+    {
+      "id": "u3w0rq8",
+      "type": "heading",
+      "level": 3,
+      "content": "Causes of Earthquakes"
+    },
+    {
+      "type": "paragraph",
+      "content": "The primary cause of earthquakes is tectonic movement along faults. As plates move, friction prevents smooth motion and stress builds up. When this stress is suddenly released, earthquakes occur. Secondary causes include volcanic eruptions, collapse of underground caverns, landslides, reservoir-induced seismicity due to large dams, mining activities, and underground nuclear explosions.",
+      "id": "5n5pg6c"
+    },
+    {
+      "id": "7og1g0s",
+      "type": "heading",
+      "level": 3,
+      "content": "Faults and Earthquakes"
+    },
+    {
+      "type": "paragraph",
+      "content": "A fault is a fracture or zone of weakness in the Earth’s crust along which displacement occurs. Most earthquakes originate along faults. Major fault types include normal faults, reverse faults, and strike-slip faults. Transform plate boundaries are typically associated with strike-slip faults.",
+      "id": "xgfbxlx"
+    },
+    {
+      "id": "sxy8o0q",
+      "type": "heading",
+      "level": 3,
+      "content": "Focus (Hypocentre) and Epicentre"
+    },
+    {
+      "type": "paragraph",
+      "content": "The focus, also called the hypocentre, is the point inside the Earth where the earthquake originates. The epicentre is the point on the Earth’s surface directly above the focus. Seismic energy is strongest near the epicentre, and damage decreases with distance from it.",
+      "id": "tszoetw"
+    },
+    {
+      "id": "0t09met",
+      "type": "heading",
+      "level": 3,
+      "content": "Seismic Waves"
+    },
+    {
+      "type": "paragraph",
+      "content": "Seismic waves are energy waves produced by earthquakes and travel outward from the focus. They are classified into body waves and surface waves.",
+      "id": "zrief83"
+    },
+    {
+      "id": "9t5id1o",
+      "type": "heading",
+      "level": 3,
+      "content": "Body Waves"
+    },
+    {
+      "type": "paragraph",
+      "content": "Body waves travel through the Earth’s interior and are of two types. P-waves (Primary waves) are compressional waves that move particles parallel to the direction of wave travel. They are the fastest waves and can pass through solids, liquids, and gases. S-waves (Secondary waves) are transverse waves in which particles move perpendicular to the direction of wave travel. They are slower than P-waves and can travel only through solid materials. Their absence in the outer core proves that the outer core is liquid.",
+      "id": "0fdgezs"
+    },
+    {
+      "id": "xbfsl47",
+      "type": "heading",
+      "level": 3,
+      "content": "Surface Waves"
+    },
+    {
+      "type": "paragraph",
+      "content": "Surface waves travel along the Earth’s surface and have the highest amplitude. They cause maximum destruction because their energy is concentrated near the surface. They are responsible for severe damage to buildings and infrastructure.",
+      "id": "uf0h976"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The focus, also called the hypocentre, is the point inside the Earth where the earthquake originates.",
+      "id": "spo5zrz"
+    },
+    {
+      "id": "lqolemm",
+      "type": "heading",
+      "level": 3,
+      "content": "Measurement of Earthquakes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Earthquakes are measured using different scales. The Richter Scale measures the magnitude or energy released by an earthquake and is logarithmic in nature. The Mercalli Intensity Scale measures the intensity of an earthquake based on observed damage and human experience.",
+      "id": "815dcr6"
+    },
+    {
+      "id": "q89ivlp",
+      "type": "heading",
+      "level": 3,
+      "content": "Earthquake Belts of the World"
+    },
+    {
+      "type": "paragraph",
+      "content": "Earthquakes are not randomly distributed. Most earthquakes occur along plate boundaries. The Circum-Pacific Belt, also known as the Ring of Fire, is the most active earthquake zone. The Alpine-Himalayan Belt extends from Southern Europe to Southeast Asia. Another important belt is along the Mid-Atlantic Ridge.",
+      "id": "75acf7w"
+    },
+    {
+      "id": "hoizf76",
+      "type": "heading",
+      "level": 3,
+      "content": "Effects of Earthquakes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Earthquakes can cause severe loss of life and property. Primary effects include ground shaking and surface rupture. Secondary effects include landslides, tsunamis, fires, liquefaction of soil, and disruption of transport and communication systems.",
+      "id": "ft64tkz"
+    },
+    {
+      "id": "0idh2i3",
+      "type": "heading",
+      "level": 3,
+      "content": "Earthquake Preparedness and Mitigation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Earthquake hazards can be reduced through proper planning and preparedness. Earthquake- resistant construction, land-use planning, public awareness, early warning systems, and disaster management strategies play a vital role in minimizing losses.",
+      "id": "awaivgh"
+    },
+    {
+      "id": "gzphsk9",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: VOLCANOES"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "P-Waves (Primary)",
+        "S-Waves (Secondary)"
+      ],
+      "rows": [
+        [
+          "Motion Type",
+          "Compressional (parallel to direction)",
+          "Transverse (perpendicular to direction)"
+        ],
+        [
+          "Speed",
+          "Fastest waves",
+          "Slower than P-waves"
+        ],
+        [
+          "Medium Propagation",
+          "Solids, Liquids, and Gases",
+          "Solids Only"
+        ],
+        [
+          "Geological Proof",
+          "Passes through core",
+          "Absence in outer core proves it is liquid"
+        ]
+      ],
+      "id": "3a192vs"
+    },
+    {
+      "id": "nv2an18",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "id": "8qa7zgb",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Volcano"
+    },
+    {
+      "type": "paragraph",
+      "content": "A volcano is an opening or vent in the Earth’s crust through which molten magma, volcanic gases, and ash escape to the surface. Volcanic activity provides direct evidence of the Earth’s interior processes.",
+      "id": "csv07p8"
+    },
+    {
+      "id": "4odusb4",
+      "type": "heading",
+      "level": 3,
+      "content": "Causes of Volcanic Eruptions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Volcanic eruptions occur when magma rises towards the surface due to intense heat and pressure. Weak zones in the Earth’s crust, plate boundaries, and hotspots allow magma to escape.",
+      "id": "dti7mxx"
+    },
+    {
+      "type": "paragraph",
+      "content": "Subduction zones and divergent boundaries are major sites of volcanic activity.",
+      "id": "s885cth"
+    },
+    {
+      "id": "0tuw429",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Volcanoes Based on Activity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Active volcanoes erupt frequently or have erupted in recent times. Dormant volcanoes remain inactive for long periods but may erupt again. Extinct volcanoes have no record of eruption in historical times and are unlikely to erupt.",
+      "id": "c5i6a6c"
+    },
+    {
+      "id": "cb6mm8v",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Volcanoes Based on Shape"
+    },
+    {
+      "type": "paragraph",
+      "content": "Shield volcanoes are formed by fluid lava and have broad, gentle slopes. Composite or stratovolcanoes are formed by alternating layers of lava and ash and are highly explosive. Cinder cone volcanoes are small, steep-sided volcanoes formed from volcanic fragments.",
+      "id": "h2b3n9l"
+    },
+    {
+      "id": "3yw8iib",
+      "type": "heading",
+      "level": 3,
+      "content": "Distribution of Volcanoes"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "S-waves cannot travel through liquids; their absence in the outer core is direct proof that the outer core is liquid.",
+        "Richter scale measures magnitude (logarithmic energy), whereas Mercalli scale measures intensity (observed damage).",
+        "Focus is inside the Earth; Epicentre is on the Earth's surface directly above the focus.",
+        "Shield volcanoes have broad, gentle slopes from fluid lava, while Composite (stratovolcanoes) are highly explosive with alternating layers."
+      ],
+      "id": "zbudwyv"
+    },
+    {
+      "type": "paragraph",
+      "content": "Volcanoes are unevenly distributed across the globe. The majority of volcanoes are found along the Circum-Pacific Belt. Some volcanoes occur away from plate boundaries at hotspots, such as the Hawaiian Islands.",
+      "id": "zo0p7gb"
+    },
+    {
+      "id": "4n4p900",
+      "type": "heading",
+      "level": 3,
+      "content": "Effects of Volcanic Eruptions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Volcanic eruptions have both destructive and constructive effects. Destructive effects include loss of life, destruction of settlements, air pollution, and climatic cooling due to volcanic ash.",
+      "id": "5kdwi8c"
+    },
+    {
+      "type": "paragraph",
+      "content": "Constructive effects include formation of fertile soils, new landforms, and mineral deposits.",
+      "id": "23a11k4"
+    },
+    {
+      "id": "ee4d0id",
+      "type": "heading",
+      "level": 3,
+      "content": "Importance of Studying Earthquakes and Volcanoes"
+    },
+    {
+      "type": "paragraph",
+      "content": "The study of earthquakes and volcanoes is essential for understanding plate tectonics, Earth’s interior, and natural hazards. It helps in disaster risk reduction, urban planning, and sustainable development.",
+      "id": "8zrzqr6"
+    },
+    {
+      "id": "ueb632v",
+      "type": "heading",
+      "level": 3,
+      "content": "Memorising Tips (SSC Focused)"
+    },
+    {
+      "id": "8lcbcf5",
+      "type": "list",
+      "items": [
+        "Earthquake = sudden energy release",
+        "Focus = origin point inside Earth",
+        "Epicentre = point on surface",
+        "P-waves = fastest, all mediums",
+        "S-waves = solids only",
+        "Richter = magnitude",
+        "Mercalli = intensity",
+        "Ring of Fire = most active zone",
+        "Shield volcano = gentle slope",
+        "Composite volcano = explosive"
+      ]
+    }
+  ],
+  "enriched": true
+}

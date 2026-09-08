@@ -1,0 +1,63 @@
+{
+  "title": "Chapter 7: Earthquakes",
+  "order": 96,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Earthquakes are among the most powerful natural processes shaping the Earth's surface. They result from the sudden release of accumulated stress within rocks of the lithosphere. This energy travels outward in the form of seismic waves, causing ground shaking, surface rupture, and large-scale destruction. Earthquake studies integrate concepts from plate tectonics, rock mechanics, structural geology, and hazard management.",
+      "id": "o3dpagt"
+    },
+    {
+      "type": "pullQuote",
+      "content": "They result from the sudden release of accumulated stress within rocks of the lithosphere.",
+      "id": "vo8d8ny"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Energy Source",
+          "value": "Lithosphere",
+          "icon": "info"
+        },
+        {
+          "label": "Transmission",
+          "value": "Seismic Waves",
+          "icon": "zap"
+        },
+        {
+          "label": "Trigger",
+          "value": "Stress Release",
+          "icon": "check"
+        },
+        {
+          "label": "Key Field",
+          "value": "Plate Tectonics",
+          "icon": "book"
+        }
+      ],
+      "id": "gg6czf1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that earthquake energy travels specifically in the form of seismic waves.",
+        "Identify the lithosphere as the layer where accumulated stress is released during an earthquake.",
+        "Note the core disciplines integrated into earthquake studies: plate tectonics, rock mechanics, structural geology, and hazard management."
+      ],
+      "id": "k8fifug"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Earthquakes are powerful natural processes shaping the Earth's surface.",
+        "They originate from the sudden release of stress built up inside lithospheric rocks.",
+        "Released energy moves outward as seismic waves, resulting in ground shaking and surface destruction.",
+        "Studying earthquakes requires an integrated understanding of plate tectonics, rock mechanics, structural geology, and hazard management."
+      ],
+      "id": "75lxxcg"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,123 @@
+{
+  "title": "Environmental Principles Applied (VERY HIGH PROBABILITY)",
+  "order": 389,
+  "blocks": [
+    {
+      "id": "8fv744w",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Principle</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Polluter Pays Principle</p>",
+            "<p>Polluter must bear cost of environmental damage.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Precautionary Principle</p>",
+            "<p>Prevent harm even if scientific certainty is lacking.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sustainable Development</p>",
+            "<p>Balance economic growth with environmental protection.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Where there are threats of serious or irreversible damage, lack of full scientific certainty shall not be used as a reason for postponing cost-effective measures to prevent environmental degradation.",
+      "id": "dnvjln8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Principle",
+        "Core Mechanism",
+        "Key Judicial Precedent"
+      ],
+      "rows": [
+        [
+          "Precautionary Principle",
+          "Anticipate and prevent harm before it occurs, shifting burden of proof to the developer.",
+          "Vellore Citizens' Welfare Forum (1996)"
+        ],
+        [
+          "Polluter Pays Principle",
+          "Polluter pays costs of pollution control, ecological restoration, and victim compensation.",
+          "Indian Council for Enviro-Legal Action (Bichhri Case, 1996)"
+        ],
+        [
+          "Absolute Liability",
+          "No exceptions allowed (Act of God, third party) for hazardous enterprise damage.",
+          "M.C. Mehta v. Union of India (Oleum Gas Leak, 1987)"
+        ],
+        [
+          "Public Trust Doctrine",
+          "State holds vital natural resources in trust for the public, preventing private conversion.",
+          "M.C. Mehta v. Kamal Nath (1997)"
+        ]
+      ],
+      "id": "2qjbn04"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Principles",
+          "value": "4 Major",
+          "icon": "book"
+        },
+        {
+          "label": "DPSP Provision",
+          "value": "Article 48A",
+          "icon": "award"
+        },
+        {
+          "label": "Fundamental Duty",
+          "value": "Article 51A(g)",
+          "icon": "check"
+        },
+        {
+          "label": "Rio Declaration",
+          "value": "1992",
+          "icon": "calendar"
+        }
+      ],
+      "id": "3nn9k6e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Vellore Citizens' Welfare Forum v. Union of India (1996) explicitly incorporated the 'Precautionary Principle' and 'Polluter Pays Principle' into Indian environmental jurisprudence.",
+        "M.C. Mehta v. Union of India (1987) established the doctrine of 'Absolute Liability' for hazardous industries, removing exceptions available under strict liability.",
+        "Differentiate Article 48A (Directive Principle instructing the State to protect forests and wildlife) from Article 51A(g) (Fundamental Duty of citizens to protect the natural environment)."
+      ],
+      "id": "hs04x5y"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Precautionary Principle dictates that lack of full scientific certainty shall not postpone cost-effective measures to prevent environmental degradation.",
+        "The Polluter Pays Principle shifts the financial burden of pollution remediation and compensation onto the polluter.",
+        "The Public Trust Doctrine mandates that certain natural resources are held by the government in trust for the free and unimpeded use of the general public.",
+        "The Indian Judiciary integrated international environmental principles into domestic law primarily under Article 21 (Right to Life) of the Constitution."
+      ],
+      "id": "gcb0y3o"
+    }
+  ],
+  "enriched": true
+}

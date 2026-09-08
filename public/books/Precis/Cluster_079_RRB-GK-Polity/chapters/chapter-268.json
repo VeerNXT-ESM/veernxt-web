@@ -1,0 +1,133 @@
+{
+  "title": "Functions of CVC",
+  "order": 268,
+  "blocks": [
+    {
+      "id": "eyih0tq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Supervise Vigilance</p>",
+            "<p>Oversees vigilance administration in central government organizations</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Advise Authorities</p>",
+            "<p>Provides advice on corruption cases</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>CBI Supervision</p>",
+            "<p>Exercises superintendence over CBI in corruption investigations</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Inquiry</p>",
+            "<p>Can order inquiries into corruption allegations</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Review Progress</p>",
+            "<p>Monitors pending investigations</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Central Vigilance Commission is the main agency for preventing corruption in the Central government.",
+      "id": "4yztkgn"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Vigilance Commission (CVC)",
+        "Central Bureau of Investigation (CBI)"
+      ],
+      "rows": [
+        [
+          "Status",
+          "Statutory Body (under CVC Act, 2003)",
+          "Non-Statutory Body (derives powers from DSPE Act, 1946)"
+        ],
+        [
+          "Primary Role",
+          "Vigilance superintendence and advisory body",
+          "Premier investigating agency for corruption and major crimes"
+        ],
+        [
+          "Jurisdiction",
+          "Supervises vigilance administration in Central Govt & PSUs",
+          "Investigates offences referred by Central Govt, Courts, or States"
+        ]
+      ],
+      "id": "ppmz57t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established Year",
+          "value": "1964",
+          "icon": "calendar"
+        },
+        {
+          "label": "Statutory Status",
+          "value": "2003",
+          "icon": "award"
+        },
+        {
+          "label": "Recommending Body",
+          "value": "Santhanam Committee",
+          "icon": "book"
+        },
+        {
+          "label": "Legal Powers",
+          "value": "Civil Court",
+          "icon": "info"
+        }
+      ],
+      "id": "j1zxi7h"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CVC is NOT an investigating agency itself; it causes inquiries to be conducted through the CBI or chief vigilance officers of government organisations.",
+        "Originally set up as an executive body in 1964, CVC gained statutory status in 2003 following a parliamentary act.",
+        "CVC exercises superintendence over CBI's investigation of corruption cases involving Central Government officers."
+      ],
+      "id": "ulbfvxg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Vigilance Commission (CVC) was established in 1964 by an executive resolution based on the Santhanam Committee recommendations.",
+        "CVC was conferred multi-member statutory status through the Central Vigilance Commission Act, 2003.",
+        "It exercises superintendence over the functioning of the Delhi Special Police Establishment (DSPE/CBI) regarding offences under the Prevention of Corruption Act, 1988.",
+        "The CVC possesses all the powers of a civil court while conducting any inquiry.",
+        "It reviews the progress of pending applications for sanction of prosecution under the Prevention of Corruption Act, 1988."
+      ],
+      "id": "0rszvwg"
+    }
+  ],
+  "enriched": true
+}

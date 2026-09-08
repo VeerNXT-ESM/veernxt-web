@@ -1,0 +1,129 @@
+{
+  "title": "RTI Appeal Process (VERY FREQUENTLY ASKED)",
+  "order": 407,
+  "blocks": [
+    {
+      "id": "0hiv0gg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Stage</strong></p>",
+            "<p><strong>Authority</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>RTI Application</p>",
+            "<p>Public Information Officer (PIO)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>First Appeal</p>",
+            "<p>Senior Officer in the same department</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Second Appeal</p>",
+            "<p>Central Information Commission</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "A second appeal against the decision shall lie within ninety days from the date on which the decision should have been made or was actually received.",
+      "id": "ubgonwm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "First Appeal",
+        "Second Appeal"
+      ],
+      "rows": [
+        [
+          "Appellate Authority",
+          "First Appellate Authority (Senior Officer in same Dept)",
+          "Information Commission (CIC / SIC)"
+        ],
+        [
+          "Time Limit to File",
+          "30 Days from response/expiry",
+          "90 Days from FAA decision/expiry"
+        ],
+        [
+          "Disposal Time",
+          "30 Days (extendable to 45 Days)",
+          "No explicit statutory cap (decided by Commission)"
+        ],
+        [
+          "Penalty Imposition",
+          "No power to fine PIO under Sec 20",
+          "Can impose fines up to ₹25,000 on PIO"
+        ]
+      ],
+      "id": "zcocjk9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "First Appeal Window",
+          "value": "30 Days",
+          "icon": "calendar"
+        },
+        {
+          "label": "Second Appeal Window",
+          "value": "90 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "FAA Decision Timeline",
+          "value": "30-45 Days",
+          "icon": "check"
+        },
+        {
+          "label": "Max Daily Penalty",
+          "value": "₹250/day",
+          "icon": "info"
+        },
+        {
+          "label": "Max Penalty Cap",
+          "value": "₹25,000",
+          "icon": "award"
+        }
+      ],
+      "id": "vop8y0a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crucial distinction: First Appeal goes to an internal departmental officer (FAA), whereas Second Appeal goes to an independent statutory body (CIC/SIC).",
+        "Maximum monetary penalty on an errant PIO is capped at ₹25,000 under Section 20.",
+        "Information concerning life or liberty must be provided within 48 hours, failing which direct appeal pathways open up."
+      ],
+      "id": "ir3qy91"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "First Appeal is filed before an officer senior in rank to the CPIO/SPIO within 30 days of receiving the response or expiry of the deadline.",
+        "The First Appellate Authority (FAA) must dispose of the appeal within 30 days, extendable to a maximum of 45 days with written justification.",
+        "Second Appeal lies with the Central Information Commission (CIC) or State Information Commission (SIC) within 90 days of the FAA order.",
+        "Under Section 20(1) of the RTI Act 2005, penalty up to ₹250 per day (subject to a maximum of ₹25,000) can be imposed on a PIO for failing to provide information without reasonable cause.",
+        "The burden of proving that he or she acted reasonably and diligently lies entirely on the Public Information Officer."
+      ],
+      "id": "0d29s3p"
+    }
+  ],
+  "enriched": true
+}

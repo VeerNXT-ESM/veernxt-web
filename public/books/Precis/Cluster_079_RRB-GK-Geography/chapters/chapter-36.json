@@ -1,0 +1,56 @@
+{
+  "title": "Prime Meridian",
+  "order": 36,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The Prime Meridian passes through Greenwich, London. It divides Earth into Eastern and Western Hemispheres.",
+      "id": "tg9kjmf"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Prime Meridian passes through Greenwich, London.",
+      "id": "8bpars1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Location",
+          "value": "Greenwich, London",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Function",
+          "value": "Divides Earth",
+          "icon": "check"
+        },
+        {
+          "label": "Hemispheres Created",
+          "value": "Eastern & Western",
+          "icon": "book"
+        }
+      ],
+      "id": "v19jhri"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Identify the specific location the Prime Meridian passes through: Greenwich, London.",
+        "Note the hemispheres created by the Prime Meridian: Eastern and Western Hemispheres."
+      ],
+      "id": "0n3ghoz"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Prime Meridian geographically passes through Greenwich, London.",
+        "It serves as the reference line dividing the Earth into two halves.",
+        "The line separates the planet into the Eastern Hemisphere and the Western Hemisphere."
+      ],
+      "id": "lbmjt25"
+    }
+  ],
+  "enriched": true
+}

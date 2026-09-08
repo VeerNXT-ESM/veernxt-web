@@ -10,29 +10,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deflation</p>",
+            "<p>Removal of loose particles leading to lowering of land surface.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Abrasion (Corrasion)</p>",
+            "<p>Sand-laden winds polish, groove, and cut rock surfaces.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Attrition</p>",
+            "<p>Particles collide and become smaller and rounded.</p>"
           ]
         }
       ]
@@ -82,28 +82,34 @@
     },
     {
       "type": "paragraph",
-      "id": "87j2z46"
+      "id": "87j2z46",
+      "content": "• Deflation Hollows – depressions created by intense removal of sediments."
+    },
+    {
+      "id": "tg0flle",
+      "type": "image",
+      "imageId": "ao8277b",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_ao8277b.jpeg"
     },
     {
       "type": "paragraph",
-      "id": "j3gtj86"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Deflation Landforms",
-      "id": "nkno1bn"
+      "id": "j3gtj86",
+      "content": "• Blowouts – small saucer-shaped basins."
     },
     {
       "type": "paragraph",
-      "id": "wykvq5a"
+      "id": "wykvq5a",
+      "content": "• Desert Pavement (Reg) – surface of coarse pebbles after fine materials are removed."
     },
     {
       "type": "paragraph",
-      "id": "qq2113f"
+      "id": "qq2113f",
+      "content": "• Lag Deposits – accumulation of heavier particles left behind after deflation."
     },
     {
       "type": "paragraph",
-      "id": "3o54m8h"
+      "id": "3o54m8h",
+      "content": "• Playas – dry lake beds formed in desert basins."
     },
     {
       "type": "comparisonTable",
@@ -139,15 +145,18 @@
     },
     {
       "type": "paragraph",
-      "id": "deh1w9f"
+      "id": "deh1w9f",
+      "content": "• Ventifacts – wind-polished stones."
     },
     {
       "type": "paragraph",
-      "id": "ly44hku"
+      "id": "ly44hku",
+      "content": "• Dreikanter – three-faced ventifacts shaped by shifting winds."
     },
     {
       "type": "paragraph",
-      "id": "7rz81ju"
+      "id": "7rz81ju",
+      "content": "• Yardangs – elongated ridges aligned with prevailing winds."
     },
     {
       "type": "examAlert",
@@ -160,15 +169,18 @@
     },
     {
       "type": "paragraph",
-      "id": "6403a86"
+      "id": "6403a86",
+      "content": "• Zeugens – tabular ridges with resistant cap rock."
     },
     {
       "type": "paragraph",
-      "id": "hgo7816"
+      "id": "hgo7816",
+      "content": "• Rock Pedestals (Mushroom Rocks) – undercut bases due to intense near-ground abrasion."
     },
     {
       "type": "paragraph",
-      "id": "ethbnim"
+      "id": "ethbnim",
+      "content": "• Inselbergs – isolated resistant rock hills rising from desert plains."
     }
   ],
   "enriched": true

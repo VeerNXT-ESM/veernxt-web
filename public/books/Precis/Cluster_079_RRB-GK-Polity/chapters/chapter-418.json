@@ -1,0 +1,133 @@
+{
+  "title": "Core Functions of FCI (EXTREMELY IMPORTANT)",
+  "order": 418,
+  "blocks": [
+    {
+      "id": "xbw96li",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Procurement</p>",
+            "<p>Purchases wheat and rice from farmers at MSP.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Storage</p>",
+            "<p>Maintains warehouses and silos.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Distribution</p>",
+            "<p>Supplies food grains under TPDS and welfare schemes.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Buffer Stock</p>",
+            "<p>Maintains reserves for emergencies.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Price Stabilization</p>",
+            "<p>Prevents extreme price fluctuations.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The core functions of FCI revolve around effective price support for farmers, widespread distribution via PDS, and maintaining buffer stocks to safeguard national food security.",
+      "id": "7zt2a34"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Procurement Operations",
+        "Distribution Operations"
+      ],
+      "rows": [
+        [
+          "Key Objective",
+          "Protect farmers against distress sales",
+          "Supply essential foodgrains to vulnerable populations"
+        ],
+        [
+          "Pricing Basis",
+          "Minimum Support Price (MSP)",
+          "Central Issue Price (CIP)"
+        ],
+        [
+          "Primary Channel",
+          "Mandis / Direct Purchase Centers",
+          "Fair Price Shops (FPS) via TPDS / NFSA"
+        ]
+      ],
+      "id": "8qbm2iu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "1965",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Act",
+          "value": "Act 1964",
+          "icon": "book"
+        },
+        {
+          "label": "Key Pillars",
+          "value": "3 Objectives",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Focus",
+          "value": "Food Security",
+          "icon": "award"
+        }
+      ],
+      "id": "r8wn905"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Pay close attention to the distinction between the Food Corporations Act enactment year (1964) and FCI's setup year (1965).",
+        "FCI purchases foodgrains at Minimum Support Price (MSP), but issues them to states at Central Issue Price (CIP).",
+        "Buffer stock maintenance targets are fixed on a quarterly basis (1st January, 1st April, 1st July, and 1st October)."
+      ],
+      "id": "x8db5fj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "FCI was set up under the Food Corporations Act, 1964 to implement the primary goals of the National Food Policy.",
+        "It undertakes effective price support operations at Minimum Support Price (MSP) to protect farmers from distress selling.",
+        "FCI manages the distribution of foodgrains across the country for the Targeted Public Distribution System (TPDS) at Central Issue Prices.",
+        "It maintains operational and strategic buffer stocks to ensure food security during lean periods and natural calamities.",
+        "Through the Open Market Sale Scheme (OMSS), FCI intervenes in the market to check foodgrain price inflation."
+      ],
+      "id": "2lqadwo"
+    }
+  ],
+  "enriched": true
+}

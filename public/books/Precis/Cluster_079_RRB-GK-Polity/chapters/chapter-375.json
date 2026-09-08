@@ -1,0 +1,56 @@
+{
+  "title": "10. Appeals Mechanism",
+  "order": 375,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Appeals against CCI decisions lie with the National Company Law Appellate Tribunal (NCLAT), and further appeals can be made to the Supreme Court.",
+      "id": "cookbj0"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Appeals against CCI decisions lie with the National Company Law Appellate Tribunal (NCLAT), and further appeals can be made to the Supreme Court.",
+      "id": "e5ji3m1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Body",
+          "value": "CCI",
+          "icon": "info"
+        },
+        {
+          "label": "First Appeal",
+          "value": "NCLAT",
+          "icon": "check"
+        },
+        {
+          "label": "Final Appeal",
+          "value": "Supreme Court",
+          "icon": "award"
+        }
+      ],
+      "id": "589cjvx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NCLAT is the designated appellate body for CCI decisions, a frequent question in statutory regulatory frameworks.",
+        "Further appeals against NCLAT orders can only be made to the Supreme Court of India."
+      ],
+      "id": "1hrtoas"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Appeals against decisions made by the Competition Commission of India (CCI) are directed to the National Company Law Appellate Tribunal (NCLAT).",
+        "The Supreme Court serves as the final authority for further appeals beyond the NCLAT.",
+        "The appellate hierarchy follows a two-tiered structure: CCI -> NCLAT -> Supreme Court."
+      ],
+      "id": "6r3v22x"
+    }
+  ],
+  "enriched": true
+}

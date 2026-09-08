@@ -1,0 +1,114 @@
+{
+  "title": "Texture of Igneous Rocks",
+  "order": 72,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Phaneritic – large crystals due to slow cooling.",
+      "id": "d59ik9n"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Texture Types",
+          "value": "4 Categories",
+          "icon": "book"
+        },
+        {
+          "label": "Phaneritic",
+          "value": "Slow Cooling",
+          "icon": "clock"
+        },
+        {
+          "label": "Aphanitic",
+          "value": "Rapid Cooling",
+          "icon": "check"
+        },
+        {
+          "label": "Glassy Rock",
+          "value": "Obsidian",
+          "icon": "info"
+        }
+      ],
+      "id": "xyq9num"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Phaneritic – large crystals due to slow cooling.",
+      "id": "btqq15q"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Phaneritic texture develops large crystals as a result of slow cooling.",
+        "Aphanitic texture is defined by fine crystals caused by rapid cooling.",
+        "Glassy texture possesses no crystals, with obsidian being a key example.",
+        "Vesicular texture features gas bubbles trapped within the rock, exemplified by pumice."
+      ],
+      "id": "rlxzgvl"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Texture Type",
+        "Cooling Rate / Cause",
+        "Crystal Size & Feature",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Phaneritic",
+          "Slow cooling",
+          "Large crystals",
+          "N/A"
+        ],
+        [
+          "Aphanitic",
+          "Rapid cooling",
+          "Fine crystals",
+          "N/A"
+        ],
+        [
+          "Glassy",
+          "Extremely rapid cooling",
+          "No crystals",
+          "Obsidian"
+        ],
+        [
+          "Vesicular",
+          "Trapped gas bubbles",
+          "Porous / Gas bubbles",
+          "Pumice"
+        ]
+      ],
+      "id": "szawarc"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Aphanitic – fine crystals due to rapid cooling.",
+      "id": "sfsuuwo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Obsidian is frequently tested as the prime example of a glassy texture (no crystals).",
+        "Pumice is a common exam question regarding vesicular texture formed by trapped gas bubbles.",
+        "Remember the cooling rate rule: Slow cooling produces large crystals (Phaneritic), while rapid cooling produces fine crystals (Aphanitic)."
+      ],
+      "id": "mfyz1et"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Glassy – no crystals (obsidian).",
+      "id": "qwj2k44"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Vesicular – contains gas bubbles (pumice).",
+      "id": "8j9jlg7"
+    }
+  ],
+  "enriched": true
+}

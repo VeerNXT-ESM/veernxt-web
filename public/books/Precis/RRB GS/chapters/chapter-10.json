@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8u014bd"
+      "id": "8u014bd",
+      "content": "Biological classification is the scientific arrangement of organisms into groups based on similarities and differences. It helps in identification, naming and understanding evolutionary relationships among organisms."
     },
     {
       "id": "rb22wxm",
@@ -60,32 +61,38 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "a2kyjju"
+      "id": "a2kyjju",
+      "content": "• Cell type (Prokaryotic/Eukaryotic)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "34987bu"
+      "id": "34987bu",
+      "content": "• Cell wall composition"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2h60zld"
+      "id": "2h60zld",
+      "content": "• Mode of nutrition (Autotrophic/Heterotrophic)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vkc4sp5"
+      "id": "vkc4sp5",
+      "content": "• Body organization"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hi0h0o8"
+      "id": "hi0h0o8",
+      "content": "• Reproduction method"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ajg6f47"
+      "id": "ajg6f47",
+      "content": "• Phylogenetic relationships"
     },
     {
       "id": "yhwzhwg",
@@ -95,7 +102,8 @@
     },
     {
       "type": "paragraph",
-      "id": "k4wzo2t"
+      "id": "k4wzo2t",
+      "content": "Earlier classification included Two Kingdom system (Plantae and Animalia). R.H. Whittaker proposed Five Kingdom Classification in 1969 based on cell structure, body organization and nutrition."
     },
     {
       "id": "a3yuvck",
@@ -105,7 +113,8 @@
     },
     {
       "type": "paragraph",
-      "id": "m811hqp"
+      "id": "m811hqp",
+      "content": "The five kingdoms are Monera, Protista, Fungi, Plantae and Animalia."
     },
     {
       "id": "hg4dh0l",
@@ -114,49 +123,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Kingdom</strong></p>",
+            "<p><strong>Cell Type</strong></p>",
+            "<p><strong>Nutrition</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Monera</p>",
+            "<p>Prokaryotic</p>",
+            "<p>Autotrophic/Heterotrophic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Protista</p>",
+            "<p>Eukaryotic (unicellular)</p>",
+            "<p>Autotrophic/Heterotrophic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fungi</p>",
+            "<p>Eukaryotic</p>",
+            "<p>Saprophytic/Parasitic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Plantae</p>",
+            "<p>Eukaryotic</p>",
+            "<p>Autotrophic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Animalia</p>",
+            "<p>Eukaryotic</p>",
+            "<p>Heterotrophic</p>"
           ]
         }
       ]
@@ -175,7 +184,8 @@
     },
     {
       "type": "paragraph",
-      "id": "05h6f6w"
+      "id": "05h6f6w",
+      "content": "Monera includes prokaryotic organisms like bacteria and cyanobacteria. They lack true nucleus and membrane-bound organelles."
     },
     {
       "id": "ao8p1ht",
@@ -184,29 +194,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cell Type</p>",
+            "<p>Prokaryotic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cell Wall</p>",
+            "<p>Peptidoglycan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Examples</p>",
+            "<p>E. coli, Nostoc</p>"
           ]
         }
       ]
@@ -219,7 +229,8 @@
     },
     {
       "type": "paragraph",
-      "id": "iqu8vjz"
+      "id": "iqu8vjz",
+      "content": "Protista includes unicellular eukaryotes like Amoeba and Paramecium. Some are photosynthetic (Euglena), others are parasitic (Plasmodium)."
     },
     {
       "id": "v5con02",
@@ -229,12 +240,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dds1u43"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Differences Between Plantae & Animalia",
-      "id": "jsxsnec"
+      "id": "dds1u43",
+      "content": "Fungi are heterotrophic organisms with chitin cell wall. They obtain food by absorption and reproduce by spores."
     },
     {
       "id": "rb3fo2z",
@@ -244,7 +251,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4i0frk4"
+      "id": "4i0frk4",
+      "content": "Plantae includes multicellular autotrophic organisms with cellulose cell wall and chlorophyll."
     },
     {
       "id": "v0w4uc2",
@@ -254,7 +262,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vsppvvh"
+      "id": "vsppvvh",
+      "content": "Animalia includes multicellular heterotrophic organisms without cell wall. They show advanced body organization and organ systems."
     },
     {
       "id": "ijvx0lr",
@@ -264,7 +273,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8b1g6pw"
+      "id": "8b1g6pw",
+      "content": "Classification follows hierarchy: Kingdom → Phylum → Class → Order → Family → Genus → Species."
     },
     {
       "id": "9f6ml93",
@@ -274,7 +284,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ww54t2d"
+      "id": "ww54t2d",
+      "content": "Binomial nomenclature was introduced by Carolus Linnaeus. Each organism has two names: Genus and Species."
     },
     {
       "id": "icvbufh",
@@ -283,29 +294,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Rule</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Genus name</p>",
+            "<p>First letter capital</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Species name</p>",
+            "<p>Small letter</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Formatting</p>",
+            "<p>Italic in print, underline in writing</p>"
           ]
         }
       ]
@@ -318,7 +329,8 @@
     },
     {
       "type": "paragraph",
-      "id": "j2b01q1"
+      "id": "j2b01q1",
+      "content": "Carolus Linnaeus is known as the Father of Taxonomy and Father of Modern Classification."
     },
     {
       "type": "comparisonTable",
@@ -364,19 +376,23 @@
     },
     {
       "type": "paragraph",
-      "id": "ixrtc39"
+      "id": "ixrtc39",
+      "content": "• Helps in identification."
     },
     {
       "type": "paragraph",
-      "id": "ewocpt3"
+      "id": "ewocpt3",
+      "content": "• Shows evolutionary relationships."
     },
     {
       "type": "paragraph",
-      "id": "2flsuqp"
+      "id": "2flsuqp",
+      "content": "• Provides universal naming system."
     },
     {
       "type": "paragraph",
-      "id": "g1llaug"
+      "id": "g1llaug",
+      "content": "• Avoids confusion of local names."
     },
     {
       "id": "l2u7eqh",
@@ -386,7 +402,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zny1stp"
+      "id": "zny1stp",
+      "content": "Carl Woese proposed three domain system: Bacteria, Archaea and Eukarya based on rRNA studies."
     },
     {
       "id": "0tzkbif",
@@ -401,67 +418,67 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Monera</strong></p>",
+            "<p><strong>Protista</strong></p>",
+            "<p><strong>Fungi</strong></p>",
+            "<p><strong>Plantae</strong></p>",
+            "<p><strong>Animalia</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Cell Type</p>",
+            "<p>Prokaryotic</p>",
+            "<p>Eukaryotic</p>",
+            "<p>Eukaryotic</p>",
+            "<p>Eukaryotic</p>",
+            "<p>Eukaryotic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Cell Wall</p>",
+            "<p>Peptidoglycan</p>",
+            "<p>Present/Absent</p>",
+            "<p>Chitin</p>",
+            "<p>Cellulose</p>",
+            "<p>Absent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Body Organization</p>",
+            "<p>Unicellular</p>",
+            "<p>Mostly unicellular</p>",
+            "<p>Multicellular</p>",
+            "<p>Multicellular</p>",
+            "<p>Multicellular</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Nutrition</p>",
+            "<p>Auto/Hetero</p>",
+            "<p>Auto/Hetero</p>",
+            "<p>Saprophytic</p>",
+            "<p>Autotrophic</p>",
+            "<p>Heterotrophic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Examples</p>",
+            "<p>Bacteria</p>",
+            "<p>Amoeba</p>",
+            "<p>Mushroom</p>",
+            "<p>Mango</p>",
+            "<p>Human</p>"
           ]
         }
       ]
@@ -479,57 +496,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Rank</strong></p>",
+            "<p><strong>Example (Human)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kingdom</p>",
+            "<p>Animalia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Phylum</p>",
+            "<p>Chordata</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Class</p>",
+            "<p>Mammalia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Order</p>",
+            "<p>Primates</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Family</p>",
+            "<p>Hominidae</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Genus</p>",
+            "<p>Homo</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Species</p>",
+            "<p>Homo sapiens</p>"
           ]
         }
       ]
@@ -547,41 +564,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Shape</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cocci</p>",
+            "<p>Spherical</p>",
+            "<p>Staphylococcus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bacilli</p>",
+            "<p>Rod-shaped</p>",
+            "<p>E. coli</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Spirilla</p>",
+            "<p>Spiral</p>",
+            "<p>Spirillum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vibrio</p>",
+            "<p>Comma-shaped</p>",
+            "<p>Vibrio cholerae</p>"
           ]
         }
       ]
@@ -599,49 +616,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Plantae</strong></p>",
+            "<p><strong>Animalia</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cell Wall</p>",
+            "<p>Present</p>",
+            "<p>Absent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nutrition</p>",
+            "<p>Autotrophic</p>",
+            "<p>Heterotrophic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Movement</p>",
+            "<p>Fixed</p>",
+            "<p>Locomotion present</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chlorophyll</p>",
+            "<p>Present</p>",
+            "<p>Absent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example</p>",
+            "<p>Rose</p>",
+            "<p>Lion</p>"
           ]
         }
       ]
@@ -669,37 +686,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Bacteria</strong></p>",
+            "<p><strong>Archaea</strong></p>",
+            "<p><strong>Eukarya</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cell Type</p>",
+            "<p>Prokaryotic</p>",
+            "<p>Prokaryotic</p>",
+            "<p>Eukaryotic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Habitat</p>",
+            "<p>Normal</p>",
+            "<p>Extreme</p>",
+            "<p>All habitats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Examples</p>",
+            "<p>E. coli</p>",
+            "<p>Methanogens</p>",
+            "<p>Plants &amp; Animals</p>"
           ]
         }
       ]
@@ -712,31 +729,38 @@
     },
     {
       "type": "paragraph",
-      "id": "dwz6m06"
+      "id": "dwz6m06",
+      "content": "1. Five kingdom system proposed by R.H. Whittaker (1969)."
     },
     {
       "type": "paragraph",
-      "id": "2890lsa"
+      "id": "2890lsa",
+      "content": "2. Monera are prokaryotic."
     },
     {
       "type": "paragraph",
-      "id": "7p93jfu"
+      "id": "7p93jfu",
+      "content": "3. Fungi have chitin cell wall."
     },
     {
       "type": "paragraph",
-      "id": "pl5fkyy"
+      "id": "pl5fkyy",
+      "content": "4. Plantae are autotrophic."
     },
     {
       "type": "paragraph",
-      "id": "b44amie"
+      "id": "b44amie",
+      "content": "5. Animalia lack cell wall."
     },
     {
       "type": "paragraph",
-      "id": "bctfww2"
+      "id": "bctfww2",
+      "content": "6. Binomial nomenclature given by Linnaeus."
     },
     {
       "type": "paragraph",
-      "id": "fbvddj2"
+      "id": "fbvddj2",
+      "content": "7. Species is basic unit of classification."
     }
   ],
   "enriched": true

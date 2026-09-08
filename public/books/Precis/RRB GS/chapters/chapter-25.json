@@ -49,11 +49,25 @@
     },
     {
       "type": "paragraph",
-      "id": "545w9m6"
+      "id": "545w9m6",
+      "content": "There are more than 118 elements."
+    },
+    {
+      "id": "5z4mk1d",
+      "type": "image",
+      "imageId": "wj2l50w",
+      "src": "/books/Precis/RRB GS/images/image_wj2l50w.png"
+    },
+    {
+      "id": "dng1c6l",
+      "type": "image",
+      "imageId": "spmyi2g",
+      "src": "/books/Precis/RRB GS/images/image_spmyi2g.png"
     },
     {
       "type": "paragraph",
-      "id": "1nd60g7"
+      "id": "1nd60g7",
+      "content": "Classification helps in systematic study of elements based on properties."
     },
     {
       "id": "yfj17n1",
@@ -68,46 +82,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Law/Rule</strong></p>",
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Limitation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dobereiner</p>",
+            "<p>Triads</p>",
+            "<p>Atomic mass</p>",
+            "<p>Only few elements fit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Newlands</p>",
+            "<p>Law of Octaves</p>",
+            "<p>Increasing atomic mass</p>",
+            "<p>Worked only till Ca</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mendeleev</p>",
+            "<p>Periodic Law</p>",
+            "<p>Atomic mass</p>",
+            "<p>Hydrogen &amp; isotopes issue</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Modern Periodic Law</p>",
+            "<p>Modern Table</p>",
+            "<p>Atomic number</p>",
+            "<p>No major limitation</p>"
           ]
         }
       ]
@@ -120,15 +134,18 @@
     },
     {
       "type": "paragraph",
-      "id": "rnf3il1"
+      "id": "rnf3il1",
+      "content": "Elements arranged in groups of three."
     },
     {
       "type": "paragraph",
-      "id": "ncemb8v"
+      "id": "ncemb8v",
+      "content": "Atomic mass of middle element = average of other two."
     },
     {
       "type": "paragraph",
-      "id": "vodff2k"
+      "id": "vodff2k",
+      "content": "Limitation: Only few elements followed this rule."
     },
     {
       "id": "8leyz6x",
@@ -138,15 +155,18 @@
     },
     {
       "type": "paragraph",
-      "id": "7qyor3j"
+      "id": "7qyor3j",
+      "content": "Elements arranged in increasing atomic mass."
     },
     {
       "type": "paragraph",
-      "id": "d1nlrys"
+      "id": "d1nlrys",
+      "content": "Every eighth element had similar properties."
     },
     {
       "type": "paragraph",
-      "id": "3bczkiw"
+      "id": "3bczkiw",
+      "content": "Limitation: Worked only up to Calcium."
     },
     {
       "id": "lyfskp9",
@@ -156,15 +176,18 @@
     },
     {
       "type": "paragraph",
-      "id": "seg1l86"
+      "id": "seg1l86",
+      "content": "Properties of elements are periodic function of their atomic masses."
     },
     {
       "type": "paragraph",
-      "id": "88v8fd9"
+      "id": "88v8fd9",
+      "content": "He left gaps for undiscovered elements."
     },
     {
       "type": "paragraph",
-      "id": "t21pa9w"
+      "id": "t21pa9w",
+      "content": "Limitation: Position of hydrogen and isotopes not correct."
     },
     {
       "id": "nkd8cjb",
@@ -174,11 +197,13 @@
     },
     {
       "type": "paragraph",
-      "id": "svyfv1x"
+      "id": "svyfv1x",
+      "content": "Properties of elements are periodic function of their atomic numbers."
     },
     {
       "type": "paragraph",
-      "id": "h7g7hbc"
+      "id": "h7g7hbc",
+      "content": "Modern table arranged by increasing atomic number."
     },
     {
       "id": "8emjv8n",
@@ -188,11 +213,13 @@
     },
     {
       "type": "paragraph",
-      "id": "j7shyvf"
+      "id": "j7shyvf",
+      "content": "7 periods (horizontal rows) and 18 groups (vertical columns)."
     },
     {
       "type": "paragraph",
-      "id": "xkk11ym"
+      "id": "xkk11ym",
+      "content": "Elements arranged in increasing atomic number."
     },
     {
       "id": "jt1n28u",
@@ -212,55 +239,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Group</strong></p>",
+            "<p><strong>Name</strong></p>",
+            "<p><strong>Valency</strong></p>",
+            "<p><strong>Reactivity</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>1</p>",
+            "<p>Alkali Metals</p>",
+            "<p>1</p>",
+            "<p>Highly reactive</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>2</p>",
+            "<p>Alkaline Earth Metals</p>",
+            "<p>2</p>",
+            "<p>Reactive</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>17</p>",
+            "<p>Halogens</p>",
+            "<p>1</p>",
+            "<p>Highly reactive non-metals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>18</p>",
+            "<p>Noble Gases</p>",
+            "<p>0</p>",
+            "<p>Inert</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Transition</p>",
+            "<p>d-block elements</p>",
+            "<p>Variable</p>",
+            "<p>Moderate</p>"
           ]
         }
       ]
@@ -284,41 +311,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Block</strong></p>",
+            "<p><strong>Valence Electron Location</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>s-block</p>",
+            "<p>s orbital</p>",
+            "<p>Na, Mg</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>p-block</p>",
+            "<p>p orbital</p>",
+            "<p>Cl, O</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>d-block</p>",
+            "<p>d orbital</p>",
+            "<p>Fe, Cu</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>f-block</p>",
+            "<p>f orbital</p>",
+            "<p>Lanthanides</p>"
           ]
         }
       ]
@@ -342,49 +369,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Across Period</strong></p>",
+            "<p><strong>Down Group</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Atomic Radius</p>",
+            "<p>Decreases</p>",
+            "<p>Increases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ionization Energy</p>",
+            "<p>Increases</p>",
+            "<p>Decreases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Electronegativity</p>",
+            "<p>Increases</p>",
+            "<p>Decreases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Metallic Character</p>",
+            "<p>Decreases</p>",
+            "<p>Increases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Non-metallic Character</p>",
+            "<p>Increases</p>",
+            "<p>Decreases</p>"
           ]
         }
       ]
@@ -397,15 +424,18 @@
     },
     {
       "type": "paragraph",
-      "id": "bb1kw28"
+      "id": "bb1kw28",
+      "content": "Group number = Number of valence electrons (main group elements)."
     },
     {
       "type": "paragraph",
-      "id": "kn0zczf"
+      "id": "kn0zczf",
+      "content": "Period number = Number of shells."
     },
     {
       "type": "paragraph",
-      "id": "h2ukoth"
+      "id": "h2ukoth",
+      "content": "Elements in same group have similar chemical properties."
     },
     {
       "id": "7k9equr",
@@ -420,41 +450,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Metals</strong></p>",
+            "<p><strong>Non-metals</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Electron tendency</p>",
+            "<p>Lose electrons</p>",
+            "<p>Gain electrons</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Oxides</p>",
+            "<p>Basic</p>",
+            "<p>Acidic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nature</p>",
+            "<p>Electropositive</p>",
+            "<p>Electronegative</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Location</p>",
+            "<p>Left side</p>",
+            "<p>Right side</p>"
           ]
         }
       ]
@@ -498,11 +528,13 @@
     },
     {
       "type": "paragraph",
-      "id": "o519ld8"
+      "id": "o519ld8",
+      "content": "7 periods (horizontal rows)."
     },
     {
       "type": "paragraph",
-      "id": "gbkozfj"
+      "id": "gbkozfj",
+      "content": "18 groups (vertical columns)."
     },
     {
       "id": "mdwr9sb",
@@ -517,49 +549,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Group Number</strong></p>",
+            "<p><strong>Family Name</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Group 1</p>",
+            "<p>Alkali Metals</p>",
+            "<p>Na, K</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Group 2</p>",
+            "<p>Alkaline Earth Metals</p>",
+            "<p>Mg, Ca</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Group 17</p>",
+            "<p>Halogens</p>",
+            "<p>Cl, F</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Group 18</p>",
+            "<p>Noble Gases</p>",
+            "<p>He, Ne</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Transition Elements</p>",
+            "<p>d-block elements</p>",
+            "<p>Fe, Cu</p>"
           ]
         }
       ]
@@ -577,41 +609,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Across Period</strong></p>",
+            "<p><strong>Down Group</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Atomic Size</p>",
+            "<p>Decreases</p>",
+            "<p>Increases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Metallic Character</p>",
+            "<p>Decreases</p>",
+            "<p>Increases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Non-metallic Character</p>",
+            "<p>Increases</p>",
+            "<p>Decreases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Valency</p>",
+            "<p>1 to 4 then 4 to 0</p>",
+            "<p>Remains same</p>"
           ]
         }
       ]
@@ -624,11 +656,13 @@
     },
     {
       "type": "paragraph",
-      "id": "2hirzgp"
+      "id": "2hirzgp",
+      "content": "Group number = Number of valence electrons (for main group elements)."
     },
     {
       "type": "paragraph",
-      "id": "iep5amq"
+      "id": "iep5amq",
+      "content": "Period number = Number of electron shells."
     },
     {
       "id": "ducz20j",
@@ -638,15 +672,18 @@
     },
     {
       "type": "paragraph",
-      "id": "fai5spl"
+      "id": "fai5spl",
+      "content": "Metals: Left side of periodic table."
     },
     {
       "type": "paragraph",
-      "id": "bro8ro0"
+      "id": "bro8ro0",
+      "content": "Non-metals: Right side of periodic table."
     },
     {
       "type": "paragraph",
-      "id": "lpkkz3e"
+      "id": "lpkkz3e",
+      "content": "Metalloids: B, Si, Ge, As (intermediate properties)."
     },
     {
       "id": "krnnjiq",
@@ -656,11 +693,13 @@
     },
     {
       "type": "paragraph",
-      "id": "awcp5zt"
+      "id": "awcp5zt",
+      "content": "Hydrogen is placed in Group 1 but has unique properties."
     },
     {
       "type": "paragraph",
-      "id": "0igdqz5"
+      "id": "0igdqz5",
+      "content": "Noble gases have valency zero."
     },
     {
       "type": "examAlert",
@@ -673,11 +712,13 @@
     },
     {
       "type": "paragraph",
-      "id": "9nj3sxm"
+      "id": "9nj3sxm",
+      "content": "Halogens are most reactive non-metals."
     },
     {
       "type": "paragraph",
-      "id": "jfn7nfn"
+      "id": "jfn7nfn",
+      "content": "Alkali metals are most reactive metals."
     },
     {
       "id": "ov4rxtl",
@@ -687,35 +728,43 @@
     },
     {
       "type": "paragraph",
-      "id": "8ecq5r2"
+      "id": "8ecq5r2",
+      "content": "1. Modern periodic law based on atomic number."
     },
     {
       "type": "paragraph",
-      "id": "mg4t361"
+      "id": "mg4t361",
+      "content": "2. 7 periods and 18 groups."
     },
     {
       "type": "paragraph",
-      "id": "zxno1pd"
+      "id": "zxno1pd",
+      "content": "3. Atomic size decreases across period."
     },
     {
       "type": "paragraph",
-      "id": "twolrcp"
+      "id": "twolrcp",
+      "content": "4. Metallic character increases down group."
     },
     {
       "type": "paragraph",
-      "id": "gdsz7jb"
+      "id": "gdsz7jb",
+      "content": "5. Group 1 = Alkali metals."
     },
     {
       "type": "paragraph",
-      "id": "amvng6g"
+      "id": "amvng6g",
+      "content": "6. Group 17 = Halogens."
     },
     {
       "type": "paragraph",
-      "id": "4v3fkca"
+      "id": "4v3fkca",
+      "content": "7. Group 18 = Noble gases."
     },
     {
       "type": "paragraph",
-      "id": "2xfztur"
+      "id": "2xfztur",
+      "content": "8. Period number = number of shells."
     }
   ],
   "enriched": true

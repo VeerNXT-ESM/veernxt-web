@@ -10,51 +10,51 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Wave</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Speed</strong></p>",
+            "<p><strong>Medium</strong></p>",
+            "<p><strong>Damage</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>P</p>",
+            "<p>Body</p>",
+            "<p>Fastest</p>",
+            "<p>Solids, liquids, gases</p>",
+            "<p>Lowest</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>S</p>",
+            "<p>Body</p>",
+            "<p>Second</p>",
+            "<p>Solids only</p>",
+            "<p>Moderate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Love</p>",
+            "<p>Surface</p>",
+            "<p>Slower</p>",
+            "<p>Surface</p>",
+            "<p>High</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Rayleigh</p>",
+            "<p>Surface</p>",
+            "<p>Slowest</p>",
+            "<p>Surface</p>",
+            "<p>Very high</p>"
           ]
         }
       ]

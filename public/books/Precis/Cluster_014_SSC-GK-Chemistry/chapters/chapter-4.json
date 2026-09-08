@@ -1,0 +1,459 @@
+{
+  "title": "CHAPTER 4 : STRUCTURE OF THE ATOM",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<br/><strong>1. INTRODUCTION TO ATOM</strong>",
+      "id": "mlbgbd5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Electron Discovered",
+          "value": "1897",
+          "icon": "calendar"
+        },
+        {
+          "label": "Max Shell Formula",
+          "value": "2n²",
+          "icon": "check"
+        },
+        {
+          "label": "Cancer Treatment",
+          "value": "Cobalt-60",
+          "icon": "award"
+        },
+        {
+          "label": "Thyroid Treatment",
+          "value": "Iodine-131",
+          "icon": "info"
+        }
+      ],
+      "id": "y8w5ab1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Atoms are composed of three primary sub-atomic particles: negatively charged electrons, positively charged protons, and neutral neutrons.",
+        "The maximum number of electrons that can occupy a given energy shell is calculated using the formula 2n².",
+        "Isotopes are atoms of the same element with equal atomic numbers but different mass numbers, whereas isobars belong to different elements with identical mass numbers.",
+        "Chemical equations must be balanced to satisfy the Law of Conservation of Mass, ensuring equal numbers of atoms on reactant and product sides.",
+        "Oxidation and reduction occur simultaneously in redox reactions, where oxidation is the gain of oxygen/loss of hydrogen and reduction is the loss of oxygen/gain of hydrogen."
+      ],
+      "id": "ywwpsef"
+    },
+    {
+      "type": "paragraph",
+      "content": "All matter in the universe is made up of tiny particles called atoms.<br/>An atom is the smallest unit of an element that takes part in chemical reactions.<br/>Earlier, scientists believed that atoms were indivisible.<br/>Later, experiments proved that atoms are made up of even smaller particles.<br/>",
+      "id": "jg2trt7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>2. DISCOVERY OF SUB-ATOMIC PARTICLES</strong>",
+      "id": "yvlqx0d"
+    },
+    {
+      "type": "paragraph",
+      "content": "Scientists discovered that atoms are made up of three smaller particles called:<br/>• Electrons<br/>• Protons<br/>• Neutrons<br/>These particles are called sub-atomic particles.",
+      "id": "282yr8u"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>2.1 ELECTRON</strong>",
+      "id": "rc6jg4y"
+    },
+    {
+      "type": "paragraph",
+      "content": "Electron was discovered by J.J. Thomson in 1897.<br/>Electrons are negatively charged particles.<br/>They revolve around the nucleus of an atom.<br/>",
+      "id": "098dut0"
+    },
+    {
+      "type": "paragraph",
+      "content": "Properties of electrons:<br/>• Charge = Negative<br/>• Mass = Very small<br/>• Present outside the nucleus<br/>",
+      "id": "mtej58p"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>2.2 PROTON</strong>",
+      "id": "mrgw1jx"
+    },
+    {
+      "type": "paragraph",
+      "content": "Proton was discovered by E. Goldstein.<br/>Protons are positively charged particles.<br/>They are present inside the nucleus of an atom.<br/><br/>Properties of protons:<br/>• Charge = Positive<br/>• Mass = Almost equal to neutron<br/>• Present in nucleus<br/>",
+      "id": "vc85j7h"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>2.3 NEUTRON</strong>",
+      "id": "se6wpjx"
+    },
+    {
+      "type": "paragraph",
+      "content": "Neutron was discovered by James Chadwick.<br/>Neutrons have no charge.<br/>They are also present inside the nucleus.<br/>Properties of neutrons:<br/>• Charge = Neutral<br/>• Mass = Nearly equal to proton<br/>• Present in nucleus<br/>",
+      "id": "0qt0zxf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>3. ATOMIC MODELS</strong>",
+      "id": "xc5tqj3"
+    },
+    {
+      "type": "paragraph",
+      "content": "Scientists proposed different models to explain the structure of the atom.<br/>Important atomic models are:<br/>• Thomson’s model<br/>• Rutherford’s model<br/>• Bohr’s model<br/>",
+      "id": "ai5w3ld"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>3.1 THOMSON’S ATOMIC MODEL</strong>",
+      "id": "c35e9db"
+    },
+    {
+      "type": "paragraph",
+      "content": "J.J. Thomson proposed this model. ",
+      "id": "ndqmxtu"
+    },
+    {
+      "type": "paragraph",
+      "content": "According to this model:<br/>• Atom is a positively charged sphere.<br/>• Electrons are embedded in it like plums in a pudding.<br/><br/>This model is called the Plum Pudding Model.<br/>Limitation:<br/>It could not explain the scattering of alpha particles.<br/>",
+      "id": "ar34kd4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>3.2 RUTHERFORD’S ATOMIC MODEL</strong>",
+      "id": "13byog2"
+    },
+    {
+      "type": "paragraph",
+      "content": "Rutherford performed the gold foil experiment.<br/>Observations:<br/>• Most alpha particles passed straight through.<br/>• Some were deflected.<br/>• Very few bounced back.",
+      "id": "7us3n8p"
+    },
+    {
+      "type": "paragraph",
+      "content": "Conclusions:<br/>• Atom has a small, dense, positively charged nucleus.<br/>• Most of the atom is empty space.<br/>• Electrons revolve around the nucleus.<br/><br/>Limitation:<br/>This model could not explain stability of atom.<br/>",
+      "id": "svrx9mv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>3.3 BOHR’S ATOMIC MODEL</strong>",
+      "id": "lfto2og"
+    },
+    {
+      "type": "paragraph",
+      "content": "Niels Bohr improved Rutherford’s model.<br/>According to Bohr:<br/>• Electrons revolve in fixed energy levels.<br/>• These orbits are called shells.<br/>• Energy is not radiated when electrons move in shells.",
+      "id": "j7pzokz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Energy is absorbed or released when electrons jump between shells.",
+      "id": "zmhtufh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>4. ELECTRONIC CONFIGURATION</strong>",
+      "id": "n03x8kb"
+    },
+    {
+      "type": "paragraph",
+      "content": "Electrons are arranged in different shells around the nucleus.<br/>The shells are named as:<br/>K, L, M, N<br/>Maximum number of electrons in a shell is given by formula:<br/>2n²<br/>Where n = shell number",
+      "id": "0q6py6q"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>5. VALENCY</strong>",
+      "id": "84yo5nf"
+    },
+    {
+      "type": "pullQuote",
+      "content": "An atom is the smallest unit of an element that takes part in chemical reactions.",
+      "id": "197a2q9"
+    },
+    {
+      "type": "paragraph",
+      "content": "Valency is the combining capacity of an atom.<br/>It depends on the number of electrons present in the outermost shell.<br/>If outer shell has:<br/>• 1, 2 or 3 electrons → valency = same number<br/>• 4 electrons → valency = 4<br/>• 5, 6 or 7 electrons → valency = 8 – number of electrons",
+      "id": "22h73sn"
+    },
+    {
+      "type": "paragraph",
+      "content": "• 8 electrons → valency = 0 ",
+      "id": "dmuaqua"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>6. ATOMIC NUMBER</strong>",
+      "id": "f9rlt8d"
+    },
+    {
+      "type": "paragraph",
+      "content": "Atomic number is the number of protons present in the nucleus of an atom.<br/>Atomic number = Number of protons = Number of electrons (in neutral atom)<br/><strong>7. MASS NUMBER</strong>",
+      "id": "isev8mu"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mass number is the total number of protons and neutrons present in the nucleus.<br/>Mass number = Number of protons + Number of neutrons<br/>",
+      "id": "7n65lla"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>8. ISOTOPES</strong>",
+      "id": "qd6snv9"
+    },
+    {
+      "type": "paragraph",
+      "content": "Isotopes are atoms of the same element having same atomic number but different mass number.<br/>Examples:<br/>• Hydrogen – Protium, Deuterium, Tritium",
+      "id": "0u4f4z6"
+    },
+    {
+      "type": "paragraph",
+      "content": "Uses of isotopes:<br/>• Cobalt-60 in cancer treatment<br/>• Iodine-131 in thyroid treatment<br/><strong>9. ISOBARS</strong>",
+      "id": "4pwlh9w"
+    },
+    {
+      "type": "paragraph",
+      "content": "Isobars are atoms of different elements having same mass number but different atomic numbers.<br/>Example:<br/>Calcium (20,40) and Argon (18,40)",
+      "id": "kg96594"
+    },
+    {
+      "id": "3eobg7f",
+      "type": "numberedList",
+      "items": [
+        "<strong>IMPORTANT SSC EXAM POINTS</strong>",
+        "• Electron discovered by J.J. Thomson<br/>• Proton discovered by Goldstein<br/>• Neutron discovered by Chadwick<br/>• Atomic number = number of protons<br/>• Mass number = protons + neutrons<br/>• Valency depends on outermost shell<br/><strong>11. QUICK REVISION</strong>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "• Atom is made of electrons, protons and neutrons<br/>• Electrons revolve in shells<br/>• Valency shows combining capacity<br/>• Isotopes have same atomic number<br/>• Isobars have same mass number<br/>",
+      "id": "658t4kh"
+    },
+    {
+      "type": "paragraph",
+      "content": "<strong>CHAPTER 5 : CHEMICAL REACTIONS AND EQUATIONS</strong>",
+      "id": "tfqktri"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>1. INTRODUCTION TO CHEMICAL REACTIONS</strong>",
+      "id": "u1wt3ic"
+    },
+    {
+      "type": "paragraph",
+      "content": "In our daily life, many changes take place around us.<br/>Some changes are physical in nature, while some are chemical in nature.<br/>A chemical reaction is a process in which one or more substances react together and form new substances.<br/>These new substances have different properties from the original substances.<br/>The substances that take part in a chemical reaction are called reactants.<br/>The substances that are formed as a result of the reaction are called products.<br/><strong>2. CHEMICAL EQUATION</strong>",
+      "id": "obz55de"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Isotopes",
+        "Isobars"
+      ],
+      "rows": [
+        [
+          "Atomic Number",
+          "Same",
+          "Different"
+        ],
+        [
+          "Mass Number",
+          "Different",
+          "Same"
+        ],
+        [
+          "Element Type",
+          "Same element",
+          "Different elements"
+        ],
+        [
+          "Example",
+          "Protium, Deuterium, Tritium",
+          "Calcium (20,40) and Argon (18,40)"
+        ]
+      ],
+      "id": "y0gh0x4"
+    },
+    {
+      "type": "paragraph",
+      "content": "A chemical equation is a way of representing a chemical reaction using symbols and formulas.<br/>It shows which substances are reacting and what substances are formed.<br/>In a chemical equation:<br/>• Reactants are written on the left-hand side.<br/>• Products are written on the right-hand side.<br/>• An arrow shows the direction of the reaction. ",
+      "id": "mi2voce"
+    },
+    {
+      "type": "paragraph",
+      "content": "Example:<br/>Magnesium + Oxygen → Magnesium Oxide<br/>",
+      "id": "ii5l1rv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>3. BALANCED CHEMICAL EQUATION</strong>",
+      "id": "5pei1v1"
+    },
+    {
+      "type": "paragraph",
+      "content": "A chemical equation is said to be balanced when the number of atoms of each element is the same on both sides of the equation.<br/>This is based on the Law of Conservation of Mass, which states that mass can neither be created nor destroyed in a chemical reaction.<br/>Therefore, during a chemical reaction, the total mass of reactants is always equal to the total mass of products.<br/><img alt=\"IMG_256\" src=\"/books/Precis/Cluster_014_SSC-GK-Chemistry/images/image_8u4kvbc.png\"/>",
+      "id": "0qs8hjw"
+    },
+    {
+      "id": "jr0o1it",
+      "type": "numberedList",
+      "items": [
+        "<strong>STEPS TO BALANCE A CHEMICAL EQUATION</strong>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 1: Write the word equation.<br/>Step 2: Convert the word equation into a skeletal chemical equation.<br/>Step 3: Balance the atoms of each element one by one.<br/>Step 4: Check whether the number of atoms on both sides is equal.<br/>Step 5: Write the final balanced chemical equation.<br/>",
+      "id": "4zro3tp"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>5. TYPES OF CHEMICAL REACTIONS</strong>",
+      "id": "dd1cxni"
+    },
+    {
+      "type": "paragraph",
+      "content": "Chemical reactions are classified into different types based on the way they occur.<br/>The main types of chemical reactions are described below.<br/><strong>5.1 COMBINATION REACTION</strong>",
+      "id": "zakqqq3"
+    },
+    {
+      "type": "paragraph",
+      "content": "A combination reaction is a reaction in which two or more substances combine together to form a single product.<br/>In this type of reaction, multiple reactants form only one product.<br/>Example:<br/>Calcium oxide + Water → Calcium hydroxide<br/>This reaction releases heat, so it is also called an exothermic reaction.",
+      "id": "74dva7v"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>5.2 DECOMPOSITION REACTION</strong>",
+      "id": "dgv9nxa"
+    },
+    {
+      "type": "paragraph",
+      "content": "A decomposition reaction is a reaction in which a single compound breaks down into two or more simpler substances.<br/>This type of reaction usually requires energy in the form of heat, electricity or light.<br/>Example:<br/>Calcium carbonate → Calcium oxide + Carbon dioxide<br/>This reaction occurs when calcium carbonate is heated.",
+      "id": "c7r01i5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>5.3 DISPLACEMENT REACTION</strong>",
+      "id": "te9yvrc"
+    },
+    {
+      "type": "paragraph",
+      "content": "A displacement reaction is a reaction in which a more reactive element displaces a less reactive element from its compound.<br/>Example:<br/>Zinc + Copper sulphate → Zinc sulphate + Copper<br/>In this reaction, zinc displaces copper because zinc is more reactive than copper.",
+      "id": "q5ecimq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>5.4 DOUBLE DISPLACEMENT REACTION</strong>",
+      "id": "sznvhd9"
+    },
+    {
+      "type": "paragraph",
+      "content": "In a double displacement reaction, two compounds exchange their ions to form two new compounds.<br/>Example:<br/>Sodium sulphate + Barium chloride → Barium sulphate + Sodium chloride<br/>This type of reaction often results in the formation of a precipitate.",
+      "id": "l1typzm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>6. OXIDATION AND REDUCTION</strong>",
+      "id": "5on37y1"
+    },
+    {
+      "type": "paragraph",
+      "content": "Oxidation is the process in which a substance gains oxygen or loses hydrogen.<br/>Reduction is the process in which a substance loses oxygen or gains hydrogen.<br/>Oxidation and reduction always occur together.<br/>That is why these reactions are called redox reactions.<br/>",
+      "id": "hhg1tvs"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Electron was discovered by J.J. Thomson (1897), Proton by E. Goldstein, and Neutron by James Chadwick.",
+        "Atomic number equals the number of protons, whereas Mass number equals protons plus neutrons.",
+        "Isotopes Cobalt-60 and Iodine-131 are frequently asked in relation to cancer and thyroid treatments respectively.",
+        "Galvanization involves coating iron with zinc to prevent rust and corrosion."
+      ],
+      "id": "w18sr1j"
+    },
+    {
+      "id": "z39jopf",
+      "type": "numberedList",
+      "items": [
+        "<strong>CORROSION</strong>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Corrosion is the slow destruction of metals due to their reaction with air, moisture or chemicals.<br/>The most common example of corrosion is rusting of iron.<br/><br/>Rusting occurs when iron reacts with oxygen and water to form rust.<br/>Rust weakens the metal and causes damage.",
+      "id": "3hzia3p"
+    },
+    {
+      "id": "lew8xnn",
+      "type": "numberedList",
+      "items": [
+        "<strong>PREVENTION OF CORROSION</strong>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Corrosion can be prevented by the following methods:<br/>• Painting the metal surface<br/>• Oiling or greasing the metal<br/>• Galvanization (coating with zinc)<br/>• Electroplating<br/>• Making alloys<br/>",
+      "id": "4bacwtw"
+    },
+    {
+      "id": "4ymbmfz",
+      "type": "numberedList",
+      "items": [
+        "<strong>RANCIDITY</strong>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Rancidity is the process in which fats and oils present in food get oxidized and produce an unpleasant smell and taste.<br/>It spoils the quality of food and makes it unfit for consumption.<br/>Rancidity can be prevented by:<br/>• Keeping food in airtight containers<br/>• Refrigeration<br/>• Adding antioxidants",
+      "id": "f3kqfew"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>10. IMPORTANT SSC EXAM POINTS</strong>",
+      "id": "d1xyquq"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Chemical reactions produce new substances.<br/>• Balanced equations follow law of conservation of mass.<br/>• Rusting is an example of oxidation.<br/>• Combination reactions form a single product.<br/>• Rancidity spoils food items.<br/>",
+      "id": "b4sscre"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>11. QUICK REVISION</strong>",
+      "id": "mt550yh"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Reactants change into products.<br/>• Chemical equations represent reactions.",
+      "id": "8b4v0rr"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Oxidation and reduction occur together.<br/>• Corrosion damages metals.<br/>• Rancidity causes food spoilage.<br/>",
+      "id": "qlmn7zc"
+    }
+  ],
+  "enriched": true
+}

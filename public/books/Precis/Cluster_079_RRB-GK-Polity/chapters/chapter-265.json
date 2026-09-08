@@ -1,0 +1,110 @@
+{
+  "title": "Composition of CVC",
+  "order": 265,
+  "blocks": [
+    {
+      "id": "rx7b9i9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Central Vigilance Commissioner</p>",
+            "<p>Chairperson</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vigilance Commissioners</p>",
+            "<p>Maximum of two members</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Central Vigilance Commission consists of a Central Vigilance Commissioner as Chairperson and not more than two Vigilance Commissioners as members.",
+      "id": "c64bgsk"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Role",
+        "Maximum Count",
+        "Tenure Limit",
+        "Post-Tenure Employment"
+      ],
+      "rows": [
+        [
+          "Central Vigilance Commissioner",
+          "1 (Chairperson)",
+          "4 years or 65 years of age",
+          "Ineligible"
+        ],
+        [
+          "Vigilance Commissioners",
+          "2 (Members)",
+          "4 years or 65 years of age",
+          "Ineligible (except appointment as CVC)"
+        ]
+      ],
+      "id": "uwclcyv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Maximum Members",
+          "value": "3 (1 CVC + 2 VCs)",
+          "icon": "users"
+        },
+        {
+          "label": "Tenure",
+          "value": "4 Years / 65 Age",
+          "icon": "clock"
+        },
+        {
+          "label": "Statutory Status",
+          "value": "2003 Act",
+          "icon": "calendar"
+        },
+        {
+          "label": "Selection Panel",
+          "value": "3-Member Committee",
+          "icon": "award"
+        }
+      ],
+      "id": "l0dfhg2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Tenure Exception: Unlike most statutory/constitutional bodies with a 5 or 6-year tenure, the CVC holds office for 4 years or up to 65 years of age.",
+        "Selection Panel Composition: Includes the Leader of the Opposition in the Lok Sabha (not Rajya Sabha), along with the Prime Minister and Home Minister.",
+        "Re-employment Bar: CVC members are strictly barred from further employment under both Central and State Governments post-tenure."
+      ],
+      "id": "m5znub9"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Vigilance Commission is a multi-member body consisting of a Central Vigilance Commissioner (Chairperson) and not more than two Vigilance Commissioners.",
+        "Members are appointed by the President by warrant under his hand and seal on the recommendation of a three-member committee.",
+        "The recommendation committee consists of the Prime Minister (Head), the Union Minister of Home Affairs, and the Leader of the Opposition in the Lok Sabha.",
+        "They hold office for a term of four years or until they attain the age of 65 years, whichever is earlier.",
+        "Upon ceasing to hold office, members are ineligible for further employment under the Central or State Government."
+      ],
+      "id": "ixk5rks"
+    }
+  ],
+  "enriched": true
+}

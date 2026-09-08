@@ -52,57 +52,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Unicode</p>",
+            "<p>Universal encoding standard that supports all scripts including Devanagari; Unicode range for Devanagari: U+0900 to U+097F; enables Hindi on all platforms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mangal Font</p>",
+            "<p>Government standard Unicode Devanagari font; developed by C-DAC; used in all government documents; available in Windows</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Noto Sans Devanagari</p>",
+            "<p>Google's open-source Unicode Devanagari font; excellent for web use</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ISCII (Indian Script Code for Info Interchange)</p>",
+            "<p>Pre-Unicode Indian encoding standard; now largely replaced by Unicode; legacy systems may still use it</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Devanagari Keyboard Layouts</p>",
+            "<p>Inscript (standard government keyboard for all Indian languages; same key positions across scripts); Phonetic/Remington; Typewriter layout</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>InScript Layout</p>",
+            "<p>Government approved layout; standardised by BIS; same position concept across all Indic keyboards; recommended for all government Hindi typing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Type Speed Standard</p>",
+            "<p>25 words per minute in Hindi (Devanagari) is the minimum standard for departmental typing examinations</p>"
           ]
         }
       ]
@@ -120,89 +120,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Tool / Software</strong></p>",
+            "<p><strong>Developer</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ISM (Indian Script Manager)</p>",
+            "<p>C-DAC</p>",
+            "<p>Hindi typing in non-Unicode environments; various keyboard layouts; bilingual documents</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Anuvadini</p>",
+            "<p>C-DAC</p>",
+            "<p>Machine Translation tool; English to Hindi and other Indian languages; used by government offices for bulk translation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shabdanjali</p>",
+            "<p>C-DAC</p>",
+            "<p>Hindi word processor; bilingual documents</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mantra-Rajbhasha</p>",
+            "<p>C-DAC TDIL</p>",
+            "<p>Machine translation system; English to Hindi and 9 other Indian languages; used in government</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Saksham</p>",
+            "<p>NIC (National Informatics Centre)</p>",
+            "<p>Hindi word processing and typing interface for government use; integrated with e-office</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>e-Office (Hindi enabled)</p>",
+            "<p>NIC / DeitY</p>",
+            "<p>Electronic file management system for government; fully bilingual Hindi-English interface; DoOL mandates all government offices to use</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kavach</p>",
+            "<p>NIC</p>",
+            "<p>Hindi software for secure e-mail and file transfer with Hindi interface</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ARTHL (Artificial Intelligence based RTL Hindi)</p>",
+            "<p>CDAC/IIT</p>",
+            "<p>Advanced tools for Hindi natural language processing; machine translation; speech recognition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Google Input Tools</p>",
+            "<p>Google</p>",
+            "<p>Type in Devanagari using transliteration (type phonetically in English, get Devanagari); widely used</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Microsoft Hindi IME</p>",
+            "<p>Microsoft</p>",
+            "<p>Built-in Hindi input method; available on Windows; phonetic and InScript modes</p>"
           ]
         }
       ]
@@ -228,50 +228,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Platform</strong></p>",
+            "<p><strong>Hindi Requirement</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ATM Interface</p>",
+            "<p>RBI mandates all ATMs to have Hindi language option (along with local language); ATM screens must display transaction messages in Hindi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mobile Banking App</p>",
+            "<p>All bank mobile apps must provide Hindi language interface option; YONO (SBI), iMobile (ICICI), Kotak Mobile all offer Hindi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Internet Banking Portal</p>",
+            "<p>Banks must provide Hindi language option on their net banking portal; HTTPS with Hindi support</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Core Banking System (CBS)</p>",
+            "<p>CBS vendors (Finacle, BaNCS, FLEXCUBE) provide Hindi modules; key reports and outputs must be bilingual</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cheques and Instruments</p>",
+            "<p>Cheque book, FD receipts, DD, account statements :all must be bilingual (Hindi and English); account holder's name in Devanagari optional but system must support it</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Welcome Kit / Passbook</p>",
+            "<p>New account welcome kit, passbook, debit card carrier :must be in bilingual format; Hindi version of all bank forms mandatory</p>"
           ]
         }
       ]

@@ -1,0 +1,93 @@
+{
+  "title": "8. Great Circles",
+  "order": 47,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A great circle is the largest possible circle on a sphere. The Equator is the only latitude that is a great circle. All other latitudes are small circles.",
+      "id": "7w7wedr"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Equator is the only latitude that is a great circle.",
+      "id": "1jy99mb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Circle Size",
+          "value": "Largest Possible",
+          "icon": "info"
+        },
+        {
+          "label": "Only Great Latitude",
+          "value": "Equator",
+          "icon": "check"
+        },
+        {
+          "label": "Other Latitudes",
+          "value": "Small Circles",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Applications",
+          "value": "Aviation & Shipping",
+          "icon": "award"
+        }
+      ],
+      "id": "2lgxkd8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Great Circles",
+        "Small Circles"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Largest possible circle on a sphere",
+          "Any circle on a sphere smaller than a great circle"
+        ],
+        [
+          "Latitude Examples",
+          "Equator (only latitude)",
+          "All other latitudes except the Equator"
+        ],
+        [
+          "Navigation Significance",
+          "Provides the shortest distance between two points",
+          "Does not provide the shortest distance route"
+        ]
+      ],
+      "id": "9swdvps"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A great circle is the largest possible circle that can be drawn on a sphere.",
+        "The Equator is uniquely the only line of latitude that forms a great circle.",
+        "All lines of latitude other than the Equator are classified as small circles.",
+        "Great circle routes provide the shortest distance between any two locations on Earth."
+      ],
+      "id": "hsv1jo0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exam questions frequently trap candidates by stating all latitudes are great circles; remember that ONLY the Equator is a great circle.",
+        "Great circle routes are specifically tested as the shortest distance between two places, which is why they are standard in aviation and shipping navigation."
+      ],
+      "id": "gihq8eb"
+    },
+    {
+      "type": "paragraph",
+      "content": "Great circle routes provide the shortest distance between two places and are used in aviation and shipping.",
+      "id": "27x76dm"
+    }
+  ],
+  "enriched": true
+}

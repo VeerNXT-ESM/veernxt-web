@@ -1,0 +1,97 @@
+{
+  "title": "1. Meaning of Citizenship",
+  "order": 21,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Citizenship refers to the legal relationship between an individual and the State. A citizen enjoys full civil and political rights such as the right to vote, hold public office, and protection under law.<br/><br/>Non-citizens do not enjoy political rights.",
+      "id": "1uuq7cj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Indian Citizenship",
+          "value": "Single",
+          "icon": "check"
+        },
+        {
+          "label": "USA Citizenship",
+          "value": "Dual",
+          "icon": "book"
+        },
+        {
+          "label": "Key Rights",
+          "value": "Civil & Political",
+          "icon": "award"
+        },
+        {
+          "label": "Primary Objective",
+          "value": "National Unity",
+          "icon": "info"
+        }
+      ],
+      "id": "qtooz1f"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Citizenship refers to the legal relationship between an individual and the State.",
+      "id": "i0nwhkm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Single Citizenship (India)",
+        "Dual Citizenship (USA)"
+      ],
+      "rows": [
+        [
+          "State Citizenship",
+          "No separate state citizenship",
+          "Separate state citizenship exists"
+        ],
+        [
+          "Impact on Unity",
+          "Strengthens national unity",
+          "Divides allegiance between State and Nation"
+        ]
+      ],
+      "id": "m8rv98r"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Citizenship represents the legal relationship binding an individual to the State.",
+        "Citizens possess full civil and political rights, including the right to vote and hold public office.",
+        "Non-citizens are excluded from enjoying political rights.",
+        "India adopts a single citizenship model, meaning there is no distinct state citizenship.",
+        "The single citizenship system in India is specifically designed to strengthen national unity."
+      ],
+      "id": "nokm9gd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "India enforces Single Citizenship only; there is no provision for state-level citizenship.",
+        "Non-citizens do not enjoy political rights such as voting or holding public office in India.",
+        "Contrast between Indian (Single Citizenship) and USA (Dual Citizenship) systems is a frequently tested topic."
+      ],
+      "id": "txgtq16"
+    },
+    {
+      "id": "h7fm6mt",
+      "type": "numberedList",
+      "items": [
+        "<strong>Single Citizenship in India</strong>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "India follows the concept of single citizenship.<br/><br/>This means:<br/>• There is only Indian citizenship.<br/>• There is no separate state citizenship.<br/><br/>This feature strengthens national unity.<br/><br/>In contrast, countries like the USA follow dual citizenship.",
+      "id": "psf7g92"
+    }
+  ],
+  "enriched": true
+}

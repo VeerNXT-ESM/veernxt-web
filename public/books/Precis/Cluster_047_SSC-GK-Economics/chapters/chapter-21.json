@@ -1,0 +1,705 @@
+{
+  "title": "CHAPTER 22: INDIAN BUDGET",
+  "order": 21,
+  "blocks": [
+    {
+      "id": "jgcempn",
+      "type": "heading",
+      "level": 2,
+      "content": "INTRODUCTION TO INDIAN BUDGET"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Union Budget is an annual financial statement of estimated receipts and expenditures presented by the Finance Minister in the Lok Sabha.",
+        "The Budget is divided into Revenue Budget (day-to-day operations without asset/liability impact) and Capital Budget (long-term development creating assets or liabilities).",
+        "Tax revenues consist of Direct Taxes (progressive, non-shiftable) and Indirect Taxes (regressive, shiftable like GST).",
+        "Key deficit indicators include Revenue Deficit, Fiscal Deficit (total borrowing needs), and Primary Deficit (Fiscal Deficit minus interest payments)."
+      ],
+      "id": "x6yf3qe"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Financial Year",
+          "value": "1st April - 31st March",
+          "icon": "calendar"
+        },
+        {
+          "label": "GST Introduced",
+          "value": "2017",
+          "icon": "check"
+        },
+        {
+          "label": "Root Word",
+          "value": "Bougette",
+          "icon": "book"
+        },
+        {
+          "label": "Budget Parts",
+          "value": "2 (Revenue & Capital)",
+          "icon": "info"
+        }
+      ],
+      "id": "m876lqv"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Indian Budget is the most important financial document of the Government of India.",
+      "id": "nw05ejc"
+    },
+    {
+      "type": "paragraph",
+      "content": "It presents the annual statement of estimated receipts and expenditures of the government for a financial year, which runs from 1st April to 31st March.",
+      "id": "0sv2mb7"
+    },
+    {
+      "type": "paragraph",
+      "content": "The budget reflects:",
+      "id": "ob5iu4t"
+    },
+    {
+      "id": "eqs5t6u",
+      "type": "list",
+      "items": [
+        "Government’s economic policy",
+        "Development priorities",
+        "Fiscal position of the country",
+        "Welfare orientation of the government"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "The Union Budget is presented every year by the Finance Minister of India in the Lok Sabha.",
+      "id": "s6umn95"
+    },
+    {
+      "id": "whhpqhk",
+      "type": "heading",
+      "level": 2,
+      "content": "MEANING AND DEFINITION OF BUDGET"
+    },
+    {
+      "type": "paragraph",
+      "content": "The word ‘Budget’ is derived from the French word ‘Bougette’, meaning a leather bag. Earlier, the Finance Minister carried financial documents in a leather bag.",
+      "id": "gzj75wq"
+    },
+    {
+      "type": "paragraph",
+      "content": "According to economists:",
+      "id": "14j3d2f"
+    },
+    {
+      "type": "paragraph",
+      "content": "<em>“The budget is an annual financial statement showing expected income and expenditure of the government.”</em>",
+      "id": "b5pa11s"
+    },
+    {
+      "type": "paragraph",
+      "content": "In simple terms:",
+      "id": "n55u8gc"
+    },
+    {
+      "type": "paragraph",
+      "content": "Budget = Estimated Income + Estimated Expenditure for one year",
+      "id": "5ld4as6"
+    },
+    {
+      "id": "ot637l3",
+      "type": "heading",
+      "level": 2,
+      "content": "OBJECTIVES OF INDIAN BUDGET"
+    },
+    {
+      "type": "paragraph",
+      "content": "The main objectives of the Indian Budget are:",
+      "id": "bi38fwn"
+    },
+    {
+      "id": "q2l714e",
+      "type": "numberedList",
+      "items": [
+        "Economic Growth:"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "To promote overall development of the economy.",
+      "id": "krvzb0b"
+    },
+    {
+      "id": "a7879ic",
+      "type": "numberedList",
+      "items": [
+        "Reduction of Poverty:"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Through welfare schemes and subsidies.",
+      "id": "1cbnef7"
+    },
+    {
+      "id": "y7divjc",
+      "type": "numberedList",
+      "items": [
+        "Employment Generation:"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "By promoting industries and infrastructure.",
+      "id": "pisn1ea"
+    },
+    {
+      "id": "1mfeqwl",
+      "type": "numberedList",
+      "items": [
+        "Reduction of Income Inequality:"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Through progressive taxation and subsidies.",
+      "id": "2w6qtrg"
+    },
+    {
+      "id": "k2lw655",
+      "type": "numberedList",
+      "items": [
+        "Price Stability:"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "To control inflation and deflation.",
+      "id": "oiig18k"
+    },
+    {
+      "id": "cadlj27",
+      "type": "numberedList",
+      "items": [
+        "Balanced Regional Development:"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "To reduce regional disparities.",
+      "id": "37xvntn"
+    },
+    {
+      "id": "430p6ai",
+      "type": "numberedList",
+      "items": [
+        "Efficient Allocation of Resources:"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "To use resources in the best possible manner.",
+      "id": "kgi8w6b"
+    },
+    {
+      "id": "l3iqu0f",
+      "type": "heading",
+      "level": 2,
+      "content": "COMPONENTS OF INDIAN BUDGET"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Indian Budget consists of two major parts:",
+      "id": "xj1yd8g"
+    },
+    {
+      "id": "z09p2l9",
+      "type": "numberedList",
+      "items": [
+        "Revenue Budget",
+        "Capital Budget"
+      ]
+    },
+    {
+      "id": "ks7hs4j",
+      "type": "heading",
+      "level": 2,
+      "content": "REVENUE BUDGET"
+    },
+    {
+      "type": "paragraph",
+      "content": "Revenue Budget includes:",
+      "id": "sk5zmi4"
+    },
+    {
+      "id": "80j58ag",
+      "type": "list",
+      "items": [
+        "Revenue Receipts",
+        "Revenue Expenditure"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "These are related to day-to-day functioning of the government.",
+      "id": "carvjlj"
+    },
+    {
+      "id": "3brejvp",
+      "type": "heading",
+      "level": 3,
+      "content": "REVENUE RECEIPTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Revenue receipts are those receipts which do not create any liability on the government and do not reduce government assets.",
+      "id": "7z692aw"
+    },
+    {
+      "type": "paragraph",
+      "content": "They are of two types:",
+      "id": "okz0w3d"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Indian Budget is the most important financial document of the Government of India.",
+      "id": "lpd2bl3"
+    },
+    {
+      "id": "ub1xobt",
+      "type": "numberedList",
+      "items": [
+        "Tax Revenue",
+        "Non-Tax Revenue"
+      ]
+    },
+    {
+      "id": "a4os43i",
+      "type": "heading",
+      "level": 3,
+      "content": "TAX REVENUE"
+    },
+    {
+      "type": "paragraph",
+      "content": "Tax revenue is the main source of income for the government.",
+      "id": "d89rxig"
+    },
+    {
+      "type": "paragraph",
+      "content": "Taxes are compulsory payments made by citizens to the government without any direct return.",
+      "id": "azrc5tg"
+    },
+    {
+      "type": "paragraph",
+      "content": "Types of Taxes:",
+      "id": "x17jp3y"
+    },
+    {
+      "id": "etiymqu",
+      "type": "numberedList",
+      "items": [
+        "Direct Taxes",
+        "Indirect Taxes"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Direct tax is paid directly by the person on whom it is imposed. Examples:",
+      "id": "mghjt7a"
+    },
+    {
+      "id": "ttd46zw",
+      "type": "list",
+      "items": [
+        "Income Tax",
+        "Corporate Tax"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Features:",
+      "id": "x64g7jq"
+    },
+    {
+      "id": "yukn02d",
+      "type": "list",
+      "items": [
+        "Progressive in nature",
+        "Burden cannot be shifted",
+        "Reduces income inequality"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Merits:",
+      "id": "5smoegm"
+    },
+    {
+      "id": "l7o6xr0",
+      "type": "list",
+      "items": [
+        "Promotes equality",
+        "Stable source of revenue"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Demerits:",
+      "id": "y401v56"
+    },
+    {
+      "id": "or55z4e",
+      "type": "list",
+      "items": [
+        "Tax evasion",
+        "Discourages savings"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Indirect tax is paid indirectly by consumers. Examples:",
+      "id": "uvp4x4w"
+    },
+    {
+      "id": "8xxkfyp",
+      "type": "list",
+      "items": [
+        "GST",
+        "Customs Duty"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Features:",
+      "id": "4dmf74m"
+    },
+    {
+      "id": "eav68xi",
+      "type": "list",
+      "items": [
+        "Burden can be shifted",
+        "Regressive in nature",
+        "Easy to collect"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "GST (Goods and Services Tax):",
+      "id": "5k0tg9a"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Direct Tax",
+        "Indirect Tax"
+      ],
+      "rows": [
+        [
+          "Payment Mechanism",
+          "Paid directly by the person on whom it is imposed",
+          "Paid indirectly by consumers"
+        ],
+        [
+          "Shifting of Burden",
+          "Burden cannot be shifted",
+          "Burden can be shifted"
+        ],
+        [
+          "Economic Nature",
+          "Progressive in nature",
+          "Regressive in nature"
+        ],
+        [
+          "Examples",
+          "Income Tax, Corporate Tax",
+          "GST, Customs Duty"
+        ]
+      ],
+      "id": "xhblrto"
+    },
+    {
+      "id": "v5ocie1",
+      "type": "list",
+      "items": [
+        "Introduced in 2017",
+        "One Nation One Tax",
+        "Replaced multiple indirect taxes"
+      ]
+    },
+    {
+      "id": "kighwqv",
+      "type": "heading",
+      "level": 3,
+      "content": "NON-TAX REVENUE"
+    },
+    {
+      "type": "paragraph",
+      "content": "Non-tax revenue includes income earned by the government other than taxes. Examples:",
+      "id": "gav1vsv"
+    },
+    {
+      "id": "xjko5lf",
+      "type": "list",
+      "items": [
+        "<ul><li><ul><li><ul><li>Fees</li><li>Fines and penalties</li><li>Interest receipts</li><li>Profit from public sector undertakings</li><li>Grants and donations</li></ul></li></ul></li></ul>",
+        "<ul><li><ul><li>Fees</li><li>Fines and penalties</li><li>Interest receipts</li><li>Profit from public sector undertakings</li><li>Grants and donations</li></ul></li></ul>",
+        "<ul><li>Fees</li><li>Fines and penalties</li><li>Interest receipts</li><li>Profit from public sector undertakings</li><li>Grants and donations</li></ul>",
+        "Fees",
+        "Fines and penalties",
+        "Interest receipts",
+        "Profit from public sector undertakings",
+        "Grants and donations"
+      ]
+    },
+    {
+      "id": "xafans7",
+      "type": "heading",
+      "level": 3,
+      "content": "REVENUE EXPENDITURE"
+    },
+    {
+      "type": "paragraph",
+      "content": "Revenue expenditure refers to expenditure that does not create assets. Examples:",
+      "id": "convziz"
+    },
+    {
+      "id": "q5bmdc1",
+      "type": "list",
+      "items": [
+        "Salaries of government employees",
+        "Pension payments",
+        "Interest on loans",
+        "Subsidies"
+      ]
+    },
+    {
+      "id": "qgsn046",
+      "type": "heading",
+      "level": 2,
+      "content": "CAPITAL BUDGET"
+    },
+    {
+      "type": "paragraph",
+      "content": "Capital Budget includes:",
+      "id": "8idiokk"
+    },
+    {
+      "id": "5goxuah",
+      "type": "list",
+      "items": [
+        "Capital Receipts",
+        "Capital Expenditure"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "It deals with long-term development of the economy.",
+      "id": "kpujqgo"
+    },
+    {
+      "id": "nv2tyme",
+      "type": "heading",
+      "level": 3,
+      "content": "CAPITAL RECEIPTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Capital receipts are receipts that create liability or reduce assets. Examples:",
+      "id": "0ts0rz5"
+    },
+    {
+      "id": "hp8h88q",
+      "type": "list",
+      "items": [
+        "Borrowings",
+        "Disinvestment",
+        "Recovery of loans"
+      ]
+    },
+    {
+      "id": "9oo0pcs",
+      "type": "heading",
+      "level": 3,
+      "content": "CAPITAL EXPENDITURE"
+    },
+    {
+      "type": "paragraph",
+      "content": "Capital expenditure leads to creation of assets. Examples:",
+      "id": "8ks45pk"
+    },
+    {
+      "id": "1rs3pyn",
+      "type": "list",
+      "items": [
+        "Construction of roads",
+        "Railways",
+        "Dams",
+        "Infrastructure projects"
+      ]
+    },
+    {
+      "id": "yag3dnf",
+      "type": "heading",
+      "level": 2,
+      "content": "DEFICITS IN BUDGET (MOST IMPORTANT)"
+    },
+    {
+      "id": "jpbcil3",
+      "type": "heading",
+      "level": 3,
+      "content": "REVENUE DEFICIT"
+    },
+    {
+      "type": "paragraph",
+      "content": "Revenue Deficit = Revenue Expenditure – Revenue Receipts Meaning:",
+      "id": "59xcow4"
+    },
+    {
+      "type": "paragraph",
+      "content": "It indicates that the government is unable to meet its regular expenses from its income.",
+      "id": "xa7uq1q"
+    },
+    {
+      "type": "paragraph",
+      "content": "Effects:",
+      "id": "j027kmp"
+    },
+    {
+      "id": "nq6rccd",
+      "type": "list",
+      "items": [
+        "Negative for economy",
+        "Increases debt burden",
+        "Reduces future growth"
+      ]
+    },
+    {
+      "id": "i04oizd",
+      "type": "heading",
+      "level": 3,
+      "content": "FISCAL DEFICIT"
+    },
+    {
+      "type": "paragraph",
+      "content": "Fiscal Deficit = Total Expenditure – (Revenue Receipts + Non-debt Capital Receipts) Meaning:",
+      "id": "97h60f9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Fiscal Deficit formula: Total Expenditure – (Revenue Receipts + Non-debt Capital Receipts); it indicates total borrowing requirement.",
+        "Primary Deficit formula: Fiscal Deficit – Interest Payments.",
+        "GST was introduced in 2017 under the concept 'One Nation One Tax' to replace multiple indirect taxes.",
+        "Direct taxes (e.g., Income Tax, Corporate Tax) are progressive and cannot be shifted, whereas indirect taxes (e.g., GST) are regressive and can be shifted."
+      ],
+      "id": "qkww3s8"
+    },
+    {
+      "type": "paragraph",
+      "content": "It shows total borrowing requirement of the government.",
+      "id": "irk7c8v"
+    },
+    {
+      "type": "paragraph",
+      "content": "High Fiscal Deficit leads to:",
+      "id": "2mx3xlw"
+    },
+    {
+      "id": "go6rjus",
+      "type": "list",
+      "items": [
+        "Inflation",
+        "Increase in public debt",
+        "Higher interest rates"
+      ]
+    },
+    {
+      "id": "djb8bkb",
+      "type": "heading",
+      "level": 3,
+      "content": "PRIMARY DEFICIT"
+    },
+    {
+      "type": "paragraph",
+      "content": "Primary Deficit = Fiscal Deficit – Interest Payments Meaning:",
+      "id": "nw8mdw0"
+    },
+    {
+      "type": "paragraph",
+      "content": "It shows current year’s fiscal position excluding past debt.",
+      "id": "iwm04py"
+    },
+    {
+      "id": "1e1ylgk",
+      "type": "heading",
+      "level": 2,
+      "content": "TYPES OF BUDGET"
+    },
+    {
+      "id": "sqseflq",
+      "type": "numberedList",
+      "items": [
+        "Balanced Budget – Income equals expenditure",
+        "Surplus Budget – Income exceeds expenditure",
+        "Deficit Budget – Expenditure exceeds income"
+      ]
+    },
+    {
+      "id": "uo4zkpp",
+      "type": "heading",
+      "level": 2,
+      "content": "ROLE OF BUDGET IN ECONOMIC DEVELOPMENT"
+    },
+    {
+      "id": "n2akeid",
+      "type": "list",
+      "items": [
+        "Promotes economic growth",
+        "Controls inflation",
+        "Reduces poverty",
+        "Encourages investment",
+        "Maintains economic stability"
+      ]
+    },
+    {
+      "id": "yyoud9c",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANCE OF INDIAN BUDGET"
+    },
+    {
+      "id": "d2eq0df",
+      "type": "list",
+      "items": [
+        "Shows government’s economic policy",
+        "Helps in resource allocation",
+        "Encourages development",
+        "Ensures financial discipline",
+        "Strengthens economy"
+      ]
+    },
+    {
+      "id": "y95lluu",
+      "type": "heading",
+      "level": 2,
+      "content": "CONCLUSION"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Indian Budget is a powerful instrument of economic policy.",
+      "id": "8i8wkcm"
+    },
+    {
+      "type": "paragraph",
+      "content": "It plays a vital role in promoting growth, development, and social justice.",
+      "id": "zucvsh6"
+    },
+    {
+      "type": "paragraph",
+      "content": "A well-prepared budget ensures balanced and sustainable economic development.",
+      "id": "fnpd49v"
+    }
+  ],
+  "enriched": true
+}

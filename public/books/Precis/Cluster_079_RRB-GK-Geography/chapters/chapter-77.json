@@ -1,0 +1,129 @@
+{
+  "title": "Parent Rock and Metamorphic Rock",
+  "order": 77,
+  "blocks": [
+    {
+      "id": "12px29e",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Parent Rock</strong></p>",
+            "<p><strong>Metamorphic Rock</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Limestone</p>",
+            "<p>Marble</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Granite</p>",
+            "<p>Gneiss</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Shale</p>",
+            "<p>Slate</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Metamorphic rocks are formed under the action of pressure, volume and temperature changes.",
+      "id": "tee6mvo"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parent Rock (Original)",
+        "Original Rock Type",
+        "Metamorphic Form"
+      ],
+      "rows": [
+        [
+          "Granite",
+          "Igneous Rock",
+          "Gneiss"
+        ],
+        [
+          "Clay / Shale",
+          "Sedimentary Rock",
+          "Slate / Schist"
+        ],
+        [
+          "Sandstone",
+          "Sedimentary Rock",
+          "Quartzite"
+        ],
+        [
+          "Limestone",
+          "Sedimentary Rock",
+          "Marble"
+        ],
+        [
+          "Coal",
+          "Sedimentary Rock",
+          "Anthracite / Graphite"
+        ]
+      ],
+      "id": "8c0vnxw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Key Drivers",
+          "value": "P, V, T Changes",
+          "icon": "info"
+        },
+        {
+          "label": "Thermal Types",
+          "value": "Contact & Regional",
+          "icon": "book"
+        },
+        {
+          "label": "Limestone",
+          "value": "Marble",
+          "icon": "check"
+        },
+        {
+          "label": "Granite",
+          "value": "Gneiss",
+          "icon": "award"
+        }
+      ],
+      "id": "guozkz7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct matching questions on Parent Rock vs Metamorphic Rock (e.g., Clay/Shale to Slate, Sandstone to Quartzite) are extremely high-yield for SSC and UPSC Prelims.",
+        "Remember that Gneiss originates from Granite (Igneous), whereas Marble originates from Limestone (Sedimentary).",
+        "Differentiate between Foliated rocks (Slate, Schist, Gneiss) and Non-Foliated rocks (Marble, Quartzite)."
+      ],
+      "id": "oivrzkg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Metamorphic rocks form under the action of Pressure, Volume, and Temperature (PVT) changes on existing igneous or sedimentary rocks.",
+        "Thermal metamorphism occurs due to intense heat and is classified into Contact Metamorphism (localised magma contact) and Regional Metamorphism (large-scale tectonic forces).",
+        "Dynamic metamorphism involves restructuring and recrystallisation of rocks due to mechanical deformation without significant chemical alteration.",
+        "Foliation or Lineation is the structural arrangement of mineral grains or crystals in parallel layers or bands during metamorphism.",
+        "Banding refers to metamorphic rocks displaying alternating thin-to-thick layers of light and dark minerals."
+      ],
+      "id": "ek2k9rt"
+    }
+  ],
+  "enriched": true
+}

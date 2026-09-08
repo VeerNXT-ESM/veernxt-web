@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "i17fb1c"
+      "id": "i17fb1c",
+      "content": "Glaciers and deserts represent two extreme natural environments of the Earth. Both play a significant role in shaping landforms through erosion, transportation, and deposition. For SSC examinations, this chapter is extremely important because questions are asked from glacier processes, glacial landforms, types of deserts, desert landforms, and climatic conditions."
     },
     {
       "type": "statStrip",
@@ -58,7 +59,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0cyaqgb"
+      "id": "0cyaqgb",
+      "content": "A glacier is a large mass of ice formed by the accumulation and compaction of snow over a long period of time. When the weight of accumulated snow becomes very high, it turns into ice and begins to move slowly under the influence of gravity."
     },
     {
       "id": "sjacg7u",
@@ -68,7 +70,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8bc3xsc"
+      "id": "8bc3xsc",
+      "content": "Glaciers are formed in regions where snowfall exceeds melting. Low temperatures, high altitude or high latitude, and gentle slopes are favourable conditions for glacier formation."
     },
     {
       "id": "ti02l08",
@@ -84,7 +87,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vdk004q"
+      "id": "vdk004q",
+      "content": "Valley glaciers flow through mountain valleys like rivers of ice. They are common in high mountain regions such as the Himalayas and Alps."
     },
     {
       "id": "4lrp753",
@@ -94,7 +98,8 @@
     },
     {
       "type": "paragraph",
-      "id": "i0pbq7e"
+      "id": "i0pbq7e",
+      "content": "Continental glaciers cover vast areas of land. They are also known as ice sheets. Antarctica and Greenland are examples."
     },
     {
       "id": "963rp6u",
@@ -109,7 +114,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dzhlw2z"
+      "id": "dzhlw2z",
+      "content": "Glaciers erode land mainly through two processes: plucking and abrasion. Plucking involves lifting of rock fragments by ice, while abrasion occurs when rocks embedded in ice scrape the surface."
     },
     {
       "id": "irfdf67",
@@ -119,7 +125,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8wyh4f6"
+      "id": "8wyh4f6",
+      "content": "Important glacial erosional landforms include cirques, arêtes, horns, U-shaped valleys, hanging valleys, and fjords."
     },
     {
       "id": "ol43eu6",
@@ -129,7 +136,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4ff8jme"
+      "id": "4ff8jme",
+      "content": "Glaciers deposit unsorted material called till. Depositional landforms include moraines (lateral, medial, terminal), drumlins, eskers, and outwash plains."
     },
     {
       "id": "dv9hr3s",
@@ -176,7 +184,8 @@
     },
     {
       "type": "paragraph",
-      "id": "d1dlrn9"
+      "id": "d1dlrn9",
+      "content": "A desert is a region that receives very little rainfall, generally less than 25 cm annually. Deserts may be hot or cold and are characterized by sparse vegetation."
     },
     {
       "id": "x3lik9t",
@@ -192,7 +201,8 @@
     },
     {
       "type": "paragraph",
-      "id": "eim7iq1"
+      "id": "eim7iq1",
+      "content": "Hot deserts are found in tropical and subtropical regions. They experience very high temperatures during the day and very low temperatures at night. The Sahara Desert is the largest hot desert."
     },
     {
       "id": "wh8xwze",
@@ -202,7 +212,8 @@
     },
     {
       "type": "paragraph",
-      "id": "oodcskh"
+      "id": "oodcskh",
+      "content": "Cold deserts are found in high latitude or high altitude regions. They experience extremely low temperatures. The Gobi Desert is an example."
     },
     {
       "id": "6rdxgkx",
@@ -212,7 +223,8 @@
     },
     {
       "type": "paragraph",
-      "id": "a0um185"
+      "id": "a0um185",
+      "content": "Wind is the main agent of erosion in deserts. Wind erodes land through deflation and abrasion."
     },
     {
       "id": "k7ri6r2",
@@ -222,7 +234,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rxugons"
+      "id": "rxugons",
+      "content": "Desert erosional landforms include mushroom rocks, yardangs, deflation hollows, and rock pedestals."
     },
     {
       "type": "examAlert",
@@ -241,7 +254,8 @@
     },
     {
       "type": "paragraph",
-      "id": "hi65rt9"
+      "id": "hi65rt9",
+      "content": "Desert depositional landforms include sand dunes such as barchans, longitudinal dunes, and transverse dunes."
     },
     {
       "id": "15i4ufy",
@@ -251,7 +265,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lf4cr4z"
+      "id": "lf4cr4z",
+      "content": "Glaciers are important sources of freshwater and influence global sea level. Deserts provide valuable minerals and have unique ecosystems. Both environments play a key role in Earth’s climate system."
     },
     {
       "id": "7wm8kco",
@@ -263,13 +278,13 @@
       "id": "yiiixar",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Glacier – moving mass of ice",
+        "Valley glacier – mountains",
+        "Ice sheet – Antarctica",
+        "Glacial erosion – plucking &amp; abrasion",
+        "Desert – rainfall less than 25 cm",
+        "Wind – main desert agent",
+        "Barchan – crescent-shaped dune"
       ]
     }
   ],

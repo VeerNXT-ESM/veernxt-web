@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "cmhudtc"
+      "id": "cmhudtc",
+      "content": "Computer memory is the storage area in a computer where data, instructions, and results are stored. It plays a crucial role in computer functioning because all processing requires data and instructions to be stored in memory. Computer memory is broadly classified into Primary Memory and Secondary Memory."
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "g1a6tls"
+      "id": "g1a6tls",
+      "content": "Primary memory is the main memory of a computer that is directly accessible by the CPU. It stores data and instructions that are currently being processed."
     },
     {
       "id": "04k703g",
@@ -68,33 +70,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Memory Type</strong></p>",
+            "<p><strong>Full Form</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RAM</p>",
+            "<p>Random Access Memory</p>",
+            "<p>Volatile memory used for temporary storage of data currently in use.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ROM</p>",
+            "<p>Read Only Memory</p>",
+            "<p>Non-volatile memory used to store permanent instructions.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cache Memory</p>",
+            "<p>-</p>",
+            "<p>Very fast memory used to speed up CPU operations.</p>"
           ]
         }
       ]
@@ -107,18 +109,20 @@
     },
     {
       "type": "paragraph",
-      "id": "fh1b1o1"
+      "id": "fh1b1o1",
+      "content": "RAM is volatile memory, meaning its contents are lost when the power is turned off. It temporarily stores programs and data currently being used by the CPU."
     },
     {
       "type": "paragraph",
-      "id": "hio18xg"
+      "id": "hio18xg",
+      "content": "Types of RAM:"
     },
     {
       "id": "5optabm",
       "type": "list",
       "items": [
-        null,
-        null
+        "DRAM – Dynamic RAM",
+        "SRAM – Static RAM"
       ]
     },
     {
@@ -134,19 +138,21 @@
     },
     {
       "type": "paragraph",
-      "id": "0ce3z4n"
+      "id": "0ce3z4n",
+      "content": "ROM is non-volatile memory used to store permanent instructions required for booting the computer."
     },
     {
       "type": "paragraph",
-      "id": "2gec3ug"
+      "id": "2gec3ug",
+      "content": "Types of ROM:"
     },
     {
       "id": "efrbfrv",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "PROM – Programmable Read Only Memory",
+        "EPROM – Erasable Programmable ROM",
+        "EEPROM – Electrically Erasable Programmable ROM"
       ]
     },
     {
@@ -188,7 +194,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qm8xgif"
+      "id": "qm8xgif",
+      "content": "Cache memory is a high-speed memory located close to the CPU. It stores frequently used instructions to speed up processing."
     },
     {
       "id": "jcqd25x",
@@ -198,7 +205,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xc1i3sh"
+      "id": "xc1i3sh",
+      "content": "Secondary memory is used for long-term storage of data and programs. It is non-volatile and retains data even when power is turned off."
     },
     {
       "id": "kf61093",
@@ -213,49 +221,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Device</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>HDD</p>",
+            "<p>Magnetic Storage</p>",
+            "<p>Traditional hard disk used for storing large data.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SSD</p>",
+            "<p>Solid State Storage</p>",
+            "<p>Faster storage device with no moving parts.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CD</p>",
+            "<p>Optical Storage</p>",
+            "<p>Compact disc used for storing digital data.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DVD</p>",
+            "<p>Optical Storage</p>",
+            "<p>Digital versatile disc with larger capacity than CD.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pen Drive</p>",
+            "<p>Flash Storage</p>",
+            "<p>Portable USB storage device.</p>"
           ]
         }
       ]
@@ -268,7 +276,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6r8njlq"
+      "id": "6r8njlq",
+      "content": "Memory capacity is measured in units such as bits, bytes, kilobytes, megabytes, gigabytes, and terabytes."
     },
     {
       "type": "examAlert",
@@ -286,50 +295,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Unit</strong></p>",
+            "<p><strong>Value</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1 Bit</p>",
+            "<p>Binary digit (0 or 1)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1 Byte</p>",
+            "<p>8 Bits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1 Kilobyte (KB)</p>",
+            "<p>1024 Bytes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1 Megabyte (MB)</p>",
+            "<p>1024 KB</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1 Gigabyte (GB)</p>",
+            "<p>1024 MB</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1 Terabyte (TB)</p>",
+            "<p>1024 GB</p>"
           ]
         }
       ]
@@ -347,36 +356,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Primary Memory</strong></p>",
+            "<p><strong>Secondary Memory</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Directly accessed by CPU</p>",
+            "<p>Not directly accessed by CPU</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Smaller storage capacity</p>",
+            "<p>Large storage capacity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Faster speed</p>",
+            "<p>Slower speed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Examples: RAM, ROM</p>",
+            "<p>Examples: HDD, SSD, CD, DVD</p>"
           ]
         }
       ]
@@ -391,12 +400,12 @@
       "id": "31y01g6",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "RAM is volatile memory.",
+        "ROM is non-volatile memory.",
+        "Cache memory is the fastest memory in a computer.",
+        "SSD is faster than HDD.",
+        "1 Byte = 8 Bits.",
+        "1 KB = 1024 Bytes."
       ]
     }
   ],

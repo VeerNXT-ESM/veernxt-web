@@ -1,0 +1,56 @@
+{
+  "title": "7. Public Distribution System (PDS) Linkage",
+  "order": 421,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "FCI supplies food grains to states for distribution through the Targeted Public Distribution System (TPDS), which provides subsidized food to eligible households.",
+      "id": "pcjw6oi"
+    },
+    {
+      "type": "pullQuote",
+      "content": "FCI supplies food grains to states for distribution through the Targeted Public Distribution System (TPDS), which provides subsidized food to eligible households.",
+      "id": "5esjgx1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Supplying Agency",
+          "value": "FCI",
+          "icon": "info"
+        },
+        {
+          "label": "Delivery Mechanism",
+          "value": "TPDS",
+          "icon": "check"
+        },
+        {
+          "label": "Benefit Type",
+          "value": "Subsidized Food",
+          "icon": "award"
+        }
+      ],
+      "id": "d6igzz7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "FCI is responsible for supplying food grains to states for central distribution schemes.",
+        "TPDS stands for Targeted Public Distribution System, designed to serve eligible households with subsidized food."
+      ],
+      "id": "4ndvfof"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Food Corporation of India (FCI) supplies food grains to state governments.",
+        "Food grain distribution is managed through the Targeted Public Distribution System (TPDS).",
+        "The ultimate objective of TPDS is to ensure subsidized food reaches eligible households."
+      ],
+      "id": "u3ksh1p"
+    }
+  ],
+  "enriched": true
+}

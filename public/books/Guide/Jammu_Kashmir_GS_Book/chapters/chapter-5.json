@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "iuio4yl"
+      "id": "iuio4yl",
+      "content": "This chapter completes the physical geography sequence by covering J&amp;K's river systems (part of the wider Indus system), its famous lakes, and the sharply zoned climate and vegetation patterns that follow directly from the elevation gradient described in Chapter 1."
     },
     {
       "type": "statStrip",
@@ -53,19 +54,23 @@
     },
     {
       "type": "paragraph",
-      "id": "yfxzrvi"
+      "id": "yfxzrvi",
+      "content": "J&amp;K's rivers belong overwhelmingly to the Indus river system, and their management is governed internationally by the Indus Waters Treaty (1960) between India and Pakistan, which allocated the three 'Western Rivers' - Indus, Jhelum and Chenab - primarily to Pakistan's use (with India permitted specified non-consumptive/limited uses such as hydropower generation), while the three 'Eastern Rivers' - Ravi, Beas and Sutlej - were allocated to India."
     },
     {
       "type": "paragraph",
-      "id": "7b8xokm"
+      "id": "7b8xokm",
+      "content": "The Jhelum River is the principal river of the Kashmir Valley, rising near Verinag in south Kashmir, flowing north-west through Srinagar and Wular Lake, before exiting through the Baramulla gorge towards Pakistan-administered territory and eventually joining the Chenab."
     },
     {
       "type": "paragraph",
-      "id": "3ppif2q"
+      "id": "3ppif2q",
+      "content": "The Chenab River is the principal river of the Jammu division's mountainous districts (Doda, Kishtwar, Ramban), flowing through deep gorges and hosting several major hydroelectric projects; it is spanned by the Chenab Bridge, the world's highest railway arch bridge, part of the Udhampur-Srinagar-Baramulla Rail Link (covered further in Chapter 23)."
     },
     {
       "type": "paragraph",
-      "id": "c9dko7e"
+      "id": "c9dko7e",
+      "content": "The Tawi River flows through Jammu city itself, a smaller but locally significant tributary system for the winter capital."
     },
     {
       "id": "ypg8wku",
@@ -74,41 +79,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>River</strong></p>",
+            "<p><strong>Origin / Course</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Jhelum</p>",
+            "<p>Rises near Verinag; flows through the Kashmir Valley, Srinagar, Wular Lake, Baramulla gorge</p>",
+            "<p>Principal river of Kashmir Valley; historic transport artery; part of the Indus system's 'Western Rivers'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chenab</p>",
+            "<p>Flows through Jammu division's mountainous districts (Doda, Kishtwar, Ramban)</p>",
+            "<p>Major hydropower source; spanned by the world's highest railway bridge</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tawi</p>",
+            "<p>Flows through Jammu city</p>",
+            "<p>Locally significant river of the winter capital</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Indus</p>",
+            "<p>Flows mainly through Ladakh UT, with headwaters relevant to the wider former princely-state geography</p>",
+            "<p>Principal river of the wider Indus system</p>"
           ]
         }
       ]
@@ -120,7 +125,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3ssqwp6"
+      "id": "3ssqwp6",
+      "content": "<strong>★ EXAM POINT: </strong><em>Indus Waters Treaty (1960): Western Rivers (Indus, Jhelum, Chenab) predominantly to Pakistan; Eastern Rivers (Ravi, Beas, Sutlej) to India. J&amp;K's rivers (Jhelum, Chenab) are both 'Western Rivers' under this treaty - a frequently tested geography-cum-international-relations crossover fact, especially given periodic diplomatic tension over the treaty's implementation.</em>"
     },
     {
       "id": "6p9bt24",
@@ -135,56 +141,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Lake</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dal Lake</p>",
+            "<p>Srinagar</p>",
+            "<p>The most famous lake of Kashmir; known for houseboats and shikara boats, floating gardens, and Mughal Gardens along its shores; faces significant environmental/encroachment pressures actively addressed by conservation authorities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wular Lake</p>",
+            "<p>Bandipora district, fed by the Jhelum</p>",
+            "<p>One of Asia's largest freshwater lakes; a natural flood-control basin for the Jhelum and an important wetland/bird habitat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nigeen Lake</p>",
+            "<p>Srinagar, adjoining Dal Lake</p>",
+            "<p>Smaller, quieter lake often described as Dal Lake's calmer twin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Manasbal Lake</p>",
+            "<p>Bandipora district</p>",
+            "<p>Known for its clear waters and lotus flowers; considered one of the deepest lakes in the Kashmir Valley</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sheshnag Lake</p>",
+            "<p>Along the Amarnath Yatra route, Anantnag district</p>",
+            "<p>High-altitude glacial lake of religious/pilgrimage significance</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "3mutvgl"
+      "id": "3mutvgl",
+      "content": "<strong>★ EXAM POINT: </strong><em>Wular Lake, not Dal Lake, is the correct answer for 'largest freshwater lake' questions (Dal Lake is far more famous but considerably smaller) - a very commonly confused pair in exam MCQs.</em>"
     },
     {
       "type": "comparisonTable",
@@ -225,15 +232,18 @@
     },
     {
       "type": "paragraph",
-      "id": "1plx2jb"
+      "id": "1plx2jb",
+      "content": "J&amp;K's climate varies dramatically with elevation and division: the Jammu plains experience a sub-tropical, monsoon-influenced climate with hot summers and the bulk of rainfall arriving via the South-West monsoon (July-September); the Kashmir Valley, shielded by the Pir Panjal from the full force of the monsoon, instead has a temperate climate with a more even, year-round precipitation pattern, including significant winter snowfall."
     },
     {
       "type": "paragraph",
-      "id": "czrw876"
+      "id": "czrw876",
+      "content": "The Kashmir Valley experiences four distinct traditional seasons in local Kashmiri usage - Sonth (spring), Grishma (summer), Harud (autumn) and Wandah (winter) - each associated with characteristic agricultural and cultural activities, from spring blossom and autumn saffron-flowering to the deep winter 'Chillai Kalan' (the harshest 40-day cold spell of the Kashmiri winter calendar, typically from late December to end of January)."
     },
     {
       "type": "paragraph",
-      "id": "t29gh4y"
+      "id": "t29gh4y",
+      "content": "Higher-altitude and northern border areas approach alpine/cold-desert conditions similar to neighbouring Ladakh, particularly in areas like Gurez and the high passes."
     },
     {
       "id": "bnwr571",
@@ -242,40 +252,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Climate Type</strong></p>",
+            "<p><strong>Key Feature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Jammu plains/Shivalik</p>",
+            "<p>Sub-tropical monsoon</p>",
+            "<p>Hot summers, monsoon-dominant rainfall (July-September)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kashmir Valley</p>",
+            "<p>Temperate, Mediterranean-influenced with winter snow</p>",
+            "<p>Even year-round precipitation; harsh winter cold spell 'Chillai Kalan' (~40 days, late Dec-Jan)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>High-altitude/border zones</p>",
+            "<p>Alpine to cold-desert</p>",
+            "<p>Extreme cold, low precipitation at highest elevations, glimpsing Ladakh-like conditions</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "esh1q1m"
+      "id": "esh1q1m",
+      "content": "<strong>★ EXAM POINT: </strong><em>'Chillai Kalan' (the 40-day harshest winter period) is one of the most specific and frequently tested local-climate terms for the Kashmir Valley - remember it runs roughly from 21 December to 31 January, followed by shorter, milder cold spells locally called 'Chillai Khurd' and 'Chillai Bachha'.</em>"
     },
     {
       "type": "examAlert",
@@ -296,10 +307,10 @@
       "id": "jhf4oh7",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "The Jammu plains and Shivalik zone support tropical and sub-tropical dry deciduous forest, with sal and other broadleaf species in the lower foothills.",
+        "The mid-altitude zones (including much of the Kashmir Valley's surrounding slopes) support temperate coniferous forest - deodar (cedar), pine, fir and spruce are dominant, forming the basis of J&amp;K's historically significant timber industry as well as its scenic hill-station landscapes (Gulmarg, Pahalgam, Sonamarg).",
+        "Above the tree line (roughly 3,300-3,500 m upward), alpine meadows ('margs' in local Kashmiri terminology, as in Gulmarg - 'meadow of flowers' - and Sonamarg - 'meadow of gold') give way to bare rock, scree and permanent snow/glacier at the highest elevations.",
+        "The famous Kashmir saffron crop is cultivated specifically on the karewa terraces of the Pampore area (see Chapter 3), a unique agro-climatic niche found almost nowhere else in India."
       ]
     },
     {
@@ -312,11 +323,11 @@
       "id": "mdec3za",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Jhelum = principal river of Kashmir Valley (rises near Verinag, exits via Baramulla gorge); Chenab = principal river of Jammu's mountain districts.",
+        "Indus Waters Treaty (1960): J&amp;K's main rivers (Jhelum, Chenab) are 'Western Rivers', predominantly allocated to Pakistan's use.",
+        "Wular Lake = largest freshwater lake (not Dal Lake, which is smaller but more famous); Dal Lake is Srinagar's iconic houseboat lake.",
+        "'Chillai Kalan' = the harshest 40-day Kashmir winter period (~21 Dec-31 Jan), followed by 'Chillai Khurd' and 'Chillai Bachha'.",
+        "Vegetation zones rise from tropical/sub-tropical deciduous (Jammu plains) -&gt; temperate coniferous/deodar-pine forest (mid-altitude) -&gt; alpine meadows ('margs', e.g. Gulmarg, Sonamarg) -&gt; bare rock/snow."
       ]
     }
   ],

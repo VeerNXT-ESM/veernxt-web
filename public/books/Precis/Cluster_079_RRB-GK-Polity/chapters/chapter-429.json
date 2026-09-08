@@ -1,0 +1,63 @@
+{
+  "title": "RRB Quick Revision Box",
+  "order": 429,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Act: 1964<br/>Established: 1965<br/>Type: Statutory Corporation<br/>HQ: New Delhi<br/>Functions: Procurement, Storage, Distribution<br/>Linked With: MSP, PDS, NFSA",
+      "id": "z5kd5uv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Functions: Procurement, Storage, Distribution",
+      "id": "m72k1kd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Act Passed",
+          "value": "1964",
+          "icon": "book"
+        },
+        {
+          "label": "Established",
+          "value": "1965",
+          "icon": "calendar"
+        },
+        {
+          "label": "Organization Type",
+          "value": "Statutory Corporation",
+          "icon": "award"
+        },
+        {
+          "label": "Headquarters",
+          "value": "New Delhi",
+          "icon": "info"
+        }
+      ],
+      "id": "vt70xq1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently distinguish between the Act year (1964) and the Establishment year (1965).",
+        "Always remember the organizational structure is a Statutory Corporation based in New Delhi.",
+        "Note the direct connection to major schemes: MSP (Minimum Support Price), PDS (Public Distribution System), and NFSA (National Food Security Act)."
+      ],
+      "id": "wvv1i91"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The body was constituted as a Statutory Corporation under the Act of 1964.",
+        "It was officially established in 1965 with headquarters in New Delhi.",
+        "Core operational functions include Procurement, Storage, and Distribution.",
+        "It plays a pivotal role linked with MSP, PDS, and NFSA."
+      ],
+      "id": "emrk5lz"
+    }
+  ],
+  "enriched": true
+}

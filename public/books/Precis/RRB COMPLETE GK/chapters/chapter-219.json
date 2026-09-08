@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "607n8d3"
+      "id": "607n8d3",
+      "content": "Soil is the uppermost layer of the earth’s crust capable of supporting plant life. It develops through the long process of weathering of rocks combined with organic matter, relief, climate, organisms and time. India possesses a wide variety of soils due to its diverse geology, relief and climatic conditions. "
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1zeifs0"
+      "id": "1zeifs0",
+      "content": "Soil formation, also called pedogenesis, depends upon several interacting factors."
     },
     {
       "id": "xd95f7a",
@@ -62,49 +64,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Role in Soil Formation</strong></p>",
+            "<p><strong>Exam Insight</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Parent Rock</p>",
+            "<p>Determines mineral composition and texture.</p>",
+            "<p>Conceptual</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Climate</p>",
+            "<p>Temperature and rainfall control weathering.</p>",
+            "<p>Very important</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Relief</p>",
+            "<p>Slope affects erosion and depth.</p>",
+            "<p>Reason-based</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vegetation</p>",
+            "<p>Adds humus to soil.</p>",
+            "<p>Static</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Time</p>",
+            "<p>Older soils are more mature.</p>",
+            "<p>Conceptual</p>"
           ]
         }
       ]
@@ -116,13 +118,15 @@
       "content": "2. Major Soil Types in India"
     },
     {
-      "type": "paragraph",
-      "id": "xomqtmk"
+      "id": "aa2wi4m",
+      "type": "image",
+      "imageId": "ef9yhkp",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_ef9yhkp.jpeg"
     },
     {
-      "type": "pullQuote",
-      "content": "Black Soil – Why Ideal for Cotton?",
-      "id": "k7258ec"
+      "type": "paragraph",
+      "id": "xomqtmk",
+      "content": "Indian soils are broadly classified into six major types: Alluvial, Black, Red, Laterite, Desert (Arid), Forest/Mountain soils. Additionally, saline and peat soils occur locally.<img></img>"
     },
     {
       "id": "h1rgy5m",
@@ -137,78 +141,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Soil Type</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Rich In</strong></p>",
+            "<p><strong>Deficient In</strong></p>",
+            "<p><strong>Texture / Traits</strong></p>",
+            "<p><strong>Major Crops</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Alluvial</p>",
+            "<p>Northern Plains, Coastal plains, Delta regions</p>",
+            "<p>Potash, Lime</p>",
+            "<p>Nitrogen, Phosphorus</p>",
+            "<p>Very fertile; formed by river deposition; two types — Bhangar (old) &amp; Khadar (new)</p>",
+            "<p>Rice, Wheat, Sugarcane, Cotton, Jute</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Black (Regur)</p>",
+            "<p>Deccan Plateau — Maharashtra, MP, Gujarat</p>",
+            "<p>Calcium carbonate, Magnesium, Potash</p>",
+            "<p>Phosphorus</p>",
+            "<p>Clayey; retains moisture; develops cracks in summer (self-ploughing)</p>",
+            "<p>Cotton, Soybean, Groundnut, Wheat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Red</p>",
+            "<p>Tamil Nadu, Karnataka, Odisha, Chhattisgarh</p>",
+            "<p>Iron</p>",
+            "<p>Nitrogen, Humus</p>",
+            "<p>Porous; red due to iron oxide</p>",
+            "<p>Millets, Pulses, Groundnut</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Laterite</p>",
+            "<p>Western Ghats, Northeast, Kerala</p>",
+            "<p>Iron, Aluminium</p>",
+            "<p>Organic matter, Nitrogen</p>",
+            "<p>Leached soil due to heavy rainfall; acidic</p>",
+            "<p>Tea, Coffee, Rubber, Cashew</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Desert (Arid)</p>",
+            "<p>Rajasthan, Gujarat</p>",
+            "<p>Soluble salts</p>",
+            "<p>Humus, Moisture</p>",
+            "<p>Sandy; low fertility; high evaporation</p>",
+            "<p>Bajra, Barley (with irrigation)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Forest/Mountain</p>",
+            "<p>Himalayas</p>",
+            "<p>Organic matter</p>",
+            "<p>Potash, Phosphorus</p>",
+            "<p>Coarse; varies with altitude</p>",
+            "<p>Tea, Fruits, Spices</p>"
           ]
         }
       ]
@@ -221,7 +225,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zhuqog7"
+      "id": "zhuqog7",
+      "content": "Alluvial soil is the most widespread and agriculturally important soil in India. It is formed by the deposition of sediments brought by rivers such as the Indus, Ganga and Brahmaputra. The fertility of this soil makes the Northern Plains the food bowl of India."
     },
     {
       "type": "comparisonTable",
@@ -251,7 +256,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ljcueea"
+      "id": "ljcueea",
+      "content": "Khadar is newer and more fertile due to annual flooding, whereas Bhangar is older and contains calcareous deposits known as kankar."
     },
     {
       "id": "31doklg",
@@ -261,7 +267,8 @@
     },
     {
       "type": "paragraph",
-      "id": "a04ecye"
+      "id": "a04ecye",
+      "content": "Black soil has high moisture retention capacity due to its clay content. During dry seasons it develops deep cracks that allow aeration, a property known as self-ploughing. These characteristics make it highly suitable for cotton cultivation."
     },
     {
       "id": "e7t15yh",
@@ -271,7 +278,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yuw8a6y"
+      "id": "yuw8a6y",
+      "content": "Laterite soils form under conditions of high temperature and heavy rainfall. Intense leaching removes silica and bases, leaving iron and aluminium oxides behind. With fertilizers and irrigation, these soils become productive."
     },
     {
       "type": "examAlert",
@@ -295,25 +303,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Soil Type</strong></p>",
+            "<p><strong>Problem</strong></p>",
+            "<p><strong>Improvement</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Saline/Alkaline</p>",
+            "<p>Excess salt reduces fertility.</p>",
+            "<p>Gypsum treatment, irrigation.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Peaty/Marshy</p>",
+            "<p>Waterlogged and acidic.</p>",
+            "<p>Drainage required.</p>"
           ]
         }
       ]
@@ -331,43 +339,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Question Trigger</strong></p>",
+            "<p><strong>Remember</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Most fertile soil</p>",
+            "<p>Alluvial</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Best soil for cotton</p>",
+            "<p>Black</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Soil formed by leaching</p>",
+            "<p>Laterite</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Red color due to</p>",
+            "<p>Iron oxide</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Self-ploughing soil</p>",
+            "<p>Black</p>"
           ]
         }
       ]

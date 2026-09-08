@@ -1,0 +1,561 @@
+{
+  "id": "txw7k8t",
+  "title": "Chapter 16: Nutrition and Health",
+  "order": 65,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1qbjexl",
+      "content": "Nutrition is the process by which living organisms obtain food and use it for energy, growth, repair and maintenance of the body. Proper nutrition is essential for maintaining health, preventing diseases and ensuring proper development of the body."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Nutrients",
+          "value": "6 Classes",
+          "icon": "book"
+        },
+        {
+          "label": "Fat Energy",
+          "value": "9 kcal/g",
+          "icon": "award"
+        },
+        {
+          "label": "Carb & Protein Energy",
+          "value": "4 kcal/g",
+          "icon": "check"
+        },
+        {
+          "label": "Essential Steps",
+          "value": "5 Stages",
+          "icon": "clock"
+        }
+      ],
+      "id": "tjlyo1f"
+    },
+    {
+      "id": "40pzwbh",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Nutrition"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Nutrition involves five main steps: Ingestion, Digestion, Absorption, Assimilation, and Egestion.",
+        "Carbohydrates and fats serve as primary energy sources, whereas proteins act as body-building nutrients required for tissue repair.",
+        "Vitamins are classified into fat-soluble (A, D, E, K) and water-soluble (B-complex, C) micronutrients.",
+        "Protein-Energy Malnutrition (PEM) leads to clinical conditions like Kwashiorkor and Marasmus in young children.",
+        "A balanced diet provides carbohydrates, proteins, fats, vitamins, minerals, roughage, and water in proper proportions."
+      ],
+      "id": "v0zji8i"
+    },
+    {
+      "type": "paragraph",
+      "id": "7gh7gyz",
+      "content": "• Nutrition is the process of obtaining food and utilizing it for energy and body functions."
+    },
+    {
+      "type": "paragraph",
+      "id": "lg567ap",
+      "content": "• It includes ingestion, digestion, absorption, assimilation and excretion."
+    },
+    {
+      "type": "paragraph",
+      "id": "xj1fm86",
+      "content": "• Good nutrition helps maintain physical and mental health."
+    },
+    {
+      "id": "hs2rmi9",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Steps in Nutrition"
+    },
+    {
+      "type": "paragraph",
+      "id": "n1dcjzp",
+      "content": "• Ingestion – Taking food into the body."
+    },
+    {
+      "type": "paragraph",
+      "id": "2g9m6km",
+      "content": "• Digestion – Breaking down complex food into simple molecules."
+    },
+    {
+      "type": "paragraph",
+      "id": "4zaf6po",
+      "content": "• Absorption – Nutrients enter the bloodstream through the intestine."
+    },
+    {
+      "type": "paragraph",
+      "id": "4g2itbq",
+      "content": "• Assimilation – Nutrients used by cells for energy and growth."
+    },
+    {
+      "type": "paragraph",
+      "id": "mrbpyco",
+      "content": "• Egestion – Removal of undigested waste."
+    },
+    {
+      "id": "x6d7pgg",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Major Nutrients in Food"
+    },
+    {
+      "id": "j942hts",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Nutrient</strong></p>",
+            "<p><strong>Main Function</strong></p>",
+            "<p><strong>Sources</strong></p>",
+            "<p><strong>Deficiency Effects</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Carbohydrates</p>",
+            "<p>Energy source</p>",
+            "<p>Rice, wheat, potatoes</p>",
+            "<p>Weakness, fatigue</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Proteins</p>",
+            "<p>Body building</p>",
+            "<p>Eggs, meat, pulses</p>",
+            "<p>Poor growth</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fats</p>",
+            "<p>Energy storage</p>",
+            "<p>Butter, oils, nuts</p>",
+            "<p>Weight loss</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vitamins</p>",
+            "<p>Protective nutrients</p>",
+            "<p>Fruits, vegetables</p>",
+            "<p>Deficiency diseases</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Minerals</p>",
+            "<p>Body regulation</p>",
+            "<p>Milk, green vegetables</p>",
+            "<p>Various disorders</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Water</p>",
+            "<p>Transport and metabolism</p>",
+            "<p>Water, fruits</p>",
+            "<p>Dehydration</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fiber</p>",
+            "<p>Digestion</p>",
+            "<p>Whole grains</p>",
+            "<p>Constipation</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "95h88gb",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Carbohydrates"
+    },
+    {
+      "type": "paragraph",
+      "id": "zg16gea",
+      "content": "• Carbohydrates are the main source of energy."
+    },
+    {
+      "type": "paragraph",
+      "id": "cu0b3zv",
+      "content": "• They are broken down into glucose."
+    },
+    {
+      "type": "paragraph",
+      "id": "j105pr6",
+      "content": "• Stored in the liver and muscles as glycogen."
+    },
+    {
+      "type": "pullQuote",
+      "content": "A balanced diet contains all essential nutrients in the correct proportions required for growth, repair, and maintenance of health.",
+      "id": "m0guabu"
+    },
+    {
+      "id": "8f1nyac",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Proteins"
+    },
+    {
+      "type": "paragraph",
+      "id": "s0ab4y6",
+      "content": "• Proteins are essential for growth and repair of tissues."
+    },
+    {
+      "type": "paragraph",
+      "id": "f48pg9x",
+      "content": "• They are composed of amino acids."
+    },
+    {
+      "type": "paragraph",
+      "id": "p1iuems",
+      "content": "• Important for enzymes and hormones."
+    },
+    {
+      "id": "26wppkk",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Fats"
+    },
+    {
+      "type": "paragraph",
+      "id": "djqaavu",
+      "content": "• Fats provide twice as much energy as carbohydrates."
+    },
+    {
+      "type": "paragraph",
+      "id": "zciz06f",
+      "content": "• They help in absorption of vitamins A, D, E and K."
+    },
+    {
+      "type": "paragraph",
+      "id": "dr1l0kf",
+      "content": "• They protect internal organs."
+    },
+    {
+      "id": "ub608zs",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Vitamins"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Fat-Soluble Vitamins",
+        "Water-Soluble Vitamins"
+      ],
+      "rows": [
+        [
+          "Vitamins Included",
+          "Vitamin A, D, E, and K",
+          "Vitamin B-Complex and Vitamin C"
+        ],
+        [
+          "Storage in Body",
+          "Stored in the liver and adipose tissue",
+          "Not stored in the body (excreted in urine)"
+        ],
+        [
+          "Toxicity Risk",
+          "Higher risk of hypervitaminosis if taken in excess",
+          "Low risk as regular excess is excreted"
+        ],
+        [
+          "Dietary Requirement",
+          "Required periodically",
+          "Required daily in regular food intake"
+        ]
+      ],
+      "id": "tqv714o"
+    },
+    {
+      "id": "d6disj9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Vitamin</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Deficiency Disease</strong></p>",
+            "<p><strong>Sources</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vitamin A</p>",
+            "<p>Vision</p>",
+            "<p>Night blindness</p>",
+            "<p>Carrot, milk</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vitamin B1</p>",
+            "<p>Energy metabolism</p>",
+            "<p>Beriberi</p>",
+            "<p>Whole grains</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vitamin B12</p>",
+            "<p>Red blood cells</p>",
+            "<p>Anemia</p>",
+            "<p>Meat, eggs</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vitamin C</p>",
+            "<p>Immunity</p>",
+            "<p>Scurvy</p>",
+            "<p>Citrus fruits</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vitamin D</p>",
+            "<p>Bone health</p>",
+            "<p>Rickets</p>",
+            "<p>Sunlight, milk</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vitamin K</p>",
+            "<p>Blood clotting</p>",
+            "<p>Bleeding disorders</p>",
+            "<p>Green vegetables</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lhgksxy",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Minerals"
+    },
+    {
+      "id": "p3qppw1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Mineral</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Deficiency</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Calcium</p>",
+            "<p>Bones and teeth</p>",
+            "<p>Weak bones</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Iron</p>",
+            "<p>Hemoglobin formation</p>",
+            "<p>Anemia</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Iodine</p>",
+            "<p>Thyroid hormone</p>",
+            "<p>Goitre</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Phosphorus</p>",
+            "<p>Bone development</p>",
+            "<p>Weak bones</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Potassium</p>",
+            "<p>Nerve function</p>",
+            "<p>Muscle weakness</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99hkjwq",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Balanced Diet"
+    },
+    {
+      "type": "paragraph",
+      "id": "hzmf5pi",
+      "content": "• A balanced diet contains all nutrients in correct proportions."
+    },
+    {
+      "type": "paragraph",
+      "id": "andqw40",
+      "content": "• It includes cereals, fruits, vegetables, milk, proteins and fats."
+    },
+    {
+      "type": "paragraph",
+      "id": "xulit9i",
+      "content": "• It is essential for maintaining health."
+    },
+    {
+      "id": "7nx6msr",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Malnutrition"
+    },
+    {
+      "type": "paragraph",
+      "id": "xhniyw7",
+      "content": "• Malnutrition occurs due to lack of proper nutrients."
+    },
+    {
+      "type": "paragraph",
+      "id": "szvdvhm",
+      "content": "• It may result from undernutrition or overnutrition."
+    },
+    {
+      "id": "fmesr55",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Common Nutrition Disorders"
+    },
+    {
+      "id": "8qzcxxr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Symptoms</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Kwashiorkor</p>",
+            "<p>Protein deficiency</p>",
+            "<p>Swollen abdomen</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Marasmus</p>",
+            "<p>Calorie deficiency</p>",
+            "<p>Severe weight loss</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Obesity</p>",
+            "<p>Excess calories</p>",
+            "<p>Excess body fat</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Anemia</p>",
+            "<p>Iron deficiency</p>",
+            "<p>Fatigue and weakness</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Vitamin C (Ascorbic Acid) is heat-labile and destroyed by cooking; its deficiency leads to Scurvy.",
+        "Vitamin D deficiency causes Rickets in children and Osteomalacia in adults.",
+        "Kwashiorkor is caused specifically by severe protein deficiency, while Marasmus results from overall calorie and protein deficiency.",
+        "Iron deficiency is the leading cause of Anaemia, impacting hemoglobin synthesis."
+      ],
+      "id": "wsmtan7"
+    },
+    {
+      "id": "0u727dh",
+      "type": "heading",
+      "level": 2,
+      "content": "12.Important Exam Points"
+    },
+    {
+      "type": "paragraph",
+      "id": "ss95ik6",
+      "content": "• Carbohydrates are the main source of energy."
+    },
+    {
+      "type": "paragraph",
+      "id": "xd1kttl",
+      "content": "• Proteins are body-building nutrients."
+    },
+    {
+      "type": "paragraph",
+      "id": "l5ki5gc",
+      "content": "• Vitamin D deficiency causes rickets."
+    },
+    {
+      "type": "paragraph",
+      "id": "6tsrr17",
+      "content": "• Iron deficiency causes anemia."
+    },
+    {
+      "type": "paragraph",
+      "id": "kay1oq0",
+      "content": "• Iodine deficiency causes goitre."
+    },
+    {
+      "type": "paragraph",
+      "id": "yudaexy",
+      "content": "• Protein deficiency causes kwashiorkor."
+    },
+    {
+      "type": "paragraph",
+      "id": "2bsdd9l",
+      "content": "• Vitamin C deficiency causes scurvy."
+    }
+  ],
+  "enriched": true
+}

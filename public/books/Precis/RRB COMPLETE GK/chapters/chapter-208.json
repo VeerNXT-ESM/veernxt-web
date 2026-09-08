@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "tz6a55x"
+      "id": "tz6a55x",
+      "content": "Water vapour is the most dynamic component of the atmosphere. Although it forms only a small fraction of atmospheric gases, it controls weather processes, cloud formation, rainfall, heat balance, and human comfort. "
     },
     {
       "type": "statStrip",
@@ -53,23 +54,28 @@
     },
     {
       "type": "paragraph",
-      "id": "mqx2cip"
+      "id": "mqx2cip",
+      "content": "Humidity refers to the amount of water vapour present in the air at a given time. Water vapour enters the atmosphere mainly through evaporation from oceans, rivers, lakes, and soil, and through transpiration from plants."
     },
     {
       "type": "paragraph",
-      "id": "wqrwsf9"
+      "id": "wqrwsf9",
+      "content": "• Warm air can hold more water vapour than cold air."
     },
     {
       "type": "paragraph",
-      "id": "9pgrmt0"
+      "id": "9pgrmt0",
+      "content": "• Humidity is highest in equatorial regions and lowest in deserts and polar areas."
     },
     {
       "type": "paragraph",
-      "id": "y9ageqg"
+      "id": "y9ageqg",
+      "content": "• Oceans supply nearly 86% of atmospheric moisture."
     },
     {
       "type": "paragraph",
-      "id": "mgves8d"
+      "id": "mgves8d",
+      "content": "• Humidity strongly influences temperature because water vapour absorbs terrestrial radiation."
     },
     {
       "id": "452rzyc",
@@ -79,7 +85,8 @@
     },
     {
       "type": "paragraph",
-      "id": "b8ncnab"
+      "id": "b8ncnab",
+      "content": "To understand atmospheric moisture scientifically, humidity is measured in multiple ways. Each type answers a different meteorological question."
     },
     {
       "id": "f6epjne",
@@ -88,36 +95,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Meaning and Importance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Absolute Humidity</p>",
+            "<p>The actual mass of water vapour present in one cubic meter of air (g/m³). It tells us how much moisture physically exists in the air but changes with air volume.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Specific Humidity</p>",
+            "<p>Ratio of water vapour mass to total air mass. It remains nearly constant even when air expands, making it very useful in meteorology.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Relative Humidity</p>",
+            "<p>The percentage of moisture present compared to the maximum moisture the air can hold at that temperature. It indicates how close the air is to saturation.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Humidity Capacity</p>",
+            "<p>Also called moisture-holding capacity. It is the maximum amount of water vapour air can hold at a given temperature. Higher temperature → greater capacity.</p>"
           ]
         }
       ]
@@ -130,27 +137,33 @@
     },
     {
       "type": "paragraph",
-      "id": "uvnuj0x"
+      "id": "uvnuj0x",
+      "content": "• Clothes dry faster in summer because warm air has higher humidity capacity and can absorb more moisture."
     },
     {
       "type": "paragraph",
-      "id": "z3gfx62"
+      "id": "z3gfx62",
+      "content": "• Clothes dry slowly during the monsoon since the air is already near saturation."
     },
     {
       "type": "paragraph",
-      "id": "tsy1567"
+      "id": "tsy1567",
+      "content": "• Desert coolers work efficiently in dry regions because low humidity allows rapid evaporation."
     },
     {
       "type": "paragraph",
-      "id": "zrwwy2q"
+      "id": "zrwwy2q",
+      "content": "• Earthen pots (matkas) keep water cool due to evaporative cooling — water seeps through tiny pores, evaporates, and removes heat."
     },
     {
       "type": "paragraph",
-      "id": "bdifajr"
+      "id": "bdifajr",
+      "content": "• We feel uncomfortable in coastal cities because high humidity prevents sweat from evaporating."
     },
     {
       "type": "paragraph",
-      "id": "vfg7yne"
+      "id": "vfg7yne",
+      "content": "• Winter air feels dry because cold air has low moisture capacity."
     },
     {
       "id": "27bm1qg",
@@ -160,28 +173,28 @@
     },
     {
       "type": "paragraph",
-      "id": "jw5ehn3"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Precipitation – Final Stage of Atmospheric Moisture",
-      "id": "gmdju0u"
+      "id": "jw5ehn3",
+      "content": "Saturation occurs when air holds the maximum amount of water vapour possible at a given temperature. At this stage, relative humidity becomes 100%."
     },
     {
       "type": "paragraph",
-      "id": "i8jmoyv"
+      "id": "i8jmoyv",
+      "content": "• When air cools, its moisture-holding capacity decreases."
     },
     {
       "type": "paragraph",
-      "id": "oq6lj7i"
+      "id": "oq6lj7i",
+      "content": "• Once the dew point temperature is reached, condensation begins."
     },
     {
       "type": "paragraph",
-      "id": "lef0vss"
+      "id": "lef0vss",
+      "content": "• Further cooling leads to formation of droplets, fog, or clouds."
     },
     {
       "type": "paragraph",
-      "id": "n4studk"
+      "id": "n4studk",
+      "content": "• Any additional moisture results in precipitation."
     },
     {
       "id": "is08oky",
@@ -191,7 +204,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fruchua"
+      "id": "fruchua",
+      "content": "The dew point is the temperature at which air becomes fully saturated. A high dew point indicates humid conditions, while a low dew point suggests dry air."
     },
     {
       "id": "c372nwz",
@@ -201,15 +215,18 @@
     },
     {
       "type": "paragraph",
-      "id": "1rdo9y8"
+      "id": "1rdo9y8",
+      "content": "• Hygrometer – measures atmospheric humidity."
     },
     {
       "type": "paragraph",
-      "id": "rxzr0hf"
+      "id": "rxzr0hf",
+      "content": "• Psychrometer – uses wet and dry bulb thermometers."
     },
     {
       "type": "paragraph",
-      "id": "vnqh7tq"
+      "id": "vnqh7tq",
+      "content": "• Dew-point hygrometer – directly determines saturation temperature."
     },
     {
       "type": "comparisonTable",
@@ -245,19 +262,23 @@
     },
     {
       "type": "paragraph",
-      "id": "fx21bcv"
+      "id": "fx21bcv",
+      "content": "Condensation is the process through which water vapour transforms into liquid when air becomes saturated."
     },
     {
       "type": "paragraph",
-      "id": "p50fwjn"
+      "id": "p50fwjn",
+      "content": "• Requires cooling of air."
     },
     {
       "type": "paragraph",
-      "id": "h6z7itl"
+      "id": "h6z7itl",
+      "content": "• Needs condensation nuclei such as dust, salt particles, or smoke."
     },
     {
       "type": "paragraph",
-      "id": "c8mum2d"
+      "id": "c8mum2d",
+      "content": "• Adiabatic cooling (rising air) is the most important mechanism."
     },
     {
       "id": "8b2ssd6",
@@ -272,43 +293,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Form</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dew</p>",
+            "<p>Water droplets deposited on cool surfaces overnight.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Frost</p>",
+            "<p>Ice crystals formed when temperature falls below freezing.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fog</p>",
+            "<p>Dense cloud at ground level reducing visibility below 1 km.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mist</p>",
+            "<p>Thinner fog with better visibility.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Smog</p>",
+            "<p>Polluted fog common in urban regions.</p>"
           ]
         }
       ]
@@ -321,7 +342,8 @@
     },
     {
       "type": "paragraph",
-      "id": "h8kp3ub"
+      "id": "h8kp3ub",
+      "content": "Clouds form when rising air cools adiabatically and reaches saturation. They regulate Earth’s temperature by reflecting solar radiation during the day and trapping heat at night."
     },
     {
       "id": "6ra1xyg",
@@ -330,49 +352,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Cloud Type</strong></p>",
+            "<p><strong>Height</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cirrus</p>",
+            "<p>Above 6000 m</p>",
+            "<p>Thin, feather-like; indicate fair weather.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cumulus</p>",
+            "<p>2000–6000 m</p>",
+            "<p>Cotton-like; may grow into storm clouds.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Stratus</p>",
+            "<p>Below 2000 m</p>",
+            "<p>Layered clouds causing overcast skies.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nimbus</p>",
+            "<p>Variable</p>",
+            "<p>Rain-bearing clouds.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cumulonimbus</p>",
+            "<p>Vertical (up to 12 km)</p>",
+            "<p>Thunderstorms, lightning, hail, heavy rain.</p>"
           ]
         }
       ]
@@ -385,7 +407,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wfb92a5"
+      "id": "wfb92a5",
+      "content": "Precipitation occurs when cloud droplets combine and become heavy enough to fall under gravity."
     },
     {
       "id": "tlols9v",
@@ -394,36 +417,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rain</p>",
+            "<p>Liquid droplets larger than 0.5 mm.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Snow</p>",
+            "<p>Ice crystals forming flakes.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sleet</p>",
+            "<p>Frozen raindrops.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hail</p>",
+            "<p>Large ice balls formed in strong updrafts.</p>"
           ]
         }
       ]
@@ -450,33 +473,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Rainfall Type</strong></p>",
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Convectional</p>",
+            "<p>Surface heating causes rapid upward movement.</p>",
+            "<p>Equatorial regions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Orographic</p>",
+            "<p>Air rises over mountains.</p>",
+            "<p>Western Ghats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cyclonic</p>",
+            "<p>Air converges in low pressure.</p>",
+            "<p>Temperate cyclones</p>"
           ]
         }
       ]
@@ -489,19 +512,23 @@
     },
     {
       "type": "paragraph",
-      "id": "9efquwq"
+      "id": "9efquwq",
+      "content": "• Latent heat released during condensation fuels storms."
     },
     {
       "type": "paragraph",
-      "id": "2bxf2zs"
+      "id": "2bxf2zs",
+      "content": "• Rain shadow regions develop on leeward mountain sides."
     },
     {
       "type": "paragraph",
-      "id": "8skzudd"
+      "id": "8skzudd",
+      "content": "• Virga is rainfall that evaporates before reaching ground."
     },
     {
       "type": "paragraph",
-      "id": "82btlkv"
+      "id": "82btlkv",
+      "content": "• Cloud seeding uses silver iodide to induce rainfall."
     },
     {
       "id": "qi9k0uh",
@@ -511,7 +538,8 @@
     },
     {
       "type": "paragraph",
-      "id": "70dunqj"
+      "id": "70dunqj",
+      "content": "• Warm air holds more moisture.<br></br>• Relative humidity indicates saturation level.<br></br>• Dew point marks condensation temperature.<br></br>• Cumulonimbus clouds cause thunderstorms.<br></br>• Orographic rainfall creates rain shadow deserts."
     }
   ],
   "enriched": true

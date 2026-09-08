@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "adsw8zr"
+      "id": "adsw8zr",
+      "content": "Soil is the uppermost layer of the Earth's crust formed by the weathering of rocks and decomposition of organic matter. It is a complex mixture of mineral particles, organic matter, water, air, and living organisms. Soil is the primary medium for plant growth and supports all terrestrial ecosystems."
     },
     {
       "id": "ftmv1bu",
@@ -64,41 +65,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Percentage (Ideal)</strong></p>",
+            "<p><strong>Role in Soil</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mineral Matter</p>",
+            "<p>45%</p>",
+            "<p>Provides physical structure; source of nutrients like Ca, Mg, K, Fe</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Organic Matter (Humus)</p>",
+            "<p>5%</p>",
+            "<p>Improves fertility, water retention, microbial activity, soil structure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Soil Water</p>",
+            "<p>25%</p>",
+            "<p>Transports dissolved nutrients to plant roots; participates in reactions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Soil Air</p>",
+            "<p>25%</p>",
+            "<p>Provides O2 for root respiration and N2 for nitrogen fixation</p>"
           ]
         }
       ]
@@ -111,7 +112,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xvibxva"
+      "id": "xvibxva",
+      "content": "Soil texture refers to the relative proportion of sand, silt, and clay particles. It is the most fundamental and permanent physical property of soil. The USDA classification system uses the soil texture triangle."
     },
     {
       "id": "0txqgda",
@@ -120,49 +122,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Particle</strong></p>",
+            "<p><strong>Size (mm)</strong></p>",
+            "<p><strong>Properties</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gravel</p>",
+            "<p>&gt; 2.0</p>",
+            "<p>Large; poor water/nutrient retention; good drainage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Coarse Sand</p>",
+            "<p>0.5 – 2.0</p>",
+            "<p>Loose; drains rapidly; low fertility</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fine Sand</p>",
+            "<p>0.1 – 0.5</p>",
+            "<p>Moderate drainage; low cohesion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Silt</p>",
+            "<p>0.002 – 0.05</p>",
+            "<p>Smooth; moderate water retention; moderate fertility</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Clay</p>",
+            "<p>&lt; 0.002</p>",
+            "<p>Sticky when wet; high water/nutrient retention; poor drainage</p>"
           ]
         }
       ]
@@ -177,11 +179,11 @@
       "id": "zts2bxk",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<strong>Light soil; fast drainage; low fertility; easy to till; warms up quickly: </strong>Sandy Soil",
+        "<strong>Ideal soil with equal sand/silt/clay; best for most crops; good water and nutrient retention: </strong>Loamy Soil",
+        "<strong>Heavy soil; poor aeration; high nutrient retention; difficult to till; prone to waterlogging: </strong>Clayey Soil",
+        "<strong>Smooth and fertile; moderate drainage; found in river deltas: </strong>Silty Soil",
+        "<strong>High organic matter; water-retentive; acidic; found in marshy areas: </strong>Peaty Soil"
       ]
     },
     {
@@ -192,7 +194,8 @@
     },
     {
       "type": "paragraph",
-      "id": "is0oib7"
+      "id": "is0oib7",
+      "content": "Soil structure refers to the arrangement of soil particles into aggregates (peds). Good soil structure improves aeration, water infiltration, root penetration, and microbial activity."
     },
     {
       "type": "pullQuote",
@@ -206,64 +209,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Structure Type</strong></p>",
+            "<p><strong>Shape</strong></p>",
+            "<p><strong>Found In</strong></p>",
+            "<p><strong>Effect on Agriculture</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Granular / Crumb</p>",
+            "<p>Spherical, loose</p>",
+            "<p>Surface A-horizon</p>",
+            "<p>Excellent; best for crops; good aeration and water movement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Platy</p>",
+            "<p>Flat, horizontal layers</p>",
+            "<p>Compacted surface soil</p>",
+            "<p>Poor; restricts root growth and drainage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Blocky</p>",
+            "<p>Angular/sub-angular blocks</p>",
+            "<p>B-horizon</p>",
+            "<p>Moderate; common in clay soils</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Prismatic / Columnar</p>",
+            "<p>Vertical prisms</p>",
+            "<p>B-horizon, arid soils</p>",
+            "<p>Poor drainage; sodic soils show columnar structure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Single-grain</p>",
+            "<p>No aggregation</p>",
+            "<p>Sandy soils</p>",
+            "<p>Poor cohesion; prone to erosion and drought</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Massive</p>",
+            "<p>Cemented, no structure</p>",
+            "<p>Heavy clays, hardpan</p>",
+            "<p>Very poor; restricts roots, air, water</p>"
           ]
         }
       ]
@@ -276,7 +279,8 @@
     },
     {
       "type": "paragraph",
-      "id": "awh0k42"
+      "id": "awh0k42",
+      "content": "Soil pH is the measure of hydrogen ion concentration in soil solution. It ranges from 0 (most acidic) to 14 (most alkaline), with 7 being neutral. Most crops grow best between pH 6.0–7.5."
     },
     {
       "id": "o99mwvw",
@@ -285,71 +289,72 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>pH Range</strong></p>",
+            "<p><strong>Soil Type</strong></p>",
+            "<p><strong>Crop Suitability</strong></p>",
+            "<p><strong>Corrective Measure</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>&lt; 4.0</p>",
+            "<p>Extremely Acidic</p>",
+            "<p>Almost no crop grows</p>",
+            "<p>Heavy liming; drainage improvement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>4.0 – 5.5</p>",
+            "<p>Strongly Acidic</p>",
+            "<p>Tea, coffee, blueberries</p>",
+            "<p>Application of lime (CaCO3)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>5.5 – 6.5</p>",
+            "<p>Slightly Acidic</p>",
+            "<p>Most vegetables, fruits</p>",
+            "<p>Light liming if below 5.5</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>6.5 – 7.5</p>",
+            "<p>Neutral (Ideal)</p>",
+            "<p>Wheat, rice, maize, most crops</p>",
+            "<p>Maintain; no correction needed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>7.5 – 8.5</p>",
+            "<p>Alkaline</p>",
+            "<p>Barley, cotton, sugarbeet</p>",
+            "<p>Gypsum (CaSO4), sulphur application</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>&gt; 8.5</p>",
+            "<p>Strongly Alkaline (Saline/Sodic)</p>",
+            "<p>Very few crops (halophytes)</p>",
+            "<p>Gypsum, leaching, bio-drainage</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "mxlonpo"
+      "id": "mxlonpo",
+      "content": "<strong>Important: </strong><em>pH affects nutrient availability. Fe, Mn, Zn become unavailable at high pH. Mo becomes unavailable at low pH. Phosphorus is most available at pH 6.5.</em>"
     },
     {
       "id": "pmvdj5p",
@@ -359,7 +364,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jdllmgt"
+      "id": "jdllmgt",
+      "content": "Soil organic matter (SOM) includes all organic materials in soil — living organisms, fresh plant residues, and decomposed materials (humus). Humus is the dark, stable, colloidal fraction of SOM formed by humification. It improves soil fertility, structure, water holding capacity, and biological activity."
     },
     {
       "type": "comparisonTable",
@@ -397,12 +403,12 @@
       "id": "mnmsyaq",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Supplies macro and micronutrients through mineralisation",
+        "Improves Cation Exchange Capacity (CEC) — holds nutrients for plant uptake",
+        "Chelates micronutrients — makes Fe, Mn, Zn available to plants",
+        "Improves soil aggregation, porosity, and water infiltration",
+        "Acts as a carbon sink — helps in climate change mitigation",
+        "Stimulates beneficial microbial and earthworm activity"
       ]
     },
     {
@@ -413,7 +419,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mqff1yi"
+      "id": "mqff1yi",
+      "content": "Soil erosion is the removal and displacement of topsoil by wind, water, or tillage. It is one of the most serious threats to soil productivity and agricultural sustainability."
     },
     {
       "id": "z1s0d8b",
@@ -422,57 +429,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type of Erosion</strong></p>",
+            "<p><strong>Agent</strong></p>",
+            "<p><strong>Effect / Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sheet Erosion</p>",
+            "<p>Water (rainfall)</p>",
+            "<p>Uniform removal of thin layer of soil; most damaging as it removes nutrient-rich topsoil</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rill Erosion</p>",
+            "<p>Water (runoff)</p>",
+            "<p>Small channels/rills formed on slope; precursor to gully erosion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gully Erosion</p>",
+            "<p>Concentrated water flow</p>",
+            "<p>Large channels formed; land becomes uncultivable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wind Erosion</p>",
+            "<p>Wind</p>",
+            "<p>Soil particles blown away; common in arid/semi-arid areas; forms dunes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Splash Erosion</p>",
+            "<p>Raindrop impact</p>",
+            "<p>Soil particles displaced by raindrop impact; first stage of water erosion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Streambank Erosion</p>",
+            "<p>River/stream flow</p>",
+            "<p>Banks collapse; common in floodplains</p>"
           ]
         }
       ]
@@ -487,13 +494,13 @@
       "id": "bv0i6x8",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<strong>Ploughing along contour lines to reduce runoff velocity: </strong>Contour Farming",
+        "<strong>Alternating strips of erosion-resistant and susceptible crops across slope: </strong>Strip Cropping",
+        "<strong>Constructing level bench terraces on steep slopes to reduce runoff: </strong>Terracing",
+        "<strong>Rows of trees/shrubs to reduce wind velocity: </strong>Windbreaks / Shelterbelts",
+        "<strong>Legumes or grasses planted to protect soil surface between main crops: </strong>Cover Crops",
+        "<strong>Applying organic/inorganic material on soil surface to reduce evaporation and erosion: </strong>Mulching",
+        "<strong>Earthen/stone bunds across slope to check runoff and promote infiltration: </strong>Bunding"
       ]
     },
     {
@@ -513,7 +520,8 @@
     },
     {
       "type": "paragraph",
-      "id": "oh5zrf3"
+      "id": "oh5zrf3",
+      "content": "Soil fertility refers to the capacity of soil to supply essential plant nutrients in adequate amounts and in available forms. There are 17 essential plant nutrients:"
     },
     {
       "id": "8arvh8w",
@@ -528,41 +536,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Nutrients</strong></p>",
+            "<p><strong>Sources</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>From Air &amp; Water (Non-mineral)</p>",
+            "<p>Carbon (C), Hydrogen (H), Oxygen (O)</p>",
+            "<p>CO2 from air; H2O from soil/rain</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Primary Macronutrients</p>",
+            "<p>Nitrogen (N), Phosphorus (P), Potassium (K)</p>",
+            "<p>Fertilisers; soil organic matter</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Secondary Macronutrients</p>",
+            "<p>Calcium (Ca), Magnesium (Mg), Sulphur (S)</p>",
+            "<p>Lime, dolomite, gypsum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Micronutrients (BCZMNFMCO)</p>",
+            "<p>B, Cu, Zn, Mn, Mo, Fe, Cl, Ni</p>",
+            "<p>Soil minerals; micronutrient fertilisers</p>"
           ]
         }
       ]
@@ -574,118 +582,118 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Nutrient</strong></p>",
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Deficiency Symptom</strong></p>",
+            "<p><strong>Common Fertiliser Source</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Nitrogen</p>",
+            "<p>N</p>",
+            "<p>Yellowing (chlorosis) from older leaves; stunted growth</p>",
+            "<p>Urea (46%N), CAN, DAP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Phosphorus</p>",
+            "<p>P</p>",
+            "<p>Purple/reddish discoloration; delayed maturity; poor root growth</p>",
+            "<p>SSP (16%P2O5), DAP, TSP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Potassium</p>",
+            "<p>K</p>",
+            "<p>Scorching/browning of leaf tips and margins (scorch)</p>",
+            "<p>MOP (60%K2O), SOP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Calcium</p>",
+            "<p>Ca</p>",
+            "<p>Tip burn of young leaves; blossom end rot in tomato</p>",
+            "<p>Lime, gypsum, superphosphate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Magnesium</p>",
+            "<p>Mg</p>",
+            "<p>Interveinal chlorosis in older leaves (veins remain green)</p>",
+            "<p>Dolomite, Epsom salt (MgSO4)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sulphur</p>",
+            "<p>S</p>",
+            "<p>Yellowing of young leaves; delayed maturity in oilseeds</p>",
+            "<p>Gypsum, elemental sulphur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Iron</p>",
+            "<p>Fe</p>",
+            "<p>Interveinal chlorosis in young leaves; pale green/yellow</p>",
+            "<p>FeSO4, chelated Fe (Fe-EDTA)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Zinc</p>",
+            "<p>Zn</p>",
+            "<p>Khaira disease (rice); white bud in maize; little leaf in citrus</p>",
+            "<p>ZnSO4 (21% Zn)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Boron</p>",
+            "<p>B</p>",
+            "<p>Hollow stem in cauliflower/cabbage; top sickness in tobacco</p>",
+            "<p>Borax, Boric acid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Manganese</p>",
+            "<p>Mn</p>",
+            "<p>Interveinal chlorosis; grey speck in oats</p>",
+            "<p>MnSO4</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Molybdenum</p>",
+            "<p>Mo</p>",
+            "<p>Whiptail in cauliflower; nitrogen fixation failure in legumes</p>",
+            "<p>Ammonium molybdate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Copper</p>",
+            "<p>Cu</p>",
+            "<p>Dieback of twigs; reclamation disease in cereals</p>",
+            "<p>CuSO4</p>"
           ]
         }
       ]
@@ -703,82 +711,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Soil Type</strong></p>",
+            "<p><strong>States / Regions</strong></p>",
+            "<p><strong>Crops Grown</strong></p>",
+            "<p><strong>Special Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Alluvial Soil (Khadar &amp; Bhangar)</p>",
+            "<p>Indo-Gangetic Plains, river deltas</p>",
+            "<p>Rice, wheat, sugarcane, cotton, oilseeds</p>",
+            "<p>Most extensive; highly fertile; low humus; Khadar = new alluvium; Bhangar = old</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Black Soil (Regur)</p>",
+            "<p>Deccan Plateau (Maharashtra, MP, Gujarat, AP)</p>",
+            "<p>Cotton, soybean, sorghum, sunflower</p>",
+            "<p>Self-ploughing; cracks in dry season; high clay; excellent water retention</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Red and Yellow Soil</p>",
+            "<p>Peninsular plateau, Odisha, Jharkhand</p>",
+            "<p>Millets, groundnut, tobacco, vegetables</p>",
+            "<p>Low fertility; acidic; red colour due to Fe2O3; yellow when hydrated</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Laterite Soil</p>",
+            "<p>Kerala, Karnataka, Assam, Meghalaya</p>",
+            "<p>Tea, coffee, cashew, rubber</p>",
+            "<p>Highly leached; low pH; iron and aluminium oxides dominate; poor in N, P, K</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Arid and Desert Soil</p>",
+            "<p>Rajasthan, Punjab (semi-arid)</p>",
+            "<p>Bajra, guar, drought-tolerant crops</p>",
+            "<p>Sandy; low organic matter; high pH; high soluble salts; Ca-rich layers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Saline and Alkaline Soil (Reh/Usar)</p>",
+            "<p>UP, Punjab, Haryana, Rajasthan</p>",
+            "<p>Salt-tolerant crops if reclaimed</p>",
+            "<p>High Na, Mg salts; Reh = saline; Usar = alkaline; low productivity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Peaty and Marshy Soil</p>",
+            "<p>Kerala backwaters, Sundarbans, Orissa coast</p>",
+            "<p>Rice, jute</p>",
+            "<p>High organic matter; waterlogged; acidic; deficient in P and K</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Forest and Mountain Soil</p>",
+            "<p>Himalayan region, Nilgiris, NE hills</p>",
+            "<p>Tea, spices, apples, temperate fruits</p>",
+            "<p>Varies with altitude; loamy in valleys; thin and acidic on steep slopes</p>"
           ]
         }
       ]

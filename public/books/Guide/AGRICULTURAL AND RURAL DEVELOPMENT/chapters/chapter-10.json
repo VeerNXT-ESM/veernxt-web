@@ -58,89 +58,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Equipment</strong></p>",
+            "<p><strong>Operation</strong></p>",
+            "<p><strong>Types / Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Plough</p>",
+            "<p>Primary tillage; turns and inverts soil</p>",
+            "<p>Wooden, MB (Mould Board), Disc Plough, Chisel Plough, Sub-soiler</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Harrow</p>",
+            "<p>Secondary tillage; breaks clods; smoothens seedbed</p>",
+            "<p>Disc Harrow, Tine Harrow, Chain Harrow</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cultivator</p>",
+            "<p>Inter-cultivation; weed control; soil aeration</p>",
+            "<p>Tractor-drawn rigid/spring-tine cultivator; sweep cultivators</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Seed Drill</p>",
+            "<p>Metered seed placement at correct depth and spacing</p>",
+            "<p>Fluted roller type; zero-till drill; Happy Seeder; broadcast seeder</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Transplanter</p>",
+            "<p>Mechanical transplanting of rice seedlings</p>",
+            "<p>Self-propelled rice transplanter; reduces labour; mat nursery required</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sprayer</p>",
+            "<p>Application of pesticides, herbicides, fertilisers</p>",
+            "<p>Knapsack, Power knapsack, Boom sprayer, Air blast sprayer, Drone sprayer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Combine Harvester</p>",
+            "<p>Harvesting, threshing, cleaning in one operation</p>",
+            "<p>Self-propelled (90% efficiency); reduces post-harvest losses significantly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Thresher</p>",
+            "<p>Separates grain from straw</p>",
+            "<p>Axial flow thresher (wheat, paddy); pedaloperated (small farms)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chaff Cutter</p>",
+            "<p>Chops fodder into small pieces for livestock</p>",
+            "<p>Motorised; reduces fodder wastage; improves palatability</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Power Tiller / Walk-Behind Tractor</p>",
+            "<p>Tillage for small/marginal farms; paddy fields</p>",
+            "<p>2-wheel; 7–12 HP; suitable for hills and wetlands</p>"
           ]
         }
       ]
@@ -181,11 +181,11 @@
       "id": "dc4std3",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Launched in 2014 to promote farm mechanisation at the grassroots level",
+        "Provides subsidy (40–80%) on purchase of farm machinery to farmers",
+        "Custom Hiring Centres (CHC) set up to provide machinery on rental basis",
+        "Farm Machinery Banks for small/marginal farmers; Village Level entrepreneurs promoted",
+        "High-tech hubs for demonstration and training of farm machinery"
       ]
     },
     {
@@ -205,16 +205,17 @@
     },
     {
       "type": "paragraph",
-      "id": "6t4je5s"
+      "id": "6t4je5s",
+      "content": "Watershed is a land area that drains to a common point. Watershed management integrates soil, water, and vegetation for sustainable development of a geographical unit."
     },
     {
       "id": "6aad72o",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "National Watershed Development Project for Rainfed Areas (NWDPRA) — now under PMKSY",
+        "IWMP (Integrated Watershed Management Programme) — now merged into PMKSY-Watershed",
+        "Techniques: Check dams, gully plugs, nala bunding, field bunding, vegetative barriers",
+        "Pradhan Mantri Krishi Sinchai Yojana — Watershed Component focuses on 2nd generation watershed projects"
       ]
     }
   ],

@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "5myo5kt"
+      "id": "5myo5kt",
+      "content": "Occupational Safety and Health (OSH) refers to the measures and procedures used to protect workers from injuries, accidents, and health hazards in workplaces such as factories, workshops, construction sites, and industrial plants. In technical trades, workers regularly use machines, tools, electricity, and heavy materials, which can create dangerous situations if safety rules are not followed."
     },
     {
       "type": "paragraph",
-      "id": "kupod0y"
+      "id": "kupod0y",
+      "content": "The main objective of occupational safety is to create a safe working environment where workers can perform their duties efficiently without risk to their health or life."
     },
     {
       "id": "z0fm9k6",
@@ -65,12 +67,12 @@
       "id": "s35br9h",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Prevent workplace accidents and injuries",
+        "Protect the health of workers",
+        "Ensure safe use of machines and tools",
+        "Improve productivity and efficiency",
+        "Reduce damage to machines and equipment",
+        "Promote a safety culture in the workplace"
       ]
     },
     {
@@ -81,7 +83,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wflxcxj"
+      "id": "wflxcxj",
+      "content": "In workshops, workers operate cutting tools, electrical equipment, welding machines, and heavy machinery. If proper safety measures are not followed, serious accidents such as burns, electric shock, cuts, or machine injuries may occur."
     },
     {
       "id": "3x20z6e",
@@ -90,43 +93,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Reason</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Protection of workers</p>",
+            "<p>Safety measures protect workers from injuries and health hazards.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Machine protection</p>",
+            "<p>Proper operation prevents damage to expensive machines.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Improved efficiency</p>",
+            "<p>Safe workplaces allow workers to focus on their tasks.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Legal compliance</p>",
+            "<p>Industries must follow government safety regulations.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Reduced financial loss</p>",
+            "<p>Accidents can cause production loss and medical expenses.</p>"
           ]
         }
       ]
@@ -144,7 +147,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jcjuui5"
+      "id": "jcjuui5",
+      "content": "Accidents in workshops usually occur due to unsafe conditions or unsafe behavior."
     },
     {
       "id": "e5xr7no",
@@ -153,43 +157,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Carelessness</p>",
+            "<p>Ignoring safety rules</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Improper use of tools</p>",
+            "<p>Using the wrong tool for a task</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lack of training</p>",
+            "<p>Operating machines without proper knowledge</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Poor housekeeping</p>",
+            "<p>Oil spills or cluttered work areas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Defective equipment</p>",
+            "<p>Broken tools or damaged wiring</p>"
           ]
         }
       ]
@@ -204,14 +208,14 @@
       "id": "tmah5d2",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Wear appropriate Personal Protective Equipment (PPE)",
+        "Keep the workplace clean and organized",
+        "Use the correct tool for each job",
+        "Do not operate machines without proper training",
+        "Switch off machines when not in use",
+        "Avoid loose clothing near moving machines",
+        "Follow instructions from supervisors",
+        "Report damaged tools or unsafe conditions immediately"
       ]
     },
     {
@@ -258,7 +262,8 @@
     },
     {
       "type": "paragraph",
-      "id": "baox6l4"
+      "id": "baox6l4",
+      "content": "Safety signs are visual symbols used to warn workers about hazards and guide them to follow safety rules."
     },
     {
       "id": "7ircntn",
@@ -267,36 +272,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Sign</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Warning Signs</p>",
+            "<p>Indicate potential hazards such as high voltage or slippery floors</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mandatory Signs</p>",
+            "<p>Indicate actions that must be followed such as wearing helmets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prohibition Signs</p>",
+            "<p>Show actions that are not allowed such as no smoking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Emergency Signs</p>",
+            "<p>Indicate emergency exits or first aid stations</p>"
           ]
         }
       ]
@@ -309,30 +314,32 @@
     },
     {
       "type": "paragraph",
-      "id": "6jk15bb"
+      "id": "6jk15bb",
+      "content": "Employer Responsibilities:"
     },
     {
       "id": "s4k8v54",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Provide safe equipment and tools",
+        "Train workers about safety procedures",
+        "Maintain machines properly",
+        "Ensure availability of protective equipment"
       ]
     },
     {
       "type": "paragraph",
-      "id": "rs1em29"
+      "id": "rs1em29",
+      "content": "Worker Responsibilities:"
     },
     {
       "id": "21dinoy",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Follow safety rules and instructions",
+        "Use PPE correctly",
+        "Handle tools carefully",
+        "Report unsafe conditions immediately"
       ]
     },
     {
@@ -352,16 +359,17 @@
     },
     {
       "type": "paragraph",
-      "id": "kbvtpkv"
+      "id": "kbvtpkv",
+      "content": "First aid is the immediate assistance given to a person who has been injured or suddenly taken ill before professional medical help arrives."
     },
     {
       "id": "h9cbn76",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Stop bleeding using clean cloth or bandage",
+        "Cool burns with clean water",
+        "Provide artificial respiration if necessary",
+        "Seek medical assistance immediately"
       ]
     },
     {
@@ -374,10 +382,10 @@
       "id": "0jp8fxh",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Occupational Safety and Health focuses on protecting workers in workplaces.",
+        "Unsafe behavior and unsafe conditions are major causes of accidents.",
+        "Safety signs help workers identify hazards.",
+        "Both employers and workers share responsibility for safety."
       ]
     }
   ],

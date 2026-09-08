@@ -1,0 +1,126 @@
+{
+  "title": "Heat Zones of the Earth",
+  "order": 33,
+  "blocks": [
+    {
+      "id": "q5lbi14",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Zone</strong></p>",
+            "<p><strong>Latitudinal Extent</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Torrid Zone</p>",
+            "<p>23.5°N – 23.5°S</p>",
+            "<p>Hottest region; receives vertical rays.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Temperate Zones</p>",
+            "<p>23.5°–66.5° in both hemispheres</p>",
+            "<p>Moderate climate.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Frigid Zones</p>",
+            "<p>66.5°–90°</p>",
+            "<p>Very cold; slanting rays.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The mid-day sun is exactly overhead at least once a year on all latitudes in between the Tropic of Cancer and the Tropic of Capricorn.",
+      "id": "jjzblqz"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Heat Zone",
+        "Latitudinal Boundaries",
+        "Sun Ray Angle",
+        "Temperature Range"
+      ],
+      "rows": [
+        [
+          "Torrid Zone",
+          "23½° N to 23½° S",
+          "Direct / Overhead",
+          "High (Maximum Heat)"
+        ],
+        [
+          "Temperate Zone",
+          "23½° to 66½° N & S",
+          "Slanting",
+          "Moderate"
+        ],
+        [
+          "Frigid Zone",
+          "66½° to 90° N & S",
+          "Very Slanting",
+          "Very Low (Extremely Cold)"
+        ]
+      ],
+      "id": "r3jf9c4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Heat Zones",
+          "value": "3",
+          "icon": "book"
+        },
+        {
+          "label": "Torrid Zone Limits",
+          "value": "23.5° N - 23.5° S",
+          "icon": "info"
+        },
+        {
+          "label": "Frigid Zone Limits",
+          "value": "66.5° to 90° N/S",
+          "icon": "clock"
+        },
+        {
+          "label": "Equator Latitude",
+          "value": "0°",
+          "icon": "check"
+        }
+      ],
+      "id": "g196s1m"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The mid-day sun NEVER shines overhead on any latitude beyond the Tropic of Cancer and the Tropic of Capricorn.",
+        "Areas lying between the Arctic Circle and the North Pole in the Northern Hemisphere are called the Frigid Zone because the sun does not rise much above the horizon.",
+        "Maximum solar radiation (insolation) is received in the Torrid Zone due to direct vertical sun rays."
+      ],
+      "id": "dksbb1o"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Torrid Zone lies between the Tropic of Cancer (23½° N) and the Tropic of Capricorn (23½° S) and receives the maximum heat.",
+        "The Temperate Zones lie between the Tropics and the Polar Circles in both hemispheres and experience moderate temperatures.",
+        "The Frigid Zones are located between the Arctic/Antarctic Circles and the Poles, receiving highly slanting sun rays resulting in extreme cold.",
+        "The angle of the sun's rays decreases continuously from the Equator towards the Poles."
+      ],
+      "id": "5gj50be"
+    }
+  ],
+  "enriched": true
+}

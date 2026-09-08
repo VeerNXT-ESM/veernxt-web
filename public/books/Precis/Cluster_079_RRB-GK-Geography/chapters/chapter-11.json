@@ -1,0 +1,95 @@
+{
+  "title": "8. Asteroids, Comets, Meteors (COMMON CONFUSION AREA)",
+  "order": 11,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "A meteoroid becomes a meteor when entering the atmosphere and a meteorite upon reaching the Earth's surface.",
+      "id": "ej4bvyw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Asteroid",
+        "Comet",
+        "Meteor"
+      ],
+      "rows": [
+        [
+          "Primary Composition",
+          "Rock, Carbon, and Metals (Iron, Nickel)",
+          "Water Ice, Frozen Gases, Dust, and Rock",
+          "Small fragments of Rock or Metal"
+        ],
+        [
+          "Primary Location",
+          "Asteroid Belt (Mars and Jupiter)",
+          "Kuiper Belt and distant Oort Cloud",
+          "Earth's Atmosphere (Meso-sphere)"
+        ],
+        [
+          "Visual Appearance",
+          "Star-like point of light through telescope",
+          "Fuzzy head (coma) with long glowing tail",
+          "Brief streak of light ('Shooting Star')"
+        ],
+        [
+          "Tail Formation",
+          "Does not produce a tail",
+          "Tail always points away from the Sun",
+          "Streak aligns with atmospheric entry path"
+        ]
+      ],
+      "id": "ajwc2pb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Asteroid Belt",
+          "value": "Between Mars & Jupiter",
+          "icon": "info"
+        },
+        {
+          "label": "Comet Origin",
+          "value": "Kuiper Belt & Oort Cloud",
+          "icon": "book"
+        },
+        {
+          "label": "Halley's Comet Period",
+          "value": "75-76 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Lonar Crater",
+          "value": "Meteorite Impact Site",
+          "icon": "award"
+        }
+      ],
+      "id": "q9hy0oy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Memorize the precise terminology shift: Meteoroid (space) -> Meteor (atmosphere/shooting star) -> Meteorite (ground surface).",
+        "Comet tails ALWAYS point directly away from the Sun due to solar radiation pressure and solar wind, regardless of the comet's travel direction.",
+        "Lonar Lake in Buldhana district, Maharashtra, is a frequently tested example of a meteorite impact crater in India."
+      ],
+      "id": "0jsck7a"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Asteroids are rocky, metallic objects orbiting the Sun, primarily located in the Asteroid Belt between Mars and Jupiter.",
+        "Comets are composed of frozen ice, dust, and rock; as they approach the Sun, solar radiation creates a glowing atmosphere (coma) and a tail.",
+        "Meteoroids are small rocky particles in space; upon entering Earth's atmosphere, friction burns them up, creating a bright streak of light called a Meteor.",
+        "A Meteorite is a meteoroid fragment that survives its passage through the atmosphere and strikes Earth's surface.",
+        "Ceres is the largest object in the main asteroid belt and is classified as a dwarf planet."
+      ],
+      "id": "z49xdqp"
+    }
+  ],
+  "enriched": true
+}

@@ -49,7 +49,20 @@
     },
     {
       "type": "paragraph",
-      "id": "vqwnams"
+      "id": "vqwnams",
+      "content": "Evolution is the gradual change in heritable characteristics of populations over successive generations. It explains the origin of diversity of life on Earth. The term evolution means 'descent with modification'."
+    },
+    {
+      "id": "xbb4zml",
+      "type": "image",
+      "imageId": "sih6069",
+      "src": "/books/Precis/RRB GS/images/image_sih6069.jpeg"
+    },
+    {
+      "id": "m5q3lw6",
+      "type": "image",
+      "imageId": "lmyykc7",
+      "src": "/books/Precis/RRB GS/images/image_lmyykc7.jpeg"
     },
     {
       "id": "pwtnzeo",
@@ -59,7 +72,8 @@
     },
     {
       "type": "paragraph",
-      "id": "g3a7sfo"
+      "id": "g3a7sfo",
+      "content": "The origin of life is explained by the chemical evolution theory proposed by Oparin and Haldane. According to this theory, life originated from non-living organic molecules in primitive Earth conditions."
     },
     {
       "id": "ms533sc",
@@ -69,7 +83,8 @@
     },
     {
       "type": "paragraph",
-      "id": "g9d263i"
+      "id": "g9d263i",
+      "content": "Before Darwin, Lamarck proposed the theory of inheritance of acquired characters. He suggested that traits acquired during lifetime are passed to offspring."
     },
     {
       "id": "3wf57qe",
@@ -78,22 +93,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Main Idea</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lamarck</p>",
+            "<p>Inheritance of acquired characters</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Darwin</p>",
+            "<p>Natural selection</p>"
           ]
         }
       ]
@@ -106,7 +121,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ksbluxu"
+      "id": "ksbluxu",
+      "content": "Charles Darwin proposed the theory of Natural Selection in his book 'On the Origin of Species' (1859). He observed variation among organisms during his voyage on HMS Beagle."
     },
     {
       "id": "xxrx3k6",
@@ -116,23 +132,28 @@
     },
     {
       "type": "paragraph",
-      "id": "o10ye1x"
+      "id": "o10ye1x",
+      "content": "• Overproduction – Organisms produce more offspring than can survive."
     },
     {
       "type": "paragraph",
-      "id": "nc5k2qx"
+      "id": "nc5k2qx",
+      "content": "• Struggle for existence – Competition for limited resources."
     },
     {
       "type": "paragraph",
-      "id": "8xg5pif"
+      "id": "8xg5pif",
+      "content": "• Variation – Individuals differ from each other."
     },
     {
       "type": "paragraph",
-      "id": "4iokqru"
+      "id": "4iokqru",
+      "content": "• Survival of the fittest – Only best adapted survive."
     },
     {
       "type": "paragraph",
-      "id": "dnbk9ys"
+      "id": "dnbk9ys",
+      "content": "• Natural selection – Nature selects advantageous traits."
     },
     {
       "id": "po4otjw",
@@ -142,7 +163,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fm6mwkv"
+      "id": "fm6mwkv",
+      "content": "Natural selection is the process by which individuals with favorable variations survive and reproduce. Over time, beneficial traits become more common in the population."
     },
     {
       "id": "7z4y3cb",
@@ -151,29 +173,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Directional Selection</p>",
+            "<p>Peppered moth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Stabilizing Selection</p>",
+            "<p>Human birth weight</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Disruptive Selection</p>",
+            "<p>Different beak sizes</p>"
           ]
         }
       ]
@@ -185,13 +207,9 @@
       "content": "7. Variation"
     },
     {
-      "type": "pullQuote",
-      "content": "Advanced Comparison Table – Lamarckism vs Darwinism",
-      "id": "r10vl8h"
-    },
-    {
       "type": "paragraph",
-      "id": "ghcx6jf"
+      "id": "ghcx6jf",
+      "content": "Variations are differences among individuals of a species. They arise due to mutation, recombination and environmental factors."
     },
     {
       "id": "xaizn0m",
@@ -201,7 +219,8 @@
     },
     {
       "type": "paragraph",
-      "id": "nb7qy9m"
+      "id": "nb7qy9m",
+      "content": "Mutation is a sudden heritable change in DNA sequence. Mutations are the raw material for evolution."
     },
     {
       "id": "ol3srja",
@@ -211,7 +230,8 @@
     },
     {
       "type": "paragraph",
-      "id": "s6qjtmz"
+      "id": "s6qjtmz",
+      "content": "Speciation is the formation of new species from existing ones. It occurs due to accumulation of variations and reproductive isolation."
     },
     {
       "id": "cvmpclh",
@@ -220,29 +240,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Speciation</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Allopatric</p>",
+            "<p>Due to geographical isolation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sympatric</p>",
+            "<p>Without geographical isolation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Artificial</p>",
+            "<p>Human-controlled breeding</p>"
           ]
         }
       ]
@@ -255,7 +275,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0utwux8"
+      "id": "0utwux8",
+      "content": "Evolution is supported by fossil records, homologous organs, analogous organs and vestigial organs."
     },
     {
       "id": "5y1uzou",
@@ -265,7 +286,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0y37v2e"
+      "id": "0y37v2e",
+      "content": "Fossils are preserved remains of ancient organisms. They show gradual changes over geological time."
     },
     {
       "type": "comparisonTable",
@@ -306,25 +328,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Homologous Organs</strong></p>",
+            "<p><strong>Analogous Organs</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Origin</p>",
+            "<p>Common origin</p>",
+            "<p>Different origin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example</p>",
+            "<p>Forelimbs of vertebrates</p>",
+            "<p>Wings of bird &amp; insect</p>"
           ]
         }
       ]
@@ -337,7 +359,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bymrzq8"
+      "id": "bymrzq8",
+      "content": "Vestigial organs are reduced and functionless organs inherited from ancestors. Example: Appendix, wisdom teeth."
     },
     {
       "id": "oz1yxxk",
@@ -347,7 +370,8 @@
     },
     {
       "type": "paragraph",
-      "id": "45l8gcs"
+      "id": "45l8gcs",
+      "content": "Humans evolved from ape-like ancestors. Important stages include Australopithecus, Homo habilis, Homo erectus and Homo sapiens."
     },
     {
       "id": "ufmhzwa",
@@ -357,11 +381,13 @@
     },
     {
       "type": "paragraph",
-      "id": "c69pcgr"
+      "id": "c69pcgr",
+      "content": "Jean Baptiste Lamarck proposed the Theory of Inheritance of Acquired Characters. He believed that traits acquired during an organism's lifetime are passed to offspring. Charles Darwin proposed the Theory of Natural Selection, stating that organisms with favorable variations survive and reproduce."
     },
     {
       "type": "paragraph",
-      "id": "xn0hndm"
+      "id": "xn0hndm",
+      "content": "Modern genetics supports Darwin’s theory because acquired traits are not inherited genetically, whereas variations caused by genetic mutation are heritable."
     },
     {
       "id": "atgv36y",
@@ -376,57 +402,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Lamarckism</strong></p>",
+            "<p><strong>Darwinism</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Founder</p>",
+            "<p>Jean Baptiste Lamarck</p>",
+            "<p>Charles Darwin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Main Concept</p>",
+            "<p>Inheritance of acquired traits</p>",
+            "<p>Natural selection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cause of Variation</p>",
+            "<p>Use and disuse of organs</p>",
+            "<p>Pre-existing genetic variations</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Role of Environment</p>",
+            "<p>Directly modifies organisms</p>",
+            "<p>Selects favorable variations</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example</p>",
+            "<p>Giraffe neck stretched</p>",
+            "<p>Long-necked giraffes survived</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Modern Support</p>",
+            "<p>Not supported genetically</p>",
+            "<p>Supported by genetics</p>"
           ]
         }
       ]
@@ -439,7 +465,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ljs5zet"
+      "id": "ljs5zet",
+      "content": "Human evolution describes the gradual development of modern humans from ape-like ancestors. Fossil records and comparative anatomy provide evidence for human evolution."
     },
     {
       "type": "examAlert",
@@ -463,49 +490,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Stage</strong></p>",
+            "<p><strong>Time Period</strong></p>",
+            "<p><strong>Important Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Australopithecus</p>",
+            "<p>4–2 million years ago</p>",
+            "<p>Bipedal, small brain</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Homo habilis</p>",
+            "<p>2.4–1.4 million years ago</p>",
+            "<p>Used stone tools</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Homo erectus</p>",
+            "<p>1.9 million–110,000 years ago</p>",
+            "<p>Used fire, upright posture</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Neanderthal</p>",
+            "<p>400,000–40,000 years ago</p>",
+            "<p>Large brain, burial practices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Homo sapiens</p>",
+            "<p>200,000 years ago–Present</p>",
+            "<p>Modern humans</p>"
           ]
         }
       ]
@@ -518,27 +545,33 @@
     },
     {
       "type": "paragraph",
-      "id": "z9pjfi5"
+      "id": "z9pjfi5",
+      "content": "1. Darwin proposed Natural Selection."
     },
     {
       "type": "paragraph",
-      "id": "6v3bh7w"
+      "id": "6v3bh7w",
+      "content": "2. Mutation is raw material of evolution."
     },
     {
       "type": "paragraph",
-      "id": "zs4oxr8"
+      "id": "zs4oxr8",
+      "content": "3. Allopatric speciation involves geographical isolation."
     },
     {
       "type": "paragraph",
-      "id": "h2nq0ag"
+      "id": "h2nq0ag",
+      "content": "4. Fossils provide evidence of evolution."
     },
     {
       "type": "paragraph",
-      "id": "ki9mkb9"
+      "id": "ki9mkb9",
+      "content": "5. Homologous organs show common ancestry."
     },
     {
       "type": "paragraph",
-      "id": "eilv0sj"
+      "id": "eilv0sj",
+      "content": "6. Appendix is vestigial organ."
     }
   ],
   "enriched": true

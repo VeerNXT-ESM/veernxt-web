@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "blz9s3r"
+      "id": "blz9s3r",
+      "content": "Sound is a form of mechanical energy that is produced by vibrating bodies and requires a material medium for its propagation."
     },
     {
       "id": "zp6x547",
@@ -58,20 +59,30 @@
       "content": "1. NATURE OF SOUND"
     },
     {
-      "type": "paragraph",
-      "id": "0qjsji4"
+      "id": "yx80x5d",
+      "type": "image",
+      "imageId": "d18bo18",
+      "src": "/books/Precis/RRB GS/images/image_d18bo18.png"
     },
     {
       "type": "paragraph",
-      "id": "sskkfco"
+      "id": "0qjsji4",
+      "content": "• Sound is a mechanical wave.<img></img>"
     },
     {
       "type": "paragraph",
-      "id": "6vy88bp"
+      "id": "sskkfco",
+      "content": "• It is a longitudinal wave."
     },
     {
       "type": "paragraph",
-      "id": "su0ebty"
+      "id": "6vy88bp",
+      "content": "• It cannot travel in vacuum."
+    },
+    {
+      "type": "paragraph",
+      "id": "su0ebty",
+      "content": "• It travels in form of compressions and rarefactions."
     },
     {
       "id": "e2t3jb2",
@@ -81,28 +92,34 @@
     },
     {
       "type": "paragraph",
-      "id": "ai1pzbk"
+      "id": "ai1pzbk",
+      "content": "• Wavelength (λ): Distance between two consecutive compressions."
     },
     {
       "type": "paragraph",
-      "id": "a7xxb7t"
+      "id": "a7xxb7t",
+      "content": "• Time Period (T): Time for one complete vibration."
     },
     {
       "type": "paragraph",
-      "id": "isbj3ov"
+      "id": "isbj3ov",
+      "content": "• Frequency (f): Number of vibrations per second."
     },
     {
       "type": "paragraph",
-      "id": "yzivxax"
+      "id": "yzivxax",
+      "content": "• Amplitude: Maximum displacement of particle."
     },
     {
       "type": "paragraph",
-      "id": "n7xkh3v"
+      "id": "n7xkh3v",
+      "content": "• Wave Velocity (v): Distance travelled per second."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wwfy9w7"
+      "id": "wwfy9w7",
+      "content": "Relation: v = fλ"
     },
     {
       "id": "12rwxrj",
@@ -117,36 +134,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Medium</strong></p>",
+            "<p><strong>Speed (approx.)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Air (at 20°C)</p>",
+            "<p>343 m/s</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Water</p>",
+            "<p>1500 m/s</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Steel</p>",
+            "<p>5000 m/s</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vacuum</p>",
+            "<p>Cannot travel</p>"
           ]
         }
       ]
@@ -164,33 +181,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Characteristic</strong></p>",
+            "<p><strong>Depends On</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Loudness</p>",
+            "<p>Amplitude</p>",
+            "<p>How loud or soft sound is</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pitch</p>",
+            "<p>Frequency</p>",
+            "<p>High or low sound</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Quality (Timbre)</p>",
+            "<p>Waveform</p>",
+            "<p>Distinguishes sounds</p>"
           ]
         }
       ]
@@ -203,15 +220,18 @@
     },
     {
       "type": "paragraph",
-      "id": "gbxig4q"
+      "id": "gbxig4q",
+      "content": "Sound follows laws of reflection."
     },
     {
       "type": "paragraph",
-      "id": "uqw4uti"
+      "id": "uqw4uti",
+      "content": "Angle of incidence = Angle of reflection."
     },
     {
       "type": "paragraph",
-      "id": "2d63ud9"
+      "id": "2d63ud9",
+      "content": "Applications: Echo, SONAR."
     },
     {
       "id": "l8hocn7",
@@ -221,15 +241,18 @@
     },
     {
       "type": "paragraph",
-      "id": "i4wlry6"
+      "id": "i4wlry6",
+      "content": "Echo is repetition of sound due to reflection."
     },
     {
       "type": "paragraph",
-      "id": "mq72x9a"
+      "id": "mq72x9a",
+      "content": "Minimum distance for echo ≈ 17 m (at 20°C)."
     },
     {
       "type": "paragraph",
-      "id": "76kwl7k"
+      "id": "76kwl7k",
+      "content": "Time interval for distinct echo ≥ 0.1 second."
     },
     {
       "id": "3zzqe14",
@@ -239,11 +262,13 @@
     },
     {
       "type": "paragraph",
-      "id": "kc126ez"
+      "id": "kc126ez",
+      "content": "Persistence of sound in large halls due to multiple reflections."
     },
     {
       "type": "paragraph",
-      "id": "ozga03e"
+      "id": "ozga03e",
+      "content": "Reduced by using curtains, carpets, sound absorbing materials."
     },
     {
       "id": "n9oqdh1",
@@ -253,12 +278,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lwfqlcm"
-    },
-    {
-      "type": "pullQuote",
-      "content": "SONAR (Sound Navigation and Ranging)",
-      "id": "ijodey3"
+      "id": "lwfqlcm",
+      "content": "Examples: Megaphone, Stethoscope, Sound board."
     },
     {
       "id": "97soanf",
@@ -274,11 +295,13 @@
     },
     {
       "type": "paragraph",
-      "id": "rvh5xh8"
+      "id": "rvh5xh8",
+      "content": "Used to measure depth of sea."
     },
     {
       "type": "paragraph",
-      "id": "dkrmzo7"
+      "id": "dkrmzo7",
+      "content": "Distance = (v × t) / 2"
     },
     {
       "id": "rlouze0",
@@ -288,11 +311,13 @@
     },
     {
       "type": "paragraph",
-      "id": "ayc470v"
+      "id": "ayc470v",
+      "content": "Sound frequency &gt; 20,000 Hz."
     },
     {
       "type": "paragraph",
-      "id": "lixfqy3"
+      "id": "lixfqy3",
+      "content": "Uses: Medical imaging, detecting cracks in metals."
     },
     {
       "id": "azla61h",
@@ -307,29 +332,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Frequency Range</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Infrasonic</p>",
+            "<p>&lt; 20 Hz</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Audible</p>",
+            "<p>20 Hz – 20,000 Hz</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ultrasonic</p>",
+            "<p>&gt; 20,000 Hz</p>"
           ]
         }
       ]
@@ -348,15 +373,18 @@
     },
     {
       "type": "paragraph",
-      "id": "a15wgfe"
+      "id": "a15wgfe",
+      "content": "Change in frequency due to relative motion between source and observer."
     },
     {
       "type": "paragraph",
-      "id": "rrtbww0"
+      "id": "rrtbww0",
+      "content": "If source approaches → Frequency increases."
     },
     {
       "type": "paragraph",
-      "id": "n53rswx"
+      "id": "n53rswx",
+      "content": "If source moves away → Frequency decreases."
     },
     {
       "id": "3wy4itx",
@@ -366,12 +394,14 @@
     },
     {
       "type": "paragraph",
-      "id": "llaqfg5"
+      "id": "llaqfg5",
+      "content": "Sound intensity level is measured in decibel (dB)."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rualxsf"
+      "id": "rualxsf",
+      "content": "Normal conversation ≈ 60 dB"
     },
     {
       "type": "comparisonTable",
@@ -405,11 +435,13 @@
     },
     {
       "type": "paragraph",
-      "id": "f3jn5qc"
+      "id": "f3jn5qc",
+      "content": "Above 120 dB → Painful to ear"
     },
     {
       "type": "paragraph",
-      "id": "st1yror"
+      "id": "st1yror",
+      "content": "0 dB is threshold of hearing."
     },
     {
       "id": "b9the28",
@@ -419,21 +451,25 @@
     },
     {
       "type": "paragraph",
-      "id": "ouwjjh8"
+      "id": "ouwjjh8",
+      "content": "Speed of sound in air increases with temperature."
     },
     {
       "type": "paragraph",
-      "id": "r722qqe"
+      "id": "r722qqe",
+      "content": "Approximate formula: v = 331 + 0.6T (T in °C)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fpd087n"
+      "id": "fpd087n",
+      "content": "At 0°C → 331 m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qiamqgd"
+      "id": "qiamqgd",
+      "content": "At 20°C → 343 m/s"
     },
     {
       "id": "q9rlqj3",
@@ -443,15 +479,18 @@
     },
     {
       "type": "paragraph",
-      "id": "zwabyti"
+      "id": "zwabyti",
+      "content": "Resonance occurs when frequency of external force matches natural frequency of object."
     },
     {
       "type": "paragraph",
-      "id": "dbdsqz6"
+      "id": "dbdsqz6",
+      "content": "It produces large amplitude vibrations."
     },
     {
       "type": "paragraph",
-      "id": "0j2qvv1"
+      "id": "0j2qvv1",
+      "content": "Example: Tuning fork, Musical instruments."
     },
     {
       "id": "w3cq86a",
@@ -461,11 +500,13 @@
     },
     {
       "type": "paragraph",
-      "id": "0q0wthn"
+      "id": "0q0wthn",
+      "content": "Every body has its own natural frequency at which it vibrates freely."
     },
     {
       "type": "paragraph",
-      "id": "vet7sdb"
+      "id": "vet7sdb",
+      "content": "Depends on length, tension, mass (for strings)."
     },
     {
       "id": "5p8xluh",
@@ -475,15 +516,18 @@
     },
     {
       "type": "paragraph",
-      "id": "py74elj"
+      "id": "py74elj",
+      "content": "When two sound waves of slightly different frequencies interfere, beats are produced."
     },
     {
       "type": "paragraph",
-      "id": "nsv1jlx"
+      "id": "nsv1jlx",
+      "content": "Number of beats per second = |f1 - f2|"
     },
     {
       "type": "paragraph",
-      "id": "39hs5dz"
+      "id": "39hs5dz",
+      "content": "Common RRB numerical concept."
     },
     {
       "id": "9oza3ya",
@@ -493,12 +537,14 @@
     },
     {
       "type": "paragraph",
-      "id": "he1hqfi"
+      "id": "he1hqfi",
+      "content": "When two waves meet, they superpose and form constructive or destructive interference."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x3zw53l"
+      "id": "x3zw53l",
+      "content": "Constructive → Loud sound"
     },
     {
       "type": "examAlert",
@@ -513,7 +559,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "pd36wzc"
+      "id": "pd36wzc",
+      "content": "Destructive → Weak sound"
     },
     {
       "id": "y4gcegj",
@@ -528,29 +575,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>String Instruments</p>",
+            "<p>Guitar, Violin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wind Instruments</p>",
+            "<p>Flute, Trumpet</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Percussion Instruments</p>",
+            "<p>Drum, Tabla</p>"
           ]
         }
       ]
@@ -563,15 +610,18 @@
     },
     {
       "type": "paragraph",
-      "id": "gn58scf"
+      "id": "gn58scf",
+      "content": "Excessive and unwanted sound is called noise pollution."
     },
     {
       "type": "paragraph",
-      "id": "3gy3937"
+      "id": "3gy3937",
+      "content": "Effects: Hearing loss, stress, sleep disturbance."
     },
     {
       "type": "paragraph",
-      "id": "hbtyout"
+      "id": "hbtyout",
+      "content": "Control: Soundproofing, Plantation, Noise barriers."
     },
     {
       "id": "wn42lsd",
@@ -581,23 +631,28 @@
     },
     {
       "type": "paragraph",
-      "id": "bk0n97u"
+      "id": "bk0n97u",
+      "content": "• Sound travels fastest in solids."
     },
     {
       "type": "paragraph",
-      "id": "yogo69b"
+      "id": "yogo69b",
+      "content": "• Frequency remains constant during reflection."
     },
     {
       "type": "paragraph",
-      "id": "bfs3i4b"
+      "id": "bfs3i4b",
+      "content": "• Speed of sound increases with temperature."
     },
     {
       "type": "paragraph",
-      "id": "mi4hl6h"
+      "id": "mi4hl6h",
+      "content": "• Loudness ∝ square of amplitude."
     },
     {
       "type": "paragraph",
-      "id": "61tlrmx"
+      "id": "61tlrmx",
+      "content": "• Wave velocity depends on medium, not frequency."
     }
   ],
   "enriched": true

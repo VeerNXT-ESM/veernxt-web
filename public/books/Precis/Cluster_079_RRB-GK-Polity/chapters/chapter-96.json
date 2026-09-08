@@ -1,0 +1,133 @@
+{
+  "title": "Jurisdiction of the Supreme Court",
+  "order": 96,
+  "blocks": [
+    {
+      "id": "pi6bhhs",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Jurisdiction</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Original Jurisdiction</p>",
+            "<p>Disputes between Centre and States or among States</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appellate Jurisdiction</p>",
+            "<p>Hears appeals from High Courts</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Advisory Jurisdiction</p>",
+            "<p>President can seek legal advice (Article 143)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Writ Jurisdiction</p>",
+            "<p>Can issue writs for enforcement of Fundamental Rights</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Review Jurisdiction</p>",
+            "<p>Can review its own judgments</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Supreme Court is the guarantor of fundamental rights and the guardian of the Constitution.",
+      "id": "tv5afs9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "SC Writ Jurisdiction (Article 32)",
+        "HC Writ Jurisdiction (Article 226)"
+      ],
+      "rows": [
+        [
+          "Scope",
+          "Enforcement of Fundamental Rights only",
+          "Enforcement of Fundamental Rights and ordinary legal rights"
+        ],
+        [
+          "Territorial Reach",
+          "Entire territory of India",
+          "Limited to state boundary or territorial jurisdiction"
+        ],
+        [
+          "Nature of Remedy",
+          "A Fundamental Right itself; SC cannot refuse to exercise it",
+          "Discretionary remedy; HC may refuse to exercise it"
+        ]
+      ],
+      "id": "gab0mw7"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Original Jurisdiction",
+          "value": "Article 131",
+          "icon": "book"
+        },
+        {
+          "label": "Writ Jurisdiction",
+          "value": "Article 32",
+          "icon": "check"
+        },
+        {
+          "label": "Advisory Jurisdiction",
+          "value": "Article 143",
+          "icon": "info"
+        },
+        {
+          "label": "Court of Record",
+          "value": "Article 129",
+          "icon": "award"
+        }
+      ],
+      "id": "7attc3m"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 136 (Special Leave Petition) is a discretionary power of the Supreme Court and does not apply to decisions of military tribunals.",
+        "The advisory opinion provided by the Supreme Court under Article 143 is not a judicial pronouncement and is not binding on the President.",
+        "The Supreme Court's writ jurisdiction under Article 32 is narrower than a High Court's under Article 226, as Article 32 applies exclusively to Fundamental Rights."
+      ],
+      "id": "2i8g1h2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Original jurisdiction under Article 131 exclusively covers federal disputes involving the Centre and States or inter-state conflicts.",
+        "Writ jurisdiction under Article 32 empowers the Supreme Court to issue Habeas Corpus, Mandamus, Prohibition, Quo-Warranto, and Certiorari for enforcing Fundamental Rights.",
+        "Appellate jurisdiction spans Constitutional (Article 132), Civil (Article 133), Criminal matters (Article 134), and Special Leave Petitions (Article 136).",
+        "Under Article 143, the President can seek advisory opinions from the Supreme Court on questions of law or public importance, which are non-binding in nature.",
+        "As a Court of Record under Article 129, its judgments have evidentiary value and cannot be questioned when produced before any subordinate court."
+      ],
+      "id": "p9yocu2"
+    }
+  ],
+  "enriched": true
+}

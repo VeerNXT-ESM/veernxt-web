@@ -1,0 +1,138 @@
+{
+  "title": "NHRC vs SHRC",
+  "order": 259,
+  "blocks": [
+    {
+      "id": "pa8r7ku",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>NHRC</strong></p>",
+            "<p><strong>SHRC</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Jurisdiction</p>",
+            "<p>Entire country</p>",
+            "<p>Concerned state</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appointed By</p>",
+            "<p>President</p>",
+            "<p>Governor</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Level</p>",
+            "<p>National</p>",
+            "<p>State</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Although the chairperson and members of a State Human Rights Commission are appointed by the Governor, they can be removed only by the President.",
+      "id": "g6s7uwv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "NHRC (National)",
+        "SHRC (State)"
+      ],
+      "rows": [
+        [
+          "Jurisdiction",
+          "Entire territory of India",
+          "State List (List II) and Concurrent List (List III)"
+        ],
+        [
+          "Appointment",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Removal",
+          "President of India",
+          "President of India (Not Governor)"
+        ],
+        [
+          "Chairperson Eligibility",
+          "Retd. Chief Justice of India or SC Judge",
+          "Retd. Chief Justice or Judge of High Court"
+        ],
+        [
+          "Selection Committee Head",
+          "Prime Minister",
+          "Chief Minister"
+        ],
+        [
+          "Tenure",
+          "3 years or 70 years of age",
+          "3 years or 70 years of age"
+        ]
+      ],
+      "id": "jwohh16"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Enactment Year",
+          "value": "1993",
+          "icon": "calendar"
+        },
+        {
+          "label": "NHRC Composition",
+          "value": "1 Chair + 5 Members",
+          "icon": "award"
+        },
+        {
+          "label": "Tenure Limit",
+          "value": "3 Years / 70 Age",
+          "icon": "clock"
+        },
+        {
+          "label": "Limitation Period",
+          "value": "1 Year",
+          "icon": "info"
+        }
+      ],
+      "id": "1jksavi"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Removal Trap: Remember that the Governor appoints SHRC members, but ONLY the President has the authority to remove them.",
+        "Limitation Period: Questions frequently test the 1-year limitation clause for taking up cases of human rights violations.",
+        "Overlapping Jurisdiction: NHRC cannot inquire into a matter already being investigated by an SHRC or another statutory commission."
+      ],
+      "id": "yx3z5qm"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Both NHRC and SHRC derive their powers from the Protection of Human Rights Act, 1993 (amended in 2019).",
+        "NHRC members are appointed by the President, whereas SHRC members are appointed by the Governor of the respective state.",
+        "Members of SHRC can be removed ONLY by the President, not the Governor, ensuring independence of office.",
+        "Both commissions function as advisory bodies with powers of a civil court but lack punitive authority.",
+        "Neither commission can inquire into any matter after the expiry of one year from the date of the alleged violation."
+      ],
+      "id": "l73b8b7"
+    }
+  ],
+  "enriched": true
+}

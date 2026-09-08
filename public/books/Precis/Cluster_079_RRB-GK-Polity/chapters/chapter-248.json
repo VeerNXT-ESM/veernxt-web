@@ -1,0 +1,64 @@
+{
+  "title": "RRB Quick Revision Box",
+  "order": 248,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Established: 2015<br/>Type: Executive Body<br/>Chairperson: Prime Minister<br/>Replaced Planning Commission<br/>Promotes Cooperative Federalism<br/>No Fund Allocation Power",
+      "id": "z2okx9j"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Promotes Cooperative Federalism",
+      "id": "o64ih8a"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "Type",
+          "value": "Executive Body",
+          "icon": "info"
+        },
+        {
+          "label": "Chairperson",
+          "value": "Prime Minister",
+          "icon": "award"
+        },
+        {
+          "label": "Fund Allocation",
+          "value": "No Power",
+          "icon": "check"
+        }
+      ],
+      "id": "gwing9w"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: It is an Executive Body, not a Constitutional or Statutory body.",
+        "Key distinction: It has NO power to allocate funds, unlike the former Planning Commission.",
+        "Ex-officio Chairperson is always the Prime Minister."
+      ],
+      "id": "u5oiubi"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Established in 2015 as an Executive Body.",
+        "Chaired ex-officio by the Prime Minister.",
+        "Replaced the legacy Planning Commission.",
+        "Designed to promote Cooperative Federalism.",
+        "Does not possess any fund allocation powers."
+      ],
+      "id": "5eya0rk"
+    }
+  ],
+  "enriched": true
+}

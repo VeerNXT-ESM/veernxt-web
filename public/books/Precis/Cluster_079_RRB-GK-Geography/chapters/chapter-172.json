@@ -1,0 +1,85 @@
+{
+  "title": "6. Depositional Coastal Landforms",
+  "order": 172,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "Beaches are characteristic features of shorelines dominated by deposition, built up by constructive waves.",
+      "id": "tkxauv6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Landform",
+        "Attachment / Structure",
+        "Formation Mechanism"
+      ],
+      "rows": [
+        [
+          "Spit",
+          "Attached to land at one end",
+          "Longshore drift carrying sand across a bay entrance"
+        ],
+        [
+          "Tombolo",
+          "Connects an island to mainland",
+          "Wave refraction depositing sediment in the lee of an island"
+        ],
+        [
+          "Offshore Bar",
+          "Parallel to coast, unattached",
+          "Wave action breaking offshore and depositing sand ridges"
+        ]
+      ],
+      "id": "th3b5q7"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Process",
+          "value": "Constructive Waves",
+          "icon": "info"
+        },
+        {
+          "label": "Sediment Transport",
+          "value": "Longshore Drift",
+          "icon": "clock"
+        },
+        {
+          "label": "Largest Lagoon (India)",
+          "value": "Chilika Lake",
+          "icon": "award"
+        },
+        {
+          "label": "Key Landforms",
+          "value": "Beaches & Spits",
+          "icon": "book"
+        }
+      ],
+      "id": "cbjw6xm"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Constructive waves have a stronger swash than backwash, leading to net sediment deposition on the shore.",
+        "Chilika Lake in Odisha is the largest coastal lagoon in India, formed by depositional barrier spits.",
+        "Longshore drift (littoral drift) is the primary transport mechanism responsible for spit and bar formation."
+      ],
+      "id": "qyxfkww"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Depositional coastal landforms primarily form along low-energy coasts dominated by constructive wave action.",
+        "Beaches represent temporary or permanent accumulations of sand, pebbles, or cobbles along the shoreline.",
+        "Spits are elongated depositional ridges attached to the mainland at one end and projecting into open water.",
+        "Tombolos are specialized sand bars that join an offshore island to the mainland or another island.",
+        "Lagoons are coastal bodies of water separated from the ocean by barrier islands, spits, or offshore bars."
+      ],
+      "id": "n3oizp8"
+    }
+  ],
+  "enriched": true
+}

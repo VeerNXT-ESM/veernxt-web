@@ -1,0 +1,99 @@
+{
+  "title": "Standard Time",
+  "order": 40,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "To avoid confusion caused by multiple local times, countries adopt a standard meridian.",
+      "id": "fvpj2f4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "IST Ahead of GMT",
+          "value": "+5h 30m",
+          "icon": "clock"
+        },
+        {
+          "label": "Adopted Solution",
+          "value": "Standard Meridian",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Goal",
+          "value": "Avoid Confusion",
+          "icon": "check"
+        }
+      ],
+      "id": "yok26t8"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Indian Standard Time (IST) is 5 hours 30 minutes ahead of Greenwich Mean Time (GMT).",
+      "id": "2jjae9v"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Time Standard",
+        "Time Difference / Offset"
+      ],
+      "rows": [
+        [
+          "Greenwich Mean Time (GMT)",
+          "Base Meridian Reference"
+        ],
+        [
+          "Indian Standard Time (IST)",
+          "+5 Hours 30 Minutes Ahead"
+        ]
+      ],
+      "id": "rd0rzud"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Countries adopt a standard meridian to eliminate confusion caused by having multiple local times.",
+        "Indian Standard Time (IST) is calculated in relation to Greenwich Mean Time (GMT).",
+        "IST is precisely 5 hours 30 minutes ahead of GMT."
+      ],
+      "id": "49ps42z"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "IST is 5 hours 30 minutes ahead of Greenwich Mean Time (GMT).",
+        "Standard Meridians are adopted by nations to avoid confusion arising from multiple local times."
+      ],
+      "id": "dzwgb1u"
+    },
+    {
+      "id": "wzzw2b9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Country</strong></p>",
+            "<p><strong>Standard Meridian</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>India</p>",
+            "<p>82.5° E (near Mirzapur, Uttar Pradesh)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Indian Standard Time (IST) is 5 hours 30 minutes ahead of Greenwich Mean Time (GMT).",
+      "id": "w8u1q2l"
+    }
+  ],
+  "enriched": true
+}

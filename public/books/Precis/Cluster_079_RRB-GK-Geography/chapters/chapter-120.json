@@ -1,0 +1,104 @@
+{
+  "title": "Untitled Chapter",
+  "order": 120,
+  "blocks": [
+    {
+      "id": "lokfo29",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Hazard</strong></p>",
+            "<p><strong>Impact</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lava flows</p>",
+            "<p>Destroy property.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ash fall</p>",
+            "<p>Damages crops and infrastructure.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pyroclastic flows</p>",
+            "<p>Fast-moving and deadly.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lahars</p>",
+            "<p>Volcanic mudflows bury settlements.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Toxic gases</p>",
+            "<p>Cause respiratory hazards.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Climate effects</p>",
+            "<p>Ash can lower global temperatures.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Untitled Chapter",
+      "id": "fb1kpnm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Status",
+          "value": "N/A",
+          "icon": "info"
+        },
+        {
+          "label": "Chapter",
+          "value": "Untitled",
+          "icon": "book"
+        },
+        {
+          "label": "Importance",
+          "value": "High",
+          "icon": "award"
+        }
+      ],
+      "id": "gaza66v"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Always verify that study guide input contains valid textual content for exam analysis."
+      ],
+      "id": "6rjkha3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "No content provided in the chapter to summarize.",
+        "Ensure chapter text is provided for detailed factual breakdown."
+      ],
+      "id": "6zaea4h"
+    }
+  ],
+  "enriched": true
+}

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "tbrd4ti"
+      "id": "tbrd4ti",
+      "content": "In-situ Conservation – protecting species within their natural habitat."
     },
     {
       "type": "statStrip",
@@ -48,12 +49,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "sz4xbog"
+      "id": "sz4xbog",
+      "content": "• National Parks"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2xwyttd"
+      "id": "2xwyttd",
+      "content": "• Wildlife Sanctuaries"
     },
     {
       "type": "pullQuote",
@@ -63,12 +66,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "u5455iv"
+      "id": "u5455iv",
+      "content": "• Biosphere Reserves"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "50ezp1m"
+      "id": "50ezp1m",
+      "content": "• Community Reserves"
     },
     {
       "type": "comparisonTable",
@@ -103,17 +108,20 @@
     },
     {
       "type": "paragraph",
-      "id": "hl833xp"
+      "id": "hl833xp",
+      "content": "Ex-situ Conservation – conservation outside natural habitat."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9x9ffsm"
+      "id": "9x9ffsm",
+      "content": "• Zoos"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3eixq72"
+      "id": "3eixq72",
+      "content": "• Botanical Gardens"
     },
     {
       "type": "examAlert",
@@ -127,17 +135,20 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "e7wawgc"
+      "id": "e7wawgc",
+      "content": "• Seed Banks"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "87uii5z"
+      "id": "87uii5z",
+      "content": "• Gene Banks"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "75q8exr"
+      "id": "75q8exr",
+      "content": "• Cryopreservation"
     }
   ],
   "enriched": true

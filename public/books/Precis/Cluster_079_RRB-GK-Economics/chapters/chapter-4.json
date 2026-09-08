@@ -1,0 +1,526 @@
+{
+  "title": "CHAPTER 6: MONEY",
+  "order": 4,
+  "blocks": [
+    {
+      "id": "23ifyug",
+      "type": "heading",
+      "level": 2,
+      "content": "1. EVOLUTION OF MONEY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "M3 (Broad Money) is the most widely used measure of money supply in India.",
+        "High Powered Money (Monetary Base) consists of currency with public plus cash reserves of banks with RBI.",
+        "Money Multiplier (m) is inversely related to the Cash Reserve Ratio (m = 1 / CRR).",
+        "Fisher's Quantity Theory establishes that the price level is directly proportional to money supply assuming velocity and output remain constant.",
+        "Keynesian liquidity preference depends on transaction, precautionary, and speculative motives.",
+        "A Liquidity Trap occurs at extremely low interest rates, rendering monetary policy ineffective."
+      ],
+      "id": "4hhpkgp"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Broad Money Measure",
+          "value": "M3",
+          "icon": "award"
+        },
+        {
+          "label": "Money Multiplier Formula",
+          "value": "1 / CRR",
+          "icon": "check"
+        },
+        {
+          "label": "Fisher's Equation",
+          "value": "MV = PT",
+          "icon": "book"
+        },
+        {
+          "label": "RBI Measures",
+          "value": "4 Aggregates",
+          "icon": "info"
+        }
+      ],
+      "id": "b6slh69"
+    },
+    {
+      "type": "paragraph",
+      "content": "The concept of money evolved to remove the inefficiencies of the barter system. Barter suffered from double coincidence of wants, lack of divisibility, absence of common measure of value, and difficulty in storing wealth.",
+      "id": "9dao75x"
+    },
+    {
+      "type": "paragraph",
+      "content": "Stages of evolution:<br/>• Barter System<br/>• Commodity Money (gold, silver, cattle)<br/>• Metallic Money<br/>• Paper Currency<br/>• Credit Money<br/>• Digital / Electronic Money",
+      "id": "wwrscem"
+    },
+    {
+      "id": "a36w9ve",
+      "type": "heading",
+      "level": 2,
+      "content": "BARTER SYSTEM vs MONEY ECONOMY"
+    },
+    {
+      "id": "5zjkz04",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Barter System</strong></p>",
+            "<p><strong>Money Economy</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Medium</p>",
+            "<p>Goods for goods</p>",
+            "<p>Goods for money</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Problem</p>",
+            "<p>Double coincidence of wants</p>",
+            "<p>No such problem</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Divisibility</p>",
+            "<p>Difficult</p>",
+            "<p>Easy</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "992oart",
+      "type": "heading",
+      "level": 2,
+      "content": "2. FUNCTIONS OF MONEY"
+    },
+    {
+      "type": "paragraph",
+      "content": "Primary Functions:<br/>• Medium of Exchange<br/>• Unit of Account<br/>Secondary Functions:<br/>• Store of Value<br/>• Standard of Deferred Payment<br/>Contingent Functions:<br/>• Transfer of Value<br/>• Basis of Credit<br/>• Measure of National Income",
+      "id": "788z2z5"
+    },
+    {
+      "id": "4jht1s6",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "id": "p9awvo8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Medium of Exchange</p>",
+            "<p>Facilitates buying and selling</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Unit of Account</p>",
+            "<p>Measures value</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Store of Value</p>",
+            "<p>Can be saved</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Standard of Deferred Payment</p>",
+            "<p>Used for future payments</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tu1bt14",
+      "type": "heading",
+      "level": 2,
+      "content": "3. TYPES OF MONEY"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Legal Tender Money – Must be accepted by law (notes &amp; coins).<br/>• Fiat Money – Declared by government as money.<br/>• Near Money – Assets easily convertible into money (treasury bills).<br/>• Digital Money – UPI, NEFT, RTGS.",
+      "id": "81xxw3u"
+    },
+    {
+      "id": "tzm2y18",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Commodity Money</p>",
+            "<p>Gold, silver, cattle</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Metallic Money</p>",
+            "<p>Coins</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Paper Money</p>",
+            "<p>Notes issued by RBI</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Credit Money</p>",
+            "<p>Cheques, bills of exchange</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Digital Money</p>",
+            "<p>UPI, NEFT, RTGS</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hxckn26",
+      "type": "heading",
+      "level": 2,
+      "content": "4. MONEY SUPPLY IN INDIA"
+    },
+    {
+      "type": "paragraph",
+      "content": "Money supply is measured by RBI in four aggregates:",
+      "id": "wq3k41u"
+    },
+    {
+      "type": "paragraph",
+      "content": "M1 = Currency with Public + Demand Deposits + Other deposits with RBI<br/>M2 = M1 + Savings Deposits of Post Office<br/>M3 = M1 + Time Deposits with Banks<br/>M4 = M3 + Total Post Office Deposits",
+      "id": "3ww622m"
+    },
+    {
+      "type": "paragraph",
+      "content": "M3 (Broad Money) is the most widely used measure in India.",
+      "id": "9lbnwvf"
+    },
+    {
+      "id": "o7j3bx3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Aggregate</p>",
+            "<p>Components</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>M1 (Narrow Money)</p>",
+            "<p>Currency + Demand Deposits + Other deposits with RBI</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>M2</p>",
+            "<p>M1 + Post Office Savings</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>M3 (Broad Money)</p>",
+            "<p>M1 + Time Deposits</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>M4</p>",
+            "<p>M3 + Total Post Office Deposits</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5mnedal",
+      "type": "heading",
+      "level": 2,
+      "content": "5. HIGH POWERED MONEY (MONETARY BASE)"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Liquidity trap occurs when interest rates are extremely low and people prefer to hold money rather than invest in bonds.",
+      "id": "wsu205x"
+    },
+    {
+      "type": "paragraph",
+      "content": "High Powered Money (H) = Currency with Public + Cash Reserves of Banks with RBI.",
+      "id": "y0xilwn"
+    },
+    {
+      "type": "paragraph",
+      "content": "It is called 'high powered' because it forms the base for credit creation.",
+      "id": "8nci30e"
+    },
+    {
+      "id": "0941vpj",
+      "type": "heading",
+      "level": 2,
+      "content": "6. MONEY MULTIPLIER – COMPLETE DERIVATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Money Multiplier (m) shows the relationship between total money supply and high powered money.",
+      "id": "3lzp8pt"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "m = 1 / CRR",
+      "id": "yvevnrz"
+    },
+    {
+      "type": "paragraph",
+      "content": "Example:<br/>If CRR = 20% (0.20)<br/>Multiplier = 1 / 0.20 = 5<br/>If initial deposit = ₹1,000<br/>Total money supply = 1000 × 5 = ₹5,000",
+      "id": "7wg4yby"
+    },
+    {
+      "type": "paragraph",
+      "content": "Thus lower CRR → higher multiplier → higher money supply.",
+      "id": "aoz91db"
+    },
+    {
+      "id": "ra7gnup",
+      "type": "heading",
+      "level": 2,
+      "content": "7. VELOCITY OF MONEY"
+    },
+    {
+      "type": "paragraph",
+      "content": "Velocity of money refers to the frequency with which a unit of money circulates in an economy.",
+      "id": "jyjeifd"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Barter System",
+        "Money Economy"
+      ],
+      "rows": [
+        [
+          "Exchange Requirement",
+          "Requires double coincidence of wants",
+          "Functions as a universal medium of exchange"
+        ],
+        [
+          "Divisibility",
+          "Suffers from lack of divisibility",
+          "Highly divisible units"
+        ],
+        [
+          "Measure of Value",
+          "Absence of common measure of value",
+          "Acts as a standard unit of account"
+        ],
+        [
+          "Store of Value",
+          "Difficulty in storing wealth",
+          "Serves as an efficient store of value"
+        ]
+      ],
+      "id": "4od2o47"
+    },
+    {
+      "type": "paragraph",
+      "content": "Fisher’s Equation of Exchange: MV = PT",
+      "id": "t95qk30"
+    },
+    {
+      "type": "paragraph",
+      "content": "Where M = Money Supply, V = Velocity, P = Price Level, T = Transactions.",
+      "id": "t7chapo"
+    },
+    {
+      "type": "paragraph",
+      "content": "If V increases, economic activity increases.",
+      "id": "avk4m8t"
+    },
+    {
+      "id": "4cdm3r8",
+      "type": "heading",
+      "level": 2,
+      "content": "8. FISHER’S QUANTITY THEORY"
+    },
+    {
+      "type": "paragraph",
+      "content": "Fisher argued that price level is directly proportional to money supply assuming velocity and output constant.",
+      "id": "pio88b1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "MV = PT",
+      "id": "isae6pj"
+    },
+    {
+      "type": "paragraph",
+      "content": "Increase in M → Increase in P (Inflation).",
+      "id": "pci24su"
+    },
+    {
+      "id": "4fd1s4i",
+      "type": "heading",
+      "level": 2,
+      "content": "9. KEYNES’ LIQUIDITY PREFERENCE THEORY"
+    },
+    {
+      "type": "paragraph",
+      "content": "Keynes stated that demand for money depends on three motives:",
+      "id": "etyc1p1"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Transaction Motive (depends on income)<br/>• Precautionary Motive (depends on income)<br/>• Speculative Motive (depends on interest rate)",
+      "id": "q62om72"
+    },
+    {
+      "type": "paragraph",
+      "content": "Total Demand for Money = L1(Y) + L2(r)",
+      "id": "0y1yqub"
+    },
+    {
+      "id": "n6vmdu6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Motive</p>",
+            "<p>Reason</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Transaction Motive</p>",
+            "<p>For day-to-day expenses</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Precautionary Motive</p>",
+            "<p>For emergencies</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Speculative Motive</p>",
+            "<p>To take advantage of interest rate changes</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "When interest rate falls, speculative demand increases.",
+      "id": "c4f1ijs"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "M3 is officially designated as 'Broad Money' and is the most frequently tested RBI money supply aggregate.",
+        "High Powered Money (H) forms the foundation for bank credit creation in an economy.",
+        "Lower CRR directly leads to a higher money multiplier and increased total money supply.",
+        "Monetary policy becomes completely ineffective during a Liquidity Trap."
+      ],
+      "id": "n80rx6i"
+    },
+    {
+      "id": "ux2fmuf",
+      "type": "heading",
+      "level": 2,
+      "content": "10. LIQUIDITY TRAP"
+    },
+    {
+      "type": "paragraph",
+      "content": "Liquidity trap occurs when interest rates are extremely low and people prefer to hold money rather than invest in bonds. In such a situation, monetary policy becomes ineffective.",
+      "id": "1hkd7cx"
+    },
+    {
+      "id": "fjnqmbe",
+      "type": "heading",
+      "level": 2,
+      "content": "11. MONEY MARKET EQUILIBRIUM"
+    },
+    {
+      "type": "paragraph",
+      "content": "Equilibrium occurs when Money Demand equals Money Supply. The intersection determines equilibrium interest rate.",
+      "id": "5lhqs40"
+    },
+    {
+      "id": "v9j3xs4",
+      "type": "heading",
+      "level": 2,
+      "content": "12. ROLE OF RBI IN CONTROLLING MONEY SUPPLY"
+    },
+    {
+      "type": "paragraph",
+      "content": "RBI controls money supply through:<br/>• Repo Rate<br/>• Reverse Repo Rate<br/>• CRR<br/>• SLR<br/>• Open Market Operations",
+      "id": "iekzm2c"
+    },
+    {
+      "id": "ob5ru1m",
+      "type": "heading",
+      "level": 2,
+      "content": "13. RRB HIGH-VALUE POINTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• M3 = Broad Money<br/>• High Powered Money = Monetary Base<br/>• Money Multiplier = 1/CRR<br/>• MV = PT (Fisher)<br/>• Liquidity Trap at low interest rate<br/>",
+      "id": "ubtpqwd"
+    }
+  ],
+  "enriched": true
+}

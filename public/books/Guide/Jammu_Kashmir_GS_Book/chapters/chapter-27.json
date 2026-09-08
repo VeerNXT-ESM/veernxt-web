@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "4jbmo9e"
+      "id": "4jbmo9e",
+      "content": "J&amp;K's education and health sectors have seen substantial recent institutional expansion, making this a useful current-affairs-adjacent chapter alongside the more historical/constitutional material earlier in the book."
     },
     {
       "type": "statStrip",
@@ -46,68 +47,63 @@
       "id": "prr15k8"
     },
     {
-      "type": "pullQuote",
-      "content": "School Education & Literacy Initiatives",
-      "id": "thsytxo"
-    },
-    {
       "id": "kva33z7",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Institution</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>University of Kashmir</p>",
+            "<p>Srinagar</p>",
+            "<p>Established 1948; one of J&amp;K's oldest and largest universities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>University of Jammu</p>",
+            "<p>Jammu</p>",
+            "<p>Established 1969 (as an independent university, having earlier been a constituent college of Punjab University)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>National Institute of Technology (NIT) Srinagar</p>",
+            "<p>Srinagar</p>",
+            "<p>Centrally administered technical institute, part of India's NIT system</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Islamic University of Science and Technology (IUST)</p>",
+            "<p>Awantipora</p>",
+            "<p>State/UT university focused on science, technology and Islamic studies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Central University of Kashmir &amp; Central University of Jammu</p>",
+            "<p>Srinagar area / Jammu area</p>",
+            "<p>Established under the Central Universities Act, 2009, extending central-university-model higher education to both divisions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>AIIMS Jammu (under development/phased operationalisation)</p>",
+            "<p>Vijaypur, Jammu district</p>",
+            "<p>Part of the national AIIMS expansion programme, adding a premier medical education/tertiary-care institution to the UT</p>"
           ]
         }
       ]
@@ -122,8 +118,8 @@
       "id": "2cmw3d9",
       "type": "list",
       "items": [
-        null,
-        null
+        "The Samagra Shiksha Abhiyan (the central government's integrated school-education scheme) has been extended to J&amp;K UT alongside various UT-specific initiatives aimed at improving school infrastructure and enrolment, particularly in remote and border areas.",
+        "Given J&amp;K's historical literacy gap relative to the national average (Chapter 19), targeted female-literacy and girl-child education initiatives have been a recurring policy emphasis across successive governments."
       ]
     },
     {
@@ -136,9 +132,9 @@
       "id": "syajvfm",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Government Medical College (GMC) Srinagar and GMC Jammu are the two principal, longest-established government medical colleges of the erstwhile state, supplemented in recent years by several newer medical colleges established across various districts as part of a broader push to expand tertiary healthcare access beyond the two main cities.",
+        "Sher-i-Kashmir Institute of Medical Sciences (SKIMS), Srinagar, is J&amp;K's premier super-speciality medical institute and research hospital, comparable in role to AIIMS-type institutions elsewhere in India.",
+        "Ayushman Bharat (central health-insurance scheme) has been extended to J&amp;K UT, alongside a UT-specific health-insurance scheme in earlier years, aimed at expanding financial protection for healthcare costs across the population."
       ]
     },
     {
@@ -160,11 +156,11 @@
       "id": "dq14aua",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "University of Kashmir (1948, Srinagar) and University of Jammu (1969, Jammu) are the two oldest major universities.",
+        "NIT Srinagar, IUST Awantipora, and separate Central Universities for Kashmir and Jammu are key higher-education institutions.",
+        "AIIMS Jammu (Vijaypur) is a major recent healthcare-infrastructure addition.",
+        "SKIMS, Srinagar = J&amp;K's premier super-speciality medical/research institute, comparable to AIIMS-type institutions elsewhere.",
+        "GMC Srinagar and GMC Jammu are the two principal long-established government medical colleges."
       ]
     }
   ],

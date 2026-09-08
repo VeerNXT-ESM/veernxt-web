@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "6vyn0ri"
+      "id": "6vyn0ri",
+      "content": "The monsoon is one of the most complex atmospheric circulation systems on Earth. Derived from the Arabic word 'Mausim' meaning season, monsoon refers to seasonal reversal of winds accompanied by significant changes in precipitation. It is not merely a wind system but a complete climatic phenomenon controlling agriculture, economy, water resources, and biodiversity — especially in South and Southeast Asia."
     },
     {
       "type": "statStrip",
@@ -53,19 +54,23 @@
     },
     {
       "type": "paragraph",
-      "id": "ir8cna1"
+      "id": "ir8cna1",
+      "content": "• Seasonal reversal of wind direction."
     },
     {
       "type": "paragraph",
-      "id": "j9t39pf"
+      "id": "j9t39pf",
+      "content": "• Associated with differential heating of land and water."
     },
     {
       "type": "paragraph",
-      "id": "tfxhwio"
+      "id": "tfxhwio",
+      "content": "• Produces distinct wet and dry seasons."
     },
     {
       "type": "paragraph",
-      "id": "t2iw1wg"
+      "id": "t2iw1wg",
+      "content": "• Most developed over the Indian subcontinent."
     },
     {
       "id": "1p3tqic",
@@ -75,7 +80,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ccijh64"
+      "id": "ccijh64",
+      "content": "Monsoon-type circulations occur in several tropical regions due to land-sea thermal contrasts."
     },
     {
       "id": "x1c50y8",
@@ -84,43 +90,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>South Asia</p>",
+            "<p>Strongest monsoon; dominates India and neighboring countries.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>East Asia</p>",
+            "<p>Influenced by Pacific Ocean and Siberian High.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>West Africa</p>",
+            "<p>Driven by ITCZ migration.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Northern Australia</p>",
+            "<p>Summer monsoon brings rainfall.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>North America</p>",
+            "<p>Weak monsoon affecting Mexico and southwestern USA.</p>"
           ]
         }
       ]
@@ -133,19 +139,23 @@
     },
     {
       "type": "paragraph",
-      "id": "14bgn16"
+      "id": "14bgn16",
+      "content": "• During summer, land heats faster than oceans creating low pressure over continents."
     },
     {
       "type": "paragraph",
-      "id": "5kmw4uc"
+      "id": "5kmw4uc",
+      "content": "• Oceans remain relatively cooler, forming high pressure."
     },
     {
       "type": "paragraph",
-      "id": "m30h8ox"
+      "id": "m30h8ox",
+      "content": "• Moist air moves from sea to land producing rainfall."
     },
     {
       "type": "paragraph",
-      "id": "2szwk9n"
+      "id": "2szwk9n",
+      "content": "• In winter, the pattern reverses."
     },
     {
       "id": "8v0tgov",
@@ -155,19 +165,23 @@
     },
     {
       "type": "paragraph",
-      "id": "mkia6bk"
+      "id": "mkia6bk",
+      "content": "Edmond Halley proposed that monsoon results from differential heating between land and sea."
     },
     {
       "type": "paragraph",
-      "id": "8lgt301"
+      "id": "8lgt301",
+      "content": "• Summer: Land becomes low pressure; moist winds blow toward land."
     },
     {
       "type": "paragraph",
-      "id": "sa2utkf"
+      "id": "sa2utkf",
+      "content": "• Winter: Land becomes high pressure; dry winds blow toward sea."
     },
     {
       "type": "paragraph",
-      "id": "8e4oslp"
+      "id": "8e4oslp",
+      "content": "Limitation: Could not explain sudden bursts, breaks, or upper-air circulation."
     },
     {
       "id": "tsba998",
@@ -176,24 +190,35 @@
       "content": "5. Modern Theory of Monsoon (Dynamic Approach)"
     },
     {
-      "type": "paragraph",
-      "id": "ps4bqf7"
+      "id": "f25bap0",
+      "type": "image",
+      "imageId": "5xlehtg",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_5xlehtg.jpeg"
     },
     {
       "type": "paragraph",
-      "id": "kodva62"
+      "id": "ps4bqf7",
+      "content": "• Shifting of ITCZ toward the Tropic of Cancer during summer."
     },
     {
       "type": "paragraph",
-      "id": "0fr7glu"
+      "id": "kodva62",
+      "content": "• Formation of strong low pressure over northwest India and Tibet."
     },
     {
       "type": "paragraph",
-      "id": "t2ddduo"
+      "id": "0fr7glu",
+      "content": "• Cross-equatorial flow of southeast trade winds."
     },
     {
       "type": "paragraph",
-      "id": "vnk2rbc"
+      "id": "t2ddduo",
+      "content": "• Coriolis force deflects them into southwest monsoon."
+    },
+    {
+      "type": "paragraph",
+      "id": "vnk2rbc",
+      "content": "• Jet streams control onset and withdrawal."
     },
     {
       "id": "p8o1ciw",
@@ -203,15 +228,18 @@
     },
     {
       "type": "paragraph",
-      "id": "5h9yges"
+      "id": "5h9yges",
+      "content": "• Acts as an elevated heat source during summer."
     },
     {
       "type": "paragraph",
-      "id": "26l9srd"
+      "id": "26l9srd",
+      "content": "• Strengthens low-pressure conditions."
     },
     {
       "type": "paragraph",
-      "id": "tp8txwj"
+      "id": "tp8txwj",
+      "content": "• Enhances vertical air circulation."
     },
     {
       "id": "orzk4mo",
@@ -221,7 +249,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1332es6"
+      "id": "1332es6",
+      "content": "• Subtropical Westerly Jet shifts north of Himalayas in summer allowing monsoon onset."
     },
     {
       "type": "pullQuote",
@@ -230,11 +259,13 @@
     },
     {
       "type": "paragraph",
-      "id": "mndjvjy"
+      "id": "mndjvjy",
+      "content": "• Tropical Easterly Jet develops aiding strong rainfall."
     },
     {
       "type": "paragraph",
-      "id": "aqlbocs"
+      "id": "aqlbocs",
+      "content": "• Reappearance of Westerly Jet signals monsoon withdrawal."
     },
     {
       "id": "d9l5fy9",
@@ -244,7 +275,8 @@
     },
     {
       "type": "paragraph",
-      "id": "c0jq4fz"
+      "id": "c0jq4fz",
+      "content": "The Indian monsoon is the most dramatic seasonal wind system in the world."
     },
     {
       "id": "uz80pyj",
@@ -253,22 +285,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Branch</strong></p>",
+            "<p><strong>Path</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Arabian Sea Branch</p>",
+            "<p>Strikes Western Ghats causing heavy orographic rainfall.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bay of Bengal Branch</p>",
+            "<p>Moves toward northeast India and then westward along Himalayas.</p>"
           ]
         }
       ]
@@ -281,19 +313,23 @@
     },
     {
       "type": "paragraph",
-      "id": "7t4jcqb"
+      "id": "7t4jcqb",
+      "content": "• Sudden onset known as 'Monsoon Burst'."
     },
     {
       "type": "paragraph",
-      "id": "fb50col"
+      "id": "fb50col",
+      "content": "• Rainfall occurs in spells called 'breaks'."
     },
     {
       "type": "paragraph",
-      "id": "gm2bn5w"
+      "id": "gm2bn5w",
+      "content": "• Orographic uplift causes heavy rainfall on windward slopes."
     },
     {
       "type": "paragraph",
-      "id": "f4hmzgn"
+      "id": "f4hmzgn",
+      "content": "• Leeward regions lie in rain shadow."
     },
     {
       "id": "w4tuyqs",
@@ -303,15 +339,18 @@
     },
     {
       "type": "paragraph",
-      "id": "fdoa3jn"
+      "id": "fdoa3jn",
+      "content": "• Begins in northwest India around September."
     },
     {
       "type": "paragraph",
-      "id": "lbprtdg"
+      "id": "lbprtdg",
+      "content": "• Associated with clear skies and rising pressure."
     },
     {
       "type": "paragraph",
-      "id": "xfolocj"
+      "id": "xfolocj",
+      "content": "• Retreating monsoon brings rainfall to Tamil Nadu."
     },
     {
       "id": "gtbdth6",
@@ -321,7 +360,8 @@
     },
     {
       "type": "paragraph",
-      "id": "u1vi2il"
+      "id": "u1vi2il",
+      "content": "• El Niño reduces monsoon rainfall."
     },
     {
       "type": "comparisonTable",
@@ -351,15 +391,18 @@
     },
     {
       "type": "paragraph",
-      "id": "4thbvsb"
+      "id": "4thbvsb",
+      "content": "• La Niña strengthens rainfall."
     },
     {
       "type": "paragraph",
-      "id": "thl4dq7"
+      "id": "thl4dq7",
+      "content": "• Indian Ocean Dipole (IOD) can offset El Niño effects."
     },
     {
       "type": "paragraph",
-      "id": "zrxbeoj"
+      "id": "zrxbeoj",
+      "content": "• Snow cover over Eurasia influences pressure patterns."
     },
     {
       "id": "a7bd7kh",
@@ -368,36 +411,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Phenomenon</strong></p>",
+            "<p><strong>Impact on Indian Monsoon</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>El Niño</p>",
+            "<p>Weak monsoon; drought risk.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>La Niña</p>",
+            "<p>Stronger monsoon.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Positive IOD</p>",
+            "<p>Enhances rainfall.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Negative IOD</p>",
+            "<p>Suppresses rainfall.</p>"
           ]
         }
       ]
@@ -410,19 +453,23 @@
     },
     {
       "type": "paragraph",
-      "id": "egm5vcp"
+      "id": "egm5vcp",
+      "content": "• Supports agriculture for billions."
     },
     {
       "type": "paragraph",
-      "id": "3nnqgmj"
+      "id": "3nnqgmj",
+      "content": "• Recharges groundwater."
     },
     {
       "type": "paragraph",
-      "id": "7rzgbjs"
+      "id": "7rzgbjs",
+      "content": "• Drives hydroelectric power."
     },
     {
       "type": "paragraph",
-      "id": "upg5gih"
+      "id": "upg5gih",
+      "content": "• Influences GDP in agrarian economies."
     },
     {
       "id": "fqquqb7",
@@ -432,19 +479,23 @@
     },
     {
       "type": "paragraph",
-      "id": "njgfysb"
+      "id": "njgfysb",
+      "content": "• Floods due to excessive rainfall."
     },
     {
       "type": "paragraph",
-      "id": "omvxgvj"
+      "id": "omvxgvj",
+      "content": "• Drought when monsoon fails."
     },
     {
       "type": "paragraph",
-      "id": "u1jlapa"
+      "id": "u1jlapa",
+      "content": "• Landslides in mountainous regions."
     },
     {
       "type": "paragraph",
-      "id": "nk1lzez"
+      "id": "nk1lzez",
+      "content": "• Urban flooding."
     },
     {
       "id": "wtgfafc",
@@ -454,7 +505,8 @@
     },
     {
       "type": "paragraph",
-      "id": "d61sy4a"
+      "id": "d61sy4a",
+      "content": "• Monsoon is a seasonal wind reversal.<br></br>• ITCZ migration is central to monsoon formation.<br></br>• Tibetan Plateau strengthens summer monsoon.<br></br>• El Niño weakens Indian monsoon.<br></br>• Arabian Sea branch causes heavy rainfall on Western Ghats.<br></br>• Retreating monsoon gives winter rain to Tamil Nadu."
     },
     {
       "id": "d4x9gvo",
@@ -464,19 +516,23 @@
     },
     {
       "type": "paragraph",
-      "id": "y1x3ju1"
+      "id": "y1x3ju1",
+      "content": "• The Tibetan Plateau is often called the 'Thermal Engine of Asia'."
     },
     {
       "type": "paragraph",
-      "id": "s1fr7dr"
+      "id": "s1fr7dr",
+      "content": "• Situated at an average elevation above 4,000 meters, it heats rapidly during summer."
     },
     {
       "type": "paragraph",
-      "id": "ht5wo0j"
+      "id": "ht5wo0j",
+      "content": "• This intense heating creates a strong low-pressure zone over Central Asia."
     },
     {
       "type": "paragraph",
-      "id": "vhxdz23"
+      "id": "vhxdz23",
+      "content": "• The low pressure strengthens the pressure gradient between the Indian Ocean and the Asian landmass."
     },
     {
       "type": "examAlert",
@@ -489,27 +545,33 @@
     },
     {
       "type": "paragraph",
-      "id": "0e4we2n"
+      "id": "0e4we2n",
+      "content": "• As a result, moisture-laden winds are drawn more powerfully toward the Indian subcontinent."
     },
     {
       "type": "paragraph",
-      "id": "x4kq2bg"
+      "id": "x4kq2bg",
+      "content": "• It enhances vertical convection, leading to formation of deep cumulonimbus clouds."
     },
     {
       "type": "paragraph",
-      "id": "3aroemm"
+      "id": "3aroemm",
+      "content": "• The plateau also disrupts the subtropical westerly jet, forcing it north of the Himalayas — a key condition for monsoon onset."
     },
     {
       "type": "paragraph",
-      "id": "b31p1cu"
+      "id": "b31p1cu",
+      "content": "• During winter, the plateau cools rapidly and becomes a strong high-pressure region, strengthening dry continental winds."
     },
     {
       "type": "paragraph",
-      "id": "i9ka5bu"
+      "id": "i9ka5bu",
+      "content": "• It acts as a mechanical barrier, preventing cold Central Asian winds from directly entering India during summer."
     },
     {
       "type": "paragraph",
-      "id": "txfi4s2"
+      "id": "txfi4s2",
+      "content": "• Modern meteorology considers the Tibetan Plateau one of the MOST critical controls of the Asian monsoon."
     },
     {
       "id": "cfx75fn",
@@ -519,27 +581,33 @@
     },
     {
       "type": "paragraph",
-      "id": "p98yivf"
+      "id": "p98yivf",
+      "content": "• Mascarene High: A strong high-pressure area near Madagascar that drives cross-equatorial winds toward India."
     },
     {
       "type": "paragraph",
-      "id": "b0qmnl3"
+      "id": "b0qmnl3",
+      "content": "• Somali Jet: A fast low-level jet stream that transports enormous moisture from the Arabian Sea."
     },
     {
       "type": "paragraph",
-      "id": "9lltiz8"
+      "id": "9lltiz8",
+      "content": "• Walker Circulation: East-west atmospheric circulation that weakens during El Niño, suppressing Indian rainfall."
     },
     {
       "type": "paragraph",
-      "id": "1ubbjet"
+      "id": "1ubbjet",
+      "content": "• Hadley Cell: Northward shift intensifies tropical convergence over India."
     },
     {
       "type": "paragraph",
-      "id": "cpv0omw"
+      "id": "cpv0omw",
+      "content": "• Eurasian Snow Cover: Excess snow delays land heating and weakens monsoon."
     },
     {
       "type": "paragraph",
-      "id": "0heehzs"
+      "id": "0heehzs",
+      "content": "• Indian Ocean Sea Surface Temperatures strongly influence moisture supply."
     }
   ],
   "enriched": true

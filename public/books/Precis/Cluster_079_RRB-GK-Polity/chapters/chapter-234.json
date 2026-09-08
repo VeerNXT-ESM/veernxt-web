@@ -1,0 +1,84 @@
+{
+  "title": "13. Exam Traps",
+  "order": 234,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• CAG is NOT a part of Parliament.<br/>• CAG does NOT control money — only audits it.<br/>• Removal is similar to a Supreme Court judge.<br/>• Salary is equal to a Supreme Court judge.",
+      "id": "3todr5k"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CAG does NOT control money — only audits it.",
+      "id": "eosli0b"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "CAG",
+        "Supreme Court Judge"
+      ],
+      "rows": [
+        [
+          "Removal Procedure",
+          "Similar to Supreme Court Judge",
+          "Constitutional Standard"
+        ],
+        [
+          "Salary Structure",
+          "Equal to Supreme Court Judge",
+          "Constitutional Standard"
+        ]
+      ],
+      "id": "2ucxomj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Parliament Status",
+          "value": "Not a Part",
+          "icon": "info"
+        },
+        {
+          "label": "Financial Control",
+          "value": "Audit Only",
+          "icon": "check"
+        },
+        {
+          "label": "Removal Process",
+          "value": "Equal to SC Judge",
+          "icon": "award"
+        },
+        {
+          "label": "Salary Level",
+          "value": "Equal to SC Judge",
+          "icon": "award"
+        }
+      ],
+      "id": "zyipj9j"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Common Trap: Questions may falsely claim CAG controls the release of money; CAG ONLY audits it.",
+        "Do not confuse CAG with parliamentary office; CAG is NOT a part of Parliament.",
+        "Remember that both removal procedure and salary for CAG are identical/similar to a Supreme Court judge."
+      ],
+      "id": "cqqx70s"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The CAG is not a part of Parliament.",
+        "The CAG does not control public funds; its function is limited strictly to auditing.",
+        "The removal process of the CAG is similar to that of a Supreme Court judge.",
+        "The CAG receives a salary equal to that of a Supreme Court judge."
+      ],
+      "id": "6840k0z"
+    }
+  ],
+  "enriched": true
+}

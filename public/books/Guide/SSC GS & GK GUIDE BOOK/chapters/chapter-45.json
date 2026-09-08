@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "gauq91a"
+      "id": "gauq91a",
+      "content": "Industries play an important role in the economic development of a country. Industrialization leads to large-scale production, employment generation, technological advancement and economic growth. India has a diversified industrial structure including traditional industries, modern industries and service-based industries."
     },
     {
       "type": "statStrip",
@@ -47,15 +48,18 @@
     },
     {
       "type": "paragraph",
-      "id": "v8oswwu"
+      "id": "v8oswwu",
+      "content": "• Industry refers to economic activities related to the production of goods."
     },
     {
       "type": "paragraph",
-      "id": "ahvkoln"
+      "id": "ahvkoln",
+      "content": "• It involves the conversion of raw materials into finished products."
     },
     {
       "type": "paragraph",
-      "id": "j9pfflm"
+      "id": "j9pfflm",
+      "content": "• Industries help in increasing production and economic growth."
     },
     {
       "id": "67irpq7",
@@ -70,33 +74,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type of Industry</strong></p>",
+            "<p><strong>Examples</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Primary Industries</p>",
+            "<p>Mining, Fishing</p>",
+            "<p>Extraction of natural resources</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Secondary Industries</p>",
+            "<p>Manufacturing, Construction</p>",
+            "<p>Processing raw materials into goods</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tertiary Industries</p>",
+            "<p>Transport, Banking, Communication</p>",
+            "<p>Service-related industries</p>"
           ]
         }
       ]
@@ -114,73 +118,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Industry</strong></p>",
+            "<p><strong>Major Centers</strong></p>",
+            "<p><strong>Raw Materials</strong></p>",
+            "<p><strong>Products</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Iron and Steel Industry</p>",
+            "<p>Bhilai, Rourkela, Jamshedpur</p>",
+            "<p>Iron ore, coal</p>",
+            "<p>Steel products</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cotton Textile Industry</p>",
+            "<p>Mumbai, Ahmedabad</p>",
+            "<p>Cotton</p>",
+            "<p>Clothing and fabrics</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Jute Industry</p>",
+            "<p>West Bengal</p>",
+            "<p>Jute fiber</p>",
+            "<p>Bags, ropes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sugar Industry</p>",
+            "<p>Uttar Pradesh, Maharashtra</p>",
+            "<p>Sugarcane</p>",
+            "<p>Sugar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cement Industry</p>",
+            "<p>Rajasthan, Madhya Pradesh</p>",
+            "<p>Limestone</p>",
+            "<p>Cement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Automobile Industry</p>",
+            "<p>Chennai, Pune</p>",
+            "<p>Steel, rubber</p>",
+            "<p>Vehicles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>IT Industry</p>",
+            "<p>Bengaluru, Hyderabad</p>",
+            "<p>Technology</p>",
+            "<p>Software services</p>"
           ]
         }
       ]
@@ -194,31 +198,31 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "bvd4pp3"
+      "id": "bvd4pp3",
+      "content": "• Mumbai-Pune Industrial Region"
     },
     {
       "type": "paragraph",
-      "id": "vr6cacu"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Factors Affecting Industrial Location",
-      "id": "nrmlweo"
+      "id": "vr6cacu",
+      "content": "• Hugli Industrial Region (West Bengal)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "eju6h2b"
+      "id": "eju6h2b",
+      "content": "• Chota Nagpur Industrial Region"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l91kwep"
+      "id": "l91kwep",
+      "content": "• Ahmedabad-Vadodara Industrial Region"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d7bxxw5"
+      "id": "d7bxxw5",
+      "content": "• Bengaluru-Tamil Nadu Industrial Region"
     },
     {
       "id": "ooeb2pa",
@@ -228,23 +232,28 @@
     },
     {
       "type": "paragraph",
-      "id": "8xobk92"
+      "id": "8xobk92",
+      "content": "• Availability of raw materials."
     },
     {
       "type": "paragraph",
-      "id": "8l7kime"
+      "id": "8l7kime",
+      "content": "• Availability of labour."
     },
     {
       "type": "paragraph",
-      "id": "o7u8xhd"
+      "id": "o7u8xhd",
+      "content": "• Availability of power supply."
     },
     {
       "type": "paragraph",
-      "id": "279bdmq"
+      "id": "279bdmq",
+      "content": "• Transportation facilities."
     },
     {
       "type": "paragraph",
-      "id": "kzgsbup"
+      "id": "kzgsbup",
+      "content": "• Market availability."
     },
     {
       "id": "d9n1c0a",
@@ -254,15 +263,18 @@
     },
     {
       "type": "paragraph",
-      "id": "fyzrmp2"
+      "id": "fyzrmp2",
+      "content": "• Industrial Policy Resolution 1948 – first industrial policy of India."
     },
     {
       "type": "paragraph",
-      "id": "a8st5zm"
+      "id": "a8st5zm",
+      "content": "• Industrial Policy Resolution 1956 – emphasized public sector development."
     },
     {
       "type": "paragraph",
-      "id": "ed9hdfk"
+      "id": "ed9hdfk",
+      "content": "• New Industrial Policy 1991 – liberalization, privatization and globalization."
     },
     {
       "id": "55uyonr",
@@ -272,11 +284,13 @@
     },
     {
       "type": "paragraph",
-      "id": "rx6o0e5"
+      "id": "rx6o0e5",
+      "content": "• Generates employment opportunities."
     },
     {
       "type": "paragraph",
-      "id": "kzkyckf"
+      "id": "kzkyckf",
+      "content": "• Increases national income."
     },
     {
       "type": "examAlert",
@@ -289,11 +303,13 @@
     },
     {
       "type": "paragraph",
-      "id": "vvnehos"
+      "id": "vvnehos",
+      "content": "• Promotes technological advancement."
     },
     {
       "type": "paragraph",
-      "id": "8etwprr"
+      "id": "8etwprr",
+      "content": "• Supports export growth."
     },
     {
       "id": "a4o8rm6",
@@ -303,15 +319,18 @@
     },
     {
       "type": "paragraph",
-      "id": "vehi75i"
+      "id": "vehi75i",
+      "content": "• Jamshedpur is famous for iron and steel industry."
     },
     {
       "type": "paragraph",
-      "id": "4m3nxt3"
+      "id": "4m3nxt3",
+      "content": "• Mumbai is known as the cotton textile capital of India."
     },
     {
       "type": "paragraph",
-      "id": "h17y9om"
+      "id": "h17y9om",
+      "content": "• Chota Nagpur Plateau is the main industrial region due to mineral resources."
     }
   ],
   "enriched": true

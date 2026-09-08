@@ -1,0 +1,82 @@
+{
+  "title": "3. Composition of the Supreme Court",
+  "order": 90,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Originally, the Supreme Court consisted of:<br/>• One Chief Justice of India<br/>• Seven other judges<br/><br/>Presently, Parliament has increased the strength.<br/>Current sanctioned strength:<br/>• Chief Justice of India + 33 judges = 34 judges total.<br/><br/>Parliament has the authority to increase the number of judges.",
+      "id": "9wnkuzz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Parliament has the authority to increase the number of judges.",
+      "id": "uu4loa8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Composition Aspect",
+        "Original Sanctioned Strength",
+        "Present Sanctioned Strength"
+      ],
+      "rows": [
+        [
+          "Chief Justice of India",
+          "1",
+          "1"
+        ],
+        [
+          "Other Judges",
+          "7",
+          "33"
+        ],
+        [
+          "Total Strength",
+          "8",
+          "34"
+        ]
+      ],
+      "id": "prxxq6z"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Original Strength",
+          "value": "8 Judges",
+          "icon": "calendar"
+        },
+        {
+          "label": "Current Strength",
+          "value": "34 Judges",
+          "icon": "award"
+        },
+        {
+          "label": "Deciding Authority",
+          "value": "Parliament",
+          "icon": "check"
+        }
+      ],
+      "id": "st5ijsp"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Parliament (and not the President) has the authority to increase the strength of Supreme Court judges.",
+        "The initial total strength of Supreme Court judges was 8, whereas the present sanctioned total strength is 34."
+      ],
+      "id": "2begt3b"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Originally, the Supreme Court comprised 1 Chief Justice of India and 7 other judges.",
+        "The present sanctioned strength stands at 34 judges (1 Chief Justice of India + 33 judges).",
+        "Parliament holds the statutory authority to increase the number of Supreme Court judges."
+      ],
+      "id": "t4f97i5"
+    }
+  ],
+  "enriched": true
+}

@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9gqgfxx"
+      "id": "9gqgfxx",
+      "content": "Cloud computing is the delivery of computing services — servers, storage, databases, networking, software, analytics, and intelligence — over the Internet ('the cloud') to offer faster innovation, flexible resources, and economies of scale."
     },
     {
       "id": "9mvzpa5",
@@ -58,43 +59,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Characteristic</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>On-demand Self-service</p>",
+            "<p>Users provision resources without human interaction with provider</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Broad Network Access</p>",
+            "<p>Available over network; accessible by diverse client platforms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Resource Pooling</p>",
+            "<p>Multi-tenant model; shared physical resources dynamically assigned</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rapid Elasticity</p>",
+            "<p>Scale resources up or down quickly based on demand</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Measured Service</p>",
+            "<p>Resource usage monitored; pay for what you use (utility computing)</p>"
           ]
         }
       ]
@@ -117,71 +118,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Model</strong></p>",
+            "<p><strong>Full Form</strong></p>",
+            "<p><strong>What's Managed by Provider</strong></p>",
+            "<p><strong>What Customer Manages</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>IaaS</p>",
+            "<p>Infrastructure as a Service</p>",
+            "<p>Physical infrastructure, virtualisation, storage, networking</p>",
+            "<p>OS, middleware, runtime, applications, data</p>",
+            "<p>AWS EC2, Azure VMs, Google Compute Engine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>PaaS</p>",
+            "<p>Platform as a Service</p>",
+            "<p>IaaS + OS, middleware, runtime, development tools</p>",
+            "<p>Applications and data only</p>",
+            "<p>Heroku, Google App Engine, AWS Elastic Beanstalk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>SaaS</p>",
+            "<p>Software as a Service</p>",
+            "<p>Everything including applications</p>",
+            "<p>Only user data and access</p>",
+            "<p>Gmail, Office 365, Salesforce, Zoom, GitHub</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>FaaS / Serverless</p>",
+            "<p>Function as a Service</p>",
+            "<p>Infrastructure + runtime + scaling</p>",
+            "<p>Function code only; event-driven</p>",
+            "<p>AWS Lambda, Azure Functions, Google Cloud Functions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>CaaS</p>",
+            "<p>Container as a Service</p>",
+            "<p>Infrastructure + container orchestration</p>",
+            "<p>Container images and applications</p>",
+            "<p>Google GKE, Amazon ECS/EKS, Azure AKS</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>DBaaS</p>",
+            "<p>Database as a Service</p>",
+            "<p>Infrastructure + database engine + backups</p>",
+            "<p>Data schema and queries</p>",
+            "<p>Amazon RDS, Azure SQL, Google Cloud SQL</p>"
           ]
         }
       ]
@@ -230,61 +231,61 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Deployment Model</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Pros</strong></p>",
+            "<p><strong>Cons</strong></p>",
+            "<p><strong>Use Case</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Public Cloud</p>",
+            "<p>Resources owned and operated by third-party provider; shared infrastructure</p>",
+            "<p>Low cost; high scalability; no maintenance</p>",
+            "<p>Less control; security concerns; compliance issues</p>",
+            "<p>Startups, web apps, development/test environments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Private Cloud</p>",
+            "<p>Cloud infrastructure for exclusive use of single organisation</p>",
+            "<p>Full control; better security; compliance-friendly</p>",
+            "<p>Expensive; requires IT expertise; limited scalability</p>",
+            "<p>Banks, government, healthcare — sensitive data</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Hybrid Cloud</p>",
+            "<p>Combination of public + private; data/apps portable between them</p>",
+            "<p>Flexibility; balance security and scalability</p>",
+            "<p>Complex management; integration challenges</p>",
+            "<p>Banks: sensitive data private, web apps public</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Multi-Cloud</p>",
+            "<p>Use multiple cloud providers simultaneously</p>",
+            "<p>Avoid vendor lock-in; best-of-breed services</p>",
+            "<p>Most complex; data governance challenges</p>",
+            "<p>Large enterprises; redundancy-critical systems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Community Cloud</p>",
+            "<p>Shared by organisations with common concerns (compliance, security)</p>",
+            "<p>Shared cost; meets specific needs</p>",
+            "<p>Limited scalability; requires governance</p>",
+            "<p>Government agencies; financial regulators</p>"
           ]
         }
       ]
@@ -302,73 +303,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Service Category</strong></p>",
+            "<p><strong>AWS</strong></p>",
+            "<p><strong>Microsoft Azure</strong></p>",
+            "<p><strong>Google Cloud Platform</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Compute</p>",
+            "<p>EC2 (VMs); Lambda (Serverless); ECS/EKS (Containers)</p>",
+            "<p>Virtual Machines; Azure Functions; AKS</p>",
+            "<p>Compute Engine; Cloud Functions; GKE</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Storage</p>",
+            "<p>S3 (Object); EBS (Block); EFS (File); Glacier (Archive)</p>",
+            "<p>Blob Storage; Azure Disk; Azure Files</p>",
+            "<p>Cloud Storage; Persistent Disk; Filestore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Database</p>",
+            "<p>RDS, DynamoDB, Aurora, Redshift</p>",
+            "<p>Azure SQL, Cosmos DB, Azure Synapse</p>",
+            "<p>Cloud SQL, Firestore, Bigtable, BigQuery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Networking</p>",
+            "<p>VPC, CloudFront (CDN), Route 53 (DNS), ELB</p>",
+            "<p>VNet, Azure CDN, Azure DNS, Azure LB</p>",
+            "<p>VPC, Cloud CDN, Cloud DNS, Cloud LB</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>AI/ML</p>",
+            "<p>SageMaker, Rekognition, Comprehend</p>",
+            "<p>Azure ML, Cognitive Services, OpenAI</p>",
+            "<p>Vertex AI, AutoML, TensorFlow on GCP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Security</p>",
+            "<p>IAM, WAF, Shield (DDoS), GuardDuty</p>",
+            "<p>AAD, Defender, Sentinel, Key Vault</p>",
+            "<p>IAM, Cloud Armor, Chronicle, Secret Manager</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Market Share (2024)</p>",
+            "<p>~31% — Market leader</p>",
+            "<p>~25% — 2nd; strong enterprise</p>",
+            "<p>~11% — 3rd; strong data/analytics</p>"
           ]
         }
       ]
@@ -395,73 +396,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>Virtual Machines (VMs)</strong></p>",
+            "<p><strong>Containers (Docker)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Isolation</p>",
+            "<p>Full OS isolation; hypervisor level</p>",
+            "<p>Process-level isolation; shared OS kernel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Size</p>",
+            "<p>GBs (includes full OS)</p>",
+            "<p>MBs (only app + dependencies)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Startup Time</p>",
+            "<p>Minutes (boots OS)</p>",
+            "<p>Seconds (starts process)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Resource Usage</p>",
+            "<p>Heavy; own kernel, memory, CPU</p>",
+            "<p>Lightweight; share host OS kernel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Portability</p>",
+            "<p>Less portable; hardware-dependent</p>",
+            "<p>Highly portable; runs anywhere Docker runs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Security</p>",
+            "<p>Stronger isolation</p>",
+            "<p>Weaker (shared kernel); namespaces/cgroups for isolation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Technology</p>",
+            "<p>VMware, VirtualBox, KVM, Hyper-V</p>",
+            "<p>Docker, containerd, Podman</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Use Cases</p>",
+            "<p>Legacy apps, different OS needs, strong isolation</p>",
+            "<p>Microservices, CI/CD, scalable cloud apps</p>"
           ]
         }
       ]
@@ -479,71 +480,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>K8s Component</strong></p>",
+            "<p><strong>Role</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pod</p>",
+            "<p>Smallest deployable unit; one or more containers sharing network/storage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Node</p>",
+            "<p>Worker machine (VM or physical); runs pods</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cluster</p>",
+            "<p>Set of nodes managed by Kubernetes control plane</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Control Plane</p>",
+            "<p>Master node; manages cluster state; API server, scheduler, etcd, controller manager</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deployment</p>",
+            "<p>Desired state declaration; manages replica sets; rolling updates, rollbacks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Service</p>",
+            "<p>Stable network endpoint for pods; load balancing; types: ClusterIP, NodePort, LoadBalancer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ingress</p>",
+            "<p>HTTP/HTTPS routing to services; SSL termination; name-based virtual hosting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ConfigMap / Secret</p>",
+            "<p>Externalize configuration from container image; Secrets for sensitive data</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Horizontal Pod Autoscaler</p>",
+            "<p>Automatically scale pod replicas based on CPU/memory metrics</p>"
           ]
         }
       ]

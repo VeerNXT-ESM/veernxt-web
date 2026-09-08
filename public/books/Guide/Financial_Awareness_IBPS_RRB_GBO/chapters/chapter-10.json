@@ -53,81 +53,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>System</strong></p>",
+            "<p><strong>Full Form</strong></p>",
+            "<p><strong>Key Feature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>UPI</p>",
+            "<p>Unified Payments Interface</p>",
+            "<p>Real-time P2P/P2M; 24x7; built on IMPS; governed by NPCI</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IMPS</p>",
+            "<p>Immediate Payment Service</p>",
+            "<p>Instant interbank transfer; 24x7; up to Rs.5 lakh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NEFT</p>",
+            "<p>National Electronic Funds Transfer</p>",
+            "<p>Hourly batches; 24x7 since 2019; no min/max limit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RTGS</p>",
+            "<p>Real Time Gross Settlement</p>",
+            "<p>Min Rs.2 lakh; for large value; real-time settlement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NACH</p>",
+            "<p>National Automated Clearing House</p>",
+            "<p>Bulk repetitive payments (salaries, EMIs, subsidies)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>BBPS</p>",
+            "<p>Bharat Bill Payment System</p>",
+            "<p>Centralised bill payment; utilities, insurance, FASTag</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>FASTag</p>",
+            "<p>Electronic Toll Collection</p>",
+            "<p>RFID-based; linked to wallet/bank; mandatory since 2021</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>AEPS</p>",
+            "<p>Aadhaar-enabled Payment System</p>",
+            "<p>Aadhaar-based biometric; financial inclusion; BC agents</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RuPay</p>",
+            "<p>Domestic Card Network</p>",
+            "<p>Indian alternative to Visa/Mastercard; NPCI product</p>"
           ]
         }
       ]
@@ -139,7 +139,8 @@
     },
     {
       "type": "paragraph",
-      "id": "p3fmcz8"
+      "id": "p3fmcz8",
+      "content": "<strong>Note: </strong><em>NPCI (National Payments Corporation of India) governs UPI, IMPS, NACH, BBPS, RuPay, FASTag, etc.</em>"
     },
     {
       "id": "talh3mi",
@@ -175,7 +176,8 @@
     },
     {
       "type": "paragraph",
-      "id": "nxfyyaz"
+      "id": "nxfyyaz",
+      "content": "NPCI was incorporated in 2008 as an umbrella organisation for retail payment systems in India. It is a not-for-profit entity promoted by RBI and IBA (Indian Banks AsGBOciation). Headquarters: Mumbai."
     },
     {
       "id": "k69bs9c",
@@ -185,7 +187,8 @@
     },
     {
       "type": "paragraph",
-      "id": "p4c4836"
+      "id": "p4c4836",
+      "content": "RBI has consistently expressed concern about private cryptocurrencies. The government introduced a Digital Assets Tax (30% flat tax + 1% TDS) in Union Budget 2022-23. RBI launched its own CBDC (Central Bank Digital Currency) called e-Rupee (e-INR) in 2022."
     },
     {
       "type": "examAlert",
@@ -200,9 +203,9 @@
       "id": "os018p3",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Wholesale CBDC pilot launched November 2022",
+        "Retail CBDC (Digital Rupee) pilot launched December 2022",
+        "e-INR is legal tender; different from cryptocurrency (not decentralised)"
       ]
     },
     {
@@ -213,7 +216,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4fvyg6g"
+      "id": "4fvyg6g",
+      "content": "Account Aggregator is an RBI-regulated entity that enables seamless and secure sharing of financial data between financial information providers (FIPs) and financial information users (FIUs) with the customer's consent."
     }
   ],
   "enriched": true

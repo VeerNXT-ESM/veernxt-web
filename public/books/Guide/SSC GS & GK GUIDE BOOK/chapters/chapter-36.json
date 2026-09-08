@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "iap6wln"
+      "id": "iap6wln",
+      "content": "Rivers are vital natural resources in India. They provide water for irrigation, drinking, transportation, fisheries, and hydroelectric power generation. Indian rivers also play an important role in agriculture, settlement patterns, and cultural traditions. The river systems of India are broadly divided into Himalayan rivers and Peninsular rivers."
     },
     {
       "type": "statStrip",
@@ -58,22 +59,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>River System</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Himalayan Rivers</p>",
+            "<p>Perennial rivers fed by glaciers and rainfall; large drainage basins</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Peninsular Rivers</p>",
+            "<p>Seasonal rivers mainly dependent on rainfall; flow through plateau regions</p>"
           ]
         }
       ]
@@ -86,7 +87,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4s48wfv"
+      "id": "4s48wfv",
+      "content": "The Himalayan rivers originate from glaciers in the Himalayan mountain range. They carry water throughout the year and form large river valleys and floodplains."
     },
     {
       "id": "j5yqubt",
@@ -95,37 +97,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>River</strong></p>",
+            "<p><strong>Origin</strong></p>",
+            "<p><strong>Length (Approx)</strong></p>",
+            "<p><strong>Important Tributaries</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Indus</p>",
+            "<p>Lake Mansarovar region, Tibet</p>",
+            "<p>3180 km</p>",
+            "<p>Jhelum, Chenab, Ravi, Beas, Sutlej</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ganga</p>",
+            "<p>Gangotri Glacier, Uttarakhand</p>",
+            "<p>2525 km</p>",
+            "<p>Yamuna, Ghaghara, Gandak, Kosi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Brahmaputra</p>",
+            "<p>Angsi Glacier, Tibet</p>",
+            "<p>2900 km</p>",
+            "<p>Subansiri, Dibang, Lohit</p>"
           ]
         }
       ]
@@ -139,27 +141,32 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "qxxzwe5"
+      "id": "qxxzwe5",
+      "content": "• Yamuna"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2lvg8pr"
+      "id": "2lvg8pr",
+      "content": "• Ghaghara"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yv5ndaz"
+      "id": "yv5ndaz",
+      "content": "• Gandak"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hfys1aa"
+      "id": "hfys1aa",
+      "content": "• Kosi"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7d0xjn6"
+      "id": "7d0xjn6",
+      "content": "• Son"
     },
     {
       "type": "pullQuote",
@@ -169,7 +176,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "m0v84ff"
+      "id": "m0v84ff",
+      "content": "• Damodar"
     },
     {
       "id": "siu010e",
@@ -179,7 +187,8 @@
     },
     {
       "type": "paragraph",
-      "id": "818i9sh"
+      "id": "818i9sh",
+      "content": "Peninsular rivers originate in the Western Ghats, central highlands or plateau regions. They flow over hard rock surfaces and are mainly rain-fed."
     },
     {
       "id": "oc1ltaa",
@@ -188,64 +197,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>River</strong></p>",
+            "<p><strong>Origin</strong></p>",
+            "<p><strong>Length (Approx)</strong></p>",
+            "<p><strong>Drainage</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Godavari</p>",
+            "<p>Trimbak Hills, Maharashtra</p>",
+            "<p>1465 km</p>",
+            "<p>Bay of Bengal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Krishna</p>",
+            "<p>Mahabaleshwar, Maharashtra</p>",
+            "<p>1400 km</p>",
+            "<p>Bay of Bengal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cauvery</p>",
+            "<p>Brahmagiri Hills, Karnataka</p>",
+            "<p>800 km</p>",
+            "<p>Bay of Bengal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Narmada</p>",
+            "<p>Amarkantak Plateau</p>",
+            "<p>1312 km</p>",
+            "<p>Arabian Sea</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tapti</p>",
+            "<p>Satpura Range</p>",
+            "<p>724 km</p>",
+            "<p>Arabian Sea</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mahanadi</p>",
+            "<p>Sihawa Hills, Chhattisgarh</p>",
+            "<p>858 km</p>",
+            "<p>Bay of Bengal</p>"
           ]
         }
       ]
@@ -263,43 +272,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>East Flowing Rivers</strong></p>",
+            "<p><strong>West Flowing Rivers</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Godavari</p>",
+            "<p>Narmada</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Krishna</p>",
+            "<p>Tapti</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cauvery</p>",
+            "<p>Mahi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mahanadi</p>",
+            "<p>Sabarmati</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Brahmani</p>",
+            "<p>Periyar</p>"
           ]
         }
       ]
@@ -343,19 +352,23 @@
     },
     {
       "type": "paragraph",
-      "id": "xcycobe"
+      "id": "xcycobe",
+      "content": "• Dendritic – tree-like pattern (most common)."
     },
     {
       "type": "paragraph",
-      "id": "g53n3cz"
+      "id": "g53n3cz",
+      "content": "• Trellis – right-angle pattern due to hard and soft rocks."
     },
     {
       "type": "paragraph",
-      "id": "nvo7g75"
+      "id": "nvo7g75",
+      "content": "• Radial – rivers flow outward from a central high point."
     },
     {
       "type": "paragraph",
-      "id": "62ss7ob"
+      "id": "62ss7ob",
+      "content": "• Centripetal – rivers flow towards a central basin."
     },
     {
       "id": "8xth5qw",
@@ -365,19 +378,23 @@
     },
     {
       "type": "paragraph",
-      "id": "s5932le"
+      "id": "s5932le",
+      "content": "• Bhakra Nangal Dam – Sutlej River."
     },
     {
       "type": "paragraph",
-      "id": "vrv58jw"
+      "id": "vrv58jw",
+      "content": "• Tehri Dam – Bhagirathi River."
     },
     {
       "type": "paragraph",
-      "id": "iy7vjzr"
+      "id": "iy7vjzr",
+      "content": "• Hirakud Dam – Mahanadi River."
     },
     {
       "type": "paragraph",
-      "id": "2e2zq0b"
+      "id": "2e2zq0b",
+      "content": "• Sardar Sarovar Dam – Narmada River."
     },
     {
       "type": "examAlert",
@@ -391,7 +408,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zo3a9xf"
+      "id": "zo3a9xf",
+      "content": "• Nagarjuna Sagar Dam – Krishna River."
     },
     {
       "id": "x16qo92",
@@ -401,19 +419,23 @@
     },
     {
       "type": "paragraph",
-      "id": "y22y6ep"
+      "id": "y22y6ep",
+      "content": "• Ganga is the longest river in India."
     },
     {
       "type": "paragraph",
-      "id": "peccgei"
+      "id": "peccgei",
+      "content": "• Godavari is the longest river in Peninsular India."
     },
     {
       "type": "paragraph",
-      "id": "hxrssnm"
+      "id": "hxrssnm",
+      "content": "• Brahmaputra is known as Tsangpo in Tibet."
     },
     {
       "type": "paragraph",
-      "id": "lkyorjk"
+      "id": "lkyorjk",
+      "content": "• Narmada and Tapti are the major west-flowing rivers."
     }
   ],
   "enriched": true

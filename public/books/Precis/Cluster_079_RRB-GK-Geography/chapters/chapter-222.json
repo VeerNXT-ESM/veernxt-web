@@ -1,0 +1,626 @@
+{
+  "title": "Chapter 25: Climate Classification",
+  "order": 222,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Climate classification is the scientific method of grouping different regions of the world based on their long-term weather patterns such as temperature, precipitation, humidity, and seasonal variations. Since climate directly influences vegetation, agriculture, settlement, and economic activities, geographers developed classification systems to simplify the complex climatic diversity of the Earth.",
+      "id": "jga8tau"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Tropical Temp",
+          "value": "> 18°C",
+          "icon": "info"
+        },
+        {
+          "label": "Primary System",
+          "value": "Köppen",
+          "icon": "book"
+        },
+        {
+          "label": "India Climate",
+          "value": "Am Code",
+          "icon": "award"
+        }
+      ],
+      "id": "kmkj2r5"
+    },
+    {
+      "id": "y373knw",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Weather vs Climate"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Climate classification simplifies global weather diversity by grouping regions based on temperature, precipitation, humidity, and seasonality.",
+        "The Köppen Climate Classification is the most widely used system because it objectively links temperature and rainfall data with natural vegetation zones.",
+        "Köppen's major climate categories include Tropical (A), Dry (B), Warm Temperate (C), Continental (D), and Polar (E).",
+        "Thornthwaite's system relies on moisture availability and the precipitation effectiveness (PE) index to evaluate water balance.",
+        "India predominantly experiences a Tropical Monsoon climate designated as 'Am' under Köppen's classification."
+      ],
+      "id": "40q4i0k"
+    },
+    {
+      "id": "702tq7k",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Weather</strong></p>",
+            "<p><strong>Climate</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Meaning</p>",
+            "<p>Short-term atmospheric condition</p>",
+            "<p>Average weather over 30+ years</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Variability</p>",
+            "<p>Changes daily</p>",
+            "<p>Relatively stable</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Example</p>",
+            "<p>Today's rainfall</p>",
+            "<p>Tropical monsoon climate</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yv4hoxb",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Why Do We Classify Climate?"
+    },
+    {
+      "type": "paragraph",
+      "content": "• To understand global climatic patterns.",
+      "id": "rzjd5be"
+    },
+    {
+      "type": "paragraph",
+      "content": "• To predict vegetation and biodiversity.",
+      "id": "9t19bzg"
+    },
+    {
+      "type": "paragraph",
+      "content": "• To assist agricultural planning.",
+      "id": "ow3jw5p"
+    },
+    {
+      "type": "paragraph",
+      "content": "• To study climate change trends.",
+      "id": "n59toix"
+    },
+    {
+      "type": "paragraph",
+      "content": "• To simplify geographical learning.",
+      "id": "bspinwl"
+    },
+    {
+      "id": "oe06h3v",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Basis of Climate Classification"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Temperature",
+      "id": "miduu45"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Precipitation",
+      "id": "qlye0ai"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Seasonality",
+      "id": "rzv8ssb"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Evaporation",
+      "id": "lx3wmk9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Vegetation indicators",
+      "id": "pymliuj"
+    },
+    {
+      "id": "dmpcbu3",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Köppen Climate Classification – The Most Important System"
+    },
+    {
+      "type": "paragraph",
+      "content": "Developed by Wladimir Köppen, this system links climate with natural vegetation. It is the MOST widely used classification in competitive exams because it is objective and data-based.",
+      "id": "luf7zls"
+    },
+    {
+      "type": "paragraph",
+      "content": "Köppen used a combination of CAPITAL and small letters to describe climate characteristics.",
+      "id": "385hroj"
+    },
+    {
+      "id": "q6h8owb",
+      "type": "heading",
+      "level": 3,
+      "content": "Major Climate Groups"
+    },
+    {
+      "id": "m5n1kky",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Group</strong></p>",
+            "<p><strong>Climate Type</strong></p>",
+            "<p><strong>Key Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A</p>",
+            "<p>Tropical</p>",
+            "<p>High temperature throughout the year.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>B</p>",
+            "<p>Dry</p>",
+            "<p>Evaporation exceeds precipitation.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>C</p>",
+            "<p>Warm Temperate</p>",
+            "<p>Mild winters.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>D</p>",
+            "<p>Cold (Continental)</p>",
+            "<p>Severe winters.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>E</p>",
+            "<p>Polar</p>",
+            "<p>Extremely low temperatures.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Developed by Wladimir Köppen, this system links climate with natural vegetation.",
+      "id": "8oaqfo8"
+    },
+    {
+      "id": "4z34kvs",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Tropical Climates (A)"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Average temperature above 18°C.",
+      "id": "bonmo5z"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Located between Tropic of Cancer and Capricorn.",
+      "id": "w03hkgh"
+    },
+    {
+      "id": "vfrvmt2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropical Rainforest</p>",
+            "<p>Af</p>",
+            "<p>Amazon Basin</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropical Monsoon</p>",
+            "<p>Am</p>",
+            "<p>India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropical Savanna</p>",
+            "<p>Aw</p>",
+            "<p>Sudan</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t9ksffc",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Dry Climates (B)"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Characterized by water deficiency.",
+      "id": "1c8fb5i"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Vegetation is sparse.",
+      "id": "szs8jpx"
+    },
+    {
+      "id": "pu7uevw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Desert</p>",
+            "<p>BW</p>",
+            "<p>Sahara</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Steppe</p>",
+            "<p>BS</p>",
+            "<p>Central Asia</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oyakm9c",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Warm Temperate Climates (C)"
+    },
+    {
+      "id": "56wa7vt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mediterranean</p>",
+            "<p>Cs</p>",
+            "<p>Southern Europe</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Humid Subtropical</p>",
+            "<p>Cfa</p>",
+            "<p>China</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Marine West Coast</p>",
+            "<p>Cfb</p>",
+            "<p>Western Europe</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Köppen Classification",
+        "Thornthwaite Classification"
+      ],
+      "rows": [
+        [
+          "Primary Basis",
+          "Natural vegetation indicators linked with temperature and precipitation data",
+          "Moisture availability using the precipitation effectiveness index (PE)"
+        ],
+        [
+          "Key Focus",
+          "Objective, measurable weather data mapped to vegetation zones",
+          "Water balance focusing on water surplus and deficit"
+        ],
+        [
+          "Main Advantage",
+          "Simple, objective, and closely matches vegetation boundaries",
+          "Highly useful for agricultural planning"
+        ]
+      ],
+      "id": "ayyttl9"
+    },
+    {
+      "id": "f5e8m9t",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Continental Climates (D)"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Found mainly in Northern Hemisphere.",
+      "id": "c0m7zm8"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Large annual temperature range.",
+      "id": "klr3dil"
+    },
+    {
+      "id": "j8eus4a",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Region</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dfa</p>",
+            "<p>Eastern USA</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dfb</p>",
+            "<p>Canada</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qsmdqru",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Polar Climates (E)"
+    },
+    {
+      "id": "58myyag",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Type</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>ET</p>",
+            "<p>Tundra</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>EF</p>",
+            "<p>Ice Cap</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mynvlnb",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Thornthwaite Classification (Conceptual)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Thornthwaite classified climates based on moisture availability using the precipitation effectiveness index (PE). It focuses more on water balance than temperature.",
+      "id": "dbptsal"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Humid climates – water surplus.",
+      "id": "vcvexl0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Arid climates – water deficit.",
+      "id": "ua1heul"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Useful for agricultural planning.",
+      "id": "y41p2fn"
+    },
+    {
+      "id": "733rifm",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Climate Types in India (Köppen)"
+    },
+    {
+      "id": "b9mpfnz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Climate</strong></p>",
+            "<p><strong>Region</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Am – Tropical Monsoon</p>",
+            "<p>Most of India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Aw – Tropical Savanna</p>",
+            "<p>Deccan Plateau</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>BWh – Desert</p>",
+            "<p>Rajasthan</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cwg – Humid Subtropical</p>",
+            "<p>North India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>H – Highland</p>",
+            "<p>Himalayas</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "db41kv7",
+      "type": "heading",
+      "level": 2,
+      "content": "12. Advantages of Köppen Classification"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Köppen classification is vegetation-based and uses combinations of capital and lowercase letters.",
+        "Mediterranean climate is represented by the symbol 'Cs', while Tundra is represented by 'ET'.",
+        "India is primarily classified under the 'Am' (Tropical Monsoon) climate type.",
+        "Thornthwaite's classification is based on water balance using the Precipitation Effectiveness (PE) index."
+      ],
+      "id": "22jn29q"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Simple and objective.",
+      "id": "2yrmopz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Closely matches vegetation zones.",
+      "id": "modkpdu"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Uses measurable data.",
+      "id": "whpanhw"
+    },
+    {
+      "id": "utf0sfh",
+      "type": "heading",
+      "level": 2,
+      "content": "13. Limitations"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Does not fully consider wind patterns.",
+      "id": "bxpw0iu"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Ignores extreme weather events.",
+      "id": "wzxtq2m"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Boundaries are sometimes artificial.",
+      "id": "g72vv5e"
+    },
+    {
+      "id": "gu9fz68",
+      "type": "heading",
+      "level": 2,
+      "content": "MASTER EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Köppen classification is vegetation-based.<br/>• 'A' climates are tropical.<br/>• 'B' climates are dry.<br/>• Mediterranean climate is 'Cs'.<br/>• Tundra is 'ET'.<br/>• India mainly has 'Am' climate.",
+      "id": "cwltsw6"
+    }
+  ],
+  "enriched": true
+}

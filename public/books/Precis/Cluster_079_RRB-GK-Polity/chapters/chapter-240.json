@@ -1,0 +1,138 @@
+{
+  "title": "Functions of NITI Aayog",
+  "order": 240,
+  "blocks": [
+    {
+      "id": "1gwmcpe",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Policy Formulation</p>",
+            "<p>Design national development strategies.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cooperative Federalism</p>",
+            "<p>Act as a platform between Centre and States.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Monitoring</p>",
+            "<p>Track implementation of government programs.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Think Tank</p>",
+            "<p>Provide research-based policy advice.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Innovation Promotion</p>",
+            "<p>Encourage technological advancement.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "NITI Aayog acts as the premier policy Think Tank of the Government of India, providing both directional and policy inputs.",
+      "id": "2erunec"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "NITI Aayog",
+        "Planning Commission"
+      ],
+      "rows": [
+        [
+          "Planning Approach",
+          "Bottom-Up Approach",
+          "Top-Down Approach"
+        ],
+        [
+          "Financial Allocation",
+          "No power to allocate funds",
+          "Power to allocate funds to states and ministries"
+        ],
+        [
+          "Role of States",
+          "Equal partners via Governing Council",
+          "Limited role through National Development Council"
+        ],
+        [
+          "Nature of Body",
+          "Advisory Think Tank",
+          "Financial & Planning Authority"
+        ]
+      ],
+      "id": "rbsynw1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "1 Jan 2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "Chairperson",
+          "value": "Prime Minister",
+          "icon": "award"
+        },
+        {
+          "label": "Approach",
+          "value": "Bottom-Up",
+          "icon": "check"
+        },
+        {
+          "label": "Core Hubs",
+          "value": "2 Hubs",
+          "icon": "info"
+        }
+      ],
+      "id": "rl87awu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NITI Aayog is an extra-constitutional, non-statutory body established via an executive resolution.",
+        "The Prime Minister of India serves as the Ex-Officio Chairperson of NITI Aayog.",
+        "Frequently tested distinction: NITI Aayog has no power to allocate funds to states, unlike the erstwhile Planning Commission."
+      ],
+      "id": "0tlwg3g"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "NITI Aayog functions as the premier policy think tank of the Government of India, providing both directional and policy inputs.",
+        "It fosters Cooperative Federalism through structured, continuous support initiatives with states.",
+        "It operates via two primary hubs: the Team India Hub and the Knowledge and Innovation Hub.",
+        "Unlike the former Planning Commission, NITI Aayog does not allocate funds, leaving fund allocation to the Ministry of Finance.",
+        "It adopts a bottom-up approach to policy planning, ensuring local-level needs are represented at the national level."
+      ],
+      "id": "ufrj65a"
+    }
+  ],
+  "enriched": true
+}

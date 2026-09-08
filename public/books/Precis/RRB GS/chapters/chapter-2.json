@@ -6,7 +6,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "22kvm9w"
+      "id": "22kvm9w",
+      "content": "<strong>1. Introduction to Cell</strong>"
     },
     {
       "type": "statStrip",
@@ -48,94 +49,134 @@
     },
     {
       "type": "paragraph",
-      "id": "psz28in"
+      "id": "psz28in",
+      "content": "The cell is the basic structural and functional unit of life. All living organisms are composed of one or more cells. Every life process such as respiration, digestion, excretion, growth and reproduction occurs at the cellular level."
+    },
+    {
+      "id": "en7z764",
+      "type": "image",
+      "imageId": "ekyumms",
+      "src": "/books/Precis/RRB GS/images/image_ekyumms.jpeg"
+    },
+    {
+      "id": "bte9nhs",
+      "type": "image",
+      "imageId": "y1b8hbc",
+      "src": "/books/Precis/RRB GS/images/image_y1b8hbc.jpeg"
+    },
+    {
+      "id": "nh2w1ak",
+      "type": "image",
+      "imageId": "liaj2mq",
+      "src": "/books/Precis/RRB GS/images/image_liaj2mq.png"
     },
     {
       "type": "paragraph",
-      "id": "tqir3dn"
+      "id": "tqir3dn",
+      "content": "1.Cell was discovered by Robert Hooke in 1665 while observing cork."
     },
     {
       "type": "paragraph",
-      "id": "pmy8guw"
+      "id": "pmy8guw",
+      "content": "2.The nucleus was discovered by Robert Brown in 1831."
     },
     {
       "type": "paragraph",
-      "id": "3j95wph"
+      "id": "3j95wph",
+      "content": "3. The smallest living cell is Mycoplasma (0.1–0.5 µm)."
     },
     {
       "type": "paragraph",
-      "id": "4ki8kq7"
+      "id": "4ki8kq7",
+      "content": "4.The largest cell in the world is the Ostrich egg."
     },
     {
       "type": "paragraph",
-      "id": "xkz05o9"
+      "id": "xkz05o9",
+      "content": "5.Human body contains trillions of cells.<strong><br></br>2. Cell Theory</strong>"
     },
     {
       "type": "paragraph",
-      "id": "zfull35"
+      "id": "zfull35",
+      "content": "Cell theory was proposed by Matthias Schleiden and Theodor Schwann and later modified by Rudolf Virchow."
     },
     {
       "type": "paragraph",
-      "id": "3nofooc"
+      "id": "3nofooc",
+      "content": "1.All living organisms are made up of cells."
     },
     {
       "type": "paragraph",
-      "id": "gvh02na"
+      "id": "gvh02na",
+      "content": "2.Cell is the basic structural and functional unit of life."
     },
     {
       "type": "paragraph",
-      "id": "apgjnw7"
+      "id": "apgjnw7",
+      "content": "3.New cells arise from pre-existing cells."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "28dzjox"
+      "id": "28dzjox",
+      "content": "<strong><br></br>3. Types of Cells</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gyuujx3"
+      "id": "gyuujx3",
+      "content": "<strong>A. Prokaryotic Cells</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ljnnsbc"
+      "id": "ljnnsbc",
+      "content": "Prokaryotic cells lack a true nucleus and membrane-bound organelles. The genetic material is present in a nucleoid region."
     },
     {
       "type": "paragraph",
-      "id": "hgvjkhw"
+      "id": "hgvjkhw",
+      "content": "•Example: Bacteria, Cyanobacteria."
     },
     {
       "type": "paragraph",
-      "id": "0g5lztz"
+      "id": "0g5lztz",
+      "content": "•Size: 1–10 micrometer."
     },
     {
       "type": "paragraph",
-      "id": "524xwok"
+      "id": "524xwok",
+      "content": "•DNA is circular."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d7ioks8"
+      "id": "d7ioks8",
+      "content": "<strong>B. Eukaryotic Cells</strong>"
     },
     {
       "type": "paragraph",
-      "id": "s9d5gd8"
+      "id": "s9d5gd8",
+      "content": "Eukaryotic cells contain a well-defined nucleus surrounded by a nuclear membrane. They possess membrane-bound organelles."
     },
     {
       "type": "paragraph",
-      "id": "km1shbh"
+      "id": "km1shbh",
+      "content": "• Example: Plant cells, Animal cells, Fungi."
     },
     {
       "type": "paragraph",
-      "id": "3e8hbrs"
+      "id": "3e8hbrs",
+      "content": "• Size: 10–100 micrometer."
     },
     {
       "type": "paragraph",
-      "id": "gwotxfg"
+      "id": "gwotxfg",
+      "content": "• DNA is linear and organized into chromosomes."
     },
     {
       "type": "paragraph",
-      "id": "a3wsdbg"
+      "id": "a3wsdbg",
+      "content": "<strong>Comparison Between Prokaryotic and Eukaryotic Cells</strong>"
     },
     {
       "id": "c3230p6",
@@ -144,79 +185,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Prokaryotic</strong></p>",
+            "<p><strong>Eukaryotic</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nucleus</p>",
+            "<p>Absent</p>",
+            "<p>Present</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Organelles</p>",
+            "<p>Absent</p>",
+            "<p>Present</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DNA Type</p>",
+            "<p>Circular</p>",
+            "<p>Linear</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cell Division</p>",
+            "<p>Binary fission</p>",
+            "<p>Mitosis/Meiosis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Examples</p>",
+            "<p>Bacteria</p>",
+            "<p>Plants &amp; Animals</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "e4j7twu"
+      "id": "e4j7twu",
+      "content": "<strong><br></br>4. Structure of a Typical Cell</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ii4nu7z"
+      "id": "ii4nu7z",
+      "content": "A typical cell consists of three main parts:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l5ulb0u"
+      "id": "l5ulb0u",
+      "content": "1.Cell membrane"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mktjnxn"
+      "id": "mktjnxn",
+      "content": "2.Cytoplasm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6a3qitp"
+      "id": "6a3qitp",
+      "content": "3.Nucleus"
     },
     {
       "type": "paragraph",
-      "id": "3mdvpe7"
+      "id": "3mdvpe7",
+      "content": "<strong><br></br>5. Cell Organelles and Their Detailed Functions</strong>"
     },
     {
       "id": "8ol7ize",
@@ -225,92 +272,93 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Organelle</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cell Membrane</p>",
+            "<p>Selectively permeable membrane controlling entry and exit of substances.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cell Wall</p>",
+            "<p>Rigid outer layer present in plant cells made of cellulose.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cytoplasm</p>",
+            "<p>Jelly-like matrix containing organelles and site of metabolic reactions.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nucleus</p>",
+            "<p>Control center containing DNA and chromosomes.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mitochondria</p>",
+            "<p>Powerhouse of the cell; produces ATP; contains its own DNA.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ribosomes</p>",
+            "<p>Site of protein synthesis.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Endoplasmic Reticulum</p>",
+            "<p>Network for transport; RER synthesizes proteins, SER synthesizes lipids.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Golgi Apparatus</p>",
+            "<p>Modifies, packages and secretes proteins.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lysosomes</p>",
+            "<p>Contain digestive enzymes; called suicide bags.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Plastids</p>",
+            "<p>Present in plants; chloroplast performs photosynthesis.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vacuole</p>",
+            "<p>Storage of water, food and waste materials.</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "p4v5dv0"
+      "id": "p4v5dv0",
+      "content": "<strong>6. Difference Between Plant and Animal Cell</strong>"
     },
     {
       "id": "2h71ax9",
@@ -319,41 +367,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Plant Cell</strong></p>",
+            "<p><strong>Animal Cell</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cell Wall</p>",
+            "<p>Present</p>",
+            "<p>Absent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chloroplast</p>",
+            "<p>Present</p>",
+            "<p>Absent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vacuole</p>",
+            "<p>Large central vacuole</p>",
+            "<p>Small or absent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shape</p>",
+            "<p>Rectangular</p>",
+            "<p>Round/Irregular</p>"
           ]
         }
       ]
@@ -361,31 +409,38 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "v3axten"
+      "id": "v3axten",
+      "content": "<strong><br></br>7. Cell Division</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ddqzi37"
+      "id": "ddqzi37",
+      "content": "<strong>Mitosis:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "jk9n97a"
+      "id": "jk9n97a",
+      "content": "Mitosis is an equational division producing two identical daughter cells."
     },
     {
       "type": "paragraph",
-      "id": "e1qx0c5"
+      "id": "e1qx0c5",
+      "content": "•Occurs in somatic cells."
     },
     {
       "type": "paragraph",
-      "id": "qe9gagy"
+      "id": "qe9gagy",
+      "content": "•Responsible for growth and repair."
     },
     {
       "type": "paragraph",
-      "id": "iboly5g"
+      "id": "iboly5g",
+      "content": "<strong>Meiosis:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "thbpr1d"
+      "id": "thbpr1d",
+      "content": "Meiosis is a reduction division producing four daughter cells with half chromosome number."
     },
     {
       "type": "pullQuote",
@@ -394,15 +449,18 @@
     },
     {
       "type": "paragraph",
-      "id": "g85owm2"
+      "id": "g85owm2",
+      "content": "1.Occurs in reproductive cells."
     },
     {
       "type": "paragraph",
-      "id": "kkq8s67"
+      "id": "kkq8s67",
+      "content": "2.Responsible for formation of gametes."
     },
     {
       "type": "paragraph",
-      "id": "wadeh55"
+      "id": "wadeh55",
+      "content": "3. Introduces genetic variation."
     },
     {
       "id": "lnon9tp",
@@ -411,41 +469,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Mitosis</strong></p>",
+            "<p><strong>Meiosis</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Number of Divisions</p>",
+            "<p>One</p>",
+            "<p>Two</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Daughter Cells</p>",
+            "<p>Two</p>",
+            "<p>Four</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chromosome Number</p>",
+            "<p>Same</p>",
+            "<p>Half</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Function</p>",
+            "<p>Growth &amp; Repair</p>",
+            "<p>Gamete Formation</p>"
           ]
         }
       ]
@@ -453,70 +511,86 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "7a7zygl"
+      "id": "7a7zygl",
+      "content": "<strong>8. Cytoskeleton</strong>"
     },
     {
       "type": "paragraph",
-      "id": "hzyux5m"
+      "id": "hzyux5m",
+      "content": "Cytoskeleton is a network of protein filaments present in cytoplasm."
     },
     {
       "type": "paragraph",
-      "id": "meyi4ae"
+      "id": "meyi4ae",
+      "content": "1.Provides structural support to the cell."
     },
     {
       "type": "paragraph",
-      "id": "msbs5be"
+      "id": "msbs5be",
+      "content": "2. Helps in movement of organelles."
     },
     {
       "type": "paragraph",
-      "id": "tq3c65h"
+      "id": "tq3c65h",
+      "content": "3. Maintains cell shape."
     },
     {
       "type": "paragraph",
-      "id": "qdpad5s"
+      "id": "qdpad5s",
+      "content": "4. Composed of microtubules, microfilaments and intermediate filaments."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a4sugs4"
+      "id": "a4sugs4",
+      "content": "<strong><br></br>9. Centrosome and Centrioles</strong>"
     },
     {
       "type": "paragraph",
-      "id": "j7cs2hv"
+      "id": "j7cs2hv",
+      "content": "1. Present mainly in animal cells."
     },
     {
       "type": "paragraph",
-      "id": "crsvmjv"
+      "id": "crsvmjv",
+      "content": "2. Help in spindle formation during cell division."
     },
     {
       "type": "paragraph",
-      "id": "5c9l8g9"
+      "id": "5c9l8g9",
+      "content": "3. Absent in most plant cells."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g1pa1y0"
+      "id": "g1pa1y0",
+      "content": "<strong><br></br>10. Cilia and Flagella</strong>"
     },
     {
       "type": "paragraph",
-      "id": "71o32p3"
+      "id": "71o32p3",
+      "content": "1.Hair-like projections from cell surface."
     },
     {
       "type": "paragraph",
-      "id": "21kasi3"
+      "id": "21kasi3",
+      "content": "2. Help in locomotion."
     },
     {
       "type": "paragraph",
-      "id": "m0x1csr"
+      "id": "m0x1csr",
+      "content": "3.Structure based on 9+2 arrangement of microtubules."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tdsdxn2"
+      "id": "tdsdxn2",
+      "content": "<strong><br></br>11. Fluid Mosaic Model</strong>"
     },
     {
       "type": "paragraph",
-      "id": "k2sp3wk"
+      "id": "k2sp3wk",
+      "content": "1. Proposed by Singer and Nicolson (1972)."
     },
     {
       "type": "comparisonTable",
@@ -551,112 +625,138 @@
     },
     {
       "type": "paragraph",
-      "id": "d3j61yz"
+      "id": "d3j61yz",
+      "content": "2. Explains structure of plasma membrane."
     },
     {
       "type": "paragraph",
-      "id": "il1y8sd"
+      "id": "il1y8sd",
+      "content": "3.Membrane consists of phospholipid bilayer with embedded proteins."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8lc95e6"
+      "id": "8lc95e6",
+      "content": "<strong><br></br>12. Cell Inclusion Bodies</strong>"
     },
     {
       "type": "paragraph",
-      "id": "raz5c9f"
+      "id": "raz5c9f",
+      "content": "1.Non-living substances present in cytoplasm."
     },
     {
       "type": "paragraph",
-      "id": "u02nt2z"
+      "id": "u02nt2z",
+      "content": " Examples: Glycogen granules, fat droplets, pigments."
     },
     {
       "type": "paragraph",
-      "id": "ka4ora2"
+      "id": "ka4ora2",
+      "content": "<strong><br></br>13. Surface Area to Volume Ratio</strong>"
     },
     {
       "type": "paragraph",
-      "id": "f4x8rlh"
+      "id": "f4x8rlh",
+      "content": "1. Smaller cells have higher surface area to volume ratio."
     },
     {
       "type": "paragraph",
-      "id": "tzmpkah"
+      "id": "tzmpkah",
+      "content": "2. Helps in efficient exchange of materials."
     },
     {
       "type": "paragraph",
-      "id": "n8in6m3"
+      "id": "n8in6m3",
+      "content": "3.As cell size increases, efficiency decreases."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "c5c7wg0"
+      "id": "c5c7wg0",
+      "content": "<strong><br></br>14. Cell Cycle Phases</strong>"
     },
     {
       "type": "paragraph",
-      "id": "wrfbf60"
+      "id": "wrfbf60",
+      "content": "1.Interphase: G1, S, G2 phases.                                                                                                                                                    "
     },
     {
       "type": "paragraph",
-      "id": "fryprr9"
+      "id": "fryprr9",
+      "content": "2. M phase: Mitotic phase."
     },
     {
       "type": "paragraph",
-      "id": "mmylp1r"
+      "id": "mmylp1r",
+      "content": "3. DNA replication occurs in S phase."
     },
     {
       "type": "paragraph",
-      "id": "lswarkc"
+      "id": "lswarkc",
+      "content": "4. Maximum time spent in interphase."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "edr7w40"
+      "id": "edr7w40",
+      "content": "<strong><br></br>15. Stages of Mitosis</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ujrplcp"
+      "id": "ujrplcp",
+      "content": "1.Prophase: Chromosomes condense."
     },
     {
       "type": "paragraph",
-      "id": "cueavl8"
+      "id": "cueavl8",
+      "content": "2. Metaphase: Chromosomes align at equator."
     },
     {
       "type": "paragraph",
-      "id": "rozwlei"
+      "id": "rozwlei",
+      "content": "3.Anaphase: Sister chromatids separate."
     },
     {
       "type": "paragraph",
-      "id": "dx9uiu0"
+      "id": "dx9uiu0",
+      "content": "4.Telophase: Nuclear membrane reappears."
     },
     {
       "type": "paragraph",
-      "id": "40bux08"
+      "id": "40bux08",
+      "content": "5.Cytokinesis: Division of cytoplasm."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0hrp9rb"
+      "id": "0hrp9rb",
+      "content": "<strong><br></br>16. Stages of Meiosis</strong>"
     },
     {
       "type": "paragraph",
-      "id": "y109m4t"
+      "id": "y109m4t",
+      "content": "1.Meiosis I: Reduction division."
     },
     {
       "type": "paragraph",
-      "id": "p7tbtux"
+      "id": "p7tbtux",
+      "content": "2.Meiosis II: Similar to mitosis."
     },
     {
       "type": "paragraph",
-      "id": "joonnu6"
+      "id": "joonnu6",
+      "content": "3. Crossing over occurs in Prophase I."
     },
     {
       "type": "paragraph",
-      "id": "ydjmwyc"
+      "id": "ydjmwyc",
+      "content": "4. Leads to genetic variation."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bjkphrw"
+      "id": "bjkphrw",
+      "content": "<strong><br></br>17. Apoptosis</strong>"
     },
     {
       "type": "examAlert",
@@ -670,19 +770,23 @@
     },
     {
       "type": "paragraph",
-      "id": "tqonqpt"
+      "id": "tqonqpt",
+      "content": "1. Programmed cell death."
     },
     {
       "type": "paragraph",
-      "id": "tmclza1"
+      "id": "tmclza1",
+      "content": "2. Important for development and removal of damaged cells."
     },
     {
       "type": "paragraph",
-      "id": "gwcgxki"
+      "id": "gwcgxki",
+      "content": "3. Controlled process, not harmful to surrounding cells."
     },
     {
       "type": "paragraph",
-      "id": "awnn4yu"
+      "id": "awnn4yu",
+      "content": "<strong><br></br>18. Differences Between Apoptosis and Necrosis</strong>"
     },
     {
       "id": "59ee2b2",
@@ -691,33 +795,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Apoptosis</strong></p>",
+            "<p><strong>Necrosis</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nature</p>",
+            "<p>Programmed</p>",
+            "<p>Accidental</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inflammation</p>",
+            "<p>Absent</p>",
+            "<p>Present</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Effect</p>",
+            "<p>Controlled</p>",
+            "<p>Damaging</p>"
           ]
         }
       ]
@@ -725,52 +829,76 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "bi93kic"
+      "id": "bi93kic",
+      "content": "<strong><br></br>19. Cell Communication</strong>"
     },
     {
       "type": "paragraph",
-      "id": "gmcotwq"
+      "id": "gmcotwq",
+      "content": "1.Cells communicate through chemical signals."
     },
     {
       "type": "paragraph",
-      "id": "i906w5i"
+      "id": "i906w5i",
+      "content": "2. Hormones act as signaling molecules."
     },
     {
       "type": "paragraph",
-      "id": "jt4hovg"
+      "id": "jt4hovg",
+      "content": "3.Receptors present on cell membrane receive signals."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tefsx77"
+      "id": "tefsx77",
+      "content": "<strong><br></br>20. Important Quick Revision Points </strong>"
     },
     {
       "type": "paragraph",
-      "id": "stwa8i9"
+      "id": "stwa8i9",
+      "content": "1.Fluid mosaic model explains plasma membrane structure."
     },
     {
       "type": "paragraph",
-      "id": "cp7rdoc"
+      "id": "cp7rdoc",
+      "content": "2. Centrioles help in spindle formation."
     },
     {
       "type": "paragraph",
-      "id": "15vq55r"
+      "id": "15vq55r",
+      "content": "3. Crossing over occurs in Prophase I of meiosis."
     },
     {
       "type": "paragraph",
-      "id": "br4qayg"
+      "id": "br4qayg",
+      "content": "4. DNA replication occurs in S phase."
     },
     {
       "type": "paragraph",
-      "id": "85uolww"
+      "id": "85uolww",
+      "content": "5.Apoptosis is programmed cell death."
     },
     {
       "type": "paragraph",
-      "id": "wj04ef1"
+      "id": "wj04ef1",
+      "content": "6. Cilia and flagella follow 9+2 arrangement."
     },
     {
       "type": "paragraph",
-      "id": "q64ktby"
+      "id": "q64ktby",
+      "content": "7. Higher surface area to volume ratio increases efficiency."
+    },
+    {
+      "id": "3kdym8r",
+      "type": "image",
+      "imageId": "7zvqwey",
+      "src": "/books/Precis/RRB GS/images/image_7zvqwey.png"
+    },
+    {
+      "id": "2vuq5zv",
+      "type": "image",
+      "imageId": "rggk4yg",
+      "src": "/books/Precis/RRB GS/images/image_rggk4yg.png"
     }
   ],
   "enriched": true

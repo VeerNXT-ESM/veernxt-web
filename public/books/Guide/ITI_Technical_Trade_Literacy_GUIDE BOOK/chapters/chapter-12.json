@@ -50,11 +50,13 @@
     },
     {
       "type": "paragraph",
-      "id": "vw06g1k"
+      "id": "vw06g1k",
+      "content": "Mechanical concepts form the basic foundation of engineering and technical trades. Understanding concepts such as force, work, energy, power, machines, and friction helps workers understand how machines operate and how mechanical systems perform work."
     },
     {
       "type": "paragraph",
-      "id": "23uayx2"
+      "id": "23uayx2",
+      "content": "These principles are widely used in mechanical engineering, automobile repair, manufacturing, construction, and maintenance work."
     },
     {
       "id": "lkv5228",
@@ -64,7 +66,8 @@
     },
     {
       "type": "paragraph",
-      "id": "olac3dx"
+      "id": "olac3dx",
+      "content": "Force is a push or pull acting on a body that can change its state of motion or shape. It is measured in Newtons (N)."
     },
     {
       "id": "lzz3dwq",
@@ -73,43 +76,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Force</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gravitational Force</p>",
+            "<p>Force that attracts objects towards the Earth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Magnetic Force</p>",
+            "<p>Force between magnets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Frictional Force</p>",
+            "<p>Force opposing motion between surfaces</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Applied Force</p>",
+            "<p>Force applied directly to an object</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Normal Force</p>",
+            "<p>Support force exerted by a surface</p>"
           ]
         }
       ]
@@ -122,16 +125,19 @@
     },
     {
       "type": "paragraph",
-      "id": "iom12uk"
+      "id": "iom12uk",
+      "content": "Work is said to be done when a force moves an object through a distance. The unit of work is Joule (J)."
     },
     {
       "type": "paragraph",
-      "id": "gtlsin8"
+      "id": "gtlsin8",
+      "content": "Formula:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o733d5s"
+      "id": "o733d5s",
+      "content": "Work = Force × Distance"
     },
     {
       "id": "ovjuxqi",
@@ -141,7 +147,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jujerxv"
+      "id": "jujerxv",
+      "content": "Energy is the capacity to do work. It exists in different forms."
     },
     {
       "type": "pullQuote",
@@ -155,43 +162,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Energy</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mechanical Energy</p>",
+            "<p>Energy of moving machines</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kinetic Energy</p>",
+            "<p>Energy of moving objects</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Potential Energy</p>",
+            "<p>Energy stored due to position</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Electrical Energy</p>",
+            "<p>Energy from electricity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thermal Energy</p>",
+            "<p>Energy from heat</p>"
           ]
         }
       ]
@@ -204,21 +211,25 @@
     },
     {
       "type": "paragraph",
-      "id": "ak20isk"
+      "id": "ak20isk",
+      "content": "Power is the rate at which work is done. It measures how quickly work is performed."
     },
     {
       "type": "paragraph",
-      "id": "cg9uvyl"
+      "id": "cg9uvyl",
+      "content": "Formula:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7q80ijm"
+      "id": "7q80ijm",
+      "content": "Power = Work ÷ Time"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f03mvum"
+      "id": "f03mvum",
+      "content": "Unit of power: Watt (W)"
     },
     {
       "id": "1foqmbr",
@@ -254,7 +265,8 @@
     },
     {
       "type": "paragraph",
-      "id": "uunimbu"
+      "id": "uunimbu",
+      "content": "Simple machines are mechanical devices that make work easier by changing the magnitude or direction of force."
     },
     {
       "id": "g52fove",
@@ -263,50 +275,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Machine</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lever</p>",
+            "<p>Used to lift heavy objects</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pulley</p>",
+            "<p>Used to change direction of force</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wheel and Axle</p>",
+            "<p>Used in vehicles and machines</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Inclined Plane</p>",
+            "<p>Used to move objects to higher levels</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Screw</p>",
+            "<p>Converts rotational motion to linear motion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wedge</p>",
+            "<p>Used for cutting or splitting objects</p>"
           ]
         }
       ]
@@ -319,15 +331,18 @@
     },
     {
       "type": "paragraph",
-      "id": "urk69hs"
+      "id": "urk69hs",
+      "content": "Mechanical Advantage (MA) is the ratio of output force to input force in a machine."
     },
     {
       "type": "paragraph",
-      "id": "u7pvdrm"
+      "id": "u7pvdrm",
+      "content": "Formula:"
     },
     {
       "type": "paragraph",
-      "id": "8lpkcmb"
+      "id": "8lpkcmb",
+      "content": "Mechanical Advantage = Load ÷ Effort"
     },
     {
       "id": "jq3mnlk",
@@ -337,7 +352,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3texso5"
+      "id": "3texso5",
+      "content": "Friction is the force that opposes the motion of objects when they come into contact."
     },
     {
       "id": "k5l3ffd",
@@ -346,36 +362,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Friction</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Static Friction</p>",
+            "<p>Friction when objects are not moving</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sliding Friction</p>",
+            "<p>Friction when objects slide over each other</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rolling Friction</p>",
+            "<p>Friction when objects roll</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fluid Friction</p>",
+            "<p>Friction in liquids and gases</p>"
           ]
         }
       ]
@@ -399,10 +415,10 @@
       "id": "1tqqr9o",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Use lubricants such as oil or grease",
+        "Use ball bearings",
+        "Polish contact surfaces",
+        "Use rollers or wheels"
       ]
     },
     {
@@ -415,10 +431,10 @@
       "id": "kq3ckhj",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Helps understand machine operation",
+        "Improves efficiency of mechanical systems",
+        "Assists in design and repair of machines",
+        "Reduces mechanical failures"
       ]
     },
     {
@@ -431,12 +447,12 @@
       "id": "5i0nwct",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Force is a push or pull measured in Newtons.",
+        "Work = Force × Distance.",
+        "Energy is the capacity to do work.",
+        "Power = Work ÷ Time.",
+        "Mechanical advantage = Load ÷ Effort.",
+        "Friction opposes motion between surfaces."
       ]
     }
   ],

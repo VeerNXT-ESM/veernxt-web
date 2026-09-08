@@ -1,0 +1,472 @@
+{
+  "title": "Chapter 26: Climate Change, Global Warming and Greenhouse Effect",
+  "order": 223,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Climate change refers to long-term alterations in temperature, precipitation, wind systems, and other elements of climate over decades or centuries. While climate has naturally fluctuated throughout Earth's history, the current phase of warming is primarily driven by human activities. ",
+      "id": "o8abjo7"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Without GH Effect",
+          "value": "-18°C",
+          "icon": "info"
+        },
+        {
+          "label": "Current Avg Temp",
+          "value": "+15°C",
+          "icon": "check"
+        },
+        {
+          "label": "Pre-Industrial Rise",
+          "value": "1.1°C",
+          "icon": "info"
+        },
+        {
+          "label": "Oceans CO₂ Absorption",
+          "value": "30%",
+          "icon": "info"
+        },
+        {
+          "label": "Paris Limit Target",
+          "value": "< 2°C",
+          "icon": "award"
+        }
+      ],
+      "id": "jmxgp47"
+    },
+    {
+      "id": "z5k748p",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Climate Variability vs Climate Change"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The greenhouse effect is a natural mechanism trapping longwave terrestrial radiation, keeping Earth at an average +15°C instead of -18°C.",
+        "Global average surface temperatures have risen by roughly 1.1°C since pre-industrial times due to human activities.",
+        "Oceans serve as major carbon sinks, absorbing nearly 30% of human-generated carbon dioxide emissions.",
+        "India faces localized impacts including Himalayan glacier retreat, intense Arabian Sea cyclones, and sea-level threats to coastal cities like Mumbai and Chennai.",
+        "International mitigation frameworks like the Paris Agreement aim to limit global warming below 2°C."
+      ],
+      "id": "pddwymc"
+    },
+    {
+      "type": "paragraph",
+      "content": "Climate variability refers to short-term natural fluctuations such as El Niño events, whereas climate change refers to persistent long-term shifts in global climate patterns.",
+      "id": "mrk0yjm"
+    },
+    {
+      "id": "8ay6ns0",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Greenhouse Effect – Fundamental Mechanism"
+    },
+    {
+      "type": "paragraph",
+      "content": "The greenhouse effect is the process by which certain gases in the atmosphere trap outgoing longwave radiation, keeping Earth warm enough to support life.",
+      "id": "u120vew"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Incoming solar radiation is shortwave radiation.",
+      "id": "prk6wu7"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Earth emits longwave terrestrial radiation.",
+      "id": "n41szis"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Greenhouse gases absorb and re-radiate this heat.",
+      "id": "c914pz9"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Without greenhouse effect, Earth's average temperature would be about -18°C instead of +15°C.",
+      "id": "2zuhf7f"
+    },
+    {
+      "id": "jzw5uje",
+      "type": "heading",
+      "level": 3,
+      "content": "Major Greenhouse Gases"
+    },
+    {
+      "id": "r248ytf",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "id": "vo5mxpg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Gas</strong></p>",
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Impact</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Carbon Dioxide (CO₂)</p>",
+            "<p>Fossil fuel burning, deforestation</p>",
+            "<p>Largest contributor to warming</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Methane (CH₄)</p>",
+            "<p>Agriculture, wetlands</p>",
+            "<p>More powerful but shorter lifespan</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nitrous Oxide (N₂O)</p>",
+            "<p>Fertilizers</p>",
+            "<p>Long atmospheric lifetime</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Water Vapour</p>",
+            "<p>Evaporation</p>",
+            "<p>Amplifies warming</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>CFCs</p>",
+            "<p>Refrigerants</p>",
+            "<p>High global warming potential</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ft27vkk",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Global Warming"
+    },
+    {
+      "type": "paragraph",
+      "content": "Global warming refers specifically to the rise in Earth's average surface temperature due to increased greenhouse gases.",
+      "id": "intcff7"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Global average temperature has risen by about 1.1°C since pre-industrial times.",
+      "id": "lzws1fp"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Polar regions are warming faster (Arctic amplification).",
+      "id": "tgkr8d7"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Without greenhouse effect, Earth's average temperature would be about -18°C instead of +15°C.",
+      "id": "62gg1do"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Glaciers and ice caps are melting.",
+      "id": "ut5v7n1"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Sea levels are rising due to thermal expansion and ice melt.",
+      "id": "uy2v1rr"
+    },
+    {
+      "id": "2oxep4u",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Carbon Cycle and Human Disruption"
+    },
+    {
+      "type": "paragraph",
+      "content": "The carbon cycle regulates the exchange of carbon between atmosphere, oceans, soil, and living organisms.",
+      "id": "71levub"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Photosynthesis removes CO₂ from atmosphere.",
+      "id": "3lmvjar"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Respiration and decomposition release CO₂.",
+      "id": "9zidzpk"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Burning fossil fuels adds excess carbon.",
+      "id": "iu6cvqb"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Oceans absorb nearly 30% of anthropogenic CO₂.",
+      "id": "htzhcsx"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Climate Variability",
+        "Climate Change"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Short-term natural fluctuations in global patterns",
+          "Persistent long-term shifts in Earth's atmospheric elements"
+        ],
+        [
+          "Time Scale",
+          "Short-term (months to years)",
+          "Long-term (decades to centuries)"
+        ],
+        [
+          "Primary Drivers",
+          "Natural events (e.g., El Niño)",
+          "Human activities (e.g., burning fossil fuels)"
+        ]
+      ],
+      "id": "548jkqb"
+    },
+    {
+      "id": "x5ooxfb",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Evidence of Climate Change"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Rising global temperatures.",
+      "id": "dksf3q7"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Melting glaciers and Arctic sea ice.",
+      "id": "5xwp79e"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Increasing frequency of extreme weather events.",
+      "id": "afapzfj"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Coral bleaching.",
+      "id": "pm6exw5"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Ocean acidification.",
+      "id": "0d8bjet"
+    },
+    {
+      "id": "jgni7oj",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Impacts of Climate Change"
+    },
+    {
+      "id": "ceo89zz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Sector</strong></p>",
+            "<p><strong>Impact</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Agriculture</p>",
+            "<p>Crop failure due to heat stress and irregular rainfall</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Water Resources</p>",
+            "<p>Glacial retreat affecting river flow</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Coastal Areas</p>",
+            "<p>Sea-level rise causing flooding</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Health</p>",
+            "<p>Heat waves and spread of diseases</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Biodiversity</p>",
+            "<p>Species migration and extinction</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4jgtxmt",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Climate Change in India"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Increased frequency of extreme rainfall events.",
+      "id": "0a4cosw"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Retreat of Himalayan glaciers.",
+      "id": "40483wv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Earth receives incoming shortwave solar radiation and emits outgoing longwave terrestrial radiation absorbed by GHGs.",
+        "CO₂ is the single largest contributor to anthropogenic global warming.",
+        "Arctic amplification refers to polar regions warming at a faster rate than the global average.",
+        "The Paris Agreement is aimed at keeping global temperature rise well below 2°C above pre-industrial levels."
+      ],
+      "id": "rhbdgy1"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Rising sea level affecting coastal cities like Mumbai and Chennai.",
+      "id": "osu40q5"
+    },
+    {
+      "type": "paragraph",
+      "content": "• More intense cyclones in Arabian Sea.",
+      "id": "knh6lzz"
+    },
+    {
+      "id": "1wux38b",
+      "type": "heading",
+      "level": 2,
+      "content": "8. International Efforts"
+    },
+    {
+      "id": "c2wsohg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Agreement</strong></p>",
+            "<p><strong>Objective</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Kyoto Protocol (1997)</p>",
+            "<p>Reduce greenhouse gas emissions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Paris Agreement (2015)</p>",
+            "<p>Limit warming below 2°C</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>IPCC</p>",
+            "<p>Scientific assessment of climate change</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vf3wvnj",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Mitigation vs Adaptation"
+    },
+    {
+      "id": "gkoqzsx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Mitigation</strong></p>",
+            "<p><strong>Adaptation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Meaning</p>",
+            "<p>Reduce emissions</p>",
+            "<p>Adjust to impacts</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Example</p>",
+            "<p>Renewable energy</p>",
+            "<p>Flood-resistant crops</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Goal</p>",
+            "<p>Slow warming</p>",
+            "<p>Reduce vulnerability</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0uqzhd8",
+      "type": "heading",
+      "level": 2,
+      "content": "MASTER EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Greenhouse effect is natural but enhanced by human activity.<br/>• CO₂ is the largest contributor to global warming.<br/>• Arctic is warming faster than global average.<br/>• Paris Agreement aims to limit warming below 2°C.<br/>• Climate change affects agriculture, water, and health.",
+      "id": "jci7hx8"
+    }
+  ],
+  "enriched": true
+}

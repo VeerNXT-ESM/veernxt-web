@@ -1,0 +1,507 @@
+{
+  "title": "Chapter 20: Atmospheric Pressure and Pressure Belts",
+  "order": 217,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Atmospheric pressure is the force exerted by the weight of air on the Earth's surface. It is one of the most critical controls of global weather and climate because differences in pressure generate winds, which redistribute heat and moisture across the planet.",
+      "id": "kb66u8y"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Sea-Level Pressure",
+          "value": "1013.25 mb",
+          "icon": "info"
+        },
+        {
+          "label": "Mercury Column",
+          "value": "76 cm",
+          "icon": "check"
+        },
+        {
+          "label": "Mass Below 5.5 km",
+          "value": "50%",
+          "icon": "info"
+        },
+        {
+          "label": "Mass Below 32 km",
+          "value": "99%",
+          "icon": "award"
+        }
+      ],
+      "id": "synl7zl"
+    },
+    {
+      "id": "4eyf4mn",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Atmospheric Pressure"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Atmospheric pressure decreases exponentially with altitude, with 50% of atmospheric mass located below 5.5 km and 99% within 32 km.",
+        "Air flows naturally from areas of high pressure to low pressure, with wind speed determined by the steepness of the pressure gradient.",
+        "Isobars map equal atmospheric pressure; closely spaced lines signal high wind speeds while widely spaced lines indicate calm weather.",
+        "The Intertropical Convergence Zone (ITCZ) is a thermal equator of intense convection and rainfall that shifts seasonally with the Sun.",
+        "Horse Latitudes are subtropical high-pressure belts with calm winds, near which major global deserts are located."
+      ],
+      "id": "d3j6cjy"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Air has mass and gravity pulls it toward the Earth, creating pressure.",
+      "id": "h7ai107"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Pressure is highest at sea level and decreases with altitude.",
+      "id": "cyxszdg"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Standard sea-level pressure is approximately 1013.25 millibars (mb) or hectopascals (hPa).",
+      "id": "we8v32m"
+    },
+    {
+      "type": "paragraph",
+      "content": "• 1 millibar = 100 pascals.",
+      "id": "ly92kap"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Normal atmospheric pressure can support a mercury column of 76 cm.",
+      "id": "yaqmymp"
+    },
+    {
+      "id": "cmcddaq",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Measurement of Atmospheric Pressure"
+    },
+    {
+      "id": "zcpwmti",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Instrument</strong></p>",
+            "<p><strong>Key Feature</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mercury Barometer</p>",
+            "<p>Invented by Torricelli; highly accurate but not portable.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Aneroid Barometer</p>",
+            "<p>Portable instrument using a sealed metal chamber.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Barograph</p>",
+            "<p>Records continuous pressure changes.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Digital Barometer</p>",
+            "<p>Modern electronic pressure sensor.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trv29e6",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Factors Affecting Atmospheric Pressure"
+    },
+    {
+      "id": "8mapscy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Temperature</p>",
+            "<p>Warm air expands and rises creating low pressure; cold air is dense creating high pressure.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Altitude</p>",
+            "<p>Air density decreases with height causing pressure to fall.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Water Vapour</p>",
+            "<p>Moist air is lighter than dry air, producing lower pressure.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Earth's Rotation</p>",
+            "<p>Centrifugal force reduces pressure near the equator.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Gravity</p>",
+            "<p>Stronger gravitational pull increases pressure concentration.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s968gl3",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Vertical Distribution of Pressure"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Pressure decreases exponentially, not uniformly.",
+      "id": "irpbzek"
+    },
+    {
+      "type": "paragraph",
+      "content": "• About 50% of atmospheric mass lies below 5.5 km.",
+      "id": "uhxy7lv"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Nearly 99% lies within 32 km.",
+      "id": "q2418s0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Low pressure at high altitudes can cause altitude sickness.",
+      "id": "bxl3zam"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Aircraft cabins are pressurized to maintain comfort.",
+      "id": "19ta58b"
+    },
+    {
+      "id": "5sflris",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Horizontal Distribution of Pressure"
+    },
+    {
+      "type": "paragraph",
+      "content": "Isobars are lines connecting places of equal atmospheric pressure.",
+      "id": "rbvnc9w"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Atmospheric pressure is the force exerted by the weight of air on the Earth's surface.",
+      "id": "w4zqhzx"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Closely spaced isobars indicate strong winds.",
+      "id": "txubd1a"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Widely spaced isobars indicate calm conditions.",
+      "id": "vhzgxor"
+    },
+    {
+      "type": "paragraph",
+      "content": "• A steep pressure gradient produces high wind speed.",
+      "id": "s7y1e0k"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Air moves from high pressure to low pressure.",
+      "id": "sz4zjzc"
+    },
+    {
+      "id": "lzj2it8",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Major Pressure Belts of the Earth"
+    },
+    {
+      "id": "18ti6ni",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "id": "c74nn0w",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Pressure Belt</strong></p>",
+            "<p><strong>Latitude</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Key Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Equatorial Low (Doldrums)</p>",
+            "<p>0°–10°</p>",
+            "<p>Thermal</p>",
+            "<p>Rising air, heavy rainfall, weak surface winds.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Subtropical High</p>",
+            "<p>25°–35°</p>",
+            "<p>Dynamic</p>",
+            "<p>Descending air; associated with world's major deserts.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Subpolar Low</p>",
+            "<p>55°–65°</p>",
+            "<p>Dynamic</p>",
+            "<p>Frequent cyclones due to air mass convergence.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Polar High</p>",
+            "<p>Near 90°</p>",
+            "<p>Thermal</p>",
+            "<p>Cold dense air; dry conditions.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ki73072",
+      "type": "heading",
+      "level": 3,
+      "content": "Horse Latitudes"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Located within subtropical highs.",
+      "id": "87ixz5v"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Characterized by calm winds.",
+      "id": "unqzvdc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Isobar Pattern",
+        "Pressure Gradient",
+        "Wind Condition"
+      ],
+      "rows": [
+        [
+          "Closely spaced isobars",
+          "Steep pressure gradient",
+          "Strong winds / High speed"
+        ],
+        [
+          "Widely spaced isobars",
+          "Gentle pressure gradient",
+          "Calm conditions"
+        ]
+      ],
+      "id": "xuk7nv9"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Major desert belts occur near these latitudes.",
+      "id": "fnftb1x"
+    },
+    {
+      "id": "okdq5an",
+      "type": "heading",
+      "level": 3,
+      "content": "Intertropical Convergence Zone (ITCZ)"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Region where trade winds converge.",
+      "id": "jnacx54"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Zone of intense convection and rainfall.",
+      "id": "j3podkw"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Shifts north and south with the Sun.",
+      "id": "gc9nkyq"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Plays a crucial role in monsoon formation.",
+      "id": "lfkipju"
+    },
+    {
+      "id": "ejnl5ex",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Shifting of Pressure Belts"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Pressure belts migrate toward the Tropic of Cancer in July.",
+      "id": "3ndghr5"
+    },
+    {
+      "type": "paragraph",
+      "content": "• They shift toward the Tropic of Capricorn in January.",
+      "id": "h9orew2"
+    },
+    {
+      "type": "paragraph",
+      "content": "• This seasonal movement drives global wind patterns.",
+      "id": "c2m1bst"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Critical for understanding monsoon circulation.",
+      "id": "f7yb0e1"
+    },
+    {
+      "id": "83exyx8",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Thermal vs Dynamic Pressure"
+    },
+    {
+      "id": "azxar87",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Thermal Pressure</strong></p>",
+            "<p><strong>Dynamic Pressure</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cause</p>",
+            "<p>Temperature differences</p>",
+            "<p>Air movement &amp; rotation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Example</p>",
+            "<p>Equatorial Low</p>",
+            "<p>Subtropical High</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Air Motion</p>",
+            "<p>Rising</p>",
+            "<p>Descending</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Air always moves from high pressure to low pressure, and the pressure gradient directly determines wind velocity.",
+        "The Equatorial region forms a low-pressure belt due to intense solar heating and is referred to as the thermal equator.",
+        "Subtropical highs are characterized by descending air and correspond directly to major desert regions like the Sahara.",
+        "Seasonal migration of pressure belts toward the Tropic of Cancer in July and Tropic of Capricorn in January is key to monsoon circulation."
+      ],
+      "id": "7zkpzqc"
+    },
+    {
+      "id": "wftwkbp",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Importance of Pressure Belts"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Control global wind circulation.",
+      "id": "lq2z15l"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Influence rainfall distribution.",
+      "id": "g240njb"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Determine climatic zones.",
+      "id": "sxq5jth"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Affect ocean currents.",
+      "id": "sljjsxa"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Explain desert formation.",
+      "id": "j7qsniv"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Essential for understanding cyclones and anticyclones.",
+      "id": "0gbvpxy"
+    },
+    {
+      "id": "i637b45",
+      "type": "heading",
+      "level": 2,
+      "content": "EXAM BOOSTER FACTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Air always moves from high pressure to low pressure.<br/>• Equatorial region is a low-pressure zone due to intense heating.<br/>• Subtropical highs correspond to desert regions like the Sahara.<br/>• Polar highs are extremely cold and dry.<br/>• ITCZ is also called the thermal equator.<br/>• Pressure gradient determines wind velocity.",
+      "id": "lj19ifk"
+    }
+  ],
+  "enriched": true
+}

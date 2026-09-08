@@ -4,8 +4,15 @@
   "order": 9,
   "blocks": [
     {
+      "id": "b2pwrh0",
+      "type": "image",
+      "imageId": "43pkdwi",
+      "src": "/books/Guide/SSC GS & GK GUIDE BOOK/images/image_43pkdwi.png"
+    },
+    {
       "type": "paragraph",
-      "id": "t1duquc"
+      "id": "t1duquc",
+      "content": "The arrival of Europeans in India marked the beginning of a new phase in Indian history. European traders came to India in search of spices, silk, cotton, and other valuable goods. Gradually, trade turned into political control. <img></img>"
     },
     {
       "type": "statStrip",
@@ -54,19 +61,23 @@
     },
     {
       "type": "paragraph",
-      "id": "jomdrg0"
+      "id": "jomdrg0",
+      "content": "• India was famous for spices, textiles, silk and precious stones."
     },
     {
       "type": "paragraph",
-      "id": "yzt2lql"
+      "id": "yzt2lql",
+      "content": "• European countries wanted direct trade with India."
     },
     {
       "type": "paragraph",
-      "id": "b2xf68l"
+      "id": "b2xf68l",
+      "content": "• The traditional trade routes were controlled by Arabs and Turks."
     },
     {
       "type": "paragraph",
-      "id": "3san5ue"
+      "id": "3san5ue",
+      "content": "• The discovery of sea routes made direct trade possible."
     },
     {
       "id": "xkjq44i",
@@ -81,29 +92,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Explorer</strong></p>",
+            "<p><strong>Achievement</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vasco da Gama</p>",
+            "<p>Discovered sea route to India in 1498</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Landing Place</p>",
+            "<p>Calicut (Kozhikode) on Malabar Coast</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ruler of Calicut</p>",
+            "<p>Zamorin</p>"
           ]
         }
       ]
@@ -116,19 +127,23 @@
     },
     {
       "type": "paragraph",
-      "id": "n4v8fcg"
+      "id": "n4v8fcg",
+      "content": "• The Portuguese were the first Europeans to establish trading posts in India."
     },
     {
       "type": "paragraph",
-      "id": "ujc418h"
+      "id": "ujc418h",
+      "content": "• Francisco de Almeida became the first Governor of Portuguese India."
     },
     {
       "type": "paragraph",
-      "id": "1yz3fph"
+      "id": "1yz3fph",
+      "content": "• Afonso de Albuquerque captured Goa in 1510 and made it the capital of Portuguese India."
     },
     {
       "type": "paragraph",
-      "id": "jibpvrg"
+      "id": "jibpvrg",
+      "content": "• The Portuguese introduced tobacco and printing press in India."
     },
     {
       "id": "9lhsda5",
@@ -138,24 +153,23 @@
     },
     {
       "type": "paragraph",
-      "id": "x5nimja"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Anglo-French Rivalry (Carnatic Wars)",
-      "id": "v81lwc0"
+      "id": "x5nimja",
+      "content": "• The Dutch East India Company was established in 1602."
     },
     {
       "type": "paragraph",
-      "id": "i8w71c6"
+      "id": "i8w71c6",
+      "content": "• The Dutch established trading centers in Surat, Pulicat, Nagapattinam and Cochin."
     },
     {
       "type": "paragraph",
-      "id": "sluloqk"
+      "id": "sluloqk",
+      "content": "• They mainly traded in spices."
     },
     {
       "type": "paragraph",
-      "id": "kxodn83"
+      "id": "kxodn83",
+      "content": "• They were defeated by the British in the Battle of Bedara (1759)."
     },
     {
       "id": "puu7m5x",
@@ -165,19 +179,23 @@
     },
     {
       "type": "paragraph",
-      "id": "7voi32c"
+      "id": "7voi32c",
+      "content": "• The English East India Company was established in 1600."
     },
     {
       "type": "paragraph",
-      "id": "cl8eve4"
+      "id": "cl8eve4",
+      "content": "• The first English factory in India was established at Surat in 1613."
     },
     {
       "type": "paragraph",
-      "id": "nqprbhr"
+      "id": "nqprbhr",
+      "content": "• Sir Thomas Roe visited the court of Mughal emperor Jahangir."
     },
     {
       "type": "paragraph",
-      "id": "1xyrguk"
+      "id": "1xyrguk",
+      "content": "• The British gradually expanded their political power in India."
     },
     {
       "type": "comparisonTable",
@@ -223,19 +241,23 @@
     },
     {
       "type": "paragraph",
-      "id": "coslq9h"
+      "id": "coslq9h",
+      "content": "• The French East India Company was established in 1664."
     },
     {
       "type": "paragraph",
-      "id": "yu9szeb"
+      "id": "yu9szeb",
+      "content": "• They established trading centers at Pondicherry, Chandernagore, Mahe and Karaikal."
     },
     {
       "type": "paragraph",
-      "id": "zwx8kf3"
+      "id": "zwx8kf3",
+      "content": "• Dupleix was the most famous French governor in India."
     },
     {
       "type": "paragraph",
-      "id": "0g128ms"
+      "id": "0g128ms",
+      "content": "• The French and British fought the Carnatic Wars."
     },
     {
       "id": "0uh4cby",
@@ -250,29 +272,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>War</strong></p>",
+            "<p><strong>Result</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>First Carnatic War (1746–1748)</p>",
+            "<p>Ended with Treaty of Aix-la-Chapelle</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Second Carnatic War (1749–1754)</p>",
+            "<p>British gained influence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Third Carnatic War (1756–1763)</p>",
+            "<p>British defeated French and became dominant</p>"
           ]
         }
       ]
@@ -285,15 +307,18 @@
     },
     {
       "type": "paragraph",
-      "id": "z4ejn0u"
+      "id": "z4ejn0u",
+      "content": "• Expansion of trade and commerce."
     },
     {
       "type": "paragraph",
-      "id": "ypbao15"
+      "id": "ypbao15",
+      "content": "• Introduction of new goods and technologies."
     },
     {
       "type": "paragraph",
-      "id": "bcel1vj"
+      "id": "bcel1vj",
+      "content": "• Beginning of European political influence in India."
     },
     {
       "type": "examAlert",
@@ -307,7 +332,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zeqrlo5"
+      "id": "zeqrlo5",
+      "content": "• Rise of British dominance in India."
     },
     {
       "id": "ibfg4zd",
@@ -317,23 +343,28 @@
     },
     {
       "type": "paragraph",
-      "id": "cbhp3lx"
+      "id": "cbhp3lx",
+      "content": "• Vasco da Gama reached Calicut in 1498."
     },
     {
       "type": "paragraph",
-      "id": "mngt2yq"
+      "id": "mngt2yq",
+      "content": "• Portuguese were the first Europeans to come to India."
     },
     {
       "type": "paragraph",
-      "id": "af87mn1"
+      "id": "af87mn1",
+      "content": "• English East India Company was established in 1600."
     },
     {
       "type": "paragraph",
-      "id": "mptohu3"
+      "id": "mptohu3",
+      "content": "• Sir Thomas Roe visited Jahangir's court."
     },
     {
       "type": "paragraph",
-      "id": "k5ldp74"
+      "id": "k5ldp74",
+      "content": "• British defeated the French in the Carnatic Wars."
     }
   ],
   "enriched": true

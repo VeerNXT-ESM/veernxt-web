@@ -1,0 +1,90 @@
+{
+  "title": "CHAPTER 3 : ATOMS AND MOLECULES",
+  "order": 3,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "In a chemical substance the elements are always present in definite proportions by mass.",
+      "id": "kd6lrd2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Cation",
+        "Anion"
+      ],
+      "rows": [
+        [
+          "Electric Charge",
+          "Positively charged ion",
+          "Negatively charged ion"
+        ],
+        [
+          "Formation Process",
+          "Formed when an atom loses one or more electrons",
+          "Formed when an atom gains one or more electrons"
+        ],
+        [
+          "Attracted Towards",
+          "Cathode (negative electrode)",
+          "Anode (positive electrode)"
+        ],
+        [
+          "Common Examples",
+          "Sodium ion (Na⁺), Calcium ion (Ca²⁺)",
+          "Chloride ion (Cl⁻), Oxide ion (O²⁻)"
+        ]
+      ],
+      "id": "ykal351"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Avogadro Constant",
+          "value": "6.022 × 10²³",
+          "icon": "info"
+        },
+        {
+          "label": "Dalton's Atomic Theory",
+          "value": "1808",
+          "icon": "calendar"
+        },
+        {
+          "label": "Reference Isotope",
+          "value": "Carbon-12",
+          "icon": "check"
+        },
+        {
+          "label": "Law of Conservation of Mass",
+          "value": "1789",
+          "icon": "award"
+        }
+      ],
+      "id": "lp6mzs1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Numerical problems on the mole concept (calculating molar mass, number of moles, and number of atoms/molecules) are heavily tested.",
+        "Memorize the valencies of common polyatomic ions such as Carbonate (CO3²⁻), Sulfate (SO4²⁻), and Ammonium (NH4⁺) to write correct chemical formulae.",
+        "Distinguish clearly between formula unit mass (used for ionic compounds) and molecular mass (used for covalent molecules)."
+      ],
+      "id": "oi10n78"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Law of Conservation of Mass states that mass can neither be created nor destroyed in a chemical reaction.",
+        "Law of Definite Proportions states that in a chemical substance, elements are always present in definite proportions by mass.",
+        "An atom is the smallest particle of an element that takes part in a chemical reaction and retains all its chemical properties.",
+        "Relative atomic mass of an atom is defined as the average mass of the atom as compared to 1/12th the mass of one Carbon-12 atom.",
+        "One mole of any substance contains exactly 6.022 × 10²³ specified elementary entities (atoms, molecules, or ions)."
+      ],
+      "id": "76cdkqq"
+    }
+  ],
+  "enriched": true
+}

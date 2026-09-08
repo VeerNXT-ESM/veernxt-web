@@ -6,7 +6,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "4dms8db"
+      "id": "4dms8db",
+      "content": "<strong>AVERAGE</strong><br></br>"
     },
     {
       "type": "statStrip",
@@ -56,13 +57,14 @@
       "id": "fnrnvyx",
       "type": "list",
       "items": [
-        null,
-        null
+        "Average of a group of numbers is a single value that represents the central value of the group.",
+        "Formula:<br></br><strong>Average = (Sum of observations) / (Number of observations)</strong>"
       ]
     },
     {
       "type": "paragraph",
-      "id": "mrmsmbh"
+      "id": "mrmsmbh",
+      "content": "<em>In SBIexamination, questions on average are direct, formula-based, and often linked with age, salary, marks, population and similar topics.</em>"
     },
     {
       "id": "ei0errr",
@@ -74,9 +76,9 @@
       "id": "kvh4x25",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Example:<br></br>Find the average of 10, 20, 30, 40 and 50.",
+        "Sum = 150<br></br>Number of observations = 5",
+        "Average = 150 / 5 = 30"
       ]
     },
     {
@@ -89,14 +91,9 @@
       "id": "dpz9mxo",
       "type": "list",
       "items": [
-        null,
-        null
+        "Formula:<br></br>Sum = Average × Number of observations",
+        "Example:<br></br>Average age of 10 students is 18 years.<br></br>Total age = 18 × 10 = 180 years"
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "IMPORTANT POINTS TO REMEMBER",
-      "id": "zyg2nir"
     },
     {
       "id": "3x7r2zv",
@@ -106,7 +103,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8qng6rx"
+      "id": "8qng6rx",
+      "content": "Example 1:<br></br>Average of 5 numbers is 20. A new number 30 is added.<br></br>Old sum = 20 × 5 = 100<br></br>New sum = 100 + 30 = 130<br></br>New number of observations = 6<br></br>New average = 130 / 6 ≈ 21.67<br></br><br></br>Example 2:<br></br>Average of 10 numbers is 25. One number 35 is removed.<br></br>Old sum = 25 × 10 = 250<br></br>New sum = 250 − 35 = 215<br></br>New number of observations = 9<br></br>New average = 215 / 9 ≈ 23.89"
     },
     {
       "id": "a272b4u",
@@ -116,17 +114,18 @@
     },
     {
       "type": "paragraph",
-      "id": "2pa32w9"
+      "id": "2pa32w9",
+      "content": "Example:"
     },
     {
       "id": "76a5man",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Average age of 5 boys is 20 years and average age of 3 girls is 18 years.",
+        "Sum of boys = 5 × 20 = 100",
+        "Sum of girls = 3 × 18 = 54",
+        "Total sum = 154",
+        "Total persons = 8<br></br><br></br>Average age = 154 / 8 = 19.25 years"
       ]
     },
     {
@@ -163,15 +162,16 @@
     },
     {
       "type": "paragraph",
-      "id": "eh8v0kw"
+      "id": "eh8v0kw",
+      "content": "Weighted average is used when groups have different sizes.<br></br>Example:"
     },
     {
       "id": "yid1jkp",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Average marks of 20 students is 60 and average marks of 30 students is 50.",
+        "Total marks = (20 × 60) + (30 × 50) = 2700",
+        "Total students = 50<br></br><br></br>Average marks = 2700 / 50 = 54"
       ]
     },
     {
@@ -182,7 +182,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4rkpwld"
+      "id": "4rkpwld",
+      "content": "• Always calculate total sum first.<br></br>• Be careful when values are added or removed.<br></br>• Average depends on sum and number of terms.<br></br>• SBIquestions are generally simple and direct."
     },
     {
       "id": "g2jq39i",
@@ -201,7 +202,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ja436cl"
+      "id": "ja436cl",
+      "content": "Example 1:<br></br>Average salary of 15 workers is ₹8000.<br></br>Total salary = 8000 × 15 = ₹1,20,000<br></br><br></br>Example 2:<br></br>Average of 6 numbers is 12.<br></br>Sum of numbers = 12 × 6 = 72"
     },
     {
       "id": "gq2r6l8",
@@ -211,7 +213,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lilrxxc"
+      "id": "lilrxxc",
+      "content": "Q1. Find the average of first 10 natural numbers.<br></br>A. 5   B. 5.5   C. 6   D. 6.5<br></br><br></br>Q2. Average age of 8 persons is 30 years. What is their total age?<br></br>A. 220   B. 230   C. 240   D. 250<br></br><br></br>Q3. Average of 4 numbers is 25. If one number is 40, find the average of remaining 3 numbers.<br></br>A. 18   B. 20   C. 22   D. 25"
     },
     {
       "id": "3kb2ccv",
@@ -222,7 +225,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "y7a1vw8"
+      "id": "y7a1vw8",
+      "content": "Q1. B<br></br>Q2. C<br></br>Q3. B"
     }
   ],
   "enriched": true

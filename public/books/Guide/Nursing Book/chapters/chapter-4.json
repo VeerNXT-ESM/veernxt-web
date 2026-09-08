@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "94d09q9"
+      "id": "94d09q9",
+      "content": "Microbiology is the study of microorganisms such as bacteria, viruses, fungi, and parasites. In nursing examinations like RRB Nursing, questions frequently come from microbial classification, modes of transmission, sterilization methods, immunity, and hospital-acquired infections."
     },
     {
       "id": "l08yctd",
@@ -63,49 +64,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Microorganism</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Examples of Diseases</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bacteria</p>",
+            "<p>Single-celled prokaryotic organisms</p>",
+            "<p>Tuberculosis, Typhoid, Cholera</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Viruses</p>",
+            "<p>Acellular organisms that require host cells to reproduce</p>",
+            "<p>Influenza, HIV, COVID-19</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fungi</p>",
+            "<p>Eukaryotic organisms including yeasts and molds</p>",
+            "<p>Candidiasis, Ringworm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Protozoa</p>",
+            "<p>Single-celled eukaryotes often transmitted by vectors</p>",
+            "<p>Malaria, Amoebiasis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Helminths</p>",
+            "<p>Parasitic worms infecting humans</p>",
+            "<p>Ascariasis, Hookworm infection</p>"
           ]
         }
       ]
@@ -118,7 +119,8 @@
     },
     {
       "type": "paragraph",
-      "id": "n0hf25m"
+      "id": "n0hf25m",
+      "content": "Bacteria are unicellular microorganisms lacking a true nucleus. They reproduce mainly by binary fission."
     },
     {
       "id": "chiexmr",
@@ -127,36 +129,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Shape of Bacteria</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cocci (spherical)</p>",
+            "<p>Staphylococcus, Streptococcus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bacilli (rod-shaped)</p>",
+            "<p>Escherichia coli, Bacillus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Spirilla (spiral)</p>",
+            "<p>Spirillum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vibrios (comma-shaped)</p>",
+            "<p>Vibrio cholerae</p>"
           ]
         }
       ]
@@ -168,13 +170,9 @@
       "content": "Viruses"
     },
     {
-      "type": "pullQuote",
-      "content": "Hospital Acquired Infections (Nosocomial Infections)",
-      "id": "h4dkyhn"
-    },
-    {
       "type": "paragraph",
-      "id": "oj12nbs"
+      "id": "oj12nbs",
+      "content": "Viruses are extremely small infectious agents composed of genetic material (DNA or RNA) surrounded by a protein coat. They can replicate only inside living host cells."
     },
     {
       "id": "o0kuw4q",
@@ -183,36 +181,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Virus</strong></p>",
+            "<p><strong>Disease</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>HIV</p>",
+            "<p>AIDS</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hepatitis B Virus</p>",
+            "<p>Hepatitis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Influenza Virus</p>",
+            "<p>Flu</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Coronavirus</p>",
+            "<p>COVID‑19</p>"
           ]
         }
       ]
@@ -225,7 +223,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ix1yf9a"
+      "id": "ix1yf9a",
+      "content": "Fungi are eukaryotic microorganisms that may exist as unicellular yeasts or multicellular molds."
     },
     {
       "id": "m6kzgjy",
@@ -234,29 +233,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Fungal Infection</strong></p>",
+            "<p><strong>Causative Organism</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Candidiasis</p>",
+            "<p>Candida albicans</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ringworm</p>",
+            "<p>Dermatophytes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Aspergillosis</p>",
+            "<p>Aspergillus species</p>"
           ]
         }
       ]
@@ -300,29 +299,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Parasite</strong></p>",
+            "<p><strong>Disease</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Plasmodium</p>",
+            "<p>Malaria</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Entamoeba histolytica</p>",
+            "<p>Amoebiasis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ascaris lumbricoides</p>",
+            "<p>Ascariasis</p>"
           ]
         }
       ]
@@ -340,36 +339,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Autoclaving</p>",
+            "<p>Sterilization using steam under pressure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Boiling</p>",
+            "<p>Kills many microorganisms but not all spores</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chemical disinfectants</p>",
+            "<p>Alcohol, chlorine, iodine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>UV Radiation</p>",
+            "<p>Used for air and surface disinfection</p>"
           ]
         }
       ]
@@ -382,7 +381,8 @@
     },
     {
       "type": "paragraph",
-      "id": "quf7q73"
+      "id": "quf7q73",
+      "content": "Immunity is the body's ability to resist infection. It can be innate (natural) or acquired."
     },
     {
       "id": "xj8esrp",
@@ -391,29 +391,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Immunity</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Innate Immunity</p>",
+            "<p>Present at birth; non-specific defense</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Active Immunity</p>",
+            "<p>Develops after infection or vaccination</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Passive Immunity</p>",
+            "<p>Transfer of antibodies from another source</p>"
           ]
         }
       ]
@@ -435,7 +435,8 @@
     },
     {
       "type": "paragraph",
-      "id": "eej4jcm"
+      "id": "eej4jcm",
+      "content": "Nosocomial infections are infections acquired in hospitals or healthcare facilities. They are commonly caused by bacteria resistant to antibiotics."
     },
     {
       "id": "9eefwgd",
@@ -444,29 +445,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Infection</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Urinary tract infections</p>",
+            "<p>Often associated with catheter use</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Surgical site infections</p>",
+            "<p>Infections after surgical procedures</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Respiratory infections</p>",
+            "<p>Ventilator-associated pneumonia</p>"
           ]
         }
       ]
@@ -484,50 +485,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Topic</strong></p>",
+            "<p><strong>Key Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Smallest microorganisms</p>",
+            "<p>Viruses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sterilization method in hospitals</p>",
+            "<p>Autoclave</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Malaria parasite</p>",
+            "<p>Plasmodium</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ringworm cause</p>",
+            "<p>Fungi (Dermatophytes)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hospital infections term</p>",
+            "<p>Nosocomial infections</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Shape of cholera bacteria</p>",
+            "<p>Comma-shaped (Vibrio)</p>"
           ]
         }
       ]

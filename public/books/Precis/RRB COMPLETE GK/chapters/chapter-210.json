@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "tzkpuej"
+      "id": "tzkpuej",
+      "content": "Climate change refers to long-term alterations in temperature, precipitation, wind systems, and other elements of climate over decades or centuries. While climate has naturally fluctuated throughout Earth's history, the current phase of warming is primarily driven by human activities. "
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "r50ys33"
+      "id": "r50ys33",
+      "content": "Climate variability refers to short-term natural fluctuations such as El Niño events, whereas climate change refers to persistent long-term shifts in global climate patterns."
     },
     {
       "id": "k61oru3",
@@ -63,23 +65,28 @@
     },
     {
       "type": "paragraph",
-      "id": "1mq1392"
+      "id": "1mq1392",
+      "content": "The greenhouse effect is the process by which certain gases in the atmosphere trap outgoing longwave radiation, keeping Earth warm enough to support life."
     },
     {
       "type": "paragraph",
-      "id": "bffvzd9"
+      "id": "bffvzd9",
+      "content": "• Incoming solar radiation is shortwave radiation."
     },
     {
       "type": "paragraph",
-      "id": "zk9qxro"
+      "id": "zk9qxro",
+      "content": "• Earth emits longwave terrestrial radiation."
     },
     {
       "type": "paragraph",
-      "id": "cup6c09"
+      "id": "cup6c09",
+      "content": "• Greenhouse gases absorb and re-radiate this heat."
     },
     {
       "type": "paragraph",
-      "id": "5v93az8"
+      "id": "5v93az8",
+      "content": "• Without greenhouse effect, Earth's average temperature would be about -18°C instead of +15°C."
     },
     {
       "id": "ffwglnm",
@@ -100,49 +107,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Gas</strong></p>",
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Impact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Carbon Dioxide (CO₂)</p>",
+            "<p>Fossil fuel burning, deforestation</p>",
+            "<p>Largest contributor to warming</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Methane (CH₄)</p>",
+            "<p>Agriculture, wetlands</p>",
+            "<p>More powerful but shorter lifespan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nitrous Oxide (N₂O)</p>",
+            "<p>Fertilizers</p>",
+            "<p>Long atmospheric lifetime</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Water Vapour</p>",
+            "<p>Evaporation</p>",
+            "<p>Amplifies warming</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CFCs</p>",
+            "<p>Refrigerants</p>",
+            "<p>High global warming potential</p>"
           ]
         }
       ]
@@ -155,15 +162,18 @@
     },
     {
       "type": "paragraph",
-      "id": "diwtup4"
+      "id": "diwtup4",
+      "content": "Global warming refers specifically to the rise in Earth's average surface temperature due to increased greenhouse gases."
     },
     {
       "type": "paragraph",
-      "id": "5wxpytx"
+      "id": "5wxpytx",
+      "content": "• Global average temperature has risen by about 1.1°C since pre-industrial times."
     },
     {
       "type": "paragraph",
-      "id": "5ocpzhy"
+      "id": "5ocpzhy",
+      "content": "• Polar regions are warming faster (Arctic amplification)."
     },
     {
       "type": "pullQuote",
@@ -172,11 +182,13 @@
     },
     {
       "type": "paragraph",
-      "id": "btdt296"
+      "id": "btdt296",
+      "content": "• Glaciers and ice caps are melting."
     },
     {
       "type": "paragraph",
-      "id": "kpc6o3l"
+      "id": "kpc6o3l",
+      "content": "• Sea levels are rising due to thermal expansion and ice melt."
     },
     {
       "id": "flkcdza",
@@ -186,23 +198,28 @@
     },
     {
       "type": "paragraph",
-      "id": "tiedz2j"
+      "id": "tiedz2j",
+      "content": "The carbon cycle regulates the exchange of carbon between atmosphere, oceans, soil, and living organisms."
     },
     {
       "type": "paragraph",
-      "id": "jp5ctmf"
+      "id": "jp5ctmf",
+      "content": "• Photosynthesis removes CO₂ from atmosphere."
     },
     {
       "type": "paragraph",
-      "id": "o3qbdo5"
+      "id": "o3qbdo5",
+      "content": "• Respiration and decomposition release CO₂."
     },
     {
       "type": "paragraph",
-      "id": "kbigeyx"
+      "id": "kbigeyx",
+      "content": "• Burning fossil fuels adds excess carbon."
     },
     {
       "type": "paragraph",
-      "id": "0vcyacb"
+      "id": "0vcyacb",
+      "content": "• Oceans absorb nearly 30% of anthropogenic CO₂."
     },
     {
       "type": "comparisonTable",
@@ -243,23 +260,28 @@
     },
     {
       "type": "paragraph",
-      "id": "7f923e3"
+      "id": "7f923e3",
+      "content": "• Rising global temperatures."
     },
     {
       "type": "paragraph",
-      "id": "9ebpfqz"
+      "id": "9ebpfqz",
+      "content": "• Melting glaciers and Arctic sea ice."
     },
     {
       "type": "paragraph",
-      "id": "rlo5tee"
+      "id": "rlo5tee",
+      "content": "• Increasing frequency of extreme weather events."
     },
     {
       "type": "paragraph",
-      "id": "qc0i6qr"
+      "id": "qc0i6qr",
+      "content": "• Coral bleaching."
     },
     {
       "type": "paragraph",
-      "id": "4qc4257"
+      "id": "4qc4257",
+      "content": "• Ocean acidification."
     },
     {
       "id": "co0gx1p",
@@ -274,43 +296,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Sector</strong></p>",
+            "<p><strong>Impact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Agriculture</p>",
+            "<p>Crop failure due to heat stress and irregular rainfall</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Water Resources</p>",
+            "<p>Glacial retreat affecting river flow</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Coastal Areas</p>",
+            "<p>Sea-level rise causing flooding</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Health</p>",
+            "<p>Heat waves and spread of diseases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Biodiversity</p>",
+            "<p>Species migration and extinction</p>"
           ]
         }
       ]
@@ -323,11 +345,13 @@
     },
     {
       "type": "paragraph",
-      "id": "qprn969"
+      "id": "qprn969",
+      "content": "• Increased frequency of extreme rainfall events."
     },
     {
       "type": "paragraph",
-      "id": "zj1r2co"
+      "id": "zj1r2co",
+      "content": "• Retreat of Himalayan glaciers."
     },
     {
       "type": "examAlert",
@@ -341,11 +365,13 @@
     },
     {
       "type": "paragraph",
-      "id": "7777rpz"
+      "id": "7777rpz",
+      "content": "• Rising sea level affecting coastal cities like Mumbai and Chennai."
     },
     {
       "type": "paragraph",
-      "id": "bfw9sz0"
+      "id": "bfw9sz0",
+      "content": "• More intense cyclones in Arabian Sea."
     },
     {
       "id": "oqbr6cf",
@@ -360,29 +386,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Agreement</strong></p>",
+            "<p><strong>Objective</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kyoto Protocol (1997)</p>",
+            "<p>Reduce greenhouse gas emissions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Paris Agreement (2015)</p>",
+            "<p>Limit warming below 2°C</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IPCC</p>",
+            "<p>Scientific assessment of climate change</p>"
           ]
         }
       ]
@@ -400,33 +426,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Mitigation</strong></p>",
+            "<p><strong>Adaptation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Meaning</p>",
+            "<p>Reduce emissions</p>",
+            "<p>Adjust to impacts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example</p>",
+            "<p>Renewable energy</p>",
+            "<p>Flood-resistant crops</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Goal</p>",
+            "<p>Slow warming</p>",
+            "<p>Reduce vulnerability</p>"
           ]
         }
       ]
@@ -439,7 +465,8 @@
     },
     {
       "type": "paragraph",
-      "id": "hcftydd"
+      "id": "hcftydd",
+      "content": "• Greenhouse effect is natural but enhanced by human activity.<br></br>• CO₂ is the largest contributor to global warming.<br></br>• Arctic is warming faster than global average.<br></br>• Paris Agreement aims to limit warming below 2°C.<br></br>• Climate change affects agriculture, water, and health."
     }
   ],
   "enriched": true

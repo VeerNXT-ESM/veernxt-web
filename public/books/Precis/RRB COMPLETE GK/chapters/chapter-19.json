@@ -4,8 +4,15 @@
   "order": 19,
   "blocks": [
     {
+      "id": "9vhr6vl",
+      "type": "image",
+      "imageId": "8ku3di8",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_8ku3di8.png"
+    },
+    {
       "type": "paragraph",
-      "id": "q44sl0j"
+      "id": "q44sl0j",
+      "content": "Seasons occur due to the combination of axial tilt and revolution — NOT distance from the Sun.<img></img>"
     },
     {
       "type": "statStrip",
@@ -81,11 +88,13 @@
     },
     {
       "type": "paragraph",
-      "id": "yu36cmk"
+      "id": "yu36cmk",
+      "content": "• 23.5° axial tilt."
     },
     {
       "type": "paragraph",
-      "id": "h7234vj"
+      "id": "h7234vj",
+      "content": "• Parallelism — axis always points in same direction."
     },
     {
       "type": "examAlert",
@@ -98,7 +107,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qvl8zs2"
+      "id": "qvl8zs2",
+      "content": "• Revolution around the Sun."
     },
     {
       "id": "f2eqe2y",
@@ -107,41 +117,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Date</strong></p>",
+            "<p><strong>Event</strong></p>",
+            "<p><strong>Result</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>21 June</p>",
+            "<p>Summer Solstice</p>",
+            "<p>Longest day in Northern Hemisphere.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>22 December</p>",
+            "<p>Winter Solstice</p>",
+            "<p>Shortest day in Northern Hemisphere.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>21 March</p>",
+            "<p>Vernal Equinox</p>",
+            "<p>Equal day &amp; night.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>23 September</p>",
+            "<p>Autumnal Equinox</p>",
+            "<p>Equal day &amp; night.</p>"
           ]
         }
       ]

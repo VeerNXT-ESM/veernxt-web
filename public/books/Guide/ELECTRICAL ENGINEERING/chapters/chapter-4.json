@@ -1,0 +1,993 @@
+{
+  "id": "08986uz",
+  "title": "Transformers",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "978cuhj",
+      "content": "<strong>CHAPTER 4 — TRANSFORMERS</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "akljdkj",
+      "content": "A transformer is a static electromagnetic device that transfers electrical energy from one circuit to another through electromagnetic induction, without any change in frequency. Transformers are the most important equipment in power systems, enabling economical transmission at high voltages and safe utilisation at low voltages. This chapter is one of the highest-weightage topics in PSU electrical exams."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e28no2m",
+      "content": "<strong>4.1  Construction &amp; Principle</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "74u18qf",
+      "content": "A transformer consists of two (or more) windings wound on a common magnetic core. When AC voltage is applied to the primary winding, it sets up an alternating flux in the core. This alternating flux links with the secondary winding and induces an EMF by Faraday's Law of Electromagnetic Induction. The core is made of silicon steel laminations to reduce eddy current losses."
+    },
+    {
+      "id": "oiph2t7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Material</strong></p>",
+            "<p><strong>Purpose</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Core</p>",
+            "<p>Silicon steel (CRGO) — laminated</p>",
+            "<p>Provides magnetic path; laminations reduce eddy current losses</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Primary Winding</p>",
+            "<p>Copper conductors</p>",
+            "<p>Receives input AC voltage; number of turns = N₁</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Secondary Winding</p>",
+            "<p>Copper conductors</p>",
+            "<p>Delivers output voltage; number of turns = N₂</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Insulation</p>",
+            "<p>Paper, varnish, oil</p>",
+            "<p>Electrical isolation between windings and core</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tank &amp; Oil</p>",
+            "<p>Transformer oil (mineral)</p>",
+            "<p>Cooling; oil also acts as insulation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Buchholz Relay</p>",
+            "<p>Oil + gas actuated</p>",
+            "<p>Protection against internal faults; used in oil-immersed transformers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Conservator</p>",
+            "<p>Oil reservoir tank</p>",
+            "<p>Maintains oil level; breathes as oil expands/contracts</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "3knmd4m",
+      "content": "<strong>4.2  EMF Equation of a Transformer</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ceqztaj",
+      "content": "The EMF induced in the primary and secondary windings can be derived from Faraday's Law. For a sinusoidally varying flux Φ = Φ_m sin(ωt):"
+    },
+    {
+      "id": "bqtmgt5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>E₁ = 4.44 × f × N₁ × Φ_m        (Primary induced EMF, RMS value)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>E₂ = 4.44 × f × N₂ × Φ_m        (Secondary induced EMF, RMS value)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Turns Ratio: a = N₁/N₂ = E₁/E₂ = I₂/I₁  (for ideal transformer)</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "dl69q1l",
+      "content": "For an ideal transformer (no losses): Input kVA = Output kVA, i.e., V₁I₁ = V₂I₂. A step-up transformer has N₂ &gt; N₁ (voltage increases, current decreases). A step-down transformer has N₂ &lt; N₁ (voltage decreases, current increases)."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v0jhv8l",
+      "content": "<strong>4.3  Transformer Losses</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ifj3y8t",
+      "content": "A practical transformer has two main types of losses: Core (Iron) Losses and Copper (I²R) Losses. These losses determine the efficiency of the transformer."
+    },
+    {
+      "id": "qysketm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Loss Type</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Formula</strong></p>",
+            "<p><strong>Varies With</strong></p>",
+            "<p><strong>Reduced By</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Hysteresis Loss (W_h)</p>",
+            "<p>Cyclic magnetisation of core</p>",
+            "<p>W_h = K_h × B_m^1.6 × f × V</p>",
+            "<p>Frequency &amp; flux density</p>",
+            "<p>Better grade silicon steel (CRGO)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Eddy Current Loss (W_e)</p>",
+            "<p>Induced currents in core</p>",
+            "<p>W_e = K_e × B_m² × f² × V</p>",
+            "<p>Frequency² &amp; flux density²</p>",
+            "<p>Laminated core (thin sheets)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Copper Loss (P_cu)</p>",
+            "<p>I²R in windings</p>",
+            "<p>P_cu = I₁²R₁ + I₂²R₂ = I²R_eq</p>",
+            "<p>Load current squared</p>",
+            "<p>Larger conductor cross-section</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Total Iron Loss (P_i)</p>",
+            "<p>W_h + W_e</p>",
+            "<p>P_i = P_h + P_e</p>",
+            "<p>Constant at fixed V &amp; f</p>",
+            "<p>Core material &amp; design</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fcbt0mg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Key: Iron/core losses are constant losses (independent of load). Copper losses are variable (depend on load current²). This distinction is critical for efficiency calculations.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8o2xd5a",
+      "content": "<strong>4.4  Transformer Efficiency</strong>"
+    },
+    {
+      "id": "im0bjcf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>η = P_out / P_in = P_out / (P_out + P_iron + P_copper)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>η = (V₂I₂cosφ₂) / (V₂I₂cosφ₂ + P_i + I₂²R₂_eq) × 100%</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "agm4wd3",
+      "content": "<strong>Condition for Maximum Efficiency</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "7z79lqe",
+      "content": "Maximum efficiency occurs when variable copper losses equal constant iron losses:"
+    },
+    {
+      "id": "bm6fhlg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>P_copper = P_iron   →   I_FL²·R_eq = P_i</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Load current at max η: I_mη = I_FL × √(P_i / P_cu_FL)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Load fraction at max η: x = √(P_i / P_cu_FL)</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eyy06vd",
+      "content": "<strong>All-Day Efficiency</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "jkvhh4i",
+      "content": "All-day efficiency is the ratio of energy output (kWh) to energy input (kWh) over 24 hours. This is important for distribution transformers that are energised all day but carry load only for a fraction of the day. Core losses run all 24 hours; copper losses run only during loading hours."
+    },
+    {
+      "id": "qp33pw8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>η_all-day = Output energy (kWh) / Input energy (kWh)  over 24 hours</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "snfa9dn",
+      "content": "<strong>4.5  Regulation of a Transformer</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "q91iye2",
+      "content": "Voltage regulation is the change in secondary terminal voltage from no-load to full-load, expressed as a percentage of the rated (full-load) secondary voltage. It is a measure of how well the transformer maintains its output voltage under varying load."
+    },
+    {
+      "id": "1f957rf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>%VR = [(V₂_NL − V₂_FL) / V₂_FL] × 100</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Approximate %VR = εR·cosφ₂ + εX·sinφ₂  (for lagging load)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>where εR = %resistance drop = (P_cu / kVA_rated)×100, εX = %reactance drop</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "na6tme1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Load Type</strong></p>",
+            "<p><strong>Power Factor</strong></p>",
+            "<p><strong>Approximate Regulation</strong></p>",
+            "<p><strong>Nature</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Unity PF load</p>",
+            "<p>cosφ = 1, sinφ = 0</p>",
+            "<p>%VR ≈ εR (positive)</p>",
+            "<p>Moderate regulation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lagging PF load</p>",
+            "<p>cosφ &lt; 1 (lagging)</p>",
+            "<p>%VR &gt; εR (positive, larger)</p>",
+            "<p>Poor regulation (V drops)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Leading PF load</p>",
+            "<p>cosφ &lt; 1 (leading)</p>",
+            "<p>%VR may be negative</p>",
+            "<p>V rises with load</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Zero PF lagging</p>",
+            "<p>cosφ = 0, sinφ = 1</p>",
+            "<p>%VR ≈ εX (positive)</p>",
+            "<p>Worst regulation</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "623mb2b",
+      "content": "<strong>4.6  Types of Transformers</strong>"
+    },
+    {
+      "id": "g30nrjj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Core Type</strong></p>",
+            "<p><strong>Application</strong></p>",
+            "<p><strong>Key Feature</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Core type</p>",
+            "<p>Windings surround core limbs</p>",
+            "<p>Power transformers, high voltage</p>",
+            "<p>Better for HV; easy to insulate</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Shell type</p>",
+            "<p>Core surrounds windings</p>",
+            "<p>Distribution, low voltage</p>",
+            "<p>Better mechanical support; less leakage</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Auto-transformer</p>",
+            "<p>Single winding, tapped</p>",
+            "<p>Voltage regulation, starters</p>",
+            "<p>No electrical isolation; less copper</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Current Transformer (CT)</p>",
+            "<p>Series connected</p>",
+            "<p>Measurement, protection</p>",
+            "<p>Measures current; never open-circuit secondary</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Potential Transformer (PT)</p>",
+            "<p>Shunt connected</p>",
+            "<p>Measurement, protection</p>",
+            "<p>Measures voltage; secondary nearly open</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Three-phase transformer</p>",
+            "<p>3 limb or 5 limb core</p>",
+            "<p>Power systems</p>",
+            "<p>Delta-star (Dyn11) most common for distribution</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9ffyzth",
+      "content": "<strong>4.7  Practice MCQs — Transformers</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "pkp94aa",
+      "content": "<strong>Q1.  </strong>The EMF equation of a transformer is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gymioz6",
+      "content": "        (A)  E = 2.22fNΦ_m"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kt41b6m",
+      "content": "        (B)  E = 4.44fNΦ_m"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oyqvled",
+      "content": "        (C)  E = 6.28fNΦ_m"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "841ci1g",
+      "content": "        (D)  E = fNΦ_m"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qf8v3qw",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "8uhohtd",
+      "content": "<strong>Q2.  </strong>In a transformer, iron losses are:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4rjzw9o",
+      "content": "        (A)  Variable with load"
+    },
+    {
+      "type": "paragraph",
+      "id": "73jxl2x",
+      "content": "        (B)  Constant at fixed voltage &amp; frequency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jdemjeq",
+      "content": "        (C)  Zero at no load"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1ax7xex",
+      "content": "        (D)  Proportional to current²"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Building a strong conceptual foundation in the introductory phase is crucial for tackling complex examination problems.",
+      "id": "zv56exm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3klboqr",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "4wie1tr",
+      "content": "<strong>Q3.  </strong>A transformer has turns ratio N₁:N₂ = 1:5. If primary voltage is 220V, secondary voltage is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3n0xr1p",
+      "content": "        (A)  44 V"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tjeveiq",
+      "content": "        (B)  1100 V"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2ttymje",
+      "content": "        (C)  220 V"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ipuz1wz",
+      "content": "        (D)  440 V"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fae8q6d",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "mhbp3t4",
+      "content": "<strong>Q4.  </strong>Copper losses in a transformer vary as:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "orclyq9",
+      "content": "        (A)  Load current"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8pepqdh",
+      "content": "        (B)  Load current squared"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iskmdee",
+      "content": "        (C)  Square root of load"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vgtkyib",
+      "content": "        (D)  Constant"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9zd03zm",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "3tz46n7",
+      "content": "<strong>Q5.  </strong>Maximum efficiency of a transformer occurs when:"
+    },
+    {
+      "type": "paragraph",
+      "id": "98v1ryq",
+      "content": "        (A)  Copper loss = half of iron loss"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ydpu8b",
+      "content": "        (B)  Iron loss = copper loss"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4gwkaoc",
+      "content": "        (C)  Copper loss is maximum"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tw6vham",
+      "content": "        (D)  Iron loss is zero"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nxaw2e7",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "y58qj14",
+      "content": "<strong>Q6.  </strong>A Buchholz relay protects against:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "grxjf61",
+      "content": "        (A)  Overcurrent only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0mydus3",
+      "content": "        (B)  Overvoltage only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k1jwwur",
+      "content": "        (C)  Internal faults generating gas"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "svzg13v",
+      "content": "        (D)  External short circuits only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7aif0aq",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "c3znfis",
+      "content": "<strong>Q7.  </strong>The purpose of laminating the transformer core is to reduce:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "r0zbd37",
+      "content": "        (A)  Hysteresis loss"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7elg7u4",
+      "content": "        (B)  Eddy current loss"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "19uy15z",
+      "content": "        (C)  Copper loss"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d4ept4m",
+      "content": "        (D)  All losses"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mgslea1",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "mx7s491",
+      "content": "<strong>Q8.  </strong>Voltage regulation of a transformer is zero when:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2vkaew3",
+      "content": "        (A)  Load is inductive"
+    },
+    {
+      "type": "paragraph",
+      "id": "nqnnwgi",
+      "content": "        (B)  Load is capacitive at a specific PF"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tce6n8m",
+      "content": "        (C)  Load is resistive"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3ks5pxm",
+      "content": "        (D)  No load"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3kan3gq",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "xgbcyuj",
+      "content": "<strong>Q9.  </strong>Current Transformer (CT) secondary should never be:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4rykq4z",
+      "content": "        (A)  Short-circuited"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s7jt28i",
+      "content": "        (B)  Open-circuited"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l3y2xo2",
+      "content": "        (C)  Loaded with a meter"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wq5qw3q",
+      "content": "        (D)  Earthed"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6b5ximt",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "kyi2xvj",
+      "content": "<strong>Q10.  </strong>An auto-transformer compared to a two-winding transformer:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tp0w3v9",
+      "content": "        (A)  Requires more copper"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ehdbbrj",
+      "content": "        (B)  Provides electrical isolation"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kowr33q",
+      "content": "        (C)  Requires less copper"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zf2x8ef",
+      "content": "        (D)  Has lower efficiency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pa61e0i",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "sr2q3pf",
+      "content": "<strong>Q11.  </strong>The all-day efficiency of a distribution transformer is always:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k7yauuw",
+      "content": "        (A)  Equal to commercial efficiency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zitn8pj",
+      "content": "        (B)  Less than commercial efficiency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3k6guha",
+      "content": "        (C)  Greater than commercial efficiency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "un87v7r",
+      "content": "        (D)  Equal to 100%"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s3slbrr",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "f87clo0",
+      "content": "<strong>Q12.  </strong>The pulsation frequency of core loss in a transformer supplied at 50Hz is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rkw9mr3",
+      "content": "        (A)  25 Hz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i2k4675",
+      "content": "        (B)  50 Hz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q8qocpz",
+      "content": "        (C)  100 Hz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ertkfyf",
+      "content": "        (D)  200 Hz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e4uwr7w",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "8pqbfdy",
+      "content": "<strong>Q13.  </strong>CRGO (Cold Rolled Grain Oriented) silicon steel is used in transformer cores to:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s5sa6xr",
+      "content": "        (A)  Increase copper losses"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eqnnedi",
+      "content": "        (B)  Reduce hysteresis loss"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pn6furk",
+      "content": "        (C)  Increase eddy currents"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uaobvnz",
+      "content": "        (D)  Improve cooling"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zu2r2e0",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "danhcp4",
+      "content": "<strong>Q14.  </strong>The no-load current of a transformer is approximately:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cewrgdn",
+      "content": "        (A)  2–10% of full-load current"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "sdhcw32",
+      "content": "        (B)  50% of full-load current"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x35fu2l",
+      "content": "        (C)  Equal to full-load current"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4v8ccaa",
+      "content": "        (D)  Zero"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j5iwcl7",
+      "content": "<strong>Answer: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "jwgo3s1",
+      "content": "<strong>Q15.  </strong>For a transformer, the condition V₁I₁ = V₂I₂ assumes:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k5ed8tl",
+      "content": "        (A)  Unity power factor"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4qprrn9",
+      "content": "        (B)  Lagging power factor"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "leoida2",
+      "content": "        (C)  Ideal (lossless) transformer"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5td0jjj",
+      "content": "        (D)  Maximum efficiency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u7zi7yu",
+      "content": "<strong>Answer: </strong>(C)"
+    }
+  ],
+  "enriched": true
+}

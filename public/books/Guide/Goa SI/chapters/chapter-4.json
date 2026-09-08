@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "i0zuj23"
+      "id": "i0zuj23",
+      "content": "Goa has the highest per capita income among all Indian states and one of the highest Human Development Index (HDI) scores. The economy is primarily driven by tourism, mining, and services. Agriculture and fisheries also play important roles."
     },
     {
       "id": "5xaetr1",
@@ -57,78 +58,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Economic Indicator</strong></p>",
+            "<p><strong>Value / Status</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Per Capita Income</p>",
+            "<p>Highest among all Indian states</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>GSDP (2023-24)</p>",
+            "<p>Approximately ₹1.30 lakh crore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Main Revenue Sources</p>",
+            "<p>Tourism, Mining (Iron Ore), Fisheries, Pharmaceuticals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major Industries</p>",
+            "<p>Tourism, Fishing, Mining, Pharmaceuticals, Electronics, IT</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major Ports</p>",
+            "<p>Mormugao Port (Major Port — one of 13 major ports of India)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major Industrial Areas</p>",
+            "<p>Verna, Kundaim, Bicholim, Sanquelim</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Agriculture</p>",
+            "<p>Rice (staple), Cashew, Coconut, Spices, Fruits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fisheries</p>",
+            "<p>Major source of livelihood; Goa is 'Land of Fish and Coconut'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mining</p>",
+            "<p>Iron ore, Manganese, Bauxite (Western Ghats belt)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SEZs</p>",
+            "<p>Verna Industrial Estate; Mopa SEZ (proposed)</p>"
           ]
         }
       ]
@@ -146,7 +147,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gc3aril"
+      "id": "gc3aril",
+      "content": "Tourism is Goa's most important industry, accounting for 16–35% of the state's GSDP depending on the season. Goa received over 8 million domestic and 0.7 million international tourists annually before COVID-19."
     },
     {
       "id": "mckrhwf",
@@ -158,13 +160,13 @@
       "id": "muppuai",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Beach Tourism — Calangute, Baga, Palolem, Anjuna, Colva",
+        "Heritage Tourism — Old Goa Churches, Goa Museum, Ancestral Goa (Loutolim)",
+        "Wildlife Tourism — Bhagwan Mahavir NP, Bondla, Cotigao, Netravali",
+        "Medical Tourism — Goa's hospitals attract medical tourists from Africa and neighboring countries",
+        "Adventure Tourism — Water sports, trekking, kayaking",
+        "MICE Tourism (Meetings, Incentives, Conferences, Exhibitions)",
+        "Sustainable / Eco-tourism — Growing segment in eastern Goa"
       ]
     },
     {
@@ -175,17 +177,18 @@
     },
     {
       "type": "paragraph",
-      "id": "f9s9wi8"
+      "id": "f9s9wi8",
+      "content": "Goa was once among the top exporters of iron ore in the world. The mining sector went through a major crisis following the Shah Commission (2012) and subsequent Supreme Court orders."
     },
     {
       "id": "bfdzvb5",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Iron ore mining: Primarily in Bicholim, Sattari, Sanguem, and Quepem talukas",
+        "Goa had 90+ mining leases; the Supreme Court cancelled all of them in 2018",
+        "The Goa Foundation vs Union of India case (2014) was a landmark Supreme Court judgment",
+        "Mining was partially resumed after legislative changes in 2020–2022",
+        "Vedanta Group (Sesa Goa), NMDC, and various private firms operate mines in Goa"
       ]
     },
     {
@@ -196,7 +199,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jwvg8jf"
+      "id": "jwvg8jf",
+      "content": "Mormugao Port Trust (MPT) is one of the 13 major ports of India, managed by the Ministry of Ports, Shipping and Waterways. It handles the bulk of Goa's external trade."
     },
     {
       "type": "examAlert",
@@ -211,10 +215,10 @@
       "id": "59dcc49",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Located at the mouth of the Zuari River in Mormugao, South Goa",
+        "Primarily handles iron ore, coal, fertilizers, petroleum products",
+        "Also serves as a cruise terminal",
+        "Mormugao Port handled over 20 million tonnes of cargo annually before mining ban"
       ]
     },
     {
@@ -230,65 +234,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Crop</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rice (Khazan)</p>",
+            "<p>Food crop</p>",
+            "<p>Staple crop; grown in khazan lands (tidal wetlands); varieties include Jyoti and Jalgaon</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cashew</p>",
+            "<p>Cash crop</p>",
+            "<p>Major export crop; Goa produces 25,000+ tonnes annually; Cashew Feni made from cashew</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Coconut</p>",
+            "<p>Plantation crop</p>",
+            "<p>Most widespread crop; source of coconut feni and toddy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Areca Nut (Betel Nut)</p>",
+            "<p>Plantation crop</p>",
+            "<p>Important in Goa's diet and culture</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Spices</p>",
+            "<p>Horticulture</p>",
+            "<p>Black pepper, cardamom, cinnamon, cloves grown in Western Ghats region</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tropical Fruits</p>",
+            "<p>Horticulture</p>",
+            "<p>Mangoes (Mancurad/Alfonso variety famous), pineapple, jackfruit, banana</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sugarcane</p>",
+            "<p>Cash crop</p>",
+            "<p>Grown in some parts of North Goa</p>"
           ]
         }
       ]

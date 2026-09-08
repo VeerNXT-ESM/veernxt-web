@@ -1,0 +1,57 @@
+{
+  "title": "8. Reports of UPSC",
+  "order": 200,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "UPSC submits its annual report to the President. The President places this report before Parliament along with a memorandum explaining cases where UPSC advice was not accepted.",
+      "id": "l35i8za"
+    },
+    {
+      "type": "pullQuote",
+      "content": "UPSC submits its annual report to the President.",
+      "id": "tm3x5t2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Report Type",
+          "value": "Annual Report",
+          "icon": "calendar"
+        },
+        {
+          "label": "Submitted To",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "Placed Before",
+          "value": "Parliament",
+          "icon": "book"
+        }
+      ],
+      "id": "dg34m1d"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "UPSC submits its annual report to the President, NOT directly to Parliament.",
+        "The President lays the report before Parliament, accompanied by a memorandum explaining reasons for non-acceptance of UPSC advice."
+      ],
+      "id": "qabvwcs"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "UPSC submits its annual report regarding its performance to the President.",
+        "The President causes the report to be laid before both Houses of Parliament.",
+        "The report is accompanied by a memorandum detailing cases where the advice of the Commission was not accepted.",
+        "The memorandum explains the reasons for such non-acceptance."
+      ],
+      "id": "g3orhlt"
+    }
+  ],
+  "enriched": true
+}

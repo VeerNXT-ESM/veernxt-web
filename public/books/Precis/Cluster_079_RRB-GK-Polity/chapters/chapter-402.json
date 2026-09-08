@@ -1,0 +1,59 @@
+{
+  "title": "5. Appointment Committee (EXTREMELY IMPORTANT)",
+  "order": 402,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The President appoints CIC members on the recommendation of a committee consisting of:<br/>• Prime Minister – Chairperson<br/>• Leader of Opposition in Lok Sabha<br/>• Union Cabinet Minister nominated by the Prime Minister",
+      "id": "6uga9ic"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The President appoints CIC members on the recommendation of a committee consisting of:",
+      "id": "ze8xhi9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Appointing Authority",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "Committee Head",
+          "value": "Prime Minister",
+          "icon": "check"
+        },
+        {
+          "label": "Committee Size",
+          "value": "3 Members",
+          "icon": "info"
+        }
+      ],
+      "id": "g25jbel"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crucial distinction: The President appoints CIC members, but only upon the recommendation of the selection committee.",
+        "Note the house specification: It is the Leader of Opposition in the Lok Sabha (not Rajya Sabha).",
+        "The Union Cabinet Minister member is specifically nominated by the Prime Minister."
+      ],
+      "id": "ylpgvcp"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The President formally appoints members of the Central Information Commission (CIC).",
+        "Appointments are strictly made based on recommendations from a specialized three-member committee.",
+        "The Prime Minister acts as the Chairperson of the Appointment Committee.",
+        "The Leader of Opposition in the Lok Sabha is a statutory member of the committee.",
+        "A Union Cabinet Minister, nominated directly by the Prime Minister, completes the committee."
+      ],
+      "id": "vnoubct"
+    }
+  ],
+  "enriched": true
+}

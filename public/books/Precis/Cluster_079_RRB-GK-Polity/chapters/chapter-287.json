@@ -1,0 +1,63 @@
+{
+  "title": "11. Exam Traps",
+  "order": 287,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• CBI is NOT a constitutional body.<br/>• Works under DSPE Act, 1946.<br/>• Requires state consent.<br/>• Director has a minimum tenure of 2 years.<br/>• CVC supervises CBI in corruption cases.",
+      "id": "a5ysiki"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CBI is NOT a constitutional body.",
+      "id": "r0rntew"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "DSPE Act, 1946",
+          "icon": "book"
+        },
+        {
+          "label": "Director Tenure",
+          "value": "Min. 2 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Supervision",
+          "value": "CVC (Corruption)",
+          "icon": "check"
+        },
+        {
+          "label": "Status",
+          "value": "Non-Constitutional",
+          "icon": "info"
+        }
+      ],
+      "id": "uyvcvwp"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently trick candidates by labeling CBI as a constitutional or statutory body created by a standalone Act—it derives powers solely from the DSPE Act, 1946.",
+        "Note that state consent is a mandatory requirement for CBI investigations inside state territory.",
+        "Supervision of CBI is divided: CVC supervises it specifically for corruption cases, not all criminal investigations."
+      ],
+      "id": "f0lzzkl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "CBI is not a constitutional body and functions under the DSPE Act, 1946.",
+        "The agency requires state consent before undertaking investigations within a state's jurisdiction.",
+        "The Director of CBI is legally guaranteed a minimum tenure of 2 years.",
+        "Superintendence over CBI regarding corruption offences lies with the Central Vigilance Commission (CVC)."
+      ],
+      "id": "e36yfe8"
+    }
+  ],
+  "enriched": true
+}

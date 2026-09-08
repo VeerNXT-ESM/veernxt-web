@@ -1,0 +1,118 @@
+{
+  "title": "5. Types of Deserts Based on Surface",
+  "order": 161,
+  "blocks": [
+    {
+      "id": "lpwgp21",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Erg</p>",
+            "<p>Vast sand seas.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reg</p>",
+            "<p>Gravel-covered deserts.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Hamada</p>",
+            "<p>Bare rocky plateaus.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Hamada or Rocky Deserts consist of bare, exposed bedrock stripped of fine material by persistent wind deflation.",
+      "id": "0c42w1k"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Desert Type",
+        "Surface Material",
+        "Primary Characteristics & Local Names"
+      ],
+      "rows": [
+        [
+          "Erg (Sandy)",
+          "Accumulations of sand and silt",
+          "Vast undulating sand dunes; known as Koum in Turkestan"
+        ],
+        [
+          "Reg (Stony)",
+          "Angular pebbles, cobbles, and gravel",
+          "Gravel plains; known as Serir (Libya) and Gibber (Australia)"
+        ],
+        [
+          "Hamada (Rocky)",
+          "Bare, exposed bedrock",
+          "Smooth, windswept rock pavements stripped of fine particles"
+        ]
+      ],
+      "id": "ma2kndp"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Erg Deserts",
+          "value": "Sandy Surfaces",
+          "icon": "info"
+        },
+        {
+          "label": "Reg Deserts",
+          "value": "Stony / Gravel",
+          "icon": "check"
+        },
+        {
+          "label": "Hamada Deserts",
+          "value": "Bare Rock",
+          "icon": "book"
+        },
+        {
+          "label": "Key Process",
+          "value": "Wind Deflation",
+          "icon": "award"
+        }
+      ],
+      "id": "9oruheu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams often test local terminology: Erg (Sahara/Turkestan), Serir (Libya), and Gibber (Australia).",
+        "Distinguish clearly between wind deflation (removal of fine dust) and abrasion (sandblasting action on rock surfaces).",
+        "Hamada deserts feature exposed bedrock pavements, whereas Erg deserts are characterized by mobile sand dunes."
+      ],
+      "id": "9dp9lop"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Erg or Sandy Deserts are vast seas of sand dominated by wind-deposited dunes.",
+        "Reg or Stony Deserts feature surfaces covered with angular gravel and pebbles, locally called Serir in Libya and Gibber in Australia.",
+        "Hamada or Rocky Deserts consist of bare, exposed bedrock stripped of fine material by persistent wind deflation.",
+        "Deflation and abrasion are the primary aeolian processes shaping these desert surface types."
+      ],
+      "id": "oezsqyf"
+    }
+  ],
+  "enriched": true
+}

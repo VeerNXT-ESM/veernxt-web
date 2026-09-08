@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "xz796lu"
+      "id": "xz796lu",
+      "content": "The High Court is the highest judicial authority at the state level in India. It functions under Part VI, Chapter V of the Constitution of India. The provisions regarding High Courts are mainly contained in Articles 214–231."
     },
     {
       "type": "statStrip",
@@ -58,113 +59,113 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 214</p>",
+            "<p>High Court for each State</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 215</p>",
+            "<p>High Court as a Court of Record</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 216</p>",
+            "<p>Constitution of High Court</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 217</p>",
+            "<p>Appointment and conditions of the office of a judge</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 218</p>",
+            "<p>Application of certain provisions relating to Supreme Court</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 219</p>",
+            "<p>Oath of judges</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 220</p>",
+            "<p>Restriction on practice after being a permanent judge</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 221</p>",
+            "<p>Salaries and allowances</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 222</p>",
+            "<p>Transfer of judges</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 223</p>",
+            "<p>Appointment of Acting Chief Justice</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 224</p>",
+            "<p>Appointment of additional and acting judges</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 226</p>",
+            "<p>Power of High Court to issue writs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 227</p>",
+            "<p>Power of superintendence over subordinate courts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 228</p>",
+            "<p>Transfer of cases to High Court</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 231</p>",
+            "<p>Common High Court for two or more states</p>"
           ]
         }
       ]
@@ -177,11 +178,13 @@
     },
     {
       "type": "paragraph",
-      "id": "m8y3wnh"
+      "id": "m8y3wnh",
+      "content": "• A High Court consists of a Chief Justice and other judges."
     },
     {
       "type": "paragraph",
-      "id": "7eppxqj"
+      "id": "7eppxqj",
+      "content": "• The number of judges is decided by the President depending on workload."
     },
     {
       "id": "audglnk",
@@ -191,7 +194,8 @@
     },
     {
       "type": "paragraph",
-      "id": "84el2f5"
+      "id": "84el2f5",
+      "content": "• Judges are appointed by the President of India."
     },
     {
       "type": "pullQuote",
@@ -200,7 +204,8 @@
     },
     {
       "type": "paragraph",
-      "id": "27ia45c"
+      "id": "27ia45c",
+      "content": "• Consultation with Chief Justice of India, Governor, and Chief Justice of High Court."
     },
     {
       "id": "lonimyd",
@@ -210,11 +215,13 @@
     },
     {
       "type": "paragraph",
-      "id": "ak15vls"
+      "id": "ak15vls",
+      "content": "• Citizen of India."
     },
     {
       "type": "paragraph",
-      "id": "nwnucmj"
+      "id": "nwnucmj",
+      "content": "• 10 years judicial office OR 10 years advocate in High Court."
     },
     {
       "id": "8bcqjll",
@@ -250,15 +257,18 @@
     },
     {
       "type": "paragraph",
-      "id": "mce10ey"
+      "id": "mce10ey",
+      "content": "• Judges retire at age 62."
     },
     {
       "type": "paragraph",
-      "id": "srysl0u"
+      "id": "srysl0u",
+      "content": "• They can resign to the President."
     },
     {
       "type": "paragraph",
-      "id": "b6j6m7n"
+      "id": "b6j6m7n",
+      "content": "• They can be removed through impeachment."
     },
     {
       "id": "p0ntd1g",
@@ -268,7 +278,8 @@
     },
     {
       "type": "paragraph",
-      "id": "v8m4i86"
+      "id": "v8m4i86",
+      "content": "Original, Appellate, Writ, and Supervisory jurisdiction."
     },
     {
       "id": "h2cg82u",
@@ -292,43 +303,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Writ</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Habeas Corpus</p>",
+            "<p>Produce illegally detained person</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mandamus</p>",
+            "<p>Order to perform duty</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prohibition</p>",
+            "<p>Stop lower court proceedings</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Certiorari</p>",
+            "<p>Transfer case</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Quo Warranto</p>",
+            "<p>Question authority of office holder</p>"
           ]
         }
       ]
@@ -341,15 +352,18 @@
     },
     {
       "type": "paragraph",
-      "id": "zclq4d8"
+      "id": "zclq4d8",
+      "content": "• Articles 214–231 deal with High Courts."
     },
     {
       "type": "paragraph",
-      "id": "t2czifc"
+      "id": "t2czifc",
+      "content": "• Judges retire at 62."
     },
     {
       "type": "paragraph",
-      "id": "gqm9pt6"
+      "id": "gqm9pt6",
+      "content": "• High Courts issue writs under Article 226."
     }
   ],
   "enriched": true

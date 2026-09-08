@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "3cs3xu8"
+      "id": "3cs3xu8",
+      "content": "The External Sector refers to all economic transactions between residents of India and the rest of the world. It includes trade in goods and services, capital flows, foreign exchange reserves, exchange rate management and external debt."
     },
     {
       "type": "paragraph",
-      "id": "3y4tumw"
+      "id": "3y4tumw",
+      "content": "The performance of the external sector determines currency stability, trade balance, foreign investment inflows and overall macroeconomic stability."
     },
     {
       "id": "k0dtb5b",
@@ -63,7 +65,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zo6hlyt"
+      "id": "zo6hlyt",
+      "content": "Balance of Payments is a systematic record of all economic transactions between India and the rest of the world during a specific period."
     },
     {
       "id": "ap4e6z6",
@@ -72,29 +75,30 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Account</strong></p>",
+            "<p><strong>Components</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Current Account</p>",
+            "<p>Goods, Services, Income, Transfers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Capital &amp; Financial Account</p>",
+            "<p>FDI, FPI, Loans, Banking Capital</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "904arhe"
+      "id": "904arhe",
+      "content": "BoP must always balance (Credits = Debits)."
     },
     {
       "id": "he3zp42",
@@ -104,15 +108,18 @@
     },
     {
       "type": "paragraph",
-      "id": "14k6xgh"
+      "id": "14k6xgh",
+      "content": "The Current Account records trade in goods and services, income flows and unilateral transfers."
     },
     {
       "type": "paragraph",
-      "id": "uhxjm11"
+      "id": "uhxjm11",
+      "content": "Trade Balance = Exports – Imports (Goods only).<br></br>Current Account Balance = Trade Balance + Net Services + Net Income + Net Transfers."
     },
     {
       "type": "paragraph",
-      "id": "9i703zf"
+      "id": "9i703zf",
+      "content": "Current Account Deficit (CAD) occurs when imports exceed exports."
     },
     {
       "id": "8tp7bjn",
@@ -122,11 +129,13 @@
     },
     {
       "type": "paragraph",
-      "id": "hr6kihn"
+      "id": "hr6kihn",
+      "content": "This account records capital flows such as foreign investments and borrowings."
     },
     {
       "type": "paragraph",
-      "id": "etewqm5"
+      "id": "etewqm5",
+      "content": "• Foreign Direct Investment (FDI) – Long-term investment with management control.<br></br>• Foreign Portfolio Investment (FPI) – Investment in shares/bonds.<br></br>• External Commercial Borrowings (ECB).<br></br>"
     },
     {
       "id": "381otwh",
@@ -135,17 +144,14 @@
       "content": "5. EXCHANGE RATE SYSTEM IN INDIA"
     },
     {
-      "type": "pullQuote",
-      "content": "RUPEE DEPRECIATION vs APPRECIATION",
-      "id": "caktv7n"
+      "type": "paragraph",
+      "id": "ckiv3id",
+      "content": "Exchange Rate is the price of one currency in terms of another."
     },
     {
       "type": "paragraph",
-      "id": "ckiv3id"
-    },
-    {
-      "type": "paragraph",
-      "id": "g6gxgkx"
+      "id": "g6gxgkx",
+      "content": "India follows a Managed Floating Exchange Rate system where market forces determine the rate, but RBI intervenes to reduce excessive volatility."
     },
     {
       "id": "o4d9f4l",
@@ -155,19 +161,23 @@
     },
     {
       "type": "paragraph",
-      "id": "4w6wjfw"
+      "id": "4w6wjfw",
+      "content": "Under flexible system, exchange rate is determined by demand and supply of foreign exchange."
     },
     {
       "type": "paragraph",
-      "id": "vd6aewo"
+      "id": "vd6aewo",
+      "content": "Demand for foreign exchange arises from imports, foreign travel, interest payments, and capital outflows."
     },
     {
       "type": "paragraph",
-      "id": "95lxch1"
+      "id": "95lxch1",
+      "content": "Supply arises from exports, remittances, FDI, FPI and foreign borrowings."
     },
     {
       "type": "paragraph",
-      "id": "djrmdqz"
+      "id": "djrmdqz",
+      "content": "Equilibrium rate is determined at intersection of demand and supply curves."
     },
     {
       "id": "jok2g9o",
@@ -213,49 +223,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>Depreciation</strong></p>",
+            "<p><strong>Appreciation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Exports</p>",
+            "<p>Increase</p>",
+            "<p>Decrease</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Imports</p>",
+            "<p>Decrease (costly)</p>",
+            "<p>Increase (cheaper)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inflation</p>",
+            "<p>May increase</p>",
+            "<p>May reduce</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>External Debt</p>",
+            "<p>Burden increases</p>",
+            "<p>Burden decreases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Current Account</p>",
+            "<p>May improve</p>",
+            "<p>May worsen</p>"
           ]
         }
       ]
@@ -268,15 +278,18 @@
     },
     {
       "type": "paragraph",
-      "id": "g7jva1o"
+      "id": "g7jva1o",
+      "content": "Forex reserves are assets held by RBI in foreign currencies."
     },
     {
       "type": "paragraph",
-      "id": "0v0kgnb"
+      "id": "0v0kgnb",
+      "content": "Components:<br></br>• Foreign Currency Assets (FCA)<br></br>• Gold<br></br>• Special Drawing Rights (SDR)<br></br>• Reserve Tranche Position (IMF)<br></br>"
     },
     {
       "type": "paragraph",
-      "id": "4y17i5d"
+      "id": "4y17i5d",
+      "content": "High reserves ensure currency stability and protect against external shocks."
     },
     {
       "id": "50e2ace",
@@ -286,11 +299,13 @@
     },
     {
       "type": "paragraph",
-      "id": "7dxcybd"
+      "id": "7dxcybd",
+      "content": "External debt refers to borrowings from foreign sources."
     },
     {
       "type": "paragraph",
-      "id": "vhromai"
+      "id": "vhromai",
+      "content": "Indicators:<br></br>• External Debt to GDP Ratio<br></br>• Short-term debt ratio<br></br>• Debt service ratio<br></br>"
     },
     {
       "id": "975p72k",
@@ -300,11 +315,13 @@
     },
     {
       "type": "paragraph",
-      "id": "5brz2lw"
+      "id": "5brz2lw",
+      "content": "Major Export Items:"
     },
     {
       "type": "paragraph",
-      "id": "ghgxb0k"
+      "id": "ghgxb0k",
+      "content": "• Petroleum products<br></br>• Engineering goods<br></br>• Gems &amp; Jewellery<br></br>• Pharmaceuticals<br></br>• IT services<br></br>"
     },
     {
       "type": "examAlert",
@@ -318,11 +335,13 @@
     },
     {
       "type": "paragraph",
-      "id": "m1f5bpn"
+      "id": "m1f5bpn",
+      "content": "Major Import Items:"
     },
     {
       "type": "paragraph",
-      "id": "drsqmn9"
+      "id": "drsqmn9",
+      "content": "• Crude oil<br></br>• Gold<br></br>• Electronics<br></br>• Machinery<br></br>"
     },
     {
       "id": "arl8w24",
@@ -332,7 +351,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8zkgdsr"
+      "id": "8zkgdsr",
+      "content": "Major Export Destinations: USA, UAE, European Union, Bangladesh, Singapore.<br></br>Major Import Sources: China, UAE, Saudi Arabia, Russia, Iraq."
     },
     {
       "id": "1b4fkrc",
@@ -342,11 +362,13 @@
     },
     {
       "type": "paragraph",
-      "id": "1mg4ol5"
+      "id": "1mg4ol5",
+      "content": "India is a member of the World Trade Organization (WTO)."
     },
     {
       "type": "paragraph",
-      "id": "9bt9x1w"
+      "id": "9bt9x1w",
+      "content": "Trade policy instruments include tariffs, quotas, export promotion schemes and Free Trade Agreements (FTAs)."
     }
   ],
   "enriched": true

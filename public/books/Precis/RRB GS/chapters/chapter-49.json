@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "o7x38nu"
+      "id": "o7x38nu",
+      "content": "This chapter covers major inventions and discoveries relevant for RRB examinations."
     },
     {
       "id": "ius3fib",
@@ -63,57 +64,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Discovery</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Isaac Newton</p>",
+            "<p>Laws of Motion and Gravitation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Albert Einstein</p>",
+            "<p>Theory of Relativity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Michael Faraday</p>",
+            "<p>Electromagnetic Induction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>James Clerk Maxwell</p>",
+            "<p>Electromagnetic Waves</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heinrich Hertz</p>",
+            "<p>Radio Waves</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>J.J. Thomson</p>",
+            "<p>Electron</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ernest Rutherford</p>",
+            "<p>Nucleus</p>"
           ]
         }
       ]
@@ -131,50 +132,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Inventor</strong></p>",
+            "<p><strong>Invention</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thomas Edison</p>",
+            "<p>Electric Bulb</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Alexander Graham Bell</p>",
+            "<p>Telephone</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nikola Tesla</p>",
+            "<p>AC System</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Guglielmo Marconi</p>",
+            "<p>Radio</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>James Watt</p>",
+            "<p>Steam Engine Improvement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Samuel Morse</p>",
+            "<p>Telegraph</p>"
           ]
         }
       ]
@@ -192,43 +193,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Contribution</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Max Planck</p>",
+            "<p>Quantum Theory</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Niels Bohr</p>",
+            "<p>Atomic Model</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Marie Curie</p>",
+            "<p>Radioactivity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>C.V. Raman</p>",
+            "<p>Raman Effect</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Subrahmanyan Chandrasekhar</p>",
+            "<p>Chandrasekhar Limit</p>"
           ]
         }
       ]
@@ -246,36 +247,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Contribution</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Anders Celsius</p>",
+            "<p>Celsius Scale</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gabriel Fahrenheit</p>",
+            "<p>Fahrenheit Scale</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Alessandro Volta</p>",
+            "<p>Electric Cell</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Georg Ohm</p>",
+            "<p>Ohm's Law</p>"
           ]
         }
       ]
@@ -293,36 +294,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Discovery</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Galileo Galilei</p>",
+            "<p>Telescope Improvement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Johannes Kepler</p>",
+            "<p>Laws of Planetary Motion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Edwin Hubble</p>",
+            "<p>Expanding Universe</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Copernicus</p>",
+            "<p>Heliocentric Theory</p>"
           ]
         }
       ]
@@ -334,54 +335,49 @@
       "content": "6. IMPORTANT DISCOVERIES IN ELECTRICITY"
     },
     {
-      "type": "pullQuote",
-      "content": "FREQUENTLY CONFUSED PAIRS (RRB TRAPS)",
-      "id": "gxmnbxg"
-    },
-    {
       "id": "wbnbnr1",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Contribution</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Benjamin Franklin</p>",
+            "<p>Nature of Electricity (Lightning experiment)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>André-Marie Ampère</p>",
+            "<p>Ampere's Law</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hans Christian Oersted</p>",
+            "<p>Magnetic Effect of Current</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>William Gilbert</p>",
+            "<p>Earth as a Magnet</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Charles-Augustin de Coulomb</p>",
+            "<p>Coulomb's Law</p>"
           ]
         }
       ]
@@ -399,43 +395,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Contribution</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Isaac Newton</p>",
+            "<p>Dispersion of Light</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thomas Young</p>",
+            "<p>Wave Nature of Light (Double Slit Experiment)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Huygens</p>",
+            "<p>Wave Theory of Light</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Snell</p>",
+            "<p>Law of Refraction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pierre and Marie Curie</p>",
+            "<p>Radioactivity Studies</p>"
           ]
         }
       ]
@@ -453,43 +449,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Instrument</strong></p>",
+            "<p><strong>Inventor</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Barometer</p>",
+            "<p>Evangelista Torricelli</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thermometer</p>",
+            "<p>Galileo Galilei</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dynamo</p>",
+            "<p>Michael Faraday</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Microscope</p>",
+            "<p>Zacharias Janssen</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Seismograph</p>",
+            "<p>John Milne</p>"
           ]
         }
       ]
@@ -507,43 +503,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Contribution</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>C.V. Raman</p>",
+            "<p>Raman Effect</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Homi J. Bhabha</p>",
+            "<p>Nuclear Programme in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vikram Sarabhai</p>",
+            "<p>Indian Space Programme</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>A.P.J. Abdul Kalam</p>",
+            "<p>Missile Technology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>S.N. Bose</p>",
+            "<p>Bose-Einstein Statistics</p>"
           ]
         }
       ]
@@ -556,30 +552,36 @@
     },
     {
       "type": "paragraph",
-      "id": "e14yj4u"
+      "id": "e14yj4u",
+      "content": "• Left Hand Rule – Fleming (Motor)"
     },
     {
       "type": "paragraph",
-      "id": "9m3yyql"
+      "id": "9m3yyql",
+      "content": "• Right Hand Rule – Fleming (Generator)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "u1868z6"
+      "id": "u1868z6",
+      "content": "• Electron – J.J. Thomson"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l3grc6l"
+      "id": "l3grc6l",
+      "content": "• Proton – Goldstein"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yjr5dfk"
+      "id": "yjr5dfk",
+      "content": "• Neutron – James Chadwick"
     },
     {
       "type": "paragraph",
-      "id": "ulyc3os"
+      "id": "ulyc3os",
+      "content": "• Radio – Marconi (Not Tesla)"
     },
     {
       "id": "77ntdnc",
@@ -600,43 +602,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Discovery</strong></p>",
+            "<p><strong>Scientist</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Electromagnetic Induction</p>",
+            "<p>Michael Faraday</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Theory of Relativity</p>",
+            "<p>Albert Einstein</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Laws of Motion</p>",
+            "<p>Isaac Newton</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ohm's Law</p>",
+            "<p>Georg Ohm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Quantum Theory</p>",
+            "<p>Max Planck</p>"
           ]
         }
       ]
@@ -658,27 +660,33 @@
     },
     {
       "type": "paragraph",
-      "id": "9j3hr6x"
+      "id": "9j3hr6x",
+      "content": "• Electron discovered by J.J. Thomson."
     },
     {
       "type": "paragraph",
-      "id": "7n320e4"
+      "id": "7n320e4",
+      "content": "• Nucleus discovered by Rutherford."
     },
     {
       "type": "paragraph",
-      "id": "r2jxcrq"
+      "id": "r2jxcrq",
+      "content": "• Raman Effect discovered by C.V. Raman."
     },
     {
       "type": "paragraph",
-      "id": "cvdegjw"
+      "id": "cvdegjw",
+      "content": "• AC system developed by Nikola Tesla."
     },
     {
       "type": "paragraph",
-      "id": "vzmn9gw"
+      "id": "vzmn9gw",
+      "content": "• Radio invented by Marconi."
     },
     {
       "type": "paragraph",
-      "id": "6i9wd3x"
+      "id": "6i9wd3x",
+      "content": "• Ohm gave relation V = IR."
     }
   ],
   "enriched": true

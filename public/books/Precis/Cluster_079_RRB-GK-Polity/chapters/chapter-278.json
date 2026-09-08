@@ -1,0 +1,138 @@
+{
+  "title": "Organizational Structure",
+  "order": 278,
+  "blocks": [
+    {
+      "id": "q6jo24d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Role</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Director</p>",
+            "<p>Head of CBI</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Special Directors</p>",
+            "<p>Assist the Director</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Joint Directors</p>",
+            "<p>Supervise major divisions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Deputy Inspector General (DIG)</p>",
+            "<p>Oversee investigations</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Superintendents of Police</p>",
+            "<p>Lead case investigations</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Organizational structure is the formal framework that defines how tasks are divided, grouped, and coordinated within an enterprise.",
+      "id": "cv3ycmf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Functional Structure",
+        "Divisional Structure"
+      ],
+      "rows": [
+        [
+          "Basis of Grouping",
+          "Grouped based on functions or specialized skills (e.g., HR, Finance, Marketing)",
+          "Grouped based on distinct products, service lines, or geographical regions"
+        ],
+        [
+          "Chain of Command",
+          "Single, vertical hierarchy led by functional department heads",
+          "Semi-autonomous divisions operating with independent division managers"
+        ],
+        [
+          "Decision Making",
+          "Centralized decision-making at the top management level",
+          "Decentralized decision-making within individual divisions"
+        ],
+        [
+          "Cost & Resource Usage",
+          "Economies of scale with low duplication of resources",
+          "Higher operational costs due to duplication of resources across divisions"
+        ]
+      ],
+      "id": "2d0g7wt"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Types",
+          "value": "5 Main Structures",
+          "icon": "book"
+        },
+        {
+          "label": "Key Principle",
+          "value": "Scalar Chain",
+          "icon": "check"
+        },
+        {
+          "label": "Core Concept",
+          "value": "Span of Control",
+          "icon": "info"
+        },
+        {
+          "label": "Exam Weightage",
+          "value": "High Frequency",
+          "icon": "award"
+        }
+      ],
+      "id": "ul3sdi4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Matrix structures violate Henri Fayol's principle of Unity of Command due to employees reporting to two managers simultaneously (Functional and Project Managers).",
+        "Distinguish clearly between Delegation (granting authority to a subordinate) and Decentralization (systematic dispersal of authority across all management levels).",
+        "V.A. Graicunas Theory calculates the mathematical relationships between a superior and subordinates based on span of control."
+      ],
+      "id": "vijkxg8"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Organizational structure defines how activities such as task allocation, coordination, and supervision are directed toward achieving organizational goals.",
+        "Line organization is the oldest and simplest form of organizational structure, characterized by a direct vertical scalar chain of authority.",
+        "Matrix organizational structure combines functional and divisional structures, resulting in a dual chain of command.",
+        "Span of control refers to the number of subordinates a manager or supervisor can directly and effectively manage.",
+        "Decentralization delegates decision-making authority down to lower levels of hierarchy, promoting agility and local responsiveness."
+      ],
+      "id": "k0u7fn8"
+    }
+  ],
+  "enriched": true
+}

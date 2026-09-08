@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "783nwlf"
+      "id": "783nwlf",
+      "content": "Winds are horizontal movements of air caused by pressure differences. They are fundamental to the Earth's heat balance system and are responsible for distributing energy from equatorial to polar regions. Understanding winds is essential for climate, rainfall, ocean currents and disaster studies."
     },
     {
       "type": "statStrip",
@@ -58,43 +59,44 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Force</strong></p>",
+            "<p><strong>Detailed Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pressure Gradient Force (PGF)</p>",
+            "<p>Initiates wind movement from high pressure to low pressure. Stronger gradient = stronger wind.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Coriolis Force</p>",
+            "<p>Deflects winds right in Northern Hemisphere and left in Southern Hemisphere. Zero at equator, maximum at poles.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Frictional Force</p>",
+            "<p>Reduces wind speed near Earth's surface; weakens Coriolis effect.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Centrifugal Force</p>",
+            "<p>Acts on curved wind paths such as cyclones and anticyclones.</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "jfxuwpw"
+      "id": "jfxuwpw",
+      "content": "Geostrophic wind develops when pressure gradient force balances Coriolis force in upper atmosphere."
     },
     {
       "id": "pzhy015",
@@ -109,33 +111,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Wind</strong></p>",
+            "<p><strong>Latitude</strong></p>",
+            "<p><strong>Important Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Trade Winds</p>",
+            "<p>0°–30°</p>",
+            "<p>Blow from subtropical highs to equatorial low; steady; converge at ITCZ.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Westerlies</p>",
+            "<p>30°–60°</p>",
+            "<p>Blow west to east; strongest in Southern Hemisphere; associated with temperate cyclones.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Polar Easterlies</p>",
+            "<p>60°–90°</p>",
+            "<p>Cold winds from polar highs toward subpolar lows.</p>"
           ]
         }
       ]
@@ -148,19 +150,23 @@
     },
     {
       "type": "paragraph",
-      "id": "umhghi9"
+      "id": "umhghi9",
+      "content": "Seasonal winds change direction due to differential heating between land and sea."
     },
     {
       "type": "paragraph",
-      "id": "bl4akgl"
+      "id": "bl4akgl",
+      "content": "• Monsoon winds reverse direction between summer and winter."
     },
     {
       "type": "paragraph",
-      "id": "k95ig19"
+      "id": "k95ig19",
+      "content": "• Driven by shifting pressure belts and ITCZ migration."
     },
     {
       "type": "paragraph",
-      "id": "ge06dba"
+      "id": "ge06dba",
+      "content": "• Strongly influenced by jet streams."
     },
     {
       "id": "ov8f1ys",
@@ -170,7 +176,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vzguril"
+      "id": "vzguril",
+      "content": "Local winds are short-distance winds caused by local temperature and pressure differences."
     },
     {
       "id": "2h4e4gm",
@@ -190,57 +197,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Wind</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Loo</p>",
+            "<p>Northern India</p>",
+            "<p>Hot, dry summer wind causing heat waves.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chinook</p>",
+            "<p>Rocky Mountains (USA/Canada)</p>",
+            "<p>Warm downslope wind; melts snow rapidly.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Foehn</p>",
+            "<p>Alps (Europe)</p>",
+            "<p>Warm, dry descending wind.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sirocco</p>",
+            "<p>North Africa to Southern Europe</p>",
+            "<p>Hot desert wind carrying dust.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Harmattan</p>",
+            "<p>West Africa</p>",
+            "<p>Dry, dusty wind from Sahara.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Santa Ana</p>",
+            "<p>California (USA)</p>",
+            "<p>Hot, dry downslope wind increasing wildfire risk.</p>"
           ]
         }
       ]
@@ -264,57 +271,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Wind</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mistral</p>",
+            "<p>France</p>",
+            "<p>Cold, dry wind blowing toward Mediterranean.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bora</p>",
+            "<p>Adriatic Coast</p>",
+            "<p>Cold gusty wind.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Blizzard</p>",
+            "<p>Polar &amp; temperate regions</p>",
+            "<p>Severe snowstorm with strong winds.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pampero</p>",
+            "<p>Argentina</p>",
+            "<p>Cold wind from polar regions.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Katabatic Winds</p>",
+            "<p>Polar regions</p>",
+            "<p>Cold dense air flowing downhill.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nor'wester (Kalbaisakhi)</p>",
+            "<p>Eastern India</p>",
+            "<p>Pre-monsoon storm with strong winds and rain.</p>"
           ]
         }
       ]
@@ -327,11 +334,13 @@
     },
     {
       "type": "paragraph",
-      "id": "7bwitca"
+      "id": "7bwitca",
+      "content": "• Sea Breeze – Daytime wind from sea to land due to faster heating of land."
     },
     {
       "type": "paragraph",
-      "id": "mcygfxw"
+      "id": "mcygfxw",
+      "content": "• Land Breeze – Nighttime wind from land to sea due to faster cooling of land."
     },
     {
       "type": "comparisonTable",
@@ -366,7 +375,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6ewu8i4"
+      "id": "6ewu8i4",
+      "content": "• Most prominent in coastal areas."
     },
     {
       "id": "evvfgzx",
@@ -376,11 +386,13 @@
     },
     {
       "type": "paragraph",
-      "id": "37fzm1r"
+      "id": "37fzm1r",
+      "content": "• Valley Breeze – Warm air rises upslope during daytime."
     },
     {
       "type": "paragraph",
-      "id": "0015cgb"
+      "id": "0015cgb",
+      "content": "• Mountain Breeze – Cold dense air flows downhill at night."
     },
     {
       "id": "ne4vm2u",
@@ -390,23 +402,28 @@
     },
     {
       "type": "paragraph",
-      "id": "utpx0ak"
+      "id": "utpx0ak",
+      "content": "• Narrow bands of high-speed winds in upper troposphere."
     },
     {
       "type": "paragraph",
-      "id": "0b5ueyw"
+      "id": "0b5ueyw",
+      "content": "• Speed may exceed 300 km/h."
     },
     {
       "type": "paragraph",
-      "id": "2etza5v"
+      "id": "2etza5v",
+      "content": "• Polar Jet Stream influences temperate cyclones."
     },
     {
       "type": "paragraph",
-      "id": "vambkmr"
+      "id": "vambkmr",
+      "content": "• Subtropical Jet influences Indian monsoon onset."
     },
     {
       "type": "paragraph",
-      "id": "nq22oid"
+      "id": "nq22oid",
+      "content": "• Tropical Easterly Jet forms during Indian summer monsoon."
     },
     {
       "type": "examAlert",
@@ -426,19 +443,23 @@
     },
     {
       "type": "paragraph",
-      "id": "khfll1j"
+      "id": "khfll1j",
+      "content": "• Geostrophic wind flows parallel to isobars."
     },
     {
       "type": "paragraph",
-      "id": "qdv0b5j"
+      "id": "qdv0b5j",
+      "content": "• Gradient wind occurs when centrifugal force balances pressure gradient force."
     },
     {
       "type": "paragraph",
-      "id": "lh3ge97"
+      "id": "lh3ge97",
+      "content": "• Windward side of mountains receives rainfall; leeward side is rain shadow area."
     },
     {
       "type": "paragraph",
-      "id": "i5apvc6"
+      "id": "i5apvc6",
+      "content": "• Roaring Forties, Furious Fifties and Screaming Sixties are strong westerly zones."
     },
     {
       "id": "ae42wxp",
@@ -448,7 +469,8 @@
     },
     {
       "type": "paragraph",
-      "id": "n9yud7j"
+      "id": "n9yud7j",
+      "content": "• Coriolis force is zero at equator.<br></br>• Trade winds are most reliable winds.<br></br>• Subtropical highs are desert belts.<br></br>• Chinook causes rapid snowmelt.<br></br>• Jet streams control monsoon intensity.<br></br>• Local winds are temperature-driven."
     }
   ],
   "enriched": true

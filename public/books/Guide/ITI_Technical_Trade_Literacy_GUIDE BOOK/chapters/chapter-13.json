@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8azpk2f"
+      "id": "8azpk2f",
+      "content": "Engineering materials are substances used to manufacture machine parts, tools, structures, and equipment used in industries and workshops. Selection of the correct material is very important because different materials have different properties such as strength, hardness, ductility, conductivity, and durability."
     },
     {
       "type": "paragraph",
-      "id": "gd6a9j6"
+      "id": "gd6a9j6",
+      "content": "In technical trades like fitting, machining, electrical work, and construction, knowledge of engineering materials helps workers choose the right material for specific applications."
     },
     {
       "id": "pqvq8qt",
@@ -68,41 +70,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Material Category</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Metals</p>",
+            "<p>Strong materials with good conductivity</p>",
+            "<p>Iron, Copper, Aluminum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Non-Metals</p>",
+            "<p>Materials without metallic properties</p>",
+            "<p>Plastic, Rubber, Glass</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alloys</p>",
+            "<p>Combination of two or more metals</p>",
+            "<p>Steel, Brass, Bronze</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Composite Materials</p>",
+            "<p>Combination of different materials</p>",
+            "<p>Fiber reinforced plastic</p>"
           ]
         }
       ]
@@ -120,25 +122,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ferrous Metals</p>",
+            "<p>Contain iron as the main element</p>",
+            "<p>Cast Iron, Steel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Non-Ferrous Metals</p>",
+            "<p>Do not contain iron</p>",
+            "<p>Copper, Aluminum, Zinc</p>"
           ]
         }
       ]
@@ -161,57 +163,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Metal</strong></p>",
+            "<p><strong>Important Properties</strong></p>",
+            "<p><strong>Common Uses</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Iron</p>",
+            "<p>Strong and magnetic</p>",
+            "<p>Construction and machinery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Steel</p>",
+            "<p>High strength and durability</p>",
+            "<p>Tools, structures, machine parts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Copper</p>",
+            "<p>Excellent electrical conductivity</p>",
+            "<p>Electrical wiring</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Aluminum</p>",
+            "<p>Lightweight and corrosion resistant</p>",
+            "<p>Aircraft, transport</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Zinc</p>",
+            "<p>Corrosion resistant</p>",
+            "<p>Galvanizing steel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lead</p>",
+            "<p>Soft and dense</p>",
+            "<p>Batteries, radiation shielding</p>"
           ]
         }
       ]
@@ -229,43 +231,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Material</strong></p>",
+            "<p><strong>Uses</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Plastic</p>",
+            "<p>Electrical insulation and containers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rubber</p>",
+            "<p>Seals, tires, insulation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Glass</p>",
+            "<p>Windows, laboratory equipment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ceramics</p>",
+            "<p>Heat resistant components</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wood</p>",
+            "<p>Construction and furniture</p>"
           ]
         }
       ]
@@ -309,7 +311,8 @@
     },
     {
       "type": "paragraph",
-      "id": "h0qvnpe"
+      "id": "h0qvnpe",
+      "content": "Alloys are materials formed by combining two or more metals to improve strength, corrosion resistance, and durability."
     },
     {
       "id": "okok6vm",
@@ -318,41 +321,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Alloy</strong></p>",
+            "<p><strong>Composition</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Steel</p>",
+            "<p>Iron + Carbon</p>",
+            "<p>Construction and machinery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Brass</p>",
+            "<p>Copper + Zinc</p>",
+            "<p>Pipes, fittings</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bronze</p>",
+            "<p>Copper + Tin</p>",
+            "<p>Bearings and sculptures</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Stainless Steel</p>",
+            "<p>Iron + Chromium</p>",
+            "<p>Kitchen tools, medical instruments</p>"
           ]
         }
       ]
@@ -370,50 +373,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Strength</p>",
+            "<p>Ability to withstand force</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hardness</p>",
+            "<p>Resistance to scratching or wear</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ductility</p>",
+            "<p>Ability to be drawn into wires</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Malleability</p>",
+            "<p>Ability to be hammered into sheets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Elasticity</p>",
+            "<p>Ability to return to original shape</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Toughness</p>",
+            "<p>Ability to absorb energy without breaking</p>"
           ]
         }
       ]
@@ -431,43 +434,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Density</p>",
+            "<p>Mass per unit volume</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thermal Conductivity</p>",
+            "<p>Ability to conduct heat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Electrical Conductivity</p>",
+            "<p>Ability to conduct electricity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Melting Point</p>",
+            "<p>Temperature at which material melts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Corrosion Resistance</p>",
+            "<p>Resistance to rust and chemical damage</p>"
           ]
         }
       ]
@@ -491,12 +494,12 @@
       "id": "j8g0mnu",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Strength requirements",
+        "Cost of material",
+        "Availability",
+        "Weight of material",
+        "Resistance to corrosion",
+        "Ease of manufacturing"
       ]
     },
     {
@@ -509,12 +512,12 @@
       "id": "zw116aj",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Engineering materials are used to manufacture machines and structures.",
+        "Ferrous metals contain iron; non-ferrous metals do not.",
+        "Steel is an alloy of iron and carbon.",
+        "Copper is widely used in electrical wiring.",
+        "Ductility means ability to be drawn into wires.",
+        "Malleability means ability to be hammered into sheets."
       ]
     }
   ],

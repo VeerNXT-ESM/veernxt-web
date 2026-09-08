@@ -1,0 +1,459 @@
+{
+  "id": "qzs90uc",
+  "title": "Chapter 15: Diseases and Immunity",
+  "order": 64,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "toss4bl",
+      "content": "Diseases are abnormal conditions that affect the normal functioning of the body. They may be caused by pathogens such as bacteria, viruses, fungi and parasites, or due to nutritional deficiencies and lifestyle factors. The human immune system protects the body against disease-causing organisms."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Disease Categories",
+          "value": "2 Main Types",
+          "icon": "book"
+        },
+        {
+          "label": "Immunity Arms",
+          "value": "Innate & Acquired",
+          "icon": "check"
+        },
+        {
+          "label": "Key Defense",
+          "value": "Vaccination",
+          "icon": "award"
+        },
+        {
+          "label": "Core Focus",
+          "value": "Prevention",
+          "icon": "info"
+        }
+      ],
+      "id": "r9qlh15"
+    },
+    {
+      "id": "srs8k6s",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Disease"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Diseases are broadly classified into communicable (infectious) and non-communicable (non-infectious) conditions.",
+        "Communicable diseases spread through pathogens like bacteria, viruses, fungi, and protozoa via vectors or direct contact.",
+        "Deficiency diseases occur due to an insufficient intake of essential nutrients, vitamins, or minerals.",
+        "The immune system comprises innate (present from birth) and acquired (developed through exposure/vaccination) immunity.",
+        "Vaccination induces active immunity by introducing harmless antigens to stimulate antibody production."
+      ],
+      "id": "3lupi17"
+    },
+    {
+      "type": "paragraph",
+      "id": "bi56fdd",
+      "content": "• A disease is a condition that impairs normal body function."
+    },
+    {
+      "type": "paragraph",
+      "id": "c43pf88",
+      "content": "• It may cause pain, weakness, discomfort or dysfunction of organs."
+    },
+    {
+      "type": "paragraph",
+      "id": "kn2b2oh",
+      "content": "• Diseases may be infectious or non‑infectious."
+    },
+    {
+      "id": "009aj4d",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Types of Diseases"
+    },
+    {
+      "type": "paragraph",
+      "id": "6jkmagf",
+      "content": "• Communicable diseases – Spread from one person to another."
+    },
+    {
+      "type": "paragraph",
+      "id": "mthvpqn",
+      "content": "• Non‑communicable diseases – Do not spread between individuals."
+    },
+    {
+      "type": "paragraph",
+      "id": "ml2mbqr",
+      "content": "• Deficiency diseases – Caused by lack of nutrients."
+    },
+    {
+      "type": "paragraph",
+      "id": "jxu8zz3",
+      "content": "• Hereditary diseases – Passed through genes."
+    },
+    {
+      "id": "4af8rk7",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Communicable Diseases"
+    },
+    {
+      "id": "7r7vo54",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Prevention</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tuberculosis</p>",
+            "<p>Bacteria (Mycobacterium tuberculosis)</p>",
+            "<p>Vaccination, hygiene</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cholera</p>",
+            "<p>Bacteria</p>",
+            "<p>Clean drinking water</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Typhoid</p>",
+            "<p>Bacteria</p>",
+            "<p>Proper sanitation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Malaria</p>",
+            "<p>Protozoa (Plasmodium)</p>",
+            "<p>Mosquito control</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dengue</p>",
+            "<p>Virus</p>",
+            "<p>Prevent mosquito breeding</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Influenza</p>",
+            "<p>Virus</p>",
+            "<p>Vaccination</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>COVID‑19</p>",
+            "<p>Virus</p>",
+            "<p>Vaccination and hygiene</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uvd7azx",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Non‑Communicable Diseases"
+    },
+    {
+      "type": "paragraph",
+      "id": "p6kiu0v",
+      "content": "• Diabetes – High blood sugar levels."
+    },
+    {
+      "type": "pullQuote",
+      "content": "Diseases and Immunity",
+      "id": "zs5cyby"
+    },
+    {
+      "type": "paragraph",
+      "id": "xtj6tkk",
+      "content": "• Hypertension – High blood pressure."
+    },
+    {
+      "type": "paragraph",
+      "id": "ezutjzk",
+      "content": "• Cancer – Uncontrolled cell division."
+    },
+    {
+      "type": "paragraph",
+      "id": "u8bb2v9",
+      "content": "• Heart disease – Affects heart function."
+    },
+    {
+      "id": "y3x8r2r",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Deficiency Diseases"
+    },
+    {
+      "id": "09umtu1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Deficient Nutrient</strong></p>",
+            "<p><strong>Symptoms</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Scurvy</p>",
+            "<p>Vitamin C</p>",
+            "<p>Bleeding gums</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rickets</p>",
+            "<p>Vitamin D</p>",
+            "<p>Weak bones</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Beriberi</p>",
+            "<p>Vitamin B1</p>",
+            "<p>Muscle weakness</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Night Blindness</p>",
+            "<p>Vitamin A</p>",
+            "<p>Poor vision in dark</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Anemia</p>",
+            "<p>Iron</p>",
+            "<p>Fatigue and weakness</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Goitre</p>",
+            "<p>Iodine</p>",
+            "<p>Swelling of neck</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5gtwa2b",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Immune System"
+    },
+    {
+      "type": "paragraph",
+      "id": "k3g9f7t",
+      "content": "• The immune system protects the body from pathogens."
+    },
+    {
+      "type": "paragraph",
+      "id": "rffl8qd",
+      "content": "• It includes white blood cells, antibodies and lymphatic organs."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Communicable Diseases",
+        "Non-Communicable Diseases"
+      ],
+      "rows": [
+        [
+          "Causative Factor",
+          "Infectious pathogens (bacteria, viruses, parasites)",
+          "Nutritional deficiencies, genetics, lifestyle factors"
+        ],
+        [
+          "Transmission",
+          "Spreads from infected person to healthy person",
+          "Does not spread from person to person"
+        ],
+        [
+          "Onset & Duration",
+          "Usually acute and rapid onset",
+          "Often chronic and slow onset"
+        ],
+        [
+          "Examples",
+          "Tuberculosis, Cholera, Malaria, COVID-19",
+          "Diabetes, Hypertension, Scurvy, Cancer"
+        ]
+      ],
+      "id": "s973aw7"
+    },
+    {
+      "type": "paragraph",
+      "id": "snmxh79",
+      "content": "• It identifies and destroys harmful microorganisms."
+    },
+    {
+      "id": "7l9yaxp",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Immunity"
+    },
+    {
+      "id": "y5o89ae",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Innate immunity</p>",
+            "<p>Natural immunity present at birth</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Acquired immunity</p>",
+            "<p>Developed after infection or vaccination</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Active immunity</p>",
+            "<p>Produced by body after exposure to antigen</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Passive immunity</p>",
+            "<p>Antibodies obtained from another source</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6pdz0xa",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Vaccination"
+    },
+    {
+      "type": "paragraph",
+      "id": "btw38te",
+      "content": "• Vaccines stimulate the immune system to produce antibodies."
+    },
+    {
+      "type": "paragraph",
+      "id": "1ym8x0a",
+      "content": "• They protect against diseases such as polio, measles and hepatitis."
+    },
+    {
+      "type": "paragraph",
+      "id": "j3ayfbs",
+      "content": "• Vaccination is one of the most effective methods of disease prevention."
+    },
+    {
+      "id": "ndgb0d0",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Prevention of Diseases"
+    },
+    {
+      "type": "paragraph",
+      "id": "ehly2x3",
+      "content": "• Maintain personal hygiene."
+    },
+    {
+      "type": "paragraph",
+      "id": "hicfq5l",
+      "content": "• Eat a balanced diet."
+    },
+    {
+      "type": "paragraph",
+      "id": "r4ajuha",
+      "content": "• Drink clean water."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: Distinguish between active immunity (long-lasting, produced by body) and passive immunity (short-term, ready-made antibodies).",
+        "Memory trick for competitive exams: Link major deficiency diseases to specific vitamins/minerals (e.g., Vitamin D – Rickets, Iodine – Goitre).",
+        "Pay attention to disease vectors: Female Anopheles causes Malaria; Aedes aegypti transmits Dengue and Chikungunya."
+      ],
+      "id": "tiawdmx"
+    },
+    {
+      "type": "paragraph",
+      "id": "miscz21",
+      "content": "• Regular vaccination."
+    },
+    {
+      "type": "paragraph",
+      "id": "2a8pi4f",
+      "content": "• Control insects and mosquitoes."
+    },
+    {
+      "id": "tbe3rrt",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "ogeezpo",
+      "content": "• Vaccines help build immunity."
+    },
+    {
+      "type": "paragraph",
+      "id": "dsdnlgz",
+      "content": "• Vitamin deficiencies cause several diseases."
+    },
+    {
+      "type": "paragraph",
+      "id": "aaxhwkm",
+      "content": "• Pathogens include bacteria, viruses, fungi and parasites."
+    },
+    {
+      "type": "paragraph",
+      "id": "9446p8f",
+      "content": "• The immune system defends the body against infections."
+    }
+  ],
+  "enriched": true
+}

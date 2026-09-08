@@ -1,0 +1,125 @@
+{
+  "title": "5. Important Soil Processes",
+  "order": 184,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Leaching: Downward movement of soluble minerals.",
+      "id": "7dqmzmu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Soil Processes",
+          "value": "6 Core Types",
+          "icon": "book"
+        },
+        {
+          "label": "Dry Climate",
+          "value": "Calcification",
+          "icon": "check"
+        },
+        {
+          "label": "Tropical Climate",
+          "value": "Laterization",
+          "icon": "info"
+        },
+        {
+          "label": "Cold Climate",
+          "value": "Podzolization",
+          "icon": "info"
+        }
+      ],
+      "id": "fbhj0k8"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Leaching involves the downward movement of soluble minerals through soil layers.",
+        "Eluviation is the removal of materials from the upper soil horizon, while Illuviation is the deposition of materials in the lower horizon.",
+        "Calcification is characterized by the accumulation of calcium carbonate in dry regions.",
+        "Laterization is a result of intense leaching in tropical climates.",
+        "Podzolization takes place in cold humid climates, resulting in acidic soils."
+      ],
+      "id": "gr980cm"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Podzolization: Leaching in cold humid climates producing acidic soils.",
+      "id": "0lf54wf"
+    },
+    {
+      "type": "paragraph",
+      "content": "Eluviation: Removal of materials from upper horizon.",
+      "id": "cajx56k"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Soil Process",
+        "Core Mechanism",
+        "Climatic / Soil Zone"
+      ],
+      "rows": [
+        [
+          "Eluviation",
+          "Removal of materials",
+          "Upper horizon"
+        ],
+        [
+          "Illuviation",
+          "Deposition of materials",
+          "Lower horizon"
+        ],
+        [
+          "Calcification",
+          "Accumulation of calcium carbonate",
+          "Dry regions"
+        ],
+        [
+          "Laterization",
+          "Intense leaching",
+          "Tropical climates"
+        ],
+        [
+          "Podzolization",
+          "Acid-producing leaching",
+          "Cold humid climates"
+        ]
+      ],
+      "id": "mxrm7jx"
+    },
+    {
+      "type": "paragraph",
+      "content": "Illuviation: Deposition of materials in lower horizon.",
+      "id": "6afq1uh"
+    },
+    {
+      "type": "paragraph",
+      "content": "Calcification: Accumulation of calcium carbonate in dry regions.",
+      "id": "4ivljz4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Eluviation vs. Illuviation: Remember Eluviation is removal from the upper horizon, whereas Illuviation is deposition in the lower horizon.",
+        "Laterization is frequently linked to intense leaching in tropical climates in exam questions.",
+        "Podzolization occurs specifically in cold, humid regions and produces acidic soils."
+      ],
+      "id": "cda5vbf"
+    },
+    {
+      "type": "paragraph",
+      "content": "Laterization: Intense leaching in tropical climates.",
+      "id": "rdsa40y"
+    },
+    {
+      "type": "paragraph",
+      "content": "Podzolization: Leaching in cold humid climates producing acidic soils.",
+      "id": "444oq4v"
+    }
+  ],
+  "enriched": true
+}

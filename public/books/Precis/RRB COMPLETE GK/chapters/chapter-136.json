@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "1a7i01p"
+      "id": "1a7i01p",
+      "content": "• Plastic Flow – internal deformation under pressure."
     },
     {
       "type": "statStrip",
@@ -92,11 +93,13 @@
     },
     {
       "type": "paragraph",
-      "id": "vi6mv4m"
+      "id": "vi6mv4m",
+      "content": "• Basal Slip – sliding over bedrock aided by meltwater."
     },
     {
       "type": "paragraph",
-      "id": "bp6dzq7"
+      "id": "bp6dzq7",
+      "content": "• Flow velocity varies (center faster than sides)."
     }
   ],
   "enriched": true

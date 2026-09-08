@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "06bgv2j"
+      "id": "06bgv2j",
+      "content": "To avoid confusion caused by multiple local times, countries adopt a standard meridian."
     },
     {
       "type": "statStrip",
@@ -91,22 +92,23 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Country</strong></p>",
+            "<p><strong>Standard Meridian</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>India</p>",
+            "<p>82.5° E (near Mirzapur, Uttar Pradesh)</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "9pivj9i"
+      "id": "9pivj9i",
+      "content": "Indian Standard Time (IST) is 5 hours 30 minutes ahead of Greenwich Mean Time (GMT)."
     }
   ],
   "enriched": true

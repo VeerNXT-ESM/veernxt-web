@@ -56,15 +56,15 @@
       "id": "prfxfkz",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Stop the vehicle immediately at a safe place",
+        "Check if anyone is injured — do not move seriously injured persons unless there is danger of fire",
+        "Call emergency services: Police — 100, Ambulance — 108",
+        "Provide first aid if you are trained to do so",
+        "Do not flee the scene — leaving the scene of an accident is an offence",
+        "Inform the nearest police station",
+        "Note down details: time, place, other vehicle number, witnesses",
+        "Do not move the vehicles before police arrive (unless blocking emergency traffic)",
+        "Cooperate with police and give a true account of what happened"
       ]
     },
     {
@@ -75,18 +75,19 @@
     },
     {
       "type": "paragraph",
-      "id": "lilb76q"
+      "id": "lilb76q",
+      "content": "A Good Samaritan is a person who voluntarily helps an accident victim without any expectation of reward."
     },
     {
       "id": "fqwigz0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "A Good Samaritan CANNOT be harassed, detained, or coerced by the police",
+        "They are entitled to confidentiality of their personal information",
+        "They are NOT legally liable for any harm that may result from their help",
+        "They are NOT required to stay at the accident scene after helping",
+        "They may be asked to give information as a witness, but cannot be forced to do so",
+        "The law encourages citizens to call ambulance and police and provide basic first aid"
       ]
     },
     {
@@ -111,50 +112,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Service</strong></p>",
+            "<p><strong>Number</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Police</p>",
+            "<p>100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ambulance</p>",
+            "<p>108</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fire Brigade</p>",
+            "<p>101</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>National Emergency Number</p>",
+            "<p>112</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Traffic Police Helpline (Delhi)</p>",
+            "<p>1095</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Road Accident Emergency</p>",
+            "<p>1073</p>"
           ]
         }
       ]

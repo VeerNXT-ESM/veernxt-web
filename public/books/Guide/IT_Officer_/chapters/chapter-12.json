@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dic8wrk"
+      "id": "dic8wrk",
+      "content": "Core Banking Solution (CBS) is a centralised system that allows banking transactions to be processed across all branches of a bank in real-time. It replaces isolated branch-level systems with a unified, centralised database."
     },
     {
       "id": "ddkpk10",
@@ -58,57 +59,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Centralised Database</p>",
+            "<p>All branches access same database; real-time updates; no end-of-day reconciliation between branches</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Anywhere Banking</p>",
+            "<p>Customer can transact from any branch or channel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Real-Time Processing</p>",
+            "<p>Transactions processed and reflected immediately</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Channel Integration</p>",
+            "<p>Integrates ATM, mobile banking, internet banking, POS on single platform</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Core CBS Vendors</p>",
+            "<p>Infosys Finacle, TCS BaNCS, Oracle FLEXCUBE, Temenos T24, Nucleus FinnOne</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SBI CBS (BaNCS)</p>",
+            "<p>SBI migrated fully to TCS BaNCS; largest CBS migration in the world</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RRBs CBS</p>",
+            "<p>All RRBs mandated to implement CBS by RBI; NABARD provided funding assistance</p>"
           ]
         }
       ]
@@ -131,82 +132,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Payment System</strong></p>",
+            "<p><strong>Technology Stack</strong></p>",
+            "<p><strong>Settlement</strong></p>",
+            "<p><strong>Governing Body</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>RTGS</p>",
+            "<p>RBI's proprietary system; ISO 20022 message format</p>",
+            "<p>Real-time gross; immediate finality</p>",
+            "<p>RBI</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>NEFT</p>",
+            "<p>Batch processing; hourly settlement cycles; 24x7 since Dec 2019</p>",
+            "<p>Deferred Net Settlement (DNS)</p>",
+            "<p>RBI</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>IMPS</p>",
+            "<p>NPCI's NFS (National Financial Switch); Immediate settlement</p>",
+            "<p>Real-time; 24x7; max Rs.5 lakh</p>",
+            "<p>NPCI</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>UPI</p>",
+            "<p>Two-factor auth; VPA-based addressing; NPCI's UPI rails; open API</p>",
+            "<p>Real-time; max Rs.1 lakh (Rs.5 lakh for verified merchants)</p>",
+            "<p>NPCI</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>FASTag</p>",
+            "<p>RFID (Radio Frequency Identification); 915 MHz frequency band; NPCI's NETC</p>",
+            "<p>Prepaid wallet / bank account debit</p>",
+            "<p>NPCI (NETC)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>NACH</p>",
+            "<p>ECS successor; sponsored by NPCI; XML-based; ACH model</p>",
+            "<p>Batch; next day settlement</p>",
+            "<p>NPCI</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Aadhaar Pay (AEPS)</p>",
+            "<p>Aadhaar Authentication; biometric (fingerprint/IRIS); UIDAI API</p>",
+            "<p>Real-time; micro-transactions</p>",
+            "<p>NPCI + UIDAI</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cards (Debit/Credit)</p>",
+            "<p>EMV chip; NFC for contactless; PCI-DSS security; tokenisation</p>",
+            "<p>Auth real-time; settlement T+1</p>",
+            "<p>Visa, Mastercard, RuPay (NPCI)</p>"
           ]
         }
       ]
@@ -255,49 +256,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>India Context</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Open Banking</p>",
+            "<p>Banks open APIs to third-party developers (TPPs) to build new services; customer consent-based</p>",
+            "<p>Account Aggregator (AA) framework, OCEN (Open Credit Enablement Network)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Account Aggregator (AA)</p>",
+            "<p>RBI-regulated entity; aggregates financial data with user consent; AA + FIP + FIU framework</p>",
+            "<p>Enables bank account data sharing for loan applications, wealth management</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>OCEN</p>",
+            "<p>Open Credit Enablement Network; standardised loan API; embed lending in any platform</p>",
+            "<p>SIDBI, small lenders use OCEN to reach MSMEs via platforms like GST portal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>UPI Deep Linking</p>",
+            "<p>Apps can initiate UPI payments via intent/deep links; third-party payment apps</p>",
+            "<p>Google Pay, PhonePe, Paytm operate on UPI rails via PSP license</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>BBPS Open API</p>",
+            "<p>Bharat Bill Payment System; open to third parties to offer bill payment collection</p>",
+            "<p>Allows banks, fintechs to become Bill Payment Operating Units (BPOUs)</p>"
           ]
         }
       ]
@@ -324,73 +325,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Infrastructure Component</strong></p>",
+            "<p><strong>Purpose</strong></p>",
+            "<p><strong>RBI / SEBI Requirement</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Data Centre</p>",
+            "<p>Primary site for all banking IT systems; Tier 3/4 minimum for banks</p>",
+            "<p>RBI mandates domestic data storage; primary DC in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Disaster Recovery (DR)</p>",
+            "<p>Secondary site for business continuity; replication of primary DC</p>",
+            "<p>RBI: RPO and RTO to be defined; DR drills mandatory</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Business Continuity Plan (BCP)</p>",
+            "<p>Documented plan for business operations during disruptions</p>",
+            "<p>RBI mandates BCP; annual testing required</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SWIFT (Society for Worldwide Interbank Financial Telecom)</p>",
+            "<p>Secure messaging for international payments; FIN messages</p>",
+            "<p>SWIFT Customer Security Programme (CSP) compliance mandatory</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>HSM (Hardware Security Module)</p>",
+            "<p>Physical device for cryptographic key generation and protection</p>",
+            "<p>Used in ATM PIN processing, card personalisation, digital signing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ATM Network</p>",
+            "<p>Cash dispensing; 24x7; connected to CBS via switches</p>",
+            "<p>NFS (National Financial Switch) by NPCI connects ATMs interoperably</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SOC (Security Operations Centre)</p>",
+            "<p>24x7 monitoring of security events; SIEM-based; threat response</p>",
+            "<p>RBI mandates 24x7 SOC for banks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IT Audit</p>",
+            "<p>Independent review of IT systems, controls, risks</p>",
+            "<p>RBI IT framework; IS Audit mandatory; CERT-In empanelled auditors</p>"
           ]
         }
       ]
@@ -408,73 +409,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Guideline / Circular</strong></p>",
+            "<p><strong>Year</strong></p>",
+            "<p><strong>Key Requirements</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RBI IT Framework for Banks</p>",
+            "<p>2011</p>",
+            "<p>Board-approved IT strategy; IT governance; risk management; audit; business continuity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RBI Cyber Security Framework</p>",
+            "<p>2016</p>",
+            "<p>24x7 SOC mandatory; incident reporting within 2-6 hours; baseline security controls; VAPT</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RBI Guidelines on Digital Payment Security Controls</p>",
+            "<p>2021</p>",
+            "<p>Secure app development; device binding; OTP security; transaction limits; cooling period</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CERT-In Directions on Incident Reporting</p>",
+            "<p>2022</p>",
+            "<p>All entities must report cyber incidents within 6 hours; log retention 180 days; VPN/cloud provider registration</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RBI Guidelines on IT Outsourcing</p>",
+            "<p>2023</p>",
+            "<p>Concentration risk; exit clauses; data localisation; oversight of service providers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tokenisation Guidelines</p>",
+            "<p>2021</p>",
+            "<p>Card data must be tokenised for online/contactless payments; no raw PAN storage by merchants</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RBI Master Direction — KYC</p>",
+            "<p>2016 (updated regularly)</p>",
+            "<p>Video KYC; e-KYC via Aadhaar; risk-based KYC; periodic updation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DPDP Act Compliance</p>",
+            "<p>2023</p>",
+            "<p>Banks must comply with Digital Personal Data Protection Act; data minimisation; consent</p>"
           ]
         }
       ]

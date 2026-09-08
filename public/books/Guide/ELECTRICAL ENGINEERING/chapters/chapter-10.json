@@ -1,0 +1,1169 @@
+{
+  "id": "usl8wjy",
+  "title": "Control Systems",
+  "order": 10,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4fi7c93",
+      "content": "<strong>CHAPTER 10 — CONTROL SYSTEMS</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "f3do75d",
+      "content": "Control Systems deal with the behaviour of dynamic systems with inputs and outputs. The objective is to make the output follow the input despite disturbances. Control systems are used everywhere in PSU industries — speed control of motors, process control in plants, automatic voltage regulation in generators, and autopilot systems. This chapter covers transfer functions, stability analysis, and frequency domain methods."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "do2d305",
+      "content": "<strong>10.1  Open-Loop vs Closed-Loop Systems</strong>"
+    },
+    {
+      "id": "uci6bgv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Open-Loop Control</strong></p>",
+            "<p><strong>Closed-Loop (Feedback) Control</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Definition</p>",
+            "<p>No feedback; output not compared to input</p>",
+            "<p>Output is measured and fed back to compare with input</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Accuracy</p>",
+            "<p>Less accurate; affected by disturbances</p>",
+            "<p>More accurate; self-correcting</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Stability</p>",
+            "<p>Stable by nature (no feedback loop)</p>",
+            "<p>May become unstable if feedback gain is high</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cost</p>",
+            "<p>Simpler and cheaper</p>",
+            "<p>More complex and expensive</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sensitivity</p>",
+            "<p>Sensitive to parameter changes</p>",
+            "<p>Reduced sensitivity to parameter changes</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Example</p>",
+            "<p>Traffic signal timer (fixed timing)</p>",
+            "<p>Air conditioner thermostat; cruise control</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Effect of disturbance</p>",
+            "<p>Cannot correct for disturbances</p>",
+            "<p>Automatically corrects disturbances</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s0jfwf2",
+      "content": "<strong>10.2  Transfer Function</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "svhn846",
+      "content": "The Transfer Function (TF) of a linear time-invariant (LTI) system is defined as the ratio of the Laplace transform of the output to the Laplace transform of the input, with all initial conditions assumed zero."
+    },
+    {
+      "id": "gl1hm13",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>G(s) = Y(s) / X(s)   (with zero initial conditions)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>For a system with differential equation: a₂ÿ + a₁ẏ + a₀y = b₀x</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>TF: G(s) = b₀ / (a₂s² + a₁s + a₀)</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "od43bhl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Element</strong></p>",
+            "<p><strong>Transfer Function G(s)</strong></p>",
+            "<p><strong>Characteristic</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Proportional (P) controller</p>",
+            "<p>K_p</p>",
+            "<p>Amplifies error by constant gain</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Integral (I) controller</p>",
+            "<p>K_i/s</p>",
+            "<p>Eliminates steady-state error; adds pole at origin</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Derivative (D) controller</p>",
+            "<p>K_d·s</p>",
+            "<p>Improves transient response; adds zero</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>PID controller</p>",
+            "<p>K_p + K_i/s + K_d·s</p>",
+            "<p>Combines all three; most common in industry</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>First-order system</p>",
+            "<p>K/(1+τs)</p>",
+            "<p>τ = time constant; 63.2% response at t=τ</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Second-order system</p>",
+            "<p>ω_n²/(s²+2ζω_n·s+ω_n²)</p>",
+            "<p>ζ=damping ratio; ω_n=natural frequency</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Integrator</p>",
+            "<p>1/s</p>",
+            "<p>Adds 90° phase lag; pole at origin</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pure delay (time delay)</p>",
+            "<p>e^(−Ts)</p>",
+            "<p>Difficult to control; destabilises system</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ky3yyph",
+      "content": "<strong>10.3  Block Diagram Reduction</strong>"
+    },
+    {
+      "id": "grbvd5v",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Configuration</strong></p>",
+            "<p><strong>Equivalent TF</strong></p>",
+            "<p><strong>Rule</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Series (Cascade)</p>",
+            "<p>G₁(s) × G₂(s)</p>",
+            "<p>Multiply transfer functions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Parallel (Same input, outputs summed)</p>",
+            "<p>G₁(s) + G₂(s)</p>",
+            "<p>Add transfer functions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Closed-loop with unity feedback</p>",
+            "<p>G(s) / [1 + G(s)]</p>",
+            "<p>Standard feedback formula</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Closed-loop with H(s) feedback</p>",
+            "<p>G(s) / [1 + G(s)H(s)]</p>",
+            "<p>Non-unity feedback</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Moving summing point behind a block</p>",
+            "<p>Add 1/G(s) on moved branch</p>",
+            "<p>Maintain equivalence</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Moving take-off point ahead of a block</p>",
+            "<p>Multiply G(s) on moved branch</p>",
+            "<p>Maintain equivalence</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0jp867c",
+      "content": "<strong>10.4  Time Domain Response</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "4orv62n",
+      "content": "The time domain response of a second-order system to a unit step input depends on the damping ratio ζ. The natural frequency ω_n determines the speed of response."
+    },
+    {
+      "id": "fhn8zil",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Damping Condition</strong></p>",
+            "<p><strong>ζ Value</strong></p>",
+            "<p><strong>Type of Response</strong></p>",
+            "<p><strong>Characteristic</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Undamped</p>",
+            "<p>ζ = 0</p>",
+            "<p>Sustained oscillations</p>",
+            "<p>Oscillates forever at ω_n; no settling</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Underdamped</p>",
+            "<p>0 &lt; ζ &lt; 1</p>",
+            "<p>Damped oscillations</p>",
+            "<p>Overshoots; oscillates; settles eventually</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Critically damped</p>",
+            "<p>ζ = 1</p>",
+            "<p>Fastest non-oscillatory</p>",
+            "<p>Settles fastest without overshoot</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Overdamped</p>",
+            "<p>ζ &gt; 1</p>",
+            "<p>Slow exponential approach</p>",
+            "<p>No overshoot; sluggish response</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i1maxg6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Performance Specification</strong></p>",
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Definition</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rise time</p>",
+            "<p>t_r</p>",
+            "<p>Time to go from 10% to 90% of final value</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Peak time</p>",
+            "<p>t_p</p>",
+            "<p>Time to reach first peak (maximum overshoot)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Maximum overshoot</p>",
+            "<p>M_p (%)</p>",
+            "<p>[(C_max − C_ss)/C_ss] × 100%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Settling time</p>",
+            "<p>t_s</p>",
+            "<p>Time to stay within ±2% or ±5% of final value</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Steady-state error</p>",
+            "<p>e_ss</p>",
+            "<p>Difference between desired and actual output at t→∞</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gpf8u4w",
+      "content": "<strong>10.5  Stability Analysis</strong>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j5af1wj",
+      "content": "<strong>Routh-Hurwitz Criterion</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "h1grfcb",
+      "content": "The Routh-Hurwitz criterion determines stability of a closed-loop system from its characteristic equation without finding roots. A system is stable if all coefficients of the characteristic polynomial are positive AND no sign changes occur in the first column of the Routh array."
+    },
+    {
+      "type": "paragraph",
+      "id": "jgxio0u",
+      "content": "Number of sign changes in first column = number of roots in right half s-plane (RHP). System is unstable if any RHP roots exist. Purely imaginary roots indicate marginal stability (sustained oscillations at that frequency)."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x43iqpo",
+      "content": "<strong>Bode Plot</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "sodxlpf",
+      "content": "Bode plot consists of two frequency-domain plots: (1) Magnitude plot: gain in dB vs log-frequency. (2) Phase plot: phase angle in degrees vs log-frequency. Gain Margin (GM) and Phase Margin (PM) determine relative stability."
+    },
+    {
+      "id": "w9f61c8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Gain Margin (GM) = −20log|G(jω)H(jω)| at phase crossover frequency (ω_pc where phase = −180°)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Phase Margin (PM) = 180° + ∠G(jω)H(jω) at gain crossover frequency (ω_gc where |GH| = 1 = 0dB)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Stable if: GM &gt; 0 dB AND PM &gt; 0°  |  Typical design: GM &gt; 6dB, PM &gt; 30°–45°</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "iqz0k6z",
+      "content": "<strong>10.6  Practice MCQs — Control Systems</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "4phleb4",
+      "content": "<strong>Q1.  </strong>The transfer function of a system is defined as:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8yqtac1",
+      "content": "        (A)  Output/Input in time domain"
+    },
+    {
+      "type": "paragraph",
+      "id": "nk99gsk",
+      "content": "        (B)  Laplace of output/Laplace of input with zero initial conditions"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2i6fivd",
+      "content": "        (C)  Differential equation coefficients"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fhq1t56",
+      "content": "        (D)  Frequency response"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7anhdvz",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "g92uv2v",
+      "content": "<strong>Q2.  </strong>A system with ζ = 0 is called:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8yv8hm3",
+      "content": "        (A)  Overdamped"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nkpxwuh",
+      "content": "        (B)  Critically damped"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7o0pehe",
+      "content": "        (C)  Underdamped"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ky76n0s",
+      "content": "        (D)  Undamped"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "adbwaic",
+      "content": "<strong>Answer: </strong>(D)"
+    },
+    {
+      "type": "paragraph",
+      "id": "t1jxbwj",
+      "content": "<strong>Q3.  </strong>In a closed-loop system with unity feedback, the transfer function is G(s)/[1+G(s)]. This is called the:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1xd0huo",
+      "content": "        (A)  Open-loop TF"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mcg9ka4",
+      "content": "        (B)  Plant TF"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "999hwlp",
+      "content": "        (C)  Closed-loop TF (CLTF)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jb7422j",
+      "content": "        (D)  Error TF"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bh1f2k1",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "luqb1f7",
+      "content": "<strong>Q4.  </strong>Gain Margin is measured at which frequency?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dqh94m8",
+      "content": "        (A)  Gain crossover frequency"
+    },
+    {
+      "type": "paragraph",
+      "id": "8kpi03c",
+      "content": "        (B)  Phase crossover frequency (phase = −180°)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ayamrke",
+      "content": "        (C)  Resonant frequency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3gpxl8i",
+      "content": "        (D)  Natural frequency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oostdpi",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "019t044",
+      "content": "<strong>Q5.  </strong>A PID controller adds:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "66j06fh",
+      "content": "        (A)  One zero only"
+    },
+    {
+      "type": "paragraph",
+      "id": "mvdj24b",
+      "content": "        (B)  One pole at origin only"
+    },
+    {
+      "type": "paragraph",
+      "id": "ssjmsvy",
+      "content": "        (C)  One pole at origin + two zeros"
+    },
+    {
+      "type": "paragraph",
+      "id": "aywl2hm",
+      "content": "        (D)  One zero + one pole"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p072hdn",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "gsq4g91",
+      "content": "<strong>Q6.  </strong>The steady-state error for a type-1 system with step input is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eecp7sp",
+      "content": "        (A)  Infinite"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tfz6y6t",
+      "content": "        (B)  1/(1+Kp)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j0ws6vm",
+      "content": "        (C)  Zero"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f9hv9d8",
+      "content": "        (D)  Finite non-zero"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2hscu9t",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "iap81gv",
+      "content": "<strong>Q7.  </strong>The Routh-Hurwitz criterion is used to determine:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z4665oy",
+      "content": "        (A)  Frequency response"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5coxjcg",
+      "content": "        (B)  Transient response"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ztaq11q",
+      "content": "        (C)  Stability without finding roots"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7vyv261",
+      "content": "        (D)  Gain margin only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "03fwdvm",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "lv6s6ly",
+      "content": "<strong>Q8.  </strong>Which controller is most commonly used in industrial process control?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rkvcdr7",
+      "content": "        (A)  P only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "25qrpap",
+      "content": "        (B)  PI"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6dv86lv",
+      "content": "        (C)  PD"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xs7uy0m",
+      "content": "        (D)  PID"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "w5265ie",
+      "content": "<strong>Answer: </strong>(D)"
+    },
+    {
+      "type": "paragraph",
+      "id": "afal1v5",
+      "content": "<strong>Q9.  </strong>The number of sign changes in the first column of Routh array equals:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lm9zvg7",
+      "content": "        (A)  Number of stable poles"
+    },
+    {
+      "type": "paragraph",
+      "id": "ty9v5dt",
+      "content": "        (B)  Number of unstable poles (RHP roots)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ct2drr6",
+      "content": "        (C)  Number of imaginary poles"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pxpe9m7",
+      "content": "        (D)  Degree of polynomial"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "o82tlqc",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "at4fgmc",
+      "content": "<strong>Q10.  </strong>Phase Margin for a stable system should be:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3i1d86q",
+      "content": "        (A)  Negative"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zd7qfiv",
+      "content": "        (B)  Zero"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vza2uxr",
+      "content": "        (C)  Positive (&gt; 0°)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l3a6ry8",
+      "content": "        (D)  Exactly 180°"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jj8zcup",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ra5rf9f",
+      "content": "<strong>CONSOLIDATED ANSWER KEY</strong>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "em0ain0",
+      "content": "<strong>Chapter 1 — DC Circuits</strong>"
+    },
+    {
+      "id": "mofwtis",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Q1: B</p>",
+            "<p>Q2: A</p>",
+            "<p>Q3: C</p>",
+            "<p>Q4: C</p>",
+            "<p>Q5: C</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q6: C</p>",
+            "<p>Q7: B</p>",
+            "<p>Q8: B</p>",
+            "<p>Q9: C</p>",
+            "<p>Q10: B</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q11: A</p>",
+            "<p>Q12: D</p>",
+            "<p>Q13: C</p>",
+            "<p>Q14: B</p>",
+            "<p>Q15: A</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3d8nl0z",
+      "content": "<strong>Chapter 2 — AC Circuits</strong>"
+    },
+    {
+      "id": "9ou73hn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Q1: B</p>",
+            "<p>Q2: B</p>",
+            "<p>Q3: B</p>",
+            "<p>Q4: B</p>",
+            "<p>Q5: B</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q6: C</p>",
+            "<p>Q7: C</p>",
+            "<p>Q8: A</p>",
+            "<p>Q9: B</p>",
+            "<p>Q10: A</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q11: C</p>",
+            "<p>Q12: C</p>",
+            "<p>Q13: C</p>",
+            "<p>Q14: B</p>",
+            "<p>Q15: C</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "itgtn2r",
+      "content": "<strong>Chapter 3 — Network Theorems</strong>"
+    },
+    {
+      "id": "8rt7122",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Q1: B</p>",
+            "<p>Q2: B</p>",
+            "<p>Q3: C</p>",
+            "<p>Q4: C</p>",
+            "<p>Q5: B</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q6: B</p>",
+            "<p>Q7: C</p>",
+            "<p>Q8: C</p>",
+            "<p>Q9: B</p>",
+            "<p>Q10: A</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7h5wk0o",
+      "content": "<strong>Chapter 4 — Transformers</strong>"
+    },
+    {
+      "id": "vrkbd3g",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Q1: B</p>",
+            "<p>Q2: B</p>",
+            "<p>Q3: B</p>",
+            "<p>Q4: B</p>",
+            "<p>Q5: B</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q6: C</p>",
+            "<p>Q7: B</p>",
+            "<p>Q8: B</p>",
+            "<p>Q9: B</p>",
+            "<p>Q10: C</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q11: B</p>",
+            "<p>Q12: C</p>",
+            "<p>Q13: B</p>",
+            "<p>Q14: A</p>",
+            "<p>Q15: C</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "b6wv2jf",
+      "content": "<strong>Chapter 5 — DC Machines</strong>"
+    },
+    {
+      "id": "vesbsi1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Q1: B</p>",
+            "<p>Q2: C</p>",
+            "<p>Q3: C</p>",
+            "<p>Q4: B</p>",
+            "<p>Q5: C</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q6: B</p>",
+            "<p>Q7: B</p>",
+            "<p>Q8: B</p>",
+            "<p>Q9: B</p>",
+            "<p>Q10: C</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1c8cpil",
+      "content": "<strong>Chapter 6 — AC Machines</strong>"
+    },
+    {
+      "id": "dx1jw3z",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Q1: B</p>",
+            "<p>Q2: C</p>",
+            "<p>Q3: C</p>",
+            "<p>Q4: B</p>",
+            "<p>Q5: C</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q6: B</p>",
+            "<p>Q7: C</p>",
+            "<p>Q8: B</p>",
+            "<p>Q9: B</p>",
+            "<p>Q10: D</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kp6wnu2",
+      "content": "<strong>Chapter 7 — Power Systems</strong>"
+    },
+    {
+      "id": "whp7795",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Q1: C</p>",
+            "<p>Q2: B</p>",
+            "<p>Q3: C</p>",
+            "<p>Q4: B</p>",
+            "<p>Q5: B</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q6: C</p>",
+            "<p>Q7: B</p>",
+            "<p>Q8: A</p>",
+            "<p>Q9: B</p>",
+            "<p>Q10: C</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5ljcux7",
+      "content": "<strong>Chapter 8 — Measurements</strong>"
+    },
+    {
+      "id": "6affk8b",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Q1: B</p>",
+            "<p>Q2: B</p>",
+            "<p>Q3: C</p>",
+            "<p>Q4: B</p>",
+            "<p>Q5: B</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q6: C</p>",
+            "<p>Q7: B</p>",
+            "<p>Q8: B</p>",
+            "<p>Q9: C</p>",
+            "<p>Q10: C</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tbb2y03",
+      "content": "<strong>Chapter 9 — Power Electronics</strong>"
+    },
+    {
+      "id": "aazif8i",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Q1: D</p>",
+            "<p>Q2: B</p>",
+            "<p>Q3: B</p>",
+            "<p>Q4: D</p>",
+            "<p>Q5: A</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q6: B</p>",
+            "<p>Q7: B</p>",
+            "<p>Q8: B</p>",
+            "<p>Q9: C</p>",
+            "<p>Q10: B</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kvp46rx",
+      "content": "<strong>Chapter 10 — Control Systems</strong>"
+    },
+    {
+      "id": "hnqueva",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Q1: B</p>",
+            "<p>Q2: D</p>",
+            "<p>Q3: C</p>",
+            "<p>Q4: B</p>",
+            "<p>Q5: C</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Q6: C</p>",
+            "<p>Q7: C</p>",
+            "<p>Q8: D</p>",
+            "<p>Q9: B</p>",
+            "<p>Q10: C</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "1u2vkic",
+      "content": "<strong>VeerNXT | PSU Navratna Series — Electrical Engineering Discipline Guide Book</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "tp9opin",
+      "content": "This book covers DC Circuits, AC Theory, Network Theorems, Transformers, DC Machines, AC Machines (Induction Motor &amp; Synchronous Machine), Power Systems, Electrical Measurements, Power Electronics, and Control Systems. It is designed for PSU recruitment CBT examinations conducted by BEL, NALCO, NLC India, NHPC, SJVN, RINL, NBCC, SECI, MDL, RITES, RVNL and other Navratna companies testing Electrical Engineering."
+    },
+    {
+      "type": "paragraph",
+      "id": "3vf2y3e",
+      "content": "Next in the VeerNXT PSU Navratna Discipline Series: Book 3 — Mechanical Engineering"
+    }
+  ],
+  "enriched": true
+}

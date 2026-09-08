@@ -1,0 +1,454 @@
+{
+  "title": "Chapter 17: Atmosphere ( Structure, Composition, Temperature and Dynamics )",
+  "order": 214,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The atmosphere is the vast gaseous envelope surrounding the Earth, held in place by gravity. It is indispensable for life because it supplies oxygen, regulates temperature, distributes heat across the planet, protects organisms from harmful solar radiation, and creates weather and climate systems. Without the atmosphere, Earth would resemble the Moon — experiencing extreme temperatures and lacking life.",
+      "id": "wp26mx6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "50% Air Mass Limit",
+          "value": "5.5 km",
+          "icon": "info"
+        },
+        {
+          "label": "99% Air Mass Limit",
+          "value": "32 km",
+          "icon": "check"
+        },
+        {
+          "label": "Montreal Protocol",
+          "value": "1987",
+          "icon": "calendar"
+        },
+        {
+          "label": "Lapse Rate",
+          "value": "6.5°C/km",
+          "icon": "award"
+        },
+        {
+          "label": "Avg Global Temp",
+          "value": "+15°C",
+          "icon": "clock"
+        }
+      ],
+      "id": "bokleh2"
+    },
+    {
+      "id": "tw9xzny",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Origin and Evolution of the Atmosphere"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The atmosphere evolved from a primordial state to a secondary state through volcanic outgassing, oceans condensation, and photosynthetic oxygen release.",
+        "Atmospheric pressure and density drop exponentially with height, with 99% of total air mass concentrated below 32 km.",
+        "Vertical temperature trends alternate across layers: dropping in the troposphere and mesosphere, while rising in the stratosphere and thermosphere.",
+        "The natural greenhouse effect traps outgoing longwave radiation, raising Earth's average global temperature from –18°C to +15°C.",
+        "Stratospheric ozone (20–30 km) shields life from UV-B radiation, and its protection was institutionalized by the 1987 Montreal Protocol."
+      ],
+      "id": "orzy56u"
+    },
+    {
+      "type": "paragraph",
+      "content": "The atmosphere developed in multiple stages. The earliest atmosphere, known as the primordial atmosphere, was composed mainly of hydrogen and helium. However, these light gases escaped into space due to weak gravitational pull and intense solar winds.",
+      "id": "8wt0qf8"
+    },
+    {
+      "type": "paragraph",
+      "content": "The secondary atmosphere formed through volcanic outgassing. Volcanoes released large quantities of water vapour, carbon dioxide, nitrogen, methane, and ammonia.",
+      "id": "t02cyx2"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Cooling of Earth allowed water vapour to condense, forming oceans.",
+      "id": "l8z2nxf"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Carbon dioxide dissolved in oceans, reducing atmospheric CO₂.",
+      "id": "4t4m5up"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Photosynthetic cyanobacteria released oxygen.",
+      "id": "zp8nq9j"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Oxygen accumulation led to formation of the ozone layer.",
+      "id": "3yc6m2q"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Ozone shield enabled life to migrate from oceans to land.",
+      "id": "1empzr6"
+    },
+    {
+      "id": "rxt5l0p",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Composition of the Atmosphere"
+    },
+    {
+      "id": "ihc0ssl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Gas</p>",
+            "<p>Percentage by Volume</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nitrogen</p>",
+            "<p>78%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Oxygen</p>",
+            "<p>21%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Argon</p>",
+            "<p>0.93%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Carbon Dioxide</p>",
+            "<p>0.04% (variable)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Trace Gases</p>",
+            "<p>Neon, Helium, Methane, Krypton, Hydrogen, Ozone</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Although carbon dioxide exists in small quantities, it plays a critical role in regulating Earth's temperature through the greenhouse effect.",
+      "id": "zi0qnwl"
+    },
+    {
+      "id": "vbpkqdr",
+      "type": "heading",
+      "level": 3,
+      "content": "Variable Components"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Water Vapour (0–4%): Controls humidity, cloud formation, precipitation, and heat absorption.",
+      "id": "ojp51bb"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Dust Particles: Act as condensation nuclei around which clouds form.",
+      "id": "crocyei"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Aerosols: Scatter and absorb solar radiation, influencing climate.",
+      "id": "hnxmm5c"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Ozone: Absorbs harmful ultraviolet radiation.",
+      "id": "stx4wlp"
+    },
+    {
+      "id": "uiy0fvv",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Vertical Structure of the Atmosphere"
+    },
+    {
+      "id": "fsqc0c1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Layer</strong></p>",
+            "<p><strong>Altitude</strong></p>",
+            "<p><strong>Major Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Troposphere</p>",
+            "<p>0–8 km at poles; up to 18 km at equator</p>",
+            "<p>Contains nearly 75% of atmospheric mass and almost all water vapour. All weather phenomena occur here. Temperature decreases with altitude at an average lapse rate of 6.5°C per km.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Stratosphere</p>",
+            "<p>18–50 km</p>",
+            "<p>Characterized by temperature increase with altitude due to ozone absorption of UV radiation. Stable air makes it ideal for jet aircraft.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mesosphere</p>",
+            "<p>50–80 km</p>",
+            "<p>Coldest atmospheric layer with temperatures reaching about –90°C. Meteoroids burn due to friction.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Thermosphere</p>",
+            "<p>80–700 km</p>",
+            "<p>Temperatures rise sharply. Contains ionosphere which reflects radio waves and enables long-distance communication. Aurora Borealis occurs here.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Exosphere</p>",
+            "<p>Above 700 km</p>",
+            "<p>Extremely thin air composed mainly of hydrogen and helium; gradually merges into outer space.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Without the atmosphere, Earth would resemble the Moon — experiencing extreme temperatures and lacking life.",
+      "id": "mad4xr1"
+    },
+    {
+      "id": "noiaxpx",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Atmospheric Boundaries"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Tropopause – separates troposphere and stratosphere; its height varies with latitude.",
+      "id": "e8wxhn0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Stratopause – boundary between stratosphere and mesosphere.",
+      "id": "i0yd1zt"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Mesopause – boundary between mesosphere and thermosphere; coldest region.",
+      "id": "flidhg7"
+    },
+    {
+      "id": "2e175m0",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Temperature Structure of the Atmosphere"
+    },
+    {
+      "type": "paragraph",
+      "content": "The vertical temperature distribution is controlled by absorption of solar radiation and terrestrial heat.",
+      "id": "refatzj"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Troposphere: Heated from below by Earth's surface; hence temperature decreases upward.",
+      "id": "1z4bxi1"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Stratosphere: Ozone absorbs UV radiation, causing temperature inversion.",
+      "id": "qk8ynwg"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Mesosphere: Lack of ozone results in falling temperatures.",
+      "id": "joynykn"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Thermosphere: High-energy solar radiation causes dramatic temperature rise.",
+      "id": "acdv7y8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Atmospheric Layer",
+        "Temperature Trend",
+        "Key Features"
+      ],
+      "rows": [
+        [
+          "Troposphere",
+          "Decreases upward (6.5°C/km)",
+          "Contains all weather phenomena; heated from Earth's surface below."
+        ],
+        [
+          "Stratosphere",
+          "Increases upward (Inversion)",
+          "Contains the Ozone layer (20–30 km) which absorbs harmful solar UV rays."
+        ],
+        [
+          "Mesosphere",
+          "Decreases upward",
+          "Coldest region of the atmosphere; bounded at top by the Mesopause."
+        ],
+        [
+          "Thermosphere",
+          "Rises dramatically upward",
+          "Absorbs high-energy solar radiation; includes radio-reflecting ionosphere."
+        ]
+      ],
+      "id": "1lsk3ut"
+    },
+    {
+      "id": "wz71sls",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Atmospheric Pressure and Density"
+    },
+    {
+      "type": "paragraph",
+      "content": "Atmospheric pressure is defined as the force exerted by the weight of air on a unit area. Pressure decreases exponentially with altitude because the density of air declines.",
+      "id": "6tp89gz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• About 50% of the atmosphere lies below 5.5 km.",
+      "id": "r1lwddh"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Nearly 99% lies within 32 km.",
+      "id": "rgz1un1"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Pressure is highest at sea level.",
+      "id": "qkp4dri"
+    },
+    {
+      "id": "45tfvb3",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Importance of the Atmosphere"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Acts as a protective shield against meteoroids.",
+      "id": "p0f6zh8"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Filters harmful ultraviolet radiation.",
+      "id": "k26o9ky"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Maintains Earth's energy balance.",
+      "id": "7klev8r"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Allows the hydrological cycle to operate.",
+      "id": "fh2d1mu"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Supports aviation and satellite communication.",
+      "id": "089jcnu"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Distributes heat through winds.",
+      "id": "2qn2heq"
+    },
+    {
+      "id": "wfiml14",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Greenhouse Effect"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "All weather phenomena occur exclusively in the Troposphere.",
+        "The Environmental Lapse Rate causes temperature to drop at approximately 6.5°C per kilometer in the troposphere.",
+        "The Ionosphere reflects radio waves and high-energy solar radiation dramatically heats the Thermosphere.",
+        "Nearly 99% of atmospheric mass is concentrated within 32 km of Earth's surface."
+      ],
+      "id": "8po6fnc"
+    },
+    {
+      "type": "paragraph",
+      "content": "Greenhouse gases — primarily carbon dioxide, methane, nitrous oxide, and water vapour — trap outgoing longwave radiation. This natural process keeps Earth warm enough to sustain life.",
+      "id": "4q05nze"
+    },
+    {
+      "type": "paragraph",
+      "content": "Without the greenhouse effect, the average global temperature would be approximately –18°C instead of about +15°C.",
+      "id": "vs1f3sj"
+    },
+    {
+      "id": "cdbkuvm",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Ozone Layer"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Located mainly between 20–30 km in the stratosphere.",
+      "id": "o5ztbi1"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Absorbs ultraviolet-B radiation.",
+      "id": "2ukwxdi"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Ozone depletion is largely caused by chlorofluorocarbons (CFCs).",
+      "id": "ahhayri"
+    },
+    {
+      "type": "paragraph",
+      "content": "• The Montreal Protocol (1987) successfully reduced ozone‑depleting substances.",
+      "id": "5c9bxdc"
+    },
+    {
+      "id": "b4mkfl1",
+      "type": "heading",
+      "level": 2,
+      "content": "MOST IMPORTANT EXAM CONCEPTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Troposphere contains all weather phenomena.<br/>• Environmental lapse rate is about 6.5°C per km.<br/>• Ozone layer is located in the stratosphere.<br/>• Ionosphere reflects radio waves.<br/>• 99% of atmospheric mass lies within 32 km.<br/>• Greenhouse effect makes Earth habitable.",
+      "id": "sqjqcwj"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,418 @@
+{
+  "id": "1j7979q",
+  "title": "Blood Relations",
+  "order": 5,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1rkba7o",
+      "content": "<strong>CHAPTER  05\tBLOOD RELATIONS</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "nph2im7",
+      "content": "<em>Family Tree | Generation Problems | Coded Relations</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pfdbu36",
+      "content": "<strong>5.1  Introduction</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "5i2b5ug",
+      "content": "Blood relation questions test your ability to decode family relationships from given clues. These questions appear 2–3 times in  CGL Tier 1. The key is to draw a family tree diagram for every question."
+    },
+    {
+      "id": "lf0j0tv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>FAMILY TERMS — MASTER LIST</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>PATERNAL SIDE: Father's father = Paternal Grandfather | Father's mother = Paternal Grandmother</p><p>  Father's brother = Uncle (Paternal) | Father's sister = Aunt (Paternal)</p><p>  Father's brother's son/daughter = Cousin</p><p>MATERNAL SIDE: Mother's father = Maternal Grandfather | Mother's mother = Maternal Grandmother</p><p>  Mother's brother = Uncle (Maternal) | Mother's sister = Aunt (Maternal)</p><p>SIBLINGS: Brother | Sister | Half-brother | Half-sister</p><p>SPOUSE: Husband | Wife | Father-in-law | Mother-in-law | Brother-in-law | Sister-in-law</p><p>CHILDREN: Son | Daughter | Nephew (brother's son) | Niece (brother's daughter)</p><p>GRAND: Grandson | Granddaughter | Great-grandfather | Great-grandmother</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5notgg4",
+      "content": "<strong>5.2  Generation Chart</strong>"
+    },
+    {
+      "id": "n5c9j86",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Relation</strong></p>",
+            "<p><strong>Generation Level</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Father / Mother</p>",
+            "<p>+1 (one level above)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Son / Daughter</p>",
+            "<p>−1 (one level below)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Brother / Sister</p>",
+            "<p>0 (same level)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Grandfather / Grandmother</p>",
+            "<p>+2 (two levels above)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Grandson / Granddaughter</p>",
+            "<p>−2 (two levels below)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Uncle (Father's brother) / Aunt</p>",
+            "<p>+1 (one level above, same side)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nephew / Niece</p>",
+            "<p>+1 male / +1 female of sibling</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cousin</p>",
+            "<p>0 (same generation)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Father-in-law / Mother-in-law</p>",
+            "<p>+1 (spouse's parent)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Son-in-law / Daughter-in-law</p>",
+            "<p>−1 (child's spouse)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Brother-in-law / Sister-in-law</p>",
+            "<p>0 (spouse's sibling / sibling's spouse)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Great-grandfather</p>",
+            "<p>+3</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Great-grandson</p>",
+            "<p>−3</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nh6bnet",
+      "content": "<strong>5.3  Notation System</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "vs5feva",
+      "content": "Use the following symbols to draw family trees quickly: + for male, ○ for female, = for married couple, | for parent-child, — for siblings."
+    },
+    {
+      "id": "2ojakt2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>NOTE: </strong><em>SHORTCUT: When solving blood relation problems, ALWAYS draw a diagram. Never try to solve mentally — errors increase dramatically without a visual tree.</em></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gu7sffv",
+      "content": "<strong>5.4  Solved Examples</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "6nm7iie",
+      "content": "<strong>Ex.1 </strong>Pointing to a woman, Ram said, 'She is the daughter of my grandfather's only son.' How is the woman related to Ram?"
+    },
+    {
+      "type": "paragraph",
+      "id": "85hxw2e",
+      "content": "<strong>Sol. </strong><em>Grandfather's only son = Ram's father. Daughter of Ram's father = Ram's sister. Ans: Sister</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "klw1y1c",
+      "content": "<strong>Ex.2 </strong>A is B's brother. C is A's mother. D is C's father. E is B's son. How is D related to E?"
+    },
+    {
+      "type": "paragraph",
+      "id": "lj7z039",
+      "content": "<strong>Sol. </strong><em>Draw: D→C (father-daughter), C→A,B (mother-children), B→E (parent-child). D is C's father → D is A and B's grandfather → D is E's great-grandfather. Ans: Great-grandfather</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "irm4vko",
+      "content": "<strong>Ex.3 </strong>Introducing a man, a woman says 'His mother is the only daughter of my mother.' How is the man related to the woman?"
+    },
+    {
+      "type": "paragraph",
+      "id": "ytocbgn",
+      "content": "<strong>Sol. </strong><em>Only daughter of woman's mother = the woman herself. So the man's mother is the woman. Therefore the man is the woman's son. Ans: Son</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "zgiambg",
+      "content": "<strong>Ex.4 </strong>P is Q's brother. R is Q's mother. S is R's father. T is S's wife. How is P related to T?"
+    },
+    {
+      "type": "paragraph",
+      "id": "jiwoawv",
+      "content": "<strong>Sol. </strong><em>T is S's wife → S and T are couple. R is S's child (R is Q's mother, S is R's father). P and Q are siblings (P is Q's brother), and R is their mother. So T is S's wife and S is R's father → T is R's mother → T is P's grandmother. Ans: Grandson (P is T's grandson)</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "kn8amfw",
+      "content": "<strong>Ex.5 </strong>X's mother is Y's sister. Z is Y's mother's husband. How is X related to Z?"
+    },
+    {
+      "type": "paragraph",
+      "id": "4khkvq8",
+      "content": "<strong>Sol. </strong><em>Z is Y's mother's husband → Z is Y's father. Y is X's mother's sibling (sister). So Z and X's mother are siblings' parents → Z is X's maternal grandfather. Ans: Grandson/Granddaughter (X is Z's grandchild)</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bafc27z",
+      "content": "<strong>5.5  Coded Blood Relations</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "0bfut8o",
+      "content": "In coded blood relation questions, relationships are represented by symbols like +, −, ×, ÷, @, #, etc. A key is given, and you must decode the relationship chain."
+    },
+    {
+      "id": "bz8r5z4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>EXAMPLE CODE KEY</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A + B → A is the father of B</p><p>A − B → A is the mother of B</p><p>A × B → A is the brother of B</p><p>A ÷ B → A is the sister of B</p><p>A @ B → A is the husband of B</p><p>A # B → A is the daughter of B</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "fqthkvg",
+      "content": "<strong>Ex.6 (Coded) </strong>Using above key: P + Q − R × S. How is P related to S?"
+    },
+    {
+      "type": "paragraph",
+      "id": "m6r4w3k",
+      "content": "<strong>Sol. </strong><em>P+Q → P is father of Q. Q−R → Q is mother of R. R×S → R is brother of S. So P→Q→R→S. P is father of Q (mother of R). So P is grandfather of R (and S). Ans: P is grandfather of S</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j50hn9h",
+      "content": "<strong>5.6  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "mcanrrb",
+      "content": "<strong>Q.25  </strong>Pointing to a photograph, a man says, 'She is the daughter of my son.' How is the girl in the photograph related to the man?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rnfmf2c",
+      "content": "<strong>  (a)  </strong>Granddaughter"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pz68jo8",
+      "content": "<strong>  (b)  </strong>Daughter"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h3fulzo",
+      "content": "<strong>  (c)  </strong>Sister"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i9ruqjb",
+      "content": "<strong>  (d)  </strong>Niece"
+    },
+    {
+      "type": "paragraph",
+      "id": "40pt45w",
+      "content": "<strong>  Ans: (a) Granddaughter  Hint: </strong><em>His son's daughter = his granddaughter.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "8ie5znv",
+      "content": "<strong>Q.26  </strong>A is B's father. C is A's sister. D is C's husband. How is D related to B?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vcogtll",
+      "content": "<strong>  (a)  </strong>Uncle"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rw77hv4",
+      "content": "<strong>  (b)  </strong>Father"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3t7j5yi",
+      "content": "<strong>  (c)  </strong>Grandfather"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rlyrq72",
+      "content": "<strong>  (d)  </strong>Cousin"
+    },
+    {
+      "type": "paragraph",
+      "id": "jpo80i9",
+      "content": "<strong>  Ans: (a) Uncle  Hint: </strong><em>C is A's sister → C is B's aunt. D is C's husband → D is B's uncle.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "6tzr2i6",
+      "content": "<strong>Q.27  </strong>If A + B means A is mother of B, and A × B means A is father of B, and A − B means A is sister of B, in the expression P × Q + R − S, how is P related to S?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bjsuz4a",
+      "content": "<strong>  (a)  </strong>Grandfather"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nkb0chc",
+      "content": "<strong>  (b)  </strong>Father"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vllkh6o",
+      "content": "<strong>  (c)  </strong>Uncle"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jy0cak9",
+      "content": "<strong>  (d)  </strong>Brother"
+    },
+    {
+      "type": "paragraph",
+      "id": "gy2s6mz",
+      "content": "<strong>  Ans: (a) Grandfather  Hint: </strong><em>P×Q: P is father of Q. Q+R: Q is mother of R. R−S: R is sister of S. P→Q(father)→R(mother). P is grandfather of R and R is sister of S → P is grandfather of S.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "4hbolg9",
+      "content": "<strong>Q.28  </strong>Introducing a boy, a girl says 'He is the son of the daughter of the father of my uncle.' How is the boy related to the girl?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0bz2s5p",
+      "content": "<strong>  (a)  </strong>Brother"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f0myrbo",
+      "content": "<strong>  (b)  </strong>Nephew"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zf9zf9x",
+      "content": "<strong>  (c)  </strong>Uncle"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gxjk633",
+      "content": "<strong>  (d)  </strong>Son-in-law"
+    },
+    {
+      "type": "paragraph",
+      "id": "eeh591f",
+      "content": "<strong>  Ans: (a) Brother  Hint: </strong><em>Father of my uncle = grandfather. Daughter of grandfather = mother/aunt. If daughter = girl's mother, then boy is her mother's son = her brother.</em>"
+    }
+  ],
+  "enriched": true
+}

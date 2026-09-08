@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "mwiatum"
+      "id": "mwiatum",
+      "content": "The cell is the basic structural and functional unit of life. All living organisms are made up of cells. Cells perform all the essential functions necessary for survival such as metabolism, growth, reproduction and response to stimuli."
     },
     {
       "type": "statStrip",
@@ -53,15 +54,18 @@
     },
     {
       "type": "paragraph",
-      "id": "gisjvsu"
+      "id": "gisjvsu",
+      "content": "• Robert Hooke discovered the cell in 1665 while observing cork under a microscope."
     },
     {
       "type": "paragraph",
-      "id": "yf6rdp6"
+      "id": "yf6rdp6",
+      "content": "• He described the small compartments as 'cells'."
     },
     {
       "type": "paragraph",
-      "id": "xpgbd9c"
+      "id": "xpgbd9c",
+      "content": "• Anton van Leeuwenhoek later observed living cells using a microscope."
     },
     {
       "id": "78oah84",
@@ -71,15 +75,18 @@
     },
     {
       "type": "paragraph",
-      "id": "a47o3ny"
+      "id": "a47o3ny",
+      "content": "• All living organisms are composed of cells."
     },
     {
       "type": "paragraph",
-      "id": "h3du4uw"
+      "id": "h3du4uw",
+      "content": "• The cell is the basic unit of life."
     },
     {
       "type": "paragraph",
-      "id": "khm5qb9"
+      "id": "khm5qb9",
+      "content": "• All cells arise from pre-existing cells."
     },
     {
       "id": "5pp7101",
@@ -94,22 +101,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Cell Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prokaryotic Cells</p>",
+            "<p>Simple cells without nucleus (e.g., bacteria)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Eukaryotic Cells</p>",
+            "<p>Complex cells with nucleus (e.g., plants and animals)</p>"
           ]
         }
       ]
@@ -122,27 +129,26 @@
     },
     {
       "type": "paragraph",
-      "id": "qotn2bi"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Difference Between Plant Cell and Animal Cell",
-      "id": "l385h21"
+      "id": "qotn2bi",
+      "content": "Main parts of a cell:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m98awdx"
+      "id": "m98awdx",
+      "content": "• Cell membrane"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9q9qvpp"
+      "id": "9q9qvpp",
+      "content": "• Cytoplasm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zflq0ef"
+      "id": "zflq0ef",
+      "content": "• Nucleus"
     },
     {
       "id": "xixggrw",
@@ -152,15 +158,18 @@
     },
     {
       "type": "paragraph",
-      "id": "0z1ems3"
+      "id": "0z1ems3",
+      "content": "• Also called plasma membrane."
     },
     {
       "type": "paragraph",
-      "id": "ju6rmm7"
+      "id": "ju6rmm7",
+      "content": "• Controls movement of substances into and out of the cell."
     },
     {
       "type": "paragraph",
-      "id": "ixxx83d"
+      "id": "ixxx83d",
+      "content": "• It is selectively permeable."
     },
     {
       "type": "comparisonTable",
@@ -206,11 +215,13 @@
     },
     {
       "type": "paragraph",
-      "id": "hjkzklb"
+      "id": "hjkzklb",
+      "content": "• Cytoplasm is the jelly-like substance inside the cell."
     },
     {
       "type": "paragraph",
-      "id": "q4q1v3c"
+      "id": "q4q1v3c",
+      "content": "• It contains organelles that perform different functions."
     },
     {
       "id": "9jtkh8n",
@@ -220,15 +231,18 @@
     },
     {
       "type": "paragraph",
-      "id": "k710t5p"
+      "id": "k710t5p",
+      "content": "• Nucleus controls the activities of the cell."
     },
     {
       "type": "paragraph",
-      "id": "abyflpv"
+      "id": "abyflpv",
+      "content": "• It contains genetic material (DNA)."
     },
     {
       "type": "paragraph",
-      "id": "odyxmz7"
+      "id": "odyxmz7",
+      "content": "• It regulates cell division."
     },
     {
       "id": "5zyyupf",
@@ -243,57 +257,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Organelle</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mitochondria</p>",
+            "<p>Produces energy (powerhouse of cell)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ribosomes</p>",
+            "<p>Protein synthesis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Endoplasmic Reticulum</p>",
+            "<p>Transport of materials</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Golgi Apparatus</p>",
+            "<p>Packaging and secretion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lysosomes</p>",
+            "<p>Digestion of waste materials</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vacuole</p>",
+            "<p>Storage of substances</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chloroplast</p>",
+            "<p>Photosynthesis in plant cells</p>"
           ]
         }
       ]
@@ -321,41 +335,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Plant Cell</strong></p>",
+            "<p><strong>Animal Cell</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cell Wall</p>",
+            "<p>Present</p>",
+            "<p>Absent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chloroplast</p>",
+            "<p>Present</p>",
+            "<p>Absent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shape</p>",
+            "<p>Usually rectangular</p>",
+            "<p>Usually round</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vacuole</p>",
+            "<p>Large</p>",
+            "<p>Small or absent</p>"
           ]
         }
       ]
@@ -368,19 +382,23 @@
     },
     {
       "type": "paragraph",
-      "id": "clea8rr"
+      "id": "clea8rr",
+      "content": "• Mitochondria are called the powerhouse of the cell."
     },
     {
       "type": "paragraph",
-      "id": "9ea8cd7"
+      "id": "9ea8cd7",
+      "content": "• Lysosomes are called suicide bags."
     },
     {
       "type": "paragraph",
-      "id": "3phix79"
+      "id": "3phix79",
+      "content": "• Ribosomes are the site of protein synthesis."
     },
     {
       "type": "paragraph",
-      "id": "q1jqm83"
+      "id": "q1jqm83",
+      "content": "• Nucleus controls cell activities."
     }
   ],
   "enriched": true

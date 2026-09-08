@@ -1,0 +1,64 @@
+{
+  "title": "MOST IMPORTANT EXAM POINTS",
+  "order": 110,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Elastic rebound explains earthquakes.<br/>• Largest earthquakes occur at convergent boundaries.<br/>• S-waves cannot travel through liquids.<br/>• Richter scale is logarithmic.<br/>• Shallow earthquakes cause maximum damage.",
+      "id": "ze5j0qn"
+    },
+    {
+      "type": "pullQuote",
+      "content": "S-waves cannot travel through liquids.",
+      "id": "t4d70hi"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Cause Theory",
+          "value": "Elastic Rebound",
+          "icon": "book"
+        },
+        {
+          "label": "Major Zone",
+          "value": "Convergent Boundaries",
+          "icon": "award"
+        },
+        {
+          "label": "Wave Property",
+          "value": "S-Waves (No Liquids)",
+          "icon": "info"
+        },
+        {
+          "label": "Scale Type",
+          "value": "Logarithmic Richter",
+          "icon": "check"
+        }
+      ],
+      "id": "xdqsl1e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that S-waves cannot travel through liquids, which is crucial for understanding Earth's internal structure in exam questions.",
+        "Questions frequently test that shallow earthquakes, not deep ones, inflict the maximum damage.",
+        "Note that the Richter scale is logarithmic, meaning each whole number step represents a 10-fold increase in measured amplitude."
+      ],
+      "id": "0vc4ers"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Elastic rebound theory provides the foundational explanation for how earthquakes occur.",
+        "The most massive earthquakes happen along convergent plate boundaries.",
+        "S-waves are strictly restricted from traveling through liquid media.",
+        "Magnitude on the Richter scale increases logarithmically rather than linearly.",
+        "Shallow-focus earthquakes are responsible for causing maximum surface damage."
+      ],
+      "id": "stgy5ml"
+    }
+  ],
+  "enriched": true
+}

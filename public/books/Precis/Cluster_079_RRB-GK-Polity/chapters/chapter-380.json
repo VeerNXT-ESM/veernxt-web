@@ -1,0 +1,63 @@
+{
+  "title": "RRB Quick Revision Box",
+  "order": 380,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Act: 2002<br/>Operational: 2009<br/>HQ: New Delhi<br/>Replaced MRTP Commission<br/>Regulates Cartels &amp; Mergers",
+      "id": "k9fre71"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Replaced MRTP Commission Regulates Cartels & Mergers",
+      "id": "oyi9e5t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Act Passed",
+          "value": "2002",
+          "icon": "calendar"
+        },
+        {
+          "label": "Operational Year",
+          "value": "2009",
+          "icon": "clock"
+        },
+        {
+          "label": "Headquarters",
+          "value": "New Delhi",
+          "icon": "info"
+        },
+        {
+          "label": "Replaced Body",
+          "value": "MRTP Commission",
+          "icon": "check"
+        }
+      ],
+      "id": "jr94o2o"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crucial distinction: Act was passed in 2002, but became Operational in 2009.",
+        "Frequently asked question: The body replaced by this Act is the MRTP Commission.",
+        "Core regulatory purview covers Cartels & Mergers."
+      ],
+      "id": "upmtljm"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Act was established in 2002 and became fully operational in 2009.",
+        "The official headquarters are located in New Delhi.",
+        "Directly replaced the former Monopolies and Restrictive Trade Practices (MRTP) Commission.",
+        "Main responsibility includes regulating anti-competitive practices like Cartels and Mergers."
+      ],
+      "id": "541hml3"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,146 @@
+{
+  "title": "9. Powers of the President",
+  "order": 68,
+  "blocks": [
+    {
+      "id": "0ax41h9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Power</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Executive Powers</p>",
+            "<p>Appoints Prime Minister, Governors, Judges, CAG, Election Commissioners</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Legislative Powers</p>",
+            "<p>Summons Parliament, dissolves Lok Sabha, gives assent to bills</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Financial Powers</p>",
+            "<p>Budget introduced with prior recommendation of President</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Judicial Powers</p>",
+            "<p>Grant pardons, reprieves, respites</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Military Powers</p>",
+            "<p>Supreme Commander of Armed Forces</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Emergency Powers</p>",
+            "<p>Can proclaim National, State, and Financial Emergency</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The executive power of the Union shall be vested in the President and shall be exercised by him either directly or through officers subordinate to him in accordance with this Constitution.",
+      "id": "2wi7t7z"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Type of Power",
+        "Constitutional Provision",
+        "Key Features & Limitations"
+      ],
+      "rows": [
+        [
+          "Pardoning Power",
+          "Article 72",
+          "Can pardon, reprieve, respite, remit, or commute death sentences and court-martial verdicts."
+        ],
+        [
+          "Ordinance-Making Power",
+          "Article 123",
+          "Promulgated when either House is not in session; maximum validity is 6 months and 6 weeks."
+        ],
+        [
+          "Veto Power",
+          "Article 111",
+          "Includes Absolute Veto, Suspensive Veto (overridden by simple majority), and Pocket Veto."
+        ],
+        [
+          "Emergency Powers",
+          "Articles 352, 356, 360",
+          "Authorizes proclamation of National Emergency, President's Rule, and Financial Emergency."
+        ]
+      ],
+      "id": "b1ucqn5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Executive Power",
+          "value": "Article 53",
+          "icon": "book"
+        },
+        {
+          "label": "Pardoning Power",
+          "value": "Article 72",
+          "icon": "check"
+        },
+        {
+          "label": "Ordinance Power",
+          "value": "Article 123",
+          "icon": "info"
+        },
+        {
+          "label": "Emergency Powers",
+          "value": "3 Types",
+          "icon": "award"
+        }
+      ],
+      "id": "1x2hmhd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "An Ordinance promulgated under Article 123 must be laid before Parliament and ceases to operate 6 weeks from its reassembly.",
+        "The President's pardoning power under Article 72 extends to court-martial sentences, unlike the Governor's pardoning power under Article 161.",
+        "A Money Bill can only be introduced in the Lok Sabha with the prior recommendation of the President.",
+        "The Indian President possesses Absolute, Suspensive, and Pocket Veto powers, but lacks Qualified Veto."
+      ],
+      "id": "latdu5b"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Executive powers include appointing the Prime Minister, Council of Ministers, Governors, CAG, and Chief Election Commissioner.",
+        "Legislative powers empower the President to summon or prorogue Parliament, dissolve Lok Sabha, and issue ordinances under Article 123.",
+        "Financial powers mandate the President's prior recommendation before introducing Money Bills in Parliament.",
+        "Judicial powers under Article 72 allow the granting of pardons, reprieves, respites, remissions, or commutations of court sentences.",
+        "Emergency powers cover National Emergency (Article 352), President's Rule (Articles 356 & 365), and Financial Emergency (Article 360)."
+      ],
+      "id": "cxc240c"
+    }
+  ],
+  "enriched": true
+}

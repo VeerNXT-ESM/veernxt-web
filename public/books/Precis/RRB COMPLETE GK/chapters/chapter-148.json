@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "ggo0sid"
+      "id": "ggo0sid",
+      "content": "Major depositional features formed when wind velocity decreases:"
     },
     {
       "type": "statStrip",
@@ -30,30 +31,35 @@
     },
     {
       "type": "paragraph",
-      "id": "whcmn44"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Types of Sand Dunes",
-      "id": "wb67h7e"
+      "id": "whcmn44",
+      "content": "• Sand Dunes – hills of sand formed by deposition."
     },
     {
       "type": "paragraph",
-      "id": "r6vwqav"
+      "id": "r6vwqav",
+      "content": "• Loess – thick deposits of fine silt; extremely fertile."
     },
     {
       "type": "paragraph",
-      "id": "c55habs"
+      "id": "c55habs",
+      "content": "• Sand Sheets – wide flat sandy surfaces."
     },
     {
       "type": "paragraph",
-      "id": "kbe73t2"
+      "id": "kbe73t2",
+      "content": "• Nebkhas – small dunes anchored by vegetation."
     },
     {
       "id": "nfguzwe",
       "type": "heading",
       "level": 2,
       "content": "Types of Sand Dunes"
+    },
+    {
+      "id": "1hvp6r0",
+      "type": "image",
+      "imageId": "ph6ot89",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_ph6ot89.png"
     },
     {
       "type": "examAlert",
@@ -80,57 +86,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Dune Type</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Wind Pattern</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Barchan</p>",
+            "<p>Crescent-shaped with horns pointing downwind</p>",
+            "<p>Unidirectional winds</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Barchanoid</p>",
+            "<p>Linked barchans forming wavy ridges</p>",
+            "<p>Consistent winds with more sand</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Transverse</p>",
+            "<p>Long ridges perpendicular to wind</p>",
+            "<p>Strong steady winds</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Longitudinal (Seif)</p>",
+            "<p>Parallel ridges</p>",
+            "<p>Bidirectional winds</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Parabolic</p>",
+            "<p>U-shaped; anchored by vegetation</p>",
+            "<p>Coastal deserts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Star Dunes</p>",
+            "<p>Pyramidal with multiple arms</p>",
+            "<p>Multidirectional winds</p>"
           ]
         }
       ]

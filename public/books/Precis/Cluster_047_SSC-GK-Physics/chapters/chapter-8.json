@@ -1,0 +1,583 @@
+{
+  "title": "CHAPTER 8 : LIGHT (OPTICS)",
+  "order": 8,
+  "blocks": [
+    {
+      "id": "cxbgw2n",
+      "type": "heading",
+      "level": 2,
+      "content": "INTRODUCTION TO LIGHT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Light travels in straight lines without requiring any medium and has a maximum speed of 3 × 10⁸ m/s in vacuum.",
+        "Concave mirrors converge light and are used in torches and dentist mirrors, while convex mirrors diverge light and provide a wide field of view for rear-view mirrors.",
+        "Refraction occurs due to speed change across media, quantified by the refractive index formula μ = c / v.",
+        "Myopia is short-sightedness corrected by a concave lens, whereas Hypermetropia is long-sightedness corrected by a convex lens.",
+        "Dispersion splits white light into VIBGYOR, and shorter wavelengths scatter more easily, explaining the blue color of the sky."
+      ],
+      "id": "sa67jsq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Speed in Vacuum",
+          "value": "3 × 10⁸ m/s",
+          "icon": "clock"
+        },
+        {
+          "label": "Nature of Light",
+          "value": "Wave & Particle",
+          "icon": "info"
+        },
+        {
+          "label": "Dispersion Colors",
+          "value": "7 (VIBGYOR)",
+          "icon": "book"
+        },
+        {
+          "label": "Mirror Types",
+          "value": "3",
+          "icon": "check"
+        }
+      ],
+      "id": "us3sq3e"
+    },
+    {
+      "type": "paragraph",
+      "content": "Light is a form of energy that makes objects visible to us. Without light, we cannot see anything.",
+      "id": "ud4nrnm"
+    },
+    {
+      "type": "paragraph",
+      "content": "Light travels in straight lines and shows many interesting phenomena such as:",
+      "id": "e1emjy3"
+    },
+    {
+      "id": "xlegaci",
+      "type": "list",
+      "items": [
+        "<ul><li>Reflection</li><li>Refraction</li><li>Dispersion</li><li>Scattering</li></ul>",
+        "Reflection",
+        "Refraction",
+        "Dispersion",
+        "Scattering"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Light does not require any medium to travel.",
+      "id": "tf6owwj"
+    },
+    {
+      "type": "paragraph",
+      "content": "Its speed in vacuum is the highest known speed in nature. Speed of light in vacuum = 3 × 10⁸ m/s",
+      "id": "9f8ws9q"
+    },
+    {
+      "id": "05nrl6t",
+      "type": "heading",
+      "level": 2,
+      "content": "NATURE OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "content": "Light behaves both as a wave and as a particle.",
+      "id": "8pfy9o6"
+    },
+    {
+      "id": "v022jqo",
+      "type": "list",
+      "items": [
+        "<ul><li>Wave nature explains reflection, refraction and interference.</li><li>Particle nature explains photoelectric effect.</li></ul>",
+        "Wave nature explains reflection, refraction and interference.",
+        "Particle nature explains photoelectric effect."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "For SSC, you only need to remember that:",
+      "id": "215xqg5"
+    },
+    {
+      "type": "paragraph",
+      "content": "Light travels in straight lines and behaves like a wave.",
+      "id": "0f10bvu"
+    },
+    {
+      "id": "5rmfbfo",
+      "type": "heading",
+      "level": 2,
+      "content": "REFLECTION OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "content": "Reflection of light is the process by which light rays return back into the same medium after striking a surface.",
+      "id": "gf8q4qy"
+    },
+    {
+      "type": "paragraph",
+      "content": "When light falls on a smooth and polished surface, it gets reflected.",
+      "id": "o0sewdr"
+    },
+    {
+      "id": "icl49qg",
+      "type": "heading",
+      "level": 3,
+      "content": "Laws of Reflection"
+    },
+    {
+      "type": "paragraph",
+      "content": "There are two laws of reflection:",
+      "id": "31cga58"
+    },
+    {
+      "id": "19lirxe",
+      "type": "numberedList",
+      "items": [
+        "The angle of incidence is always equal to the angle of reflection.",
+        "The incident ray, reflected ray and the normal at the point of incidence lie in the same plane."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "These laws are valid for all reflecting surfaces.",
+      "id": "f8sra6w"
+    },
+    {
+      "id": "0dz33w2",
+      "type": "heading",
+      "level": 2,
+      "content": "TYPES OF MIRRORS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mirrors are smooth reflecting surfaces. There are three types of mirrors:",
+      "id": "rpddtjo"
+    },
+    {
+      "id": "ykz3urt",
+      "type": "numberedList",
+      "items": [
+        "Plane Mirror",
+        "Concave Mirror",
+        "<img src=\"/books/Precis/Cluster_014_SSC-GK-Physics/images/image_h8yv7ib.png\"/>Convex Mirror"
+      ]
+    },
+    {
+      "id": "c3ywcko",
+      "type": "heading",
+      "level": 3,
+      "content": "Plane Mirror"
+    },
+    {
+      "type": "paragraph",
+      "content": "A plane mirror is a flat reflecting surface. Characteristics of image: ",
+      "id": "zzkxuz7"
+    },
+    {
+      "id": "bs8ewrb",
+      "type": "list",
+      "items": [
+        "<ul><li>Image is virtual and erect</li><li>Image size is equal to object size</li><li>Image distance = object distance</li><li>Image is laterally inverted</li></ul>",
+        "Image is virtual and erect",
+        "Image size is equal to object size",
+        "Image distance = object distance",
+        "Image is laterally inverted"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Uses:",
+      "id": "m3wl8hf"
+    },
+    {
+      "id": "4kg1k7b",
+      "type": "list",
+      "items": [
+        "<ul><li>Dressing mirror</li><li>Looking glass</li></ul>",
+        "Dressing mirror",
+        "Looking glass"
+      ]
+    },
+    {
+      "id": "q0fger3",
+      "type": "heading",
+      "level": 3,
+      "content": "Concave Mirror"
+    },
+    {
+      "type": "paragraph",
+      "content": "A concave mirror has its reflecting surface curved inward. Characteristics:",
+      "id": "4rc16sv"
+    },
+    {
+      "id": "ksscxku",
+      "type": "list",
+      "items": [
+        "<ul><li>It is a converging mirror</li><li>Can form real or virtual image</li><li>Real image is inverted</li><li>Virtual image is erect </li></ul>",
+        "It is a converging mirror",
+        "Can form real or virtual image",
+        "Real image is inverted",
+        "Virtual image is erect "
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Light is a form of energy that makes objects visible to us.",
+      "id": "9l1fmfm"
+    },
+    {
+      "type": "paragraph",
+      "content": "Uses:",
+      "id": "ggvol2h"
+    },
+    {
+      "id": "5jxxeux",
+      "type": "list",
+      "items": [
+        "<ul><li>Torch and headlights</li><li>Solar cooker</li><li>Dentist mirror</li><li>Shaving mirror</li></ul>",
+        "Torch and headlights",
+        "Solar cooker",
+        "Dentist mirror",
+        "Shaving mirror"
+      ]
+    },
+    {
+      "id": "ky6155o",
+      "type": "heading",
+      "level": 3,
+      "content": "Convex Mirror"
+    },
+    {
+      "type": "paragraph",
+      "content": "A convex mirror has its reflecting surface bulging outward. Characteristics:",
+      "id": "3qbsa5r"
+    },
+    {
+      "id": "8vt9f1s",
+      "type": "list",
+      "items": [
+        "<ul><li>It is a diverging mirror</li><li>Always forms virtual, erect and diminished image</li><li>Gives wide field of view</li></ul>",
+        "It is a diverging mirror",
+        "Always forms virtual, erect and diminished image",
+        "Gives wide field of view"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Uses:",
+      "id": "uthq6bd"
+    },
+    {
+      "id": "4vn0aib",
+      "type": "list",
+      "items": [
+        "<ul><li>Rear-view mirrors in vehicles</li></ul>",
+        "Rear-view mirrors in vehicles"
+      ]
+    },
+    {
+      "id": "1q21i2r",
+      "type": "heading",
+      "level": 2,
+      "content": "REFRACTION OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "content": "Refraction is the bending of light when it passes from one medium to another. This happens because speed of light changes in different media.",
+      "id": "4khtnpg"
+    },
+    {
+      "type": "paragraph",
+      "content": "Examples:",
+      "id": "5ceu28m"
+    },
+    {
+      "id": "0dtxmdm",
+      "type": "list",
+      "items": [
+        "<ul><li>Pencil appears bent in water</li><li>Coin appears raised in water</li></ul>",
+        "Pencil appears bent in water",
+        "Coin appears raised in water"
+      ]
+    },
+    {
+      "id": "j0uuswx",
+      "type": "heading",
+      "level": 3,
+      "content": "Laws of Refraction"
+    },
+    {
+      "id": "zeiwb31",
+      "type": "numberedList",
+      "items": [
+        "The incident ray, refracted ray and normal lie in the same plane.",
+        "The ratio of sine of angle of incidence to sine of angle of refraction is constant."
+      ]
+    },
+    {
+      "id": "kxtfghj",
+      "type": "heading",
+      "level": 2,
+      "content": "REFRACTIVE INDEX"
+    },
+    {
+      "type": "paragraph",
+      "content": "Refractive index (μ) is the ratio of speed of light in vacuum to speed of light in a medium. Formula:",
+      "id": "m8rrhxu"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Concave Mirror",
+        "Convex Mirror"
+      ],
+      "rows": [
+        [
+          "Behavior",
+          "Converging mirror",
+          "Diverging mirror"
+        ],
+        [
+          "Image Type",
+          "Can form real (inverted) or virtual (erect) image",
+          "Always forms virtual, erect, and diminished image"
+        ],
+        [
+          "Field of View",
+          "Focused view",
+          "Gives wide field of view"
+        ],
+        [
+          "Applications",
+          "Torch, headlights, solar cooker, dentist mirror, shaving mirror",
+          "Rear-view mirrors in vehicles"
+        ]
+      ],
+      "id": "k9swe9e"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "μ = c / v",
+      "id": "1esx27b"
+    },
+    {
+      "type": "paragraph",
+      "content": "Higher the refractive index, greater is the bending of light.",
+      "id": "ai8rgo2"
+    },
+    {
+      "id": "i2i8ex2",
+      "type": "heading",
+      "level": 2,
+      "content": "LENSES"
+    },
+    {
+      "type": "paragraph",
+      "content": "A lens is a transparent object bounded by at least one curved surface. Types of lenses:",
+      "id": "imy4lrw"
+    },
+    {
+      "id": "fee8uwf",
+      "type": "numberedList",
+      "items": [
+        "Convex lens",
+        "<img src=\"/books/Precis/Cluster_014_SSC-GK-Physics/images/image_2pokwct.png\"/>Concave lens"
+      ]
+    },
+    {
+      "id": "qsclaac",
+      "type": "heading",
+      "level": 3,
+      "content": "Convex Lens"
+    },
+    {
+      "type": "paragraph",
+      "content": "A convex lens is thicker at the centre and thinner at the edges. Properties:",
+      "id": "7seg8z4"
+    },
+    {
+      "id": "5vxewnh",
+      "type": "list",
+      "items": [
+        "<ul><li>Converging lens</li><li>Can form real or virtual image</li><li>Used in microscope, camera, magnifying glass</li></ul>",
+        "Converging lens",
+        "Can form real or virtual image",
+        "Used in microscope, camera, magnifying glass"
+      ]
+    },
+    {
+      "id": "0s5brkn",
+      "type": "heading",
+      "level": 3,
+      "content": "Concave Lens"
+    },
+    {
+      "type": "paragraph",
+      "content": "A concave lens is thinner at the centre and thicker at the edges. Properties:",
+      "id": "xbg30kp"
+    },
+    {
+      "id": "chjen54",
+      "type": "list",
+      "items": [
+        "<ul><li>Diverging lens</li><li>Always forms virtual image</li><li><img alt=\"Human Eye\" src=\"/books/Precis/Cluster_014_SSC-GK-Physics/images/image_j1jnw4p.jpeg\"/>Used to correct myopia</li></ul>",
+        "Diverging lens",
+        "Always forms virtual image",
+        "<img alt=\"Human Eye\" src=\"/books/Precis/Cluster_014_SSC-GK-Physics/images/image_j1jnw4p.jpeg\"/>Used to correct myopia"
+      ]
+    },
+    {
+      "id": "x8q7cyp",
+      "type": "heading",
+      "level": 2,
+      "content": "HUMAN EYE"
+    },
+    {
+      "type": "paragraph",
+      "content": "Human eye works like a camera. Parts of human eye:",
+      "id": "qb8600u"
+    },
+    {
+      "id": "i90axol",
+      "type": "list",
+      "items": [
+        "<ul><li>Cornea – allows light to enter</li><li>Iris – controls light entering eye</li><li>Pupil – opening of eye</li><li>Lens – focuses light</li><li>Retina – forms image</li></ul>",
+        "Cornea – allows light to enter",
+        "Iris – controls light entering eye",
+        "Pupil – opening of eye",
+        "Lens – focuses light",
+        "Retina – forms image"
+      ]
+    },
+    {
+      "id": "s3ntklq",
+      "type": "heading",
+      "level": 3,
+      "content": "Defects of Vision"
+    },
+    {
+      "id": "gi64jzy",
+      "type": "numberedList",
+      "items": [
+        "Myopia (Short-sightedness) Cannot see distant objects clearly. Corrected by concave lens.",
+        "Hypermetropia (Long-sightedness) Cannot see nearby objects clearly. Corrected by convex lens.",
+        "Presbyopia"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Occurs due to ageing.",
+      "id": "ew5dvjz"
+    },
+    {
+      "id": "c7c4g65",
+      "type": "heading",
+      "level": 2,
+      "content": "DISPERSION OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "content": "Dispersion is the splitting of white light into its seven colours. VIBGYOR:",
+      "id": "7f65c97"
+    },
+    {
+      "type": "paragraph",
+      "content": "Violet, Indigo, Blue, Green, Yellow, Orange, Red Dispersion occurs due to refraction of light.",
+      "id": "4dzs8pu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Convex mirrors are frequently asked in SSC exams as the preferred choice for vehicle rear-view mirrors due to their wide field of view.",
+        "Myopia is corrected using a Concave lens, whereas Hypermetropia is corrected using a Convex lens.",
+        "Refractive Index (μ) formula μ = c / v is a key quantitative relation where higher μ indicates greater bending of light.",
+        "Wave nature of light explains reflection, refraction, and interference, while particle nature explains the photoelectric effect."
+      ],
+      "id": "kjpubkf"
+    },
+    {
+      "id": "xw9gv3y",
+      "type": "heading",
+      "level": 2,
+      "content": "SCATTERING OF LIGHT"
+    },
+    {
+      "type": "paragraph",
+      "content": "Scattering of light explains:",
+      "id": "iduhq41"
+    },
+    {
+      "id": "piun2d2",
+      "type": "list",
+      "items": [
+        "<ul><li>Blue colour of sky</li><li>Red colour of sun at sunrise and sunset</li></ul>",
+        "Blue colour of sky",
+        "Red colour of sun at sunrise and sunset"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Shorter wavelength scatters more than longer wavelength.",
+      "id": "of9gyq3"
+    },
+    {
+      "id": "am3le34",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT SSC QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q1. Speed of light in vacuum? Ans: 3 × 10⁸ m/s",
+      "id": "ycfaqcz"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q2. Which mirror is used as rear-view mirror? Ans: Convex mirror",
+      "id": "11xke2h"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q3. Which lens is used to correct myopia? Ans: Concave lens",
+      "id": "kqn0git"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q4. What is refractive index?",
+      "id": "43yzsvn"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ans: Ratio of speed of light in vacuum to medium",
+      "id": "55wk9x2"
+    },
+    {
+      "id": "sgomstm",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION"
+    },
+    {
+      "id": "huqk0ql",
+      "type": "list",
+      "items": [
+        "<ul><li>Light is energy</li><li>Travels in straight line</li><li>Reflection follows laws</li><li>Convex mirror gives wide view</li><li>Refraction bends light</li><li>Dispersion splits white light</li><li>Human eye works like camera</li></ul>",
+        "Light is energy",
+        "Travels in straight line",
+        "Reflection follows laws",
+        "Convex mirror gives wide view",
+        "Refraction bends light",
+        "Dispersion splits white light",
+        "Human eye works like camera"
+      ]
+    }
+  ],
+  "enriched": true
+}

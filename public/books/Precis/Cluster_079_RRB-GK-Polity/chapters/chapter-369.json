@@ -1,0 +1,124 @@
+{
+  "title": "Composition of CCI",
+  "order": 369,
+  "blocks": [
+    {
+      "id": "p3kyu58",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>Appointed by Central Government</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Members</p>",
+            "<p>Minimum 2 and Maximum 6</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Qualification</p>",
+            "<p>Experts in law, economics, commerce, finance or public affairs</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Competition Commission of India shall consist of a Chairperson and not less than two and not more than six other Members to be appointed by the Central Government.",
+      "id": "72wdgsf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Chairperson",
+        "Members"
+      ],
+      "rows": [
+        [
+          "Number of Positions",
+          "1 Position",
+          "Minimum 2, Maximum 6 Positions"
+        ],
+        [
+          "Role",
+          "Heads the Commission, presides over meetings, and manages administration",
+          "Participates in hearings, deliberations, and decision-making"
+        ],
+        [
+          "Tenure & Age Limit",
+          "5 Years / 65 Years of Age",
+          "5 Years / 65 Years of Age"
+        ],
+        [
+          "Experience Required",
+          "Minimum 15 years in specified professional fields",
+          "Minimum 15 years in specified professional fields"
+        ]
+      ],
+      "id": "cik7qdt"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chairperson",
+          "value": "1 Leader",
+          "icon": "award"
+        },
+        {
+          "label": "Members Range",
+          "value": "2 to 6",
+          "icon": "check"
+        },
+        {
+          "label": "Tenure",
+          "value": "5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Age Upper Limit",
+          "value": "65 Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "oilougm"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Composition limit trap: CCI consists of 1 Chairperson + Minimum 2 to Maximum 6 Members (Total strength ranges from 3 to 7).",
+        "Tenure & Age Cap: 5 years term or up to 65 years of age, whichever is earlier.",
+        "Selection Committee Head: The Selection Committee for CCI appointments is chaired by the Chief Justice of India or a Supreme Court Judge nominated by him.",
+        "Minimum Experience Criteria: At least 15 years of relevant professional experience is mandatory."
+      ],
+      "id": "6cd1gjn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Competition Commission of India (CCI) consists of a Chairperson and not less than 2 and not more than 6 Members appointed by the Central Government.",
+        "Members and the Chairperson are selected by the Central Government upon recommendations of a Selection Committee headed by the Chief Justice of India or their nominee.",
+        "Eligible members must be persons of integrity and standing with at least 15 years of professional experience in law, economics, finance, administration, or trade.",
+        "The term of office for the Chairperson and Members is 5 years or until attaining 65 years of age, whichever is earlier, with eligibility for re-appointment."
+      ],
+      "id": "r6i5knv"
+    }
+  ],
+  "enriched": true
+}

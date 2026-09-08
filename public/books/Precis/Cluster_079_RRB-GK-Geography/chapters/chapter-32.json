@@ -1,0 +1,149 @@
+{
+  "title": "2. Important Parallels of Latitude",
+  "order": 32,
+  "blocks": [
+    {
+      "id": "yp5wjce",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Latitude</strong></p>",
+            "<p><strong>Degree</strong></p>",
+            "<p><strong>Significance</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Equator</p>",
+            "<p>0°</p>",
+            "<p>Receives direct sunlight; divides Earth into two hemispheres.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropic of Cancer</p>",
+            "<p>23.5° N</p>",
+            "<p>Northern limit of overhead Sun.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropic of Capricorn</p>",
+            "<p>23.5° S</p>",
+            "<p>Southern limit of overhead Sun.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Arctic Circle</p>",
+            "<p>66.5° N</p>",
+            "<p>Region of 24-hour daylight or darkness.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Antarctic Circle</p>",
+            "<p>66.5° S</p>",
+            "<p>Similar polar phenomenon in Southern Hemisphere.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Besides the equator, the North Pole and the South Pole, there are four important parallels of latitudes.",
+      "id": "cb7b49w"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parallel of Latitude",
+        "Angular Distance",
+        "Zone Boundary / Location"
+      ],
+      "rows": [
+        [
+          "Tropic of Cancer",
+          "23½° N",
+          "Northern Limit of Torrid Zone"
+        ],
+        [
+          "Tropic of Capricorn",
+          "23½° S",
+          "Southern Limit of Torrid Zone"
+        ],
+        [
+          "Arctic Circle",
+          "66½° N",
+          "Boundary between N. Temperate & Frigid Zone"
+        ],
+        [
+          "Antarctic Circle",
+          "66½° S",
+          "Boundary between S. Temperate & Frigid Zone"
+        ]
+      ],
+      "id": "hoaryk4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equator",
+          "value": "0° Latitude",
+          "icon": "compass"
+        },
+        {
+          "label": "Tropic of Cancer",
+          "value": "23½° N",
+          "icon": "map"
+        },
+        {
+          "label": "Tropic of Capricorn",
+          "value": "23½° S",
+          "icon": "map"
+        },
+        {
+          "label": "Polar Circles",
+          "value": "66½° N & S",
+          "icon": "calendar"
+        },
+        {
+          "label": "Heat Zones",
+          "value": "3 Main Zones",
+          "icon": "info"
+        }
+      ],
+      "id": "asqls56"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Tropic of Cancer (23½° N) passes through 8 Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+        "The mid-day sun is exactly overhead at least once a year on all latitudes between the Tropic of Cancer and Tropic of Capricorn.",
+        "Areas beyond the Arctic Circle and Antarctic Circle receive extremely slanted solar rays, resulting in the Frigid Zones."
+      ],
+      "id": "ztvet5c"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Besides the Equator (0°), North Pole (90° N), and South Pole (90° S), there are four important parallels of latitude.",
+        "Tropic of Cancer (23½° N) is located in the Northern Hemisphere and passes through eight states in India.",
+        "Tropic of Capricorn (23½° S) is located in the Southern Hemisphere.",
+        "The Arctic Circle (66½° N) and Antarctic Circle (66½° S) define the boundaries of the Temperate and Frigid zones.",
+        "The area bounded by the Tropic of Cancer and the Tropic of Capricorn receives maximum heat and is called the Torrid Zone."
+      ],
+      "id": "ha9wc61"
+    }
+  ],
+  "enriched": true
+}

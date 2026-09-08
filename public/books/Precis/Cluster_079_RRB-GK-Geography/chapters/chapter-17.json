@@ -1,0 +1,138 @@
+{
+  "title": "1. Shape of the Earth",
+  "order": 17,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "At first glance, the Earth appears spherical. However, scientific measurements show that it is not a perfect sphere. The Earth is slightly flattened at the poles and bulges at the equator. This unique shape is called a GEOID, meaning 'earth-like shape.' ",
+      "id": "nw5n5sd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Official Shape",
+          "value": "GEOID",
+          "icon": "book"
+        },
+        {
+          "label": "Equator",
+          "value": "Bulges",
+          "icon": "info"
+        },
+        {
+          "label": "Poles",
+          "value": "Flattened",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Cause",
+          "value": "Rotation",
+          "icon": "clock"
+        }
+      ],
+      "id": "u4h353g"
+    },
+    {
+      "type": "paragraph",
+      "content": "The reason behind this shape is Earth's rotation. When a body rotates, centrifugal force pushes material outward. Because the equator experiences the highest rotational speed, the outward force is strongest there, causing the equatorial bulge. The poles experience almost no centrifugal force, so they remain flattened.",
+      "id": "9qepm17"
+    },
+    {
+      "type": "pullQuote",
+      "content": "This unique shape is called a GEOID, meaning 'earth-like shape.'",
+      "id": "dchjqq5"
+    },
+    {
+      "id": "q5q9f53",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Proper Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Geoid</p>",
+            "<p>Actual irregular shape of Earth based on gravity and mean sea level.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Oblate Spheroid</p>",
+            "<p>Mathematical model — sphere flattened at poles.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w6hsmj2",
+      "type": "heading",
+      "level": 2,
+      "content": "Why Earth is NOT a Perfect Sphere"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Region",
+        "Centrifugal Force & Speed",
+        "Physical Characteristic"
+      ],
+      "rows": [
+        [
+          "Equator",
+          "Highest rotational speed; strongest outward force",
+          "Bulges outward"
+        ],
+        [
+          "Poles",
+          "Almost no centrifugal force",
+          "Flattened"
+        ]
+      ],
+      "id": "goa468w"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth is not a perfect sphere; it is flattened at the poles and bulges at the equator.",
+        "The technical term for the Earth's unique shape is GEOID, which translates to 'earth-like shape'.",
+        "Earth's rotation generates centrifugal force, which pushes material outward, creating the equatorial bulge.",
+        "The poles remain flattened because they experience almost no centrifugal force.",
+        "Imperfection in Earth's spherical shape is caused by rotation, uneven mass distribution, and geological features like ocean trenches and mountains."
+      ],
+      "id": "j79otz6"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Rotation creates centrifugal force.",
+      "id": "62haunh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The exact term used to define Earth's shape in competitive exams is 'GEOID'.",
+        "Centrifugal force resulting from Earth's rotation is the primary mechanism responsible for the equatorial bulge.",
+        "Rotational speed and centrifugal force are highest at the equator and lowest/negligible at the poles."
+      ],
+      "id": "nzllun6"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Mass distribution inside Earth is uneven.",
+      "id": "stfbmxg"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Mountains, ocean trenches, and plate movements distort perfect symmetry.",
+      "id": "vsb72r2"
+    }
+  ],
+  "enriched": true
+}

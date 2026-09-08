@@ -10,37 +10,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Boundary</strong></p>",
+            "<p><strong>Movement</strong></p>",
+            "<p><strong>Crustal Effect</strong></p>",
+            "<p><strong>Landforms</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Divergent</p>",
+            "<p>Move apart</p>",
+            "<p>New crust formed</p>",
+            "<p>Mid-ocean ridges, rift valleys</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Convergent</p>",
+            "<p>Collide</p>",
+            "<p>Crust destroyed or uplifted</p>",
+            "<p>Mountains, trenches, volcanic arcs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Transform</p>",
+            "<p>Slide horizontally</p>",
+            "<p>Crust neither created nor destroyed</p>",
+            "<p>Fault lines</p>"
           ]
         }
       ]
@@ -90,11 +90,13 @@
     },
     {
       "type": "paragraph",
-      "id": "zhxk5bh"
+      "id": "zhxk5bh",
+      "content": "• Magma rises to fill the gap created by separating plates."
     },
     {
       "type": "paragraph",
-      "id": "jzz5a5b"
+      "id": "jzz5a5b",
+      "content": "• Produces mid-ocean ridges such as the Mid-Atlantic Ridge."
     },
     {
       "type": "pullQuote",
@@ -103,7 +105,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9edaubi"
+      "id": "9edaubi",
+      "content": "• On continents, divergence forms rift valleys like the East African Rift."
     },
     {
       "id": "k3nxgaw",
@@ -135,15 +138,18 @@
     },
     {
       "type": "paragraph",
-      "id": "aywpcmc"
+      "id": "aywpcmc",
+      "content": "• Oceanic–continental convergence forms volcanic mountain chains."
     },
     {
       "type": "paragraph",
-      "id": "kdohaxc"
+      "id": "kdohaxc",
+      "content": "• Oceanic–oceanic convergence forms island arcs."
     },
     {
       "type": "paragraph",
-      "id": "qhgms2f"
+      "id": "qhgms2f",
+      "content": "• Continental–continental collision forms large fold mountains such as the Himalayas."
     },
     {
       "id": "dbsotlm",
@@ -161,15 +167,18 @@
     },
     {
       "type": "paragraph",
-      "id": "ve12uf7"
+      "id": "ve12uf7",
+      "content": "• Characterized by strike-slip faults."
     },
     {
       "type": "paragraph",
-      "id": "nrjhln4"
+      "id": "nrjhln4",
+      "content": "• Earthquakes occur due to sudden release of accumulated stress."
     },
     {
       "type": "paragraph",
-      "id": "2gydia4"
+      "id": "2gydia4",
+      "content": "• Example: San Andreas Fault."
     }
   ],
   "enriched": true

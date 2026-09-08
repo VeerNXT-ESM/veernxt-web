@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "0ij85aj"
+      "id": "0ij85aj",
+      "content": "Every motor vehicle must be registered before it is used on a public road. Registration is done at the Regional Transport Office (RTO)."
     },
     {
       "type": "statStrip",
@@ -35,11 +36,6 @@
       "content": "Documents Every Driver Must Carry"
     },
     {
-      "type": "pullQuote",
-      "content": "Documents Every Driver Must Carry",
-      "id": "6yreclv"
-    },
-    {
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
@@ -56,57 +52,58 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Document</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Driving Licence (DL)</p>",
+            "<p>Proof that you are authorised to drive</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Registration Certificate (RC)</p>",
+            "<p>Proof of vehicle ownership and registration</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Insurance Certificate</p>",
+            "<p>Proof of valid third-party insurance (mandatory)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pollution Under Control (PUC) Certificate</p>",
+            "<p>Proof vehicle meets emission norms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Permit (for commercial vehicles)</p>",
+            "<p>Permission to operate commercially</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fitness Certificate (for commercial vehicles)</p>",
+            "<p>Vehicle is fit to use on road</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "gqz8486"
+      "id": "gqz8486",
+      "content": "Note: Digital documents are legally accepted. Showing documents on DigiLocker or mParivahan app is valid under the 2019 Amendment."
     },
     {
       "type": "examAlert",
@@ -126,12 +123,12 @@
       "id": "dbee837",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "New vehicle: Register within 7 days of purchase",
+        "Registration Certificate (RC) must be renewed before expiry",
+        "Number plate must be clearly visible, as per standard format — no fancy plates",
+        "Vehicle colour and body must match what is registered",
+        "Modifications to vehicle structure require RTO approval",
+        "Selling a vehicle: Transfer of ownership must be reported to RTO within 30 days"
       ]
     }
   ],

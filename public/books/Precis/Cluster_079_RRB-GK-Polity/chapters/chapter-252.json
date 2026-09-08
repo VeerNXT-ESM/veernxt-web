@@ -1,0 +1,138 @@
+{
+  "title": "Composition of NHRC",
+  "order": 252,
+  "blocks": [
+    {
+      "id": "f7jqbc5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Qualification</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>Former Chief Justice of India or a Judge of the Supreme Court</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Member</p>",
+            "<p>Serving or former Judge of the Supreme Court</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Member</p>",
+            "<p>Chief Justice of a High Court</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Two Members</p>",
+            "<p>Persons with knowledge or practical experience in human rights</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ex-Officio Members</p>",
+            "<p>Chairpersons of National Commissions for SC, ST, Women, Minorities, and others</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Chairperson and members of the National Human Rights Commission are appointed by the President on the recommendations of a six-member committee headed by the Prime Minister.",
+      "id": "k4as8ok"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Provision",
+        "Pre-2019 Act",
+        "Post-2019 Amendment"
+      ],
+      "rows": [
+        [
+          "Tenure",
+          "5 years or until 70 years of age",
+          "3 years or until 70 years of age"
+        ],
+        [
+          "Reappointment",
+          "Ineligible for reappointment",
+          "Eligible for reappointment"
+        ],
+        [
+          "Chairperson Qualification",
+          "Only retired Chief Justice of India",
+          "Retired CJI or retired Supreme Court Judge"
+        ],
+        [
+          "Expert Members",
+          "2 members with human rights experience",
+          "3 members (at least 1 woman) with experience"
+        ]
+      ],
+      "id": "zk9bfqd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Full-Time Body",
+          "value": "1 Chair + 5 Members",
+          "icon": "award"
+        },
+        {
+          "label": "Ex-Officio Members",
+          "value": "7 Chairpersons",
+          "icon": "info"
+        },
+        {
+          "label": "Tenure",
+          "value": "3 Years / 70 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Selection Committee",
+          "value": "6 Members (PM Head)",
+          "icon": "check"
+        }
+      ],
+      "id": "a9adt26"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Selection Committee Composition: Prime Minister (Head), Speaker of Lok Sabha, Deputy Chairman of Rajya Sabha, Leaders of Opposition in both Houses of Parliament, and Union Home Minister.",
+        "2019 Amendment Impact: Tenure reduced from 5 years to 3 years (up to 70 years of age), with eligibility for reappointment restored.",
+        "Removal Process: Can be removed by the President only on the grounds of proven misbehaviour or incapacity after an inquiry by the Supreme Court."
+      ],
+      "id": "gqa4kq1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "NHRC is a statutory multi-member body consisting of a Chairperson, 5 full-time members, and 7 ex-officio members.",
+        "The Chairperson must be a retired Chief Justice of India or a retired Judge of the Supreme Court as per the 2019 Amendment.",
+        "Among the five full-time members, at least one must be a woman with practical experience in human rights.",
+        "Ex-officio members include heads of National Commissions for Minorities, SCs, STs, Women, BCs, Protection of Child Rights, and Persons with Disabilities.",
+        "Appointments are made by the President on the recommendation of a six-member selection committee headed by the Prime Minister."
+      ],
+      "id": "a7t40xg"
+    }
+  ],
+  "enriched": true
+}

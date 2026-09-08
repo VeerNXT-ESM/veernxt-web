@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "6spjwx4"
+      "id": "6spjwx4",
+      "content": "• Policyholder – Person who owns an insurance policy."
     },
     {
       "type": "statStrip",
@@ -77,7 +78,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yy543iz"
+      "id": "yy543iz",
+      "content": "• Premium – Amount paid for insurance coverage."
     },
     {
       "type": "examAlert",
@@ -90,11 +92,13 @@
     },
     {
       "type": "paragraph",
-      "id": "yqder4m"
+      "id": "yqder4m",
+      "content": "• Sum Assured – Guaranteed amount paid on claim."
     },
     {
       "type": "paragraph",
-      "id": "doe4mpp"
+      "id": "doe4mpp",
+      "content": "• Reinsurance – Insurance taken by insurers to reduce risk."
     }
   ],
   "enriched": true

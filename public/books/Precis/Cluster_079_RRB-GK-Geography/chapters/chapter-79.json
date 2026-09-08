@@ -1,0 +1,146 @@
+{
+  "title": "9. Comparison of Rock Types",
+  "order": 79,
+  "blocks": [
+    {
+      "id": "chsseb9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Igneous</strong></p>",
+            "<p><strong>Sedimentary</strong></p>",
+            "<p><strong>Metamorphic</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Formation</p>",
+            "<p>Cooling magma</p>",
+            "<p>Sediment deposition</p>",
+            "<p>Heat &amp; pressure</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fossils</p>",
+            "<p>Absent</p>",
+            "<p>Present</p>",
+            "<p>Rare</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Structure</p>",
+            "<p>Massive</p>",
+            "<p>Layered</p>",
+            "<p>Recrystallized</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Hardness</p>",
+            "<p>Hard</p>",
+            "<p>Soft to moderate</p>",
+            "<p>Very hard</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Igneous rocks are called primary rocks because all other rock types are ultimately derived from them.",
+      "id": "ht09rzo"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Igneous Rocks",
+        "Sedimentary Rocks",
+        "Metamorphic Rocks"
+      ],
+      "rows": [
+        [
+          "Formation Process",
+          "Cooling and crystallization of magma or lava",
+          "Weathering, erosion, deposition, and lithification",
+          "Recrystallization driven by intense heat and pressure"
+        ],
+        [
+          "Fossil Content",
+          "Absent (destroyed by heat)",
+          "Present (preserved between strata)",
+          "Rare or absent (distorted/destroyed by metamorphism)"
+        ],
+        [
+          "Structure & Texture",
+          "Crystalline, non-stratified, massive",
+          "Stratified (layered), clastic or non-clastic",
+          "Foliated, banded, or recrystallized granular"
+        ],
+        [
+          "Key Examples",
+          "Granite, Basalt, Gabbro, Pumice",
+          "Sandstone, Limestone, Shale, Conglomerate",
+          "Gneiss, Slate, Marble, Quartzite"
+        ]
+      ],
+      "id": "zplfyng"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Rock Types",
+          "value": "3",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Rocks",
+          "value": "Igneous",
+          "icon": "check"
+        },
+        {
+          "label": "Surface Coverage",
+          "value": "75%",
+          "icon": "info"
+        },
+        {
+          "label": "Key Drivers",
+          "value": "Heat & Pressure",
+          "icon": "clock"
+        }
+      ],
+      "id": "ul1xykh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Fossils are strictly found in Sedimentary rocks; Igneous and Metamorphic rocks do not preserve organic remains.",
+        "Remember parent-to-metamorphic pairs: Limestone becomes Marble, Sandstone becomes Quartzite, Shale becomes Slate, and Granite becomes Gneiss.",
+        "The Deccan Traps of India are composed of Basalt, an extrusive igneous rock formed by fissure lava eruptions."
+      ],
+      "id": "3rrnkqx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks are formed by the cooling and solidification of molten magma or lava and lack organic fossils.",
+        "Sedimentary rocks are formed through the lithification of accumulated sediments and frequently contain fossils within strata.",
+        "Metamorphic rocks develop from pre-existing rocks undergoing structural and mineralogical changes due to severe heat and dynamic pressure.",
+        "Extrusive igneous rocks cool rapidly on the Earth's surface creating fine-grained textures, whereas intrusive igneous rocks cool slowly underground forming coarse grains.",
+        "Metamorphism alters rock texture and composition, producing foliated structures like gneiss or non-foliated structures like quartzite."
+      ],
+      "id": "cmscci8"
+    }
+  ],
+  "enriched": true
+}

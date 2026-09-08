@@ -1,0 +1,130 @@
+{
+  "title": "Composition of NGT (VERY FREQUENTLY ASKED)",
+  "order": 385,
+  "blocks": [
+    {
+      "id": "z95kx01",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>Retired Supreme Court Judge or Chief Justice of a High Court</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Judicial Members</p>",
+            "<p>Serving or retired High Court Judges</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Expert Members</p>",
+            "<p>Experts in environmental science, forestry, biodiversity, or related fields</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Selection Committee</p>",
+            "<p>Headed by a Supreme Court judge</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Chairperson of the National Green Tribunal is appointed by the Central Government in consultation with the Chief Justice of India.",
+      "id": "6j57upr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Position",
+        "Appointment Process",
+        "Eligibility Criteria",
+        "Re-appointment Eligibility"
+      ],
+      "rows": [
+        [
+          "Chairperson",
+          "Central Govt in consultation with Chief Justice of India",
+          "Retired/Serving Judge of Supreme Court or Chief Justice of a High Court",
+          "Not Eligible"
+        ],
+        [
+          "Judicial Members",
+          "Central Govt via Selection Committee recommendation",
+          "Retired/Serving Judge of a High Court",
+          "Not Eligible"
+        ],
+        [
+          "Expert Members",
+          "Central Govt via Selection Committee recommendation",
+          "Master of Science/Doctorate with minimum 15 years experience in relevant environmental field",
+          "Not Eligible"
+        ]
+      ],
+      "id": "eir9ge4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Establishment Act",
+          "value": "NGT Act 2010",
+          "icon": "book"
+        },
+        {
+          "label": "Full-Time Members",
+          "value": "10 to 20 Members",
+          "icon": "info"
+        },
+        {
+          "label": "Term of Office",
+          "value": "5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Re-appointment",
+          "value": "Not Eligible",
+          "icon": "check"
+        }
+      ],
+      "id": "f2t9xru"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NGT members hold office for a term of 5 years and are NOT eligible for re-appointment (frequently tested in UPSC/State PSC prelims).",
+        "The minimum number of full-time Judicial and Expert members is 10, and the maximum is 20.",
+        "The Chairperson is appointed in consultation with the CJI, whereas Judicial and Expert members are chosen via a Selection Committee."
+      ],
+      "id": "ffhpt23"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The National Green Tribunal (NGT) comprises a Chairperson, full-time Judicial Members, and Expert Members.",
+        "The Chairperson is appointed by the Central Government in consultation with the Chief Justice of India (CJI).",
+        "The Tribunal must consist of a minimum of 10 and a maximum of 20 full-time Judicial and Expert Members.",
+        "Judicial and Expert Members are appointed by the Central Government based on the recommendation of a Selection Committee.",
+        "Members hold office for a fixed term of 5 years and are strictly not eligible for re-appointment."
+      ],
+      "id": "wo2gikf"
+    }
+  ],
+  "enriched": true
+}

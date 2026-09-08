@@ -49,27 +49,36 @@
     },
     {
       "type": "paragraph",
-      "id": "i5g7y8f"
+      "id": "i5g7y8f",
+      "content": "Energy is defined as the capacity of a body to do work. Without energy, no activity in the universe is possible."
+    },
+    {
+      "id": "h6pe9kd",
+      "type": "image",
+      "imageId": "oofg0q6",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_oofg0q6.png"
     },
     {
       "type": "paragraph",
-      "id": "x6o4l4f"
+      "id": "x6o4l4f",
+      "content": "Every action in our daily life requires energy, such as:"
     },
     {
       "id": "fpazbr6",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Walking</li><li>Running</li><li>Cooking food</li><li>Driving vehicles</li><li>Using electrical appliances</li></ul>",
+        "Walking",
+        "Running",
+        "Cooking food",
+        "Driving vehicles",
+        "Using electrical appliances"
       ]
     },
     {
       "type": "paragraph",
-      "id": "y9yf02x"
+      "id": "y9yf02x",
+      "content": "Energy exists in different forms and can be converted from one form to another."
     },
     {
       "id": "ngxzbon",
@@ -79,28 +88,32 @@
     },
     {
       "type": "paragraph",
-      "id": "o10at1p"
+      "id": "o10at1p",
+      "content": "The SI unit of energy is Joule (J)."
     },
     {
       "type": "paragraph",
-      "id": "oqapi1g"
+      "id": "oqapi1g",
+      "content": "1 Joule is defined as the amount of energy required to move a body through a distance of 1 metre when a force of 1 Newton is applied."
     },
     {
       "type": "paragraph",
-      "id": "fibcdzz"
+      "id": "fibcdzz",
+      "content": "Other important units of energy:"
     },
     {
       "id": "9whr7af",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "<ul><li>Calorie</li><li>Kilowatt-hour (kWh)</li></ul>",
+        "Calorie",
+        "Kilowatt-hour (kWh)"
       ]
     },
     {
       "type": "paragraph",
-      "id": "g1evw48"
+      "id": "g1evw48",
+      "content": "Commercial unit of electrical energy = kilowatt-hour (kWh)"
     },
     {
       "id": "q11bsxw",
@@ -110,24 +123,26 @@
     },
     {
       "type": "paragraph",
-      "id": "dtak1fk"
+      "id": "dtak1fk",
+      "content": "Energy exists in many forms. Some important forms are:"
     },
     {
       "id": "5oddbq2",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Mechanical Energy</li><li>Heat Energy</li><li>Light Energy</li><li>Electrical Energy</li><li>Chemical Energy</li><li>Nuclear Energy</li></ul>",
+        "Mechanical Energy",
+        "Heat Energy",
+        "Light Energy",
+        "Electrical Energy",
+        "Chemical Energy",
+        "Nuclear Energy"
       ]
     },
     {
       "type": "paragraph",
-      "id": "mwu79sq"
+      "id": "mwu79sq",
+      "content": "Among these, mechanical energy is the most important in physics."
     },
     {
       "id": "16jcvpj",
@@ -137,14 +152,15 @@
     },
     {
       "type": "paragraph",
-      "id": "jqpx4rv"
+      "id": "jqpx4rv",
+      "content": "Mechanical energy is the energy possessed by an object due to its motion or position. Mechanical energy is of two types:"
     },
     {
       "id": "gg7uuth",
       "type": "numberedList",
       "items": [
-        null,
-        null
+        "Kinetic Energy",
+        "Potential Energy"
       ]
     },
     {
@@ -155,49 +171,56 @@
     },
     {
       "type": "paragraph",
-      "id": "r3q3lux"
+      "id": "r3q3lux",
+      "content": "Kinetic energy is the energy possessed by a body due to its motion. Formula:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "sza22z7"
+      "id": "sza22z7",
+      "content": "KE = ½ mv²"
     },
     {
       "type": "paragraph",
-      "id": "x1tvdy2"
+      "id": "x1tvdy2",
+      "content": "Where:"
     },
     {
       "type": "paragraph",
-      "id": "qq16cnq"
+      "id": "qq16cnq",
+      "content": "m = mass of the body"
     },
     {
       "type": "paragraph",
-      "id": "05gguci"
+      "id": "05gguci",
+      "content": "v = velocity of the body"
     },
     {
       "type": "paragraph",
-      "id": "lylhv62"
+      "id": "lylhv62",
+      "content": "Important points:"
     },
     {
       "id": "8el615c",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Greater the mass → greater the kinetic energy",
+        "Greater the velocity → greater the kinetic energy",
+        "If velocity doubles, kinetic energy becomes four times"
       ]
     },
     {
       "type": "paragraph",
-      "id": "z7zq4t5"
+      "id": "z7zq4t5",
+      "content": "Examples:"
     },
     {
       "id": "oibhzyj",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Moving car",
+        "Flowing river",
+        "Flying bird"
       ]
     },
     {
@@ -213,42 +236,49 @@
     },
     {
       "type": "paragraph",
-      "id": "blp6qyn"
+      "id": "blp6qyn",
+      "content": "Potential energy is the energy possessed by a body due to its position or shape. Formula:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2nvz85l"
+      "id": "2nvz85l",
+      "content": "PE = mgh"
     },
     {
       "type": "paragraph",
-      "id": "ll8hoep"
+      "id": "ll8hoep",
+      "content": "Where:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "s6atvup"
+      "id": "s6atvup",
+      "content": "m = mass"
     },
     {
       "type": "paragraph",
-      "id": "wh5a48y"
+      "id": "wh5a48y",
+      "content": "g = acceleration due to gravity"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "246gkvn"
+      "id": "246gkvn",
+      "content": "h = height"
     },
     {
       "type": "paragraph",
-      "id": "xnx73tl"
+      "id": "xnx73tl",
+      "content": "Examples:"
     },
     {
       "id": "pzrvim9",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Water stored in a dam",
+        "Raised hammer QCOMPARE",
+        "Stretched spring"
       ]
     },
     {
@@ -259,16 +289,17 @@
     },
     {
       "type": "paragraph",
-      "id": "dhcrb3y"
+      "id": "dhcrb3y",
+      "content": "When an object falls from a height:"
     },
     {
       "id": "twach5c",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>At top → Maximum Potential Energy, Zero Kinetic Energy</li><li>During fall → Potential energy converts into kinetic energy</li><li>At ground → Maximum Kinetic Energy, Minimum Potential Energy Total energy remains constant.</li></ul>",
+        "At top → Maximum Potential Energy, Zero Kinetic Energy",
+        "During fall → Potential energy converts into kinetic energy",
+        "At ground → Maximum Kinetic Energy, Minimum Potential Energy Total energy remains constant."
       ]
     },
     {
@@ -279,15 +310,18 @@
     },
     {
       "type": "paragraph",
-      "id": "vhtopm0"
+      "id": "vhtopm0",
+      "content": "According to the law of conservation of energy: "
     },
     {
       "type": "paragraph",
-      "id": "e9pm6qt"
+      "id": "e9pm6qt",
+      "content": "Energy can neither be created nor destroyed."
     },
     {
       "type": "paragraph",
-      "id": "jo4l4mm"
+      "id": "jo4l4mm",
+      "content": "It can only be transformed from one form to another."
     },
     {
       "type": "comparisonTable",
@@ -317,15 +351,18 @@
     },
     {
       "type": "paragraph",
-      "id": "cpxkwxh"
+      "id": "cpxkwxh",
+      "content": "Example:"
     },
     {
       "type": "paragraph",
-      "id": "i2ebywc"
+      "id": "i2ebywc",
+      "content": "In an electric bulb:"
     },
     {
       "type": "paragraph",
-      "id": "krydkbl"
+      "id": "krydkbl",
+      "content": "Electrical energy → Heat energy + Light energy"
     },
     {
       "id": "p2nl5v7",
@@ -335,15 +372,18 @@
     },
     {
       "type": "paragraph",
-      "id": "g0v02rl"
+      "id": "g0v02rl",
+      "content": "Electrical energy consumed in homes is measured in kilowatt-hour (kWh). 1 unit = 1 kWh"
     },
     {
       "type": "paragraph",
-      "id": "rymk7vx"
+      "id": "rymk7vx",
+      "content": "1 kWh = 3.6 × 10⁶ Joules"
     },
     {
       "type": "paragraph",
-      "id": "rzmsdfx"
+      "id": "rzmsdfx",
+      "content": "Electricity bill is calculated on the basis of kWh."
     },
     {
       "id": "bps6e9k",
@@ -353,14 +393,15 @@
     },
     {
       "type": "paragraph",
-      "id": "4br9dsg"
+      "id": "4br9dsg",
+      "content": "Sources of energy are divided into two types:"
     },
     {
       "id": "mpvxigx",
       "type": "numberedList",
       "items": [
-        null,
-        null
+        "Renewable Sources of Energy",
+        "Non-Renewable Sources of Energy"
       ]
     },
     {
@@ -371,31 +412,33 @@
     },
     {
       "type": "paragraph",
-      "id": "cvk7ndx"
+      "id": "cvk7ndx",
+      "content": "Renewable sources are those which can be used again and again. Examples:"
     },
     {
       "id": "27wpima",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Solar energy</li><li>Wind energy</li><li>Hydroelectric energy</li><li>Biogas</li></ul>",
+        "Solar energy",
+        "Wind energy",
+        "Hydroelectric energy",
+        "Biogas"
       ]
     },
     {
       "type": "paragraph",
-      "id": "igms2wh"
+      "id": "igms2wh",
+      "content": "Advantages:"
     },
     {
       "id": "52cww26",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Eco-friendly</li><li>Inexhaustible</li><li>Less pollution</li></ul>",
+        "Eco-friendly",
+        "Inexhaustible",
+        "Less pollution"
       ]
     },
     {
@@ -406,31 +449,33 @@
     },
     {
       "type": "paragraph",
-      "id": "bxswaw9"
+      "id": "bxswaw9",
+      "content": "Non-renewable sources are limited in quantity. Examples:"
     },
     {
       "id": "40sm972",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Coal</li><li>Petroleum</li><li>Natural gas</li><li>Nuclear fuel</li></ul>",
+        "Coal",
+        "Petroleum",
+        "Natural gas",
+        "Nuclear fuel"
       ]
     },
     {
       "type": "paragraph",
-      "id": "ei12wif"
+      "id": "ei12wif",
+      "content": "Disadvantages:"
     },
     {
       "id": "k5ioi3o",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Limited supply</li><li>Cause pollution</li><li>Lead to global warming</li></ul>",
+        "Limited supply",
+        "Cause pollution",
+        "Lead to global warming"
       ]
     },
     {
@@ -450,18 +495,19 @@
     },
     {
       "type": "paragraph",
-      "id": "irh6iw4"
+      "id": "irh6iw4",
+      "content": "A good source of energy should:"
     },
     {
       "id": "11onqm7",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Be easily available</li><li>Be economical</li><li>Have high energy output</li><li>Be easy to store and transport</li><li>Cause minimum pollution</li></ul>",
+        "Be easily available",
+        "Be economical",
+        "Have high energy output",
+        "Be easy to store and transport",
+        "Cause minimum pollution"
       ]
     },
     {
@@ -472,27 +518,33 @@
     },
     {
       "type": "paragraph",
-      "id": "829nply"
+      "id": "829nply",
+      "content": "Q1. SI unit of energy? Ans: Joule"
     },
     {
       "type": "paragraph",
-      "id": "prq1erj"
+      "id": "prq1erj",
+      "content": "Q2. Formula of kinetic energy? Ans: ½ mv²"
     },
     {
       "type": "paragraph",
-      "id": "c54pxp0"
+      "id": "c54pxp0",
+      "content": "Q3. Commercial unit of electricity? Ans: kWh"
     },
     {
       "type": "paragraph",
-      "id": "0lsquc2"
+      "id": "0lsquc2",
+      "content": "Q4. Energy stored in dam? Ans: Potential energy"
     },
     {
       "type": "paragraph",
-      "id": "31wap1o"
+      "id": "31wap1o",
+      "content": "Q5. Law of conservation of energy states?"
     },
     {
       "type": "paragraph",
-      "id": "1zr9iiy"
+      "id": "1zr9iiy",
+      "content": "Ans: Energy can neither be created nor destroyed"
     },
     {
       "id": "j6idgcp",
@@ -504,13 +556,13 @@
       "id": "5q356ht",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Energy is capacity to do work</li><li>SI unit = Joule</li><li>KE = ½ mv²</li><li>PE = mgh</li><li>Energy is conserved</li><li>1 unit = 1 kWh</li></ul>",
+        "Energy is capacity to do work",
+        "SI unit = Joule",
+        "KE = ½ mv²",
+        "PE = mgh",
+        "Energy is conserved",
+        "1 unit = 1 kWh"
       ]
     }
   ],

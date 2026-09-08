@@ -1,0 +1,168 @@
+{
+  "title": "Untitled Chapter",
+  "order": 135,
+  "blocks": [
+    {
+      "id": "n4wht4m",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Hydraulic Action</p>",
+            "<p>Force of water removes materials.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Abrasion</p>",
+            "<p>Sediments grind against river bed.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Attrition</p>",
+            "<p>Particles collide and become smaller.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Solution (Corrosion)</p>",
+            "<p>Soluble minerals dissolve in water.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Traction",
+          "value": "Large Boulders",
+          "icon": "book"
+        },
+        {
+          "label": "Saltation",
+          "value": "Small Pebbles",
+          "icon": "check"
+        },
+        {
+          "label": "Suspension",
+          "value": "Fine Particles",
+          "icon": "info"
+        },
+        {
+          "label": "Solution",
+          "value": "Dissolved Load",
+          "icon": "award"
+        }
+      ],
+      "id": "7wtiz3a"
+    },
+    {
+      "id": "j6ae0ji",
+      "type": "heading",
+      "level": 2,
+      "content": "Transportation by Rivers"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Traction is the transportation process involving the rolling of large boulders along the riverbed.",
+        "Saltation involves small pebbles bouncing along the riverbed.",
+        "Suspension carries light, fine particles directly suspended within the water flow.",
+        "Solution transports dissolved materials and chemical load in the river water.",
+        "Deposition takes place when the velocity of the river decreases, leading to the settling of sediments."
+      ],
+      "id": "7tj1mn6"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Deposition occurs when river velocity decreases and sediments are laid down.",
+      "id": "xd80u6u"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Traction – rolling of large boulders.",
+      "id": "gse34ld"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Transportation Type",
+        "Mechanism",
+        "Particle/Sediment Type"
+      ],
+      "rows": [
+        [
+          "Traction",
+          "Rolling",
+          "Large boulders"
+        ],
+        [
+          "Saltation",
+          "Bouncing",
+          "Small pebbles"
+        ],
+        [
+          "Suspension",
+          "Carried in water",
+          "Fine particles"
+        ],
+        [
+          "Solution",
+          "Dissolved",
+          "Dissolved load"
+        ]
+      ],
+      "id": "b0u9l82"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Saltation – bouncing of small pebbles.",
+      "id": "m6ifhfz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Suspension – fine particles carried in water.",
+      "id": "b1g4w14"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Solution – dissolved load.",
+      "id": "p7dgt52"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Match the sediment type to its river transport mechanism: Boulders (Traction), Pebbles (Saltation), Fine particles (Suspension), and Dissolved load (Solution).",
+        "Key trigger for deposition: A decrease in river velocity causes sediments to settle.",
+        "Questions frequently differentiate between Traction (rolling) and Saltation (bouncing)."
+      ],
+      "id": "6den8pb"
+    },
+    {
+      "id": "r1xqetk",
+      "type": "heading",
+      "level": 2,
+      "content": "Deposition"
+    },
+    {
+      "type": "paragraph",
+      "content": "Deposition occurs when river velocity decreases and sediments are laid down.",
+      "id": "wmvbz82"
+    }
+  ],
+  "enriched": true
+}

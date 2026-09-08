@@ -1,0 +1,73 @@
+{
+  "title": "Local Time",
+  "order": 39,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Local time is determined by the position of the Sun at a particular longitude. Places east experience sunrise earlier than places west.",
+      "id": "7qk8cfh"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Local time is determined by the position of the Sun at a particular longitude.",
+      "id": "uivgcf9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Direction",
+        "Sunrise Experience"
+      ],
+      "rows": [
+        [
+          "Places East",
+          "Experience sunrise earlier"
+        ],
+        [
+          "Places West",
+          "Experience sunrise later"
+        ]
+      ],
+      "id": "p1gatuy"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Determining Factor",
+          "value": "Sun's Position",
+          "icon": "info"
+        },
+        {
+          "label": "Spatial Basis",
+          "value": "Longitude",
+          "icon": "book"
+        },
+        {
+          "label": "Earlier Sunrise",
+          "value": "Eastern Region",
+          "icon": "clock"
+        }
+      ],
+      "id": "0546ewo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that local time varies continuously with changes in longitude.",
+        "Exam questions frequently test the concept that places in the East gain time relative to places in the West."
+      ],
+      "id": "yedzb8e"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Local time is directly determined by the position of the Sun at a specific longitude.",
+        "Geographical regions located further east experience sunrise earlier than regions to the west."
+      ],
+      "id": "o47h3ld"
+    }
+  ],
+  "enriched": true
+}

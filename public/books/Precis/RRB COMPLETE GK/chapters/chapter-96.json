@@ -10,33 +10,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Scale</strong></p>",
+            "<p><strong>Measures</strong></p>",
+            "<p><strong>Important Feature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Richter Scale</p>",
+            "<p>Magnitude</p>",
+            "<p>Logarithmic; each unit increases amplitude by 10 times.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Moment Magnitude</p>",
+            "<p>Total energy</p>",
+            "<p>Most reliable modern scale.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mercalli Scale</p>",
+            "<p>Intensity</p>",
+            "<p>Based on damage and human observation.</p>"
           ]
         }
       ]
@@ -126,7 +126,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zfe6ns8"
+      "id": "zfe6ns8",
+      "content": "Each increase of one magnitude corresponds to approximately 32 times more energy release."
     }
   ],
   "enriched": true

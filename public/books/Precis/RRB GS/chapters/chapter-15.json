@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dr09t3b"
+      "id": "dr09t3b",
+      "content": "Vitamins and minerals are essential micronutrients required in small quantities for proper growth, metabolism and body functions. They do not provide energy but regulate various biochemical reactions."
     },
     {
       "id": "0o6s4ol",
@@ -65,7 +66,8 @@
     },
     {
       "type": "paragraph",
-      "id": "t5oxg1v"
+      "id": "t5oxg1v",
+      "content": "Vitamins are classified into Fat-soluble and Water-soluble vitamins based on their solubility."
     },
     {
       "id": "y61oph8",
@@ -74,22 +76,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Vitamins Included</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fat-Soluble</p>",
+            "<p>Vitamin A, D, E, K</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Water-Soluble</p>",
+            "<p>Vitamin B-complex and Vitamin C</p>"
           ]
         }
       ]
@@ -107,56 +109,56 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Vitamin</strong></p>",
+            "<p><strong>Chemical Name</strong></p>",
+            "<p><strong>Main Source</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Deficiency</strong></p>",
+            "<p><strong>Overdose Effect</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>A</p>",
+            "<p>Retinol</p>",
+            "<p>Carrot, Milk</p>",
+            "<p>Vision</p>",
+            "<p>Night blindness</p>",
+            "<p>Liver damage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>D</p>",
+            "<p>Calciferol</p>",
+            "<p>Sunlight, Fish</p>",
+            "<p>Bone formation</p>",
+            "<p>Rickets</p>",
+            "<p>Kidney damage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>E</p>",
+            "<p>Tocopherol</p>",
+            "<p>Vegetable oil</p>",
+            "<p>Antioxidant</p>",
+            "<p>Muscle weakness</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>K</p>",
+            "<p>Phylloquinone</p>",
+            "<p>Green leafy veg</p>",
+            "<p>Blood clotting</p>",
+            "<p>Bleeding</p>",
+            "<p>Clotting issues</p>"
           ]
         }
       ]
@@ -174,74 +176,75 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Vitamin</strong></p>",
+            "<p><strong>Chemical Name</strong></p>",
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Deficiency</strong></p>",
+            "<p><strong>Overdose Effect</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B1</p>",
+            "<p>Thiamine</p>",
+            "<p>Cereals</p>",
+            "<p>Energy metabolism</p>",
+            "<p>Beriberi</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B2</p>",
+            "<p>Riboflavin</p>",
+            "<p>Milk</p>",
+            "<p>Cell growth</p>",
+            "<p>Cheilosis</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B3</p>",
+            "<p>Niacin</p>",
+            "<p>Meat</p>",
+            "<p>Metabolism</p>",
+            "<p>Pellagra</p>",
+            "<p>Skin flush</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B12</p>",
+            "<p>Cobalamin</p>",
+            "<p>Animal food</p>",
+            "<p>RBC formation</p>",
+            "<p>Anaemia</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>C</p>",
+            "<p>Ascorbic acid</p>",
+            "<p>Citrus fruits</p>",
+            "<p>Immunity</p>",
+            "<p>Scurvy</p>",
+            "<p>Kidney stones</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "22bn9fr"
+      "id": "22bn9fr",
+      "content": "Minerals are inorganic substances required for structural components and physiological functions of the body."
     },
     {
       "type": "pullQuote",
@@ -261,71 +264,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Mineral</strong></p>",
+            "<p><strong>Main Source</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Deficiency</strong></p>",
+            "<p><strong>Excess Effect</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Calcium</p>",
+            "<p>Milk</p>",
+            "<p>Bone formation</p>",
+            "<p>Weak bones</p>",
+            "<p>Kidney stones</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Iron</p>",
+            "<p>Green veg</p>",
+            "<p>Haemoglobin</p>",
+            "<p>Anaemia</p>",
+            "<p>Toxicity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Iodine</p>",
+            "<p>Iodized salt</p>",
+            "<p>Thyroid hormone</p>",
+            "<p>Goitre</p>",
+            "<p>Thyroid issues</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Sodium</p>",
+            "<p>Salt</p>",
+            "<p>Fluid balance</p>",
+            "<p>Muscle cramps</p>",
+            "<p>High BP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Potassium</p>",
+            "<p>Banana</p>",
+            "<p>Nerve impulse</p>",
+            "<p>Weakness</p>",
+            "<p>Heart issues</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Zinc</p>",
+            "<p>Nuts</p>",
+            "<p>Immunity</p>",
+            "<p>Poor healing</p>",
+            "<p>Nausea</p>"
           ]
         }
       ]
@@ -338,15 +341,18 @@
     },
     {
       "type": "paragraph",
-      "id": "2o2jywi"
+      "id": "2o2jywi",
+      "content": "1. Fat-soluble vitamins (A, D, E, K) are stored in liver and adipose tissue."
     },
     {
       "type": "paragraph",
-      "id": "pg6wxko"
+      "id": "pg6wxko",
+      "content": "2. Water-soluble vitamins (B-complex, C) are generally not stored and excess is excreted in urine."
     },
     {
       "type": "paragraph",
-      "id": "1c0y4zl"
+      "id": "1c0y4zl",
+      "content": "3. Vitamin B12 absorption requires intrinsic factor secreted by stomach."
     },
     {
       "type": "comparisonTable",
@@ -381,23 +387,28 @@
     },
     {
       "type": "paragraph",
-      "id": "fdwv177"
+      "id": "fdwv177",
+      "content": "4. Vitamin K is essential for synthesis of prothrombin in blood clotting."
     },
     {
       "type": "paragraph",
-      "id": "86mbbsr"
+      "id": "86mbbsr",
+      "content": "5. Pellagra (Niacin deficiency) is characterized by 3 D's – Dermatitis, Diarrhea, Dementia."
     },
     {
       "type": "paragraph",
-      "id": "pwkm5ku"
+      "id": "pwkm5ku",
+      "content": "6. Rickets occurs in children; Osteomalacia occurs in adults (Vitamin D deficiency)."
     },
     {
       "type": "paragraph",
-      "id": "70dv24e"
+      "id": "70dv24e",
+      "content": "7. Hypervitaminosis mainly occurs with fat-soluble vitamins."
     },
     {
       "type": "paragraph",
-      "id": "pnihkpz"
+      "id": "pnihkpz",
+      "content": "8. Vitamin C enhances iron absorption in intestine."
     },
     {
       "id": "ylrh98a",
@@ -412,169 +423,169 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Vitamin</strong></p>",
+            "<p><strong>Chemical Name</strong></p>",
+            "<p><strong>Solubility</strong></p>",
+            "<p><strong>Major Source</strong></p>",
+            "<p><strong>Main Function</strong></p>",
+            "<p><strong>Deficiency Disease</strong></p>",
+            "<p><strong>Overdose Effect</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>A</p>",
+            "<p>Retinol</p>",
+            "<p>Fat</p>",
+            "<p>Carrot, Milk</p>",
+            "<p>Vision</p>",
+            "<p>Night Blindness</p>",
+            "<p>Liver damage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>D</p>",
+            "<p>Calciferol</p>",
+            "<p>Fat</p>",
+            "<p>Sunlight, Fish</p>",
+            "<p>Bone formation</p>",
+            "<p>Rickets</p>",
+            "<p>Kidney damage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>E</p>",
+            "<p>Tocopherol</p>",
+            "<p>Fat</p>",
+            "<p>Vegetable oil</p>",
+            "<p>Antioxidant</p>",
+            "<p>Muscle weakness</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>K</p>",
+            "<p>Phylloquinone</p>",
+            "<p>Fat</p>",
+            "<p>Green leafy veg</p>",
+            "<p>Blood clotting</p>",
+            "<p>Bleeding</p>",
+            "<p>Clot risk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B1</p>",
+            "<p>Thiamine</p>",
+            "<p>Water</p>",
+            "<p>Cereals</p>",
+            "<p>Energy metabolism</p>",
+            "<p>Beriberi</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B2</p>",
+            "<p>Riboflavin</p>",
+            "<p>Water</p>",
+            "<p>Milk</p>",
+            "<p>Cell growth</p>",
+            "<p>Cheilosis</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B3</p>",
+            "<p>Niacin</p>",
+            "<p>Water</p>",
+            "<p>Meat</p>",
+            "<p>Metabolism</p>",
+            "<p>Pellagra</p>",
+            "<p>Skin flush</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B5</p>",
+            "<p>Pantothenic acid</p>",
+            "<p>Water</p>",
+            "<p>Whole grains</p>",
+            "<p>Metabolism</p>",
+            "<p>Rare</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B6</p>",
+            "<p>Pyridoxine</p>",
+            "<p>Water</p>",
+            "<p>Banana</p>",
+            "<p>Protein metabolism</p>",
+            "<p>Dermatitis</p>",
+            "<p>Nerve damage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B7</p>",
+            "<p>Biotin</p>",
+            "<p>Water</p>",
+            "<p>Egg yolk</p>",
+            "<p>Fat metabolism</p>",
+            "<p>Hair loss</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B9</p>",
+            "<p>Folic acid</p>",
+            "<p>Water</p>",
+            "<p>Green veg</p>",
+            "<p>DNA synthesis</p>",
+            "<p>Anaemia</p>",
+            "<p>Masks B12 deficiency</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>B12</p>",
+            "<p>Cobalamin</p>",
+            "<p>Water</p>",
+            "<p>Animal food</p>",
+            "<p>RBC formation</p>",
+            "<p>Pernicious anaemia</p>",
+            "<p>Rare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>C</p>",
+            "<p>Ascorbic acid</p>",
+            "<p>Water</p>",
+            "<p>Citrus fruits</p>",
+            "<p>Immunity</p>",
+            "<p>Scurvy</p>",
+            "<p>Kidney stones</p>"
           ]
         }
       ]
@@ -597,27 +608,33 @@
     },
     {
       "type": "paragraph",
-      "id": "tio3qyb"
+      "id": "tio3qyb",
+      "content": "1. Fat-soluble vitamins are stored in the liver."
     },
     {
       "type": "paragraph",
-      "id": "1jyvl6u"
+      "id": "1jyvl6u",
+      "content": "2. Water-soluble vitamins are not stored in large amounts."
     },
     {
       "type": "paragraph",
-      "id": "r0mtjpl"
+      "id": "r0mtjpl",
+      "content": "3. Vitamin D is known as the Sunshine Vitamin."
     },
     {
       "type": "paragraph",
-      "id": "3lb3s0u"
+      "id": "3lb3s0u",
+      "content": "4. Vitamin C deficiency causes scurvy."
     },
     {
       "type": "paragraph",
-      "id": "y69842i"
+      "id": "y69842i",
+      "content": "5. Iron deficiency leads to anaemia."
     },
     {
       "type": "paragraph",
-      "id": "q3v5x21"
+      "id": "q3v5x21",
+      "content": "6. Iodine deficiency causes goitre."
     }
   ],
   "enriched": true

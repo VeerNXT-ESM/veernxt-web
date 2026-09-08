@@ -10,43 +10,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Established (Interim)</p>",
+            "<p>2003</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Statutory Status</p>",
+            "<p>2013</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Act</p>",
+            "<p>PFRDA Act, 2013</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Type</p>",
+            "<p>Statutory Regulatory Body</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Headquarters</p>",
+            "<p>New Delhi</p>"
           ]
         }
       ]
@@ -131,7 +131,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qlvmj1d"
+      "id": "qlvmj1d",
+      "content": "PFRDA was initially set up by a government resolution in 2003 and later granted statutory status through the PFRDA Act, 2013."
     }
   ],
   "enriched": true

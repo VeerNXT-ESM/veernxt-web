@@ -1,0 +1,121 @@
+{
+  "title": "11. Important Terms",
+  "order": 124,
+  "blocks": [
+    {
+      "id": "irgfjag",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Magma</p>",
+            "<p>Molten rock beneath surface.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lava</p>",
+            "<p>Molten rock after eruption.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pyroclastic flow</p>",
+            "<p>Hot mixture of gas and debris.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lahar</p>",
+            "<p>Volcanic mudflow.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Understanding key terminology is essential for mastering Indian Polity and Governance concepts in competitive examinations.",
+      "id": "90uhqkg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Term",
+        "Key Distinction"
+      ],
+      "rows": [
+        [
+          "Adjournment",
+          "Terminates a sitting only; done by the Presiding Officer of the House."
+        ],
+        [
+          "Prorogation",
+          "Terminates a sitting as well as a session; done by the President/Governor."
+        ],
+        [
+          "Dissolution",
+          "Ends the existing life of the House (Lok Sabha/Vidhan Sabha); fresh elections required."
+        ]
+      ],
+      "id": "co2f9r9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Terms",
+          "value": "Key Definitions",
+          "icon": "book"
+        },
+        {
+          "label": "Quorum Requirement",
+          "value": "1/10th Strength",
+          "icon": "check"
+        },
+        {
+          "label": "Ordinance Validity",
+          "value": "6 Weeks / 6 Months",
+          "icon": "clock"
+        },
+        {
+          "label": "Exam Importance",
+          "value": "High Weightage",
+          "icon": "award"
+        }
+      ],
+      "id": "88xjwrz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct questions are frequently asked on the difference between Adjournment, Adjournment Sine Die, Prorogation, and Dissolution.",
+        "Zero Hour is unique to the Indian Parliamentary System and is not explicitly defined in the official Rule Book.",
+        "Article 123 empowers the President to issue Ordinances, while Article 213 empowers Governors."
+      ],
+      "id": "zkt064q"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Quorum refers to the minimum number of members required to be present to conduct a meeting of the House (1/10th of total members).",
+        "Zero Hour is an Indian parliamentary innovation not mentioned in the Rules of Procedure, starting immediately after the Question Hour.",
+        "Prorogation terminates both the sitting and a session of the House, unlike Adjournment which only terminates a sitting.",
+        "Ordinances promulgated by the President under Article 123 must be approved by Parliament within 6 weeks from its reassembly."
+      ],
+      "id": "0rhd3gf"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,92 @@
+{
+  "title": "4. Movement of Glaciers",
+  "order": 147,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Plastic Flow – internal deformation under pressure.",
+      "id": "387usyd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Movement Mechanisms",
+          "value": "2 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Internal Process",
+          "value": "Plastic Flow",
+          "icon": "info"
+        },
+        {
+          "label": "Bedrock Process",
+          "value": "Basal Slip",
+          "icon": "check"
+        },
+        {
+          "label": "Fastest Flow Zone",
+          "value": "Center",
+          "icon": "award"
+        }
+      ],
+      "id": "01iehrl"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Flow velocity varies (center faster than sides).",
+      "id": "ovdoxyz"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Mechanism",
+        "Location / Action",
+        "Driving / Aiding Factor"
+      ],
+      "rows": [
+        [
+          "Plastic Flow",
+          "Internal deformation",
+          "Pressure"
+        ],
+        [
+          "Basal Slip",
+          "Sliding over bedrock",
+          "Meltwater"
+        ]
+      ],
+      "id": "kk55pv2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Plastic Flow refers to the internal deformation of glacier ice occurring under pressure.",
+        "Basal Slip involves the physical sliding of a glacier over bedrock, assisted by meltwater.",
+        "Glacial flow velocity is non-uniform across the body, moving faster at the center than at the sides."
+      ],
+      "id": "0o0dlud"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Plastic Flow (internal pressure deformation) and Basal Slip (bedrock sliding aided by meltwater).",
+        "Note for spatial questions: Glacial velocity is higher at the center than at the edges due to friction against side walls."
+      ],
+      "id": "ec81179"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Basal Slip – sliding over bedrock aided by meltwater.",
+      "id": "bng1d1m"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Flow velocity varies (center faster than sides).",
+      "id": "g3t3d4p"
+    }
+  ],
+  "enriched": true
+}

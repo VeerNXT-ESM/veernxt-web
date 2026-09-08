@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3j19s2o"
+      "id": "3j19s2o",
+      "content": "An Operating System (OS) is system software that manages computer hardware, software resources, and provides services for computer programs. It acts as an intermediary between users and hardware."
     },
     {
       "id": "xgtn9vm",
@@ -61,12 +62,12 @@
       "id": "x6acciv",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Process Management — create, schedule, synchronise, terminate processes",
+        "Memory Management — allocate/deallocate memory; virtual memory; paging; segmentation",
+        "File System Management — organise, store, retrieve, protect files and directories",
+        "Device Management — manage I/O devices through device drivers; interrupt handling",
+        "Security and Protection — user authentication; access control; isolation between processes",
+        "Networking — manage network protocols, sockets, communication"
       ]
     },
     {
@@ -76,65 +77,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>OS Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Batch OS</p>",
+            "<p>Jobs collected and processed without user interaction; high throughput</p>",
+            "<p>Early IBM systems, Payroll processing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Time-Sharing OS</p>",
+            "<p>Multiple users share CPU time; quick response; context switching</p>",
+            "<p>Unix, Linux, Windows Server</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Real-Time OS (RTOS)</p>",
+            "<p>Strict timing constraints; deterministic; hard/soft real-time</p>",
+            "<p>VxWorks, FreeRTOS, embedded systems, medical devices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Distributed OS</p>",
+            "<p>Multiple computers work as single system; transparent to user</p>",
+            "<p>Amoeba, Plan 9, cloud OS platforms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Network OS</p>",
+            "<p>Manages resources on a network; file/print sharing</p>",
+            "<p>Windows Server, Novell NetWare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mobile OS</p>",
+            "<p>Designed for mobile devices; touch interface; power-efficient</p>",
+            "<p>Android, iOS, HarmonyOS</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Embedded OS</p>",
+            "<p>Designed for specific hardware; resource-constrained</p>",
+            "<p>RTOS variants, Linux for routers, Arduino OS</p>"
           ]
         }
       ]
@@ -158,65 +159,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Thread</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Definition</p>",
+            "<p>Program in execution; independent</p>",
+            "<p>Lightweight unit within process; shares process resources</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Memory</p>",
+            "<p>Own memory space (code, data, heap, stack)</p>",
+            "<p>Shares code, data, heap; own stack and registers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Creation overhead</p>",
+            "<p>High (fork/exec system calls)</p>",
+            "<p>Low (thread creation much faster)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Communication</p>",
+            "<p>IPC (pipes, sockets, shared memory)</p>",
+            "<p>Direct through shared memory within process</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Context switch</p>",
+            "<p>Expensive</p>",
+            "<p>Cheaper (less state to save)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Crash impact</p>",
+            "<p>Does not affect other processes</p>",
+            "<p>Can crash entire process</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example</p>",
+            "<p>Chrome: each tab is a process</p>",
+            "<p>Web server: each request is a thread</p>"
           ]
         }
       ]
@@ -231,17 +232,12 @@
       "id": "9uf6h5d",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "New: process being created",
+        "Ready: waiting to be assigned CPU",
+        "Running: currently executing on CPU",
+        "Waiting/Blocked: waiting for I/O or event",
+        "Terminated: process has finished execution"
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Critical Section Problem",
-      "id": "vdzjmvd"
     },
     {
       "id": "ebvr26f",
@@ -256,81 +252,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Algorithm</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Preemptive?</strong></p>",
+            "<p><strong>Key Metric</strong></p>",
+            "<p><strong>Limitation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>FCFS (First Come First Served)</p>",
+            "<p>Non-preemptive</p>",
+            "<p>No</p>",
+            "<p>Simple; no starvation</p>",
+            "<p>Convoy effect; poor avg waiting time</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>SJF (Shortest Job First)</p>",
+            "<p>Non-preemptive</p>",
+            "<p>No</p>",
+            "<p>Optimal avg waiting time</p>",
+            "<p>Requires knowing burst time in advance; starvation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>SRTF (Shortest Remaining Time First)</p>",
+            "<p>Preemptive SJF</p>",
+            "<p>Yes</p>",
+            "<p>Optimal preemptive</p>",
+            "<p>Starvation of long jobs; overhead</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Round Robin (RR)</p>",
+            "<p>Preemptive</p>",
+            "<p>Yes</p>",
+            "<p>Fair; time quantum q</p>",
+            "<p>High context switch overhead if q too small</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Priority Scheduling</p>",
+            "<p>Both versions</p>",
+            "<p>Both</p>",
+            "<p>Urgent tasks run first</p>",
+            "<p>Starvation of low-priority; aging solution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Multilevel Queue</p>",
+            "<p>Non-preemptive</p>",
+            "<p>Varies</p>",
+            "<p>System/interactive/batch separation</p>",
+            "<p>Rigid; inter-queue starvation possible</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Multilevel Feedback Queue</p>",
+            "<p>Preemptive</p>",
+            "<p>Yes</p>",
+            "<p>Adaptive; most practical OS use this</p>",
+            "<p>Most complex to configure</p>"
           ]
         }
       ]
@@ -349,7 +345,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8ogqz5x"
+      "id": "8ogqz5x",
+      "content": "A critical section is a code segment that accesses shared resources and must not be executed by more than one process simultaneously. Requirements for a solution: Mutual Exclusion, Progress, Bounded Waiting."
     },
     {
       "id": "16l69rj",
@@ -395,65 +392,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Mechanism</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Example Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mutex (Mutual Exclusion Lock)</p>",
+            "<p>Binary lock; only owner can release; prevents concurrent access</p>",
+            "<p>Protecting a shared variable or data structure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Semaphore</p>",
+            "<p>Integer variable; P (wait/down) and V (signal/up) operations</p>",
+            "<p>Producer-consumer, reader-writer, dining philosophers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Binary Semaphore</p>",
+            "<p>Semaphore with value 0 or 1; equivalent to mutex</p>",
+            "<p>Simple mutual exclusion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Counting Semaphore</p>",
+            "<p>Value can be any non-negative integer</p>",
+            "<p>Managing finite pool of resources (e.g., connection pool)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Monitor</p>",
+            "<p>High-level synchronisation; encapsulates shared data + procedures</p>",
+            "<p>Java synchronized methods, condition variables</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Spinlock</p>",
+            "<p>Busy-waiting lock; process loops until lock available</p>",
+            "<p>Short critical sections in multiprocessor systems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Condition Variable</p>",
+            "<p>Allows thread to wait until condition holds; used with mutex</p>",
+            "<p>Producer-consumer with empty/full conditions</p>"
           ]
         }
       ]
@@ -466,7 +463,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5ihcbyu"
+      "id": "5ihcbyu",
+      "content": "Deadlock is a situation where a set of processes are permanently blocked, each waiting for a resource held by another process in the set."
     },
     {
       "id": "td27a18",
@@ -475,48 +473,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Coffman Condition</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Prevention Strategy</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mutual Exclusion</p>",
+            "<p>Resource held by exactly one process at a time</p>",
+            "<p>Make resources shareable (not always possible)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hold and Wait</p>",
+            "<p>Process holds resources while waiting for more</p>",
+            "<p>Request all resources at once (pre-allocation)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>No Preemption</p>",
+            "<p>Resources cannot be forcibly taken; must be voluntarily released</p>",
+            "<p>Allow preemption (take resources away if needed)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Circular Wait</p>",
+            "<p>Circular chain of processes waiting for each other</p>",
+            "<p>Impose total ordering of resource types; always request in order</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "hheiq4p"
+      "id": "hheiq4p",
+      "content": "<strong>Note: </strong><em>All 4 Coffman conditions must hold simultaneously for deadlock to occur. Breaking any one prevents deadlock. Banker's Algorithm is used for deadlock avoidance.</em>"
     },
     {
       "id": "lmb4in9",
@@ -531,78 +530,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Contiguous Allocation</p>",
+            "<p>Process gets one block of memory; external fragmentation issue</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Paging</p>",
+            "<p>Fixed-size pages (process) mapped to frames (physical memory); eliminates external fragmentation; page table needed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Segmentation</p>",
+            "<p>Variable-size segments (logical view — code, data, stack); external fragmentation possible</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Virtual Memory</p>",
+            "<p>Allows execution of processes not completely in RAM; enables larger address space than physical RAM</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Demand Paging</p>",
+            "<p>Pages loaded only when needed; page fault triggers loading from disk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Page Replacement Algorithms</p>",
+            "<p>FIFO, Optimal, LRU, LRU Approximation (Clock/Second Chance), LFU</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thrashing</p>",
+            "<p>Excessive paging; process spends more time swapping pages than executing; caused by too many processes in memory</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Translation Lookaside Buffer (TLB)</p>",
+            "<p>Fast cache for page table entries; reduces memory access time; associative memory</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Internal Fragmentation</p>",
+            "<p>Wasted space inside allocated block (paging)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>External Fragmentation</p>",
+            "<p>Free memory scattered in small pieces; can't satisfy large request (contiguous)</p>"
           ]
         }
       ]
@@ -630,55 +629,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Algorithm</strong></p>",
+            "<p><strong>Strategy</strong></p>",
+            "<p><strong>Belady's Anomaly?</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>FIFO</p>",
+            "<p>Replace page that has been in memory longest</p>",
+            "<p>Yes (more frames can increase faults)</p>",
+            "<p>Simple; poor performance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Optimal (OPT)</p>",
+            "<p>Replace page that won't be used for longest time</p>",
+            "<p>No</p>",
+            "<p>Impossible in practice; used as benchmark</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>LRU</p>",
+            "<p>Replace least recently used page</p>",
+            "<p>No</p>",
+            "<p>Good performance; costly implementation; stack/counter based</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Clock (Second Chance)</p>",
+            "<p>FIFO + reference bit; give second chance if recently used</p>",
+            "<p>Yes</p>",
+            "<p>Practical approximation of LRU; used in Linux</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>LFU</p>",
+            "<p>Replace least frequently used page</p>",
+            "<p>No</p>",
+            "<p>Requires frequency counters; aging technique used</p>"
           ]
         }
       ]
@@ -696,71 +695,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>File System</strong></p>",
+            "<p><strong>OS</strong></p>",
+            "<p><strong>Max File Size</strong></p>",
+            "<p><strong>Max Volume Size</strong></p>",
+            "<p><strong>Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>FAT32</p>",
+            "<p>Windows (old)</p>",
+            "<p>4 GB</p>",
+            "<p>2 TB</p>",
+            "<p>Simple; widely compatible; no journaling</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>NTFS</p>",
+            "<p>Windows</p>",
+            "<p>16 TB</p>",
+            "<p>256 TB</p>",
+            "<p>Journaling; permissions; encryption; compression</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>ext4</p>",
+            "<p>Linux</p>",
+            "<p>16 TB</p>",
+            "<p>1 EB</p>",
+            "<p>Journaling; extents; backward compatible with ext2/3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>APFS</p>",
+            "<p>macOS/iOS</p>",
+            "<p>8 EB</p>",
+            "<p>8 EB</p>",
+            "<p>Copy-on-write; snapshots; encryption; SSD-optimised</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>ZFS</p>",
+            "<p>Solaris/BSD/Linux</p>",
+            "<p>256 TB</p>",
+            "<p>256 ZB</p>",
+            "<p>Copy-on-write; checksums; RAID; self-healing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>HDFS</p>",
+            "<p>Hadoop (distributed)</p>",
+            "<p>Petabytes</p>",
+            "<p>Exabytes</p>",
+            "<p>Write-once-read-many; block size 128 MB; NameNode + DataNode</p>"
           ]
         }
       ]
@@ -778,57 +777,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disk Scheduling Algo</strong></p>",
+            "<p><strong>Strategy</strong></p>",
+            "<p><strong>Advantage</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>FCFS</p>",
+            "<p>Service requests in order of arrival</p>",
+            "<p>Fair; simple; high seek time with random requests</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SSTF (Shortest Seek Time First)</p>",
+            "<p>Service nearest track first</p>",
+            "<p>Reduces average seek time; starvation possible</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SCAN (Elevator)</p>",
+            "<p>Move arm in one direction servicing all; reverse</p>",
+            "<p>Good throughput; no starvation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>C-SCAN (Circular SCAN)</p>",
+            "<p>Move in one direction; return to start without servicing</p>",
+            "<p>More uniform wait time than SCAN</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>LOOK</p>",
+            "<p>Like SCAN but reverses at last request (not end of disk)</p>",
+            "<p>More efficient than SCAN</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>C-LOOK</p>",
+            "<p>Like C-SCAN but uses LOOK strategy</p>",
+            "<p>Most practical; used in modern disks</p>"
           ]
         }
       ]

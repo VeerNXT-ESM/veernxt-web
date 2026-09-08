@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "15xnl84"
+      "id": "15xnl84",
+      "content": "Primary Effects:"
     },
     {
       "type": "statStrip",
@@ -47,7 +48,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "eqy0qoi"
+      "id": "eqy0qoi",
+      "content": "• Ground shaking"
     },
     {
       "type": "pullQuote",
@@ -57,11 +59,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "iij228o"
+      "id": "iij228o",
+      "content": "• Surface rupture"
     },
     {
       "type": "paragraph",
-      "id": "3ysmbjt"
+      "id": "3ysmbjt",
+      "content": "Secondary Effects:"
     },
     {
       "type": "comparisonTable",
@@ -97,17 +101,20 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "aw1lfdi"
+      "id": "aw1lfdi",
+      "content": "• Tsunamis"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3dng2tl"
+      "id": "3dng2tl",
+      "content": "• Landslides"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "p09ix5j"
+      "id": "p09ix5j",
+      "content": "• Liquefaction"
     },
     {
       "type": "examAlert",
@@ -121,12 +128,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "dqaovuc"
+      "id": "dqaovuc",
+      "content": "• Fires"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g461kpe"
+      "id": "g461kpe",
+      "content": "• Dam failures"
     }
   ],
   "enriched": true

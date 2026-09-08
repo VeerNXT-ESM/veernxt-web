@@ -1,0 +1,77 @@
+{
+  "title": "11. Inquiry Wing and Prosecution Wing",
+  "order": 300,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Lokpal has its own:<br/>• Inquiry Wing – conducts preliminary inquiries.<br/>• Prosecution Wing – initiates prosecution in special courts.",
+      "id": "uxkoxh9"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Inquiry Wing – conducts preliminary inquiries.",
+      "id": "kf79b8e"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Wing",
+        "Primary Mandate",
+        "Key Area of Operation"
+      ],
+      "rows": [
+        [
+          "Inquiry Wing",
+          "Conducts preliminary inquiries",
+          "Initial investigation stage"
+        ],
+        [
+          "Prosecution Wing",
+          "Initiates prosecution",
+          "Special Courts"
+        ]
+      ],
+      "id": "095za6w"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Parent Authority",
+          "value": "Lokpal",
+          "icon": "award"
+        },
+        {
+          "label": "Inquiry Wing Role",
+          "value": "Preliminary Inquiries",
+          "icon": "info"
+        },
+        {
+          "label": "Prosecution Wing Role",
+          "value": "Special Courts",
+          "icon": "check"
+        }
+      ],
+      "id": "bhgq62t"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Note that the Inquiry Wing handles preliminary inquiries, not final trials.",
+        "The Prosecution Wing files cases directly in Special Courts, a frequent subject of statement-based questions."
+      ],
+      "id": "43pgf2d"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Lokpal is equipped with its own dedicated Inquiry Wing and Prosecution Wing.",
+        "The Inquiry Wing is responsible for conducting preliminary inquiries into complaints.",
+        "The Prosecution Wing initiates legal proceedings and prosecution specifically in special courts."
+      ],
+      "id": "zicnz1o"
+    }
+  ],
+  "enriched": true
+}

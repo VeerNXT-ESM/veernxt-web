@@ -1,0 +1,90 @@
+{
+  "title": "3. Election of the President (Article 54)",
+  "order": 64,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The President is elected indirectly by an Electoral College consisting of:<br/>• Elected members of both Houses of Parliament<br/>• Elected members of State Legislative Assemblies<br/>• Elected members of Legislative Assemblies of Delhi and Puducherry<br/><br/>Nominated members do NOT participate in the election.<br/>Voting System:<br/>• Proportional Representation<br/>• Single Transferable Vote<br/>• Secret Ballot",
+      "id": "c4hcgaz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Nominated members do NOT participate in the election.",
+      "id": "e09n7kg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category of Members",
+        "Electoral College Participation Status"
+      ],
+      "rows": [
+        [
+          "Elected Members of Parliament (Lok Sabha & Rajya Sabha)",
+          "Participate"
+        ],
+        [
+          "Elected Members of State Legislative Assemblies",
+          "Participate"
+        ],
+        [
+          "Elected Members of Legislative Assemblies of Delhi and Puducherry",
+          "Participate"
+        ],
+        [
+          "Nominated Members of Parliament & Legislative Assemblies",
+          "Do NOT Participate"
+        ]
+      ],
+      "id": "z2pz5j9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 54",
+          "icon": "book"
+        },
+        {
+          "label": "Election Mode",
+          "value": "Indirect",
+          "icon": "check"
+        },
+        {
+          "label": "Voting System",
+          "value": "Secret Ballot",
+          "icon": "info"
+        },
+        {
+          "label": "Eligible UTs",
+          "value": "Delhi & Puducherry",
+          "icon": "award"
+        }
+      ],
+      "id": "jxy888k"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Nominated members of Parliament and State Assemblies do NOT participate in the Presidential election.",
+        "Only the elected members of Legislative Assemblies of Delhi and Puducherry are included among Union Territories.",
+        "The voting mechanism strictly uses Proportional Representation with a Single Transferable Vote and Secret Ballot."
+      ],
+      "id": "kuywbot"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The President of India is elected indirectly by an Electoral College under Article 54.",
+        "The Electoral College comprises elected members of both Houses of Parliament and State Legislative Assemblies.",
+        "Elected members of the Legislative Assemblies of Delhi and Puducherry are included in the Electoral College.",
+        "Nominated members from any house or assembly are excluded from participating in the election.",
+        "The voting system follows Proportional Representation by means of a Single Transferable Vote through a Secret Ballot."
+      ],
+      "id": "ell7mpf"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,73 @@
+{
+  "title": "15. Mayor and Municipal Governance",
+  "order": 171,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Mayor is the head of a Municipal Corporation.<br/>• Municipal Commissioner is the administrative head.",
+      "id": "j3l9am3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Mayor is the head of a Municipal Corporation.",
+      "id": "ksdtd7d"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Position",
+        "Governance Role"
+      ],
+      "rows": [
+        [
+          "Mayor",
+          "Head of Municipal Corporation"
+        ],
+        [
+          "Municipal Commissioner",
+          "Administrative Head"
+        ]
+      ],
+      "id": "9i2lgml"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Corporation Head",
+          "value": "Mayor",
+          "icon": "award"
+        },
+        {
+          "label": "Administrative Head",
+          "value": "Municipal Commissioner",
+          "icon": "check"
+        },
+        {
+          "label": "Governing Body",
+          "value": "Municipal Corporation",
+          "icon": "info"
+        }
+      ],
+      "id": "bre3a2l"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish clearly between the Mayor (head of the corporation) and the Municipal Commissioner (administrative head).",
+        "Questions often ask for the administrative head of a Municipal Corporation, which is the Municipal Commissioner."
+      ],
+      "id": "n83kfw7"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Mayor serves as the head of the Municipal Corporation.",
+        "The Municipal Commissioner holds the role of the administrative head."
+      ],
+      "id": "wy4gxz8"
+    }
+  ],
+  "enriched": true
+}

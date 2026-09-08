@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wb03e1l"
+      "id": "wb03e1l",
+      "content": "Madhya Pradesh has the highest Scheduled Tribe (ST) population in India in absolute numbers. Tribal communities constitute approximately 21% of the state's total population. The tribal belt is concentrated primarily in eastern, central-southern, and western parts of the state. The state has 46 Scheduled Tribes, of which several are Particularly Vulnerable Tribal Groups (PVTGs)."
     },
     {
       "type": "pullQuote",
@@ -68,89 +69,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Tribe</strong></p>",
+            "<p><strong>Major Districts</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gond</p>",
+            "<p>Mandla, Dindori, Chhindwara, Seoni, Balaghat</p>",
+            "<p>Largest tribe in MP; Gond Paintings; Kachhi Ghodi dance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bhil</p>",
+            "<p>Jhabua, Alirajpur, Barwani, Dhar, Ratlam</p>",
+            "<p>Archery tradition, Bhagoria Haat festival</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Baiga</p>",
+            "<p>Mandla, Dindori, Umaria, Kabir Dham</p>",
+            "<p>PVTG; Bewar (shifting) cultivation; Gotul system</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Korku</p>",
+            "<p>Betul, Chhindwara, Khandwa, Harda</p>",
+            "<p>Melghat region, Satpura hills</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sahariya</p>",
+            "<p>Sheopur, Gwalior, Shivpuri</p>",
+            "<p>PVTG; forest dwellers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kol</p>",
+            "<p>Rewa, Satna, Shahdol, Anuppur</p>",
+            "<p>Eastern highlands</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Agaria</p>",
+            "<p>Mandla, Dindori</p>",
+            "<p>Iron smelters; PVTG</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Halba</p>",
+            "<p>Balaghat, Seoni</p>",
+            "<p>South-eastern MP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bhilala</p>",
+            "<p>Jhabua, Alirajpur, Barwani, Dhar</p>",
+            "<p>Sub-group of Bhil</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pando</p>",
+            "<p>Shahdol, Anuppur</p>",
+            "<p>PVTG; eastern highlands</p>"
           ]
         }
       ]
@@ -163,18 +164,19 @@
     },
     {
       "type": "paragraph",
-      "id": "8rw9t8y"
+      "id": "8rw9t8y",
+      "content": "Madhya Pradesh has several Particularly Vulnerable Tribal Groups (PVTGs) - formerly called Primitive Tribal Groups. These communities are considered especially vulnerable due to their declining or stagnant population, pre-agricultural technology, and critical economic situation."
     },
     {
       "id": "y90vvfz",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Baiga - Mandla, Dindori, Umaria (shifting cultivation practitioners called Bewar)",
+        "Sahariya - Sheopur, Gwalior, Shivpuri",
+        "Birhor - Shahdol, Sidhi (nomadic, basket makers)",
+        "Abujhmaria - Southern MP border area (Dindori)",
+        "Kamar - Border districts",
+        "Agaria - Mandla, Dindori (iron smelters, considered sacred craftsmen)"
       ]
     },
     {
@@ -196,12 +198,12 @@
       "id": "4hkakbs",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Bhagoria Haat (Bhil/Bhilala) - Marriage market festival of Jhabua, Alirajpur; celebrated in Phalgun month before Holi",
+        "Hareli (Gond) - First festival of year, sowing of seeds",
+        "Karma Festival - Worship of Karma tree for good harvest",
+        "Nagpanchami - Worship of snakes",
+        "Goncha Festival - Gond festival of Bastar region",
+        "Madai Festival - Tribal fair held in various parts of eastern MP"
       ]
     }
   ],

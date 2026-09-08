@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "n0j4e3k"
+      "id": "n0j4e3k",
+      "content": "Cyclones and anticyclones are large-scale atmospheric circulation systems formed due to horizontal pressure differences. They are the most powerful weather-producing mechanisms in the troposphere and play a critical role in global heat redistribution. A cyclone is a low-pressure system with converging and rising air, whereas an anticyclone is a high-pressure system with diverging and descending air."
     },
     {
       "type": "statStrip",
@@ -53,23 +54,28 @@
     },
     {
       "type": "paragraph",
-      "id": "gwgmj3f"
+      "id": "gwgmj3f",
+      "content": "• Formed around a center of low atmospheric pressure."
     },
     {
       "type": "paragraph",
-      "id": "l7c1pyb"
+      "id": "l7c1pyb",
+      "content": "• Air converges at surface and rises vertically."
     },
     {
       "type": "paragraph",
-      "id": "f81k6xp"
+      "id": "f81k6xp",
+      "content": "• Latent heat released during condensation strengthens the system."
     },
     {
       "type": "paragraph",
-      "id": "0bwnzzq"
+      "id": "0bwnzzq",
+      "content": "• Rotation due to Coriolis force: Counterclockwise (NH), Clockwise (SH)."
     },
     {
       "type": "paragraph",
-      "id": "u4h0qy5"
+      "id": "u4h0qy5",
+      "content": "• Strong pressure gradient causes high wind speeds."
     },
     {
       "id": "smzr990",
@@ -79,23 +85,28 @@
     },
     {
       "type": "paragraph",
-      "id": "tacrjgx"
+      "id": "tacrjgx",
+      "content": "• Pressure Gradient Force – pulls air toward low pressure."
     },
     {
       "type": "paragraph",
-      "id": "o3ie7bp"
+      "id": "o3ie7bp",
+      "content": "• Coriolis Force – deflects moving air."
     },
     {
       "type": "paragraph",
-      "id": "kqmjqvg"
+      "id": "kqmjqvg",
+      "content": "• Centrifugal Force – balances inward pull in curved motion."
     },
     {
       "type": "paragraph",
-      "id": "ctgo7ll"
+      "id": "ctgo7ll",
+      "content": "• Friction – slows wind near surface."
     },
     {
       "type": "paragraph",
-      "id": "gce4m7t"
+      "id": "gce4m7t",
+      "content": "Balance of these forces creates gradient wind circulation."
     },
     {
       "id": "ya5przl",
@@ -105,19 +116,23 @@
     },
     {
       "type": "paragraph",
-      "id": "chnbfqj"
+      "id": "chnbfqj",
+      "content": "• Eye – 10–50 km wide calm center with lowest pressure."
     },
     {
       "type": "paragraph",
-      "id": "i952703"
+      "id": "i952703",
+      "content": "• Eyewall – Most destructive zone with highest wind speed and intense rainfall."
     },
     {
       "type": "paragraph",
-      "id": "shvhkcy"
+      "id": "shvhkcy",
+      "content": "• Spiral Rainbands – Bands of thunderstorms extending outward."
     },
     {
       "type": "paragraph",
-      "id": "1t6aq2e"
+      "id": "1t6aq2e",
+      "content": "• Outflow – Diverging air at upper troposphere."
     },
     {
       "id": "y82gsh7",
@@ -127,15 +142,18 @@
     },
     {
       "type": "paragraph",
-      "id": "vt5zcf9"
+      "id": "vt5zcf9",
+      "content": "• Formation (Tropical Disturbance)."
     },
     {
       "type": "paragraph",
-      "id": "zmocb43"
+      "id": "zmocb43",
+      "content": "• Intensification (Tropical Depression → Storm → Cyclone)."
     },
     {
       "type": "paragraph",
-      "id": "rysm8b5"
+      "id": "rysm8b5",
+      "content": "• Mature Stage (Well-developed eye)."
     },
     {
       "type": "pullQuote",
@@ -144,7 +162,8 @@
     },
     {
       "type": "paragraph",
-      "id": "t14shqr"
+      "id": "t14shqr",
+      "content": "• Weakening after landfall due to loss of moisture."
     },
     {
       "id": "isglwvc",
@@ -154,27 +173,33 @@
     },
     {
       "type": "paragraph",
-      "id": "1xsvopy"
+      "id": "1xsvopy",
+      "content": "• Sea surface temperature above 26.5°C up to depth of 60m."
     },
     {
       "type": "paragraph",
-      "id": "ukw3o1t"
+      "id": "ukw3o1t",
+      "content": "• High humidity in mid-troposphere."
     },
     {
       "type": "paragraph",
-      "id": "x1lkx4a"
+      "id": "x1lkx4a",
+      "content": "• Low vertical wind shear."
     },
     {
       "type": "paragraph",
-      "id": "m5t9x78"
+      "id": "m5t9x78",
+      "content": "• Sufficient Coriolis force (minimum 5° latitude)."
     },
     {
       "type": "paragraph",
-      "id": "vxn7l1c"
+      "id": "vxn7l1c",
+      "content": "• Pre-existing low-pressure disturbance."
     },
     {
       "type": "paragraph",
-      "id": "fvdw0sn"
+      "id": "fvdw0sn",
+      "content": "• Upper-level divergence."
     },
     {
       "id": "l7xngw2",
@@ -189,33 +214,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Energy Source</strong></p>",
+            "<p><strong>Key Feature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tropical Cyclone</p>",
+            "<p>Latent heat from warm ocean</p>",
+            "<p>No fronts; circular structure.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Temperate Cyclone</p>",
+            "<p>Temperature contrast</p>",
+            "<p>Frontal system; comma shape.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Polar Cyclone</p>",
+            "<p>Cold-core instability</p>",
+            "<p>Short-lived; limited strength.</p>"
           ]
         }
       ]
@@ -269,65 +294,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Tropical</strong></p>",
+            "<p><strong>Temperate</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Latitude</p>",
+            "<p>5°–20°</p>",
+            "<p>30°–60°</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Energy Source</p>",
+            "<p>Warm water</p>",
+            "<p>Air mass contrast</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fronts</p>",
+            "<p>Absent</p>",
+            "<p>Present</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wind Speed</p>",
+            "<p>Very High</p>",
+            "<p>Moderate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Diameter</p>",
+            "<p>200–500 km</p>",
+            "<p>1000–3000 km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rainfall</p>",
+            "<p>Heavy convectional</p>",
+            "<p>Frontal rainfall</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Life Span</p>",
+            "<p>5–10 days</p>",
+            "<p>3–7 days</p>"
           ]
         }
       ]
@@ -340,23 +365,28 @@
     },
     {
       "type": "paragraph",
-      "id": "3kaauqk"
+      "id": "3kaauqk",
+      "content": "• Bay of Bengal is more cyclone-prone due to higher sea surface temperature."
     },
     {
       "type": "paragraph",
-      "id": "n8v1847"
+      "id": "n8v1847",
+      "content": "• Shallow continental shelf increases storm surge damage."
     },
     {
       "type": "paragraph",
-      "id": "izby3ap"
+      "id": "izby3ap",
+      "content": "• Arabian Sea cyclones increasing in frequency."
     },
     {
       "type": "paragraph",
-      "id": "bq6vtev"
+      "id": "bq6vtev",
+      "content": "• Two peak seasons: Pre-monsoon (Apr–Jun) and Post-monsoon (Oct–Dec)."
     },
     {
       "type": "paragraph",
-      "id": "0xoal6o"
+      "id": "0xoal6o",
+      "content": "• IMD classifies cyclones into Depression, Deep Depression, Cyclonic Storm, Severe Cyclonic Storm etc."
     },
     {
       "id": "5i9lauo",
@@ -366,7 +396,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mz7pgq4"
+      "id": "mz7pgq4",
+      "content": "Hurricanes (Atlantic), Typhoons (Pacific), Cyclones (Indian Ocean). Names are assigned by WMO regional panels."
     },
     {
       "id": "r2393wz",
@@ -376,23 +407,28 @@
     },
     {
       "type": "paragraph",
-      "id": "k1d0mbt"
+      "id": "k1d0mbt",
+      "content": "• High-pressure center with descending air."
     },
     {
       "type": "paragraph",
-      "id": "jdwm3s4"
+      "id": "jdwm3s4",
+      "content": "• Divergence at surface."
     },
     {
       "type": "paragraph",
-      "id": "eilfrnj"
+      "id": "eilfrnj",
+      "content": "• Clockwise rotation in NH."
     },
     {
       "type": "paragraph",
-      "id": "mp0zj8f"
+      "id": "mp0zj8f",
+      "content": "• Associated with clear skies and stable weather."
     },
     {
       "type": "paragraph",
-      "id": "3vv9f87"
+      "id": "3vv9f87",
+      "content": "• Winter anticyclones can cause cold waves."
     },
     {
       "type": "examAlert",
@@ -417,57 +453,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Cyclone</strong></p>",
+            "<p><strong>Anticyclone</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pressure</p>",
+            "<p>Low</p>",
+            "<p>High</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Air Motion</p>",
+            "<p>Rising</p>",
+            "<p>Sinking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Clouds</p>",
+            "<p>Dense cloud cover</p>",
+            "<p>Clear skies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rainfall</p>",
+            "<p>Heavy rainfall</p>",
+            "<p>Dry weather</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wind Direction</p>",
+            "<p>Inward</p>",
+            "<p>Outward</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Weather Stability</p>",
+            "<p>Unstable</p>",
+            "<p>Stable</p>"
           ]
         }
       ]
@@ -480,23 +516,28 @@
     },
     {
       "type": "paragraph",
-      "id": "zmk5gwz"
+      "id": "zmk5gwz",
+      "content": "• Storm Surge – Abnormal rise of sea level due to cyclone winds and pressure drop."
     },
     {
       "type": "paragraph",
-      "id": "9zf34mb"
+      "id": "9zf34mb",
+      "content": "• Fujiwhara Effect – Two cyclones rotate around each other."
     },
     {
       "type": "paragraph",
-      "id": "7f1qnws"
+      "id": "7f1qnws",
+      "content": "• Rapid Intensification – Wind speed increases by 55 km/h in 24 hours."
     },
     {
       "type": "paragraph",
-      "id": "z6pt3om"
+      "id": "z6pt3om",
+      "content": "• Occlusion – Occurs in temperate cyclones when cold front overtakes warm front."
     },
     {
       "type": "paragraph",
-      "id": "2abvin7"
+      "id": "2abvin7",
+      "content": "• Climate change may increase intensity though not necessarily frequency."
     },
     {
       "id": "i5ligs1",
@@ -506,7 +547,8 @@
     },
     {
       "type": "paragraph",
-      "id": "oqcmwen"
+      "id": "oqcmwen",
+      "content": "• Cyclones are low-pressure systems with converging winds.<br></br>• Tropical cyclones require warm ocean water.<br></br>• Eye is calm but eyewall is most destructive.<br></br>• Coriolis force is essential for rotation.<br></br>• Temperate cyclones form along fronts.<br></br>• Anticyclones bring stable weather."
     }
   ],
   "enriched": true

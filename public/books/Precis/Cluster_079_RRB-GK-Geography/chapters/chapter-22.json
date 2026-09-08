@@ -1,0 +1,119 @@
+{
+  "title": "Coriolis Effect",
+  "order": 22,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Coriolis force is an apparent force caused by Earth's rotation that deflects moving objects such as winds and ocean currents.",
+      "id": "2cwb9ej"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equator Force",
+          "value": "ZERO",
+          "icon": "info"
+        },
+        {
+          "label": "Polar Force",
+          "value": "Maximum",
+          "icon": "award"
+        },
+        {
+          "label": "Northern Deflection",
+          "value": "RIGHT",
+          "icon": "check"
+        },
+        {
+          "label": "Southern Deflection",
+          "value": "LEFT",
+          "icon": "check"
+        }
+      ],
+      "id": "qqgmhl1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Coriolis force is an apparent force resulting directly from Earth's rotation.",
+        "Objects like winds and ocean currents are deflected to the RIGHT in the Northern Hemisphere and to the LEFT in the Southern Hemisphere.",
+        "The force magnitude is ZERO at the Equator and reaches its Maximum at the poles.",
+        "Without the Coriolis effect, global wind systems and cyclones would fail to rotate."
+      ],
+      "id": "ayrg9c3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Coriolis force is an apparent force caused by Earth's rotation that deflects moving objects such as winds and ocean currents.",
+      "id": "a8i1zu1"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Deflection RIGHT in Northern Hemisphere.",
+      "id": "741785s"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Location / Region",
+        "Deflection Direction",
+        "Coriolis Force Magnitude"
+      ],
+      "rows": [
+        [
+          "Northern Hemisphere",
+          "RIGHT",
+          "Increases towards pole"
+        ],
+        [
+          "Southern Hemisphere",
+          "LEFT",
+          "Increases towards pole"
+        ],
+        [
+          "Equator",
+          "None",
+          "ZERO"
+        ],
+        [
+          "Poles",
+          "Maximum",
+          "Maximum"
+        ]
+      ],
+      "id": "5fqqy8f"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Deflection LEFT in Southern Hemisphere.",
+      "id": "bylzbuc"
+    },
+    {
+      "type": "paragraph",
+      "content": "• ZERO at the Equator.",
+      "id": "28kafz2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Deflection direction is frequently tested: RIGHT in the Northern Hemisphere and LEFT in the Southern Hemisphere.",
+        "Magnitude variation questions: Remember that Coriolis force is ZERO at the Equator and Maximum at the poles.",
+        "Cyclonic rotation depends on Coriolis force; cyclones cannot form at the Equator due to zero Coriolis force."
+      ],
+      "id": "rnjo5gu"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Maximum at poles.",
+      "id": "1yvs2so"
+    },
+    {
+      "type": "paragraph",
+      "content": "Without the Coriolis effect, global wind systems and cyclones would not rotate.",
+      "id": "4qhmmuq"
+    }
+  ],
+  "enriched": true
+}

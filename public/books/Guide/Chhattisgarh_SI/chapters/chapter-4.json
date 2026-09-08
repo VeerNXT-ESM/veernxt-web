@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9eqrm6o"
+      "id": "9eqrm6o",
+      "content": "Chhattisgarh follows the parliamentary system of governance as prescribed by the Constitution of India. The state has a unicameral legislature (Vidhan Sabha). The Governor is the constitutional head of the state, while the Chief Minister and the Council of Ministers exercise executive power."
     },
     {
       "id": "hpj7zqv",
@@ -57,64 +58,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Institution</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Legislature</p>",
+            "<p>Unicameral - Vidhan Sabha (90 seats)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Governor</p>",
+            "<p>Constitutional head; appointed by President of India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chief Minister</p>",
+            "<p>Head of government; leader of majority party</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>High Court</p>",
+            "<p>Chhattisgarh High Court, Bilaspur (established 1 Nov 2000)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lok Sabha Seats</p>",
+            "<p>11 seats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rajya Sabha Seats</p>",
+            "<p>5 seats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Capital</p>",
+            "<p>Raipur (Legislative/Administrative); Bilaspur (Judicial)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>New Capital</p>",
+            "<p>Nava Raipur (Atal Nagar) - under development</p>"
           ]
         }
       ]
@@ -127,7 +128,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0yncs7x"
+      "id": "0yncs7x",
+      "content": "The state is divided into 5 divisions, 33 districts, sub-divisions, tehsils, blocks, and village panchayats. The district collector (IAS officer) heads each district and is responsible for land administration, law and order, and implementation of government schemes."
     },
     {
       "id": "3q9xmqd",
@@ -136,26 +138,23 @@
       "content": "3.3 Panchayati Raj System"
     },
     {
-      "type": "pullQuote",
-      "content": "3.4 State Police Structure (Important for SI Exam)",
-      "id": "cliw4xf"
-    },
-    {
       "type": "paragraph",
-      "id": "79uveh2"
+      "id": "79uveh2",
+      "content": "Chhattisgarh has a three-tier Panchayati Raj system:"
     },
     {
       "id": "25qcupu",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Gram Panchayat (Village level)",
+        "Janpad Panchayat (Block level)",
+        "Zila Panchayat (District level)"
       ]
     },
     {
       "type": "paragraph",
-      "id": "y3gdd7g"
+      "id": "y3gdd7g",
+      "content": "The Panchayats Extension to Scheduled Areas (PESA) Act, 1996 is implemented in the 5th Schedule areas of Chhattisgarh, giving tribal panchayats special powers over natural resources, land, and traditional customs."
     },
     {
       "id": "lbn5ywi",
@@ -165,7 +164,8 @@
     },
     {
       "type": "paragraph",
-      "id": "nk0y4w9"
+      "id": "nk0y4w9",
+      "content": "The Chhattisgarh Police is headed by the Director General of Police (DGP). The state is divided into police ranges, each headed by an Inspector General of Police (IGP). Districts are headed by Superintendent of Police (SP). The hierarchy from bottom to top is: Constable → Head Constable → Assistant Sub-Inspector (ASI) → Sub-Inspector (SI) → Inspector → Deputy Superintendent of Police (DSP) → Additional Superintendent of Police (ASP) → Superintendent of Police (SP) → Senior Superintendent of Police (SSP) → Deputy Inspector General (DIG) → Inspector General (IG) → Additional Director General (ADG) → Director General of Police (DGP)."
     },
     {
       "id": "szszyif",
@@ -180,57 +180,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Force</strong></p>",
+            "<p><strong>Role/Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chhattisgarh Police (CG Police)</p>",
+            "<p>Regular state police force for law and order</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chhattisgarh Armed Force (CAF)</p>",
+            "<p>Armed wing of state police</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>District Reserve Guard (DRG)</p>",
+            "<p>Anti-Naxal force using surrendered Naxals and local tribals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Special Task Force (STF)</p>",
+            "<p>Special operations against Naxalism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bastar Fighters</p>",
+            "<p>Local tribal youth recruited to fight Naxalism in Bastar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Civil Defence</p>",
+            "<p>Disaster management and civil protection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Home Guards</p>",
+            "<p>Supplementary to police; voluntary force</p>"
           ]
         }
       ]
@@ -243,7 +243,8 @@
     },
     {
       "type": "paragraph",
-      "id": "pbvkn2o"
+      "id": "pbvkn2o",
+      "content": "Fifth Schedule of the Constitution covers the administration of Scheduled Areas in Chhattisgarh. The Tribes Advisory Council (TAC) is constituted under the Fifth Schedule to advise the Governor on matters concerning tribal welfare. Large parts of Chhattisgarh (especially Bastar division and parts of Surguja division) fall under the Fifth Schedule Area."
     },
     {
       "type": "examAlert",
@@ -267,46 +268,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>S.No.</strong></p>",
+            "<p><strong>Name</strong></p>",
+            "<p><strong>Party</strong></p>",
+            "<p><strong>Period</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>1</p>",
+            "<p>Ajit Jogi</p>",
+            "<p>INC</p>",
+            "<p>2000 - 2003</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>2</p>",
+            "<p>Dr. Raman Singh</p>",
+            "<p>BJP</p>",
+            "<p>2003 - 2018</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>3</p>",
+            "<p>Bhupesh Baghel</p>",
+            "<p>INC</p>",
+            "<p>2018 - 2023</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>4</p>",
+            "<p>Vishnu Deo Sai</p>",
+            "<p>BJP</p>",
+            "<p>2023 - Present</p>"
           ]
         }
       ]
@@ -324,71 +325,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Name</strong></p>",
+            "<p><strong>Period</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dinesh Nandan Sahay</p>",
+            "<p>2000 - 2003</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lt. Gen. Krishna Mohan Seth</p>",
+            "<p>2003 - 2007</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>E.S.L. Narasimhan</p>",
+            "<p>2007 - 2010</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Shekhar Dutt</p>",
+            "<p>2010 - 2014</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>V. K. Singh</p>",
+            "<p>2014 (brief)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Balram Ji Dass Tandon</p>",
+            "<p>2014 - 2018</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Anandiben Patel</p>",
+            "<p>2018 (brief)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Anusuiya Uikey</p>",
+            "<p>2019 - 2022</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Biswabhusan Harichandan</p>",
+            "<p>2022 - Present</p>"
           ]
         }
       ]

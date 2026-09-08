@@ -1,0 +1,122 @@
+{
+  "title": "2. Galaxies",
+  "order": 3,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A galaxy is a massive gravitational system consisting of billions of stars, gas, and dust.",
+      "id": "kih4w4k"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Star Count",
+          "value": "100–400 Billion",
+          "icon": "award"
+        },
+        {
+          "label": "Galaxy Diameter",
+          "value": "100,000 Light Years",
+          "icon": "info"
+        },
+        {
+          "label": "Sun's Location",
+          "value": "Orion Arm",
+          "icon": "check"
+        }
+      ],
+      "id": "7pemoax"
+    },
+    {
+      "id": "y60ryt9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Shape</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Spiral</p>",
+            "<p>Flat with rotating arms</p>",
+            "<p>Milky Way</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Elliptical</p>",
+            "<p>Oval-shaped</p>",
+            "<p>Older star systems</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Irregular</p>",
+            "<p>No fixed shape</p>",
+            "<p>Large Magellanic Cloud</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "A galaxy is a massive gravitational system consisting of billions of stars, gas, and dust.",
+      "id": "bl3oe27"
+    },
+    {
+      "id": "lcs2qlf",
+      "type": "heading",
+      "level": 2,
+      "content": "Milky Way Galaxy (VERY HIGH PROBABILITY)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A galaxy is a massive gravitational system consisting of billions of stars, gas, and dust.",
+        "Our Solar System is situated within the Milky Way galaxy, which appears as a glowing band in the night sky.",
+        "The Milky Way has an estimated diameter of about 100,000 light years and contains 100–400 billion stars.",
+        "The Sun is located specifically in the Orion Arm of the Milky Way."
+      ],
+      "id": "w2d5ogw"
+    },
+    {
+      "type": "paragraph",
+      "content": "Our Solar System lies in the Milky Way galaxy. It appears as a glowing band in the night sky.",
+      "id": "auwlmnc"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Contains 100–400 billion stars.",
+      "id": "uhdx2zf"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The specific location of the Sun within the Milky Way (Orion Arm) is frequently tested.",
+        "Memorize the diameter of the Milky Way galaxy: Approximately 100,000 light years.",
+        "Note the estimated number of stars in the Milky Way: 100–400 billion."
+      ],
+      "id": "ffhvr97"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Diameter: About 100,000 light years.",
+      "id": "xor6ewl"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Sun is located in the Orion Arm.",
+      "id": "kqg289w"
+    }
+  ],
+  "enriched": true
+}

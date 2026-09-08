@@ -1,0 +1,542 @@
+{
+  "title": "CHAPTER 5 : GRAVITATION",
+  "order": 5,
+  "blocks": [
+    {
+      "id": "cayhcul",
+      "type": "heading",
+      "level": 2,
+      "content": "INTRODUCTION TO GRAVITATION"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Gravitational force is a universal force acting between all objects with mass, calculated as F = G × (m₁m₂ / r²).",
+        "Acceleration due to gravity (g = 9.8 m/s²) decreases with both height and depth, and varies across latitudes.",
+        "Mass is the amount of matter in a body and remains constant everywhere, while Weight is the gravitational force acting on it (W = mg).",
+        "According to Archimedes' Principle, a body immersed in fluid experiences an upward buoyant force equal to the weight of the fluid displaced.",
+        "Floatation depends on density: objects float if their density is less than the liquid density and sink if greater."
+      ],
+      "id": "cpy83iv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Gravitational Constant (G)",
+          "value": "6.67 × 10⁻¹¹ N m²/kg²",
+          "icon": "info"
+        },
+        {
+          "label": "Value of g on Earth",
+          "value": "9.8 m/s²",
+          "icon": "check"
+        },
+        {
+          "label": "SI Unit of Pressure",
+          "value": "Pascal (Pa)",
+          "icon": "award"
+        },
+        {
+          "label": "Universal Law Discovered By",
+          "value": "Sir Isaac Newton",
+          "icon": "book"
+        }
+      ],
+      "id": "kk50t88"
+    },
+    {
+      "type": "paragraph",
+      "content": "Gravitation is the force by which every object in the universe attracts every other object. This force is responsible for:",
+      "id": "64u1o4n"
+    },
+    {
+      "id": "lzqfh4i",
+      "type": "list",
+      "items": [
+        "<ul><li>Falling of objects on Earth</li><li>Motion of planets around the Sun</li><li>Motion of moon around Earth</li><li>Formation of tides</li></ul>",
+        "Falling of objects on Earth",
+        "Motion of planets around the Sun",
+        "Motion of moon around Earth",
+        "Formation of tides"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "The force of gravitation is a universal force, which means it acts between all objects having mass.",
+      "id": "ql6l5eh"
+    },
+    {
+      "id": "uwfwa79",
+      "type": "heading",
+      "level": 2,
+      "content": "UNIVERSAL LAW OF GRAVITATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Universal Law of Gravitation was given by Sir Isaac Newton. According to this law:",
+      "id": "d69gotq"
+    },
+    {
+      "type": "paragraph",
+      "content": "Every object in the universe attracts every other object with a force which is:",
+      "id": "xqswleo"
+    },
+    {
+      "id": "ztb0viu",
+      "type": "list",
+      "items": [
+        "<ul><li>Directly proportional to the product of their masses</li><li>Inversely proportional to the square of the distance between their centres</li></ul>",
+        "Directly proportional to the product of their masses",
+        "Inversely proportional to the square of the distance between their centres"
+      ]
+    },
+    {
+      "id": "xn0r6kj",
+      "type": "heading",
+      "level": 3,
+      "content": "Mathematical Formula"
+    },
+    {
+      "type": "paragraph",
+      "content": "F = G × (m₁m₂ / r²) Where:",
+      "id": "6662snt"
+    },
+    {
+      "type": "paragraph",
+      "content": "F = gravitational force m₁ = mass of first object",
+      "id": "k4upeb4"
+    },
+    {
+      "type": "paragraph",
+      "content": "m₂ = mass of second object",
+      "id": "svt1im9"
+    },
+    {
+      "type": "paragraph",
+      "content": "r = distance between the centres G = gravitational constant",
+      "id": "itrgtbs"
+    },
+    {
+      "id": "1jtu9c8",
+      "type": "heading",
+      "level": 3,
+      "content": "Value of Gravitational Constant"
+    },
+    {
+      "type": "paragraph",
+      "content": "G = 6.67 × 10⁻¹¹ N m² / kg²",
+      "id": "z9n4k9t"
+    },
+    {
+      "type": "paragraph",
+      "content": "This value is constant everywhere in the universe.",
+      "id": "r6eym61"
+    },
+    {
+      "id": "zbki8my",
+      "type": "heading",
+      "level": 2,
+      "content": "EFFECTS OF GRAVITATIONAL FORCE"
+    },
+    {
+      "type": "paragraph",
+      "content": "Gravitational force is responsible for:",
+      "id": "qtc5rjx"
+    },
+    {
+      "id": "m9oe08e",
+      "type": "list",
+      "items": [
+        "<ul><li>Objects falling towards Earth</li><li>Planets revolving around the Sun</li><li>Formation of tides</li><li>Weight of bodies</li><li>Holding atmosphere to Earth</li></ul>",
+        "Objects falling towards Earth",
+        "Planets revolving around the Sun",
+        "Formation of tides",
+        "Weight of bodies",
+        "Holding atmosphere to Earth"
+      ]
+    },
+    {
+      "id": "e4yd7g7",
+      "type": "heading",
+      "level": 2,
+      "content": "FREE FALL"
+    },
+    {
+      "type": "paragraph",
+      "content": "When an object falls towards the Earth under the influence of gravitational force only, it is said to be in free fall.",
+      "id": "qgt2ln8"
+    },
+    {
+      "type": "paragraph",
+      "content": "In free fall:",
+      "id": "in4j2q3"
+    },
+    {
+      "id": "08la033",
+      "type": "list",
+      "items": [
+        "<ul><li>Only gravitational force acts</li><li>Air resistance is neglected</li></ul>",
+        "Only gravitational force acts",
+        "Air resistance is neglected"
+      ]
+    },
+    {
+      "id": "9p3ln2k",
+      "type": "heading",
+      "level": 3,
+      "content": "Acceleration Due to Gravity (g)"
+    },
+    {
+      "type": "paragraph",
+      "content": "The acceleration produced in a body due to gravitational pull of Earth is called acceleration due to gravity.",
+      "id": "ffmp0g2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Symbol: g",
+      "id": "maulhpl"
+    },
+    {
+      "type": "paragraph",
+      "content": "Value on Earth = 9.8 m/s² It is constant for all objects.",
+      "id": "iuefq9p"
+    },
+    {
+      "id": "6g0fs3e",
+      "type": "heading",
+      "level": 2,
+      "content": "MASS AND WEIGHT"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Gravitation is the force by which every object in the universe attracts every other object.",
+      "id": "l1wtj8l"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mass:",
+      "id": "6bwlfvr"
+    },
+    {
+      "id": "ro4w171",
+      "type": "list",
+      "items": [
+        "<ul><li>Amount of matter in a body</li><li>Constant everywhere</li><li>SI unit = kilogram</li><li>Scalar quantity</li></ul>",
+        "Amount of matter in a body",
+        "Constant everywhere",
+        "SI unit = kilogram",
+        "Scalar quantity"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Weight:",
+      "id": "udfkr09"
+    },
+    {
+      "id": "bqbvs5m",
+      "type": "list",
+      "items": [
+        "<ul><li>Force with which Earth attracts a body</li><li>Changes with place</li><li>SI unit = Newton</li><li>Vector quantity</li></ul>",
+        "Force with which Earth attracts a body",
+        "Changes with place",
+        "SI unit = Newton",
+        "Vector quantity"
+      ]
+    },
+    {
+      "id": "6mo8t5o",
+      "type": "heading",
+      "level": 3,
+      "content": "Formula of Weight"
+    },
+    {
+      "type": "paragraph",
+      "content": "Weight = Mass × Acceleration due to gravity W = mg",
+      "id": "gc7qf0c"
+    },
+    {
+      "id": "kjonz4q",
+      "type": "heading",
+      "level": 3,
+      "content": "Difference Between Mass and Weight"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mass:",
+      "id": "tao7oqx"
+    },
+    {
+      "id": "f7u4834",
+      "type": "list",
+      "items": [
+        "<ul><li>Constant</li><li>Scalar</li><li>kg</li><li>Does not change</li></ul>",
+        "Constant",
+        "Scalar",
+        "kg",
+        "Does not change"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Weight:",
+      "id": "vjb6zkq"
+    },
+    {
+      "id": "iz3kwwr",
+      "type": "list",
+      "items": [
+        "<ul><li>Changes with place</li><li>Vector</li><li>Newton</li><li>Depends on gravity</li></ul>",
+        "Changes with place",
+        "Vector",
+        "Newton",
+        "Depends on gravity"
+      ]
+    },
+    {
+      "id": "g40vnjk",
+      "type": "heading",
+      "level": 2,
+      "content": "VARIATION OF GRAVITY"
+    },
+    {
+      "type": "paragraph",
+      "content": "The value of g changes with:",
+      "id": "e6fkmkd"
+    },
+    {
+      "id": "eu59vki",
+      "type": "list",
+      "items": [
+        "<ul><li>Height</li><li>Depth</li><li>Latitude</li></ul>",
+        "Height",
+        "Depth",
+        "Latitude"
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Mass",
+        "Weight"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Amount of matter in a body",
+          "Force with which Earth attracts a body"
+        ],
+        [
+          "Constancy",
+          "Constant everywhere",
+          "Changes with place"
+        ],
+        [
+          "Quantity Type",
+          "Scalar quantity",
+          "Vector quantity"
+        ],
+        [
+          "SI Unit",
+          "Kilogram (kg)",
+          "Newton (N)"
+        ]
+      ],
+      "id": "6rbhnzo"
+    },
+    {
+      "type": "paragraph",
+      "content": "g decreases with height. g decreases with depth.",
+      "id": "euutw66"
+    },
+    {
+      "type": "paragraph",
+      "content": "g is maximum at poles and minimum at equator.",
+      "id": "e8veyju"
+    },
+    {
+      "id": "32qs3hs",
+      "type": "heading",
+      "level": 2,
+      "content": "THRUST AND PRESSURE"
+    },
+    {
+      "type": "paragraph",
+      "content": "Thrust:",
+      "id": "acsprug"
+    },
+    {
+      "type": "paragraph",
+      "content": "Force acting perpendicular to a surface. Pressure:",
+      "id": "u6s3vxd"
+    },
+    {
+      "type": "paragraph",
+      "content": "Force acting per unit area.",
+      "id": "19dwnsw"
+    },
+    {
+      "type": "paragraph",
+      "content": "Formula:",
+      "id": "v85u7x8"
+    },
+    {
+      "type": "paragraph",
+      "content": "Pressure = Force / Area SI unit = Pascal (Pa)",
+      "id": "gubutbx"
+    },
+    {
+      "id": "zjef03k",
+      "type": "heading",
+      "level": 2,
+      "content": "BUOYANCY"
+    },
+    {
+      "type": "paragraph",
+      "content": "The upward force exerted by a fluid on an object immersed in it is called buoyant force. Due to buoyancy:",
+      "id": "3kod05u"
+    },
+    {
+      "id": "uve3011",
+      "type": "list",
+      "items": [
+        "<ul><li>Objects float</li><li>Objects sink</li></ul>",
+        "Objects float",
+        "Objects sink"
+      ]
+    },
+    {
+      "id": "k1u0zgq",
+      "type": "heading",
+      "level": 2,
+      "content": "ARCHIMEDES' PRINCIPLE"
+    },
+    {
+      "type": "paragraph",
+      "content": "According to Archimedes' Principle:",
+      "id": "q3j7q7f"
+    },
+    {
+      "type": "paragraph",
+      "content": "When a body is immersed in a fluid, it experiences an upward force equal to the weight of the fluid displaced.",
+      "id": "zoihkgj"
+    },
+    {
+      "type": "paragraph",
+      "content": "This principle is used in:",
+      "id": "s798xtv"
+    },
+    {
+      "id": "g5kicpl",
+      "type": "list",
+      "items": [
+        "<ul><li>Ships</li><li>Submarines</li><li>Hydrometers</li></ul>",
+        "Ships",
+        "Submarines",
+        "Hydrometers"
+      ]
+    },
+    {
+      "id": "tkb87si",
+      "type": "heading",
+      "level": 2,
+      "content": "FLOATATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "An object floats if:",
+      "id": "7gypgwn"
+    },
+    {
+      "type": "paragraph",
+      "content": "Density of object &lt; Density of liquid",
+      "id": "9dn3gwq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Value of g is maximum at the poles and minimum at the equator; it decreases with both height and depth.",
+        "The SI unit of weight is Newton (N), whereas the SI unit of mass is kilogram (kg).",
+        "Gravitational constant (G = 6.67 × 10⁻¹¹ N m² / kg²) is constant everywhere in the universe."
+      ],
+      "id": "lrub7ow"
+    },
+    {
+      "type": "paragraph",
+      "content": "An object sinks if:",
+      "id": "i7pth0l"
+    },
+    {
+      "type": "paragraph",
+      "content": "Density of object &gt; Density of liquid",
+      "id": "q61swz5"
+    },
+    {
+      "id": "d3zbl6n",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT SSC EXAM QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q1. Value of g on Earth? Ans: 9.8 m/s²",
+      "id": "p7f72j6"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q2. Who gave Universal Law of Gravitation?",
+      "id": "c9pl7ex"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Ans: Newton",
+      "id": "penoueu"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q3. SI unit of weight?",
+      "id": "8m24e9a"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Ans: Newton",
+      "id": "7kuxe5h"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q4. Formula of gravitational force? Ans: F = Gm₁m₂/r²",
+      "id": "xkuf6l0"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q5. Why do objects float? Ans: Due to buoyant force",
+      "id": "l0y5bbr"
+    },
+    {
+      "id": "yeibvjv",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "syeau4a",
+      "type": "list",
+      "items": [
+        "<ul><li>Gravitation is universal force</li><li>F = Gm₁m₂ / r²</li><li>g = 9.8 m/s²</li><li>Weight = mg</li><li>Pressure = Force / Area</li><li>Objects float due to buoyancy</li></ul>",
+        "Gravitation is universal force",
+        "F = Gm₁m₂ / r²",
+        "g = 9.8 m/s²",
+        "Weight = mg",
+        "Pressure = Force / Area",
+        "Objects float due to buoyancy"
+      ]
+    }
+  ],
+  "enriched": true
+}

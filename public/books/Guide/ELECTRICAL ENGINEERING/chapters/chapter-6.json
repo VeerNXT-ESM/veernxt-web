@@ -1,0 +1,835 @@
+{
+  "id": "99rldvc",
+  "title": "Ac Machines",
+  "order": 6,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uvjhs0s",
+      "content": "<strong>CHAPTER 6 — AC MACHINES</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "gq7dt16",
+      "content": "AC machines are the workhorses of modern industry. The three-phase induction motor is the most widely used motor in the world — found in pumps, compressors, conveyors, fans, and industrial drives. Synchronous machines serve as generators in power plants and as synchronous condensers for reactive power control. This chapter covers theory, equivalent circuits, torque-speed characteristics, and starting methods."
+    },
+    {
+      "type": "paragraph",
+      "id": "1ju2qv5",
+      "content": "<strong>6.1  Three-Phase Induction Motor — Construction</strong>"
+    },
+    {
+      "id": "8jbwvve",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Material/Details</strong></p>",
+            "<p><strong>Function</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Stator</p>",
+            "<p>Fixed outer part</p>",
+            "<p>Silicon steel laminations; 3-phase distributed winding</p>",
+            "<p>Carries 3-phase supply; creates rotating magnetic field</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rotor: Squirrel Cage</p>",
+            "<p>Short-circuited bars</p>",
+            "<p>Aluminium or copper bars in slots; short-circuited by end rings</p>",
+            "<p>Simple, rugged; most common; no external resistance</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rotor: Slip Ring (WRIM)</p>",
+            "<p>External resistance connection</p>",
+            "<p>3-phase winding; connected to external resistance via slip rings</p>",
+            "<p>Allows external resistance for starting torque control</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Air Gap</p>",
+            "<p>Between stator &amp; rotor</p>",
+            "<p>0.5–2 mm; kept small to reduce magnetising current</p>",
+            "<p>Magnetic flux linkage between stator and rotor</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Shaft &amp; Bearings</p>",
+            "<p>Steel, ball/roller bearings</p>",
+            "<p>—</p>",
+            "<p>Transmit mechanical output torque</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3u342vq",
+      "content": "<strong>6.2  Rotating Magnetic Field (RMF)</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "uxzdjbv",
+      "content": "When a balanced three-phase supply is applied to a three-phase stator winding, it produces a Rotating Magnetic Field (RMF). The speed of this rotating field is called the synchronous speed (N_s). The RMF cuts the stationary rotor conductors, inducing EMF and current. The interaction of this rotor current with the RMF produces torque, causing the rotor to rotate."
+    },
+    {
+      "id": "d09u7jp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Synchronous Speed: N_s = 120f / P        (RPM)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>where f = supply frequency (Hz), P = number of poles</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3g6y97w",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Supply Frequency (f)</strong></p>",
+            "<p><strong>Number of Poles (P)</strong></p>",
+            "<p><strong>Synchronous Speed N_s (RPM)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>50 Hz</p>",
+            "<p>2</p>",
+            "<p>3000</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>50 Hz</p>",
+            "<p>4</p>",
+            "<p>1500</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>50 Hz</p>",
+            "<p>6</p>",
+            "<p>1000</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>50 Hz</p>",
+            "<p>8</p>",
+            "<p>750</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>60 Hz</p>",
+            "<p>2</p>",
+            "<p>3600</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>60 Hz</p>",
+            "<p>4</p>",
+            "<p>1800</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oi4vmj8",
+      "content": "<strong>6.3  Slip</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "3hbyc5o",
+      "content": "The rotor of an induction motor always runs at a speed N_r slightly less than synchronous speed N_s. The difference is called slip. Slip is the fundamental quantity of an induction motor — it determines frequency of rotor currents, rotor EMF, rotor impedance, and torque."
+    },
+    {
+      "id": "if92jb6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Slip: s = (N_s − N_r) / N_s  =  (n_s − n_r) / n_s        (dimensionless; 0 to 1)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Rotor speed: N_r = N_s (1 − s)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Rotor frequency: f_r = s × f_s        (varies from f_s at standstill to 0 at synchronous speed)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Rotor EMF at slip s: E_r = s × E_r0        (E_r0 = rotor EMF at standstill)</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4nklwi",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Condition</strong></p>",
+            "<p><strong>Slip Value</strong></p>",
+            "<p><strong>Speed</strong></p>",
+            "<p><strong>Rotor Frequency</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Synchronous speed (no-load ideal)</p>",
+            "<p>s = 0</p>",
+            "<p>N_r = N_s</p>",
+            "<p>f_r = 0 Hz</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Normal running (rated load)</p>",
+            "<p>s = 0.03–0.05 (3–5%)</p>",
+            "<p>N_r ≈ 0.95–0.97 N_s</p>",
+            "<p>f_r = 1.5–2.5 Hz (at 50Hz)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Starting (standstill)</p>",
+            "<p>s = 1</p>",
+            "<p>N_r = 0</p>",
+            "<p>f_r = f_s = 50 Hz</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Plugging (braking)</p>",
+            "<p>s &gt; 1</p>",
+            "<p>Rotor tries to go opposite to RMF</p>",
+            "<p>f_r &gt; f_s</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Generator mode</p>",
+            "<p>s &lt; 0</p>",
+            "<p>N_r &gt; N_s</p>",
+            "<p>f_r negative</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "xyk9tbf",
+      "content": "<strong>6.4  Torque Equation &amp; Torque-Speed Characteristics</strong>"
+    },
+    {
+      "id": "e8swtby",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Torque: T = (3/ω_s) × [s·E₂²·R₂ / (R₂² + (sX₂)²)]</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Starting torque (s=1): T_st = (3/ω_s) × [E₂²·R₂ / (R₂² + X₂²)]</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Maximum torque (pullout): T_max = (3/ω_s) × [E₂² / (2X₂)]  (when R₂ = sX₂)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Slip at max torque: s_m = R₂ / X₂        (for squirrel cage motor)</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "31rk5co",
+      "content": "The torque-speed curve of an induction motor has three important regions: (1) Stable operating region: from no-load to full-load slip — here, increasing load increases slip and torque. (2) Maximum torque (pullout torque): peak of the torque-speed curve. (3) Unstable region: beyond maximum torque, motor stalls."
+    },
+    {
+      "type": "paragraph",
+      "id": "b00vj1q",
+      "content": "<strong>6.5  Starting Methods of Induction Motor</strong>"
+    },
+    {
+      "id": "shf4ss2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Applicable To</strong></p>",
+            "<p><strong>Starting Current Reduction</strong></p>",
+            "<p><strong>Starting Torque</strong></p>",
+            "<p><strong>Notes</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Direct On-Line (DOL)</p>",
+            "<p>Small motors (up to 5 kW)</p>",
+            "<p>None (6–8 × I_FL)</p>",
+            "<p>High</p>",
+            "<p>Simple; heavy inrush current</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Star-Delta Starter</p>",
+            "<p>Squirrel cage</p>",
+            "<p>Current reduced to 1/3 of DOL</p>",
+            "<p>Torque reduced to 1/3</p>",
+            "<p>Most common; V_line/√3 during start</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Auto-Transformer Starter</p>",
+            "<p>Both types</p>",
+            "<p>1/x² of DOL (x = transformer ratio)</p>",
+            "<p>1/x² of DOL torque</p>",
+            "<p>Smooth start; costly</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rotor Resistance (Rheostatic)</p>",
+            "<p>Slip ring motors only</p>",
+            "<p>Moderate reduction</p>",
+            "<p>Can be maximised</p>",
+            "<p>Best for high-load starting; resistance removed in steps</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Soft Starter</p>",
+            "<p>Both types</p>",
+            "<p>Controlled voltage ramp</p>",
+            "<p>Adjustable</p>",
+            "<p>Electronic; smooth acceleration</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Variable Frequency Drive (VFD)</p>",
+            "<p>Both types</p>",
+            "<p>Complete control</p>",
+            "<p>Rated torque at all speeds</p>",
+            "<p>Best method; costly; widely used today</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2r8fddb",
+      "content": "<strong>6.6  Synchronous Machine</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "rym4me7",
+      "content": "A synchronous machine runs at exactly synchronous speed (N_s = 120f/P). It can operate as a generator (alternator) or motor. As a generator, it converts mechanical energy to electrical energy and is used in all power plants. As a motor, it can operate at leading power factor and is used for reactive power compensation (synchronous condenser) and constant-speed drives."
+    },
+    {
+      "id": "sexc2bf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Formula / Value</strong></p>",
+            "<p><strong>Significance</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Synchronous speed</p>",
+            "<p>N_s = 120f/P</p>",
+            "<p>Fixed by frequency and number of poles</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>EMF generated (no-load)</p>",
+            "<p>E₀ = 4.44fNΦ</p>",
+            "<p>Same as transformer EMF equation; Φ depends on field current</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Synchronous reactance</p>",
+            "<p>X_s = X_a + X_l</p>",
+            "<p>X_a = armature reactance, X_l = leakage reactance</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Terminal voltage (generator)</p>",
+            "<p>V = E₀ − jI_a X_s − I_a R_a</p>",
+            "<p>Phasor equation; R_a usually neglected</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Power angle (δ)</p>",
+            "<p>P = (VE₀/X_s) sinδ</p>",
+            "<p>δ = angle between V and E₀; max power at δ=90°</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Excitation (over-excited)</p>",
+            "<p>E₀ &gt; V</p>",
+            "<p>Motor draws leading current; acts as capacitor (VAR supply)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Excitation (under-excited)</p>",
+            "<p>E₀ &lt; V</p>",
+            "<p>Motor draws lagging current; acts as inductor (VAR absorb)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>V-curves</p>",
+            "<p>I_a vs I_f at constant load</p>",
+            "<p>Shows variation of armature current with field current</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "fcojekk",
+      "content": "<strong>6.7  Practice MCQs — AC Machines</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "9xqpazr",
+      "content": "<strong>Q1.  </strong>Synchronous speed of a 4-pole induction motor at 50Hz is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oexza5i",
+      "content": "        (A)  1000 RPM"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j7m7fm9",
+      "content": "        (B)  1500 RPM"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oy8ioze",
+      "content": "        (C)  3000 RPM"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8ngra4r",
+      "content": "        (D)  750 RPM"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "al9b93d",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "zmyouq2",
+      "content": "<strong>Q2.  </strong>Slip of an induction motor at no-load is approximately:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bay688z",
+      "content": "        (A)  1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "99c9u78",
+      "content": "        (B)  0.5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2m0ifbq",
+      "content": "        (C)  0 (nearly zero)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nch14v0",
+      "content": "        (D)  0.1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ahluyh3",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "9qotqud",
+      "content": "<strong>Q3.  </strong>In a squirrel cage induction motor, the rotor winding is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t06qvaz",
+      "content": "        (A)  Open circuited"
+    },
+    {
+      "type": "paragraph",
+      "id": "48qfdeh",
+      "content": "        (B)  Short circuited through slip rings"
+    },
+    {
+      "type": "paragraph",
+      "id": "jjdi0i5",
+      "content": "        (C)  Short circuited by end rings"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fmuiq6q",
+      "content": "        (D)  Connected to external resistance"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ij0qhdb",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "9urgasy",
+      "content": "<strong>Q4.  </strong>The starting torque of a 3-phase induction motor with star-delta starter compared to DOL is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f332dnp",
+      "content": "        (A)  Equal"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pcntzeq",
+      "content": "        (B)  One-third"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t8t7qk4",
+      "content": "        (C)  Three times"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nbcovni",
+      "content": "        (D)  Half"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z7gksnc",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "r6evaqh",
+      "content": "<strong>Q5.  </strong>Rotor frequency of an induction motor at 5% slip (50Hz supply) is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lmszxgd",
+      "content": "        (A)  50 Hz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3dlrlq0",
+      "content": "        (B)  5 Hz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x22o1qv",
+      "content": "        (C)  2.5 Hz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v8p4fru",
+      "content": "        (D)  100 Hz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fb3p16a",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "9lwb00x",
+      "content": "<strong>Q6.  </strong>Maximum torque in an induction motor is also called:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1txztla",
+      "content": "        (A)  Full-load torque"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0y6un0a",
+      "content": "        (B)  Breakdown torque"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rt1omb9",
+      "content": "        (C)  Starting torque"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tjmwk6w",
+      "content": "        (D)  Synchronous torque"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m26gl0e",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "c7bll6p",
+      "content": "<strong>Q7.  </strong>A synchronous motor operating at leading power factor is equivalent to:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3j5ou2o",
+      "content": "        (A)  An inductor"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tul19sh",
+      "content": "        (B)  A resistor"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ehi00vq",
+      "content": "        (C)  A capacitor"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j5ym6kk",
+      "content": "        (D)  A rectifier"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zvrxu6u",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "kyn69ec",
+      "content": "<strong>Q8.  </strong>For slip ring induction motor, external resistance is added to the rotor circuit to:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7okd4wm",
+      "content": "        (A)  Reduce starting current only"
+    },
+    {
+      "type": "paragraph",
+      "id": "bx16it3",
+      "content": "        (B)  Increase starting torque while reducing starting current"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ws12e3a",
+      "content": "        (C)  Increase speed"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j9jw0z1",
+      "content": "        (D)  Reduce all losses"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m0qxs3t",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "hg7qczw",
+      "content": "<strong>Q9.  </strong>An induction motor cannot run at synchronous speed because:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ftkh2f7",
+      "content": "        (A)  It would overheat"
+    },
+    {
+      "type": "paragraph",
+      "id": "y8x26vm",
+      "content": "        (B)  Rotor current would be zero; no torque"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nrmz560",
+      "content": "        (C)  It is against KVL"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ct2lrhv",
+      "content": "        (D)  Slip rings prevent it"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zllyz7l",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ivhn1z3",
+      "content": "<strong>Q10.  </strong>The synchronous motor has no starting torque because:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "b6v1x02",
+      "content": "        (A)  No field winding"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jh1yejk",
+      "content": "        (B)  Single phase supply"
+    },
+    {
+      "type": "paragraph",
+      "id": "pynt4ab",
+      "content": "        (C)  Rotor inertia is too high"
+    },
+    {
+      "type": "paragraph",
+      "id": "0ku2aqh",
+      "content": "        (D)  Field cannot lock with stator RMF at standstill"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kx2geus",
+      "content": "<strong>Answer: </strong>(D)"
+    }
+  ],
+  "enriched": true
+}

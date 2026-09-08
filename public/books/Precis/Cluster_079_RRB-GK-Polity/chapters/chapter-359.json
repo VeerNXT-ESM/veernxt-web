@@ -1,0 +1,124 @@
+{
+  "title": "Defined Benefit vs Defined Contribution (Exam Favorite)",
+  "order": 359,
+  "blocks": [
+    {
+      "id": "yftc56d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Defined Benefit</strong></p>",
+            "<p><strong>Defined Contribution</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fixed pension amount</p>",
+            "<p>Pension depends on contribution</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Government bears risk</p>",
+            "<p>Subscriber bears investment risk</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Example: Old Pension Scheme</p>",
+            "<p>Example: NPS</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Under Defined Benefit schemes, the employer bears the investment risk, whereas under Defined Contribution schemes, the risk is shifted to the employee.",
+      "id": "vpnal2s"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Defined Benefit (DB)",
+        "Defined Contribution (DC)"
+      ],
+      "rows": [
+        [
+          "Payout Guarantee",
+          "Fixed & pre-determined formula",
+          "Variable & market-linked"
+        ],
+        [
+          "Investment Risk",
+          "Employer / Government",
+          "Employee / Subscriber"
+        ],
+        [
+          "Employee Contribution",
+          "Usually nil (e.g., OPS)",
+          "Mandatory recurring contribution"
+        ],
+        [
+          "Indian Example",
+          "Old Pension Scheme (OPS)",
+          "National Pension System (NPS)"
+        ]
+      ],
+      "id": "yi9u2ed"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "NPS Launch Date",
+          "value": "1 Jan 2004",
+          "icon": "calendar"
+        },
+        {
+          "label": "DB Pension Base",
+          "value": "50% Last Salary",
+          "icon": "award"
+        },
+        {
+          "label": "Risk Bearer (DC)",
+          "value": "Employee",
+          "icon": "info"
+        },
+        {
+          "label": "Pension Models",
+          "value": "2 Primary Types",
+          "icon": "book"
+        }
+      ],
+      "id": "zgbrf7p"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "National Pension System (NPS) is a Defined Contribution (DC) scheme implemented for central government recruits starting January 1, 2004.",
+        "Old Pension Scheme (OPS) is an unfunded Defined Benefit (DB) scheme funded out of current government revenues.",
+        "Exams often test who bears the investment risk: Employer in DB vs Employee in DC."
+      ],
+      "id": "5ybbbgh"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Defined Benefit (DB) schemes promise a predefined pension payout calculated using salary history and service length.",
+        "Defined Contribution (DC) schemes fix the contribution amount, while final retirement payout depends entirely on market returns.",
+        "In Defined Benefit plans, financial and investment risk is entirely borne by the employer or government.",
+        "In Defined Contribution plans, individual subscribers bear all market investment risks.",
+        "Central Government of India transitioned from DB (Old Pension Scheme) to DC (National Pension System) for employees joining on or after January 1, 2004."
+      ],
+      "id": "2u8mn1l"
+    }
+  ],
+  "enriched": true
+}

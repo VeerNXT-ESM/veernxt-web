@@ -1,0 +1,64 @@
+{
+  "title": "RRB Quick Revision Box",
+  "order": 288,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Established: 1963<br/>Legal Basis: DSPE Act, 1946<br/>Type: Statutory Body<br/>Director Tenure: 2 years<br/>Requires State Consent<br/>India’s Premier Investigative Agency",
+      "id": "ssn7hx6"
+    },
+    {
+      "type": "pullQuote",
+      "content": "India’s Premier Investigative Agency",
+      "id": "er6f1j3"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "1963",
+          "icon": "calendar"
+        },
+        {
+          "label": "Legal Basis",
+          "value": "DSPE Act, 1946",
+          "icon": "book"
+        },
+        {
+          "label": "Director Tenure",
+          "value": "2 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Type",
+          "value": "Statutory Body",
+          "icon": "info"
+        }
+      ],
+      "id": "a6evz2f"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Legal foundation is based on the DSPE Act, 1946.",
+        "Director's fixed tenure is 2 years.",
+        "State consent requirement is a frequently tested constitutional jurisdiction point."
+      ],
+      "id": "7le2bhm"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The agency was established in 1963 as India's premier investigative agency.",
+        "It derives its legal authority from the DSPE Act, 1946.",
+        "It functions as a Statutory Body.",
+        "The Director has a mandated tenure of 2 years.",
+        "It requires state consent to exercise powers and jurisdiction in a state."
+      ],
+      "id": "5b5at77"
+    }
+  ],
+  "enriched": true
+}

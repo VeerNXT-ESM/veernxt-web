@@ -1,0 +1,63 @@
+{
+  "title": "ULTRA QUICK REVISION",
+  "order": 15,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Age: 13.8 billion years<br/>Galaxy: Milky Way<br/>Nearest Star: Sun<br/>Largest Planet: Jupiter<br/>Hottest Planet: Venus<br/>Dwarf Planet: Pluto",
+      "id": "vl7w6kg"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Hottest Planet: Venus",
+      "id": "f8w56cu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Age",
+          "value": "13.8 billion years",
+          "icon": "clock"
+        },
+        {
+          "label": "Galaxy",
+          "value": "Milky Way",
+          "icon": "info"
+        },
+        {
+          "label": "Nearest Star",
+          "value": "Sun",
+          "icon": "award"
+        },
+        {
+          "label": "Largest Planet",
+          "value": "Jupiter",
+          "icon": "check"
+        }
+      ],
+      "id": "sij7h2m"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Venus is identified as the hottest planet in the solar system.",
+        "Pluto is classified specifically as a dwarf planet.",
+        "The Sun is recognized as the nearest star."
+      ],
+      "id": "zybncyx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The age of the universe is 13.8 billion years.",
+        "Our galaxy is the Milky Way and the nearest star is the Sun.",
+        "Jupiter is the largest planet in our solar system.",
+        "Venus is the hottest planet, while Pluto is classified as a dwarf planet."
+      ],
+      "id": "m7zneth"
+    }
+  ],
+  "enriched": true
+}

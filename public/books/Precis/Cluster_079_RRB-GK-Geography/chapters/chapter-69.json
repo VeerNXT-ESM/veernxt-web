@@ -1,0 +1,132 @@
+{
+  "title": "4. Major Types of Rocks",
+  "order": 69,
+  "blocks": [
+    {
+      "id": "z5wyadp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Rock Type</strong></p>",
+            "<p><strong>Formation</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Igneous</p>",
+            "<p>Cooling of magma/lava</p>",
+            "<p>Hard, crystalline, no fossils</p>",
+            "<p>Granite, Basalt</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sedimentary</p>",
+            "<p>Deposition of sediments</p>",
+            "<p>Layered, may contain fossils</p>",
+            "<p>Sandstone, Limestone</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Metamorphic</p>",
+            "<p>Heat and pressure</p>",
+            "<p>Very hard, recrystallized</p>",
+            "<p>Marble, Slate</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Igneous rocks are called primary rocks because all other rocks are derived from them directly or indirectly.",
+      "id": "iixtc7i"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Rock Type",
+        "Formation Process",
+        "Key Characteristics",
+        "Examples"
+      ],
+      "rows": [
+        [
+          "Igneous Rocks",
+          "Cooling and solidification of molten magma or lava",
+          "Crystalline, unstratified, non-fossiliferous",
+          "Granite, Basalt, Gabbro, Pumice"
+        ],
+        [
+          "Sedimentary Rocks",
+          "Weathering, erosion, deposition, and lithification",
+          "Stratified (layered), porous, fossil-rich",
+          "Sandstone, Limestone, Shale, Conglomerate"
+        ],
+        [
+          "Metamorphic Rocks",
+          "Recrystallization under heat, pressure, and chemical fluids",
+          "Foliated or banded, highly crystalline, compact",
+          "Marble, Quartzite, Gneiss, Slate, Schist"
+        ]
+      ],
+      "id": "f3tzxsb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Rock Types",
+          "value": "3 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Rock Group",
+          "value": "Igneous",
+          "icon": "check"
+        },
+        {
+          "label": "Major Elements in Crust",
+          "value": "98%",
+          "icon": "info"
+        },
+        {
+          "label": "Dynamic Transformation",
+          "value": "Rock Cycle",
+          "icon": "clock"
+        }
+      ],
+      "id": "6odqsok"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Fossils are present strictly in sedimentary rocks; igneous rocks are non-fossiliferous and crystalline.",
+        "Lithification refers to the process of turning loose sediments into consolidated sedimentary rocks through compaction and cementation.",
+        "Granite metastasises into Gneiss, Clay/Shale into Slate, and Limestone transforms into Marble under thermal and dynamic metamorphism.",
+        "Foliation or lineation is a structural feature exclusive to metamorphic rocks caused by directed pressure during recrystallisation."
+      ],
+      "id": "vg8l9o8"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks form directly from the cooling and solidification of magma or lava and are classified as primary rocks.",
+        "Sedimentary rocks are formed through the weathering, deposition, compaction, and lithification of pre-existing rock fragments.",
+        "Metamorphic rocks undergo recrystallisation and reorganisation of minerals under high Pressure, Volume, and Temperature (PVT changes).",
+        "Fossils are preserved almost exclusively in sedimentary rocks and are absent in igneous rocks due to intense thermal conditions during cooling.",
+        "The Rock Cycle is a continuous geological process wherein older rocks are transformed into new ones through thermal, mechanical, and chemical action."
+      ],
+      "id": "x032qrr"
+    }
+  ],
+  "enriched": true
+}

@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "u3aqw90"
+      "id": "u3aqw90",
+      "content": "Heredity is the transmission of traits from parents to offspring. Genetics is the branch of biology that deals with the study of heredity and variation. Gregor Johann Mendel is known as the Father of Genetics."
     },
     {
       "id": "rtlcuq2",
@@ -58,7 +59,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ltzk7jn"
+      "id": "ltzk7jn",
+      "content": "In genetics, specific terms are used to describe inheritance patterns. Understanding these terms is essential before studying Mendel’s laws."
     },
     {
       "id": "4sjldt0",
@@ -67,43 +69,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gene</p>",
+            "<p>Unit of heredity located on chromosome</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Allele</p>",
+            "<p>Alternative form of a gene</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Trait</p>",
+            "<p>Observable characteristic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Genotype</p>",
+            "<p>Genetic makeup of organism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Phenotype</p>",
+            "<p>Physical expression of trait</p>"
           ]
         }
       ]
@@ -122,7 +124,8 @@
     },
     {
       "type": "paragraph",
-      "id": "g4x3ame"
+      "id": "g4x3ame",
+      "content": "Mendel conducted experiments on pea plants (Pisum sativum). He studied seven contrasting traits and established fundamental laws of inheritance."
     },
     {
       "id": "j9nxdwd",
@@ -132,7 +135,8 @@
     },
     {
       "type": "paragraph",
-      "id": "89obo72"
+      "id": "89obo72",
+      "content": "When two contrasting traits are present together, only one trait appears in F1 generation. The trait that appears is called dominant, while the hidden trait is recessive."
     },
     {
       "id": "htwuv1e",
@@ -142,7 +146,8 @@
     },
     {
       "type": "paragraph",
-      "id": "00d0s5c"
+      "id": "00d0s5c",
+      "content": "Alleles separate during gamete formation so that each gamete carries only one allele for each trait."
     },
     {
       "id": "umokcp0",
@@ -152,7 +157,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yglb1k6"
+      "id": "yglb1k6",
+      "content": "Genes for different traits are inherited independently of one another when located on different chromosomes."
     },
     {
       "type": "pullQuote",
@@ -167,7 +173,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wfii7jk"
+      "id": "wfii7jk",
+      "content": "Dominant traits are expressed even if only one allele is present. Recessive traits are expressed only when both alleles are recessive. "
     },
     {
       "id": "5kc5e9v",
@@ -176,36 +183,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Trait</strong></p>",
+            "<p><strong>Type</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tall (T)</p>",
+            "<p>Dominant</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dwarf (t)</p>",
+            "<p>Recessive</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Round seed (R)</p>",
+            "<p>Dominant</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wrinkled seed (r)</p>",
+            "<p>Recessive</p>"
           ]
         }
       ]
@@ -218,7 +225,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rzf2pgy"
+      "id": "rzf2pgy",
+      "content": "Genotype refers to the genetic constitution (TT, Tt, tt), whereas phenotype refers to observable characters."
     },
     {
       "id": "q18d0ng",
@@ -228,7 +236,8 @@
     },
     {
       "type": "paragraph",
-      "id": "v41uc5v"
+      "id": "v41uc5v",
+      "content": "Chromosomes are thread-like structures present in nucleus. Humans have 23 pairs (46 chromosomes): 22 pairs of autosomes and 1 pair of sex chromosomes."
     },
     {
       "id": "wlchf0t",
@@ -237,22 +246,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Number in Humans</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Autosomes</p>",
+            "<p>22 pairs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sex Chromosomes</p>",
+            "<p>1 pair (XX/XY)</p>"
           ]
         }
       ]
@@ -265,7 +274,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9d1fuyj"
+      "id": "9d1fuyj",
+      "content": "Females have XX chromosomes while males have XY chromosomes. The sperm determines the sex of the child."
     },
     {
       "id": "ybgqwe3",
@@ -275,7 +285,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ylufjd5"
+      "id": "ylufjd5",
+      "content": "ABO blood group system is controlled by three alleles: IA, IB and i. IA and IB are codominant, while i is recessi<strong>ve. </strong>"
     },
     {
       "id": "f85mqpo",
@@ -284,36 +295,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Genotype</strong></p>",
+            "<p><strong>Blood Group</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IAIA or IAi</p>",
+            "<p>A</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IBIB or IBi</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IAIB</p>",
+            "<p>AB</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ii</p>",
+            "<p>O</p>"
           ]
         }
       ]
@@ -326,7 +337,8 @@
     },
     {
       "type": "paragraph",
-      "id": "g84orzy"
+      "id": "g84orzy",
+      "content": "Variations are differences between individuals of same species. They may be genetic or environmental."
     },
     {
       "id": "xohgria",
@@ -336,7 +348,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bvrw1p5"
+      "id": "bvrw1p5",
+      "content": "Mutation is sudden change in genetic material. It may be beneficial or harmful and leads to variation."
     },
     {
       "type": "examAlert",
@@ -355,27 +368,39 @@
     },
     {
       "type": "paragraph",
-      "id": "779flry"
+      "id": "779flry",
+      "content": "1. Mendel is Father of Genetics."
     },
     {
       "type": "paragraph",
-      "id": "aal856k"
+      "id": "aal856k",
+      "content": "2. Humans have 23 pairs of chromosomes."
     },
     {
       "type": "paragraph",
-      "id": "jbw3leu"
+      "id": "jbw3leu",
+      "content": "3. XX – Female, XY – Male."
     },
     {
       "type": "paragraph",
-      "id": "b6750lh"
+      "id": "b6750lh",
+      "content": "4. IA and IB are codominant."
     },
     {
       "type": "paragraph",
-      "id": "874vekn"
+      "id": "874vekn",
+      "content": "5. Law of Segregation – Alleles separate."
     },
     {
       "type": "paragraph",
-      "id": "45e0g50"
+      "id": "45e0g50",
+      "content": "6. Dominant trait appears in F1 generation."
+    },
+    {
+      "id": "f317y3h",
+      "type": "image",
+      "imageId": "jq9gyva",
+      "src": "/books/Precis/RRB GS/images/image_jq9gyva.png"
     }
   ],
   "enriched": true

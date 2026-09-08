@@ -49,7 +49,14 @@
     },
     {
       "type": "paragraph",
-      "id": "6pouchx"
+      "id": "6pouchx",
+      "content": "Gravitation is the force of attraction between any two masses in the universe. Every object attracts every other object with a force known as gravitational force."
+    },
+    {
+      "id": "xa7wa74",
+      "type": "image",
+      "imageId": "zsqcak5",
+      "src": "/books/Precis/RRB GS/images/image_zsqcak5.png"
     },
     {
       "id": "ixkw1qs",
@@ -59,43 +66,52 @@
     },
     {
       "type": "paragraph",
-      "id": "pj89aan"
+      "id": "pj89aan",
+      "content": "According to Newton’s Universal Law of Gravitation: Every two particles in the universe attract each other with a force directly proportional to the product of their masses and inversely proportional to the square of the distance between them."
     },
     {
       "type": "paragraph",
-      "id": "ice7uu2"
+      "id": "ice7uu2",
+      "content": "Mathematical Form:"
     },
     {
       "type": "paragraph",
-      "id": "vv2vvwr"
+      "id": "vv2vvwr",
+      "content": "F = G (m1 × m2) / r²"
     },
     {
       "type": "paragraph",
-      "id": "jrgmqyl"
+      "id": "jrgmqyl",
+      "content": "Where:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "52o4o74"
+      "id": "52o4o74",
+      "content": "m1, m2 = masses"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "35vflmk"
+      "id": "35vflmk",
+      "content": "r = distance between centres"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "k0g18q9"
+      "id": "k0g18q9",
+      "content": "G = Universal Gravitational Constant"
     },
     {
       "type": "paragraph",
-      "id": "6pjdemu"
+      "id": "6pjdemu",
+      "content": "Value of G = 6.67 × 10⁻¹¹ N m²/kg²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lhwn33i"
+      "id": "lhwn33i",
+      "content": "Dimension of G = [M⁻¹L³T⁻²]"
     },
     {
       "id": "ke5zdqj",
@@ -104,39 +120,53 @@
       "content": "2. ACCELERATION DUE TO GRAVITY (g)"
     },
     {
-      "type": "heading",
-      "level": 4,
-      "id": "cow042m"
-    },
-    {
-      "type": "paragraph",
-      "id": "i0n3lh7"
-    },
-    {
-      "type": "paragraph",
-      "id": "fjtqgd4"
-    },
-    {
-      "type": "paragraph",
-      "id": "5602n4f"
+      "id": "auumz4q",
+      "type": "image",
+      "imageId": "qit7jlw",
+      "src": "/books/Precis/RRB GS/images/image_qit7jlw.png"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mwhr60j"
+      "id": "cow042m",
+      "content": "g = GM / R²<img></img>"
+    },
+    {
+      "type": "paragraph",
+      "id": "i0n3lh7",
+      "content": "Value near Earth’s surface ≈ 9.8 m/s²"
+    },
+    {
+      "type": "paragraph",
+      "id": "fjtqgd4",
+      "content": "Depends on: Mass and Radius of Earth "
+    },
+    {
+      "type": "paragraph",
+      "id": "5602n4f",
+      "content": "Variation of g:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4iz45lu"
+      "id": "mwhr60j",
+      "content": "• g decreases with altitude"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4iz45lu",
+      "content": "• g decreases with depth"
     },
     {
       "type": "paragraph",
-      "id": "4igv0fi"
+      "id": "4igv0fi",
+      "content": "• g is maximum at poles"
     },
     {
       "type": "paragraph",
-      "id": "vx8fg1j"
+      "id": "vx8fg1j",
+      "content": "• g is minimum at equator"
     },
     {
       "id": "ent3uh5",
@@ -151,49 +181,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Mass</strong></p>",
+            "<p><strong>Weight</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Definition</p>",
+            "<p>Amount of matter</p>",
+            "<p>Force due to gravity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Formula</p>",
+            "<p>m</p>",
+            "<p>W = mg</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SI Unit</p>",
+            "<p>Kilogram (kg)</p>",
+            "<p>Newton (N)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nature</p>",
+            "<p>Scalar</p>",
+            "<p>Vector</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Variation</p>",
+            "<p>Constant</p>",
+            "<p>Varies with g</p>"
           ]
         }
       ]
@@ -212,26 +242,31 @@
     },
     {
       "type": "paragraph",
-      "id": "x34zrns"
+      "id": "x34zrns",
+      "content": "When a body falls under gravity alone, it is said to be in free fall."
     },
     {
       "type": "paragraph",
-      "id": "lu1rzbt"
+      "id": "lu1rzbt",
+      "content": "Equations:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lopx6m0"
+      "id": "lopx6m0",
+      "content": "v = gt"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0mu06ij"
+      "id": "0mu06ij",
+      "content": "s = ½ gt²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gt3oh6k"
+      "id": "gt3oh6k",
+      "content": "v² = 2gh"
     },
     {
       "id": "m28mr0c",
@@ -241,21 +276,25 @@
     },
     {
       "type": "paragraph",
-      "id": "tps5rwd"
+      "id": "tps5rwd",
+      "content": "Thrust = Force acting perpendicular to surface."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a28baff"
+      "id": "a28baff",
+      "content": "Pressure = Force / Area"
     },
     {
       "type": "paragraph",
-      "id": "ih4zvck"
+      "id": "ih4zvck",
+      "content": "SI Unit of Pressure = Pascal (Pa)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "05059n0"
+      "id": "05059n0",
+      "content": "1 Pa = 1 N/m²"
     },
     {
       "id": "yj2a42s",
@@ -265,7 +304,8 @@
     },
     {
       "type": "paragraph",
-      "id": "breaf6g"
+      "id": "breaf6g",
+      "content": "Buoyant force is the upward force exerted by a fluid on a body immersed in it."
     },
     {
       "id": "f02q7c8",
@@ -275,11 +315,13 @@
     },
     {
       "type": "paragraph",
-      "id": "67wxpwa"
+      "id": "67wxpwa",
+      "content": "When a body is immersed in a fluid, it experiences an upward force equal to the weight of fluid displaced by it."
     },
     {
       "type": "paragraph",
-      "id": "c6dgso1"
+      "id": "c6dgso1",
+      "content": "Buoyant Force = Weight of displaced fluid"
     },
     {
       "id": "5xfpg5n",
@@ -294,29 +336,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Substance</strong></p>",
+            "<p><strong>Relative Density</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Water</p>",
+            "<p>1</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Iron</p>",
+            "<p>7.8</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mercury</p>",
+            "<p>13.6</p>"
           ]
         }
       ]
@@ -329,11 +371,13 @@
     },
     {
       "type": "paragraph",
-      "id": "ukqjj78"
+      "id": "ukqjj78",
+      "content": "A body floats if its density is less than density of liquid."
     },
     {
       "type": "paragraph",
-      "id": "v230t6x"
+      "id": "v230t6x",
+      "content": "Weight of floating body = Weight of displaced liquid"
     },
     {
       "id": "t56sl4z",
@@ -349,12 +393,14 @@
     },
     {
       "type": "paragraph",
-      "id": "3ievrls"
+      "id": "3ievrls",
+      "content": "Escape Velocity = √(2GM / R)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "26dvyll"
+      "id": "26dvyll",
+      "content": "For Earth ≈ 11.2 km/s<img></img>"
     },
     {
       "id": "vftl3hb",
@@ -364,15 +410,18 @@
     },
     {
       "type": "paragraph",
-      "id": "nfn82lw"
+      "id": "nfn82lw",
+      "content": "Orbital Velocity = √(GM / R)"
     },
     {
       "type": "paragraph",
-      "id": "nwigzzg"
+      "id": "nwigzzg",
+      "content": "Orbital Velocity of Earth ≈ 7.9 km/s"
     },
     {
       "type": "paragraph",
-      "id": "b6agaez"
+      "id": "b6agaez",
+      "content": "Time Period of satellite: T² ∝ R³ (Kepler’s Third Law)"
     },
     {
       "id": "a08lp4c",
@@ -382,19 +431,23 @@
     },
     {
       "type": "paragraph",
-      "id": "i4h894a"
+      "id": "i4h894a",
+      "content": "We know: g = GM / R²"
     },
     {
       "type": "paragraph",
-      "id": "lfrgs69"
+      "id": "lfrgs69",
+      "content": "Where M = Mass of Earth, R = Radius of Earth"
     },
     {
       "type": "paragraph",
-      "id": "y1y3s9y"
+      "id": "y1y3s9y",
+      "content": "Using this formula, we can derive mass or density of Earth."
     },
     {
       "type": "paragraph",
-      "id": "z50imf7"
+      "id": "z50imf7",
+      "content": "Density of Earth (ρ) = 3g / (4πGR)"
     },
     {
       "id": "szy3pzv",
@@ -404,32 +457,33 @@
     },
     {
       "type": "paragraph",
-      "id": "h45aatj"
+      "id": "h45aatj",
+      "content": "At height h above Earth’s surface:"
     },
     {
       "type": "paragraph",
-      "id": "ej3vek0"
+      "id": "ej3vek0",
+      "content": "g_h = g (R / (R + h))²"
     },
     {
       "type": "paragraph",
-      "id": "sggduad"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Escape Velocity = √2 × Orbital Velocity.",
-      "id": "qxsk68l"
+      "id": "sggduad",
+      "content": "As height increases, value of g decreases."
     },
     {
       "type": "paragraph",
-      "id": "r16c05g"
+      "id": "r16c05g",
+      "content": "At depth d below Earth’s surface:"
     },
     {
       "type": "paragraph",
-      "id": "k3f5y5s"
+      "id": "k3f5y5s",
+      "content": "g_d = g (1 - d/R)"
     },
     {
       "type": "paragraph",
-      "id": "6nmdqkj"
+      "id": "6nmdqkj",
+      "content": "g becomes zero at centre of Earth."
     },
     {
       "id": "4w01620",
@@ -439,15 +493,18 @@
     },
     {
       "type": "paragraph",
-      "id": "lnmwqgm"
+      "id": "lnmwqgm",
+      "content": "Near Earth’s surface: PE = mgh"
     },
     {
       "type": "paragraph",
-      "id": "hgiu30x"
+      "id": "hgiu30x",
+      "content": "General form: PE = - GMm / r"
     },
     {
       "type": "paragraph",
-      "id": "21hwexi"
+      "id": "21hwexi",
+      "content": "Negative sign indicates attractive nature of gravitational force."
     },
     {
       "id": "z8g7u43",
@@ -457,20 +514,24 @@
     },
     {
       "type": "paragraph",
-      "id": "zxbyic2"
+      "id": "zxbyic2",
+      "content": "Escape Velocity = √(2GM / R)"
     },
     {
       "type": "paragraph",
-      "id": "aval0sz"
+      "id": "aval0sz",
+      "content": "Relation: Escape Velocity = √2 × Orbital Velocity"
     },
     {
       "type": "paragraph",
-      "id": "mnkudbf"
+      "id": "mnkudbf",
+      "content": "Does not depend on mass of object."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "spily2j"
+      "id": "spily2j",
+      "content": "For Earth ≈ 11.2 km/s"
     },
     {
       "id": "cp8b6v2",
@@ -480,15 +541,18 @@
     },
     {
       "type": "paragraph",
-      "id": "3a6315a"
+      "id": "3a6315a",
+      "content": "Orbital Velocity = √(GM / R)"
     },
     {
       "type": "paragraph",
-      "id": "cog7f9v"
+      "id": "cog7f9v",
+      "content": "Time Period of Satellite: T = 2πR / v"
     },
     {
       "type": "paragraph",
-      "id": "hhf1vk9"
+      "id": "hhf1vk9",
+      "content": "Kepler’s Third Law: T² ∝ R³"
     },
     {
       "id": "lw5wmol",
@@ -503,29 +567,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Law</strong></p>",
+            "<p><strong>Statement</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>First Law</p>",
+            "<p>Planets move in elliptical orbits with Sun at one focus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Second Law</p>",
+            "<p>Equal areas in equal intervals of time</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Third Law</p>",
+            "<p>Square of time period ∝ Cube of orbital radius</p>"
           ]
         }
       ]
@@ -538,24 +602,29 @@
     },
     {
       "type": "paragraph",
-      "id": "l9dziye"
+      "id": "l9dziye",
+      "content": "Conditions:"
     },
     {
       "type": "paragraph",
-      "id": "s93v1rr"
+      "id": "s93v1rr",
+      "content": "• Time period = 24 hours"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j9vqu1k"
+      "id": "j9vqu1k",
+      "content": "• Moves in equatorial plane"
     },
     {
       "type": "paragraph",
-      "id": "ymkqp6c"
+      "id": "ymkqp6c",
+      "content": "• Moves from west to east"
     },
     {
       "type": "paragraph",
-      "id": "qk8ai2k"
+      "id": "qk8ai2k",
+      "content": "Height ≈ 36,000 km above Earth surface"
     },
     {
       "id": "jdoiz0y",
@@ -565,15 +634,18 @@
     },
     {
       "type": "paragraph",
-      "id": "5094p6m"
+      "id": "5094p6m",
+      "content": "Weightlessness occurs when normal reaction becomes zero."
     },
     {
       "type": "paragraph",
-      "id": "p9fq648"
+      "id": "p9fq648",
+      "content": "Example: Astronauts inside orbiting satellite."
     },
     {
       "type": "paragraph",
-      "id": "5seirur"
+      "id": "5seirur",
+      "content": "Cause: Continuous free fall condition."
     },
     {
       "id": "mlbnpcd",
@@ -583,12 +655,14 @@
     },
     {
       "type": "paragraph",
-      "id": "azv1zzl"
+      "id": "azv1zzl",
+      "content": "When gravitational force equals air resistance, body falls with constant velocity called terminal velocity."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5bwpvlb"
+      "id": "5bwpvlb",
+      "content": "<strong>21.ADVANCED RRB EXAM POINTS</strong>"
     },
     {
       "id": "dlgenrs",
@@ -631,9 +705,9 @@
       "id": "ulnvush",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "g is maximum at poles and minimum at equator",
+        "Gravitational force is always attractive in nature.It follows inverse square law (1/r²).",
+        "A body floats when density of body &lt; density of liquid."
       ]
     },
     {
@@ -650,64 +724,78 @@
     },
     {
       "type": "paragraph",
-      "id": "np0v9d2"
+      "id": "np0v9d2",
+      "content": "Two masses 5 kg and 10 kg are separated by a distance of 2 m. The gravitational force between them (G = 6.67 × 10⁻¹¹ N m²/kg²) is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4a3sejc"
+      "id": "4a3sejc",
+      "content": "A) 8.3 × 10⁻¹¹ N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "sai1o6c"
+      "id": "sai1o6c",
+      "content": "B) 1.67 × 10⁻¹⁰ N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xv6d4wk"
+      "id": "xv6d4wk",
+      "content": "C) 3.33 × 10⁻¹⁰ N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qvnlcrn"
+      "id": "qvnlcrn",
+      "content": "D) 6.67 × 10⁻¹¹ N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m0qpqlf"
+      "id": "m0qpqlf",
+      "content": "<br></br>Correct Answer: A"
     },
     {
       "type": "paragraph",
-      "id": "t8dbgox"
+      "id": "t8dbgox",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "jthl3n0"
+      "id": "jthl3n0",
+      "content": "Step 1: Use Newton’s Law of Gravitation."
     },
     {
       "type": "paragraph",
-      "id": "gqofska"
+      "id": "gqofska",
+      "content": "F = G (m1 × m2) / r²"
     },
     {
       "type": "paragraph",
-      "id": "71vuv9i"
+      "id": "71vuv9i",
+      "content": "Step 2: Substitute values."
     },
     {
       "type": "paragraph",
-      "id": "f6krdsp"
+      "id": "f6krdsp",
+      "content": "F = (6.67 × 10⁻¹¹ × 5 × 10) / (2²)"
     },
     {
       "type": "paragraph",
-      "id": "s44ldnj"
+      "id": "s44ldnj",
+      "content": "F = (6.67 × 10⁻¹¹ × 50) / 4"
     },
     {
       "type": "paragraph",
-      "id": "jx8v1mw"
+      "id": "jx8v1mw",
+      "content": "F = (333.5 × 10⁻¹¹) / 4"
     },
     {
       "type": "paragraph",
-      "id": "co5olat"
+      "id": "co5olat",
+      "content": "F ≈ 8.3 × 10⁻¹⁰ N"
     },
     {
       "id": "cw1x11y",
@@ -717,54 +805,65 @@
     },
     {
       "type": "paragraph",
-      "id": "nafc2ct"
+      "id": "nafc2ct",
+      "content": "A person has mass 60 kg. If acceleration due to gravity on Moon is 1.6 m/s², his weight on Moon is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "anoic8b"
+      "id": "anoic8b",
+      "content": "A) 96 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ygmnvum"
+      "id": "ygmnvum",
+      "content": "B) 60 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7lb77r2"
+      "id": "7lb77r2",
+      "content": "C) 588 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fbfwe4f"
+      "id": "fbfwe4f",
+      "content": "D) 37.5 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "slu3usm"
+      "id": "slu3usm",
+      "content": "<br></br>Correct Answer: A"
     },
     {
       "type": "paragraph",
-      "id": "ud53d3g"
+      "id": "ud53d3g",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "auqqmg7"
+      "id": "auqqmg7",
+      "content": "Weight (W) = m × g"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ne3ikcq"
+      "id": "ne3ikcq",
+      "content": "W = 60 × 1.6"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cywe829"
+      "id": "cywe829",
+      "content": "W = 96 N"
     },
     {
       "type": "paragraph",
-      "id": "rfp4e2j"
+      "id": "rfp4e2j",
+      "content": "Note: Mass remains same everywhere."
     },
     {
       "id": "qcgtfh3",
@@ -774,54 +873,65 @@
     },
     {
       "type": "paragraph",
-      "id": "a2nkcoq"
+      "id": "a2nkcoq",
+      "content": "A stone is dropped from a height of 80 m (g = 10 m/s²). Time taken to reach ground is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "00vka1q"
+      "id": "00vka1q",
+      "content": "A) 2 s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xgot9f3"
+      "id": "xgot9f3",
+      "content": "B) 4 s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bfttq8d"
+      "id": "bfttq8d",
+      "content": "C) 8 s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "luv9thw"
+      "id": "luv9thw",
+      "content": "D) 16 s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wiv9q6r"
+      "id": "wiv9q6r",
+      "content": "<br></br>Correct Answer: B"
     },
     {
       "type": "paragraph",
-      "id": "a9wexof"
+      "id": "a9wexof",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "iyc8fdn"
+      "id": "iyc8fdn",
+      "content": "Use formula: s = ½ g t²"
     },
     {
       "type": "paragraph",
-      "id": "lvfgh1z"
+      "id": "lvfgh1z",
+      "content": "80 = ½ × 10 × t²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jcom2tx"
+      "id": "jcom2tx",
+      "content": "80 = 5t²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "15k360c"
+      "id": "15k360c",
+      "content": "t² = 80/5 = 16"
     },
     {
       "type": "examAlert",
@@ -835,7 +945,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "zky6p4d"
+      "id": "zky6p4d",
+      "content": "t = 4 seconds"
     },
     {
       "id": "ib0l71z",
@@ -845,54 +956,65 @@
     },
     {
       "type": "paragraph",
-      "id": "3nrt3ek"
+      "id": "3nrt3ek",
+      "content": "Find pressure at depth 5 m in water (ρ = 1000 kg/m³, g = 10 m/s²):"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "s2jof3m"
+      "id": "s2jof3m",
+      "content": "A) 5 × 10⁴ Pa"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "urgz10l"
+      "id": "urgz10l",
+      "content": "B) 5 × 10³ Pa"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7yqh5q4"
+      "id": "7yqh5q4",
+      "content": "C) 50 Pa"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ksnumoe"
+      "id": "ksnumoe",
+      "content": "D) 500 Pa"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ymmkawf"
+      "id": "ymmkawf",
+      "content": "<br></br>Correct Answer: A"
     },
     {
       "type": "paragraph",
-      "id": "ozpu3x0"
+      "id": "ozpu3x0",
+      "content": "Detailed Solution:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jbk42v2"
+      "id": "jbk42v2",
+      "content": "Formula: P = hρg"
     },
     {
       "type": "paragraph",
-      "id": "31flspf"
+      "id": "31flspf",
+      "content": "P = 5 × 1000 × 10"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2zmb0nn"
+      "id": "2zmb0nn",
+      "content": "P = 50,000 Pa"
     },
     {
       "type": "paragraph",
-      "id": "6np70h4"
+      "id": "6np70h4",
+      "content": "P = 5 × 10⁴ Pa"
     },
     {
       "id": "c4608pn",
@@ -902,53 +1024,64 @@
     },
     {
       "type": "paragraph",
-      "id": "gxy7dre"
+      "id": "gxy7dre",
+      "content": "If orbital velocity of a satellite is 8 km/s, escape velocity is approximately:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cc86fnf"
+      "id": "cc86fnf",
+      "content": "A) 8 km/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ul41pwq"
+      "id": "ul41pwq",
+      "content": "B) 11.2 km/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nfyp9zy"
+      "id": "nfyp9zy",
+      "content": "C) 16 km/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5hf3fyv"
+      "id": "5hf3fyv",
+      "content": "D) 5.6 km/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0lol74d"
+      "id": "0lol74d",
+      "content": "<br></br>Correct Answer: B"
     },
     {
       "type": "paragraph",
-      "id": "px3h96b"
+      "id": "px3h96b",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "lu0i640"
+      "id": "lu0i640",
+      "content": "Escape Velocity = √2 × Orbital Velocity"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "98j3qvo"
+      "id": "98j3qvo",
+      "content": "√2 ≈ 1.414"
     },
     {
       "type": "paragraph",
-      "id": "phsvv51"
+      "id": "phsvv51",
+      "content": "Escape velocity = 1.414 × 8"
     },
     {
       "type": "paragraph",
-      "id": "ibdfx1a"
+      "id": "ibdfx1a",
+      "content": "≈ 11.3 km/s ≈ 11.2 km/s (approx.)"
     }
   ],
   "enriched": true

@@ -1,0 +1,133 @@
+{
+  "title": "Difference Between CVC and CBI",
+  "order": 271,
+  "blocks": [
+    {
+      "id": "uz5xayd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>CVC</strong></p>",
+            "<p><strong>CBI</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type</p>",
+            "<p>Statutory Body</p>",
+            "<p>Statutory (under DSPE Act)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Role</p>",
+            "<p>Advisory and supervisory</p>",
+            "<p>Investigative agency</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Function</p>",
+            "<p>Prevents corruption</p>",
+            "<p>Investigates crimes</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "CVC exercises superintendence over the functioning of the CBI in so far as it relates to the investigation of offences under the Prevention of Corruption Act.",
+      "id": "plygdgp"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Vigilance Commission (CVC)",
+        "Central Bureau of Investigation (CBI)"
+      ],
+      "rows": [
+        [
+          "Year of Establishment",
+          "1964 (Statutory status in 2003)",
+          "1963 (by Executive Resolution)"
+        ],
+        [
+          "Legal Status",
+          "Statutory Body (CVC Act, 2003)",
+          "Non-Statutory Body (Derives power from DSPE Act, 1946)"
+        ],
+        [
+          "Primary Role",
+          "Vigilance, advisory, and supervisory body for central government integrity",
+          "Premier criminal investigative agency for corruption, economic offenses, and conventional crimes"
+        ],
+        [
+          "Parent Ministry / Control",
+          "Independent body reporting directly to the Parliament",
+          "Ministry of Personnel, Public Grievances and Pensions (DoPT)"
+        ],
+        [
+          "Head of Organization",
+          "Central Vigilance Commissioner",
+          "Director, CBI"
+        ]
+      ],
+      "id": "rj1wo57"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "CVC Established",
+          "value": "1964",
+          "icon": "calendar"
+        },
+        {
+          "label": "CBI Established",
+          "value": "1963",
+          "icon": "clock"
+        },
+        {
+          "label": "CVC Statutory Year",
+          "value": "2003",
+          "icon": "award"
+        },
+        {
+          "label": "CBI Power Source",
+          "value": "DSPE Act 1946",
+          "icon": "book"
+        }
+      ],
+      "id": "9moi1ma"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CBI is NOT a statutory body; it derives its investigative powers from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "CVC was converted into a statutory body by an Act of Parliament in 2003 based on the Santhanam Committee recommendations.",
+        "The Director of CBI is appointed by a committee consisting of the Prime Minister (Chairperson), Leader of Opposition/Largest Opposition Party, and Chief Justice of India (or a nominated SC Judge)."
+      ],
+      "id": "vonafjz"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "CVC is an apex vigilance advisory body established in 1964 and granted statutory status in 2003.",
+        "CBI is the premier investigating agency of India, established in 1963 by an executive resolution of the Ministry of Home Affairs.",
+        "CVC is a statutory body, whereas CBI is a non-statutory body deriving its powers from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "CVC exercises superintendence over the functioning of CBI in matters relating to the investigation of offences under the Prevention of Corruption Act, 1988.",
+        "Both agencies were set up based on the recommendations of the Santhanam Committee on Prevention of Corruption (1962–1964)."
+      ],
+      "id": "fptzlwq"
+    }
+  ],
+  "enriched": true
+}

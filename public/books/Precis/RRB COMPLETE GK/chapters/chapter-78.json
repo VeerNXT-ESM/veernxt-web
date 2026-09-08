@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "2oy57eq"
+      "id": "2oy57eq",
+      "content": "Plate tectonics refined Wegener’s ideas by explaining that both continents and ocean floors move together as parts of lithospheric plates. These plates float over the asthenosphere, a mechanically weak and partially molten zone. "
     },
     {
       "type": "statStrip",
@@ -35,7 +36,8 @@
     },
     {
       "type": "paragraph",
-      "id": "w81mk7p"
+      "id": "w81mk7p",
+      "content": "Plate movement is driven by heat generated inside the Earth, which produces convection currents in the mantle."
     },
     {
       "id": "pcswis3",
@@ -61,15 +63,18 @@
     },
     {
       "type": "paragraph",
-      "id": "bit4je3"
+      "id": "bit4je3",
+      "content": "• Average thickness ranges from 50 to 150 km."
     },
     {
       "type": "paragraph",
-      "id": "tdko4lq"
+      "id": "tdko4lq",
+      "content": "• Plates may consist of oceanic crust, continental crust, or both."
     },
     {
       "type": "paragraph",
-      "id": "wc7nuay"
+      "id": "wc7nuay",
+      "content": "• Plate velocities typically range from 2 to 10 cm per year."
     },
     {
       "type": "comparisonTable",
@@ -104,7 +109,8 @@
     },
     {
       "type": "paragraph",
-      "id": "n3gooqm"
+      "id": "n3gooqm",
+      "content": "• Plate interiors are relatively stable, while boundaries are geologically active."
     },
     {
       "id": "fn894hf",
@@ -134,65 +140,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Plate</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Notable Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pacific Plate</p>",
+            "<p>Oceanic</p>",
+            "<p>Largest plate; associated with Ring of Fire.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>North American Plate</p>",
+            "<p>Continental + oceanic</p>",
+            "<p>Includes Greenland and part of Atlantic floor.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>South American Plate</p>",
+            "<p>Continental + oceanic</p>",
+            "<p>Andes mountains formed along its margin.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Eurasian Plate</p>",
+            "<p>Mostly continental</p>",
+            "<p>Contains some of the oldest crust.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>African Plate</p>",
+            "<p>Continental</p>",
+            "<p>Associated with East African Rift.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Antarctic Plate</p>",
+            "<p>Mixed</p>",
+            "<p>Surrounds Antarctica.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Indo-Australian Plate</p>",
+            "<p>Mixed</p>",
+            "<p>Collision formed the Himalayas.</p>"
           ]
         }
       ]
@@ -210,36 +216,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Oceanic Plates</strong></p>",
+            "<p><strong>Continental Plates</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Denser; basaltic composition</p>",
+            "<p>Less dense; granitic composition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Typically younger (&lt;200 million years)</p>",
+            "<p>Can be billions of years old</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>More prone to subduction</p>",
+            "<p>Resist subduction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thinner</p>",
+            "<p>Thicker</p>"
           ]
         }
       ]

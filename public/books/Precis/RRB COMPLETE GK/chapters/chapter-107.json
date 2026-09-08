@@ -4,56 +4,62 @@
   "order": 107,
   "blocks": [
     {
+      "id": "8wnh7eh",
+      "type": "image",
+      "imageId": "ivcyjs0",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_ivcyjs0.png"
+    },
+    {
       "id": "fo7uz1k",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Eruption Type</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Icelandic</p>",
+            "<p>Gentle lava outpouring.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hawaiian</p>",
+            "<p>Low explosivity; continuous lava flow.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Strombolian</p>",
+            "<p>Moderate bursts.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vulcanian</p>",
+            "<p>Short violent explosions.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pelean</p>",
+            "<p>Dominated by pyroclastic flows.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Plinian</p>",
+            "<p>Extremely explosive; tall ash columns.</p>"
           ]
         }
       ]

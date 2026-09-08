@@ -1,0 +1,106 @@
+{
+  "title": "9. Soil Erosion (Detailed Explanation)",
+  "order": 188,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Soil erosion removes the fertile top layer, reducing productivity. Water erosion is dominant in humid regions, while wind erosion is common in dry regions.",
+      "id": "8woo2gf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Humid Regions",
+          "value": "Water Erosion",
+          "icon": "info"
+        },
+        {
+          "label": "Dry Regions",
+          "value": "Wind Erosion",
+          "icon": "info"
+        },
+        {
+          "label": "Erosion Forms",
+          "value": "4 Types",
+          "icon": "book"
+        }
+      ],
+      "id": "iteuflj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Soil erosion removes the fertile top layer, reducing productivity.",
+      "id": "f070qn2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Soil erosion strips away the fertile top layer, leading to reduced agricultural productivity.",
+        "Water erosion is dominant in humid environments, whereas wind erosion prevails in dry regions.",
+        "Sheet erosion involves the uniform removal of a thin topsoil layer.",
+        "Rill erosion develops small channels caused by surface water runoff.",
+        "Gully erosion cuts deep channels, ultimately forming badland topography.",
+        "Wind erosion primarily impacts loose, dry soil particles."
+      ],
+      "id": "gf8d5v6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Erosion Type",
+        "Key Characteristic"
+      ],
+      "rows": [
+        [
+          "Sheet Erosion",
+          "Thin uniform removal of topsoil"
+        ],
+        [
+          "Rill Erosion",
+          "Small channels formed by runoff"
+        ],
+        [
+          "Gully Erosion",
+          "Deep channels creating badlands"
+        ],
+        [
+          "Wind Erosion",
+          "Removal of loose dry soil particles"
+        ]
+      ],
+      "id": "k01sfh2"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sheet Erosion: Thin uniform removal of topsoil.",
+      "id": "i9cezqg"
+    },
+    {
+      "type": "paragraph",
+      "content": "Rill Erosion: Small channels formed by runoff.",
+      "id": "2lnxnag"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Gully erosion is a high-yield topic as it directly leads to the formation of 'badlands'.",
+        "Differentiate the progression: Sheet erosion (thin uniform layer) -> Rill erosion (small channels) -> Gully erosion (deep channels).",
+        "Remember the geographic distribution: Water erosion dominates humid regions, while Wind erosion affects dry regions."
+      ],
+      "id": "n4dsron"
+    },
+    {
+      "type": "paragraph",
+      "content": "Gully Erosion: Deep channels creating badlands.",
+      "id": "hthgv2j"
+    },
+    {
+      "type": "paragraph",
+      "content": "Wind Erosion: Removal of loose dry soil particles.",
+      "id": "5uwncci"
+    }
+  ],
+  "enriched": true
+}

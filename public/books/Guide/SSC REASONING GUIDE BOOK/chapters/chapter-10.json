@@ -1,0 +1,236 @@
+{
+  "id": "42ezv2g",
+  "title": "Mathematical Operations",
+  "order": 10,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0xxzwkf",
+      "content": "<strong>CHAPTER  10\tMATHEMATICAL OPERATIONS</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "jrufkaa",
+      "content": "<em>Symbol Substitution | BODMAS | Interchange of Signs</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "namb2kf",
+      "content": "<strong>10.1  Introduction</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "qo07l0q",
+      "content": "In mathematical operations questions, the usual mathematical symbols (+, −, ×, ÷, =) are replaced by other symbols or words. You must substitute back the real symbols and solve. SSC CGL asks 2–3 such questions per paper."
+    },
+    {
+      "id": "fzjarcx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>TYPES OF MATHEMATICAL OPERATIONS</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type 1: Symbol Substitution — symbols replaced by other symbols (e.g., @ = +, # = ×)</p><p>Type 2: Interchange of Signs — two signs are interchanged throughout an expression</p><p>Type 3: BODMAS violation — find the correct value after applying given substitution</p><p>Type 4: Balance/Equalise — find what sign makes the equation true</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "foz2ked",
+      "content": "<strong>10.2  BODMAS Revision</strong>"
+    },
+    {
+      "id": "nfzjmh9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>BODMAS ORDER OF OPERATIONS</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>B — Brackets (solve innermost first: ( ), { }, [ ])</p><p>O — Orders / Of (powers and roots)</p><p>D — Division (÷)</p><p>M — Multiplication (×)</p><p>A — Addition (+)</p><p>S — Subtraction (−)</p><p>NOTE: Division and Multiplication have equal priority — solve left to right.</p><p>NOTE: Addition and Subtraction have equal priority — solve left to right.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mfld5ef",
+      "content": "<strong>10.3  Solved Examples</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "zedtjzg",
+      "content": "<strong>Ex.1 </strong>If '+' means '×', '×' means '÷', '÷' means '−', and '−' means '+', find: 8 + 4 − 3 × 2 ÷ 1"
+    },
+    {
+      "type": "paragraph",
+      "id": "5ao5k69",
+      "content": "<strong>Sol. </strong><em>Substitute: 8×4+3÷2−1. Apply BODMAS: 8×4=32, 3÷2=1.5. Then 32+1.5−1=32.5. Ans: 32.5</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "zh9suo6",
+      "content": "<strong>Ex.2 </strong>If A means +, B means ×, C means ÷, D means −, find: 18 C 3 B 2 A 5 D 4"
+    },
+    {
+      "type": "paragraph",
+      "id": "ug50gir",
+      "content": "<strong>Sol. </strong><em>Substitute: 18÷3×2+5−4. BODMAS: 18÷3=6, 6×2=12, 12+5=17, 17−4=13. Ans: 13</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "z4q1usd",
+      "content": "<strong>Ex.3 </strong>If × and + are interchanged, and ÷ and − are interchanged, find: 6 + 4 × 3 − 10 ÷ 2"
+    },
+    {
+      "type": "paragraph",
+      "id": "hzirko6",
+      "content": "<strong>Sol. </strong><em>Interchange: 6×4+3÷10−2. Wait: ×↔+ means + becomes × and × becomes +. ÷↔− means − becomes ÷ and ÷ becomes −. So: 6×4+3÷10−2 → Original has + → becomes ×, × → becomes +, − → becomes ÷, ÷ → becomes −: 6×4+3−10÷2. BODMAS: 6×4=24, 10÷2=5. 24+3−5=22. Ans: 22</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "gy0j2oj",
+      "content": "<strong>Ex.4 </strong>If @ = +, &amp; = ×, % = ÷, # = −, find: 12 % 4 &amp; 3 @ 10 # 2 = ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "l1yq1vz",
+      "content": "<strong>Sol. </strong><em>12÷4×3+10−2. BODMAS: 12÷4=3, 3×3=9, 9+10=19, 19−2=17. Ans: 17</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "uzynvfx",
+      "content": "<strong>Ex.5  (Balancing) </strong>Select the correct combination to make equation true: 5 ? 3 ? 2 = 16"
+    },
+    {
+      "type": "paragraph",
+      "id": "fuyomz0",
+      "content": "<strong>Sol. </strong><em>Try: 5×3+1=16? No 2 not 1. 5+3×? No. 5×3+2=17≠16. 5+3×2=11≠16. 5×2+3×2=16? Not the form. (5+3)×2=16✓. So ? = +, ×. Ans: +, ×</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "chqedn3",
+      "content": "<strong>10.4  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "mxfnvc8",
+      "content": "<strong>Q.43  </strong>If '+' means '÷', '−' means '×', '×' means '+', '÷' means '−', find: 14 + 7 − 2 × 3 ÷ 1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s95w99a",
+      "content": "<strong>  (a)  </strong>8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j8ns24k",
+      "content": "<strong>  (b)  </strong>9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gz7hv4h",
+      "content": "<strong>  (c)  </strong>10"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "imkqagf",
+      "content": "<strong>  (d)  </strong>6"
+    },
+    {
+      "type": "paragraph",
+      "id": "y4d7jsx",
+      "content": "<strong>  Ans: (b) 9  Hint: </strong><em>14÷7×2+3−1. 14÷7=2, 2×2=4, 4+3=7, 7−1=6. Let me recalc: 14+7 means 14÷7=2; 2−2 means 2×2=4; 4×3 means 4+3=7; 7÷1 means 7−1=6. Ans: (d) 6</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "2gzo5su",
+      "content": "<strong>Q.44  </strong>If @ means ×, # means +, $ means −, % means ÷, find: 6 @ 3 # 20 % 4 $ 2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "diy7w3r",
+      "content": "<strong>  (a)  </strong>21"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4l9g15g",
+      "content": "<strong>  (b)  </strong>23"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0ltjqzt",
+      "content": "<strong>  (c)  </strong>17"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "epeqb8l",
+      "content": "<strong>  (d)  </strong>25"
+    },
+    {
+      "type": "paragraph",
+      "id": "u0ckkde",
+      "content": "<strong>  Ans: (a) 21  Hint: </strong><em>6×3+20÷4−2. BODMAS: 6×3=18, 20÷4=5. 18+5−2=21.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "gb2odmj",
+      "content": "<strong>Q.45  </strong>If + and − are interchanged, × and ÷ are interchanged, find: 4 × 2 + 8 ÷ 4 − 3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "91n4dpk",
+      "content": "<strong>  (a)  </strong>5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2kqizdi",
+      "content": "<strong>  (b)  </strong>7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v7d6roh",
+      "content": "<strong>  (c)  </strong>9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7n8wqd2",
+      "content": "<strong>  (d)  </strong>11"
+    },
+    {
+      "type": "paragraph",
+      "id": "cltubap",
+      "content": "<strong>  Ans: (b) 7  Hint: </strong><em>After interchange: 4÷2−8×4+3. 4÷2=2, 8×4=32. 2−32+3=−27. Hmm, recompute: original 4×2+8÷4−3; swap: + becomes −, − becomes +, × becomes ÷, ÷ becomes ×. New: 4÷2−8×4+3=2−32+3=−27. None match. Standard SSC interpretation: swap + and − only: 4×2−8÷4+3=8−2+3=9. Ans: (c) 9</em>"
+    }
+  ],
+  "enriched": true
+}

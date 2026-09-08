@@ -1,0 +1,94 @@
+{
+  "title": "14. Exam Traps",
+  "order": 219,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Finance Commission is NOT a permanent body.<br/>• Recommendations are NOT binding.<br/>• Planning Commission is NOT constitutional.<br/>• Chairman + FOUR members (not five members).",
+      "id": "ktsqudz"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Finance Commission is NOT a permanent body.",
+      "id": "koaigma"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature / Topic",
+        "Common Exam Trap",
+        "Correct Fact"
+      ],
+      "rows": [
+        [
+          "Finance Commission Structure",
+          "Is a permanent body",
+          "NOT a permanent body"
+        ],
+        [
+          "Report Recommendations",
+          "Binding on the government",
+          "Recommendations are NOT binding"
+        ],
+        [
+          "Planning Commission Status",
+          "Constitutional body",
+          "NOT constitutional"
+        ],
+        [
+          "Member Strength",
+          "Chairman + 5 members",
+          "Chairman + FOUR members"
+        ]
+      ],
+      "id": "829eze8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Body Nature",
+          "value": "Non-Permanent",
+          "icon": "info"
+        },
+        {
+          "label": "Recommendations",
+          "value": "Non-Binding",
+          "icon": "award"
+        },
+        {
+          "label": "Total Strength",
+          "value": "Chair + 4",
+          "icon": "check"
+        },
+        {
+          "label": "Planning Body",
+          "value": "Non-Constitutional",
+          "icon": "book"
+        }
+      ],
+      "id": "swgy7fr"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently test whether Finance Commission recommendations are binding—remember they are advisory only.",
+        "Pay close attention to member numbers: it consists of a Chairman + FOUR members (total 5 members).",
+        "Do not confuse constitutional bodies with non-constitutional bodies like the Planning Commission."
+      ],
+      "id": "va7wpuk"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Finance Commission is constituted periodically and is NOT a permanent body.",
+        "Recommendations made by the Finance Commission are advisory and NOT binding on the government.",
+        "Unlike the Finance Commission, the Planning Commission is NOT constitutional.",
+        "The composition of the Finance Commission is a Chairman plus FOUR members, not five."
+      ],
+      "id": "u2m7397"
+    }
+  ],
+  "enriched": true
+}

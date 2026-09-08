@@ -1,0 +1,130 @@
+{
+  "title": "3. Layers Based on Chemical Composition",
+  "order": 54,
+  "blocks": [
+    {
+      "id": "o86i1um",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Layer</strong></p>",
+            "<p><strong>Depth (km)</strong></p>",
+            "<p><strong>Composition</strong></p>",
+            "<p><strong>Density</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Crust</p>",
+            "<p>0–35</p>",
+            "<p>Silica + Aluminium (SIAL)</p>",
+            "<p>Lowest</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mantle</p>",
+            "<p>35–2900</p>",
+            "<p>Silica + Magnesium (SIMA)</p>",
+            "<p>Moderate</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Core</p>",
+            "<p>2900–6371</p>",
+            "<p>Nickel + Iron (NIFE)</p>",
+            "<p>Highest</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Edward Suess classified the interior of the Earth into three distinct chemical layers: SIAL, SIMA, and NIFE.",
+      "id": "3wlow2x"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Chemical Layer",
+        "Primary Composition",
+        "Average Density",
+        "Geographic / Structural Role"
+      ],
+      "rows": [
+        [
+          "SIAL",
+          "Silica (Si) + Aluminium (Al)",
+          "2.7 g/cm³",
+          "Forms Continental Crust"
+        ],
+        [
+          "SIMA",
+          "Silica (Si) + Magnesium (Mg)",
+          "2.9 – 4.7 g/cm³",
+          "Forms Oceanic Crust & Lower Crust"
+        ],
+        [
+          "NIFE",
+          "Nickel (Ni) + Iron (Fe)",
+          "11 – 13 g/cm³",
+          "Forms Earth's Core (Innermost Zone)"
+        ]
+      ],
+      "id": "623vibu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SIAL Layer",
+          "value": "Silica & Aluminium",
+          "icon": "book"
+        },
+        {
+          "label": "SIMA Layer",
+          "value": "Silica & Magnesium",
+          "icon": "info"
+        },
+        {
+          "label": "NIFE Layer",
+          "value": "Nickel & Iron (Fe)",
+          "icon": "check"
+        },
+        {
+          "label": "Classification By",
+          "value": "Edward Suess",
+          "icon": "award"
+        }
+      ],
+      "id": "ipnpscm"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "SIAL forms the continental crust and floats on the denser SIMA layer, which forms the ocean beds.",
+        "The abundance of Nickel and Iron in the NIFE layer is responsible for Earth's geomagnetic field.",
+        "Direct questions often test the chemical formula abbreviations: SIAL (Si + Al), SIMA (Si + Mg), and NIFE (Ni + Fe)."
+      ],
+      "id": "85xq2b8"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Edward Suess classified the Earth's interior into three distinct layers based on chemical composition: SIAL, SIMA, and NIFE.",
+        "SIAL consists predominantly of Silica and Aluminium, forming the upper layer of the continental crust with an average density of 2.7 g/cm³.",
+        "SIMA is composed of Silica and Magnesium, forming the oceanic floor and underlying continental layer with a density ranging from 2.9 to 4.7 g/cm³.",
+        "NIFE forms the core of the Earth, dominated by Nickel and Iron (Ferrum), exhibiting extremely high density (11–13 g/cm³) and rigid magnetic properties."
+      ],
+      "id": "ab2xbux"
+    }
+  ],
+  "enriched": true
+}

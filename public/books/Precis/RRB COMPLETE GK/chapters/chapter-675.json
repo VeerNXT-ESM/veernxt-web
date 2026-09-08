@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "dct3jmy"
+      "id": "dct3jmy",
+      "content": "The Securities Appellate Tribunal hears appeals against orders passed by SEBI, IRDAI, and PFRDA."
     },
     {
       "type": "pullQuote",
@@ -97,29 +98,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Established</p>",
+            "<p>1995</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Appeals Against</p>",
+            "<p>SEBI, IRDAI, PFRDA</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Appeal Lies With</p>",
+            "<p>Supreme Court</p>"
           ]
         }
       ]

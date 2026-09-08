@@ -1,0 +1,136 @@
+{
+  "title": "Important Differences: DPSP vs Fundamental Rights",
+  "order": 54,
+  "blocks": [
+    {
+      "id": "zoq0jg5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Directive Principles</strong></p>",
+            "<p><strong>Fundamental Rights</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Non-justiciable</p>",
+            "<p>Justiciable</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Guidelines to State</p>",
+            "<p>Guarantees to citizens</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Part IV</p>",
+            "<p>Part III</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Promote welfare</p>",
+            "<p>Protect individual freedom</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Indian Constitution is founded on the bedrock of the balance between Fundamental Rights and Directive Principles.",
+      "id": "s77h6wr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Fundamental Rights (Part III)",
+        "Directive Principles (Part IV)"
+      ],
+      "rows": [
+        [
+          "Nature",
+          "Negative; prohibit the State from taking certain actions.",
+          "Positive; require the State to perform certain duties."
+        ],
+        [
+          "Justiciability",
+          "Justiciable; directly enforceable by courts.",
+          "Non-justiciable; cannot be enforced by any court."
+        ],
+        [
+          "Democratic Aim",
+          "Establish Political Democracy.",
+          "Establish Social and Economic Democracy."
+        ],
+        [
+          "Sanction",
+          "Legal sanctions backed by constitutional remedies.",
+          "Moral and political sanctions backed by public opinion."
+        ],
+        [
+          "Scope",
+          "Promote individual liberty and civil welfare.",
+          "Promote community welfare and a socio-economic Welfare State."
+        ]
+      ],
+      "id": "hoba9oo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Fundamental Rights",
+          "value": "Part III",
+          "icon": "book"
+        },
+        {
+          "label": "Directive Principles",
+          "value": "Part IV",
+          "icon": "info"
+        },
+        {
+          "label": "FR Enforcement",
+          "value": "Article 32",
+          "icon": "check"
+        },
+        {
+          "label": "DPSP Non-Justiciable",
+          "value": "Article 37",
+          "icon": "award"
+        }
+      ],
+      "id": "kufj5xq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Champakam Dorairajan Case (1951): The Supreme Court ruled that Fundamental Rights prevail over DPSPs in case of conflict.",
+        "25th Constitutional Amendment Act (1971): Inserted Article 31C, giving precedence to DPSPs under Article 39(b) and (c) over Fundamental Rights in Articles 14 and 19.",
+        "Minerva Mills Case (1980): The Supreme Court held that the Constitution relies on harmony between Part III and Part IV, and absolute supremacy of one over the other destroys the basic structure."
+      ],
+      "id": "cexuhnw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Fundamental Rights are negative injunctions that prohibit the State from restricting individual liberty, whereas Directive Principles are positive commands requiring the State to take social welfare measures.",
+        "Fundamental Rights are legally enforceable and justiciable in court under Articles 32 and 226, while Directive Principles are non-justiciable under Article 37.",
+        "Fundamental Rights aim to establish political democracy, whereas Directive Principles aim to establish social and economic democracy.",
+        "Fundamental Rights carry legal sanctions, whereas Directive Principles carry moral and political sanctions.",
+        "In case of a conflict, courts generally uphold Fundamental Rights, except when laws are enacted to implement Articles 39(b) and 39(c) as protected under Article 31C."
+      ],
+      "id": "grltq21"
+    }
+  ],
+  "enriched": true
+}

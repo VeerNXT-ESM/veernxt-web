@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "wxuzwlu"
+      "id": "wxuzwlu",
+      "content": "A workplace hazard is any condition, situation, or activity that has the potential to cause injury, illness, or damage to workers, equipment, or the environment. In workshops and industrial settings, workers are often exposed to machines, electricity, chemicals, heat, noise, and heavy materials. If hazards are not properly identified and controlled, they can lead to serious accidents."
     },
     {
       "type": "paragraph",
-      "id": "nk1h26f"
+      "id": "nk1h26f",
+      "content": "Accident prevention involves identifying hazards, controlling risks, following safety rules, and ensuring that workers are properly trained to perform their tasks safely."
     },
     {
       "id": "xccqpt6",
@@ -63,7 +65,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wsv819q"
+      "id": "wsv819q",
+      "content": "An accident is an unplanned and unexpected event that results in injury, damage to property, or loss of life. In technical workshops, accidents may occur due to unsafe behavior, unsafe working conditions, or lack of proper knowledge about equipment and safety procedures."
     },
     {
       "id": "xrh5hsl",
@@ -83,57 +86,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Hazard Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mechanical Hazards</p>",
+            "<p>Risks from moving machinery or tools</p>",
+            "<p>Rotating machine parts, cutting tools</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Electrical Hazards</p>",
+            "<p>Dangers related to electric current</p>",
+            "<p>Electric shock, exposed wires</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chemical Hazards</p>",
+            "<p>Exposure to harmful chemicals</p>",
+            "<p>Acids, solvents, toxic gases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fire Hazards</p>",
+            "<p>Danger of fire or explosions</p>",
+            "<p>Flammable liquids, sparks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Noise Hazards</p>",
+            "<p>Exposure to excessive noise</p>",
+            "<p>Heavy machinery and compressors</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ergonomic Hazards</p>",
+            "<p>Poor working posture or repetitive work</p>",
+            "<p>Improper lifting, long working hours</p>"
           ]
         }
       ]
@@ -151,50 +154,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lack of Training</p>",
+            "<p>Workers may not understand how to operate machines safely.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Carelessness</p>",
+            "<p>Ignoring safety rules or rushing work.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Faulty Equipment</p>",
+            "<p>Damaged tools or machines can cause accidents.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Poor Housekeeping</p>",
+            "<p>Cluttered floors, oil spills, and scattered tools.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Improper Use of Tools</p>",
+            "<p>Using the wrong tool for a job.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fatigue</p>",
+            "<p>Tired workers may make mistakes.</p>"
           ]
         }
       ]
@@ -231,11 +234,11 @@
       "id": "b80ndt8",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Injury or loss of life",
+        "Damage to machines and tools",
+        "Loss of productivity",
+        "Financial loss to the organization",
+        "Psychological stress for workers"
       ]
     },
     {
@@ -248,13 +251,13 @@
       "id": "cagwb5y",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Follow all safety rules and procedures",
+        "Use appropriate Personal Protective Equipment (PPE)",
+        "Keep the workplace clean and organized",
+        "Maintain machines regularly",
+        "Provide proper training to workers",
+        "Install safety guards on machines",
+        "Ensure proper lighting and ventilation"
       ]
     },
     {
@@ -265,7 +268,8 @@
     },
     {
       "type": "paragraph",
-      "id": "d59eaq9"
+      "id": "d59eaq9",
+      "content": "Safety awareness programs and training sessions help workers understand workplace hazards and learn how to avoid accidents. Regular safety meetings, demonstrations, and safety drills improve workers' knowledge and preparedness."
     },
     {
       "type": "examAlert",
@@ -286,11 +290,11 @@
       "id": "8on2ogi",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Follow safety guidelines at all times",
+        "Report unsafe conditions immediately",
+        "Use tools and equipment properly",
+        "Participate in safety training programs",
+        "Encourage coworkers to follow safety rules"
       ]
     },
     {
@@ -303,10 +307,10 @@
       "id": "fqcfl49",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "A hazard is anything that can cause harm or injury.",
+        "Accidents are unplanned events that cause injury or damage.",
+        "Mechanical, electrical, chemical, and fire hazards are common in workshops.",
+        "Accident prevention requires training, safe practices, and proper equipment."
       ]
     }
   ],

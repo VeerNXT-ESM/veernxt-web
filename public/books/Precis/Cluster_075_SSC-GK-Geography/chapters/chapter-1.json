@@ -1,0 +1,324 @@
+{
+  "title": "CHAPTER 1: UNIVERSE & SOLAR SYSTEM",
+  "order": 1,
+  "blocks": [
+    {
+      "id": "0p51q3n",
+      "type": "heading",
+      "level": 3,
+      "content": "Universe"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Sun's Mass Share",
+          "value": "99.86%",
+          "icon": "award"
+        },
+        {
+          "label": "Sun-Earth Distance",
+          "value": "150 Million km",
+          "icon": "info"
+        },
+        {
+          "label": "Pluto Reclassified",
+          "value": "2006",
+          "icon": "calendar"
+        },
+        {
+          "label": "Solar System Planets",
+          "value": "8",
+          "icon": "check"
+        }
+      ],
+      "id": "zblz2fp"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Universe originated from an extremely hot, dense singularity via the Big Bang and continues to expand.",
+        "Our Solar System is located within the Milky Way, which is a spiral galaxy.",
+        "The Sun is a medium-sized star generating energy through core nuclear fusion reactions, making up 99.86% of the Solar System's total mass.",
+        "Venus is the hottest planet due to the greenhouse effect and rotates from east to west.",
+        "Asteroids are rocky bodies located primarily between the orbits of Mars and Jupiter."
+      ],
+      "id": "y182htp"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Universe is the vast, infinite space that contains everything that exists. It includes galaxies, stars, planets, satellites, asteroids, comets, dust, and gases. The Universe has no definite shape or boundary and is continuously expanding.",
+      "id": "izey935"
+    },
+    {
+      "id": "o1tyn69",
+      "type": "heading",
+      "level": 3,
+      "content": "Big Bang Theory"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Big Bang Theory is the most accepted theory regarding the origin of the Universe. According to this theory, the Universe originated from an extremely hot and dense point called a singularity. A massive explosion occurred, after which the Universe started expanding. This expansion is still continuing. <img alt=\"Origin of the Universe: The Big Bang Theory | UPSC General Studies Notes |  CUET Notes |\" src=\"/books/Precis/Cluster_014_SSC-GK-Geography/images/image_v5d72cb.png\"/>",
+      "id": "kltda6h"
+    },
+    {
+      "id": "kq2h2zy",
+      "type": "heading",
+      "level": 3,
+      "content": "Galaxies"
+    },
+    {
+      "type": "paragraph",
+      "content": "A galaxy is a huge system of billions of stars, planets, gases, and dust held together by gravity. There are billions of galaxies in the Universe.",
+      "id": "8fgltn4"
+    },
+    {
+      "type": "paragraph",
+      "content": "Types of galaxies:",
+      "id": "gklxuqs"
+    },
+    {
+      "id": "e89i0vk",
+      "type": "list",
+      "items": [
+        "<ul><li><ul><li>Spiral galaxies</li><li>Elliptical galaxies</li><li>Irregular galaxies</li></ul></li></ul>",
+        "<ul><li>Spiral galaxies</li><li>Elliptical galaxies</li><li>Irregular galaxies</li></ul>",
+        "Spiral galaxies",
+        "Elliptical galaxies",
+        "Irregular galaxies"
+      ]
+    },
+    {
+      "id": "3t3h7gr",
+      "type": "heading",
+      "level": 3,
+      "content": "Milky Way Galaxy"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Milky Way is the galaxy in which our Solar System is located. It is a spiral galaxy and contains billions of stars. The Sun is one of the stars of the Milky Way galaxy.",
+      "id": "zsityyu"
+    },
+    {
+      "id": "c1adhjd",
+      "type": "heading",
+      "level": 3,
+      "content": "Stars"
+    },
+    {
+      "type": "paragraph",
+      "content": "Stars are massive, self-luminous celestial bodies that emit heat and light. They produce energy through nuclear fusion reactions occurring in their core.",
+      "id": "2anpdc6"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Universe is the vast, infinite space that contains everything that exists.",
+      "id": "w1oaxy9"
+    },
+    {
+      "id": "w66622t",
+      "type": "heading",
+      "level": 3,
+      "content": "The Sun"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Sun is a medium-sized star and the central body of the Solar System. It is composed mainly of hydrogen and helium. The Sun provides heat and light to all the planets of the Solar System.",
+      "id": "3biwhnr"
+    },
+    {
+      "type": "paragraph",
+      "content": "Important facts about the Sun:",
+      "id": "zxuh9g1"
+    },
+    {
+      "id": "gxc97b1",
+      "type": "list",
+      "items": [
+        "<ul><li><ul><li>Accounts for about 99.86% of the total mass of the Solar System</li><li>Average distance from Earth is about 150 million kilometres</li><li>Source of solar energy for Earth</li></ul></li></ul>",
+        "<ul><li>Accounts for about 99.86% of the total mass of the Solar System</li><li>Average distance from Earth is about 150 million kilometres</li><li>Source of solar energy for Earth</li></ul>",
+        "Accounts for about 99.86% of the total mass of the Solar System",
+        "Average distance from Earth is about 150 million kilometres",
+        "Source of solar energy for Earth"
+      ]
+    },
+    {
+      "id": "1p2ye7j",
+      "type": "heading",
+      "level": 3,
+      "content": "Solar System"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Solar System consists of the Sun, eight planets, their satellites, asteroids, comets, meteoroids, and other celestial bodies. All planets revolve around the Sun in elliptical orbits.",
+      "id": "3lpw3lo"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Planet",
+        "Special Name / Distinction",
+        "Key Characteristics"
+      ],
+      "rows": [
+        [
+          "Mercury",
+          "Closest & Smallest Planet",
+          "No atmosphere and no satellite"
+        ],
+        [
+          "Venus",
+          "Hottest Planet / Earth's Twin",
+          "Rotates east to west; intense greenhouse effect"
+        ],
+        [
+          "Earth",
+          "Blue Planet",
+          "Only planet known to support life; has water and oxygen"
+        ],
+        [
+          "Mars",
+          "Red Planet",
+          "Surface has iron oxide; has two moons (Phobos and Deimos)"
+        ],
+        [
+          "Jupiter",
+          "Largest Planet",
+          "Gas giant; has maximum number of satellites"
+        ],
+        [
+          "Saturn",
+          "Ringed Planet",
+          "Has a prominent ring system; least dense planet"
+        ]
+      ],
+      "id": "11ggyxj"
+    },
+    {
+      "id": "nov4lry",
+      "type": "heading",
+      "level": 3,
+      "content": "Order of Planets"
+    },
+    {
+      "type": "paragraph",
+      "content": "The eight planets in order from the Sun are:",
+      "id": "ntvot22"
+    },
+    {
+      "id": "386q935",
+      "type": "numberedList",
+      "items": [
+        "Mercury",
+        "Venus",
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune"
+      ]
+    },
+    {
+      "id": "dbjs5am",
+      "type": "heading",
+      "level": 3,
+      "content": "Planets: Individual Description"
+    },
+    {
+      "id": "d05a4ac",
+      "type": "list",
+      "items": [
+        "Mercury: Closest and smallest planet. No atmosphere and no satellite.",
+        "Venus: Hottest planet due to greenhouse effect. Rotates from east to west. Called Earth's twin.",
+        "Earth: Only planet known to support life. Has water, oxygen, and suitable temperature. Called Blue Planet.",
+        "Mars: Known as Red Planet due to iron oxide. Has two moons – Phobos and Deimos.",
+        "Jupiter: Largest planet and gas giant. Has maximum number of satellites.",
+        "Saturn: Known for its ring system. Least dense planet.",
+        "Uranus: Rotates on its side due to extreme axial tilt.",
+        "Neptune: Farthest planet from the Sun. Strong winds and very cold."
+      ]
+    },
+    {
+      "id": "7sdp2y9",
+      "type": "heading",
+      "level": 3,
+      "content": "Dwarf Planets"
+    },
+    {
+      "type": "paragraph",
+      "content": "Dwarf planets are celestial bodies that orbit the Sun but have not cleared their orbital path. Important dwarf planets include Pluto, Ceres, and Eris. Pluto was reclassified as a dwarf planet in 2006.",
+      "id": "el4dsmn"
+    },
+    {
+      "id": "uxp48d0",
+      "type": "heading",
+      "level": 3,
+      "content": "Satellites"
+    },
+    {
+      "type": "paragraph",
+      "content": "Satellites are celestial bodies that revolve around planets. They can be natural or artificial.",
+      "id": "ooyq1g4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Venus rotates from east to west and is the hottest planet in the Solar System.",
+        "Mars is known as the Red Planet (due to iron oxide) and has two moons: Phobos and Deimos.",
+        "Pluto was reclassified from a major planet to a dwarf planet in 2006.",
+        "Saturn is the least dense planet, and Jupiter is the largest."
+      ],
+      "id": "ja361xp"
+    },
+    {
+      "id": "teissuf",
+      "type": "heading",
+      "level": 3,
+      "content": "The Moon"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Moon is the only natural satellite of the Earth. It has no atmosphere and no water. The Moon reflects sunlight and causes tides on Earth.",
+      "id": "woj2vv8"
+    },
+    {
+      "id": "68kd2jd",
+      "type": "heading",
+      "level": 3,
+      "content": "Other Celestial Bodies"
+    },
+    {
+      "id": "y484dhv",
+      "type": "list",
+      "items": [
+        "Asteroids are rocky bodies found mainly between Mars and Jupiter.",
+        "Comets are made of ice and dust and develop a tail when they come close to the Sun.",
+        "Meteors burn in the Earth's atmosphere and are called shooting stars.",
+        "Meteorites are meteors that reach the Earth's surface."
+      ]
+    },
+    {
+      "id": "6ct48w2",
+      "type": "heading",
+      "level": 3,
+      "content": "SSC Important One-Liners"
+    },
+    {
+      "id": "z6ggn92",
+      "type": "list",
+      "items": [
+        "Largest planet – Jupiter",
+        "Hottest planet – Venus",
+        "Red Planet – Mars",
+        "Blue Planet – Earth",
+        "Planet with rings – Saturn",
+        "Farthest planet – Neptune",
+        "Galaxy of Solar System – Milky Way",
+        "Sun is a star"
+      ]
+    }
+  ],
+  "enriched": true
+}

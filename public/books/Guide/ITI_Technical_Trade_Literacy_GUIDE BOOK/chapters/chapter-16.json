@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "79p89in"
+      "id": "79p89in",
+      "content": "Electric current is the flow of electric charge through a conductor. In electrical engineering and technical trades, two main types of electric current are used: Alternating Current (AC) and Direct Current (DC). Understanding their characteristics, applications, and differences is important for working with electrical systems."
     },
     {
       "id": "wbweben",
@@ -59,7 +60,8 @@
     },
     {
       "type": "paragraph",
-      "id": "j862u4s"
+      "id": "j862u4s",
+      "content": "Direct Current (DC) is the type of electric current that flows in only one direction. The magnitude of current may be constant or may vary slightly, but its direction does not change."
     },
     {
       "id": "p1gnguc",
@@ -68,36 +70,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Direction of Flow</p>",
+            "<p>Flows in only one direction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Source</p>",
+            "<p>Batteries, solar cells, DC generators</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Voltage Level</p>",
+            "<p>Usually low voltage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Waveform</p>",
+            "<p>Straight line (constant value)</p>"
           ]
         }
       ]
@@ -112,11 +114,11 @@
       "id": "r0e0avh",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Dry cell battery",
+        "Car battery",
+        "Solar panel",
+        "DC generator",
+        "Power supply units"
       ]
     },
     {
@@ -127,7 +129,8 @@
     },
     {
       "type": "paragraph",
-      "id": "a7gbl6m"
+      "id": "a7gbl6m",
+      "content": "Alternating Current (AC) is the type of electric current that periodically changes its direction and magnitude with time. AC is widely used for power distribution because it can be easily transmitted over long distances."
     },
     {
       "type": "pullQuote",
@@ -141,36 +144,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Direction of Flow</p>",
+            "<p>Changes direction periodically</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Source</p>",
+            "<p>AC generators and power stations</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Voltage Level</p>",
+            "<p>Can be stepped up or down using transformers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Waveform</p>",
+            "<p>Sinusoidal waveform</p>"
           ]
         }
       ]
@@ -183,7 +186,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ca4vmzt"
+      "id": "ca4vmzt",
+      "content": "In AC circuits, voltage and current vary with time in a sinusoidal pattern. This waveform is called a sine wave. The waveform alternates between positive and negative values."
     },
     {
       "id": "ynxgzy1",
@@ -198,43 +202,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cycle</p>",
+            "<p>One complete wave of AC</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Frequency</p>",
+            "<p>Number of cycles per second (Hz)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Peak Value</p>",
+            "<p>Maximum value of voltage or current</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Time Period</p>",
+            "<p>Time taken for one cycle</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RMS Value</p>",
+            "<p>Effective value of AC voltage/current</p>"
           ]
         }
       ]
@@ -283,11 +287,13 @@
     },
     {
       "type": "paragraph",
-      "id": "mrur7hu"
+      "id": "mrur7hu",
+      "content": "Frequency is the number of cycles of AC produced in one second. The unit of frequency is Hertz (Hz)."
     },
     {
       "type": "paragraph",
-      "id": "ocn7df0"
+      "id": "ocn7df0",
+      "content": "Standard household frequency in many countries including India is 50 Hz."
     },
     {
       "id": "0pva0r0",
@@ -302,49 +308,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>AC</strong></p>",
+            "<p><strong>DC</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Direction of Current</p>",
+            "<p>Changes periodically</p>",
+            "<p>Constant direction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Source</p>",
+            "<p>Power plants</p>",
+            "<p>Batteries</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Transmission</p>",
+            "<p>Efficient for long distance</p>",
+            "<p>Less efficient for long distance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Waveform</p>",
+            "<p>Sinusoidal</p>",
+            "<p>Straight line</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Applications</p>",
+            "<p>Household appliances</p>",
+            "<p>Electronics and batteries</p>"
           ]
         }
       ]
@@ -362,22 +368,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Current Type</strong></p>",
+            "<p><strong>Applications</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>AC</p>",
+            "<p>Home appliances, industrial motors, power distribution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>DC</p>",
+            "<p>Electronic circuits, batteries, mobile phones, computers</p>"
           ]
         }
       ]
@@ -401,9 +407,9 @@
       "id": "08q61l6",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Easy transmission over long distances",
+        "Voltage can be easily transformed",
+        "Used for large-scale power generation"
       ]
     },
     {
@@ -416,9 +422,9 @@
       "id": "apr22f9",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Stable voltage supply",
+        "Used in electronic devices",
+        "Suitable for battery-powered equipment"
       ]
     },
     {
@@ -431,11 +437,11 @@
       "id": "k4t6e7f",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "DC flows in only one direction.",
+        "AC changes direction periodically.",
+        "Unit of frequency is Hertz (Hz).",
+        "Standard household frequency in India is 50 Hz.",
+        "AC waveform is sinusoidal."
       ]
     }
   ],

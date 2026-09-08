@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "13rs1o1"
+      "id": "13rs1o1",
+      "content": "Electricity is one of the most important and high-weightage topics in RRB examinations. This chapter covers electric charge, current, potential difference, resistance, Ohm’s law, electric power, heating effect of current and related numericals."
     },
     {
       "id": "s3jmjch",
@@ -59,24 +60,29 @@
     },
     {
       "type": "paragraph",
-      "id": "y4or1ox"
+      "id": "y4or1ox",
+      "content": "• Charge is the basic property of matter responsible for electrical phenomena."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tfr31qo"
+      "id": "tfr31qo",
+      "content": "• SI unit: Coulomb (C)"
     },
     {
       "type": "paragraph",
-      "id": "4qqps3g"
+      "id": "4qqps3g",
+      "content": "• 1 Coulomb = 6.25 × 10¹⁸ electrons"
     },
     {
       "type": "paragraph",
-      "id": "dwz6083"
+      "id": "dwz6083",
+      "content": "• Charge is conserved and quantized."
     },
     {
       "type": "paragraph",
-      "id": "2mwyszc"
+      "id": "2mwyszc",
+      "content": "• e = 1.6 × 10⁻¹⁹ C"
     },
     {
       "id": "8sveucu",
@@ -85,26 +91,37 @@
       "content": "2. ELECTRIC CURRENT"
     },
     {
-      "type": "paragraph",
-      "id": "a4zolgr"
+      "id": "a3hgqoc",
+      "type": "image",
+      "imageId": "7t36t9h",
+      "src": "/books/Precis/RRB GS/images/image_7t36t9h.png"
     },
     {
       "type": "paragraph",
-      "id": "hl4n9s9"
+      "id": "a4zolgr",
+      "content": "• Electric current is the rate of flow of charge.<img></img>"
+    },
+    {
+      "type": "paragraph",
+      "id": "hl4n9s9",
+      "content": "Formula: I = Q / t"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9nm103t"
+      "id": "9nm103t",
+      "content": "SI unit: Ampere (A)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yx0kd7r"
+      "id": "yx0kd7r",
+      "content": "1 Ampere = 1 Coulomb/second"
     },
     {
       "type": "paragraph",
-      "id": "9ntjtaf"
+      "id": "9ntjtaf",
+      "content": "Conventional current flows from positive to negative terminal."
     },
     {
       "id": "u0wthc7",
@@ -114,21 +131,25 @@
     },
     {
       "type": "paragraph",
-      "id": "6pjqmkf"
+      "id": "6pjqmkf",
+      "content": "• Work done in moving unit charge between two points."
     },
     {
       "type": "paragraph",
-      "id": "k2cfoyj"
+      "id": "k2cfoyj",
+      "content": "Formula: V = W / Q"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i1nemm3"
+      "id": "i1nemm3",
+      "content": "SI unit: Volt (V)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g0xumnj"
+      "id": "g0xumnj",
+      "content": "1 Volt = 1 Joule/Coulomb"
     },
     {
       "id": "29ltnuk",
@@ -138,21 +159,25 @@
     },
     {
       "type": "paragraph",
-      "id": "elndrf5"
+      "id": "elndrf5",
+      "content": "At constant temperature, current is directly proportional to potential difference."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z7uk5t8"
+      "id": "z7uk5t8",
+      "content": "V ∝ I"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8cj20tf"
+      "id": "8cj20tf",
+      "content": "V = IR"
     },
     {
       "type": "paragraph",
-      "id": "inrl6zv"
+      "id": "inrl6zv",
+      "content": "Graph of V vs I is a straight line."
     },
     {
       "type": "pullQuote",
@@ -167,21 +192,25 @@
     },
     {
       "type": "paragraph",
-      "id": "4283f7e"
+      "id": "4283f7e",
+      "content": "• Opposition offered by conductor to flow of current."
     },
     {
       "type": "paragraph",
-      "id": "cyvcdjg"
+      "id": "cyvcdjg",
+      "content": "Formula: R = V / I"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i2yhh27"
+      "id": "i2yhh27",
+      "content": "SI unit: Ohm (Ω)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tkholwu"
+      "id": "tkholwu",
+      "content": "1 Ohm = 1 Volt/Ampere"
     },
     {
       "id": "0brw9vw",
@@ -196,43 +225,44 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Relation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Length (L)</p>",
+            "<p>R ∝ L</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Area (A)</p>",
+            "<p>R ∝ 1/A</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Material</p>",
+            "<p>Depends on resistivity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Temperature</p>",
+            "<p>Increases for metals</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "dq2dihv"
+      "id": "dq2dihv",
+      "content": "Formula: R = ρL / A"
     },
     {
       "id": "7vu2th6",
@@ -242,16 +272,19 @@
     },
     {
       "type": "paragraph",
-      "id": "9lcyn91"
+      "id": "9lcyn91",
+      "content": "• Property of material."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "h9fgd6n"
+      "id": "h9fgd6n",
+      "content": "SI unit: Ohm metre (Ωm)"
     },
     {
       "type": "paragraph",
-      "id": "xjny1hj"
+      "id": "xjny1hj",
+      "content": "Depends on temperature and material only."
     },
     {
       "type": "comparisonTable",
@@ -303,25 +336,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Combination</strong></p>",
+            "<p><strong>Formula</strong></p>",
+            "<p><strong>Current/Voltage</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Series</p>",
+            "<p>R = R1 + R2 + R3</p>",
+            "<p>Current same</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Parallel</p>",
+            "<p>1/R = 1/R1 + 1/R2</p>",
+            "<p>Voltage same</p>"
           ]
         }
       ]
@@ -334,21 +367,25 @@
     },
     {
       "type": "paragraph",
-      "id": "mkb0pkz"
+      "id": "mkb0pkz",
+      "content": "• Rate of doing electrical work."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lqlx2ca"
+      "id": "lqlx2ca",
+      "content": "P = VI"
     },
     {
       "type": "paragraph",
-      "id": "dpv2yre"
+      "id": "dpv2yre",
+      "content": "Also: P = I²R and P = V²/R"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ktyu4w8"
+      "id": "ktyu4w8",
+      "content": "SI unit: Watt (W)"
     },
     {
       "id": "ikizw7j",
@@ -359,11 +396,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "vfwaada"
+      "id": "vfwaada",
+      "content": "Heat produced: H = I²Rt"
     },
     {
       "type": "paragraph",
-      "id": "gkp7nee"
+      "id": "gkp7nee",
+      "content": "Applications: Electric heater, fuse, bulb filament."
     },
     {
       "id": "0pw5l37",
@@ -373,11 +412,13 @@
     },
     {
       "type": "paragraph",
-      "id": "t7hm536"
+      "id": "t7hm536",
+      "content": "1 kWh = 3.6 × 10⁶ Joule"
     },
     {
       "type": "paragraph",
-      "id": "m7o969l"
+      "id": "m7o969l",
+      "content": "Electric bill calculated in kWh units."
     },
     {
       "id": "f0y25s1",
@@ -387,7 +428,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jlkdfy3"
+      "id": "jlkdfy3",
+      "content": "• Fuse protects circuit from overcurrent."
     },
     {
       "type": "examAlert",
@@ -401,11 +443,13 @@
     },
     {
       "type": "paragraph",
-      "id": "qhs58rc"
+      "id": "qhs58rc",
+      "content": "• Made of low melting point alloy."
     },
     {
       "type": "paragraph",
-      "id": "lrecunz"
+      "id": "lrecunz",
+      "content": "• MCB automatically switches off during overload."
     },
     {
       "id": "bigz4ym",
@@ -420,50 +464,51 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Colour</strong></p>",
+            "<p><strong>Number</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Black</p>",
+            "<p>0</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Brown</p>",
+            "<p>1</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Red</p>",
+            "<p>2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Orange</p>",
+            "<p>3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Yellow</p>",
+            "<p>4</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "o92k885"
+      "id": "o92k885",
+      "content": "Mnemonic example: 'BB ROY' pattern often used in exams."
     },
     {
       "id": "fx18fil",
@@ -473,23 +518,28 @@
     },
     {
       "type": "paragraph",
-      "id": "1tfmt6y"
+      "id": "1tfmt6y",
+      "content": "• Ammeter connected in series (low resistance)."
     },
     {
       "type": "paragraph",
-      "id": "6uwus25"
+      "id": "6uwus25",
+      "content": "• Voltmeter connected in parallel (high resistance)."
     },
     {
       "type": "paragraph",
-      "id": "gt5n8f8"
+      "id": "gt5n8f8",
+      "content": "• In series, total resistance increases."
     },
     {
       "type": "paragraph",
-      "id": "d20bui2"
+      "id": "d20bui2",
+      "content": "• In parallel, equivalent resistance decreases."
     },
     {
       "type": "paragraph",
-      "id": "pyj6qyi"
+      "id": "pyj6qyi",
+      "content": "• Electric bulb filament made of tungsten (high melting point)."
     }
   ],
   "enriched": true

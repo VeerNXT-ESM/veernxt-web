@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "r0myuj9"
+      "id": "r0myuj9",
+      "content": "Force and work are important concepts in physics that explain how objects move and interact. Force causes a change in the state of motion of an object, while work is done when a force causes displacement."
     },
     {
       "type": "statStrip",
@@ -53,19 +54,23 @@
     },
     {
       "type": "paragraph",
-      "id": "jatqice"
+      "id": "jatqice",
+      "content": "• Force is a push or pull acting on an object."
     },
     {
       "type": "paragraph",
-      "id": "d0s8smz"
+      "id": "d0s8smz",
+      "content": "• It can change the shape, direction or speed of an object."
     },
     {
       "type": "paragraph",
-      "id": "qmsf66h"
+      "id": "qmsf66h",
+      "content": "• The SI unit of force is Newton (N)."
     },
     {
       "type": "paragraph",
-      "id": "zsdc9t5"
+      "id": "zsdc9t5",
+      "content": "• Force is a vector quantity."
     },
     {
       "id": "gok3am2",
@@ -75,19 +80,23 @@
     },
     {
       "type": "paragraph",
-      "id": "eg8ou5k"
+      "id": "eg8ou5k",
+      "content": "• Force can start or stop motion."
     },
     {
       "type": "paragraph",
-      "id": "fb44h6j"
+      "id": "fb44h6j",
+      "content": "• It can change the speed of an object."
     },
     {
       "type": "paragraph",
-      "id": "6i5vb7a"
+      "id": "6i5vb7a",
+      "content": "• It can change the direction of motion."
     },
     {
       "type": "paragraph",
-      "id": "iel0gu8"
+      "id": "iel0gu8",
+      "content": "• It can change the shape or size of an object."
     },
     {
       "id": "2hzmadb",
@@ -102,22 +111,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Force</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Contact Force</p>",
+            "<p>Frictional force, muscular force</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Non-Contact Force</p>",
+            "<p>Gravitational force, magnetic force, electrostatic force</p>"
           ]
         }
       ]
@@ -135,27 +144,33 @@
     },
     {
       "type": "paragraph",
-      "id": "csyz3ng"
+      "id": "csyz3ng",
+      "content": "First Law (Law of Inertia):"
     },
     {
       "type": "paragraph",
-      "id": "5znfdf3"
+      "id": "5znfdf3",
+      "content": "An object remains at rest or continues in uniform motion unless acted upon by an external force."
     },
     {
       "type": "paragraph",
-      "id": "bzyo8p0"
+      "id": "bzyo8p0",
+      "content": "Second Law:"
     },
     {
       "type": "paragraph",
-      "id": "eyzhgu4"
+      "id": "eyzhgu4",
+      "content": "The rate of change of momentum of an object is proportional to the applied force. Mathematically: F = ma"
     },
     {
       "type": "paragraph",
-      "id": "edqx2r0"
+      "id": "edqx2r0",
+      "content": "Third Law:"
     },
     {
       "type": "paragraph",
-      "id": "2vwsb3w"
+      "id": "2vwsb3w",
+      "content": "For every action, there is an equal and opposite reaction."
     },
     {
       "id": "c6lfqhp",
@@ -191,7 +206,8 @@
     },
     {
       "type": "paragraph",
-      "id": "446626r"
+      "id": "446626r",
+      "content": "Work is said to be done when a force applied on an object causes displacement. The SI unit of work is Joule (J)."
     },
     {
       "id": "ufaoji2",
@@ -202,12 +218,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "04v69mf"
+      "id": "04v69mf",
+      "content": "Work = Force × Displacement"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9gvuswm"
+      "id": "9gvuswm",
+      "content": "W = F × s"
     },
     {
       "id": "qgwfok1",
@@ -217,15 +235,18 @@
     },
     {
       "type": "paragraph",
-      "id": "t66bpj6"
+      "id": "t66bpj6",
+      "content": "• Positive Work – When force and displacement are in the same direction."
     },
     {
       "type": "paragraph",
-      "id": "dn0gjjc"
+      "id": "dn0gjjc",
+      "content": "• Negative Work – When force and displacement are in opposite directions."
     },
     {
       "type": "paragraph",
-      "id": "0j898qh"
+      "id": "0j898qh",
+      "content": "• Zero Work – When displacement is zero."
     },
     {
       "id": "n0cekcn",
@@ -235,7 +256,8 @@
     },
     {
       "type": "paragraph",
-      "id": "clah6lw"
+      "id": "clah6lw",
+      "content": "Power is the rate at which work is done."
     },
     {
       "type": "examAlert",
@@ -248,11 +270,13 @@
     },
     {
       "type": "paragraph",
-      "id": "10vghwq"
+      "id": "10vghwq",
+      "content": "Formula: Power = Work / Time"
     },
     {
       "type": "paragraph",
-      "id": "5ec1k3v"
+      "id": "5ec1k3v",
+      "content": "SI Unit of Power = Watt (W)"
     },
     {
       "id": "yk2p2d4",
@@ -262,19 +286,23 @@
     },
     {
       "type": "paragraph",
-      "id": "6a11zr0"
+      "id": "6a11zr0",
+      "content": "• SI unit of force is Newton."
     },
     {
       "type": "paragraph",
-      "id": "1esd03q"
+      "id": "1esd03q",
+      "content": "• Work is measured in Joule."
     },
     {
       "type": "paragraph",
-      "id": "k1ggwmj"
+      "id": "k1ggwmj",
+      "content": "• F = ma represents Newton’s Second Law of Motion."
     },
     {
       "type": "paragraph",
-      "id": "8513og6"
+      "id": "8513og6",
+      "content": "• Power is the rate of doing work."
     }
   ],
   "enriched": true

@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "qwcqjtk"
+      "id": "qwcqjtk",
+      "content": "National Income refers to the total monetary value of all final goods and services produced within a country during a financial year."
     },
     {
       "type": "paragraph",
-      "id": "pnjqfbx"
+      "id": "pnjqfbx",
+      "content": "In India, financial year runs from 1 April to 31 March."
     },
     {
       "id": "an7um24",
@@ -68,78 +70,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Formula / Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>GDP</p>",
+            "<p>Value of final goods &amp; services within domestic territory</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NDP</p>",
+            "<p>GDP – Depreciation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>GNP</p>",
+            "<p>GDP + Net Factor Income from Abroad (NFIA)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NNP</p>",
+            "<p>GNP – Depreciation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NNP at Factor Cost</p>",
+            "<p>NNP at Market Price – Indirect Taxes + Subsidies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Personal Income</p>",
+            "<p>Income received before direct tax</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Disposable Income</p>",
+            "<p>Personal Income – Direct Tax</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Per Capita Income</p>",
+            "<p>National Income ÷ Population</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>GDP Deflator</p>",
+            "<p>(Nominal GDP / Real GDP) × 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>GVA</p>",
+            "<p>GDP + Subsidies – Indirect Taxes</p>"
           ]
         }
       ]
@@ -152,7 +154,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8ng89wz"
+      "id": "8ng89wz",
+      "content": "1. Production Method (Value Added Method): Sum of value added at each stage of production.<br></br>2. Income Method: Sum of factor incomes (Wages + Rent + Interest + Profit).<br></br>3. Expenditure Method: C + I + G + (X – M)."
     },
     {
       "id": "cfqsbrt",
@@ -162,11 +165,13 @@
     },
     {
       "type": "paragraph",
-      "id": "uo0aicv"
+      "id": "uo0aicv",
+      "content": "GVA measures the value of goods and services produced in a sector after deducting intermediate consumption."
     },
     {
       "type": "paragraph",
-      "id": "r6fq27f"
+      "id": "r6fq27f",
+      "content": "Formula: GVA = Output – Intermediate Consumption."
     },
     {
       "type": "pullQuote",
@@ -175,7 +180,8 @@
     },
     {
       "type": "paragraph",
-      "id": "7d6kv18"
+      "id": "7d6kv18",
+      "content": "India shifted focus to GVA in 2015 for better sectoral analysis."
     },
     {
       "id": "n9j7wr4",
@@ -190,33 +196,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Factor Cost</strong></p>",
+            "<p><strong>Market Price</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Meaning</p>",
+            "<p>Cost of production</p>",
+            "<p>Price paid by consumers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Includes</p>",
+            "<p>Wages, Rent, Interest, Profit</p>",
+            "<p>Factor cost + Indirect taxes – Subsidies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Relation</p>",
+            "<p>Lower</p>",
+            "<p>Higher (due to taxes)</p>"
           ]
         }
       ]
@@ -229,11 +235,13 @@
     },
     {
       "type": "paragraph",
-      "id": "h8p4i3d"
+      "id": "h8p4i3d",
+      "content": "Base year is the reference year used for comparison of economic data."
     },
     {
       "type": "paragraph",
-      "id": "wck3sff"
+      "id": "wck3sff",
+      "content": "India's current GDP base year is 2011–12."
     },
     {
       "type": "comparisonTable",
@@ -263,7 +271,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0x1u15b"
+      "id": "0x1u15b",
+      "content": "Base year is revised periodically to reflect structural changes in the economy."
     },
     {
       "id": "hd43va1",
@@ -273,11 +282,13 @@
     },
     {
       "type": "paragraph",
-      "id": "o80n0m0"
+      "id": "o80n0m0",
+      "content": "Earlier, National Income was estimated by Central Statistical Organisation (CSO)."
     },
     {
       "type": "paragraph",
-      "id": "q0po3tl"
+      "id": "q0po3tl",
+      "content": "Now it is prepared by National Statistical Office (NSO) under Ministry of Statistics &amp; Programme Implementation (MoSPI)."
     },
     {
       "id": "6h5jgcd",
@@ -287,15 +298,18 @@
     },
     {
       "type": "paragraph",
-      "id": "6j39dsz"
+      "id": "6j39dsz",
+      "content": "PPP is an economic theory used to compare economic productivity and living standards between countries."
     },
     {
       "type": "paragraph",
-      "id": "ywmm8r6"
+      "id": "ywmm8r6",
+      "content": "It adjusts exchange rates according to price level differences."
     },
     {
       "type": "paragraph",
-      "id": "l4586ca"
+      "id": "l4586ca",
+      "content": "India is among the top economies in the world in terms of PPP."
     },
     {
       "type": "examAlert",
@@ -319,33 +333,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Nominal</strong></p>",
+            "<p><strong>Real</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Price</p>",
+            "<p>Current Prices</p>",
+            "<p>Constant Prices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inflation</p>",
+            "<p>Includes inflation</p>",
+            "<p>Adjusted for inflation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Purpose</p>",
+            "<p>Current value</p>",
+            "<p>Growth measurement</p>"
           ]
         }
       ]
@@ -358,7 +372,8 @@
     },
     {
       "type": "paragraph",
-      "id": "h4lu9bu"
+      "id": "h4lu9bu",
+      "content": "• Transfer payments (pension, scholarships)<br></br>• Sale of second-hand goods<br></br>• Illegal activities<br></br>• Intermediate goods (to avoid double counting)"
     },
     {
       "id": "jrwzoec",
@@ -368,7 +383,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ct4mzbx"
+      "id": "ct4mzbx",
+      "content": "• GNP = GDP + NFIA<br></br>• NNP at FC = NNP at MP – Indirect Tax + Subsidy<br></br>• Base Year (India) – 2011–12<br></br>• National Income estimated by NSO<br></br>• GVA = Output – Intermediate Consumption<br></br>• GDP Deflator measures inflation<br></br>"
     }
   ],
   "enriched": true

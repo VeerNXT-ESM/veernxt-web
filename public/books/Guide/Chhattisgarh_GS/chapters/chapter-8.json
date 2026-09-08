@@ -4,6 +4,12 @@
   "order": 8,
   "blocks": [
     {
+      "id": "kg1rsar",
+      "type": "image",
+      "imageId": "o42hcrv",
+      "src": "/books/Guide/Chhattisgarh_GS/images/image_o42hcrv.jpeg"
+    },
+    {
       "id": "m21pp43",
       "type": "heading",
       "level": 2,
@@ -49,7 +55,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fu5qkex"
+      "id": "fu5qkex",
+      "content": "Chhattisgarh is one of the most forested states of India. About 44% of the state's geographical area is covered by forests, which is among the highest in the country. The forests are primarily concentrated in the Bastar, Surguja, and Jashpur regions."
     },
     {
       "id": "0sef3h5",
@@ -58,36 +65,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Area (approx.)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Reserved Forests</p>",
+            "<p>Maximum area</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Protected Forests</p>",
+            "<p>Moderate area</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Unclassified Forests</p>",
+            "<p>Some area</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Total Forest Cover</p>",
+            "<p>~55,000 sq km (approx. 44% of state area)</p>"
           ]
         }
       ]
@@ -110,37 +117,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>National Park</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Area (sq km)</strong></p>",
+            "<p><strong>Key Wildlife</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Indravati National Park</p>",
+            "<p>Bijapur</p>",
+            "<p>2,799</p>",
+            "<p>Wild buffalo; tiger; leopard; wild dog</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kanger Valley National Park</p>",
+            "<p>Bastar (Jagdalpur)</p>",
+            "<p>200</p>",
+            "<p>Bastar hill myna; caves; river</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Guru Ghasidas National Park</p>",
+            "<p>Korea &amp; Surguja</p>",
+            "<p>1,441</p>",
+            "<p>Tiger; leopard; barasingha; wolf</p>"
           ]
         }
       ]
@@ -184,81 +191,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Sanctuary</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Achanakmar Tiger Reserve</p>",
+            "<p>Bilaspur, Mungli</p>",
+            "<p>Tiger reserve; part of Achanakmar-Amarkantak Biosphere</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Udanti-Sitanadi Tiger Reserve</p>",
+            "<p>Gariaband, Dhamtari</p>",
+            "<p>Wild buffalo conservation; two units merged</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Barnawapara Wildlife Sanctuary</p>",
+            "<p>Baloda Bazar</p>",
+            "<p>Leopard; deer; waterfowl</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Badalkhol Wildlife Sanctuary</p>",
+            "<p>Jashpur</p>",
+            "<p>Leopard; sambar; chital</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sanjay-Dubri Tiger Reserve</p>",
+            "<p>Korea</p>",
+            "<p>Extended into MP; tiger reserve</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pamed Wildlife Sanctuary</p>",
+            "<p>Bijapur</p>",
+            "<p>Wild buffalo; deer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gomarda Wildlife Sanctuary</p>",
+            "<p>Raigarh</p>",
+            "<p>Gaur; leopard; deer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tamor Pingla Wildlife Sanctuary</p>",
+            "<p>Surguja</p>",
+            "<p>Tiger; leopard</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Semarsot Wildlife Sanctuary</p>",
+            "<p>Surguja</p>",
+            "<p>Tiger; sambar; chital</p>"
           ]
         }
       ]
@@ -285,64 +292,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Species</strong></p>",
+            "<p><strong>Significance in CG</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wild Buffalo (Gaur Bhains)</p>",
+            "<p>State animal of CG; found in Indravati NP and Udanti-Sitanadi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hill Myna (Pahadi Myna)</p>",
+            "<p>State bird of CG; famous for mimicry; found in Kanger Valley NP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Teak (Sagwan)</p>",
+            "<p>State tree of CG; major timber tree</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tiger (Bagh)</p>",
+            "<p>Found in Achanakmar, Indravati, Guru Ghasidas reserves</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Barasingha (Swamp Deer)</p>",
+            "<p>Found in forests of CG and Guru Ghasidas NP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Giant Squirrel</p>",
+            "<p>Found in forests of Bastar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mouse Deer</p>",
+            "<p>Small deer; found in dense forests</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Painted Stork</p>",
+            "<p>Found near water bodies</p>"
           ]
         }
       ]
@@ -360,73 +367,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Waterfall</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>River/Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chitrakoot Falls</p>",
+            "<p>Jagdalpur, Bastar</p>",
+            "<p>Indravati river; called 'Niagara of India'; widest fall</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tirathgarh Falls</p>",
+            "<p>Jagdalpur, Bastar</p>",
+            "<p>Kanger river; horseshoe shape; near Kanger NP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Amritdhara Falls</p>",
+            "<p>Korea district</p>",
+            "<p>Hasdeo river; religious significance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mandwa Falls</p>",
+            "<p>Jashpur district</p>",
+            "<p>Scenic waterfall</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ranidah Falls</p>",
+            "<p>Jashpur district</p>",
+            "<p>Scenic; tourist spot</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Keoti Falls</p>",
+            "<p>Rajnandgaon district</p>",
+            "<p>Scenic location</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ghatarani Falls</p>",
+            "<p>Raipur (Gariaband district)</p>",
+            "<p>Waterfall + Devi temple</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chite Dhara</p>",
+            "<p>Surguja district</p>",
+            "<p>Seasonal waterfall</p>"
           ]
         }
       ]

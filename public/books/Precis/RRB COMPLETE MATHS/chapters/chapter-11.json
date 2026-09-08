@@ -48,19 +48,23 @@
     },
     {
       "type": "paragraph",
-      "id": "lk1lpsa"
+      "id": "lk1lpsa",
+      "content": "Principal (P): The original sum of money that is borrowed or invested. Rate of Interest (R): The percentage charged on the principal per year."
     },
     {
       "type": "paragraph",
-      "id": "wxxqvqe"
+      "id": "wxxqvqe",
+      "content": "Time (T): The duration for which the money is invested or borrowed. Time must always be expressed in years unless stated otherwise."
     },
     {
       "type": "paragraph",
-      "id": "dxqpf80"
+      "id": "dxqpf80",
+      "content": "Simple Interest (SI): The extra amount paid by the borrower or earned by the investor for using the money."
     },
     {
       "type": "paragraph",
-      "id": "p6rbhay"
+      "id": "p6rbhay",
+      "content": "Amount (A): The total money received at the end of the time period. Relationship: Amount = Principal + Simple Interest"
     },
     {
       "id": "on7srou",
@@ -70,15 +74,18 @@
     },
     {
       "type": "paragraph",
-      "id": "npdcqk6"
+      "id": "npdcqk6",
+      "content": "Simple Interest: SI = (P × R × T) / 100 Amount: A = P + SI"
     },
     {
       "type": "paragraph",
-      "id": "ybg32tc"
+      "id": "ybg32tc",
+      "content": "Direct Formula for Amount: A = P(1 + RT/100) Finding Principal: P = (SI × 100) / (R × T) Finding Rate: R = (SI × 100) / (P × T)"
     },
     {
       "type": "paragraph",
-      "id": "v4n7za5"
+      "id": "v4n7za5",
+      "content": "Finding Time: T = (SI × 100) / (P × R)"
     },
     {
       "id": "qfc03t0",
@@ -90,23 +97,24 @@
       "id": "1mkj3kh",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>If the principal is constant, simple interest increases uniformly every year.</li><li>The interest earned each year is always the same in Simple Interest.</li><li>SI is directly proportional to Principal, Rate, and Time.</li><li>Always convert months into years.</li></ul>",
+        "If the principal is constant, simple interest increases uniformly every year.",
+        "The interest earned each year is always the same in Simple Interest.",
+        "SI is directly proportional to Principal, Rate, and Time.",
+        "Always convert months into years."
       ]
     },
     {
       "type": "paragraph",
-      "id": "cqn6sog"
+      "id": "cqn6sog",
+      "content": "Example: 6 months = 1/2 year, 9 months = 3/4 year."
     },
     {
       "id": "d59lsp9",
       "type": "list",
       "items": [
-        null,
-        null
+        "<ul><li>For days: Time = Number of days / 365 (generally used in advanced questions).</li></ul>",
+        "For days: Time = Number of days / 365 (generally used in advanced questions)."
       ]
     },
     {
@@ -117,11 +125,13 @@
     },
     {
       "type": "paragraph",
-      "id": "dhce9j7"
+      "id": "dhce9j7",
+      "content": "If the interest for 1 year is known, multiply it directly by the number of years. Example:"
     },
     {
       "type": "paragraph",
-      "id": "iliz0q5"
+      "id": "iliz0q5",
+      "content": "If interest on ₹2000 at 5% is ₹100 per year, then in 4 years the interest will be ₹400. No need to apply the formula repeatedly."
     },
     {
       "id": "5xgclmp",
@@ -131,19 +141,23 @@
     },
     {
       "type": "paragraph",
-      "id": "g0eyjcw"
+      "id": "g0eyjcw",
+      "content": "When the difference between amounts for two different time periods is given, remember: Difference in Amount = Interest for the extra time."
     },
     {
       "type": "paragraph",
-      "id": "iovzjyr"
+      "id": "iovzjyr",
+      "content": "Example:"
     },
     {
       "type": "paragraph",
-      "id": "a3zzlwh"
+      "id": "a3zzlwh",
+      "content": "The difference between the amounts for 5 years and 3 years is ₹400. Extra time = 2 years."
     },
     {
       "type": "paragraph",
-      "id": "7saji3p"
+      "id": "7saji3p",
+      "content": "Interest for 1 year = 400 ÷ 2 = ₹200."
     },
     {
       "id": "2m1c4sx",
@@ -159,27 +173,33 @@
     },
     {
       "type": "paragraph",
-      "id": "yoz6eod"
+      "id": "yoz6eod",
+      "content": "Find the simple interest on ₹6000 at 10% per annum for 3 years. Step 1: Write the formula."
     },
     {
       "type": "paragraph",
-      "id": "phb7h1w"
+      "id": "phb7h1w",
+      "content": "SI = (P × R × T) / 100"
     },
     {
       "type": "paragraph",
-      "id": "c583pyx"
+      "id": "c583pyx",
+      "content": "Step 2: Substitute the values. SI = (6000 × 10 × 3) / 100"
     },
     {
       "type": "paragraph",
-      "id": "4ib3eif"
+      "id": "4ib3eif",
+      "content": "Step 3: Simplify carefully before multiplying. 6000 ÷ 100 = 60"
     },
     {
       "type": "paragraph",
-      "id": "puoore9"
+      "id": "puoore9",
+      "content": "Step 4: 60 × 10 × 3 = 1800"
     },
     {
       "type": "paragraph",
-      "id": "al3gtxu"
+      "id": "al3gtxu",
+      "content": "Final Answer: The simple interest is ₹1800."
     },
     {
       "id": "o6cvw89",
@@ -189,23 +209,28 @@
     },
     {
       "type": "paragraph",
-      "id": "u4lyg4a"
+      "id": "u4lyg4a",
+      "content": "A sum of ₹4500 is invested at 8% per annum for 2 years. Find the amount."
     },
     {
       "type": "paragraph",
-      "id": "d1zwfmm"
+      "id": "d1zwfmm",
+      "content": "Step 1: Calculate SI."
     },
     {
       "type": "paragraph",
-      "id": "v4p0tiq"
+      "id": "v4p0tiq",
+      "content": "SI = (4500 × 8 × 2) / 100"
     },
     {
       "type": "paragraph",
-      "id": "a6oao2i"
+      "id": "a6oao2i",
+      "content": "First simplify: 4500 ÷ 100 = 45"
     },
     {
       "type": "paragraph",
-      "id": "xolnznk"
+      "id": "xolnznk",
+      "content": "Now multiply: 45 × 8 × 2 = 720 Step 2: Add SI to the principal. Amount = 4500 + 720 = ₹5220."
     },
     {
       "type": "pullQuote",
@@ -214,7 +239,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0dm0fbc"
+      "id": "0dm0fbc",
+      "content": "Final Answer: The amount is ₹5220."
     },
     {
       "id": "hm4cfaw",
@@ -224,32 +250,39 @@
     },
     {
       "type": "paragraph",
-      "id": "11yjs44"
+      "id": "11yjs44",
+      "content": "A principal of ₹5000 earns ₹1500 as simple interest in 5 years. Find the rate."
     },
     {
       "type": "paragraph",
-      "id": "tj6ktdb"
+      "id": "tj6ktdb",
+      "content": "Step 1: Use the rate formula. R = (SI × 100) / (P × T)"
     },
     {
       "type": "paragraph",
-      "id": "wmwxgcl"
+      "id": "wmwxgcl",
+      "content": "Step 2: Substitute values."
     },
     {
       "type": "paragraph",
-      "id": "msp1ybj"
+      "id": "msp1ybj",
+      "content": "R = (1500 × 100) / (5000 × 5)"
     },
     {
       "type": "paragraph",
-      "id": "hvopxpw"
+      "id": "hvopxpw",
+      "content": "Step 3: Simplify."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mn6ggue"
+      "id": "mn6ggue",
+      "content": "150000 ÷ 25000 = 6"
     },
     {
       "type": "paragraph",
-      "id": "cdpet08"
+      "id": "cdpet08",
+      "content": "Final Answer: The rate of interest is 6% per annum."
     },
     {
       "id": "mvczeg1",
@@ -259,23 +292,28 @@
     },
     {
       "type": "paragraph",
-      "id": "52a6f6n"
+      "id": "52a6f6n",
+      "content": "In how many years will ₹4000 earn ₹800 at 5% simple interest?"
     },
     {
       "type": "paragraph",
-      "id": "rx3z8yc"
+      "id": "rx3z8yc",
+      "content": "Step 1: Apply the time formula. T = (SI × 100) / (P × R)"
     },
     {
       "type": "paragraph",
-      "id": "gncl03c"
+      "id": "gncl03c",
+      "content": "Step 2: T = (800 × 100) / (4000 × 5)"
     },
     {
       "type": "paragraph",
-      "id": "0qg4lny"
+      "id": "0qg4lny",
+      "content": "Step 3: 80000 ÷ 20000 = 4"
     },
     {
       "type": "paragraph",
-      "id": "3ff7ozj"
+      "id": "3ff7ozj",
+      "content": "Final Answer: The required time is 4 years."
     },
     {
       "id": "6jbqmf4",
@@ -285,11 +323,13 @@
     },
     {
       "type": "paragraph",
-      "id": "7qnnx75"
+      "id": "7qnnx75",
+      "content": "Find the simple interest on ₹2400 at 12% per annum for 9 months."
     },
     {
       "type": "paragraph",
-      "id": "sdrybm8"
+      "id": "sdrybm8",
+      "content": "Step 1: Convert months into years. 9 months = 9/12 = 3/4 year."
     },
     {
       "type": "comparisonTable",
@@ -319,29 +359,35 @@
     },
     {
       "type": "paragraph",
-      "id": "d3ozezw"
+      "id": "d3ozezw",
+      "content": "Step 2: Apply the formula. SI = (2400 × 12 × 3/4) / 100"
     },
     {
       "type": "paragraph",
-      "id": "4wkzgi8"
+      "id": "4wkzgi8",
+      "content": "Step 3: Simplify."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "u4g0p32"
+      "id": "u4g0p32",
+      "content": "12 × 3/4 = 9"
     },
     {
       "type": "paragraph",
-      "id": "y68avae"
+      "id": "y68avae",
+      "content": "So, SI = (2400 × 9) / 100"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "301gri4"
+      "id": "301gri4",
+      "content": "= 216"
     },
     {
       "type": "paragraph",
-      "id": "xk9ik7f"
+      "id": "xk9ik7f",
+      "content": "Final Answer: The simple interest is ₹216."
     },
     {
       "id": "kdzbkbu",
@@ -357,19 +403,23 @@
     },
     {
       "type": "paragraph",
-      "id": "gvo2adi"
+      "id": "gvo2adi",
+      "content": "Find the simple interest on ₹3200 at 5% per annum for 4 years."
     },
     {
       "type": "paragraph",
-      "id": "gzji2xd"
+      "id": "gzji2xd",
+      "content": "SI = (3200 × 5 × 4) / 100"
     },
     {
       "type": "paragraph",
-      "id": "u4lyrud"
+      "id": "u4lyrud",
+      "content": "Simplify: 3200 ÷ 100 = 32"
     },
     {
       "type": "paragraph",
-      "id": "0swhkxf"
+      "id": "0swhkxf",
+      "content": "Now multiply: 32 × 5 × 4 = 640 Final Answer: ₹640."
     },
     {
       "id": "53u3b82",
@@ -379,25 +429,30 @@
     },
     {
       "type": "paragraph",
-      "id": "6nja5b5"
+      "id": "6nja5b5",
+      "content": "Find the principal if the interest is ₹540 at 9% for 2 years."
     },
     {
       "type": "paragraph",
-      "id": "dcc7e4f"
+      "id": "dcc7e4f",
+      "content": "P = (SI × 100) / (R × T) P = (540 × 100) / (9 × 2)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ylix4jf"
+      "id": "ylix4jf",
+      "content": "= 54000 / 18"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "467nb7l"
+      "id": "467nb7l",
+      "content": "= 3000"
     },
     {
       "type": "paragraph",
-      "id": "k7jv5t4"
+      "id": "k7jv5t4",
+      "content": "Final Answer: The principal is ₹3000."
     },
     {
       "id": "lj4wg3g",
@@ -407,20 +462,24 @@
     },
     {
       "type": "paragraph",
-      "id": "mo61k4p"
+      "id": "mo61k4p",
+      "content": "What will be the amount on ₹7000 at 6% for 3 years?"
     },
     {
       "type": "paragraph",
-      "id": "dk4fklt"
+      "id": "dk4fklt",
+      "content": "Step 1: Calculate SI."
     },
     {
       "type": "paragraph",
-      "id": "3y196tc"
+      "id": "3y196tc",
+      "content": "SI = (7000 × 6 × 3) / 100"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zv60u6u"
+      "id": "zv60u6u",
+      "content": "7000 ÷ 100 = 70"
     },
     {
       "type": "examAlert",
@@ -433,11 +492,13 @@
     },
     {
       "type": "paragraph",
-      "id": "sa3wtxa"
+      "id": "sa3wtxa",
+      "content": "70 × 6 × 3 = 1260"
     },
     {
       "type": "paragraph",
-      "id": "9ll88wv"
+      "id": "9ll88wv",
+      "content": "Step 2:Amount = 7000 + 1260 = ₹8260. Final Answer: ₹8260."
     },
     {
       "id": "8s977wp",
@@ -447,15 +508,18 @@
     },
     {
       "type": "paragraph",
-      "id": "ryvkq7z"
+      "id": "ryvkq7z",
+      "content": "The difference between the simple interests for 6 years and 4 years is ₹500. Find the yearly interest."
     },
     {
       "type": "paragraph",
-      "id": "fga0ues"
+      "id": "fga0ues",
+      "content": "Extra time = 2 years."
     },
     {
       "type": "paragraph",
-      "id": "emscrtk"
+      "id": "emscrtk",
+      "content": "Interest per year = 500 ÷ 2 = ₹250. Final Answer: Yearly interest is ₹250."
     },
     {
       "id": "7lhoerm",
@@ -465,37 +529,45 @@
     },
     {
       "type": "paragraph",
-      "id": "rw1djt3"
+      "id": "rw1djt3",
+      "content": "Find the rate if ₹2000 becomes ₹2600 in 5 years at simple interest."
     },
     {
       "type": "paragraph",
-      "id": "vgbpe0j"
+      "id": "vgbpe0j",
+      "content": "Step 1: Find SI."
     },
     {
       "type": "paragraph",
-      "id": "nytwriy"
+      "id": "nytwriy",
+      "content": "SI = 2600 − 2000 = 600"
     },
     {
       "type": "paragraph",
-      "id": "u02ub2k"
+      "id": "u02ub2k",
+      "content": "Step 2:"
     },
     {
       "type": "paragraph",
-      "id": "osctce0"
+      "id": "osctce0",
+      "content": "R = (600 × 100) / (2000 × 5)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ps4jtzl"
+      "id": "ps4jtzl",
+      "content": "= 60000 / 10000"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qpwh6mt"
+      "id": "qpwh6mt",
+      "content": "= 6%"
     },
     {
       "type": "paragraph",
-      "id": "5o2y4z2"
+      "id": "5o2y4z2",
+      "content": "Final Answer: The rate is 6% per annum."
     }
   ],
   "enriched": true

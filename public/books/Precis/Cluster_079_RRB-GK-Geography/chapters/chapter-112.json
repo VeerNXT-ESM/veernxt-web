@@ -1,0 +1,143 @@
+{
+  "title": "1. Causes of Volcanism",
+  "order": 112,
+  "blocks": [
+    {
+      "id": "d8f8bhs",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>High mantle temperature</p>",
+            "<p>Radioactive decay and residual heat melt rocks into magma.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Plate tectonics</p>",
+            "<p>Magma rises at convergent and divergent boundaries.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pressure reduction</p>",
+            "<p>Decompression melting occurs when plates separate.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Water in subduction zones</p>",
+            "<p>Water lowers melting point of mantle rocks.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Crustal fractures</p>",
+            "<p>Faults provide pathways for magma.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Volcanism is driven by the upward movement of molten rock (magma) caused by density contrasts, pressure changes, and tectonic plate interactions.",
+      "id": "vk24nok"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Convergent Boundary Volcanism",
+        "Divergent Boundary Volcanism"
+      ],
+      "rows": [
+        [
+          "Primary Process",
+          "Subduction & Flux Melting (Addition of Water)",
+          "Decompression Melting (Pressure Reduction)"
+        ],
+        [
+          "Magma Composition",
+          "Silica-rich (Andesitic to Rhyolitic)",
+          "Silica-poor / Mafic (Basaltic)"
+        ],
+        [
+          "Viscosity & Gas",
+          "High viscosity, high gas content",
+          "Low viscosity, low gas content"
+        ],
+        [
+          "Eruption Style",
+          "Highly Explosive and Violent",
+          "Effusive and Gentle Fissure Eruptions"
+        ],
+        [
+          "Geographic Example",
+          "Pacific Ring of Fire (Andes, Krakatoa)",
+          "Mid-Atlantic Ridge, East African Rift"
+        ]
+      ],
+      "id": "0a9npqf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Pacific Ring of Fire",
+          "value": "75%",
+          "icon": "award"
+        },
+        {
+          "label": "Magma Temperature",
+          "value": "700–1300°C",
+          "icon": "info"
+        },
+        {
+          "label": "Main Tectonic Settings",
+          "value": "3 Types",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Mechanism",
+          "value": "Plate Tectonics",
+          "icon": "book"
+        }
+      ],
+      "id": "q49l6m3"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Deccan Traps in India were formed by intraplate hotspot volcanism (Reunion Hotspot) during the Late Cretaceous period.",
+        "Mid-Ocean Ridge volcanism produces fluid basaltic magma with low silica content, whereas subduction zone volcanoes yield silica-rich, viscous andesitic/rhyolitic magma.",
+        "Questions frequently contrast explosive (convergent) versus effusive (divergent/hotspot) eruption styles."
+      ],
+      "id": "03xhx7f"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Volcanism is primarily driven by the upward movement of magma due to lower density relative to surrounding mantle and crustal rocks.",
+        "Convergent boundaries lead to explosive volcanism via subduction and volatile-driven melting of mantle rock.",
+        "Divergent boundaries create effusive basaltic volcanism through decompression melting as tectonic plates pull apart.",
+        "Mantle plumes and hotspots generate intraplate volcanism independent of plate boundaries, such as the Hawaiian chain and Reunion hotspot.",
+        "The trapped gases (water vapor, CO2, SO2) under high pressure provide the expansive force for explosive volcanic eruptions."
+      ],
+      "id": "e53duiy"
+    }
+  ],
+  "enriched": true
+}

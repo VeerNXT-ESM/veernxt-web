@@ -55,57 +55,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ALU (Arithmetic Logic Unit)</p>",
+            "<p>Performs arithmetic operations (+, -, ×, ÷) and logic operations (AND, OR, NOT, XOR)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Control Unit (CU)</p>",
+            "<p>Fetches and decodes instructions; coordinates all CPU components; generates control signals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Registers</p>",
+            "<p>Small, fast memory inside CPU; PC (Program Counter), IR (Instruction Register), MAR, MDR, Accumulator</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cache Memory</p>",
+            "<p>Small high-speed memory between CPU and RAM; L1 (fastest, smallest), L2, L3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Main Memory (RAM)</p>",
+            "<p>Primary storage; volatile; stores currently running programs and data</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Secondary Storage</p>",
+            "<p>Non-volatile; HDD, SSD, optical disk; stores data permanently</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>I/O Interface</p>",
+            "<p>Connects CPU with external devices; handles speed mismatch and format differences</p>"
           ]
         }
       ]
@@ -120,11 +120,11 @@
       "id": "a31xft4",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Fetch: PC contains address; instruction fetched from memory to IR; PC incremented",
+        "Decode: Control unit decodes instruction in IR; identifies opcode and operands",
+        "Execute: ALU performs operation; result stored in accumulator or register",
+        "Write Back: Result written to memory or register file if needed",
+        "Interrupt Check: Check for pending interrupts after each instruction"
       ]
     },
     {
@@ -145,100 +145,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Level</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Speed</strong></p>",
+            "<p><strong>Size</strong></p>",
+            "<p><strong>Cost/Bit</strong></p>",
+            "<p><strong>Volatile?</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Registers</p>",
+            "<p>SRAM (on-chip)</p>",
+            "<p>&lt; 1 ns</p>",
+            "<p>&lt; 1 KB</p>",
+            "<p>Very High</p>",
+            "<p>Yes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>L1 Cache</p>",
+            "<p>SRAM (on-chip)</p>",
+            "<p>~1 ns</p>",
+            "<p>32–64 KB</p>",
+            "<p>High</p>",
+            "<p>Yes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>L2 Cache</p>",
+            "<p>SRAM (on/off-chip)</p>",
+            "<p>~5 ns</p>",
+            "<p>256 KB–1 MB</p>",
+            "<p>High</p>",
+            "<p>Yes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>L3 Cache</p>",
+            "<p>SRAM (shared)</p>",
+            "<p>~10–30 ns</p>",
+            "<p>4–64 MB</p>",
+            "<p>Moderate</p>",
+            "<p>Yes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Main Memory (RAM)</p>",
+            "<p>DRAM</p>",
+            "<p>~100 ns</p>",
+            "<p>4–64 GB</p>",
+            "<p>Low</p>",
+            "<p>Yes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>SSD (NVMe)</p>",
+            "<p>Flash NAND</p>",
+            "<p>~0.1 ms</p>",
+            "<p>256 GB–4 TB</p>",
+            "<p>Very Low</p>",
+            "<p>No</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>HDD</p>",
+            "<p>Magnetic disk</p>",
+            "<p>~10 ms</p>",
+            "<p>1–20 TB</p>",
+            "<p>Lowest</p>",
+            "<p>No</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Optical/Tape</p>",
+            "<p>Optical/Magnetic</p>",
+            "<p>Seconds</p>",
+            "<p>TBs</p>",
+            "<p>Very Lowest</p>",
+            "<p>No</p>"
           ]
         }
       ]
@@ -287,46 +287,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Number System</strong></p>",
+            "<p><strong>Base</strong></p>",
+            "<p><strong>Digits</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Binary</p>",
+            "<p>2</p>",
+            "<p>0, 1</p>",
+            "<p>1010₂ = 10₁₀</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Octal</p>",
+            "<p>8</p>",
+            "<p>0–7</p>",
+            "<p>12₈ = 10₁₀</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Decimal</p>",
+            "<p>10</p>",
+            "<p>0–9</p>",
+            "<p>10₁₀</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hexadecimal</p>",
+            "<p>16</p>",
+            "<p>0–9, A–F</p>",
+            "<p>A₁₆ = 10₁₀</p>"
           ]
         }
       ]
@@ -341,11 +341,11 @@
       "id": "07lumqc",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "1s Complement: invert all bits (0→1, 1→0)",
+        "2s Complement: invert all bits + add 1; used for signed integer representation in computers",
+        "For 8-bit signed: range is -128 to +127 (2s complement)",
+        "For 8-bit unsigned: range is 0 to 255",
+        "IEEE 754 Floating Point: sign (1 bit) + exponent + mantissa; single (32-bit), double (64-bit)"
       ]
     },
     {
@@ -356,7 +356,8 @@
     },
     {
       "type": "paragraph",
-      "id": "h5n2ds0"
+      "id": "h5n2ds0",
+      "content": "Pipelining is a technique to increase CPU throughput by overlapping execution of multiple instructions. Like an assembly line — different stages of different instructions execute simultaneously."
     },
     {
       "type": "examAlert",
@@ -374,64 +375,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Stages (typical)</p>",
+            "<p>IF (Instruction Fetch) → ID (Decode) → EX (Execute) → MEM (Memory Access) → WB (Write Back)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Throughput</p>",
+            "<p>Ideally 1 instruction per clock cycle (CPI = 1) with 5-stage pipeline</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pipeline Hazards</p>",
+            "<p>Situations preventing next instruction from executing in next clock cycle</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Structural Hazard</p>",
+            "<p>Hardware resource conflict; two instructions need same resource</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Data Hazard</p>",
+            "<p>Instruction depends on result of previous instruction; RAW, WAR, WAW hazards</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Control Hazard</p>",
+            "<p>Branch instruction; don't know next instruction until branch resolved</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hazard Solutions</p>",
+            "<p>Stalling (pipeline bubble), Data forwarding, Branch prediction, Out-of-order execution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Speedup</p>",
+            "<p>Ideal speedup = k stages; limited by hazards and pipeline fill/drain time</p>"
           ]
         }
       ]
@@ -449,65 +450,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>RISC (Reduced Instruction Set Computer)</strong></p>",
+            "<p><strong>CISC (Complex Instruction Set Computer)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Instructions</p>",
+            "<p>Simple, fixed-length; few addressing modes</p>",
+            "<p>Complex, variable-length; many addressing modes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Execution</p>",
+            "<p>1 cycle per instruction (mostly)</p>",
+            "<p>Multi-cycle instructions common</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pipeline</p>",
+            "<p>Easy to pipeline; regular format</p>",
+            "<p>Difficult to pipeline; variable format</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Registers</p>",
+            "<p>Many general-purpose registers</p>",
+            "<p>Fewer registers; memory-to-memory operations</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Memory Access</p>",
+            "<p>Load-Store architecture only</p>",
+            "<p>Can operate directly on memory</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Compiler</p>",
+            "<p>Complex compiler needed</p>",
+            "<p>Simpler assembly; complex hardware</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Examples</p>",
+            "<p>ARM, MIPS, SPARC, RISC-V</p>",
+            "<p>x86, x86-64 (Intel/AMD), VAX</p>"
           ]
         }
       ]

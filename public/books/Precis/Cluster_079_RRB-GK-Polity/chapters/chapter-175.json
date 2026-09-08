@@ -1,0 +1,141 @@
+{
+  "title": "Important Differences: Panchayats vs Municipalities",
+  "order": 175,
+  "blocks": [
+    {
+      "id": "9ggy2hy",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Panchayats</strong></p>",
+            "<p><strong>Municipalities</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rural areas</p>",
+            "<p>Urban areas</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>73rd Amendment</p>",
+            "<p>74th Amendment</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Eleventh Schedule – 29 subjects</p>",
+            "<p>Twelfth Schedule – 18 subjects</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Gram Sabha is base</p>",
+            "<p>Ward Committees</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The 73rd and 74th Constitutional Amendment Acts of 1992 bestowed constitutional status upon rural and urban local bodies in India, establishing grassroots democracy.",
+      "id": "s4stlcg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Panchayats (Rural)",
+        "Municipalities (Urban)"
+      ],
+      "rows": [
+        [
+          "Constitutional Part",
+          "Part IX (Articles 243 to 243O)",
+          "Part IXA (Articles 243P to 243ZG)"
+        ],
+        [
+          "Schedule & Functional Items",
+          "11th Schedule (29 Items)",
+          "12th Schedule (18 Items)"
+        ],
+        [
+          "Amendment Act",
+          "73rd CAA, 1992",
+          "74th CAA, 1992"
+        ],
+        [
+          "Area of Jurisdiction",
+          "Rural Local Areas",
+          "Urban Local Areas"
+        ],
+        [
+          "Governance Tiers",
+          "Gram Panchayat, Panchayat Samiti, Zilla Parishad",
+          "Nagar Panchayat, Municipal Council, Municipal Corporation"
+        ]
+      ],
+      "id": "vcxrwb1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Panchayats Amendment",
+          "value": "73rd CAA, 1992",
+          "icon": "book"
+        },
+        {
+          "label": "Municipalities Amendment",
+          "value": "74th CAA, 1992",
+          "icon": "book"
+        },
+        {
+          "label": "Constitutional Parts",
+          "value": "Part IX & IXA",
+          "icon": "award"
+        },
+        {
+          "label": "Schedules",
+          "value": "11th & 12th",
+          "icon": "calendar"
+        },
+        {
+          "label": "Minimum Age",
+          "value": "21 Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "dmkgvqe"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Panchayats deal with 29 functional items in the 11th Schedule, whereas Municipalities deal with 18 functional items in the 12th Schedule.",
+        "Articles 243 to 243O cover Panchayats, while Articles 243P to 243ZG cover Municipalities.",
+        "State Finance Commission is constituted every 5 years under Article 243-I (Panchayats) and Article 243-Y (Municipalities) to review financial position."
+      ],
+      "id": "d2hkl2a"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Panchayats govern rural local areas under Part IX (11th Schedule, 29 functional items), while Municipalities govern urban local areas under Part IXA (12th Schedule, 18 functional items).",
+        "Both the 73rd and 74th Constitutional Amendment Acts of 1992 conferred constitutional status on local self-government institutions in India.",
+        "Both systems mandate a 3-tier structure in larger states and require a minimum age of 21 years to contest elections.",
+        "Not less than one-third (1/3rd) of total seats are reserved for women in both rural and urban local bodies.",
+        "State Election Commission conducts elections every 5 years for both Panchayats and Municipalities."
+      ],
+      "id": "f8wt6jj"
+    }
+  ],
+  "enriched": true
+}

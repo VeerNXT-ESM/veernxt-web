@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "mgxw50s"
+      "id": "mgxw50s",
+      "content": "This chapter covers topics specifically relevant to the Sub-Inspector (SI) and police-related examinations of Arunachal Pradesh."
     },
     {
       "type": "statStrip",
@@ -62,71 +63,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p>Details</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Head of Police</strong></p>",
+            "<p>Director General of Police (DGP), Arunachal Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Police Headquarters</strong></p>",
+            "<p>Itanagar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Police Ranges</strong></p>",
+            "<p>Itanagar Range, Pasighat Range, Bomdila Range, Tirap-Changlang Range (approximate)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Total Districts</strong></p>",
+            "<p>26 (each with Superintendent of Police / Deputy SP)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Paramilitary Presence</strong></p>",
+            "<p>CRPF, SSB (Sashastra Seema Bal), ITBP, BSF along borders</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Special Forces</strong></p>",
+            "<p>APFR (Arunachal Pradesh Frontier Police Reserve)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Training Academy</strong></p>",
+            "<p>Banderdewa Police Training Centre near Itanagar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Women Police</strong></p>",
+            "<p>Increasing representation; women police stations</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Insurgency Management</strong></p>",
+            "<p>NSCN factions in Tirap-Changlang-Longding; CRPF-Police coordination</p>"
           ]
         }
       ]
@@ -141,17 +142,17 @@
       "id": "mxk4xi9",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Indian Penal Code (IPC) 1860 / Bharatiya Nyaya Sanhita (BNS) 2023 — criminal law",
+        "Code of Criminal Procedure (CrPC) 1973 / Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+        "Bengal Eastern Frontier Regulation, 1873 — Inner Line Permit",
+        "Arunachal Pradesh Panchayati Raj Act, 1997",
+        "Forest Rights Act, 2006 — tribal land rights",
+        "Wild Life (Protection) Act, 1972 — protected areas management",
+        "Narcotic Drugs and Psychotropic Substances Act (NDPS), 1985",
+        "Arms Act, 1959 — licensing of firearms",
+        "Prevention of Corruption Act, 1988",
+        "Protection of Children from Sexual Offences (POCSO) Act, 2012",
+        "Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989"
       ]
     },
     {
@@ -167,118 +168,118 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Rank</strong></p>",
+            "<p><strong>Abbreviation</strong></p>",
+            "<p><strong>Appointment Method</strong></p>",
+            "<p><strong>Badge</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Constable</p>",
+            "<p>Const.</p>",
+            "<p>Direct recruitment by state</p>",
+            "<p>Plain uniform</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Head Constable</p>",
+            "<p>HC</p>",
+            "<p>Promotion</p>",
+            "<p>One chevron</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Assistant Sub-Inspector</p>",
+            "<p>ASI</p>",
+            "<p>Promotion from HC / direct in some states</p>",
+            "<p>One star</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sub-Inspector</p>",
+            "<p>SI</p>",
+            "<p>Direct recruitment via APPSC / state PSC</p>",
+            "<p>Two stars</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Inspector</p>",
+            "<p>Insp.</p>",
+            "<p>Promotion from SI</p>",
+            "<p>Three stars</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Deputy Superintendent of Police</p>",
+            "<p>DSP / Dy.SP</p>",
+            "<p>State PSC (Group-A) or promotion</p>",
+            "<p>One star on gorget patch</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Additional Superintendent of Police</p>",
+            "<p>Addl. SP</p>",
+            "<p>IPS or promotion</p>",
+            "<p>Two stars + Ashoka emblem</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Superintendent of Police</p>",
+            "<p>SP</p>",
+            "<p>IPS</p>",
+            "<p>Three stars + Ashoka emblem</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Deputy Inspector General</p>",
+            "<p>DIG</p>",
+            "<p>IPS</p>",
+            "<p>One star + crossed sword &amp; baton</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Inspector General</p>",
+            "<p>IG</p>",
+            "<p>IPS</p>",
+            "<p>Two stars + crossed sword &amp; baton</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Additional Director General</p>",
+            "<p>Addl. DGP</p>",
+            "<p>IPS</p>",
+            "<p>Three stars + crossed sword &amp; baton</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Director General of Police</p>",
+            "<p>DGP</p>",
+            "<p>IPS</p>",
+            "<p>Ashoka Lion + crossed sword &amp; baton</p>"
           ]
         }
       ]
@@ -305,64 +306,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Section</strong></p>",
+            "<p>Topics</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>General Knowledge &amp; Current Affairs</strong></p>",
+            "<p>AP specific GK, national GK, current events</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>General English</strong></p>",
+            "<p>Grammar, comprehension, vocabulary</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Reasoning &amp; Mental Ability</strong></p>",
+            "<p>Logical reasoning, numerical ability</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>AP History, Geography, Culture</strong></p>",
+            "<p>Covered in this book's earlier chapters</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Indian Polity &amp; Constitution</strong></p>",
+            "<p>Constitution of India, fundamental rights, DPSP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Criminal Law Basics</strong></p>",
+            "<p>IPC/BNS, CrPC/BNSS, Evidence Act</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Physical Fitness Test (PFT)</strong></p>",
+            "<p>Running, long jump, height, weight — physical standards required</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Medical Test</strong></p>",
+            "<p>Vision, physical fitness standards</p>"
           ]
         }
       ]

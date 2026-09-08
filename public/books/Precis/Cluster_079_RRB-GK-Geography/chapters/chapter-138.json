@@ -1,0 +1,175 @@
+{
+  "title": "5. Depositional Landforms by Rivers",
+  "order": 138,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Floodplains – flat fertile land beside rivers.",
+      "id": "qsmrf96"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Landforms",
+          "value": "6 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Fan Shape",
+          "value": "Cone-Shaped",
+          "icon": "info"
+        },
+        {
+          "label": "Delta Shape",
+          "value": "Triangular",
+          "icon": "check"
+        },
+        {
+          "label": "Fan Location",
+          "value": "Foothills",
+          "icon": "calendar"
+        }
+      ],
+      "id": "zzdqy86"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Natural Levees – raised banks formed during floods.",
+      "id": "6lq04mo"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Meanders – looping bends in river.",
+      "id": "9kd5j8x"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Deltas – triangular deposits at river mouth.",
+      "id": "rko4lgd"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Oxbow Lakes – cut-off meander loops.",
+      "id": "wxrn65v"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Landform",
+        "Location",
+        "Description / Shape"
+      ],
+      "rows": [
+        [
+          "Floodplains",
+          "Beside rivers",
+          "Flat fertile land"
+        ],
+        [
+          "Natural Levees",
+          "River banks",
+          "Raised banks formed during floods"
+        ],
+        [
+          "Meanders",
+          "River course",
+          "Looping bends"
+        ],
+        [
+          "Oxbow Lakes",
+          "Cut off from meanders",
+          "Isolated loop lakes"
+        ],
+        [
+          "Alluvial Fans",
+          "Foothills",
+          "Cone-shaped deposits"
+        ],
+        [
+          "Deltas",
+          "River mouth",
+          "Triangular deposits"
+        ]
+      ],
+      "id": "3u4vixq"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Alluvial Fans – cone-shaped deposits at foothills.",
+      "id": "pxxrkx0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Deltas – triangular deposits at river mouth.",
+      "id": "jskxkoe"
+    },
+    {
+      "id": "v9j3ein",
+      "type": "heading",
+      "level": 2,
+      "content": "Types of Deltas"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently contrast Alluvial Fans (located at foothills) with Deltas (located at the river mouth).",
+        "Oxbow lakes are specifically identified as cut-off meander loops.",
+        "Natural levees are highlighted as raised bank landforms created specifically during floods."
+      ],
+      "id": "xjeaxb8"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Floodplains are flat, fertile land areas located directly beside river channels.",
+        "Natural levees are raised river banks formed naturally during flood events.",
+        "Meanders represent winding, looping bends along the course of a river.",
+        "Oxbow lakes originate when meander loops are cut off from the main river flow.",
+        "Alluvial fans build up as cone-shaped sediment deposits at mountain foothills.",
+        "Deltas form triangular depositional features where the river meets its mouth."
+      ],
+      "id": "tqdo6jp"
+    },
+    {
+      "id": "m0950s1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Shape</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Arcuate</p>",
+            "<p>Fan-shaped</p>",
+            "<p>Nile Delta</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Bird's Foot</p>",
+            "<p>Finger-like projections</p>",
+            "<p>Mississippi Delta</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cuspate</p>",
+            "<p>Tooth-shaped</p>",
+            "<p>Tiber Delta</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

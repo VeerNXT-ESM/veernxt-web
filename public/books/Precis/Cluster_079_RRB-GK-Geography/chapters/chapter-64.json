@@ -1,0 +1,77 @@
+{
+  "title": "ULTRA QUICK REVISION",
+  "order": 64,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Crust — Thin outer layer<br/>Mantle — 35–2900 km<br/>Core — 2900–6371 km<br/>Moho — Crust/Mantle<br/>Gutenberg — Mantle/Core",
+      "id": "hlewrpc"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Crust — Thin outer layer",
+      "id": "h7it7ge"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Discontinuity",
+        "Separated Boundary"
+      ],
+      "rows": [
+        [
+          "Moho",
+          "Crust / Mantle"
+        ],
+        [
+          "Gutenberg",
+          "Mantle / Core"
+        ]
+      ],
+      "id": "6lhfghg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Mantle Depth",
+          "value": "35–2900 km",
+          "icon": "info"
+        },
+        {
+          "label": "Core Depth",
+          "value": "2900–6371 km",
+          "icon": "check"
+        },
+        {
+          "label": "Max Depth",
+          "value": "6371 km",
+          "icon": "award"
+        }
+      ],
+      "id": "ma53r61"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Moho discontinuity defines the boundary between the Crust and Mantle.",
+        "Gutenberg discontinuity marks the junction between the Mantle and Core.",
+        "Total depth of the Earth's core reaches 6371 km."
+      ],
+      "id": "fwu3ykw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Crust is the thin outer layer of the Earth.",
+        "The Mantle spans from a depth of 35 km to 2900 km.",
+        "The Core lies deep within the Earth from 2900 km to 6371 km.",
+        "The Moho discontinuity separates the Crust from the Mantle.",
+        "The Gutenberg discontinuity separates the Mantle from the Core."
+      ],
+      "id": "t3ivvve"
+    }
+  ],
+  "enriched": true
+}

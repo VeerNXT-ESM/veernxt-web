@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "fak1a6c"
+      "id": "fak1a6c",
+      "content": "The hotspot concept was proposed by Norman Myers in 1988."
     },
     {
       "type": "statStrip",
@@ -46,7 +47,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5wc3qgm"
+      "id": "5wc3qgm",
+      "content": "• Must contain at least 1500 endemic vascular plant species."
     },
     {
       "type": "pullQuote",
@@ -55,7 +57,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vqsedin"
+      "id": "vqsedin",
+      "content": "• Must have lost at least 70% of original habitat."
     },
     {
       "type": "comparisonTable",
@@ -85,17 +88,20 @@
     },
     {
       "type": "paragraph",
-      "id": "83l70g6"
+      "id": "83l70g6",
+      "content": "India shares four global biodiversity hotspots:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3b6odn9"
+      "id": "3b6odn9",
+      "content": "• Western Ghats"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "txzbpmm"
+      "id": "txzbpmm",
+      "content": "• Himalaya"
     },
     {
       "type": "examAlert",
@@ -109,12 +115,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "pjbpwas"
+      "id": "pjbpwas",
+      "content": "• Indo-Burma"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g9jnq2e"
+      "id": "g9jnq2e",
+      "content": "• Sundaland (Nicobar Islands)"
     }
   ],
   "enriched": true

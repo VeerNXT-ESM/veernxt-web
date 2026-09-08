@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "lm26ud7"
+      "id": "lm26ud7",
+      "content": "Natural vegetation refers to plant communities that grow naturally without human intervention and have been left undisturbed for a long time. India possesses a rich variety of natural vegetation due to variations in relief, soil, temperature and rainfall. "
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vvl7qwk"
+      "id": "vvl7qwk",
+      "content": "The distribution of natural vegetation in India depends on climatic and geographical factors."
     },
     {
       "id": "t6uf3ig",
@@ -62,49 +64,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Impact on Vegetation</strong></p>",
+            "<p><strong>Exam Insight</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Temperature</p>",
+            "<p>Higher temperature supports dense forests.</p>",
+            "<p>Conceptual questions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rainfall</p>",
+            "<p>Most important factor; more rainfall → thicker vegetation.</p>",
+            "<p>Very frequently asked</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Soil</p>",
+            "<p>Different soils support different plant species.</p>",
+            "<p>Static GK</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Relief/Altitude</p>",
+            "<p>Vegetation changes with height.</p>",
+            "<p>Himalayan questions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sunlight</p>",
+            "<p>Controls photosynthesis.</p>",
+            "<p>Basic concept</p>"
           ]
         }
       ]
@@ -117,7 +119,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9ofj95d"
+      "id": "9ofj95d",
+      "content": "Based on temperature and rainfall, Indian vegetation is classified into five major types: Tropical Evergreen Forests, Tropical Deciduous Forests, Thorn Forests, Montane Forests, and Mangrove Forests."
     },
     {
       "id": "epatg7p",
@@ -132,81 +135,76 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Vegetation Type</strong></p>",
+            "<p><strong>Rainfall</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Major Trees</strong></p>",
+            "<p><strong>Other Plants</strong></p>",
+            "<p><strong>Common Animals</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Evergreen</p>",
+            "<p>&gt;200 cm</p>",
+            "<p>Western Ghats, Northeast, Andaman</p>",
+            "<p>Ebony, Mahogany, Rosewood</p>",
+            "<p>Bamboo, Ferns, Orchids</p>",
+            "<p>Elephants, Monkeys, Hornbills</p>",
+            "<p>Dense, multi-layered; remain green year-round</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Deciduous (Monsoon)</p>",
+            "<p>100–200 cm</p>",
+            "<p>Central India, Northern plains</p>",
+            "<p>Teak, Sal, Shisham</p>",
+            "<p>Bamboo, Grasses</p>",
+            "<p>Tigers, Deer, Elephants</p>",
+            "<p>Shed leaves in dry season</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Thorn Forest</p>",
+            "<p>&lt;70 cm</p>",
+            "<p>Rajasthan, Gujarat</p>",
+            "<p>Acacia, Babool, Khejri</p>",
+            "<p>Cactus, Date palm</p>",
+            "<p>Camel, Fox</p>",
+            "<p>Scattered trees; adapted to drought</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Montane Forest</p>",
+            "<p>Varies with altitude</p>",
+            "<p>Himalayas</p>",
+            "<p>Deodar, Pine, Fir</p>",
+            "<p>Juniper, Rhododendron</p>",
+            "<p>Snow leopard, Yak</p>",
+            "<p>Changes with height; conical trees</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Mangrove</p>",
+            "<p>Tidal areas</p>",
+            "<p>Sundarbans, Coastal deltas</p>",
+            "<p>Sundari</p>",
+            "<p>Palm, Coconut</p>",
+            "<p>Royal Bengal Tiger, Crocodile</p>",
+            "<p>Salt-tolerant; roots above water</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Tropical Deciduous Forests – Most Important",
-      "id": "ftu741s"
     },
     {
       "id": "gtsbm7v",
@@ -216,7 +214,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bx78b0r"
+      "id": "bx78b0r",
+      "content": "These forests grow in areas receiving heavy rainfall and high temperature throughout the year. Trees can reach heights of 60 meters or more. The forests are so dense that sunlight rarely reaches the ground."
     },
     {
       "id": "qr0u791",
@@ -226,11 +225,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8j3dgdq"
+      "id": "8j3dgdq",
+      "content": "These are the most widespread forests in India and are economically valuable. They are also called monsoon forests because their growth is closely linked with seasonal rainfall."
     },
     {
       "type": "paragraph",
-      "id": "2zs3v4t"
+      "id": "2zs3v4t",
+      "content": "They are further divided into Moist Deciduous (higher rainfall) and Dry Deciduous (lower rainfall)."
     },
     {
       "type": "comparisonTable",
@@ -271,7 +272,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ktb9tfr"
+      "id": "ktb9tfr",
+      "content": "As altitude increases, temperature decreases leading to distinct vegetation belts — from subtropical forests to temperate forests and finally alpine vegetation."
     },
     {
       "id": "lumz35t",
@@ -281,7 +283,8 @@
     },
     {
       "type": "paragraph",
-      "id": "q5v1hl5"
+      "id": "q5v1hl5",
+      "content": "Mangroves are salt-tolerant forests found in tidal regions. Their complex root systems protect coastlines from erosion and reduce cyclone damage."
     },
     {
       "id": "mxeat3q",
@@ -291,11 +294,13 @@
     },
     {
       "type": "paragraph",
-      "id": "mte1e8c"
+      "id": "mte1e8c",
+      "content": "• Maintain ecological balance."
     },
     {
       "type": "paragraph",
-      "id": "jih3c4d"
+      "id": "jih3c4d",
+      "content": "• Prevent soil erosion."
     },
     {
       "type": "examAlert",
@@ -308,15 +313,18 @@
     },
     {
       "type": "paragraph",
-      "id": "e413nus"
+      "id": "e413nus",
+      "content": "• Regulate climate."
     },
     {
       "type": "paragraph",
-      "id": "wqjuxdu"
+      "id": "wqjuxdu",
+      "content": "• Provide habitat for wildlife."
     },
     {
       "type": "paragraph",
-      "id": "gtfrzd6"
+      "id": "gtfrzd6",
+      "content": "• Support livelihoods."
     },
     {
       "id": "vekd12q",
@@ -331,43 +339,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Question Trigger</strong></p>",
+            "<p><strong>Remember</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Most widespread forest</p>",
+            "<p>Tropical Deciduous</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hardwood forest</p>",
+            "<p>Evergreen</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tree of mangrove</p>",
+            "<p>Sundari</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Best teak forests</p>",
+            "<p>Monsoon forests</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Animal of Sundarbans</p>",
+            "<p>Royal Bengal Tiger</p>"
           ]
         }
       ]

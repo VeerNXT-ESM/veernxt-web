@@ -1,0 +1,399 @@
+{
+  "title": "CHAPTER 2: MOTION",
+  "order": 2,
+  "blocks": [
+    {
+      "id": "kjzqfpy",
+      "type": "heading",
+      "level": 2,
+      "content": "MOTION"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Motion is defined as a change in position relative to time and a reference point.",
+        "Distance measures total path covered (scalar), whereas displacement measures the shortest path between initial and final points (vector).",
+        "Acceleration is the rate of change of velocity; negative acceleration is termed retardation.",
+        "The three core equations of motion are v = u + at, s = ut + ½at², and v² = u² + 2as.",
+        "On a Velocity-Time graph, the slope indicates acceleration and the area under the curve indicates distance."
+      ],
+      "id": "6km5ok4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equations of Motion",
+          "value": "3",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Acceleration",
+          "value": "m/s²",
+          "icon": "info"
+        },
+        {
+          "label": "km/h to m/s Factor",
+          "value": "5/18",
+          "icon": "clock"
+        },
+        {
+          "label": "Minimum Displacement",
+          "value": "0",
+          "icon": "check"
+        }
+      ],
+      "id": "lwxsamy"
+    },
+    {
+      "type": "paragraph",
+      "content": "Motion is said to occur when an object changes its position with respect to time and a reference point.If an object does not change its position with time, it is said to be at rest.",
+      "id": "rd91nqf"
+    },
+    {
+      "id": "x532po3",
+      "type": "heading",
+      "level": 2,
+      "content": "REST AND MOTION"
+    },
+    {
+      "id": "3v8g5v5",
+      "type": "list",
+      "items": [
+        "<ul><li>Rest: When an object does not change its position with time.</li><li>Motion: When an object changes its position with time.</li></ul>",
+        "Rest: When an object does not change its position with time.",
+        "Motion: When an object changes its position with time."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Example:",
+      "id": "37nbmjj"
+    },
+    {
+      "type": "paragraph",
+      "content": "A person sitting in a bus is at rest with respect to the bus but in motion with respect to the road.",
+      "id": "gm8yknp"
+    },
+    {
+      "id": "svqdxxw",
+      "type": "heading",
+      "level": 2,
+      "content": "TYPES OF MOTION"
+    },
+    {
+      "id": "k1qj0wx",
+      "type": "numberedList",
+      "items": [
+        "Rectilinear Motion – Motion in a straight line",
+        "Circular Motion – Motion in a circular path",
+        "Rotational Motion – Motion about an axis",
+        "Oscillatory Motion – To and fro motion"
+      ]
+    },
+    {
+      "id": "w3xgl3b",
+      "type": "heading",
+      "level": 2,
+      "content": "DISTANCE AND DISPLACEMENT"
+    },
+    {
+      "type": "paragraph",
+      "content": "Distance:",
+      "id": "i3t1y48"
+    },
+    {
+      "id": "1vs8yrf",
+      "type": "list",
+      "items": [
+        "<ul><li>Total path covered by an object</li><li>Scalar quantity</li><li>Always positive</li></ul>",
+        "Total path covered by an object",
+        "Scalar quantity",
+        "Always positive"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Displacement:",
+      "id": "ojmsgiv"
+    },
+    {
+      "id": "2ctfx54",
+      "type": "list",
+      "items": [
+        "<ul><li>Shortest distance between initial and final position</li><li>Vector quantity</li><li>Can be zero</li></ul>",
+        "Shortest distance between initial and final position",
+        "Vector quantity",
+        "Can be zero"
+      ]
+    },
+    {
+      "id": "pb48tfn",
+      "type": "heading",
+      "level": 2,
+      "content": "SPEED AND VELOCITY"
+    },
+    {
+      "type": "paragraph",
+      "content": "Speed:",
+      "id": "9z7j1n9"
+    },
+    {
+      "type": "paragraph",
+      "content": "Speed = Distance / Time Unit = m/s",
+      "id": "3lpml6i"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Scalar quantity",
+      "id": "geimeri"
+    },
+    {
+      "type": "paragraph",
+      "content": "Velocity:",
+      "id": "1xx12qo"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Negative acceleration is called retardation.",
+      "id": "prpwobw"
+    },
+    {
+      "type": "paragraph",
+      "content": "Velocity = Displacement / Time Vector quantity",
+      "id": "6ri16tp"
+    },
+    {
+      "id": "40qozye",
+      "type": "heading",
+      "level": 2,
+      "content": "ACCELERATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Acceleration is the rate of change of velocity. Formula:",
+      "id": "60izb4d"
+    },
+    {
+      "type": "paragraph",
+      "content": "Acceleration = (Final velocity – Initial velocity) / Time Unit = m/s²",
+      "id": "96wez9j"
+    },
+    {
+      "type": "paragraph",
+      "content": "Negative acceleration is called retardation.",
+      "id": "ps6iir4"
+    },
+    {
+      "id": "tck4fki",
+      "type": "heading",
+      "level": 2,
+      "content": "EQUATIONS OF MOTION"
+    },
+    {
+      "type": "paragraph",
+      "content": "There are three equations of motion:",
+      "id": "0yilxhp"
+    },
+    {
+      "id": "qwk2g7c",
+      "type": "numberedList",
+      "items": [
+        "v = u + at",
+        "s = ut + ½at²",
+        "v² = u² + 2as"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Where:",
+      "id": "bmj7kds"
+    },
+    {
+      "type": "paragraph",
+      "content": "u = initial velocity v = final velocity a = acceleration",
+      "id": "625xnih"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Distance",
+        "Displacement"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Total path covered by an object",
+          "Shortest distance between initial and final position"
+        ],
+        [
+          "Type of Quantity",
+          "Scalar quantity",
+          "Vector quantity"
+        ],
+        [
+          "Value Range",
+          "Always positive",
+          "Can be zero"
+        ]
+      ],
+      "id": "yrbssd4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "t = time",
+      "id": "t5as4td"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "s = distance",
+      "id": "3kgh61m"
+    },
+    {
+      "id": "prlqkwn",
+      "type": "heading",
+      "level": 2,
+      "content": "UNIFORM AND NON-UNIFORM MOTION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Uniform Motion:",
+      "id": "uwk25cb"
+    },
+    {
+      "id": "2osgzcj",
+      "type": "list",
+      "items": [
+        "<ul><li>Equal distance in equal time</li><li>Constant speed</li></ul>",
+        "Equal distance in equal time",
+        "Constant speed"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Non-uniform Motion:",
+      "id": "673yayv"
+    },
+    {
+      "id": "jmobwqe",
+      "type": "list",
+      "items": [
+        "<ul><li>Unequal distance in equal time</li><li>Variable speed</li></ul>",
+        "Unequal distance in equal time",
+        "Variable speed"
+      ]
+    },
+    {
+      "id": "zodxw8y",
+      "type": "heading",
+      "level": 2,
+      "content": "GRAPHICAL REPRESENTATION OF MOTION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Distance-Time Graph: ",
+      "id": "6l5hisf"
+    },
+    {
+      "id": "2zxbpnz",
+      "type": "list",
+      "items": [
+        "<ul><li>Straight line → Uniform motion</li><li>Curve → Non-uniform motion</li></ul>",
+        "Straight line → Uniform motion",
+        "Curve → Non-uniform motion"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Velocity-Time Graph:",
+      "id": "r6lnn8q"
+    },
+    {
+      "id": "mlt525d",
+      "type": "list",
+      "items": [
+        "<ul><li>Slope gives acceleration</li><li>Area gives distance</li></ul>",
+        "Slope gives acceleration",
+        "Area gives distance"
+      ]
+    },
+    {
+      "id": "6zbo8am",
+      "type": "heading",
+      "level": 2,
+      "content": "UNITS AND CONVERSIONS"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "SI Units Frequently Tested: Acceleration is m/s², while Speed and Velocity are m/s.",
+        "Graph Interpretation: In Velocity-Time graphs, Slope = Acceleration and Area = Distance.",
+        "Speed Conversion: To convert km/h to m/s, multiply by 5/18; to convert m/s to km/h, multiply by 18/5.",
+        "Vector vs Scalar Property: Displacement can be zero, whereas Distance is always positive."
+      ],
+      "id": "1rstiow"
+    },
+    {
+      "type": "paragraph",
+      "content": "1 km/h = 5/18 m/s 1 m/s = 18/5 km/h",
+      "id": "xmjtlf5"
+    },
+    {
+      "id": "phpc490",
+      "type": "heading",
+      "level": 2,
+      "content": "SSC EXAM IMPORTANT QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q1. SI unit of acceleration? Ans: m/s²",
+      "id": "sxer6dg"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q2. Formula of velocity? Ans: Distance / Time",
+      "id": "l5u5dw2"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q3. What is retardation? Ans: Negative acceleration",
+      "id": "u1iylxz"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q4. Unit of speed?",
+      "id": "1bhn2qe"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Ans: m/s",
+      "id": "7tsuato"
+    },
+    {
+      "id": "rhbu0e1",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "miijxrn",
+      "type": "list",
+      "items": [
+        "<ul><li>Motion means change in position</li><li>Speed is scalar, velocity is vector</li><li>Acceleration is change in velocity</li><li>v = u + at</li><li>s = ut + ½at²</li><li>v² = u² + 2as</li></ul>",
+        "Motion means change in position",
+        "Speed is scalar, velocity is vector",
+        "Acceleration is change in velocity",
+        "v = u + at",
+        "s = ut + ½at²",
+        "v² = u² + 2as"
+      ]
+    }
+  ],
+  "enriched": true
+}

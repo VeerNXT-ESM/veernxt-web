@@ -1,0 +1,156 @@
+{
+  "title": "3. Focus, Epicenter and Depth",
+  "order": 99,
+  "blocks": [
+    {
+      "id": "8xgmhud",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Focus (Hypocenter)</p>",
+            "<p>Actual point inside the Earth where rupture begins.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Epicenter</p>",
+            "<p>Surface point directly above the focus; usually experiences strongest shaking.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "",
+            ""
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Depth Range</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Shallow-focus</p>",
+            "<p>0–70 km</p>",
+            "<p>Most destructive; majority of earthquakes</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Intermediate</p>",
+            "<p>70–300 km</p>",
+            "<p>Occur mainly in subduction zones</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Deep-focus</p>",
+            "<p>300–700 km</p>",
+            "<p>Less surface damage but scientifically important</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The epicenter is the point on the Earth's surface directly above the focus where the maximum destruction typically occurs.",
+      "id": "73sbly6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Focus (Hypocenter)",
+        "Epicenter"
+      ],
+      "rows": [
+        [
+          "Location",
+          "Inside the Earth's crust or mantle",
+          "On the Earth's surface directly above the focus"
+        ],
+        [
+          "Energy Release",
+          "Point of actual origin where stored strain energy is released",
+          "First surface location to receive seismic wave energy"
+        ],
+        [
+          "Measurement",
+          "Defined by focal depth (km) beneath the surface",
+          "Defined by surface geographic coordinates (latitude & longitude)"
+        ],
+        [
+          "Wave Dynamics",
+          "Body waves (P-waves and S-waves) originate from here",
+          "Surface waves (L-waves and R-waves) propagate outward from here"
+        ]
+      ],
+      "id": "01sk9hf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Shallow Depth Range",
+          "value": "0–70 km",
+          "icon": "info"
+        },
+        {
+          "label": "Max Focus Depth",
+          "value": "700 km",
+          "icon": "clock"
+        },
+        {
+          "label": "Shallow Quakes Frequency",
+          "value": "85%",
+          "icon": "check"
+        },
+        {
+          "label": "Direct Surface Angle",
+          "value": "90°",
+          "icon": "award"
+        }
+      ],
+      "id": "of3ljim"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Focus is also known as the Hypocenter; the Epicenter lies directly above it on the surface at a 90-degree angle.",
+        "Shallow-focus earthquakes (0–70 km depth) cause the highest intensity of surface shaking and structural damage.",
+        "Focal depth rarely exceeds 700 km because rocks at greater depths deform plastically under high temperature and pressure."
+      ],
+      "id": "p5gx0ka"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The focus (or hypocenter) is the point inside the Earth where seismic energy is first released during an earthquake.",
+        "The epicenter is the point on the Earth's surface located directly vertical to the focus, experiencing seismic waves first.",
+        "Earthquakes are categorized by focal depth: shallow (0–70 km), intermediate (70–300 km), and deep (300–700 km).",
+        "Shallow-focus earthquakes account for over 80% of total seismic energy release and cause the greatest surface devastation.",
+        "Deep-focus earthquakes occur primarily in subduction zones along Wadati-Benioff zones where oceanic crust sinks into the mantle."
+      ],
+      "id": "11k1vwh"
+    }
+  ],
+  "enriched": true
+}

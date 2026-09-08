@@ -1,0 +1,559 @@
+{
+  "title": "Chapter 23: Cyclones and Anticyclones",
+  "order": 220,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Cyclones and anticyclones are large-scale atmospheric circulation systems formed due to horizontal pressure differences. They are the most powerful weather-producing mechanisms in the troposphere and play a critical role in global heat redistribution. A cyclone is a low-pressure system with converging and rising air, whereas an anticyclone is a high-pressure system with diverging and descending air.",
+      "id": "v8petcz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Min SST Required",
+          "value": "> 26.5°C",
+          "icon": "info"
+        },
+        {
+          "label": "Eye Width",
+          "value": "10–50 km",
+          "icon": "book"
+        },
+        {
+          "label": "Min Latitude Required",
+          "value": "5° Latitude",
+          "icon": "award"
+        },
+        {
+          "label": "Peak Seasons (India)",
+          "value": "2 Seasons",
+          "icon": "calendar"
+        },
+        {
+          "label": "Rapid Intensification",
+          "value": "+55 km/h in 24h",
+          "icon": "clock"
+        }
+      ],
+      "id": "ezb2gv2"
+    },
+    {
+      "id": "3b6za10",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Cyclone – Concept and Dynamics"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A cyclone is a low-pressure system with converging and rising air, while an anticyclone is a high-pressure system with diverging and descending air.",
+        "Tropical cyclone formation requires sea surface temperatures above 26.5°C up to 60m depth, high mid-tropospheric humidity, low wind shear, and at least 5° latitude for Coriolis force.",
+        "The structure of a tropical cyclone consists of a calm eye (10–50 km wide), a highly destructive eyewall, spiral rainbands, and upper-level outflow.",
+        "India experiences two peak cyclone seasons—Pre-monsoon (Apr–Jun) and Post-monsoon (Oct–Dec)—with the Bay of Bengal being more cyclone-prone.",
+        "Key advanced phenomena include the Fujiwhara Effect (two cyclones rotating around each other) and Rapid Intensification (wind speed increasing by 55 km/h in 24 hours)."
+      ],
+      "id": "x69d5e9"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Formed around a center of low atmospheric pressure.",
+      "id": "5j6axcu"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Air converges at surface and rises vertically.",
+      "id": "7hx3r4f"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Latent heat released during condensation strengthens the system.",
+      "id": "hqp6ou2"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Rotation due to Coriolis force: Counterclockwise (NH), Clockwise (SH).",
+      "id": "6fzssjt"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Strong pressure gradient causes high wind speeds.",
+      "id": "kgug0q6"
+    },
+    {
+      "id": "f0ey3w4",
+      "type": "heading",
+      "level": 3,
+      "content": "Forces Acting in a Cyclone"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Pressure Gradient Force – pulls air toward low pressure.",
+      "id": "plqqsq8"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Coriolis Force – deflects moving air.",
+      "id": "nvb25y4"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Centrifugal Force – balances inward pull in curved motion.",
+      "id": "vpsa6g1"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Friction – slows wind near surface.",
+      "id": "jkp387c"
+    },
+    {
+      "type": "paragraph",
+      "content": "Balance of these forces creates gradient wind circulation.",
+      "id": "j9esr71"
+    },
+    {
+      "id": "5lctyfr",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Structure of a Tropical Cyclone"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Eye – 10–50 km wide calm center with lowest pressure.",
+      "id": "opq3c3y"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Eyewall – Most destructive zone with highest wind speed and intense rainfall.",
+      "id": "sqk6wep"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Spiral Rainbands – Bands of thunderstorms extending outward.",
+      "id": "i7nk5ym"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Outflow – Diverging air at upper troposphere.",
+      "id": "o5gi3ba"
+    },
+    {
+      "id": "ooyj4d8",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Life Cycle of Tropical Cyclone"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Formation (Tropical Disturbance).",
+      "id": "hj4uub8"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Intensification (Tropical Depression → Storm → Cyclone).",
+      "id": "sb8tvoz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Mature Stage (Well-developed eye).",
+      "id": "10ayen6"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A cyclone is a low-pressure system with converging and rising air, whereas an anticyclone is a high-pressure system with diverging and descending air.",
+      "id": "76zpijl"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Weakening after landfall due to loss of moisture.",
+      "id": "rbymal8"
+    },
+    {
+      "id": "epyrlnx",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Conditions for Formation"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Sea surface temperature above 26.5°C up to depth of 60m.",
+      "id": "rxfc579"
+    },
+    {
+      "type": "paragraph",
+      "content": "• High humidity in mid-troposphere.",
+      "id": "b9fjtvm"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Low vertical wind shear.",
+      "id": "x2xmbit"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Sufficient Coriolis force (minimum 5° latitude).",
+      "id": "h5gpim5"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Pre-existing low-pressure disturbance.",
+      "id": "0sf527k"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Upper-level divergence.",
+      "id": "dmwne7u"
+    },
+    {
+      "id": "zfjw19l",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Types of Cyclones"
+    },
+    {
+      "id": "cykey75",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Energy Source</strong></p>",
+            "<p><strong>Key Feature</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropical Cyclone</p>",
+            "<p>Latent heat from warm ocean</p>",
+            "<p>No fronts; circular structure.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Temperate Cyclone</p>",
+            "<p>Temperature contrast</p>",
+            "<p>Frontal system; comma shape.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Polar Cyclone</p>",
+            "<p>Cold-core instability</p>",
+            "<p>Short-lived; limited strength.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qwl6mrm",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Tropical vs Temperate Cyclone (Complete Comparison)"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Cyclone",
+        "Anticyclone"
+      ],
+      "rows": [
+        [
+          "Pressure Center",
+          "Low pressure",
+          "High pressure"
+        ],
+        [
+          "Air Movement",
+          "Converging and rising air",
+          "Diverging and descending air"
+        ],
+        [
+          "Rotation in Northern Hemisphere",
+          "Counterclockwise",
+          "Clockwise"
+        ],
+        [
+          "Rotation in Southern Hemisphere",
+          "Clockwise",
+          "Counterclockwise"
+        ],
+        [
+          "Weather Associated",
+          "Powerful weather, storms, rain",
+          "Clear skies and stable weather"
+        ]
+      ],
+      "id": "gi1jnxx"
+    },
+    {
+      "id": "nk6oo5l",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Tropical</strong></p>",
+            "<p><strong>Temperate</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Latitude</p>",
+            "<p>5°–20°</p>",
+            "<p>30°–60°</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Energy Source</p>",
+            "<p>Warm water</p>",
+            "<p>Air mass contrast</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fronts</p>",
+            "<p>Absent</p>",
+            "<p>Present</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Wind Speed</p>",
+            "<p>Very High</p>",
+            "<p>Moderate</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Diameter</p>",
+            "<p>200–500 km</p>",
+            "<p>1000–3000 km</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rainfall</p>",
+            "<p>Heavy convectional</p>",
+            "<p>Frontal rainfall</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Life Span</p>",
+            "<p>5–10 days</p>",
+            "<p>3–7 days</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q67te4x",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Cyclones in India"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Bay of Bengal is more cyclone-prone due to higher sea surface temperature.",
+      "id": "8u9o8zz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Shallow continental shelf increases storm surge damage.",
+      "id": "2hshyu9"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Arabian Sea cyclones increasing in frequency.",
+      "id": "t6xwd7m"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Two peak seasons: Pre-monsoon (Apr–Jun) and Post-monsoon (Oct–Dec).",
+      "id": "n4b3pcu"
+    },
+    {
+      "type": "paragraph",
+      "content": "• IMD classifies cyclones into Depression, Deep Depression, Cyclonic Storm, Severe Cyclonic Storm etc.",
+      "id": "3blyxnn"
+    },
+    {
+      "id": "dsqpnyy",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Naming Conventions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Hurricanes (Atlantic), Typhoons (Pacific), Cyclones (Indian Ocean). Names are assigned by WMO regional panels.",
+      "id": "6jba8hx"
+    },
+    {
+      "id": "6yxnwaz",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Anticyclones – Structure and Weather"
+    },
+    {
+      "type": "paragraph",
+      "content": "• High-pressure center with descending air.",
+      "id": "7f3xoas"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Divergence at surface.",
+      "id": "nw6aodf"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Clockwise rotation in NH.",
+      "id": "s06xknz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Associated with clear skies and stable weather.",
+      "id": "ky4fx33"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Winter anticyclones can cause cold waves.",
+      "id": "e12z4q2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Coriolis force is essential for rotation: Cyclones rotate counterclockwise in the Northern Hemisphere and clockwise in the Southern Hemisphere.",
+        "Tropical cyclones require a minimum of 5° latitude to form because Coriolis force is insufficient near the equator.",
+        "The eyewall features the highest wind speeds and most intense rainfall, making it the most destructive zone, while the center (eye) remains calm.",
+        "Bay of Bengal is more cyclone-prone than the Arabian Sea due to higher sea surface temperatures and a shallow continental shelf."
+      ],
+      "id": "2ngwezu"
+    },
+    {
+      "id": "2fhzoih",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Cyclone vs Anticyclone (Complete Table)"
+    },
+    {
+      "id": "ktlc2x0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Cyclone</strong></p>",
+            "<p><strong>Anticyclone</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pressure</p>",
+            "<p>Low</p>",
+            "<p>High</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Air Motion</p>",
+            "<p>Rising</p>",
+            "<p>Sinking</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Clouds</p>",
+            "<p>Dense cloud cover</p>",
+            "<p>Clear skies</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rainfall</p>",
+            "<p>Heavy rainfall</p>",
+            "<p>Dry weather</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Wind Direction</p>",
+            "<p>Inward</p>",
+            "<p>Outward</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Weather Stability</p>",
+            "<p>Unstable</p>",
+            "<p>Stable</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ibjsad4",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Advanced Concepts for Competitive Exams"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Storm Surge – Abnormal rise of sea level due to cyclone winds and pressure drop.",
+      "id": "wl7hi0g"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Fujiwhara Effect – Two cyclones rotate around each other.",
+      "id": "bbc6uyv"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Rapid Intensification – Wind speed increases by 55 km/h in 24 hours.",
+      "id": "j4u5558"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Occlusion – Occurs in temperate cyclones when cold front overtakes warm front.",
+      "id": "7xi7i8z"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Climate change may increase intensity though not necessarily frequency.",
+      "id": "8tz8pkm"
+    },
+    {
+      "id": "x5qji6n",
+      "type": "heading",
+      "level": 2,
+      "content": "MASTER EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Cyclones are low-pressure systems with converging winds.<br/>• Tropical cyclones require warm ocean water.<br/>• Eye is calm but eyewall is most destructive.<br/>• Coriolis force is essential for rotation.<br/>• Temperate cyclones form along fronts.<br/>• Anticyclones bring stable weather.",
+      "id": "j6a8vqi"
+    }
+  ],
+  "enriched": true
+}

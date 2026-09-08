@@ -1,0 +1,592 @@
+{
+  "id": "vqxp4wt",
+  "title": "Network Theorems",
+  "order": 3,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5ojk3js",
+      "content": "<strong>CHAPTER 3 — NETWORK THEOREMS</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "5z5d7mc",
+      "content": "Network theorems provide powerful methods to simplify complex electrical circuits. Instead of applying KVL/KCL to every branch, these theorems reduce the circuit to a simple equivalent. The most important theorems for PSU exams are: Thevenin's Theorem, Norton's Theorem, Superposition Theorem, Maximum Power Transfer Theorem, and Reciprocity Theorem."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q3vfsau",
+      "content": "<strong>3.1  Thevenin's Theorem</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "5okeyur",
+      "content": "Thevenin's Theorem states that any two-terminal linear network containing voltage/current sources and resistances can be replaced by an equivalent circuit consisting of a single voltage source V_th in series with a single resistance R_th."
+    },
+    {
+      "id": "hhhpbxr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Steps to Find Thevenin Equivalent:</strong></p><p>Step 1: Remove the load resistance R_L from the terminals (terminals A and B).</p><p>Step 2: Find the open-circuit voltage across terminals A-B. This is V_th (Thevenin voltage).</p><p>Step 3: Deactivate all independent sources (replace voltage sources with short circuits, current sources with open circuits). Find the equivalent resistance seen from terminals A-B. This is R_th.</p><p>Step 4: Connect V_th in series with R_th. Connect R_L across the output terminals.</p><p>Step 5: Load current I_L = V_th / (R_th + R_L)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q9fnk03",
+      "content": "<strong>Worked Example</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "o60zfg0",
+      "content": "A circuit has a 12V source in series with 4Ω, connected across two terminals A-B along with a 6Ω resistor connected from A to B through 2Ω. Find the Thevenin equivalent."
+    },
+    {
+      "type": "paragraph",
+      "id": "wijwmf4",
+      "content": "V_th = Voltage divider: V_th = 12 × 6/(4+6) = 7.2V. R_th = (4||6) + 2 = 2.4 + 2 = 4.4Ω. Thevenin equivalent: 7.2V in series with 4.4Ω."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nfqv3zo",
+      "content": "<strong>3.2  Norton's Theorem</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "t8ua2ud",
+      "content": "Norton's Theorem states that any two-terminal linear network can be replaced by an equivalent current source I_N in parallel with a resistance R_N. Norton's equivalent is the dual of Thevenin's equivalent."
+    },
+    {
+      "id": "5xwh4ah",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>I_N = Short-circuit current at output terminals (terminals A-B shorted)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>R_N = R_th (same method as Thevenin — deactivate sources)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Relationship: V_th = I_N × R_N   (Source Transformation)</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zuwarg2",
+      "content": "<strong>3.3  Superposition Theorem</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "88hxsap",
+      "content": "The Superposition Theorem states that in a linear network with multiple independent sources, the response (voltage or current) in any element equals the algebraic sum of responses due to each source acting alone (all other independent sources deactivated)."
+    },
+    {
+      "type": "paragraph",
+      "id": "wndfidy",
+      "content": "Procedure: (1) Take one source at a time. Deactivate all other independent sources (short voltage sources, open current sources). (2) Calculate the response due to that single source. (3) Algebraically add all individual responses to get the total response. Note: Superposition does NOT apply to power (since power is non-linear: P = I²R)."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k2j7mbb",
+      "content": "<strong>3.4  Maximum Power Transfer Theorem</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "bz0gnwp",
+      "content": "Maximum power is transferred from a source to a load when the load resistance equals the Thevenin (source) resistance. This is critical in communication and electronics circuits where maximum power delivery is important."
+    },
+    {
+      "id": "r4gxyfe",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>For DC: R_L = R_th for maximum power transfer</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Maximum power: P_max = V_th² / (4 R_th)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>For AC: Z_L = Z_th* (complex conjugate of source impedance) for maximum power</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qqgnw63",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Condition</strong></p>",
+            "<p><strong>Load</strong></p>",
+            "<p><strong>Power Transferred</strong></p>",
+            "<p><strong>Efficiency</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>R_L &lt; R_th</p>",
+            "<p>Low resistance</p>",
+            "<p>Less than maximum</p>",
+            "<p>&gt; 50%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>R_L = R_th</p>",
+            "<p>Matched load</p>",
+            "<p>Maximum power</p>",
+            "<p>= 50% (η = 50%)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>R_L &gt; R_th</p>",
+            "<p>High resistance</p>",
+            "<p>Less than maximum</p>",
+            "<p>&lt; 50%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>R_L → ∞</p>",
+            "<p>Open circuit</p>",
+            "<p>Zero</p>",
+            "<p>100% (but no load)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>R_L → 0</p>",
+            "<p>Short circuit</p>",
+            "<p>Zero</p>",
+            "<p>0%</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k9dbbs5",
+      "content": "<strong>3.5  Reciprocity &amp; Millman's Theorem</strong>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ei1uydg",
+      "content": "<strong>Reciprocity Theorem</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "0urbckq",
+      "content": "In a linear, bilateral network, the ratio of response to excitation remains the same when the positions of excitation and response are interchanged. If a voltage source V in branch 1 produces current I in branch 2, then the same voltage V in branch 2 will produce the same current I in branch 1."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l7cee8z",
+      "content": "<strong>Millman's Theorem</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "00jmicv",
+      "content": "Millman's Theorem provides a quick method to find the common voltage across parallel branches that have both a source and a resistance. It is particularly useful for unbalanced parallel circuits."
+    },
+    {
+      "id": "4coxqy3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>V_AB = (V₁/R₁ + V₂/R₂ + V₃/R₃ + …) / (1/R₁ + 1/R₂ + 1/R₃ + …)</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "wq8z9ty",
+      "content": "<strong>3.6  Practice MCQs — Network Theorems</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "o4cdk0m",
+      "content": "<strong>Q1.  </strong>Thevenin's equivalent circuit consists of:"
+    },
+    {
+      "type": "paragraph",
+      "id": "wilj0vq",
+      "content": "        (A)  Current source and parallel resistance"
+    },
+    {
+      "type": "paragraph",
+      "id": "jushs5s",
+      "content": "        (B)  Voltage source and series resistance"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vjwkaii",
+      "content": "        (C)  Voltage source only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1wvrrh2",
+      "content": "        (D)  Current source only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zvq7dbn",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "vnr20t7",
+      "content": "<strong>Q2.  </strong>In Superposition theorem, voltage sources are deactivated by:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d4h5a8u",
+      "content": "        (A)  Open circuit"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fqanxpx",
+      "content": "        (B)  Short circuit"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3hfulc3",
+      "content": "        (C)  Removing them"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "r17ewlz",
+      "content": "        (D)  Replacing with capacitors"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "odzva85",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "npdejws",
+      "content": "<strong>Q3.  </strong>Maximum power is transferred when R_L equals:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1moy7d4",
+      "content": "        (A)  Zero"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "54b4456",
+      "content": "        (B)  Infinity"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5nyg4vr",
+      "content": "        (C)  R_th"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ucl51cp",
+      "content": "        (D)  2 × R_th"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "npf2c0v",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "02o0ec2",
+      "content": "<strong>Q4.  </strong>Efficiency of power transfer at maximum power condition is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fdd886c",
+      "content": "        (A)  100%"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5imwt75",
+      "content": "        (B)  75%"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rhywdgz",
+      "content": "        (C)  50%"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1ermleq",
+      "content": "        (D)  25%"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ai2zcui",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "jue57j0",
+      "content": "<strong>Q5.  </strong>Norton's equivalent consists of:"
+    },
+    {
+      "type": "paragraph",
+      "id": "6vl3ow8",
+      "content": "        (A)  Voltage source in series with resistance"
+    },
+    {
+      "type": "paragraph",
+      "id": "o6nzj2u",
+      "content": "        (B)  Current source in parallel with resistance"
+    },
+    {
+      "type": "paragraph",
+      "id": "ug20dzv",
+      "content": "        (C)  Voltage source in parallel with resistance"
+    },
+    {
+      "type": "paragraph",
+      "id": "is87us2",
+      "content": "        (D)  Current source in series with resistance"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "w44bvmo",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "1exeiyv",
+      "content": "<strong>Q6.  </strong>The Norton current I_N is found by:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dgeq7ou",
+      "content": "        (A)  Open-circuiting the output terminals"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z8cu4o2",
+      "content": "        (B)  Short-circuiting the output terminals"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5djztsy",
+      "content": "        (C)  Removing the load"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7nvyuud",
+      "content": "        (D)  None of these"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zfgqkff",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "z5bglc8",
+      "content": "<strong>Q7.  </strong>Reciprocity theorem is applicable to:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cv8oswn",
+      "content": "        (A)  Non-linear networks"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xsynxlm",
+      "content": "        (B)  Active networks"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ln3e9hd",
+      "content": "        (C)  Linear bilateral networks"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0pk8ne6",
+      "content": "        (D)  Unilateral networks"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9guklqi",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "jfiu9to",
+      "content": "<strong>Q8.  </strong>Superposition theorem is NOT applicable to:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "593fl9c",
+      "content": "        (A)  Voltage calculation"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7e6aead",
+      "content": "        (B)  Current calculation"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cpq8xnf",
+      "content": "        (C)  Power calculation"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2ghq1uk",
+      "content": "        (D)  Resistance calculation"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k1rf69c",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "83mk0bg",
+      "content": "<strong>Q9.  </strong>Millman's theorem is used to find:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "94cpygc",
+      "content": "        (A)  Mesh current"
+    },
+    {
+      "type": "paragraph",
+      "id": "wq75bj5",
+      "content": "        (B)  Node voltage of parallel circuit"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s990map",
+      "content": "        (C)  Short-circuit current"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dvvqccs",
+      "content": "        (D)  Open-circuit voltage"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oxz8tm6",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "zjh3ojx",
+      "content": "<strong>Q10.  </strong>A Thevenin equivalent has V_th = 10V and R_th = 5Ω. Maximum power to load is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z8wzcqy",
+      "content": "        (A)  5 W"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v6kt9xm",
+      "content": "        (B)  2.5 W"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a45acy0",
+      "content": "        (C)  10 W"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2i968j6",
+      "content": "        (D)  20 W"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6rt59h3",
+      "content": "<strong>Answer: </strong>(A)"
+    }
+  ],
+  "enriched": true
+}

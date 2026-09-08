@@ -48,7 +48,32 @@
     },
     {
       "type": "paragraph",
-      "id": "769ul44"
+      "id": "769ul44",
+      "content": "Motion is the change in position of an object with respect to time and reference point. If an object changes its position with time, it is said to be in motion."
+    },
+    {
+      "id": "dclxxbn",
+      "type": "image",
+      "imageId": "f66c1p3",
+      "src": "/books/Precis/RRB GS/images/image_f66c1p3.jpeg"
+    },
+    {
+      "id": "21db24q",
+      "type": "image",
+      "imageId": "ejmbbha",
+      "src": "/books/Precis/RRB GS/images/image_ejmbbha.png"
+    },
+    {
+      "id": "y4mi5e3",
+      "type": "image",
+      "imageId": "dwaslk1",
+      "src": "/books/Precis/RRB GS/images/image_dwaslk1.png"
+    },
+    {
+      "id": "tbyuz7p",
+      "type": "image",
+      "imageId": "mocg77d",
+      "src": "/books/Precis/RRB GS/images/image_mocg77d.png"
     },
     {
       "id": "kvbzxx9",
@@ -58,19 +83,23 @@
     },
     {
       "type": "paragraph",
-      "id": "pjl2ljv"
+      "id": "pjl2ljv",
+      "content": "• Linear Motion – Motion in a straight line."
     },
     {
       "type": "paragraph",
-      "id": "uo8j3a9"
+      "id": "uo8j3a9",
+      "content": "• Circular Motion – Motion along circular path."
     },
     {
       "type": "paragraph",
-      "id": "burmv5c"
+      "id": "burmv5c",
+      "content": "• Rotational Motion – Motion about an axis."
     },
     {
       "type": "paragraph",
-      "id": "f2ifl1j"
+      "id": "f2ifl1j",
+      "content": "• Periodic Motion – Motion that repeats at regular intervals."
     },
     {
       "id": "487p4dc",
@@ -85,25 +114,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Distance</strong></p>",
+            "<p><strong>Displacement</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Definition</p>",
+            "<p>Total path travelled</p>",
+            "<p>Shortest path between two points</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nature</p>",
+            "<p>Scalar Quantity</p>",
+            "<p>Vector Quantity</p>"
           ]
         }
       ]
@@ -111,7 +140,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "y2y98r8"
+      "id": "y2y98r8",
+      "content": "SI Unit: metre (m)"
     },
     {
       "id": "jjwyznz",
@@ -122,12 +152,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "dz3e7h6"
+      "id": "dz3e7h6",
+      "content": "Speed = Distance / Time"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "iw02v4l"
+      "id": "iw02v4l",
+      "content": "Velocity = Displacement / Time"
     },
     {
       "id": "ph1h4l5",
@@ -136,25 +168,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Speed</strong></p>",
+            "<p><strong>Velocity</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nature</p>",
+            "<p>Scalar</p>",
+            "<p>Vector</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Depends on</p>",
+            "<p>Distance</p>",
+            "<p>Displacement</p>"
           ]
         }
       ]
@@ -162,7 +194,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "pf2kahx"
+      "id": "pf2kahx",
+      "content": "SI Unit: m/s"
     },
     {
       "id": "2opdkk8",
@@ -172,25 +205,30 @@
     },
     {
       "type": "paragraph",
-      "id": "rduqbv0"
+      "id": "rduqbv0",
+      "content": "Acceleration = (Final Velocity – Initial Velocity) / Time"
     },
     {
       "type": "paragraph",
-      "id": "5y8852e"
+      "id": "5y8852e",
+      "content": "a = (v – u) / t"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rwtt0sf"
+      "id": "rwtt0sf",
+      "content": "SI Unit: m/s²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "919w74u"
+      "id": "919w74u",
+      "content": "Positive acceleration → Speed increases"
     },
     {
       "type": "paragraph",
-      "id": "f7w594j"
+      "id": "f7w594j",
+      "content": "Negative acceleration (Retardation) → Speed decreases"
     },
     {
       "id": "4kklkip",
@@ -201,45 +239,54 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "2sacv8v"
+      "id": "2sacv8v",
+      "content": "v = u + at"
     },
     {
       "type": "paragraph",
-      "id": "pxv05ro"
+      "id": "pxv05ro",
+      "content": "s = ut + ½ at²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8bdix2y"
+      "id": "8bdix2y",
+      "content": "v² = u² + 2as"
     },
     {
       "type": "paragraph",
-      "id": "9g1k01k"
+      "id": "9g1k01k",
+      "content": "Where:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gl978ia"
+      "id": "gl978ia",
+      "content": "u = Initial velocity"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lhn5e3z"
+      "id": "lhn5e3z",
+      "content": "v = Final velocity"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7peu9u0"
+      "id": "7peu9u0",
+      "content": "a = Acceleration"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "s9rddb4"
+      "id": "s9rddb4",
+      "content": "t = Time"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0kpno8b"
+      "id": "0kpno8b",
+      "content": "s = Displacement"
     },
     {
       "id": "pe3k24n",
@@ -249,31 +296,31 @@
     },
     {
       "type": "paragraph",
-      "id": "nht5yo8"
+      "id": "nht5yo8",
+      "content": "When a body falls freely under gravity, acceleration = g = 9.8 m/s²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lg12t2g"
+      "id": "lg12t2g",
+      "content": "v = gt"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4txx2ug"
-    },
-    {
-      "type": "pullQuote",
-      "content": "GRAPH CONCEPTS (VERY IMPORTANT FOR RRB)",
-      "id": "jsveept"
+      "id": "4txx2ug",
+      "content": "s = ½ gt²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dhzjk73"
+      "id": "dhzjk73",
+      "content": "v² = 2gh"
     },
     {
       "type": "paragraph",
-      "id": "dmgn58m"
+      "id": "dmgn58m",
+      "content": "All bodies fall with same acceleration in vacuum."
     },
     {
       "id": "udwirq2",
@@ -283,7 +330,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dr1ylry"
+      "id": "dr1ylry",
+      "content": "In uniform circular motion, speed remains constant but direction changes. Hence velocity changes and acceleration exists (centripetal acceleration)."
     },
     {
       "id": "hefvhpt",
@@ -293,28 +341,34 @@
     },
     {
       "type": "paragraph",
-      "id": "mldvrc8"
+      "id": "mldvrc8",
+      "content": "Distance-Time Graph:"
     },
     {
       "type": "paragraph",
-      "id": "tpj8z4k"
+      "id": "tpj8z4k",
+      "content": "• Straight line → Uniform motion"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "10o0w03"
+      "id": "10o0w03",
+      "content": "• Curve → Non-uniform motion"
     },
     {
       "type": "paragraph",
-      "id": "9qn21yr"
+      "id": "9qn21yr",
+      "content": "Velocity-Time Graph: "
     },
     {
       "type": "paragraph",
-      "id": "mtwikoe"
+      "id": "mtwikoe",
+      "content": "• Straight line → Uniform acceleration"
     },
     {
       "type": "paragraph",
-      "id": "ej5dswd"
+      "id": "ej5dswd",
+      "content": "• Area under graph = Displacement"
     },
     {
       "id": "qafmj29",
@@ -329,25 +383,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Scalar</strong></p>",
+            "<p><strong>Vector</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Definition</p>",
+            "<p>Magnitude only</p>",
+            "<p>Magnitude + Direction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Examples</p>",
+            "<p>Distance, Speed, Time</p>",
+            "<p>Displacement, Velocity, Acceleration</p>"
           ]
         }
       ]
@@ -360,23 +414,28 @@
     },
     {
       "type": "paragraph",
-      "id": "vjem21z"
+      "id": "vjem21z",
+      "content": "Average Speed = Total Distance / Total Time"
     },
     {
       "type": "paragraph",
-      "id": "j7uixf7"
+      "id": "j7uixf7",
+      "content": "Average Velocity = Total Displacement / Total Time"
     },
     {
       "type": "paragraph",
-      "id": "g5yrp2g"
+      "id": "g5yrp2g",
+      "content": "Instantaneous Velocity = Velocity at a particular instant of time"
     },
     {
       "type": "paragraph",
-      "id": "edag9d7"
+      "id": "edag9d7",
+      "content": "Important RRB Concept:"
     },
     {
       "type": "paragraph",
-      "id": "3226a28"
+      "id": "3226a28",
+      "content": "• If a body travels equal distances at speeds v1 and v2,"
     },
     {
       "type": "comparisonTable",
@@ -401,7 +460,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6x9c79c"
+      "id": "6x9c79c",
+      "content": "  Average Speed = 2v1v2 / (v1 + v2)"
     },
     {
       "id": "s0ebkxs",
@@ -411,15 +471,18 @@
     },
     {
       "type": "paragraph",
-      "id": "7njbws0"
+      "id": "7njbws0",
+      "content": "Relative motion is the motion of an object with respect to another object."
     },
     {
       "type": "paragraph",
-      "id": "cr52o93"
+      "id": "cr52o93",
+      "content": "Relative Velocity (same direction) = v1 – v2"
     },
     {
       "type": "paragraph",
-      "id": "bgihmps"
+      "id": "bgihmps",
+      "content": "Relative Velocity (opposite direction) = v1 + v2"
     },
     {
       "id": "amb9vz7",
@@ -429,35 +492,43 @@
     },
     {
       "type": "paragraph",
-      "id": "5p4yhtm"
+      "id": "5p4yhtm",
+      "content": "1D Motion – Motion along straight line."
     },
     {
       "type": "paragraph",
-      "id": "ykh47b1"
+      "id": "ykh47b1",
+      "content": "2D Motion – Motion in a plane (Projectile motion conceptually)."
     },
     {
       "type": "paragraph",
-      "id": "5766zmr"
+      "id": "5766zmr",
+      "content": "Projectile Important Points:"
     },
     {
       "type": "paragraph",
-      "id": "r2tsqwb"
+      "id": "r2tsqwb",
+      "content": "• Horizontal velocity remains constant."
     },
     {
       "type": "paragraph",
-      "id": "odi6xjd"
+      "id": "odi6xjd",
+      "content": "• Vertical motion affected by gravity."
     },
     {
       "type": "paragraph",
-      "id": "kz5omor"
+      "id": "kz5omor",
+      "content": "• Time of flight = 2u sinθ / g"
     },
     {
       "type": "paragraph",
-      "id": "727lsnf"
+      "id": "727lsnf",
+      "content": "• Maximum height = u² sin²θ / 2g<img></img>"
     },
     {
       "type": "paragraph",
-      "id": "zyzoleu"
+      "id": "zyzoleu",
+      "content": "• Range = u² sin2θ / g"
     },
     {
       "id": "3brlu4y",
@@ -467,15 +538,18 @@
     },
     {
       "type": "paragraph",
-      "id": "3eb7dg4"
+      "id": "3eb7dg4",
+      "content": "Centripetal Acceleration (a) = v² / r"
     },
     {
       "type": "paragraph",
-      "id": "al5plqz"
+      "id": "al5plqz",
+      "content": "Centripetal Force (F) = mv² / r"
     },
     {
       "type": "paragraph",
-      "id": "tz6ark8"
+      "id": "tz6ark8",
+      "content": "Direction always towards centre."
     },
     {
       "id": "g5jng3e",
@@ -485,19 +559,23 @@
     },
     {
       "type": "paragraph",
-      "id": "rg18be3"
+      "id": "rg18be3",
+      "content": "• Slope of Distance-Time Graph = Speed"
     },
     {
       "type": "paragraph",
-      "id": "bc3rwxa"
+      "id": "bc3rwxa",
+      "content": "• Slope of Velocity-Time Graph = Acceleration"
     },
     {
       "type": "paragraph",
-      "id": "jqhjyqf"
+      "id": "jqhjyqf",
+      "content": "• Area under Velocity-Time Graph = Displacement"
     },
     {
       "type": "paragraph",
-      "id": "yypm4f5"
+      "id": "yypm4f5",
+      "content": "• Horizontal line in v-t graph = Constant velocity"
     },
     {
       "type": "examAlert",
@@ -510,7 +588,8 @@
     },
     {
       "type": "paragraph",
-      "id": "y5zi7kv"
+      "id": "y5zi7kv",
+      "content": "• Negative slope in v-t graph = Retardation"
     },
     {
       "id": "0k7ac61",
@@ -521,12 +600,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "gby6iyb"
+      "id": "gby6iyb",
+      "content": "1 km/h = 5/18 m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yf6fg0n"
+      "id": "yf6fg0n",
+      "content": "1 m/s = 18/5 km/h"
     },
     {
       "id": "zspv96u",
@@ -536,43 +617,53 @@
     },
     {
       "type": "paragraph",
-      "id": "9er4mep"
+      "id": "9er4mep",
+      "content": "• At highest point of projectile, vertical velocity = 0."
     },
     {
       "type": "paragraph",
-      "id": "wvicu4o"
+      "id": "wvicu4o",
+      "content": "• In uniform motion, acceleration = 0."
     },
     {
       "type": "paragraph",
-      "id": "751mumo"
+      "id": "751mumo",
+      "content": "• A body can have zero velocity but non-zero acceleration."
     },
     {
       "type": "paragraph",
-      "id": "lno8pz3"
+      "id": "lno8pz3",
+      "content": "• Speed is never negative, velocity can be negative."
     },
     {
       "type": "paragraph",
-      "id": "s4x9amj"
+      "id": "s4x9amj",
+      "content": "• If displacement is zero, average velocity is zero but distance may not be zero."
     },
     {
       "type": "paragraph",
-      "id": "kzkulv0"
+      "id": "kzkulv0",
+      "content": "• State of rest is zero velocity."
     },
     {
       "type": "paragraph",
-      "id": "lr9mvph"
+      "id": "lr9mvph",
+      "content": "• At highest point of vertical throw, velocity = 0 but acceleration = g."
     },
     {
       "type": "paragraph",
-      "id": "zzpjk9l"
+      "id": "zzpjk9l",
+      "content": "• In circular motion, acceleration acts towards centre."
     },
     {
       "type": "paragraph",
-      "id": "aa4ro1f"
+      "id": "aa4ro1f",
+      "content": "• Scalar quantities: Distance, Speed."
     },
     {
       "type": "paragraph",
-      "id": "7h8016f"
+      "id": "7h8016f",
+      "content": "• Vector quantities: Displacement, Velocity, Acceleration."
     }
   ],
   "enriched": true

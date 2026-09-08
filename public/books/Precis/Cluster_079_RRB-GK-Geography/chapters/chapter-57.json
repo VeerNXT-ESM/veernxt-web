@@ -1,0 +1,140 @@
+{
+  "title": "5. Mantle — Detailed Study",
+  "order": 57,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The mantle is the thickest layer and forms about 83% of Earth's volume.",
+      "id": "pusq8yk"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth's Volume",
+          "value": "83%",
+          "icon": "info"
+        },
+        {
+          "label": "Mantle Depth",
+          "value": "35–2900 km",
+          "icon": "book"
+        },
+        {
+          "label": "Asthenosphere Depth",
+          "value": "100–350 km",
+          "icon": "clock"
+        }
+      ],
+      "id": "40s8z38"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Extends from 35 km to 2900 km.",
+      "id": "2mrofk1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The mantle is the thickest layer and forms about 83% of Earth's volume.",
+      "id": "a08qpbj"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Upper mantle includes lithosphere and asthenosphere.",
+      "id": "m3lr01j"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Asthenosphere (100–350 km) is partially molten.",
+      "id": "eqbjkcu"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Lithosphere",
+        "Asthenosphere"
+      ],
+      "rows": [
+        [
+          "Location / Depth",
+          "Part of Upper Mantle (outermost layer)",
+          "100–350 km depth in Upper Mantle"
+        ],
+        [
+          "Physical State",
+          "Solid and rigid",
+          "Partially molten"
+        ]
+      ],
+      "id": "20gaugz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Convection currents in mantle cause plate movement.",
+      "id": "djumf70"
+    },
+    {
+      "id": "vjzywjv",
+      "type": "heading",
+      "level": 2,
+      "content": "Lithosphere vs Asthenosphere"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Note the volume percentage: Mantle accounts for ~83% of Earth's volume.",
+        "Asthenosphere is located between 100–350 km and is partially molten.",
+        "Convection currents in the mantle are the direct cause of tectonic plate movement."
+      ],
+      "id": "va5m930"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The mantle is Earth's thickest layer, occupying nearly 83% of Earth's volume.",
+        "It extends vertically from a depth of 35 km down to 2900 km.",
+        "The upper mantle comprises both the rigid lithosphere and the asthenosphere.",
+        "The asthenosphere lies between 100–350 km depth and is partially molten.",
+        "Plate movement is driven by convection currents operating within the mantle."
+      ],
+      "id": "z6nwkf5"
+    },
+    {
+      "id": "rectmxr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Lithosphere</strong></p>",
+            "<p><strong>Asthenosphere</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rigid</p>",
+            "<p>Plastic and semi-molten</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Includes crust + uppermost mantle</p>",
+            "<p>Below lithosphere</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Forms tectonic plates</p>",
+            "<p>Allows plate movement</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

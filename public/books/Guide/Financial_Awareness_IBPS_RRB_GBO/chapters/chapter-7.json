@@ -54,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0kj8xvr"
+      "id": "0kj8xvr",
+      "content": "Balance of Payments is a systematic record of all economic transactions between residents of a country and the rest of the world during a given period."
     },
     {
       "id": "qcsgmfl",
@@ -63,33 +64,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Account</strong></p>",
+            "<p><strong>Includes</strong></p>",
+            "<p><strong>Nature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Current Account</p>",
+            "<p>Trade in goods (Trade Balance), Trade in services, Income (remittances, dividends), Current transfers</p>",
+            "<p>Flow of goods/services/income</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Capital Account</p>",
+            "<p>Capital transfers, Acquisition of non-produced assets</p>",
+            "<p>Usually small; often merged with financial</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Financial Account</p>",
+            "<p>FDI, FII/FPI, External borrowings, Banking capital, Reserve assets</p>",
+            "<p>Flow of financial instruments</p>"
           ]
         }
       ]
@@ -138,64 +139,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Definition</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Trade Deficit</p>",
+            "<p>Imports exceed exports (negative trade balance)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Current Account Deficit (CAD)</p>",
+            "<p>Current account outflows exceed inflows; financed by capital account surplus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>FDI (Foreign Direct Investment)</p>",
+            "<p>Investment that creates lasting interest; investor holds &gt;10% stake</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>FPI/FII (Foreign Portfolio Investment)</p>",
+            "<p>Investment in stocks, bonds without management control; volatile</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>FEMA (Foreign Exchange Management Act)</p>",
+            "<p>1999; replaces FERA; governs forex transactions in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ECB (External Commercial Borrowing)</p>",
+            "<p>Loans raised by Indian companies from foreign lenders</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>EXIM Bank</p>",
+            "<p>Export-Import Bank; finances cross-border trade and investment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>DGFT</p>",
+            "<p>Directorate General of Foreign Trade; formulates export-import policy</p>"
           ]
         }
       ]
@@ -219,11 +220,11 @@
       "id": "ug9ecmm",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<strong>Currency pegged to another currency or gold; requires large forex reserves: </strong>Fixed Exchange Rate",
+        "<strong>Market-determined; fully flexible: </strong>Floating Exchange Rate",
+        "<strong>Market-determined but RBI intervenes to prevent excessive volatility: </strong>Managed Float (India)",
+        "<strong>Domestic currency strengthens (e.g., USD/INR decreases): </strong>Appreciation",
+        "<strong>Domestic currency weakens (e.g., USD/INR increases): </strong>Depreciation"
       ]
     }
   ],

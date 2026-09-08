@@ -1,0 +1,56 @@
+{
+  "title": "9. Are Recommendations Binding? (VERY IMPORTANT)",
+  "order": 214,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The recommendations of the Finance Commission are ADVISORY in nature.<br/>However, they are generally accepted because they are based on objective criteria.",
+      "id": "blucjv1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The recommendations of the Finance Commission are ADVISORY in nature.",
+      "id": "n6ny1jb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Nature",
+          "value": "Advisory",
+          "icon": "info"
+        },
+        {
+          "label": "Legal Status",
+          "value": "Non-Binding",
+          "icon": "check"
+        },
+        {
+          "label": "Basis",
+          "value": "Objective Criteria",
+          "icon": "award"
+        }
+      ],
+      "id": "e1vs8io"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Examiners often ask if the Finance Commission recommendations are binding; they are strictly ADVISORY.",
+        "The reason for widespread acceptance of these non-binding recommendations is their reliance on objective criteria."
+      ],
+      "id": "a5kdj0z"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Recommendations made by the Finance Commission are advisory in nature.",
+        "The recommendations are not legally binding on the government.",
+        "They are generally accepted by the government because they are framed using objective criteria."
+      ],
+      "id": "7pxa1t6"
+    }
+  ],
+  "enriched": true
+}

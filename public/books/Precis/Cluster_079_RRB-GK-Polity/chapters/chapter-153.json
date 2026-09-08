@@ -1,0 +1,143 @@
+{
+  "title": "Comparison: Legislative Assembly vs Legislative Council",
+  "order": 153,
+  "blocks": [
+    {
+      "id": "ri0ees8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Legislative Assembly</strong></p>",
+            "<p><strong>Legislative Council</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lower House</p>",
+            "<p>Upper House</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Directly elected</p>",
+            "<p>Indirectly elected</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>5-year term</p>",
+            "<p>Permanent body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>More powers</p>",
+            "<p>Limited powers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Controls Council of Ministers</p>",
+            "<p>Cannot remove ministry</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Legislative Council is a permanent body and not subject to dissolution, but one-third of its members retire every second year.",
+      "id": "0k0fcr6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Legislative Assembly (Vidhan Sabha)",
+        "Legislative Council (Vidhan Parishad)"
+      ],
+      "rows": [
+        [
+          "Nature of House",
+          "Lower / Popular House (Directly elected)",
+          "Upper / House of Elders (Indirectly elected)"
+        ],
+        [
+          "Tenure",
+          "5 years (Can be dissolved earlier)",
+          "Permanent body (1/3rd members retire every 2 years)"
+        ],
+        [
+          "Minimum Age",
+          "25 years",
+          "30 years"
+        ],
+        [
+          "Money Bill Powers",
+          "Exclusive authority to introduce and pass",
+          "Can only delay up to 14 days, cannot reject or amend"
+        ],
+        [
+          "Strength Limits",
+          "Maximum 500, Minimum 60 (with exceptions)",
+          "Maximum 1/3rd of Assembly strength, Minimum 40"
+        ]
+      ],
+      "id": "dk8era4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Bicameral States",
+          "value": "6 States",
+          "icon": "book"
+        },
+        {
+          "label": "Assembly Min Age",
+          "value": "25 Years",
+          "icon": "check"
+        },
+        {
+          "label": "Council Min Age",
+          "value": "30 Years",
+          "icon": "check"
+        },
+        {
+          "label": "Council Creation/Abolition",
+          "value": "Article 169",
+          "icon": "info"
+        }
+      ],
+      "id": "l14zrox"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Legislative Council can delay an Ordinary Bill for a maximum period of 4 months total (3 months in the first instance and 1 month in the second instance).",
+        "Only 6 states currently have bicameral legislatures in India: Uttar Pradesh, Bihar, Maharashtra, Karnataka, Andhra Pradesh, and Telangana.",
+        "There is no constitutional provision for a joint sitting at the state level to resolve legislative deadlocks between the Assembly and the Council."
+      ],
+      "id": "r43p4hj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Legislative Assembly (Vidhan Sabha) is the directly elected lower house, while the Legislative Council (Vidhan Parishad) is the indirectly elected upper house.",
+        "The Legislative Assembly has a 5-year term subject to dissolution, whereas the Legislative Council is a permanent body where one-third of members retire every two years.",
+        "Money Bills can only originate in the Legislative Assembly, and the Legislative Council can delay a Money Bill for a maximum of 14 days only.",
+        "Under Article 169, Parliament can create or abolish a Legislative Council if the state's Legislative Assembly passes a resolution by a special majority.",
+        "Unlike Parliament at the central level, there is no provision for a joint sitting of both state houses to resolve deadlocks on legislative bills."
+      ],
+      "id": "30c3doj"
+    }
+  ],
+  "enriched": true
+}

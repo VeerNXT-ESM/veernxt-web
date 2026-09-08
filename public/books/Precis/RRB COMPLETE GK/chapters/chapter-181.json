@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "4yuo83f"
+      "id": "4yuo83f",
+      "content": "Global vegetation zones are closely linked with climatic belts."
     },
     {
       "type": "pullQuote",
@@ -97,82 +98,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Vegetation</strong></p>",
+            "<p><strong>Rainfall</strong></p>",
+            "<p><strong>Temperature</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Evergreen Forest</p>",
+            "<p>&gt;200 cm</p>",
+            "<p>High year-round</p>",
+            "<p>Dense multi-layered forests; hardwood trees; extremely high biodiversity.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Deciduous Forest</p>",
+            "<p>100–200 cm</p>",
+            "<p>High seasonal</p>",
+            "<p>Trees shed leaves to conserve water; teak and sal common.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Grasslands (Savanna)</p>",
+            "<p>50–100 cm</p>",
+            "<p>Warm</p>",
+            "<p>Tall grasses with scattered trees; supports large herbivores.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Desert Vegetation</p>",
+            "<p>&lt;25 cm</p>",
+            "<p>Extreme</p>",
+            "<p>Sparse xerophytic plants; thick cuticle and long roots.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mediterranean Vegetation</p>",
+            "<p>Winter rain</p>",
+            "<p>Warm dry summers</p>",
+            "<p>Sclerophyllous plants with waxy leaves.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Temperate Deciduous</p>",
+            "<p>75–150 cm</p>",
+            "<p>Moderate</p>",
+            "<p>Broadleaf trees; distinct seasons.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Taiga (Boreal Forest)</p>",
+            "<p>Moderate</p>",
+            "<p>Long cold winters</p>",
+            "<p>Coniferous trees; softwood forests.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tundra</p>",
+            "<p>Very low</p>",
+            "<p>Extremely cold</p>",
+            "<p>Mosses, lichens; permafrost prevents deep roots.</p>"
           ]
         }
       ]

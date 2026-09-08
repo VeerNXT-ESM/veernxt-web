@@ -1,0 +1,56 @@
+{
+  "title": "6. Geographic Grid",
+  "order": 44,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The network formed by intersecting latitudes and longitudes is called the geographic grid. It enables the exact location of any place using coordinates.",
+      "id": "edrd4jq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The network formed by intersecting latitudes and longitudes is called the geographic grid.",
+      "id": "30f9jfv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Grid Composition",
+          "value": "Latitudes & Longitudes",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Function",
+          "value": "Exact Location",
+          "icon": "info"
+        },
+        {
+          "label": "Location Method",
+          "value": "Coordinates",
+          "icon": "check"
+        }
+      ],
+      "id": "1kurcb8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Definition Alert: The geographic grid is specifically formed by intersecting lines of latitude and longitude.",
+        "Function Alert: The geographic grid is used to determine the exact location of any place via coordinates."
+      ],
+      "id": "1jq5ueu"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The geographic grid is defined as the network formed by the intersection of lines of latitude and longitude.",
+        "It serves the essential function of pinpointing precise spatial locations across the globe.",
+        "Coordinates derived from this grid system enable the exact positioning of any place on Earth."
+      ],
+      "id": "j7ahrm1"
+    }
+  ],
+  "enriched": true
+}

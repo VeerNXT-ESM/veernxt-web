@@ -1,0 +1,129 @@
+{
+  "title": "CIC vs State Information Commission",
+  "order": 409,
+  "blocks": [
+    {
+      "id": "xgduum0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>CIC</strong></p>",
+            "<p><strong>State Information Commission</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Deals with Central bodies</p>",
+            "<p>Deals with State bodies</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appointed by President</p>",
+            "<p>Appointed by Governor</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reports to Central Government</p>",
+            "<p>Reports to State Government</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Right to Information Act of 2005 provides for the creation of not only the Central Information Commission but also a State Information Commission at the state level.",
+      "id": "dnd6s4i"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Information Commission (CIC)",
+        "State Information Commission (SIC)"
+      ],
+      "rows": [
+        [
+          "Jurisdiction",
+          "Central Public Authorities",
+          "State Public Authorities"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Selection Committee Head",
+          "Prime Minister",
+          "Chief Minister"
+        ],
+        [
+          "Tenure & Service Rules",
+          "Prescribed by Central Govt (Max 65 yrs age)",
+          "Prescribed by Central Govt (Max 65 yrs age)"
+        ],
+        [
+          "Removal Authority",
+          "President (on SC reference)",
+          "Governor (on SC reference)"
+        ]
+      ],
+      "id": "66cg9i3"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Statute",
+          "value": "RTI Act, 2005",
+          "icon": "book"
+        },
+        {
+          "label": "Max Strength",
+          "value": "1 Chief + 10 ICs",
+          "icon": "check"
+        },
+        {
+          "label": "Upper Age Limit",
+          "value": "65 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Key Amendment",
+          "value": "RTI Act 2019",
+          "icon": "calendar"
+        }
+      ],
+      "id": "r7zxw4i"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Selection Committee Composition: For CIC, it includes the PM (Chair), Leader of Opposition in Lok Sabha, and a Union Cabinet Minister. For SIC, it includes the CM (Chair), Leader of Opposition in Legislative Assembly, and a State Cabinet Minister.",
+        "Removal Procedure: Both Central and State Information Commissioners can be removed only after an inquiry by the Supreme Court on grounds of proved misbehaviour or incapacity.",
+        "2019 Amendment Impact: Fixed 5-year tenure was removed; the Central Government now prescribes the tenure and service conditions for both CIC and SIC members."
+      ],
+      "id": "yj83lui"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Both the Central Information Commission (CIC) and State Information Commissions (SIC) are statutory bodies created under the Right to Information Act, 2005.",
+        "The CIC consists of a Chief Information Commissioner and up to 10 Information Commissioners appointed by the President of India.",
+        "The SIC consists of a State Chief Information Commissioner and up to 10 State Information Commissioners appointed by the respective State Governor.",
+        "The RTI (Amendment) Act, 2005 empowers the Central Government to notify terms of office, salaries, and allowances for both Central and State Information Commissioners.",
+        "Commissioners of both CIC and SIC are ineligible for reappointment to the same office after completing their term."
+      ],
+      "id": "24fsdku"
+    }
+  ],
+  "enriched": true
+}

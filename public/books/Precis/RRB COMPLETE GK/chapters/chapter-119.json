@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "2yy8v42"
+      "id": "2yy8v42",
+      "content": "Mass wasting is the downslope movement of weathered material under the influence of gravity without external transporting agents."
     },
     {
       "type": "statStrip",
@@ -54,11 +55,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "3u0mw6i"
+      "id": "3u0mw6i",
+      "content": "• Gravity (primary force)"
     },
     {
       "type": "paragraph",
-      "id": "bn0foc8"
+      "id": "bn0foc8",
+      "content": "• Slope angle (angle of repose concept)"
     },
     {
       "type": "pullQuote",
@@ -68,12 +71,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "cjywvbr"
+      "id": "cjywvbr",
+      "content": "• Water content (lubrication effect)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "myon4bm"
+      "id": "myon4bm",
+      "content": "• Vegetation cover"
     },
     {
       "type": "comparisonTable",
@@ -109,12 +114,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "mqlqnc4"
+      "id": "mqlqnc4",
+      "content": "• Rock structure"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l079ohn"
+      "id": "l079ohn",
+      "content": "• Seismic activity"
     },
     {
       "id": "qlvl9iq",
@@ -123,71 +130,77 @@
       "content": "Types of Mass Movement"
     },
     {
+      "id": "c4oeobb",
+      "type": "image",
+      "imageId": "yryoljn",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_yryoljn.png"
+    },
+    {
       "id": "zab27if",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Speed</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rockfall</p>",
+            "<p>Very Rapid</p>",
+            "<p>Mountain cliffs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Landslide</p>",
+            "<p>Rapid</p>",
+            "<p>Himalayan slopes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Debris Flow</p>",
+            "<p>Rapid</p>",
+            "<p>After heavy rainfall</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mudflow</p>",
+            "<p>Moderate–Rapid</p>",
+            "<p>Volcanic slopes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Soil Creep</p>",
+            "<p>Very Slow</p>",
+            "<p>Gradual slope movement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Solifluction</p>",
+            "<p>Slow</p>",
+            "<p>Periglacial regions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Avalanche</p>",
+            "<p>Extremely Rapid</p>",
+            "<p>Snow-covered mountains</p>"
           ]
         }
       ]
@@ -209,11 +222,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8ek0imc"
+      "id": "8ek0imc",
+      "content": "Hazards: Loss of life, infrastructure damage, river blockage."
     },
     {
       "type": "paragraph",
-      "id": "iqtefov"
+      "id": "iqtefov",
+      "content": "Mitigation: Retaining walls, afforestation, drainage control, hazard mapping."
     }
   ],
   "enriched": true

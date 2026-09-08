@@ -1,0 +1,128 @@
+{
+  "title": "Finance Commission vs Planning Commission",
+  "order": 216,
+  "blocks": [
+    {
+      "id": "zuxqrtu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Finance Commission</strong></p>",
+            "<p><strong>Planning Commission (Now replaced)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Status</p>",
+            "<p>Constitutional</p>",
+            "<p>Non-constitutional</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Focus</p>",
+            "<p>Tax distribution</p>",
+            "<p>Plan grants</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Frequency</p>",
+            "<p>Every 5 years</p>",
+            "<p>Permanent</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Finance Commission is a constitutional body under Article 280, whereas the Planning Commission was an extra-constitutional body established by executive resolution.",
+      "id": "jqql3a0"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Finance Commission",
+        "Planning Commission"
+      ],
+      "rows": [
+        [
+          "Nature",
+          "Constitutional Body (Article 280)",
+          "Non-Constitutional / Extra-Constitutional Body"
+        ],
+        [
+          "Origin",
+          "Created under Constitutional provision",
+          "Created by Executive Cabinet Resolution in 1950"
+        ],
+        [
+          "Primary Function",
+          "Tax distribution & advisory on grants-in-aid",
+          "Formulation of Five-Year Plans & resource allocation"
+        ],
+        [
+          "Current Status",
+          "Active (Constituted every 5 years)",
+          "Dissolved in 2015 (Replaced by NITI Aayog)"
+        ]
+      ],
+      "id": "8h8qraw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "FC Constitution Provision",
+          "value": "Article 280",
+          "icon": "book"
+        },
+        {
+          "label": "PC Establishment",
+          "value": "1950",
+          "icon": "calendar"
+        },
+        {
+          "label": "PC Replacement Year",
+          "value": "2015",
+          "icon": "clock"
+        },
+        {
+          "label": "FC Recommendation Term",
+          "value": "5 Years",
+          "icon": "check"
+        }
+      ],
+      "id": "70469ea"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 280 governs the Finance Commission; remember that its recommendations are advisory in nature and not legally binding.",
+        "The Planning Commission had no constitutional provision and was created by a cabinet resolution, unlike the statutory or constitutional status of other bodies.",
+        "NITI Aayog replaced the Planning Commission on January 1, 2015, shifting focus from top-down planning to cooperative federalism."
+      ],
+      "id": "613ane6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Finance Commission is a constitutional body defined under Article 280 of the Indian Constitution, constituted by the President every five years.",
+        "The Planning Commission was a non-constitutional, extra-constitutional body established via an executive resolution in March 1950.",
+        "The Finance Commission mainly deals with tax revenue distribution between the Union and States, and determining grants-in-aid.",
+        "The Planning Commission was responsible for formulating India's Five-Year Plans and making plan resource allocations to states.",
+        "On 1st January 2015, the Planning Commission was officially replaced by NITI Aayog (National Institution for Transforming India)."
+      ],
+      "id": "bhprxlh"
+    }
+  ],
+  "enriched": true
+}

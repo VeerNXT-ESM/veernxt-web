@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "u3r7up9"
+      "id": "u3r7up9",
+      "content": "The Maratha Empire played a crucial role in Indian history after the decline of the Mughal Empire. It was founded by Chhatrapati Shivaji Maharaj in the 17th century. Shivaji established a strong administrative system and a powerful military. "
     },
     {
       "type": "statStrip",
@@ -53,19 +54,23 @@
     },
     {
       "type": "paragraph",
-      "id": "nrkehuv"
+      "id": "nrkehuv",
+      "content": "• The Marathas lived in the Deccan region of India."
     },
     {
       "type": "paragraph",
-      "id": "1s67j9t"
+      "id": "1s67j9t",
+      "content": "• They were mainly farmers and warriors."
     },
     {
       "type": "paragraph",
-      "id": "48t2b4v"
+      "id": "48t2b4v",
+      "content": "• The weakening of the Deccan Sultanates and Mughal authority helped the rise of Maratha power."
     },
     {
       "type": "paragraph",
-      "id": "if8tsq9"
+      "id": "if8tsq9",
+      "content": "• Shivaji organized the Marathas into a strong military and political force."
     },
     {
       "id": "7jkghnz",
@@ -75,7 +80,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dv4vd6f"
+      "id": "dv4vd6f",
+      "content": "Shivaji was the founder of the Maratha Empire and one of the greatest rulers in Indian history."
     },
     {
       "id": "3xc521g",
@@ -84,50 +90,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Event</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Birth</p>",
+            "<p>1630 at Shivneri Fort</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Father</p>",
+            "<p>Shahaji Bhonsle</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mother</p>",
+            "<p>Jijabai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Guru</p>",
+            "<p>Dadaji Konddev</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Coronation</p>",
+            "<p>1674 at Raigad</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Death</p>",
+            "<p>1680</p>"
           ]
         }
       ]
@@ -140,19 +146,23 @@
     },
     {
       "type": "paragraph",
-      "id": "nazlnss"
+      "id": "nazlnss",
+      "content": "• Captured Torna Fort in 1646."
     },
     {
       "type": "paragraph",
-      "id": "1cccd1v"
+      "id": "1cccd1v",
+      "content": "• Captured several forts in the Deccan region."
     },
     {
       "type": "paragraph",
-      "id": "2fzqrpe"
+      "id": "2fzqrpe",
+      "content": "• Defeated Afzal Khan, a general of Bijapur Sultanate."
     },
     {
       "type": "paragraph",
-      "id": "c4jzl4g"
+      "id": "c4jzl4g",
+      "content": "• Established control over many strategic forts."
     },
     {
       "id": "e8vsq0l",
@@ -162,20 +172,18 @@
     },
     {
       "type": "paragraph",
-      "id": "j37igbz"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Shivaji Maharaj (1630–1680)",
-      "id": "z9ff9xh"
+      "id": "j37igbz",
+      "content": "• Shivaji fought several battles against Mughal forces."
     },
     {
       "type": "paragraph",
-      "id": "h8rnpp0"
+      "id": "h8rnpp0",
+      "content": "• He attacked Surat in 1664."
     },
     {
       "type": "paragraph",
-      "id": "xs50vj9"
+      "id": "xs50vj9",
+      "content": "• He was invited to the Mughal court by Aurangzeb but later escaped from Agra in 1666. "
     },
     {
       "id": "r201l0e",
@@ -190,64 +198,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Administrative Feature</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>King (Chhatrapati)</p>",
+            "<p>Supreme authority of the state</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ashta Pradhan</p>",
+            "<p>Council of eight ministers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Peshwa</p>",
+            "<p>Prime Minister</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Amatya</p>",
+            "<p>Finance minister</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Senapati</p>",
+            "<p>Commander of army</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sachiv</p>",
+            "<p>Secretary</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sumant</p>",
+            "<p>Foreign affairs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nyayadhish</p>",
+            "<p>Chief justice</p>"
           ]
         }
       ]
@@ -259,16 +267,25 @@
       "content": "6. Military System"
     },
     {
-      "type": "paragraph",
-      "id": "mgojd3c"
+      "id": "mtmtc5t",
+      "type": "image",
+      "imageId": "m0qws4m",
+      "src": "/books/Guide/GEN AWARENESS/images/image_m0qws4m.jpeg"
     },
     {
       "type": "paragraph",
-      "id": "mjc5hx1"
+      "id": "mgojd3c",
+      "content": "<img></img>• Shivaji organized a strong and disciplined army."
     },
     {
       "type": "paragraph",
-      "id": "tyjdb9z"
+      "id": "mjc5hx1",
+      "content": "• He developed a powerful navy to protect the western coast."
+    },
+    {
+      "type": "paragraph",
+      "id": "tyjdb9z",
+      "content": "• He used guerrilla warfare tactics known as 'Ganimi Kava'."
     },
     {
       "type": "comparisonTable",
@@ -299,19 +316,23 @@
     },
     {
       "type": "paragraph",
-      "id": "2r75on6"
+      "id": "2r75on6",
+      "content": "• Land revenue was the main source of income."
     },
     {
       "type": "paragraph",
-      "id": "gbad7ne"
+      "id": "gbad7ne",
+      "content": "• Two important taxes were collected:"
     },
     {
       "type": "paragraph",
-      "id": "hn6shsl"
+      "id": "hn6shsl",
+      "content": "• Chauth – one-fourth of revenue collected from territories."
     },
     {
       "type": "paragraph",
-      "id": "x78owb7"
+      "id": "x78owb7",
+      "content": "• Sardeshmukhi – additional tax collected from regions."
     },
     {
       "id": "1ar120l",
@@ -321,15 +342,18 @@
     },
     {
       "type": "paragraph",
-      "id": "nzdow15"
+      "id": "nzdow15",
+      "content": "• After Shivaji's death, the Maratha Empire expanded further under the Peshwas."
     },
     {
       "type": "paragraph",
-      "id": "9m666tw"
+      "id": "9m666tw",
+      "content": "• Peshwa Baji Rao I greatly expanded Maratha territory."
     },
     {
       "type": "paragraph",
-      "id": "a2cjdxs"
+      "id": "a2cjdxs",
+      "content": "• The Marathas became a major political power in India."
     },
     {
       "id": "dpecowm",
@@ -339,7 +363,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qdezb7p"
+      "id": "qdezb7p",
+      "content": "• The Third Battle of Panipat in 1761 weakened the Marathas."
     },
     {
       "type": "examAlert",
@@ -353,11 +378,13 @@
     },
     {
       "type": "paragraph",
-      "id": "uh2201p"
+      "id": "uh2201p",
+      "content": "• Internal conflicts among Maratha leaders."
     },
     {
       "type": "paragraph",
-      "id": "6rfkaot"
+      "id": "6rfkaot",
+      "content": "• The rise of British power in India."
     },
     {
       "id": "o8di89c",
@@ -367,23 +394,28 @@
     },
     {
       "type": "paragraph",
-      "id": "5s2rupz"
+      "id": "5s2rupz",
+      "content": "• Shivaji was crowned in 1674 at Raigad."
     },
     {
       "type": "paragraph",
-      "id": "764hzz1"
+      "id": "764hzz1",
+      "content": "• The council of ministers was called Ashta Pradhan."
     },
     {
       "type": "paragraph",
-      "id": "8uon24l"
+      "id": "8uon24l",
+      "content": "• Shivaji used guerrilla warfare tactics."
     },
     {
       "type": "paragraph",
-      "id": "n1a6x9h"
+      "id": "n1a6x9h",
+      "content": "• Chauth and Sardeshmukhi were Maratha taxes."
     },
     {
       "type": "paragraph",
-      "id": "98v44o9"
+      "id": "98v44o9",
+      "content": "• Third Battle of Panipat (1761) weakened Maratha power."
     }
   ],
   "enriched": true

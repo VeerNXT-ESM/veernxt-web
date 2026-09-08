@@ -4,6 +4,12 @@
   "order": 9,
   "blocks": [
     {
+      "id": "v5axab8",
+      "type": "image",
+      "imageId": "q9xqg58",
+      "src": "/books/Guide/Odisha SI/images/image_q9xqg58.jpeg"
+    },
+    {
       "id": "5235kez",
       "type": "heading",
       "level": 2,
@@ -48,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "m6d55o3"
+      "id": "m6d55o3",
+      "content": "The Gajapati dynasty succeeded the Eastern Gangas and ruled Odisha from Cuttack. Kapilendradeva (1435–1467) was the greatest Gajapati ruler who extended the empire from the Ganga in the north to the Kaveri in the south."
     },
     {
       "type": "pullQuote",
@@ -62,29 +69,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Ruler</strong></p>",
+            "<p><strong>Achievement</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kapilendradeva (1435–67)</p>",
+            "<p>Greatest Gajapati ruler; vast empire; defeated Bahmani Sultanate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Purushottamadeva (1467–97)</p>",
+            "<p>Military campaigns in South India; won Kanchi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prataparudra (1497–1540)</p>",
+            "<p>Last great Gajapati; contemporary of Chaitanya Mahaprabhu</p>"
           ]
         }
       ]
@@ -123,7 +130,8 @@
     },
     {
       "type": "paragraph",
-      "id": "irx0pdr"
+      "id": "irx0pdr",
+      "content": "Chaitanya Mahaprabhu, the Vaishnava saint from Bengal, came to Puri and spent 18 years (1510–1533) at Jagannath Puri. His influence greatly shaped Odisha's Vaishnavism and the Jagannath cult. The panchasabda (five musical instruments) tradition of Jagannath Temple is associated with this period."
     },
     {
       "id": "vn1o878",
@@ -133,7 +141,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ppzz4hq"
+      "id": "ppzz4hq",
+      "content": "After the decline of the Gajapatis, the Afghan rulers (Sulaiman Karrani) conquered Odisha in 1568. The Mughals under Akbar's general Man Singh captured Odisha in 1592. The Subah of Odisha was established as a Mughal province. During this period, the Jagannath cult suffered but also persisted."
     },
     {
       "type": "examAlert",
@@ -152,7 +161,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9upucgt"
+      "id": "9upucgt",
+      "content": "The Marathas conquered Odisha in 1751 and it remained under Maratha (Bhonsle of Nagpur) control until 1803. During Maratha rule, the Jagannath Temple was restored. Revenue was collected through the panda system. The Maratha rule is remembered for its extractive nature."
     }
   ],
   "enriched": true

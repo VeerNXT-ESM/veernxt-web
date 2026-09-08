@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ls7mkfr"
+      "id": "ls7mkfr",
+      "content": "The Indian banking system is regulated by the Reserve Bank of India (RBI) and operates under a multi-tier structure including commercial banks, cooperative banks, regional rural banks, payment banks, and small finance banks."
     },
     {
       "id": "xigs9h1",
@@ -57,73 +58,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type of Bank</strong></p>",
+            "<p><strong>Examples</strong></p>",
+            "<p><strong>Key Feature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Scheduled Commercial Banks</p>",
+            "<p>SBI, PNB, HDFC, ICICI</p>",
+            "<p>Listed in 2nd Schedule of RBI Act 1934</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Public Sector Banks (PSBs)</p>",
+            "<p>SBI, Bank of Baroda, Canara Bank</p>",
+            "<p>Govt holds &gt;51% stake</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Private Sector Banks</p>",
+            "<p>HDFC, ICICI, Axis, Kotak</p>",
+            "<p>Majority private ownership</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Foreign Banks</p>",
+            "<p>Citibank, HSBC, Standard Chartered</p>",
+            "<p>HQ outside India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Regional Rural Banks (RRBs)</p>",
+            "<p>Prathama UP Gramin Bank</p>",
+            "<p>Serve rural/semi-urban areas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Small Finance Banks</p>",
+            "<p>AU SFB, Equitas SFB</p>",
+            "<p>Focus on unserved segments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Payment Banks</p>",
+            "<p>Paytm, Airtel, India Post</p>",
+            "<p>Cannot give loans; max Rs.2 lakh deposit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Co-operative Banks</p>",
+            "<p>NAFCUB, Urban Co-op Banks</p>",
+            "<p>Member-owned; dual regulation</p>"
           ]
         }
       ]
@@ -135,13 +136,9 @@
       "content": "1.2 Reserve Bank of India (RBI)"
     },
     {
-      "type": "pullQuote",
-      "content": "1.2 Reserve Bank of India (RBI)",
-      "id": "1ywbvsc"
-    },
-    {
       "type": "paragraph",
-      "id": "xsc3f0i"
+      "id": "xsc3f0i",
+      "content": "RBI was established on April 1, 1935 under the Reserve Bank of India Act, 1934 and nationalised on January 1, 1949. It is headquartered in Mumbai."
     },
     {
       "id": "rxtmqhz",
@@ -153,13 +150,13 @@
       "id": "vvknen6",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Issue of Currency Notes (Monopoly except Rs.1 coin/note, issued by Govt)",
+        "Banker to the Government – manages government accounts and public debt",
+        "Banker's Bank – lender of last reGBOrt, holds CRR deposits of banks",
+        "Controller of Credit – uses monetary policy tools to regulate money supply",
+        "Foreign Exchange Management – manages forex reserves, regulates FEMA",
+        "Developmental Role – promotes financial inclusion, priority sector lending",
+        "Regulator and SuperviGBOr of Banks – grants licences, issues guidelines"
       ]
     },
     {
@@ -211,41 +208,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Governor</strong></p>",
+            "<p><strong>Tenure</strong></p>",
+            "<p><strong>Key Development</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Raghuram Rajan</p>",
+            "<p>2013–2016</p>",
+            "<p>Inflation targeting framework introduced</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Urjit Patel</p>",
+            "<p>2016–2018</p>",
+            "<p>Demonetisation &amp; NBFC regulation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shaktikanta Das</p>",
+            "<p>2018–2024</p>",
+            "<p>COVID relief measures, Flexible inflation target</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sanjay Malhotra</p>",
+            "<p>Dec 2024–Present</p>",
+            "<p>Current Governor</p>"
           ]
         }
       ]
@@ -263,73 +260,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Account Type</strong></p>",
+            "<p><strong>Interest Rate</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Savings Account</p>",
+            "<p>2.5% – 7% p.a.</p>",
+            "<p>For individuals; limited withdrawals; ATM/net banking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Current Account</p>",
+            "<p>Nil (generally)</p>",
+            "<p>For businesses; unlimited transactions; overdraft facility</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fixed Deposit (FD)</p>",
+            "<p>5% – 9% p.a.</p>",
+            "<p>Lump sum for fixed tenor; TDS applicable on interest</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Recurring Deposit (RD)</p>",
+            "<p>5% – 8% p.a.</p>",
+            "<p>Monthly fixed installment; builds savings habit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DEMAT Account</p>",
+            "<p>N/A</p>",
+            "<p>Electronic holding of shares/securities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NRE Account</p>",
+            "<p>Fully repatriable</p>",
+            "<p>Foreign income in INR; tax-free interest</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NRO Account</p>",
+            "<p>Not fully repatriable</p>",
+            "<p>Income earned in India by NRIs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>FCNR Account</p>",
+            "<p>Foreign currency</p>",
+            "<p>Foreign Currency Non-Resident; no forex risk</p>"
           ]
         }
       ]
@@ -353,14 +350,14 @@
       "id": "crv4u39",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<strong>Current Account + Savings Account deposits as % of total deposits; higher is better for banks: </strong>CASA Ratio",
+        "<strong>Loan overdue for more than 90 days; classified as Sub-standard, Doubtful, Loss: </strong>NPA (Non-Performing Asset)",
+        "<strong>Capital / Risk-Weighted Assets; minimum 9% under Basel III in India: </strong>Capital Adequacy Ratio (CAR)",
+        "<strong>Capital to Risk-weighted Assets Ratio; same as CAR: </strong>CRAR",
+        "<strong>Difference between interest income and interest paid; profitability measure: </strong>Net Interest Margin (NIM)",
+        "<strong>Gross NPAs / Gross Advances x 100: </strong>Gross NPA Ratio",
+        "<strong>Provisions held against NPAs; higher = more buffer: </strong>Provisioning Coverage Ratio",
+        "<strong>Banks must lend 40% of ANBC to priority sectors (agriculture, MSME, etc.): </strong>Priority Sector Lending (PSL)"
       ]
     },
     {
@@ -376,49 +373,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Year</strong></p>",
+            "<p><strong>Banks Nationalised</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1955</p>",
+            "<p>SBI (Imperial Bank)</p>",
+            "<p>First nationalisation; SBI Act 1955</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1969</p>",
+            "<p>14 banks with deposits &gt; Rs.50 crore</p>",
+            "<p>Major nationalisation under Indira Gandhi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1980</p>",
+            "<p>6 more banks with deposits &gt; Rs.200 crore</p>",
+            "<p>Second wave of nationalisation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1993</p>",
+            "<p>New Bank of India merged with PNB</p>",
+            "<p>ConGBOlidation due to losses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2019–2020</p>",
+            "<p>Mega mergers of PSBs</p>",
+            "<p>10 PSBs merged to form 4 entities</p>"
           ]
         }
       ]

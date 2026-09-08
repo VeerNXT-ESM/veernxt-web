@@ -50,7 +50,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6gk6q31"
+      "id": "6gk6q31",
+      "content": "Biochemistry is the study of chemical substances and vital processes occurring in living organisms. In nursing competitive examinations such as RRB Nursing, questions are commonly asked from biomolecules, enzymes, vitamins, minerals, metabolism, and acid–base balance. Understanding biochemical processes helps nurses understand disease mechanisms, drug actions, and nutritional deficiencies."
     },
     {
       "id": "qix6yiw",
@@ -60,7 +61,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jb4qpnk"
+      "id": "jb4qpnk",
+      "content": "Biomolecules are organic molecules present in living organisms that are essential for structure and metabolism. The major biomolecules include carbohydrates, proteins, lipids, and nucleic acids."
     },
     {
       "id": "xuhafvy",
@@ -69,41 +71,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Biomolecule</strong></p>",
+            "<p><strong>Main Function</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Carbohydrates</p>",
+            "<p>Primary source of energy</p>",
+            "<p>Glucose, starch, glycogen</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Proteins</p>",
+            "<p>Structural components and enzymes</p>",
+            "<p>Hemoglobin, enzymes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lipids</p>",
+            "<p>Energy storage and cell membranes</p>",
+            "<p>Fats, phospholipids, cholesterol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nucleic Acids</p>",
+            "<p>Genetic information storage</p>",
+            "<p>DNA, RNA</p>"
           ]
         }
       ]
@@ -116,7 +118,8 @@
     },
     {
       "type": "paragraph",
-      "id": "akq70o7"
+      "id": "akq70o7",
+      "content": "Carbohydrates are the body's major energy source. Glucose metabolism occurs mainly through glycolysis, the Krebs cycle, and oxidative phosphorylation."
     },
     {
       "id": "l4vq814",
@@ -125,43 +128,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Glycolysis</p>",
+            "<p>Breakdown of glucose to pyruvate producing ATP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Krebs Cycle</p>",
+            "<p>Occurs in mitochondria producing energy carriers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Oxidative Phosphorylation</p>",
+            "<p>Electron transport chain producing ATP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Glycogenesis</p>",
+            "<p>Formation of glycogen from glucose</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Glycogenolysis</p>",
+            "<p>Breakdown of glycogen into glucose</p>"
           ]
         }
       ]
@@ -173,13 +176,9 @@
       "content": "Protein Metabolism"
     },
     {
-      "type": "pullQuote",
-      "content": "Important Exam Facts",
-      "id": "mhe4k2j"
-    },
-    {
       "type": "paragraph",
-      "id": "8w9qzlm"
+      "id": "8w9qzlm",
+      "content": "Proteins are composed of amino acids and are essential for tissue repair, enzyme formation, hormone production, and immune function."
     },
     {
       "id": "g3ijntp",
@@ -188,36 +187,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Digestion</p>",
+            "<p>Proteins are broken down into amino acids in stomach and intestine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Transamination</p>",
+            "<p>Transfer of amino group between amino acids</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deamination</p>",
+            "<p>Removal of amino group producing ammonia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Urea Cycle</p>",
+            "<p>Conversion of ammonia to urea in liver</p>"
           ]
         }
       ]
@@ -230,7 +229,8 @@
     },
     {
       "type": "paragraph",
-      "id": "j6wpeug"
+      "id": "j6wpeug",
+      "content": "Lipids provide long‑term energy storage and are important components of cell membranes."
     },
     {
       "id": "88abje4",
@@ -239,29 +239,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lipolysis</p>",
+            "<p>Breakdown of fats into fatty acids</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Beta‑oxidation</p>",
+            "<p>Fatty acids converted to energy in mitochondria</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lipogenesis</p>",
+            "<p>Formation of fat from excess carbohydrates</p>"
           ]
         }
       ]
@@ -300,7 +300,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zr1mljb"
+      "id": "zr1mljb",
+      "content": "Enzymes are biological catalysts that accelerate chemical reactions without being consumed."
     },
     {
       "id": "hng7aqz",
@@ -309,36 +310,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Enzyme Property</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Specificity</p>",
+            "<p>Each enzyme acts on a specific substrate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Optimal pH</p>",
+            "<p>Most enzymes work best at specific pH levels</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Optimal Temperature</p>",
+            "<p>Human enzymes function best near 37°C</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Inhibitors</p>",
+            "<p>Chemicals that reduce enzyme activity</p>"
           ]
         }
       ]
@@ -356,57 +357,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Vitamin</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Deficiency Disease</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vitamin A</p>",
+            "<p>Vision and immune function</p>",
+            "<p>Night blindness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vitamin B1 (Thiamine)</p>",
+            "<p>Carbohydrate metabolism</p>",
+            "<p>Beriberi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vitamin B3 (Niacin)</p>",
+            "<p>Energy metabolism</p>",
+            "<p>Pellagra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vitamin C</p>",
+            "<p>Collagen formation</p>",
+            "<p>Scurvy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vitamin D</p>",
+            "<p>Calcium absorption</p>",
+            "<p>Rickets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vitamin K</p>",
+            "<p>Blood clotting</p>",
+            "<p>Bleeding disorders</p>"
           ]
         }
       ]
@@ -424,49 +425,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Mineral</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Deficiency</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Calcium</p>",
+            "<p>Bone formation and muscle contraction</p>",
+            "<p>Osteoporosis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Iron</p>",
+            "<p>Hemoglobin formation</p>",
+            "<p>Anemia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Iodine</p>",
+            "<p>Thyroid hormone production</p>",
+            "<p>Goiter</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Potassium</p>",
+            "<p>Nerve impulse conduction</p>",
+            "<p>Muscle weakness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sodium</p>",
+            "<p>Fluid balance</p>",
+            "<p>Hyponatremia</p>"
           ]
         }
       ]
@@ -489,7 +490,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5jriyvt"
+      "id": "5jriyvt",
+      "content": "The body maintains blood pH within a narrow range of 7.35–7.45 through buffer systems, respiratory regulation, and renal mechanisms."
     },
     {
       "id": "f5desms",
@@ -498,36 +500,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Disorder</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Acidosis</p>",
+            "<p>Blood pH falls below normal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Alkalosis</p>",
+            "<p>Blood pH rises above normal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Respiratory Acidosis</p>",
+            "<p>Caused by CO2 retention</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Metabolic Acidosis</p>",
+            "<p>Caused by excess acid production</p>"
           ]
         }
       ]
@@ -545,78 +547,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Important Point</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Main energy source of body</p>",
+            "<p>Carbohydrates</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Energy currency of cell</p>",
+            "<p>ATP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Protein building blocks</p>",
+            "<p>Amino acids</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vitamin A deficiency</p>",
+            "<p>Night blindness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vitamin B1 deficiency</p>",
+            "<p>Beriberi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vitamin B3 deficiency</p>",
+            "<p>Pellagra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vitamin C deficiency</p>",
+            "<p>Scurvy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vitamin D deficiency</p>",
+            "<p>Rickets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vitamin K function</p>",
+            "<p>Blood clotting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Iron deficiency</p>",
+            "<p>Anemia</p>"
           ]
         }
       ]

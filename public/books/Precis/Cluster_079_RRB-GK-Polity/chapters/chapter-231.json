@@ -1,0 +1,57 @@
+{
+  "title": "10. Limitations of CAG",
+  "order": 231,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• CAG only audits — it does NOT enforce recovery.<br/>• Cannot question government policy decisions.<br/>• Functions mainly after expenditure has occurred.",
+      "id": "829hqli"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CAG only audits — it does NOT enforce recovery.",
+      "id": "hsvdhg2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Audit Nature",
+          "value": "Ex-Post",
+          "icon": "clock"
+        },
+        {
+          "label": "Enforcement Power",
+          "value": "None",
+          "icon": "check"
+        },
+        {
+          "label": "Policy Review",
+          "value": "Restricted",
+          "icon": "info"
+        }
+      ],
+      "id": "7c5jdya"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CAG has no authority to enforce the recovery of disallowed public expenditure.",
+        "Government policy decisions lie strictly outside the jurisdiction of CAG's questioning.",
+        "CAG's audit functions mainly after the expenditure has already been incurred."
+      ],
+      "id": "q280u0l"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The CAG acts strictly as an auditor and lacks executive power to enforce fund recovery.",
+        "CAG cannot question the wisdom or merits of government policy decisions.",
+        "The role of CAG is largely ex-post, functioning primarily after expenditure has taken place."
+      ],
+      "id": "t68cwbd"
+    }
+  ],
+  "enriched": true
+}

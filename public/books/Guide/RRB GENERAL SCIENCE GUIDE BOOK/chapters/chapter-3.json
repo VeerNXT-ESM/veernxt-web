@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "mjo9zsw"
+      "id": "mjo9zsw",
+      "content": "Energy and power are fundamental concepts in physics that explain the ability to do work and the rate at which work is done. Energy exists in many forms and can be converted from one form to another."
     },
     {
       "type": "statStrip",
@@ -54,15 +55,18 @@
     },
     {
       "type": "paragraph",
-      "id": "y8464mf"
+      "id": "y8464mf",
+      "content": "• Energy is the capacity to do work."
     },
     {
       "type": "paragraph",
-      "id": "zhsxkbu"
+      "id": "zhsxkbu",
+      "content": "• Energy can exist in different forms such as mechanical energy, heat energy, electrical energy and chemical energy."
     },
     {
       "type": "paragraph",
-      "id": "8453h2r"
+      "id": "8453h2r",
+      "content": "• The SI unit of energy is Joule (J)."
     },
     {
       "id": "sc9yz6u",
@@ -77,43 +81,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Energy</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mechanical Energy</p>",
+            "<p>Energy of moving objects</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heat Energy</p>",
+            "<p>Energy produced by heat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Electrical Energy</p>",
+            "<p>Energy from electric current</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chemical Energy</p>",
+            "<p>Energy stored in fuels and food</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Light Energy</p>",
+            "<p>Energy from sunlight</p>"
           ]
         }
       ]
@@ -126,24 +130,29 @@
     },
     {
       "type": "paragraph",
-      "id": "2pl1czp"
+      "id": "2pl1czp",
+      "content": "Kinetic energy is the energy possessed by an object due to its motion."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ashkbp7"
+      "id": "ashkbp7",
+      "content": "Formula: KE = ½ mv²"
     },
     {
       "type": "paragraph",
-      "id": "6sgymyh"
+      "id": "6sgymyh",
+      "content": "Where:"
     },
     {
       "type": "paragraph",
-      "id": "s2756k5"
+      "id": "s2756k5",
+      "content": "m = mass of the object"
     },
     {
       "type": "paragraph",
-      "id": "w3trx52"
+      "id": "w3trx52",
+      "content": "v = velocity of the object"
     },
     {
       "type": "pullQuote",
@@ -158,30 +167,36 @@
     },
     {
       "type": "paragraph",
-      "id": "z0xr303"
+      "id": "z0xr303",
+      "content": "Potential energy is the energy possessed by an object due to its position or configuration."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5tzlmdz"
+      "id": "5tzlmdz",
+      "content": "Formula: PE = mgh"
     },
     {
       "type": "paragraph",
-      "id": "j48c9y0"
+      "id": "j48c9y0",
+      "content": "Where:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1ezt2hb"
+      "id": "1ezt2hb",
+      "content": "m = mass"
     },
     {
       "type": "paragraph",
-      "id": "6j24pxq"
+      "id": "6j24pxq",
+      "content": "g = acceleration due to gravity"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ht67ovr"
+      "id": "ht67ovr",
+      "content": "h = height"
     },
     {
       "type": "comparisonTable",
@@ -227,7 +242,8 @@
     },
     {
       "type": "paragraph",
-      "id": "us2mzyx"
+      "id": "us2mzyx",
+      "content": "The law of conservation of energy states that energy can neither be created nor destroyed; it can only be converted from one form to another."
     },
     {
       "id": "gvopkgj",
@@ -237,11 +253,13 @@
     },
     {
       "type": "paragraph",
-      "id": "3gqyalc"
+      "id": "3gqyalc",
+      "content": "Mechanical energy is the sum of kinetic energy and potential energy."
     },
     {
       "type": "paragraph",
-      "id": "2dea27h"
+      "id": "2dea27h",
+      "content": "Mechanical Energy = KE + PE"
     },
     {
       "id": "zixab21",
@@ -251,15 +269,18 @@
     },
     {
       "type": "paragraph",
-      "id": "bks4dar"
+      "id": "bks4dar",
+      "content": "Power is the rate at which work is done or energy is transferred."
     },
     {
       "type": "paragraph",
-      "id": "c2pv8iq"
+      "id": "c2pv8iq",
+      "content": "Formula: Power = Work / Time"
     },
     {
       "type": "paragraph",
-      "id": "6740d1l"
+      "id": "6740d1l",
+      "content": "SI Unit of Power = Watt (W)"
     },
     {
       "id": "3zf4pya",
@@ -284,29 +305,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p>Unit</p>",
+            "<p>Description</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Watt</p>",
+            "<p>SI unit of power</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kilowatt</p>",
+            "<p>1000 watts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Horsepower</p>",
+            "<p>Unit used in engines</p>"
           ]
         }
       ]
@@ -319,19 +340,23 @@
     },
     {
       "type": "paragraph",
-      "id": "a0oczvs"
+      "id": "a0oczvs",
+      "content": "• Energy is the capacity to do work."
     },
     {
       "type": "paragraph",
-      "id": "rrzcl51"
+      "id": "rrzcl51",
+      "content": "• SI unit of energy is Joule."
     },
     {
       "type": "paragraph",
-      "id": "gqqhfef"
+      "id": "gqqhfef",
+      "content": "• Kinetic energy formula is ½ mv²."
     },
     {
       "type": "paragraph",
-      "id": "f0952n5"
+      "id": "f0952n5",
+      "content": "• SI unit of power is Watt."
     }
   ],
   "enriched": true

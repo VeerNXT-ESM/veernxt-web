@@ -1,0 +1,809 @@
+{
+  "id": "ekns4kx",
+  "title": "Dc Machines",
+  "order": 5,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "aeb8ula",
+      "content": "<strong>CHAPTER 5 — DC MACHINES</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "e4gndjq",
+      "content": "DC machines are electromechanical devices that convert electrical energy to mechanical energy (DC motor) or mechanical energy to electrical energy (DC generator). Despite widespread use of AC machines, DC machines remain important in traction, steel plants, paper mills, and variable-speed drives. Understanding their construction, working, and characteristics is essential for PSU exams."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a1cz3ea",
+      "content": "<strong>5.1  Construction of DC Machine</strong>"
+    },
+    {
+      "id": "gecz0jb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Material / Type</strong></p>",
+            "<p><strong>Function</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Yoke (Frame)</p>",
+            "<p>Cast iron or steel</p>",
+            "<p>Mechanical support; carries flux between poles</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Poles &amp; Pole Shoes</p>",
+            "<p>Laminated silicon steel</p>",
+            "<p>Creates magnetic field; pole shoes spread flux uniformly</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Field Winding</p>",
+            "<p>Copper wire on pole body</p>",
+            "<p>Produces magnetic flux when energised (DC supply)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Armature Core</p>",
+            "<p>Laminated silicon steel</p>",
+            "<p>Carries armature winding; laminated to reduce eddy losses</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Armature Winding</p>",
+            "<p>Copper conductors</p>",
+            "<p>Carries current; site of EMF generation (lap or wave winding)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Commutator</p>",
+            "<p>Copper segments, mica insulation</p>",
+            "<p>Converts AC generated in armature to DC at brushes</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Brushes</p>",
+            "<p>Carbon or graphite</p>",
+            "<p>Makes sliding contact with commutator; collects current</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Shaft &amp; Bearings</p>",
+            "<p>Steel shaft, ball/journal bearings</p>",
+            "<p>Mechanical transmission of torque</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "79d38qs",
+      "content": "<strong>5.2  EMF Equation of DC Generator</strong>"
+    },
+    {
+      "id": "570au03",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>E = (ΦZNP) / (60A)</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "qa3na1d",
+      "content": "where: Φ = Flux per pole (Wb), Z = Total armature conductors, N = Speed in RPM, P = Number of poles, A = Number of parallel paths in armature winding."
+    },
+    {
+      "type": "paragraph",
+      "id": "ykvkyg0",
+      "content": "For lap winding: A = P (parallel paths equal number of poles). For wave winding: A = 2 (always two parallel paths, regardless of number of poles). Lap winding is used for high-current, low-voltage machines. Wave winding for high-voltage, low-current machines."
+    },
+    {
+      "type": "paragraph",
+      "id": "a15ai6w",
+      "content": "<strong>5.3  Types of DC Generators (Excitation)</strong>"
+    },
+    {
+      "id": "oq59rwr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Excitation</strong></p>",
+            "<p><strong>Characteristic</strong></p>",
+            "<p><strong>Use</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Separately Excited</p>",
+            "<p>External DC source for field</p>",
+            "<p>Best voltage regulation; independent control</p>",
+            "<p>Laboratory, Ward-Leonard system</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Self-Excited: Shunt</p>",
+            "<p>Field parallel to armature</p>",
+            "<p>Nearly constant voltage; slight droop</p>",
+            "<p>General purpose, battery charging</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Self-Excited: Series</p>",
+            "<p>Field in series with armature</p>",
+            "<p>Voltage rises steeply with load</p>",
+            "<p>Series arc lamps; boosters</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Self-Excited: Compound (Cumulative)</p>",
+            "<p>Both series &amp; shunt fields aiding</p>",
+            "<p>Flat or over-compounded V-I curve</p>",
+            "<p>Most common: lifts, welding</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Compound (Differential)</p>",
+            "<p>Series field opposes shunt field</p>",
+            "<p>Dropping V-I characteristic</p>",
+            "<p>Welding generators</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "hu9hbyd",
+      "content": "<strong>5.4  DC Motor — Working Principle</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "9knnwtu",
+      "content": "When a current-carrying conductor is placed in a magnetic field, it experiences a force (Lorentz force). In a DC motor, the armature conductors carrying current in the presence of the field flux experience this force, creating torque and causing rotation. Fleming's Left-Hand Rule gives the direction of force."
+    },
+    {
+      "id": "kmlutkp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Torque: T = (ΦZIA P) / (2πA)  =  K_a × Φ × I_a        (K_a = machine constant)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Back EMF: E_b = V − I_a R_a        (Motor equation)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Speed: N = (V − I_a R_a) / (KΦ)  =  E_b / KΦ</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "rqet0rr",
+      "content": "Back EMF (E_b) is the voltage induced in the armature of a motor due to rotation in the field. It opposes the applied voltage and acts as a self-regulating mechanism. When load increases: speed drops → E_b drops → I_a = (V−E_b)/R_a increases → torque increases → speed recovers."
+    },
+    {
+      "type": "paragraph",
+      "id": "8aopomi",
+      "content": "<strong>5.5  DC Motor Types &amp; Characteristics</strong>"
+    },
+    {
+      "id": "26av1ky",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Motor Type</strong></p>",
+            "<p><strong>Speed Characteristic</strong></p>",
+            "<p><strong>Torque Characteristic</strong></p>",
+            "<p><strong>Starting Torque</strong></p>",
+            "<p><strong>Applications</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Shunt Motor</p>",
+            "<p>Nearly constant speed (drops slightly with load)</p>",
+            "<p>T ∝ I_a (linear)</p>",
+            "<p>Moderate</p>",
+            "<p>Lathes, fans, centrifugal pumps, machine tools</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Series Motor</p>",
+            "<p>Speed varies greatly with load (N ∝ 1/√T)</p>",
+            "<p>T ∝ I_a² (high starting torque)</p>",
+            "<p>Very high</p>",
+            "<p>Cranes, hoists, traction (railways), starter motors</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Compound Motor (Cumulative)</p>",
+            "<p>Intermediate — speed drops moderately</p>",
+            "<p>Better than shunt; lower than series</p>",
+            "<p>High</p>",
+            "<p>Presses, shears, reciprocating compressors</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Compound Motor (Differential)</p>",
+            "<p>Rising speed characteristic</p>",
+            "<p>Reduces with load — unstable</p>",
+            "<p>Low</p>",
+            "<p>Rarely used in practice</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "svyfbt5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>CRITICAL: A series motor should NEVER be started without load. At no-load, speed becomes dangerously high (N → ∞ theoretically) as E_b ≈ V and Φ ≈ 0. This causes mechanical damage.</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "ko5y13k",
+      "content": "<strong>5.6  Speed Control of DC Motors</strong>"
+    },
+    {
+      "id": "kw9cyi4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Equation Used</strong></p>",
+            "<p><strong>Effect</strong></p>",
+            "<p><strong>Type of Motor</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Armature Resistance Control</p>",
+            "<p>N ∝ (V − I_a R_a)/Φ</p>",
+            "<p>Reduces speed; wasteful (I²R loss)</p>",
+            "<p>All types; simple but inefficient</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Field (Flux) Control</p>",
+            "<p>N ∝ E_b/Φ; reduce Φ → increase N</p>",
+            "<p>Increases speed above base speed</p>",
+            "<p>Shunt &amp; compound motors</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Armature Voltage Control</p>",
+            "<p>N ∝ V_a (Ward-Leonard)</p>",
+            "<p>Precise speed control below base speed</p>",
+            "<p>All types; expensive but efficient</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chopper Control</p>",
+            "<p>Varies mean armature voltage</p>",
+            "<p>Electronic; smooth, efficient control</p>",
+            "<p>Modern DC drives</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Field Weakening</p>",
+            "<p>Reduce field current → reduce Φ</p>",
+            "<p>Speed above base (constant power region)</p>",
+            "<p>Used in traction, hoists</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "699mwvb",
+      "content": "<strong>5.7  Losses &amp; Efficiency of DC Machine</strong>"
+    },
+    {
+      "id": "lv7mimw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Loss Type</strong></p>",
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Varies With</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Copper loss (armature)</p>",
+            "<p>I_a²R_a</p>",
+            "<p>Resistance of armature winding</p>",
+            "<p>Load current squared</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Copper loss (field)</p>",
+            "<p>I_f²R_f</p>",
+            "<p>Field winding resistance</p>",
+            "<p>Approximately constant (shunt)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Iron/Core loss</p>",
+            "<p>P_i</p>",
+            "<p>Hysteresis + eddy in armature core</p>",
+            "<p>Approximately constant at rated speed</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mechanical loss</p>",
+            "<p>P_mech</p>",
+            "<p>Friction at brushes, bearings + windage</p>",
+            "<p>Speed (approx. constant at rated speed)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Stray load loss</p>",
+            "<p>P_s</p>",
+            "<p>Distortion of flux, poor commutation</p>",
+            "<p>Load current (about 1% of output)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hjstha2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>η = P_out / P_in = P_out / (P_out + ΣLosses) × 100%</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>For generator: P_in = mechanical (T×ω), P_out = V_t × I_L</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>For motor: P_in = V × I, P_out = mechanical (T×ω) = E_b × I_a</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "z1pp3ud",
+      "content": "<strong>5.8  Practice MCQs — DC Machines</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "a1r0j6i",
+      "content": "<strong>Q1.  </strong>The purpose of a commutator in a DC machine is to:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2i0bazu",
+      "content": "        (A)  Reduce friction"
+    },
+    {
+      "type": "paragraph",
+      "id": "572cq7j",
+      "content": "        (B)  Convert AC to DC at output terminals"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vwh7qch",
+      "content": "        (C)  Reduce armature resistance"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lyrajl1",
+      "content": "        (D)  Provide mechanical strength"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nt7mkuz",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "6q8wiqr",
+      "content": "<strong>Q2.  </strong>Back EMF in a DC motor is:"
+    },
+    {
+      "type": "paragraph",
+      "id": "bzud7bl",
+      "content": "        (A)  Always greater than supply voltage"
+    },
+    {
+      "type": "paragraph",
+      "id": "h6r7nj2",
+      "content": "        (B)  Always equal to supply voltage"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qpwxkl2",
+      "content": "        (C)  Less than supply voltage"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qbrxw26",
+      "content": "        (D)  Zero at full load"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "23ijlb2",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "4sr5mzh",
+      "content": "<strong>Q3.  </strong>A DC series motor is NOT suitable for:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tcjfrrw",
+      "content": "        (A)  Cranes"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "c07iwiu",
+      "content": "        (B)  Traction"
+    },
+    {
+      "type": "paragraph",
+      "id": "g5jpggx",
+      "content": "        (C)  Constant speed drives like fans"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ikv8133",
+      "content": "        (D)  Hoists"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p8ynpl6",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ywn187y",
+      "content": "<strong>Q4.  </strong>The speed of a DC shunt motor on no-load compared to full-load is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nokso16",
+      "content": "        (A)  Much higher"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u9ktxzi",
+      "content": "        (B)  Slightly higher"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h8yfh2m",
+      "content": "        (C)  Same"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g2hjd6b",
+      "content": "        (D)  Much lower"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fwutgdt",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "yyzgovl",
+      "content": "<strong>Q5.  </strong>For a DC motor: N ∝"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "32c90ci",
+      "content": "        (A)  Φ"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3jmiqt8",
+      "content": "        (B)  I_a"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rwiia9f",
+      "content": "        (C)  E_b/Φ"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uxfhxpx",
+      "content": "        (D)  V × I_a"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "66aze49",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "8o6r3dz",
+      "content": "<strong>Q6.  </strong>In lap winding, the number of parallel paths equals:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l2rkt9a",
+      "content": "        (A)  Always 2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "75n1x5q",
+      "content": "        (B)  Number of poles P"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "l76stan",
+      "content": "        (C)  Number of conductors Z"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s73qagp",
+      "content": "        (D)  P/2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "45ihsun",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "zadedk3",
+      "content": "<strong>Q7.  </strong>A series DC motor has high starting torque because:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6ajm3tn",
+      "content": "        (A)  Field flux is constant"
+    },
+    {
+      "type": "paragraph",
+      "id": "a9elp0b",
+      "content": "        (B)  T ∝ I_a² at starting (I_a and Φ both high)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ud5on1u",
+      "content": "        (C)  Back EMF is zero at start"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vheqzkb",
+      "content": "        (D)  Armature resistance is high"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5ekynuv",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "5r6ced2",
+      "content": "<strong>Q8.  </strong>Field control of DC motor speed operates in the:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jifoh1f",
+      "content": "        (A)  Below base speed range"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oawcoc0",
+      "content": "        (B)  Above base speed range"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cyvhjf0",
+      "content": "        (C)  At base speed only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pxim06f",
+      "content": "        (D)  Constant torque region"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x7flt07",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "11cw9t8",
+      "content": "<strong>Q9.  </strong>Ward-Leonard system is used for:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m9gtf2p",
+      "content": "        (A)  Braking of motors"
+    },
+    {
+      "type": "paragraph",
+      "id": "b3d74tu",
+      "content": "        (B)  Precise speed control of DC motors"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "weiudsr",
+      "content": "        (C)  Increasing motor efficiency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "msg9vwr",
+      "content": "        (D)  Reducing armature resistance"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gvdv9t6",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "870807z",
+      "content": "<strong>Q10.  </strong>The EMF of a DC generator is proportional to:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0z9esun",
+      "content": "        (A)  N only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9g2pzx9",
+      "content": "        (B)  Φ only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3k7pvxh",
+      "content": "        (C)  ΦN"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gbjbnlh",
+      "content": "        (D)  Φ/N"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "19l9ipe",
+      "content": "<strong>Answer: </strong>(C)"
+    }
+  ],
+  "enriched": true
+}

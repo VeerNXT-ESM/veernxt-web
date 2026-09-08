@@ -49,19 +49,47 @@
     },
     {
       "type": "paragraph",
-      "id": "lt0o9zd"
+      "id": "lt0o9zd",
+      "content": "<strong>Physical Change: </strong>"
+    },
+    {
+      "id": "glbtqnz",
+      "type": "image",
+      "imageId": "kya1g88",
+      "src": "/books/Precis/RRB GS/images/image_kya1g88.png"
+    },
+    {
+      "id": "z2edbje",
+      "type": "image",
+      "imageId": "lecv8qk",
+      "src": "/books/Precis/RRB GS/images/image_lecv8qk.png"
+    },
+    {
+      "id": "e45n03d",
+      "type": "image",
+      "imageId": "g768w2i",
+      "src": "/books/Precis/RRB GS/images/image_g768w2i.png"
+    },
+    {
+      "id": "jyok42p",
+      "type": "image",
+      "imageId": "3kukc4y",
+      "src": "/books/Precis/RRB GS/images/image_3kukc4y.png"
     },
     {
       "type": "paragraph",
-      "id": "vhh63ct"
+      "id": "vhh63ct",
+      "content": "A change in which only physical properties such as shape, size, colour or state change. No new substance is formed and the change is usually reversible."
     },
     {
       "type": "paragraph",
-      "id": "haf1urn"
+      "id": "haf1urn",
+      "content": "<strong>Chemical Change: </strong>"
     },
     {
       "type": "paragraph",
-      "id": "e25rf9e"
+      "id": "e25rf9e",
+      "content": "A change in which one or more new substances are formed with new properties. These changes are usually irreversible."
     },
     {
       "id": "hq9sv06",
@@ -70,49 +98,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Physical Change</strong></p>",
+            "<p><strong>Chemical Change</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>New Substance</p>",
+            "<p>Not formed</p>",
+            "<p>Formed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Reversibility</p>",
+            "<p>Usually reversible</p>",
+            "<p>Usually irreversible</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Energy Change</p>",
+            "<p>Small</p>",
+            "<p>Large</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example 1</p>",
+            "<p>Melting of ice</p>",
+            "<p>Rusting of iron</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example 2</p>",
+            "<p>Boiling of water</p>",
+            "<p>Burning of wood</p>"
           ]
         }
       ]
@@ -131,26 +159,29 @@
     },
     {
       "type": "paragraph",
-      "id": "2x32tjr"
+      "id": "2x32tjr",
+      "content": "A chemical reaction is a process in which reactants are converted into products with formation of new substances."
     },
     {
       "type": "paragraph",
-      "id": "1hxhf2h"
+      "id": "1hxhf2h",
+      "content": "<strong>Indicators of Chemical Reaction:</strong>"
     },
     {
       "id": "v9r13bf",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        " Change in colour",
+        "Evolution of gas",
+        " Change in temperature",
+        "Formation of precipitate",
+        "Change in state"
       ]
     },
     {
       "type": "paragraph",
-      "id": "j6zdau3"
+      "id": "j6zdau3",
+      "content": "Example:"
     },
     {
       "id": "frs668x",
@@ -160,11 +191,13 @@
     },
     {
       "type": "paragraph",
-      "id": "cto3eao"
+      "id": "cto3eao",
+      "content": "According to the Law of Conservation of Mass, mass can neither be created nor destroyed. The number of atoms of each element must be equal on both sides of a chemical equation."
     },
     {
       "type": "paragraph",
-      "id": "obbn62z"
+      "id": "obbn62z",
+      "content": "Example: "
     },
     {
       "id": "iuc5fmz",
@@ -179,49 +212,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Combination</p>",
+            "<p>Two or more substances combine to form one product</p>",
+            "<p>CaO + H2O → Ca(OH)2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Decomposition</p>",
+            "<p>One compound breaks into simpler substances</p>",
+            "<p>CaCO3 → CaO + CO2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Displacement</p>",
+            "<p>More reactive element replaces less reactive element</p>",
+            "<p>Fe + CuSO4 → FeSO4 + Cu</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Double Displacement</p>",
+            "<p>Exchange of ions between two compounds</p>",
+            "<p>Na2SO4 + BaCl2 → BaSO4 + 2NaCl</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Neutralisation</p>",
+            "<p>Acid + Base → Salt + Water</p>",
+            "<p>HCl + NaOH → NaCl + H2O</p>"
           ]
         }
       ]
@@ -234,15 +267,18 @@
     },
     {
       "type": "paragraph",
-      "id": "w93uzdo"
+      "id": "w93uzdo",
+      "content": "Oxidation: Addition of oxygen or removal of hydrogen or loss of electrons."
     },
     {
       "type": "paragraph",
-      "id": "lzg94bp"
+      "id": "lzg94bp",
+      "content": "Reduction: Removal of oxygen or addition of hydrogen or gain of electrons."
     },
     {
       "type": "paragraph",
-      "id": "f5i8730"
+      "id": "f5i8730",
+      "content": "Example: Zn + CuSO4 → ZnSO4 + Cu"
     },
     {
       "id": "m9duotq",
@@ -252,15 +288,18 @@
     },
     {
       "type": "paragraph",
-      "id": "juk96v8"
+      "id": "juk96v8",
+      "content": "Corrosion: Slow destruction of metals due to reaction with air and moisture. Example: Rusting of iron."
     },
     {
       "type": "paragraph",
-      "id": "9b2613j"
+      "id": "9b2613j",
+      "content": "Rancidity: Oxidation of oils and fats causing bad smell and taste."
     },
     {
       "type": "paragraph",
-      "id": "pwgchk4"
+      "id": "pwgchk4",
+      "content": "Prevention: Use antioxidants, refrigeration, airtight containers."
     },
     {
       "id": "2qxfl7t",
@@ -275,50 +314,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Chemical Formula</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Quick Lime</p>",
+            "<p>CaO</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Slaked Lime</p>",
+            "<p>Ca(OH)2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bleaching Powder</p>",
+            "<p>CaOCl2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Baking Soda</p>",
+            "<p>NaHCO3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Washing Soda</p>",
+            "<p>Na2CO3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Plaster of Paris</p>",
+            "<p>CaSO4·1/2H2O</p>"
           ]
         }
       ]
@@ -330,33 +369,45 @@
       "content": "Exothermic and Endothermic Reactions"
     },
     {
+      "id": "xvwzbh7",
+      "type": "image",
+      "imageId": "6wwy3ew",
+      "src": "/books/Precis/RRB GS/images/image_6wwy3ew.png"
+    },
+    {
       "type": "pullQuote",
       "content": "Mass can neither be created nor destroyed in a chemical reaction.",
       "id": "r7bzifs"
     },
     {
       "type": "paragraph",
-      "id": "c9xtkft"
+      "id": "c9xtkft",
+      "content": "<strong>Exothermic Reaction:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "d3m856y"
+      "id": "d3m856y",
+      "content": "A reaction in which heat energy is released to the surroundings."
     },
     {
       "type": "paragraph",
-      "id": "u9yztdg"
+      "id": "u9yztdg",
+      "content": "Example: Combustion of methane."
     },
     {
       "type": "paragraph",
-      "id": "nmn9fux"
+      "id": "nmn9fux",
+      "content": "<strong>Endothermic Reaction:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "tnxlkb5"
+      "id": "tnxlkb5",
+      "content": "A reaction in which heat energy is absorbed from the surroundings."
     },
     {
       "type": "paragraph",
-      "id": "4a22vah"
+      "id": "4a22vah",
+      "content": "Example: Photosynthesis."
     },
     {
       "id": "m4njyf1",
@@ -366,11 +417,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8v8gzd6"
+      "id": "8v8gzd6",
+      "content": "When two aqueous solutions react to form an insoluble solid called precipitate."
     },
     {
       "type": "paragraph",
-      "id": "dprdp34"
+      "id": "dprdp34",
+      "content": "Example: Na2SO4 + BaCl2 → BaSO4 (white precipitate) + 2NaCl"
     },
     {
       "id": "4asniph",
@@ -380,11 +433,13 @@
     },
     {
       "type": "paragraph",
-      "id": "wlrwnr7"
+      "id": "wlrwnr7",
+      "content": "Decomposition reaction carried out by heating."
     },
     {
       "type": "paragraph",
-      "id": "74r429a"
+      "id": "74r429a",
+      "content": "Example: CaCO3 (heat) → CaO + CO2"
     },
     {
       "id": "qxwotq4",
@@ -394,7 +449,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jf23n09"
+      "id": "jf23n09",
+      "content": "<strong>Oxidising Agent:</strong>"
     },
     {
       "type": "comparisonTable",
@@ -424,15 +480,18 @@
     },
     {
       "type": "paragraph",
-      "id": "1lywzh3"
+      "id": "1lywzh3",
+      "content": "Substance that gives oxygen or removes hydrogen."
     },
     {
       "type": "paragraph",
-      "id": "uogu3pl"
+      "id": "uogu3pl",
+      "content": "<strong>Reducing Agent:</strong>"
     },
     {
       "type": "paragraph",
-      "id": "1yq9yki"
+      "id": "1yq9yki",
+      "content": "Substance that gives hydrogen or removes oxygen."
     },
     {
       "id": "984o00x",
@@ -442,24 +501,27 @@
     },
     {
       "type": "paragraph",
-      "id": "3vdolrh"
+      "id": "3vdolrh",
+      "content": "Corrosion is the slow destruction of metals due to chemical reaction with environment."
     },
     {
       "type": "paragraph",
-      "id": "z8kemir"
+      "id": "z8kemir",
+      "content": "Example: Rusting of iron requires oxygen and moisture."
     },
     {
       "type": "paragraph",
-      "id": "ca7sjjf"
+      "id": "ca7sjjf",
+      "content": "Prevention Methods:"
     },
     {
       "id": "pumqr1m",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        " Painting",
+        "Galvanization",
+        "Oiling and Greasing",
+        "Alloy formation"
       ]
     },
     {
@@ -470,20 +532,22 @@
     },
     {
       "type": "paragraph",
-      "id": "2jutbki"
+      "id": "2jutbki",
+      "content": "Rancidity is caused due to oxidation of fats and oils."
     },
     {
       "type": "paragraph",
-      "id": "7i6sw6e"
+      "id": "7i6sw6e",
+      "content": "Prevention Methods:"
     },
     {
       "id": "bunzk66",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        " Adding antioxidants",
+        "Storing in airtight containers",
+        " Refrigeration",
+        "Nitrogen gas packing"
       ]
     },
     {
@@ -494,11 +558,13 @@
     },
     {
       "type": "paragraph",
-      "id": "u93gybh"
+      "id": "u93gybh",
+      "content": "More reactive metals displace less reactive metals from their compounds."
     },
     {
       "type": "paragraph",
-      "id": "rprhxpn"
+      "id": "rprhxpn",
+      "content": "Example: Fe displaces Cu from CuSO4 solution."
     },
     {
       "id": "vuiqaej",
@@ -513,99 +579,99 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Order (Most Reactive → Least Reactive)</strong></p>",
+            "<p><strong>Metal</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1</p>",
+            "<p>Potassium (K)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>2</p>",
+            "<p>Sodium (Na)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>3</p>",
+            "<p>Calcium (Ca)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>4</p>",
+            "<p>Magnesium (Mg)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>5</p>",
+            "<p>Aluminium (Al)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>6</p>",
+            "<p>Zinc (Zn)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>7</p>",
+            "<p>Iron (Fe)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>8</p>",
+            "<p>Lead (Pb)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>9</p>",
+            "<p>Hydrogen (H)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>10</p>",
+            "<p>Copper (Cu)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>11</p>",
+            "<p>Mercury (Hg)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>12</p>",
+            "<p>Silver (Ag)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>13</p>",
+            "<p>Gold (Au)</p>"
           ]
         }
       ]
@@ -623,43 +689,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Reaction</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Respiration</p>",
+            "<p>Glucose + Oxygen → CO2 + Water + Energy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Photosynthesis</p>",
+            "<p>CO2 + Water → Glucose + Oxygen</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Digestion</p>",
+            "<p>Food breakdown into simpler substances</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Combustion</p>",
+            "<p>Burning of fuels</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Souring of Milk</p>",
+            "<p>Formation of lactic acid</p>"
           ]
         }
       ]
@@ -681,47 +747,58 @@
     },
     {
       "type": "paragraph",
-      "id": "fk9oecn"
+      "id": "fk9oecn",
+      "content": "1. Physical change does not form a new substance; chemical change forms a new substance."
     },
     {
       "type": "paragraph",
-      "id": "d8ifmht"
+      "id": "d8ifmht",
+      "content": "2. Indicators of chemical reaction: colour change, gas evolution, temperature change, precipitate formation."
     },
     {
       "type": "paragraph",
-      "id": "x1vdu9r"
+      "id": "x1vdu9r",
+      "content": "3. Law of Conservation of Mass: Mass can neither be created nor destroyed."
     },
     {
       "type": "paragraph",
-      "id": "u163ngl"
+      "id": "u163ngl",
+      "content": "4. Balanced equation must have equal number of atoms on both sides."
     },
     {
       "type": "paragraph",
-      "id": "eztqjm4"
+      "id": "eztqjm4",
+      "content": "5. Combination reaction: Two or more reactants form a single product."
     },
     {
       "type": "paragraph",
-      "id": "0euvv73"
+      "id": "0euvv73",
+      "content": "6. Decomposition reaction: One compound breaks into simpler substances."
     },
     {
       "type": "paragraph",
-      "id": "cv5bu49"
+      "id": "cv5bu49",
+      "content": "7. Displacement reaction occurs according to reactivity series."
     },
     {
       "type": "paragraph",
-      "id": "oi5hgl5"
+      "id": "oi5hgl5",
+      "content": "8. Double displacement involves exchange of ions."
     },
     {
       "type": "paragraph",
-      "id": "a5r2dl9"
+      "id": "a5r2dl9",
+      "content": "9. Neutralisation: Acid + Base → Salt + Water."
     },
     {
       "type": "paragraph",
-      "id": "u8qvhng"
+      "id": "u8qvhng",
+      "content": "10. Oxidation = Addition of oxygen / Loss of hydrogen / Loss of electrons."
     },
     {
       "type": "paragraph",
-      "id": "myjc0ps"
+      "id": "myjc0ps",
+      "content": "11. Reduction = Removal of oxygen / Gain of hydrogen / Gain of electrons."
     }
   ],
   "enriched": true

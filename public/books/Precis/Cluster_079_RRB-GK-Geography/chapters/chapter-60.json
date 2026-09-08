@@ -1,0 +1,88 @@
+{
+  "title": "8. Temperature and Pressure",
+  "order": 60,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Temperature increases with depth. The geothermal gradient averages 25–30°C per km in the crust.",
+      "id": "5p2uz2p"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Geothermal Gradient",
+          "value": "25–30°C / km",
+          "icon": "info"
+        },
+        {
+          "label": "Heat Sources",
+          "value": "2 Primary Sources",
+          "icon": "book"
+        },
+        {
+          "label": "Pressure Trend",
+          "value": "Increases with Depth",
+          "icon": "check"
+        }
+      ],
+      "id": "axi9fss"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The geothermal gradient averages 25–30°C per km in the crust.",
+      "id": "w74g8g6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Trend with Depth",
+        "Associated Details / Sources"
+      ],
+      "rows": [
+        [
+          "Temperature",
+          "Increases",
+          "Geothermal gradient averages 25–30°C per km in the crust; powered by radioactive decay and residual heat"
+        ],
+        [
+          "Pressure",
+          "Increases",
+          "Increases steadily with depth alongside temperature"
+        ]
+      ],
+      "id": "w722gen"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Both temperature and pressure increase consistently with increasing depth.",
+        "The average geothermal gradient within the Earth's crust is 25–30°C per kilometer.",
+        "Earth's internal heat originates from two main sources: radioactive decay and residual heat from its formation."
+      ],
+      "id": "5507ost"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The exact range of the crustal geothermal gradient (25–30°C per km) is a frequently asked factual question in geography papers.",
+        "Identify radioactive decay and residual heat from formation as the twin heat sources of Earth's interior.",
+        "Remember that BOTH temperature and pressure increase with depth; do not confuse crustal trends with atmospheric layers."
+      ],
+      "id": "f6w6p0n"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Pressure also increases with depth.",
+      "id": "j6d3cwn"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Heat sources: radioactive decay, residual heat from formation.",
+      "id": "lovgakn"
+    }
+  ],
+  "enriched": true
+}

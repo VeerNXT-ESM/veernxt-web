@@ -1,0 +1,82 @@
+{
+  "title": "Why Latitudes are Parallel",
+  "order": 31,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Earth is spherical; therefore circles drawn around it without intersecting remain parallel.",
+      "id": "z0ufkwd"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Earth is spherical; therefore circles drawn around it without intersecting remain parallel.",
+      "id": "ctx2b3a"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth Shape",
+          "value": "Spherical",
+          "icon": "info"
+        },
+        {
+          "label": "Intersection",
+          "value": "Never Meet",
+          "icon": "check"
+        },
+        {
+          "label": "Compared To",
+          "value": "Longitudes",
+          "icon": "book"
+        }
+      ],
+      "id": "zcgl1c9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Latitudes",
+        "Longitudes"
+      ],
+      "rows": [
+        [
+          "Parallel Status",
+          "Remain parallel",
+          "Not parallel"
+        ],
+        [
+          "Intersection",
+          "They never meet",
+          "They meet/intersect"
+        ]
+      ],
+      "id": "25curvk"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Because the Earth is spherical, circles drawn around it without intersecting stay parallel.",
+        "Lines of latitude never meet at any point.",
+        "Unlike latitudes, longitudes do intersect and are not parallel."
+      ],
+      "id": "63fj1tk"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Latitudes are parallel lines that never intersect, which distinguishes them from longitudes.",
+        "The spherical shape of the Earth is the primary reason why latitudes can be drawn as non-intersecting parallel circles."
+      ],
+      "id": "idfhlkm"
+    },
+    {
+      "type": "paragraph",
+      "content": "• They never meet, unlike longitudes.",
+      "id": "xx65rq1"
+    }
+  ],
+  "enriched": true
+}

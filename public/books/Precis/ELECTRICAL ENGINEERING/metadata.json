@@ -3,15 +3,78 @@
   "title": "ELECTRICAL ENGINEERING",
   "source_file": "Cluster_044_ELECTRICAL ENGINEERING.docx",
   "category": "Precis",
-  "chapter_count": 1,
-  "image_count": 0,
+  "chapter_count": 10,
+  "image_count": 6,
   "chapters": [
     {
-      "title": "Introduction",
+      "title": "Dc Circuits",
       "order": 1,
       "enriched": true,
-      "blocks_count": 966,
+      "blocks_count": 153,
       "file_name": "chapters/chapter-1.json"
+    },
+    {
+      "title": "Ac Circuits & Phasors",
+      "order": 2,
+      "enriched": true,
+      "blocks_count": 114,
+      "file_name": "chapters/chapter-2.json"
+    },
+    {
+      "title": "Network Theorems",
+      "order": 3,
+      "enriched": true,
+      "blocks_count": 85,
+      "file_name": "chapters/chapter-3.json"
+    },
+    {
+      "title": "Transformers",
+      "order": 4,
+      "enriched": true,
+      "blocks_count": 119,
+      "file_name": "chapters/chapter-4.json"
+    },
+    {
+      "title": "Dc Machines",
+      "order": 5,
+      "enriched": true,
+      "blocks_count": 83,
+      "file_name": "chapters/chapter-5.json"
+    },
+    {
+      "title": "Ac Machines",
+      "order": 6,
+      "enriched": true,
+      "blocks_count": 81,
+      "file_name": "chapters/chapter-6.json"
+    },
+    {
+      "title": "Power Systems",
+      "order": 7,
+      "enriched": true,
+      "blocks_count": 81,
+      "file_name": "chapters/chapter-7.json"
+    },
+    {
+      "title": "Electrical Measurements",
+      "order": 8,
+      "enriched": true,
+      "blocks_count": 74,
+      "file_name": "chapters/chapter-8.json"
+    },
+    {
+      "title": "Power Electronics",
+      "order": 9,
+      "enriched": true,
+      "blocks_count": 76,
+      "file_name": "chapters/chapter-9.json"
+    },
+    {
+      "title": "Control Systems",
+      "order": 10,
+      "enriched": true,
+      "blocks_count": 106,
+      "file_name": "chapters/chapter-10.json"
     }
   ]
 }

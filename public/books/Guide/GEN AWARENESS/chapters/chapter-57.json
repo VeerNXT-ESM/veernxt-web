@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "n93uu25"
+      "id": "n93uu25",
+      "content": "Matter is anything that occupies space and has mass. Everything around us such as air, water, plants, animals and objects is made of matter. The study of matter and its properties is an important part of physics and chemistry."
     },
     {
       "type": "statStrip",
@@ -54,15 +55,18 @@
     },
     {
       "type": "paragraph",
-      "id": "mktfsuy"
+      "id": "mktfsuy",
+      "content": "• Matter is anything that has mass and occupies space."
     },
     {
       "type": "paragraph",
-      "id": "5cu2gdq"
+      "id": "5cu2gdq",
+      "content": "• It is made up of tiny particles called atoms and molecules."
     },
     {
       "type": "paragraph",
-      "id": "0mvvjxy"
+      "id": "0mvvjxy",
+      "content": "• Matter exists in different forms in nature."
     },
     {
       "id": "xwjanny",
@@ -77,33 +81,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>State</strong></p>",
+            "<p><strong>Properties</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Solid</p>",
+            "<p>Fixed shape and volume</p>",
+            "<p>Iron, wood, ice</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Liquid</p>",
+            "<p>Fixed volume but no fixed shape</p>",
+            "<p>Water, oil, milk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gas</p>",
+            "<p>No fixed shape or volume</p>",
+            "<p>Air, oxygen, carbon dioxide</p>"
           ]
         }
       ]
@@ -116,24 +120,23 @@
     },
     {
       "type": "paragraph",
-      "id": "6p7alr8"
+      "id": "6p7alr8",
+      "content": "• Mass – amount of matter in a substance."
     },
     {
       "type": "paragraph",
-      "id": "2yfovtm"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Physical Properties of Matter",
-      "id": "2a9vfmv"
+      "id": "2yfovtm",
+      "content": "• Volume – space occupied by matter."
     },
     {
       "type": "paragraph",
-      "id": "0rc0ejt"
+      "id": "0rc0ejt",
+      "content": "• Density – mass per unit volume."
     },
     {
       "type": "paragraph",
-      "id": "1ahhdae"
+      "id": "1ahhdae",
+      "content": "• Elasticity – ability of a material to regain its original shape."
     },
     {
       "id": "8c0y77b",
@@ -148,43 +151,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Melting</p>",
+            "<p>Solid changes into liquid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Freezing</p>",
+            "<p>Liquid changes into solid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Evaporation</p>",
+            "<p>Liquid changes into gas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Condensation</p>",
+            "<p>Gas changes into liquid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sublimation</p>",
+            "<p>Solid changes directly into gas</p>"
           ]
         }
       ]
@@ -197,7 +200,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wnatrgd"
+      "id": "wnatrgd",
+      "content": "Density is defined as mass per unit volume."
     },
     {
       "type": "comparisonTable",
@@ -227,11 +231,13 @@
     },
     {
       "type": "paragraph",
-      "id": "i6350es"
+      "id": "i6350es",
+      "content": "Formula: Density = Mass / Volume"
     },
     {
       "type": "paragraph",
-      "id": "zbp972l"
+      "id": "zbp972l",
+      "content": "SI Unit of Density = kg/m³"
     },
     {
       "id": "hu55ucj",
@@ -241,7 +247,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ujzbcg5"
+      "id": "ujzbcg5",
+      "content": "Elasticity is the property of a material to regain its original shape after deformation when the external force is removed."
     },
     {
       "id": "bzoor1d",
@@ -251,16 +258,19 @@
     },
     {
       "type": "paragraph",
-      "id": "un9kkub"
+      "id": "un9kkub",
+      "content": "Pressure is defined as force acting per unit area."
     },
     {
       "type": "paragraph",
-      "id": "r76zryr"
+      "id": "r76zryr",
+      "content": "Formula: Pressure = Force / Area"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "r3srq04"
+      "id": "r3srq04",
+      "content": "SI Unit = Pascal (Pa)"
     },
     {
       "type": "examAlert",
@@ -279,19 +289,23 @@
     },
     {
       "type": "paragraph",
-      "id": "p78dpuq"
+      "id": "p78dpuq",
+      "content": "• Matter has mass and occupies space."
     },
     {
       "type": "paragraph",
-      "id": "9dkbikk"
+      "id": "9dkbikk",
+      "content": "• Density = Mass / Volume."
     },
     {
       "type": "paragraph",
-      "id": "ltjxjs3"
+      "id": "ltjxjs3",
+      "content": "• SI unit of pressure is Pascal."
     },
     {
       "type": "paragraph",
-      "id": "bugd9s2"
+      "id": "bugd9s2",
+      "content": "• There are three main states of matter: solid, liquid and gas."
     }
   ],
   "enriched": true

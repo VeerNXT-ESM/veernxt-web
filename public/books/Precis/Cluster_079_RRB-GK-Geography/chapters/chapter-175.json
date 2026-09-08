@@ -1,0 +1,122 @@
+{
+  "title": "8. Emergent vs Submergent Coasts",
+  "order": 175,
+  "blocks": [
+    {
+      "id": "2jkhvxn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Emergent Coast</strong></p>",
+            "<p><strong>Submergent Coast</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Land rises or sea level falls</p>",
+            "<p>Land sinks or sea level rises</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Raised beaches</p>",
+            "<p>Rias and fjords</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Submergent coasts are formed due to the subsidence of land or a rise in sea level, whereas emergent coasts result from tectonic uplift or a fall in sea level.",
+      "id": "72ymn97"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Emergent Coast",
+        "Submergent Coast"
+      ],
+      "rows": [
+        [
+          "Primary Cause",
+          "Land uplift or relative drop in sea level",
+          "Land subsidence or relative rise in sea level"
+        ],
+        [
+          "Coastline Shape",
+          "Regular, straight, and smooth coastline",
+          "Highly indented, irregular coastline"
+        ],
+        [
+          "Characteristic Landforms",
+          "Raised beaches, wave-cut platforms, sea caves",
+          "Ria coasts, Fjord coasts, Estuaries, Lagoons (Kayals)"
+        ],
+        [
+          "Port Suitability",
+          "Less suitable for natural harbors; requires dredging",
+          "Highly suitable for natural deep-water ports"
+        ],
+        [
+          "Indian Examples",
+          "East Coast of India (Coromandel Coast)",
+          "West Coast of India (Konkan Coast)"
+        ]
+      ],
+      "id": "v9kvmv0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Emergent Cause",
+          "value": "Uplift / Sea Fall",
+          "icon": "info"
+        },
+        {
+          "label": "Submergent Cause",
+          "value": "Subsidence / Sea Rise",
+          "icon": "clock"
+        },
+        {
+          "label": "West Coast India",
+          "value": "Predominantly Submergent",
+          "icon": "check"
+        },
+        {
+          "label": "East Coast India",
+          "value": "Predominantly Emergent",
+          "icon": "award"
+        }
+      ],
+      "id": "n9oqgj8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently asked: Match the coast type to Indian geography (Konkan Coast = Submergent, Coromandel Coast = Emergent).",
+        "Identify landforms: Rias and Fjords belong strictly to submergent coasts, while wave-cut benches belong to emergent coasts.",
+        "Port suitability: Submergent coastlines provide natural deep-water harbors due to their indented nature, unlike emergent coastlines."
+      ],
+      "id": "wos14u0"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Emergent coasts are formed by tectonic uplift of the land or a fall in sea level.",
+        "Submergent coasts occur due to land subsidence or a relative rise in global sea levels.",
+        "Rias, Fjords, estuaries, and drowned river valleys are signature landforms of submergent coasts.",
+        "Raised beaches, sea cliffs, spit bars, and wave-cut platforms characterize emergent coastlines.",
+        "The Western coast of India (Konkan) shows features of submergence, whereas the Eastern coast is largely an emergent coast."
+      ],
+      "id": "crzk3o1"
+    }
+  ],
+  "enriched": true
+}

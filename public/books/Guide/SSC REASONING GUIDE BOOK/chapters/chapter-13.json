@@ -1,0 +1,304 @@
+{
+  "id": "znm66cc",
+  "title": "Non-Verbal Reasoning",
+  "order": 13,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "43qsaoj",
+      "content": "<strong>CHAPTER  13\tNON-VERBAL REASONING</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "0nd50bq",
+      "content": "<em>Mirror/Water Image | Paper Folding | Counting Figures | Embedded Figures</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9hk3c3m",
+      "content": "<strong>13.1  Mirror Image</strong>"
+    },
+    {
+      "id": "r8ndcio",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>MIRROR IMAGE RULES</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vertical mirror (placed on right/left): Left-right get swapped; top-bottom stays same.</p><p>Horizontal mirror (placed on top/bottom): Top-bottom gets swapped; left-right stays same.</p><p>KEY: Numbers/letters get horizontally flipped in a vertical mirror.</p><p>A, H, I, M, O, T, U, V, W, X, Y are symmetric — look same in vertical mirror.</p><p>Special clock rule: Mirror image of a clock time T = 11:60 − T (vertical mirror).</p><p>  Example: Mirror image of 3:00 = 11:60−3:00 = 8:60 → 9:00</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "po3r8al",
+      "content": "<strong>Ex.1 </strong>If the time shown on a clock is 7:25, what will its mirror image show?"
+    },
+    {
+      "type": "paragraph",
+      "id": "pd4saza",
+      "content": "<strong>Sol. </strong><em>Mirror time = 11:60 − 7:25 = 4:35. Ans: 4:35</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "znksn39",
+      "content": "<strong>Ex.2 </strong>Mirror image of 2:50?"
+    },
+    {
+      "type": "paragraph",
+      "id": "jsd7n33",
+      "content": "<strong>Sol. </strong><em>11:60 − 2:50 = 9:10. Ans: 9:10</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fnt4k52",
+      "content": "<strong>13.2  Water Image</strong>"
+    },
+    {
+      "id": "cyil2il",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>WATER IMAGE RULES</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Water image = reflection in horizontal mirror (imagine water below the object).</p><p>TOP and BOTTOM are swapped; LEFT and RIGHT stay same.</p><p>A capital letter's water image: A → ∀ (upside down).</p><p>Numbers: Water image of a digit = digit flipped upside down.</p><p>Symmetric letters (top-bottom) look same in water: B, C, D, E, K look changed.</p><p>Letters that look same in water image: C, D, E, H, I, O, X (approximately).</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bpxlts5",
+      "content": "<strong>13.3  Paper Folding &amp; Punching</strong>"
+    },
+    {
+      "id": "miyoy1i",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>PAPER FOLDING RULES</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Visualise the unfolded paper — the punch holes are SYMMETRIC about the fold line.</p><p>Single fold: one hole becomes 2 holes (symmetric about fold).</p><p>Two folds: one hole can create 4 holes (symmetric about both folds).</p><p>APPROACH: Always work BACKWARDS — unfold step by step.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "n37shb8",
+      "content": "<strong>13.4  Counting of Figures</strong>"
+    },
+    {
+      "id": "tqmjxls",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Figure Type</strong></p>",
+            "<p><strong>Counting Formula</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Straight lines forming triangles</p>",
+            "<p>Draw systematically: small + medium + large</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Squares in a grid (n×n)</p>",
+            "<p>n×n grid: squares = 1² + 2² + 3² + ... + n² = n(n+1)(2n+1)/6</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rectangles in a 1×n strip</p>",
+            "<p>n cells in row: rectangles = n(n+1)/2</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rectangles in an m×n grid</p>",
+            "<p>m×n grid: rectangles = mC2 × nC2 = [m(m+1)/2] × [n(n+1)/2]</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Triangles in a row of n triangles</p>",
+            "<p>n triangles in row: sum = n(n+2)/4 (if n even) or (n+1)²/4 (if n odd)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "4mq1kmf",
+      "content": "<strong>Ex.3 </strong>How many squares are in a 3×3 grid?"
+    },
+    {
+      "type": "paragraph",
+      "id": "g9fin36",
+      "content": "<strong>Sol. </strong><em>1×1 squares: 9. 2×2 squares: 4. 3×3 squares: 1. Total = 9+4+1 = 14. Ans: 14</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "4s2b00o",
+      "content": "<strong>Ex.4 </strong>How many rectangles (including squares) in a 2×3 grid?"
+    },
+    {
+      "type": "paragraph",
+      "id": "5fa5xvk",
+      "content": "<strong>Sol. </strong><em>Rectangles = [2(2+1)/2] × [3(3+1)/2] = 3 × 6 = 18. Ans: 18</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nnr7deo",
+      "content": "<strong>13.5  Embedded Figures</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "3fq86b9",
+      "content": "An embedded figure question shows a small figure and asks you to find which of 4 larger options contains this small figure hidden within it. The small figure may be rotated. Check: count lines, angles, proportions."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cabrqq5",
+      "content": "<strong>13.6  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "9uxcta6",
+      "content": "<strong>Q.52  </strong>Mirror image of clock showing 4:45:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fpefrfg",
+      "content": "<strong>  (a)  </strong>8:15"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rwbg870",
+      "content": "<strong>  (b)  </strong>7:15"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t9wstru",
+      "content": "<strong>  (c)  </strong>7:00"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kv532dp",
+      "content": "<strong>  (d)  </strong>8:00"
+    },
+    {
+      "type": "paragraph",
+      "id": "uh19oub",
+      "content": "<strong>  Ans: (b) 7:15  Hint: </strong><em>11:60−4:45=7:15.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "fuhlcha",
+      "content": "<strong>Q.53  </strong>How many triangles in figure with 4 triangles arranged in a row?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9zgjma8",
+      "content": "<strong>  (a)  </strong>6"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eij5gnq",
+      "content": "<strong>  (b)  </strong>8"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k4khuz3",
+      "content": "<strong>  (c)  </strong>10"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "birif1e",
+      "content": "<strong>  (d)  </strong>12"
+    },
+    {
+      "type": "paragraph",
+      "id": "7dnppck",
+      "content": "<strong>  Ans: (c) 10  Hint: </strong><em>n=4: 4 unit + 3 two-unit + 2 three-unit + 1 four-unit = 4+3+2+1=10.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "obkkszk",
+      "content": "<strong>Q.54  </strong>How many squares in a 4×4 grid?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4g8wjkm",
+      "content": "<strong>  (a)  </strong>16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "krjgq6h",
+      "content": "<strong>  (b)  </strong>30"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kv84i93",
+      "content": "<strong>  (c)  </strong>25"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f1gf5ap",
+      "content": "<strong>  (d)  </strong>20"
+    },
+    {
+      "type": "paragraph",
+      "id": "jnu0jvt",
+      "content": "<strong>  Ans: (b) 30  Hint: </strong><em>1²+2²+3²+4²=1+4+9+16=30.</em>"
+    }
+  ],
+  "enriched": true
+}

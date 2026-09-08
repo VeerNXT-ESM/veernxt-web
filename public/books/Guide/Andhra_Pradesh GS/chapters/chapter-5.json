@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "3n1bvvc"
+      "id": "3n1bvvc",
+      "content": "Andhra Pradesh has one of the fast-growing economies among Indian states. The state's economy is primarily agrarian but has been diversifying significantly into industry, services, and information technology."
     },
     {
       "type": "statStrip",
@@ -47,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8gp0u69"
+      "id": "8gp0u69",
+      "content": "Agriculture is the backbone of Andhra Pradesh's economy, employing a large proportion of the workforce. The state is called the 'Rice Bowl of India' owing to the fertile Krishna-Godavari delta producing enormous quantities of rice. Andhra Pradesh is one of the top producers of rice, tobacco, cotton, sugarcane, groundnut, chilli peppers, and aquaculture in India."
     },
     {
       "id": "c8mxhvm",
@@ -62,85 +64,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Crop</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rice (Paddy)</p>",
+            "<p>Principal food crop; grown in Krishna-Godavari delta (kharif and rabi seasons); major varieties – Sona Masuri, BPT 5204</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tobacco</p>",
+            "<p>AP is India's largest tobacco producer; grown in Guntur, Krishna, West Godavari; famous 'Virginia Tobacco'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chilli (Red Pepper)</p>",
+            "<p>AP is India's largest chilli-producing state; Guntur famous for 'Guntur Sannam' variety; major export commodity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Groundnut</p>",
+            "<p>2nd or 3rd largest producer in India; major crop in Anantapur, Kurnool, Kadapa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cotton</p>",
+            "<p>Grown in Guntur, Krishna, West Godavari, Kurnool</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sugarcane</p>",
+            "<p>Grown in coastal districts and Godavari basin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Turmeric</p>",
+            "<p>Nizamabad (earlier in AP, now Telangana), but Warangal area; coastal AP also produces</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Maize</p>",
+            "<p>Grown in Nellore, Guntur, Kurnool</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cashew Nuts</p>",
+            "<p>Srikakulam, Vizianagaram, Visakhapatnam (East Coast)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mango</p>",
+            "<p>State Fruit; Banganapalle/Banganapalli variety from Kurnool is GI-tagged</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Aquaculture (Shrimp/Prawn)</p>",
+            "<p>AP is India's largest aquaculture state; Nellore, West Godavari, Krishna; major export earner</p>"
           ]
         }
       ]
@@ -164,7 +166,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vhxsw4p"
+      "id": "vhxsw4p",
+      "content": "Andhra Pradesh has a diverse industrial base including pharmaceuticals, cement, power generation, textiles, food processing, petroleum, and information technology."
     },
     {
       "id": "nj92eaf",
@@ -173,85 +176,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Industry</strong></p>",
+            "<p><strong>Key Areas/Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pharmaceuticals</p>",
+            "<p>Visakhapatnam, Kakinada; several bulk drug manufacturing clusters; 'Pharma City' near Visakhapatnam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cement</p>",
+            "<p>Kurnool, Kadapa, Guntur; major companies – Ultratech, Ramco, India Cements, Dalmia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Petroleum/Refining</p>",
+            "<p>HPCL Visakhapatnam Refinery (one of India's major refineries); ONGC operations offshore and onshore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Textiles</p>",
+            "<p>Chirala and Ongole for synthetic fabrics; handloom clusters in Mangalagiri, Venkatagiri, Uppada, Dharmavaram</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ship Building</p>",
+            "<p>Hindustan Shipyard Limited (HSL), Visakhapatnam – one of India's first shipyards</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Steel</p>",
+            "<p>RINL – Rashtriya Ispat Nigam Limited (Visakhapatnam Steel Plant / Vizag Steel) – only coastal integrated steel plant in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Information Technology</p>",
+            "<p>Visakhapatnam (IT SEZ); Amaravati (Smart Capital city IT corridor planned)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sugar Mills</p>",
+            "<p>Krishna, West Godavari, Visakhapatnam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Food Processing</p>",
+            "<p>Aquaculture processing units in coastal districts; mango and chilli processing in Guntur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Leather</p>",
+            "<p>Nellore, Visakhapatnam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mining (Minerals)</p>",
+            "<p>Limestone in Kurnool, Kadapa; Barytes in Kadapa (world-class deposits); Asbestos in Cuddapah; Manganese in Srikakulam; Uranium in Nellore</p>"
           ]
         }
       ]
@@ -269,43 +272,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Port</strong></p>",
+            "<p><strong>Location / Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Visakhapatnam Port</p>",
+            "<p>Deepest natural port in India; one of India's largest ports by cargo handled; handles iron ore, petroleum, fertilizers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Krishnapatnam Port</p>",
+            "<p>Nellore district; one of India's largest private ports; major container handling</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kakinada Port</p>",
+            "<p>East Godavari; handles fish, fertilizers, petroleum products</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gangavaram Port</p>",
+            "<p>Near Visakhapatnam; private port; handles coal, limestone, bauxite</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Machilipatnam Port (under development)</p>",
+            "<p>Krishna district; being developed as part of Andhra Pradesh maritime policy</p>"
           ]
         }
       ]
@@ -318,7 +321,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5ivc17z"
+      "id": "5ivc17z",
+      "content": "Andhra Pradesh has a mix of thermal, hydro, solar, and wind power projects. The state has been proactive in renewable energy development."
     },
     {
       "type": "examAlert",
@@ -335,78 +339,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Power Project</strong></p>",
+            "<p><strong>Type / Location</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RTPP (Rayalaseema Thermal Power Plant)</p>",
+            "<p>Thermal; Kadapa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>VTPS (Vijayawada Thermal Power Station)</p>",
+            "<p>Thermal; Krishna district</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sri Damodaram Sanjeevaiah Thermal Power Station (SDSTPS)</p>",
+            "<p>Thermal; Nellore district (Krishnapatnam area)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nagarjunasagar Hydro Power Station</p>",
+            "<p>Hydro; Krishna River</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Srisailam Left &amp; Right Bank Hydro</p>",
+            "<p>Hydro; Krishna River</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Somasila Hydro Power</p>",
+            "<p>Hydro; Pennar River</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Jaiswal Neco Industries Solar Park</p>",
+            "<p>Solar; Anantapur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ultra Mega Solar Park, Kurnool</p>",
+            "<p>Solar; 1000 MW; among largest solar parks in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ultra Mega Solar Park, Kadapa</p>",
+            "<p>Solar; 1000 MW</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wind Energy</p>",
+            "<p>Kurnool, Anantapur, Chittoor – significant installed capacity</p>"
           ]
         }
       ]
@@ -419,7 +423,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jnydtyg"
+      "id": "jnydtyg",
+      "content": "The Visakhapatnam-Chennai Industrial Corridor (VCIC) is a major industrial development initiative connecting the two cities. Andhra Pradesh also has several SEZs in Visakhapatnam and Krishnapatnam focusing on IT, pharmaceuticals, and manufacturing. The PCPIR (Petroleum, Chemicals and Petrochemicals Investment Region) at Visakhapatnam/Kakinada is another major initiative."
     }
   ],
   "enriched": true

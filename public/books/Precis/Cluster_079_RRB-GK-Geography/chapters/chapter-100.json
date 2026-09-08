@@ -1,0 +1,102 @@
+{
+  "title": "4. Plate Boundaries and Earthquake Generation",
+  "order": 100,
+  "blocks": [
+    {
+      "id": "g1i5bh0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Boundary</strong></p>",
+            "<p><strong>Stress Type</strong></p>",
+            "<p><strong>Fault</strong></p>",
+            "<p><strong>Earthquake Nature</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Convergent</p>",
+            "<p>Compressional</p>",
+            "<p>Reverse/Thrust</p>",
+            "<p>Largest megathrust earthquakes</p>",
+            "<p>Japan, Chile</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Divergent</p>",
+            "<p>Tensional</p>",
+            "<p>Normal</p>",
+            "<p>Shallow, moderate earthquakes</p>",
+            "<p>Mid-Atlantic Ridge</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Transform</p>",
+            "<p>Shear</p>",
+            "<p>Strike-slip</p>",
+            "<p>Frequent shallow earthquakes</p>",
+            "<p>San Andreas Fault</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Nearly 90–95% of global earthquakes occur along plate boundaries.",
+      "id": "dpszupi"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Boundary Occurrence",
+          "value": "90–95%",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Location",
+          "value": "Plate Boundaries",
+          "icon": "info"
+        },
+        {
+          "label": "Key Subject",
+          "value": "Earthquakes",
+          "icon": "book"
+        }
+      ],
+      "id": "gn9d4jb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The vast majority of global seismic activity is concentrated along tectonic plate boundaries.",
+        "An estimated 90–95% of all earthquakes worldwide occur at plate margins.",
+        "Plate boundary interactions are the single largest driver of global earthquake generation."
+      ],
+      "id": "4im2h36"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently test the exact percentage of global earthquakes occurring at plate boundaries (90–95%).",
+        "Be prepared for direct questions regarding the relationship between tectonic plate boundaries and seismic zones."
+      ],
+      "id": "zm3n8bt"
+    },
+    {
+      "type": "paragraph",
+      "content": "Nearly 90–95% of global earthquakes occur along plate boundaries.",
+      "id": "dnvyn2q"
+    }
+  ],
+  "enriched": true
+}

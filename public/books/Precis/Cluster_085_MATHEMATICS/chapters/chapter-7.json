@@ -1,0 +1,290 @@
+{
+  "id": "0jjalla",
+  "title": "PART 10",
+  "order": 7,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "2a5eejq",
+      "content": "TIME, SPEED &amp; DISTANCE + BASIC MENSURATION + BASIC DATA INTERPRETATION <br></br>"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Main Sections",
+          "value": "3 Sections",
+          "icon": "book"
+        },
+        {
+          "label": "Key Topics",
+          "value": "9 Topics",
+          "icon": "check"
+        },
+        {
+          "label": "Subject Area",
+          "value": "Quantitative Aptitude",
+          "icon": "award"
+        },
+        {
+          "label": "Target Skill",
+          "value": "Problem Solving",
+          "icon": "clock"
+        }
+      ],
+      "id": "a4ohe8g"
+    },
+    {
+      "id": "zvzvj6u",
+      "type": "heading",
+      "level": 2,
+      "content": "SECTION A: TIME, SPEED & DISTANCE"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Time, Speed & Distance covers core principles including speed conversion, relative speed, average speed, and train-based problems.",
+        "Basic Mensuration is divided into two dimensions (2D plane figures) and three dimensions (3D solid figures).",
+        "Data Interpretation tests the ability to extract, analyze, and compute quantitative information from structured datasets.",
+        "Solving practice questions along with verifying against the answer key builds accuracy and time management for competitive exams."
+      ],
+      "id": "i50b919"
+    },
+    {
+      "id": "5tuxift",
+      "type": "heading",
+      "level": 3,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "paragraph",
+      "id": "h9tj9mj",
+      "content": "Speed = Distance / Time<br></br>Distance = Speed × Time<br></br>Time = Distance / Speed<br></br><br></br>SSC questions from this area are direct and calculation-light."
+    },
+    {
+      "id": "qguh6ud",
+      "type": "heading",
+      "level": 3,
+      "content": "2. SPEED CONVERSION"
+    },
+    {
+      "type": "paragraph",
+      "id": "gdpic00",
+      "content": "1 km/hr = 5/18 m/s<br></br>1 m/s = 18/5 km/hr<br></br><br></br>Example:<br></br>36 km/hr = 36 × 5/18 = 10 m/s"
+    },
+    {
+      "id": "u3rz0eq",
+      "type": "heading",
+      "level": 3,
+      "content": "3. AVERAGE SPEED"
+    },
+    {
+      "type": "paragraph",
+      "id": "sd2sf76",
+      "content": "For equal distance:<br></br>Average speed = (2xy)/(x+y)<br></br><br></br>Example:<br></br>40 km/hr and 60 km/hr<br></br>Average speed = 48 km/hr"
+    },
+    {
+      "id": "46cskw5",
+      "type": "heading",
+      "level": 3,
+      "content": "4. RELATIVE SPEED"
+    },
+    {
+      "type": "paragraph",
+      "id": "b45ffl1",
+      "content": "Same direction: Difference of speeds<br></br>Opposite direction: Sum of speeds<br></br><br></br>Example:<br></br>50 km/hr and 70 km/hr (opposite)<br></br>Relative speed = 120 km/hr"
+    },
+    {
+      "id": "5xhsrji",
+      "type": "heading",
+      "level": 3,
+      "content": "5. TRAIN PROBLEMS"
+    },
+    {
+      "type": "paragraph",
+      "id": "pdl4z9w",
+      "content": "Time to cross an object = Length / Relative speed<br></br><br></br>Example:<br></br>Train length = 100 m, time = 10 s<br></br>Speed = 10 m/s"
+    },
+    {
+      "id": "hqhgv7w",
+      "type": "heading",
+      "level": 2,
+      "content": "SECTION B: BASIC MENSURATION"
+    },
+    {
+      "id": "cmlzms8",
+      "type": "heading",
+      "level": 3,
+      "content": "6. 2D FIGURES"
+    },
+    {
+      "type": "paragraph",
+      "id": "7oap31y",
+      "content": "Square:<br></br>Area = a², Perimeter = 4a<br></br><br></br>Rectangle:<br></br>Area = l × b, Perimeter = 2(l+b)<br></br><br></br>Circle:<br></br>Area = πr², Circumference = 2πr"
+    },
+    {
+      "type": "paragraph",
+      "id": "6e53nmn",
+      "content": "Example:<br></br>Radius = 7 cm<br></br>Area = 154 cm²"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "2D Figures",
+        "3D Figures"
+      ],
+      "rows": [
+        [
+          "Dimensions",
+          "Two (Length & Breadth)",
+          "Three (Length, Breadth & Height)"
+        ],
+        [
+          "Key Measurements",
+          "Area and Perimeter",
+          "Volume and Surface Area"
+        ],
+        [
+          "Common Examples",
+          "Square, Rectangle, Circle, Triangle",
+          "Cube, Cuboid, Cylinder, Cone, Sphere"
+        ]
+      ],
+      "id": "j5ugxw2"
+    },
+    {
+      "id": "dovtcw2",
+      "type": "heading",
+      "level": 3,
+      "content": "7. 3D FIGURES"
+    },
+    {
+      "type": "paragraph",
+      "id": "j5bwd7t",
+      "content": "Cube:<br></br>Volume = a³, TSA = 6a²<br></br><br></br>Cuboid:<br></br>Volume = l × b × h<br></br><br></br>Cylinder:<br></br>Volume = πr²h"
+    },
+    {
+      "type": "paragraph",
+      "id": "ha3rgo8",
+      "content": "Example:<br></br>Cube side = 5 cm<br></br>Volume = 125 cm³"
+    },
+    {
+      "id": "bsfm4s0",
+      "type": "heading",
+      "level": 2,
+      "content": "SECTION C: BASIC DATA INTERPRETATION"
+    },
+    {
+      "id": "lyj22wl",
+      "type": "heading",
+      "level": 3,
+      "content": "8. DATA INTERPRETATION"
+    },
+    {
+      "type": "paragraph",
+      "id": "tcimd5x",
+      "content": "SSC DI questions are simple and based on totals and averages."
+    },
+    {
+      "id": "9xoeu3q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Subject</strong></p>",
+            "<p><strong>Marks</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Maths</p>",
+            "<p>60</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>English</p>",
+            "<p>70</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Science</p>",
+            "<p>80</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>History</p>",
+            "<p>50</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Geography</p>",
+            "<p>40</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "ye5hbhr",
+      "content": "Total marks = 300<br></br>Average marks = TOTAL MARKS/ TOTAL NUMBER OF SUBJECTS"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Conversion between km/h and m/s (multiplying by 5/18 or 18/5) is a frequently tested preliminary step in Train Problems.",
+        "Relative speed applications differ when two objects move in the same direction versus opposite directions.",
+        "Mensuration problems often test direct formula-based calculations for total surface area, volume, and perimeter.",
+        "Data Interpretation sets carry high weightage and demand rapid calculation of percentages, ratios, and averages."
+      ],
+      "id": "z5prgo4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tcbwy21",
+      "content": "                                  300/5 = 60"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gp2p9tq",
+      "content": "ANSWER : 60"
+    },
+    {
+      "id": "wr0egeo",
+      "type": "heading",
+      "level": 2,
+      "content": "9. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "zp5f7vp",
+      "content": "Q1. Convert 54 km/hr into m/s.<br></br>A. 12   B. 13   C. 14   D. 15<br></br><br></br>Q2. Find area of square of side 10 cm.<br></br>A. 100   B. 200   C. 300   D. 400<br></br><br></br>Q3. A train travels 120 km in 3 hours. Find its speed.<br></br>A. 30   B. 40   C. 50   D. 60"
+    },
+    {
+      "id": "rfv9d1r",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9l35iqa",
+      "content": "Q1. D<br></br>Q2. A<br></br>Q3. B"
+    }
+  ],
+  "enriched": true
+}

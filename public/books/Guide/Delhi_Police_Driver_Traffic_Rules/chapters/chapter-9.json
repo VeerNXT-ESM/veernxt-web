@@ -41,12 +41,8 @@
     },
     {
       "type": "paragraph",
-      "id": "iq8gl40"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Drunk Driving (Section 185 — MV Act)",
-      "id": "abxowuv"
+      "id": "iq8gl40",
+      "content": "Driving under the influence of alcohol or drugs is one of the most serious traffic offences. It is tested by a breath analyser or blood/urine test."
     },
     {
       "id": "5bpod9s",
@@ -55,29 +51,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Blood Alcohol Content (BAC)</strong></p>",
+            "<p><strong>Legal Limit in India</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Permitted BAC for drivers</p>",
+            "<p>30 mg per 100 ml of blood</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>If BAC exceeds 30 mg/100 ml</p>",
+            "<p>Offence under Section 185</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Commercial vehicle drivers</p>",
+            "<p>Zero tolerance recommended</p>"
           ]
         }
       ]
@@ -107,29 +103,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Offence</strong></p>",
+            "<p><strong>Punishment</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1st offence — drunk driving</p>",
+            "<p>Fine Rs.10,000 AND/OR imprisonment up to 6 months</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>2nd offence (within 3 years)</p>",
+            "<p>Fine Rs.15,000 AND/OR imprisonment up to 2 years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Repeat offences</p>",
+            "<p>Licence cancelled, vehicle may be seized</p>"
           ]
         }
       ]
@@ -142,7 +138,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zx3elo5"
+      "id": "zx3elo5",
+      "content": "Dangerous driving means driving in a way that is likely to cause death or injury to others."
     },
     {
       "type": "examAlert",
@@ -156,13 +153,13 @@
       "id": "spotu1q",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Driving at excessive speed",
+        "Driving on the wrong side of the road",
+        "Overtaking recklessly",
+        "Not following traffic signals and signs",
+        "Using a mobile phone while driving",
+        "Driving with defective brakes, steering, or lights",
+        "Driving while heavily fatigued or drowsy"
       ]
     },
     {
@@ -172,29 +169,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Offence</strong></p>",
+            "<p><strong>Punishment</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1st offence — dangerous driving</p>",
+            "<p>Fine Rs.1,000–5,000 AND/OR imprisonment up to 1 year</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>2nd offence (within 3 years)</p>",
+            "<p>Fine Rs.10,000 AND/OR imprisonment up to 2 years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Causing death by dangerous driving</p>",
+            "<p>Imprisonment up to 7 years (IPC Section 304A)</p>"
           ]
         }
       ]

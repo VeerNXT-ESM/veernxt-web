@@ -1,0 +1,331 @@
+{
+  "id": "x1teibf",
+  "title": "Clocks & Calendars",
+  "order": 12,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rel72g0",
+      "content": "<strong>CHAPTER  12\tCLOCKS &amp; CALENDARS</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "c7i8mds",
+      "content": "<em>Clock Angles | Coincidence | Calendar — Odd Days</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5xy6a8r",
+      "content": "<strong>12.1  Clock Problems</strong>"
+    },
+    {
+      "id": "32xj17y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>CLOCK FUNDAMENTALS</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Clock has 360° total. 12 hours = 360°, so 1 hour = 30°.</p><p>Minute hand moves 360° in 60 min → 6° per minute.</p><p>Hour hand moves 30° in 60 min → 0.5° per minute.</p><p>Relative speed of minute hand over hour hand = 6 − 0.5 = 5.5° per minute.</p><p>Both hands coincide every 720/11 minutes ≈ 65.45 minutes.</p><p>Both hands are at 90° apart: 720/11 × (n ± 1/4) [complex formula — use direct calculation]</p><p>ANGLE FORMULA:</p><p>θ = |30H − 5.5M| where H = hours, M = minutes</p><p>If θ &gt; 180°, actual angle = 360° − θ</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "6hx95a5",
+      "content": "<strong>Ex.1 </strong>Find the angle between clock hands at 3:40."
+    },
+    {
+      "type": "paragraph",
+      "id": "ib2lj2l",
+      "content": "<strong>Sol. </strong><em>θ = |30×3 − 5.5×40| = |90 − 220| = |−130| = 130°. Ans: 130°</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "z1ecosp",
+      "content": "<strong>Ex.2 </strong>Find angle at 6:30."
+    },
+    {
+      "type": "paragraph",
+      "id": "qex5je9",
+      "content": "<strong>Sol. </strong><em>θ = |30×6 − 5.5×30| = |180 − 165| = 15°. Ans: 15°</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "8wgzjh6",
+      "content": "<strong>Ex.3 </strong>At what time between 3 and 4 o'clock are the hands together?"
+    },
+    {
+      "type": "paragraph",
+      "id": "uw9b3e6",
+      "content": "<strong>Sol. </strong><em>At 3:00, minute hand is 15 min behind hour hand (= 90°). Time to gain 90° = 90/5.5 = 16.36 min = 16 min 21.8 sec. So hands meet at 3:16:21. Ans: 16 4/11 min past 3</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ry6mlem",
+      "content": "<strong>Ex.4 </strong>At what time between 4 and 5 are the hands at right angles (first time)?"
+    },
+    {
+      "type": "paragraph",
+      "id": "2x7w0c7",
+      "content": "<strong>Sol. </strong><em>At 4:00, hour hand is at 20 minutes position. To be 15 minutes ahead (90°): 15−20=−5 (already passed). For next 90°: need to gain 15 min. Minute hand needs to close 20 min gap and then create 15 min gap = 35 min gain. 35/5.5 = 350/11 = 31 9/11 min. So at 4h 31 9/11 min. Ans: 31 9/11 min past 4</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t7y6ach",
+      "content": "<strong>12.2  Calendar Problems</strong>"
+    },
+    {
+      "id": "78u11t8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>ODD DAYS CONCEPT</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ordinary year = 365 days = 52 weeks + 1 day → 1 ODD DAY</p><p>Leap year = 366 days = 52 weeks + 2 days → 2 ODD DAYS</p><p>100 years = 76 ordinary + 24 leap = 76×1 + 24×2 = 76+48 = 124 = 17 weeks + 5 days → 5 ODD DAYS</p><p>200 years → 5+5=10 → 10−7=3 ODD DAYS</p><p>300 years → 5+5+5=15 → 15−14=1 ODD DAY</p><p>400 years → 5+5+5+6=21 → 21−21=0 ODD DAYS (400th year is special leap year)</p><p>DAY CODES: Sunday=0, Monday=1, Tuesday=2, Wednesday=3, Thursday=4, Friday=5, Saturday=6</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wqsmal9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Month (Non-Leap)</strong></p>",
+            "<p><strong>Odd Days</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>January</p>",
+            "<p>3</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>February</p>",
+            "<p>0</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>March</p>",
+            "<p>3</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>April</p>",
+            "<p>2</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>May</p>",
+            "<p>3</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>June</p>",
+            "<p>2</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>July</p>",
+            "<p>3</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>August</p>",
+            "<p>3</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>September</p>",
+            "<p>2</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>October</p>",
+            "<p>3</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>November</p>",
+            "<p>2</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>December</p>",
+            "<p>3</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "pc9xl4b",
+      "content": "<strong>Ex.5 </strong>January 1, 2000 was a Saturday. What day was January 1, 2001?"
+    },
+    {
+      "type": "paragraph",
+      "id": "cwhmka0",
+      "content": "<strong>Sol. </strong><em>2000 is a leap year → 2 odd days. Saturday + 2 = Monday. Ans: Monday</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "sks3mjy",
+      "content": "<strong>Ex.6 </strong>If 15 August 2020 was Saturday, what day was 26 January 2021?"
+    },
+    {
+      "type": "paragraph",
+      "id": "t07f0pe",
+      "content": "<strong>Sol. </strong><em>From 15 Aug 2020 to 26 Jan 2021 = 164 days. 164 = 23×7 + 3. 3 odd days. Saturday + 3 = Tuesday. Ans: Tuesday</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lzpfdnf",
+      "content": "<strong>12.3  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "6r6u5jz",
+      "content": "<strong>Q.49  </strong>What is the angle between clock hands at 5:20?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ik6qy1p",
+      "content": "<strong>  (a)  </strong>30°"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mr4vrnd",
+      "content": "<strong>  (b)  </strong>40°"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1ahqe5m",
+      "content": "<strong>  (c)  </strong>50°"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8f3ld4k",
+      "content": "<strong>  (d)  </strong>60°"
+    },
+    {
+      "type": "paragraph",
+      "id": "16jf0yp",
+      "content": "<strong>  Ans: (b) 40°  Hint: </strong><em>θ=|30×5−5.5×20|=|150−110|=40°.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "gau0n3x",
+      "content": "<strong>Q.50  </strong>If 1st January 2023 is Sunday, what day is 1st January 2024?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f5rxsen",
+      "content": "<strong>  (a)  </strong>Monday"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u6ybe3r",
+      "content": "<strong>  (b)  </strong>Tuesday"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ioxswd3",
+      "content": "<strong>  (c)  </strong>Sunday"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nl2bakc",
+      "content": "<strong>  (d)  </strong>Wednesday"
+    },
+    {
+      "type": "paragraph",
+      "id": "thjyakp",
+      "content": "<strong>  Ans: (a) Monday  Hint: </strong><em>2023 is not a leap year → 1 odd day. Sunday+1=Monday.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "qfr7ke0",
+      "content": "<strong>Q.51  </strong>At what time between 2 and 3 do clock hands coincide?"
+    },
+    {
+      "type": "paragraph",
+      "id": "wmpt7z9",
+      "content": "<strong>  (a)  </strong>10 10/11 min past 2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0b68768",
+      "content": "<strong>  (b)  </strong>10 min past 2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "joqs2fd",
+      "content": "<strong>  (c)  </strong>11 min past 2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z97biqx",
+      "content": "<strong>  (d)  </strong>10.5 min past 2"
+    },
+    {
+      "type": "paragraph",
+      "id": "u9g0loz",
+      "content": "<strong>  Ans: (a) 10 10/11 min past 2  Hint: </strong><em>At 2:00 gap = 10 min. Gain 10 min at 5.5°/min → 10×2/11 = 20/11 of 60/11... time = 10×60/55 = 120/11 = 10 10/11 min.</em>"
+    }
+  ],
+  "enriched": true
+}

@@ -52,65 +52,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Technology</strong></p>",
+            "<p><strong>Application in HR</strong></p>",
+            "<p><strong>Banking Adoption</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>HRMS / SAP / Workday / PeopleSoft</p>",
+            "<p>Integrated HR management system; payroll, leave, performance, recruitment on single platform</p>",
+            "<p>SBI, HDFC, Axis use SAP; private banks on Workday; RRBs often use simpler systems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>AI and Machine Learning in HR</p>",
+            "<p>Resume screening; predictive analytics for attrition; chatbots for HR queries; automated scheduling</p>",
+            "<p>HDFC, ICICI use AI chatbots for HR helpdesk; attrition prediction models; digital onboarding</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Applicant Tracking System (ATS)</p>",
+            "<p>Manages recruitment workflow; tracks applications; integration with job portals</p>",
+            "<p>IBPS uses ATS for banking exams at scale; private banks use Taleo, Greenhouse</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Learning Management System (LMS)</p>",
+            "<p>Online training delivery; track completion; assessment; certification</p>",
+            "<p>Banks have LMS for compliance training (KYC, AML, POSH); IIBF courses online</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>People Analytics / HR Analytics</p>",
+            "<p>Data-driven HR decisions; dashboards; predictive modelling; workforce planning</p>",
+            "<p>Attrition hotspot identification; branch staffing optimisation; productivity analysis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Digital Onboarding</p>",
+            "<p>Paperless joining; e-signature; virtual orientation; pre-boarding apps</p>",
+            "<p>Accelerated by COVID-19; standard in private banks; SBI implemented digital onboarding</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Performance Management Tech</p>",
+            "<p>Continuous feedback tools; OKR platforms; real-time recognition; goal tracking</p>",
+            "<p>Replacing annual reviews with continuous PM; pulse surveys; Betterworks, Lattice</p>"
           ]
         }
       ]
@@ -154,49 +154,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Dimension</strong></p>",
+            "<p><strong>Details</strong></p>",
+            "<p><strong>Banking Initiatives</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gender Diversity</p>",
+            "<p>Women representation in banking workforce and leadership; glass ceiling; gender pay gap</p>",
+            "<p>FICCI-FLO Banking Committee; SBI Women Leadership Programme; HDFC gender parity target; RBI women employees: ~20% of workforce</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Persons with Disabilities (PwD)</p>",
+            "<p>3% reservation in government jobs; accessibility; reasonable accommodation</p>",
+            "<p>PSBs follow 3% PwD reservation; accessibility in branch premises; assistive technology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SC/ST and OBC Reservation</p>",
+            "<p>Reservation policy in government banks; 15% SC + 7.5% ST + 27% OBC in PSBs</p>",
+            "<p>Roster system; liaison officer; annual report to Govt on reservation compliance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Generational Diversity</p>",
+            "<p>Managing Gen Z, Millennials, Gen X, Baby Boomers together; different values and work styles</p>",
+            "<p>Reverse mentoring; flexible policies; digital-native workforce integration in banking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>LGBTQ+ Inclusion</p>",
+            "<p>Post Navtej Singh Johar judgment (2018) :non-discrimination; inclusive policies</p>",
+            "<p>Private banks (HDFC, Kotak) have LGBTQ+ ERGs; pride month recognition; policy updates</p>"
           ]
         }
       ]
@@ -223,71 +223,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Employee Experience (EX)</p>",
+            "<p>Holistic view of employee's journey; culture, technology, workspace; moves beyond engagement to overall experience; Jacob Morgan framework</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gig Economy / Workforce</p>",
+            "<p>Freelancers, contract workers, platform workers; flexible; non-permanent; covered under new Social Security Code 2020 in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Remote Work / Hybrid Work</p>",
+            "<p>Post-COVID norm; challenges: monitoring, culture, collaboration; RBI guidelines on work from home for banks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Psychological Safety</p>",
+            "<p>Amy Edmondson: team environment where members feel safe to take risks, speak up, make mistakes without fear; essential for innovation and learning</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>OKRs (Objectives and Key Results)</p>",
+            "<p>Goal-setting framework; ambitious objectives + measurable key results; quarterly cycles; Intel, Google, Banks adopting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Talent Marketplace</p>",
+            "<p>Internal mobility platform; employees can apply for projects, roles within organisation; democratises opportunity; reduces attrition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>People-First Leadership</p>",
+            "<p>Leader prioritises employee well-being and growth; servant leadership; mental health awareness; financial wellness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Total Talent Management</p>",
+            "<p>Manage permanent employees + contractors + gig workers + alumni as unified talent pool</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ESG in HR (Social Dimension)</p>",
+            "<p>Environmental, Social, Governance framework; HR's role in social metrics: diversity, labour practices, employee development, human rights</p>"
           ]
         }
       ]

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "nm3bq9q"
+      "id": "nm3bq9q",
+      "content": "A computer is an electronic machine that accepts data as input, processes the data according to instructions, stores it, and produces meaningful information as output."
     },
     {
       "type": "statStrip",
@@ -47,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gro55p1"
+      "id": "gro55p1",
+      "content": "A computer is an electronic device that takes raw data as input, processes it using programs, stores the data, and produces output in the form of information."
     },
     {
       "id": "hce4wx0",
@@ -67,36 +69,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Input</p>",
+            "<p>Accepting data and instructions from input devices.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Processing</p>",
+            "<p>Performing calculations and logical operations.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Storage</p>",
+            "<p>Saving data and programs for future use.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Output</p>",
+            "<p>Displaying processed information.</p>"
           ]
         }
       ]
@@ -133,13 +135,13 @@
       "id": "sn2uvbp",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Speed – Performs millions of operations per second.",
+        "Accuracy – Produces accurate results if input is correct.",
+        "Diligence – Does not get tired.",
+        "Storage – Can store huge amounts of data.",
+        "Automation – Works automatically once instructions are given.",
+        "Versatility – Can perform many types of tasks.",
+        "Reliability – Produces consistent results."
       ]
     },
     {
@@ -155,33 +157,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Analog Computer</p>",
+            "<p>Processes continuous data such as temperature or speed.</p>",
+            "<p>Thermometer, Speedometer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Digital Computer</p>",
+            "<p>Processes discrete data using binary numbers.</p>",
+            "<p>Desktop, Laptop</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hybrid Computer</p>",
+            "<p>Combination of analog and digital computers.</p>",
+            "<p>Medical monitoring systems</p>"
           ]
         }
       ]
@@ -208,55 +210,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Generation</strong></p>",
+            "<p><strong>Time Period</strong></p>",
+            "<p><strong>Technology</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>First</p>",
+            "<p>1940–1956</p>",
+            "<p>Vacuum Tubes</p>",
+            "<p>Very large computers, high heat, ENIAC</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Second</p>",
+            "<p>1956–1963</p>",
+            "<p>Transistors</p>",
+            "<p>Smaller, faster, reliable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Third</p>",
+            "<p>1964–1971</p>",
+            "<p>Integrated Circuits</p>",
+            "<p>Improved speed and reduced size</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Fourth</p>",
+            "<p>1971–Present</p>",
+            "<p>Microprocessors</p>",
+            "<p>Personal computers, laptops</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Fifth</p>",
+            "<p>Present &amp; Future</p>",
+            "<p>Artificial Intelligence</p>",
+            "<p>Machine learning and robotics</p>"
           ]
         }
       ]
@@ -271,12 +273,12 @@
       "id": "qff51x3",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "The word computer comes from 'compute' meaning calculate.",
+        "Digital computers work on binary numbers (0 and 1).",
+        "ENIAC is an example of a first generation computer.",
+        "Transistors were used in second generation computers.",
+        "Microprocessors are used in fourth generation computers.",
+        "Fifth generation computers are based on Artificial Intelligence."
       ]
     }
   ],

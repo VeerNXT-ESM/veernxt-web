@@ -1,0 +1,132 @@
+{
+  "title": "3. Marine Erosion Processes",
+  "order": 169,
+  "blocks": [
+    {
+      "id": "h1cf06i",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Hydraulic Action</p>",
+            "<p>Force of water compresses air in cracks causing rocks to break.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Abrasion (Corrasion)</p>",
+            "<p>Rock fragments carried by waves grind coastal rocks.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Attrition</p>",
+            "<p>Rock particles collide and become smaller.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Solution (Corrosion)</p>",
+            "<p>Soluble rocks dissolve in seawater.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Hydraulic action, abrasion, attrition, and solution are the primary mechanisms through which ocean waves continuously erode coastal landforms.",
+      "id": "853j4z0"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Process",
+        "Action Mechanism",
+        "Effect on Coastline"
+      ],
+      "rows": [
+        [
+          "Hydraulic Action",
+          "Trapped air in rock fissures expands and contracts violently under wave pressure",
+          "Widens cracks and breaks off structural rock fragments"
+        ],
+        [
+          "Abrasion (Corrasion)",
+          "Waves hurl sand, gravel, and stones against the cliff base",
+          "Creates wave-cut notches and continuously undercuts cliffs"
+        ],
+        [
+          "Attrition",
+          "Swirling water causes wave-borne rocks to collide with each other",
+          "Rounds and shrinks rock fragments into smooth shingle and sand"
+        ],
+        [
+          "Solution (Corrosion)",
+          "Saline water and weak organic acids dissolve minerals within coastal rocks",
+          "Erodes soluble rock formations like chalk and limestone"
+        ]
+      ],
+      "id": "95cc744"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Processes",
+          "value": "4 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Main Agent",
+          "value": "Ocean Waves",
+          "icon": "info"
+        },
+        {
+          "label": "Landform Sequence",
+          "value": "Cave to Stump",
+          "icon": "clock"
+        },
+        {
+          "label": "Chemical Process",
+          "value": "Solution",
+          "icon": "check"
+        }
+      ],
+      "id": "8brpeql"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sequence of landform evolution (Sea Cave → Sea Arch → Stack → Stump) is a high-frequency topic in physical geography papers.",
+        "Differentiate Corrasion (mechanical grinding of rock by sediment) from Corrosion (chemical dissolution of rock minerals in seawater).",
+        "Wave-cut platforms mark the retreat of coastal cliffs over time and typically form at the high-tide level."
+      ],
+      "id": "swoty41"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Marine erosion is driven by wave action, tides, currents, and storm surges impacting coastal zones.",
+        "The four main erosion processes are hydraulic action, abrasion (corrasion), attrition, and solution (corrosion).",
+        "Hydraulic action compresses air in cliff crevices, causing explosive pressure that shatters rock faces.",
+        "Abrasion acts as a sandpaper effect, where waves hurl rocks and sediments against cliff bases.",
+        "Attrition reduces rock debris into smaller, rounded pebbles through continuous inter-particle collisions.",
+        "Erosional coastal features evolve in sequence: Sea Cave → Sea Arch → Stack → Stump."
+      ],
+      "id": "j6uqc9f"
+    }
+  ],
+  "enriched": true
+}

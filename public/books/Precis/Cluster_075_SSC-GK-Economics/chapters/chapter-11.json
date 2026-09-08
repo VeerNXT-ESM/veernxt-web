@@ -1,0 +1,389 @@
+{
+  "title": "CHAPTER 12: INEQUALITY",
+  "order": 11,
+  "blocks": [
+    {
+      "id": "k6ujle5",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: FOUNDATIONAL UNDERSTANDING OF INEQUALITY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Inequality is not limited to income; it encompasses wealth, education, healthcare, gender rights, and social advantages.",
+        "Poverty refers to the inability to meet basic needs, while inequality refers to the uneven distribution of economic resources.",
+        "Wealth inequality is generally more severe than income inequality because wealth accumulates over generations.",
+        "The Lorenz Curve (graphical plot) and Gini Coefficient (0 to 1 scale) are the primary tools used to measure inequality.",
+        "Inclusive growth and progressive taxation are necessary long-term solutions to sustainably reduce inequality."
+      ],
+      "id": "0cgxaxn"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Gini Scale",
+          "value": "0 to 1",
+          "icon": "info"
+        },
+        {
+          "label": "Key Indicator",
+          "value": "Lorenz Curve",
+          "icon": "book"
+        },
+        {
+          "label": "Critical Distinction",
+          "value": "Poverty vs Inequality",
+          "icon": "check"
+        },
+        {
+          "label": "Core Solution",
+          "value": "Inclusive Growth",
+          "icon": "award"
+        }
+      ],
+      "id": "erace3w"
+    },
+    {
+      "id": "0lefu2p",
+      "type": "heading",
+      "level": 3,
+      "content": "1. What Exactly is Inequality?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Inequality refers to a condition in which economic resources, income, wealth, opportunities and social advantages are distributed unevenly among individuals or groups within a society.",
+      "id": "tthjf67"
+    },
+    {
+      "type": "paragraph",
+      "content": "In a perfectly equal society, every individual would have identical access to income, wealth, education, healthcare and opportunities. In reality, such perfect equality never exists.",
+      "id": "cfg9rcn"
+    },
+    {
+      "id": "g226ysv",
+      "type": "heading",
+      "level": 3,
+      "content": "2. Inequality is NOT Only About Money"
+    },
+    {
+      "type": "paragraph",
+      "content": "Although income is the most visible form of inequality, inequality also exists in education, healthcare, nutrition, housing, employment, gender rights, social respect and political power.",
+      "id": "27tqpop"
+    },
+    {
+      "id": "dbdvk4e",
+      "type": "heading",
+      "level": 3,
+      "content": "3. Inequality vs Poverty (Critical SSC Area)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Poverty refers to inability to meet basic needs. Inequality refers to unequal distribution of resources.",
+      "id": "3lshz68"
+    },
+    {
+      "type": "paragraph",
+      "content": "An economy may reduce poverty but still show rising inequality if income growth is concentrated among the rich.",
+      "id": "umjyk4s"
+    },
+    {
+      "id": "1p9e3u0",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: DETAILED TYPES OF INEQUALITY"
+    },
+    {
+      "id": "b22pzzu",
+      "type": "heading",
+      "level": 3,
+      "content": "4. Income Inequality (Explained Deeply)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Income inequality refers to differences in earnings among individuals or households. These earnings may come from wages, salaries, profits, rent or interest.",
+      "id": "ozz6pnq"
+    },
+    {
+      "type": "paragraph",
+      "content": "Income inequality increases when high‑income groups experience faster income growth than low‑income groups.",
+      "id": "bip3ie8"
+    },
+    {
+      "id": "ffp2sdq",
+      "type": "heading",
+      "level": 3,
+      "content": "5. Wealth Inequality (More Severe Than Income)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Wealth inequality refers to unequal ownership of assets such as land, property, gold, shares, bonds and savings.",
+      "id": "0qxh7j3"
+    },
+    {
+      "type": "paragraph",
+      "content": "Wealth inequality is usually much higher than income inequality because wealth accumulates over generations.",
+      "id": "ru41cn8"
+    },
+    {
+      "id": "1afgtp6",
+      "type": "heading",
+      "level": 3,
+      "content": "6. Gender Inequality (Economic + Social)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Gender inequality exists when women receive fewer opportunities than men in education, employment, wages, health access and decision‑making.",
+      "id": "pjyrmuu"
+    },
+    {
+      "type": "paragraph",
+      "content": "Economic gender inequality reduces overall economic growth by underutilising half of the population.",
+      "id": "2j8upo8"
+    },
+    {
+      "id": "ssgap1y",
+      "type": "heading",
+      "level": 3,
+      "content": "7. Social Inequality"
+    },
+    {
+      "type": "pullQuote",
+      "content": "An economy may reduce poverty but still show rising inequality if income growth is concentrated among the rich.",
+      "id": "ev69hc1"
+    },
+    {
+      "type": "paragraph",
+      "content": "Social inequality arises from caste, religion, ethnicity and historical discrimination.",
+      "id": "s7acw4c"
+    },
+    {
+      "id": "oingbvj",
+      "type": "heading",
+      "level": 3,
+      "content": "8. Regional Inequality"
+    },
+    {
+      "type": "paragraph",
+      "content": "Regional inequality refers to uneven economic development between regions or states.",
+      "id": "qmefajq"
+    },
+    {
+      "id": "99b5vg4",
+      "type": "heading",
+      "level": 2,
+      "content": "PART C: ROOT CAUSES OF INEQUALITY (STEP‑BY‑STEP LOGIC)"
+    },
+    {
+      "id": "xry5lhc",
+      "type": "heading",
+      "level": 3,
+      "content": "9. Economic Causes"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Unequal ownership of land and capital<br/>• Differences in education and skills<br/>• Capital‑intensive growth<br/>• Technological bias favouring skilled labour<br/>• Inflation affecting poor more than rich",
+      "id": "zt5q28r"
+    },
+    {
+      "id": "p2m0biv",
+      "type": "heading",
+      "level": 3,
+      "content": "10. Social Causes"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Caste system<br/>• Gender discrimination<br/>• Unequal access to quality education<br/>• Social exclusion",
+      "id": "kn1kp9f"
+    },
+    {
+      "id": "ccqt6t9",
+      "type": "heading",
+      "level": 3,
+      "content": "11. Institutional & Policy Causes"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Weak redistribution mechanisms<br/>• Tax evasion by rich<br/>• Poor implementation of welfare schemes<br/>• Policy capture by elite groups",
+      "id": "y5l55zp"
+    },
+    {
+      "id": "3o1yz6x",
+      "type": "heading",
+      "level": 2,
+      "content": "PART D: MEASUREMENT OF INEQUALITY (VERY HIGH SSC WEIGHTAGE)"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Poverty",
+        "Inequality"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Inability to meet basic human needs",
+          "Unequal distribution of resources, income, and opportunities"
+        ],
+        [
+          "Scope",
+          "Focuses on absolute deprivation",
+          "Focuses on relative distribution across society"
+        ],
+        [
+          "Impact of Economic Growth",
+          "Can decrease during growth periods",
+          "Can rise simultaneously if growth favors the rich"
+        ]
+      ],
+      "id": "clui1gv"
+    },
+    {
+      "id": "7ql0sek",
+      "type": "heading",
+      "level": 3,
+      "content": "12. Why Measuring Inequality is Necessary"
+    },
+    {
+      "type": "paragraph",
+      "content": "Measurement helps governments understand distributional outcomes and design corrective policies.",
+      "id": "2iu5mlc"
+    },
+    {
+      "id": "mqupuhf",
+      "type": "heading",
+      "level": 3,
+      "content": "13. Lorenz Curve (Graphical Explanation)"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Lorenz Curve plots cumulative income share against cumulative population share.",
+      "id": "uawjaa6"
+    },
+    {
+      "id": "rw6p6o5",
+      "type": "heading",
+      "level": 3,
+      "content": "14. Gini Coefficient (Mathematical Logic Explained Simply)"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Gini coefficient quantifies inequality on a scale of 0 to 1. Closer to 1 indicates higher inequality.",
+      "id": "ahnaw0q"
+    },
+    {
+      "id": "mgpzy3t",
+      "type": "heading",
+      "level": 3,
+      "content": "15. Other Indicators"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Top 10% vs bottom 10% income share<br/>• Consumption inequality indicators",
+      "id": "acaewp1"
+    },
+    {
+      "id": "gr76n14",
+      "type": "heading",
+      "level": 2,
+      "content": "PART E: EFFECTS OF INEQUALITY (DEEP ECONOMIC & SOCIAL IMPACT)"
+    },
+    {
+      "id": "7utxtw9",
+      "type": "heading",
+      "level": 3,
+      "content": "16. Economic Effects"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Reduces aggregate demand<br/>• Slows economic growth<br/>• Increases unemployment<br/>• Weakens human capital formation",
+      "id": "it3d2wq"
+    },
+    {
+      "id": "0fr5pak",
+      "type": "heading",
+      "level": 3,
+      "content": "17. Social & Political Effects"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Social unrest<br/>• Crime and violence<br/>• Political instability<br/>• Loss of trust in institutions",
+      "id": "4354q6a"
+    },
+    {
+      "id": "dcehva5",
+      "type": "heading",
+      "level": 2,
+      "content": "PART F: INEQUALITY IN INDIA (COMPLETE CONTEXT)"
+    },
+    {
+      "id": "zlalgbo",
+      "type": "heading",
+      "level": 3,
+      "content": "18. India’s Inequality Pattern"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Gini Coefficient Scale: Quantifies inequality from 0 to 1, where a value closer to 1 indicates higher inequality.",
+        "Lorenz Curve: Plots cumulative income share against cumulative population share.",
+        "Poverty vs Inequality: Reducing poverty does not automatically lower inequality if growth is concentrated among high-income groups.",
+        "Severity of Inequality: Wealth inequality is inherently more severe than income inequality due to generational accumulation."
+      ],
+      "id": "o85brk7"
+    },
+    {
+      "type": "paragraph",
+      "content": "India experiences income, wealth, gender, caste and regional inequalities.",
+      "id": "cs5gesw"
+    },
+    {
+      "type": "paragraph",
+      "content": "Rapid economic growth has reduced poverty but inequality remains high.",
+      "id": "h4b0g1b"
+    },
+    {
+      "id": "faeelix",
+      "type": "heading",
+      "level": 2,
+      "content": "PART G: SOLUTIONS & POLICY RESPONSE"
+    },
+    {
+      "id": "1uvlz5i",
+      "type": "heading",
+      "level": 3,
+      "content": "19. Government Measures to Reduce Inequality"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Progressive taxation<br/>• Social security &amp; welfare schemes<br/>• Education &amp; skill development<br/>• Employment generation<br/>• Regional development",
+      "id": "ai57kty"
+    },
+    {
+      "id": "cbsox8m",
+      "type": "heading",
+      "level": 3,
+      "content": "20. Importance of Inclusive Growth"
+    },
+    {
+      "type": "paragraph",
+      "content": "Inclusive growth ensures economic participation of all sections and reduces inequality sustainably.",
+      "id": "ea0182b"
+    },
+    {
+      "id": "u6dpded",
+      "type": "heading",
+      "level": 3,
+      "content": "SSC HYPER FINAL REVISION POINTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Inequality = uneven distribution of income, wealth and opportunities<br/>• Wealth inequality is more severe than income inequality<br/>• Gini coefficient measures inequality<br/>• Inequality harms growth and social stability<br/>• Inclusive growth is the long‑term solution",
+      "id": "kgc0y3n"
+    }
+  ],
+  "enriched": true
+}

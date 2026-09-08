@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "1fd3i27"
+      "id": "1fd3i27",
+      "content": "Alluvial Soil: Formed by river deposition; rich in potash and lime."
     },
     {
       "type": "statStrip",
@@ -52,7 +53,8 @@
     },
     {
       "type": "paragraph",
-      "id": "po8eqf2"
+      "id": "po8eqf2",
+      "content": "Black Soil: High clay content; swells when wet; ideal for cotton."
     },
     {
       "type": "comparisonTable",
@@ -87,11 +89,13 @@
     },
     {
       "type": "paragraph",
-      "id": "69t5dv3"
+      "id": "69t5dv3",
+      "content": "Red Soil: Iron-rich; low humus; requires fertilizers."
     },
     {
       "type": "paragraph",
-      "id": "axpzvsx"
+      "id": "axpzvsx",
+      "content": "Laterite Soil: Strongly leached; suitable for tea, coffee."
     },
     {
       "type": "examAlert",
@@ -104,11 +108,13 @@
     },
     {
       "type": "paragraph",
-      "id": "c9b2bay"
+      "id": "c9b2bay",
+      "content": "Desert Soil: Sandy; low organic matter."
     },
     {
       "type": "paragraph",
-      "id": "l63a2vk"
+      "id": "l63a2vk",
+      "content": "Mountain Soil: Varies with altitude and vegetation."
     }
   ],
   "enriched": true

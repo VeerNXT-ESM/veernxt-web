@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "mteyaps"
+      "id": "mteyaps",
+      "content": "Matter is anything that occupies space and has mass. Everything around us such as air, water, plants, animals and objects is made of matter. The study of matter and its properties is an important part of physics and chemistry."
     },
     {
       "type": "statStrip",
@@ -53,15 +54,18 @@
     },
     {
       "type": "paragraph",
-      "id": "s8cekze"
+      "id": "s8cekze",
+      "content": "• Matter is anything that has mass and occupies space."
     },
     {
       "type": "paragraph",
-      "id": "zqa4wjo"
+      "id": "zqa4wjo",
+      "content": "• It is made up of tiny particles called atoms and molecules."
     },
     {
       "type": "paragraph",
-      "id": "lc7bfi3"
+      "id": "lc7bfi3",
+      "content": "• Matter exists in different forms in nature."
     },
     {
       "id": "grssm5r",
@@ -76,33 +80,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>State</strong></p>",
+            "<p><strong>Properties</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Solid</p>",
+            "<p>Fixed shape and volume</p>",
+            "<p>Iron, wood, ice</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Liquid</p>",
+            "<p>Fixed volume but no fixed shape</p>",
+            "<p>Water, oil, milk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gas</p>",
+            "<p>No fixed shape or volume</p>",
+            "<p>Air, oxygen, carbon dioxide</p>"
           ]
         }
       ]
@@ -115,11 +119,13 @@
     },
     {
       "type": "paragraph",
-      "id": "t20cqsg"
+      "id": "t20cqsg",
+      "content": "• Mass – amount of matter in a substance."
     },
     {
       "type": "paragraph",
-      "id": "gqi2e3h"
+      "id": "gqi2e3h",
+      "content": "• Volume – space occupied by matter."
     },
     {
       "type": "pullQuote",
@@ -128,11 +134,13 @@
     },
     {
       "type": "paragraph",
-      "id": "76vqitq"
+      "id": "76vqitq",
+      "content": "• Density – mass per unit volume."
     },
     {
       "type": "paragraph",
-      "id": "bcrwj8f"
+      "id": "bcrwj8f",
+      "content": "• Elasticity – ability of a material to regain its original shape."
     },
     {
       "id": "4d6z9sm",
@@ -147,43 +155,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Melting</p>",
+            "<p>Solid changes into liquid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Freezing</p>",
+            "<p>Liquid changes into solid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Evaporation</p>",
+            "<p>Liquid changes into gas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Condensation</p>",
+            "<p>Gas changes into liquid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sublimation</p>",
+            "<p>Solid changes directly into gas</p>"
           ]
         }
       ]
@@ -196,7 +204,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ig2sm5u"
+      "id": "ig2sm5u",
+      "content": "Density is defined as mass per unit volume."
     },
     {
       "type": "comparisonTable",
@@ -236,11 +245,13 @@
     },
     {
       "type": "paragraph",
-      "id": "qrmrwna"
+      "id": "qrmrwna",
+      "content": "Formula: Density = Mass / Volume"
     },
     {
       "type": "paragraph",
-      "id": "thcedrg"
+      "id": "thcedrg",
+      "content": "SI Unit of Density = kg/m³"
     },
     {
       "id": "t14x8d1",
@@ -250,7 +261,8 @@
     },
     {
       "type": "paragraph",
-      "id": "j61qkxr"
+      "id": "j61qkxr",
+      "content": "Elasticity is the property of a material to regain its original shape after deformation when the external force is removed."
     },
     {
       "id": "go4yvke",
@@ -260,16 +272,19 @@
     },
     {
       "type": "paragraph",
-      "id": "wrtqsy3"
+      "id": "wrtqsy3",
+      "content": "Pressure is defined as force acting per unit area."
     },
     {
       "type": "paragraph",
-      "id": "lqmi9ue"
+      "id": "lqmi9ue",
+      "content": "Formula: Pressure = Force / Area"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "46x3xem"
+      "id": "46x3xem",
+      "content": "SI Unit = Pascal (Pa)"
     },
     {
       "type": "examAlert",
@@ -289,19 +304,23 @@
     },
     {
       "type": "paragraph",
-      "id": "zsqi74r"
+      "id": "zsqi74r",
+      "content": "• Matter has mass and occupies space."
     },
     {
       "type": "paragraph",
-      "id": "zdmhhdc"
+      "id": "zdmhhdc",
+      "content": "• Density = Mass / Volume."
     },
     {
       "type": "paragraph",
-      "id": "bil3h83"
+      "id": "bil3h83",
+      "content": "• SI unit of pressure is Pascal."
     },
     {
       "type": "paragraph",
-      "id": "9a0m0xv"
+      "id": "9a0m0xv",
+      "content": "• There are three main states of matter: solid, liquid and gas."
     }
   ],
   "enriched": true

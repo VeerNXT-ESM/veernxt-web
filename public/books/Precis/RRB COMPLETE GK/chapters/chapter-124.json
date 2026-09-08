@@ -10,36 +10,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hydraulic Action</p>",
+            "<p>Force of water removes materials.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Abrasion</p>",
+            "<p>Sediments grind against river bed.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Attrition</p>",
+            "<p>Particles collide and become smaller.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Solution (Corrosion)</p>",
+            "<p>Soluble minerals dissolve in water.</p>"
           ]
         }
       ]
@@ -82,25 +82,24 @@
       "id": "gex2kjr"
     },
     {
-      "type": "pullQuote",
-      "content": "Transportation by Rivers",
-      "id": "6d6sm6k"
+      "type": "paragraph",
+      "id": "6v29gvv",
+      "content": "• Traction – rolling of large boulders."
     },
     {
       "type": "paragraph",
-      "id": "6v29gvv"
+      "id": "4i8vn8i",
+      "content": "• Saltation – bouncing of small pebbles."
     },
     {
       "type": "paragraph",
-      "id": "4i8vn8i"
+      "id": "xn6qfcr",
+      "content": "• Suspension – fine particles carried in water."
     },
     {
       "type": "paragraph",
-      "id": "xn6qfcr"
-    },
-    {
-      "type": "paragraph",
-      "id": "k57sipp"
+      "id": "k57sipp",
+      "content": "• Solution – dissolved load."
     },
     {
       "type": "examAlert",
@@ -118,7 +117,8 @@
     },
     {
       "type": "paragraph",
-      "id": "hrbetc0"
+      "id": "hrbetc0",
+      "content": "Deposition occurs when river velocity decreases and sediments are laid down."
     }
   ],
   "enriched": true

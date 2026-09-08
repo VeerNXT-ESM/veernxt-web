@@ -1,0 +1,966 @@
+{
+  "id": "hgic59q",
+  "title": "Ac Circuits & Phasors",
+  "order": 2,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "hbhlcm5",
+      "content": "<strong>CHAPTER 2 — AC CIRCUITS &amp; PHASORS</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "kpys4pq",
+      "content": "Alternating Current (AC) circuits are the backbone of power systems. Unlike DC, AC voltage and current vary sinusoidally with time. The analysis of AC circuits requires understanding of phasors, impedance, resonance, and power concepts. This chapter covers all these topics in depth."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "15lnzhl",
+      "content": "<strong>2.1  Sinusoidal Waveforms</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "av155dy",
+      "content": "A sinusoidal voltage is expressed as: v(t) = V_m sin(ωt + φ), where V_m is the peak (maximum) voltage, ω = 2πf is the angular frequency in radians/second, f is frequency in Hz, T = 1/f is the time period, and φ is the phase angle."
+    },
+    {
+      "id": "x1l46u4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Formula</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Peak Value (V_m)</p>",
+            "<p>—</p>",
+            "<p>Maximum instantaneous value of the waveform</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>RMS Value</p>",
+            "<p>V_rms = V_m / √2  =  0.707 V_m</p>",
+            "<p>Equivalent DC value for same heating effect</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Average Value</p>",
+            "<p>V_avg = 2V_m / π  =  0.637 V_m</p>",
+            "<p>Average of half cycle (for full wave)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Form Factor</p>",
+            "<p>V_rms / V_avg = 1.11</p>",
+            "<p>Ratio of RMS to average value</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Peak Factor</p>",
+            "<p>V_m / V_rms = √2 = 1.414</p>",
+            "<p>Ratio of peak to RMS value</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Frequency (f)</p>",
+            "<p>f = 1/T  (Hz)</p>",
+            "<p>Number of cycles per second</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Angular Frequency</p>",
+            "<p>ω = 2πf  (rad/s)</p>",
+            "<p>Rate of change of phase angle</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Phase Difference</p>",
+            "<p>φ₁ − φ₂</p>",
+            "<p>Phase lead or lag between two waveforms</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "otn12rf",
+      "content": "<strong>2.2  Phasor Representation</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "o03f9dl",
+      "content": "A phasor is a rotating vector that represents a sinusoidal quantity. Phasors allow AC circuit analysis using simple algebraic operations instead of differential equations. In phasor notation, a sinusoidal voltage v = V_m sin(ωt + φ) is represented as V = V∠φ in polar form or V = V·cosφ + jV·sinφ in rectangular form."
+    },
+    {
+      "id": "okx2nh6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Form</strong></p>",
+            "<p><strong>Notation</strong></p>",
+            "<p><strong>Conversion</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Polar form</p>",
+            "<p>V∠φ = V_m∠φ</p>",
+            "<p>—</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rectangular form</p>",
+            "<p>a + jb</p>",
+            "<p>a = V cosφ,  b = V sinφ</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>To polar from rect</p>",
+            "<p>V∠φ</p>",
+            "<p>V = √(a²+b²),  φ = tan⁻¹(b/a)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Multiplication (polar)</p>",
+            "<p>V₁∠φ₁ × V₂∠φ₂</p>",
+            "<p>(V₁V₂)∠(φ₁+φ₂)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Division (polar)</p>",
+            "<p>V₁∠φ₁ / V₂∠φ₂</p>",
+            "<p>(V₁/V₂)∠(φ₁−φ₂)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>j notation</p>",
+            "<p>j = √(−1)</p>",
+            "<p>j² = −1,  j³ = −j,  j⁴ = 1</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qlmoc82",
+      "content": "<strong>2.3  Impedance of Basic Elements</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "am0h2h0",
+      "content": "Impedance (Z) is the total opposition offered by a circuit to AC current. It generalises resistance to include frequency-dependent effects of inductors and capacitors."
+    },
+    {
+      "id": "k54c0uz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Element</strong></p>",
+            "<p><strong>Impedance (Z)</strong></p>",
+            "<p><strong>Phase Relationship</strong></p>",
+            "<p><strong>Nature</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Resistor (R)</p>",
+            "<p>Z_R = R∠0°</p>",
+            "<p>V and I in phase (φ = 0°)</p>",
+            "<p>Purely resistive</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Inductor (L)</p>",
+            "<p>Z_L = jωL = jX_L∠90°</p>",
+            "<p>V leads I by 90°</p>",
+            "<p>Purely inductive</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Capacitor (C)</p>",
+            "<p>Z_C = 1/jωC = −jX_C∠−90°</p>",
+            "<p>V lags I by 90°</p>",
+            "<p>Purely capacitive</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Series RLC</p>",
+            "<p>Z = R + j(X_L − X_C)</p>",
+            "<p>φ = tan⁻¹[(X_L−X_C)/R]</p>",
+            "<p>Complex impedance</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Parallel RLC</p>",
+            "<p>Y = G + j(B_C − B_L)</p>",
+            "<p>Admittance Y = 1/Z</p>",
+            "<p>Admittance form</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p8m18je",
+      "content": "<strong>2.4  Series RLC Circuit Analysis</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "to5dxit",
+      "content": "In a series RLC circuit connected to a sinusoidal supply V∠0°, the current I = V/Z flows through all elements. The voltages across individual elements may be larger than the supply voltage (resonance condition)."
+    },
+    {
+      "id": "tjrmvo4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Z = R + j(X_L − X_C)   |   |Z| = √[R² + (X_L − X_C)²]</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>I = V / Z   |   Phase angle: φ = tan⁻¹[(X_L − X_C) / R]</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>V_R = IR∠0°   |   V_L = IX_L∠90°   |   V_C = IX_C∠−90°</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "03e65sk",
+      "content": "<strong>Resonance in Series RLC Circuit</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "f6qhiv6",
+      "content": "At resonance, the inductive and capacitive reactances are equal: X_L = X_C. The circuit becomes purely resistive. Impedance is minimum and equal to R. Current is maximum. The circuit can exhibit voltage magnification."
+    },
+    {
+      "id": "ydvpyy9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Resonant frequency: f₀ = 1 / (2π√LC)   Hz</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Quality factor: Q = (1/R)√(L/C) = X_L/R = X_C/R = ω₀L/R = 1/(ω₀CR)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Bandwidth: BW = f₀/Q = R/(2πL)   Hz</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Half-power frequencies: f₁ and f₂ such that f₂ − f₁ = BW</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bi4j3mw",
+      "content": "<strong>2.5  Power in AC Circuits</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "pq60f4b",
+      "content": "In AC circuits, three types of power are defined: Active power (P) is the real power actually consumed. Reactive power (Q) is the power stored and released by inductors and capacitors. Apparent power (S) is the product of RMS voltage and current."
+    },
+    {
+      "id": "y5wum54",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Power Type</strong></p>",
+            "<p><strong>Formula</strong></p>",
+            "<p><strong>Unit</strong></p>",
+            "<p><strong>Physical Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Active Power (P)</p>",
+            "<p>P = VI cosφ = I²R</p>",
+            "<p>Watt (W)</p>",
+            "<p>Actual power consumed; converted to heat/work</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reactive Power (Q)</p>",
+            "<p>Q = VI sinφ</p>",
+            "<p>VAR</p>",
+            "<p>Power stored &amp; released by L and C; no net consumption</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Apparent Power (S)</p>",
+            "<p>S = VI = √(P²+Q²)</p>",
+            "<p>VA (Volt-Ampere)</p>",
+            "<p>Product of RMS V and I; rating of equipment</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Power Factor (PF)</p>",
+            "<p>cosφ = P/S = R/|Z|</p>",
+            "<p>Dimensionless (0 to 1)</p>",
+            "<p>Ratio of active to apparent power</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Power Factor Angle (φ)</p>",
+            "<p>φ = cos⁻¹(PF)</p>",
+            "<p>Degrees</p>",
+            "<p>Angle between V and I phasors</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reactive Factor</p>",
+            "<p>sinφ = Q/S</p>",
+            "<p>Dimensionless</p>",
+            "<p>Ratio of reactive to apparent power</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ukse6dj",
+      "content": "<strong>Power Factor Correction</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "7441dwb",
+      "content": "Industrial loads (induction motors, transformers) are inductive — they draw lagging current and have poor power factor. This increases the apparent power (S) and hence the kVA rating of equipment and transmission losses. Power factor is improved (corrected) by connecting capacitors in parallel with the load. The capacitor supplies reactive power locally, reducing the reactive power demand from the supply."
+    },
+    {
+      "id": "fm2tici",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Capacitor required for PF correction: C = P(tanφ₁ − tanφ₂) / (ωV²)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>where φ₁ = original PF angle, φ₂ = improved PF angle, V = supply voltage</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "sh96rgg",
+      "content": "<strong>2.6  Practice MCQs — AC Circuits</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "st909dh",
+      "content": "<strong>Q1.  </strong>The RMS value of a sinusoidal voltage with peak value 100V is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iw2jdmk",
+      "content": "        (A)  100 V"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7gt5mkc",
+      "content": "        (B)  70.7 V"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mkv6szq",
+      "content": "        (C)  63.7 V"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8qufr3k",
+      "content": "        (D)  141.4 V"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rvgtgri",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ui4ulm5",
+      "content": "<strong>Q2.  </strong>At resonance in a series RLC circuit, the impedance equals:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "n4pijfm",
+      "content": "        (A)  Zero"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ysv8275",
+      "content": "        (B)  R only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i44bzkw",
+      "content": "        (C)  X_L + X_C"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ti7wlu6",
+      "content": "        (D)  Infinity"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "y4ivhvq",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "3vgimfd",
+      "content": "<strong>Q3.  </strong>The power factor of a purely inductive circuit is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "csj1q7p",
+      "content": "        (A)  Unity"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pmlxzx4",
+      "content": "        (B)  Zero (lagging)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0d3t55t",
+      "content": "        (C)  Zero (leading)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "n0tlj44",
+      "content": "        (D)  0.5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "aso6pv8",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "gtmq6rh",
+      "content": "<strong>Q4.  </strong>If frequency is doubled, the inductive reactance X_L:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z0kx6g6",
+      "content": "        (A)  Halves"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "unqm8ed",
+      "content": "        (B)  Doubles"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1zn8d08",
+      "content": "        (C)  Stays same"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3y5trax",
+      "content": "        (D)  Quadruples"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4e6ufvu",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "dcdp24h",
+      "content": "<strong>Q5.  </strong>If frequency is doubled, the capacitive reactance X_C:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3yelty6",
+      "content": "        (A)  Doubles"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lxbojps",
+      "content": "        (B)  Halves"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3kv1vwd",
+      "content": "        (C)  Stays same"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "shhp1o5",
+      "content": "        (D)  Quadruples"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "aa4x5rv",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "0801li2",
+      "content": "<strong>Q6.  </strong>A series RLC circuit has R=10Ω, X_L=20Ω, X_C=20Ω. The circuit is at:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hasoee2",
+      "content": "        (A)  Inductive"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "88aa50c",
+      "content": "        (B)  Capacitive"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oho3y5r",
+      "content": "        (C)  Resonance"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5rlclcb",
+      "content": "        (D)  Neither"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6dr0d5q",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "c1aj0pt",
+      "content": "<strong>Q7.  </strong>The form factor of a sinusoidal wave is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wg01mh0",
+      "content": "        (A)  1.414"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "khp8582",
+      "content": "        (B)  0.637"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ej3vgcd",
+      "content": "        (C)  1.11"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "r26xg3u",
+      "content": "        (D)  0.707"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ebgttq3",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ymzem7b",
+      "content": "<strong>Q8.  </strong>In a parallel RLC circuit at resonance, the admittance is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "n1ti0az",
+      "content": "        (A)  Maximum"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8f712pn",
+      "content": "        (B)  Minimum"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1xx1x26",
+      "content": "        (C)  Zero"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dvjpo2w",
+      "content": "        (D)  Equal to susceptance"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tu37kmk",
+      "content": "<strong>Answer: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "qx6v3na",
+      "content": "<strong>Q9.  </strong>The quality factor Q of a series RLC circuit is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0p6xb7u",
+      "content": "        (A)  R/ωL"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iqepng4",
+      "content": "        (B)  ωL/R"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fuckvue",
+      "content": "        (C)  ωCR"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9g9wqdl",
+      "content": "        (D)  1/ωCR"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bbv5grk",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "4rujfnn",
+      "content": "<strong>Q10.  </strong>A load of 10kW at 0.8 power factor lagging. The reactive power is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vpd2h3z",
+      "content": "        (A)  7.5 kVAR"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fab14sg",
+      "content": "        (B)  12.5 kVAR"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0zximod",
+      "content": "        (C)  8 kVAR"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8i4s5gk",
+      "content": "        (D)  10 kVAR"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "61yjerr",
+      "content": "<strong>Answer: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "xpcddfr",
+      "content": "<strong>Q11.  </strong>For power factor correction, which element is connected in parallel?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z8hu8sy",
+      "content": "        (A)  Inductor"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8whupln",
+      "content": "        (B)  Resistor"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1cq6l39",
+      "content": "        (C)  Capacitor"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rmz0rp4",
+      "content": "        (D)  Diode"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eip4kpn",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "weu290m",
+      "content": "<strong>Q12.  </strong>The apparent power unit is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jvyxkaj",
+      "content": "        (A)  Watt"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9fdvbja",
+      "content": "        (B)  VAR"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "11zj31a",
+      "content": "        (C)  VA"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3mllkon",
+      "content": "        (D)  kWh"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h0pxb78",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "vztn5ln",
+      "content": "<strong>Q13.  </strong>Phase difference between V and I in a pure capacitor is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nmffjkp",
+      "content": "        (A)  0°"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ghtn8w8",
+      "content": "        (B)  90° (V leads I)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "n5lbdl9",
+      "content": "        (C)  90° (I leads V)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tekwzlr",
+      "content": "        (D)  180°"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f6qjski",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "f2slzd7",
+      "content": "<strong>Q14.  </strong>Bandwidth of a series resonant circuit equals:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "liic1hb",
+      "content": "        (A)  f₀ × Q"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k1rp4mu",
+      "content": "        (B)  f₀ / Q"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rmruups",
+      "content": "        (C)  Q / f₀"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zfi3z6q",
+      "content": "        (D)  R/L"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "aenh4qd",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "wcch0v1",
+      "content": "<strong>Q15.  </strong>Which instrument measures apparent power?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8zwvzi2",
+      "content": "        (A)  Wattmeter"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ky6fgrw",
+      "content": "        (B)  VAR meter"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eaxb8q9",
+      "content": "        (C)  VA meter"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "81ia4za",
+      "content": "        (D)  Energymeter"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ma9386u",
+      "content": "<strong>Answer: </strong>(C)"
+    }
+  ],
+  "enriched": true
+}

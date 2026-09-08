@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "y3baofd"
+      "id": "y3baofd",
+      "content": "The Indian Contract Act, 1872 governs contracts in India. A contract is an agreement enforceable by law. Every promise and every set of promises forming consideration for each other is an agreement. An agreement that is enforceable by law is a contract."
     },
     {
       "id": "5vw58ez",
@@ -58,73 +59,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Essential</strong></p>",
+            "<p><strong>Section</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Offer (Proposal)</p>",
+            "<p>2(a)</p>",
+            "<p>Expression of willingness to do or abstain from doing something with a view to obtaining the assent of another</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Acceptance</p>",
+            "<p>2(b)</p>",
+            "<p>When person to whom offer is made signifies assent thereto; must be absolute and unqualified</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Promise</p>",
+            "<p>2(b)</p>",
+            "<p>Accepted proposal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Consideration</p>",
+            "<p>2(d)</p>",
+            "<p>Something done, abstained, or promised in return for promise; 'quid pro quo'; past consideration valid in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Capacity to Contract</p>",
+            "<p>11</p>",
+            "<p>Major (18 years); of sound mind; not disqualified by law; minor's contract is void ab initio (Mohori Bibee v. Dharmodas Ghose, 1903)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Free Consent</p>",
+            "<p>14</p>",
+            "<p>Consent free from coercion (15), undue influence (16), fraud (17), misrepresentation (18), mistake (20–22)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lawful Object</p>",
+            "<p>23</p>",
+            "<p>Object must be legal; not contrary to law, immoral, or opposed to public policy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Not Declared Void</p>",
+            "<p>24–30</p>",
+            "<p>Agreement not declared void by any law (wagering contracts, agreements in restraint of trade, etc.)</p>"
           ]
         }
       ]
@@ -142,65 +143,60 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Valid Contract</p>",
+            "<p>All essentials present; enforceable by law</p>",
+            "<p>Ordinary sale/purchase agreement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Void Agreement</p>",
+            "<p>Not enforceable from the very beginning; no legal effect</p>",
+            "<p>Agreement with minor; agreement in restraint of marriage; wagering agreement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Void Contract</p>",
+            "<p>Valid when formed; subsequently becomes void due to some event</p>",
+            "<p>Agreement with alien enemy after war declared; frustration of contract</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Voidable Contract</p>",
+            "<p>Enforceable at the option of one party; other party cannot enforce</p>",
+            "<p>Contract obtained by coercion, fraud, misrepresentation — aggrieved party may avoid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Unenforceable Contract</p>",
+            "<p>Valid but cannot be enforced due to technical defect</p>",
+            "<p>Oral contract required to be in writing; time-barred contract</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Illegal/Unlawful Agreement</p>",
+            "<p>Against law; no civil remedy; collateral transactions also void</p>",
+            "<p>Contract to commit crime; contract against public policy</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Indemnity and Guarantee (Sections 124–147)",
-      "id": "ipwqful"
     },
     {
       "id": "bo6q7yf",
@@ -215,43 +211,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Mode of Discharge</strong></p>",
+            "<p><strong>Method</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>By Performance</p>",
+            "<p>Actual performance (complete) or attempted performance (tender of performance)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>By Agreement</p>",
+            "<p>Novation (new contract replacing old), Rescission (mutual cancellation), Alteration, Remission, Waiver</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>By Impossibility (Frustration)</p>",
+            "<p>Section 56: subsequent impossibility due to supervening events (death, destruction, law change, frustration of purpose)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>By Operation of Law</p>",
+            "<p>Death, insolvency, merger, lapse of time (Limitation Act bars remedy, not right)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>By Breach</p>",
+            "<p>Actual breach (at time of performance) or Anticipatory breach (before performance date)</p>"
           ]
         }
       ]
@@ -269,49 +265,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Remedy</strong></p>",
+            "<p><strong>Section/Law</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Damages</p>",
+            "<p>Section 73–75 ICA</p>",
+            "<p>Compensation for loss; ordinary damages (natural consequences); special damages (Hadley v. Baxendale rule); nominal damages; liquidated damages vs penalty</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Specific Performance</p>",
+            "<p>Specific Relief Act, 1963</p>",
+            "<p>Court orders defaulting party to perform the contract; discretionary; granted where damages inadequate (e.g., unique property)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Injunction</p>",
+            "<p>Specific Relief Act / CPC</p>",
+            "<p>Court restrains party from doing something; temporary, permanent, or mandatory injunction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Quantum Meruit</p>",
+            "<p>Section 70 ICA</p>",
+            "<p>Reasonable compensation for work done when contract becomes void or one party prevented from completing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rescission</p>",
+            "<p>Section 64 ICA</p>",
+            "<p>Cancellation of contract; puts parties in original position; restoration of benefits</p>"
           ]
         }
       ]
@@ -335,28 +331,28 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Contract</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Parties</strong></p>",
+            "<p><strong>Key Distinction</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Contract of Indemnity</p>",
+            "<p>Section 124: Promise by one party (indemnifier) to save another (indemnified/indemnity-holder) from loss caused by promisor's conduct or any other person's conduct</p>",
+            "<p>Indemnifier + Indemnity Holder</p>",
+            "<p>Two parties; primary liability</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Contract of Guarantee</p>",
+            "<p>Section 126: Contract to perform the promise, or discharge liability of a third person in case of default; principal debtor must exist</p>",
+            "<p>Surety + Principal Debtor + Creditor</p>",
+            "<p>Three parties; secondary liability; co-extensive with principal debtor</p>"
           ]
         }
       ]
@@ -368,49 +364,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Guarantee Concept</strong></p>",
+            "<p><strong>Section</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Surety's Liability</p>",
+            "<p>128</p>",
+            "<p>Co-extensive with principal debtor; surety liable to same extent as principal debtor unless otherwise provided</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Continuing Guarantee</p>",
+            "<p>129</p>",
+            "<p>Guarantee extending to series of transactions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Revocation</p>",
+            "<p>130</p>",
+            "<p>Surety can revoke continuing guarantee for future transactions by notice</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Discharge of Surety</p>",
+            "<p>133–139</p>",
+            "<p>Variance in terms; release of principal debtor; loss of security; act of omission by creditor impairing surety's rights</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rights of Surety</p>",
+            "<p>140–145</p>",
+            "<p>Right of subrogation (stand in creditor's shoes); right to indemnity from principal debtor; right to share in securities held by creditor</p>"
           ]
         }
       ]
@@ -436,73 +432,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Section</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bailment</p>",
+            "<p>148</p>",
+            "<p>Delivery of goods for some purpose; returned or disposed as per directions after purpose accomplished; bailment of services not covered (Ultramares)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bailor and Bailee</p>",
+            "<p>148</p>",
+            "<p>Bailor = person delivering goods; Bailee = person receiving goods on bailment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bailee's Duty of Care</p>",
+            "<p>151</p>",
+            "<p>Standard of 'reasonable man' — not absolute; negligence standard</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gratuitous Bailment</p>",
+            "<p>150</p>",
+            "<p>No reward; bailor liable only for known defects; bailee liable for gross negligence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Non-Gratuitous Bailment</p>",
+            "<p>150</p>",
+            "<p>For reward; bailor liable even for unknown defects; bailee liable for negligence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pledge</p>",
+            "<p>172</p>",
+            "<p>Bailment of goods as security for payment of debt or performance of promise; Pawnor = pledgor; Pawnee = pledgee</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pawnee's Rights</p>",
+            "<p>176</p>",
+            "<p>Right to sue pawnor for debt, to sell goods after reasonable notice; right to retain goods till payment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Finder of Goods</p>",
+            "<p>168–169</p>",
+            "<p>Has duties of a bailee; can sue for specific reward if promised; can sell perishable goods</p>"
           ]
         }
       ]
@@ -520,73 +516,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Section</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Agent and Principal</p>",
+            "<p>182</p>",
+            "<p>Agent = person employed to do act for another or represent another in dealings with third persons; Principal = person for whom agent acts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Creation of Agency</p>",
+            "<p>185–190</p>",
+            "<p>By express agreement, implied conduct, ratification, necessity, estoppel; consideration not necessary</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Apparent/Ostensible Authority</p>",
+            "<p>—</p>",
+            "<p>Authority that third parties reasonably believe agent has even if not actually conferred; principal bound</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ratification</p>",
+            "<p>196–200</p>",
+            "<p>Principal can ratify unauthorised act of agent; retrospective effect; cannot ratify partly; must ratify whole</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Duties of Agent</p>",
+            "<p>211–216</p>",
+            "<p>Follow principal's instructions; conduct business with reasonable skill; render accounts; communicate; not to make secret profit; not to delegate (delegatus non potest delegare)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rights of Agent</p>",
+            "<p>217–224</p>",
+            "<p>Right to remuneration; right to lien on goods and papers; right of indemnity and compensation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Termination of Agency</p>",
+            "<p>201–210</p>",
+            "<p>By revocation by principal; by renunciation by agent; completion of business; death/insanity/insolvency of principal or agent; destruction of subject matter</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Irrevocable Agency</p>",
+            "<p>202</p>",
+            "<p>Agency where agent has interest in subject matter; cannot be revoked without express consent; e.g., agent authorised to sell goods and pay himself from proceeds</p>"
           ]
         }
       ]

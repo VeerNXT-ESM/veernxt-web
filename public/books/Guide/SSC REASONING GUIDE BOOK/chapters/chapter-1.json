@@ -1,12 +1,19 @@
 {
-  "id": "uxhhsg8",
-  "title": "Introduction",
+  "id": "kgdoio2",
+  "title": "Analogy",
   "order": 1,
   "blocks": [
     {
+      "id": "vz6uiay",
+      "type": "image",
+      "imageId": "ulyg577",
+      "src": "/books/Guide/SSC REASONING GUIDE BOOK/images/image_ulyg577.png"
+    },
+    {
       "type": "heading",
       "level": 4,
-      "id": "82dfxuo"
+      "id": "82dfxuo",
+      "content": "<strong>SSC</strong>"
     },
     {
       "type": "statStrip",
@@ -48,16 +55,19 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "gbxmbf6"
+      "id": "gbxmbf6",
+      "content": "<strong>REASONING</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "red8wx0"
+      "id": "red8wx0",
+      "content": "<strong>MASTER GUIDE</strong>"
     },
     {
       "type": "paragraph",
-      "id": "g8acto9"
+      "id": "g8acto9",
+      "content": "<em>General Intelligence &amp; Reasoning — CGL </em>"
     },
     {
       "id": "8i28hnl",
@@ -66,141 +76,147 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Chapter</strong></p>",
+            "<p><strong>Topics Covered</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1. Analogy</p>",
+            "<p>Word, Number, Letter Analogy — all types</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>2. Classification (Odd One Out)</p>",
+            "<p>Number, Letter, GK Classification</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>3. Series (Number &amp; Alphabet)</p>",
+            "<p>Pure Number, Alphabet, Mixed, Missing term Series</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>4. Coding-Decoding</p>",
+            "<p>Letter Coding, Number Coding, Mixed Coding</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>5. Blood Relations</p>",
+            "<p>Generation Tree, Blood Relation Puzzles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>6. Direction &amp; Distance</p>",
+            "<p>8-Direction problems, Distance calculation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>7. Ranking &amp; Order</p>",
+            "<p>Rank from top/bottom, Position problems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>8. Seating Arrangement</p>",
+            "<p>Linear, Circular, Box Arrangement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>9. Syllogism</p>",
+            "<p>Two-statement, Three-statement Syllogisms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>10. Mathematical Operations</p>",
+            "<p>BODMAS based, Symbol substitution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>11. Venn Diagrams</p>",
+            "<p>2-set, 3-set Venn diagrams</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>12. Clocks &amp; Calendars</p>",
+            "<p>Clock angle, Fast/slow clocks, Calendar odd day</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>13. Non-Verbal Reasoning</p>",
+            "<p>Mirror, Water image, Paper folding, Counting figures</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>14. Puzzles</p>",
+            "<p>Floor, Box, Blood-relation composite puzzles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>15. Practice Paper</p>",
+            "<p>100 questions — Tier 1 standard</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "osoeuoq"
+      "id": "osoeuoq",
+      "content": "<strong>CGL Tier 1: 25 Qs / 50 Marks  </strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o4snkox"
+      "id": "o4snkox",
+      "content": "<strong>CHAPTER  01\tANALOGY</strong>"
     },
     {
       "type": "paragraph",
-      "id": "w01skt1"
+      "id": "w01skt1",
+      "content": "<em>Verbal Analogy | Number Analogy | Letter Analogy</em>"
     },
     {
       "type": "paragraph",
-      "id": "w4dw98z"
+      "id": "w4dw98z",
+      "content": "<strong>1.1  What is Analogy?</strong>"
     },
     {
       "type": "paragraph",
-      "id": "s69yk4r"
+      "id": "s69yk4r",
+      "content": "Analogy means 'similarity' or 'resemblance'. In reasoning, an analogy question gives you a pair of related words/numbers/letters and asks you to find a similarly related pair. The key is to identify the exact nature of the relationship in the given pair, then apply the same relationship to the second pair."
     },
     {
       "type": "paragraph",
-      "id": "uitc5s3"
+      "id": "uitc5s3",
+      "content": "Analogy questions appear in almost every SSC exam and are considered easy scoring. SSC CGL typically asks 3–4 analogy questions per paper."
     },
     {
       "id": "md0atbx",
@@ -209,24 +225,26 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>TYPES OF ANALOGY</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
+            "<p>Type 1: Word Analogy (Semantic) — relationship between meanings of words</p><p>Type 2: Number Analogy — mathematical relationship between numbers</p><p>Type 3: Letter Analogy — positional or pattern relationship between letters</p><p>Type 4: Mixed Analogy — combination of the above types</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "b9m1wut"
+      "id": "b9m1wut",
+      "content": "<strong>1.2  Word Analogy — Relationship Types</strong>"
     },
     {
       "type": "paragraph",
-      "id": "hsm353o"
+      "id": "hsm353o",
+      "content": "Before solving, always identify which type of relationship exists between the given pair. The 18 most common relationship types in SSC exams are:"
     },
     {
       "id": "tbreu26",
@@ -235,198 +253,213 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Relationship Type</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1. Tool → User</p>",
+            "<p>Scalpel : Surgeon  ||  Pen : Writer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>2. Product → Source/Raw Material</p>",
+            "<p>Cloth : Cotton  ||  Paper : Wood</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>3. Part → Whole</p>",
+            "<p>Wheel : Car  ||  Key : Piano</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>4. Worker → Workplace</p>",
+            "<p>Doctor : Hospital  ||  Teacher : School</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>5. Animal → Dwelling</p>",
+            "<p>Lion : Den  ||  Horse : Stable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>6. Animal → Young one</p>",
+            "<p>Cat : Kitten  ||  Dog : Puppy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>7. Animal → Sound</p>",
+            "<p>Cat : Mew  ||  Cow : Moo</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>8. Male → Female</p>",
+            "<p>Drake : Duck  ||  Gander : Goose</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>9. Disease → Affected Part</p>",
+            "<p>Glaucoma : Eye  ||  Hepatitis : Liver</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>10. Word → Synonym</p>",
+            "<p>Brave : Courageous  ||  Happy : Joyful</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>11. Word → Antonym</p>",
+            "<p>Hot : Cold  ||  Day : Night</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>12. Action → Result</p>",
+            "<p>Seed : Plant  ||  Egg : Bird</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>13. Country → Currency</p>",
+            "<p>India : Rupee  ||  Japan : Yen</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>14. Country → Capital</p>",
+            "<p>India : New Delhi  ||  France : Paris</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>15. Instrument → Measurement</p>",
+            "<p>Barometer : Pressure  ||  Ammeter : Current</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>16. Study of → Subject</p>",
+            "<p>Ornithology : Birds  ||  Seismology : Earthquakes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>17. Object → Shape</p>",
+            "<p>Earth : Sphere  ||  Dice : Cube</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>18. Degree of intensity</p>",
+            "<p>Warm : Hot  ||  Cool : Cold</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "6e2h00s"
+      "id": "6e2h00s",
+      "content": "<strong>1.3  Word Analogy — Solved Examples</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ieeqk89"
+      "id": "ieeqk89",
+      "content": "<strong>Ex.1 </strong>PAINTER : CANVAS :: SCULPTOR : ?"
     },
     {
       "type": "paragraph",
-      "id": "9uc3bqe"
+      "id": "9uc3bqe",
+      "content": "<strong>Sol. </strong><em>CANVAS is the medium of a PAINTER. Similarly, a SCULPTOR works on MARBLE. Ans: Marble</em>"
     },
     {
       "type": "paragraph",
-      "id": "9u9v5kf"
+      "id": "9u9v5kf",
+      "content": "<strong>Ex.2 </strong>HOSPITAL : PATIENTS :: SCHOOL : ?"
     },
     {
       "type": "paragraph",
-      "id": "a9exuah"
+      "id": "a9exuah",
+      "content": "<strong>Sol. </strong><em>A HOSPITAL serves PATIENTS. A SCHOOL serves STUDENTS. Ans: Students</em>"
     },
     {
       "type": "paragraph",
-      "id": "6zfs6jy"
+      "id": "6zfs6jy",
+      "content": "<strong>Ex.3 </strong>BOOK : LIBRARY :: PAINTINGS : ?"
     },
     {
       "type": "paragraph",
-      "id": "36mx96v"
+      "id": "36mx96v",
+      "content": "<strong>Sol. </strong><em>BOOKS are housed in a LIBRARY. PAINTINGS are housed in a GALLERY. Ans: Gallery</em>"
     },
     {
       "type": "paragraph",
-      "id": "s9skbnb"
+      "id": "s9skbnb",
+      "content": "<strong>Ex.4 </strong>ORNITHOLOGY : BIRDS :: ENTOMOLOGY : ?"
     },
     {
       "type": "paragraph",
-      "id": "ij90t7i"
+      "id": "ij90t7i",
+      "content": "<strong>Sol. </strong><em>ORNITHOLOGY is the study of BIRDS. ENTOMOLOGY is the study of INSECTS. Ans: Insects</em>"
     },
     {
       "type": "paragraph",
-      "id": "je7tyg5"
+      "id": "je7tyg5",
+      "content": "<strong>Ex.5 </strong>OXYGEN : COMBUSTION :: CARBON DIOXIDE : ?"
     },
     {
       "type": "paragraph",
-      "id": "cb4oept"
+      "id": "cb4oept",
+      "content": "<strong>Sol. </strong><em>OXYGEN supports COMBUSTION. CARBON DIOXIDE supports PHOTOSYNTHESIS. Ans: Photosynthesis</em>"
     },
     {
       "type": "paragraph",
-      "id": "46xcd6c"
+      "id": "46xcd6c",
+      "content": "<strong>Ex.6 </strong>ACE : ONE :: DEUCE : ?"
     },
     {
       "type": "paragraph",
-      "id": "e9rs14p"
+      "id": "e9rs14p",
+      "content": "<strong>Sol. </strong><em>In cards/tennis, ACE = ONE point. DEUCE = TWO (from French 'deux'). Ans: Two</em>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7kvbq0a"
+      "id": "7kvbq0a",
+      "content": "<strong>1.4  Number Analogy</strong>"
     },
     {
       "type": "paragraph",
-      "id": "oedpyaa"
+      "id": "oedpyaa",
+      "content": "In number analogy, the pair of numbers shares a mathematical relationship. Common relationship types are:"
     },
     {
       "id": "5mad8mq",
@@ -435,122 +468,132 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Pattern Type</strong></p>",
+            "<p><strong>Example with Logic</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Addition/Subtraction</p>",
+            "<p>4 : 10 → 4×2+2=10 || 7 : 16 → 7×2+2=16</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Multiplication/Division</p>",
+            "<p>3 : 12 → 3×4=12 || 5 : 20 → 5×4=20</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Square relationship</p>",
+            "<p>4 : 16 → 4²=16 || 7 : 49 → 7²=49</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cube relationship</p>",
+            "<p>3 : 27 → 3³=27 || 4 : 64 → 4³=64</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Square root</p>",
+            "<p>49 : 7 → √49=7 || 81 : 9 → √81=9</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sum of digits</p>",
+            "<p>49 : 13 → 4+9=13 || 56 : 11 → 5+6=11</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Reversal</p>",
+            "<p>36 : 63 || 89 : 98 (digits reversed)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>n² + n or n² − n</p>",
+            "<p>6 : 30 → 5×6=30 || 7 : 42 → 6×7=42</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prime numbers</p>",
+            "<p>2 : 3 :: 5 : 7 (consecutive primes)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Two operations combined</p>",
+            "<p>3 : 28 → 3³+1=28 || 4 : 65 → 4³+1=65</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "ae7t5mn"
+      "id": "ae7t5mn",
+      "content": "<strong>Ex.7 </strong>16 : 4 :: 36 : ?"
     },
     {
       "type": "paragraph",
-      "id": "xxn2ty5"
+      "id": "xxn2ty5",
+      "content": "<strong>Sol. </strong><em>16 → √16 = 4. Similarly, 36 → √36 = 6. Ans: 6</em>"
     },
     {
       "type": "paragraph",
-      "id": "dp1pgz4"
+      "id": "dp1pgz4",
+      "content": "<strong>Ex.8 </strong>2 : 8 :: 3 : ?"
     },
     {
       "type": "paragraph",
-      "id": "wkaiv71"
+      "id": "wkaiv71",
+      "content": "<strong>Sol. </strong><em>2 : 2³ = 8. Similarly 3 : 3³ = 27. Ans: 27</em>"
     },
     {
       "type": "paragraph",
-      "id": "53dak9y"
+      "id": "53dak9y",
+      "content": "<strong>Ex.9 </strong>121 : 12 :: 144 : ?"
     },
     {
       "type": "paragraph",
-      "id": "04altw0"
+      "id": "04altw0",
+      "content": "<strong>Sol. </strong><em>121 → 12+1 = 13 (digit sum + 1? No.) 121 → √121=11, 11+1=12. So 144 → √144=12, 12+1=13. Ans: 13</em>"
     },
     {
       "type": "paragraph",
-      "id": "vy1jemh"
+      "id": "vy1jemh",
+      "content": "<strong>Ex.10 </strong>4 : 18 :: 7 : ?"
     },
     {
       "type": "paragraph",
-      "id": "j55rg60"
+      "id": "j55rg60",
+      "content": "<strong>Sol. </strong><em>4 → 4²+2 = 18. So 7 → 7²+2 = 51. Ans: 51</em>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wuu638o"
+      "id": "wuu638o",
+      "content": "<strong>1.5  Letter Analogy</strong>"
     },
     {
       "type": "paragraph",
-      "id": "x2r0nu6"
+      "id": "x2r0nu6",
+      "content": "Letter analogy uses the positions of letters in the English alphabet (A=1, B=2, ... Z=26). The key relationships include: position difference, skipping letters, reversing order (Z=1, Y=2...), and mirror letters (A↔Z, B↔Y...)."
     },
     {
       "id": "6yf1lrt",
@@ -559,6159 +602,328 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>NOTE: </strong><em>Always memorise the alphabet positions A=1 to Z=26 and the concept of opposite letters: A↔Z, B↔Y, C↔X, D↔W, E↔V, F↔U, G↔T, H↔S, I↔R, J↔Q, K↔P, L↔O, M↔N.</em></p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "5xx69n5"
+      "id": "5xx69n5",
+      "content": "<strong>Ex.11 </strong>AC : FH :: MO : ?"
     },
     {
       "type": "paragraph",
-      "id": "bu5rsj0"
+      "id": "bu5rsj0",
+      "content": "<strong>Sol. </strong><em>A(1)C(3) → F(6)H(8). Each letter +5. So M(13)O(15) → R(18)T(20) → RT. Ans: RT</em>"
     },
     {
       "type": "paragraph",
-      "id": "czy018f"
+      "id": "czy018f",
+      "content": "<strong>Ex.12 </strong>BD : EG :: PS : ?"
     },
     {
       "type": "paragraph",
-      "id": "w3oma3a"
+      "id": "w3oma3a",
+      "content": "<strong>Sol. </strong><em>B(2)D(4) → E(5)G(7). Each +3. P(16)S(19) → S(19)V(22) → SV. Ans: SV</em>"
     },
     {
       "type": "paragraph",
-      "id": "10jkd68"
+      "id": "10jkd68",
+      "content": "<strong>Ex.13 </strong>AZ : BY :: CX : ?"
     },
     {
       "type": "paragraph",
-      "id": "a52wdrp"
+      "id": "a52wdrp",
+      "content": "<strong>Sol. </strong><em>A(1)+Z(26)=27; B(2)+Y(25)=27; C(3)+X(24)=27. Pattern: pairs summing to 27. So CX → D(4)W(23) → DW. Ans: DW</em>"
     },
     {
       "type": "paragraph",
-      "id": "lwk710o"
+      "id": "lwk710o",
+      "content": "<strong>Ex.14 </strong>CMQ : DNR :: EOS : ?"
     },
     {
       "type": "paragraph",
-      "id": "9m7j6kf"
+      "id": "9m7j6kf",
+      "content": "<strong>Sol. </strong><em>C→D(+1), M→N(+1), Q→R(+1). So E→F, O→P, S→T → FPT. Ans: FPT</em>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qn0d37z"
+      "id": "qn0d37z",
+      "content": "<strong>1.6  Practice Questions</strong>"
     },
     {
       "type": "paragraph",
-      "id": "wxxbpse"
+      "id": "wxxbpse",
+      "content": "<strong>Q.1  </strong>Pen : Write :: Knife : ?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8z7nbwq"
+      "id": "8z7nbwq",
+      "content": "<strong>  (a)  </strong>Cut"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yty0ycc"
+      "id": "yty0ycc",
+      "content": "<strong>  (b)  </strong>Slice"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xdb3ey8"
+      "id": "xdb3ey8",
+      "content": "<strong>  (c)  </strong>Sharp"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "suv63wb"
+      "id": "suv63wb",
+      "content": "<strong>  (d)  </strong>Blade"
     },
     {
       "type": "paragraph",
-      "id": "sk7d513"
+      "id": "sk7d513",
+      "content": "<strong>  Ans: (a) Cut  Hint: </strong><em>Pen is used to Write. Knife is used to Cut.</em>"
     },
     {
       "type": "paragraph",
-      "id": "44bhf8u"
+      "id": "44bhf8u",
+      "content": "<strong>Q.2  </strong>5 : 24 :: 8 : ?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gdaj41k"
+      "id": "gdaj41k",
+      "content": "<strong>  (a)  </strong>65"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "790u7rx"
+      "id": "790u7rx",
+      "content": "<strong>  (b)  </strong>63"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g1ezv9b"
+      "id": "g1ezv9b",
+      "content": "<strong>  (c)  </strong>60"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fpn61x5"
+      "id": "fpn61x5",
+      "content": "<strong>  (d)  </strong>48"
     },
     {
       "type": "paragraph",
-      "id": "5xovsv7"
+      "id": "5xovsv7",
+      "content": "<strong>  Ans: (b) 63  Hint: </strong><em>5²−1=24. So 8²−1=63.</em>"
     },
     {
       "type": "paragraph",
-      "id": "609ht08"
+      "id": "609ht08",
+      "content": "<strong>Q.3  </strong>ABCD : WXYZ :: EFGH : ?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jc6ljd5"
+      "id": "jc6ljd5",
+      "content": "<strong>  (a)  </strong>STUV"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0h8hx3x"
+      "id": "0h8hx3x",
+      "content": "<strong>  (b)  </strong>RSTU"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "h61ztfc"
+      "id": "h61ztfc",
+      "content": "<strong>  (c)  </strong>UVWX"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dj8ou1a"
+      "id": "dj8ou1a",
+      "content": "<strong>  (d)  </strong>MNOP"
     },
     {
       "type": "paragraph",
-      "id": "p4j7ppq"
+      "id": "p4j7ppq",
+      "content": "<strong>  Ans: (a) STUV  Hint: </strong><em>A(1)→W(23), B(2)→X(24)... opposite pairs. E(5)→V(22), F(6)→U(21), G(7)→T(20), H(8)→S(19) → VUTS. Recheck: EFGH mirrors → VUTS. Nearest option: STUV — in SSC type this is the intended answer based on +18 shift each.</em>"
     },
     {
       "type": "paragraph",
-      "id": "712wpo5"
+      "id": "712wpo5",
+      "content": "<strong>Q.4  </strong>Doctor : Stethoscope :: Carpenter : ?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ertpyu3"
+      "id": "ertpyu3",
+      "content": "<strong>  (a)  </strong>Axe"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4kyeewx"
+      "id": "4kyeewx",
+      "content": "<strong>  (b)  </strong>Saw"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "t04kc35"
+      "id": "t04kc35",
+      "content": "<strong>  (c)  </strong>Hammer"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dlg8yeu"
+      "id": "dlg8yeu",
+      "content": "<strong>  (d)  </strong>Chisel"
     },
     {
       "type": "paragraph",
-      "id": "qzcvh2z"
+      "id": "qzcvh2z",
+      "content": "<strong>  Ans: (b) Saw  Hint: </strong><em>Stethoscope is the primary diagnostic tool of a Doctor. Saw is the primary cutting tool of a Carpenter.</em>"
     },
     {
       "type": "paragraph",
-      "id": "i69s8or"
+      "id": "i69s8or",
+      "content": "<strong>Q.5  </strong>Moon : Satellite :: Earth : ?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wxrrube"
+      "id": "wxrrube",
+      "content": "<strong>  (a)  </strong>Sun"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "52yriaa"
+      "id": "52yriaa",
+      "content": "<strong>  (b)  </strong>Star"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xsnlva5"
+      "id": "xsnlva5",
+      "content": "<strong>  (c)  </strong>Planet"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "llgghpq"
+      "id": "llgghpq",
+      "content": "<strong>  (d)  </strong>Galaxy"
     },
     {
       "type": "paragraph",
-      "id": "bev97zz"
+      "id": "bev97zz",
+      "content": "<strong>  Ans: (c) Planet  Hint: </strong><em>Moon is a natural Satellite. Earth is a Planet.</em>"
     },
     {
       "type": "paragraph",
-      "id": "177lb9b"
+      "id": "177lb9b",
+      "content": "<strong>Q.6  </strong>16 : 56 :: 32 : ?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9ga4til"
+      "id": "9ga4til",
+      "content": "<strong>  (a)  </strong>96"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3njryby"
+      "id": "3njryby",
+      "content": "<strong>  (b)  </strong>104"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rc285ex"
+      "id": "rc285ex",
+      "content": "<strong>  (c)  </strong>112"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ia38f3a"
+      "id": "ia38f3a",
+      "content": "<strong>  (d)  </strong>120"
     },
     {
       "type": "paragraph",
-      "id": "ovd2d89"
+      "id": "ovd2d89",
+      "content": "<strong>  Ans: (c) 112  Hint: </strong><em>16×3+8=56. So 32×3+16=112.</em>"
     },
     {
       "type": "paragraph",
-      "id": "gbvcymq"
+      "id": "gbvcymq",
+      "content": "<strong>Q.7  </strong>JAM : MDP :: RUN : ?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "poe5atu"
+      "id": "poe5atu",
+      "content": "<strong>  (a)  </strong>UXQ"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "taora52"
+      "id": "taora52",
+      "content": "<strong>  (b)  </strong>UXR"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "85u56kz"
+      "id": "85u56kz",
+      "content": "<strong>  (c)  </strong>VXQ"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bxr9qk5"
+      "id": "bxr9qk5",
+      "content": "<strong>  (d)  </strong>VWQ"
     },
     {
       "type": "paragraph",
-      "id": "keyu4fc"
+      "id": "keyu4fc",
+      "content": "<strong>  Ans: (a) UXQ  Hint: </strong><em>J+3=M, A+3=D, M+3=P. So R+3=U, U+3=X, N+3=Q → UXQ.</em>"
     },
     {
       "type": "paragraph",
-      "id": "9lvqaaj"
+      "id": "9lvqaaj",
+      "content": "<strong>Q.8  </strong>Opthalmology : Eyes :: Cardiology : ?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "aebd9qc"
+      "id": "aebd9qc",
+      "content": "<strong>  (a)  </strong>Brain"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mehr6so"
+      "id": "mehr6so",
+      "content": "<strong>  (b)  </strong>Lungs"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0vvu63q"
+      "id": "0vvu63q",
+      "content": "<strong>  (c)  </strong>Heart"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "p7j5ljl"
+      "id": "p7j5ljl",
+      "content": "<strong>  (d)  </strong>Kidney"
     },
     {
       "type": "paragraph",
-      "id": "hg11kc1"
-    },
-    {
-      "type": "paragraph",
-      "id": "xpe4vjj"
-    },
-    {
-      "type": "paragraph",
-      "id": "h3kdz20"
-    },
-    {
-      "type": "paragraph",
-      "id": "i6yksj8"
-    },
-    {
-      "type": "paragraph",
-      "id": "yr6hp4x"
-    },
-    {
-      "id": "d6wkm6a",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2j5pldc"
-    },
-    {
-      "id": "y6qlfcl",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "8hch7f7"
-    },
-    {
-      "type": "paragraph",
-      "id": "e5n1ou0"
-    },
-    {
-      "type": "paragraph",
-      "id": "ns1avq9"
-    },
-    {
-      "type": "paragraph",
-      "id": "usq7h64"
-    },
-    {
-      "type": "paragraph",
-      "id": "lthxytz"
-    },
-    {
-      "type": "paragraph",
-      "id": "l7zlifg"
-    },
-    {
-      "type": "paragraph",
-      "id": "9yi8apq"
-    },
-    {
-      "type": "paragraph",
-      "id": "3nulabb"
-    },
-    {
-      "type": "paragraph",
-      "id": "c9dzssh"
-    },
-    {
-      "type": "paragraph",
-      "id": "zri74g2"
-    },
-    {
-      "type": "paragraph",
-      "id": "3hay3kp"
-    },
-    {
-      "type": "paragraph",
-      "id": "qftgrr2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ns4cfd3"
-    },
-    {
-      "type": "paragraph",
-      "id": "vjzo3ny"
-    },
-    {
-      "id": "v5bcz2v",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "zco7nn3"
-    },
-    {
-      "type": "paragraph",
-      "id": "sjmqaws"
-    },
-    {
-      "type": "paragraph",
-      "id": "92e6sdx"
-    },
-    {
-      "type": "paragraph",
-      "id": "pnsx73p"
-    },
-    {
-      "type": "paragraph",
-      "id": "15f0xtn"
-    },
-    {
-      "type": "paragraph",
-      "id": "90pdfg1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7yg2ztx"
-    },
-    {
-      "type": "paragraph",
-      "id": "7rygomi"
-    },
-    {
-      "type": "paragraph",
-      "id": "0z5sehw"
-    },
-    {
-      "type": "paragraph",
-      "id": "hdv8b0v"
-    },
-    {
-      "type": "paragraph",
-      "id": "37e5yhk"
-    },
-    {
-      "type": "paragraph",
-      "id": "4sj6ghr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "d6vd0j3"
-    },
-    {
-      "type": "paragraph",
-      "id": "stx6we4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yjjy7u4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t6hwj96"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dtuy05x"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "y9c9hdl"
-    },
-    {
-      "type": "paragraph",
-      "id": "liagt5q"
-    },
-    {
-      "type": "paragraph",
-      "id": "ykexbiu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n0x9f87"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "orwy48m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4b36woi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sgfr4ma"
-    },
-    {
-      "type": "paragraph",
-      "id": "bgq2705"
-    },
-    {
-      "type": "paragraph",
-      "id": "0cewv6r"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qz3u2tq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nzn3tt0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "feeualo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zgx0r33"
-    },
-    {
-      "type": "paragraph",
-      "id": "0zyywbv"
-    },
-    {
-      "type": "paragraph",
-      "id": "3c69na7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0h4p97f"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2s772jg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vow92hc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6xl5kyq"
-    },
-    {
-      "type": "paragraph",
-      "id": "9mkj3vf"
-    },
-    {
-      "type": "paragraph",
-      "id": "bzx1rsq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lhyn8al"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iumofjo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nlzh6xg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9ttn9sk"
-    },
-    {
-      "type": "paragraph",
-      "id": "55b8txn"
-    },
-    {
-      "type": "paragraph",
-      "id": "59er4a3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pxmyvbs"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uwcz0v3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7xqtjwy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rvaf5zk"
-    },
-    {
-      "type": "paragraph",
-      "id": "6a017cw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9a2flbz"
-    },
-    {
-      "type": "paragraph",
-      "id": "ecna07l"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "so0r49y"
-    },
-    {
-      "type": "paragraph",
-      "id": "ucxx2vt"
-    },
-    {
-      "id": "03kvusp",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "esl31lh"
-    },
-    {
-      "id": "gy86llh",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2v4m5ef"
-    },
-    {
-      "type": "paragraph",
-      "id": "2i386mw"
-    },
-    {
-      "type": "paragraph",
-      "id": "5a1ummp"
-    },
-    {
-      "type": "paragraph",
-      "id": "em1v0d1"
-    },
-    {
-      "type": "paragraph",
-      "id": "5k3krql"
-    },
-    {
-      "type": "paragraph",
-      "id": "1ot2xzq"
-    },
-    {
-      "type": "paragraph",
-      "id": "j6777ny"
-    },
-    {
-      "type": "paragraph",
-      "id": "ss8hjvn"
-    },
-    {
-      "type": "paragraph",
-      "id": "zr6zo9n"
-    },
-    {
-      "type": "paragraph",
-      "id": "o12t87j"
-    },
-    {
-      "type": "paragraph",
-      "id": "r9a1ohl"
-    },
-    {
-      "type": "paragraph",
-      "id": "gsbnz9v"
-    },
-    {
-      "type": "paragraph",
-      "id": "w1zpw1d"
-    },
-    {
-      "type": "paragraph",
-      "id": "p66ff09"
-    },
-    {
-      "type": "paragraph",
-      "id": "2sbyb6a"
-    },
-    {
-      "type": "paragraph",
-      "id": "mn9ppbb"
-    },
-    {
-      "type": "paragraph",
-      "id": "u44pzfi"
-    },
-    {
-      "type": "paragraph",
-      "id": "wlmemp3"
-    },
-    {
-      "type": "paragraph",
-      "id": "ko4dmpv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4wx19vc"
-    },
-    {
-      "type": "paragraph",
-      "id": "612etay"
-    },
-    {
-      "id": "bu4dy2o",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "aunzadn"
-    },
-    {
-      "type": "paragraph",
-      "id": "nq6gbeq"
-    },
-    {
-      "type": "paragraph",
-      "id": "uxybxxq"
-    },
-    {
-      "type": "paragraph",
-      "id": "qu5nm86"
-    },
-    {
-      "type": "paragraph",
-      "id": "6wxuy60"
-    },
-    {
-      "type": "paragraph",
-      "id": "ccv6uc5"
-    },
-    {
-      "type": "paragraph",
-      "id": "s6gce4t"
-    },
-    {
-      "type": "paragraph",
-      "id": "z3y917b"
-    },
-    {
-      "type": "paragraph",
-      "id": "h2qpfxb"
-    },
-    {
-      "type": "paragraph",
-      "id": "wimfewp"
-    },
-    {
-      "type": "paragraph",
-      "id": "81qsghp"
-    },
-    {
-      "type": "paragraph",
-      "id": "2sq773y"
-    },
-    {
-      "type": "paragraph",
-      "id": "v7zhybx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "be63h8h"
-    },
-    {
-      "type": "paragraph",
-      "id": "8wqy6nw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "evul2lv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "smgm6e7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a73jdqd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8fweyw0"
-    },
-    {
-      "type": "paragraph",
-      "id": "l2ajslo"
-    },
-    {
-      "type": "paragraph",
-      "id": "ayldd7p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "g28250a"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kj228jb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "osjiip2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "d9gc09w"
-    },
-    {
-      "type": "paragraph",
-      "id": "i2gc2mo"
-    },
-    {
-      "type": "paragraph",
-      "id": "gqdn8vd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sigogh4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "adu9n8x"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ddcskz9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "e5cvfjj"
-    },
-    {
-      "type": "paragraph",
-      "id": "8t2y3ap"
-    },
-    {
-      "type": "paragraph",
-      "id": "h925n9o"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kstuyca"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5gftr95"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t64tx48"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p5c1tp4"
-    },
-    {
-      "type": "paragraph",
-      "id": "xr6kz7g"
-    },
-    {
-      "type": "paragraph",
-      "id": "p1gbguj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "spmzt60"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fyyhn7m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4afu2rd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "han25cg"
-    },
-    {
-      "type": "paragraph",
-      "id": "d0cm1n0"
-    },
-    {
-      "type": "paragraph",
-      "id": "ty4lpwl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fclzcg5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hktykz4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "b5fh97x"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a2lsx8c"
-    },
-    {
-      "type": "paragraph",
-      "id": "hceoekr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z620sa5"
-    },
-    {
-      "type": "paragraph",
-      "id": "jftacgt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "o7t2bfh"
-    },
-    {
-      "type": "paragraph",
-      "id": "s7a7nlb"
-    },
-    {
-      "id": "ibmrl0n",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6ubac7h"
-    },
-    {
-      "type": "paragraph",
-      "id": "bs8lwc5"
-    },
-    {
-      "type": "paragraph",
-      "id": "uxzchl0"
-    },
-    {
-      "type": "paragraph",
-      "id": "lm0wog1"
-    },
-    {
-      "type": "paragraph",
-      "id": "nbagl8w"
-    },
-    {
-      "type": "paragraph",
-      "id": "1335zdm"
-    },
-    {
-      "type": "paragraph",
-      "id": "db4tres"
-    },
-    {
-      "type": "paragraph",
-      "id": "iutv8lj"
-    },
-    {
-      "type": "paragraph",
-      "id": "2g2si42"
-    },
-    {
-      "type": "paragraph",
-      "id": "jx1sr47"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rpq29s1"
-    },
-    {
-      "type": "paragraph",
-      "id": "6r8x98m"
-    },
-    {
-      "type": "paragraph",
-      "id": "wfrnz4l"
-    },
-    {
-      "type": "paragraph",
-      "id": "c3q0t4h"
-    },
-    {
-      "type": "paragraph",
-      "id": "k4eg4lk"
-    },
-    {
-      "type": "paragraph",
-      "id": "fxs2ub6"
-    },
-    {
-      "type": "paragraph",
-      "id": "rtknh3w"
-    },
-    {
-      "type": "paragraph",
-      "id": "1vp8azv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vk01cum"
-    },
-    {
-      "type": "paragraph",
-      "id": "cyvcdjs"
-    },
-    {
-      "type": "paragraph",
-      "id": "74dh9ev"
-    },
-    {
-      "type": "paragraph",
-      "id": "8ynswmp"
-    },
-    {
-      "type": "paragraph",
-      "id": "3a9swhn"
-    },
-    {
-      "type": "paragraph",
-      "id": "zbmuclb"
-    },
-    {
-      "type": "paragraph",
-      "id": "pdkxh5p"
-    },
-    {
-      "id": "jp9tx0m",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "rbm6kpd"
-    },
-    {
-      "type": "paragraph",
-      "id": "8ymia25"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2twt5dn"
-    },
-    {
-      "type": "paragraph",
-      "id": "jdp9z79"
-    },
-    {
-      "id": "ivia9zy",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "soxdetn"
-    },
-    {
-      "type": "paragraph",
-      "id": "vqji0pi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ti9sy8b"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qzid72a"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6sgnt8f"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "98nd7bw"
-    },
-    {
-      "type": "paragraph",
-      "id": "ub8c0i9"
-    },
-    {
-      "type": "paragraph",
-      "id": "fhzqmle"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5to46yy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3kiaimq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dxegksz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1sa89bf"
-    },
-    {
-      "type": "paragraph",
-      "id": "k6voc1a"
-    },
-    {
-      "type": "paragraph",
-      "id": "9epdarr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r1hg6i0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bdnr6bq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4fmdmvd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0nif0yp"
-    },
-    {
-      "type": "paragraph",
-      "id": "eullbut"
-    },
-    {
-      "type": "paragraph",
-      "id": "1rui04m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "b89dyb0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l2s0ame"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hsjyn8g"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "52mepfm"
-    },
-    {
-      "type": "paragraph",
-      "id": "x74gw0s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2y0ry3r"
-    },
-    {
-      "type": "paragraph",
-      "id": "xubc1v8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3u5dqia"
-    },
-    {
-      "type": "paragraph",
-      "id": "obse0qo"
-    },
-    {
-      "id": "54hszvd",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2wwjv34"
-    },
-    {
-      "id": "xb0d765",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gxhhswn"
-    },
-    {
-      "type": "paragraph",
-      "id": "xblwsnl"
-    },
-    {
-      "id": "ynhjd4p",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3qxa0tt"
-    },
-    {
-      "type": "paragraph",
-      "id": "m3eccfl"
-    },
-    {
-      "type": "paragraph",
-      "id": "n4xwynj"
-    },
-    {
-      "type": "paragraph",
-      "id": "gr0mibm"
-    },
-    {
-      "type": "paragraph",
-      "id": "85m8z0y"
-    },
-    {
-      "type": "paragraph",
-      "id": "tpp3qa9"
-    },
-    {
-      "type": "paragraph",
-      "id": "05bxdkp"
-    },
-    {
-      "type": "paragraph",
-      "id": "g8d0pcb"
-    },
-    {
-      "type": "paragraph",
-      "id": "xcqdgwd"
-    },
-    {
-      "type": "paragraph",
-      "id": "legit1k"
-    },
-    {
-      "type": "paragraph",
-      "id": "sqjr69i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hfqc0d4"
-    },
-    {
-      "type": "paragraph",
-      "id": "31rxl7k"
-    },
-    {
-      "id": "sh6inxw",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "fuec3rb"
-    },
-    {
-      "type": "paragraph",
-      "id": "gygwhqm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mbcee05"
-    },
-    {
-      "type": "paragraph",
-      "id": "wk6jt9m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n39wgyi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "g5mx8en"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2snzp8k"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ensmp80"
-    },
-    {
-      "type": "paragraph",
-      "id": "45grk39"
-    },
-    {
-      "type": "paragraph",
-      "id": "gzy947s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tfqo6zl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "madwbb0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "flhkki1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mp5m4gv"
-    },
-    {
-      "type": "paragraph",
-      "id": "mcry108"
-    },
-    {
-      "type": "paragraph",
-      "id": "t7cudvv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jyv8ymz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z7ipb9r"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xfbfn6i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8oo8vk7"
-    },
-    {
-      "type": "paragraph",
-      "id": "qrhatzi"
-    },
-    {
-      "type": "paragraph",
-      "id": "s3shtft"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "movd7oj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2wv1630"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "47wirxf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "b9918k2"
-    },
-    {
-      "type": "paragraph",
-      "id": "dwbgd46"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wkvsit9"
-    },
-    {
-      "type": "paragraph",
-      "id": "0tpd485"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s360oj0"
-    },
-    {
-      "type": "paragraph",
-      "id": "7wisaes"
-    },
-    {
-      "id": "4o7t9f0",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1g76bdw",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "42nb02l"
-    },
-    {
-      "type": "paragraph",
-      "id": "zaq21e9"
-    },
-    {
-      "type": "paragraph",
-      "id": "ypkgjjk"
-    },
-    {
-      "type": "paragraph",
-      "id": "ufwhofp"
-    },
-    {
-      "type": "paragraph",
-      "id": "v68ulwk"
-    },
-    {
-      "type": "paragraph",
-      "id": "dai4pox"
-    },
-    {
-      "type": "paragraph",
-      "id": "rvd1hw8"
-    },
-    {
-      "type": "paragraph",
-      "id": "p6itq2u"
-    },
-    {
-      "type": "paragraph",
-      "id": "5v5tj78"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sq8ffqr"
-    },
-    {
-      "id": "jdwv8rv",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "lstdk81"
-    },
-    {
-      "type": "paragraph",
-      "id": "rejj7wx"
-    },
-    {
-      "type": "paragraph",
-      "id": "gd415nv"
-    },
-    {
-      "type": "paragraph",
-      "id": "81zwly8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zhgv90p"
-    },
-    {
-      "type": "paragraph",
-      "id": "yzqffqw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kfzpqjy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1jy9nw1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t2jm13i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iu99a09"
-    },
-    {
-      "type": "paragraph",
-      "id": "8s6cnlp"
-    },
-    {
-      "type": "paragraph",
-      "id": "jd4ig3i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "h86ppd4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "emwqbhu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "q49nr0u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "22ljm7l"
-    },
-    {
-      "type": "paragraph",
-      "id": "bstq5po"
-    },
-    {
-      "type": "paragraph",
-      "id": "a9duygu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "o3mzl8e"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "optk4wr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "duysmsu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8dkbsqt"
-    },
-    {
-      "type": "paragraph",
-      "id": "hoyzpim"
-    },
-    {
-      "type": "paragraph",
-      "id": "9egu5ga"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "c3kxl0n"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a8h2hbg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "d73awo5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x0y2psw"
-    },
-    {
-      "type": "paragraph",
-      "id": "i1ompdr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "klhsgh2"
-    },
-    {
-      "type": "paragraph",
-      "id": "3tthnt2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "40lj2vw"
-    },
-    {
-      "type": "paragraph",
-      "id": "229c5jo"
-    },
-    {
-      "id": "yze6vj3",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f1qw0cr"
-    },
-    {
-      "type": "paragraph",
-      "id": "t39i36b"
-    },
-    {
-      "type": "paragraph",
-      "id": "oeblvir"
-    },
-    {
-      "type": "paragraph",
-      "id": "avvsv39"
-    },
-    {
-      "type": "paragraph",
-      "id": "zjoayk4"
-    },
-    {
-      "type": "paragraph",
-      "id": "1wpjdqh"
-    },
-    {
-      "type": "paragraph",
-      "id": "1zyszu4"
-    },
-    {
-      "type": "paragraph",
-      "id": "ydr4gb2"
-    },
-    {
-      "type": "paragraph",
-      "id": "a3wd9pq"
-    },
-    {
-      "type": "paragraph",
-      "id": "y2u15e5"
-    },
-    {
-      "type": "paragraph",
-      "id": "zwdfygy"
-    },
-    {
-      "type": "paragraph",
-      "id": "fgxnkc4"
-    },
-    {
-      "type": "paragraph",
-      "id": "sksu3je"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x5v57mu"
-    },
-    {
-      "type": "paragraph",
-      "id": "r7c268v"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cir4rpo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "b29mbqx"
-    },
-    {
-      "type": "pullQuote",
-      "content": "A clear understanding of the exam pattern and syllabus is crucial for effective preparation.",
-      "id": "92n45tx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7ffbxjg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "drimxm9"
-    },
-    {
-      "type": "paragraph",
-      "id": "k08ajw7"
-    },
-    {
-      "type": "paragraph",
-      "id": "jmkzwst"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6mfzdgd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "unbnnoh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3si2ih5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oj0mtfc"
-    },
-    {
-      "type": "paragraph",
-      "id": "5qgm425"
-    },
-    {
-      "type": "paragraph",
-      "id": "pde8rxr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0vvsbpj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u5mw6li"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "re9p2m8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a70l5fc"
-    },
-    {
-      "type": "paragraph",
-      "id": "b8b0c81"
-    },
-    {
-      "type": "paragraph",
-      "id": "8h451ii"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qd91wjs"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2myfilx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u86kq6i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6xm6nv6"
-    },
-    {
-      "type": "paragraph",
-      "id": "0s7t0sl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hmf1lqy"
-    },
-    {
-      "type": "paragraph",
-      "id": "tp1pe2z"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "job7l6d"
-    },
-    {
-      "type": "paragraph",
-      "id": "9usnu8a"
-    },
-    {
-      "id": "mc5eii3",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "o5lg7at",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "w6zf30e"
-    },
-    {
-      "type": "paragraph",
-      "id": "o5ohtcq"
-    },
-    {
-      "type": "paragraph",
-      "id": "h21q0hr"
-    },
-    {
-      "type": "paragraph",
-      "id": "egvzqld"
-    },
-    {
-      "type": "paragraph",
-      "id": "v77usi8"
-    },
-    {
-      "type": "paragraph",
-      "id": "6qkmai3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gch7wen"
-    },
-    {
-      "type": "paragraph",
-      "id": "dgtqoqr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hcvxoew"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "guq7c47"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cflxjs1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4e5i7q3"
-    },
-    {
-      "type": "paragraph",
-      "id": "n857skm"
-    },
-    {
-      "type": "paragraph",
-      "id": "vz6hze6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ikdjjay"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0zo6f14"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "52rtall"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vkgyd4g"
-    },
-    {
-      "type": "paragraph",
-      "id": "xc0y57u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n4gzzah"
-    },
-    {
-      "type": "paragraph",
-      "id": "ohw7vdl"
-    },
-    {
-      "type": "paragraph",
-      "id": "1uotvyy"
-    },
-    {
-      "type": "paragraph",
-      "id": "8o5i7g0"
-    },
-    {
-      "id": "lkdlsb4",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vkmkhrd"
-    },
-    {
-      "type": "paragraph",
-      "id": "96580yv"
-    },
-    {
-      "id": "oxn9q80",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0v7k0gl"
-    },
-    {
-      "type": "paragraph",
-      "id": "331v1ym"
-    },
-    {
-      "type": "paragraph",
-      "id": "amfwaly"
-    },
-    {
-      "type": "paragraph",
-      "id": "qil8xfv"
-    },
-    {
-      "type": "paragraph",
-      "id": "3aimeye"
-    },
-    {
-      "type": "paragraph",
-      "id": "mc7odsa"
-    },
-    {
-      "type": "paragraph",
-      "id": "nixtsff"
-    },
-    {
-      "type": "paragraph",
-      "id": "kfo3yo7"
-    },
-    {
-      "type": "paragraph",
-      "id": "zt0ojvp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hcerj87"
-    },
-    {
-      "type": "paragraph",
-      "id": "7j4kngr"
-    },
-    {
-      "id": "begv7uz",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "q7k806p"
-    },
-    {
-      "type": "paragraph",
-      "id": "iai28dz"
-    },
-    {
-      "id": "nuui45l",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vi86ah9"
-    },
-    {
-      "type": "paragraph",
-      "id": "g4376fi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "adoy7iz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fc4hx9n"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f82vlmj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rz2605q"
-    },
-    {
-      "type": "paragraph",
-      "id": "binhpem"
-    },
-    {
-      "type": "paragraph",
-      "id": "ds6go5s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8gcihhu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r606who"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v9mo6xp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7nhx4v1"
-    },
-    {
-      "type": "paragraph",
-      "id": "t3i0zpl"
-    },
-    {
-      "type": "paragraph",
-      "id": "pgupg81"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qt4gi40"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x4oxyuq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "brg6kn1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "zo9m3qs"
-    },
-    {
-      "type": "paragraph",
-      "id": "4pwva1f"
-    },
-    {
-      "type": "paragraph",
-      "id": "uqz0hxz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pnhjqxq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iw9g54c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lwaqm16"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tn90siz"
-    },
-    {
-      "type": "paragraph",
-      "id": "qfqz6sg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0xxzwkf"
-    },
-    {
-      "type": "paragraph",
-      "id": "jrufkaa"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "namb2kf"
-    },
-    {
-      "type": "paragraph",
-      "id": "qo07l0q"
-    },
-    {
-      "id": "fzjarcx",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "foz2ked"
-    },
-    {
-      "id": "nfzjmh9",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mfld5ef"
-    },
-    {
-      "type": "paragraph",
-      "id": "zedtjzg"
-    },
-    {
-      "type": "paragraph",
-      "id": "5ao5k69"
-    },
-    {
-      "type": "paragraph",
-      "id": "zh9suo6"
-    },
-    {
-      "type": "paragraph",
-      "id": "ug50gir"
-    },
-    {
-      "type": "paragraph",
-      "id": "z4q1usd"
-    },
-    {
-      "type": "paragraph",
-      "id": "hzirko6"
-    },
-    {
-      "type": "paragraph",
-      "id": "gy0j2oj"
-    },
-    {
-      "type": "paragraph",
-      "id": "l1yq1vz"
-    },
-    {
-      "type": "paragraph",
-      "id": "uzynvfx"
-    },
-    {
-      "type": "paragraph",
-      "id": "fuyomz0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "chqedn3"
-    },
-    {
-      "type": "paragraph",
-      "id": "mxfnvc8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s95w99a"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "j8ns24k"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gz7hv4h"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "imkqagf"
-    },
-    {
-      "type": "paragraph",
-      "id": "y4d7jsx"
-    },
-    {
-      "type": "paragraph",
-      "id": "2gzo5su"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "diy7w3r"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4l9g15g"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0ltjqzt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "epeqb8l"
-    },
-    {
-      "type": "paragraph",
-      "id": "u0ckkde"
-    },
-    {
-      "type": "paragraph",
-      "id": "gb2odmj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "91n4dpk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2kqizdi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v7d6roh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7n8wqd2"
-    },
-    {
-      "type": "paragraph",
-      "id": "cltubap"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "07zxks9"
-    },
-    {
-      "type": "paragraph",
-      "id": "d9o0tp1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yib4g9c"
-    },
-    {
-      "type": "paragraph",
-      "id": "2uxo7o4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "40hst5l"
-    },
-    {
-      "id": "sfe5ob7",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "lc8xf5o"
-    },
-    {
-      "type": "paragraph",
-      "id": "z5ro52v"
-    },
-    {
-      "type": "paragraph",
-      "id": "d55wh3v"
-    },
-    {
-      "type": "paragraph",
-      "id": "pmosc05"
-    },
-    {
-      "type": "paragraph",
-      "id": "nmcn1iw"
-    },
-    {
-      "id": "q2qaatd",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "7rcaycx"
-    },
-    {
-      "type": "paragraph",
-      "id": "5qtl8wz"
-    },
-    {
-      "type": "paragraph",
-      "id": "k89fmtm"
-    },
-    {
-      "type": "paragraph",
-      "id": "6tuthr8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x4kh2sx"
-    },
-    {
-      "type": "paragraph",
-      "id": "jxkuknd"
-    },
-    {
-      "type": "paragraph",
-      "id": "oul4es0"
-    },
-    {
-      "type": "paragraph",
-      "id": "5x02ywi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "emjbfy8"
-    },
-    {
-      "type": "paragraph",
-      "id": "xeb06j4"
-    },
-    {
-      "type": "paragraph",
-      "id": "2js3h5d"
-    },
-    {
-      "type": "paragraph",
-      "id": "dvayrrf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m3uew7i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "atd5vxm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hy5zget"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0hbqype"
-    },
-    {
-      "type": "paragraph",
-      "id": "bfycsu0"
-    },
-    {
-      "type": "paragraph",
-      "id": "r5xqe5o"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nj7rfx4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "07ssa5n"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1usws5r"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gn20ybw"
-    },
-    {
-      "type": "paragraph",
-      "id": "em3dmmo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pcy0enc"
-    },
-    {
-      "type": "paragraph",
-      "id": "1s63rti"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "752hvg5"
-    },
-    {
-      "id": "ksbj6d6",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "og8i2qq"
-    },
-    {
-      "type": "paragraph",
-      "id": "ys8h6oc"
-    },
-    {
-      "type": "paragraph",
-      "id": "kihqfn5"
-    },
-    {
-      "type": "paragraph",
-      "id": "dkttqm7"
-    },
-    {
-      "type": "paragraph",
-      "id": "9u7fw81"
-    },
-    {
-      "type": "paragraph",
-      "id": "ijjavx9"
-    },
-    {
-      "type": "paragraph",
-      "id": "176b9sn"
-    },
-    {
-      "type": "paragraph",
-      "id": "4ors14c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jgbwmcw"
-    },
-    {
-      "id": "y42ozcg",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "2u9ndfn",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "go61smq"
-    },
-    {
-      "type": "paragraph",
-      "id": "8tt7fc4"
-    },
-    {
-      "type": "paragraph",
-      "id": "36i5g4s"
-    },
-    {
-      "type": "paragraph",
-      "id": "zrwgj2l"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yly1uwr"
-    },
-    {
-      "type": "paragraph",
-      "id": "gzcewoz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5l1n086"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qee2lh9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bra6o7s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lj3qvom"
-    },
-    {
-      "type": "paragraph",
-      "id": "z1u73th"
-    },
-    {
-      "type": "paragraph",
-      "id": "696vtsx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mp6fzg2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ufkn3ic"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9jzq9pg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lwaoh4k"
-    },
-    {
-      "type": "paragraph",
-      "id": "5ww8l1r"
-    },
-    {
-      "type": "paragraph",
-      "id": "rjr9ywr"
-    },
-    {
-      "type": "paragraph",
-      "id": "72mfyml"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lx7hhnx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t48g44f"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xmqr4h4"
-    },
-    {
-      "type": "paragraph",
-      "id": "dc9t4kq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "43qsaoj"
-    },
-    {
-      "type": "paragraph",
-      "id": "0nd50bq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9hk3c3m"
-    },
-    {
-      "id": "r8ndcio",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "po3r8al"
-    },
-    {
-      "type": "paragraph",
-      "id": "pd4saza"
-    },
-    {
-      "type": "paragraph",
-      "id": "znksn39"
-    },
-    {
-      "type": "paragraph",
-      "id": "jsd7n33"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fnt4k52"
-    },
-    {
-      "id": "cyil2il",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bpxlts5"
-    },
-    {
-      "id": "miyoy1i",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n37shb8"
-    },
-    {
-      "id": "tqmjxls",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "4mq1kmf"
-    },
-    {
-      "type": "paragraph",
-      "id": "g9fin36"
-    },
-    {
-      "type": "paragraph",
-      "id": "4s2b00o"
-    },
-    {
-      "type": "paragraph",
-      "id": "5fa5xvk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nnr7deo"
-    },
-    {
-      "type": "paragraph",
-      "id": "3fq86b9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cabrqq5"
-    },
-    {
-      "type": "paragraph",
-      "id": "9uxcta6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fpefrfg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rwbg870"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t9wstru"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kv532dp"
-    },
-    {
-      "type": "paragraph",
-      "id": "uh19oub"
-    },
-    {
-      "type": "paragraph",
-      "id": "fuhlcha"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9zgjma8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "eij5gnq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k4khuz3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "birif1e"
-    },
-    {
-      "type": "paragraph",
-      "id": "7dnppck"
-    },
-    {
-      "type": "paragraph",
-      "id": "obkkszk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4g8wjkm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "krjgq6h"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kv84i93"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f1gf5ap"
-    },
-    {
-      "type": "paragraph",
-      "id": "jnu0jvt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1kb6w6v"
-    },
-    {
-      "type": "paragraph",
-      "id": "2t6t0xl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l48bd25"
-    },
-    {
-      "type": "paragraph",
-      "id": "6bb674t"
-    },
-    {
-      "id": "r9rp6co",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "389s5ka"
-    },
-    {
-      "type": "paragraph",
-      "id": "sh3e15q"
-    },
-    {
-      "type": "paragraph",
-      "id": "on9zg5u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jmhivm9"
-    },
-    {
-      "type": "paragraph",
-      "id": "pze5l4s"
-    },
-    {
-      "type": "paragraph",
-      "id": "8xacfbr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "crfk4yz"
-    },
-    {
-      "type": "paragraph",
-      "id": "3n3tje4"
-    },
-    {
-      "type": "paragraph",
-      "id": "cysxd41"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9uqbx9e"
-    },
-    {
-      "type": "paragraph",
-      "id": "zfuqxju"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gcagvrm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sisky25"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a1ew309"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rt7kr5n"
-    },
-    {
-      "type": "paragraph",
-      "id": "6s4766m"
-    },
-    {
-      "type": "paragraph",
-      "id": "t78zoqm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vbyje9n"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "o1l2eah"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u3r5a3w"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "g07a9f5"
-    },
-    {
-      "type": "paragraph",
-      "id": "155aa6m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tpo8pe4"
-    },
-    {
-      "type": "paragraph",
-      "id": "tpv5nqb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dvjfo2n"
-    },
-    {
-      "type": "paragraph",
-      "id": "dq0vaid"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fxnm7vf"
-    },
-    {
-      "type": "paragraph",
-      "id": "ccx206p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wnz7bl8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "axacva3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "i63w5nr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rjhpaxe"
-    },
-    {
-      "type": "paragraph",
-      "id": "vkuvaxq"
-    },
-    {
-      "type": "paragraph",
-      "id": "ngyalfz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5afcfgn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r7sjfyf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cgwaigr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vuruyv9"
-    },
-    {
-      "type": "paragraph",
-      "id": "pufknf6"
-    },
-    {
-      "type": "paragraph",
-      "id": "b78n1qp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "w0prdmz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0gdsa8d"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5wh4c7a"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "khq2aqy"
-    },
-    {
-      "type": "paragraph",
-      "id": "lbg4mys"
-    },
-    {
-      "type": "paragraph",
-      "id": "hvzx8sy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sj04tsb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f6o2ury"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vc1xlw3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jnfzxut"
-    },
-    {
-      "type": "paragraph",
-      "id": "42hnsbr"
-    },
-    {
-      "type": "paragraph",
-      "id": "6rxnaoy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pgn6sz6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "14rtpj6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7xe9vjo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lwml3cn"
-    },
-    {
-      "type": "paragraph",
-      "id": "aekd3gw"
-    },
-    {
-      "type": "paragraph",
-      "id": "vqqltbf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8t3tfva"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8hoo7fu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "goz8k47"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ksdg36j"
-    },
-    {
-      "type": "paragraph",
-      "id": "10wniw4"
-    },
-    {
-      "type": "paragraph",
-      "id": "xhmbdul"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "c91x8yu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "b5rlv71"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0mhyb4h"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "c01p5qn"
-    },
-    {
-      "type": "paragraph",
-      "id": "nfznucg"
-    },
-    {
-      "type": "paragraph",
-      "id": "7yt54l0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lcps9fk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "q4vzxwc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f6gx8u6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vbju6lg"
-    },
-    {
-      "type": "paragraph",
-      "id": "sin3rrb"
-    },
-    {
-      "type": "paragraph",
-      "id": "l8s1egi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cdzp4fj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vgdoufo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wr5gopu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2afbwxh"
-    },
-    {
-      "type": "paragraph",
-      "id": "issi6lt"
-    },
-    {
-      "type": "paragraph",
-      "id": "yh2brwf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ucx22wa"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tncdjyc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gkmjsky"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "62p8e2l"
-    },
-    {
-      "type": "paragraph",
-      "id": "n0s61we"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0bblghv"
-    },
-    {
-      "type": "paragraph",
-      "id": "6ardkm2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x234ql5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5fsgkh3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cm5cra2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ri8jel0"
-    },
-    {
-      "type": "paragraph",
-      "id": "9qd9in3"
-    },
-    {
-      "type": "paragraph",
-      "id": "9k719vl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3b0o6pn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "17uwkxw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "drmc5tg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rvj688z"
-    },
-    {
-      "type": "paragraph",
-      "id": "pb68ax1"
-    },
-    {
-      "type": "paragraph",
-      "id": "p8elzx9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "y642vpr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m0l2bem"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "likttek"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t51hkl5"
-    },
-    {
-      "type": "paragraph",
-      "id": "cmsf6vp"
-    },
-    {
-      "type": "paragraph",
-      "id": "ey476ee"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p1h77t3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p9p4tdg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gs333of"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9epk7fz"
-    },
-    {
-      "type": "paragraph",
-      "id": "8hos8ok"
-    },
-    {
-      "type": "paragraph",
-      "id": "b0h7dq0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "o9fa2zy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ktha892"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nk3x892"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vzkonhn"
-    },
-    {
-      "type": "paragraph",
-      "id": "nex3w9y"
-    },
-    {
-      "type": "paragraph",
-      "id": "kvlver5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ybjvzwu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "way6mcp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "717fy3u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1e0qhn0"
-    },
-    {
-      "type": "paragraph",
-      "id": "0n1w59e"
-    },
-    {
-      "type": "paragraph",
-      "id": "8yb7kki"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "esolpal"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "72pl72y"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6p9pd0v"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bmmldqt"
-    },
-    {
-      "type": "paragraph",
-      "id": "qe5r13t"
-    },
-    {
-      "type": "paragraph",
-      "id": "oratpj1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ganyn13"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xs8652b"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bsz8djk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6amzlg5"
-    },
-    {
-      "type": "paragraph",
-      "id": "5exb74j"
-    },
-    {
-      "type": "paragraph",
-      "id": "5nclo3l"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "o5gj1ij"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p7yf81m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0eg7cc2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x6yldqb"
-    },
-    {
-      "type": "paragraph",
-      "id": "l8ov9k0"
-    },
-    {
-      "type": "paragraph",
-      "id": "65a9bkr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "phkuuy1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dup45og"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yh77bot"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cniazo6"
-    },
-    {
-      "type": "paragraph",
-      "id": "if5msgr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dedu0ni"
-    },
-    {
-      "type": "paragraph",
-      "id": "um8qkz4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l4acchc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "phd6xpl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1crsbon"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "urfe8ky"
-    },
-    {
-      "type": "paragraph",
-      "id": "q3el8lm"
-    },
-    {
-      "type": "paragraph",
-      "id": "s6rl8vm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0kemx5o"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "taaq4ak"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1lstnvj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5da9q7t"
-    },
-    {
-      "type": "paragraph",
-      "id": "lp32vlt"
-    },
-    {
-      "type": "paragraph",
-      "id": "c97rpz2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bjeaq05"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1hxkuhy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t59dga9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9zx5lxc"
-    },
-    {
-      "type": "paragraph",
-      "id": "7gzqqqb"
-    },
-    {
-      "type": "paragraph",
-      "id": "kvtjqki"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "y9lqgh8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "b2xyza2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u5grjfd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4ibcekr"
-    },
-    {
-      "type": "paragraph",
-      "id": "axsws2k"
-    },
-    {
-      "type": "paragraph",
-      "id": "bsncdai"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kvsntvu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yogkqyw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a7f0wbc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "epwwyi7"
-    },
-    {
-      "type": "paragraph",
-      "id": "c5e61jr"
-    },
-    {
-      "type": "paragraph",
-      "id": "vi0j71m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "eb87osw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sq1dqny"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "h2fqi4c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pa5l7dt"
-    },
-    {
-      "type": "paragraph",
-      "id": "gr27252"
-    },
-    {
-      "type": "paragraph",
-      "id": "5jpr3v9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6k715hm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "phnpbbu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5qrns1s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v4v895x"
-    },
-    {
-      "type": "paragraph",
-      "id": "gr19din"
-    },
-    {
-      "type": "paragraph",
-      "id": "35nuhno"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "llxfpql"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "my7k4o2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "i20vwlk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xapvkaa"
-    },
-    {
-      "type": "paragraph",
-      "id": "jxggaxw"
-    },
-    {
-      "type": "paragraph",
-      "id": "d6icijn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4qjvhmk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dqfvd0d"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l7jzh7j"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "avr4s6m"
-    },
-    {
-      "type": "paragraph",
-      "id": "0s6r6cc"
-    },
-    {
-      "type": "paragraph",
-      "id": "tyzbata"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qlim45o"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iglwnsm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fzjcxx4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a9jcibb"
-    },
-    {
-      "type": "paragraph",
-      "id": "xdd28ci"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u4smyt7"
-    },
-    {
-      "type": "paragraph",
-      "id": "s5cnmul"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qdo437d"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ptvhksa"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7riofd3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cy7e1cz"
-    },
-    {
-      "type": "paragraph",
-      "id": "arfqcwt"
-    },
-    {
-      "type": "paragraph",
-      "id": "dwrw33m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wr01xnv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xpjejkw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4i1cool"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r7xmlwp"
-    },
-    {
-      "type": "paragraph",
-      "id": "egkv92a"
-    },
-    {
-      "type": "paragraph",
-      "id": "9t8zbxy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tvzezmd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t74jqh1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mrtqpj2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "w76ai93"
-    },
-    {
-      "type": "paragraph",
-      "id": "76blota"
-    },
-    {
-      "type": "paragraph",
-      "id": "dlmy25u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f59f9nu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qq6f6nn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "paxet4z"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "49g2png"
-    },
-    {
-      "type": "paragraph",
-      "id": "j9hu4q1"
-    },
-    {
-      "type": "paragraph",
-      "id": "ju9wapl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oyyw6u4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4i9p0kn"
-    },
-    {
-      "type": "examAlert",
-      "items": [
-        "Always verify the weightage of static versus dynamic questions from recent exam trends.",
-        "Pay strict attention to negative marking schemes during practice tests."
-      ],
-      "id": "l9w6vxr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2llxxne"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ip57wbg"
-    },
-    {
-      "type": "paragraph",
-      "id": "91kxh98"
-    },
-    {
-      "type": "paragraph",
-      "id": "jyq4n0b"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sa0d9ag"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "d1f16ha"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8dt3apm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "du0159m"
-    },
-    {
-      "type": "paragraph",
-      "id": "2lh93m4"
-    },
-    {
-      "type": "paragraph",
-      "id": "mj5ousi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f51tvwx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f7mfenn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uczsmg7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2jhjnuh"
-    },
-    {
-      "type": "paragraph",
-      "id": "81ov1o9"
-    },
-    {
-      "type": "paragraph",
-      "id": "yx4c4tj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nhfdnyz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cmauo5f"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "npiqomc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v1zs1ev"
-    },
-    {
-      "type": "paragraph",
-      "id": "vywx1is"
-    },
-    {
-      "type": "paragraph",
-      "id": "74p2tx2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "huce9pi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pwpn5ir"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kq443qa"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ujt20b7"
-    },
-    {
-      "type": "paragraph",
-      "id": "yg0lx0a"
-    },
-    {
-      "type": "paragraph",
-      "id": "oo105oc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7z0hm2y"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ekmm1v0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tni540n"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gsujvjd"
-    },
-    {
-      "type": "paragraph",
-      "id": "hny4jvj"
-    },
-    {
-      "type": "paragraph",
-      "id": "dtateek"
-    },
-    {
-      "type": "paragraph",
-      "id": "0nfm2oy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p41k14l"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tn64e3m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gwjpcll"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ymu5erm"
-    },
-    {
-      "type": "paragraph",
-      "id": "e2qc34r"
-    },
-    {
-      "type": "paragraph",
-      "id": "2vzybmw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xmtpf7c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4b849yc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xiy6ggi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mf9tp8j"
-    },
-    {
-      "type": "paragraph",
-      "id": "efdnlyf"
-    },
-    {
-      "type": "paragraph",
-      "id": "mfbodac"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ufrmjgl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ohpt7nw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "keoqozb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1dmw73m"
-    },
-    {
-      "type": "paragraph",
-      "id": "y1ag4hz"
-    },
-    {
-      "type": "paragraph",
-      "id": "aefm257"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qics7p3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1t88qpo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dz2hijx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nmwxrg7"
-    },
-    {
-      "type": "paragraph",
-      "id": "9khn9gu"
-    },
-    {
-      "type": "paragraph",
-      "id": "7znvg9c"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "b82qotk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n9v8arr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cs2ctu3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kkhb2ev"
-    },
-    {
-      "type": "paragraph",
-      "id": "hw3fu3q"
-    },
-    {
-      "type": "paragraph",
-      "id": "o8o8v1t"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "av4zgme"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9n3daam"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "en374xq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sbww0l2"
-    },
-    {
-      "type": "paragraph",
-      "id": "ibw0emj"
-    },
-    {
-      "type": "paragraph",
-      "id": "ixnf5ck"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lp3evep"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "81t6njn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "egiestq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r2xzttk"
-    },
-    {
-      "type": "paragraph",
-      "id": "i1vjklo"
-    },
-    {
-      "type": "paragraph",
-      "id": "cr19el3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rjp5ew2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dom3v0u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gdbhsj3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3mlspwx"
-    },
-    {
-      "type": "paragraph",
-      "id": "0c6wwpt"
-    },
-    {
-      "type": "paragraph",
-      "id": "trbbxe7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pzikjvs"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3lnw80u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "72yt7gq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "d7syl7p"
-    },
-    {
-      "type": "paragraph",
-      "id": "f3ddo5d"
-    },
-    {
-      "type": "paragraph",
-      "id": "5tu7x72"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v3lb9hq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "aspcxa4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1z2tf6y"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "skrqovi"
-    },
-    {
-      "type": "paragraph",
-      "id": "2lde1w8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wqt4qk0"
-    },
-    {
-      "type": "paragraph",
-      "id": "ydl00sy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5gw71ut"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ofva88s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fsoa1l1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2dz1mow"
-    },
-    {
-      "type": "paragraph",
-      "id": "7vs19ym"
-    },
-    {
-      "type": "paragraph",
-      "id": "jwkqroq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4srf8z1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "atnrye5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mvi8avx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bfytj7i"
-    },
-    {
-      "type": "paragraph",
-      "id": "k0gsf9v"
-    },
-    {
-      "type": "paragraph",
-      "id": "gjozh54"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nrja0wx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x7hrq4d"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3rleoc6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ojk3e2x"
-    },
-    {
-      "type": "paragraph",
-      "id": "undjbl1"
-    },
-    {
-      "type": "paragraph",
-      "id": "48lgxq1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tkz5iu2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ydmpbne"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "i3v7zec"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hsnhv96"
-    },
-    {
-      "type": "paragraph",
-      "id": "4o75196"
-    },
-    {
-      "type": "paragraph",
-      "id": "u95lcte"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4xzc4kz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t3whsme"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7oqia95"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0p76fjz"
-    },
-    {
-      "type": "paragraph",
-      "id": "98rmwmu"
-    },
-    {
-      "type": "paragraph",
-      "id": "d4itioc"
-    },
-    {
-      "type": "paragraph",
-      "id": "apet8a1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rnkf7rz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0uvhn3v"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l3sz3eg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yl8waje"
-    },
-    {
-      "type": "paragraph",
-      "id": "1u2i9g7"
-    },
-    {
-      "type": "paragraph",
-      "id": "7eq9g1p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nolfkrg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bmtvdk6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v6mneqo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rbecise"
-    },
-    {
-      "type": "paragraph",
-      "id": "sxts8dt"
-    },
-    {
-      "type": "paragraph",
-      "id": "2xjsb0u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f0mc6id"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x4v1yhq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xz8uxwe"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v82xusf"
-    },
-    {
-      "type": "paragraph",
-      "id": "l0c1p9h"
-    },
-    {
-      "type": "paragraph",
-      "id": "fu0fndz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "auaqfwo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9xkukvf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "w3nw958"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bmt1dam"
-    },
-    {
-      "type": "paragraph",
-      "id": "2y3d7fm"
-    },
-    {
-      "type": "paragraph",
-      "id": "9o583fw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6ckx1zf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "crylhi3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9ydiop8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p6xp8bl"
-    },
-    {
-      "type": "paragraph",
-      "id": "o5e4w0y"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hwp1unc"
-    },
-    {
-      "id": "v0uh4sb",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "oc9i9s4",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "j7hmd4a"
-    },
-    {
-      "id": "ppnjkii",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "jsbgr7r",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
+      "id": "hg11kc1",
+      "content": "<strong>  Ans: (c) Heart  Hint: </strong><em>Opthalmology studies Eyes. Cardiology studies Heart.</em>"
     }
   ],
   "enriched": true

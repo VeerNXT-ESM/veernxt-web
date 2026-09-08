@@ -10,50 +10,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article</p>",
+            "<p>Article 280</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Part</p>",
+            "<p>Part XII – Finance, Property, Contracts and Suits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Type</p>",
+            "<p>Constitutional Body</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Appointed By</p>",
+            "<p>President of India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nature</p>",
+            "<p>Advisory Body</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Objective</p>",
+            "<p>Promote fiscal federalism</p>"
           ]
         }
       ]
@@ -137,7 +137,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mlaidrr"
+      "id": "mlaidrr",
+      "content": "Article 280 makes it mandatory for the President to constitute a Finance Commission every FIVE years or earlier if necessary."
     }
   ],
   "enriched": true

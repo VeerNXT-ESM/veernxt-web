@@ -1,0 +1,62 @@
+{
+  "title": "5. Jurisdiction of CBI",
+  "order": 280,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "CBI can investigate cases involving:<br/>• Corruption and bribery<br/>• Economic crimes<br/>• Special crimes such as terrorism or major fraud<br/>• Cases ordered by High Courts or the Supreme Court",
+      "id": "rub9p7t"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Cases ordered by High Courts or the Supreme Court",
+      "id": "wcu5g3p"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Focus",
+          "value": "Corruption & Bribery",
+          "icon": "check"
+        },
+        {
+          "label": "Financial Crimes",
+          "value": "Economic Offenses",
+          "icon": "award"
+        },
+        {
+          "label": "Judicial Referral",
+          "value": "HC & SC Orders",
+          "icon": "info"
+        },
+        {
+          "label": "Special Mandate",
+          "value": "Terrorism & Fraud",
+          "icon": "book"
+        }
+      ],
+      "id": "ihgju1i"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that CBI can take up cases ordered by both High Courts and the Supreme Court.",
+        "Special crimes investigated by CBI include terrorism and major fraud alongside corruption and economic crimes."
+      ],
+      "id": "mffctbu"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "CBI investigates cases related to corruption and bribery.",
+        "Economic offenses and major financial frauds fall under CBI's jurisdiction.",
+        "Special high-profile crimes, including terrorism, are investigated by the CBI.",
+        "The Supreme Court and High Courts can directly order CBI investigations."
+      ],
+      "id": "lgvuebk"
+    }
+  ],
+  "enriched": true
+}

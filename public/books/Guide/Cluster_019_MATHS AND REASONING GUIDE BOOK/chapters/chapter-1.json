@@ -1,0 +1,262 @@
+{
+  "id": "sky5qle",
+  "title": "PART 1",
+  "order": 1,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f9wgecd",
+      "content": "NUMBER SYSTEM "
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Topic",
+          "value": "Number System",
+          "icon": "book"
+        },
+        {
+          "label": "Target Exam",
+          "value": "SSC Exams",
+          "icon": "award"
+        },
+        {
+          "label": "Core Focus",
+          "value": "Divisibility Rules",
+          "icon": "check"
+        },
+        {
+          "label": "Key Modules",
+          "value": "6 Sections",
+          "icon": "info"
+        }
+      ],
+      "id": "fxxsxf2"
+    },
+    {
+      "id": "86f9hob",
+      "type": "heading",
+      "level": 2,
+      "content": "1. NUMBER SYSTEM – BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Covers fundamental concepts of the Number System and classification of numbers.",
+        "Emphasizes core mathematical properties critical for SSC competitive exams.",
+        "Focuses on divisibility rules, factors, and multiples as high-yield problem-solving tools.",
+        "Provides structured practice with solved examples, test questions, and an answer key."
+      ],
+      "id": "yvd0iow"
+    },
+    {
+      "type": "paragraph",
+      "id": "kn3xdks",
+      "content": "Number System deals with classification and properties of numbers used in calculations.<br></br><br></br>In SBIexamination, questions from Number System are:<br></br>• Basic<br></br>• Concept-based<br></br>• Usually one or two steps only"
+    },
+    {
+      "id": "olo70lq",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Numbers"
+    },
+    {
+      "id": "ir83jg8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Natural Numbers</p>",
+            "<p>1, 2, 3, 4, …</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Whole Numbers</p>",
+            "<p>0, 1, 2, 3, …</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Integers</p>",
+            "<p>…, –3, –2, –1, 0, 1, 2, 3 …</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rational Numbers</p>",
+            "<p>Numbers expressible as p/q</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Irrational Numbers</p>",
+            "<p>Numbers not expressible as p/q (√2, π)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Prime Numbers</p>",
+            "<p>Numbers divisible only by 1 and itself</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Composite Numbers</p>",
+            "<p>Numbers having more than two factors</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yws6n2e",
+      "type": "heading",
+      "level": 2,
+      "content": "2. IMPORTANT PROPERTIES (VERY IMPORTANT FOR SSC)"
+    },
+    {
+      "type": "paragraph",
+      "id": "5ixn246",
+      "content": "Even and Odd Numbers:<br></br>• Even + Even = Even<br></br>• Odd + Odd = Even<br></br>• Even + Odd = Odd<br></br>• Even × Odd = Even<br></br>• Odd × Odd = Odd<br></br><br></br>Prime Numbers:<br></br>• 2 is the only even prime number<br></br>• 1 is neither prime nor composite<br></br>• Every composite number can be expressed as a product of prime numbers"
+    },
+    {
+      "id": "ml9woqn",
+      "type": "heading",
+      "level": 2,
+      "content": "3. DIVISIBILITY RULES (FREQUENTLY ASKED)"
+    },
+    {
+      "id": "ehzc65q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Number</strong></p>",
+            "<p><strong>Rule</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>2</p>",
+            "<p>Last digit must be even</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>3</p>",
+            "<p>Sum of digits divisible by 3</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>4</p>",
+            "<p>Last two digits divisible by 4</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>5</p>",
+            "<p>Last digit is 0 or 5</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>6</p>",
+            "<p>Divisible by both 2 and 3</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>9</p>",
+            "<p>Sum of digits divisible by 9</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>11</p>",
+            "<p>Difference of alternate digit sums is 0 or multiple of 11</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kxv209t",
+      "type": "heading",
+      "level": 2,
+      "content": "4. FACTORS & MULTIPLES"
+    },
+    {
+      "type": "paragraph",
+      "id": "rs87i5e",
+      "content": "Factor: A number that divides another number exactly.<br></br>Multiple: The result obtained after multiplication.<br></br><br></br>Important Points:<br></br>• Smallest factor of any number is 1<br></br>• Largest factor of any number is the number itself"
+    },
+    {
+      "id": "2genodr",
+      "type": "heading",
+      "level": 2,
+      "content": "5. SOLVED EXAMPLES"
+    },
+    {
+      "type": "paragraph",
+      "id": "tbyvqr9",
+      "content": "<strong>Example 1:</strong><br></br>Which of the following is a prime number?<br></br>A. 21   B. 29   C. 39   D. 51<br></br><br></br>Answer: 29<br></br><br></br><strong>Example 2:</strong><br></br>What is the unit digit of 7⁴?<br></br>7¹ = 7<br></br>7² = 49<br></br>7³ = 343<br></br>7⁴ = 2401<br></br><br></br>Answer: 1"
+    },
+    {
+      "id": "hbrnix5",
+      "type": "heading",
+      "level": 2,
+      "content": "6. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Divisibility rules are frequently asked concepts in quantitative aptitude sections.",
+        "Understanding number properties is vital for fast-track calculations in SSC exams."
+      ],
+      "id": "2jvhc74"
+    },
+    {
+      "type": "paragraph",
+      "id": "1uyhek2",
+      "content": "Q1. Which of the following is not a composite number?<br></br>A. 1   B. 4   C. 6   D. 9<br></br><br></br>Q2. Find the number of factors of 16.<br></br>A. 4   B. 5   C. 6   D. 7<br></br><br></br>Q3. Which number is divisible by 11?<br></br>A. 121   B. 132   C. 143   D. 154"
+    },
+    {
+      "id": "p2jltto",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wok3h5p",
+      "content": "Q1. A<br></br>Q2. B<br></br>Q3. A"
+    }
+  ],
+  "enriched": true
+}

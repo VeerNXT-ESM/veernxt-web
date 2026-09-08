@@ -1,0 +1,308 @@
+{
+  "id": "h34h0kv",
+  "title": "Chapter 47: Reserve Bank of India (RBI)",
+  "order": 47,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "dwk9vq2",
+      "content": "The Reserve Bank of India (RBI) is the central bank of India. It regulates the country's monetary system and manages the currency and credit system of the economy. It plays a vital role in maintaining financial stability and controlling inflation."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "1935",
+          "icon": "calendar"
+        },
+        {
+          "label": "Nationalised",
+          "value": "1949",
+          "icon": "award"
+        },
+        {
+          "label": "Governing Act",
+          "value": "RBI Act, 1934",
+          "icon": "book"
+        },
+        {
+          "label": "Headquarters",
+          "value": "Mumbai",
+          "icon": "info"
+        }
+      ],
+      "id": "5awg21a"
+    },
+    {
+      "id": "kakq0fd",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Establishment of RBI"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Reserve Bank of India was established on April 1, 1935, based on the recommendations of the Hilton Young Commission.",
+        "RBI was nationalised on January 1, 1949, transforming it into a fully state-owned central banking institution.",
+        "It acts as the sole issuer of bank notes in India, excluding one-rupee notes and coins which are issued by the Ministry of Finance.",
+        "RBI regulates monetary policy using quantitative instruments (Repo, CRR, SLR) and qualitative instruments (Moral Suasion, Margin Requirements).",
+        "It acts as the banker to the government, banker's bank, and custodian of India's foreign exchange reserves under FEMA 1999."
+      ],
+      "id": "4wp5ugn"
+    },
+    {
+      "type": "paragraph",
+      "id": "3u5741j",
+      "content": "• RBI was established on 1 April 1935."
+    },
+    {
+      "type": "paragraph",
+      "id": "9tgw8k3",
+      "content": "• It was established under the Reserve Bank of India Act, 1934."
+    },
+    {
+      "type": "paragraph",
+      "id": "z87nb66",
+      "content": "• The headquarters of RBI is located in Mumbai."
+    },
+    {
+      "type": "paragraph",
+      "id": "9pxy47u",
+      "content": "• It was nationalized in 1949."
+    },
+    {
+      "id": "1pbmdla",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Objectives of RBI"
+    },
+    {
+      "type": "paragraph",
+      "id": "b0lwxu8",
+      "content": "• To regulate the issue of banknotes."
+    },
+    {
+      "type": "paragraph",
+      "id": "bcv2gln",
+      "content": "• To maintain monetary stability in the country."
+    },
+    {
+      "type": "paragraph",
+      "id": "4xc1czm",
+      "content": "• To operate the currency and credit system."
+    },
+    {
+      "type": "paragraph",
+      "id": "u8p8vcf",
+      "content": "• To support economic growth."
+    },
+    {
+      "id": "z039x5e",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Functions of RBI"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Reserve Bank of India was established on April 1, 1935, in accordance with the provisions of the Reserve Bank of India Act, 1934.",
+      "id": "s7v4hat"
+    },
+    {
+      "id": "dvd0shv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Issuer of Currency</p>",
+            "<p>RBI issues currency notes except one-rupee note.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Banker to Government</p>",
+            "<p>RBI manages accounts of central and state governments.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Banker's Bank</p>",
+            "<p>Commercial banks keep reserves with RBI.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Controller of Credit</p>",
+            "<p>RBI controls credit through monetary policy.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Custodian of Foreign Exchange</p>",
+            "<p>RBI manages foreign exchange reserves.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Clearing House</p>",
+            "<p>RBI settles interbank payments.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9ldr88b",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Monetary Policy Tools"
+    },
+    {
+      "type": "paragraph",
+      "id": "fle79gq",
+      "content": "• Repo Rate – Rate at which RBI lends money to commercial banks."
+    },
+    {
+      "type": "paragraph",
+      "id": "yiefml9",
+      "content": "• Reverse Repo Rate – Rate at which RBI borrows money from banks."
+    },
+    {
+      "type": "paragraph",
+      "id": "90s2b77",
+      "content": "• Cash Reserve Ratio (CRR) – Percentage of deposits banks must keep with RBI."
+    },
+    {
+      "type": "paragraph",
+      "id": "zv7zvgr",
+      "content": "• Statutory Liquidity Ratio (SLR) – Percentage of deposits banks must maintain in liquid assets."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Quantitative Monetary Tools",
+        "Qualitative Monetary Tools"
+      ],
+      "rows": [
+        [
+          "Primary Focus",
+          "Overall volume and quantity of money supply in the economy",
+          "Direction, allocation, and channelization of credit to specific sectors"
+        ],
+        [
+          "Key Instruments",
+          "Repo Rate, Reverse Repo Rate, CRR, SLR, Bank Rate, OMO",
+          "Margin Requirements, Moral Suasion, Credit Rationing, Direct Action"
+        ],
+        [
+          "Nature of Impact",
+          "General and non-discriminatory across all sectors",
+          "Selective and targeted towards specific industries or priority sectors"
+        ]
+      ],
+      "id": "v3q9s85"
+    },
+    {
+      "type": "paragraph",
+      "id": "07xhxvv",
+      "content": "• Open Market Operations – Buying and selling government securities."
+    },
+    {
+      "id": "ymg5kqv",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Organization of RBI"
+    },
+    {
+      "type": "paragraph",
+      "id": "k9cpzwv",
+      "content": "• Governor – Head of RBI."
+    },
+    {
+      "type": "paragraph",
+      "id": "8ribggp",
+      "content": "• Deputy Governors – Assist the Governor."
+    },
+    {
+      "type": "paragraph",
+      "id": "bwx2cwh",
+      "content": "• Central Board of Directors – Governing body."
+    },
+    {
+      "id": "6dhe3j1",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Importance of RBI"
+    },
+    {
+      "type": "paragraph",
+      "id": "y3fxao5",
+      "content": "• Maintains financial stability."
+    },
+    {
+      "type": "paragraph",
+      "id": "mmygcg3",
+      "content": "• Controls inflation."
+    },
+    {
+      "type": "paragraph",
+      "id": "hutxa23",
+      "content": "• Supervises banking system."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Hilton Young Commission (1926) recommended the setup of RBI; Sir Osborne Smith was its first Governor and C.D. Deshmukh was the first Indian Governor.",
+        "One-rupee notes carry the signature of the Finance Secretary, whereas other currency notes bear the RBI Governor's signature.",
+        "Cash Reserve Ratio (CRR) is maintained in liquid cash with the RBI, whereas Statutory Liquidity Ratio (SLR) is maintained by commercial banks with themselves in approved securities or cash."
+      ],
+      "id": "cnp3rn6"
+    },
+    {
+      "type": "paragraph",
+      "id": "3d7v59j",
+      "content": "• Promotes economic development."
+    },
+    {
+      "id": "w2l605i",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "26mwqpw",
+      "content": "• RBI was established in 1935."
+    },
+    {
+      "type": "paragraph",
+      "id": "5hyaige",
+      "content": "• RBI headquarters is in Mumbai."
+    },
+    {
+      "type": "paragraph",
+      "id": "n0wvydx",
+      "content": "• RBI was nationalized in 1949."
+    },
+    {
+      "type": "paragraph",
+      "id": "3s4oibd",
+      "content": "• RBI issues all currency notes except one-rupee note."
+    }
+  ],
+  "enriched": true
+}

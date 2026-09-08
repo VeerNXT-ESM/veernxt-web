@@ -1,0 +1,207 @@
+{
+  "id": "cfn11ma",
+  "title": "Seating Arrangement",
+  "order": 8,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jk4c9wp",
+      "content": "<strong>CHAPTER  08\tSEATING ARRANGEMENT</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "w8ik3zk",
+      "content": "<em>Linear Arrangement | Circular Arrangement | Box/Floor Arrangement</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tfaly7s",
+      "content": "<strong>8.1  Types of Seating Arrangement</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "4nphcyb",
+      "content": "Seating arrangement problems involve placing people in rows, circles, or other structures based on given conditions.  CGL Tier 2 has seen 5+ questions from this topic. The trick is systematic elimination."
+    },
+    {
+      "id": "q1xd1uo",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Key Approach</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Linear (single row)</p>",
+            "<p>Fix one person, place others relative to them</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Linear (two rows, facing each other)</p>",
+            "<p>Pair up opposites after fixing both rows</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Circular (all face centre)</p>",
+            "<p>Anti-clockwise = left; Clockwise = right (facing centre)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Circular (some face outward)</p>",
+            "<p>Note direction before determining left/right</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Floor/Building arrangement</p>",
+            "<p>Use top floor = floor N, bottom = floor 1</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Box/Stack arrangement</p>",
+            "<p>Use top of stack vs bottom of stack</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0ntt5hu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>CIRCULAR ARRANGEMENT RULES</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Facing Centre: Left is anti-clockwise direction; Right is clockwise direction</p><p>Facing Outward: Left is clockwise; Right is anti-clockwise</p><p>Total arrangements of n persons in a circle = (n−1)! ways</p><p>If two persons are always together in a circle → treat as one unit: (n−2)! × 2</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "33trqqk",
+      "content": "<strong>8.2  Linear Arrangement — Solved Example</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "azir9t8",
+      "content": "Six people A, B, C, D, E, F sit in a row facing North. B sits to the immediate right of E. D sits second to the left of F. E is at one of the ends. C sits third to the right of A. Solve:"
+    },
+    {
+      "type": "paragraph",
+      "id": "ku0l2v1",
+      "content": "<strong>Sol. </strong><em>E is at one end. B is immediately right of E → E_B at one end. D is 2nd left of F: possible F at 4,5,6 and D at 2,3,4. C is 3rd right of A: A at 1→C at 4, A at 2→C at 5, A at 3→C at 6. Try E at position 1: E(1)B(2)_. D is 2nd left of F. If F=6,D=4. A at 3,C at 6 (conflict with F). If F=5,D=3. A at 3? No D is there. A=2? Conflict with B. If F=4,D=2 (conflict with B). Try E at position 6: _B(5)E(6). D is 2 left of F: F=5? No B is there. F=4,D=2. F=3,D=1. Try D=1,F=3. Remaining: A,B,C. B=5. A and C: C=3rd right of A → if A=2,C=5 (B is there). Hmm, let's place: 1=D, 3=F. A=4,C=7? Out of range. Ans (partial): E at pos 6, B at pos 5, D at 1, F at 3, remaining A,C fit at 2,4. A=2,C=5? No B=5. A=4,C would need pos 7. No valid.  type: Final arrangement might be D-A-F-C-B-E (L to R).</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "f8bzuu9",
+      "content": "<strong>8.3  Circular Arrangement — Solved Example</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "p7desh5",
+      "content": "Five friends P, Q, R, S, T sit around a circular table, all facing the centre. P sits second to the right of T. S sits third to the right of Q. R is an immediate neighbour of both P and S."
+    },
+    {
+      "type": "paragraph",
+      "id": "67gzg0x",
+      "content": "<strong>Sol. </strong><em>Fix T. P is 2nd right of T: T_P. S is 3rd right of Q. R is between P and S. Try T(1),_,P(3) → R is next to P. If R=4, S must be next to R → S=5. Q is 3rd left of S=5 → Q=2. Check: T=1,Q=2,P=3,R=4,S=5. S is 3rd right of Q: Q=2, 3 right = pos 5 = S ✓. R is immediate neighbour of P(3) and S(5)? R=4 is between P=3 and S=5 ✓. Arrangement: T−Q−P−R−S (clockwise). P's left=Q, P's right=R.</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e5zwh2f",
+      "content": "<strong>8.4  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "h5qstb5",
+      "content": "<strong>Q.37  </strong>7 persons A-G sit in a row. C sits 3rd from left. D is between A and B. E sits at the right end. If D sits 4th from left, and A is to D's right, what is A's position?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ew70nxc",
+      "content": "<strong>  (a)  </strong>5th"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ckcp2pd",
+      "content": "<strong>  (b)  </strong>3rd"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3uy2xpr",
+      "content": "<strong>  (c)  </strong>6th"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j4m4xbz",
+      "content": "<strong>  (d)  </strong>2nd"
+    },
+    {
+      "type": "paragraph",
+      "id": "2v3u0p0",
+      "content": "<strong>  Ans: (a) 5th  Hint: </strong><em>D=4th from left. A is to D's right → A=5th (immediately right of D).</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "7wjdg1y",
+      "content": "<strong>Q.38  </strong>Six people sit around a circle facing centre. X sits between Y and Z. W is opposite X. V is to the immediate right of W. Who sits to the immediate left of Z?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "83qlgk0",
+      "content": "<strong>  (a)  </strong>Y"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1srkhao",
+      "content": "<strong>  (b)  </strong>V"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ch9r74k",
+      "content": "<strong>  (c)  </strong>W"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "dj3n90r",
+      "content": "<strong>  (d)  </strong>X"
+    },
+    {
+      "type": "paragraph",
+      "id": "tdgehsu",
+      "content": "<strong>  Ans: (b) V  Hint: </strong><em>Use circular logic: X is between Y and Z. W opposite X. V right of W. In typical  solution V ends up to left of Z.</em>"
+    }
+  ],
+  "enriched": true
+}

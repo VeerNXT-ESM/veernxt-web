@@ -54,36 +54,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Total Forest Cover</strong></p>",
+            "<p>~38,720 sq. km (approx. 20.19% of state area)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Reserved Forests</strong></p>",
+            "<p>30,418 sq. km (protected, dense cover)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Protected Forests</strong></p>",
+            "<p>6,148 sq. km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Unclassed Forests</strong></p>",
+            "<p>~2,154 sq. km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Forest Dept. Headquarters</strong></p>",
+            "<p>Bengaluru</p>"
           ]
         }
       ]
@@ -91,7 +91,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "lhxnpsc"
+      "id": "lhxnpsc",
+      "content": "<strong>Types of Forests in Karnataka</strong>"
     },
     {
       "id": "g7pcn7a",
@@ -100,64 +101,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Forest Type</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Rainfall</strong></p>",
+            "<p><strong>Vegetation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Wet Evergreen</p>",
+            "<p>Coastal &amp; Malnad (Western Ghats)</p>",
+            "<p>&gt;2,500 mm</p>",
+            "<p>Tall trees; Dipterocarpus, Calophyllum, Hopea; thick canopy; no dry season</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Semi-Evergreen</p>",
+            "<p>Malnad transition zone</p>",
+            "<p>1,500–2,500 mm</p>",
+            "<p>Mix of evergreen and deciduous trees; medium density</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Moist Deciduous</p>",
+            "<p>Malnad foothills, Kodagu, Shivamogga</p>",
+            "<p>1,000–2,000 mm</p>",
+            "<p>Teak, Rosewood, Nandi tree; shed leaves in dry season</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dry Deciduous</p>",
+            "<p>Plateau (Tumakuru, Chitradurga)</p>",
+            "<p>600–1,200 mm</p>",
+            "<p>Lighter canopy; Red Sanders, Neem, Bamboo</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Shola Forests</p>",
+            "<p>High altitude Malnad (&gt;1,500 m)</p>",
+            "<p>High altitude</p>",
+            "<p>Stunted, cloud forest; preserve watersheds; rare orchids, mosses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Scrub / Thorny</p>",
+            "<p>North-East Karnataka (Kalaburagi, Raichur)</p>",
+            "<p>&lt;600 mm</p>",
+            "<p>Acacia, Euphorbia; sparse ground cover; drought-adapted</p>"
           ]
         }
       ]
@@ -180,141 +181,141 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Park / Sanctuary</strong></p>",
+            "<p><strong>District(s)</strong></p>",
+            "<p><strong>Area (sq km)</strong></p>",
+            "<p><strong>Key Species</strong></p>",
+            "<p><strong>Special Designation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Bandipur National Park</p>",
+            "<p>Mysuru / Chamarajanagar</p>",
+            "<p>874</p>",
+            "<p>Tiger, Elephant, Gaur, Leopard, Dhole</p>",
+            "<p>Project Tiger 1973; Nilgiri Biosphere Reserve</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Nagarhole National Park (Rajiv Gandhi NP)</p>",
+            "<p>Mysuru / Kodagu</p>",
+            "<p>643</p>",
+            "<p>Tiger, Leopard, Elephant, Dholes</p>",
+            "<p>Project Tiger 1999; Kabini reservoir within park</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Bhadra Wildlife Sanctuary</p>",
+            "<p>Chikkamagaluru / Shivamogga</p>",
+            "<p>492</p>",
+            "<p>Tiger, Elephant, Gaur, Crocodile</p>",
+            "<p>Project Tiger 1998; Bhadra River</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Dandeli-Anshi Tiger Reserve (Kali TR)</p>",
+            "<p>Uttara Kannada</p>",
+            "<p>1,097</p>",
+            "<p>Tiger, Elephant, Black Panther, Malabar Pied Hornbill</p>",
+            "<p>Project Tiger 2007; Kali (Kalinadi) river</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>BRT (Biligirirangana Hills) Tiger Reserve</p>",
+            "<p>Chamarajanagar</p>",
+            "<p>574</p>",
+            "<p>Tiger, Elephant, Spotted Deer, Sloth Bear</p>",
+            "<p>Project Tiger 2011; Soliga tribe traditional land</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Kudremukh National Park</p>",
+            "<p>Chikkamagaluru</p>",
+            "<p>600</p>",
+            "<p>Lion-tailed Macaque, Malabar Giant Squirrel, Pangolin</p>",
+            "<p>UNESCO WH; shola grassland</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Ranganathittu Bird Sanctuary</p>",
+            "<p>Mandya</p>",
+            "<p>0.67</p>",
+            "<p>Painted Stork, Open-bill Stork, Ibis, Cormorant</p>",
+            "<p>Ramsar Wetland Site 2022; Cauvery river islands</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Daroji Sloth Bear Sanctuary</p>",
+            "<p>Ballari / Vijayanagara</p>",
+            "<p>82</p>",
+            "<p>Sloth Bear, Porcupine, Jackal</p>",
+            "<p>Only dedicated sloth bear sanctuary in Karnataka</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Cauvery Wildlife Sanctuary</p>",
+            "<p>Chamarajanagar / Ramanagara</p>",
+            "<p>1,027</p>",
+            "<p>Mahseer Fish, Elephant, Crocodile, Otter</p>",
+            "<p>Cauvery river stretch; Galibore fishing camp</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Brahmagiri Wildlife Sanctuary</p>",
+            "<p>Kodagu</p>",
+            "<p>181</p>",
+            "<p>Nilgiri Tahr, Tiger, King Cobra, Malabar Civet</p>",
+            "<p>Adjoins Kerala's Wayanad Sanctuary</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Mookambika Wildlife Sanctuary</p>",
+            "<p>Udupi / Dakshina Kannada</p>",
+            "<p>247</p>",
+            "<p>Leopard, Jungle Cat, Sambar, Giant Squirrel</p>",
+            "<p>Pilgrimage centre within sanctuary</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Gudavi Bird Sanctuary</p>",
+            "<p>Shivamogga (Sorab)</p>",
+            "<p>0.74</p>",
+            "<p>Painted Stork, Lesser Whistling Duck</p>",
+            "<p>Ramsar Wetland Site 2022</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Arabithittu Wildlife Sanctuary</p>",
+            "<p>Mysuru</p>",
+            "<p>13</p>",
+            "<p>Lesser Florican, Peafowl, Jackal</p>",
+            "<p>Grassland bird sanctuary</p>"
           ]
         }
       ]
@@ -358,33 +359,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Biosphere Reserve</strong></p>",
+            "<p><strong>States Covered</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nilgiri Biosphere Reserve</p>",
+            "<p>Karnataka, Tamil Nadu, Kerala</p>",
+            "<p>First BR in India (1986); 5,520 sq km; includes Bandipur, Nagarhole, Mudumalai, Wayanad; largest BR in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Agasthyamalai Biosphere Reserve</p>",
+            "<p>Karnataka, Tamil Nadu, Kerala</p>",
+            "<p>UNESCO recognised; rich endemism; includes Shendurney, Kalakkad-Mundanthurai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kudremukh Biosphere Reserve</p>",
+            "<p>Karnataka</p>",
+            "<p>Shola forests; Lion-tailed Macaque; Gangamoola — source of 3 rivers</p>"
           ]
         }
       ]
@@ -402,71 +403,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>State Animal</strong></p>",
+            "<p>Indian Elephant (Elephas maximus)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Bird</strong></p>",
+            "<p>Indian Roller / Blue Jay (Coracias benghalensis) — called 'Neelakantha'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Tree</strong></p>",
+            "<p>Sandalwood (Santalum album)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Flower</strong></p>",
+            "<p>Lotus (Nelumbo nucifera)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Butterfly</strong></p>",
+            "<p>Southern Birdwing (Troides minos) — largest butterfly in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Fruit</strong></p>",
+            "<p>Mango (Mangifera indica)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Reptile</strong></p>",
+            "<p>Indian Star Tortoise (Geochelone elegans)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Aquatic Animal</strong></p>",
+            "<p>Mahseer Fish (Tor khudree) — Cauvery Mahseer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Emblem</strong></p>",
+            "<p>Gandaberunda — mythical two-headed eagle; Hoysala dynasty symbol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Anthem</strong></p>",
+            "<p>Jaya Bharata Jananiya Tanujate (written by Kuvempu; set to music by Mysore Ananthaswamy)</p>"
           ]
         }
       ]
@@ -493,89 +494,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Species</strong></p>",
+            "<p><strong>Location in Karnataka</strong></p>",
+            "<p><strong>Status / Note</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Indian Tiger (Panthera tigris)</p>",
+            "<p>Bandipur, Nagarhole, Bhadra, BRT, Kali</p>",
+            "<p>Karnataka has highest tiger density in some surveys</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Asian Elephant</p>",
+            "<p>All major forests; Nagarhole leads</p>",
+            "<p>Largest elephant population in any Indian state</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lion-Tailed Macaque</p>",
+            "<p>Kudremukh, Shola forests</p>",
+            "<p>Critically endangered; endemic to Western Ghats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Malabar Giant Squirrel</p>",
+            "<p>Malnad forests</p>",
+            "<p>Endemic to Indian subcontinent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Black Panther (melanistic Leopard)</p>",
+            "<p>Nagarhole, Dandeli-Anshi</p>",
+            "<p>Karnataka famous for black panther sightings</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>King Cobra</p>",
+            "<p>Western Ghats</p>",
+            "<p>World's longest venomous snake; many in Malnad</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cauvery Mahseer Fish</p>",
+            "<p>Cauvery, Kabini rivers</p>",
+            "<p>Sacred fish; endangered; conservation at Galibore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nilgiri Tahr</p>",
+            "<p>Brahmagiri, Pushpagiri</p>",
+            "<p>Endangered mountain goat; Western Ghats endemic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dhole (Indian Wild Dog)</p>",
+            "<p>Nagarhole, Bandipur</p>",
+            "<p>Endangered pack hunter; plays crucial ecological role</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Great Indian Hornbill</p>",
+            "<p>Kodagu, Uttara Kannada</p>",
+            "<p>Umbrella species for forest conservation</p>"
           ]
         }
       ]
@@ -593,50 +594,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Mining Issue — Bellary</strong></p>",
+            "<p>Illegal iron-ore mining scandal 2010-11; led to landmark Supreme Court ruling; Vijayanagara dist.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Cauvery Water Dispute</strong></p>",
+            "<p>Inter-state dispute between Karnataka, Tamil Nadu, Kerala &amp; Puducherry; Cauvery Water Disputes Tribunal; Supreme Court final order 2018</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Western Ghats Ecology Panel</strong></p>",
+            "<p>Kasturirangan Report (2013) &amp; Madhav Gadgil Report (2011) recommended ESA (Ecologically Sensitive Areas) zones</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Kudremukh Iron Ore Mine</strong></p>",
+            "<p>Controversy over mining in Kudremukh NP; mine closed 2005 after Supreme Court order</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Solid Waste — Bengaluru</strong></p>",
+            "<p>Mandur landfill issue; Bruhat Bengaluru Mahanagara Palike (BBMP) solid waste management</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Pollution — Bellandur Lake</strong></p>",
+            "<p>Bengaluru's Bellandur Lake catches fire due to sewage foam; Varthur Lake — similar issues</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Deforestation — Malnad</strong></p>",
+            "<p>Hydroelectric projects threatening shola forests; Silent Valley controversy echoes</p>"
           ]
         }
       ]

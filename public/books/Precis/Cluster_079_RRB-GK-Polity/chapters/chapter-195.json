@@ -1,0 +1,135 @@
+{
+  "title": "Tenure, Removal and Resignation",
+  "order": 195,
+  "blocks": [
+    {
+      "id": "ywkviiq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Post</strong></p>",
+            "<p><strong>Tenure</strong></p>",
+            "<p><strong>Removal Authority</strong></p>",
+            "<p><strong>Resignation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairman</p>",
+            "<p>6 years or 65 years</p>",
+            "<p>President after Supreme Court inquiry</p>",
+            "<p>To President</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Member</p>",
+            "<p>6 years or 65 years</p>",
+            "<p>President after Supreme Court inquiry</p>",
+            "<p>To President</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "A Judge of the Supreme Court shall not be removed from his office except by an order of the President passed after an address by each House of Parliament supported by a majority of the total membership of that House and by a majority of not less than two-thirds of the members of that House present and voting.",
+      "id": "3v3702k"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Constitutional Post",
+        "Tenure / Max Age",
+        "Resignation Submitted To",
+        "Removal Authority & Grounds"
+      ],
+      "rows": [
+        [
+          "Supreme Court Judge",
+          "Until age 65",
+          "President of India",
+          "President (Special Majority of Parliament on proved misbehaviour/incapacity)"
+        ],
+        [
+          "High Court Judge",
+          "Until age 62",
+          "President of India",
+          "President (Same manner and grounds as SC Judge)"
+        ],
+        [
+          "CAG of India",
+          "6 Years or 65 Years",
+          "President of India",
+          "President (Same manner and grounds as SC Judge)"
+        ],
+        [
+          "UPSC Chairman / Member",
+          "6 Years or 65 Years",
+          "President of India",
+          "President (After Supreme Court inquiry for misbehaviour / insolvency)"
+        ],
+        [
+          "SPSC Chairman / Member",
+          "6 Years or 62 Years",
+          "Governor",
+          "President (Appointed by Governor, but removed ONLY by President)"
+        ]
+      ],
+      "id": "wa0cx7x"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SC Judge Max Age",
+          "value": "65 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "HC Judge Max Age",
+          "value": "62 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "UPSC / CAG Term Limit",
+          "value": "6 Years / 65 Age",
+          "icon": "award"
+        },
+        {
+          "label": "Impeachment Article",
+          "value": "Article 124(4)",
+          "icon": "book"
+        }
+      ],
+      "id": "gnic5fd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "High Court judges submit their resignation to the President of India, NOT to the Governor of the state.",
+        "Members of State Public Service Commissions are appointed by the Governor, but their removal power lies exclusively with the President of India.",
+        "Grounds for impeachment of SC/HC judges are limited strictly to 'proved misbehaviour' or 'incapacity' under Article 124(4).",
+        "CAG, CEC, and UPSC Chairmen share the same removal process and grounds as a Judge of the Supreme Court."
+      ],
+      "id": "ytm3g7d"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Supreme Court judges hold office until the age of 65 years and submit their resignation directly to the President of India.",
+        "High Court judges hold office until attaining 62 years of age and can be removed by the President through a parliamentary address.",
+        "The Comptroller and Auditor General (CAG) and Chief Election Commissioner (CEC) share the same tenure of 6 years or 65 years of age, whichever is earlier.",
+        "Members of the State Public Service Commission (SPSC) are appointed by the Governor but can only be removed by the President of India.",
+        "Removal of Judges requires a special majority in both Houses of Parliament on grounds of 'proved misbehaviour' or 'incapacity'."
+      ],
+      "id": "3huni6r"
+    }
+  ],
+  "enriched": true
+}

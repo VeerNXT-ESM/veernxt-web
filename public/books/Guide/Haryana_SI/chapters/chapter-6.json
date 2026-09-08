@@ -53,57 +53,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Indicator</strong></p>",
+            "<p><strong>Value / Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>GSDP (2023-24)</p>",
+            "<p>Approx. ₹9.5 lakh crore (nominal)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Per Capita Income</p>",
+            "<p>Among top 5 states in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Primary Sector</p>",
+            "<p>Agriculture contributes ~15% to GSDP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Secondary Sector</p>",
+            "<p>Industries ~30%; major contributor</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tertiary Sector</p>",
+            "<p>Services ~55%; IT, trade, finance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major Crops</p>",
+            "<p>Wheat, rice (paddy), sugarcane, mustard, cotton, bajra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Export Zone</p>",
+            "<p>Auto components, textiles, rice; Basmati rice major export</p>"
           ]
         }
       ]
@@ -121,7 +121,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wiw7gqu"
+      "id": "wiw7gqu",
+      "content": "Haryana is a key contributor to India's food security. It supplies ~15% of India's wheat and ~10% of its rice procurement to the Central Pool."
     },
     {
       "type": "comparisonTable",
@@ -151,57 +152,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Crop</strong></p>",
+            "<p><strong>Season (Kharif/Rabi)</strong></p>",
+            "<p><strong>Major Districts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wheat</p>",
+            "<p>Rabi (sown Oct–Nov; harvest Mar–Apr)</p>",
+            "<p>Karnal, Kurukshetra, Ambala, Kaithal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Paddy (Rice)</p>",
+            "<p>Kharif (Jun–Nov)</p>",
+            "<p>Karnal, Kurukshetra, Ambala – 'Rice Bowl'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sugarcane</p>",
+            "<p>Annual / Kharif</p>",
+            "<p>Yamunanagar, Panipat, Karnal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cotton</p>",
+            "<p>Kharif</p>",
+            "<p>Sirsa, Fatehabad, Hisar, Bhiwani</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mustard (Sarson)</p>",
+            "<p>Rabi</p>",
+            "<p>Mahendragarh, Rewari, Bhiwani</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bajra</p>",
+            "<p>Kharif</p>",
+            "<p>Bhiwani, Mahendragarh, Hisar</p>"
           ]
         }
       ]
@@ -219,65 +220,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Sector / Hub</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Automobile &amp; Auto Parts</p>",
+            "<p>Gurugram, Faridabad, Manesar</p>",
+            "<p>Maruti Suzuki, Hero MotoCorp, Honda plants</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IT / BPO / Corporate</p>",
+            "<p>Gurugram (Cyber City)</p>",
+            "<p>India's 2nd largest IT employment after Bengaluru</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Steel / Heavy Industry</p>",
+            "<p>Faridabad, Hisar</p>",
+            "<p>SAIL plant; steel rolling mills</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Textiles / Handloom</p>",
+            "<p>Panipat, Bhiwani</p>",
+            "<p>Panipat = 'City of Weavers'; woollen goods</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Scientific Instruments</p>",
+            "<p>Ambala Cantonment</p>",
+            "<p>India's largest scientific instrument cluster</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Agriculture Equipment</p>",
+            "<p>Faridabad, Hisar</p>",
+            "<p>Tractor &amp; farm equipment manufacturing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pharma / Biotech</p>",
+            "<p>Panchkula, Gurugram</p>",
+            "<p>Growing sector; several MNCs</p>"
           ]
         }
       ]
@@ -304,57 +305,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Institution</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Focus</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>National Dairy Research Institute (NDRI)</p>",
+            "<p>Karnal</p>",
+            "<p>Dairy science; premier institution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Central Soil Salinity Research Institute (CSSRI)</p>",
+            "<p>Karnal</p>",
+            "<p>Saline/alkaline land research</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>National Research Centre on Equines</p>",
+            "<p>Hisar</p>",
+            "<p>Horse &amp; equine research</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chaudhary Charan Singh Haryana Agri Univ (HAU)</p>",
+            "<p>Hisar</p>",
+            "<p>State's premier agriculture university</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kurukshetra University</p>",
+            "<p>Kurukshetra</p>",
+            "<p>Founded 1956; arts, science, commerce</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>MDU Rohtak</p>",
+            "<p>Rohtak</p>",
+            "<p>Maharishi Dayanand University</p>"
           ]
         }
       ]

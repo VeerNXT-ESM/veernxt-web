@@ -43,7 +43,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jpfdluy"
+      "id": "jpfdluy",
+      "content": "Scientific names follow binomial nomenclature introduced by Carolus Linnaeus. Each organism has two names <strong>Genus</strong> (first letter capital) and <strong>Species</strong> (small letter). Names are written in italics in print and underlined separately when handwritten."
     },
     {
       "id": "kcj7zpu",
@@ -58,78 +59,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Scientific Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rice</p>",
+            "<p>Oryza sativa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wheat</p>",
+            "<p>Triticum aestivum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Maize</p>",
+            "<p>Zea mays</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Barley</p>",
+            "<p>Hordeum vulgare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gram</p>",
+            "<p>Cicer arietinum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pea</p>",
+            "<p>Pisum sativum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mustard</p>",
+            "<p>Brassica campestris</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Potato</p>",
+            "<p>Solanum tuberosum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tomato</p>",
+            "<p>Solanum lycopersicum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sugarcane</p>",
+            "<p>Saccharum officinarum</p>"
           ]
         }
       ]
@@ -147,64 +148,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Scientific Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mango</p>",
+            "<p>Mangifera indica</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Banana</p>",
+            "<p>Musa paradisiaca</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Apple</p>",
+            "<p>Malus domestica</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Guava</p>",
+            "<p>Psidium guajava</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Onion</p>",
+            "<p>Allium cepa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Garlic</p>",
+            "<p>Allium sativum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Carrot</p>",
+            "<p>Daucus carota</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cabbage</p>",
+            "<p>Brassica oleracea</p>"
           ]
         }
       ]
@@ -222,64 +223,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Scientific Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Human</p>",
+            "<p>Homo sapiens</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cow</p>",
+            "<p>Bos indicus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Buffalo</p>",
+            "<p>Bubalus bubalis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dog</p>",
+            "<p>Canis familiaris</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cat</p>",
+            "<p>Felis catus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Goat</p>",
+            "<p>Capra hircus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sheep</p>",
+            "<p>Ovis aries</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Horse</p>",
+            "<p>Equus caballus</p>"
           ]
         }
       ]
@@ -297,72 +298,67 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Scientific Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lion</p>",
+            "<p>Panthera leo</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tiger</p>",
+            "<p>Panthera tigris</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Elephant</p>",
+            "<p>Elephas maximus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Camel</p>",
+            "<p>Camelus dromedarius</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deer</p>",
+            "<p>Cervus elaphus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Monkey</p>",
+            "<p>Macaca mulatta</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Frog</p>",
+            "<p>Rana tigrina</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cockroach</p>",
+            "<p>Periplaneta americana</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Introduction to Scientific Names (Binomial Nomenclature)",
-      "id": "w183r45"
     },
     {
       "id": "zwnb4k9",
@@ -377,50 +373,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Scientific Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bacteria causing TB</p>",
+            "<p>Mycobacterium tuberculosis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cholera bacteria</p>",
+            "<p>Vibrio cholerae</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Malaria parasite</p>",
+            "<p>Plasmodium vivax</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Amoeba</p>",
+            "<p>Entamoeba histolytica</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Yeast</p>",
+            "<p>Saccharomyces cerevisiae</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Penicillium</p>",
+            "<p>Penicillium notatum</p>"
           ]
         }
       ]
@@ -438,64 +434,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Scientific Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ragi</p>",
+            "<p>Eleusine coracana</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Jowar</p>",
+            "<p>Sorghum bicolor</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bajra</p>",
+            "<p>Pennisetum glaucum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lentil</p>",
+            "<p>Lens culinaris</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Red gram</p>",
+            "<p>Cajanus cajan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Black gram</p>",
+            "<p>Vigna mungo</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Green gram</p>",
+            "<p>Vigna radiata</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Groundnut</p>",
+            "<p>Arachis hypogaea</p>"
           ]
         }
       ]
@@ -513,64 +509,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Scientific Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tea</p>",
+            "<p>Camellia sinensis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Coffee</p>",
+            "<p>Coffea arabica</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cotton</p>",
+            "<p>Gossypium herbaceum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Jute</p>",
+            "<p>Corchorus capsularis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rubber</p>",
+            "<p>Hevea brasiliensis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Coconut</p>",
+            "<p>Cocos nucifera</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sunflower</p>",
+            "<p>Helianthus annuus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tobacco</p>",
+            "<p>Nicotiana tabacum</p>"
           ]
         }
       ]
@@ -588,64 +584,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Scientific Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Leopard</p>",
+            "<p>Panthera pardus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cheetah</p>",
+            "<p>Acinonyx jubatus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wolf</p>",
+            "<p>Canis lupus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fox</p>",
+            "<p>Vulpes vulpes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bear</p>",
+            "<p>Ursus arctos</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Giraffe</p>",
+            "<p>Giraffa camelopardalis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Zebra</p>",
+            "<p>Equus quagga</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kangaroo</p>",
+            "<p>Macropus rufus</p>"
           ]
         }
       ]
@@ -663,64 +659,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Scientific Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Peacock</p>",
+            "<p>Pavo cristatus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Crow</p>",
+            "<p>Corvus splendens</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sparrow</p>",
+            "<p>Passer domesticus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Eagle</p>",
+            "<p>Aquila chrysaetos</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ostrich</p>",
+            "<p>Struthio camelus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cobra</p>",
+            "<p>Naja naja</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lizard</p>",
+            "<p>Hemidactylus flaviviridis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Crocodile</p>",
+            "<p>Crocodylus palustris</p>"
           ]
         }
       ]
@@ -738,64 +734,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Scientific Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rohu fish</p>",
+            "<p>Labeo rohita</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Catla fish</p>",
+            "<p>Catla catla</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Shark</p>",
+            "<p>Scoliodon laticaudus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Octopus</p>",
+            "<p>Octopus vulgaris</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Whale</p>",
+            "<p>Balaenoptera musculus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dolphin</p>",
+            "<p>Delphinus delphis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Starfish</p>",
+            "<p>Asterias rubens</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Jellyfish</p>",
+            "<p>Aurelia aurita</p>"
           ]
         }
       ]
@@ -808,7 +804,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vmd82dy"
+      "id": "vmd82dy",
+      "content": "1. Father of Taxonomy – Carolus Linnaeus."
     },
     {
       "type": "examAlert",
@@ -821,23 +818,28 @@
     },
     {
       "type": "paragraph",
-      "id": "47tff1w"
+      "id": "47tff1w",
+      "content": "2. Rice – Oryza sativa."
     },
     {
       "type": "paragraph",
-      "id": "dtw1pdg"
+      "id": "dtw1pdg",
+      "content": "3. Human – Homo sapiens."
     },
     {
       "type": "paragraph",
-      "id": "qwisgsz"
+      "id": "qwisgsz",
+      "content": "4. Tiger – Panthera tigris."
     },
     {
       "type": "paragraph",
-      "id": "mtjd5xk"
+      "id": "mtjd5xk",
+      "content": "5. Mango – Mangifera indica."
     },
     {
       "type": "paragraph",
-      "id": "3st26gz"
+      "id": "3st26gz",
+      "content": "6. Malaria parasite – Plasmodium vivax."
     }
   ],
   "enriched": true

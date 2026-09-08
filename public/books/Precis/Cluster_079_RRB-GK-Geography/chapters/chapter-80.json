@@ -1,0 +1,95 @@
+{
+  "title": "MOST IMPORTANT EXAM POINTS",
+  "order": 80,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Igneous rocks are primary rocks.<br/>• Basalt forms ocean floors.<br/>• Sedimentary rocks contain fossils.<br/>• Marble forms from limestone.<br/>• Rock cycle is continuous.",
+      "id": "y7a31da"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Sedimentary rocks contain fossils.",
+      "id": "7wco0eh"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Rock / Feature",
+        "Key Significance / Origin"
+      ],
+      "rows": [
+        [
+          "Igneous rocks",
+          "Primary rocks"
+        ],
+        [
+          "Basalt",
+          "Forms ocean floors"
+        ],
+        [
+          "Sedimentary rocks",
+          "Contain fossils"
+        ],
+        [
+          "Marble",
+          "Forms from limestone"
+        ]
+      ],
+      "id": "nmy3qic"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Rocks",
+          "value": "Igneous",
+          "icon": "book"
+        },
+        {
+          "label": "Ocean Floor Rock",
+          "value": "Basalt",
+          "icon": "info"
+        },
+        {
+          "label": "Fossil Bearers",
+          "value": "Sedimentary",
+          "icon": "check"
+        },
+        {
+          "label": "Source of Marble",
+          "value": "Limestone",
+          "icon": "award"
+        },
+        {
+          "label": "Rock Cycle",
+          "value": "Continuous",
+          "icon": "clock"
+        }
+      ],
+      "id": "339itte"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently asked: Sedimentary rocks are the only rock type containing fossils.",
+        "High yield point: Basalt forms the primary layer of ocean floors.",
+        "Metamorphism focus: Marble forms specifically from limestone transformation."
+      ],
+      "id": "sgk0hr2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks serve as the primary rocks from which others originate.",
+        "Basalt is the principal rock composition forming ocean floors.",
+        "Sedimentary rocks uniquely contain trapped organic fossils.",
+        "Marble is a metamorphic rock produced from limestone.",
+        "The rock cycle is an ongoing, continuous geological process."
+      ],
+      "id": "z3tr5w6"
+    }
+  ],
+  "enriched": true
+}

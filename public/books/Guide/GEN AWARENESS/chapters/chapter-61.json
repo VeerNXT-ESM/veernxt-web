@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "2w1bbpq"
+      "id": "2w1bbpq",
+      "content": "The periodic table is the systematic arrangement of chemical elements based on their atomic numbers, electronic configuration and chemical properties. It is one of the most important tools in chemistry that helps scientists understand the relationships between different elements and predict their behavior."
     },
     {
       "type": "statStrip",
@@ -52,15 +53,18 @@
     },
     {
       "type": "paragraph",
-      "id": "6h4ahza"
+      "id": "6h4ahza",
+      "content": "• As the number of discovered elements increased, it became difficult to study them individually."
     },
     {
       "type": "paragraph",
-      "id": "n5ikku1"
+      "id": "n5ikku1",
+      "content": "• Scientists needed a systematic way to group elements with similar properties."
     },
     {
       "type": "paragraph",
-      "id": "nq9tqp6"
+      "id": "nq9tqp6",
+      "content": "• The periodic table helps organize elements for easier study and understanding."
     },
     {
       "id": "x70oyvd",
@@ -70,22 +74,26 @@
     },
     {
       "type": "paragraph",
-      "id": "a4fb3cw"
+      "id": "a4fb3cw",
+      "content": "Johann Wolfgang Dobereiner (1829) grouped elements into sets of three called triads based on similar chemical properties."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xdlp2l9"
+      "id": "xdlp2l9",
+      "content": "• Lithium, Sodium, Potassium"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xohqsey"
+      "id": "xohqsey",
+      "content": "• Calcium, Strontium, Barium"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "w08i15t"
+      "id": "w08i15t",
+      "content": "• Chlorine, Bromine, Iodine"
     },
     {
       "id": "eln2101",
@@ -95,7 +103,8 @@
     },
     {
       "type": "paragraph",
-      "id": "g6v9sei"
+      "id": "g6v9sei",
+      "content": "John Newlands arranged elements in order of increasing atomic mass and observed that every eighth element had similar properties."
     },
     {
       "id": "spwkuvi",
@@ -105,24 +114,23 @@
     },
     {
       "type": "paragraph",
-      "id": "68yjjm8"
+      "id": "68yjjm8",
+      "content": "Dmitri Mendeleev arranged elements in increasing order of atomic mass and grouped them based on similar chemical properties."
     },
     {
       "type": "paragraph",
-      "id": "sjly4ax"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Need for Classification of Elements",
-      "id": "xd9doj1"
+      "id": "sjly4ax",
+      "content": "• Left gaps for undiscovered elements."
     },
     {
       "type": "paragraph",
-      "id": "wrby2o1"
+      "id": "wrby2o1",
+      "content": "• Predicted properties of unknown elements."
     },
     {
       "type": "paragraph",
-      "id": "g4v0iw6"
+      "id": "g4v0iw6",
+      "content": "• Grouped elements with similar properties together."
     },
     {
       "id": "8gs6u8s",
@@ -132,23 +140,28 @@
     },
     {
       "type": "paragraph",
-      "id": "lwbjh6f"
+      "id": "lwbjh6f",
+      "content": "The modern periodic table was developed by Henry Moseley in 1913 based on atomic number."
     },
     {
       "type": "paragraph",
-      "id": "k7503zw"
+      "id": "k7503zw",
+      "content": "• Elements are arranged according to increasing atomic number."
     },
     {
       "type": "paragraph",
-      "id": "s9tncr9"
+      "id": "s9tncr9",
+      "content": "• There are 7 horizontal rows called periods."
     },
     {
       "type": "paragraph",
-      "id": "fqa4dqm"
+      "id": "fqa4dqm",
+      "content": "• There are 18 vertical columns called groups."
     },
     {
       "type": "paragraph",
-      "id": "uzduvvo"
+      "id": "uzduvvo",
+      "content": "• Elements in the same group have similar chemical properties."
     },
     {
       "type": "comparisonTable",
@@ -189,36 +202,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Group</strong></p>",
+            "<p><strong>Elements</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Group 1</p>",
+            "<p>Alkali metals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Group 2</p>",
+            "<p>Alkaline earth metals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Group 17</p>",
+            "<p>Halogens</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Group 18</p>",
+            "<p>Noble gases</p>"
           ]
         }
       ]
@@ -236,29 +249,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Metals</p>",
+            "<p>Good conductors of heat and electricity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Non-metals</p>",
+            "<p>Poor conductors</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Metalloids</p>",
+            "<p>Have properties of both metals and non-metals</p>"
           ]
         }
       ]
@@ -271,19 +284,23 @@
     },
     {
       "type": "paragraph",
-      "id": "fjtud4p"
+      "id": "fjtud4p",
+      "content": "• Atomic size decreases across a period."
     },
     {
       "type": "paragraph",
-      "id": "lcyd2b7"
+      "id": "lcyd2b7",
+      "content": "• Atomic size increases down a group."
     },
     {
       "type": "paragraph",
-      "id": "c4fwp2l"
+      "id": "c4fwp2l",
+      "content": "• Metallic character decreases across a period."
     },
     {
       "type": "paragraph",
-      "id": "bzcf0wz"
+      "id": "bzcf0wz",
+      "content": "• Electronegativity increases across a period."
     },
     {
       "id": "du83jn7",
@@ -293,7 +310,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4gzaxwg"
+      "id": "4gzaxwg",
+      "content": "• Helps understand properties of elements."
     },
     {
       "type": "examAlert",
@@ -306,11 +324,13 @@
     },
     {
       "type": "paragraph",
-      "id": "exx3wsu"
+      "id": "exx3wsu",
+      "content": "• Predicts properties of undiscovered elements."
     },
     {
       "type": "paragraph",
-      "id": "s7goh97"
+      "id": "s7goh97",
+      "content": "• Helps classify elements into groups."
     },
     {
       "id": "dhexcbf",
@@ -320,19 +340,23 @@
     },
     {
       "type": "paragraph",
-      "id": "rcxss39"
+      "id": "rcxss39",
+      "content": "• Mendeleev is called the Father of Periodic Table."
     },
     {
       "type": "paragraph",
-      "id": "0t4z40e"
+      "id": "0t4z40e",
+      "content": "• Modern periodic table is based on atomic number."
     },
     {
       "type": "paragraph",
-      "id": "pdr45d3"
+      "id": "pdr45d3",
+      "content": "• There are 7 periods and 18 groups."
     },
     {
       "type": "paragraph",
-      "id": "sqficsg"
+      "id": "sqficsg",
+      "content": "• Noble gases belong to group 18."
     }
   ],
   "enriched": true

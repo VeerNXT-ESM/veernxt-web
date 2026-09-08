@@ -10,41 +10,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Boundary</strong></p>",
+            "<p><strong>Stress Type</strong></p>",
+            "<p><strong>Fault</strong></p>",
+            "<p><strong>Earthquake Nature</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Convergent</p>",
+            "<p>Compressional</p>",
+            "<p>Reverse/Thrust</p>",
+            "<p>Largest megathrust earthquakes</p>",
+            "<p>Japan, Chile</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Divergent</p>",
+            "<p>Tensional</p>",
+            "<p>Normal</p>",
+            "<p>Shallow, moderate earthquakes</p>",
+            "<p>Mid-Atlantic Ridge</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Transform</p>",
+            "<p>Shear</p>",
+            "<p>Strike-slip</p>",
+            "<p>Frequent shallow earthquakes</p>",
+            "<p>San Andreas Fault</p>"
           ]
         }
       ]
@@ -132,7 +132,8 @@
     },
     {
       "type": "paragraph",
-      "id": "szyw5wh"
+      "id": "szyw5wh",
+      "content": "Nearly 90–95% of global earthquakes occur along plate boundaries."
     }
   ],
   "enriched": true

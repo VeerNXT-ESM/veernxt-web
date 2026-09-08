@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ev3px3y"
+      "id": "ev3px3y",
+      "content": "Job Analysis is the process of collecting, analysing, and setting out information about the content of a job in order to provide a basis for job description, person specification, and recruitment. It is the foundation of all HR functions."
     },
     {
       "id": "fs0jsbi",
@@ -58,33 +59,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Output</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Used For</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Job Description (JD)</p>",
+            "<p>Written statement of job title, duties, responsibilities, reporting relationships, working conditions, and performance standards</p>",
+            "<p>Recruitment; clarity of role; performance appraisal; legal compliance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Job Specification / Person Specification</p>",
+            "<p>Minimum qualifications, experience, skills, competencies, and attributes required for the job</p>",
+            "<p>Selecting candidates; shortlisting; designing interview questions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Job Evaluation</p>",
+            "<p>Systematic comparison of jobs to determine their relative worth; basis for pay structure</p>",
+            "<p>Pay design; grade structure; resolving pay inequities</p>"
           ]
         }
       ]
@@ -99,12 +100,12 @@
       "id": "xri59n0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<strong>Structured/unstructured interviews with job holder and supervisor; flexible but time-consuming: </strong>Interview Method",
+        "<strong>Analyst directly observes employee performing work; accurate for manual jobs; not suitable for mental work: </strong>Observation Method",
+        "<strong>Position Analysis Questionnaire; standardised; quantitative; suitable for large organisations: </strong>Questionnaire Method (e.g., PAQ)",
+        "<strong>Employees record daily activities; useful for managerial jobs; respondent bias possible: </strong>Diary/Work Log Method",
+        "<strong>Identify critical behaviours that lead to success/failure; Flanagan's technique; competency identification: </strong>Critical Incident Technique (CIT)",
+        "<strong>Analyses what workers do in relation to data, people, and things; US DOL method: </strong>Functional Job Analysis (FJA)"
       ]
     },
     {
@@ -120,7 +121,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mspke88"
+      "id": "mspke88",
+      "content": "Recruitment is the process of attracting, screening, and selecting qualified people for a job at an organisation or firm. It is a positive process :creating a pool of candidates from which selections are made."
     },
     {
       "id": "194y8kn",
@@ -129,28 +131,28 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Source Type</strong></p>",
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Advantages</strong></p>",
+            "<p><strong>Disadvantages</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Internal Sources</p>",
+            "<p>Promotions, transfers, rehires, employee referrals, internal job postings</p>",
+            "<p>Cost-effective; known performance; motivates existing employees; faster onboarding</p>",
+            "<p>Limited talent pool; inbreeding; may create internal politics</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>External Sources</p>",
+            "<p>Campus recruitment, job portals (Naukri, LinkedIn), walk-in drives, employment exchanges, consultants/head-hunters, newspaper ads, social media</p>",
+            "<p>Fresh talent; new ideas; wider choice; specialised skills available</p>",
+            "<p>Higher cost; longer time; integration challenges; unknown performance</p>"
           ]
         }
       ]
@@ -165,11 +167,11 @@
       "id": "tlwmcwl",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Online Job Boards: Naukri.com, LinkedIn, Indeed, Monster :post jobs and search resumes",
+        "Applicant Tracking System (ATS): Software to manage job applications; automate screening; IBPS uses ATS for banking recruitment",
+        "Social Media Recruiting: LinkedIn for professional hiring; Twitter, Instagram for employer branding",
+        "Video Interviewing: HireVue, Zoom interviews; especially post-COVID standard practice",
+        "AI in Recruitment: Resume parsing; chatbot screening; predictive hiring; bias concerns"
       ]
     },
     {
@@ -211,7 +213,8 @@
     },
     {
       "type": "paragraph",
-      "id": "k0uc5kh"
+      "id": "k0uc5kh",
+      "content": "Selection is the process of choosing the most suitable candidate from the pool of applicants recruited. It is a negative process :eliminating unsuitable candidates :unlike recruitment which is positive."
     },
     {
       "id": "1awkif5",
@@ -220,73 +223,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Stage</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Tools / Methods</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Application Screening</p>",
+            "<p>Review applications against job requirements; shortlisting</p>",
+            "<p>ATS; manual review; minimum qualification criteria</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Preliminary Interview</p>",
+            "<p>Brief interaction to check basic suitability; eliminate obviously unsuitable</p>",
+            "<p>Telephonic/video call; structured questions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Written Tests</p>",
+            "<p>Assess knowledge, aptitude, and skills</p>",
+            "<p>Aptitude tests, technical tests, personality tests, SHL, NMAT; IBPS CWE for banking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Group Discussion (GD)</p>",
+            "<p>Assess communication, leadership, teamwork, analytical thinking</p>",
+            "<p>Case GD; topic GD; fish bowl; abstract GD</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Personal Interview</p>",
+            "<p>In-depth assessment; competency-based questions</p>",
+            "<p>Structured, semi-structured, unstructured; panel interview; stress interview</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Background Verification</p>",
+            "<p>Check education, employment history, criminal record, references</p>",
+            "<p>Third-party agencies; CIBIL check; police verification</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Medical Examination</p>",
+            "<p>Ensure fitness for the role; pre-employment health screening</p>",
+            "<p>Medical board; vision test; blood tests</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Job Offer and Appointment</p>",
+            "<p>Formal offer letter; negotiation; acceptance; joining formalities</p>",
+            "<p>Offer letter; appointment letter; induction</p>"
           ]
         }
       ]
@@ -304,73 +307,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Test Category</strong></p>",
+            "<p><strong>Test Type</strong></p>",
+            "<p><strong>Measures</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Aptitude Tests</p>",
+            "<p>Intelligence/Cognitive Ability</p>",
+            "<p>Verbal, numerical, logical reasoning ability</p>",
+            "<p>IBPS Reasoning, GMAT, Raven's Progressive Matrices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Aptitude Tests</p>",
+            "<p>Mechanical Aptitude</p>",
+            "<p>Mechanical understanding; ability to work with machines</p>",
+            "<p>Bennett Mechanical Comprehension Test</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Achievement/Knowledge Tests</p>",
+            "<p>Trade Tests</p>",
+            "<p>Specific knowledge and skills for the job</p>",
+            "<p>IBPS banking questions; computer proficiency test</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Personality Tests</p>",
+            "<p>Projective Tests</p>",
+            "<p>Unconscious personality traits through unstructured stimuli</p>",
+            "<p>Rorschach Inkblot; TAT (Thematic Apperception Test)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Personality Tests</p>",
+            "<p>Objective/Psychometric Tests</p>",
+            "<p>Structured questionnaires for personality dimensions</p>",
+            "<p>Big Five (OCEAN), MBTI, 16PF, Hogan Assessment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Interest Tests</p>",
+            "<p>Interest Inventories</p>",
+            "<p>Vocational interests; career fit</p>",
+            "<p>Strong Interest Inventory; Holland's RIASEC</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Work Sample Tests</p>",
+            "<p>Simulation</p>",
+            "<p>Actual job performance sample</p>",
+            "<p>In-basket exercise; role play; case study presentation</p>"
           ]
         }
       ]
@@ -397,73 +400,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Interview Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Suitability</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Structured Interview</p>",
+            "<p>Pre-determined questions; same questions for all candidates; standardised scoring</p>",
+            "<p>Ensures comparability; legally defensible; large-scale hiring</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Unstructured Interview</p>",
+            "<p>Conversational; no fixed questions; flow based on candidate responses</p>",
+            "<p>Senior positions; exploratory; cultural fit assessment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Semi-Structured</p>",
+            "<p>Core questions fixed; follow-up questions flexible</p>",
+            "<p>Balance of standardisation and depth; most common</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Panel Interview</p>",
+            "<p>Multiple interviewers; different perspectives; reduces bias</p>",
+            "<p>Senior positions; technical + HR combined</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Stress Interview</p>",
+            "<p>Deliberately challenging; create pressure situations; assess resilience</p>",
+            "<p>Jobs requiring high pressure performance; controversial method</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Competency-Based (BEI)</p>",
+            "<p>Behavioural Event Interview; STAR method (Situation, Task, Action, Result)</p>",
+            "<p>Best predictor of future performance; evidence-based</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Case Interview</p>",
+            "<p>Business problem solving; analytical approach</p>",
+            "<p>Consulting, strategy roles; management selection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Technical Interview</p>",
+            "<p>Domain knowledge assessment; coding, problem solving</p>",
+            "<p>IT, engineering, finance specialist roles</p>"
           ]
         }
       ]
@@ -476,17 +479,18 @@
     },
     {
       "type": "paragraph",
-      "id": "5irwymu"
+      "id": "5irwymu",
+      "content": "Onboarding is the process of integrating a new employee into the organisation and acquainting them with the policies, culture, people, and their role. Effective onboarding improves retention, productivity, and employee engagement."
     },
     {
       "id": "kzwy824",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Pre-boarding: Document collection, IT setup, welcome email, buddy assignment before joining",
+        "Orientation: Company overview, vision/mission/values, policies, benefits, compliance training",
+        "Departmental Induction: Team introduction, role clarity, tools and systems, performance expectations",
+        "Buddy System: Senior employee assigned to guide new joinee informally for 3–6 months",
+        "30-60-90 Day Plan: Structured milestones for the first three months of employment"
       ]
     }
   ],

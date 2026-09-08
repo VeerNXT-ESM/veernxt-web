@@ -1,0 +1,118 @@
+{
+  "title": "Powers of TRAI (VERY IMPORTANT)",
+  "order": 342,
+  "blocks": [
+    {
+      "id": "ea69f5j",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Power Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regulatory</p>",
+            "<p>Fix tariffs, regulate telecom services.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Recommendatory</p>",
+            "<p>Advise government on telecom policies and licensing.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Supervisory</p>",
+            "<p>Ensure compliance with telecom standards.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The recommendations of TRAI are advisory in nature and not binding on the Central Government.",
+      "id": "pqp0wx4"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "TRAI",
+        "TDSAT"
+      ],
+      "rows": [
+        [
+          "Primary Function",
+          "Regulatory and Advisory body",
+          "Adjudicatory and Appellate tribunal"
+        ],
+        [
+          "Establishment",
+          "TRAI Act, 1997",
+          "TRAI (Amendment) Act, 2000"
+        ],
+        [
+          "Key Jurisdiction",
+          "Tariff regulation, service quality standards",
+          "Disputes between licensor, licensees, and consumers"
+        ]
+      ],
+      "id": "fqvsq1y"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Establishment Year",
+          "value": "1997",
+          "icon": "calendar"
+        },
+        {
+          "label": "TDSAT Created",
+          "value": "2000",
+          "icon": "clock"
+        },
+        {
+          "label": "Member Term",
+          "value": "3 Years",
+          "icon": "info"
+        },
+        {
+          "label": "Maximum Age",
+          "value": "65 Years",
+          "icon": "check"
+        }
+      ],
+      "id": "nj43ly7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "TRAI's recommendations regarding the need and timing for introduction of new service providers are advisory and non-binding.",
+        "TDSAT was set up in 2000 to adjudicate disputes between a licensor and a licensee, between two or more service providers, and between a service provider and a group of consumers.",
+        "Members of TRAI hold office for a term of 3 years or until they attain the age of 65 years, whichever is earlier."
+      ],
+      "id": "64hqhnt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "TRAI was established as a statutory body under the Telecom Regulatory Authority of India Act, 1997.",
+        "The 2000 Amendment separated adjudicatory functions from TRAI and established the Telecom Disputes Settlement and Appellate Tribunal (TDSAT).",
+        "TRAI regulates telecommunication services, including fixation and revision of tariffs for telecom services.",
+        "The authority consists of a Chairperson and not more than two full-time members and two part-time members."
+      ],
+      "id": "mj06ozw"
+    }
+  ],
+  "enriched": true
+}

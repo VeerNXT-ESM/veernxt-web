@@ -1,0 +1,103 @@
+{
+  "title": "3. Stages of River (Davis Cycle Concept)",
+  "order": 136,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "According to William Morris Davis, rivers pass through three stages: youthful, mature, and old.",
+      "id": "lyi91pe"
+    },
+    {
+      "type": "pullQuote",
+      "content": "According to William Morris Davis, rivers pass through three stages: youthful, mature, and old.",
+      "id": "hh015gb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Stages",
+          "value": "3",
+          "icon": "check"
+        },
+        {
+          "label": "Proponent",
+          "value": "William Morris Davis",
+          "icon": "book"
+        },
+        {
+          "label": "First Stage",
+          "value": "Youthful",
+          "icon": "clock"
+        },
+        {
+          "label": "Final Stage",
+          "value": "Old",
+          "icon": "calendar"
+        }
+      ],
+      "id": "sv8p844"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Davis Cycle Concept was formulated by William Morris Davis.",
+        "Rivers undergo a sequential passage through three distinct stages of development.",
+        "The three stages identified in the river cycle are youthful, mature, and old."
+      ],
+      "id": "66zqwxc"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions often ask for the creator of the river cycle concept (William Morris Davis).",
+        "Be prepared to identify the correct sequence of the three river stages: youthful, mature, and old."
+      ],
+      "id": "r8ex0h6"
+    },
+    {
+      "id": "1ya4865",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Stage</strong></p>",
+            "<p><strong>Gradient</strong></p>",
+            "<p><strong>Dominant Erosion</strong></p>",
+            "<p><strong>Landforms</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Youthful</p>",
+            "<p>Steep</p>",
+            "<p>Vertical</p>",
+            "<p>V-shaped valleys, waterfalls</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mature</p>",
+            "<p>Moderate</p>",
+            "<p>Lateral</p>",
+            "<p>Meanders, floodplains</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Old</p>",
+            "<p>Gentle</p>",
+            "<p>Deposition</p>",
+            "<p>Oxbow lakes, deltas</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

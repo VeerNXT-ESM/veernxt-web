@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "jkkimaa"
+      "id": "jkkimaa",
+      "content": "The Constitution does not specify the number of members. The President determines the strength of the Commission."
     },
     {
       "type": "statStrip",
@@ -97,29 +98,30 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Role</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chairman</p>",
+            "<p>Head of the Commission</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Members</p>",
+            "<p>Assist in recruitment and advisory functions</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "0k8wib9"
+      "id": "0k8wib9",
+      "content": "At least HALF of the members should have held office under the Government of India or a State Government for at least 10 years."
     }
   ],
   "enriched": true

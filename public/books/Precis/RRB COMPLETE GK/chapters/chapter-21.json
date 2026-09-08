@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "5bp8ebo"
+      "id": "5bp8ebo",
+      "content": "Earth rotates 360° in 24 hours.<br></br>→ 15° per hour<br></br>→ 1° every 4 minutes"
     },
     {
       "type": "statStrip",
@@ -34,13 +35,9 @@
       "id": "992c1cv"
     },
     {
-      "type": "pullQuote",
-      "content": "International Date Line",
-      "id": "eehhxmh"
-    },
-    {
       "type": "paragraph",
-      "id": "jsh5rcv"
+      "id": "jsh5rcv",
+      "content": "This forms the basis of local time and standard time."
     },
     {
       "type": "comparisonTable",
@@ -96,7 +93,8 @@
     },
     {
       "type": "paragraph",
-      "id": "uvdxtgd"
+      "id": "uvdxtgd",
+      "content": "Located near 180° longitude. Crossing west adds a day; crossing east subtracts a day."
     }
   ],
   "enriched": true

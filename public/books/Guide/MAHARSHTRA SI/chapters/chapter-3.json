@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3ykwa77"
+      "id": "3ykwa77",
+      "content": "Maharashtra is India's wealthiest and most industrialized state, contributing approximately 14-15% to India's GDP. The state has a diversified economy with strong presence in manufacturing, services, IT, finance, agriculture, and trade."
     },
     {
       "id": "jve8prg",
@@ -57,43 +58,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>GSDP</strong></p>",
+            "<p>Largest among all Indian states (~Rs. 32 lakh crore in 2022-23)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Per Capita Income</strong></p>",
+            "<p>Among highest in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Major Contributors</strong></p>",
+            "<p>Services (55%), Industry (30%), Agriculture (15%)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Financial Hub</strong></p>",
+            "<p>Mumbai houses RBI, SEBI, BSE, NSE, major banks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Foreign Investment</strong></p>",
+            "<p>Largest FDI recipient state in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Export Centers</strong></p>",
+            "<p>SEEPZ (Mumbai), MIDC areas</p>"
           ]
         }
       ]
@@ -117,43 +118,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Kharif Crops (Sown June-July)</strong></p>",
+            "<p>Cotton, Soybean, Jowar (Sorghum), Bajra (Pearl Millet), Paddy, Groundnut, Tur (Pigeon Pea), Urad</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Rabi Crops (Sown October-November)</strong></p>",
+            "<p>Wheat, Gram (Chickpea), Rabi Jowar, Sunflower</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Cash Crops</strong></p>",
+            "<p>Sugarcane, Cotton, Tobacco</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Fruits</strong></p>",
+            "<p>Alphonso Mango (Ratnagiri, Sindhudurg), Grapes (Nashik, Sangli), Banana (Jalgaon), Orange (Nagpur, Amravati), Pomegranate (Solapur, Nashik)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Vegetables</strong></p>",
+            "<p>Onion (Nashik – India's largest producer), Tomato</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Plantation Crops</strong></p>",
+            "<p>Coconut (Konkan), Cashew (Konkan), Betel nut</p>"
           ]
         }
       ]
@@ -171,64 +172,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Nashik</strong></p>",
+            "<p>Onion (India's onion capital), Grapes, Wine, Tomato</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Jalgaon</strong></p>",
+            "<p>Banana (Jalgaon is Banana capital of India), Cotton</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nagpur / Amravati</strong></p>",
+            "<p>Oranges (Nagpur is Orange City), Cotton, Soybean</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Satara / Kolhapur / Sangli</strong></p>",
+            "<p>Sugarcane (cooperative sugar factories)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Vidarbha</strong></p>",
+            "<p>Cotton (historically the cotton bowl of Maharashtra)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Marathwada</strong></p>",
+            "<p>Jowar, Cotton, Sugarcane; drought-prone region</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Ratnagiri / Sindhudurg</strong></p>",
+            "<p>Alphonso Mango, Cashew, Coconut, Paddy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Sangli</strong></p>",
+            "<p>Grapes, Turmeric (India's largest turmeric market)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Solapur</strong></p>",
+            "<p>Pomegranate, Bajra, Cotton</p>"
           ]
         }
       ]
@@ -241,7 +242,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gb8qt2c"
+      "id": "gb8qt2c",
+      "content": "Maharashtra has significant irrigation potential but faces challenges in equitable distribution, especially in drought-prone Marathwada and parts of Vidarbha."
     },
     {
       "type": "pullQuote",
@@ -252,13 +254,13 @@
       "id": "kq1kb6q",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Total irrigated area: About 18-20% of agricultural land",
+        "Major source: Canals (from large dams), wells, and lift irrigation",
+        "Jayakwadi Project (Paithan Dam) – major irrigation in Marathwada",
+        "Koyna Dam – major irrigation in Western Maharashtra",
+        "Maharashtra Krishna Valley Development Corporation (MKVDC) – manages Krishna basin irrigation",
+        "Vidarbha Irrigation Development Corporation (VIDC) – Vidarbha basin",
+        "Konkan Irrigation Development Corporation (KIDC) – Konkan region"
       ]
     },
     {
@@ -275,7 +277,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vepq7kl"
+      "id": "vepq7kl",
+      "content": "Maharashtra Industrial Development Corporation (MIDC) was established in 1962 to promote industrial development. MIDC develops industrial estates and provides infrastructure for industries."
     },
     {
       "id": "dp2g5sm",
@@ -284,29 +287,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>MIDC Headquarters</strong></p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Total Industrial Estates</strong></p>",
+            "<p>Over 280 MIDC areas across Maharashtra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Largest Industrial Area</strong></p>",
+            "<p>Pimpri-Chinchwad (near Pune) – auto industry hub</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Export Processing Zones</strong></p>",
+            "<p>SEEPZ (Mumbai), Navi Mumbai SEZ, Aurangabad SEZ</p>"
           ]
         }
       ]
@@ -324,64 +327,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Mumbai–Thane–Navi Mumbai</strong></p>",
+            "<p>Petrochemicals, pharmaceuticals, financial services, IT, textiles, chemicals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Pune–Pimpri-Chinchwad</strong></p>",
+            "<p>Automobiles (Bajaj, Tata, Mercedes-Benz, Volkswagen, Fiat), IT (Infosys, Wipro, TCS), defense</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nashik</strong></p>",
+            "<p>Hindustan Aeronautics Ltd. (HAL), wine, grapes processing, glass</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Aurangabad</strong></p>",
+            "<p>Aurangabad Industrial City (AURIC); automobiles (Bajaj Auto), pharma</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nagpur</strong></p>",
+            "<p>Orange processing, coal-based industries, power plants, logistics (MIHAN-SEZ)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Kolhapur</strong></p>",
+            "<p>Kolhapuri chappals, textiles, sugar, foundry</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Solapur</strong></p>",
+            "<p>Textiles (bed linen), sugar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Chandrapur</strong></p>",
+            "<p>Thermal power plants, cement, paper, coal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Ratnagiri / Konkan</strong></p>",
+            "<p>Fishing, Jaitapur Nuclear Power Project (proposed), petrochemicals (Ratnagiri)</p>"
           ]
         }
       ]
@@ -399,78 +402,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Reserve Bank of India (RBI)</strong></p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Securities and Exchange Board of India (SEBI)</strong></p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Bombay Stock Exchange (BSE)</strong></p>",
+            "<p>Mumbai – Asia's oldest stock exchange (1875)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>National Stock Exchange (NSE)</strong></p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>National Bank for Agriculture &amp; Rural Development (NABARD)</strong></p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>SIDBI</strong></p>",
+            "<p>Lucknow (regional office in Mumbai)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nuclear Power Corporation of India (NPCIL)</strong></p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Tata Group (Tata Sons)</strong></p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Reliance Industries</strong></p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Bajaj Auto</strong></p>",
+            "<p>Pune</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Mahindra &amp; Mahindra</strong></p>",
+            "<p>Mumbai</p>"
           ]
         }
       ]
@@ -491,13 +494,13 @@
       "id": "4mwnbgt",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Mumbai is the hub of Indian Railways western and central regions.",
+        "Central Railway HQ: Mumbai (CST / Chhatrapati Shivaji Maharaj Terminus – a UNESCO World Heritage Site)",
+        "Western Railway HQ: Mumbai (Churchgate)",
+        "Konkan Railway: Mumbai–Mangalore; passes through Goa; 760 km; many tunnels and bridges",
+        "Mumbai Metro: Currently operational on multiple lines; more under construction",
+        "Mumbai Local Train: Lifeline of Mumbai; runs on Central, Western, and Harbour lines",
+        "Deccan Queen: Mumbai–Pune; first superfast train in India (1930)"
       ]
     },
     {
@@ -519,11 +522,11 @@
       "id": "scfygrk",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "NH-48 (old NH-4): Mumbai–Chennai; passes through Pune",
+        "NH-3 (Mumbai–Agra): Passes through Nashik",
+        "Mumbai–Pune Expressway: India's first 6-lane expressway",
+        "Samruddhi Mahamarg (Hindu Hrudaysamrat Balasaheb Thackeray Maharashtra Samruddhi Mahamarg): Nagpur–Mumbai Expressway, 701 km, operationally opened in phases from 2022",
+        "Mumbai–Nagpur: 6-lane access-controlled highway"
       ]
     },
     {
@@ -536,10 +539,10 @@
       "id": "3lb6shb",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<img></img>Mumbai Port (Major Port – administered by Central Government)",
+        "Jawaharlal Nehru Port (JNPT) / Nhava Sheva: India's largest container port",
+        "Mumbai Port Trust: Major port",
+        "Minor Ports: Ratnagiri, Jaigad, Revdanda, Dighi, Dahanu (managed by Maharashtra Maritime Board)"
       ]
     },
     {
@@ -552,11 +555,11 @@
       "id": "exmfcwk",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Chhatrapati Shivaji Maharaj International Airport, Mumbai: One of India's busiest airports",
+        "Pune International Airport",
+        "Nagpur Airport (Dr. Babasaheb Ambedkar International Airport): MIHAN project",
+        "Aurangabad Airport: Chhatrapati Sambhajinagar Airport",
+        "Navi Mumbai International Airport: Under construction"
       ]
     }
   ],

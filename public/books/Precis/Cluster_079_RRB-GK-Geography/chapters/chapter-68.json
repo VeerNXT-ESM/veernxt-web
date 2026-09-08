@@ -1,0 +1,120 @@
+{
+  "title": "3. Rock Cycle",
+  "order": 68,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The rock cycle is the continuous process through which rocks transform from one type to another over geological time.",
+      "id": "v3u624h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Rock Types",
+          "value": "3 Main Types",
+          "icon": "book"
+        },
+        {
+          "label": "Igneous Source",
+          "value": "Magma Cooling",
+          "icon": "check"
+        },
+        {
+          "label": "Sedimentary Source",
+          "value": "Sediment Compaction",
+          "icon": "info"
+        },
+        {
+          "label": "Metamorphic Source",
+          "value": "Heat & Pressure",
+          "icon": "award"
+        }
+      ],
+      "id": "j5ua8dm"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The rock cycle is a continuous geological process transforming rocks from one type to another.",
+        "Magma cooling forms igneous rocks.",
+        "Weathered rock particles compact to form sedimentary rocks.",
+        "Heat and pressure transform rocks into metamorphic rocks.",
+        "Metamorphic rocks can melt back into magma, continuing the cycle indefinitely."
+      ],
+      "id": "xtpgb64"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The rock cycle demonstrates that no rock type is permanent.",
+      "id": "yc9w0ab"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Magma cools to form igneous rocks.",
+      "id": "wm9i8zo"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Weathering breaks rocks into sediments.",
+      "id": "ugljwmj"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Rock Type",
+        "Source Material",
+        "Primary Process"
+      ],
+      "rows": [
+        [
+          "Igneous Rocks",
+          "Magma",
+          "Cooling"
+        ],
+        [
+          "Sedimentary Rocks",
+          "Sediments",
+          "Weathering & Compaction"
+        ],
+        [
+          "Metamorphic Rocks",
+          "Existing Rocks",
+          "Heat & Pressure"
+        ]
+      ],
+      "id": "lkwa4va"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Sediments compact to form sedimentary rocks.",
+      "id": "65rgkmq"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Heat and pressure convert rocks into metamorphic rocks.",
+      "id": "xj1t7ai"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Heat and pressure are key factors specifically required for forming metamorphic rocks.",
+        "Sedimentary rock formation relies on the sequential processes of weathering and sediment compaction.",
+        "No rock type is permanent in geological time; any rock type can revert to magma or convert to another form."
+      ],
+      "id": "np42ko2"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Metamorphic rocks may melt again to form magma.",
+      "id": "cy6nr7o"
+    },
+    {
+      "type": "paragraph",
+      "content": "The rock cycle demonstrates that no rock type is permanent.",
+      "id": "yudsf6n"
+    }
+  ],
+  "enriched": true
+}

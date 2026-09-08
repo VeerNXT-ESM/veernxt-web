@@ -1,0 +1,84 @@
+{
+  "title": "SSC COMPLETE HISTORY BOOK",
+  "order": 24,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "Modern Indian History focuses on the struggle for freedom, socio-religious reform movements, and the constitutional development of India.",
+      "id": "ieky00q"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Historical Era",
+        "Core Focus Area",
+        "Key Epoch / Milestone"
+      ],
+      "rows": [
+        [
+          "Ancient History",
+          "Indus Valley & Early Dynasties",
+          "Harappan Civilization & Maurya Empire"
+        ],
+        [
+          "Medieval History",
+          "Delhi Sultanate & Mughals",
+          "Foundation of Delhi Sultanate (1206)"
+        ],
+        [
+          "Modern History",
+          "Freedom Movement & British Rule",
+          "Revolt of 1857 & Independence (1947)"
+        ]
+      ],
+      "id": "uxw1gw0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Historical Eras",
+          "value": "3 Main Eras",
+          "icon": "book"
+        },
+        {
+          "label": "Battle of Plassey",
+          "value": "1757 AD",
+          "icon": "calendar"
+        },
+        {
+          "label": "Revolt of 1857",
+          "value": "10th May 1857",
+          "icon": "clock"
+        },
+        {
+          "label": "Indian Independence",
+          "value": "1947",
+          "icon": "award"
+        }
+      ],
+      "id": "vkn43o0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently asked: Years and commanders of major battles such as Plassey (1757), Buxar (1764), and Panipat (1526, 1556, 1761).",
+        "SSC repeatedly tests key Viceroys, Governors-General, and their specific administrative reforms.",
+        "Important sessions of the Indian National Congress (INC), including session presidents and landmark resolutions."
+      ],
+      "id": "rs450n6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "History for SSC exams is broadly divided into Ancient, Medieval, and Modern Indian History.",
+        "Indus Valley Civilisation and the Vedic Period form the foundation of Ancient Indian History.",
+        "Delhi Sultanate (1206–1526 AD) and the Mughal Empire (1526–1857 AD) form the core of Medieval Indian History.",
+        "Modern History focuses heavily on the Indian Freedom Struggle, the Indian National Congress (1885), and British constitutional developments."
+      ],
+      "id": "1qnuxmc"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,144 @@
+{
+  "title": "5. Classification of Planets (EXTREMELY IMPORTANT)",
+  "order": 8,
+  "blocks": [
+    {
+      "id": "x48e5zt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Inner Planets (Terrestrial)</strong></p>",
+            "<p><strong>Outer Planets (Jovian)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mercury, Venus, Earth, Mars</p>",
+            "<p>Jupiter, Saturn, Uranus, Neptune</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rocky surface</p>",
+            "<p>Gaseous</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>High density</p>",
+            "<p>Low density</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Few moons</p>",
+            "<p>Many moons</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>No rings</p>",
+            "<p>Ring systems present</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The terrestrial planets were formed in the close vicinity of the parent star where it was too warm for gases to condense into solid particles, whereas the Jovian planets were formed at quite a distant location.",
+      "id": "ymix0uz"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Terrestrial Planets (Inner)",
+        "Jovian Planets (Outer)"
+      ],
+      "rows": [
+        [
+          "Included Planets",
+          "Mercury, Venus, Earth, Mars",
+          "Jupiter, Saturn, Uranus, Neptune"
+        ],
+        [
+          "Primary Composition",
+          "Rock, silicates, and metallic minerals",
+          "Hydrogen, Helium, Ammonia, and Methane gas/ice"
+        ],
+        [
+          "Average Density",
+          "High density (3.9 to 5.5 g/cm³)",
+          "Low density (0.7 to 1.6 g/cm³)"
+        ],
+        [
+          "Atmosphere",
+          "Thin atmosphere (or absent, like Mercury)",
+          "Thick, deep gaseous atmospheres"
+        ],
+        [
+          "Satellites & Rings",
+          "Few or no moons; no ring systems",
+          "Numerous moons; extensive ring systems"
+        ]
+      ],
+      "id": "c6mlzss"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Planets",
+          "value": "8 Planets",
+          "icon": "book"
+        },
+        {
+          "label": "Terrestrial Planets",
+          "value": "4 (Inner)",
+          "icon": "info"
+        },
+        {
+          "label": "Jovian Planets",
+          "value": "4 (Outer)",
+          "icon": "check"
+        },
+        {
+          "label": "IAU Reclassification",
+          "value": "2006",
+          "icon": "calendar"
+        }
+      ],
+      "id": "to49eph"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Asteroid Belt lies specifically between the orbits of Mars and Jupiter.",
+        "Venus and Uranus exhibit retrograde rotation (rotating clockwise from East to West), unlike the other six planets.",
+        "Saturn has the lowest average density of all planets in the solar system, making it less dense than water.",
+        "Pluto was demoted to a dwarf planet at the 26th General Assembly of the IAU in 2006 for failing to 'clear its orbital neighborhood'."
+      ],
+      "id": "r164dw0"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Planets are broadly divided into two main categories: Terrestrial (Inner) planets and Jovian (Outer) planets based on distance from the Sun and composition.",
+        "The four Terrestrial planets—Mercury, Venus, Earth, and Mars—are dense, rocky, and located inside the Asteroid Belt.",
+        "The four Jovian planets—Jupiter, Saturn, Uranus, and Neptune—are massive gas and ice giants with low densities, extensive ring systems, and numerous moons.",
+        "The Asteroid Belt serves as the physical boundary separating the Inner Terrestrial planets from the Outer Jovian planets.",
+        "In 2006, the International Astronomical Union (IAU) established the official three-part definition of a planet, reclassifying Pluto as a dwarf planet."
+      ],
+      "id": "kn68hk2"
+    }
+  ],
+  "enriched": true
+}

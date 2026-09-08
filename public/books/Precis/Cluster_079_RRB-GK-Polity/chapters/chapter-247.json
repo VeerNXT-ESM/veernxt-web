@@ -1,0 +1,89 @@
+{
+  "title": "11. Exam Traps",
+  "order": 247,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• NITI Aayog is NOT a constitutional body.<br/>• It was formed in 2015.<br/>• Prime Minister is the Chairperson.<br/>• It does NOT allocate funds.<br/>• Replaced Planning Commission.",
+      "id": "tp8chl1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "NITI Aayog is NOT a constitutional body.",
+      "id": "b620zsu"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "NITI Aayog",
+        "Planning Commission"
+      ],
+      "rows": [
+        [
+          "Status",
+          "Replaced the Planning Commission (2015)",
+          "Replaced by NITI Aayog"
+        ],
+        [
+          "Fund Allocation",
+          "Does NOT allocate funds",
+          "Allocated funds to states and ministries"
+        ],
+        [
+          "Chairperson",
+          "Prime Minister",
+          "Prime Minister"
+        ]
+      ],
+      "id": "p15s2sn"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Formation Year",
+          "value": "2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "Chairperson",
+          "value": "Prime Minister",
+          "icon": "award"
+        },
+        {
+          "label": "Body Type",
+          "value": "Non-Constitutional",
+          "icon": "info"
+        },
+        {
+          "label": "Replaced Body",
+          "value": "Planning Commission",
+          "icon": "book"
+        }
+      ],
+      "id": "xj40y3r"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exam Trap: Options often falsely claim NITI Aayog is a constitutional or statutory body.",
+        "Fund Allocation: Remember that NITI Aayog does NOT allocate funds, a key difference often tested in MCQs.",
+        "Direct Question: NITI Aayog replaced the Planning Commission in 1 January 2015 under the Chairmanship of the Prime Minister."
+      ],
+      "id": "3xlrrn3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "NITI Aayog was established in 2015 to replace the Planning Commission.",
+        "It is a non-constitutional body created via an executive resolution.",
+        "The Prime Minister of India serves as the Chairperson of NITI Aayog.",
+        "Unlike the Planning Commission, NITI Aayog has no mandate or power to allocate funds."
+      ],
+      "id": "v5nbben"
+    }
+  ],
+  "enriched": true
+}

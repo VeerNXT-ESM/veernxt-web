@@ -1,0 +1,268 @@
+{
+  "id": "tl31gfp",
+  "title": "PART 5",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i8826je",
+      "content": "PERCENTAGE <br></br>"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Topic",
+          "value": "Percentage",
+          "icon": "book"
+        },
+        {
+          "label": "Core Modules",
+          "value": "7 Topics",
+          "icon": "info"
+        },
+        {
+          "label": "Practice",
+          "value": "Examples & Quiz",
+          "icon": "check"
+        },
+        {
+          "label": "Exam Importance",
+          "value": "High",
+          "icon": "award"
+        }
+      ],
+      "id": "08wtjlx"
+    },
+    {
+      "id": "6r377hm",
+      "type": "heading",
+      "level": 2,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Master foundational concepts and rules for converting between percentages, fractions, and decimals.",
+        "Memorize important percentage values for fast mental math in competitive exams.",
+        "Learn systematically to calculate percentage increase, decrease, and net successive percentage changes.",
+        "Apply reverse percentage techniques to solve complex multi-step quantitative problems."
+      ],
+      "id": "xwd23r7"
+    },
+    {
+      "id": "0my3hf6",
+      "type": "list",
+      "items": [
+        "Percentage means 'per hundred'.<br></br>1% = 1/100",
+        "Percentage is used to express increase or decrease, comparison, profit and loss, marks, population, growth, etc.<br></br><br></br><em>In SSC examination, percentage questions are direct, formula-based, and often linked with Ratio, Profit–Loss and Simple Interest.</em>"
+      ]
+    },
+    {
+      "id": "e9jujbh",
+      "type": "heading",
+      "level": 2,
+      "content": "2. CONVERSION RULES"
+    },
+    {
+      "id": "rlpya28",
+      "type": "list",
+      "items": [
+        "Fraction to Percentage:<br></br>(a/b) × 100<br></br>Example: 3/5 = 60%",
+        "Percentage to Fraction:<br></br>x% = x/100<br></br>Example: 25% = 1/4",
+        "Decimal to Percentage:<br></br>Multiply the decimal by 100<br></br>Example: 0.75 = 75%"
+      ]
+    },
+    {
+      "id": "05c64lu",
+      "type": "heading",
+      "level": 2,
+      "content": "3. IMPORTANT PERCENTAGE VALUES"
+    },
+    {
+      "id": "9gyvwpz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Fraction</strong></p>",
+            "<p><strong>Percentage</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>1/2</p>",
+            "<p>50%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>1/3</p>",
+            "<p>33⅓%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>1/4</p>",
+            "<p>25%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>1/5</p>",
+            "<p>20%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>1/8</p>",
+            "<p>12.5%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>3/4</p>",
+            "<p>75%</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pffmpii",
+      "type": "heading",
+      "level": 2,
+      "content": "4. PERCENTAGE INCREASE & DECREASE"
+    },
+    {
+      "id": "ocvotxu",
+      "type": "list",
+      "items": [
+        "Increase Percentage:<br></br>(Increase / Original) × 100",
+        "Decrease Percentage:<br></br>(Decrease / Original) × 100<br></br>",
+        "Example:<br></br>Price increases from ₹200 to ₹250.<br></br>Increase = 50<br></br>(50/200) × 100 = 25%<br></br>Increase = 25%"
+      ]
+    },
+    {
+      "id": "mkj9nf8",
+      "type": "heading",
+      "level": 2,
+      "content": "5. SUCCESSIVE PERCENTAGE CHANGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "nuvdd4y",
+      "content": "When two percentage changes occur successively:"
+    },
+    {
+      "id": "d6fg5hr",
+      "type": "list",
+      "items": [
+        "Net % = a + b + (ab/100)",
+        "Use negative sign for decrease.<br></br>Example:<br></br>Increase by 10% and then decrease by 10%.<br></br>Net = 10 – 10 – (100/100)<br></br>Net decrease = 1%"
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Percentage Increase",
+        "Percentage Decrease"
+      ],
+      "rows": [
+        [
+          "Multiplier",
+          "(1 + r / 100)",
+          "(1 - r / 100)"
+        ],
+        [
+          "Final Value Formula",
+          "Original Quantity × (1 + r / 100)",
+          "Original Quantity × (1 - r / 100)"
+        ]
+      ],
+      "id": "jc6mq4j"
+    },
+    {
+      "id": "uw17q88",
+      "type": "heading",
+      "level": 2,
+      "content": "6. PERCENTAGE OF A QUANTITY"
+    },
+    {
+      "type": "paragraph",
+      "id": "6q0dvx1",
+      "content": "Formula:"
+    },
+    {
+      "id": "sjb3p0c",
+      "type": "list",
+      "items": [
+        "x% of y = (x/100) × y<br></br>Example:<br></br>15% of 400 = (15/100) × 400 = 60"
+      ]
+    },
+    {
+      "id": "3s29hiv",
+      "type": "heading",
+      "level": 2,
+      "content": "7. REVERSE PERCENTAGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "cv5vbsh",
+      "content": "Example:<br></br>If 20% of a number is 50, find the number.<br></br>(20/100) × x = 50<br></br>x = 250"
+    },
+    {
+      "id": "z5v8au4",
+      "type": "heading",
+      "level": 2,
+      "content": "8. SOLVED EXAMPLES"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Successive percentage change concepts are extensively tested in Profit & Loss, Discount, and Compound Interest topics.",
+        "Fraction-to-percentage conversions are vital for speed and accuracy in Data Interpretation (DI) sets.",
+        "Reverse percentage questions frequently appear in preliminary exam papers to test inverse problem-solving."
+      ],
+      "id": "cz1d1xf"
+    },
+    {
+      "type": "paragraph",
+      "id": "yreia15",
+      "content": "<strong>Example 1:</strong><br></br>A student scored 360 marks out of 450. Find the percentage.<br></br>(360/450) × 100 = 80%<br></br><br></br><strong>Example 2:</strong><br></br>Population of a town is 40,000. It increases by 5%.<br></br>Increase = 2,000<br></br>New population = 42,000"
+    },
+    {
+      "id": "3lndj0k",
+      "type": "heading",
+      "level": 2,
+      "content": "9. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "pezhqbo",
+      "content": "Q1. What is 25% of 640?<br></br>A. 120   B. 140   C. 160   D. 180<br></br><br></br>Q2. Price decreases from ₹500 to ₹450. Find the percentage decrease.<br></br>A. 8%   B. 9%   C. 10%   D. 12%<br></br><br></br>Q3. A number is increased by 20% and then decreased by 10%. Find the net change.<br></br>A. 8% increase   B. 10% decrease   C. No change   D. 2% increase"
+    },
+    {
+      "id": "1x0ilsw",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jx1ecv0",
+      "content": "Q1. C<br></br>Q2. C<br></br>Q3. A"
+    }
+  ],
+  "enriched": true
+}

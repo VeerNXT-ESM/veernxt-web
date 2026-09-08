@@ -1,0 +1,239 @@
+{
+  "id": "uig9c8v",
+  "title": "PART 2",
+  "order": 2,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "djotbys",
+      "content": "<strong>LCM &amp; HCF</strong><br></br>"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Subject",
+          "value": "HCF & LCM",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Methods",
+          "value": "2 Methods",
+          "icon": "check"
+        },
+        {
+          "label": "Key Formula",
+          "value": "HCF × LCM = Product",
+          "icon": "award"
+        },
+        {
+          "label": "Applications",
+          "value": "Fractions & Word Problems",
+          "icon": "info"
+        }
+      ],
+      "id": "8d0jlkj"
+    },
+    {
+      "id": "sdoqin0",
+      "type": "heading",
+      "level": 2,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "HCF (Highest Common Factor) and LCM (Least Common Multiple) are calculated using Prime Factorisation or Division Method.",
+        "The product of any two given numbers is always equal to the product of their HCF and LCM.",
+        "HCF of Fractions = (HCF of Numerators) / (LCM of Denominators).",
+        "LCM of Fractions = (LCM of Numerators) / (HCF of Denominators).",
+        "Word problems involving maximum division or largest measure require HCF, while those involving simultaneous events require LCM."
+      ],
+      "id": "h6vq3ni"
+    },
+    {
+      "id": "lpt1tvo",
+      "type": "list",
+      "items": [
+        "HCF (Highest Common Factor):",
+        "HCF of two or more numbers is the greatest number that divides each of them exactly.",
+        "LCM (Least Common Multiple):",
+        "LCM of two or more numbers is the smallest number which is exactly divisible by each of them.<br></br>In SBIexamination, questions from LCM &amp; HCF are:<br></br>• Direct<br></br>• Formula-based<br></br>• Application-oriented (word problems)"
+      ]
+    },
+    {
+      "id": "zoiqr83",
+      "type": "heading",
+      "level": 2,
+      "content": "METHODS TO FIND HCF & LCM"
+    },
+    {
+      "id": "l9uh1pk",
+      "type": "heading",
+      "level": 2,
+      "content": "(A) PRIME FACTORISATION METHOD"
+    },
+    {
+      "type": "paragraph",
+      "id": "5ibp5os",
+      "content": "Steps:<br></br>1. Resolve each number into prime factors.<br></br>2. For HCF, take common prime factors with the lowest power.<br></br>3. For LCM, take all prime factors with the highest power."
+    },
+    {
+      "type": "paragraph",
+      "id": "y1lkjme",
+      "content": "<strong>Example:</strong><br></br>1)Find HCF and LCM of 12 and 18.<br></br>12 = 2² × 3<br></br>18 = 2 × 3²<br></br>HCF = 2 × 3 = 6<br></br>LCM = 2² × 3² = 36"
+    },
+    {
+      "id": "oxchr7y",
+      "type": "heading",
+      "level": 3,
+      "content": "(B) DIVISION METHOD"
+    },
+    {
+      "type": "paragraph",
+      "id": "ab1mkpg",
+      "content": "Steps:<br></br>1. Divide the numbers by the smallest possible prime number.<br></br>2. Continue dividing till no further division is possible.<br></br>3. Product of the divisors gives the HCF.<br></br>4. Product of the divisors and remaining numbers gives the LCM."
+    },
+    {
+      "id": "m1ntlh8",
+      "type": "heading",
+      "level": 2,
+      "content": "3. IMPORTANT RELATION BETWEEN HCF & LCM"
+    },
+    {
+      "id": "fi0m7s4",
+      "type": "list",
+      "items": [
+        "For two numbers:<br></br>HCF × LCM = Product of the two numbers"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "9p3un3r",
+      "content": "<strong>Example:</strong><br></br>1)If HCF = 6 and LCM = 180, and one number is 30, find the other.<br></br><br></br>6 × 180 = 30 × x<br></br>x = 36<br></br>Numbers are 30 and 36."
+    },
+    {
+      "id": "uem3tgg",
+      "type": "heading",
+      "level": 2,
+      "content": "4. HCF & LCM OF FRACTIONS"
+    },
+    {
+      "id": "3cp0qco",
+      "type": "list",
+      "items": [
+        "HCF of fractions:<br></br>HCF = (HCF of numerators) / (LCM of denominators)",
+        "LCM of fractions:<br></br>LCM = (LCM of numerators) / (HCF of denominators)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "fp2ewe9",
+      "content": "<strong>Example:</strong><br></br>1)Find HCF and LCM of 2/3 and 4/9.<br></br>HCF = 2 / 9<br></br>LCM = 4 / 3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "HCF (Highest Common Factor)",
+        "LCM (Least Common Multiple)"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "The largest positive integer that divides each of the given integers.",
+          "The smallest positive integer that is divisible by each of the given integers."
+        ],
+        [
+          "Fraction Formula",
+          "HCF of Numerators / LCM of Denominators",
+          "LCM of Numerators / HCF of Denominators"
+        ],
+        [
+          "Problem Keywords",
+          "Maximum, Largest, Greatest, Equal splits",
+          "Minimum, Smallest, Least, Occurring together"
+        ]
+      ],
+      "id": "ms1yq5o"
+    },
+    {
+      "id": "o0gbk6f",
+      "type": "heading",
+      "level": 2,
+      "content": "5. WORD PROBLEMS"
+    },
+    {
+      "type": "paragraph",
+      "id": "cqbp2kj",
+      "content": "<strong>Example 1:</strong><br></br>Two numbers have HCF = 12 and LCM = 180. If one number is 36, find the other.<br></br>Solution:<br></br>12 × 180 = 36 × x<br></br>x = 60"
+    },
+    {
+      "type": "paragraph",
+      "id": "jjwxtu5",
+      "content": "<strong>Example 2:</strong><br></br>A bell rings every 6 minutes and another every 8 minutes. After how much time will they ring together?<br></br>Solution:<br></br>LCM of 6 and 8 = 24 minutes"
+    },
+    {
+      "id": "i2vsvlz",
+      "type": "heading",
+      "level": 2,
+      "content": "6. IMPORTANT POINTS TO REMEMBER"
+    },
+    {
+      "type": "paragraph",
+      "id": "vu43w1w",
+      "content": "• HCF of two co-prime numbers is 1.<br></br>• LCM of two co-prime numbers is their product.<br></br>• HCF always divides LCM.<br></br>• LCM is always greater than or equal to the greatest number."
+    },
+    {
+      "id": "nv9erk8",
+      "type": "heading",
+      "level": 2,
+      "content": "7. SOLVED EXAMPLE"
+    },
+    {
+      "type": "paragraph",
+      "id": "t458lvs",
+      "content": "<strong>Example 1:</strong><br></br>Find the HCF of 24 and 36.<br></br>HCF = 12<br></br>"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct questions based on 'Product of two numbers = HCF × LCM' are frequently asked in tier-1 competitive exams.",
+        "Questions involving fractional HCF and LCM often trick candidates by reversing the operations on numerators and denominators.",
+        "Identify key phrases in word problems: 'greatest capacity/length' signals HCF, while 'bells ringing together at intervals' signals LCM."
+      ],
+      "id": "qi8rtmh"
+    },
+    {
+      "type": "paragraph",
+      "id": "vf1sfkr",
+      "content": "<strong>Example 2:</strong><br></br>Find the LCM of 15 and 20.<br></br><br></br>LCM = 60"
+    },
+    {
+      "id": "dt8e3xd",
+      "type": "heading",
+      "level": 2,
+      "content": "8. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "gt0ex5k",
+      "content": "Q1. Find the HCF of 18 and 42.<br></br>A. 6   B. 12   C. 18   D. 21<br></br><br></br>Q2. Find the LCM of 12, 15 and 20.<br></br>A. 60   B. 120   C. 180   D. 240<br></br><br></br>Q3. The HCF and LCM of two numbers are 8 and 96. If one number is 24, find the other.<br></br>A. 32   B. 36   C. 48   D. 64"
+    },
+    {
+      "id": "hnyyhxt",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ss8013s",
+      "content": "Q1. A<br></br>Q2. B<br></br>Q3. A"
+    }
+  ],
+  "enriched": true
+}

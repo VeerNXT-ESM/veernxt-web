@@ -1,0 +1,189 @@
+{
+  "title": "3. Types of Plate Boundaries",
+  "order": 86,
+  "blocks": [
+    {
+      "id": "6q76ji1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Boundary</strong></p>",
+            "<p><strong>Movement</strong></p>",
+            "<p><strong>Crustal Effect</strong></p>",
+            "<p><strong>Landforms</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Divergent</p>",
+            "<p>Move apart</p>",
+            "<p>New crust formed</p>",
+            "<p>Mid-ocean ridges, rift valleys</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Convergent</p>",
+            "<p>Collide</p>",
+            "<p>Crust destroyed or uplifted</p>",
+            "<p>Mountains, trenches, volcanic arcs</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Transform</p>",
+            "<p>Slide horizontally</p>",
+            "<p>Crust neither created nor destroyed</p>",
+            "<p>Fault lines</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Boundary Types",
+          "value": "3",
+          "icon": "book"
+        },
+        {
+          "label": "Divergent Feature",
+          "value": "Mid-Atlantic Ridge",
+          "icon": "info"
+        },
+        {
+          "label": "Fold Mountains",
+          "value": "Himalayas",
+          "icon": "award"
+        },
+        {
+          "label": "Transform Fault",
+          "value": "San Andreas",
+          "icon": "check"
+        }
+      ],
+      "id": "o0w2kg4"
+    },
+    {
+      "id": "uv7sdqv",
+      "type": "heading",
+      "level": 2,
+      "content": "Divergent Boundaries"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Divergent boundaries occur where plates separate, allowing magma to rise and form mid-ocean ridges or rift valleys.",
+        "Convergent boundaries involve plate collisions, creating volcanic chains, island arcs, or fold mountains depending on the crust types.",
+        "Continental–continental collisions at convergent boundaries produce massive fold mountain systems like the Himalayas.",
+        "Transform boundaries feature strike-slip faults where accumulated stress release results in earthquakes."
+      ],
+      "id": "w97spil"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Magma rises to fill the gap created by separating plates.",
+      "id": "s4v7dt6"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Produces mid-ocean ridges such as the Mid-Atlantic Ridge.",
+      "id": "26ygfpp"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Continental–continental collision forms large fold mountains such as the Himalayas.",
+      "id": "k0qqvr0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• On continents, divergence forms rift valleys like the East African Rift.",
+      "id": "ju85goi"
+    },
+    {
+      "id": "q7blxbn",
+      "type": "heading",
+      "level": 2,
+      "content": "Convergent Boundaries"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Boundary Type",
+        "Mechanism & Features",
+        "Examples"
+      ],
+      "rows": [
+        [
+          "Divergent",
+          "Plates separate; rising magma forms mid-ocean ridges and rift valleys",
+          "Mid-Atlantic Ridge, East African Rift"
+        ],
+        [
+          "Convergent",
+          "Plates collide; forms volcanic chains, island arcs, or fold mountains",
+          "Himalayas"
+        ],
+        [
+          "Transform",
+          "Plates slide past each other along strike-slip faults, releasing earthquake stress",
+          "San Andreas Fault"
+        ]
+      ],
+      "id": "axdvni6"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Oceanic–continental convergence forms volcanic mountain chains.",
+      "id": "vs1n1ux"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Oceanic–oceanic convergence forms island arcs.",
+      "id": "6soyk56"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Continental–continental collision forms large fold mountains such as the Himalayas.",
+      "id": "66w87kq"
+    },
+    {
+      "id": "dmapz9h",
+      "type": "heading",
+      "level": 2,
+      "content": "Transform Boundaries"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Himalayas are a prime example of continental–continental convergent collision frequently asked in physical geography questions.",
+        "East African Rift represents a continental divergent boundary, whereas the Mid-Atlantic Ridge represents an oceanic divergent boundary.",
+        "San Andreas Fault is the standard example of a transform boundary characterized by strike-slip faulting."
+      ],
+      "id": "jwrgdg7"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Characterized by strike-slip faults.",
+      "id": "rgypwqr"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Earthquakes occur due to sudden release of accumulated stress.",
+      "id": "0j7esrh"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Example: San Andreas Fault.",
+      "id": "n4pyw35"
+    }
+  ],
+  "enriched": true
+}

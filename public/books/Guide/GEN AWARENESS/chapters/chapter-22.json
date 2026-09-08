@@ -4,8 +4,15 @@
   "order": 22,
   "blocks": [
     {
+      "id": "d753yur",
+      "type": "image",
+      "imageId": "w4oys70",
+      "src": "/books/Guide/GEN AWARENESS/images/image_w4oys70.jpeg"
+    },
+    {
       "type": "paragraph",
-      "id": "l56q44e"
+      "id": "l56q44e",
+      "content": "The Prime Minister is the head of the government in India and the most powerful political authority in the parliamentary system. While the President is the nominal executive head, the real executive powers are exercised by the Prime Minister and the Council of Ministers. The relevant constitutional provisions are mainly found in Articles 74 to 78 in Part V of the Constitution."
     },
     {
       "type": "statStrip",
@@ -58,36 +65,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 74</p>",
+            "<p>Council of Ministers to aid and advise the President</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 75</p>",
+            "<p>Appointment, tenure, salaries and responsibility of ministers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 77</p>",
+            "<p>Conduct of business of the Government of India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 78</p>",
+            "<p>Duties of the Prime Minister</p>"
           ]
         }
       ]
@@ -100,19 +107,23 @@
     },
     {
       "type": "paragraph",
-      "id": "v6seyw2"
+      "id": "v6seyw2",
+      "content": "• The Prime Minister is appointed by the President of India."
     },
     {
       "type": "paragraph",
-      "id": "2spga0u"
+      "id": "2spga0u",
+      "content": "• Usually the leader of the majority party in the Lok Sabha is appointed as Prime Minister."
     },
     {
       "type": "paragraph",
-      "id": "wk00z98"
+      "id": "wk00z98",
+      "content": "• If no party gets majority (hung parliament), the President may appoint the leader who can prove majority support in the Lok Sabha."
     },
     {
       "type": "paragraph",
-      "id": "5r2nnoo"
+      "id": "5r2nnoo",
+      "content": "• Other ministers are appointed by the President on the advice of the Prime Minister."
     },
     {
       "id": "juwrgf6",
@@ -122,15 +133,18 @@
     },
     {
       "type": "paragraph",
-      "id": "9pv6s9m"
+      "id": "9pv6s9m",
+      "content": "• Must be a citizen of India."
     },
     {
       "type": "paragraph",
-      "id": "7ir9ddd"
+      "id": "7ir9ddd",
+      "content": "• Must be a member of either House of Parliament (Lok Sabha or Rajya Sabha)."
     },
     {
       "type": "paragraph",
-      "id": "hnw3if7"
+      "id": "hnw3if7",
+      "content": "• If a person is not a member at the time of appointment, he/she must become a member within six months."
     },
     {
       "id": "cwqty2k",
@@ -140,7 +154,8 @@
     },
     {
       "type": "paragraph",
-      "id": "czk1jb2"
+      "id": "czk1jb2",
+      "content": "The Prime Minister takes oath of office and secrecy administered by the President of India according to the Third Schedule of the Constitution."
     },
     {
       "id": "oga3nwz",
@@ -155,41 +170,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Minister</strong></p>",
+            "<p><strong>Role</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cabinet Ministers</p>",
+            "<p>Senior ministers responsible for major ministries and members of the cabinet</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ministers of State</p>",
+            "<p>Assist cabinet ministers or hold independent charge</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deputy Ministers</p>",
+            "<p>Assist ministers in their administrative duties</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "7mjivq1"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Cabinet vs Council of Ministers",
-      "id": "hn5oa16"
+      "id": "7mjivq1",
+      "content": "The Cabinet is the core decision‑making body of the government and consists of the most senior ministers."
     },
     {
       "id": "4n6r1pw",
@@ -205,19 +216,23 @@
     },
     {
       "type": "paragraph",
-      "id": "79eiesv"
+      "id": "79eiesv",
+      "content": "• Head of the Council of Ministers."
     },
     {
       "type": "paragraph",
-      "id": "lsxvm45"
+      "id": "lsxvm45",
+      "content": "• Advises the President regarding appointment of ministers."
     },
     {
       "type": "paragraph",
-      "id": "fqay4zn"
+      "id": "fqay4zn",
+      "content": "• Advises appointment of Governors, judges, Attorney General, and other key officials."
     },
     {
       "type": "paragraph",
-      "id": "ts1fnth"
+      "id": "ts1fnth",
+      "content": "• Coordinates activities of all ministries."
     },
     {
       "id": "fe1vu5m",
@@ -227,11 +242,13 @@
     },
     {
       "type": "paragraph",
-      "id": "uijtgn9"
+      "id": "uijtgn9",
+      "content": "• Leader of the Lok Sabha (if member of Lok Sabha)."
     },
     {
       "type": "paragraph",
-      "id": "rii957e"
+      "id": "rii957e",
+      "content": "• Advises the President to summon and dissolve Lok Sabha."
     },
     {
       "type": "comparisonTable",
@@ -266,7 +283,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1qo10r4"
+      "id": "1qo10r4",
+      "content": "• Plays a major role in the legislative agenda of the Parliament."
     },
     {
       "id": "4eh30ci",
@@ -276,15 +294,18 @@
     },
     {
       "type": "paragraph",
-      "id": "sqhh409"
+      "id": "sqhh409",
+      "content": "• Allocates portfolios among ministers."
     },
     {
       "type": "paragraph",
-      "id": "plimhj8"
+      "id": "plimhj8",
+      "content": "• Reshuffles or removes ministers."
     },
     {
       "type": "paragraph",
-      "id": "6kqwiy5"
+      "id": "6kqwiy5",
+      "content": "• Coordinates policies of different ministries."
     },
     {
       "id": "2htt7mc",
@@ -294,11 +315,13 @@
     },
     {
       "type": "paragraph",
-      "id": "9fu11iw"
+      "id": "9fu11iw",
+      "content": "• Represents India in international forums."
     },
     {
       "type": "paragraph",
-      "id": "erijdjf"
+      "id": "erijdjf",
+      "content": "• Plays a key role in foreign policy decisions."
     },
     {
       "id": "38p4mma",
@@ -308,11 +331,13 @@
     },
     {
       "type": "paragraph",
-      "id": "qgpn5qt"
+      "id": "qgpn5qt",
+      "content": "• Advises the President regarding declaration of emergency."
     },
     {
       "type": "paragraph",
-      "id": "c95hn45"
+      "id": "c95hn45",
+      "content": "• Leads the government during national crises."
     },
     {
       "id": "ilbbfxo",
@@ -331,7 +356,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1mxrbj3"
+      "id": "1mxrbj3",
+      "content": "The Council of Ministers is collectively responsible to the Lok Sabha. If the Lok Sabha passes a vote of no confidence against the government, the entire Council of Ministers including the Prime Minister must resign."
     },
     {
       "id": "rdh6cyu",
@@ -346,29 +372,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Cabinet</strong></p>",
+            "<p><strong>Council of Ministers</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Small inner body of senior ministers</p>",
+            "<p>Larger body including all categories of ministers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Makes key policy decisions</p>",
+            "<p>Implements decisions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Meets frequently</p>",
+            "<p>Meets occasionally</p>"
           ]
         }
       ]
@@ -381,19 +407,23 @@
     },
     {
       "type": "paragraph",
-      "id": "0xzaevd"
+      "id": "0xzaevd",
+      "content": "• Articles 74–78 deal with Prime Minister and Council of Ministers."
     },
     {
       "type": "paragraph",
-      "id": "48xma3y"
+      "id": "48xma3y",
+      "content": "• Prime Minister is the real executive authority in India."
     },
     {
       "type": "paragraph",
-      "id": "18con6c"
+      "id": "18con6c",
+      "content": "• Council of Ministers is collectively responsible to Lok Sabha."
     },
     {
       "type": "paragraph",
-      "id": "42w3iwd"
+      "id": "42w3iwd",
+      "content": "• First Prime Minister of India – Jawaharlal Nehru."
     }
   ],
   "enriched": true

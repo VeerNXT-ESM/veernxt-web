@@ -1,0 +1,76 @@
+{
+  "title": "5. FCI and Minimum Support Price (MSP)",
+  "order": 419,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "MSP is announced by the Government based on recommendations of the Commission for Agricultural Costs and Prices (CACP). FCI operationalizes MSP by procuring crops, thereby ensuring farmers receive guaranteed prices.",
+      "id": "8w55uhv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "FCI operationalizes MSP by procuring crops, thereby ensuring farmers receive guaranteed prices.",
+      "id": "tjjiykw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Organization",
+        "Primary Responsibility"
+      ],
+      "rows": [
+        [
+          "CACP",
+          "Recommends Minimum Support Price (MSP)"
+        ],
+        [
+          "FCI",
+          "Operationalizes MSP through crop procurement"
+        ]
+      ],
+      "id": "nif19w5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Recommending Body",
+          "value": "CACP",
+          "icon": "book"
+        },
+        {
+          "label": "Operational Agency",
+          "value": "FCI",
+          "icon": "check"
+        },
+        {
+          "label": "Guaranteed Support",
+          "value": "MSP",
+          "icon": "award"
+        }
+      ],
+      "id": "bkgh8xl"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CACP (Commission for Agricultural Costs and Prices) recommends MSP; it does not announce it.",
+        "FCI is the primary agency responsible for procuring crops to implement MSP.",
+        "MSP ensures guaranteed prices to farmers to protect them against price volatility."
+      ],
+      "id": "a06pxmo"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Minimum Support Price (MSP) is announced directly by the Government.",
+        "The Commission for Agricultural Costs and Prices (CACP) recommends the MSP values.",
+        "The Food Corporation of India (FCI) operationalizes MSP by directly procuring crops.",
+        "MSP guarantees minimum price assurance to protect farmers' incomes."
+      ],
+      "id": "93vq2lt"
+    }
+  ],
+  "enriched": true
+}

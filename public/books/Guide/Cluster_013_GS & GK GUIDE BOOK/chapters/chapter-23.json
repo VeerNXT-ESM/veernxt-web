@@ -1,0 +1,495 @@
+{
+  "id": "6qgk6ms",
+  "title": "Chapter 22: Parliament of India",
+  "order": 23,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "qrbwyss",
+      "content": "The Parliament of India is the supreme legislative body of the country. It represents the will of the people and makes laws for the nation. The Indian Parliament follows a bicameral system consisting of two houses: the Lok Sabha (House of the People) and the Rajya Sabha (Council of States), along with the President of India."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Lower House",
+          "value": "Lok Sabha",
+          "icon": "book"
+        },
+        {
+          "label": "Upper House",
+          "value": "Rajya Sabha",
+          "icon": "award"
+        },
+        {
+          "label": "Deadlock Resolution",
+          "value": "Joint Sitting",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Domain",
+          "value": "Legislative Powers",
+          "icon": "info"
+        }
+      ],
+      "id": "ub25ig9"
+    },
+    {
+      "id": "e1of5j7",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Constitutional Articles Related to Parliament"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Parliament of India comprises two houses: the Lok Sabha (House of the People) and the Rajya Sabha (Council of States).",
+        "Parliamentary operations proceed through designated Sessions of Parliament and specific steps in the Legislative Process.",
+        "Parliamentary functions are divided into Legislative Powers, Financial Powers, Executive Control, and Judicial Powers.",
+        "A Joint Sitting of Parliament is utilized to resolve legislative deadlocks between both houses."
+      ],
+      "id": "8olp402"
+    },
+    {
+      "id": "wk7b35t",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 79</p>",
+            "<p>Constitution of Parliament</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 80</p>",
+            "<p>Composition of Rajya Sabha</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 81</p>",
+            "<p>Composition of Lok Sabha</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 83</p>",
+            "<p>Duration of Houses</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 85</p>",
+            "<p>Sessions of Parliament</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 86</p>",
+            "<p>President’s Address</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 100</p>",
+            "<p>Voting in Houses</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 105</p>",
+            "<p>Powers and privileges of Parliament</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 107</p>",
+            "<p>Introduction and passing of bills</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 108</p>",
+            "<p>Joint sitting of Parliament</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 110</p>",
+            "<p>Money Bills</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 111</p>",
+            "<p>President’s assent to Bills</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m0ram76",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Structure of Parliament"
+    },
+    {
+      "id": "all50j1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>President</p>",
+            "<p>Part of Parliament; gives assent to bills</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lok Sabha</p>",
+            "<p>Lower House representing the people</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rajya Sabha</p>",
+            "<p>Upper House representing the states</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vi54920",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Lok Sabha (House of the People)"
+    },
+    {
+      "type": "paragraph",
+      "id": "u4nt6ev",
+      "content": "• Maximum strength: 552 members."
+    },
+    {
+      "type": "paragraph",
+      "id": "1atb2ui",
+      "content": "• Members are directly elected by the people."
+    },
+    {
+      "type": "paragraph",
+      "id": "lkc1g0l",
+      "content": "• Term of Lok Sabha: 5 years."
+    },
+    {
+      "type": "paragraph",
+      "id": "lw62wby",
+      "content": "• The Speaker presides over the Lok Sabha."
+    },
+    {
+      "id": "ql815en",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Rajya Sabha (Council of States)"
+    },
+    {
+      "type": "paragraph",
+      "id": "lai5cy9",
+      "content": "• Maximum strength: 250 members."
+    },
+    {
+      "type": "paragraph",
+      "id": "oet5ac6",
+      "content": "• Members are elected by State Legislative Assemblies."
+    },
+    {
+      "type": "paragraph",
+      "id": "zmz549q",
+      "content": "• 12 members are nominated by the President."
+    },
+    {
+      "type": "paragraph",
+      "id": "onuy0bz",
+      "content": "• It is a permanent house and cannot be dissolved."
+    },
+    {
+      "type": "paragraph",
+      "id": "leulqc1",
+      "content": "• One-third members retire every two years."
+    },
+    {
+      "id": "lvgo6wx",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Sessions of Parliament"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "y8pxw1z",
+      "content": "• Budget Session (February–May)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "03p8hp6",
+      "content": "• Monsoon Session (July–September)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3ful7v4",
+      "content": "• Winter Session (November–December)"
+    },
+    {
+      "id": "r44flg3",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Types of Bills in Parliament"
+    },
+    {
+      "id": "aa41x1n",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Bill</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ordinary Bill</p>",
+            "<p>Can be introduced in either House</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Money Bill</p>",
+            "<p>Can be introduced only in Lok Sabha</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Financial Bill</p>",
+            "<p>Related to financial matters</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Constitution Amendment Bill</p>",
+            "<p>Used to amend the Constitution</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t442b7w",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Legislative Process"
+    },
+    {
+      "type": "paragraph",
+      "id": "bbgoyvk",
+      "content": "• First Reading – Introduction of the bill."
+    },
+    {
+      "type": "paragraph",
+      "id": "iajims0",
+      "content": "• Second Reading – Detailed discussion and committee stage."
+    },
+    {
+      "type": "paragraph",
+      "id": "ltzh5k4",
+      "content": "• Third Reading – Final voting."
+    },
+    {
+      "type": "paragraph",
+      "id": "y98yuwv",
+      "content": "• Bill sent to the other House."
+    },
+    {
+      "type": "paragraph",
+      "id": "ve0cpll",
+      "content": "• President’s assent required for law."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Chamber",
+        "Official Title"
+      ],
+      "rows": [
+        [
+          "Lok Sabha",
+          "House of the People"
+        ],
+        [
+          "Rajya Sabha",
+          "Council of States"
+        ]
+      ],
+      "id": "08pk7u1"
+    },
+    {
+      "id": "fdlk9go",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Joint Sitting of Parliament"
+    },
+    {
+      "type": "paragraph",
+      "id": "ipckhvy",
+      "content": "A joint sitting of both Houses may be called by the President when there is a deadlock between Lok Sabha and Rajya Sabha over a bill. It is presided over by the Speaker of Lok Sabha."
+    },
+    {
+      "id": "ggajak8",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Powers and Functions of Parliament"
+    },
+    {
+      "id": "rgpr9ty",
+      "type": "heading",
+      "level": 3,
+      "content": "Legislative Powers"
+    },
+    {
+      "type": "paragraph",
+      "id": "21vp4yo",
+      "content": "• Makes laws for the country"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ox9knn1",
+      "content": "• Amends the Constitution"
+    },
+    {
+      "id": "0lfzhpj",
+      "type": "heading",
+      "level": 3,
+      "content": "Financial Powers"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "twri7nx",
+      "content": "• Approves the Union Budget"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jp69hpr",
+      "content": "• Controls public expenditure"
+    },
+    {
+      "id": "f58m14w",
+      "type": "heading",
+      "level": 3,
+      "content": "Executive Control"
+    },
+    {
+      "type": "paragraph",
+      "id": "kww1es4",
+      "content": "• Council of Ministers responsible to Lok Sabha"
+    },
+    {
+      "type": "paragraph",
+      "id": "pr2w726",
+      "content": "• Parliament can remove government through no-confidence motion"
+    },
+    {
+      "id": "43lklkb",
+      "type": "heading",
+      "level": 3,
+      "content": "Judicial Powers"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Constitutional Articles Related to Parliament and its core structure are frequently asked in competitive exams.",
+        "Distinguish carefully between the powers and composition of Lok Sabha (House of the People) and Rajya Sabha (Council of States).",
+        "Questions often focus on the Types of Bills in Parliament and the procedural rules surrounding a Joint Sitting of Parliament."
+      ],
+      "id": "7dtv1rv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "sea4rxk",
+      "content": "• Impeachment of President"
+    },
+    {
+      "type": "paragraph",
+      "id": "9v7447v",
+      "content": "• Removal of judges of Supreme Court and High Courts"
+    },
+    {
+      "id": "dvsor3o",
+      "type": "heading",
+      "level": 2,
+      "content": "EXAM Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "df3b1nj",
+      "content": "• Parliament consists of President, Lok Sabha and Rajya Sabha."
+    },
+    {
+      "type": "paragraph",
+      "id": "3yd6xe1",
+      "content": "• Lok Sabha maximum strength 552."
+    },
+    {
+      "type": "paragraph",
+      "id": "phuvnfu",
+      "content": "• Rajya Sabha maximum strength 250."
+    },
+    {
+      "type": "paragraph",
+      "id": "z6n35fc",
+      "content": "• Money Bill introduced only in Lok Sabha."
+    },
+    {
+      "type": "paragraph",
+      "id": "ipzjjln",
+      "content": "• Joint sitting presided by Speaker of Lok Sabha."
+    }
+  ],
+  "enriched": true
+}

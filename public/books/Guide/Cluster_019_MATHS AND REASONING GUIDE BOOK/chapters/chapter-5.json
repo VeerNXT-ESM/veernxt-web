@@ -1,0 +1,232 @@
+{
+  "id": "y12supl",
+  "title": "PART 8",
+  "order": 5,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jjvl2tk",
+      "content": "<strong>AVERAGE</strong><br></br>"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Topic",
+          "value": "Averages",
+          "icon": "book"
+        },
+        {
+          "label": "Core Formula",
+          "value": "Sum / Count",
+          "icon": "check"
+        },
+        {
+          "label": "Key Sections",
+          "value": "9 Modules",
+          "icon": "info"
+        },
+        {
+          "label": "Exam Relevance",
+          "value": "High Priority",
+          "icon": "award"
+        }
+      ],
+      "id": "nlasa4u"
+    },
+    {
+      "id": "hos57h5",
+      "type": "heading",
+      "level": 2,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Average is calculated by dividing the total sum of observations by the total number of observations.",
+        "To find the total sum when the average is given, multiply the average by the total count of numbers.",
+        "Adding or removing a value alters both the overall sum and total count, shifting the average value.",
+        "Weighted average accounts for varying degrees of importance or group sizes across datasets."
+      ],
+      "id": "0rni23x"
+    },
+    {
+      "id": "rhoshxe",
+      "type": "list",
+      "items": [
+        "Average of a group of numbers is a single value that represents the central value of the group.",
+        "Formula:<br></br><strong>Average = (Sum of observations) / (Number of observations)</strong>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "yt2e3lk",
+      "content": "<em>In SBIexamination, questions on average are direct, formula-based, and often linked with age, salary, marks, population and similar topics.</em>"
+    },
+    {
+      "id": "30tywr0",
+      "type": "heading",
+      "level": 2,
+      "content": "2. AVERAGE OF NUMBERS"
+    },
+    {
+      "id": "cn5xo8y",
+      "type": "list",
+      "items": [
+        "Example:<br></br>Find the average of 10, 20, 30, 40 and 50.",
+        "Sum = 150<br></br>Number of observations = 5",
+        "Average = 150 / 5 = 30"
+      ]
+    },
+    {
+      "id": "a8rnfwy",
+      "type": "heading",
+      "level": 2,
+      "content": "3. FINDING SUM WHEN AVERAGE IS GIVEN"
+    },
+    {
+      "id": "2sko0ig",
+      "type": "list",
+      "items": [
+        "Formula:<br></br>Sum = Average × Number of observations",
+        "Example:<br></br>Average age of 10 students is 18 years.<br></br>Total age = 18 × 10 = 180 years"
+      ]
+    },
+    {
+      "id": "dv12ago",
+      "type": "heading",
+      "level": 2,
+      "content": "4. AVERAGE WHEN A VALUE IS ADDED OR REMOVED"
+    },
+    {
+      "type": "paragraph",
+      "id": "a0rkqoh",
+      "content": "Example 1:<br></br>Average of 5 numbers is 20. A new number 30 is added.<br></br>Old sum = 20 × 5 = 100<br></br>New sum = 100 + 30 = 130<br></br>New number of observations = 6<br></br>New average = 130 / 6 ≈ 21.67<br></br><br></br>Example 2:<br></br>Average of 10 numbers is 25. One number 35 is removed.<br></br>Old sum = 25 × 10 = 250<br></br>New sum = 250 − 35 = 215<br></br>New number of observations = 9<br></br>New average = 215 / 9 ≈ 23.89"
+    },
+    {
+      "id": "1gwhhu7",
+      "type": "heading",
+      "level": 2,
+      "content": "5. AVERAGE OF AGES"
+    },
+    {
+      "type": "paragraph",
+      "id": "pqd1hit",
+      "content": "Example:"
+    },
+    {
+      "id": "vcceerd",
+      "type": "list",
+      "items": [
+        "Average age of 5 boys is 20 years and average age of 3 girls is 18 years.",
+        "Sum of boys = 5 × 20 = 100",
+        "Sum of girls = 3 × 18 = 54",
+        "Total sum = 154",
+        "Total persons = 8<br></br><br></br>Average age = 154 / 8 = 19.25 years"
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Simple Average",
+        "Weighted Average"
+      ],
+      "rows": [
+        [
+          "Weightage",
+          "All values carry equal weight",
+          "Values carry different weights or counts"
+        ],
+        [
+          "Formula",
+          "Sum of Values ÷ Total Count",
+          "Sum of (Value × Weight) ÷ Total Weights"
+        ],
+        [
+          "Usage",
+          "Uniform, single-group datasets",
+          "Combined groups with unequal sizes or importance"
+        ]
+      ],
+      "id": "6fxvevz"
+    },
+    {
+      "id": "coxjckl",
+      "type": "heading",
+      "level": 2,
+      "content": "6. WEIGHTED AVERAGE"
+    },
+    {
+      "type": "paragraph",
+      "id": "rnh761v",
+      "content": "Weighted average is used when groups have different sizes.<br></br>Example:"
+    },
+    {
+      "id": "w2wjuoe",
+      "type": "list",
+      "items": [
+        "Average marks of 20 students is 60 and average marks of 30 students is 50.",
+        "Total marks = (20 × 60) + (30 × 50) = 2700",
+        "Total students = 50<br></br><br></br>Average marks = 2700 / 50 = 54"
+      ]
+    },
+    {
+      "id": "90mz7i7",
+      "type": "heading",
+      "level": 2,
+      "content": "7. IMPORTANT POINTS TO REMEMBER"
+    },
+    {
+      "type": "paragraph",
+      "id": "m5j60qv",
+      "content": "• Always calculate total sum first.<br></br>• Be careful when values are added or removed.<br></br>• Average depends on sum and number of terms.<br></br>• SBIquestions are generally simple and direct."
+    },
+    {
+      "id": "644myly",
+      "type": "heading",
+      "level": 2,
+      "content": "8. SOLVED EXAMPLES"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Problems involving changes in average age when a person enters or leaves a group are frequently asked in competitive exams.",
+        "Always compute the original total sum before applying modifications when a value is added or removed.",
+        "Weighted average concepts are critical for solving questions on combined group means and mixtures."
+      ],
+      "id": "g0fz48x"
+    },
+    {
+      "type": "paragraph",
+      "id": "n410m3m",
+      "content": "Example 1:<br></br>Average salary of 15 workers is ₹8000.<br></br>Total salary = 8000 × 15 = ₹1,20,000<br></br><br></br>Example 2:<br></br>Average of 6 numbers is 12.<br></br>Sum of numbers = 12 × 6 = 72"
+    },
+    {
+      "id": "u3lz0hq",
+      "type": "heading",
+      "level": 2,
+      "content": "9. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "nx3o2dm",
+      "content": "Q1. Find the average of first 10 natural numbers.<br></br>A. 5   B. 5.5   C. 6   D. 6.5<br></br><br></br>Q2. Average age of 8 persons is 30 years. What is their total age?<br></br>A. 220   B. 230   C. 240   D. 250<br></br><br></br>Q3. Average of 4 numbers is 25. If one number is 40, find the average of remaining 3 numbers.<br></br>A. 18   B. 20   C. 22   D. 25"
+    },
+    {
+      "id": "hx9aztw",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u6tbtwq",
+      "content": "Q1. B<br></br>Q2. C<br></br>Q3. B"
+    }
+  ],
+  "enriched": true
+}

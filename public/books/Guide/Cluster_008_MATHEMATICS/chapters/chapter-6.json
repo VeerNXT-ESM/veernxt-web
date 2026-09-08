@@ -1,0 +1,246 @@
+{
+  "id": "0gkhiom",
+  "title": "PART 9",
+  "order": 6,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j1rt8qi",
+      "content": "<strong>TIME &amp; WORK </strong><br></br>"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Topic",
+          "value": "Time & Work",
+          "icon": "book"
+        },
+        {
+          "label": "Core Concept",
+          "value": "Men–Days Concept",
+          "icon": "calendar"
+        },
+        {
+          "label": "Key Metric",
+          "value": "Work & Efficiency",
+          "icon": "clock"
+        },
+        {
+          "label": "Exam Focus",
+          "value": "SSC Level",
+          "icon": "award"
+        }
+      ],
+      "id": "ugd6uuw"
+    },
+    {
+      "id": "jnve4n7",
+      "type": "heading",
+      "level": 2,
+      "content": "1. BASIC CONCEPT"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "If a person completes a work in 'n' days, then their one day's work is equal to 1/n.",
+        "Total work is calculated as the product of efficiency and time taken.",
+        "When two persons work together, their combined efficiency is the sum of their individual daily work rates.",
+        "The Men–Days concept relies on the relation: (M1 × D1 × H1) / W1 = (M2 × D2 × H2) / W2."
+      ],
+      "id": "vdod4nq"
+    },
+    {
+      "id": "ftu48re",
+      "type": "list",
+      "items": [
+        "Time &amp; Work deals with how long a person or group of persons take to complete a work and their efficiency."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "rygp83k",
+      "content": "<em>In SSC examination, questions are direct, formula-based and mostly one to two step problems.</em>"
+    },
+    {
+      "id": "j0qcxia",
+      "type": "heading",
+      "level": 2,
+      "content": "2. BASIC FORMULAS"
+    },
+    {
+      "id": "6rzfxem",
+      "type": "list",
+      "items": [
+        "Work = Rate × Time",
+        "If a person can complete a work in x days, then one day’s work = 1/x."
+      ]
+    },
+    {
+      "id": "yijybtm",
+      "type": "heading",
+      "level": 2,
+      "content": "3. SINGLE PERSON WORK"
+    },
+    {
+      "type": "paragraph",
+      "id": "xeoh81f",
+      "content": "Example 1:<br></br>A can complete a work in 10 days.<br></br>Work done by A in one day = 1/10"
+    },
+    {
+      "type": "paragraph",
+      "id": "0c3eas0",
+      "content": "Example 2:<br></br>If a person does 1/8 work in one day, then total time = 8 days."
+    },
+    {
+      "id": "x4bz9q4",
+      "type": "heading",
+      "level": 2,
+      "content": "4. TWO PERSONS WORKING TOGETHER"
+    },
+    {
+      "id": "t51m8yw",
+      "type": "list",
+      "items": [
+        "If A completes work in x days and B in y days, then combined work per day = (1/x + 1/y).",
+        "Total time = 1 / (1/x + 1/y)."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "oahmz12",
+      "content": "Example 3:<br></br>A can do a work in 12 days and B in 18 days."
+    },
+    {
+      "type": "paragraph",
+      "id": "j8r3stf",
+      "content": "1/12 + 1/18 = 5/36<br></br>Time = 36/5 = 7.2 days."
+    },
+    {
+      "id": "ojncd1t",
+      "type": "heading",
+      "level": 2,
+      "content": "5. WORK AND EFFICIENCY"
+    },
+    {
+      "id": "swmjp3n",
+      "type": "list",
+      "items": [
+        "Efficiency is inversely proportional to time.",
+        "If efficiency ratio of A : B = x : y, then time ratio = y : x."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "nw9cfa1",
+      "content": "Example 4:<br></br>A is twice as efficient as B. B takes 20 days.<br></br>Time taken by A = 10 days."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Concept",
+        "Formula / Relationship"
+      ],
+      "rows": [
+        [
+          "Single Person Work Rate",
+          "1 Day Work = 1 / Total Days Needed"
+        ],
+        [
+          "Two Persons Working Together",
+          "Combined 1 Day Work = (1 / A) + (1 / B)"
+        ],
+        [
+          "Men–Days Concept",
+          "M1 × D1 × H1 = M2 × D2 × H2 (when Work is constant)"
+        ]
+      ],
+      "id": "mk10883"
+    },
+    {
+      "id": "bv6jnt2",
+      "type": "heading",
+      "level": 2,
+      "content": "6. PARTIAL WORK"
+    },
+    {
+      "type": "paragraph",
+      "id": "uodj4ml",
+      "content": "Example 5:<br></br>A can do a work in 10 days. He works for 4 days.<br></br><br></br>Work done = 4 × 1/10 = 2/5<br></br>Remaining work = 3/5."
+    },
+    {
+      "id": "9m4aafr",
+      "type": "heading",
+      "level": 2,
+      "content": "7. MEN–DAYS CONCEPT"
+    },
+    {
+      "id": "rd37t06",
+      "type": "list",
+      "items": [
+        "Men × Days = Constant"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "q5urds7",
+      "content": "Example 6:<br></br>10 men can do a work in 6 days.<br></br>15 men will take = 4 days."
+    },
+    {
+      "id": "lazk44h",
+      "type": "heading",
+      "level": 2,
+      "content": "8. SOLVED EXAMPLES (SSC LEVEL)"
+    },
+    {
+      "type": "paragraph",
+      "id": "kcxui9l",
+      "content": "Example 7:<br></br>A can do a work in 15 days and B in 20 days.<br></br>Time together = 60/7 ≈ 8.57 days.<br></br><br></br>Example 8:<br></br>A alone can do a work in 25 days.<br></br>Work done in 5 days = 1/5."
+    },
+    {
+      "id": "ohfuk3v",
+      "type": "heading",
+      "level": 2,
+      "content": "9. IMPORTANT POINTS TO REMEMBER"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "SSC exams frequently test problems involving alternate working days and partial work completion.",
+        "Questions using the Men–Days–Hours formula (M1 D1 H1 / W1 = M2 D2 H2 / W2) are high-yield for tier-1 competitive exams."
+      ],
+      "id": "mpwq71v"
+    },
+    {
+      "type": "paragraph",
+      "id": "7fqj605",
+      "content": "• Take total work as 1.<br></br>• Use fractions for accuracy.<br></br>• Efficiency is inversely proportional to time.<br></br>• SSC avoids lengthy time–work questions."
+    },
+    {
+      "id": "yxc4d0w",
+      "type": "heading",
+      "level": 2,
+      "content": "10. PRACTICE QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "id": "de6i4rl",
+      "content": "Q1. A can complete a work in 20 days. How much work will he do in 5 days?<br></br>A. 1/2   B. 1/4   C. 1/5   D. 1/10<br></br><br></br>Q2. A and B can do a work in 12 days and 18 days respectively. How long will they take together?<br></br>A. 6 days   B. 7.2 days   C. 8 days   D. 9 days<br></br><br></br>Q3. 12 men can do a work in 10 days. How many days will 15 men take?<br></br>A. 6   B. 7   C. 8   D. 9"
+    },
+    {
+      "id": "g9awbiq",
+      "type": "heading",
+      "level": 2,
+      "content": "ANSWER KEY"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hm2635k",
+      "content": "Q1. C<br></br>Q2. B<br></br>Q3. C"
+    }
+  ],
+  "enriched": true
+}

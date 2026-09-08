@@ -1,0 +1,125 @@
+{
+  "title": "Independence of CAG",
+  "order": 226,
+  "blocks": [
+    {
+      "id": "wl8ytgb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Safeguard</strong></p>",
+            "<p><strong>Importance</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Security of tenure</p>",
+            "<p>Prevents arbitrary removal</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Salary charged on Consolidated Fund of India</p>",
+            "<p>Financial independence</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Service conditions cannot be altered</p>",
+            "<p>Protects autonomy</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Not eligible for further government office</p>",
+            "<p>Ensures neutrality</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The CAG shall only be removed from office in like manner and on the like grounds as a Judge of the Supreme Court.",
+      "id": "3u3ja8q"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "CAG of India",
+        "CAG of Britain"
+      ],
+      "rows": [
+        [
+          "Control over Exchequer",
+          "Does not control the issue of money from the exchequer",
+          "Has full control; money cannot be issued without consent"
+        ],
+        [
+          "Timing of Audit",
+          "Audits accounts after expenditure is incurred (ex-post facto)",
+          "Audits before money is drawn from the public exchequer"
+        ],
+        [
+          "Parliament Membership",
+          "Is not a member of Parliament",
+          "Is a member of the House of Commons"
+        ]
+      ],
+      "id": "3j3321w"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Article",
+          "value": "Article 148",
+          "icon": "book"
+        },
+        {
+          "label": "Tenure",
+          "value": "6 Years / 65 Age",
+          "icon": "clock"
+        },
+        {
+          "label": "Appointing Authority",
+          "value": "President",
+          "icon": "check"
+        },
+        {
+          "label": "Expenses Charged On",
+          "value": "Consolidated Fund of India",
+          "icon": "award"
+        }
+      ],
+      "id": "g9sz5jb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CAG's salary and office expenses are charged upon the Consolidated Fund of India and are not subject to the vote of Parliament.",
+        "After retirement or removal, CAG is strictly prohibited from holding any further office under the Central or State Governments.",
+        "CAG can be removed only on the basis of a resolution passed by both Houses of Parliament with a special majority on grounds of proved misbehaviour or incapacity."
+      ],
+      "id": "2cfv8sk"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The CAG is provided with security of tenure and can be removed by the President only in the manner and on the grounds similar to a Supreme Court judge.",
+        "The CAG is not eligible for further office either under the Government of India or any state government after ceasing to hold office.",
+        "Salary and other service conditions of the CAG are determined by Parliament and cannot be varied to their disadvantage after appointment.",
+        "Administrative expenses of the office of CAG, including all salaries, allowances, and pensions, are charged upon the Consolidated Fund of India and are non-votable."
+      ],
+      "id": "gcqcekq"
+    }
+  ],
+  "enriched": true
+}

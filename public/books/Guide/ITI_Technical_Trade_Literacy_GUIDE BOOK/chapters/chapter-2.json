@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "cqgiz1r"
+      "id": "cqgiz1r",
+      "content": "Personal Protective Equipment (PPE) refers to protective clothing, helmets, gloves, goggles, and other equipment designed to protect workers from injuries and health hazards in workplaces. In technical trades such as fitting, welding, electrical work, and mechanical maintenance, workers are exposed to risks like flying particles, heat, electric shock, noise, and harmful chemicals. PPE acts as a barrier between the worker and these hazards."
     },
     {
       "type": "paragraph",
-      "id": "6appf83"
+      "id": "6appf83",
+      "content": "PPE does not eliminate hazards completely, but it significantly reduces the chances of injury when used properly along with safe working practices."
     },
     {
       "id": "ezwo7y5",
@@ -65,11 +67,11 @@
       "id": "g9dhwfx",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Protects workers from injuries and accidents",
+        "Reduces exposure to harmful substances",
+        "Prevents burns, cuts, and eye injuries",
+        "Ensures safer working conditions",
+        "Improves confidence and productivity of workers"
       ]
     },
     {
@@ -79,84 +81,79 @@
       "content": "3. Types of Personal Protective Equipment"
     },
     {
-      "type": "pullQuote",
-      "content": "Importance of PPE in Workshops",
-      "id": "mrwn994"
-    },
-    {
       "id": "dbygf07",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type of PPE</strong></p>",
+            "<p><strong>Protection Provided</strong></p>",
+            "<p><strong>Example Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Helmet / Safety Helmet</p>",
+            "<p>Protects head from falling objects</p>",
+            "<p>Construction and workshop work</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Safety Goggles</p>",
+            "<p>Protects eyes from dust, sparks, and metal particles</p>",
+            "<p>Grinding and welding</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Face Shield</p>",
+            "<p>Protects entire face from sparks and chemicals</p>",
+            "<p>Welding operations</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gloves</p>",
+            "<p>Protects hands from cuts, burns, and chemicals</p>",
+            "<p>Handling tools and materials</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Safety Shoes</p>",
+            "<p>Protects feet from heavy falling objects</p>",
+            "<p>Industrial workshops</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ear Plugs / Ear Muffs</p>",
+            "<p>Protects hearing from loud noise</p>",
+            "<p>Working near heavy machinery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Protective Clothing / Apron</p>",
+            "<p>Protects body from heat, sparks, and chemicals</p>",
+            "<p>Welding and chemical work</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Respirator / Mask</p>",
+            "<p>Protects lungs from dust and harmful gases</p>",
+            "<p>Painting and chemical work</p>"
           ]
         }
       ]
@@ -169,16 +166,17 @@
     },
     {
       "type": "paragraph",
-      "id": "e37mdj5"
+      "id": "e37mdj5",
+      "content": "The selection of PPE depends on the type of hazard present in the workplace. Proper assessment of risks must be done before choosing protective equipment."
     },
     {
       "id": "e7swhrg",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "PPE should be comfortable and properly fitted",
+        "It should provide adequate protection for the specific hazard",
+        "It should be durable and easy to maintain",
+        "It should meet safety standards and regulations"
       ]
     },
     {
@@ -191,11 +189,11 @@
       "id": "e33bm24",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Always wear PPE before starting work",
+        "Ensure PPE is properly fitted",
+        "Do not remove PPE while working in hazardous areas",
+        "Use PPE according to manufacturer instructions",
+        "Replace damaged PPE immediately"
       ]
     },
     {
@@ -211,36 +209,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Maintenance Rule</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Regular Cleaning</p>",
+            "<p>PPE should be cleaned after use to remove dust and contaminants</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Proper Storage</p>",
+            "<p>Store PPE in dry and clean places</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Inspection</p>",
+            "<p>Check PPE regularly for damage or wear</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Replacement</p>",
+            "<p>Replace worn-out or damaged equipment immediately</p>"
           ]
         }
       ]
@@ -262,15 +260,16 @@
     },
     {
       "type": "paragraph",
-      "id": "lfgk1bw"
+      "id": "lfgk1bw",
+      "content": "Although PPE is essential for safety, it should not be the only method used to control hazards. Engineering controls, machine guards, and proper training should also be used."
     },
     {
       "id": "yx5cbq0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "PPE may not eliminate hazards completely",
+        "Improper use reduces effectiveness",
+        "Damaged PPE may fail to provide protection"
       ]
     },
     {
@@ -283,10 +282,10 @@
       "id": "lcfb9qp",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "PPE stands for Personal Protective Equipment.",
+        "PPE protects workers from workplace hazards.",
+        "Common PPE includes helmets, gloves, goggles, safety shoes, and masks.",
+        "PPE must be properly maintained and inspected regularly."
       ]
     }
   ],

@@ -1,0 +1,124 @@
+{
+  "title": "Composition of TRAI",
+  "order": 341,
+  "blocks": [
+    {
+      "id": "r61d57y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Member</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>Appointed by Central Government</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Members</p>",
+            "<p>Maximum of 2 full-time members</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Part-time Members</p>",
+            "<p>Maximum of 2</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Authority consists of a Chairperson, and not more than two whole-time members and not more than two part-time members, all appointed by the Central Government.",
+      "id": "2howbav"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "TRAI",
+        "TDSAT"
+      ],
+      "rows": [
+        [
+          "Primary Role",
+          "Regulatory and Tariff Determination",
+          "Adjudication of Disputes & Appeals"
+        ],
+        [
+          "Established By",
+          "TRAI Act, 1997",
+          "2000 Amendment to TRAI Act"
+        ],
+        [
+          "Composition",
+          "Chairperson + Max 2 Whole-time + Max 2 Part-time Members",
+          "Chairperson + Max 2 Members"
+        ]
+      ],
+      "id": "aolau8h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established Year",
+          "value": "1997",
+          "icon": "calendar"
+        },
+        {
+          "label": "Chairperson",
+          "value": "1",
+          "icon": "award"
+        },
+        {
+          "label": "Max Whole-time Members",
+          "value": "2",
+          "icon": "check"
+        },
+        {
+          "label": "Max Part-time Members",
+          "value": "2",
+          "icon": "info"
+        },
+        {
+          "label": "Tenure / Age Limit",
+          "value": "3 Yrs / 65 Yrs",
+          "icon": "clock"
+        }
+      ],
+      "id": "3t047yd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Tenure limit for TRAI Chairperson and members is 3 years or 65 years of age, whichever comes earlier.",
+        "The 2000 Amendment stripped TRAI of its adjudicatory powers and created the Telecom Disputes Settlement and Appellate Tribunal (TDSAT).",
+        "All appointments to TRAI are made directly by the Central Government."
+      ],
+      "id": "5itrj0v"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "TRAI was established under the Telecom Regulatory Authority of India Act, 1997 to regulate telecommunication services.",
+        "The body consists of a Chairperson, a maximum of two whole-time members, and a maximum of two part-time members appointed by the Central Government.",
+        "Members hold office for a term of three years or until reaching 65 years of age, whichever is earlier.",
+        "The TRAI Amendment Act of 2000 separated adjudicatory functions from TRAI and transferred them to TDSAT.",
+        "Members must possess specialized knowledge or professional experience in telecommunications, industry, finance, law, or administration."
+      ],
+      "id": "07izqqh"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,382 @@
+{
+  "title": "CHAPTER 6 : PRESSURE AND FLUIDS",
+  "order": 6,
+  "blocks": [
+    {
+      "id": "fpzds3y",
+      "type": "heading",
+      "level": 2,
+      "content": "PRESSURE"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Pressure is defined as force acting per unit area (P = F / A) with the SI unit Pascal (1 Pa = 1 N/m²).",
+        "Liquid pressure acts in all directions, depends on liquid column height, and increases with depth.",
+        "Atmospheric pressure is the force exerted by air on the Earth's surface and acts equally in all directions.",
+        "Archimedes' Principle states that an immersed body experiences an upward force equal to the weight of the fluid displaced.",
+        "Flotation is determined by density: an object floats if its density is less than the liquid's density and sinks if it is greater."
+      ],
+      "id": "jbx648t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Pressure",
+          "value": "Pascal (Pa)",
+          "icon": "info"
+        },
+        {
+          "label": "SI Unit of Density",
+          "value": "kg/m³",
+          "icon": "check"
+        },
+        {
+          "label": "Liquid Pressure Formula",
+          "value": "P = hρg",
+          "icon": "book"
+        },
+        {
+          "label": "Pressure Formula",
+          "value": "P = F / A",
+          "icon": "award"
+        }
+      ],
+      "id": "aioubev"
+    },
+    {
+      "type": "paragraph",
+      "content": "Pressure is defined as the force acting per unit area.",
+      "id": "k5pumz5"
+    },
+    {
+      "type": "paragraph",
+      "content": "It tells us how much force is applied on a particular area. Formula:",
+      "id": "zk0utci"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Pressure = Force / Area",
+      "id": "k3sdgay"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "P = F / A",
+      "id": "5j2z2km"
+    },
+    {
+      "type": "paragraph",
+      "content": "SI Unit of Pressure = Pascal (Pa) 1 Pascal = 1 Newton / m²",
+      "id": "d2hmpwx"
+    },
+    {
+      "id": "2waebu3",
+      "type": "heading",
+      "level": 3,
+      "content": "Examples of Pressure"
+    },
+    {
+      "id": "i4jb6r9",
+      "type": "list",
+      "items": [
+        "A sharp knife cuts easily because it has small area → more pressure.",
+        "A camel walks easily on sand because it has broad feet → less pressure.",
+        "High-heeled shoes exert more pressure than flat shoes."
+      ]
+    },
+    {
+      "id": "4ogedlo",
+      "type": "heading",
+      "level": 2,
+      "content": "PRESSURE IN SOLIDS"
+    },
+    {
+      "type": "paragraph",
+      "content": "In solids, pressure depends upon:",
+      "id": "msgqhzm"
+    },
+    {
+      "id": "84zmf07",
+      "type": "list",
+      "items": [
+        "<ul><li>Force applied</li><li>Area of contact</li></ul>",
+        "Force applied",
+        "Area of contact"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "If area is less → pressure is more If area is more → pressure is less",
+      "id": "pbh8rsk"
+    },
+    {
+      "id": "4wcsx5c",
+      "type": "heading",
+      "level": 2,
+      "content": "PRESSURE IN LIQUIDS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Liquids also exert pressure. Important points:",
+      "id": "omax6h8"
+    },
+    {
+      "id": "kktlazk",
+      "type": "list",
+      "items": [
+        "<ul><li>Liquid pressure increases with depth</li><li>Liquid pressure acts in all directions</li><li>Liquid pressure depends on height of liquid column</li></ul>",
+        "Liquid pressure increases with depth",
+        "Liquid pressure acts in all directions",
+        "Liquid pressure depends on height of liquid column"
+      ]
+    },
+    {
+      "id": "su1awxh",
+      "type": "heading",
+      "level": 3,
+      "content": "Formula for Pressure in Liquid"
+    },
+    {
+      "type": "paragraph",
+      "content": "Pressure = hρg Where:",
+      "id": "jrrckbz"
+    },
+    {
+      "type": "paragraph",
+      "content": "h = height of liquid column",
+      "id": "ujix4kk"
+    },
+    {
+      "type": "pullQuote",
+      "content": "When a body is immersed partially or completely in a fluid, it experiences an upward force equal to the weight of the fluid displaced.",
+      "id": "qo7busj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "ρ = density of liquid",
+      "id": "zaglt0z"
+    },
+    {
+      "type": "paragraph",
+      "content": "g = acceleration due to gravity",
+      "id": "8rh25ro"
+    },
+    {
+      "id": "nvqs748",
+      "type": "heading",
+      "level": 2,
+      "content": "ATMOSPHERIC PRESSURE"
+    },
+    {
+      "type": "paragraph",
+      "content": "The pressure exerted by air on the surface of the Earth is called atmospheric pressure. We do not feel atmospheric pressure because it acts equally in all directions.",
+      "id": "9adxcl2"
+    },
+    {
+      "id": "3ofsktp",
+      "type": "heading",
+      "level": 3,
+      "content": "Examples of Atmospheric Pressure"
+    },
+    {
+      "id": "9b9mout",
+      "type": "list",
+      "items": [
+        "<ul><li>Drinking with straw</li><li>Sucker sticking to wall</li><li>Collapse of empty bottle</li></ul>",
+        "Drinking with straw",
+        "Sucker sticking to wall",
+        "Collapse of empty bottle"
+      ]
+    },
+    {
+      "id": "q3wuvfz",
+      "type": "heading",
+      "level": 2,
+      "content": "BUOYANT FORCE"
+    },
+    {
+      "type": "paragraph",
+      "content": "The upward force exerted by a liquid on an object immersed in it is called buoyant force. This force helps objects to float.",
+      "id": "gdlo5ev"
+    },
+    {
+      "id": "dj7qb7o",
+      "type": "heading",
+      "level": 2,
+      "content": "ARCHIMEDES' PRINCIPLE"
+    },
+    {
+      "type": "paragraph",
+      "content": "According to Archimedes' Principle:",
+      "id": "yzw2sx5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Area of Contact",
+        "Resulting Pressure",
+        "Practical Examples"
+      ],
+      "rows": [
+        [
+          "Small Area",
+          "More Pressure",
+          "Sharp knives, needles, high-heeled shoes"
+        ],
+        [
+          "Broad Area",
+          "Less Pressure",
+          "Camel feet on sand, broad tyres on heavy vehicles, snow shoes"
+        ]
+      ],
+      "id": "v3e3mnh"
+    },
+    {
+      "type": "paragraph",
+      "content": "When a body is immersed partially or completely in a fluid, it experiences an upward force equal to the weight of the fluid displaced.",
+      "id": "i4w9dis"
+    },
+    {
+      "type": "paragraph",
+      "content": "This principle explains why objects float or sink.",
+      "id": "wh7gl5g"
+    },
+    {
+      "id": "hec9rhf",
+      "type": "heading",
+      "level": 3,
+      "content": "Applications of Archimedes’ Principle"
+    },
+    {
+      "id": "3fl1ju5",
+      "type": "list",
+      "items": [
+        "<ul><li>Floating of ships</li><li>Submarines</li><li>Hydrometers</li><li>Lactometers</li></ul>",
+        "Floating of ships",
+        "Submarines",
+        "Hydrometers",
+        "Lactometers"
+      ]
+    },
+    {
+      "id": "8cd9bqj",
+      "type": "heading",
+      "level": 2,
+      "content": "FLOATATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "An object floats or sinks depending upon its density.",
+      "id": "unpqbqd"
+    },
+    {
+      "type": "paragraph",
+      "content": "If density of object &lt; density of liquid → object floats If density of object &gt; density of liquid → object sinks",
+      "id": "yc4aor2"
+    },
+    {
+      "id": "ebvkxjf",
+      "type": "heading",
+      "level": 2,
+      "content": "DENSITY"
+    },
+    {
+      "type": "paragraph",
+      "content": "Density is defined as mass per unit volume. Formula:",
+      "id": "eaut64u"
+    },
+    {
+      "type": "paragraph",
+      "content": "Density = Mass / Volume SI unit = kg/m³",
+      "id": "03ca31l"
+    },
+    {
+      "type": "paragraph",
+      "content": "Objects with higher density sink in water.",
+      "id": "hzfgl4v"
+    },
+    {
+      "id": "31tk0fm",
+      "type": "heading",
+      "level": 2,
+      "content": "APPLICATIONS OF PRESSURE"
+    },
+    {
+      "id": "okya430",
+      "type": "list",
+      "items": [
+        "<ul><li>Broad tyres used in heavy vehicles</li><li>Sharp knives and needles</li><li>Dam walls thicker at bottom</li><li>Snow shoes used in snow regions</li></ul>",
+        "Broad tyres used in heavy vehicles",
+        "Sharp knives and needles",
+        "Dam walls thicker at bottom",
+        "Snow shoes used in snow regions"
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "SI unit of pressure is Pascal (Pa) or N/m².",
+        "Liquid pressure increases with depth (P = hρg).",
+        "Ships, submarines, hydrometers, and lactometers work on Archimedes' Principle.",
+        "Object density relative to liquid density determines whether an object floats or sinks."
+      ],
+      "id": "ynuoqlw"
+    },
+    {
+      "id": "l6we6rt",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT SSC EXAM QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q1. SI unit of pressure? Ans: Pascal",
+      "id": "g8ggz5y"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q2. Formula of pressure? Ans: Force / Area",
+      "id": "keoa6oy"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q3. Why do ships float? Ans: Due to buoyant force",
+      "id": "07o7skb"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q4. Principle of flotation is based on? Ans: Archimedes’ principle",
+      "id": "tixak3s"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q5. Pressure increases with? Ans: Depth",
+      "id": "kbcdvjr"
+    },
+    {
+      "id": "9fc90wt",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "v31dc9z",
+      "type": "list",
+      "items": [
+        "<ul><li>Pressure = Force / Area</li><li>Liquid pressure increases with depth</li><li>Atmospheric pressure surrounds Earth</li><li>Buoyant force acts upward</li><li>Archimedes principle explains floating</li><li>Density decides floating or sinking</li></ul>",
+        "Pressure = Force / Area",
+        "Liquid pressure increases with depth",
+        "Atmospheric pressure surrounds Earth",
+        "Buoyant force acts upward",
+        "Archimedes principle explains floating",
+        "Density decides floating or sinking"
+      ]
+    }
+  ],
+  "enriched": true
+}

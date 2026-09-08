@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "5ij88t1"
+      "id": "5ij88t1",
+      "content": "Recent technological advancements have significantly transformed the field of computing. Modern computer systems now integrate advanced technologies that improve data processing, automation, connectivity, and intelligent decision-making. Some of the most important developments in modern computing include Cloud Computing, Artificial Intelligence (AI), Internet of Things (IoT), and Big Data."
     },
     {
       "type": "statStrip",
@@ -52,7 +53,8 @@
     },
     {
       "type": "paragraph",
-      "id": "35kqoq6"
+      "id": "35kqoq6",
+      "content": "Cloud Computing refers to the delivery of computing services such as servers, storage, databases, networking, software, and analytics over the Internet (the cloud). Instead of owning physical hardware or data centers, organizations can access these resources on demand."
     },
     {
       "id": "2ynyll6",
@@ -64,11 +66,11 @@
       "id": "k4t7dxb",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "On-demand self-service – Users can access computing resources without human interaction.",
+        "Broad network access – Services are accessible via the Internet from multiple devices.",
+        "Resource pooling – Multiple users share computing resources.",
+        "Rapid elasticity – Resources can be scaled up or down quickly.",
+        "Measured service – Usage is monitored and billed based on consumption."
       ]
     },
     {
@@ -84,36 +86,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Cloud Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Public Cloud</p>",
+            "<p>Services provided over the public Internet by third-party providers.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Private Cloud</p>",
+            "<p>Dedicated cloud infrastructure used by a single organization.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hybrid Cloud</p>",
+            "<p>Combination of public and private cloud environments.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Community Cloud</p>",
+            "<p>Shared cloud infrastructure used by several organizations.</p>"
           ]
         }
       ]
@@ -131,29 +133,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Service Model</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IaaS (Infrastructure as a Service)</p>",
+            "<p>Provides virtualized computing resources such as servers and storage.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>PaaS (Platform as a Service)</p>",
+            "<p>Provides development platforms for building applications.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SaaS (Software as a Service)</p>",
+            "<p>Delivers software applications via the Internet.</p>"
           ]
         }
       ]
@@ -168,11 +170,11 @@
       "id": "8mribod",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Google Drive",
+        "Microsoft OneDrive",
+        "Dropbox",
+        "Amazon Web Services (AWS)",
+        "Microsoft Azure"
       ]
     },
     {
@@ -188,7 +190,8 @@
     },
     {
       "type": "paragraph",
-      "id": "47hg4so"
+      "id": "47hg4so",
+      "content": "Artificial Intelligence (AI) is a branch of computer science that enables machines to simulate human intelligence. AI systems can learn from data, recognize patterns, make decisions, and perform tasks that normally require human intelligence."
     },
     {
       "id": "gw9j9p0",
@@ -203,29 +206,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>AI Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Narrow AI</p>",
+            "<p>AI designed to perform a specific task.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>General AI</p>",
+            "<p>AI capable of performing any intellectual task a human can perform.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Super AI</p>",
+            "<p>Hypothetical AI that surpasses human intelligence.</p>"
           ]
         }
       ]
@@ -240,11 +243,11 @@
       "id": "lg0tkn0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Voice assistants (Siri, Alexa, Google Assistant).",
+        "Self-driving cars.",
+        "Medical diagnosis systems.",
+        "Recommendation systems used by Netflix and Amazon.",
+        "Fraud detection in banking."
       ]
     },
     {
@@ -255,7 +258,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tw95xwm"
+      "id": "tw95xwm",
+      "content": "The Internet of Things (IoT) refers to the network of physical devices connected to the Internet that collect and exchange data."
     },
     {
       "id": "lqtf7pf",
@@ -267,10 +271,10 @@
       "id": "vxcj64h",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Sensors – Collect data from the environment.",
+        "Connectivity – Devices connect to the Internet.",
+        "Data Processing – Data is analyzed and processed.",
+        "User Interface – Allows users to interact with devices."
       ]
     },
     {
@@ -283,11 +287,11 @@
       "id": "qdxr8tb",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Smart homes (smart lights, smart thermostats).",
+        "Wearable devices (fitness trackers, smart watches).",
+        "Smart cities.",
+        "Industrial automation.",
+        "Healthcare monitoring systems."
       ]
     },
     {
@@ -298,7 +302,8 @@
     },
     {
       "type": "paragraph",
-      "id": "el77zq5"
+      "id": "el77zq5",
+      "content": "Big Data refers to extremely large datasets that cannot be easily processed using traditional data processing techniques."
     },
     {
       "type": "examAlert",
@@ -322,43 +327,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Characteristic</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Volume</p>",
+            "<p>Large amount of data generated every second.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Velocity</p>",
+            "<p>Speed at which data is generated and processed.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Variety</p>",
+            "<p>Different types of data such as text, images, and videos.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Veracity</p>",
+            "<p>Accuracy and reliability of data.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Value</p>",
+            "<p>Useful insights derived from data.</p>"
           ]
         }
       ]
@@ -373,11 +378,11 @@
       "id": "gxtkm5f",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Social media analytics.",
+        "Healthcare research.",
+        "E-commerce recommendations.",
+        "Weather forecasting.",
+        "Financial market analysis."
       ]
     },
     {
@@ -390,11 +395,11 @@
       "id": "j8hlctp",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Cloud computing provides services over the Internet.",
+        "AI enables machines to simulate human intelligence.",
+        "IoT connects physical devices to the Internet.",
+        "Big Data refers to extremely large datasets.",
+        "The 5Vs of Big Data are Volume, Velocity, Variety, Veracity, and Value."
       ]
     }
   ],

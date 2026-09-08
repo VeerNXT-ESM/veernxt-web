@@ -1,0 +1,82 @@
+{
+  "title": "RRB Quick Revision Box",
+  "order": 139,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "State Executive – Articles 153–167<br/>Governor – Appointed by President<br/>CM – Real executive<br/>Article 161 – Governor’s pardon<br/>Article 213 – Ordinance<br/>Article 356 – President’s Rule<br/>Council responsible to Assembly",
+      "id": "o43v08w"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CM – Real executive",
+      "id": "4fyxb7k"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Executive Authority",
+        "Key Characteristic"
+      ],
+      "rows": [
+        [
+          "Governor",
+          "Appointed by President"
+        ],
+        [
+          "CM",
+          "Real executive"
+        ]
+      ],
+      "id": "vaa92a4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "State Executive",
+          "value": "Articles 153–167",
+          "icon": "book"
+        },
+        {
+          "label": "Governor's Pardon",
+          "value": "Article 161",
+          "icon": "check"
+        },
+        {
+          "label": "Ordinance Power",
+          "value": "Article 213",
+          "icon": "calendar"
+        },
+        {
+          "label": "President's Rule",
+          "value": "Article 356",
+          "icon": "info"
+        }
+      ],
+      "id": "20v8urk"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 213 empowers the Governor to promulgate Ordinances during legislative recess.",
+        "Article 356 pertains to the imposition of President's Rule in states.",
+        "Distinction between Constitutional/Appointed head (Governor) and Real executive (CM) is a frequent exam topic."
+      ],
+      "id": "av3es89"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Articles 153–167 deal with the State Executive.",
+        "The Governor is appointed by the President.",
+        "The Chief Minister (CM) is the real executive head.",
+        "Article 161 grants pardoning powers to the Governor, while Article 213 covers Ordinances.",
+        "The Council of Ministers is collectively responsible to the Assembly."
+      ],
+      "id": "gj0ff9c"
+    }
+  ],
+  "enriched": true
+}

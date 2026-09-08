@@ -4,67 +4,73 @@
   "order": 91,
   "blocks": [
     {
+      "id": "fx4wau9",
+      "type": "image",
+      "imageId": "r3r15ay",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_r3r15ay.jpeg"
+    },
+    {
       "id": "9oqxjxu",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Focus (Hypocenter)</p>",
+            "<p>Actual point inside the Earth where rupture begins.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Epicenter</p>",
+            "<p>Surface point directly above the focus; usually experiences strongest shaking.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "",
+            ""
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Depth Range</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shallow-focus</p>",
+            "<p>0–70 km</p>",
+            "<p>Most destructive; majority of earthquakes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Intermediate</p>",
+            "<p>70–300 km</p>",
+            "<p>Occur mainly in subduction zones</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Deep-focus</p>",
+            "<p>300–700 km</p>",
+            "<p>Less surface damage but scientifically important</p>"
           ]
         }
       ]

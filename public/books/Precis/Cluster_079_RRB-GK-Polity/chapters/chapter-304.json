@@ -1,0 +1,138 @@
+{
+  "title": "Lokpal vs CVC vs CBI",
+  "order": 304,
+  "blocks": [
+    {
+      "id": "xwpfces",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Lokpal</strong></p>",
+            "<p><strong>CVC</strong></p>",
+            "<p><strong>CBI</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type</p>",
+            "<p>Statutory Ombudsman</p>",
+            "<p>Statutory Vigilance Body</p>",
+            "<p>Investigative Agency</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Role</p>",
+            "<p>Anti-corruption authority</p>",
+            "<p>Advisory watchdog</p>",
+            "<p>Conducts investigation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Power</p>",
+            "<p>Can order probe</p>",
+            "<p>Advisory</p>",
+            "<p>Files cases</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Central Vigilance Commission exercises superintendence over the functioning of the Central Bureau of Investigation in so far as it relates to the investigation of offences under the Prevention of Corruption Act.",
+      "id": "tc7zn1l"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Lokpal",
+        "Central Vigilance Commission (CVC)",
+        "Central Bureau of Investigation (CBI)"
+      ],
+      "rows": [
+        [
+          "Legal Status",
+          "Statutory body (Lokpal and Lokayuktas Act, 2013)",
+          "Statutory body (CVC Act, 2003)",
+          "Non-Statutory (Powers from DSPE Act, 1946)"
+        ],
+        [
+          "Origin / Recommendation",
+          "Administrative Reforms Commission (1966)",
+          "Santhanam Committee (1962–64)",
+          "Special Police Establishment (1941) / DSPE Act"
+        ],
+        [
+          "Primary Role",
+          "Ombudsman for inquiring into corruption complaints against public officials",
+          "Vigilance oversight and advisory body for central administration",
+          "Premier investigative agency for corruption, financial crimes, and major cases"
+        ],
+        [
+          "Supervisory Mandate",
+          "Can direct CBI or its own wing to investigate cases referred by it",
+          "Supervises CBI in corruption cases under Prevention of Corruption Act",
+          "Functions under Ministry of Personnel; supervised by CVC for corruption cases"
+        ]
+      ],
+      "id": "upi1s5d"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Lokpal Enactment",
+          "value": "2013",
+          "icon": "calendar"
+        },
+        {
+          "label": "CVC Establishment",
+          "value": "1964",
+          "icon": "clock"
+        },
+        {
+          "label": "CBI Power Source",
+          "value": "DSPE Act 1946",
+          "icon": "book"
+        },
+        {
+          "label": "Lokpal Max Strength",
+          "value": "1 + 8 Members",
+          "icon": "info"
+        }
+      ],
+      "id": "b694jwy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Santhanam Committee (1962–64) recommended the creation of the Central Vigilance Commission (CVC).",
+        "CBI is NOT a statutory body; its legal mandate to investigate stems from the DSPE Act, 1946.",
+        "Lokpal's jurisdiction extends to the Prime Minister, Union Ministers, Members of Parliament, and Groups A, B, C, and D officers of the Central Government.",
+        "The Selection Committee for Lokpal consists of the Prime Minister, Speaker of Lok Sabha, Leader of Opposition in Lok Sabha, Chief Justice of India (or nominee), and an eminent jurist."
+      ],
+      "id": "abphl79"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Lokpal is a statutory anti-corruption ombudsman established under the Lokpal and Lokayuktas Act, 2013 to inquire into allegations of corruption against public functionaries.",
+        "The Central Vigilance Commission (CVC) was created in 1964 on the recommendations of the Santhanam Committee and granted statutory status in 2003.",
+        "The Central Bureau of Investigation (CBI) is not a statutory body; it derives its investigative powers from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "CVC exercises superintendence over the functioning of CBI insofar as it relates to the investigation of offences under the Prevention of Corruption Act, 1988.",
+        "Lokpal has the authority to refer complaints directly to the CBI or its own inquiry wing for preliminary inquiry and investigation."
+      ],
+      "id": "7zsw55v"
+    }
+  ],
+  "enriched": true
+}

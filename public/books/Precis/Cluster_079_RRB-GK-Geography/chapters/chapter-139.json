@@ -1,0 +1,137 @@
+{
+  "title": "6. Drainage Patterns",
+  "order": 139,
+  "blocks": [
+    {
+      "id": "ayeoq9m",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Pattern</strong></p>",
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Region</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dendritic</p>",
+            "<p>Tree-like branching</p>",
+            "<p>Uniform rock regions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Trellis</p>",
+            "<p>Parallel streams</p>",
+            "<p>Folded mountains</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Radial</p>",
+            "<p>Flow outward</p>",
+            "<p>Volcanic hills</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rectangular</p>",
+            "<p>Right angle bends</p>",
+            "<p>Faulted regions</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "A dendritic pattern develops where the river channel follows the slope of the terrain and resembles the branches of a tree.",
+      "id": "43hf2dw"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Dendritic Pattern",
+        "Trellis Pattern"
+      ],
+      "rows": [
+        [
+          "Appearance",
+          "Tree-like branching pattern",
+          "Rectangular grid layout"
+        ],
+        [
+          "Rock Structure",
+          "Uniformly resistant rocks and gentle slope",
+          "Alternating parallel bands of hard and soft rock"
+        ],
+        [
+          "Junction Angle",
+          "Tributaries join at acute angles",
+          "Tributaries join main streams at right angles"
+        ],
+        [
+          "Indian Example",
+          "Northern Plains (Ganga River system)",
+          "Old folded mountain regions of Chota Nagpur Plateau"
+        ]
+      ],
+      "id": "yv9lqdk"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Patterns",
+          "value": "8 Major Types",
+          "icon": "book"
+        },
+        {
+          "label": "Antecedent Rivers",
+          "value": "Indus, Sutlej, Brahmaputra",
+          "icon": "check"
+        },
+        {
+          "label": "Radial Hub",
+          "value": "Amarkantak Plateau",
+          "icon": "award"
+        },
+        {
+          "label": "Centripetal Site",
+          "value": "Loktak Lake",
+          "icon": "info"
+        }
+      ],
+      "id": "rpdq4z3"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Himalayan rivers like the Indus, Sutlej, and Brahmaputra are classic examples of antecedent drainage that predate the Himalayan orogeny.",
+        "Amarkantak Plateau is frequently cited in exams as the primary Indian example of a radial drainage pattern giving rise to the Narmada and Son rivers.",
+        "Loktak Lake in Manipur is the prime example of centripetal drainage where surrounding streams drain into a central lake basin.",
+        "Trellis patterns form in folded sedimentary structures where primary tributaries flow parallel to folded ridges and secondary tributaries join at right angles."
+      ],
+      "id": "2mlc9gz"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Consequent streams follow the natural slope of the terrain, forming the initial drainage network of a newly uplifted landform.",
+        "Antecedent rivers existed before the upliftment of mountains and maintained their courses by cutting deep gorges through rising landmasses.",
+        "Dendritic drainage patterns develop in areas of uniform rock structure and resemble the branching network of a tree.",
+        "Radial drainage patterns emerge when rivers radiate outwards in all directions from a central elevated peak or dome.",
+        "Centripetal drainage occurs when streams flow from surrounding high grounds into a central depression, lake, or inland basin."
+      ],
+      "id": "pfq2gq7"
+    }
+  ],
+  "enriched": true
+}

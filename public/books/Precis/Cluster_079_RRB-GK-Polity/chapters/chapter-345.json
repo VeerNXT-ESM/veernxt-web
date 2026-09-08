@@ -1,0 +1,137 @@
+{
+  "title": "Comparison: TRAI vs RBI vs SEBI",
+  "order": 345,
+  "blocks": [
+    {
+      "id": "kbwkz77",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>TRAI</strong></p>",
+            "<p><strong>RBI</strong></p>",
+            "<p><strong>SEBI</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sector</p>",
+            "<p>Telecommunications</p>",
+            "<p>Banking</p>",
+            "<p>Capital Market</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Act</p>",
+            "<p>1997</p>",
+            "<p>1934</p>",
+            "<p>1992</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Main Role</p>",
+            "<p>Telecom Regulation</p>",
+            "<p>Monetary Authority</p>",
+            "<p>Investor Protection</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Regulatory bodies such as RBI, SEBI, and TRAI serve as autonomous pillars ensuring financial stability, investor protection, and fair market competition across key sectors of the Indian economy.",
+      "id": "wt6v0np"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "RBI",
+        "SEBI",
+        "TRAI"
+      ],
+      "rows": [
+        [
+          "Sector Regulated",
+          "Banking, Forex & Monetary System",
+          "Capital & Securities Markets",
+          "Telecommunications & Broadcasting"
+        ],
+        [
+          "Parent Legislation",
+          "Reserve Bank of India Act, 1934",
+          "Securities and Exchange Board of India Act, 1992",
+          "Telecom Regulatory Authority of India Act, 1997"
+        ],
+        [
+          "Primary Mandate",
+          "Price stability, credit regulation & bank supervision",
+          "Investor protection & securities market regulation",
+          "Fixing tariffs, ensuring fair competition & service quality"
+        ],
+        [
+          "Appellate Tribunal",
+          "Finance Bench / High Courts / Supreme Court",
+          "Securities Appellate Tribunal (SAT)",
+          "Telecom Disputes Settlement & Appellate Tribunal (TDSAT)"
+        ]
+      ],
+      "id": "ronw48a"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "RBI Established",
+          "value": "1935",
+          "icon": "calendar"
+        },
+        {
+          "label": "SEBI Statutory Status",
+          "value": "1992",
+          "icon": "award"
+        },
+        {
+          "label": "TRAI Act Passed",
+          "value": "1997",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Objective",
+          "value": "Sectoral Governance",
+          "icon": "check"
+        }
+      ],
+      "id": "mpno5jy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "RBI was established on April 1, 1935 based on the recommendations of the Hilton Young Commission.",
+        "SEBI was non-statutory when formed in 1988 and gained statutory powers via the SEBI Act in 1992.",
+        "TDSAT (Telecom Disputes Settlement and Appellate Tribunal) was created by an amendment in 2000 to divest TRAI of its adjudicatory powers."
+      ],
+      "id": "4yhvxbf"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "RBI functions as the central bank regulating monetary policy, currency issuance, and the banking system under the RBI Act, 1934.",
+        "SEBI regulates the securities, capital, and commodities markets to safeguard investor interests under the SEBI Act, 1992.",
+        "TRAI regulates telecommunication services, tariffs, and service standards under the Telecom Regulatory Authority of India Act, 1997.",
+        "While RBI and SEBI govern core financial sectors, TRAI manages communication infrastructure and tariff fairness.",
+        "Adjudicatory functions for TRAI were transferred to TDSAT in 2000, whereas SEBI decisions are appealed before SAT."
+      ],
+      "id": "h56fs6n"
+    }
+  ],
+  "enriched": true
+}

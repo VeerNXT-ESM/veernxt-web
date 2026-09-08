@@ -1,0 +1,789 @@
+{
+  "id": "j94wq29",
+  "title": "Power Systems",
+  "order": 7,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bs6zsvg",
+      "content": "<strong>CHAPTER 7 — POWER SYSTEMS</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "i6bjgnl",
+      "content": "Power Systems encompass the generation, transmission, distribution, and utilisation of electrical energy. Understanding power system fundamentals is essential for PSU exams in power sector companies (NHPC, SJVN, NLC, NTPC, PGCIL, POWERGRID). Key topics include power system structure, per-unit system, load flow, faults, protection, and high-voltage transmission."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v93tly3",
+      "content": "<strong>7.1  Structure of Power System</strong>"
+    },
+    {
+      "id": "m6trf45",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Stage</strong></p>",
+            "<p><strong>Voltage Level (India)</strong></p>",
+            "<p><strong>Equipment Used</strong></p>",
+            "<p><strong>Purpose</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Generation</p>",
+            "<p>11 kV – 25 kV (3-phase)</p>",
+            "<p>Alternators, step-up transformers</p>",
+            "<p>Convert fuel/water/nuclear energy to electrical energy</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Extra High Voltage Transmission</p>",
+            "<p>220 kV, 400 kV, 765 kV, 1200 kV</p>",
+            "<p>EHV lines, towers, HVDC</p>",
+            "<p>Long-distance bulk power transfer; reduces I²R loss</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>High Voltage Transmission</p>",
+            "<p>66 kV, 110 kV, 132 kV</p>",
+            "<p>HV lines, sub-stations</p>",
+            "<p>State-level transmission</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sub-Transmission</p>",
+            "<p>11 kV, 33 kV</p>",
+            "<p>Distribution substations</p>",
+            "<p>Steps down to distribution voltage</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Distribution (Primary)</p>",
+            "<p>11 kV</p>",
+            "<p>Distribution transformers</p>",
+            "<p>Feeds industrial and large commercial consumers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Distribution (Secondary)</p>",
+            "<p>440 V (3-phase), 230 V (1-phase)</p>",
+            "<p>Service transformers, LT lines</p>",
+            "<p>Feeds homes and small loads</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Utilisation</p>",
+            "<p>Varies by load</p>",
+            "<p>Motors, heaters, lighting etc.</p>",
+            "<p>End use of electrical energy</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kfteq8v",
+      "content": "<strong>7.2  Per-Unit System</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "48bgv28",
+      "content": "The per-unit (pu) system expresses all electrical quantities as fractions of chosen base values. It simplifies calculations in power systems with multiple voltage levels (through transformers) by eliminating the effect of turns ratio. All quantities on the same pu base can be directly compared."
+    },
+    {
+      "id": "54svwsl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>pu value = Actual value / Base value</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Base power: S_base (MVA),  Base voltage: V_base (kV)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Base current: I_base = S_base / (√3 × V_base)    Base impedance: Z_base = V_base² / S_base</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "ghs5jh1",
+      "content": "To change pu impedance from old base to new base:"
+    },
+    {
+      "id": "8zzxhea",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Z_pu(new) = Z_pu(old) × (MVA_base_new / MVA_base_old) × (kV_base_old / kV_base_new)²</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6dgs3jf",
+      "content": "<strong>7.3  Transmission Line Parameters</strong>"
+    },
+    {
+      "id": "uacbqlp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Unit</strong></p>",
+            "<p><strong>Significance</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Resistance</p>",
+            "<p>R</p>",
+            "<p>Ω/km</p>",
+            "<p>Causes I²R (copper) losses; increases with temperature</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Inductance</p>",
+            "<p>L (or X_L)</p>",
+            "<p>H/km or Ω/km</p>",
+            "<p>Due to flux linkage; causes voltage drop; limits power transfer</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Capacitance</p>",
+            "<p>C (or B_C)</p>",
+            "<p>F/km or S/km</p>",
+            "<p>Shunt capacitance to ground; produces charging current; significant in long lines</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Conductance</p>",
+            "<p>G</p>",
+            "<p>S/km</p>",
+            "<p>Due to leakage through insulators; usually neglected</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Surge Impedance</p>",
+            "<p>Z_c = √(L/C)</p>",
+            "<p>Ω</p>",
+            "<p>Natural impedance; at SIL, no reactive power on line</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>SIL (Surge Impedance Loading)</p>",
+            "<p>P_SIL = V²/Z_c</p>",
+            "<p>MW</p>",
+            "<p>Loading at which line neither absorbs nor supplies VAR</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "sk4zp4f",
+      "content": "<strong>Line Models</strong>"
+    },
+    {
+      "id": "j3ywjnu",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Line Length</strong></p>",
+            "<p><strong>Model</strong></p>",
+            "<p><strong>Parameters</strong></p>",
+            "<p><strong>Application</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Short line (&lt; 80 km)</p>",
+            "<p>Series R and X only</p>",
+            "<p>R and X_L; capacitance neglected</p>",
+            "<p>Distribution, sub-transmission</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Medium line (80–250 km)</p>",
+            "<p>Nominal-π or T model</p>",
+            "<p>R, X_L, and lumped C</p>",
+            "<p>132 kV, 220 kV transmission lines</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Long line (&gt; 250 km)</p>",
+            "<p>Distributed parameter model</p>",
+            "<p>Hyperbolic equations; all distributed</p>",
+            "<p>400 kV and above EHV transmission</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "ugofk8n",
+      "content": "<strong>7.4  Power Factor Improvement in Power Systems</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "dhm5frw",
+      "content": "Low power factor in a power system increases current for the same active power, causing higher I²R losses, larger conductor sizes, lower voltage regulation, and higher kVA ratings for generators and transformers. Power factor is improved using shunt capacitors (at load end), synchronous condensers (overexcited synchronous motors), or Static VAR Compensators (SVC)."
+    },
+    {
+      "id": "upo1uxl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Loss reduction with PF improvement from cosφ₁ to cosφ₂: % loss reduction = [1 − (cosφ₁/cosφ₂)²] × 100</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gdrxa40",
+      "content": "<strong>7.5  Faults in Power Systems</strong>"
+    },
+    {
+      "id": "6opi5gh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Fault Type</strong></p>",
+            "<p><strong>Phases Involved</strong></p>",
+            "<p><strong>% Occurrence</strong></p>",
+            "<p><strong>Fault Current</strong></p>",
+            "<p><strong>Severity</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Three-phase fault (LLL or LLLG)</p>",
+            "<p>All 3 phases</p>",
+            "<p>2–5%</p>",
+            "<p>Maximum (3-phase symmetrical)</p>",
+            "<p>Most severe for equipment; used for equipment rating</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Single Line to Ground (SLG)</p>",
+            "<p>1 phase + ground</p>",
+            "<p>70–80%</p>",
+            "<p>Moderate (depends on grounding)</p>",
+            "<p>Most frequent fault</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Line to Line (LL)</p>",
+            "<p>2 phases</p>",
+            "<p>10–15%</p>",
+            "<p>0.866 × 3-phase fault current</p>",
+            "<p>Moderate</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Double Line to Ground (DLG)</p>",
+            "<p>2 phases + ground</p>",
+            "<p>10%</p>",
+            "<p>Higher than LL; less than 3-phase</p>",
+            "<p>Severe</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "21svjms",
+      "content": "<strong>7.6  Power System Protection</strong>"
+    },
+    {
+      "id": "ad2x0wa",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Protective Device</strong></p>",
+            "<p><strong>Operates On</strong></p>",
+            "<p><strong>Protected Equipment</strong></p>",
+            "<p><strong>Operating Principle</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Overcurrent Relay (OCR)</p>",
+            "<p>Excess current</p>",
+            "<p>Feeders, transformers (backup)</p>",
+            "<p>Current exceeds set pickup; inverse-time characteristic</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Differential Relay</p>",
+            "<p>Difference of currents (Id = I₁−I₂)</p>",
+            "<p>Transformers, generators, buses</p>",
+            "<p>Operates when differential current &gt; bias setting</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Distance (Impedance) Relay</p>",
+            "<p>Impedance (V/I ratio)</p>",
+            "<p>EHV transmission lines</p>",
+            "<p>Operates when impedance &lt; zone setting</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Buchholz Relay</p>",
+            "<p>Gas and oil flow</p>",
+            "<p>Oil-immersed transformers</p>",
+            "<p>Thermal/arc faults generate gas; two-stage alarm &amp; trip</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Earth Fault Relay</p>",
+            "<p>Zero-sequence current</p>",
+            "<p>Grounded systems</p>",
+            "<p>Detects current through earth; residual connection</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Negative Sequence Relay</p>",
+            "<p>Negative sequence components</p>",
+            "<p>Generators, motors</p>",
+            "<p>Unbalanced faults; protects against phase imbalance</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pilot Differential Relay</p>",
+            "<p>Current comparison at both ends</p>",
+            "<p>Long transmission lines</p>",
+            "<p>Communicates via pilot wire or optical fibre</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "73xweq8",
+      "content": "<strong>7.7  Practice MCQs — Power Systems</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "45fh3tk",
+      "content": "<strong>Q1.  </strong>The per-unit impedance of a transformer does NOT change with:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vrecas3",
+      "content": "        (A)  Change in MVA base"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1izjywk",
+      "content": "        (B)  Change in kV base"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v076f94",
+      "content": "        (C)  Change in turns ratio"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3be3o3a",
+      "content": "        (D)  All of the above"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9grx10b",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "wv39wls",
+      "content": "<strong>Q2.  </strong>Voltage at which electricity is transmitted over long distances is:"
+    },
+    {
+      "type": "paragraph",
+      "id": "qzruool",
+      "content": "        (A)  Low (to reduce insulation cost)"
+    },
+    {
+      "type": "paragraph",
+      "id": "cjd5sak",
+      "content": "        (B)  High (to reduce I²R losses)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pcdfwn9",
+      "content": "        (C)  Same as generation voltage"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "40nnmyz",
+      "content": "        (D)  Same as utilisation voltage"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p34wk6t",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "xc1see6",
+      "content": "<strong>Q3.  </strong>The most common type of fault in a power system is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "h1w1yy8",
+      "content": "        (A)  Three-phase fault"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0po4fpd",
+      "content": "        (B)  Line-to-line fault"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "80fc95k",
+      "content": "        (C)  Single line-to-ground fault"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "83jpyti",
+      "content": "        (D)  Double line-to-ground fault"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6z74f5z",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "c4kj0qt",
+      "content": "<strong>Q4.  </strong>Buchholz relay is used to protect:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k3etm3e",
+      "content": "        (A)  Overhead transmission lines"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vwxh2h6",
+      "content": "        (B)  Oil-immersed transformers"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cetbd18",
+      "content": "        (C)  Induction motors"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fz75cca",
+      "content": "        (D)  Busbars"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ys0nvuo",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "vgz6dhb",
+      "content": "<strong>Q5.  </strong>Surge impedance loading (SIL) of a transmission line is the load at which:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ect1aip",
+      "content": "        (A)  Maximum power is transferred"
+    },
+    {
+      "type": "paragraph",
+      "id": "nludv4j",
+      "content": "        (B)  The line neither absorbs nor supplies reactive power"
+    },
+    {
+      "type": "paragraph",
+      "id": "ljyai1d",
+      "content": "        (C)  The voltage profile is flat"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lw12ex0",
+      "content": "        (D)  All of the above"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8l9kigc",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "t2xceit",
+      "content": "<strong>Q6.  </strong>Distance relay operates on the principle of:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ivnzdni",
+      "content": "        (A)  Overcurrent"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "stdj9jw",
+      "content": "        (B)  Differential current"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6p6otrx",
+      "content": "        (C)  Measured impedance (V/I)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k6ij1vm",
+      "content": "        (D)  Zero sequence current"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "j82w9jw",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "8yvk02z",
+      "content": "<strong>Q7.  </strong>Power factor correction using capacitors reduces:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4v7ef4f",
+      "content": "        (A)  Active power"
+    },
+    {
+      "type": "paragraph",
+      "id": "y1sbcqw",
+      "content": "        (B)  Reactive power demand from source"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fwk1ncw",
+      "content": "        (C)  System frequency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mlj2dxp",
+      "content": "        (D)  Voltage level"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k34l397",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ag6rc1",
+      "content": "<strong>Q8.  </strong>In per-unit system, the advantage is:"
+    },
+    {
+      "type": "paragraph",
+      "id": "y4zlwa6",
+      "content": "        (A)  Eliminates the effect of turns ratio of transformers"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8hyoqu8",
+      "content": "        (B)  Increases calculation complexity"
+    },
+    {
+      "type": "paragraph",
+      "id": "dtpgujc",
+      "content": "        (C)  Requires different base for each voltage level"
+    },
+    {
+      "type": "paragraph",
+      "id": "29tqguz",
+      "content": "        (D)  Applicable only to DC systems"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qrfmfs3",
+      "content": "<strong>Answer: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "o0q0lcy",
+      "content": "<strong>Q9.  </strong>The differential relay provides protection against:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e7pwnnh",
+      "content": "        (A)  Overcurrent"
+    },
+    {
+      "type": "paragraph",
+      "id": "tucce2u",
+      "content": "        (B)  Internal faults (winding short, turn-to-turn)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p6chmun",
+      "content": "        (C)  Overvoltage"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mq94mb1",
+      "content": "        (D)  Underfrequency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0z9aycn",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "zryjpt4",
+      "content": "<strong>Q10.  </strong>Skin effect in a conductor causes:"
+    },
+    {
+      "type": "paragraph",
+      "id": "9jydijh",
+      "content": "        (A)  Current to concentrate at centre"
+    },
+    {
+      "type": "paragraph",
+      "id": "mh670li",
+      "content": "        (B)  Resistance to decrease at high frequency"
+    },
+    {
+      "type": "paragraph",
+      "id": "uf0r0yd",
+      "content": "        (C)  Current to concentrate at surface; effective resistance increases"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t9lu06c",
+      "content": "        (D)  No change in resistance"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pabh6o7",
+      "content": "<strong>Answer: </strong>(C)"
+    }
+  ],
+  "enriched": true
+}

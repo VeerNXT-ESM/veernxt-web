@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "uwil4x4"
+      "id": "uwil4x4",
+      "content": "The Constitution of India provides a federal system with powers divided between the Union and the States. The structure of the State Government is similar to that of the Central Government. It consists of the Governor, Chief Minister, Council of Ministers, and the State Legislature. The provisions related to State Government are mainly found in Part VI of the Constitution (Articles 153–237)."
     },
     {
       "type": "statStrip",
@@ -58,71 +59,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 153</p>",
+            "<p>Governor of a State</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 154</p>",
+            "<p>Executive power of the State</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 163</p>",
+            "<p>Council of Ministers to aid and advise the Governor</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 164</p>",
+            "<p>Appointment of Chief Minister and Council of Ministers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 168</p>",
+            "<p>Constitution of State Legislature</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 170</p>",
+            "<p>Composition of Legislative Assembly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 171</p>",
+            "<p>Composition of Legislative Council</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 174</p>",
+            "<p>Sessions of State Legislature</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 200</p>",
+            "<p>Governor's assent to bills</p>"
           ]
         }
       ]
@@ -135,19 +136,23 @@
     },
     {
       "type": "paragraph",
-      "id": "uxo109p"
+      "id": "uxo109p",
+      "content": "• The Governor is the constitutional head of the State."
     },
     {
       "type": "paragraph",
-      "id": "e5qsodz"
+      "id": "e5qsodz",
+      "content": "• The Governor is appointed by the President of India."
     },
     {
       "type": "paragraph",
-      "id": "hk0az6w"
+      "id": "hk0az6w",
+      "content": "• The normal term of office is five years."
     },
     {
       "type": "paragraph",
-      "id": "bz25r3v"
+      "id": "bz25r3v",
+      "content": "• The Governor performs executive, legislative, financial and judicial functions."
     },
     {
       "id": "27f2bg9",
@@ -157,24 +162,23 @@
     },
     {
       "type": "paragraph",
-      "id": "ju1x4c4"
+      "id": "ju1x4c4",
+      "content": "• The Chief Minister is the real executive head of the State Government."
     },
     {
       "type": "paragraph",
-      "id": "1d8vhrr"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Constitutional Articles Related to State Government",
-      "id": "70lddls"
+      "id": "1d8vhrr",
+      "content": "• Appointed by the Governor."
     },
     {
       "type": "paragraph",
-      "id": "kiilq6y"
+      "id": "kiilq6y",
+      "content": "• Usually the leader of the majority party in the Legislative Assembly becomes Chief Minister."
     },
     {
       "type": "paragraph",
-      "id": "wuj5fgk"
+      "id": "wuj5fgk",
+      "content": "• He or she heads the Council of Ministers."
     },
     {
       "id": "0nmsuco",
@@ -184,7 +188,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ivjlzrj"
+      "id": "ivjlzrj",
+      "content": "The Council of Ministers assists the Chief Minister in administration."
     },
     {
       "id": "qoqg6kr",
@@ -193,29 +198,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Role</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cabinet Ministers</p>",
+            "<p>Head important departments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ministers of State</p>",
+            "<p>Assist cabinet ministers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deputy Ministers</p>",
+            "<p>Assist ministers in administrative work</p>"
           ]
         }
       ]
@@ -264,11 +269,13 @@
     },
     {
       "type": "paragraph",
-      "id": "fdz8hym"
+      "id": "fdz8hym",
+      "content": "• The State Legislature consists of the Governor and one or two houses."
     },
     {
       "type": "paragraph",
-      "id": "ew0rey6"
+      "id": "ew0rey6",
+      "content": "• States may have unicameral or bicameral legislature."
     },
     {
       "id": "g2qg1n6",
@@ -278,15 +285,18 @@
     },
     {
       "type": "paragraph",
-      "id": "yu0i7n6"
+      "id": "yu0i7n6",
+      "content": "• Lower house of state legislature."
     },
     {
       "type": "paragraph",
-      "id": "3eey272"
+      "id": "3eey272",
+      "content": "• Members directly elected by people."
     },
     {
       "type": "paragraph",
-      "id": "fwm2j12"
+      "id": "fwm2j12",
+      "content": "• Normal term is 5 years."
     },
     {
       "id": "6un5e82",
@@ -296,7 +306,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1f5pn0g"
+      "id": "1f5pn0g",
+      "content": "• Upper house in some states."
     },
     {
       "type": "examAlert",
@@ -310,11 +321,13 @@
     },
     {
       "type": "paragraph",
-      "id": "9iext8n"
+      "id": "9iext8n",
+      "content": "• It is a permanent body."
     },
     {
       "type": "paragraph",
-      "id": "der8odg"
+      "id": "der8odg",
+      "content": "• One-third members retire every two years."
     },
     {
       "id": "o14kq15",
@@ -324,15 +337,18 @@
     },
     {
       "type": "paragraph",
-      "id": "zlzmxeb"
+      "id": "zlzmxeb",
+      "content": "• Part VI deals with State Government."
     },
     {
       "type": "paragraph",
-      "id": "bh7bzvg"
+      "id": "bh7bzvg",
+      "content": "• Governor is constitutional head."
     },
     {
       "type": "paragraph",
-      "id": "xitmaru"
+      "id": "xitmaru",
+      "content": "• Chief Minister is real executive head."
     }
   ],
   "enriched": true

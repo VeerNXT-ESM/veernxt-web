@@ -1,0 +1,375 @@
+{
+  "id": "t4dkntx",
+  "title": "Chapter 9: Chemical Reactions",
+  "order": 58,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "phhtv3g",
+      "content": "Chemical reactions are processes in which substances undergo chemical changes to form new substances with different properties. During a chemical reaction, atoms rearrange themselves to form new molecules. Chemical reactions are essential in everyday life, industrial processes and biological systems."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Types",
+          "value": "5 Reactions",
+          "icon": "book"
+        },
+        {
+          "label": "Governing Law",
+          "value": "Mass Conservation",
+          "icon": "award"
+        },
+        {
+          "label": "Process Indicators",
+          "value": "4 Signs",
+          "icon": "check"
+        },
+        {
+          "label": "Key Phenomenon",
+          "value": "Redox Reactions",
+          "icon": "info"
+        }
+      ],
+      "id": "zainctu"
+    },
+    {
+      "id": "i8ppxne",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Chemical Reaction"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A chemical reaction involves the breaking and making of chemical bonds to produce new substances with entirely different properties.",
+        "Chemical equations must be balanced to satisfy the Law of Conservation of Mass, ensuring equal atoms on reactants and products sides.",
+        "Key indicators of a chemical reaction include change in state, color, temperature, or evolution of a gas.",
+        "Oxidation involves the gain of oxygen or loss of hydrogen, whereas reduction involves the loss of oxygen or gain of hydrogen.",
+        "Corrosion and rancidity are everyday effects of oxidation processes affecting metals and fat-containing food items respectively."
+      ],
+      "id": "uuqq0cw"
+    },
+    {
+      "type": "paragraph",
+      "id": "dqy1xyc",
+      "content": "• A chemical reaction is a process in which one or more substances are transformed into new substances."
+    },
+    {
+      "type": "paragraph",
+      "id": "rx6gxhi",
+      "content": "• The substances that take part in a reaction are called reactants."
+    },
+    {
+      "type": "paragraph",
+      "id": "pekwvu8",
+      "content": "• The substances formed in a reaction are called products."
+    },
+    {
+      "type": "paragraph",
+      "id": "bshepfa",
+      "content": "• Chemical reactions involve breaking and forming of chemical bonds."
+    },
+    {
+      "id": "st54gd1",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Chemical Equation"
+    },
+    {
+      "type": "paragraph",
+      "id": "a5iuv4m",
+      "content": "A chemical equation is a symbolic representation of a chemical reaction using chemical formulas."
+    },
+    {
+      "type": "paragraph",
+      "id": "e56kv1i",
+      "content": "Example:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a09qp9j",
+      "content": "2H₂ + O₂ → 2H₂O"
+    },
+    {
+      "id": "7q4n5yq",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Balanced Chemical Equation"
+    },
+    {
+      "type": "paragraph",
+      "id": "ql4c0d1",
+      "content": "A balanced chemical equation has an equal number of atoms of each element on both sides."
+    },
+    {
+      "type": "paragraph",
+      "id": "feezsb6",
+      "content": "Example:"
+    },
+    {
+      "type": "paragraph",
+      "id": "4asqmtu",
+      "content": "CH₄ + 2O₂ → CO₂ + 2H₂O"
+    },
+    {
+      "id": "bd3lf5h",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Indicators of Chemical Reaction"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A balanced chemical equation has an equal number of atoms of each element on both reactant and product sides.",
+      "id": "7si9udn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4krf4fx",
+      "content": "• Change in colour"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m5c7a0p",
+      "content": "• Change in temperature"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "phr0wq6",
+      "content": "• Formation of gas"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lnj1els",
+      "content": "• Formation of precipitate"
+    },
+    {
+      "type": "paragraph",
+      "id": "q5wxsi5",
+      "content": "• Emission of light or sound"
+    },
+    {
+      "id": "fbwoln0",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Types of Chemical Reactions"
+    },
+    {
+      "id": "ea7mz7k",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Reaction Type</strong></p>",
+            "<p><strong>General Form</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Combination Reaction</p>",
+            "<p>A + B → AB</p>",
+            "<p>2H₂ + O₂ → 2H₂O</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Decomposition Reaction</p>",
+            "<p>AB → A + B</p>",
+            "<p>CaCO₃ → CaO + CO₂</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Displacement Reaction</p>",
+            "<p>A + BC → AC + B</p>",
+            "<p>Zn + CuSO₄ → ZnSO₄ + Cu</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Double Displacement Reaction</p>",
+            "<p>AB + CD → AD + CB</p>",
+            "<p>AgNO₃ + NaCl → AgCl + NaNO₃</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pomqwqe",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Oxidation and Reduction"
+    },
+    {
+      "type": "paragraph",
+      "id": "ecaz1g4",
+      "content": "Oxidation: Addition of oxygen or loss of hydrogen."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Exothermic Reaction",
+        "Endothermic Reaction"
+      ],
+      "rows": [
+        [
+          "Heat Energy",
+          "Released into the surroundings",
+          "Absorbed from the surroundings"
+        ],
+        [
+          "Temperature",
+          "Surrounding temperature increases",
+          "Surrounding temperature decreases"
+        ],
+        [
+          "Common Example",
+          "Respiration, Burning of Natural Gas",
+          "Photosynthesis, Thermal Decomposition"
+        ]
+      ],
+      "id": "6tk340b"
+    },
+    {
+      "type": "paragraph",
+      "id": "ngnmr04",
+      "content": "Reduction: Removal of oxygen or gain of hydrogen."
+    },
+    {
+      "type": "paragraph",
+      "id": "py80h5a",
+      "content": "These reactions together are called redox reactions."
+    },
+    {
+      "id": "riacwkv",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Exothermic and Endothermic Reactions"
+    },
+    {
+      "id": "qz4yw6b",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Reaction Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Exothermic Reaction</p>",
+            "<p>Releases heat energy</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Endothermic Reaction</p>",
+            "<p>Absorbs heat energy</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4zx0v55",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Corrosion"
+    },
+    {
+      "type": "paragraph",
+      "id": "hnzq83b",
+      "content": "Corrosion is the gradual destruction of metals due to chemical reactions with the environment. Rusting of iron is the most common example."
+    },
+    {
+      "type": "paragraph",
+      "id": "dgekgw6",
+      "content": "Example of rusting:"
+    },
+    {
+      "type": "paragraph",
+      "id": "9dzpj0a",
+      "content": "Iron + Oxygen + Water → Rust"
+    },
+    {
+      "id": "7whshd8",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Rancidity"
+    },
+    {
+      "type": "paragraph",
+      "id": "9qlxjml",
+      "content": "Rancidity refers to the oxidation of fats and oils in food which causes unpleasant smell and taste. It can be prevented by storing food in airtight containers."
+    },
+    {
+      "id": "fbup9s9",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Catalysts"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Respiration is classified as an exothermic reaction, while photosynthesis is an endothermic process.",
+        "Rancidity in food items containing fats and oils is prevented by flushing packaging with inert nitrogen gas.",
+        "Catalysts alter the rate of a chemical reaction without undergoing any permanent chemical change themselves."
+      ],
+      "id": "k4igcik"
+    },
+    {
+      "type": "paragraph",
+      "id": "j44czej",
+      "content": "A catalyst is a substance that increases the rate of a chemical reaction without being consumed in the reaction."
+    },
+    {
+      "type": "paragraph",
+      "id": "exqqc14",
+      "content": "Examples: Platinum, Iron catalyst in Haber process"
+    },
+    {
+      "id": "azznrba",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "aj5vx59",
+      "content": "• Chemical equations represent chemical reactions."
+    },
+    {
+      "type": "paragraph",
+      "id": "i5au94c",
+      "content": "• Rusting of iron is a common example of corrosion."
+    },
+    {
+      "type": "paragraph",
+      "id": "p5mfgwg",
+      "content": "• Redox reactions involve oxidation and reduction."
+    },
+    {
+      "type": "paragraph",
+      "id": "7gklduo",
+      "content": "• Exothermic reactions release heat energy."
+    }
+  ],
+  "enriched": true
+}

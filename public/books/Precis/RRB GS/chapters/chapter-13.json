@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4ki5u4t"
+      "id": "4ki5u4t",
+      "content": "Diseases are abnormal conditions that negatively affect the structure or function of an organism. They may be caused by pathogens, nutritional deficiency, genetic factors or lifestyle habits."
     },
     {
       "id": "chptmq8",
@@ -59,7 +60,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ezhhe8v"
+      "id": "ezhhe8v",
+      "content": "Communicable diseases spread from one person to another through air, water, contact or vectors. Non-communicable diseases do not spread and are often related to lifestyle, genetics or deficiency."
     },
     {
       "id": "6kfwhl8",
@@ -68,33 +70,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Communicable</strong></p>",
+            "<p><strong>Non-Communicable</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cause</p>",
+            "<p>Pathogens</p>",
+            "<p>Lifestyle/Genetic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Spread</p>",
+            "<p>Yes</p>",
+            "<p>No</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example</p>",
+            "<p>Tuberculosis</p>",
+            "<p>Diabetes</p>"
           ]
         }
       ]
@@ -113,7 +115,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6krd9qo"
+      "id": "6krd9qo",
+      "content": "Bacterial diseases are caused by harmful bacteria. They can often be treated using antibiotics."
     },
     {
       "id": "anz19f0",
@@ -122,49 +125,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Causative Agent</strong></p>",
+            "<p><strong>Transmission</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tuberculosis</p>",
+            "<p>Mycobacterium tuberculosis</p>",
+            "<p>Air</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cholera</p>",
+            "<p>Vibrio cholerae</p>",
+            "<p>Contaminated water</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Typhoid</p>",
+            "<p>Salmonella typhi</p>",
+            "<p>Food &amp; water</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Plague</p>",
+            "<p>Yersinia pestis</p>",
+            "<p>Rat flea</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Diphtheria</p>",
+            "<p>Corynebacterium diphtheriae</p>",
+            "<p>Air</p>"
           ]
         }
       ]
@@ -188,7 +191,8 @@
     },
     {
       "type": "paragraph",
-      "id": "nduyytb"
+      "id": "nduyytb",
+      "content": "Viral diseases are caused by viruses. Antibiotics do not work against viruses; vaccines help prevent them."
     },
     {
       "id": "oklx5j9",
@@ -197,49 +201,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Virus</strong></p>",
+            "<p><strong>Transmission</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Polio</p>",
+            "<p>Poliovirus</p>",
+            "<p>Contaminated water</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Measles</p>",
+            "<p>Measles virus</p>",
+            "<p>Air</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>AIDS</p>",
+            "<p>HIV</p>",
+            "<p>Blood/Contact</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>COVID-19</p>",
+            "<p>SARS-CoV-2</p>",
+            "<p>Air</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hepatitis B</p>",
+            "<p>HBV</p>",
+            "<p>Blood</p>"
           ]
         }
       ]
@@ -252,7 +256,8 @@
     },
     {
       "type": "paragraph",
-      "id": "roq6bc9"
+      "id": "roq6bc9",
+      "content": "Fungal diseases are caused by fungi, while protozoan diseases are caused by unicellular parasites."
     },
     {
       "id": "wnzahhw",
@@ -261,41 +266,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Causative Agent</strong></p>",
+            "<p><strong>Type</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ringworm</p>",
+            "<p>Trichophyton</p>",
+            "<p>Fungal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Athlete's Foot</p>",
+            "<p>Fungus</p>",
+            "<p>Fungal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Malaria</p>",
+            "<p>Plasmodium</p>",
+            "<p>Protozoan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Amoebiasis</p>",
+            "<p>Entamoeba histolytica</p>",
+            "<p>Protozoan</p>"
           ]
         }
       ]
@@ -339,7 +344,8 @@
     },
     {
       "type": "paragraph",
-      "id": "07mori3"
+      "id": "07mori3",
+      "content": "Immunity is the ability of the body to resist infection. Vaccines stimulate immune response by introducing weakened or inactive pathogens."
     },
     {
       "id": "ivvho4e",
@@ -348,29 +354,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Immunity</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Active Immunity</p>",
+            "<p>Developed after infection or vaccination</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Passive Immunity</p>",
+            "<p>Antibodies transferred from mother</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Innate Immunity</p>",
+            "<p>Inborn resistance</p>"
           ]
         }
       ]
@@ -383,7 +389,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xoexj15"
+      "id": "xoexj15",
+      "content": "Deficiency diseases occur due to lack of essential nutrients such as vitamins and minerals."
     },
     {
       "id": "kkv69n9",
@@ -392,49 +399,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Nutrient Deficiency</strong></p>",
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Symptoms</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vitamin A</p>",
+            "<p>Night Blindness</p>",
+            "<p>Poor vision</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vitamin C</p>",
+            "<p>Scurvy</p>",
+            "<p>Bleeding gums</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vitamin D</p>",
+            "<p>Rickets</p>",
+            "<p>Weak bones</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Iron</p>",
+            "<p>Anaemia</p>",
+            "<p>Low haemoglobin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Iodine</p>",
+            "<p>Goitre</p>",
+            "<p>Enlarged thyroid</p>"
           ]
         }
       ]
@@ -452,61 +459,61 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Pathogen Type</strong></p>",
+            "<p><strong>Cell Type</strong></p>",
+            "<p><strong>Example Disease</strong></p>",
+            "<p><strong>Transmission</strong></p>",
+            "<p><strong>Treatment</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Bacteria</p>",
+            "<p>Prokaryotic</p>",
+            "<p>Tuberculosis</p>",
+            "<p>Air</p>",
+            "<p>Antibiotics</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Virus</p>",
+            "<p>Non-cellular</p>",
+            "<p>COVID-19</p>",
+            "<p>Air</p>",
+            "<p>Vaccine/Antivirals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Fungi</p>",
+            "<p>Eukaryotic</p>",
+            "<p>Ringworm</p>",
+            "<p>Contact</p>",
+            "<p>Antifungal drugs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Protozoa</p>",
+            "<p>Eukaryotic (unicellular)</p>",
+            "<p>Malaria</p>",
+            "<p>Mosquito</p>",
+            "<p>Antiprotozoal drugs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Helminths</p>",
+            "<p>Multicellular</p>",
+            "<p>Ascariasis</p>",
+            "<p>Contaminated food</p>",
+            "<p>Anthelmintics</p>"
           ]
         }
       ]
@@ -534,100 +541,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Causative Agent</strong></p>",
+            "<p><strong>Transmission</strong></p>",
+            "<p><strong>Key Symptom</strong></p>",
+            "<p><strong>Prevention</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Tuberculosis</p>",
+            "<p>Bacterial</p>",
+            "<p>Mycobacterium</p>",
+            "<p>Air</p>",
+            "<p>Persistent cough</p>",
+            "<p>BCG vaccine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Cholera</p>",
+            "<p>Bacterial</p>",
+            "<p>Vibrio cholerae</p>",
+            "<p>Water</p>",
+            "<p>Severe diarrhea</p>",
+            "<p>Clean water</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Typhoid</p>",
+            "<p>Bacterial</p>",
+            "<p>Salmonella typhi</p>",
+            "<p>Food/Water</p>",
+            "<p>High fever</p>",
+            "<p>Vaccination</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Malaria</p>",
+            "<p>Protozoan</p>",
+            "<p>Plasmodium</p>",
+            "<p>Mosquito</p>",
+            "<p>Periodic fever</p>",
+            "<p>Mosquito control</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>AIDS</p>",
+            "<p>Viral</p>",
+            "<p>HIV</p>",
+            "<p>Blood/Contact</p>",
+            "<p>Low immunity</p>",
+            "<p>Safe practices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>COVID-19</p>",
+            "<p>Viral</p>",
+            "<p>SARS-CoV-2</p>",
+            "<p>Air</p>",
+            "<p>Respiratory distress</p>",
+            "<p>Vaccination</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Ringworm</p>",
+            "<p>Fungal</p>",
+            "<p>Trichophyton</p>",
+            "<p>Contact</p>",
+            "<p>Itching skin</p>",
+            "<p>Hygiene</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Scurvy</p>",
+            "<p>Deficiency</p>",
+            "<p>Vitamin C lack</p>",
+            "<p>Nutritional</p>",
+            "<p>Bleeding gums</p>",
+            "<p>Balanced diet</p>"
           ]
         }
       ]
@@ -640,7 +647,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4piti4p"
+      "id": "4piti4p",
+      "content": "The immune system protects the body from pathogens through physical, cellular and chemical defenses. It is divided into innate immunity and acquired immunity."
     },
     {
       "id": "dbi20kl",
@@ -649,33 +657,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type of Immunity</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Innate Immunity</p>",
+            "<p>Inborn, non-specific</p>",
+            "<p>Skin barrier</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Active Immunity</p>",
+            "<p>Produced after infection/vaccine</p>",
+            "<p>Measles infection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Passive Immunity</p>",
+            "<p>Antibodies received externally</p>",
+            "<p>Mother to child</p>"
           ]
         }
       ]
@@ -693,49 +701,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Cell Type</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Category</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>WBC (Leukocytes)</p>",
+            "<p>Fight infection</p>",
+            "<p>Innate/Adaptive</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Neutrophils</p>",
+            "<p>Phagocytosis</p>",
+            "<p>Innate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lymphocytes</p>",
+            "<p>Antibody production</p>",
+            "<p>Adaptive</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>B-Cells</p>",
+            "<p>Produce antibodies</p>",
+            "<p>Adaptive</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>T-Cells</p>",
+            "<p>Kill infected cells</p>",
+            "<p>Adaptive</p>"
           ]
         }
       ]

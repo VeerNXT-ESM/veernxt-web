@@ -4,8 +4,15 @@
   "order": 3,
   "blocks": [
     {
+      "id": "gwl7et9",
+      "type": "image",
+      "imageId": "cogm13i",
+      "src": "/books/Guide/GS & GK GUIDE BOOK/images/image_cogm13i.png"
+    },
+    {
       "type": "paragraph",
-      "id": "79ps1ud"
+      "id": "79ps1ud",
+      "content": "<img></img>This chapter explains the rise of Jainism and Buddhism in Ancient India. These religions emerged in the 6th century BCE as a reaction against ritualism and social inequalities of the Later Vedic period. "
     },
     {
       "type": "statStrip",
@@ -53,19 +60,23 @@
     },
     {
       "type": "paragraph",
-      "id": "ncokz3c"
+      "id": "ncokz3c",
+      "content": "• By the 6th century BCE many people were dissatisfied with the complex rituals of Vedic religion."
     },
     {
       "type": "paragraph",
-      "id": "8i5h0un"
+      "id": "8i5h0un",
+      "content": "• The dominance of Brahmins and rigid caste system created social tensions."
     },
     {
       "type": "paragraph",
-      "id": "lukzrsb"
+      "id": "lukzrsb",
+      "content": "• Expensive sacrifices (Yajnas) were difficult for common people."
     },
     {
       "type": "paragraph",
-      "id": "uirddyi"
+      "id": "uirddyi",
+      "content": "• As a result, new religious movements like Jainism and Buddhism emerged."
     },
     {
       "id": "akxzfzh",
@@ -75,7 +86,8 @@
     },
     {
       "type": "paragraph",
-      "id": "umi40p6"
+      "id": "umi40p6",
+      "content": "Jainism is one of the oldest religions in India. It emphasizes non‑violence, self‑discipline and spiritual purity."
     },
     {
       "id": "m2h9q32",
@@ -90,57 +102,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Point</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Founder</p>",
+            "<p>Traditionally associated with Rishabhanatha (1st Tirthankara)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>24th Tirthankara</p>",
+            "<p>Vardhamana Mahavira</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Birth</p>",
+            "<p>599 BCE at Kundagrama near Vaishali</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Father</p>",
+            "<p>Siddhartha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mother</p>",
+            "<p>Trishala</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Enlightenment</p>",
+            "<p>After 12 years of penance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Death</p>",
+            "<p>527 BCE at Pavapuri (Bihar)</p>"
           ]
         }
       ]
@@ -154,27 +166,32 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "9c2me4x"
+      "id": "9c2me4x",
+      "content": "• Ahimsa (Non‑violence)                                                                  "
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7qwx80q"
+      "id": "7qwx80q",
+      "content": "• Satya (Truth)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1xepy8y"
+      "id": "1xepy8y",
+      "content": "• Asteya (Non‑stealing)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j46tako"
+      "id": "j46tako",
+      "content": "• Aparigraha (Non‑possession)                                                                          "
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nxek5xd"
+      "id": "nxek5xd",
+      "content": "• Brahmacharya (Celibacy) "
     },
     {
       "id": "p2fimtc",
@@ -185,17 +202,20 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "52ie10v"
+      "id": "52ie10v",
+      "content": "• Right Faith (Samyak Darshan)                                                                     "
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e24v0v0"
+      "id": "e24v0v0",
+      "content": "• Right Knowledge (Samyak Gyan)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ucxn33c"
+      "id": "ucxn33c",
+      "content": "• Right Conduct (Samyak Charitra)"
     },
     {
       "id": "k9jrtwy",
@@ -210,25 +230,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Council</strong></p>",
+            "<p><strong>Place</strong></p>",
+            "<p><strong>Important Outcome</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>First Council</p>",
+            "<p>Pataliputra</p>",
+            "<p>Compilation of Jain scriptures</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Second Council</p>",
+            "<p>Vallabhi</p>",
+            "<p>Final compilation of Jain Agamas</p>"
           ]
         }
       ]
@@ -240,33 +260,28 @@
       "content": "Jain Sects"
     },
     {
-      "type": "pullQuote",
-      "content": "Three Jewels of Jainism (Triratna)",
-      "id": "jtpugwz"
-    },
-    {
       "id": "cyff4md",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Sect</strong></p>",
+            "<p><strong>Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Digambara</p>",
+            "<p>Monks do not wear clothes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Svetambara</p>",
+            "<p>Monks wear white clothes</p>"
           ]
         }
       ]
@@ -279,15 +294,18 @@
     },
     {
       "type": "paragraph",
-      "id": "956ed23"
+      "id": "956ed23",
+      "content": "• Spread the message of non‑violence."
     },
     {
       "type": "paragraph",
-      "id": "i0k28r6"
+      "id": "i0k28r6",
+      "content": "• Encouraged equality and ethical living."
     },
     {
       "type": "paragraph",
-      "id": "xpmh84h"
+      "id": "xpmh84h",
+      "content": "• Promoted art, architecture and literature."
     },
     {
       "id": "lltj5jx",
@@ -297,7 +315,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9buyrz8"
+      "id": "9buyrz8",
+      "content": "Buddhism was founded by Gautama Buddha in the 6th century BCE. It emphasized the middle path and rejected extreme asceticism."
     },
     {
       "id": "sulgd2i",
@@ -312,57 +331,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Event</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Birth</p>",
+            "<p>563 BCE at Lumbini</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Father</p>",
+            "<p>Suddhodana</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mother</p>",
+            "<p>Maya</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Original Name</p>",
+            "<p>Siddhartha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Enlightenment</p>",
+            "<p>Bodh Gaya</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>First Sermon</p>",
+            "<p>Sarnath</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Death (Mahaparinirvana)</p>",
+            "<p>483 BCE at Kushinagar</p>"
           ]
         }
       ]
@@ -375,11 +394,13 @@
     },
     {
       "type": "paragraph",
-      "id": "0ykeoxz"
+      "id": "0ykeoxz",
+      "content": "• Life is full of suffering (Dukkha)."
     },
     {
       "type": "paragraph",
-      "id": "78n76qf"
+      "id": "78n76qf",
+      "content": "• Suffering is caused by desire."
     },
     {
       "type": "comparisonTable",
@@ -414,11 +435,13 @@
     },
     {
       "type": "paragraph",
-      "id": "u2if42z"
+      "id": "u2if42z",
+      "content": "• Suffering can be ended."
     },
     {
       "type": "paragraph",
-      "id": "anho3ez"
+      "id": "anho3ez",
+      "content": "• The Eightfold Path leads to the end of suffering."
     },
     {
       "id": "l8mlvvp",
@@ -429,42 +452,50 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "jh5h5tl"
+      "id": "jh5h5tl",
+      "content": "• Right View"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dpwj1th"
+      "id": "dpwj1th",
+      "content": "• Right Intention"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ql8fon3"
+      "id": "ql8fon3",
+      "content": "• Right Speech"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nqjxez9"
+      "id": "nqjxez9",
+      "content": "• Right Action"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "euvt5gr"
+      "id": "euvt5gr",
+      "content": "• Right Livelihood"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "72k4oph"
+      "id": "72k4oph",
+      "content": "• Right Effort"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "c6yk912"
+      "id": "c6yk912",
+      "content": "• Right Mindfulness"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5wgntms"
+      "id": "5wgntms",
+      "content": "• Right Concentration"
     },
     {
       "id": "ny09sce",
@@ -479,41 +510,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Council</strong></p>",
+            "<p><strong>Place</strong></p>",
+            "<p><strong>Patron</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>First Council</p>",
+            "<p>Rajgir</p>",
+            "<p>King Ajatashatru</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Second Council</p>",
+            "<p>Vaishali</p>",
+            "<p>Kalashoka</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Third Council</p>",
+            "<p>Pataliputra</p>",
+            "<p>Ashoka</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fourth Council</p>",
+            "<p>Kashmir</p>",
+            "<p>Kanishka</p>"
           ]
         }
       ]
@@ -527,12 +558,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "2ig9ie2"
+      "id": "2ig9ie2",
+      "content": "• Theravada (Hinayana)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x6myb25"
+      "id": "x6myb25",
+      "content": "• Mahayana"
     },
     {
       "type": "examAlert",
@@ -546,7 +579,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "x4zmn27"
+      "id": "x4zmn27",
+      "content": "• Vajrayana"
     },
     {
       "id": "szp8624",
@@ -556,12 +590,14 @@
     },
     {
       "type": "paragraph",
-      "id": "szu8sm7"
+      "id": "szu8sm7",
+      "content": "• Tripitaka (Vinaya Pitaka, Sutta Pitaka, Abhidhamma Pitaka)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pf0zv2j"
+      "id": "pf0zv2j",
+      "content": "• Jataka Tales"
     },
     {
       "id": "q6sj99h",
@@ -571,23 +607,28 @@
     },
     {
       "type": "paragraph",
-      "id": "9qe7uaf"
+      "id": "9qe7uaf",
+      "content": "• Mahavira was the 24th Tirthankara of Jainism."
     },
     {
       "type": "paragraph",
-      "id": "vnsk3ax"
+      "id": "vnsk3ax",
+      "content": "• Jainism emphasizes Ahimsa (non‑violence)."
     },
     {
       "type": "paragraph",
-      "id": "799x8d8"
+      "id": "799x8d8",
+      "content": "• Buddha attained enlightenment at Bodh Gaya."
     },
     {
       "type": "paragraph",
-      "id": "lvqox5u"
+      "id": "lvqox5u",
+      "content": "• First Buddhist sermon was delivered at Sarnath."
     },
     {
       "type": "paragraph",
-      "id": "5vgq06j"
+      "id": "5vgq06j",
+      "content": "• Ashoka played a major role in spreading Buddhism."
     }
   ],
   "enriched": true

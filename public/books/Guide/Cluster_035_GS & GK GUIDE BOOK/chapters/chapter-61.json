@@ -1,0 +1,369 @@
+{
+  "id": "9s07z99",
+  "title": "Chapter 12: Periodic Table",
+  "order": 61,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1xamtrg",
+      "content": "The periodic table is the systematic arrangement of chemical elements based on their atomic numbers, electronic configuration and chemical properties. It is one of the most important tools in chemistry that helps scientists understand the relationships between different elements and predict their behavior."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Periods",
+          "value": "7",
+          "icon": "calendar"
+        },
+        {
+          "label": "Total Groups",
+          "value": "18",
+          "icon": "check"
+        },
+        {
+          "label": "Key Basis",
+          "value": "Atomic Number",
+          "icon": "book"
+        },
+        {
+          "label": "Core Concepts",
+          "value": "9 Sections",
+          "icon": "info"
+        }
+      ],
+      "id": "j9x1mig"
+    },
+    {
+      "id": "ilmxdxj",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Need for Classification of Elements"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Dobereiner classified elements into triads based on similar chemical properties and atomic masses.",
+        "Newlands' Law of Octaves showed that every eighth element has properties similar to the first.",
+        "Mendeleev arranged elements by atomic mass and successfully predicted the properties of undiscovered elements.",
+        "The Modern Periodic Table arranges elements by increasing atomic number, resolving anomalies in Mendeleev's table.",
+        "Periodic trends explain systematic variations in atomic radius, ionization energy, electronegativity, and metallic character."
+      ],
+      "id": "x8v7tzm"
+    },
+    {
+      "type": "paragraph",
+      "id": "oos1dss",
+      "content": "• As the number of discovered elements increased, it became difficult to study them individually."
+    },
+    {
+      "type": "paragraph",
+      "id": "ucmq4kq",
+      "content": "• Scientists needed a systematic way to group elements with similar properties."
+    },
+    {
+      "type": "paragraph",
+      "id": "ygctko7",
+      "content": "• The periodic table helps organize elements for easier study and understanding."
+    },
+    {
+      "id": "ydmed7e",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Dobereiner’s Triads"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ckrgln",
+      "content": "Johann Wolfgang Dobereiner (1829) grouped elements into sets of three called triads based on similar chemical properties."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "heq3f53",
+      "content": "• Lithium, Sodium, Potassium"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0qanx4h",
+      "content": "• Calcium, Strontium, Barium"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jid0upf",
+      "content": "• Chlorine, Bromine, Iodine"
+    },
+    {
+      "id": "6hpfcag",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Newlands’ Law of Octaves"
+    },
+    {
+      "type": "paragraph",
+      "id": "bonc9m1",
+      "content": "John Newlands arranged elements in order of increasing atomic mass and observed that every eighth element had similar properties."
+    },
+    {
+      "id": "88tabef",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Mendeleev’s Periodic Table"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ti8hiu",
+      "content": "Dmitri Mendeleev arranged elements in increasing order of atomic mass and grouped them based on similar chemical properties."
+    },
+    {
+      "type": "paragraph",
+      "id": "88lxl00",
+      "content": "• Left gaps for undiscovered elements."
+    },
+    {
+      "type": "paragraph",
+      "id": "1ajvvmo",
+      "content": "• Predicted properties of unknown elements."
+    },
+    {
+      "type": "paragraph",
+      "id": "jb1wxat",
+      "content": "• Grouped elements with similar properties together."
+    },
+    {
+      "id": "0ear7b3",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Modern Periodic Table"
+    },
+    {
+      "type": "paragraph",
+      "id": "d9ow802",
+      "content": "The modern periodic table was developed by Henry Moseley in 1913 based on atomic number."
+    },
+    {
+      "type": "paragraph",
+      "id": "65x1vkx",
+      "content": "• Elements are arranged according to increasing atomic number."
+    },
+    {
+      "type": "paragraph",
+      "id": "9p7u3lm",
+      "content": "• There are 7 horizontal rows called periods."
+    },
+    {
+      "type": "paragraph",
+      "id": "2sk6w1t",
+      "content": "• There are 18 vertical columns called groups."
+    },
+    {
+      "type": "paragraph",
+      "id": "6ldrom9",
+      "content": "• Elements in the same group have similar chemical properties."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Mendeleev's Periodic Table",
+        "Modern Periodic Table"
+      ],
+      "rows": [
+        [
+          "Basis of Classification",
+          "Atomic Mass",
+          "Atomic Number"
+        ],
+        [
+          "Number of Groups",
+          "8 Groups",
+          "18 Vertical Columns (Groups)"
+        ],
+        [
+          "Anomalies & Isotopes",
+          "Could not explain placement of isotopes",
+          "Isotopes occupy the same position based on atomic number"
+        ],
+        [
+          "Position of Hydrogen",
+          "Not clearly specified",
+          "Placed in Group 1 based on electronic configuration"
+        ]
+      ],
+      "id": "2xo4092"
+    },
+    {
+      "id": "at7870f",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Groups in Periodic Table"
+    },
+    {
+      "id": "dogs95r",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Group</strong></p>",
+            "<p><strong>Elements</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Group 1</p>",
+            "<p>Alkali metals</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Group 2</p>",
+            "<p>Alkaline earth metals</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Group 17</p>",
+            "<p>Halogens</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Group 18</p>",
+            "<p>Noble gases</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kyuq4v4",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Classification of Elements"
+    },
+    {
+      "id": "cwsmxwq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Metals</p>",
+            "<p>Good conductors of heat and electricity</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Non-metals</p>",
+            "<p>Poor conductors</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Metalloids</p>",
+            "<p>Have properties of both metals and non-metals</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6zd281z",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Periodic Trends"
+    },
+    {
+      "type": "paragraph",
+      "id": "zmnc798",
+      "content": "• Atomic size decreases across a period."
+    },
+    {
+      "type": "paragraph",
+      "id": "io3lvu6",
+      "content": "• Atomic size increases down a group."
+    },
+    {
+      "type": "paragraph",
+      "id": "mv3apgv",
+      "content": "• Metallic character decreases across a period."
+    },
+    {
+      "type": "paragraph",
+      "id": "xomz3sl",
+      "content": "• Electronegativity increases across a period."
+    },
+    {
+      "id": "l45k3z9",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Importance of Periodic Table"
+    },
+    {
+      "type": "paragraph",
+      "id": "7hazie3",
+      "content": "• Helps understand properties of elements."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Modern Periodic Law is based on Atomic Number (Henry Moseley), whereas Mendeleev's Law was based on Atomic Mass.",
+        "Atomic Radius decreases across a period (left to right) and increases down a group.",
+        "Mendeleev's predicted elements (Eka-Boron, Eka-Aluminium, Eka-Silicon) correspond to Scandium, Gallium, and Germanium respectively."
+      ],
+      "id": "go7w6m0"
+    },
+    {
+      "type": "paragraph",
+      "id": "h5uwie0",
+      "content": "• Predicts properties of undiscovered elements."
+    },
+    {
+      "type": "paragraph",
+      "id": "a2pdkzb",
+      "content": "• Helps classify elements into groups."
+    },
+    {
+      "id": "apqk4ru",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "9e3ya5g",
+      "content": "• Mendeleev is called the Father of Periodic Table."
+    },
+    {
+      "type": "paragraph",
+      "id": "7sg2dq6",
+      "content": "• Modern periodic table is based on atomic number."
+    },
+    {
+      "type": "paragraph",
+      "id": "1x7vh0n",
+      "content": "• There are 7 periods and 18 groups."
+    },
+    {
+      "type": "paragraph",
+      "id": "e6fq6yw",
+      "content": "• Noble gases belong to group 18."
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,89 @@
+{
+  "title": "Tenure, Removal and Resignation",
+  "order": 182,
+  "blocks": [
+    {
+      "id": "pvvc69s",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Post</strong></p>",
+            "<p><strong>Tenure</strong></p>",
+            "<p><strong>Removal</strong></p>",
+            "<p><strong>Resignation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chief Election Commissioner</p>",
+            "<p>6 years or 65 years</p>",
+            "<p>Same as Supreme Court Judge</p>",
+            "<p>To President</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Election Commissioner</p>",
+            "<p>6 years or 65 years</p>",
+            "<p>On recommendation of CEC</p>",
+            "<p>To President</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The CEC can only be removed through impeachment similar to a Supreme Court judge, ensuring independence.",
+      "id": "37o6ftc"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Removal Method",
+          "value": "Impeachment",
+          "icon": "check"
+        },
+        {
+          "label": "Equivalent Status",
+          "value": "Supreme Court Judge",
+          "icon": "award"
+        },
+        {
+          "label": "Primary Objective",
+          "value": "Ensuring Independence",
+          "icon": "info"
+        }
+      ],
+      "id": "f5gehcd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Chief Election Commissioner (CEC) enjoys security of tenure to maintain constitutional autonomy.",
+        "Removal of the CEC requires an impeachment process identical to that of a Supreme Court judge.",
+        "This stringent procedure ensures the independence of the Election Commission from executive influence."
+      ],
+      "id": "pm275do"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The CEC is removed on the same grounds and in the same manner as a Supreme Court Judge, not at the pleasure of the President.",
+        "Impeachment security safeguards institutional independence from executive interference."
+      ],
+      "id": "ezizsu2"
+    },
+    {
+      "type": "paragraph",
+      "content": "The CEC can only be removed through impeachment similar to a Supreme Court judge, ensuring independence.",
+      "id": "jz6ih18"
+    }
+  ],
+  "enriched": true
+}

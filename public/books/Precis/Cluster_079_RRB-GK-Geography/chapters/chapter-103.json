@@ -1,0 +1,79 @@
+{
+  "title": "Seismograph and Seismogram",
+  "order": 103,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A seismograph records ground motion, producing a seismogram. The time gap between P and S waves helps determine the distance to the epicenter.",
+      "id": "qzhmpvr"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A seismograph records ground motion, producing a seismogram.",
+      "id": "ouee9d1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Term",
+        "Function / Definition"
+      ],
+      "rows": [
+        [
+          "Seismograph",
+          "The instrument that detects and records ground motion."
+        ],
+        [
+          "Seismogram",
+          "The resulting graph or output produced by the recording device."
+        ]
+      ],
+      "id": "rml242h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Instrument",
+          "value": "Seismograph",
+          "icon": "info"
+        },
+        {
+          "label": "Record",
+          "value": "Seismogram",
+          "icon": "check"
+        },
+        {
+          "label": "Key Waves",
+          "value": "P and S Waves",
+          "icon": "clock"
+        },
+        {
+          "label": "Calculation",
+          "value": "Epicenter Distance",
+          "icon": "award"
+        }
+      ],
+      "id": "s5n7w5g"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish clearly between Seismograph (the measuring device) and Seismogram (the recorded output graph).",
+        "Understand that the epicenter distance is determined using the time gap between P and S waves."
+      ],
+      "id": "r20vp7q"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A seismograph is the instrument used to measure and record ground motion caused by seismic waves.",
+        "A seismogram is the visual graph or data recording produced by a seismograph.",
+        "The time interval between the arrival of P (Primary) waves and S (Secondary) waves is crucial for calculating the distance to an earthquake's epicenter."
+      ],
+      "id": "1knwukv"
+    }
+  ],
+  "enriched": true
+}

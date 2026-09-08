@@ -1,0 +1,170 @@
+{
+  "title": "Paleolithic Age (Old Stone Age)",
+  "order": 2,
+  "blocks": [
+    {
+      "id": "ipg3qbl",
+      "type": "heading",
+      "level": 3,
+      "content": "Time Period"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Time Span",
+          "value": "2M YA - 10,000 BC",
+          "icon": "calendar"
+        },
+        {
+          "label": "Key Discovery",
+          "value": "Fire",
+          "icon": "award"
+        },
+        {
+          "label": "Famous Site",
+          "value": "Bhimbetka (MP)",
+          "icon": "info"
+        },
+        {
+          "label": "Tool Material",
+          "value": "Unpolished Stone",
+          "icon": "book"
+        }
+      ],
+      "id": "yjqve82"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Paleolithic Age is the longest phase of human history, spanning from 2 million years ago to around 10,000 BC.",
+        "Humans were nomadic hunter-gatherers living in caves and rock shelters with no knowledge of agriculture or animal domestication.",
+        "Tools were made of rough, unpolished stones, such as hand axes, cleavers, and choppers.",
+        "The discovery of fire was a monumental milestone used for cooking, warmth, and defense against wild animals.",
+        "Bhimbetka in Madhya Pradesh is the premier Indian site for Paleolithic cave paintings portraying animals and hunting scenes."
+      ],
+      "id": "c94h6hk"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Paleolithic Age is the longest phase of human history. It extended from about <strong>2 million years ago to around 10,000 BC</strong>.",
+      "id": "dbnkssi"
+    },
+    {
+      "id": "uvb1ffk",
+      "type": "heading",
+      "level": 3,
+      "content": "Lifestyle of Paleolithic Humans"
+    },
+    {
+      "type": "paragraph",
+      "content": "Humans during this period lived a very simple and hard life. They depended completely on nature for survival. - They were <strong>hunters and gatherers</strong>. - They hunted wild animals and gathered fruits, roots, and berries. - There was no knowledge of agriculture or animal domestication. - People lived in <strong>caves and rock shelters</strong>. - There was no permanent settlement.",
+      "id": "6ht5asl"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Paleolithic Age is the longest phase of human history.",
+      "id": "qwnlqga"
+    },
+    {
+      "id": "qfa9dqd",
+      "type": "heading",
+      "level": 3,
+      "content": "Tools of the Paleolithic Age"
+    },
+    {
+      "id": "1d9zjw0",
+      "type": "list",
+      "items": [
+        "Tools were made of <strong>rough and unpolished stone</strong>.",
+        "Important tools included hand axes, cleavers, and choppers.",
+        "These tools were used for cutting meat, hunting animals, and digging roots."
+      ]
+    },
+    {
+      "id": "6h53wuc",
+      "type": "heading",
+      "level": 3,
+      "content": "Discovery of Fire"
+    },
+    {
+      "type": "paragraph",
+      "content": "One of the most important achievements of Paleolithic humans was the <strong>discovery of fire</strong>. Fire was used for: - Cooking food - Protection from wild animals - Providing warmth in cold climates",
+      "id": "x5q62ba"
+    },
+    {
+      "id": "hh1z936",
+      "type": "list",
+      "items": [
+        "This is a very common SSC question."
+      ]
+    },
+    {
+      "id": "89j5g2f",
+      "type": "heading",
+      "level": 3,
+      "content": "Art and Culture"
+    },
+    {
+      "type": "paragraph",
+      "content": "Paleolithic humans expressed themselves through <strong>cave paintings</strong>. - These paintings mainly depict hunting scenes, animals, and daily life. - The most famous site of Paleolithic cave paintings in India is <strong>Bhimbetka </strong>in Madhya Pradesh.",
+      "id": "xyrchh6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Bhimbetka in Madhya Pradesh is frequently tested in exams as the major Indian site for Paleolithic cave paintings.",
+        "The discovery of fire and its primary uses are very common questions in SSC exams.",
+        "Exams often test the absence of agriculture, animal domestication, and permanent settlements during the Paleolithic Age."
+      ],
+      "id": "aqjy5ye"
+    },
+    {
+      "id": "vetw6kl",
+      "type": "heading",
+      "level": 3,
+      "content": "Sub-divisions of Paleolithic Age"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Paleolithic Age is further divided into three stages:",
+      "id": "5ebz2gi"
+    },
+    {
+      "id": "93wh8z0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Sub-stage</strong></p>",
+            "<p><strong>Tool Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lower Paleolithic</p>",
+            "<p>Large hand axes</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Middle Paleolithic</p>",
+            "<p>Flake tools</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Upper Paleolithic</p>",
+            "<p>Blade tools</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

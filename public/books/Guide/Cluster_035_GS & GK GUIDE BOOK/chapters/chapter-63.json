@@ -1,0 +1,342 @@
+{
+  "id": "jbrlht3",
+  "title": "Chapter 14: Human Body Systems",
+  "order": 63,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "vkiprdi",
+      "content": "The human body is a complex organism made up of different organs that work together to perform various life processes. Groups of organs working together to perform specific functions are called organ systems. These systems help maintain life, growth, movement and reproduction."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Body Systems",
+          "value": "10 Major Systems",
+          "icon": "book"
+        },
+        {
+          "label": "Basic Unit",
+          "value": "Cell",
+          "icon": "check"
+        },
+        {
+          "label": "Core Focus",
+          "value": "Human Physiology",
+          "icon": "award"
+        },
+        {
+          "label": "Control Center",
+          "value": "Nervous & Endocrine",
+          "icon": "info"
+        }
+      ],
+      "id": "u931qh9"
+    },
+    {
+      "id": "olj25r2",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Levels of Organization in the Human Body"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The human body is structured in hierarchical levels of organization: cells, tissues, organs, organ systems, and the complete organism.",
+        "The digestive, respiratory, and circulatory systems work synergistically to supply nutrients and oxygen to body tissues.",
+        "The nervous and endocrine systems serve as the primary communication networks regulating body processes.",
+        "The skeletal and muscular systems provide structural framework, protection, and enable voluntary and involuntary movement.",
+        "The excretory system maintains internal homeostasis by filtering metabolic waste products from the bloodstream."
+      ],
+      "id": "ntybz6x"
+    },
+    {
+      "type": "paragraph",
+      "id": "vcwl9ke",
+      "content": "• Cell – Basic structural and functional unit of life."
+    },
+    {
+      "type": "paragraph",
+      "id": "olixdek",
+      "content": "• Tissue – Group of similar cells performing the same function."
+    },
+    {
+      "type": "paragraph",
+      "id": "dno83su",
+      "content": "• Organ – Structure formed by different tissues working together."
+    },
+    {
+      "type": "paragraph",
+      "id": "ej6g9zw",
+      "content": "• Organ System – Group of organs performing specific functions."
+    },
+    {
+      "id": "xw4yi43",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Digestive System"
+    },
+    {
+      "type": "paragraph",
+      "id": "2fxctvz",
+      "content": "The digestive system breaks down food into simpler substances that can be absorbed and used by the body for energy, growth and repair."
+    },
+    {
+      "type": "paragraph",
+      "id": "g6jfmol",
+      "content": "• Mouth – Ingestion of food and mechanical digestion."
+    },
+    {
+      "type": "paragraph",
+      "id": "6nlnhq9",
+      "content": "• Esophagus – Transports food to stomach."
+    },
+    {
+      "type": "paragraph",
+      "id": "detfjti",
+      "content": "• Stomach – Digestion using gastric juices."
+    },
+    {
+      "type": "paragraph",
+      "id": "t97u1jv",
+      "content": "• Small intestine – Absorption of nutrients."
+    },
+    {
+      "type": "paragraph",
+      "id": "unrbgn5",
+      "content": "• Large intestine – Absorption of water."
+    },
+    {
+      "type": "paragraph",
+      "id": "o2kkf1f",
+      "content": "• Liver – Produces bile."
+    },
+    {
+      "type": "paragraph",
+      "id": "urzsbjo",
+      "content": "• Pancreas – Produces digestive enzymes."
+    },
+    {
+      "id": "91p4pyb",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Respiratory System"
+    },
+    {
+      "type": "paragraph",
+      "id": "2fs0tff",
+      "content": "• The respiratory system helps in breathing."
+    },
+    {
+      "type": "paragraph",
+      "id": "7vlg0sf",
+      "content": "• It exchanges oxygen and carbon dioxide between the body and environment."
+    },
+    {
+      "type": "paragraph",
+      "id": "jahf9sz",
+      "content": "• Main organs include nose, trachea, lungs and diaphragm."
+    },
+    {
+      "id": "i8359cg",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Circulatory System"
+    },
+    {
+      "type": "paragraph",
+      "id": "5tl4dvb",
+      "content": "• The circulatory system transports blood, oxygen, nutrients and hormones throughout the body."
+    },
+    {
+      "type": "paragraph",
+      "id": "l1140rx",
+      "content": "• It consists of heart, blood vessels and blood."
+    },
+    {
+      "type": "paragraph",
+      "id": "0w57qdu",
+      "content": "• The heart acts as a pump."
+    },
+    {
+      "id": "a8cpeie",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Nervous System"
+    },
+    {
+      "type": "paragraph",
+      "id": "f2uvqn5",
+      "content": "• The nervous system controls and coordinates body activities."
+    },
+    {
+      "type": "paragraph",
+      "id": "vwkbn1r",
+      "content": "• It consists of brain, spinal cord and nerves."
+    },
+    {
+      "type": "paragraph",
+      "id": "bbtkhs1",
+      "content": "• It responds to stimuli and transmits signals."
+    },
+    {
+      "id": "e6iklpx",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Excretory System"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Body System",
+        "Primary Function",
+        "Major Organs Involved"
+      ],
+      "rows": [
+        [
+          "Circulatory System",
+          "Transport of nutrients, oxygen, and metabolic wastes",
+          "Heart, Blood Vessels, Blood"
+        ],
+        [
+          "Respiratory System",
+          "Exchange of oxygen and carbon dioxide gases",
+          "Lungs, Trachea, Bronchi"
+        ],
+        [
+          "Nervous System",
+          "Rapid signal transmission and bodily control",
+          "Brain, Spinal Cord, Nerves"
+        ],
+        [
+          "Endocrine System",
+          "Hormonal regulation of physiological processes",
+          "Pituitary, Thyroid, Adrenal Glands"
+        ]
+      ],
+      "id": "fls87a0"
+    },
+    {
+      "type": "paragraph",
+      "id": "4a7bmwv",
+      "content": "• The excretory system removes waste products from the body."
+    },
+    {
+      "type": "paragraph",
+      "id": "d7ghmd3",
+      "content": "• The kidneys filter blood and produce urine."
+    },
+    {
+      "type": "paragraph",
+      "id": "191doxu",
+      "content": "• Other organs include ureters, urinary bladder and urethra."
+    },
+    {
+      "id": "ywnvmvx",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Skeletal System"
+    },
+    {
+      "type": "paragraph",
+      "id": "juadldg",
+      "content": "• The skeletal system provides support and shape to the body."
+    },
+    {
+      "type": "paragraph",
+      "id": "cn04q5t",
+      "content": "• It protects internal organs."
+    },
+    {
+      "type": "paragraph",
+      "id": "vtuy6f7",
+      "content": "• The adult human skeleton has 206 bones."
+    },
+    {
+      "id": "vhtz17k",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Muscular System"
+    },
+    {
+      "type": "paragraph",
+      "id": "1molmdf",
+      "content": "• The muscular system allows movement of the body."
+    },
+    {
+      "type": "paragraph",
+      "id": "5uao70a",
+      "content": "• There are three types of muscles: skeletal, smooth and cardiac."
+    },
+    {
+      "id": "cwzrsfa",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Reproductive System"
+    },
+    {
+      "type": "paragraph",
+      "id": "1bcoifv",
+      "content": "• The reproductive system enables production of offspring."
+    },
+    {
+      "type": "paragraph",
+      "id": "do82jdu",
+      "content": "• It includes organs that produce reproductive cells."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Identify key differences between endocrine (ductless) and exocrine glands and their specific hormone secretions.",
+        "Memorize the path of blood circulation through heart chambers, pulmonary valves, and systemic circulation.",
+        "Understand the structural and functional divisions of the Nervous System (Central vs. Peripheral)."
+      ],
+      "id": "c78s892"
+    },
+    {
+      "id": "14728qz",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Endocrine System"
+    },
+    {
+      "type": "paragraph",
+      "id": "khxe8qo",
+      "content": "• The endocrine system controls body functions through hormones."
+    },
+    {
+      "type": "paragraph",
+      "id": "2ydxesy",
+      "content": "• Important glands include pituitary, thyroid and adrenal glands."
+    },
+    {
+      "id": "s153jkq",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "lyus9yk",
+      "content": "• The human body contains about 206 bones."
+    },
+    {
+      "type": "paragraph",
+      "id": "6t9plnf",
+      "content": "• The heart pumps blood throughout the body."
+    },
+    {
+      "type": "paragraph",
+      "id": "u1uguzl",
+      "content": "• The brain controls all body activities."
+    },
+    {
+      "type": "paragraph",
+      "id": "938lnw3",
+      "content": "• Lungs help in breathing."
+    }
+  ],
+  "enriched": true
+}

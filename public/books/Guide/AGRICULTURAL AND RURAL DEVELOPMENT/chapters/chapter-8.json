@@ -53,145 +53,145 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Scheme</strong></p>",
+            "<p><strong>Launch Year</strong></p>",
+            "<p><strong>Ministry / Dept</strong></p>",
+            "<p><strong>Objective / Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>PM-KISAN</p>",
+            "<p>2019</p>",
+            "<p>Agriculture &amp; Farmers Welfare</p>",
+            "<p>Income support of Rs.6,000/year in 3 instalments of Rs.2,000 to all farmer families</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>PM Fasal Bima Yojana (PMFBY)</p>",
+            "<p>2016</p>",
+            "<p>Agriculture &amp; Farmers Welfare</p>",
+            "<p>Crop insurance for Kharif (2% premium), Rabi (1.5%), commercial (5%); rest by Govt</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Rashtriya Krishi Vikas Yojana (RKVY)</p>",
+            "<p>2007</p>",
+            "<p>Agriculture &amp; Farmers Welfare</p>",
+            "<p>Infrastructure, technology, capacity building in agriculture; RAFTAAR sub-scheme</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>National Food Security Mission (NFSM)</p>",
+            "<p>2007</p>",
+            "<p>Agriculture &amp; Farmers Welfare</p>",
+            "<p>Increase production of rice, wheat, pulses, coarse cereals in targeted districts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>National Horticulture Mission (NHM)</p>",
+            "<p>2005–06</p>",
+            "<p>Horticulture Division</p>",
+            "<p>Holistic development of horticulture; area expansion, post-harvest, marketing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>PM Krishi Sinchai Yojana (PMKSY)</p>",
+            "<p>2015</p>",
+            "<p>Jal Shakti Ministry</p>",
+            "<p>Har khet ko paani; per drop more crop; micro irrigation; AIBP watershed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Soil Health Card Scheme</p>",
+            "<p>2015</p>",
+            "<p>Agriculture</p>",
+            "<p>Soil testing; card issued every 2 years with fertiliser recommendations; 14 parameters</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>eNAM</p>",
+            "<p>2016</p>",
+            "<p>Agriculture</p>",
+            "<p>Unified national agri market; 1000+ APMCs online; transparent price discovery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Paramparagat Krishi Vikas Yojana (PKVY)</p>",
+            "<p>2015</p>",
+            "<p>Agriculture</p>",
+            "<p>Promote organic farming; cluster approach; Rs.50,000/ha for 3 years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>MIDH (Mission for Integrated Development of Horticulture)</p>",
+            "<p>2014–15</p>",
+            "<p>Horticulture</p>",
+            "<p>Merger of NHM, HMNEH, NHB, CDB schemes; holistic horticulture development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>National Mission for Sustainable Agriculture (NMSA)</p>",
+            "<p>2014</p>",
+            "<p>Agriculture</p>",
+            "<p>Climate-resilient agriculture; soil health; water conservation; conservation agriculture</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>PM Matsya Sampada Yojana (PMMSY)</p>",
+            "<p>2020</p>",
+            "<p>Fisheries</p>",
+            "<p>Rs.20,055 crore investment in fisheries; Blue Revolution 2.0; aquaculture, cold chain</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>National Livestock Mission (NLM)</p>",
+            "<p>2014</p>",
+            "<p>Animal Husbandry</p>",
+            "<p>Sustainable development of livestock sector; fodder, breed improvement, insurance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Pradhan Mantri Kisan Sampada Yojana</p>",
+            "<p>2016</p>",
+            "<p>Food Processing</p>",
+            "<p>Create modern infrastructure for food processing; mega food parks; cold chains</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Operation Greens</p>",
+            "<p>2018</p>",
+            "<p>Food Processing</p>",
+            "<p>Stabilise prices of TOP (Tomato, Onion, Potato); promote FPOs; 50% transport subsidy</p>"
           ]
         }
       ]
@@ -240,7 +240,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5kgrxlu"
+      "id": "5kgrxlu",
+      "content": "The MSP (Minimum Support Price) is announced by the Cabinet Committee on Economic Affairs (CCEA) based on CACP recommendations. It covers 23 crops (14 Kharif, 6 Rabi, and 2 commercial crops)."
     },
     {
       "id": "2715i50",
@@ -249,36 +250,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Season</strong></p>",
+            "<p><strong>Crops Covered by MSP</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kharif (14 crops)</p>",
+            "<p>Paddy, Jowar, Bajra, Maize, Ragi, Tur (Arhar), Moong, Urad, Groundnut, Sunflower, Soybean, Sesamum, Nigerseed, Cotton</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rabi (6 crops)</p>",
+            "<p>Wheat, Barley, Gram, Masur (Lentil), Mustard/Rapeseed, Safflower</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Commercial Crops (2)</p>",
+            "<p>Sugarcane (FRP — Fair and Remunerative Price), Jute</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "rwb8tgb"
+      "id": "rwb8tgb",
+      "content": "<strong>Important: </strong><em>FRP for sugarcane is announced by CCEA; State Advised Price (SAP) announced by states can be higher. MSP = C2 + 50% as per recommendation.</em>"
     },
     {
       "type": "examAlert",
@@ -302,129 +304,129 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Institute</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Mandate</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ICAR (Indian Council of Agri Research)</p>",
+            "<p>New Delhi</p>",
+            "<p>Apex body; funds and coordinates 100+ institutes and 600+ Krishi Vigyan Kendras (KVKs)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IARI (Pusa Institute)</p>",
+            "<p>New Delhi</p>",
+            "<p>Wheat and rice varieties; Green Revolution varieties; Pusa Basmati, HD-2967</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NBPGR</p>",
+            "<p>New Delhi</p>",
+            "<p>National Bureau of Plant Genetic Resources; germplasm conservation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NDRI</p>",
+            "<p>Karnal, Haryana</p>",
+            "<p>Dairy research; Karan Fries breed; processing technology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CIARI</p>",
+            "<p>Port Blair</p>",
+            "<p>Agriculture research for island ecosystems; Andaman &amp; Nicobar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IVRI</p>",
+            "<p>Bareilly, UP</p>",
+            "<p>Indian Veterinary Research Institute; animal diseases; FMD vaccines</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CPCRI</p>",
+            "<p>Kasaragod, Kerala</p>",
+            "<p>Coconut and related palms research</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NRC Banana</p>",
+            "<p>Trichy, Tamil Nadu</p>",
+            "<p>Banana research and variety development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NRCG (NRC Groundnut)</p>",
+            "<p>Junagadh, Gujarat</p>",
+            "<p>Groundnut research; drought-tolerant varieties</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CRRI</p>",
+            "<p>Cuttack, Odisha</p>",
+            "<p>Central Rice Research Institute; rice genetics and agronomy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ICRISAT</p>",
+            "<p>Hyderabad</p>",
+            "<p>CGIAR; dryland crops (sorghum, pearl millet, chickpea, groundnut, pigeonpea)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IRRI</p>",
+            "<p>Los Banos, Philippines</p>",
+            "<p>International Rice Research Institute; IR-8, IR-36 varieties</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CIMMYT</p>",
+            "<p>Mexico City</p>",
+            "<p>Wheat and maize; Norman Borlaug's institute; Green Revolution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CIP</p>",
+            "<p>Lima, Peru</p>",
+            "<p>Potato and sweet potato research</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ILRI</p>",
+            "<p>Nairobi, Kenya</p>",
+            "<p>Livestock research for developing countries</p>"
           ]
         }
       ]

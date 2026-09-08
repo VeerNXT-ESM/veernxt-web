@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "naz46ry"
+      "id": "naz46ry",
+      "content": "Motion is said to occur when an object changes its position with respect to time and a reference point.If an object does not change its position with time, it is said to be at rest."
     },
     {
       "id": "y48ubnj",
@@ -61,18 +62,32 @@
       "id": "vqfe9f0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "<ul><li>Rest: When an object does not change its position with time.</li><li>Motion: When an object changes its position with time.</li></ul>",
+        "Rest: When an object does not change its position with time.",
+        "Motion: When an object changes its position with time."
       ]
     },
     {
-      "type": "paragraph",
-      "id": "o7fmck9"
+      "id": "oc2s5dp",
+      "type": "image",
+      "imageId": "7uvazcv",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_7uvazcv.png"
+    },
+    {
+      "id": "kqb19oc",
+      "type": "image",
+      "imageId": "hn0jyfb",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_hn0jyfb.png"
     },
     {
       "type": "paragraph",
-      "id": "gvwe85d"
+      "id": "o7fmck9",
+      "content": "Example:"
+    },
+    {
+      "type": "paragraph",
+      "id": "gvwe85d",
+      "content": "A person sitting in a bus is at rest with respect to the bus but in motion with respect to the road."
     },
     {
       "id": "j606vev",
@@ -81,13 +96,19 @@
       "content": "TYPES OF MOTION"
     },
     {
+      "id": "cdh7cgw",
+      "type": "image",
+      "imageId": "szlr0v1",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_szlr0v1.png"
+    },
+    {
       "id": "bxjjeiq",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Rectilinear Motion – Motion in a straight line",
+        "Circular Motion – Motion in a circular path",
+        "Rotational Motion – Motion about an axis",
+        "Oscillatory Motion – To and fro motion"
       ]
     },
     {
@@ -98,30 +119,32 @@
     },
     {
       "type": "paragraph",
-      "id": "300n11n"
+      "id": "300n11n",
+      "content": "Distance:"
     },
     {
       "id": "s7h9smr",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Total path covered by an object</li><li>Scalar quantity</li><li>Always positive</li></ul>",
+        "Total path covered by an object",
+        "Scalar quantity",
+        "Always positive"
       ]
     },
     {
       "type": "paragraph",
-      "id": "hjtbo0k"
+      "id": "hjtbo0k",
+      "content": "Displacement:"
     },
     {
       "id": "e5irqtr",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Shortest distance between initial and final position</li><li>Vector quantity</li><li>Can be zero</li></ul>",
+        "Shortest distance between initial and final position",
+        "Vector quantity",
+        "Can be zero"
       ]
     },
     {
@@ -132,29 +155,29 @@
     },
     {
       "type": "paragraph",
-      "id": "uuub3o4"
+      "id": "uuub3o4",
+      "content": "Speed:"
     },
     {
       "type": "paragraph",
-      "id": "ncs0zo1"
+      "id": "ncs0zo1",
+      "content": "Speed = Distance / Time Unit = m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bxcv8ik"
+      "id": "bxcv8ik",
+      "content": "Scalar quantity"
     },
     {
       "type": "paragraph",
-      "id": "sonbhtr"
-    },
-    {
-      "type": "pullQuote",
-      "content": "UNIFORM AND NON-UNIFORM MOTION",
-      "id": "vu3ut4n"
+      "id": "sonbhtr",
+      "content": "Velocity:"
     },
     {
       "type": "paragraph",
-      "id": "7wcrdnw"
+      "id": "7wcrdnw",
+      "content": "Velocity = Displacement / Time Vector quantity"
     },
     {
       "id": "bosx0xb",
@@ -164,15 +187,18 @@
     },
     {
       "type": "paragraph",
-      "id": "4ejm1ga"
+      "id": "4ejm1ga",
+      "content": "Acceleration is the rate of change of velocity. Formula:"
     },
     {
       "type": "paragraph",
-      "id": "o27ojs2"
+      "id": "o27ojs2",
+      "content": "Acceleration = (Final velocity – Initial velocity) / Time Unit = m/s²"
     },
     {
       "type": "paragraph",
-      "id": "wipl4jb"
+      "id": "wipl4jb",
+      "content": "Negative acceleration is called retardation."
     },
     {
       "id": "qkrtj2t",
@@ -182,24 +208,27 @@
     },
     {
       "type": "paragraph",
-      "id": "i0kkt21"
+      "id": "i0kkt21",
+      "content": "There are three equations of motion:"
     },
     {
       "id": "cw7kfh8",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null
+        "v = u + at",
+        "s = ut + ½at²",
+        "v² = u² + 2as"
       ]
     },
     {
       "type": "paragraph",
-      "id": "9kd8aoa"
+      "id": "9kd8aoa",
+      "content": "Where:"
     },
     {
       "type": "paragraph",
-      "id": "u1pr4r1"
+      "id": "u1pr4r1",
+      "content": "u = initial velocity v = final velocity a = acceleration"
     },
     {
       "type": "comparisonTable",
@@ -235,12 +264,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "rcg9v7o"
+      "id": "rcg9v7o",
+      "content": "t = time"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y3cdmf4"
+      "id": "y3cdmf4",
+      "content": "s = distance"
     },
     {
       "id": "3az3xur",
@@ -250,28 +281,30 @@
     },
     {
       "type": "paragraph",
-      "id": "7qo6b1r"
+      "id": "7qo6b1r",
+      "content": "Uniform Motion:"
     },
     {
       "id": "317roo6",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "<ul><li>Equal distance in equal time</li><li>Constant speed</li></ul>",
+        "Equal distance in equal time",
+        "Constant speed"
       ]
     },
     {
       "type": "paragraph",
-      "id": "5muriyd"
+      "id": "5muriyd",
+      "content": "Non-uniform Motion:"
     },
     {
       "id": "qnwc7l2",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "<ul><li>Unequal distance in equal time</li><li>Variable speed</li></ul>",
+        "Unequal distance in equal time",
+        "Variable speed"
       ]
     },
     {
@@ -282,28 +315,30 @@
     },
     {
       "type": "paragraph",
-      "id": "yso4z6q"
+      "id": "yso4z6q",
+      "content": "Distance-Time Graph: "
     },
     {
       "id": "9l3wxqd",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "<ul><li>Straight line → Uniform motion</li><li>Curve → Non-uniform motion</li></ul>",
+        "Straight line → Uniform motion",
+        "Curve → Non-uniform motion"
       ]
     },
     {
       "type": "paragraph",
-      "id": "zuo22ez"
+      "id": "zuo22ez",
+      "content": "Velocity-Time Graph:"
     },
     {
       "id": "vbkf2pq",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "<ul><li>Slope gives acceleration</li><li>Area gives distance</li></ul>",
+        "Slope gives acceleration",
+        "Area gives distance"
       ]
     },
     {
@@ -324,7 +359,8 @@
     },
     {
       "type": "paragraph",
-      "id": "k5ebnfi"
+      "id": "k5ebnfi",
+      "content": "1 km/h = 5/18 m/s 1 m/s = 18/5 km/h"
     },
     {
       "id": "8ss6jht",
@@ -334,24 +370,29 @@
     },
     {
       "type": "paragraph",
-      "id": "qm1cstz"
+      "id": "qm1cstz",
+      "content": "Q1. SI unit of acceleration? Ans: m/s²"
     },
     {
       "type": "paragraph",
-      "id": "ba0w29x"
+      "id": "ba0w29x",
+      "content": "Q2. Formula of velocity? Ans: Distance / Time"
     },
     {
       "type": "paragraph",
-      "id": "2ihv2tp"
+      "id": "2ihv2tp",
+      "content": "Q3. What is retardation? Ans: Negative acceleration"
     },
     {
       "type": "paragraph",
-      "id": "glbnd5t"
+      "id": "glbnd5t",
+      "content": "Q4. Unit of speed?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jwkvfe3"
+      "id": "jwkvfe3",
+      "content": "Ans: m/s"
     },
     {
       "id": "zk5yuwd",
@@ -363,13 +404,13 @@
       "id": "1lu7u9v",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Motion means change in position</li><li>Speed is scalar, velocity is vector</li><li>Acceleration is change in velocity</li><li>v = u + at</li><li>s = ut + ½at²</li><li>v² = u² + 2as</li></ul>",
+        "Motion means change in position",
+        "Speed is scalar, velocity is vector",
+        "Acceleration is change in velocity",
+        "v = u + at",
+        "s = ut + ½at²",
+        "v² = u² + 2as"
       ]
     }
   ],

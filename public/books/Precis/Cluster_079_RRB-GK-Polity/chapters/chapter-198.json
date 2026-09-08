@@ -1,0 +1,126 @@
+{
+  "title": "Independence of UPSC",
+  "order": 198,
+  "blocks": [
+    {
+      "id": "ma37o5a",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Safeguard</strong></p>",
+            "<p><strong>Purpose</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Security of tenure</p>",
+            "<p>Prevents arbitrary removal</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Removal via Supreme Court inquiry</p>",
+            "<p>Ensures neutrality</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Expenses charged on Consolidated Fund of India</p>",
+            "<p>Financial autonomy</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Post-retirement restrictions</p>",
+            "<p>Maintains impartiality</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The expenses, including the salaries, allowances and pensions of the chairman and members of the UPSC are charged on the Consolidated Fund of India.",
+      "id": "c6ckhnq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Provision / Role",
+        "Chairman of UPSC",
+        "Member of UPSC"
+      ],
+      "rows": [
+        [
+          "Further Employment Eligibility",
+          "Ineligible for any further employment under GOI or any State",
+          "Eligible only as Chairman of UPSC or Chairman of an SPSC"
+        ],
+        [
+          "Re-appointment to Same Office",
+          "Not eligible for a second term",
+          "Not eligible for a second term as member"
+        ],
+        [
+          "Removal Authority",
+          "President (following constitutional procedure)",
+          "President (following constitutional procedure)"
+        ]
+      ],
+      "id": "8hk0rlu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Articles",
+          "value": "315 to 323",
+          "icon": "book"
+        },
+        {
+          "label": "Constitutional Part",
+          "value": "Part XIV",
+          "icon": "award"
+        },
+        {
+          "label": "Tenure Limit",
+          "value": "6 Years / 65 Age",
+          "icon": "clock"
+        },
+        {
+          "label": "Financial Source",
+          "value": "Consolidated Fund",
+          "icon": "info"
+        }
+      ],
+      "id": "5tc6gu7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Chairman of UPSC is completely ineligible for any further employment under the central or state government post-retirement.",
+        "A member of UPSC can become the Chairman of UPSC or a State Public Service Commission (SPSC), but cannot be re-appointed as a member.",
+        "Removal on the grounds of misbehaviour requires an inquiry by the Supreme Court, whose advice is binding on the President."
+      ],
+      "id": "y7tjwoa"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Security of Tenure: The Chairman and members of UPSC can be removed from office by the President only in the manner and on the grounds specified in the Constitution.",
+        "Fixed Conditions of Service: The conditions of service of the chairman or members cannot be varied to their disadvantage after their appointment.",
+        "Non-Votable Expenses: The salaries, allowances, and pensions of the chairman and members are charged on the Consolidated Fund of India and are not subject to parliamentary vote.",
+        "Bar on Re-appointment: Neither the chairman nor members are eligible for re-appointment to the same office for a second term.",
+        "Bar on Further Employment: The Chairman of UPSC is strictly ineligible for any further employment under the Government of India or any state government."
+      ],
+      "id": "s9b01cl"
+    }
+  ],
+  "enriched": true
+}

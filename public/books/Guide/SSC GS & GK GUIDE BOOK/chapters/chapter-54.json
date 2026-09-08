@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "xd7zsbe"
+      "id": "xd7zsbe",
+      "content": "Light is a form of energy that enables us to see objects. It is a type of electromagnetic radiation that travels in straight lines. Light plays an important role in vision, optical instruments and many natural phenomena."
     },
     {
       "type": "statStrip",
@@ -53,19 +54,23 @@
     },
     {
       "type": "paragraph",
-      "id": "mgp1khv"
+      "id": "mgp1khv",
+      "content": "• Light is a form of energy."
     },
     {
       "type": "paragraph",
-      "id": "tgnogt7"
+      "id": "tgnogt7",
+      "content": "• It travels in straight lines."
     },
     {
       "type": "paragraph",
-      "id": "2qw712o"
+      "id": "2qw712o",
+      "content": "• Light does not require a material medium for propagation."
     },
     {
       "type": "paragraph",
-      "id": "v4eud2f"
+      "id": "v4eud2f",
+      "content": "• The speed of light in vacuum is approximately 3 × 10^8 m/s."
     },
     {
       "id": "zu5wb1c",
@@ -80,22 +85,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Natural Sources</p>",
+            "<p>Sun, stars, fire</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Artificial Sources</p>",
+            "<p>Electric bulb, candle, LED</p>"
           ]
         }
       ]
@@ -108,15 +113,18 @@
     },
     {
       "type": "paragraph",
-      "id": "0yauh5h"
+      "id": "0yauh5h",
+      "content": "Reflection is the bouncing back of light when it strikes a surface."
     },
     {
       "type": "paragraph",
-      "id": "qod36zt"
+      "id": "qod36zt",
+      "content": "Laws of Reflection:"
     },
     {
       "type": "paragraph",
-      "id": "pvxl19w"
+      "id": "pvxl19w",
+      "content": "• Angle of incidence = Angle of reflection."
     },
     {
       "type": "pullQuote",
@@ -125,7 +133,8 @@
     },
     {
       "type": "paragraph",
-      "id": "oycd2po"
+      "id": "oycd2po",
+      "content": "• Incident ray, reflected ray and normal lie in the same plane."
     },
     {
       "id": "5907pk0",
@@ -140,22 +149,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Regular Reflection</p>",
+            "<p>Occurs on smooth surfaces</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Diffuse Reflection</p>",
+            "<p>Occurs on rough surfaces</p>"
           ]
         }
       ]
@@ -168,11 +177,13 @@
     },
     {
       "type": "paragraph",
-      "id": "xwhz74w"
+      "id": "xwhz74w",
+      "content": "Refraction is the bending of light when it passes from one medium to another."
     },
     {
       "type": "paragraph",
-      "id": "d27q3cc"
+      "id": "d27q3cc",
+      "content": "Examples:"
     },
     {
       "type": "comparisonTable",
@@ -207,11 +218,13 @@
     },
     {
       "type": "paragraph",
-      "id": "26xpb5x"
+      "id": "26xpb5x",
+      "content": "• A pencil appears bent in water."
     },
     {
       "type": "paragraph",
-      "id": "ngki4fn"
+      "id": "ngki4fn",
+      "content": "• Mirage in deserts."
     },
     {
       "id": "fm2m5hk",
@@ -226,22 +239,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Lens Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Convex Lens</p>",
+            "<p>Converges light rays</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Concave Lens</p>",
+            "<p>Diverges light rays</p>"
           ]
         }
       ]
@@ -254,15 +267,18 @@
     },
     {
       "type": "paragraph",
-      "id": "8r2tqj5"
+      "id": "8r2tqj5",
+      "content": "• Microscope – used to see small objects."
     },
     {
       "type": "paragraph",
-      "id": "24ig62u"
+      "id": "24ig62u",
+      "content": "• Telescope – used to observe distant objects."
     },
     {
       "type": "paragraph",
-      "id": "lxq5p6b"
+      "id": "lxq5p6b",
+      "content": "• Camera – used to capture images."
     },
     {
       "id": "53kp9w8",
@@ -282,7 +298,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1ougvq4"
+      "id": "1ougvq4",
+      "content": "Dispersion is the splitting of white light into its component colors when it passes through a prism. The seven colors are Violet, Indigo, Blue, Green, Yellow, Orange and Red."
     },
     {
       "id": "r18hzl1",
@@ -292,19 +309,23 @@
     },
     {
       "type": "paragraph",
-      "id": "grjurvr"
+      "id": "grjurvr",
+      "content": "• Speed of light is approximately 3 × 10^8 m/s."
     },
     {
       "type": "paragraph",
-      "id": "husjcgm"
+      "id": "husjcgm",
+      "content": "• Angle of incidence equals angle of reflection."
     },
     {
       "type": "paragraph",
-      "id": "8321hf6"
+      "id": "8321hf6",
+      "content": "• Convex lens converges light rays."
     },
     {
       "type": "paragraph",
-      "id": "rzzkwlr"
+      "id": "rzzkwlr",
+      "content": "• Dispersion of light produces seven colors."
     }
   ],
   "enriched": true

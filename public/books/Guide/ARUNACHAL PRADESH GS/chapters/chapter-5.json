@@ -4,8 +4,15 @@
   "order": 5,
   "blocks": [
     {
+      "id": "e9n448g",
+      "type": "image",
+      "imageId": "7xzdzvi",
+      "src": "/books/Guide/ARUNACHAL PRADESH GS/images/image_7xzdzvi.jpeg"
+    },
+    {
       "type": "paragraph",
-      "id": "8c7rtzn"
+      "id": "8c7rtzn",
+      "content": "<img></img>Arunachal Pradesh has a predominantly natural resource-based economy with agriculture, horticulture, hydropower, and forestry as its main pillars. Despite its vast natural wealth, the state faces challenges of geographical isolation, poor infrastructure, and sparse population density."
     },
     {
       "type": "statStrip",
@@ -58,71 +65,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Indicator</strong></p>",
+            "<p>Details</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>GSDP Rank</strong></p>",
+            "<p>Among smaller GSDP states due to small population</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Per Capita Income</strong></p>",
+            "<p>Higher than several NE states due to central transfers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Primary Sector</strong></p>",
+            "<p>Agriculture, horticulture, animal husbandry, forestry</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Secondary Sector</strong></p>",
+            "<p>Small-scale industries, hydropower, handicrafts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Tertiary Sector</strong></p>",
+            "<p>Government services (largest employer), trade, tourism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Central Transfers</strong></p>",
+            "<p>Heavily dependent; &gt;80% of state budget from central funds</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Major Exports</strong></p>",
+            "<p>Timber (restricted), oranges, kiwi, ginger, cardamom</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Hydropower Potential</strong></p>",
+            "<p>50,000+ MW (one of highest in India)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Forest Cover</strong></p>",
+            "<p>Over 80% of state area under forests</p>"
           ]
         }
       ]
@@ -135,7 +142,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8t3zncd"
+      "id": "8t3zncd",
+      "content": "Agriculture is the backbone of Arunachal Pradesh's rural economy. Jhum (shifting) cultivation has been practiced for millennia, though settled agriculture is increasingly being promoted. The state has significant horticulture potential due to its varied climate."
     },
     {
       "id": "9808qj4",
@@ -145,7 +153,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xsqhg61"
+      "id": "xsqhg61",
+      "content": "Jhum cultivation involves clearing a patch of forest, burning the vegetation, cultivating it for 1–2 seasons, and then moving to a new area while the earlier plot is left fallow for 8–15 years. Though ecologically controversial, it is deeply integrated into the cultural practices of many tribes."
     },
     {
       "id": "9gzd7ob",
@@ -160,57 +169,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Crops</strong></p>",
+            "<p><strong>Major Producing Districts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Food Grains</p>",
+            "<p>Rice (wet and dry), maize, millet, wheat</p>",
+            "<p>Papum Pare, Lohit, Namsai, Changlang</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cash Crops</p>",
+            "<p>Ginger, turmeric, large cardamom, sugarcane</p>",
+            "<p>Tirap, Changlang, Lower Subansiri</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fruits</p>",
+            "<p>Oranges, kiwi fruit, passion fruit, pineapple, banana</p>",
+            "<p>Aalo (W. Siang), Lower Dibang, Tirap</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vegetables</p>",
+            "<p>Potato, cabbage, beans, tomato</p>",
+            "<p>Bomdila (W. Kameng), Ziro (L. Subansiri)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Plantation</p>",
+            "<p>Tea, rubber</p>",
+            "<p>Changlang, Lohit, Tirap</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Floriculture</p>",
+            "<p>Orchids (700+ species), anthurium</p>",
+            "<p>Across state</p>"
           ]
         }
       ]
@@ -228,7 +237,8 @@
     },
     {
       "type": "paragraph",
-      "id": "92aj72k"
+      "id": "92aj72k",
+      "content": "The Ziro Valley in Lower Subansiri district is famous for the Apatani tribe's unique paddy-cum-fish farming system. The Apatanis practice wet rice cultivation integrated with fish rearing in the paddy fields — a practice that achieves high productivity without using any agrochemicals. This system has been recognised by UNESCO and is a candidate for World Heritage status."
     },
     {
       "id": "65mhmfc",
@@ -238,7 +248,8 @@
     },
     {
       "type": "paragraph",
-      "id": "7ttktgy"
+      "id": "7ttktgy",
+      "content": "Arunachal Pradesh has been called the 'Powerhouse of India' or the 'Future Power Capital of India' due to its enormous hydropower potential. The state has an assessed hydropower potential of approximately 50,328 MW — the highest of any Indian state."
     },
     {
       "id": "20jz2ic",
@@ -247,88 +258,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Project</strong></p>",
+            "<p><strong>River</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Capacity (MW)</strong></p>",
+            "<p><strong>Status</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Kameng HEP</p>",
+            "<p>Bichom/Kameng</p>",
+            "<p>West Kameng</p>",
+            "<p>600 MW</p>",
+            "<p>Commissioned</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Subansiri Lower HEP</p>",
+            "<p>Subansiri</p>",
+            "<p>Lower Subansiri</p>",
+            "<p>2,000 MW</p>",
+            "<p>Under Construction / Partial</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Dibang Multipurpose</p>",
+            "<p>Dibang</p>",
+            "<p>Lower Dibang Valley</p>",
+            "<p>2,880 MW</p>",
+            "<p>Approved / Under Development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Tawang HEP</p>",
+            "<p>Tawang Chu</p>",
+            "<p>Tawang</p>",
+            "<p>800 MW</p>",
+            "<p>Under Development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Pare HEP</p>",
+            "<p>Dikrong</p>",
+            "<p>Papum Pare</p>",
+            "<p>110 MW</p>",
+            "<p>Commissioned</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Ranganadi HEP</p>",
+            "<p>Ranganadi</p>",
+            "<p>Lower Subansiri</p>",
+            "<p>405 MW</p>",
+            "<p>Commissioned</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Siang Upper HEP</p>",
+            "<p>Siang</p>",
+            "<p>Upper Siang</p>",
+            "<p>11,000 MW (proposed)</p>",
+            "<p>Planning stage</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "y30sqcy"
+      "id": "y30sqcy",
+      "content": "The Subansiri Lower HEP has been one of the most controversial hydropower projects in the country due to environmental concerns and protests from downstream communities in Assam. The Dibang Multipurpose Project, if completed, will be one of the tallest dams in the world."
     },
     {
       "id": "hgx2lwj",
@@ -359,16 +371,17 @@
     },
     {
       "type": "paragraph",
-      "id": "76dsu18"
+      "id": "76dsu18",
+      "content": "Forests cover over 80% of Arunachal Pradesh's area, making it one of the most forested states in India. The state has four broad types of forests: tropical evergreen, subtropical, temperate, and alpine."
     },
     {
       "id": "18z7lo0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "State Forest Department regulates timber, bamboo, and non-timber forest produce (NTFP).",
+        "Major NTFP include cane, bamboo, medicinal plants, honey, mushrooms, and lac.",
+        "The Forest Rights Act (2006) has significantly impacted forest governance by recognising tribal rights.",
+        "Eco-tourism is being developed as an alternative to commercial forest exploitation."
       ]
     },
     {
@@ -379,18 +392,19 @@
     },
     {
       "type": "paragraph",
-      "id": "ep0q2mi"
+      "id": "ep0q2mi",
+      "content": "Large-scale industry is largely absent in Arunachal Pradesh. The industrial landscape is dominated by small and cottage industries:"
     },
     {
       "id": "mfhw7xu",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Handloom and handicraft industries — a major source of livelihood for tribal women",
+        "Agro-based industries — ginger processing, orange juice, and spice processing",
+        "Bamboo industries — furniture, handicrafts, construction materials",
+        "Eco-tourism and adventure tourism — river rafting, trekking, bird watching",
+        "NERAMAC (North Eastern Regional Agricultural Marketing Corporation) assists in marketing NE produce",
+        "Pharmaceutical industries — small scale, at Pasighat and Naharlagun"
       ]
     },
     {
@@ -401,7 +415,8 @@
     },
     {
       "type": "paragraph",
-      "id": "w3nv0m6"
+      "id": "w3nv0m6",
+      "content": "Connectivity has been one of the biggest challenges for Arunachal Pradesh. The state has seen significant improvement in recent decades, particularly in road and air connectivity."
     },
     {
       "id": "0bb0efl",
@@ -420,7 +435,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zeqfxsq"
+      "id": "zeqfxsq",
+      "content": "The Border Roads Organisation (BRO) plays a vital role in constructing and maintaining strategic roads. The Trans-Arunachal Highway (TAH), currently under construction, will connect Tawang in the west to Kanubari in the east, passing through the state capital Itanagar."
     },
     {
       "id": "4m14284",
@@ -435,73 +451,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Airport</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Status</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Donyi-Polo Airport</p>",
+            "<p>Hollongi</p>",
+            "<p>Papum Pare</p>",
+            "<p>Operational — New Greenfield Airport for Itanagar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Pasighat Airport</p>",
+            "<p>Pasighat</p>",
+            "<p>East Siang</p>",
+            "<p>Operational — oldest airport in NE India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tezu Airport</p>",
+            "<p>Tezu</p>",
+            "<p>Lohit</p>",
+            "<p>Operational</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Deomali Airport</p>",
+            "<p>Deomali</p>",
+            "<p>Tirap</p>",
+            "<p>Operational</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tawang Helipad</p>",
+            "<p>Tawang</p>",
+            "<p>Tawang</p>",
+            "<p>Helipad — critical military supply route</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Along/Aalo Airport</p>",
+            "<p>Aalo</p>",
+            "<p>West Siang</p>",
+            "<p>Operational</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ziro Airport</p>",
+            "<p>Ziro</p>",
+            "<p>Lower Subansiri</p>",
+            "<p>Operational (limited services)</p>"
           ]
         }
       ]
@@ -514,7 +530,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4x7fz33"
+      "id": "4x7fz33",
+      "content": "Arunachal Pradesh is the last major state to be connected by railway. The first train service reached Naharlagun (near Itanagar) in 2014. Extension of railways to Itanagar and beyond is under progress. The Harmuti–Naharlagun rail link was the first in the state."
     }
   ],
   "enriched": true

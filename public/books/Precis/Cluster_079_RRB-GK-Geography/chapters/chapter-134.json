@@ -1,0 +1,89 @@
+{
+  "title": "2. Processes of River Erosion",
+  "order": 134,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "Abrasion acts as the main tool of river erosion, grinding sediment particles against the channel bed and banks like natural sandpaper.",
+      "id": "rpfthcb"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Erosion Process",
+        "Action Type",
+        "Target Area"
+      ],
+      "rows": [
+        [
+          "Hydraulic Action",
+          "Physical force of water and compressed air",
+          "River banks and bed"
+        ],
+        [
+          "Abrasion (Corrasion)",
+          "Mechanical grinding by sediment load",
+          "River channel floor and sides"
+        ],
+        [
+          "Attrition",
+          "Collision between moving sediments",
+          "The sediment load itself"
+        ],
+        [
+          "Solution (Corrosion)",
+          "Chemical dissolution of soluble minerals",
+          "Limestone and chalk bedrocks"
+        ]
+      ],
+      "id": "iefm25g"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Erosion Processes",
+          "value": "4 Main Types",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Course",
+          "value": "Upper Stage",
+          "icon": "award"
+        },
+        {
+          "label": "Main Action",
+          "value": "Vertical Erosion",
+          "icon": "check"
+        },
+        {
+          "label": "Chemical Action",
+          "value": "Corrosion",
+          "icon": "info"
+        }
+      ],
+      "id": "7qydf6c"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Do not confuse Corrasion (mechanical wear by rocks against the channel) with Corrosion (chemical dissolution of minerals).",
+        "Attrition reduces the load size itself, while Abrasion wears away the surrounding river channel.",
+        "Vertical erosion dominates the upper course to form V-shaped valleys, whereas lateral erosion dominates the middle course to widen the valley."
+      ],
+      "id": "ifhtlpx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Hydraulic Action operates through the physical force of flowing water dislodging loose riverbed materials.",
+        "Abrasion (Corrasion) occurs when the river uses its load of rocks and sand as tools to scrape and grind the bed and banks.",
+        "Attrition involves rock fragments colliding with each other in the current, becoming smaller, smoother, and rounder over time.",
+        "Solution (Corrosion) is the chemical dissolving of soluble rock structures, particularly limestone and chalk, by slightly acidic water."
+      ],
+      "id": "jaox3x7"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,122 @@
+{
+  "title": "7. Global Distribution of Earthquakes",
+  "order": 105,
+  "blocks": [
+    {
+      "id": "hun7est",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Seismic Belt</strong></p>",
+            "<p><strong>Features</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Circum-Pacific Belt</p>",
+            "<p>Contains about 80% of earthquakes; associated with subduction zones.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mediterranean-Himalayan Belt</p>",
+            "<p>Extends from Europe to Asia; formed by continental collision.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mid-Oceanic Ridge Belt</p>",
+            "<p>Linked to divergent boundaries.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Circum-Pacific Belt, commonly referred to as the Pacific Ring of Fire, experiences nearly 68% of all recorded earthquakes globally.",
+      "id": "8i6zc75"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Seismic Zone",
+        "Global Percentage",
+        "Boundary Type",
+        "Focal Depth Range"
+      ],
+      "rows": [
+        [
+          "Circum-Pacific Belt",
+          "68%",
+          "Convergent (Subduction)",
+          "Shallow, Intermediate, and Deep"
+        ],
+        [
+          "Mid-Continental Belt",
+          "21%",
+          "Convergent (Collision)",
+          "Shallow to Intermediate"
+        ],
+        [
+          "Mid-Atlantic Ridge",
+          "11%",
+          "Divergent (Spreading)",
+          "Shallow Focus Only"
+        ]
+      ],
+      "id": "0mky51j"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Circum-Pacific Share",
+          "value": "68%",
+          "icon": "globe"
+        },
+        {
+          "label": "Mid-Continental Share",
+          "value": "21%",
+          "icon": "info"
+        },
+        {
+          "label": "Mid-Atlantic Share",
+          "value": "11%",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Cause",
+          "value": "Plate Tectonics",
+          "icon": "book"
+        }
+      ],
+      "id": "h1839lw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "India's Himalayan region falls within the highly vulnerable Mid-Continental seismic belt.",
+        "Deep-focus earthquakes occur almost exclusively along subduction zones within the Circum-Pacific Belt.",
+        "Divergent plate boundaries, such as the Mid-Atlantic Ridge, are characterized strictly by shallow-focus earthquakes."
+      ],
+      "id": "ylipz0z"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Circum-Pacific Belt, popularly known as the Pacific Ring of Fire, accounts for nearly 68% of the world's total seismic activity.",
+        "The Mid-Continental Belt extends along the Alpine-Himalayan mountain chain, covering Southern Europe, North Africa, and Northern India.",
+        "The Mid-Atlantic Ridge experiences shallow-focus earthquakes along ocean floor spreading ridges at divergent boundaries.",
+        "Earthquake distribution closely outlines the active margins of lithospheric plates, including subduction zones and rift valleys."
+      ],
+      "id": "kae1xnq"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,62 @@
+{
+  "id": "wlp8ieb",
+  "title": "2. Check conclusions one by one3. Do not assume anything extra",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "cjgmy3n",
+      "content": "<br></br><strong>Solved Example:</strong><br></br>Statements:<br></br>All soldiers are disciplined.<br></br>Some disciplined are officers.<br></br><br></br>Conclusion:<br></br>Some soldiers are officers.<br></br>Logic:<br></br>Not necessarily true (no direct link)<br></br>Answer:<br></br>Conclusion does not follow<br></br>"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Do not assume anything extra",
+      "id": "1jew6xg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Rule",
+          "value": "Check conclusions one by one",
+          "icon": "check"
+        },
+        {
+          "label": "Golden Principle",
+          "value": "Do not assume anything extra",
+          "icon": "info"
+        },
+        {
+          "label": "Subject Area",
+          "value": "Logical Reasoning",
+          "icon": "book"
+        }
+      ],
+      "id": "19c9xwz"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Evaluate each conclusion individually against the provided statements.",
+        "Strictly avoid incorporating real-world facts or assumptions not explicitly given in the premises.",
+        "A conclusion is valid only if it logically and directly follows from the statements."
+      ],
+      "id": "yebn6qo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exam questions frequently use real-world truths as options to trap candidates who rely on external knowledge.",
+        "Always test every conclusion one by one to ensure accuracy in statement-conclusion questions."
+      ],
+      "id": "9sxi19x"
+    },
+    {
+      "type": "paragraph",
+      "id": "gqa7xji",
+      "content": "<br></br><strong>Practice Questions (Syllogism):</strong><br></br><br></br>Q4.<br></br>Statements:<br></br>All dogs are animals.<br></br>All animals are living beings.<br></br><br></br>Conclusions:<br></br>I. All dogs are living beings<br></br>II. Some animals are dogs<br></br><br></br>A. Only I follows<br></br>B. Only II follows<br></br>C. Both follow<br></br>D. Neither follows<br></br><br></br>Q5.<br></br>Statements:<br></br>Some books are pens.<br></br>All pens are papers.<br></br><br></br>Conclusions:<br></br>I. Some books are papers<br></br>II. All books are papers<br></br><br></br>A. Only I<br></br>B. Only II<br></br>C. Both<br></br>D. Neither<br></br>"
+    }
+  ],
+  "enriched": true
+}

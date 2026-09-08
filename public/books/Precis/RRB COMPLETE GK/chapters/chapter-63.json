@@ -10,37 +10,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Rock Type</strong></p>",
+            "<p><strong>Formation</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Igneous</p>",
+            "<p>Cooling of magma/lava</p>",
+            "<p>Hard, crystalline, no fossils</p>",
+            "<p>Granite, Basalt</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sedimentary</p>",
+            "<p>Deposition of sediments</p>",
+            "<p>Layered, may contain fossils</p>",
+            "<p>Sandstone, Limestone</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Metamorphic</p>",
+            "<p>Heat and pressure</p>",
+            "<p>Very hard, recrystallized</p>",
+            "<p>Marble, Slate</p>"
           ]
         }
       ]

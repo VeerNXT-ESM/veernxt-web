@@ -1,0 +1,123 @@
+{
+  "title": "Tenure and Service Conditions",
+  "order": 224,
+  "blocks": [
+    {
+      "id": "iglpgh0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Condition</strong></p>",
+            "<p><strong>Provision</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tenure</p>",
+            "<p>6 years or 65 years of age, whichever is earlier</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Resignation</p>",
+            "<p>Addressed to the President</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Salary</p>",
+            "<p>Equivalent to a Supreme Court Judge</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The service conditions of a member shall not be varied to his disadvantage after his appointment.",
+      "id": "oog5ihk"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Supreme Court Judge",
+        "High Court Judge"
+      ],
+      "rows": [
+        [
+          "Retirement Age",
+          "65 Years",
+          "62 Years"
+        ],
+        [
+          "Resignation Addressed To",
+          "President of India",
+          "President of India"
+        ],
+        [
+          "Removal Procedure",
+          "Special Majority in Parliament (Art. 124(4))",
+          "Same procedure as Supreme Court Judge"
+        ],
+        [
+          "Pension Charged On",
+          "Consolidated Fund of India",
+          "Consolidated Fund of India"
+        ]
+      ],
+      "id": "5naez5c"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "UPSC / CAG Tenure",
+          "value": "6 Yrs / 65 Age",
+          "icon": "calendar"
+        },
+        {
+          "label": "SC Judge Age Limit",
+          "value": "65 Years",
+          "icon": "award"
+        },
+        {
+          "label": "HC Judge Age Limit",
+          "value": "62 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Charged Expenditure",
+          "value": "Consolidated Fund",
+          "icon": "book"
+        }
+      ],
+      "id": "0an7rr3"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Note the vital difference in retirement ages: Supreme Court Judges retire at 65 years, while High Court Judges retire at 62 years.",
+        "Expenditure 'charged upon' the Consolidated Fund of India can be discussed in Parliament but is not subject to vote.",
+        "Members of the UPSC and State PSCs are ineligible for further employment under the Government of India or a State after retirement, except specific allowed appointments."
+      ],
+      "id": "son6i67"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional functionaries such as the CAG, CEC, and UPSC members hold office for a fixed term of 6 years or until attaining 65 years of age, whichever is earlier.",
+        "Salaries, allowances, and pensions of constitutional post-holders are charged upon the Consolidated Fund of India and are non-votable by Parliament.",
+        "Service conditions cannot be varied to the disadvantage of an incumbent after their appointment, safeguarding administrative independence.",
+        "Security of tenure ensures that constitutional authorities cannot be removed at the pleasure of the executive, requiring specific parliamentary procedures for removal."
+      ],
+      "id": "lwbvmrb"
+    }
+  ],
+  "enriched": true
+}

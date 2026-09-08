@@ -1,0 +1,385 @@
+{
+  "id": "4hexizg",
+  "title": "Chapter 42: National Income",
+  "order": 42,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "yyzbti8",
+      "content": "National income is a key macroeconomic concept used to measure the economic performance of a country. It represents the total monetary value of all final goods and services produced in a nation during a specific period, usually one year."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Estimation Body",
+          "value": "NSO / CSO",
+          "icon": "award"
+        },
+        {
+          "label": "First Estimate Year",
+          "value": "1867-68",
+          "icon": "calendar"
+        },
+        {
+          "label": "Estimation Methods",
+          "value": "3 Primary Methods",
+          "icon": "book"
+        },
+        {
+          "label": "Current Base Year",
+          "value": "2011-12",
+          "icon": "clock"
+        }
+      ],
+      "id": "5wvvyuz"
+    },
+    {
+      "id": "ktf0c10",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of National Income"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "National Income measures the net value of all final goods and services produced by a nation within a financial year.",
+        "Gross Domestic Product (GDP) accounts for total production within domestic boundaries regardless of citizenship.",
+        "Gross National Product (GNP) adjusts GDP by adding Net Factor Income from Abroad (NFIA).",
+        "Net National Product (NNP) at Factor Cost is considered the true indicator of National Income.",
+        "The three standard methods of calculation are Value Added (Product) Method, Income Method, and Expenditure Method."
+      ],
+      "id": "pyvquez"
+    },
+    {
+      "type": "paragraph",
+      "id": "mkux4zf",
+      "content": "• National income refers to the total value of all final goods and services produced in a country during a year."
+    },
+    {
+      "type": "paragraph",
+      "id": "5h5i755",
+      "content": "• It measures the overall economic activity of a nation."
+    },
+    {
+      "type": "paragraph",
+      "id": "209mcai",
+      "content": "• It helps governments formulate economic policies and development plans."
+    },
+    {
+      "type": "paragraph",
+      "id": "58nt6kp",
+      "content": "• It is an indicator of economic growth and standard of living."
+    },
+    {
+      "id": "s0tuwjp",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Important Concepts of National Income"
+    },
+    {
+      "id": "8jv18l6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>GDP (Gross Domestic Product)</p>",
+            "<p>Total value of goods and services produced within the country's borders.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>GNP (Gross National Product)</p>",
+            "<p>GDP plus income earned by citizens abroad minus income earned by foreigners.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>NNP (Net National Product)</p>",
+            "<p>GNP minus depreciation (wear and tear of capital).</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>National Income</p>",
+            "<p>NNP calculated at factor cost.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Per Capita Income</p>",
+            "<p>Average income per person (National income divided by population).</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yvlxk8x",
+      "type": "heading",
+      "level": 2,
+      "content": "3. GDP Explained"
+    },
+    {
+      "type": "paragraph",
+      "id": "3ww5x79",
+      "content": "• GDP measures the total production of goods and services within a country."
+    },
+    {
+      "type": "paragraph",
+      "id": "kr824jd",
+      "content": "• It includes production by both domestic and foreign companies within the country."
+    },
+    {
+      "type": "paragraph",
+      "id": "m90x3kq",
+      "content": "• It is widely used as an indicator of economic performance."
+    },
+    {
+      "type": "paragraph",
+      "id": "c18xrd8",
+      "content": "• GDP can be calculated at market price or factor cost."
+    },
+    {
+      "id": "1wis44x",
+      "type": "heading",
+      "level": 2,
+      "content": "4. GNP Explained"
+    },
+    {
+      "type": "paragraph",
+      "id": "7n79r8n",
+      "content": "• GNP measures the total income earned by residents of a country."
+    },
+    {
+      "type": "paragraph",
+      "id": "6y5t9yd",
+      "content": "• It includes income from abroad earned by citizens."
+    },
+    {
+      "type": "paragraph",
+      "id": "m98ybsx",
+      "content": "• It excludes income generated by foreign residents within the country."
+    },
+    {
+      "id": "08v6p2z",
+      "type": "heading",
+      "level": 2,
+      "content": "5. NNP Explained"
+    },
+    {
+      "type": "paragraph",
+      "id": "ouquwur",
+      "content": "• NNP is obtained by subtracting depreciation from GNP."
+    },
+    {
+      "type": "paragraph",
+      "id": "nd6nlo9",
+      "content": "• Depreciation refers to the wear and tear of machinery and equipment."
+    },
+    {
+      "type": "paragraph",
+      "id": "j78v4yl",
+      "content": "• NNP gives a more accurate measure of economic output."
+    },
+    {
+      "id": "2bt15fh",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Methods of Calculating National Income"
+    },
+    {
+      "id": "h9kx5rc",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Production Method</p>",
+            "<p>Adds the value of goods and services produced in different sectors.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Income Method</p>",
+            "<p>Adds incomes earned by factors of production such as wages, rent, interest and profit.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Expenditure Method</p>",
+            "<p>Adds all expenditures on final goods and services in the economy.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16ani2b",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Components of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "dwiz1pb",
+      "content": "• Wages – payments made to labour."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Indicator",
+        "Geographical / Boundary Scope",
+        "Core Formula"
+      ],
+      "rows": [
+        [
+          "GDP (Gross Domestic Product)",
+          "Within Domestic Territory of the country",
+          "GDP = C + I + G + (X - M)"
+        ],
+        [
+          "GNP (Gross National Product)",
+          "By Normal Residents (Domestic + Abroad)",
+          "GNP = GDP + NFIA"
+        ],
+        [
+          "NNP (Net National Product)",
+          "Net Value generated after accounting for wear/tear",
+          "NNP = GNP - Depreciation"
+        ]
+      ],
+      "id": "ld8rce8"
+    },
+    {
+      "type": "paragraph",
+      "id": "s3210wi",
+      "content": "• Rent – income received for use of land or property."
+    },
+    {
+      "type": "paragraph",
+      "id": "1anvjkj",
+      "content": "• Interest – income earned on capital."
+    },
+    {
+      "type": "paragraph",
+      "id": "ut8pml4",
+      "content": "• Profit – earnings of entrepreneurs."
+    },
+    {
+      "id": "nynzoeo",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Importance of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "jgoc6zt",
+      "content": "• Measures economic growth and development."
+    },
+    {
+      "type": "paragraph",
+      "id": "t3s6k6k",
+      "content": "• Helps government plan economic policies."
+    },
+    {
+      "type": "paragraph",
+      "id": "we0cbe1",
+      "content": "• Helps compare economic performance between countries."
+    },
+    {
+      "type": "paragraph",
+      "id": "9r8qb1s",
+      "content": "• Indicates the standard of living of people."
+    },
+    {
+      "id": "ehyz4ti",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Limitations of National Income"
+    },
+    {
+      "type": "paragraph",
+      "id": "6wf54zp",
+      "content": "• Does not include unpaid household services."
+    },
+    {
+      "type": "paragraph",
+      "id": "x28sk7r",
+      "content": "• Does not reflect income inequality."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "National Income in India is officially defined as Net National Product at Factor Cost (NNP at FC).",
+        "Dadabhai Naoroji made the first unofficial estimate of National Income in 1867-68 in 'Poverty and Un-British Rule in India'.",
+        "Transfer payments (like pensions, unemployment allowances, and scholarships) are excluded from National Income calculations.",
+        "Real GDP measures output using constant base year prices, removing the effect of inflation, unlike Nominal GDP."
+      ],
+      "id": "5clt54h"
+    },
+    {
+      "type": "paragraph",
+      "id": "h1jj5ri",
+      "content": "• Does not measure environmental damage."
+    },
+    {
+      "type": "paragraph",
+      "id": "40vd2no",
+      "content": "• Does not show distribution of wealth."
+    },
+    {
+      "id": "ptbez1l",
+      "type": "heading",
+      "level": 2,
+      "content": "10. National Income Estimation in India"
+    },
+    {
+      "type": "paragraph",
+      "id": "5brwmut",
+      "content": "In India, national income is estimated by the National Statistical Office (NSO) under the Ministry of Statistics and Programme Implementation."
+    },
+    {
+      "id": "f4nhbu9",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "yg2dsa9",
+      "content": "• GDP is the most widely used indicator of economic growth."
+    },
+    {
+      "type": "paragraph",
+      "id": "thvxg9f",
+      "content": "• Per capita income indicates the average income of citizens."
+    },
+    {
+      "type": "paragraph",
+      "id": "xtljrjx",
+      "content": "• In India, NSO estimates national income."
+    }
+  ],
+  "enriched": true
+}

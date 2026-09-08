@@ -1,0 +1,121 @@
+{
+  "title": "Important Election Terms",
+  "order": 187,
+  "blocks": [
+    {
+      "id": "0fyj8pg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Model Code of Conduct</p>",
+            "<p>Guidelines for political parties during elections</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Electoral Roll</p>",
+            "<p>Official list of eligible voters</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Delimitation</p>",
+            "<p>Redrawing boundaries of constituencies</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Recognized Party</p>",
+            "<p>Party fulfilling ECI criteria</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Article 324 of the Constitution vests the superintendence, direction, and control of elections in the Election Commission of India.",
+      "id": "cbiqtxo"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Electoral System",
+        "Winning Criterion",
+        "Application in India"
+      ],
+      "rows": [
+        [
+          "First-Past-The-Post (FPTP)",
+          "Candidate receiving the highest number of votes wins",
+          "Lok Sabha and State Legislative Assemblies"
+        ],
+        [
+          "Proportional Representation (PR-STV)",
+          "Candidate securing a quota of preferential votes wins",
+          "President, Vice-President, Rajya Sabha, Legislative Councils"
+        ]
+      ],
+      "id": "it3n631"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "ECI Constitutional Provision",
+          "value": "Article 324",
+          "icon": "book"
+        },
+        {
+          "label": "Voting Age Reduced",
+          "value": "61st Amendment",
+          "icon": "calendar"
+        },
+        {
+          "label": "NOTA Introduced",
+          "value": "2013",
+          "icon": "check"
+        },
+        {
+          "label": "First EVM Usage",
+          "value": "1982",
+          "icon": "clock"
+        }
+      ],
+      "id": "8nibhb1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The 61st Constitutional Amendment Act, 1988 reduced the voting age from 21 years to 18 years.",
+        "The Model Code of Conduct (MCC) is not a statutory document and lacks independent legal enforceability, though specific provisions are enforced via IPC and RPA 1951.",
+        "Proportional Representation by Means of Single Transferable Vote (PR-STV) is used for Presidential, Vice-Presidential, and Rajya Sabha elections, not Lok Sabha."
+      ],
+      "id": "y834sw6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The First-Past-The-Post (FPTP) system is used for Lok Sabha and State Legislative Assembly elections, where the candidate with the most votes wins.",
+        "Article 324 vests the superintendence, direction, and control of elections in the Election Commission of India.",
+        "The Model Code of Conduct (MCC) comes into effect immediately upon the announcement of election dates by the Election Commission.",
+        "Voter Verifiable Paper Audit Trail (VVPAT) allows voters to visually verify that their vote has been correctly printed and recorded.",
+        "The Representation of the People Act, 1951 details qualifications, disqualifications, and the actual conduct of elections in India."
+      ],
+      "id": "yjz5nwf"
+    }
+  ],
+  "enriched": true
+}

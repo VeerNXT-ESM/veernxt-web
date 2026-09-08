@@ -1,0 +1,90 @@
+{
+  "title": "2. Minerals and Rocks",
+  "order": 67,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Minerals are the building blocks of rocks. A mineral is a naturally occurring inorganic substance with a definite chemical composition and crystalline structure.",
+      "id": "tk12enc"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A mineral is a naturally occurring inorganic substance with a definite chemical composition and crystalline structure.",
+      "id": "epqfa3e"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Role",
+          "value": "Building Blocks",
+          "icon": "book"
+        },
+        {
+          "label": "Origin",
+          "value": "Naturally Occurring",
+          "icon": "info"
+        },
+        {
+          "label": "Nature",
+          "value": "Inorganic",
+          "icon": "check"
+        }
+      ],
+      "id": "79chngj"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Minerals are the fundamental building blocks of rocks.",
+        "A mineral is a naturally occurring, inorganic substance.",
+        "Minerals are characterized by a definite chemical composition and a crystalline structure."
+      ],
+      "id": "mdzaywl"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams often test the definition of a mineral: it must be naturally occurring and inorganic.",
+        "Key diagnostic features of minerals include a definite chemical composition and an ordered crystalline structure."
+      ],
+      "id": "qikgz8i"
+    },
+    {
+      "id": "rjdn1xo",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Minerals</strong></p>",
+            "<p><strong>Rocks</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Have definite chemical composition</p>",
+            "<p>No fixed composition</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Homogeneous</p>",
+            "<p>May be heterogeneous</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Example: Quartz</p>",
+            "<p>Example: Granite</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

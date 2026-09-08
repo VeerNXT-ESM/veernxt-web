@@ -1,0 +1,368 @@
+{
+  "id": "fpelvf1",
+  "title": "Chapter 33: Atmosphere",
+  "order": 34,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "y0r04v4",
+      "content": "The atmosphere is the layer of gases surrounding the Earth. It is essential for life because it provides oxygen for breathing, carbon dioxide for photosynthesis, and protects the Earth from harmful solar radiation. The atmosphere also regulates temperature and weather patterns."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Nitrogen Share",
+          "value": "78%",
+          "icon": "info"
+        },
+        {
+          "label": "Oxygen Share",
+          "value": "21%",
+          "icon": "check"
+        },
+        {
+          "label": "Atmospheric Layers",
+          "value": "5 Layers",
+          "icon": "book"
+        },
+        {
+          "label": "Troposphere Height",
+          "value": "8-18 km",
+          "icon": "clock"
+        }
+      ],
+      "id": "i5jcfk8"
+    },
+    {
+      "id": "a191tk2",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Composition of the Atmosphere"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The atmosphere consists of five main layers: Troposphere, Stratosphere, Mesosphere, Thermosphere, and Exosphere.",
+        "Troposphere is the innermost layer containing nearly all weather phenomena and atmospheric water vapor.",
+        "Stratosphere contains the ozone layer which absorbs harmful ultraviolet solar radiation.",
+        "Mesosphere is the coldest layer of the atmosphere where most meteorites burn up.",
+        "Thermosphere contains the Ionosphere, which reflects radio waves back to Earth for telecommunication."
+      ],
+      "id": "0az3512"
+    },
+    {
+      "id": "s3pvqw0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Gas</strong></p>",
+            "<p><strong>Percentage</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nitrogen</p>",
+            "<p>78%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Oxygen</p>",
+            "<p>21%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Argon</p>",
+            "<p>0.93%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Carbon Dioxide</p>",
+            "<p>0.04%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Other gases (Neon, Helium, Hydrogen etc.)</p>",
+            "<p>Trace amounts</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bp9fqi5",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Importance of the Atmosphere"
+    },
+    {
+      "type": "paragraph",
+      "id": "mfsidqb",
+      "content": "• Provides oxygen necessary for respiration."
+    },
+    {
+      "type": "paragraph",
+      "id": "uy0y0ls",
+      "content": "• Protects Earth from harmful ultraviolet radiation."
+    },
+    {
+      "type": "paragraph",
+      "id": "i9xmo84",
+      "content": "• Maintains Earth's temperature through greenhouse effect."
+    },
+    {
+      "type": "paragraph",
+      "id": "nuykra2",
+      "content": "• Helps in weather formation and water cycle."
+    },
+    {
+      "id": "c366sui",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Layers of the Atmosphere"
+    },
+    {
+      "id": "yndgbv4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Layer</strong></p>",
+            "<p><strong>Height Range</strong></p>",
+            "<p><strong>Key Features</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Troposphere</p>",
+            "<p>0–12 km</p>",
+            "<p>Weather phenomena occur here; temperature decreases with height</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Stratosphere</p>",
+            "<p>12–50 km</p>",
+            "<p>Contains ozone layer; temperature increases with height</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mesosphere</p>",
+            "<p>50–80 km</p>",
+            "<p>Coldest layer; meteors burn here</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Thermosphere</p>",
+            "<p>80–700 km</p>",
+            "<p>Contains ionosphere; auroras occur here</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Exosphere</p>",
+            "<p>Above 700 km</p>",
+            "<p>Outermost layer merging into space</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i5166mc",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Troposphere"
+    },
+    {
+      "type": "paragraph",
+      "id": "z7i0g8s",
+      "content": "• Lowest layer of the atmosphere."
+    },
+    {
+      "type": "paragraph",
+      "id": "qzaxc3p",
+      "content": "• Contains about 75% of atmospheric mass."
+    },
+    {
+      "type": "paragraph",
+      "id": "hsu7kud",
+      "content": "• All weather phenomena such as clouds, rain and storms occur here."
+    },
+    {
+      "id": "13q683x",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Stratosphere"
+    },
+    {
+      "type": "paragraph",
+      "id": "myiaatg",
+      "content": "• Located above the troposphere."
+    },
+    {
+      "type": "paragraph",
+      "id": "cqhol64",
+      "content": "• Contains the ozone layer that absorbs harmful ultraviolet radiation."
+    },
+    {
+      "type": "paragraph",
+      "id": "1ap0n60",
+      "content": "• Jet aircraft often fly in this layer."
+    },
+    {
+      "id": "lr2mlht",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Mesosphere"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Layer",
+        "Altitude",
+        "Key Feature",
+        "Temperature Trend"
+      ],
+      "rows": [
+        [
+          "Troposphere",
+          "0 - 18 km",
+          "Weather phenomena occur here",
+          "Decreases with height"
+        ],
+        [
+          "Stratosphere",
+          "18 - 50 km",
+          "Contains the Ozone Layer",
+          "Increases with height"
+        ],
+        [
+          "Mesosphere",
+          "50 - 80 km",
+          "Coldest layer; meteors burn up",
+          "Decreases with height"
+        ],
+        [
+          "Thermosphere",
+          "80 - 400 km",
+          "Ionosphere reflects radio waves",
+          "Increases with height"
+        ]
+      ],
+      "id": "9sy67nh"
+    },
+    {
+      "type": "paragraph",
+      "id": "q0s1y7f",
+      "content": "• Third layer of the atmosphere."
+    },
+    {
+      "type": "paragraph",
+      "id": "yrkqtwj",
+      "content": "• Meteors burn up due to friction in this layer."
+    },
+    {
+      "type": "paragraph",
+      "id": "cmm8cgk",
+      "content": "• It is the coldest layer."
+    },
+    {
+      "id": "tifqaki",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Thermosphere"
+    },
+    {
+      "type": "paragraph",
+      "id": "hhrhj8c",
+      "content": "• Temperature rises sharply with height."
+    },
+    {
+      "type": "paragraph",
+      "id": "fh2qnac",
+      "content": "• Contains ionized gases forming the ionosphere."
+    },
+    {
+      "type": "paragraph",
+      "id": "vagt5cu",
+      "content": "• Important for radio communication."
+    },
+    {
+      "id": "fi129f0",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Exosphere"
+    },
+    {
+      "type": "paragraph",
+      "id": "f3nhn6p",
+      "content": "• Outermost layer of the atmosphere."
+    },
+    {
+      "type": "paragraph",
+      "id": "2ccci4r",
+      "content": "• Gradually merges into outer space."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Ozone layer is located in the Stratosphere, protecting life from UV radiation.",
+        "All weather phenomena (clouds, rainfall, fog) occur exclusively in the Troposphere.",
+        "Radio wave reflection occurs in the Ionosphere, which forms part of the Thermosphere.",
+        "Temperature decreases at a normal lapse rate of 6.5°C per 1,000 meters in the Troposphere."
+      ],
+      "id": "mcnfrfn"
+    },
+    {
+      "type": "paragraph",
+      "id": "k6e36eq",
+      "content": "• Contains very thin air."
+    },
+    {
+      "id": "85qhw3t",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "38q4y5i",
+      "content": "• Nitrogen is the most abundant gas in the atmosphere."
+    },
+    {
+      "type": "paragraph",
+      "id": "ye51e72",
+      "content": "• Ozone layer is located in the stratosphere."
+    },
+    {
+      "type": "paragraph",
+      "id": "znd2jv3",
+      "content": "• Troposphere contains most weather phenomena."
+    },
+    {
+      "type": "paragraph",
+      "id": "2w2axpm",
+      "content": "• Mesosphere is the coldest layer."
+    }
+  ],
+  "enriched": true
+}

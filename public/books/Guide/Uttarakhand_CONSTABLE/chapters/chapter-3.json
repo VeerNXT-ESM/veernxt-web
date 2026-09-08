@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "ccunzko"
+      "id": "ccunzko",
+      "content": "Uttarakhand has 13 districts organized into 2 administrative divisions — Garhwal and Kumaon."
     },
     {
       "type": "statStrip",
@@ -40,11 +41,6 @@
       "content": "3.1 Garhwal Division (7 Districts)"
     },
     {
-      "type": "pullQuote",
-      "content": "3.1 Garhwal Division (7 Districts)",
-      "id": "z2qzxz5"
-    },
-    {
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
@@ -61,73 +57,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>District</strong></p>",
+            "<p><strong>HQ</strong></p>",
+            "<p><strong>Area (sq km)</strong></p>",
+            "<p><strong>Key Facts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dehradun</p>",
+            "<p>Dehradun</p>",
+            "<p>3088</p>",
+            "<p>State capital; IMA, LBSNAA, FRI, ONGC; Jolly Grant Airport</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Haridwar</p>",
+            "<p>Haridwar</p>",
+            "<p>2360</p>",
+            "<p>Smallest district by area in Garhwal; Kumbh Mela; Bhel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Pauri Garhwal</p>",
+            "<p>Pauri</p>",
+            "<p>5438</p>",
+            "<p>Lansdowne Cantonment; Garhwal Rifles raised here</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Chamoli</p>",
+            "<p>Gopeshwar</p>",
+            "<p>8030</p>",
+            "<p>Largest district; Badrinath, Valley of Flowers, Hemkund; Nanda Devi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tehri Garhwal</p>",
+            "<p>Tehri/New Tehri</p>",
+            "<p>4085</p>",
+            "<p>Tehri Dam (Asia's one of tallest); submerged old Tehri town</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Uttarkashi</p>",
+            "<p>Uttarkashi</p>",
+            "<p>8016</p>",
+            "<p>2nd largest; Gangotri, Yamunotri; Nehru Mountaineering Institute</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Rudraprayag</p>",
+            "<p>Rudraprayag</p>",
+            "<p>1984</p>",
+            "<p>Smallest district; Kedarnath; 2013 disaster; Panch Kedar area</p>"
           ]
         }
       ]
@@ -163,64 +159,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>District</strong></p>",
+            "<p><strong>HQ</strong></p>",
+            "<p><strong>Area (sq km)</strong></p>",
+            "<p><strong>Key Facts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Nainital</p>",
+            "<p>Nainital</p>",
+            "<p>4251</p>",
+            "<p>Tourist hub; High Court of UK; Corbett Park (Ramnagar part); Naini Lake</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Almora</p>",
+            "<p>Almora</p>",
+            "<p>3144</p>",
+            "<p>Cultural capital of Kumaon; Chand Dynasty capital; Binsar WLS; Kasar Devi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Pithoragarh</p>",
+            "<p>Pithoragarh</p>",
+            "<p>7110</p>",
+            "<p>'Little Kashmir'; tri-border (India-Nepal-China); Dharchula; Adi Kailash route</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bageshwar</p>",
+            "<p>Bageshwar</p>",
+            "<p>2246</p>",
+            "<p>Baghnath temple; Uttarayani Mela (Begar abolition 1921); Pindari trek base</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Champawat</p>",
+            "<p>Champawat</p>",
+            "<p>1766</p>",
+            "<p>Smallest district in UK; ancient Chand capital; Purnagiri temple; Abbott Mount</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Udham Singh Nagar</p>",
+            "<p>Rudrapur</p>",
+            "<p>2542</p>",
+            "<p>Most industrialised; SIDCUL; Pantnagar University; Jim Corbett (part); plain district</p>"
           ]
         }
       ]
@@ -246,97 +242,97 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Detail</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Largest by area</p>",
+            "<p>Chamoli</p>",
+            "<p>8030 sq km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Smallest by area</p>",
+            "<p>Champawat</p>",
+            "<p>1766 sq km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Most populous</p>",
+            "<p>Haridwar</p>",
+            "<p>~18 lakh (2011)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Highest literacy</p>",
+            "<p>Dehradun</p>",
+            "<p>~84%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Highest altitude district</p>",
+            "<p>Chamoli</p>",
+            "<p>Nanda Devi 7816 m</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Only plains district (pure)</p>",
+            "<p>Udham Singh Nagar + Haridwar</p>",
+            "<p>Terai zone</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>International border (China)</p>",
+            "<p>Chamoli, Uttarkashi, Pithoragarh</p>",
+            "<p>Three districts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>International border (Nepal)</p>",
+            "<p>Pithoragarh, Champawat, Udham Singh Nagar</p>",
+            "<p>Three districts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>State capital district</p>",
+            "<p>Dehradun</p>",
+            "<p>Temporary capital</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>High Court location</p>",
+            "<p>Nainital</p>",
+            "<p>High Court of Uttarakhand</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Summer capital district</p>",
+            "<p>Chamoli (Gairsain/Bhararisain)</p>",
+            "<p>Declared 2020</p>"
           ]
         }
       ]

@@ -1,0 +1,139 @@
+{
+  "title": "Constitutional Status",
+  "order": 192,
+  "blocks": [
+    {
+      "id": "4zsjx4n",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Articles</p>",
+            "<p>315–323</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Part of Constitution</p>",
+            "<p>Part XIV – Services Under the Union and States</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nature</p>",
+            "<p>Independent Constitutional Body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Objective</p>",
+            "<p>Ensure merit-based recruitment</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type</p>",
+            "<p>Central Recruiting Agency</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The 73rd Constitutional Amendment Act of 1992 gave constitutional status to the Panchayati Raj institutions by adding Part IX and the 11th Schedule to the Constitution.",
+      "id": "4ptptre"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constitutional Bodies",
+        "Statutory Bodies"
+      ],
+      "rows": [
+        [
+          "Source of Authority",
+          "Directly established by the Constitution of India",
+          "Created by an Act of Parliament or State Legislature"
+        ],
+        [
+          "Modification / Abolition",
+          "Requires Constitutional Amendment under Article 368",
+          "Requires passing an Amendment Act in Parliament/Legislature"
+        ],
+        [
+          "Primary Objective",
+          "Uphold key democratic, legal, and constitutional machinery",
+          "Perform specific regulatory, administrative, or executive duties"
+        ],
+        [
+          "Key Examples",
+          "Election Commission (Art. 324), UPSC (Art. 315), CAG (Art. 148)",
+          "NHRC, SEBI, National Commission for Women, CVC"
+        ]
+      ],
+      "id": "2yjq4ia"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Amendment Act",
+          "value": "73rd Act, 1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Constitutional Part",
+          "value": "Part IX",
+          "icon": "book"
+        },
+        {
+          "label": "Articles Covered",
+          "value": "243 to 243O",
+          "icon": "info"
+        },
+        {
+          "label": "Functional Items",
+          "value": "29 Matters",
+          "icon": "check"
+        }
+      ],
+      "id": "0bu284p"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 243I mandates the Governor to constitute a State Finance Commission every five years to review the financial position of Panchayats.",
+        "Article 243K vests the superintendence, direction, and control of elections to Panchayats in the State Election Commission.",
+        "Part IX of the Constitution does not apply to the states of Nagaland, Meghalaya, and Mizoram, as well as certain tribal areas.",
+        "Constitutional bodies derive their powers directly from the Constitution, whereas statutory bodies are created by an Act of Parliament."
+      ],
+      "id": "ntvtilk"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The 73rd Constitutional Amendment Act of 1992 conferred constitutional status on Panchayati Raj Institutions.",
+        "It added Part IX titled 'The Panchayats' and the 11th Schedule to the Constitution of India.",
+        "The Act mandates a three-tier system of Panchayati Raj at the village, intermediate, and district levels.",
+        "Provides for a minimum of 33% (one-third) reservation of total seats for women across all tiers.",
+        "Constitutes a State Election Commission (Article 243K) and a State Finance Commission (Article 243I) in every state."
+      ],
+      "id": "tpk9eye"
+    }
+  ],
+  "enriched": true
+}

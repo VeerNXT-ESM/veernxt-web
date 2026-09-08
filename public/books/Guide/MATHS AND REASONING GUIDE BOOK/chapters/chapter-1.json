@@ -6,7 +6,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "391rhu1"
+      "id": "391rhu1",
+      "content": "NUMBER SYSTEM "
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "26v5033"
+      "id": "26v5033",
+      "content": "Number System deals with classification and properties of numbers used in calculations.<br></br><br></br>In SBIexamination, questions from Number System are:<br></br>• Basic<br></br>• Concept-based<br></br>• Usually one or two steps only"
     },
     {
       "id": "7i3od69",
@@ -68,65 +70,60 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Natural Numbers</p>",
+            "<p>1, 2, 3, 4, …</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Whole Numbers</p>",
+            "<p>0, 1, 2, 3, …</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Integers</p>",
+            "<p>…, –3, –2, –1, 0, 1, 2, 3 …</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rational Numbers</p>",
+            "<p>Numbers expressible as p/q</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Irrational Numbers</p>",
+            "<p>Numbers not expressible as p/q (√2, π)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prime Numbers</p>",
+            "<p>Numbers divisible only by 1 and itself</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Composite Numbers</p>",
+            "<p>Numbers having more than two factors</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "IMPORTANT PROPERTIES (VERY IMPORTANT FOR SSC)",
-      "id": "rezx7gz"
     },
     {
       "id": "szq68ga",
@@ -136,7 +133,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yy0jq4w"
+      "id": "yy0jq4w",
+      "content": "Even and Odd Numbers:<br></br>• Even + Even = Even<br></br>• Odd + Odd = Even<br></br>• Even + Odd = Odd<br></br>• Even × Odd = Even<br></br>• Odd × Odd = Odd<br></br><br></br>Prime Numbers:<br></br>• 2 is the only even prime number<br></br>• 1 is neither prime nor composite<br></br>• Every composite number can be expressed as a product of prime numbers"
     },
     {
       "id": "zf3w0ss",
@@ -151,57 +149,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Number</strong></p>",
+            "<p><strong>Rule</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>2</p>",
+            "<p>Last digit must be even</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>3</p>",
+            "<p>Sum of digits divisible by 3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>4</p>",
+            "<p>Last two digits divisible by 4</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>5</p>",
+            "<p>Last digit is 0 or 5</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>6</p>",
+            "<p>Divisible by both 2 and 3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>9</p>",
+            "<p>Sum of digits divisible by 9</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>11</p>",
+            "<p>Difference of alternate digit sums is 0 or multiple of 11</p>"
           ]
         }
       ]
@@ -214,7 +212,8 @@
     },
     {
       "type": "paragraph",
-      "id": "l10ybdl"
+      "id": "l10ybdl",
+      "content": "Factor: A number that divides another number exactly.<br></br>Multiple: The result obtained after multiplication.<br></br><br></br>Important Points:<br></br>• Smallest factor of any number is 1<br></br>• Largest factor of any number is the number itself"
     },
     {
       "id": "kquq6un",
@@ -224,7 +223,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ii2sj1f"
+      "id": "ii2sj1f",
+      "content": "<strong>Example 1:</strong><br></br>Which of the following is a prime number?<br></br>A. 21   B. 29   C. 39   D. 51<br></br><br></br>Answer: 29<br></br><br></br><strong>Example 2:</strong><br></br>What is the unit digit of 7⁴?<br></br>7¹ = 7<br></br>7² = 49<br></br>7³ = 343<br></br>7⁴ = 2401<br></br><br></br>Answer: 1"
     },
     {
       "id": "n6b9ohp",
@@ -243,7 +243,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jzxnhbz"
+      "id": "jzxnhbz",
+      "content": "Q1. Which of the following is not a composite number?<br></br>A. 1   B. 4   C. 6   D. 9<br></br><br></br>Q2. Find the number of factors of 16.<br></br>A. 4   B. 5   C. 6   D. 7<br></br><br></br>Q3. Which number is divisible by 11?<br></br>A. 121   B. 132   C. 143   D. 154"
     },
     {
       "id": "gtg52nx",
@@ -254,7 +255,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "p78v07f"
+      "id": "p78v07f",
+      "content": "Q1. A<br></br>Q2. B<br></br>Q3. A"
     }
   ],
   "enriched": true

@@ -1,0 +1,123 @@
+{
+  "title": "Three-Tier Structure of Panchayati Raj",
+  "order": 160,
+  "blocks": [
+    {
+      "id": "15v8cb5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Level</strong></p>",
+            "<p><strong>Institution</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Village Level</p>",
+            "<p>Gram Panchayat</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Intermediate Level</p>",
+            "<p>Panchayat Samiti / Block Panchayat</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>District Level</p>",
+            "<p>Zila Parishad</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The 73rd Constitutional Amendment Act of 1992 constitutionalized the three-tier Panchayati Raj system, empowering local self-governance across rural India.",
+      "id": "cn8b684"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Tier Level",
+        "Governing Body",
+        "Key Representative",
+        "Primary Function"
+      ],
+      "rows": [
+        [
+          "Village Level",
+          "Gram Panchayat",
+          "Sarpanch / Gram Pradhan",
+          "Direct implementation of local civic amenities and welfare programs"
+        ],
+        [
+          "Block / Intermediate Level",
+          "Panchayat Samiti",
+          "Block Pramukh / Chairman",
+          "Coordination and aggregation of plans submitted by Gram Panchayats"
+        ],
+        [
+          "District Level",
+          "Zilla Parishad",
+          "Zilla Parishad President",
+          "District-wide development planning, supervision, and fund distribution"
+        ]
+      ],
+      "id": "m38l4m4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Tiers of Governance",
+          "value": "3 Tiers",
+          "icon": "book"
+        },
+        {
+          "label": "Constitutional Amendment",
+          "value": "73rd Act, 1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "11th Schedule Items",
+          "value": "29 Subjects",
+          "icon": "check"
+        },
+        {
+          "label": "Mandatory Reservation",
+          "value": "33% Women",
+          "icon": "award"
+        }
+      ],
+      "id": "n8jtk31"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Balwant Rai Mehta Committee (1957) recommended the 3-tier Panchayati Raj system, whereas the Ashok Mehta Committee (1977) proposed a 2-tier system.",
+        "Rajasthan was the first state to establish Panchayati Raj, inaugurated in Nagaur district on October 2, 1959.",
+        "Article 243I mandates the creation of a State Finance Commission every 5 years, and Article 243K establishes a State Election Commission."
+      ],
+      "id": "2cplzo7"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The 73rd Constitutional Amendment Act, 1992 added Part IX (Articles 243 to 243O) and the 11th Schedule to the Constitution of India.",
+        "The Panchayati Raj system establishes a uniform three-tier structure: Gram Panchayat (village level), Panchayat Samiti (block level), and Zilla Parishad (district level).",
+        "States with a population under 20 lakhs are exempted from constituting the intermediate (block) tier.",
+        "A minimum of one-third (33%) of all seats and chairperson positions are reserved for women across all three tiers.",
+        "The tenure for every Panchayati Raj Institution is fixed at 5 years, and fresh elections must be conducted within 6 months in case of dissolution."
+      ],
+      "id": "9a504kh"
+    }
+  ],
+  "enriched": true
+}

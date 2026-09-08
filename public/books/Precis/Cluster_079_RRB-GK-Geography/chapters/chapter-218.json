@@ -1,0 +1,481 @@
+{
+  "title": "Chapter 21: Winds (Complete Classification, Dynamics and Local Wind Systems )",
+  "order": 218,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Winds are horizontal movements of air caused by pressure differences. They are fundamental to the Earth's heat balance system and are responsible for distributing energy from equatorial to polar regions. Understanding winds is essential for climate, rainfall, ocean currents and disaster studies.",
+      "id": "gc3obvn"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Coriolis Force at Equator",
+          "value": "0",
+          "icon": "info"
+        },
+        {
+          "label": "Max Jet Stream Speed",
+          "value": "> 300 km/h",
+          "icon": "clock"
+        },
+        {
+          "label": "Westerly Wind Belts",
+          "value": "40°-60° S",
+          "icon": "book"
+        },
+        {
+          "label": "Most Reliable Winds",
+          "value": "Trade Winds",
+          "icon": "check"
+        }
+      ],
+      "id": "3w1y343"
+    },
+    {
+      "id": "qyshp4x",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Forces Controlling Winds"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Winds are horizontal air movements driven by pressure differences and serve to balance Earth's heat system.",
+        "Geostrophic winds form in the upper atmosphere where the pressure gradient force balances the Coriolis force, flowing parallel to isobars.",
+        "Sea breezes blow from sea to land during the day, whereas land breezes blow from land to sea at night.",
+        "Jet streams are narrow, high-speed wind bands in the upper troposphere that significantly influence cyclones and monsoon patterns.",
+        "Roaring Forties, Furious Fifties, and Screaming Sixties represent powerful westerly wind belts in the Southern Hemisphere."
+      ],
+      "id": "5bqjo8j"
+    },
+    {
+      "id": "wygl3y5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Force</strong></p>",
+            "<p><strong>Detailed Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pressure Gradient Force (PGF)</p>",
+            "<p>Initiates wind movement from high pressure to low pressure. Stronger gradient = stronger wind.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Coriolis Force</p>",
+            "<p>Deflects winds right in Northern Hemisphere and left in Southern Hemisphere. Zero at equator, maximum at poles.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Frictional Force</p>",
+            "<p>Reduces wind speed near Earth's surface; weakens Coriolis effect.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Centrifugal Force</p>",
+            "<p>Acts on curved wind paths such as cyclones and anticyclones.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Geostrophic wind develops when pressure gradient force balances Coriolis force in upper atmosphere.",
+      "id": "xnjc311"
+    },
+    {
+      "id": "tg5bewg",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Planetary (Permanent) Winds"
+    },
+    {
+      "id": "rscznhk",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Wind</strong></p>",
+            "<p><strong>Latitude</strong></p>",
+            "<p><strong>Important Features</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Trade Winds</p>",
+            "<p>0°–30°</p>",
+            "<p>Blow from subtropical highs to equatorial low; steady; converge at ITCZ.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Westerlies</p>",
+            "<p>30°–60°</p>",
+            "<p>Blow west to east; strongest in Southern Hemisphere; associated with temperate cyclones.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Polar Easterlies</p>",
+            "<p>60°–90°</p>",
+            "<p>Cold winds from polar highs toward subpolar lows.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pvulna5",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Seasonal Winds"
+    },
+    {
+      "type": "paragraph",
+      "content": "Seasonal winds change direction due to differential heating between land and sea.",
+      "id": "egtcpms"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Monsoon winds reverse direction between summer and winter.",
+      "id": "52fso6y"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Driven by shifting pressure belts and ITCZ migration.",
+      "id": "ot6hryh"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Strongly influenced by jet streams.",
+      "id": "815l029"
+    },
+    {
+      "id": "yrqg70f",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Local Winds (Detailed Classification)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Local winds are short-distance winds caused by local temperature and pressure differences.",
+      "id": "dygvlw8"
+    },
+    {
+      "id": "p7crqix",
+      "type": "heading",
+      "level": 3,
+      "content": "A. Warm Local Winds"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Winds are horizontal movements of air caused by pressure differences.",
+      "id": "yctgumm"
+    },
+    {
+      "id": "kr0ssoh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Wind</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Loo</p>",
+            "<p>Northern India</p>",
+            "<p>Hot, dry summer wind causing heat waves.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chinook</p>",
+            "<p>Rocky Mountains (USA/Canada)</p>",
+            "<p>Warm downslope wind; melts snow rapidly.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Foehn</p>",
+            "<p>Alps (Europe)</p>",
+            "<p>Warm, dry descending wind.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sirocco</p>",
+            "<p>North Africa to Southern Europe</p>",
+            "<p>Hot desert wind carrying dust.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Harmattan</p>",
+            "<p>West Africa</p>",
+            "<p>Dry, dusty wind from Sahara.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Santa Ana</p>",
+            "<p>California (USA)</p>",
+            "<p>Hot, dry downslope wind increasing wildfire risk.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4nvwt02",
+      "type": "heading",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "id": "mg9nwjr",
+      "type": "heading",
+      "level": 3,
+      "content": "B. Cold Local Winds"
+    },
+    {
+      "id": "hlhfxnx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Wind</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mistral</p>",
+            "<p>France</p>",
+            "<p>Cold, dry wind blowing toward Mediterranean.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Bora</p>",
+            "<p>Adriatic Coast</p>",
+            "<p>Cold gusty wind.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Blizzard</p>",
+            "<p>Polar &amp; temperate regions</p>",
+            "<p>Severe snowstorm with strong winds.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pampero</p>",
+            "<p>Argentina</p>",
+            "<p>Cold wind from polar regions.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Katabatic Winds</p>",
+            "<p>Polar regions</p>",
+            "<p>Cold dense air flowing downhill.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nor'wester (Kalbaisakhi)</p>",
+            "<p>Eastern India</p>",
+            "<p>Pre-monsoon storm with strong winds and rain.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crkvxb9",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Land and Sea Breeze System"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Sea Breeze – Daytime wind from sea to land due to faster heating of land.",
+      "id": "obulyp0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Land Breeze – Nighttime wind from land to sea due to faster cooling of land.",
+      "id": "2rmg014"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Wind System",
+        "Timing",
+        "Flow Direction",
+        "Primary Mechanism"
+      ],
+      "rows": [
+        [
+          "Sea Breeze",
+          "Daytime",
+          "Sea to Land",
+          "Faster heating of land creating low pressure"
+        ],
+        [
+          "Land Breeze",
+          "Nighttime",
+          "Land to Sea",
+          "Faster cooling of land creating high pressure"
+        ],
+        [
+          "Valley Breeze",
+          "Daytime",
+          "Upslope",
+          "Warm air rising along heated slopes"
+        ],
+        [
+          "Mountain Breeze",
+          "Nighttime",
+          "Downhill",
+          "Cold, dense air sinking into valleys"
+        ]
+      ],
+      "id": "c3nbpdj"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Most prominent in coastal areas.",
+      "id": "aer9l1q"
+    },
+    {
+      "id": "wkkax2l",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Mountain and Valley Winds"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Valley Breeze – Warm air rises upslope during daytime.",
+      "id": "vmalc58"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Mountain Breeze – Cold dense air flows downhill at night.",
+      "id": "a4z6rct"
+    },
+    {
+      "id": "0na55zh",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Jet Streams (Advanced Concept)"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Narrow bands of high-speed winds in upper troposphere.",
+      "id": "fgknl36"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Speed may exceed 300 km/h.",
+      "id": "8fr2o3z"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Polar Jet Stream influences temperate cyclones.",
+      "id": "ful49o6"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Subtropical Jet influences Indian monsoon onset.",
+      "id": "iun2che"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Tropical Easterly Jet forms during Indian summer monsoon.",
+      "id": "mtrvodv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Coriolis force is zero at the equator and increases toward the poles.",
+        "Chinook is a warm local wind responsible for rapid snowmelt.",
+        "Subtropical high-pressure belts correspond directly to global desert belts.",
+        "Subtropical and Tropical Easterly Jet Streams dictate the onset and intensity of the Indian monsoon."
+      ],
+      "id": "whm1pjx"
+    },
+    {
+      "id": "s5uay1q",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Additional Important Concepts"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Geostrophic wind flows parallel to isobars.",
+      "id": "u2x4vvn"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Gradient wind occurs when centrifugal force balances pressure gradient force.",
+      "id": "3ikwtwc"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Windward side of mountains receives rainfall; leeward side is rain shadow area.",
+      "id": "la4qjq6"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Roaring Forties, Furious Fifties and Screaming Sixties are strong westerly zones.",
+      "id": "68r31xh"
+    },
+    {
+      "id": "7rcs1tj",
+      "type": "heading",
+      "level": 2,
+      "content": "EXAM BOOSTER FACTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Coriolis force is zero at equator.<br/>• Trade winds are most reliable winds.<br/>• Subtropical highs are desert belts.<br/>• Chinook causes rapid snowmelt.<br/>• Jet streams control monsoon intensity.<br/>• Local winds are temperature-driven.",
+      "id": "ymludwb"
+    }
+  ],
+  "enriched": true
+}

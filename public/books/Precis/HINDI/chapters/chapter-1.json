@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "9sc1rbt"
+      "id": "9sc1rbt",
+      "content": "हिंदी भारत की राजभाषा है और यह संसार में सबसे अधिक बोली जाने वाली भाषाओं में से एक है। हिंदी का उद्भव संस्कृत भाषा से हुआ है और यह देवनागरी लिपि में लिखी जाती है। भारत में लगभग 50 करोड़ से अधिक लोग हिंदी को अपनी मातृभाषा या द्वितीय भाषा के रूप में बोलते हैं।"
     },
     {
       "type": "paragraph",
-      "id": "279oi52"
+      "id": "279oi52",
+      "content": "हिंदी भाषा को सीखने के लिए सबसे पहले देवनागरी लिपि को समझना आवश्यक है। इस लिपि में स्वर, व्यंजन, मात्राएँ और विराम चिह्न:ये सभी मिलकर हिंदी लेखन की नींव बनाते हैं।"
     },
     {
       "id": "z9l74rh",
@@ -63,12 +65,14 @@
     },
     {
       "type": "paragraph",
-      "id": "oq2uxb2"
+      "id": "oq2uxb2",
+      "content": "देवनागरी लिपि एक ध्वन्यात्मक (phonetic) लिपि है, जिसका अर्थ है कि जो लिखा जाता है, वही पढ़ा जाता है। इसमें बाएँ से दाएँ लिखा जाता है। प्रत्येक अक्षर के ऊपर एक शिरो-रेखा (horizontal line) होती है।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m2csw1d"
+      "id": "m2csw1d",
+      "content": "<strong>देवनागरी लिपि की विशेषताएँ</strong>"
     },
     {
       "id": "hopajq5",
@@ -77,43 +81,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>विशेषता</strong></p>",
+            "<p><strong>विवरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>लेखन दिशा</p>",
+            "<p>बाएँ से दाएँ (Left to Right)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>शिरो-रेखा</p>",
+            "<p>प्रत्येक अक्षर के ऊपर क्षैतिज रेखा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ध्वन्यात्मकता</p>",
+            "<p>जैसा लिखो, वैसा पढ़ो</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>वर्णों की संख्या</p>",
+            "<p>कुल 52 मानक वर्ण (11 स्वर + 41 व्यंजन)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>मात्राएँ</p>",
+            "<p>स्वरों के संकेत, व्यंजनों से जुड़ते हैं</p>"
           ]
         }
       ]
@@ -126,7 +130,8 @@
     },
     {
       "type": "paragraph",
-      "id": "41ho0ci"
+      "id": "41ho0ci",
+      "content": "स्वर वे वर्ण होते हैं जिनका उच्चारण बिना किसी अन्य वर्ण की सहायता के होता है। हिंदी में 11 मानक स्वर हैं, जिन्हें दो भागों में बाँटा जाता है:"
     },
     {
       "type": "pullQuote",
@@ -137,14 +142,15 @@
       "id": "sl1h6j9",
       "type": "list",
       "items": [
-        null,
-        null
+        "ह्रस्व स्वर (Short Vowels):इनका उच्चारण कम समय में होता है।",
+        "दीर्घ स्वर (Long Vowels):इनका उच्चारण ह्रस्व स्वर से दोगुने समय में होता है।"
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rrezhml"
+      "id": "rrezhml",
+      "content": "<strong>स्वर तालिका</strong>"
     },
     {
       "id": "tnfenuh",
@@ -153,109 +159,109 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>स्वर</strong></p>",
+            "<p><strong>प्रकार</strong></p>",
+            "<p><strong>उच्चारण</strong></p>",
+            "<p><strong>उदाहरण शब्द</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अ</p>",
+            "<p>ह्रस्व</p>",
+            "<p>a (short)</p>",
+            "<p>अब, अच्छा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>आ</p>",
+            "<p>दीर्घ</p>",
+            "<p>aa (long)</p>",
+            "<p>आम, आकाश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>इ</p>",
+            "<p>ह्रस्व</p>",
+            "<p>i (short)</p>",
+            "<p>इधर, इनाम</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ई</p>",
+            "<p>दीर्घ</p>",
+            "<p>ee (long)</p>",
+            "<p>ईश्वर, ईंट</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>उ</p>",
+            "<p>ह्रस्व</p>",
+            "<p>u (short)</p>",
+            "<p>उठो, उपकार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ऊ</p>",
+            "<p>दीर्घ</p>",
+            "<p>oo (long)</p>",
+            "<p>ऊँट, ऊपर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ऋ</p>",
+            "<p>ह्रस्व</p>",
+            "<p>ri</p>",
+            "<p>ऋषि, ऋण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ए</p>",
+            "<p>दीर्घ</p>",
+            "<p>e (long)</p>",
+            "<p>एक, एड़ी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ऐ</p>",
+            "<p>दीर्घ</p>",
+            "<p>ai</p>",
+            "<p>ऐनक, ऐतिहासिक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ओ</p>",
+            "<p>दीर्घ</p>",
+            "<p>o</p>",
+            "<p>ओर, ओखली</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>औ</p>",
+            "<p>दीर्घ</p>",
+            "<p>au</p>",
+            "<p>औरत, औजार</p>"
           ]
         }
       ]
@@ -268,12 +274,14 @@
     },
     {
       "type": "paragraph",
-      "id": "azi4wce"
+      "id": "azi4wce",
+      "content": "व्यंजन वे वर्ण हैं जिनका उच्चारण स्वर की सहायता से होता है। हिंदी में 41 व्यंजन हैं। इन्हें उच्चारण-स्थान के आधार पर वर्गों में बाँटा गया है।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "61bwi1z"
+      "id": "61bwi1z",
+      "content": "<strong>व्यंजन वर्गीकरण</strong>"
     },
     {
       "type": "comparisonTable",
@@ -308,65 +316,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>वर्ग</strong></p>",
+            "<p><strong>व्यंजन</strong></p>",
+            "<p><strong>उच्चारण स्थान</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>क-वर्ग</p>",
+            "<p>क, ख, ग, घ, ङ</p>",
+            "<p>कंठ (Velar)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>च-वर्ग</p>",
+            "<p>च, छ, ज, झ, ञ</p>",
+            "<p>तालु (Palatal)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ट-वर्ग</p>",
+            "<p>ट, ठ, ड, ढ, ण</p>",
+            "<p>मूर्धा (Retroflex)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>त-वर्ग</p>",
+            "<p>त, थ, द, ध, न</p>",
+            "<p>दंत (Dental)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>प-वर्ग</p>",
+            "<p>प, फ, ब, भ, म</p>",
+            "<p>ओष्ठ (Labial)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अंतस्थ</p>",
+            "<p>य, र, ल, व</p>",
+            "<p>मध्यवर्ती (Semi-vowels)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ऊष्म/संघर्षी</p>",
+            "<p>श, ष, स, ह</p>",
+            "<p>विभिन्न स्थान (Sibilants)</p>"
           ]
         }
       ]
@@ -379,12 +387,14 @@
     },
     {
       "type": "paragraph",
-      "id": "m48odhy"
+      "id": "m48odhy",
+      "content": "जब स्वर किसी व्यंजन के साथ जुड़ता है, तो उसका एक विशेष चिह्न बनता है जिसे मात्रा कहते हैं। 'अ' स्वर की कोई मात्रा नहीं होती:वह व्यंजन में स्वाभाविक रूप से निहित होता है।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "k8qk4ia"
+      "id": "k8qk4ia",
+      "content": "<strong>मात्रा तालिका:'क' के साथ</strong>"
     },
     {
       "id": "e3vl2kv",
@@ -393,109 +403,109 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>स्वर</strong></p>",
+            "<p><strong>मात्रा चिह्न</strong></p>",
+            "<p><strong>व्यंजन + मात्रा</strong></p>",
+            "<p><strong>उच्चारण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अ</p>",
+            "<p>(कोई चिह्न नहीं)</p>",
+            "<p>क</p>",
+            "<p>ka</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>आ</p>",
+            "<p>ा</p>",
+            "<p>का</p>",
+            "<p>kaa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>इ</p>",
+            "<p>ि</p>",
+            "<p>कि</p>",
+            "<p>ki</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ई</p>",
+            "<p>ी</p>",
+            "<p>की</p>",
+            "<p>kee</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>उ</p>",
+            "<p>ु</p>",
+            "<p>कु</p>",
+            "<p>ku</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ऊ</p>",
+            "<p>ू</p>",
+            "<p>कू</p>",
+            "<p>koo</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ऋ</p>",
+            "<p>ृ</p>",
+            "<p>कृ</p>",
+            "<p>kri</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ए</p>",
+            "<p>े</p>",
+            "<p>के</p>",
+            "<p>ke</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ऐ</p>",
+            "<p>ै</p>",
+            "<p>कै</p>",
+            "<p>kai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ओ</p>",
+            "<p>ो</p>",
+            "<p>को</p>",
+            "<p>ko</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>औ</p>",
+            "<p>ौ</p>",
+            "<p>कौ</p>",
+            "<p>kau</p>"
           ]
         }
       ]
@@ -513,46 +523,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>चिह्न</strong></p>",
+            "<p><strong>नाम</strong></p>",
+            "<p><strong>प्रयोग</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ं</p>",
+            "<p>अनुस्वार</p>",
+            "<p>नासिक्य ध्वनि (nasal)</p>",
+            "<p>अंक, रंग, संख्या</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ः</p>",
+            "<p>विसर्ग</p>",
+            "<p>साँस छोड़ने की ध्वनि</p>",
+            "<p>दुःख, प्रातः</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ँ</p>",
+            "<p>चंद्रबिंदु</p>",
+            "<p>अनुनासिक स्वर ध्वनि</p>",
+            "<p>माँ, हँसना, आँख</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>्</p>",
+            "<p>हलंत</p>",
+            "<p>व्यंजन में स्वर का अभाव</p>",
+            "<p>संस्कृत्, विद्युत्</p>"
           ]
         }
       ]
@@ -574,17 +584,18 @@
     },
     {
       "type": "paragraph",
-      "id": "tydkpba"
+      "id": "tydkpba",
+      "content": "निम्नलिखित प्रश्नों के उत्तर दीजिए:"
     },
     {
       "id": "zfml461",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "हिंदी के 11 स्वरों को लिखकर उन्हें ह्रस्व और दीर्घ में वर्गीकृत कीजिए।",
+        "क, च, ट, त और प-वर्ग के व्यंजनों को उनके उच्चारण स्थान के साथ लिखिए।",
+        "'म' व्यंजन में सभी मात्राएँ लगाकर लिखिए।",
+        "अनुस्वार, विसर्ग और चंद्रबिंदु में क्या अंतर है? उदाहरण सहित समझाइए।",
+        "पाँच ऐसे शब्द लिखिए जिनमें दीर्घ स्वर का प्रयोग हुआ हो।"
       ]
     },
     {
@@ -597,12 +608,12 @@
       "id": "3uuyidx",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "देवनागरी लिपि ध्वन्यात्मक है:उच्चारण और लेखन में समानता।",
+        "हिंदी में 11 स्वर और 41 व्यंजन होते हैं।",
+        "स्वर दो प्रकार के होते हैं:ह्रस्व और दीर्घ।",
+        "व्यंजनों का वर्गीकरण उनके उच्चारण स्थान के आधार पर किया जाता है।",
+        "'अ' स्वर की कोई मात्रा नहीं होती।",
+        "अनुस्वार (ं), विसर्ग (ः) और चंद्रबिंदु (ँ) विशेष चिह्न हैं।"
       ]
     }
   ],

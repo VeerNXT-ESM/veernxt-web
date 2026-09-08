@@ -1,0 +1,118 @@
+{
+  "title": "2. Levels of Biodiversity",
+  "order": 203,
+  "blocks": [
+    {
+      "id": "fz9081q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Level</strong></p>",
+            "<p><strong>Detailed Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Genetic Diversity</p>",
+            "<p>Variation in genes within a species. Higher genetic diversity improves resilience to diseases and climate change.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Species Diversity</p>",
+            "<p>Variety and relative abundance of species in a region. Includes species richness and species evenness.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ecosystem Diversity</p>",
+            "<p>Variety of habitats such as forests, deserts, wetlands, grasslands, and marine ecosystems.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Biodiversity manifests across multiple hierarchical levels, ranging from genetic variations within a single species to complex ecological networks within entire biomes.",
+      "id": "o3c4xlm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Level of Diversity",
+        "Scope of Measurement",
+        "Key Example"
+      ],
+      "rows": [
+        [
+          "Genetic Diversity",
+          "Variation of genes within a single species",
+          "50,000 genetic strains of rice in India"
+        ],
+        [
+          "Species Diversity",
+          "Variety and relative abundance of species in a region",
+          "Amphibian species richness in Western Ghats vs. Eastern Ghats"
+        ],
+        [
+          "Ecological Diversity",
+          "Diversity of biomes, habitats, and ecosystem processes",
+          "Estuaries, mangroves, coral reefs, and alpine meadows in India"
+        ]
+      ],
+      "id": "lfkxo1o"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Levels of Diversity",
+          "value": "3 Levels",
+          "icon": "book"
+        },
+        {
+          "label": "Rice Strains in India",
+          "value": "50,000+",
+          "icon": "info"
+        },
+        {
+          "label": "Mango Varieties",
+          "value": "1,000+",
+          "icon": "award"
+        },
+        {
+          "label": "Whittaker's Scales",
+          "value": "Alpha, Beta, Gamma",
+          "icon": "check"
+        }
+      ],
+      "id": "5349xg0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently ask to differentiate Alpha, Beta, and Gamma diversity: Alpha is local within-community diversity, Beta is species turnover between habitats, and Gamma is regional diversity.",
+        "Questions often highlight the Western Ghats having higher amphibian species diversity than the Eastern Ghats as a standard textbook example of species richness.",
+        "Rauwolfia vomitoria (producing reserpine) in the Himalayas is a classic example used in exams to illustrate genetic diversity at the intra-species level."
+      ],
+      "id": "n769wzv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Genetic diversity refers to variations in genetic information within a single species, such as variations in reserpine potency in Rauwolfia vomitoria.",
+        "Species diversity measures the variety and richness of species within a specific geographic region.",
+        "Ecological diversity encompasses variations in ecosystem structure, including deserts, rainforests, mangroves, coral reefs, and alpine meadows.",
+        "Whittaker classified spatial ecosystem diversity into Alpha (within-habitat), Beta (between-habitat), and Gamma (regional landscape) diversity."
+      ],
+      "id": "2pwuxvx"
+    }
+  ],
+  "enriched": true
+}

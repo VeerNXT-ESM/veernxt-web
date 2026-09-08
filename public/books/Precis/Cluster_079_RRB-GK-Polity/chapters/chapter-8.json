@@ -1,0 +1,77 @@
+{
+  "title": "11. Universal Adult Franchise",
+  "order": 8,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Every citizen aged **18 years or above** has the right to vote.<br/>• Voting age reduced from 21 to 18 by the **61st Constitutional Amendment Act, 1988**.",
+      "id": "qnbz4ra"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Every citizen aged 18 years or above has the right to vote.",
+      "id": "hj414v7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Before 61st Amendment Act, 1988",
+        "After 61st Amendment Act, 1988"
+      ],
+      "rows": [
+        [
+          "Minimum Voting Age",
+          "21 years",
+          "18 years"
+        ]
+      ],
+      "id": "xwy8tw4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Current Voting Age",
+          "value": "18 Years",
+          "icon": "check"
+        },
+        {
+          "label": "Amendment Act",
+          "value": "61st CAA",
+          "icon": "book"
+        },
+        {
+          "label": "Enactment Year",
+          "value": "1988",
+          "icon": "calendar"
+        },
+        {
+          "label": "Former Voting Age",
+          "value": "21 Years",
+          "icon": "info"
+        }
+      ],
+      "id": "aqxvk3s"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The 61st Constitutional Amendment Act, 1988 is a high-frequency question regarding the reduction of voting age in India.",
+        "Questions often contrast the previous voting age requirement (21 years) with the present voting age (18 years)."
+      ],
+      "id": "p31b8s5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Universal Adult Franchise guarantees the right to vote to every citizen aged 18 years or above.",
+        "The voting age in India was previously 21 years.",
+        "The reduction of the voting age from 21 to 18 was brought about by the 61st Constitutional Amendment Act, 1988."
+      ],
+      "id": "5z4rq1j"
+    }
+  ],
+  "enriched": true
+}

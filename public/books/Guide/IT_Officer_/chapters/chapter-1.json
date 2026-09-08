@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mnfk3m5"
+      "id": "mnfk3m5",
+      "content": "A data structure is a way of organising and storing data in a computer so that it can be accessed and modified efficiently. The choice of data structure affects algorithm performance significantly. Data structures are broadly classified into Linear (Array, Stack, Queue, Linked List) and Non-Linear (Tree, Graph) types."
     },
     {
       "id": "ay4lnba",
@@ -58,100 +59,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Data Structure</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Time Complexity (Search/Insert/Delete)</strong></p>",
+            "<p><strong>Use Cases</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Array</p>",
+            "<p>Linear</p>",
+            "<p>O(1) access / O(n) insert/delete</p>",
+            "<p>Sequential storage, matrix operations, lookup tables</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Linked List</p>",
+            "<p>Linear</p>",
+            "<p>O(n) search / O(1) insert-delete at head</p>",
+            "<p>Dynamic memory; polynomials; undo operations</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Stack</p>",
+            "<p>Linear (LIFO)</p>",
+            "<p>O(1) push/pop</p>",
+            "<p>Expression evaluation, recursion, backtracking, browser history</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Queue</p>",
+            "<p>Linear (FIFO)</p>",
+            "<p>O(1) enqueue/dequeue</p>",
+            "<p>BFS, scheduling, buffers, printer spooling</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Deque</p>",
+            "<p>Linear</p>",
+            "<p>O(1) both ends</p>",
+            "<p>Palindrome check, sliding window problems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hash Table</p>",
+            "<p>Non-Linear</p>",
+            "<p>O(1) avg search/insert</p>",
+            "<p>Dictionary, caching, symbol tables, indexing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Binary Tree</p>",
+            "<p>Non-Linear</p>",
+            "<p>O(log n) for BST</p>",
+            "<p>Hierarchical data, expression trees, Huffman coding</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Heap</p>",
+            "<p>Non-Linear</p>",
+            "<p>O(log n) insert; O(1) min/max</p>",
+            "<p>Priority queue, heap sort, Dijkstra's algorithm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Graph</p>",
+            "<p>Non-Linear</p>",
+            "<p>Depends on representation</p>",
+            "<p>Social networks, maps, routing, dependency resolution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Trie</p>",
+            "<p>Non-Linear</p>",
+            "<p>O(L) where L=word length</p>",
+            "<p>Auto-complete, spell check, IP routing, dictionary</p>"
           ]
         }
       ]
@@ -172,11 +173,11 @@
       "id": "x7lu0cv",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Fixed size; contiguous memory allocation; random access in O(1)",
+        "1D, 2D (Matrix), Multi-dimensional arrays",
+        "Types: Static (compile-time), Dynamic (runtime — ArrayList in Java, list in Python)",
+        "Row-major order (C/C++) vs Column-major order (Fortran, MATLAB)",
+        "Sparse matrix: most elements zero; represented using linked list or 3-tuple format"
       ]
     },
     {
@@ -192,46 +193,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Structure</strong></p>",
+            "<p><strong>Advantage</strong></p>",
+            "<p><strong>Disadvantage</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Singly Linked List</p>",
+            "<p>Node → Node → NULL</p>",
+            "<p>Simple; efficient insert/delete at head</p>",
+            "<p>No backward traversal; O(n) access</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Doubly Linked List</p>",
+            "<p>NULL ← Node ↔ Node → NULL</p>",
+            "<p>Bidirectional traversal; O(1) delete with pointer</p>",
+            "<p>Extra memory for prev pointer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Circular Linked List</p>",
+            "<p>Last node points to head</p>",
+            "<p>Useful for round-robin scheduling</p>",
+            "<p>Complex traversal; need flag to stop</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Circular Doubly</p>",
+            "<p>Both directions + circular</p>",
+            "<p>Most flexible; used in advanced applications</p>",
+            "<p>Most complex; most memory</p>"
           ]
         }
       ]
@@ -252,12 +253,12 @@
       "id": "yx04oce",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Infix to Postfix/Prefix conversion (Shunting Yard algorithm)",
+        "Postfix evaluation using stack",
+        "Balanced parentheses checking",
+        "Function call management — call stack (activation records)",
+        "DFS (Depth First Search) implementation",
+        "Tower of Hanoi — recursive solution uses stack implicitly"
       ]
     },
     {
@@ -273,41 +274,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Queue Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Application</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Simple Queue</p>",
+            "<p>FIFO; enqueue at rear, dequeue at front</p>",
+            "<p>Print spooler, CPU scheduling</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Circular Queue</p>",
+            "<p>Rear wraps to front; avoids wasted space</p>",
+            "<p>Real-time systems, buffer management</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Priority Queue</p>",
+            "<p>Dequeue highest priority first; implemented with heap</p>",
+            "<p>Dijkstra, Prim's, A* algorithm, OS scheduling</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Deque (Double-ended)</p>",
+            "<p>Insert/delete at both ends</p>",
+            "<p>Sliding window maximum, palindrome check</p>"
           ]
         }
       ]
@@ -333,10 +334,10 @@
       "id": "3sj28w8",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Max nodes at level i = 2^i (root is level 0)",
+        "Max nodes in tree of height h = 2^(h+1) − 1",
+        "Min height of tree with n nodes = ⌊log2 n⌋",
+        "Number of leaf nodes = number of internal nodes with 2 children + 1 (Full Binary Tree)"
       ]
     },
     {
@@ -352,41 +353,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Traversal</strong></p>",
+            "<p><strong>Order</strong></p>",
+            "<p><strong>Use Case</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inorder (LNR)</p>",
+            "<p>Left → Root → Right</p>",
+            "<p>Gives sorted output from BST</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Preorder (NLR)</p>",
+            "<p>Root → Left → Right</p>",
+            "<p>Copy tree; prefix expression; serialize tree</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Postorder (LRN)</p>",
+            "<p>Left → Right → Root</p>",
+            "<p>Delete tree; postfix expression; evaluate expression tree</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Level Order (BFS)</p>",
+            "<p>Level by level using queue</p>",
+            "<p>Finding shortest path; level-wise processing</p>"
           ]
         }
       ]
@@ -404,73 +405,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Tree Type</strong></p>",
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>BST (Binary Search Tree)</p>",
+            "<p>Left &lt; Root &lt; Right; O(log n) avg search</p>",
+            "<p>Database indexing, sorted dictionaries</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>AVL Tree</p>",
+            "<p>Self-balancing BST; |height(L)−height(R)| ≤ 1; O(log n) guaranteed</p>",
+            "<p>File systems, databases needing fast lookups</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Red-Black Tree</p>",
+            "<p>Self-balancing; root is black; no two consecutive red nodes</p>",
+            "<p>Java TreeMap, C++ STL map/set, Linux kernel scheduler</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>B-Tree</p>",
+            "<p>Generalised BST; multiple keys per node; balanced; minimises disk I/O</p>",
+            "<p>Databases (MySQL), file systems (NTFS, ext4)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>B+ Tree</p>",
+            "<p>All data in leaves; internal nodes only keys; leaves linked</p>",
+            "<p>RDBMS primary index structure (InnoDB)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Heap</p>",
+            "<p>Complete binary tree; max-heap or min-heap property</p>",
+            "<p>Priority queue, heap sort</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Trie (Prefix Tree)</p>",
+            "<p>Each node stores character; root is empty</p>",
+            "<p>Auto-complete, spell check, IP routing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Segment Tree</p>",
+            "<p>Stores intervals; O(log n) range queries</p>",
+            "<p>Range min/max/sum queries; competitive programming</p>"
           ]
         }
       ]
@@ -517,13 +518,13 @@
       "id": "xdsih9z",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Directed Graph (Digraph): edges have direction (u → v ≠ v → u)",
+        "Undirected Graph: edges have no direction; u–v = v–u",
+        "Weighted Graph: edges have weights/costs",
+        "Degree: in-degree (edges coming in), out-degree (edges going out) for directed graphs",
+        "Path: sequence of vertices connected by edges",
+        "Cycle: path that starts and ends at same vertex",
+        "DAG (Directed Acyclic Graph): directed graph with no cycles — used in compilers, task scheduling"
       ]
     },
     {
@@ -539,41 +540,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Representation</strong></p>",
+            "<p><strong>Space</strong></p>",
+            "<p><strong>Edge Check</strong></p>",
+            "<p><strong>Adjacency Iteration</strong></p>",
+            "<p><strong>Best For</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Adjacency Matrix</p>",
+            "<p>O(V²)</p>",
+            "<p>O(1)</p>",
+            "<p>O(V)</p>",
+            "<p>Dense graphs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Adjacency List</p>",
+            "<p>O(V+E)</p>",
+            "<p>O(degree)</p>",
+            "<p>O(degree)</p>",
+            "<p>Sparse graphs (most real networks)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Edge List</p>",
+            "<p>O(E)</p>",
+            "<p>O(E)</p>",
+            "<p>O(E)</p>",
+            "<p>Kruskal's MST algorithm</p>"
           ]
         }
       ]
@@ -591,82 +592,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Algorithm</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Time Complexity</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>BFS (Breadth First Search)</p>",
+            "<p>Traversal</p>",
+            "<p>O(V+E)</p>",
+            "<p>Shortest path (unweighted), level-order, connectivity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>DFS (Depth First Search)</p>",
+            "<p>Traversal</p>",
+            "<p>O(V+E)</p>",
+            "<p>Cycle detection, topological sort, connected components</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dijkstra's Algorithm</p>",
+            "<p>Shortest Path</p>",
+            "<p>O((V+E) log V) with heap</p>",
+            "<p>Single-source shortest path (non-negative weights)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bellman-Ford</p>",
+            "<p>Shortest Path</p>",
+            "<p>O(VE)</p>",
+            "<p>Single-source shortest path (negative weights allowed)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Floyd-Warshall</p>",
+            "<p>All-Pairs Shortest</p>",
+            "<p>O(V³)</p>",
+            "<p>All-pairs shortest path; DP approach</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kruskal's Algorithm</p>",
+            "<p>MST</p>",
+            "<p>O(E log E)</p>",
+            "<p>Minimum Spanning Tree; uses Union-Find (DSU)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Prim's Algorithm</p>",
+            "<p>MST</p>",
+            "<p>O(E log V) with heap</p>",
+            "<p>Minimum Spanning Tree; greedy approach</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Topological Sort</p>",
+            "<p>DAG ordering</p>",
+            "<p>O(V+E)</p>",
+            "<p>Task scheduling, build systems, course prerequisites</p>"
           ]
         }
       ]
@@ -684,128 +685,129 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Algorithm</strong></p>",
+            "<p><strong>Best</strong></p>",
+            "<p><strong>Average</strong></p>",
+            "<p><strong>Worst</strong></p>",
+            "<p><strong>Space</strong></p>",
+            "<p><strong>Stable?</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Bubble Sort</p>",
+            "<p>O(n)</p>",
+            "<p>O(n²)</p>",
+            "<p>O(n²)</p>",
+            "<p>O(1)</p>",
+            "<p>Yes</p>",
+            "<p>Simple; educational; poor performance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Selection Sort</p>",
+            "<p>O(n²)</p>",
+            "<p>O(n²)</p>",
+            "<p>O(n²)</p>",
+            "<p>O(1)</p>",
+            "<p>No</p>",
+            "<p>Minimum swaps; slow but simple</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Insertion Sort</p>",
+            "<p>O(n)</p>",
+            "<p>O(n²)</p>",
+            "<p>O(n²)</p>",
+            "<p>O(1)</p>",
+            "<p>Yes</p>",
+            "<p>Best for nearly sorted; used in TimSort</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Merge Sort</p>",
+            "<p>O(n log n)</p>",
+            "<p>O(n log n)</p>",
+            "<p>O(n log n)</p>",
+            "<p>O(n)</p>",
+            "<p>Yes</p>",
+            "<p>Divide &amp; conquer; external sorting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Quick Sort</p>",
+            "<p>O(n log n)</p>",
+            "<p>O(n log n)</p>",
+            "<p>O(n²)</p>",
+            "<p>O(log n)</p>",
+            "<p>No</p>",
+            "<p>Fastest in practice; pivot choice critical</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Heap Sort</p>",
+            "<p>O(n log n)</p>",
+            "<p>O(n log n)</p>",
+            "<p>O(n log n)</p>",
+            "<p>O(1)</p>",
+            "<p>No</p>",
+            "<p>In-place; not cache-friendly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Counting Sort</p>",
+            "<p>O(n+k)</p>",
+            "<p>O(n+k)</p>",
+            "<p>O(n+k)</p>",
+            "<p>O(k)</p>",
+            "<p>Yes</p>",
+            "<p>Integer only; k = range</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Radix Sort</p>",
+            "<p>O(nk)</p>",
+            "<p>O(nk)</p>",
+            "<p>O(nk)</p>",
+            "<p>O(n+k)</p>",
+            "<p>Yes</p>",
+            "<p>Digit-by-digit; used for integers/strings</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Tim Sort</p>",
+            "<p>O(n)</p>",
+            "<p>O(n log n)</p>",
+            "<p>O(n log n)</p>",
+            "<p>O(n)</p>",
+            "<p>Yes</p>",
+            "<p>Hybrid (Merge+Insertion); Python &amp; Java default</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "w7mmbqj"
+      "id": "w7mmbqj",
+      "content": "<strong>Note: </strong><em>Quick Sort is fastest in practice (cache-friendly); Merge Sort is best for linked lists &amp; external sorting; Heap Sort is always O(n log n) in-place.</em>"
     },
     {
       "type": "examAlert",
@@ -829,64 +831,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Algorithm</strong></p>",
+            "<p><strong>Time Complexity</strong></p>",
+            "<p><strong>Prerequisite</strong></p>",
+            "<p><strong>Use Case</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Linear Search</p>",
+            "<p>O(n)</p>",
+            "<p>None</p>",
+            "<p>Unsorted data; small datasets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Binary Search</p>",
+            "<p>O(log n)</p>",
+            "<p>Sorted array</p>",
+            "<p>Fast search in sorted data; foundation for many algorithms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ternary Search</p>",
+            "<p>O(log₃ n)</p>",
+            "<p>Sorted / unimodal</p>",
+            "<p>Finding maximum of unimodal function</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Interpolation Search</p>",
+            "<p>O(log log n) avg</p>",
+            "<p>Sorted, uniformly distributed</p>",
+            "<p>Better than binary for uniform data</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Jump Search</p>",
+            "<p>O(√n)</p>",
+            "<p>Sorted array</p>",
+            "<p>Sorted arrays when binary not applicable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Exponential Search</p>",
+            "<p>O(log n)</p>",
+            "<p>Sorted; unbounded</p>",
+            "<p>Unbounded/infinite sorted arrays</p>"
           ]
         }
       ]
@@ -904,57 +906,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Technique</strong></p>",
+            "<p><strong>Approach</strong></p>",
+            "<p><strong>Classic Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Greedy</p>",
+            "<p>Make locally optimal choice at each step; no backtracking</p>",
+            "<p>Dijkstra, Prim, Kruskal, Huffman coding, Activity selection, Fractional Knapsack</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Divide and Conquer</p>",
+            "<p>Split problem; solve subproblems; combine</p>",
+            "<p>Merge Sort, Quick Sort, Binary Search, Karatsuba multiplication, Strassen's matrix</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dynamic Programming</p>",
+            "<p>Overlapping subproblems + optimal substructure; memoisation/tabulation</p>",
+            "<p>0/1 Knapsack, LCS, LIS, Edit Distance, Floyd-Warshall, Matrix Chain Multiplication</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Backtracking</p>",
+            "<p>Explore all paths; abandon invalid paths early</p>",
+            "<p>N-Queens, Sudoku Solver, Hamiltonian Path, Subset Sum, Graph Colouring</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Branch and Bound</p>",
+            "<p>Systematic enumeration; prune branches exceeding best solution</p>",
+            "<p>TSP, 0/1 Knapsack (optimal), Job Assignment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Randomised Algorithms</p>",
+            "<p>Use random numbers in logic; Las Vegas vs Monte Carlo</p>",
+            "<p>Randomised Quick Sort, Skip Lists, Bloom Filters, Miller-Rabin primality</p>"
           ]
         }
       ]
@@ -972,73 +974,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Notation</strong></p>",
+            "<p><strong>Name</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>O(1)</p>",
+            "<p>Constant</p>",
+            "<p>Array access, hash table lookup, push/pop stack</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>O(log n)</p>",
+            "<p>Logarithmic</p>",
+            "<p>Binary search, BST operations, heap insert/delete</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>O(n)</p>",
+            "<p>Linear</p>",
+            "<p>Linear search, array traversal, single loop</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>O(n log n)</p>",
+            "<p>Linearithmic</p>",
+            "<p>Merge sort, heap sort, efficient sorting algorithms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>O(n²)</p>",
+            "<p>Quadratic</p>",
+            "<p>Bubble sort, insertion sort, nested loops</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>O(n³)</p>",
+            "<p>Cubic</p>",
+            "<p>Floyd-Warshall, naive matrix multiplication, triple loops</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>O(2ⁿ)</p>",
+            "<p>Exponential</p>",
+            "<p>Naive recursion for Fibonacci, power set generation, naive TSP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>O(n!)</p>",
+            "<p>Factorial</p>",
+            "<p>Brute force permutations, naive TSP (n cities)</p>"
           ]
         }
       ]

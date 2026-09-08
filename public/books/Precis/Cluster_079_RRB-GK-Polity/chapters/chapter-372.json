@@ -1,0 +1,130 @@
+{
+  "title": "Important Terms (VERY FREQUENTLY ASKED)",
+  "order": 372,
+  "blocks": [
+    {
+      "id": "lwwqiyq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cartel</p>",
+            "<p>Group of firms colluding to control prices.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dominant Position</p>",
+            "<p>Position of economic strength allowing a firm to influence the market.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Combination</p>",
+            "<p>Merger or acquisition beyond threshold limits.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Predatory Pricing</p>",
+            "<p>Selling below cost to eliminate competition.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Repo rate is the key benchmark interest rate at which the Reserve Bank of India lends short-term funds to commercial banks.",
+      "id": "x57c56i"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Repo Rate",
+        "Reverse Repo Rate"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Rate at which RBI lends money to commercial banks",
+          "Rate at which RBI borrows money/absorbs liquidity from banks"
+        ],
+        [
+          "Purpose",
+          "Used to control inflation and supply liquidity",
+          "Used to control excess money supply in the banking system"
+        ],
+        [
+          "Rate Comparison",
+          "Always higher than Reverse Repo Rate",
+          "Always lower than Repo Rate"
+        ],
+        [
+          "Collateral",
+          "Commercial banks pledge government securities to RBI",
+          "RBI transfers government securities to commercial banks"
+        ]
+      ],
+      "id": "pwctbx8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Inflation Target",
+          "value": "4% (±2%)",
+          "icon": "target"
+        },
+        {
+          "label": "Key Rates",
+          "value": "Repo & Reverse Repo",
+          "icon": "percent"
+        },
+        {
+          "label": "Deficit Types",
+          "value": "Fiscal, Revenue, Primary",
+          "icon": "book"
+        },
+        {
+          "label": "Policy Review",
+          "value": "Bi-Monthly MPC",
+          "icon": "calendar"
+        }
+      ],
+      "id": "uuunbds"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently test the core difference: RBI lends at Repo Rate, whereas banks park funds with RBI at Reverse Repo Rate.",
+        "Remember that Primary Deficit = Fiscal Deficit - Interest Payments (a recurring direct formula question in SSC CGL and UPSC).",
+        "Stagflation contradicts the traditional Phillips Curve relationship and is a favorite concept in competitive economics papers."
+      ],
+      "id": "gzr6gbo"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Repo Rate is the rate at which the Reserve Bank of India lends short-term funds to commercial banks against government securities.",
+        "Reverse Repo Rate is the rate at which the RBI absorbs excess liquidity from commercial banks.",
+        "Stagflation refers to a situation of high inflation occurring simultaneously with stagnant economic growth and high unemployment.",
+        "Primary Deficit is derived by subtracting interest payments from the overall Fiscal Deficit."
+      ],
+      "id": "7lbic97"
+    }
+  ],
+  "enriched": true
+}

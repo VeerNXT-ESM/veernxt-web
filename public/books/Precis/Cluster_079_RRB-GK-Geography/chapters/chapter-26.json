@@ -1,0 +1,96 @@
+{
+  "title": "8. Time Calculation",
+  "order": 26,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Earth rotates 360° in 24 hours.<br/>→ 15° per hour<br/>→ 1° every 4 minutes",
+      "id": "ui8e2x2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Full Rotation",
+          "value": "360° in 24 hrs",
+          "icon": "clock"
+        },
+        {
+          "label": "Hourly Rotation",
+          "value": "15° per hour",
+          "icon": "info"
+        },
+        {
+          "label": "Rate per 1°",
+          "value": "4 minutes",
+          "icon": "clock"
+        },
+        {
+          "label": "IDL Location",
+          "value": "Near 180°",
+          "icon": "calendar"
+        }
+      ],
+      "id": "cqeg4uf"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Crossing west adds a day; crossing east subtracts a day.",
+      "id": "ulcmt1z"
+    },
+    {
+      "type": "paragraph",
+      "content": "This forms the basis of local time and standard time.",
+      "id": "58qcgj9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Direction Crossing IDL",
+        "Day Adjustment"
+      ],
+      "rows": [
+        [
+          "Crossing West",
+          "Adds a day"
+        ],
+        [
+          "Crossing East",
+          "Subtracts a day"
+        ]
+      ],
+      "id": "usdj6bf"
+    },
+    {
+      "id": "35cua42",
+      "type": "heading",
+      "level": 2,
+      "content": "International Date Line"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "1° of longitude change corresponds strictly to a 4-minute time difference.",
+        "Crossing the International Date Line (180° longitude) Westwards ADDS a day, whereas Eastwards SUBTRACTS a day."
+      ],
+      "id": "4odexwl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Earth rotates 360° in 24 hours, which translates to 15° per hour or 1° every 4 minutes.",
+        "The rotation of the Earth forms the basis of local time and standard time.",
+        "The International Date Line is located near 180° longitude.",
+        "Crossing the International Date Line to the west adds a day, while crossing to the east subtracts a day."
+      ],
+      "id": "56q30za"
+    },
+    {
+      "type": "paragraph",
+      "content": "Located near 180° longitude. Crossing west adds a day; crossing east subtracts a day.",
+      "id": "4i1c9p4"
+    }
+  ],
+  "enriched": true
+}

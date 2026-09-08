@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "zmo9mne"
+      "id": "zmo9mne",
+      "content": "Chemical reactions are processes in which substances undergo chemical changes to form new substances with different properties. During a chemical reaction, atoms rearrange themselves to form new molecules. Chemical reactions are essential in everyday life, industrial processes and biological systems."
     },
     {
       "type": "statStrip",
@@ -53,19 +54,23 @@
     },
     {
       "type": "paragraph",
-      "id": "71415er"
+      "id": "71415er",
+      "content": "• A chemical reaction is a process in which one or more substances are transformed into new substances."
     },
     {
       "type": "paragraph",
-      "id": "rbhvzic"
+      "id": "rbhvzic",
+      "content": "• The substances that take part in a reaction are called reactants."
     },
     {
       "type": "paragraph",
-      "id": "ydrvan7"
+      "id": "ydrvan7",
+      "content": "• The substances formed in a reaction are called products."
     },
     {
       "type": "paragraph",
-      "id": "c3my9bl"
+      "id": "c3my9bl",
+      "content": "• Chemical reactions involve breaking and forming of chemical bonds."
     },
     {
       "id": "iw6ooat",
@@ -75,16 +80,19 @@
     },
     {
       "type": "paragraph",
-      "id": "23s65b2"
+      "id": "23s65b2",
+      "content": "A chemical equation is a symbolic representation of a chemical reaction using chemical formulas."
     },
     {
       "type": "paragraph",
-      "id": "dyjz6la"
+      "id": "dyjz6la",
+      "content": "Example:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cqzv65i"
+      "id": "cqzv65i",
+      "content": "2H₂ + O₂ → 2H₂O"
     },
     {
       "id": "grqkd1l",
@@ -94,15 +102,18 @@
     },
     {
       "type": "paragraph",
-      "id": "w5w7vva"
+      "id": "w5w7vva",
+      "content": "A balanced chemical equation has an equal number of atoms of each element on both sides."
     },
     {
       "type": "paragraph",
-      "id": "k2y1z1l"
+      "id": "k2y1z1l",
+      "content": "Example:"
     },
     {
       "type": "paragraph",
-      "id": "h4v5i6g"
+      "id": "h4v5i6g",
+      "content": "CH₄ + 2O₂ → CO₂ + 2H₂O"
     },
     {
       "id": "aawv4ew",
@@ -111,33 +122,33 @@
       "content": "4. Indicators of Chemical Reaction"
     },
     {
-      "type": "pullQuote",
-      "content": "Exothermic and Endothermic Reactions",
-      "id": "dgi2vd2"
+      "type": "heading",
+      "level": 4,
+      "id": "zgtiiur",
+      "content": "• Change in colour"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zgtiiur"
+      "id": "c8vkf35",
+      "content": "• Change in temperature"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "c8vkf35"
+      "id": "o2xj7v5",
+      "content": "• Formation of gas"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o2xj7v5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yauj0w1"
+      "id": "yauj0w1",
+      "content": "• Formation of precipitate"
     },
     {
       "type": "paragraph",
-      "id": "m6cjx8g"
+      "id": "m6cjx8g",
+      "content": "• Emission of light or sound"
     },
     {
       "id": "z9o9u25",
@@ -152,41 +163,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Reaction Type</strong></p>",
+            "<p><strong>General Form</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Combination Reaction</p>",
+            "<p>A + B → AB</p>",
+            "<p>2H₂ + O₂ → 2H₂O</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Decomposition Reaction</p>",
+            "<p>AB → A + B</p>",
+            "<p>CaCO₃ → CaO + CO₂</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Displacement Reaction</p>",
+            "<p>A + BC → AC + B</p>",
+            "<p>Zn + CuSO₄ → ZnSO₄ + Cu</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Double Displacement Reaction</p>",
+            "<p>AB + CD → AD + CB</p>",
+            "<p>AgNO₃ + NaCl → AgCl + NaNO₃</p>"
           ]
         }
       ]
@@ -199,7 +210,8 @@
     },
     {
       "type": "paragraph",
-      "id": "r5d7vd6"
+      "id": "r5d7vd6",
+      "content": "Oxidation: Addition of oxygen or loss of hydrogen."
     },
     {
       "type": "comparisonTable",
@@ -229,11 +241,13 @@
     },
     {
       "type": "paragraph",
-      "id": "qzcc2jr"
+      "id": "qzcc2jr",
+      "content": "Reduction: Removal of oxygen or gain of hydrogen."
     },
     {
       "type": "paragraph",
-      "id": "ab6jeri"
+      "id": "ab6jeri",
+      "content": "These reactions together are called redox reactions."
     },
     {
       "id": "hfbyp74",
@@ -248,22 +262,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Reaction Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Exothermic Reaction</p>",
+            "<p>Releases heat energy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Endothermic Reaction</p>",
+            "<p>Absorbs heat energy</p>"
           ]
         }
       ]
@@ -276,15 +290,18 @@
     },
     {
       "type": "paragraph",
-      "id": "lzmdook"
+      "id": "lzmdook",
+      "content": "Corrosion is the gradual destruction of metals due to chemical reactions with the environment. Rusting of iron is the most common example."
     },
     {
       "type": "paragraph",
-      "id": "79kx463"
+      "id": "79kx463",
+      "content": "Example of rusting:"
     },
     {
       "type": "paragraph",
-      "id": "0k6gmq8"
+      "id": "0k6gmq8",
+      "content": "Iron + Oxygen + Water → Rust"
     },
     {
       "id": "6p8cfup",
@@ -294,7 +311,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jpw5sod"
+      "id": "jpw5sod",
+      "content": "Rancidity refers to the oxidation of fats and oils in food which causes unpleasant smell and taste. It can be prevented by storing food in airtight containers."
     },
     {
       "id": "wx76hwa",
@@ -314,11 +332,13 @@
     },
     {
       "type": "paragraph",
-      "id": "pcmps6s"
+      "id": "pcmps6s",
+      "content": "A catalyst is a substance that increases the rate of a chemical reaction without being consumed in the reaction."
     },
     {
       "type": "paragraph",
-      "id": "e9ham58"
+      "id": "e9ham58",
+      "content": "Examples: Platinum, Iron catalyst in Haber process"
     },
     {
       "id": "1c9nq2t",
@@ -328,19 +348,23 @@
     },
     {
       "type": "paragraph",
-      "id": "5dos6ew"
+      "id": "5dos6ew",
+      "content": "• Chemical equations represent chemical reactions."
     },
     {
       "type": "paragraph",
-      "id": "47l4tgk"
+      "id": "47l4tgk",
+      "content": "• Rusting of iron is a common example of corrosion."
     },
     {
       "type": "paragraph",
-      "id": "l2q8lax"
+      "id": "l2q8lax",
+      "content": "• Redox reactions involve oxidation and reduction."
     },
     {
       "type": "paragraph",
-      "id": "1fjfu7e"
+      "id": "1fjfu7e",
+      "content": "• Exothermic reactions release heat energy."
     }
   ],
   "enriched": true

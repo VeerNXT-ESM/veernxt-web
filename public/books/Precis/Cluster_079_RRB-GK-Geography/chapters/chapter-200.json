@@ -1,0 +1,94 @@
+{
+  "title": "MOST IMPORTANT EXAM CONCEPTS",
+  "order": 200,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Climate is the primary determinant of vegetation.<br/>• Taiga is the largest terrestrial biome.<br/>• Savanna is known for migratory herbivores.<br/>• Mangroves protect coastlines from storms.<br/>• Evergreen forests show multi-layered structure.<br/>• Thorn forests indicate arid climate.",
+      "id": "pjz6gua"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Climate is the primary determinant of vegetation.",
+      "id": "f248uws"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Biome / Forest Type",
+        "Key Characteristic"
+      ],
+      "rows": [
+        [
+          "Taiga",
+          "Largest terrestrial biome"
+        ],
+        [
+          "Savanna",
+          "Known for migratory herbivores"
+        ],
+        [
+          "Mangroves",
+          "Protect coastlines from storms"
+        ],
+        [
+          "Evergreen forests",
+          "Show multi-layered structure"
+        ],
+        [
+          "Thorn forests",
+          "Indicate arid climate"
+        ]
+      ],
+      "id": "2vfmba1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Determinant",
+          "value": "Climate",
+          "icon": "info"
+        },
+        {
+          "label": "Largest Biome",
+          "value": "Taiga",
+          "icon": "book"
+        },
+        {
+          "label": "Coastal Shield",
+          "value": "Mangroves",
+          "icon": "check"
+        },
+        {
+          "label": "Arid Indicator",
+          "value": "Thorn Forests",
+          "icon": "award"
+        }
+      ],
+      "id": "o2hfy0s"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Expect questions identifying Taiga as the largest terrestrial biome.",
+        "Remember that climate, not soil type alone, is the primary factor determining vegetation.",
+        "Note the protective coastal role of mangroves frequently featured in environmental section questions."
+      ],
+      "id": "9xc1rrw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Climate serves as the primary determinant for the distribution and type of vegetation.",
+        "Taiga holds the record as the world's largest terrestrial biome.",
+        "Savanna biomes are uniquely associated with vast populations of migratory herbivores.",
+        "Mangrove ecosystems act as essential natural buffers protecting coastlines from destructive storms.",
+        "Evergreen forests feature a complex, multi-layered structural canopy, while thorn forests signal arid climatic conditions."
+      ],
+      "id": "wa387ew"
+    }
+  ],
+  "enriched": true
+}

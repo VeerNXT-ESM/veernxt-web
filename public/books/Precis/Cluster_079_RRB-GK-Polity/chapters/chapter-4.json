@@ -1,0 +1,186 @@
+{
+  "title": "4. Longest Written Constitution",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Originally:<br/>• 395 Articles<br/>• 22 Parts<br/>• 8 Schedules<br/><br/>Present:<br/>• 450+ Articles<br/>• 25 Parts",
+      "id": "7lp9cph"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Original Articles",
+          "value": "395",
+          "icon": "book"
+        },
+        {
+          "label": "Present Articles",
+          "value": "450+",
+          "icon": "check"
+        },
+        {
+          "label": "Original Parts",
+          "value": "22",
+          "icon": "info"
+        },
+        {
+          "label": "Present Parts",
+          "value": "25",
+          "icon": "award"
+        },
+        {
+          "label": "Present Schedules",
+          "value": "12",
+          "icon": "calendar"
+        }
+      ],
+      "id": "vth4nh1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "VERY IMPORTANT: Frequently asked in RRB exams.",
+      "id": "gyq8jqd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Indian Constitution originally consisted of 395 Articles, 22 Parts, and 8 Schedules.",
+        "Currently, the Constitution has grown to include over 450 Articles, 25 Parts, and 12 Schedules.",
+        "Changes in article count, parts, and schedules reflect the evolving nature of India's constitutional framework."
+      ],
+      "id": "qsrn9ow"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Originally",
+        "Present"
+      ],
+      "rows": [
+        [
+          "Articles",
+          "395",
+          "450+"
+        ],
+        [
+          "Parts",
+          "22",
+          "25"
+        ],
+        [
+          "Schedules",
+          "8",
+          "12"
+        ]
+      ],
+      "id": "u8m72pg"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• 12 Schedules",
+      "id": "6lz0ion"
+    },
+    {
+      "type": "paragraph",
+      "content": "<br/>VERY IMPORTANT: Frequently asked in RRB exams.",
+      "id": "fqmrr7j"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "RRB and other competitive exams frequently ask for the original vs. current count of Articles, Parts, and Schedules.",
+        "Note the expansion of Schedules from 8 originally to 12 at present.",
+        "Remember that Parts increased from 22 to 25."
+      ],
+      "id": "2fda9bk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>Sources of the Indian Constitution</strong>",
+      "id": "rrwjoxe"
+    },
+    {
+      "id": "p6n5vwp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Country</strong></p>",
+            "<p><strong>Features Borrowed</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Britain</p>",
+            "<p>Parliamentary System, Rule of Law, Single Citizenship</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>USA</p>",
+            "<p>Fundamental Rights, Judicial Review, Independence of Judiciary</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ireland</p>",
+            "<p>Directive Principles of State Policy</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Canada</p>",
+            "<p>Federal System with Strong Centre</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Australia</p>",
+            "<p>Concurrent List, Freedom of Trade</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Germany</p>",
+            "<p>Emergency Provisions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>USSR (Russia)</p>",
+            "<p>Fundamental Duties</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>France</p>",
+            "<p>Republic and ideals of Liberty, Equality, Fraternity</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Japan</p>",
+            "<p>Procedure Established by Law</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

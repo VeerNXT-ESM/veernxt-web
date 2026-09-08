@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "ai3fjpg"
+      "id": "ai3fjpg",
+      "content": "Diseases are abnormal conditions that affect the normal functioning of the body. They may be caused by pathogens such as bacteria, viruses, fungi and parasites, or due to nutritional deficiencies and lifestyle factors. The human immune system protects the body against disease-causing organisms."
     },
     {
       "type": "statStrip",
@@ -53,15 +54,18 @@
     },
     {
       "type": "paragraph",
-      "id": "bedzbcg"
+      "id": "bedzbcg",
+      "content": "• A disease is a condition that impairs normal body function."
     },
     {
       "type": "paragraph",
-      "id": "ozszfg0"
+      "id": "ozszfg0",
+      "content": "• It may cause pain, weakness, discomfort or dysfunction of organs."
     },
     {
       "type": "paragraph",
-      "id": "udahc60"
+      "id": "udahc60",
+      "content": "• Diseases may be infectious or non‑infectious."
     },
     {
       "id": "0g4ygut",
@@ -71,19 +75,23 @@
     },
     {
       "type": "paragraph",
-      "id": "crt4fd6"
+      "id": "crt4fd6",
+      "content": "• Communicable diseases – Spread from one person to another."
     },
     {
       "type": "paragraph",
-      "id": "8dmudul"
+      "id": "8dmudul",
+      "content": "• Non‑communicable diseases – Do not spread between individuals."
     },
     {
       "type": "paragraph",
-      "id": "23uhcrk"
+      "id": "23uhcrk",
+      "content": "• Deficiency diseases – Caused by lack of nutrients."
     },
     {
       "type": "paragraph",
-      "id": "4x0wkx4"
+      "id": "4x0wkx4",
+      "content": "• Hereditary diseases – Passed through genes."
     },
     {
       "id": "oxpvjl0",
@@ -98,65 +106,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Prevention</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tuberculosis</p>",
+            "<p>Bacteria (Mycobacterium tuberculosis)</p>",
+            "<p>Vaccination, hygiene</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cholera</p>",
+            "<p>Bacteria</p>",
+            "<p>Clean drinking water</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Typhoid</p>",
+            "<p>Bacteria</p>",
+            "<p>Proper sanitation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Malaria</p>",
+            "<p>Protozoa (Plasmodium)</p>",
+            "<p>Mosquito control</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dengue</p>",
+            "<p>Virus</p>",
+            "<p>Prevent mosquito breeding</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Influenza</p>",
+            "<p>Virus</p>",
+            "<p>Vaccination</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>COVID‑19</p>",
+            "<p>Virus</p>",
+            "<p>Vaccination and hygiene</p>"
           ]
         }
       ]
@@ -169,7 +177,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gib8m15"
+      "id": "gib8m15",
+      "content": "• Diabetes – High blood sugar levels."
     },
     {
       "type": "pullQuote",
@@ -178,15 +187,18 @@
     },
     {
       "type": "paragraph",
-      "id": "k5klk1s"
+      "id": "k5klk1s",
+      "content": "• Hypertension – High blood pressure."
     },
     {
       "type": "paragraph",
-      "id": "poyr3vu"
+      "id": "poyr3vu",
+      "content": "• Cancer – Uncontrolled cell division."
     },
     {
       "type": "paragraph",
-      "id": "hi9lj6q"
+      "id": "hi9lj6q",
+      "content": "• Heart disease – Affects heart function."
     },
     {
       "id": "mcawc5t",
@@ -201,57 +213,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Deficient Nutrient</strong></p>",
+            "<p><strong>Symptoms</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Scurvy</p>",
+            "<p>Vitamin C</p>",
+            "<p>Bleeding gums</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rickets</p>",
+            "<p>Vitamin D</p>",
+            "<p>Weak bones</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Beriberi</p>",
+            "<p>Vitamin B1</p>",
+            "<p>Muscle weakness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Night Blindness</p>",
+            "<p>Vitamin A</p>",
+            "<p>Poor vision in dark</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Anemia</p>",
+            "<p>Iron</p>",
+            "<p>Fatigue and weakness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Goitre</p>",
+            "<p>Iodine</p>",
+            "<p>Swelling of neck</p>"
           ]
         }
       ]
@@ -264,11 +276,13 @@
     },
     {
       "type": "paragraph",
-      "id": "jytsmdq"
+      "id": "jytsmdq",
+      "content": "• The immune system protects the body from pathogens."
     },
     {
       "type": "paragraph",
-      "id": "k7b554g"
+      "id": "k7b554g",
+      "content": "• It includes white blood cells, antibodies and lymphatic organs."
     },
     {
       "type": "comparisonTable",
@@ -298,7 +312,8 @@
     },
     {
       "type": "paragraph",
-      "id": "75kv5dp"
+      "id": "75kv5dp",
+      "content": "• It identifies and destroys harmful microorganisms."
     },
     {
       "id": "rrzk7dm",
@@ -313,36 +328,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Innate immunity</p>",
+            "<p>Natural immunity present at birth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Acquired immunity</p>",
+            "<p>Developed after infection or vaccination</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Active immunity</p>",
+            "<p>Produced by body after exposure to antigen</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Passive immunity</p>",
+            "<p>Antibodies obtained from another source</p>"
           ]
         }
       ]
@@ -355,15 +370,18 @@
     },
     {
       "type": "paragraph",
-      "id": "3hqaxn3"
+      "id": "3hqaxn3",
+      "content": "• Vaccines stimulate the immune system to produce antibodies."
     },
     {
       "type": "paragraph",
-      "id": "m887quv"
+      "id": "m887quv",
+      "content": "• They protect against diseases such as polio, measles and hepatitis."
     },
     {
       "type": "paragraph",
-      "id": "qqvopp3"
+      "id": "qqvopp3",
+      "content": "• Vaccination is one of the most effective methods of disease prevention."
     },
     {
       "id": "lxq7bbh",
@@ -373,15 +391,18 @@
     },
     {
       "type": "paragraph",
-      "id": "r18x04f"
+      "id": "r18x04f",
+      "content": "• Maintain personal hygiene."
     },
     {
       "type": "paragraph",
-      "id": "q76i90e"
+      "id": "q76i90e",
+      "content": "• Eat a balanced diet."
     },
     {
       "type": "paragraph",
-      "id": "sufwnvl"
+      "id": "sufwnvl",
+      "content": "• Drink clean water."
     },
     {
       "type": "examAlert",
@@ -394,11 +415,13 @@
     },
     {
       "type": "paragraph",
-      "id": "fzvj6gd"
+      "id": "fzvj6gd",
+      "content": "• Regular vaccination."
     },
     {
       "type": "paragraph",
-      "id": "yks5e1u"
+      "id": "yks5e1u",
+      "content": "• Control insects and mosquitoes."
     },
     {
       "id": "rr1ve6d",
@@ -408,19 +431,23 @@
     },
     {
       "type": "paragraph",
-      "id": "uqne7cz"
+      "id": "uqne7cz",
+      "content": "• Vaccines help build immunity."
     },
     {
       "type": "paragraph",
-      "id": "8gjbs0l"
+      "id": "8gjbs0l",
+      "content": "• Vitamin deficiencies cause several diseases."
     },
     {
       "type": "paragraph",
-      "id": "xsapbbb"
+      "id": "xsapbbb",
+      "content": "• Pathogens include bacteria, viruses, fungi and parasites."
     },
     {
       "type": "paragraph",
-      "id": "tvi9n35"
+      "id": "tvi9n35",
+      "content": "• The immune system defends the body against infections."
     }
   ],
   "enriched": true

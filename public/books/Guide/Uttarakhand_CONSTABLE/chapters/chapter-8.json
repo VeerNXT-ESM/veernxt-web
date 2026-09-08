@@ -4,6 +4,12 @@
   "order": 8,
   "blocks": [
     {
+      "id": "wcjig6t",
+      "type": "image",
+      "imageId": "vkymrl3",
+      "src": "/books/Guide/Uttarakhand_CONSTABLE/images/image_vkymrl3.jpeg"
+    },
+    {
       "id": "a85hzqs",
       "type": "heading",
       "level": 2,
@@ -48,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1kf6t38"
+      "id": "1kf6t38",
+      "content": "The Char Dham (Four Shrines) is one of the most important Hindu pilgrimages in India. The four shrines are located in the Garhwal Himalayas and are open only from May to November (closed in winter due to heavy snowfall)."
     },
     {
       "type": "pullQuote",
@@ -62,51 +69,51 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Dham</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Altitude (m)</strong></p>",
+            "<p><strong>Deity</strong></p>",
+            "<p><strong>Opening/Closing</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Yamunotri</p>",
+            "<p>Uttarkashi</p>",
+            "<p>3293</p>",
+            "<p>Goddess Yamuna; Divya Shila rock</p>",
+            "<p>Akshaya Tritiya / Diwali</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Gangotri</p>",
+            "<p>Uttarkashi</p>",
+            "<p>3048</p>",
+            "<p>Goddess Ganga; original source area</p>",
+            "<p>Akshaya Tritiya / Diwali</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Kedarnath</p>",
+            "<p>Rudraprayag</p>",
+            "<p>3583</p>",
+            "<p>Lord Shiva (Jyotirlinga)</p>",
+            "<p>Akshaya Tritiya / Bhai Dooj</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Badrinath</p>",
+            "<p>Chamoli</p>",
+            "<p>3133</p>",
+            "<p>Lord Vishnu (Badri Narayan)</p>",
+            "<p>Akshaya Tritiya / Vijaya Dashami</p>"
           ]
         }
       ]
@@ -154,55 +161,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Kedar</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Deity Part</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kedarnath</p>",
+            "<p>Kedarnath</p>",
+            "<p>Rudraprayag</p>",
+            "<p>Hump (Kamar) of Nandi/Bull</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tungnath</p>",
+            "<p>Chopta</p>",
+            "<p>Rudraprayag</p>",
+            "<p>Arms of Shiva (Highest Shiva temple in world — 3680 m)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Rudranath</p>",
+            "<p>Rudranath</p>",
+            "<p>Chamoli</p>",
+            "<p>Face (Mukh) of Shiva</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Madhyamaheshwar</p>",
+            "<p>Ukhimath area</p>",
+            "<p>Rudraprayag</p>",
+            "<p>Navel of Shiva</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kalpeshwar</p>",
+            "<p>Urgam Valley</p>",
+            "<p>Chamoli</p>",
+            "<p>Locks/Jata of Shiva; only Kedar open all year</p>"
           ]
         }
       ]
@@ -220,55 +227,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Badri</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Badrinath (Vishal Badri)</p>",
+            "<p>Badrinath town</p>",
+            "<p>Chamoli</p>",
+            "<p>Main shrine; one of Char Dham</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Yogadhyan Badri</p>",
+            "<p>Pandukeshwar</p>",
+            "<p>Chamoli</p>",
+            "<p>Pandu (father of Pandavas) performed penance here</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bridha Badri</p>",
+            "<p>Animath</p>",
+            "<p>Chamoli</p>",
+            "<p>Lord Vishnu in old form</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bhavisya Badri</p>",
+            "<p>Subhain</p>",
+            "<p>Chamoli</p>",
+            "<p>Future Badrinath (mythology says temple will move here)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Adi Badri</p>",
+            "<p>Karnaprayag area</p>",
+            "<p>Chamoli</p>",
+            "<p>Group of 14 temples; Satyug Badri</p>"
           ]
         }
       ]
@@ -295,136 +302,136 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Temple</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Jageshwar</p>",
+            "<p>Jageshwar</p>",
+            "<p>Almora</p>",
+            "<p>Group of 124 stone temples; Shiva; 8th century; medieval Nagara style</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Baijnath</p>",
+            "<p>Baijnath</p>",
+            "<p>Bageshwar</p>",
+            "<p>Famous Shiva temple; Katyuri style; 13th century</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dhari Devi</p>",
+            "<p>Srinagar</p>",
+            "<p>Pauri</p>",
+            "<p>Guardian deity of Uttarakhand; Alaknanda; relocated before Srinagar dam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kartik Swami</p>",
+            "<p>Kanakchauri</p>",
+            "<p>Rudraprayag</p>",
+            "<p>Dedicated to Kartikeya; hill top; panoramic views</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Surya Kund / Surkanda Devi</p>",
+            "<p>Tehri</p>",
+            "<p>Tehri Garhwal</p>",
+            "<p>High Devi shrine on hilltop</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Purnagiri Temple</p>",
+            "<p>Tanakpur</p>",
+            "<p>Champawat</p>",
+            "<p>51 Shakti Peeths; 3 km climb; Nepal border</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Naina Devi</p>",
+            "<p>Nainital</p>",
+            "<p>Nainital</p>",
+            "<p>Sati's eyes fell here; Nainital lakeside</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kainchi Dham</p>",
+            "<p>Bhowali</p>",
+            "<p>Nainital</p>",
+            "<p>Neem Karoli Baba ashram; visited by Steve Jobs, Mark Zuckerberg</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kasar Devi</p>",
+            "<p>Almora</p>",
+            "<p>Almora</p>",
+            "<p>Ancient Durga shrine; cosmic energy belt; 'Crank's Ridge'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dunagiri temple</p>",
+            "<p>Dwarahat</p>",
+            "<p>Almora</p>",
+            "<p>Vaishnavite; ancient; above Dwarahat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Syahi Devi</p>",
+            "<p>Almora hills</p>",
+            "<p>Almora</p>",
+            "<p>Kumaon Devi; high hilltop</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hemkund Sahib (Gurudwara)</p>",
+            "<p>Chamoli</p>",
+            "<p>Chamoli</p>",
+            "<p>Sikh pilgrimage; Gobind Dham base; 7 peaks; Lokpal Lake</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Haridwar Temples (Har Ki Pauri)</p>",
+            "<p>Haridwar</p>",
+            "<p>Haridwar</p>",
+            "<p>Main Ganga ghat; Ganga Aarti; Mansa Devi, Chandi Devi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Rishikesh temples</p>",
+            "<p>Rishikesh</p>",
+            "<p>Dehradun</p>",
+            "<p>Neelkanth Mahadev, Triveni Ghat, Laxman Jhula, Ram Jhula</p>"
           ]
         }
       ]

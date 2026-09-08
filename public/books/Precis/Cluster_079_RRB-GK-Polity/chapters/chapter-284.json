@@ -1,0 +1,93 @@
+{
+  "title": "Independence of CBI",
+  "order": 284,
+  "blocks": [
+    {
+      "id": "irllzoi",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Safeguard</strong></p>",
+            "<p><strong>Purpose</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fixed tenure of Director</p>",
+            "<p>Prevents arbitrary transfer</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Selection Committee</p>",
+            "<p>Ensures bipartisan appointment</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Judicial Oversight</p>",
+            "<p>Courts can monitor investigations</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Director of CBI has been provided security of tenure in office by the CVC Act, 2003.",
+      "id": "d3ju26s"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "DSPE Act, 1946",
+          "icon": "book"
+        },
+        {
+          "label": "Established Year",
+          "value": "1963",
+          "icon": "calendar"
+        },
+        {
+          "label": "Minimum Tenure",
+          "value": "2 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Recommending Body",
+          "value": "Santhanam Committee",
+          "icon": "award"
+        }
+      ],
+      "id": "fp3uqs9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CBI is neither a statutory nor a constitutional body; it is an executive body created by a government resolution.",
+        "State government consent is mandatory for the CBI to extend its jurisdiction to a state, unless mandated by the Supreme Court or High Courts.",
+        "The statutory committee for recommending the appointment of the CBI Director was mandated by the Lokpal and Lokayuktas Act, 2013."
+      ],
+      "id": "s292yq4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The CBI is not a statutory body; it derives its investigative powers from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "The Director of CBI is provided security of tenure with a minimum period of two years under the CVC Act, 2003.",
+        "Selection of the CBI Director is made by a committee consisting of the Prime Minister (Chairperson), the Leader of Opposition in Lok Sabha, and the Chief Justice of India or a Supreme Court Judge.",
+        "The Central Vigilance Commission (CVC) exercises superintendence over the CBI in matters related to the Prevention of Corruption Act.",
+        "General administrative control and superintendence over the agency rest with the Ministry of Personnel, Public Grievances and Pensions."
+      ],
+      "id": "uqohzjj"
+    }
+  ],
+  "enriched": true
+}

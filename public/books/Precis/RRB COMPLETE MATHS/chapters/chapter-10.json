@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "j376k2h"
+      "id": "j376k2h",
+      "content": "Discount is one of the most practical and exam-relevant chapters in RRB mathematics . Questions from this topic are highly predictable and usually test a student’s understanding of percentages, marked price, and selling price."
     },
     {
       "type": "statStrip",
@@ -45,7 +46,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ikqb4e6"
+      "id": "ikqb4e6",
+      "content": "From an examiner’s perspective, the most frequently tested models include:"
     },
     {
       "type": "examAlert",
@@ -59,12 +61,12 @@
       "id": "pk7w946",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Successive discounts",
+        "Markup followed by discount",
+        "Finding marked price or selling price",
+        "Equivalent single discount",
+        "Profit after discount",
+        "Markup calculation"
       ]
     }
   ],

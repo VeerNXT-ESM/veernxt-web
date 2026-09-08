@@ -1,0 +1,89 @@
+{
+  "title": "11. Exam Traps",
+  "order": 260,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• NHRC is a statutory body, NOT constitutional.<br/>• Established in 1993.<br/>• Recommendations are advisory.<br/>• Chairperson is usually a former CJI.<br/>• Has powers of a civil court.",
+      "id": "xxwmtlr"
+    },
+    {
+      "type": "pullQuote",
+      "content": "NHRC is a statutory body, NOT constitutional.",
+      "id": "j1qabor"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "NHRC Reality",
+        "Common Exam Trap"
+      ],
+      "rows": [
+        [
+          "Body Type",
+          "Statutory (Est. 1993)",
+          "Constitutional Body"
+        ],
+        [
+          "Recommendations",
+          "Advisory",
+          "Binding"
+        ],
+        [
+          "Judicial Powers",
+          "Civil Court Powers",
+          "Criminal Court Powers"
+        ]
+      ],
+      "id": "ld5gkqk"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Body Type",
+          "value": "Statutory",
+          "icon": "info"
+        },
+        {
+          "label": "Year Established",
+          "value": "1993",
+          "icon": "calendar"
+        },
+        {
+          "label": "Recommendations",
+          "value": "Advisory",
+          "icon": "check"
+        },
+        {
+          "label": "Court Status",
+          "value": "Civil Court",
+          "icon": "book"
+        }
+      ],
+      "id": "5hlkp8q"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams often trick candidates into marking NHRC as a constitutional body instead of a statutory body.",
+        "NHRC's recommendations are purely advisory and non-binding.",
+        "NHRC has powers of a civil court, not a criminal court."
+      ],
+      "id": "uglu3hy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "NHRC is a statutory body established in 1993, not a constitutional body.",
+        "The recommendations made by the NHRC are advisory in nature.",
+        "The Chairperson of the commission is usually a former Chief Justice of India (CJI).",
+        "The commission possesses the powers of a civil court."
+      ],
+      "id": "hnppkgy"
+    }
+  ],
+  "enriched": true
+}

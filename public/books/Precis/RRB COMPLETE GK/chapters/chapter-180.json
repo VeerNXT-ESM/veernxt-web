@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "by2pv7w"
+      "id": "by2pv7w",
+      "content": "Vegetation growth depends on multiple interacting physical and biological factors."
     },
     {
       "type": "pullQuote",
@@ -86,43 +87,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Detailed Role</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Climate</p>",
+            "<p>Temperature determines growing season while rainfall controls density of vegetation. Areas with &gt;200 cm rainfall support evergreen forests, whereas &lt;25 cm rainfall leads to deserts.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Soil</p>",
+            "<p>Soil fertility, depth, texture and drainage directly affect root penetration and nutrient availability.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Relief</p>",
+            "<p>Altitude influences temperature; slopes affect moisture retention. South-facing slopes in the Northern Hemisphere receive more sunlight.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Groundwater</p>",
+            "<p>Regions with shallow water tables support lush vegetation even with moderate rainfall.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Biotic Factors</p>",
+            "<p>Human interference, grazing, pests and forest fires modify vegetation patterns.</p>"
           ]
         }
       ]

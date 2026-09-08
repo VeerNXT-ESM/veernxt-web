@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5wnmkxt"
+      "id": "5wnmkxt",
+      "content": "Electrical components are devices used in electrical circuits to control, protect, or utilize electrical energy. In technical trades such as electrician, electronics technician, and maintenance work, understanding these components and circuit arrangements is essential for installation, repair, and troubleshooting."
     },
     {
       "id": "02rhble",
@@ -64,73 +65,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Example Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Battery</p>",
+            "<p>Provides electrical energy</p>",
+            "<p>Torch, mobile devices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Switch</p>",
+            "<p>Controls flow of current</p>",
+            "<p>Light switch</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wire/Conductor</p>",
+            "<p>Carries electric current</p>",
+            "<p>Copper wiring</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Resistor</p>",
+            "<p>Limits current flow</p>",
+            "<p>Electronic circuits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lamp/Bulb</p>",
+            "<p>Converts electricity to light</p>",
+            "<p>Lighting systems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Motor</p>",
+            "<p>Converts electrical energy to mechanical energy</p>",
+            "<p>Fans, pumps</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fuse</p>",
+            "<p>Protects circuit from overload</p>",
+            "<p>House wiring</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Capacitor</p>",
+            "<p>Stores electrical energy temporarily</p>",
+            "<p>Power supply circuits</p>"
           ]
         }
       ]
@@ -148,57 +149,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component Symbol</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Battery Symbol</p>",
+            "<p>Source of electrical energy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Switch Symbol</p>",
+            "<p>Controls circuit opening or closing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Resistor Symbol</p>",
+            "<p>Limits current</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lamp Symbol</p>",
+            "<p>Represents light bulb</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fuse Symbol</p>",
+            "<p>Safety device in circuit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Motor Symbol</p>",
+            "<p>Represents electric motor</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Capacitor Symbol</p>",
+            "<p>Stores electrical charge</p>"
           ]
         }
       ]
@@ -216,7 +217,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lng9v8b"
+      "id": "lng9v8b",
+      "content": "An electrical circuit is a closed conducting path through which electric current flows from a power source through various components and returns to the source."
     },
     {
       "id": "as9moh6",
@@ -231,36 +233,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Power Source</p>",
+            "<p>Supplies electrical energy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Conductors</p>",
+            "<p>Provide path for current</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Load</p>",
+            "<p>Device that uses electrical energy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Control Device</p>",
+            "<p>Switch used to control circuit</p>"
           ]
         }
       ]
@@ -278,49 +280,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Circuit Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Application</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Series Circuit</p>",
+            "<p>Components connected in single path</p>",
+            "<p>Decorative lighting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Parallel Circuit</p>",
+            "<p>Multiple current paths</p>",
+            "<p>Household wiring</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Open Circuit</p>",
+            "<p>Broken path, no current flows</p>",
+            "<p>Switch OFF condition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Closed Circuit</p>",
+            "<p>Complete path for current</p>",
+            "<p>Switch ON condition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Short Circuit</p>",
+            "<p>Low resistance path causing high current</p>",
+            "<p>Fault condition</p>"
           ]
         }
       ]
@@ -366,9 +368,9 @@
       "id": "7by5oc1",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Same current flows through all components",
+        "Voltage is divided across components",
+        "If one component fails, the entire circuit stops working"
       ]
     },
     {
@@ -381,9 +383,9 @@
       "id": "ve2llkt",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Current divides into different branches",
+        "Same voltage across all components",
+        "If one component fails, others continue to operate"
       ]
     },
     {
@@ -399,36 +401,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Device</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fuse</p>",
+            "<p>Protects circuit from overload</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MCB (Miniature Circuit Breaker)</p>",
+            "<p>Automatically breaks circuit during faults</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Earthing</p>",
+            "<p>Protects users from electric shock</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Circuit Breaker</p>",
+            "<p>Protects electrical installations</p>"
           ]
         }
       ]
@@ -452,10 +454,10 @@
       "id": "zzat0y2",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Enables operation of electrical devices",
+        "Provides safe distribution of electricity",
+        "Helps control and protect electrical systems",
+        "Allows efficient use of electrical energy"
       ]
     },
     {
@@ -468,12 +470,12 @@
       "id": "b97ix2w",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Battery supplies electrical energy to circuits.",
+        "Resistor limits current flow.",
+        "Fuse protects circuits from overload.",
+        "Series circuit has single current path.",
+        "Parallel circuit is used in household wiring.",
+        "Open circuit means no current flow."
       ]
     }
   ],

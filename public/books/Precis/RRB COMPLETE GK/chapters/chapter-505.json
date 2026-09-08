@@ -10,29 +10,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Provision</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tenure</p>",
+            "<p>4 years or 65 years of age (whichever is earlier)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Reappointment</p>",
+            "<p>Not eligible for reappointment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Removal</p>",
+            "<p>By the President on grounds of misbehavior or incapacity</p>"
           ]
         }
       ]
@@ -122,7 +122,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gbnzcc7"
+      "id": "gbnzcc7",
+      "content": "Removal on grounds of misbehavior requires an inquiry by the Supreme Court."
     }
   ],
   "enriched": true

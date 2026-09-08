@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "f26k1qu"
+      "id": "f26k1qu",
+      "content": "This concluding chapter consolidates Delhi's tourism circuit, key personalities, and every important numeric/name fact from the earlier chapters into one place for rapid last-minute revision."
     },
     {
       "type": "statStrip",
@@ -51,43 +52,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Circuit / Area</strong></p>",
+            "<p><strong>Key Attractions</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Old Delhi (Shahjahanabad)</p>",
+            "<p>Red Fort, Jama Masjid, Chandni Chowk, Khari Baoli spice market, Raj Ghat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lutyens' Delhi / New Delhi</p>",
+            "<p>Rashtrapati Bhavan, Sansad Bhavan, India Gate, National War Memorial, Rajpath/Kartavya Path</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>South Delhi Heritage</p>",
+            "<p>Qutub Minar complex, Humayun's Tomb, Lodi Gardens, Purana Qila, Safdarjung's Tomb</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Modern Religious Landmarks</p>",
+            "<p>Lotus Temple, Akshardham Temple, Gurdwara Bangla Sahib, ISKCON Temple</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Museums</p>",
+            "<p>National Museum, National Gallery of Modern Art, National Rail Museum, National Science Centre</p>"
           ]
         }
       ]
@@ -105,64 +106,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Personality</strong></p>",
+            "<p><strong>Association</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prithviraj Chauhan</p>",
+            "<p>Chauhan ruler who expanded Lal Kot into Qila Rai Pithora, the first of the 'Seven Cities'; defeated by Muhammad of Ghor in 1192</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bahadur Shah Zafar</p>",
+            "<p>Last Mughal emperor; symbolic leader of the 1857 Revolt in Delhi; exiled to Rangoon after its suppression</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sir Edwin Lutyens &amp; Sir Herbert Baker</p>",
+            "<p>British architects who designed New Delhi (1911-1931)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chaudhary Brahm Prakash</p>",
+            "<p>First Chief Minister of Delhi (Part C State era, 1952-55)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sheila Dikshit</p>",
+            "<p>Longest-serving Chief Minister of Delhi (INC, 1998-2013), associated with major infrastructure expansion including the Delhi Metro's early phases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Arvind Kejriwal</p>",
+            "<p>Founder of the Aam Aadmi Party; Chief Minister of Delhi (2013 briefly, then 2015-2024), architect of the free electricity/water and Mohalla Clinic schemes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rekha Gupta</p>",
+            "<p>Current (2026) Chief Minister of Delhi, 9th CM and 4th woman CM, in office since 20 February 2025</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Taranjit Singh Sandhu</p>",
+            "<p>Current (2026) Lieutenant Governor of Delhi, former Indian Ambassador to the United States, in office since 11 March 2026</p>"
           ]
         }
       ]
@@ -174,82 +175,82 @@
       "content": "One-Line Quick Facts Compendium"
     },
     {
-      "type": "pullQuote",
-      "content": "Key Personalities Associated with Delhi",
-      "id": "118ko0v"
-    },
-    {
       "type": "heading",
       "level": 4,
-      "id": "go38xub"
+      "id": "go38xub",
+      "content": "<strong>Geography</strong>"
     },
     {
       "id": "s29z4e6",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Delhi (NCT): ~1,484 sq km; borders only Haryana and Uttar Pradesh; sits on the Yamuna's west bank.",
+        "Delhi Ridge = northernmost Aravalli extension, the 'green lungs of Delhi'.",
+        "Distinguish Delhi (NCT) vs New Delhi (capital area) vs NCR (larger multi-state region)."
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ttw9f8w"
+      "id": "ttw9f8w",
+      "content": "<strong>History</strong>"
     },
     {
       "id": "gfwohlv",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "'Seven Cities of Delhi': Lal Kot/Qila Rai Pithora, Siri, Tughlaqabad, Jahanpanah, Firozabad, Purana Qila/Dinpanah, Shahjahanabad.",
+        "Delhi Sultanate (1206-1526): Mamluk, Khalji, Tughlaq, Sayyid, Lodi dynasties.",
+        "1526 First Battle of Panipat (Babur founds Mughal rule); 1556 Second Battle of Panipat (Akbar consolidates it).",
+        "1857 Revolt centred on Delhi; Bahadur Shah Zafar exiled to Rangoon.",
+        "1911 Delhi Durbar announces capital shift from Calcutta; New Delhi inaugurated 13 Feb 1931."
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "k3lv5ix"
+      "id": "k3lv5ix",
+      "content": "<strong>Polity</strong>"
     },
     {
       "id": "lrrzy1s",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Delhi = Part C State (1950-56, brief Assembly) -&gt; plain UT with NO Assembly (1956-91) -&gt; NCT under Article 239AA (from 1 Feb 1992).",
+        "3 'excluded subjects' outside Delhi Assembly's power: Public Order, Police, Land.",
+        "2018 SC verdict limits LG's independent power; May 2023 SC verdict gives Services to Delhi govt; GNCTD (Amendment) Act 2023 creates National Capital Civil Service Authority, restoring LG-weighted control.",
+        "Only 3 UTs with Assembly + CM: Delhi, Puducherry, J&amp;K.",
+        "70-seat Assembly (BJP 48, AAP 22, 2025); 7 Lok Sabha seats (all BJP); 3 Rajya Sabha seats.",
+        "Current CM: Rekha Gupta (BJP), since 20 Feb 2025. Current LG: Taranjit Singh Sandhu, since 11 March 2026."
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "iao4ppu"
+      "id": "iao4ppu",
+      "content": "<strong>Local Government</strong>"
     },
     {
       "id": "jcp5apn",
       "type": "list",
       "items": [
-        null,
-        null
+        "3 local bodies: MCD (bulk of NCT), NDMC (Lutyens' zone, largely nominated), Delhi Cantonment Board.",
+        "MCD trifurcated 2012, re-unified May 2022; is India's largest municipal corporation."
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xni59o5"
+      "id": "xni59o5",
+      "content": "<strong>Economy &amp; Demography</strong>"
     },
     {
       "id": "kuhqt1b",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Services-dominated economy; among India's highest per-capita income UTs.",
+        "Khari Baoli = Asia's largest wholesale spice market.",
+        "Population ~1.68 crore (2011); among the highest population density of any Indian state/UT (~11,300/sq km); ~97-98% urban."
       ]
     },
     {
@@ -264,16 +265,17 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "7i4zqao"
+      "id": "7i4zqao",
+      "content": "<strong>Heritage &amp; Environment</strong>"
     },
     {
       "id": "rqc7dn0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "3 UNESCO World Heritage Sites: Qutub Minar, Humayun's Tomb, Red Fort Complex.",
+        "New Parliament Building inaugurated 2023, alongside the original Sansad Bhavan.",
+        "GRAP (4 stages) manages air-quality emergencies; CAQM (2021 Act) coordinates cross-state pollution policy.",
+        "Yamuna's Delhi stretch is heavily polluted; toxic Chhath Puja foam is an iconic recurring image."
       ]
     },
     {
@@ -286,9 +288,9 @@
       "id": "z3p6tq3",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Revise this chapter last - it consolidates every numeric/name fact from Chapters 1-11 in one place for rapid recall.",
+        "The single most exam-critical topic in this entire book is the LG-vs-CM constitutional tussle (Chapter 4) - revise the 2018 verdict, May 2023 verdict, and the 2023 Amendment Act sequence carefully.",
+        "Always verify current officeholders (LG, CM, Deputy CM, Speaker) closer to your exam date, since Delhi's political landscape has changed rapidly in recent years."
       ]
     }
   ],

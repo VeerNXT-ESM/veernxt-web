@@ -1,0 +1,84 @@
+{
+  "title": "5. Qualifications of Supreme Court Judges",
+  "order": 92,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A person is qualified if he or she:<br/>• Is a citizen of India.<br/>• Has been a High Court judge for at least 5 years, OR<br/>• Has been an advocate in a High Court for at least 10 years, OR<br/>• Is a distinguished jurist in the opinion of the President.",
+      "id": "muh465b"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Is a distinguished jurist in the opinion of the President.",
+      "id": "hyg4g5a"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Qualification Criteria",
+        "Minimum Requirement"
+      ],
+      "rows": [
+        [
+          "High Court Judge",
+          "At least 5 years"
+        ],
+        [
+          "High Court Advocate",
+          "At least 10 years"
+        ],
+        [
+          "Jurist Category",
+          "Distinguished jurist in the opinion of the President"
+        ]
+      ],
+      "id": "3s0i1he"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Citizenship",
+          "value": "Citizen of India",
+          "icon": "check"
+        },
+        {
+          "label": "HC Judge Experience",
+          "value": "5 Years",
+          "icon": "award"
+        },
+        {
+          "label": "HC Advocate Experience",
+          "value": "10 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Special Category",
+          "value": "Distinguished Jurist",
+          "icon": "info"
+        }
+      ],
+      "id": "ogrujqp"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Note the duration difference: 5 years required for a High Court judge versus 10 years for a High Court advocate.",
+        "The 'distinguished jurist' provision depends strictly on the opinion of the President."
+      ],
+      "id": "lnpqxj4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "An individual must be a citizen of India to be qualified for appointment as a Supreme Court judge.",
+        "Requires a minimum of 5 years of experience as a High Court judge.",
+        "Alternatively, requires a minimum of 10 years of experience as an advocate in a High Court.",
+        "Can be appointed if recognized as a distinguished jurist in the opinion of the President."
+      ],
+      "id": "9mffdih"
+    }
+  ],
+  "enriched": true
+}

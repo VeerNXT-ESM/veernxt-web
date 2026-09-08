@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "4m8ogrt"
+      "id": "4m8ogrt",
+      "content": "Acids, bases and salts are important classes of chemical compounds that play a crucial role in chemistry and daily life. These substances participate in numerous chemical reactions and are widely used in industries, laboratories and households."
     },
     {
       "type": "statStrip",
@@ -53,43 +54,52 @@
     },
     {
       "type": "paragraph",
-      "id": "2cbzpyq"
+      "id": "2cbzpyq",
+      "content": "• Acids are substances that produce hydrogen ions (H⁺) when dissolved in water."
     },
     {
       "type": "paragraph",
-      "id": "q4ranwr"
+      "id": "q4ranwr",
+      "content": "• They have a sour taste."
     },
     {
       "type": "paragraph",
-      "id": "dxzax0z"
+      "id": "dxzax0z",
+      "content": "• They turn blue litmus paper red."
     },
     {
       "type": "paragraph",
-      "id": "b9gdruq"
+      "id": "b9gdruq",
+      "content": "• They react with metals to produce hydrogen gas."
     },
     {
       "type": "paragraph",
-      "id": "l971fpe"
+      "id": "l971fpe",
+      "content": "Examples of common acids:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "01ka1h3"
+      "id": "01ka1h3",
+      "content": "• Hydrochloric acid (HCl)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nz0ncfy"
+      "id": "nz0ncfy",
+      "content": "• Sulphuric acid (H₂SO₄)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y07ujnn"
+      "id": "y07ujnn",
+      "content": "• Nitric acid (HNO₃)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "v2dvojc"
+      "id": "v2dvojc",
+      "content": "• Acetic acid (CH₃COOH)"
     },
     {
       "id": "h1dmzsb",
@@ -99,34 +109,41 @@
     },
     {
       "type": "paragraph",
-      "id": "s2nn71b"
+      "id": "s2nn71b",
+      "content": "• Bases are substances that produce hydroxide ions (OH⁻) in aqueous solution."
     },
     {
       "type": "paragraph",
-      "id": "x8ohaaj"
+      "id": "x8ohaaj",
+      "content": "• They taste bitter and feel slippery."
     },
     {
       "type": "paragraph",
-      "id": "y8uzvkh"
+      "id": "y8uzvkh",
+      "content": "• They turn red litmus paper blue."
     },
     {
       "type": "paragraph",
-      "id": "q7d5vgh"
+      "id": "q7d5vgh",
+      "content": "Examples of bases:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i2tnonp"
+      "id": "i2tnonp",
+      "content": "• Sodium hydroxide (NaOH)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0o8vag0"
+      "id": "0o8vag0",
+      "content": "• Potassium hydroxide (KOH)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lsbw3o0"
+      "id": "lsbw3o0",
+      "content": "• Calcium hydroxide Ca(OH)₂"
     },
     {
       "type": "pullQuote",
@@ -141,7 +158,8 @@
     },
     {
       "type": "paragraph",
-      "id": "l6errjg"
+      "id": "l6errjg",
+      "content": "Alkalis are bases that dissolve in water and produce hydroxide ions. All alkalis are bases but all bases are not alkalis."
     },
     {
       "id": "872v4oc",
@@ -156,41 +174,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Acids</strong></p>",
+            "<p><strong>Bases</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Taste</p>",
+            "<p>Sour</p>",
+            "<p>Bitter</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Litmus test</p>",
+            "<p>Blue → Red</p>",
+            "<p>Red → Blue</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>pH value</p>",
+            "<p>Less than 7</p>",
+            "<p>Greater than 7</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Reaction with metals</p>",
+            "<p>Produces hydrogen gas</p>",
+            "<p>Usually no reaction</p>"
           ]
         }
       ]
@@ -203,19 +221,23 @@
     },
     {
       "type": "paragraph",
-      "id": "haiyu3y"
+      "id": "haiyu3y",
+      "content": "• Strong acids completely ionize in water."
     },
     {
       "type": "paragraph",
-      "id": "idu50po"
+      "id": "idu50po",
+      "content": "• Weak acids partially ionize in water."
     },
     {
       "type": "paragraph",
-      "id": "l6duop5"
+      "id": "l6duop5",
+      "content": "• Strong bases completely ionize in water."
     },
     {
       "type": "paragraph",
-      "id": "bvq19k0"
+      "id": "bvq19k0",
+      "content": "• Weak bases partially ionize."
     },
     {
       "id": "04miwve",
@@ -225,7 +247,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5tu581s"
+      "id": "5tu581s",
+      "content": "The pH scale measures the acidity or basicity of a solution and ranges from 0 to 14."
     },
     {
       "type": "comparisonTable",
@@ -265,15 +288,18 @@
     },
     {
       "type": "paragraph",
-      "id": "vpolzk3"
+      "id": "vpolzk3",
+      "content": "pH &lt; 7 : Acidic solution"
     },
     {
       "type": "paragraph",
-      "id": "5hgpmjz"
+      "id": "5hgpmjz",
+      "content": "pH = 7 : Neutral solution"
     },
     {
       "type": "paragraph",
-      "id": "6ovwhpy"
+      "id": "6ovwhpy",
+      "content": "pH &gt; 7 : Basic solution"
     },
     {
       "id": "0bjuoyv",
@@ -288,33 +314,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Indicator</strong></p>",
+            "<p><strong>Acid</strong></p>",
+            "<p><strong>Base</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Litmus</p>",
+            "<p>Red</p>",
+            "<p>Blue</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Phenolphthalein</p>",
+            "<p>Colorless</p>",
+            "<p>Pink</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Methyl orange</p>",
+            "<p>Red</p>",
+            "<p>Yellow</p>"
           ]
         }
       ]
@@ -327,15 +353,18 @@
     },
     {
       "type": "paragraph",
-      "id": "gdacjcb"
+      "id": "gdacjcb",
+      "content": "Neutralization is the reaction between an acid and a base to form salt and water."
     },
     {
       "type": "paragraph",
-      "id": "rvjha42"
+      "id": "rvjha42",
+      "content": "Example:"
     },
     {
       "type": "paragraph",
-      "id": "772qst2"
+      "id": "772qst2",
+      "content": "HCl + NaOH → NaCl + H₂O"
     },
     {
       "id": "ccrunyg",
@@ -345,15 +374,18 @@
     },
     {
       "type": "paragraph",
-      "id": "npxvzmz"
+      "id": "npxvzmz",
+      "content": "• Salts are ionic compounds formed from neutralization reactions."
     },
     {
       "type": "paragraph",
-      "id": "x12dwpt"
+      "id": "x12dwpt",
+      "content": "• They may be acidic, basic or neutral."
     },
     {
       "type": "paragraph",
-      "id": "tpgkz2o"
+      "id": "tpgkz2o",
+      "content": "• Examples include sodium chloride, copper sulfate and ammonium chloride."
     },
     {
       "type": "examAlert",
@@ -373,15 +405,18 @@
     },
     {
       "type": "paragraph",
-      "id": "1qswr6r"
+      "id": "1qswr6r",
+      "content": "• Acids are used in batteries and fertilizers."
     },
     {
       "type": "paragraph",
-      "id": "2wh2wy7"
+      "id": "2wh2wy7",
+      "content": "• Bases are used in soap making and cleaning agents."
     },
     {
       "type": "paragraph",
-      "id": "9mzmh5o"
+      "id": "9mzmh5o",
+      "content": "• Salts are used in food preservation and fertilizers."
     },
     {
       "id": "b8un09b",
@@ -391,19 +426,23 @@
     },
     {
       "type": "paragraph",
-      "id": "9e44aem"
+      "id": "9e44aem",
+      "content": "• Acids produce hydrogen ions in water."
     },
     {
       "type": "paragraph",
-      "id": "unsh0ds"
+      "id": "unsh0ds",
+      "content": "• Bases produce hydroxide ions."
     },
     {
       "type": "paragraph",
-      "id": "e3vi67z"
+      "id": "e3vi67z",
+      "content": "• pH scale ranges from 0 to 14."
     },
     {
       "type": "paragraph",
-      "id": "7h01ik8"
+      "id": "7h01ik8",
+      "content": "• Neutralization produces salt and water."
     }
   ],
   "enriched": true

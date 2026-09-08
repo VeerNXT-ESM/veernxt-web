@@ -1,0 +1,321 @@
+{
+  "id": "6t8298t",
+  "title": "Chapter 5: Light",
+  "order": 54,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "1kbn46g",
+      "content": "Light is a form of energy that enables us to see objects. It is a type of electromagnetic radiation that travels in straight lines. Light plays an important role in vision, optical instruments and many natural phenomena."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Key Topics",
+          "value": "8 Sections",
+          "icon": "book"
+        },
+        {
+          "label": "Speed in Vacuum",
+          "value": "3 × 10⁸ m/s",
+          "icon": "clock"
+        },
+        {
+          "label": "Core Field",
+          "value": "Optics",
+          "icon": "award"
+        },
+        {
+          "label": "Primary Phenomenon",
+          "value": "Dispersion",
+          "icon": "info"
+        }
+      ],
+      "id": "i4t6nlo"
+    },
+    {
+      "id": "lidenee",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Nature of Light"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Light exhibits both wave and particle characteristics as it travels and interacts with matter.",
+        "Reflection occurs when light rays bounce off a boundary, satisfying the fundamental laws of reflection.",
+        "Refraction involves the bending of light as it transitions between media with different optical densities.",
+        "Lenses manipulate light through refraction to form magnified, real, or virtual images.",
+        "Dispersion separates white light into its component spectral colors when passing through a optical prism."
+      ],
+      "id": "8k0117r"
+    },
+    {
+      "type": "paragraph",
+      "id": "cx58o83",
+      "content": "• Light is a form of energy."
+    },
+    {
+      "type": "paragraph",
+      "id": "6kzo02e",
+      "content": "• It travels in straight lines."
+    },
+    {
+      "type": "paragraph",
+      "id": "tiu4ph5",
+      "content": "• Light does not require a material medium for propagation."
+    },
+    {
+      "type": "paragraph",
+      "id": "sznrzig",
+      "content": "• The speed of light in vacuum is approximately 3 × 10^8 m/s."
+    },
+    {
+      "id": "xosmkc3",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Sources of Light"
+    },
+    {
+      "id": "y83o5vg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Natural Sources</p>",
+            "<p>Sun, stars, fire</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Artificial Sources</p>",
+            "<p>Electric bulb, candle, LED</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bw1szj7",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Reflection of Light"
+    },
+    {
+      "type": "paragraph",
+      "id": "z4s8dhq",
+      "content": "Reflection is the bouncing back of light when it strikes a surface."
+    },
+    {
+      "type": "paragraph",
+      "id": "bmlshjh",
+      "content": "Laws of Reflection:"
+    },
+    {
+      "type": "paragraph",
+      "id": "ayuijfy",
+      "content": "• Angle of incidence = Angle of reflection."
+    },
+    {
+      "type": "paragraph",
+      "id": "4rnay87",
+      "content": "• Incident ray, reflected ray and normal lie in the same plane."
+    },
+    {
+      "id": "l4r20a0",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Types of Reflection"
+    },
+    {
+      "id": "9r6aifi",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regular Reflection</p>",
+            "<p>Occurs on smooth surfaces</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Diffuse Reflection</p>",
+            "<p>Occurs on rough surfaces</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yyzr51n",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Refraction of Light"
+    },
+    {
+      "type": "paragraph",
+      "id": "3j7zait",
+      "content": "Refraction is the bending of light when it passes from one medium to another."
+    },
+    {
+      "type": "paragraph",
+      "id": "mp8b7xk",
+      "content": "Examples:"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Reflection of Light",
+        "Refraction of Light"
+      ],
+      "rows": [
+        [
+          "Medium Interaction",
+          "Bounces back into the original medium",
+          "Passes into a second transparent medium"
+        ],
+        [
+          "Light Speed",
+          "Speed remains unchanged",
+          "Speed changes depending on refractive index"
+        ],
+        [
+          "Governing Principle",
+          "Angle of incidence equals angle of reflection",
+          "Snell's Law (sin i / sin r = constant)"
+        ]
+      ],
+      "id": "b989jt1"
+    },
+    {
+      "type": "paragraph",
+      "id": "b8v7zze",
+      "content": "• A pencil appears bent in water."
+    },
+    {
+      "type": "paragraph",
+      "id": "796f578",
+      "content": "• Mirage in deserts."
+    },
+    {
+      "id": "l8j3px7",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Lenses"
+    },
+    {
+      "id": "zkrcsim",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Lens Type</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Convex Lens</p>",
+            "<p>Converges light rays</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Concave Lens</p>",
+            "<p>Diverges light rays</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ff79rc8",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Optical Instruments"
+    },
+    {
+      "type": "paragraph",
+      "id": "huo9egw",
+      "content": "• Microscope – used to see small objects."
+    },
+    {
+      "type": "paragraph",
+      "id": "7jt0qjb",
+      "content": "• Telescope – used to observe distant objects."
+    },
+    {
+      "type": "paragraph",
+      "id": "tplnsak",
+      "content": "• Camera – used to capture images."
+    },
+    {
+      "id": "1dnxdsi",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Dispersion of Light"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Snell's Law and absolute refractive index calculations appear frequently in general science sections.",
+        "Exam questions often contrast image characteristics produced by concave versus convex lenses.",
+        "Dispersion sequence (VIBGYOR) and wavelength properties are recurring topics in competitive exams."
+      ],
+      "id": "cd3ci01"
+    },
+    {
+      "type": "paragraph",
+      "id": "jlc2o7u",
+      "content": "Dispersion is the splitting of white light into its component colors when it passes through a prism. The seven colors are Violet, Indigo, Blue, Green, Yellow, Orange and Red."
+    },
+    {
+      "id": "l5eslbq",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "hm0ffez",
+      "content": "• Speed of light is approximately 3 × 10^8 m/s."
+    },
+    {
+      "type": "paragraph",
+      "id": "8b3z6il",
+      "content": "• Angle of incidence equals angle of reflection."
+    },
+    {
+      "type": "paragraph",
+      "id": "2fbchyw",
+      "content": "• Convex lens converges light rays."
+    },
+    {
+      "type": "paragraph",
+      "id": "9rvlmxk",
+      "content": "• Dispersion of light produces seven colors."
+    }
+  ],
+  "enriched": true
+}

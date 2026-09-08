@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "gi3ajha"
+      "id": "gi3ajha",
+      "content": "Mountains are an important physical feature of India. They influence the country's climate, drainage system, vegetation and human activities. The major mountain systems of India include the Himalayan Mountains and the Peninsular Mountains. These mountains also play an important role in protecting India from cold winds, influencing monsoon rainfall, and serving as the source of many important rivers."
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "20dv7kp"
+      "id": "20dv7kp",
+      "content": "The Himalayas are the youngest fold mountains in the world. They extend for about 2400 km from Jammu &amp; Kashmir in the west to Arunachal Pradesh in the east. The Himalayas were formed due to the collision between the Indian Plate and the Eurasian Plate."
     },
     {
       "id": "u1n8sse",
@@ -62,33 +64,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Division</strong></p>",
+            "<p><strong>Average Height</strong></p>",
+            "<p><strong>Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Greater Himalayas (Himadri)</p>",
+            "<p>6000 m+</p>",
+            "<p>Contains highest peaks and glaciers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lesser Himalayas (Himachal)</p>",
+            "<p>3500–4500 m</p>",
+            "<p>Hill stations and valleys</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shiwalik Range</p>",
+            "<p>900–1200 m</p>",
+            "<p>Outer foothills formed by sediments</p>"
           ]
         }
       ]
@@ -106,49 +108,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Peak</strong></p>",
+            "<p><strong>Height</strong></p>",
+            "<p><strong>Location</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mount Everest</p>",
+            "<p>8848 m</p>",
+            "<p>Nepal-Tibet border</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kanchenjunga</p>",
+            "<p>8586 m</p>",
+            "<p>India-Nepal border</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nanda Devi</p>",
+            "<p>7816 m</p>",
+            "<p>Uttarakhand</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nanga Parbat</p>",
+            "<p>8126 m</p>",
+            "<p>Pakistan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Annapurna</p>",
+            "<p>8091 m</p>",
+            "<p>Nepal</p>"
           ]
         }
       ]
@@ -161,11 +163,13 @@
     },
     {
       "type": "paragraph",
-      "id": "uicl9qk"
+      "id": "uicl9qk",
+      "content": "• Karakoram Range – Contains K2, the second highest peak in the world."
     },
     {
       "type": "paragraph",
-      "id": "3q9n01t"
+      "id": "3q9n01t",
+      "content": "• Ladakh Range – Located north of the Great Himalayas."
     },
     {
       "type": "pullQuote",
@@ -174,7 +178,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1ufgnwi"
+      "id": "1ufgnwi",
+      "content": "• Zaskar Range – Located between Ladakh and Himachal."
     },
     {
       "id": "8pqp8ks",
@@ -184,7 +189,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qspgng3"
+      "id": "qspgng3",
+      "content": "The Peninsular mountains are older than the Himalayas. They are mainly formed of hard igneous and metamorphic rocks. These mountains are more stable and have experienced less tectonic activity."
     },
     {
       "id": "28ek8m8",
@@ -193,43 +199,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Mountain Range</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Western Ghats</p>",
+            "<p>Run parallel to western coast; average height about 900–1600 m</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Eastern Ghats</p>",
+            "<p>Discontinuous range along eastern coast</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Aravalli Range</p>",
+            "<p>One of the oldest mountain ranges in the world</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vindhya Range</p>",
+            "<p>Separates northern plains from Deccan Plateau</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Satpura Range</p>",
+            "<p>Located between Narmada and Tapti rivers</p>"
           ]
         }
       ]
@@ -283,36 +289,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Western Ghats</strong></p>",
+            "<p><strong>Eastern Ghats</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Higher and continuous</p>",
+            "<p>Lower and discontinuous</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Receive heavy rainfall</p>",
+            "<p>Receive less rainfall</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Parallel to west coast</p>",
+            "<p>Parallel to east coast</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Highest peak – Anamudi</p>",
+            "<p>Highest peak – Mahendragiri</p>"
           ]
         }
       ]
@@ -325,23 +331,28 @@
     },
     {
       "type": "paragraph",
-      "id": "yrw3q0y"
+      "id": "yrw3q0y",
+      "content": "• Mountains act as natural barriers and protect the country."
     },
     {
       "type": "paragraph",
-      "id": "l1366ku"
+      "id": "l1366ku",
+      "content": "• They influence the climate and monsoon rainfall."
     },
     {
       "type": "paragraph",
-      "id": "aue634g"
+      "id": "aue634g",
+      "content": "• They are the source of major rivers."
     },
     {
       "type": "paragraph",
-      "id": "ewg9321"
+      "id": "ewg9321",
+      "content": "• They provide forests, biodiversity and natural resources."
     },
     {
       "type": "paragraph",
-      "id": "m02cxfv"
+      "id": "m02cxfv",
+      "content": "• They support tourism and hill stations."
     },
     {
       "type": "examAlert",
@@ -361,19 +372,23 @@
     },
     {
       "type": "paragraph",
-      "id": "py595ba"
+      "id": "py595ba",
+      "content": "• The Himalayas are the youngest fold mountains."
     },
     {
       "type": "paragraph",
-      "id": "kdatdb3"
+      "id": "kdatdb3",
+      "content": "• Kanchenjunga is the highest peak in India."
     },
     {
       "type": "paragraph",
-      "id": "urf5xsq"
+      "id": "urf5xsq",
+      "content": "• Aravalli Range is among the oldest mountain systems."
     },
     {
       "type": "paragraph",
-      "id": "a4rqspm"
+      "id": "a4rqspm",
+      "content": "• Western Ghats are a UNESCO World Heritage biodiversity hotspot."
     }
   ],
   "enriched": true

@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "qvdtl9i"
+      "id": "qvdtl9i",
+      "content": "Chhattisgarh is one of the fastest growing states in India. The economy is primarily based on agriculture, mineral resources, and forest produce. The state is rich in natural resources including coal, iron ore, limestone, tin, gold, bauxite, and dolomite. The state ranks among the top producers of several minerals in India."
     },
     {
       "type": "paragraph",
-      "id": "svq9mz4"
+      "id": "svq9mz4",
+      "content": "Despite its rich natural resources, Chhattisgarh faces challenges of poverty, illiteracy, and Naxalism in some regions. The government has been implementing various schemes to improve infrastructure, attract investment, and boost economic growth."
     },
     {
       "id": "qxohkis",
@@ -68,50 +70,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Indicator</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Primary Sector Contribution</p>",
+            "<p>Agriculture + Forestry (approx. 20-22% of GSDP)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Secondary Sector</p>",
+            "<p>Industry and Mining (approx. 40% of GSDP)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tertiary Sector</p>",
+            "<p>Services (approx. 38% of GSDP)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major Revenue Source</p>",
+            "<p>Minerals (especially coal and iron ore royalties)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Key Industrial City</p>",
+            "<p>Raipur (Steel hub), Korba (Power), Bhilai (Steel)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Per Capita Income</p>",
+            "<p>Below national average but improving</p>"
           ]
         }
       ]
@@ -129,7 +131,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ljcznl2"
+      "id": "ljcznl2",
+      "content": "Agriculture is the backbone of Chhattisgarh's rural economy. About 80% of the population is engaged in agriculture directly or indirectly. The state is known as the 'Rice Bowl of India' due to its extensive paddy cultivation."
     },
     {
       "id": "0zd6zmm",
@@ -175,48 +178,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Crop Type</strong></p>",
+            "<p><strong>Crops</strong></p>",
+            "<p><strong>Key Districts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kharif (Monsoon)</p>",
+            "<p>Paddy (rice), maize, sorghum, arhar (tur), soybean, groundnut</p>",
+            "<p>Raipur, Durg, Rajnandgaon, Dhamtari</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rabi (Winter)</p>",
+            "<p>Wheat, gram (chana), linseed, mustard</p>",
+            "<p>Raipur, Bilaspur, Durg</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Zaid (Summer)</p>",
+            "<p>Vegetables, watermelon, cucumber</p>",
+            "<p>Various districts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cash Crops</p>",
+            "<p>Sugar cane, cotton, oilseeds</p>",
+            "<p>Rajnandgaon, Durg, Kawardha</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "088liyp"
+      "id": "088liyp",
+      "content": "The state government launched the 'Rajiv Gandhi Kisan Nyay Yojana' to provide income support to farmers. The scheme provides direct benefit transfer (DBT) to farmers for cultivation of paddy, sugarcane, maize, and other crops."
     },
     {
       "id": "ruycs42",
@@ -226,7 +230,8 @@
     },
     {
       "type": "paragraph",
-      "id": "kdb4d7b"
+      "id": "kdb4d7b",
+      "content": "Chhattisgarh has emerged as a major industrial hub, especially in the steel, cement, power, and aluminum sectors. Bhilai Steel Plant (BSP), set up with Soviet assistance in 1959, is one of the largest integrated steel plants in Asia."
     },
     {
       "id": "i0oz6jy",
@@ -235,64 +240,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Industry Type</strong></p>",
+            "<p><strong>Location/Companies</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Steel</p>",
+            "<p>Bhilai Steel Plant (SAIL); multiple private steel plants in Raipur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Power Generation</p>",
+            "<p>Korba (NTPC, CSPGCL); major thermal power stations</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cement</p>",
+            "<p>ACC Jamul, Ultratech (Hirmi), Ambuja Cement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Aluminum</p>",
+            "<p>BALCO (Bharat Aluminium Company, Korba)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tin Smelting</p>",
+            "<p>Bastar region; only tin ore in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Iron &amp; Steel</p>",
+            "<p>Raipur, Raigarh, Bilaspur districts - private sector</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IT/Electronics</p>",
+            "<p>Nava Raipur; IT SEZs being developed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Coal Mining</p>",
+            "<p>South Eastern Coalfields Ltd (SECL); Korba, Korea, Raigarh</p>"
           ]
         }
       ]
@@ -314,7 +319,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vupowqu"
+      "id": "vupowqu",
+      "content": "Chhattisgarh is extremely rich in mineral resources. The state contributes significantly to India's mineral production. It is the only state in India that produces tin ore. The Bailadila iron ore mines in Dantewada are among the highest quality iron ore deposits in the world, with iron content of over 68%."
     },
     {
       "id": "vuqx6ol",
@@ -323,89 +329,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Mineral</strong></p>",
+            "<p><strong>Districts</strong></p>",
+            "<p><strong>Rank in India</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Coal</p>",
+            "<p>Korba, Korea, Raigarh, Surguja</p>",
+            "<p>3rd largest reserves</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Iron Ore</p>",
+            "<p>Dantewada (Bailadila), Kanker, Rajnandgaon</p>",
+            "<p>Major producer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tin Ore</p>",
+            "<p>Dantewada, Bastar</p>",
+            "<p>Only producing state in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Limestone</p>",
+            "<p>Raipur, Durg, Bilaspur, Rajnandgaon</p>",
+            "<p>Major reserves</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bauxite</p>",
+            "<p>Surguja, Raigarh, Bilaspur</p>",
+            "<p>Significant deposits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dolomite</p>",
+            "<p>Raipur, Durg, Bilaspur</p>",
+            "<p>Large reserves</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Diamond</p>",
+            "<p>Raipur (Panna extension area)</p>",
+            "<p>Minor deposits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gold</p>",
+            "<p>Bastar, Surguja</p>",
+            "<p>Small deposits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Corundum</p>",
+            "<p>Bastar</p>",
+            "<p>Deposits found</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Quartz &amp; Silica Sand</p>",
+            "<p>Various districts</p>",
+            "<p>Available</p>"
           ]
         }
       ]

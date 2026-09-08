@@ -48,58 +48,80 @@
     },
     {
       "type": "paragraph",
-      "id": "2na9xy1"
+      "id": "2na9xy1",
+      "content": "In our daily life, we use many substances such as lemon, curd, soap, baking soda, toothpaste and washing powder.<br></br>Some of these substances taste sour, some taste bitter and some feel soapy to touch.<br></br>Based on their nature, these substances are classified into three main groups:<br></br>1. Acids<br></br>2. Bases<br></br>3. Salts<br></br>Acids, bases and salts play a very important role in daily life as well as in industries."
+    },
+    {
+      "id": "mcpkl2e",
+      "type": "image",
+      "imageId": "fdgf9i7",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_fdgf9i7.png"
+    },
+    {
+      "id": "ae0sbny",
+      "type": "image",
+      "imageId": "3ex8x6t",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_3ex8x6t.png"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hrvlfn3"
+      "id": "hrvlfn3",
+      "content": "<strong>2. ACIDS</strong>"
     },
     {
       "type": "paragraph",
-      "id": "eptz2oo"
+      "id": "eptz2oo",
+      "content": "An acid is a substance which produces hydrogen ions (H⁺) when dissolved in water.<br></br>The presence of hydrogen ions is responsible for the acidic nature of a substance.<br></br>Acids generally taste sour and can change the colour of indicators.<br></br><strong>2.1 TYPES OF ACIDS</strong>"
     },
     {
       "type": "paragraph",
-      "id": "xw71kq5"
+      "id": "xw71kq5",
+      "content": "Acids are classified into different types based on their source.<br></br>Natural acids are found in natural substances.<br></br>For example, citric acid is present in lemon, lactic acid is present in curd, and acetic acid is present in vinegar.<br></br>Mineral acids are prepared in laboratories."
     },
     {
       "type": "paragraph",
-      "id": "3ypdi06"
+      "id": "3ypdi06",
+      "content": "Examples include hydrochloric acid, sulphuric acid and nitric acid."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jex1piq"
+      "id": "jex1piq",
+      "content": "<strong>2.2 PROPERTIES OF ACIDS</strong>"
     },
     {
       "type": "paragraph",
-      "id": "o1gmx1t"
+      "id": "o1gmx1t",
+      "content": "Acids have the following properties:"
     },
     {
       "id": "y19ysbo",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "They taste sour.",
+        "They turn blue litmus paper red.",
+        "They react with metals to produce hydrogen gas.",
+        "They react with bases to form salt and water.",
+        "They conduct electricity in aqueous solution.<br></br>"
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i0szjo5"
+      "id": "i0szjo5",
+      "content": "<strong>2.3 CHEMICAL REACTIONS OF ACIDS</strong>"
     },
     {
       "type": "paragraph",
-      "id": "bw5xovk"
+      "id": "bw5xovk",
+      "content": "Acids react with metals to form salt and hydrogen gas.<br></br>Example:<br></br>Zinc + Hydrochloric acid → Zinc chloride + Hydrogen<br></br>Acids react with metal carbonates to form salt, water and carbon dioxide.<br></br>Example:<br></br>Calcium carbonate + Hydrochloric acid → Calcium chloride + Water + Carbon dioxide<br></br>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "b6soat9"
+      "id": "b6soat9",
+      "content": "<strong>3. BASES</strong>"
     },
     {
       "type": "pullQuote",
@@ -108,31 +130,36 @@
     },
     {
       "type": "paragraph",
-      "id": "jq8kajt"
+      "id": "jq8kajt",
+      "content": "A base is a substance which produces hydroxide ions (OH⁻) when dissolved in water.<br></br>Bases are bitter in taste and feel soapy on touch.<br></br>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mavhnod"
+      "id": "mavhnod",
+      "content": "<strong>3.1 PROPERTIES OF BASES</strong>"
     },
     {
       "type": "paragraph",
-      "id": "mh94f2u"
+      "id": "mh94f2u",
+      "content": "Bases have the following properties:<br></br>They taste bitter.<br></br>They turn red litmus paper blue.<br></br>They neutralize acids.<br></br>They feel slippery to touch.<br></br>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "058o26t"
+      "id": "058o26t",
+      "content": "<strong>3.2 ALKALIS</strong>"
     },
     {
       "type": "paragraph",
-      "id": "zd9a1au"
+      "id": "zd9a1au",
+      "content": "Alkalis are those bases which dissolve in water.<br></br>Examples of alkalis include sodium hydroxide, potassium hydroxide and ammonium hydroxide.<br></br>"
     },
     {
       "id": "g8yaqys",
       "type": "numberedList",
       "items": [
-        null
+        "<strong>SALTS</strong>"
       ]
     },
     {
@@ -168,49 +195,56 @@
     },
     {
       "type": "paragraph",
-      "id": "3qfktgx"
+      "id": "3qfktgx",
+      "content": "A salt is formed when an acid reacts with a base.<br></br>This reaction is called a neutralization reaction.<br></br>Example:<br></br>Hydrochloric acid + Sodium hydroxide → Sodium chloride + Water<br></br>"
     },
     {
       "id": "yj041zn",
       "type": "numberedList",
       "items": [
-        null
+        "<strong>pH SCALE</strong>"
       ]
     },
     {
       "type": "paragraph",
-      "id": "1sdeo82"
+      "id": "1sdeo82",
+      "content": "The pH scale is used to measure the acidic or basic nature of a substance.<br></br>The pH scale ranges from 0 to 14.<br></br>pH less than 7 indicates an acidic substance.<br></br>pH equal to 7 indicates a neutral substance.<br></br>pH greater than 7 indicates a basic substance.<br></br>"
     },
     {
       "type": "paragraph",
-      "id": "qkjj25k"
+      "id": "qkjj25k",
+      "content": "<strong>5.1 IMPORTANCE OF pH IN DAILY LIFE</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ybweej0"
+      "id": "ybweej0",
+      "content": "pH plays a very important role in our daily life.<br></br>The pH of our stomach helps in digestion.<br></br>Too much acid causes acidity and indigestion.<br></br>pH of soil affects crop production.<br></br>Acid rain lowers soil pH and damages crops.<br></br>pH of water affects aquatic life.<br></br>Sudden change in pH can kill fish and aquatic animals.<br></br>"
     },
     {
       "type": "paragraph",
-      "id": "z9bp5bg"
+      "id": "z9bp5bg",
+      "content": "<strong>6. COMMON SALTS AND THEIR USES</strong>"
     },
     {
       "id": "9339s1k",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Common Salt (Sodium Chloride):<br></br>Used in cooking and food preservation.",
+        "Baking Soda (Sodium Bicarbonate):<br></br>Used in baking, fire extinguishers and as an antacid.",
+        "Washing Soda (Sodium Carbonate):<br></br>Used in washing clothes, making glass and soap.",
+        "Plaster of Paris:<br></br>Used in making toys, statues and casts for broken bones.<br></br>"
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z5hjg9b"
+      "id": "z5hjg9b",
+      "content": "<strong>7. PREPARATION OF IMPORTANT SALTS</strong>"
     },
     {
       "type": "paragraph",
-      "id": "odf4ys8"
+      "id": "odf4ys8",
+      "content": "Baking soda is prepared from sodium chloride and ammonia.<br></br>Washing soda is prepared by heating baking soda.<br></br>Plaster of Paris is prepared by heating gypsum at 100–120°C.<br></br>"
     },
     {
       "type": "examAlert",
@@ -224,31 +258,36 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "a81csjr"
+      "id": "a81csjr",
+      "content": "<strong>8. INDICATORS</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ct5wqie"
+      "id": "ct5wqie",
+      "content": "Indicators are substances that show different colours in acidic and basic solutions.<br></br>Examples of indicators:<br></br>Litmus<br></br>Methyl orange<br></br>Phenolphthalein<br></br>Litmus turns red in acid and blue in base.<br></br>"
     },
     {
       "id": "cab4o2u",
       "type": "numberedList",
       "items": [
-        null
+        "<strong>IMPORTANT  EXAM POINTS</strong>"
       ]
     },
     {
       "type": "paragraph",
-      "id": "856tt02"
+      "id": "856tt02",
+      "content": "• Acids release H⁺ ions.<br></br>• Bases release OH⁻ ions.<br></br>• pH scale ranges from 0 to 14.<br></br>• Neutralization forms salt and water.<br></br>• Baking soda is sodium bicarbonate.<br></br>• Washing soda is sodium carbonate.<br></br>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "te2xrzx"
+      "id": "te2xrzx",
+      "content": "<strong>10. QUICK REVISION</strong>"
     },
     {
       "type": "paragraph",
-      "id": "kazazma"
+      "id": "kazazma",
+      "content": "• Acids are sour in taste.<br></br>• Bases are bitter and soapy.<br></br>• Salts are formed from acid and base.<br></br>• pH tells nature of substance.<br></br>• Indicators show acidic or basic nature.<br></br>"
     }
   ],
   "enriched": true

@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ox49lot"
+      "id": "ox49lot",
+      "content": "Maharashtra has a history stretching back over 2,000 years. The region was home to some of the most powerful kingdoms and dynasties of ancient India. The name 'Maharashtra' is first found in a 7th century inscription of Chalukya king Pulakesi II and in the writings of Chinese traveler Xuanzang (Hiuen Tsang)."
     },
     {
       "id": "uqew7de",
@@ -58,7 +59,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fldkdui"
+      "id": "fldkdui",
+      "content": "Maharashtra's ancient history is marked by a succession of powerful ruling dynasties, each contributing to the cultural and political landscape of the region."
     },
     {
       "id": "94uphgd",
@@ -67,73 +69,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Dynasty</strong></p>",
+            "<p><strong>Period</strong></p>",
+            "<p><strong>Capital / Key Facts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Satavahanas</p>",
+            "<p>230 BCE – 220 CE</p>",
+            "<p>Pratishthana (Paithan); First major dynasty of Deccan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vakatakas</p>",
+            "<p>250 CE – 500 CE</p>",
+            "<p>Ruled central India; Ajanta caves patronized</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chalukyas of Badami</p>",
+            "<p>543 CE – 757 CE</p>",
+            "<p>Aihole, Badami; Great builders of temples</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rashtrakutas</p>",
+            "<p>753 CE – 982 CE</p>",
+            "<p>Malkhed (Manyakheta); Ellora Kailasa temple</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Yadavas of Devagiri</p>",
+            "<p>850 CE – 1317 CE</p>",
+            "<p>Devagiri (Daulatabad); Last Hindu kingdom</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bahamani Sultanate</p>",
+            "<p>1347 – 1527 CE</p>",
+            "<p>Gulbarga then Bidar; First Muslim kingdom</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nizamshahi</p>",
+            "<p>1490 – 1636 CE</p>",
+            "<p>Ahmadnagar; Founded by Malik Ahmad</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Adilshahi</p>",
+            "<p>1490 – 1686 CE</p>",
+            "<p>Bijapur; Challenged by Shivaji Maharaj</p>"
           ]
         }
       ]
@@ -146,17 +148,18 @@
     },
     {
       "type": "paragraph",
-      "id": "u2v5use"
+      "id": "u2v5use",
+      "content": "The Satavahanas (also known as Andhrabhrityas) were the first major dynasty to rule over Maharashtra. Their capital was Pratishthana (modern Paithan in Aurangabad district). Important facts about Satavahanas:"
     },
     {
       "id": "z0kvhac",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Simuka was the founder of the Satavahana dynasty.",
+        "Gautamiputra Satakarni (106–130 CE) was their greatest ruler; he defeated the Western Kshatrapas.",
+        "They issued coins with bilingual (Prakrit and Telugu/Marathi) inscriptions.",
+        "They were great patrons of Buddhism; Karla, Bhaja, and Nashik caves built during this period.",
+        "The Satavahana period saw the flourishing of Prakrit literature."
       ]
     },
     {
@@ -167,7 +170,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ttbmn4y"
+      "id": "ttbmn4y",
+      "content": "The Yadava dynasty, also known as the Seuna dynasty, ruled from Devagiri (now Daulatabad near Aurangabad). They were the last major Hindu dynasty to rule over Maharashtra before the coming of the Delhi Sultanate."
     },
     {
       "id": "elg1waw",
@@ -176,43 +180,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Founder</strong></p>",
+            "<p>Dridhaprahara (850 CE)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Capital</strong></p>",
+            "<p>Devagiri (Daulatabad)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Greatest Ruler</strong></p>",
+            "<p>Singhana (1200–1247 CE)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Language Promoted</strong></p>",
+            "<p>Marathi literature flourished; Dnyaneshwar wrote Dnyaneshwari (1290 CE)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Famous Saint</strong></p>",
+            "<p>Chakradhar Swami (Mahanubhava sect), Dnyaneshwar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Fall</strong></p>",
+            "<p>Alauddin Khilji defeated Ramadeva Rai in 1296 CE; Malik Kafur ended dynasty in 1317 CE</p>"
           ]
         }
       ]
@@ -230,13 +234,9 @@
       "content": "Bahmani Sultanate (1347–1527 CE)"
     },
     {
-      "type": "pullQuote",
-      "content": "The Ashtapradhan – Council of Eight Ministers",
-      "id": "lxe6zsx"
-    },
-    {
       "type": "paragraph",
-      "id": "b0n4jz2"
+      "id": "b0n4jz2",
+      "content": "Alauddin Hasan Bahman Shah founded the Bahmani Sultanate after revolting against the Delhi Sultanate. The kingdom was eventually divided into five Deccan Sultanates known as the Deccan Sultanates or Deccan Shahi (Five Kingdoms)."
     },
     {
       "id": "ca9p5e0",
@@ -245,55 +245,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Sultanate</strong></p>",
+            "<p><strong>Capital</strong></p>",
+            "<p><strong>Founded By</strong></p>",
+            "<p><strong>Year</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Nizamshahi</p>",
+            "<p>Ahmadnagar</p>",
+            "<p>Malik Ahmad</p>",
+            "<p>1490</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Adilshahi</p>",
+            "<p>Bijapur</p>",
+            "<p>Yusuf Adil Shah</p>",
+            "<p>1490</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Imadshahi</p>",
+            "<p>Berar</p>",
+            "<p>Fathullah Imad-ul-Mulk</p>",
+            "<p>1490</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Baridshahi</p>",
+            "<p>Bidar</p>",
+            "<p>Qasim Barid</p>",
+            "<p>1492</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Qutbshahi</p>",
+            "<p>Golconda</p>",
+            "<p>Quli Qutb Shah</p>",
+            "<p>1518</p>"
           ]
         }
       ]
@@ -306,7 +306,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6afilsi"
+      "id": "6afilsi",
+      "content": "Shivaji Bhonsle (1630–1680 CE), posthumously known as Chhatrapati Shivaji Maharaj, was a Maratha king and member of the Bhonsle Maratha clan. He carved out an enclave from the declining Adilshahi Sultanate of Bijapur and established the Maratha Kingdom."
     },
     {
       "id": "bkqrdwq",
@@ -321,85 +322,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Birth Date</strong></p>",
+            "<p>19 February 1630 (Shivneri Fort, Pune district)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Birth Place</strong></p>",
+            "<p>Shivneri Fort near Junnar, Pune district</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Father</strong></p>",
+            "<p>Shahaji Bhonsle</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Mother</strong></p>",
+            "<p>Jijabai (Jijau) – considered the architect of Shivaji's character</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Guru / Mentor</strong></p>",
+            "<p>Dadoji Kondadev (administrator); Ramdas Swami (spiritual mentor)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>First Fort Captured</strong></p>",
+            "<p>Torna Fort (1645 CE) at age 15</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Coronation</strong></p>",
+            "<p>6 June 1674 CE at Raigad Fort; Title: Chhatrapati</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Rajyabhishek</strong></p>",
+            "<p>Performed by Gaga Bhatt (a Varanasi scholar)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Death</strong></p>",
+            "<p>3 April 1680 CE at Raigad Fort</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Ashtapradhan</strong></p>",
+            "<p>Council of eight ministers established by Shivaji</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Naval Force</strong></p>",
+            "<p>Established a strong naval force; considered Father of Indian Navy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Capital</strong></p>",
+            "<p>Raigad (after 1674); Earlier Rajgad</p>"
           ]
         }
       ]
@@ -417,57 +418,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Peshwa</strong></p>",
+            "<p>Prime Minister – head of civil administration</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Amatya (Mazumdar)</strong></p>",
+            "<p>Finance Minister</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Mantri (Waqia-Navis)</strong></p>",
+            "<p>Personal records and diary of the king</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Sachiv (Shuru-Navis)</strong></p>",
+            "<p>Correspondence and royal letters</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Sumant (Dabir)</strong></p>",
+            "<p>Foreign Minister</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Senapati (Sar-i-Naubat)</strong></p>",
+            "<p>Commander-in-Chief of Army</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nyayadhish</strong></p>",
+            "<p>Chief Justice</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Panditrao</strong></p>",
+            "<p>Grants and charity; religious matters</p>"
           ]
         }
       ]
@@ -485,65 +486,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Battle</strong></p>",
+            "<p><strong>Year</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Battle of Pratapgad</p>",
+            "<p>1659</p>",
+            "<p>Shivaji defeated and killed Afzal Khan of Bijapur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sack of Surat</p>",
+            "<p>1664</p>",
+            "<p>Shivaji looted the Mughal port of Surat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Battle of Purandar</p>",
+            "<p>1665</p>",
+            "<p>Treaty with Jai Singh; Shivaji surrendered 23 forts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Agra Incident</p>",
+            "<p>1666</p>",
+            "<p>Shivaji arrested by Aurangzeb; escaped from Agra prison</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Battle of Sinhagad</p>",
+            "<p>1670</p>",
+            "<p>Tanaji Malusare captured Sinhagad fort; died in battle</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Battle of Salher</p>",
+            "<p>1672</p>",
+            "<p>Largest cavalry battle; Marathas defeated Mughals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Second Sack of Surat</p>",
+            "<p>1670</p>",
+            "<p>Shivaji looted Surat again after returning from Agra</p>"
           ]
         }
       ]
@@ -556,7 +557,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fg8ara7"
+      "id": "fg8ara7",
+      "content": "After Shivaji's death in 1680, the Maratha Empire continued to expand under subsequent rulers. The Peshwas (Prime Ministers) eventually became the de facto rulers of the Maratha Confederacy."
     },
     {
       "id": "6ugi2sk",
@@ -565,64 +567,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Sambhaji (1680–1689)</strong></p>",
+            "<p>Son of Shivaji; captured and executed by Aurangzeb at Tulapur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Rajaram (1689–1700)</strong></p>",
+            "<p>Second son of Shivaji; continued resistance against Mughals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Tarabai (1700–1707)</strong></p>",
+            "<p>Wife of Rajaram; regent; led Maratha resistance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Shahu I (1707–1749)</strong></p>",
+            "<p>Grandson of Shivaji; released by Mughals; Peshwa rule began</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Balaji Vishwanath (1713–1720)</strong></p>",
+            "<p>First Peshwa of significance; Maratha power consolidated</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Bajirao I (1720–1740)</strong></p>",
+            "<p>Greatest Peshwa; never lost a battle; expanded empire to Attock</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nana Saheb/Balaji Bajirao (1740–1761)</strong></p>",
+            "<p>Peshwa at time of Third Battle of Panipat (1761)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Madhavrao I (1761–1772)</strong></p>",
+            "<p>Revived Maratha power after Panipat disaster</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Third Battle of Panipat</strong></p>",
+            "<p>14 January 1761 – Marathas defeated by Ahmad Shah Durrani (Abdali)</p>"
           ]
         }
       ]
@@ -646,33 +648,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>War</strong></p>",
+            "<p><strong>Year</strong></p>",
+            "<p><strong>Outcome</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>First Anglo-Maratha War</p>",
+            "<p>1775–1782</p>",
+            "<p>Treaty of Salbai; status quo restored</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Second Anglo-Maratha War</p>",
+            "<p>1803–1805</p>",
+            "<p>British gained Delhi, Agra; weakened Marathas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Third Anglo-Maratha War</p>",
+            "<p>1817–1818</p>",
+            "<p>Complete British victory; Peshwa's dominion abolished</p>"
           ]
         }
       ]
@@ -685,7 +687,8 @@
     },
     {
       "type": "paragraph",
-      "id": "d61pvw8"
+      "id": "d61pvw8",
+      "content": "Maharashtra produced some of the most prominent leaders of the Indian independence movement. The state has a rich tradition of social reform and political activism."
     },
     {
       "type": "examAlert",
@@ -703,43 +706,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Bal Gangadhar Tilak (1856–1920)</strong></p>",
+            "<p>Called 'Father of Indian Unrest' and 'Lokmanya'; started Ganeshotsav (1893) and Shiv Jayanti festivals; editor of Kesari and Mahratta; championed Swaraj ('Swaraj is my birthright')</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Gopal Krishna Gokhale (1866–1915)</strong></p>",
+            "<p>Liberal reformer; founded Servants of India Society (1905); Mahatma Gandhi's political mentor</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Damodar Hari Chapekar (1870–1898)</strong></p>",
+            "<p>Organized armed resistance against the British; hanged in 1898 for assassination of Plague Commissioner Rand</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Vasudeo Balwant Phadke (1845–1883)</strong></p>",
+            "<p>Pioneer of armed revolt against British; first revolutionary in Maharashtra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Vinayak Damodar Savarkar (1883–1966)</strong></p>",
+            "<p>Wrote 'The Indian War of Independence, 1857'; founded Abhinav Bharat Society; coined term 'Hindutva'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Dr. B.R. Ambedkar (1891–1956)</strong></p>",
+            "<p>Born in Mhow (now in MP, but Marathi); Father of Indian Constitution; Dalit rights champion; Minister of Law in Nehru Cabinet</p>"
           ]
         }
       ]
@@ -752,7 +755,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xwrene5"
+      "id": "xwrene5",
+      "content": "Maharashtra has been a cradle of social reform in India. The 19th and 20th centuries saw a remarkable series of reformers who challenged caste discrimination, untouchability, and the oppression of women."
     },
     {
       "id": "0r5ou2y",
@@ -761,43 +765,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Mahatma Jyotirao Phule (1827–1890)</strong></p>",
+            "<p>Founder of Satyashodhak Samaj (1873); first to open school for girls (1848); fought untouchability; wrote 'Gulamgiri' (Slavery)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Savitribai Phule (1831–1897)</strong></p>",
+            "<p>First woman teacher of India; worked alongside Jyotirao Phule; first women's school at Bhidewada, Pune (1848)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Smt. Ramabai Ranade</strong></p>",
+            "<p>Social reformer; founded Seva Sadan; worked for women's education</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Gopal Ganesh Agarkar (1856–1895)</strong></p>",
+            "<p>Rationalist and social reformer; founded Sudharak newspaper</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Maharshi Karve (1858–1962)</strong></p>",
+            "<p>Founded first women's university (SNDT University 1916); worked for widow remarriage; awarded Bharat Ratna 1958</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Dr. B.R. Ambedkar</strong></p>",
+            "<p>Burned Manusmriti (1927); Mahad Satyagraha (1927) for water rights; founded Republican Party of India; converted to Buddhism (1956)</p>"
           ]
         }
       ]
@@ -815,74 +819,80 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>1 May 1960</strong></p>",
+            "<p>Maharashtra State formed (Maharashtra Day / Kamgar Din)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1 May 1960</strong></p>",
+            "<p>Bombay Reorganization Act came into effect</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1960</strong></p>",
+            "<p>Mumbai became capital of Maharashtra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1 November 1956</strong></p>",
+            "<p>States Reorganization Act; Bombay State enlarged</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>6 June 1674</strong></p>",
+            "<p>Shivaji Maharaj's coronation at Raigad</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>19 February 1630</strong></p>",
+            "<p>Shivaji Maharaj's birth (celebrated as Shiv Jayanti)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>14 January 1761</strong></p>",
+            "<p>Third Battle of Panipat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1775–1782</strong></p>",
+            "<p>First Anglo-Maratha War</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1817–1818</strong></p>",
+            "<p>Third Anglo-Maratha War; end of Maratha Empire</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1 April 1875</strong></p>",
+            "<p>Deccan Riots (Peasant uprising against moneylenders)</p>"
           ]
         }
       ]
+    },
+    {
+      "id": "cwlgjdf",
+      "type": "image",
+      "imageId": "z2zc64p",
+      "src": "/books/Guide/MAHARSHTRA SI/images/image_z2zc64p.jpeg"
     }
   ],
   "enriched": true

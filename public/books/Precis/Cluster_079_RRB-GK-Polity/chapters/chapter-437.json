@@ -1,0 +1,92 @@
+{
+  "title": "7. Securities Appellate Tribunal (SAT)",
+  "order": 437,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The Securities Appellate Tribunal hears appeals against orders passed by SEBI, IRDAI, and PFRDA.",
+      "id": "hn9g8nc"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Securities Appellate Tribunal hears appeals against orders passed by SEBI, IRDAI, and PFRDA.",
+      "id": "pudlq6i"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Tribunal Name",
+          "value": "SAT",
+          "icon": "award"
+        },
+        {
+          "label": "Regulators Covered",
+          "value": "3 Bodies",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Role",
+          "value": "Hear Appeals",
+          "icon": "info"
+        }
+      ],
+      "id": "2npx4sg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "SAT stands for the Securities Appellate Tribunal.",
+        "It serves as a legal body to hear appeals against rulings of financial regulators.",
+        "It has appellate jurisdiction over decisions made by SEBI.",
+        "Appeals against orders passed by IRDAI are brought before SAT.",
+        "Orders issued by PFRDA are also appealable at the Securities Appellate Tribunal."
+      ],
+      "id": "g7nihsy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exam questions frequently ask which regulatory bodies fall under SAT's jurisdiction: SEBI, IRDAI, and PFRDA.",
+        "Note that SAT is not restricted to SEBI alone; insurance (IRDAI) and pension (PFRDA) appeals are also heard here."
+      ],
+      "id": "eepoquc"
+    },
+    {
+      "id": "4pw1x0x",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Established</p>",
+            "<p>1995</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appeals Against</p>",
+            "<p>SEBI, IRDAI, PFRDA</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appeal Lies With</p>",
+            "<p>Supreme Court</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

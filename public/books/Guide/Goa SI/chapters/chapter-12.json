@@ -52,120 +52,120 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Topic</strong></p>",
+            "<p><strong>Formula / Key Rule</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Simple Interest (SI)</p>",
+            "<p>SI = P × R × T / 100 where P = Principal, R = Rate%, T = Time in years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Compound Interest (CI)</p>",
+            "<p>A = P(1 + R/100)^T; CI = A - P</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Percentage</p>",
+            "<p>x% of y = xy/100; % increase = (increase/original) × 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Profit and Loss</p>",
+            "<p>Profit% = (Profit/CP) × 100; SP = CP(1 + Profit%/100)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Average</p>",
+            "<p>Average = Sum of observations / Number of observations</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Speed, Time, Distance</p>",
+            "<p>D = S × T; Average speed for equal distances = 2S1S2/(S1+S2)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Time and Work</p>",
+            "<p>If A does work in n days, in 1 day A does 1/n; combined efficiency = 1/n1 + 1/n2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ratio and Proportion</p>",
+            "<p>a:b = c:d → ad = bc; Compound ratio a:b × c:d = ac:bd</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Area — Rectangle</p>",
+            "<p>Area = l × b; Perimeter = 2(l+b)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Area — Circle</p>",
+            "<p>Area = πr²; Circumference = 2πr</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Area — Triangle</p>",
+            "<p>Area = ½ × base × height; Hero's formula: √[s(s-a)(s-b)(s-c)]</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Volume — Cube</p>",
+            "<p>V = a³; Surface Area = 6a²</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Volume — Cylinder</p>",
+            "<p>V = πr²h; CSA = 2πrh; TSA = 2πr(r+h)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Permutation</p>",
+            "<p>nPr = n! / (n-r)!</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Combination</p>",
+            "<p>nCr = n! / [r!(n-r)!]</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Probability</p>",
+            "<p>P(E) = Number of favorable outcomes / Total possible outcomes; 0 ≤ P ≤ 1</p>"
           ]
         }
       ]
@@ -188,15 +188,15 @@
       "id": "t5t2jg9",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Syllogism: Drawing conclusions from premises using Venn diagrams",
+        "Coding-Decoding: Letter shifting, number coding, symbol coding patterns",
+        "Blood Relations: Father, Mother, Son, Daughter, Brother, Sister chains",
+        "Directions: N, S, E, W and NE, NW, SE, SW; left/right turns",
+        "Number Series: Arithmetic progression (AP), Geometric progression (GP), Fibonacci series",
+        "Analogy: Word analogy (e.g., Doctor:Hospital :: Teacher:School)",
+        "Classification (Odd One Out): Finding the item that does not belong",
+        "Calendar: January 1, 2000 was Saturday; every year advances by 1 day (leap year: 2 days)",
+        "Clocks: Angle between hands = |30H - 5.5M| degrees"
       ]
     }
   ],

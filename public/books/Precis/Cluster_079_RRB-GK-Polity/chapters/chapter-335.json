@@ -1,0 +1,68 @@
+{
+  "title": "11. Exam Traps",
+  "order": 335,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• IRDAI is a statutory body.<br/>• Established in 1999.<br/>• Based on Malhotra Committee.<br/>• Headquarters in Hyderabad.<br/>• Regulates life AND general insurance.",
+      "id": "k6hft9m"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Regulates life AND general insurance.",
+      "id": "7h0cmoy"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "1999",
+          "icon": "calendar"
+        },
+        {
+          "label": "Committee",
+          "value": "Malhotra",
+          "icon": "book"
+        },
+        {
+          "label": "Headquarters",
+          "value": "Hyderabad",
+          "icon": "info"
+        },
+        {
+          "label": "Status",
+          "value": "Statutory Body",
+          "icon": "award"
+        },
+        {
+          "label": "Scope",
+          "value": "Life & General",
+          "icon": "check"
+        }
+      ],
+      "id": "85m4e0t"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Do not confuse headquarters location: IRDAI is based in Hyderabad, not New Delhi.",
+        "IRDAI regulates BOTH life and general insurance sectors.",
+        "Remember that IRDAI is a statutory body formed following the Malhotra Committee recommendations."
+      ],
+      "id": "n9lu9ni"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "IRDAI is a statutory body constituted in 1999.",
+        "Its formation was based on the recommendations of the Malhotra Committee.",
+        "The headquarters of IRDAI are located in Hyderabad.",
+        "IRDAI holds regulatory authority over both life and general insurance."
+      ],
+      "id": "0d0kg1h"
+    }
+  ],
+  "enriched": true
+}

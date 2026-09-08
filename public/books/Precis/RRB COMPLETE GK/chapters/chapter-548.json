@@ -10,50 +10,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Established</p>",
+            "<p>1988</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Initial Status</p>",
+            "<p>Non-statutory body</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Statutory Status</p>",
+            "<p>1992</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Act</p>",
+            "<p>SEBI Act, 1992</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Type</p>",
+            "<p>Statutory Regulatory Authority</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Headquarters</p>",
+            "<p>Mumbai</p>"
           ]
         }
       ]
@@ -137,7 +137,8 @@
     },
     {
       "type": "paragraph",
-      "id": "e8ru1fh"
+      "id": "e8ru1fh",
+      "content": "SEBI was granted statutory powers in 1992 after the Harshad Mehta securities scam exposed major loopholes in the Indian stock market."
     }
   ],
   "enriched": true

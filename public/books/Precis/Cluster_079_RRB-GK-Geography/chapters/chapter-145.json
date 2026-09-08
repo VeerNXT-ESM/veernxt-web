@@ -1,0 +1,130 @@
+{
+  "title": "2. Types of Glaciers",
+  "order": 145,
+  "blocks": [
+    {
+      "id": "3g2zwtq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Features</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Continental Glacier (Ice Sheet)</p>",
+            "<p>Antarctica, Greenland</p>",
+            "<p>Cover large areas; flow outward</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Valley Glacier (Alpine)</p>",
+            "<p>Himalayas, Alps</p>",
+            "<p>Confined within valleys</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Piedmont Glacier</p>",
+            "<p>Mountain foothills</p>",
+            "<p>Spread onto plains</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ice Cap</p>",
+            "<p>Polar uplands</p>",
+            "<p>Smaller than ice sheets</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Glaciers are classified based on their size, shape, and location into continental glaciers, valley glaciers, and piedmont glaciers.",
+      "id": "92x8hzd"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Continental Glacier",
+        "Valley Glacier"
+      ],
+      "rows": [
+        [
+          "Coverage",
+          "Vast areas spanning continents or large islands",
+          "Restricted to narrow mountain valleys"
+        ],
+        [
+          "Flow Pattern",
+          "Outward from central thickest zone in all directions",
+          "Unidirectional flow along valley slope"
+        ],
+        [
+          "Key Examples",
+          "Antarctic Ice Sheet, Greenland Ice Sheet",
+          "Siachen Glacier, Gangotri Glacier, Alps"
+        ]
+      ],
+      "id": "qiq5cic"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Antarctica Ice",
+          "value": "90% Global Ice",
+          "icon": "info"
+        },
+        {
+          "label": "Siachen Glacier",
+          "value": "76 km Length",
+          "icon": "award"
+        },
+        {
+          "label": "Freshwater Reserve",
+          "value": "69% Earth's Fresh Water",
+          "icon": "book"
+        },
+        {
+          "label": "Types of Glaciers",
+          "value": "4 Primary Classes",
+          "icon": "check"
+        }
+      ],
+      "id": "dp749fq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Siachen Glacier in the Karakoram Range is the longest glacier in the non-polar region.",
+        "Gangotri Glacier in Uttarakhand is the primary source of the Bhagirathi River.",
+        "Tarn lakes form inside cirque basins once glacial ice completely thaws."
+      ],
+      "id": "vhshbmb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Continental Glaciers cover expansive land masses such as Antarctica and Greenland, moving outwards in all directions.",
+        "Valley or Alpine Glaciers are confined within mountain valleys and flow downslope under the influence of gravity.",
+        "Piedmont Glaciers occur when valley glaciers emerge from mountain canyons onto adjacent flat plains.",
+        "Cirque Glaciers occupy amphitheater-shaped basins high on mountain slopes and often form tarn lakes upon melting."
+      ],
+      "id": "003gpzo"
+    }
+  ],
+  "enriched": true
+}

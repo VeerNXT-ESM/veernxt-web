@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "3nhs8tw"
+      "id": "3nhs8tw",
+      "content": "Reading Comprehension : Hindi &amp; English"
     },
     {
       "type": "statStrip",
@@ -52,7 +53,8 @@
     },
     {
       "type": "paragraph",
-      "id": "twabb9r"
+      "id": "twabb9r",
+      "content": "अपठित गद्यांश वह गद्यांश होता है जो परीक्षार्थी ने पहले नहीं पढ़ा होता। SSC JHT Paper 1 में हिंदी और अंग्रेज़ी दोनों में Reading Comprehension से प्रश्न पूछे जाते हैं। गद्यांश पढ़कर उसके आधार पर दिए गए प्रश्नों के उत्तर देने होते हैं।"
     },
     {
       "id": "ip7ashr",
@@ -61,41 +63,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>परीक्षा में प्रकार</strong></p>",
+            "<p><strong>हिंदी</strong></p>",
+            "<p><strong>अंग्रेज़ी</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>गद्यांश की संख्या</p>",
+            "<p>2–3 गद्यांश</p>",
+            "<p>2–3 Passages</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>प्रश्नों की संख्या</p>",
+            "<p>4–5 प्रति गद्यांश</p>",
+            "<p>4–5 per Passage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>प्रश्नों के प्रकार</p>",
+            "<p>भाव, शीर्षक, शब्द-अर्थ, निष्कर्ष</p>",
+            "<p>Factual, Inferential, Vocabulary, Title</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अंक</p>",
+            "<p>1 अंक प्रति प्रश्न</p>",
+            "<p>1 mark per question</p>"
           ]
         }
       ]
@@ -113,72 +115,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>चरण</strong></p>",
+            "<p><strong>क्या करें</strong></p>",
+            "<p><strong>क्यों</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1. प्रश्न पहले पढ़ें</p>",
+            "<p>गद्यांश से पहले प्रश्नों पर नज़र डालें</p>",
+            "<p>पता चलेगा कि किस सूचना पर ध्यान देना है</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2. गद्यांश पढ़ें</p>",
+            "<p>पूरा गद्यांश ध्यान से पढ़ें : मुख्य विचार पकड़ें</p>",
+            "<p>समझ के बिना उत्तर सही नहीं होंगे</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>3. Topic Sentence पहचानें</p>",
+            "<p>प्रत्येक पैराग्राफ का पहला वाक्य महत्त्वपूर्ण है</p>",
+            "<p>यहाँ मुख्य विचार होता है</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>4. शाब्दिक प्रश्न</p>",
+            "<p>उत्तर सीधे गद्यांश में होगा : रेखांकित करें</p>",
+            "<p>Factual questions : no inference needed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>5. अनुमान प्रश्न</p>",
+            "<p>गद्यांश के भाव से उत्तर निकालें</p>",
+            "<p>Inferential questions need thinking beyond text</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>6. शीर्षक प्रश्न</p>",
+            "<p>गद्यांश का मुख्य विचार = उचित शीर्षक</p>",
+            "<p>शीर्षक विषय को संक्षेप में व्यक्त करता है</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>7. शब्द-अर्थ</p>",
+            "<p>संदर्भ से शब्द का अर्थ निकालें</p>",
+            "<p>Context clues से अर्थ पहचानें</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "lkie7bh"
+      "id": "lkie7bh",
+      "content": "<strong>भाग क : हिंदी अपठित गद्यांश</strong>"
     },
     {
       "id": "16sbiay",
@@ -188,60 +191,74 @@
     },
     {
       "type": "paragraph",
-      "id": "a4ufoa3"
+      "id": "a4ufoa3",
+      "content": "मनुष्य और प्रकृति का संबंध उतना ही पुराना है जितना स्वयं मानव जाति। आदिकाल से मनुष्य ने प्रकृति को अपनी माँ माना है और उसकी गोद में जीवन बिताया है। वृक्ष, नदियाँ, पर्वत और आकाश : ये सभी मनुष्य के जीवन के अभिन्न अंग रहे हैं। परंतु औद्योगिक क्रांति के बाद मनुष्य ने प्रकृति के साथ शोषक का व्यवहार शुरू कर दिया।"
     },
     {
       "type": "paragraph",
-      "id": "93yrspn"
+      "id": "93yrspn",
+      "content": "आज स्थिति यह है कि हिमालय के हिमनद पिघल रहे हैं, समुद्र का जलस्तर बढ़ रहा है और जैव विविधता तेज़ी से नष्ट हो रही है। वनों की अंधाधुंध कटाई, नदियों में औद्योगिक कचरे का विसर्जन और कार्बन उत्सर्जन ने पृथ्वी के तापमान को खतरनाक स्तर तक बढ़ा दिया है। वैज्ञानिकों का कहना है कि यदि यही रफ्तार जारी रही तो अगली सदी में कई तटीय शहर समुद्र में समा जाएँगे।"
     },
     {
       "type": "paragraph",
-      "id": "b2titkj"
+      "id": "b2titkj",
+      "content": "प्रकृति की रक्षा के लिए हमें अपनी जीवनशैली में आमूल परिवर्तन लाना होगा। नवीकरणीय ऊर्जा को अपनाना, जल का संयमित उपयोग, पेड़-पौधे लगाना और पुनर्चक्रण को प्रोत्साहन देना : ये छोटे-छोटे कदम मिलकर एक बड़ा बदलाव ला सकते हैं। प्रकृति के साथ सहकार की भावना ही आने वाली पीढ़ियों के जीवन को सुरक्षित रख सकती है।"
     },
     {
       "type": "paragraph",
-      "id": "p9qqjma"
+      "id": "p9qqjma",
+      "content": "नीचे दिए प्रश्नों के उत्तर गद्यांश के आधार पर दीजिए:"
     },
     {
       "type": "paragraph",
-      "id": "trb3zyl"
+      "id": "trb3zyl",
+      "content": "1. इस गद्यांश का उचित शीर्षक क्या होगा?"
     },
     {
       "type": "paragraph",
-      "id": "w1tuori"
+      "id": "w1tuori",
+      "content": "उत्तर: 'मानव और प्रकृति: बदलता संबंध' या 'प्रकृति की रक्षा: आज की आवश्यकता'"
     },
     {
       "type": "paragraph",
-      "id": "otnx71e"
+      "id": "otnx71e",
+      "content": "2. मनुष्य ने प्रकृति के साथ शोषक का व्यवहार कब शुरू किया?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x6hlyo0"
+      "id": "x6hlyo0",
+      "content": "उत्तर: औद्योगिक क्रांति के बाद"
     },
     {
       "type": "paragraph",
-      "id": "2484abz"
+      "id": "2484abz",
+      "content": "3. वैज्ञानिकों की क्या चेतावनी है?"
     },
     {
       "type": "paragraph",
-      "id": "e7pnhi7"
+      "id": "e7pnhi7",
+      "content": "उत्तर: यदि वर्तमान रफ्तार जारी रही तो अगली सदी में कई तटीय शहर समुद्र में समा जाएँगे।"
     },
     {
       "type": "paragraph",
-      "id": "mh6rls5"
+      "id": "mh6rls5",
+      "content": "4. 'आमूल' शब्द का अर्थ क्या है?"
     },
     {
       "type": "paragraph",
-      "id": "yt3npd5"
+      "id": "yt3npd5",
+      "content": "उत्तर: मूल से / पूर्णतः / जड़ से"
     },
     {
       "type": "paragraph",
-      "id": "yamit4e"
+      "id": "yamit4e",
+      "content": "5. गद्यांश के अनुसार प्रकृति की रक्षा के लिए कौन-कौन से उपाय सुझाए गए हैं?"
     },
     {
       "type": "paragraph",
-      "id": "q9bnyf4"
+      "id": "q9bnyf4",
+      "content": "उत्तर: नवीकरणीय ऊर्जा अपनाना, जल का संयमित उपयोग, पेड़ लगाना और पुनर्चक्रण को बढ़ावा देना।"
     },
     {
       "id": "iy2gk74",
@@ -251,59 +268,73 @@
     },
     {
       "type": "paragraph",
-      "id": "j0tbyjj"
+      "id": "j0tbyjj",
+      "content": "शिक्षा किसी भी समाज की प्रगति की आधारशिला है। एक शिक्षित समाज न केवल आर्थिक विकास की ओर अग्रसर होता है बल्कि सामाजिक न्याय, लोकतांत्रिक मूल्यों और वैज्ञानिक चेतना को भी आत्मसात करता है। डॉ. भीमराव अंबेडकर ने शिक्षा को सामाजिक परिवर्तन का सबसे सशक्त हथियार बताया था।"
     },
     {
       "type": "paragraph",
-      "id": "un079hf"
+      "id": "un079hf",
+      "content": "परंतु भारत में शिक्षा की वास्तविक स्थिति चिंताजनक है। ग्रामीण क्षेत्रों में विद्यालयों की कमी, शिक्षकों की अनुपस्थिति, पाठ्यपुस्तकों का अभाव और लड़कियों की शिक्षा के प्रति सामाजिक उदासीनता : ये सभी समस्याएँ शिक्षा की गुणवत्ता को प्रभावित करती हैं। देश में आज भी करोड़ों बच्चे प्राथमिक शिक्षा भी पूरी नहीं कर पाते।"
     },
     {
       "type": "paragraph",
-      "id": "0vsuydi"
+      "id": "0vsuydi",
+      "content": "सरकार ने शिक्षा के क्षेत्र में अनेक कदम उठाए हैं। शिक्षा का अधिकार अधिनियम 2009 ने 6 से 14 वर्ष के सभी बच्चों के लिए निःशुल्क और अनिवार्य शिक्षा सुनिश्चित की है। नई राष्ट्रीय शिक्षा नीति 2020 में व्यावसायिक शिक्षा, डिजिटल तकनीक के एकीकरण और मातृभाषा में शिक्षण पर बल दिया गया है। यदि इन नीतियों का प्रभावी क्रियान्वयन हो तो भारत एक शिक्षित और सशक्त राष्ट्र बन सकता है।"
     },
     {
       "type": "paragraph",
-      "id": "7d656wg"
+      "id": "7d656wg",
+      "content": "नीचे दिए प्रश्नों के उत्तर गद्यांश के आधार पर दीजिए:"
     },
     {
       "type": "paragraph",
-      "id": "03cexfm"
+      "id": "03cexfm",
+      "content": "1. इस गद्यांश का सर्वोचित शीर्षक क्या होगा?"
     },
     {
       "type": "paragraph",
-      "id": "r1iom0c"
+      "id": "r1iom0c",
+      "content": "उत्तर: 'भारत में शिक्षा: समस्याएँ और समाधान' या 'शिक्षा और सामाजिक प्रगति'"
     },
     {
       "type": "paragraph",
-      "id": "2agpi44"
+      "id": "2agpi44",
+      "content": "2. डॉ. अंबेडकर ने शिक्षा को क्या बताया था?"
     },
     {
       "type": "paragraph",
-      "id": "nlytpqs"
+      "id": "nlytpqs",
+      "content": "उत्तर: सामाजिक परिवर्तन का सबसे सशक्त हथियार"
     },
     {
       "type": "paragraph",
-      "id": "mau2cxg"
+      "id": "mau2cxg",
+      "content": "3. शिक्षा के अधिकार अधिनियम के अनुसार किन बच्चों के लिए शिक्षा अनिवार्य है?"
     },
     {
       "type": "paragraph",
-      "id": "9rtvryw"
+      "id": "9rtvryw",
+      "content": "उत्तर: 6 से 14 वर्ष के सभी बच्चों के लिए"
     },
     {
       "type": "paragraph",
-      "id": "93d51fu"
+      "id": "93d51fu",
+      "content": "4. 'आत्मसात' शब्द का अर्थ क्या है?"
     },
     {
       "type": "paragraph",
-      "id": "v3zpoyz"
+      "id": "v3zpoyz",
+      "content": "उत्तर: अपने में मिला लेना / आंतरिक रूप से अपनाना"
     },
     {
       "type": "paragraph",
-      "id": "lnobvor"
+      "id": "lnobvor",
+      "content": "5. नई राष्ट्रीय शिक्षा नीति 2020 में किन बातों पर बल दिया गया है?"
     },
     {
       "type": "paragraph",
-      "id": "icqjdf3"
+      "id": "icqjdf3",
+      "content": "उत्तर: व्यावसायिक शिक्षा, डिजिटल तकनीक के एकीकरण और मातृभाषा में शिक्षण पर।"
     },
     {
       "id": "li3m0w3",
@@ -313,59 +344,73 @@
     },
     {
       "type": "paragraph",
-      "id": "1nhvzct"
+      "id": "1nhvzct",
+      "content": "विज्ञान और आस्था का संबंध सदा से जटिल और बहुआयामी रहा है। कुछ लोग इन्हें परस्पर विरोधी मानते हैं : एक तर्क पर आधारित है, दूसरी श्रद्धा पर। परंतु वास्तव में ये दोनों मानव जिज्ञासा के भिन्न आयाम हैं, न कि प्रतिद्वंद्वी।"
     },
     {
       "type": "paragraph",
-      "id": "xiy9c00"
+      "id": "xiy9c00",
+      "content": "विज्ञान प्रयोग और प्रमाण के आधार पर सत्य की खोज करता है। यह भौतिक जगत के रहस्यों को उजागर करता है। आस्था उन प्रश्नों का उत्तर देती है जो विज्ञान की पहुँच से परे हैं : जैसे जीवन का उद्देश्य, नैतिकता का आधार और मृत्यु के बाद क्या। महान वैज्ञानिक आइंस्टीन ने कहा था : 'विज्ञान के बिना आस्था अंधी है और आस्था के बिना विज्ञान लँगड़ा।'"
     },
     {
       "type": "paragraph",
-      "id": "zz18t51"
+      "id": "zz18t51",
+      "content": "भारतीय परंपरा में विज्ञान और आस्था कभी विरोधी नहीं रहे। आर्यभट्ट, वराहमिहिर और भास्कराचार्य जैसे महान भारतीय वैज्ञानिक गहरे आस्थावान भी थे। आज आवश्यकता इस बात की है कि हम वैज्ञानिक सोच को अंधविश्वास से मुक्त करें और आस्था को अंधभक्ति से बचाएँ। दोनों का समन्वय ही एक संपूर्ण और संतुलित जीवन का आधार है।"
     },
     {
       "type": "paragraph",
-      "id": "kchgsmm"
+      "id": "kchgsmm",
+      "content": "नीचे दिए प्रश्नों के उत्तर गद्यांश के आधार पर दीजिए:"
     },
     {
       "type": "paragraph",
-      "id": "tqgqvjn"
+      "id": "tqgqvjn",
+      "content": "1. गद्यांश का उचित शीर्षक क्या होगा?"
     },
     {
       "type": "paragraph",
-      "id": "u92b15o"
+      "id": "u92b15o",
+      "content": "उत्तर: 'विज्ञान और आस्था: विरोध नहीं, सामंजस्य' या 'विज्ञान और धर्म: एक संतुलन'"
     },
     {
       "type": "paragraph",
-      "id": "765u070"
+      "id": "765u070",
+      "content": "2. आइंस्टीन ने क्या कहा था?"
     },
     {
       "type": "paragraph",
-      "id": "2ggqi3j"
+      "id": "2ggqi3j",
+      "content": "उत्तर: 'विज्ञान के बिना आस्था अंधी है और आस्था के बिना विज्ञान लँगड़ा।'"
     },
     {
       "type": "paragraph",
-      "id": "zvaratg"
+      "id": "zvaratg",
+      "content": "3. आस्था किन प्रश्नों का उत्तर देती है?"
     },
     {
       "type": "paragraph",
-      "id": "ib6o8g2"
+      "id": "ib6o8g2",
+      "content": "उत्तर: जीवन का उद्देश्य, नैतिकता का आधार और मृत्यु के बाद क्या : ये विज्ञान की पहुँच से परे प्रश्न।"
     },
     {
       "type": "paragraph",
-      "id": "3hw63o2"
+      "id": "3hw63o2",
+      "content": "4. 'जिज्ञासा' शब्द का अर्थ क्या है?"
     },
     {
       "type": "paragraph",
-      "id": "qbthvpm"
+      "id": "qbthvpm",
+      "content": "उत्तर: जानने की इच्छा / curiosity"
     },
     {
       "type": "paragraph",
-      "id": "grs54pt"
+      "id": "grs54pt",
+      "content": "5. गद्यांश के अनुसार आज क्या आवश्यकता है?"
     },
     {
       "type": "paragraph",
-      "id": "2i3pvo6"
+      "id": "2i3pvo6",
+      "content": "उत्तर: वैज्ञानिक सोच को अंधविश्वास से और आस्था को अंधभक्ति से मुक्त करने की।"
     },
     {
       "id": "vjgd8c5",
@@ -375,69 +420,79 @@
     },
     {
       "type": "paragraph",
-      "id": "pjautls"
+      "id": "pjautls",
+      "content": "लोकतंत्र में नागरिकों की भूमिका केवल मतदान तक सीमित नहीं है। एक स्वस्थ लोकतंत्र के लिए जागरूक, सक्रिय और उत्तरदायी नागरिकों की आवश्यकता है जो न केवल अपने अधिकारों के प्रति सचेत हों बल्कि अपने कर्तव्यों का भी निर्वाह करें।"
     },
     {
       "type": "paragraph",
-      "id": "4yddtnv"
+      "id": "4yddtnv",
+      "content": "भारतीय संविधान के अनुच्छेद 51-क में मूल कर्तव्यों का उल्लेख है जो प्रत्येक नागरिक से अपेक्षित हैं। इनमें संविधान का पालन करना, राष्ट्रीय एकता बनाए रखना, वैज्ञानिक दृष्टिकोण विकसित करना, सार्वजनिक संपत्ति की रक्षा करना और पर्यावरण का संरक्षण करना शामिल है। ये कर्तव्य नागरिकों को याद दिलाते हैं कि अधिकार और कर्तव्य एक ही सिक्के के दो पहलू हैं।"
     },
     {
       "type": "paragraph",
-      "id": "zqyd9cu"
-    },
-    {
-      "type": "pullQuote",
-      "content": "18.11  शब्द-अर्थ प्रश्नों की रणनीति : Context Clues",
-      "id": "7zmaqv4"
+      "id": "zqyd9cu",
+      "content": "दुर्भाग्यवश आज भारत में नागरिक कर्तव्यों के प्रति उदासीनता दिखाई देती है। मतदान से विमुखता, सार्वजनिक संपत्ति को नुकसान पहुँचाना, भ्रष्टाचार को सहन करना और अफवाहों पर विश्वास करना : ये सब नागरिक निष्क्रियता के लक्षण हैं। यदि प्रत्येक नागरिक अपने कर्तव्यों के प्रति सचेत हो जाए तो भारत एक आदर्श लोकतंत्र बन सकता है।"
     },
     {
       "type": "paragraph",
-      "id": "he94srh"
+      "id": "he94srh",
+      "content": "नीचे दिए प्रश्नों के उत्तर गद्यांश के आधार पर दीजिए:"
     },
     {
       "type": "paragraph",
-      "id": "wb8j929"
+      "id": "wb8j929",
+      "content": "1. इस गद्यांश का उचित शीर्षक सुझाइए।"
     },
     {
       "type": "paragraph",
-      "id": "avw4ekw"
+      "id": "avw4ekw",
+      "content": "उत्तर: 'लोकतंत्र और नागरिक कर्तव्य' या 'जागरूक नागरिक: स्वस्थ लोकतंत्र की नींव'"
     },
     {
       "type": "paragraph",
-      "id": "2fkfy1k"
+      "id": "2fkfy1k",
+      "content": "2. मूल कर्तव्यों का उल्लेख संविधान के किस अनुच्छेद में है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cre3ie4"
+      "id": "cre3ie4",
+      "content": "उत्तर: अनुच्छेद 51-क में"
     },
     {
       "type": "paragraph",
-      "id": "2bpz1s7"
+      "id": "2bpz1s7",
+      "content": "3. लेखक के अनुसार नागरिक निष्क्रियता के क्या लक्षण हैं?"
     },
     {
       "type": "paragraph",
-      "id": "j3e8qvo"
+      "id": "j3e8qvo",
+      "content": "उत्तर: मतदान से विमुखता, सार्वजनिक संपत्ति को नुकसान, भ्रष्टाचार को सहन करना और अफवाहों पर विश्वास करना।"
     },
     {
       "type": "paragraph",
-      "id": "7ef0cuz"
+      "id": "7ef0cuz",
+      "content": "4. 'विमुखता' शब्द का अर्थ क्या है?"
     },
     {
       "type": "paragraph",
-      "id": "3gxud21"
+      "id": "3gxud21",
+      "content": "उत्तर: दूरी बनाना / रुचि न रखना / मुँह फेर लेना"
     },
     {
       "type": "paragraph",
-      "id": "jwwuuvs"
+      "id": "jwwuuvs",
+      "content": "5. गद्यांश में 'अधिकार और कर्तव्य एक ही सिक्के के दो पहलू हैं' : इस कथन का भाव स्पष्ट कीजिए।"
     },
     {
       "type": "paragraph",
-      "id": "s66sjhm"
+      "id": "s66sjhm",
+      "content": "उत्तर: जैसे सिक्के के दो पहलू अलग नहीं किए जा सकते, उसी प्रकार अधिकार और कर्तव्य को भी अलग नहीं किया जा सकता। दोनों साथ-साथ चलते हैं।"
     },
     {
       "type": "paragraph",
-      "id": "v3lvvr9"
+      "id": "v3lvvr9",
+      "content": "<strong>भाग ख : English Reading Comprehension</strong>"
     },
     {
       "id": "dhoedxv",
@@ -447,64 +502,79 @@
     },
     {
       "type": "paragraph",
-      "id": "gvysoem"
+      "id": "gvysoem",
+      "content": "The rapid growth of digital technology has brought enormous benefits to modern society, transforming the way we communicate, learn, work and access information. However, not everyone has been able to benefit equally from this digital revolution. The gap between those who have access to digital tools and those who do not : known as the digital divide : remains one of the most pressing challenges of our time."
     },
     {
       "type": "paragraph",
-      "id": "2ryfy7s"
+      "id": "2ryfy7s",
+      "content": "In India, the digital divide manifests in several ways. Urban residents have far greater access to high-speed internet, smartphones and digital services than their rural counterparts. Literacy barriers further compound the problem: even when technology is available, people with low levels of education often lack the skills to use it effectively. Gender disparities are also significant : women and girls in rural areas are less likely than men to own smartphones or use the internet."
     },
     {
       "type": "paragraph",
-      "id": "nlz5slw"
+      "id": "nlz5slw",
+      "content": "The consequences of the digital divide are far-reaching. In education, students without internet access were severely disadvantaged during the COVID-19 pandemic when schools shifted to online learning. In the economy, those without digital skills are increasingly excluded from the fastest-growing sectors of the job market. In governance, digital public services may inadvertently exclude the most vulnerable citizens."
     },
     {
       "type": "paragraph",
-      "id": "r5wlbnl"
+      "id": "r5wlbnl",
+      "content": "Addressing the digital divide requires a multi-pronged approach. Expanding broadband infrastructure to rural and remote areas, promoting digital literacy programmes, subsidising affordable devices for low-income households and ensuring content is available in local languages are all critical steps. Bridging the digital divide is not just a matter of equity : it is essential for India's inclusive growth."
     },
     {
       "type": "paragraph",
-      "id": "al555v5"
+      "id": "al555v5",
+      "content": "Answer the following questions based on the passage:"
     },
     {
       "type": "paragraph",
-      "id": "589ycgi"
+      "id": "589ycgi",
+      "content": "1. What is the 'digital divide' as described in the passage?"
     },
     {
       "type": "paragraph",
-      "id": "u9jnd4q"
+      "id": "u9jnd4q",
+      "content": "Answer: The gap between those who have access to digital tools and those who do not."
     },
     {
       "type": "paragraph",
-      "id": "qljpqie"
+      "id": "qljpqie",
+      "content": "2. How does the digital divide affect education?"
     },
     {
       "type": "paragraph",
-      "id": "0yjcrpg"
+      "id": "0yjcrpg",
+      "content": "Answer: Students without internet access were severely disadvantaged during COVID-19 when schools shifted to online learning."
     },
     {
       "type": "paragraph",
-      "id": "zponkrh"
+      "id": "zponkrh",
+      "content": "3. What does 'multi-pronged approach' mean in this context?"
     },
     {
       "type": "paragraph",
-      "id": "nhy4tgs"
+      "id": "nhy4tgs",
+      "content": "Answer: An approach that involves multiple strategies simultaneously : expanding infrastructure, promoting literacy, subsidising devices and ensuring local language content."
     },
     {
       "type": "paragraph",
-      "id": "p58uszk"
+      "id": "p58uszk",
+      "content": "4. Find a word in the passage that means 'unintentionally' or 'without meaning to'."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "14il1ox"
+      "id": "14il1ox",
+      "content": "Answer: 'Inadvertently' (paragraph 3)"
     },
     {
       "type": "paragraph",
-      "id": "h6q0jzi"
+      "id": "h6q0jzi",
+      "content": "5. What is the most suitable title for this passage?"
     },
     {
       "type": "paragraph",
-      "id": "kxkc35i"
+      "id": "kxkc35i",
+      "content": "Answer: 'The Digital Divide: Challenges and Solutions' or 'Bridging India's Digital Gap'"
     },
     {
       "id": "qighmf5",
@@ -514,64 +584,79 @@
     },
     {
       "type": "paragraph",
-      "id": "3pkshrb"
+      "id": "3pkshrb",
+      "content": "In a culture that celebrates success and stigmatises failure, it is easy to forget that failure is often the most powerful catalyst for growth. The history of human achievement is littered with failures that preceded triumph : Edison's ten thousand unsuccessful attempts before inventing the light bulb, J.K. Rowling's rejection by twelve publishers before Harry Potter became a global phenomenon, and Gandhi's early political setbacks before he became the father of a nation."
     },
     {
       "type": "paragraph",
-      "id": "ix9s253"
+      "id": "ix9s253",
+      "content": "Psychologists and educators increasingly recognise the importance of what they call 'productive failure' : the process by which individuals learn more effectively when they struggle and make mistakes than when they are given the correct solution from the outset. Research has shown that students who are allowed to grapple with difficult problems before being taught the solution develop a deeper and more durable understanding than those who receive instruction first."
     },
     {
       "type": "paragraph",
-      "id": "tu2yh1e"
+      "id": "tu2yh1e",
+      "content": "The ability to fail gracefully and learn from failure is closely linked to a concept known as 'growth mindset', popularised by psychologist Carol Dweck. People with a growth mindset believe that their abilities can be developed through dedication and hard work. They see failure not as evidence of their inadequacy but as a springboard for growth and learning. In contrast, those with a 'fixed mindset' believe that intelligence and talent are innate and unchangeable, leading them to avoid challenges for fear of failure."
     },
     {
       "type": "paragraph",
-      "id": "9rxg8r0"
+      "id": "9rxg8r0",
+      "content": "For India to become an innovative and entrepreneurial nation, it must cultivate a culture that embraces failure as part of the learning journey. Educational institutions must reward effort and intellectual risk-taking, not just results. Employers must create environments where employees feel safe to experiment and fail. Only then can India unleash the full creative potential of its people."
     },
     {
       "type": "paragraph",
-      "id": "12czl97"
+      "id": "12czl97",
+      "content": "Answer the following questions based on the passage:"
     },
     {
       "type": "paragraph",
-      "id": "2s3edhq"
+      "id": "2s3edhq",
+      "content": "1. What does the author mean by 'productive failure'?"
     },
     {
       "type": "paragraph",
-      "id": "6r3qdoe"
+      "id": "6r3qdoe",
+      "content": "Answer: The process by which people learn more effectively when they struggle and make mistakes, rather than being given the correct answer from the start."
     },
     {
       "type": "paragraph",
-      "id": "23or9q5"
+      "id": "23or9q5",
+      "content": "2. How does a 'growth mindset' differ from a 'fixed mindset'?"
     },
     {
       "type": "paragraph",
-      "id": "hkk8oos"
+      "id": "hkk8oos",
+      "content": "Answer: People with a growth mindset believe abilities can be developed through hard work and see failure as a learning opportunity. Those with a fixed mindset believe intelligence is innate and avoid challenges for fear of failure."
     },
     {
       "type": "paragraph",
-      "id": "ezcaznk"
+      "id": "ezcaznk",
+      "content": "3. What examples does the author give of famous failures that led to success?"
     },
     {
       "type": "paragraph",
-      "id": "njwe4y7"
+      "id": "njwe4y7",
+      "content": "Answer: Edison's ten thousand attempts before inventing the light bulb, J.K. Rowling's rejection by twelve publishers before Harry Potter succeeded, and Gandhi's early political setbacks."
     },
     {
       "type": "paragraph",
-      "id": "qeozcjx"
+      "id": "qeozcjx",
+      "content": "4. Find a word in passage 3 that means 'inborn' or 'natural'."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tcqsfkb"
+      "id": "tcqsfkb",
+      "content": "Answer: 'Innate'"
     },
     {
       "type": "paragraph",
-      "id": "qyaqofy"
+      "id": "qyaqofy",
+      "content": "5. What does the author suggest India must do to become an innovative nation?"
     },
     {
       "type": "paragraph",
-      "id": "ivoo3ie"
+      "id": "ivoo3ie",
+      "content": "Answer: Cultivate a culture that embraces failure, reward effort in schools, and create workplaces where people feel safe to experiment and fail."
     },
     {
       "id": "2t1eq36",
@@ -581,63 +666,78 @@
     },
     {
       "type": "paragraph",
-      "id": "88at8wr"
+      "id": "88at8wr",
+      "content": "Language is far more than a medium of communication : it is the vessel in which culture, history and identity are carried from one generation to the next. When a child speaks in her mother tongue, she is not merely conveying information; she is drawing upon a rich inheritance of idioms, metaphors, stories and ways of understanding the world that have evolved over centuries."
     },
     {
       "type": "paragraph",
-      "id": "my9goh6"
+      "id": "my9goh6",
+      "content": "In the era of globalisation, English has emerged as the dominant language of international commerce, science and diplomacy. This has created enormous pressures on speakers of minority languages to abandon their mother tongues in favour of a language that offers greater economic opportunity. The result is a global crisis of linguistic diversity: according to UNESCO, half of the approximately 7,000 languages currently spoken in the world are expected to disappear by the end of this century."
     },
     {
       "type": "paragraph",
-      "id": "ta6vec3"
+      "id": "ta6vec3",
+      "content": "The loss of a language is not merely a cultural loss : it is a cognitive loss as well. Each language encodes a unique way of perceiving and interpreting the world. The Inuit people of the Arctic, for example, have dozens of words for different types of snow : a richness of vocabulary that reflects centuries of intimate knowledge of their environment. When such a language disappears, that knowledge disappears with it."
     },
     {
       "type": "paragraph",
-      "id": "geyx1kg"
+      "id": "geyx1kg",
+      "content": "India, with over 700 living languages, has a particular responsibility to protect its linguistic heritage. The new National Education Policy's emphasis on mother-tongue based education is a step in the right direction. Preserving linguistic diversity is not a retreat into parochialism : it is a recognition that human civilisation is enriched, not diminished, by the variety of languages through which we make sense of our world."
     },
     {
       "type": "paragraph",
-      "id": "4l9qvtw"
+      "id": "4l9qvtw",
+      "content": "Answer the following questions based on the passage:"
     },
     {
       "type": "paragraph",
-      "id": "1eit4g1"
+      "id": "1eit4g1",
+      "content": "1. According to the author, what is language beyond a medium of communication?"
     },
     {
       "type": "paragraph",
-      "id": "bf4gn8q"
+      "id": "bf4gn8q",
+      "content": "Answer: A vessel in which culture, history and identity are carried from one generation to the next."
     },
     {
       "type": "paragraph",
-      "id": "qr4mt9n"
+      "id": "qr4mt9n",
+      "content": "2. What does UNESCO say about language disappearance?"
     },
     {
       "type": "paragraph",
-      "id": "1b0z4cg"
+      "id": "1b0z4cg",
+      "content": "Answer: Half of the approximately 7,000 languages currently spoken are expected to disappear by the end of this century."
     },
     {
       "type": "paragraph",
-      "id": "yhhokou"
+      "id": "yhhokou",
+      "content": "3. What example does the author use to show the cognitive value of languages?"
     },
     {
       "type": "paragraph",
-      "id": "gh75lp8"
+      "id": "gh75lp8",
+      "content": "Answer: The Inuit people of the Arctic who have dozens of words for different types of snow, reflecting centuries of environmental knowledge."
     },
     {
       "type": "paragraph",
-      "id": "zmuo2ug"
+      "id": "zmuo2ug",
+      "content": "4. What does 'parochialism' mean as used in the last paragraph?"
     },
     {
       "type": "paragraph",
-      "id": "pr3et64"
+      "id": "pr3et64",
+      "content": "Answer: A narrow or limited outlook; excessive concern with local issues at the expense of broader perspectives."
     },
     {
       "type": "paragraph",
-      "id": "fqdnq03"
+      "id": "fqdnq03",
+      "content": "5. What is the most suitable title for this passage?"
     },
     {
       "type": "paragraph",
-      "id": "xc2rttz"
+      "id": "xc2rttz",
+      "content": "Answer: 'Language, Identity and the Crisis of Linguistic Diversity' or 'Why Languages Matter'"
     },
     {
       "id": "ev66gjh",
@@ -647,23 +747,28 @@
     },
     {
       "type": "paragraph",
-      "id": "h38337h"
+      "id": "h38337h",
+      "content": "A free press is often described as the fourth pillar of democracy, alongside the legislature, executive and judiciary. In a democratic society, the media plays a vital role: it informs citizens, holds those in power accountable, gives voice to marginalised communities and creates the informed public discourse on which democratic decision-making depends. Where the press is free, democracy tends to flourish; where it is suppressed, authoritarian tendencies tend to prevail."
     },
     {
       "type": "paragraph",
-      "id": "trv0x90"
+      "id": "trv0x90",
+      "content": "However, the relationship between democracy and the press is not without its complications. The rise of digital media has democratised information production, allowing ordinary citizens to report and share news in real time. At the same time, it has created a fertile environment for misinformation, propaganda and deliberate manipulation of public opinion. The proliferation of social media platforms has made it increasingly difficult to distinguish credible journalism from sensationalism and outright falsehood."
     },
     {
       "type": "paragraph",
-      "id": "t57vyam"
+      "id": "t57vyam",
+      "content": "In India, the media landscape is vast and diverse, with thousands of newspapers, television channels and digital news portals operating in dozens of languages. This diversity is a strength. However, concerns have been raised about media ownership concentration, the influence of advertisers over editorial decisions and the increasing use of sedition and defamation laws to silence critical voices. A media that is economically dependent or politically intimidated cannot effectively fulfil its democratic function."
     },
     {
       "type": "paragraph",
-      "id": "y1w16iq"
+      "id": "y1w16iq",
+      "content": "Strengthening press freedom in India requires multiple measures: transparent media ownership laws, robust legal protections for journalists, investment in public media and digital literacy programmes that help citizens critically evaluate the information they consume. Ultimately, democracy and press freedom are symbiotic : each depends on the other for its health and vitality."
     },
     {
       "type": "paragraph",
-      "id": "eio3e1s"
+      "id": "eio3e1s",
+      "content": "Answer the following questions based on the passage:"
     },
     {
       "type": "examAlert",
@@ -675,43 +780,53 @@
     },
     {
       "type": "paragraph",
-      "id": "23exrae"
+      "id": "23exrae",
+      "content": "1. Why is the press called the 'fourth pillar of democracy'?"
     },
     {
       "type": "paragraph",
-      "id": "45hot1g"
+      "id": "45hot1g",
+      "content": "Answer: Because it informs citizens, holds power accountable, voices marginalised communities and enables informed public discourse : essential functions alongside the legislature, executive and judiciary."
     },
     {
       "type": "paragraph",
-      "id": "h87e95z"
+      "id": "h87e95z",
+      "content": "2. What challenges has the rise of digital media created?"
     },
     {
       "type": "paragraph",
-      "id": "nce9zd4"
+      "id": "nce9zd4",
+      "content": "Answer: It has created an environment for misinformation, propaganda and manipulation of public opinion, making it harder to distinguish credible journalism from falsehood."
     },
     {
       "type": "paragraph",
-      "id": "b39lxmn"
+      "id": "b39lxmn",
+      "content": "3. What concerns about Indian media does the author raise?"
     },
     {
       "type": "paragraph",
-      "id": "qgjgtln"
+      "id": "qgjgtln",
+      "content": "Answer: Media ownership concentration, advertiser influence over editorial decisions, and the use of sedition and defamation laws to silence critical voices."
     },
     {
       "type": "paragraph",
-      "id": "oxhoqov"
+      "id": "oxhoqov",
+      "content": "4. What does 'symbiotic' mean as used in the last paragraph?"
     },
     {
       "type": "paragraph",
-      "id": "wu0d5m5"
+      "id": "wu0d5m5",
+      "content": "Answer: Mutually dependent : each benefits from and depends on the other for survival and health."
     },
     {
       "type": "paragraph",
-      "id": "pyliwje"
+      "id": "pyliwje",
+      "content": "5. What does the author suggest to strengthen press freedom?"
     },
     {
       "type": "paragraph",
-      "id": "6xitt69"
+      "id": "6xitt69",
+      "content": "Answer: Transparent ownership laws, legal protections for journalists, investment in public media and digital literacy programmes for citizens."
     },
     {
       "id": "boe5gz4",
@@ -721,7 +836,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0vokl7v"
+      "id": "0vokl7v",
+      "content": "Reading Comprehension में शब्द-अर्थ प्रश्न अक्सर पूछे जाते हैं। पाठक को शब्दकोश के बिना संदर्भ से अर्थ निकालना होता है:"
     },
     {
       "id": "7wrhxl1",
@@ -730,49 +846,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Context Clue का प्रकार</strong></p>",
+            "<p><strong>विवरण</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Definition Clue</p>",
+            "<p>शब्द की परिभाषा वाक्य में ही दी गई हो</p>",
+            "<p>'Heliocentric, which means sun-centred, was Galileo's theory.'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Synonym Clue</p>",
+            "<p>पास में समान अर्थ का शब्द हो</p>",
+            "<p>'He was obstinate, stubbornly refusing to change his mind.'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Antonym Clue</p>",
+            "<p>विपरीत अर्थ का शब्द संकेत दे</p>",
+            "<p>'Unlike his verbose colleague, he was brief and concise.'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example Clue</p>",
+            "<p>उदाहरणों से अर्थ का अनुमान</p>",
+            "<p>'Fauna such as lions, elephants and rhinos...'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>General Context</p>",
+            "<p>पूरे वाक्य या अनुच्छेद के भाव से अर्थ</p>",
+            "<p>गद्यांश का विषय और भाव देखकर</p>"
           ]
         }
       ]
@@ -785,46 +901,51 @@
     },
     {
       "type": "paragraph",
-      "id": "89q7bt2"
+      "id": "89q7bt2",
+      "content": "निम्नलिखित गद्यांश पढ़कर नीचे दिए गए प्रश्नों के उत्तर दीजिए:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9epf9pe"
+      "id": "9epf9pe",
+      "content": "<strong>हिंदी स्वतंत्र अभ्यास</strong>"
     },
     {
       "type": "paragraph",
-      "id": "o6bsqxo"
+      "id": "o6bsqxo",
+      "content": "मनोबल ही मनुष्य की सबसे बड़ी शक्ति है। जिस व्यक्ति का मनोबल ऊँचा होता है, वह विपरीत परिस्थितियों में भी अपना संयम नहीं खोता। इतिहास में ऐसे अनेक उदाहरण मिलते हैं जहाँ साधनहीन व्यक्तियों ने अपने मनोबल के बल पर असंभव को संभव कर दिखाया। महात्मा गांधी के पास न सेना थी, न शस्त्र : फिर भी उन्होंने केवल अपने मनोबल और नैतिक शक्ति से विश्व की सबसे बड़ी सत्ता को झुकाया। इसीलिए कहा जाता है कि शरीर की शक्ति क्षणिक होती है, मन की शक्ति स्थायी।"
     },
     {
       "id": "eki6zul",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "उपर्युक्त गद्यांश का उचित शीर्षक लिखिए।",
+        "'मनोबल' से क्या तात्पर्य है?",
+        "गांधीजी का उदाहरण देकर लेखक क्या सिद्ध करना चाहते हैं?",
+        "'विपरीत परिस्थितियों' का अर्थ क्या है?",
+        "गद्यांश के अनुसार शरीर और मन की शक्ति में क्या अंतर है?"
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q6m8cct"
+      "id": "q6m8cct",
+      "content": "<strong>English Independent Practice</strong>"
     },
     {
       "type": "paragraph",
-      "id": "s9cqif1"
+      "id": "s9cqif1",
+      "content": "Biodiversity refers to the variety of life on Earth : the millions of different species of plants, animals, fungi and micro-organisms that inhabit our planet. This diversity is not merely aesthetically pleasing; it is functionally essential. Ecosystems depend on the interaction of many different species for their stability and productivity. When species are lost, ecosystems can become fragile, less productive and less able to withstand disturbance. The current rate of species extinction : estimated to be up to 1,000 times higher than the natural background rate : has led scientists to declare that we are in the midst of a sixth mass extinction, driven not by a meteor or volcanic eruption but by human activity."
     },
     {
       "id": "s184r7t",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "What is biodiversity?",
+        "Why is biodiversity described as 'functionally essential'?",
+        "What is the 'sixth mass extinction' and what causes it according to the passage?",
+        "Find a word in the passage that means 'residents' or 'live in'.",
+        "Suggest a suitable title for this passage."
       ]
     },
     {
@@ -837,13 +958,13 @@
       "id": "hgaie8q",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "अपठित गद्यांश में उत्तर गद्यांश में ही होता है : कल्पना नहीं करें।",
+        "गद्यांश पढ़ने से पहले प्रश्न पढ़ें : इससे ध्यान केंद्रित होगा।",
+        "शीर्षक का उत्तर : गद्यांश का मुख्य विचार पहचानें।",
+        "शब्द-अर्थ : संदर्भ से निकालें, Context Clues का उपयोग करें।",
+        "अनुमान आधारित प्रश्न : गद्यांश के भाव से, गद्यांश से बाहर नहीं।",
+        "उत्तर पूर्ण वाक्य में लिखें : केवल एक-दो शब्द में नहीं।",
+        "हिंदी गद्यांश में मात्रा और वर्तनी पर ध्यान दें।"
       ]
     }
   ],

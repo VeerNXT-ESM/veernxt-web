@@ -53,65 +53,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Formula</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>GDP (Gross Domestic Product)</p>",
+            "<p>Total value of goods/services produced within country's borders</p>",
+            "<p>C + I + G + (X - M)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>GNP (Gross National Product)</p>",
+            "<p>GDP + Net Factor Income from Abroad (NFIA)</p>",
+            "<p>GDP + NFIA</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>NNP (Net National Product)</p>",
+            "<p>GNP minus depreciation</p>",
+            "<p>GNP - Depreciation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>National Income (NI)</p>",
+            "<p>NNP at factor cost</p>",
+            "<p>NNP - Indirect taxes + Subsidies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Per Capita Income</p>",
+            "<p>National Income / Population</p>",
+            "<p>NI / Population</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Real GDP</p>",
+            "<p>GDP adjusted for inflation using base year prices</p>",
+            "<p>Nominal GDP / GDP Deflator</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nominal GDP</p>",
+            "<p>GDP calculated at current prices</p>",
+            "<p>Current market prices</p>"
           ]
         }
       ]
@@ -129,78 +129,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Revenue Budget</p>",
+            "<p>Revenue receipts (taxes, non-tax) and revenue expenditure (salaries, subsidies, interest)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Capital Budget</p>",
+            "<p>Capital receipts (borrowings, disinvestment) and capital expenditure (assets, loans given)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fiscal Deficit</p>",
+            "<p>Total expenditure minus total receipts excluding borrowings; indicator of govt borrowing need</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Revenue Deficit</p>",
+            "<p>Revenue expenditure minus revenue receipts; reflects current account imbalance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Primary Deficit</p>",
+            "<p>Fiscal Deficit minus interest payments; reflects current year borrowing needs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Effective Revenue Deficit</p>",
+            "<p>Revenue Deficit minus grants for capital asset creation (GFCE)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>FRBM Act 2003</p>",
+            "<p>Fiscal Responsibility and Budget Management Act; mandates reduction in fiscal deficit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ConGBOlidated Fund of India</p>",
+            "<p>Main fund; all revenue/capital receipts; all expenditure drawn from here</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Contingency Fund of India</p>",
+            "<p>Rs.500 crore; for unforeseen expenditure; Parliament approval later</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Public Account of India</p>",
+            "<p>For funds where govt acts as banker; provident funds, small savings, etc.</p>"
           ]
         }
       ]
@@ -244,10 +244,10 @@
       "id": "vnqhypi",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Income Tax – levied on individual/corporate income; administered by CBDT",
+        "Corporate Tax – on company profits; reduced to 22% for domestic companies (15% for new manufacturing)",
+        "Capital Gains Tax – on profit from sale of capital assets; STCG and LTCG",
+        "Securities Transaction Tax (STT) – on equity trading; collected at GBOurce"
       ]
     },
     {
@@ -260,9 +260,9 @@
       "id": "e1ibmkx",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "GST (Goods and Services Tax) – introduced July 1, 2017; replaced VAT, Service Tax, Excise",
+        "Customs Duty – on import/export of goods; administered by CBIC",
+        "GST Council – chaired by Union Finance Minister; 2/3 weightage to states, 1/3 to Centre"
       ]
     },
     {
@@ -272,43 +272,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>GST Slab</strong></p>",
+            "<p><strong>Items</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>0% (Exempt)</p>",
+            "<p>Essential food items, fresh produce, education, healthcare</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>5%</p>",
+            "<p>Basic necessities, packaged food, economy class air travel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>12%</p>",
+            "<p>Processed food, computers, mobile phones</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>18%</p>",
+            "<p>Most services, consumer goods, financial services</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>28%</p>",
+            "<p>Luxury goods, sin goods (tobacco, aerated drinks), automobiles</p>"
           ]
         }
       ]
@@ -330,15 +330,16 @@
     },
     {
       "type": "paragraph",
-      "id": "18t514e"
+      "id": "18t514e",
+      "content": "India's Planning Commission (est. 1950) oversaw twelve Five Year Plans. It was replaced by NITI Aayog (National Institution for Transforming India) on January 1, 2015."
     },
     {
       "id": "fhq4b83",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "NITI Aayog is a policy think tank; does not allocate funds (unlike Planning Commission)",
+        "Headed by Prime Minister; CEO is key executive official",
+        "Key documents: India@2047 Vision, National Development Agenda"
       ]
     }
   ],

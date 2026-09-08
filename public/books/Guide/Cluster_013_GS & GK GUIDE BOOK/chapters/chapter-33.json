@@ -1,0 +1,472 @@
+{
+  "id": "q19xqc9",
+  "title": "Chapter 32: Volcanoes and Earthquakes",
+  "order": 33,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "e8s6hr8",
+      "content": "Volcanoes and earthquakes are major geological phenomena caused by movements inside the Earth. They are closely related to tectonic plate movements and the internal structure of the Earth. Understanding these processes helps explain landform formation, natural disasters, and plate tectonics."
+    },
+    {
+      "id": "0obk0jq",
+      "type": "image",
+      "imageId": "7ec0nkq",
+      "src": "/books/Guide/Cluster_013_GS & GK GUIDE BOOK/images/image_7ec0nkq.jpeg"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Seismic Wave Types",
+          "value": "3 (P, S, L Waves)",
+          "icon": "info"
+        },
+        {
+          "label": "Ring of Fire Share",
+          "value": "~68% Earthquakes",
+          "icon": "globe"
+        },
+        {
+          "label": "Volcano Categories",
+          "value": "3 Activity Types",
+          "icon": "check"
+        },
+        {
+          "label": "Richter Scale",
+          "value": "1-10 Magnitude",
+          "icon": "award"
+        }
+      ],
+      "id": "p503cpx"
+    },
+    {
+      "id": "2y7i05r",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Volcanoes"
+    },
+    {
+      "id": "xldofb8",
+      "type": "image",
+      "imageId": "bs0adqt",
+      "src": "/books/Guide/Cluster_013_GS & GK GUIDE BOOK/images/image_bs0adqt.jpeg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Volcanoes are classified by eruption frequency into Active, Dormant, and Extinct types, and by structure into Shield, Composite, and Dome volcanoes.",
+        "The point of origin of an earthquake inside the Earth is called the Focus (Hypocenter), while the point on the surface vertically above it is the Epicenter.",
+        "Primary (P) waves are compressional waves that travel fastest through solids, liquids, and gases.",
+        "Secondary (S) waves are transverse waves that can only travel through solid media, proving the outer core is liquid.",
+        "Earthquake magnitude measures energy released (Richter Scale), whereas earthquake intensity measures visible damage (Mercalli Scale)."
+      ],
+      "id": "t5p0a1u"
+    },
+    {
+      "type": "paragraph",
+      "id": "z7nma0g",
+      "content": "A volcano is an opening in the Earth's crust through which molten rock (magma), gases, and ash are expelled to the surface. When magma reaches the Earth's surface, it is called lava."
+    },
+    {
+      "id": "0gb98aj",
+      "type": "heading",
+      "level": 3,
+      "content": "Structure of a Volcano"
+    },
+    {
+      "type": "paragraph",
+      "id": "g14eaw4",
+      "content": "• Crater – bowl-shaped opening at the top of a volcano."
+    },
+    {
+      "type": "paragraph",
+      "id": "16yz3wq",
+      "content": "• Vent – the channel through which magma reaches the surface."
+    },
+    {
+      "type": "paragraph",
+      "id": "nqknpv1",
+      "content": "• Magma Chamber – underground reservoir of molten rock."
+    },
+    {
+      "type": "paragraph",
+      "id": "cv4okex",
+      "content": "• Lava Flow – molten rock flowing out during eruption."
+    },
+    {
+      "type": "paragraph",
+      "id": "1zkb7ed",
+      "content": "• Ash and Gas – volcanic eruptions release ash, steam, and gases."
+    },
+    {
+      "id": "xukxffw",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Volcanoes Based on Activity"
+    },
+    {
+      "id": "2v5n10q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Active Volcano</p>",
+            "<p>Currently erupting or likely to erupt</p>",
+            "<p>Mount Etna (Italy)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dormant Volcano</p>",
+            "<p>Inactive but may erupt again</p>",
+            "<p>Mount Fuji (Japan)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Extinct Volcano</p>",
+            "<p>No eruption expected again</p>",
+            "<p>Mount Kenya</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mcbnebz",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Volcanoes Based on Shape"
+    },
+    {
+      "id": "4bnp1nf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Features</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Shield Volcano</p>",
+            "<p>Broad and gently sloping</p>",
+            "<p>Mauna Loa (Hawaii)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Composite Volcano</p>",
+            "<p>Steep sides formed by alternating layers</p>",
+            "<p>Mount Vesuvius (Italy)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cinder Cone</p>",
+            "<p>Small steep volcano made of volcanic fragments</p>",
+            "<p>Paricutin (Mexico)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wotovnv",
+      "type": "heading",
+      "level": 3,
+      "content": "Effects of Volcanoes"
+    },
+    {
+      "type": "paragraph",
+      "id": "d82g7pf",
+      "content": "• Formation of new landforms."
+    },
+    {
+      "type": "paragraph",
+      "id": "phxgysj",
+      "content": "• Creation of fertile soils due to volcanic ash."
+    },
+    {
+      "type": "paragraph",
+      "id": "h9yaftc",
+      "content": "<img></img>• Volcanic disasters destroying settlements."
+    },
+    {
+      "type": "paragraph",
+      "id": "itzk3ba",
+      "content": "• Emission of gases affecting climate."
+    },
+    {
+      "id": "57jep9h",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Earthquakes"
+    },
+    {
+      "type": "paragraph",
+      "id": "ygs15ci",
+      "content": "An earthquake is the sudden shaking of the Earth's surface caused by the release of energy from movements within the Earth's crust. This energy travels in the form of seismic waves."
+    },
+    {
+      "id": "uxl7ko7",
+      "type": "heading",
+      "level": 3,
+      "content": "Important Terms"
+    },
+    {
+      "type": "paragraph",
+      "id": "1lyo5lp",
+      "content": "• Focus (Hypocenter) – point inside Earth where earthquake originates."
+    },
+    {
+      "type": "paragraph",
+      "id": "6tvarp4",
+      "content": "• Epicenter – point on the surface directly above the focus."
+    },
+    {
+      "type": "paragraph",
+      "id": "fiyib8x",
+      "content": "• Seismic Waves – energy waves produced during earthquakes."
+    },
+    {
+      "type": "paragraph",
+      "id": "i4ks2b5",
+      "content": "• Fault – fracture in Earth's crust where movement occurs."
+    },
+    {
+      "id": "8hh3hhy",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Seismic Waves"
+    },
+    {
+      "id": "vo0i9i5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Wave</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Medium</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>P Waves</p>",
+            "<p>Fastest seismic waves</p>",
+            "<p>Travel through solids, liquids and gases</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>S Waves</p>",
+            "<p>Slower than P waves</p>",
+            "<p>Travel only through solids</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>L Waves</p>",
+            "<p>Surface waves causing maximum damage</p>",
+            "<p>Travel along Earth's surface</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Primary Waves (P-Waves)",
+        "Secondary Waves (S-Waves)"
+      ],
+      "rows": [
+        [
+          "Wave Type",
+          "Longitudinal / Compressional",
+          "Transverse / Shear"
+        ],
+        [
+          "Medium of Propagation",
+          "Solids, Liquids, and Gases",
+          "Solids Only"
+        ],
+        [
+          "Relative Velocity",
+          "Fastest (Arrives first at seismograph)",
+          "Slower (Arrives second)"
+        ],
+        [
+          "Particle Movement",
+          "Parallel to direction of wave movement",
+          "Perpendicular to direction of wave movement"
+        ]
+      ],
+      "id": "o4xjhjv"
+    },
+    {
+      "id": "s0j3f1u",
+      "type": "heading",
+      "level": 3,
+      "content": "Causes of Earthquakes"
+    },
+    {
+      "type": "paragraph",
+      "id": "nq8rs7p",
+      "content": "• Movement of tectonic plates."
+    },
+    {
+      "type": "paragraph",
+      "id": "mnv7qjt",
+      "content": "• Volcanic activity."
+    },
+    {
+      "type": "paragraph",
+      "id": "ff8xp7p",
+      "content": "• Faulting in Earth's crust."
+    },
+    {
+      "type": "paragraph",
+      "id": "vtrsn6w",
+      "content": "• Human activities such as mining and dam construction."
+    },
+    {
+      "id": "8k86vus",
+      "type": "heading",
+      "level": 3,
+      "content": "Measurement of Earthquakes"
+    },
+    {
+      "id": "fcoe061",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Scale</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Richter Scale</p>",
+            "<p>Measures magnitude (energy released).</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mercalli Scale</p>",
+            "<p>Measures intensity based on damage observed.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osos1l5",
+      "type": "heading",
+      "level": 3,
+      "content": "Effects of Earthquakes"
+    },
+    {
+      "type": "paragraph",
+      "id": "sfwea54",
+      "content": "• Damage to buildings and infrastructure."
+    },
+    {
+      "type": "paragraph",
+      "id": "o2q9vxk",
+      "content": "• Landslides and ground cracks."
+    },
+    {
+      "type": "paragraph",
+      "id": "kriv2ei",
+      "content": "• Tsunamis in coastal regions."
+    },
+    {
+      "type": "paragraph",
+      "id": "7dt4clg",
+      "content": "• Loss of life and property."
+    },
+    {
+      "id": "4co5k01",
+      "type": "heading",
+      "level": 3,
+      "content": "Major Earthquake Zones of the World"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Focus vs. Epicenter: Focus is the subterranean source of seismic energy, while Epicenter is the surface point directly above the Focus.",
+        "Wave Propagation: P-waves pass through solids, liquids, and gases; S-waves pass ONLY through solids.",
+        "Richter vs. Mercalli: Richter measures magnitude (energy, quantitative 1-10), while Mercalli measures intensity (damage, qualitative I-XII)."
+      ],
+      "id": "q4ytsr4"
+    },
+    {
+      "type": "paragraph",
+      "id": "hymwvgl",
+      "content": "• Pacific Ring of Fire."
+    },
+    {
+      "type": "paragraph",
+      "id": "jp02jxk",
+      "content": "• Mid-Atlantic Ridge."
+    },
+    {
+      "type": "paragraph",
+      "id": "go8wwia",
+      "content": "• Himalayan belt."
+    },
+    {
+      "id": "vvkx2jo",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "xdt27ky",
+      "content": "• Pacific Ring of Fire has the highest number of volcanoes and earthquakes."
+    },
+    {
+      "type": "paragraph",
+      "id": "tah3j3m",
+      "content": "• P waves travel through solids and liquids; S waves travel only through solids."
+    },
+    {
+      "type": "paragraph",
+      "id": "we8j3co",
+      "content": "• Epicenter is directly above the earthquake focus."
+    },
+    {
+      "type": "paragraph",
+      "id": "wvf57pz",
+      "content": "• Richter scale measures magnitude of earthquakes."
+    }
+  ],
+  "enriched": true
+}

@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "025m0xa"
+      "id": "025m0xa",
+      "content": "The OSI (Open Systems Interconnection) model is a conceptual framework with 7 layers used to standardise communication between different computer systems. Each layer provides services to the layer above and uses services from the layer below."
     },
     {
       "id": "nhgn29g",
@@ -58,80 +59,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Layer (Top to Bottom)</strong></p>",
+            "<p><strong>Number</strong></p>",
+            "<p><strong>Protocol Data Unit</strong></p>",
+            "<p><strong>Key Protocols / Functions</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Application</p>",
+            "<p>7</p>",
+            "<p>Data (Message)</p>",
+            "<p>HTTP, HTTPS, FTP, SMTP, DNS, DHCP, Telnet, SSH, SNMP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Presentation</p>",
+            "<p>6</p>",
+            "<p>Data</p>",
+            "<p>Encryption (SSL/TLS), compression, format conversion (JPEG, ASCII, EBCDIC)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Session</p>",
+            "<p>5</p>",
+            "<p>Data</p>",
+            "<p>Session establishment, maintenance, termination; NetBIOS, RPC, SQL sessions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Transport</p>",
+            "<p>4</p>",
+            "<p>Segment</p>",
+            "<p>TCP (reliable), UDP (unreliable); port numbers; flow control; error control</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Network</p>",
+            "<p>3</p>",
+            "<p>Packet</p>",
+            "<p>IP (IPv4, IPv6), ICMP, ARP, OSPF, BGP; routing; logical addressing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Data Link</p>",
+            "<p>2</p>",
+            "<p>Frame</p>",
+            "<p>MAC addressing; Ethernet, Wi-Fi (802.11); switches; error detection (CRC); HDLC, PPP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Physical</p>",
+            "<p>1</p>",
+            "<p>Bits</p>",
+            "<p>Physical transmission; cables, fibre, radio; hub, repeater; NIC; encoding</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "eomrvn9"
+      "id": "eomrvn9",
+      "content": "<strong>Note: </strong><em>Mnemonic for OSI layers (top to bottom): All People Seem To Need Data Processing. Or bottom to top: Please Do Not Throw Sausage Pizza Away.</em>"
     },
     {
       "id": "rz9yklv",
@@ -146,41 +148,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>TCP/IP Layer</strong></p>",
+            "<p><strong>Maps to OSI Layers</strong></p>",
+            "<p><strong>Key Protocols</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Application</p>",
+            "<p>OSI 5,6,7</p>",
+            "<p>HTTP, HTTPS, FTP, SMTP, DNS, DHCP, SNMP, SSH, Telnet</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Transport</p>",
+            "<p>OSI 4</p>",
+            "<p>TCP, UDP, SCTP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Internet (Network)</p>",
+            "<p>OSI 3</p>",
+            "<p>IP (IPv4/IPv6), ICMP, ARP, IGMP, OSPF, BGP, RIP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Network Access (Link)</p>",
+            "<p>OSI 1,2</p>",
+            "<p>Ethernet, Wi-Fi (802.11), MAC, ARP, PPP, Frame Relay</p>"
           ]
         }
       ]
@@ -198,81 +200,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>TCP (Transmission Control Protocol)</strong></p>",
+            "<p><strong>UDP (User Datagram Protocol)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Connection</p>",
+            "<p>Connection-oriented (3-way handshake: SYN, SYN-ACK, ACK)</p>",
+            "<p>Connectionless</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Reliability</p>",
+            "<p>Reliable; acknowledgements; retransmission</p>",
+            "<p>Unreliable; no acknowledgements</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ordering</p>",
+            "<p>Guaranteed in-order delivery</p>",
+            "<p>No ordering guarantee</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Error Control</p>",
+            "<p>Yes (checksum + retransmission)</p>",
+            "<p>Checksum only (optional)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Flow Control</p>",
+            "<p>Yes (sliding window)</p>",
+            "<p>No</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Congestion Control</p>",
+            "<p>Yes (slow start, congestion avoidance)</p>",
+            "<p>No</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Speed</p>",
+            "<p>Slower (overhead)</p>",
+            "<p>Faster</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Header Size</p>",
+            "<p>20–60 bytes</p>",
+            "<p>8 bytes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Use Cases</p>",
+            "<p>HTTP/HTTPS, FTP, SMTP, SSH, file transfer</p>",
+            "<p>DNS, VoIP, video streaming, gaming, TFTP, SNMP</p>"
           ]
         }
       ]
@@ -301,61 +303,61 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Class</strong></p>",
+            "<p><strong>First Octet Range</strong></p>",
+            "<p><strong>Default Subnet Mask</strong></p>",
+            "<p><strong>Network/Host Bits</strong></p>",
+            "<p><strong>Used For</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Class A</p>",
+            "<p>1–126</p>",
+            "<p>255.0.0.0 (/8)</p>",
+            "<p>8 / 24</p>",
+            "<p>Large networks; 126 networks; 16M hosts each</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Class B</p>",
+            "<p>128–191</p>",
+            "<p>255.255.0.0 (/16)</p>",
+            "<p>16 / 16</p>",
+            "<p>Medium networks; 16K networks; 65K hosts each</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Class C</p>",
+            "<p>192–223</p>",
+            "<p>255.255.255.0 (/24)</p>",
+            "<p>24 / 8</p>",
+            "<p>Small networks; 2M networks; 254 hosts each</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Class D</p>",
+            "<p>224–239</p>",
+            "<p>N/A (multicast)</p>",
+            "<p>Multicast</p>",
+            "<p>Multicasting (IPTV, video conferencing)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Class E</p>",
+            "<p>240–255</p>",
+            "<p>N/A (reserved)</p>",
+            "<p>Research</p>",
+            "<p>Experimental; not used commercially</p>"
           ]
         }
       ]
@@ -373,43 +375,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Address</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>127.0.0.1</p>",
+            "<p>Loopback address; testing network software on same machine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>0.0.0.0</p>",
+            "<p>Default route; unspecified address; this host on this network</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>255.255.255.255</p>",
+            "<p>Limited broadcast; to all hosts on local network</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>169.254.0.0/16</p>",
+            "<p>APIPA (Auto-Private IP Addressing); assigned when DHCP fails</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16</p>",
+            "<p>Private IP ranges (RFC 1918); not routed on Internet</p>"
           ]
         }
       ]
@@ -424,11 +426,11 @@
       "id": "nt9zqv1",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "128-bit address space (vs 32-bit IPv4); 340 undecillion addresses",
+        "Written as 8 groups of 4 hex digits: 2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+        "No broadcast; uses multicast and anycast instead",
+        "Built-in IPsec support; auto-configuration (SLAAC)",
+        "Header simplified (40 bytes fixed); extension headers for options"
       ]
     },
     {
@@ -480,91 +482,91 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>CIDR Prefix</strong></p>",
+            "<p><strong>Subnet Mask</strong></p>",
+            "<p><strong>Total Addresses</strong></p>",
+            "<p><strong>Usable Hosts</strong></p>",
+            "<p><strong>Common Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>/8</p>",
+            "<p>255.0.0.0</p>",
+            "<p>16,777,216</p>",
+            "<p>16,777,214</p>",
+            "<p>Class A equivalent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>/16</p>",
+            "<p>255.255.0.0</p>",
+            "<p>65,536</p>",
+            "<p>65,534</p>",
+            "<p>Class B equivalent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>/24</p>",
+            "<p>255.255.255.0</p>",
+            "<p>256</p>",
+            "<p>254</p>",
+            "<p>Class C; small LAN</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>/25</p>",
+            "<p>255.255.255.128</p>",
+            "<p>128</p>",
+            "<p>126</p>",
+            "<p>Two halves of Class C</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>/26</p>",
+            "<p>255.255.255.192</p>",
+            "<p>64</p>",
+            "<p>62</p>",
+            "<p>Quarter of Class C</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>/28</p>",
+            "<p>255.255.255.240</p>",
+            "<p>16</p>",
+            "<p>14</p>",
+            "<p>Very small subnet</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>/30</p>",
+            "<p>255.255.255.252</p>",
+            "<p>4</p>",
+            "<p>2</p>",
+            "<p>Point-to-point links</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>/32</p>",
+            "<p>255.255.255.255</p>",
+            "<p>1</p>",
+            "<p>1 (host route)</p>",
+            "<p>Single host route</p>"
           ]
         }
       ]
@@ -582,172 +584,172 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Protocol</strong></p>",
+            "<p><strong>Port</strong></p>",
+            "<p><strong>Protocol Type</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>HTTP</p>",
+            "<p>80</p>",
+            "<p>TCP</p>",
+            "<p>Web browsing; stateless; request-response</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>HTTPS</p>",
+            "<p>443</p>",
+            "<p>TCP</p>",
+            "<p>Encrypted HTTP using TLS/SSL; secure web</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>FTP</p>",
+            "<p>20 (data), 21 (control)</p>",
+            "<p>TCP</p>",
+            "<p>File transfer; active/passive mode</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>SFTP</p>",
+            "<p>22</p>",
+            "<p>TCP</p>",
+            "<p>Secure FTP over SSH; encrypted file transfer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>SSH</p>",
+            "<p>22</p>",
+            "<p>TCP</p>",
+            "<p>Secure remote login; encrypted shell access</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Telnet</p>",
+            "<p>23</p>",
+            "<p>TCP</p>",
+            "<p>Remote login; unencrypted (insecure; avoid)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>SMTP</p>",
+            "<p>25</p>",
+            "<p>TCP</p>",
+            "<p>Sending email from client to server</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>POP3</p>",
+            "<p>110</p>",
+            "<p>TCP</p>",
+            "<p>Download email; delete from server</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>IMAP</p>",
+            "<p>143</p>",
+            "<p>TCP</p>",
+            "<p>Access email on server; sync multiple devices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>DNS</p>",
+            "<p>53</p>",
+            "<p>UDP/TCP</p>",
+            "<p>Resolve domain names to IP addresses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>DHCP</p>",
+            "<p>67 (server), 68 (client)</p>",
+            "<p>UDP</p>",
+            "<p>Assign IP addresses automatically</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>SNMP</p>",
+            "<p>161/162</p>",
+            "<p>UDP</p>",
+            "<p>Network management; monitoring devices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>TFTP</p>",
+            "<p>69</p>",
+            "<p>UDP</p>",
+            "<p>Simple file transfer; no authentication</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>NTP</p>",
+            "<p>123</p>",
+            "<p>UDP</p>",
+            "<p>Network time synchronisation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>LDAP</p>",
+            "<p>389</p>",
+            "<p>TCP</p>",
+            "<p>Directory services; user authentication</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>RDP</p>",
+            "<p>3389</p>",
+            "<p>TCP</p>",
+            "<p>Remote Desktop Protocol; Windows remote access</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>MySQL</p>",
+            "<p>3306</p>",
+            "<p>TCP</p>",
+            "<p>MySQL database access</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>PostgreSQL</p>",
+            "<p>5432</p>",
+            "<p>TCP</p>",
+            "<p>PostgreSQL database access</p>"
           ]
         }
       ]
@@ -765,100 +767,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Device</strong></p>",
+            "<p><strong>OSI Layer</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Key Difference</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hub</p>",
+            "<p>Physical (L1)</p>",
+            "<p>Broadcasts signal to all ports; dumb device</p>",
+            "<p>No intelligence; creates collision domain</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Repeater</p>",
+            "<p>Physical (L1)</p>",
+            "<p>Regenerates/amplifies signal; extends cable distance</p>",
+            "<p>Signal regeneration only</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bridge</p>",
+            "<p>Data Link (L2)</p>",
+            "<p>Connects two network segments; uses MAC addresses; filters traffic</p>",
+            "<p>Reduces collision domains</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Switch</p>",
+            "<p>Data Link (L2)</p>",
+            "<p>Connects multiple devices; uses MAC address table; unicast forwarding</p>",
+            "<p>Each port = separate collision domain</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Router</p>",
+            "<p>Network (L3)</p>",
+            "<p>Routes packets between different networks; uses IP addresses; separates broadcast domains</p>",
+            "<p>Works at layer 3; connects different networks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Gateway</p>",
+            "<p>Application (L7)</p>",
+            "<p>Protocol conversion; connects networks with different architectures</p>",
+            "<p>Full protocol translation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Firewall</p>",
+            "<p>Multiple Layers</p>",
+            "<p>Filters traffic based on rules; stateful/stateless inspection</p>",
+            "<p>Security device; packet filtering/inspection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Load Balancer</p>",
+            "<p>L4/L7</p>",
+            "<p>Distributes traffic across multiple servers</p>",
+            "<p>Availability and scalability</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Access Point (AP)</p>",
+            "<p>Data Link (L2)</p>",
+            "<p>Wireless connectivity; bridges wired and wireless LAN</p>",
+            "<p>802.11 wireless; connects to switch</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Modem</p>",
+            "<p>Physical (L1)</p>",
+            "<p>Modulates/demodulates signal; converts digital to analog</p>",
+            "<p>Required for DSL/cable internet access</p>"
           ]
         }
       ]
@@ -886,64 +888,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Topology</strong></p>",
+            "<p><strong>Structure</strong></p>",
+            "<p><strong>Advantages</strong></p>",
+            "<p><strong>Disadvantages</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bus</p>",
+            "<p>All nodes on single cable</p>",
+            "<p>Simple; cheap; easy to install</p>",
+            "<p>Single point of failure; limited length; collision</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ring</p>",
+            "<p>Nodes connected in circular chain</p>",
+            "<p>Equal access; no collisions (token ring)</p>",
+            "<p>Single break disrupts all; difficult to troubleshoot</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Star</p>",
+            "<p>All nodes connect to central hub/switch</p>",
+            "<p>Easy to manage; one failure doesn't affect others</p>",
+            "<p>Central device = single point of failure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mesh</p>",
+            "<p>Every node connected to every other node</p>",
+            "<p>Highly redundant; no single failure point</p>",
+            "<p>Expensive; complex; many cables</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tree (Hierarchical)</p>",
+            "<p>Combination of bus and star; branched</p>",
+            "<p>Scalable; easy to extend</p>",
+            "<p>Central hub failure affects many</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hybrid</p>",
+            "<p>Combination of two or more topologies</p>",
+            "<p>Flexible; combines advantages</p>",
+            "<p>Complex design and management</p>"
           ]
         }
       ]
@@ -961,61 +963,61 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Protocol</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Algorithm</strong></p>",
+            "<p><strong>Metric</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>RIP (Routing Info Protocol)</p>",
+            "<p>IGP; Distance Vector</p>",
+            "<p>Bellman-Ford</p>",
+            "<p>Hop count (max 15)</p>",
+            "<p>Small networks; legacy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>OSPF (Open Shortest Path First)</p>",
+            "<p>IGP; Link State</p>",
+            "<p>Dijkstra (SPF)</p>",
+            "<p>Cost (bandwidth-based)</p>",
+            "<p>Enterprise networks; scalable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>EIGRP (Cisco)</p>",
+            "<p>IGP; Hybrid</p>",
+            "<p>DUAL algorithm</p>",
+            "<p>Bandwidth + Delay + Load + Reliability</p>",
+            "<p>Cisco enterprise networks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>BGP (Border Gateway Protocol)</p>",
+            "<p>EGP; Path Vector</p>",
+            "<p>Best path policy</p>",
+            "<p>AS path, policy attributes</p>",
+            "<p>Internet backbone; between ISPs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>IS-IS</p>",
+            "<p>IGP; Link State</p>",
+            "<p>SPF (Dijkstra)</p>",
+            "<p>Cost</p>",
+            "<p>ISP core networks; large enterprise</p>"
           ]
         }
       ]
@@ -1033,73 +1035,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Protocol/Technology</strong></p>",
+            "<p><strong>Purpose</strong></p>",
+            "<p><strong>Key Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SSL/TLS</p>",
+            "<p>Encrypt communication between client and server</p>",
+            "<p>SSL deprecated; TLS 1.3 current standard; uses PKI</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IPsec</p>",
+            "<p>Secure IP communications at network layer</p>",
+            "<p>Tunnel mode (gateway-to-gateway) vs Transport mode (host-to-host); AH + ESP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>VPN</p>",
+            "<p>Secure private network over public Internet</p>",
+            "<p>IPsec VPN, SSL VPN, WireGuard; tunnelling protocols</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SSH</p>",
+            "<p>Encrypted remote administration</p>",
+            "<p>Replaces Telnet; public key authentication; port 22</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>HTTPS</p>",
+            "<p>Encrypted HTTP</p>",
+            "<p>HTTP over TLS; uses X.509 certificates; port 443</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>802.1X</p>",
+            "<p>Port-based Network Access Control (NAC)</p>",
+            "<p>RADIUS authentication; EAP; enterprise Wi-Fi security</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>WPA3</p>",
+            "<p>Latest Wi-Fi security standard</p>",
+            "<p>SAE (Simultaneous Authentication of Equals) replaces PSK; forward secrecy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DNSSEC</p>",
+            "<p>DNS Security Extensions</p>",
+            "<p>Digitally signs DNS records; prevents DNS spoofing/cache poisoning</p>"
           ]
         }
       ]

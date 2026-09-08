@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "yg9hbj1"
+      "id": "yg9hbj1",
+      "content": "• Species Richness – total number of species in a region."
     },
     {
       "type": "statStrip",
@@ -51,7 +52,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tq4ghip"
+      "id": "tq4ghip",
+      "content": "• Species Evenness – distribution of individuals among species."
     },
     {
       "type": "comparisonTable",
@@ -81,11 +83,13 @@
     },
     {
       "type": "paragraph",
-      "id": "9tcdki2"
+      "id": "9tcdki2",
+      "content": "• Alpha Diversity – diversity within a particular habitat."
     },
     {
       "type": "paragraph",
-      "id": "9ca8itb"
+      "id": "9ca8itb",
+      "content": "• Beta Diversity – comparison of diversity between ecosystems."
     },
     {
       "type": "examAlert",
@@ -98,11 +102,13 @@
     },
     {
       "type": "paragraph",
-      "id": "xfskehe"
+      "id": "xfskehe",
+      "content": "• Gamma Diversity – overall diversity within a large geographic region."
     },
     {
       "type": "paragraph",
-      "id": "zy6pet2"
+      "id": "zy6pet2",
+      "content": "• Endemism – species restricted to a specific geographic area."
     }
   ],
   "enriched": true

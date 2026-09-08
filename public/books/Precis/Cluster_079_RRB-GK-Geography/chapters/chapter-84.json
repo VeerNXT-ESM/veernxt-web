@@ -1,0 +1,89 @@
+{
+  "title": "2. Plate Tectonics Theory",
+  "order": 84,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "The tectonic plates are in constant motion relative to each other, driven by convection currents deep within the Earth's mantle.",
+      "id": "g75amk9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Boundary Type",
+        "Plate Motion",
+        "Crustal Effect",
+        "Key Example"
+      ],
+      "rows": [
+        [
+          "Divergent",
+          "Moving apart",
+          "Constructive (New crust created)",
+          "Mid-Atlantic Ridge"
+        ],
+        [
+          "Convergent",
+          "Moving together",
+          "Destructive (Crust subducted/folded)",
+          "Himalayas / Pacific Ring of Fire"
+        ],
+        [
+          "Transform",
+          "Sliding past horizontally",
+          "Conservative (Crust neither created nor destroyed)",
+          "San Andreas Fault"
+        ]
+      ],
+      "id": "0gvalpj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Plates",
+          "value": "7",
+          "icon": "book"
+        },
+        {
+          "label": "Theory Outlined",
+          "value": "1967",
+          "icon": "calendar"
+        },
+        {
+          "label": "Boundary Types",
+          "value": "3",
+          "icon": "info"
+        },
+        {
+          "label": "Slowest Movement",
+          "value": "< 2.5 cm/yr",
+          "icon": "clock"
+        }
+      ],
+      "id": "n5z9ozm"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish plate boundaries: Divergent creates crust, Convergent destroys crust, and Transform conserves crust.",
+        "Identify major versus minor plates: Cocos, Nazca, Arabian, Philippine, and Caroline are frequently tested minor plates.",
+        "San Andreas Fault is the most classic example of a transform plate boundary."
+      ],
+      "id": "q2um3nd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth's rigid lithosphere is divided into 7 major and several minor plates that float upon the semi-fluid asthenosphere.",
+        "Divergent boundaries pull plates apart, allowing upwelling magma to form new crust at mid-ocean ridges.",
+        "Convergent boundaries occur where plates collide, giving rise to mountain ranges, deep sea trenches, and volcanic arcs through subduction.",
+        "Transform boundaries involve plates sliding horizontally past one another, conserving landmass while generating frequent seismic activity.",
+        "Thermal convection currents operating within the upper mantle act as the main mechanism propelling plate movements."
+      ],
+      "id": "sbb48fr"
+    }
+  ],
+  "enriched": true
+}

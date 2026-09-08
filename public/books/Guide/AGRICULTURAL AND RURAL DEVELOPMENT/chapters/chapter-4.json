@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jyvnxll"
+      "id": "jyvnxll",
+      "content": "Plant pathology is the scientific study of plant diseases caused by pathogens (infectious agents) and environmental conditions (abiotic factors). It encompasses the mechanisms of disease development, diagnosis, and management strategies."
     },
     {
       "type": "pullQuote",
@@ -58,7 +59,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3j0moye"
+      "id": "3j0moye",
+      "content": "Disease Triangle: For a disease to occur, three factors must coincide: Susceptible Host + Virulent Pathogen + Favourable Environment. This is the fundamental concept of plant disease epidemiology."
     },
     {
       "id": "2w5rk1c",
@@ -104,73 +106,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Pathogen Group</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Key Feature</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Fungi</p>",
+            "<p>Eukaryotic</p>",
+            "<p>Most important plant pathogens; spread by spores; &gt;8000 species cause diseases</p>",
+            "<p>Blast, rust, smut, blight, damping-off, rot</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bacteria</p>",
+            "<p>Prokaryotic</p>",
+            "<p>Enter through wounds, stomata, hydathodes; spread by rain, insects</p>",
+            "<p>Bacterial blight of rice (Xanthomonas), Crown gall (Agrobacterium)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Viruses</p>",
+            "<p>Sub-cellular</p>",
+            "<p>Obligate intracellular parasites; transmitted by vectors (aphids, whitefly)</p>",
+            "<p>TMV (Tobacco Mosaic), BGMV (Bean Golden Mosaic), PRSV (Papaya Ring Spot)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Nematodes</p>",
+            "<p>Roundworms</p>",
+            "<p>Soil-borne; root-knot (Meloidogyne) most damaging; create feeding sites</p>",
+            "<p>Root-knot, Cyst nematode, Root lesion nematode</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Phytoplasma</p>",
+            "<p>Bacteria-like</p>",
+            "<p>Obligate intracellular; transmitted by leafhoppers; cause yellowing, witches' broom</p>",
+            "<p>Little leaf of brinjal, Phyllody of sesame</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Viroids</p>",
+            "<p>Sub-viral</p>",
+            "<p>Naked RNA; smallest known plant pathogen</p>",
+            "<p>Potato Spindle Tuber Viroid (PSTVd), Coconut Cadang-cadang</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Oomycetes (Water Moulds)</p>",
+            "<p>Fungus-like protists</p>",
+            "<p>Cause downy mildews, late blight; favoured by cool and wet conditions</p>",
+            "<p>Late blight of potato (Phytophthora infestans), Downy mildew</p>"
           ]
         }
       ]
@@ -188,131 +190,131 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Crop</strong></p>",
+            "<p><strong>Pathogen</strong></p>",
+            "<p><strong>Symptoms</strong></p>",
+            "<p><strong>Management</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Rice Blast</p>",
+            "<p>Rice</p>",
+            "<p>Pyricularia oryzae (Magnaporthe oryzae)</p>",
+            "<p>Diamond-shaped lesions on leaves; neck rot; panicle blast</p>",
+            "<p>Tricyclazole, Carbendazim; resistant varieties (IR-64)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Bacterial Leaf Blight (BLB)</p>",
+            "<p>Rice</p>",
+            "<p>Xanthomonas oryzae pv. oryzae</p>",
+            "<p>Water-soaked margins turning yellow; kresek (wilting) in seedlings</p>",
+            "<p>Copper bactericide; resistant varieties (TN-1)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Brown Spot</p>",
+            "<p>Rice</p>",
+            "<p>Helminthosporium oryzae (Bipolaris oryzae)</p>",
+            "<p>Brown oval lesions with grey centre; associated with nutrient deficiency</p>",
+            "<p>Seed treatment; Mancozeb foliar spray; balanced nutrition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Rust (Yellow/Brown/Black)</p>",
+            "<p>Wheat</p>",
+            "<p>Puccinia striiformis / P. triticina / P. graminis</p>",
+            "<p>Yellow/brown/black pustules on leaves and stem</p>",
+            "<p>Propiconazole, Mancozeb; resistant varieties (HD-2967)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Loose Smut</p>",
+            "<p>Wheat/Barley</p>",
+            "<p>Ustilago segetum var. tritici</p>",
+            "<p>Entire ear replaced by black smut mass; early infection at flowering</p>",
+            "<p>Carboxin (Vitavax) seed treatment; hot water treatment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Karnal Bunt</p>",
+            "<p>Wheat</p>",
+            "<p>Tilletia indica (Neovossia indica)</p>",
+            "<p>Partial conversion of kernels to black powder with fishy odour</p>",
+            "<p>Tebuconazole foliar spray; certified seed use</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Late Blight</p>",
+            "<p>Potato/Tomato</p>",
+            "<p>Phytophthora infestans</p>",
+            "<p>Water-soaked lesions turning brown; white sporulation on leaf underside</p>",
+            "<p>Metalaxyl+Mancozeb (Ridomil); prophylactic spraying</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Early Blight</p>",
+            "<p>Potato/Tomato</p>",
+            "<p>Alternaria solani</p>",
+            "<p>Concentric ring target-board lesions; older leaves affected first</p>",
+            "<p>Mancozeb; Chlorothalonil; crop rotation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Downy Mildew of Pearl Millet</p>",
+            "<p>Pearl millet (Bajra)</p>",
+            "<p>Sclerospora graminicola</p>",
+            "<p>Downy growth on lower leaf surface; green ear symptom</p>",
+            "<p>Metalaxyl seed treatment; resistant varieties</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Red Rot of Sugarcane</p>",
+            "<p>Sugarcane</p>",
+            "<p>Colletotrichum falcatum</p>",
+            "<p>Reddening of internal stem tissue; alcoholic smell; white patches inside</p>",
+            "<p>Use disease-free seed setts; hot water treatment; Carbendazim</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Tikka Disease (Leaf Spot)</p>",
+            "<p>Groundnut</p>",
+            "<p>Cercospora arachidicola (early); Cercosporidium personatum (late)</p>",
+            "<p>Circular brown spots with yellow halo on leaves; defoliation</p>",
+            "<p>Carbendazim; Chlorothalonil spray at 15-day intervals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Wilt of Chickpea</p>",
+            "<p>Chickpea (Gram)</p>",
+            "<p>Fusarium oxysporum f. sp. ciceri</p>",
+            "<p>Sudden wilting; browning of vascular tissue; no yellowing</p>",
+            "<p>Trichoderma seed treatment; Carbendazim; resistant varieties</p>"
           ]
         }
       ]
@@ -340,73 +342,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Principle</strong></p>",
+            "<p><strong>Methods</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Exclusion</p>",
+            "<p>Prevent pathogen entry into a region</p>",
+            "<p>Quarantine, seed certification, import regulation (PQ Act)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Eradication</p>",
+            "<p>Eliminate established pathogen</p>",
+            "<p>Roguing, burning infected crop debris, soil fumigation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Protection</p>",
+            "<p>Prevent infection of healthy plants</p>",
+            "<p>Fungicide sprays, seed treatment, physical barriers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Immunisation (Resistance)</p>",
+            "<p>Use of resistant varieties</p>",
+            "<p>Breeding for disease resistance; IARI, ICRISAT varieties</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Biological Control</p>",
+            "<p>Use natural enemies of pathogens</p>",
+            "<p>Trichoderma viride, T. harzianum; Pseudomonas fluorescens; Bacillus subtilis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chemical Control</p>",
+            "<p>Fungicides, bactericides, nematicides</p>",
+            "<p>Systemic (Carbendazim, Propiconazole); Contact (Mancozeb, Copper)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cultural Control</p>",
+            "<p>Modify environment unfavourable for pathogen</p>",
+            "<p>Crop rotation, deep summer ploughing, intercropping, proper spacing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Integrated Disease Management</p>",
+            "<p>Combination of all methods</p>",
+            "<p>IPM approach; reduces chemical use; sustainable</p>"
           ]
         }
       ]

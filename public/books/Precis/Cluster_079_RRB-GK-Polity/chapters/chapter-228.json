@@ -1,0 +1,124 @@
+{
+  "title": "Types of Audit Conducted",
+  "order": 228,
+  "blocks": [
+    {
+      "id": "mdlzq59",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Audit Type</strong></p>",
+            "<p><strong>Purpose</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Compliance Audit</p>",
+            "<p>Ensures spending follows laws and rules</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Financial Audit</p>",
+            "<p>Verifies accuracy of financial statements</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Performance Audit</p>",
+            "<p>Evaluates efficiency and effectiveness of programs</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Statutory audit is a legally mandated examination of financial statements to ensure a true and fair view of the company's financial state.",
+      "id": "6339lsy"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Basis of Comparison",
+        "Statutory Audit",
+        "Internal Audit"
+      ],
+      "rows": [
+        [
+          "Governing Authority",
+          "Appointed by Shareholders under Law",
+          "Appointed by Management / Board"
+        ],
+        [
+          "Primary Objective",
+          "Form opinion on True & Fair view of financials",
+          "Evaluate internal controls and operational efficiency"
+        ],
+        [
+          "Scope of Work",
+          "Determined strictly by relevant Statute",
+          "Determined by Management needs"
+        ],
+        [
+          "Report Recipient",
+          "Shareholders / Members of the Company",
+          "Management / Audit Committee"
+        ]
+      ],
+      "id": "arah15o"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Companies Act",
+          "value": "2013",
+          "icon": "book"
+        },
+        {
+          "label": "Internal Audit",
+          "value": "Sec 138",
+          "icon": "info"
+        },
+        {
+          "label": "Tax Audit",
+          "value": "Sec 44AB",
+          "icon": "calendar"
+        },
+        {
+          "label": "Secretarial Audit",
+          "value": "Sec 204",
+          "icon": "award"
+        }
+      ],
+      "id": "49odmow"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Section 139 of the Companies Act, 2013 regarding the appointment of statutory auditors is frequently tested in competitive exam MCQs.",
+        "Remember the distinction: Statutory Auditors report to Shareholders, whereas Internal Auditors report to Management.",
+        "Tax audit thresholds under Section 44AB and Secretarial Audit limits under Section 204 are high-yield questions."
+      ],
+      "id": "la9pnzi"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Statutory audit is compulsory for all registered companies under the Companies Act, 2013.",
+        "Internal audit under Section 138 focuses on evaluating internal controls, operational efficiency, and risk management.",
+        "Tax audit under Section 44AB of the Income Tax Act, 1961 is required for businesses exceeding specified turnover thresholds.",
+        "Secretarial audit under Section 204 applies to listed companies and prescribed public companies to ensure corporate law compliance.",
+        "Cost audit under Section 148 is applicable to specified companies engaged in production, processing, or manufacturing activities."
+      ],
+      "id": "xv947in"
+    }
+  ],
+  "enriched": true
+}

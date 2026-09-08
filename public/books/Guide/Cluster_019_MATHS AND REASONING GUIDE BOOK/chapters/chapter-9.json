@@ -1,0 +1,126 @@
+{
+  "id": "aeke8j9",
+  "title": "SBIREASONING – PART 2",
+  "order": 9,
+  "blocks": [
+    {
+      "id": "7i6pq7i",
+      "type": "heading",
+      "level": 2,
+      "content": "4. CODING–DECODING"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Coding–Decoding focuses on pattern recognition, letter-number shifts, and rule-based substitution.",
+        "Direction Sense tests spatial orientation, cardinal directions, and shortest distance evaluation.",
+        "The chapter includes an Answer Key section for practice validation and performance check."
+      ],
+      "id": "ix20hi9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter Part",
+          "value": "Part 2",
+          "icon": "book"
+        },
+        {
+          "label": "Main Topics",
+          "value": "2 Sections",
+          "icon": "check"
+        },
+        {
+          "label": "Exam Focus",
+          "value": "Reasoning Ability",
+          "icon": "award"
+        }
+      ],
+      "id": "pjevlwc"
+    },
+    {
+      "id": "5wopk2e",
+      "type": "list",
+      "items": [
+        "Concept:<br></br>Coding–Decoding questions test the ability to understand a fixed pattern or logic used to convert a word or number into another form. In SSC, coding questions are generally simple and based on letter positions or alphabet shifting.",
+        "Common Types in SSC:<br></br>1. Letter Position Coding (A = 1, B = 2 … Z = 26)<br></br>2. Alphabet Shifting (forward or backward)<br></br>3. Word Coding (same pattern applied to all words)",
+        "Method to Solve:<br></br>1. Observe the pattern in the given coded pair.<br></br>2. Identify the position change or shift.<br></br>3. Apply the same logic to the new word."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "9qlgy3h",
+      "content": "<strong>Solved Examples:</strong><br></br>Example 1:<br></br>If CAT is coded as DBU, how is DOG coded?<br></br>Logic: C→D, A→B, T→U (each letter shifted by +1)<br></br>Answer: EPH<br></br>Example 2:<br></br>If PEN is written as 16–5–14, how is INK written?<br></br>Logic: Alphabet positions<br></br>I = 9, N = 14, K = 11<br></br>Answer: 9–14–11"
+    },
+    {
+      "type": "paragraph",
+      "id": "g6xcwhq",
+      "content": "<strong>Practice Questions (Coding–Decoding):</strong><br></br><br></br>Q1. If BOOK is coded as CPPL, how is PEN coded?<br></br>A. QFO   B. QFM   C. OFM   D. PFN<br></br><br></br>Q2. If A = 1, B = 2 … Z = 26, what is the code for BAD?<br></br>A. 2–1–4   B. 1–2–4   C. 2–4–1   D. 4–2–1<br></br><br></br>Q3. If LION is written as KHMN, how is BEAR written?<br></br>A. ADZQ   B. ADAQ   C. ADZP   D. ZCZQ"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Topic",
+        "Core Focus"
+      ],
+      "rows": [
+        [
+          "Coding–Decoding",
+          "Pattern deciphering, position shifting, and symbol-letter operations"
+        ],
+        [
+          "Direction Sense",
+          "Cardinal directions (N-S-E-W), turns, and final position relative to start point"
+        ]
+      ],
+      "id": "9lyr8hz"
+    },
+    {
+      "id": "d5zcx0z",
+      "type": "heading",
+      "level": 2,
+      "content": "5. DIRECTION SENSE"
+    },
+    {
+      "id": "crerf8v",
+      "type": "list",
+      "items": [
+        "Concept:<br></br>Direction sense questions test the ability to track movement and direction from a starting point. SBIquestions are usually GUIDE, direct and involve one or two turns.",
+        "Standard Directions:<br></br>North ↑<br></br>South ↓<br></br>East →<br></br>West ←",
+        "Key Rules:<br></br>• Always fix North before solving<br></br>• Right turn = clockwise<br></br>• Left turn = anti-clockwise"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "g0mar52",
+      "content": "<strong>Solved Examples:</strong><br></br>Example 1:<br></br>A person walks 10 m north, then turns right and walks 5 m.<br></br>Direction faced now: East<br></br>Example 2:<br></br>A man walks 5 m east, then 5 m south, then 5 m west.<br></br>Distance from starting point: 5 m"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Coding–Decoding questions carry significant weightage in SBI Prelims and Mains exams.",
+        "Direction Sense questions frequently test shortest distance calculations using the Pythagoras theorem."
+      ],
+      "id": "ikpq0b9"
+    },
+    {
+      "type": "paragraph",
+      "id": "qpevn55",
+      "content": "<strong>Practice Questions (Direction Sense):</strong><br></br><br></br>Q4. A person walks 10 m south, then turns left and walks 5 m. Which direction is he facing now?<br></br>A. North   B. South   C. East   D. West<br></br><br></br>Q5. A man walks 5 m north, then 5 m east, then 5 m south. How far is he from the starting point?<br></br>A. 0 m   B. 5 m   C. 10 m   D. 15 m<br></br><br></br>Q6. A woman walks 10 m east, turns right, walks 10 m, turns right again and walks 10 m. Which direction is she facing now?<br></br>A. East   B. West   C. North   D. South"
+    },
+    {
+      "id": "pe3o9h2",
+      "type": "heading",
+      "level": 2,
+      "content": "Answer Key"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ybg0xe",
+      "content": "Q1. B   Q2. A   Q3. B   Q4. D   Q5. B   Q6. B"
+    }
+  ],
+  "enriched": true
+}

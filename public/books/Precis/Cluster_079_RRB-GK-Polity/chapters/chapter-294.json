@@ -1,0 +1,63 @@
+{
+  "title": "5. Appointment Committee (VERY IMPORTANT)",
+  "order": 294,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Appointed by the President based on recommendations of:<br/>• Prime Minister<br/>• Speaker of Lok Sabha<br/>• Leader of Opposition in Lok Sabha<br/>• Chief Justice of India or nominee<br/>• One eminent jurist",
+      "id": "4kbsi2p"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Appointed by the President based on recommendations of:",
+      "id": "r7t1yw2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Appointing Authority",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "Panel Members",
+          "value": "5 Recommended",
+          "icon": "info"
+        },
+        {
+          "label": "Judicial Member",
+          "value": "CJI or Nominee",
+          "icon": "book"
+        },
+        {
+          "label": "Exam Priority",
+          "value": "Very Important",
+          "icon": "check"
+        }
+      ],
+      "id": "fgyw0lj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently test the composition of the recommendation panel—ensure you remember all 5 members.",
+        "Note that the appointment is made by the President, but only upon the specific recommendation of this committee.",
+        "Pay attention to the inclusion of the Leader of Opposition in Lok Sabha as a statutory panel member."
+      ],
+      "id": "cf9qyp5"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Appointments are formally made by the President of India.",
+        "The recommendation panel consists of five key figures from executive, legislative, and judicial branches.",
+        "Legislative representation includes both the Speaker of Lok Sabha and the Leader of Opposition in Lok Sabha.",
+        "Judicial representation includes the Chief Justice of India (or their nominee) alongside one eminent jurist."
+      ],
+      "id": "qmrrhpq"
+    }
+  ],
+  "enriched": true
+}

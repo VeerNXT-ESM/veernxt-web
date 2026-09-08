@@ -1,0 +1,102 @@
+{
+  "title": "6. Soil Texture and Structure",
+  "order": 185,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Soil texture refers to the proportion of sand, silt and clay particles. It affects drainage, aeration and fertility.",
+      "id": "1ahmbmb"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Soil texture refers to the proportion of sand, silt and clay particles.",
+      "id": "flamw9e"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Property",
+          "value": "Soil Texture",
+          "icon": "book"
+        },
+        {
+          "label": "Particle Types",
+          "value": "Sand, Silt, Clay",
+          "icon": "info"
+        },
+        {
+          "label": "Key Impacts",
+          "value": "Drainage & Fertility",
+          "icon": "check"
+        }
+      ],
+      "id": "uamjmkr"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Soil texture is determined by the relative proportion of sand, silt, and clay particles.",
+        "Soil texture plays a critical role in controlling soil drainage and aeration.",
+        "Overall soil fertility is directly influenced by its physical texture."
+      ],
+      "id": "l30ca63"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Soil texture composition is frequently tested: remember it consists of sand, silt, and clay.",
+        "Key physical soil factors affected by texture include drainage, aeration, and fertility."
+      ],
+      "id": "t621c6l"
+    },
+    {
+      "id": "va6uqq3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Soil Type</strong></p>",
+            "<p><strong>Water Holding Capacity</strong></p>",
+            "<p><strong>Agricultural Suitability</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sandy</p>",
+            "<p>Low</p>",
+            "<p>Good for drainage; low fertility</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Clayey</p>",
+            "<p>High</p>",
+            "<p>Retains water; prone to waterlogging</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Silty</p>",
+            "<p>Moderate</p>",
+            "<p>Fertile and smooth texture</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Loamy</p>",
+            "<p>Balanced</p>",
+            "<p>Ideal for most crops</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

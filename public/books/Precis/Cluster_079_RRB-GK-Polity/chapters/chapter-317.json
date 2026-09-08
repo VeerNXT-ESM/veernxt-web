@@ -1,0 +1,55 @@
+{
+  "title": "8. Insider Trading",
+  "order": 317,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Insider trading refers to buying or selling securities using unpublished price-sensitive information. SEBI strictly prohibits such practices.",
+      "id": "afckvf1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Insider trading refers to buying or selling securities using unpublished price-sensitive information.",
+      "id": "zo22kwm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Concept",
+          "value": "Insider Trading",
+          "icon": "book"
+        },
+        {
+          "label": "Regulator",
+          "value": "SEBI",
+          "icon": "award"
+        },
+        {
+          "label": "Key Factor",
+          "value": "UPSI",
+          "icon": "info"
+        }
+      ],
+      "id": "at931ly"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "SEBI is the regulatory body that strictly prohibits insider trading.",
+        "Using unpublished price-sensitive information to trade securities constitutes illegal insider trading."
+      ],
+      "id": "rb51eql"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Insider trading consists of trading securities based on unpublished price-sensitive information.",
+        "SEBI strictly prohibits insider trading practices in capital markets."
+      ],
+      "id": "matlke4"
+    }
+  ],
+  "enriched": true
+}

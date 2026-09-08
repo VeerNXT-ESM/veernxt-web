@@ -1,0 +1,90 @@
+{
+  "title": "3. Stars",
+  "order": 4,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "Stars are self-luminous celestial bodies that produce immense light and heat energy through continuous nuclear fusion at their cores.",
+      "id": "b78tndg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Stars",
+        "Planets"
+      ],
+      "rows": [
+        [
+          "Luminosity",
+          "Self-luminous (emit own light)",
+          "Non-luminous (reflect sunlight)"
+        ],
+        [
+          "Twinkling Effect",
+          "Twinkle due to atmospheric refraction",
+          "Do not twinkle significantly"
+        ],
+        [
+          "Energy Source",
+          "Nuclear fusion of hydrogen into helium",
+          "No internal nuclear fusion energy"
+        ],
+        [
+          "Relative Movement",
+          "Appear stationary relative to each other",
+          "Revolve around stars in defined orbits"
+        ]
+      ],
+      "id": "cahmttr"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Sun-Earth Light Time",
+          "value": "8.3 Minutes",
+          "icon": "clock"
+        },
+        {
+          "label": "Nearest Star (after Sun)",
+          "value": "Proxima Centauri",
+          "icon": "star"
+        },
+        {
+          "label": "1 Light Year",
+          "value": "9.46 × 10¹² km",
+          "icon": "info"
+        },
+        {
+          "label": "Chandrasekhar Limit",
+          "value": "1.44 M☉",
+          "icon": "award"
+        }
+      ],
+      "id": "dp4paox"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Light-year is a unit of astronomical distance, NOT a unit of time.",
+        "The Chandrasekhar Limit (1.44 Solar Masses) defines the maximum mass threshold for a stable White Dwarf.",
+        "Planets do not twinkle like stars because they are closer to Earth and act as extended sources of light."
+      ],
+      "id": "ekuvhyi"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Stars are massive self-luminous celestial bodies composed mainly of Hydrogen and Helium undergoing nuclear fusion.",
+        "The Sun is the closest star to Earth, situated at an average distance of approximately 150 million kilometers.",
+        "Distances between stars are measured in light-years, which is the distance light travels in one Julian year at 300,000 km/s.",
+        "The Pole Star (Polaris) appears stationary in the sky because it lies directly above the Earth's rotational north pole.",
+        "Stars twinkle when observed from Earth due to continuous atmospheric refraction caused by air temperature and density fluctuations."
+      ],
+      "id": "8hari2u"
+    }
+  ],
+  "enriched": true
+}

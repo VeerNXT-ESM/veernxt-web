@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "n803srr"
+      "id": "n803srr",
+      "content": "A driving licence is compulsory for driving any motor vehicle on a public road. Driving without a valid licence is an offence under Section 3 of the MV Act."
     },
     {
       "type": "statStrip",
@@ -35,11 +36,6 @@
       "content": "Types of Driving Licences"
     },
     {
-      "type": "pullQuote",
-      "content": "Licence Suspension / Cancellation",
-      "id": "3hcwp1o"
-    },
-    {
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
@@ -56,50 +52,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Learner's Licence (LL)</p>",
+            "<p>Issued first. Valid for 6 months. Learner must display 'L' board. Must drive with a licensed driver.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Permanent Driving Licence</p>",
+            "<p>Issued after passing driving test. Apply within 30 days of LL but not before 30 days of LL issue.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Light Motor Vehicle (LMV)</p>",
+            "<p>Cars, jeeps, taxis — age 18+</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heavy Motor Vehicle (HMV)</p>",
+            "<p>Trucks, buses — age 20+, must hold LMV licence first</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Transport Vehicle Licence</p>",
+            "<p>For commercial vehicles — requires medical certificate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>International Driving Permit</p>",
+            "<p>For driving abroad — issued by RTO</p>"
           ]
         }
       ]
@@ -114,10 +110,10 @@
       "id": "rj4gine",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Non-transport licence: Valid for 20 years or until age 50, whichever is earlier",
+        "After age 50: Renewed every 5 years",
+        "Transport vehicle licence: Valid for 3 years (requires medical fitness certificate)",
+        "Renew licence before it expires. Driving with expired licence is an offence."
       ]
     },
     {
@@ -139,10 +135,10 @@
       "id": "1c39uto",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "A licence can be suspended for serious offences like drunk driving, dangerous driving, causing death by negligence, racing on road",
+        "Court or licensing authority can cancel a licence",
+        "Repeated violations lead to suspension",
+        "A disqualified person must surrender their licence immediately"
       ]
     }
   ],

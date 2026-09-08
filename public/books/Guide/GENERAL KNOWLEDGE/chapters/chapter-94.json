@@ -7,7 +7,7 @@
       "id": "v3xqtme",
       "type": "numberedList",
       "items": [
-        null
+        "<strong>INTRODUCTION TO PHYSICS</strong>"
       ]
     },
     {
@@ -38,25 +38,28 @@
     },
     {
       "type": "paragraph",
-      "id": "71ej987"
+      "id": "71ej987",
+      "content": "Physics is the branch of science that deals with matter, energy, motion, force, heat, light and sound."
     },
     {
       "type": "paragraph",
-      "id": "5jg5anq"
+      "id": "5jg5anq",
+      "content": "It explains the natural phenomena occurring around us using scientific laws."
     },
     {
       "type": "paragraph",
-      "id": "gl6ie3n"
+      "id": "gl6ie3n",
+      "content": "Examples: "
     },
     {
       "id": "1h7rgeg",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Motion of vehicles – Mechanics</li><li>Flow of electricity – Electricity</li><li>Boiling of water – Heat</li><li>Rainbow formation – Optics</li></ul>",
+        "Motion of vehicles – Mechanics",
+        "Flow of electricity – Electricity",
+        "Boiling of water – Heat",
+        "Rainbow formation – Optics"
       ]
     },
     {
@@ -79,19 +82,23 @@
     },
     {
       "type": "paragraph",
-      "id": "5ldrdft"
+      "id": "5ldrdft",
+      "content": "A physical quantity is any quantity that can be measured and expressed in numerical value with a unit."
     },
     {
       "type": "paragraph",
-      "id": "uobgdso"
+      "id": "uobgdso",
+      "content": "Example:"
     },
     {
       "type": "paragraph",
-      "id": "zmfkd9f"
+      "id": "zmfkd9f",
+      "content": "Length = 10 m Mass = 5 kg Time = 20 s"
     },
     {
       "type": "paragraph",
-      "id": "r0uwmvt"
+      "id": "r0uwmvt",
+      "content": "Without unit, a number has no physical meaning."
     },
     {
       "id": "4014rdt",
@@ -101,14 +108,15 @@
     },
     {
       "type": "paragraph",
-      "id": "e523ul7"
+      "id": "e523ul7",
+      "content": "Physical quantities are of two types:"
     },
     {
       "id": "x369os9",
       "type": "numberedList",
       "items": [
-        null,
-        null
+        "Fundamental Quantities",
+        "Derived Quantities"
       ]
     },
     {
@@ -118,33 +126,43 @@
       "content": "FUNDAMENTAL QUANTITIES"
     },
     {
-      "type": "paragraph",
-      "id": "cfaokan"
+      "id": "syk8ulg",
+      "type": "image",
+      "imageId": "437c8cy",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_437c8cy.png"
     },
     {
       "type": "paragraph",
-      "id": "1yn9q16"
+      "id": "cfaokan",
+      "content": "Fundamental quantities are basic quantities which cannot be derived from other quantities.<img></img>"
+    },
+    {
+      "type": "paragraph",
+      "id": "1yn9q16",
+      "content": "There are seven fundamental quantities in SI system."
     },
     {
       "id": "xicxil3",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Length – Meter (m)",
+        "Mass – Kilogram (kg)",
+        "Time – Second (s)",
+        "Temperature – Kelvin (K)",
+        "Electric Current – Ampere (A)",
+        "Luminous Intensity – Candela (cd)",
+        "Amount of Substance – Mole (mol)"
       ]
     },
     {
       "type": "paragraph",
-      "id": "hcaautq"
+      "id": "hcaautq",
+      "content": "Trick to remember:"
     },
     {
       "type": "paragraph",
-      "id": "icwa2ii"
+      "id": "icwa2ii",
+      "content": "\"My Teacher Likes Playing Chess Daily Morning\""
     },
     {
       "id": "gbyurdv",
@@ -154,12 +172,14 @@
     },
     {
       "type": "paragraph",
-      "id": "heiob6p"
+      "id": "heiob6p",
+      "content": "Derived quantities are obtained from fundamental quantities. Examples:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cow3bga"
+      "id": "cow3bga",
+      "content": "Speed = Distance / Time"
     },
     {
       "type": "pullQuote",
@@ -168,11 +188,13 @@
     },
     {
       "type": "paragraph",
-      "id": "toggdt2"
+      "id": "toggdt2",
+      "content": "Acceleration = Change in velocity / Time Force = Mass × Acceleration"
     },
     {
       "type": "paragraph",
-      "id": "3bb0bek"
+      "id": "3bb0bek",
+      "content": "Work = Force × Distance Power = Work / Time Density = Mass / Volume"
     },
     {
       "id": "f3lkxk8",
@@ -182,20 +204,24 @@
     },
     {
       "type": "paragraph",
-      "id": "2yzo2o4"
+      "id": "2yzo2o4",
+      "content": "SI stands for International System of Units."
     },
     {
       "type": "paragraph",
-      "id": "elz697a"
+      "id": "elz697a",
+      "content": "It is accepted globally and used in scientific measurements. It was adopted in the year 1960."
     },
     {
       "type": "paragraph",
-      "id": "58ymogk"
+      "id": "58ymogk",
+      "content": "Important SI Units: Length – Meter Mass – Kilogram Time – Second Force – Newton Energy – Joule"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "715zqya"
+      "id": "715zqya",
+      "content": "Pressure – Pascal"
     },
     {
       "id": "6kkb8kb",
@@ -206,22 +232,26 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ewbin8u"
+      "id": "ewbin8u",
+      "content": "1 kilometer = 1000 meters"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "w8swaz2"
+      "id": "w8swaz2",
+      "content": "1 meter = 100 centimeters"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qfg4egd"
+      "id": "qfg4egd",
+      "content": "1 kilogram = 1000 grams"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5cwmo5l"
+      "id": "5cwmo5l",
+      "content": "1 hour = 3600 seconds"
     },
     {
       "type": "comparisonTable",
@@ -257,12 +287,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "of6hrdq"
+      "id": "of6hrdq",
+      "content": "1 litre = 1000 millilitres"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "te6au2m"
+      "id": "te6au2m",
+      "content": "1 tonne = 1000 kilograms"
     },
     {
       "id": "26qqe1q",
@@ -272,23 +304,28 @@
     },
     {
       "type": "paragraph",
-      "id": "i3082ft"
+      "id": "i3082ft",
+      "content": "Density is defined as mass per unit volume. Formula:"
     },
     {
       "type": "paragraph",
-      "id": "tek7swo"
+      "id": "tek7swo",
+      "content": "Density = Mass / Volume Unit: kg/m³"
     },
     {
       "type": "paragraph",
-      "id": "1tctt0t"
+      "id": "1tctt0t",
+      "content": "If density is more, object is heavier. If density is less, object is lighter."
     },
     {
       "type": "paragraph",
-      "id": "f894jbe"
+      "id": "f894jbe",
+      "content": "Example:"
     },
     {
       "type": "paragraph",
-      "id": "67jmtlw"
+      "id": "67jmtlw",
+      "content": "Iron sinks in water because its density is greater than water."
     },
     {
       "id": "25urnwp",
@@ -298,24 +335,29 @@
     },
     {
       "type": "paragraph",
-      "id": "w2nbxr7"
+      "id": "w2nbxr7",
+      "content": "Dimensional formula represents the relation of a physical quantity with mass (M), length"
     },
     {
       "type": "paragraph",
-      "id": "hvf8mjf"
+      "id": "hvf8mjf",
+      "content": "(L) and time (T)."
     },
     {
       "type": "paragraph",
-      "id": "5lq6m91"
+      "id": "5lq6m91",
+      "content": "Speed = M⁰L¹T⁻¹ Acceleration = M⁰L¹T⁻² Force = M¹L¹T⁻²"
     },
     {
       "type": "paragraph",
-      "id": "gxjltb6"
+      "id": "gxjltb6",
+      "content": "Work = M¹L²T⁻² Power = M¹L²T⁻³"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d4vc0db"
+      "id": "d4vc0db",
+      "content": "Pressure = M¹L⁻¹T⁻²"
     },
     {
       "id": "jtfrzhg",
@@ -337,11 +379,11 @@
       "id": "hrfumih",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>To check correctness of equations</li><li>To convert units</li><li>To derive formulas</li><li>To understand relationships between quantities</li></ul>",
+        "To check correctness of equations",
+        "To convert units",
+        "To derive formulas",
+        "To understand relationships between quantities"
       ]
     },
     {
@@ -352,28 +394,34 @@
     },
     {
       "type": "paragraph",
-      "id": "s18rbw8"
+      "id": "s18rbw8",
+      "content": "Q1. SI unit of force? Ans: Newton"
     },
     {
       "type": "paragraph",
-      "id": "cbhvy0t"
+      "id": "cbhvy0t",
+      "content": "Q2. Unit of pressure?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "odd4ilt"
+      "id": "odd4ilt",
+      "content": "Ans: Pascal"
     },
     {
       "type": "paragraph",
-      "id": "4z9dv9d"
+      "id": "4z9dv9d",
+      "content": "Q3. Formula of density? Ans: Mass / Volume"
     },
     {
       "type": "paragraph",
-      "id": "zpgo8sm"
+      "id": "zpgo8sm",
+      "content": "Q4. SI unit of work? Ans: Joule"
     },
     {
       "type": "paragraph",
-      "id": "y5xso5u"
+      "id": "y5xso5u",
+      "content": "Q5. How many fundamental quantities are there? Ans: Seven"
     },
     {
       "id": "qyn3r3f",
@@ -385,13 +433,13 @@
       "id": "6cr11oq",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Physics deals with matter and energy</li><li>There are 7 fundamental quantities</li><li>SI system is used worldwide</li><li>Density = Mass / Volume</li><li>Force = Mass × Acceleration</li><li>Power = Work / Time</li></ul>",
+        "Physics deals with matter and energy",
+        "There are 7 fundamental quantities",
+        "SI system is used worldwide",
+        "Density = Mass / Volume",
+        "Force = Mass × Acceleration",
+        "Power = Work / Time"
       ]
     }
   ],

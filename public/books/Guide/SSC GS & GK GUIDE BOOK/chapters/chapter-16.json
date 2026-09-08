@@ -4,8 +4,21 @@
   "order": 16,
   "blocks": [
     {
+      "id": "4l6af14",
+      "type": "image",
+      "imageId": "xcyn6l8",
+      "src": "/books/Guide/SSC GS & GK GUIDE BOOK/images/image_xcyn6l8.png"
+    },
+    {
       "type": "paragraph",
-      "id": "4w7hj3z"
+      "id": "4w7hj3z",
+      "content": "The Constitution of India is the supreme law of the country. It establishes the framework of governance and guarantees rights to citizens. It is known for its detailed structure and for borrowing many provisions from different constitutions of the world.<img></img>"
+    },
+    {
+      "id": "1c1y1hy",
+      "type": "image",
+      "imageId": "3vnkqq3",
+      "src": "/books/Guide/SSC GS & GK GUIDE BOOK/images/image_3vnkqq3.png"
     },
     {
       "type": "statStrip",
@@ -53,7 +66,8 @@
     },
     {
       "type": "paragraph",
-      "id": "17zylge"
+      "id": "17zylge",
+      "content": "The Indian Constitution is the longest written constitution in the world. It originally contained 395 Articles, 22 Parts, and 8 Schedules. Due to amendments, the number of Articles and Schedules has increased."
     },
     {
       "id": "yxcouie",
@@ -68,71 +82,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Source Country</strong></p>",
+            "<p><strong>Borrowed Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>United Kingdom</p>",
+            "<p>Parliamentary system, Rule of law, Cabinet system, Bicameral legislature</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>United States of America</p>",
+            "<p>Fundamental Rights, Judicial review, Independence of judiciary</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ireland</p>",
+            "<p>Directive Principles of State Policy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Canada</p>",
+            "<p>Federal system with strong centre, Residuary powers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Australia</p>",
+            "<p>Concurrent List, Freedom of trade and commerce</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Germany</p>",
+            "<p>Emergency provisions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>South Africa</p>",
+            "<p>Procedure for amendment of the Constitution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>USSR (Russia)</p>",
+            "<p>Fundamental Duties</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>France</p>",
+            "<p>Ideals of liberty, equality and fraternity</p>"
           ]
         }
       ]
@@ -145,15 +159,18 @@
     },
     {
       "type": "paragraph",
-      "id": "fraoaxf"
+      "id": "fraoaxf",
+      "content": "• Powers are divided between Union and States."
     },
     {
       "type": "paragraph",
-      "id": "567mdb3"
+      "id": "567mdb3",
+      "content": "• The Constitution provides Union List, State List and Concurrent List."
     },
     {
       "type": "paragraph",
-      "id": "ez36g6s"
+      "id": "ez36g6s",
+      "content": "• During emergencies the central government becomes powerful."
     },
     {
       "id": "ed0ys8q",
@@ -163,15 +180,18 @@
     },
     {
       "type": "paragraph",
-      "id": "zgfqe47"
+      "id": "zgfqe47",
+      "content": "• Based on the British parliamentary model."
     },
     {
       "type": "paragraph",
-      "id": "c9o8d6y"
+      "id": "c9o8d6y",
+      "content": "• President is nominal head of state."
     },
     {
       "type": "paragraph",
-      "id": "pgbsn8s"
+      "id": "pgbsn8s",
+      "content": "• Prime Minister and Council of Ministers exercise real executive powers."
     },
     {
       "type": "pullQuote",
@@ -186,7 +206,8 @@
     },
     {
       "type": "paragraph",
-      "id": "kpslz80"
+      "id": "kpslz80",
+      "content": "The Constitution guarantees Fundamental Rights to citizens to ensure liberty, equality and justice."
     },
     {
       "id": "27flfmz",
@@ -196,7 +217,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ix56o20"
+      "id": "ix56o20",
+      "content": "Directive Principles guide the government in making laws and policies to create a welfare state."
     },
     {
       "id": "f6baxu3",
@@ -206,11 +228,13 @@
     },
     {
       "type": "paragraph",
-      "id": "yi4g2dp"
+      "id": "yi4g2dp",
+      "content": "• Judiciary is independent from the executive."
     },
     {
       "type": "paragraph",
-      "id": "64yh4dj"
+      "id": "64yh4dj",
+      "content": "• Supreme Court is the highest judicial authority.<img></img>"
     },
     {
       "type": "comparisonTable",
@@ -240,7 +264,8 @@
     },
     {
       "type": "paragraph",
-      "id": "o6q192v"
+      "id": "o6q192v",
+      "content": "• It protects Fundamental Rights and the Constitution."
     },
     {
       "id": "gaprlxw",
@@ -250,7 +275,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5sdk6fe"
+      "id": "5sdk6fe",
+      "content": "India provides single citizenship to all its citizens unlike countries like the USA."
     },
     {
       "id": "61ebgpi",
@@ -260,7 +286,8 @@
     },
     {
       "type": "paragraph",
-      "id": "61x0bbz"
+      "id": "61x0bbz",
+      "content": "The Constitution declares India a secular state and treats all religions equally."
     },
     {
       "id": "wa5v5zh",
@@ -270,7 +297,8 @@
     },
     {
       "type": "paragraph",
-      "id": "sevt6je"
+      "id": "sevt6je",
+      "content": "Every citizen above 18 years has the right to vote."
     },
     {
       "id": "6wqket5",
@@ -280,11 +308,13 @@
     },
     {
       "type": "paragraph",
-      "id": "whzgf75"
+      "id": "whzgf75",
+      "content": "• National Emergency – Article 352"
     },
     {
       "type": "paragraph",
-      "id": "fwcjqyf"
+      "id": "fwcjqyf",
+      "content": "• State Emergency – Article 356"
     },
     {
       "type": "examAlert",
@@ -298,7 +328,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8zpa3ic"
+      "id": "8zpa3ic",
+      "content": "• Financial Emergency – Article 360"
     },
     {
       "id": "vwudfjp",
@@ -308,19 +339,23 @@
     },
     {
       "type": "paragraph",
-      "id": "dfosq1x"
+      "id": "dfosq1x",
+      "content": "• Indian Constitution adopted on 26 November 1949"
     },
     {
       "type": "paragraph",
-      "id": "2ty7csw"
+      "id": "2ty7csw",
+      "content": "• Constitution came into force on 26 January 1950"
     },
     {
       "type": "paragraph",
-      "id": "5m822wx"
+      "id": "5m822wx",
+      "content": "• Drafting Committee chairman – Dr. B.R. Ambedkar"
     },
     {
       "type": "paragraph",
-      "id": "ma8ekzp"
+      "id": "ma8ekzp",
+      "content": "• Indian Constitution borrowed features from many countries"
     }
   ],
   "enriched": true

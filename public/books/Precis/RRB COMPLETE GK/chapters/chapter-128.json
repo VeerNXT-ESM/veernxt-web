@@ -4,47 +4,53 @@
   "order": 128,
   "blocks": [
     {
+      "id": "bzi673m",
+      "type": "image",
+      "imageId": "diz5h45",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_diz5h45.png"
+    },
+    {
       "id": "nsg7eyc",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Pattern</strong></p>",
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Region</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dendritic</p>",
+            "<p>Tree-like branching</p>",
+            "<p>Uniform rock regions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Trellis</p>",
+            "<p>Parallel streams</p>",
+            "<p>Folded mountains</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Radial</p>",
+            "<p>Flow outward</p>",
+            "<p>Volcanic hills</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rectangular</p>",
+            "<p>Right angle bends</p>",
+            "<p>Faulted regions</p>"
           ]
         }
       ]

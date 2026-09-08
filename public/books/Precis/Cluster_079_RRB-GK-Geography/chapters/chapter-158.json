@@ -1,0 +1,181 @@
+{
+  "title": "2. Wind Erosion Processes",
+  "order": 158,
+  "blocks": [
+    {
+      "id": "rtcmss9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Deflation</p>",
+            "<p>Removal of loose particles leading to lowering of land surface.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Abrasion (Corrasion)</p>",
+            "<p>Sand-laden winds polish, groove, and cut rock surfaces.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Attrition</p>",
+            "<p>Particles collide and become smaller and rounded.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Deflation Types",
+          "value": "5 Landforms",
+          "icon": "book"
+        },
+        {
+          "label": "Abrasion Types",
+          "value": "6 Landforms",
+          "icon": "check"
+        },
+        {
+          "label": "Desert Pavement",
+          "value": "Reg",
+          "icon": "info"
+        },
+        {
+          "label": "3-Faced Stone",
+          "value": "Dreikanter",
+          "icon": "award"
+        }
+      ],
+      "id": "7cdq47j"
+    },
+    {
+      "id": "3nueqr1",
+      "type": "heading",
+      "level": 2,
+      "content": "Deflation Landforms"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Deflation removes fine particles to form landforms such as Deflation Hollows, Blowouts, Lag Deposits, Playas, and Desert Pavement (Reg).",
+        "Abrasion involves wind-driven particles scouring rock surfaces, creating Ventifacts, Yardangs, Zeugens, Rock Pedestals, and Inselbergs.",
+        "Dreikanter are distinct three-faced ventifact stones created under shifting wind directions.",
+        "Yardangs align parallel to prevailing winds, whereas Zeugens form tabular structures capped by resistant rock.",
+        "Rock Pedestals (Mushroom Rocks) derive their unique shape from intense near-ground wind abrasion."
+      ],
+      "id": "sjo8hq8"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Deflation Hollows – depressions created by intense removal of sediments.",
+      "id": "rb6vzcs"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Blowouts – small saucer-shaped basins.",
+      "id": "5n87ngv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Dreikanter – three-faced ventifacts shaped by shifting winds.",
+      "id": "7l8ir8k"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Desert Pavement (Reg) – surface of coarse pebbles after fine materials are removed.",
+      "id": "umoi9d8"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Lag Deposits – accumulation of heavier particles left behind after deflation.",
+      "id": "m7p2f8g"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Playas – dry lake beds formed in desert basins.",
+      "id": "jt8fb7f"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Process Category",
+        "Mechanism",
+        "Associated Landforms"
+      ],
+      "rows": [
+        [
+          "Deflation Landforms",
+          "Removal and lifting of loose, fine sediment particles by wind",
+          "Deflation Hollows, Blowouts, Desert Pavement (Reg), Lag Deposits, Playas"
+        ],
+        [
+          "Abrasion Landforms",
+          "Mechanical grinding, polishing, and undercutting of exposed rock by wind-borne sand",
+          "Ventifacts, Dreikanter, Yardangs, Zeugens, Rock Pedestals (Mushroom Rocks), Inselbergs"
+        ]
+      ],
+      "id": "2ijfxjd"
+    },
+    {
+      "id": "ayzo1kd",
+      "type": "heading",
+      "level": 2,
+      "content": "Abrasion Landforms"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Ventifacts – wind-polished stones.",
+      "id": "llf0ued"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Dreikanter – three-faced ventifacts shaped by shifting winds.",
+      "id": "pp69mnk"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Yardangs – elongated ridges aligned with prevailing winds.",
+      "id": "t6yoece"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Yardangs (elongated ridges aligned with prevailing winds) and Zeugens (tabular ridges with resistant cap rock).",
+        "Note that Reg is the alternative term for Desert Pavement left behind after fine materials are deflated.",
+        "Rock Pedestals (Mushroom Rocks) are formed specifically due to maximum abrasion occurring near ground level."
+      ],
+      "id": "5foju3h"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Zeugens – tabular ridges with resistant cap rock.",
+      "id": "nvffm46"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Rock Pedestals (Mushroom Rocks) – undercut bases due to intense near-ground abrasion.",
+      "id": "7zc8hiu"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Inselbergs – isolated resistant rock hills rising from desert plains.",
+      "id": "7yg28lq"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,65 @@
+{
+  "title": "MOST IMPORTANT EXAM POINTS",
+  "order": 94,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Alfred Wegener proposed continental drift.<br/>• Pangaea existed about 300 million years ago.<br/>• Plates move a few centimeters per year.<br/>• Convergent boundaries create mountains.<br/>• Oceanic plates are denser.<br/>• Ring of Fire contains most active volcanoes.",
+      "id": "5odqq0y"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Ring of Fire contains most active volcanoes.",
+      "id": "lyssi4j"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Theory Proposer",
+          "value": "Alfred Wegener",
+          "icon": "award"
+        },
+        {
+          "label": "Pangaea Existence",
+          "value": "300 Mya",
+          "icon": "calendar"
+        },
+        {
+          "label": "Plate Movement",
+          "value": "Few cm/year",
+          "icon": "clock"
+        },
+        {
+          "label": "Volcano Hotspot",
+          "value": "Ring of Fire",
+          "icon": "info"
+        }
+      ],
+      "id": "ievdoxz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that Alfred Wegener proposed the continental drift theory.",
+        "Identify convergent boundaries as the specific plate interactions that create mountains.",
+        "Note for density questions: Oceanic plates are denser than continental plates."
+      ],
+      "id": "5c05cv4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Alfred Wegener introduced the theory of continental drift.",
+        "Pangaea existed as a supercontinent around 300 million years ago.",
+        "Tectonic plates undergo continuous slow movement of a few centimeters per year.",
+        "Convergent boundaries are responsible for mountain formation.",
+        "Oceanic plates possess a higher density compared to continental crust.",
+        "The Ring of Fire harbors the majority of active volcanoes globally."
+      ],
+      "id": "rx9s5tj"
+    }
+  ],
+  "enriched": true
+}

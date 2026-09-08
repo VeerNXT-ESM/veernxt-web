@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "vimyryf"
+      "id": "vimyryf",
+      "content": "Kerala's history stretches back to prehistoric times. The region was home to Neolithic cultures and later came under the influence of the Megalithic civilisation. The ancient name of Kerala was 'Keralaputra', mentioned in the Ashokan edicts of the 3rd century BCE."
     },
     {
       "type": "paragraph",
-      "id": "xjcyaua"
+      "id": "xjcyaua",
+      "content": "The Sangam Age (circa 300 BCE – 300 CE) is the golden era of ancient South Indian literature. During this period, the region was home to Chera dynasty who ruled the western coast. The Sangam literature — Purananuru, Akananuru, Padirruppattu — provides valuable historical insights about ancient Kerala."
     },
     {
       "id": "z8omv2l",
@@ -68,41 +70,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>King/Ruler</strong></p>",
+            "<p><strong>Period</strong></p>",
+            "<p><strong>Notable Contribution</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Udiyanjeral</p>",
+            "<p>1st century CE</p>",
+            "<p>Known for feeding both warring armies at Kurukshetra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nedum Cheralathan</p>",
+            "<p>1st century CE</p>",
+            "<p>Conquered parts of northern territories</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Senguttuvan (Red Chera)</p>",
+            "<p>2nd century CE</p>",
+            "<p>Founded Kannagi cult; sent expedition to Himalayas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Imayavaramban Nedum Cheralathan</p>",
+            "<p>2nd century CE</p>",
+            "<p>Extended Chera power; famous for trade with Rome</p>"
           ]
         }
       ]
@@ -115,7 +117,8 @@
     },
     {
       "type": "paragraph",
-      "id": "y0169kk"
+      "id": "y0169kk",
+      "content": "The medieval period saw the rise and fall of several kingdoms. The Kulashekhara dynasty (800–1102 CE) ruled Kerala and contributed immensely to Malayalam literature. Cheraman Perumal Nayanar, the last Kulashekhara king, is said to have converted to Islam and traveled to Mecca."
     },
     {
       "id": "y52r797",
@@ -124,72 +127,67 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Dynasty/Kingdom</strong></p>",
+            "<p><strong>Period</strong></p>",
+            "<p><strong>Capital</strong></p>",
+            "<p><strong>Notable Facts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kulashekhara Dynasty</p>",
+            "<p>800–1102 CE</p>",
+            "<p>Mahodayapuram (Kodungallur)</p>",
+            "<p>Founded Kerala Bhasha; Bhakti movement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Venad Kingdom</p>",
+            "<p>12th–16th century</p>",
+            "<p>Thiruvananthapuram</p>",
+            "<p>Evolved into Travancore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Calicut (Zamorins)</p>",
+            "<p>13th–18th century</p>",
+            "<p>Kozhikode</p>",
+            "<p>Welcomed Vasco da Gama; maritime trade</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cochin Kingdom</p>",
+            "<p>14th–20th century</p>",
+            "<p>Kochi</p>",
+            "<p>Allied with Portuguese</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kolathiri Kingdom</p>",
+            "<p>10th–17th century</p>",
+            "<p>Kannur</p>",
+            "<p>Ruled Malabar coast</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Travancore Kingdom</p>",
+            "<p>1729–1949</p>",
+            "<p>Thiruvananthapuram</p>",
+            "<p>Modern administration by Marthanda Varma</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Chera Dynasty — Ancient Period",
-      "id": "5gp5s9u"
     },
     {
       "id": "iczzawm",
@@ -199,7 +197,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tu5l92b"
+      "id": "tu5l92b",
+      "content": "Vasco da Gama landed at Kappad (Kozhikode) on May 27, 1498, marking the beginning of the European era in Kerala. This was the first direct sea route from Europe to India."
     },
     {
       "id": "jub1akq",
@@ -208,46 +207,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>European Power</strong></p>",
+            "<p><strong>Year of Arrival</strong></p>",
+            "<p><strong>First Fort/Factory</strong></p>",
+            "<p><strong>Key Events</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Portuguese</p>",
+            "<p>1498</p>",
+            "<p>Fort Manuel, Kochi (1503)</p>",
+            "<p>First European fort in India; converted to Christianity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dutch</p>",
+            "<p>1604</p>",
+            "<p>Pulicat (1609)</p>",
+            "<p>Defeated Portuguese at Battle of Colachel (1741)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>British</p>",
+            "<p>1600 (EIC)</p>",
+            "<p>Surat; later Tellicherry (Thalassery)</p>",
+            "<p>Established dominance after 1800</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>French</p>",
+            "<p>1725</p>",
+            "<p>Mahe (Pondicherry)</p>",
+            "<p>Mahe remains a UT of France even today</p>"
           ]
         }
       ]
@@ -260,7 +259,8 @@
     },
     {
       "type": "paragraph",
-      "id": "a4i3ayo"
+      "id": "a4i3ayo",
+      "content": "Marthanda Varma (1706–1758) is considered the 'Maker of Modern Travancore'. He transformed Travancore from a weak kingdom into a powerful state. He defeated the Dutch at the Battle of Colachel (1741), the first Asian victory over a European power in modern warfare. His general Eustachius De Lannoy, the captured Dutch admiral, helped modernize the Travancore army."
     },
     {
       "type": "comparisonTable",
@@ -290,7 +290,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rrs5kf4"
+      "id": "rrs5kf4",
+      "content": "Rama Varma (Dharmaraja) (1758–1798) and later Rani Gowri Lakshmi Bayi were notable rulers. The kingdom came under British paramountcy through the Travancore-British treaty."
     },
     {
       "id": "7cliiiv",
@@ -299,57 +300,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Ruler of Travancore</strong></p>",
+            "<p><strong>Period</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Marthanda Varma</p>",
+            "<p>1729–1758</p>",
+            "<p>Maker of Modern Travancore; Battle of Colachel victory</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dharmaraja (Rama Varma)</p>",
+            "<p>1758–1798</p>",
+            "<p>Patronized arts; Hyder Ali invasion repelled</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rani Gowri Lakshmi Bayi</p>",
+            "<p>1810–1815</p>",
+            "<p>Regency; introduced social reforms</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Swati Tirunal</p>",
+            "<p>1829–1847</p>",
+            "<p>Great composer and reformer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Uthradom Tirunal Marthanda Varma</p>",
+            "<p>1924–1991</p>",
+            "<p>Last Maharaja of Travancore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chithira Tirunal Balarama Varma</p>",
+            "<p>1931–1949</p>",
+            "<p>Signed instrument of accession to India</p>"
           ]
         }
       ]
@@ -362,7 +363,8 @@
     },
     {
       "type": "paragraph",
-      "id": "p8o8sjm"
+      "id": "p8o8sjm",
+      "content": "Kerala has a rich tradition of social reform movements that fought against caste discrimination, untouchability, and social inequality. These movements paved the way for the progressive nature of Kerala's society today."
     },
     {
       "id": "3ohb8ax",
@@ -371,73 +373,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Reformer</strong></p>",
+            "<p><strong>Born</strong></p>",
+            "<p><strong>Movement/Contribution</strong></p>",
+            "<p><strong>Key Organisations</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sree Narayana Guru</p>",
+            "<p>1856</p>",
+            "<p>SNDP Yogam; 'One Caste, One Religion, One God for Man'</p>",
+            "<p>SNDP Yogam (1903)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ayyankali</p>",
+            "<p>1863</p>",
+            "<p>Dalit rights; land rights for Pulayas</p>",
+            "<p>Sadhu Jana Paripalana Sangham (1905)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Brahmananda Sivayogi</p>",
+            "<p>1852</p>",
+            "<p>Ananda Maha Sabha; atheism and rationalism</p>",
+            "<p>Ananda Maha Sabha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Chattampi Swamikal</p>",
+            "<p>1853</p>",
+            "<p>Challenged caste system; Sanskrit education for all</p>",
+            "<p>–</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>V.T. Bhattathirippad</p>",
+            "<p>1896</p>",
+            "<p>Nambudiri reform; widow remarriage</p>",
+            "<p>Yoga Kshema Sabha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vakkom Abdul Khader Maulavi</p>",
+            "<p>1873</p>",
+            "<p>Muslim reformation; education for women</p>",
+            "<p>Swadeshabhimani newspaper</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Pandit Karuppan</p>",
+            "<p>1885</p>",
+            "<p>Ezhava empowerment; education</p>",
+            "<p>Cochin Legislative Council member</p>"
           ]
         }
       ]
@@ -459,7 +461,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8jw2a5q"
+      "id": "8jw2a5q",
+      "content": "Kerala's freedom struggle was deeply intertwined with the national movement and the regional social reform movements. Important events and personalities shaped the trajectory of independence movement in Kerala."
     },
     {
       "id": "dtmgnxm",
@@ -468,73 +471,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Event</strong></p>",
+            "<p><strong>Year</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Malabar Rebellion (Mappila Uprising)</p>",
+            "<p>1921</p>",
+            "<p>Malabar (Malappuram, Palakkad)</p>",
+            "<p>Anti-British and anti-landlord revolt</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vaikom Satyagraha</p>",
+            "<p>1924–1925</p>",
+            "<p>Vaikom, Kottayam</p>",
+            "<p>First Satyagraha for temple entry rights</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Guruvayur Satyagraha</p>",
+            "<p>1931–1932</p>",
+            "<p>Guruvayur, Thrissur</p>",
+            "<p>Led by K. Kelappan; temple entry for lower castes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Paliyam Satyagraha</p>",
+            "<p>1947–1948</p>",
+            "<p>Chendamangalam, Ernakulam</p>",
+            "<p>Against caste discrimination on public roads</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kayyur Revolt</p>",
+            "<p>1941</p>",
+            "<p>Kayyur, Kasaragod</p>",
+            "<p>Anti-feudal armed revolt; 4 hanged by British</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Punnapra-Vayalar Revolt</p>",
+            "<p>1946</p>",
+            "<p>Alappuzha</p>",
+            "<p>Working class revolt against Divan C.P. Ramaswamy Iyer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Temple Entry Proclamation</p>",
+            "<p>1936</p>",
+            "<p>Travancore</p>",
+            "<p>Issued by Chithira Tirunal; opened temples to all Hindus</p>"
           ]
         }
       ]
@@ -547,7 +550,8 @@
     },
     {
       "type": "paragraph",
-      "id": "l6ialfl"
+      "id": "l6ialfl",
+      "content": "Kerala was formed on November 1, 1956, when the States Reorganisation Act came into effect. The state was carved out of the former Travancore-Cochin state and the Malabar district of Madras State, uniting all Malayalam-speaking people under one administrative unit."
     },
     {
       "id": "cs6boot",
@@ -556,49 +560,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Component Region</strong></p>",
+            "<p><strong>Former Status</strong></p>",
+            "<p><strong>Area (approx.)</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Travancore-Cochin</p>",
+            "<p>State (post-1949)</p>",
+            "<p>Major portion</p>",
+            "<p>Formed by merger of Travancore &amp; Cochin in 1949</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Malabar District</p>",
+            "<p>Part of Madras State</p>",
+            "<p>Northern Kerala</p>",
+            "<p>Includes Kozhikode, Kannur, Malappuram</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kasaragod Taluk</p>",
+            "<p>Part of South Canara, Madras</p>",
+            "<p>Northernmost Kerala</p>",
+            "<p>Added due to Malayalam majority</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Shencottah Taluk</p>",
+            "<p>Part of Travancore-Cochin</p>",
+            "<p>Later transferred</p>",
+            "<p>Transferred to Tamil Nadu in 1956</p>"
           ]
         }
       ]
+    },
+    {
+      "id": "8jsa2et",
+      "type": "image",
+      "imageId": "y9cupu6",
+      "src": "/books/Guide/KERALA CONSTABLE/images/image_y9cupu6.jpeg"
     }
   ],
   "enriched": true

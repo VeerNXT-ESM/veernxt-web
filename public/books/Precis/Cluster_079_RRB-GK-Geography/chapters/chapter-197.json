@@ -1,0 +1,204 @@
+{
+  "title": "6. Natural Vegetation of India (Very Detailed)",
+  "order": 197,
+  "blocks": [
+    {
+      "id": "5onvnkn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Forest Type</strong></p>",
+            "<p><strong>Rainfall</strong></p>",
+            "<p><strong>Regions</strong></p>",
+            "<p><strong>Important Trees</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropical Evergreen</p>",
+            "<p>&gt;200 cm</p>",
+            "<p>Western Ghats, Northeast, Andaman</p>",
+            "<p>Ebony, mahogany, rosewood</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropical Moist Deciduous</p>",
+            "<p>100–200 cm</p>",
+            "<p>Eastern India, foothills</p>",
+            "<p>Teak, sal</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropical Dry Deciduous</p>",
+            "<p>70–100 cm</p>",
+            "<p>Central India</p>",
+            "<p>Bamboo, neem</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Thorn Forest</p>",
+            "<p>&lt;70 cm</p>",
+            "<p>Rajasthan, Gujarat</p>",
+            "<p>Acacia, babool</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Montane Forest</p>",
+            "<p>Varies with altitude</p>",
+            "<p>Himalayas</p>",
+            "<p>Pine, deodar, fir</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mangrove</p>",
+            "<p>Tidal coasts</p>",
+            "<p>Sundarbans</p>",
+            "<p>Sundari tree</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "1000–2000 m",
+          "value": "Subtropical",
+          "icon": "info"
+        },
+        {
+          "label": "2000–3000 m",
+          "value": "Temperate",
+          "icon": "info"
+        },
+        {
+          "label": "3000–4000 m",
+          "value": "Coniferous",
+          "icon": "info"
+        },
+        {
+          "label": ">4000 m",
+          "value": "Alpine",
+          "icon": "info"
+        }
+      ],
+      "id": "kazxiww"
+    },
+    {
+      "id": "95apmo1",
+      "type": "heading",
+      "level": 2,
+      "content": "Montane Forest Altitudinal Zones"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Montane forests are categorized by altitudinal zones ranging from subtropical to alpine vegetation.",
+        "Coniferous forests occur at elevations between 3000–4000 m, while alpine vegetation is found above 4000 m.",
+        "Mangroves possess pneumatophores which serve as specialized breathing roots.",
+        "Vivipary is a key adaptation where seeds germinate while still attached to the parent tree.",
+        "Salt filtration mechanisms help mangroves survive in saline environment conditions."
+      ],
+      "id": "s7a7lm6"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Vivipary – seeds germinate while attached to parent tree.",
+      "id": "zoodkt7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• 1000–2000 m: Subtropical forests",
+      "id": "e8qlhsq"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• 2000–3000 m: Temperate forests",
+      "id": "vu1er3l"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Altitudinal Zone",
+        "Vegetation Type"
+      ],
+      "rows": [
+        [
+          "1000–2000 m",
+          "Subtropical forests"
+        ],
+        [
+          "2000–3000 m",
+          "Temperate forests"
+        ],
+        [
+          "3000–4000 m",
+          "Coniferous forests"
+        ],
+        [
+          ">4000 m",
+          "Alpine vegetation"
+        ]
+      ],
+      "id": "ey1wd05"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• 3000–4000 m: Coniferous forests",
+      "id": "rkdygc2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• &gt;4000 m: Alpine vegetation",
+      "id": "oaggizi"
+    },
+    {
+      "id": "z1mfv48",
+      "type": "heading",
+      "level": 2,
+      "content": "Mangrove Adaptations"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember the correct sequence of Montane forest zones by altitude: Subtropical (1000-2000m) -> Temperate (2000-3000m) -> Coniferous (3000-4000m) -> Alpine (>4000m).",
+        "Pneumatophores (breathing roots) and Vivipary are frequently tested adaptive characteristics of mangrove ecosystems."
+      ],
+      "id": "yu796dk"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Pneumatophores (breathing roots).",
+      "id": "hwr7w3p"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Vivipary – seeds germinate while attached to parent tree.",
+      "id": "6lztezi"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Salt filtration mechanisms.",
+      "id": "hf3126o"
+    }
+  ],
+  "enriched": true
+}

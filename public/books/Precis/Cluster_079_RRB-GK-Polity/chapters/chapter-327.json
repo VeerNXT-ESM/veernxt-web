@@ -1,0 +1,130 @@
+{
+  "title": "Composition of IRDAI",
+  "order": 327,
+  "blocks": [
+    {
+      "id": "tz7ezzg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Member</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>Appointed by the Central Government</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Maximum Members</p>",
+            "<p>10 members</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Full-time Members</p>",
+            "<p>Up to 5</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Part-time Members</p>",
+            "<p>Up to 5</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The authority consists of a ten-member body comprising a chairman, five whole-time members, and four part-time members appointed by the Government of India.",
+      "id": "1wn219p"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Designation",
+        "Number of Posts",
+        "Tenure",
+        "Age Limit"
+      ],
+      "rows": [
+        [
+          "Chairman",
+          "1",
+          "5 Years",
+          "65 Years"
+        ],
+        [
+          "Whole-Time Members",
+          "5",
+          "5 Years",
+          "62 Years"
+        ],
+        [
+          "Part-Time Members",
+          "4",
+          "Up to 5 Years",
+          "Not Specified"
+        ]
+      ],
+      "id": "obwfktt"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Members",
+          "value": "10",
+          "icon": "check"
+        },
+        {
+          "label": "Chairman Age Limit",
+          "value": "65 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Whole-time Members",
+          "value": "5",
+          "icon": "book"
+        },
+        {
+          "label": "Part-time Members",
+          "value": "4",
+          "icon": "info"
+        }
+      ],
+      "id": "2sb6ozz"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember the breakdown of 10 IRDAI members: 1 Chairman + 5 Whole-time Members + 4 Part-time Members.",
+        "Different age limits apply: Maximum age limit is 65 years for the Chairman and 62 years for Whole-time Members.",
+        "All members of IRDAI are exclusively appointed by the Government of India under the provisions of the IRDAI Act, 1999."
+      ],
+      "id": "6eu1xeq"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Insurance Regulatory and Development Authority of India (IRDAI) is a 10-member statutory body established under Section 4 of the IRDAI Act, 1999.",
+        "The authority comprises one Chairman, five whole-time members, and four part-time members, all appointed by the Central Government.",
+        "The Chairman holds office for a term of 5 years or until attaining the age of 65 years, whichever is earlier.",
+        "Whole-time members hold office for a term of 5 years or until attaining the age of 62 years.",
+        "Members are selected from individuals with knowledge or experience in insurance, actuarial science, finance, law, or administration."
+      ],
+      "id": "mg5vqas"
+    }
+  ],
+  "enriched": true
+}

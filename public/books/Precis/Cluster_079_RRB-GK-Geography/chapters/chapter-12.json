@@ -1,0 +1,92 @@
+{
+  "title": "Untitled Chapter",
+  "order": 12,
+  "blocks": [
+    {
+      "id": "vli0w0w",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Body</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Asteroid</p>",
+            "<p>Rocky body orbiting the Sun</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Comet</p>",
+            "<p>Ice + dust; develops glowing tail</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Meteor</p>",
+            "<p>Burns in atmosphere (shooting star)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Meteorite</p>",
+            "<p>Reaches Earth surface</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Understanding underlying principles is crucial for scoring well in competitive examinations.",
+      "id": "4f5im8h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter Focus",
+          "value": "Core Concepts",
+          "icon": "book"
+        },
+        {
+          "label": "Revision Priority",
+          "value": "High",
+          "icon": "award"
+        },
+        {
+          "label": "Target Relevance",
+          "value": "Competitive Exams",
+          "icon": "check"
+        }
+      ],
+      "id": "ng0z4hh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct conceptual questions are frequently tested from fundamental topics.",
+        "Ensure clarity on core definitions to avoid common traps in multiple-choice questions."
+      ],
+      "id": "gtvwolp"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Understanding underlying principles is crucial for scoring well in competitive examinations.",
+        "Consistent practice with previous years' questions builds accuracy and speed.",
+        "Structured revision helps retain key facts and analytical techniques effectively."
+      ],
+      "id": "d3ocuux"
+    }
+  ],
+  "enriched": true
+}

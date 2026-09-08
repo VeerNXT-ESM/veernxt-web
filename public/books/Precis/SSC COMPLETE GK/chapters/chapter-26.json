@@ -10,6 +10,12 @@
       "content": "Time Period"
     },
     {
+      "id": "buui0k3",
+      "type": "image",
+      "imageId": "qvnm2ys",
+      "src": "/books/Precis/SSC COMPLETE GK/images/image_qvnm2ys.jpeg"
+    },
+    {
       "type": "statStrip",
       "stats": [
         {
@@ -49,7 +55,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6ih62oa"
+      "id": "6ih62oa",
+      "content": "<img></img>The Neolithic Age generally extended from <strong>6,000 BC to 1,000 BC</strong>, though the exact time varies from region to region."
     },
     {
       "id": "fczsade",
@@ -59,7 +66,8 @@
     },
     {
       "type": "paragraph",
-      "id": "771hqht"
+      "id": "771hqht",
+      "content": "The Neolithic Age marked a major transformation in human life, often referred to as the <strong>Neolithic Revolution</strong>. During this period: - Humans began <strong>agriculture</strong>. - Animals were <strong>domesticated</strong>. - People started living in <strong>permanent settlements</strong>."
     },
     {
       "type": "pullQuote",
@@ -68,7 +76,8 @@
     },
     {
       "type": "paragraph",
-      "id": "kcsehzv"
+      "id": "kcsehzv",
+      "content": "SSC Highlight: <em>Agriculture began in the Neolithic Age.</em>"
     },
     {
       "id": "6zsdk61",
@@ -80,8 +89,8 @@
       "id": "gomtby4",
       "type": "list",
       "items": [
-        null,
-        null
+        "Tools were made of <strong>polished stone</strong>, making them sharper and more durable.",
+        "These tools were mainly used for farming and clearing forests."
       ]
     },
     {
@@ -125,9 +134,9 @@
       "id": "cddwvnh",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Humans lived in permanent villages.",
+        "Houses were made of mud and bricks.",
+        "Grains were stored for future use."
       ]
     },
     {
@@ -138,7 +147,8 @@
     },
     {
       "type": "paragraph",
-      "id": "pot1crj"
+      "id": "pot1crj",
+      "content": "Commonly domesticated animals included: - Cow - Goat - Sheep - Dog"
     },
     {
       "id": "uax7o67",
@@ -160,14 +170,15 @@
       "id": "y8c6ux9",
       "type": "list",
       "items": [
-        null,
-        null
+        "Pottery became common.",
+        "Humans started wearing clothes made from cotton and wool."
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wd0i332"
+      "id": "wd0i332",
+      "content": "Important Neolithic Sites in India"
     },
     {
       "id": "6oj51d4",
@@ -176,36 +187,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Site</strong></p>",
+            "<p><strong>Region</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mehrgarh</p>",
+            "<p>Pakistan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Burzahom</p>",
+            "<p>Kashmir</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Koldihwa</p>",
+            "<p>Uttar Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Daojali Hading</p>",
+            "<p>Assam</p>"
           ]
         }
       ]

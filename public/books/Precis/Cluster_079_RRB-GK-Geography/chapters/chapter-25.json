@@ -1,0 +1,83 @@
+{
+  "title": "7. Perihelion vs Aphelion",
+  "order": 25,
+  "blocks": [
+    {
+      "id": "3iruol9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Perihelion</p>",
+            "<p>Closest (~3 Jan)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Aphelion</p>",
+            "<p>Farthest (~4 July)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Northern Hemisphere winter occurs near perihelion , proving distance does NOT cause seasons.",
+      "id": "65gzzdo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Orbital Event",
+          "value": "Perihelion",
+          "icon": "info"
+        },
+        {
+          "label": "NH Season",
+          "value": "Winter",
+          "icon": "calendar"
+        },
+        {
+          "label": "Season Primary Cause",
+          "value": "Not Distance",
+          "icon": "check"
+        }
+      ],
+      "id": "5f6q0yn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Northern Hemisphere winter occurs when the Earth is near perihelion.",
+        "The distance between Earth and the Sun does NOT cause the change of seasons.",
+        "The occurrence of winter during the closest approach (perihelion) proves orbital distance is not responsible for seasonal temperatures."
+      ],
+      "id": "awir728"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently test the misconception that Earth is farthest from the Sun during winter; in fact, Northern Hemisphere winter occurs near perihelion.",
+        "Remember that variation in Earth-Sun distance is NOT the cause of seasons."
+      ],
+      "id": "2bnqkvq"
+    },
+    {
+      "type": "paragraph",
+      "content": "IMPORTANT: Northern Hemisphere winter occurs near perihelion , proving distance does NOT cause seasons.",
+      "id": "2izvuok"
+    }
+  ],
+  "enriched": true
+}

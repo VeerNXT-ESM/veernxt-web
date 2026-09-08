@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "5wggexe"
+      "id": "5wggexe",
+      "content": "The tribal chapter is the single most exam-critical portion of A&amp;N General Studies. Almost every competitive exam covering this UT asks at least one question distinguishing the six recognised tribes, their PVTG status, population trends, and legal protections."
     },
     {
       "type": "statStrip",
@@ -52,69 +53,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Indicator</strong></p>",
+            "<p><strong>Detail (2011 Census, latest available decennial data)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Total population</p>",
+            "<p>≈ 3.8 lakh (380,581)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sex ratio</p>",
+            "<p>≈ 876 females per 1,000 males (below national average)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Literacy rate</p>",
+            "<p>≈ 86.6% — among the highest of all Indian states/UTs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Population density</p>",
+            "<p>≈ 46 persons per sq km — among the lowest in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Most populous district</p>",
+            "<p>South Andaman</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Least populous district</p>",
+            "<p>Nicobar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major settler communities</p>",
+            "<p>Bengali, Tamil, Telugu, Malayali, Ranchi (tribal-origin mainland settlers), Karen (from Myanmar)</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "xqys5yp"
-    },
-    {
-      "type": "pullQuote",
-      "content": "The Six Indigenous Tribes of A&N Islands",
-      "id": "ov7sohr"
+      "id": "xqys5yp",
+      "content": "<strong>★ EXAM POINT: </strong><em>A&amp;N's literacy rate (~86.6%) is consistently among the top handful of all Indian states/UTs, and its population density is among the lowest — both are commonly tested comparative facts.</em>"
     },
     {
       "id": "0xg8tqr",
@@ -124,7 +121,8 @@
     },
     {
       "type": "paragraph",
-      "id": "sli9hix"
+      "id": "sli9hix",
+      "content": "A&amp;N Islands are home to six Scheduled Tribes, broadly divided into two ethnic-linguistic groups: the Negrito tribes of the Andaman group and the Mongoloid tribes of the Nicobar group. Five of the six are classified as Particularly Vulnerable Tribal Groups (PVTGs) due to their pre-agricultural technology, extremely low/declining population, and high degree of isolation — the Nicobarese are the sole exception."
     },
     {
       "id": "z1xsnhz",
@@ -133,71 +131,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Tribe</strong></p>",
+            "<p><strong>Group</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>PVTG?</strong></p>",
+            "<p><strong>Approx. Population / Status</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Great Andamanese</p>",
+            "<p>Negrito</p>",
+            "<p>Strait Island (relocated)</p>",
+            "<p>Yes</p>",
+            "<p>Critically endangered; a few dozen individuals remain — most endangered of all</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Onge</p>",
+            "<p>Negrito</p>",
+            "<p>Little Andaman</p>",
+            "<p>Yes</p>",
+            "<p>Very small population, under 150</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Jarawa</p>",
+            "<p>Negrito</p>",
+            "<p>South &amp; Middle Andaman (along ATR)</p>",
+            "<p>Yes</p>",
+            "<p>≈ 400–450; largely isolated, semi-contacted since 1998</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Sentinelese</p>",
+            "<p>Negrito</p>",
+            "<p>North Sentinel Island</p>",
+            "<p>Yes</p>",
+            "<p>Estimated 50–200; totally uncontacted, hostile to outsiders, legally off-limits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Nicobarese (Nicobari)</p>",
+            "<p>Mongoloid</p>",
+            "<p>Car Nicobar &amp; other Nicobar islands</p>",
+            "<p>No</p>",
+            "<p>Largest tribal group, ≈ 27,000–30,000; relatively integrated, agriculturalist</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Shompen</p>",
+            "<p>Mongoloid</p>",
+            "<p>Interior Great Nicobar</p>",
+            "<p>Yes</p>",
+            "<p>≈ 200–300; forest-dwelling hunter-gatherers, semi-isolated</p>"
           ]
         }
       ]
@@ -222,7 +220,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tepvxqp"
+      "id": "tepvxqp",
+      "content": "<strong>★ EXAM POINT: </strong><em>Memory aid — of the 6 tribes, 5 are PVTGs: Great Andamanese, Onge, Jarawa, Sentinelese (all Negrito, Andaman group) plus Shompen (Mongoloid, Nicobar group). Only the Nicobarese are NOT a PVTG. This 5-vs-6 count is one of the most commonly mis-stated facts — always double-check it against the year's official list before your exam.</em>"
     },
     {
       "id": "cwlb744",
@@ -234,12 +233,12 @@
       "id": "u20qp0d",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "The Great Andamanese were originally ten distinct sub-tribes; today the survivors (a few dozen) live mainly on Strait Island under government care, and their original languages are nearly extinct — linguists class most Great Andamanese languages as critically endangered or already extinct.",
+        "The Jarawa came into more sustained contact with the outside world only after 1998, having resisted contact for most of the colonial and early independence period; the Andaman Trunk Road cutting through their reserve remains a major point of controversy for enabling illegal tourist 'human safaris', now legally restricted.",
+        "The Sentinelese remain the world's most isolated people, having no known contact with any outside civilisation; in November 2018, American national John Allen Chau was killed after illegally trespassing on North Sentinel Island, an incident that renewed global attention on the tribe's legal protection.",
+        "The 2004 tsunami caused significant concern for tribal survival, but most tribal groups — drawing on generations of traditional ecological knowledge (reportedly reading changes in animal behaviour and tidal patterns) — moved to higher ground before the waves struck and suffered comparatively few casualties, a widely cited example of indigenous disaster-resilience knowledge.",
+        "The Shompen of Great Nicobar are increasingly discussed in current affairs because their forest habitat overlaps with the Great Nicobar Island Development Project area, raising rehabilitation and indigenous-rights concerns flagged by tribal-welfare bodies and the National Commission for Scheduled Tribes.",
+        "The Nicobarese, unlike the Andamanese tribes, are agriculturalists and traders with a longer history of contact, own coconut/areca plantations, and were the community most severely affected by fatalities in the 2004 tsunami due to their coastal settlement pattern."
       ]
     },
     {
@@ -261,10 +260,10 @@
       "id": "zrwc26h",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Post-Partition refugees from East Bengal (now Bangladesh) were resettled in South and Middle Andaman from the 1950s onward under organised government resettlement schemes — the single largest wave of non-tribal settlement.",
+        "Tamil and Telugu-speaking settlers, largely ex-servicemen and agricultural colonists, were resettled mainly in parts of South Andaman and Nicobar under similar schemes.",
+        "The Karen community, originally from Myanmar (Burma), were resettled by the British around Mayabunder in North Andaman in the 1920s–1940s and retain a distinct cultural identity.",
+        "A significant Ranchi-origin tribal (Oraon, Munda) population, brought as labourers during British times, is settled mainly in Middle Andaman."
       ]
     },
     {
@@ -277,13 +276,13 @@
       "id": "11m9r3a",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "6 tribes: Great Andamanese, Onge, Jarawa, Sentinelese (Negrito) + Nicobarese, Shompen (Mongoloid).",
+        "5 of the 6 tribes are PVTGs — only the Nicobarese are not classified as a PVTG.",
+        "Sentinelese on North Sentinel Island remain totally uncontacted; entry is illegal (John Allen Chau incident, 2018).",
+        "Jarawa came into sustained outside contact only after 1998; Andaman Trunk Road passes through their reserve.",
+        "Great Andamanese are the most critically endangered — a few dozen survivors, mostly on Strait Island.",
+        "Shompen habitat overlaps the Great Nicobar Development Project area — a major current tribal-rights issue.",
+        "Nicobarese are the largest and most integrated tribal group; suffered the heaviest tsunami casualties in 2004."
       ]
     }
   ],

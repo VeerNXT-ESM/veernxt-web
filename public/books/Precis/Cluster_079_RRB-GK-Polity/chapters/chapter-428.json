@@ -1,0 +1,63 @@
+{
+  "title": "14. Exam Traps",
+  "order": 428,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• FCI established in 1965.<br/>• Created under Food Corporations Act, 1964.<br/>• Procures at MSP but does NOT decide MSP.<br/>• Maintains buffer stock.<br/>• Key agency for PDS and NFSA.",
+      "id": "ngv9hk4"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Procures at MSP but does NOT decide MSP.",
+      "id": "du8shoy"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "1965",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Act",
+          "value": "1964",
+          "icon": "book"
+        },
+        {
+          "label": "MSP Role",
+          "value": "Procures Only",
+          "icon": "info"
+        },
+        {
+          "label": "Core Function",
+          "value": "Buffer Stock",
+          "icon": "check"
+        }
+      ],
+      "id": "n4g2tly"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequent Trap: Examiners often trick candidates by stating FCI fixes MSP. FCI only procures at MSP; it does NOT determine it.",
+        "Year Differentiation: Note that the Food Corporations Act was passed in 1964, but FCI was officially established in 1965.",
+        "Key Implementation Agency: FCI is directly linked as the execution body for both PDS and NFSA."
+      ],
+      "id": "d0vdkah"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "FCI was established in 1965 under the statutory framework of the Food Corporations Act, 1964.",
+        "While FCI procures food grains at the Minimum Support Price (MSP), it does not have the authority to decide the MSP.",
+        "FCI is responsible for maintaining the nation's buffer stock of food grains.",
+        "It serves as the main operational agency for implementing the Public Distribution System (PDS) and the National Food Security Act (NFSA)."
+      ],
+      "id": "8pyav1w"
+    }
+  ],
+  "enriched": true
+}

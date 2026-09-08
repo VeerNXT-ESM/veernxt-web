@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xy090j4"
+      "id": "xy090j4",
+      "content": "Human physiology is the study of functions of the human body and how different organs and systems work together to maintain life. In nursing competitive examinations such as RRB Nursing, questions are commonly asked about blood composition, cardiac cycle, respiration, digestion, kidney function, hormones, and normal physiological values."
     },
     {
       "id": "i6th564",
@@ -58,7 +59,8 @@
     },
     {
       "type": "paragraph",
-      "id": "oldiyb0"
+      "id": "oldiyb0",
+      "content": "Cells are the basic functional units of the body. Cell physiology includes metabolism, transport mechanisms, and cellular communication."
     },
     {
       "id": "cdw6gw4",
@@ -67,50 +69,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Cell Process</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Diffusion</p>",
+            "<p>Movement of molecules from higher concentration to lower concentration</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Osmosis</p>",
+            "<p>Movement of water across a semipermeable membrane</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Active Transport</p>",
+            "<p>Movement of substances against concentration gradient using ATP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Facilitated Diffusion</p>",
+            "<p>Transport with help of carrier proteins</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Endocytosis</p>",
+            "<p>Cell engulfs particles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Exocytosis</p>",
+            "<p>Cell releases substances outside</p>"
           ]
         }
       ]
@@ -123,7 +125,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yy4xp1s"
+      "id": "yy4xp1s",
+      "content": "Blood is a connective tissue responsible for transport of oxygen, nutrients, hormones, and waste products."
     },
     {
       "id": "tay4sb4",
@@ -132,36 +135,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Red Blood Cells (RBC)</p>",
+            "<p>Carry oxygen using hemoglobin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>White Blood Cells (WBC)</p>",
+            "<p>Defense against infection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Platelets</p>",
+            "<p>Blood clotting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Plasma</p>",
+            "<p>Liquid part carrying nutrients and hormones</p>"
           ]
         }
       ]
@@ -179,58 +182,53 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Normal Value</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hemoglobin (Male)</p>",
+            "<p>13–17 g/dL</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hemoglobin (Female)</p>",
+            "<p>12–15 g/dL</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RBC Count</p>",
+            "<p>4.5–6 million cells/mm³</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>WBC Count</p>",
+            "<p>4,000–11,000 cells/mm³</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Platelet Count</p>",
+            "<p>150,000–450,000/mm³</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Blood pH</p>",
+            "<p>7.35 – 7.45</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Normal Blood Values (Important Exam Facts)",
-      "id": "1gb6o1u"
     },
     {
       "id": "fs0sk0b",
@@ -240,7 +238,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ocylkl1"
+      "id": "ocylkl1",
+      "content": "The heart pumps blood throughout the body. The cardiac cycle includes systole (contraction) and diastole (relaxation)."
     },
     {
       "id": "hs8akjk",
@@ -249,36 +248,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Systole</p>",
+            "<p>Contraction phase of heart</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Diastole</p>",
+            "<p>Relaxation phase</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Stroke Volume</p>",
+            "<p>Amount of blood pumped per beat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cardiac Output</p>",
+            "<p>Heart rate × Stroke volume</p>"
           ]
         }
       ]
@@ -296,36 +295,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Vital Sign</strong></p>",
+            "<p><strong>Normal Range</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heart Rate</p>",
+            "<p>60–100 beats per minute</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Respiratory Rate</p>",
+            "<p>12–20 breaths per minute</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Blood Pressure</p>",
+            "<p>120/80 mmHg</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Body Temperature</p>",
+            "<p>36.5–37.5 °C</p>"
           ]
         }
       ]
@@ -338,7 +337,8 @@
     },
     {
       "type": "paragraph",
-      "id": "eyg91w6"
+      "id": "eyg91w6",
+      "content": "The respiratory system provides oxygen to the body and removes carbon dioxide."
     },
     {
       "id": "xrdifnw",
@@ -347,36 +347,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tidal Volume</p>",
+            "<p>Amount of air inhaled in normal breath (~500 mL)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vital Capacity</p>",
+            "<p>Maximum air expelled after deep breath</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Residual Volume</p>",
+            "<p>Air remaining in lungs after forced expiration</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Alveoli</p>",
+            "<p>Site of gas exchange</p>"
           ]
         }
       ]
@@ -389,7 +389,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ucydvil"
+      "id": "ucydvil",
+      "content": "The digestive system breaks down food, absorbs nutrients, and eliminates waste."
     },
     {
       "id": "bq7jr72",
@@ -398,43 +399,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Organ</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Stomach</p>",
+            "<p>Protein digestion using gastric juice</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Small Intestine</p>",
+            "<p>Absorption of nutrients</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Liver</p>",
+            "<p>Produces bile</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pancreas</p>",
+            "<p>Produces digestive enzymes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Large Intestine</p>",
+            "<p>Water absorption</p>"
           ]
         }
       ]
@@ -447,7 +448,8 @@
     },
     {
       "type": "paragraph",
-      "id": "j8zmiy5"
+      "id": "j8zmiy5",
+      "content": "The kidneys maintain fluid balance and remove metabolic waste through urine formation."
     },
     {
       "type": "examAlert",
@@ -465,36 +467,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Filtration</p>",
+            "<p>Blood filtration in glomerulus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Reabsorption</p>",
+            "<p>Useful substances reabsorbed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Secretion</p>",
+            "<p>Waste substances secreted into tubules</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Excretion</p>",
+            "<p>Formation of urine</p>"
           ]
         }
       ]
@@ -512,43 +514,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Gland</strong></p>",
+            "<p><strong>Hormone Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pituitary</p>",
+            "<p>Controls other endocrine glands</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thyroid</p>",
+            "<p>Regulates metabolism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Adrenal</p>",
+            "<p>Stress response</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pancreas</p>",
+            "<p>Insulin and glucose regulation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pineal</p>",
+            "<p>Melatonin secretion</p>"
           ]
         }
       ]
@@ -566,78 +568,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Normal Value / Important Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Blood pH</p>",
+            "<p>7.35 – 7.45</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heart rate</p>",
+            "<p>60–100 beats per minute</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Respiratory rate</p>",
+            "<p>12–20 breaths per minute</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Body temperature</p>",
+            "<p>About 37°C</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Blood pressure</p>",
+            "<p>120/80 mmHg</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hemoglobin (Male)</p>",
+            "<p>13–17 g/dL</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hemoglobin (Female)</p>",
+            "<p>12–15 g/dL</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cardiac Output</p>",
+            "<p>Heart rate × Stroke volume</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tidal volume</p>",
+            "<p>About 500 mL</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major site of nutrient absorption</p>",
+            "<p>Small intestine</p>"
           ]
         }
       ]

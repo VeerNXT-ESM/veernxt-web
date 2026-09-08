@@ -49,17 +49,24 @@
     },
     {
       "type": "paragraph",
-      "id": "anysyks"
+      "id": "anysyks",
+      "content": "Force is a push or pull which can:"
+    },
+    {
+      "id": "br9r4rp",
+      "type": "image",
+      "imageId": "0yivxb6",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_0yivxb6.png"
     },
     {
       "id": "59r6dda",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Change the shape of an object</li><li>Change the speed of an object</li><li>Change the direction of motion</li><li>Bring a moving object to rest SI Unit: Newton (N)</li></ul>",
+        "Change the shape of an object",
+        "Change the speed of an object",
+        "Change the direction of motion",
+        "Bring a moving object to rest SI Unit: Newton (N)"
       ]
     },
     {
@@ -72,13 +79,14 @@
       "id": "4r316vf",
       "type": "numberedList",
       "items": [
-        null,
-        null
+        "Contact Force – Requires physical contact Example: Friction, Muscular force",
+        "Non-Contact Force – Acts from a distance"
       ]
     },
     {
       "type": "paragraph",
-      "id": "hav7tra"
+      "id": "hav7tra",
+      "content": "Example: Gravitational force, Magnetic force, Electrostatic force"
     },
     {
       "id": "f1f1udm",
@@ -88,19 +96,23 @@
     },
     {
       "type": "paragraph",
-      "id": "7asq9mm"
+      "id": "7asq9mm",
+      "content": "Statement:"
     },
     {
       "type": "paragraph",
-      "id": "jfz3j6z"
+      "id": "jfz3j6z",
+      "content": "An object remains at rest or in uniform motion in a straight line unless acted upon by an external force."
     },
     {
       "type": "paragraph",
-      "id": "ldpcivx"
+      "id": "ldpcivx",
+      "content": "This law is also known as the Law of Inertia. Inertia:"
     },
     {
       "type": "paragraph",
-      "id": "3incc1d"
+      "id": "3incc1d",
+      "content": "The tendency of an object to resist change in its state of motion."
     },
     {
       "id": "opt6p4t",
@@ -112,9 +124,9 @@
       "id": "p52hkgk",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null
+        "Inertia of Rest",
+        "Inertia of Motion",
+        "Inertia of Direction"
       ]
     },
     {
@@ -125,28 +137,28 @@
     },
     {
       "type": "paragraph",
-      "id": "eok2ukm"
+      "id": "eok2ukm",
+      "content": "Statement:"
     },
     {
       "type": "paragraph",
-      "id": "vl0zi71"
+      "id": "vl0zi71",
+      "content": "The rate of change of momentum of an object is directly proportional to the applied force and takes place in the direction of force."
     },
     {
       "type": "paragraph",
-      "id": "s9w1bvr"
-    },
-    {
-      "type": "pullQuote",
-      "content": "LAW OF CONSERVATION OF MOMENTUM",
-      "id": "d7lwz92"
+      "id": "s9w1bvr",
+      "content": "Formula:"
     },
     {
       "type": "paragraph",
-      "id": "jptxpkq"
+      "id": "jptxpkq",
+      "content": "Force = Mass × Acceleration F = ma"
     },
     {
       "type": "paragraph",
-      "id": "6sthcmd"
+      "id": "6sthcmd",
+      "content": "SI Unit of Force = Newton"
     },
     {
       "id": "jtejfv2",
@@ -156,16 +168,19 @@
     },
     {
       "type": "paragraph",
-      "id": "i1k2bnz"
+      "id": "i1k2bnz",
+      "content": "Momentum is the product of mass and velocity. Formula:"
     },
     {
       "type": "paragraph",
-      "id": "retuu5k"
+      "id": "retuu5k",
+      "content": "Momentum = Mass × Velocity p = mv"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1qyn3fh"
+      "id": "1qyn3fh",
+      "content": "Unit: kg m/s"
     },
     {
       "id": "l67kevc",
@@ -175,11 +190,13 @@
     },
     {
       "type": "paragraph",
-      "id": "ot4z5pr"
+      "id": "ot4z5pr",
+      "content": "Statement:"
     },
     {
       "type": "paragraph",
-      "id": "0psn4u2"
+      "id": "0psn4u2",
+      "content": "For every action, there is an equal and opposite reaction."
     },
     {
       "type": "comparisonTable",
@@ -209,16 +226,17 @@
     },
     {
       "type": "paragraph",
-      "id": "cgvzxtg"
+      "id": "cgvzxtg",
+      "content": "Examples:"
     },
     {
       "id": "2my6up7",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Walking</li><li>Swimming</li><li>Recoil of gun</li></ul>",
+        "Walking",
+        "Swimming",
+        "Recoil of gun"
       ]
     },
     {
@@ -229,7 +247,8 @@
     },
     {
       "type": "paragraph",
-      "id": "k6xsbff"
+      "id": "k6xsbff",
+      "content": "According to this law, the total momentum of a system remains constant if no external force acts on it."
     },
     {
       "id": "vn2325p",
@@ -239,20 +258,22 @@
     },
     {
       "type": "paragraph",
-      "id": "9igj7tt"
+      "id": "9igj7tt",
+      "content": "Friction is the force that opposes motion between two surfaces in contact. Types of Friction:"
     },
     {
       "id": "2yp7b4e",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null
+        "Static friction",
+        "Sliding friction",
+        "Rolling friction"
       ]
     },
     {
       "type": "paragraph",
-      "id": "ll4bwfa"
+      "id": "ll4bwfa",
+      "content": "Rolling friction is the least."
     },
     {
       "id": "x29vje5",
@@ -262,21 +283,23 @@
     },
     {
       "type": "paragraph",
-      "id": "rsmcs1w"
+      "id": "rsmcs1w",
+      "content": "Advantages:"
     },
     {
       "id": "qlr9hvb",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Helps in walking</li><li>Writing is possible</li><li>Vehicles move due to friction</li></ul>",
+        "Helps in walking",
+        "Writing is possible",
+        "Vehicles move due to friction"
       ]
     },
     {
       "type": "paragraph",
-      "id": "0d4ihbj"
+      "id": "0d4ihbj",
+      "content": "Disadvantages:"
     },
     {
       "type": "examAlert",
@@ -291,10 +314,10 @@
       "id": "d2zlmux",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Causes wear and tear</li><li>Produces heat</li><li>Reduces efficiency</li></ul>",
+        "Causes wear and tear",
+        "Produces heat",
+        "Reduces efficiency"
       ]
     },
     {
@@ -305,19 +328,23 @@
     },
     {
       "type": "paragraph",
-      "id": "ldn1dw9"
+      "id": "ldn1dw9",
+      "content": "Q1. SI unit of force? Ans: Newton"
     },
     {
       "type": "paragraph",
-      "id": "pfefvao"
+      "id": "pfefvao",
+      "content": "Q2. Who gave laws of motion? Ans: Sir Isaac Newton"
     },
     {
       "type": "paragraph",
-      "id": "azktwly"
+      "id": "azktwly",
+      "content": "Q3. Formula of momentum? Ans: p = mv"
     },
     {
       "type": "paragraph",
-      "id": "lg35uy3"
+      "id": "lg35uy3",
+      "content": "Q4. Which friction is least? Ans: Rolling friction"
     },
     {
       "id": "agdv3fo",
@@ -329,12 +356,12 @@
       "id": "chw8xli",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Force causes change in motion</li><li>F = ma</li><li>Momentum = mv</li><li>Action and reaction are equal and opposite</li><li>Rolling friction is minimum</li></ul>",
+        "Force causes change in motion",
+        "F = ma",
+        "Momentum = mv",
+        "Action and reaction are equal and opposite",
+        "Rolling friction is minimum"
       ]
     }
   ],

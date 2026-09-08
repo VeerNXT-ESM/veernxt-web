@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "9tb4d9z"
+      "id": "9tb4d9z",
+      "content": "Computer networking is the practice of connecting computers and other devices together to share resources, exchange data, and communicate. Networks allow computers to share files, printers, internet connections, and other resources efficiently."
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tmnanxy"
+      "id": "tmnanxy",
+      "content": "A computer network is a group of interconnected computers and devices that communicate with each other using communication channels. Networking allows users to share data, hardware devices, and software applications."
     },
     {
       "id": "7x51s2f",
@@ -65,11 +67,11 @@
       "id": "34pexxz",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Resource sharing (printers, storage devices).",
+        "Data sharing between users.",
+        "Communication through email and messaging.",
+        "Centralized management of data.",
+        "Improved reliability and backup systems."
       ]
     },
     {
@@ -85,33 +87,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Network Type</strong></p>",
+            "<p><strong>Full Form</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>LAN</p>",
+            "<p>Local Area Network</p>",
+            "<p>Covers a small geographical area such as a home, office, or school.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>MAN</p>",
+            "<p>Metropolitan Area Network</p>",
+            "<p>Covers a city or large campus.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>WAN</p>",
+            "<p>Wide Area Network</p>",
+            "<p>Covers a large geographical area such as countries or continents.</p>"
           ]
         }
       ]
@@ -124,7 +126,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lzbwebl"
+      "id": "lzbwebl",
+      "content": "A Local Area Network connects computers within a limited area such as a building, office, or school. LANs provide high data transfer speed and are commonly used in organizations."
     },
     {
       "id": "7o0m06d",
@@ -134,7 +137,8 @@
     },
     {
       "type": "paragraph",
-      "id": "59ysshx"
+      "id": "59ysshx",
+      "content": "A Metropolitan Area Network covers a larger geographical area than LAN, typically a city. It connects multiple LANs within a metropolitan region."
     },
     {
       "id": "on9w3nx",
@@ -144,7 +148,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ok9xll7"
+      "id": "ok9xll7",
+      "content": "A Wide Area Network connects computers over very large distances such as across countries or continents. The Internet is the largest example of WAN."
     },
     {
       "type": "pullQuote",
@@ -164,36 +169,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Device</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Router</p>",
+            "<p>Connects multiple networks and directs data packets between them.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Switch</p>",
+            "<p>Connects devices within a LAN and forwards data to the correct device.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hub</p>",
+            "<p>Basic networking device that broadcasts data to all connected devices.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Modem</p>",
+            "<p>Converts digital signals into analog signals and vice versa for internet communication.</p>"
           ]
         }
       ]
@@ -206,7 +211,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0xsycm4"
+      "id": "0xsycm4",
+      "content": "A router is a networking device that forwards data packets between different networks. It determines the best path for data to travel."
     },
     {
       "id": "8ofynpd",
@@ -216,7 +222,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tr7eld3"
+      "id": "tr7eld3",
+      "content": "A switch connects multiple devices in a LAN and sends data only to the intended device, improving network efficiency."
     },
     {
       "id": "aom4bxj",
@@ -226,7 +233,8 @@
     },
     {
       "type": "paragraph",
-      "id": "r0eo2bu"
+      "id": "r0eo2bu",
+      "content": "A hub is a simple networking device that connects multiple computers in a network and broadcasts incoming data to all connected devices."
     },
     {
       "type": "comparisonTable",
@@ -272,7 +280,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jxotfue"
+      "id": "jxotfue",
+      "content": "A modem (Modulator-Demodulator) converts digital signals from a computer into analog signals for transmission over telephone lines and vice versa."
     },
     {
       "id": "a5zeu3b",
@@ -287,43 +296,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Topology</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bus Topology</p>",
+            "<p>All devices share a single communication line.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Star Topology</p>",
+            "<p>All devices are connected to a central hub or switch.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ring Topology</p>",
+            "<p>Devices are connected in a circular path.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mesh Topology</p>",
+            "<p>Each device connects to multiple other devices.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tree Topology</p>",
+            "<p>Hierarchical combination of multiple star networks.</p>"
           ]
         }
       ]
@@ -336,7 +345,8 @@
     },
     {
       "type": "paragraph",
-      "id": "z0vbl3s"
+      "id": "z0vbl3s",
+      "content": "In a bus topology, all computers are connected to a single communication cable called the backbone."
     },
     {
       "id": "ujwh4vy",
@@ -346,7 +356,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3ceamq2"
+      "id": "3ceamq2",
+      "content": "In star topology, all devices are connected to a central device such as a hub or switch."
     },
     {
       "id": "7kz7uif",
@@ -365,7 +376,8 @@
     },
     {
       "type": "paragraph",
-      "id": "itdu9di"
+      "id": "itdu9di",
+      "content": "In ring topology, each device is connected to two other devices forming a circular network."
     },
     {
       "id": "57idelt",
@@ -375,7 +387,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8dmvfhp"
+      "id": "8dmvfhp",
+      "content": "In mesh topology, every device is connected to every other device in the network."
     },
     {
       "id": "itf5q65",
@@ -385,7 +398,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1a2rp0v"
+      "id": "1a2rp0v",
+      "content": "Tree topology combines characteristics of star and bus topologies forming a hierarchical network."
     },
     {
       "id": "p1cr6mu",
@@ -397,13 +411,13 @@
       "id": "ltdou5s",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "LAN covers a small geographical area.",
+        "MAN covers a city or metropolitan region.",
+        "WAN covers large geographical areas such as countries.",
+        "Router connects multiple networks.",
+        "Switch is more intelligent than a hub.",
+        "Modem stands for Modulator-Demodulator.",
+        "Star topology is the most commonly used topology in modern networks."
       ]
     }
   ],

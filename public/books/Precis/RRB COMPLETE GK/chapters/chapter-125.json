@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "ynj0712"
+      "id": "ynj0712",
+      "content": "According to William Morris Davis, rivers pass through three stages: youthful, mature, and old."
     },
     {
       "type": "pullQuote",
@@ -102,37 +103,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Stage</strong></p>",
+            "<p><strong>Gradient</strong></p>",
+            "<p><strong>Dominant Erosion</strong></p>",
+            "<p><strong>Landforms</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Youthful</p>",
+            "<p>Steep</p>",
+            "<p>Vertical</p>",
+            "<p>V-shaped valleys, waterfalls</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mature</p>",
+            "<p>Moderate</p>",
+            "<p>Lateral</p>",
+            "<p>Meanders, floodplains</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Old</p>",
+            "<p>Gentle</p>",
+            "<p>Deposition</p>",
+            "<p>Oxbow lakes, deltas</p>"
           ]
         }
       ]

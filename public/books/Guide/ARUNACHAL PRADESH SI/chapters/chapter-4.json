@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "frdodft"
+      "id": "frdodft",
+      "content": "Arunachal Pradesh follows the parliamentary form of government as prescribed by the Indian Constitution. Being a border state with strategic sensitivity, it has certain special provisions. It also has constitutional protections for its tribal population."
     },
     {
       "type": "statStrip",
@@ -52,16 +53,17 @@
     },
     {
       "type": "paragraph",
-      "id": "ot8lyaj"
+      "id": "ot8lyaj",
+      "content": "Arunachal Pradesh is governed under the same constitutional framework as other Indian states, but with several important special provisions:"
     },
     {
       "id": "14nqnmo",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "The Inner Line Permit (ILP) system, inherited from the colonial British Inner Line Regulation of 1873, regulates entry of non-residents into the state.",
+        "Under the Sixth Schedule, the tribal areas are given a degree of self-governance through Autonomous District Councils (ADCs). However, Arunachal Pradesh is NOT under the Sixth Schedule; instead it has its own customary law framework.",
+        "Article 371(H) of the Constitution confers special responsibility on the Governor of Arunachal Pradesh regarding law and order.",
+        "As a border state, defence and strategic decisions often involve the central government."
       ]
     },
     {
@@ -77,85 +79,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Governor</strong></p>",
+            "<p>Constitutional head; special powers under Art. 371(H)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Chief Minister</strong></p>",
+            "<p>Head of State Government; leader of majority party</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Council of Ministers</strong></p>",
+            "<p>Cabinet collectively responsible to Legislative Assembly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>State Legislature</strong></p>",
+            "<p>Unicameral — Arunachal Pradesh Legislative Assembly (APLA)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Seats in Assembly</strong></p>",
+            "<p>60 (Legislative Assembly)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Lok Sabha Seats</strong></p>",
+            "<p>2 (Arunachal West and Arunachal East)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Rajya Sabha Seats</strong></p>",
+            "<p>1</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>High Court</strong></p>",
+            "<p>Gauhati High Court (Permanent Bench at Itanagar)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Administrative Divisions</strong></p>",
+            "<p>3 Divisions — Itanagar, Pasighat, Bomdila</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Districts</strong></p>",
+            "<p>26</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Sub-Divisions</strong></p>",
+            "<p>Numerous; headed by Deputy Commissioners and Circle Officers</p>"
           ]
         }
       ]
@@ -167,11 +169,6 @@
       "content": "3.3 Important Constitutional Provisions"
     },
     {
-      "type": "pullQuote",
-      "content": "Traditional Governance (Kebang / Village Council)",
-      "id": "jb41h36"
-    },
-    {
       "id": "k1lmosp",
       "type": "heading",
       "level": 3,
@@ -179,7 +176,8 @@
     },
     {
       "type": "paragraph",
-      "id": "m0dkhxl"
+      "id": "m0dkhxl",
+      "content": "Article 371(H) was inserted by the 55th Constitutional Amendment Act, 1986. It provides that the Governor of Arunachal Pradesh shall have special responsibility with respect to law and order. The Governor has discretionary powers in this regard and can act without the advice of the Council of Ministers, though the extent of this discretion has been subject to judicial interpretation."
     },
     {
       "id": "iqiivi9",
@@ -189,15 +187,16 @@
     },
     {
       "type": "paragraph",
-      "id": "fdyqfqw"
+      "id": "fdyqfqw",
+      "content": "The ILP is mandatory for all non-residents (including other Indian citizens) wishing to travel to Arunachal Pradesh. It is governed by the Bengal Eastern Frontier Regulation, 1873. The permit can be obtained from the state government or its authorised offices. The purpose is to protect the tribal culture and land rights of indigenous communities."
     },
     {
       "id": "yrlrxii",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "ILP can be obtained for periods ranging from 15 days to 3 months.",
+        "Foreign nationals require Protected Area Permit (PAP) in addition to ILP.",
+        "Residents of Assam, Nagaland, Meghalaya, and Manipur who share borders may have simplified processes."
       ]
     },
     {
@@ -208,7 +207,8 @@
     },
     {
       "type": "paragraph",
-      "id": "o03lmh9"
+      "id": "o03lmh9",
+      "content": "Arunachal Pradesh has a unique system of local governance that blends constitutional panchayati raj institutions with traditional tribal governance structures."
     },
     {
       "id": "k3mqi4b",
@@ -220,10 +220,10 @@
       "id": "ehh3b20",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Three-tier system: Gram Panchayat (village), Anchal Samiti (block), and Zila Parishad (district)",
+        "Panchayati Raj Act enacted in 1997 following 73rd Constitutional Amendment",
+        "33% reservation for women in panchayat bodies",
+        "Village Councils play a crucial role alongside formal panchayats"
       ]
     },
     {
@@ -243,7 +243,8 @@
     },
     {
       "type": "paragraph",
-      "id": "32wo5fv"
+      "id": "32wo5fv",
+      "content": "Many tribes in Arunachal Pradesh have their own traditional governance systems. The Kebang among the Adi tribe, the Bulyiang among the Nyishi, and similar institutions in other tribes serve as village-level dispute resolution and governance bodies. These traditional bodies often handle local conflicts, land disputes, and community affairs more effectively than formal administrative channels."
     },
     {
       "id": "jesee1y",
@@ -253,7 +254,8 @@
     },
     {
       "type": "paragraph",
-      "id": "58yvrm8"
+      "id": "58yvrm8",
+      "content": "APPSC is the premier recruiting body for gazetted and non-gazetted posts under the Government of Arunachal Pradesh. It conducts various examinations including the Combined Graduate Level Examination (CGLE), Judicial Services Examination, and various departmental exams."
     },
     {
       "id": "fh9wxph",
@@ -262,57 +264,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Examination</strong></p>",
+            "<p><strong>Posts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>APPSC Combined Graduate Level Exam (CGLE)</strong></p>",
+            "<p>Various Group-A and Group-B gazetted posts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>APPSC Sub-Inspector (SI) Exam</strong></p>",
+            "<p>Sub-Inspector of Police; Group-B post</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>APPSC Junior Engineer Exam</strong></p>",
+            "<p>JE in PWD, PHE, Power departments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>APPSC Lower Division Clerk (LDC)</strong></p>",
+            "<p>Clerical posts in state departments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>APPSC Judicial Service Exam</strong></p>",
+            "<p>Civil Judge and Judicial Magistrate posts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>APPSC Teacher Eligibility Test (TET)</strong></p>",
+            "<p>Primary and Upper Primary teachers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>APPSC Pharmacist Exam</strong></p>",
+            "<p>Government pharmacy posts</p>"
           ]
         }
       ]

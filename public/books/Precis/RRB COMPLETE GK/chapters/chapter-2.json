@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "837cwmb"
+      "id": "837cwmb",
+      "content": "A galaxy is a massive gravitational system consisting of billions of stars, gas, and dust."
     },
     {
       "type": "statStrip",
@@ -35,41 +36,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Shape</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Spiral</p>",
+            "<p>Flat with rotating arms</p>",
+            "<p>Milky Way</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Elliptical</p>",
+            "<p>Oval-shaped</p>",
+            "<p>Older star systems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Irregular</p>",
+            "<p>No fixed shape</p>",
+            "<p>Large Magellanic Cloud</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Milky Way Galaxy (VERY HIGH PROBABILITY)",
-      "id": "7ylo42k"
     },
     {
       "id": "79959lc",
@@ -89,11 +85,13 @@
     },
     {
       "type": "paragraph",
-      "id": "m202h5t"
+      "id": "m202h5t",
+      "content": "Our Solar System lies in the Milky Way galaxy. It appears as a glowing band in the night sky."
     },
     {
       "type": "paragraph",
-      "id": "huhkwns"
+      "id": "huhkwns",
+      "content": "• Contains 100–400 billion stars."
     },
     {
       "type": "examAlert",
@@ -105,11 +103,13 @@
     },
     {
       "type": "paragraph",
-      "id": "osf2qku"
+      "id": "osf2qku",
+      "content": "• Diameter: About 100,000 light years."
     },
     {
       "type": "paragraph",
-      "id": "hyc5pi8"
+      "id": "hyc5pi8",
+      "content": "<a></a>• Sun is located in the Orion Arm."
     }
   ],
   "enriched": true

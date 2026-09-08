@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "1kneuy6"
+      "id": "1kneuy6",
+      "content": "Data representation refers to the methods used to represent information inside a computer system. Computers work with binary data (0 and 1), so all forms of data such as numbers, text, images, and audio must be converted into binary form before processing."
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xeeimwz"
+      "id": "xeeimwz",
+      "content": "A number system is a method of representing numbers using a specific base or radix. In computer science, several number systems are used to represent and process data."
     },
     {
       "id": "4tszvg6",
@@ -62,41 +64,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Number System</strong></p>",
+            "<p><strong>Base</strong></p>",
+            "<p><strong>Digits Used</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Binary</p>",
+            "<p>2</p>",
+            "<p>0,1</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Octal</p>",
+            "<p>8</p>",
+            "<p>0–7</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Decimal</p>",
+            "<p>10</p>",
+            "<p>0–9</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hexadecimal</p>",
+            "<p>16</p>",
+            "<p>0–9, A–F</p>"
           ]
         }
       ]
@@ -109,7 +111,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xy9djn9"
+      "id": "xy9djn9",
+      "content": "The binary number system is the most important number system in computers. It uses only two digits: 0 and 1. Each digit is called a bit (binary digit)."
     },
     {
       "id": "iubbq02",
@@ -119,7 +122,8 @@
     },
     {
       "type": "paragraph",
-      "id": "z35l3lk"
+      "id": "z35l3lk",
+      "content": "The octal number system has base 8 and uses digits from 0 to 7."
     },
     {
       "id": "c57d3uz",
@@ -129,7 +133,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ixc5k9e"
+      "id": "ixc5k9e",
+      "content": "The decimal number system has base 10 and uses digits from 0 to 9."
     },
     {
       "type": "pullQuote",
@@ -144,7 +149,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9l8fjx2"
+      "id": "9l8fjx2",
+      "content": "The hexadecimal number system has base 16 and uses digits 0–9 and letters A–F."
     },
     {
       "id": "xj72dzp",
@@ -160,7 +166,8 @@
     },
     {
       "type": "paragraph",
-      "id": "siyycyt"
+      "id": "siyycyt",
+      "content": "To convert decimal numbers to binary, repeatedly divide the number by 2 and record the remainders."
     },
     {
       "type": "comparisonTable",
@@ -201,7 +208,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ssafyp1"
+      "id": "ssafyp1",
+      "content": "Multiply each binary digit by powers of 2 and add the results."
     },
     {
       "id": "niacyud",
@@ -211,7 +219,8 @@
     },
     {
       "type": "paragraph",
-      "id": "u2z6d7w"
+      "id": "u2z6d7w",
+      "content": "Group binary digits into sets of three bits from right to left."
     },
     {
       "id": "9iv2t7w",
@@ -221,7 +230,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vysa86u"
+      "id": "vysa86u",
+      "content": "Group binary digits into sets of four bits from right to left."
     },
     {
       "id": "iewb7at",
@@ -231,7 +241,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rvddsd4"
+      "id": "rvddsd4",
+      "content": "ASCII is a character encoding standard used to represent text in computers."
     },
     {
       "type": "examAlert",
@@ -250,57 +261,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Character</strong></p>",
+            "<p><strong>ASCII Code</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>A</p>",
+            "<p>65</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>B</p>",
+            "<p>66</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>C</p>",
+            "<p>67</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>a</p>",
+            "<p>97</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>b</p>",
+            "<p>98</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>0</p>",
+            "<p>48</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1</p>",
+            "<p>49</p>"
           ]
         }
       ]
@@ -318,41 +329,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Number System</strong></p>",
+            "<p><strong>Base</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Binary</p>",
+            "<p>2</p>",
+            "<p>1010</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Octal</p>",
+            "<p>8</p>",
+            "<p>17</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Decimal</p>",
+            "<p>10</p>",
+            "<p>25</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hexadecimal</p>",
+            "<p>16</p>",
+            "<p>1A</p>"
           ]
         }
       ]
@@ -367,12 +378,12 @@
       "id": "i2bivtk",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Binary uses base 2.",
+        "Decimal uses base 10.",
+        "Octal uses base 8.",
+        "Hexadecimal uses base 16.",
+        "ASCII represents characters in computers.",
+        "1 byte equals 8 bits."
       ]
     }
   ],

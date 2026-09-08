@@ -1,0 +1,78 @@
+{
+  "title": "8. Reports of CAG",
+  "order": 229,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The CAG submits audit reports to:<br/>• President (for Union accounts)<br/>• Governor (for State accounts)<br/><br/>These reports are then placed before Parliament or State Legislature and examined by the Public Accounts Committee (PAC).",
+      "id": "ryg3gv7"
+    },
+    {
+      "type": "pullQuote",
+      "content": "These reports are then placed before Parliament or State Legislature and examined by the Public Accounts Committee (PAC).",
+      "id": "tbp7vno"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Account Level",
+        "Report Submitted To",
+        "Laid Before"
+      ],
+      "rows": [
+        [
+          "Union Accounts",
+          "President",
+          "Parliament"
+        ],
+        [
+          "State Accounts",
+          "Governor",
+          "State Legislature"
+        ]
+      ],
+      "id": "k2911nb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Union Reports",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "State Reports",
+          "value": "Governor",
+          "icon": "info"
+        },
+        {
+          "label": "Examining Body",
+          "value": "PAC",
+          "icon": "check"
+        }
+      ],
+      "id": "nne26xb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CAG reports are NOT submitted directly to Parliament; Union reports are submitted to the President, and State reports to the Governor.",
+        "The Public Accounts Committee (PAC) examines the CAG audit reports after they are presented in Parliament or State Legislature."
+      ],
+      "id": "kf6dla3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The CAG submits audit reports for Union accounts to the President.",
+        "The CAG submits audit reports for State accounts to the Governor.",
+        "The submitted reports are placed before Parliament or the respective State Legislature.",
+        "The Public Accounts Committee (PAC) is responsible for examining these audit reports."
+      ],
+      "id": "taf59hm"
+    }
+  ],
+  "enriched": true
+}

@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "sz38p1p"
+      "id": "sz38p1p",
+      "content": "Translation (Anuvad) is the process of transferring meaning from one language (source language) to another (target language) while maintaining the original meaning, tone, context, and purpose. For Rajbhasha Adhikari, translation is primarily from English to Hindi :translating official orders, circulars, correspondence, notices, forms, and banking documents."
     },
     {
       "id": "96654ig",
@@ -57,72 +58,67 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Type of Translation</strong></p>",
+            "<p><strong>Hindi Term</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Literal / Word-for-Word Translation</p>",
+            "<p>शाब्दिक अनुवाद</p>",
+            "<p>Translate each word directly; mechanical; often unnatural; useful for technical/legal documents where precision required</p>",
+            "<p>Legal sections, technical standards where word precision critical</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Free Translation</p>",
+            "<p>स्वतंत्र अनुवाद / भावानुवाद</p>",
+            "<p>Translate meaning and spirit; not word-for-word; natural target language output; reader-friendly</p>",
+            "<p>Speeches, creative content, general correspondence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Literary Translation</p>",
+            "<p>साहित्यिक अनुवाद</p>",
+            "<p>Translate literature (poetry, novels, plays); capture tone, style, cultural nuances</p>",
+            "<p>Translating Hindi poetry to English; translating novels</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Official/Administrative Translation</p>",
+            "<p>आधिकारिक अनुवाद</p>",
+            "<p>Government orders, notifications, rules, circulars, official correspondence; accuracy paramount</p>",
+            "<p>Acts of Parliament translated to Hindi; bank circulars; RBI guidelines</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Interpretation (Oral)</p>",
+            "<p>दुभाषिया / भाषान्तरण</p>",
+            "<p>Real-time oral translation; simultaneous or consecutive; parliamentary debates, high-level meetings</p>",
+            "<p>Parliamentary interpreters; international conference translators</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Machine Translation (MT)</p>",
+            "<p>मशीनी अनुवाद</p>",
+            "<p>Automated software translation; GIST (C-DAC), Google Translate, deepL; needs post-editing for official use</p>",
+            "<p>Anuvadini (C-DAC), Sangyan system; used for volume translation</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "5.4 Banking Terminology :English to Hindi (Important for Exam)",
-      "id": "sdfu93f"
     },
     {
       "id": "oriu7pp",
@@ -134,13 +130,13 @@
       "id": "4igcml1",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Faithfulness (Faithfulness to meaning): The translation must accurately convey the meaning of the original; no omission or addition",
+        "Idiomacity: Use natural idiomatic Hindi expressions; avoid 'Hindi-English' hybrid writing",
+        "Clarity: The translated text must be clear and unambiguous to the reader",
+        "Appropriate register: Official documents need formal Hindi (शिष्ट हिंदी); avoid colloquial forms",
+        "Technical terminology: Use approved technical terms from Paribhashik Shabdavali (terminology lists) prepared by CSTT",
+        "Cultural sensitivity: Avoid awkward cultural impositions; find natural Hindi equivalents",
+        "Consistency: Use same term for same concept throughout a document; maintain consistency in long documents"
       ]
     },
     {
@@ -156,57 +152,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Institution</strong></p>",
+            "<p><strong>Hindi Name</strong></p>",
+            "<p><strong>Role</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Central Hindi Directorate (CHD)</p>",
+            "<p>केन्द्रीय हिंदी निदेशालय</p>",
+            "<p>Under Ministry of Education; promotes Hindi; prepares grammar, dictionaries, textbooks; grants for Hindi authors and publications</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Central Translation Bureau (CTB)</p>",
+            "<p>केन्द्रीय अनुवाद ब्यूरो</p>",
+            "<p>Under DoOL, MHA; translates Acts, Rules, forms, and other official documents from English to Hindi; provides translation assistance to Ministries</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Commission for Scientific and Technical Terminology (CSTT)</p>",
+            "<p>वैज्ञानिक तथा तकनीकी शब्दावली आयोग</p>",
+            "<p>Develops technical vocabulary (paribhashik shabdavali) for Hindi in all subjects; prepares bilingual technical dictionaries</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>C-DAC (Gist group)</p>",
+            "<p>C-DAC GIST</p>",
+            "<p>Develops Hindi computing tools; Mangal Unicode font; Anuvadini machine translation; IndiX search; ISM software for Devanagari typing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>National Translation Mission (NTM)</p>",
+            "<p>राष्ट्रीय अनुवाद मिशन</p>",
+            "<p>Under Central Hindi Directorate; translates important Indian and foreign texts into all 22 scheduled languages; major translation project</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sahitya Akademi</p>",
+            "<p>साहित्य अकादमी</p>",
+            "<p>India's national academy of letters; promotes Indian literature; annual Sahitya Akademi Awards; translation prizes</p>"
           ]
         }
       ]
@@ -233,260 +229,260 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>English Term</strong></p>",
+            "<p><strong>Approved Hindi Term</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bank</p>",
+            "<p>बैंक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Account</p>",
+            "<p>खाता / लेखा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Savings Account</p>",
+            "<p>बचत खाता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Current Account</p>",
+            "<p>चालू खाता / जारी खाता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fixed Deposit</p>",
+            "<p>सावधि जमा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Loan</p>",
+            "<p>ऋण / उधार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Interest</p>",
+            "<p>ब्याज</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Interest Rate</p>",
+            "<p>ब्याज दर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Principal</p>",
+            "<p>मूलधन / मूल राशि</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Balance</p>",
+            "<p>शेष / बकाया</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cheque</p>",
+            "<p>चेक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Draft / Demand Draft</p>",
+            "<p>ड्राफ्ट / माँग ड्राफ्ट</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Passbook</p>",
+            "<p>पासबुक / पास-बही</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ledger</p>",
+            "<p>खाता-बही / बहीखाता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Transaction</p>",
+            "<p>लेन-देन / संव्यवहार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deposit</p>",
+            "<p>जमा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Withdrawal</p>",
+            "<p>निकासी / आहरण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Branch</p>",
+            "<p>शाखा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Head Office</p>",
+            "<p>प्रधान कार्यालय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cash</p>",
+            "<p>नकद / नकदी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Credit</p>",
+            "<p>जमा / साख / उधार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Debit</p>",
+            "<p>नाम / डेबिट</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nominee</p>",
+            "<p>नामांकित व्यक्ति / नॉमिनी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mortgager / Mortgagee</p>",
+            "<p>बंधककर्ता / बंधकदार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Guarantor</p>",
+            "<p>ज़मानतकर्ता / गारंटर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Collateral</p>",
+            "<p>प्रतिभूति / संपार्श्विक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Non-Performing Asset (NPA)</p>",
+            "<p>अनर्जक परिसंपत्ति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Financial Inclusion</p>",
+            "<p>वित्तीय समावेशन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cheque Book</p>",
+            "<p>चेकबुक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Promissory Note</p>",
+            "<p>वचन-पत्र / प्रतिज्ञा-पत्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bill of Exchange</p>",
+            "<p>विनिमय पत्र / हुंडी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Annual Report</p>",
+            "<p>वार्षिक रिपोर्ट / वार्षिक प्रतिवेदन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rate of Interest</p>",
+            "<p>ब्याज की दर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bank Statement</p>",
+            "<p>बैंक विवरणी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Official Language</p>",
+            "<p>राजभाषा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Implementation</p>",
+            "<p>कार्यान्वयन / क्रियान्वयन</p>"
           ]
         }
       ]
@@ -504,218 +500,218 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>English Term</strong></p>",
+            "<p><strong>Hindi Term</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Government of India</p>",
+            "<p>भारत सरकार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ministry</p>",
+            "<p>मंत्रालय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Department</p>",
+            "<p>विभाग</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Office Order</p>",
+            "<p>कार्यालय आदेश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Circular</p>",
+            "<p>परिपत्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Notification</p>",
+            "<p>अधिसूचना</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Resolution</p>",
+            "<p>प्रस्ताव / संकल्प</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Memorandum (Memo)</p>",
+            "<p>ज्ञापन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Office Memorandum (OM)</p>",
+            "<p>कार्यालय ज्ञापन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Letter</p>",
+            "<p>पत्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Demi-Official (DO) Letter</p>",
+            "<p>अर्द्ध-शासकीय पत्र</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Annual Confidential Report (ACR)</p>",
+            "<p>वार्षिक गोपनीय प्रतिवेदन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Government Order (GO)</p>",
+            "<p>सरकारी आदेश / शासनादेश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gazette</p>",
+            "<p>राजपत्र / सरकारी गज़ट</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gazette Notification</p>",
+            "<p>राजपत्र अधिसूचना</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Headquarters</p>",
+            "<p>मुख्यालय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deputation</p>",
+            "<p>प्रतिनियुक्ति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Transfer</p>",
+            "<p>स्थानांतरण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Promotion</p>",
+            "<p>पदोन्नति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Increment</p>",
+            "<p>वेतन वृद्धि</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Suspension</p>",
+            "<p>निलंबन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Termination</p>",
+            "<p>सेवा समाप्ति / पदच्युति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Appeal</p>",
+            "<p>अपील</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Representation</p>",
+            "<p>अभ्यावेदन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tender</p>",
+            "<p>निविदा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Contract</p>",
+            "<p>अनुबंध / संविदा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Budget</p>",
+            "<p>बजट / आय-व्यय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Expenditure</p>",
+            "<p>व्यय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Revenue</p>",
+            "<p>राजस्व / आय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Audit</p>",
+            "<p>लेखापरीक्षा / ऑडिट</p>"
           ]
         }
       ]

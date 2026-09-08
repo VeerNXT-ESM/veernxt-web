@@ -1,0 +1,136 @@
+{
+  "title": "Comparison: Supreme Court vs High Court",
+  "order": 119,
+  "blocks": [
+    {
+      "id": "bb2ussz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Supreme Court</strong></p>",
+            "<p><strong>High Court</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Highest court of India</p>",
+            "<p>Highest court of a state</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 32 – writs</p>",
+            "<p>Article 226 – writs</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Retirement age – 65 years</p>",
+            "<p>Retirement age – 62 years</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Guardian of Constitution</p>",
+            "<p>Guardian of state laws</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The writ jurisdiction of the High Court under Article 226 is wider than that of the Supreme Court under Article 32.",
+      "id": "lyff0ir"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Supreme Court",
+        "High Court"
+      ],
+      "rows": [
+        [
+          "Constitutional Part & Articles",
+          "Part V (Articles 124-147)",
+          "Part VI (Articles 214-231)"
+        ],
+        [
+          "Retirement Age",
+          "65 Years",
+          "62 Years"
+        ],
+        [
+          "Writ Jurisdiction Article",
+          "Article 32 (Fundamental Rights only)",
+          "Article 226 (Fundamental Rights & Legal Rights)"
+        ],
+        [
+          "Territorial Scope",
+          "Entire Territory of India",
+          "Respective State or Union Territory"
+        ],
+        [
+          "Removal Process",
+          "By President on Parliamentary address",
+          "By President on Parliamentary address"
+        ]
+      ],
+      "id": "mg0yht5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SC Article Range",
+          "value": "Arts 124-147",
+          "icon": "book"
+        },
+        {
+          "label": "HC Article Range",
+          "value": "Arts 214-231",
+          "icon": "book"
+        },
+        {
+          "label": "SC Retirement Age",
+          "value": "65 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "HC Retirement Age",
+          "value": "62 Years",
+          "icon": "calendar"
+        }
+      ],
+      "id": "ejkk9er"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 32 is itself a Fundamental Right, making SC remedy mandatory, whereas Article 226 is a constitutional remedy and discretionary for the High Court.",
+        "Supreme Court judges submit resignation to the President; High Court judges also submit resignation to the President, not the State Governor.",
+        "A High Court judge can be removed from office in the same manner and on the same grounds as a Supreme Court judge."
+      ],
+      "id": "y77gofh"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Supreme Court operates as the supreme judicial authority under Part V, while High Courts function at the state level under Part VI of the Constitution.",
+        "High Courts possess wider writ jurisdiction (Article 226) than the Supreme Court (Article 32) as they can issue writs for both Fundamental Rights and ordinary legal rights.",
+        "Judges of the Supreme Court retire at 65 years of age, whereas High Court judges retire at 62 years of age.",
+        "The Supreme Court holds exclusive original jurisdiction in federal disputes involving the Centre and states or between states.",
+        "Both courts function as Courts of Record with powers to punish for contempt of court."
+      ],
+      "id": "wgehs4w"
+    }
+  ],
+  "enriched": true
+}

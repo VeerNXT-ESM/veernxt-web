@@ -1,0 +1,124 @@
+{
+  "title": "Independence of Finance Commission",
+  "order": 215,
+  "blocks": [
+    {
+      "id": "fzq38g2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Safeguard</strong></p>",
+            "<p><strong>Importance</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Constitutional Status</p>",
+            "<p>Ensures credibility</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appointed by President</p>",
+            "<p>Neutral authority</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Expert Members</p>",
+            "<p>Professional recommendations</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Finance Commission is envisaged as the balancing wheel of fiscal federalism in India.",
+      "id": "xiz3aza"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Dimension",
+        "Finance Commission",
+        "NITI Aayog"
+      ],
+      "rows": [
+        [
+          "Status",
+          "Constitutional Body (Article 280)",
+          "Non-Constitutional / Executive Body"
+        ],
+        [
+          "Primary Mandate",
+          "Devolution of central taxes and grants-in-aid",
+          "Policy think-tank and strategic planning"
+        ],
+        [
+          "Powers",
+          "Quasi-judicial powers to summon records and witnesses",
+          "Advisory platform without judicial powers"
+        ],
+        [
+          "Tenure",
+          "Constituted every 5th year by the President",
+          "Permanent continuous body"
+        ]
+      ],
+      "id": "1byi6mh"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 280",
+          "icon": "book"
+        },
+        {
+          "label": "Constituted Interval",
+          "value": "Every 5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Body Composition",
+          "value": "1 Chair + 4 Members",
+          "icon": "check"
+        },
+        {
+          "label": "Legal Status",
+          "value": "Quasi-Judicial",
+          "icon": "info"
+        }
+      ],
+      "id": "aqxvbsu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The recommendations of the Finance Commission are purely advisory in nature and not legally binding on the Union Government.",
+        "Qualifications of the Chairman and members are not specified in Article 280 itself, but in the Finance Commission (Miscellaneous Provisions) Act, 1951 enacted by Parliament.",
+        "The Finance Commission has all the powers of a Civil Court under the Code of Civil Procedure, 1908 while summoning documents and evidence."
+      ],
+      "id": "l6oawut"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Finance Commission is a constitutional body established under Article 280 to ensure non-partisan allocation of financial resources.",
+        "Members are appointed by the President of India, but their qualifications and selection process are determined by Parliament through the Finance Commission Act, 1951.",
+        "The Commission possesses quasi-judicial powers under the Code of Civil Procedure, 1908, allowing it to summon witnesses and require production of public records.",
+        "Recommendations made by the Commission are advisory in nature, though established conventions mandate serious consideration by the Central Government.",
+        "It acts as the principal balancing wheel of fiscal federalism in India by determining tax devolution and grants-in-aid to States."
+      ],
+      "id": "k7fktgm"
+    }
+  ],
+  "enriched": true
+}

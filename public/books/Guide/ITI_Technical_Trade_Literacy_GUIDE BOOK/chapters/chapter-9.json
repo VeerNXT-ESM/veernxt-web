@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "legdbl0"
+      "id": "legdbl0",
+      "content": "Hand tools are manually operated tools used in workshops for operations such as cutting, shaping, tightening, gripping, measuring, and assembling materials. They do not require electricity or external power and are widely used in trades like fitter, electrician, mechanic, carpenter, welder, and plumber."
     },
     {
       "id": "2hgyq81",
@@ -64,57 +65,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Tool Category</strong></p>",
+            "<p><strong>Purpose</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Striking Tools</p>",
+            "<p>Used to apply force</p>",
+            "<p>Hammer, Mallet</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cutting Tools</p>",
+            "<p>Used to remove material</p>",
+            "<p>Hacksaw, Chisel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Turning Tools</p>",
+            "<p>Tighten or loosen fasteners</p>",
+            "<p>Screwdriver, Spanner</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Holding Tools</p>",
+            "<p>Hold or grip objects</p>",
+            "<p>Pliers, Vice</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Marking Tools</p>",
+            "<p>Mark layout lines</p>",
+            "<p>Scriber, Punch</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Measuring Tools</p>",
+            "<p>Measure dimensions</p>",
+            "<p>Steel rule</p>"
           ]
         }
       ]
@@ -132,41 +133,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Tool</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ball Peen Hammer</p>",
+            "<p>Flat face with round peen</p>",
+            "<p>Metalworking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sledgehammer</p>",
+            "<p>Heavy hammer</p>",
+            "<p>Breaking materials</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mallet</p>",
+            "<p>Rubber or wooden head</p>",
+            "<p>Striking without damage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cross Peen Hammer</p>",
+            "<p>Wedge-shaped peen</p>",
+            "<p>Metal shaping</p>"
           ]
         }
       ]
@@ -184,41 +185,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Tip Shape</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Flat Head</p>",
+            "<p>Straight blade</p>",
+            "<p>Slotted screws</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Phillips</p>",
+            "<p>Cross shaped</p>",
+            "<p>Phillips screws</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Offset</p>",
+            "<p>Bent shaft</p>",
+            "<p>Tight spaces</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ratchet</p>",
+            "<p>Rotating mechanism</p>",
+            "<p>Fast screw driving</p>"
           ]
         }
       ]
@@ -236,43 +237,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Open-End Spanner</p>",
+            "<p>Tightening hexagonal nuts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ring Spanner</p>",
+            "<p>Strong grip on nuts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Combination Spanner</p>",
+            "<p>Open and ring ends</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Adjustable Spanner</p>",
+            "<p>Adjustable jaw size</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Socket Wrench</p>",
+            "<p>Used with socket attachments</p>"
           ]
         }
       ]
@@ -295,36 +296,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Combination Pliers</p>",
+            "<p>General gripping</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Long Nose Pliers</p>",
+            "<p>Work in narrow spaces</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Side Cutting Pliers</p>",
+            "<p>Cutting wires</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Locking Pliers</p>",
+            "<p>Strong gripping force</p>"
           ]
         }
       ]
@@ -342,49 +343,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>File Type</strong></p>",
+            "<p><strong>Shape</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Flat File</p>",
+            "<p>Rectangular</p>",
+            "<p>General filing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Round File</p>",
+            "<p>Circular</p>",
+            "<p>Enlarging holes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Half-Round File</p>",
+            "<p>Half round</p>",
+            "<p>Curved surfaces</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Square File</p>",
+            "<p>Square</p>",
+            "<p>Internal corners</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Triangular File</p>",
+            "<p>Triangle</p>",
+            "<p>Sharpening saw teeth</p>"
           ]
         }
       ]
@@ -397,11 +398,13 @@
     },
     {
       "type": "paragraph",
-      "id": "pcsmxsc"
+      "id": "pcsmxsc",
+      "content": "Hacksaw is used for cutting metal rods, bars and pipes."
     },
     {
       "type": "paragraph",
-      "id": "me06d1k"
+      "id": "me06d1k",
+      "content": "Main Parts: Frame, Blade, Handle, Tension Screw."
     },
     {
       "type": "comparisonTable",
@@ -447,36 +450,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Flat Chisel</p>",
+            "<p>General metal cutting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cape Chisel</p>",
+            "<p>Narrow grooves</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Round Nose Chisel</p>",
+            "<p>Semicircular grooves</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Diamond Point Chisel</p>",
+            "<p>Sharp corners</p>"
           ]
         }
       ]
@@ -490,25 +493,30 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "qcfxy1r"
+      "id": "qcfxy1r",
+      "content": "• Clean tools after use"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8f20hlw"
+      "id": "8f20hlw",
+      "content": "• Store tools properly"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e8vdnpi"
+      "id": "e8vdnpi",
+      "content": "• Keep cutting tools sharp"
     },
     {
       "type": "paragraph",
-      "id": "tgpfryp"
+      "id": "tgpfryp",
+      "content": "• Do not use damaged tools"
     },
     {
       "type": "paragraph",
-      "id": "s91pqss"
+      "id": "s91pqss",
+      "content": "• Wear PPE while using tools"
     },
     {
       "type": "examAlert",
@@ -528,23 +536,28 @@
     },
     {
       "type": "paragraph",
-      "id": "e4h8s4k"
+      "id": "e4h8s4k",
+      "content": "• Hand tools operate without electricity."
     },
     {
       "type": "paragraph",
-      "id": "o9ox3gb"
+      "id": "o9ox3gb",
+      "content": "• Ball peen hammer is used in metalworking."
     },
     {
       "type": "paragraph",
-      "id": "fa30010"
+      "id": "fa30010",
+      "content": "• Hacksaw is used for cutting metal."
     },
     {
       "type": "paragraph",
-      "id": "c5kycd9"
+      "id": "c5kycd9",
+      "content": "• Bench vice holds workpieces firmly."
     },
     {
       "type": "paragraph",
-      "id": "dmunrfx"
+      "id": "dmunrfx",
+      "content": "• Centre punch marks drilling points."
     }
   ],
   "enriched": true

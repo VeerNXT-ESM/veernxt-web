@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "3epx9a8"
+      "id": "3epx9a8",
+      "content": "Topic: Write a formal letter from the Branch Manager to a home loan customer informing them about a change in the External Benchmark Lending Rate (EBLR) and the corresponding change in their EMI."
     },
     {
       "type": "statStrip",
@@ -48,27 +49,32 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ag7diji"
+      "id": "ag7diji",
+      "content": "The Branch Manager,"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gxc74cl"
+      "id": "gxc74cl",
+      "content": "Union Bank of India,"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pspvfsj"
+      "id": "pspvfsj",
+      "content": "Sector 14, Gurugram Branch,"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d6ppf1g"
+      "id": "d6ppf1g",
+      "content": "Gurugram — 122001"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "94k3zvj"
+      "id": "94k3zvj",
+      "content": "1 April 2025"
     },
     {
       "type": "pullQuote",
@@ -78,21 +84,25 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "vcagenu"
+      "id": "vcagenu",
+      "content": "Ms. Kavita Sharma,"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qw6y26y"
+      "id": "qw6y26y",
+      "content": "Plot 15, DLF Phase 2,"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1d1s6ff"
+      "id": "1d1s6ff",
+      "content": "Gurugram — 122002"
     },
     {
       "type": "paragraph",
-      "id": "s1nrc5o"
+      "id": "s1nrc5o",
+      "content": "<strong>Subject: Revision in Home Loan EMI Following Change in External Benchmark Lending Rate (EBLR)</strong>"
     },
     {
       "type": "comparisonTable",
@@ -123,23 +133,28 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "hf4ffat"
+      "id": "hf4ffat",
+      "content": "Dear Ms. Sharma,"
     },
     {
       "type": "paragraph",
-      "id": "kta2ob7"
+      "id": "kta2ob7",
+      "content": "We refer to your Home Loan Account No. HL-GGN-4451237 sanctioned by our branch for Rs. 55,00,000 on 12 September 2023, linked to our External Benchmark Lending Rate (EBLR). In accordance with the Reserve Bank of India's mandate, your home loan is priced at EBLR plus a credit risk spread, and the EMI is subject to revision when the RBI's Monetary Policy Committee revises the Repo Rate."
     },
     {
       "type": "paragraph",
-      "id": "ntr6253"
+      "id": "ntr6253",
+      "content": "We wish to inform you that with effect from 1 April 2025, the Repo Rate has been revised by the MPC. Pursuant to this revision, our EBLR has been reduced from 9.25% per annum to 9.00% per annum. Accordingly, your revised loan interest rate (EBLR + credit risk spread) stands at 8.75% per annum, down from 9.00% per annum."
     },
     {
       "type": "paragraph",
-      "id": "hb3lnov"
+      "id": "hb3lnov",
+      "content": "As a result of this favourable revision, your monthly EMI will reduce from Rs. 49,340 to Rs. 48,615 with effect from the April 2025 billing cycle — a monthly saving of Rs. 725. If you prefer to keep your EMI unchanged and instead reduce the tenure of your loan, please write to us within 30 days of this communication, and we will make the necessary adjustments."
     },
     {
       "type": "paragraph",
-      "id": "47zk40o"
+      "id": "47zk40o",
+      "content": "We take this opportunity to thank you for your continued association with Union Bank of India and assure you of our best services at all times."
     },
     {
       "type": "examAlert",
@@ -153,20 +168,24 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "p5ithod"
+      "id": "p5ithod",
+      "content": "Yours faithfully,"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5z53l0o"
+      "id": "5z53l0o",
+      "content": "(Branch Manager)"
     },
     {
       "type": "paragraph",
-      "id": "x4968qh"
+      "id": "x4968qh",
+      "content": "Union Bank of India, Gurugram Branch"
     },
     {
       "type": "paragraph",
-      "id": "fpbnhho"
+      "id": "fpbnhho",
+      "content": "<strong>Examiner's Tip: </strong><em>Such letters demonstrate understanding of EBLR mechanism, which is a highly tested topic in bank exams. Note the logical structure: inform of rate change → explain impact on EMI → give customer an option to reduce tenure or EMI.</em>"
     }
   ],
   "enriched": true

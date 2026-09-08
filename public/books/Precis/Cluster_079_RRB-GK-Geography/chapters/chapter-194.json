@@ -1,0 +1,143 @@
+{
+  "title": "3. Major Natural Vegetation Types of the World",
+  "order": 194,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Global vegetation zones are closely linked with climatic belts.",
+      "id": "yif53js"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Global vegetation zones are closely linked with climatic belts.",
+      "id": "b2ln62j"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Focus Area",
+          "value": "Natural Vegetation",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Determinant",
+          "value": "Climatic Belts",
+          "icon": "info"
+        },
+        {
+          "label": "Interconnection",
+          "value": "Closely Linked",
+          "icon": "check"
+        }
+      ],
+      "id": "9a4j7sn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Global vegetation zones share a direct relationship with world climatic belts.",
+        "The spatial distribution of major natural vegetation types is primarily driven by climate.",
+        "Understanding vegetation patterns requires mapping them against climatic zones."
+      ],
+      "id": "kcjzacg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently test the core relationship between climatic belts and global vegetation zones.",
+        "Always identify climate as the principal factor determining the boundaries of major vegetation regions."
+      ],
+      "id": "ntvy3aw"
+    },
+    {
+      "id": "f9t9vfb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Vegetation</strong></p>",
+            "<p><strong>Rainfall</strong></p>",
+            "<p><strong>Temperature</strong></p>",
+            "<p><strong>Key Features</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropical Evergreen Forest</p>",
+            "<p>&gt;200 cm</p>",
+            "<p>High year-round</p>",
+            "<p>Dense multi-layered forests; hardwood trees; extremely high biodiversity.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropical Deciduous Forest</p>",
+            "<p>100–200 cm</p>",
+            "<p>High seasonal</p>",
+            "<p>Trees shed leaves to conserve water; teak and sal common.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tropical Grasslands (Savanna)</p>",
+            "<p>50–100 cm</p>",
+            "<p>Warm</p>",
+            "<p>Tall grasses with scattered trees; supports large herbivores.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Desert Vegetation</p>",
+            "<p>&lt;25 cm</p>",
+            "<p>Extreme</p>",
+            "<p>Sparse xerophytic plants; thick cuticle and long roots.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mediterranean Vegetation</p>",
+            "<p>Winter rain</p>",
+            "<p>Warm dry summers</p>",
+            "<p>Sclerophyllous plants with waxy leaves.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Temperate Deciduous</p>",
+            "<p>75–150 cm</p>",
+            "<p>Moderate</p>",
+            "<p>Broadleaf trees; distinct seasons.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Taiga (Boreal Forest)</p>",
+            "<p>Moderate</p>",
+            "<p>Long cold winters</p>",
+            "<p>Coniferous trees; softwood forests.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tundra</p>",
+            "<p>Very low</p>",
+            "<p>Extremely cold</p>",
+            "<p>Mosses, lichens; permafrost prevents deep roots.</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

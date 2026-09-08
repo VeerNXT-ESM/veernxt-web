@@ -47,7 +47,8 @@
     },
     {
       "type": "paragraph",
-      "id": "nweocig"
+      "id": "nweocig",
+      "content": "Kerala has one of the highest per capita incomes and HDI among Indian states. The economy is driven by services, remittances from Non-Resident Keralites (NRK), tourism, agriculture, and industry. The state follows a unique development model — the 'Kerala Model' — characterized by high human development indicators despite relatively moderate income levels."
     },
     {
       "id": "ysxjvs1",
@@ -56,64 +57,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Economic Indicator</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>GSDP (2022-23)</p>",
+            "<p>Approx ₹10.5 lakh crore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major Sector Contribution</p>",
+            "<p>Services (~65%), Industry (~25%), Agriculture (~10%)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NRI Remittances</p>",
+            "<p>India's largest receiver (~₹1.6 lakh crore annually)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Poverty Rate</p>",
+            "<p>Among lowest in India (~7%)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Unemployment Rate</p>",
+            "<p>Relatively high (~7%); migration alleviates pressure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Major Exports</p>",
+            "<p>Seafood, spices, rubber, cashew, coir, handicrafts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Banking HQ</p>",
+            "<p>Federal Bank, South Indian Bank, CSB Bank, Dhanlaxmi Bank</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Budget</p>",
+            "<p>Revenue-deficit state; depends on central transfers</p>"
           ]
         }
       ]
@@ -131,7 +132,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0wfiqlm"
+      "id": "0wfiqlm",
+      "content": "Agriculture in Kerala is dominated by plantation and cash crops due to the hilly terrain. The state is India's leading producer of rubber, pepper, cardamom, and ginger."
     },
     {
       "id": "2x6teyq",
@@ -140,109 +142,109 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Crop</strong></p>",
+            "<p><strong>Leading Districts</strong></p>",
+            "<p><strong>National Rank</strong></p>",
+            "<p><strong>Uses</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Rubber</p>",
+            "<p>Kottayam, Idukki, Ernakulam</p>",
+            "<p>1st (90% of India's production)</p>",
+            "<p>Tyre, industrial</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Pepper (Black Gold)</p>",
+            "<p>Idukki, Wayanad, Kozhikode</p>",
+            "<p>Historically 1st</p>",
+            "<p>Spice, export</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cardamom (Queen of Spices)</p>",
+            "<p>Idukki</p>",
+            "<p>2nd (after Gujarat for large cardamom)</p>",
+            "<p>Spice, flavoring</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Coconut</p>",
+            "<p>Thrissur, Palakkad, Alappuzha</p>",
+            "<p>2nd or 3rd</p>",
+            "<p>Oil, coir, food</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Coffee</p>",
+            "<p>Wayanad, Idukki</p>",
+            "<p>Top 3</p>",
+            "<p>Beverage, export</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tea</p>",
+            "<p>Idukki (Munnar)</p>",
+            "<p>2nd (after Assam)</p>",
+            "<p>Beverage, export</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cashew</p>",
+            "<p>Kollam, Thiruvananthapuram</p>",
+            "<p>3rd</p>",
+            "<p>Snack, export</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ginger</p>",
+            "<p>Wayanad, Idukki</p>",
+            "<p>2nd</p>",
+            "<p>Spice, medicine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Rice</p>",
+            "<p>Palakkad (Granary of Kerala)</p>",
+            "<p>Deficit</p>",
+            "<p>Staple food</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Banana</p>",
+            "<p>Thrissur, Malappuram</p>",
+            "<p>Top producer</p>",
+            "<p>Food</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tapioca</p>",
+            "<p>Idukki, Thiruvananthapuram</p>",
+            "<p>Top producer</p>",
+            "<p>Food staple for poor</p>"
           ]
         }
       ]
@@ -255,7 +257,8 @@
     },
     {
       "type": "paragraph",
-      "id": "sasvc5p"
+      "id": "sasvc5p",
+      "content": "Kerala's industry includes public sector undertakings, small and medium enterprises, IT/ITES, and traditional industries like coir, handloom, and cashew processing."
     },
     {
       "id": "i5v97vp",
@@ -264,113 +267,113 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Industry</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>FACT (Fertilizers and Chemicals Travancore)</p>",
+            "<p>Udyogamandal, Ernakulam</p>",
+            "<p>India's first fertilizer plant (1943)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>HMT (Hindustan Machine Tools)</p>",
+            "<p>Kalamassery, Ernakulam</p>",
+            "<p>Precision instruments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cochin Shipyard</p>",
+            "<p>Kochi</p>",
+            "<p>India's largest shipbuilding yard</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>BPCL (Kochi Refinery)</p>",
+            "<p>Ambalamugal, Ernakulam</p>",
+            "<p>Major petroleum refinery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>VSSC (Vikram Sarabhai Space Centre)</p>",
+            "<p>Thiruvananthapuram</p>",
+            "<p>ISRO's largest centre; rockets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ISRO LPSC</p>",
+            "<p>Thiruvananthapuram</p>",
+            "<p>Liquid propulsion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Coir Industry</p>",
+            "<p>Alappuzha, Kollam</p>",
+            "<p>Traditional; world's largest coir hub</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cashew Processing</p>",
+            "<p>Kollam, Thiruvananthapuram</p>",
+            "<p>Largest in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IT/ITES (Technopark)</p>",
+            "<p>Thiruvananthapuram</p>",
+            "<p>Asia's largest IT park (by employment)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Infopark</p>",
+            "<p>Kochi</p>",
+            "<p>Major IT hub</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SMART CITY Kochi</p>",
+            "<p>Kochi</p>",
+            "<p>Integrated IT township</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Titanium Dioxide Plant</p>",
+            "<p>Veli, Thiruvananthapuram</p>",
+            "<p>Kerala Minerals &amp; Metals Ltd.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rubber Products</p>",
+            "<p>Kottayam, Ernakulam</p>",
+            "<p>Apex, MRF, etc.</p>"
           ]
         }
       ]
@@ -391,7 +394,8 @@
     },
     {
       "type": "paragraph",
-      "id": "e1whnd2"
+      "id": "e1whnd2",
+      "content": "Tourism is one of Kerala's primary revenue earners. The state was branded 'God's Own Country' in 1989. It attracts millions of domestic and international tourists annually."
     },
     {
       "id": "qlbnxt0",
@@ -400,64 +404,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Key Destinations</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Backwaters</p>",
+            "<p>Alappuzha, Kumarakom, Kollam, Kasaragod (Valiyaparamba)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hill Stations</p>",
+            "<p>Munnar, Wayanad, Vagamon, Ponmudi, Nelliyampathy, Peermade</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Beaches</p>",
+            "<p>Kovalam, Varkala, Bekal, Cherai, Marari, Kappad</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wildlife/Eco Tourism</p>",
+            "<p>Periyar, Silent Valley, Wayanad, Chinnar, Parambikulam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heritage/Culture</p>",
+            "<p>Fort Kochi, Mattancherry, Thrissur Pooram, Bekal Fort</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pilgrim Tourism</p>",
+            "<p>Sabarimala, Guruvayur, Varkala, Kodungallur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ayurveda Tourism</p>",
+            "<p>All districts; promoted by Kerala Tourism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Responsible Tourism</p>",
+            "<p>Kumbalangi (first RT village), Thenmala (first eco-tourism destination)</p>"
           ]
         }
       ]

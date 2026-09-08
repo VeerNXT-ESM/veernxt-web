@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "x0lem59"
+      "id": "x0lem59",
+      "content": "Computer hardware refers to the physical components of a computer system that can be seen and touched. Hardware performs the fundamental operations of input, processing, storage, and output. In this chapter we study important hardware components such as CPU, Motherboard, Ports, and Expansion Cards."
     },
     {
       "type": "statStrip",
@@ -52,7 +53,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ggwmbwd"
+      "id": "ggwmbwd",
+      "content": "The Central Processing Unit (CPU) is the main processing component of a computer system. It is often called the 'brain of the computer' because it performs all calculations, logical operations, and controls the functioning of other hardware components."
     },
     {
       "id": "yprvafz",
@@ -67,33 +69,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Full Form</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ALU</p>",
+            "<p>Arithmetic Logic Unit</p>",
+            "<p>Performs arithmetic operations (addition, subtraction, multiplication, division) and logical comparisons.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CU</p>",
+            "<p>Control Unit</p>",
+            "<p>Directs and coordinates all operations of the computer system and controls data flow.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Registers</p>",
+            "<p>CPU Registers</p>",
+            "<p>Small high-speed storage locations used to temporarily store data during processing.</p>"
           ]
         }
       ]
@@ -108,10 +110,10 @@
       "id": "vxp9fqp",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Executes program instructions.",
+        "Performs arithmetic and logical operations.",
+        "Controls and coordinates computer operations.",
+        "Manages data transfer between memory and input/output devices."
       ]
     },
     {
@@ -124,10 +126,10 @@
       "id": "cs04dlh",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "CPU is called the brain of the computer.",
+        "ALU performs arithmetic and logical operations.",
+        "CU controls the working of the entire computer.",
+        "Registers are the fastest memory inside CPU."
       ]
     },
     {
@@ -143,7 +145,8 @@
     },
     {
       "type": "paragraph",
-      "id": "i9yehgr"
+      "id": "i9yehgr",
+      "content": "The motherboard is the main circuit board of a computer that connects all hardware components such as CPU, memory, storage devices, and peripheral devices."
     },
     {
       "id": "gw2vctl",
@@ -155,11 +158,11 @@
       "id": "ubrybel",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "CPU Socket – Holds the CPU.",
+        "RAM Slots – Used to install memory modules.",
+        "Chipset – Controls communication between CPU and other components.",
+        "Expansion Slots – Used to install expansion cards.",
+        "Power Connectors – Provide power supply to motherboard."
       ]
     },
     {
@@ -172,9 +175,9 @@
       "id": "jbh9omb",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Connects all computer hardware components.",
+        "Allows communication between CPU, memory, and peripherals.",
+        "Provides slots for expansion cards."
       ]
     },
     {
@@ -213,9 +216,9 @@
       "id": "7mh54x0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Motherboard is the main circuit board of the computer.",
+        "All hardware components are connected through the motherboard.",
+        "Expansion slots are present on the motherboard."
       ]
     },
     {
@@ -226,7 +229,8 @@
     },
     {
       "type": "paragraph",
-      "id": "76qvqjh"
+      "id": "76qvqjh",
+      "content": "Ports are connection points on a computer that allow external devices to communicate with the system."
     },
     {
       "id": "ofw05sc",
@@ -241,41 +245,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Port Type</strong></p>",
+            "<p><strong>Purpose</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>USB Port</p>",
+            "<p>Connect external devices</p>",
+            "<p>Pen drive, keyboard, mouse</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>HDMI Port</p>",
+            "<p>Connect display devices</p>",
+            "<p>Monitor, projector</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ethernet Port</p>",
+            "<p>Network connection</p>",
+            "<p>LAN cable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Audio Port</p>",
+            "<p>Sound input/output</p>",
+            "<p>Speakers, headphones</p>"
           ]
         }
       ]
@@ -297,7 +301,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0qboqp5"
+      "id": "0qboqp5",
+      "content": "Expansion cards are circuit boards inserted into expansion slots on the motherboard to enhance the functionality of a computer."
     },
     {
       "id": "3knpnw4",
@@ -312,36 +317,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Expansion Card</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Graphics Card</p>",
+            "<p>Improves graphics and display performance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sound Card</p>",
+            "<p>Enhances audio quality</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Network Interface Card (NIC)</p>",
+            "<p>Enables network connectivity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wi‑Fi Card</p>",
+            "<p>Provides wireless internet connectivity</p>"
           ]
         }
       ]
@@ -356,12 +361,12 @@
       "id": "lex4svt",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "CPU is the brain of the computer.",
+        "ALU performs arithmetic and logical operations.",
+        "CU controls and coordinates system operations.",
+        "Motherboard is the main circuit board.",
+        "USB is the most commonly used port.",
+        "Graphics card improves display performance."
       ]
     }
   ],

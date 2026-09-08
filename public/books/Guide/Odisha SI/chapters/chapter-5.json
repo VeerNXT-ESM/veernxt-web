@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "a4dm7tx"
+      "id": "a4dm7tx",
+      "content": "According to the India State of Forest Report 2021, Odisha has a forest cover of approximately 52,156 sq. km, constituting about 33.50% of its geographical area, which is above the national average. Odisha is one of India's leading states in forest biodiversity."
     },
     {
       "id": "c29d4ul",
@@ -69,49 +70,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Forest Type</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Key Species</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tropical Moist Deciduous</p>",
+            "<p>Northern &amp; Central Odisha</p>",
+            "<p>Sal, Teak, Bamboo, Asan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tropical Dry Deciduous</p>",
+            "<p>Western Odisha plateau</p>",
+            "<p>Sal, Mahua, Tendu, Char</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tropical Semi-Evergreen</p>",
+            "<p>Koraput, Malkangiri, E. Ghats</p>",
+            "<p>Neem, Jack fruit, Bamboo</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mangrove Forests</p>",
+            "<p>Bhitarkanika, Mahanadi delta</p>",
+            "<p>Sundari, Mangrove species</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sub-tropical Pine</p>",
+            "<p>High altitude E. Ghats</p>",
+            "<p>Pine varieties</p>"
           ]
         }
       ]
@@ -129,105 +130,105 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Name</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Known For</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Simlipal National Park (Biosphere Reserve)</p>",
+            "<p>Mayurbhanj</p>",
+            "<p>Tigers, Elephants, Gaur; UNESCO Biosphere Reserve</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bhitarkanika National Park</p>",
+            "<p>Kendrapara</p>",
+            "<p>Saltwater crocodiles, Mangroves, Olive Ridley turtles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chilika Bird Sanctuary</p>",
+            "<p>Puri/Khurda/Ganjam</p>",
+            "<p>Migratory birds, Irrawaddy dolphins</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nandankanan Zoological Park</p>",
+            "<p>Khurda (Bhubaneswar)</p>",
+            "<p>White tigers, Melanistic tigers; first zoo to breed white tigers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Satkosia Tiger Reserve</p>",
+            "<p>Angul/Nayagarh/Boudh/Cuttack</p>",
+            "<p>Tigers, Mugger crocodiles, Gharials</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gahirmatha Marine Sanctuary</p>",
+            "<p>Kendrapara</p>",
+            "<p>World's largest Olive Ridley sea turtle rookery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kapilash Wildlife Sanctuary</p>",
+            "<p>Dhenkanal</p>",
+            "<p>Elephants</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Baisipalli Sanctuary</p>",
+            "<p>Nayagarh</p>",
+            "<p>Sambar, Leopard, Wild boar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hadagarh Sanctuary</p>",
+            "<p>Keonjhar</p>",
+            "<p>Elephants, Tigers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ushakothi Sanctuary</p>",
+            "<p>Sambalpur</p>",
+            "<p>Tiger, Elephant, Leopard</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kuldiha Sanctuary</p>",
+            "<p>Balasore</p>",
+            "<p>Elephants</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sunabeda Sanctuary</p>",
+            "<p>Nuapada</p>",
+            "<p>Wolf, Chinkara (rare)</p>"
           ]
         }
       ]
@@ -245,57 +246,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Bird</p>",
+            "<p>Indian Roller / Neelakantha (Coracias benghalensis)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Animal</p>",
+            "<p>Sambar Deer (Rusa unicolor)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Tree</p>",
+            "<p>Sacred Fig / Peepal (Ficus religiosa)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Flower</p>",
+            "<p>Ashok Flower (Saraca asoca)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Fish</p>",
+            "<p>Mahanadi Mahseer / Rohu</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Sport</p>",
+            "<p>Hockey</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Anthem</p>",
+            "<p>'Bande Utkal Janani' – by Kantakabi Laxmikanta Mohapatra</p>"
           ]
         }
       ]
@@ -317,15 +318,16 @@
     },
     {
       "type": "paragraph",
-      "id": "3ktpgmg"
+      "id": "3ktpgmg",
+      "content": "Odisha's coast is the world's most important nesting ground for Olive Ridley sea turtles (Lepidochelys olivacea). Mass nesting (Arribada) occurs at three main sites:"
     },
     {
       "id": "puuvsmc",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Gahirmatha Beach (Kendrapara) – World's largest Olive Ridley rookery; protected by Gahirmatha Marine Sanctuary",
+        "Rushikulya River Mouth (Ganjam) – Second most important site",
+        "Devi River Mouth (Puri district) – Third important nesting site"
       ]
     }
   ],

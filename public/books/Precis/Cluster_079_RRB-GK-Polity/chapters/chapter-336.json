@@ -1,0 +1,63 @@
+{
+  "title": "RRB Quick Revision Box",
+  "order": 336,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Act: 1999<br/>HQ: Hyderabad<br/>Based on Malhotra Committee<br/>Regulates Insurance Sector<br/>Protects Policyholders<br/>Statutory Authority",
+      "id": "sh51h77"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Regulates Insurance Sector",
+      "id": "zalbib7"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Act Year",
+          "value": "1999",
+          "icon": "calendar"
+        },
+        {
+          "label": "Headquarters",
+          "value": "Hyderabad",
+          "icon": "info"
+        },
+        {
+          "label": "Recommended By",
+          "value": "Malhotra Committee",
+          "icon": "award"
+        },
+        {
+          "label": "Legal Status",
+          "value": "Statutory Authority",
+          "icon": "check"
+        }
+      ],
+      "id": "vx7mix9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "frequently tested: Location of headquarters (Hyderabad).",
+        "frequently tested: Associated committee name (Malhotra Committee).",
+        "frequently tested: Year of the Act (1999) and statutory status."
+      ],
+      "id": "hlto7fn"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Passed under the Act of 1999 as a Statutory Authority.",
+        "Headquartered in Hyderabad.",
+        "Established based on the recommendations of the Malhotra Committee.",
+        "Primary mandate is to regulate the insurance sector and protect policyholders."
+      ],
+      "id": "55o6vng"
+    }
+  ],
+  "enriched": true
+}

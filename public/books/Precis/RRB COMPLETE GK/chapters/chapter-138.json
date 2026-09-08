@@ -4,8 +4,15 @@
   "order": 138,
   "blocks": [
     {
+      "id": "60fzze8",
+      "type": "image",
+      "imageId": "r09fvv5",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_r09fvv5.png"
+    },
+    {
       "type": "paragraph",
-      "id": "cytdog5"
+      "id": "cytdog5",
+      "content": "• Cirque (Corrie) – bowl-shaped depression.<img></img>"
     },
     {
       "type": "statStrip",
@@ -47,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3s1acvo"
+      "id": "3s1acvo",
+      "content": "• Arete – sharp ridge between two cirques."
     },
     {
       "type": "pullQuote",
@@ -56,7 +64,8 @@
     },
     {
       "type": "paragraph",
-      "id": "d2z8v5d"
+      "id": "d2z8v5d",
+      "content": "• Horn – pyramid-shaped peak (e.g., Matterhorn)."
     },
     {
       "type": "comparisonTable",
@@ -91,15 +100,18 @@
     },
     {
       "type": "paragraph",
-      "id": "c1f1ycb"
+      "id": "c1f1ycb",
+      "content": "• U-Shaped Valley – wide valley with flat floor."
     },
     {
       "type": "paragraph",
-      "id": "zfxa31d"
+      "id": "zfxa31d",
+      "content": "• Hanging Valley – tributary valley above main valley."
     },
     {
       "type": "paragraph",
-      "id": "sha6ibb"
+      "id": "sha6ibb",
+      "content": "• Fjord – drowned glacial valley."
     },
     {
       "type": "examAlert",
@@ -112,11 +124,13 @@
     },
     {
       "type": "paragraph",
-      "id": "p4fy5io"
+      "id": "p4fy5io",
+      "content": "• Roche Moutonnée – asymmetrical rock feature."
     },
     {
       "type": "paragraph",
-      "id": "sqy6ct0"
+      "id": "sqy6ct0",
+      "content": "• Glacial Striations – scratches on bedrock."
     }
   ],
   "enriched": true

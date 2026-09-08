@@ -1,0 +1,87 @@
+{
+  "title": "ULTRA QUICK REVISION",
+  "order": 28,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Tilt: 23.5°<br/>Rotation: 24h<br/>Revolution: 365¼ days<br/>Longest Day: 21 June<br/>Closest: 3 Jan",
+      "id": "7wb1ntj"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Longest Day: 21 June",
+      "id": "4yx4gi7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Motion Type",
+        "Time Duration"
+      ],
+      "rows": [
+        [
+          "Rotation",
+          "24h"
+        ],
+        [
+          "Revolution",
+          "365¼ days"
+        ]
+      ],
+      "id": "qa86olf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Axial Tilt",
+          "value": "23.5°",
+          "icon": "info"
+        },
+        {
+          "label": "Rotation",
+          "value": "24h",
+          "icon": "clock"
+        },
+        {
+          "label": "Revolution",
+          "value": "365¼ days",
+          "icon": "calendar"
+        },
+        {
+          "label": "Longest Day",
+          "value": "21 June",
+          "icon": "award"
+        },
+        {
+          "label": "Closest Position",
+          "value": "3 Jan",
+          "icon": "check"
+        }
+      ],
+      "id": "v15scms"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The exact date when Earth is closest to the Sun is 3 January (Perihelion).",
+        "The longest day of the year (Summer Solstice) falls on 21 June.",
+        "Differentiate clearly between rotation duration (24h) and revolution duration (365¼ days)."
+      ],
+      "id": "f1mhaq2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Earth is tilted at an angle of 23.5° on its axis.",
+        "The duration of one complete Earth rotation is 24 hours.",
+        "One complete revolution around the Sun takes 365¼ days.",
+        "The longest day of the year occurs on 21 June.",
+        "Earth is closest to the Sun on 3 January."
+      ],
+      "id": "dc5f25n"
+    }
+  ],
+  "enriched": true
+}

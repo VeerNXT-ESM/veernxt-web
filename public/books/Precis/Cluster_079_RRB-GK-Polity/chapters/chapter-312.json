@@ -1,0 +1,131 @@
+{
+  "title": "Composition of SEBI Board",
+  "order": 312,
+  "blocks": [
+    {
+      "id": "txj97k3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Member</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>Appointed by Central Government</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Two Members</p>",
+            "<p>From Ministry of Finance</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>One Member</p>",
+            "<p>From RBI</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Five Members</p>",
+            "<p>Appointed by Central Government (minimum 3 full-time)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Board of members shall consist of a Chairman, two members from the Ministry of Finance, one member from the RBI, and five other members appointed by the Central Government.",
+      "id": "n73g66n"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Designation / Representation",
+        "Number of Members",
+        "Nominating / Appointing Body"
+      ],
+      "rows": [
+        [
+          "Chairman",
+          "1",
+          "Central Government"
+        ],
+        [
+          "Finance Ministry Officials",
+          "2",
+          "Union Finance Ministry"
+        ],
+        [
+          "RBI Representative",
+          "1",
+          "Reserve Bank of India"
+        ],
+        [
+          "Other Appointed Members",
+          "5 (At least 3 Whole-Time)",
+          "Central Government"
+        ]
+      ],
+      "id": "am7wcje"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Board Strength",
+          "value": "9 Members",
+          "icon": "check"
+        },
+        {
+          "label": "Governing Legislation",
+          "value": "SEBI Act, 1992",
+          "icon": "book"
+        },
+        {
+          "label": "Statutory Provision",
+          "value": "Section 4",
+          "icon": "info"
+        },
+        {
+          "label": "Min. Whole-Time Members",
+          "value": "3 Members",
+          "icon": "award"
+        }
+      ],
+      "id": "0vwo1yc"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently ask about the minimum number of Whole-Time Members (WTMs): out of 5 appointed members, at least 3 must be whole-time members.",
+        "Note the nominating bodies: RBI nominates 1 member, Union Finance Ministry nominates 2 members, and the Central Government appoints the Chairman and remaining 5 members.",
+        "Total statutory composition consists of 9 members under Section 4 of the SEBI Act, 1992."
+      ],
+      "id": "10dh5fm"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The SEBI Board is constituted under Section 4 of the Securities and Exchange Board of India Act, 1992.",
+        "The Chairman of the Board is appointed directly by the Central Government of India.",
+        "Two members are nominated from amongst the officials of the Union Ministry of Finance.",
+        "One member is nominated by the Reserve Bank of India (RBI).",
+        "Five other members are appointed by the Central Government, out of which at least three must be whole-time members."
+      ],
+      "id": "tsw5xko"
+    }
+  ],
+  "enriched": true
+}

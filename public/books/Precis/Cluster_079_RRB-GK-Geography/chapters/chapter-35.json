@@ -1,0 +1,104 @@
+{
+  "title": "3. Longitudes : Meaning and Characteristics",
+  "order": 35,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Longitudes are imaginary semicircles that run from the North Pole to the South Pole. They measure angular distance east or west of the Prime Meridian.",
+      "id": "4gj4jjw"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Longitudes are imaginary semicircles that run from the North Pole to the South Pole.",
+      "id": "x4fn7xu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Geometric Form",
+          "value": "Semicircles",
+          "icon": "info"
+        },
+        {
+          "label": "Extent",
+          "value": "North to South Pole",
+          "icon": "clock"
+        },
+        {
+          "label": "Base Reference Line",
+          "value": "Prime Meridian",
+          "icon": "check"
+        }
+      ],
+      "id": "h017rc7"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Longitudes are imaginary semicircles connecting the North Pole to the South Pole.",
+        "They measure the angular distance of a location east or west relative to the Prime Meridian.",
+        "Unlike full-circle latitudes, longitude lines are defined as semicircles."
+      ],
+      "id": "kyqkp77"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Longitudes run from pole to pole (North Pole to South Pole) as imaginary semicircles.",
+        "The measurement direction for longitudinal angular distance is always East or West of the Prime Meridian."
+      ],
+      "id": "y09kutz"
+    },
+    {
+      "id": "bijcnum",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reference Line</p>",
+            "<p>Prime Meridian (0° longitude)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Range</p>",
+            "<p>0° to 180° East and 0° to 180° West</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Shape</p>",
+            "<p>Semicircles joining both poles</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Length</p>",
+            "<p>All longitudes are equal in length</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Meeting Point</p>",
+            "<p>Converge at poles</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

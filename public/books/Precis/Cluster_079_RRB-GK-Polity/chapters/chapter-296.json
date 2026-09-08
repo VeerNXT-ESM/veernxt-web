@@ -1,0 +1,137 @@
+{
+  "title": "Tenure, Salary and Removal",
+  "order": 296,
+  "blocks": [
+    {
+      "id": "ilnatki",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Provision</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tenure</p>",
+            "<p>5 years or 70 years</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Salary</p>",
+            "<p>Equivalent to Chief Justice of India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reappointment</p>",
+            "<p>Not allowed</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Removal</p>",
+            "<p>President after Supreme Court inquiry</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The salary and service conditions of a constitutional authority cannot be varied to their disadvantage after appointment, except during a Financial Emergency.",
+      "id": "meh6ec4"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Office / Authority",
+        "Tenure / Age Limit",
+        "Removal Process / Authority",
+        "Post-Retirement Employment"
+      ],
+      "rows": [
+        [
+          "CAG of India",
+          "6 years or 65 years",
+          "President (Same grounds/manner as SC Judge)",
+          "Ineligible for further GoI/State office"
+        ],
+        [
+          "UPSC Chairman",
+          "6 years or 65 years",
+          "President (Reference to Supreme Court under Art. 145)",
+          "Ineligible for further GoI/State office"
+        ],
+        [
+          "Chief Election Commissioner",
+          "6 years or 65 years",
+          "President (Same grounds/manner as SC Judge)",
+          "Eligible for further government offices"
+        ],
+        [
+          "State Governor",
+          "5 years (No fixed security)",
+          "President at any time (Pleasure doctrine)",
+          "Eligible for re-appointment or other offices"
+        ]
+      ],
+      "id": "w5xzvy1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Standard Tenure",
+          "value": "6 Years / 65 Yrs Age",
+          "icon": "calendar"
+        },
+        {
+          "label": "Salary Source",
+          "value": "Consolidated Fund",
+          "icon": "award"
+        },
+        {
+          "label": "Removal Grounds",
+          "value": "Misbehaviour / Incapacity",
+          "icon": "info"
+        },
+        {
+          "label": "Voting on Salary",
+          "value": "Non-Votable in Parliament",
+          "icon": "check"
+        }
+      ],
+      "id": "7lukaw6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between 'Charged upon' (non-votable) and 'Made from' the Consolidated Fund of India for exam questions.",
+        "Special Majority for removal requires majority of total membership of the House AND at least two-thirds of members present and voting.",
+        "While the CEC is removed like a Supreme Court Judge, other Election Commissioners can be removed by the President on the recommendation of the CEC.",
+        "The Governor does NOT enjoy security of tenure and holds office during the pleasure of the President."
+      ],
+      "id": "lyu6klb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional authorities like the CAG, CEC, and UPSC Chairman hold office for a maximum term of six years or until attaining 65 years of age, whichever is earlier.",
+        "Salaries and administrative expenses of key constitutional bodies are charged upon the Consolidated Fund of India and are not subject to parliamentary vote.",
+        "Security of tenure is guaranteed to ensure independence; removal requires a special majority in both Houses of Parliament on grounds of proved misbehaviour or incapacity.",
+        "Service conditions and salaries of constitutional office holders cannot be varied to their disadvantage after appointment, except during a Financial Emergency under Article 360.",
+        "Post-retirement restrictions apply to posts like the CAG and UPSC Chairman, making them ineligible for further appointment under the Union or State Governments."
+      ],
+      "id": "2v3nxpf"
+    }
+  ],
+  "enriched": true
+}

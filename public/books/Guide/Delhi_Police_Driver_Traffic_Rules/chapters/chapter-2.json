@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "f73h1pg"
+      "id": "f73h1pg",
+      "content": "The Motor Vehicles Act, 1988 (MV Act) is the main law that controls all road transport in India. It came into force on 1 July 1989 and applies to the whole country. It was significantly amended in 2019 to increase penalties and promote road safety."
     },
     {
       "type": "statStrip",
@@ -85,13 +86,13 @@
       "id": "3wj3uae",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Driving licences — who can drive, age limits, tests",
+        "Vehicle registration with Regional Transport Offices (RTO)",
+        "Traffic rules — speed limits, signals, lane discipline",
+        "Insurance — third-party insurance is compulsory",
+        "Permits for commercial/transport vehicles",
+        "Penalties and fines for traffic violations",
+        "Road safety measures and enforcement"
       ]
     },
     {
@@ -116,43 +117,44 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Vehicle Type</strong></p>",
+            "<p><strong>Minimum Age</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Light motor vehicle (car, jeep)</p>",
+            "<p>18 years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Motorcycle (up to 50cc engine)</p>",
+            "<p>16 years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Transport / commercial vehicle</p>",
+            "<p>20 years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>No person below 18 shall drive any motor vehicle</p>",
+            "<p>—</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "qvxxwj9"
+      "id": "qvxxwj9",
+      "content": "Note: No person shall hold more than one driving licence. A licence holder cannot allow another person to use their licence."
     }
   ],
   "enriched": true

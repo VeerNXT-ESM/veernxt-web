@@ -1,0 +1,125 @@
+{
+  "title": "8. Primary and Secondary Effects",
+  "order": 106,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Primary Effects:",
+      "id": "3ybmawf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Effects",
+          "value": "2 Types",
+          "icon": "info"
+        },
+        {
+          "label": "Secondary Effects",
+          "value": "5 Types",
+          "icon": "check"
+        },
+        {
+          "label": "Total Effects Listed",
+          "value": "7 Hazards",
+          "icon": "book"
+        }
+      ],
+      "id": "0qf5tam"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Primary effects are direct results of earthquake activity, consisting of ground shaking and surface rupture.",
+        "Secondary effects are indirect hazards caused as a consequence of primary effects.",
+        "Secondary hazards include tsunamis, landslides, soil liquefaction, fires, and catastrophic dam failures."
+      ],
+      "id": "ts6nvae"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Ground shaking",
+      "id": "k4wjeca"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Ground shaking",
+      "id": "br4yteu"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Surface rupture",
+      "id": "94vlp1i"
+    },
+    {
+      "type": "paragraph",
+      "content": "Secondary Effects:",
+      "id": "yph8fy9"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Primary Effects",
+        "Secondary Effects"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Direct results caused immediately by the earthquake process",
+          "Indirect hazards triggered as a result of primary effects"
+        ],
+        [
+          "Listed Types",
+          "Ground shaking, Surface rupture",
+          "Tsunamis, Landslides, Liquefaction, Fires, Dam failures"
+        ]
+      ],
+      "id": "5iz6dpv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Tsunamis",
+      "id": "c8mg1py"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Landslides",
+      "id": "rwrudxg"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Liquefaction",
+      "id": "34j5spa"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Ground shaking and surface rupture are classified strictly as Primary Effects.",
+        "Tsunamis, landslides, liquefaction, fires, and dam failures are categorized as Secondary Effects.",
+        "Exam questions frequently test the distinction between direct (primary) and indirect (secondary) seismic hazards."
+      ],
+      "id": "2hom67n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Fires",
+      "id": "9rbkgay"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Dam failures",
+      "id": "oevf2lo"
+    }
+  ],
+  "enriched": true
+}

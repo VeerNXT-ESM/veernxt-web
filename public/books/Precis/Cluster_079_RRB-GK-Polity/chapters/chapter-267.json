@@ -1,0 +1,90 @@
+{
+  "title": "Tenure and Removal",
+  "order": 267,
+  "blocks": [
+    {
+      "id": "f6dkqou",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Provision</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tenure</p>",
+            "<p>4 years or 65 years of age (whichever is earlier)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reappointment</p>",
+            "<p>Not eligible for reappointment</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Removal</p>",
+            "<p>By the President on grounds of misbehavior or incapacity</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Removal on grounds of misbehavior requires an inquiry by the Supreme Court.",
+      "id": "vimluky"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Ground for Removal",
+          "value": "Misbehavior",
+          "icon": "info"
+        },
+        {
+          "label": "Inquiry Authority",
+          "value": "Supreme Court",
+          "icon": "award"
+        },
+        {
+          "label": "Mandatory Process",
+          "value": "Inquiry",
+          "icon": "check"
+        }
+      ],
+      "id": "l8cncou"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The primary legal ground specified for removal is misbehavior.",
+        "An inquiry conducted by the Supreme Court is a mandatory prerequisite for removal.",
+        "Constitutional provisions mandate judicial scrutiny to safeguard against arbitrary dismissals."
+      ],
+      "id": "vaoz8ag"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Note that the Supreme Court, not a political committee, conducts the inquiry into misbehavior for removal.",
+        "Misbehavior is the key constitutionally mandated ground that initiates a Supreme Court inquiry."
+      ],
+      "id": "pqzgi9y"
+    },
+    {
+      "type": "paragraph",
+      "content": "Removal on grounds of misbehavior requires an inquiry by the Supreme Court.",
+      "id": "bei2u5b"
+    }
+  ],
+  "enriched": true
+}

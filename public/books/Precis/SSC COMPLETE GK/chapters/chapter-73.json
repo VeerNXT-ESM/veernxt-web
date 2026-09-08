@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "3jvc6qd"
+      "id": "3jvc6qd",
+      "content": "National Income is the MOST IMPORTANT and MOST SCORING chapter of SSC Economics. Questions from this chapter are direct, formula-based and concept-based. "
     },
     {
       "type": "statStrip",
@@ -59,11 +60,13 @@
     },
     {
       "type": "paragraph",
-      "id": "dfr2ojd"
+      "id": "dfr2ojd",
+      "content": "National Income refers to the total monetary value of all FINAL goods and services produced by the normal residents of a country during one financial year. It represents the income earned by factors of production such as land, labour, capital and entrepreneurship."
     },
     {
       "type": "paragraph",
-      "id": "7qpue7p"
+      "id": "7qpue7p",
+      "content": "National Income is used to measure the economic performance of a country, compare growth over time and frame economic policies."
     },
     {
       "id": "l3rf5wq",
@@ -79,11 +82,13 @@
     },
     {
       "type": "paragraph",
-      "id": "tdvsdmb"
+      "id": "tdvsdmb",
+      "content": "GDP is the total monetary value of all FINAL goods and services produced within the domestic territory of a country during one year."
     },
     {
       "type": "paragraph",
-      "id": "it86cpp"
+      "id": "it86cpp",
+      "content": "Formula:<br></br>GDP = Value of output produced within domestic territory<br></br><br></br>Key Points:<br></br>• Includes only final goods<br></br>• Includes production by foreigners within India<br></br>• Excludes income earned by Indians abroad"
     },
     {
       "id": "rdt8b2t",
@@ -93,11 +98,13 @@
     },
     {
       "type": "paragraph",
-      "id": "d29pttp"
+      "id": "d29pttp",
+      "content": "GNP measures the total income earned by the normal residents of a country."
     },
     {
       "type": "paragraph",
-      "id": "6rerxp7"
+      "id": "6rerxp7",
+      "content": "Formula:<br></br>GNP = GDP + Net Factor Income from Abroad (NFIA)<br></br><br></br>NFIA = Income earned by Indians abroad – Income earned by foreigners in India"
     },
     {
       "id": "u5m1eyz",
@@ -107,12 +114,14 @@
     },
     {
       "type": "paragraph",
-      "id": "7gcdlzs"
+      "id": "7gcdlzs",
+      "content": "NDP is obtained by deducting depreciation from GDP. Depreciation refers to wear and tear of capital goods."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nd8ybxe"
+      "id": "nd8ybxe",
+      "content": "Formula:<br></br>NDP = GDP – Depreciation"
     },
     {
       "id": "vjrw31e",
@@ -122,23 +131,20 @@
     },
     {
       "type": "paragraph",
-      "id": "01th42x"
+      "id": "01th42x",
+      "content": "NNP shows the actual income earned by the nation after allowing for depreciation."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vqol3d3"
+      "id": "vqol3d3",
+      "content": "Formula:<br></br>NNP = GNP – Depreciation"
     },
     {
       "id": "ehep9gs",
       "type": "heading",
       "level": 2,
       "content": "PART C: MARKET PRICE AND FACTOR COST (FORMULA BASED)"
-    },
-    {
-      "type": "pullQuote",
-      "content": "SSC ULTRA FINAL REVISION FORMULAS",
-      "id": "3dmaq8h"
     },
     {
       "id": "0bwmhxl",
@@ -148,7 +154,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vqwr4w6"
+      "id": "vqwr4w6",
+      "content": "Market Price is the price paid by consumers. It includes indirect taxes and excludes subsidies."
     },
     {
       "id": "o7n9klt",
@@ -158,11 +165,13 @@
     },
     {
       "type": "paragraph",
-      "id": "iqwqovs"
+      "id": "iqwqovs",
+      "content": "Factor Cost is the cost of production incurred by producers."
     },
     {
       "type": "paragraph",
-      "id": "xb08kr2"
+      "id": "xb08kr2",
+      "content": "Formula:<br></br>Factor Cost = Market Price – Indirect Taxes + Subsidies"
     },
     {
       "id": "twxtxvw",
@@ -178,7 +187,8 @@
     },
     {
       "type": "paragraph",
-      "id": "w1v6dvd"
+      "id": "w1v6dvd",
+      "content": "Nominal GDP is GDP measured at current prices. It is affected by inflation."
     },
     {
       "id": "epjfndq",
@@ -188,7 +198,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4fho8yf"
+      "id": "4fho8yf",
+      "content": "Real GDP is GDP measured at constant prices. It shows true economic growth."
     },
     {
       "id": "bi415dv",
@@ -224,11 +235,13 @@
     },
     {
       "type": "paragraph",
-      "id": "bcdtkje"
+      "id": "bcdtkje",
+      "content": "GDP Deflator is used to remove the effect of inflation."
     },
     {
       "type": "paragraph",
-      "id": "7zvh8m5"
+      "id": "7zvh8m5",
+      "content": "Formula:<br></br>GDP Deflator = (Nominal GDP / Real GDP) × 100"
     },
     {
       "id": "0rd1vqv",
@@ -244,11 +257,13 @@
     },
     {
       "type": "paragraph",
-      "id": "lm8pwge"
+      "id": "lm8pwge",
+      "content": "Per Capita Income is the average income of people in a country."
     },
     {
       "type": "paragraph",
-      "id": "b1o2ngd"
+      "id": "b1o2ngd",
+      "content": "Formula:<br></br>Per Capita Income = National Income / Total Population"
     },
     {
       "id": "dljxjd2",
@@ -264,7 +279,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bdp243n"
+      "id": "bdp243n",
+      "content": "National Income is calculated by summing value added at each stage of production."
     },
     {
       "id": "1zumhna",
@@ -274,11 +290,13 @@
     },
     {
       "type": "paragraph",
-      "id": "12tttrf"
+      "id": "12tttrf",
+      "content": "National Income is calculated by summing factor incomes."
     },
     {
       "type": "paragraph",
-      "id": "9xun55h"
+      "id": "9xun55h",
+      "content": "Formula:<br></br>National Income = Wages + Rent + Interest + Profit"
     },
     {
       "id": "uu3wzxh",
@@ -297,11 +315,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8ijfsyc"
+      "id": "8ijfsyc",
+      "content": "National Income is calculated by summing total expenditure."
     },
     {
       "type": "paragraph",
-      "id": "622g46m"
+      "id": "622g46m",
+      "content": "Formula:<br></br>GDP = C + I + G + (X – M)"
     },
     {
       "id": "ih65eyh",
@@ -317,7 +337,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qml67b9"
+      "id": "qml67b9",
+      "content": "It helps in economic planning, policy making, comparison of growth and measurement of living standards."
     },
     {
       "id": "19tu3bb",
@@ -327,7 +348,8 @@
     },
     {
       "type": "paragraph",
-      "id": "b63t5yv"
+      "id": "b63t5yv",
+      "content": "It ignores non-monetary activities, income inequality and environmental degradation."
     },
     {
       "id": "fi255v9",
@@ -337,7 +359,8 @@
     },
     {
       "type": "paragraph",
-      "id": "nivjeo9"
+      "id": "nivjeo9",
+      "content": "• GDP = Value of final goods<br></br>• GNP = GDP + NFIA<br></br>• NDP = GDP – Depreciation<br></br>• NNP = GNP – Depreciation<br></br>• Factor Cost = Market Price – Indirect Tax + Subsidy<br></br>• GDP Deflator = (Nominal GDP / Real GDP) × 100<br></br>• Per Capita Income = NI / Population<br></br>• GDP (Expenditure) = C + I + G + (X – M)"
     }
   ],
   "enriched": true

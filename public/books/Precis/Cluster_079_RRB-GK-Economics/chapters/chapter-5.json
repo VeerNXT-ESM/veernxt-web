@@ -1,0 +1,480 @@
+{
+  "title": "CHAPTER 7: INFLATION & BUSINESS CYCLE",
+  "order": 5,
+  "blocks": [
+    {
+      "id": "wle3whv",
+      "type": "heading",
+      "level": 2,
+      "content": "PART 1: INFLATION"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Inflation is a sustained rise in general price level that decreases purchasing power, measured via CPI and WPI.",
+        "RBI targets CPI inflation at 4% ± 2% using monetary tools like Repo Rate, CRR, SLR, and open market operations.",
+        "The Short-Run Phillips Curve shows an inverse relationship between inflation and unemployment, while the Long-Run curve is vertical at the Natural Rate of Unemployment.",
+        "Stagflation occurs when high inflation, high unemployment, and low growth coexist simultaneously, contradicting the traditional Phillips Curve.",
+        "Demand-pull inflation shifts the Aggregate Demand curve right, whereas cost-push inflation shifts the Aggregate Supply curve left."
+      ],
+      "id": "o4oegy8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "RBI CPI Target",
+          "value": "4% ± 2%",
+          "icon": "award"
+        },
+        {
+          "label": "Headline Inflation",
+          "value": "All Items Included",
+          "icon": "info"
+        },
+        {
+          "label": "Core Inflation",
+          "value": "Excl. Food & Fuel",
+          "icon": "book"
+        },
+        {
+          "label": "Business Cycle",
+          "value": "4 Phases",
+          "icon": "clock"
+        }
+      ],
+      "id": "fyfh92p"
+    },
+    {
+      "type": "paragraph",
+      "content": "Inflation refers to a sustained rise in the general price level of goods and services over a period of time. It reduces the purchasing power of money.",
+      "id": "5j3dn0j"
+    },
+    {
+      "id": "y97x9th",
+      "type": "heading",
+      "level": 3,
+      "content": "1. TYPES OF INFLATION"
+    },
+    {
+      "id": "nug546r",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Demand-Pull Inflation</p>",
+            "<p>Demand exceeds supply</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cost-Push Inflation</p>",
+            "<p>Rise in production costs</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Creeping Inflation</p>",
+            "<p>Slow and steady rise</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Galloping Inflation</p>",
+            "<p>Rapid price rise</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Hyperinflation</p>",
+            "<p>Extremely high inflation</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tccdzvh",
+      "type": "heading",
+      "level": 3,
+      "content": "2. CAUSES OF INFLATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Increase in money supply<br/>• Excess demand<br/>• Rising wages<br/>• Increase in fuel prices<br/>• Supply shocks<br/>",
+      "id": "q8geov6"
+    },
+    {
+      "id": "5isa141",
+      "type": "heading",
+      "level": 3,
+      "content": "3. EFFECTS OF INFLATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Decreases purchasing power<br/>• Affects fixed income groups<br/>• Creates uncertainty<br/>• Encourages speculation<br/>",
+      "id": "1u0p0jx"
+    },
+    {
+      "id": "4pc3by4",
+      "type": "heading",
+      "level": 3,
+      "content": "4. CONTROL OF INFLATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Monetary Measures:<br/>• Increase Repo Rate<br/>• Increase CRR &amp; SLR<br/>• Sell government securities<br/><br/>Fiscal Measures:<br/>• Reduce government expenditure<br/>• Increase taxes<br/>",
+      "id": "m6uo1k5"
+    },
+    {
+      "id": "ragig12",
+      "type": "heading",
+      "level": 3,
+      "content": "5. MEASUREMENT OF INFLATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Inflation is measured through:<br/>• Consumer Price Index (CPI)<br/>• Wholesale Price Index (WPI)<br/>",
+      "id": "f3zfkvu"
+    },
+    {
+      "type": "paragraph",
+      "content": "RBI targets CPI inflation (4% ± 2%).",
+      "id": "qdj161h"
+    },
+    {
+      "id": "69dm1ec",
+      "type": "heading",
+      "level": 2,
+      "content": "PART 2: BUSINESS CYCLE"
+    },
+    {
+      "type": "paragraph",
+      "content": "Business Cycle refers to periodic fluctuations in economic activity.",
+      "id": "uf420oz"
+    },
+    {
+      "id": "9w4ywzw",
+      "type": "heading",
+      "level": 3,
+      "content": "1. PHASES OF BUSINESS CYCLE"
+    },
+    {
+      "id": "4dtyt4h",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Phase</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Expansion</p>",
+            "<p>Increase in output &amp; employment</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Peak</p>",
+            "<p>Highest level of activity</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Recession</p>",
+            "<p>Decline in output</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Depression</p>",
+            "<p>Severe downturn</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Stagflation is a situation where the economy experiences high inflation, high unemployment, and low economic growth simultaneously.",
+      "id": "sgxfzb2"
+    },
+    {
+      "id": "ny4fzaj",
+      "type": "heading",
+      "level": 3,
+      "content": "2. CAUSES OF BUSINESS CYCLE"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Changes in investment<br/>• Credit expansion or contraction<br/>• Technological changes<br/>• External shocks<br/>",
+      "id": "0nuz7sk"
+    },
+    {
+      "id": "8ado2d6",
+      "type": "heading",
+      "level": 3,
+      "content": "3. CONTROL OF BUSINESS CYCLE"
+    },
+    {
+      "type": "paragraph",
+      "content": "During Recession:<br/>• Lower interest rates<br/>• Increase public spending<br/><br/>During Inflationary Boom:<br/>• Raise interest rates<br/>• Reduce money supply",
+      "id": "c8h1xo0"
+    },
+    {
+      "type": "paragraph",
+      "content": "<strong>PART 3 : ADVANCED INFLATION CONCEPTS</strong>",
+      "id": "wwyq035"
+    },
+    {
+      "id": "md90309",
+      "type": "numberedList",
+      "items": [
+        "<strong>PHILLIPS CURVE</strong>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "The Phillips Curve shows the inverse relationship between inflation and unemployment in the short run. When unemployment decreases, inflation tends to rise, and vice versa.",
+      "id": "kqoc7u2"
+    },
+    {
+      "type": "paragraph",
+      "content": "Short-Run Phillips Curve:",
+      "id": "m402nhe"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Downward sloping curve.<br/>• Low unemployment → High inflation.<br/>• High unemployment → Low inflation.",
+      "id": "z2dwnq1"
+    },
+    {
+      "type": "paragraph",
+      "content": "Long-Run Phillips Curve:",
+      "id": "md99nwp"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Headline Inflation",
+        "Core Inflation"
+      ],
+      "rows": [
+        [
+          "Scope",
+          "Includes all goods and services in the economy",
+          "Excludes volatile items from the basket"
+        ],
+        [
+          "Volatile Components",
+          "Includes Food and Fuel",
+          "Excludes Food and Fuel"
+        ]
+      ],
+      "id": "805igyn"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Vertical at Natural Rate of Unemployment.<br/>• No long-term trade-off between inflation and unemployment.",
+      "id": "jxwk5y8"
+    },
+    {
+      "id": "cpkzpvw",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Run</strong></p>",
+            "<p><strong>Relationship</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Short Run</p>",
+            "<p>Inverse relationship</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Long Run</p>",
+            "<p>No trade-off (Vertical curve)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i2dfqk0",
+      "type": "heading",
+      "level": 2,
+      "content": "2. STAGFLATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Stagflation is a situation where the economy experiences high inflation, high unemployment, and low economic growth simultaneously.",
+      "id": "zjhgw1l"
+    },
+    {
+      "type": "paragraph",
+      "content": "It contradicts the traditional Phillips Curve concept.",
+      "id": "a7d588p"
+    },
+    {
+      "type": "paragraph",
+      "content": "Major Cause:<br/>• Supply shocks (e.g., oil crisis of 1970s)<br/>• Increase in production costs<br/>",
+      "id": "hastxe4"
+    },
+    {
+      "id": "hgyp8ip",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Indicator</strong></p>",
+            "<p><strong>Condition in Stagflation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Inflation</p>",
+            "<p>High</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Unemployment</p>",
+            "<p>High</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mwz5md2",
+      "type": "heading",
+      "level": 2,
+      "content": "3. CORE vs HEADLINE INFLATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Headline Inflation includes all goods and services including food and fuel.<br/>Core Inflation excludes volatile items like food and fuel.",
+      "id": "gqot3m5"
+    },
+    {
+      "id": "4d70c1j",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>Headline Inflation</strong></p>",
+            "<p><strong>Core Inflation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Includes</p>",
+            "<p>All items</p>",
+            "<p>Excludes food &amp; fuel</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Volatility</p>",
+            "<p>Highly volatile</p>",
+            "<p>More stable</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fkrdhg6",
+      "type": "heading",
+      "level": 2,
+      "content": "4. DEMAND-SUPPLY GRAPH EXPLANATION OF INFLATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Demand-Pull Inflation (Graph Explanation):",
+      "id": "d2exnjl"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Core inflation excludes volatile items like food and fuel, while Headline inflation includes all items.",
+        "Demand-pull inflation shifts the Aggregate Demand (AD) curve right; Cost-push inflation shifts the Aggregate Supply (AS) curve left.",
+        "The Long-Run Phillips Curve is vertical at the Natural Rate of Unemployment.",
+        "During a recession, central banks lower interest rates and governments increase public spending to stimulate the economy."
+      ],
+      "id": "x2gjqyg"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Initial equilibrium at intersection of AD and AS.<br/>• Increase in Aggregate Demand shifts AD curve right.<br/>• New equilibrium at higher price level.<br/>",
+      "id": "ra6ggtd"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cost-Push Inflation (Graph Explanation):",
+      "id": "3fumxwi"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Increase in production cost shifts AS curve left.<br/>• Price level increases.<br/>• Output decreases.",
+      "id": "jpngdva"
+    },
+    {
+      "type": "paragraph",
+      "content": "Graph Axes Explanation:",
+      "id": "jvrivfi"
+    },
+    {
+      "type": "paragraph",
+      "content": "• X-axis → Output (GDP)<br/>• Y-axis → Price Level<br/>",
+      "id": "d8teg8j"
+    },
+    {
+      "id": "jcoxuh6",
+      "type": "heading",
+      "level": 2,
+      "content": "RRB HIGH-VALUE EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Phillips Curve – Short run trade-off exists.<br/>• Long-run Phillips Curve is vertical.<br/>• Stagflation = High inflation + High unemployment.<br/>• Core inflation excludes food &amp; fuel.<br/>• Demand-pull shifts AD right; Cost-push shifts AS left.",
+      "id": "5upmegu"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Inflation reduces purchasing power<br/>• CPI used for inflation targeting<br/>• Phases: Expansion → Peak → Recession → Depression<br/>• RBI controls inflation through monetary tools<br/>",
+      "id": "d4fvktl"
+    }
+  ],
+  "enriched": true
+}

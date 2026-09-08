@@ -10,43 +10,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Act</p>",
+            "<p>Competition Act, 2002</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Enforced</p>",
+            "<p>2003</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fully Operational</p>",
+            "<p>2009</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Type</p>",
+            "<p>Statutory + Quasi-Judicial Body</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Headquarters</p>",
+            "<p>New Delhi</p>"
           ]
         }
       ]
@@ -130,7 +130,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5tnpdho"
+      "id": "5tnpdho",
+      "content": "CCI replaced the Monopolies and Restrictive Trade Practices (MRTP) Commission after liberalization made the older law inadequate."
     }
   ],
   "enriched": true

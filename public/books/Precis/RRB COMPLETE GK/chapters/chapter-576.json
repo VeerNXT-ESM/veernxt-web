@@ -10,43 +10,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Established</p>",
+            "<p>1997</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Act</p>",
+            "<p>TRAI Act, 1997</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Type</p>",
+            "<p>Statutory Regulatory Body</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Headquarters</p>",
+            "<p>New Delhi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Objective</p>",
+            "<p>Regulate telecom services and protect consumers</p>"
           ]
         }
       ]
@@ -130,7 +130,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4z55wc1"
+      "id": "4z55wc1",
+      "content": "TRAI was created to separate regulatory functions from service providers and to encourage private participation in the telecom sector."
     }
   ],
   "enriched": true

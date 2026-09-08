@@ -48,11 +48,13 @@
     },
     {
       "type": "paragraph",
-      "id": "henk9j5"
+      "id": "henk9j5",
+      "content": "शब्दों का वह सार्थक समूह जो किसी पूर्ण भाव को व्यक्त करे, वाक्य कहलाता है। एक पूर्ण वाक्य में उद्देश्य (Subject) और विधेय (Predicate) : दोनों होते हैं।"
     },
     {
       "type": "paragraph",
-      "id": "7arqu1t"
+      "id": "7arqu1t",
+      "content": "उदाहरण: राम स्कूल जाता है। यहाँ 'राम' उद्देश्य है और 'स्कूल जाता है' विधेय है।"
     },
     {
       "id": "aoklxyt",
@@ -61,41 +63,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>वाक्य का भाग</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उदाहरण (राम रोटी खाता है)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>उद्देश्य (Subject)</p>",
+            "<p>जिसके बारे में कुछ कहा जाए</p>",
+            "<p>राम</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>विधेय (Predicate)</p>",
+            "<p>उद्देश्य के बारे में जो कहा जाए</p>",
+            "<p>रोटी खाता है</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>कर्म (Object)</p>",
+            "<p>जिस पर क्रिया का प्रभाव पड़े</p>",
+            "<p>रोटी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>क्रिया (Verb)</p>",
+            "<p>कार्य का बोध कराने वाला शब्द</p>",
+            "<p>खाता है</p>"
           ]
         }
       ]
@@ -108,7 +110,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0o3ehmu"
+      "id": "0o3ehmu",
+      "content": "अर्थ की दृष्टि से वाक्य के आठ भेद होते हैं:"
     },
     {
       "id": "ur39f7g",
@@ -117,73 +120,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>भेद</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>विधानवाचक</p>",
+            "<p>सामान्य कथन, सकारात्मक</p>",
+            "<p>राम विद्यालय जाता है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>निषेधवाचक</p>",
+            "<p>नकारात्मक कथन</p>",
+            "<p>राम विद्यालय नहीं जाता।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>प्रश्नवाचक</p>",
+            "<p>प्रश्न पूछा जाए</p>",
+            "<p>क्या राम विद्यालय जाता है?</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आज्ञावाचक</p>",
+            "<p>आज्ञा, आदेश, प्रार्थना</p>",
+            "<p>विद्यालय जाओ। / कृपया बैठिए।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>विस्मयवाचक</p>",
+            "<p>आश्चर्य, हर्ष, शोक आदि भाव</p>",
+            "<p>अरे! वह आ गया!</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>इच्छावाचक</p>",
+            "<p>इच्छा या आशीर्वाद का भाव</p>",
+            "<p>ईश्वर तुम्हें सुखी रखे।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>संदेहवाचक</p>",
+            "<p>संदेह या संभावना का भाव</p>",
+            "<p>शायद वह आज आए।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>संकेतवाचक</p>",
+            "<p>एक क्रिया दूसरी पर निर्भर हो</p>",
+            "<p>यदि वर्षा हो तो फसल होगी।</p>"
           ]
         }
       ]
@@ -196,7 +199,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yejyhmw"
+      "id": "yejyhmw",
+      "content": "रचना की दृष्टि से वाक्य के तीन भेद होते हैं। SSC JHT में इनसे प्रश्न अवश्य पूछे जाते हैं:"
     },
     {
       "id": "o4k01gm",
@@ -205,44 +209,45 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>भेद</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>पहचान</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>सरल वाक्य (Simple Sentence)</p>",
+            "<p>एक उद्देश्य, एक विधेय, एक मुख्य क्रिया</p>",
+            "<p>कोई उपवाक्य नहीं</p>",
+            "<p>राम खाना खाता है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>संयुक्त वाक्य (Compound Sentence)</p>",
+            "<p>दो या अधिक सरल वाक्य समुच्चयबोधक से जुड़े</p>",
+            "<p>और, परंतु, इसलिए, किंतु</p>",
+            "<p>राम आया और श्याम गया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मिश्र वाक्य (Complex Sentence)</p>",
+            "<p>एक मुख्य वाक्य + एक या अधिक आश्रित उपवाक्य</p>",
+            "<p>जो, कि, जब, यदि, क्योंकि</p>",
+            "<p>जो परिश्रम करता है वह सफल होता है।</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "e3mlgkg"
+      "id": "e3mlgkg",
+      "content": "<strong>सरल वाक्य से संयुक्त और मिश्र वाक्य बनाना</strong>"
     },
     {
       "id": "i4ivh3s",
@@ -251,33 +256,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>सरल वाक्य</strong></p>",
+            "<p><strong>संयुक्त वाक्य</strong></p>",
+            "<p><strong>मिश्र वाक्य</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वह मेहनती है। वह सफल हुआ।</p>",
+            "<p>वह मेहनती है इसलिए सफल हुआ।</p>",
+            "<p>चूँकि वह मेहनती है इसलिए वह सफल हुआ।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>राम आया। सीता गई।</p>",
+            "<p>राम आया और सीता गई।</p>",
+            "<p>जब राम आया तब सीता गई।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वर्षा हुई। फसल अच्छी हुई।</p>",
+            "<p>वर्षा हुई इसलिए फसल अच्छी हुई।</p>",
+            "<p>क्योंकि वर्षा हुई इसलिए फसल अच्छी हुई।</p>"
           ]
         }
       ]
@@ -290,7 +295,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wlgorfa"
+      "id": "wlgorfa",
+      "content": "वाक्य के वे भाग जो अपने आप में पूर्ण अर्थ न दें परंतु किसी मुख्य वाक्य से जुड़े हों, उपवाक्य कहलाते हैं।"
     },
     {
       "id": "slkizga",
@@ -299,33 +305,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>उपवाक्य का प्रकार</strong></p>",
+            "<p><strong>पहचान</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>संज्ञा उपवाक्य</p>",
+            "<p>'कि' से जुड़ा, कर्ता/कर्म का काम करे</p>",
+            "<p>मुझे पता है कि वह आएगा।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>विशेषण उपवाक्य</p>",
+            "<p>'जो' से जुड़ा, संज्ञा की विशेषता बताए</p>",
+            "<p>जो छात्र पढ़ता है वह पास होता है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>क्रियाविशेषण उपवाक्य</p>",
+            "<p>जब, जहाँ, क्योंकि, यदि से जुड़ा</p>",
+            "<p>जब वर्षा होगी तब जाऊँगा।</p>"
           ]
         }
       ]
@@ -338,7 +344,8 @@
     },
     {
       "type": "paragraph",
-      "id": "r0cedhi"
+      "id": "r0cedhi",
+      "content": "वाक्य लिखते समय उचित स्थान पर रुकने के संकेत के लिए विराम चिह्नों का प्रयोग किया जाता है। सही विराम चिह्न के बिना वाक्य का अर्थ बदल जाता है।"
     },
     {
       "id": "q634b32",
@@ -347,100 +354,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>विराम चिह्न</strong></p>",
+            "<p><strong>नाम</strong></p>",
+            "<p><strong>प्रयोग</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>।</p>",
+            "<p>पूर्ण विराम</p>",
+            "<p>वाक्य समाप्त होने पर</p>",
+            "<p>राम घर गया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>,</p>",
+            "<p>अल्पविराम</p>",
+            "<p>थोड़ी देर रुकने पर</p>",
+            "<p>राम, श्याम और मोहन आए।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>;</p>",
+            "<p>अर्धविराम</p>",
+            "<p>दो स्वतंत्र खंडों के बीच</p>",
+            "<p>वह आया; मैं गया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>:</p>",
+            "<p>विवरण चिह्न</p>",
+            "<p>विवरण या सूची से पहले</p>",
+            "<p>निम्नलिखित कारण हैं:</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>?</p>",
+            "<p>प्रश्नवाचक</p>",
+            "<p>प्रश्न के अंत में</p>",
+            "<p>तुम कहाँ गए थे?</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>!</p>",
+            "<p>विस्मयादिबोधक</p>",
+            "<p>भावना व्यक्त करने पर</p>",
+            "<p>वाह! क्या बात है!</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>\"\"</p>",
+            "<p>उद्धरण चिह्न</p>",
+            "<p>किसी के कथन को ज्यों-का-त्यों लिखने पर</p>",
+            "<p>गांधीजी ने कहा, \"सत्य ही ईश्वर है।\"</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>-</p>",
+            "<p>योजक चिह्न</p>",
+            "<p>दो शब्दों को जोड़ने पर</p>",
+            "<p>माता-पिता, राम-लक्ष्मण</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>( )</p>",
+            "<p>कोष्ठक</p>",
+            "<p>अतिरिक्त सूचना देने पर</p>",
+            "<p>हिंदी (राजभाषा) महत्त्वपूर्ण है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>...</p>",
+            "<p>लोप चिह्न</p>",
+            "<p>शब्द/वाक्य छोड़ने पर</p>",
+            "<p>जो गया सो...</p>"
           ]
         }
       ]
@@ -453,11 +460,13 @@
     },
     {
       "type": "paragraph",
-      "id": "b4pb2v4"
+      "id": "b4pb2v4",
+      "content": "वाक्य में होने वाली अशुद्धियों को पहचानकर शुद्ध करने की प्रक्रिया को वाक्य शुद्धि कहते हैं। SSC JHT में वाक्य शुद्धि से सर्वाधिक प्रश्न पूछे जाते हैं।"
     },
     {
       "type": "paragraph",
-      "id": "xr0v52r"
+      "id": "xr0v52r",
+      "content": "अशुद्धियाँ मुख्यतः निम्नलिखित प्रकार की होती हैं:"
     },
     {
       "id": "rq4phox",
@@ -466,73 +475,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>अशुद्धि का प्रकार</strong></p>",
+            "<p><strong>उदाहरण (अशुद्ध)</strong></p>",
+            "<p><strong>शुद्ध</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>लिंग संबंधी</p>",
+            "<p>यह लड़की बहुत होशियार है।</p>",
+            "<p>यह लड़की बहुत होशियार है। (ठीक है)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वचन संबंधी</p>",
+            "<p>सभी छात्र पढ़ता है।</p>",
+            "<p>सभी छात्र पढ़ते हैं।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>कारक संबंधी</p>",
+            "<p>मैंने घर जाना है।</p>",
+            "<p>मुझे घर जाना है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>क्रिया संबंधी</p>",
+            "<p>वह रोटी खाई।</p>",
+            "<p>उसने रोटी खाई।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>सर्वनाम संबंधी</p>",
+            "<p>वह मेरे को जानता है।</p>",
+            "<p>वह मुझे जानता है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>विशेषण संबंधी</p>",
+            "<p>यह बहुत ठंडी पानी है।</p>",
+            "<p>यह बहुत ठंडा पानी है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अनावश्यक शब्द</p>",
+            "<p>वह वापस लौट आया।</p>",
+            "<p>वह लौट आया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>शब्द क्रम</p>",
+            "<p>खाना राम ने खाया।</p>",
+            "<p>राम ने खाना खाया।</p>"
           ]
         }
       ]
@@ -550,7 +559,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jd3nl3z"
+      "id": "jd3nl3z",
+      "content": "हिंदी में लिंग की गलती सबसे अधिक होती है। क्रिया और विशेषण दोनों संज्ञा के लिंग के अनुसार बदलते हैं।"
     },
     {
       "id": "5kaqkle",
@@ -559,73 +569,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>अशुद्ध वाक्य</strong></p>",
+            "<p><strong>शुद्ध वाक्य</strong></p>",
+            "<p><strong>कारण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>यह पुस्तक बहुत अच्छा है।</p>",
+            "<p>यह पुस्तक बहुत अच्छी है।</p>",
+            "<p>पुस्तक : स्त्रीलिंग</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मेरी भाई आया।</p>",
+            "<p>मेरा भाई आया।</p>",
+            "<p>भाई : पुल्लिंग</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>गाय बहुत अच्छा दूध देती है।</p>",
+            "<p>गाय बहुत अच्छा दूध देती है।</p>",
+            "<p>दूध : पुल्लिंग (सही है)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>उसकी पैर में दर्द है।</p>",
+            "<p>उसके पैर में दर्द है।</p>",
+            "<p>पैर : पुल्लिंग</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>सड़क बहुत लंबा है।</p>",
+            "<p>सड़क बहुत लंबी है।</p>",
+            "<p>सड़क : स्त्रीलिंग</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>नदी का पानी साफ है।</p>",
+            "<p>नदी का पानी साफ है।</p>",
+            "<p>सही है</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>राम की माँ बहुत अच्छा इंसान है।</p>",
+            "<p>राम की माँ बहुत अच्छी इंसान हैं।</p>",
+            "<p>माँ : स्त्रीलिंग</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मेरी हाथ में किताब है।</p>",
+            "<p>मेरे हाथ में किताब है।</p>",
+            "<p>हाथ : पुल्लिंग</p>"
           ]
         }
       ]
@@ -643,57 +653,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>अशुद्ध वाक्य</strong></p>",
+            "<p><strong>शुद्ध वाक्य</strong></p>",
+            "<p><strong>कारण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>सभी विद्यार्थी पढ़ता है।</p>",
+            "<p>सभी विद्यार्थी पढ़ते हैं।</p>",
+            "<p>सभी : बहुवचन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>हम लोग घर जाता है।</p>",
+            "<p>हम लोग घर जाते हैं।</p>",
+            "<p>हम : बहुवचन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>आपके कपड़ा गीला है।</p>",
+            "<p>आपके कपड़े गीले हैं।</p>",
+            "<p>बहुवचन में कपड़े</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>तीन बच्चा खेल रहा है।</p>",
+            "<p>तीन बच्चे खेल रहे हैं।</p>",
+            "<p>तीन : बहुवचन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>दो आदमी आया।</p>",
+            "<p>दो आदमी आए।</p>",
+            "<p>दो : बहुवचन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अनेक छात्र परीक्षा दिया।</p>",
+            "<p>अनेक छात्रों ने परीक्षा दी।</p>",
+            "<p>अनेक : बहुवचन</p>"
           ]
         }
       ]
@@ -711,73 +721,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>अशुद्ध वाक्य</strong></p>",
+            "<p><strong>शुद्ध वाक्य</strong></p>",
+            "<p><strong>कारण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मैंने घर जाना है।</p>",
+            "<p>मुझे घर जाना है।</p>",
+            "<p>'जाना है' = विवशता/आवश्यकता → मुझे</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मुझको ठंड लग रही है।</p>",
+            "<p>मुझे ठंड लग रही है।</p>",
+            "<p>'मुझको' के स्थान पर 'मुझे' अधिक शुद्ध</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>राम के घर आया।</p>",
+            "<p>राम घर आया।</p>",
+            "<p>अनावश्यक 'के'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वह मेरे से बड़ा है।</p>",
+            "<p>वह मुझसे बड़ा है।</p>",
+            "<p>तुलना में 'मुझसे' शुद्ध</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मैं आपके साथ में जाऊँगा।</p>",
+            "<p>मैं आपके साथ जाऊँगा।</p>",
+            "<p>'साथ में' के बजाय 'साथ'</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>उसने मुझको मारा।</p>",
+            "<p>उसने मुझे मारा।</p>",
+            "<p>मुझे शुद्ध, मुझको अशुद्ध</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>बच्चों ने गाना गाई।</p>",
+            "<p>बच्चों ने गाना गाया।</p>",
+            "<p>गाना : पुल्लिंग → गाया</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>माँ ने बेटे को खाना खिलाई।</p>",
+            "<p>माँ ने बेटे को खाना खिलाया।</p>",
+            "<p>खाना : पुल्लिंग → खिलाया</p>"
           ]
         }
       ]
@@ -790,7 +800,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mmg8cse"
+      "id": "mmg8cse",
+      "content": "जब एक ही अर्थ वाले दो शब्द एक साथ प्रयुक्त हों तो यह अशुद्धि होती है। इसे पुनरुक्ति दोष कहते हैं।"
     },
     {
       "id": "cnspqp6",
@@ -799,73 +810,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>अशुद्ध प्रयोग</strong></p>",
+            "<p><strong>शुद्ध प्रयोग</strong></p>",
+            "<p><strong>क्यों अशुद्ध है</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वह वापस लौट आया।</p>",
+            "<p>वह लौट आया।</p>",
+            "<p>'वापस' और 'लौटना' दोनों का अर्थ एक ही है</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>सूर्य पूर्व दिशा में उगता है।</p>",
+            "<p>सूर्य पूर्व में उगता है।</p>",
+            "<p>'दिशा' अनावश्यक : पूर्व स्वयं दिशा है</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>वह अंदर भीतर गया।</p>",
+            "<p>वह अंदर गया।</p>",
+            "<p>'अंदर' और 'भीतर' समानार्थी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मेरे जीवन की आत्मकथा।</p>",
+            "<p>मेरी आत्मकथा।</p>",
+            "<p>'आत्म' = स्वयं, 'मेरे जीवन की' अनावश्यक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अपना खुद का घर।</p>",
+            "<p>अपना घर।</p>",
+            "<p>'अपना' और 'खुद का' दोनों निजवाचक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>भविष्य में आने वाला समय।</p>",
+            "<p>भविष्य।</p>",
+            "<p>भविष्य = आने वाला समय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>चारों तरफ से चारों ओर।</p>",
+            "<p>चारों ओर।</p>",
+            "<p>पुनरुक्ति</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मृत शव।</p>",
+            "<p>शव।</p>",
+            "<p>'मृत' और 'शव' दोनों मृत्यु बोधक</p>"
           ]
         }
       ]
@@ -896,7 +907,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wm1plie"
+      "id": "wm1plie",
+      "content": "हिंदी में शब्दों का सामान्य क्रम है: कर्ता → कर्म → क्रिया। इस क्रम में गड़बड़ी होने से वाक्य अटपटा लगता है।"
     },
     {
       "id": "rk9reba",
@@ -905,50 +917,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>अशुद्ध क्रम</strong></p>",
+            "<p><strong>शुद्ध क्रम</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>खाना राम ने खाया।</p>",
+            "<p>राम ने खाना खाया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पढ़ती किताब वह है।</p>",
+            "<p>वह किताब पढ़ती है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>गई सीता घर।</p>",
+            "<p>सीता घर गई।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>बहुत वह थका हुआ है।</p>",
+            "<p>वह बहुत थका हुआ है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>राम को मैंने देखा।</p>",
+            "<p>मैंने राम को देखा।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>कल मुझे जाना है दिल्ली।</p>",
+            "<p>मुझे कल दिल्ली जाना है।</p>"
           ]
         }
       ]
@@ -961,11 +973,13 @@
     },
     {
       "type": "paragraph",
-      "id": "sisofu7"
+      "id": "sisofu7",
+      "content": "नीचे दिए गए अशुद्ध वाक्यों को ध्यान से देखिए। शुद्ध रूप और कारण याद कीजिए : ये परीक्षा में बार-बार आते हैं:"
     },
     {
       "type": "paragraph",
-      "id": "8uynhxw"
+      "id": "8uynhxw",
+      "content": "<strong>(क) लिंग और वचन की अशुद्धियाँ</strong>"
     },
     {
       "id": "2gtj0c8",
@@ -974,96 +988,97 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>क्र.</strong></p>",
+            "<p><strong>अशुद्ध</strong></p>",
+            "<p><strong>शुद्ध</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1</p>",
+            "<p>यह काम बहुत अच्छी है।</p>",
+            "<p>यह काम बहुत अच्छा है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2</p>",
+            "<p>मेरी भाई दिल्ली गया।</p>",
+            "<p>मेरा भाई दिल्ली गया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>3</p>",
+            "<p>उसका आँख बहुत सुंदर है।</p>",
+            "<p>उसकी आँख बहुत सुंदर है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>4</p>",
+            "<p>सभी बच्चा मैदान में है।</p>",
+            "<p>सभी बच्चे मैदान में हैं।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>5</p>",
+            "<p>उसकी पुत्र परीक्षा दे रहा है।</p>",
+            "<p>उसका पुत्र परीक्षा दे रहा है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>6</p>",
+            "<p>मेरे हाथ में दर्द है।</p>",
+            "<p>मेरे हाथ में दर्द है।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>7</p>",
+            "<p>कई विद्यार्थी अनुपस्थित था।</p>",
+            "<p>कई विद्यार्थी अनुपस्थित थे।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>8</p>",
+            "<p>उसका बहन शहर गई।</p>",
+            "<p>उसकी बहन शहर गई।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>9</p>",
+            "<p>वह लड़की बहुत होशियार है।</p>",
+            "<p>वह लड़की बहुत होशियार है।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>10</p>",
+            "<p>तुम्हारी भाई कहाँ है?</p>",
+            "<p>तुम्हारा भाई कहाँ है?</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "yq3bv4p"
+      "id": "yq3bv4p",
+      "content": "<strong>(ख) कारक और क्रिया की अशुद्धियाँ</strong>"
     },
     {
       "id": "lkvv3d6",
@@ -1072,89 +1087,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>क्र.</strong></p>",
+            "<p><strong>अशुद्ध</strong></p>",
+            "<p><strong>शुद्ध</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>11</p>",
+            "<p>राम ने रोटी खाई।</p>",
+            "<p>राम ने रोटी खाई।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>12</p>",
+            "<p>सीता ने गाना गाई।</p>",
+            "<p>सीता ने गाना गाया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>13</p>",
+            "<p>बच्चे खेलते है।</p>",
+            "<p>बच्चे खेलते हैं।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>14</p>",
+            "<p>मैंने घर जाना है।</p>",
+            "<p>मुझे घर जाना है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>15</p>",
+            "<p>वह मेरे से बड़ा है।</p>",
+            "<p>वह मुझसे बड़ा है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>16</p>",
+            "<p>राम ने दूध पिया।</p>",
+            "<p>राम ने दूध पिया।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>17</p>",
+            "<p>उसने पत्र लिखी।</p>",
+            "<p>उसने पत्र लिखा।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>18</p>",
+            "<p>माँ ने बच्चे को सुलाई।</p>",
+            "<p>माँ ने बच्चे को सुलाया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>19</p>",
+            "<p>वह कल जाऊँगा था।</p>",
+            "<p>वह कल जाएगा था।  → वह कल जाएगा।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>20</p>",
+            "<p>उन्होंने पानी पिया।</p>",
+            "<p>उन्होंने पानी पिया।  (शुद्ध)</p>"
           ]
         }
       ]
@@ -1162,7 +1177,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ohr9fvj"
+      "id": "ohr9fvj",
+      "content": "<strong>(ग) पुनरुक्ति और अनावश्यक शब्द</strong>"
     },
     {
       "id": "igdlvpx",
@@ -1171,89 +1187,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>क्र.</strong></p>",
+            "<p><strong>अशुद्ध</strong></p>",
+            "<p><strong>शुद्ध</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>21</p>",
+            "<p>वह पुनः दोबारा आया।</p>",
+            "<p>वह दोबारा आया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>22</p>",
+            "<p>मृत शव मिला।</p>",
+            "<p>शव मिला।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>23</p>",
+            "<p>अपनी खुद की गलती।</p>",
+            "<p>अपनी गलती।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>24</p>",
+            "<p>सूर्य पूर्व दिशा में उगता है।</p>",
+            "<p>सूर्य पूर्व में उगता है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>25</p>",
+            "<p>वह वापस लौट गया।</p>",
+            "<p>वह लौट गया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>26</p>",
+            "<p>भविष्य में आने वाला समय।</p>",
+            "<p>भविष्य।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>27</p>",
+            "<p>वह आगे भविष्य में पढ़ेगा।</p>",
+            "<p>वह भविष्य में पढ़ेगा।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>28</p>",
+            "<p>नीचे तले बैठ जाओ।</p>",
+            "<p>नीचे बैठ जाओ।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>29</p>",
+            "<p>ऊपर छत पर जाओ।</p>",
+            "<p>छत पर जाओ।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>30</p>",
+            "<p>वह अंदर भीतर गया।</p>",
+            "<p>वह अंदर गया।</p>"
           ]
         }
       ]
@@ -1261,7 +1277,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "0xlvyk1"
+      "id": "0xlvyk1",
+      "content": "<strong>(घ) मिश्रित अशुद्धियाँ</strong>"
     },
     {
       "id": "afuwd50",
@@ -1270,96 +1287,97 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>क्र.</strong></p>",
+            "<p><strong>अशुद्ध</strong></p>",
+            "<p><strong>शुद्ध</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>31</p>",
+            "<p>मुझे प्यास लग रहा है।</p>",
+            "<p>मुझे प्यास लग रही है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>32</p>",
+            "<p>वह बहुत तेज़ दौड़ता है।</p>",
+            "<p>वह बहुत तेज़ दौड़ता है।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>33</p>",
+            "<p>मैं आपका आभारी हूँ।</p>",
+            "<p>मैं आपका आभारी हूँ।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>34</p>",
+            "<p>उसे बुखार आई है।</p>",
+            "<p>उसे बुखार आया है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>35</p>",
+            "<p>यह बात मेरे दिमाग में नहीं आती।</p>",
+            "<p>यह बात मेरे दिमाग में नहीं आती।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>36</p>",
+            "<p>राम और श्याम दोनों आया।</p>",
+            "<p>राम और श्याम दोनों आए।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>37</p>",
+            "<p>मैं हर रोज़ सुबह उठता हूँ।</p>",
+            "<p>मैं हर रोज़ सुबह उठता हूँ।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>38</p>",
+            "<p>उसने यह काम किया था।</p>",
+            "<p>उसने यह काम किया था।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>39</p>",
+            "<p>वह कहानी सुना रही थी।</p>",
+            "<p>वह कहानी सुना रही थी।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>40</p>",
+            "<p>मेरे को खाना नहीं मिला।</p>",
+            "<p>मुझे खाना नहीं मिला।</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "v4m5gvj"
+      "id": "v4m5gvj",
+      "content": "<strong>(ङ) परीक्षा में बार-बार आने वाली अशुद्धियाँ</strong>"
     },
     {
       "id": "s8iunq2",
@@ -1368,89 +1386,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>क्र.</strong></p>",
+            "<p><strong>अशुद्ध</strong></p>",
+            "<p><strong>शुद्ध</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>41</p>",
+            "<p>वह अनेकों बार आया।</p>",
+            "<p>वह अनेक बार आया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>42</p>",
+            "<p>आप क्या करता है?</p>",
+            "<p>आप क्या करते हैं?</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>43</p>",
+            "<p>कोई ने यह काम किया।</p>",
+            "<p>किसी ने यह काम किया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>44</p>",
+            "<p>वह मेरे को नहीं जानता।</p>",
+            "<p>वह मुझे नहीं जानता।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>45</p>",
+            "<p>उसने यह बात मुझसे कही।</p>",
+            "<p>उसने यह बात मुझसे कही।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>46</p>",
+            "<p>वह बहुत दिनों से बीमार पड़ा है।</p>",
+            "<p>वह बहुत दिनों से बीमार है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>47</p>",
+            "<p>गरीब जनता को कष्ट है।</p>",
+            "<p>गरीब जनता को कष्ट है।  (शुद्ध)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>48</p>",
+            "<p>प्रत्येक व्यक्ति को अपने-अपने कर्तव्य करने चाहिए।</p>",
+            "<p>प्रत्येक व्यक्ति को अपना कर्तव्य करना चाहिए।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>49</p>",
+            "<p>हमें सबको मिलकर काम करना चाहिए।</p>",
+            "<p>हमें मिलकर काम करना चाहिए।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>50</p>",
+            "<p>वह बोला कि मैं नहीं जाऊँगा।</p>",
+            "<p>उसने कहा कि वह नहीं जाएगा।</p>"
           ]
         }
       ]
@@ -1474,69 +1492,69 @@
       "id": "5b5wmrn",
       "type": "numberedList",
       "items": [
-        null
+        "निम्नलिखित वाक्यों का भेद बताइए (अर्थ के आधार पर):"
       ]
     },
     {
       "id": "sgz1mtq",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "शायद आज वर्षा हो।",
+        "ईश्वर तुम्हें सफलता दे।",
+        "यदि तुम पढ़ोगे तो पास होगे।",
+        "अरे! वह आ गया!"
       ]
     },
     {
       "id": "8aspq6d",
       "type": "numberedList",
       "items": [
-        null
+        "नीचे दिए गए वाक्यों को निर्देशानुसार बदलिए:"
       ]
     },
     {
       "id": "vr9eclu",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "राम विद्यालय जाता है। (प्रश्नवाचक में बदलिए)",
+        "क्या तुमने खाना खाया? (विधानवाचक में बदलिए)",
+        "वह आया और वह गया। (सरल वाक्य में बदलिए)"
       ]
     },
     {
       "id": "3jag0ln",
       "type": "numberedList",
       "items": [
-        null
+        "निम्नलिखित सरल वाक्यों को मिश्र वाक्य में बदलिए:"
       ]
     },
     {
       "id": "k207vam",
       "type": "list",
       "items": [
-        null,
-        null
+        "परिश्रमी व्यक्ति सफल होता है।",
+        "वर्षा के कारण फसल अच्छी हुई।"
       ]
     },
     {
       "id": "3kahu7e",
       "type": "numberedList",
       "items": [
-        null
+        "निम्नलिखित वाक्यों को शुद्ध कीजिए:"
       ]
     },
     {
       "id": "as2nfgt",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "वह वापस लौट आया।",
+        "सभी छात्र पढ़ता है।",
+        "मेरी भाई दिल्ली गया।",
+        "कोई ने दरवाज़ा खटखटाया।",
+        "उसने गाना गाई।",
+        "मैंने घर जाना है।",
+        "वह मेरे से छोटा है।",
+        "आप क्या करता है?"
       ]
     },
     {
@@ -1549,16 +1567,16 @@
       "id": "yg69fog",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "वाक्य में उद्देश्य और विधेय : दोनों होते हैं।",
+        "अर्थ के आधार पर वाक्य के आठ भेद : विधानवाचक, निषेधवाचक, प्रश्नवाचक, आज्ञावाचक, विस्मयवाचक, इच्छावाचक, संदेहवाचक, संकेतवाचक।",
+        "रचना के आधार पर तीन भेद : सरल, संयुक्त, मिश्र।",
+        "सबसे अधिक परीक्षा में आने वाली गलतियाँ : लिंग, वचन, कारक, पुनरुक्ति।",
+        "'अनेकों' नहीं : 'अनेक' शुद्ध है।",
+        "'कोई ने' नहीं : 'किसी ने' शुद्ध है।",
+        "'मेरे को' नहीं : 'मुझे' शुद्ध है।",
+        "'वापस लौटना' : पुनरुक्ति दोष; 'लौटना' अकेला शुद्ध है।",
+        "'मृत शव' : पुनरुक्ति दोष; केवल 'शव' शुद्ध।",
+        "क्रिया का लिंग-वचन सकर्मक भूतकाल में कर्म के अनुसार होता है।"
       ]
     }
   ],

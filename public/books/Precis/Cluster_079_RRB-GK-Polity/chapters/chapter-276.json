@@ -1,0 +1,111 @@
+{
+  "title": "Status and Establishment",
+  "order": 276,
+  "blocks": [
+    {
+      "id": "1zgknh3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Established</p>",
+            "<p>1963</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Legal Basis</p>",
+            "<p>Delhi Special Police Establishment (DSPE) Act, 1946</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type</p>",
+            "<p>Statutory Body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ministry</p>",
+            "<p>Ministry of Personnel, Public Grievances and Pensions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Control</p>",
+            "<p>Department of Personnel and Training (DoPT)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Headquarters</p>",
+            "<p>New Delhi</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "CBI is NOT mentioned in the Constitution.",
+      "id": "5l2y4gw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Status",
+          "value": "Non-Constitutional",
+          "icon": "info"
+        },
+        {
+          "label": "Governing Act",
+          "value": "DSPE Act",
+          "icon": "book"
+        },
+        {
+          "label": "Year of Act",
+          "value": "1946",
+          "icon": "calendar"
+        }
+      ],
+      "id": "0qof2ix"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Bureau of Investigation (CBI) is not a constitutional body as it is not mentioned in the Constitution.",
+        "CBI functions as a specialized investigating agency deriving its powers from an existing legislative act.",
+        "The legal foundation and statutory powers of the CBI originate from the Delhi Special Police Establishment (DSPE) Act, 1946."
+      ],
+      "id": "vbr41a1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently ask if CBI is a constitutional or statutory body created by its own separate act: remember it derives powers specifically from the DSPE Act, 1946.",
+        "Statements claiming CBI is mentioned in the Constitution are incorrect."
+      ],
+      "id": "21avxvt"
+    },
+    {
+      "type": "paragraph",
+      "content": "IMPORTANT: CBI is NOT mentioned in the Constitution. It derives its powers from the DSPE Act, 1946.",
+      "id": "bn6pza1"
+    }
+  ],
+  "enriched": true
+}

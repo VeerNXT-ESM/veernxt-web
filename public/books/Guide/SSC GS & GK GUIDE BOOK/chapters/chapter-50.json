@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "5vqrjyn"
+      "id": "5vqrjyn",
+      "content": "Motion is one of the most fundamental concepts in physics. A body is said to be in motion when its position changes with respect to time and a reference point. The study of motion is called mechanics, and the branch dealing only with motion without considering forces is known as kinematics."
     },
     {
       "type": "statStrip",
@@ -53,15 +54,18 @@
     },
     {
       "type": "paragraph",
-      "id": "idprycp"
+      "id": "idprycp",
+      "content": "• A body is said to be in motion if its position changes with time."
     },
     {
       "type": "paragraph",
-      "id": "fknd2g6"
+      "id": "fknd2g6",
+      "content": "• If the position of a body does not change with time, it is said to be at rest."
     },
     {
       "type": "paragraph",
-      "id": "zav32ph"
+      "id": "zav32ph",
+      "content": "• Motion is always described with respect to a reference point."
     },
     {
       "id": "qkkk2us",
@@ -76,43 +80,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Motion</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rectilinear Motion</p>",
+            "<p>Motion in a straight line</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Circular Motion</p>",
+            "<p>Motion along a circular path</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Periodic Motion</p>",
+            "<p>Motion that repeats at equal intervals of time</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Oscillatory Motion</p>",
+            "<p>To and fro motion about a mean position</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rotational Motion</p>",
+            "<p>Motion of a body around its axis</p>"
           ]
         }
       ]
@@ -130,25 +134,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Quantity</strong></p>",
+            "<p><strong>Meaning</strong></p>",
+            "<p><strong>Type</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Distance</p>",
+            "<p>Total path travelled by an object</p>",
+            "<p>Scalar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Displacement</p>",
+            "<p>Shortest distance between initial and final position</p>",
+            "<p>Vector</p>"
           ]
         }
       ]
@@ -166,25 +170,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Quantity</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Type</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Speed</p>",
+            "<p>Distance travelled per unit time</p>",
+            "<p>Scalar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Velocity</p>",
+            "<p>Displacement per unit time</p>",
+            "<p>Vector</p>"
           ]
         }
       ]
@@ -196,21 +200,19 @@
       "content": "5. Types of Speed"
     },
     {
-      "type": "pullQuote",
-      "content": "Distance and Displacement",
-      "id": "r8l3amb"
+      "type": "paragraph",
+      "id": "6xj3e2z",
+      "content": "• Uniform Speed – When an object covers equal distances in equal intervals of time."
     },
     {
       "type": "paragraph",
-      "id": "6xj3e2z"
+      "id": "17bmgfz",
+      "content": "• Non-uniform Speed – When an object covers unequal distances in equal intervals of time."
     },
     {
       "type": "paragraph",
-      "id": "17bmgfz"
-    },
-    {
-      "type": "paragraph",
-      "id": "zia823c"
+      "id": "zia823c",
+      "content": "• Average Speed – Total distance divided by total time."
     },
     {
       "id": "t62ys50",
@@ -220,15 +222,18 @@
     },
     {
       "type": "paragraph",
-      "id": "2pnw6lm"
+      "id": "2pnw6lm",
+      "content": "• Acceleration is the rate of change of velocity with time."
     },
     {
       "type": "paragraph",
-      "id": "tirea18"
+      "id": "tirea18",
+      "content": "• It can occur due to change in speed or direction."
     },
     {
       "type": "paragraph",
-      "id": "d6no57s"
+      "id": "d6no57s",
+      "content": "• If velocity decreases, the acceleration is called retardation."
     },
     {
       "type": "comparisonTable",
@@ -264,19 +269,23 @@
     },
     {
       "type": "paragraph",
-      "id": "qn6wtc9"
+      "id": "qn6wtc9",
+      "content": "For uniformly accelerated motion:"
     },
     {
       "type": "paragraph",
-      "id": "4h7t8o2"
+      "id": "4h7t8o2",
+      "content": "• v = u + at"
     },
     {
       "type": "paragraph",
-      "id": "1glft8n"
+      "id": "1glft8n",
+      "content": "• s = ut + ½ at²"
     },
     {
       "type": "paragraph",
-      "id": "kwpfcph"
+      "id": "kwpfcph",
+      "content": "• v² = u² + 2as"
     },
     {
       "id": "k1utdbr",
@@ -286,15 +295,18 @@
     },
     {
       "type": "paragraph",
-      "id": "ebzycle"
+      "id": "ebzycle",
+      "content": "• Distance–Time Graph shows how distance changes with time."
     },
     {
       "type": "paragraph",
-      "id": "dgen0fu"
+      "id": "dgen0fu",
+      "content": "• Velocity–Time Graph shows how velocity changes with time."
     },
     {
       "type": "paragraph",
-      "id": "r7cx5ia"
+      "id": "r7cx5ia",
+      "content": "• Slope of distance-time graph gives speed."
     },
     {
       "type": "examAlert",
@@ -308,7 +320,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dtachvq"
+      "id": "dtachvq",
+      "content": "• Area under velocity-time graph gives displacement."
     },
     {
       "id": "qupsasm",
@@ -318,19 +331,23 @@
     },
     {
       "type": "paragraph",
-      "id": "ioo14jc"
+      "id": "ioo14jc",
+      "content": "• Motion is defined as change in position with time."
     },
     {
       "type": "paragraph",
-      "id": "dl7a5gg"
+      "id": "dl7a5gg",
+      "content": "• Speed is a scalar quantity while velocity is a vector quantity."
     },
     {
       "type": "paragraph",
-      "id": "ah5htwj"
+      "id": "ah5htwj",
+      "content": "• Acceleration is the rate of change of velocity."
     },
     {
       "type": "paragraph",
-      "id": "v1h9uef"
+      "id": "v1h9uef",
+      "content": "• Equations of motion are valid only for uniform acceleration."
     }
   ],
   "enriched": true

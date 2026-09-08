@@ -1,0 +1,124 @@
+{
+  "title": "Composition of PFRDA",
+  "order": 355,
+  "blocks": [
+    {
+      "id": "e4ffaxl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Member</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>Appointed by Central Government</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Members</p>",
+            "<p>Maximum of 6 members</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Full-time Members</p>",
+            "<p>At least 3</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Authority shall consist of a Chairperson and not more than six members, to be appointed by the Central Government, out of whom at least three shall be Whole-Time Members.",
+      "id": "2lw2cb2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Chairperson",
+        "Whole-Time Members"
+      ],
+      "rows": [
+        [
+          "Maximum Age Limit",
+          "65 Years",
+          "62 Years"
+        ],
+        [
+          "Tenure",
+          "5 Years",
+          "5 Years"
+        ],
+        [
+          "Mandatory Count",
+          "1",
+          "Minimum 3"
+        ],
+        [
+          "Re-appointment Eligibility",
+          "Eligible",
+          "Eligible"
+        ]
+      ],
+      "id": "h2c3rmj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Max Members",
+          "value": "6 Members",
+          "icon": "users"
+        },
+        {
+          "label": "Whole-Time Members",
+          "value": "At least 3",
+          "icon": "check"
+        },
+        {
+          "label": "Chairperson Age Limit",
+          "value": "65 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Member Age Limit",
+          "value": "62 Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "uerdzk3"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested in exams: The maximum age limit for the Chairperson is 65 years, whereas for Members it is 62 years.",
+        "Note the minimum requirement: At least 3 Whole-Time Members are mandatory in the composition.",
+        "All members, including the Chairperson, are appointed directly by the Central Government."
+      ],
+      "id": "9h22kcg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Pension Fund Regulatory and Development Authority (PFRDA) consists of a Chairperson and not more than six members appointed by the Central Government.",
+        "Out of the maximum six members, at least three must be Whole-Time Members.",
+        "The Chairperson holds office for a term of 5 years or until attaining the age of 65 years, whichever is earlier, and is eligible for re-appointment.",
+        "Whole-Time and Part-Time members hold office for a term of 5 years or until reaching the age of 62 years, whichever is earlier.",
+        "The Central Government reserves the authority to remove any member from office under specific conditions specified in the PFRDA Act."
+      ],
+      "id": "pcjaab4"
+    }
+  ],
+  "enriched": true
+}

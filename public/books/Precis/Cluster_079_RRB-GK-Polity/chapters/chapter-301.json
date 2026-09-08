@@ -1,0 +1,132 @@
+{
+  "title": "Powers of Lokpal",
+  "order": 301,
+  "blocks": [
+    {
+      "id": "g6to8xc",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Power</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Order Investigation</p>",
+            "<p>Can direct CBI or its own wing</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Search &amp; Seizure</p>",
+            "<p>Authorize raids</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Attachment of Property</p>",
+            "<p>Confiscate corrupt assets</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Recommend Suspension</p>",
+            "<p>Suggest suspension of officials</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>File Cases</p>",
+            "<p>Initiate prosecution</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Lokpal shall have powers of superintendence over, and direction to, any investigating agency including the Delhi Special Police Establishment in respect of the cases referred by it.",
+      "id": "awuzopf"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Preliminary Inquiry",
+        "Investigation"
+      ],
+      "rows": [
+        [
+          "Primary Purpose",
+          "Determine if a prima facie case exists",
+          "Gather comprehensive evidence for prosecution"
+        ],
+        [
+          "Standard Timeframe",
+          "60 days (extendable by 60 days)",
+          "6 months (extendable upon written request)"
+        ],
+        [
+          "Executing Body",
+          "Inquiry Wing of Lokpal or any agency",
+          "Investigating agency (e.g., CBI) under Lokpal supervision"
+        ]
+      ],
+      "id": "eqtqwjw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "Lokpal Act, 2013",
+          "icon": "book"
+        },
+        {
+          "label": "Inquiry Time Limit",
+          "value": "60 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Status Powers",
+          "value": "Civil Court",
+          "icon": "check"
+        },
+        {
+          "label": "Jurisdiction",
+          "value": "PM & Group A-D",
+          "icon": "info"
+        }
+      ],
+      "id": "nr70lpy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Inquiries against the Prime Minister cannot be initiated if allegations relate to international relations, security, public order, atomic energy, or space.",
+        "Prior sanction from the government is NOT required for the Lokpal to initiate an inquiry or direct prosecution against a public servant.",
+        "A preliminary inquiry by the Lokpal must ordinarily be completed within 60 days, extendable by another 60 days for valid reasons."
+      ],
+      "id": "qrtfcz6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Lokpal has jurisdiction to inquire into allegations of corruption against the Prime Minister, Union Ministers, Members of Parliament, and Group A, B, C, and D officers.",
+        "It possesses the statutory powers of a Civil Court under the Code of Civil Procedure, 1908, including summoning witnesses and demanding document production.",
+        "The Lokpal exercises powers of superintendence and direction over any investigating agency, including the CBI, for cases referred by it.",
+        "It has the authority to order search and seizure operations as well as the provisional attachment of assets acquired through corrupt means."
+      ],
+      "id": "ri9fl47"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,95 @@
+{
+  "title": "Chapter 1: Universe and Solar System",
+  "order": 1,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "The Big Bang Theory explains the origin and expansion of the universe from a single primordial singularity.",
+      "id": "a8i45hm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Terrestrial Planets (Inner)",
+        "Jovian Planets (Outer)"
+      ],
+      "rows": [
+        [
+          "Composition",
+          "Dense, rocky, and metallic materials",
+          "Gases (Hydrogen, Helium) and ice"
+        ],
+        [
+          "Density",
+          "High density",
+          "Low density"
+        ],
+        [
+          "Satellites & Rings",
+          "Few or no moons; no ring systems",
+          "Numerous moons; extensive ring systems"
+        ],
+        [
+          "Location",
+          "Between the Sun and Asteroid Belt",
+          "Beyond the Asteroid Belt"
+        ],
+        [
+          "Examples",
+          "Mercury, Venus, Earth, Mars",
+          "Jupiter, Saturn, Uranus, Neptune"
+        ]
+      ],
+      "id": "62idw5o"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Age of Universe",
+          "value": "13.8 Billion Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Solar System Planets",
+          "value": "8 Planets",
+          "icon": "check"
+        },
+        {
+          "label": "Sun Light to Earth",
+          "value": "8m 20s",
+          "icon": "clock"
+        },
+        {
+          "label": "Home Galaxy",
+          "value": "Milky Way",
+          "icon": "book"
+        }
+      ],
+      "id": "ujhxxt8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Venus and Uranus rotate from East to West (retrograde rotation), whereas all other planets rotate from West to East.",
+        "Jupiter has the shortest day of all planets in the solar system, completing one full rotation in approximately 9 hours and 55 minutes.",
+        "Light from the Sun takes approximately 8 minutes and 20 seconds (500 seconds) to reach Earth."
+      ],
+      "id": "dfced5t"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Big Bang Theory, proposed by Georges Lemaître, is the leading scientific explanation for the origin and expansion of the universe around 13.8 billion years ago.",
+        "The Solar System consists of eight planets categorized into Terrestrial (Mercury, Venus, Earth, Mars) and Jovian (Jupiter, Saturn, Uranus, Neptune) planets.",
+        "Venus is referred to as Earth's Twin due to its similar size, mass, and density, and it is the hottest planet in the Solar System.",
+        "The Asteroid Belt lies between the orbits of Mars and Jupiter, separating the inner terrestrial planets from the outer gas giants.",
+        "In 2006, the International Astronomical Union (IAU) reclassified Pluto as a dwarf planet, establishing three clear criteria for full planet status."
+      ],
+      "id": "2ctw4c8"
+    }
+  ],
+  "enriched": true
+}

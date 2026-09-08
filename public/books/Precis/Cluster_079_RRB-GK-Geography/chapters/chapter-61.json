@@ -1,0 +1,149 @@
+{
+  "title": "9. Layers Based on Physical Properties",
+  "order": 61,
+  "blocks": [
+    {
+      "id": "7v8ofop",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Layer</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lithosphere</p>",
+            "<p>Rigid outer layer</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Asthenosphere</p>",
+            "<p>Semi-molten; plastic</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mesosphere</p>",
+            "<p>Lower mantle</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Outer Core</p>",
+            "<p>Liquid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Inner Core</p>",
+            "<p>Solid</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The asthenosphere is the main source of magma that finds its way to the surface during volcanic eruptions.",
+      "id": "4juhmf7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Layer",
+        "Physical State",
+        "Depth Range",
+        "Key Characteristic"
+      ],
+      "rows": [
+        [
+          "Lithosphere",
+          "Rigid / Solid",
+          "0 – 100 km",
+          "Comprises crust and uppermost solid mantle"
+        ],
+        [
+          "Asthenosphere",
+          "Semi-fluid / Plastic",
+          "100 – 400 km",
+          "Weak zone; facilitates tectonic plate movement"
+        ],
+        [
+          "Mesosphere",
+          "Solid",
+          "400 – 2,900 km",
+          "Lower mantle under high pressure"
+        ],
+        [
+          "Outer Core",
+          "Liquid",
+          "2,900 – 5,150 km",
+          "Iron-nickel liquid layer; generates magnetic field"
+        ],
+        [
+          "Inner Core",
+          "Solid",
+          "5,150 – 6,371 km",
+          "Solid sphere due to intense pressure at Earth's center"
+        ]
+      ],
+      "id": "xgtzz5t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Lithosphere Depth",
+          "value": "0-100 km",
+          "icon": "info"
+        },
+        {
+          "label": "Asthenosphere State",
+          "value": "Semi-Fluid",
+          "icon": "check"
+        },
+        {
+          "label": "Outer Core State",
+          "value": "Liquid",
+          "icon": "clock"
+        },
+        {
+          "label": "Center Depth",
+          "value": "6,371 km",
+          "icon": "award"
+        }
+      ],
+      "id": "91mpjgk"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Asthenosphere is semi-fluid/ductile and is the main source of magma during volcanic eruptions.",
+        "Outer Core is liquid, whereas Inner Core is solid due to high pressure despite extreme temperatures.",
+        "The Earth's geodynamo (magnetic field) is driven by convection currents in the liquid Outer Core."
+      ],
+      "id": "q0zm452"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Based on physical properties, Earth is divided into the Lithosphere, Asthenosphere, Mesosphere, Outer Core, and Inner Core.",
+        "The Lithosphere is the rigid, brittle outer shell that includes the crust and uppermost mantle.",
+        "The Asthenosphere is a ductile, plastic layer in the upper mantle responsible for plate tectonic movement.",
+        "The Mesosphere forms the lower mantle, maintaining a solid state due to high confining pressure.",
+        "The Outer Core is liquid and generates Earth's magnetic field, while the Inner Core is solid due to extreme pressure."
+      ],
+      "id": "znp6dt9"
+    }
+  ],
+  "enriched": true
+}

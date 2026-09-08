@@ -1,0 +1,135 @@
+{
+  "title": "NGT vs Central Pollution Control Board (CPCB)",
+  "order": 394,
+  "blocks": [
+    {
+      "id": "10muntr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>NGT</strong></p>",
+            "<p><strong>CPCB</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Quasi-judicial tribunal</p>",
+            "<p>Regulatory authority</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Provides judgments</p>",
+            "<p>Monitors pollution levels</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Awards compensation</p>",
+            "<p>Advises government</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Hears environmental cases</p>",
+            "<p>Implements pollution control measures</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The National Green Tribunal was established for effective and expeditious disposal of cases relating to environmental protection and conservation of forests.",
+      "id": "zeqokm1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "National Green Tribunal (NGT)",
+        "Central Pollution Control Board (CPCB)"
+      ],
+      "rows": [
+        [
+          "Nature of Body",
+          "Specialized Judicial / Quasi-Judicial Body",
+          "Statutory Executive / Administrative Body"
+        ],
+        [
+          "Governing Act",
+          "National Green Tribunal Act, 2010",
+          "Water (Prevention & Control of Pollution) Act, 1974"
+        ],
+        [
+          "Primary Function",
+          "Adjudicates environmental disputes and awards compensation",
+          "Monitors pollution levels, sets standards, and provides technical guidance"
+        ],
+        [
+          "Binding Authority",
+          "Passes legally binding judicial orders and penalties",
+          "Issues executive directions to industries and SPCBs"
+        ],
+        [
+          "Appellate Authority",
+          "Appeals go directly to the Supreme Court of India",
+          "Orders can be challenged before appellate authorities or the NGT"
+        ]
+      ],
+      "id": "bcpux93"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "CPCB Formation",
+          "value": "1974",
+          "icon": "calendar"
+        },
+        {
+          "label": "NGT Act",
+          "value": "2010",
+          "icon": "book"
+        },
+        {
+          "label": "NGT Disposal Limit",
+          "value": "6 Months",
+          "icon": "clock"
+        },
+        {
+          "label": "Supreme Court Appeal",
+          "value": "90 Days",
+          "icon": "award"
+        }
+      ],
+      "id": "45jaqyd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CPCB was established under the Water Act 1974, but was later entrusted with powers under the Air Act 1981.",
+        "India is only the third country in the world (after Australia and New Zealand) to establish a dedicated environmental tribunal like NGT.",
+        "Appeals against NGT orders lie directly to the Supreme Court of India within 90 days."
+      ],
+      "id": "ojiuh4z"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "NGT is a specialized judicial body established under the National Green Tribunal Act, 2010, whereas CPCB is a statutory executive body established under the Water (Prevention and Control of Pollution) Act, 1974.",
+        "NGT has powers to adjudicate environmental disputes, enforce legal rights, and award relief and compensation for damages.",
+        "CPCB functions as a technical and administrative organization that monitors air and water quality, sets environmental standards, and coordinates State Pollution Control Boards (SPCBs).",
+        "NGT is not bound by the Code of Civil Procedure, 1908, but is guided by principles of natural justice."
+      ],
+      "id": "uocgerv"
+    }
+  ],
+  "enriched": true
+}

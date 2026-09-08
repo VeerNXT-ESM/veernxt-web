@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "7rrxi2w"
+      "id": "7rrxi2w",
+      "content": "Ohm’s Law is one of the most fundamental principles in electrical engineering. It explains the relationship between voltage, current, and resistance in an electrical circuit. Understanding Ohm’s Law helps technicians calculate electrical quantities and troubleshoot circuits."
     },
     {
       "id": "1gebh9l",
@@ -59,16 +60,19 @@
     },
     {
       "type": "paragraph",
-      "id": "wi84blv"
+      "id": "wi84blv",
+      "content": "Ohm’s Law states that the current flowing through a conductor is directly proportional to the voltage applied across it and inversely proportional to the resistance of the conductor, provided temperature remains constant."
     },
     {
       "type": "paragraph",
-      "id": "3ftjdsv"
+      "id": "3ftjdsv",
+      "content": "Mathematical Formula:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2ofsr2o"
+      "id": "2ofsr2o",
+      "content": "V = I × R"
     },
     {
       "id": "sbzuiat",
@@ -77,29 +81,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>V</p>",
+            "<p>Voltage (Volt)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>I</p>",
+            "<p>Current (Ampere)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>R</p>",
+            "<p>Resistance (Ohm)</p>"
           ]
         }
       ]
@@ -112,11 +116,13 @@
     },
     {
       "type": "paragraph",
-      "id": "5dsil6q"
+      "id": "5dsil6q",
+      "content": "The Ohm's Law triangle helps to remember formulas:<br></br>V at the top, I and R at the bottom.<br></br>Cover the quantity you want to find."
     },
     {
       "type": "paragraph",
-      "id": "z9z0hgn"
+      "id": "z9z0hgn",
+      "content": "Derived formulas:"
     },
     {
       "type": "pullQuote",
@@ -126,12 +132,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "3zq7fwu"
+      "id": "3zq7fwu",
+      "content": "I = V / R"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q3fu2w2"
+      "id": "q3fu2w2",
+      "content": "R = V / I"
     },
     {
       "id": "do43hnl",
@@ -141,7 +149,8 @@
     },
     {
       "type": "paragraph",
-      "id": "w2l8cdx"
+      "id": "w2l8cdx",
+      "content": "Resistance is the opposition offered by a material to the flow of electric current."
     },
     {
       "id": "0tfyjed",
@@ -150,36 +159,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Effect</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Length of conductor</p>",
+            "<p>Resistance increases with length</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Area of cross-section</p>",
+            "<p>Resistance decreases with larger area</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Material type</p>",
+            "<p>Different materials have different resistances</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Temperature</p>",
+            "<p>Resistance generally increases with temperature</p>"
           ]
         }
       ]
@@ -228,49 +237,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Instrument</strong></p>",
+            "<p><strong>Quantity Measured</strong></p>",
+            "<p><strong>Unit</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ammeter</p>",
+            "<p>Electric Current</p>",
+            "<p>Ampere</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Voltmeter</p>",
+            "<p>Voltage</p>",
+            "<p>Volt</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ohmmeter</p>",
+            "<p>Resistance</p>",
+            "<p>Ohm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Multimeter</p>",
+            "<p>Multiple quantities</p>",
+            "<p>Various units</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wattmeter</p>",
+            "<p>Electrical Power</p>",
+            "<p>Watt</p>"
           ]
         }
       ]
@@ -288,29 +297,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Instrument</strong></p>",
+            "<p><strong>Connection Method</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ammeter</p>",
+            "<p>Connected in series with the circuit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Voltmeter</p>",
+            "<p>Connected in parallel with the circuit</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ohmmeter</p>",
+            "<p>Connected across component when circuit is off</p>"
           ]
         }
       ]
@@ -323,19 +332,23 @@
     },
     {
       "type": "paragraph",
-      "id": "dfexjdk"
+      "id": "dfexjdk",
+      "content": "Example 1:"
     },
     {
       "type": "paragraph",
-      "id": "eoxag50"
+      "id": "eoxag50",
+      "content": "A circuit has voltage 12 V and resistance 4 Ω.<br></br>Find current.<br></br>I = V / R = 12 / 4 = 3 A"
     },
     {
       "type": "paragraph",
-      "id": "8y9lvfy"
+      "id": "8y9lvfy",
+      "content": "Example 2:"
     },
     {
       "type": "paragraph",
-      "id": "cltnktj"
+      "id": "cltnktj",
+      "content": "A circuit carries current 2 A and resistance is 5 Ω.<br></br>Find voltage.<br></br>V = I × R = 2 × 5 = 10 V"
     },
     {
       "type": "examAlert",
@@ -355,7 +368,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "k4c5hp0"
+      "id": "k4c5hp0",
+      "content": "P = V × I"
     },
     {
       "id": "r0z7fxx",
@@ -364,29 +378,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Formula</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>P = V × I</p>",
+            "<p>Basic power formula</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>P = I²R</p>",
+            "<p>Power using current</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>P = V²/R</p>",
+            "<p>Power using voltage</p>"
           ]
         }
       ]
@@ -401,12 +415,12 @@
       "id": "izisfz2",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Ohm’s Law formula: V = I × R",
+        "Ammeter measures current",
+        "Voltmeter measures voltage",
+        "Ohmmeter measures resistance",
+        "Ammeter connected in series",
+        "Voltmeter connected in parallel"
       ]
     }
   ],

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "zmu854v"
+      "id": "zmu854v",
+      "content": "The Solar System is a gravitationally bound system centered around the Sun."
     },
     {
       "type": "statStrip",
@@ -34,61 +35,56 @@
       "id": "fkxc5tx"
     },
     {
-      "type": "pullQuote",
-      "content": "Order of Planets from the Sun (MEMORY FAVORITE)",
-      "id": "51g7ar9"
-    },
-    {
       "id": "hp19mnx",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Key Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sun</p>",
+            "<p>Contains 99.86% of total solar system mass</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Planets</p>",
+            "<p>8 planets revolve in elliptical orbits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dwarf Planets</p>",
+            "<p>Pluto, Eris, Haumea, Makemake, Ceres</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Asteroids</p>",
+            "<p>Mostly between Mars and Jupiter</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Comets</p>",
+            "<p>Develop tails when near Sun</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Meteoroids</p>",
+            "<p>Small rocky fragments</p>"
           ]
         }
       ]
@@ -119,11 +115,13 @@
     },
     {
       "type": "paragraph",
-      "id": "74jjynp"
+      "id": "74jjynp",
+      "content": "Mercury → Venus → Earth → Mars → Jupiter → Saturn → Uranus → Neptune"
     },
     {
       "type": "paragraph",
-      "id": "h39g3xw"
+      "id": "h39g3xw",
+      "content": "Mnemonic: <strong><em>My Very Educated Mother Just Served Us Noodles</em></strong>"
     }
   ],
   "enriched": true

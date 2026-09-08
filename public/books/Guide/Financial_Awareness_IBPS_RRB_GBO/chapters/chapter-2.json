@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vp753nb"
+      "id": "vp753nb",
+      "content": "Monetary Policy refers to the actions taken by RBI to control money supply and interest rates to achieve macroeconomic goals such as controlling inflation, fostering growth, maintaining exchange rate stability, and ensuring financial stability."
     },
     {
       "id": "mvj5l0s",
@@ -59,7 +60,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fzpxziq"
+      "id": "fzpxziq",
+      "content": "The MPC was constituted under Section 45ZB of the RBI Act, 1934 (amended 2016). It has 6 members: 3 from RBI (including the Governor who chairs it) and 3 external members appointed by the Government."
     },
     {
       "type": "pullQuote",
@@ -68,7 +70,8 @@
     },
     {
       "type": "paragraph",
-      "id": "k0gidyg"
+      "id": "k0gidyg",
+      "content": "<strong>Note: </strong><em>MPC meets at least 4 times a year. Decisions taken by majority vote; Governor has casting vote in case of a tie.</em>"
     },
     {
       "id": "kofog44",
@@ -109,80 +112,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Instrument</strong></p>",
+            "<p><strong>Current Rate (Indicative)</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Repo Rate</p>",
+            "<p>~6.50%</p>",
+            "<p>Rate at which RBI lends short-term funds to banks against govt securities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Reverse Repo Rate</p>",
+            "<p>~3.35%</p>",
+            "<p>Rate at which RBI borrows from banks; floor of LAF corridor</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Marginal Standing Facility (MSF)</p>",
+            "<p>~6.75%</p>",
+            "<p>Emergency borrowing window; 1% above repo; banks pledge SLR securities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bank Rate</p>",
+            "<p>~6.75%</p>",
+            "<p>Rate for long-term borrowing; penal rate for shortfalls; linked to MSF</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cash Reserve Ratio (CRR)</p>",
+            "<p>~4%</p>",
+            "<p>% of NDTL (Net Demand and Time Liabilities) parked with RBI; earns no interest</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Statutory Liquidity Ratio (SLR)</p>",
+            "<p>~18%</p>",
+            "<p>% of NDTL maintained in gold/govt securities/cash by banks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Open Market Operations (OMO)</p>",
+            "<p>Variable</p>",
+            "<p>RBI buys/sells govt securities to inject/abGBOrb liquidity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Market Stabilisation Scheme (MSS)</p>",
+            "<p>Variable</p>",
+            "<p>Special bonds to sterilise excess liquidity from foreign inflows</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "4p4ctc6"
+      "id": "4p4ctc6",
+      "content": "<strong>Note: </strong><em>CRR and SLR are quantitative tools. Repo, Reverse Repo, Bank Rate are qualitative tools. Both affect credit availability.</em>"
     },
     {
       "id": "ki7vh9h",
@@ -192,7 +196,8 @@
     },
     {
       "type": "paragraph",
-      "id": "79rzjsn"
+      "id": "79rzjsn",
+      "content": "LAF is an RBI tool to manage day-to-day liquidity in the banking system. It operates through overnight Repo (injection) and Reverse Repo (abGBOrption) auctions. Banks can borrow overnight against G-secs."
     },
     {
       "type": "examAlert",
@@ -211,7 +216,8 @@
     },
     {
       "type": "paragraph",
-      "id": "nnfnyjx"
+      "id": "nnfnyjx",
+      "content": "India adopted Flexible Inflation Targeting (FIT) in 2016. The target is CPI inflation of 4% with a tolerance band of +/- 2% (i.e., 2%–6%). If inflation stays above/below target for 3 consecutive quarters, RBI must explain and submit remedial plan to Govt."
     },
     {
       "id": "md9kjtf",
@@ -220,46 +226,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Index</strong></p>",
+            "<p><strong>Base Year</strong></p>",
+            "<p><strong>Compiled By</strong></p>",
+            "<p><strong>Measures</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>CPI (Consumer Price Index)</p>",
+            "<p>2012</p>",
+            "<p>MoSPI (NGBO)</p>",
+            "<p>Retail prices; food, fuel, housing, misc.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>WPI (Wholesale Price Index)</p>",
+            "<p>2011-12</p>",
+            "<p>DPIIT, Ministry of Commerce</p>",
+            "<p>Wholesale/factory gate prices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Core Inflation</p>",
+            "<p>:</p>",
+            "<p>RBI / Analysts</p>",
+            "<p>CPI excluding food and fuel; structural inflation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>GDP Deflator</p>",
+            "<p>:</p>",
+            "<p>CGBO/NGBO</p>",
+            "<p>Broadest measure; ratio of nominal to real GDP</p>"
           ]
         }
       ]

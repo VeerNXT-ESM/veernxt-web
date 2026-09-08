@@ -1,0 +1,136 @@
+{
+  "title": "Constitutional Status",
+  "order": 222,
+  "blocks": [
+    {
+      "id": "1lu51nz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article</p>",
+            "<p>Article 148</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Part of Constitution</p>",
+            "<p>Part V – Union</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nature</p>",
+            "<p>Independent Constitutional Authority</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appointed By</p>",
+            "<p>President of India</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Role</p>",
+            "<p>Guardian of the Public Purse</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Constitutional bodies derive their power directly from the Constitution of India, making any structural modification subject to a constitutional amendment under Article 368.",
+      "id": "90i5k73"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constitutional Bodies",
+        "Statutory Bodies",
+        "Executive Bodies"
+      ],
+      "rows": [
+        [
+          "Source of Power",
+          "Constitution of India",
+          "Act of Parliament or State Legislature",
+          "Executive Order / Cabinet Resolution"
+        ],
+        [
+          "Modification Method",
+          "Constitutional Amendment (Art. 368)",
+          "Simple Legislative Amendment",
+          "Executive Notification"
+        ],
+        [
+          "Examples",
+          "CAG (Art. 148), UPSC (Art. 315)",
+          "NHRC, NGT, SEBI",
+          "NITI Aayog, Law Commission"
+        ]
+      ],
+      "id": "qyoobyd"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Election Commission",
+          "value": "Article 324",
+          "icon": "check"
+        },
+        {
+          "label": "CAG of India",
+          "value": "Article 148",
+          "icon": "book"
+        },
+        {
+          "label": "Finance Commission",
+          "value": "Article 280",
+          "icon": "calendar"
+        },
+        {
+          "label": "UPSC & SPSC",
+          "value": "Article 315",
+          "icon": "award"
+        }
+      ],
+      "id": "watpofc"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between Statutory Bodies (e.g., NHRC, SEBI) and Constitutional Bodies (e.g., CAG, UPSC) for prelims questions.",
+        "Remember that National Commission for Backward Classes (NCBC) gained constitutional status via the 102nd Constitutional Amendment Act, 2018 (Article 338B).",
+        "NITI Aayog is neither a statutory nor a constitutional body; it was established via an executive resolution."
+      ],
+      "id": "jscc53b"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional bodies derive their powers, duties, and existence directly from the Constitution of India.",
+        "Any amendment to the structure or powers of a constitutional body requires a constitutional amendment under Article 368.",
+        "Key examples include the Election Commission (Article 324), Comptroller and Auditor General (Article 148), and Finance Commission (Article 280).",
+        "Non-constitutional bodies are classified into statutory bodies (created by an Act of Parliament) and executive bodies (created by executive resolution)."
+      ],
+      "id": "qbxcfay"
+    }
+  ],
+  "enriched": true
+}

@@ -50,7 +50,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yll4n9k"
+      "id": "yll4n9k",
+      "content": "A Database Management System (DBMS) is software that manages databases — organises, stores, retrieves, and manipulates data. It provides an abstraction layer between data and application programs."
     },
     {
       "id": "y2hd65r",
@@ -59,57 +60,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Data</p>",
+            "<p>Raw facts without context</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Information</p>",
+            "<p>Processed data with context and meaning</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Database</p>",
+            "<p>Organised collection of interrelated data</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>DBMS</p>",
+            "<p>Software to manage databases (e.g., MySQL, Oracle, PostgreSQL)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Schema</p>",
+            "<p>Logical structure/blueprint of database; DDL defines schema</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Instance</p>",
+            "<p>Actual data in database at a given moment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Data Independence</p>",
+            "<p>Physical independence: change storage without changing schema; Logical independence: change schema without changing applications</p>"
           ]
         }
       ]
@@ -127,33 +128,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Level</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Who Uses It</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>External Level (View Level)</p>",
+            "<p>Individual user views; each user sees only relevant data; multiple views possible</p>",
+            "<p>End users, application programmers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Conceptual Level (Logical Level)</p>",
+            "<p>Complete logical structure of entire database; entities, attributes, relationships, constraints</p>",
+            "<p>DBA (Database Administrator)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Internal Level (Physical Level)</p>",
+            "<p>How data is physically stored; file organisation, indexes, access paths</p>",
+            "<p>System designers, storage engineers</p>"
           ]
         }
       ]
@@ -171,81 +172,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>ER Component</strong></p>",
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Entity</p>",
+            "<p>Rectangle</p>",
+            "<p>Real-world object (Student, Employee, Product)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Weak Entity</p>",
+            "<p>Double Rectangle</p>",
+            "<p>Depends on strong entity; no key of its own (Order-Item depends on Order)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Attribute</p>",
+            "<p>Ellipse</p>",
+            "<p>Property of entity (Name, Age, Salary)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Key Attribute</p>",
+            "<p>Underlined Ellipse</p>",
+            "<p>Unique identifier for entity (Rollno, EmployeeID)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Multi-valued Attribute</p>",
+            "<p>Double Ellipse</p>",
+            "<p>Can have multiple values (Phone numbers, Skills)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Composite Attribute</p>",
+            "<p>Ellipse with sub-ellipses</p>",
+            "<p>Can be divided (Full Name = First + Last)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Derived Attribute</p>",
+            "<p>Dashed Ellipse</p>",
+            "<p>Computed from another attribute (Age from DOB)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Relationship</p>",
+            "<p>Diamond</p>",
+            "<p>Association between entities (Enrolls, Works_In)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Identifying Relationship</p>",
+            "<p>Double Diamond</p>",
+            "<p>Connects weak entity to its owner strong entity</p>"
           ]
         }
       ]
@@ -263,41 +264,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Cardinality</strong></p>",
+            "<p><strong>Meaning</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>One-to-One (1:1)</p>",
+            "<p>One entity in A relates to exactly one in B</p>",
+            "<p>Person ↔ Passport; Employee ↔ CompanyCar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>One-to-Many (1:N)</p>",
+            "<p>One entity in A relates to many in B</p>",
+            "<p>Customer → Orders; Department → Employees</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Many-to-One (N:1)</p>",
+            "<p>Many in A relate to one in B</p>",
+            "<p>Students → Department</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Many-to-Many (M:N)</p>",
+            "<p>Many in A relate to many in B</p>",
+            "<p>Students ↔ Courses; Employees ↔ Projects</p>"
           ]
         }
       ]
@@ -326,57 +327,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Key Type</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Super Key</p>",
+            "<p>Any set of attributes that uniquely identifies a tuple</p>",
+            "<p>(StudentID), (StudentID, Name), (Email)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Candidate Key</p>",
+            "<p>Minimal super key; no proper subset is a super key</p>",
+            "<p>StudentID, Email (both can uniquely identify)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Primary Key (PK)</p>",
+            "<p>Chosen candidate key; not NULL; unique</p>",
+            "<p>StudentID (chosen as PK)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alternate Key</p>",
+            "<p>Candidate keys not chosen as PK</p>",
+            "<p>Email (if StudentID is PK)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Foreign Key (FK)</p>",
+            "<p>Attribute referencing PK of another table; enforces referential integrity</p>",
+            "<p>CourseID in Enrollment references Course(CourseID)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Composite Key</p>",
+            "<p>Primary key made of multiple attributes</p>",
+            "<p>(StudentID, CourseID) in Enrollment table</p>"
           ]
         }
       ]
@@ -394,49 +395,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Commands</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DDL (Data Definition Language)</p>",
+            "<p>CREATE, ALTER, DROP, TRUNCATE, RENAME</p>",
+            "<p>Define and modify database schema/structure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DML (Data Manipulation Language)</p>",
+            "<p>SELECT, INSERT, UPDATE, DELETE</p>",
+            "<p>Manipulate data within tables</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DCL (Data Control Language)</p>",
+            "<p>GRANT, REVOKE</p>",
+            "<p>Control access permissions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>TCL (Transaction Control Language)</p>",
+            "<p>COMMIT, ROLLBACK, SAVEPOINT, SET TRANSACTION</p>",
+            "<p>Manage transactions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DQL (Data Query Language)</p>",
+            "<p>SELECT</p>",
+            "<p>Query and retrieve data (often grouped under DML)</p>"
           ]
         }
       ]
@@ -485,137 +486,137 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>SQL Element</strong></p>",
+            "<p><strong>Syntax/Description</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SELECT DISTINCT</p>",
+            "<p>Returns unique values only</p>",
+            "<p>Eliminates duplicate rows in result</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>WHERE</p>",
+            "<p>Filter rows based on condition</p>",
+            "<p>Applied before aggregation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>GROUP BY</p>",
+            "<p>Group rows sharing a value; used with aggregate functions</p>",
+            "<p>Must appear after WHERE, before HAVING</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>HAVING</p>",
+            "<p>Filter groups based on aggregate condition</p>",
+            "<p>Like WHERE but for groups; after GROUP BY</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ORDER BY</p>",
+            "<p>Sort results ASC (default) or DESC</p>",
+            "<p>Applied last; can use column alias</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>JOIN (INNER)</p>",
+            "<p>Returns rows with matching values in both tables</p>",
+            "<p>Most common join type</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>LEFT OUTER JOIN</p>",
+            "<p>All rows from left + matching from right; NULL if no match</p>",
+            "<p>Includes unmatched left rows</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RIGHT OUTER JOIN</p>",
+            "<p>All rows from right + matching from left</p>",
+            "<p>Includes unmatched right rows</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>FULL OUTER JOIN</p>",
+            "<p>All rows from both; NULL where no match</p>",
+            "<p>Combines LEFT and RIGHT joins</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CROSS JOIN</p>",
+            "<p>Cartesian product of both tables</p>",
+            "<p>n×m rows; no ON condition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SELF JOIN</p>",
+            "<p>Table joined with itself</p>",
+            "<p>Hierarchies, org charts, finding pairs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Subquery</p>",
+            "<p>Query within query; correlated vs non-correlated</p>",
+            "<p>Can be in SELECT, FROM, WHERE, HAVING</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>EXISTS / NOT EXISTS</p>",
+            "<p>Test if subquery returns any rows</p>",
+            "<p>Often more efficient than IN for large datasets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>UNION / UNION ALL</p>",
+            "<p>Combine result sets; UNION removes duplicates</p>",
+            "<p>UNION ALL is faster; keeps duplicates</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Aggregate Functions</p>",
+            "<p>COUNT, SUM, AVG, MIN, MAX</p>",
+            "<p>Operate on sets of rows; ignore NULLs (except COUNT(*))</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Window Functions</p>",
+            "<p>ROW_NUMBER(), RANK(), DENSE_RANK(), LEAD(), LAG(), PARTITION BY</p>",
+            "<p>Analytics; do not collapse rows like GROUP BY</p>"
           ]
         }
       ]
@@ -628,7 +629,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ksl1nqy"
+      "id": "ksl1nqy",
+      "content": "Normalisation is the process of organising a database to reduce data redundancy and improve data integrity. It involves decomposing tables to satisfy specific normal forms while preserving dependencies."
     },
     {
       "id": "9d2go1m",
@@ -637,64 +639,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Normal Form</strong></p>",
+            "<p><strong>Condition to Satisfy</strong></p>",
+            "<p><strong>What it Eliminates</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1NF (First Normal Form)</p>",
+            "<p>Every attribute has atomic (indivisible) values; no repeating groups; has primary key</p>",
+            "<p>Multi-valued attributes, nested tables</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2NF (Second Normal Form)</p>",
+            "<p>In 1NF + no partial dependency (non-key attribute depends on whole composite PK)</p>",
+            "<p>Partial functional dependencies; redundancy due to composite keys</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>3NF (Third Normal Form)</p>",
+            "<p>In 2NF + no transitive dependency (non-key attribute depends on another non-key attribute)</p>",
+            "<p>Transitive dependencies; update anomalies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>BCNF (Boyce-Codd NF)</p>",
+            "<p>In 3NF + for every functional dependency X→Y, X must be a super key</p>",
+            "<p>More stricter than 3NF; handles certain anomalies 3NF misses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>4NF (Fourth Normal Form)</p>",
+            "<p>In BCNF + no multi-valued dependency</p>",
+            "<p>Independent multi-valued facts stored separately</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>5NF (Fifth Normal Form)</p>",
+            "<p>In 4NF + no join dependency that isn't implied by candidate keys</p>",
+            "<p>Redundancy from join dependencies</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "1t61tx5"
+      "id": "1t61tx5",
+      "content": "<strong>Note: </strong><em>For exams: Master 1NF through BCNF. The most common exam questions involve identifying and eliminating partial and transitive dependencies.</em>"
     },
     {
       "id": "h67swm0",
@@ -719,41 +722,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>ACID Property</strong></p>",
+            "<p><strong>Meaning</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Atomicity</p>",
+            "<p>Transaction is all-or-nothing; either all operations succeed or none</p>",
+            "<p>Bank transfer: debit + credit must both succeed or both rollback</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Consistency</p>",
+            "<p>Transaction takes DB from one valid state to another; integrity constraints preserved</p>",
+            "<p>Account balance cannot go negative after transfer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Isolation</p>",
+            "<p>Concurrent transactions execute as if serial; intermediate states invisible to others</p>",
+            "<p>Two users booking last seat; one must wait or fail</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Durability</p>",
+            "<p>Committed transactions persist even after system failure; write-ahead logging (WAL)</p>",
+            "<p>After commit, data survives power failure</p>"
           ]
         }
       ]
@@ -771,41 +774,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Problem</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Solution</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lost Update</p>",
+            "<p>Two transactions read same value; both update; one update lost</p>",
+            "<p>Locking, timestamp ordering</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dirty Read</p>",
+            "<p>Transaction reads uncommitted data written by another</p>",
+            "<p>ISOLATION levels; READ COMMITTED</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Non-Repeatable Read</p>",
+            "<p>Same query returns different values within same transaction</p>",
+            "<p>REPEATABLE READ isolation level</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Phantom Read</p>",
+            "<p>New rows appear in repeated query within same transaction</p>",
+            "<p>SERIALIZABLE isolation level</p>"
           ]
         }
       ]
@@ -823,73 +826,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Index Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Use Case</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Primary Index</p>",
+            "<p>Built on primary key; data file ordered on key</p>",
+            "<p>Fast access by primary key; clustered</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Secondary Index</p>",
+            "<p>Built on non-key attribute; data not ordered on this attribute</p>",
+            "<p>Access by frequently queried non-key columns</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Clustered Index</p>",
+            "<p>Physical order of data matches index order; one per table</p>",
+            "<p>Range queries; data locality</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Non-Clustered Index</p>",
+            "<p>Logical order only; separate structure; multiple per table</p>",
+            "<p>Point queries; high-selectivity columns</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>B+ Tree Index</p>",
+            "<p>Most common; all data in leaf nodes; leaves linked</p>",
+            "<p>Range queries, equality queries — databases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hash Index</p>",
+            "<p>Hash function maps key to bucket; O(1) lookup</p>",
+            "<p>Equality queries only; no range queries</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bitmap Index</p>",
+            "<p>Bit vector per value; AND/OR operations fast</p>",
+            "<p>Low-cardinality columns (gender, status); data warehouses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Full-Text Index</p>",
+            "<p>Inverted index for text search; tokenisation</p>",
+            "<p>Search engines; document databases</p>"
           ]
         }
       ]

@@ -48,81 +48,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type of Company</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Key Feature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Private Limited Company</p>",
+            "<p>Restrict transfer of shares; limit members to 200; cannot invite public subscriptions</p>",
+            "<p>Name ends with 'Private Limited'; min 2 and max 200 members</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Public Limited Company</p>",
+            "<p>Shares freely transferable; can invite public to subscribe shares/debentures</p>",
+            "<p>Name ends with 'Limited'; min 7 members; min 3 directors</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>One Person Company (OPC)</p>",
+            "<p>Single member; single director; nominee required; relaxed compliance</p>",
+            "<p>New under Companies Act 2013; min Rs.1 lakh authorised capital</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Producer Company</p>",
+            "<p>Members are primary producers (farmers, artisans); deals in produce</p>",
+            "<p>Agricultural producer companies; minimum 10 producer individuals or 2 producer institutions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Section 8 Company</p>",
+            "<p>Company with charitable objects; no profit distribution; operates with licence from Central Govt</p>",
+            "<p>NGOs, foundations, clubs with charitable purpose</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Holding Company</p>",
+            "<p>Company that holds majority shares (&gt;50%) of another company</p>",
+            "<p>Controls subsidiary; consolidation of accounts required</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Subsidiary Company</p>",
+            "<p>Company whose majority shares held by holding company or controlled by holding company</p>",
+            "<p>At least 51% shares held by holding or by composition of Board</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Associate Company</p>",
+            "<p>Company over which another has significant influence (20% or more of voting power) but not subsidiary</p>",
+            "<p>Section 2(6) of Companies Act 2013; equity method of accounting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nidhi Company</p>",
+            "<p>Cultivate habit of saving among members; borrow from and lend to members only</p>",
+            "<p>Mutual benefit society; registered as public limited; exempted from many provisions</p>"
           ]
         }
       ]
@@ -145,49 +145,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Document / Concept</strong></p>",
+            "<p><strong>Purpose</strong></p>",
+            "<p><strong>Key Contents</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Memorandum of Association (MoA)</p>",
+            "<p>Charter document; defines scope and objects; company cannot act beyond MoA (ultra vires)</p>",
+            "<p>Name clause; Registered Office clause; Objects clause; Liability clause; Capital clause; Association clause</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Articles of Association (AoA)</p>",
+            "<p>Internal rules and regulations; governs internal management</p>",
+            "<p>Allotment of shares; calls on shares; transfer; transmission; voting rights; board meetings; dividends</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Prospectus</p>",
+            "<p>Invitation to public to subscribe shares/debentures; detailed disclosures required</p>",
+            "<p>Risk factors; financials; promoter background; objects of issue; abridged prospectus for retail investors</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Certificate of Incorporation</p>",
+            "<p>Issued by ROC (Registrar of Companies) on registration; company becomes legal entity</p>",
+            "<p>Conclusive evidence of incorporation; company can commence business</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Certificate of Commencement</p>",
+            "<p>Required for public company to start business; not needed after 2018 amendment (SPICe+)</p>",
+            "<p>Abolished for most practical purposes by Companies (Amendment) Act 2019</p>"
           ]
         }
       ]
@@ -205,89 +205,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Provision</strong></p>",
+            "<p><strong>Section</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Minimum Directors</p>",
+            "<p>149</p>",
+            "<p>Private: 2 directors; Public: 3 directors; OPC: 1 director; maximum 15 directors (more by special resolution)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Independent Director</p>",
+            "<p>149(6)</p>",
+            "<p>No relationship with company; not related to promoter; professional expertise; listed companies need at least 1/3 independent directors</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Woman Director</p>",
+            "<p>149(1)</p>",
+            "<p>Listed companies and certain prescribed public companies must have at least one woman director</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Board Meetings</p>",
+            "<p>173</p>",
+            "<p>Minimum 4 meetings per year; gap between two consecutive meetings not more than 120 days</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Quorum</p>",
+            "<p>174</p>",
+            "<p>1/3 of total directors or 2 directors, whichever is higher; minimum quorum 2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Director's Liability</p>",
+            "<p>166, 167</p>",
+            "<p>Duties: act in good faith; not conflict of interest; not achieve undue gain; exercise due diligence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Disqualification of Director</p>",
+            "<p>164</p>",
+            "<p>Convicted of offence involving moral turpitude; declared insolvent; unsound mind; debarred by court; company in default in filing returns for 3 years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>KMP (Key Managerial Personnel)</p>",
+            "<p>203</p>",
+            "<p>CEO/MD, CFO, CS (Company Secretary) and whole-time director are KMPs; mandatory for listed and large public companies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Loans to Directors</p>",
+            "<p>185</p>",
+            "<p>Prohibited; company cannot give loans to directors or their relatives except in certain circumstances</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Related Party Transactions</p>",
+            "<p>188</p>",
+            "<p>Board approval required for transactions with related parties above threshold; shareholder approval for larger transactions</p>"
           ]
         }
       ]
@@ -314,33 +314,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Procedure</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Compulsory Winding Up by Tribunal</p>",
+            "<p>NCLT orders winding up on petition; grounds: special resolution, fraud, just and equitable, failure to file annual returns, regulatory order</p>",
+            "<p>Petition to NCLT; Provisional Liquidator; Official Liquidator; distribution of assets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Voluntary Winding Up</p>",
+            "<p>Members or creditors voluntarily wind up without NCLT order</p>",
+            "<p>Special resolution; declaration of solvency; winding up by members if solvent, by creditors if insolvent</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IBC (now applicable)</p>",
+            "<p>IBC 2016 now primary insolvency framework; NCLT adjudicates; Liquidation under IBC Chapter III</p>",
+            "<p>CIRP first; if fails — Liquidation; Official Liquidator or IP as Liquidator</p>"
           ]
         }
       ]

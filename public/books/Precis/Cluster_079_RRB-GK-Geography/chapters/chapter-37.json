@@ -1,0 +1,66 @@
+{
+  "title": "Why Longitudes are Needed",
+  "order": 37,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• To calculate local time.",
+      "id": "hknecy4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Uses",
+          "value": "3 Functions",
+          "icon": "check"
+        },
+        {
+          "label": "Time Functions",
+          "value": "Local & Standard",
+          "icon": "clock"
+        },
+        {
+          "label": "Core Purpose",
+          "value": "Time Differences",
+          "icon": "info"
+        }
+      ],
+      "id": "s0cycbq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "To determine time differences between places.",
+      "id": "treyogt"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Longitudes are essential for calculating local time across different regions.",
+        "They allow for the precise determination of time differences between distinct geographical locations.",
+        "Longitudes serve as the foundational system to establish standard time zones."
+      ],
+      "id": "uq6pkaj"
+    },
+    {
+      "type": "paragraph",
+      "content": "• To determine time differences between places.",
+      "id": "acp65vf"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions frequently test the primary function of longitudes, which is time calculation rather than temperature or climate zone determination.",
+        "Standard time in any region or country is established using specific reference longitudes."
+      ],
+      "id": "t3rz4do"
+    },
+    {
+      "type": "paragraph",
+      "content": "• To establish standard time.",
+      "id": "aifp2j8"
+    }
+  ],
+  "enriched": true
+}

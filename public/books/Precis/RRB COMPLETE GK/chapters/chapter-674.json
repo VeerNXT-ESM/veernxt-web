@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "webukp8"
+      "id": "webukp8",
+      "content": "The Armed Forces Tribunal was established under the Armed Forces Tribunal Act, 2007 to adjudicate disputes and complaints related to service matters of armed forces personnel."
     },
     {
       "type": "pullQuote",
@@ -92,36 +93,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Act</p>",
+            "<p>Armed Forces Tribunal Act, 2007</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Operational</p>",
+            "<p>2009</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Jurisdiction</p>",
+            "<p>Army, Navy, Air Force personnel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Appeal</p>",
+            "<p>Supreme Court</p>"
           ]
         }
       ]

@@ -1,0 +1,77 @@
+{
+  "title": "9. Jurisdiction",
+  "order": 406,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "CIC handles complaints and second appeals related to Central Public Authorities. State-level matters are handled by State Information Commissions.",
+      "id": "0o9o31m"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CIC handles complaints and second appeals related to Central Public Authorities.",
+      "id": "8kng3dn"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Information Commission (CIC)",
+        "State Information Commission (SIC)"
+      ],
+      "rows": [
+        [
+          "Jurisdiction",
+          "Central Public Authorities",
+          "State Public Authorities"
+        ],
+        [
+          "Key Functions",
+          "Complaints and Second Appeals at the Central Level",
+          "Complaints and Second Appeals at the State Level"
+        ]
+      ],
+      "id": "tklhxb8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Central Authority",
+          "value": "CIC",
+          "icon": "info"
+        },
+        {
+          "label": "State Authority",
+          "value": "State Commissions",
+          "icon": "info"
+        },
+        {
+          "label": "Key Function",
+          "value": "Second Appeals",
+          "icon": "check"
+        }
+      ],
+      "id": "nwuv8wa"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Second appeals for Central Public Authorities lie with the Central Information Commission (CIC), not State Commissions.",
+        "State Information Commissions exclusively handle state-level matters and cannot adjudicate on Central Public Authorities."
+      ],
+      "id": "jxqs0vg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Information Commission (CIC) exercises jurisdiction over complaints and second appeals involving Central Public Authorities.",
+        "Matters pertaining to state-level public authorities fall under the purview of respective State Information Commissions.",
+        "Jurisdiction is functionally divided between Central and State levels based on the governing public authority."
+      ],
+      "id": "77gcnkq"
+    }
+  ],
+  "enriched": true
+}

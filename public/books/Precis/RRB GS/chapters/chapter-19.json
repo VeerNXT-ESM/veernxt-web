@@ -47,7 +47,8 @@
     },
     {
       "type": "paragraph",
-      "id": "d7613ad"
+      "id": "d7613ad",
+      "content": "Biology is divided into several branches for systematic study of living organisms. Each branch focuses on specific aspects such as plants, animals, genes, microorganisms, environment and applied sciences."
     },
     {
       "id": "9d18d6g",
@@ -57,7 +58,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bshpya2"
+      "id": "bshpya2",
+      "content": "Genetics is the branch of biology that deals with heredity and variation. It studies genes, DNA, chromosomes and inheritance patterns."
     },
     {
       "id": "p70exj1",
@@ -67,7 +69,8 @@
     },
     {
       "type": "paragraph",
-      "id": "755cn8u"
+      "id": "755cn8u",
+      "content": "Botany is the study of plants including their structure, classification, physiology and economic importance."
     },
     {
       "id": "fdw40vp",
@@ -77,7 +80,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xff1eq3"
+      "id": "xff1eq3",
+      "content": "Zoology deals with the study of animals including their anatomy, physiology, classification and behavior."
     },
     {
       "id": "owlp10u",
@@ -87,7 +91,8 @@
     },
     {
       "type": "paragraph",
-      "id": "eisq8h8"
+      "id": "eisq8h8",
+      "content": "Microbiology is the study of microscopic organisms such as bacteria, viruses, fungi and protozoa."
     },
     {
       "id": "20qvi5q",
@@ -97,7 +102,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3btmuix"
+      "id": "3btmuix",
+      "content": "Biotechnology involves the use of living organisms or biological systems to develop useful products like vaccines, GM crops and medicines."
     },
     {
       "id": "bxdwpfl",
@@ -107,7 +113,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mz2pqg7"
+      "id": "mz2pqg7",
+      "content": "Ecology studies the relationship between organisms and their environment."
     },
     {
       "id": "z6dgazd",
@@ -116,82 +123,77 @@
       "content": "Mega Comparison Table – Important Branches of Biology"
     },
     {
-      "type": "pullQuote",
-      "content": "Mega Comparison Table – Important Branches of Biology",
-      "id": "w6e8gso"
-    },
-    {
       "id": "htnd5be",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Branch</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Main Focus</strong></p>",
+            "<p><strong>Applications</strong></p>",
+            "<p><strong>Related Scientist</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Genetics</p>",
+            "<p>Study of heredity</p>",
+            "<p>Genes &amp; DNA</p>",
+            "<p>Genetic engineering</p>",
+            "<p>Gregor Mendel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Botany</p>",
+            "<p>Study of plants</p>",
+            "<p>Plant structure</p>",
+            "<p>Agriculture</p>",
+            "<p>Theophrastus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Zoology</p>",
+            "<p>Study of animals</p>",
+            "<p>Animal classification</p>",
+            "<p>Veterinary science</p>",
+            "<p>Aristotle</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Microbiology</p>",
+            "<p>Study of microbes</p>",
+            "<p>Bacteria &amp; viruses</p>",
+            "<p>Medicine</p>",
+            "<p>Louis Pasteur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Biotechnology</p>",
+            "<p>Applied biology</p>",
+            "<p>Genetic modification</p>",
+            "<p>Vaccine production</p>",
+            "<p>Kary Mullis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Ecology</p>",
+            "<p>Study of environment</p>",
+            "<p>Ecosystems</p>",
+            "<p>Conservation</p>",
+            "<p>Ernst Haeckel</p>"
           ]
         }
       ]
@@ -204,27 +206,33 @@
     },
     {
       "type": "paragraph",
-      "id": "v5yax53"
+      "id": "v5yax53",
+      "content": "Anatomy – Study of internal structure."
     },
     {
       "type": "paragraph",
-      "id": "ozy9yut"
+      "id": "ozy9yut",
+      "content": "Physiology – Study of body functions."
     },
     {
       "type": "paragraph",
-      "id": "s36uf3u"
+      "id": "s36uf3u",
+      "content": "Cytology – Study of cells."
     },
     {
       "type": "paragraph",
-      "id": "3ck5av2"
+      "id": "3ck5av2",
+      "content": "Histology – Study of tissues."
     },
     {
       "type": "paragraph",
-      "id": "m91w6kk"
+      "id": "m91w6kk",
+      "content": "Embryology – Study of embryo development."
     },
     {
       "type": "paragraph",
-      "id": "1oex0e7"
+      "id": "1oex0e7",
+      "content": "Taxonomy – Study of classification."
     },
     {
       "type": "comparisonTable",
@@ -254,31 +262,38 @@
     },
     {
       "type": "paragraph",
-      "id": "0fo910t"
+      "id": "0fo910t",
+      "content": "Palaeontology – Study of fossils."
     },
     {
       "type": "paragraph",
-      "id": "sjkzsrn"
+      "id": "sjkzsrn",
+      "content": "Immunology – Study of immune system."
     },
     {
       "type": "paragraph",
-      "id": "vt49opt"
+      "id": "vt49opt",
+      "content": "Parasitology – Study of parasites."
     },
     {
       "type": "paragraph",
-      "id": "2b5q77k"
+      "id": "2b5q77k",
+      "content": "Entomology – Study of insects."
     },
     {
       "type": "paragraph",
-      "id": "uqvmdyb"
+      "id": "uqvmdyb",
+      "content": "Ornithology – Study of birds."
     },
     {
       "type": "paragraph",
-      "id": "83y1j9t"
+      "id": "83y1j9t",
+      "content": "Ichthyology – Study of fishes."
     },
     {
       "type": "paragraph",
-      "id": "ar4beks"
+      "id": "ar4beks",
+      "content": "Herpetology – Study of reptiles and amphibians."
     },
     {
       "id": "uzqjha2",
@@ -293,73 +308,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Branch</strong></p>",
+            "<p><strong>Studies</strong></p>",
+            "<p><strong>Example</strong></p>",
+            "<p><strong>Category</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Entomology</p>",
+            "<p>Insects</p>",
+            "<p>Butterfly</p>",
+            "<p>Zoology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ornithology</p>",
+            "<p>Birds</p>",
+            "<p>Eagle</p>",
+            "<p>Zoology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ichthyology</p>",
+            "<p>Fishes</p>",
+            "<p>Rohu</p>",
+            "<p>Zoology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Herpetology</p>",
+            "<p>Reptiles</p>",
+            "<p>Snake</p>",
+            "<p>Zoology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Immunology</p>",
+            "<p>Immune system</p>",
+            "<p>Antibodies</p>",
+            "<p>Medical</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cytology</p>",
+            "<p>Cells</p>",
+            "<p>Cell division</p>",
+            "<p>Cell Biology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Taxonomy</p>",
+            "<p>Classification</p>",
+            "<p>Species naming</p>",
+            "<p>Systematics</p>"
           ]
         }
       ]
@@ -377,55 +392,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Field</strong></p>",
+            "<p><strong>Purpose</strong></p>",
+            "<p><strong>Example Use</strong></p>",
+            "<p><strong>Related Branch</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Agriculture</p>",
+            "<p>Crop production</p>",
+            "<p>Hybrid seeds</p>",
+            "<p>Botany</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Medicine</p>",
+            "<p>Disease treatment</p>",
+            "<p>Vaccines</p>",
+            "<p>Microbiology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Genetic Engineering</p>",
+            "<p>Gene modification</p>",
+            "<p>Insulin production</p>",
+            "<p>Genetics</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Environmental Science</p>",
+            "<p>Conservation</p>",
+            "<p>Wildlife protection</p>",
+            "<p>Ecology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Pharmacology</p>",
+            "<p>Drug study</p>",
+            "<p>Antibiotics</p>",
+            "<p>Biotechnology</p>"
           ]
         }
       ]
@@ -446,27 +461,33 @@
     },
     {
       "type": "paragraph",
-      "id": "dp0vko7"
+      "id": "dp0vko7",
+      "content": "1. Mendel is the Father of Genetics."
     },
     {
       "type": "paragraph",
-      "id": "32up62d"
+      "id": "32up62d",
+      "content": "2. Theophrastus is the Father of Botany."
     },
     {
       "type": "paragraph",
-      "id": "uc2gu2a"
+      "id": "uc2gu2a",
+      "content": "3. Aristotle is the Father of Zoology."
     },
     {
       "type": "paragraph",
-      "id": "0sp5i7o"
+      "id": "0sp5i7o",
+      "content": "4. Louis Pasteur is the Father of Microbiology."
     },
     {
       "type": "paragraph",
-      "id": "pzgf2dq"
+      "id": "pzgf2dq",
+      "content": "5. Ernst Haeckel coined the term Ecology."
     },
     {
       "type": "paragraph",
-      "id": "vv9q2lp"
+      "id": "vv9q2lp",
+      "content": "6. Biotechnology is widely used in vaccine production."
     }
   ],
   "enriched": true

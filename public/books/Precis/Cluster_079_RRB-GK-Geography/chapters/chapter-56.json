@@ -1,0 +1,104 @@
+{
+  "title": "4. Crust — Detailed Study",
+  "order": 56,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The crust is the outermost layer and supports life.",
+      "id": "0rbrrne"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Continental Thickness",
+          "value": "35 km",
+          "icon": "book"
+        },
+        {
+          "label": "Oceanic Thickness",
+          "value": "5–10 km",
+          "icon": "book"
+        },
+        {
+          "label": "Oxygen Share",
+          "value": "46%",
+          "icon": "info"
+        },
+        {
+          "label": "Silicon Share",
+          "value": "28%",
+          "icon": "info"
+        }
+      ],
+      "id": "0wxwgpt"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The crust is the outermost layer and supports life.",
+      "id": "dhfkxfw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The crust is the outermost surface layer of the Earth that supports life.",
+        "Continental crust is thicker (avg. 35 km) compared to oceanic crust (5–10 km).",
+        "Continental crust is predominantly composed of granite, while oceanic crust consists mainly of basalt.",
+        "Oxygen (46%) and Silicon (28%) constitute the vast majority of the crust's elemental composition, alongside Aluminum and Iron."
+      ],
+      "id": "kowdjsh"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Continental Crust",
+        "Oceanic Crust"
+      ],
+      "rows": [
+        [
+          "Average Thickness",
+          "35 km",
+          "5–10 km"
+        ],
+        [
+          "Main Composition",
+          "Granite",
+          "Basalt"
+        ]
+      ],
+      "id": "gj9cgan"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Average thickness: 35 km (continental), 5–10 km (oceanic).",
+      "id": "ovdhtce"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Continental crust is composed mainly of granite.",
+      "id": "vpm776a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Rock Types: Continental crust is granitic, whereas oceanic crust is basaltic.",
+        "Elemental Composition: Oxygen (46%) is the most abundant element in the crust, followed by Silicon (28%).",
+        "Thickness Difference: Oceanic crust is significantly thinner (5–10 km) than continental crust (35 km)."
+      ],
+      "id": "ugq6pgn"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Oceanic crust is composed mainly of basalt.",
+      "id": "sfhy755"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Major elements: Oxygen (46%), Silicon (28%), Aluminum, Iron.",
+      "id": "4sc041e"
+    }
+  ],
+  "enriched": true
+}

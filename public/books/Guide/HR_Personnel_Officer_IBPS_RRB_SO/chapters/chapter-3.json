@@ -54,55 +54,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Dimension</strong></p>",
+            "<p><strong>Training</strong></p>",
+            "<p><strong>Development</strong></p>",
+            "<p><strong>Education</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Purpose</p>",
+            "<p>Specific skill for current job</p>",
+            "<p>Future roles and responsibilities; potential</p>",
+            "<p>General knowledge; lifelong learning</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Focus</p>",
+            "<p>Job-oriented; task-specific</p>",
+            "<p>Career-oriented; potential-focused</p>",
+            "<p>Concept and theory-oriented</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Time Frame</p>",
+            "<p>Short-term; immediate application</p>",
+            "<p>Long-term; gradual growth</p>",
+            "<p>Long-term; general foundation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Scope</p>",
+            "<p>Narrow; specific competencies</p>",
+            "<p>Broad; multiple competencies</p>",
+            "<p>Broad; general education</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Example</p>",
+            "<p>Bank clerk trained on CBS software</p>",
+            "<p>Branch manager developed for regional head role</p>",
+            "<p>MBA degree; banking diploma</p>"
           ]
         }
       ]
@@ -120,7 +120,8 @@
     },
     {
       "type": "paragraph",
-      "id": "u02r4j4"
+      "id": "u02r4j4",
+      "content": "Training Needs Analysis (TNA) is a systematic process of identifying gaps between current and desired knowledge, skills, and attitudes. It ensures training resources are targeted effectively."
     },
     {
       "id": "mt718jq",
@@ -129,33 +130,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Level of Analysis</strong></p>",
+            "<p><strong>Focus</strong></p>",
+            "<p><strong>Methods</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Organisational Analysis</p>",
+            "<p>Organisation-wide needs; business goals; culture; resources for training</p>",
+            "<p>Strategic plans review; HR reports; climate surveys; audit results</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Task/Operational Analysis</p>",
+            "<p>What knowledge, skills, attitudes needed for each job/task</p>",
+            "<p>Job analysis; performance standards; observation; subject matter experts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Person/Individual Analysis</p>",
+            "<p>Who specifically needs training; gap between actual and required performance</p>",
+            "<p>Performance appraisal data; 360-degree feedback; assessment centres; self-assessment</p>"
           ]
         }
       ]
@@ -203,118 +204,118 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Best For</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>On-the-Job Training (OJT)</p>",
+            "<p>Job Rotation</p>",
+            "<p>Employee moves through different departments/roles; breadth of experience</p>",
+            "<p>Management trainees; future leaders; cross-functional awareness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>On-the-Job Training (OJT)</p>",
+            "<p>Mentoring / Coaching</p>",
+            "<p>Senior guides junior; personalised learning; coach provides feedback and support</p>",
+            "<p>Leadership development; transition to new role; high-potential employees</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>On-the-Job Training (OJT)</p>",
+            "<p>Apprenticeship</p>",
+            "<p>Structured work-based learning; combination of theory and practice; formal qualification</p>",
+            "<p>Skilled trades; banking graduate programmes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>On-the-Job Training (OJT)</p>",
+            "<p>Committee/Project Assignment</p>",
+            "<p>Employee given membership of project/committee to develop decision-making and leadership skills</p>",
+            "<p>Senior management development; strategic thinking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Off-the-Job Training</p>",
+            "<p>Classroom/Lecture</p>",
+            "<p>Instructor-led; structured content delivery; cost-effective for groups</p>",
+            "<p>Regulatory/compliance training; product knowledge; conceptual training</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Off-the-Job Training</p>",
+            "<p>Case Study Method</p>",
+            "<p>Real or simulated business problem analysed; develops analytical and decision-making skills</p>",
+            "<p>Management development; business schools; IIM method</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Off-the-Job Training</p>",
+            "<p>Role Playing</p>",
+            "<p>Act out real workplace scenarios; develop interpersonal skills; emotional simulation</p>",
+            "<p>Customer service; negotiation; conflict resolution training</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Off-the-Job Training</p>",
+            "<p>Business Games/Simulations</p>",
+            "<p>Compete in simulated business environment; strategic decision-making under conditions of uncertainty</p>",
+            "<p>Management development; competitive strategy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Off-the-Job Training</p>",
+            "<p>Sensitivity Training (T-Group)</p>",
+            "<p>Group dynamics; develop interpersonal sensitivity; self-awareness; feedback-intensive</p>",
+            "<p>Leadership development; team building; organisational development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Technology-Based</p>",
+            "<p>E-Learning / LMS</p>",
+            "<p>Online modules; self-paced; interactive; accessible 24x7; Learning Management System</p>",
+            "<p>Large dispersed workforce; banking compliance training; product training</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Technology-Based</p>",
+            "<p>Virtual Reality (VR) / Simulations</p>",
+            "<p>Immersive realistic environments; safe practice of high-stakes situations</p>",
+            "<p>Frontline banking; customer interaction practice; risk scenarios</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Technology-Based</p>",
+            "<p>Blended Learning</p>",
+            "<p>Combination of e-learning + classroom; flexibility + engagement</p>",
+            "<p>Most modern corporate programmes including banking sector</p>"
           ]
         }
       ]
@@ -341,46 +342,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Level</strong></p>",
+            "<p><strong>Name</strong></p>",
+            "<p><strong>What is Measured</strong></p>",
+            "<p><strong>How Measured</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Level 1</p>",
+            "<p>Reaction</p>",
+            "<p>How participants feel about the training; satisfaction; relevance</p>",
+            "<p>Post-training feedback forms; smile sheets; ratings</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Level 2</p>",
+            "<p>Learning</p>",
+            "<p>Knowledge, skills, attitude change due to training; what was learned</p>",
+            "<p>Pre and post-tests; quizzes; skill demonstrations; assessments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Level 3</p>",
+            "<p>Behaviour</p>",
+            "<p>Transfer of learning to the job; change in on-the-job behaviour</p>",
+            "<p>Supervisor observation; 360-degree feedback; performance reviews; 60–90 days post-training</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Level 4</p>",
+            "<p>Results</p>",
+            "<p>Impact on business outcomes; ROI of training; organisational performance change</p>",
+            "<p>Business metrics: productivity, sales, error rates, NPA reduction; ROI calculation</p>"
           ]
         }
       ]
@@ -398,49 +399,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Banking Application</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Action Learning</p>",
+            "<p>Managers work on real organisational problems; reflect and learn from action; Revans' approach</p>",
+            "<p>Bank branch managers solving real NPA or customer attrition problems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Outdoor Training / Adventure Learning</p>",
+            "<p>Physical and mental challenges outside office; team building; leadership under stress</p>",
+            "<p>Banking leadership programmes; relationship building</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Assessment Centre</p>",
+            "<p>Multiple simulation exercises; multiple assessors; predict management potential</p>",
+            "<p>IBPS, RBI use for promotion to senior positions; identify high-potentials</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Succession Planning</p>",
+            "<p>Identify and develop internal talent for key positions; talent pipeline; leadership readiness</p>",
+            "<p>Banks develop branch managers → regional managers → GM pipeline</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Executive Education</p>",
+            "<p>IIM/IIT/MDI programmes; executive MBA; functional specialisation</p>",
+            "<p>Senior bankers sponsored for leadership programmes</p>"
           ]
         }
       ]

@@ -1,0 +1,138 @@
+{
+  "title": "5. Revolution : Movement Around the Sun",
+  "order": 23,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Revolution is Earth's orbital movement around the Sun along an elliptical path at an average speed of 29.8 km per second.",
+      "id": "74knv3w"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Average Speed",
+          "value": "29.8 km/s",
+          "icon": "clock"
+        },
+        {
+          "label": "Orbital Path",
+          "value": "Elliptical",
+          "icon": "info"
+        },
+        {
+          "label": "Leap Year Rule",
+          "value": "Divisible by 4",
+          "icon": "calendar"
+        },
+        {
+          "label": "Century Rule",
+          "value": "Divisible by 400",
+          "icon": "check"
+        }
+      ],
+      "id": "7atexis"
+    },
+    {
+      "id": "hjh24p8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Fact</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Time Taken</p>",
+            "<p>365 days 5h 48m 46s</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Extra Time</p>",
+            "<p>~6 hours → leap year</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Orbit Shape</p>",
+            "<p>Elliptical</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Revolution is Earth's orbital movement around the Sun along an elliptical path at an average speed of 29.8 km per second.",
+      "id": "33qxs7z"
+    },
+    {
+      "id": "4s6tdmh",
+      "type": "heading",
+      "level": 2,
+      "content": "Leap Year (Full Rule)"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category",
+        "Divisibility Condition",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Standard Year",
+          "Must be divisible by 4",
+          "2004 is a leap year"
+        ],
+        [
+          "Century Year",
+          "Must be divisible by 400",
+          "2000 is a leap year; 1900 is NOT"
+        ]
+      ],
+      "id": "2e45w5o"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Revolution is Earth's orbital movement around the Sun along an elliptical path.",
+        "The average orbital speed of the Earth during revolution is 29.8 km per second.",
+        "A standard year is a leap year if its number is divisible by 4.",
+        "Century years are exceptions: they must be divisible by 400 to be considered leap years."
+      ],
+      "id": "2y8l2ib"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Divisible by 4 → Leap year.",
+      "id": "y7gnssx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Century Year Trap: Year 1900 is NOT a leap year because it is not divisible by 400, whereas year 2000 IS a leap year.",
+        "Speed & Path: Note the exact average speed (29.8 km/s) and the shape of the orbit (elliptical) for direct multiple-choice questions."
+      ],
+      "id": "f0yt15y"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Century year must be divisible by 400.",
+      "id": "t4fq5j3"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Example: 2000 leap; 1900 not.",
+      "id": "2xqolhd"
+    }
+  ],
+  "enriched": true
+}

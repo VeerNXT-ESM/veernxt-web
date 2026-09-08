@@ -49,11 +49,25 @@
     },
     {
       "type": "paragraph",
-      "id": "7v2r30l"
+      "id": "7v2r30l",
+      "content": "Matter is anything that has mass and occupies space."
+    },
+    {
+      "id": "u0gv0sg",
+      "type": "image",
+      "imageId": "rtdqtrh",
+      "src": "/books/Precis/RRB GS/images/image_rtdqtrh.png"
+    },
+    {
+      "id": "i4brcse",
+      "type": "image",
+      "imageId": "uy96mt0",
+      "src": "/books/Precis/RRB GS/images/image_uy96mt0.png"
     },
     {
       "type": "paragraph",
-      "id": "aoow5ru"
+      "id": "aoow5ru",
+      "content": "Matter is made up of extremely small particles called atoms and molecules."
     },
     {
       "id": "c8iuse7",
@@ -65,11 +79,11 @@
       "id": "2dxjf2a",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        " Particles have space between them.",
+        " Particles are continuously moving (kinetic energy).",
+        "Particles attract each other.",
+        "Force of attraction: Solid &gt; Liquid &gt; Gas.",
+        "Kinetic energy: Gas &gt; Liquid &gt; Solid."
       ]
     },
     {
@@ -85,46 +99,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Solid</strong></p>",
+            "<p><strong>Liquid</strong></p>",
+            "<p><strong>Gas</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Shape</p>",
+            "<p>Definite</p>",
+            "<p>No definite shape</p>",
+            "<p>No definite shape</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Volume</p>",
+            "<p>Definite</p>",
+            "<p>Definite</p>",
+            "<p>No definite volume</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Compressibility</p>",
+            "<p>Negligible</p>",
+            "<p>Very little</p>",
+            "<p>High</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Density</p>",
+            "<p>High</p>",
+            "<p>Moderate</p>",
+            "<p>Low</p>"
           ]
         }
       ]
@@ -137,15 +151,18 @@
     },
     {
       "type": "paragraph",
-      "id": "fod4mpv"
+      "id": "fod4mpv",
+      "content": "Plasma: Ionized gas found in Sun, stars, lightning, neon signs."
     },
     {
       "type": "paragraph",
-      "id": "u5xg9ov"
+      "id": "u5xg9ov",
+      "content": "Bose-Einstein Condensate (BEC): Formed at extremely low temperature near 0 Kelvin."
     },
     {
       "type": "paragraph",
-      "id": "c64l0d8"
+      "id": "c64l0d8",
+      "content": "Absolute Zero = 0 K (−273°C)."
     },
     {
       "id": "ye2a048",
@@ -155,35 +172,48 @@
     },
     {
       "type": "paragraph",
-      "id": "xttv780"
+      "id": "xttv780",
+      "content": "Matter changes state by change in temperature or pressure."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "670zfpy"
+      "id": "670zfpy",
+      "content": "Melting: Solid → Liquid"
+    },
+    {
+      "id": "qhmfhv6",
+      "type": "image",
+      "imageId": "aqghmf4",
+      "src": "/books/Precis/RRB GS/images/image_aqghmf4.png"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gqcu7qn"
+      "id": "gqcu7qn",
+      "content": "Boiling: Liquid → Gas"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "feld3we"
+      "id": "feld3we",
+      "content": "Condensation: Gas → Liquid"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ze0d15x"
+      "id": "ze0d15x",
+      "content": "Freezing: Liquid → Solid"
     },
     {
       "type": "paragraph",
-      "id": "88bg2kd"
+      "id": "88bg2kd",
+      "content": "Sublimation: Solid → Gas directly (Dry ice, Camphor)"
     },
     {
       "type": "paragraph",
-      "id": "ltvuf4l"
+      "id": "ltvuf4l",
+      "content": "Deposition: Gas → Solid directly (Frost)"
     },
     {
       "id": "6ajs9ir",
@@ -193,20 +223,24 @@
     },
     {
       "type": "paragraph",
-      "id": "il56chn"
+      "id": "il56chn",
+      "content": "Melting point of ice = 273.15 K"
     },
     {
       "type": "paragraph",
-      "id": "cyakl3j"
+      "id": "cyakl3j",
+      "content": "Boiling point of water = 373 K"
     },
     {
       "type": "paragraph",
-      "id": "y69hcep"
+      "id": "y69hcep",
+      "content": "1 atmosphere = 1.01 × 10^5 Pascal"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mooakg1"
+      "id": "mooakg1",
+      "content": "K = °C + 273"
     },
     {
       "type": "pullQuote",
@@ -221,20 +255,24 @@
     },
     {
       "type": "paragraph",
-      "id": "kfyoy3r"
+      "id": "kfyoy3r",
+      "content": "Latent heat is heat required to change state without change in temperature."
     },
     {
       "type": "paragraph",
-      "id": "2870pva"
+      "id": "2870pva",
+      "content": "Latent Heat of Fusion: Solid → Liquid"
     },
     {
       "type": "paragraph",
-      "id": "x30btnx"
+      "id": "x30btnx",
+      "content": "Latent Heat of Vaporization: Liquid → Gas"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fah35fg"
+      "id": "fah35fg",
+      "content": "Unit = Joule/kg"
     },
     {
       "id": "68wywe8",
@@ -244,21 +282,29 @@
     },
     {
       "type": "paragraph",
-      "id": "jx8xkyx"
+      "id": "jx8xkyx",
+      "content": "Evaporation is a surface phenomenon and causes cooling."
     },
     {
       "type": "paragraph",
-      "id": "pcig28y"
+      "id": "pcig28y",
+      "content": "Factors affecting evaporation:"
     },
     {
       "id": "lohds5a",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        " Surface area (More → Faster)",
+        "Temperature (Higher → Faster)",
+        " Wind speed (Higher → Faster)",
+        "Humidity (Lower → Faster)"
       ]
+    },
+    {
+      "id": "drffnzu",
+      "type": "image",
+      "imageId": "xcfbldy",
+      "src": "/books/Precis/RRB GS/images/image_xcfbldy.png"
     },
     {
       "id": "1kdgfk6",
@@ -268,11 +314,13 @@
     },
     {
       "type": "paragraph",
-      "id": "hvbxrfo"
+      "id": "hvbxrfo",
+      "content": "Diffusion is mixing of particles due to motion."
     },
     {
       "type": "paragraph",
-      "id": "ey7jc86"
+      "id": "ey7jc86",
+      "content": "Fastest in gases, slowest in solids."
     },
     {
       "type": "comparisonTable",
@@ -319,20 +367,24 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ckbscyz"
+      "id": "ckbscyz",
+      "content": "Density = Mass / Volume"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "etb8qjn"
+      "id": "etb8qjn",
+      "content": "SI Unit = kg/m³"
     },
     {
       "type": "paragraph",
-      "id": "7thhv16"
+      "id": "7thhv16",
+      "content": "Density of water = 1000 kg/m³"
     },
     {
       "type": "paragraph",
-      "id": "dkuvtqo"
+      "id": "dkuvtqo",
+      "content": "Ice floats on water due to lower density."
     },
     {
       "id": "cqsbfjv",
@@ -342,11 +394,13 @@
     },
     {
       "type": "paragraph",
-      "id": "re0la67"
+      "id": "re0la67",
+      "content": "Pure substances: Elements and Compounds (fixed composition)."
     },
     {
       "type": "paragraph",
-      "id": "bnjblum"
+      "id": "bnjblum",
+      "content": "Mixtures: Two or more substances in any proportion."
     },
     {
       "id": "3nav19n",
@@ -355,25 +409,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Homogeneous</strong></p>",
+            "<p><strong>Heterogeneous</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Composition</p>",
+            "<p>Uniform</p>",
+            "<p>Non-uniform</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example</p>",
+            "<p>Salt solution, Air</p>",
+            "<p>Sand + Water</p>"
           ]
         }
       ]
@@ -386,19 +440,23 @@
     },
     {
       "type": "paragraph",
-      "id": "xnlfe8n"
+      "id": "xnlfe8n",
+      "content": "Solution: Homogeneous mixture (particle size &lt; 1 nm)."
     },
     {
       "type": "paragraph",
-      "id": "aatrcve"
+      "id": "aatrcve",
+      "content": "Suspension: Visible particles, unstable."
     },
     {
       "type": "paragraph",
-      "id": "qg4vs8k"
+      "id": "qg4vs8k",
+      "content": "Colloid: Intermediate size, shows Tyndall effect."
     },
     {
       "type": "paragraph",
-      "id": "83b9s3j"
+      "id": "83b9s3j",
+      "content": "Particle size order: Solution &lt; Colloid &lt; Suspension."
     },
     {
       "id": "dtfba5d",
@@ -410,11 +468,11 @@
       "id": "ng236ja",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Evaporation – Salt from water",
+        " Centrifugation – Cream from milk",
+        "Distillation – Separating liquids",
+        "Chromatography – Ink colours",
+        "Crystallization – Purification of solids"
       ]
     },
     {
@@ -435,43 +493,53 @@
     },
     {
       "type": "paragraph",
-      "id": "xgb3f4e"
+      "id": "xgb3f4e",
+      "content": "1. Matter has mass and occupies space."
     },
     {
       "type": "paragraph",
-      "id": "tfxt00u"
+      "id": "tfxt00u",
+      "content": "2. Force of attraction: Solid &gt; Liquid &gt; Gas."
     },
     {
       "type": "paragraph",
-      "id": "xqca02i"
+      "id": "xqca02i",
+      "content": "3. Melting point of ice = 273 K."
     },
     {
       "type": "paragraph",
-      "id": "hmejs2a"
+      "id": "hmejs2a",
+      "content": "4. 1 atm = 1.01 × 10^5 Pa."
     },
     {
       "type": "paragraph",
-      "id": "qjvj2ew"
+      "id": "qjvj2ew",
+      "content": "5. Density formula is frequently asked."
     },
     {
       "type": "paragraph",
-      "id": "0ytu2dg"
+      "id": "0ytu2dg",
+      "content": "6. Sublimation example: Dry ice."
     },
     {
       "type": "paragraph",
-      "id": "1rvyxgw"
+      "id": "1rvyxgw",
+      "content": "7. Evaporation causes cooling."
     },
     {
       "type": "paragraph",
-      "id": "yarsano"
+      "id": "yarsano",
+      "content": "8. Colloids show Tyndall effect."
     },
     {
       "type": "paragraph",
-      "id": "eq5l9f1"
+      "id": "eq5l9f1",
+      "content": "9. Gas is highly compressible."
     },
     {
       "type": "paragraph",
-      "id": "gf5twlf"
+      "id": "gf5twlf",
+      "content": "10. Particle size: Solution &lt; Colloid &lt; Suspension."
     }
   ],
   "enriched": true

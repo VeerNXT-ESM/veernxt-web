@@ -1,0 +1,56 @@
+{
+  "title": "7. Soil pH and Fertility",
+  "order": 186,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Soil pH measures acidity or alkalinity. Most crops grow best in slightly acidic to neutral soils (pH 6–7.5). Highly acidic soils limit nutrient availability.",
+      "id": "rukfw8f"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Most crops grow best in slightly acidic to neutral soils (pH 6–7.5).",
+      "id": "0rji8x1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Optimal pH Range",
+          "value": "6–7.5",
+          "icon": "check"
+        },
+        {
+          "label": "pH Parameter",
+          "value": "Acidity / Alkalinity",
+          "icon": "info"
+        },
+        {
+          "label": "Acidic Soil Impact",
+          "value": "Limits Nutrients",
+          "icon": "book"
+        }
+      ],
+      "id": "3oknj77"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently ask for the ideal crop soil pH range: 6–7.5 (slightly acidic to neutral).",
+        "Remember that high soil acidity negatively impacts fertility by limiting key nutrient availability."
+      ],
+      "id": "5q1fbrb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Soil pH is a chemical measure used to determine soil acidity or alkalinity.",
+        "The optimal soil condition for most crops is slightly acidic to neutral, spanning a pH of 6 to 7.5.",
+        "Highly acidic soil environments directly impair plant growth by restricting essential nutrient availability."
+      ],
+      "id": "xkg5vct"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,367 @@
+{
+  "id": "3rbaxv3",
+  "title": "Syllogism",
+  "order": 9,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "n4gzzah",
+      "content": "<strong>CHAPTER  09\tSYLLOGISM</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ohw7vdl",
+      "content": "<em>Venn Diagram Method | Statement-Conclusion | Possibility Cases</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "1uotvyy",
+      "content": "<strong>9.1  What is Syllogism?</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "8o5i7g0",
+      "content": "Syllogism consists of two or more statements (premises) followed by conclusions. You must decide which conclusions follow logically. SSC CGL asks 3–4 syllogism questions per paper, making it extremely important."
+    },
+    {
+      "id": "lkdlsb4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>TYPES OF STATEMENTS IN SYLLOGISM</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Universal Positive (A): ALL A are B → Full circle of A inside B</p><p>Universal Negative (E): NO A is B  → Circles of A and B completely separate</p><p>Particular Positive (I): SOME A are B → Circles partially overlapping</p><p>Particular Negative (O): SOME A are NOT B → Part of A outside B</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vkmkhrd",
+      "content": "<strong>9.2  The Venn Diagram Method</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "96580yv",
+      "content": "Draw Venn diagrams for the given statements and check if each conclusion diagram is ALWAYS true (definite conclusion) or SOMETIMES true (possible conclusion)."
+    },
+    {
+      "id": "oxn9q80",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Statement Pair</strong></p>",
+            "<p><strong>Valid Conclusions</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>All A are B + All B are C</p>",
+            "<p>All A are C (definite)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>All A are B + No B is C</p>",
+            "<p>No A is C (definite)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Some A are B + All B are C</p>",
+            "<p>Some A are C (definite)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Some A are B + No B is C</p>",
+            "<p>Some A are not C (definite)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>All A are B + Some B are C</p>",
+            "<p>Some C are A (possible, not definite)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>No A is B + All C are B</p>",
+            "<p>No A is C (definite)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Some A are B + Some B are C</p>",
+            "<p>No definite conclusion about A and C</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>All A are B + All C are B</p>",
+            "<p>Some A may or may not be C (no definite)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0v7k0gl",
+      "content": "<strong>9.3  Solved Examples</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "331v1ym",
+      "content": "<strong>Ex.1 </strong>Statements: All dogs are animals. All animals are living things. Conclusions: I. All dogs are living things. II. All living things are dogs."
+    },
+    {
+      "type": "paragraph",
+      "id": "amfwaly",
+      "content": "<strong>Sol. </strong><em>Dogs ⊂ Animals ⊂ Living things. Conclusion I: All dogs are living things ✓ (definite). Conclusion II: All living things are dogs ✗ (reverse not true). Ans: Only I follows</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "qil8xfv",
+      "content": "<strong>Ex.2 </strong>Statements: No cat is dog. Some dogs are lions. Conclusions: I. Some lions are not cats. II. No lion is cat."
+    },
+    {
+      "type": "paragraph",
+      "id": "3aimeye",
+      "content": "<strong>Sol. </strong><em>No cat=dog, some dogs=lions. The 'some dogs' that are lions → those dogs are not cats (since no cat is dog). So some lions are not cats. But ALL lions could be non-cats? Not necessarily since some dogs are lions and those dogs aren't cats. Conclusion I: Some lions are not cats ✓. Conclusion II: No lion is cat — not definite (some lions not shown to be dogs might be cats). Ans: Only I follows</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "mc7odsa",
+      "content": "<strong>Ex.3 </strong>Statements: All roses are flowers. Some flowers are red. Conclusions: I. Some roses are red. II. Some red things are flowers."
+    },
+    {
+      "type": "paragraph",
+      "id": "nixtsff",
+      "content": "<strong>Sol. </strong><em>Roses ⊂ Flowers. Some Flowers = Red. The red flowers may or may not be roses. Conclusion I: Some roses are red — NOT definite (possible but not certain). Conclusion II: Some red things are flowers ✓ (since some flowers are red, those flowers are red → some red = flowers). Ans: Only II follows</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "kfo3yo7",
+      "content": "<strong>Ex.4 </strong>Statements: Some books are pens. No pen is a pencil. Conclusions: I. Some books are pencils. II. Some books are not pencils."
+    },
+    {
+      "type": "paragraph",
+      "id": "zt0ojvp",
+      "content": "<strong>Sol. </strong><em>Some books = pens. No pen = pencil. So the books that are pens → not pencils (since pens ≠ pencils). So SOME books are not pencils (the ones that are pens). Conclusion I: Some books are pencils — NOT certain (books might not overlap with pencils). Conclusion II: Some books are not pencils ✓. Ans: Only II follows</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hcerj87",
+      "content": "<strong>9.4  The Either-Or Case</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "7j4kngr",
+      "content": "When neither conclusion I nor II alone follows, but together they cover all possibilities (complementary pair), the answer is 'Either I or II follows'."
+    },
+    {
+      "id": "begv7uz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>NOTE: </strong><em>For Either-Or: One conclusion must be Universal Positive and the other Particular Negative of the SAME subject and predicate. Example: 'All A are B' and 'Some A are not B' form a complementary pair.</em></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q7k806p",
+      "content": "<strong>9.5  Possibility Cases</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "iai28dz",
+      "content": "From SSC 2016 onwards, questions use phrases like 'Some A being C is a possibility' or 'All A being B is a possibility'. The rule: a possibility is TRUE unless it is DEFINITELY FALSE."
+    },
+    {
+      "id": "nuui45l",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>POSSIBILITY RULES</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>If 'No A is B' is definite → 'Some A are B' is NOT a possibility.</p><p>If 'All A are B' is definite → 'Some A are not B' is NOT a possibility.</p><p>If 'Some A are B' is definite → 'No A is B' is NOT a possibility.</p><p>In all other cases, the possibility is VALID (true).</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vi86ah9",
+      "content": "<strong>9.6  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "g4376fi",
+      "content": "<strong>Q.39  </strong>All mangoes are fruits. All fruits are tasty. Conclusions: I. All mangoes are tasty. II. Some tasty things are fruits."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "adoy7iz",
+      "content": "<strong>  (a)  </strong>Only I"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fc4hx9n",
+      "content": "<strong>  (b)  </strong>Only II"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f82vlmj",
+      "content": "<strong>  (c)  </strong>Both I and II"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rz2605q",
+      "content": "<strong>  (d)  </strong>Neither"
+    },
+    {
+      "type": "paragraph",
+      "id": "binhpem",
+      "content": "<strong>  Ans: (c) Both I and II  Hint: </strong><em>All mangoes are fruits (⊂tasty) → All mangoes tasty ✓. Fruits ⊂ tasty → some tasty = fruits ✓.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ds6go5s",
+      "content": "<strong>Q.40  </strong>No table is chair. Some chairs are wooden. Conclusions: I. No table is wooden. II. Some wooden things are not tables."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8gcihhu",
+      "content": "<strong>  (a)  </strong>Only I"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "r606who",
+      "content": "<strong>  (b)  </strong>Only II"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v9mo6xp",
+      "content": "<strong>  (c)  </strong>Both"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7nhx4v1",
+      "content": "<strong>  (d)  </strong>Neither"
+    },
+    {
+      "type": "paragraph",
+      "id": "t3i0zpl",
+      "content": "<strong>  Ans: (b) Only II  Hint: </strong><em>From 'some chairs are wooden' and 'no table is chair' → those wooden chairs are not tables → some wooden are not tables ✓. But other wooden things might be tables → I not definite.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "pgupg81",
+      "content": "<strong>Q.41  </strong>All A are B. No B is C. Conclusions: I. No A is C. II. All C are A."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qt4gi40",
+      "content": "<strong>  (a)  </strong>Only I"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x4oxyuq",
+      "content": "<strong>  (b)  </strong>Only II"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "brg6kn1",
+      "content": "<strong>  (c)  </strong>Both"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zo9m3qs",
+      "content": "<strong>  (d)  </strong>Neither"
+    },
+    {
+      "type": "paragraph",
+      "id": "4pwva1f",
+      "content": "<strong>  Ans: (a) Only I  Hint: </strong><em>A⊂B, B∩C=∅ → A∩C=∅ → No A is C ✓. II is not supported.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "uqz0hxz",
+      "content": "<strong>Q.42  </strong>Some doctors are engineers. All engineers are lawyers. Conclusions: I. Some doctors are lawyers. II. All lawyers are engineers."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pnhjqxq",
+      "content": "<strong>  (a)  </strong>Only I"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iw9g54c",
+      "content": "<strong>  (b)  </strong>Only II"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lwaqm16",
+      "content": "<strong>  (c)  </strong>Both"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tn90siz",
+      "content": "<strong>  (d)  </strong>Neither"
+    },
+    {
+      "type": "paragraph",
+      "id": "qfqz6sg",
+      "content": "<strong>  Ans: (a) Only I  Hint: </strong><em>Some doctors=engineers, engineers⊂lawyers → those doctors are lawyers → some doctors are lawyers ✓. II reverses the universal → not valid.</em>"
+    }
+  ],
+  "enriched": true
+}

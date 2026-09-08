@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "fzjpkot"
+      "id": "fzjpkot",
+      "content": "Soil consists of four major components: mineral matter (about 45%), organic matter (about 5%), water (25%) and air (25%). The proportions vary depending on climate and location."
     },
     {
       "type": "statStrip",
@@ -77,11 +78,13 @@
     },
     {
       "type": "paragraph",
-      "id": "70zcgms"
+      "id": "70zcgms",
+      "content": "Mineral Matter: Derived from weathered parent rock."
     },
     {
       "type": "paragraph",
-      "id": "w9m2owx"
+      "id": "w9m2owx",
+      "content": "Organic Matter (Humus): Decomposed plant and animal remains."
     },
     {
       "type": "examAlert",
@@ -94,11 +97,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8vb3ixr"
+      "id": "8vb3ixr",
+      "content": "Soil Water: Occupies pore spaces; essential for nutrient transport."
     },
     {
       "type": "paragraph",
-      "id": "epz37vi"
+      "id": "epz37vi",
+      "content": "Soil Air: Fills remaining pore spaces; supplies oxygen to roots."
     }
   ],
   "enriched": true

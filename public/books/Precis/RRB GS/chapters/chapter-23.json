@@ -49,11 +49,37 @@
     },
     {
       "type": "paragraph",
-      "id": "18pkjm0"
+      "id": "18pkjm0",
+      "content": "Law of Conservation of Mass: Mass can neither be created nor destroyed in a chemical reaction."
+    },
+    {
+      "id": "lghdoa6",
+      "type": "image",
+      "imageId": "90j0xof",
+      "src": "/books/Precis/RRB GS/images/image_90j0xof.png"
+    },
+    {
+      "id": "vp29u1z",
+      "type": "image",
+      "imageId": "3gebn66",
+      "src": "/books/Precis/RRB GS/images/image_3gebn66.png"
+    },
+    {
+      "id": "myvb7oq",
+      "type": "image",
+      "imageId": "j5bz39s",
+      "src": "/books/Precis/RRB GS/images/image_j5bz39s.png"
+    },
+    {
+      "id": "wp6olhw",
+      "type": "image",
+      "imageId": "b405z92",
+      "src": "/books/Precis/RRB GS/images/image_b405z92.png"
     },
     {
       "type": "paragraph",
-      "id": "m0d7urd"
+      "id": "m0d7urd",
+      "content": "Law of Constant Proportions: Elements in a compound are present in fixed ratio by mass."
     },
     {
       "id": "kmmnvcd",
@@ -65,12 +91,18 @@
       "id": "eqp2q18",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        " Matter is made up of tiny particles called atoms.",
+        "Atoms cannot be created or destroyed.",
+        "Atoms of same element are identical in mass and properties.",
+        "Atoms of different elements have different masses and properties.",
+        "Atoms combine in simple whole number ratios."
       ]
+    },
+    {
+      "id": "rnr86ab",
+      "type": "image",
+      "imageId": "lk7zfv7",
+      "src": "/books/Precis/RRB GS/images/image_lk7zfv7.png"
     },
     {
       "id": "b6cf26g",
@@ -80,11 +112,13 @@
     },
     {
       "type": "paragraph",
-      "id": "lnl1hmc"
+      "id": "lnl1hmc",
+      "content": "Atom is the smallest particle of an element that takes part in chemical reaction."
     },
     {
       "type": "paragraph",
-      "id": "g7spvsr"
+      "id": "g7spvsr",
+      "content": "Atomic radius is measured in nanometre (1 nm = 10^-9 m)."
     },
     {
       "id": "6w3u1al",
@@ -94,11 +128,13 @@
     },
     {
       "type": "paragraph",
-      "id": "fg7wvnr"
+      "id": "fg7wvnr",
+      "content": "Atomic mass is the mass of an atom relative to 1/12th mass of carbon-12 atom."
     },
     {
       "type": "paragraph",
-      "id": "hc35h6r"
+      "id": "hc35h6r",
+      "content": "1 atomic mass unit (u) = 1/12th mass of carbon-12."
     },
     {
       "id": "11cg049",
@@ -113,50 +149,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Element</strong></p>",
+            "<p><strong>Atomic Mass</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hydrogen (H)</p>",
+            "<p>1</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Carbon (C)</p>",
+            "<p>12</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nitrogen (N)</p>",
+            "<p>14</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Oxygen (O)</p>",
+            "<p>16</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sodium (Na)</p>",
+            "<p>23</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Magnesium (Mg)</p>",
+            "<p>24</p>"
           ]
         }
       ]
@@ -169,11 +205,13 @@
     },
     {
       "type": "paragraph",
-      "id": "dcmkg2h"
+      "id": "dcmkg2h",
+      "content": "Molecule is the smallest particle of an element or compound capable of independent existence."
     },
     {
       "type": "paragraph",
-      "id": "khnc2gx"
+      "id": "khnc2gx",
+      "content": "Atomicity = Number of atoms in a molecule."
     },
     {
       "id": "z7o6flc",
@@ -188,43 +226,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Element</strong></p>",
+            "<p><strong>Atomicity</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Helium (He)</p>",
+            "<p>Monoatomic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Oxygen (O2)</p>",
+            "<p>Diatomic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nitrogen (N2)</p>",
+            "<p>Diatomic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Phosphorus (P4)</p>",
+            "<p>Tetra-atomic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sulphur (S8)</p>",
+            "<p>Polyatomic</p>"
           ]
         }
       ]
@@ -237,20 +275,18 @@
     },
     {
       "type": "paragraph",
-      "id": "8l8k2zw"
+      "id": "8l8k2zw",
+      "content": "Ions are charged particles."
     },
     {
       "type": "paragraph",
-      "id": "7tgr0ta"
+      "id": "7tgr0ta",
+      "content": "Cation: Positively charged ion (Na+)."
     },
     {
       "type": "paragraph",
-      "id": "gvt6ccu"
-    },
-    {
-      "type": "pullQuote",
-      "content": "FINAL REVISION POINTS (RRB QUICK REVISION)",
-      "id": "b1q7baz"
+      "id": "gvt6ccu",
+      "content": "Anion: Negatively charged ion (Cl−)."
     },
     {
       "id": "pi9k1ts",
@@ -260,11 +296,13 @@
     },
     {
       "type": "paragraph",
-      "id": "jl1dfg3"
+      "id": "jl1dfg3",
+      "content": "Molecular mass = Sum of atomic masses of all atoms in a molecule."
     },
     {
       "type": "paragraph",
-      "id": "spp9dos"
+      "id": "spp9dos",
+      "content": "Example: H2O = (2×1) + 16 = 18 u"
     },
     {
       "id": "pi1zjbd",
@@ -274,31 +312,38 @@
     },
     {
       "type": "paragraph",
-      "id": "pya6ti3"
+      "id": "pya6ti3",
+      "content": "Electron discovered by J.J. Thomson."
     },
     {
       "type": "paragraph",
-      "id": "lblmjlf"
+      "id": "lblmjlf",
+      "content": "Proton discovered by Rutherford."
     },
     {
       "type": "paragraph",
-      "id": "u11zls0"
+      "id": "u11zls0",
+      "content": "Neutron discovered by James Chadwick."
     },
     {
       "type": "paragraph",
-      "id": "tb81yqh"
+      "id": "tb81yqh",
+      "content": "Rutherford Model: Nucleus at centre, electrons revolve around it."
     },
     {
       "type": "paragraph",
-      "id": "6w5ylbc"
+      "id": "6w5ylbc",
+      "content": "Bohr Model: Electrons revolve in fixed shells (K, L, M, N)."
     },
     {
       "type": "paragraph",
-      "id": "bk3lkch"
+      "id": "bk3lkch",
+      "content": "Maximum electrons in shell = 2n² (where n = shell number)."
     },
     {
       "type": "paragraph",
-      "id": "pxyhriq"
+      "id": "pxyhriq",
+      "content": "Maximum electrons in outermost shell = 8."
     },
     {
       "type": "comparisonTable",
@@ -332,15 +377,18 @@
     },
     {
       "type": "paragraph",
-      "id": "4h0wrm2"
+      "id": "4h0wrm2",
+      "content": "<strong>9. Atomic Number and Mass Number</strong>"
     },
     {
       "type": "paragraph",
-      "id": "v23p249"
+      "id": "v23p249",
+      "content": "Atomic number = Number of protons."
     },
     {
       "type": "paragraph",
-      "id": "xpw0et3"
+      "id": "xpw0et3",
+      "content": "Mass number = Protons + Neutrons."
     },
     {
       "id": "2bakzb6",
@@ -350,15 +398,18 @@
     },
     {
       "type": "paragraph",
-      "id": "mhhwqnz"
+      "id": "mhhwqnz",
+      "content": "Isotopes: Same atomic number, different mass number (Cl-35, Cl-37)."
     },
     {
       "type": "paragraph",
-      "id": "eahh7yh"
+      "id": "eahh7yh",
+      "content": "Isobars: Same mass number, different atomic number (Ar-40, Ca-40)."
     },
     {
       "type": "paragraph",
-      "id": "tkvie16"
+      "id": "tkvie16",
+      "content": "Isotones: Same number of neutrons."
     },
     {
       "id": "9ykaplv",
@@ -370,9 +421,9 @@
       "id": "cwulg2c",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        " Uranium isotope used as nuclear fuel.",
+        " Cobalt isotope used in cancer treatment.",
+        "Iodine isotope used in goitre treatment."
       ]
     },
     {
@@ -383,13 +434,14 @@
     },
     {
       "type": "paragraph",
-      "id": "0xj9gvl"
+      "id": "0xj9gvl",
+      "content": "Avogadro number = 6.022 × 10^23 particles."
     },
     {
       "id": "jageovu",
       "type": "numberedList",
       "items": [
-        null
+        "<a></a>mole of any substance contains 6.022 × 10^23 particles."
       ]
     },
     {
@@ -405,73 +457,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Key Formula / Rule</strong></p>",
+            "<p><strong>Exam Important Point</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mole Concept</p>",
+            "<p>1 mole = 6.022 × 10^23 particles</p>",
+            "<p>Used in numerical problems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Number of Moles</p>",
+            "<p>Moles = Given Mass / Molar Mass</p>",
+            "<p>Very frequently asked</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Valency</p>",
+            "<p>Combining capacity of atom</p>",
+            "<p>Determines chemical formula</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Electronic Configuration</p>",
+            "<p>2n² rule</p>",
+            "<p>K=2, L=8, M=18, N=32</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Relative Atomic Mass</p>",
+            "<p>Weighted average of isotopes</p>",
+            "<p>Based on carbon-12 scale</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gram Atomic Mass</p>",
+            "<p>Atomic mass expressed in grams</p>",
+            "<p>Equal to 1 mole</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Empirical Formula</p>",
+            "<p>Simplest whole number ratio</p>",
+            "<p>Derived from percentage composition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Molecular Formula</p>",
+            "<p>n × Empirical Formula</p>",
+            "<p>n = Molecular mass / Empirical mass</p>"
           ]
         }
       ]
@@ -493,43 +545,53 @@
     },
     {
       "type": "paragraph",
-      "id": "va36maq"
+      "id": "va36maq",
+      "content": "1. Law of conservation of mass is frequently asked."
     },
     {
       "type": "paragraph",
-      "id": "cuewkm4"
+      "id": "cuewkm4",
+      "content": "2. 1 amu = 1/12th mass of carbon-12."
     },
     {
       "type": "paragraph",
-      "id": "dpifk49"
+      "id": "dpifk49",
+      "content": "3. Atomic number = Protons."
     },
     {
       "type": "paragraph",
-      "id": "k1gubx8"
+      "id": "k1gubx8",
+      "content": "4. Mass number = Protons + Neutrons."
     },
     {
       "type": "paragraph",
-      "id": "vgmmfkx"
+      "id": "vgmmfkx",
+      "content": "5. Maximum electrons in shell = 2n²."
     },
     {
       "type": "paragraph",
-      "id": "zz18q44"
+      "id": "zz18q44",
+      "content": "6. Outermost shell maximum = 8 electrons."
     },
     {
       "type": "paragraph",
-      "id": "kr8n7ao"
+      "id": "kr8n7ao",
+      "content": "7. Avogadro number = 6.022 × 10^23."
     },
     {
       "type": "paragraph",
-      "id": "htd4prp"
+      "id": "htd4prp",
+      "content": "8. Isotopes have same chemical properties."
     },
     {
       "type": "paragraph",
-      "id": "qqm2qs7"
+      "id": "qqm2qs7",
+      "content": "9. H2O molecular mass = 18 u."
     },
     {
       "type": "paragraph",
-      "id": "lkz7ln5"
+      "id": "lkz7ln5",
+      "content": "10. Electron, proton, neutron discoveries are important."
     }
   ],
   "enriched": true

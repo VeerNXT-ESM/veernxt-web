@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "y2dheff"
+      "id": "y2dheff",
+      "content": "Biology has progressed through important discoveries and inventions made by great scientists. These discoveries form the foundation of modern medicine, genetics and biotechnology."
     },
     {
       "id": "uci8m6n",
@@ -63,73 +64,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Discovery/Contribution</strong></p>",
+            "<p><strong>Year (Approx.)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Robert Hooke</p>",
+            "<p>Discovered Cell</p>",
+            "<p>1665</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Antonie van Leeuwenhoek</p>",
+            "<p>Discovered Bacteria</p>",
+            "<p>1674</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Edward Jenner</p>",
+            "<p>Smallpox Vaccine</p>",
+            "<p>1796</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Louis Pasteur</p>",
+            "<p>Rabies Vaccine &amp; Germ Theory</p>",
+            "<p>1885</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gregor Mendel</p>",
+            "<p>Laws of Heredity</p>",
+            "<p>1866</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Charles Darwin</p>",
+            "<p>Theory of Evolution</p>",
+            "<p>1859</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Karl Landsteiner</p>",
+            "<p>Blood Groups (ABO)</p>",
+            "<p>1900</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Watson &amp; Crick</p>",
+            "<p>DNA Double Helix Model</p>",
+            "<p>1953</p>"
           ]
         }
       ]
@@ -142,7 +143,8 @@
     },
     {
       "type": "paragraph",
-      "id": "as5pqcp"
+      "id": "as5pqcp",
+      "content": "Edward Jenner developed the first vaccine against smallpox. Louis Pasteur further developed vaccines for rabies and anthrax. Vaccination stimulates active immunity by introducing weakened or killed pathogens. "
     },
     {
       "id": "6b3zpgx",
@@ -151,49 +153,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Vaccine</strong></p>",
+            "<p><strong>Developed By</strong></p>",
+            "<p><strong>Disease</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Smallpox</p>",
+            "<p>Edward Jenner</p>",
+            "<p>Smallpox</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rabies</p>",
+            "<p>Louis Pasteur</p>",
+            "<p>Rabies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>BCG</p>",
+            "<p>Calmette &amp; Guerin</p>",
+            "<p>Tuberculosis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Polio</p>",
+            "<p>Jonas Salk</p>",
+            "<p>Polio</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>COVID-19</p>",
+            "<p>Various Scientists</p>",
+            "<p>COVID-19</p>"
           ]
         }
       ]
@@ -206,7 +208,8 @@
     },
     {
       "type": "paragraph",
-      "id": "cs9k3tm"
+      "id": "cs9k3tm",
+      "content": "DNA was first isolated by Friedrich Miescher in 1869. The double helix structure was proposed by James Watson and Francis Crick in 1953 based on X-ray diffraction data of Rosalind Franklin."
     },
     {
       "type": "pullQuote",
@@ -221,7 +224,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8btig93"
+      "id": "8btig93",
+      "content": "Karl Landsteiner discovered the ABO blood group system in 1900. He also co-discovered the Rh factor later."
     },
     {
       "id": "8o6du97",
@@ -230,41 +234,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Blood Group</strong></p>",
+            "<p><strong>Antigen Present</strong></p>",
+            "<p><strong>Can Donate To</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>A</p>",
+            "<p>A antigen</p>",
+            "<p>A, AB</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>B</p>",
+            "<p>B antigen</p>",
+            "<p>B, AB</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>AB</p>",
+            "<p>A &amp; B</p>",
+            "<p>AB only</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>O</p>",
+            "<p>None</p>",
+            "<p>All groups (Universal donor)</p>"
           ]
         }
       ]
@@ -277,7 +281,8 @@
     },
     {
       "type": "paragraph",
-      "id": "iux8ocu"
+      "id": "iux8ocu",
+      "content": "Gregor Mendel proposed three laws of heredity based on pea plant experiments."
     },
     {
       "id": "8npp46i",
@@ -286,29 +291,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Law</strong></p>",
+            "<p><strong>Statement</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Law of Dominance</p>",
+            "<p>Dominant trait masks recessive trait.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Law of Segregation</p>",
+            "<p>Alleles separate during gamete formation.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Law of Independent Assortment</p>",
+            "<p>Traits assort independently.</p>"
           ]
         }
       ]
@@ -326,129 +331,129 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Scientist</strong></p>",
+            "<p><strong>Discovery / Contribution</strong></p>",
+            "<p><strong>Year (Approx.)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alexander Fleming</p>",
+            "<p>Discovery of Penicillin</p>",
+            "<p>1928</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Joseph Lister</p>",
+            "<p>Antiseptic Surgery</p>",
+            "<p>1867</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Robert Koch</p>",
+            "<p>Koch’s Postulates &amp; TB Bacteria</p>",
+            "<p>1882</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Camillo Golgi</p>",
+            "<p>Golgi Apparatus</p>",
+            "<p>1898</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Schleiden &amp; Schwann</p>",
+            "<p>Cell Theory</p>",
+            "<p>1838-39</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rudolf Virchow</p>",
+            "<p>Cell arises from pre-existing cell</p>",
+            "<p>1855</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Thomas Hunt Morgan</p>",
+            "<p>Chromosomal Theory of Inheritance</p>",
+            "<p>1910</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Har Gobind Khorana</p>",
+            "<p>Genetic Code Deciphering</p>",
+            "<p>1960s</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Barbara McClintock</p>",
+            "<p>Jumping Genes (Transposons)</p>",
+            "<p>1950</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Frederick Griffith</p>",
+            "<p>Transformation Experiment</p>",
+            "<p>1928</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hershey &amp; Chase</p>",
+            "<p>DNA as Genetic Material</p>",
+            "<p>1952</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rosalind Franklin</p>",
+            "<p>X-ray Diffraction of DNA</p>",
+            "<p>1952</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ian Wilmut</p>",
+            "<p>Cloning of Dolly Sheep</p>",
+            "<p>1996</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Craig Venter</p>",
+            "<p>Human Genome Project Contribution</p>",
+            "<p>2000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alexander von Humboldt</p>",
+            "<p>Father of Biogeography</p>",
+            "<p>1800s</p>"
           ]
         }
       ]
@@ -466,65 +471,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Instrument / Technique</strong></p>",
+            "<p><strong>Invented / Developed By</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Compound Microscope</p>",
+            "<p>Zacharias Janssen</p>",
+            "<p>Magnification of cells</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Electron Microscope</p>",
+            "<p>Ernst Ruska</p>",
+            "<p>Study of ultrastructure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>PCR Technique</p>",
+            "<p>Kary Mullis</p>",
+            "<p>DNA amplification</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Insulin Discovery</p>",
+            "<p>Banting &amp; Best</p>",
+            "<p>Treatment of Diabetes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IVF Technique</p>",
+            "<p>Robert Edwards</p>",
+            "<p>Test tube baby</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CRISPR-Cas9</p>",
+            "<p>Doudna &amp; Charpentier</p>",
+            "<p>Gene editing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Stethoscope</p>",
+            "<p>Rene Laennec</p>",
+            "<p>Heart sound examination</p>"
           ]
         }
       ]
@@ -537,7 +542,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fgk5waw"
+      "id": "fgk5waw",
+      "content": "1. Robert Hooke discovered the cell in cork."
     },
     {
       "type": "examAlert",
@@ -550,23 +556,28 @@
     },
     {
       "type": "paragraph",
-      "id": "4yi7gf0"
+      "id": "4yi7gf0",
+      "content": "2. Edward Jenner developed the first vaccine."
     },
     {
       "type": "paragraph",
-      "id": "l2a2cz6"
+      "id": "l2a2cz6",
+      "content": "3. Watson and Crick proposed the DNA double helix model."
     },
     {
       "type": "paragraph",
-      "id": "zo32xiv"
+      "id": "zo32xiv",
+      "content": "4. Karl Landsteiner discovered ABO blood groups."
     },
     {
       "type": "paragraph",
-      "id": "54yyfqy"
+      "id": "54yyfqy",
+      "content": "5. Mendel is known as the Father of Genetics."
     },
     {
       "type": "paragraph",
-      "id": "y0ukffi"
+      "id": "y0ukffi",
+      "content": "6. Louis Pasteur proposed the Germ Theory of Disease."
     }
   ],
   "enriched": true

@@ -10,36 +10,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Latitudes</strong></p>",
+            "<p><strong>Longitudes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Run east–west</p>",
+            "<p>Run north–south</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Parallel</p>",
+            "<p>Converge at poles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Measure north–south distance</p>",
+            "<p>Measure east–west distance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Used to define climate zones</p>",
+            "<p>Used for time calculation</p>"
           ]
         }
       ]

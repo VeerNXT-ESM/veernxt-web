@@ -1,0 +1,84 @@
+{
+  "title": "Chapter 6: Plate Tectonics and Continental Drift",
+  "order": 82,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Plate tectonics is the fundamental theory explaining the structure and dynamics of the Earth's surface. It links continental movement, ocean basin formation, earthquakes, volcanoes, mountain building, and geological hazards into a single framework. The lithosphere is divided into rigid plates that move slowly over the semi-fluid asthenosphere due to internal heat-driven processes.",
+      "id": "xct3sai"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Plate tectonics is the fundamental theory explaining the structure and dynamics of the Earth's surface.",
+      "id": "s6u5utg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Lithosphere",
+        "Asthenosphere"
+      ],
+      "rows": [
+        [
+          "Physical State",
+          "Rigid",
+          "Semi-fluid"
+        ],
+        [
+          "Role in Tectonics",
+          "Divided into moving plates",
+          "Sub-surface layer over which plates move"
+        ]
+      ],
+      "id": "977o2na"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Framework",
+          "value": "Plate Tectonics",
+          "icon": "book"
+        },
+        {
+          "label": "Outer Shell",
+          "value": "Rigid Lithosphere",
+          "icon": "info"
+        },
+        {
+          "label": "Sub-surface Layer",
+          "value": "Semi-fluid Asthenosphere",
+          "icon": "info"
+        },
+        {
+          "label": "Driving Mechanism",
+          "value": "Internal Heat",
+          "icon": "check"
+        }
+      ],
+      "id": "u608tfo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The lithosphere consists of rigid plates, whereas the asthenosphere is semi-fluid.",
+        "Internal heat-driven processes are the primary mechanism behind plate movements.",
+        "Plate tectonics unifies geological hazards, mountain building, and continental movement into a single theoretical framework."
+      ],
+      "id": "5b2y8ta"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Plate tectonics is the unifying framework explaining Earth's surface dynamics and structure.",
+        "It connects continental movement, ocean basin formation, earthquakes, volcanoes, and mountain building.",
+        "The Earth's rigid lithosphere is broken into plates that move over the semi-fluid asthenosphere.",
+        "Plate movements are driven by internal heat-driven processes within the Earth."
+      ],
+      "id": "6o56j1g"
+    }
+  ],
+  "enriched": true
+}

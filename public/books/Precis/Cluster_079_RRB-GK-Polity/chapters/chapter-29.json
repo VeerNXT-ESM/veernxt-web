@@ -1,0 +1,57 @@
+{
+  "title": "13. Overseas Citizen of India (OCI)",
+  "order": 29,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "OCI is not full citizenship.<br/>OCI card holders:<br/>• Do not have voting rights<br/>• Cannot hold constitutional posts<br/>• Cannot purchase agricultural land<br/>This is a very common trap question in exams.",
+      "id": "vmqttep"
+    },
+    {
+      "type": "pullQuote",
+      "content": "OCI is not full citizenship.",
+      "id": "jpl5jg9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Citizenship Status",
+          "value": "Not Full",
+          "icon": "info"
+        },
+        {
+          "label": "Voting Rights",
+          "value": "None",
+          "icon": "check"
+        },
+        {
+          "label": "Agri Land Purchase",
+          "value": "Prohibited",
+          "icon": "book"
+        }
+      ],
+      "id": "c13jmam"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently set trap questions around OCI being mistaken for full citizenship.",
+        "Remember the three key restrictions for OCI card holders: no voting rights, no constitutional posts, and no agricultural land purchases."
+      ],
+      "id": "nbzgwpe"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "OCI does not confer full citizenship status.",
+        "OCI card holders do not possess voting rights.",
+        "OCI card holders are barred from holding constitutional posts.",
+        "OCI card holders cannot purchase agricultural land."
+      ],
+      "id": "axsjswf"
+    }
+  ],
+  "enriched": true
+}

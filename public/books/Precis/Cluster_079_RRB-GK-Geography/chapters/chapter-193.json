@@ -1,0 +1,104 @@
+{
+  "title": "2. Factors Controlling Natural Vegetation",
+  "order": 193,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Vegetation growth depends on multiple interacting physical and biological factors.",
+      "id": "ignzaf6"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Vegetation growth depends on multiple interacting physical and biological factors.",
+      "id": "yu6od7c"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Factor Types",
+          "value": "Physical & Biological",
+          "icon": "check"
+        },
+        {
+          "label": "Interaction Mode",
+          "value": "Interacting Factors",
+          "icon": "info"
+        },
+        {
+          "label": "Subject",
+          "value": "Vegetation Growth",
+          "icon": "book"
+        }
+      ],
+      "id": "m0x6w7c"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Vegetation growth is reliant on multiple controlling factors.",
+        "The factors influencing growth are categorized into physical and biological types.",
+        "Growth outcomes stem from the interaction among these physical and biological elements."
+      ],
+      "id": "3x4rvrv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Note that both physical and biological factors jointly control natural vegetation.",
+        "Exams frequently test the dual physical and biological dependencies of vegetation growth."
+      ],
+      "id": "nghu2x8"
+    },
+    {
+      "id": "e1bv6ef",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Detailed Role</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Climate</p>",
+            "<p>Temperature determines growing season while rainfall controls density of vegetation. Areas with &gt;200 cm rainfall support evergreen forests, whereas &lt;25 cm rainfall leads to deserts.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Soil</p>",
+            "<p>Soil fertility, depth, texture and drainage directly affect root penetration and nutrient availability.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Relief</p>",
+            "<p>Altitude influences temperature; slopes affect moisture retention. South-facing slopes in the Northern Hemisphere receive more sunlight.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Groundwater</p>",
+            "<p>Regions with shallow water tables support lush vegetation even with moderate rainfall.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Biotic Factors</p>",
+            "<p>Human interference, grazing, pests and forest fires modify vegetation patterns.</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

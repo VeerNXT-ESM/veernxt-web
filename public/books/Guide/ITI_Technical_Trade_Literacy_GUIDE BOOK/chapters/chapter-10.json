@@ -42,11 +42,13 @@
     },
     {
       "type": "paragraph",
-      "id": "ds0x86j"
+      "id": "ds0x86j",
+      "content": "Engineering drawing is the graphical language used by engineers and technicians to communicate ideas, designs, and technical information. It represents objects, machines, and structures using lines, symbols, dimensions, and standardized conventions. Engineering drawings are essential in manufacturing, construction, maintenance, and technical trades such as fitting, machining, and electrical work."
     },
     {
       "type": "paragraph",
-      "id": "cdyx3s8"
+      "id": "cdyx3s8",
+      "content": "In technical trades, engineering drawings help workers understand the exact shape, size, and assembly of machine parts. Accurate drawings ensure that components are manufactured and assembled correctly."
     },
     {
       "id": "2o14lsk",
@@ -58,12 +60,12 @@
       "id": "a6fwu9i",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Communicates technical information clearly",
+        "Shows exact dimensions and shapes of components",
+        "Helps in manufacturing and assembly of parts",
+        "Reduces errors in production",
+        "Provides a permanent technical record",
+        "Used as a universal language for engineers and technicians"
       ]
     },
     {
@@ -79,41 +81,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Orthographic Drawing</p>",
+            "<p>Shows different views of an object</p>",
+            "<p>Front view, Top view</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Isometric Drawing</p>",
+            "<p>3D representation of objects</p>",
+            "<p>Machine parts drawing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Assembly Drawing</p>",
+            "<p>Shows how different parts fit together</p>",
+            "<p>Machine assembly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Detail Drawing</p>",
+            "<p>Shows detailed view of a single component</p>",
+            "<p>Bolt or shaft drawing</p>"
           ]
         }
       ]
@@ -131,72 +133,67 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Instrument</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Drawing Board</p>",
+            "<p>Provides flat surface for drawing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>T-Square</p>",
+            "<p>Drawing horizontal lines</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Set Squares</p>",
+            "<p>Drawing vertical and inclined lines</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Compass</p>",
+            "<p>Drawing circles and arcs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Divider</p>",
+            "<p>Transferring measurements</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Protractor</p>",
+            "<p>Measuring angles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pencils</p>",
+            "<p>Drawing lines and lettering</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Eraser</p>",
+            "<p>Removing unwanted lines</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Care of Drawing Instruments",
-      "id": "0jj6d70"
     },
     {
       "id": "hzyyjyd",
@@ -211,57 +208,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Line Type</strong></p>",
+            "<p><strong>Appearance</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Object Line</p>",
+            "<p>Thick continuous line</p>",
+            "<p>Visible edges of object</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hidden Line</p>",
+            "<p>Short dashed line</p>",
+            "<p>Hidden edges</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Center Line</p>",
+            "<p>Long dash-short dash</p>",
+            "<p>Axis of symmetry</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dimension Line</p>",
+            "<p>Thin line with arrowheads</p>",
+            "<p>Shows measurement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Extension Line</p>",
+            "<p>Thin line</p>",
+            "<p>Extends from object to dimension</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Leader Line</p>",
+            "<p>Thin line with arrow</p>",
+            "<p>Indicates notes or labels</p>"
           ]
         }
       ]
@@ -274,17 +271,18 @@
     },
     {
       "type": "paragraph",
-      "id": "wxi4f5i"
+      "id": "wxi4f5i",
+      "content": "Dimensioning is the process of indicating the size and location of features on a drawing. It provides numerical values for length, diameter, radius, and angles."
     },
     {
       "id": "05i583i",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Dimensions should be clear and easy to read",
+        "Do not repeat dimensions unnecessarily",
+        "Dimension lines should not cross each other",
+        "Arrowheads should touch the extension lines",
+        "Units are usually in millimetres unless specified"
       ]
     },
     {
@@ -295,7 +293,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gld8aq1"
+      "id": "gld8aq1",
+      "content": "Orthographic projection is a method of representing a three-dimensional object using two-dimensional views. Each view shows the object from a different direction."
     },
     {
       "id": "j4pepal",
@@ -304,29 +303,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>View</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Front View</p>",
+            "<p>Shows height and width</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Top View (Plan)</p>",
+            "<p>Shows width and depth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Side View</p>",
+            "<p>Shows height and depth</p>"
           ]
         }
       ]
@@ -339,16 +338,17 @@
     },
     {
       "type": "paragraph",
-      "id": "gjr7mim"
+      "id": "gjr7mim",
+      "content": "Lettering is used to write titles, notes, dimensions, and labels on drawings. Good lettering should be uniform, clear, and easy to read."
     },
     {
       "id": "toqt5e1",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Letters should be evenly spaced",
+        "Use capital letters for clarity",
+        "Maintain uniform height and thickness",
+        "Use standard lettering styles"
       ]
     },
     {
@@ -372,43 +372,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ø</p>",
+            "<p>Diameter</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>R</p>",
+            "<p>Radius</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>°</p>",
+            "<p>Degree (angle)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>⌀</p>",
+            "<p>Circular dimension</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>⊥</p>",
+            "<p>Perpendicular</p>"
           ]
         }
       ]
@@ -423,11 +423,11 @@
       "id": "empidnt",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Keep instruments clean and dry",
+        "Do not drop precision instruments",
+        "Store instruments properly in boxes",
+        "Sharpen pencils regularly",
+        "Handle instruments carefully"
       ]
     },
     {
@@ -440,11 +440,11 @@
       "id": "u8pj67i",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Engineering drawing is the language of engineers.",
+        "Object lines represent visible edges of objects.",
+        "Hidden lines represent invisible edges.",
+        "Orthographic projection shows front, top, and side views.",
+        "Dimensioning provides the size of objects."
       ]
     }
   ],

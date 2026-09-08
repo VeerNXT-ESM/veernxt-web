@@ -10,43 +10,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Established</p>",
+            "<p>1 January 2015</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Created By</p>",
+            "<p>Union Cabinet Resolution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Type</p>",
+            "<p>Executive Body (Non-Constitutional)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Replaced</p>",
+            "<p>Planning Commission</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Headquarters</p>",
+            "<p>New Delhi</p>"
           ]
         }
       ]
@@ -130,7 +130,8 @@
     },
     {
       "type": "paragraph",
-      "id": "56mhe94"
+      "id": "56mhe94",
+      "content": "Unlike the Planning Commission, NITI Aayog does not have the power to allocate funds to states. It functions primarily as a policy advisory institution."
     }
   ],
   "enriched": true

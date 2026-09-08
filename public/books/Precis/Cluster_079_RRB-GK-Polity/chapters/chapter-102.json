@@ -1,0 +1,149 @@
+{
+  "title": "Writs Issued by Supreme Court",
+  "order": 102,
+  "blocks": [
+    {
+      "id": "rz9ksqq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Writ</strong></p>",
+            "<p><strong>Purpose</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Habeas Corpus</p>",
+            "<p>Produce detained person before court</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mandamus</p>",
+            "<p>Order public authority to perform duty</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Prohibition</p>",
+            "<p>Prevent lower court from exceeding jurisdiction</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Certiorari</p>",
+            "<p>Transfer case to higher court</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Quo Warranto</p>",
+            "<p>Challenge illegal holding of public office</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Article 32 is the very soul of the Constitution and the very heart of it.",
+      "id": "f7a5wmu"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Writ Name",
+        "Literal Meaning",
+        "Against Whom Issued",
+        "Key Purpose"
+      ],
+      "rows": [
+        [
+          "Habeas Corpus",
+          "To have the body of",
+          "Public authorities & Private individuals",
+          "Protects personal liberty against arbitrary detention"
+        ],
+        [
+          "Mandamus",
+          "We command",
+          "Public officials, lower courts, bodies",
+          "Directs performance of a mandatory legal duty"
+        ],
+        [
+          "Prohibition",
+          "To forbid",
+          "Judicial and quasi-judicial bodies only",
+          "Preventive; stops lower court from exceeding jurisdiction"
+        ],
+        [
+          "Certiorari",
+          "To be certified",
+          "Judicial, quasi-judicial & administrative bodies",
+          "Preventive & curative; quashes illegal lower court orders"
+        ],
+        [
+          "Quo-Warranto",
+          "By what authority?",
+          "Persons occupying public offices of substance",
+          "Prevents illegal usurpation of a public office"
+        ]
+      ],
+      "id": "909amry"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Supreme Court Writ Jurisdiction",
+          "value": "Article 32",
+          "icon": "book"
+        },
+        {
+          "label": "High Court Writ Jurisdiction",
+          "value": "Article 226",
+          "icon": "book"
+        },
+        {
+          "label": "Types of Writs",
+          "value": "5 Writs",
+          "icon": "check"
+        },
+        {
+          "label": "Constitutional Status",
+          "value": "Heart & Soul",
+          "icon": "award"
+        }
+      ],
+      "id": "mwme9qs"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Mandamus cannot be issued against private individuals, the President of India, or State Governors.",
+        "Prohibition is purely preventive, whereas Certiorari is both preventive and curative in nature.",
+        "Supreme Court writ jurisdiction under Article 32 is a Fundamental Right itself, whereas High Court writ jurisdiction under Article 226 is discretionary."
+      ],
+      "id": "f3khem2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 32 guarantees the right to move the Supreme Court for the enforcement of Fundamental Rights.",
+        "The Supreme Court can issue five types of writs: Habeas Corpus, Mandamus, Prohibition, Certiorari, and Quo-Warranto.",
+        "Habeas Corpus is the only writ that can be issued against both public authorities and private individuals.",
+        "High Courts under Article 226 have a wider writ jurisdiction than the Supreme Court under Article 32, as High Courts can issue writs for ordinary legal rights as well.",
+        "Quo-Warranto can be sought by any interested person, even if they are not the aggrieved party."
+      ],
+      "id": "f0151h7"
+    }
+  ],
+  "enriched": true
+}

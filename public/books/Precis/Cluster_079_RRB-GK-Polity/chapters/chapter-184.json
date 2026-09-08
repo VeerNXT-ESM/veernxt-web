@@ -1,0 +1,126 @@
+{
+  "title": "Independence of Election Commission",
+  "order": 184,
+  "blocks": [
+    {
+      "id": "bmq11m1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Safeguard</strong></p>",
+            "<p><strong>Importance</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Security of tenure</p>",
+            "<p>Prevents arbitrary removal</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Removal like Supreme Court judge</p>",
+            "<p>Ensures neutrality</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Expenses charged on Consolidated Fund of India</p>",
+            "<p>Financial independence</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Service conditions protected</p>",
+            "<p>Cannot be altered after appointment</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Chief Election Commissioner is provided with the security of tenure and cannot be removed from his office except in the same manner and on the same grounds as a judge of the Supreme Court.",
+      "id": "auoqcl7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Chief Election Commissioner (CEC)",
+        "Other Election Commissioners"
+      ],
+      "rows": [
+        [
+          "Security of Tenure",
+          "Guaranteed by Constitution (Removed like SC Judge)",
+          "Not explicitly guaranteed; removed on CEC recommendation"
+        ],
+        [
+          "Removal Procedure",
+          "Requires Parliamentary resolution by special majority",
+          "Removed by President on recommendation of CEC"
+        ],
+        [
+          "Powers & Salary",
+          "Equal to other Election Commissioners & SC Judge",
+          "Equal to Chief Election Commissioner & SC Judge"
+        ]
+      ],
+      "id": "y3bkf9h"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 324",
+          "icon": "book"
+        },
+        {
+          "label": "CEC Removal Standard",
+          "value": "SC Judge Ground",
+          "icon": "award"
+        },
+        {
+          "label": "Removal Authority",
+          "value": "President",
+          "icon": "check"
+        },
+        {
+          "label": "Term Limit in Constitution",
+          "value": "Not Specified",
+          "icon": "info"
+        }
+      ],
+      "id": "pxkmzfv"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The CEC does not hold office during the pleasure of the President, despite being appointed by the President.",
+        "Other Election Commissioners can be removed by the President only on the recommendation of the Chief Election Commissioner.",
+        "A key constitutional flaw frequently tested is that the Constitution has not debarred retiring Election Commissioners from further government appointments."
+      ],
+      "id": "io3rhb3"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Article 324 provides constitutional safeguards to ensure the independent and impartial functioning of the Election Commission.",
+        "The Chief Election Commissioner (CEC) is provided with security of tenure and cannot be removed except in the same manner and on the same grounds as a judge of the Supreme Court.",
+        "The service conditions of the Chief Election Commissioner cannot be varied to his disadvantage after his appointment.",
+        "Other Election Commissioners or Regional Commissioners cannot be removed from office except on the recommendation of the Chief Election Commissioner.",
+        "The Constitution has not prescribed qualifications (legal, educational, administrative) for members nor debarred retiring commissioners from further government appointments."
+      ],
+      "id": "ohkgfyr"
+    }
+  ],
+  "enriched": true
+}

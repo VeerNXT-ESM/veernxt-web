@@ -1,0 +1,102 @@
+{
+  "title": "6. Core — Detailed Study",
+  "order": 58,
+  "blocks": [
+    {
+      "id": "bwqh6qd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Depth (km)</strong></p>",
+            "<p><strong>State</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Outer Core</p>",
+            "<p>2900–5150</p>",
+            "<p>Liquid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Inner Core</p>",
+            "<p>5150–6371</p>",
+            "<p>Solid</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Composition",
+          "value": "Iron & Nickel",
+          "icon": "info"
+        },
+        {
+          "label": "Temperature",
+          "value": "4000°C–6000°C",
+          "icon": "clock"
+        },
+        {
+          "label": "Key Phenomenon",
+          "value": "Geodynamo Effect",
+          "icon": "check"
+        },
+        {
+          "label": "Generated Field",
+          "value": "Magnetic Field",
+          "icon": "award"
+        }
+      ],
+      "id": "vp3o7wu"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Outer core generates Earth's magnetic field (geodynamo effect).",
+      "id": "iginq9c"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth's core is mainly composed of iron and nickel.",
+        "The temperature of the core ranges from 4000°C to 6000°C.",
+        "The outer core generates the Earth's magnetic field through the geodynamo effect."
+      ],
+      "id": "sd5a5tr"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Mainly composed of iron and nickel.",
+      "id": "qd29wol"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions often ask about the primary composition of the core: Iron and Nickel.",
+        "The source of Earth's magnetic field is the outer core (via the geodynamo effect).",
+        "Temperature range of the core (4000°C–6000°C) is a standard factual point tested in general studies."
+      ],
+      "id": "jfsf93q"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Temperature: 4000°C–6000°C.",
+      "id": "1nd9cx2"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Outer core generates Earth's magnetic field (geodynamo effect).",
+      "id": "niwt67z"
+    }
+  ],
+  "enriched": true
+}

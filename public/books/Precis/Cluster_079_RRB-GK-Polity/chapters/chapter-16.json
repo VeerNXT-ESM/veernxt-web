@@ -1,0 +1,131 @@
+{
+  "title": "Union Territories vs States",
+  "order": 16,
+  "blocks": [
+    {
+      "id": "lhzevtm",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>States</strong></p>",
+            "<p><strong>Union Territories</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Have elected governments</p>",
+            "<p>Administered by President through Administrator/LG</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Enjoy more autonomy</p>",
+            "<p>Less autonomy</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Have their own Chief Minister</p>",
+            "<p>Some UTs have CM (Delhi, Puducherry)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Federal units</p>",
+            "<p>Directly controlled by Centre</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Union Territories are administrative divisions directly governed by the Central Government of India.",
+      "id": "c9kbl95"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "States",
+        "Union Territories"
+      ],
+      "rows": [
+        [
+          "Relationship with Centre",
+          "Federal relationship with constitutional autonomy",
+          "Unitary relationship under direct central control"
+        ],
+        [
+          "Executive Head",
+          "Governor (Constitutional Head)",
+          "Administrator / Lieutenant Governor (Agent of President)"
+        ],
+        [
+          "Legislative Powers",
+          "Exclusive jurisdiction over the State List",
+          "Parliament can legislate on all lists including State List"
+        ],
+        [
+          "Rajya Sabha Representation",
+          "All States are represented",
+          "Only Delhi, Puducherry, and J&K have representation"
+        ]
+      ],
+      "id": "2098lsw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total States",
+          "value": "28",
+          "icon": "book"
+        },
+        {
+          "label": "Union Territories",
+          "value": "8",
+          "icon": "award"
+        },
+        {
+          "label": "Constitutional Part",
+          "value": "Part VIII",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Article",
+          "value": "Article 239",
+          "icon": "calendar"
+        }
+      ],
+      "id": "captz4a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The 69th Constitutional Amendment Act of 1991 granted special status to Delhi, creating Article 239AA.",
+        "Parliament can make laws on all three lists (including the State List) for Union Territories without requiring special authorization.",
+        "High Court jurisdiction over Union Territories is established directly by Parliament through law."
+      ],
+      "id": "q6i3uzs"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "States maintain a federal relationship with the Centre with autonomous powers distributed under the Seventh Schedule.",
+        "Union Territories have a unitary relationship with the Centre and are administered directly by the President through an Administrator or Lieutenant Governor.",
+        "Parliament possesses the authority to enact legislation on any subject in the State List specifically for Union Territories.",
+        "Out of eight Union Territories, only Delhi, Puducherry, and Jammu & Kashmir are provided with elected Legislative Assemblies.",
+        "The Governor of a State is a constitutional head, whereas the Administrator of a UT is an agent of the President."
+      ],
+      "id": "ps8purd"
+    }
+  ],
+  "enriched": true
+}

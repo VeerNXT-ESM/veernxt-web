@@ -48,82 +48,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Order</strong></p>",
+            "<p><strong>Common Name</strong></p>",
+            "<p><strong>Examples in Agriculture</strong></p>",
+            "<p><strong>Mouth Parts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Coleoptera</p>",
+            "<p>Beetles</p>",
+            "<p>Aphid predators (Coccinellids); grain weevils; bark beetles</p>",
+            "<p>Chewing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Lepidoptera</p>",
+            "<p>Moths &amp; Butterflies</p>",
+            "<p>Stem borers, armyworms, bollworms, caterpillars</p>",
+            "<p>Siphoning (adults); Chewing (larvae)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Diptera</p>",
+            "<p>Flies</p>",
+            "<p>Fruit flies (Bactrocera), Hessian fly, Leaf miners, Gall midges</p>",
+            "<p>Sponging/Piercing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hemiptera</p>",
+            "<p>True Bugs</p>",
+            "<p>Aphids, scale insects, leafhoppers, whiteflies, mealybugs</p>",
+            "<p>Piercing-sucking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Orthoptera</p>",
+            "<p>Grasshoppers/Locusts</p>",
+            "<p>Desert Locust (Schistocerca gregaria), Army worm, Crickets</p>",
+            "<p>Chewing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Thysanoptera</p>",
+            "<p>Thrips</p>",
+            "<p>Chilli thrips, Tea thrips, Onion thrips; spread tospoviruses</p>",
+            "<p>Rasping-sucking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Acarina</p>",
+            "<p>Mites (not insects)</p>",
+            "<p>Red spider mite, Gall mite, Eriophyid mite; sucking damage</p>",
+            "<p>Piercing-sucking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Isoptera</p>",
+            "<p>Termites</p>",
+            "<p>Major soil insects; attack roots and woody material; social insects</p>",
+            "<p>Chewing</p>"
           ]
         }
       ]
@@ -146,37 +146,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Stages</strong></p>",
+            "<p><strong>Examples</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ametabolous (no metamorphosis)</p>",
+            "<p>Egg → Nymph (like adult) → Adult</p>",
+            "<p>Silverfish, springtails</p>",
+            "<p>Rare in pest species</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hemimetabolous (Incomplete)</p>",
+            "<p>Egg → Nymph → Adult; nymph resembles adult</p>",
+            "<p>Locusts, aphids, leafhoppers, bugs</p>",
+            "<p>All stages can be pests; no pupal stage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Holometabolous (Complete)</p>",
+            "<p>Egg → Larva → Pupa → Adult; larva unlike adult</p>",
+            "<p>Butterflies, beetles, flies, wasps, moths</p>",
+            "<p>Larval stage is usually the damaging stage</p>"
           ]
         }
       ]
@@ -194,111 +194,111 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Pest</strong></p>",
+            "<p><strong>Crop</strong></p>",
+            "<p><strong>Order/Type</strong></p>",
+            "<p><strong>Damage</strong></p>",
+            "<p><strong>Management</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Rice Stem Borer (Yellow/Striped)</p>",
+            "<p>Rice</p>",
+            "<p>Lepidoptera (Scirpophaga incertulas)</p>",
+            "<p>Dead heart (vegetative); White ear (reproductive); holes in stem</p>",
+            "<p>Carbofuran granules; Light trap; resistant varieties (TN-1)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Brown Planthopper (BPH)</p>",
+            "<p>Rice</p>",
+            "<p>Hemiptera (Nilaparvata lugens)</p>",
+            "<p>Hopperburn — yellowing and drying; spreads grassy stunt virus</p>",
+            "<p>Imidacloprid, Buprofezin; resistant varieties; avoid resurgence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Gall Midge</p>",
+            "<p>Rice</p>",
+            "<p>Diptera (Orseolia oryzae)</p>",
+            "<p>Silver shoot — tiller transforms into tubular leaf; no grain</p>",
+            "<p>Systemic insecticides; resistant varieties (Vikas, Sasyasree)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Aphids</p>",
+            "<p>Wheat, mustard, vegetables</p>",
+            "<p>Hemiptera (Rhopalosiphum padi, Lipaphis erysimi)</p>",
+            "<p>Suck sap; honeydew promotes sooty mould; virus vectors</p>",
+            "<p>Imidacloprid seed treatment; Dimethoate foliar; natural enemies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>American Bollworm</p>",
+            "<p>Cotton, tomato, chickpea</p>",
+            "<p>Lepidoptera (Helicoverpa armigera)</p>",
+            "<p>Bores into bolls, pods, fruits; polyphagous; pesticide-resistant</p>",
+            "<p>NPV (nuclear polyhedrosis virus); Bt cotton; Spinosad; pheromone traps</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Whitefly</p>",
+            "<p>Cotton, tomato, cucurbits</p>",
+            "<p>Hemiptera (Bemisia tabaci)</p>",
+            "<p>Sucks sap; secretes honeydew; vector of Cotton Leaf Curl Virus (CLCuV)</p>",
+            "<p>Imidacloprid; yellow sticky traps; reflective mulches; neem</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Fall Armyworm (FAW)</p>",
+            "<p>Maize</p>",
+            "<p>Lepidoptera (Spodoptera frugiperda)</p>",
+            "<p>Feeds on whorl leaves; window pane damage; invasive since 2018</p>",
+            "<p>Emamectin benzoate; Spinetoram; Bt maize; early sowing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Desert Locust</p>",
+            "<p>All field crops</p>",
+            "<p>Orthoptera (Schistocerca gregaria)</p>",
+            "<p>Swarms eat all vegetation; declared national emergency when outbreak</p>",
+            "<p>Chlorpyrifos, Malathion aerial spray; FAO coordination</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Fruit Fly</p>",
+            "<p>Mango, guava, cucurbits</p>",
+            "<p>Diptera (Bactrocera dorsalis)</p>",
+            "<p>Maggots inside fruit; rotting; major quarantine pest</p>",
+            "<p>Cue-lure bait traps; protein bait; cover sprays; vapour heat treatment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Termites</p>",
+            "<p>Groundnut, sugarcane, wheat</p>",
+            "<p>Isoptera</p>",
+            "<p>Attack roots and underground parts; hollow plants</p>",
+            "<p>Chlorpyrifos soil treatment; treated seeds; Beauveria bassiana</p>"
           ]
         }
       ]
@@ -311,7 +311,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wio68ee"
+      "id": "wio68ee",
+      "content": "Integrated Pest Management (IPM) is an ecosystem-based strategy that focuses on long-term prevention of pests through biological control, habitat manipulation, resistant varieties, and use of pesticides only when necessary."
     },
     {
       "id": "cq27n64",
@@ -332,12 +333,12 @@
       "id": "h0kcr9t",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<strong>Deep summer ploughing, crop rotation, trap crops, proper spacing, destruction of crop residue: </strong>Cultural Control",
+        "<strong>Hand-picking, light traps, sticky traps, pheromone traps, bird perches: </strong>Mechanical Control",
+        "<strong>Trichogramma (egg parasitoid), Chrysoperla (lacewing predator), Coccinella, NPV, Bacillus thuringiensis (Bt): </strong>Biological Control",
+        "<strong>Last resort; selective pesticides; correct dose and timing; avoid broad-spectrum: </strong>Chemical Control",
+        "<strong>Use of resistant varieties; most sustainable approach: </strong>Host Plant Resistance (HPR)",
+        "<strong>Plant Quarantine Act; import/export restrictions; pest-free certification: </strong>Regulatory Control"
       ]
     },
     {
@@ -353,73 +354,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Class</strong></p>",
+            "<p><strong>Mode of Action</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Organochlorines (OC)</p>",
+            "<p>Nerve toxin (disrupts Na channels)</p>",
+            "<p>DDT, Endosulfan (banned), Lindane — mostly banned now</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Organophosphates (OP)</p>",
+            "<p>Inhibit AChE (acetylcholinesterase)</p>",
+            "<p>Chlorpyrifos, Monocrotophos, Dimethoate, Profenophos</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Carbamates</p>",
+            "<p>Inhibit AChE (reversible)</p>",
+            "<p>Carbaryl (Sevin), Carbofuran, Methomyl</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pyrethroids</p>",
+            "<p>Disrupt Na channels (fast knockdown)</p>",
+            "<p>Cypermethrin, Deltamethrin, Lambda-cyhalothrin, Permethrin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Neonicotinoids</p>",
+            "<p>Act on nicotinic acetylcholine receptors</p>",
+            "<p>Imidacloprid, Thiamethoxam, Clothianidin — systemic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bt toxins (Biological)</p>",
+            "<p>Disrupt midgut membrane; Lepidoptera-specific</p>",
+            "<p>Bt formulations; Bt cotton (Cry1Ac gene)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Spinosyns</p>",
+            "<p>Acts on nicotinic receptor and GABA receptor</p>",
+            "<p>Spinosad, Spinetoram — derived from Saccharopolyspora spinosa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IGRs (Insect Growth Regulators)</p>",
+            "<p>Disrupt moulting (chitin inhibitors) or juvenile hormone mimics</p>",
+            "<p>Diflubenzuron, Buprofezin, Lufenuron</p>"
           ]
         }
       ]

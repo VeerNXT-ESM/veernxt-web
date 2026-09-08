@@ -1,0 +1,117 @@
+{
+  "title": "3. Earth's Axis and Axial Tilt",
+  "order": 20,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Earth rotates around an imaginary axis tilted at 23.5° from the vertical. This tilt is the SINGLE MOST IMPORTANT reason seasons exist.",
+      "id": "tdo1bou"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Axial Tilt Angle",
+          "value": "23.5°",
+          "icon": "info"
+        },
+        {
+          "label": "Main Cause",
+          "value": "Seasons",
+          "icon": "award"
+        },
+        {
+          "label": "No-Tilt Result",
+          "value": "Equal Sunlight",
+          "icon": "check"
+        }
+      ],
+      "id": "u47z8wi"
+    },
+    {
+      "type": "pullQuote",
+      "content": "This tilt is the SINGLE MOST IMPORTANT reason seasons exist.",
+      "id": "rf02yhy"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Scenario",
+        "Sunlight Distribution",
+        "Seasonal Variation"
+      ],
+      "rows": [
+        [
+          "Tilted Axis (23.5°)",
+          "Unequal / Varies throughout the year",
+          "Seasons exist"
+        ],
+        [
+          "No Tilt (0°)",
+          "Nearly equal throughout the year",
+          "No seasonal variation"
+        ]
+      ],
+      "id": "afgs69u"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Earth rotates around an imaginary axis tilted at 23.5° from the vertical.",
+        "The 23.5° tilt is the single most important reason seasons exist on Earth.",
+        "Without an axial tilt, every location on Earth would receive nearly equal sunlight throughout the year, eliminating seasonal variation."
+      ],
+      "id": "70umfi1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Earth's axis is tilted at 23.5° from the vertical (frequently asked value in geography exams).",
+        "Axial tilt—not distance from the Sun—is the primary cause of seasonal variation.",
+        "If Earth had no axial tilt, there would be no seasons due to equal sunlight distribution throughout the year."
+      ],
+      "id": "pmf1knb"
+    },
+    {
+      "type": "paragraph",
+      "content": "If Earth had no tilt, every place would receive nearly equal sunlight throughout the year — resulting in no seasonal variation.",
+      "id": "kwdgano"
+    },
+    {
+      "id": "ur81dtc",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Exam Fact</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Axial Tilt</p>",
+            "<p>23.5°</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Angle with orbital plane</p>",
+            "<p>66.5°</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Direction</p>",
+            "<p>West to East rotation</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

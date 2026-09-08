@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "udv6erk"
+      "id": "udv6erk",
+      "content": "Earth rotates around an imaginary axis tilted at 23.5° from the vertical. This tilt is the SINGLE MOST IMPORTANT reason seasons exist."
     },
     {
       "type": "statStrip",
@@ -87,7 +88,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1qw4ida"
+      "id": "1qw4ida",
+      "content": "If Earth had no tilt, every place would receive nearly equal sunlight throughout the year — resulting in no seasonal variation."
     },
     {
       "id": "hivdw87",
@@ -96,29 +98,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Exam Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Axial Tilt</p>",
+            "<p>23.5°</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Angle with orbital plane</p>",
+            "<p>66.5°</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Direction</p>",
+            "<p>West to East rotation</p>"
           ]
         }
       ]

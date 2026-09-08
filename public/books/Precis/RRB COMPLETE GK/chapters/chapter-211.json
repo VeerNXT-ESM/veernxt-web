@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "m89tbpz"
+      "id": "m89tbpz",
+      "content": "The oceans cover about 71% of the Earth's surface and contain nearly 97% of the planet’s water. They play a crucial role in regulating climate, supporting biodiversity, influencing weather systems, and sustaining human livelihoods. Understanding ocean relief, temperature, and salinity is fundamental to mastering physical geography because these factors control ocean circulation, marine ecosystems, and global heat distribution."
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3x36u6y"
+      "id": "3x36u6y",
+      "content": "Ocean relief refers to the variation in depth and shape of the ocean floor. Just like continents have mountains and plains, the ocean floor has diverse landforms formed by tectonic activity, volcanism, and sediment deposition."
     },
     {
       "id": "o1wmcyq",
@@ -68,64 +70,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Continental Shelf</p>",
+            "<p>Gently sloping submerged extension of continents; average depth 0–200 m. Rich in marine life and major fishing zones. Petroleum extraction is common here.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Continental Slope</p>",
+            "<p>Steep descent from shelf to deep ocean floor; marks the true boundary of continents.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Continental Rise</p>",
+            "<p>Gentle incline formed by sediments deposited at the base of the slope.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Abyssal Plains</p>",
+            "<p>Extremely flat and deep regions (3000–6000 m); among the smoothest surfaces on Earth.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Oceanic Trenches</p>",
+            "<p>Deepest parts of oceans formed at subduction zones; e.g., Mariana Trench (~11,000 m).</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mid-Ocean Ridges</p>",
+            "<p>Underwater mountain chains formed due to seafloor spreading; volcanically active.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Seamounts</p>",
+            "<p>Submerged volcanic mountains that do not reach the surface.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Guyots</p>",
+            "<p>Flat-topped seamounts eroded by waves before subsiding.</p>"
           ]
         }
       ]
@@ -138,23 +140,28 @@
     },
     {
       "type": "paragraph",
-      "id": "g7hs7hu"
+      "id": "g7hs7hu",
+      "content": "• Controls ocean currents."
     },
     {
       "type": "paragraph",
-      "id": "705sx4e"
+      "id": "705sx4e",
+      "content": "• Influences marine biodiversity."
     },
     {
       "type": "paragraph",
-      "id": "494xben"
+      "id": "494xben",
+      "content": "• Affects submarine cable routes."
     },
     {
       "type": "paragraph",
-      "id": "7gtvks9"
+      "id": "7gtvks9",
+      "content": "• Determines fishing zones."
     },
     {
       "type": "paragraph",
-      "id": "d9rh92k"
+      "id": "d9rh92k",
+      "content": "• Impacts tsunami propagation."
     },
     {
       "id": "oz4086t",
@@ -164,7 +171,8 @@
     },
     {
       "type": "paragraph",
-      "id": "pzgr2b9"
+      "id": "pzgr2b9",
+      "content": "Ocean temperature varies both horizontally and vertically. Since water has high heat capacity, oceans act as thermal reservoirs, moderating global climate."
     },
     {
       "id": "eae36ob",
@@ -179,43 +187,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Impact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Latitude</p>",
+            "<p>Equatorial waters are warmer than polar waters.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ocean Currents</p>",
+            "<p>Warm currents raise temperatures; cold currents lower them.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prevailing Winds</p>",
+            "<p>Transport warm or cold surface water.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Season</p>",
+            "<p>Temperature varies more in enclosed seas.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cloud Cover</p>",
+            "<p>Reduces solar heating.</p>"
           ]
         }
       ]
@@ -228,7 +236,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qk2grsy"
+      "id": "qk2grsy",
+      "content": "• Surface Zone – Warm due to solar radiation."
     },
     {
       "type": "pullQuote",
@@ -237,15 +246,18 @@
     },
     {
       "type": "paragraph",
-      "id": "u8wyw8r"
+      "id": "u8wyw8r",
+      "content": "• Thermocline – Rapid temperature decrease with depth."
     },
     {
       "type": "paragraph",
-      "id": "abqae8w"
+      "id": "abqae8w",
+      "content": "• Deep Zone – Very cold and stable (around 0–3°C)."
     },
     {
       "type": "paragraph",
-      "id": "96xaany"
+      "id": "96xaany",
+      "content": "The thermocline acts as a barrier preventing mixing between warm surface water and cold deep water."
     },
     {
       "id": "udbeb1i",
@@ -255,7 +267,8 @@
     },
     {
       "type": "paragraph",
-      "id": "04qpg5j"
+      "id": "04qpg5j",
+      "content": "Salinity refers to the concentration of dissolved salts in seawater, usually expressed in parts per thousand (‰). The average ocean salinity is about 35‰."
     },
     {
       "id": "8j1pejn",
@@ -265,15 +278,18 @@
     },
     {
       "type": "paragraph",
-      "id": "ry2meg2"
+      "id": "ry2meg2",
+      "content": "• Weathering of continental rocks."
     },
     {
       "type": "paragraph",
-      "id": "yy103hl"
+      "id": "yy103hl",
+      "content": "• Volcanic activity."
     },
     {
       "type": "paragraph",
-      "id": "ielgokr"
+      "id": "ielgokr",
+      "content": "• Submarine hydrothermal vents."
     },
     {
       "type": "comparisonTable",
@@ -313,7 +329,8 @@
     },
     {
       "type": "paragraph",
-      "id": "uukioeq"
+      "id": "uukioeq",
+      "content": "• River inflow transporting dissolved minerals."
     },
     {
       "id": "32jr92m",
@@ -328,43 +345,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Effect</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Evaporation</p>",
+            "<p>Increases salinity.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Precipitation</p>",
+            "<p>Dilutes seawater.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>River Discharge</p>",
+            "<p>Lowers salinity near coasts.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Melting Ice</p>",
+            "<p>Reduces salinity.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ocean Currents</p>",
+            "<p>Redistribute saline water.</p>"
           ]
         }
       ]
@@ -377,15 +394,18 @@
     },
     {
       "type": "paragraph",
-      "id": "h4ejsu9"
+      "id": "h4ejsu9",
+      "content": "• Highest in subtropical regions due to high evaporation."
     },
     {
       "type": "paragraph",
-      "id": "q8zgtad"
+      "id": "q8zgtad",
+      "content": "• Lower near the equator because of heavy rainfall."
     },
     {
       "type": "paragraph",
-      "id": "zkerv0x"
+      "id": "zkerv0x",
+      "content": "• Very low in polar regions due to melting ice."
     },
     {
       "id": "56sgppq",
@@ -395,7 +415,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1802vrk"
+      "id": "1802vrk",
+      "content": "Salinity generally decreases with depth and becomes relatively stable in deeper layers."
     },
     {
       "id": "90t9vfx",
@@ -410,36 +431,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Condition</strong></p>",
+            "<p><strong>Result</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>High evaporation + high temperature</p>",
+            "<p>High salinity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Heavy rainfall</p>",
+            "<p>Low salinity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cold polar waters</p>",
+            "<p>Lower salinity</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "2exedqv"
+      "id": "2exedqv",
+      "content": "Temperature and salinity together control seawater density, which drives thermohaline circulation — often called the global ocean conveyor belt."
     },
     {
       "type": "examAlert",
@@ -459,23 +481,28 @@
     },
     {
       "type": "paragraph",
-      "id": "yz43i4n"
+      "id": "yz43i4n",
+      "content": "• Thermohaline Circulation – Deep ocean movement driven by density differences."
     },
     {
       "type": "paragraph",
-      "id": "muqnjz1"
+      "id": "muqnjz1",
+      "content": "• Halocline – Layer with rapid salinity change."
     },
     {
       "type": "paragraph",
-      "id": "xgkzilm"
+      "id": "xgkzilm",
+      "content": "• Upwelling – Rising of nutrient-rich cold water supporting fisheries."
     },
     {
       "type": "paragraph",
-      "id": "cs4d6t8"
+      "id": "cs4d6t8",
+      "content": "• Downwelling – Sinking of dense water."
     },
     {
       "type": "paragraph",
-      "id": "24rbjlt"
+      "id": "24rbjlt",
+      "content": "• El Niño disrupts normal ocean temperature patterns."
     },
     {
       "id": "qs8tg53",
@@ -485,7 +512,8 @@
     },
     {
       "type": "paragraph",
-      "id": "svylu60"
+      "id": "svylu60",
+      "content": "• Continental shelf is the richest fishing zone.<br></br>• Mariana Trench is the deepest ocean point.<br></br>• Thermocline shows rapid temperature decline.<br></br>• Average salinity is about 35‰.<br></br>• Evaporation increases salinity.<br></br>• Thermohaline circulation drives global ocean currents."
     }
   ],
   "enriched": true

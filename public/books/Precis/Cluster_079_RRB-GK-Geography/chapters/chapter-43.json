@@ -1,0 +1,137 @@
+{
+  "title": "5. Latitudes vs Longitudes",
+  "order": 43,
+  "blocks": [
+    {
+      "id": "9u56d6x",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Latitudes</strong></p>",
+            "<p><strong>Longitudes</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Run east–west</p>",
+            "<p>Run north–south</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Parallel</p>",
+            "<p>Converge at poles</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Measure north–south distance</p>",
+            "<p>Measure east–west distance</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Used to define climate zones</p>",
+            "<p>Used for time calculation</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Latitudes determine climatic zones across the globe, whereas longitudes are essential for determining local time and time zones.",
+      "id": "rubs42c"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitudes (Parallels)",
+        "Longitudes (Meridians)"
+      ],
+      "rows": [
+        [
+          "Direction",
+          "East to West, parallel to Equator",
+          "North to South, converging at Poles"
+        ],
+        [
+          "Reference Line",
+          "Equator (0°)",
+          "Prime Meridian (0° Greenwich)"
+        ],
+        [
+          "Spacing",
+          "Constant (~111 km everywhere)",
+          "Maximum at Equator (~111 km), zero at Poles"
+        ],
+        [
+          "Primary Function",
+          "Determining heat zones & climate",
+          "Calculating time zones & local time"
+        ],
+        [
+          "Total Measurement",
+          "180° (90° N to 90° S)",
+          "360° (180° E to 180° W)"
+        ]
+      ],
+      "id": "s5opfj4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equator",
+          "value": "0° Latitude",
+          "icon": "info"
+        },
+        {
+          "label": "Prime Meridian",
+          "value": "0° Longitude",
+          "icon": "clock"
+        },
+        {
+          "label": "1° Longitude",
+          "value": "4 Minutes",
+          "icon": "clock"
+        },
+        {
+          "label": "1° Latitude Distance",
+          "value": "~111 km",
+          "icon": "check"
+        }
+      ],
+      "id": "d4cg86v"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Indian Standard Time (IST) is based on the 82°30' E longitude, which passes through Mirzapur (UP) and is 5 hours 30 minutes ahead of GMT.",
+        "The Tropic of Cancer (23°30' N) passes through 8 Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+        "Every 1° longitude shift causes a 4-minute time difference (15° = 1 hour).",
+        "Crossing the International Date Line (180° Longitude) from West to East gains a calendar day, whereas crossing from East to West loses a day."
+      ],
+      "id": "xdx4uub"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Latitudes are parallel horizontal lines that measure angular distance north or south of the Equator.",
+        "Longitudes are vertical semi-circles running from pole to pole that measure angular distance east or west of the Prime Meridian.",
+        "The distance between any two parallel latitudes remains constant across the globe at approximately 111 km.",
+        "Longitudes converge at the poles, meaning the distance between them is maximum at the Equator and decreases to zero at the poles.",
+        "Longitudes are fundamentally used to calculate local time, where 15 degrees of longitude corresponds to a time difference of 1 hour."
+      ],
+      "id": "fy9nhgj"
+    }
+  ],
+  "enriched": true
+}

@@ -4,49 +4,55 @@
   "order": 105,
   "blocks": [
     {
+      "id": "srxb6m6",
+      "type": "image",
+      "imageId": "agju86o",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_agju86o.jpeg"
+    },
+    {
       "id": "lhdw819",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Magma Chamber</p>",
+            "<p>Underground reservoir of molten rock.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vent</p>",
+            "<p>Passage through which magma reaches surface.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Crater</p>",
+            "<p>Bowl-shaped depression at summit.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Volcanic Cone</p>",
+            "<p>Accumulated layers of lava and ash.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lava Flow</p>",
+            "<p>Molten rock flowing after eruption.</p>"
           ]
         }
       ]

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "nzfjljh"
+      "id": "nzfjljh",
+      "content": "The Mughal Empire was one of the most powerful and longest-ruling empires in Indian history. It was founded by Babur in 1526 AD after the First Battle of Panipat and formally ended in 1857 AD after the Revolt of 1857. The Mughal period represents the highest level of political centralisation, administrative sophistication, economic prosperity, cultural synthesis, and artistic excellence in medieval India. Mughal rule deeply influenced Indian administration, land revenue systems, architecture, painting, literature, and socio-religious life. For  examinations, the Mughal Empire is extremely important because questions are asked from rulers, administration, revenue system, art and architecture, religious policies, and causes of decline."
     },
     {
       "type": "statStrip",
@@ -47,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tulcn77"
+      "id": "tulcn77",
+      "content": "Our knowledge of Mughal history comes from a variety of contemporary literary sources, official records, autobiographies, and foreign travellers’ accounts."
     },
     {
       "id": "zvymzz6",
@@ -56,72 +58,77 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Author</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Baburnama</p>",
+            "<p>Babur</p>",
+            "<p>Autobiography describing Babur’s life, battles, administration, geography</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Akbarnama</p>",
+            "<p>Abul Fazl</p>",
+            "<p>Political history of Akbar’s reign</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ain-i-Akbari</p>",
+            "<p>Abul Fazl</p>",
+            "<p>Detailed account of Mughal administration, economy, society</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tuzuk-i-Jahangiri</p>",
+            "<p>Jahangir</p>",
+            "<p>Autobiography of Jahangir</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Foreign Accounts</p>",
+            "<p>Bernier, Tavernier, Manucci</p>",
+            "<p>Economy, society, court life</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "e56wyo0"
+      "id": "e56wyo0",
+      "content": "Babur was a descendant of Timur on his father’s side and Genghis Khan on his mother’s side. Originally a ruler of Ferghana, Babur was driven out by the Uzbeks and turned towards India. He laid the foundation of Mughal rule by defeating Ibrahim Lodi."
     },
     {
       "type": "paragraph",
-      "id": "bewqso5"
+      "id": "bewqso5",
+      "content": "First Battle of Panipat (1526): Babur defeated Ibrahim Lodi using superior artillery and military tactics."
     },
     {
       "type": "paragraph",
-      "id": "7dfhzlg"
+      "id": "7dfhzlg",
+      "content": "Battle of Khanwa (1527): Babur defeated Rana Sanga and crushed Rajput resistance. Battle of Ghaghra (1529): Babur defeated Afghan chiefs and consolidated Mughal rule."
     },
     {
       "type": "paragraph",
-      "id": "j1ujatj"
+      "id": "j1ujatj",
+      "content": "Babur introduced gunpowder warfare, field artillery, and matchlocks in India. He also laid the foundation of Mughal administrative and military traditions."
     },
     {
       "type": "paragraph",
-      "id": "ukec5zp"
+      "id": "ukec5zp",
+      "content": "Humayun succeeded Babur but faced continuous challenges due to Afghan rebellions and weak finances. His lack of practical leadership led to his defeat by Sher Shah Suri."
     },
     {
       "type": "pullQuote",
@@ -130,23 +137,28 @@
     },
     {
       "type": "paragraph",
-      "id": "ofj07yt"
+      "id": "ofj07yt",
+      "content": "Sher Shah Suri defeated Humayun in the Battles of Chausa (1539) and Kannauj (1540). Although his rule was short, Sher Shah introduced excellent administrative and revenue reforms such as land measurement, fixed revenue rates, efficient road system, and postal network."
     },
     {
       "type": "paragraph",
-      "id": "0bxmjc3"
+      "id": "0bxmjc3",
+      "content": "Akbar ascended the throne at the age of 13 and was guided initially by Bairam Khan. He is regarded as the greatest Mughal ruler due to his military success, administrative genius, religious tolerance, and cultural patronage."
     },
     {
       "type": "paragraph",
-      "id": "01bkvad"
+      "id": "01bkvad",
+      "content": "Akbar expanded the Mughal Empire through a combination of warfare, diplomacy, and matrimonial alliances. He conquered Malwa, Gujarat, Bengal, Kashmir, Sindh, and large parts of the Deccan. Rajput rulers were incorporated into the Mughal administration through alliance rather than destruction."
     },
     {
       "type": "paragraph",
-      "id": "rurpqai"
+      "id": "rurpqai",
+      "content": "The Mansabdari system was the backbone of Mughal administration. Each Mansabdar was assigned a rank (Mansab) which determined his salary and military obligations."
     },
     {
       "type": "paragraph",
-      "id": "vcqnxjb"
+      "id": "vcqnxjb",
+      "content": "Zat indicated personal rank and status."
     },
     {
       "type": "comparisonTable",
@@ -176,27 +188,33 @@
     },
     {
       "type": "paragraph",
-      "id": "rd9ydl2"
+      "id": "rd9ydl2",
+      "content": "Sawar indicated the number of cavalrymen to be maintained."
     },
     {
       "type": "paragraph",
-      "id": "wysf5m9"
+      "id": "wysf5m9",
+      "content": "Akbar introduced a scientific land revenue system under Raja Todar Mal, known as Zabti or Bandobast. Land was measured, average produce calculated, and revenue fixed in cash. This system ensured stable income for the state and reduced exploitation of peasants."
     },
     {
       "type": "paragraph",
-      "id": "edwwplu"
+      "id": "edwwplu",
+      "content": "Akbar followed a policy of Sulh-i-Kul (universal tolerance). He abolished Jizya and pilgrimage taxes and respected all religions. He introduced Ibadat Khana discussions and later formulated the concept of Din-i-Ilahi."
     },
     {
       "type": "paragraph",
-      "id": "4citiay"
+      "id": "4citiay",
+      "content": "Jahangir continued Akbar’s policies and is remembered for his strong sense of justice. He established the famous Chain of Justice to ensure direct access to the emperor."
     },
     {
       "type": "paragraph",
-      "id": "32beje3"
+      "id": "32beje3",
+      "content": "Shah Jahan’s reign marked the zenith of Mughal architecture and prosperity. He built magnificent monuments such as the Taj Mahal, Red Fort, and Jama Masjid."
     },
     {
       "type": "paragraph",
-      "id": "3560fxf"
+      "id": "3560fxf",
+      "content": "Aurangzeb was the last powerful Mughal ruler. He expanded the empire to its greatest territorial extent but followed orthodox religious policies. His long Deccan campaigns weakened the empire financially and militarily."
     },
     {
       "type": "examAlert",
@@ -209,23 +227,28 @@
     },
     {
       "type": "paragraph",
-      "id": "hj10w3i"
+      "id": "hj10w3i",
+      "content": "The Mughal administration was highly centralised with the Emperor at the top. Important officials included Wazir (finance), Mir Bakshi (military), Sadr-us-Sudur (religious affairs), and Qazi-ul-Quzat (justice)."
     },
     {
       "type": "paragraph",
-      "id": "gn2vpq8"
+      "id": "gn2vpq8",
+      "content": "The Mughal economy was primarily agrarian but supported by flourishing trade and crafts. India exported textiles, spices, and indigo to Europe and West Asia."
     },
     {
       "type": "paragraph",
-      "id": "2zlgp8r"
+      "id": "2zlgp8r",
+      "content": "Mughal society was hierarchical but culturally composite. Persian language and culture influenced Indian traditions, leading to a rich cultural synthesis."
     },
     {
       "type": "paragraph",
-      "id": "0z9y1kw"
+      "id": "0z9y1kw",
+      "content": "After Aurangzeb, the Mughal Empire declined due to weak successors, court intrigues, economic exhaustion, rise of regional powers, and European intervention."
     },
     {
       "type": "paragraph",
-      "id": "prowrft"
+      "id": "prowrft",
+      "content": "Founder – Babur | Real consolidator – Akbar | Revenue system – Todar Mal | Chain of Justice – Jahangir | Mughal architecture peak – Shah Jahan | Last powerful ruler – Aurangzeb"
     }
   ],
   "enriched": true

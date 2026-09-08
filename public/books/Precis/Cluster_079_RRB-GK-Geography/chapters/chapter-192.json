@@ -1,0 +1,116 @@
+{
+  "title": "1. Concept of Natural Vegetation and Biomes",
+  "order": 192,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A biome is a very large ecological region characterized by specific climate conditions, vegetation types, and associated wildlife. For example, equatorial rainforests, tropical grasslands, deserts, and tundra are all distinct biomes.",
+      "id": "1dynibu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Key Biomes",
+          "value": "4 Examples",
+          "icon": "book"
+        },
+        {
+          "label": "Succession Types",
+          "value": "2 Main Types",
+          "icon": "info"
+        },
+        {
+          "label": "Final Stage",
+          "value": "Climax Vegetation",
+          "icon": "check"
+        },
+        {
+          "label": "Distribution Pattern",
+          "value": "Latitudinal",
+          "icon": "award"
+        }
+      ],
+      "id": "2xcmi1k"
+    },
+    {
+      "type": "paragraph",
+      "content": "The distribution of biomes across the Earth follows a broad latitudinal pattern because temperature and rainfall vary systematically from the equator to the poles.",
+      "id": "9powp9b"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A biome is a very large ecological region characterized by specific climate conditions, vegetation types, and associated wildlife.",
+      "id": "hr9d1ui"
+    },
+    {
+      "type": "paragraph",
+      "content": "Natural vegetation also reflects ecological succession — the gradual replacement of plant communities over time until a stable climax vegetation develops.",
+      "id": "2l2gmc5"
+    },
+    {
+      "id": "yzpupbx",
+      "type": "heading",
+      "level": 2,
+      "content": "Ecological Succession"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Type of Succession",
+        "Starting Condition",
+        "Typical Triggers / Examples"
+      ],
+      "rows": [
+        [
+          "Primary Succession",
+          "Bare rock surfaces with no prior vegetation",
+          "Lava flows, glacial deposits"
+        ],
+        [
+          "Secondary Succession",
+          "Areas where previous vegetation was removed",
+          "Forest fires, floods"
+        ]
+      ],
+      "id": "qkziypl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A biome is a large ecological region characterized by specific climate, vegetation, and wildlife.",
+        "Biome distribution follows a latitudinal pattern due to systematic temperature and rainfall variations.",
+        "Natural vegetation undergoes ecological succession to gradually replace plant communities over time.",
+        "Primary succession begins on bare rock surfaces, while secondary succession occurs in previously vegetated areas.",
+        "Climax vegetation is the final stable plant community fully adapted to regional climate conditions."
+      ],
+      "id": "a88noly"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Primary Succession – begins on bare rock surfaces such as lava flows or glacial deposits.",
+      "id": "xzvs7eq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Primary Succession starts on bare surfaces (lava flows, glacial deposits) with no prior vegetation.",
+        "Secondary Succession happens where prior vegetation was destroyed (forest fires, floods).",
+        "Climax vegetation is the ultimate stable stage in ecological succession."
+      ],
+      "id": "f4td3rb"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Secondary Succession – occurs in areas where vegetation previously existed but was removed (forest fire, flood).",
+      "id": "cq1zm8c"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Climax Vegetation – the final stable plant community adapted to regional climate.",
+      "id": "hlym8wg"
+    }
+  ],
+  "enriched": true
+}

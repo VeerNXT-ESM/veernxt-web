@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "28meqvv"
+      "id": "28meqvv",
+      "content": "The Vedic Period marks the time when the Aryans composed the Vedas and established their civilization in the north-western part of the Indian subcontinent. "
     },
     {
       "type": "statStrip",
@@ -58,22 +59,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p>Period</p>",
+            "<p>Approximate Time</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Early Vedic Period (Rigvedic Age)</p>",
+            "<p>1500 BC – 1000 BC</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Later Vedic Period</p>",
+            "<p>1000 BC – 600 BC</p>"
           ]
         }
       ]
@@ -91,41 +92,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Veda</strong></p>",
+            "<p><strong>Main Content</strong></p>",
+            "<p><strong>Exam Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rigveda</p>",
+            "<p>Collection of hymns</p>",
+            "<p>Oldest Veda</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Samaveda</p>",
+            "<p>Musical chants</p>",
+            "<p>Origin of Indian music</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Yajurveda</p>",
+            "<p>Ritual formulas</p>",
+            "<p>Used in sacrifices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Atharvaveda</p>",
+            "<p>Magic spells &amp; medicine</p>",
+            "<p>Last Veda</p>"
           ]
         }
       ]
@@ -143,51 +144,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Unit</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kula</p>",
+            "<p>Family</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Grama</p>",
+            "<p>Village</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vis</p>",
+            "<p>Clan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Jana</p>",
+            "<p>Tribe</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Janapada</p>",
+            "<p>Territory</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Time Period of the Vedic Age",
-      "id": "b9ggvkz"
     },
     {
       "id": "n9kb2gc",
@@ -202,22 +198,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Assembly</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sabha</p>",
+            "<p>Council of elders</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Samiti</p>",
+            "<p>General assembly of people</p>"
           ]
         }
       ]
@@ -230,11 +226,13 @@
     },
     {
       "type": "paragraph",
-      "id": "s5346h5"
+      "id": "s5346h5",
+      "content": "• Agriculture and cattle rearing were main occupations."
     },
     {
       "type": "paragraph",
-      "id": "0xonbqu"
+      "id": "0xonbqu",
+      "content": "• Cows were considered measure of wealth."
     },
     {
       "type": "comparisonTable",
@@ -260,11 +258,13 @@
     },
     {
       "type": "paragraph",
-      "id": "4jmzsng"
+      "id": "4jmzsng",
+      "content": "• Barter trade existed."
     },
     {
       "type": "paragraph",
-      "id": "hnlfqma"
+      "id": "hnlfqma",
+      "content": "• Main crops: barley and wheat."
     },
     {
       "id": "69uptoo",
@@ -279,43 +279,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>God</strong></p>",
+            "<p><strong>Associated With</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Indra</p>",
+            "<p>Rain and war</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Agni</p>",
+            "<p>Fire</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Varuna</p>",
+            "<p>Water</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Surya</p>",
+            "<p>Sun</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vayu</p>",
+            "<p>Wind</p>"
           ]
         }
       ]
@@ -328,7 +328,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8k8m1fl"
+      "id": "8k8m1fl",
+      "content": "• Rigveda is the oldest Veda"
     },
     {
       "type": "examAlert",
@@ -341,20 +342,24 @@
     },
     {
       "type": "paragraph",
-      "id": "5qpgnxk"
+      "id": "5qpgnxk",
+      "content": "• Indra is the most important Rigvedic god"
     },
     {
       "type": "paragraph",
-      "id": "ro83z2e"
+      "id": "ro83z2e",
+      "content": "• Sabha and Samiti were assemblies"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "oyy9hvd"
+      "id": "oyy9hvd",
+      "content": "• Cow symbolized wealth"
     },
     {
       "type": "paragraph",
-      "id": "ci76i6j"
+      "id": "ci76i6j",
+      "content": "• Iron use increased in Later Vedic period"
     }
   ],
   "enriched": true

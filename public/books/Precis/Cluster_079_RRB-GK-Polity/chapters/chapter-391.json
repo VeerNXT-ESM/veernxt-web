@@ -1,0 +1,55 @@
+{
+  "title": "10. Appeals",
+  "order": 391,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Appeals against NGT orders lie directly with the Supreme Court and must typically be filed within 90 days.",
+      "id": "epgbhja"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Appeals against NGT orders lie directly with the Supreme Court and must typically be filed within 90 days.",
+      "id": "bwzgdhb"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Appellate Forum",
+          "value": "Supreme Court",
+          "icon": "award"
+        },
+        {
+          "label": "Filing Limitation",
+          "value": "90 Days",
+          "icon": "calendar"
+        },
+        {
+          "label": "Subject Jurisdiction",
+          "value": "NGT Orders",
+          "icon": "check"
+        }
+      ],
+      "id": "kvqkdrr"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Appeals against NGT decisions bypass High Courts and lie directly before the Supreme Court.",
+        "Note the 90-day limitation period for filing NGT appeals, a standard question format in environmental law sections."
+      ],
+      "id": "6l63b5g"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Appeals challenging the orders of the National Green Tribunal (NGT) are made directly to the Supreme Court of India.",
+        "The prescribed timeframe to file an appeal against an NGT order is generally 90 days."
+      ],
+      "id": "brb6uzi"
+    }
+  ],
+  "enriched": true
+}

@@ -4,8 +4,15 @@
   "order": 62,
   "blocks": [
     {
+      "id": "3ir9hgo",
+      "type": "image",
+      "imageId": "q78mzaj",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_q78mzaj.jpeg"
+    },
+    {
       "type": "paragraph",
-      "id": "w8xy9yb"
+      "id": "w8xy9yb",
+      "content": "The rock cycle is the continuous process through which rocks transform from one type to another over geological time."
     },
     {
       "type": "statStrip",
@@ -52,11 +59,13 @@
     },
     {
       "type": "paragraph",
-      "id": "vjbecjo"
+      "id": "vjbecjo",
+      "content": "• Magma cools to form igneous rocks."
     },
     {
       "type": "paragraph",
-      "id": "aj2xz69"
+      "id": "aj2xz69",
+      "content": "• Weathering breaks rocks into sediments."
     },
     {
       "type": "comparisonTable",
@@ -90,11 +99,13 @@
     },
     {
       "type": "paragraph",
-      "id": "sbpt0z1"
+      "id": "sbpt0z1",
+      "content": "• Sediments compact to form sedimentary rocks."
     },
     {
       "type": "paragraph",
-      "id": "6m8mryj"
+      "id": "6m8mryj",
+      "content": "• Heat and pressure convert rocks into metamorphic rocks."
     },
     {
       "type": "examAlert",
@@ -107,11 +118,13 @@
     },
     {
       "type": "paragraph",
-      "id": "dh08hqt"
+      "id": "dh08hqt",
+      "content": "• Metamorphic rocks may melt again to form magma."
     },
     {
       "type": "paragraph",
-      "id": "eh7ivsu"
+      "id": "eh7ivsu",
+      "content": "The rock cycle demonstrates that no rock type is permanent."
     }
   ],
   "enriched": true

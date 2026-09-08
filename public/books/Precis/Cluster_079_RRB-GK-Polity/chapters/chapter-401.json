@@ -1,0 +1,119 @@
+{
+  "title": "Composition of CIC (VERY FREQUENTLY ASKED)",
+  "order": 401,
+  "blocks": [
+    {
+      "id": "vmwpljr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chief Information Commissioner</p>",
+            "<p>Head of CIC</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Information Commissioners</p>",
+            "<p>Maximum of 10</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appointment</p>",
+            "<p>By President of India</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Commission consists of a Chief Information Commissioner and not more than ten Information Commissioners.",
+      "id": "u1xptf8"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Chief Information Commissioner (CIC)",
+        "Information Commissioners (IC)"
+      ],
+      "rows": [
+        [
+          "Maximum Count",
+          "1",
+          "10"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "President of India"
+        ],
+        [
+          "Reappointment Status",
+          "Not Eligible",
+          "Eligible to be appointed as CIC, but total aggregate tenure cannot exceed 5 years"
+        ]
+      ],
+      "id": "1pedmwt"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Max Strength",
+          "value": "1 + 10 Max",
+          "icon": "info"
+        },
+        {
+          "label": "Appointed By",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "Committee Size",
+          "value": "3 Members",
+          "icon": "check"
+        },
+        {
+          "label": "Governing Act",
+          "value": "RTI Act, 2005",
+          "icon": "book"
+        }
+      ],
+      "id": "z9yyeyt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CIC is a Statutory Body created under the Right to Information Act, 2005, NOT a Constitutional Body.",
+        "The Selection Committee includes the Leader of Opposition in the Lok Sabha, NOT the Rajya Sabha.",
+        "Information Commissioners are not eligible for reappointment to the same post."
+      ],
+      "id": "fkh77jc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Information Commission consists of a Chief Information Commissioner and not more than ten Information Commissioners.",
+        "Members are appointed by the President on the recommendation of a three-member committee comprising the Prime Minister, the Leader of Opposition in Lok Sabha, and a Union Cabinet Minister nominated by the Prime Minister.",
+        "Candidates must be persons of eminence in public life with experience in law, science, technology, social service, management, journalism, mass media, or administration.",
+        "Commissioners cannot be Members of Parliament or State Legislature, nor can they hold any office of profit or pursue any business or profession.",
+        "Members are not eligible for reappointment after completing their tenure."
+      ],
+      "id": "plf3rpq"
+    }
+  ],
+  "enriched": true
+}

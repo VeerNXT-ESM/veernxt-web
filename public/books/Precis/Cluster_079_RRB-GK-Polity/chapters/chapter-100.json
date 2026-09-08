@@ -1,0 +1,56 @@
+{
+  "title": "13. Seat of the Supreme Court",
+  "order": 100,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The Supreme Court is located in New Delhi.<br/>However, the Chief Justice of India may appoint other places for sittings with Presidential approval.",
+      "id": "gdwj2rp"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Supreme Court is located in New Delhi.",
+      "id": "rw7qhc2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Official Seat",
+          "value": "New Delhi",
+          "icon": "info"
+        },
+        {
+          "label": "Appointing Authority",
+          "value": "Chief Justice of India",
+          "icon": "award"
+        },
+        {
+          "label": "Prerequisite",
+          "value": "Presidential Approval",
+          "icon": "check"
+        }
+      ],
+      "id": "uwl0ahk"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently ask who holds the power to appoint other places for Supreme Court sittings: It is the Chief Justice of India, not the Parliament.",
+        "Always remember that Presidential approval is a mandatory requirement before the Chief Justice can appoint an alternate seat or sitting place."
+      ],
+      "id": "4m24jm8"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Supreme Court of India is permanently located in New Delhi.",
+        "The Chief Justice of India is authorized to declare other places as sittings for the Supreme Court.",
+        "The Chief Justice can only appoint alternative places for sittings after obtaining approval from the President of India."
+      ],
+      "id": "wokhgzd"
+    }
+  ],
+  "enriched": true
+}

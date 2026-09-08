@@ -1,0 +1,119 @@
+{
+  "title": "Types of Metamorphism",
+  "order": 76,
+  "blocks": [
+    {
+      "id": "4afeyvh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Contact</p>",
+            "<p>Heat from magma</p>",
+            "<p>Marble</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regional</p>",
+            "<p>Heat + pressure over large areas</p>",
+            "<p>Slate</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Metamorphism involves the recrystallization and rearrangement of minerals within solid rock without complete melting.",
+      "id": "vfzctpd"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Contact Metamorphism",
+        "Regional Metamorphism"
+      ],
+      "rows": [
+        [
+          "Primary Driver",
+          "Extreme Heat / Temperature",
+          "High Differential Pressure & Heat"
+        ],
+        [
+          "Areal Extent",
+          "Localized (Aureole zone)",
+          "Widespread (Orogenic belts)"
+        ],
+        [
+          "Rock Texture",
+          "Non-Foliated (e.g., Hornfels, Marble)",
+          "Foliated (e.g., Schist, Gneiss)"
+        ],
+        [
+          "Tectonic Setting",
+          "Igneous Intrusions",
+          "Convergent Plate Boundaries"
+        ]
+      ],
+      "id": "p0iuic6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Agents",
+          "value": "3 (Heat, Pressure, Fluids)",
+          "icon": "info"
+        },
+        {
+          "label": "Major Types",
+          "value": "4 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Regional Scale",
+          "value": "100s-1000s km",
+          "icon": "check"
+        },
+        {
+          "label": "Key Output",
+          "value": "Foliated & Non-Foliated Rocks",
+          "icon": "award"
+        }
+      ],
+      "id": "mdd0lvf"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Limestone transforms into Marble and Sandstone transforms into Quartzite via thermal/contact metamorphism.",
+        "The progressive regional metamorphic sequence of shale is: Slate -> Phyllite -> Schist -> Gneiss.",
+        "Foliation develops predominantly under high directional pressure during regional metamorphism."
+      ],
+      "id": "1mpmwfd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Contact (thermal) metamorphism occurs when host rocks are altered primarily by extreme heat from adjacent magma intrusions.",
+        "Regional metamorphism affects vast geological areas driven by high pressure and temperature during mountain-building tectonic events.",
+        "Dynamic metamorphism occurs along fault zones where intense mechanical stress fractures and deforms rocks without significant heat.",
+        "Hydrothermal metamorphism takes place when hot, chemically active fluid percolates through rock fractures, altering mineral compositions."
+      ],
+      "id": "mdoyvc2"
+    }
+  ],
+  "enriched": true
+}

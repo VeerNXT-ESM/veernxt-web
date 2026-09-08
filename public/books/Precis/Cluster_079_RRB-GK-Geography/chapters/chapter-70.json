@@ -1,0 +1,84 @@
+{
+  "title": "5. Igneous Rocks",
+  "order": 70,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Igneous rocks form when molten material called magma cools and solidifies. They are known as primary rocks because other rock types are derived from them.",
+      "id": "yv85714"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Origin Material",
+          "value": "Magma",
+          "icon": "info"
+        },
+        {
+          "label": "Classification",
+          "value": "Primary Rocks",
+          "icon": "book"
+        },
+        {
+          "label": "Relative Age",
+          "value": "Oldest Rocks",
+          "icon": "calendar"
+        },
+        {
+          "label": "Fossil Content",
+          "value": "Absence of Fossils",
+          "icon": "check"
+        }
+      ],
+      "id": "ealxs6h"
+    },
+    {
+      "type": "pullQuote",
+      "content": "They are known as primary rocks because other rock types are derived from them.",
+      "id": "119hnbl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks are formed from the cooling and solidification of molten material known as magma.",
+        "Known as primary rocks because all other categories of rocks are derived from them.",
+        "Represent the oldest rock formations on Earth.",
+        "Possess high resistance against erosion.",
+        "Completely lack fossils but are highly rich in minerals."
+      ],
+      "id": "iwllwe9"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Oldest rocks on Earth.",
+      "id": "to46o4f"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Highly resistant to erosion.",
+      "id": "nof8pzo"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: Igneous rocks do NOT contain fossils due to their thermal origin.",
+        "Remember that Igneous rocks are termed 'Primary Rocks' as they serve as the parent material for sedimentary and metamorphic rocks.",
+        "Questions often test the high mineral content and erosion resistance characteristic of igneous formations."
+      ],
+      "id": "3mkysmx"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Do not contain fossils.",
+      "id": "9za7tm0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Rich in minerals.",
+      "id": "mcogpl6"
+    }
+  ],
+  "enriched": true
+}

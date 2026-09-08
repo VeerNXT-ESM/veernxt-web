@@ -42,53 +42,64 @@
     },
     {
       "type": "paragraph",
-      "id": "or9dupk"
+      "id": "or9dupk",
+      "content": "A potential difference of 10 V is applied across a resistor and a current of 2 A flows. The resistance of the conductor is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y2f32at"
+      "id": "y2f32at",
+      "content": "A) 2 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8kbozi0"
+      "id": "8kbozi0",
+      "content": "B) 5 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "n4osg4p"
+      "id": "n4osg4p",
+      "content": "C) 10 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d566eia"
+      "id": "d566eia",
+      "content": "D) 20 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rdkihcn"
+      "id": "rdkihcn",
+      "content": "<br></br>Correct Answer: B (5 Ω)"
     },
     {
       "type": "paragraph",
-      "id": "id5q22t"
+      "id": "id5q22t",
+      "content": "<br></br>Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "p39e40e"
+      "id": "p39e40e",
+      "content": "Using Ohm’s Law: V = IR"
     },
     {
       "type": "paragraph",
-      "id": "68nu7tt"
+      "id": "68nu7tt",
+      "content": "Rearranging: R = V / I"
     },
     {
       "type": "paragraph",
-      "id": "utlylou"
+      "id": "utlylou",
+      "content": "Substitute values: R = 10 / 2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nrlsxq1"
+      "id": "nrlsxq1",
+      "content": "R = 5 Ω"
     },
     {
       "id": "ne5p67t",
@@ -98,54 +109,65 @@
     },
     {
       "type": "paragraph",
-      "id": "8vezqk7"
+      "id": "8vezqk7",
+      "content": "Two resistors of 4 Ω and 6 Ω are connected in series. The equivalent resistance is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bzxqj8c"
+      "id": "bzxqj8c",
+      "content": "A) 2.4 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f93g17m"
+      "id": "f93g17m",
+      "content": "B) 5 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cqavxrj"
+      "id": "cqavxrj",
+      "content": "C) 10 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "83kij13"
+      "id": "83kij13",
+      "content": "D) 24 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5s88fjo"
+      "id": "5s88fjo",
+      "content": "<br></br>Correct Answer: C (10 Ω)"
     },
     {
       "type": "paragraph",
-      "id": "2f9ecpp"
+      "id": "2f9ecpp",
+      "content": "<br></br>Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "yucjoga"
+      "id": "yucjoga",
+      "content": "For series combination: R_total = R1 + R2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4t65vse"
+      "id": "4t65vse",
+      "content": "R_total = 4 + 6"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7h1amsl"
+      "id": "7h1amsl",
+      "content": "R_total = 10 Ω"
     },
     {
       "type": "paragraph",
-      "id": "8k7wyun"
+      "id": "8k7wyun",
+      "content": "In series, resistance increases."
     },
     {
       "type": "pullQuote",
@@ -160,74 +182,89 @@
     },
     {
       "type": "paragraph",
-      "id": "xof5mkj"
+      "id": "xof5mkj",
+      "content": "Two resistors of 6 Ω and 3 Ω are connected in parallel. The equivalent resistance is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7d28u7t"
+      "id": "7d28u7t",
+      "content": "A) 1 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jp8ayy5"
+      "id": "jp8ayy5",
+      "content": "B) 2 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "te41r6t"
+      "id": "te41r6t",
+      "content": "C) 3 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pt32nja"
+      "id": "pt32nja",
+      "content": "D) 9 Ω"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gj02y2s"
+      "id": "gj02y2s",
+      "content": "<br></br>Correct Answer: B (2 Ω)"
     },
     {
       "type": "paragraph",
-      "id": "aon15a2"
+      "id": "aon15a2",
+      "content": "<br></br>Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "zigq4by"
+      "id": "zigq4by",
+      "content": "For parallel combination:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a1rxt0f"
+      "id": "a1rxt0f",
+      "content": "1/R = 1/R1 + 1/R2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "n3c47o7"
+      "id": "n3c47o7",
+      "content": "1/R = 1/6 + 1/3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l9mv8pa"
+      "id": "l9mv8pa",
+      "content": "1/R = 1/6 + 2/6"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xt5tb8l"
+      "id": "xt5tb8l",
+      "content": "1/R = 3/6"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qt2k1ie"
+      "id": "qt2k1ie",
+      "content": "1/R = 1/2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "emttwsb"
+      "id": "emttwsb",
+      "content": "R = 2 Ω"
     },
     {
       "type": "paragraph",
-      "id": "sum4e6g"
+      "id": "sum4e6g",
+      "content": "In parallel, equivalent resistance is less than smallest resistor."
     },
     {
       "id": "ayujqr7",
@@ -237,51 +274,61 @@
     },
     {
       "type": "paragraph",
-      "id": "skdwvpu"
+      "id": "skdwvpu",
+      "content": "A device operates at 220 V and draws 2 A current. Its power is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ajaweaq"
+      "id": "ajaweaq",
+      "content": "A) 110 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vhjflmr"
+      "id": "vhjflmr",
+      "content": "B) 220 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ns5hwqx"
+      "id": "ns5hwqx",
+      "content": "C) 440 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zrqgfbd"
+      "id": "zrqgfbd",
+      "content": "D) 880 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nz4pgkw"
+      "id": "nz4pgkw",
+      "content": "<br></br>Correct Answer: C (440 W)"
     },
     {
       "type": "paragraph",
-      "id": "lg0d88n"
+      "id": "lg0d88n",
+      "content": "<br></br>Detailed Solution:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "txpvig6"
+      "id": "txpvig6",
+      "content": "Formula: P = VI"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uzxob2t"
+      "id": "uzxob2t",
+      "content": "P = 220 × 2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5ljamll"
+      "id": "5ljamll",
+      "content": "P = 440 W"
     },
     {
       "id": "iconmwx",
@@ -291,7 +338,8 @@
     },
     {
       "type": "paragraph",
-      "id": "quo413b"
+      "id": "quo413b",
+      "content": "A current of 5 A flows through a resistor of 4 Ω for 2 seconds. Heat produced is:"
     },
     {
       "type": "examAlert",
@@ -304,48 +352,58 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "g99fr8q"
+      "id": "g99fr8q",
+      "content": "A) 100 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bt2qgwj"
+      "id": "bt2qgwj",
+      "content": "B) 150 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f9b4ef5"
+      "id": "f9b4ef5",
+      "content": "C) 200 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "usjeynp"
+      "id": "usjeynp",
+      "content": "D) 250 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z2otkjt"
+      "id": "z2otkjt",
+      "content": "<br></br>Correct Answer: C (200 J)"
     },
     {
       "type": "paragraph",
-      "id": "9b3wwwu"
+      "id": "9b3wwwu",
+      "content": "<br></br>Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "xqelli2"
+      "id": "xqelli2",
+      "content": "Using Joule’s Law: H = I²Rt"
     },
     {
       "type": "paragraph",
-      "id": "cam16a2"
+      "id": "cam16a2",
+      "content": "H = (5)² × 4 × 2"
     },
     {
       "type": "paragraph",
-      "id": "m6vlrs1"
+      "id": "m6vlrs1",
+      "content": "H = 25 × 4 × 2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zxl8x34"
+      "id": "zxl8x34",
+      "content": "H = 200 Joule"
     }
   ],
   "enriched": true

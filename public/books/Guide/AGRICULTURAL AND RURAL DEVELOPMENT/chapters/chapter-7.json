@@ -54,55 +54,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Reform</strong></p>",
+            "<p><strong>Period</strong></p>",
+            "<p><strong>Objective</strong></p>",
+            "<p><strong>Outcome</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Abolition of Zamindari</p>",
+            "<p>1950s</p>",
+            "<p>Remove intermediaries between state and cultivators</p>",
+            "<p>Largely successful; freed 20+ million tenants</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tenancy Reforms</p>",
+            "<p>1950s–70s</p>",
+            "<p>Security of tenure; regulate rent; right to purchase land</p>",
+            "<p>Partial success; many tenants still unprotected</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Land Ceiling Acts</p>",
+            "<p>1960s–70s</p>",
+            "<p>Set maximum land holding limits; redistribute surplus land</p>",
+            "<p>Poor implementation; benami transactions; limited redistribution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Consolidation of Holdings</p>",
+            "<p>Ongoing</p>",
+            "<p>Merge fragmented holdings into viable units</p>",
+            "<p>Successful in Punjab, Haryana; poor progress in east India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bhoodan Movement</p>",
+            "<p>1951</p>",
+            "<p>Vinoba Bhave's voluntary land gift movement</p>",
+            "<p>~4 million acres donated; most land unfit for cultivation</p>"
           ]
         }
       ]
@@ -115,7 +115,8 @@
     },
     {
       "type": "paragraph",
-      "id": "x32j09m"
+      "id": "x32j09m",
+      "content": "Agricultural credit is the financial backbone of farming. It enables farmers to purchase inputs, equipment, and meet consumption needs. Credit can be short-term (crop loans), medium-term (equipment purchase), or long-term (land development, irrigation)."
     },
     {
       "id": "qqyxjfw",
@@ -135,37 +136,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Features</strong></p>",
+            "<p><strong>Major Institutions</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Institutional (Formal)</p>",
+            "<p>Banks, Co-ops, RRBs, MFIs</p>",
+            "<p>Lower interest; regulated; requires collateral; KCC loans</p>",
+            "<p>Commercial banks, RRBs, Co-operative banks, NABARD</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Non-Institutional (Informal)</p>",
+            "<p>Moneylenders, traders, landlords</p>",
+            "<p>High interest (24–48%); no documentation; exploitative</p>",
+            "<p>Local moneylenders; commission agents (Arthiyas)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Government Sources</p>",
+            "<p>Subsidised credit, DBT</p>",
+            "<p>Interest subvention (3% for short-term agri loans)</p>",
+            "<p>NABARD, State governments</p>"
           ]
         }
       ]
@@ -180,11 +181,11 @@
       "id": "yb6i46y",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Introduced in 1998-99; based on R.V. Gupta Committee recommendations",
+        "Provides revolving credit for crop production, post-harvest, maintenance, consumption",
+        "Interest subvention: 2% by Govt + 3% prompt repayment incentive = 4% effective rate",
+        "Limit based on land holding and crop type; enhanced to include allied activities in 2019",
+        "As of 2024: ~7.5 crore KCC holders; target to cover all PM-KISAN beneficiaries"
       ]
     },
     {
@@ -195,7 +196,8 @@
     },
     {
       "type": "paragraph",
-      "id": "s3ebh4l"
+      "id": "s3ebh4l",
+      "content": "Agricultural marketing includes all activities involved in the flow of agricultural products from farm to consumer. Efficient marketing reduces post-harvest losses, ensures remunerative prices to farmers, and stabilises consumer prices."
     },
     {
       "id": "vrqfiyi",
@@ -204,78 +206,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>APMC (Agri Produce Market Committee)</p>",
+            "<p>State-regulated mandis; farmers must sell in designated mandis; APMC Act governs; controversial — many states amending</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MSP (Minimum Support Price)</p>",
+            "<p>Floor price announced by Govt; based on C2+50% formula recommended by CACP; covers 23 crops</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>CACP</p>",
+            "<p>Commission for Agricultural Costs and Prices; recommends MSP; under Ministry of Agriculture</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Procurement Agencies</p>",
+            "<p>FCI (Food Corporation of India), NAFED, State agencies; procure at MSP from farmers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>eNAM</p>",
+            "<p>Electronic National Agriculture Market; online trading platform; connects 1000+ mandis; price discovery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>FPO / FPC</p>",
+            "<p>Farmer Producer Organisation/Company; collective marketing; aggregation reduces transaction cost</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Grading and Standardisation</p>",
+            "<p>AGMARK certification; ensures quality standards; important for exports</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cold Chain</p>",
+            "<p>Temperature-controlled supply chain; reduces post-harvest losses; NHB, NCCD promote</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Forward Markets</p>",
+            "<p>NCDEX, MCX; futures trading in agri commodities; price risk management (hedging)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Direct Marketing</p>",
+            "<p>Rythu Bazars (AP), Uzhavar Sandhi (TN); eliminates middlemen; better farmer prices</p>"
           ]
         }
       ]
@@ -288,7 +290,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bjoahe9"
+      "id": "bjoahe9",
+      "content": "NABARD (National Bank for Agriculture and Rural Development) was established on July 12, 1982 based on the recommendations of the Shivaraman Committee. It is the apex institution for agricultural and rural credit in India, headquartered in Mumbai."
     },
     {
       "id": "czcvx3j",
@@ -309,12 +312,12 @@
       "id": "qglulb7",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<strong>Refinancing commercial banks, RRBs, co-operative banks, MFIs for agriculture and rural development: </strong>Credit Functions",
+        "<strong>Capacity building, training, technology promotion, Agri Clinic and Agri Business Centres (ACABCs): </strong>Development Functions",
+        "<strong>Inspects and supervises RRBs and State Co-operative Banks (StCBs) and DCCBs: </strong>Regulatory Functions",
+        "<strong>World's largest microfinance programme; started 1992; links self-help groups to banks: </strong>SHG-Bank Linkage Programme",
+        "<strong>PSL shortfall funds deposited in RIDF; used for rural infrastructure by State Govts: </strong>RIDF (Rural Infrastructure Development Fund)",
+        "<strong>Direct credit to FPOs; no collateral if turnover &lt; Rs.1 crore: </strong>NABKISAN"
       ]
     },
     {
@@ -330,92 +333,92 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Formula / Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cost of Cultivation</p>",
+            "<p>All costs incurred to produce a crop; classified as A1, A2, B1, B2, C1, C2, C3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cost A1</p>",
+            "<p>All paid-out costs excluding rent and interest on owned capital</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cost A2</p>",
+            "<p>A1 + Rent paid for leased-in land</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cost B1</p>",
+            "<p>A1 + interest on owned capital (fixed assets)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cost B2</p>",
+            "<p>A2 + interest on owned working capital</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cost C1</p>",
+            "<p>B1 + imputed value of family labour</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cost C2</p>",
+            "<p>B2 + imputed rental value of owned land + interest on fixed capital</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cost C3</p>",
+            "<p>C2 + 10% of C2 as managerial cost (for MSP calculation)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Break-even Analysis</p>",
+            "<p>Point where Total Revenue = Total Cost; no profit, no loss</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Benefit-Cost Ratio (BCR)</p>",
+            "<p>Total Benefits / Total Costs; BCR &gt; 1 means profitable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Net Returns</p>",
+            "<p>Gross Returns minus Total Costs; measure of profitability</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Farm Business Income</p>",
+            "<p>Net income from farm operations; includes value of produce consumed at home</p>"
           ]
         }
       ]

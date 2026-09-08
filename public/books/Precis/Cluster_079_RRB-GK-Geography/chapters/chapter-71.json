@@ -1,0 +1,119 @@
+{
+  "title": "Classification of Igneous Rocks",
+  "order": 71,
+  "blocks": [
+    {
+      "id": "5gc36sh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Formation</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Intrusive (Plutonic)</p>",
+            "<p>Magma cools below surface; slow cooling produces large crystals.</p>",
+            "<p>Granite</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Extrusive (Volcanic)</p>",
+            "<p>Lava cools rapidly on surface; small crystals.</p>",
+            "<p>Basalt</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Igneous rocks, often called primary rocks, are formed through the cooling, crystallization, and solidification of magma or lava.",
+      "id": "hrqsl5z"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Acidic Igneous Rocks",
+        "Basic Igneous Rocks"
+      ],
+      "rows": [
+        [
+          "Silica Content",
+          "High (> 65%)",
+          "Low (45% - 55%)"
+        ],
+        [
+          "Color & Density",
+          "Light colored, lower density",
+          "Dark colored, higher density"
+        ],
+        [
+          "Dominant Minerals",
+          "Quartz and Feldspar",
+          "Pyroxene, Olivine, and Plagioclase"
+        ],
+        [
+          "Examples",
+          "Granite, Pegmatite, Rhyolite",
+          "Basalt, Gabbro, Dolerite"
+        ]
+      ],
+      "id": "i1maenk"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Silica in Acid Rocks",
+          "value": "> 65%",
+          "icon": "info"
+        },
+        {
+          "label": "Silica in Basic Rocks",
+          "value": "45-55%",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Rock Types",
+          "value": "Intrusive & Extrusive",
+          "icon": "book"
+        },
+        {
+          "label": "Cooling Rates",
+          "value": "Slow vs Rapid",
+          "icon": "clock"
+        }
+      ],
+      "id": "yffahh1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Granite (Acidic Intrusive) and Basalt (Basic Extrusive) are major components of continental and oceanic crusts respectively.",
+        "Deccan Traps in India are composed of flood basaltic extrusive igneous rocks.",
+        "Questions frequently distinguish between Plutonic (Granite, Gabbro) and Volcanic (Basalt, Obsidian) igneous rocks based on grain size and mineral composition."
+      ],
+      "id": "mk0jti6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Igneous rocks are formed by the cooling and solidification of molten magma or lava.",
+        "Based on mode of occurrence, they are divided into Plutonic (deep-seated), Hypabyssal (intermediate depth), and Extrusive/Volcanic (surface).",
+        "Chemical classification categorizes igneous rocks into Acidic (silica-rich) and Basic/Ultrabasic (iron and magnesium-rich).",
+        "Cooling speed dictates texture: slow subterranean cooling creates coarse-grained (phaneritic) rocks, while rapid surface cooling forms fine-grained (aphanitic) rocks."
+      ],
+      "id": "sxa1w5b"
+    }
+  ],
+  "enriched": true
+}

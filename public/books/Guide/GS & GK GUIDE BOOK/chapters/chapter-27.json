@@ -4,8 +4,15 @@
   "order": 27,
   "blocks": [
     {
+      "id": "vdbcjyd",
+      "type": "image",
+      "imageId": "gi3pi0r",
+      "src": "/books/Guide/GS & GK GUIDE BOOK/images/image_gi3pi0r.png"
+    },
+    {
       "type": "paragraph",
-      "id": "pdimpz9"
+      "id": "pdimpz9",
+      "content": "<img></img>The Panchayati Raj System represents rural local self-government in India. It aims to decentralize power and ensure people's participation in governance at the grassroots level. The system received constitutional status through the 73rd Constitutional Amendment Act, 1992."
     },
     {
       "type": "statStrip",
@@ -53,19 +60,23 @@
     },
     {
       "type": "paragraph",
-      "id": "doinbad"
+      "id": "doinbad",
+      "content": "• Village self-government existed in ancient India."
     },
     {
       "type": "paragraph",
-      "id": "5vrlfoh"
+      "id": "5vrlfoh",
+      "content": "• The Balwant Rai Mehta Committee (1957) recommended democratic decentralization."
     },
     {
       "type": "paragraph",
-      "id": "brtvjmu"
+      "id": "brtvjmu",
+      "content": "• The committee suggested a three-tier Panchayati Raj system."
     },
     {
       "type": "paragraph",
-      "id": "i8x8fu3"
+      "id": "i8x8fu3",
+      "content": "• The 73rd Constitutional Amendment Act, 1992 gave constitutional status to Panchayats."
     },
     {
       "id": "4ehhf8m",
@@ -80,85 +91,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243</p>",
+            "<p>Definitions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243A</p>",
+            "<p>Gram Sabha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243B</p>",
+            "<p>Constitution of Panchayats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243C</p>",
+            "<p>Composition of Panchayats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243D</p>",
+            "<p>Reservation of seats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243E</p>",
+            "<p>Duration of Panchayats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243F</p>",
+            "<p>Disqualification of members</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243G</p>",
+            "<p>Powers and responsibilities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243H</p>",
+            "<p>Power to impose taxes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243I</p>",
+            "<p>State Finance Commission</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 243K</p>",
+            "<p>State Election Commission</p>"
           ]
         }
       ]
@@ -176,29 +187,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Level</strong></p>",
+            "<p><strong>Institution</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Village Level</p>",
+            "<p>Gram Panchayat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Intermediate/Block Level</p>",
+            "<p>Panchayat Samiti</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>District Level</p>",
+            "<p>Zila Parishad</p>"
           ]
         }
       ]
@@ -211,7 +222,8 @@
     },
     {
       "type": "paragraph",
-      "id": "686nql2"
+      "id": "686nql2",
+      "content": "• Consists of all registered voters in the village."
     },
     {
       "type": "pullQuote",
@@ -220,11 +232,13 @@
     },
     {
       "type": "paragraph",
-      "id": "qyey8ot"
+      "id": "qyey8ot",
+      "content": "• Acts as the foundation of the Panchayati Raj system."
     },
     {
       "type": "paragraph",
-      "id": "39x79v3"
+      "id": "39x79v3",
+      "content": "• Approves plans and budgets of the Gram Panchayat."
     },
     {
       "id": "wju5yye",
@@ -234,15 +248,18 @@
     },
     {
       "type": "paragraph",
-      "id": "heu5z51"
+      "id": "heu5z51",
+      "content": "• Executive body at village level."
     },
     {
       "type": "paragraph",
-      "id": "a7iyznl"
+      "id": "a7iyznl",
+      "content": "• Members elected directly by villagers."
     },
     {
       "type": "paragraph",
-      "id": "yn57c9d"
+      "id": "yn57c9d",
+      "content": "• The head is called Sarpanch or Pradhan."
     },
     {
       "id": "7fu0lw8",
@@ -282,11 +299,13 @@
     },
     {
       "type": "paragraph",
-      "id": "eepu5ih"
+      "id": "eepu5ih",
+      "content": "• Works at block level."
     },
     {
       "type": "paragraph",
-      "id": "9wk60do"
+      "id": "9wk60do",
+      "content": "• Coordinates activities of Gram Panchayats."
     },
     {
       "id": "zjo1arn",
@@ -296,11 +315,13 @@
     },
     {
       "type": "paragraph",
-      "id": "xhzf34n"
+      "id": "xhzf34n",
+      "content": "• Functions at district level."
     },
     {
       "type": "paragraph",
-      "id": "utmx582"
+      "id": "utmx582",
+      "content": "• Supervises Panchayat Samitis."
     },
     {
       "id": "78kwawk",
@@ -310,19 +331,23 @@
     },
     {
       "type": "paragraph",
-      "id": "6hbwtkc"
+      "id": "6hbwtkc",
+      "content": "• Three-tier structure of governance."
     },
     {
       "type": "paragraph",
-      "id": "4e1p829"
+      "id": "4e1p829",
+      "content": "• Regular elections every five years."
     },
     {
       "type": "paragraph",
-      "id": "uce6yph"
+      "id": "uce6yph",
+      "content": "• Reservation for SC, ST and women."
     },
     {
       "type": "paragraph",
-      "id": "7dbyuab"
+      "id": "7dbyuab",
+      "content": "• State Election Commission for conducting elections."
     },
     {
       "type": "examAlert",
@@ -335,7 +360,8 @@
     },
     {
       "type": "paragraph",
-      "id": "p57vuiy"
+      "id": "p57vuiy",
+      "content": "• State Finance Commission for financial review."
     },
     {
       "id": "xjh8or4",
@@ -345,19 +371,23 @@
     },
     {
       "type": "paragraph",
-      "id": "lbe9vuc"
+      "id": "lbe9vuc",
+      "content": "• 73rd Constitutional Amendment Act (1992) introduced Panchayati Raj."
     },
     {
       "type": "paragraph",
-      "id": "71kc3no"
+      "id": "71kc3no",
+      "content": "• Gram Sabha is the basic unit of rural democracy."
     },
     {
       "type": "paragraph",
-      "id": "g7psswq"
+      "id": "g7psswq",
+      "content": "• At least one-third seats reserved for women."
     },
     {
       "type": "paragraph",
-      "id": "fan4iwp"
+      "id": "fan4iwp",
+      "content": "• Panchayat elections are held every 5 years."
     }
   ],
   "enriched": true

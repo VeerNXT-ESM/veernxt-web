@@ -48,11 +48,13 @@
     },
     {
       "type": "paragraph",
-      "id": "mq8813i"
+      "id": "mq8813i",
+      "content": "Cost Price (CP): Price at which the shopkeeper purchases the article. Marked Price (MP): The labelled price on the article (also called List Price). Discount: Reduction offered on the marked price to attract customers."
     },
     {
       "type": "paragraph",
-      "id": "ptaomki"
+      "id": "ptaomki",
+      "content": "Selling Price (SP): Final price paid by the customer. Relationship: SP = MP − Discount"
     },
     {
       "id": "okktyhh",
@@ -63,15 +65,18 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "8bthoid"
+      "id": "8bthoid",
+      "content": "Discount = MP − SP"
     },
     {
       "type": "paragraph",
-      "id": "gf6oq8r"
+      "id": "gf6oq8r",
+      "content": "Discount % = (Discount / MP) × 100 SP = MP × (100 − Discount%) / 100 MP = SP × 100 / (100 − Discount%) When discount is d%:"
     },
     {
       "type": "paragraph",
-      "id": "c7u6jkv"
+      "id": "c7u6jkv",
+      "content": "Customer pays (100 − d)% of MP."
     },
     {
       "id": "wh3mv0x",
@@ -83,39 +88,42 @@
       "id": "xcd3a0q",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Always calculate discount percentage on MARKED PRICE.</li><li>Assume MP = 100 when percentages are involved — this simplifies calculation.</li><li>Successive Discount Formula:</li></ul>",
+        "Always calculate discount percentage on MARKED PRICE.",
+        "Assume MP = 100 when percentages are involved — this simplifies calculation.",
+        "Successive Discount Formula:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "yelaa7g"
+      "id": "yelaa7g",
+      "content": "Net Discount = a + b − (ab / 100)"
     },
     {
       "id": "jhagt7u",
       "type": "list",
       "items": [
-        null,
-        null
+        "<ul><li>Equivalent Discount Concept:</li></ul>",
+        "Equivalent Discount Concept:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "7129ddd"
+      "id": "7129ddd",
+      "content": "Two successive discounts of 30% and 20% do NOT mean 50%."
     },
     {
       "id": "zq2wcrn",
       "type": "list",
       "items": [
-        null,
-        null
+        "<ul><li>Markup–Discount Strategy:</li></ul>",
+        "Markup–Discount Strategy:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "mvkfbf5"
+      "id": "mvkfbf5",
+      "content": "If CP is given and MP is increased first, always calculate MP before applying discount."
     },
     {
       "id": "z63qfhb",
@@ -125,34 +133,41 @@
     },
     {
       "type": "paragraph",
-      "id": "jg2w3be"
+      "id": "jg2w3be",
+      "content": "When two or more discounts are given one after another, they are called successive discounts. Formula:"
     },
     {
       "type": "paragraph",
-      "id": "pxqpu0k"
+      "id": "pxqpu0k",
+      "content": "Net Discount = a + b − (ab / 100)"
     },
     {
       "type": "paragraph",
-      "id": "r4hcqoo"
+      "id": "r4hcqoo",
+      "content": "Example: Find the net discount on successive discounts of 20% and 15%. Step 1:"
     },
     {
       "type": "paragraph",
-      "id": "fju0jik"
+      "id": "fju0jik",
+      "content": "Net Discount = 20 + 15 − (20×15)/100"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f7hd809"
+      "id": "f7hd809",
+      "content": "= 35 − 3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7fdh2k3"
+      "id": "7fdh2k3",
+      "content": "= 32%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gcqhemx"
+      "id": "gcqhemx",
+      "content": "Final Answer: 32%"
     },
     {
       "id": "h73mlpn",
@@ -162,32 +177,39 @@
     },
     {
       "type": "paragraph",
-      "id": "60mtosq"
+      "id": "60mtosq",
+      "content": "A shopkeeper marks goods higher than cost price and then offers discount."
     },
     {
       "type": "paragraph",
-      "id": "nt0p4hm"
+      "id": "nt0p4hm",
+      "content": "Example: A shopkeeper marks an article 50% above CP and gives a discount of 20%. Find profit. Step 1: Assume CP = 100."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bwpgtl7"
+      "id": "bwpgtl7",
+      "content": "Step 2: MP = 150"
     },
     {
       "type": "paragraph",
-      "id": "o4smt6b"
+      "id": "o4smt6b",
+      "content": "Step 3: Discount = 20% of 150 = 30"
     },
     {
       "type": "paragraph",
-      "id": "wmo5o1x"
+      "id": "wmo5o1x",
+      "content": "Step 4: SP = 150 − 30 = 120"
     },
     {
       "type": "paragraph",
-      "id": "l6guvyt"
+      "id": "l6guvyt",
+      "content": "Step 5: Profit = 120 − 100 = 20 Profit % = 20%"
     },
     {
       "type": "paragraph",
-      "id": "w8l3dsl"
+      "id": "w8l3dsl",
+      "content": "Final Answer: 20% profit."
     },
     {
       "id": "cmsrfb9",
@@ -197,28 +219,34 @@
     },
     {
       "type": "paragraph",
-      "id": "8tws78b"
+      "id": "8tws78b",
+      "content": "If an article is sold after two discounts, we can find a single equivalent discount. Example: Successive discounts of 10% and 10%."
     },
     {
       "type": "paragraph",
-      "id": "xq80rqz"
+      "id": "xq80rqz",
+      "content": "Net Discount:"
     },
     {
       "type": "paragraph",
-      "id": "urq97if"
+      "id": "urq97if",
+      "content": "= 10 + 10 − 1"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "et5fas1"
+      "id": "et5fas1",
+      "content": "= 19%"
     },
     {
       "type": "paragraph",
-      "id": "i1jy0hl"
+      "id": "i1jy0hl",
+      "content": "Important Learning:"
     },
     {
       "type": "paragraph",
-      "id": "kwxsafh"
+      "id": "kwxsafh",
+      "content": "Two 10% discounts are NOT equal to 20%."
     },
     {
       "id": "53vytyn",
@@ -228,28 +256,34 @@
     },
     {
       "type": "paragraph",
-      "id": "stp74rl"
+      "id": "stp74rl",
+      "content": "Example:"
     },
     {
       "type": "paragraph",
-      "id": "e6t56a2"
+      "id": "e6t56a2",
+      "content": "An article costs ₹800. It is marked 25% higher and sold at 10% discount. Find profit. Step 1: MP = 800 × 1.25 = 1000"
     },
     {
       "type": "paragraph",
-      "id": "9veloxj"
+      "id": "9veloxj",
+      "content": "Step 2: Discount = 10% of 1000 = 100"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9vqva6y"
+      "id": "9vqva6y",
+      "content": "Step 3: SP = 900"
     },
     {
       "type": "paragraph",
-      "id": "7c93b0y"
+      "id": "7c93b0y",
+      "content": "Step 4: Profit = 900 − 800 = 100 Profit % = (100/800)×100 = 12.5%"
     },
     {
       "type": "paragraph",
-      "id": "ecmml48"
+      "id": "ecmml48",
+      "content": "Final Answer: Profit = 12.5%."
     },
     {
       "id": "hj6nuvd",
@@ -259,34 +293,35 @@
     },
     {
       "type": "paragraph",
-      "id": "ulffjih"
+      "id": "ulffjih",
+      "content": "Example: A shopkeeper gives 20% discount on one article and 10% on another. Which gives more reduction?"
     },
     {
       "type": "paragraph",
-      "id": "9jtaqqn"
+      "id": "9jtaqqn",
+      "content": "Assume MP = 100 for both. Discounts:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "s17b94p"
-    },
-    {
-      "type": "pullQuote",
-      "content": "MARKUP AND DISCOUNT MODEL (TOP RRB QUESTION)",
-      "id": "t8d95jt"
+      "id": "s17b94p",
+      "content": "20% → ₹20"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z3nzu28"
+      "id": "z3nzu28",
+      "content": "10% → ₹10"
     },
     {
       "type": "paragraph",
-      "id": "c44brrh"
+      "id": "c44brrh",
+      "content": "Conclusion:"
     },
     {
       "type": "paragraph",
-      "id": "yizjdoo"
+      "id": "yizjdoo",
+      "content": "Higher discount always gives greater price reduction."
     },
     {
       "id": "2hmpyec",
@@ -302,23 +337,28 @@
     },
     {
       "type": "paragraph",
-      "id": "onazwi1"
+      "id": "onazwi1",
+      "content": "An article is marked at ₹2000 and is sold after allowing a discount of 25%. We are required to find the selling price."
     },
     {
       "type": "paragraph",
-      "id": "to0menc"
+      "id": "to0menc",
+      "content": "Step 1: Recall that discount is always calculated on the marked price. Therefore, we first calculate 25% of ₹2000."
     },
     {
       "type": "paragraph",
-      "id": "qd03509"
+      "id": "qd03509",
+      "content": "Discount = (25/100) × 2000 = ₹500."
     },
     {
       "type": "paragraph",
-      "id": "ximi9iq"
+      "id": "ximi9iq",
+      "content": "Step 2: Subtract the discount from the marked price to obtain the selling price. Selling Price = 2000 − 500 = ₹1500."
     },
     {
       "type": "paragraph",
-      "id": "qx9461r"
+      "id": "qx9461r",
+      "content": "Final Answer: The selling price of the article is ₹1500."
     },
     {
       "id": "6w4odga",
@@ -328,24 +368,29 @@
     },
     {
       "type": "paragraph",
-      "id": "sc4ezy2"
+      "id": "sc4ezy2",
+      "content": "An article is sold for ₹720 after allowing a discount of 10%. We need to determine the marked price."
     },
     {
       "type": "paragraph",
-      "id": "2zllo1h"
+      "id": "2zllo1h",
+      "content": "Step 1: If the discount is 10%, the customer pays 90% of the marked price. Step 2: Let the marked price be x. Then:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hc9emq8"
+      "id": "hc9emq8",
+      "content": "0.9x = 720"
     },
     {
       "type": "paragraph",
-      "id": "kjbzwg3"
+      "id": "kjbzwg3",
+      "content": "Step 3: Solve for x. x = 720 ÷ 0.9 = 800"
     },
     {
       "type": "paragraph",
-      "id": "omej4wo"
+      "id": "omej4wo",
+      "content": "Verification: 10% of 800 equals ₹80, and 800 − 80 = ₹720. Final Answer: The marked price is ₹800."
     },
     {
       "id": "n6lthju",
@@ -355,33 +400,40 @@
     },
     {
       "type": "paragraph",
-      "id": "2iv8fzs"
+      "id": "2iv8fzs",
+      "content": "Two successive discounts of 30% and 20% are offered on an article. We must find the net discount."
     },
     {
       "type": "paragraph",
-      "id": "fycn3k1"
+      "id": "fycn3k1",
+      "content": "Step 1: Use the successive discount formula:"
     },
     {
       "type": "paragraph",
-      "id": "003s11c"
+      "id": "003s11c",
+      "content": "Net Discount = a + b − (ab/100) Step 2: Substitute the given values."
     },
     {
       "type": "paragraph",
-      "id": "micmh55"
+      "id": "micmh55",
+      "content": "Net Discount = 30 + 20 − (30×20)/100"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6szem1d"
+      "id": "6szem1d",
+      "content": "= 50 − 6"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m5qzaxu"
+      "id": "m5qzaxu",
+      "content": "= 44%"
     },
     {
       "type": "paragraph",
-      "id": "ywzuniz"
+      "id": "ywzuniz",
+      "content": "Final Answer: The equivalent single discount is 44%."
     },
     {
       "id": "sfjyhus",
@@ -417,31 +469,38 @@
     },
     {
       "type": "paragraph",
-      "id": "2nvory3"
+      "id": "2nvory3",
+      "content": "A trader marks his goods 40% above the cost price and then allows a discount of 20%. We are required to find the profit percentage."
     },
     {
       "type": "paragraph",
-      "id": "dx84lp4"
+      "id": "dx84lp4",
+      "content": "Step 1: Assume the cost price is ₹100 to simplify percentage calculations. Step 2: Since the goods are marked 40% above cost price:"
     },
     {
       "type": "paragraph",
-      "id": "wg8qrse"
+      "id": "wg8qrse",
+      "content": "Marked Price = 100 + 40 = ₹140. Step 3: Calculate the discount."
     },
     {
       "type": "paragraph",
-      "id": "w3oukxl"
+      "id": "w3oukxl",
+      "content": "Discount = 20% of 140 = ₹28. Step 4: Determine the selling price. Selling Price = 140 − 28 = ₹112."
     },
     {
       "type": "paragraph",
-      "id": "dyiwmqp"
+      "id": "dyiwmqp",
+      "content": "Step 5: Calculate the profit. Profit = 112 − 100 = ₹12."
     },
     {
       "type": "paragraph",
-      "id": "pdd3xhu"
+      "id": "pdd3xhu",
+      "content": "Step 6: Convert profit into percentage. Profit % = (12/100) × 100 = 12%."
     },
     {
       "type": "paragraph",
-      "id": "kdqi6g8"
+      "id": "kdqi6g8",
+      "content": "Final Answer: The trader earns a profit of 12%."
     },
     {
       "id": "ng4tlgt",
@@ -451,35 +510,43 @@
     },
     {
       "type": "paragraph",
-      "id": "hm3mqpi"
+      "id": "hm3mqpi",
+      "content": "A shopkeeper allows a discount of 10% on the marked price and still makes a profit of 20%. We need to find the markup percentage."
     },
     {
       "type": "paragraph",
-      "id": "2zwnhpx"
+      "id": "2zwnhpx",
+      "content": "Step 1: Assume the cost price is ₹100."
     },
     {
       "type": "paragraph",
-      "id": "u0uc1o2"
+      "id": "u0uc1o2",
+      "content": "Step 2: A profit of 20% means the selling price becomes ₹120."
     },
     {
       "type": "paragraph",
-      "id": "tuu4xp1"
+      "id": "tuu4xp1",
+      "content": "Step 3: After a discount of 10%, the customer pays 90% of the marked price. Therefore: 0.9 × MP = 120"
     },
     {
       "type": "paragraph",
-      "id": "k3jucij"
+      "id": "k3jucij",
+      "content": "Step 4: Solve for the marked price. MP = 120 ÷ 0.9 = ₹133.33 (approx.)"
     },
     {
       "type": "paragraph",
-      "id": "c5xaqj0"
+      "id": "c5xaqj0",
+      "content": "Step 5: Calculate the markup. Markup = 133.33 − 100 = ₹33.33"
     },
     {
       "type": "paragraph",
-      "id": "oskn6iy"
+      "id": "oskn6iy",
+      "content": "Markup % = 33.33%."
     },
     {
       "type": "paragraph",
-      "id": "jynjcz6"
+      "id": "jynjcz6",
+      "content": "Final Answer: The markup is approximately 33.33%."
     },
     {
       "id": "00f4v23",
@@ -495,19 +562,23 @@
     },
     {
       "type": "paragraph",
-      "id": "iiin4tx"
+      "id": "iiin4tx",
+      "content": "The marked price of an article is ₹1500 and a discount of 20% is allowed. Find the selling price."
     },
     {
       "type": "paragraph",
-      "id": "ysxf62y"
+      "id": "ysxf62y",
+      "content": "Step 1: Calculate the discount. Discount = (20/100) × 1500 = ₹300."
     },
     {
       "type": "paragraph",
-      "id": "qh3y56u"
+      "id": "qh3y56u",
+      "content": "Step 2: Subtract the discount from the marked price. Selling Price = 1500 − 300 = ₹1200."
     },
     {
       "type": "paragraph",
-      "id": "r63lmh9"
+      "id": "r63lmh9",
+      "content": "Final Answer: The selling price is ₹1200."
     },
     {
       "id": "i22l85b",
@@ -517,24 +588,29 @@
     },
     {
       "type": "paragraph",
-      "id": "vwyweq8"
+      "id": "vwyweq8",
+      "content": "An article is sold for ₹850 after allowing a discount of 15%. Find the marked price."
     },
     {
       "type": "paragraph",
-      "id": "01xsb6y"
+      "id": "01xsb6y",
+      "content": "Step 1: If the discount is 15%, the customer pays 85% of the marked price. Let the marked price be x."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lx4ltq2"
+      "id": "lx4ltq2",
+      "content": "0.85x = 850"
     },
     {
       "type": "paragraph",
-      "id": "m63ctac"
+      "id": "m63ctac",
+      "content": "Step 2: Solve the equation. x = 850 ÷ 0.85 = 1000"
     },
     {
       "type": "paragraph",
-      "id": "5tl775p"
+      "id": "5tl775p",
+      "content": "Verification: 15% of 1000 equals ₹150, and 1000 − 150 = ₹850. Final Answer: The marked price is ₹1000."
     },
     {
       "id": "cjjct7g",
@@ -544,16 +620,19 @@
     },
     {
       "type": "paragraph",
-      "id": "o0cr804"
+      "id": "o0cr804",
+      "content": "Find the net discount when successive discounts of 25% and 10% are given."
     },
     {
       "type": "paragraph",
-      "id": "rxx40tx"
+      "id": "rxx40tx",
+      "content": "Step 1: Apply the successive discount formula. Net Discount = 25 + 10 − (25×10)/100"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "blb0fpu"
+      "id": "blb0fpu",
+      "content": "= 35 − 2.5"
     },
     {
       "type": "examAlert",
@@ -567,11 +646,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "jler54b"
+      "id": "jler54b",
+      "content": "= 32.5%"
     },
     {
       "type": "paragraph",
-      "id": "gfnszf5"
+      "id": "gfnszf5",
+      "content": "Final Answer: The equivalent single discount is 32.5%."
     },
     {
       "id": "yeqiaz3",
@@ -581,31 +662,38 @@
     },
     {
       "type": "paragraph",
-      "id": "j2w11vp"
+      "id": "j2w11vp",
+      "content": "The cost price of an article is ₹500. It is marked 20% higher and sold after allowing a discount of 10%. Find the profit percentage."
     },
     {
       "type": "paragraph",
-      "id": "kwoadxi"
+      "id": "kwoadxi",
+      "content": "Step 1: Calculate the marked price."
     },
     {
       "type": "paragraph",
-      "id": "wi95s99"
+      "id": "wi95s99",
+      "content": "Marked Price = 500 + 20% of 500 = 500 + 100 = ₹600. Step 2: Calculate the discount."
     },
     {
       "type": "paragraph",
-      "id": "0k27m1f"
+      "id": "0k27m1f",
+      "content": "Discount = 10% of 600 = ₹60. Step 3: Determine the selling price. Selling Price = 600 − 60 = ₹540."
     },
     {
       "type": "paragraph",
-      "id": "lyn8lq5"
+      "id": "lyn8lq5",
+      "content": "Step 4: Calculate the profit. Profit = 540 − 500 = ₹40."
     },
     {
       "type": "paragraph",
-      "id": "vadk3vy"
+      "id": "vadk3vy",
+      "content": "Step 5: Convert into percentage. Profit % = (40/500) × 100 = 8%."
     },
     {
       "type": "paragraph",
-      "id": "0jnbyz4"
+      "id": "0jnbyz4",
+      "content": "Final Answer: The profit is 8%."
     },
     {
       "id": "0nsrk2e",
@@ -615,40 +703,49 @@
     },
     {
       "type": "paragraph",
-      "id": "c2470wd"
+      "id": "c2470wd",
+      "content": "A trader allows a discount of 20% on the marked price but still earns a profit of 20%. Find the markup percentage."
     },
     {
       "type": "paragraph",
-      "id": "lcf9kyy"
+      "id": "lcf9kyy",
+      "content": "Step 1: Assume the cost price is ₹100."
     },
     {
       "type": "paragraph",
-      "id": "l2oqgo5"
+      "id": "l2oqgo5",
+      "content": "Step 2: With a profit of 20%, the selling price becomes ₹120."
     },
     {
       "type": "paragraph",
-      "id": "lkogm69"
+      "id": "lkogm69",
+      "content": "Step 3: After a 20% discount, the customer pays 80% of the marked price. Therefore:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dpfdqq5"
+      "id": "dpfdqq5",
+      "content": "0.8MP = 120"
     },
     {
       "type": "paragraph",
-      "id": "4ir02cm"
+      "id": "4ir02cm",
+      "content": "Step 4: Solve for MP."
     },
     {
       "type": "paragraph",
-      "id": "mhxnvna"
+      "id": "mhxnvna",
+      "content": "MP = 120 ÷ 0.8 = ₹150."
     },
     {
       "type": "paragraph",
-      "id": "y7603aj"
+      "id": "y7603aj",
+      "content": "Step 5: Calculate the markup. Markup = 150 − 100 = ₹50. Markup % = 50%."
     },
     {
       "type": "paragraph",
-      "id": "u5o3hzi"
+      "id": "u5o3hzi",
+      "content": "Final Answer: The markup is 50%."
     }
   ],
   "enriched": true

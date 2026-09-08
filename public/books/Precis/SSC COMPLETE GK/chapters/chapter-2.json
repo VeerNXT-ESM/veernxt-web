@@ -10,6 +10,12 @@
       "content": "Shape of the Earth"
     },
     {
+      "id": "qpq9tmz",
+      "type": "image",
+      "imageId": "h6axc32",
+      "src": "/books/Precis/SSC COMPLETE GK/images/image_h6axc32.jpeg"
+    },
+    {
       "type": "statStrip",
       "stats": [
         {
@@ -49,7 +55,8 @@
     },
     {
       "type": "paragraph",
-      "id": "cimi16e"
+      "id": "cimi16e",
+      "content": "<img></img>The Earth is not a perfect sphere. Its actual shape is best described as a geoid or an oblate spheroid. Due to the continuous rotation of the Earth, centrifugal force acts more strongly at the equator, causing a slight bulge, while the poles appear slightly flattened. The term ‘geoid’ means ‘Earth-shaped’ and refers to the irregular shape of the Earth influenced by uneven distribution of land and water. This shape affects gravity, sea level, satellite motion, and long-distance navigation. "
     },
     {
       "id": "u06jyv8",
@@ -59,7 +66,8 @@
     },
     {
       "type": "paragraph",
-      "id": "sxww8v1"
+      "id": "sxww8v1",
+      "content": "The Earth is the fifth largest planet in the Solar System. Its mean radius is about 6,371 kilometres. The equatorial diameter is approximately 12,756 km, whereas the polar diameter is about 12,714 km. This small difference further confirms that the Earth is flattened at the poles. The total surface area of the Earth is around 510 million square kilometres, out of which nearly 71 percent is covered by water and 29 percent by land. These dimensions help in understanding climatic zones, ocean distribution, and global calculations."
     },
     {
       "id": "jr087py",
@@ -69,7 +77,8 @@
     },
     {
       "type": "paragraph",
-      "id": "icoh34s"
+      "id": "icoh34s",
+      "content": "Several evidences support the spherical nature of the Earth. During a lunar eclipse, the shadow of the Earth on the Moon appears circular, which is possible only if the Earth is spherical. Ships moving away from the coast gradually disappear from view from the bottom upwards, indicating curvature. Modern satellite photographs provide direct visual proof of Earth’s shape. Differences in gravity and time across latitudes also support the oblate spheroid shape."
     },
     {
       "id": "ketr8pa",
@@ -78,13 +87,20 @@
       "content": "Motions of the Earth"
     },
     {
+      "id": "6n5cepw",
+      "type": "image",
+      "imageId": "pcksn08",
+      "src": "/books/Precis/SSC COMPLETE GK/images/image_pcksn08.jpeg"
+    },
+    {
       "type": "pullQuote",
       "content": "The Earth's shape is technically described as a Geoid—meaning Earth-shaped—characterized by an equatorial bulge and polar flattening.",
       "id": "gp1q8ek"
     },
     {
       "type": "paragraph",
-      "id": "97t72y0"
+      "id": "97t72y0",
+      "content": "The Earth performs two important movements simultaneously—rotation and revolution. These motions are responsible for many natural phenomena that directly affect human life.<img></img>"
     },
     {
       "id": "twmcj3a",
@@ -94,7 +110,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xdei0o7"
+      "id": "xdei0o7",
+      "content": "Rotation refers to the spinning of the Earth on its axis from west to east. The Earth takes nearly 24 hours to complete one rotation, resulting in the cycle of day and night. As the Earth rotates, different places move into sunlight and darkness alternately. Rotation is also responsible for the Coriolis effect, which causes winds and ocean currents to deflect to the right in the Northern Hemisphere and to the left in the Southern Hemisphere."
     },
     {
       "id": "s7be3sq",
@@ -104,7 +121,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1iljg0d"
+      "id": "1iljg0d",
+      "content": "Revolution is the movement of the Earth around the Sun along an elliptical path. One complete revolution takes about 365 days and 6 hours. The extra 6 hours are adjusted by adding one extra"
     },
     {
       "type": "comparisonTable",
@@ -139,7 +157,8 @@
     },
     {
       "type": "paragraph",
-      "id": "t3z79p1"
+      "id": "t3z79p1",
+      "content": "day every four years, known as a leap year. The Earth’s axis is tilted at 23½ degrees, and this tilt combined with revolution causes seasons. Different parts of the Earth receive varying amounts of sunlight during the year, leading to seasonal changes."
     },
     {
       "id": "vwtd34t",
@@ -149,7 +168,8 @@
     },
     {
       "type": "paragraph",
-      "id": "2v17uox"
+      "id": "2v17uox",
+      "content": "Day and night occur due to Earth’s rotation. At any moment, only one half of the Earth faces the Sun and experiences day, while the other half remains in darkness. The duration of day and night remains almost equal at the equator but varies significantly as we move towards the poles."
     },
     {
       "id": "f4u5xeg",
@@ -159,7 +179,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mzx3yrs"
+      "id": "mzx3yrs",
+      "content": "Seasons are caused by the tilt of the Earth’s axis and its revolution around the Sun. When the Northern Hemisphere tilts towards the Sun, it experiences summer, while the Southern Hemisphere experiences winter. The opposite situation leads to winter in the Northern Hemisphere and summer in the Southern Hemisphere. Regions near the equator experience minimal seasonal variation, whereas higher latitudes witness extreme seasonal changes."
     },
     {
       "id": "qs9ll6n",
@@ -179,7 +200,8 @@
     },
     {
       "type": "paragraph",
-      "id": "756tq7t"
+      "id": "756tq7t",
+      "content": "The shape, size, and movements of the Earth control climate, weather patterns, time calculation, navigation, and life-support systems. These factors explain why time differs from place to place, why climatic zones exist, and why Earth is suitable for life. In SSC examinations, conceptual clarity of these topics helps solve both direct and application-based questions."
     },
     {
       "id": "tqwjjd8",
@@ -191,18 +213,19 @@
       "id": "wpgf4mt",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Remember: Shape → Rotation → Bulge → Oblate spheroid.",
+        "Equator = bulge, Poles = flat (link with centrifugal force).",
+        "Rotation = Day &amp; Night (24 hours).",
+        "Revolution + Tilt = Seasons.",
+        "365 days + 6 hours = Leap year concept.",
+        "Coriolis effect = deflection of winds and currents.",
+        "Equator → equal day &amp; night, Poles → extreme variation."
       ]
     },
     {
       "type": "paragraph",
-      "id": "o6zinwf"
+      "id": "o6zinwf",
+      "content": "Using flow thinking instead of memorisation will help retain concepts longer."
     }
   ],
   "enriched": true

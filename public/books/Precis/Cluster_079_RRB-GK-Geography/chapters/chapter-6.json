@@ -1,0 +1,91 @@
+{
+  "title": "4. Solar System",
+  "order": 6,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "The Solar System consists of the Sun and the celestial bodies bound to it by gravity, including eight planets and their satellites.",
+      "id": "yuywqd2"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Terrestrial Planets (Inner)",
+        "Jovian Planets (Outer)"
+      ],
+      "rows": [
+        [
+          "Planets",
+          "Mercury, Venus, Earth, Mars",
+          "Jupiter, Saturn, Uranus, Neptune"
+        ],
+        [
+          "Composition",
+          "Metallic and rocky solids",
+          "Hydrogen, helium, and icy compounds"
+        ],
+        [
+          "Density",
+          "High density",
+          "Low density"
+        ],
+        [
+          "Moons & Rings",
+          "Few or no moons; no rings",
+          "Numerous moons; system of rings present"
+        ]
+      ],
+      "id": "5muqs3m"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Planets",
+          "value": "8 Planets",
+          "icon": "book"
+        },
+        {
+          "label": "Estimated Age",
+          "value": "4.6 Billion Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Largest Planet",
+          "value": "Jupiter",
+          "icon": "award"
+        },
+        {
+          "label": "Hottest Planet",
+          "value": "Venus",
+          "icon": "info"
+        }
+      ],
+      "id": "xxq0vso"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Venus and Uranus rotate from East to West (retrograde rotation), whereas all other planets rotate from West to East.",
+        "The Asteroid Belt is situated strictly between the orbits of Mars and Jupiter.",
+        "Mercury and Venus are the only two planets in the Solar System that have no natural moons.",
+        "Ganymede (Jupiter's moon) is larger than the planet Mercury and is the largest satellite in the Solar System."
+      ],
+      "id": "hcmer93"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Solar System comprises the Sun, eight major planets, dwarf planets, natural satellites, asteroids, comets, and meteoroids bound together by gravity.",
+        "Planets are divided into two main categories: Inner/Terrestrial planets (Mercury, Venus, Earth, Mars) and Outer/Jovian planets (Jupiter, Saturn, Uranus, Neptune).",
+        "Venus is the hottest planet due to an extreme runaway greenhouse effect caused by a dense carbon dioxide atmosphere, and is often called Earth's Twin.",
+        "The Asteroid Belt is a region located between the orbits of Mars and Jupiter, containing thousands of rocky bodies.",
+        "Jupiter has the fastest rotational period (~10 hours) and hosts Ganymede, the largest moon in the Solar System."
+      ],
+      "id": "k539uxi"
+    }
+  ],
+  "enriched": true
+}

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "5r0rjnq"
+      "id": "5r0rjnq",
+      "content": "Sound is a form of mechanical energy that produces the sensation of hearing. It is produced due to vibrations of objects and travels through a medium in the form of sound waves. Sound is essential for communication, music and many scientific applications."
     },
     {
       "type": "statStrip",
@@ -53,19 +54,23 @@
     },
     {
       "type": "paragraph",
-      "id": "r9se1x9"
+      "id": "r9se1x9",
+      "content": "• Sound is a form of energy that produces the sensation of hearing."
     },
     {
       "type": "paragraph",
-      "id": "r68mdsd"
+      "id": "r68mdsd",
+      "content": "• It is produced by vibrating objects."
     },
     {
       "type": "paragraph",
-      "id": "19ameyf"
+      "id": "19ameyf",
+      "content": "• Sound travels through a medium in the form of waves."
     },
     {
       "type": "paragraph",
-      "id": "qtgqjgx"
+      "id": "qtgqjgx",
+      "content": "• It cannot travel through vacuum because it requires a material medium."
     },
     {
       "id": "8rpy9dc",
@@ -75,15 +80,18 @@
     },
     {
       "type": "paragraph",
-      "id": "uityn8o"
+      "id": "uityn8o",
+      "content": "• Sound is produced when an object vibrates."
     },
     {
       "type": "paragraph",
-      "id": "xwkvz2j"
+      "id": "xwkvz2j",
+      "content": "• The vibrating object causes nearby particles of the medium to vibrate."
     },
     {
       "type": "paragraph",
-      "id": "u1jw4u2"
+      "id": "u1jw4u2",
+      "content": "• These vibrations travel through the medium as sound waves."
     },
     {
       "id": "ol3ka62",
@@ -93,15 +101,18 @@
     },
     {
       "type": "paragraph",
-      "id": "c79hpwy"
+      "id": "c79hpwy",
+      "content": "Sound waves are longitudinal waves consisting of compressions and rarefactions."
     },
     {
       "type": "paragraph",
-      "id": "iuv1lzn"
+      "id": "iuv1lzn",
+      "content": "• Compression – region of high pressure."
     },
     {
       "type": "paragraph",
-      "id": "po4s3zz"
+      "id": "po4s3zz",
+      "content": "• Rarefaction – region of low pressure."
     },
     {
       "id": "1po4sjf",
@@ -121,36 +132,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Characteristic</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Amplitude</p>",
+            "<p>Maximum displacement of particles; determines loudness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Frequency</p>",
+            "<p>Number of vibrations per second</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wavelength</p>",
+            "<p>Distance between two compressions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Time Period</p>",
+            "<p>Time taken for one complete vibration</p>"
           ]
         }
       ]
@@ -168,29 +179,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Frequency Range</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Infrasonic</p>",
+            "<p>Less than 20 Hz</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Audible Sound</p>",
+            "<p>20 Hz – 20,000 Hz</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ultrasonic</p>",
+            "<p>Greater than 20,000 Hz</p>"
           ]
         }
       ]
@@ -203,7 +214,8 @@
     },
     {
       "type": "paragraph",
-      "id": "cxssz86"
+      "id": "cxssz86",
+      "content": "The speed of sound depends on the medium and temperature. It travels fastest in solids and slowest in gases."
     },
     {
       "id": "3wz50tc",
@@ -212,29 +224,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Medium</strong></p>",
+            "<p><strong>Speed</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Air</p>",
+            "<p>343 m/s</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Water</p>",
+            "<p>1500 m/s</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Steel</p>",
+            "<p>5000 m/s</p>"
           ]
         }
       ]
@@ -247,7 +259,8 @@
     },
     {
       "type": "paragraph",
-      "id": "iae7rld"
+      "id": "iae7rld",
+      "content": "When sound waves strike a surface, they bounce back. This phenomenon is called reflection of sound."
     },
     {
       "type": "comparisonTable",
@@ -287,15 +300,18 @@
     },
     {
       "type": "paragraph",
-      "id": "9tjq70k"
+      "id": "9tjq70k",
+      "content": "• Echo is the repetition of sound caused by reflection of sound waves."
     },
     {
       "type": "paragraph",
-      "id": "7evifsi"
+      "id": "7evifsi",
+      "content": "• It is heard when sound reflects from a distant surface."
     },
     {
       "type": "paragraph",
-      "id": "7xjd8hw"
+      "id": "7xjd8hw",
+      "content": "• The minimum distance required to hear echo is about 17 meters."
     },
     {
       "id": "m1sp10p",
@@ -306,21 +322,25 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "tcdbezt"
+      "id": "tcdbezt",
+      "content": "• Medical imaging (ultrasound scanning)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0td66ki"
+      "id": "0td66ki",
+      "content": "• Detecting cracks in metals"
     },
     {
       "type": "paragraph",
-      "id": "5v253xi"
+      "id": "5v253xi",
+      "content": "• SONAR used by ships to detect underwater objects"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8fo6axj"
+      "id": "8fo6axj",
+      "content": "• Cleaning delicate electronic components"
     },
     {
       "id": "15ky7a1",
@@ -330,7 +350,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wd99nnh"
+      "id": "wd99nnh",
+      "content": "• Noise pollution refers to unwanted or harmful sound."
     },
     {
       "type": "examAlert",
@@ -344,11 +365,13 @@
     },
     {
       "type": "paragraph",
-      "id": "hghv7dv"
+      "id": "hghv7dv",
+      "content": "• It can cause hearing problems and stress."
     },
     {
       "type": "paragraph",
-      "id": "xp9td7m"
+      "id": "xp9td7m",
+      "content": "• Sources include traffic, industrial machines and loudspeakers."
     },
     {
       "id": "trx1aw8",
@@ -358,19 +381,23 @@
     },
     {
       "type": "paragraph",
-      "id": "91147cg"
+      "id": "91147cg",
+      "content": "• Sound cannot travel in vacuum."
     },
     {
       "type": "paragraph",
-      "id": "x9l3ufa"
+      "id": "x9l3ufa",
+      "content": "• Human hearing range is 20 Hz to 20,000 Hz."
     },
     {
       "type": "paragraph",
-      "id": "ov5mwbq"
+      "id": "ov5mwbq",
+      "content": "• Sound waves are longitudinal waves."
     },
     {
       "type": "paragraph",
-      "id": "75i1he1"
+      "id": "75i1he1",
+      "content": "• Speed of sound in air is about 343 m/s."
     }
   ],
   "enriched": true

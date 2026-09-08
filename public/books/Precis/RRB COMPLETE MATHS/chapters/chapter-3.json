@@ -43,38 +43,46 @@
     },
     {
       "type": "paragraph",
-      "id": "jildjws"
+      "id": "jildjws",
+      "content": "Step 1: Perform prime factorization. 72 = 2 × 2 × 2 × 3 × 3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ar02343"
+      "id": "ar02343",
+      "content": "72 = 2³ × 3²"
     },
     {
       "type": "paragraph",
-      "id": "8dsry2k"
+      "id": "8dsry2k",
+      "content": "Step 2: Use the formula for number of factors. If N = pᵃ × qᵇ,"
     },
     {
       "type": "paragraph",
-      "id": "0p0q291"
+      "id": "0p0q291",
+      "content": "Number of factors = (a + 1)(b + 1) Here, a = 3 and b = 2."
     },
     {
       "type": "paragraph",
-      "id": "i3d49mw"
+      "id": "i3d49mw",
+      "content": "Number of factors = (3 + 1)(2 + 1)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qtcwxs2"
+      "id": "qtcwxs2",
+      "content": "= 4 × 3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j5ova6o"
+      "id": "j5ova6o",
+      "content": "= 12"
     },
     {
       "type": "paragraph",
-      "id": "mctnyrn"
+      "id": "mctnyrn",
+      "content": "Final Answer: 72 has 12 factors."
     },
     {
       "id": "olyokzl",
@@ -84,80 +92,98 @@
     },
     {
       "type": "paragraph",
-      "id": "jfczmej"
+      "id": "jfczmej",
+      "content": "Step 1: Prime factorize both numbers. 24 = 2 × 2 × 2 × 3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hmrvc3z"
+      "id": "hmrvc3z",
+      "content": "24 = 2³ × 3"
     },
     {
       "type": "paragraph",
-      "id": "a5fgiag"
+      "id": "a5fgiag",
+      "content": "36 = 2 × 2 × 3 × 3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nqiqllk"
+      "id": "nqiqllk",
+      "content": "36 = 2² × 3²"
     },
     {
       "type": "paragraph",
-      "id": "48af7dr"
+      "id": "48af7dr",
+      "content": "Step 2: Identify the common prime factors with the smallest powers. Common factor of 2 → minimum power is 2&lt;"
     },
     {
       "type": "paragraph",
-      "id": "8oemd0y"
+      "id": "8oemd0y",
+      "content": "Common factor of 3 → minimum power is 3¹ Step 3: Multiply them."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3oxijy9"
+      "id": "3oxijy9",
+      "content": "HCF = 2² × 3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "80oq07h"
+      "id": "80oq07h",
+      "content": "= 4 × 3"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wtf92tm"
+      "id": "wtf92tm",
+      "content": "= 12"
     },
     {
       "type": "paragraph",
-      "id": "atjsjdr"
+      "id": "atjsjdr",
+      "content": "Final Answer: The HCF of 24 and 36 is 12."
     },
     {
       "type": "paragraph",
-      "id": "m9i6tvi"
+      "id": "m9i6tvi",
+      "content": "<strong>Example 3: Find the unit digit of 9^23. </strong>Step 1: Observe the unit digit pattern of powers of 9. 9; = 9 → Unit digit = 9"
     },
     {
       "type": "paragraph",
-      "id": "npdpi8a"
+      "id": "npdpi8a",
+      "content": "9&lt; = 81 → Unit digit = 1"
     },
     {
       "type": "paragraph",
-      "id": "cfczvd8"
+      "id": "cfczvd8",
+      "content": "9= = 729 → Unit digit = 9"
     },
     {
       "type": "paragraph",
-      "id": "u2k84g1"
+      "id": "u2k84g1",
+      "content": "9&gt; = 6561 → Unit digit = 1"
     },
     {
       "type": "paragraph",
-      "id": "eb0slqi"
+      "id": "eb0slqi",
+      "content": "The unit digits repeat in a cycle: 9, 1. Cycle length = 2."
     },
     {
       "type": "paragraph",
-      "id": "g8xnrot"
+      "id": "g8xnrot",
+      "content": "Step 2: Divide the exponent by the cycle length. 23"
     },
     {
       "type": "paragraph",
-      "id": "btm7zl4"
+      "id": "btm7zl4",
+      "content": "÷ 2 leaves a remainder of 1."
     },
     {
       "type": "paragraph",
-      "id": "fejm1v1"
+      "id": "fejm1v1",
+      "content": "Step 3: Match the remainder with the cycle."
     },
     {
       "type": "pullQuote",
@@ -166,7 +192,8 @@
     },
     {
       "type": "paragraph",
-      "id": "u17itgg"
+      "id": "u17itgg",
+      "content": "Remainder 1 corresponds to the first number in the cycle → 9. Final Answer: The unit digit of 9^23 is 9."
     },
     {
       "id": "hnb57cp",
@@ -176,138 +203,170 @@
     },
     {
       "type": "paragraph",
-      "id": "f2zpnr0"
+      "id": "f2zpnr0",
+      "content": "<strong>Question 1</strong>: Find the LCM of 16 and 20."
     },
     {
       "type": "paragraph",
-      "id": "chqknn2"
+      "id": "chqknn2",
+      "content": "Step 1: Perform prime factorization of both numbers. 16 = 2 × 2 × 2 × 2 = 2"
     },
     {
       "type": "paragraph",
-      "id": "mp4mxo1"
+      "id": "mp4mxo1",
+      "content": "20 = 2 × 2 × 5 = 2² × 5"
     },
     {
       "type": "paragraph",
-      "id": "d05s949"
+      "id": "d05s949",
+      "content": "Step 2: Identify the highest power of each prime factor. Highest power of 2 → 2⁴"
     },
     {
       "type": "paragraph",
-      "id": "70ex4da"
+      "id": "70ex4da",
+      "content": "Highest power of 5 → 5;"
     },
     {
       "type": "paragraph",
-      "id": "bv9ssu6"
+      "id": "bv9ssu6",
+      "content": "Step 3: Multiply them to obtain the LCM. LCM = 2&gt; × 5"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4b4unsr"
+      "id": "4b4unsr",
+      "content": "= 16 × 5"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ere4kt8"
+      "id": "ere4kt8",
+      "content": "= 80"
     },
     {
       "type": "paragraph",
-      "id": "vanzm1c"
+      "id": "vanzm1c",
+      "content": "Final Answer: The LCM of 16 and 20 is 80."
     },
     {
       "type": "paragraph",
-      "id": "lf4k7p6"
+      "id": "lf4k7p6",
+      "content": "<strong>Question 2</strong>: How many factors does 100 have? Step 1: Prime factorize the number."
     },
     {
       "type": "paragraph",
-      "id": "ijnl31n"
+      "id": "ijnl31n",
+      "content": "100 = 2 × 2 × 5 × 5"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "knkm0au"
+      "id": "knkm0au",
+      "content": "100 = 2² × 5²"
     },
     {
       "type": "paragraph",
-      "id": "lw0byp2"
+      "id": "lw0byp2",
+      "content": "Step 2: Use the formula for counting factors."
     },
     {
       "type": "paragraph",
-      "id": "idi81v1"
+      "id": "idi81v1",
+      "content": "If N = pᵃ × qᵇ,"
     },
     {
       "type": "paragraph",
-      "id": "771zwgk"
+      "id": "771zwgk",
+      "content": "Number of factors = (a + 1)(b + 1) Here, a = 2 and b = 2."
     },
     {
       "type": "paragraph",
-      "id": "hq5irop"
+      "id": "hq5irop",
+      "content": "Number of factors = (2 + 1)(2 + 1)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dlywmzd"
+      "id": "dlywmzd",
+      "content": "=&gt; 3 × 3= 9"
     },
     {
       "type": "paragraph",
-      "id": "yq00543"
+      "id": "yq00543",
+      "content": "Final Answer: 100 has 9 factors."
     },
     {
       "type": "paragraph",
-      "id": "7ut7pxc"
+      "id": "7ut7pxc",
+      "content": "<strong>Question 3</strong>: Find the remainder when 3⁷ is divided by 4. Step 1: Reduce the base using modulus."
     },
     {
       "type": "paragraph",
-      "id": "y3roi6k"
+      "id": "y3roi6k",
+      "content": "3 ÷ 4 leaves remainder 3."
     },
     {
       "type": "paragraph",
-      "id": "g3t59n4"
+      "id": "g3t59n4",
+      "content": "So, 3 ≡ -1 (mod 4)."
     },
     {
       "type": "paragraph",
-      "id": "x9cdvk0"
+      "id": "x9cdvk0",
+      "content": "Step 2: Rewrite the expression."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "echlykz"
+      "id": "echlykz",
+      "content": "3⁷ ≡ (-1)⁷ (mod 4)"
     },
     {
       "type": "paragraph",
-      "id": "t5hy4wq"
+      "id": "t5hy4wq",
+      "content": "Step 3: Evaluate the power. (-1)⁷ = -1"
     },
     {
       "type": "paragraph",
-      "id": "618q931"
+      "id": "618q931",
+      "content": "Step 4: Convert the negative remainder into a positive remainder."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0me9ba5"
+      "id": "0me9ba5",
+      "content": "-1 mod 4 = 3"
     },
     {
       "type": "paragraph",
-      "id": "epncuva"
+      "id": "epncuva",
+      "content": "Final Answer: The remainder is 3."
     },
     {
       "type": "paragraph",
-      "id": "2w7tfiv"
+      "id": "2w7tfiv",
+      "content": "<strong>Question 4</strong>: Is 121 a perfect square?"
     },
     {
       "type": "paragraph",
-      "id": "6gfo7yu"
+      "id": "6gfo7yu",
+      "content": "Step 1: Find the square root of the number."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g4qbj3d"
+      "id": "g4qbj3d",
+      "content": "√121 = 11"
     },
     {
       "type": "paragraph",
-      "id": "iugyb5s"
+      "id": "iugyb5s",
+      "content": "Step 2: Check whether the square root is an integer. Since 11 is a whole number and 11× 11 = 121, 121 is a perfect square."
     },
     {
       "type": "paragraph",
-      "id": "ch1o498"
+      "id": "ch1o498",
+      "content": "Final Answer: Yes, 121 is a perfect square."
     },
     {
       "type": "examAlert",
@@ -319,43 +378,52 @@
     },
     {
       "type": "paragraph",
-      "id": "offt6vn"
+      "id": "offt6vn",
+      "content": "<strong>Question 5</strong>: Convert (1101)₂ into decimal. Step 1: Write the place values for base 2. From right to left:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "heywkjt"
+      "id": "heywkjt",
+      "content": "2º, 2<sup>2</sup>, 2<sup>3</sup>, 2<sup>4</sup>"
     },
     {
       "type": "paragraph",
-      "id": "uqb8xs6"
+      "id": "uqb8xs6",
+      "content": "Step 2: Multiply each digit by its place value. 1 × 2³ = 8"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rlubt1g"
+      "id": "rlubt1g",
+      "content": "1 × 2² = 4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bzlcxiw"
+      "id": "bzlcxiw",
+      "content": "0 × 2¹ = 0"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kbfvkhp"
+      "id": "kbfvkhp",
+      "content": "1 × 2º = 1"
     },
     {
       "type": "paragraph",
-      "id": "qkanqni"
+      "id": "qkanqni",
+      "content": "Step 3: Add the results."
     },
     {
       "type": "paragraph",
-      "id": "ekh9azc"
+      "id": "ekh9azc",
+      "content": "8 + 4 + 0 + 1 = 13"
     },
     {
       "type": "paragraph",
-      "id": "6s6v4h0"
+      "id": "6s6v4h0",
+      "content": "Final Answer: (1101)₂ = 13 in decimal."
     },
     {
       "id": "i4nj654",
@@ -365,11 +433,13 @@
     },
     {
       "type": "paragraph",
-      "id": "gpxwmow"
+      "id": "gpxwmow",
+      "content": "The Number System is not just a chapter — it is mathematical training for the brain. Students who master patterns, factorization, and divisibility develop exceptional numerical confidence."
     },
     {
       "type": "paragraph",
-      "id": "vnnohko"
+      "id": "vnnohko",
+      "content": "This confidence directly translates into higher attempts and better scores in RRB examinations."
     }
   ],
   "enriched": true

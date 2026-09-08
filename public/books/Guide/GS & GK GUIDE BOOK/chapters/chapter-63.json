@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "bokkmkr"
+      "id": "bokkmkr",
+      "content": "The human body is a complex organism made up of different organs that work together to perform various life processes. Groups of organs working together to perform specific functions are called organ systems. These systems help maintain life, growth, movement and reproduction."
     },
     {
       "type": "statStrip",
@@ -52,19 +53,23 @@
     },
     {
       "type": "paragraph",
-      "id": "n15pydx"
+      "id": "n15pydx",
+      "content": "• Cell – Basic structural and functional unit of life."
     },
     {
       "type": "paragraph",
-      "id": "bwt7k83"
+      "id": "bwt7k83",
+      "content": "• Tissue – Group of similar cells performing the same function."
     },
     {
       "type": "paragraph",
-      "id": "fe97w4a"
+      "id": "fe97w4a",
+      "content": "• Organ – Structure formed by different tissues working together."
     },
     {
       "type": "paragraph",
-      "id": "8zxz4ey"
+      "id": "8zxz4ey",
+      "content": "• Organ System – Group of organs performing specific functions."
     },
     {
       "id": "4a80ahp",
@@ -74,35 +79,43 @@
     },
     {
       "type": "paragraph",
-      "id": "x43bh1p"
+      "id": "x43bh1p",
+      "content": "The digestive system breaks down food into simpler substances that can be absorbed and used by the body for energy, growth and repair."
     },
     {
       "type": "paragraph",
-      "id": "1vf2qpm"
+      "id": "1vf2qpm",
+      "content": "• Mouth – Ingestion of food and mechanical digestion."
     },
     {
       "type": "paragraph",
-      "id": "ava5vrj"
+      "id": "ava5vrj",
+      "content": "• Esophagus – Transports food to stomach."
     },
     {
       "type": "paragraph",
-      "id": "1fywtnm"
+      "id": "1fywtnm",
+      "content": "• Stomach – Digestion using gastric juices."
     },
     {
       "type": "paragraph",
-      "id": "krprq1v"
+      "id": "krprq1v",
+      "content": "• Small intestine – Absorption of nutrients."
     },
     {
       "type": "paragraph",
-      "id": "gbflgc2"
+      "id": "gbflgc2",
+      "content": "• Large intestine – Absorption of water."
     },
     {
       "type": "paragraph",
-      "id": "oei5sjl"
+      "id": "oei5sjl",
+      "content": "• Liver – Produces bile."
     },
     {
       "type": "paragraph",
-      "id": "0cooppl"
+      "id": "0cooppl",
+      "content": "• Pancreas – Produces digestive enzymes."
     },
     {
       "id": "ghav0lb",
@@ -112,20 +125,18 @@
     },
     {
       "type": "paragraph",
-      "id": "m2h0hj7"
+      "id": "m2h0hj7",
+      "content": "• The respiratory system helps in breathing."
     },
     {
       "type": "paragraph",
-      "id": "phzsxik"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Levels of Organization in the Human Body",
-      "id": "nvz9esx"
+      "id": "phzsxik",
+      "content": "• It exchanges oxygen and carbon dioxide between the body and environment."
     },
     {
       "type": "paragraph",
-      "id": "xh8sw9d"
+      "id": "xh8sw9d",
+      "content": "• Main organs include nose, trachea, lungs and diaphragm."
     },
     {
       "id": "7jik62k",
@@ -135,15 +146,18 @@
     },
     {
       "type": "paragraph",
-      "id": "wwj23l0"
+      "id": "wwj23l0",
+      "content": "• The circulatory system transports blood, oxygen, nutrients and hormones throughout the body."
     },
     {
       "type": "paragraph",
-      "id": "nxu62d0"
+      "id": "nxu62d0",
+      "content": "• It consists of heart, blood vessels and blood."
     },
     {
       "type": "paragraph",
-      "id": "vsh7ucb"
+      "id": "vsh7ucb",
+      "content": "• The heart acts as a pump."
     },
     {
       "id": "aismapu",
@@ -153,15 +167,18 @@
     },
     {
       "type": "paragraph",
-      "id": "pywreaz"
+      "id": "pywreaz",
+      "content": "• The nervous system controls and coordinates body activities."
     },
     {
       "type": "paragraph",
-      "id": "olhx127"
+      "id": "olhx127",
+      "content": "• It consists of brain, spinal cord and nerves."
     },
     {
       "type": "paragraph",
-      "id": "o2htq88"
+      "id": "o2htq88",
+      "content": "• It responds to stimuli and transmits signals."
     },
     {
       "id": "g9bwvxy",
@@ -192,15 +209,18 @@
     },
     {
       "type": "paragraph",
-      "id": "sx36ls2"
+      "id": "sx36ls2",
+      "content": "• The excretory system removes waste products from the body."
     },
     {
       "type": "paragraph",
-      "id": "segngf5"
+      "id": "segngf5",
+      "content": "• The kidneys filter blood and produce urine."
     },
     {
       "type": "paragraph",
-      "id": "9t3re72"
+      "id": "9t3re72",
+      "content": "• Other organs include ureters, urinary bladder and urethra."
     },
     {
       "id": "56dzs4p",
@@ -210,15 +230,18 @@
     },
     {
       "type": "paragraph",
-      "id": "gy1fj6d"
+      "id": "gy1fj6d",
+      "content": "• The skeletal system provides support and shape to the body."
     },
     {
       "type": "paragraph",
-      "id": "ptgutbb"
+      "id": "ptgutbb",
+      "content": "• It protects internal organs."
     },
     {
       "type": "paragraph",
-      "id": "qwh1xlj"
+      "id": "qwh1xlj",
+      "content": "• The adult human skeleton has 206 bones."
     },
     {
       "id": "4etbrfv",
@@ -228,11 +251,13 @@
     },
     {
       "type": "paragraph",
-      "id": "rc5dmwb"
+      "id": "rc5dmwb",
+      "content": "• The muscular system allows movement of the body."
     },
     {
       "type": "paragraph",
-      "id": "dfxn2ze"
+      "id": "dfxn2ze",
+      "content": "• There are three types of muscles: skeletal, smooth and cardiac."
     },
     {
       "id": "o01tnf7",
@@ -242,11 +267,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8458730"
+      "id": "8458730",
+      "content": "• The reproductive system enables production of offspring."
     },
     {
       "type": "paragraph",
-      "id": "6h5dqyn"
+      "id": "6h5dqyn",
+      "content": "• It includes organs that produce reproductive cells."
     },
     {
       "type": "examAlert",
@@ -265,11 +292,13 @@
     },
     {
       "type": "paragraph",
-      "id": "h6qomc7"
+      "id": "h6qomc7",
+      "content": "• The endocrine system controls body functions through hormones."
     },
     {
       "type": "paragraph",
-      "id": "mgql7fa"
+      "id": "mgql7fa",
+      "content": "• Important glands include pituitary, thyroid and adrenal glands."
     },
     {
       "id": "pdmiqhz",
@@ -279,19 +308,23 @@
     },
     {
       "type": "paragraph",
-      "id": "z5nnt72"
+      "id": "z5nnt72",
+      "content": "• The human body contains about 206 bones."
     },
     {
       "type": "paragraph",
-      "id": "n3st8yx"
+      "id": "n3st8yx",
+      "content": "• The heart pumps blood throughout the body."
     },
     {
       "type": "paragraph",
-      "id": "boz45u8"
+      "id": "boz45u8",
+      "content": "• The brain controls all body activities."
     },
     {
       "type": "paragraph",
-      "id": "2i2mtcj"
+      "id": "2i2mtcj",
+      "content": "• Lungs help in breathing."
     }
   ],
   "enriched": true

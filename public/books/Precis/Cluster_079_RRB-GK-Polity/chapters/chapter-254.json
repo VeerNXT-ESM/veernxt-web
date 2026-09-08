@@ -1,0 +1,90 @@
+{
+  "title": "Tenure and Removal",
+  "order": 254,
+  "blocks": [
+    {
+      "id": "1ho0rz8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Provision</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tenure</p>",
+            "<p>3 years or 70 years of age (whichever is earlier)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reappointment</p>",
+            "<p>Eligible for reappointment</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Removal</p>",
+            "<p>By the President on grounds of misbehavior or incapacity</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Removal requires an inquiry by the Supreme Court if based on misbehavior.",
+      "id": "999ttnf"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Ground for Removal",
+          "value": "Misbehavior",
+          "icon": "info"
+        },
+        {
+          "label": "Inquiring Authority",
+          "value": "Supreme Court",
+          "icon": "award"
+        },
+        {
+          "label": "Requirement",
+          "value": "Mandatory Inquiry",
+          "icon": "check"
+        }
+      ],
+      "id": "330e3hg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Removal based on charges of misbehavior cannot take place without a formal inquiry.",
+        "The Supreme Court is the constitutional/legal body mandated to conduct this inquiry.",
+        "The process ensures judicial oversight before any final decision on removal is made."
+      ],
+      "id": "1qtjfsl"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams often test the inquiring body for removal on grounds of misbehavior; remember it is the Supreme Court.",
+        "Pay attention to the specific ground: an inquiry by the Supreme Court is explicitly required when removal is based on misbehavior."
+      ],
+      "id": "mm8b643"
+    },
+    {
+      "type": "paragraph",
+      "content": "Removal requires an inquiry by the Supreme Court if based on misbehavior.",
+      "id": "jly6cvm"
+    }
+  ],
+  "enriched": true
+}

@@ -10,43 +10,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Qualification / Role</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chairman</p>",
+            "<p>Person having experience in public affairs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Member 1</p>",
+            "<p>Judge of High Court OR qualified to be one</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Member 2</p>",
+            "<p>Expert in government finance and accounts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Member 3</p>",
+            "<p>Person with wide financial &amp; administrative experience</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Member 4</p>",
+            "<p>Expert in economics</p>"
           ]
         }
       ]
@@ -134,7 +134,8 @@
     },
     {
       "type": "paragraph",
-      "id": "lxp0x1m"
+      "id": "lxp0x1m",
+      "content": "Qualifications are prescribed under the Finance Commission Act, 1951."
     }
   ],
   "enriched": true

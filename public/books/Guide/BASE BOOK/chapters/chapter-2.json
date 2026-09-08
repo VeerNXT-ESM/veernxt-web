@@ -1,0 +1,1060 @@
+{
+  "id": "a23mqgs",
+  "title": "Logical Reasoning",
+  "order": 2,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gbefs9l",
+      "content": "<strong>UNIT 2 — LOGICAL REASONING</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "rnogoiq",
+      "content": "Logical Reasoning tests the ability to think systematically and draw conclusions from given information. PSU CBT exams typically include 20–30 questions. Key topics: Series, Analogy, Classification (Odd One Out), Coding–Decoding, Blood Relations, Direction Sense, Seating Arrangement, Syllogisms, and Venn Diagrams."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7fe6czc",
+      "content": "<strong>2.1  Number &amp; Letter Series</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ypieg8o",
+      "content": "A series is a sequence of numbers or letters following a definite pattern. Identify the pattern and find the missing or next term."
+    },
+    {
+      "id": "ok7zz6y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Pattern Type</strong></p>",
+            "<p><strong>Example</strong></p>",
+            "<p><strong>Rule</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Arithmetic (constant difference)</p>",
+            "<p>3, 7, 11, 15, __</p>",
+            "<p>Add 4 each time → 19</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Geometric (constant ratio)</p>",
+            "<p>2, 6, 18, 54, __</p>",
+            "<p>Multiply by 3 → 162</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Squares</p>",
+            "<p>1, 4, 9, 16, 25, __</p>",
+            "<p>n² → 36</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cubes</p>",
+            "<p>1, 8, 27, 64, __</p>",
+            "<p>n³ → 125</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fibonacci-type</p>",
+            "<p>1, 1, 2, 3, 5, 8, __</p>",
+            "<p>Sum of previous two → 13</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Alternate terms</p>",
+            "<p>2, 5, 3, 7, 4, 9, __</p>",
+            "<p>Two interleaved series → 5</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Difference of differences</p>",
+            "<p>3, 7, 13, 21, 31, __</p>",
+            "<p>Differences: 4,6,8,10 → 43</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Letter series (positional)</p>",
+            "<p>A, C, E, G, __</p>",
+            "<p>Every alternate letter → I</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "uhto0re",
+      "content": "<strong>2.2  Analogy</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "w9oertd",
+      "content": "In analogy questions, a pair of words/numbers is given with a specific relationship. You must identify the same relationship in the answer choices."
+    },
+    {
+      "id": "mv2yg37",
+      "type": "list",
+      "items": [
+        "Word Analogy: Doctor : Hospital :: Teacher : ? → School (place of work)",
+        "Number Analogy: 4 : 16 :: 7 : ? → 49 (square relationship)",
+        "Letter Analogy: ACE : BDF :: GIK : ? → HJL (each letter +1)"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "27ka5mx",
+      "content": "<strong>2.3  Classification (Odd One Out)</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "a0sgyly",
+      "content": "Find the item that does not belong to the same group as the others. Look for the common property among three items and identify which one breaks the pattern."
+    },
+    {
+      "id": "gyk1i7n",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Question</strong></p>",
+            "<p><strong>Options</strong></p>",
+            "<p><strong>Answer &amp; Reason</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Which is odd one out?</p>",
+            "<p>Rose, Lotus, Lily, Mango</p>",
+            "<p>Mango – not a flower</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Which is odd one out?</p>",
+            "<p>11, 13, 17, 21</p>",
+            "<p>21 – not prime (divisible by 3 and 7)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Which is odd one out?</p>",
+            "<p>BDFH, ACEG, PRSU, JLNP</p>",
+            "<p>PRSU – not in +2 pattern (P+2=R, R+2=S? No – should be PRTVW)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Which is odd one out?</p>",
+            "<p>Triangle, Square, Circle, Cone</p>",
+            "<p>Cone – 3D solid; others are 2D shapes</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "92d3jzc",
+      "content": "<strong>2.4  Coding–Decoding</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "2oaedrp",
+      "content": "In coding questions, a word is written in a code language. You must decipher the rule and apply it to find the code for another word."
+    },
+    {
+      "id": "go7fd9a",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Example</strong></p>",
+            "<p><strong>Rule</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Letter shift</p>",
+            "<p>CAT → FDW</p>",
+            "<p>Each letter +3 in alphabet</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reverse</p>",
+            "<p>CAT → TAC</p>",
+            "<p>Reverse the word</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Number code</p>",
+            "<p>A=1, B=2 … BALL=2+1+12+12=27</p>",
+            "<p>Positional value sum</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mixed code</p>",
+            "<p>Lim suk ta = Girls are happy; identify word</p>",
+            "<p>Compare across sentences</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "nuga6lv",
+      "content": "<strong>Example: </strong>If COME is coded as XLNV, find the code for DONE."
+    },
+    {
+      "type": "paragraph",
+      "id": "4hg3cbt",
+      "content": "<strong>Solution: </strong>Each letter is replaced by its mirror (A↔Z, B↔Y, C↔X…). C→X, O→L, M→N, E→V. Similarly D→W, O→L, N→M, E→V. Code = WLMV"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ac5769j",
+      "content": "<strong>2.5  Blood Relations</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "gjnqbin",
+      "content": "Blood relation questions test your ability to determine the relationship between members of a family from given statements."
+    },
+    {
+      "id": "uf4er06",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Statement</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A is the father of B</p>",
+            "<p>B is A's son/daughter</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A is the mother of B</p>",
+            "<p>B is A's son/daughter</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A is the brother of B</p>",
+            "<p>A and B have same parents; A is male</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A is the sister of B</p>",
+            "<p>A and B have same parents; A is female</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A is the son of B</p>",
+            "<p>B is A's father or mother</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A is the wife of B</p>",
+            "<p>B is A's husband</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A is the uncle of B</p>",
+            "<p>A is sibling of B's parent (male)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A is the nephew of B</p>",
+            "<p>A is son of B's sibling</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "lpg0i4n",
+      "content": "<strong>Example: </strong>Pointing to a photograph, Ram said, \"She is the mother of my son's wife's daughter.\" How is the woman related to Ram?"
+    },
+    {
+      "type": "paragraph",
+      "id": "1csi6gm",
+      "content": "<strong>Solution: </strong>Ram's son's wife = daughter-in-law. Daughter-in-law's daughter = Ram's granddaughter. Mother of granddaughter = daughter-in-law = wife of Ram's son. Answer: Daughter-in-law."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "z93kcz2",
+      "content": "<strong>2.6  Direction Sense</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "i0q2cje",
+      "content": "Direction sense questions require you to trace a path based on given directions and find the final position, distance, or direction relative to the starting point."
+    },
+    {
+      "id": "c0w2elg",
+      "type": "list",
+      "items": [
+        "Always draw the path on paper. Start from origin, mark each turn.",
+        "Right turn from North → Face East | Left turn from North → Face West",
+        "Opposite directions: North↔South, East↔West",
+        "Distance (when path is L-shaped) = √(perpendicular² + base²) using Pythagoras"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5o1audk",
+      "content": "<strong>2.7  Seating Arrangement</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "9y6dej4",
+      "content": "Persons are seated in a line or circle and you must determine who sits where based on given conditions. Circular arrangements are common in PSU exams."
+    },
+    {
+      "id": "65qgkjb",
+      "type": "list",
+      "items": [
+        "Linear arrangement: Left and right are absolute (fixed reference)",
+        "Circular arrangement: Left and right are relative to the person facing the centre",
+        "Always place the most restrictive clue first, then fill remaining positions",
+        "Use a matrix or diagram to track placements"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6164asf",
+      "content": "<strong>2.8  Syllogism</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "819yhjy",
+      "content": "Syllogism questions give two or more statements (premises) and ask which conclusions follow logically. Use Venn diagrams to solve."
+    },
+    {
+      "id": "h61ehk5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Statement Type</strong></p>",
+            "<p><strong>Venn Representation</strong></p>",
+            "<p><strong>Conclusion Possible?</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>All A are B</p>",
+            "<p>A circle fully inside B circle</p>",
+            "<p>All A are B; Some B are A; Some A are B</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>No A is B</p>",
+            "<p>A and B circles completely separate</p>",
+            "<p>No A is B; No B is A</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Some A are B</p>",
+            "<p>A and B circles partially overlapping</p>",
+            "<p>Some A are B; Some B are A</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Some A are not B</p>",
+            "<p>Part of A is outside B</p>",
+            "<p>Some A are not B (cannot reverse)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0jnbkj9",
+      "content": "<strong>2.9  Venn Diagrams</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "v3gj9vf",
+      "content": "Venn diagrams use circles to represent sets and their relationships. They are among the most frequently tested topics in PSU reasoning sections. There are four fundamental types of Venn diagram relationships:"
+    },
+    {
+      "type": "paragraph",
+      "id": "3pqjuap",
+      "content": "<strong>Type 1 — Two Overlapping Sets</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ck73igr",
+      "content": "When two sets share some elements but not all, they are represented by partially overlapping circles. The overlapping region contains elements common to both sets."
+    },
+    {
+      "type": "paragraph",
+      "id": "16n6e4q",
+      "content": "Example: A class has 40 students. 25 play cricket, 20 play football, 10 play both. Students who play only cricket = 25–10=15. Students who play only football = 20–10=10. Students who play neither = 40–15–10–10 = 5."
+    },
+    {
+      "type": "paragraph",
+      "id": "9ukewcx",
+      "content": "<strong>Type 2 — Three Overlapping Sets</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "t0aeytu",
+      "content": "When three sets share elements among themselves, each pair may overlap, and all three may share a common region. This is the most complex and frequently tested Venn diagram type in PSU exams."
+    },
+    {
+      "id": "tuhywbz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Universal Formula for Three Sets:</strong></p><p>n(A∪B∪C) = n(A) + n(B) + n(C) − n(A∩B) − n(B∩C) − n(A∩C) + n(A∩B∩C)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "cs1tip8",
+      "content": "<strong>Example: </strong>In a survey of 100 persons: 45 read Newspaper A, 35 read B, 25 read C, 10 read A&amp;B, 8 read B&amp;C, 6 read A&amp;C, 3 read all three. How many read at least one?"
+    },
+    {
+      "type": "paragraph",
+      "id": "q1ro08g",
+      "content": "<strong>Solution: </strong>n(A∪B∪C) = 45+35+25 – 10–8–6 + 3 = 105–24+3 = 84. Answer: 84 persons."
+    },
+    {
+      "type": "paragraph",
+      "id": "4clkwj1",
+      "content": "<strong>Type 3 — Subset (All elements of one set are in another)</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "hy08gdq",
+      "content": "When every element of Set A is also in Set B, Set A is a subset of Set B. Represented by one circle completely inside another."
+    },
+    {
+      "type": "paragraph",
+      "id": "hruyq4v",
+      "content": "Example: \"All doctors are graduates.\" Here the set of Doctors is completely inside the set of Graduates. Conclusion valid: \"Some graduates are doctors.\""
+    },
+    {
+      "type": "paragraph",
+      "id": "s70xg6i",
+      "content": "<strong>Type 4 — Disjoint Sets (No common element)</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "bpj5p63",
+      "content": "When two sets share no elements at all, they are disjoint. Represented by circles that do not touch or overlap."
+    },
+    {
+      "type": "paragraph",
+      "id": "s56yjxh",
+      "content": "Example: \"No man is perfect.\" The set of Men and the set of Perfect things are completely separate circles with no overlap."
+    },
+    {
+      "type": "paragraph",
+      "id": "qpg078g",
+      "content": "<strong>2.10  Practice MCQs — Logical Reasoning</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "x4qizbf",
+      "content": "<strong>Q1. </strong>Find the next number in the series: 2, 6, 12, 20, 30, __"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "n9atan5",
+      "content": "    (A)  40"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vru5pt2",
+      "content": "    (B)  42"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9h5ywbr",
+      "content": "    (C)  44"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ha03d8p",
+      "content": "    (D)  38"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "b422v9o",
+      "content": "<strong>Ans: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "t6svdrx",
+      "content": "<strong>Q2. </strong>BDFH : ACEG :: PRTV : ?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eac2lid",
+      "content": "    (A)  QSUW"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i8fccmr",
+      "content": "    (B)  OQSU"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tia90hz",
+      "content": "    (C)  QSUV"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ttmo23q",
+      "content": "    (D)  RTVX"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8so9jcw",
+      "content": "<strong>Ans: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "zpapdgo",
+      "content": "<strong>Q3. </strong>Doctor : Stethoscope :: Carpenter : ?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fv47yii",
+      "content": "    (A)  Hammer"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kpqwaxg",
+      "content": "    (B)  Chisel"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yzil3bb",
+      "content": "    (C)  Saw"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hff3j2b",
+      "content": "    (D)  All of these"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7k1w7js",
+      "content": "<strong>Ans: </strong>(D)"
+    },
+    {
+      "type": "paragraph",
+      "id": "savxn3m",
+      "content": "<strong>Q4. </strong>If ROSE is coded as 6821 and CHAIR is coded as 73456, what is the code for SEARCH?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "97gw9l0",
+      "content": "    (A)  216473"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "w3eb5tk",
+      "content": "    (B)  214673"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tgtvqio",
+      "content": "    (C)  216743"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "f75r2hg",
+      "content": "    (D)  246173"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e86bmpq",
+      "content": "<strong>Ans: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "n44r340",
+      "content": "<strong>Q5. </strong>In a row of 40 students, A is 15th from the left. B is 12th from the right. How many students sit between A and B?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mncmwam",
+      "content": "    (A)  13"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iagveot",
+      "content": "    (B)  14"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ghffwde",
+      "content": "    (C)  15"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Introduction",
+      "id": "y4dp994"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "mt788ls",
+      "content": "    (D)  12"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gscn4ew",
+      "content": "<strong>Ans: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "kbjfytv",
+      "content": "<strong>Q6. </strong>Pointing to a man, a woman said, \"His mother is the only daughter of my mother.\" How is the woman related to the man?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "q5gatl1",
+      "content": "    (A)  Grandmother"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "56a4awt",
+      "content": "    (B)  Mother"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "18ix796",
+      "content": "    (C)  Aunt"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5l8i5tt",
+      "content": "    (D)  Sister"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vxanin7",
+      "content": "<strong>Ans: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "5zmiklc",
+      "content": "<strong>Q7. </strong>A man walks 5 km north, turns right and walks 3 km, turns right and walks 5 km. How far is he from the starting point?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fk6vdla",
+      "content": "    (A)  3 km"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3dgmt5r",
+      "content": "    (B)  5 km"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gkb1ujv",
+      "content": "    (C)  8 km"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x8ebipq",
+      "content": "    (D)  6 km"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vb7tqop",
+      "content": "<strong>Ans: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "zuon6tt",
+      "content": "<strong>Q8. </strong>In a class, 30 students play cricket, 25 play football and 10 play both. How many play at least one sport?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hs6bu4e",
+      "content": "    (A)  45"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ri12lup",
+      "content": "    (B)  55"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "myiika8",
+      "content": "    (C)  65"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qkmub86",
+      "content": "    (D)  60"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0uozhid",
+      "content": "<strong>Ans: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "d4ci832",
+      "content": "<strong>Q9. </strong>All cats are animals. All animals are living things. Which conclusion is definitely true?"
+    },
+    {
+      "type": "paragraph",
+      "id": "olzzvr9",
+      "content": "    (A)  All living things are cats"
+    },
+    {
+      "type": "paragraph",
+      "id": "8pg14tu",
+      "content": "    (B)  Some living things are cats"
+    },
+    {
+      "type": "paragraph",
+      "id": "9elzbhq",
+      "content": "    (C)  All cats are living things"
+    },
+    {
+      "type": "paragraph",
+      "id": "wz945ph",
+      "content": "    (D)  Some cats are not living things"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "v820ygy",
+      "content": "<strong>Ans: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "w02erz1",
+      "content": "<strong>Q10. </strong>Find the odd one out: 3, 5, 7, 9, 11"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oel2kd3",
+      "content": "    (A)  3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ufdy9yb",
+      "content": "    (B)  7"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9xv5xxl",
+      "content": "    (C)  9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bhb3i89",
+      "content": "    (D)  11"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g9h5hi5",
+      "content": "<strong>Ans: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "r14ufo1",
+      "content": "<strong>Q11. </strong>In a certain code, MANGO is written as OCPIQ. Find the code for GRAPE."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "74qghw4",
+      "content": "    (A)  ITCRF"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bbra78o",
+      "content": "    (B)  ITCQF"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "on5r5ac",
+      "content": "    (C)  ITBQF"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "k7zmlzw",
+      "content": "    (D)  HSBQF"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3iowfmm",
+      "content": "<strong>Ans: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "u02ufnr",
+      "content": "<strong>Q12. </strong>How many such pairs of letters are there in the word STATION where the letters have as many letters between them as in the alphabet?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5vsjk9m",
+      "content": "    (A)  2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xfpq481",
+      "content": "    (B)  3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cx60h0r",
+      "content": "    (C)  4"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0geyc3v",
+      "content": "    (D)  1"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kcqcm0o",
+      "content": "<strong>Ans: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "zjbspsm",
+      "content": "<strong>Q13. </strong>Choose the figure that will come next: △□○ △□○ △□○ __"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yy6k1bf",
+      "content": "    (A)  △"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "6klioan",
+      "content": "    (B)  □"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a262i7p",
+      "content": "    (C)  ○"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u49quwr",
+      "content": "    (D)  ◇"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ydcxrgp",
+      "content": "<strong>Ans: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "smdtiv6",
+      "content": "<strong>Q14. </strong>From a group of 6 men and 4 women, how many different committees of 3 men and 2 women can be formed?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "81048zn",
+      "content": "    (A)  120"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5y6rur6",
+      "content": "    (B)  80"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "36ghplo",
+      "content": "    (C)  60"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gphd9fe",
+      "content": "    (D)  100"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tshhf88",
+      "content": "<strong>Ans: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ezsp5p",
+      "content": "<strong>Q15. </strong>In a class, 40 students like Maths, 30 like Science, 20 like both. How many like neither if total students = 70?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "du1z7ln",
+      "content": "    (A)  20"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "isjl1w9",
+      "content": "    (B)  25"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4w8t6by",
+      "content": "    (C)  15"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "walr2ap",
+      "content": "    (D)  10"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ywyfz8j",
+      "content": "<strong>Ans: </strong>(A)"
+    }
+  ],
+  "enriched": true
+}

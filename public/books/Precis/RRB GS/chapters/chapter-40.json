@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "owzshfu"
+      "id": "owzshfu",
+      "content": "Light is a form of energy that enables us to see objects. It travels in the form of electromagnetic waves and does not require a medium."
     },
     {
       "id": "sn1hi70",
@@ -59,15 +60,18 @@
     },
     {
       "type": "paragraph",
-      "id": "b83jx9s"
+      "id": "b83jx9s",
+      "content": "• Light is an electromagnetic wave."
     },
     {
       "type": "paragraph",
-      "id": "3leovs7"
+      "id": "3leovs7",
+      "content": "• It travels with speed 3 × 10⁸ m/s in vacuum."
     },
     {
       "type": "paragraph",
-      "id": "nv8v6n9"
+      "id": "nv8v6n9",
+      "content": "• It shows both wave and particle nature (dual nature)."
     },
     {
       "id": "czht4uy",
@@ -77,15 +81,18 @@
     },
     {
       "type": "paragraph",
-      "id": "honlius"
+      "id": "honlius",
+      "content": "Laws of Reflection:"
     },
     {
       "type": "paragraph",
-      "id": "cmrt1pv"
+      "id": "cmrt1pv",
+      "content": "1. Angle of incidence = Angle of reflection."
     },
     {
       "type": "paragraph",
-      "id": "u9bzp63"
+      "id": "u9bzp63",
+      "content": "2. Incident ray, reflected ray and normal lie in same plane."
     },
     {
       "id": "qmt2ctq",
@@ -95,12 +102,14 @@
     },
     {
       "type": "paragraph",
-      "id": "e0ol47w"
+      "id": "e0ol47w",
+      "content": "Mirror Formula: 1/f = 1/v + 1/u"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x87vl46"
+      "id": "x87vl46",
+      "content": "Magnification (m) = -v/u"
     },
     {
       "id": "utyt4wq",
@@ -121,33 +130,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Mirror Type</strong></p>",
+            "<p><strong>Image Nature</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Plane Mirror</p>",
+            "<p>Virtual, erect, same size</p>",
+            "<p>Dressing mirror</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Concave Mirror</p>",
+            "<p>Real/Virtual (depends on position)</p>",
+            "<p>Shaving mirror</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Convex Mirror</p>",
+            "<p>Virtual, diminished</p>",
+            "<p>Rear-view mirror</p>"
           ]
         }
       ]
@@ -160,11 +169,13 @@
     },
     {
       "type": "paragraph",
-      "id": "joa76ds"
+      "id": "joa76ds",
+      "content": "Refraction is bending of light when it passes from one medium to another."
     },
     {
       "type": "paragraph",
-      "id": "jgmpyvg"
+      "id": "jgmpyvg",
+      "content": "Snell’s Law: n = sin i / sin r"
     },
     {
       "id": "qrligub",
@@ -174,12 +185,14 @@
     },
     {
       "type": "paragraph",
-      "id": "sj3jqkp"
+      "id": "sj3jqkp",
+      "content": "Refractive Index (n) = Speed of light in vacuum / Speed in medium"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vobjr7x"
+      "id": "vobjr7x",
+      "content": "n = c / v"
     },
     {
       "id": "602x1wm",
@@ -189,12 +202,14 @@
     },
     {
       "type": "paragraph",
-      "id": "w5f4vd1"
+      "id": "w5f4vd1",
+      "content": "Lens Formula: 1/f = 1/v - 1/u"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uvv5v1t"
+      "id": "uvv5v1t",
+      "content": "Magnification (m) = v/u"
     },
     {
       "id": "7qjicx6",
@@ -209,25 +224,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Lens Type</strong></p>",
+            "<p><strong>Image Nature</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Convex Lens</p>",
+            "<p>Real &amp; inverted (generally)</p>",
+            "<p>Magnifying glass</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Concave Lens</p>",
+            "<p>Virtual &amp; diminished</p>",
+            "<p>Spectacles (myopia)</p>"
           ]
         }
       ]
@@ -240,22 +255,26 @@
     },
     {
       "type": "paragraph",
-      "id": "kdwy1gm"
+      "id": "kdwy1gm",
+      "content": "Power (P) = 1/f (f in metre)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kl34q7l"
+      "id": "kl34q7l",
+      "content": "Unit: Dioptre (D)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "h5l8ufq"
+      "id": "h5l8ufq",
+      "content": "Convex lens → Positive power"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mc9epbe"
+      "id": "mc9epbe",
+      "content": "Concave lens → Negative power"
     },
     {
       "id": "yghra0u",
@@ -270,21 +289,19 @@
       "content": ""
     },
     {
-      "type": "pullQuote",
-      "content": "SIGN CONVENTION (CARTESIAN SIGN RULE)",
-      "id": "uke250v"
+      "type": "paragraph",
+      "id": "7lns5ts",
+      "content": "Splitting of white light into seven colours (VIBGYOR)."
     },
     {
       "type": "paragraph",
-      "id": "7lns5ts"
+      "id": "05nbog4",
+      "content": "Caused by prism."
     },
     {
       "type": "paragraph",
-      "id": "05nbog4"
-    },
-    {
-      "type": "paragraph",
-      "id": "2orn9yj"
+      "id": "2orn9yj",
+      "content": "Red has maximum wavelength; Violet has minimum wavelength."
     },
     {
       "id": "4vnmllg",
@@ -293,16 +310,25 @@
       "content": "11. TOTAL INTERNAL REFLECTION"
     },
     {
-      "type": "paragraph",
-      "id": "ebznpc5"
+      "id": "sbnt906",
+      "type": "image",
+      "imageId": "m8flshj",
+      "src": "/books/Precis/RRB GS/images/image_m8flshj.png"
     },
     {
       "type": "paragraph",
-      "id": "9wz301n"
+      "id": "ebznpc5",
+      "content": "Occurs when light travels from denser to rarer medium."
     },
     {
       "type": "paragraph",
-      "id": "ulcoo9k"
+      "id": "9wz301n",
+      "content": "Angle of incidence &gt; Critical angle."
+    },
+    {
+      "type": "paragraph",
+      "id": "ulcoo9k",
+      "content": "Applications: Optical fibre."
     },
     {
       "id": "ml4lf65",
@@ -317,33 +343,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Defect</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Correction</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Myopia</p>",
+            "<p>Image forms before retina</p>",
+            "<p>Concave lens</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hypermetropia</p>",
+            "<p>Image forms behind retina</p>",
+            "<p>Convex lens</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Presbyopia</p>",
+            "<p>Weak eye muscles</p>",
+            "<p>Bifocal lens</p>"
           ]
         }
       ]
@@ -356,27 +382,33 @@
     },
     {
       "type": "paragraph",
-      "id": "bhgnc3r"
+      "id": "bhgnc3r",
+      "content": "• All distances are measured from pole (mirror) or optical centre (lens)."
     },
     {
       "type": "paragraph",
-      "id": "ozsrv8z"
+      "id": "ozsrv8z",
+      "content": "• Distances measured in direction of incident light → Positive."
     },
     {
       "type": "paragraph",
-      "id": "pdipzff"
+      "id": "pdipzff",
+      "content": "• Distances measured opposite to incident light → Negative."
     },
     {
       "type": "paragraph",
-      "id": "ruk986k"
+      "id": "ruk986k",
+      "content": "• Heights above principal axis → Positive."
     },
     {
       "type": "paragraph",
-      "id": "qe81bqf"
+      "id": "qe81bqf",
+      "content": "• Heights below principal axis → Negative."
     },
     {
       "type": "paragraph",
-      "id": "hk8djxc"
+      "id": "hk8djxc",
+      "content": "Very common RRB numerical trap area."
     },
     {
       "id": "d5q26cu",
@@ -386,7 +418,8 @@
     },
     {
       "type": "paragraph",
-      "id": "l8o0vmk"
+      "id": "l8o0vmk",
+      "content": "• Ray parallel to principal axis → Passes through focus (concave)."
     },
     {
       "type": "comparisonTable",
@@ -421,15 +454,18 @@
     },
     {
       "type": "paragraph",
-      "id": "aybn3kz"
+      "id": "aybn3kz",
+      "content": "• Ray passing through focus → Becomes parallel to axis."
     },
     {
       "type": "paragraph",
-      "id": "czsg355"
+      "id": "czsg355",
+      "content": "• Ray passing through centre of curvature → Retraces its path."
     },
     {
       "type": "paragraph",
-      "id": "hihx3nr"
+      "id": "hihx3nr",
+      "content": "• For convex mirror, reflected rays appear to diverge from focus."
     },
     {
       "id": "18rdgit",
@@ -439,19 +475,23 @@
     },
     {
       "type": "paragraph",
-      "id": "0fnozbl"
+      "id": "0fnozbl",
+      "content": "• Ray parallel to axis → Passes through focus (convex lens)."
     },
     {
       "type": "paragraph",
-      "id": "gn481m7"
+      "id": "gn481m7",
+      "content": "• Ray through optical centre → Goes straight without deviation."
     },
     {
       "type": "paragraph",
-      "id": "ifd18wv"
+      "id": "ifd18wv",
+      "content": "• Ray through focus → Emerges parallel to principal axis."
     },
     {
       "type": "paragraph",
-      "id": "kr3mqlj"
+      "id": "kr3mqlj",
+      "content": "Concave lens always forms virtual, erect and diminished image."
     },
     {
       "id": "l1djs62",
@@ -461,15 +501,18 @@
     },
     {
       "type": "paragraph",
-      "id": "sgqr97r"
+      "id": "sgqr97r",
+      "content": "Emergent ray is parallel to incident ray."
     },
     {
       "type": "paragraph",
-      "id": "mt3if44"
+      "id": "mt3if44",
+      "content": "There is lateral displacement."
     },
     {
       "type": "paragraph",
-      "id": "p7bmmq2"
+      "id": "p7bmmq2",
+      "content": "No change in direction if slab surfaces are parallel."
     },
     {
       "id": "txyzgfr",
@@ -479,16 +522,19 @@
     },
     {
       "type": "paragraph",
-      "id": "xj530q3"
+      "id": "xj530q3",
+      "content": "Critical angle is the angle of incidence in denser medium for which angle of refraction is 90°."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7heotag"
+      "id": "7heotag",
+      "content": "Formula: sin C = 1/n"
     },
     {
       "type": "paragraph",
-      "id": "3ir5tyu"
+      "id": "3ir5tyu",
+      "content": "If angle of incidence &gt; Critical angle → Total Internal Reflection occurs."
     },
     {
       "id": "ic37lv4",
@@ -498,20 +544,24 @@
     },
     {
       "type": "paragraph",
-      "id": "aasudhz"
+      "id": "aasudhz",
+      "content": "For lenses in contact:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uo02d46"
+      "id": "uo02d46",
+      "content": "1/F = 1/f1 + 1/f2"
     },
     {
       "type": "paragraph",
-      "id": "fgtt4p0"
+      "id": "fgtt4p0",
+      "content": "Power: P = P1 + P2"
     },
     {
       "type": "paragraph",
-      "id": "f4y3jbr"
+      "id": "f4y3jbr",
+      "content": "Frequently asked in RRB numerical problems."
     },
     {
       "id": "mzbxnvb",
@@ -522,7 +572,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "76ry22d"
+      "id": "76ry22d",
+      "content": "For mirrors: m = -v/u"
     },
     {
       "type": "examAlert",
@@ -536,19 +587,23 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "1tt94fl"
+      "id": "1tt94fl",
+      "content": "For lenses: m = v/u"
     },
     {
       "type": "paragraph",
-      "id": "o7vmri4"
+      "id": "o7vmri4",
+      "content": "If m &gt; 1 → Image enlarged."
     },
     {
       "type": "paragraph",
-      "id": "arif0t1"
+      "id": "arif0t1",
+      "content": "If m &lt; 1 → Image diminished."
     },
     {
       "type": "paragraph",
-      "id": "i75bboc"
+      "id": "i75bboc",
+      "content": "If m is positive → Image is virtual and erect."
     },
     {
       "id": "m4dnybz",
@@ -558,19 +613,23 @@
     },
     {
       "type": "paragraph",
-      "id": "i8cgblz"
+      "id": "i8cgblz",
+      "content": "Scattering is deviation of light by particles."
     },
     {
       "type": "paragraph",
-      "id": "qwpbwqp"
+      "id": "qwpbwqp",
+      "content": "Shorter wavelength scatters more (Violet/Blue)."
     },
     {
       "type": "paragraph",
-      "id": "6gshhq8"
+      "id": "6gshhq8",
+      "content": "Reason for blue colour of sky."
     },
     {
       "type": "paragraph",
-      "id": "dtq2q4x"
+      "id": "dtq2q4x",
+      "content": "Sun appears red at sunrise/sunset due to scattering."
     },
     {
       "id": "i1wmjr9",
@@ -580,23 +639,28 @@
     },
     {
       "type": "paragraph",
-      "id": "zu6e40u"
+      "id": "zu6e40u",
+      "content": "• Speed of light is maximum in vacuum."
     },
     {
       "type": "paragraph",
-      "id": "wnmlysk"
+      "id": "wnmlysk",
+      "content": "• Frequency of light does not change during refraction."
     },
     {
       "type": "paragraph",
-      "id": "2jj9lq2"
+      "id": "2jj9lq2",
+      "content": "• Magnification is positive for virtual image."
     },
     {
       "type": "paragraph",
-      "id": "25twrc1"
+      "id": "25twrc1",
+      "content": "• Convex mirror always forms virtual image."
     },
     {
       "type": "paragraph",
-      "id": "26eceta"
+      "id": "26eceta",
+      "content": "• Power of lens increases when focal length decreases."
     }
   ],
   "enriched": true

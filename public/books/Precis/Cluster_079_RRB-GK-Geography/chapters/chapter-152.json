@@ -1,0 +1,143 @@
+{
+  "title": "Untitled Chapter",
+  "order": 152,
+  "blocks": [
+    {
+      "id": "2b24d9w",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Landform</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Terminal Moraine</p>",
+            "<p>Marks furthest glacier advance.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lateral Moraine</p>",
+            "<p>Deposits along sides.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Medial Moraine</p>",
+            "<p>Formed by merging glaciers.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ground Moraine</p>",
+            "<p>Till deposited beneath glacier.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Drumlin</p>",
+            "<p>Streamlined hill indicating ice flow.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Esker</p>",
+            "<p>Winding ridge formed by subglacial streams.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Kame</p>",
+            "<p>Mound formed by meltwater.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Outwash Plain</p>",
+            "<p>Deposited sediments beyond glacier.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Kettle Lake</p>",
+            "<p>Depression formed by melting ice block.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Deposit Type",
+          "value": "Till",
+          "icon": "info"
+        },
+        {
+          "label": "Sorting",
+          "value": "Unsorted",
+          "icon": "check"
+        },
+        {
+          "label": "Stratification",
+          "value": "Unstratified",
+          "icon": "check"
+        },
+        {
+          "label": "Agent",
+          "value": "Ice",
+          "icon": "book"
+        }
+      ],
+      "id": "so1e7ka"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Till is unsorted, unstratified glacial sediment deposited directly by ice.",
+      "id": "mar22xi"
+    },
+    {
+      "id": "sbzekhr",
+      "type": "heading",
+      "level": 2,
+      "content": "Glacial Deposits: Till"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Till is a major classification of glacial deposits.",
+        "It is characterized by being unsorted and unstratified.",
+        "Till is deposited directly by glacier ice rather than meltwater."
+      ],
+      "id": "7ruj4k6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams frequently ask to identify the characteristics of glacial till: remember it is both unsorted and unstratified.",
+        "Pay attention to the agent of deposition: Till is deposited directly by ice, not by glacial meltwater."
+      ],
+      "id": "gpgq5h9"
+    },
+    {
+      "type": "paragraph",
+      "content": "Till is unsorted, unstratified glacial sediment deposited directly by ice.",
+      "id": "ddysepp"
+    }
+  ],
+  "enriched": true
+}

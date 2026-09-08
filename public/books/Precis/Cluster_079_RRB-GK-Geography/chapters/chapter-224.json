@@ -1,0 +1,508 @@
+{
+  "title": "Chapter 27: Ocean Relief, Temperature and Salinity",
+  "order": 224,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The oceans cover about 71% of the Earth's surface and contain nearly 97% of the planet’s water. They play a crucial role in regulating climate, supporting biodiversity, influencing weather systems, and sustaining human livelihoods. Understanding ocean relief, temperature, and salinity is fundamental to mastering physical geography because these factors control ocean circulation, marine ecosystems, and global heat distribution.",
+      "id": "t2j3e6u"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth Surface Covered",
+          "value": "71%",
+          "icon": "info"
+        },
+        {
+          "label": "Planet Water Contained",
+          "value": "97%",
+          "icon": "book"
+        },
+        {
+          "label": "Average Ocean Salinity",
+          "value": "35‰",
+          "icon": "check"
+        },
+        {
+          "label": "Deep Zone Temperature",
+          "value": "0–3°C",
+          "icon": "clock"
+        }
+      ],
+      "id": "77oxrkt"
+    },
+    {
+      "id": "ggjve0g",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Ocean Relief – Meaning"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Ocean relief shapes depth variations through tectonic activity, volcanism, and sediment deposition.",
+        "Ocean temperature varies vertically across three zones: Surface Zone, Thermocline, and Deep Zone.",
+        "Average ocean salinity is 35‰, reaching its highest levels in subtropical regions due to high evaporation.",
+        "Seawater density is determined by temperature and salinity, driving deep ocean thermohaline circulation."
+      ],
+      "id": "jmnd84h"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ocean relief refers to the variation in depth and shape of the ocean floor. Just like continents have mountains and plains, the ocean floor has diverse landforms formed by tectonic activity, volcanism, and sediment deposition.",
+      "id": "guiawrr"
+    },
+    {
+      "id": "s8857dl",
+      "type": "heading",
+      "level": 2,
+      "content": "Major Divisions of Ocean Floor Major Divisions of Ocean Floor"
+    },
+    {
+      "id": "ntcz8u8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Continental Shelf</p>",
+            "<p>Gently sloping submerged extension of continents; average depth 0–200 m. Rich in marine life and major fishing zones. Petroleum extraction is common here.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Continental Slope</p>",
+            "<p>Steep descent from shelf to deep ocean floor; marks the true boundary of continents.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Continental Rise</p>",
+            "<p>Gentle incline formed by sediments deposited at the base of the slope.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Abyssal Plains</p>",
+            "<p>Extremely flat and deep regions (3000–6000 m); among the smoothest surfaces on Earth.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Oceanic Trenches</p>",
+            "<p>Deepest parts of oceans formed at subduction zones; e.g., Mariana Trench (~11,000 m).</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mid-Ocean Ridges</p>",
+            "<p>Underwater mountain chains formed due to seafloor spreading; volcanically active.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Seamounts</p>",
+            "<p>Submerged volcanic mountains that do not reach the surface.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Guyots</p>",
+            "<p>Flat-topped seamounts eroded by waves before subsiding.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gxu98og",
+      "type": "heading",
+      "level": 2,
+      "content": "Why Ocean Relief is Important"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Controls ocean currents.",
+      "id": "n8k6pqz"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Influences marine biodiversity.",
+      "id": "c2sh1wq"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Affects submarine cable routes.",
+      "id": "jti4ug0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Determines fishing zones.",
+      "id": "5n8woik"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Impacts tsunami propagation.",
+      "id": "2l573eg"
+    },
+    {
+      "id": "68dizrs",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Ocean Temperature"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ocean temperature varies both horizontally and vertically. Since water has high heat capacity, oceans act as thermal reservoirs, moderating global climate.",
+      "id": "piq3fnu"
+    },
+    {
+      "id": "of5oqbm",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Ocean Temperature"
+    },
+    {
+      "id": "isxrmeo",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Impact</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Latitude</p>",
+            "<p>Equatorial waters are warmer than polar waters.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ocean Currents</p>",
+            "<p>Warm currents raise temperatures; cold currents lower them.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Prevailing Winds</p>",
+            "<p>Transport warm or cold surface water.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Season</p>",
+            "<p>Temperature varies more in enclosed seas.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cloud Cover</p>",
+            "<p>Reduces solar heating.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i9lmd6n",
+      "type": "heading",
+      "level": 3,
+      "content": "Vertical Distribution of Temperature"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Surface Zone – Warm due to solar radiation.",
+      "id": "mfvu897"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Temperature and salinity together control seawater density, which drives thermohaline circulation — often called the global ocean conveyor belt.",
+      "id": "tnfd65i"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Thermocline – Rapid temperature decrease with depth.",
+      "id": "7z3chcy"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Deep Zone – Very cold and stable (around 0–3°C).",
+      "id": "eycma6h"
+    },
+    {
+      "type": "paragraph",
+      "content": "The thermocline acts as a barrier preventing mixing between warm surface water and cold deep water.",
+      "id": "mwpgvw2"
+    },
+    {
+      "id": "04imk5e",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Salinity – Meaning"
+    },
+    {
+      "type": "paragraph",
+      "content": "Salinity refers to the concentration of dissolved salts in seawater, usually expressed in parts per thousand (‰). The average ocean salinity is about 35‰.",
+      "id": "o4a0sls"
+    },
+    {
+      "id": "r8ebk45",
+      "type": "heading",
+      "level": 3,
+      "content": "Sources of Ocean Salts"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Weathering of continental rocks.",
+      "id": "njtg8na"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Volcanic activity.",
+      "id": "xrq26c7"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Submarine hydrothermal vents.",
+      "id": "hyhrmoe"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Ocean Layer",
+        "Temperature Profile",
+        "Key Characteristic"
+      ],
+      "rows": [
+        [
+          "Surface Zone",
+          "Warm",
+          "Heated directly by solar radiation"
+        ],
+        [
+          "Thermocline",
+          "Rapid decrease with depth",
+          "Acts as a barrier preventing mixing between surface and deep water"
+        ],
+        [
+          "Deep Zone",
+          "Very cold and stable (0–3°C)",
+          "Deepest layer containing cold, dense ocean water"
+        ]
+      ],
+      "id": "8sb7ubm"
+    },
+    {
+      "type": "paragraph",
+      "content": "• River inflow transporting dissolved minerals.",
+      "id": "vburhat"
+    },
+    {
+      "id": "ul0ohfp",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Salinity"
+    },
+    {
+      "id": "8cp9e3n",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Effect</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Evaporation</p>",
+            "<p>Increases salinity.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Precipitation</p>",
+            "<p>Dilutes seawater.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>River Discharge</p>",
+            "<p>Lowers salinity near coasts.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Melting Ice</p>",
+            "<p>Reduces salinity.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ocean Currents</p>",
+            "<p>Redistribute saline water.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b9ilhsg",
+      "type": "heading",
+      "level": 3,
+      "content": "Horizontal Distribution of Salinity"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Highest in subtropical regions due to high evaporation.",
+      "id": "ljclc8u"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Lower near the equator because of heavy rainfall.",
+      "id": "xxw3imx"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Very low in polar regions due to melting ice.",
+      "id": "gcm0m1l"
+    },
+    {
+      "id": "ifui63j",
+      "type": "heading",
+      "level": 3,
+      "content": "Vertical Distribution of Salinity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Salinity generally decreases with depth and becomes relatively stable in deeper layers.",
+      "id": "qzmdawz"
+    },
+    {
+      "id": "im10cct",
+      "type": "heading",
+      "level": 2,
+      "content": "Relationship Between Temperature and Salinity"
+    },
+    {
+      "id": "mds6yqa",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Condition</strong></p>",
+            "<p><strong>Result</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>High evaporation + high temperature</p>",
+            "<p>High salinity</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Heavy rainfall</p>",
+            "<p>Low salinity</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cold polar waters</p>",
+            "<p>Lower salinity</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Temperature and salinity together control seawater density, which drives thermohaline circulation — often called the global ocean conveyor belt.",
+      "id": "b3nmnm0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Continental shelf is the richest fishing zone, whereas Mariana Trench is the deepest ocean point.",
+        "The thermocline layer exhibits a rapid decline in temperature and acts as a barrier preventing water layer mixing.",
+        "Salinity is highest in subtropical regions due to high evaporation, lower near the equator, and lowest in polar regions.",
+        "Thermohaline circulation is driven by density differences resulting from temperature and salinity variations."
+      ],
+      "id": "xezyuwy"
+    },
+    {
+      "id": "hht4jmy",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Advanced Concepts"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Thermohaline Circulation – Deep ocean movement driven by density differences.",
+      "id": "90plq92"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Halocline – Layer with rapid salinity change.",
+      "id": "x1ueeba"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Upwelling – Rising of nutrient-rich cold water supporting fisheries.",
+      "id": "fvx0yjq"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Downwelling – Sinking of dense water.",
+      "id": "35gv65a"
+    },
+    {
+      "type": "paragraph",
+      "content": "• El Niño disrupts normal ocean temperature patterns.",
+      "id": "nqj11so"
+    },
+    {
+      "id": "vp83mw3",
+      "type": "heading",
+      "level": 2,
+      "content": "MASTER EXAM POINTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Continental shelf is the richest fishing zone.<br/>• Mariana Trench is the deepest ocean point.<br/>• Thermocline shows rapid temperature decline.<br/>• Average salinity is about 35‰.<br/>• Evaporation increases salinity.<br/>• Thermohaline circulation drives global ocean currents.",
+      "id": "6yij6h9"
+    }
+  ],
+  "enriched": true
+}

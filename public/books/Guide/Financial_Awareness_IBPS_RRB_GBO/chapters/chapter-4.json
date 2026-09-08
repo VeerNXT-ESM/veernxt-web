@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bdr0igk"
+      "id": "bdr0igk",
+      "content": "Basel Accords are international banking regulations issued by the Basel Committee on Banking Supervision (BCBS) to ensure banks hold enough capital to abGBOrb losses and reduce risk."
     },
     {
       "id": "jfhwob5",
@@ -58,37 +59,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Accord</strong></p>",
+            "<p><strong>Year</strong></p>",
+            "<p><strong>Focus</strong></p>",
+            "<p><strong>India Status</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Basel I</p>",
+            "<p>1988</p>",
+            "<p>Credit risk only; 8% capital ratio</p>",
+            "<p>Implemented</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Basel II</p>",
+            "<p>2004</p>",
+            "<p>Credit, Market, Operational risks; Pillar framework</p>",
+            "<p>Implemented</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Basel III</p>",
+            "<p>2010 (post GFC)</p>",
+            "<p>Higher quality capital (Tier 1); leverage ratio; liquidity ratios (LCR, NSFR)</p>",
+            "<p>Implemented; CRAR min 9% in India</p>"
           ]
         }
       ]
@@ -103,11 +104,11 @@
       "id": "w1ad9na",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Minimum CRAR: 9% (vs 8% globally)",
+        "Tier 1 Capital: 7% (Common Equity Tier 1 of 5.5%)",
+        "Capital Conservation Buffer: 2.5%",
+        "LCR (Liquidity Coverage Ratio): Banks must hold sufficient high-quality liquid assets",
+        "NSFR (Net Stable Funding Ratio): Ensures long-term stable funding"
       ]
     },
     {
@@ -128,56 +129,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Domestic Banks &amp; Foreign Banks (&gt;20 branches)</strong></p>",
+            "<p><strong>Foreign Banks (&lt;20 branches)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Total PSL</p>",
+            "<p>40% of ANBC</p>",
+            "<p>40% of ANBC</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Agriculture</p>",
+            "<p>18% (with 10% for small/marginal farmers)</p>",
+            "<p>:</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Micro Enterprises</p>",
+            "<p>7.5% of ANBC</p>",
+            "<p>:</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Weaker Sections</p>",
+            "<p>12% of ANBC</p>",
+            "<p>:</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Export Credit (Foreign Banks)</p>",
+            "<p>:</p>",
+            "<p>32% of ANBC</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "0ina1gt"
+      "id": "0ina1gt",
+      "content": "<strong>Note: </strong><em>ANBC = Adjusted Net Bank Credit. Shortfalls are deposited in RIDF (Rural Infrastructure Development Fund).</em>"
     },
     {
       "type": "comparisonTable",
@@ -218,7 +220,8 @@
     },
     {
       "type": "paragraph",
-      "id": "m4ju8tl"
+      "id": "m4ju8tl",
+      "content": "A Non-Performing Asset (NPA) is a loan or advance where interest or principal repayment has remained overdue for more than 90 days."
     },
     {
       "id": "avhsm6t",
@@ -227,33 +230,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>NPA Category</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Provisioning Requirement</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sub-Standard Asset</p>",
+            "<p>NPA for up to 12 months</p>",
+            "<p>15% for secured; 25% for unsecured</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Doubtful Asset</p>",
+            "<p>NPA for more than 12 months</p>",
+            "<p>25%–100% depending on age</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Loss Asset</p>",
+            "<p>Identified as uncollectable; loss confirmed by auditor/RBI</p>",
+            "<p>100% provisioning</p>"
           ]
         }
       ]
@@ -266,7 +269,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mqtl8k8"
+      "id": "mqtl8k8",
+      "content": "The Securitisation and Reconstruction of Financial Assets and Enforcement of Securities Interest (SARFAESI) Act allows banks and financial institutions to auction residential or commercial properties to recover loans without court intervention."
     },
     {
       "type": "examAlert",
@@ -281,10 +285,10 @@
       "id": "at4scm7",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Applicable for secured debts of Rs.1 lakh and above",
+        "Bank issues demand notice; borrower has 60 days to pay",
+        "If unpaid, bank can take possession of assets",
+        "ARCs (Asset Reconstruction Companies) can purchase NPAs from banks"
       ]
     },
     {
@@ -300,73 +304,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Scheme</strong></p>",
+            "<p><strong>Launch Year</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pradhan Mantri Jan Dhan Yojana (PMJDY)</p>",
+            "<p>2014</p>",
+            "<p>Basic savings account with zero balance; overdraft up to Rs.10,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kisan Credit Card (KCC)</p>",
+            "<p>1998-99</p>",
+            "<p>Short-term credit to farmers for agri/allied activities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>PM SVANidhi</p>",
+            "<p>2020</p>",
+            "<p>Micro-credit for street vendors; up to Rs.50,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Stand Up India</p>",
+            "<p>2016</p>",
+            "<p>Loans Rs.10L–1Cr to SC/ST and women entrepreneurs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>MUDRA Loans</p>",
+            "<p>2015</p>",
+            "<p>Micro units; Shishu (&lt;5L), Kishore (5-50L), Tarun (50L-10Cr)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>PM Suraksha Bima Yojana</p>",
+            "<p>2015</p>",
+            "<p>Accidental insurance; Rs.12/year premium</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>PM Jeevan Jyoti Bima Yojana</p>",
+            "<p>2015</p>",
+            "<p>Life insurance; Rs.436/year; Rs.2 lakh cover</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Atal Pension Yojana (APY)</p>",
+            "<p>2015</p>",
+            "<p>Pension for unorganised sector; linked to bank account</p>"
           ]
         }
       ]

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "ykdfiit"
+      "id": "ykdfiit",
+      "content": "Mock Test 1 &amp; Mock Test 2 : SSC JHT Paper 1 &amp; Paper 2"
     },
     {
       "type": "statStrip",
@@ -52,2174 +53,2628 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Paper</strong></p>",
+            "<p><strong>विषय</strong></p>",
+            "<p><strong>प्रश्न</strong></p>",
+            "<p><strong>अंक</strong></p>",
+            "<p><strong>समय</strong></p>",
+            "<p><strong>नकारात्मक अंकन</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Paper 1</p>",
+            "<p>General Hindi + General English</p>",
+            "<p>100+100 = 200 MCQ</p>",
+            "<p>200</p>",
+            "<p>2 घंटे</p>",
+            "<p>-0.25 प्रति गलत उत्तर</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Paper 2</p>",
+            "<p>Translation + Essay (Descriptive)</p>",
+            "<p>4 प्रश्न</p>",
+            "<p>200</p>",
+            "<p>2 घंटे</p>",
+            "<p>कोई नहीं</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "pdhupht"
+      "id": "pdhupht",
+      "content": "Paper 2 में: (1) हिंदी → अंग्रेज़ी अनुवाद (2) अंग्रेज़ी → हिंदी अनुवाद (3) हिंदी निबंध (4) अंग्रेज़ी निबंध"
     },
     {
       "type": "paragraph",
-      "id": "m9gzsay"
+      "id": "m9gzsay",
+      "content": "<strong>अभ्यास परीक्षा 1 : Paper 1 (MCQ)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "nvd425y"
+      "id": "nvd425y",
+      "content": "कुल समय: 2 घंटे  |  कुल अंक: 200  |  नकारात्मक अंकन: -0.25"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pd4i1kp"
+      "id": "pd4i1kp",
+      "content": "<strong>खंड-क: सामान्य हिंदी (50 प्रश्न)</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y5b43oq"
+      "id": "y5b43oq",
+      "content": "<strong>हिंदी व्याकरण</strong>"
     },
     {
       "type": "paragraph",
-      "id": "5dttee6"
+      "id": "5dttee6",
+      "content": "1. निम्नलिखित में तत्सम शब्द कौन-सा है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "w1z91pi"
+      "id": "w1z91pi",
+      "content": "(A) आग"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f7zxk1n"
+      "id": "f7zxk1n",
+      "content": "(B) दाँत"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5iz06b1"
+      "id": "5iz06b1",
+      "content": "(C) अग्नि"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bjde6im"
+      "id": "bjde6im",
+      "content": "(D) पाँव"
     },
     {
       "type": "paragraph",
-      "id": "j17ls5b"
+      "id": "j17ls5b",
+      "content": "2. 'दूध का दूध पानी का पानी करना' मुहावरे का अर्थ है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0q7z3aq"
+      "id": "0q7z3aq",
+      "content": "(A) दूध में पानी मिलाना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "til6hb5"
+      "id": "til6hb5",
+      "content": "(B) न्याय करना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ryxshgl"
+      "id": "ryxshgl",
+      "content": "(C) झूठ बोलना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "r3fes24"
+      "id": "r3fes24",
+      "content": "(D) भेद बताना"
     },
     {
       "type": "paragraph",
-      "id": "yzaf4za"
+      "id": "yzaf4za",
+      "content": "3. निम्नलिखित में से कौन-सा शब्द स्त्रीलिंग है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pdhfkpv"
+      "id": "pdhfkpv",
+      "content": "(A) घर"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cbxa49k"
+      "id": "cbxa49k",
+      "content": "(B) पानी"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a70alm6"
+      "id": "a70alm6",
+      "content": "(C) सड़क"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2fu37bp"
+      "id": "2fu37bp",
+      "content": "(D) रास्ता"
     },
     {
       "type": "paragraph",
-      "id": "96zatm6"
+      "id": "96zatm6",
+      "content": "4. 'उत्कर्ष' शब्द में उपसर्ग है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "832eqqz"
+      "id": "832eqqz",
+      "content": "(A) उत्"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "neo2xd7"
+      "id": "neo2xd7",
+      "content": "(B) उत"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z67rcbg"
+      "id": "z67rcbg",
+      "content": "(C) उ"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "eyz0o9j"
+      "id": "eyz0o9j",
+      "content": "(D) कोई नहीं"
     },
     {
       "type": "paragraph",
-      "id": "zmgmanj"
+      "id": "zmgmanj",
+      "content": "5. निम्नलिखित में से 'दीर्घ संधि' का उदाहरण कौन-सा है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "js34wdq"
+      "id": "js34wdq",
+      "content": "(A) देवेंद्र"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "n91ypng"
+      "id": "n91ypng",
+      "content": "(B) विद्यालय"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9d22yyb"
+      "id": "9d22yyb",
+      "content": "(C) महेश"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ensttac"
+      "id": "ensttac",
+      "content": "(D) जगन्नाथ"
     },
     {
       "type": "paragraph",
-      "id": "4s24ifx"
+      "id": "4s24ifx",
+      "content": "6. 'जो परिश्रम करता है वह सफल होता है' : यह किस प्रकार का वाक्य है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ew1ms0a"
+      "id": "ew1ms0a",
+      "content": "(A) सरल वाक्य"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "inmw3xh"
+      "id": "inmw3xh",
+      "content": "(B) संयुक्त वाक्य"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lhhxxpk"
+      "id": "lhhxxpk",
+      "content": "(C) मिश्र वाक्य"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1uy39sa"
+      "id": "1uy39sa",
+      "content": "(D) नकारात्मक वाक्य"
     },
     {
       "type": "paragraph",
-      "id": "pil4g76"
+      "id": "pil4g76",
+      "content": "7. 'राजपुत्र' में कौन-सा समास है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "imba9be"
+      "id": "imba9be",
+      "content": "(A) अव्ययीभाव"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rdqe2bg"
+      "id": "rdqe2bg",
+      "content": "(B) तत्पुरुष"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "grhss7z"
+      "id": "grhss7z",
+      "content": "(C) बहुव्रीहि"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ajaa0fg"
+      "id": "ajaa0fg",
+      "content": "(D) द्वंद्व"
     },
     {
       "type": "paragraph",
-      "id": "4p28qub"
+      "id": "4p28qub",
+      "content": "8. 'सुंदर' विशेषण का भाववाचक संज्ञा रूप क्या है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j29yc15"
+      "id": "j29yc15",
+      "content": "(A) सुंदरी"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yw0b0mn"
+      "id": "yw0b0mn",
+      "content": "(B) सुंदरता"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o8faevr"
+      "id": "o8faevr",
+      "content": "(C) सुंदरतम"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a2i3hus"
+      "id": "a2i3hus",
+      "content": "(D) सुंदरीकरण"
     },
     {
       "type": "paragraph",
-      "id": "30hwsji"
+      "id": "30hwsji",
+      "content": "9. निम्नलिखित में से 'अनुस्वार' का सही प्रयोग कौन-सा है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4rkhvli"
+      "id": "4rkhvli",
+      "content": "(A) कोई ने बुलाया"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "olcqo17"
+      "id": "olcqo17",
+      "content": "(B) किसी ने बुलाया"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9pen3ft"
+      "id": "9pen3ft",
+      "content": "(C) कोई को बुलाया"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x509gav"
+      "id": "x509gav",
+      "content": "(D) कोई से बुलाया"
     },
     {
       "type": "paragraph",
-      "id": "hp1fjlg"
+      "id": "hp1fjlg",
+      "content": "10. 'आम के आम गुठलियों के दाम' : यह लोकोक्ति किस अर्थ में प्रयुक्त होती है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "w4bcb2r"
+      "id": "w4bcb2r",
+      "content": "(A) आम खाने के लिए"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qo2bs5f"
+      "id": "qo2bs5f",
+      "content": "(B) दोहरा लाभ उठाना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9u96naa"
+      "id": "9u96naa",
+      "content": "(C) बेकार काम करना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zwyqkhp"
+      "id": "zwyqkhp",
+      "content": "(D) बहुत महँगा"
     },
     {
       "type": "paragraph",
-      "id": "qlllcui"
+      "id": "qlllcui",
+      "content": "11. निम्नलिखित वाक्यों में से शुद्ध वाक्य चुनिए:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mdoh9ap"
+      "id": "mdoh9ap",
+      "content": "(A) वह वापस लौट आया।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9kj7ozz"
+      "id": "9kj7ozz",
+      "content": "(B) वह लौट आया।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3sf8yri"
+      "id": "3sf8yri",
+      "content": "(C) वह वापस आया।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9tj8zqv"
+      "id": "9tj8zqv",
+      "content": "(D) वह वापस गया।"
     },
     {
       "type": "paragraph",
-      "id": "8ny2uwh"
+      "id": "8ny2uwh",
+      "content": "12. 'नौ दो ग्यारह होना' मुहावरे का अर्थ है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l23uj5t"
+      "id": "l23uj5t",
+      "content": "(A) गणित करना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cmuonqw"
+      "id": "cmuonqw",
+      "content": "(B) भाग जाना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "95sm6ig"
+      "id": "95sm6ig",
+      "content": "(C) लड़ाई करना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uydjo3d"
+      "id": "uydjo3d",
+      "content": "(D) सफल होना"
     },
     {
       "type": "paragraph",
-      "id": "2rdxdyv"
+      "id": "2rdxdyv",
+      "content": "13. निम्नलिखित में से 'महाप्राण' व्यंजन कौन-सा है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "13ziltf"
+      "id": "13ziltf",
+      "content": "(A) क"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ttdnjer"
+      "id": "ttdnjer",
+      "content": "(B) ग"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y0onzeu"
+      "id": "y0onzeu",
+      "content": "(C) ख"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "70slqdf"
+      "id": "70slqdf",
+      "content": "(D) ञ"
     },
     {
       "type": "paragraph",
-      "id": "f58mq5n"
+      "id": "f58mq5n",
+      "content": "14. 'पुस्तक' शब्द का लिंग है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4ho8krn"
+      "id": "4ho8krn",
+      "content": "(A) पुल्लिंग"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f9hm81t"
+      "id": "f9hm81t",
+      "content": "(B) स्त्रीलिंग"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "h9zuzw4"
+      "id": "h9zuzw4",
+      "content": "(C) उभयलिंगी"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o55jm5q"
+      "id": "o55jm5q",
+      "content": "(D) नपुंसकलिंग"
     },
     {
       "type": "paragraph",
-      "id": "9csf7kn"
+      "id": "9csf7kn",
+      "content": "15. निम्नलिखित में से 'अनेकार्थी' शब्द का उदाहरण कौन-सा है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "001rnjj"
+      "id": "001rnjj",
+      "content": "(A) जल"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7ope5pv"
+      "id": "7ope5pv",
+      "content": "(B) कर"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yu4n5a7"
+      "id": "yu4n5a7",
+      "content": "(C) विद्या"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2f7o1lg"
+      "id": "2f7o1lg",
+      "content": "(D) प्रकाश"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j54z0ov"
+      "id": "j54z0ov",
+      "content": "<strong>शब्द भंडार</strong>"
     },
     {
       "type": "paragraph",
-      "id": "m9hzdov"
+      "id": "m9hzdov",
+      "content": "16. 'आकाश' का पर्यायवाची शब्द नहीं है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1xvhrcj"
+      "id": "1xvhrcj",
+      "content": "(A) नभ"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3rasoft"
+      "id": "3rasoft",
+      "content": "(B) गगन"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qikso19"
+      "id": "qikso19",
+      "content": "(C) अंबर"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hdhkv7z"
+      "id": "hdhkv7z",
+      "content": "(D) सागर"
     },
     {
       "type": "paragraph",
-      "id": "lhdwcsc"
+      "id": "lhdwcsc",
+      "content": "17. 'जल' का विलोम शब्द है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ro5fqe5"
+      "id": "ro5fqe5",
+      "content": "(A) स्थल"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tbvnpvh"
+      "id": "tbvnpvh",
+      "content": "(B) अग्नि"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j33bnoo"
+      "id": "j33bnoo",
+      "content": "(C) वायु"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6pb30qv"
+      "id": "6pb30qv",
+      "content": "(D) आकाश"
     },
     {
       "type": "paragraph",
-      "id": "oonvsgh"
+      "id": "oonvsgh",
+      "content": "18. 'जो अनुकरण करने योग्य हो' : इसके लिए एक शब्द है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pqh6au0"
+      "id": "pqh6au0",
+      "content": "(A) अनुकरणीय"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jd12dq9"
+      "id": "jd12dq9",
+      "content": "(B) अनुसरणीय"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "s809bh7"
+      "id": "s809bh7",
+      "content": "(C) अनुकर्ता"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xtm6yoh"
+      "id": "xtm6yoh",
+      "content": "(D) अनुगामी"
     },
     {
       "type": "paragraph",
-      "id": "swhfhwe"
+      "id": "swhfhwe",
+      "content": "19. निम्नलिखित में से 'तद्भव' शब्द कौन-सा है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rpc715n"
+      "id": "rpc715n",
+      "content": "(A) पुष्प"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "elcbsm5"
+      "id": "elcbsm5",
+      "content": "(B) नेत्र"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uaardu0"
+      "id": "uaardu0",
+      "content": "(C) आग"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l8dbzy8"
+      "id": "l8dbzy8",
+      "content": "(D) वायु"
     },
     {
       "type": "paragraph",
-      "id": "8cjk7ip"
+      "id": "8cjk7ip",
+      "content": "20. 'कलेजा मुँह को आना' का अर्थ है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bc57lem"
+      "id": "bc57lem",
+      "content": "(A) खुशी होना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nylsn9e"
+      "id": "nylsn9e",
+      "content": "(B) बहुत घबरा जाना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "usglozq"
+      "id": "usglozq",
+      "content": "(C) क्रोध आना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yi2e9ny"
+      "id": "yi2e9ny",
+      "content": "(D) उल्टी होना"
     },
     {
       "type": "paragraph",
-      "id": "qait2pq"
+      "id": "qait2pq",
+      "content": "21. 'सूर्य' का पर्यायवाची नहीं है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "b5dfwdu"
+      "id": "b5dfwdu",
+      "content": "(A) रवि"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "22c420e"
+      "id": "22c420e",
+      "content": "(B) दिनकर"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "aj7sx51"
+      "id": "aj7sx51",
+      "content": "(C) इंदु"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6b1er1p"
+      "id": "6b1er1p",
+      "content": "(D) भानु"
     },
     {
       "type": "paragraph",
-      "id": "9qv3w8x"
+      "id": "9qv3w8x",
+      "content": "22. निम्नलिखित में से 'विदेशज' शब्द कौन-सा है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "unovfpw"
+      "id": "unovfpw",
+      "content": "(A) ग्राम"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y133tvj"
+      "id": "y133tvj",
+      "content": "(B) कमरा"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1myr0le"
+      "id": "1myr0le",
+      "content": "(C) घर"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bieww82"
+      "id": "bieww82",
+      "content": "(D) नदी"
     },
     {
       "type": "paragraph",
-      "id": "830sh0a"
+      "id": "830sh0a",
+      "content": "23. 'श्रुतिसमभिन्नार्थक' शब्द-युग्म का उदाहरण है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i0s6xcl"
+      "id": "i0s6xcl",
+      "content": "(A) राम-श्याम"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rd2fsqh"
+      "id": "rd2fsqh",
+      "content": "(B) दिन-रात"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rcj8f7c"
+      "id": "rcj8f7c",
+      "content": "(C) दिन-दीन"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lp97wl1"
+      "id": "lp97wl1",
+      "content": "(D) सुख-दुःख"
     },
     {
       "type": "paragraph",
-      "id": "za0rjx9"
+      "id": "za0rjx9",
+      "content": "24. 'परिश्रम' शब्द में प्रयुक्त उपसर्ग है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "grrd5gx"
+      "id": "grrd5gx",
+      "content": "(A) प"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zbals2u"
+      "id": "zbals2u",
+      "content": "(B) परि"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7yr53io"
+      "id": "7yr53io",
+      "content": "(C) पर"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uaqr6ps"
+      "id": "uaqr6ps",
+      "content": "(D) परिश्र"
     },
     {
       "type": "paragraph",
-      "id": "fwihdsk"
+      "id": "fwihdsk",
+      "content": "25. निम्नलिखित में से 'भाववाचक संज्ञा' कौन-सी है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "obhnqjy"
+      "id": "obhnqjy",
+      "content": "(A) राम"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i5nz5kk"
+      "id": "i5nz5kk",
+      "content": "(B) नदी"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ew2xux9"
+      "id": "ew2xux9",
+      "content": "(C) बचपन"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "muslykx"
+      "id": "muslykx",
+      "content": "(D) सेना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "oqfc1f3"
+      "id": "oqfc1f3",
+      "content": "<strong>अपठित गद्यांश</strong>"
     },
     {
       "type": "paragraph",
-      "id": "qashaky"
+      "id": "qashaky",
+      "content": "निम्नलिखित गद्यांश को पढ़कर प्रश्नों के उत्तर दीजिए:"
     },
     {
       "type": "paragraph",
-      "id": "bcbaaol"
+      "id": "bcbaaol",
+      "content": "महान व्यक्तित्व वह है जो कठिन परिस्थितियों में भी अपना आपा नहीं खोता। जीवन में संकट आते हैं, चुनौतियाँ आती हैं : परंतु जो व्यक्ति इनसे घबराता नहीं बल्कि इन्हें एक अवसर के रूप में देखता है, वही सफल होता है। इतिहास के पन्नों पर ऐसे अनेक उदाहरण मिलते हैं जहाँ विपत्ति ने महान लोगों को और भी महान बना दिया। अब्राहम लिंकन बार-बार असफल हुए परंतु हार नहीं मानी और अंततः अमेरिका के राष्ट्रपति बने। अतः संघर्ष से भागने की बजाय उसका साहस से सामना करना चाहिए।"
     },
     {
       "type": "paragraph",
-      "id": "dcv91g5"
+      "id": "dcv91g5",
+      "content": "26. इस गद्यांश का उचित शीर्षक क्या होगा?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ndfdvbc"
+      "id": "ndfdvbc",
+      "content": "(A) अब्राहम लिंकन की कहानी"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "81bt2ja"
+      "id": "81bt2ja",
+      "content": "(B) संघर्ष और सफलता"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rygdfm6"
+      "id": "rygdfm6",
+      "content": "(C) महान लोगों की असफलता"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "u0r4lnf"
+      "id": "u0r4lnf",
+      "content": "(D) परिस्थितियाँ और मनुष्य"
     },
     {
       "type": "paragraph",
-      "id": "3r37gy0"
+      "id": "3r37gy0",
+      "content": "27. गद्यांश के अनुसार महान व्यक्तित्व की क्या विशेषता है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g3dwuqj"
+      "id": "g3dwuqj",
+      "content": "(A) धन संपत्ति होना"
     },
     {
       "type": "paragraph",
-      "id": "vgied7i"
+      "id": "vgied7i",
+      "content": "(B) कठिन परिस्थितियों में भी संयम रखना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xaue19u"
+      "id": "xaue19u",
+      "content": "(C) कभी असफल न होना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tf10zll"
+      "id": "tf10zll",
+      "content": "(D) शत्रुओं को हराना"
     },
     {
       "type": "paragraph",
-      "id": "7c2pewc"
+      "id": "7c2pewc",
+      "content": "28. लिंकन के संदर्भ में गद्यांश क्या संदेश देता है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4kixn9u"
+      "id": "4kixn9u",
+      "content": "(A) बार-बार असफलता से बचें"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mgzq8ia"
+      "id": "mgzq8ia",
+      "content": "(B) राजनीति में आएँ"
     },
     {
       "type": "paragraph",
-      "id": "j6uj2q7"
+      "id": "j6uj2q7",
+      "content": "(C) बार-बार असफल होने पर भी हार न मानें"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ogfkhyc"
+      "id": "ogfkhyc",
+      "content": "(D) अमेरिका की संस्कृति अपनाएँ"
     },
     {
       "type": "paragraph",
-      "id": "o3sfdu9"
+      "id": "o3sfdu9",
+      "content": "29. 'आपा न खोना' का अर्थ है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ke84k1v"
+      "id": "ke84k1v",
+      "content": "(A) संयम न खोना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5wpij9n"
+      "id": "5wpij9n",
+      "content": "(B) रास्ता न खोना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rowgp6m"
+      "id": "rowgp6m",
+      "content": "(C) संपत्ति न खोना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "00nvct4"
+      "id": "00nvct4",
+      "content": "(D) समय न खोना"
     },
     {
       "type": "paragraph",
-      "id": "vje8o2d"
+      "id": "vje8o2d",
+      "content": "30. गद्यांश में 'अवसर' शब्द किसके लिए प्रयुक्त हुआ है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "aief1vp"
+      "id": "aief1vp",
+      "content": "(A) लाभ के लिए"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ixzdiad"
+      "id": "ixzdiad",
+      "content": "(B) कठिन परिस्थिति के लिए"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tqvi5ik"
+      "id": "tqvi5ik",
+      "content": "(C) शत्रु के लिए"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cswiq5o"
+      "id": "cswiq5o",
+      "content": "(D) संपत्ति के लिए"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kj0m28f"
+      "id": "kj0m28f",
+      "content": "<strong>अनुवाद ज्ञान (हिंदी)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "s01tpgj"
+      "id": "s01tpgj",
+      "content": "31. 'It is raining cats and dogs' का सही हिंदी अनुवाद है:"
     },
     {
       "type": "paragraph",
-      "id": "2nf1bt5"
+      "id": "2nf1bt5",
+      "content": "(A) बिल्लियाँ और कुत्ते बरस रहे हैं"
     },
     {
       "type": "paragraph",
-      "id": "11hecs0"
+      "id": "11hecs0",
+      "content": "(B) मूसलाधार बारिश हो रही है"
     },
     {
       "type": "paragraph",
-      "id": "rre0xs0"
+      "id": "rre0xs0",
+      "content": "(C) जानवरों से बारिश हो रही है"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9fc0knk"
+      "id": "9fc0knk",
+      "content": "(D) आज बहुत गर्मी है"
     },
     {
       "type": "paragraph",
-      "id": "n287spl"
+      "id": "n287spl",
+      "content": "32. 'He kicked the bucket' का भावानुवाद है:"
     },
     {
       "type": "paragraph",
-      "id": "u7rugzd"
+      "id": "u7rugzd",
+      "content": "(A) उसने बाल्टी को लात मारी"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "oqrhmij"
+      "id": "oqrhmij",
+      "content": "(B) उसने काम पूरा किया"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z3vs5je"
+      "id": "z3vs5je",
+      "content": "(C) उसकी मृत्यु हो गई"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7x8vu7q"
+      "id": "7x8vu7q",
+      "content": "(D) वह गिर गया"
     },
     {
       "type": "paragraph",
-      "id": "1892ub4"
+      "id": "1892ub4",
+      "content": "33. 'Government of India' का सही हिंदी अनुवाद है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dbqairv"
+      "id": "dbqairv",
+      "content": "(A) भारत की सरकार"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dfp3n3r"
+      "id": "dfp3n3r",
+      "content": "(B) भारत सरकार"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jhrbw26"
+      "id": "jhrbw26",
+      "content": "(C) भारतीय सरकार"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uhmhu8w"
+      "id": "uhmhu8w",
+      "content": "(D) हिंदुस्तान की सरकार"
     },
     {
       "type": "paragraph",
-      "id": "zl5z1xi"
+      "id": "zl5z1xi",
+      "content": "34. Passive Voice 'A letter was written by him' का सर्वोचित हिंदी अनुवाद है:"
     },
     {
       "type": "paragraph",
-      "id": "8jm22d8"
+      "id": "8jm22d8",
+      "content": "(A) एक पत्र उसके द्वारा लिखा गया था।"
     },
     {
       "type": "paragraph",
-      "id": "fg9e1bn"
+      "id": "fg9e1bn",
+      "content": "(B) उसने एक पत्र लिखा था।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2k7tukp"
+      "id": "2k7tukp",
+      "content": "(C) पत्र लिखा जाएगा।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g1fuo6l"
+      "id": "g1fuo6l",
+      "content": "(D) उसे पत्र लिखना था।"
     },
     {
       "type": "paragraph",
-      "id": "0s8o5r8"
+      "id": "0s8o5r8",
+      "content": "35. 'Constitution' का सही हिंदी पारिभाषिक शब्द है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0zq1b02"
+      "id": "0zq1b02",
+      "content": "(A) कानून"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "loerv83"
+      "id": "loerv83",
+      "content": "(B) न्यायालय"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "sejq5j5"
+      "id": "sejq5j5",
+      "content": "(C) संविधान"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z2jomti"
+      "id": "z2jomti",
+      "content": "(D) संसद"
     },
     {
       "type": "paragraph",
-      "id": "88vfcsw"
+      "id": "88vfcsw",
+      "content": "36. हिंदी में शब्द-क्रम सामान्यतः किस प्रकार होता है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rmhpa6i"
+      "id": "rmhpa6i",
+      "content": "(A) Subject-Verb-Object"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2lm3f7w"
+      "id": "2lm3f7w",
+      "content": "(B) Object-Subject-Verb"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ncwuvg4"
+      "id": "ncwuvg4",
+      "content": "(C) Subject-Object-Verb"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "19uy6ke"
+      "id": "19uy6ke",
+      "content": "(D) Verb-Subject-Object"
     },
     {
       "type": "paragraph",
-      "id": "ppro8qc"
+      "id": "ppro8qc",
+      "content": "37. 'Affidavit' का हिंदी पारिभाषिक शब्द है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "op2izpi"
+      "id": "op2izpi",
+      "content": "(A) न्यायाधीश"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nr0gc25"
+      "id": "nr0gc25",
+      "content": "(B) शपथपत्र"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a99fmfd"
+      "id": "a99fmfd",
+      "content": "(C) अभियोग"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ni1gqje"
+      "id": "ni1gqje",
+      "content": "(D) जमानत"
     },
     {
       "type": "paragraph",
-      "id": "f3k18he"
+      "id": "f3k18he",
+      "content": "38. राजभाषा के संदर्भ में 'क' क्षेत्र में कौन-से राज्य आते हैं?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9w4ggpk"
+      "id": "9w4ggpk",
+      "content": "(A) महाराष्ट्र, गुजरात"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cubrhl8"
+      "id": "cubrhl8",
+      "content": "(B) केरल, तमिलनाडु"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vwg4bgv"
+      "id": "vwg4bgv",
+      "content": "(C) उत्तर प्रदेश, बिहार, राजस्थान"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qwjz63r"
+      "id": "qwjz63r",
+      "content": "(D) पंजाब, जम्मू-कश्मीर"
     },
     {
       "type": "paragraph",
-      "id": "ru799ka"
+      "id": "ru799ka",
+      "content": "39. भारत की राजभाषा का उल्लेख संविधान के किस अनुच्छेद में है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wtb4gv7"
+      "id": "wtb4gv7",
+      "content": "(A) अनुच्छेद 343"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ylg5vn5"
+      "id": "ylg5vn5",
+      "content": "(B) अनुच्छेद 44"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9lvr98w"
+      "id": "9lvr98w",
+      "content": "(C) अनुच्छेद 370"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9o1xr3l"
+      "id": "9o1xr3l",
+      "content": "(D) अनुच्छेद 21"
     },
     {
       "type": "paragraph",
-      "id": "9hk0ijj"
+      "id": "9hk0ijj",
+      "content": "40. निम्नलिखित में से 'I am directed to inform you' का सही हिंदी अनुवाद है:"
     },
     {
       "type": "paragraph",
-      "id": "1dys1qc"
+      "id": "1dys1qc",
+      "content": "(A) मुझे यह सूचित करने का आदेश है"
     },
     {
       "type": "paragraph",
-      "id": "envouey"
+      "id": "envouey",
+      "content": "(B) मुझे यह सूचित करने का निदेश हुआ है"
     },
     {
       "type": "paragraph",
-      "id": "oiyy84x"
+      "id": "oiyy84x",
+      "content": "(C) मैं आपको सूचित करता हूँ"
     },
     {
       "type": "paragraph",
-      "id": "ox9h8xr"
+      "id": "ox9h8xr",
+      "content": "(D) आपको सूचित किया जाता है"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ijrnm96"
+      "id": "ijrnm96",
+      "content": "<strong>विविध : हिंदी</strong>"
     },
     {
       "type": "paragraph",
-      "id": "wnk54b7"
+      "id": "wnk54b7",
+      "content": "41. SSC JHT Paper 2 में कुल कितने प्रश्न होते हैं?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "h2l4knh"
+      "id": "h2l4knh",
+      "content": "(A) 100"
     },
     {
-      "type": "pullQuote",
-      "content": "19.1  परीक्षा का स्वरूप (Exam Pattern)",
-      "id": "rq66fdt"
-    },
-    {
       "type": "heading",
       "level": 4,
-      "id": "6qcq04t"
+      "id": "6qcq04t",
+      "content": "(B) 200"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ykf5j6x"
+      "id": "ykf5j6x",
+      "content": "(C) 4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "480lrdj"
+      "id": "480lrdj",
+      "content": "(D) 50"
     },
     {
       "type": "paragraph",
-      "id": "ijjwv21"
+      "id": "ijjwv21",
+      "content": "42. निम्नलिखित में से 'कर्मधारय समास' का उदाहरण है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e1873r1"
+      "id": "e1873r1",
+      "content": "(A) त्रिभुवन"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zaom0jz"
+      "id": "zaom0jz",
+      "content": "(B) माता-पिता"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nnat0ac"
+      "id": "nnat0ac",
+      "content": "(C) नीलकमल"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gxst71o"
+      "id": "gxst71o",
+      "content": "(D) राजपुत्र"
     },
     {
       "type": "paragraph",
-      "id": "7wb6ke7"
+      "id": "7wb6ke7",
+      "content": "43. 'अकेला चना भाड़ नहीं फोड़ता' लोकोक्ति का अर्थ है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q3ua6rg"
+      "id": "q3ua6rg",
+      "content": "(A) चने सस्ते होते हैं"
     },
     {
       "type": "paragraph",
-      "id": "vvm6dp3"
+      "id": "vvm6dp3",
+      "content": "(B) अकेला व्यक्ति बड़ा काम नहीं कर सकता"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "akhol5d"
+      "id": "akhol5d",
+      "content": "(C) एकता में शक्ति है"
     },
     {
       "type": "paragraph",
-      "id": "qfsuahz"
+      "id": "qfsuahz",
+      "content": "(D) मेहनत का फल मिलता है"
     },
     {
       "type": "paragraph",
-      "id": "885bnc1"
+      "id": "885bnc1",
+      "content": "44. निम्नलिखित में से कौन-सा शब्द सदा पुल्लिंग होता है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ep59mgd"
+      "id": "ep59mgd",
+      "content": "(A) सड़क"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g660q15"
+      "id": "g660q15",
+      "content": "(B) किताब"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0qa31ec"
+      "id": "0qa31ec",
+      "content": "(C) दर्द"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g3mu9ta"
+      "id": "g3mu9ta",
+      "content": "(D) भाषा"
     },
     {
       "type": "paragraph",
-      "id": "qz83f92"
+      "id": "qz83f92",
+      "content": "45. वर्तमान काल का 'संदिग्ध' रूप कौन-सा है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bh540ud"
+      "id": "bh540ud",
+      "content": "(A) वह पढ़ता है"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0rd6l2z"
+      "id": "0rd6l2z",
+      "content": "(B) वह पढ़ता होगा"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mwsof5g"
+      "id": "mwsof5g",
+      "content": "(C) वह पढ़ रहा है"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j64b7dp"
+      "id": "j64b7dp",
+      "content": "(D) उसने पढ़ा है"
     },
     {
       "type": "paragraph",
-      "id": "da7ybj6"
+      "id": "da7ybj6",
+      "content": "46. 'बाल की खाल निकालना' मुहावरे का अर्थ है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kppuhot"
+      "id": "kppuhot",
+      "content": "(A) बाल काटना"
     },
     {
       "type": "paragraph",
-      "id": "6pq5ijz"
+      "id": "6pq5ijz",
+      "content": "(B) बहुत बारीकी से दोष ढूँढना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "083zeiz"
+      "id": "083zeiz",
+      "content": "(C) झगड़ा करना"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "t0vdw6n"
+      "id": "t0vdw6n",
+      "content": "(D) मेहनत करना"
     },
     {
       "type": "paragraph",
-      "id": "6mctl5n"
+      "id": "6mctl5n",
+      "content": "47. 'विद्यालय' शब्द में संधि-विच्छेद है:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4nwmdsz"
+      "id": "4nwmdsz",
+      "content": "(A) विद्या + अलय"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4vvaphl"
+      "id": "4vvaphl",
+      "content": "(B) विद्या + आलय"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "sbl94f2"
+      "id": "sbl94f2",
+      "content": "(C) विद्य + आलय"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gqc2kn4"
+      "id": "gqc2kn4",
+      "content": "(D) विद्यां + आलय"
     },
     {
       "type": "paragraph",
-      "id": "iekjcgk"
+      "id": "iekjcgk",
+      "content": "48. निम्नलिखित में से शुद्ध वाक्य कौन-सा है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7e94c9a"
+      "id": "7e94c9a",
+      "content": "(A) सभी छात्र पढ़ता है।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g0gfku3"
+      "id": "g0gfku3",
+      "content": "(B) सभी छात्र पढ़ते हैं।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1ivu36a"
+      "id": "1ivu36a",
+      "content": "(C) सभी छात्र पढ़ती है।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dpmr6d2"
+      "id": "dpmr6d2",
+      "content": "(D) सभी छात्र पढ़ती हैं।"
     },
     {
       "type": "paragraph",
-      "id": "ib7lyxk"
+      "id": "ib7lyxk",
+      "content": "49. हिंदी में 'ण' और 'न' में क्या अंतर है?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q4x58oj"
+      "id": "q4x58oj",
+      "content": "(A) रंग"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uslvnqf"
+      "id": "uslvnqf",
+      "content": "(B) उच्चारण स्थान"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xio4c1b"
+      "id": "xio4c1b",
+      "content": "(C) वचन"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "40idv7c"
+      "id": "40idv7c",
+      "content": "(D) लिंग"
     },
     {
       "type": "paragraph",
-      "id": "garllee"
+      "id": "garllee",
+      "content": "50. 'घर की मुर्गी दाल बराबर' लोकोक्ति का अर्थ है:"
     },
     {
       "type": "paragraph",
-      "id": "3u5emmw"
+      "id": "3u5emmw",
+      "content": "(A) मुर्गी दाल के भाव मिलती है"
     },
     {
       "type": "paragraph",
-      "id": "88382f4"
+      "id": "88382f4",
+      "content": "(B) घर की चीज़ की कदर नहीं होती"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z98i90b"
+      "id": "z98i90b",
+      "content": "(C) खाना सस्ता होता है"
     },
     {
       "type": "paragraph",
-      "id": "myw9rxg"
+      "id": "myw9rxg",
+      "content": "(D) घर में दाल बनती है"
     },
     {
       "type": "paragraph",
-      "id": "96epdx6"
+      "id": "96epdx6",
+      "content": "<strong>Section B: General English (50 Questions)</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z4yv9fs"
+      "id": "z4yv9fs",
+      "content": "<strong>Grammar &amp; Usage</strong>"
     },
     {
       "type": "paragraph",
-      "id": "zn970x0"
+      "id": "zn970x0",
+      "content": "51. Choose the correct passive form: 'She is writing a letter.'"
     },
     {
       "type": "paragraph",
-      "id": "9h65r77"
+      "id": "9h65r77",
+      "content": "(A) A letter is written by her."
     },
     {
       "type": "paragraph",
-      "id": "vs3bfd9"
+      "id": "vs3bfd9",
+      "content": "(B) A letter is being written by her."
     },
     {
       "type": "paragraph",
-      "id": "7kucc9a"
+      "id": "7kucc9a",
+      "content": "(C) A letter was written by her."
     },
     {
       "type": "paragraph",
-      "id": "p91yve1"
+      "id": "p91yve1",
+      "content": "(D) A letter has been written by her."
     },
     {
       "type": "paragraph",
-      "id": "bd6kvqs"
+      "id": "bd6kvqs",
+      "content": "52. Select the correct indirect speech: He said, 'I am going to Delhi.'"
     },
     {
       "type": "paragraph",
-      "id": "av5tb2y"
+      "id": "av5tb2y",
+      "content": "(A) He said that he is going to Delhi."
     },
     {
       "type": "paragraph",
-      "id": "6fw6lqi"
+      "id": "6fw6lqi",
+      "content": "(B) He said that he was going to Delhi."
     },
     {
       "type": "paragraph",
-      "id": "4om6x7z"
+      "id": "4om6x7z",
+      "content": "(C) He told that he went to Delhi."
     },
     {
       "type": "paragraph",
-      "id": "onuk4e0"
+      "id": "onuk4e0",
+      "content": "(D) He said that he has gone to Delhi."
     },
     {
       "type": "paragraph",
-      "id": "m6fiayb"
+      "id": "m6fiayb",
+      "content": "53. Choose the correct sentence:"
     },
     {
       "type": "paragraph",
-      "id": "nq88kk9"
+      "id": "nq88kk9",
+      "content": "(A) Each of the students are present."
     },
     {
       "type": "paragraph",
-      "id": "e4g32ov"
+      "id": "e4g32ov",
+      "content": "(B) Each of the students is present."
     },
     {
       "type": "paragraph",
-      "id": "jdh9s2t"
+      "id": "jdh9s2t",
+      "content": "(C) Each of the students were present."
     },
     {
       "type": "paragraph",
-      "id": "33rys84"
+      "id": "33rys84",
+      "content": "(D) Each of the students have been present."
     },
     {
       "type": "paragraph",
-      "id": "tbyd6ia"
+      "id": "tbyd6ia",
+      "content": "54. Fill in the blank: He has been working here _____ five years."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hmaz4m3"
+      "id": "hmaz4m3",
+      "content": "(A) since"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "sb7n38p"
+      "id": "sb7n38p",
+      "content": "(B) from"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zakui43"
+      "id": "zakui43",
+      "content": "(C) for"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2cd5jog"
+      "id": "2cd5jog",
+      "content": "(D) during"
     },
     {
       "type": "paragraph",
-      "id": "gugm7dz"
+      "id": "gugm7dz",
+      "content": "55. Choose the correct option: _____ Himalayas are the highest mountains in the world."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a838a8t"
+      "id": "a838a8t",
+      "content": "(A) A"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5lvuipm"
+      "id": "5lvuipm",
+      "content": "(B) An"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5v4ngvr"
+      "id": "5v4ngvr",
+      "content": "(C) The"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "avy1dc1"
+      "id": "avy1dc1",
+      "content": "(D) No article"
     },
     {
       "type": "paragraph",
-      "id": "d5ysnl0"
+      "id": "d5ysnl0",
+      "content": "56. 'No sooner did he arrive _____ it started raining.'"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1tx6zen"
+      "id": "1tx6zen",
+      "content": "(A) then"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "aizu0bg"
+      "id": "aizu0bg",
+      "content": "(B) than"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wbtf0y8"
+      "id": "wbtf0y8",
+      "content": "(C) when"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "16zxx78"
+      "id": "16zxx78",
+      "content": "(D) as"
     },
     {
       "type": "paragraph",
-      "id": "q7bwk84"
+      "id": "q7bwk84",
+      "content": "57. Identify the error: 'She is one of the best student in the class.'"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2ppzywc"
+      "id": "2ppzywc",
+      "content": "(A) She is"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "adrsbtt"
+      "id": "adrsbtt",
+      "content": "(B) one of the"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uq5g6yw"
+      "id": "uq5g6yw",
+      "content": "(C) best student"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9cdk1zh"
+      "id": "9cdk1zh",
+      "content": "(D) in the class"
     },
     {
       "type": "paragraph",
-      "id": "xodrv86"
+      "id": "xodrv86",
+      "content": "58. Choose the correct form: 'If he _____ harder, he would have passed.'"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0qqrf88"
+      "id": "0qqrf88",
+      "content": "(A) studies"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "onmdiki"
+      "id": "onmdiki",
+      "content": "(B) studied"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zce3jym"
+      "id": "zce3jym",
+      "content": "(C) had studied"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "b0cqdr1"
+      "id": "b0cqdr1",
+      "content": "(D) has studied"
     },
     {
       "type": "paragraph",
-      "id": "l00bi6b"
+      "id": "l00bi6b",
+      "content": "59. The word 'ephemeral' means:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ch5p1t1"
+      "id": "ch5p1t1",
+      "content": "(A) eternal"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f6yu8ta"
+      "id": "f6yu8ta",
+      "content": "(B) short-lived"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tpinq5i"
+      "id": "tpinq5i",
+      "content": "(C) powerful"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "isdsj8k"
+      "id": "isdsj8k",
+      "content": "(D) colourful"
     },
     {
       "type": "paragraph",
-      "id": "zgpkc4q"
+      "id": "zgpkc4q",
+      "content": "60. Choose the correct sentence:"
     },
     {
       "type": "paragraph",
-      "id": "hhtvn7q"
+      "id": "hhtvn7q",
+      "content": "(A) The news are good."
     },
     {
       "type": "paragraph",
-      "id": "b9x23sa"
+      "id": "b9x23sa",
+      "content": "(B) The news is good."
     },
     {
       "type": "paragraph",
-      "id": "117r8df"
+      "id": "117r8df",
+      "content": "(C) The news were good."
     },
     {
       "type": "paragraph",
-      "id": "xgfsphu"
+      "id": "xgfsphu",
+      "content": "(D) The news have been good."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ogruph2"
+      "id": "ogruph2",
+      "content": "<strong>Synonyms &amp; Antonyms</strong>"
     },
     {
       "type": "paragraph",
-      "id": "gmhko3m"
+      "id": "gmhko3m",
+      "content": "61. Choose the synonym of 'Eloquent':"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jfut9h9"
+      "id": "jfut9h9",
+      "content": "(A) Silent"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mrvqx1r"
+      "id": "mrvqx1r",
+      "content": "(B) Fluent and expressive"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o2acz7m"
+      "id": "o2acz7m",
+      "content": "(C) Confused"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a1mov64"
+      "id": "a1mov64",
+      "content": "(D) Aggressive"
     },
     {
       "type": "paragraph",
-      "id": "60ph4fe"
+      "id": "60ph4fe",
+      "content": "62. Choose the antonym of 'Diligent':"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "099u8mt"
+      "id": "099u8mt",
+      "content": "(A) Hard-working"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "63fmyby"
+      "id": "63fmyby",
+      "content": "(B) Sincere"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zcow3cs"
+      "id": "zcow3cs",
+      "content": "(C) Lazy"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cu53fmx"
+      "id": "cu53fmx",
+      "content": "(D) Careful"
     },
     {
       "type": "paragraph",
-      "id": "fps2ku4"
+      "id": "fps2ku4",
+      "content": "63. Choose the synonym of 'Mitigate':"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "v1mr97y"
+      "id": "v1mr97y",
+      "content": "(A) Intensify"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "t3isagu"
+      "id": "t3isagu",
+      "content": "(B) Alleviate"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "awcte4w"
+      "id": "awcte4w",
+      "content": "(C) Aggravate"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4dmiq7a"
+      "id": "4dmiq7a",
+      "content": "(D) Provoke"
     },
     {
       "type": "paragraph",
-      "id": "lvlb039"
+      "id": "lvlb039",
+      "content": "64. Choose the antonym of 'Transparent':"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hk5wn9k"
+      "id": "hk5wn9k",
+      "content": "(A) Clear"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "21n0tne"
+      "id": "21n0tne",
+      "content": "(B) Open"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "k0j5thw"
+      "id": "k0j5thw",
+      "content": "(C) Opaque"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l7azd13"
+      "id": "l7azd13",
+      "content": "(D) Honest"
     },
     {
       "type": "paragraph",
-      "id": "8l4ypdl"
+      "id": "8l4ypdl",
+      "content": "65. Choose the synonym of 'Pragmatic':"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kzlciqq"
+      "id": "kzlciqq",
+      "content": "(A) Idealistic"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "u25mx0j"
+      "id": "u25mx0j",
+      "content": "(B) Theoretical"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "t03ribe"
+      "id": "t03ribe",
+      "content": "(C) Practical"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7mjrr2q"
+      "id": "7mjrr2q",
+      "content": "(D) Visionary"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o1o81kb"
+      "id": "o1o81kb",
+      "content": "<strong>Idioms, Phrases &amp; One-word Substitution</strong>"
     },
     {
       "type": "paragraph",
-      "id": "zocu98s"
+      "id": "zocu98s",
+      "content": "66. 'Burning the midnight oil' means:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4zugdku"
+      "id": "4zugdku",
+      "content": "(A) Setting fire to oil"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8m1m6fq"
+      "id": "8m1m6fq",
+      "content": "(B) Wasting energy"
     },
     {
       "type": "paragraph",
-      "id": "blmvj2b"
+      "id": "blmvj2b",
+      "content": "(C) Working late into the night"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cb4tl38"
+      "id": "cb4tl38",
+      "content": "(D) Cooking at midnight"
     },
     {
       "type": "paragraph",
-      "id": "ak64yu4"
+      "id": "ak64yu4",
+      "content": "67. One who knows many languages is called:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cy84quu"
+      "id": "cy84quu",
+      "content": "(A) Linguist"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y40yf55"
+      "id": "y40yf55",
+      "content": "(B) Polyglot"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ff5kmyu"
+      "id": "ff5kmyu",
+      "content": "(C) Bilingual"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rvnh4x5"
+      "id": "rvnh4x5",
+      "content": "(D) Translator"
     },
     {
       "type": "paragraph",
-      "id": "rwug3hy"
+      "id": "rwug3hy",
+      "content": "68. 'A blessing in disguise' means:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "abwevhg"
+      "id": "abwevhg",
+      "content": "(A) A hidden curse"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9el32x9"
+      "id": "9el32x9",
+      "content": "(B) An indirect benefit"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gneenpn"
+      "id": "gneenpn",
+      "content": "(C) A false promise"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "unmhl28"
+      "id": "unmhl28",
+      "content": "(D) An unexpected problem"
     },
     {
       "type": "paragraph",
-      "id": "hec76pm"
+      "id": "hec76pm",
+      "content": "69. One who eats human flesh is called:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kd89kp2"
+      "id": "kd89kp2",
+      "content": "(A) Cannibal"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tngc67s"
+      "id": "tngc67s",
+      "content": "(B) Carnivore"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fm2m8dq"
+      "id": "fm2m8dq",
+      "content": "(C) Omnivore"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e4qmlxk"
+      "id": "e4qmlxk",
+      "content": "(D) Herbivore"
     },
     {
       "type": "paragraph",
-      "id": "042xdhv"
+      "id": "042xdhv",
+      "content": "70. 'Let the cat out of the bag' means:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ll7d25f"
+      "id": "ll7d25f",
+      "content": "(A) Release an animal"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a89dgl2"
+      "id": "a89dgl2",
+      "content": "(B) Reveal a secret"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fcn85wn"
+      "id": "fcn85wn",
+      "content": "(C) Create confusion"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gd5hg0d"
+      "id": "gd5hg0d",
+      "content": "(D) Solve a problem"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "h1p4j9f"
+      "id": "h1p4j9f",
+      "content": "<strong>Reading Comprehension</strong>"
     },
     {
       "type": "paragraph",
-      "id": "fykpyxp"
+      "id": "fykpyxp",
+      "content": "Read the following passage and answer the questions:"
     },
     {
       "type": "paragraph",
-      "id": "gxz2i5h"
+      "id": "gxz2i5h",
+      "content": "Democracy is not just a system of government : it is a way of life. The strength of a democracy lies not merely in its institutions but in the quality of its citizens. An informed and engaged citizenry is the bedrock of any thriving democracy. When citizens stop participating, stop questioning and stop holding their leaders accountable, democracy begins to hollow out from within. History has repeatedly shown that the greatest threat to democracy comes not from external enemies but from within : from complacency, indifference and the silent surrender of rights. Therefore, active citizenship : voting, debating, protesting, volunteering : is not an option for a democracy; it is its oxygen."
     },
     {
       "type": "paragraph",
-      "id": "147y7bw"
+      "id": "147y7bw",
+      "content": "71. According to the passage, what is the greatest threat to democracy?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qhhghls"
+      "id": "qhhghls",
+      "content": "(A) External enemies"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x4uao8a"
+      "id": "x4uao8a",
+      "content": "(B) Poverty"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "u4gaod6"
+      "id": "u4gaod6",
+      "content": "(C) Internal complacency and indifference"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mxwbk8j"
+      "id": "mxwbk8j",
+      "content": "(D) Strong leadership"
     },
     {
       "type": "paragraph",
-      "id": "tx7lx0a"
+      "id": "tx7lx0a",
+      "content": "72. What does the author describe as the 'oxygen' of democracy?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nhqx0lj"
+      "id": "nhqx0lj",
+      "content": "(A) Freedom of speech"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yuyw4l3"
+      "id": "yuyw4l3",
+      "content": "(B) Active citizenship"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jl4v35i"
+      "id": "jl4v35i",
+      "content": "(C) Strong institutions"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "votz3zp"
+      "id": "votz3zp",
+      "content": "(D) Free press"
     },
     {
       "type": "paragraph",
-      "id": "9j94z5n"
+      "id": "9j94z5n",
+      "content": "73. What does 'hollow out from within' mean in the passage?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vsmhzbq"
+      "id": "vsmhzbq",
+      "content": "(A) To build from inside"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j9bxal5"
+      "id": "j9bxal5",
+      "content": "(B) To become weak internally"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rf8rtc3"
+      "id": "rf8rtc3",
+      "content": "(C) To expand rapidly"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "chrsgjf"
+      "id": "chrsgjf",
+      "content": "(D) To reform completely"
     },
     {
       "type": "paragraph",
-      "id": "ho1x47z"
+      "id": "ho1x47z",
+      "content": "74. Which of the following best reflects the main idea of the passage?"
     },
     {
       "type": "paragraph",
-      "id": "auyz6bq"
+      "id": "auyz6bq",
+      "content": "(A) Democracy needs external support."
     },
     {
       "type": "paragraph",
-      "id": "92po94g"
+      "id": "92po94g",
+      "content": "(B) Citizens are responsible for democracy's health."
     },
     {
       "type": "paragraph",
-      "id": "en1solh"
+      "id": "en1solh",
+      "content": "(C) Voting is the only democratic duty."
     },
     {
       "type": "paragraph",
-      "id": "6ub2949"
+      "id": "6ub2949",
+      "content": "(D) Democracy is perfect as it is."
     },
     {
       "type": "paragraph",
-      "id": "zo8uy4j"
+      "id": "zo8uy4j",
+      "content": "75. Find the word in the passage that means 'foundation' or 'base':"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wle0lyj"
+      "id": "wle0lyj",
+      "content": "(A) Bedrock"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4yreqtt"
+      "id": "4yreqtt",
+      "content": "(B) Citizenry"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1zvat8c"
+      "id": "1zvat8c",
+      "content": "(C) Complacency"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lz8fwp9"
+      "id": "lz8fwp9",
+      "content": "(D) Indifference"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "06unxht"
+      "id": "06unxht",
+      "content": "<strong>Para Jumbles &amp; Sentence Correction</strong>"
     },
     {
       "type": "paragraph",
-      "id": "oemtd11"
+      "id": "oemtd11",
+      "content": "76. Arrange the sentences in the correct order: A. He was finally arrested by the police. B. The thief broke into the house at night. C. A neighbour saw him and raised an alarm. D. He grabbed valuables and tried to escape."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fxwm2fo"
+      "id": "fxwm2fo",
+      "content": "(A) B-D-C-A"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j80wf2f"
+      "id": "j80wf2f",
+      "content": "(B) A-B-C-D"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0cfkrpn"
+      "id": "0cfkrpn",
+      "content": "(C) C-D-B-A"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l7hbmgr"
+      "id": "l7hbmgr",
+      "content": "(D) D-A-B-C"
     },
     {
       "type": "paragraph",
-      "id": "xxa5nu3"
+      "id": "xxa5nu3",
+      "content": "77. Choose the correctly spelt word:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9t9wf2u"
+      "id": "9t9wf2u",
+      "content": "(A) Accomodation"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d6zhvrz"
+      "id": "d6zhvrz",
+      "content": "(B) Accommodation"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vbwh1i4"
+      "id": "vbwh1i4",
+      "content": "(C) Accomodation"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cakga3c"
+      "id": "cakga3c",
+      "content": "(D) Accomadation"
     },
     {
       "type": "paragraph",
-      "id": "2rid6dm"
+      "id": "2rid6dm",
+      "content": "78. Identify the correct sentence:"
     },
     {
       "type": "paragraph",
-      "id": "m5208yt"
+      "id": "m5208yt",
+      "content": "(A) Neither he nor I are wrong."
     },
     {
       "type": "paragraph",
-      "id": "al3wfiy"
+      "id": "al3wfiy",
+      "content": "(B) Neither he nor I am wrong."
     },
     {
       "type": "paragraph",
-      "id": "f6rar9v"
+      "id": "f6rar9v",
+      "content": "(C) Neither he nor I is wrong."
     },
     {
       "type": "paragraph",
-      "id": "rdzbm6c"
+      "id": "rdzbm6c",
+      "content": "(D) Neither he nor me am wrong."
     },
     {
       "type": "paragraph",
-      "id": "3autoi3"
+      "id": "3autoi3",
+      "content": "79. Choose the correct sentence:"
     },
     {
       "type": "paragraph",
-      "id": "5194c32"
+      "id": "5194c32",
+      "content": "(A) He is more taller than his brother."
     },
     {
       "type": "paragraph",
-      "id": "u1gms2f"
+      "id": "u1gms2f",
+      "content": "(B) He is taller than his brother."
     },
     {
       "type": "paragraph",
-      "id": "9gvgt1j"
+      "id": "9gvgt1j",
+      "content": "(C) He is most taller than his brother."
     },
     {
       "type": "paragraph",
-      "id": "xw1p22c"
+      "id": "xw1p22c",
+      "content": "(D) He is tall than his brother."
     },
     {
       "type": "paragraph",
-      "id": "c1v96do"
+      "id": "c1v96do",
+      "content": "80. One who walks in sleep is called:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ishn2j8"
+      "id": "ishn2j8",
+      "content": "(A) Somnambulist"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ht76e90"
+      "id": "ht76e90",
+      "content": "(B) Insomniac"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e2dlb6o"
+      "id": "e2dlb6o",
+      "content": "(C) Narcoleptic"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pdfp4r0"
+      "id": "pdfp4r0",
+      "content": "(D) Somnolent"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jk2mokh"
+      "id": "jk2mokh",
+      "content": "<strong>Translation Awareness (English)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "9yvoj14"
+      "id": "9yvoj14",
+      "content": "81. The correct English translation of 'मुझे घर जाना है' is:"
     },
     {
       "type": "paragraph",
-      "id": "i0ahvxq"
+      "id": "i0ahvxq",
+      "content": "(A) I am going home."
     },
     {
       "type": "paragraph",
-      "id": "lknfizb"
+      "id": "lknfizb",
+      "content": "(B) I want to go home."
     },
     {
       "type": "paragraph",
-      "id": "u0k48qv"
+      "id": "u0k48qv",
+      "content": "(C) I have to go home."
     },
     {
       "type": "paragraph",
-      "id": "xcbio15"
+      "id": "xcbio15",
+      "content": "(D) I will go home."
     },
     {
       "type": "paragraph",
-      "id": "tq8p6pe"
+      "id": "tq8p6pe",
+      "content": "82. The correct English translation of 'कहा जाता है कि ईमानदारी सबसे अच्छी नीति है' is:"
     },
     {
       "type": "paragraph",
-      "id": "d4mf4g6"
+      "id": "d4mf4g6",
+      "content": "(A) We say that honesty is the best policy."
     },
     {
       "type": "paragraph",
-      "id": "4w3xrbx"
+      "id": "4w3xrbx",
+      "content": "(B) It is said that honesty is the best policy."
     },
     {
       "type": "paragraph",
-      "id": "5hwgy4p"
+      "id": "5hwgy4p",
+      "content": "(C) People say honesty is good."
     },
     {
       "type": "paragraph",
-      "id": "crq09hm"
+      "id": "crq09hm",
+      "content": "(D) I think honesty is good."
     },
     {
       "type": "paragraph",
-      "id": "7qgrp71"
+      "id": "7qgrp71",
+      "content": "83. The correct English translation of 'यद्यपि वह थका था, फिर भी उसने काम किया' is:"
     },
     {
       "type": "paragraph",
-      "id": "4kjqsa1"
+      "id": "4kjqsa1",
+      "content": "(A) Because he was tired, he worked."
     },
     {
       "type": "paragraph",
-      "id": "z7mqx3i"
+      "id": "z7mqx3i",
+      "content": "(B) Although he was tired, he worked."
     },
     {
       "type": "paragraph",
-      "id": "whmwxtc"
+      "id": "whmwxtc",
+      "content": "(C) Since he was tired, he worked."
     },
     {
       "type": "paragraph",
-      "id": "gcwew7f"
+      "id": "gcwew7f",
+      "content": "(D) As he was tired, he worked."
     },
     {
       "type": "paragraph",
-      "id": "krcotrx"
+      "id": "krcotrx",
+      "content": "84. 'जितना पढ़ोगे उतना जानोगे' is correctly translated as:"
     },
     {
       "type": "paragraph",
-      "id": "21k4i7e"
+      "id": "21k4i7e",
+      "content": "(A) If you read you will know."
     },
     {
       "type": "paragraph",
-      "id": "652phsx"
+      "id": "652phsx",
+      "content": "(B) Reading leads to knowledge."
     },
     {
       "type": "paragraph",
-      "id": "u5rao96"
+      "id": "u5rao96",
+      "content": "(C) The more you read, the more you know."
     },
     {
       "type": "paragraph",
-      "id": "vyy16ym"
+      "id": "vyy16ym",
+      "content": "(D) You should read to gain knowledge."
     },
     {
       "type": "paragraph",
-      "id": "g1k73ci"
+      "id": "g1k73ci",
+      "content": "85. Which is the correct translation of 'India has launched a new scheme for farmers'?"
     },
     {
       "type": "paragraph",
-      "id": "ijuf0t3"
+      "id": "ijuf0t3",
+      "content": "(A) भारत के किसान एक नई योजना लाए।"
     },
     {
       "type": "paragraph",
-      "id": "rtmtr9z"
+      "id": "rtmtr9z",
+      "content": "(B) भारत सरकार ने किसानों के लिए एक नई योजना शुरू की है।"
     },
     {
       "type": "paragraph",
-      "id": "ymfr39j"
+      "id": "ymfr39j",
+      "content": "(C) भारत में किसानों ने एक नई योजना बनाई।"
     },
     {
       "type": "paragraph",
-      "id": "n24diw5"
+      "id": "n24diw5",
+      "content": "(D) भारत में किसानों की एक नई योजना है।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5uszu5e"
+      "id": "5uszu5e",
+      "content": "<strong>Miscellaneous : English</strong>"
     },
     {
       "type": "paragraph",
-      "id": "04n4al0"
+      "id": "04n4al0",
+      "content": "86. The synonym of 'Tenacious' is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l8kcxou"
+      "id": "l8kcxou",
+      "content": "(A) Weak"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hoak9rj"
+      "id": "hoak9rj",
+      "content": "(B) Persistent"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wa9k4mc"
+      "id": "wa9k4mc",
+      "content": "(C) Flexible"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rsrjx4m"
+      "id": "rsrjx4m",
+      "content": "(D) Careless"
     },
     {
       "type": "paragraph",
-      "id": "mr6apnr"
+      "id": "mr6apnr",
+      "content": "87. Fear of closed spaces is called:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "j54cw4s"
+      "id": "j54cw4s",
+      "content": "(A) Acrophobia"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "k6yo5hm"
+      "id": "k6yo5hm",
+      "content": "(B) Hydrophobia"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bo8fc0y"
+      "id": "bo8fc0y",
+      "content": "(C) Claustrophobia"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fov6f56"
+      "id": "fov6f56",
+      "content": "(D) Agoraphobia"
     },
     {
       "type": "paragraph",
-      "id": "zpmjl5b"
+      "id": "zpmjl5b",
+      "content": "88. 'Murder of one's own mother' is called:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qfjwcdz"
+      "id": "qfjwcdz",
+      "content": "(A) Patricide"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7z18nye"
+      "id": "7z18nye",
+      "content": "(B) Matricide"
     },
     {
       "type": "examAlert",
@@ -2232,286 +2687,348 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "790bnug"
+      "id": "790bnug",
+      "content": "(C) Fratricide"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5v8r7gi"
+      "id": "5v8r7gi",
+      "content": "(D) Homicide"
     },
     {
       "type": "paragraph",
-      "id": "iy5f1h7"
+      "id": "iy5f1h7",
+      "content": "89. Choose the correct preposition: 'He is angry _____ me.'"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6mge21t"
+      "id": "6mge21t",
+      "content": "(A) on"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bu6fjzz"
+      "id": "bu6fjzz",
+      "content": "(B) at"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gom7qzk"
+      "id": "gom7qzk",
+      "content": "(C) with"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "14g6yet"
+      "id": "14g6yet",
+      "content": "(D) against"
     },
     {
       "type": "paragraph",
-      "id": "a9icyux"
+      "id": "a9icyux",
+      "content": "90. The antonym of 'Verbose' is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bblnfdm"
+      "id": "bblnfdm",
+      "content": "(A) Talkative"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ithif9y"
+      "id": "ithif9y",
+      "content": "(B) Garrulous"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "t0nk0sj"
+      "id": "t0nk0sj",
+      "content": "(C) Concise"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "khhz6zp"
+      "id": "khhz6zp",
+      "content": "(D) Eloquent"
     },
     {
       "type": "paragraph",
-      "id": "7vh9ngf"
+      "id": "7vh9ngf",
+      "content": "91. Choose the correct sentence:"
     },
     {
       "type": "paragraph",
-      "id": "wnqj2hv"
+      "id": "wnqj2hv",
+      "content": "(A) She plays violin beautifully."
     },
     {
       "type": "paragraph",
-      "id": "69p6i1u"
+      "id": "69p6i1u",
+      "content": "(B) She plays the violin beautifully."
     },
     {
       "type": "paragraph",
-      "id": "s8zkkio"
+      "id": "s8zkkio",
+      "content": "(C) She plays a violin beautifully."
     },
     {
       "type": "paragraph",
-      "id": "0aofsfb"
+      "id": "0aofsfb",
+      "content": "(D) She plays an violin beautifully."
     },
     {
       "type": "paragraph",
-      "id": "fwvwjtu"
+      "id": "fwvwjtu",
+      "content": "92. 'A storm in a teacup' means:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "u734cru"
+      "id": "u734cru",
+      "content": "(A) A serious disaster"
     },
     {
       "type": "paragraph",
-      "id": "i838usj"
+      "id": "i838usj",
+      "content": "(B) A small problem made big"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "k9abkot"
+      "id": "k9abkot",
+      "content": "(C) A heavy storm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ls7otdv"
+      "id": "ls7otdv",
+      "content": "(D) Boiling water"
     },
     {
       "type": "paragraph",
-      "id": "cemtx7q"
+      "id": "cemtx7q",
+      "content": "93. The word 'Impede' means:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "44mbm7e"
+      "id": "44mbm7e",
+      "content": "(A) Assist"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "270inzv"
+      "id": "270inzv",
+      "content": "(B) Encourage"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6svt8rh"
+      "id": "6svt8rh",
+      "content": "(C) Obstruct"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "sisuang"
+      "id": "sisuang",
+      "content": "(D) Accelerate"
     },
     {
       "type": "paragraph",
-      "id": "e1qcyo2"
+      "id": "e1qcyo2",
+      "content": "94. Choose the correctly punctuated sentence:"
     },
     {
       "type": "paragraph",
-      "id": "y0aouxc"
+      "id": "y0aouxc",
+      "content": "(A) She said I am tired"
     },
     {
       "type": "paragraph",
-      "id": "sv7iprk"
+      "id": "sv7iprk",
+      "content": "(B) She said, \"I am tired.\""
     },
     {
       "type": "paragraph",
-      "id": "6ycnk1k"
+      "id": "6ycnk1k",
+      "content": "(C) She said; I am tired."
     },
     {
       "type": "paragraph",
-      "id": "vzsbmgx"
+      "id": "vzsbmgx",
+      "content": "(D) She said: I am tired."
     },
     {
       "type": "paragraph",
-      "id": "l5d4rfo"
+      "id": "l5d4rfo",
+      "content": "95. One who studies the stars is called:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3u4kl9g"
+      "id": "3u4kl9g",
+      "content": "(A) Astrologer"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hvkzj69"
+      "id": "hvkzj69",
+      "content": "(B) Astronomer"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "adjsv47"
+      "id": "adjsv47",
+      "content": "(C) Geologist"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4htzsdl"
+      "id": "4htzsdl",
+      "content": "(D) Meteorologist"
     },
     {
       "type": "paragraph",
-      "id": "1m1wbvx"
+      "id": "1m1wbvx",
+      "content": "96. Choose the correct form: 'The teacher, along with students, _____ present.'"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7c0mqwp"
+      "id": "7c0mqwp",
+      "content": "(A) are"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zf2h5oj"
+      "id": "zf2h5oj",
+      "content": "(B) were"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f24ldeb"
+      "id": "f24ldeb",
+      "content": "(C) is"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ww3a445"
+      "id": "ww3a445",
+      "content": "(D) have been"
     },
     {
       "type": "paragraph",
-      "id": "h3ebqoi"
+      "id": "h3ebqoi",
+      "content": "97. 'Ubiquitous' means:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9g7j9ba"
+      "id": "9g7j9ba",
+      "content": "(A) Rare"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2hz85ox"
+      "id": "2hz85ox",
+      "content": "(B) Absent"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "b3mi5y7"
+      "id": "b3mi5y7",
+      "content": "(C) Present everywhere"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ukjt0df"
+      "id": "ukjt0df",
+      "content": "(D) Ancient"
     },
     {
       "type": "paragraph",
-      "id": "zgr35dl"
+      "id": "zgr35dl",
+      "content": "98. The antonym of 'Benevolent' is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1ony41u"
+      "id": "1ony41u",
+      "content": "(A) Generous"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5p0g1p5"
+      "id": "5p0g1p5",
+      "content": "(B) Kind"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4thq77g"
+      "id": "4thq77g",
+      "content": "(C) Malevolent"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fjkxfn9"
+      "id": "fjkxfn9",
+      "content": "(D) Charitable"
     },
     {
       "type": "paragraph",
-      "id": "ey07ncl"
+      "id": "ey07ncl",
+      "content": "99. 'Put all eggs in one basket' means:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hllvggv"
+      "id": "hllvggv",
+      "content": "(A) To be careful"
     },
     {
       "type": "paragraph",
-      "id": "a3od25d"
+      "id": "a3od25d",
+      "content": "(B) To risk everything on one chance"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4a389kk"
+      "id": "4a389kk",
+      "content": "(C) To diversify investments"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "n3gyzek"
+      "id": "n3gyzek",
+      "content": "(D) To work hard"
     },
     {
       "type": "paragraph",
-      "id": "r47f8sa"
+      "id": "r47f8sa",
+      "content": "100. Choose the correct sentence:"
     },
     {
       "type": "paragraph",
-      "id": "hc67sn5"
+      "id": "hc67sn5",
+      "content": "(A) Neither Ram nor Shyam have come."
     },
     {
       "type": "paragraph",
-      "id": "dkz7xac"
+      "id": "dkz7xac",
+      "content": "(B) Neither Ram nor Shyam has come."
     },
     {
       "type": "paragraph",
-      "id": "is2w63s"
+      "id": "is2w63s",
+      "content": "(C) Neither Ram nor Shyam are come."
     },
     {
       "type": "paragraph",
-      "id": "ujl9cl9"
+      "id": "ujl9cl9",
+      "content": "(D) Neither Ram nor Shyam were come."
     },
     {
       "id": "c644eug",
@@ -2526,388 +3043,401 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>प्र.</strong></p>",
+            "<p><strong>उत्तर</strong></p>",
+            "<p><strong>प्र.</strong></p>",
+            "<p><strong>उत्तर</strong></p>",
+            "<p><strong>प्र.</strong></p>",
+            "<p><strong>उत्तर</strong></p>",
+            "<p><strong>प्र.</strong></p>",
+            "<p><strong>उत्तर</strong></p>",
+            "<p><strong>प्र.</strong></p>",
+            "<p><strong>उत्तर</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>1</p>",
+            "<p>C</p>",
+            "<p>2</p>",
+            "<p>B</p>",
+            "<p>3</p>",
+            "<p>C</p>",
+            "<p>4</p>",
+            "<p>A</p>",
+            "<p>5</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>6</p>",
+            "<p>C</p>",
+            "<p>7</p>",
+            "<p>B</p>",
+            "<p>8</p>",
+            "<p>B</p>",
+            "<p>9</p>",
+            "<p>B</p>",
+            "<p>10</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>11</p>",
+            "<p>B</p>",
+            "<p>12</p>",
+            "<p>B</p>",
+            "<p>13</p>",
+            "<p>C</p>",
+            "<p>14</p>",
+            "<p>B</p>",
+            "<p>15</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>16</p>",
+            "<p>D</p>",
+            "<p>17</p>",
+            "<p>B</p>",
+            "<p>18</p>",
+            "<p>A</p>",
+            "<p>19</p>",
+            "<p>C</p>",
+            "<p>20</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>21</p>",
+            "<p>C</p>",
+            "<p>22</p>",
+            "<p>B</p>",
+            "<p>23</p>",
+            "<p>C</p>",
+            "<p>24</p>",
+            "<p>B</p>",
+            "<p>25</p>",
+            "<p>C</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>26</p>",
+            "<p>B</p>",
+            "<p>27</p>",
+            "<p>B</p>",
+            "<p>28</p>",
+            "<p>C</p>",
+            "<p>29</p>",
+            "<p>A</p>",
+            "<p>30</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>31</p>",
+            "<p>B</p>",
+            "<p>32</p>",
+            "<p>C</p>",
+            "<p>33</p>",
+            "<p>B</p>",
+            "<p>34</p>",
+            "<p>B</p>",
+            "<p>35</p>",
+            "<p>C</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>36</p>",
+            "<p>C</p>",
+            "<p>37</p>",
+            "<p>B</p>",
+            "<p>38</p>",
+            "<p>C</p>",
+            "<p>39</p>",
+            "<p>A</p>",
+            "<p>40</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>41</p>",
+            "<p>C</p>",
+            "<p>42</p>",
+            "<p>C</p>",
+            "<p>43</p>",
+            "<p>B</p>",
+            "<p>44</p>",
+            "<p>C</p>",
+            "<p>45</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>46</p>",
+            "<p>B</p>",
+            "<p>47</p>",
+            "<p>B</p>",
+            "<p>48</p>",
+            "<p>B</p>",
+            "<p>49</p>",
+            "<p>B</p>",
+            "<p>50</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>51</p>",
+            "<p>B</p>",
+            "<p>52</p>",
+            "<p>B</p>",
+            "<p>53</p>",
+            "<p>B</p>",
+            "<p>54</p>",
+            "<p>C</p>",
+            "<p>55</p>",
+            "<p>C</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>56</p>",
+            "<p>B</p>",
+            "<p>57</p>",
+            "<p>C</p>",
+            "<p>58</p>",
+            "<p>C</p>",
+            "<p>59</p>",
+            "<p>B</p>",
+            "<p>60</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>61</p>",
+            "<p>B</p>",
+            "<p>62</p>",
+            "<p>C</p>",
+            "<p>63</p>",
+            "<p>B</p>",
+            "<p>64</p>",
+            "<p>C</p>",
+            "<p>65</p>",
+            "<p>C</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>66</p>",
+            "<p>C</p>",
+            "<p>67</p>",
+            "<p>B</p>",
+            "<p>68</p>",
+            "<p>B</p>",
+            "<p>69</p>",
+            "<p>A</p>",
+            "<p>70</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>71</p>",
+            "<p>C</p>",
+            "<p>72</p>",
+            "<p>B</p>",
+            "<p>73</p>",
+            "<p>B</p>",
+            "<p>74</p>",
+            "<p>B</p>",
+            "<p>75</p>",
+            "<p>A</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>76</p>",
+            "<p>A</p>",
+            "<p>77</p>",
+            "<p>B</p>",
+            "<p>78</p>",
+            "<p>B</p>",
+            "<p>79</p>",
+            "<p>B</p>",
+            "<p>80</p>",
+            "<p>A</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>81</p>",
+            "<p>C</p>",
+            "<p>82</p>",
+            "<p>B</p>",
+            "<p>83</p>",
+            "<p>B</p>",
+            "<p>84</p>",
+            "<p>C</p>",
+            "<p>85</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>86</p>",
+            "<p>B</p>",
+            "<p>87</p>",
+            "<p>C</p>",
+            "<p>88</p>",
+            "<p>B</p>",
+            "<p>89</p>",
+            "<p>C</p>",
+            "<p>90</p>",
+            "<p>C</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>91</p>",
+            "<p>B</p>",
+            "<p>92</p>",
+            "<p>B</p>",
+            "<p>93</p>",
+            "<p>C</p>",
+            "<p>94</p>",
+            "<p>B</p>",
+            "<p>95</p>",
+            "<p>B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>96</p>",
+            "<p>C</p>",
+            "<p>97</p>",
+            "<p>C</p>",
+            "<p>98</p>",
+            "<p>C</p>",
+            "<p>99</p>",
+            "<p>B</p>",
+            "<p>100</p>",
+            "<p>B</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "jf37ak9"
+      "id": "jf37ak9",
+      "content": "<strong>अभ्यास परीक्षा 1 : Paper 2 (Descriptive)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "enjacla"
+      "id": "enjacla",
+      "content": "कुल समय: 2 घंटे  |  कुल अंक: 200  |  नकारात्मक अंकन: कोई नहीं"
     },
     {
       "type": "paragraph",
-      "id": "js0lnt6"
+      "id": "js0lnt6",
+      "content": "निर्देश: सभी चार प्रश्न अनिवार्य हैं। अनुवाद स्पष्ट, सटीक और प्रवाहमान भाषा में करें। निबंध 300-350 शब्दों का हो।"
     },
     {
       "type": "paragraph",
-      "id": "zq7hph2"
+      "id": "zq7hph2",
+      "content": "<strong>प्रश्न 1 : हिंदी से अंग्रेज़ी अनुवाद  (50 अंक)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "4wj9pjf"
+      "id": "4wj9pjf",
+      "content": "निम्नलिखित गद्यांश का अंग्रेज़ी में अनुवाद कीजिए:"
     },
     {
       "type": "paragraph",
-      "id": "9vn2kk5"
+      "id": "9vn2kk5",
+      "content": "भारत विविधताओं में एकता का अद्भुत उदाहरण है। यहाँ सैकड़ों भाषाएँ बोली जाती हैं, अनेक धर्मों के लोग एक साथ रहते हैं और विभिन्न संस्कृतियाँ मिल-जुलकर एक सुंदर सामाजिक ताना-बाना बनाती हैं। यही भारत की पहचान है और यही उसकी शक्ति भी। इतिहास गवाह है कि जब-जब भारत की एकता को चुनौती मिली, भारतीयों ने मिलकर उसका मुकाबला किया। आज जब विश्व संघर्ष और असहिष्णुता की आग में जल रहा है, भारत की 'वसुधैव कुटुंबकम्' की अवधारणा संपूर्ण मानवता के लिए एक प्रकाश-स्तंभ की तरह है।"
     },
     {
       "type": "paragraph",
-      "id": "qbe4ekv"
+      "id": "qbe4ekv",
+      "content": "<strong>प्रश्न 2 : अंग्रेज़ी से हिंदी अनुवाद  (50 अंक)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "q3djkeh"
+      "id": "q3djkeh",
+      "content": "Translate the following passage into Hindi:"
     },
     {
       "type": "paragraph",
-      "id": "4gd81as"
+      "id": "4gd81as",
+      "content": "The right to education is one of the most fundamental rights of every human being. It is through education that individuals are empowered to participate fully in the economic, social and political life of their country. Yet, despite significant progress in recent decades, millions of children around the world : particularly girls, children from marginalised communities and those living in conflict zones : remain out of school. Investing in education is therefore not merely a moral imperative but a strategic necessity for any nation that aspires to peace, prosperity and progress."
     },
     {
       "type": "paragraph",
-      "id": "p8szn5u"
+      "id": "p8szn5u",
+      "content": "<strong>प्रश्न 3 : हिंदी निबंध  (50 अंक)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "eg74jog"
+      "id": "eg74jog",
+      "content": "निम्नलिखित विषयों में से किसी एक पर लगभग 300-350 शब्दों में निबंध लिखिए:"
     },
     {
       "id": "wkwtbfx",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "(क) जलवायु परिवर्तन और भारत की ज़िम्मेदारी",
+        "(ख) युवा और राष्ट्र निर्माण",
+        "(ग) आत्मनिर्भर भारत: सपना और हकीकत"
       ]
     },
     {
       "type": "paragraph",
-      "id": "91783tj"
+      "id": "91783tj",
+      "content": "<strong>प्रश्न 4 : English Essay  (50 अंक)</strong>"
     },
     {
       "type": "paragraph",
-      "id": "u1ptnze"
+      "id": "u1ptnze",
+      "content": "Write an essay of approximately 300-350 words on any one of the following topics:"
     },
     {
       "id": "zr5hy9p",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "(a) The Role of Technology in Education",
+        "(b) Democracy and Press Freedom",
+        "(c) India's Rise as a Global Power"
       ]
     },
     {
@@ -2918,7 +3448,8 @@
     },
     {
       "type": "paragraph",
-      "id": "52w1zr6"
+      "id": "52w1zr6",
+      "content": "India is a remarkable example of unity in diversity. Here hundreds of languages are spoken, people of many religions live together, and various cultures blend to create a beautiful social fabric. This is India's identity and also its strength. History bears witness to the fact that whenever India's unity was challenged, Indians stood together to face it. Today, when the world is engulfed in conflict and intolerance, India's concept of 'Vasudhaiva Kutumbakam' : the world is one family : serves as a beacon of light for the entire humanity."
     },
     {
       "id": "1vrhspo",
@@ -2928,7 +3459,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xdf3pa2"
+      "id": "xdf3pa2",
+      "content": "शिक्षा का अधिकार प्रत्येक मनुष्य के सबसे मूलभूत अधिकारों में से एक है। शिक्षा के माध्यम से ही व्यक्ति अपने देश के आर्थिक, सामाजिक और राजनीतिक जीवन में पूरी तरह भागीदारी करने में सक्षम होता है। फिर भी, पिछले दशकों में हुई उल्लेखनीय प्रगति के बावजूद, विश्व भर में लाखों बच्चे : विशेषकर लड़कियाँ, हाशिए पर रहने वाले समुदायों के बच्चे और संघर्ष क्षेत्रों में रहने वाले बच्चे : अभी भी स्कूल से बाहर हैं। इसलिए शिक्षा में निवेश करना न केवल एक नैतिक अनिवार्यता है बल्कि उस किसी भी राष्ट्र के लिए एक रणनीतिक आवश्यकता भी है जो शांति, समृद्धि और प्रगति की आकांक्षा रखता है।"
     }
   ],
   "enriched": true

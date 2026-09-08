@@ -49,15 +49,18 @@
     },
     {
       "type": "paragraph",
-      "id": "wkh4kms"
+      "id": "wkh4kms",
+      "content": "The Reserve Bank of India (RBI) is the central bank of India. It was established on 1 April 1935 under the RBI Act, 1934."
     },
     {
       "type": "paragraph",
-      "id": "ydukh2l"
+      "id": "ydukh2l",
+      "content": "It was nationalised on 1 January 1949."
     },
     {
       "type": "paragraph",
-      "id": "l80ea4h"
+      "id": "l80ea4h",
+      "content": "Headquarters: Mumbai<br></br>First Governor: Sir Osborne Smith<br></br>RBI represents India in IMF and World Bank."
     },
     {
       "id": "5305yhh",
@@ -66,49 +69,55 @@
       "content": "2. ORGANISATIONAL STRUCTURE"
     },
     {
+      "id": "t9pir9a",
+      "type": "image",
+      "imageId": "pa8493b",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_pa8493b.jpeg"
+    },
+    {
       "id": "zupm4nh",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Governor</p>",
+            "<p>Head of RBI</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deputy Governors</p>",
+            "<p>4 Deputy Governors</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Central Board</p>",
+            "<p>Includes directors &amp; finance ministry representatives</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Zonal Offices</p>",
+            "<p>North, South, East, West</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ownership</p>",
+            "<p>Wholly owned by Government of India</p>"
           ]
         }
       ]
@@ -122,47 +131,57 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "6x9q4f4"
+      "id": "6x9q4f4",
+      "content": "A. Monetary Authority"
     },
     {
       "type": "paragraph",
-      "id": "j9eawp2"
+      "id": "j9eawp2",
+      "content": "• Controls money supply<br></br>• Controls inflation<br></br>• Maintains financial stability"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kzo7mf6"
+      "id": "kzo7mf6",
+      "content": "B. Issuer of Currency"
     },
     {
       "type": "paragraph",
-      "id": "ibrlivq"
+      "id": "ibrlivq",
+      "content": "• Sole authority to issue currency notes (except ₹1 note &amp; coins issued by Ministry of Finance)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qi0283z"
+      "id": "qi0283z",
+      "content": "C. Banker to Government"
     },
     {
       "type": "paragraph",
-      "id": "2hxhago"
+      "id": "2hxhago",
+      "content": "• Manages government accounts<br></br>• Manages public debt"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nbe5yzm"
+      "id": "nbe5yzm",
+      "content": "D. Banker’s Bank"
     },
     {
       "type": "paragraph",
-      "id": "2oharbe"
+      "id": "2oharbe",
+      "content": "• Provides loans to commercial banks<br></br>• Maintains CRR of banks"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i4xg1pa"
+      "id": "i4xg1pa",
+      "content": "E. Custodian of Foreign Exchange"
     },
     {
       "type": "paragraph",
-      "id": "dodbi11"
+      "id": "dodbi11",
+      "content": "• Manages forex reserves<br></br>• Regulates exchange rate under FEMA, 1999"
     },
     {
       "id": "ni7gkw3",
@@ -177,57 +196,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Tool</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Repo Rate</p>",
+            "<p>Quantitative</p>",
+            "<p>Controls inflation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Reverse Repo Rate</p>",
+            "<p>Quantitative</p>",
+            "<p>Controls liquidity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CRR</p>",
+            "<p>Quantitative</p>",
+            "<p>Reserve requirement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SLR</p>",
+            "<p>Quantitative</p>",
+            "<p>Liquidity control</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bank Rate</p>",
+            "<p>Quantitative</p>",
+            "<p>Long-term lending rate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Open Market Operations</p>",
+            "<p>Quantitative</p>",
+            "<p>Buying/selling securities</p>"
           ]
         }
       ]
@@ -245,11 +264,13 @@
     },
     {
       "type": "paragraph",
-      "id": "ad9ctym"
+      "id": "ad9ctym",
+      "content": "MPC was formed in 2016 under RBI Act amendment. It has 6 members and decides policy repo rate."
     },
     {
       "type": "paragraph",
-      "id": "4giyvcr"
+      "id": "4giyvcr",
+      "content": "Objective: Maintain inflation target (4% ± 2%)."
     },
     {
       "id": "pxp3zxy",
@@ -259,11 +280,13 @@
     },
     {
       "type": "paragraph",
-      "id": "z8xvx51"
+      "id": "z8xvx51",
+      "content": "Quantitative Methods:<br></br>• Repo Rate<br></br>• CRR<br></br>• SLR<br></br>• Open Market Operations"
     },
     {
       "type": "paragraph",
-      "id": "y23xrz8"
+      "id": "y23xrz8",
+      "content": "Qualitative Methods:<br></br>• Moral suasion<br></br>• Selective credit control<br></br>• Rationing of credit"
     },
     {
       "id": "v09amrw",
@@ -273,15 +296,18 @@
     },
     {
       "type": "paragraph",
-      "id": "4zkqauo"
+      "id": "4zkqauo",
+      "content": "India adopted Flexible Inflation Targeting (FIT) in 2016 through amendment to RBI Act, 1934."
     },
     {
       "type": "paragraph",
-      "id": "f4ewauc"
+      "id": "f4ewauc",
+      "content": "Target: 4% CPI inflation with tolerance band of ±2% (i.e., 2% to 6%)."
     },
     {
       "type": "paragraph",
-      "id": "h8f5iy4"
+      "id": "h8f5iy4",
+      "content": "The Monetary Policy Committee (MPC) is responsible for maintaining this target."
     },
     {
       "id": "xj8l1ye",
@@ -290,29 +316,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Type</p>",
+            "<p>Flexible Inflation Targeting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Target</p>",
+            "<p>4% ± 2%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Authority</p>",
+            "<p>Monetary Policy Committee</p>"
           ]
         }
       ]
@@ -351,11 +377,13 @@
     },
     {
       "type": "paragraph",
-      "id": "cw3ek74"
+      "id": "cw3ek74",
+      "content": "LAF was introduced in 2000 to manage short-term liquidity in the banking system."
     },
     {
       "type": "paragraph",
-      "id": "93w3jnt"
+      "id": "93w3jnt",
+      "content": "It operates through Repo Rate and Reverse Repo Rate."
     },
     {
       "id": "6f5jq6k",
@@ -364,25 +392,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Instrument</strong></p>",
+            "<p><strong>Purpose</strong></p>",
+            "<p><strong>Impact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Repo Rate</p>",
+            "<p>RBI lends to banks</p>",
+            "<p>Controls inflation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Reverse Repo</p>",
+            "<p>Banks deposit money with RBI</p>",
+            "<p>Absorbs liquidity</p>"
           ]
         }
       ]
@@ -395,11 +423,13 @@
     },
     {
       "type": "paragraph",
-      "id": "0fqurmk"
+      "id": "0fqurmk",
+      "content": "MSF was introduced in 2011. It allows banks to borrow overnight funds from RBI against government securities beyond SLR limit."
     },
     {
       "type": "paragraph",
-      "id": "8fxcmcr"
+      "id": "8fxcmcr",
+      "content": "MSF rate is usually higher than Repo Rate."
     },
     {
       "id": "rmczhcd",
@@ -409,11 +439,13 @@
     },
     {
       "type": "paragraph",
-      "id": "1mmu3j3"
+      "id": "1mmu3j3",
+      "content": "Basel Norms are international banking regulations issued by Basel Committee on Banking Supervision (BCBS)."
     },
     {
       "type": "paragraph",
-      "id": "gem9vc6"
+      "id": "gem9vc6",
+      "content": "Objective: Strengthen bank capital adequacy and risk management."
     },
     {
       "id": "k3y47aj",
@@ -422,36 +454,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Basel Accord</strong></p>",
+            "<p><strong>Focus</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Basel I (1988)</p>",
+            "<p>Credit risk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Basel II</p>",
+            "<p>Risk management framework</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Basel III</p>",
+            "<p>Stronger capital &amp; liquidity norms</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "ae8aynw"
+      "id": "ae8aynw",
+      "content": "India follows Basel III norms."
     },
     {
       "id": "n5gr6d7",
@@ -461,11 +494,13 @@
     },
     {
       "type": "paragraph",
-      "id": "onbvabf"
+      "id": "onbvabf",
+      "content": "NBFCs provide banking-like services but do not have full banking license."
     },
     {
       "type": "paragraph",
-      "id": "spct1hz"
+      "id": "spct1hz",
+      "content": "They cannot accept demand deposits like commercial banks."
     },
     {
       "type": "examAlert",
@@ -478,7 +513,8 @@
     },
     {
       "type": "paragraph",
-      "id": "hif04fd"
+      "id": "hif04fd",
+      "content": "RBI regulates NBFCs under RBI Act, 1934."
     },
     {
       "id": "fjfm28g",
@@ -487,25 +523,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>NBFC</strong></p>",
+            "<p><strong>Bank</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Demand Deposits</p>",
+            "<p>Not Allowed</p>",
+            "<p>Allowed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Regulation</p>",
+            "<p>RBI</p>",
+            "<p>RBI</p>"
           ]
         }
       ]
@@ -518,19 +554,23 @@
     },
     {
       "type": "paragraph",
-      "id": "xk9p1d0"
+      "id": "xk9p1d0",
+      "content": "RBI promotes digital payment systems to ensure financial inclusion and reduce cash dependency."
     },
     {
       "type": "paragraph",
-      "id": "pwde0mv"
+      "id": "pwde0mv",
+      "content": "Key Systems: UPI, NEFT, RTGS, IMPS."
     },
     {
       "type": "paragraph",
-      "id": "gaikct6"
+      "id": "gaikct6",
+      "content": "RBI established NPCI to manage retail digital payment systems."
     },
     {
       "type": "paragraph",
-      "id": "4vpo0yu"
+      "id": "4vpo0yu",
+      "content": "Digital payments improve transparency, reduce black money, and enhance efficiency."
     },
     {
       "id": "3lmebuw",
@@ -540,7 +580,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tz25ofc"
+      "id": "tz25ofc",
+      "content": "• RBI established in 1935<br></br>• Nationalised in 1949<br></br>• Headquarter – Mumbai<br></br>• Repo Rate &gt; Reverse Repo Rate<br></br>• MPC decides policy rate<br></br>"
     }
   ],
   "enriched": true

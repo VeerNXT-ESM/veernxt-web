@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "1s8726p"
+      "id": "1s8726p",
+      "content": "The Motor Vehicles (Amendment) Act, 2019, significantly increased fines to deter reckless driving. Fines can be paid online through e-challan systems."
     },
     {
       "type": "statStrip",
@@ -27,11 +28,6 @@
         }
       ],
       "id": "c9l6tp9"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Fine Chart — Common Violations",
-      "id": "kn4x11n"
     },
     {
       "id": "h69wi6s",
@@ -64,162 +60,163 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Violation</strong></p>",
+            "<p><strong>Fine (Rs.)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Driving without licence</p>",
+            "<p>5,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Driving with disqualified/suspended licence</p>",
+            "<p>10,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Driving without registration (RC)</p>",
+            "<p>5,000 + vehicle may be seized</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Driving without valid insurance</p>",
+            "<p>2,000 (1st offence); 4,000 (repeat)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>No PUC (Pollution) Certificate</p>",
+            "<p>10,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Overspeeding — light vehicle</p>",
+            "<p>1,000–2,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Overspeeding — heavy vehicle</p>",
+            "<p>2,000–4,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Jumping red light</p>",
+            "<p>1,000–5,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dangerous / reckless driving</p>",
+            "<p>1,000–5,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Not wearing seat belt (driver)</p>",
+            "<p>1,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Not wearing seat belt (passenger)</p>",
+            "<p>1,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Not wearing helmet (rider)</p>",
+            "<p>1,000 + 3-month licence suspension</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Using mobile phone while driving</p>",
+            "<p>1,000–5,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Driving under influence of alcohol/drugs</p>",
+            "<p>10,000 + 6 months jail (1st offence)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Drunk driving (repeat within 3 years)</p>",
+            "<p>15,000 + 2 years jail</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Overloading — persons in vehicle</p>",
+            "<p>1,000 per extra passenger</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Overloading — goods vehicle</p>",
+            "<p>2,000 + Rs.1,000 per tonne excess</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Not giving way to emergency vehicle</p>",
+            "<p>10,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Driving wrong way / against traffic</p>",
+            "<p>500–1,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Illegal parking</p>",
+            "<p>500–1,000</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Racing or speed contest on road</p>",
+            "<p>5,000 + licence suspension</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "mu86juq"
+      "id": "mu86juq",
+      "content": "Note: Juvenile driving: Rs.25,000 fine on guardian + vehicle registration cancelled."
     }
   ],
   "enriched": true

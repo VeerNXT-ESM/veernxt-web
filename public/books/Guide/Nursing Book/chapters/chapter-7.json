@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xzyb1tn"
+      "id": "xzyb1tn",
+      "content": "Pharmacology is the science that studies drugs, their sources, properties, actions, therapeutic uses, side effects, and mechanisms of action in the human body. For nursing competitive examinations such as RRB Nursing, pharmacology is one of the most important subjects. Questions are commonly asked from drug classifications, routes of administration, pharmacokinetics, pharmacodynamics, antibiotics, analgesics, cardiovascular drugs, endocrine drugs, and emergency medications."
     },
     {
       "id": "brrf6si",
@@ -64,50 +65,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Drug</p>",
+            "<p>Chemical substance used for diagnosis, treatment, or prevention of disease</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pharmacokinetics</p>",
+            "<p>Study of how the body absorbs, distributes, metabolizes, and excretes drugs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pharmacodynamics</p>",
+            "<p>Study of the biochemical and physiological effects of drugs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Therapeutic effect</p>",
+            "<p>Desired beneficial effect of a drug</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Side effect</p>",
+            "<p>Unintended effect occurring at normal doses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Toxicity</p>",
+            "<p>Harmful effect of a drug due to overdose or accumulation</p>"
           ]
         }
       ]
@@ -125,49 +126,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Plant</p>",
+            "<p>Drugs obtained from plant parts</p>",
+            "<p>Morphine, Digoxin, Atropine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Animal</p>",
+            "<p>Derived from animal tissues</p>",
+            "<p>Insulin, Heparin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mineral</p>",
+            "<p>Obtained from mineral sources</p>",
+            "<p>Iron, Magnesium sulfate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Synthetic</p>",
+            "<p>Chemically manufactured</p>",
+            "<p>Paracetamol, Sulfonamides</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Biotechnology</p>",
+            "<p>Produced using genetic engineering</p>",
+            "<p>Monoclonal antibodies</p>"
           ]
         }
       ]
@@ -185,73 +186,68 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Route</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Oral</p>",
+            "<p>Drug taken by mouth</p>",
+            "<p>Tablets, capsules</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sublingual</p>",
+            "<p>Placed under the tongue</p>",
+            "<p>Nitroglycerin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Intravenous (IV)</p>",
+            "<p>Injected into vein</p>",
+            "<p>Emergency drugs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Intramuscular (IM)</p>",
+            "<p>Injected into muscle</p>",
+            "<p>Vaccines</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Subcutaneous</p>",
+            "<p>Injected under skin</p>",
+            "<p>Insulin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Topical</p>",
+            "<p>Applied to skin</p>",
+            "<p>Ointments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inhalation</p>",
+            "<p>Drug inhaled into lungs</p>",
+            "<p>Asthma inhalers</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Pharmacokinetics (ADME)",
-      "id": "6bhflmh"
     },
     {
       "id": "03n1ytx",
@@ -266,36 +262,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Absorption</p>",
+            "<p>Movement of drug from site of administration into bloodstream</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Distribution</p>",
+            "<p>Transport of drug throughout the body</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Metabolism</p>",
+            "<p>Chemical modification of drug mainly in liver</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Excretion</p>",
+            "<p>Removal of drug from body mainly through kidneys</p>"
           ]
         }
       ]
@@ -313,43 +309,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Effect</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Age</p>",
+            "<p>Children and elderly respond differently</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Body weight</p>",
+            "<p>Dose adjustments required</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Genetic factors</p>",
+            "<p>Individual variation in drug metabolism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Disease conditions</p>",
+            "<p>Liver and kidney disease affect drug metabolism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Drug interactions</p>",
+            "<p>Multiple drugs may interact with each other</p>"
           ]
         }
       ]
@@ -393,49 +389,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Class</strong></p>",
+            "<p><strong>Mechanism</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Penicillins</p>",
+            "<p>Inhibit bacterial cell wall synthesis</p>",
+            "<p>Amoxicillin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cephalosporins</p>",
+            "<p>Broad spectrum antibiotics</p>",
+            "<p>Ceftriaxone</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Macrolides</p>",
+            "<p>Inhibit protein synthesis</p>",
+            "<p>Azithromycin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tetracyclines</p>",
+            "<p>Inhibit bacterial growth</p>",
+            "<p>Doxycycline</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fluoroquinolones</p>",
+            "<p>Inhibit DNA replication</p>",
+            "<p>Ciprofloxacin</p>"
           ]
         }
       ]
@@ -453,29 +449,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Drug Type</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Non-opioid analgesics</p>",
+            "<p>Paracetamol, Aspirin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NSAIDs</p>",
+            "<p>Ibuprofen, Diclofenac</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Opioid analgesics</p>",
+            "<p>Morphine, Codeine</p>"
           ]
         }
       ]
@@ -493,36 +489,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Drug Class</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Antihypertensives</p>",
+            "<p>Amlodipine, Atenolol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Diuretics</p>",
+            "<p>Furosemide</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Antiarrhythmics</p>",
+            "<p>Lidocaine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Anticoagulants</p>",
+            "<p>Heparin, Warfarin</p>"
           ]
         }
       ]
@@ -549,29 +545,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Drug</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Insulin</p>",
+            "<p>Treatment of diabetes mellitus</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thyroxine</p>",
+            "<p>Treatment of hypothyroidism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Oral hypoglycemic drugs</p>",
+            "<p>Control blood sugar in diabetes</p>"
           ]
         }
       ]
@@ -589,36 +585,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Vaccine</strong></p>",
+            "<p><strong>Disease Prevented</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>BCG</p>",
+            "<p>Tuberculosis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MMR</p>",
+            "<p>Measles, mumps, rubella</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hepatitis B vaccine</p>",
+            "<p>Hepatitis B</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Polio vaccine</p>",
+            "<p>Poliomyelitis</p>"
           ]
         }
       ]
@@ -636,43 +632,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Topic</strong></p>",
+            "<p><strong>Key Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ADME</p>",
+            "<p>Absorption, Distribution, Metabolism, Excretion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fastest drug route</p>",
+            "<p>Intravenous</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Common antipyretic drug</p>",
+            "<p>Paracetamol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Common anticoagulant</p>",
+            "<p>Heparin</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Insulin use</p>",
+            "<p>Treatment of diabetes</p>"
           ]
         }
       ]

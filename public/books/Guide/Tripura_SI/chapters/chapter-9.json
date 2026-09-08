@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rzcgfje"
+      "id": "rzcgfje",
+      "content": "Despite its small area (10,486 sq km), Tripura has significant biodiversity as part of the Indo-Burma Biodiversity Hotspot. Approximately 60% of the state is under forest cover — one of the highest proportions in India. The forests range from tropical moist deciduous in the plains to subtropical hill forests in the highlands."
     },
     {
       "id": "5yz7vk8",
@@ -57,73 +58,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Number (approx.)</strong></p>",
+            "<p><strong>Notable Species</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Plant species</p>",
+            "<p>3,000+</p>",
+            "<p>Hollong, Garjan, Teak (plantation), Rubber, 60+ bamboo species, 150+ orchid species</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mammal species</p>",
+            "<p>70+</p>",
+            "<p>Phayre's Langur (state animal), Clouded Leopard, Elephant, Leopard, Gaur, Sambar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bird species</p>",
+            "<p>600+</p>",
+            "<p>Green Imperial Pigeon (state bird), Great Pied Hornbill, Pied Falconet, various migratory species</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Reptile species</p>",
+            "<p>100+</p>",
+            "<p>King Cobra, Python, various vipers; gharial in rivers historically</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Amphibian species</p>",
+            "<p>50+</p>",
+            "<p>Various frogs and toads</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Butterfly species</p>",
+            "<p>300+</p>",
+            "<p>Various swallowtails, blues, nymphalids</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fish species</p>",
+            "<p>150+</p>",
+            "<p>Freshwater fish in rivers; mahseer, catfish; Rudrasagar Lake fish</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Orchid species</p>",
+            "<p>150+</p>",
+            "<p>Various epiphytic orchids in hill forests</p>"
           ]
         }
       ]
@@ -135,66 +136,61 @@
       "content": "9.2 Protected Areas of Tripura"
     },
     {
-      "type": "pullQuote",
-      "content": "Phayre's Langur — State Animal",
-      "id": "si4cgtt"
-    },
-    {
       "id": "bqin1ou",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Protected Area</strong></p>",
+            "<p><strong>Area (sq km)</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Key Species / Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Gumti Wildlife Sanctuary</p>",
+            "<p>389.55</p>",
+            "<p>Dhalai, Gomati</p>",
+            "<p>Elephant, leopard, Phayre's Langur, bear, sambar; buffer around Dumbur reservoir; important elephant corridor</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Trishna Wildlife Sanctuary</p>",
+            "<p>162.94</p>",
+            "<p>South Tripura</p>",
+            "<p>Phayre's Langur (state animal) — one of the best places to see this rare primate; gaur, sambar, barking deer, porcupine; near Muhuri River</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sepahijala Wildlife Sanctuary</p>",
+            "<p>18.53</p>",
+            "<p>Sepahijala</p>",
+            "<p>Famous for Clouded Leopard and Spectacled Monkey (Phayre's Langur); also has a zoo and botanical garden; nearest wildlife sanctuary to Agartala; very popular tourist spot</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Rowa Wildlife Sanctuary</p>",
+            "<p>0.86</p>",
+            "<p>North Tripura</p>",
+            "<p>Smallest protected area; primarily a botanical reserve; rare plant species</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sipahijola (Sipahijola Zoo)</p>",
+            "<p>Sepahijala district</p>",
+            "<p>Sepahijala</p>",
+            "<p>State zoo; clouded leopard breeding programme; adjacent to Sepahijala WLS</p>"
           ]
         }
       ]
@@ -215,12 +211,12 @@
       "id": "e43ignb",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Phayre's Langur (Trachypithecus phayrei) is the state animal of Tripura",
+        "A leaf monkey (colobine); distinctive white circles around the eyes — also called 'spectacled langur'",
+        "IUCN: Endangered",
+        "Best place to see in India: Trishna Wildlife Sanctuary, South Tripura — has one of the largest populations",
+        "Also found in Gumti WLS, Rowa WLS, forest areas throughout Tripura",
+        "Threatened by habitat loss and hunting; Tripura has launched conservation programmes"
       ]
     },
     {
@@ -233,10 +229,10 @@
       "id": "ss2qrqe",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Tripura is one of the few states with a confirmed population of Clouded Leopards (Neofelis nebulosa)",
+        "Found in Sepahijala Wildlife Sanctuary; captive breeding programme at Sipahijola Zoo has been successful",
+        "IUCN: Vulnerable; very secretive and rarely photographed in wild",
+        "Tripura's Sepahijola Zoo achieved captive breeding milestones — important for species conservation"
       ]
     },
     {
@@ -258,10 +254,10 @@
       "id": "76zi0fd",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Wild Elephants are found in Tripura; frequent human-elephant conflicts occur",
+        "Gumti Wildlife Sanctuary is a key elephant habitat; elephant corridors connect with Assam and Bangladesh (historically)",
+        "Estimated population: 60–90 wild elephants in Tripura",
+        "Human-elephant conflict is a serious problem; elephants raid crops in North Tripura and Dhalai"
       ]
     },
     {
@@ -274,12 +270,12 @@
       "id": "jyn8eic",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Agar (Aquilaria malaccensis) is the state tree of Tripura and one of the most economically valuable trees in the world",
+        "Source of Agarwood (Oud) — the resinous heartwood formed when the tree is infected by a fungus",
+        "Agarwood is one of the most expensive natural products in the world — used in perfumes, incense, and traditional medicine",
+        "Tripura is a major source of Agarwood in India; significant cultivation and wild populations",
+        "International trade in Agarwood is regulated under CITES (Convention on International Trade in Endangered Species)",
+        "The Agar Industry is increasingly important for Tripura's economy; government is promoting Agarwood cultivation"
       ]
     }
   ],

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "dixiuqv"
+      "id": "dixiuqv",
+      "content": "Minerals are the building blocks of rocks. A mineral is a naturally occurring inorganic substance with a definite chemical composition and crystalline structure."
     },
     {
       "type": "pullQuote",
@@ -97,29 +98,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Minerals</strong></p>",
+            "<p><strong>Rocks</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Have definite chemical composition</p>",
+            "<p>No fixed composition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Homogeneous</p>",
+            "<p>May be heterogeneous</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Example: Quartz</p>",
+            "<p>Example: Granite</p>"
           ]
         }
       ]

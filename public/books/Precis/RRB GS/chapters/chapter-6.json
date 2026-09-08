@@ -48,7 +48,14 @@
     },
     {
       "type": "paragraph",
-      "id": "t640d0w"
+      "id": "t640d0w",
+      "content": "Control and coordination enable organisms to respond to stimuli and maintain internal balance (homeostasis). In humans, coordination occurs through the Nervous System and Endocrine System. In plants, coordination is regulated by plant hormones."
+    },
+    {
+      "id": "mq9bhje",
+      "type": "image",
+      "imageId": "26llgnt",
+      "src": "/books/Precis/RRB GS/images/image_26llgnt.jpeg"
     },
     {
       "id": "obbk122",
@@ -58,19 +65,23 @@
     },
     {
       "type": "paragraph",
-      "id": "ut0n86g"
+      "id": "ut0n86g",
+      "content": "• Respond to external stimuli (light, heat, touch)."
     },
     {
       "type": "paragraph",
-      "id": "8bpukdy"
+      "id": "8bpukdy",
+      "content": "• Maintain internal balance."
     },
     {
       "type": "paragraph",
-      "id": "wja1apa"
+      "id": "wja1apa",
+      "content": "• Coordinate voluntary and involuntary actions."
     },
     {
       "type": "paragraph",
-      "id": "97m5nl1"
+      "id": "97m5nl1",
+      "content": "• Regulate growth and development."
     },
     {
       "id": "baes963",
@@ -80,7 +91,8 @@
     },
     {
       "type": "paragraph",
-      "id": "efd1uyt"
+      "id": "efd1uyt",
+      "content": "The nervous system controls body activities through electrical impulses. The functional unit is the neuron, which transmits nerve impulses."
     },
     {
       "id": "u4vkyyy",
@@ -95,29 +107,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dendrites</p>",
+            "<p>Receive impulses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cell Body</p>",
+            "<p>Controls metabolic activities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Axon</p>",
+            "<p>Transmits impulses away</p>"
           ]
         }
       ]
@@ -136,15 +148,18 @@
     },
     {
       "type": "paragraph",
-      "id": "dgy0obd"
+      "id": "dgy0obd",
+      "content": "• Central Nervous System (Brain &amp; Spinal Cord)."
     },
     {
       "type": "paragraph",
-      "id": "1hoo7it"
+      "id": "1hoo7it",
+      "content": "• Peripheral Nervous System (Cranial &amp; Spinal nerves)."
     },
     {
       "type": "paragraph",
-      "id": "7vfz70o"
+      "id": "7vfz70o",
+      "content": "• Autonomic Nervous System (Sympathetic &amp; Parasympathetic)."
     },
     {
       "id": "urk8xpm",
@@ -154,19 +169,23 @@
     },
     {
       "type": "paragraph",
-      "id": "alnlt1t"
+      "id": "alnlt1t",
+      "content": "• Cerebrum – Intelligence, memory, voluntary actions."
     },
     {
       "type": "paragraph",
-      "id": "ofrvu6x"
+      "id": "ofrvu6x",
+      "content": "• Cerebellum – Balance and posture."
     },
     {
       "type": "paragraph",
-      "id": "c7x1s0u"
+      "id": "c7x1s0u",
+      "content": "• Medulla Oblongata – Controls breathing, heartbeat."
     },
     {
       "type": "paragraph",
-      "id": "xhelsiu"
+      "id": "xhelsiu",
+      "content": "• Forebrain – Thinking region."
     },
     {
       "type": "pullQuote",
@@ -175,11 +194,13 @@
     },
     {
       "type": "paragraph",
-      "id": "auyc9di"
+      "id": "auyc9di",
+      "content": "• Midbrain – Visual &amp; auditory reflexes."
     },
     {
       "type": "paragraph",
-      "id": "ou9jdyi"
+      "id": "ou9jdyi",
+      "content": "• Hindbrain – Balance &amp; involuntary control."
     },
     {
       "id": "b9cp91p",
@@ -189,15 +210,18 @@
     },
     {
       "type": "paragraph",
-      "id": "av5xwv7"
+      "id": "av5xwv7",
+      "content": "• Protected by vertebral column."
     },
     {
       "type": "paragraph",
-      "id": "7g3fbc0"
+      "id": "7g3fbc0",
+      "content": "• Conducts impulses to and from brain."
     },
     {
       "type": "paragraph",
-      "id": "c2ovmuy"
+      "id": "c2ovmuy",
+      "content": "• Controls reflex actions."
     },
     {
       "id": "fiz12u0",
@@ -207,15 +231,18 @@
     },
     {
       "type": "paragraph",
-      "id": "8xk2fl1"
+      "id": "8xk2fl1",
+      "content": "• Quick automatic response."
     },
     {
       "type": "paragraph",
-      "id": "oqlj0e1"
+      "id": "oqlj0e1",
+      "content": "• Controlled by spinal cord."
     },
     {
       "type": "paragraph",
-      "id": "mafm5gu"
+      "id": "mafm5gu",
+      "content": "• Reflex Arc: Receptor → Sensory neuron → Interneuron → Motor neuron → Effector."
     },
     {
       "id": "ukaj3yw",
@@ -251,7 +278,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9mnobll"
+      "id": "9mnobll",
+      "content": "Endocrine glands secrete hormones directly into blood. Hormones regulate metabolism, growth, reproduction and behavior."
     },
     {
       "id": "a2k9c7i",
@@ -266,57 +294,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Gland</strong></p>",
+            "<p><strong>Hormone</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pituitary</p>",
+            "<p>Growth Hormone</p>",
+            "<p>Master gland</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Thyroid</p>",
+            "<p>Thyroxine</p>",
+            "<p>Metabolism</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Parathyroid</p>",
+            "<p>Parathormone</p>",
+            "<p>Calcium balance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pancreas</p>",
+            "<p>Insulin/Glucagon</p>",
+            "<p>Blood sugar control</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Adrenal</p>",
+            "<p>Adrenaline</p>",
+            "<p>Fight or flight</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Thymus</p>",
+            "<p>Thymosin</p>",
+            "<p>Immunity</p>"
           ]
         }
       ]
@@ -329,19 +357,23 @@
     },
     {
       "type": "paragraph",
-      "id": "r9sn38l"
+      "id": "r9sn38l",
+      "content": "• Diabetes – Lack of insulin."
     },
     {
       "type": "paragraph",
-      "id": "9cfl8q5"
+      "id": "9cfl8q5",
+      "content": "• Goitre – Iodine deficiency."
     },
     {
       "type": "paragraph",
-      "id": "czxfk58"
+      "id": "czxfk58",
+      "content": "• Gigantism – Excess growth hormone."
     },
     {
       "type": "paragraph",
-      "id": "zt0l60n"
+      "id": "zt0l60n",
+      "content": "• Dwarfism – Deficiency of growth hormone."
     },
     {
       "id": "ugwlo92",
@@ -351,23 +383,28 @@
     },
     {
       "type": "paragraph",
-      "id": "3wqsdm1"
+      "id": "3wqsdm1",
+      "content": "• Auxin – Cell elongation."
     },
     {
       "type": "paragraph",
-      "id": "k8kr1go"
+      "id": "k8kr1go",
+      "content": "• Gibberellin – Stem growth."
     },
     {
       "type": "paragraph",
-      "id": "1dtlcl5"
+      "id": "1dtlcl5",
+      "content": "• Cytokinin – Cell division."
     },
     {
       "type": "paragraph",
-      "id": "e9f9v4c"
+      "id": "e9f9v4c",
+      "content": "• Ethylene – Fruit ripening."
     },
     {
       "type": "paragraph",
-      "id": "qr6vvzz"
+      "id": "qr6vvzz",
+      "content": "• Abscisic Acid – Growth inhibition &amp; dormancy."
     },
     {
       "id": "w3mxh61",
@@ -387,11 +424,13 @@
     },
     {
       "type": "paragraph",
-      "id": "de6v8hw"
+      "id": "de6v8hw",
+      "content": "• Tropic Movements – Directional (Phototropism, Geotropism)."
     },
     {
       "type": "paragraph",
-      "id": "25k2pit"
+      "id": "25k2pit",
+      "content": "• Nastic Movements – Non-directional (Touch-me-not plant)."
     },
     {
       "id": "uauv8qp",
@@ -401,27 +440,33 @@
     },
     {
       "type": "paragraph",
-      "id": "phl7cne"
+      "id": "phl7cne",
+      "content": "1. Neuron is functional unit of nervous system."
     },
     {
       "type": "paragraph",
-      "id": "uhxjvaa"
+      "id": "uhxjvaa",
+      "content": "2. Cerebrum controls thinking."
     },
     {
       "type": "paragraph",
-      "id": "qygjtp9"
+      "id": "qygjtp9",
+      "content": "3. Reflex action controlled by spinal cord."
     },
     {
       "type": "paragraph",
-      "id": "1gd1mhn"
+      "id": "1gd1mhn",
+      "content": "4. Pituitary is master gland."
     },
     {
       "type": "paragraph",
-      "id": "c14dvqt"
+      "id": "c14dvqt",
+      "content": "5. Insulin regulates blood sugar."
     },
     {
       "type": "paragraph",
-      "id": "2yu3f8y"
+      "id": "2yu3f8y",
+      "content": "6. Auxin promotes plant growth."
     }
   ],
   "enriched": true

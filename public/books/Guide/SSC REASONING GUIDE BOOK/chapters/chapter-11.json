@@ -1,0 +1,266 @@
+{
+  "id": "4tbo6j2",
+  "title": "Venn Diagrams",
+  "order": 11,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "07zxks9",
+      "content": "<strong>CHAPTER  11\tVENN DIAGRAMS</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "d9o0tp1",
+      "content": "<em>2-Set | 3-Set | Finding Region Values</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yib4g9c",
+      "content": "<strong>11.1  Introduction</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "2uxo7o4",
+      "content": "Venn diagram questions use overlapping circles to represent relationships between groups. In SSC exams, two types are asked: (a) which diagram best represents the relationship between given items, and (b) solve for missing values given information about regions."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "40hst5l",
+      "content": "<strong>11.2  Diagram Selection (Relationship Type)</strong>"
+    },
+    {
+      "id": "sfe5ob7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Relationship</strong></p>",
+            "<p><strong>Example Groups</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>All A are B, no C is A or B</p>",
+            "<p>Roses : Flowers : Tables</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Some A are B, all C are B, no A is C</p>",
+            "<p>Teachers : Graduates : Professionals</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A and B are completely different, C is partly A and partly B</p>",
+            "<p>Males : Females : Doctors</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A, B, C are all completely different</p>",
+            "<p>Cat : Dog : Cow</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>All three overlap partially</p>",
+            "<p>Indians : Doctors : Graduates</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A is inside B, C is inside B but outside A</p>",
+            "<p>Men : Humans : Married men</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A, B completely different, C completely inside A</p>",
+            "<p>Cats : Mammals : Dogs</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "lc8xf5o",
+      "content": "<strong>Ex.1 </strong>Which Venn diagram correctly represents: Dogs, Animals, Cats?"
+    },
+    {
+      "type": "paragraph",
+      "id": "z5ro52v",
+      "content": "<strong>Sol. </strong><em>Dogs ⊂ Animals. Cats ⊂ Animals. Dogs and Cats don't overlap. → Two small circles inside one large circle, the small circles not overlapping. Diagram: Concentric where Animals is outermost, Dogs and Cats are two separate inner circles.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "d55wh3v",
+      "content": "<strong>Ex.2 </strong>Which diagram for: Males, Fathers, Doctors?"
+    },
+    {
+      "type": "paragraph",
+      "id": "pmosc05",
+      "content": "<strong>Sol. </strong><em>Some males are fathers. Some males are doctors. Some fathers may be doctors. All groups can overlap with each other but none is fully inside another. → Three mutually overlapping circles (partial overlap of all three).</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "nmcn1iw",
+      "content": "<strong>11.3  Finding Missing Values (3-Set Venn Diagrams)</strong>"
+    },
+    {
+      "id": "q2qaatd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>FORMULA — 3 SETS A, B, C</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>n(A∪B∪C) = n(A) + n(B) + n(C) − n(A∩B) − n(B∩C) − n(A∩C) + n(A∩B∩C)</p><p>Only A = n(A) − n(A∩B) − n(A∩C) + n(A∩B∩C)</p><p>Only A and B = n(A∩B) − n(A∩B∩C)</p><p>Only in all three = n(A∩B∩C)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "7rcaycx",
+      "content": "<strong>Ex.3 </strong>In a class of 100 students: 50 play cricket, 45 play football, 40 play hockey. 20 play cricket &amp; football, 15 play football &amp; hockey, 18 play cricket &amp; hockey, 10 play all three. Find students who play at least one game."
+    },
+    {
+      "type": "paragraph",
+      "id": "5qtl8wz",
+      "content": "<strong>Sol. </strong><em>n(C∪F∪H) = 50+45+40−20−15−18+10 = 135−53+10 = 92. Ans: 92 students</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "k89fmtm",
+      "content": "<strong>Ex.4 </strong>From Ex.3, how many play only cricket?"
+    },
+    {
+      "type": "paragraph",
+      "id": "6tuthr8",
+      "content": "<strong>Sol. </strong><em>Only cricket = 50 − 20 − 18 + 10 = 22. Ans: 22 students</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "x4kh2sx",
+      "content": "<strong>11.4  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "jxkuknd",
+      "content": "<strong>Q.46  </strong>Which diagram shows: Mammals, Whales, Fish?"
+    },
+    {
+      "type": "paragraph",
+      "id": "oul4es0",
+      "content": "<strong>  (a)  </strong>Fish inside Mammals, Whales outside both"
+    },
+    {
+      "type": "paragraph",
+      "id": "5x02ywi",
+      "content": "<strong>  (b)  </strong>Mammals large, Whales inside, Fish outside Mammals"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "emjbfy8",
+      "content": "<strong>  (c)  </strong>All three separate"
+    },
+    {
+      "type": "paragraph",
+      "id": "xeb06j4",
+      "content": "<strong>  (d)  </strong>Whales inside Mammals, Fish separate"
+    },
+    {
+      "type": "paragraph",
+      "id": "2js3h5d",
+      "content": "<strong>  Ans: (b) Mammals large, Whales inside, Fish outside Mammals  Hint: </strong><em>Whales are Mammals (so inside Mammals circle). Fish are not Mammals (separate circle).</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "dvayrrf",
+      "content": "<strong>Q.47  </strong>70 students study Maths, 60 study Science, 50 study both. How many study at least one?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "m3uew7i",
+      "content": "<strong>  (a)  </strong>80"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "atd5vxm",
+      "content": "<strong>  (b)  </strong>130"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hy5zget",
+      "content": "<strong>  (c)  </strong>180"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0hbqype",
+      "content": "<strong>  (d)  </strong>90"
+    },
+    {
+      "type": "paragraph",
+      "id": "bfycsu0",
+      "content": "<strong>  Ans: (a) 80  Hint: </strong><em>n(M∪S)=70+60−50=80.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "r5xqe5o",
+      "content": "<strong>Q.48  </strong>In a group, 25 like tea, 20 like coffee, 10 like both. How many like only tea?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nj7rfx4",
+      "content": "<strong>  (a)  </strong>5"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "07ssa5n",
+      "content": "<strong>  (b)  </strong>10"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1usws5r",
+      "content": "<strong>  (c)  </strong>15"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gn20ybw",
+      "content": "<strong>  (d)  </strong>20"
+    },
+    {
+      "type": "paragraph",
+      "id": "em3dmmo",
+      "content": "<strong>  Ans: (c) 15  Hint: </strong><em>Only tea = 25−10=15.</em>"
+    }
+  ],
+  "enriched": true
+}

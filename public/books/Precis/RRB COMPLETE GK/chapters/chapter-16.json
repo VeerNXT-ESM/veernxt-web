@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "rjwiy6l"
+      "id": "rjwiy6l",
+      "content": "Rotation is Earth's spinning movement on its axis from west to east. Because of this direction, the Sun appears to move east to west."
     },
     {
       "type": "statStrip",
@@ -40,29 +41,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sidereal Day</p>",
+            "<p>23h 56m — time taken relative to distant stars.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Solar Day</p>",
+            "<p>24h — time taken for the Sun to reappear at the same position.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Speed at Equator</p>",
+            "<p>~1670 km/hr — decreases toward poles.</p>"
           ]
         }
       ]
@@ -92,7 +93,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gi6915b"
+      "id": "gi6915b",
+      "content": "While Earth rotates, it also moves along its orbit. Therefore, it must rotate slightly more than 360° for the Sun to appear in the same position — making the solar day longer."
     },
     {
       "type": "comparisonTable",
@@ -128,11 +130,13 @@
     },
     {
       "type": "paragraph",
-      "id": "n0oe1on"
+      "id": "n0oe1on",
+      "content": "• Day and night cycle."
     },
     {
       "type": "paragraph",
-      "id": "i4yiido"
+      "id": "i4yiido",
+      "content": "• Formation of time zones."
     },
     {
       "type": "examAlert",
@@ -145,15 +149,18 @@
     },
     {
       "type": "paragraph",
-      "id": "q8zfmp8"
+      "id": "q8zfmp8",
+      "content": "• Coriolis effect."
     },
     {
       "type": "paragraph",
-      "id": "obmb8hu"
+      "id": "obmb8hu",
+      "content": "• Equatorial bulge."
     },
     {
       "type": "paragraph",
-      "id": "o3blxr4"
+      "id": "o3blxr4",
+      "content": "• Daily temperature differences."
     }
   ],
   "enriched": true

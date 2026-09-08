@@ -1,0 +1,90 @@
+{
+  "title": "11. Exam Traps",
+  "order": 273,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• CVC is a statutory body, NOT constitutional.<br/>• Given statutory status in 2003.<br/>• Supervises CBI in corruption cases.<br/>• Maximum two vigilance commissioners.<br/>• Not an investigative agency.",
+      "id": "j4xomdv"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CVC is a statutory body, NOT constitutional.",
+      "id": "syygvgz"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Actual Fact",
+        "Common Exam Misconception"
+      ],
+      "rows": [
+        [
+          "Legal Status",
+          "Statutory Body (Status in 2003)",
+          "Constitutional Body"
+        ],
+        [
+          "Primary Function",
+          "Supervises CBI in corruption cases",
+          "Investigative Agency"
+        ],
+        [
+          "Commissioners Limit",
+          "Maximum 2 Vigilance Commissioners",
+          "No limit / 3 or more commissioners"
+        ]
+      ],
+      "id": "9qkxpb2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Body Type",
+          "value": "Statutory",
+          "icon": "award"
+        },
+        {
+          "label": "Statutory Status",
+          "value": "2003",
+          "icon": "calendar"
+        },
+        {
+          "label": "Max Vigilance Commissioners",
+          "value": "2",
+          "icon": "check"
+        },
+        {
+          "label": "Nature",
+          "value": "Supervisory",
+          "icon": "info"
+        }
+      ],
+      "id": "qilpg1a"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams often incorrectly label CVC as a Constitutional body; remember it received Statutory status in 2003.",
+        "Do not confuse CVC with an investigative agency; it only holds supervisory powers over CBI in corruption cases.",
+        "Pay attention to composition limits: a maximum of two Vigilance Commissioners are allowed."
+      ],
+      "id": "ia0ygq2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "CVC is a statutory body, NOT a constitutional body.",
+        "Statutory status was granted to the CVC in the year 2003.",
+        "CVC supervises the Central Bureau of Investigation (CBI) in corruption cases.",
+        "There can be a maximum of two Vigilance Commissioners.",
+        "CVC is a supervisory authority and NOT an investigative agency."
+      ],
+      "id": "pm1vjwi"
+    }
+  ],
+  "enriched": true
+}

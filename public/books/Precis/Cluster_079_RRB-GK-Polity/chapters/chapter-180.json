@@ -1,0 +1,123 @@
+{
+  "title": "2. Composition of Election Commission",
+  "order": 180,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The Constitution does not fix the number of members of the Commission. The President determines its composition.",
+      "id": "6dx2nxw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Limit",
+          "value": "Not Fixed",
+          "icon": "info"
+        },
+        {
+          "label": "Composition Fixed By",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "Multi-Member Body",
+          "value": "Since 1989",
+          "icon": "calendar"
+        },
+        {
+          "label": "Decision Mode",
+          "value": "Majority Vote",
+          "icon": "check"
+        }
+      ],
+      "id": "0u0zglr"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Constitution does not fix the number of members of the Commission.",
+      "id": "gptxa0p"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Original Setup (Pre-1989)",
+        "Current Setup (Since 1989)"
+      ],
+      "rows": [
+        [
+          "Structure",
+          "Single-member body",
+          "Multi-member body"
+        ],
+        [
+          "Decision Making",
+          "Individual decision",
+          "Majority vote"
+        ]
+      ],
+      "id": "iiezsaw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Constitution does not fix the specific number of members of the Election Commission.",
+        "The President of India determines the strength and composition of the Election Commission.",
+        "The Commission was originally a single-member body, but has functioned as a multi-member body since 1989.",
+        "In the multi-member setup, decisions are taken by majority vote among the members."
+      ],
+      "id": "mq1bso7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The President (not Parliament) holds the power to determine the number of Election Commissioners.",
+        "1989 is a frequently tested year when the Election Commission converted from a single-member body to a multi-member body.",
+        "Decisions in the Election Commission are not dictated by the Chief alone, but are decided by a majority vote."
+      ],
+      "id": "9lwey88"
+    },
+    {
+      "id": "nomu8e6",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Role</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chief Election Commissioner (CEC)</p>",
+            "<p>Head of the Commission</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Election Commissioners</p>",
+            "<p>Assist the CEC; all members have equal powers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regional Commissioners</p>",
+            "<p>Appointed by the President when required</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Originally, the Election Commission was a single-member body. Since 1989, it has been functioning as a multi-member body. Decisions are taken by majority vote.",
+      "id": "ix7v5qa"
+    }
+  ],
+  "enriched": true
+}

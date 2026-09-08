@@ -1,0 +1,131 @@
+{
+  "title": "Powers of SEBI (EXTREMELY IMPORTANT)",
+  "order": 313,
+  "blocks": [
+    {
+      "id": "7tj6eox",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Power</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regulatory</p>",
+            "<p>Frame rules, register intermediaries, regulate exchanges.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Investigative</p>",
+            "<p>Inspect records, conduct audits, demand information.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Quasi-Judicial</p>",
+            "<p>Pass orders, impose penalties, ban entities.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Quasi-Executive</p>",
+            "<p>Implement regulations and enforce compliance.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "SEBI operates as a quasi-judicial, quasi-legislative, and quasi-executive body to protect the interests of investors in securities and to promote the development of, and to regulate, the securities market.",
+      "id": "hitb90h"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Power Category",
+        "Scope & Function",
+        "Practical Example"
+      ],
+      "rows": [
+        [
+          "Quasi-Legislative",
+          "Drafts regulations and framing policy guidelines for market conduct",
+          "Framing SEBI (LODR) Regulations and Insider Trading Regulations"
+        ],
+        [
+          "Quasi-Executive",
+          "Conducts inspections, summons witnesses, and investigates market misconduct",
+          "Inspecting books of accounts of brokers or auditing listed entities"
+        ],
+        [
+          "Quasi-Judicial",
+          "Adjudicates disputes, passes enforcement orders, and imposes monetary penalties",
+          "Issuing penalty orders for market manipulation or insider trading"
+        ]
+      ],
+      "id": "97ujklw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SEBI Act",
+          "value": "1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Primary Section",
+          "value": "Section 11",
+          "icon": "book"
+        },
+        {
+          "label": "Appellate Body",
+          "value": "SAT",
+          "icon": "info"
+        },
+        {
+          "label": "Appeal Timeline",
+          "value": "45 Days",
+          "icon": "clock"
+        },
+        {
+          "label": "Status",
+          "value": "Statutory",
+          "icon": "check"
+        }
+      ],
+      "id": "3qgp7t7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Appeals against SEBI orders must be filed with the Securities Appellate Tribunal (SAT) within 45 days from the date of receipt of the order.",
+        "SEBI cannot directly award imprisonment; criminal prosecution for non-compliance must be initiated before designated Special Courts.",
+        "Section 11(4) empowers SEBI to pass interim or final orders to restrain persons from accessing the securities market and freeze bank accounts during investigations."
+      ],
+      "id": "v15ajia"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "SEBI derives its core statutory powers from Section 11 of the SEBI Act, 1992 to protect investor interests and regulate the securities market.",
+        "SEBI exercises a triple role: Quasi-Legislative (drafting regulations), Quasi-Executive (investigation and inspection), and Quasi-Judicial (adjudication and passing penalty orders).",
+        "Under Section 11B, SEBI possesses broad powers to issue directions to any stock exchange, intermediary, or market participant in the interest of investors.",
+        "SEBI has the power to inspect books, summon persons, compel production of documents, and perform search and seizure operations with judicial magistrate authorization.",
+        "An appeal against any order passed by SEBI or an Adjudicating Officer lies with the Securities Appellate Tribunal (SAT)."
+      ],
+      "id": "qlndjr2"
+    }
+  ],
+  "enriched": true
+}

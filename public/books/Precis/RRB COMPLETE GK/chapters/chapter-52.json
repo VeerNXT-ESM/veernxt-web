@@ -10,25 +10,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Depth (km)</strong></p>",
+            "<p><strong>State</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Outer Core</p>",
+            "<p>2900–5150</p>",
+            "<p>Liquid</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inner Core</p>",
+            "<p>5150–6371</p>",
+            "<p>Solid</p>"
           ]
         }
       ]
@@ -109,7 +109,8 @@
     },
     {
       "type": "paragraph",
-      "id": "kppll0y"
+      "id": "kppll0y",
+      "content": "• Mainly composed of iron and nickel."
     },
     {
       "type": "examAlert",
@@ -122,11 +123,13 @@
     },
     {
       "type": "paragraph",
-      "id": "9igpaqb"
+      "id": "9igpaqb",
+      "content": "• Temperature: 4000°C–6000°C."
     },
     {
       "type": "paragraph",
-      "id": "qoj1in4"
+      "id": "qoj1in4",
+      "content": "• Outer core generates Earth's magnetic field (geodynamo effect)."
     }
   ],
   "enriched": true

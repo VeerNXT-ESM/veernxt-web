@@ -1,0 +1,165 @@
+{
+  "title": "4. Rotation of the Earth",
+  "order": 21,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Rotation is Earth's spinning movement on its axis from west to east. Because of this direction, the Sun appears to move east to west.",
+      "id": "n6ylgwn"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Rotation Direction",
+          "value": "West to East",
+          "icon": "info"
+        },
+        {
+          "label": "Apparent Sun Motion",
+          "value": "East to West",
+          "icon": "clock"
+        },
+        {
+          "label": "Solar Rotation Angle",
+          "value": "> 360°",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Consequences",
+          "value": "5 Key Effects",
+          "icon": "award"
+        }
+      ],
+      "id": "ywt4x0u"
+    },
+    {
+      "id": "h883lr5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sidereal Day</p>",
+            "<p>23h 56m — time taken relative to distant stars.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Solar Day</p>",
+            "<p>24h — time taken for the Sun to reappear at the same position.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Speed at Equator</p>",
+            "<p>~1670 km/hr — decreases toward poles.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7bv09yo",
+      "type": "heading",
+      "level": 2,
+      "content": "Why Sidereal Day is Shorter"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Rotation is Earth's spinning movement on its axis from west to east.",
+      "id": "du83obd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Rotation is defined as Earth spinning on its axis from west to east.",
+        "Because Earth rotates from west to east, the Sun appears to move from east to west across the sky.",
+        "The solar day is longer than the sidereal day because Earth must rotate slightly more than 360° to realign with the Sun while advancing in its orbit.",
+        "Major impacts of rotation include day and night, time zone formation, daily temperature fluctuations, equatorial bulge, and the Coriolis effect."
+      ],
+      "id": "m5bqfsr"
+    },
+    {
+      "type": "paragraph",
+      "content": "While Earth rotates, it also moves along its orbit. Therefore, it must rotate slightly more than 360° for the Sun to appear in the same position — making the solar day longer.",
+      "id": "6n0dn7m"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Sidereal Day",
+        "Solar Day"
+      ],
+      "rows": [
+        [
+          "Duration",
+          "Shorter",
+          "Longer"
+        ],
+        [
+          "Rotation Requirement",
+          "Exactly 360° rotation",
+          "Slightly more than 360° rotation"
+        ],
+        [
+          "Reason for Difference",
+          "Measures single complete spin relative to distant position",
+          "Requires extra rotation because Earth also moves along its orbit around the Sun"
+        ]
+      ],
+      "id": "gg6tj26"
+    },
+    {
+      "id": "s5uxyac",
+      "type": "heading",
+      "level": 2,
+      "content": "Major Effects of Rotation"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Day and night cycle.",
+      "id": "18qdz38"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Formation of time zones.",
+      "id": "bj8yp1p"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direction of Rotation vs. Apparent Movement: Earth rotates West to East; consequently, the Sun appears to move East to West.",
+        "Sidereal Day vs. Solar Day: The Solar day is longer than the Sidereal day because Earth must rotate slightly more than 360° due to its simultaneous orbital movement.",
+        "Direct Effects of Rotation: Questions often ask to identify effects of rotation vs. revolution—remember that the Coriolis effect, equatorial bulge, time zones, and daily temperature variations are caused by rotation."
+      ],
+      "id": "xfb0pay"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Coriolis effect.",
+      "id": "0dvtypf"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Equatorial bulge.",
+      "id": "0jqz4sq"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Daily temperature differences.",
+      "id": "re67gvv"
+    }
+  ],
+  "enriched": true
+}

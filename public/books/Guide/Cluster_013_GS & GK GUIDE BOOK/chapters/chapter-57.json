@@ -1,0 +1,321 @@
+{
+  "id": "vex5xcu",
+  "title": "Chapter 8: Matter and Its Properties",
+  "order": 57,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "3r7a1hr",
+      "content": "Matter is anything that occupies space and has mass. Everything around us such as air, water, plants, animals and objects is made of matter. The study of matter and its properties is an important part of physics and chemistry."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "States of Matter",
+          "value": "3 Main",
+          "icon": "book"
+        },
+        {
+          "label": "SI Unit of Density",
+          "value": "kg/m³",
+          "icon": "award"
+        },
+        {
+          "label": "SI Unit of Pressure",
+          "value": "Pascal (Pa)",
+          "icon": "check"
+        },
+        {
+          "label": "Elasticity Principle",
+          "value": "Hooke's Law",
+          "icon": "info"
+        }
+      ],
+      "id": "b3uwzqz"
+    },
+    {
+      "id": "g9cdk0o",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Matter"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Matter is defined as anything that occupies space and possesses mass.",
+        "The three primary states of matter are solid, liquid, and gas.",
+        "Density is calculated as mass per unit volume of a substance.",
+        "Elasticity is the property that enables a body to regain its original shape when deforming forces are removed.",
+        "Pressure is defined as the perpendicular force exerted per unit area."
+      ],
+      "id": "k9qag0h"
+    },
+    {
+      "type": "paragraph",
+      "id": "pu8kbus",
+      "content": "• Matter is anything that has mass and occupies space."
+    },
+    {
+      "type": "paragraph",
+      "id": "tp0v8om",
+      "content": "• It is made up of tiny particles called atoms and molecules."
+    },
+    {
+      "type": "paragraph",
+      "id": "gnaf7o1",
+      "content": "• Matter exists in different forms in nature."
+    },
+    {
+      "id": "3w15myx",
+      "type": "heading",
+      "level": 2,
+      "content": "2. States of Matter"
+    },
+    {
+      "id": "vkzla1m",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>State</strong></p>",
+            "<p><strong>Properties</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Solid</p>",
+            "<p>Fixed shape and volume</p>",
+            "<p>Iron, wood, ice</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Liquid</p>",
+            "<p>Fixed volume but no fixed shape</p>",
+            "<p>Water, oil, milk</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Gas</p>",
+            "<p>No fixed shape or volume</p>",
+            "<p>Air, oxygen, carbon dioxide</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p080xu7",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Physical Properties of Matter"
+    },
+    {
+      "type": "paragraph",
+      "id": "7p0ksxa",
+      "content": "• Mass – amount of matter in a substance."
+    },
+    {
+      "type": "paragraph",
+      "id": "iqtazvh",
+      "content": "• Volume – space occupied by matter."
+    },
+    {
+      "type": "pullQuote",
+      "content": "Density is defined as mass per unit volume of a substance.",
+      "id": "1h6ehwq"
+    },
+    {
+      "type": "paragraph",
+      "id": "nu97ra5",
+      "content": "• Density – mass per unit volume."
+    },
+    {
+      "type": "paragraph",
+      "id": "lly5pir",
+      "content": "• Elasticity – ability of a material to regain its original shape."
+    },
+    {
+      "id": "t2fjxw0",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Changes in States of Matter"
+    },
+    {
+      "id": "7xgvyr5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Melting</p>",
+            "<p>Solid changes into liquid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Freezing</p>",
+            "<p>Liquid changes into solid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Evaporation</p>",
+            "<p>Liquid changes into gas</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Condensation</p>",
+            "<p>Gas changes into liquid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sublimation</p>",
+            "<p>Solid changes directly into gas</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vrhmaei",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Density"
+    },
+    {
+      "type": "paragraph",
+      "id": "fypezu7",
+      "content": "Density is defined as mass per unit volume."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Solid",
+        "Liquid",
+        "Gas"
+      ],
+      "rows": [
+        [
+          "Shape & Volume",
+          "Definite shape and volume",
+          "Definite volume, indefinite shape",
+          "Indefinite shape and volume"
+        ],
+        [
+          "Intermolecular Force",
+          "Strongest",
+          "Moderate",
+          "Weakest"
+        ],
+        [
+          "Compressibility",
+          "Negligible",
+          "Low",
+          "High"
+        ]
+      ],
+      "id": "hmdb229"
+    },
+    {
+      "type": "paragraph",
+      "id": "v4izrma",
+      "content": "Formula: Density = Mass / Volume"
+    },
+    {
+      "type": "paragraph",
+      "id": "2z49bmt",
+      "content": "SI Unit of Density = kg/m³"
+    },
+    {
+      "id": "8m0ocrx",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Elasticity"
+    },
+    {
+      "type": "paragraph",
+      "id": "gis9vyg",
+      "content": "Elasticity is the property of a material to regain its original shape after deformation when the external force is removed."
+    },
+    {
+      "id": "ixe0d8a",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Pressure"
+    },
+    {
+      "type": "paragraph",
+      "id": "tki6n65",
+      "content": "Pressure is defined as force acting per unit area."
+    },
+    {
+      "type": "paragraph",
+      "id": "itmm2ks",
+      "content": "Formula: Pressure = Force / Area"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ceejxmj",
+      "content": "SI Unit = Pascal (Pa)"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Pascal (N/m²) is the standard SI unit for pressure commonly tested in competitive exams.",
+        "Hooke's Law states that stress is directly proportional to strain within the elastic limit.",
+        "Atmospheric pressure decreases with an increase in altitude.",
+        "Sublimation refers to the direct transition from solid to gas phase without turning into a liquid."
+      ],
+      "id": "z90egka"
+    },
+    {
+      "id": "v66pj5f",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "xu5a3a0",
+      "content": "• Matter has mass and occupies space."
+    },
+    {
+      "type": "paragraph",
+      "id": "r9b9ebm",
+      "content": "• Density = Mass / Volume."
+    },
+    {
+      "type": "paragraph",
+      "id": "3xaiypw",
+      "content": "• SI unit of pressure is Pascal."
+    },
+    {
+      "type": "paragraph",
+      "id": "sp5ptc3",
+      "content": "• There are three main states of matter: solid, liquid and gas."
+    }
+  ],
+  "enriched": true
+}

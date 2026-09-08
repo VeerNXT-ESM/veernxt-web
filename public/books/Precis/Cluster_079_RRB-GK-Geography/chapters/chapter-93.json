@@ -1,0 +1,123 @@
+{
+  "title": "Continental Drift vs Plate Tectonics",
+  "order": 93,
+  "blocks": [
+    {
+      "id": "miz9h7q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Continental Drift</strong></p>",
+            "<p><strong>Plate Tectonics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Proposed in 1912</p>",
+            "<p>Developed in the 1960s</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Explained continental movement</p>",
+            "<p>Explains movement of entire lithosphere</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>No driving mechanism</p>",
+            "<p>Mechanism identified</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "While Continental Drift posited that continents plowed through the ocean floor, Plate Tectonic Theory proved that continents and ocean floors move together as lithospheric plates over the asthenosphere.",
+      "id": "b2ulbnq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Continental Drift Theory",
+        "Plate Tectonic Theory"
+      ],
+      "rows": [
+        [
+          "Proposed By",
+          "Alfred Wegener (1912)",
+          "McKenzie, Parker, and Morgan (1960s)"
+        ],
+        [
+          "Core Concept",
+          "Continents drifted through ocean basins",
+          "Lithospheric plates move over asthenosphere"
+        ],
+        [
+          "Driving Mechanism",
+          "Tidal forces and polar-fleeing force (Flawed)",
+          "Thermal convection currents in the mantle"
+        ],
+        [
+          "Key Evidence",
+          "Jigsaw fit, fossils, tillite, rocks across oceans",
+          "Seafloor spreading, paleomagnetism, earthquake belts"
+        ]
+      ],
+      "id": "mkftp8n"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Proposed Year",
+          "value": "1912",
+          "icon": "calendar"
+        },
+        {
+          "label": "Drift Theorist",
+          "value": "Alfred Wegener",
+          "icon": "book"
+        },
+        {
+          "label": "Supercontinent",
+          "value": "Pangea",
+          "icon": "info"
+        },
+        {
+          "label": "Driving Mechanism",
+          "value": "Convection Currents",
+          "icon": "check"
+        }
+      ],
+      "id": "m42f447"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Wegener cited jigsaw fit of coastlines, matching fossil distributions (Mesosaurus, Glossopteris), and tillite glacial deposits as primary evidence for Continental Drift.",
+        "Mid-Oceanic Ridges are constructive/divergent boundaries where seafloor spreading creates new oceanic crust.",
+        "The Circum-Pacific 'Ring of Fire' is formed along convergent plate boundaries where subduction leads to intense volcanic and seismic activity."
+      ],
+      "id": "wisusux"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Alfred Wegener proposed the Continental Drift Theory in 1912, hypothesizing that all landmasses were once part of a supercontinent named Pangea surrounded by Panthalassa.",
+        "Plate Tectonic Theory, formulated in the 1960s, explains that the Earth's lithosphere is divided into major and minor plates floating on the semi-fluid asthenosphere.",
+        "Continental Drift attributed movement to gravitational/tidal forces, which was rejected; Plate Tectonics successfully identified thermal convection currents in the mantle as the true driving force.",
+        "Tectonic plate interactions occur along three main types of boundaries: Divergent (constructive), Convergent (destructive), and Transform (conservative)."
+      ],
+      "id": "9bynhta"
+    }
+  ],
+  "enriched": true
+}

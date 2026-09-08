@@ -1,0 +1,63 @@
+{
+  "title": "14. Exam Traps",
+  "order": 395,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Established in 2010.<br/>• India is the third country to create such a tribunal.<br/>• Wildlife Protection Act is NOT under NGT.<br/>• Appeals go directly to Supreme Court.<br/>• Follows Polluter Pays principle.<br/>• Not bound by Civil Procedure Code.",
+      "id": "gbtnart"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Wildlife Protection Act is NOT under NGT.",
+      "id": "iyykxi6"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established",
+          "value": "2010",
+          "icon": "calendar"
+        },
+        {
+          "label": "Global Rank",
+          "value": "3rd Country",
+          "icon": "award"
+        },
+        {
+          "label": "Appeals Body",
+          "value": "Supreme Court",
+          "icon": "check"
+        },
+        {
+          "label": "Key Principle",
+          "value": "Polluter Pays",
+          "icon": "info"
+        }
+      ],
+      "id": "agvb7zt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Common Trap: Questions often incorrectly state that the Wildlife Protection Act comes under NGT.",
+        "Procedure Trap: NGT is NOT bound by the Civil Procedure Code (CPC); it follows the principles of natural justice.",
+        "Appeals Jurisdiction: Appeals against NGT orders lie directly before the Supreme Court, not High Courts."
+      ],
+      "id": "202nmsy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The tribunal was established in 2010, making India the third country globally to set up such a specialized body.",
+        "The Wildlife Protection Act is explicitly NOT covered under NGT jurisdiction.",
+        "Appeals against tribunal decisions go directly to the Supreme Court.",
+        "It operates on the 'Polluter Pays' principle and is not bound by the Civil Procedure Code."
+      ],
+      "id": "xlxwm5w"
+    }
+  ],
+  "enriched": true
+}

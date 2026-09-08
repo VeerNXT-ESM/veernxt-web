@@ -1,0 +1,123 @@
+{
+  "title": "Types of Sedimentary Rocks",
+  "order": 74,
+  "blocks": [
+    {
+      "id": "5kl94pe",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Formation</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mechanical</p>",
+            "<p>Broken rock fragments</p>",
+            "<p>Sandstone</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chemical</p>",
+            "<p>Evaporation of minerals</p>",
+            "<p>Rock salt</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Organic</p>",
+            "<p>Plant/animal remains</p>",
+            "<p>Coal, Limestone</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Lithification is the process by which loose sediments are turned into rocks through compaction and cementation.",
+      "id": "h8t5kkl"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category",
+        "Formation Mechanism",
+        "Key Examples"
+      ],
+      "rows": [
+        [
+          "Mechanically Formed (Clastic)",
+          "Accumulation, compaction, and cementation of weathered rock fragments",
+          "Sandstone, Shale, Conglomerate, Loess, Clay"
+        ],
+        [
+          "Organically Formed",
+          "Decomposition and consolidation of plant and animal remains",
+          "Coal, Chalk, Limestone, Geyserite"
+        ],
+        [
+          "Chemically Formed",
+          "Precipitation and evaporation of dissolved minerals in water bodies",
+          "Halite (Rock Salt), Gypsum, Potash, Chert"
+        ]
+      ],
+      "id": "3klvi24"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Main Categories",
+          "value": "3 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Earth Surface Coverage",
+          "value": "75%",
+          "icon": "award"
+        },
+        {
+          "label": "Core Process",
+          "value": "Lithification",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Characteristic",
+          "value": "Stratification",
+          "icon": "info"
+        }
+      ],
+      "id": "0c8hbno"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Fossils are almost exclusively preserved in sedimentary rocks, making this a high-yield topic for prelims.",
+        "Major energy resources like petroleum, natural gas, and coal are found strictly in sedimentary rock strata.",
+        "Exams frequently require classifying rocks into their correct formation types: Sandstone (Mechanical), Coal/Chalk (Organic), and Gypsum/Halite (Chemical)."
+      ],
+      "id": "s7ekkvg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Sedimentary rocks are formed by the deposition, compaction, and cementation of sediments over long periods through lithification.",
+        "They are broadly classified into three categories based on their mode of formation: Mechanically formed, Organically formed, and Chemically formed.",
+        "Mechanically formed (clastic) rocks consist of weathered rock fragments and include sandstone, shale, conglomerate, and loess.",
+        "Organically formed rocks originate from the accumulation of biological debris, producing coal, chalk, limestone, and geyserite.",
+        "Chemically formed rocks result from the precipitation of minerals from water solutions, producing halite, gypsum, potash, and chert."
+      ],
+      "id": "x8k55tw"
+    }
+  ],
+  "enriched": true
+}

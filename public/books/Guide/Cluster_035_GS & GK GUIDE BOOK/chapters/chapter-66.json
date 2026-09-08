@@ -1,0 +1,580 @@
+{
+  "id": "nkzb0ra",
+  "title": "Chapter 17:Plant Biology",
+  "order": 66,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "u5z7dp7",
+      "content": "Plant biology is the branch of biology that studies plants, their structure, growth, reproduction, metabolism, development, diseases and evolution. Plants are autotrophic organisms capable of producing their own food through photosynthesis."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Groups",
+          "value": "5 Divisions",
+          "icon": "book"
+        },
+        {
+          "label": "Tissue Types",
+          "value": "2 Categories",
+          "icon": "check"
+        },
+        {
+          "label": "Key Hormones",
+          "value": "5 Primary",
+          "icon": "award"
+        },
+        {
+          "label": "Primary Mode",
+          "value": "Autotrophic",
+          "icon": "info"
+        }
+      ],
+      "id": "nxpvon7"
+    },
+    {
+      "id": "1jg5qx9",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Characteristics of Plants"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Plants are multicellular, eukaryotic autotrophs with cellulose-based cell walls.",
+        "Plant tissues are divided into Meristematic (actively dividing) and Permanent tissues (Xylem and Phloem).",
+        "Photosynthesis synthesizes glucose and oxygen using light, carbon dioxide, and water inside chloroplasts.",
+        "Plant reproduction occurs through sexual mechanisms in flowers and asexual mechanisms via vegetative propagation.",
+        "Phytohormones including Auxins, Gibberellins, Cytokinins, Abscisic Acid, and Ethylene regulate plant growth and development."
+      ],
+      "id": "ygroudh"
+    },
+    {
+      "type": "paragraph",
+      "id": "mmpvzu3",
+      "content": "• Plants are multicellular eukaryotic organisms."
+    },
+    {
+      "type": "paragraph",
+      "id": "2mfnkyu",
+      "content": "• They contain chlorophyll and perform photosynthesis."
+    },
+    {
+      "type": "paragraph",
+      "id": "r3l4bz0",
+      "content": "• Cell walls are made of cellulose."
+    },
+    {
+      "type": "paragraph",
+      "id": "tkq7xz9",
+      "content": "• They are generally non‑motile."
+    },
+    {
+      "type": "paragraph",
+      "id": "jfpipc1",
+      "content": "• They store food mainly in the form of starch."
+    },
+    {
+      "id": "6ihl1tu",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Classification of Plants"
+    },
+    {
+      "id": "68y5bin",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Plant Group</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Thallophyta</p>",
+            "<p>Simple plants without roots, stems or leaves</p>",
+            "<p>Algae</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Bryophyta</p>",
+            "<p>Non‑vascular plants</p>",
+            "<p>Moss</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pteridophyta</p>",
+            "<p>Vascular plants with spores</p>",
+            "<p>Ferns</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Gymnosperms</p>",
+            "<p>Seed producing plants without fruits</p>",
+            "<p>Pine</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Angiosperms</p>",
+            "<p>Flowering plants</p>",
+            "<p>Mango, wheat</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8iu5k8m",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Plant Cell"
+    },
+    {
+      "id": "yeyal9d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Organelle</strong></p>",
+            "<p><strong>Function</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cell wall</p>",
+            "<p>Provides support and protection</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cell membrane</p>",
+            "<p>Controls movement of substances</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chloroplast</p>",
+            "<p>Photosynthesis</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vacuole</p>",
+            "<p>Storage of water and nutrients</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nucleus</p>",
+            "<p>Controls cell activities</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mitochondria</p>",
+            "<p>Energy production</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "y4i4l16",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Plant Tissues"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Photosynthesis converts light energy into chemical energy, producing glucose and releasing oxygen.",
+      "id": "jpqh06q"
+    },
+    {
+      "id": "dnd3x68",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Tissue</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Meristematic tissue</p>",
+            "<p>Growth of plants</p>",
+            "<p>Apical meristem</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Parenchyma</p>",
+            "<p>Storage and photosynthesis</p>",
+            "<p>Leaf cells</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Collenchyma</p>",
+            "<p>Support</p>",
+            "<p>Stem</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sclerenchyma</p>",
+            "<p>Mechanical strength</p>",
+            "<p>Seed coat</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Xylem</p>",
+            "<p>Transport of water</p>",
+            "<p>Vascular tissue</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Phloem</p>",
+            "<p>Transport of food</p>",
+            "<p>Vascular tissue</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rezd5w5",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Parts of a Plant"
+    },
+    {
+      "id": "ly20wbb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Function</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Root</p>",
+            "<p>Absorbs water and minerals</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Stem</p>",
+            "<p>Supports plant and transports substances</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Leaf</p>",
+            "<p>Photosynthesis</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Flower</p>",
+            "<p>Reproduction</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fruit</p>",
+            "<p>Protects seeds</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Seed</p>",
+            "<p>Grows into new plant</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7tpe7e",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Photosynthesis"
+    },
+    {
+      "type": "paragraph",
+      "id": "omjvelq",
+      "content": "Photosynthesis is the process by which plants prepare food using sunlight, carbon dioxide and water."
+    },
+    {
+      "type": "paragraph",
+      "id": "zotvnjy",
+      "content": "Equation: 6CO2 + 6H2O → C6H12O6 + 6O2"
+    },
+    {
+      "id": "65wanbl",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Types of Plant Nutrition"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Xylem",
+        "Phloem"
+      ],
+      "rows": [
+        [
+          "Primary Function",
+          "Transports water and dissolved minerals",
+          "Transports synthesized food (sucrose)"
+        ],
+        [
+          "Direction of Flow",
+          "Unidirectional (Root to aerial parts)",
+          "Bidirectional (Source to sink)"
+        ],
+        [
+          "Cell Viability",
+          "Composed mostly of dead cells at maturity",
+          "Composed mostly of living cells"
+        ]
+      ],
+      "id": "59tf4sv"
+    },
+    {
+      "type": "paragraph",
+      "id": "m6a04hf",
+      "content": "• Autotrophic nutrition – plants make their own food."
+    },
+    {
+      "type": "paragraph",
+      "id": "tdzvs81",
+      "content": "• Parasitic plants – obtain nutrients from host (e.g., Cuscuta)."
+    },
+    {
+      "type": "paragraph",
+      "id": "knex8t8",
+      "content": "• Insectivorous plants – trap insects for nutrients (e.g., pitcher plant)."
+    },
+    {
+      "type": "paragraph",
+      "id": "1umcuda",
+      "content": "• Symbiotic plants – mutual relationship with other organisms (e.g., lichens)."
+    },
+    {
+      "id": "9yjov8t",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Plant Reproduction"
+    },
+    {
+      "id": "lcxnjne",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sexual reproduction</p>",
+            "<p>Occurs through flowers and seeds</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Asexual reproduction</p>",
+            "<p>Occurs through vegetative propagation</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uclbvn0",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Vegetative Propagation"
+    },
+    {
+      "id": "pzesb6y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cutting</p>",
+            "<p>Rose</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Layering</p>",
+            "<p>Jasmine</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Grafting</p>",
+            "<p>Mango</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tissue culture</p>",
+            "<p>Banana</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "163nf69",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Plant Hormones"
+    },
+    {
+      "id": "4me5j8h",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Hormone</strong></p>",
+            "<p><strong>Function</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Auxin</p>",
+            "<p>Cell elongation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Gibberellin</p>",
+            "<p>Stem growth</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cytokinin</p>",
+            "<p>Cell division</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ethylene</p>",
+            "<p>Fruit ripening</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Abscisic acid</p>",
+            "<p>Growth inhibition</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Xylem transports water unidirectionally, whereas Phloem transports food bidirectionally.",
+        "Ethylene is the only natural plant hormone that exists in a gaseous state and regulates fruit ripening.",
+        "Bryophytes are commonly referred to as the 'amphibians of the plant kingdom' as they require water for reproduction.",
+        "The Light Reaction of photosynthesis occurs in the Grana, while the Dark Reaction takes place in the Stroma."
+      ],
+      "id": "b2vh863"
+    },
+    {
+      "id": "rgjar73",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Exam Points"
+    },
+    {
+      "type": "paragraph",
+      "id": "7siesq1",
+      "content": "• Chlorophyll is responsible for photosynthesis."
+    },
+    {
+      "type": "paragraph",
+      "id": "x0epr64",
+      "content": "• Xylem transports water while phloem transports food."
+    },
+    {
+      "type": "paragraph",
+      "id": "to3h2u7",
+      "content": "• Auxin is responsible for plant growth."
+    },
+    {
+      "type": "paragraph",
+      "id": "gvjn47h",
+      "content": "• Ethylene promotes fruit ripening."
+    },
+    {
+      "type": "paragraph",
+      "id": "rzfi9vt",
+      "content": "• Angiosperms are flowering plants."
+    }
+  ],
+  "enriched": true
+}

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "dpnciob"
+      "id": "dpnciob",
+      "content": "The Constitution of India is neither completely rigid nor completely flexible. It provides a well-defined procedure for amendment so that the Constitution can evolve with changing political, social and economic conditions. The power and procedure of constitutional amendment are given under Article 368 in Part XX of the Constitution."
     },
     {
       "type": "statStrip",
@@ -52,15 +53,18 @@
     },
     {
       "type": "paragraph",
-      "id": "8m6f0ap"
+      "id": "8m6f0ap",
+      "content": "• A constitutional amendment refers to a change, addition, or modification in the provisions of the Constitution."
     },
     {
       "type": "paragraph",
-      "id": "lk3fmtr"
+      "id": "lk3fmtr",
+      "content": "• It allows the Constitution to adapt to new needs and challenges."
     },
     {
       "type": "paragraph",
-      "id": "hhe7ruc"
+      "id": "hhe7ruc",
+      "content": "• The power to amend the Constitution lies with the Parliament of India."
     },
     {
       "id": "bsp6c63",
@@ -70,7 +74,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gn4pmxf"
+      "id": "gn4pmxf",
+      "content": "Article 368 provides the procedure for amending the Constitution. It states that Parliament has the power to amend any part of the Constitution according to the specified procedure."
     },
     {
       "id": "q5jbzrl",
@@ -85,33 +90,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Majority Required</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Simple Majority</p>",
+            "<p>More than 50% of members present and voting</p>",
+            "<p>Creation of new states, change in boundaries</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Special Majority</p>",
+            "<p>Majority of total membership + 2/3 members present and voting</p>",
+            "<p>Most constitutional amendments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Special Majority + State Ratification</p>",
+            "<p>Special majority in Parliament + approval by half of State Legislatures</p>",
+            "<p>Federal structure changes, election of President</p>"
           ]
         }
       ]
@@ -124,28 +129,28 @@
     },
     {
       "type": "paragraph",
-      "id": "gi3ufx0"
+      "id": "gi3ufx0",
+      "content": "• The amendment bill can be introduced in either House of Parliament."
     },
     {
       "type": "paragraph",
-      "id": "xrsraei"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Constitutional Provision (Article 368)",
-      "id": "1v2l78u"
+      "id": "xrsraei",
+      "content": "• It must be passed by the required majority in both Houses."
     },
     {
       "type": "paragraph",
-      "id": "sb6ff6k"
+      "id": "sb6ff6k",
+      "content": "• In certain cases, approval by at least half of the State Legislatures is required."
     },
     {
       "type": "paragraph",
-      "id": "4lr6pj3"
+      "id": "4lr6pj3",
+      "content": "• After approval, the bill is presented to the President."
     },
     {
       "type": "paragraph",
-      "id": "85qsjfn"
+      "id": "85qsjfn",
+      "content": "• The President must give assent; he cannot withhold assent."
     },
     {
       "id": "l7v5vgd",
@@ -155,15 +160,18 @@
     },
     {
       "type": "paragraph",
-      "id": "kb7kvmk"
+      "id": "kb7kvmk",
+      "content": "• Election of the President."
     },
     {
       "type": "paragraph",
-      "id": "d5mqsil"
+      "id": "d5mqsil",
+      "content": "• Distribution of legislative powers between the Union and the States."
     },
     {
       "type": "paragraph",
-      "id": "v33bf6w"
+      "id": "v33bf6w",
+      "content": "• Representation of States in Parliament."
     },
     {
       "type": "comparisonTable",
@@ -193,7 +201,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xvuodoy"
+      "id": "xvuodoy",
+      "content": "• Judiciary structure such as Supreme Court and High Courts."
     },
     {
       "id": "xv5au22",
@@ -208,81 +217,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Amendment</strong></p>",
+            "<p><strong>Year</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1st Amendment</p>",
+            "<p>1951</p>",
+            "<p>Added Ninth Schedule and restrictions on certain Fundamental Rights</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>7th Amendment</p>",
+            "<p>1956</p>",
+            "<p>Reorganization of States</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>24th Amendment</p>",
+            "<p>1971</p>",
+            "<p>Confirmed Parliament's power to amend Constitution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>42nd Amendment</p>",
+            "<p>1976</p>",
+            "<p>Called the Mini Constitution; added Fundamental Duties</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>44th Amendment</p>",
+            "<p>1978</p>",
+            "<p>Removed Right to Property from Fundamental Rights</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>73rd Amendment</p>",
+            "<p>1992</p>",
+            "<p>Introduced Panchayati Raj system</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>74th Amendment</p>",
+            "<p>1992</p>",
+            "<p>Introduced Municipalities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>86th Amendment</p>",
+            "<p>2002</p>",
+            "<p>Right to Education added (Article 21A)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>101st Amendment</p>",
+            "<p>2016</p>",
+            "<p>Introduced GST system</p>"
           ]
         }
       ]
@@ -295,15 +304,18 @@
     },
     {
       "type": "paragraph",
-      "id": "hflcqor"
+      "id": "hflcqor",
+      "content": "• The Basic Structure Doctrine was established by the Supreme Court in the Kesavananda Bharati case (1973)."
     },
     {
       "type": "paragraph",
-      "id": "1qho0ej"
+      "id": "1qho0ej",
+      "content": "• It states that Parliament cannot amend the basic structure of the Constitution."
     },
     {
       "type": "paragraph",
-      "id": "6khnr5w"
+      "id": "6khnr5w",
+      "content": "• Examples of basic structure elements include supremacy of the Constitution, rule of law, judicial review, federalism, and secularism."
     },
     {
       "id": "zx6ygxp",
@@ -313,11 +325,13 @@
     },
     {
       "type": "paragraph",
-      "id": "w1jom04"
+      "id": "w1jom04",
+      "content": "• Helps the Constitution remain relevant over time."
     },
     {
       "type": "paragraph",
-      "id": "f81te0b"
+      "id": "f81te0b",
+      "content": "• Allows democratic changes through legal procedures."
     },
     {
       "type": "examAlert",
@@ -330,7 +344,8 @@
     },
     {
       "type": "paragraph",
-      "id": "h4uuo41"
+      "id": "h4uuo41",
+      "content": "• Maintains balance between rigidity and flexibility."
     },
     {
       "id": "gwpsgoz",
@@ -340,19 +355,23 @@
     },
     {
       "type": "paragraph",
-      "id": "flhff9k"
+      "id": "flhff9k",
+      "content": "• Article 368 deals with constitutional amendments."
     },
     {
       "type": "paragraph",
-      "id": "30a2vmz"
+      "id": "30a2vmz",
+      "content": "• 42nd Amendment is known as the Mini Constitution."
     },
     {
       "type": "paragraph",
-      "id": "1so27y6"
+      "id": "1so27y6",
+      "content": "• Basic Structure Doctrine was established in 1973."
     },
     {
       "type": "paragraph",
-      "id": "0osya2r"
+      "id": "0osya2r",
+      "content": "• Right to Education was introduced by the 86th Amendment."
     }
   ],
   "enriched": true

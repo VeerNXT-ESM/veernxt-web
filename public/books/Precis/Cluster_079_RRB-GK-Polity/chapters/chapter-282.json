@@ -1,0 +1,125 @@
+{
+  "title": "Functions of CBI",
+  "order": 282,
+  "blocks": [
+    {
+      "id": "fop7wpl",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Anti-Corruption</p>",
+            "<p>Investigates corruption involving central government employees</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Economic Crimes</p>",
+            "<p>Handles bank fraud, financial scams, and cybercrime</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Special Crimes</p>",
+            "<p>Investigates serious and organized crimes</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>International Cooperation</p>",
+            "<p>Acts as India’s nodal agency for Interpol</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Central Bureau of Investigation serves as the premier investigating agency of India, tasked with upholding integrity in public administration and investigating complex crimes.",
+      "id": "tlizee3"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Bureau of Investigation (CBI)",
+        "National Investigation Agency (NIA)"
+      ],
+      "rows": [
+        [
+          "Primary Domain",
+          "Anti-Corruption, Economic Crimes, and Special Offences",
+          "Terrorism and Scheduled Offences Impacting National Security"
+        ],
+        [
+          "Legal Basis",
+          "Executive Resolution 1963 (Powers from DSPE Act, 1946)",
+          "Statutory Body created by the NIA Act, 2008"
+        ],
+        [
+          "State Consent Requirement",
+          "Requires General or Specific Consent of State Govt (Sec 6, DSPE Act)",
+          "Has concurrent jurisdiction nationwide without requiring state consent"
+        ]
+      ],
+      "id": "56v4e3t"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Established Year",
+          "value": "1963",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Statute",
+          "value": "DSPE Act, 1946",
+          "icon": "book"
+        },
+        {
+          "label": "Parent Ministry",
+          "value": "MoPPG&P",
+          "icon": "award"
+        },
+        {
+          "label": "Global Role",
+          "value": "Interpol NCB",
+          "icon": "info"
+        }
+      ],
+      "id": "fpr8xcs"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CBI is NOT a statutory body—it was set up by an executive resolution and draws investigation powers from the DSPE Act, 1946.",
+        "Under Section 6 of the DSPE Act, CBI requires the consent (general or specific) of the respective state government to conduct investigations in its territorial jurisdiction.",
+        "The CBI Director is appointed by a statutory committee consisting of the Prime Minister (Chairperson), Leader of Opposition/Single Largest Party in Lok Sabha, and the Chief Justice of India (or a nominated Supreme Court Judge)."
+      ],
+      "id": "kq3jo88"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Bureau of Investigation (CBI) was established in 1963 by an executive resolution of the Ministry of Home Affairs on the recommendation of the Santhanam Committee.",
+        "CBI is not a statutory body; it derives its investigative power from the Delhi Special Police Establishment (DSPE) Act, 1946.",
+        "It currently functions under the Ministry of Personnel, Public Grievances and Pensions, Government of India.",
+        "CBI serves as the official National Central Bureau (NCB) of Interpol in India, facilitating international law enforcement cooperation."
+      ],
+      "id": "svj4ned"
+    }
+  ],
+  "enriched": true
+}

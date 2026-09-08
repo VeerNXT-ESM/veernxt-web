@@ -1,0 +1,133 @@
+{
+  "title": "Jurisdiction and Powers of High Courts",
+  "order": 115,
+  "blocks": [
+    {
+      "id": "66s5g30",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Jurisdiction</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Original Jurisdiction</p>",
+            "<p>Cases related to enforcement of Fundamental Rights and disputes</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appellate Jurisdiction</p>",
+            "<p>Appeals from subordinate courts</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Writ Jurisdiction</p>",
+            "<p>Can issue writs under Article 226</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Supervisory Jurisdiction</p>",
+            "<p>Supervises subordinate courts</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Control over Subordinate Courts</p>",
+            "<p>Administrative control over district courts</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The writ jurisdiction of the High Court under Article 226 is wider than that of the Supreme Court under Article 32.",
+      "id": "0heoo25"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Article 226 (High Court)",
+        "Article 32 (Supreme Court)"
+      ],
+      "rows": [
+        [
+          "Scope of Writs",
+          "Enforcement of Fundamental Rights and ordinary legal rights",
+          "Enforcement of Fundamental Rights only"
+        ],
+        [
+          "Territorial Scope",
+          "Limited to its state/territorial jurisdiction",
+          "Applicable throughout the entire territory of India"
+        ],
+        [
+          "Nature of Right",
+          "Discretionary remedy (High Court may refuse relief)",
+          "Guaranteed Fundamental Right (Supreme Court cannot refuse)"
+        ]
+      ],
+      "id": "wxh34h0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total High Courts",
+          "value": "25",
+          "icon": "book"
+        },
+        {
+          "label": "Writ Jurisdiction",
+          "value": "Article 226",
+          "icon": "check"
+        },
+        {
+          "label": "Court of Record",
+          "value": "Article 215",
+          "icon": "award"
+        },
+        {
+          "label": "Oldest High Court",
+          "value": "Calcutta (1862)",
+          "icon": "calendar"
+        }
+      ],
+      "id": "ma8o7qy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "High Courts can issue writs for both Fundamental Rights and ordinary legal rights, whereas the Supreme Court can issue writs only for Fundamental Rights.",
+        "Supervisory jurisdiction under Article 227 extends to both administrative and judicial superintendence over subordinate courts.",
+        "The 7th Constitutional Amendment Act of 1956 authorized Parliament to establish a common High Court for two or more states or Union Territories."
+      ],
+      "id": "mopk9iw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The High Court stands at the apex of the state judicial administration in India.",
+        "Article 226 empowers High Courts to issue writs for the enforcement of Fundamental Rights and for any other legal purpose.",
+        "The High Court's writ jurisdiction is broader in scope than the Supreme Court's remedy under Article 32.",
+        "Under Article 227, High Courts possess supervisory jurisdiction over all subordinate courts and tribunals within their territorial jurisdiction.",
+        "As a Court of Record under Article 215, High Court proceedings are recorded as perpetual memory and it holds the power to punish for contempt of court."
+      ],
+      "id": "i01g6u5"
+    }
+  ],
+  "enriched": true
+}

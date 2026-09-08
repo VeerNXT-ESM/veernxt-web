@@ -1,0 +1,102 @@
+{
+  "title": "3. Structure of a Glacier",
+  "order": 146,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Zone of Accumulation – snowfall exceeds melting.",
+      "id": "s3zzlan"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Accumulation Zone",
+          "value": "Snowfall > Melting",
+          "icon": "check"
+        },
+        {
+          "label": "Ablation Zone",
+          "value": "Melting > Snowfall",
+          "icon": "info"
+        },
+        {
+          "label": "Boundary",
+          "value": "Equilibrium Line",
+          "icon": "book"
+        },
+        {
+          "label": "Structural Stress",
+          "value": "Crevasses",
+          "icon": "award"
+        }
+      ],
+      "id": "pfih001"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Equilibrium Line – boundary between accumulation and ablation zones.",
+      "id": "hw4h53x"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Zone of Accumulation is where total snowfall exceeds glacial melting.",
+        "The Zone of Ablation is characterized by melting exceeding snowfall.",
+        "The Equilibrium Line forms the dividing boundary between accumulation and ablation zones.",
+        "Crevasses are deep cracks that develop within a glacier due to stress.",
+        "The Glacial Tongue refers to the projecting extension of a glacier."
+      ],
+      "id": "rf36sdc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Glacial Zone",
+        "Dominant Process"
+      ],
+      "rows": [
+        [
+          "Zone of Accumulation",
+          "Snowfall exceeds melting"
+        ],
+        [
+          "Zone of Ablation",
+          "Melting exceeds snowfall"
+        ]
+      ],
+      "id": "w3kh747"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Zone of Ablation – melting exceeds snowfall.",
+      "id": "rpifwut"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Equilibrium Line – boundary between accumulation and ablation zones.",
+      "id": "92xgj80"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish clearly between the Zone of Accumulation (snowfall exceeds melting) and the Zone of Ablation (melting exceeds snowfall).",
+        "Identify the Equilibrium Line as the exact boundary separating the accumulation and ablation zones.",
+        "Remember that deep cracks caused by internal stress are specifically termed Crevasses."
+      ],
+      "id": "j62ib51"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Crevasses – deep cracks due to stress.",
+      "id": "xx4d1e2"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Glacial Tongue – projecting part of glacier.",
+      "id": "gvr5j1v"
+    }
+  ],
+  "enriched": true
+}

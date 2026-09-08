@@ -1,0 +1,215 @@
+{
+  "title": "2. Mass Wasting (Mass Movement)",
+  "order": 129,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Mass wasting is the downslope movement of weathered material under the influence of gravity without external transporting agents.",
+      "id": "rre24wz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Force",
+          "value": "Gravity",
+          "icon": "award"
+        },
+        {
+          "label": "Controlling Factors",
+          "value": "6 Factors",
+          "icon": "check"
+        },
+        {
+          "label": "Major Hazards",
+          "value": "3 Types",
+          "icon": "info"
+        },
+        {
+          "label": "Mitigation Methods",
+          "value": "4 Measures",
+          "icon": "book"
+        }
+      ],
+      "id": "kuaxj1h"
+    },
+    {
+      "id": "vf4tv98",
+      "type": "heading",
+      "level": 2,
+      "content": "A. Controlling Factors"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Mass wasting is the downslope movement of weathered material driven by gravity without external transporting agents.",
+        "Primary controlling factors include gravity, slope angle, water content, vegetation cover, rock structure, and seismic activity.",
+        "Water content serves a lubrication effect that promotes movement on slopes.",
+        "Hazards include loss of life, infrastructure damage, and blockage of rivers.",
+        "Key mitigation strategies involve retaining walls, afforestation, drainage control, and hazard mapping."
+      ],
+      "id": "7weccwj"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Gravity (primary force)",
+      "id": "ke8kkcm"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Slope angle (angle of repose concept)",
+      "id": "31iacc1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Mass wasting is the downslope movement of weathered material under the influence of gravity without external transporting agents.",
+      "id": "yll9dvl"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Water content (lubrication effect)",
+      "id": "6ml4a6l"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Vegetation cover",
+      "id": "e5o0guz"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Aspect",
+        "Key Characteristics / Measures"
+      ],
+      "rows": [
+        [
+          "Hazards",
+          "Loss of life, infrastructure damage, river blockage"
+        ],
+        [
+          "Mitigation",
+          "Retaining walls, afforestation, drainage control, hazard mapping"
+        ]
+      ],
+      "id": "dd9teit"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Rock structure",
+      "id": "6f4ebfn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Seismic activity",
+      "id": "csm4wqo"
+    },
+    {
+      "id": "m8ixqfb",
+      "type": "heading",
+      "level": 2,
+      "content": "Types of Mass Movement"
+    },
+    {
+      "id": "325rl5k",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Speed</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rockfall</p>",
+            "<p>Very Rapid</p>",
+            "<p>Mountain cliffs</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Landslide</p>",
+            "<p>Rapid</p>",
+            "<p>Himalayan slopes</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Debris Flow</p>",
+            "<p>Rapid</p>",
+            "<p>After heavy rainfall</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mudflow</p>",
+            "<p>Moderate–Rapid</p>",
+            "<p>Volcanic slopes</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Soil Creep</p>",
+            "<p>Very Slow</p>",
+            "<p>Gradual slope movement</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Solifluction</p>",
+            "<p>Slow</p>",
+            "<p>Periglacial regions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Avalanche</p>",
+            "<p>Extremely Rapid</p>",
+            "<p>Snow-covered mountains</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Gravity is the primary driving force in mass movement, acting without external transporting agents like wind or water.",
+        "The angle of repose and the lubrication effect of water are critical controlling factors in slope failure.",
+        "Afforestation, drainage control, hazard mapping, and retaining walls are frequently tested slope mitigation techniques."
+      ],
+      "id": "hqqd0rh"
+    },
+    {
+      "id": "jb4k36k",
+      "type": "heading",
+      "level": 2,
+      "content": "C. Hazards and Mitigation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Hazards: Loss of life, infrastructure damage, river blockage.",
+      "id": "a6s1p4d"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mitigation: Retaining walls, afforestation, drainage control, hazard mapping.",
+      "id": "aubdn8o"
+    }
+  ],
+  "enriched": true
+}

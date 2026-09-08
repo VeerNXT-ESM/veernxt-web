@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "b9uv2hc"
+      "id": "b9uv2hc",
+      "content": "Plant biology is the branch of biology that studies plants, their structure, growth, reproduction, metabolism, development, diseases and evolution. Plants are autotrophic organisms capable of producing their own food through photosynthesis."
     },
     {
       "type": "statStrip",
@@ -53,23 +54,28 @@
     },
     {
       "type": "paragraph",
-      "id": "etalxq9"
+      "id": "etalxq9",
+      "content": "• Plants are multicellular eukaryotic organisms."
     },
     {
       "type": "paragraph",
-      "id": "eiqcbvy"
+      "id": "eiqcbvy",
+      "content": "• They contain chlorophyll and perform photosynthesis."
     },
     {
       "type": "paragraph",
-      "id": "eq6j27j"
+      "id": "eq6j27j",
+      "content": "• Cell walls are made of cellulose."
     },
     {
       "type": "paragraph",
-      "id": "8x9fu3i"
+      "id": "8x9fu3i",
+      "content": "• They are generally non‑motile."
     },
     {
       "type": "paragraph",
-      "id": "tuzt946"
+      "id": "tuzt946",
+      "content": "• They store food mainly in the form of starch."
     },
     {
       "id": "7cu6p2q",
@@ -84,49 +90,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Plant Group</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Thallophyta</p>",
+            "<p>Simple plants without roots, stems or leaves</p>",
+            "<p>Algae</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bryophyta</p>",
+            "<p>Non‑vascular plants</p>",
+            "<p>Moss</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pteridophyta</p>",
+            "<p>Vascular plants with spores</p>",
+            "<p>Ferns</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gymnosperms</p>",
+            "<p>Seed producing plants without fruits</p>",
+            "<p>Pine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Angiosperms</p>",
+            "<p>Flowering plants</p>",
+            "<p>Mango, wheat</p>"
           ]
         }
       ]
@@ -144,50 +150,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Organelle</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cell wall</p>",
+            "<p>Provides support and protection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cell membrane</p>",
+            "<p>Controls movement of substances</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chloroplast</p>",
+            "<p>Photosynthesis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vacuole</p>",
+            "<p>Storage of water and nutrients</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nucleus</p>",
+            "<p>Controls cell activities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mitochondria</p>",
+            "<p>Energy production</p>"
           ]
         }
       ]
@@ -210,57 +216,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Tissue</strong></p>",
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Meristematic tissue</p>",
+            "<p>Growth of plants</p>",
+            "<p>Apical meristem</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Parenchyma</p>",
+            "<p>Storage and photosynthesis</p>",
+            "<p>Leaf cells</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Collenchyma</p>",
+            "<p>Support</p>",
+            "<p>Stem</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sclerenchyma</p>",
+            "<p>Mechanical strength</p>",
+            "<p>Seed coat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Xylem</p>",
+            "<p>Transport of water</p>",
+            "<p>Vascular tissue</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Phloem</p>",
+            "<p>Transport of food</p>",
+            "<p>Vascular tissue</p>"
           ]
         }
       ]
@@ -278,50 +284,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Root</p>",
+            "<p>Absorbs water and minerals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Stem</p>",
+            "<p>Supports plant and transports substances</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Leaf</p>",
+            "<p>Photosynthesis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Flower</p>",
+            "<p>Reproduction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fruit</p>",
+            "<p>Protects seeds</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Seed</p>",
+            "<p>Grows into new plant</p>"
           ]
         }
       ]
@@ -334,11 +340,13 @@
     },
     {
       "type": "paragraph",
-      "id": "7ait7qv"
+      "id": "7ait7qv",
+      "content": "Photosynthesis is the process by which plants prepare food using sunlight, carbon dioxide and water."
     },
     {
       "type": "paragraph",
-      "id": "1joukcu"
+      "id": "1joukcu",
+      "content": "Equation: 6CO2 + 6H2O → C6H12O6 + 6O2"
     },
     {
       "id": "djh5mla",
@@ -374,19 +382,23 @@
     },
     {
       "type": "paragraph",
-      "id": "r7skbpm"
+      "id": "r7skbpm",
+      "content": "• Autotrophic nutrition – plants make their own food."
     },
     {
       "type": "paragraph",
-      "id": "4g8rdps"
+      "id": "4g8rdps",
+      "content": "• Parasitic plants – obtain nutrients from host (e.g., Cuscuta)."
     },
     {
       "type": "paragraph",
-      "id": "2q0zfcw"
+      "id": "2q0zfcw",
+      "content": "• Insectivorous plants – trap insects for nutrients (e.g., pitcher plant)."
     },
     {
       "type": "paragraph",
-      "id": "3p678nx"
+      "id": "3p678nx",
+      "content": "• Symbiotic plants – mutual relationship with other organisms (e.g., lichens)."
     },
     {
       "id": "gyy4q8t",
@@ -401,22 +413,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sexual reproduction</p>",
+            "<p>Occurs through flowers and seeds</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Asexual reproduction</p>",
+            "<p>Occurs through vegetative propagation</p>"
           ]
         }
       ]
@@ -434,36 +446,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cutting</p>",
+            "<p>Rose</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Layering</p>",
+            "<p>Jasmine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Grafting</p>",
+            "<p>Mango</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tissue culture</p>",
+            "<p>Banana</p>"
           ]
         }
       ]
@@ -481,43 +493,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Hormone</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Auxin</p>",
+            "<p>Cell elongation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gibberellin</p>",
+            "<p>Stem growth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cytokinin</p>",
+            "<p>Cell division</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ethylene</p>",
+            "<p>Fruit ripening</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Abscisic acid</p>",
+            "<p>Growth inhibition</p>"
           ]
         }
       ]
@@ -539,23 +551,28 @@
     },
     {
       "type": "paragraph",
-      "id": "q1am4cs"
+      "id": "q1am4cs",
+      "content": "• Chlorophyll is responsible for photosynthesis."
     },
     {
       "type": "paragraph",
-      "id": "qam5dej"
+      "id": "qam5dej",
+      "content": "• Xylem transports water while phloem transports food."
     },
     {
       "type": "paragraph",
-      "id": "wy9pdwr"
+      "id": "wy9pdwr",
+      "content": "• Auxin is responsible for plant growth."
     },
     {
       "type": "paragraph",
-      "id": "em60k1a"
+      "id": "em60k1a",
+      "content": "• Ethylene promotes fruit ripening."
     },
     {
       "type": "paragraph",
-      "id": "hxvsp0t"
+      "id": "hxvsp0t",
+      "content": "• Angiosperms are flowering plants."
     }
   ],
   "enriched": true

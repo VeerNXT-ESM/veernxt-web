@@ -4,8 +4,15 @@
   "order": 31,
   "blocks": [
     {
+      "id": "35hgjmp",
+      "type": "image",
+      "imageId": "ihbai3f",
+      "src": "/books/Guide/GS & GK GUIDE BOOK/images/image_ihbai3f.jpeg"
+    },
+    {
       "type": "paragraph",
-      "id": "rs3j8fy"
+      "id": "rs3j8fy",
+      "content": "<img></img>Latitudes and longitudes form the geographical coordinate system used to locate places on the Earth's surface. Latitudes run east–west and measure distance north or south of the Equator, while longitudes run north–south and measure distance east or west of the Prime Meridian."
     },
     {
       "type": "statStrip",
@@ -53,19 +60,23 @@
     },
     {
       "type": "paragraph",
-      "id": "1sgsvt9"
+      "id": "1sgsvt9",
+      "content": "• Latitudes are imaginary lines drawn parallel to the Equator. "
     },
     {
       "type": "paragraph",
-      "id": "3985o2u"
+      "id": "3985o2u",
+      "content": "• They measure distance north or south of the Equator."
     },
     {
       "type": "paragraph",
-      "id": "s63wp36"
+      "id": "s63wp36",
+      "content": "• The Equator is 0° latitude."
     },
     {
       "type": "paragraph",
-      "id": "5zqm0bp"
+      "id": "5zqm0bp",
+      "content": "• Latitudes extend from 0° to 90° North and 0° to 90° South."
     },
     {
       "id": "2k1fxbs",
@@ -80,43 +91,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Latitude</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Equator (0°)</p>",
+            "<p>Divides Earth into Northern and Southern Hemispheres</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tropic of Cancer (23½° N)</p>",
+            "<p>Northern limit where Sun appears overhead</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tropic of Capricorn (23½° S)</p>",
+            "<p>Southern limit where Sun appears overhead</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Arctic Circle (66½° N)</p>",
+            "<p>Polar day and night occur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Antarctic Circle (66½° S)</p>",
+            "<p>Polar day and night occur</p>"
           ]
         }
       ]
@@ -128,20 +139,30 @@
       "content": "2. Longitudes"
     },
     {
-      "type": "paragraph",
-      "id": "oad17n7"
+      "id": "hg0x286",
+      "type": "image",
+      "imageId": "pqtm0bo",
+      "src": "/books/Guide/GS & GK GUIDE BOOK/images/image_pqtm0bo.jpeg"
     },
     {
       "type": "paragraph",
-      "id": "juld9l7"
+      "id": "oad17n7",
+      "content": "<img></img>• Longitudes are imaginary vertical lines joining North and South poles."
     },
     {
       "type": "paragraph",
-      "id": "m8k6yaa"
+      "id": "juld9l7",
+      "content": "• They measure distance east or west of the Prime Meridian."
     },
     {
       "type": "paragraph",
-      "id": "u8xooj6"
+      "id": "m8k6yaa",
+      "content": "• The Prime Meridian is located at Greenwich, London."
+    },
+    {
+      "type": "paragraph",
+      "id": "u8xooj6",
+      "content": "• There are 360° of longitude."
     },
     {
       "id": "czyqurk",
@@ -151,19 +172,23 @@
     },
     {
       "type": "paragraph",
-      "id": "w4jv920"
+      "id": "w4jv920",
+      "content": "• India follows Indian Standard Time."
     },
     {
       "type": "paragraph",
-      "id": "2mdda12"
+      "id": "2mdda12",
+      "content": "• The standard meridian is 82°30′ East longitude.       "
     },
     {
       "type": "paragraph",
-      "id": "amuoknz"
+      "id": "amuoknz",
+      "content": "• It passes near Mirzapur in Uttar Pradesh."
     },
     {
       "type": "paragraph",
-      "id": "hbm8dwj"
+      "id": "hbm8dwj",
+      "content": "• IST is 5 hours 30 minutes ahead of GMT."
     },
     {
       "type": "pullQuote",
@@ -179,42 +204,50 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "830cs7y"
+      "id": "830cs7y",
+      "content": "• Gujarat"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "96zo9ab"
+      "id": "96zo9ab",
+      "content": "• Rajasthan"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qtvh78x"
+      "id": "qtvh78x",
+      "content": "• Madhya Pradesh"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8l5t9fu"
+      "id": "8l5t9fu",
+      "content": "• Chhattisgarh"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cf7q2sr"
+      "id": "cf7q2sr",
+      "content": "• Jharkhand"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0pvfp0l"
+      "id": "0pvfp0l",
+      "content": "• West Bengal"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e4uqng4"
+      "id": "e4uqng4",
+      "content": "• Tripura"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "usvv8g9"
+      "id": "usvv8g9",
+      "content": "• Mizoram"
     },
     {
       "id": "rr2va1q",
@@ -256,17 +289,20 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "55cyzq5"
+      "id": "55cyzq5",
+      "content": "• South America"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "926rivn"
+      "id": "926rivn",
+      "content": "• Africa"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z6z8wio"
+      "id": "z6z8wio",
+      "content": "• Asia"
     },
     {
       "id": "lt29dhd",
@@ -277,47 +313,56 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "u62cvju"
+      "id": "u62cvju",
+      "content": "• Ecuador"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2v34yee"
+      "id": "2v34yee",
+      "content": "• Colombia"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "drosw1n"
+      "id": "drosw1n",
+      "content": "• Brazil"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fvxbejd"
+      "id": "fvxbejd",
+      "content": "• Gabon"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o9zww8c"
+      "id": "o9zww8c",
+      "content": "• Republic of Congo"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ozqzh43"
+      "id": "ozqzh43",
+      "content": "• Democratic Republic of Congo"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "af3j5qs"
+      "id": "af3j5qs",
+      "content": "• Uganda"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "v5xoe7n"
+      "id": "v5xoe7n",
+      "content": "• Kenya"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yir88zf"
+      "id": "yir88zf",
+      "content": "• Somalia"
     },
     {
       "type": "examAlert",
@@ -332,7 +377,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "xhlntfi"
+      "id": "xhlntfi",
+      "content": "• Indonesia"
     },
     {
       "id": "ayhaho3",
@@ -347,36 +393,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Latitude</strong></p>",
+            "<p><strong>Longitude</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Run east–west</p>",
+            "<p>Run north–south</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Measure north or south of Equator</p>",
+            "<p>Measure east or west of Prime Meridian</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Parallel to each other</p>",
+            "<p>Meet at poles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Used for climate zones</p>",
+            "<p>Used for time zones</p>"
           ]
         }
       ]
@@ -389,19 +435,23 @@
     },
     {
       "type": "paragraph",
-      "id": "uvjlazw"
+      "id": "uvjlazw",
+      "content": "• Equator is the longest latitude."
     },
     {
       "type": "paragraph",
-      "id": "pf96gtm"
+      "id": "pf96gtm",
+      "content": "• Prime Meridian is 0° longitude."
     },
     {
       "type": "paragraph",
-      "id": "0cw3xhn"
+      "id": "0cw3xhn",
+      "content": "• Tropic of Cancer divides India into tropical and subtropical parts."
     },
     {
       "type": "paragraph",
-      "id": "6zvn31f"
+      "id": "6zvn31f",
+      "content": "• India's standard meridian is 82°30′ E."
     }
   ],
   "enriched": true

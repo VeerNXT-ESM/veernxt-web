@@ -49,7 +49,14 @@
     },
     {
       "type": "paragraph",
-      "id": "pek1ji5"
+      "id": "pek1ji5",
+      "content": "Sources help historians reconstruct the past. Ancient Indian history is mainly known through archaeological and literary evidence."
+    },
+    {
+      "id": "9km436y",
+      "type": "image",
+      "imageId": "ow621eu",
+      "src": "/books/Guide/GS & GK GUIDE BOOK/images/image_ow621eu.png"
     },
     {
       "id": "yuhrzot",
@@ -58,36 +65,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Source</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Archaeological Sources</p>",
+            "<p>Inscriptions, Coins, Seals, Pottery, Monuments, Tools</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Literary Sources</p>",
+            "<p>Vedas, Upanishads, Puranas, Epics (Ramayana &amp; Mahabharata)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Foreign Accounts</p>",
+            "<p>Megasthenes (Indica), Fa-Hien, Hiuen Tsang</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Material Remains</p>",
+            "<p>Buildings, sculptures, terracotta figures</p>"
           ]
         }
       ]
@@ -100,7 +107,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xtwou5i"
+      "id": "xtwou5i",
+      "content": "The prehistoric period refers to the time before the invention of writing. It is known mainly through tools, cave paintings, and fossils."
     },
     {
       "id": "412u9p8",
@@ -109,33 +117,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Period</strong></p>",
+            "<p><strong>Features</strong></p>",
+            "<p><strong>Important Sites</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Paleolithic Age (Old Stone Age)</p>",
+            "<p>Use of crude stone tools, hunting and food gathering</p>",
+            "<p>Bhimbetka, Hunsgi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mesolithic Age (Middle Stone Age)</p>",
+            "<p>Microlith tools, beginning of domestication</p>",
+            "<p>Bagor, Adamgarh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Neolithic Age (New Stone Age)</p>",
+            "<p>Polished stone tools, agriculture begins</p>",
+            "<p>Mehrgarh, Burzahom</p>"
           ]
         }
       ]
@@ -148,11 +156,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8rnuvst"
+      "id": "8rnuvst",
+      "content": "Time Period: Approximately 2500 BCE – 1750 BCE"
     },
     {
       "type": "paragraph",
-      "id": "9ai5yl1"
+      "id": "9ai5yl1",
+      "content": "The Indus Valley Civilization was one of the world's earliest urban civilizations. It developed mainly along the Indus River and its tributaries."
     },
     {
       "id": "j3ul1nd",
@@ -162,35 +172,36 @@
     },
     {
       "type": "paragraph",
-      "id": "28n08ai"
+      "id": "28n08ai",
+      "content": "• Well-planned cities with grid pattern"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lsvda7s"
+      "id": "lsvda7s",
+      "content": "• Advanced drainage system                                                        "
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1gsy3xe"
+      "id": "1gsy3xe",
+      "content": "• Use of standardized bricks"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cndy7jk"
+      "id": "cndy7jk",
+      "content": "• Trade with Mesopotamia"
     },
     {
       "type": "paragraph",
-      "id": "u87ekcq"
+      "id": "u87ekcq",
+      "content": "• Use of seals and undeciphered script"
     },
     {
       "type": "paragraph",
-      "id": "gcwlckx"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Indus Valley Civilization (Harappan Civilization)",
-      "id": "15xy90i"
+      "id": "gcwlckx",
+      "content": "• Absence of large temples or palaces"
     },
     {
       "id": "oy7km9j",
@@ -205,50 +216,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Site</strong></p>",
+            "<p><strong>Important Feature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Harappa</p>",
+            "<p>First discovered site (1921)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mohenjo-daro</p>",
+            "<p>Great Bath and large granary</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lothal</p>",
+            "<p>Dockyard and maritime trade</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kalibangan</p>",
+            "<p>Evidence of ploughed field</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dholavira</p>",
+            "<p>Advanced water conservation system</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rakhigarhi</p>",
+            "<p>Largest Harappan site in India</p>"
           ]
         }
       ]
@@ -261,19 +272,23 @@
     },
     {
       "type": "paragraph",
-      "id": "z5advr5"
+      "id": "z5advr5",
+      "content": "• Cities were divided into Citadel and Lower Town"
     },
     {
       "type": "paragraph",
-      "id": "ybvtfdc"
+      "id": "ybvtfdc",
+      "content": "• Houses were made of baked bricks"
     },
     {
       "type": "paragraph",
-      "id": "73hr40b"
+      "id": "73hr40b",
+      "content": "• Roads intersected at right angles"
     },
     {
       "type": "paragraph",
-      "id": "83p1dnr"
+      "id": "83p1dnr",
+      "content": "• Covered drainage system was highly advanced"
     },
     {
       "id": "hiioxvq",
@@ -283,20 +298,24 @@
     },
     {
       "type": "paragraph",
-      "id": "h7qic38"
+      "id": "h7qic38",
+      "content": "• Agriculture was the main occupation"
     },
     {
       "type": "paragraph",
-      "id": "oyz401d"
+      "id": "oyz401d",
+      "content": "• Wheat and barley were major crops"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q2m2vxy"
+      "id": "q2m2vxy",
+      "content": "• Trade existed with Mesopotamia"
     },
     {
       "type": "paragraph",
-      "id": "1qrcjhc"
+      "id": "1qrcjhc",
+      "content": "• Standard weights and measures were used"
     },
     {
       "id": "qw2yoj3",
@@ -307,20 +326,24 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "gz5bow8"
+      "id": "gz5bow8",
+      "content": "• Worship of Mother Goddess"
     },
     {
       "type": "paragraph",
-      "id": "0u9p745"
+      "id": "0u9p745",
+      "content": "• Pashupati seal suggests proto‑Shiva worship                                                     "
     },
     {
       "type": "paragraph",
-      "id": "7aqlwxf"
+      "id": "7aqlwxf",
+      "content": "• Sacred animals included bull and unicorn"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "194sf66"
+      "id": "194sf66",
+      "content": "• Peepal tree considered sacred"
     },
     {
       "id": "qum5flz",
@@ -330,12 +353,14 @@
     },
     {
       "type": "paragraph",
-      "id": "nk3rb8b"
+      "id": "nk3rb8b",
+      "content": "• Climate change and drying of rivers"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pws7021"
+      "id": "pws7021",
+      "content": "• Floods and natural disasters"
     },
     {
       "type": "examAlert",
@@ -349,11 +374,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "oztbmch"
+      "id": "oztbmch",
+      "content": "• Decline in trade"
     },
     {
       "type": "paragraph",
-      "id": "tyron1a"
+      "id": "tyron1a",
+      "content": "• Possible Aryan migration theory (debated)"
     },
     {
       "id": "lojbxjr",
@@ -363,23 +390,28 @@
     },
     {
       "type": "paragraph",
-      "id": "oyilsaw"
+      "id": "oyilsaw",
+      "content": "• Indus Valley script is still undeciphered"
     },
     {
       "type": "paragraph",
-      "id": "fyaj4on"
+      "id": "fyaj4on",
+      "content": "• Lothal is famous for dockyard"
     },
     {
       "type": "paragraph",
-      "id": "vw3gmqz"
+      "id": "vw3gmqz",
+      "content": "• Dholavira is known for water management"
     },
     {
       "type": "paragraph",
-      "id": "n5bv57e"
+      "id": "n5bv57e",
+      "content": "• Harappa civilization is also called Bronze Age civilization"
     },
     {
       "type": "paragraph",
-      "id": "5zl3m2v"
+      "id": "5zl3m2v",
+      "content": "• Great Bath is located in Mohenjo‑daro"
     }
   ],
   "enriched": true

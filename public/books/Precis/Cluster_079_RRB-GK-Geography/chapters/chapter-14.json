@@ -1,0 +1,99 @@
+{
+  "title": "MOST IMPORTANT EXAM TRAPS",
+  "order": 14,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Venus is hottest — NOT Mercury.<br/>• Jupiter is largest.<br/>• Saturn least dense.<br/>• Uranus rotates sideways.<br/>• Asteroid belt between Mars &amp; Jupiter.<br/>• Universe expanding (Red Shift).",
+      "id": "fuclrej"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Venus is hottest — NOT Mercury.",
+      "id": "0beiqhz"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Celestial Entity / Concept",
+        "Key Feature / Exam Trap"
+      ],
+      "rows": [
+        [
+          "Venus",
+          "Hottest planet (NOT Mercury)"
+        ],
+        [
+          "Jupiter",
+          "Largest planet"
+        ],
+        [
+          "Saturn",
+          "Least dense planet"
+        ],
+        [
+          "Uranus",
+          "Rotates sideways"
+        ],
+        [
+          "Asteroid Belt",
+          "Located between Mars & Jupiter"
+        ],
+        [
+          "Red Shift",
+          "Evidence of Universe expanding"
+        ]
+      ],
+      "id": "eicddkm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Hottest Planet",
+          "value": "Venus",
+          "icon": "info"
+        },
+        {
+          "label": "Largest Planet",
+          "value": "Jupiter",
+          "icon": "award"
+        },
+        {
+          "label": "Least Dense",
+          "value": "Saturn",
+          "icon": "check"
+        },
+        {
+          "label": "Expansion Proof",
+          "value": "Red Shift",
+          "icon": "book"
+        }
+      ],
+      "id": "g32vkws"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Common Trap: Students often mistakenly mark Mercury as the hottest planet because it is closest to the Sun; Venus is actually the hottest.",
+        "Location Alert: Exams frequently test the position of the Asteroid Belt—remember it lies strictly between Mars and Jupiter.",
+        "Concept Alert: Red Shift is the specific astronomical term associated with the expansion of the Universe."
+      ],
+      "id": "e1zp0zg"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Venus is the hottest planet in the solar system, not Mercury.",
+        "Jupiter holds the distinction of being the largest planet.",
+        "Saturn has the lowest density of all planets.",
+        "Uranus features a unique sideways rotation.",
+        "The asteroid belt is situated between Mars and Jupiter.",
+        "Red Shift demonstrates that the Universe is continuously expanding."
+      ],
+      "id": "5dqf355"
+    }
+  ],
+  "enriched": true
+}

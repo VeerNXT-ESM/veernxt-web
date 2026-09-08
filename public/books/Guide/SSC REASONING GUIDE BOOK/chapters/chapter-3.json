@@ -1,0 +1,595 @@
+{
+  "id": "yu6oqy2",
+  "title": "Series",
+  "order": 3,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9a2flbz",
+      "content": "<strong>CHAPTER  03\tSERIES</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ecna07l",
+      "content": "<em>Number Series | Alphabet Series | Mixed Series | Missing Term</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "so0r49y",
+      "content": "<strong>3.1  Introduction</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ucxx2vt",
+      "content": "Series questions ask you to find a missing term or the wrong term in a sequence. The sequence follows a fixed mathematical or alphabetical rule. SSC CGL asks 3–4 series questions per paper, making this a high-priority topic."
+    },
+    {
+      "id": "03kvusp",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>APPROACH TO SOLVE ANY SERIES</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Step 1: Check if terms are increasing or decreasing.</p><p>Step 2: Find differences between consecutive terms.</p><p>Step 3: If differences are equal → arithmetic series.</p><p>Step 4: If differences are themselves in AP → second-order differences.</p><p>Step 5: If ratio between terms is constant → geometric series.</p><p>Step 6: Check for squares, cubes, prime additions.</p><p>Step 7: For alternating series — look at odd and even positions separately.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "esl31lh",
+      "content": "<strong>3.2  Types of Number Series</strong>"
+    },
+    {
+      "id": "gy86llh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Pattern Type</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Arithmetic Series (AP)</p>",
+            "<p>2, 5, 8, 11, 14... (diff = 3 each)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Geometric Series (GP)</p>",
+            "<p>3, 6, 12, 24, 48... (ratio = 2)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Square Series</p>",
+            "<p>1, 4, 9, 16, 25, 36... (n²)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cube Series</p>",
+            "<p>1, 8, 27, 64, 125... (n³)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Prime number additions</p>",
+            "<p>2, 4, 7, 12, 19... (+2,+3,+5,+7 prime diffs)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fibonacci-type</p>",
+            "<p>2, 3, 5, 8, 13, 21... (each = sum of two prev)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Two-step mixed</p>",
+            "<p>1, 2, 4, 7, 11, 16... (diffs: 1,2,3,4,5)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Alternating series</p>",
+            "<p>2, 6, 3, 9, 4, 12... (×2 and +1 alternate)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Difference of differences (2nd order AP)</p>",
+            "<p>1, 2, 5, 10, 17, 26... (diffs 1,3,5,7,9)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Combination: square + constant</p>",
+            "<p>2, 5, 10, 17, 26... (n²+1)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2v4m5ef",
+      "content": "<strong>3.3  Solved Number Series Examples</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "2i386mw",
+      "content": "<strong>Ex.1 </strong>4, 9, 16, 25, 36, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "5a1ummp",
+      "content": "<strong>Sol. </strong><em>2², 3², 4², 5², 6², → 7² = 49. Ans: 49</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "em1v0d1",
+      "content": "<strong>Ex.2 </strong>2, 6, 12, 20, 30, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "5k3krql",
+      "content": "<strong>Sol. </strong><em>Diffs: 4, 6, 8, 10... next diff = 12. 30+12 = 42. Ans: 42</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ot2xzq",
+      "content": "<strong>Ex.3 </strong>1, 8, 27, 64, 125, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "j6777ny",
+      "content": "<strong>Sol. </strong><em>1³, 2³, 3³, 4³, 5³, → 6³ = 216. Ans: 216</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ss8hjvn",
+      "content": "<strong>Ex.4 </strong>3, 7, 13, 21, 31, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "zr6zo9n",
+      "content": "<strong>Sol. </strong><em>Diffs: 4, 6, 8, 10... next = 12. 31+12 = 43. Ans: 43</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "o12t87j",
+      "content": "<strong>Ex.5 </strong>2, 3, 5, 7, 11, 13, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "r9a1ohl",
+      "content": "<strong>Sol. </strong><em>Prime numbers in order. Next prime after 13 is 17. Ans: 17</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "gsbnz9v",
+      "content": "<strong>Ex.6 </strong>1, 1, 2, 3, 5, 8, 13, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "w1zpw1d",
+      "content": "<strong>Sol. </strong><em>Fibonacci: each term = sum of previous two. 8+13 = 21. Ans: 21</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "p66ff09",
+      "content": "<strong>Ex.7 </strong>5, 10, 13, 26, 29, 58, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "2sbyb6a",
+      "content": "<strong>Sol. </strong><em>Pattern: ×2, +3, ×2, +3... 58+3 = 61. Ans: 61</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "mn9ppbb",
+      "content": "<strong>Ex.8 </strong>3, 5, 11, 29, 83, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "u44pzfi",
+      "content": "<strong>Sol. </strong><em>Pattern: ×2−1, ×2+1, ×3−4? Let's check: 3×2−1=5, 5×2+1=11, 11×3−4=29, 29×3−4=83, 83×3−4=245. Ans: 245</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "wlmemp3",
+      "content": "<strong>Ex.9  (Wrong Term) </strong>7, 14, 56, 168, 504, 1008, 3024"
+    },
+    {
+      "type": "paragraph",
+      "id": "ko4dmpv",
+      "content": "<strong>Sol. </strong><em>7×2=14, 14×4=56, 56×3=168, 168×3=504, 504×2=1008, 1008×3=3024. Pattern should be ×2,×4,×3,×3,×2,×3. Check 14×4=56✓. But expected pattern ×2,×3,×3... 14×3=42≠56. Wrong term is 56 → should be 42. Ans: 56 is wrong</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4wx19vc",
+      "content": "<strong>3.4  Alphabet Series</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "612etay",
+      "content": "In alphabet series, letters appear in a sequence based on their positions (A=1...Z=26). Common patterns: fixed skip, increasing skip, position reversal, vowel-consonant alternation."
+    },
+    {
+      "id": "bu4dy2o",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Pattern</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fixed gap forward</p>",
+            "<p>A, C, E, G, I... (skip 1 each)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Increasing gap</p>",
+            "<p>A, B, D, G, K... (gaps 1,2,3,4)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Skip consonants</p>",
+            "<p>A, E, I, O, U (vowels)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reverse alphabet</p>",
+            "<p>Z, Y, X, W... (reverse)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vowels only</p>",
+            "<p>A, E, I, O, U</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Consonants only</p>",
+            "<p>B, C, D, F, G, H, J...</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Alternate letters</p>",
+            "<p>A, C, B, D, C, E, D...</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Position pattern n²</p>",
+            "<p>A(1), D(4), I(9), P(16)...</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mirror pairs</p>",
+            "<p>AZ, BY, CX, DW...</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "aunzadn",
+      "content": "<strong>Ex.10 </strong>A, C, F, J, O, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "nq6gbeq",
+      "content": "<strong>Sol. </strong><em>Gaps: +2, +3, +4, +5, +6. O(15)+6 = U(21). Ans: U</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "uxybxxq",
+      "content": "<strong>Ex.11 </strong>Z, X, V, T, R, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "qu5nm86",
+      "content": "<strong>Sol. </strong><em>Z(26),X(24),V(22),T(20),R(18) — each −2. R−2 = P(16). Ans: P</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "6wxuy60",
+      "content": "<strong>Ex.12 </strong>B, E, H, K, N, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "ccv6uc5",
+      "content": "<strong>Sol. </strong><em>B(2),E(5),H(8),K(11),N(14) — each +3. N+3 = Q(17). Ans: Q</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "s6gce4t",
+      "content": "<strong>Ex.13 </strong>AZ, CX, EV, GT, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "z3y917b",
+      "content": "<strong>Sol. </strong><em>First letter: A,C,E,G → +2 each. H(8) next. Second letter: Z,X,V,T → −2 each. R next. Ans: IR</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "h2qpfxb",
+      "content": "<strong>3.5  Mixed Series (Letters + Numbers)</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "wimfewp",
+      "content": "<strong>Ex.14 </strong>A1B, C4D, E9F, G16H, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "81qsghp",
+      "content": "<strong>Sol. </strong><em>Letters: A,B / C,D / E,F / G,H → consecutive pairs. Numbers: 1,4,9,16 → 1²,2²,3²,4² → 5²=25. Next pair: I,J. Ans: I25J</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "2sq773y",
+      "content": "<strong>Ex.15 </strong>2A11, 4D13, 12G17, ?"
+    },
+    {
+      "type": "paragraph",
+      "id": "v7zhybx",
+      "content": "<strong>Sol. </strong><em>First numbers: 2,4,12 → ×2, ×3. Next ×4? = 48. Letters A(1),D(4),G(7) → +3 each → J(10). Last numbers: 11,13,17 → +2,+4 → +6? =23. Ans: 48J23</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "be63h8h",
+      "content": "<strong>3.6  Practice Questions</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "8wqy6nw",
+      "content": "<strong>Q.15  </strong>3, 6, 11, 18, 27, ?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "evul2lv",
+      "content": "<strong>  (a)  </strong>38"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "smgm6e7",
+      "content": "<strong>  (b)  </strong>40"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a73jdqd",
+      "content": "<strong>  (c)  </strong>35"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8fweyw0",
+      "content": "<strong>  (d)  </strong>36"
+    },
+    {
+      "type": "paragraph",
+      "id": "l2ajslo",
+      "content": "<strong>  Ans: (a) 38  Hint: </strong><em>Diffs: 3,5,7,9,11. 27+11=38.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ayldd7p",
+      "content": "<strong>Q.16  </strong>1, 4, 9, 16, 25, 36, ?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g28250a",
+      "content": "<strong>  (a)  </strong>42"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kj228jb",
+      "content": "<strong>  (b)  </strong>48"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "osjiip2",
+      "content": "<strong>  (c)  </strong>49"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d9gc09w",
+      "content": "<strong>  (d)  </strong>50"
+    },
+    {
+      "type": "paragraph",
+      "id": "i2gc2mo",
+      "content": "<strong>  Ans: (c) 49  Hint: </strong><em>Perfect squares: 7²=49.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "gqdn8vd",
+      "content": "<strong>Q.17  </strong>2, 5, 10, 17, 26, ?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "sigogh4",
+      "content": "<strong>  (a)  </strong>35"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "adu9n8x",
+      "content": "<strong>  (b)  </strong>36"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ddcskz9",
+      "content": "<strong>  (c)  </strong>37"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e5cvfjj",
+      "content": "<strong>  (d)  </strong>38"
+    },
+    {
+      "type": "paragraph",
+      "id": "8t2y3ap",
+      "content": "<strong>  Ans: (c) 37  Hint: </strong><em>n²+1: 1+1=2, 4+1=5, 9+1=10, 16+1=17, 25+1=26, 36+1=37.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "h925n9o",
+      "content": "<strong>Q.18  </strong>B, E, H, K, ?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "kstuyca",
+      "content": "<strong>  (a)  </strong>M"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5gftr95",
+      "content": "<strong>  (b)  </strong>N"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t64tx48",
+      "content": "<strong>  (c)  </strong>O"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p5c1tp4",
+      "content": "<strong>  (d)  </strong>P"
+    },
+    {
+      "type": "paragraph",
+      "id": "xr6kz7g",
+      "content": "<strong>  Ans: (b) N  Hint: </strong><em>B(2),E(5),H(8),K(11) → +3. K+3=N(14).</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "p1gbguj",
+      "content": "<strong>Q.19  </strong>7, 14, 28, 56, ?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "spmzt60",
+      "content": "<strong>  (a)  </strong>96"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fyyhn7m",
+      "content": "<strong>  (b)  </strong>112"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4afu2rd",
+      "content": "<strong>  (c)  </strong>108"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "han25cg",
+      "content": "<strong>  (d)  </strong>124"
+    },
+    {
+      "type": "paragraph",
+      "id": "d0cm1n0",
+      "content": "<strong>  Ans: (b) 112  Hint: </strong><em>×2 each time. 56×2=112.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ty4lpwl",
+      "content": "<strong>Q.20  </strong>AZ, BY, CX, ?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fclzcg5",
+      "content": "<strong>  (a)  </strong>DW"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hktykz4",
+      "content": "<strong>  (b)  </strong>DV"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "b5fh97x",
+      "content": "<strong>  (c)  </strong>EW"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a2lsx8c",
+      "content": "<strong>  (d)  </strong>DX"
+    },
+    {
+      "type": "paragraph",
+      "id": "hceoekr",
+      "content": "<strong>  Ans: (a) DW  Hint: </strong><em>A→B→C→D, Z→Y→X→W.</em>"
+    }
+  ],
+  "enriched": true
+}

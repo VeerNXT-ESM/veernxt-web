@@ -10,29 +10,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 323A</p>",
+            "<p>Provides for Administrative Tribunals for service matters.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 323B</p>",
+            "<p>Provides for Tribunals for other matters like taxation, elections, land reforms, and industrial disputes.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Inserted By</p>",
+            "<p>42nd Constitutional Amendment Act, 1976</p>"
           ]
         }
       ]
@@ -116,7 +116,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gsz80gk"
+      "id": "gsz80gk",
+      "content": "The 42nd Amendment aimed to reduce the workload of High Courts and ensure faster justice through specialized bodies."
     }
   ],
   "enriched": true

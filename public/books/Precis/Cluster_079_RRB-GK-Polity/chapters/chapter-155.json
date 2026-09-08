@@ -1,0 +1,90 @@
+{
+  "title": "RRB Quick Revision Box",
+  "order": 155,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Articles 168–212 – State Legislature<br/>Assembly – 5 years<br/>Council – Permanent<br/>Minimum age – Assembly 25, Council 30<br/>Money Bill – Assembly only<br/>Governor summons legislature",
+      "id": "ao42vsf"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Governor summons legislature",
+      "id": "fadip4r"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Assembly",
+        "Council"
+      ],
+      "rows": [
+        [
+          "Tenure",
+          "5 years",
+          "Permanent"
+        ],
+        [
+          "Minimum Age",
+          "25",
+          "30"
+        ],
+        [
+          "Money Bill",
+          "Assembly only",
+          "Not applicable"
+        ]
+      ],
+      "id": "ajer0xo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Articles",
+          "value": "168–212",
+          "icon": "book"
+        },
+        {
+          "label": "Assembly Tenure",
+          "value": "5 years",
+          "icon": "clock"
+        },
+        {
+          "label": "Assembly Min Age",
+          "value": "25",
+          "icon": "check"
+        },
+        {
+          "label": "Council Min Age",
+          "value": "30",
+          "icon": "award"
+        }
+      ],
+      "id": "lylrn7c"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Articles 168–212 deal directly with the State Legislature in competitive exams.",
+        "Note the minimum age distinction: Assembly requires 25 years, while Council requires 30 years.",
+        "Money Bills are exclusively restricted to the Assembly."
+      ],
+      "id": "d42i4tk"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Articles 168–212 pertain to the State Legislature.",
+        "The Legislative Assembly serves a 5-year tenure, whereas the Legislative Council is a permanent body.",
+        "The minimum age requirement is 25 for the Assembly and 30 for the Council.",
+        "Money Bills can be introduced in the Assembly only.",
+        "The Governor is responsible for summoning the legislature."
+      ],
+      "id": "22g9w2q"
+    }
+  ],
+  "enriched": true
+}

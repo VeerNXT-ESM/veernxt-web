@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "yqozlf9"
+      "id": "yqozlf9",
+      "content": "Tax is a compulsory contribution imposed by the government on individuals and businesses to raise revenue for public expenditure. It is not a voluntary payment and no direct benefit is guaranteed to the taxpayer."
     },
     {
       "type": "paragraph",
-      "id": "wqhedoz"
+      "id": "wqhedoz",
+      "content": "Objectives of Taxation:<br></br>• Raise revenue for government expenditure<br></br>• Reduce income inequality<br></br>• Control inflation<br></br>• Promote economic growth<br></br>• Discourage harmful consumption (sin goods)<br></br>"
     },
     {
       "id": "2yemcfg",
@@ -63,7 +65,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9bvipi7"
+      "id": "9bvipi7",
+      "content": "• Canon of Equality – Tax should be based on ability to pay.<br></br>• Canon of Certainty – Tax amount and time should be clear.<br></br>• Canon of Convenience – Tax should be easy to pay.<br></br>• Canon of Economy – Cost of collection should be low.<br></br>"
     },
     {
       "id": "ud1s8pt",
@@ -78,25 +81,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Direct Tax</strong></p>",
+            "<p><strong>Indirect Tax</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Burden</p>",
+            "<p>Cannot be shifted</p>",
+            "<p>Can be shifted to consumer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Examples</p>",
+            "<p>Income Tax, Corporate Tax, Capital Gains</p>",
+            "<p>GST, Customs Duty, Excise</p>"
           ]
         }
       ]
@@ -109,7 +112,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qox4pi0"
+      "id": "qox4pi0",
+      "content": "Income Tax:<br></br>• Levied on individual income.<br></br>• Progressive tax system.<br></br><br></br>Corporate Tax:<br></br>• Levied on company profits.<br></br><br></br>Capital Gains Tax:<br></br>• Levied on gains from sale of assets."
     },
     {
       "id": "6az01ww",
@@ -118,29 +122,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Income Tax</p>",
+            "<p>Tax on individual income</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Corporate Tax</p>",
+            "<p>Tax on company profits</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Capital Gains Tax</p>",
+            "<p>Tax on sale of assets</p>"
           ]
         }
       ]
@@ -153,7 +157,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yfbf1g5"
+      "id": "yfbf1g5",
+      "content": "GST:<br></br>• Implemented on 1 July 2017.<br></br>• Destination-based tax.<br></br>• Replaced VAT, Service Tax and many others.<br></br><br></br>Customs Duty:<br></br>• Levied on imports and exports.<br></br><br></br>Excise Duty:<br></br>• Levied on manufacture (petroleum, alcohol excluded from GST)."
     },
     {
       "id": "bmae8am",
@@ -162,29 +167,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>GST</p>",
+            "<p>Goods and Services Tax</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Customs Duty</p>",
+            "<p>Tax on imports/exports</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Excise Duty</p>",
+            "<p>Tax on manufacture (selected items)</p>"
           ]
         }
       ]
@@ -202,45 +207,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Collected By</strong></p>",
+            "<p><strong>Applicable On</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CGST</p>",
+            "<p>Central Government</p>",
+            "<p>Intra-state supply</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SGST</p>",
+            "<p>State Government</p>",
+            "<p>Intra-state supply</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IGST</p>",
+            "<p>Central Government</p>",
+            "<p>Inter-state supply</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "cl428f7"
-    },
-    {
-      "type": "pullQuote",
-      "content": "INCOME TAX SLABS – OLD vs NEW REGIME (LATEST STRUCTURE)",
-      "id": "qcnd9e7"
+      "id": "cl428f7",
+      "content": "Example:<br></br>If goods sold within state → CGST + SGST.<br></br>If goods sold between states → IGST.<br></br>"
     },
     {
       "id": "p9zsu7j",
@@ -255,43 +256,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Rate</strong></p>",
+            "<p><strong>Items Category</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>0%</p>",
+            "<p>Essential goods</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>5%</p>",
+            "<p>Basic necessities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>12%</p>",
+            "<p>Processed goods</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>18%</p>",
+            "<p>Most goods &amp; services</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>28%</p>",
+            "<p>Luxury &amp; sin goods</p>"
           ]
         }
       ]
@@ -304,7 +305,8 @@
     },
     {
       "type": "paragraph",
-      "id": "7ie6jbs"
+      "id": "7ie6jbs",
+      "content": "Progressive Tax – Rate increases with income.<br></br>Regressive Tax – Rate decreases as income rises.<br></br>Proportional Tax – Same rate for all income levels.<br></br>"
     },
     {
       "id": "j6ix3kn",
@@ -313,29 +315,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Progressive</p>",
+            "<p>Rate increases with income</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Regressive</p>",
+            "<p>Rate decreases as income rises</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Proportional</p>",
+            "<p>Same rate for all incomes</p>"
           ]
         }
       ]
@@ -348,15 +350,18 @@
     },
     {
       "type": "paragraph",
-      "id": "uii7dib"
+      "id": "uii7dib",
+      "content": "• CBDT – Direct taxes administration.<br></br>• CBIC – Indirect taxes administration.<br></br>• GST Council – Decides GST rates and structure.<br></br>"
     },
     {
       "type": "paragraph",
-      "id": "82fe4f5"
+      "id": "82fe4f5",
+      "content": "<strong>10. TAX-TO-GDP RATIO &amp; TAX BUOYANCY</strong>"
     },
     {
       "type": "paragraph",
-      "id": "05fx4p9"
+      "id": "05fx4p9",
+      "content": "Tax-to-GDP Ratio measures tax revenue as percentage of GDP.<br></br>Higher ratio indicates better revenue mobilisation.<br></br><br></br>Tax Buoyancy measures responsiveness of tax revenue to changes in GDP."
     },
     {
       "type": "comparisonTable",
@@ -392,7 +397,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "lq4ml3q"
+      "id": "lq4ml3q",
+      "content": "<strong>11.ADVANCED TAX STRUCTURE ADD-ON</strong>"
     },
     {
       "id": "qjxhqp3",
@@ -402,7 +408,8 @@
     },
     {
       "type": "paragraph",
-      "id": "10u1gv5"
+      "id": "10u1gv5",
+      "content": "A. OLD TAX REGIME (with deductions allowed)"
     },
     {
       "id": "dexsi57",
@@ -411,47 +418,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Income Slab (₹)</strong></p>",
+            "<p><strong>Tax Rate</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Up to 2.5 lakh</p>",
+            "<p>Nil</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>2.5 – 5 lakh</p>",
+            "<p>5%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>5 – 10 lakh</p>",
+            "<p>20%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Above 10 lakh</p>",
+            "<p>30%</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "3tz9xwj"
+      "id": "3tz9xwj",
+      "content": "Deductions allowed under sections like 80C, 80D, HRA etc."
     },
     {
       "type": "paragraph",
-      "id": "q5kvxky"
+      "id": "q5kvxky",
+      "content": "B. NEW TAX REGIME (Lower rates, fewer deductions)"
     },
     {
       "id": "e6agv0l",
@@ -460,64 +469,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Income Slab (₹)</strong></p>",
+            "<p><strong>Tax Rate</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Up to 3 lakh</p>",
+            "<p>Nil</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>3 – 6 lakh</p>",
+            "<p>5%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>6 – 9 lakh</p>",
+            "<p>10%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>9 – 12 lakh</p>",
+            "<p>15%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>12 – 15 lakh</p>",
+            "<p>20%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Above 15 lakh</p>",
+            "<p>30%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "",
+            ""
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "q7t9a12"
+      "id": "q7t9a12",
+      "content": "New regime is default option (as per recent budget changes)."
     },
     {
       "id": "mpjlxey",
@@ -527,7 +537,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yzzyyd9"
+      "id": "yzzyyd9",
+      "content": "GST Council was established under Article 279A of the Constitution."
     },
     {
       "id": "wad57iv",
@@ -536,43 +547,44 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chairperson</p>",
+            "<p>Union Finance Minister</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Members</p>",
+            "<p>Union MoS (Finance) + State Finance Ministers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Quorum</p>",
+            "<p>50% of total members</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Decision Rule</p>",
+            "<p>75% weighted majority</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "wml8bml"
+      "id": "wml8bml",
+      "content": "Voting Pattern:"
     },
     {
       "type": "examAlert",
@@ -585,7 +597,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vykqeza"
+      "id": "vykqeza",
+      "content": "• Centre’s vote weight = 1/3<br></br>• States’ combined vote weight = 2/3<br></br>• Decision requires 3/4th majority of weighted votes<br></br>"
     },
     {
       "id": "f8r77mz",
@@ -595,15 +608,18 @@
     },
     {
       "type": "paragraph",
-      "id": "6ngbjh9"
+      "id": "6ngbjh9",
+      "content": "Tax-to-GDP Ratio = (Total Tax Revenue / GDP) × 100<br></br>It measures the efficiency of tax collection relative to economic size."
     },
     {
       "type": "paragraph",
-      "id": "c2q1v65"
+      "id": "c2q1v65",
+      "content": "Tax Buoyancy measures responsiveness of tax revenue to changes in GDP.<br></br>Formula: % Change in Tax Revenue / % Change in GDP<br></br>"
     },
     {
       "type": "paragraph",
-      "id": "muccet7"
+      "id": "muccet7",
+      "content": "If Tax Buoyancy &gt; 1 → Tax revenue grows faster than GDP.<br></br>If Tax Buoyancy &lt; 1 → Tax revenue grows slower than GDP.<br></br>"
     },
     {
       "id": "05udj8v",
@@ -613,11 +629,13 @@
     },
     {
       "type": "paragraph",
-      "id": "oelivsi"
+      "id": "oelivsi",
+      "content": "• New tax regime is default.<br></br>• GST Council formed under Article 279A.<br></br>• Centre has 1/3 voting power.<br></br>• Tax-to-GDP ratio shows fiscal capacity."
     },
     {
       "type": "paragraph",
-      "id": "6ti46jb"
+      "id": "6ti46jb",
+      "content": "• GST is destination-based tax.<br></br>• Direct tax burden cannot be shifted.<br></br>• Progressive tax promotes equity.<br></br>• GST implemented on 1 July 2017.<br></br>"
     }
   ],
   "enriched": true

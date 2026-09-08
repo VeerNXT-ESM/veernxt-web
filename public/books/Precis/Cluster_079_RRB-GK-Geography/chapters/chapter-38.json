@@ -1,0 +1,56 @@
+{
+  "title": "4. Time Calculation : Fundamental Concept",
+  "order": 38,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Earth rotates 360° in 24 hours.<br/>→ 15° longitude equals 1 hour.<br/>→ 1° equals 4 minutes.",
+      "id": "oatca1r"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Earth rotates 360° in 24 hours.",
+      "id": "2jw6lgl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Full Rotation",
+          "value": "360° / 24 Hours",
+          "icon": "clock"
+        },
+        {
+          "label": "Hourly Angle",
+          "value": "15° Longitude",
+          "icon": "info"
+        },
+        {
+          "label": "Degree Time",
+          "value": "1° = 4 Minutes",
+          "icon": "clock"
+        }
+      ],
+      "id": "6ykhwcx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember the key formula for time conversion: 1° longitude equals 4 minutes.",
+        "Calculate time zone differences based on the 15° longitude per 1 hour ratio."
+      ],
+      "id": "qunuka6"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth completes a full 360° rotation over a period of 24 hours.",
+        "A longitudinal shift of 15° is equivalent to a time change of 1 hour.",
+        "A single degree (1°) of longitude corresponds to a time difference of 4 minutes."
+      ],
+      "id": "hvcdw7l"
+    }
+  ],
+  "enriched": true
+}

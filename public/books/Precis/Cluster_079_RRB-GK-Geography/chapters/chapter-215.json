@@ -1,0 +1,463 @@
+{
+  "title": "Chapter 18: Insolation, Heat Budget and Temperature Distribution",
+  "order": 215,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Insolation refers to the incoming solar radiation received by the Earth. It is the primary source of energy for all atmospheric processes, weather systems, ocean currents, and life on Earth. Without solar radiation, the planet would remain extremely cold and incapable of supporting life.",
+      "id": "gb1d2sw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Solar Energy Share",
+          "value": "99.9%",
+          "icon": "award"
+        },
+        {
+          "label": "Solar Constant",
+          "value": "1361 W/m²",
+          "icon": "info"
+        },
+        {
+          "label": "Sun Surface Temp",
+          "value": "~6000°C",
+          "icon": "info"
+        },
+        {
+          "label": "Normal Lapse Rate",
+          "value": "6.5°C / km",
+          "icon": "check"
+        },
+        {
+          "label": "Axial Tilt",
+          "value": "23.5°",
+          "icon": "calendar"
+        }
+      ],
+      "id": "1uguekh"
+    },
+    {
+      "id": "9e83l9y",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Nature of Solar Radiation"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Insolation is the primary shortwave solar energy source driving weather systems, ocean currents, and Earth's climate zones.",
+        "Earth maintains thermal equilibrium by radiating absorbed solar energy back into space as longwave terrestrial radiation.",
+        "Insolation varies based on the angle of incidence, sunshine duration, atmospheric transparency, altitude, and Earth's 23.5° axial tilt.",
+        "Albedo measures reflected radiation; reflective snow has high albedo, whereas oceans and forests have low albedo.",
+        "Temperature generally decreases with altitude at 6.5°C per km (normal lapse rate), but temperature inversion reverses this trend and traps pollutants."
+      ],
+      "id": "ioe8lly"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Sun emits energy in the form of electromagnetic waves. This energy travels through space as shortwave radiation.",
+      "id": "gsjfq7l"
+    },
+    {
+      "type": "paragraph",
+      "content": "• About 99.9% of Earth's energy is derived from the Sun.",
+      "id": "imxu9qk"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Solar radiation travels at the speed of light (~300,000 km per second).",
+      "id": "4zrxcgi"
+    },
+    {
+      "type": "paragraph",
+      "content": "• The Sun behaves nearly like a black body radiator with a surface temperature of about 6000°C.",
+      "id": "cy2igov"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Solar constant: The average energy received at the top of Earth's atmosphere is about 1361 W/m².",
+      "id": "iwo9r7t"
+    },
+    {
+      "id": "riwbn6b",
+      "type": "heading",
+      "level": 3,
+      "content": "Solar Spectrum"
+    },
+    {
+      "type": "paragraph",
+      "content": "Solar radiation consists mainly of visible light, ultraviolet radiation, and infrared radiation.",
+      "id": "jwlwn5y"
+    },
+    {
+      "id": "k35qtag",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Radiation</strong></p>",
+            "<p><strong>Approximate Share</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ultraviolet</p>",
+            "<p>7%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Visible Light</p>",
+            "<p>44%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Infrared</p>",
+            "<p>49%</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lgameny",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Factors Affecting Insolation"
+    },
+    {
+      "id": "7czk603",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "type": "paragraph",
+      "content": "• Angle of Incidence – Vertical rays concentrate energy; slanting rays spread it.",
+      "id": "yb5nxst"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Duration of Sunshine – Longer days receive more energy.",
+      "id": "gtzsc3x"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Transparency of Atmosphere – Clouds, dust, and water vapour reduce incoming radiation.",
+      "id": "xymrg52"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Distance from the Sun – Slight variation due to Earth's elliptical orbit.",
+      "id": "mbkhma8"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Altitude – Higher regions receive greater insolation due to thinner atmosphere.",
+      "id": "vlrblua"
+    },
+    {
+      "id": "v3pjfsd",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Role of Earth's Movements"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Rotation causes day and night, leading to diurnal temperature variation.",
+      "id": "qec28ik"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Revolution around the Sun creates seasons.",
+      "id": "fxikxyr"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Axial tilt (23.5°) causes unequal heating between hemispheres.",
+      "id": "fsjxf05"
+    },
+    {
+      "id": "nj7yc4l",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Earth's Heat Budget (Energy Balance)"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Insolation refers to the incoming solar radiation received by the Earth.",
+      "id": "qpgz91f"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Earth maintains a balance between incoming solar radiation and outgoing terrestrial radiation. This equilibrium is known as the heat budget.",
+      "id": "hpm45hl"
+    },
+    {
+      "id": "1wp46od",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Energy Share (Approx.)</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reflected back to space (albedo)</p>",
+            "<p>~30%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Absorbed by atmosphere</p>",
+            "<p>~19%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Absorbed by Earth's surface</p>",
+            "<p>~51%</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "To maintain thermal equilibrium, the Earth radiates the absorbed energy back into space as longwave radiation.",
+      "id": "hi479oj"
+    },
+    {
+      "id": "e2ce5kp",
+      "type": "heading",
+      "level": 3,
+      "content": "Albedo (Reflectivity)"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Albedo is the fraction of solar radiation reflected by a surface.",
+      "id": "wqewwqx"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Snow-covered surfaces have high albedo.",
+      "id": "zuvtlzu"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Oceans and forests have low albedo.",
+      "id": "rdwzsg9"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Increasing ice melt reduces albedo and accelerates warming.",
+      "id": "4fpbdz7"
+    },
+    {
+      "id": "lbul1nc",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Terrestrial Radiation and Greenhouse Effect"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Earth emits longwave radiation after absorbing solar energy. Greenhouse gases trap part of this heat, keeping the planet warm.",
+      "id": "u081nzg"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Major gases: CO₂, methane, nitrous oxide, water vapour.",
+      "id": "hrykamm"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Natural greenhouse effect is essential for life.",
+      "id": "5i3k2qq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Solar Radiation (Insolation)",
+        "Terrestrial Radiation"
+      ],
+      "rows": [
+        [
+          "Wavelength",
+          "Shortwave radiation",
+          "Longwave radiation"
+        ],
+        [
+          "Source",
+          "Sun (surface temp ~6000°C)",
+          "Earth's warmed surface"
+        ],
+        [
+          "Greenhouse Gas Interaction",
+          "Passes mostly through transparent atmosphere",
+          "Absorbed and trapped by greenhouse gases"
+        ]
+      ],
+      "id": "s9ihx1e"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Enhanced greenhouse effect leads to global warming.",
+      "id": "kwlugu2"
+    },
+    {
+      "id": "okvk9sy",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Global Temperature Distribution"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Temperature generally decreases from the equator toward the poles.",
+      "id": "9d5fimo"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Land heats and cools faster than water, creating continental and maritime climates.",
+      "id": "hcnle7g"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Ocean currents redistribute heat across the planet.",
+      "id": "v8ou67d"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Cloud cover moderates temperature extremes.",
+      "id": "6ron480"
+    },
+    {
+      "id": "jy168vo",
+      "type": "heading",
+      "level": 3,
+      "content": "Horizontal Distribution"
+    },
+    {
+      "type": "paragraph",
+      "content": "Isotherms are imaginary lines connecting places with equal temperature.",
+      "id": "skyok2u"
+    },
+    {
+      "type": "paragraph",
+      "content": "• They bend poleward over oceans due to warm currents.",
+      "id": "imsx30o"
+    },
+    {
+      "type": "paragraph",
+      "content": "• They bend equatorward over continents during winter.",
+      "id": "bt1dig4"
+    },
+    {
+      "id": "1iqk6ns",
+      "type": "heading",
+      "level": 3,
+      "content": "Vertical Distribution"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Temperature decreases with altitude.",
+      "id": "apxycz8"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Normal lapse rate is about 6.5°C per 1000 meters.",
+      "id": "dkegqo7"
+    },
+    {
+      "id": "7lbcqdw",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Temperature Inversion"
+    },
+    {
+      "type": "paragraph",
+      "content": "<img alt=\"Temperature Inversion\" src=\"/books/Precis/Cluster_079_RRB-GK-Geography/images/image_bf75uol.jpeg\"/>Temperature inversion occurs when temperature increases with altitude instead of decreasing.",
+      "id": "luyja63"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Common during winter nights.",
+      "id": "m3fmjra"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Solar constant value is approximately 1361 W/m² at the top of the Earth's atmosphere.",
+        "Earth emits longwave terrestrial radiation, whereas solar radiation arrives in shortwave form.",
+        "Normal lapse rate is precisely 6.5°C decrease per 1000 meters of vertical ascent.",
+        "Temperature inversion happens on winter nights when temperature increases with altitude, trapping cold air and fog near the ground."
+      ],
+      "id": "vgs4r2x"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Cold air becomes trapped near the surface.",
+      "id": "8qm0bj5"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Leads to fog and air pollution accumulation.",
+      "id": "3dyf7o3"
+    },
+    {
+      "id": "7aazfoz",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Importance of Insolation"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Drives atmospheric circulation.",
+      "id": "szwvwbd"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Controls climate zones.",
+      "id": "sx4rw2i"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Influences ocean currents.",
+      "id": "9uu9xod"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Supports photosynthesis.",
+      "id": "m69qgzh"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Determines seasons.",
+      "id": "rnupw35"
+    },
+    {
+      "id": "pobswiu",
+      "type": "heading",
+      "level": 2,
+      "content": "MOST IMPORTANT EXAM CONCEPTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Solar constant ≈ 1361 W/m².<br/>• About 30% radiation is reflected (albedo).<br/>• Earth emits longwave radiation.<br/>• Normal lapse rate is 6.5°C per km.<br/>• Temperature inversion traps pollutants.<br/>• Visible light forms the largest share of solar radiation.",
+      "id": "nw0souu"
+    }
+  ],
+  "enriched": true
+}

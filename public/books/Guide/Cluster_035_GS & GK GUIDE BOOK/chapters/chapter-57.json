@@ -1,0 +1,327 @@
+{
+  "id": "3pe5qqx",
+  "title": "Chapter 8: Matter and Its Properties",
+  "order": 57,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "hq96jr5",
+      "content": "Matter is anything that occupies space and has mass. Everything around us such as air, water, plants, animals and objects is made of matter. The study of matter and its properties is an important part of physics and chemistry."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "States of Matter",
+          "value": "5",
+          "icon": "book"
+        },
+        {
+          "label": "Max Density Temp",
+          "value": "4°C",
+          "icon": "info"
+        },
+        {
+          "label": "Latent Heat of Ice",
+          "value": "80 cal/g",
+          "icon": "check"
+        },
+        {
+          "label": "Latent Heat of Steam",
+          "value": "540 cal/g",
+          "icon": "award"
+        },
+        {
+          "label": "Std Atm Pressure",
+          "value": "760 mm Hg",
+          "icon": "clock"
+        }
+      ],
+      "id": "jhohe66"
+    },
+    {
+      "id": "f9lldev",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Matter"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Matter exists in five fundamental states: solid, liquid, gas, plasma (ionized gas), and Bose-Einstein Condensate (BEC).",
+        "Water reaches its maximum density and minimum volume at 4°C, causing ice (density 0.92 g/cm³) to float.",
+        "Steel is scientifically more elastic than rubber because it requires a larger deforming force to produce the same strain.",
+        "Latent heat represents energy absorbed or released during a phase change without altering temperature.",
+        "Viscosity of liquids decreases with rising temperature, whereas viscosity of gases increases with rising temperature."
+      ],
+      "id": "2wkshhr"
+    },
+    {
+      "type": "paragraph",
+      "id": "naypa3m",
+      "content": "• Matter is anything that has mass and occupies space."
+    },
+    {
+      "type": "paragraph",
+      "id": "x4eo7b5",
+      "content": "• It is made up of tiny particles called atoms and molecules."
+    },
+    {
+      "type": "paragraph",
+      "id": "ieod0hc",
+      "content": "• Matter exists in different forms in nature."
+    },
+    {
+      "id": "1udhwf5",
+      "type": "heading",
+      "level": 2,
+      "content": "2. States of Matter"
+    },
+    {
+      "id": "8lq69ye",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>State</strong></p>",
+            "<p><strong>Properties</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Solid</p>",
+            "<p>Fixed shape and volume</p>",
+            "<p>Iron, wood, ice</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Liquid</p>",
+            "<p>Fixed volume but no fixed shape</p>",
+            "<p>Water, oil, milk</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Gas</p>",
+            "<p>No fixed shape or volume</p>",
+            "<p>Air, oxygen, carbon dioxide</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "csb1iyv",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Physical Properties of Matter"
+    },
+    {
+      "type": "paragraph",
+      "id": "0s3mjvy",
+      "content": "• Mass – amount of matter in a substance."
+    },
+    {
+      "type": "paragraph",
+      "id": "luhvsq5",
+      "content": "• Volume – space occupied by matter."
+    },
+    {
+      "type": "pullQuote",
+      "content": "Water has maximum density at 4°C (1000 kg/m³ or 1 g/cm³).",
+      "id": "igs95ok"
+    },
+    {
+      "type": "paragraph",
+      "id": "5nvncwo",
+      "content": "• Density – mass per unit volume."
+    },
+    {
+      "type": "paragraph",
+      "id": "gn3bgpk",
+      "content": "• Elasticity – ability of a material to regain its original shape."
+    },
+    {
+      "id": "ap0bzr2",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Changes in States of Matter"
+    },
+    {
+      "id": "5cnh86k",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Melting</p>",
+            "<p>Solid changes into liquid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Freezing</p>",
+            "<p>Liquid changes into solid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Evaporation</p>",
+            "<p>Liquid changes into gas</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Condensation</p>",
+            "<p>Gas changes into liquid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sublimation</p>",
+            "<p>Solid changes directly into gas</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jpg0lft",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Density"
+    },
+    {
+      "type": "paragraph",
+      "id": "w7n5jmn",
+      "content": "Density is defined as mass per unit volume."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Mass",
+        "Weight"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Amount of matter present in a body",
+          "Gravitational force with which Earth attracts a body"
+        ],
+        [
+          "Constancy",
+          "Constant everywhere in the universe",
+          "Varies from place to place with gravity (g)"
+        ],
+        [
+          "Formula & SI Unit",
+          "Measured in kilograms (kg)",
+          "W = m × g, measured in Newtons (N)"
+        ],
+        [
+          "Zero Value",
+          "Can never be zero",
+          "Can be zero where gravity is zero (e.g., center of Earth)"
+        ]
+      ],
+      "id": "u3szohx"
+    },
+    {
+      "type": "paragraph",
+      "id": "26clt1b",
+      "content": "Formula: Density = Mass / Volume"
+    },
+    {
+      "type": "paragraph",
+      "id": "fhdyupx",
+      "content": "SI Unit of Density = kg/m³"
+    },
+    {
+      "id": "og85t8r",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Elasticity"
+    },
+    {
+      "type": "paragraph",
+      "id": "f7b0jsw",
+      "content": "Elasticity is the property of a material to regain its original shape after deformation when the external force is removed."
+    },
+    {
+      "id": "zx3dlmt",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Pressure"
+    },
+    {
+      "type": "paragraph",
+      "id": "ymt8kvh",
+      "content": "Pressure is defined as force acting per unit area."
+    },
+    {
+      "type": "paragraph",
+      "id": "tpto5vd",
+      "content": "Formula: Pressure = Force / Area"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "y4rc2wu",
+      "content": "SI Unit = Pascal (Pa)"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Barometer Trends: A sudden drop indicates a storm/cyclone, a slow drop indicates rain, and a slow rise indicates clear weather.",
+        "Sublimation Substances: Camphor, Ammonium Chloride, Dry Ice (solid CO2), and Naphthalene directly change from solid to gas.",
+        "Pascal's Law: Explains the working principle behind hydraulic lifts, hydraulic presses, and hydraulic brakes.",
+        "Surface Tension Effects: Causes raindrops to be spherical, allows insects to walk on water, and enables capillary action."
+      ],
+      "id": "5us808e"
+    },
+    {
+      "id": "dr2ybq0",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "rh932ws",
+      "content": "• Matter has mass and occupies space."
+    },
+    {
+      "type": "paragraph",
+      "id": "pcdt9w5",
+      "content": "• Density = Mass / Volume."
+    },
+    {
+      "type": "paragraph",
+      "id": "07j63p7",
+      "content": "• SI unit of pressure is Pascal."
+    },
+    {
+      "type": "paragraph",
+      "id": "u60zr6v",
+      "content": "• There are three main states of matter: solid, liquid and gas."
+    }
+  ],
+  "enriched": true
+}

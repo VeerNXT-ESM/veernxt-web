@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "0wbep60"
+      "id": "0wbep60",
+      "content": "Fundamental Rights are basic human freedoms guaranteed by the Constitution of India to all citizens. They are contained in Part III of the Constitution (Articles 12–35). These rights protect individual liberty and ensure equality before the law. Dr. B.R. Ambedkar called the Right to Constitutional Remedies the 'heart and soul of the Constitution'."
     },
     {
       "type": "statStrip",
@@ -58,57 +59,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Right</strong></p>",
+            "<p><strong>Articles</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Right to Equality</p>",
+            "<p>Articles 14–18</p>",
+            "<p>Equality before law and abolition of social discrimination</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Right to Freedom</p>",
+            "<p>Articles 19–22</p>",
+            "<p>Civil liberties like speech, movement, profession</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Right against Exploitation</p>",
+            "<p>Articles 23–24</p>",
+            "<p>Prohibits human trafficking and child labour</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Freedom of Religion</p>",
+            "<p>Articles 25–28</p>",
+            "<p>Guarantees religious freedom</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cultural &amp; Educational Rights</p>",
+            "<p>Articles 29–30</p>",
+            "<p>Protects minority culture and education</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Right to Constitutional Remedies</p>",
+            "<p>Article 32</p>",
+            "<p>Allows citizens to approach courts for enforcement of rights</p>"
           ]
         }
       ]
@@ -121,11 +122,13 @@
     },
     {
       "type": "paragraph",
-      "id": "7ft2bqr"
+      "id": "7ft2bqr",
+      "content": "• Article 12 defines the term 'State'. It includes Government, Parliament, State Legislatures, local authorities and other authorities."
     },
     {
       "type": "paragraph",
-      "id": "xwzu98y"
+      "id": "xwzu98y",
+      "content": "• Article 13 declares that laws inconsistent with Fundamental Rights are void."
     },
     {
       "id": "ae8x5oy",
@@ -140,43 +143,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 14</p>",
+            "<p>Equality before law and equal protection of laws</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 15</p>",
+            "<p>Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 16</p>",
+            "<p>Equality of opportunity in public employment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 17</p>",
+            "<p>Abolition of untouchability</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 18</p>",
+            "<p>Abolition of titles</p>"
           ]
         }
       ]
@@ -189,19 +192,23 @@
     },
     {
       "type": "paragraph",
-      "id": "asdgmnh"
+      "id": "asdgmnh",
+      "content": "• President and Governors enjoy immunity from court proceedings during their tenure."
     },
     {
       "type": "paragraph",
-      "id": "djrz0ug"
+      "id": "djrz0ug",
+      "content": "• Parliament can make special provisions for women and children."
     },
     {
       "type": "paragraph",
-      "id": "zw1crul"
+      "id": "zw1crul",
+      "content": "• State can provide reservations for SC, ST and OBC."
     },
     {
       "type": "paragraph",
-      "id": "1c05opv"
+      "id": "1c05opv",
+      "content": "• Diplomatic officials enjoy immunity."
     },
     {
       "id": "oaag8uw",
@@ -211,37 +218,39 @@
     },
     {
       "type": "paragraph",
-      "id": "l1dqq2h"
+      "id": "l1dqq2h",
+      "content": "Article 19 provides six freedoms to citizens:"
     },
     {
       "type": "paragraph",
-      "id": "v8y8yc9"
+      "id": "v8y8yc9",
+      "content": "• Freedom of speech and expression"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1mnis9z"
+      "id": "1mnis9z",
+      "content": "• Freedom to assemble peacefully"
     },
     {
       "type": "paragraph",
-      "id": "o2ly1ok"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Right to Constitutional Remedies (Articles 32–35)",
-      "id": "n6mx7bp"
+      "id": "o2ly1ok",
+      "content": "• Freedom to form associations or unions"
     },
     {
       "type": "paragraph",
-      "id": "80wdeua"
+      "id": "80wdeua",
+      "content": "• Freedom to move freely throughout India"
     },
     {
       "type": "paragraph",
-      "id": "d75gaz1"
+      "id": "d75gaz1",
+      "content": "• Freedom to reside and settle in any part of India"
     },
     {
       "type": "paragraph",
-      "id": "gmp1y15"
+      "id": "gmp1y15",
+      "content": "• Freedom to practice any profession or occupation"
     },
     {
       "id": "gaqewx6",
@@ -252,26 +261,31 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "4xhsofn"
+      "id": "4xhsofn",
+      "content": "• Security of the state"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8dgvcki"
+      "id": "8dgvcki",
+      "content": "• Public order"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vu6ret2"
+      "id": "vu6ret2",
+      "content": "• Morality"
     },
     {
       "type": "paragraph",
-      "id": "bhqnokv"
+      "id": "bhqnokv",
+      "content": "• Friendly relations with foreign states"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8kp0c87"
+      "id": "8kp0c87",
+      "content": "• Contempt of court"
     },
     {
       "type": "comparisonTable",
@@ -312,23 +326,28 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "yjsc75a"
+      "id": "yjsc75a",
+      "content": "• Defamation"
     },
     {
       "type": "paragraph",
-      "id": "1qjbd5k"
+      "id": "1qjbd5k",
+      "content": "Article 20 protects against arbitrary punishment."
     },
     {
       "type": "paragraph",
-      "id": "p3a9m77"
+      "id": "p3a9m77",
+      "content": "Article 21 guarantees protection of life and personal liberty."
     },
     {
       "type": "paragraph",
-      "id": "tu759p2"
+      "id": "tu759p2",
+      "content": "Article 21A provides the Right to Education (added by 86th Amendment)."
     },
     {
       "type": "paragraph",
-      "id": "cwsyv6q"
+      "id": "cwsyv6q",
+      "content": "Article 22 protects against arbitrary arrest and detention."
     },
     {
       "id": "5dw7ycy",
@@ -343,22 +362,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 23</p>",
+            "<p>Prohibits human trafficking and forced labour</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 24</p>",
+            "<p>Prohibits employment of children below 14 years in hazardous industries</p>"
           ]
         }
       ]
@@ -376,36 +395,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 25</p>",
+            "<p>Freedom of conscience and free profession of religion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 26</p>",
+            "<p>Freedom to manage religious affairs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 27</p>",
+            "<p>Freedom from taxation for promotion of religion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 28</p>",
+            "<p>Freedom from religious instruction in certain educational institutions</p>"
           ]
         }
       ]
@@ -423,22 +442,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Article</strong></p>",
+            "<p><strong>Provision</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 29</p>",
+            "<p>Protection of language, script and culture of minorities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Article 30</p>",
+            "<p>Right of minorities to establish and administer educational institutions</p>"
           ]
         }
       ]
@@ -451,7 +470,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qmp6j6g"
+      "id": "qmp6j6g",
+      "content": "Citizens can approach Supreme Court or High Court to enforce Fundamental Rights."
     },
     {
       "type": "examAlert",
@@ -476,43 +496,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Writ</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Habeas Corpus</p>",
+            "<p>Produce a person illegally detained</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mandamus</p>",
+            "<p>Order to public authority to perform duty</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Prohibition</p>",
+            "<p>Prevent lower court from exceeding jurisdiction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Certiorari</p>",
+            "<p>Transfer case from lower court to higher court</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Quo Warranto</p>",
+            "<p>Challenge legality of holding public office</p>"
           ]
         }
       ]
@@ -525,23 +545,28 @@
     },
     {
       "type": "paragraph",
-      "id": "2vntuz6"
+      "id": "2vntuz6",
+      "content": "• Fundamental Rights are given in Part III (Articles 12–35)."
     },
     {
       "type": "paragraph",
-      "id": "yw6wzlp"
+      "id": "yw6wzlp",
+      "content": "• Article 32 is called the heart and soul of the Constitution."
     },
     {
       "type": "paragraph",
-      "id": "hiyneq5"
+      "id": "hiyneq5",
+      "content": "• Article 17 abolishes untouchability."
     },
     {
       "type": "paragraph",
-      "id": "ppqltgn"
+      "id": "ppqltgn",
+      "content": "• Right to Education added by 86th Amendment."
     },
     {
       "type": "paragraph",
-      "id": "aldus5g"
+      "id": "aldus5g",
+      "content": "• There are currently six Fundamental Rights."
     }
   ],
   "enriched": true

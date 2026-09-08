@@ -1,0 +1,85 @@
+{
+  "title": "8. Depositional Landforms",
+  "order": 151,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "Barchans are crescent-shaped dunes with tips or horns pointing downstream in the direction of the prevailing wind.",
+      "id": "jgpwb9i"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Alluvial Fan",
+        "Delta"
+      ],
+      "rows": [
+        [
+          "Location of Formation",
+          "At the base of mountain fronts (foothills)",
+          "At the mouth of a river (sea or lake entry point)"
+        ],
+        [
+          "Sediment Sorting",
+          "Poorly sorted with coarse debris near apex",
+          "Well sorted with fine silt and clay carried further"
+        ],
+        [
+          "Slope Gradient",
+          "Moderate to steep piedmont slope",
+          "Extremely low to flat coastal plain"
+        ]
+      ],
+      "id": "co7va8u"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Fluvial Landforms",
+          "value": "Deltas & Fans",
+          "icon": "book"
+        },
+        {
+          "label": "Glacial Landforms",
+          "value": "Drumlins & Moraines",
+          "icon": "award"
+        },
+        {
+          "label": "Aeolian Landforms",
+          "value": "Barchans & Loess",
+          "icon": "check"
+        },
+        {
+          "label": "Karst Landforms",
+          "value": "Stalactites & Stalagmites",
+          "icon": "info"
+        }
+      ],
+      "id": "20dcyds"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Barchan dunes have horns pointing DOWNWIND (in the direction of wind flow), a high-frequency question in UPSC and State PSC exams.",
+        "Drumlins represent GLACIAL DEPOSITION, whereas Roches Moutonnées represent GLACIAL EROSION; do not confuse the two.",
+        "Stalactites hang from the ceiling, while Stalagmites grow up from the floor; when they join, they form a limestone pillar."
+      ],
+      "id": "oj88c75"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Alluvial fans develop at mountain fronts where streams break onto gentle slopes, depositing coarse detritus in a fan-shaped form.",
+        "Deltas form at river mouths when river speed drops upon entering standing bodies of water like seas or lakes.",
+        "Barchans are crescent-shaped sand dunes formed by aeolian deposition with horns pointing downwind.",
+        "Drumlins are oval, streamlined hillocks formed by glacial till, giving rise to basket of eggs topography.",
+        "Stalactites grow downwards from cave ceilings while stalagmites rise upward from cave floors due to calcium carbonate deposition."
+      ],
+      "id": "rt72zlc"
+    }
+  ],
+  "enriched": true
+}

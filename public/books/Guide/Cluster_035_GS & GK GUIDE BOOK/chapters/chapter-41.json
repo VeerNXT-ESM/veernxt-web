@@ -1,0 +1,366 @@
+{
+  "id": "5j5lb4g",
+  "title": "Chapter 41: Basic Concepts of Economics",
+  "order": 41,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5qjvuyv",
+      "content": "Economics is the social science that studies how individuals, businesses and governments make choices about allocating scarce resources to satisfy unlimited human wants. It helps us understand production, consumption, distribution and exchange of goods and services."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Father of Economics",
+          "value": "Adam Smith",
+          "icon": "award"
+        },
+        {
+          "label": "Main Branches",
+          "value": "2 (Micro & Macro)",
+          "icon": "book"
+        },
+        {
+          "label": "Factors of Production",
+          "value": "4 Core Factors",
+          "icon": "check"
+        },
+        {
+          "label": "Fundamental Problem",
+          "value": "Scarcity & Choice",
+          "icon": "info"
+        }
+      ],
+      "id": "qlsnzw4"
+    },
+    {
+      "id": "vemfmkr",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Economics"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Economics originates from the Greek word 'Oikonomia', which means household management.",
+        "Adam Smith defined economics as the 'Science of Wealth' in his seminal 1776 work 'The Wealth of Nations'.",
+        "Economics is divided into Microeconomics (study of individual economic units) and Macroeconomics (study of the economy as a whole).",
+        "The four fundamental factors of production are Land, Labour, Capital, and Entrepreneurship/Organization.",
+        "Opportunity Cost refers to the value of the next best alternative foregone when making a decision."
+      ],
+      "id": "zpms09f"
+    },
+    {
+      "type": "paragraph",
+      "id": "hzzevs1",
+      "content": "• Economics studies how scarce resources are used to satisfy unlimited human wants."
+    },
+    {
+      "type": "paragraph",
+      "id": "381krlx",
+      "content": "• It explains how goods and services are produced, distributed and consumed."
+    },
+    {
+      "type": "paragraph",
+      "id": "nwa5g6e",
+      "content": "• The word Economics is derived from the Greek words 'Oikos' (house) and 'Nomos' (management)."
+    },
+    {
+      "id": "ue2pbk9",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Definitions of Economics"
+    },
+    {
+      "id": "i64rr2u",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Economist</strong></p>",
+            "<p><strong>Definition</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Adam Smith</p>",
+            "<p>Economics is the study of wealth.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Alfred Marshall</p>",
+            "<p>Economics is the study of mankind in the ordinary business of life.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lionel Robbins</p>",
+            "<p>Economics is the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g09ih9n",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Branches of Economics"
+    },
+    {
+      "id": "9xn0ovg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Microeconomics</p>",
+            "<p>Macroeconomics</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Study of individual units such as households and firms</p>",
+            "<p>Study of the economy as a whole</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Focuses on price determination</p>",
+            "<p>Focuses on national income and inflation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Example: demand and supply</p>",
+            "<p>Example: GDP, unemployment</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Economics is a science which studies human behavior as a relationship between ends and scarce means which have alternative uses.",
+      "id": "vhmye7j"
+    },
+    {
+      "id": "dxfmfcg",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Goods and Services"
+    },
+    {
+      "type": "paragraph",
+      "id": "f1wiz6h",
+      "content": "Goods: Physical items that satisfy human wants (e.g., food, clothes, cars)."
+    },
+    {
+      "type": "paragraph",
+      "id": "46lmyde",
+      "content": "Services: Activities performed for others (e.g., education, banking, transport)."
+    },
+    {
+      "id": "ckzcrv9",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Factors of Production"
+    },
+    {
+      "id": "6rjq3bh",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>Meaning</strong></p>",
+            "<p><strong>Reward</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Land</p>",
+            "<p>Natural resources such as soil, minerals and water</p>",
+            "<p>Rent</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Labour</p>",
+            "<p>Human effort used in production</p>",
+            "<p>Wages</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Capital</p>",
+            "<p>Machines, tools and money used for production</p>",
+            "<p>Interest</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Entrepreneur</p>",
+            "<p>Person who organizes production and takes risk</p>",
+            "<p>Profit</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u0sjrtl",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Scarcity and Choice"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Basis of Distinction",
+        "Microeconomics",
+        "Macroeconomics"
+      ],
+      "rows": [
+        [
+          "Level of Study",
+          "Individual economic units (firm, household, individual price)",
+          "Economy as a whole (GDP, aggregate demand, national income)"
+        ],
+        [
+          "Core Determinants",
+          "Price of individual goods and services (Price Theory)",
+          "Income and employment levels of the nation (Income Theory)"
+        ],
+        [
+          "Primary Tools",
+          "Individual Demand and Individual Supply",
+          "Aggregate Demand and Aggregate Supply"
+        ]
+      ],
+      "id": "3qpg5d6"
+    },
+    {
+      "type": "paragraph",
+      "id": "n9cvn0x",
+      "content": "• Resources such as land, labour and capital are limited."
+    },
+    {
+      "type": "paragraph",
+      "id": "o2z2nhc",
+      "content": "• Human wants are unlimited."
+    },
+    {
+      "type": "paragraph",
+      "id": "1110xl5",
+      "content": "• Because of scarcity, people must make choices about how to use resources."
+    },
+    {
+      "id": "mx2snft",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Opportunity Cost"
+    },
+    {
+      "type": "paragraph",
+      "id": "hrkhg4p",
+      "content": "Opportunity cost is the value of the next best alternative that is sacrificed when a choice is made. For example, if a farmer uses land to grow wheat instead of rice, the lost rice production is the opportunity cost."
+    },
+    {
+      "id": "i4vut91",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Types of Economic Activities"
+    },
+    {
+      "id": "9xrbw24",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Activity</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Production</p>",
+            "<p>Manufacturing goods in factories</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Consumption</p>",
+            "<p>Using goods and services</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Distribution</p>",
+            "<p>Transport and selling of goods</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Exchange</p>",
+            "<p>Buying and selling in markets</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Ragnar Frisch was the first economist to coin the terms 'Microeconomics' and 'Macroeconomics' in 1933.",
+        "Lionel Robbins proposed the famous 'Scarcity Definition' of economics in his 1932 book.",
+        "Land and Capital are passive factors of production, whereas Labour and Entrepreneurship are active factors.",
+        "Opportunity Cost is a recurring question topic in UPSC/SSC exams and is also referred to as alternative cost."
+      ],
+      "id": "n5c2sbh"
+    },
+    {
+      "id": "eb4qb5t",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "1q6yy3c",
+      "content": "• Adam Smith is called the Father of Economics."
+    },
+    {
+      "type": "paragraph",
+      "id": "goblj5t",
+      "content": "• Microeconomics studies individual economic units."
+    },
+    {
+      "type": "paragraph",
+      "id": "3nn43md",
+      "content": "• Macroeconomics studies the economy as a whole."
+    },
+    {
+      "type": "paragraph",
+      "id": "m8xujof",
+      "content": "• There are four main factors of production: land, labour, capital and entrepreneur."
+    }
+  ],
+  "enriched": true
+}

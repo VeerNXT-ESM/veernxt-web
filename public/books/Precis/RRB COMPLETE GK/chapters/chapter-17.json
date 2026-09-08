@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "1ftc9ul"
+      "id": "1ftc9ul",
+      "content": "Coriolis force is an apparent force caused by Earth's rotation that deflects moving objects such as winds and ocean currents."
     },
     {
       "type": "statStrip",
@@ -52,7 +53,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mbcr7jk"
+      "id": "mbcr7jk",
+      "content": "• Deflection RIGHT in Northern Hemisphere."
     },
     {
       "type": "comparisonTable",
@@ -82,11 +84,13 @@
     },
     {
       "type": "paragraph",
-      "id": "azznefs"
+      "id": "azznefs",
+      "content": "• Deflection LEFT in Southern Hemisphere."
     },
     {
       "type": "paragraph",
-      "id": "1xdxlip"
+      "id": "1xdxlip",
+      "content": "• ZERO at the Equator."
     },
     {
       "type": "examAlert",
@@ -99,11 +103,13 @@
     },
     {
       "type": "paragraph",
-      "id": "laxjm1l"
+      "id": "laxjm1l",
+      "content": "• Maximum at poles."
     },
     {
       "type": "paragraph",
-      "id": "s773lui"
+      "id": "s773lui",
+      "content": "Without the Coriolis effect, global wind systems and cyclones would not rotate."
     }
   ],
   "enriched": true

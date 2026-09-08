@@ -49,23 +49,25 @@
     },
     {
       "type": "paragraph",
-      "id": "8otk52c"
+      "id": "8otk52c",
+      "content": "Electricity is a form of energy produced due to the flow of electric charges. In daily life, electricity is used in:"
     },
     {
       "id": "c22vlp1",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Lighting</li><li>Fans</li><li>Heaters</li><li>Mobile phones</li><li>Computers</li></ul>",
+        "Lighting",
+        "Fans",
+        "Heaters",
+        "Mobile phones",
+        "Computers"
       ]
     },
     {
       "type": "paragraph",
-      "id": "ldwxugm"
+      "id": "ldwxugm",
+      "content": "Electricity plays a very important role in modern life."
     },
     {
       "id": "uqk054h",
@@ -75,24 +77,27 @@
     },
     {
       "type": "paragraph",
-      "id": "dw2i6vp"
+      "id": "dw2i6vp",
+      "content": "Electric charge is the basic property of matter responsible for electrical phenomena. Types of charges:"
     },
     {
       "id": "u93o9ay",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "<ul><li>Positive charge<img></img></li><li>Negative charge</li></ul>",
+        "Positive charge<img></img>",
+        "Negative charge"
       ]
     },
     {
       "type": "paragraph",
-      "id": "u1jb6r9"
+      "id": "u1jb6r9",
+      "content": "Like charges repel each other. Unlike charges attract each other."
     },
     {
       "type": "paragraph",
-      "id": "rjhh179"
+      "id": "rjhh179",
+      "content": "SI unit of charge = Coulomb (C)"
     },
     {
       "id": "ocuv9ut",
@@ -102,15 +107,18 @@
     },
     {
       "type": "paragraph",
-      "id": "2k68moc"
+      "id": "2k68moc",
+      "content": "Electric current is the rate of flow of electric charge. Formula:"
     },
     {
       "type": "paragraph",
-      "id": "su8s4b6"
+      "id": "su8s4b6",
+      "content": "Current (I) = Charge (Q) / Time (t) SI unit of current = Ampere (A)"
     },
     {
       "type": "paragraph",
-      "id": "094dwoj"
+      "id": "094dwoj",
+      "content": "1 Ampere means 1 Coulomb of charge flowing per second."
     },
     {
       "id": "ro3sfwf",
@@ -120,17 +128,18 @@
     },
     {
       "type": "paragraph",
-      "id": "zftzrkv"
+      "id": "zftzrkv",
+      "content": "An electric circuit is a closed path through which electric current flows. Main components:"
     },
     {
       "id": "k4ugvec",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Cell or battery</li><li>Connecting wires</li><li>Switch</li><li>Load (bulb, fan, etc.)</li></ul>",
+        "Cell or battery",
+        "Connecting wires",
+        "Switch",
+        "Load (bulb, fan, etc.)"
       ]
     },
     {
@@ -141,11 +150,13 @@
     },
     {
       "type": "paragraph",
-      "id": "4z0xlzu"
+      "id": "4z0xlzu",
+      "content": "Potential difference is the work done in moving a unit charge from one point to another. Formula:"
     },
     {
       "type": "paragraph",
-      "id": "l4vj3kw"
+      "id": "l4vj3kw",
+      "content": "V = Work / Charge SI unit = Volt (V)"
     },
     {
       "id": "3ppue9o",
@@ -154,8 +165,15 @@
       "content": "OHM’S LAW"
     },
     {
+      "id": "uspwlit",
+      "type": "image",
+      "imageId": "vhnux26",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_vhnux26.png"
+    },
+    {
       "type": "paragraph",
-      "id": "zqnyg03"
+      "id": "zqnyg03",
+      "content": "According to Ohm’s Law:<img></img>"
     },
     {
       "type": "pullQuote",
@@ -164,29 +182,35 @@
     },
     {
       "type": "paragraph",
-      "id": "98scdh4"
+      "id": "98scdh4",
+      "content": "The current flowing through a conductor is directly proportional to the potential difference across its ends, provided temperature remains constant."
     },
     {
       "type": "paragraph",
-      "id": "cgntloa"
+      "id": "cgntloa",
+      "content": "Formula: "
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x7rd2g1"
+      "id": "x7rd2g1",
+      "content": "V = IR"
     },
     {
       "type": "paragraph",
-      "id": "nzxu2ha"
+      "id": "nzxu2ha",
+      "content": "Where:"
     },
     {
       "type": "paragraph",
-      "id": "1g27rct"
+      "id": "1g27rct",
+      "content": "V = Voltage I = Current"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "quv3pry"
+      "id": "quv3pry",
+      "content": "R = Resistance"
     },
     {
       "id": "70j28ev",
@@ -196,21 +220,23 @@
     },
     {
       "type": "paragraph",
-      "id": "ztzwiix"
+      "id": "ztzwiix",
+      "content": "Resistance is the opposition offered to the flow of electric current. SI unit = Ohm (Ω)"
     },
     {
       "type": "paragraph",
-      "id": "omow6dn"
+      "id": "omow6dn",
+      "content": "Factors affecting resistance:"
     },
     {
       "id": "4md6vcp",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Length of conductor</li><li>Area of cross-section</li><li>Material of conductor</li><li>Temperature</li></ul>",
+        "Length of conductor",
+        "Area of cross-section",
+        "Material of conductor",
+        "Temperature"
       ]
     },
     {
@@ -221,7 +247,8 @@
     },
     {
       "type": "paragraph",
-      "id": "knbvhk4"
+      "id": "knbvhk4",
+      "content": "Electric power is the rate at which electrical energy is consumed. Formula:"
     },
     {
       "type": "comparisonTable",
@@ -251,21 +278,25 @@
     },
     {
       "type": "paragraph",
-      "id": "jl61se5"
+      "id": "jl61se5",
+      "content": "Power (P) = V × I SI unit = Watt (W)"
     },
     {
       "type": "paragraph",
-      "id": "i5p2g1s"
+      "id": "i5p2g1s",
+      "content": "Other forms:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yxp0li9"
+      "id": "yxp0li9",
+      "content": "P = I²R"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q984m6y"
+      "id": "q984m6y",
+      "content": "P = V² / R"
     },
     {
       "id": "poft2ic",
@@ -275,11 +306,13 @@
     },
     {
       "type": "paragraph",
-      "id": "6eu71sp"
+      "id": "6eu71sp",
+      "content": "Electric energy is the total electrical work done. Commercial unit of electric energy = kilowatt-hour (kWh) 1 kWh = 3.6 × 10⁶ Joules"
     },
     {
       "type": "paragraph",
-      "id": "aiziqmg"
+      "id": "aiziqmg",
+      "content": "This is also called one unit of electricity."
     },
     {
       "id": "eprjzha",
@@ -289,31 +322,33 @@
     },
     {
       "type": "paragraph",
-      "id": "uj79j3z"
+      "id": "uj79j3z",
+      "content": "When electric current flows through a conductor, it produces heat. This effect is used in:"
     },
     {
       "id": "54kdpao",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Electric heater</li><li>Iron</li><li>Geyser</li><li>Electric bulb</li></ul>",
+        "Electric heater",
+        "Iron",
+        "Geyser",
+        "Electric bulb"
       ]
     },
     {
       "type": "paragraph",
-      "id": "a0row3z"
+      "id": "a0row3z",
+      "content": "Heating effect depends on:"
     },
     {
       "id": "rnohqtr",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Current</li><li>Resistance</li><li>Time</li></ul>",
+        "Current",
+        "Resistance",
+        "Time"
       ]
     },
     {
@@ -324,7 +359,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ppq3knq"
+      "id": "ppq3knq",
+      "content": "Fuse is a safety device used to protect electrical appliances. It melts when excess current flows and breaks the circuit."
     },
     {
       "type": "examAlert",
@@ -337,15 +373,16 @@
     },
     {
       "type": "paragraph",
-      "id": "d4rg5pf"
+      "id": "d4rg5pf",
+      "content": "Fuse wire is made of:"
     },
     {
       "id": "iu7814k",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "<ul><li>Tin</li><li>Lead</li></ul>",
+        "Tin",
+        "Lead"
       ]
     },
     {
@@ -356,23 +393,28 @@
     },
     {
       "type": "paragraph",
-      "id": "ygtp7oe"
+      "id": "ygtp7oe",
+      "content": "Q1. SI unit of current? Ans: Ampere"
     },
     {
       "type": "paragraph",
-      "id": "lhjvs9n"
+      "id": "lhjvs9n",
+      "content": "Q2. Formula of Ohm’s Law? Ans: V = IR"
     },
     {
       "type": "paragraph",
-      "id": "e4zw80r"
+      "id": "e4zw80r",
+      "content": "Q3. Commercial unit of electricity? Ans: kWh"
     },
     {
       "type": "paragraph",
-      "id": "nzw5ufm"
+      "id": "nzw5ufm",
+      "content": "Q4. SI unit of resistance? Ans: Ohm"
     },
     {
       "type": "paragraph",
-      "id": "d2hm1il"
+      "id": "d2hm1il",
+      "content": "Q5. Heating effect depends on? Ans: Current, resistance and time"
     },
     {
       "id": "r6m0i9c",
@@ -384,13 +426,13 @@
       "id": "cb2yto0",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Electric current = Q / t</li><li>V = IR</li><li>Power = VI</li><li>1 unit = 1 kWh</li><li>Fuse protects circuit</li><li>Heating effect produces heat</li></ul>",
+        "Electric current = Q / t",
+        "V = IR",
+        "Power = VI",
+        "1 unit = 1 kWh",
+        "Fuse protects circuit",
+        "Heating effect produces heat"
       ]
     }
   ],

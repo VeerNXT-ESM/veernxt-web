@@ -1,0 +1,133 @@
+{
+  "title": "Untitled Chapter",
+  "order": 7,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The Solar System is a gravitationally bound system centered around the Sun.",
+      "id": "m35dftx"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Central Body",
+          "value": "Sun",
+          "icon": "info"
+        },
+        {
+          "label": "Total Planets",
+          "value": "8",
+          "icon": "check"
+        },
+        {
+          "label": "Closest Planet",
+          "value": "Mercury",
+          "icon": "book"
+        },
+        {
+          "label": "Farthest Planet",
+          "value": "Neptune",
+          "icon": "clock"
+        }
+      ],
+      "id": "imig2p7"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Solar System is a gravitationally bound system centered around the Sun.",
+      "id": "rmv4eno"
+    },
+    {
+      "id": "wf42gln",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Key Fact</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sun</p>",
+            "<p>Contains 99.86% of total solar system mass</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Planets</p>",
+            "<p>8 planets revolve in elliptical orbits</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dwarf Planets</p>",
+            "<p>Pluto, Eris, Haumea, Makemake, Ceres</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Asteroids</p>",
+            "<p>Mostly between Mars and Jupiter</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Comets</p>",
+            "<p>Develop tails when near Sun</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Meteoroids</p>",
+            "<p>Small rocky fragments</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vcqatri",
+      "type": "heading",
+      "level": 2,
+      "content": "Order of Planets from the Sun (MEMORY FAVORITE)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Solar System is a gravitationally bound system centered around the Sun.",
+        "The order of planets from closest to furthest from the Sun is Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+        "The mnemonic 'My Very Educated Mother Just Served Us Noodles' helps easily recall the sequence of the eight planets."
+      ],
+      "id": "oep8hip"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions often test the exact sequence of planets from the Sun: Mercury → Venus → Earth → Mars → Jupiter → Saturn → Uranus → Neptune.",
+        "Mercury is the first planet closest to the Sun, while Neptune is the eighth and farthest.",
+        "Use the first letter of each word in 'My Very Educated Mother Just Served Us Noodles' to quickly identify planet names in exam options."
+      ],
+      "id": "lomd8v8"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mercury → Venus → Earth → Mars → Jupiter → Saturn → Uranus → Neptune",
+      "id": "06rkj8o"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mnemonic: <strong><em>My Very Educated Mother Just Served Us Noodles</em></strong>",
+      "id": "tdiuf9j"
+    }
+  ],
+  "enriched": true
+}

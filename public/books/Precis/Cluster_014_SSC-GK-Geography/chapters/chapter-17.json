@@ -1,0 +1,332 @@
+{
+  "title": "CHAPTER 14: HUMIDITY, CLOUDS & RAINFALL",
+  "order": 17,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Humidity, clouds, and rainfall are the final visible outcomes of atmospheric processes. This chapter completes the understanding of weather and climate. Almost every question related to monsoon, precipitation, cyclones, fog, dew, frost, and climatic regions is rooted in this chapter. Hence, this is one of the MOST SCORING chapters for SSC examinations.",
+      "id": "1i8javo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "High Cloud Altitude",
+          "value": ">6,000 m",
+          "icon": "info"
+        },
+        {
+          "label": "Middle Cloud Altitude",
+          "value": "2,000–6,000 m",
+          "icon": "info"
+        },
+        {
+          "label": "Low Cloud Altitude",
+          "value": "<2,000 m",
+          "icon": "info"
+        },
+        {
+          "label": "Absolute Humidity Unit",
+          "value": "g/m³",
+          "icon": "check"
+        }
+      ],
+      "id": "3948jcj"
+    },
+    {
+      "id": "m8xlrgl",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: HUMIDITY"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Temperature is the primary driver of humidity because warm air has a higher capacity to hold water vapour than cold air.",
+        "Condensation occurs when moist air cools below its dew point around suspended dust particles known as condensation nuclei.",
+        "Clouds are classified by altitude into High (>6,000m), Middle (2,000–6,000m), Low (<2,000m), and Vertical types.",
+        "Cumulonimbus clouds span multiple atmospheric layers and produce severe weather, including thunderstorms, hailstorms, and tornadoes.",
+        "Rainfall is categorized into three types: Convectional (equatorial surface heating), Orographic (mountain forced uplift), and Cyclonic (low-pressure convergence)."
+      ],
+      "id": "fkjgsjn"
+    },
+    {
+      "id": "7cxrlci",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Humidity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Humidity refers to the amount of water vapour present in the air. Water vapour enters the atmosphere through evaporation and transpiration. Humidity plays a crucial role in cloud formation, rainfall, comfort level of humans, and regulation of temperature.",
+      "id": "9l0l3tp"
+    },
+    {
+      "id": "6vff4g4",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Humidity"
+    },
+    {
+      "id": "h0lk9if",
+      "type": "heading",
+      "level": 3,
+      "content": "Absolute Humidity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Absolute humidity is the actual amount of water vapour present in a given volume of air. It is expressed in grams per cubic metre.",
+      "id": "02n044r"
+    },
+    {
+      "id": "ysurg0d",
+      "type": "heading",
+      "level": 3,
+      "content": "Relative Humidity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Relative humidity is the ratio of the actual amount of water vapour present in the air to the maximum amount the air can hold at a given temperature, expressed as a percentage. It is the most commonly used measure in weather reports.",
+      "id": "7p8st1x"
+    },
+    {
+      "id": "smthzht",
+      "type": "heading",
+      "level": 3,
+      "content": "Specific Humidity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Specific humidity is the ratio of the mass of water vapour to the total mass of air. It remains relatively constant and is useful in climatological studies.",
+      "id": "y3s7p5j"
+    },
+    {
+      "id": "ja5rt7l",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Humidity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Temperature is the most important factor affecting humidity because warm air can hold more water vapour than cold air. Other factors include availability of water bodies, winds, vegetation, and altitude.",
+      "id": "urlcbqe"
+    },
+    {
+      "id": "2x76mms",
+      "type": "heading",
+      "level": 3,
+      "content": "Condensation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Condensation is the process by which water vapour changes into liquid water or ice when air becomes saturated or cools below its dew point temperature. Condensation is essential for cloud formation and precipitation.",
+      "id": "owb8nww"
+    },
+    {
+      "id": "fh01xzl",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: CLOUDS"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Temperature is the most important factor affecting humidity because warm air can hold more water vapour than cold air.",
+      "id": "4wzozgg"
+    },
+    {
+      "id": "lx2x9xz",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Clouds"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clouds are visible masses of tiny water droplets or ice crystals suspended in the atmosphere. They form when moist air rises, cools, and condenses around dust particles called condensation nuclei.",
+      "id": "rp4lro3"
+    },
+    {
+      "id": "ewf5y0r",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Clouds (Based on Height)"
+    },
+    {
+      "id": "1s9g9dv",
+      "type": "heading",
+      "level": 3,
+      "content": "High Clouds"
+    },
+    {
+      "type": "paragraph",
+      "content": "High clouds form above 6,000 metres and are composed mainly of ice crystals. Cirrus clouds are thin and feathery and indicate fair weather.",
+      "id": "tp8i2pp"
+    },
+    {
+      "id": "z4t8ubd",
+      "type": "heading",
+      "level": 3,
+      "content": "Middle Clouds"
+    },
+    {
+      "type": "paragraph",
+      "content": "Middle clouds form between 2,000 and 6,000 metres. Altostratus clouds often bring continuous rain.",
+      "id": "uuhp84z"
+    },
+    {
+      "id": "0iaqdf1",
+      "type": "heading",
+      "level": 3,
+      "content": "Low Clouds"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Humidity Type",
+        "Measurement Standard",
+        "Key Application / Characteristic"
+      ],
+      "rows": [
+        [
+          "Absolute Humidity",
+          "Grams per cubic metre (g/m³)",
+          "Actual mass of water vapour in a given volume of air"
+        ],
+        [
+          "Relative Humidity",
+          "Percentage (%)",
+          "Ratio of actual water vapour to maximum air capacity; most common in weather reports"
+        ],
+        [
+          "Specific Humidity",
+          "Mass ratio (vapour mass / total air mass)",
+          "Remains relatively constant; essential for climatological studies"
+        ]
+      ],
+      "id": "ucph5vs"
+    },
+    {
+      "type": "paragraph",
+      "content": "Low clouds form below 2,000 metres. Stratus clouds cause overcast skies and light drizzle.",
+      "id": "4tfvpwj"
+    },
+    {
+      "id": "1ckhtra",
+      "type": "heading",
+      "level": 3,
+      "content": "Vertical Clouds"
+    },
+    {
+      "type": "paragraph",
+      "content": "Vertical clouds extend through several layers of the atmosphere. Cumulonimbus clouds are associated with thunderstorms, heavy rainfall, hailstorms, and tornadoes.",
+      "id": "0rcsf7j"
+    },
+    {
+      "id": "3sgw3j7",
+      "type": "heading",
+      "level": 2,
+      "content": "PART C: RAINFALL / PRECIPITATION"
+    },
+    {
+      "id": "a14kc6w",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Precipitation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Precipitation refers to the falling of condensed moisture from clouds to the Earth’s surface in various forms such as rain, snow, sleet, and hail.",
+      "id": "iaau8cv"
+    },
+    {
+      "id": "479p30w",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Rainfall"
+    },
+    {
+      "id": "rva36yk",
+      "type": "heading",
+      "level": 3,
+      "content": "Convectional Rainfall"
+    },
+    {
+      "type": "paragraph",
+      "content": "Convectional rainfall occurs due to intense heating of the Earth’s surface. Warm air rises rapidly, cools, and condenses to form heavy rainfall. It is common in equatorial regions.",
+      "id": "rs4vclc"
+    },
+    {
+      "id": "hqrr7ha",
+      "type": "heading",
+      "level": 3,
+      "content": "Orographic Rainfall"
+    },
+    {
+      "type": "paragraph",
+      "content": "Orographic rainfall occurs when moist air is forced to rise over mountains. The windward side receives heavy rainfall, while the leeward side experiences rain shadow effect.",
+      "id": "c8525g5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Relative humidity is expressed as a percentage and is the most frequently tested and reported measure of atmospheric moisture.",
+        "Orographic rainfall creates distinct zones: heavy precipitation on the windward slope and a dry rain shadow region on the leeward slope.",
+        "Cumulonimbus clouds are uniquely responsible for violent thunderstorm activity, heavy rainfall, and tornadoes.",
+        "Convectional rainfall is typically observed in equatorial regions due to high daily solar heating."
+      ],
+      "id": "dfyfcgg"
+    },
+    {
+      "id": "r52t7eb",
+      "type": "heading",
+      "level": 3,
+      "content": "Cyclonic Rainfall"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cyclonic rainfall occurs due to convergence of air masses in low-pressure systems. It is associated with cyclones and depressions.",
+      "id": "x3s5yjh"
+    },
+    {
+      "id": "l501bnp",
+      "type": "heading",
+      "level": 3,
+      "content": "Other Forms of Condensation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Dew forms when moist air comes in contact with a cold surface. Frost forms when condensation occurs directly into ice. Fog and mist are formed when condensation occurs near the ground.",
+      "id": "dn03qi0"
+    },
+    {
+      "id": "k5jl1ki",
+      "type": "heading",
+      "level": 3,
+      "content": "Importance of Humidity, Clouds & Rainfall"
+    },
+    {
+      "type": "paragraph",
+      "content": "These elements control weather, climate, agriculture, water availability, and natural vegetation. They are essential for sustaining life on Earth.",
+      "id": "xmcjln9"
+    },
+    {
+      "id": "072l0gp",
+      "type": "heading",
+      "level": 3,
+      "content": "SSC Ultra Revision Points"
+    },
+    {
+      "id": "agk45km",
+      "type": "list",
+      "items": [
+        "Relative humidity is most used",
+        "Warm air holds more moisture",
+        "Condensation nuclei are essential",
+        "Cumulonimbus – thunderstorm cloud",
+        "Orographic rainfall – rain shadow",
+        "Dew ≠ Fog"
+      ]
+    }
+  ],
+  "enriched": true
+}

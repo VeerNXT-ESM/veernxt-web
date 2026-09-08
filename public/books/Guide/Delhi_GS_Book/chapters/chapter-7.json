@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "q4e5ctn"
+      "id": "q4e5ctn",
+      "content": "Delhi's civic administration is unusually fragmented among multiple local bodies rather than one unified municipal corporation for the whole NCT - a structural quirk that is a favourite source of comparative/list-based exam questions."
     },
     {
       "type": "statStrip",
@@ -50,17 +51,14 @@
       "id": "oi5socq"
     },
     {
-      "type": "pullQuote",
-      "content": "The Three (formerly Five) Local Bodies",
-      "id": "pbc9jqz"
+      "type": "paragraph",
+      "id": "68cg1sg",
+      "content": "Unlike most Indian metropolitan cities governed by a single municipal corporation, Delhi's civic administration is divided among THREE distinct local bodies, each with jurisdiction over a different part of the NCT."
     },
     {
       "type": "paragraph",
-      "id": "68cg1sg"
-    },
-    {
-      "type": "paragraph",
-      "id": "kcnloya"
+      "id": "kcnloya",
+      "content": "From 2012 to 2022, the erstwhile Municipal Corporation of Delhi (MCD) was itself trifurcated into three separate corporations - North, South and East Delhi Municipal Corporations - to improve administrative manageability; however, this arrangement was reversed via the Delhi Municipal Corporation (Amendment) Act, 2022, which UNIFIED the three back into a single Municipal Corporation of Delhi (MCD) with effect from May 2022, citing financial unviability and coordination problems in the trifurcated structure."
     },
     {
       "type": "comparisonTable",
@@ -91,40 +89,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Local Body</strong></p>",
+            "<p><strong>Jurisdiction</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Municipal Corporation of Delhi (MCD)</p>",
+            "<p>The bulk of the NCT's area and population</p>",
+            "<p>Re-unified in May 2022 (after a 2012-2022 trifurcation into North/South/East MCDs); India's largest municipal corporation by population served</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>New Delhi Municipal Council (NDMC)</p>",
+            "<p>The Lutyens' Delhi/New Delhi area (VIP zone housing Parliament, Rashtrapati Bhavan, central govt offices)</p>",
+            "<p>A statutory body, not fully elected - Chairperson and most members are nominated by the Central Government, with only limited elected representation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Delhi Cantonment Board</p>",
+            "<p>The Delhi Cantonment area (military zone)</p>",
+            "<p>Administered under the Cantonments Act, jointly by military and civic representatives, for the defence-establishment area</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "7s9pnla"
+      "id": "7s9pnla",
+      "content": "<strong>★ EXAM POINT: </strong><em>'MCD is India's largest municipal corporation' is a frequently tested one-liner - remember it was reunified from three corporations (North/South/East) back into one in 2022, reversing the 2012 trifurcation.</em>"
     },
     {
       "id": "cpl3wcd",
@@ -144,8 +143,8 @@
       "id": "ywpevnd",
       "type": "list",
       "items": [
-        null,
-        null
+        "The Mayor of Delhi (MCD) is an indirectly elected ceremonial-cum-administrative head chosen by the elected councillors, with the post rotating annually and reserved seats (for women, SC candidates) cycling through in a fixed sequence.",
+        "MCD elections in December 2022 (the first since reunification) saw AAP win a majority of council seats, ending 15 years of BJP control of the erstwhile MCD; this made MCD control split from Assembly-level Delhi Government control for a period, an unusual 'divided government' phase in Delhi's civic history until the BJP's 2025 Assembly win realigned control."
       ]
     },
     {
@@ -158,10 +157,10 @@
       "id": "nqmekkx",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Delhi has THREE local bodies: MCD (bulk of NCT), NDMC (New Delhi/Lutyens' zone, largely nominated), Delhi Cantonment Board (military zone).",
+        "MCD was trifurcated (North/South/East) in 2012, then RE-UNIFIED into a single MCD in May 2022.",
+        "MCD is India's largest municipal corporation by population served.",
+        "NDMC uniquely has a largely NOMINATED (not elected) governing council, given its VIP/central-government-zone character."
       ]
     }
   ],

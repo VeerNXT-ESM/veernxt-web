@@ -59,217 +59,217 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Port</strong></p>",
+            "<p><strong>Protocol</strong></p>",
+            "<p><strong>Service</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>20</p>",
+            "<p>TCP</p>",
+            "<p>FTP Data Transfer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>21</p>",
+            "<p>TCP</p>",
+            "<p>FTP Control</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>22</p>",
+            "<p>TCP</p>",
+            "<p>SSH, SFTP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>23</p>",
+            "<p>TCP</p>",
+            "<p>Telnet (insecure)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>25</p>",
+            "<p>TCP</p>",
+            "<p>SMTP (outgoing email)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>53</p>",
+            "<p>UDP/TCP</p>",
+            "<p>DNS</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>67/68</p>",
+            "<p>UDP</p>",
+            "<p>DHCP (Server/Client)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>69</p>",
+            "<p>UDP</p>",
+            "<p>TFTP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>80</p>",
+            "<p>TCP</p>",
+            "<p>HTTP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>110</p>",
+            "<p>TCP</p>",
+            "<p>POP3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>143</p>",
+            "<p>TCP</p>",
+            "<p>IMAP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>161/162</p>",
+            "<p>UDP</p>",
+            "<p>SNMP (Agent/Manager)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>389</p>",
+            "<p>TCP</p>",
+            "<p>LDAP</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>443</p>",
+            "<p>TCP</p>",
+            "<p>HTTPS</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>465</p>",
+            "<p>TCP</p>",
+            "<p>SMTPS (Encrypted SMTP)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>587</p>",
+            "<p>TCP</p>",
+            "<p>SMTP Submission</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>993</p>",
+            "<p>TCP</p>",
+            "<p>IMAPS (Encrypted IMAP)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>995</p>",
+            "<p>TCP</p>",
+            "<p>POP3S (Encrypted POP3)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1433</p>",
+            "<p>TCP</p>",
+            "<p>Microsoft SQL Server</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1521</p>",
+            "<p>TCP</p>",
+            "<p>Oracle Database</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>3306</p>",
+            "<p>TCP</p>",
+            "<p>MySQL</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>3389</p>",
+            "<p>TCP</p>",
+            "<p>RDP (Remote Desktop)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>5432</p>",
+            "<p>TCP</p>",
+            "<p>PostgreSQL</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>6379</p>",
+            "<p>TCP</p>",
+            "<p>Redis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>8080</p>",
+            "<p>TCP</p>",
+            "<p>HTTP Alternate / Tomcat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>27017</p>",
+            "<p>TCP</p>",
+            "<p>MongoDB</p>"
           ]
         }
       ]
@@ -292,421 +292,421 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Abbreviation</strong></p>",
+            "<p><strong>Full Form</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>API</p>",
+            "<p>Application Programming Interface</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ACID</p>",
+            "<p>Atomicity, Consistency, Isolation, Durability</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>AJAX</p>",
+            "<p>Asynchronous JavaScript and XML</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>BGP</p>",
+            "<p>Border Gateway Protocol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>BIOS</p>",
+            "<p>Basic Input Output System</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>BCP</p>",
+            "<p>Business Continuity Plan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>CAP Theorem</p>",
+            "<p>Consistency, Availability, Partition Tolerance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>CBS</p>",
+            "<p>Core Banking Solution</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>CDN</p>",
+            "<p>Content Delivery Network</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>CIDR</p>",
+            "<p>Classless Inter-Domain Routing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>CSRF</p>",
+            "<p>Cross-Site Request Forgery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>DDoS</p>",
+            "<p>Distributed Denial of Service</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>DNS</p>",
+            "<p>Domain Name System</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>EDR</p>",
+            "<p>Endpoint Detection and Response</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ETL</p>",
+            "<p>Extract, Transform, Load</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>GDPR</p>",
+            "<p>General Data Protection Regulation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>HDFS</p>",
+            "<p>Hadoop Distributed File System</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>HSM</p>",
+            "<p>Hardware Security Module</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IaC</p>",
+            "<p>Infrastructure as Code</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IMAP</p>",
+            "<p>Internet Message Access Protocol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IoT</p>",
+            "<p>Internet of Things</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IPsec</p>",
+            "<p>Internet Protocol Security</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IPS</p>",
+            "<p>Intrusion Prevention System</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>JWT</p>",
+            "<p>JSON Web Token</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>LDAP</p>",
+            "<p>Lightweight Directory Access Protocol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MFA</p>",
+            "<p>Multi-Factor Authentication</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MQTT</p>",
+            "<p>Message Queuing Telemetry Transport</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NAT</p>",
+            "<p>Network Address Translation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NLP</p>",
+            "<p>Natural Language Processing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>NTFS</p>",
+            "<p>New Technology File System</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>OAuth</p>",
+            "<p>Open Authorisation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>OLAP</p>",
+            "<p>Online Analytical Processing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>OLTP</p>",
+            "<p>Online Transaction Processing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>ORM</p>",
+            "<p>Object-Relational Mapping</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>OWASP</p>",
+            "<p>Open Web Application Security Project</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>PAM</p>",
+            "<p>Privileged Access Management</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>PKI</p>",
+            "<p>Public Key Infrastructure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RAID</p>",
+            "<p>Redundant Array of Independent Disks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RBAC</p>",
+            "<p>Role-Based Access Control</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>REST</p>",
+            "<p>Representational State Transfer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RPO</p>",
+            "<p>Recovery Point Objective</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RTO</p>",
+            "<p>Recovery Time Objective</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SAML</p>",
+            "<p>Security Assertion Markup Language</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SIEM</p>",
+            "<p>Security Information and Event Management</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SMTP</p>",
+            "<p>Simple Mail Transfer Protocol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SNMP</p>",
+            "<p>Simple Network Management Protocol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SOC</p>",
+            "<p>Security Operations Centre</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SOLID</p>",
+            "<p>Single Responsibility, Open/Closed, Liskov, Interface Segregation, Dependency Inversion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SOAR</p>",
+            "<p>Security Orchestration, Automation and Response</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SQL</p>",
+            "<p>Structured Query Language</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SSH</p>",
+            "<p>Secure Shell</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SSL</p>",
+            "<p>Secure Sockets Layer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>TLS</p>",
+            "<p>Transport Layer Security</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>UML</p>",
+            "<p>Unified Modelling Language</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>UUID</p>",
+            "<p>Universally Unique Identifier</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>VAPT</p>",
+            "<p>Vulnerability Assessment and Penetration Testing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>VPN</p>",
+            "<p>Virtual Private Network</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>WAF</p>",
+            "<p>Web Application Firewall</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>XSS</p>",
+            "<p>Cross-Site Scripting</p>"
           ]
         }
       ]
@@ -724,148 +724,148 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Formula / Fact</strong></p>",
+            "<p><strong>Value / Expression</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IPv4 Address Space</p>",
+            "<p>2³² = 4,294,967,296 (~4.3 billion) unique addresses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IPv6 Address Space</p>",
+            "<p>2¹²⁸ = 340 undecillion addresses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Maximum hosts in subnet /n</p>",
+            "<p>2^(32-n) − 2 (subtract network and broadcast addresses)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cyclomatic Complexity (McCabe)</p>",
+            "<p>V(G) = E − N + 2P; E=edges, N=nodes, P=connected components</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RAID 0</p>",
+            "<p>Striping; no redundancy; capacity = n × disk_size; performance++</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RAID 1</p>",
+            "<p>Mirroring; full redundancy; capacity = disk_size (only 1 copy)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RAID 5</p>",
+            "<p>Striping + distributed parity; min 3 disks; capacity = (n−1) × disk_size; can lose 1 disk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RAID 6</p>",
+            "<p>Like RAID 5 + extra parity; min 4 disks; can lose 2 disks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>RAID 10</p>",
+            "<p>RAID 1+0; mirrored stripes; min 4 disks; best performance + redundancy; enterprise</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Amdahl's Law</p>",
+            "<p>Speedup = 1/(S + (1-S)/N); S=serial fraction, N=processors; limits parallel speedup</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pipeline Speedup (ideal)</p>",
+            "<p>k stages = k× speedup (k=number of pipeline stages)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>CPI (Cycles Per Instruction)</p>",
+            "<p>Total CPU cycles / Total instructions executed; lower is better</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MIPS</p>",
+            "<p>Millions of Instructions Per Second = f / CPI; f=clock frequency</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cache Hit Rate</p>",
+            "<p>(Cache hits / Total accesses) × 100%; target &gt;95%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Memory Access Time (EMAT)</p>",
+            "<p>h×Tc + (1-h)×Tm; h=hit rate, Tc=cache time, Tm=main memory time</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hamming Distance</p>",
+            "<p>Number of bit positions where two code words differ; error detection capability</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Error Detection</p>",
+            "<p>Can detect up to d bit errors if Hamming distance ≥ d+1</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Error Correction</p>",
+            "<p>Can correct up to t bit errors if Hamming distance ≥ 2t+1</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Shannon's Channel Capacity</p>",
+            "<p>C = B log₂(1 + S/N); B=bandwidth(Hz), S/N=signal-to-noise ratio</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Throughput (Pipelining)</p>",
+            "<p>1 instruction / clock cycle (ideal); limited by slowest stage</p>"
           ]
         }
       ]
@@ -880,16 +880,16 @@
       "id": "6c6salw",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "OSI Layers (top-bottom): All People Seem To Need Data Processing → Application, Presentation, Session, Transport, Network, Data Link, Physical",
+        "OSI Layers (bottom-top): Please Do Not Throw Sausage Pizza Away → Physical, Data Link, Network, Transport, Session, Presentation, Application",
+        "ACID properties: Angry Customers Ignore Delays → Atomicity, Consistency, Isolation, Durability",
+        "SOLID principles: Single-Open-Liskov-Interface-Dependency → S.O.L.I.D",
+        "Sorting complexities: O(n²) sorts — BIS (Bubble, Insertion, Selection); O(n log n) — MQH (Merge, Quick, Heap)",
+        "Coffman deadlock conditions: HNCP — Hold-and-wait, No-preemption, Circular-wait, Mutual-exclusion",
+        "TCP 3-way handshake: SYN → SYN-ACK → ACK (I Synchronise → I Acknowledge your Sync → I Acknowledge)",
+        "IPv4 private ranges: 10.x, 172.16-31.x, 192.168.x.x (the three RFC 1918 private blocks)",
+        "Normalisation: 1NF=atomic; 2NF=no partial dependency; 3NF=no transitive dependency; BCNF=every determinant is a superkey",
+        "CAP Theorem: Consistency, Availability, Partition Tolerance — can only guarantee 2 of 3 simultaneously"
       ]
     },
     {
@@ -914,121 +914,121 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Company</strong></p>",
+            "<p><strong>Product / Service</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CBS Vendor</p>",
+            "<p>Infosys</p>",
+            "<p>Finacle — used by SBI (partial), HDFC, Axis, 100+ banks globally</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CBS Vendor</p>",
+            "<p>TCS</p>",
+            "<p>BaNCS — used by SBI (main), Standard Chartered, Bank of America</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CBS Vendor</p>",
+            "<p>Oracle</p>",
+            "<p>FLEXCUBE — used by Union Bank, IDFC First Bank; Oracle Financial Services</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CBS Vendor</p>",
+            "<p>Temenos</p>",
+            "<p>T24/Transact — European banks; growing in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CBS Vendor</p>",
+            "<p>Nucleus Software</p>",
+            "<p>FinnOne Neo — used by many co-operative banks and smaller NBFCs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Payment Tech</p>",
+            "<p>NPCI</p>",
+            "<p>UPI, IMPS, NACH, FASTag, RuPay, AePS, BBPS — India's digital payment backbone</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Payment Tech</p>",
+            "<p>Visa / Mastercard</p>",
+            "<p>Global card payment networks; tokenisation; 3D Secure (3DS)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cloud</p>",
+            "<p>AWS</p>",
+            "<p>Bank of Baroda, HDFC, Kotak — cloud workloads on AWS</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cloud</p>",
+            "<p>Microsoft Azure</p>",
+            "<p>SBI Life, Bajaj Finance — Azure for data analytics, Microsoft banking cloud</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cyber Security</p>",
+            "<p>Palo Alto Networks</p>",
+            "<p>NGFW, Cortex XDR — used in bank SOCs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cyber Security</p>",
+            "<p>CrowdStrike</p>",
+            "<p>Falcon EDR — endpoint protection in banking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Identity</p>",
+            "<p>CyberArk</p>",
+            "<p>Privileged Access Management in large banks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Analytics</p>",
+            "<p>SAS</p>",
+            "<p>Risk analytics, fraud detection in banking; SAS Fraud Framework</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Regtech</p>",
+            "<p>NICE Actimize</p>",
+            "<p>Financial crime, AML, fraud compliance platform</p>"
           ]
         }
       ]

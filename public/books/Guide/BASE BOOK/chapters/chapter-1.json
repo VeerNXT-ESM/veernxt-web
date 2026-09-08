@@ -1,12 +1,19 @@
 {
-  "id": "5yebiir",
-  "title": "Introduction",
+  "id": "oskffzr",
+  "title": "Quantitative Aptitude",
   "order": 1,
   "blocks": [
     {
+      "id": "ghdwnym",
+      "type": "image",
+      "imageId": "fzcgn9o",
+      "src": "/books/Guide/BASE BOOK/images/image_fzcgn9o.png"
+    },
+    {
       "type": "heading",
       "level": 4,
-      "id": "iftcq3k"
+      "id": "iftcq3k",
+      "content": "<strong>BASE GUIDE BOOK</strong>"
     },
     {
       "type": "statStrip",
@@ -42,17 +49,20 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "br55il4"
+      "id": "br55il4",
+      "content": "<strong>PSU NAVRATNA</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dao8lnb"
+      "id": "dao8lnb",
+      "content": "<strong>2026</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2evzmnw"
+      "id": "2evzmnw",
+      "content": "<strong>TABLE OF CONTENTS</strong>"
     },
     {
       "id": "elud2l5",
@@ -61,57 +71,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Unit</strong></p>",
+            "<p><strong>Chapter</strong></p>",
+            "<p><strong>Page</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>UNIT 1</p>",
+            "<p>Quantitative Aptitude</p>",
+            "<p>3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>UNIT 2</p>",
+            "<p>Logical Reasoning</p>",
+            "<p>25</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>UNIT 3</p>",
+            "<p>English Language</p>",
+            "<p>47</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>UNIT 4</p>",
+            "<p>General Awareness – PSU GK</p>",
+            "<p>67</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>UNIT 5</p>",
+            "<p>About PSU Navratna Companies</p>",
+            "<p>81</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>UNIT 6</p>",
+            "<p>Current Affairs &amp; Economy</p>",
+            "<p>91</p>"
           ]
         }
       ]
@@ -119,47 +129,78 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "47tolye"
+      "id": "47tolye",
+      "content": "<strong>How to Use This Book</strong>"
     },
     {
       "type": "paragraph",
-      "id": "64ah2ht"
+      "id": "64ah2ht",
+      "content": "This guide book is designed specifically for aspirants of PSU Navratna recruitment examinations. It covers all four common sections tested in PSU CBT examinations: Quantitative Aptitude, Logical Reasoning, English Language and General Awareness. Each unit contains concept notes, worked examples, formula tables, and practice MCQs with answers. Solve all practice questions before attempting mock tests. Focus on accuracy before speed."
+    },
+    {
+      "id": "e8mm56w",
+      "type": "image",
+      "imageId": "e8znmm6",
+      "src": "/books/Guide/BASE BOOK/images/image_e8znmm6.png"
+    },
+    {
+      "id": "wiwu3dz",
+      "type": "image",
+      "imageId": "f07hx58",
+      "src": "/books/Guide/BASE BOOK/images/image_f07hx58.png"
+    },
+    {
+      "id": "t1rlhc8",
+      "type": "image",
+      "imageId": "xnde6o8",
+      "src": "/books/Guide/BASE BOOK/images/image_xnde6o8.png"
+    },
+    {
+      "id": "q2e4qlh",
+      "type": "image",
+      "imageId": "xq97n2m",
+      "src": "/books/Guide/BASE BOOK/images/image_xq97n2m.png"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uk29tql"
+      "id": "uk29tql",
+      "content": "<strong>UNIT 1 — QUANTITATIVE APTITUDE</strong>"
     },
     {
       "type": "paragraph",
-      "id": "jk7jad8"
+      "id": "jk7jad8",
+      "content": "Quantitative Aptitude tests numerical ability and mathematical reasoning. PSU CBT exams typically have 25–40 questions from this section. The key topics are: Number System, Percentage, Ratio &amp; Proportion, Average, Profit &amp; Loss, Simple &amp; Compound Interest, Time–Work, Time–Speed–Distance, Algebra, Geometry, Data Interpretation, and Mensuration."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wepwrng"
+      "id": "wepwrng",
+      "content": "<strong>1.1  Number System</strong>"
     },
     {
       "type": "paragraph",
-      "id": "atrzrwo"
+      "id": "atrzrwo",
+      "content": "A number system defines how numbers are classified. The most important classifications for PSU exams are:"
     },
     {
       "id": "4ez64fq",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Natural Numbers: 1, 2, 3, 4 … (positive integers excluding zero)",
+        "Whole Numbers: 0, 1, 2, 3 … (natural numbers including zero)",
+        "Integers: … –3, –2, –1, 0, 1, 2, 3 … (positive and negative whole numbers)",
+        "Rational Numbers: Numbers expressible as p/q where q ≠ 0. E.g. 3/4, 0.5, –2",
+        "Irrational Numbers: Non-terminating, non-repeating decimals. E.g. √2, π",
+        "Prime Numbers: Divisible only by 1 and itself. E.g. 2, 3, 5, 7, 11, 13 …",
+        "Composite Numbers: Having more than two factors. E.g. 4, 6, 8, 9 …"
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q6kp65t"
+      "id": "q6kp65t",
+      "content": "<strong>Divisibility Rules</strong>"
     },
     {
       "id": "idgi3qi",
@@ -168,81 +209,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Divisor</strong></p>",
+            "<p><strong>Rule</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2</p>",
+            "<p>Last digit is 0, 2, 4, 6, or 8</p>",
+            "<p>128 → last digit 8 ✓</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>3</p>",
+            "<p>Sum of digits divisible by 3</p>",
+            "<p>123 → 1+2+3=6 ✓</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>4</p>",
+            "<p>Last two digits divisible by 4</p>",
+            "<p>316 → 16÷4=4 ✓</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>5</p>",
+            "<p>Last digit is 0 or 5</p>",
+            "<p>235 → last digit 5 ✓</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>6</p>",
+            "<p>Divisible by both 2 and 3</p>",
+            "<p>312 → even &amp; 3+1+2=6 ✓</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>7</p>",
+            "<p>Double last digit, subtract from rest; result divisible by 7</p>",
+            "<p>203 → 20–6=14 ✓</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>8</p>",
+            "<p>Last three digits divisible by 8</p>",
+            "<p>1,024 → 024÷8=3 ✓</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>9</p>",
+            "<p>Sum of digits divisible by 9</p>",
+            "<p>729 → 7+2+9=18 ✓</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>11</p>",
+            "<p>Alternate digit sum difference divisible by 11</p>",
+            "<p>121 → 1–2+1=0 ✓</p>"
           ]
         }
       ]
@@ -250,11 +291,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "fflxezb"
+      "id": "fflxezb",
+      "content": "<strong>LCM and HCF</strong>"
     },
     {
       "type": "paragraph",
-      "id": "moox8rk"
+      "id": "moox8rk",
+      "content": "HCF (Highest Common Factor): The greatest number that divides two or more numbers exactly. Also called GCD. LCM (Lowest Common Multiple): The smallest number divisible by two or more given numbers."
     },
     {
       "id": "0u22ajb",
@@ -263,7 +306,7 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>Key Formula: </strong>HCF × LCM = Product of the two numbers</p><p><strong>Example: </strong>HCF(12,18) = 6 | LCM(12,18) = 36 | Check: 6 × 36 = 216 = 12 × 18 ✓</p>"
           ]
         }
       ]
@@ -271,11 +314,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "vdfy8hd"
+      "id": "vdfy8hd",
+      "content": "<strong>1.2  Percentage</strong>"
     },
     {
       "type": "paragraph",
-      "id": "vdoxwpl"
+      "id": "vdoxwpl",
+      "content": "Percentage means \"per hundred\". It is used to compare quantities and express fractions in a standard form. PSU exams frequently combine percentage with profit/loss and data interpretation."
     },
     {
       "id": "377xu7h",
@@ -284,43 +329,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Formula</strong></p>",
+            "<p><strong>Expression</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>x% of y</p>",
+            "<p>(x/100) × y</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>a is what % of b</p>",
+            "<p>(a/b) × 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>% increase</p>",
+            "<p>[(New – Old)/Old] × 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>% decrease</p>",
+            "<p>[(Old – New)/Old] × 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Successive % change (a% then b%)</p>",
+            "<p>a + b + (ab/100)</p>"
           ]
         }
       ]
@@ -328,55 +373,65 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "kf1mazy"
+      "id": "kf1mazy",
+      "content": "<strong>Solved Examples</strong>"
     },
     {
       "type": "paragraph",
-      "id": "q887upv"
+      "id": "q887upv",
+      "content": "<strong>Example 1: </strong>A salary of Rs. 25,000 is increased by 20%. Find the new salary."
     },
     {
       "type": "paragraph",
-      "id": "rh0b1ks"
+      "id": "rh0b1ks",
+      "content": "<strong>Solution: </strong>Increase = 20% of 25,000 = 5,000. New salary = 25,000 + 5,000 = Rs. 30,000"
     },
     {
       "type": "paragraph",
-      "id": "xt3xe23"
+      "id": "xt3xe23",
+      "content": "<strong>Example 2: </strong>A price is first increased by 10% and then decreased by 10%. Find net % change."
     },
     {
       "type": "paragraph",
-      "id": "1j7ojvm"
+      "id": "1j7ojvm",
+      "content": "<strong>Solution: </strong>Net % change = 10 + (–10) + (10 × –10)/100 = –1%. Net decrease of 1%."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bxklurb"
+      "id": "bxklurb",
+      "content": "<strong>1.3  Ratio &amp; Proportion</strong>"
     },
     {
       "type": "paragraph",
-      "id": "4un3kq7"
+      "id": "4un3kq7",
+      "content": "A ratio compares two quantities of the same type. A proportion states that two ratios are equal."
     },
     {
       "id": "8g4wtmw",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "If a:b = c:d, then ad = bc (cross multiplication rule)",
+        "If a:b:c = 2:3:5, and total is T, then a = 2T/10, b = 3T/10, c = 5T/10",
+        "Compounded ratio of a:b and c:d = ac:bd",
+        "Duplicate ratio of a:b = a²:b² | Sub-duplicate = √a:√b"
       ]
     },
     {
       "type": "paragraph",
-      "id": "u8v1ktl"
+      "id": "u8v1ktl",
+      "content": "<strong>Example: </strong>Divide Rs. 4,500 in the ratio 2:3:4."
     },
     {
       "type": "paragraph",
-      "id": "hvcrxbt"
+      "id": "hvcrxbt",
+      "content": "<strong>Solution: </strong>Total parts = 9. Shares = (2/9)×4500=1000, (3/9)×4500=1500, (4/9)×4500=2000"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9y8xuje"
+      "id": "9y8xuje",
+      "content": "<strong>1.4  Average</strong>"
     },
     {
       "id": "hjqv3fl",
@@ -385,23 +440,26 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>Average = Sum of all observations / Number of observations</strong></p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "5fjuv5y"
+      "id": "5fjuv5y",
+      "content": "If the average of n numbers is A and a new number x is added, new average = (nA + x)/(n+1). If the average of n numbers is A and one number x is removed, new average = (nA – x)/(n–1)."
     },
     {
       "type": "paragraph",
-      "id": "7um7703"
+      "id": "7um7703",
+      "content": "<strong>Weighted Average: </strong>= (w₁x₁ + w₂x₂ + … + wₙxₙ) / (w₁ + w₂ + … + wₙ)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4u47cnd"
+      "id": "4u47cnd",
+      "content": "<strong>1.5  Profit &amp; Loss</strong>"
     },
     {
       "id": "tand5xx",
@@ -410,64 +468,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Formula</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Profit</p>",
+            "<p>Selling Price – Cost Price (when SP &gt; CP)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Loss</p>",
+            "<p>Cost Price – Selling Price (when CP &gt; SP)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Profit %</p>",
+            "<p>(Profit / CP) × 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Loss %</p>",
+            "<p>(Loss / CP) × 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SP (when profit%)</p>",
+            "<p>CP × (100 + Profit%) / 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>SP (when loss%)</p>",
+            "<p>CP × (100 – Loss%) / 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Marked Price &amp; Discount</p>",
+            "<p>Discount = MP – SP | Discount% = (Discount/MP) × 100</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Successive Discounts d1 and d2</p>",
+            "<p>Net SP = MP × (1–d1/100) × (1–d2/100)</p>"
           ]
         }
       ]
@@ -475,7 +533,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "0pyqjoj"
+      "id": "0pyqjoj",
+      "content": "<strong>1.6  Simple &amp; Compound Interest</strong>"
     },
     {
       "id": "o46gxw4",
@@ -484,57 +543,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Formula</strong></p>",
+            "<p><strong>Variables</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Simple Interest (SI)</p>",
+            "<p>SI = (P × R × T) / 100</p>",
+            "<p>P=Principal, R=Rate%, T=Time(yrs)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Amount (SI)</p>",
+            "<p>A = P + SI</p>",
+            "<p>A = P(1 + RT/100)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Compound Interest (CI)</p>",
+            "<p>A = P(1 + R/100)ⁿ</p>",
+            "<p>n = number of years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CI (half-yearly)</p>",
+            "<p>A = P(1 + R/200)²ⁿ</p>",
+            "<p>R halved, period doubled</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CI (quarterly)</p>",
+            "<p>A = P(1 + R/400)⁴ⁿ</p>",
+            "<p>R quartered, period ×4</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Difference (CI–SI) for 2 years</p>",
+            "<p>P(R/100)²</p>",
+            "<p>Useful shortcut</p>"
           ]
         }
       ]
@@ -542,33 +601,38 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "qd3m561"
+      "id": "qd3m561",
+      "content": "<strong>1.7  Time, Work &amp; Pipes</strong>"
     },
     {
       "type": "paragraph",
-      "id": "ftv6gqi"
+      "id": "ftv6gqi",
+      "content": "If A can do a work in x days, A's one day work = 1/x. If A and B together can do work in T days, then 1/T = 1/x + 1/y."
     },
     {
       "id": "waxsjbl",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Work done = Efficiency × Time",
+        "If A is twice as efficient as B and they work together to finish in T days: T = 2x/3 where x = days A takes alone",
+        "Pipe filling: If pipe A fills in x hrs and pipe B empties in y hrs, net rate = 1/x – 1/y"
       ]
     },
     {
       "type": "paragraph",
-      "id": "845r6yd"
+      "id": "845r6yd",
+      "content": "<strong>Example: </strong>A can do a work in 12 days, B in 18 days. How long will they take together?"
     },
     {
       "type": "paragraph",
-      "id": "j1c0n5p"
+      "id": "j1c0n5p",
+      "content": "<strong>Solution: </strong>Together: 1/12 + 1/18 = 3/36 + 2/36 = 5/36. Days = 36/5 = 7.2 days"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ocrdefl"
+      "id": "ocrdefl",
+      "content": "<strong>1.8  Speed, Distance &amp; Time</strong>"
     },
     {
       "id": "ud8ktcv",
@@ -577,7 +641,7 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>Distance = Speed × Time  |  Speed = Distance/Time  |  Time = Distance/Speed</strong></p>"
           ]
         }
       ]
@@ -589,71 +653,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Formula</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Average speed (equal distances)</p>",
+            "<p>2s₁s₂/(s₁+s₂)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Relative speed – same direction</p>",
+            "<p>|s₁ – s₂|</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Relative speed – opposite direction</p>",
+            "<p>s₁ + s₂</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Train crossing a pole</p>",
+            "<p>Time = Length of train / Speed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Train crossing a platform</p>",
+            "<p>Time = (Length of train + Length of platform) / Speed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Boat downstream</p>",
+            "<p>Speed = u + v (u=boat speed, v=stream speed)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Boat upstream</p>",
+            "<p>Speed = u – v</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Speed in still water</p>",
+            "<p>(Downstream + Upstream) / 2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Stream speed</p>",
+            "<p>(Downstream – Upstream) / 2</p>"
           ]
         }
       ]
@@ -661,11 +725,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "peityrt"
+      "id": "peityrt",
+      "content": "<strong>1.9  Data Interpretation</strong>"
     },
     {
       "type": "paragraph",
-      "id": "q4kpkjk"
+      "id": "q4kpkjk",
+      "content": "Data Interpretation (DI) is one of the highest-weightage topics in PSU exams. Questions are based on Bar Charts, Line Graphs, Pie Charts, and Tables. Key approach: Read the question carefully, identify the relevant data, apply the correct formula, and avoid calculation errors."
     },
     {
       "id": "i0e8366",
@@ -674,43 +740,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>DI Type</strong></p>",
+            "<p><strong>Key Skill Required</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bar Chart</p>",
+            "<p>Compare heights, calculate % change between years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Line Graph</p>",
+            "<p>Identify trends, calculate rate of change</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pie Chart</p>",
+            "<p>Convert degrees/% to actual values using totals</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Table</p>",
+            "<p>Multi-step calculations, finding ratios and averages</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mixed Graph</p>",
+            "<p>Combine two charts; cross-reference data</p>"
           ]
         }
       ]
@@ -718,11 +784,13 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "hr3rnj3"
+      "id": "hr3rnj3",
+      "content": "<strong>Sample DI Set</strong>"
     },
     {
       "type": "paragraph",
-      "id": "baslrc9"
+      "id": "baslrc9",
+      "content": "The following table shows the production (in thousand tonnes) of five PSUs over 5 years:"
     },
     {
       "id": "rqql2ga",
@@ -731,5344 +799,670 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>PSU / Year</strong></p>",
+            "<p><strong>2019</strong></p>",
+            "<p><strong>2020</strong></p>",
+            "<p><strong>2021</strong></p>",
+            "<p><strong>2022</strong></p>",
+            "<p><strong>2023</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>BEL</p>",
+            "<p>120</p>",
+            "<p>135</p>",
+            "<p>142</p>",
+            "<p>158</p>",
+            "<p>170</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>NALCO</p>",
+            "<p>80</p>",
+            "<p>88</p>",
+            "<p>95</p>",
+            "<p>104</p>",
+            "<p>112</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>NMDC</p>",
+            "<p>200</p>",
+            "<p>215</p>",
+            "<p>230</p>",
+            "<p>248</p>",
+            "<p>260</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>NLC</p>",
+            "<p>175</p>",
+            "<p>180</p>",
+            "<p>190</p>",
+            "<p>205</p>",
+            "<p>220</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "2mg7rlx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f661an6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ecpcwm5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s6ggtcy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ykn8lsh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pieaycu"
-    },
-    {
-      "type": "paragraph",
-      "id": "af8kwkq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "riw4v2z"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9nh92w8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "77mpumu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "g616ksz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p1354rv"
-    },
-    {
-      "type": "paragraph",
-      "id": "i7jzhu7"
-    },
-    {
-      "type": "paragraph",
-      "id": "qwopo2w"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wajqwgm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lb2z86e"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2l81cbn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1xcpvrd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ldobrgu"
-    },
-    {
-      "type": "paragraph",
-      "id": "6qhaylp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xha4sux"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rd834t1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lnmuk1k"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "42nftfi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r48rnoe"
-    },
-    {
-      "type": "paragraph",
-      "id": "xo1pivg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a1revn1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bmj6ks2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2qz22st"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hpa16bu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qwzb5ej"
-    },
-    {
-      "type": "paragraph",
-      "id": "oyjeidn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "buqn8ye"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sblp0lp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8tj7vjd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z073oeq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7ldz7gh"
-    },
-    {
-      "type": "paragraph",
-      "id": "5vwgbmo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8qhdiix"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "y4mjp3l"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pjtdm66"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a78d07q"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ymswp2e"
-    },
-    {
-      "type": "paragraph",
-      "id": "mu0mzls"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6hs60sd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xmz9009"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lssfmbh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "16lf5qq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "81zy15e"
-    },
-    {
-      "type": "paragraph",
-      "id": "773scck"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jpl1iw2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r1w52dv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "chqyfcz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2ga15as"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8r3q37h"
-    },
-    {
-      "type": "paragraph",
-      "id": "5unvqke"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yke7cdi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fzgridj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vd7cnt1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6i1zmiw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "p7jctpu"
-    },
-    {
-      "type": "paragraph",
-      "id": "ossu9nd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6gin44i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7kmemqe"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lqz0zuo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "70c567o"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8aeub7j"
-    },
-    {
-      "type": "paragraph",
-      "id": "1dfyh3h"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xcj1f55"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l79kkr8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jz72nu2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "baho8hx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ih115wi"
-    },
-    {
-      "type": "paragraph",
-      "id": "71wxbvu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vtw8upt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "66fy5bj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "i797gns"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u8ih0b8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0n0dp75"
-    },
-    {
-      "type": "paragraph",
-      "id": "gapcxeh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k2teygo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0f0ijoj"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "y1l062n"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xw0ndye"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tk14av2"
-    },
-    {
-      "type": "paragraph",
-      "id": "kvdiulg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "av0rkqc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5eb8txd"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4hj0sv5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "g9bemr9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1wzjbeo"
-    },
-    {
-      "type": "paragraph",
-      "id": "t1fs325"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bzewq6w"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xku5vu8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "idilehb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "i9eqjfe"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9uoni99"
-    },
-    {
-      "type": "paragraph",
-      "id": "k4ihhyh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vxv20pr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dznh7q4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7y3bqez"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "99sh4r9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wk59hen"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gbefs9l"
-    },
-    {
-      "type": "paragraph",
-      "id": "rnogoiq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7fe6czc"
-    },
-    {
-      "type": "paragraph",
-      "id": "ypieg8o"
-    },
-    {
-      "id": "ok7zz6y",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uhto0re"
-    },
-    {
-      "type": "paragraph",
-      "id": "w9oertd"
-    },
-    {
-      "id": "mv2yg37",
-      "type": "list",
-      "items": [
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "27ka5mx"
-    },
-    {
-      "type": "paragraph",
-      "id": "a0sgyly"
-    },
-    {
-      "id": "gyk1i7n",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "92d3jzc"
-    },
-    {
-      "type": "paragraph",
-      "id": "2oaedrp"
-    },
-    {
-      "id": "go7fd9a",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
+            "<p>RINL</p>",
+            "<p>95</p>",
+            "<p>100</p>",
+            "<p>108</p>",
+            "<p>115</p>",
+            "<p>125</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "nuga6lv"
+      "id": "2mg7rlx",
+      "content": "<strong>Q1. </strong>What is the total production of NMDC over all 5 years (in thousand tonnes)?"
     },
     {
-      "type": "paragraph",
-      "id": "4hg3cbt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ac5769j"
-    },
-    {
-      "type": "paragraph",
-      "id": "gjnqbin"
-    },
-    {
-      "id": "uf4er06",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "lpg0i4n"
-    },
-    {
-      "type": "paragraph",
-      "id": "1csi6gm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z93kcz2"
-    },
-    {
-      "type": "paragraph",
-      "id": "i0q2cje"
-    },
-    {
-      "id": "c0w2elg",
-      "type": "list",
-      "items": [
-        null,
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5o1audk"
-    },
-    {
-      "type": "paragraph",
-      "id": "9y6dej4"
-    },
-    {
-      "id": "65qgkjb",
-      "type": "list",
-      "items": [
-        null,
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6164asf"
-    },
-    {
-      "type": "paragraph",
-      "id": "819yhjy"
-    },
-    {
-      "id": "h61ehk5",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0jnbkj9"
-    },
-    {
-      "type": "paragraph",
-      "id": "v3gj9vf"
-    },
-    {
-      "type": "paragraph",
-      "id": "3pqjuap"
-    },
-    {
-      "type": "paragraph",
-      "id": "ck73igr"
-    },
-    {
-      "type": "paragraph",
-      "id": "16n6e4q"
-    },
-    {
-      "type": "paragraph",
-      "id": "9ukewcx"
-    },
-    {
-      "type": "paragraph",
-      "id": "t0aeytu"
-    },
-    {
-      "id": "tuhywbz",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "cs1tip8"
-    },
-    {
-      "type": "paragraph",
-      "id": "q1ro08g"
-    },
-    {
-      "type": "paragraph",
-      "id": "4clkwj1"
-    },
-    {
-      "type": "paragraph",
-      "id": "hy08gdq"
-    },
-    {
-      "type": "paragraph",
-      "id": "hruyq4v"
-    },
-    {
-      "type": "paragraph",
-      "id": "s70xg6i"
-    },
-    {
-      "type": "paragraph",
-      "id": "bpj5p63"
-    },
-    {
-      "type": "paragraph",
-      "id": "s56yjxh"
-    },
-    {
-      "type": "paragraph",
-      "id": "qpg078g"
-    },
-    {
-      "type": "paragraph",
-      "id": "x4qizbf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n9atan5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vru5pt2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9h5ywbr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ha03d8p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "b422v9o"
-    },
-    {
-      "type": "paragraph",
-      "id": "t6svdrx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "eac2lid"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "i8fccmr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tia90hz"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ttmo23q"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "8so9jcw"
-    },
-    {
-      "type": "paragraph",
-      "id": "zpapdgo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fv47yii"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kpqwaxg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yzil3bb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hff3j2b"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7k1w7js"
-    },
-    {
-      "type": "paragraph",
-      "id": "savxn3m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "97gw9l0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "w3eb5tk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tgtvqio"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f75r2hg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "e86bmpq"
-    },
-    {
-      "type": "paragraph",
-      "id": "n44r340"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mncmwam"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iagveot"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ghffwde"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Introduction",
-      "id": "y4dp994"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mt788ls"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gscn4ew"
-    },
-    {
-      "type": "paragraph",
-      "id": "kbjfytv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "q5gatl1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "56a4awt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "18ix796"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5l8i5tt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vxanin7"
-    },
-    {
-      "type": "paragraph",
-      "id": "5zmiklc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fk6vdla"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3dgmt5r"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gkb1ujv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x8ebipq"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vb7tqop"
-    },
-    {
-      "type": "paragraph",
-      "id": "zuon6tt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hs6bu4e"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ri12lup"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "myiika8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qkmub86"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0uozhid"
-    },
-    {
-      "type": "paragraph",
-      "id": "d4ci832"
-    },
-    {
-      "type": "paragraph",
-      "id": "olzzvr9"
-    },
-    {
-      "type": "paragraph",
-      "id": "8pg14tu"
-    },
-    {
-      "type": "paragraph",
-      "id": "9elzbhq"
-    },
-    {
-      "type": "paragraph",
-      "id": "wz945ph"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "v820ygy"
-    },
-    {
-      "type": "paragraph",
-      "id": "w02erz1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "oel2kd3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ufdy9yb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "9xv5xxl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bhb3i89"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "g9h5hi5"
-    },
-    {
-      "type": "paragraph",
-      "id": "r14ufo1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "74qghw4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bbra78o"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "on5r5ac"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k7zmlzw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3iowfmm"
-    },
-    {
-      "type": "paragraph",
-      "id": "u02ufnr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5vsjk9m"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xfpq481"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cx60h0r"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "0geyc3v"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kcqcm0o"
-    },
-    {
-      "type": "paragraph",
-      "id": "zjbspsm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "yy6k1bf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6klioan"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a262i7p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u49quwr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ydcxrgp"
-    },
-    {
-      "type": "paragraph",
-      "id": "smdtiv6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "81048zn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5y6rur6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "36ghplo"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gphd9fe"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tshhf88"
-    },
-    {
-      "type": "paragraph",
-      "id": "9ezsp5p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "du1z7ln"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "isjl1w9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4w8t6by"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "walr2ap"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ywyfz8j"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "e8nk207"
-    },
-    {
-      "type": "paragraph",
-      "id": "b2wauey"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "obyx4vf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sacjzdq"
-    },
-    {
-      "id": "y7kucoi",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "i6tqq2o"
-    },
-    {
-      "id": "hngnop6",
-      "type": "list",
-      "items": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7ditvnn"
-    },
-    {
-      "id": "8xizvms",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "55biivj"
-    },
-    {
-      "id": "3qs10e1",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s798f6r"
-    },
-    {
-      "id": "ix2y0tg",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lnafh89"
-    },
-    {
-      "id": "cu98y3o",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z9k7zy1"
-    },
-    {
-      "id": "rz4t1ba",
-      "type": "numberedList",
-      "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "mcrwaf6"
-    },
-    {
-      "id": "lf91icz",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "eyd1fa3"
-    },
-    {
-      "type": "paragraph",
-      "id": "ghtrbhb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t4l03ug"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rb8qxez"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mu12bk2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vycz7tk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ku0pahx"
-    },
-    {
-      "type": "paragraph",
-      "id": "gh0am9s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jbwjaxv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5bxfx1u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sjmr75w"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "00xcjh3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m66ilbh"
-    },
-    {
-      "type": "paragraph",
-      "id": "f0az676"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tafsqf6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5mofkqi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "abpektu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "piaa0rg"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "s7n4fmt"
-    },
-    {
-      "type": "paragraph",
-      "id": "oc6i3nc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "137bkxi"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rbxzxw4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "mpdiuya"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uxvebt0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gi4cg6j"
-    },
-    {
-      "type": "paragraph",
-      "id": "0od7jx9"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ffolha6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xqcwrn1"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6ihuaxb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cfql6xh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5x0unkk"
-    },
-    {
-      "type": "paragraph",
-      "id": "xq3d74u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "obvodp0"
-    },
-    {
-      "type": "paragraph",
-      "id": "py1rpze"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "qlo5dwr"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bp7bcom"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "y7e3dry"
-    },
-    {
-      "type": "paragraph",
-      "id": "ao3subl"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xlubq7s"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6mi0qbf"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "03klkm4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wihfvxp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "alvk4v0"
-    },
-    {
-      "type": "paragraph",
-      "id": "7fdu5um"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "avod5xp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "u2ouc05"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "d2u5e2i"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ozn39y0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ezk8lj7"
-    },
-    {
-      "type": "paragraph",
-      "id": "he26utt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6iwz8dy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "12030hb"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "wa9b9l2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t8jldb8"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5l3od88"
-    },
-    {
-      "type": "paragraph",
-      "id": "prf3b55"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4zbtvbu"
-    },
-    {
       "type": "heading",
       "level": 4,
-      "id": "ehqnmsa"
+      "id": "f661an6",
+      "content": "    (A)  1,053"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xxugy64"
+      "id": "ecpcwm5",
+      "content": "    (B)  1,153"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mtz1cbm"
+      "id": "s6ggtcy",
+      "content": "    (C)  1,253"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bgy5mcs"
-    },
-    {
-      "type": "paragraph",
-      "id": "7u7annm"
-    },
-    {
-      "type": "paragraph",
-      "id": "u5341f9"
-    },
-    {
-      "type": "paragraph",
-      "id": "jiwrqwz"
-    },
-    {
-      "type": "paragraph",
-      "id": "h4q8pwc"
-    },
-    {
-      "type": "paragraph",
-      "id": "7ileovh"
+      "id": "ykn8lsh",
+      "content": "    (D)  1,353"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1u43w4a"
+      "id": "pieaycu",
+      "content": "<strong>Ans: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "8uubv6m"
+      "id": "af8kwkq",
+      "content": "<strong>Q2. </strong>By what % did BEL's production increase from 2019 to 2023?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rwjxkr6"
+      "id": "riw4v2z",
+      "content": "    (A)  41.67%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zmnbhjd"
+      "id": "9nh92w8",
+      "content": "    (B)  35.42%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nyl8dvn"
+      "id": "77mpumu",
+      "content": "    (C)  38.50%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d0gikgy"
+      "id": "g616ksz",
+      "content": "    (D)  42.00%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f61pan6"
+      "id": "p1354rv",
+      "content": "<strong>Ans: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "b269x1p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "l8xg9ai"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7hwepew"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "65ujl88"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gvbf0jk"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "k9ks045"
+      "id": "i7jzhu7",
+      "content": "<strong>1.10  Practice MCQs — Quantitative Aptitude</strong>"
     },
     {
       "type": "paragraph",
-      "id": "qc7tb3e"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ppa1e5x"
+      "id": "qwopo2w",
+      "content": "<strong>Q1. </strong>The LCM of 12, 18 and 24 is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g9ybdge"
+      "id": "wajqwgm",
+      "content": "    (A)  48"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e00vvl8"
+      "id": "lb2z86e",
+      "content": "    (B)  72"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lhkeg92"
+      "id": "2l81cbn",
+      "content": "    (C)  36"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m95syix"
-    },
-    {
-      "type": "paragraph",
-      "id": "az0m9is"
-    },
-    {
-      "type": "paragraph",
-      "id": "0xy8smu"
-    },
-    {
-      "type": "paragraph",
-      "id": "vowj0uz"
-    },
-    {
-      "type": "paragraph",
-      "id": "9qkhrih"
-    },
-    {
-      "type": "paragraph",
-      "id": "i2rpoe4"
+      "id": "1xcpvrd",
+      "content": "    (D)  96"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jexzxg3"
-    },
-    {
-      "type": "paragraph",
-      "id": "gc1d1tm"
-    },
-    {
-      "type": "paragraph",
-      "id": "nzkss5t"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ztrpbg9"
-    },
-    {
-      "id": "mr822ol",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "n47o2dc",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "phnybd8"
-    },
-    {
-      "id": "kjwb8c6",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "rsaej0g"
-    },
-    {
-      "id": "803bll5",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "0mo7qhk"
-    },
-    {
-      "id": "ukr7san",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xfms80d"
-    },
-    {
-      "id": "6793r5p",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "1knwzid"
-    },
-    {
-      "type": "paragraph",
-      "id": "9caugkh"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kx4vnhx"
-    },
-    {
-      "id": "1rzjavj",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "klidw85"
-    },
-    {
-      "id": "a44a7nr",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uor2nqy"
-    },
-    {
-      "id": "xondniv",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "frviqfk"
-    },
-    {
-      "id": "izioxsl",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "56hecq7"
-    },
-    {
-      "id": "sd03wuc",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "6pizssr"
-    },
-    {
-      "id": "sb7mnbq",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bv043ok"
-    },
-    {
-      "id": "mwxroo6",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "1i9kx3e"
-    },
-    {
-      "id": "qyk7iki",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "yn5k1xe"
-    },
-    {
-      "id": "lrmz149",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "uc30ocd"
-    },
-    {
-      "id": "8tsa7fw",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "86wznhw"
-    },
-    {
-      "id": "zukn2a3",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tb5frdk"
-    },
-    {
-      "id": "bbc8bhs",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "escxch4"
-    },
-    {
-      "id": "gcg5t9l",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "271tyr6"
-    },
-    {
-      "id": "5wr2g69",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "masptgj"
-    },
-    {
-      "id": "mz5p3kv",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "181rtv8"
-    },
-    {
-      "id": "02bcx2p",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iipbnc6"
-    },
-    {
-      "id": "sntvb77",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "r6medxm"
-    },
-    {
-      "id": "z3k7kn6",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4jlmrbz"
-    },
-    {
-      "id": "br5c1ac",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "iphou81"
-    },
-    {
-      "id": "d4wj38p",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "c7dgcu1"
-    },
-    {
-      "id": "kl39skn",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "5rkgzt4"
-    },
-    {
-      "id": "lcdwt21",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "3n182eg"
-    },
-    {
-      "id": "f12la1k",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "mo5prlm"
-    },
-    {
-      "id": "l9zycrc",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "97g5kx0"
-    },
-    {
-      "id": "newysva",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "d2gyuib"
-    },
-    {
-      "type": "paragraph",
-      "id": "88sgz7u"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ypyqtm0"
-    },
-    {
-      "id": "jx0vcgk",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "3kju6lr"
-    },
-    {
-      "id": "btpcm4f",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "crbdm3m"
-    },
-    {
-      "id": "zvt5goy",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "wmbnle5"
-    },
-    {
-      "id": "rv2ulq4",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
+      "id": "ldobrgu",
+      "content": "<strong>Ans: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "oaggbum"
-    },
-    {
-      "type": "paragraph",
-      "id": "xek6it4"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "lezmqwt"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "pvctca7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ltufflm"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "740m91m"
+      "id": "6qhaylp",
+      "content": "<strong>Q2. </strong>A shopkeeper buys an article for Rs. 800 and sells it at a profit of 25%. Find the selling price."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ujai5ji"
-    },
-    {
-      "type": "paragraph",
-      "id": "krswdm9"
+      "id": "xha4sux",
+      "content": "    (A)  Rs. 950"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "73n164u"
+      "id": "rd834t1",
+      "content": "    (B)  Rs. 1,000"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fl6qnxz"
+      "id": "lnmuk1k",
+      "content": "    (C)  Rs. 1,050"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kmk9l3v"
-    },
-    {
-      "type": "paragraph",
-      "id": "556tgs0"
+      "id": "42nftfi",
+      "content": "    (D)  Rs. 1,100"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l5u887d"
+      "id": "r48rnoe",
+      "content": "<strong>Ans: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "p84a82z"
+      "id": "xo1pivg",
+      "content": "<strong>Q3. </strong>The average of five numbers is 27. If one number is excluded, the average becomes 25. Find the excluded number."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9827nu8"
-    },
-    {
-      "type": "examAlert",
-      "items": [
-        "Introductory definitions and core terminology frequently appear in direct multiple-choice questions.",
-        "Understanding foundational concepts presented in the introduction is critical for solving complex analytical problems in later chapters."
-      ],
-      "id": "z8u4o4a"
+      "id": "a1revn1",
+      "content": "    (A)  35"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4i46qgb"
+      "id": "bmj6ks2",
+      "content": "    (B)  37"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0a7q7ip"
+      "id": "2qz22st",
+      "content": "    (C)  33"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gpqwuvq"
+      "id": "hpa16bu",
+      "content": "    (D)  39"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mgs3785"
+      "id": "qwzb5ej",
+      "content": "<strong>Ans: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "dvbwsmo"
+      "id": "oyjeidn",
+      "content": "<strong>Q4. </strong>What is the compound interest on Rs. 10,000 at 10% per annum for 2 years?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "n12yd7b"
+      "id": "buqn8ye",
+      "content": "    (A)  Rs. 2,000"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "er5mxt4"
+      "id": "sblp0lp",
+      "content": "    (B)  Rs. 2,100"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9zuai00"
+      "id": "8tj7vjd",
+      "content": "    (C)  Rs. 2,200"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0qye18v"
+      "id": "z073oeq",
+      "content": "    (D)  Rs. 1,900"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xpdryzg"
+      "id": "7ldz7gh",
+      "content": "<strong>Ans: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "mqn3hnn"
+      "id": "5vwgbmo",
+      "content": "<strong>Q5. </strong>A and B can complete a work in 15 and 20 days respectively. In how many days will they complete the work together?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1s2zq2l"
+      "id": "8qhdiix",
+      "content": "    (A)  8 days"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o5il02g"
+      "id": "y4mjp3l",
+      "content": "    (B)  8.57 days"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9anurjl"
+      "id": "pjtdm66",
+      "content": "    (C)  9 days"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z0fff18"
+      "id": "a78d07q",
+      "content": "    (D)  7.5 days"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "da7xen0"
+      "id": "ymswp2e",
+      "content": "<strong>Ans: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "v3yt6mo"
+      "id": "mu0mzls",
+      "content": "<strong>Q6. </strong>A train 200 m long passes a pole in 10 seconds. Find its speed in km/h."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mi2jbwg"
+      "id": "6hs60sd",
+      "content": "    (A)  60 km/h"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jliso9s"
+      "id": "xmz9009",
+      "content": "    (B)  72 km/h"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0c4xdff"
+      "id": "lssfmbh",
+      "content": "    (C)  80 km/h"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9keb6c2"
+      "id": "16lf5qq",
+      "content": "    (D)  54 km/h"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0cvb2d8"
+      "id": "81zy15e",
+      "content": "<strong>Ans: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "2aiz3lj"
+      "id": "773scck",
+      "content": "<strong>Q7. </strong>If 30% of a number is 90, what is 50% of the same number?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0e4oo0e"
+      "id": "jpl1iw2",
+      "content": "    (A)  150"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e5stokh"
+      "id": "r1w52dv",
+      "content": "    (B)  100"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9mihxoo"
+      "id": "chqyfcz",
+      "content": "    (C)  200"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m6wq4vx"
+      "id": "2ga15as",
+      "content": "    (D)  120"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "abne8y5"
+      "id": "8r3q37h",
+      "content": "<strong>Ans: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "d1hhgqw"
+      "id": "5unvqke",
+      "content": "<strong>Q8. </strong>The ratio of ages of A and B is 3:5. After 10 years the ratio will be 5:7. Find A's present age."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2piaqhk"
+      "id": "yke7cdi",
+      "content": "    (A)  15 years"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9nybmec"
+      "id": "fzgridj",
+      "content": "    (B)  20 years"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g393508"
+      "id": "vd7cnt1",
+      "content": "    (C)  25 years"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wl1uugx"
+      "id": "6i1zmiw",
+      "content": "    (D)  18 years"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cqgzbmp"
+      "id": "p7jctpu",
+      "content": "<strong>Ans: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "0sz7i2r"
+      "id": "ossu9nd",
+      "content": "<strong>Q9. </strong>What sum of money will amount to Rs. 6,050 at 10% per annum SI in 2 years?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ba9ogt0"
+      "id": "6gin44i",
+      "content": "    (A)  Rs. 5,000"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jn3u66a"
+      "id": "7kmemqe",
+      "content": "    (B)  Rs. 5,500"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "srobht4"
+      "id": "lqz0zuo",
+      "content": "    (C)  Rs. 4,500"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "plyz9dn"
+      "id": "70c567o",
+      "content": "    (D)  Rs. 5,050"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o72l1da"
+      "id": "8aeub7j",
+      "content": "<strong>Ans: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "ya934h9"
+      "id": "1dfyh3h",
+      "content": "<strong>Q10. </strong>A cistern can be filled in 6 hours and emptied in 9 hours. If both the inlet and outlet are open, how long will it take to fill the cistern?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "48k0nam"
+      "id": "xcj1f55",
+      "content": "    (A)  15 hours"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zjexrqt"
+      "id": "l79kkr8",
+      "content": "    (B)  18 hours"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e9krtdw"
+      "id": "jz72nu2",
+      "content": "    (C)  12 hours"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tq6g63s"
+      "id": "baho8hx",
+      "content": "    (D)  20 hours"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xg3uqyy"
+      "id": "ih115wi",
+      "content": "<strong>Ans: </strong>(B)"
     },
     {
       "type": "paragraph",
-      "id": "g9ygdbu"
+      "id": "71wxbvu",
+      "content": "<strong>Q11. </strong>A man buys a watch for Rs. 1,500 and sells it for Rs. 1,200. Find the loss percentage."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "90fz80f"
+      "id": "vtw8upt",
+      "content": "    (A)  20%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qf3kjzo"
+      "id": "66fy5bj",
+      "content": "    (B)  15%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "betifuv"
+      "id": "i797gns",
+      "content": "    (C)  25%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ku78w0x"
+      "id": "u8ih0b8",
+      "content": "    (D)  18%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tou45z8"
+      "id": "0n0dp75",
+      "content": "<strong>Ans: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "0utob2m"
+      "id": "gapcxeh",
+      "content": "<strong>Q12. </strong>The difference between simple and compound interest on Rs. 5,000 for 2 years at 8% p.a. is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q1wf1gi"
+      "id": "k2teygo",
+      "content": "    (A)  Rs. 32"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ma1fe1j"
+      "id": "0f0ijoj",
+      "content": "    (B)  Rs. 28"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4w8wtwm"
+      "id": "y1l062n",
+      "content": "    (C)  Rs. 40"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mddtohz"
+      "id": "xw0ndye",
+      "content": "    (D)  Rs. 36"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "13cuoa8"
+      "id": "tk14av2",
+      "content": "<strong>Ans: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "jitljrs"
+      "id": "kvdiulg",
+      "content": "<strong>Q13. </strong>Speed of a boat in still water is 12 km/h and speed of stream is 4 km/h. Find time taken to go 64 km downstream."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mmi2ezn"
+      "id": "av0rkqc",
+      "content": "    (A)  4 hours"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0lwunzp"
+      "id": "5eb8txd",
+      "content": "    (B)  5 hours"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "b6xfk0j"
+      "id": "4hj0sv5",
+      "content": "    (C)  6 hours"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8hzfcxf"
+      "id": "g9bemr9",
+      "content": "    (D)  3.5 hours"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "okeycj0"
+      "id": "1wzjbeo",
+      "content": "<strong>Ans: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "wc7vgq9"
+      "id": "t1fs325",
+      "content": "<strong>Q14. </strong>If the price of sugar increases by 25%, by what % should a family reduce its consumption to maintain the same expenditure?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "douf1dn"
+      "id": "bzewq6w",
+      "content": "    (A)  20%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jbk4j1t"
+      "id": "xku5vu8",
+      "content": "    (B)  25%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "v99u33x"
+      "id": "idilehb",
+      "content": "    (C)  15%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q31aegd"
+      "id": "i9eqjfe",
+      "content": "    (D)  18%"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1dt7ap0"
+      "id": "9uoni99",
+      "content": "<strong>Ans: </strong>(A)"
     },
     {
       "type": "paragraph",
-      "id": "54xr8ss"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rhyefkw"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "rzlqo22"
+      "id": "k4ihhyh",
+      "content": "<strong>Q15. </strong>Two numbers are in the ratio 4:5. If 8 is subtracted from each, the ratio becomes 3:4. Find the larger number."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5bx9d79"
+      "id": "vxv20pr",
+      "content": "    (A)  40"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f2jiygn"
+      "id": "dznh7q4",
+      "content": "    (B)  45"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cs2mx1j"
+      "id": "7y3bqez",
+      "content": "    (C)  48"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "y291lkq"
+      "id": "99sh4r9",
+      "content": "    (D)  50"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nsrvrty"
-    },
-    {
-      "id": "mq7nlm6",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "khzf92k"
-    },
-    {
-      "id": "u7yzhzf",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "nsjrfem"
-    },
-    {
-      "id": "ouh38ok",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "az7vkjy"
-    },
-    {
-      "id": "fdxelvk",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "sa2wqo0"
-    },
-    {
-      "type": "paragraph",
-      "id": "z5h0901"
-    },
-    {
-      "type": "paragraph",
-      "id": "w5b117h"
+      "id": "wk59hen",
+      "content": "<strong>Ans: </strong>(A)"
     }
   ],
   "enriched": true

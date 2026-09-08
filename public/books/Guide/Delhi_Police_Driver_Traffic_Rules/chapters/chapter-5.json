@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "prlm8sl"
+      "id": "prlm8sl",
+      "content": "Speed limits are defined under Section 112 of the Motor Vehicles Act, 1988. Driving above the limit is an offence. State governments can set lower limits for their roads."
     },
     {
       "type": "statStrip",
@@ -35,11 +36,6 @@
       "content": "General Speed Limits"
     },
     {
-      "type": "pullQuote",
-      "content": "Special Speed Restrictions",
-      "id": "gk32c4s"
-    },
-    {
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
@@ -56,73 +52,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Vehicle Type</strong></p>",
+            "<p><strong>Plain Road (km/h)</strong></p>",
+            "<p><strong>Expressway (km/h)</strong></p>",
+            "<p><strong>City/Urban (km/h)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cars, Jeeps, Taxis</p>",
+            "<p>100</p>",
+            "<p>120</p>",
+            "<p>50–70</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Motor cycles</p>",
+            "<p>80</p>",
+            "<p>80</p>",
+            "<p>50–60</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Light Motor Vehicles (goods)</p>",
+            "<p>80</p>",
+            "<p>80</p>",
+            "<p>50</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mini Bus / Medium Vehicles</p>",
+            "<p>80</p>",
+            "<p>80</p>",
+            "<p>40–50</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Buses (passenger)</p>",
+            "<p>80</p>",
+            "<p>100</p>",
+            "<p>40–60</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Heavy Goods Vehicles (trucks)</p>",
+            "<p>60–80</p>",
+            "<p>80</p>",
+            "<p>40</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vehicles with trailer</p>",
+            "<p>50</p>",
+            "<p>60</p>",
+            "<p>40</p>"
           ]
         }
       ]
@@ -146,17 +142,18 @@
       "id": "ef1x9nj",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Near schools, hospitals, and crowded areas — drive very slowly (usually 25–30 km/h)",
+        "Speed bumps / road humps — slow down completely before crossing",
+        "Night driving on unlit roads — reduce speed significantly",
+        "Foggy or rainy conditions — reduce speed and use fog lights/hazard lights",
+        "Near railway crossings — slow down and check for trains",
+        "Through villages — maximum 25 km/h"
       ]
     },
     {
       "type": "paragraph",
-      "id": "luhtb74"
+      "id": "luhtb74",
+      "content": "Note: A speed limit sign on the road overrides the general limit. Always follow the lowest applicable speed limit."
     }
   ],
   "enriched": true

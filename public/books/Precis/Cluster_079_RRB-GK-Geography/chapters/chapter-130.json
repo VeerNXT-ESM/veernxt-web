@@ -1,0 +1,271 @@
+{
+  "title": "3. Erosion",
+  "order": 130,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Erosion involves detachment, transportation, and removal of weathered material by natural agents.",
+      "id": "ob6xtr8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Erosion Processes",
+          "value": "4 Key Types",
+          "icon": "info"
+        },
+        {
+          "label": "River Erosion Types",
+          "value": "3 Stage Types",
+          "icon": "book"
+        },
+        {
+          "label": "Transport Methods",
+          "value": "4 Modes",
+          "icon": "check"
+        },
+        {
+          "label": "Ultimate Base Level",
+          "value": "Sea Level",
+          "icon": "award"
+        }
+      ],
+      "id": "9fyxmcu"
+    },
+    {
+      "id": "2lodpya",
+      "type": "heading",
+      "level": 2,
+      "content": "A. Agents of Erosion"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Erosion involves three main steps: detachment, transportation, and removal of weathered material by natural agents.",
+        "The primary physical and chemical erosion processes include Hydraulic Action, Abrasion, Attrition, and Solution.",
+        "River erosion progresses through distinct stages: Vertical Erosion (deepening in youth stage), Lateral Erosion (widening in mature stage), and Headward Erosion (backward cutting at river source).",
+        "Sediment transportation takes place via Traction (rolling), Saltation (bouncing), Suspension (carried in water), and Solution (dissolved load).",
+        "Base level represents the lowest point erosion can reach, with sea level acting as the ultimate base level."
+      ],
+      "id": "0khas4v"
+    },
+    {
+      "id": "npea1vf",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Agent</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Landforms</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Running Water</p>",
+            "<p>Humid</p>",
+            "<p>V-shaped valleys, floodplains</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Wind</p>",
+            "<p>Arid</p>",
+            "<p>Sand dunes, loess</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Glaciers</p>",
+            "<p>Cold</p>",
+            "<p>U-shaped valleys, moraines</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sea Waves</p>",
+            "<p>Coastal</p>",
+            "<p>Cliffs, beaches</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2pjox3p",
+      "type": "heading",
+      "level": 2,
+      "content": "B. Processes of Erosion"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Hydraulic Action",
+      "id": "38ucbse"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Abrasion",
+      "id": "1jo06iv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Attrition",
+      "id": "3ft7zel"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Sea level is the ultimate base level.",
+      "id": "u0uvmv0"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Solution (Corrosion)",
+      "id": "pselt1d"
+    },
+    {
+      "id": "ohqto7z",
+      "type": "heading",
+      "level": 2,
+      "content": "C. Types of Erosion by Rivers"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Vertical Erosion – deepening of valleys (youth stage).",
+      "id": "8ey1917"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Lateral Erosion – widening of valleys (mature stage).",
+      "id": "zrpudlr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Transport Method",
+        "Mechanism",
+        "Particle Type / Load"
+      ],
+      "rows": [
+        [
+          "Traction",
+          "Rolling action",
+          "Large particles"
+        ],
+        [
+          "Saltation",
+          "Bouncing movement",
+          "Medium particles"
+        ],
+        [
+          "Suspension",
+          "Carried within water flow",
+          "Fine particles"
+        ],
+        [
+          "Solution",
+          "Dissolved state",
+          "Dissolved chemical load"
+        ]
+      ],
+      "id": "e765xo4"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Headward Erosion – backward cutting at river source.",
+      "id": "29vwgn2"
+    },
+    {
+      "id": "zl6vro7",
+      "type": "heading",
+      "level": 2,
+      "content": "D. Transportation Methods"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Traction – rolling of large particles.",
+      "id": "f421yva"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Saltation – bouncing movement.",
+      "id": "vcjsoue"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Suspension – fine particles carried within water.",
+      "id": "t8td85c"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Solution – dissolved load.",
+      "id": "h219u1f"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Match the river erosion type with its river stage: Vertical erosion corresponds to the youth stage (deepening) while lateral erosion corresponds to the mature stage (widening).",
+        "Distinguish between transport methods: Traction involves rolling large particles, whereas Saltation involves bouncing movements.",
+        "Remember that sea level is defined as the ultimate base level of erosion."
+      ],
+      "id": "9rnu840"
+    },
+    {
+      "id": "wncj436",
+      "type": "heading",
+      "level": 2,
+      "content": "E. Base Level of Erosion"
+    },
+    {
+      "type": "paragraph",
+      "content": "Base level refers to the lowest level to which erosion can occur. Sea level is the ultimate base level.",
+      "id": "v7mvich"
+    },
+    {
+      "id": "b4c6ojy",
+      "type": "heading",
+      "level": 2,
+      "content": "Weathering vs Mass Wasting vs Erosion (Comparison)"
+    },
+    {
+      "id": "tacyu92",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Weathering</strong></p>",
+            "<p><strong>Mass Wasting</strong></p>",
+            "<p><strong>Erosion</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>In-situ breakdown</p>",
+            "<p>Gravity-driven movement</p>",
+            "<p>Agent-driven transport</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>No transport</p>",
+            "<p>Limited transport</p>",
+            "<p>Active transport</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

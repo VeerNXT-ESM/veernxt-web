@@ -4,6 +4,12 @@
   "order": 8,
   "blocks": [
     {
+      "id": "434wj6l",
+      "type": "image",
+      "imageId": "ft9chcf",
+      "src": "/books/Guide/Gujarat_SI/images/image_ft9chcf.jpeg"
+    },
+    {
       "id": "8muei3i",
       "type": "heading",
       "level": 2,
@@ -45,10 +51,10 @@
       "id": "xdaeq9n",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Physical Research Laboratory (PRL): Ahmedabad — premier space sciences institute; founded by Vikram Sarabhai in 1947; under Dept. of Space.",
+        "Space Application Centre (SAC): Ahmedabad — ISRO's key centre for satellite communication, earth observation. Developed payloads for Chandrayaan missions.",
+        "Institute of Plasma Research (IPR): Gandhinagar — nuclear fusion research; India's tokamak (Aditya, SST-1).",
+        "Nirma University, DAIICT (Dhirubhai Ambani Institute of ICT): Major technical universities in Gandhinagar."
       ]
     },
     {
@@ -66,7 +72,7 @@
       "id": "mg8vi1c",
       "type": "list",
       "items": [
-        null
+        "Kakrapar Atomic Power Station: Surat district; on banks of Tapi river; CANDU-type (PHWR) reactors. India's first nuclear plant to use light water for cooling (1993)."
       ]
     },
     {
@@ -82,89 +88,89 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Name</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Key Wildlife</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gir National Park &amp; Sanctuary</p>",
+            "<p>Junagadh, Gir Somnath, Amreli</p>",
+            "<p>Only habitat of Asiatic Lion (Panthera leo persica) in the world outside Africa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Marine National Park</p>",
+            "<p>Jamnagar (Gulf of Kutch)</p>",
+            "<p>India's first marine national park (1982); corals, dugong, turtles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Blackbuck National Park (Velavadar)</p>",
+            "<p>Bhavnagar</p>",
+            "<p>Blackbuck (Indian antelope); also home to wolves and raptors</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wild Ass Sanctuary (Little Rann)</p>",
+            "<p>Surendranagar/Kutch</p>",
+            "<p>Indian Wild Ass (Khur) — Equus hemionus khur; IUCN Near Threatened</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Narayan Sarovar Sanctuary</p>",
+            "<p>Kutch</p>",
+            "<p>Caracal, wolf, chinkara, desert fox</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hingolgadh Nature Education Sanctuary</p>",
+            "<p>Rajkot</p>",
+            "<p>Blackbuck, nilgai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Jessore Sloth Bear Sanctuary</p>",
+            "<p>Banaskantha</p>",
+            "<p>Sloth bear; near Jessore hill</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kutch Bustard Sanctuary</p>",
+            "<p>Kutch</p>",
+            "<p>Great Indian Bustard (GIB) — critically endangered</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Purna Wildlife Sanctuary</p>",
+            "<p>Dang</p>",
+            "<p>Tiger, leopard, gaur; part of Western Ghats ecosystem</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Barda Wildlife Sanctuary</p>",
+            "<p>Porbandar</p>",
+            "<p>Asiatic lion (reintroduction planned); leopard</p>"
           ]
         }
       ]
@@ -179,10 +185,10 @@
       "id": "zh8b7g5",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Gulf of Kutch: Marine National Park and Marine Sanctuary — India's first; coral reefs and rich biodiversity.",
+        "Gulf of Khambhat (Cambay): Rich in marine life; Narmada and Mahi rivers meet the sea here; known for tidal bore phenomenon.",
+        "Mangroves: Found along Gujarat's coast, particularly in Kutch and south Gujarat. Kutch has the largest mangrove area in Gujarat.",
+        "Olive Ridley Turtles: Nesting sites at Simar beach (Kutch) and other coastal areas."
       ]
     },
     {
@@ -202,16 +208,17 @@
     },
     {
       "type": "paragraph",
-      "id": "l9h8oxn"
+      "id": "l9h8oxn",
+      "content": "Gujarat is a leader in renewable energy in India."
     },
     {
       "id": "auwa9oi",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Solar Energy: Charanka Solar Park (Patan district) — one of Asia's largest solar parks. Gujarat was the first state to adopt a Solar Power Policy (2009).",
+        "Wind Energy: Kutch and Saurashtra have high wind energy potential. Gujarat is among India's top wind energy states.",
+        "RE-Invest: Gujarat participates actively in national renewable energy summits.",
+        "Hydrogen Project: Gujarat is being developed as a hub for Green Hydrogen production."
       ]
     }
   ],

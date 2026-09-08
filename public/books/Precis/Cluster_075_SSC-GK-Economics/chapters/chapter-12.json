@@ -1,0 +1,297 @@
+{
+  "title": "CHAPTER 13: PUBLIC FINANCE",
+  "order": 12,
+  "blocks": [
+    {
+      "id": "j952y1v",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: CONCEPT OF PUBLIC FINANCE"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Public finance studies government revenue, expenditure, and public debt to promote social welfare rather than profit.",
+        "Taxes are compulsory payments without direct return, categorized into direct taxes (e.g., Income Tax) and indirect taxes (e.g., GST).",
+        "Taxation structures vary: progressive taxes increase rate with higher income, proportional taxes remain constant, and regressive taxes decrease rate as income rises.",
+        "Public expenditure is divided into day-to-day Revenue Expenditure (salaries, subsidies) and long-term Capital Expenditure (roads, railways).",
+        "Fiscal Deficit reflects total borrowing needs, whereas Primary Deficit isolates current fiscal performance by subtracting interest payments."
+      ],
+      "id": "evvubrx"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Revenue Source",
+          "value": "Taxes",
+          "icon": "award"
+        },
+        {
+          "label": "Budget Period",
+          "value": "Annual Financial Year",
+          "icon": "calendar"
+        },
+        {
+          "label": "Primary Deficit",
+          "value": "Fiscal Deficit - Interest",
+          "icon": "check"
+        },
+        {
+          "label": "Core Objective",
+          "value": "Social Welfare",
+          "icon": "info"
+        }
+      ],
+      "id": "sd6ty67"
+    },
+    {
+      "id": "ia51cd0",
+      "type": "heading",
+      "level": 3,
+      "content": "1. Meaning of Public Finance"
+    },
+    {
+      "type": "paragraph",
+      "content": "Public finance is the branch of economics that studies the financial activities of the government. It explains how the government collects money (revenue), how it spends money (expenditure), how it borrows money (public debt), and how these activities affect the economy.",
+      "id": "l3gpgau"
+    },
+    {
+      "type": "paragraph",
+      "content": "Unlike private finance, public finance focuses on social welfare and public interest, not profit.",
+      "id": "ckzasmf"
+    },
+    {
+      "id": "v4hggim",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: PUBLIC REVENUE – DEEP EXPLANATION"
+    },
+    {
+      "id": "fwhtf93",
+      "type": "heading",
+      "level": 3,
+      "content": "2. Public Revenue"
+    },
+    {
+      "type": "paragraph",
+      "content": "Public revenue refers to all income received by the government to meet its administrative, developmental and welfare expenditure.",
+      "id": "hdvu1hr"
+    },
+    {
+      "id": "a4rlubh",
+      "type": "heading",
+      "level": 3,
+      "content": "3. Taxes – Concept + Logic"
+    },
+    {
+      "type": "paragraph",
+      "content": "Taxes are compulsory contributions imposed by the government on individuals and businesses without any direct return. Taxes are the main source of public revenue.",
+      "id": "lnq6hcm"
+    },
+    {
+      "id": "l5pjnz9",
+      "type": "heading",
+      "level": 3,
+      "content": "4. Types of Taxes (Detailed)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Direct Taxes are imposed directly on income and wealth. Example: Income Tax.<br/><br/>Indirect Taxes are imposed on goods and services and are collected indirectly. Example: GST.",
+      "id": "2rtlc5e"
+    },
+    {
+      "id": "ngfr5yx",
+      "type": "heading",
+      "level": 3,
+      "content": "5. Progressive, Proportional & Regressive Tax – WITH GRAPH LOGIC"
+    },
+    {
+      "type": "paragraph",
+      "content": "Progressive Tax:<br/>In progressive taxation, tax rate increases as income increases. Graphically, income is shown on X-axis and tax paid on Y-axis. The curve becomes steeper as income increases.<br/><br/>Proportional Tax:<br/>Tax rate remains constant at all income levels. The graph is a straight line rising uniformly.<br/><br/>Regressive Tax:<br/>Tax rate decreases as income increases. The curve rises but at a decreasing rate.",
+      "id": "luo24qc"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Unlike private finance, public finance focuses on social welfare and public interest, not profit.",
+      "id": "uwc819e"
+    },
+    {
+      "id": "pjv8i3x",
+      "type": "heading",
+      "level": 2,
+      "content": "PART C: PUBLIC EXPENDITURE – WITH CONCEPTUAL GRAPH"
+    },
+    {
+      "id": "ocw2ogk",
+      "type": "heading",
+      "level": 3,
+      "content": "6. Public Expenditure"
+    },
+    {
+      "type": "paragraph",
+      "content": "Public expenditure refers to spending by the government on administration, defence, education, health, infrastructure and welfare programmes.",
+      "id": "1yy5q4c"
+    },
+    {
+      "id": "wp7504c",
+      "type": "heading",
+      "level": 3,
+      "content": "7. Types of Public Expenditure (Explained)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Revenue Expenditure includes day-to-day expenses such as salaries and subsidies.<br/><br/>Capital Expenditure includes long-term investment like roads, dams and railways.",
+      "id": "nkdrjzw"
+    },
+    {
+      "id": "t9f651q",
+      "type": "heading",
+      "level": 3,
+      "content": "8. Growth of Public Expenditure – GRAPH EXPLANATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Graphically, public expenditure is shown increasing over time. On X-axis time is taken, on Y-axis government expenditure. The upward-sloping curve shows increasing role of government.",
+      "id": "ckawkwh"
+    },
+    {
+      "id": "el16ubs",
+      "type": "heading",
+      "level": 2,
+      "content": "PART D: GOVERNMENT BUDGET – COMPLETE LOGIC"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category",
+        "Key Definition",
+        "Examples / Features"
+      ],
+      "rows": [
+        [
+          "Direct Tax",
+          "Imposed directly on income and wealth",
+          "Income Tax"
+        ],
+        [
+          "Indirect Tax",
+          "Imposed on goods and services, collected indirectly",
+          "GST"
+        ],
+        [
+          "Revenue Expenditure",
+          "Day-to-day operational expenses",
+          "Salaries and subsidies"
+        ],
+        [
+          "Capital Expenditure",
+          "Long-term investments creating assets",
+          "Roads, dams, and railways"
+        ]
+      ],
+      "id": "3frmuid"
+    },
+    {
+      "id": "osihiut",
+      "type": "heading",
+      "level": 3,
+      "content": "9. Budget"
+    },
+    {
+      "type": "paragraph",
+      "content": "A government budget is an annual statement showing estimated receipts and expenditures for a financial year.",
+      "id": "7rutg62"
+    },
+    {
+      "id": "jg4ieit",
+      "type": "heading",
+      "level": 3,
+      "content": "10. Objectives of Budget – WITH FLOW LOGIC"
+    },
+    {
+      "type": "paragraph",
+      "content": "Allocation of resources ensures efficient use of resources.<br/>Redistribution reduces inequality.<br/>Economic stability controls inflation and deflation.<br/>Growth promotes development.",
+      "id": "rdpc4pt"
+    },
+    {
+      "id": "ojxkg63",
+      "type": "heading",
+      "level": 2,
+      "content": "PART E: DEFICITS – MOST IMPORTANT WITH GRAPHS"
+    },
+    {
+      "id": "rdbk7hx",
+      "type": "heading",
+      "level": 3,
+      "content": "11. Revenue Deficit – GRAPH EXPLANATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Revenue deficit occurs when revenue expenditure exceeds revenue receipts. Graphically, revenue expenditure line lies above revenue receipts line.",
+      "id": "r63snqz"
+    },
+    {
+      "id": "aaoc33e",
+      "type": "heading",
+      "level": 3,
+      "content": "12. Fiscal Deficit – GRAPH EXPLANATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Fiscal deficit represents total borrowing requirement. Graph shows total expenditure above total receipts excluding borrowings.",
+      "id": "mr0xfby"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Primary Deficit formula is frequently tested: Primary Deficit = Fiscal Deficit − Interest Payments.",
+        "Fiscal Deficit represents the total borrowing requirement of the government.",
+        "Revenue Deficit specifically occurs when revenue expenditure exceeds revenue receipts.",
+        "Progressive tax systems reduce income inequality by raising tax rates as income increases."
+      ],
+      "id": "u8mj3qa"
+    },
+    {
+      "id": "nk2zq94",
+      "type": "heading",
+      "level": 3,
+      "content": "13. Primary Deficit – LOGIC"
+    },
+    {
+      "type": "paragraph",
+      "content": "Primary deficit is fiscal deficit minus interest payments. It shows current fiscal position excluding past debt burden.",
+      "id": "w5tg6xx"
+    },
+    {
+      "id": "qaymzu3",
+      "type": "heading",
+      "level": 2,
+      "content": "PART F: PUBLIC DEBT – FULL EXPLANATION"
+    },
+    {
+      "id": "yqcx7tt",
+      "type": "heading",
+      "level": 3,
+      "content": "14. Public Debt"
+    },
+    {
+      "type": "paragraph",
+      "content": "Public debt refers to government borrowings to finance deficits. Internal debt is borrowed within country; external debt is borrowed from foreign sources.",
+      "id": "6yfkrfd"
+    },
+    {
+      "id": "404cmy3",
+      "type": "heading",
+      "level": 3,
+      "content": "SSC ULTRA FINAL REVISION POINTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Public finance = government income &amp; spending<br/>• Taxes are main revenue source<br/>• Progressive tax reduces inequality<br/>• Budget is annual financial plan<br/>• Fiscal deficit shows borrowing need",
+      "id": "erhojtb"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,82 @@
+{
+  "title": "MOST IMPORTANT EXAM POINTS",
+  "order": 142,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Vertical erosion dominates in youthful stage.<br/>• Lateral erosion forms meanders.<br/>• Oxbow lakes form from cut-off meanders.<br/>• Sea level is ultimate base level.<br/>• Dendritic drainage resembles tree branches.",
+      "id": "cuhort3"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Sea level is ultimate base level.",
+      "id": "wa4xmrk"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Erosion Type",
+        "Associated Feature / Stage"
+      ],
+      "rows": [
+        [
+          "Vertical erosion",
+          "Dominates in youthful stage"
+        ],
+        [
+          "Lateral erosion",
+          "Forms meanders"
+        ]
+      ],
+      "id": "v7isgqz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Youthful Stage",
+          "value": "Vertical Erosion",
+          "icon": "check"
+        },
+        {
+          "label": "Meanders",
+          "value": "Lateral Erosion",
+          "icon": "info"
+        },
+        {
+          "label": "Ultimate Base Level",
+          "value": "Sea Level",
+          "icon": "award"
+        },
+        {
+          "label": "Tree Pattern",
+          "value": "Dendritic",
+          "icon": "book"
+        }
+      ],
+      "id": "oxndtat"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between vertical erosion (youthful stage) and lateral erosion (meanders) as this distinction is commonly tested.",
+        "Remember that oxbow lakes are specifically formed from cut-off meanders.",
+        "Identify dendritic drainage pattern by its resemblance to tree branches."
+      ],
+      "id": "e7u5u9u"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Vertical erosion dominates during the youthful stage of a river.",
+        "Lateral erosion leads to the formation of river meanders.",
+        "Oxbow lakes are created from cut-off meanders.",
+        "Sea level is the ultimate base level for erosion.",
+        "Dendritic drainage pattern resembles tree branches."
+      ],
+      "id": "tbdd72m"
+    }
+  ],
+  "enriched": true
+}

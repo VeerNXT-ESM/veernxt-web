@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mpfkq2a"
+      "id": "mpfkq2a",
+      "content": "A tissue is a group of similar cells that perform a specific function. In multicellular organisms, cells specialize and form tissues to increase efficiency. The study of tissues is called Histology."
     },
     {
       "id": "83k41jo",
@@ -64,25 +65,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Unicellular</strong></p>",
+            "<p><strong>Multicellular</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Number of Cells</p>",
+            "<p>Single cell</p>",
+            "<p>Many cells</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Division of Labour</p>",
+            "<p>Absent</p>",
+            "<p>Present</p>"
           ]
         }
       ]
@@ -95,17 +96,26 @@
     },
     {
       "type": "paragraph",
-      "id": "s4ay4tl"
+      "id": "s4ay4tl",
+      "content": "Tissues are broadly classified into:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bkhyf0f"
+      "id": "bkhyf0f",
+      "content": "1. Plant Tissues"
+    },
+    {
+      "id": "d1lklwp",
+      "type": "image",
+      "imageId": "vmo74cy",
+      "src": "/books/Precis/RRB GS/images/image_vmo74cy.jpeg"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gfrpkz5"
+      "id": "gfrpkz5",
+      "content": "2. Animal Tissues"
     },
     {
       "id": "p6s1s58",
@@ -115,7 +125,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ldeipyo"
+      "id": "ldeipyo",
+      "content": "Plant tissues are divided into Meristematic and Permanent tissues."
     },
     {
       "id": "o5g47i1",
@@ -125,7 +136,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rd8ijpb"
+      "id": "rd8ijpb",
+      "content": "Meristematic tissues consist of actively dividing cells. They are responsible for growth in plants."
     },
     {
       "id": "77j71cu",
@@ -134,33 +146,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Apical</p>",
+            "<p>Root &amp; shoot tips</p>",
+            "<p>Increase in length (Primary growth)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Intercalary</p>",
+            "<p>Nodes / Internodes</p>",
+            "<p>Elongation of internodes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lateral</p>",
+            "<p>Cambium</p>",
+            "<p>Increase in girth (Secondary growth)</p>"
           ]
         }
       ]
@@ -173,11 +185,13 @@
     },
     {
       "type": "paragraph",
-      "id": "ubc4q8g"
+      "id": "ubc4q8g",
+      "content": "Permanent tissues are formed from meristematic tissues after losing their ability to divide."
     },
     {
       "type": "paragraph",
-      "id": "tx93ken"
+      "id": "tx93ken",
+      "content": "They are of two types: Simple and Complex."
     },
     {
       "id": "ijh1d52",
@@ -197,37 +211,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Tissue</strong></p>",
+            "<p><strong>Nature</strong></p>",
+            "<p><strong>Special Types</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Parenchyma</p>",
+            "<p>Living</p>",
+            "<p>Chlorenchyma, Aerenchyma</p>",
+            "<p>Storage, Photosynthesis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Collenchyma</p>",
+            "<p>Living</p>",
+            "<p>—</p>",
+            "<p>Flexibility &amp; Support</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sclerenchyma</p>",
+            "<p>Dead</p>",
+            "<p>Fibres, Sclereids</p>",
+            "<p>Mechanical strength</p>"
           ]
         }
       ]
@@ -245,28 +259,28 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Tissue</strong></p>",
+            "<p><strong>Components</strong></p>",
+            "<p><strong>Living/Dead</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Xylem</p>",
+            "<p>Tracheids, Vessels, Fibres, Parenchyma</p>",
+            "<p>Mostly dead</p>",
+            "<p>Transport of water</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Phloem</p>",
+            "<p>Sieve tubes, Companion cells, Fibres, Parenchyma</p>",
+            "<p>Mostly living</p>",
+            "<p>Transport of food</p>"
           ]
         }
       ]
@@ -279,7 +293,8 @@
     },
     {
       "type": "paragraph",
-      "id": "j6upu65"
+      "id": "j6upu65",
+      "content": "Animal tissues are divided into four main types."
     },
     {
       "id": "0ozhza0",
@@ -289,7 +304,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5ie0q4d"
+      "id": "5ie0q4d",
+      "content": "Forms outer covering and inner lining of organs."
     },
     {
       "id": "cuf5870",
@@ -298,49 +314,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Structure</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Squamous</p>",
+            "<p>Flat cells</p>",
+            "<p>Diffusion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cuboidal</p>",
+            "<p>Cube-shaped</p>",
+            "<p>Secretion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Columnar</p>",
+            "<p>Tall cells</p>",
+            "<p>Absorption</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ciliated</p>",
+            "<p>Hair-like projections</p>",
+            "<p>Movement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Glandular</p>",
+            "<p>Secretory cells</p>",
+            "<p>Hormone/Enzyme secretion</p>"
           ]
         }
       ]
@@ -384,7 +400,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gu3f4ky"
+      "id": "gu3f4ky",
+      "content": "Connective tissue connects, supports and binds other tissues. It has cells embedded in a matrix (solid, liquid or gel-like)."
     },
     {
       "id": "9reqgk2",
@@ -393,65 +410,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Structure/Matrix</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Blood</p>",
+            "<p>Fluid matrix (Plasma)</p>",
+            "<p>Transport of gases &amp; nutrients</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bone</p>",
+            "<p>Hard, calcium-rich matrix</p>",
+            "<p>Support &amp; protection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cartilage</p>",
+            "<p>Flexible matrix</p>",
+            "<p>Smooth joint movement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Areolar</p>",
+            "<p>Loose connective tissue</p>",
+            "<p>Fills spaces &amp; repair</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Adipose</p>",
+            "<p>Fat storing cells</p>",
+            "<p>Energy storage &amp; insulation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tendon</p>",
+            "<p>Fibrous tissue</p>",
+            "<p>Connects muscle to bone</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ligament</p>",
+            "<p>Elastic connective tissue</p>",
+            "<p>Connects bone to bone</p>"
           ]
         }
       ]
@@ -464,7 +481,8 @@
     },
     {
       "type": "paragraph",
-      "id": "54f5wmb"
+      "id": "54f5wmb",
+      "content": "Responsible for movement."
     },
     {
       "id": "5smvit1",
@@ -473,33 +491,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Control</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Striated</p>",
+            "<p>Voluntary</p>",
+            "<p>Limbs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Smooth</p>",
+            "<p>Involuntary</p>",
+            "<p>Intestine</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cardiac</p>",
+            "<p>Involuntary</p>",
+            "<p>Heart</p>"
           ]
         }
       ]
@@ -512,7 +530,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mwt1o9o"
+      "id": "mwt1o9o",
+      "content": "Nervous tissue consists of neurons which transmit nerve impulses. It forms brain, spinal cord and nerves."
     },
     {
       "id": "0fqztyr",
@@ -522,19 +541,23 @@
     },
     {
       "type": "paragraph",
-      "id": "bz4r6tc"
+      "id": "bz4r6tc",
+      "content": "• Aerenchyma helps aquatic plants float."
     },
     {
       "type": "paragraph",
-      "id": "07ah4it"
+      "id": "07ah4it",
+      "content": "• Chlorenchyma performs photosynthesis."
     },
     {
       "type": "paragraph",
-      "id": "2ml140x"
+      "id": "2ml140x",
+      "content": "• Sclerenchyma cells are lignified."
     },
     {
       "type": "paragraph",
-      "id": "z3e5x5t"
+      "id": "z3e5x5t",
+      "content": "• Xylem transports upward; Phloem transports in both directions."
     },
     {
       "type": "examAlert",
@@ -548,7 +571,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xjhitle"
+      "id": "xjhitle",
+      "content": "• Blood is fluid connective tissue."
     },
     {
       "id": "ay5of7k",
@@ -558,27 +582,33 @@
     },
     {
       "type": "paragraph",
-      "id": "tfqoxyi"
+      "id": "tfqoxyi",
+      "content": "1. Apical meristem increases plant length."
     },
     {
       "type": "paragraph",
-      "id": "7tg7xrl"
+      "id": "7tg7xrl",
+      "content": "2. Sclerenchyma cells are dead at maturity."
     },
     {
       "type": "paragraph",
-      "id": "4o1rsqy"
+      "id": "4o1rsqy",
+      "content": "3. Xylem = Water transport; Phloem = Food transport."
     },
     {
       "type": "paragraph",
-      "id": "7knq6iv"
+      "id": "7knq6iv",
+      "content": "4. Cardiac muscle is only in heart."
     },
     {
       "type": "paragraph",
-      "id": "fgskrxk"
+      "id": "fgskrxk",
+      "content": "5. Blood is connective tissue."
     },
     {
       "type": "paragraph",
-      "id": "zz9m25i"
+      "id": "zz9m25i",
+      "content": "6. Tendon connects muscle to bone; Ligament connects bone to bone."
     }
   ],
   "enriched": true

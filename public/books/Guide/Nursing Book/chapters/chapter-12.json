@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "olh3kc8"
+      "id": "olh3kc8",
+      "content": "Child Health Nursing (Pediatric Nursing) focuses on the health care of infants, children, and adolescents. It includes growth and development monitoring, nutrition, immunization, prevention of childhood diseases, and nursing care for sick children. In nursing competitive exams such as RRB Nursing, common questions come from growth milestones, immunization schedules, common pediatric diseases, and neonatal care."
     },
     {
       "id": "sojkjfb",
@@ -64,36 +65,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Principle</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Family-centered care</p>",
+            "<p>Parents and family are involved in child care decisions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Growth and development focus</p>",
+            "<p>Monitoring physical and mental development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Disease prevention</p>",
+            "<p>Vaccination and health education</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Holistic care</p>",
+            "<p>Addressing physical, emotional, and social needs</p>"
           ]
         }
       ]
@@ -111,65 +112,60 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Stage</strong></p>",
+            "<p><strong>Age Group</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Neonate</p>",
+            "<p>Birth–28 days</p>",
+            "<p>Rapid adaptation to life outside womb</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Infant</p>",
+            "<p>1 month–1 year</p>",
+            "<p>Rapid growth and development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Toddler</p>",
+            "<p>1–3 years</p>",
+            "<p>Learning to walk and talk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Preschool child</p>",
+            "<p>3–6 years</p>",
+            "<p>Improved motor skills</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>School-age child</p>",
+            "<p>6–12 years</p>",
+            "<p>Learning and social development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Adolescent</p>",
+            "<p>12–18 years</p>",
+            "<p>Puberty and emotional changes</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Principles of Child Health Nursing",
-      "id": "vgfno92"
     },
     {
       "id": "b9hbpqv",
@@ -184,49 +180,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Age</strong></p>",
+            "<p><strong>Milestone</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>3 months</p>",
+            "<p>Head control</p>",
+            "<p>Infant can hold head up</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>6 months</p>",
+            "<p>Sitting</p>",
+            "<p>Infant sits with support</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>9 months</p>",
+            "<p>Crawling</p>",
+            "<p>Infant starts crawling</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>12 months</p>",
+            "<p>Standing</p>",
+            "<p>Infant stands or walks with support</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2 years</p>",
+            "<p>Walking independently</p>",
+            "<p>Child walks and speaks simple words</p>"
           ]
         }
       ]
@@ -244,49 +240,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Vaccine</strong></p>",
+            "<p><strong>Disease Prevented</strong></p>",
+            "<p><strong>Age</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>BCG</p>",
+            "<p>Tuberculosis</p>",
+            "<p>At birth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>OPV</p>",
+            "<p>Polio</p>",
+            "<p>Birth and infancy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hepatitis B</p>",
+            "<p>Hepatitis B infection</p>",
+            "<p>Birth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DPT</p>",
+            "<p>Diphtheria, Pertussis, Tetanus</p>",
+            "<p>6, 10, 14 weeks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Measles</p>",
+            "<p>Measles</p>",
+            "<p>9 months</p>"
           ]
         }
       ]
@@ -304,49 +300,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Disease</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Symptoms</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Measles</p>",
+            "<p>Viral infection</p>",
+            "<p>Fever, rash</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chickenpox</p>",
+            "<p>Varicella virus</p>",
+            "<p>Itchy skin rash</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Polio</p>",
+            "<p>Poliovirus</p>",
+            "<p>Paralysis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Diarrhea</p>",
+            "<p>Infection or poor hygiene</p>",
+            "<p>Loose stools</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Malnutrition</p>",
+            "<p>Poor nutrition</p>",
+            "<p>Weight loss, weakness</p>"
           ]
         }
       ]
@@ -364,36 +360,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Care</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Breastfeeding</p>",
+            "<p>Provides nutrition and immunity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thermal protection</p>",
+            "<p>Maintains newborn body temperature</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cord care</p>",
+            "<p>Prevents infection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Newborn screening</p>",
+            "<p>Detects congenital disorders early</p>"
           ]
         }
       ]
@@ -420,36 +416,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Care</strong></p>",
+            "<p><strong>Importance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Monitoring vital signs</p>",
+            "<p>Detects deterioration early</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Medication administration</p>",
+            "<p>Treats infection or illness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fluid management</p>",
+            "<p>Prevents dehydration</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Parental education</p>",
+            "<p>Helps family manage child care at home</p>"
           ]
         }
       ]
@@ -467,43 +463,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Topic</strong></p>",
+            "<p><strong>Key Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Age of neonate</p>",
+            "<p>Birth–28 days</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>First vaccine at birth</p>",
+            "<p>BCG</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>First food for infant</p>",
+            "<p>Breast milk</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Disease causing paralysis in children</p>",
+            "<p>Polio</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Milestone at 6 months</p>",
+            "<p>Sitting with support</p>"
           ]
         }
       ]

@@ -1,0 +1,55 @@
+{
+  "title": "Length of a Degree of Latitude",
+  "order": 34,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The distance between two latitudes is approximately 111 kilometers anywhere on Earth because latitudes are parallel circles.",
+      "id": "u0ud7xd"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The distance between two latitudes is approximately 111 kilometers anywhere on Earth because latitudes are parallel circles.",
+      "id": "dgrgh5b"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Inter-Latitude Distance",
+          "value": "111 km",
+          "icon": "info"
+        },
+        {
+          "label": "Geometric Form",
+          "value": "Parallel Circles",
+          "icon": "book"
+        },
+        {
+          "label": "Global Variance",
+          "value": "Constant Everywhere",
+          "icon": "check"
+        }
+      ],
+      "id": "11r3bbt"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "1 degree of latitude equals approximately 111 km everywhere on Earth.",
+        "Latitudes are parallel circles, unlike longitudes which converge at the poles."
+      ],
+      "id": "k17klcl"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The distance between two adjacent degrees of latitude is roughly 111 kilometers across the globe.",
+        "Lines of latitude form parallel circles around the Earth, preventing them from converging."
+      ],
+      "id": "7br3lm6"
+    }
+  ],
+  "enriched": true
+}

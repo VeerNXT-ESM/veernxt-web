@@ -1,0 +1,125 @@
+{
+  "title": "Status and Establishment",
+  "order": 237,
+  "blocks": [
+    {
+      "id": "jap7njq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Established</p>",
+            "<p>1 January 2015</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Created By</p>",
+            "<p>Union Cabinet Resolution</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type</p>",
+            "<p>Executive Body (Non-Constitutional)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Replaced</p>",
+            "<p>Planning Commission</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Headquarters</p>",
+            "<p>New Delhi</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Unlike the Planning Commission, NITI Aayog does not have the power to allocate funds to states.",
+      "id": "7vt55xo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Function",
+          "value": "Policy Advisory",
+          "icon": "info"
+        },
+        {
+          "label": "Fund Allocation",
+          "value": "No Power",
+          "icon": "check"
+        },
+        {
+          "label": "Comparison Body",
+          "value": "Planning Commission",
+          "icon": "book"
+        }
+      ],
+      "id": "k95m919"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Planning Commission",
+        "NITI Aayog"
+      ],
+      "rows": [
+        [
+          "Fund Allocation to States",
+          "Had the power to allocate funds",
+          "Does not have the power to allocate funds"
+        ],
+        [
+          "Primary Role",
+          "Resource allocation and planning",
+          "Policy advisory institution"
+        ]
+      ],
+      "id": "1x59n0m"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "NITI Aayog functions primarily as a policy advisory institution.",
+        "Unlike the former Planning Commission, NITI Aayog does not possess the authority to allocate funds to states.",
+        "The role of NITI Aayog is centered on advisory functions rather than financial devolution."
+      ],
+      "id": "vp0wpgw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NITI Aayog does NOT have fund allocation powers; this differentiates it keyly from the Planning Commission in exam questions.",
+        "NITI Aayog's structural role is strictly that of a policy advisory institution."
+      ],
+      "id": "mlxj9hj"
+    },
+    {
+      "type": "paragraph",
+      "content": "Unlike the Planning Commission, NITI Aayog does not have the power to allocate funds to states. It functions primarily as a policy advisory institution.",
+      "id": "332imw3"
+    }
+  ],
+  "enriched": true
+}

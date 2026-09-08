@@ -52,33 +52,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>",
+            "<p><strong>Exam Focus</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nature</p>",
+            "<p>Young fold mountains stretching from Indus to Brahmaputra (~2500 km).</p>",
+            "<p>Very frequent question</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Climatic Role</p>",
+            "<p>Block cold winds and force monsoon uplift causing rainfall.</p>",
+            "<p>Conceptual MCQs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Jet Streams</p>",
+            "<p>Influence subtropical jet streams affecting monsoon timing.</p>",
+            "<p>Advanced question</p>"
           ]
         }
       ]
@@ -96,37 +96,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Western</strong></p>",
+            "<p><strong>Eastern</strong></p>",
+            "<p><strong>Reason</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Rainfall</p>",
+            "<p>Lower</p>",
+            "<p>Higher</p>",
+            "<p>Eastern gets more monsoon</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vegetation</p>",
+            "<p>Less dense</p>",
+            "<p>Dense forests</p>",
+            "<p>High rainfall</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sediment</p>",
+            "<p>Less deposition</p>",
+            "<p>Higher deposition</p>",
+            "<p>Wider plains</p>"
           ]
         }
       ]
@@ -139,7 +139,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gl5bt03"
+      "id": "gl5bt03",
+      "content": "Formed by deposition from Indus, Ganga and Brahmaputra — one of the world's most fertile regions. <img></img>"
     },
     {
       "id": "vjnxarm",
@@ -148,33 +149,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Division</strong></p>",
+            "<p><strong>Formed By</strong></p>",
+            "<p><strong>States</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Punjab Plains</p>",
+            "<p>Indus tributaries</p>",
+            "<p>Punjab, Haryana</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ganga Plains</p>",
+            "<p>Major Himalayan rivers</p>",
+            "<p>UP, Bihar, WB</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Brahmaputra Plains</p>",
+            "<p>Brahmaputra</p>",
+            "<p>Assam</p>"
           ]
         }
       ]
@@ -192,41 +193,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bhabar</p>",
+            "<p>Pebble belt; streams disappear.</p>",
+            "<p>Foothill zone</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Terai</p>",
+            "<p>Wet marsh where streams reappear.</p>",
+            "<p>Forest region</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bhangar</p>",
+            "<p>Old alluvium with kankar.</p>",
+            "<p>Above floodplains</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Khadar</p>",
+            "<p>New alluvium renewed by floods.</p>",
+            "<p>Most fertile</p>"
           ]
         }
       ]
@@ -238,25 +239,24 @@
       "content": "Significance"
     },
     {
-      "type": "pullQuote",
-      "content": "Western VS Eastern Himalayas",
-      "id": "v792h3e"
+      "type": "paragraph",
+      "id": "xdsztxi",
+      "content": "• ~50% wheat and &gt;90% rice production."
     },
     {
       "type": "paragraph",
-      "id": "xdsztxi"
+      "id": "c2y2rr4",
+      "content": "• Extremely high population density."
     },
     {
       "type": "paragraph",
-      "id": "c2y2rr4"
+      "id": "8y9s6gf",
+      "content": "• Supports major industries."
     },
     {
       "type": "paragraph",
-      "id": "8y9s6gf"
-    },
-    {
-      "type": "paragraph",
-      "id": "bgesa16"
+      "id": "bgesa16",
+      "content": "• Cultural core of India."
     },
     {
       "id": "ybg6euh",
@@ -266,7 +266,8 @@
     },
     {
       "type": "paragraph",
-      "id": "axv7wpn"
+      "id": "axv7wpn",
+      "content": "• Heavy monsoon rainfall."
     },
     {
       "type": "comparisonTable",
@@ -291,15 +292,18 @@
     },
     {
       "type": "paragraph",
-      "id": "8rcy2qi"
+      "id": "8rcy2qi",
+      "content": "• Sediment raising riverbeds."
     },
     {
       "type": "paragraph",
-      "id": "2azh6hm"
+      "id": "2azh6hm",
+      "content": "• Poor river management."
     },
     {
       "type": "paragraph",
-      "id": "5etzsse"
+      "id": "5etzsse",
+      "content": "• Deforestation increasing runoff."
     },
     {
       "id": "xepaso0",
@@ -309,7 +313,8 @@
     },
     {
       "type": "paragraph",
-      "id": "np0vyuq"
+      "id": "np0vyuq",
+      "content": "Expansion linked to mining, deforestation, rainfall change, groundwater overuse, and dune spread."
     },
     {
       "id": "rmzsb8l",
@@ -324,33 +329,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Detail</strong></p>",
+            "<p><strong>Exam Insight</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Origin</p>",
+            "<p>Part of Gondwana; triangular tableland.</p>",
+            "<p>Static GK</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Division</p>",
+            "<p>Central Highlands &amp; Deccan (split by Narmada).</p>",
+            "<p>Important</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Stability</p>",
+            "<p>Ancient volcanic rock; fewer faults.</p>",
+            "<p>Conceptual</p>"
           ]
         }
       ]
@@ -377,41 +382,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Western Ghats</strong></p>",
+            "<p><strong>Eastern Ghats</strong></p>",
+            "<p><strong>Difference</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Higher, continuous</p>",
+            "<p>Lower, fragmented</p>",
+            "<p>Continuity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Heavy rainfall</p>",
+            "<p>Drier climate</p>",
+            "<p>Climate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>More biodiversity</p>",
+            "<p>Less biodiversity</p>",
+            "<p>Ecology</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Younger basalt</p>",
+            "<p>Older metamorphic</p>",
+            "<p>Geology</p>"
           ]
         }
       ]
@@ -429,46 +434,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Factor</strong></p>",
+            "<p><strong>West</strong></p>",
+            "<p><strong>East</strong></p>",
+            "<p><strong>Reason</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Formation</p>",
+            "<p>Narmada, Tapi</p>",
+            "<p>Ganga, Godavari</p>",
+            "<p>River deposition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Type</p>",
+            "<p>Submerged</p>",
+            "<p>Emergent</p>",
+            "<p>Sediment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Width</p>",
+            "<p>Narrow</p>",
+            "<p>Broad</p>",
+            "<p>Delta formation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Cyclones</p>",
+            "<p>Less</p>",
+            "<p>More</p>",
+            "<p>Bay of Bengal</p>"
           ]
         }
       ]
@@ -492,33 +497,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Andaman &amp; Nicobar</strong></p>",
+            "<p><strong>Lakshadweep</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Origin</p>",
+            "<p>Submerged mountain range.</p>",
+            "<p>Coral islands.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Topography</p>",
+            "<p>Hilly</p>",
+            "<p>Flat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Biodiversity</p>",
+            "<p>Dense forests</p>",
+            "<p>Marine rich</p>"
           ]
         }
       ]

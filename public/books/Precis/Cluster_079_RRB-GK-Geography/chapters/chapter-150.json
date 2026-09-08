@@ -1,0 +1,88 @@
+{
+  "title": "7. Transportation by Glaciers",
+  "order": 150,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Supraglacial – debris on surface.",
+      "id": "ax7h0t1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Supraglacial",
+          "value": "Surface Debris",
+          "icon": "info"
+        },
+        {
+          "label": "Englacial",
+          "value": "Inside Ice",
+          "icon": "book"
+        },
+        {
+          "label": "Subglacial",
+          "value": "Base Debris",
+          "icon": "check"
+        }
+      ],
+      "id": "z94vwe4"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Supraglacial – debris on surface.",
+      "id": "an68zyq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Transportation Type",
+        "Debris Location"
+      ],
+      "rows": [
+        [
+          "Supraglacial",
+          "Debris on surface"
+        ],
+        [
+          "Englacial",
+          "Debris inside ice"
+        ],
+        [
+          "Subglacial",
+          "Debris at base"
+        ]
+      ],
+      "id": "m0j0u5x"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Supraglacial transportation refers to debris carried on the surface of the glacier.",
+        "Englacial transportation involves debris transported inside the body of glacial ice.",
+        "Subglacial transportation involves debris located and moved along the base of the glacier."
+      ],
+      "id": "7h9uev5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Match-the-following questions frequently test the three locations of glacial debris: surface (Supraglacial), inside (Englacial), and base (Subglacial).",
+        "Do not confuse Englacial (inside ice) with Subglacial (at the base)."
+      ],
+      "id": "9rwn3u9"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Englacial – debris inside ice.",
+      "id": "5bdj4c3"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Subglacial – debris at base.",
+      "id": "zq9fa6o"
+    }
+  ],
+  "enriched": true
+}

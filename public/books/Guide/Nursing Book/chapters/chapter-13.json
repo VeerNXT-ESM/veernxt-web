@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9h8i4ep"
+      "id": "9h8i4ep",
+      "content": "Midwifery and Obstetrical Nursing deals with the care of women during pregnancy, labor, childbirth, and the postpartum period. It also includes care of the newborn. In nursing competitive examinations such as RRB Nursing, questions frequently come from stages of pregnancy, antenatal care, stages of labor, complications of pregnancy, and postnatal care."
     },
     {
       "id": "1kny19s",
@@ -64,43 +65,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gravida</p>",
+            "<p>Total number of pregnancies a woman has had</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Para</p>",
+            "<p>Number of births after 20 weeks of gestation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Primigravida</p>",
+            "<p>Woman pregnant for the first time</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Multigravida</p>",
+            "<p>Woman who has been pregnant more than once</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gestation</p>",
+            "<p>Duration of pregnancy (about 40 weeks)</p>"
           ]
         }
       ]
@@ -118,41 +119,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Trimester</strong></p>",
+            "<p><strong>Duration</strong></p>",
+            "<p><strong>Important Changes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>First Trimester</p>",
+            "<p>0–12 weeks</p>",
+            "<p>Organ formation and early fetal development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Second Trimester</p>",
+            "<p>13–27 weeks</p>",
+            "<p>Rapid fetal growth and movement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Third Trimester</p>",
+            "<p>28–40 weeks</p>",
+            "<p>Preparation for birth and final fetal development</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Stages of Pregnancy (Trimesters)",
-      "id": "0fhg197"
     },
     {
       "id": "7dohps2",
@@ -167,33 +163,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type of Sign</strong></p>",
+            "<p><strong>Examples</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Presumptive signs</p>",
+            "<p>Amenorrhea, nausea, fatigue</p>",
+            "<p>Symptoms felt by woman</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Probable signs</p>",
+            "<p>Positive pregnancy test, uterine enlargement</p>",
+            "<p>Signs observed by examiner</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Positive signs</p>",
+            "<p>Fetal heartbeat, fetal movements felt by examiner</p>",
+            "<p>Definite confirmation of pregnancy</p>"
           ]
         }
       ]
@@ -211,43 +207,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Care</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Regular checkups</p>",
+            "<p>Monitor maternal and fetal health</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Blood pressure monitoring</p>",
+            "<p>Detect hypertension</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nutritional counseling</p>",
+            "<p>Ensure healthy fetal development</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Iron and folic acid supplements</p>",
+            "<p>Prevent anemia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Immunization</p>",
+            "<p>Protect mother and fetus from infections</p>"
           ]
         }
       ]
@@ -296,41 +292,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Stage</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Key Events</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>First Stage</p>",
+            "<p>Cervical dilation</p>",
+            "<p>Onset of contractions until cervix fully dilated</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Second Stage</p>",
+            "<p>Delivery of baby</p>",
+            "<p>From full dilation to birth of baby</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Third Stage</p>",
+            "<p>Delivery of placenta</p>",
+            "<p>Placenta expelled after birth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fourth Stage</p>",
+            "<p>Recovery period</p>",
+            "<p>First hours after delivery</p>"
           ]
         }
       ]
@@ -348,36 +344,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Complication</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Preeclampsia</p>",
+            "<p>High blood pressure during pregnancy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Eclampsia</p>",
+            "<p>Seizures associated with preeclampsia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gestational diabetes</p>",
+            "<p>High blood sugar during pregnancy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Placenta previa</p>",
+            "<p>Placenta covers cervical opening</p>"
           ]
         }
       ]
@@ -395,36 +391,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Care</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Monitoring bleeding</p>",
+            "<p>Prevent postpartum hemorrhage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Breastfeeding support</p>",
+            "<p>Promote infant nutrition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Perineal care</p>",
+            "<p>Prevent infection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Maternal rest and nutrition</p>",
+            "<p>Aid recovery after childbirth</p>"
           ]
         }
       ]
@@ -452,36 +448,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Care</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Immediate drying</p>",
+            "<p>Prevent hypothermia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Breastfeeding initiation</p>",
+            "<p>Provide nutrition and immunity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cord care</p>",
+            "<p>Prevent infection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>APGAR scoring</p>",
+            "<p>Assess newborn condition</p>"
           ]
         }
       ]
@@ -499,43 +495,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Topic</strong></p>",
+            "<p><strong>Key Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Normal pregnancy duration</p>",
+            "<p>40 weeks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>First stage of labor</p>",
+            "<p>Cervical dilation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Second stage of labor</p>",
+            "<p>Birth of baby</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Placenta delivery stage</p>",
+            "<p>Third stage</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Score used to assess newborn</p>",
+            "<p>APGAR score</p>"
           ]
         }
       ]

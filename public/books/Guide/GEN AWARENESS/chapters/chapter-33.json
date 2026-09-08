@@ -5,7 +5,14 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "b8qpx2j"
+      "id": "b8qpx2j",
+      "content": "Volcanoes and earthquakes are major geological phenomena caused by movements inside the Earth. They are closely related to tectonic plate movements and the internal structure of the Earth. Understanding these processes helps explain landform formation, natural disasters, and plate tectonics."
+    },
+    {
+      "id": "2j616uw",
+      "type": "image",
+      "imageId": "rann6jf",
+      "src": "/books/Guide/GEN AWARENESS/images/image_rann6jf.jpeg"
     },
     {
       "type": "statStrip",
@@ -40,6 +47,12 @@
       "content": "1. Volcanoes"
     },
     {
+      "id": "9bw00wc",
+      "type": "image",
+      "imageId": "6cafnak",
+      "src": "/books/Guide/GEN AWARENESS/images/image_6cafnak.jpeg"
+    },
+    {
       "type": "keyFacts",
       "title": "Key Takeaways",
       "items": [
@@ -53,7 +66,8 @@
     },
     {
       "type": "paragraph",
-      "id": "2jx5h0d"
+      "id": "2jx5h0d",
+      "content": "A volcano is an opening in the Earth's crust through which molten rock (magma), gases, and ash are expelled to the surface. When magma reaches the Earth's surface, it is called lava."
     },
     {
       "id": "gqzqjv0",
@@ -63,23 +77,28 @@
     },
     {
       "type": "paragraph",
-      "id": "ax9rvyo"
+      "id": "ax9rvyo",
+      "content": "• Crater – bowl-shaped opening at the top of a volcano."
     },
     {
       "type": "paragraph",
-      "id": "tst24v1"
+      "id": "tst24v1",
+      "content": "• Vent – the channel through which magma reaches the surface."
     },
     {
       "type": "paragraph",
-      "id": "g0em4wh"
+      "id": "g0em4wh",
+      "content": "• Magma Chamber – underground reservoir of molten rock."
     },
     {
       "type": "paragraph",
-      "id": "ft6hcmv"
+      "id": "ft6hcmv",
+      "content": "• Lava Flow – molten rock flowing out during eruption."
     },
     {
       "type": "paragraph",
-      "id": "uykwdxr"
+      "id": "uykwdxr",
+      "content": "• Ash and Gas – volcanic eruptions release ash, steam, and gases."
     },
     {
       "id": "xnq2v4b",
@@ -94,33 +113,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Active Volcano</p>",
+            "<p>Currently erupting or likely to erupt</p>",
+            "<p>Mount Etna (Italy)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dormant Volcano</p>",
+            "<p>Inactive but may erupt again</p>",
+            "<p>Mount Fuji (Japan)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Extinct Volcano</p>",
+            "<p>No eruption expected again</p>",
+            "<p>Mount Kenya</p>"
           ]
         }
       ]
@@ -138,33 +157,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Features</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shield Volcano</p>",
+            "<p>Broad and gently sloping</p>",
+            "<p>Mauna Loa (Hawaii)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Composite Volcano</p>",
+            "<p>Steep sides formed by alternating layers</p>",
+            "<p>Mount Vesuvius (Italy)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cinder Cone</p>",
+            "<p>Small steep volcano made of volcanic fragments</p>",
+            "<p>Paricutin (Mexico)</p>"
           ]
         }
       ]
@@ -177,19 +196,23 @@
     },
     {
       "type": "paragraph",
-      "id": "8rla3io"
+      "id": "8rla3io",
+      "content": "• Formation of new landforms."
     },
     {
       "type": "paragraph",
-      "id": "00m5drp"
+      "id": "00m5drp",
+      "content": "• Creation of fertile soils due to volcanic ash."
     },
     {
       "type": "paragraph",
-      "id": "g77ejr9"
+      "id": "g77ejr9",
+      "content": "<img></img>• Volcanic disasters destroying settlements."
     },
     {
       "type": "paragraph",
-      "id": "p498q8v"
+      "id": "p498q8v",
+      "content": "• Emission of gases affecting climate."
     },
     {
       "type": "pullQuote",
@@ -204,7 +227,8 @@
     },
     {
       "type": "paragraph",
-      "id": "g6t1nlv"
+      "id": "g6t1nlv",
+      "content": "An earthquake is the sudden shaking of the Earth's surface caused by the release of energy from movements within the Earth's crust. This energy travels in the form of seismic waves."
     },
     {
       "id": "219m8oh",
@@ -214,19 +238,23 @@
     },
     {
       "type": "paragraph",
-      "id": "j7cd5cg"
+      "id": "j7cd5cg",
+      "content": "• Focus (Hypocenter) – point inside Earth where earthquake originates."
     },
     {
       "type": "paragraph",
-      "id": "g3cgu62"
+      "id": "g3cgu62",
+      "content": "• Epicenter – point on the surface directly above the focus."
     },
     {
       "type": "paragraph",
-      "id": "ic5uvf5"
+      "id": "ic5uvf5",
+      "content": "• Seismic Waves – energy waves produced during earthquakes."
     },
     {
       "type": "paragraph",
-      "id": "hn797am"
+      "id": "hn797am",
+      "content": "• Fault – fracture in Earth's crust where movement occurs."
     },
     {
       "id": "iagrzv3",
@@ -241,33 +269,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Wave</strong></p>",
+            "<p><strong>Characteristics</strong></p>",
+            "<p><strong>Medium</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>P Waves</p>",
+            "<p>Fastest seismic waves</p>",
+            "<p>Travel through solids, liquids and gases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>S Waves</p>",
+            "<p>Slower than P waves</p>",
+            "<p>Travel only through solids</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>L Waves</p>",
+            "<p>Surface waves causing maximum damage</p>",
+            "<p>Travel along Earth's surface</p>"
           ]
         }
       ]
@@ -306,19 +334,23 @@
     },
     {
       "type": "paragraph",
-      "id": "kmqhld6"
+      "id": "kmqhld6",
+      "content": "• Movement of tectonic plates."
     },
     {
       "type": "paragraph",
-      "id": "6hqe4ai"
+      "id": "6hqe4ai",
+      "content": "• Volcanic activity."
     },
     {
       "type": "paragraph",
-      "id": "tzlukoy"
+      "id": "tzlukoy",
+      "content": "• Faulting in Earth's crust."
     },
     {
       "type": "paragraph",
-      "id": "elt4ig4"
+      "id": "elt4ig4",
+      "content": "• Human activities such as mining and dam construction."
     },
     {
       "id": "buizg3y",
@@ -333,22 +365,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Scale</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Richter Scale</p>",
+            "<p>Measures magnitude (energy released).</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mercalli Scale</p>",
+            "<p>Measures intensity based on damage observed.</p>"
           ]
         }
       ]
@@ -361,19 +393,23 @@
     },
     {
       "type": "paragraph",
-      "id": "5b1h4lg"
+      "id": "5b1h4lg",
+      "content": "• Damage to buildings and infrastructure."
     },
     {
       "type": "paragraph",
-      "id": "hr90emw"
+      "id": "hr90emw",
+      "content": "• Landslides and ground cracks."
     },
     {
       "type": "paragraph",
-      "id": "6gdk5wd"
+      "id": "6gdk5wd",
+      "content": "• Tsunamis in coastal regions."
     },
     {
       "type": "paragraph",
-      "id": "5284nhj"
+      "id": "5284nhj",
+      "content": "• Loss of life and property."
     },
     {
       "id": "w4pwe51",
@@ -392,15 +428,18 @@
     },
     {
       "type": "paragraph",
-      "id": "npodj41"
+      "id": "npodj41",
+      "content": "• Pacific Ring of Fire."
     },
     {
       "type": "paragraph",
-      "id": "tcs7upn"
+      "id": "tcs7upn",
+      "content": "• Mid-Atlantic Ridge."
     },
     {
       "type": "paragraph",
-      "id": "ht7nvu2"
+      "id": "ht7nvu2",
+      "content": "• Himalayan belt."
     },
     {
       "id": "y0iue8s",
@@ -410,19 +449,23 @@
     },
     {
       "type": "paragraph",
-      "id": "px58ncc"
+      "id": "px58ncc",
+      "content": "• Pacific Ring of Fire has the highest number of volcanoes and earthquakes."
     },
     {
       "type": "paragraph",
-      "id": "047pf0m"
+      "id": "047pf0m",
+      "content": "• P waves travel through solids and liquids; S waves travel only through solids."
     },
     {
       "type": "paragraph",
-      "id": "eqa73c7"
+      "id": "eqa73c7",
+      "content": "• Epicenter is directly above the earthquake focus."
     },
     {
       "type": "paragraph",
-      "id": "hm0szgr"
+      "id": "hm0szgr",
+      "content": "• Richter scale measures magnitude of earthquakes."
     }
   ],
   "enriched": true

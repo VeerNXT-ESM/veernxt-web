@@ -1,0 +1,363 @@
+{
+  "title": "CHAPTER 3: LAWS OF MOTION",
+  "order": 3,
+  "blocks": [
+    {
+      "id": "q5j48eh",
+      "type": "heading",
+      "level": 2,
+      "content": "FORCE"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Force is a push or pull capable of changing an object's shape, speed, direction of motion, or bringing it to rest.",
+        "Newton's First Law is also known as the Law of Inertia, describing an object's tendency to resist changes in its state of motion.",
+        "Newton's Second Law defines force as the rate of change of momentum, yielding the formula F = ma.",
+        "Newton's Third Law states that every action has an equal and opposite reaction, as seen in walking, swimming, and gun recoil.",
+        "Friction opposes motion between surfaces; static, sliding, and rolling are its main types, with rolling friction being the least."
+      ],
+      "id": "f5pq1zi"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Force",
+          "value": "Newton (N)",
+          "icon": "award"
+        },
+        {
+          "label": "Force Formula",
+          "value": "F = ma",
+          "icon": "book"
+        },
+        {
+          "label": "Momentum Unit",
+          "value": "kg m/s",
+          "icon": "info"
+        },
+        {
+          "label": "Least Friction",
+          "value": "Rolling Friction",
+          "icon": "check"
+        }
+      ],
+      "id": "oubi3zp"
+    },
+    {
+      "type": "paragraph",
+      "content": "Force is a push or pull which can:",
+      "id": "ibraibe"
+    },
+    {
+      "id": "b5uiheb",
+      "type": "list",
+      "items": [
+        "<ul><li>Change the shape of an object</li><li>Change the speed of an object</li><li>Change the direction of motion</li><li>Bring a moving object to rest SI Unit: Newton (N)</li></ul>",
+        "Change the shape of an object",
+        "Change the speed of an object",
+        "Change the direction of motion",
+        "Bring a moving object to rest SI Unit: Newton (N)"
+      ]
+    },
+    {
+      "id": "j2bg9ol",
+      "type": "heading",
+      "level": 2,
+      "content": "TYPES OF FORCE"
+    },
+    {
+      "id": "xp5tjki",
+      "type": "numberedList",
+      "items": [
+        "Contact Force – Requires physical contact Example: Friction, Muscular force",
+        "Non-Contact Force – Acts from a distance"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Example: Gravitational force, Magnetic force, Electrostatic force",
+      "id": "aw6qp7p"
+    },
+    {
+      "id": "b07dq8r",
+      "type": "heading",
+      "level": 2,
+      "content": "NEWTON’S FIRST LAW OF MOTION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Statement:",
+      "id": "o51kmy9"
+    },
+    {
+      "type": "paragraph",
+      "content": "An object remains at rest or in uniform motion in a straight line unless acted upon by an external force.",
+      "id": "qbq5lce"
+    },
+    {
+      "type": "paragraph",
+      "content": "This law is also known as the Law of Inertia. Inertia:",
+      "id": "7u5iv1i"
+    },
+    {
+      "type": "paragraph",
+      "content": "The tendency of an object to resist change in its state of motion.",
+      "id": "xxkmwmv"
+    },
+    {
+      "id": "zoqxecx",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Inertia"
+    },
+    {
+      "id": "cbm8ipn",
+      "type": "numberedList",
+      "items": [
+        "Inertia of Rest",
+        "Inertia of Motion",
+        "Inertia of Direction"
+      ]
+    },
+    {
+      "id": "g6qudvz",
+      "type": "heading",
+      "level": 2,
+      "content": "NEWTON’S SECOND LAW OF MOTION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Statement:",
+      "id": "tyewqjp"
+    },
+    {
+      "type": "paragraph",
+      "content": "The rate of change of momentum of an object is directly proportional to the applied force and takes place in the direction of force.",
+      "id": "cifht0m"
+    },
+    {
+      "type": "paragraph",
+      "content": "Formula:",
+      "id": "524trle"
+    },
+    {
+      "type": "pullQuote",
+      "content": "For every action, there is an equal and opposite reaction.",
+      "id": "98x9rk8"
+    },
+    {
+      "type": "paragraph",
+      "content": "Force = Mass × Acceleration F = ma",
+      "id": "cbzxn10"
+    },
+    {
+      "type": "paragraph",
+      "content": "SI Unit of Force = Newton",
+      "id": "l9baghy"
+    },
+    {
+      "id": "wuapfgz",
+      "type": "heading",
+      "level": 2,
+      "content": "MOMENTUM"
+    },
+    {
+      "type": "paragraph",
+      "content": "Momentum is the product of mass and velocity. Formula:",
+      "id": "uzywkku"
+    },
+    {
+      "type": "paragraph",
+      "content": "Momentum = Mass × Velocity p = mv",
+      "id": "pibu8xa"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Unit: kg m/s",
+      "id": "qhwpisk"
+    },
+    {
+      "id": "okat4yk",
+      "type": "heading",
+      "level": 2,
+      "content": "NEWTON’S THIRD LAW OF MOTION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Statement:",
+      "id": "bhuw00z"
+    },
+    {
+      "type": "paragraph",
+      "content": "For every action, there is an equal and opposite reaction.",
+      "id": "mfq75jo"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Force Type",
+        "Characteristics",
+        "Examples"
+      ],
+      "rows": [
+        [
+          "Contact Force",
+          "Requires physical contact between objects",
+          "Friction, Muscular force"
+        ],
+        [
+          "Non-Contact Force",
+          "Acts from a distance without physical contact",
+          "Gravitational force, Magnetic force, Electrostatic force"
+        ]
+      ],
+      "id": "b9acwz1"
+    },
+    {
+      "type": "paragraph",
+      "content": "Examples:",
+      "id": "1vgfyf3"
+    },
+    {
+      "id": "leembzn",
+      "type": "list",
+      "items": [
+        "<ul><li>Walking</li><li>Swimming</li><li>Recoil of gun</li></ul>",
+        "Walking",
+        "Swimming",
+        "Recoil of gun"
+      ]
+    },
+    {
+      "id": "4gz80ji",
+      "type": "heading",
+      "level": 2,
+      "content": "LAW OF CONSERVATION OF MOMENTUM"
+    },
+    {
+      "type": "paragraph",
+      "content": "According to this law, the total momentum of a system remains constant if no external force acts on it.",
+      "id": "fosyz0o"
+    },
+    {
+      "id": "apka1aq",
+      "type": "heading",
+      "level": 2,
+      "content": "FRICTION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Friction is the force that opposes motion between two surfaces in contact. Types of Friction:",
+      "id": "8j8mq40"
+    },
+    {
+      "id": "7khxklt",
+      "type": "numberedList",
+      "items": [
+        "Static friction",
+        "Sliding friction",
+        "Rolling friction"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Rolling friction is the least.",
+      "id": "xfrd5d4"
+    },
+    {
+      "id": "f0cbdfe",
+      "type": "heading",
+      "level": 2,
+      "content": "ADVANTAGES AND DISADVANTAGES OF FRICTION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Advantages:",
+      "id": "jn4r8tp"
+    },
+    {
+      "id": "2dfm2ik",
+      "type": "list",
+      "items": [
+        "<ul><li>Helps in walking</li><li>Writing is possible</li><li>Vehicles move due to friction</li></ul>",
+        "Helps in walking",
+        "Writing is possible",
+        "Vehicles move due to friction"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Disadvantages:",
+      "id": "6v3jq3j"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Newton's First Law of Motion is frequently referred to as the Law of Inertia in exam questions.",
+        "The formula for momentum is p = mv, with its unit being kg m/s.",
+        "Rolling friction is always the least among static, sliding, and rolling friction.",
+        "Total momentum of a system remains constant when no external force acts upon it (Law of Conservation of Momentum)."
+      ],
+      "id": "cyub21s"
+    },
+    {
+      "id": "2oupt9o",
+      "type": "list",
+      "items": [
+        "<ul><li>Causes wear and tear</li><li>Produces heat</li><li>Reduces efficiency</li></ul>",
+        "Causes wear and tear",
+        "Produces heat",
+        "Reduces efficiency"
+      ]
+    },
+    {
+      "id": "bjma0e3",
+      "type": "heading",
+      "level": 2,
+      "content": "SSC EXAM IMPORTANT QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q1. SI unit of force? Ans: Newton",
+      "id": "0l54yip"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q2. Who gave laws of motion? Ans: Sir Isaac Newton",
+      "id": "p2tsv8a"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q3. Formula of momentum? Ans: p = mv",
+      "id": "9mu3yxo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q4. Which friction is least? Ans: Rolling friction",
+      "id": "jy6bvgu"
+    },
+    {
+      "id": "ov8fa7y",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "6l8psrk",
+      "type": "list",
+      "items": [
+        "<ul><li>Force causes change in motion</li><li>F = ma</li><li>Momentum = mv</li><li>Action and reaction are equal and opposite</li><li>Rolling friction is minimum</li></ul>",
+        "Force causes change in motion",
+        "F = ma",
+        "Momentum = mv",
+        "Action and reaction are equal and opposite",
+        "Rolling friction is minimum"
+      ]
+    }
+  ],
+  "enriched": true
+}

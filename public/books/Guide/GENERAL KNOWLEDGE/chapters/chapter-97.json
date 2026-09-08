@@ -7,7 +7,7 @@
       "id": "59xecly",
       "type": "numberedList",
       "items": [
-        null
+        "<strong>WORK</strong>"
       ]
     },
     {
@@ -38,27 +38,49 @@
     },
     {
       "type": "paragraph",
-      "id": "zd1ygkf"
+      "id": "zd1ygkf",
+      "content": "In daily life, we use the word ‘work’ very casually. But in Physics, work has a very specific meaning."
+    },
+    {
+      "id": "jpquk9v",
+      "type": "image",
+      "imageId": "zcq57dy",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_zcq57dy.jpeg"
+    },
+    {
+      "id": "cenj6kl",
+      "type": "image",
+      "imageId": "xmhls20",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_xmhls20.jpeg"
+    },
+    {
+      "id": "clcj6n3",
+      "type": "image",
+      "imageId": "7cwvmvm",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_7cwvmvm.jpeg"
     },
     {
       "type": "paragraph",
-      "id": "2l6ere1"
+      "id": "2l6ere1",
+      "content": "In Physics, work is said to be done only when:"
     },
     {
       "type": "paragraph",
-      "id": "pqvoiqb"
+      "id": "pqvoiqb",
+      "content": "1. A force is applied on an object"
     },
     {
       "id": "f8b318n",
       "type": "numberedList",
       "items": [
-        null,
-        null
+        "The object moves (displacement occurs)",
+        "The displacement is in the direction of force"
       ]
     },
     {
       "type": "paragraph",
-      "id": "1jrpa6b"
+      "id": "1jrpa6b",
+      "content": "If any one of these conditions is not satisfied, then NO WORK is done."
     },
     {
       "id": "ucnqb4e",
@@ -70,11 +92,11 @@
       "id": "ddxijzl",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>A boy pushing a car and it moves → Work is done</li><li>A person lifting a load → Work is done</li><li>A person pushing a wall → No work (no displacement)</li><li>A coolie carrying a load on head → No work (force is vertical, motion is horizontal)</li></ul>",
+        "A boy pushing a car and it moves → Work is done",
+        "A person lifting a load → Work is done",
+        "A person pushing a wall → No work (no displacement)",
+        "A coolie carrying a load on head → No work (force is vertical, motion is horizontal)"
       ]
     },
     {
@@ -85,15 +107,18 @@
     },
     {
       "type": "paragraph",
-      "id": "07qdhdv"
+      "id": "07qdhdv",
+      "content": "Work = Force × Displacement W = F×s"
     },
     {
       "type": "paragraph",
-      "id": "gnam61t"
+      "id": "gnam61t",
+      "content": "SI Unit of Work = Joule (J)"
     },
     {
       "type": "paragraph",
-      "id": "ijtsdff"
+      "id": "ijtsdff",
+      "content": "1 Joule is the work done when a force of 1 Newton moves an object through 1 meter in the direction of force."
     },
     {
       "id": "nscstxt",
@@ -105,38 +130,42 @@
       "id": "zbsrl75",
       "type": "numberedList",
       "items": [
-        null
+        "Positive Work:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "ce1rlz5"
+      "id": "ce1rlz5",
+      "content": "When force and displacement are in the same direction. Example: A falling object."
     },
     {
       "id": "8gbi5nf",
       "type": "numberedList",
       "items": [
-        null
+        "Negative Work:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "drygk4z"
+      "id": "drygk4z",
+      "content": "When force and displacement are in opposite directions."
     },
     {
       "type": "paragraph",
-      "id": "x15bcqn"
+      "id": "x15bcqn",
+      "content": "Example: Friction acting on a moving body."
     },
     {
       "id": "rp138zu",
       "type": "numberedList",
       "items": [
-        null
+        "Zero Work:"
       ]
     },
     {
       "type": "paragraph",
-      "id": "taaaofc"
+      "id": "taaaofc",
+      "content": "When displacement is zero or force is perpendicular. Example: Carrying a bag on the head."
     },
     {
       "id": "pupw6pn",
@@ -158,11 +187,13 @@
     },
     {
       "type": "paragraph",
-      "id": "akawc0y"
+      "id": "akawc0y",
+      "content": "Energy is defined as the capacity of a body to do work. Without energy, no work can be performed."
     },
     {
       "type": "paragraph",
-      "id": "ypqh6ji"
+      "id": "ypqh6ji",
+      "content": "SI unit of energy is Joule (J)."
     },
     {
       "id": "wbcgyqz",
@@ -172,25 +203,21 @@
     },
     {
       "type": "paragraph",
-      "id": "dsb5ehj"
+      "id": "dsb5ehj",
+      "content": "Energy exists in various forms such as:"
     },
     {
       "id": "0w2na11",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Mechanical Energy</li><li>Heat Energy</li><li>Light Energy</li><li>Electrical Energy</li><li>Chemical Energy</li><li>Sound Energy</li></ul>",
+        "Mechanical Energy",
+        "Heat Energy",
+        "Light Energy",
+        "Electrical Energy",
+        "Chemical Energy",
+        "Sound Energy"
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "LAW OF CONSERVATION OF ENERGY",
-      "id": "3cy97ae"
     },
     {
       "id": "sqsxqen",
@@ -200,34 +227,41 @@
     },
     {
       "type": "paragraph",
-      "id": "qzl4os1"
+      "id": "qzl4os1",
+      "content": "Kinetic energy is the energy possessed by a body due to its motion."
     },
     {
       "type": "paragraph",
-      "id": "icku6bx"
+      "id": "icku6bx",
+      "content": " Formula:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kb96fjv"
+      "id": "kb96fjv",
+      "content": "KE = ½ mv²"
     },
     {
       "type": "paragraph",
-      "id": "ae9vrc8"
+      "id": "ae9vrc8",
+      "content": "Where:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x79seki"
+      "id": "x79seki",
+      "content": "m = mass of body"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "en6oyom"
+      "id": "en6oyom",
+      "content": "v = velocity of body"
     },
     {
       "type": "paragraph",
-      "id": "7k4zbxj"
+      "id": "7k4zbxj",
+      "content": "If velocity increases, kinetic energy increases. If mass increases, kinetic energy increases."
     },
     {
       "id": "897iiou",
@@ -237,25 +271,30 @@
     },
     {
       "type": "paragraph",
-      "id": "loayb56"
+      "id": "loayb56",
+      "content": "Potential energy is the energy possessed by a body due to its position or shape. Formula:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5molrwa"
+      "id": "5molrwa",
+      "content": "PE = mgh"
     },
     {
       "type": "paragraph",
-      "id": "0dhvv72"
+      "id": "0dhvv72",
+      "content": "Where:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xbz3zs6"
+      "id": "xbz3zs6",
+      "content": "m = mass"
     },
     {
       "type": "paragraph",
-      "id": "6lt1rd6"
+      "id": "6lt1rd6",
+      "content": "g = acceleration due to gravity"
     },
     {
       "type": "comparisonTable",
@@ -291,20 +330,22 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "nr3ae7w"
+      "id": "nr3ae7w",
+      "content": "h = height<img></img>"
     },
     {
       "type": "paragraph",
-      "id": "dj7wd1i"
+      "id": "dj7wd1i",
+      "content": "Examples:"
     },
     {
       "id": "qdc55vr",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Water stored in a dam</li><li>A stretched spring</li><li>A raised stone</li></ul>",
+        "Water stored in a dam",
+        "A stretched spring",
+        "A raised stone"
       ]
     },
     {
@@ -315,23 +356,28 @@
     },
     {
       "type": "paragraph",
-      "id": "4wuooi3"
+      "id": "4wuooi3",
+      "content": "According to this law:"
     },
     {
       "type": "paragraph",
-      "id": "ctjboqm"
+      "id": "ctjboqm",
+      "content": "Energy can neither be created nor destroyed."
     },
     {
       "type": "paragraph",
-      "id": "gk5rfls"
+      "id": "gk5rfls",
+      "content": "It can only be transformed from one form to another."
     },
     {
       "type": "paragraph",
-      "id": "nbioggq"
+      "id": "nbioggq",
+      "content": "The total energy of a system always remains constant. Example:"
     },
     {
       "type": "paragraph",
-      "id": "1q13ue4"
+      "id": "1q13ue4",
+      "content": "When a ball falls from a height, its potential energy changes into kinetic energy. But the total energy remains the same."
     },
     {
       "id": "3ds9r7i",
@@ -341,16 +387,19 @@
     },
     {
       "type": "paragraph",
-      "id": "6hj202p"
+      "id": "6hj202p",
+      "content": "Power is defined as the rate of doing work. Formula:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "x4d12yw"
+      "id": "x4d12yw",
+      "content": "Power = Work / Time"
     },
     {
       "type": "paragraph",
-      "id": "utk9wjf"
+      "id": "utk9wjf",
+      "content": "SI Unit of Power = Watt (W) 1 Watt = 1 Joule per second"
     },
     {
       "id": "p6vuisa",
@@ -360,11 +409,13 @@
     },
     {
       "type": "paragraph",
-      "id": "5d9cjy9"
+      "id": "5d9cjy9",
+      "content": "Horse Power (HP) is a bigger unit of power. 1 HP = 746 Watt"
     },
     {
       "type": "paragraph",
-      "id": "r5vzvg4"
+      "id": "r5vzvg4",
+      "content": "It is used for measuring the power of engines and machines."
     },
     {
       "id": "fjj5zpe",
@@ -374,7 +425,8 @@
     },
     {
       "type": "paragraph",
-      "id": "y9zl880"
+      "id": "y9zl880",
+      "content": "The commercial unit of electrical energy is kilowatt-hour (kWh). 1 kWh = 3.6 × 10⁶ Joules"
     },
     {
       "type": "examAlert",
@@ -387,7 +439,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rrd3o12"
+      "id": "rrd3o12",
+      "content": "Electricity bills are calculated in kilowatt-hours."
     },
     {
       "id": "oam8695",
@@ -397,32 +450,39 @@
     },
     {
       "type": "paragraph",
-      "id": "mfha3wz"
+      "id": "mfha3wz",
+      "content": "Q1. SI unit of work? Ans: Joule"
     },
     {
       "type": "paragraph",
-      "id": "7zxch8x"
+      "id": "7zxch8x",
+      "content": "Q2. Formula of kinetic energy? Ans: ½ mv²"
     },
     {
       "type": "paragraph",
-      "id": "hu3uk0e"
+      "id": "hu3uk0e",
+      "content": "Q3. Commercial unit of electricity? Ans: kWh"
     },
     {
       "type": "paragraph",
-      "id": "drggnl0"
+      "id": "drggnl0",
+      "content": "Q4. SI unit of power?"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9d04hax"
+      "id": "9d04hax",
+      "content": "Ans: Watt"
     },
     {
       "type": "paragraph",
-      "id": "08rp8up"
+      "id": "08rp8up",
+      "content": "Q5. Law of conservation of energy states?"
     },
     {
       "type": "paragraph",
-      "id": "5jbjmq2"
+      "id": "5jbjmq2",
+      "content": "Ans: Energy can neither be created nor destroyed."
     },
     {
       "id": "zkbeugh",
@@ -434,13 +494,13 @@
       "id": "mdbbsz8",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Work = Force × Distance</li><li>KE = ½ mv²</li><li>PE = mgh</li><li>Power = Work / Time</li><li>1 HP = 746 W</li><li>Energy is conserved</li></ul>",
+        "Work = Force × Distance",
+        "KE = ½ mv²",
+        "PE = mgh",
+        "Power = Work / Time",
+        "1 HP = 746 W",
+        "Energy is conserved"
       ]
     }
   ],

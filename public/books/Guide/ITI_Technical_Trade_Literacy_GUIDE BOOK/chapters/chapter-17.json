@@ -47,7 +47,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fc0hy4t"
+      "id": "fc0hy4t",
+      "content": "Workshop practices refer to the basic procedures and methods followed in workshops and industrial environments while performing technical work. These practices ensure efficient work, safety, proper tool handling, and maintenance of machines and equipment. In technical trades such as fitter, electrician, mechanic, and welder, following proper workshop practices is essential for maintaining productivity and safety."
     },
     {
       "id": "t0wbsvv",
@@ -59,11 +60,11 @@
       "id": "zx0jpis",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Ensure safe working conditions",
+        "Improve efficiency and productivity",
+        "Maintain tools and machines properly",
+        "Reduce accidents and equipment damage",
+        "Promote discipline and teamwork in workshops"
       ]
     },
     {
@@ -79,49 +80,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Practice</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Use correct tool</p>",
+            "<p>Select appropriate tool for the job</p>",
+            "<p>Prevents damage and accidents</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inspect tools</p>",
+            "<p>Check tools before use</p>",
+            "<p>Ensures safe operation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Handle carefully</p>",
+            "<p>Avoid dropping or misusing tools</p>",
+            "<p>Extends tool life</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Return tools</p>",
+            "<p>Place tools back in toolbox after use</p>",
+            "<p>Maintains organization</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Clean tools</p>",
+            "<p>Remove dirt and oil after use</p>",
+            "<p>Prevents rust and wear</p>"
           ]
         }
       ]
@@ -144,43 +145,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Rule</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Check machine condition</p>",
+            "<p>Inspect machine before starting work</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Follow operating instructions</p>",
+            "<p>Operate machines according to guidelines</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Use safety guards</p>",
+            "<p>Prevent contact with moving parts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Switch off machine</p>",
+            "<p>Turn off machine after work</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Report faults</p>",
+            "<p>Inform supervisor about machine problems</p>"
           ]
         }
       ]
@@ -198,43 +199,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Practice</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Clean work area</p>",
+            "<p>Prevents accidents and improves efficiency</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Organize tools</p>",
+            "<p>Ensures easy access and safety</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dispose waste properly</p>",
+            "<p>Maintains cleanliness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Keep pathways clear</p>",
+            "<p>Allows safe movement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Remove oil spills</p>",
+            "<p>Prevents slipping accidents</p>"
           ]
         }
       ]
@@ -252,43 +253,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Maintenance Activity</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Regular inspection</p>",
+            "<p>Detect faults early</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lubrication</p>",
+            "<p>Reduce friction and wear</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cleaning</p>",
+            "<p>Remove dust and debris</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Calibration</p>",
+            "<p>Ensure measurement accuracy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Repair and replacement</p>",
+            "<p>Maintain operational efficiency</p>"
           ]
         }
       ]
@@ -303,11 +304,11 @@
       "id": "ehrp33c",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Wear personal protective equipment (PPE)",
+        "Avoid loose clothing near machines",
+        "Keep hands away from moving parts",
+        "Use insulated tools for electrical work",
+        "Follow safety instructions at all times"
       ]
     },
     {
@@ -323,43 +324,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Practice</strong></p>",
+            "<p><strong>Importance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Teamwork</p>",
+            "<p>Improves efficiency in industrial work</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Communication</p>",
+            "<p>Ensures clear instructions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Time management</p>",
+            "<p>Completes work on schedule</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Quality control</p>",
+            "<p>Maintains product standards</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Documentation</p>",
+            "<p>Records maintenance and operations</p>"
           ]
         }
       ]
@@ -382,11 +383,11 @@
       "id": "8rkjwlw",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Improves productivity",
+        "Reduces accidents and injuries",
+        "Extends life of machines and tools",
+        "Improves quality of work",
+        "Ensures smooth industrial operations"
       ]
     },
     {
@@ -399,11 +400,11 @@
       "id": "mhsxd42",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Workshop practices ensure safety and efficiency.",
+        "Proper tool handling prevents accidents.",
+        "Housekeeping keeps workshop clean and organized.",
+        "Maintenance increases life of machines.",
+        "Safety rules protect workers from hazards."
       ]
     }
   ],

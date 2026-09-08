@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "qr7ri8w"
+      "id": "qr7ri8w",
+      "content": "India is one of the world's richest countries in terms of biodiversity. To conserve wildlife and their habitats, the Government of India has created protected areas such as National Parks, Wildlife Sanctuaries, Biosphere Reserves, Tiger Reserves and Bird Sanctuaries."
     },
     {
       "type": "statStrip",
@@ -57,43 +58,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Protected Area</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>National Parks</p>",
+            "<p>Strictly protected areas where wildlife and habitat are fully protected; no human activity allowed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wildlife Sanctuaries</p>",
+            "<p>Areas where animals are protected but limited human activities may be allowed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Biosphere Reserves</p>",
+            "<p>Large areas protecting biodiversity, ecosystems and traditional communities</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tiger Reserves</p>",
+            "<p>Special reserves created under Project Tiger to conserve tigers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bird Sanctuaries</p>",
+            "<p>Protected areas mainly for migratory and native birds</p>"
           ]
         }
       ]
@@ -111,111 +112,111 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>National Park</strong></p>",
+            "<p><strong>State</strong></p>",
+            "<p><strong>Established</strong></p>",
+            "<p><strong>Famous For</strong></p>",
+            "<p><strong>Speciality</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Jim Corbett National Park</p>",
+            "<p>Uttarakhand</p>",
+            "<p>1936</p>",
+            "<p>Bengal Tigers</p>",
+            "<p>India's first national park</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Kaziranga National Park</p>",
+            "<p>Assam</p>",
+            "<p>1974</p>",
+            "<p>One-horned Rhinoceros</p>",
+            "<p>UNESCO World Heritage Site</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Gir National Park</p>",
+            "<p>Gujarat</p>",
+            "<p>1965</p>",
+            "<p>Asiatic Lions</p>",
+            "<p>Only natural habitat of Asiatic lions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Sundarbans National Park</p>",
+            "<p>West Bengal</p>",
+            "<p>1984</p>",
+            "<p>Royal Bengal Tiger</p>",
+            "<p>Largest mangrove forest</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Kanha National Park</p>",
+            "<p>Madhya Pradesh</p>",
+            "<p>1955</p>",
+            "<p>Barasingha Deer</p>",
+            "<p>Inspiration for Rudyard Kipling's Jungle Book</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Ranthambore National Park</p>",
+            "<p>Rajasthan</p>",
+            "<p>1980</p>",
+            "<p>Tigers</p>",
+            "<p>Popular tiger reserve</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Bandipur National Park</p>",
+            "<p>Karnataka</p>",
+            "<p>1974</p>",
+            "<p>Elephants and Tigers</p>",
+            "<p>Part of Nilgiri Biosphere Reserve</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Periyar National Park</p>",
+            "<p>Kerala</p>",
+            "<p>1982</p>",
+            "<p>Elephants</p>",
+            "<p>Located in Western Ghats biodiversity hotspot</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Hemis National Park</p>",
+            "<p>Ladakh</p>",
+            "<p>1981</p>",
+            "<p>Snow Leopard</p>",
+            "<p>Largest national park in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Great Himalayan National Park</p>",
+            "<p>Himachal Pradesh</p>",
+            "<p>1984</p>",
+            "<p>Himalayan biodiversity</p>",
+            "<p>UNESCO World Heritage Site</p>"
           ]
         }
       ]
@@ -233,55 +234,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Sanctuary</strong></p>",
+            "<p><strong>State</strong></p>",
+            "<p><strong>Famous For</strong></p>",
+            "<p><strong>Speciality</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vedanthangal Bird Sanctuary</p>",
+            "<p>Tamil Nadu</p>",
+            "<p>Migratory Birds</p>",
+            "<p>Oldest bird sanctuary in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Keoladeo Ghana Sanctuary</p>",
+            "<p>Rajasthan</p>",
+            "<p>Birds</p>",
+            "<p>UNESCO World Heritage Site</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Periyar Wildlife Sanctuary</p>",
+            "<p>Kerala</p>",
+            "<p>Elephants</p>",
+            "<p>Part of Western Ghats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Chilika Bird Sanctuary</p>",
+            "<p>Odisha</p>",
+            "<p>Migratory Birds</p>",
+            "<p>Largest coastal lagoon in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Nal Sarovar Bird Sanctuary</p>",
+            "<p>Gujarat</p>",
+            "<p>Flamingos</p>",
+            "<p>Important wintering ground for birds</p>"
           ]
         }
       ]
@@ -294,11 +295,13 @@
     },
     {
       "type": "paragraph",
-      "id": "s7ntsie"
+      "id": "s7ntsie",
+      "content": "• Corbett Tiger Reserve – Uttarakhand"
     },
     {
       "type": "paragraph",
-      "id": "ws8d007"
+      "id": "ws8d007",
+      "content": "• Kanha Tiger Reserve – Madhya Pradesh"
     },
     {
       "type": "pullQuote",
@@ -307,15 +310,18 @@
     },
     {
       "type": "paragraph",
-      "id": "lr57ovr"
+      "id": "lr57ovr",
+      "content": "• Bandhavgarh Tiger Reserve – Madhya Pradesh"
     },
     {
       "type": "paragraph",
-      "id": "sun8rlu"
+      "id": "sun8rlu",
+      "content": "• Ranthambore Tiger Reserve – Rajasthan"
     },
     {
       "type": "paragraph",
-      "id": "vz681kc"
+      "id": "vz681kc",
+      "content": "• Sundarbans Tiger Reserve – West Bengal"
     },
     {
       "id": "7l5tb58",
@@ -325,7 +331,8 @@
     },
     {
       "type": "paragraph",
-      "id": "59llxn9"
+      "id": "59llxn9",
+      "content": "• Project Tiger (1973) – conservation of tigers."
     },
     {
       "type": "comparisonTable",
@@ -355,15 +362,18 @@
     },
     {
       "type": "paragraph",
-      "id": "393drk4"
+      "id": "393drk4",
+      "content": "• Project Elephant (1992) – conservation of elephants."
     },
     {
       "type": "paragraph",
-      "id": "rkhnjku"
+      "id": "rkhnjku",
+      "content": "• Crocodile Conservation Project – protection of crocodiles."
     },
     {
       "type": "paragraph",
-      "id": "cgbkfla"
+      "id": "cgbkfla",
+      "content": "• Wildlife Protection Act (1972) – legal framework for wildlife protection."
     },
     {
       "id": "tgbys1e",
@@ -373,19 +383,23 @@
     },
     {
       "type": "paragraph",
-      "id": "soz5dvo"
+      "id": "soz5dvo",
+      "content": "• Maintains ecological balance."
     },
     {
       "type": "paragraph",
-      "id": "hoqu834"
+      "id": "hoqu834",
+      "content": "• Prevents extinction of endangered species."
     },
     {
       "type": "paragraph",
-      "id": "fctwgl9"
+      "id": "fctwgl9",
+      "content": "• Protects biodiversity."
     },
     {
       "type": "paragraph",
-      "id": "octa7lx"
+      "id": "octa7lx",
+      "content": "• Supports eco-tourism and scientific research."
     },
     {
       "type": "examAlert",
@@ -404,19 +418,23 @@
     },
     {
       "type": "paragraph",
-      "id": "byg97si"
+      "id": "byg97si",
+      "content": "• Jim Corbett is the first national park in India."
     },
     {
       "type": "paragraph",
-      "id": "pk30bh5"
+      "id": "pk30bh5",
+      "content": "• Gir National Park is the only natural habitat of Asiatic lions."
     },
     {
       "type": "paragraph",
-      "id": "d2fmslc"
+      "id": "d2fmslc",
+      "content": "• Kaziranga National Park is famous for one-horned rhinoceros."
     },
     {
       "type": "paragraph",
-      "id": "xm6vz4x"
+      "id": "xm6vz4x",
+      "content": "• Hemis National Park is the largest national park in India."
     }
   ],
   "enriched": true

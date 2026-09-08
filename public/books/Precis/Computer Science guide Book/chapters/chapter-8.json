@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "92i70ad"
+      "id": "92i70ad",
+      "content": "An Operating System (OS) is the most important system software in a computer system. It acts as an interface between the user and the computer hardware. The operating system manages hardware resources, executes programs, and provides services for application software."
     },
     {
       "type": "statStrip",
@@ -53,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "c3ztf23"
+      "id": "c3ztf23",
+      "content": "An Operating System is a system software that manages computer hardware and software resources and provides common services for computer programs. It controls the execution of programs and coordinates the activities of hardware devices."
     },
     {
       "id": "2hnomne",
@@ -65,11 +67,11 @@
       "id": "pcnturb",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Microsoft Windows",
+        "Linux",
+        "macOS",
+        "Android",
+        "iOS"
       ]
     },
     {
@@ -85,50 +87,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Process Management</p>",
+            "<p>Controls execution of programs and manages CPU usage.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Memory Management</p>",
+            "<p>Manages primary memory and allocation of RAM.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>File Management</p>",
+            "<p>Organizes and controls files stored in storage devices.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Device Management</p>",
+            "<p>Controls hardware devices such as printers and disks.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Security Management</p>",
+            "<p>Protects system from unauthorized access.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>User Interface</p>",
+            "<p>Provides graphical or command interface for users.</p>"
           ]
         }
       ]
@@ -152,7 +154,8 @@
     },
     {
       "type": "paragraph",
-      "id": "34ko511"
+      "id": "34ko511",
+      "content": "In a batch operating system, jobs are collected and processed in batches without user interaction. This type of system was used in early computers."
     },
     {
       "id": "pofnnxk",
@@ -162,7 +165,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bx0dor5"
+      "id": "bx0dor5",
+      "content": "A time sharing operating system allows multiple users to share computer resources simultaneously by allocating time slots for each task."
     },
     {
       "id": "n6bo0dq",
@@ -198,7 +202,8 @@
     },
     {
       "type": "paragraph",
-      "id": "j6qhk85"
+      "id": "j6qhk85",
+      "content": "A multiprocessing operating system supports the use of two or more CPUs within a single system. This allows the system to perform multiple tasks simultaneously."
     },
     {
       "id": "sy7h783",
@@ -213,36 +218,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>OS Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Single User OS</p>",
+            "<p>Supports one user at a time.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Multi User OS</p>",
+            "<p>Allows multiple users to use the system simultaneously.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Real Time OS</p>",
+            "<p>Processes data instantly for time-critical applications.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Distributed OS</p>",
+            "<p>Manages multiple computers as a single system.</p>"
           ]
         }
       ]
@@ -255,7 +260,8 @@
     },
     {
       "type": "paragraph",
-      "id": "pdpkcrt"
+      "id": "pdpkcrt",
+      "content": "Microsoft Windows is one of the most widely used operating systems for personal computers. It provides a Graphical User Interface (GUI) that allows users to interact with the computer using icons, windows, and menus."
     },
     {
       "id": "n0vn1ga",
@@ -276,11 +282,11 @@
       "id": "kymedpb",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Graphical User Interface (GUI).",
+        "Multitasking capability.",
+        "Support for multiple hardware devices.",
+        "User-friendly interface.",
+        "Networking capabilities."
       ]
     },
     {
@@ -296,43 +302,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Desktop</p>",
+            "<p>Main screen where icons appear.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Taskbar</p>",
+            "<p>Displays running applications.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Start Menu</p>",
+            "<p>Provides access to programs and settings.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Icons</p>",
+            "<p>Small graphical representations of programs.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>File Explorer</p>",
+            "<p>Used to manage files and folders.</p>"
           ]
         }
       ]
@@ -347,11 +353,11 @@
       "id": "2nwbvbu",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Operating System acts as an interface between user and hardware.",
+        "Windows is the most widely used operating system for PCs.",
+        "Batch OS processes jobs in groups.",
+        "Time sharing OS allows multiple users simultaneously.",
+        "Multiprocessing OS uses multiple CPUs."
       ]
     }
   ],

@@ -1,0 +1,61 @@
+{
+  "title": "12. Election of the Vice President",
+  "order": 71,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Elected by members of both Houses of Parliament.<br/>State legislatures do NOT participate.<br/>Uses proportional representation and single transferable vote.",
+      "id": "kos3mof"
+    },
+    {
+      "type": "pullQuote",
+      "content": "State legislatures do NOT participate.",
+      "id": "rd1o7yw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Electoral Body",
+          "value": "Both Houses of Parliament",
+          "icon": "book"
+        },
+        {
+          "label": "State Participation",
+          "value": "Do NOT participate",
+          "icon": "info"
+        },
+        {
+          "label": "Election System",
+          "value": "Proportional Representation",
+          "icon": "award"
+        },
+        {
+          "label": "Voting Technique",
+          "value": "Single Transferable Vote",
+          "icon": "check"
+        }
+      ],
+      "id": "eys6zrp"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember that State Legislatures do NOT participate in the Vice President's election (unlike the Presidential election).",
+        "The Vice President election uses Proportional Representation by means of a Single Transferable Vote."
+      ],
+      "id": "0a4pxvp"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Vice President is elected solely by members of both Houses of Parliament.",
+        "Members of State legislatures do not participate in this election.",
+        "The election follows the principle of proportional representation using the single transferable vote."
+      ],
+      "id": "evb69ww"
+    }
+  ],
+  "enriched": true
+}

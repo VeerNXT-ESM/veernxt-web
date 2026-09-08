@@ -1,0 +1,94 @@
+{
+  "title": "6. Measurement of Earthquakes",
+  "order": 104,
+  "blocks": [
+    {
+      "id": "hoczoq2",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Scale</strong></p>",
+            "<p><strong>Measures</strong></p>",
+            "<p><strong>Important Feature</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Richter Scale</p>",
+            "<p>Magnitude</p>",
+            "<p>Logarithmic; each unit increases amplitude by 10 times.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Moment Magnitude</p>",
+            "<p>Total energy</p>",
+            "<p>Most reliable modern scale.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mercalli Scale</p>",
+            "<p>Intensity</p>",
+            "<p>Based on damage and human observation.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Each increase of one magnitude corresponds to approximately 32 times more energy release.",
+      "id": "femw2pl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Magnitude Step",
+          "value": "+1 Unit",
+          "icon": "check"
+        },
+        {
+          "label": "Energy Multiplier",
+          "value": "~32 Times",
+          "icon": "award"
+        },
+        {
+          "label": "Subject",
+          "value": "Earthquakes",
+          "icon": "book"
+        }
+      ],
+      "id": "j4eek1y"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Earthquake magnitude directly correlates to energy release.",
+        "A single unit increase in magnitude results in roughly 32 times more released energy.",
+        "The relationship between magnitude and energy release is exponential rather than linear."
+      ],
+      "id": "cbo14tu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently test the exact multiplier (~32 times) of energy release per magnitude step.",
+        "Avoid the common trap of assuming a 1-unit increase in magnitude means only a 1-unit or 10-fold increase in energy."
+      ],
+      "id": "exuig6p"
+    },
+    {
+      "type": "paragraph",
+      "content": "Each increase of one magnitude corresponds to approximately 32 times more energy release.",
+      "id": "6w459yj"
+    }
+  ],
+  "enriched": true
+}

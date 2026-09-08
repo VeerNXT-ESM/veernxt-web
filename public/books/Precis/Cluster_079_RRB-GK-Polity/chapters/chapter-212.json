@@ -1,0 +1,130 @@
+{
+  "title": "Types of Grants Recommended",
+  "order": 212,
+  "blocks": [
+    {
+      "id": "zm18q3t",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Grant Type</strong></p>",
+            "<p><strong>Purpose</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Statutory Grants</p>",
+            "<p>Given under Article 275</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>General Grants</p>",
+            "<p>Support state budgets</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Specific Purpose Grants</p>",
+            "<p>For schemes like health or education</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Performance Grants</p>",
+            "<p>Reward states for reforms</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Statutory grants are charged on the Consolidated Fund of India every year and different sums may be fixed for different states.",
+      "id": "qygrtbq"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Statutory Grants (Article 275)",
+        "Discretionary Grants (Article 282)"
+      ],
+      "rows": [
+        [
+          "Basis of Allocation",
+          "Recommended by the Finance Commission",
+          "At the discretion of the Union or State Government"
+        ],
+        [
+          "Charge on Funds",
+          "Charged on the Consolidated Fund of India",
+          "Subject to budgetary allocations and parliamentary vote"
+        ],
+        [
+          "Primary Objective",
+          "To assist states in financial need and bridge fiscal deficits",
+          "To execute specific public purpose schemes and plan targets"
+        ],
+        [
+          "Binding Nature",
+          "Constitutional mandate based on FC criteria",
+          "Non-statutory and dependent on executive discretion"
+        ]
+      ],
+      "id": "a2n8rmz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Statutory Grants",
+          "value": "Article 275",
+          "icon": "book"
+        },
+        {
+          "label": "Discretionary Grants",
+          "value": "Article 282",
+          "icon": "info"
+        },
+        {
+          "label": "Recommending Body",
+          "value": "Finance Commission",
+          "icon": "award"
+        },
+        {
+          "label": "Charge Source",
+          "value": "Consolidated Fund",
+          "icon": "check"
+        }
+      ],
+      "id": "ezlmra5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 275 deals with Statutory Grants recommended by the Finance Commission, whereas Article 282 deals with Discretionary Grants.",
+        "Statutory grants under Article 275 are charged upon the Consolidated Fund of India and are not subject to annual voting by Parliament.",
+        "Grants for promoting the welfare of Scheduled Tribes are mandatory statutory grants under the proviso to Article 275(1)."
+      ],
+      "id": "55ic4x7"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Statutory grants are provided under Article 275 of the Constitution based on recommendations of the Finance Commission.",
+        "Discretionary grants under Article 282 empower the Union and States to make grants for any public purpose.",
+        "Statutory grants are charged on the Consolidated Fund of India and differ in allocation for different states.",
+        "Special grants under Article 275(1) target the welfare of Scheduled Tribes and raising administration levels in Scheduled Areas."
+      ],
+      "id": "lyem2u1"
+    }
+  ],
+  "enriched": true
+}

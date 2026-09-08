@@ -1,0 +1,405 @@
+{
+  "id": "wh5x0zw",
+  "title": "Chapter 13: Cell Structure",
+  "order": 62,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "ug2k94y",
+      "content": "The cell is the basic structural and functional unit of life. All living organisms are made up of cells. Cells perform all the essential functions necessary for survival such as metabolism, growth, reproduction and response to stimuli."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Cell Discovered",
+          "value": "1665",
+          "icon": "calendar"
+        },
+        {
+          "label": "Cell Theory",
+          "value": "1839",
+          "icon": "book"
+        },
+        {
+          "label": "Smallest Cell",
+          "value": "Mycoplasma",
+          "icon": "info"
+        },
+        {
+          "label": "Largest Cell",
+          "value": "Ostrich Egg",
+          "icon": "award"
+        }
+      ],
+      "id": "rtw49xg"
+    },
+    {
+      "id": "m9n841x",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Discovery of the Cell"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Robert Hooke first discovered cells in cork in 1665, while Leeuwenhoek observed living cells in 1674.",
+        "Cell Theory was formulated by Schleiden and Schwann, and expanded by Rudolf Virchow with 'Omnis cellula-e-cellula'.",
+        "Prokaryotic cells lack a membrane-bound nucleus, whereas Eukaryotic cells contain a well-defined nucleus and membrane-bound organelles.",
+        "Mitochondria generate ATP (powerhouse of the cell), while Ribosomes are responsible for protein synthesis.",
+        "Plant cells possess cell walls, plastids, and large vacuoles, which are typically absent or smaller in animal cells."
+      ],
+      "id": "ycef1fa"
+    },
+    {
+      "type": "paragraph",
+      "id": "r39ivkk",
+      "content": "• Robert Hooke discovered the cell in 1665 while observing cork under a microscope."
+    },
+    {
+      "type": "paragraph",
+      "id": "bjr3xes",
+      "content": "• He described the small compartments as 'cells'."
+    },
+    {
+      "type": "paragraph",
+      "id": "guzu1hx",
+      "content": "• Anton van Leeuwenhoek later observed living cells using a microscope."
+    },
+    {
+      "id": "1sdfj0l",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Cell Theory"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ik38k6",
+      "content": "• All living organisms are composed of cells."
+    },
+    {
+      "type": "paragraph",
+      "id": "a7exq09",
+      "content": "• The cell is the basic unit of life."
+    },
+    {
+      "type": "paragraph",
+      "id": "noa26md",
+      "content": "• All cells arise from pre-existing cells."
+    },
+    {
+      "id": "slozyu5",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Types of Cells"
+    },
+    {
+      "id": "nqyz3fo",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Cell Type</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Prokaryotic Cells</p>",
+            "<p>Simple cells without nucleus (e.g., bacteria)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Eukaryotic Cells</p>",
+            "<p>Complex cells with nucleus (e.g., plants and animals)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yfg799s",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Structure of Cell"
+    },
+    {
+      "type": "paragraph",
+      "id": "m999673",
+      "content": "Main parts of a cell:"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Omnis cellula-e-cellula",
+      "id": "hfsbpq6"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4dbfnb3",
+      "content": "• Cell membrane"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lmn7ziw",
+      "content": "• Cytoplasm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "csi6peb",
+      "content": "• Nucleus"
+    },
+    {
+      "id": "4yetyqj",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Cell Membrane"
+    },
+    {
+      "type": "paragraph",
+      "id": "ug9ak2p",
+      "content": "• Also called plasma membrane."
+    },
+    {
+      "type": "paragraph",
+      "id": "5uldzuc",
+      "content": "• Controls movement of substances into and out of the cell."
+    },
+    {
+      "type": "paragraph",
+      "id": "54dv35o",
+      "content": "• It is selectively permeable."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Plant Cell",
+        "Animal Cell"
+      ],
+      "rows": [
+        [
+          "Cell Wall",
+          "Present (composed of cellulose)",
+          "Absent"
+        ],
+        [
+          "Plastids / Chloroplasts",
+          "Present",
+          "Absent"
+        ],
+        [
+          "Vacuoles",
+          "Large central single vacuole",
+          "Small, multiple, or absent"
+        ],
+        [
+          "Centrosome / Centrioles",
+          "Absent in higher plants",
+          "Present"
+        ]
+      ],
+      "id": "5lgrmiv"
+    },
+    {
+      "id": "c9wct1p",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Cytoplasm"
+    },
+    {
+      "type": "paragraph",
+      "id": "vhqsres",
+      "content": "• Cytoplasm is the jelly-like substance inside the cell."
+    },
+    {
+      "type": "paragraph",
+      "id": "geellxz",
+      "content": "• It contains organelles that perform different functions."
+    },
+    {
+      "id": "qcj4ia0",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Nucleus"
+    },
+    {
+      "type": "paragraph",
+      "id": "dd7mppr",
+      "content": "• Nucleus controls the activities of the cell."
+    },
+    {
+      "type": "paragraph",
+      "id": "nxkr1vc",
+      "content": "• It contains genetic material (DNA)."
+    },
+    {
+      "type": "paragraph",
+      "id": "ta4uac8",
+      "content": "• It regulates cell division."
+    },
+    {
+      "id": "tl3j7ro",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Cell Organelles"
+    },
+    {
+      "id": "xc3xmcj",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Organelle</strong></p>",
+            "<p><strong>Function</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mitochondria</p>",
+            "<p>Produces energy (powerhouse of cell)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ribosomes</p>",
+            "<p>Protein synthesis</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Endoplasmic Reticulum</p>",
+            "<p>Transport of materials</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Golgi Apparatus</p>",
+            "<p>Packaging and secretion</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lysosomes</p>",
+            "<p>Digestion of waste materials</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vacuole</p>",
+            "<p>Storage of substances</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chloroplast</p>",
+            "<p>Photosynthesis in plant cells</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "higlm6a",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Difference Between Plant Cell and Animal Cell"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Mature mammalian Red Blood Cells (RBCs) lack a nucleus, with exception to Camel and Llama.",
+        "Mitochondria and Chloroplasts are semi-autonomous organelles containing their own circular DNA and 70S ribosomes.",
+        "Lysosomes are frequently referred to as 'suicidal bags' due to their hydrolytic digestive enzymes.",
+        "The plant cell wall is composed of cellulose, whereas the fungal cell wall is composed of chitin."
+      ],
+      "id": "9kdn0h4"
+    },
+    {
+      "id": "cqkyoj5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Plant Cell</strong></p>",
+            "<p><strong>Animal Cell</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cell Wall</p>",
+            "<p>Present</p>",
+            "<p>Absent</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chloroplast</p>",
+            "<p>Present</p>",
+            "<p>Absent</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Shape</p>",
+            "<p>Usually rectangular</p>",
+            "<p>Usually round</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vacuole</p>",
+            "<p>Large</p>",
+            "<p>Small or absent</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fx8wee6",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "vowh1pi",
+      "content": "• Mitochondria are called the powerhouse of the cell."
+    },
+    {
+      "type": "paragraph",
+      "id": "n2ib0od",
+      "content": "• Lysosomes are called suicide bags."
+    },
+    {
+      "type": "paragraph",
+      "id": "a242ih1",
+      "content": "• Ribosomes are the site of protein synthesis."
+    },
+    {
+      "type": "paragraph",
+      "id": "v8f08n7",
+      "content": "• Nucleus controls cell activities."
+    }
+  ],
+  "enriched": true
+}

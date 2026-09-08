@@ -1,0 +1,132 @@
+{
+  "title": "Establishment and Legal Framework",
+  "order": 398,
+  "blocks": [
+    {
+      "id": "dbgry8q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Act</p>",
+            "<p>Right to Information Act, 2005</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type</p>",
+            "<p>Statutory Body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nature</p>",
+            "<p>Quasi-Judicial</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Headquarters</p>",
+            "<p>New Delhi</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Objective</p>",
+            "<p>Promote transparency and accountability</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The legal framework provides the structural foundation for regulatory oversight, ensuring financial stability and institutional integrity.",
+      "id": "ve5lgu6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constitutional Bodies",
+        "Statutory Bodies"
+      ],
+      "rows": [
+        [
+          "Source of Authority",
+          "Derived directly from specific articles in the Constitution of India",
+          "Created by an Act passed by Parliament or State Legislature"
+        ],
+        [
+          "Amendment Method",
+          "Requires a Constitutional Amendment Bill under Article 368",
+          "Requires an amendment law enacted by a simple legislative process"
+        ],
+        [
+          "Key Examples",
+          "Finance Commission (Art. 280), Election Commission (Art. 324)",
+          "Reserve Bank of India (RBI Act 1934), SEBI (SEBI Act 1992)"
+        ]
+      ],
+      "id": "vhb1p1d"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "RBI Act Enactment",
+          "value": "1934",
+          "icon": "calendar"
+        },
+        {
+          "label": "Establishment Date",
+          "value": "April 1, 1935",
+          "icon": "clock"
+        },
+        {
+          "label": "Nationalization Year",
+          "value": "1949",
+          "icon": "award"
+        },
+        {
+          "label": "BR Act Enacted",
+          "value": "1949",
+          "icon": "book"
+        }
+      ],
+      "id": "8bfv4d0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Competitive exams frequently test the exact division of power: RBI Act, 1934 governs monetary policy functions, whereas Banking Regulation Act, 1949 governs bank licensing and operational control.",
+        "Remember the exact date of RBI nationalization: January 1, 1949.",
+        "Be prepared to distinguish between Constitutional Bodies (e.g., CAG, Finance Commission) and Statutory Bodies (e.g., RBI, SEBI)."
+      ],
+      "id": "qrmdav1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Reserve Bank of India was established on April 1, 1935, under the statutory provisions of the Reserve Bank of India Act, 1934.",
+        "Initially established in Kolkata, the central office of the RBI was permanently relocated to Mumbai in 1937.",
+        "The institution was nationalized on January 1, 1949, through the Reserve Bank (Transfer to Public Ownership) Act, 1948.",
+        "The Banking Regulation Act, 1949 provides the core legal framework empowering regulatory oversight, licensing, and management supervision over commercial banks."
+      ],
+      "id": "jopbmf6"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,476 @@
+{
+  "title": "CHAPTER 3: LATITUDE, LONGITUDE & TIME",
+  "order": 5,
+  "blocks": [
+    {
+      "id": "fi8gfgp",
+      "type": "heading",
+      "level": 3,
+      "content": "CORE CONCEPT (READ ONCE)"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Full Earth Rotation",
+          "value": "360° in 24 hrs",
+          "icon": "clock"
+        },
+        {
+          "label": "Hourly Rotation Rate",
+          "value": "15° per hour",
+          "icon": "info"
+        },
+        {
+          "label": "1° Longitude Value",
+          "value": "4 minutes",
+          "icon": "check"
+        },
+        {
+          "label": "IST Offset",
+          "value": "GMT + 5:30",
+          "icon": "award"
+        }
+      ],
+      "id": "u4wppt1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Earth rotates from west to east, making local time in eastern longitudes ahead of western longitudes.",
+        "A 15° longitude difference corresponds to 1 hour, while a 1° longitude difference equals 4 minutes.",
+        "Always add time when moving toward the East and subtract time when moving toward the West.",
+        "Indian Standard Time (IST) is calculated by adding 5 hours and 30 minutes to GMT (12:00 PM GMT = 5:30 PM IST).",
+        "Crossing the International Date Line (IDL) from West to East requires subtracting one calendar day."
+      ],
+      "id": "90ehqza"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Earth rotates from west to east. Because of this rotation, places to the east see the Sun earlier and their clocks show a later time. Places to the west see the Sun later and their clocks show an earlier time. This single concept is the key to solving all longitude–time numericals.",
+      "id": "h5i6vm4"
+    },
+    {
+      "id": "h9wrqz8",
+      "type": "heading",
+      "level": 3,
+      "content": "FORMULAS WITH LOGIC"
+    },
+    {
+      "type": "paragraph",
+      "content": "Earth rotates 360° in 24 hours.",
+      "id": "0lat52d"
+    },
+    {
+      "type": "paragraph",
+      "content": "So, rotation per hour = 360° ÷ 24 = 15°.",
+      "id": "499032s"
+    },
+    {
+      "type": "paragraph",
+      "content": "This means: 15° longitude difference = 1 hour time difference. Further dividing:",
+      "id": "4whceuw"
+    },
+    {
+      "type": "paragraph",
+      "content": "1° longitude = 4 minutes.",
+      "id": "qf2vxcv"
+    },
+    {
+      "type": "paragraph",
+      "content": "Always remember: East → Add time | West → Subtract time.",
+      "id": "cvbw0je"
+    },
+    {
+      "id": "9noxczi",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 1"
+    },
+    {
+      "type": "paragraph",
+      "content": "Question:",
+      "id": "cvcwk2z"
+    },
+    {
+      "type": "paragraph",
+      "content": "What is the time difference between two places having a longitude difference of 30°?",
+      "id": "fszi6un"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ultra Detailed Solution:",
+      "id": "3m54gzt"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 1: Understand what is given. Longitude difference = 30°. Step 2: Recall the basic rule: 15° longitude = 1 hour.",
+      "id": "3xb51mo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 3: Divide the longitude difference by 15. 30° ÷ 15° = 2 hours.",
+      "id": "vicehak"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 4: Since only time difference is asked, direction is not needed. Final Answer: Time difference is 2 hours.",
+      "id": "stn2six"
+    },
+    {
+      "type": "paragraph",
+      "content": "Common Mistake: Students try to convert into minutes unnecessarily.",
+      "id": "q4wxoff"
+    },
+    {
+      "id": "5tq7fqv",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 2"
+    },
+    {
+      "type": "paragraph",
+      "content": "Question:",
+      "id": "oxeq70l"
+    },
+    {
+      "type": "paragraph",
+      "content": "Find the time difference for 1° longitude.",
+      "id": "e2v53gi"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ultra Detailed Solution:",
+      "id": "gucpnf7"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 1: Earth rotates 360° in 24 hours.",
+      "id": "m0l9gpm"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 2: Convert hours into minutes: 24 × 60 = 1440 minutes. Step 3: Divide total minutes by total degrees.",
+      "id": "bfw50qu"
+    },
+    {
+      "type": "paragraph",
+      "content": "1440 ÷ 360 = 4 minutes.",
+      "id": "r3bank1"
+    },
+    {
+      "type": "paragraph",
+      "content": "Final Answer: 1° longitude corresponds to 4 minutes.",
+      "id": "3jcl22f"
+    },
+    {
+      "type": "paragraph",
+      "content": "Exam Tip: This is the MOST IMPORTANT value in SSC numericals.",
+      "id": "tel06tb"
+    },
+    {
+      "id": "jlehwly",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 3"
+    },
+    {
+      "type": "paragraph",
+      "content": "Question:",
+      "id": "ivg8y1g"
+    },
+    {
+      "type": "paragraph",
+      "content": "If the local time at Greenwich is 10:00 AM, what will be the local time at 30° East?",
+      "id": "md1qh55"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ultra Detailed Solution:",
+      "id": "mp8hx5u"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Always remember: East → Add time | West → Subtract time.",
+      "id": "2iofuqp"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 1: Identify reference point: Greenwich (0°). Step 2: Identify target longitude: 30° East.",
+      "id": "dhafu6p"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 3: Calculate longitude difference = 30°. Step 4: Convert degrees into time.",
+      "id": "zie9vbr"
+    },
+    {
+      "type": "paragraph",
+      "content": "30° ÷ 15 = 2 hours.",
+      "id": "fdunxwv"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 5: Decide direction. East means ahead in time. Step 6: Add time to Greenwich time.",
+      "id": "j7g6bwz"
+    },
+    {
+      "type": "paragraph",
+      "content": "10:00 AM + 2 hours = 12:00 Noon. Final Answer: Local time = 12:00 PM.",
+      "id": "eyet4fx"
+    },
+    {
+      "type": "paragraph",
+      "content": "Common Mistake: Students subtract instead of adding.",
+      "id": "3u3eg98"
+    },
+    {
+      "id": "hr16i5h",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 4"
+    },
+    {
+      "type": "paragraph",
+      "content": "Question:",
+      "id": "fgiuajd"
+    },
+    {
+      "type": "paragraph",
+      "content": "If the local time at 45° West is 6:00 AM, what is the time at Greenwich?",
+      "id": "7vborsg"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ultra Detailed Solution:",
+      "id": "nlcc3u7"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 1: Identify given place: 45° West. Step 2: Greenwich is east of this place. Step 3: Longitude difference = 45°.",
+      "id": "53cjqve"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 4: Convert into time. 45° ÷ 15 = 3 hours.",
+      "id": "qh5rb6q"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 5: West is behind, so Greenwich time will be ahead. Step 6: Add time.",
+      "id": "4vlmmk5"
+    },
+    {
+      "type": "paragraph",
+      "content": "6:00 AM + 3 hours = 9:00 AM.",
+      "id": "wbz4wv3"
+    },
+    {
+      "type": "paragraph",
+      "content": "Final Answer: Greenwich time = 9:00 AM.",
+      "id": "i9zqv1g"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Direction / Direction of Crossing",
+        "Time Adjustment",
+        "International Date Line (IDL) Rule"
+      ],
+      "rows": [
+        [
+          "Eastward Movement",
+          "Add time (Ahead in time)",
+          "Subtract one day (e.g., Monday to Sunday)"
+        ],
+        [
+          "Westward Movement",
+          "Subtract time (Behind in time)",
+          "Add one day (e.g., Sunday to Monday)"
+        ]
+      ],
+      "id": "l7p9ha9"
+    },
+    {
+      "id": "53nwbeo",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 5"
+    },
+    {
+      "type": "paragraph",
+      "content": "Question:",
+      "id": "hgcx9d8"
+    },
+    {
+      "type": "paragraph",
+      "content": "When it is 12:00 noon GMT, what is the time in India (IST)?",
+      "id": "q7kfez8"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ultra Detailed Solution:",
+      "id": "rhop984"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 1: Remember IST relation. IST = GMT + 5 hours 30 minutes.",
+      "id": "n9pb9lk"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 2: Add 5 hours 30 minutes to 12:00 noon.",
+      "id": "umhl36r"
+    },
+    {
+      "type": "paragraph",
+      "content": "12:00 + 5:30 = 5:30 PM.",
+      "id": "1bs14qc"
+    },
+    {
+      "type": "paragraph",
+      "content": "Final Answer: IST = 5:30 PM.",
+      "id": "az8inho"
+    },
+    {
+      "type": "paragraph",
+      "content": "Exam Tip: Never change date unless IDL is mentioned.",
+      "id": "85ewe1t"
+    },
+    {
+      "id": "skege2z",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 6"
+    },
+    {
+      "type": "paragraph",
+      "content": "Question:",
+      "id": "2rvxzfl"
+    },
+    {
+      "type": "paragraph",
+      "content": "A place is located at 97½° East longitude. If the time at Greenwich is 6:00 AM, find the local time.",
+      "id": "xx3jjom"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ultra Detailed Solution:",
+      "id": "54uuyrn"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 1: Identify longitude difference = 97.5°. Step 2: Convert degrees to hours.",
+      "id": "h1f0l0y"
+    },
+    {
+      "type": "paragraph",
+      "content": "97.5 ÷ 15 = 6.5 hours.",
+      "id": "dffbu7w"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 3: Convert decimal into minutes.",
+      "id": "gt8ecmf"
+    },
+    {
+      "type": "paragraph",
+      "content": "0.5 hour = 30 minutes.",
+      "id": "cp482k1"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 4: Direction is East, so add time.",
+      "id": "0ebm67p"
+    },
+    {
+      "type": "paragraph",
+      "content": "6:00 AM + 6 hours 30 minutes = 12:30 PM. Final Answer: Local time = 12:30 PM.",
+      "id": "k7kjofu"
+    },
+    {
+      "id": "7jsp8kn",
+      "type": "heading",
+      "level": 3,
+      "content": "Question 7"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The relation 1° longitude = 4 minutes is the most frequently tested value in competitive exam numericals.",
+        "When calculating local time from GMT to IST, directly add 5 hours and 30 minutes.",
+        "Do not change the calendar date in time calculations unless the problem explicitly mentions crossing the International Date Line (IDL)."
+      ],
+      "id": "gm3ounw"
+    },
+    {
+      "type": "paragraph",
+      "content": "Question:",
+      "id": "on6t1no"
+    },
+    {
+      "type": "paragraph",
+      "content": "A ship crosses the International Date Line from West to East on Monday. What will be the day?",
+      "id": "5kov3pj"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ultra Detailed Solution:",
+      "id": "t5inytd"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 1: Recall IDL rule.",
+      "id": "0znaoz8"
+    },
+    {
+      "type": "paragraph",
+      "content": "West to East crossing means subtract one day. Step 2: Given day = Monday.",
+      "id": "g1i4hyf"
+    },
+    {
+      "type": "paragraph",
+      "content": "Step 3: Subtract one day. Monday − 1 = Sunday.",
+      "id": "25cpyqx"
+    },
+    {
+      "type": "paragraph",
+      "content": "Final Answer: Day will be Sunday.",
+      "id": "74qsybd"
+    },
+    {
+      "type": "paragraph",
+      "content": "Common Mistake: Students add a day incorrectly.",
+      "id": "pgt4ms8"
+    },
+    {
+      "id": "zy70gdr",
+      "type": "heading",
+      "level": 3,
+      "content": "FINAL EXAM STRATEGY"
+    },
+    {
+      "id": "zowgx5l",
+      "type": "numberedList",
+      "items": [
+        "First convert longitude into time.",
+        "Then decide direction (East/West).",
+        "Only then add or subtract time.",
+        "For IDL, change date separately."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "If this order is followed, mistakes will never happen.",
+      "id": "uyxzx3r"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "nb",
+      "id": "kvfs52c"
+    }
+  ],
+  "enriched": true
+}

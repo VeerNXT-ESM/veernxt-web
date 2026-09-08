@@ -1,0 +1,224 @@
+{
+  "title": "Untitled Chapter",
+  "order": 85,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Plate tectonics refined Wegener’s ideas by explaining that both continents and ocean floors move together as parts of lithospheric plates. These plates float over the asthenosphere, a mechanically weak and partially molten zone. ",
+      "id": "o57hfki"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Average Thickness",
+          "value": "50 - 150 km",
+          "icon": "info"
+        },
+        {
+          "label": "Plate Velocity",
+          "value": "2 - 10 cm/year",
+          "icon": "clock"
+        },
+        {
+          "label": "Underlying Layer",
+          "value": "Asthenosphere",
+          "icon": "book"
+        },
+        {
+          "label": "Driving Mechanism",
+          "value": "Convection Currents",
+          "icon": "check"
+        }
+      ],
+      "id": "t0f0qtw"
+    },
+    {
+      "type": "paragraph",
+      "content": "Plate movement is driven by heat generated inside the Earth, which produces convection currents in the mantle.",
+      "id": "mgb8nsz"
+    },
+    {
+      "id": "rw2r2qy",
+      "type": "heading",
+      "level": 2,
+      "content": "Characteristics of Lithospheric Plates"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Plate tectonics refined Wegener’s ideas by demonstrating that continents and ocean floors move together as lithospheric plates.",
+        "Lithospheric plates float over the asthenosphere, a mechanically weak and partially molten layer.",
+        "Internal heat from the Earth generates convection currents in the mantle that drive plate movement.",
+        "Plate interiors are relatively stable, whereas plate boundaries are geologically active."
+      ],
+      "id": "yl2dumq"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Plate tectonics refined Wegener’s ideas by explaining that both continents and ocean floors move together as parts of lithospheric plates.",
+      "id": "momuti0"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Average thickness ranges from 50 to 150 km.",
+      "id": "0xr27kk"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Plates may consist of oceanic crust, continental crust, or both.",
+      "id": "mzy3b7i"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Plate velocities typically range from 2 to 10 cm per year.",
+      "id": "y90plvl"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Plate interiors are relatively stable, while boundaries are geologically active.",
+      "id": "kxwrys6"
+    },
+    {
+      "id": "513zzlk",
+      "type": "heading",
+      "level": 2,
+      "content": "Major Lithospheric Plates"
+    },
+    {
+      "id": "c8y44cl",
+      "type": "heading",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Lithospheric plates float over the asthenosphere, which is defined as a mechanically weak and partially molten zone.",
+        "The primary driving force of plate motion is heat-generated convection currents in the mantle.",
+        "Average plate thickness (50–150 km) and movement velocity (2–10 cm/year) are frequently tested parameters.",
+        "Geological activity is concentrated at plate boundaries, while plate interiors remain stable."
+      ],
+      "id": "xm95q8w"
+    },
+    {
+      "id": "j1zdwsi",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Plate</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Notable Features</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pacific Plate</p>",
+            "<p>Oceanic</p>",
+            "<p>Largest plate; associated with Ring of Fire.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>North American Plate</p>",
+            "<p>Continental + oceanic</p>",
+            "<p>Includes Greenland and part of Atlantic floor.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>South American Plate</p>",
+            "<p>Continental + oceanic</p>",
+            "<p>Andes mountains formed along its margin.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Eurasian Plate</p>",
+            "<p>Mostly continental</p>",
+            "<p>Contains some of the oldest crust.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>African Plate</p>",
+            "<p>Continental</p>",
+            "<p>Associated with East African Rift.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Antarctic Plate</p>",
+            "<p>Mixed</p>",
+            "<p>Surrounds Antarctica.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Indo-Australian Plate</p>",
+            "<p>Mixed</p>",
+            "<p>Collision formed the Himalayas.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "812cptu",
+      "type": "heading",
+      "level": 2,
+      "content": "Oceanic vs Continental Plates"
+    },
+    {
+      "id": "lnauk2u",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Oceanic Plates</strong></p>",
+            "<p><strong>Continental Plates</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Denser; basaltic composition</p>",
+            "<p>Less dense; granitic composition</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Typically younger (&lt;200 million years)</p>",
+            "<p>Can be billions of years old</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>More prone to subduction</p>",
+            "<p>Resist subduction</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Thinner</p>",
+            "<p>Thicker</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

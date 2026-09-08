@@ -49,7 +49,20 @@
     },
     {
       "type": "paragraph",
-      "id": "gbrnda1"
+      "id": "gbrnda1",
+      "content": "Measurement is the comparison of an unknown quantity with a known standard quantity (unit). Every measurement consists of two parts: Numerical Value + Unit."
+    },
+    {
+      "id": "ylq92kh",
+      "type": "image",
+      "imageId": "pztgkz7",
+      "src": "/books/Precis/RRB GS/images/image_pztgkz7.png"
+    },
+    {
+      "id": "oa3smhe",
+      "type": "image",
+      "imageId": "08lashq",
+      "src": "/books/Precis/RRB GS/images/image_08lashq.png"
     },
     {
       "id": "qzfi58m",
@@ -59,20 +72,24 @@
     },
     {
       "type": "paragraph",
-      "id": "9409yt4"
+      "id": "9409yt4",
+      "content": "Physical quantities are measurable quantities in physics."
     },
     {
       "type": "paragraph",
-      "id": "5qjdvdw"
+      "id": "5qjdvdw",
+      "content": "Types:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mnict73"
+      "id": "mnict73",
+      "content": "• Fundamental Quantities (Independent)"
     },
     {
       "type": "paragraph",
-      "id": "zf1n24z"
+      "id": "zf1n24z",
+      "content": "• Derived Quantities (Dependent on fundamental quantities)"
     },
     {
       "id": "f2e59q5",
@@ -87,65 +104,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Quantity</strong></p>",
+            "<p><strong>SI Unit</strong></p>",
+            "<p><strong>Symbol</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Length</p>",
+            "<p>Metre</p>",
+            "<p>m</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mass</p>",
+            "<p>Kilogram</p>",
+            "<p>kg</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Time</p>",
+            "<p>Second</p>",
+            "<p>s</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Electric Current</p>",
+            "<p>Ampere</p>",
+            "<p>A</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Temperature</p>",
+            "<p>Kelvin</p>",
+            "<p>K</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Amount of Substance</p>",
+            "<p>Mole</p>",
+            "<p>mol</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Luminous Intensity</p>",
+            "<p>Candela</p>",
+            "<p>cd</p>"
           ]
         }
       ]
@@ -163,97 +180,97 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Quantity</strong></p>",
+            "<p><strong>SI Unit</strong></p>",
+            "<p><strong>Formula</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Force</p>",
+            "<p>Newton (N)</p>",
+            "<p>F = m × a</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Work</p>",
+            "<p>Joule (J)</p>",
+            "<p>W = F × s</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Energy</p>",
+            "<p>Joule (J)</p>",
+            "<p>Work done</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Power</p>",
+            "<p>Watt (W)</p>",
+            "<p>P = W / t</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pressure</p>",
+            "<p>Pascal (Pa)</p>",
+            "<p>P = F / A</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Velocity</p>",
+            "<p>m/s</p>",
+            "<p>v = s / t</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Acceleration</p>",
+            "<p>m/s²</p>",
+            "<p>a = (v-u)/t</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Density</p>",
+            "<p>kg/m³</p>",
+            "<p>ρ = m / V</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Momentum</p>",
+            "<p>kg m/s</p>",
+            "<p>p = m × v</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Electric Charge</p>",
+            "<p>Coulomb (C)</p>",
+            "<p>Q = I × t</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Voltage</p>",
+            "<p>Volt (V)</p>",
+            "<p>V = W / Q</p>"
           ]
         }
       ]
@@ -267,27 +284,32 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "efgww2h"
+      "id": "efgww2h",
+      "content": "Force = [M¹L¹T⁻²]"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lmfi9ga"
+      "id": "lmfi9ga",
+      "content": "Work = [M¹L²T⁻²]"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wysxln7"
+      "id": "wysxln7",
+      "content": "Power = [M¹L²T⁻³]"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "n4ocijr"
+      "id": "n4ocijr",
+      "content": "Pressure = [M¹L⁻¹T⁻²]"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wfc59fd"
+      "id": "wfc59fd",
+      "content": "Density = [M¹L⁻³]"
     },
     {
       "id": "mbqvmq5",
@@ -302,92 +324,92 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Prefix</strong></p>",
+            "<p><strong>Power of 10</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Femto</p>",
+            "<p>10^-15</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pico</p>",
+            "<p>10^-12</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nano</p>",
+            "<p>10^-9</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Micro</p>",
+            "<p>10^-6</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Milli</p>",
+            "<p>10^-3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Centi</p>",
+            "<p>10^-2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deci</p>",
+            "<p>10^-1</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deka</p>",
+            "<p>10^1</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hecto</p>",
+            "<p>10^2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kilo</p>",
+            "<p>10^3</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mega</p>",
+            "<p>10^6</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Giga</p>",
+            "<p>10^9</p>"
           ]
         }
       ]
@@ -400,23 +422,28 @@
     },
     {
       "type": "paragraph",
-      "id": "5dmp2tq"
+      "id": "5dmp2tq",
+      "content": "• Systematic Error – Instrument error"
     },
     {
       "type": "paragraph",
-      "id": "tm6e117"
+      "id": "tm6e117",
+      "content": "• Random Error – Accidental error"
     },
     {
       "type": "paragraph",
-      "id": "wwo8w7r"
+      "id": "wwo8w7r",
+      "content": "• Least Count Error – Smallest readable value"
     },
     {
       "type": "paragraph",
-      "id": "xxlfsqx"
+      "id": "xxlfsqx",
+      "content": "• Zero Error – When instrument does not read zero properly"
     },
     {
       "type": "paragraph",
-      "id": "10l4i2v"
+      "id": "10l4i2v",
+      "content": "Parallax Error – Due to wrong eye position"
     },
     {
       "id": "auakg6o",
@@ -426,15 +453,18 @@
     },
     {
       "type": "paragraph",
-      "id": "5g5x82g"
+      "id": "5g5x82g",
+      "content": "Metre Scale – Least Count 1 mm"
     },
     {
       "type": "paragraph",
-      "id": "bbqu24t"
+      "id": "bbqu24t",
+      "content": "Vernier Caliper – Least Count 0.01 cm "
     },
     {
       "type": "paragraph",
-      "id": "l5w0umn"
+      "id": "l5w0umn",
+      "content": "Screw Gauge – Least Count 0.001 cm "
     },
     {
       "id": "sqhyyqw",
@@ -445,27 +475,32 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ijfzsj4"
+      "id": "ijfzsj4",
+      "content": "1 km = 1000 m"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kh2lkmg"
+      "id": "kh2lkmg",
+      "content": "1 m = 100 cm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bca9nk2"
+      "id": "bca9nk2",
+      "content": "1 kg = 1000 g"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gu1rtlb"
+      "id": "gu1rtlb",
+      "content": "1 tonne = 1000 kg"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5qajyg2"
+      "id": "5qajyg2",
+      "content": "1 quintal = 100 kg"
     },
     {
       "id": "wku8bfd",
@@ -475,23 +510,28 @@
     },
     {
       "type": "paragraph",
-      "id": "56pspof"
+      "id": "56pspof",
+      "content": "Speed of light = 3 × 10^8 m/s"
     },
     {
       "type": "paragraph",
-      "id": "xw6of35"
+      "id": "xw6of35",
+      "content": "Acceleration due to gravity = 9.8 m/s²"
     },
     {
       "type": "paragraph",
-      "id": "9730vcp"
+      "id": "9730vcp",
+      "content": "1 Astronomical Unit = 1.496 × 10^11 m"
     },
     {
       "type": "paragraph",
-      "id": "pcidg1o"
+      "id": "pcidg1o",
+      "content": "1 Light Year = 9.46 × 10^15 m"
     },
     {
       "type": "paragraph",
-      "id": "gc9ml6g"
+      "id": "gc9ml6g",
+      "content": "1 Parsec = 3.08 × 10^16 m"
     },
     {
       "id": "qmx0koc",
@@ -501,27 +541,33 @@
     },
     {
       "type": "paragraph",
-      "id": "djkpfn8"
+      "id": "djkpfn8",
+      "content": "• 1 fermi = 10^-15 m"
     },
     {
       "type": "paragraph",
-      "id": "lyjht2x"
+      "id": "lyjht2x",
+      "content": "• 1 angstrom = 10^-10 m"
     },
     {
       "type": "paragraph",
-      "id": "5q57w6z"
+      "id": "5q57w6z",
+      "content": "• Mass of 1 litre water = 1 kg"
     },
     {
       "type": "paragraph",
-      "id": "syr6pwr"
+      "id": "syr6pwr",
+      "content": "• Heat is a form of energy"
     },
     {
       "type": "paragraph",
-      "id": "wyny6zm"
+      "id": "wyny6zm",
+      "content": "• Sound cannot travel in vacuum"
     },
     {
       "type": "paragraph",
-      "id": "dj2xfpv"
+      "id": "dj2xfpv",
+      "content": "• Light travels fastest in vacuum"
     },
     {
       "id": "o93gnqg",
@@ -537,95 +583,109 @@
     },
     {
       "type": "paragraph",
-      "id": "3gc786d"
+      "id": "3gc786d",
+      "content": "A train is moving with a speed of 72 km/h. Its speed in m/s is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "byr9650"
+      "id": "byr9650",
+      "content": "A) 18 m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m3qepje"
+      "id": "m3qepje",
+      "content": "B) 20 m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "15vys1t"
+      "id": "15vys1t",
+      "content": "C) 22 m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1mht86z"
+      "id": "1mht86z",
+      "content": "D) 25 m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o29juxm"
-    },
-    {
-      "type": "pullQuote",
-      "content": "UNITS AND MEASUREMENTS",
-      "id": "97sp2kx"
+      "id": "o29juxm",
+      "content": "<br></br>Correct Answer: B (20 m/s)"
     },
     {
       "type": "paragraph",
-      "id": "m9ghkvm"
+      "id": "m9ghkvm",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "4mgixnk"
+      "id": "4mgixnk",
+      "content": "Step 1: Understand the unit conversion."
     },
     {
       "type": "paragraph",
-      "id": "wgzbegp"
+      "id": "wgzbegp",
+      "content": "1 kilometre (km) = 1000 metres (m)"
     },
     {
       "type": "paragraph",
-      "id": "sbh0ejk"
+      "id": "sbh0ejk",
+      "content": "1 hour (h) = 3600 seconds (s)"
     },
     {
       "type": "paragraph",
-      "id": "k3c8nhy"
+      "id": "k3c8nhy",
+      "content": "Step 2: Convert 1 km/h into m/s"
     },
     {
       "type": "paragraph",
-      "id": "qniwk6c"
+      "id": "qniwk6c",
+      "content": "1 km/h = 1000 m / 3600 s"
     },
     {
       "type": "paragraph",
-      "id": "1ctzfck"
+      "id": "1ctzfck",
+      "content": "= 5/18 m/s (standard conversion factor)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "svwlcqp"
+      "id": "svwlcqp",
+      "content": "Step 3: Convert 72 km/h"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q27w4ba"
+      "id": "q27w4ba",
+      "content": "72 × (5/18)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zwxbtci"
+      "id": "zwxbtci",
+      "content": "Step 4: Simplify mathematically"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6a16a4w"
+      "id": "6a16a4w",
+      "content": "72 ÷ 18 = 4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ph7je3b"
+      "id": "ph7je3b",
+      "content": "4 × 5 = 20"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1bul98j"
+      "id": "1bul98j",
+      "content": "Final Answer = 20 m/s"
     },
     {
       "id": "fuowk16",
@@ -635,67 +695,81 @@
     },
     {
       "type": "paragraph",
-      "id": "gkptg4f"
+      "id": "gkptg4f",
+      "content": "The density of a substance having mass 6 kg and volume 3 m³ is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i2rijmp"
+      "id": "i2rijmp",
+      "content": "A) 1 kg/m³"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qktn9ta"
+      "id": "qktn9ta",
+      "content": "B) 2 kg/m³"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "s9ypdlx"
+      "id": "s9ypdlx",
+      "content": "C) 3 kg/m³"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ysm7hky"
+      "id": "ysm7hky",
+      "content": "D) 18 kg/m³"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2j5xhqp"
+      "id": "2j5xhqp",
+      "content": "<br></br>Correct Answer: B (2 kg/m³)"
     },
     {
       "type": "paragraph",
-      "id": "cnyug8c"
+      "id": "cnyug8c",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "3af1dae"
+      "id": "3af1dae",
+      "content": "Step 1: Write the formula of density."
     },
     {
       "type": "paragraph",
-      "id": "qx3wrgh"
+      "id": "qx3wrgh",
+      "content": "Density (ρ) = Mass / Volume"
     },
     {
       "type": "paragraph",
-      "id": "8dfkxev"
+      "id": "8dfkxev",
+      "content": "Step 2: Substitute given values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "91kbfuo"
+      "id": "91kbfuo",
+      "content": "Mass = 6 kg"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "af0ieok"
+      "id": "af0ieok",
+      "content": "Volume = 3 m³"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "a1wuoeu"
+      "id": "a1wuoeu",
+      "content": "ρ = 6 / 3"
     },
     {
       "type": "paragraph",
-      "id": "zjzue7q"
+      "id": "zjzue7q",
+      "content": "Step 3: Divide."
     },
     {
       "type": "comparisonTable",
@@ -722,15 +796,18 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "eqhpsti"
+      "id": "eqhpsti",
+      "content": "ρ = 2"
     },
     {
       "type": "paragraph",
-      "id": "0224q4v"
+      "id": "0224q4v",
+      "content": "Unit check: kg ÷ m³ = kg/m³"
     },
     {
       "type": "paragraph",
-      "id": "wrmuluh"
+      "id": "wrmuluh",
+      "content": "Final Answer = 2 kg per cubic metre"
     },
     {
       "id": "3vi7wr3",
@@ -740,85 +817,103 @@
     },
     {
       "type": "paragraph",
-      "id": "sdayikl"
+      "id": "sdayikl",
+      "content": "A force acts on a 5 kg body producing acceleration of 3 m/s². The force is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9ldys3n"
+      "id": "9ldys3n",
+      "content": "A) 8 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z3hbygs"
+      "id": "z3hbygs",
+      "content": "B) 10 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2f9ihoz"
+      "id": "2f9ihoz",
+      "content": "C) 15 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m1t2me4"
+      "id": "m1t2me4",
+      "content": "D) 20 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o5jtvkk"
+      "id": "o5jtvkk",
+      "content": "<br></br>Correct Answer: C (15 N)"
     },
     {
       "type": "paragraph",
-      "id": "b8u3gde"
+      "id": "b8u3gde",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "3gk49o4"
+      "id": "3gk49o4",
+      "content": "Step 1: Use Newton’s Second Law of Motion."
     },
     {
       "type": "paragraph",
-      "id": "jot21z8"
+      "id": "jot21z8",
+      "content": "Force (F) = Mass (m) × Acceleration (a)"
     },
     {
       "type": "paragraph",
-      "id": "k07iyyh"
+      "id": "k07iyyh",
+      "content": "Step 2: Substitute values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nz8t5sv"
+      "id": "nz8t5sv",
+      "content": "m = 5 kg"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "eiuuizm"
+      "id": "eiuuizm",
+      "content": "a = 3 m/s²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "umxazqk"
+      "id": "umxazqk",
+      "content": "F = 5 × 3"
     },
     {
       "type": "paragraph",
-      "id": "ckr9l82"
+      "id": "ckr9l82",
+      "content": "Step 3: Multiply."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2yqujt5"
+      "id": "2yqujt5",
+      "content": "F = 15"
     },
     {
       "type": "paragraph",
-      "id": "g8tghu5"
+      "id": "g8tghu5",
+      "content": "Unit Explanation:"
     },
     {
       "type": "paragraph",
-      "id": "ym9d08r"
+      "id": "ym9d08r",
+      "content": "kg × m/s² = Newton (N)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gdgg0iy"
+      "id": "gdgg0iy",
+      "content": "Final Answer = 15 N"
     },
     {
       "id": "ght8l2b",
@@ -828,63 +923,76 @@
     },
     {
       "type": "paragraph",
-      "id": "dp69k80"
+      "id": "dp69k80",
+      "content": "A force of 12 N moves a body through 4 m. The work done is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1b7dmgh"
+      "id": "1b7dmgh",
+      "content": "A) 3 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "stdx3tr"
+      "id": "stdx3tr",
+      "content": "B) 16 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q1j9iom"
+      "id": "q1j9iom",
+      "content": "C) 48 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6lr3787"
+      "id": "6lr3787",
+      "content": "D) 8 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qnclcb2"
+      "id": "qnclcb2",
+      "content": "<br></br>Correct Answer: C (48 J)"
     },
     {
       "type": "paragraph",
-      "id": "1i3m77o"
+      "id": "1i3m77o",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "ohl9nyy"
+      "id": "ohl9nyy",
+      "content": "Step 1: Write formula of work."
     },
     {
       "type": "paragraph",
-      "id": "jicw3cd"
+      "id": "jicw3cd",
+      "content": "Work (W) = Force (F) × Displacement (s)"
     },
     {
       "type": "paragraph",
-      "id": "o8gkt23"
+      "id": "o8gkt23",
+      "content": "Step 2: Substitute values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q0xigoo"
+      "id": "q0xigoo",
+      "content": "F = 12 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "06w3376"
+      "id": "06w3376",
+      "content": "s = 4 m"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nicbi6h"
+      "id": "nicbi6h",
+      "content": "W = 12 × 4"
     },
     {
       "type": "examAlert",
@@ -897,25 +1005,30 @@
     },
     {
       "type": "paragraph",
-      "id": "mhoq8uf"
+      "id": "mhoq8uf",
+      "content": "Step 3: Multiply."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hcvrnt2"
+      "id": "hcvrnt2",
+      "content": "W = 48"
     },
     {
       "type": "paragraph",
-      "id": "a5wa6cz"
+      "id": "a5wa6cz",
+      "content": "Unit Explanation:"
     },
     {
       "type": "paragraph",
-      "id": "dfevwjf"
+      "id": "dfevwjf",
+      "content": "Newton × metre = Joule (J)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8o15jf1"
+      "id": "8o15jf1",
+      "content": "Final Answer = 48 J"
     },
     {
       "id": "qiuswvk",
@@ -925,82 +1038,99 @@
     },
     {
       "type": "paragraph",
-      "id": "qev25da"
+      "id": "qev25da",
+      "content": "If pitch of a screw gauge is 0.5 mm and circular scale has 50 divisions, its least count is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ntjs1gc"
+      "id": "ntjs1gc",
+      "content": "A) 0.01 mm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qjohoj0"
+      "id": "qjohoj0",
+      "content": "B) 0.02 mm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "b4xyc9m"
+      "id": "b4xyc9m",
+      "content": "C) 0.1 mm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zvlxzq5"
+      "id": "zvlxzq5",
+      "content": "D) 0.001 mm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "age36dz"
+      "id": "age36dz",
+      "content": "<br></br>Correct Answer: A (0.01 mm)"
     },
     {
       "type": "paragraph",
-      "id": "sgxmh2t"
+      "id": "sgxmh2t",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "k15fxs5"
+      "id": "k15fxs5",
+      "content": "Step 1: Write formula of Least Count."
     },
     {
       "type": "paragraph",
-      "id": "lx5vptr"
+      "id": "lx5vptr",
+      "content": "Least Count (LC) = Pitch / Number of circular scale divisions"
     },
     {
       "type": "paragraph",
-      "id": "f0g8ox5"
+      "id": "f0g8ox5",
+      "content": "Step 2: Substitute given values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kmcz08z"
+      "id": "kmcz08z",
+      "content": "Pitch = 0.5 mm"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l1qnhvb"
+      "id": "l1qnhvb",
+      "content": "Divisions = 50"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lskijuo"
+      "id": "lskijuo",
+      "content": "LC = 0.5 / 50"
     },
     {
       "type": "paragraph",
-      "id": "hzd2ygr"
+      "id": "hzd2ygr",
+      "content": "Step 3: Perform division carefully."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "db5pqve"
+      "id": "db5pqve",
+      "content": "0.5 ÷ 50 = 0.01"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kudpztl"
+      "id": "kudpztl",
+      "content": "Unit remains millimetre (mm)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "lgcbthf"
+      "id": "lgcbthf",
+      "content": "Final Answer = 0.01 mm"
     }
   ],
   "enriched": true

@@ -1,0 +1,136 @@
+{
+  "title": "Status and Establishment",
+  "order": 250,
+  "blocks": [
+    {
+      "id": "1i5se48",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Established</p>",
+            "<p>1993</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Legal Basis</p>",
+            "<p>Protection of Human Rights Act, 1993</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type</p>",
+            "<p>Statutory Body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Headquarters</p>",
+            "<p>New Delhi</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Objective</p>",
+            "<p>Protection and promotion of human rights</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Constitutional bodies derive their powers, status, and authority directly from the Constitution of India.",
+      "id": "hzvi32i"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Constitutional Bodies",
+        "Statutory Bodies",
+        "Executive Bodies"
+      ],
+      "rows": [
+        [
+          "Source of Power",
+          "Constitution of India",
+          "Act of Parliament / State Act",
+          "Executive Cabinet Resolution"
+        ],
+        [
+          "Creation & Abolition",
+          "Constitutional Amendment (Art 368)",
+          "Legislative Amendment / Repeal",
+          "Cabinet Decision"
+        ],
+        [
+          "Key Examples",
+          "ECI, UPSC, CAG, Finance Commission",
+          "NHRC, SEBI, NGT, CVC",
+          "NITI Aayog, Law Commission"
+        ]
+      ],
+      "id": "iau52yz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Election Commission",
+          "value": "Article 324",
+          "icon": "book"
+        },
+        {
+          "label": "Finance Commission",
+          "value": "Article 280",
+          "icon": "award"
+        },
+        {
+          "label": "UPSC & SPSC",
+          "value": "Article 315",
+          "icon": "check"
+        },
+        {
+          "label": "CAG of India",
+          "value": "Article 148",
+          "icon": "info"
+        }
+      ],
+      "id": "vr36fa2"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "frequently tested: Classifying bodies like NITI Aayog, NHRC, CVC, and UIDAI into Constitutional, Statutory, or Executive categories.",
+        "Remember that NITI Aayog is an executive (non-constitutional, non-statutory) body formed via a Cabinet resolution on January 1, 2015.",
+        "Constitutional provisions and corresponding article numbers for key statutory versus constitutional bodies are commonly matched in preliminary exams."
+      ],
+      "id": "l23g0ey"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional bodies derive their power, authority, and status directly from specific articles of the Constitution of India.",
+        "Statutory bodies are established through acts passed by Parliament or State Legislatures.",
+        "Executive bodies are created via an executive resolution passed by the Cabinet without legislative enactment.",
+        "Any modification to the status or structure of a constitutional body requires a constitutional amendment under Article 368."
+      ],
+      "id": "s8s5z76"
+    }
+  ],
+  "enriched": true
+}

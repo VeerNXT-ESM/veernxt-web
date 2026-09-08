@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "qjp1oml"
+      "id": "qjp1oml",
+      "content": "Temperature, air pressure, and winds together form the backbone of atmospheric dynamics. No weather or climate phenomenon is possible without the interaction of these three elements."
     },
     {
       "type": "statStrip",
@@ -35,7 +36,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ild85gn"
+      "id": "ild85gn",
+      "content": "Unequal heating of the Earth produces temperature differences; temperature differences lead to pressure differences; and pressure differences generate winds. This chapter is one of the MOST IMPORTANT chapters for  because it forms the base of monsoon, cyclones, anticyclones, rainfall, desert formation, and climatic regions."
     },
     {
       "id": "necsf2e",
@@ -63,7 +65,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9tgopgv"
+      "id": "9tgopgv",
+      "content": "Temperature is the measure of the degree of hotness or coldness of air. It directly affects air density, pressure, humidity, cloud formation, and wind movement. Warm air expands, becomes lighter, and rises, whereas cold air contracts, becomes heavier, and sinks. This vertical movement of air is fundamental to atmospheric circulation."
     },
     {
       "id": "c4rizem",
@@ -79,7 +82,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gcno9vl"
+      "id": "gcno9vl",
+      "content": "Latitude controls the angle of solar rays. Near the equator, rays are vertical and concentrated, leading to higher temperatures. Towards the poles, rays are slanting, spread over larger areas, and lose heat while passing through thicker atmosphere, resulting in lower temperatures."
     },
     {
       "id": "ugx0460",
@@ -89,7 +93,8 @@
     },
     {
       "type": "paragraph",
-      "id": "e8al6xk"
+      "id": "e8al6xk",
+      "content": "Temperature decreases with increase in altitude due to reduction in air density. The normal lapse rate is 6.5°C per 1000 metres. This is why hill stations are cooler than plains."
     },
     {
       "id": "uhvanz0",
@@ -99,7 +104,8 @@
     },
     {
       "type": "paragraph",
-      "id": "cbzzsg6"
+      "id": "cbzzsg6",
+      "content": "Land heats and cools faster than water. Coastal areas experience moderate temperatures due to the influence of sea breezes, while interior regions show extreme temperatures."
     },
     {
       "id": "ea7ftaz",
@@ -109,12 +115,8 @@
     },
     {
       "type": "paragraph",
-      "id": "uspo0p4"
-    },
-    {
-      "type": "pullQuote",
-      "content": "PART D: INTERRELATIONSHIP (EXAM GOLD)",
-      "id": "9eblzjy"
+      "id": "uspo0p4",
+      "content": "Warm ocean currents raise coastal temperatures and increase humidity, whereas cold ocean currents lower temperatures and reduce rainfall."
     },
     {
       "id": "d6nme97",
@@ -124,7 +126,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mbuxuch"
+      "id": "mbuxuch",
+      "content": "Clouds reduce daytime temperature by reflecting solar radiation and reduce night-time cooling by trapping heat. Winds transfer heat horizontally from one region to another."
     },
     {
       "id": "a9dbfej",
@@ -134,7 +137,8 @@
     },
     {
       "type": "paragraph",
-      "id": "pl7z94w"
+      "id": "pl7z94w",
+      "content": "Temperature inversion is a condition in which temperature increases with height instead of decreasing. It usually occurs during long winter nights, in valleys, and under calm conditions. Inversion traps pollutants near the ground, causing smog and health hazards."
     },
     {
       "id": "874kjua",
@@ -150,7 +154,8 @@
     },
     {
       "type": "paragraph",
-      "id": "398866r"
+      "id": "398866r",
+      "content": "Air pressure is the force exerted by the weight of air on the Earth’s surface. It is highest at sea level and decreases with altitude."
     },
     {
       "id": "cc8m97x",
@@ -186,7 +191,8 @@
     },
     {
       "type": "paragraph",
-      "id": "o8gohm9"
+      "id": "o8gohm9",
+      "content": "Temperature (warm air – low pressure, cold air – high pressure), altitude, and water vapour content significantly influence air pressure."
     },
     {
       "id": "4fozlvj",
@@ -196,7 +202,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5sf0dbk"
+      "id": "5sf0dbk",
+      "content": "Equatorial Low Pressure Belt forms due to intense heating and rising air. Subtropical High Pressure Belts form due to descending air. Subpolar Low Pressure Belts form due to convergence of westerlies and polar winds. Polar High Pressure Belts exist due to extremely cold and dense air."
     },
     {
       "id": "mnvupxm",
@@ -205,8 +212,15 @@
       "content": "Seasonal Shifting of Pressure Belts"
     },
     {
+      "id": "4lg58nk",
+      "type": "image",
+      "imageId": "coa6osm",
+      "src": "/books/Guide/GENERAL KNOWLEDGE/images/image_coa6osm.png"
+    },
+    {
       "type": "paragraph",
-      "id": "lk86g35"
+      "id": "lk86g35",
+      "content": "Pressure belts shift northward and southward with the apparent movement of the Sun. This shifting is responsible for the origin and reversal of monsoon winds.<img></img>"
     },
     {
       "id": "qbxdwxr",
@@ -222,7 +236,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bzz91xv"
+      "id": "bzz91xv",
+      "content": "Wind is the horizontal movement of air from areas of high pressure to areas of low pressure. Wind speed and direction depend on pressure gradient, Coriolis force, and friction."
     },
     {
       "id": "i7skmk9",
@@ -232,7 +247,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fk6byy1"
+      "id": "fk6byy1",
+      "content": "Pressure Gradient Force initiates wind movement. Coriolis Force deflects wind to the right in the Northern Hemisphere and to the left in the Southern Hemisphere. Frictional Force reduces wind speed near the Earth’s surface."
     },
     {
       "type": "examAlert",
@@ -247,7 +263,7 @@
       "id": "0nwgpzo",
       "type": "list",
       "items": [
-        null
+        "<strong>Classification of Winds (COMPLETE TABLE)</strong>"
       ]
     },
     {
@@ -257,45 +273,45 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Type of Wind</strong></p>",
+            "<p><strong>Origin / Cause</strong></p>",
+            "<p><strong>Direction</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Examples</strong></p>",
+            "<p><strong> Exam Importance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Permanent Winds</p>",
+            "<p>Global pressure belts</p>",
+            "<p>Fixed direction</p>",
+            "<p>Global</p>",
+            "<p>Trade Winds, Westerlies, Polar Easterlies</p>",
+            "<p>Asked directly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Periodic Winds</p>",
+            "<p>Seasonal pressure change</p>",
+            "<p>Seasonal reversal</p>",
+            "<p>Regional</p>",
+            "<p>Monsoon, Land–Sea Breeze</p>",
+            "<p>Conceptual</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Local Winds</p>",
+            "<p>Local temperature</p>",
+            "<p>Short duration</p>",
+            "<p>Local</p>",
+            "<p>Loo, Chinook,</p>",
+            "<p>One-liners</p>"
           ]
         }
       ]
@@ -307,12 +323,12 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "",
+            "<p>difference</p>",
+            "",
+            "",
+            "<p>Foehn</p>",
+            ""
           ]
         }
       ]
@@ -325,7 +341,8 @@
     },
     {
       "type": "paragraph",
-      "id": "n9zy5fi"
+      "id": "n9zy5fi",
+      "content": "Unequal heating → Temperature difference → Pressure difference → Winds. This chain reaction explains global circulation, rainfall patterns, monsoon system, cyclones, anticyclones, and climatic regions."
     },
     {
       "id": "2g9drjm",
@@ -337,13 +354,13 @@
       "id": "iv28n6w",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ol><li>Temperature controls pressure</li><li>Warm air rises – low pressure</li><li>Cold air sinks – high pressure</li><li>Winds move high → low pressure</li><li>Coriolis causes deflection</li><li>Monsoon = seasonal wind reversal</li></ol>",
+        "Temperature controls pressure",
+        "Warm air rises – low pressure",
+        "Cold air sinks – high pressure",
+        "Winds move high → low pressure",
+        "Coriolis causes deflection",
+        "Monsoon = seasonal wind reversal"
       ]
     }
   ],

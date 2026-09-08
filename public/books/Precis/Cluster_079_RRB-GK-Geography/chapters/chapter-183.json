@@ -1,0 +1,111 @@
+{
+  "title": "4. Soil Profile and Horizons",
+  "order": 183,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A vertical section of soil is called a soil profile. It consists of distinct layers formed due to movement of water and minerals.",
+      "id": "u52wf8r"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A vertical section of soil is called a soil profile.",
+      "id": "2mha9zo"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Concept",
+          "value": "Soil Profile",
+          "icon": "book"
+        },
+        {
+          "label": "Orientation",
+          "value": "Vertical Section",
+          "icon": "check"
+        },
+        {
+          "label": "Key Agents",
+          "value": "Water & Minerals",
+          "icon": "info"
+        }
+      ],
+      "id": "6ybp3m9"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A vertical section displaying the structure of soil is defined as a soil profile.",
+        "Soil profiles are divided into distinct layers known as horizons.",
+        "The primary mechanism behind the formation of these layers is the continuous movement of water and minerals."
+      ],
+      "id": "zs27jcf"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Definition Alert: A soil profile specifically refers to a vertical section of soil.",
+        "Formation Factors: Questions often test the role of water and mineral movement in creating distinct soil layers."
+      ],
+      "id": "1m0pe1b"
+    },
+    {
+      "id": "4uaqw6i",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Horizon</strong></p>",
+            "<p><strong>Detailed Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>O Horizon</p>",
+            "<p>Surface organic layer rich in leaf litter and humus.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A Horizon</p>",
+            "<p>Topsoil; mixture of minerals and humus; most fertile.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>E Horizon</p>",
+            "<p>Zone of intense leaching; pale in color.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>B Horizon</p>",
+            "<p>Subsoil; accumulation of clay, iron and aluminum.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>C Horizon</p>",
+            "<p>Weathered parent material.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>R Horizon</p>",
+            "<p>Unweathered bedrock.</p>"
+          ]
+        }
+      ]
+    }
+  ],
+  "enriched": true
+}

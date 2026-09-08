@@ -49,11 +49,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8kfy0vb"
+      "id": "8kfy0vb",
+      "content": "किसी व्यक्ति, स्थान, वस्तु, भाव या गुण के नाम को संज्ञा कहते हैं। संज्ञा वाक्य की आत्मा होती है:इसके बिना वाक्य अधूरा है।"
     },
     {
       "type": "paragraph",
-      "id": "u5t59re"
+      "id": "u5t59re",
+      "content": "उदाहरण: राम (व्यक्ति), दिल्ली (स्थान), पुस्तक (वस्तु), सुंदरता (गुण), बचपन (भाव)।"
     },
     {
       "id": "3jmbxpt",
@@ -63,7 +65,8 @@
     },
     {
       "type": "paragraph",
-      "id": "un9fvy5"
+      "id": "un9fvy5",
+      "content": "हिंदी व्याकरण में संज्ञा के पाँच मुख्य भेद होते हैं:"
     },
     {
       "id": "58havxn",
@@ -72,49 +75,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>भेद</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>व्यक्तिवाचक संज्ञा</p>",
+            "<p>किसी एक विशेष व्यक्ति, स्थान या वस्तु का नाम</p>",
+            "<p>राम, गंगा, हिमालय, दिल्ली, ताजमहल</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>जातिवाचक संज्ञा</p>",
+            "<p>किसी पूरी जाति या वर्ग का बोध कराने वाला नाम</p>",
+            "<p>लड़का, नदी, पहाड़, पशु, शहर, पेड़</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>भाववाचक संज्ञा</p>",
+            "<p>किसी भाव, गुण, दशा या अवस्था का नाम</p>",
+            "<p>खुशी, दुःख, बचपन, बुढ़ापा, सुंदरता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>द्रव्यवाचक संज्ञा</p>",
+            "<p>किसी पदार्थ, धातु या द्रव्य का नाम जो मापा-तौला जाए</p>",
+            "<p>सोना, चाँदी, पानी, तेल, दूध, लकड़ी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>समूहवाचक संज्ञा</p>",
+            "<p>किसी समूह या समुदाय का बोध कराने वाला नाम</p>",
+            "<p>सेना, झुंड, कक्षा, परिवार, सभा, भीड़</p>"
           ]
         }
       ]
@@ -127,12 +130,14 @@
     },
     {
       "type": "paragraph",
-      "id": "6hai1jk"
+      "id": "6hai1jk",
+      "content": "भाववाचक संज्ञाएँ विशेषण, क्रिया, जातिवाचक संज्ञा और सर्वनाम से बनाई जाती हैं। "
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ntlrwzc"
+      "id": "ntlrwzc",
+      "content": "<strong>(क) विशेषण से भाववाचक संज्ञा</strong>"
     },
     {
       "id": "9ju3cje",
@@ -141,82 +146,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>विशेषण</strong></p>",
+            "<p><strong>भाववाचक संज्ञा</strong></p>",
+            "<p><strong>विशेषण</strong></p>",
+            "<p><strong>भाववाचक संज्ञा</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>अच्छा</p>",
+            "<p>अच्छाई</p>",
+            "<p>बुरा</p>",
+            "<p>बुराई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>सुंदर</p>",
+            "<p>सुंदरता</p>",
+            "<p>कठोर</p>",
+            "<p>कठोरता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>महान</p>",
+            "<p>महानता</p>",
+            "<p>वीर</p>",
+            "<p>वीरता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मीठा</p>",
+            "<p>मिठास</p>",
+            "<p>कड़वा</p>",
+            "<p>कड़वाहट</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>गर्म</p>",
+            "<p>गर्मी</p>",
+            "<p>ठंडा</p>",
+            "<p>ठंडक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>चतुर</p>",
+            "<p>चतुराई</p>",
+            "<p>समझदार</p>",
+            "<p>समझदारी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>लंबा</p>",
+            "<p>लंबाई</p>",
+            "<p>चौड़ा</p>",
+            "<p>चौड़ाई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>गहरा</p>",
+            "<p>गहराई</p>",
+            "<p>ऊँचा</p>",
+            "<p>ऊँचाई</p>"
           ]
         }
       ]
@@ -224,7 +229,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ofdx2vr"
+      "id": "ofdx2vr",
+      "content": "<strong>(ख) क्रिया से भाववाचक संज्ञा</strong>"
     },
     {
       "id": "b94ax8s",
@@ -233,71 +239,72 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>क्रिया (धातु)</strong></p>",
+            "<p><strong>भाववाचक संज्ञा</strong></p>",
+            "<p><strong>क्रिया (धातु)</strong></p>",
+            "<p><strong>भाववाचक संज्ञा</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>पढ़ना</p>",
+            "<p>पढ़ाई</p>",
+            "<p>लिखना</p>",
+            "<p>लिखाई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>दौड़ना</p>",
+            "<p>दौड़</p>",
+            "<p>उड़ना</p>",
+            "<p>उड़ान</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>हँसना</p>",
+            "<p>हँसी</p>",
+            "<p>रोना</p>",
+            "<p>रुलाई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>चलना</p>",
+            "<p>चाल</p>",
+            "<p>बोलना</p>",
+            "<p>बोली</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>खेलना</p>",
+            "<p>खेल</p>",
+            "<p>सीना</p>",
+            "<p>सिलाई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>बुनना</p>",
+            "<p>बुनाई</p>",
+            "<p>पीटना</p>",
+            "<p>पिटाई</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "2fp6s0h"
+      "id": "2fp6s0h",
+      "content": "<strong>(ग) जातिवाचक संज्ञा से भाववाचक संज्ञा</strong>"
     },
     {
       "id": "hvsc39k",
@@ -306,55 +313,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>जातिवाचक संज्ञा</strong></p>",
+            "<p><strong>भाववाचक संज्ञा</strong></p>",
+            "<p><strong>जातिवाचक संज्ञा</strong></p>",
+            "<p><strong>भाववाचक संज्ञा</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मित्र</p>",
+            "<p>मित्रता</p>",
+            "<p>शत्रु</p>",
+            "<p>शत्रुता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>बच्चा</p>",
+            "<p>बचपन</p>",
+            "<p>बूढ़ा</p>",
+            "<p>बुढ़ापा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मनुष्य</p>",
+            "<p>मनुष्यता</p>",
+            "<p>पशु</p>",
+            "<p>पशुता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>दास</p>",
+            "<p>दासता</p>",
+            "<p>स्वामी</p>",
+            "<p>स्वामित्व</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>इंसान</p>",
+            "<p>इंसानियत</p>",
+            "<p>राष्ट्र</p>",
+            "<p>राष्ट्रीयता</p>"
           ]
         }
       ]
@@ -367,7 +374,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dllytvy"
+      "id": "dllytvy",
+      "content": "संज्ञा के जिस रूप से उसके पुरुष या स्त्री जाति होने का बोध हो, उसे लिंग कहते हैं। हिंदी में दो लिंग होते हैं:"
     },
     {
       "id": "9397r8g",
@@ -376,32 +384,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>लिंग</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>पुल्लिंग (Masculine)</p>",
+            "<p>जिस संज्ञा से पुरुष जाति या पुरुष भाव का बोध हो</p>",
+            "<p>राम, लड़का, घोड़ा, शेर, पिता, राजा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>स्त्रीलिंग (Feminine)</p>",
+            "<p>जिस संज्ञा से स्त्री जाति या स्त्री भाव का बोध हो</p>",
+            "<p>सीता, लड़की, घोड़ी, शेरनी, माता, रानी</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "qasyox5"
+      "id": "qasyox5",
+      "content": "हिंदी में उर्दू और संस्कृत के विपरीत नपुंसक लिंग (Neuter Gender) नहीं माना जाता:सभी संज्ञाएँ या तो पुल्लिंग हैं या स्त्रीलिंग।"
     },
     {
       "id": "vbu2m96",
@@ -412,7 +421,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "bmatvvm"
+      "id": "bmatvvm",
+      "content": "<strong>(क) पुल्लिंग शब्दों की पहचान</strong>"
     },
     {
       "id": "sdrc6t8",
@@ -421,64 +431,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>नियम</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पर्वतों के नाम</p>",
+            "<p>हिमालय, विंध्याचल, सतपुड़ा, अरावली</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>महीनों के नाम (हिंदी)</p>",
+            "<p>चैत्र, वैशाख, ज्येष्ठ, आषाढ़, सावन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>दिनों के नाम</p>",
+            "<p>सोमवार, मंगलवार, बुधवार, गुरुवार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>धातुओं और रत्नों के नाम</p>",
+            "<p>सोना, लोहा, ताँबा, हीरा, पन्ना</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अनाजों के नाम</p>",
+            "<p>गेहूँ, चावल, जौ, चना, मक्का, बाजरा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>वृक्षों के अधिकांश नाम</p>",
+            "<p>आम, नीम, पीपल, बरगद, शीशम</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>-आ अंत वाले शब्द (प्रायः)</p>",
+            "<p>लड़का, घोड़ा, कपड़ा, रस्सा, मोटा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>देश के नाम (अधिकांश)</p>",
+            "<p>भारत, चीन, जापान, रूस, अमेरिका</p>"
           ]
         }
       ]
@@ -497,7 +507,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "00wcdxw"
+      "id": "00wcdxw",
+      "content": "<strong>(क) स्त्रीलिंग शब्दों की पहचान</strong>"
     },
     {
       "id": "882tiro",
@@ -506,64 +517,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>नियम</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>नदियों के नाम</p>",
+            "<p>गंगा, यमुना, सरस्वती, कावेरी, नर्मदा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>तिथियों के नाम</p>",
+            "<p>एकादशी, द्वादशी, अमावस्या, पूर्णिमा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>भाषाओं के नाम</p>",
+            "<p>हिंदी, संस्कृत, बंगाली, तमिल, अंग्रेज़ी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>लिपियों के नाम</p>",
+            "<p>देवनागरी, रोमन, गुरुमुखी, ब्राह्मी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>-ई, -इ अंत वाले शब्द (प्रायः)</p>",
+            "<p>लड़की, नदी, रोटी, साड़ी, टोपी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>-आई, -ता, -त्व अंत वाले</p>",
+            "<p>पढ़ाई, सुंदरता, मानवता, महानता</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>अधिकांश भाव वाचक संज्ञाएँ</p>",
+            "<p>खुशी, दुःख (कुछ), बुराई, अच्छाई</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>मसालों और सब्ज़ियों के नाम</p>",
+            "<p>हल्दी, मिर्च, सरसों, इलायची, लौंग</p>"
           ]
         }
       ]
@@ -576,11 +587,13 @@
     },
     {
       "type": "paragraph",
-      "id": "wt4i1um"
+      "id": "wt4i1um",
+      "content": "पुल्लिंग शब्दों से स्त्रीलिंग शब्द बनाने के निम्नलिखित नियम हैं:"
     },
     {
       "type": "paragraph",
-      "id": "avjsnyr"
+      "id": "avjsnyr",
+      "content": "<strong>(क) 'आ' को 'ई' में बदलकर</strong>"
     },
     {
       "id": "m434i9p",
@@ -589,55 +602,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>पुल्लिंग</strong></p>",
+            "<p><strong>स्त्रीलिंग</strong></p>",
+            "<p><strong>पुल्लिंग</strong></p>",
+            "<p><strong>स्त्रीलिंग</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>लड़का</p>",
+            "<p>लड़की</p>",
+            "<p>घोड़ा</p>",
+            "<p>घोड़ी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>नाना</p>",
+            "<p>नानी</p>",
+            "<p>दादा</p>",
+            "<p>दादी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>बेटा</p>",
+            "<p>बेटी</p>",
+            "<p>काका</p>",
+            "<p>काकी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>भतीजा</p>",
+            "<p>भतीजी</p>",
+            "<p>मामा</p>",
+            "<p>मामी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>चाचा</p>",
+            "<p>चाची</p>",
+            "<p>बछड़ा</p>",
+            "<p>बछड़ी</p>"
           ]
         }
       ]
@@ -645,7 +658,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "ufu6tp4"
+      "id": "ufu6tp4",
+      "content": "<strong>(ख) 'इनी' / 'नी' जोड़कर</strong>"
     },
     {
       "id": "5pmpgmq",
@@ -654,55 +668,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>पुल्लिंग</strong></p>",
+            "<p><strong>स्त्रीलिंग</strong></p>",
+            "<p><strong>पुल्लिंग</strong></p>",
+            "<p><strong>स्त्रीलिंग</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>शेर</p>",
+            "<p>शेरनी</p>",
+            "<p>हाथी</p>",
+            "<p>हथिनी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मोर</p>",
+            "<p>मोरनी</p>",
+            "<p>ऊँट</p>",
+            "<p>ऊँटनी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>भेड़िया</p>",
+            "<p>भेड़िनी</p>",
+            "<p>बाघ</p>",
+            "<p>बाघिन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>चोर</p>",
+            "<p>चोरनी</p>",
+            "<p>तेल</p>",
+            "<p>तेलिन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>माली</p>",
+            "<p>मालिन</p>",
+            "<p>नाई</p>",
+            "<p>नाइन</p>"
           ]
         }
       ]
@@ -710,7 +724,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "lvx07cn"
+      "id": "lvx07cn",
+      "content": "<strong>(ग) 'आनी' जोड़कर</strong>"
     },
     {
       "id": "6jxlldb",
@@ -719,46 +734,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>पुल्लिंग</strong></p>",
+            "<p><strong>स्त्रीलिंग</strong></p>",
+            "<p><strong>पुल्लिंग</strong></p>",
+            "<p><strong>स्त्रीलिंग</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>देवर</p>",
+            "<p>देवरानी</p>",
+            "<p>जेठ</p>",
+            "<p>जेठानी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>नौकर</p>",
+            "<p>नौकरानी</p>",
+            "<p>चौधरी</p>",
+            "<p>चौधरानी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>ठाकुर</p>",
+            "<p>ठाकुरानी</p>",
+            "<p>पंडित</p>",
+            "<p>पंडिताइन</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मेहतर</p>",
+            "<p>मेहतरानी</p>",
+            "<p>राजपूत</p>",
+            "<p>राजपूतानी</p>"
           ]
         }
       ]
@@ -766,7 +781,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "cmi3jlx"
+      "id": "cmi3jlx",
+      "content": "<strong>(घ) अलग शब्द (Suppletive Forms)</strong>"
     },
     {
       "type": "comparisonTable",
@@ -796,7 +812,8 @@
     },
     {
       "type": "paragraph",
-      "id": "g7s8c4w"
+      "id": "g7s8c4w",
+      "content": "कुछ स्त्रीलिंग शब्द पुल्लिंग से नहीं बनते:वे बिल्कुल अलग होते हैं।"
     },
     {
       "id": "oliram1",
@@ -805,64 +822,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>पुल्लिंग</strong></p>",
+            "<p><strong>स्त्रीलिंग</strong></p>",
+            "<p><strong>पुल्लिंग</strong></p>",
+            "<p><strong>स्त्रीलिंग</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>पिता</p>",
+            "<p>माता</p>",
+            "<p>राजा</p>",
+            "<p>रानी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>भाई</p>",
+            "<p>बहन</p>",
+            "<p>वर</p>",
+            "<p>वधू</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>पुरुष</p>",
+            "<p>स्त्री</p>",
+            "<p>बैल</p>",
+            "<p>गाय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>बकरा</p>",
+            "<p>बकरी</p>",
+            "<p>मुर्गा</p>",
+            "<p>मुर्गी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>भतीजा</p>",
+            "<p>भतीजी</p>",
+            "<p>भाँजा</p>",
+            "<p>भाँजी</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>नर</p>",
+            "<p>नारी / मादा</p>",
+            "<p>सूअर</p>",
+            "<p>सूअरी</p>"
           ]
         }
       ]
@@ -875,7 +892,8 @@
     },
     {
       "type": "paragraph",
-      "id": "woudlep"
+      "id": "woudlep",
+      "content": "कुछ शब्द पुल्लिंग और स्त्रीलिंग दोनों के लिए प्रयुक्त होते हैं। इन्हें उभयलिंगी शब्द कहते हैं।"
     },
     {
       "id": "dtgwdx3",
@@ -884,49 +902,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>उभयलिंगी शब्द</strong></p>",
+            "<p><strong>पुल्लिंग प्रयोग</strong></p>",
+            "<p><strong>स्त्रीलिंग प्रयोग</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>प्रधानमंत्री</p>",
+            "<p>श्री नरेंद्र मोदी प्रधानमंत्री हैं।</p>",
+            "<p>श्रीमती इंदिरा गांधी प्रधानमंत्री थीं।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मंत्री</p>",
+            "<p>वे मंत्री हैं।</p>",
+            "<p>वे मंत्री हैं।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>राष्ट्रपति</p>",
+            "<p>वे राष्ट्रपति हैं।</p>",
+            "<p>वे राष्ट्रपति हैं।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>शिक्षक</p>",
+            "<p>वे अच्छे शिक्षक हैं।</p>",
+            "<p>वे अच्छी शिक्षक हैं।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>मित्र</p>",
+            "<p>वह मेरा अच्छा मित्र है।</p>",
+            "<p>वह मेरी अच्छी मित्र है।</p>"
           ]
         }
       ]
@@ -939,11 +957,13 @@
     },
     {
       "type": "paragraph",
-      "id": "8473wzd"
+      "id": "8473wzd",
+      "content": "नीचे दिए गए शब्द अनेक विद्यार्थियों को भ्रमित करते हैं। इन्हें ध्यान से याद कीजिए:"
     },
     {
       "type": "paragraph",
-      "id": "veq15q7"
+      "id": "veq15q7",
+      "content": "<strong>(क) सदा पुल्लिंग रहने वाले शब्द</strong>"
     },
     {
       "id": "h7w5u68",
@@ -952,62 +972,63 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>शब्द</strong></p>",
+            "<p><strong>शब्द</strong></p>",
+            "<p><strong>शब्द</strong></p>",
+            "<p><strong>शब्द</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>पत्थर</p>",
+            "<p>रास्ता</p>",
+            "<p>स्वभाव</p>",
+            "<p>विचार</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>आँसू</p>",
+            "<p>घाव</p>",
+            "<p>दर्द</p>",
+            "<p>इलाज</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>फैसला</p>",
+            "<p>सवाल</p>",
+            "<p>जवाब</p>",
+            "<p>हादसा</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>किस्सा</p>",
+            "<p>तमाशा</p>",
+            "<p>नज़ारा</p>",
+            "<p>अफसाना</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>होश</p>",
+            "<p>जोश</p>",
+            "<p>जुनून</p>",
+            "<p>दौर</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "tcr8ds3"
+      "id": "tcr8ds3",
+      "content": "<strong>(ख) सदा स्त्रीलिंग रहने वाले शब्द</strong>"
     },
     {
       "id": "06g4k4p",
@@ -1016,55 +1037,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>शब्द</strong></p>",
+            "<p><strong>शब्द</strong></p>",
+            "<p><strong>शब्द</strong></p>",
+            "<p><strong>शब्द</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>आँख</p>",
+            "<p>नाक</p>",
+            "<p>जीभ</p>",
+            "<p>उँगली</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>खबर</p>",
+            "<p>बात</p>",
+            "<p>तकलीफ</p>",
+            "<p>कोशिश</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>मुसीबत</p>",
+            "<p>राय</p>",
+            "<p>सलाह</p>",
+            "<p>उम्मीद</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>तहसील</p>",
+            "<p>सरकार</p>",
+            "<p>इच्छा</p>",
+            "<p>भावना</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>सड़क</p>",
+            "<p>दुकान</p>",
+            "<p>किताब</p>",
+            "<p>कलम</p>"
           ]
         }
       ]
@@ -1077,7 +1098,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jli5lwu"
+      "id": "jli5lwu",
+      "content": "संज्ञा के जिस रूप से एक या अनेक का बोध हो, उसे वचन कहते हैं। हिंदी में दो वचन होते हैं:"
     },
     {
       "id": "ylniuj4",
@@ -1086,25 +1108,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>वचन</strong></p>",
+            "<p><strong>परिभाषा</strong></p>",
+            "<p><strong>उदाहरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>एकवचन (Singular)</p>",
+            "<p>जिससे एक वस्तु या प्राणी का बोध हो</p>",
+            "<p>लड़का, पुस्तक, नदी, घर, गाय</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>बहुवचन (Plural)</p>",
+            "<p>जिससे एक से अधिक का बोध हो</p>",
+            "<p>लड़के, पुस्तकें, नदियाँ, घर, गाएँ</p>"
           ]
         }
       ]
@@ -1120,7 +1142,8 @@
     },
     {
       "type": "paragraph",
-      "id": "q6ca7ap"
+      "id": "q6ca7ap",
+      "content": "<strong>एकवचन से बहुवचन बनाने के नियम</strong>"
     },
     {
       "id": "y0ufqmp",
@@ -1129,57 +1152,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>नियम</strong></p>",
+            "<p><strong>एकवचन</strong></p>",
+            "<p><strong>बहुवचन</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>पुल्लिंग 'आ' → 'ए'</p>",
+            "<p>लड़का, घोड़ा, कमरा</p>",
+            "<p>लड़के, घोड़े, कमरे</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>स्त्रीलिंग 'ई' → 'इयाँ'</p>",
+            "<p>लड़की, रोटी, टोपी</p>",
+            "<p>लड़कियाँ, रोटियाँ, टोपियाँ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>स्त्रीलिंग 'आ' → 'एँ'</p>",
+            "<p>माता, महिला, सेना</p>",
+            "<p>माताएँ, महिलाएँ, सेनाएँ</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>स्त्रीलिंग व्यंजनांत → 'एँ'</p>",
+            "<p>किताब, बात, सड़क</p>",
+            "<p>किताबें, बातें, सड़कें</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अकारांत स्त्री → 'एँ'</p>",
+            "<p>रात, बात, आँख</p>",
+            "<p>रातें, बातें, आँखें</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>विशेष अपरिवर्तित शब्द</p>",
+            "<p>पिता, नेता, योद्धा</p>",
+            "<p>पिता, नेता, योद्धा (अपरिवर्तित)</p>"
           ]
         }
       ]
@@ -1192,7 +1215,8 @@
     },
     {
       "type": "paragraph",
-      "id": "mue1x8t"
+      "id": "mue1x8t",
+      "content": "संज्ञा का क्रिया से जो संबंध होता है, उसे कारक कहते हैं। हिंदी में आठ कारक होते हैं। ये संज्ञा के रूप को प्रभावित करते हैं।"
     },
     {
       "id": "ir8b2g2",
@@ -1201,73 +1225,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>कारक</strong></p>",
+            "<p><strong>विभक्ति / परसर्ग</strong></p>",
+            "<p><strong>उदाहरण वाक्य</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>कर्ता (Nominative)</p>",
+            "<p>ने (भूतकाल में)</p>",
+            "<p>राम ने आम खाया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>कर्म (Accusative)</p>",
+            "<p>को</p>",
+            "<p>मैंने राम को बुलाया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>करण (Instrumental)</p>",
+            "<p>से, के द्वारा</p>",
+            "<p>वह कलम से लिखता है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>संप्रदान (Dative)</p>",
+            "<p>को, के लिए</p>",
+            "<p>माँ ने बच्चे को दूध दिया।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अपादान (Ablative)</p>",
+            "<p>से (अलग होना)</p>",
+            "<p>पेड़ से पत्ता गिरा।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>संबंध (Genitive)</p>",
+            "<p>का / की / के</p>",
+            "<p>यह राम का घर है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>अधिकरण (Locative)</p>",
+            "<p>में, पर</p>",
+            "<p>वह घर में है।</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>संबोधन (Vocative)</p>",
+            "<p>हे!, अरे!, ओ!</p>",
+            "<p>हे ईश्वर! रक्षा करो।</p>"
           ]
         }
       ]
@@ -1282,23 +1306,23 @@
       "id": "mdtzh0l",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "निम्नलिखित शब्दों को उनके भेद के अनुसार वर्गीकृत कीजिए: गंगा, भीड़, सोना, बचपन, मेज़",
+        "निम्नलिखित विशेषणों से भाववाचक संज्ञाएँ बनाइए: सुंदर, वीर, चतुर, महान, गर्म",
+        "निम्नलिखित पुल्लिंग शब्दों के स्त्रीलिंग रूप लिखिए: शेर, ऊँट, भाई, राजा, नाई, ठाकुर, मोर, नेता",
+        "निम्नलिखित एकवचन शब्दों के बहुवचन लिखिए: लड़की, किताब, रोटी, माता, रात, कमरा",
+        "'आँसू' और 'सड़क' का लिंग बताइए और उचित वाक्य बनाइए।",
+        "कारक किसे कहते हैं? संबंध कारक और अधिकरण कारक का उदाहरण सहित अंतर स्पष्ट कीजिए।",
+        "निम्नलिखित वाक्यों में रेखांकित शब्दों का संज्ञा-भेद बताइए:"
       ]
     },
     {
       "id": "5gp87n2",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "गंगा भारत की पवित्र नदी है।",
+        "बचपन में हम सभी बहुत खुश रहते हैं।",
+        "सेना ने शत्रु को परास्त किया।",
+        "सोना बहुत महँगा धातु है।"
       ]
     },
     {
@@ -1311,14 +1335,14 @@
       "id": "90xiy9i",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "संज्ञा के पाँच भेद:व्यक्तिवाचक, जातिवाचक, भाववाचक, द्रव्यवाचक, समूहवाचक।",
+        "भाववाचक संज्ञाएँ:विशेषण, क्रिया या जातिवाचक संज्ञा से बनती हैं।",
+        "हिंदी में केवल दो लिंग हैं:पुल्लिंग और स्त्रीलिंग।",
+        "नदियों, भाषाओं, लिपियों के नाम सदा स्त्रीलिंग होते हैं।",
+        "पर्वतों, दिनों, महीनों, धातुओं के नाम सदा पुल्लिंग होते हैं।",
+        "पुल्लिंग से स्त्रीलिंग बनाने में:'ई', 'इनी', 'नी', 'आनी' प्रत्यय लगते हैं।",
+        "हिंदी में दो वचन हैं:एकवचन और बहुवचन।",
+        "कारक आठ हैं:कर्ता, कर्म, करण, संप्रदान, अपादान, संबंध, अधिकरण, संबोधन।"
       ]
     }
   ],

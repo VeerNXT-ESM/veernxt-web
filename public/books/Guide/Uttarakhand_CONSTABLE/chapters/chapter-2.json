@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8hcbbf6"
+      "id": "8hcbbf6",
+      "content": "Uttarakhand is a northern Indian state located in the Western Himalayas. It lies between 28°43'N to 31°27'N latitude and 77°34'E to 81°02'E longitude. The state covers an area of 53,483 sq. km (1.63% of India's area). It is the 18th largest state by area."
     },
     {
       "id": "o3xzyh2",
@@ -58,85 +59,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Official name</p>",
+            "<p>Uttarakhand (formerly Uttaranchal)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Area</p>",
+            "<p>53,483 sq. km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rank by area</p>",
+            "<p>18th in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Population (2011 Census)</p>",
+            "<p>1,00,86,292 (1.01 crore)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Population rank</p>",
+            "<p>20th in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Population density</p>",
+            "<p>189 persons/sq. km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sex ratio</p>",
+            "<p>963 females per 1000 males (above national avg.)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Literacy rate</p>",
+            "<p>78.82%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Capital</p>",
+            "<p>Dehradun (temporary); Gairsain (summer capital)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State language</p>",
+            "<p>Hindi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Formation</p>",
+            "<p>9 November 2000</p>"
           ]
         }
       ]
@@ -151,15 +152,16 @@
       "id": "6emziqz",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "North: China (Tibet) — shares international border",
+        "East: Nepal — shares international border",
+        "West: Himachal Pradesh",
+        "South: Uttar Pradesh (Saharanpur, Muzaffarnagar, Bijnor, Moradabad, Rampur, Bareilly, Pilibhit, Lakhimpur Kheri districts)"
       ]
     },
     {
       "type": "paragraph",
-      "id": "ew2a0n0"
+      "id": "ew2a0n0",
+      "content": "Total international border length: approx. 350 km with China and 275 km with Nepal. Total length of borders with other states is approximately 1,784 km."
     },
     {
       "id": "wf31356",
@@ -174,69 +176,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Zone</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Altitude</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bhabar</p>",
+            "<p>Narrow belt at foothills; porous soil; streams disappear underground</p>",
+            "<p>300–900 m</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Terai</p>",
+            "<p>Fertile, flat plains south of Bhabar; dense forests formerly; now agricultural</p>",
+            "<p>200–300 m</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shiwalik Hills</p>",
+            "<p>Outer Himalayas; lowest ranges; alluvial valleys called 'Duns'</p>",
+            "<p>600–1500 m</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lesser Himalayas / Mahabharat</p>",
+            "<p>Middle ranges; most habitation; Mussoorie, Lansdowne ridges</p>",
+            "<p>1500–4500 m</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Greater Himalayas</p>",
+            "<p>Main Himalayan range; glaciers, high peaks, trans-Himalayan valleys</p>",
+            "<p>4500–7817 m</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Trans-Himalayan / Inner Himalaya</p>",
+            "<p>Beyond main range; Milam, Johar valleys; Tibetan plateau edge</p>",
+            "<p>&gt;5500 m</p>"
           ]
         }
       ]
     },
     {
-      "type": "pullQuote",
-      "content": "Panch Prayag — The Five Sacred Confluences",
-      "id": "wfykmid"
-    },
-    {
       "type": "paragraph",
-      "id": "u0f8w5n"
+      "id": "u0f8w5n",
+      "content": "Important 'Duns' (intermontane valleys): Dehradun Dun (most famous), Kotah Dun, Patli Dun (Yamuna valley), Chandpur Garhi Dun. These duns were formed by tectonic movements and are agriculturally productive."
     },
     {
       "id": "ws0th6s",
@@ -251,118 +249,118 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Peak</strong></p>",
+            "<p><strong>Height (m)</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Nanda Devi</p>",
+            "<p>7816</p>",
+            "<p>Chamoli</p>",
+            "<p>Highest peak entirely within India; Biosphere Reserve; UNESCO WHS</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kamet</p>",
+            "<p>7756</p>",
+            "<p>Chamoli</p>",
+            "<p>2nd highest; 3rd highest in Garhwal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kedarnath Peak</p>",
+            "<p>6940</p>",
+            "<p>Rudraprayag</p>",
+            "<p>Near Kedarnath temple</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Trisul</p>",
+            "<p>7120</p>",
+            "<p>Chamoli</p>",
+            "<p>Trident-shaped; visible from Kausani</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Chaukhamba</p>",
+            "<p>7138</p>",
+            "<p>Chamoli</p>",
+            "<p>Four-peaked massif above Gangotri glacier</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dunagiri</p>",
+            "<p>7066</p>",
+            "<p>Chamoli</p>",
+            "<p>Near Nanda Devi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Satopanth</p>",
+            "<p>7075</p>",
+            "<p>Chamoli</p>",
+            "<p>Near Badrinath</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Gangotri Peak</p>",
+            "<p>6672</p>",
+            "<p>Uttarkashi</p>",
+            "<p>Near Gangotri glacier</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Shivling</p>",
+            "<p>6543</p>",
+            "<p>Uttarkashi</p>",
+            "<p>Distinctive shape; popular climbing peak</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mana Peak</p>",
+            "<p>7272</p>",
+            "<p>Chamoli</p>",
+            "<p>Near Badrinath; close to Mana village</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bandarpunch</p>",
+            "<p>6316</p>",
+            "<p>Uttarkashi</p>",
+            "<p>Monkey-tail peak</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Swargarohini</p>",
+            "<p>6252</p>",
+            "<p>Uttarkashi</p>",
+            "<p>Mythological significance — Pandavas' route to heaven</p>"
           ]
         }
       ]
@@ -375,7 +373,8 @@
     },
     {
       "type": "paragraph",
-      "id": "epg2a7d"
+      "id": "epg2a7d",
+      "content": "Uttarakhand is the source of two of India's most sacred rivers — the Ganga and Yamuna — and is thus called 'Devbhoomi' (Land of Gods). The state is drained by two main river systems: Ganga system and Yamuna system."
     },
     {
       "id": "odmsdnt",
@@ -384,105 +383,105 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>River</strong></p>",
+            "<p><strong>Origin</strong></p>",
+            "<p><strong>Tributaries / Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bhagirathi</p>",
+            "<p>Gaumukh (Gangotri Glacier, Uttarkashi)</p>",
+            "<p>Meets Alaknanda at Devprayag to form Ganga</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alaknanda</p>",
+            "<p>Satopanth/Bhagirath Kharak glaciers (Chamoli)</p>",
+            "<p>Meets Bhagirathi at Devprayag; Mandakini, Pindar, Nandakini join it</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mandakini</p>",
+            "<p>Kedarnath glacier (Rudraprayag)</p>",
+            "<p>Joins Alaknanda at Rudraprayag</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Pindar</p>",
+            "<p>Pindari Glacier (Bageshwar)</p>",
+            "<p>Joins Alaknanda at Karnaprayag</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nandakini</p>",
+            "<p>Nanda Ghunti (Chamoli)</p>",
+            "<p>Joins Alaknanda at Nandaprayag</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dhauliganga</p>",
+            "<p>Milam Glacier (Pithoragarh)</p>",
+            "<p>Joins Alaknanda at Vishnuprayag</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Saryu (Sarayu)</p>",
+            "<p>Sarmul, Bageshwar district</p>",
+            "<p>Joins Sharda at Pancheshwar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sharda (Mahakali)</p>",
+            "<p>Kalapani (Nepal border)</p>",
+            "<p>Forms Nepal boundary; becomes Sharda in plains</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Yamuna</p>",
+            "<p>Yamunotri Glacier (Uttarkashi)</p>",
+            "<p>Tons, Giri tributaries in UK</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tons</p>",
+            "<p>Bandarpunch glacier</p>",
+            "<p>Largest tributary of Yamuna in UK</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ramganga (W)</p>",
+            "<p>Dudhatoli hills (Chamoli/Almora)</p>",
+            "<p>Flows to Uttar Pradesh; Jim Corbett Park river</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gori Ganga</p>",
+            "<p>Milam region (Pithoragarh)</p>",
+            "<p>Joins Sharda/Mahakali system</p>"
           ]
         }
       ]
@@ -500,49 +499,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Prayag</strong></p>",
+            "<p><strong>Confluence</strong></p>",
+            "<p><strong>District</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vishnuprayag</p>",
+            "<p>Alaknanda + Dhauliganga</p>",
+            "<p>Chamoli</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nandaprayag</p>",
+            "<p>Alaknanda + Nandakini</p>",
+            "<p>Chamoli</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Karnaprayag</p>",
+            "<p>Alaknanda + Pindar</p>",
+            "<p>Chamoli</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rudraprayag</p>",
+            "<p>Alaknanda + Mandakini</p>",
+            "<p>Rudraprayag</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Devprayag</p>",
+            "<p>Alaknanda + Bhagirathi = Ganga</p>",
+            "<p>Tehri Garhwal</p>"
           ]
         }
       ]
@@ -560,136 +559,136 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Lake</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Altitude (m)</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hemkund Sahib</p>",
+            "<p>Chamoli</p>",
+            "<p>4329</p>",
+            "<p>Sikh pilgrimage; Lokpal Lake; 7 peaks surround it</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Nainital</p>",
+            "<p>Nainital</p>",
+            "<p>2084</p>",
+            "<p>Most famous lake; Naini Devi temple; 3.5 km × 1.4 km</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bhimtal</p>",
+            "<p>Nainital</p>",
+            "<p>1370</p>",
+            "<p>Larger than Nainital; island in center</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sattal</p>",
+            "<p>Nainital</p>",
+            "<p>1370</p>",
+            "<p>Seven interconnected lakes; Ramgarh area</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Naukuchiatal</p>",
+            "<p>Nainital</p>",
+            "<p>1220</p>",
+            "<p>Nine-cornered lake; deepest in Kumaon region</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Khurpatal</p>",
+            "<p>Nainital</p>",
+            "<p>1635</p>",
+            "<p>Sickle-shaped; near Nainital</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Deoria Tal</p>",
+            "<p>Rudraprayag</p>",
+            "<p>2438</p>",
+            "<p>Reflection of Chaukhamba; popular trek</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Vasuki Tal</p>",
+            "<p>Rudraprayag</p>",
+            "<p>5135</p>",
+            "<p>Near Kedarnath; high altitude glacial</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Shasra Tal</p>",
+            "<p>Uttarkashi</p>",
+            "<p>3600</p>",
+            "<p>Thousand lakes; Buk ridge area</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Dodi Tal</p>",
+            "<p>Uttarkashi</p>",
+            "<p>3310</p>",
+            "<p>Origin of Asi Ganga; trout fishing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Roopkund</p>",
+            "<p>Chamoli</p>",
+            "<p>4800</p>",
+            "<p>Mystery lake; skeletal remains; trek destination</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kagbhusandi Tal</p>",
+            "<p>Chamoli</p>",
+            "<p>5200</p>",
+            "<p>High altitude; Nanda Devi area</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Nachiketa Tal</p>",
+            "<p>Uttarkashi</p>",
+            "<p>2439</p>",
+            "<p>Named after sage Nachiketa (Kathopanishad)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Binsar Mahadev lake</p>",
+            "<p>Almora area</p>",
+            "<p>—</p>",
+            "<p>Near Binsar sanctuary</p>"
           ]
         }
       ]
@@ -716,100 +715,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Glacier</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Length (km)</strong></p>",
+            "<p><strong>Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Gangotri</p>",
+            "<p>Uttarkashi</p>",
+            "<p>30.2</p>",
+            "<p>Source of Bhagirathi; one of largest in Himalayas; retreating</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Pindari</p>",
+            "<p>Bageshwar</p>",
+            "<p>3.5 (main)</p>",
+            "<p>Famous trek; source of Pindar river</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Milam</p>",
+            "<p>Pithoragarh</p>",
+            "<p>16</p>",
+            "<p>Source of Gori Ganga; part of Nanda Devi Biosphere</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kedarnath (Chorabari)</p>",
+            "<p>Rudraprayag</p>",
+            "<p>14</p>",
+            "<p>Source near Kedarnath temple; caused 2013 flood</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Satopanth</p>",
+            "<p>Chamoli</p>",
+            "<p>13</p>",
+            "<p>Near Badrinath; triangular lake formed at snout</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Khatling</p>",
+            "<p>Tehri Garhwal</p>",
+            "<p>12</p>",
+            "<p>Source of Bhilangana river</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kafni</p>",
+            "<p>Bageshwar</p>",
+            "<p>5.3</p>",
+            "<p>Adjacent to Pindari; Kafni Glacier trek</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sunderdunga</p>",
+            "<p>Bageshwar</p>",
+            "<p>5</p>",
+            "<p>Near Kafni glacier</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Namik</p>",
+            "<p>Pithoragarh</p>",
+            "<p>3</p>",
+            "<p>Near Namik village; melting rapidly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Siachen (part)</p>",
+            "<p>—</p>",
+            "<p>—</p>",
+            "<p>Siachen dispute; Saltoro region — not UK but ITBP based in UK</p>"
           ]
         }
       ]
@@ -827,118 +826,118 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Pass</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Altitude (m)</strong></p>",
+            "<p><strong>Route / Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mana Pass</p>",
+            "<p>Chamoli</p>",
+            "<p>5610</p>",
+            "<p>Ancient Indo-Tibet trade route; near Badrinath</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Niti Pass</p>",
+            "<p>Chamoli</p>",
+            "<p>5389</p>",
+            "<p>Johar valley to Tibet; ancient trade route</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Lipulekh Pass</p>",
+            "<p>Pithoragarh</p>",
+            "<p>5334</p>",
+            "<p>India-Tibet-Nepal trijunction; Kailash-Mansarovar route</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Thaga La / Darma Pass</p>",
+            "<p>Pithoragarh</p>",
+            "<p>5486</p>",
+            "<p>Darma valley to Tibet</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Shipki La</p>",
+            "<p>—</p>",
+            "<p>—</p>",
+            "<p>Actually in HP but Sutlej route nearby</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bara Lacha La</p>",
+            "<p>—</p>",
+            "<p>—</p>",
+            "<p>Not in UK — note for exam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kedarnath Pass</p>",
+            "<p>Rudraprayag</p>",
+            "<p>5360</p>",
+            "<p>Kedarnath to Badrinath trek</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kalindikhal Pass</p>",
+            "<p>Uttarkashi</p>",
+            "<p>5947</p>",
+            "<p>Gaumukh to Valley of Flowers; glacial pass</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Gangotri-Badrinath Pass</p>",
+            "<p>Chamoli/Uttarkashi</p>",
+            "<p>—</p>",
+            "<p>High Himalayan crossing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Traill's Pass</p>",
+            "<p>Bageshwar/Chamoli</p>",
+            "<p>5312</p>",
+            "<p>Named after Collector G.W. Traill; classic trek</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sunderdhunga Khal</p>",
+            "<p>Bageshwar</p>",
+            "<p>5450</p>",
+            "<p>Connects Bageshwar to Chamoli via Sunderdhunga glacier</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kuari Pass</p>",
+            "<p>Chamoli</p>",
+            "<p>3640</p>",
+            "<p>Popular trek; panoramic Himalayan views; Lord Curzon Trail</p>"
           ]
         }
       ]
@@ -956,46 +955,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Zone</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Climate Type</strong></p>",
+            "<p><strong>Rainfall</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Terai / Foothills</p>",
+            "<p>Haridwar, Udham Singh Nagar</p>",
+            "<p>Tropical/Sub-tropical; hot summers</p>",
+            "<p>1500–2000 mm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Middle Himalayas</p>",
+            "<p>Almora, Pauri, Tehri</p>",
+            "<p>Temperate; cool winters</p>",
+            "<p>1200–1800 mm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Higher Himalayas</p>",
+            "<p>Kedarnath, Badrinath areas</p>",
+            "<p>Alpine; heavy snowfall</p>",
+            "<p>600–1000 mm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Trans-Himalaya</p>",
+            "<p>Nelang, Niti valley</p>",
+            "<p>Cold desert; rain shadow</p>",
+            "<p>&lt;300 mm</p>"
           ]
         }
       ]

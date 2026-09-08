@@ -1,0 +1,206 @@
+{
+  "title": "CHAPTER 3: CELL DIVISION – MITOSIS AND MEIOSIS",
+  "order": 2,
+  "blocks": [
+    {
+      "id": "fg4gtzl",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Cell Division – Meaning"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The cell cycle comprises Interphase (G1, S, G2) and the Mitotic phase, with DNA replication specifically occurring during the S phase.",
+        "Mitosis is an equational division in somatic cells that produces two genetically identical daughter cells, maintaining the chromosome number.",
+        "Meiosis is a reduction division in germ cells that produces four haploid cells, halving the chromosome number to produce gametes.",
+        "Crossing over occurs during Prophase I of Meiosis, introducing essential genetic variation for sexual reproduction.",
+        "The four main stages of mitotic division follow the sequence: Prophase, Metaphase, Anaphase, and Telophase (PMAT)."
+      ],
+      "id": "nhrr1wl"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Mitosis Output",
+          "value": "2 Diploid Cells",
+          "icon": "check"
+        },
+        {
+          "label": "Meiosis Output",
+          "value": "4 Haploid Cells",
+          "icon": "award"
+        },
+        {
+          "label": "DNA Replication",
+          "value": "S Phase",
+          "icon": "clock"
+        },
+        {
+          "label": "Crossing Over",
+          "value": "Prophase I",
+          "icon": "book"
+        }
+      ],
+      "id": "sh9bdhm"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cell division is the process by which a parent cell divides into two or more daughter cells.<br/>It is essential for growth, repair, reproduction, and continuity of life.<br/>In unicellular organisms, cell division itself acts as a mode of reproduction.<br/>In multicellular organisms, cell division helps in growth and replacement of damaged or worn-out cells.<br/>Cell division ensures proper distribution of genetic material.<br/>It occurs in a regulated manner to maintain genetic stability.",
+      "id": "82zkrky"
+    },
+    {
+      "id": "u3bf0ld",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Cell Cycle"
+    },
+    {
+      "type": "paragraph",
+      "content": "<img src=\"/books/Precis/Cluster_014_SSC-GK-Biology/images/image_wl3llsq.png\"/>The cell cycle is the series of events that take place in a cell leading to its division.<br/>It has two main phases: Interphase and Mitotic phase.<br/>Interphase includes G1 phase, S phase, and G2 phase.<br/>DNA replication occurs during S phase.<br/>Interphase is the longest phase of the cell cycle.<br/>The mitotic phase includes nuclear division and cytokinesis.",
+      "id": "pcx9467"
+    },
+    {
+      "id": "d515owy",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Types of Cell Division"
+    },
+    {
+      "type": "paragraph",
+      "content": "There are two main types of cell division: Mitosis and Meiosis.<br/>Mitosis occurs in somatic cells.<br/>Meiosis occurs in germ cells.<br/>Mitosis maintains chromosome number.<br/>Meiosis reduces chromosome number by half.<br/>Both are essential for survival and reproduction.",
+      "id": "xlomfog"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Mitosis is an equational division in which a parent cell divides into two identical daughter cells.",
+      "id": "5aplmh3"
+    },
+    {
+      "id": "oc55b1t",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Mitosis – Definition"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mitosis is an equational division in which a parent cell divides into two identical daughter cells.<br/>The chromosome number remains unchanged.<br/>It occurs in body cells.<br/>Mitosis is essential for growth, repair, and asexual reproduction.<br/>It ensures equal distribution of chromosomes.",
+      "id": "6qrrclf"
+    },
+    {
+      "id": "c6mbwqs",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Stages of Mitosis"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mitosis occurs in four stages: Prophase, Metaphase, Anaphase, and Telophase.<br/>Prophase: Chromosomes condense and nuclear membrane disappears.<br/>Metaphase: Chromosomes align at equator.<br/>Anaphase: Sister chromatids separate.<br/>Telophase: Nuclear membrane reforms.<br/>Cytokinesis follows mitosis.",
+      "id": "0f96zta"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Mitosis",
+        "Meiosis"
+      ],
+      "rows": [
+        [
+          "Type of Division",
+          "Equational division",
+          "Reduction division"
+        ],
+        [
+          "Cell Type",
+          "Somatic cells (body cells)",
+          "Germ cells (reproductive organs)"
+        ],
+        [
+          "Daughter Cells",
+          "Two identical cells",
+          "Four haploid cells"
+        ],
+        [
+          "Chromosome Number",
+          "Maintains chromosome number",
+          "Reduces chromosome number by half"
+        ],
+        [
+          "Genetic Variation",
+          "No variation (identical daughter cells)",
+          "Introduces variation via crossing over in Prophase I"
+        ]
+      ],
+      "id": "l5qdgnb"
+    },
+    {
+      "id": "2m8ezzt",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Significance of Mitosis"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mitosis helps in growth and development.<br/>It repairs damaged tissues.<br/>It maintains chromosome number.<br/>It plays role in asexual reproduction.<br/>Abnormal mitosis can cause cancer.",
+      "id": "7lw2l23"
+    },
+    {
+      "id": "2twnzyn",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Meiosis – Definition"
+    },
+    {
+      "type": "paragraph",
+      "content": "Meiosis is a reduction division producing four haploid cells.<br/>It occurs in reproductive organs.<br/>Meiosis introduces variation.<br/>It halves chromosome number.<br/>It is essential for sexual reproduction.",
+      "id": "jw2u1s8"
+    },
+    {
+      "id": "8fhwrab",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Stages of Meiosis"
+    },
+    {
+      "type": "paragraph",
+      "content": "Meiosis occurs in two stages: Meiosis I and Meiosis II.<br/>Meiosis I includes Prophase I, Metaphase I, Anaphase I, Telophase I.<br/>Crossing over occurs in Prophase I.<br/>Meiosis II is similar to mitosis.<br/>Four haploid cells are formed.",
+      "id": "d9l2hcg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "SSC exams frequently test that DNA replication occurs specifically during the S phase of Interphase, not during active mitosis.",
+        "Remember that Crossing Over takes place exclusively in Prophase I of Meiosis I.",
+        "Distinguish cell locations: Mitosis occurs in somatic (body) cells, while Meiosis occurs in germ (reproductive) cells.",
+        "Errors in mitotic division can lead to cancer, whereas errors during meiosis cause genetic disorders."
+      ],
+      "id": "lzf9hfb"
+    },
+    {
+      "id": "y29rzst",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Significance of Meiosis"
+    },
+    {
+      "type": "paragraph",
+      "content": "Meiosis produces gametes.<br/>It introduces genetic variation.<br/>It maintains chromosome number in species.<br/>Errors in meiosis cause genetic disorders.",
+      "id": "5iss3l0"
+    },
+    {
+      "id": "xju2z2v",
+      "type": "heading",
+      "level": 2,
+      "content": "10. IMPORTANT FACTS – SSC FOCUS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Mitosis is equational division.<br/>• Meiosis is reduction division.<br/>• PMAT are stages of mitosis.<br/>• Crossing over occurs in Prophase I.<br/>• Meiosis produces four haploid cells.<br/>• Mitosis produces two diploid cells.<br/>• Meiosis occurs in germ cells.<br/>• Mitosis occurs in somatic cells.<br/>• Errors in cell division can cause cancer.\t",
+      "id": "oi6le5h"
+    }
+  ],
+  "enriched": true
+}

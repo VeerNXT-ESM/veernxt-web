@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "an9f8bn"
+      "id": "an9f8bn",
+      "content": "The Gupta Empire marks a glorious phase in ancient Indian history and is often referred to as the ‘Golden Age of India’. The period witnessed remarkable progress in administration, economy, art, architecture, literature, science, and philosophy. The Gupta Empire emerged around 320 AD and lasted until the mid-6th century AD."
     },
     {
       "type": "statStrip",
@@ -52,36 +53,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Information Provided</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Inscriptions</p>",
+            "<p>Prayag Prashasti, Mehrauli Iron Pillar inscription</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Coins</p>",
+            "<p>Economic prosperity, kings, religion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Literary sources</p>",
+            "<p>Kalidasa’s works, Puranas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Foreign accounts</p>",
+            "<p>Fa-Hien’s travel account</p>"
           ]
         }
       ]
@@ -90,16 +91,18 @@
       "id": "e5jycvo",
       "type": "numberedList",
       "items": [
-        null
+        "<strong>Founders and Early Rulers</strong>"
       ]
     },
     {
       "type": "paragraph",
-      "id": "j7o4b4j"
+      "id": "j7o4b4j",
+      "content": "The Gupta dynasty was founded by Sri Gupta. His successor Ghatotkacha consolidated the dynasty. However, the real foundation of the empire was laid by Chandragupta I."
     },
     {
       "type": "paragraph",
-      "id": "orv2xmi"
+      "id": "orv2xmi",
+      "content": "Chandragupta I assumed the title of Maharajadhiraja and married Lichchhavi princess Kumaradevi, which strengthened Gupta power."
     },
     {
       "type": "pullQuote",
@@ -108,19 +111,23 @@
     },
     {
       "type": "paragraph",
-      "id": "nuaux0m"
+      "id": "nuaux0m",
+      "content": "Samudragupta was the greatest conqueror of the Gupta dynasty. His achievements are recorded in the Prayag Prashasti written by Harisena."
     },
     {
       "type": "paragraph",
-      "id": "lemzd5e"
+      "id": "lemzd5e",
+      "content": "Samudragupta conducted extensive military campaigns classified into northern conquests, southern campaigns, and forest region expeditions."
     },
     {
       "type": "paragraph",
-      "id": "6xql90y"
+      "id": "6xql90y",
+      "content": "He was not only a great warrior but also a poet and musician. He followed a policy of religious tolerance."
     },
     {
       "type": "paragraph",
-      "id": "1z801dt"
+      "id": "1z801dt",
+      "content": "Chandragupta II expanded the empire and defeated the Shakas. His reign marked the peak of Gupta glory."
     },
     {
       "type": "comparisonTable",
@@ -160,19 +167,23 @@
     },
     {
       "type": "paragraph",
-      "id": "f1tg218"
+      "id": "f1tg218",
+      "content": "The Gupta administration was decentralized compared to the Mauryas. Provinces were governed by Uparikas and districts by Vishayapatis."
     },
     {
       "type": "paragraph",
-      "id": "wunf822"
+      "id": "wunf822",
+      "content": "Agriculture was the backbone of the economy. Trade and commerce flourished, and gold coins known as Dinars were issued."
     },
     {
       "type": "paragraph",
-      "id": "pk6fp0b"
+      "id": "pk6fp0b",
+      "content": "The Varna system became more rigid. The position of women declined, but education and learning flourished."
     },
     {
       "type": "paragraph",
-      "id": "09o0ej7"
+      "id": "09o0ej7",
+      "content": "Hinduism witnessed revival with emphasis on Vaishnavism and Shaivism. Buddhism and Jainism continued to exist."
     },
     {
       "type": "examAlert",
@@ -186,19 +197,23 @@
     },
     {
       "type": "paragraph",
-      "id": "17ar1dj"
+      "id": "17ar1dj",
+      "content": "Gupta art is known for its elegance and balance. Development of temple architecture and cave paintings like Ajanta occurred during this period."
     },
     {
       "type": "paragraph",
-      "id": "jaw1n2g"
+      "id": "jaw1n2g",
+      "content": "Kalidasa, Aryabhata, Varahamihira, and Sushruta were prominent scholars of this period."
     },
     {
       "type": "paragraph",
-      "id": "k0j68gq"
+      "id": "k0j68gq",
+      "content": "The Gupta Empire declined due to Hun invasions, weak rulers, and administrative inefficiency."
     },
     {
       "type": "paragraph",
-      "id": "j0hemna"
+      "id": "j0hemna",
+      "content": "Golden Age of India – Gupta Period. Napoleon of India – Samudragupta. Prayag Prashasti – Harisena. Chinese traveler – Fa-Hien. Gold coins – Dinars."
     }
   ],
   "enriched": true

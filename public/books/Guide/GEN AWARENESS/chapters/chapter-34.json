@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "lp1nx8f"
+      "id": "lp1nx8f",
+      "content": "The atmosphere is the layer of gases surrounding the Earth. It is essential for life because it provides oxygen for breathing, carbon dioxide for photosynthesis, and protects the Earth from harmful solar radiation. The atmosphere also regulates temperature and weather patterns."
     },
     {
       "type": "statStrip",
@@ -58,43 +59,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Gas</strong></p>",
+            "<p><strong>Percentage</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nitrogen</p>",
+            "<p>78%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Oxygen</p>",
+            "<p>21%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Argon</p>",
+            "<p>0.93%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Carbon Dioxide</p>",
+            "<p>0.04%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Other gases (Neon, Helium, Hydrogen etc.)</p>",
+            "<p>Trace amounts</p>"
           ]
         }
       ]
@@ -107,19 +108,23 @@
     },
     {
       "type": "paragraph",
-      "id": "h7353wf"
+      "id": "h7353wf",
+      "content": "• Provides oxygen necessary for respiration."
     },
     {
       "type": "paragraph",
-      "id": "vggqqtf"
+      "id": "vggqqtf",
+      "content": "• Protects Earth from harmful ultraviolet radiation."
     },
     {
       "type": "paragraph",
-      "id": "qhfih6c"
+      "id": "qhfih6c",
+      "content": "• Maintains Earth's temperature through greenhouse effect."
     },
     {
       "type": "paragraph",
-      "id": "aassn49"
+      "id": "aassn49",
+      "content": "• Helps in weather formation and water cycle."
     },
     {
       "id": "vp0egpf",
@@ -134,49 +139,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Layer</strong></p>",
+            "<p><strong>Height Range</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Troposphere</p>",
+            "<p>0–12 km</p>",
+            "<p>Weather phenomena occur here; temperature decreases with height</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Stratosphere</p>",
+            "<p>12–50 km</p>",
+            "<p>Contains ozone layer; temperature increases with height</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mesosphere</p>",
+            "<p>50–80 km</p>",
+            "<p>Coldest layer; meteors burn here</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Thermosphere</p>",
+            "<p>80–700 km</p>",
+            "<p>Contains ionosphere; auroras occur here</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Exosphere</p>",
+            "<p>Above 700 km</p>",
+            "<p>Outermost layer merging into space</p>"
           ]
         }
       ]
@@ -189,20 +194,18 @@
     },
     {
       "type": "paragraph",
-      "id": "790399k"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Composition of the Atmosphere",
-      "id": "attotlw"
+      "id": "790399k",
+      "content": "• Lowest layer of the atmosphere."
     },
     {
       "type": "paragraph",
-      "id": "iodev1g"
+      "id": "iodev1g",
+      "content": "• Contains about 75% of atmospheric mass."
     },
     {
       "type": "paragraph",
-      "id": "yel6qe4"
+      "id": "yel6qe4",
+      "content": "• All weather phenomena such as clouds, rain and storms occur here."
     },
     {
       "id": "7ml4tr9",
@@ -212,15 +215,18 @@
     },
     {
       "type": "paragraph",
-      "id": "h3db1s2"
+      "id": "h3db1s2",
+      "content": "• Located above the troposphere."
     },
     {
       "type": "paragraph",
-      "id": "rb61mv0"
+      "id": "rb61mv0",
+      "content": "• Contains the ozone layer that absorbs harmful ultraviolet radiation."
     },
     {
       "type": "paragraph",
-      "id": "0jk4c0o"
+      "id": "0jk4c0o",
+      "content": "• Jet aircraft often fly in this layer."
     },
     {
       "id": "adpikf0",
@@ -266,15 +272,18 @@
     },
     {
       "type": "paragraph",
-      "id": "fpt5af9"
+      "id": "fpt5af9",
+      "content": "• Third layer of the atmosphere."
     },
     {
       "type": "paragraph",
-      "id": "lrqp5xo"
+      "id": "lrqp5xo",
+      "content": "• Meteors burn up due to friction in this layer."
     },
     {
       "type": "paragraph",
-      "id": "5lugepo"
+      "id": "5lugepo",
+      "content": "• It is the coldest layer."
     },
     {
       "id": "mar2u07",
@@ -284,15 +293,18 @@
     },
     {
       "type": "paragraph",
-      "id": "nd5dyg4"
+      "id": "nd5dyg4",
+      "content": "• Temperature rises sharply with height."
     },
     {
       "type": "paragraph",
-      "id": "726cqtt"
+      "id": "726cqtt",
+      "content": "• Contains ionized gases forming the ionosphere."
     },
     {
       "type": "paragraph",
-      "id": "6a7ieea"
+      "id": "6a7ieea",
+      "content": "• Important for radio communication."
     },
     {
       "id": "ojr65af",
@@ -302,11 +314,13 @@
     },
     {
       "type": "paragraph",
-      "id": "9e199kr"
+      "id": "9e199kr",
+      "content": "• Outermost layer of the atmosphere."
     },
     {
       "type": "paragraph",
-      "id": "e7btbvy"
+      "id": "e7btbvy",
+      "content": "• Gradually merges into outer space."
     },
     {
       "type": "examAlert",
@@ -320,7 +334,8 @@
     },
     {
       "type": "paragraph",
-      "id": "i7fakzz"
+      "id": "i7fakzz",
+      "content": "• Contains very thin air."
     },
     {
       "id": "wy3iypl",
@@ -330,19 +345,23 @@
     },
     {
       "type": "paragraph",
-      "id": "at9lfl9"
+      "id": "at9lfl9",
+      "content": "• Nitrogen is the most abundant gas in the atmosphere."
     },
     {
       "type": "paragraph",
-      "id": "vtffcxk"
+      "id": "vtffcxk",
+      "content": "• Ozone layer is located in the stratosphere."
     },
     {
       "type": "paragraph",
-      "id": "3ui3dqq"
+      "id": "3ui3dqq",
+      "content": "• Troposphere contains most weather phenomena."
     },
     {
       "type": "paragraph",
-      "id": "gjjqf15"
+      "id": "gjjqf15",
+      "content": "• Mesosphere is the coldest layer."
     }
   ],
   "enriched": true

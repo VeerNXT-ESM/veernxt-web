@@ -1,0 +1,109 @@
+{
+  "title": "1. River System and Drainage Basin",
+  "order": 133,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A river system consists of the main river and its tributaries. The area drained by a river and its tributaries is called a drainage basin. The boundary separating two drainage basins is known as a watershed.",
+      "id": "ijggnm0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Component",
+          "value": "River System",
+          "icon": "book"
+        },
+        {
+          "label": "Landform Boundary",
+          "value": "Watershed",
+          "icon": "info"
+        },
+        {
+          "label": "Junction Type",
+          "value": "Confluence",
+          "icon": "check"
+        },
+        {
+          "label": "River Origin",
+          "value": "Source",
+          "icon": "clock"
+        }
+      ],
+      "id": "wj2n9g0"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The boundary separating two drainage basins is known as a watershed.",
+      "id": "m583jup"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A river system is composed of the primary river together with all its tributaries.",
+        "A drainage basin encompasses the entire geographical area drained by a river and its tributaries.",
+        "A watershed acts as the elevated physical boundary dividing two adjacent river basins.",
+        "Crucial hydrological elements include the Source (origin), Tributary (joining stream), Confluence (meeting point), and Watershed (highland divider)."
+      ],
+      "id": "cnsqfwj"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Term",
+        "Definition"
+      ],
+      "rows": [
+        [
+          "Source",
+          "Origin of the river"
+        ],
+        [
+          "Tributary",
+          "Smaller stream joining main river"
+        ],
+        [
+          "Confluence",
+          "Meeting point of two rivers"
+        ],
+        [
+          "Watershed",
+          "Highland dividing two river basins"
+        ]
+      ],
+      "id": "kpi16ol"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Source – origin of the river.",
+      "id": "xaulg9e"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Tributary – smaller stream joining main river.",
+      "id": "ljtyuk0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct definitions of 'Watershed' versus 'Drainage Basin' are frequently tested in geography preliminary exams.",
+        "Remember that a 'Confluence' specifically refers to the meeting point of two rivers.",
+        "Distinguish clearly between a tributary (stream joining a main river) and the river's source (its origin)."
+      ],
+      "id": "yuvrw51"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Confluence – meeting point of two rivers.",
+      "id": "4i3vmh3"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Watershed – highland dividing two river basins.",
+      "id": "672gkya"
+    }
+  ],
+  "enriched": true
+}

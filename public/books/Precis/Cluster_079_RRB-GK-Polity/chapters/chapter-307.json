@@ -1,0 +1,65 @@
+{
+  "title": "18. Exam Traps",
+  "order": 307,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Lokpal is NOT constitutional.<br/>• Created in 2013 but first appointed in 2019.<br/>• Covers PM with safeguards.<br/>• Chairperson + max 8 members.<br/>• Has prosecution wing.",
+      "id": "f27ewl2"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Lokpal is NOT constitutional.",
+      "id": "kn67ppq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Status",
+          "value": "Non-Constitutional",
+          "icon": "info"
+        },
+        {
+          "label": "Created Year",
+          "value": "2013",
+          "icon": "calendar"
+        },
+        {
+          "label": "First Appointed",
+          "value": "2019",
+          "icon": "clock"
+        },
+        {
+          "label": "Max Members",
+          "value": "8",
+          "icon": "check"
+        }
+      ],
+      "id": "u8bhp69"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Common Trap: Lokpal is often mistakenly marked as a constitutional body; it is statutory.",
+        "Pay attention to dates: Enacted in 2013, but first appointed in 2019.",
+        "Jurisdiction nuance: The Prime Minister IS covered, but with specific safeguards.",
+        "Composition structure: Chairperson + a maximum of 8 members."
+      ],
+      "id": "5ulcty4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Lokpal is a statutory body, not a constitutional one.",
+        "The legislation was enacted in 2013, but the first appointment was made in 2019.",
+        "The jurisdiction extends to the Prime Minister with predefined safeguards.",
+        "Composition consists of a Chairperson plus a maximum of 8 members.",
+        "It is equipped with its own dedicated prosecution wing."
+      ],
+      "id": "q0vwutf"
+    }
+  ],
+  "enriched": true
+}

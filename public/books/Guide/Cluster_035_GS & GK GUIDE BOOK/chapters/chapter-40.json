@@ -1,0 +1,481 @@
+{
+  "id": "ga634cq",
+  "title": "Chapter 40: Minerals and Resources of India",
+  "order": 40,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "8qorlsp",
+      "content": "Minerals are naturally occurring inorganic substances found in the Earth's crust. They have a definite chemical composition and physical properties. Minerals are very important for industrial development, energy production, transportation and infrastructure. India possesses a wide variety of mineral resources due to its diverse geological structure."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Chapter Number",
+          "value": "40",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Focus",
+          "value": "Minerals & Resources",
+          "icon": "info"
+        },
+        {
+          "label": "Mineral Categories",
+          "value": "Metallic & Non-Metallic",
+          "icon": "check"
+        },
+        {
+          "label": "Key Fuel Types",
+          "value": "Coal & Petroleum",
+          "icon": "award"
+        }
+      ],
+      "id": "k9v2lhh"
+    },
+    {
+      "id": "kbbuz7o",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Mineral Resources"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Minerals in India are broadly classified into metallic, non-metallic, and energy resources.",
+        "Major metallic minerals include iron ore, manganese, bauxite, and copper distributed across specific geographic belts.",
+        "Energy resources comprise conventional fuels such as coal and petroleum alongside non-conventional sources.",
+        "India's mineral deposits are concentrated in distinct mineral belts such as the Chota Nagpur Belt.",
+        "Conservation of non-renewable mineral resources is crucial for sustainable economic development."
+      ],
+      "id": "vc2swr9"
+    },
+    {
+      "type": "paragraph",
+      "id": "f71lkyi",
+      "content": "• Minerals are natural substances found in rocks."
+    },
+    {
+      "type": "paragraph",
+      "id": "c2osbui",
+      "content": "• They are formed through geological processes over millions of years."
+    },
+    {
+      "type": "paragraph",
+      "id": "zfpihos",
+      "content": "• Minerals are essential raw materials for industries."
+    },
+    {
+      "id": "jhllz75",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Classification of Minerals"
+    },
+    {
+      "id": "vhzqixb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Mineral</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Metallic Minerals</p>",
+            "<p>Iron, Copper, Bauxite, Manganese, Zinc</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Non-Metallic Minerals</p>",
+            "<p>Mica, Limestone, Gypsum, Dolomite</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Energy Minerals</p>",
+            "<p>Coal, Petroleum, Natural Gas, Uranium</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pxv6ue6",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Major Metallic Minerals"
+    },
+    {
+      "id": "skqi2fv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Mineral</strong></p>",
+            "<p><strong>Major Producing States</strong></p>",
+            "<p><strong>Uses</strong></p>",
+            "<p><strong>Special Features</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Iron Ore</p>",
+            "<p>Odisha, Chhattisgarh, Jharkhand, Karnataka</p>",
+            "<p>Steel production</p>",
+            "<p>India is among top iron ore producers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Bauxite</p>",
+            "<p>Odisha, Gujarat, Maharashtra, Madhya Pradesh</p>",
+            "<p>Aluminium manufacturing</p>",
+            "<p>Main ore of aluminium</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Manganese</p>",
+            "<p>Odisha, Karnataka, Madhya Pradesh, Maharashtra</p>",
+            "<p>Steel alloys and batteries</p>",
+            "<p>Important alloy metal</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Copper</p>",
+            "<p>Rajasthan, Jharkhand, Madhya Pradesh</p>",
+            "<p>Electrical wires and electronics</p>",
+            "<p>Excellent conductor</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Zinc</p>",
+            "<p>Rajasthan</p>",
+            "<p>Galvanizing steel</p>",
+            "<p>Protects metals from corrosion</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nxtzxp6",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Major Non-Metallic Minerals"
+    },
+    {
+      "id": "6rnz8j7",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Mineral</strong></p>",
+            "<p><strong>Major Areas</strong></p>",
+            "<p><strong>Uses</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mica</p>",
+            "<p>Jharkhand, Bihar</p>",
+            "<p>Electrical and electronic equipment</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Limestone</p>",
+            "<p>Rajasthan, Madhya Pradesh, Andhra Pradesh</p>",
+            "<p>Cement manufacturing</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Gypsum</p>",
+            "<p>Rajasthan</p>",
+            "<p>Fertilizer and cement production</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dolomite</p>",
+            "<p>Chhattisgarh, Odisha</p>",
+            "<p>Iron and steel industry</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03u4j23",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Energy Resources"
+    },
+    {
+      "id": "osvygk0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Resource</strong></p>",
+            "<p><strong>Major Regions</strong></p>",
+            "<p><strong>Uses</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Coal</p>",
+            "<p>Jharkhand, Odisha, Chhattisgarh, West Bengal</p>",
+            "<p>Electricity generation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Petroleum</p>",
+            "<p>Assam, Gujarat, Mumbai High offshore field</p>",
+            "<p>Fuel, petrochemicals</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Natural Gas</p>",
+            "<p>Assam, Gujarat, Krishna-Godavari Basin</p>",
+            "<p>Energy, fertilizers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Uranium</p>",
+            "<p>Jharkhand, Andhra Pradesh</p>",
+            "<p>Nuclear energy production</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vyv0wv2",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Major Mineral Belts of India"
+    },
+    {
+      "type": "paragraph",
+      "id": "j10sok4",
+      "content": "• North-Eastern Plateau Region – Chota Nagpur Plateau rich in coal, iron, manganese and mica."
+    },
+    {
+      "type": "paragraph",
+      "id": "uxzzwq7",
+      "content": "• South-Western Plateau Region – Karnataka and Tamil Nadu rich in iron ore and bauxite."
+    },
+    {
+      "type": "paragraph",
+      "id": "0pzduqh",
+      "content": "• North-Western Region – Rajasthan rich in copper and zinc."
+    },
+    {
+      "type": "paragraph",
+      "id": "ntpw8nj",
+      "content": "• Central Belt – Madhya Pradesh and Chhattisgarh rich in minerals."
+    },
+    {
+      "id": "nhso4t0",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Important Coalfields in India"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ffhmnib",
+      "content": "• Jharia Coalfield – Jharkhand"
+    },
+    {
+      "type": "paragraph",
+      "id": "esz3lc7",
+      "content": "• Raniganj Coalfield – West Bengal"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gedd90g",
+      "content": "• Bokaro Coalfield – Jharkhand"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "urqyzf8",
+      "content": "• Talcher Coalfield – Odisha"
+    },
+    {
+      "type": "paragraph",
+      "id": "hegoopv",
+      "content": "• Neyveli Lignite Field – Tamil Nadu"
+    },
+    {
+      "id": "z8uyeep",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Petroleum Fields in India"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Metallic Minerals",
+        "Non-Metallic Minerals"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Minerals containing metals in raw form",
+          "Minerals that do not contain metal content"
+        ],
+        [
+          "Sub-classification",
+          "Ferrous and Non-Ferrous",
+          "Organic (Fuel) and Inorganic"
+        ],
+        [
+          "Examples",
+          "Iron Ore, Manganese, Bauxite, Copper",
+          "Mica, Limestone, Gypsum, Coal, Petroleum"
+        ]
+      ],
+      "id": "yvvo1sx"
+    },
+    {
+      "type": "paragraph",
+      "id": "e1jcqhn",
+      "content": "• Mumbai High – Offshore field in Arabian Sea."
+    },
+    {
+      "type": "paragraph",
+      "id": "3kqloj5",
+      "content": "• Digboi – Assam (oldest oil field in India)."
+    },
+    {
+      "type": "paragraph",
+      "id": "870lhgd",
+      "content": "• Ankleshwar – Gujarat."
+    },
+    {
+      "type": "paragraph",
+      "id": "b2rpz99",
+      "content": "• Krishna-Godavari Basin – Andhra Pradesh."
+    },
+    {
+      "id": "wvbtfdv",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Importance of Mineral Resources"
+    },
+    {
+      "type": "paragraph",
+      "id": "f65chax",
+      "content": "• Provide raw materials for industries."
+    },
+    {
+      "type": "paragraph",
+      "id": "qb3wuz3",
+      "content": "• Promote economic development."
+    },
+    {
+      "type": "paragraph",
+      "id": "4sxlkkd",
+      "content": "• Create employment opportunities."
+    },
+    {
+      "type": "paragraph",
+      "id": "2irrsfy",
+      "content": "• Support infrastructure development."
+    },
+    {
+      "id": "25yoepf",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Conservation of Mineral Resources"
+    },
+    {
+      "type": "paragraph",
+      "id": "bjtzht5",
+      "content": "• Use minerals efficiently."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Identify key coalfields (Jharia, Raniganj, Singrauli) and major oil fields (Digboi, Mumbai High) as high-yield map and matching questions.",
+        "Distinguish between ferrous (iron, manganese) and non-ferrous (bauxite, copper) metallic minerals.",
+        "Memorize the geographic extent and dominant minerals of the Chota Nagpur Plateau and Southern Mineral Belt."
+      ],
+      "id": "k0qocyd"
+    },
+    {
+      "type": "paragraph",
+      "id": "lsvuud5",
+      "content": "• Recycle metals and materials."
+    },
+    {
+      "type": "paragraph",
+      "id": "ta8htqt",
+      "content": "• Promote sustainable mining practices."
+    },
+    {
+      "type": "paragraph",
+      "id": "9t9l6vp",
+      "content": "• Develop alternative energy sources."
+    },
+    {
+      "id": "hor4jil",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "kxlq3ju",
+      "content": "• Chota Nagpur Plateau is called the mineral heartland of India."
+    },
+    {
+      "type": "paragraph",
+      "id": "b5igfkf",
+      "content": "• Odisha is the largest producer of iron ore in India."
+    },
+    {
+      "type": "paragraph",
+      "id": "d3jtzg1",
+      "content": "• Digboi oil field is the oldest petroleum field in India."
+    },
+    {
+      "type": "paragraph",
+      "id": "h9ebzwd",
+      "content": "• Coal is the most important energy resource in India."
+    }
+  ],
+  "enriched": true
+}

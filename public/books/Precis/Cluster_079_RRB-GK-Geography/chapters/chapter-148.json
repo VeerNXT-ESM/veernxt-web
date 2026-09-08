@@ -1,0 +1,119 @@
+{
+  "title": "5. Glacial Erosion Processes",
+  "order": 148,
+  "blocks": [
+    {
+      "id": "ho5zkq8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Process</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Plucking</p>",
+            "<p>Ice freezes into cracks and pulls rock fragments.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Abrasion</p>",
+            "<p>Embedded debris scrapes bedrock forming striations.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Frost Action</p>",
+            "<p>Freeze-thaw weakens rocks.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Glaciers erode the landscape through two primary mechanisms: plucking, where ice pulls away fractured rock fragments, and abrasion, where embedded debris scours the bedrock.",
+      "id": "fgysxe6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Process",
+        "Plucking (Quarrying)",
+        "Abrasion"
+      ],
+      "rows": [
+        [
+          "Mechanism",
+          "Meltwater freezes in joints; moving ice lifts and removes rock blocks",
+          "Embedded rock debris grinds, scratches, and sands bedrock"
+        ],
+        [
+          "Prerequisites",
+          "Jointed, fractured rock and subglacial freeze-thaw cycles",
+          "Presence of basal rock fragments acting as abrasive agents"
+        ],
+        [
+          "Surface Result",
+          "Produces steep, rugged, and jagged bedrock topography",
+          "Produces smooth, polished surfaces and linear glacial striations"
+        ]
+      ],
+      "id": "7uvpi1e"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Processes",
+          "value": "2 (Plucking & Abrasion)",
+          "icon": "check"
+        },
+        {
+          "label": "Valley Profile",
+          "value": "U-Shaped Trough",
+          "icon": "book"
+        },
+        {
+          "label": "Glacial Movement",
+          "value": "1 - 100 cm/day",
+          "icon": "clock"
+        },
+        {
+          "label": "Key Landform",
+          "value": "Cirque / Corrie",
+          "icon": "award"
+        }
+      ],
+      "id": "s2s5q5z"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "U-shaped valleys and hanging valleys are characteristic features of glacial erosion, whereas V-shaped valleys are formed by river (fluvial) erosion.",
+        "Aretes are razor-sharp ridges formed when two adjacent cirques erode backward toward each other; three or more cirques forming a central peak create a pyramidal horn.",
+        "Fiords are glaciated valleys that have been submerged by sea water, creating deep, steep-walled coastal inlets."
+      ],
+      "id": "dwj0hda"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Glacial erosion primarily operates through two distinct mechanisms: plucking (quarrying) and abrasion.",
+        "Plucking occurs when meltwater freezes into bedrock fractures, allowing moving ice to lift and detach shattered blocks.",
+        "Abrasion acts like sandpaper, where rock fragments embedded in the glacier's base scour, scratch, and polish the underlying bedrock.",
+        "Cirques are steep-sided, amphitheatre-shaped depressions carved out at the head of mountain glaciers.",
+        "Hanging valleys are created when smaller tributary glaciers erode less deeply than the main trunk glacier, leaving high-level valley junctions upon ice retreat."
+      ],
+      "id": "d82xwdi"
+    }
+  ],
+  "enriched": true
+}

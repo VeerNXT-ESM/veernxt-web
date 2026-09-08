@@ -1,0 +1,74 @@
+{
+  "title": "9. Penalties",
+  "order": 374,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "CCI can impose penalties up to 10% of a company's average turnover. In cartel cases, penalties may reach three times the profit.",
+      "id": "kcmgpyk"
+    },
+    {
+      "type": "pullQuote",
+      "content": "In cartel cases, penalties may reach three times the profit.",
+      "id": "h97gh1a"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Case Category",
+        "Maximum Penalty Threshold"
+      ],
+      "rows": [
+        [
+          "General Violations",
+          "Up to 10% of average turnover"
+        ],
+        [
+          "Cartel Violations",
+          "Up to 3 times the profit"
+        ]
+      ],
+      "id": "eklwp3n"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Max General Penalty",
+          "value": "10%",
+          "icon": "info"
+        },
+        {
+          "label": "Max Cartel Penalty",
+          "value": "3x Profit",
+          "icon": "award"
+        },
+        {
+          "label": "Enforcing Authority",
+          "value": "CCI",
+          "icon": "book"
+        }
+      ],
+      "id": "130ubqj"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between standard penalty caps (up to 10% of average turnover) and cartel penalty caps (up to 3x profit).",
+        "Pay attention to the base metric: general penalties apply to 'average turnover', while cartel penalties are tied to 'profit'."
+      ],
+      "id": "kvdft77"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Competition Commission of India (CCI) has statutory powers to levy heavy monetary penalties on defaulting companies.",
+        "The standard statutory cap for general penalties is set at 10% of a company's average turnover.",
+        "Cartel cases carry enhanced penalty limits, reaching up to three times the profit realized by the entity."
+      ],
+      "id": "blhocdc"
+    }
+  ],
+  "enriched": true
+}

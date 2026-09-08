@@ -1,0 +1,56 @@
+{
+  "title": "Untitled Chapter",
+  "order": 92,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A horseshoe-shaped belt around the Pacific Ocean marked by intense earthquakes and volcanic eruptions. Nearly 75% of the world’s active volcanoes occur here.",
+      "id": "bxayd35"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Nearly 75% of the world’s active volcanoes occur here.",
+      "id": "6q697o2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Active Volcanoes Share",
+          "value": "75%",
+          "icon": "check"
+        },
+        {
+          "label": "Geographic Shape",
+          "value": "Horseshoe",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Location",
+          "value": "Pacific Ocean",
+          "icon": "book"
+        }
+      ],
+      "id": "qqccwd5"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Extremely common question: 75% of the world's active volcanoes are concentrated in this region around the Pacific Ocean.",
+        "Note the exact physical description often asked in exams: a 'horseshoe-shaped belt'."
+      ],
+      "id": "ttxpw3q"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The region forms a distinct horseshoe-shaped belt surrounding the Pacific Ocean.",
+        "It is characterized by frequent and intense seismic activity, including severe earthquakes and volcanic eruptions.",
+        "The belt hosts nearly 75% of all active volcanoes on the planet."
+      ],
+      "id": "jl5h84y"
+    }
+  ],
+  "enriched": true
+}

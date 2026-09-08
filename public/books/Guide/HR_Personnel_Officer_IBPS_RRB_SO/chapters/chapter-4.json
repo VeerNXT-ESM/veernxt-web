@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "zr5eqjb"
+      "id": "zr5eqjb",
+      "content": "Performance Management System (PMS) is a continuous process of identifying, measuring, and developing the performance of individuals and aligning their performance with the strategic goals of the organisation. It goes beyond annual appraisal to include goal-setting, coaching, feedback, and development throughout the year."
     },
     {
       "type": "pullQuote",
@@ -63,50 +64,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>PMS Component</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Goal Setting / KRA-KPI</p>",
+            "<p>Define Key Result Areas (KRAs) and Key Performance Indicators (KPIs) at start of year; SMART goals; cascaded from organisational objectives</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mid-Year Review</p>",
+            "<p>Formal check-in at mid-year; progress review; course correction; coaching and feedback</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Annual Appraisal</p>",
+            "<p>End-of-year formal assessment; rating against KPIs; competency assessment; bell curve distribution in many banks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Development Plan (IDP)</p>",
+            "<p>Individual Development Plan :identify training needs; career aspirations; skills to develop</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Normalisation / Moderation</p>",
+            "<p>Calibration of ratings across departments; reduce bias; ensure fair distribution across the organisation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Reward Linkage</p>",
+            "<p>Performance ratings linked to increments, bonus, promotion; performance-linked incentive (PLI) in banks</p>"
           ]
         }
       ]
@@ -156,82 +157,82 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Merits</strong></p>",
+            "<p><strong>Limitations</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Ranking Method</p>",
+            "<p>Rank employees from best to worst; simple comparison</p>",
+            "<p>Simple; inexpensive; identifies best and worst performers clearly</p>",
+            "<p>Does not show degree of difference; difficult in large groups; no absolute standards</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Paired Comparison</p>",
+            "<p>Compare each employee with every other employee; count favourable comparisons</p>",
+            "<p>More reliable than simple ranking; systematic</p>",
+            "<p>Becomes cumbersome with many employees; n(n-1)/2 comparisons needed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Forced Distribution (Bell Curve)</p>",
+            "<p>Assign predetermined percentages to rating categories (e.g., 20% top, 70% average, 10% bottom)</p>",
+            "<p>Prevents clustering at top/middle; forces differentiation</p>",
+            "<p>Leads to de-motivation; unfair when all employees perform well; peer conflicts</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Graphic Rating Scale</p>",
+            "<p>Rate employee on various traits/dimensions on scale (e.g., 1–5 or 1–10)</p>",
+            "<p>Simple; uniform; quantifiable; easy to understand</p>",
+            "<p>Halo effect; subjectivity in trait definitions; rater bias</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Checklist Method</p>",
+            "<p>Rater checks applicable statements from a list of positive/negative statements</p>",
+            "<p>Simple; reduces rater bias; consistent</p>",
+            "<p>Rater may not understand all items; weightage not always clear</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Essay Method</p>",
+            "<p>Free-form written description of employee performance by rater</p>",
+            "<p>Flexible; can capture nuance; no constraint of fixed categories</p>",
+            "<p>Time-consuming; depends on rater's writing skills; difficult to compare across raters</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Critical Incident Method</p>",
+            "<p>Record specific critical (exceptionally good or bad) incidents during evaluation period</p>",
+            "<p>Behaviour-based; specific feedback; reduces recency bias</p>",
+            "<p>Time-consuming recordkeeping; negative incidents may discourage employees</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Field Review Method</p>",
+            "<p>HR officer interviews managers and records assessment; independent review</p>",
+            "<p>More objective; HR adds perspective; reduces leniency bias</p>",
+            "<p>Time-consuming; HR may not know employee directly</p>"
           ]
         }
       ]
@@ -258,65 +259,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Method</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>MBO (Management by Objectives)</p>",
+            "<p>Peter Drucker's concept; manager and employee jointly set SMART objectives at start of period; performance measured against these specific objectives</p>",
+            "<p>Participative; objective-based; clear accountability; used extensively in banking sector</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>360-Degree Feedback</p>",
+            "<p>Feedback from multiple sources: self, peers, subordinates, supervisor, customers; holistic view</p>",
+            "<p>Multi-rater; reduces bias; development-focused; provides comprehensive view; used by HDFC, SBI for senior managers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Behaviourally Anchored Rating Scale (BARS)</p>",
+            "<p>Rate on specific behavioural descriptions for each performance level; anchored to actual job behaviours</p>",
+            "<p>Highly accurate; behaviour-specific; reduces subjectivity; requires significant development effort</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Behavioural Observation Scale (BOS)</p>",
+            "<p>Observe and rate frequency of specific job behaviours; observer rates how often employee demonstrates each behaviour</p>",
+            "<p>Frequency-based; objective; directly tied to observable job behaviour</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Assessment Centre</p>",
+            "<p>Multiple simulation exercises (in-basket, role play, group discussion, presentation); multiple trained assessors; used for selection AND appraisal</p>",
+            "<p>High validity and reliability; predicts management potential; expensive; used in banks for promotion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Balanced Scorecard (BSC)</p>",
+            "<p>Kaplan and Norton; four perspectives: Financial, Customer, Internal Process, Learning &amp; Growth; HR BSC aligns HR metrics with business strategy</p>",
+            "<p>Strategic alignment; balanced view; used in bank branch performance and HR department performance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Human Resource Accounting (HRA)</p>",
+            "<p>Assign monetary value to human assets; measure ROI on HR investments; Flamholtz model; Lev &amp; Schwartz model</p>",
+            "<p>HR as investment, not cost; emerging; not yet standardised accounting practice</p>"
           ]
         }
       ]
@@ -334,81 +335,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Error / Bias</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Solution</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Halo Effect</p>",
+            "<p>One outstanding positive trait influences overall rating favourably</p>",
+            "<p>Train raters; use BARS; separate competency ratings</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Horn Effect</p>",
+            "<p>One negative trait unfairly colours overall assessment negatively</p>",
+            "<p>Structured appraisal forms; multiple raters</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Central Tendency</p>",
+            "<p>Rater avoids extremes; rates everyone as average; all ratings cluster in middle</p>",
+            "<p>Forced distribution; training to use full scale</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Leniency / Strictness Bias</p>",
+            "<p>Consistently high (lenient) or consistently low (strict) ratings by same rater</p>",
+            "<p>Calibration sessions; normalisation; anchor definitions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Recency Effect</p>",
+            "<p>Events near appraisal period dominate; earlier performance forgotten</p>",
+            "<p>Critical incident log throughout year; quarterly reviews</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Primacy Effect</p>",
+            "<p>First impression dominates overall assessment; recent performance discounted</p>",
+            "<p>Structured evaluation of all periods; mid-year reviews</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Similarity Bias</p>",
+            "<p>Rater rates similar employees more favourably ('like me' effect)</p>",
+            "<p>Training on bias; diverse rating panels; structured criteria</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Attribution Error</p>",
+            "<p>Success attributed to luck externally; failure attributed to personal failings of employee</p>",
+            "<p>Objective goal-based assessment; separate outcome from effort</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Contrast Effect</p>",
+            "<p>Rating influenced by previous candidate (in selection) or comparison with other employees rather than absolute standard</p>",
+            "<p>Absolute standards; one-at-a-time evaluation against criteria</p>"
           ]
         }
       ]

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "4gh1ics"
+      "id": "4gh1ics",
+      "content": "Longitudes are imaginary semicircles that run from the North Pole to the South Pole. They measure angular distance east or west of the Prime Meridian."
     },
     {
       "type": "pullQuote",
@@ -97,43 +98,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Reference Line</p>",
+            "<p>Prime Meridian (0° longitude)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Range</p>",
+            "<p>0° to 180° East and 0° to 180° West</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Shape</p>",
+            "<p>Semicircles joining both poles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Length</p>",
+            "<p>All longitudes are equal in length</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Meeting Point</p>",
+            "<p>Converge at poles</p>"
           ]
         }
       ]

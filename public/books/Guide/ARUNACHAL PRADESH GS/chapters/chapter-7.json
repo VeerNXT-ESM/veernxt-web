@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "rce9hal"
+      "id": "rce9hal",
+      "content": "Arunachal Pradesh is a biodiversity hotspot of global significance. It forms part of the Indo-Burma biodiversity hotspot and the Eastern Himalaya biodiversity hotspot. With over 80% of its area under forest cover, it harbours an astonishing variety of plant and animal life."
     },
     {
       "type": "statStrip",
@@ -57,64 +58,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Forest Type</strong></p>",
+            "<p>Elevation / Location</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Tropical Evergreen Forests</strong></p>",
+            "<p>Below 500 m; Changlang, Tirap, Lohit, Namsai foothills</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Tropical Semi-Evergreen</strong></p>",
+            "<p>500–1,000 m; transitional zones</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Subtropical Broadleaf</strong></p>",
+            "<p>1,000–2,000 m; most widely distributed type</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Subtropical Pine Forests</strong></p>",
+            "<p>1,000–2,000 m; dominated by Pinus roxburghii</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Temperate Broadleaf</strong></p>",
+            "<p>2,000–3,000 m; oak, rhododendron, magnolia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Subalpine / Coniferous</strong></p>",
+            "<p>3,000–4,000 m; fir, spruce, juniper</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Alpine Meadows (Bugyals)</strong></p>",
+            "<p>Above 4,000 m; seasonal grasses, mosses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Tundra / Permanent Snowfields</strong></p>",
+            "<p>Above 5,000 m; sparse vegetation</p>"
           ]
         }
       ]
@@ -127,24 +128,20 @@
     },
     {
       "type": "paragraph",
-      "id": "lrb2tpr"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Eagle Nest Wildlife Sanctuary — Birding Paradise",
-      "id": "9gg1mlg"
+      "id": "lrb2tpr",
+      "content": "Arunachal Pradesh has one of the richest plant diversities in Asia. It is estimated to have over 5,000 species of flowering plants, 500+ species of orchids, and hundreds of medicinal plant species."
     },
     {
       "id": "ortfati",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Orchids: Over 500–600 species including Rhynchostylis retusa (State Flower), Vanda coerulea (Blue Vanda — endangered)",
+        "Rhododendrons: Over 100 species; state flower of neighbouring Sikkim; mass blooms in spring",
+        "Medicinal plants: Taxus wallichiana (Himalayan Yew — source of taxol), Rauvolfia serpentina, Podophyllum hexandrum",
+        "Bamboo: Over 100 species; crucial for tribal livelihood and construction",
+        "Ferns: Over 500 species, including tree ferns in warmer zones",
+        "The state tree is Hollong (Dipterocarpus macrocarpus) — a tropical evergreen timber tree",
+        "State flower: Foxtail Orchid (Rhynchostylis retusa) — known locally as Kopou Phool"
       ]
     },
     {
@@ -160,108 +157,110 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Notable Species</strong></p>",
+            "<p><strong>Conservation Status</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Big Cats</p>",
+            "<p>Tiger (Bengal Tiger), Clouded Leopard, Snow Leopard, Leopard</p>",
+            "<p>Endangered / Vulnerable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bears</p>",
+            "<p>Himalayan Black Bear, Sun Bear, Sloth Bear</p>",
+            "<p>Vulnerable to Least Concern</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Primates</p>",
+            "<p>Hoolock Gibbon (only ape in India), Assamese Macaque, Golden Langur</p>",
+            "<p>Endangered</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Elephants</p>",
+            "<p>Asian Elephant</p>",
+            "<p>Endangered; large herds in Changlang, Lohit, Tirap</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Deer</p>",
+            "<p>Musk Deer, Sambar, Barasingha, Muntjac</p>",
+            "<p>Vulnerable to Least Concern</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Red Panda</p>",
+            "<p>Red Panda (Ailurus fulgens)</p>",
+            "<p>Endangered; higher altitude areas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Takin</p>",
+            "<p>Takin (Budorcas taxicolor) — State Animal</p>",
+            "<p>Vulnerable; found in Tawang and West Kameng</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Birds</p>",
+            "<p>Great Hornbill, White-bellied Heron, Sclater's Monal, Blyth's Tragopan</p>",
+            "<p>Endangered to VU</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Reptiles</p>",
+            "<p>King Cobra, Reticulated Python, Gharial (Lohit area)</p>",
+            "<p>Vulnerable to Endangered</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fish</p>",
+            "<p>Mahseer (Golden and Chocolate), Snow Trout, various hill stream fish</p>",
+            "<p>Vulnerable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Butterflies</p>",
+            "<p>Kaiser-I-Hind (Queen of Himalayas), over 500 species recorded</p>",
+            "<p>Some Endangered</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "3uiwvp0"
+      "id": "3uiwvp0",
+      "content": "The Takin (Budorcas taxicolor) is the State Animal of Arunachal Pradesh. It is a massive bovid found in the bamboo forests of the Eastern Himalayas, including Tawang and West Kameng districts."
     },
     {
       "type": "paragraph",
-      "id": "4svng83"
+      "id": "4svng83",
+      "content": "The Great Hornbill (Buceros bicornis) is the State Bird. It holds great cultural significance for many tribes; the Nyishi traditionally used its beak in their Bopia headgear, which has now been replaced by fibreglass replicas to protect the species."
     },
     {
       "id": "2a4sadm",
@@ -276,111 +275,111 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Protected Area</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>District(s)</strong></p>",
+            "<p><strong>Area (approx.)</strong></p>",
+            "<p><strong>Key Species</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Namdapha National Park</p>",
+            "<p>National Park + Tiger Reserve</p>",
+            "<p>Changlang</p>",
+            "<p>1,985 sq km</p>",
+            "<p>Tiger, Elephant, Snow Leopard, Clouded Leopard, Hoolock Gibbon — all four big cats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Pakke (Pakhui) Tiger Reserve</p>",
+            "<p>Tiger Reserve + Wildlife Sanctuary</p>",
+            "<p>East Kameng / Pakke Kessang</p>",
+            "<p>862 sq km</p>",
+            "<p>Tiger, Elephant, Great Hornbill; world-famous hornbill nest adoption program</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Dibang Wildlife Sanctuary</p>",
+            "<p>Wildlife Sanctuary</p>",
+            "<p>Dibang Valley</p>",
+            "<p>4,149 sq km</p>",
+            "<p>Red Panda, Takin, Snow Leopard, Musk Deer — largest WLS in India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Mehao Wildlife Sanctuary</p>",
+            "<p>Wildlife Sanctuary</p>",
+            "<p>Lower Dibang Valley</p>",
+            "<p>282 sq km</p>",
+            "<p>Elephant, Hoolock Gibbon, Tiger</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Kane Wildlife Sanctuary</p>",
+            "<p>Wildlife Sanctuary</p>",
+            "<p>Tirap</p>",
+            "<p>~55 sq km</p>",
+            "<p>Elephant, Bear</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Talley Valley Wildlife Sanctuary</p>",
+            "<p>Wildlife Sanctuary</p>",
+            "<p>Lower Subansiri (Ziro)</p>",
+            "<p>337 sq km</p>",
+            "<p>Flying squirrel, serow, medicinal plants; sacred grove</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Itanagar Wildlife Sanctuary</p>",
+            "<p>Wildlife Sanctuary</p>",
+            "<p>Papum Pare</p>",
+            "<p>140 sq km</p>",
+            "<p>Elephant corridor; near state capital</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>D'Ering Memorial Wildlife Sanctuary</p>",
+            "<p>Wildlife Sanctuary</p>",
+            "<p>East Siang</p>",
+            "<p>190 sq km</p>",
+            "<p>Gangetic Dolphins, Irrawaddy Dolphins in Siang</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Eagle Nest Wildlife Sanctuary</p>",
+            "<p>Wildlife Sanctuary</p>",
+            "<p>West Kameng</p>",
+            "<p>218 sq km</p>",
+            "<p>Bouquet of rare birds; premier birding site of India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Sessa Orchid Sanctuary</p>",
+            "<p>Orchid Sanctuary</p>",
+            "<p>West Kameng</p>",
+            "<p>100 sq km</p>",
+            "<p>Hundreds of orchid species; unique in India</p>"
           ]
         }
       ]
@@ -402,7 +401,8 @@
     },
     {
       "type": "paragraph",
-      "id": "401g23r"
+      "id": "401g23r",
+      "content": "Namdapha is one of India's most biodiverse national parks and is the third largest in the country. It is the only park in the world where all four felid species of big cats — tiger, leopard, clouded leopard, and snow leopard — coexist. It is also a part of the Indo-Burma biodiversity hotspot and has exceptional bird diversity with over 400 species recorded."
     },
     {
       "id": "fus6bm1",
@@ -412,7 +412,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yqmfzrl"
+      "id": "yqmfzrl",
+      "content": "Eagle Nest WLS in West Kameng district is widely regarded as one of the best bird-watching sites in the world. It is famous for the discovery of the Bugun Liocichla (Liocichla bugunorum), a new bird species discovered as late as 2006. The sanctuary hosts over 450 bird species and attracts birdwatchers from across the globe."
     }
   ],
   "enriched": true

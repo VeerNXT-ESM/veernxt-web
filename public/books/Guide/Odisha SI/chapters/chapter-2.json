@@ -42,16 +42,17 @@
     },
     {
       "type": "paragraph",
-      "id": "2cscson"
+      "id": "2cscson",
+      "content": "Odisha has four major physiographic regions:"
     },
     {
       "id": "xtmo6cl",
       "type": "numberedList",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "The Northern Plateau (Chota Nagpur Plateau extension)",
+        "The Central Table Land (Eastern Ghats &amp; hill ranges)",
+        "The Valley &amp; Rolling Upland Region",
+        "The Coastal Plains (Delta region)"
       ]
     },
     {
@@ -67,7 +68,8 @@
     },
     {
       "type": "paragraph",
-      "id": "1oohhod"
+      "id": "1oohhod",
+      "content": "The northern plateau region forms the southward extension of the Chota Nagpur Plateau, covering districts like Sundargarh, Jharsuguda, Sambalpur, Keonjhar, and Mayurbhanj. This region is rich in minerals (iron ore, coal, manganese). The Simlipal Hills are in this zone."
     },
     {
       "id": "01usinl",
@@ -77,7 +79,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fc7uo8d"
+      "id": "fc7uo8d",
+      "content": "The Eastern Ghats run through the central and southern parts of Odisha. They are discontinuous hills running NE–SW. Important hill ranges include Mahendragiri (highest peak, 1501 m), Deomali (highest peak of Eastern Ghats at 1672 m – in Koraput district), and Niyamgiri Hills (Rayagada/Kalahandi)."
     },
     {
       "id": "ce31anc",
@@ -86,43 +89,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Peak</strong></p>",
+            "<p><strong>Height &amp; Location</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Deomali</p>",
+            "<p>1,672 m – Koraput district (Highest peak of Odisha)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mahendragiri</p>",
+            "<p>1,501 m – Gajapati district</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sinkaram</p>",
+            "<p>1,620 m – Koraput (Pottangi area)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Yendrika</p>",
+            "<p>1,516 m – Koraput</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Niyamgiri</p>",
+            "<p>~1,516 m – Kalahandi/Rayagada (Dongria Kondh sacred hill)</p>"
           ]
         }
       ]
@@ -143,7 +146,8 @@
     },
     {
       "type": "paragraph",
-      "id": "nlwy3q9"
+      "id": "nlwy3q9",
+      "content": "The coastal plain extends along the Bay of Bengal for about 480 km. It includes the Mahanadi delta (one of largest deltas in India), Chilika Lake (largest lagoon in Asia), and the Rushikulya coastline in the south. Olive Ridley sea turtles nest at Gahirmatha, Rushikulya, and Devi Mouth."
     },
     {
       "id": "mxjqkdv",
@@ -158,49 +162,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Soil Type</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Crops Suitable</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alluvial Soil</p>",
+            "<p>Coastal plains, river valleys</p>",
+            "<p>Rice, jute, vegetables</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Red Laterite Soil</p>",
+            "<p>Plateau regions (Keonjhar, Sundargarh)</p>",
+            "<p>Millets, oilseeds, pulses</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sandy Soil</p>",
+            "<p>Coastal belt, near sea</p>",
+            "<p>Coconut, cashew</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Black Cotton Soil</p>",
+            "<p>Bolangir, Nuapada, Bargarh</p>",
+            "<p>Cotton, soybean</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mixed Red-Yellow Soil</p>",
+            "<p>Central table land</p>",
+            "<p>Paddy, pulses</p>"
           ]
         }
       ]

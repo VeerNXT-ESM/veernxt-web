@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6n880ex"
+      "id": "6n880ex",
+      "content": "Kingdom Animalia consists of multicellular, eukaryotic, heterotrophic organisms. They lack cell wall, show locomotion at some stage of life, and exhibit complex organ systems. Animals are classified mainly on the basis of level of organization, symmetry, germ layers, coelom, segmentation and presence of notochord."
     },
     {
       "id": "fqogj8t",
@@ -60,21 +61,25 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "5v4twi7"
+      "id": "5v4twi7",
+      "content": "• Cellular level – Porifera"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "7iqwnd9"
+      "id": "7iqwnd9",
+      "content": "• Tissue level – Cnidaria"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "q7dypga"
+      "id": "q7dypga",
+      "content": "• Organ level – Platyhelminthes"
     },
     {
       "type": "paragraph",
-      "id": "b3ipqo8"
+      "id": "b3ipqo8",
+      "content": "• Organ system level – From Nematoda onwards"
     },
     {
       "id": "gtkx3if",
@@ -89,33 +94,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Porifera</strong></p>",
+            "<p><strong>Cnidaria</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Symmetry</p>",
+            "<p>Asymmetrical</p>",
+            "<p>Radial</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Germ Layers</p>",
+            "<p>No true layers</p>",
+            "<p>Diploblastic</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Coelom</p>",
+            "<p>Absent</p>",
+            "<p>Absent</p>"
           ]
         }
       ]
@@ -134,7 +139,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gpupa72"
+      "id": "gpupa72",
+      "content": "Non-chordates lack notochord and dorsal nerve cord. Major phyla include Porifera, Cnidaria, Platyhelminthes, Nematoda, Annelida and Arthropoda."
     },
     {
       "id": "n0itdlj",
@@ -144,7 +150,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9d5zyq7"
+      "id": "9d5zyq7",
+      "content": "Aquatic animals with pores (ostia) and canal system. Cellular level organization. Skeleton made of spicules or spongin."
     },
     {
       "id": "c5jyxgj",
@@ -154,7 +161,8 @@
     },
     {
       "type": "paragraph",
-      "id": "hzgevzb"
+      "id": "hzgevzb",
+      "content": "Diploblastic, radially symmetrical animals with tentacles and stinging cells (nematocysts). Exhibit polymorphism."
     },
     {
       "id": "j386vjf",
@@ -164,7 +172,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vx7h1tr"
+      "id": "vx7h1tr",
+      "content": "Flatworms, triploblastic, acoelomate. Mostly parasitic. Example: Taenia."
     },
     {
       "id": "ssjsop5",
@@ -174,7 +183,8 @@
     },
     {
       "type": "paragraph",
-      "id": "aikjuhc"
+      "id": "aikjuhc",
+      "content": "Roundworms, pseudocoelomate, complete digestive system. Example: Ascaris."
     },
     {
       "type": "pullQuote",
@@ -189,7 +199,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wv1s7fh"
+      "id": "wv1s7fh",
+      "content": "Segmented worms with true coelom and closed circulatory system. Example: Earthworm."
     },
     {
       "id": "9by561m",
@@ -199,7 +210,8 @@
     },
     {
       "type": "paragraph",
-      "id": "twdra07"
+      "id": "twdra07",
+      "content": "Largest phylum. Segmented body, jointed appendages, chitinous exoskeleton, open circulatory system."
     },
     {
       "id": "47xizly",
@@ -214,71 +226,71 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Phylum</strong></p>",
+            "<p><strong>Symmetry</strong></p>",
+            "<p><strong>Coelom</strong></p>",
+            "<p><strong>Circulation</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Porifera</p>",
+            "<p>Asymmetrical</p>",
+            "<p>Absent</p>",
+            "<p>Absent</p>",
+            "<p>Sycon</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Cnidaria</p>",
+            "<p>Radial</p>",
+            "<p>Absent</p>",
+            "<p>Absent</p>",
+            "<p>Hydra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Platyhelminthes</p>",
+            "<p>Bilateral</p>",
+            "<p>Acoelomate</p>",
+            "<p>Absent</p>",
+            "<p>Planaria</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Nematoda</p>",
+            "<p>Bilateral</p>",
+            "<p>Pseudocoelomate</p>",
+            "<p>Absent</p>",
+            "<p>Ascaris</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Annelida</p>",
+            "<p>Bilateral</p>",
+            "<p>True coelom</p>",
+            "<p>Closed</p>",
+            "<p>Earthworm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Arthropoda</p>",
+            "<p>Bilateral</p>",
+            "<p>True coelom</p>",
+            "<p>Open</p>",
+            "<p>Cockroach</p>"
           ]
         }
       ]
@@ -291,7 +303,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4tzd1jo"
+      "id": "4tzd1jo",
+      "content": "Chordates possess notochord, dorsal hollow nerve cord, pharyngeal gill slits and post-anal tail at some stage."
     },
     {
       "id": "3vcnxvo",
@@ -301,7 +314,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3v8x63f"
+      "id": "3v8x63f",
+      "content": "Vertebrates are divided into Pisces, Amphibia, Reptilia, Aves and Mammalia."
     },
     {
       "id": "ikxli2k",
@@ -347,7 +361,8 @@
     },
     {
       "type": "paragraph",
-      "id": "rnkycat"
+      "id": "rnkycat",
+      "content": "Pisces: Aquatic, gills, 2-chambered heart.<br></br>Amphibia: Land &amp; water, 3-chambered heart.<br></br>Reptilia: Dry scales, mostly 3-chambered heart (except crocodile)."
     },
     {
       "id": "lasxfdr",
@@ -357,7 +372,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6h9x30i"
+      "id": "6h9x30i",
+      "content": "Warm-blooded, feathers present, 4-chambered heart, pneumatic bones."
     },
     {
       "id": "mpwze2i",
@@ -367,7 +383,8 @@
     },
     {
       "type": "paragraph",
-      "id": "06frisi"
+      "id": "06frisi",
+      "content": "Warm-blooded animals with mammary glands, hair, diaphragm and 4-chambered heart. Most are viviparous."
     },
     {
       "id": "zk02abp",
@@ -382,73 +399,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Class</strong></p>",
+            "<p><strong>Habitat</strong></p>",
+            "<p><strong>Respiration</strong></p>",
+            "<p><strong>Heart</strong></p>",
+            "<p><strong>Fertilization</strong></p>",
+            "<p><strong>Temperature</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Pisces</p>",
+            "<p>Water</p>",
+            "<p>Gills</p>",
+            "<p>2</p>",
+            "<p>External</p>",
+            "<p>Cold</p>",
+            "<p>Shark</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Amphibia</p>",
+            "<p>Land/Water</p>",
+            "<p>Lungs/Skin</p>",
+            "<p>3</p>",
+            "<p>External</p>",
+            "<p>Cold</p>",
+            "<p>Frog</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Reptilia</p>",
+            "<p>Land</p>",
+            "<p>Lungs</p>",
+            "<p>3</p>",
+            "<p>Internal</p>",
+            "<p>Cold</p>",
+            "<p>Snake</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Aves</p>",
+            "<p>Air/Land</p>",
+            "<p>Lungs</p>",
+            "<p>4</p>",
+            "<p>Internal</p>",
+            "<p>Warm</p>",
+            "<p>Pigeon</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Mammalia</p>",
+            "<p>Land</p>",
+            "<p>Lungs</p>",
+            "<p>4</p>",
+            "<p>Internal</p>",
+            "<p>Warm</p>",
+            "<p>Human</p>"
           ]
         }
       ]
@@ -466,105 +483,105 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Phylum</strong></p>",
+            "<p><strong>Level</strong></p>",
+            "<p><strong>Symmetry</strong></p>",
+            "<p><strong>Germ Layers</strong></p>",
+            "<p><strong>Coelom</strong></p>",
+            "<p><strong>Segmentation</strong></p>",
+            "<p><strong>Circulation</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Porifera</p>",
+            "<p>Cellular</p>",
+            "<p>Asymmetrical</p>",
+            "<p>No true layers</p>",
+            "<p>Absent</p>",
+            "<p>Absent</p>",
+            "<p>Absent</p>",
+            "<p>Sycon</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Cnidaria</p>",
+            "<p>Tissue</p>",
+            "<p>Radial</p>",
+            "<p>Diploblastic</p>",
+            "<p>Absent</p>",
+            "<p>Absent</p>",
+            "<p>Absent</p>",
+            "<p>Hydra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Platyhelminthes</p>",
+            "<p>Organ</p>",
+            "<p>Bilateral</p>",
+            "<p>Triploblastic</p>",
+            "<p>Acoelomate</p>",
+            "<p>Absent</p>",
+            "<p>Absent</p>",
+            "<p>Planaria</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Nematoda</p>",
+            "<p>Organ system</p>",
+            "<p>Bilateral</p>",
+            "<p>Triploblastic</p>",
+            "<p>Pseudocoelom</p>",
+            "<p>Absent</p>",
+            "<p>Absent</p>",
+            "<p>Ascaris</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Annelida</p>",
+            "<p>Organ system</p>",
+            "<p>Bilateral</p>",
+            "<p>Triploblastic</p>",
+            "<p>True coelom</p>",
+            "<p>Present</p>",
+            "<p>Closed</p>",
+            "<p>Earthworm</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Arthropoda</p>",
+            "<p>Organ system</p>",
+            "<p>Bilateral</p>",
+            "<p>Triploblastic</p>",
+            "<p>True coelom</p>",
+            "<p>Present</p>",
+            "<p>Open</p>",
+            "<p>Cockroach</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Mollusca</p>",
+            "<p>Organ system</p>",
+            "<p>Bilateral</p>",
+            "<p>Triploblastic</p>",
+            "<p>True coelom</p>",
+            "<p>Absent</p>",
+            "<p>Open</p>",
+            "<p>Pila</p>"
           ]
         }
       ]
@@ -582,49 +599,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Non-Chordates</strong></p>",
+            "<p><strong>Chordates</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Notochord</p>",
+            "<p>Absent</p>",
+            "<p>Present</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nerve Cord</p>",
+            "<p>Ventral, solid</p>",
+            "<p>Dorsal, hollow</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gill Slits</p>",
+            "<p>Absent</p>",
+            "<p>Present (at some stage)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Heart Position</p>",
+            "<p>Dorsal</p>",
+            "<p>Ventral</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Examples</p>",
+            "<p>Arthropods</p>",
+            "<p>Vertebrates</p>"
           ]
         }
       ]
@@ -642,86 +659,87 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Class</strong></p>",
+            "<p><strong>Habitat</strong></p>",
+            "<p><strong>Skin</strong></p>",
+            "<p><strong>Respiration</strong></p>",
+            "<p><strong>Heart</strong></p>",
+            "<p><strong>Fertilization</strong></p>",
+            "<p><strong>Temperature</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Pisces</p>",
+            "<p>Water</p>",
+            "<p>Scales</p>",
+            "<p>Gills</p>",
+            "<p>2-chambered</p>",
+            "<p>External</p>",
+            "<p>Cold-blooded</p>",
+            "<p>Shark</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Amphibia</p>",
+            "<p>Land &amp; Water</p>",
+            "<p>Moist</p>",
+            "<p>Lungs/Skin</p>",
+            "<p>3-chambered</p>",
+            "<p>External</p>",
+            "<p>Cold-blooded</p>",
+            "<p>Frog</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Reptilia</p>",
+            "<p>Land</p>",
+            "<p>Dry scales</p>",
+            "<p>Lungs</p>",
+            "<p>3-chambered*</p>",
+            "<p>Internal</p>",
+            "<p>Cold-blooded</p>",
+            "<p>Snake</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Aves</p>",
+            "<p>Air/Land</p>",
+            "<p>Feathers</p>",
+            "<p>Lungs</p>",
+            "<p>4-chambered</p>",
+            "<p>Internal</p>",
+            "<p>Warm-blooded</p>",
+            "<p>Pigeon</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Mammalia</p>",
+            "<p>Land</p>",
+            "<p>Hair</p>",
+            "<p>Lungs</p>",
+            "<p>4-chambered</p>",
+            "<p>Internal</p>",
+            "<p>Warm-blooded</p>",
+            "<p>Human</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "gvhxxn6"
+      "id": "gvhxxn6",
+      "content": "*Crocodile has 4-chambered heart among reptiles."
     },
     {
       "type": "examAlert",
@@ -745,57 +763,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Correct Fact</strong></p>",
+            "<p><strong>Common Trap</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Largest Phylum</p>",
+            "<p>Arthropoda</p>",
+            "<p>Not Mollusca</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>First True Coelom</p>",
+            "<p>Annelida</p>",
+            "<p>Not Nematoda</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Warm-blooded Classes</p>",
+            "<p>Aves &amp; Mammalia</p>",
+            "<p>Not Reptilia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2-Chambered Heart</p>",
+            "<p>Pisces</p>",
+            "<p>Not Amphibia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Open Circulation</p>",
+            "<p>Arthropoda</p>",
+            "<p>Not Annelida</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Amphibian Respiration</p>",
+            "<p>Skin + Lungs</p>",
+            "<p>Not Gills only</p>"
           ]
         }
       ]
@@ -808,27 +826,33 @@
     },
     {
       "type": "paragraph",
-      "id": "ichori0"
+      "id": "ichori0",
+      "content": "1. Arthropoda is the largest phylum of Animal Kingdom."
     },
     {
       "type": "paragraph",
-      "id": "7ipkqxf"
+      "id": "7ipkqxf",
+      "content": "2. Annelida is the first phylum with true coelom and closed circulatory system."
     },
     {
       "type": "paragraph",
-      "id": "k68fsuu"
+      "id": "k68fsuu",
+      "content": "3. Pisces have a 2-chambered heart and are cold-blooded."
     },
     {
       "type": "paragraph",
-      "id": "f7nah81"
+      "id": "f7nah81",
+      "content": "4. Amphibia live both on land and in water and have a 3-chambered heart."
     },
     {
       "type": "paragraph",
-      "id": "1suqzia"
+      "id": "1suqzia",
+      "content": "5. Aves and Mammalia are warm-blooded animals with 4-chambered heart."
     },
     {
       "type": "paragraph",
-      "id": "a5xkxca"
+      "id": "a5xkxca",
+      "content": "6. Presence of notochord is the main feature of Chordates."
     }
   ],
   "enriched": true

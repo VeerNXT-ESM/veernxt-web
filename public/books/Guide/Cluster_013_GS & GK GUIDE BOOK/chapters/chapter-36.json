@@ -1,0 +1,437 @@
+{
+  "id": "7ecimx8",
+  "title": "Chapter 35: Rivers of India",
+  "order": 36,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "5yrikoe",
+      "content": "Rivers are vital natural resources in India. They provide water for irrigation, drinking, transportation, fisheries, and hydroelectric power generation. Indian rivers also play an important role in agriculture, settlement patterns, and cultural traditions. The river systems of India are broadly divided into Himalayan rivers and Peninsular rivers."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "River Systems",
+          "value": "2 Primary Types",
+          "icon": "book"
+        },
+        {
+          "label": "Ganga Length",
+          "value": "2,525 km",
+          "icon": "check"
+        },
+        {
+          "label": "Flow Directions",
+          "value": "East & West",
+          "icon": "info"
+        },
+        {
+          "label": "Major Patterns",
+          "value": "4+ Types",
+          "icon": "award"
+        }
+      ],
+      "id": "l1im18y"
+    },
+    {
+      "id": "4h07y4v",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Classification of Rivers of India"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Indian river systems are broadly classified into perennial Himalayan rivers and rain-fed Peninsular rivers.",
+        "The Ganga system is India's largest river basin, featuring major tributaries like Yamuna, Son, Kosi, and Ghaghara.",
+        "Peninsular rivers are divided into east-flowing rivers (forming deltas) and west-flowing rivers (forming estuaries).",
+        "Key river drainage patterns include Dendritic, Trellis, Radial, and Centripetal arrangements.",
+        "Multipurpose river projects and dams play a critical role in irrigation, hydroelectricity, and flood control across India."
+      ],
+      "id": "lyc18ue"
+    },
+    {
+      "id": "nd45eax",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>River System</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Himalayan Rivers</p>",
+            "<p>Perennial rivers fed by glaciers and rainfall; large drainage basins</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Peninsular Rivers</p>",
+            "<p>Seasonal rivers mainly dependent on rainfall; flow through plateau regions</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex62yl2",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Himalayan River System"
+    },
+    {
+      "type": "paragraph",
+      "id": "uv12fwk",
+      "content": "The Himalayan rivers originate from glaciers in the Himalayan mountain range. They carry water throughout the year and form large river valleys and floodplains."
+    },
+    {
+      "id": "dv3ox1p",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>River</strong></p>",
+            "<p><strong>Origin</strong></p>",
+            "<p><strong>Length (Approx)</strong></p>",
+            "<p><strong>Important Tributaries</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Indus</p>",
+            "<p>Lake Mansarovar region, Tibet</p>",
+            "<p>3180 km</p>",
+            "<p>Jhelum, Chenab, Ravi, Beas, Sutlej</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ganga</p>",
+            "<p>Gangotri Glacier, Uttarakhand</p>",
+            "<p>2525 km</p>",
+            "<p>Yamuna, Ghaghara, Gandak, Kosi</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Brahmaputra</p>",
+            "<p>Angsi Glacier, Tibet</p>",
+            "<p>2900 km</p>",
+            "<p>Subansiri, Dibang, Lohit</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4tw0i0p",
+      "type": "heading",
+      "level": 3,
+      "content": "Important Tributaries of the Ganga"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "sgpwrq8",
+      "content": "• Yamuna"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zn3959k",
+      "content": "• Ghaghara"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5v1p48d",
+      "content": "• Gandak"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "972l1xx",
+      "content": "• Kosi"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "211ynzb",
+      "content": "• Son"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e37k8jb",
+      "content": "• Damodar"
+    },
+    {
+      "id": "3tvjmjk",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Peninsular River System"
+    },
+    {
+      "type": "paragraph",
+      "id": "2lx0ytm",
+      "content": "Peninsular rivers originate in the Western Ghats, central highlands or plateau regions. They flow over hard rock surfaces and are mainly rain-fed."
+    },
+    {
+      "id": "uhlcqvt",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>River</strong></p>",
+            "<p><strong>Origin</strong></p>",
+            "<p><strong>Length (Approx)</strong></p>",
+            "<p><strong>Drainage</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Godavari</p>",
+            "<p>Trimbak Hills, Maharashtra</p>",
+            "<p>1465 km</p>",
+            "<p>Bay of Bengal</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Krishna</p>",
+            "<p>Mahabaleshwar, Maharashtra</p>",
+            "<p>1400 km</p>",
+            "<p>Bay of Bengal</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cauvery</p>",
+            "<p>Brahmagiri Hills, Karnataka</p>",
+            "<p>800 km</p>",
+            "<p>Bay of Bengal</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Narmada</p>",
+            "<p>Amarkantak Plateau</p>",
+            "<p>1312 km</p>",
+            "<p>Arabian Sea</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tapti</p>",
+            "<p>Satpura Range</p>",
+            "<p>724 km</p>",
+            "<p>Arabian Sea</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mahanadi</p>",
+            "<p>Sihawa Hills, Chhattisgarh</p>",
+            "<p>858 km</p>",
+            "<p>Bay of Bengal</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t9z5nc0",
+      "type": "heading",
+      "level": 2,
+      "content": "4. East Flowing vs West Flowing Rivers"
+    },
+    {
+      "id": "4denomr",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>East Flowing Rivers</strong></p>",
+            "<p><strong>West Flowing Rivers</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Godavari</p>",
+            "<p>Narmada</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Krishna</p>",
+            "<p>Tapti</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cauvery</p>",
+            "<p>Mahi</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mahanadi</p>",
+            "<p>Sabarmati</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Brahmani</p>",
+            "<p>Periyar</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "euvf744",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Drainage Patterns in India"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "East Flowing Rivers",
+        "West Flowing Rivers"
+      ],
+      "rows": [
+        [
+          "Drainage Destination",
+          "Bay of Bengal",
+          "Arabian Sea"
+        ],
+        [
+          "Mouth Deposits",
+          "Form large deltas",
+          "Form estuaries (no deltas)"
+        ],
+        [
+          "Valley Profile",
+          "Flow through broad valleys with gentle slopes",
+          "Flow through steep channels or rift valleys"
+        ],
+        [
+          "Key Examples",
+          "Mahanadi, Godavari, Krishna, Cauvery",
+          "Narmada, Tapti, Sabarmati, Mahi"
+        ]
+      ],
+      "id": "94s7o5n"
+    },
+    {
+      "type": "paragraph",
+      "id": "b73cggd",
+      "content": "• Dendritic – tree-like pattern (most common)."
+    },
+    {
+      "type": "paragraph",
+      "id": "czrvus2",
+      "content": "• Trellis – right-angle pattern due to hard and soft rocks."
+    },
+    {
+      "type": "paragraph",
+      "id": "o3liqik",
+      "content": "• Radial – rivers flow outward from a central high point."
+    },
+    {
+      "type": "paragraph",
+      "id": "yh2tpyu",
+      "content": "• Centripetal – rivers flow towards a central basin."
+    },
+    {
+      "id": "u5fyq9z",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Important Dams and River Projects"
+    },
+    {
+      "type": "paragraph",
+      "id": "jkswynd",
+      "content": "• Bhakra Nangal Dam – Sutlej River."
+    },
+    {
+      "type": "paragraph",
+      "id": "ln25xeo",
+      "content": "• Tehri Dam – Bhagirathi River."
+    },
+    {
+      "type": "paragraph",
+      "id": "5iyuvnr",
+      "content": "• Hirakud Dam – Mahanadi River."
+    },
+    {
+      "type": "paragraph",
+      "id": "ofothcv",
+      "content": "• Sardar Sarovar Dam – Narmada River."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Narmada and Tapti flow through rift valleys into the Arabian Sea and form estuaries instead of deltas.",
+        "Godavari is the longest Peninsular river and is widely known as 'Dakshin Ganga'.",
+        "Kosi is termed the 'Sorrow of Bihar' due to frequent course changes causing recurrent floods.",
+        "Brahmaputra hosts Majuli, the world's largest mid-river deltaic island."
+      ],
+      "id": "74wg2sx"
+    },
+    {
+      "type": "paragraph",
+      "id": "635i2gi",
+      "content": "• Nagarjuna Sagar Dam – Krishna River."
+    },
+    {
+      "id": "fj6xrps",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "g2lbzl5",
+      "content": "• Ganga is the longest river in India."
+    },
+    {
+      "type": "paragraph",
+      "id": "w8qhobe",
+      "content": "• Godavari is the longest river in Peninsular India."
+    },
+    {
+      "type": "paragraph",
+      "id": "gae7j10",
+      "content": "• Brahmaputra is known as Tsangpo in Tibet."
+    },
+    {
+      "type": "paragraph",
+      "id": "sbswckz",
+      "content": "• Narmada and Tapti are the major west-flowing rivers."
+    }
+  ],
+  "enriched": true
+}

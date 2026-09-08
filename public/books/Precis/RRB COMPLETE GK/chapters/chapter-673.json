@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "pucrm2g"
+      "id": "pucrm2g",
+      "content": "The Central Administrative Tribunal was established in 1985 under the Administrative Tribunals Act, 1985 to adjudicate disputes related to recruitment and service conditions of public servants."
     },
     {
       "type": "statStrip",
@@ -92,43 +93,44 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Established</p>",
+            "<p>1985</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Act</p>",
+            "<p>Administrative Tribunals Act, 1985</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Jurisdiction</p>",
+            "<p>Central government employees</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Appeal</p>",
+            "<p>Subject to judicial review by High Courts (L. Chandra Kumar, 1997)</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "kqhifed"
+      "id": "kqhifed",
+      "content": "IMPORTANT: In the L. Chandra Kumar (1997) judgment, the Supreme Court ruled that tribunal decisions are subject to judicial review by High Courts, restoring the power of constitutional courts."
     }
   ],
   "enriched": true

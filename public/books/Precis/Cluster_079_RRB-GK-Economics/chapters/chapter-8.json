@@ -1,0 +1,643 @@
+{
+  "title": "CHAPTER 10: TAX STRUCTURE IN INDIA",
+  "order": 8,
+  "blocks": [
+    {
+      "id": "hea8eq5",
+      "type": "heading",
+      "level": 2,
+      "content": "1. MEANING AND OBJECTIVES OF TAXATION"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Taxation is a compulsory contribution without guaranteed direct benefits to the taxpayer.",
+        "Adam Smith outlined four canons of taxation: Equality, Certainty, Convenience, and Economy.",
+        "GST is a destination-based indirect tax introduced on 1 July 2017, replacing VAT and Service Tax.",
+        "CBDT administers direct taxes while CBIC oversees indirect taxes in India.",
+        "The GST Council operates under Article 279A where the Centre holds 1/3 vote weight and States hold 2/3.",
+        "Tax Buoyancy greater than 1 indicates tax revenue grows faster than GDP."
+      ],
+      "id": "ie7kif5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "GST Implementation",
+          "value": "1 July 2017",
+          "icon": "calendar"
+        },
+        {
+          "label": "GST Council Article",
+          "value": "Article 279A",
+          "icon": "book"
+        },
+        {
+          "label": "Centre Vote Weight",
+          "value": "1/3",
+          "icon": "info"
+        },
+        {
+          "label": "Council Decision Majority",
+          "value": "3/4th",
+          "icon": "check"
+        }
+      ],
+      "id": "2zilbiv"
+    },
+    {
+      "type": "paragraph",
+      "content": "Tax is a compulsory contribution imposed by the government on individuals and businesses to raise revenue for public expenditure. It is not a voluntary payment and no direct benefit is guaranteed to the taxpayer.",
+      "id": "zwtc6md"
+    },
+    {
+      "type": "paragraph",
+      "content": "Objectives of Taxation:<br/>• Raise revenue for government expenditure<br/>• Reduce income inequality<br/>• Control inflation<br/>• Promote economic growth<br/>• Discourage harmful consumption (sin goods)<br/>",
+      "id": "hn5k0ni"
+    },
+    {
+      "id": "a9jlqcy",
+      "type": "heading",
+      "level": 2,
+      "content": "2. CANONS OF TAXATION (ADAM SMITH)"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Canon of Equality – Tax should be based on ability to pay.<br/>• Canon of Certainty – Tax amount and time should be clear.<br/>• Canon of Convenience – Tax should be easy to pay.<br/>• Canon of Economy – Cost of collection should be low.<br/>",
+      "id": "qxlxta9"
+    },
+    {
+      "id": "pcbw150",
+      "type": "heading",
+      "level": 2,
+      "content": "3. CLASSIFICATION OF TAXES"
+    },
+    {
+      "id": "3nb9ytb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Basis</strong></p>",
+            "<p><strong>Direct Tax</strong></p>",
+            "<p><strong>Indirect Tax</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Burden</p>",
+            "<p>Cannot be shifted</p>",
+            "<p>Can be shifted to consumer</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Examples</p>",
+            "<p>Income Tax, Corporate Tax, Capital Gains</p>",
+            "<p>GST, Customs Duty, Excise</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "umdk0a3",
+      "type": "heading",
+      "level": 2,
+      "content": "4. DIRECT TAXES IN DETAIL"
+    },
+    {
+      "type": "paragraph",
+      "content": "Income Tax:<br/>• Levied on individual income.<br/>• Progressive tax system.<br/><br/>Corporate Tax:<br/>• Levied on company profits.<br/><br/>Capital Gains Tax:<br/>• Levied on gains from sale of assets.",
+      "id": "u8zj7yx"
+    },
+    {
+      "id": "wtwezy0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Income Tax</p>",
+            "<p>Tax on individual income</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Corporate Tax</p>",
+            "<p>Tax on company profits</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Capital Gains Tax</p>",
+            "<p>Tax on sale of assets</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4njtxs8",
+      "type": "heading",
+      "level": 2,
+      "content": "5. INDIRECT TAXES IN DETAIL"
+    },
+    {
+      "type": "paragraph",
+      "content": "GST:<br/>• Implemented on 1 July 2017.<br/>• Destination-based tax.<br/>• Replaced VAT, Service Tax and many others.<br/><br/>Customs Duty:<br/>• Levied on imports and exports.<br/><br/>Excise Duty:<br/>• Levied on manufacture (petroleum, alcohol excluded from GST).",
+      "id": "r13om8p"
+    },
+    {
+      "id": "zvexx6h",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>GST</p>",
+            "<p>Goods and Services Tax</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Customs Duty</p>",
+            "<p>Tax on imports/exports</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Excise Duty</p>",
+            "<p>Tax on manufacture (selected items)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ot071k6",
+      "type": "heading",
+      "level": 2,
+      "content": "6. GST STRUCTURE"
+    },
+    {
+      "id": "lvo5ize",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Collected By</strong></p>",
+            "<p><strong>Applicable On</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>CGST</p>",
+            "<p>Central Government</p>",
+            "<p>Intra-state supply</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>SGST</p>",
+            "<p>State Government</p>",
+            "<p>Intra-state supply</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>IGST</p>",
+            "<p>Central Government</p>",
+            "<p>Inter-state supply</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Example:<br/>If goods sold within state → CGST + SGST.<br/>If goods sold between states → IGST.<br/>",
+      "id": "jfzsbsi"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Tax is a compulsory contribution imposed by the government on individuals and businesses to raise revenue for public expenditure.",
+      "id": "apfccyr"
+    },
+    {
+      "id": "3cddcs6",
+      "type": "heading",
+      "level": 2,
+      "content": "7. GST TAX SLABS"
+    },
+    {
+      "id": "txr4u9d",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Rate</strong></p>",
+            "<p><strong>Items Category</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>0%</p>",
+            "<p>Essential goods</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>5%</p>",
+            "<p>Basic necessities</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>12%</p>",
+            "<p>Processed goods</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>18%</p>",
+            "<p>Most goods &amp; services</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>28%</p>",
+            "<p>Luxury &amp; sin goods</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0tdoats",
+      "type": "heading",
+      "level": 2,
+      "content": "8. TYPES OF TAX RATES"
+    },
+    {
+      "type": "paragraph",
+      "content": "Progressive Tax – Rate increases with income.<br/>Regressive Tax – Rate decreases as income rises.<br/>Proportional Tax – Same rate for all income levels.<br/>",
+      "id": "6s37rnj"
+    },
+    {
+      "id": "mas1z92",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Progressive</p>",
+            "<p>Rate increases with income</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regressive</p>",
+            "<p>Rate decreases as income rises</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Proportional</p>",
+            "<p>Same rate for all incomes</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f4w118w",
+      "type": "heading",
+      "level": 2,
+      "content": "9. TAX ADMINISTRATION IN INDIA"
+    },
+    {
+      "type": "paragraph",
+      "content": "• CBDT – Direct taxes administration.<br/>• CBIC – Indirect taxes administration.<br/>• GST Council – Decides GST rates and structure.<br/>",
+      "id": "6w7prwo"
+    },
+    {
+      "type": "paragraph",
+      "content": "<strong>10. TAX-TO-GDP RATIO &amp; TAX BUOYANCY</strong>",
+      "id": "bar2rpk"
+    },
+    {
+      "type": "paragraph",
+      "content": "Tax-to-GDP Ratio measures tax revenue as percentage of GDP.<br/>Higher ratio indicates better revenue mobilisation.<br/><br/>Tax Buoyancy measures responsiveness of tax revenue to changes in GDP.",
+      "id": "v1eqp40"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Tax Structure",
+        "Rate Variation",
+        "Key Characteristic"
+      ],
+      "rows": [
+        [
+          "Progressive Tax",
+          "Rate increases with income",
+          "Promotes equity; higher income pays higher percentage"
+        ],
+        [
+          "Regressive Tax",
+          "Rate decreases as income rises",
+          "Higher relative burden on lower-income individuals"
+        ],
+        [
+          "Proportional Tax",
+          "Same rate for all income levels",
+          "Flat percentage tax applied uniformly across all income"
+        ]
+      ],
+      "id": "ho5cezk"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "<strong>11.ADVANCED TAX STRUCTURE ADD-ON</strong>",
+      "id": "hesulu1"
+    },
+    {
+      "id": "yk1h44p",
+      "type": "heading",
+      "level": 2,
+      "content": "1. INCOME TAX SLABS – OLD vs NEW REGIME (LATEST STRUCTURE)"
+    },
+    {
+      "type": "paragraph",
+      "content": "A. OLD TAX REGIME (with deductions allowed)",
+      "id": "p5x01us"
+    },
+    {
+      "id": "6yyujfq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Income Slab (₹)</strong></p>",
+            "<p><strong>Tax Rate</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Up to 2.5 lakh</p>",
+            "<p>Nil</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>2.5 – 5 lakh</p>",
+            "<p>5%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>5 – 10 lakh</p>",
+            "<p>20%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Above 10 lakh</p>",
+            "<p>30%</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Deductions allowed under sections like 80C, 80D, HRA etc.",
+      "id": "1h1in1v"
+    },
+    {
+      "type": "paragraph",
+      "content": "B. NEW TAX REGIME (Lower rates, fewer deductions)",
+      "id": "dkzku82"
+    },
+    {
+      "id": "sjdko60",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Income Slab (₹)</strong></p>",
+            "<p><strong>Tax Rate</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Up to 3 lakh</p>",
+            "<p>Nil</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>3 – 6 lakh</p>",
+            "<p>5%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>6 – 9 lakh</p>",
+            "<p>10%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>9 – 12 lakh</p>",
+            "<p>15%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>12 – 15 lakh</p>",
+            "<p>20%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Above 15 lakh</p>",
+            "<p>30%</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "New regime is default option (as per recent budget changes).",
+      "id": "dikg6sb"
+    },
+    {
+      "id": "s9kevuk",
+      "type": "heading",
+      "level": 2,
+      "content": "2. GST COUNCIL – STRUCTURE & VOTING PATTERN"
+    },
+    {
+      "type": "paragraph",
+      "content": "GST Council was established under Article 279A of the Constitution.",
+      "id": "452suoi"
+    },
+    {
+      "id": "2i9tpiq",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Position</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>Union Finance Minister</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Members</p>",
+            "<p>Union MoS (Finance) + State Finance Ministers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Quorum</p>",
+            "<p>50% of total members</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Decision Rule</p>",
+            "<p>75% weighted majority</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Voting Pattern:",
+      "id": "3out0lk"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "GST Council voting structure: Centre gets 1/3 weight, States get 2/3 weight, requiring 3/4th weighted majority for decisions under Article 279A.",
+        "GST was implemented on 1 July 2017 as a destination-based indirect tax.",
+        "CBDT handles Direct Taxes, while CBIC handles Indirect Taxes.",
+        "The New Tax Regime is now the default option in India's latest income tax structure."
+      ],
+      "id": "e0z7szm"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Centre’s vote weight = 1/3<br/>• States’ combined vote weight = 2/3<br/>• Decision requires 3/4th majority of weighted votes<br/>",
+      "id": "2fr8aot"
+    },
+    {
+      "id": "3oh8271",
+      "type": "heading",
+      "level": 2,
+      "content": "3. TAX BUOYANCY & TAX-TO-GDP RATIO"
+    },
+    {
+      "type": "paragraph",
+      "content": "Tax-to-GDP Ratio = (Total Tax Revenue / GDP) × 100<br/>It measures the efficiency of tax collection relative to economic size.",
+      "id": "fdt6lm9"
+    },
+    {
+      "type": "paragraph",
+      "content": "Tax Buoyancy measures responsiveness of tax revenue to changes in GDP.<br/>Formula: % Change in Tax Revenue / % Change in GDP<br/>",
+      "id": "cod3bci"
+    },
+    {
+      "type": "paragraph",
+      "content": "If Tax Buoyancy &gt; 1 → Tax revenue grows faster than GDP.<br/>If Tax Buoyancy &lt; 1 → Tax revenue grows slower than GDP.<br/>",
+      "id": "8sat5hd"
+    },
+    {
+      "id": "3ak1zks",
+      "type": "heading",
+      "level": 2,
+      "content": "RRB HIGH-VALUE POINTS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• New tax regime is default.<br/>• GST Council formed under Article 279A.<br/>• Centre has 1/3 voting power.<br/>• Tax-to-GDP ratio shows fiscal capacity.",
+      "id": "0n02ghr"
+    },
+    {
+      "type": "paragraph",
+      "content": "• GST is destination-based tax.<br/>• Direct tax burden cannot be shifted.<br/>• Progressive tax promotes equity.<br/>• GST implemented on 1 July 2017.<br/>",
+      "id": "wrvy2jy"
+    }
+  ],
+  "enriched": true
+}

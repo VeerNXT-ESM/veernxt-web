@@ -1,0 +1,56 @@
+{
+  "title": "Coordinates Example",
+  "order": 45,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Example: 28°N latitude and 77°E longitude locate Delhi.",
+      "id": "l3v5uxe"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Example: 28°N latitude and 77°E longitude locate Delhi.",
+      "id": "ao77e9i"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Latitude",
+          "value": "28°N",
+          "icon": "info"
+        },
+        {
+          "label": "Longitude",
+          "value": "77°E",
+          "icon": "clock"
+        },
+        {
+          "label": "Location",
+          "value": "Delhi",
+          "icon": "book"
+        }
+      ],
+      "id": "b755qzx"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct questions often ask for the specific geographic coordinates of major Indian cities like Delhi (28°N, 77°E).",
+        "Ensure clarity between North (N) latitude and East (E) longitude designations for Indian geographical positions."
+      ],
+      "id": "jgyinna"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Geographical coordinates are expressed using pairs of latitude and longitude.",
+        "Delhi is specifically situated at 28°N latitude.",
+        "Delhi is specifically situated at 77°E longitude."
+      ],
+      "id": "zeb6n8f"
+    }
+  ],
+  "enriched": true
+}

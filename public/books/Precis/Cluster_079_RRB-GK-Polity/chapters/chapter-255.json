@@ -1,0 +1,145 @@
+{
+  "title": "Functions of NHRC",
+  "order": 255,
+  "blocks": [
+    {
+      "id": "hrjzgel",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Function</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Investigate Violations</p>",
+            "<p>Inquire into complaints of human rights violations</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Court Intervention</p>",
+            "<p>Intervene in court proceedings involving human rights</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Inspection</p>",
+            "<p>Visit jails and detention centers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Review Safeguards</p>",
+            "<p>Examine constitutional and legal protections</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Promote Awareness</p>",
+            "<p>Encourage human rights education and research</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Recommend Compensation</p>",
+            "<p>Suggest relief to victims</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The functions of the Commission are mainly recommendatory in nature, possessing no power to punish the violators of human rights or to grant immediate relief to the victim.",
+      "id": "wmmf02u"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "National Human Rights Commission (NHRC)",
+        "State Human Rights Commission (SHRC)"
+      ],
+      "rows": [
+        [
+          "Jurisdiction",
+          "Inquires into violations related to Union and Concurrent List subjects",
+          "Inquires into violations related to State and Concurrent List subjects"
+        ],
+        [
+          "Appointing Authority",
+          "President of India (via high-powered committee)",
+          "Governor of the State (via state-level committee)"
+        ],
+        [
+          "Removal Authority",
+          "President of India",
+          "President of India (Governor has no power of removal)"
+        ],
+        [
+          "Overlapping Inquiry",
+          "Can inquire into any matter nationwide",
+          "Cannot inquire if NHRC or any other statutory commission is already investigating"
+        ]
+      ],
+      "id": "dwr55n9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "PHRA 1993",
+          "icon": "book"
+        },
+        {
+          "label": "Time Limit to Inquire",
+          "value": "1 Year",
+          "icon": "clock"
+        },
+        {
+          "label": "Nature of Function",
+          "value": "Advisory",
+          "icon": "info"
+        },
+        {
+          "label": "Legal Status",
+          "value": "Civil Court Powers",
+          "icon": "award"
+        }
+      ],
+      "id": "jqz7cbb"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Limitation Period: NHRC cannot inquire into any matter after the expiry of 1 year from the date on which the human rights violation occurred.",
+        "Armed Forces Jurisdiction: In cases of human rights violations by armed forces, NHRC can only seek a report from the Central Government and make recommendations.",
+        "Removal Distinction: While members of SHRC are appointed by the Governor, they can only be removed by the President of India, similar to NHRC members."
+      ],
+      "id": "1n8dhe2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "NHRC can inquire into human rights violations either suo motu (on its own initiative) or based on petitions submitted by victims.",
+        "The Commission possesses the powers of a civil court trying a suit under the Code of Civil Procedure, 1908.",
+        "It has the authority to visit jails and detention centers to study inmate conditions and recommend remedial measures.",
+        "NHRC reviews constitutional and legal safeguards for human rights protection and recommends effective implementation strategies.",
+        "Its functions are primarily advisory; it lacks the authority to enforce decisions, punish violators, or directly award monetary relief."
+      ],
+      "id": "h1kexo4"
+    }
+  ],
+  "enriched": true
+}

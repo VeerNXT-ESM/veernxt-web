@@ -1,0 +1,84 @@
+{
+  "title": "RRB Quick Revision Box",
+  "order": 350,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Act: TRAI Act, 1997<br/>HQ: New Delhi<br/>Statutory Body<br/>TDSAT – 2000<br/>Regulates Telecom Sector<br/>Protects Consumers",
+      "id": "4fw1n8y"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Regulates Telecom Sector",
+      "id": "7ac6wby"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Entity",
+        "Year Established",
+        "Key Role / Nature"
+      ],
+      "rows": [
+        [
+          "TRAI",
+          "1997",
+          "Statutory Regulatory Body (Regulates Telecom & Protects Consumers)"
+        ],
+        [
+          "TDSAT",
+          "2000",
+          "Dispute Settlement & Appellate Tribunal"
+        ]
+      ],
+      "id": "ayazxuv"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Act Enacted",
+          "value": "1997",
+          "icon": "calendar"
+        },
+        {
+          "label": "Headquarters",
+          "value": "New Delhi",
+          "icon": "info"
+        },
+        {
+          "label": "Legal Status",
+          "value": "Statutory Body",
+          "icon": "award"
+        },
+        {
+          "label": "TDSAT Est.",
+          "value": "2000",
+          "icon": "clock"
+        }
+      ],
+      "id": "plmkib4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "TRAI is a Statutory Body (established by TRAI Act, 1997), frequently asked in polity/current affairs questions.",
+        "TDSAT was set up in the year 2000 for telecom dispute settlement.",
+        "Headquarters location of TRAI is New Delhi."
+      ],
+      "id": "jgsydjv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "TRAI was established under the TRAI Act, 1997 as a statutory body.",
+        "The headquarters of TRAI is located in New Delhi.",
+        "TDSAT (Telecom Disputes Settlement and Appellate Tribunal) was formed in the year 2000.",
+        "The core mandate of TRAI includes regulating the telecom sector and protecting consumer interests."
+      ],
+      "id": "mz76sdy"
+    }
+  ],
+  "enriched": true
+}

@@ -48,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fcf38ug"
+      "id": "fcf38ug",
+      "content": "IRDAI (Insurance Regulatory and Development Authority of India) was established under the IRDA Act, 1999. Headquartered in Hyderabad, it regulates and promotes the insurance sector in India."
     },
     {
       "type": "pullQuote",
@@ -94,57 +95,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Sub-type</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Life Insurance</p>",
+            "<p>Term, Whole Life, Endowment, ULIP, Money-back</p>",
+            "<p>LIC, HDFC Life, SBI Life</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Health Insurance</p>",
+            "<p>Individual, Family Floater, Critical Illness</p>",
+            "<p>Star Health, Niva Bupa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Motor Insurance</p>",
+            "<p>Third Party (mandatory), Comprehensive</p>",
+            "<p>ICICI Lombard, New India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Property Insurance</p>",
+            "<p>Fire, Marine, Burglary</p>",
+            "<p>United India, Oriental</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Crop Insurance</p>",
+            "<p>PMFBY, RWBCIS</p>",
+            "<p>AIC, Private insurers</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Travel Insurance</p>",
+            "<p>Trip cancellation, medical abroad</p>",
+            "<p>Bajaj Allianz, Tata AIG</p>"
           ]
         }
       ]
@@ -162,49 +163,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Scheme</strong></p>",
+            "<p><strong>Coverage</strong></p>",
+            "<p><strong>Premium</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>PM Suraksha Bima Yojana</p>",
+            "<p>Rs.2 lakh accidental death/disability</p>",
+            "<p>Rs.20/year (revised)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>PM Jeevan Jyoti Bima Yojana</p>",
+            "<p>Rs.2 lakh life cover (death)</p>",
+            "<p>Rs.436/year</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>PM Fasal Bima Yojana (PMFBY)</p>",
+            "<p>Crop damage due to natural calamities</p>",
+            "<p>2% Kharif, 1.5% Rabi, 5% commercial</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ayushman Bharat (PMJAY)</p>",
+            "<p>Rs.5 lakh health cover per family/year</p>",
+            "<p>Fully subsidised by Govt</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ESIC (Employees State Insurance)</p>",
+            "<p>Medical, maternity, disability, death</p>",
+            "<p>Employee 0.75% + Employer 3.25% of wages</p>"
           ]
         }
       ]
@@ -226,7 +227,8 @@
     },
     {
       "type": "paragraph",
-      "id": "69h3z4w"
+      "id": "69h3z4w",
+      "content": "LIC was established in 1956 when 245 private insurance companies were nationalised. It is India's largest insurance company with HQ in Mumbai. LIC's IPO was launched in May 2022, becoming India's largest ever IPO."
     }
   ],
   "enriched": true

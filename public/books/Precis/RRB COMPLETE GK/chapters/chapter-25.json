@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "ytgdxo4"
+      "id": "ytgdxo4",
+      "content": "Latitudes are imaginary circular lines drawn parallel to the Equator. They measure angular distance north or south of the Equator in degrees."
     },
     {
       "type": "pullQuote",
@@ -107,43 +108,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Reference Line</p>",
+            "<p>Equator (0° latitude)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Range</p>",
+            "<p>0° to 90° North and 0° to 90° South</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Shape</p>",
+            "<p>Complete circles parallel to each other</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Length</p>",
+            "<p>Decrease from Equator toward the poles</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Zero Latitude</p>",
+            "<p>Equator divides Earth into Northern and Southern Hemispheres</p>"
           ]
         }
       ]

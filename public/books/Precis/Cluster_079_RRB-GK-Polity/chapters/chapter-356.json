@@ -1,0 +1,100 @@
+{
+  "title": "Powers of PFRDA (Frequently Asked)",
+  "order": 356,
+  "blocks": [
+    {
+      "id": "iuhfw3p",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Power Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regulatory</p>",
+            "<p>Registers and regulates pension funds.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Supervisory</p>",
+            "<p>Monitors performance of intermediaries.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Quasi-Judicial</p>",
+            "<p>Can impose penalties for violations.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Developmental</p>",
+            "<p>Promotes pension awareness and expansion.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "PFRDA acts as the principal regulatory body to promote old age income security by establishing, developing, and regulating pension funds.",
+      "id": "sq2jg4l"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Act Enacted",
+          "value": "2013",
+          "icon": "calendar"
+        },
+        {
+          "label": "Primary Mandate",
+          "value": "NPS Regulation",
+          "icon": "book"
+        },
+        {
+          "label": "Key Objective",
+          "value": "Subscriber Protection",
+          "icon": "award"
+        },
+        {
+          "label": "Regulated Entities",
+          "value": "CRAs & Pension Funds",
+          "icon": "check"
+        }
+      ],
+      "id": "im165jy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "PFRDA was established as a statutory regulatory body under the PFRDA Act, 2013.",
+        "Powers of search and seizure under the PFRDA Act require mandatory authorization from a Judicial Magistrate of the First Class.",
+        "PFRDA has the authority to adjudicate disputes between intermediaries and subscribers or between multiple intermediaries."
+      ],
+      "id": "t5r283o"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "PFRDA regulates the National Pension System (NPS) and other pension schemes not covered under any other central act.",
+        "Holds statutory powers to register, regulate, and oversee intermediaries like Central Recordkeeping Agencies (CRAs), Pension Funds, and Points of Presence (PoPs).",
+        "Empowered to conduct inquiries, call for information, inspect books of accounts, and perform audits of intermediaries.",
+        "Protects subscriber interests through standardizing operational rules and establishing robust grievance redressal mechanisms.",
+        "Possesses quasi-judicial powers to impose monetary penalties and initiate search and seizure procedures upon authorization."
+      ],
+      "id": "vblg246"
+    }
+  ],
+  "enriched": true
+}

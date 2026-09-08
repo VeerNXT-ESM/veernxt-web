@@ -1,0 +1,358 @@
+{
+  "id": "679q7ct",
+  "title": "Chapter 46: Banking System in India",
+  "order": 46,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "k00jwbv",
+      "content": "The banking system plays a crucial role in the economic development of a country. Banks mobilize savings from the public and provide loans for investment and development. The Indian banking system includes the Reserve Bank of India, commercial banks, regional rural banks and cooperative banks."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "RBI Established",
+          "value": "1 April 1935",
+          "icon": "calendar"
+        },
+        {
+          "label": "RBI Nationalised",
+          "value": "1949",
+          "icon": "award"
+        },
+        {
+          "label": "First Nationalisation",
+          "value": "1969 (14 Banks)",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Governing Act",
+          "value": "RBI Act, 1934",
+          "icon": "book"
+        }
+      ],
+      "id": "4immjt4"
+    },
+    {
+      "id": "0qa0qq2",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Banking"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Reserve Bank of India (RBI) serves as the supreme regulatory authority for the entire Indian monetary and banking structure.",
+        "Commercial banks are divided into Public Sector, Private Sector, Foreign, and Regional Rural Banks (RRBs).",
+        "Monetary Policy tools used by RBI to maintain liquidity and price stability include Quantitative (CRR, SLR, Repo Rate) and Qualitative controls.",
+        "Primary bank account types include Savings Account, Current Account, Fixed Deposit (FD), and Recurring Deposit (RD).",
+        "Modern digital banking operates seamlessly through transfer systems such as NEFT, RTGS, IMPS, and UPI."
+      ],
+      "id": "mus15tr"
+    },
+    {
+      "type": "paragraph",
+      "id": "lyls9ne",
+      "content": "• Banking refers to the business of accepting deposits and providing loans."
+    },
+    {
+      "type": "paragraph",
+      "id": "qln11ch",
+      "content": "• Banks act as financial intermediaries between savers and borrowers."
+    },
+    {
+      "type": "paragraph",
+      "id": "l96n188",
+      "content": "• They facilitate economic development by promoting savings and investments."
+    },
+    {
+      "id": "kadz6ai",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Structure of Banking System in India"
+    },
+    {
+      "id": "8azoagv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Bank</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Central Bank</p>",
+            "<p>Reserve Bank of India (RBI) controls monetary policy</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Commercial Banks</p>",
+            "<p>Provide banking services to the public</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regional Rural Banks</p>",
+            "<p>Provide banking facilities in rural areas</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cooperative Banks</p>",
+            "<p>Serve agricultural and rural sectors</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ztg3w0b",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Reserve Bank of India (RBI)"
+    },
+    {
+      "type": "paragraph",
+      "id": "e00c1yp",
+      "content": "The Reserve Bank of India is the central bank of the country. It was established in 1935 under the Reserve Bank of India Act, 1934."
+    },
+    {
+      "id": "sm6db0x",
+      "type": "heading",
+      "level": 3,
+      "content": "Functions of RBI"
+    },
+    {
+      "type": "paragraph",
+      "id": "h1e66ft",
+      "content": "• Issuer of currency notes."
+    },
+    {
+      "type": "paragraph",
+      "id": "dz8zs0c",
+      "content": "• Banker to the government."
+    },
+    {
+      "type": "paragraph",
+      "id": "tnhsjk8",
+      "content": "• Banker’s bank."
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Reserve Bank of India is the central bank of the country and regulates the entire banking system in India.",
+      "id": "xlwhu0j"
+    },
+    {
+      "type": "paragraph",
+      "id": "xhu8vvk",
+      "content": "• Controller of credit."
+    },
+    {
+      "type": "paragraph",
+      "id": "gmkk7g4",
+      "content": "• Custodian of foreign exchange."
+    },
+    {
+      "id": "nprbsvb",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Commercial Banks"
+    },
+    {
+      "type": "paragraph",
+      "id": "gc8zlel",
+      "content": "• Commercial banks accept deposits from the public."
+    },
+    {
+      "type": "paragraph",
+      "id": "ovi5gve",
+      "content": "• They provide loans to individuals and businesses."
+    },
+    {
+      "type": "paragraph",
+      "id": "xwef4wg",
+      "content": "• They facilitate trade and commerce."
+    },
+    {
+      "id": "87oypx8",
+      "type": "heading",
+      "level": 3,
+      "content": "Types of Commercial Banks"
+    },
+    {
+      "type": "paragraph",
+      "id": "y8rko4g",
+      "content": "• Public sector banks."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Cash Reserve Ratio (CRR)",
+        "Statutory Liquidity Ratio (SLR)"
+      ],
+      "rows": [
+        [
+          "Form of Reserve",
+          "Maintained strictly in cash form",
+          "Maintained in cash, gold, or approved unencumbered securities"
+        ],
+        [
+          "Held With",
+          "Deposited directly with the RBI",
+          "Maintained by the bank with itself"
+        ],
+        [
+          "Interest Earnings",
+          "Banks earn no interest on CRR balances",
+          "Banks earn interest from investment securities"
+        ],
+        [
+          "Primary Objective",
+          "Controls inflation and excess credit creation in the economy",
+          "Ensures bank solvency and satisfies government borrowing needs"
+        ]
+      ],
+      "id": "yfluigm"
+    },
+    {
+      "type": "paragraph",
+      "id": "7b3wy53",
+      "content": "• Private sector banks."
+    },
+    {
+      "type": "paragraph",
+      "id": "r1cirqc",
+      "content": "• Foreign banks."
+    },
+    {
+      "id": "baimjnq",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Types of Bank Accounts"
+    },
+    {
+      "id": "qt01t10",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Account Type</p>",
+            "<p>Features</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Savings Account</p>",
+            "<p>Encourages saving with interest</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Current Account</p>",
+            "<p>Used for business transactions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fixed Deposit</p>",
+            "<p>Deposits kept for fixed period with higher interest</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Recurring Deposit</p>",
+            "<p>Regular deposits over time</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tmfvw7k",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Monetary Policy"
+    },
+    {
+      "type": "paragraph",
+      "id": "fisrm45",
+      "content": "• Monetary policy refers to control of money supply by the central bank."
+    },
+    {
+      "type": "paragraph",
+      "id": "z7hrsbh",
+      "content": "• It aims to control inflation and promote economic growth."
+    },
+    {
+      "id": "hnvanff",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Modern Banking Services"
+    },
+    {
+      "type": "paragraph",
+      "id": "hau07la",
+      "content": "• Internet banking."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Hilton Young Commission (Royal Commission on Indian Currency and Finance) recommended the establishment of the Reserve Bank of India.",
+        "14 major commercial banks were nationalised on July 19, 1969, and 6 more banks were nationalised in 1980.",
+        "Cash Reserve Ratio (CRR) reserves are held with the RBI in cash form, whereas Statutory Liquidity Ratio (SLR) reserves are held with the bank itself in liquid assets."
+      ],
+      "id": "vcro3uj"
+    },
+    {
+      "type": "paragraph",
+      "id": "wy52lmo",
+      "content": "• Mobile banking."
+    },
+    {
+      "type": "paragraph",
+      "id": "mpu7was",
+      "content": "• ATM services."
+    },
+    {
+      "type": "paragraph",
+      "id": "jpvseuh",
+      "content": "• Digital payment systems."
+    },
+    {
+      "id": "g8e7at0",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "iu5t6lx",
+      "content": "• Reserve Bank of India was established in 1935."
+    },
+    {
+      "type": "paragraph",
+      "id": "85ob8ei",
+      "content": "• RBI is the central bank of India."
+    },
+    {
+      "type": "paragraph",
+      "id": "1sp9ila",
+      "content": "• Savings account is the most common bank account."
+    }
+  ],
+  "enriched": true
+}

@@ -49,7 +49,14 @@
     },
     {
       "type": "paragraph",
-      "id": "51v3luw"
+      "id": "51v3luw",
+      "content": "Work, Energy and Power are fundamental concepts of physics frequently asked in RRB exams. This chapter covers definitions, formulas, laws, units, tables and advanced exam-relevant points."
+    },
+    {
+      "id": "c3bpgp3",
+      "type": "image",
+      "imageId": "el20g6s",
+      "src": "/books/Precis/RRB GS/images/image_el20g6s.png"
     },
     {
       "id": "u523w1m",
@@ -59,29 +66,41 @@
     },
     {
       "type": "paragraph",
-      "id": "6xnuhq9"
+      "id": "6xnuhq9",
+      "content": "Work is said to be done when a force produces displacement in the direction of force."
     },
     {
       "type": "paragraph",
-      "id": "1dp6u0y"
+      "id": "1dp6u0y",
+      "content": "Formula: Work (W) = Force × Displacement × cosθ"
     },
     {
       "type": "paragraph",
-      "id": "7j6rm2x"
+      "id": "7j6rm2x",
+      "content": "If force and displacement are in same direction: W = F × s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vedohhr"
+      "id": "vedohhr",
+      "content": "SI Unit: Joule (J)"
+    },
+    {
+      "id": "p6q43mr",
+      "type": "image",
+      "imageId": "v8juuo1",
+      "src": "/books/Precis/RRB GS/images/image_v8juuo1.gif"
     },
     {
       "type": "paragraph",
-      "id": "a2yhoje"
+      "id": "a2yhoje",
+      "content": "1 Joule = 1 Newton × 1 metre"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dxebaxx"
+      "id": "dxebaxx",
+      "content": "Dimension of Work = [M¹L²T⁻²]"
     },
     {
       "id": "ycgjxj0",
@@ -96,33 +115,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Angle (θ)</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Positive Work</p>",
+            "<p>0°</p>",
+            "<p>Pulling a cart forward</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Negative Work</p>",
+            "<p>180°</p>",
+            "<p>Friction opposing motion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Zero Work</p>",
+            "<p>90°</p>",
+            "<p>Centripetal force in circular motion</p>"
           ]
         }
       ]
@@ -135,17 +154,20 @@
     },
     {
       "type": "paragraph",
-      "id": "xnyjhf3"
+      "id": "xnyjhf3",
+      "content": "Energy is the capacity to do work."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bi52ftv"
+      "id": "bi52ftv",
+      "content": "SI Unit: Joule (J)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "puhd4b9"
+      "id": "puhd4b9",
+      "content": "Dimension: [M¹L²T⁻²]"
     },
     {
       "id": "3wla3lg",
@@ -160,43 +182,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Energy</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kinetic Energy</p>",
+            "<p>Moving car</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Potential Energy</p>",
+            "<p>Water stored in dam</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thermal Energy</p>",
+            "<p>Hot object</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Electrical Energy</p>",
+            "<p>Battery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Chemical Energy</p>",
+            "<p>Fuel</p>"
           ]
         }
       ]
@@ -209,16 +231,19 @@
     },
     {
       "type": "paragraph",
-      "id": "b6me9w2"
+      "id": "b6me9w2",
+      "content": "Energy possessed by body due to motion."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "igkln00"
+      "id": "igkln00",
+      "content": "Formula: KE = ½ mv²"
     },
     {
       "type": "paragraph",
-      "id": "74ky92i"
+      "id": "74ky92i",
+      "content": "KE ∝ v² (If velocity doubles, KE becomes four times)"
     },
     {
       "id": "smhozsm",
@@ -228,11 +253,13 @@
     },
     {
       "type": "paragraph",
-      "id": "1p5bru7"
+      "id": "1p5bru7",
+      "content": "Energy possessed due to position or configuration."
     },
     {
       "type": "paragraph",
-      "id": "pfd2i2x"
+      "id": "pfd2i2x",
+      "content": "Gravitational PE near Earth: PE = mgh"
     },
     {
       "id": "fhi3oof",
@@ -248,12 +275,14 @@
     },
     {
       "type": "paragraph",
-      "id": "cfkgpt5"
+      "id": "cfkgpt5",
+      "content": "Work done by net force = Change in kinetic energy."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "corgbd7"
+      "id": "corgbd7",
+      "content": "W = ΔKE"
     },
     {
       "id": "0ge8rm5",
@@ -263,11 +292,13 @@
     },
     {
       "type": "paragraph",
-      "id": "bpknfmo"
+      "id": "bpknfmo",
+      "content": "Energy can neither be created nor destroyed, only transformed from one form to another."
     },
     {
       "type": "paragraph",
-      "id": "k04dlg7"
+      "id": "k04dlg7",
+      "content": "Total mechanical energy = KE + PE (constant if no external force)."
     },
     {
       "id": "y47syfz",
@@ -277,25 +308,30 @@
     },
     {
       "type": "paragraph",
-      "id": "i879sbv"
+      "id": "i879sbv",
+      "content": "Power is the rate of doing work."
     },
     {
       "type": "paragraph",
-      "id": "fsucao2"
+      "id": "fsucao2",
+      "content": "Formula: Power (P) = Work / Time"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "eqvqivh"
+      "id": "eqvqivh",
+      "content": "SI Unit: Watt (W)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gvkckjq"
+      "id": "gvkckjq",
+      "content": "1 Watt = 1 Joule/second"
     },
     {
       "type": "paragraph",
-      "id": "lmawkoy"
+      "id": "lmawkoy",
+      "content": "1 Horsepower (HP) = 746 Watt"
     },
     {
       "id": "xgzp6kx",
@@ -305,11 +341,13 @@
     },
     {
       "type": "paragraph",
-      "id": "yxlrzlz"
+      "id": "yxlrzlz",
+      "content": "Efficiency = (Output Work / Input Work) × 100%"
     },
     {
       "type": "paragraph",
-      "id": "9j3zsvc"
+      "id": "9j3zsvc",
+      "content": "Efficiency is always less than 100% in practical machines."
     },
     {
       "id": "12kixc9",
@@ -319,11 +357,13 @@
     },
     {
       "type": "paragraph",
-      "id": "4k6buwx"
+      "id": "4k6buwx",
+      "content": "1 kilowatt-hour (kWh) = 3.6 × 10⁶ Joules"
     },
     {
       "type": "paragraph",
-      "id": "fu60apd"
+      "id": "fu60apd",
+      "content": "Used for measuring electrical energy consumption.<img></img>"
     },
     {
       "id": "9p7uoeg",
@@ -333,15 +373,18 @@
     },
     {
       "type": "paragraph",
-      "id": "wpxme46"
+      "id": "wpxme46",
+      "content": "When force is not constant, work done equals area under Force-Displacement graph."
     },
     {
       "type": "paragraph",
-      "id": "pjwbgl9"
+      "id": "pjwbgl9",
+      "content": "Graph Concept: Area under F–s graph = Work done."
     },
     {
       "type": "paragraph",
-      "id": "7slj1hh"
+      "id": "7slj1hh",
+      "content": "This is a common RRB graphical concept question."
     },
     {
       "id": "ouf017o",
@@ -351,20 +394,24 @@
     },
     {
       "type": "paragraph",
-      "id": "s6h1y3n"
+      "id": "s6h1y3n",
+      "content": "When a spring is stretched or compressed, work is stored as elastic potential energy."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0f9clok"
+      "id": "0f9clok",
+      "content": "Formula: PE = ½ kx² "
     },
     {
       "type": "paragraph",
-      "id": "l5k1v1d"
+      "id": "l5k1v1d",
+      "content": "k = Spring constant, x = displacement<img></img>"
     },
     {
       "type": "paragraph",
-      "id": "ttqayc2"
+      "id": "ttqayc2",
+      "content": "Energy stored ∝ square of extension"
     },
     {
       "id": "g8s2879",
@@ -379,33 +426,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Conservative Force</strong></p>",
+            "<p><strong>Non-Conservative Force</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Work depends on</p>",
+            "<p>Initial &amp; final position</p>",
+            "<p>Path followed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mechanical Energy</p>",
+            "<p>Conserved</p>",
+            "<p>Not conserved</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Example</p>",
+            "<p>Gravitational force</p>",
+            "<p>Friction</p>"
           ]
         }
       ]
@@ -419,21 +466,19 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "342ix1t"
+      "id": "342ix1t",
+      "content": "KE = p² / (2m)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5ogeazd"
+      "id": "5ogeazd",
+      "content": "Where p = momentum"
     },
     {
       "type": "paragraph",
-      "id": "yfa9uui"
-    },
-    {
-      "type": "pullQuote",
-      "content": "LAW OF CONSERVATION OF ENERGY",
-      "id": "engr7qv"
+      "id": "yfa9uui",
+      "content": "This formula is often used in advanced RRB numericals."
     },
     {
       "id": "olo13eq",
@@ -443,15 +488,18 @@
     },
     {
       "type": "paragraph",
-      "id": "0ew0u0n"
+      "id": "0ew0u0n",
+      "content": "Stopping distance ∝ square of velocity."
     },
     {
       "type": "paragraph",
-      "id": "8fx5rge"
+      "id": "8fx5rge",
+      "content": "If speed doubles, stopping distance becomes four times."
     },
     {
       "type": "paragraph",
-      "id": "nukeb53"
+      "id": "nukeb53",
+      "content": "Based on Work-Energy Theorem."
     },
     {
       "id": "akjcm6y",
@@ -461,15 +509,18 @@
     },
     {
       "type": "paragraph",
-      "id": "0c7zu9z"
+      "id": "0c7zu9z",
+      "content": "Average Power = Total work / Total time"
     },
     {
       "type": "paragraph",
-      "id": "q588epq"
+      "id": "q588epq",
+      "content": "Instantaneous Power = Force × Velocity"
     },
     {
       "type": "paragraph",
-      "id": "ck3ctbt"
+      "id": "ck3ctbt",
+      "content": "P = Fv (when force and velocity are in same direction)"
     },
     {
       "id": "1j8iq2d",
@@ -479,15 +530,18 @@
     },
     {
       "type": "paragraph",
-      "id": "dnp7ddh"
+      "id": "dnp7ddh",
+      "content": "Efficiency = (Useful output energy / Input energy) × 100%"
     },
     {
       "type": "paragraph",
-      "id": "1myqv6u"
+      "id": "1myqv6u",
+      "content": "No machine can have efficiency greater than 100%."
     },
     {
       "type": "paragraph",
-      "id": "d1b51mp"
+      "id": "d1b51mp",
+      "content": "Losses occur due to friction and heat."
     },
     {
       "id": "qq934tb",
@@ -497,23 +551,28 @@
     },
     {
       "type": "paragraph",
-      "id": "de3e1ed"
+      "id": "de3e1ed",
+      "content": "• In circular motion, centripetal force does zero work."
     },
     {
       "type": "paragraph",
-      "id": "r09mezx"
+      "id": "r09mezx",
+      "content": "• KE depends on mass and square of velocity."
     },
     {
       "type": "paragraph",
-      "id": "6oqqfs5"
+      "id": "6oqqfs5",
+      "content": "• If speed doubles, KE becomes 4 times."
     },
     {
       "type": "paragraph",
-      "id": "ul0ru55"
+      "id": "ul0ru55",
+      "content": "• Power = Force × Velocity (when force and velocity are in same direction)."
     },
     {
       "type": "paragraph",
-      "id": "oonmn6s"
+      "id": "oonmn6s",
+      "content": "• Mechanical Energy = KE + PE."
     },
     {
       "id": "jrlmk96",
@@ -529,44 +588,53 @@
     },
     {
       "type": "paragraph",
-      "id": "fbw3gmp"
+      "id": "fbw3gmp",
+      "content": "A force of 25 N moves a body through 4 m in the direction of force. The work done is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fnx0usj"
+      "id": "fnx0usj",
+      "content": "A) 50 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "olwshh3"
+      "id": "olwshh3",
+      "content": "B) 75 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "aqh5fmw"
+      "id": "aqh5fmw",
+      "content": "C) 100 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d6f5f96"
+      "id": "d6f5f96",
+      "content": "D) 125 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "spgqm9e"
+      "id": "spgqm9e",
+      "content": "<br></br>Correct Answer: C (100 J)"
     },
     {
       "type": "paragraph",
-      "id": "keik9gj"
+      "id": "keik9gj",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "1nax5ia"
+      "id": "1nax5ia",
+      "content": "Step 1: Use formula of work."
     },
     {
       "type": "paragraph",
-      "id": "zwuuvvn"
+      "id": "zwuuvvn",
+      "content": "Work (W) = Force × Displacement"
     },
     {
       "type": "comparisonTable",
@@ -601,25 +669,30 @@
     },
     {
       "type": "paragraph",
-      "id": "vfje1al"
+      "id": "vfje1al",
+      "content": "Step 2: Substitute values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2efnzey"
+      "id": "2efnzey",
+      "content": "W = 25 × 4"
     },
     {
       "type": "paragraph",
-      "id": "nq64n7k"
+      "id": "nq64n7k",
+      "content": "Step 3: Multiply carefully."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ll6rv2n"
+      "id": "ll6rv2n",
+      "content": "W = 100 Joule"
     },
     {
       "type": "paragraph",
-      "id": "0kavx1z"
+      "id": "0kavx1z",
+      "content": "Unit Check: Newton × metre = Joule"
     },
     {
       "id": "oke0z6s",
@@ -629,67 +702,81 @@
     },
     {
       "type": "paragraph",
-      "id": "3gvz3aw"
+      "id": "3gvz3aw",
+      "content": "The kinetic energy of a 2 kg body moving with velocity 10 m/s is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jjyrurp"
+      "id": "jjyrurp",
+      "content": "A) 50 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "czxvrjr"
+      "id": "czxvrjr",
+      "content": "B) 100 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xwa5y90"
+      "id": "xwa5y90",
+      "content": "C) 200 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vlgh44x"
+      "id": "vlgh44x",
+      "content": "D) 400 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tpq8060"
+      "id": "tpq8060",
+      "content": "<br></br>Correct Answer: B (100 J)"
     },
     {
       "type": "paragraph",
-      "id": "q1c31e0"
+      "id": "q1c31e0",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "f4xq5fs"
+      "id": "f4xq5fs",
+      "content": "Step 1: Formula of kinetic energy."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "h942125"
+      "id": "h942125",
+      "content": "KE = ½ mv²"
     },
     {
       "type": "paragraph",
-      "id": "j458ssu"
+      "id": "j458ssu",
+      "content": "Step 2: Substitute values."
     },
     {
       "type": "paragraph",
-      "id": "9ijcg1r"
+      "id": "9ijcg1r",
+      "content": "KE = ½ × 2 × (10)²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hv24iv1"
+      "id": "hv24iv1",
+      "content": "KE = 1 × 100"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "el448ui"
+      "id": "el448ui",
+      "content": "KE = 100 Joule"
     },
     {
       "type": "paragraph",
-      "id": "2wqwpzf"
+      "id": "2wqwpzf",
+      "content": "Note: KE depends on square of velocity."
     },
     {
       "id": "e1cqpbk",
@@ -699,62 +786,75 @@
     },
     {
       "type": "paragraph",
-      "id": "zerf2cg"
+      "id": "zerf2cg",
+      "content": "A 5 kg object is lifted to a height of 8 m (g = 10 m/s²). The potential energy gained is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "iasxm1x"
+      "id": "iasxm1x",
+      "content": "A) 200 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "23kby4s"
+      "id": "23kby4s",
+      "content": "B) 300 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "duiwp0o"
+      "id": "duiwp0o",
+      "content": "C) 400 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4i5rw71"
+      "id": "4i5rw71",
+      "content": "D) 500 J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dkyyyy0"
+      "id": "dkyyyy0",
+      "content": "<br></br>Correct Answer: C (400 J)"
     },
     {
       "type": "paragraph",
-      "id": "px4b5tx"
+      "id": "px4b5tx",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "shqeraq"
+      "id": "shqeraq",
+      "content": "Step 1: Use formula of gravitational potential energy."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hj8upyy"
+      "id": "hj8upyy",
+      "content": "PE = mgh"
     },
     {
       "type": "paragraph",
-      "id": "80yfhk1"
+      "id": "80yfhk1",
+      "content": "Step 2: Substitute values."
     },
     {
       "type": "paragraph",
-      "id": "x4quemm"
+      "id": "x4quemm",
+      "content": "PE = 5 × 10 × 8"
     },
     {
       "type": "paragraph",
-      "id": "r6nyrbm"
+      "id": "r6nyrbm",
+      "content": "Step 3: Multiply."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3oa2e81"
+      "id": "3oa2e81",
+      "content": "PE = 400 Joule"
     },
     {
       "id": "6vbchpb",
@@ -764,17 +864,20 @@
     },
     {
       "type": "paragraph",
-      "id": "r6nnwya"
+      "id": "r6nnwya",
+      "content": "A machine does 500 J of work in 10 seconds. Its power is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "xghu2fa"
+      "id": "xghu2fa",
+      "content": "A) 5 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qwbrcgn"
+      "id": "qwbrcgn",
+      "content": "B) 50 W"
     },
     {
       "type": "examAlert",
@@ -788,52 +891,63 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "2ngolb5"
+      "id": "2ngolb5",
+      "content": "C) 500 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "p9r9fwc"
+      "id": "p9r9fwc",
+      "content": "D) 5000 W"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uw210q8"
+      "id": "uw210q8",
+      "content": "<br></br>Correct Answer: B (50 W)"
     },
     {
       "type": "paragraph",
-      "id": "gmlmtcx"
+      "id": "gmlmtcx",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "q5gxznj"
+      "id": "q5gxznj",
+      "content": "Step 1: Use formula of power."
     },
     {
       "type": "paragraph",
-      "id": "h903oga"
+      "id": "h903oga",
+      "content": "Power (P) = Work / Time"
     },
     {
       "type": "paragraph",
-      "id": "oyh07mh"
+      "id": "oyh07mh",
+      "content": "Step 2: Substitute values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3ymhnaz"
+      "id": "3ymhnaz",
+      "content": "P = 500 / 10"
     },
     {
       "type": "paragraph",
-      "id": "tghtni2"
+      "id": "tghtni2",
+      "content": "Step 3: Divide."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g10jsby"
+      "id": "g10jsby",
+      "content": "P = 50 Watt"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2q21o87"
+      "id": "2q21o87",
+      "content": "Unit: Joule/second = Watt"
     },
     {
       "id": "qwq1dtd",
@@ -843,54 +957,65 @@
     },
     {
       "type": "paragraph",
-      "id": "2e0b9ol"
+      "id": "2e0b9ol",
+      "content": "1 kWh of energy is equal to:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d22h3pk"
+      "id": "d22h3pk",
+      "content": "A) 3.6 × 10³ J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yl3qy67"
+      "id": "yl3qy67",
+      "content": "B) 3.6 × 10⁴ J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "forrp40"
+      "id": "forrp40",
+      "content": "C) 3.6 × 10⁵ J"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yuz2pti"
+      "id": "yuz2pti",
+      "content": "D) 3.6 × 10⁶ J"
     },
     {
       "type": "paragraph",
-      "id": "2ugyp0d"
+      "id": "2ugyp0d",
+      "content": "<br></br>Correct Answer: D (3.6 × 10⁶ J)"
     },
     {
       "type": "paragraph",
-      "id": "fw8ul7f"
+      "id": "fw8ul7f",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "rgznjt4"
+      "id": "rgznjt4",
+      "content": "1 kWh = 1000 Watt × 3600 seconds"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m8did66"
+      "id": "m8did66",
+      "content": "= 1000 × 3600 Joule"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kh4i1bg"
+      "id": "kh4i1bg",
+      "content": "= 3,600,000 Joule"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "src7c4f"
+      "id": "src7c4f",
+      "content": "= 3.6 × 10⁶ J"
     }
   ],
   "enriched": true

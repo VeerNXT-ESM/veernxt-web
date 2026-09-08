@@ -1,0 +1,126 @@
+{
+  "title": "Tenure and Age Limit",
+  "order": 386,
+  "blocks": [
+    {
+      "id": "0vp5hlc",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Post</strong></p>",
+            "<p><strong>Tenure</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chairperson</p>",
+            "<p>5 years or 70 years of age</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Members</p>",
+            "<p>5 years or 67 years of age</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Constitutional authorities like the CAG, UPSC Chairman, and Chief Election Commissioner serve for a term of 6 years or until reaching 65 years of age, whichever is earlier.",
+      "id": "fpoczde"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Office / Position",
+        "Minimum Age",
+        "Tenure / Retirement Age"
+      ],
+      "rows": [
+        [
+          "President / Vice-President / Governor",
+          "35 Years",
+          "5 Years (President/VP) / Pleasure of President (Governor)"
+        ],
+        [
+          "Rajya Sabha Member",
+          "30 Years",
+          "6 Years (1/3rd retire every 2 years)"
+        ],
+        [
+          "Lok Sabha Member",
+          "25 Years",
+          "5 Years"
+        ],
+        [
+          "CAG / CEC / UPSC Chairman",
+          "No Minimum Age specified",
+          "6 Years or 65 Years of age"
+        ],
+        [
+          "Supreme Court Judge",
+          "No Minimum Age specified",
+          "Until age of 65 Years"
+        ],
+        [
+          "High Court Judge",
+          "No Minimum Age specified",
+          "Until age of 62 Years"
+        ]
+      ],
+      "id": "86267kj"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Supreme Court Retirement Age",
+          "value": "65 Years",
+          "icon": "award"
+        },
+        {
+          "label": "High Court Retirement Age",
+          "value": "62 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "CAG & CEC Service Tenure",
+          "value": "6 Years / 65 Age",
+          "icon": "calendar"
+        },
+        {
+          "label": "President Minimum Age",
+          "value": "35 Years",
+          "icon": "check"
+        }
+      ],
+      "id": "fwx5jut"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "High Court judges retire at 62 years, while Supreme Court judges retire at 65 years.",
+        "The tenure for CAG and Chief Election Commissioner is 6 years or up to 65 years of age, whichever comes first.",
+        "Minimum age eligibility for Rajya Sabha is 30 years, whereas for Lok Sabha it is 25 years."
+      ],
+      "id": "yyiry9t"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Constitutional authorities like the CAG, UPSC Chairman, and Chief Election Commissioner serve for a term of 6 years or until reaching 65 years of age, whichever is earlier.",
+        "The retirement age for Supreme Court judges is 65 years, whereas for High Court judges, it is 62 years.",
+        "The minimum age requirement to contest elections for President, Vice-President, and Governor is 35 years.",
+        "The minimum age eligible to become a member of the Lok Sabha is 25 years, whereas for the Rajya Sabha, it is 30 years."
+      ],
+      "id": "jjupylb"
+    }
+  ],
+  "enriched": true
+}

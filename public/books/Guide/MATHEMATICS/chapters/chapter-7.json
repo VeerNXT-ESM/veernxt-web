@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "a6qzsz6"
+      "id": "a6qzsz6",
+      "content": "TIME, SPEED &amp; DISTANCE + BASIC MENSURATION + BASIC DATA INTERPRETATION <br></br>"
     },
     {
       "type": "statStrip",
@@ -52,7 +53,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6nso2go"
+      "id": "6nso2go",
+      "content": "Speed = Distance / Time<br></br>Distance = Speed × Time<br></br>Time = Distance / Speed<br></br><br></br>SSC questions from this area are direct and calculation-light."
     },
     {
       "id": "ts5qgkt",
@@ -62,7 +64,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ai3m80g"
+      "id": "ai3m80g",
+      "content": "1 km/hr = 5/18 m/s<br></br>1 m/s = 18/5 km/hr<br></br><br></br>Example:<br></br>36 km/hr = 36 × 5/18 = 10 m/s"
     },
     {
       "id": "qq8qro2",
@@ -72,7 +75,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0w8aauq"
+      "id": "0w8aauq",
+      "content": "For equal distance:<br></br>Average speed = (2xy)/(x+y)<br></br><br></br>Example:<br></br>40 km/hr and 60 km/hr<br></br>Average speed = 48 km/hr"
     },
     {
       "id": "zd5vo68",
@@ -82,7 +86,8 @@
     },
     {
       "type": "paragraph",
-      "id": "jh7pepw"
+      "id": "jh7pepw",
+      "content": "Same direction: Difference of speeds<br></br>Opposite direction: Sum of speeds<br></br><br></br>Example:<br></br>50 km/hr and 70 km/hr (opposite)<br></br>Relative speed = 120 km/hr"
     },
     {
       "type": "pullQuote",
@@ -97,7 +102,8 @@
     },
     {
       "type": "paragraph",
-      "id": "9p2nnv3"
+      "id": "9p2nnv3",
+      "content": "Time to cross an object = Length / Relative speed<br></br><br></br>Example:<br></br>Train length = 100 m, time = 10 s<br></br>Speed = 10 m/s"
     },
     {
       "id": "bp61su3",
@@ -113,11 +119,13 @@
     },
     {
       "type": "paragraph",
-      "id": "roqu9a3"
+      "id": "roqu9a3",
+      "content": "Square:<br></br>Area = a², Perimeter = 4a<br></br><br></br>Rectangle:<br></br>Area = l × b, Perimeter = 2(l+b)<br></br><br></br>Circle:<br></br>Area = πr², Circumference = 2πr"
     },
     {
       "type": "paragraph",
-      "id": "y7vy1o2"
+      "id": "y7vy1o2",
+      "content": "Example:<br></br>Radius = 7 cm<br></br>Area = 154 cm²"
     },
     {
       "type": "comparisonTable",
@@ -153,11 +161,13 @@
     },
     {
       "type": "paragraph",
-      "id": "g0jfahe"
+      "id": "g0jfahe",
+      "content": "Cube:<br></br>Volume = a³, TSA = 6a²<br></br><br></br>Cuboid:<br></br>Volume = l × b × h<br></br><br></br>Cylinder:<br></br>Volume = πr²h"
     },
     {
       "type": "paragraph",
-      "id": "krsgft5"
+      "id": "krsgft5",
+      "content": "Example:<br></br>Cube side = 5 cm<br></br>Volume = 125 cm³"
     },
     {
       "id": "b5ys3me",
@@ -173,7 +183,8 @@
     },
     {
       "type": "paragraph",
-      "id": "2uh82pk"
+      "id": "2uh82pk",
+      "content": "SSC DI questions are simple and based on totals and averages."
     },
     {
       "id": "zuljgxd",
@@ -182,50 +193,51 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Subject</strong></p>",
+            "<p><strong>Marks</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Maths</p>",
+            "<p>60</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>English</p>",
+            "<p>70</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Science</p>",
+            "<p>80</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>History</p>",
+            "<p>50</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Geography</p>",
+            "<p>40</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "d99vsbp"
+      "id": "d99vsbp",
+      "content": "Total marks = 300<br></br>Average marks = TOTAL MARKS/ TOTAL NUMBER OF SUBJECTS"
     },
     {
       "type": "examAlert",
@@ -239,12 +251,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "mjba4c5"
+      "id": "mjba4c5",
+      "content": "                                  300/5 = 60"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "r2c329k"
+      "id": "r2c329k",
+      "content": "ANSWER : 60"
     },
     {
       "id": "785qy4h",
@@ -254,7 +268,8 @@
     },
     {
       "type": "paragraph",
-      "id": "4d2rzl6"
+      "id": "4d2rzl6",
+      "content": "Q1. Convert 54 km/hr into m/s.<br></br>A. 12   B. 13   C. 14   D. 15<br></br><br></br>Q2. Find area of square of side 10 cm.<br></br>A. 100   B. 200   C. 300   D. 400<br></br><br></br>Q3. A train travels 120 km in 3 hours. Find its speed.<br></br>A. 30   B. 40   C. 50   D. 60"
     },
     {
       "id": "6fxhtji",
@@ -265,7 +280,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "8itdoy4"
+      "id": "8itdoy4",
+      "content": "Q1. D<br></br>Q2. A<br></br>Q3. B"
     }
   ],
   "enriched": true

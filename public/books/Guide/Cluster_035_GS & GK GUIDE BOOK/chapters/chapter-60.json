@@ -1,0 +1,404 @@
+{
+  "id": "xowfbfm",
+  "title": "Chapter 11: Metals and Non-metals",
+  "order": 60,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "fcersym",
+      "content": "Metals and non-metals are two major categories of elements found in nature. They differ in their physical and chemical properties. Metals are generally good conductors of heat and electricity, while non-metals usually act as poor conductors. Understanding their properties helps in identifying their uses in industries and daily life."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Subject",
+          "value": "Metals & Non-metals",
+          "icon": "book"
+        },
+        {
+          "label": "Major Sections",
+          "value": "8 Topics",
+          "icon": "calendar"
+        },
+        {
+          "label": "Primary Focus",
+          "value": "Reactivity Series",
+          "icon": "award"
+        },
+        {
+          "label": "Practical Application",
+          "value": "Metal Extraction",
+          "icon": "info"
+        }
+      ],
+      "id": "jfvfxvh"
+    },
+    {
+      "id": "0cri5o7",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Metals"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Metals and non-metals are distinguished by distinct physical traits like malleability, ductility, and electrical conductivity.",
+        "Chemical classification shows metals typically form basic oxides while non-metals form acidic or neutral oxides.",
+        "The Reactivity Series ranks metals in decreasing order of their chemical activity.",
+        "The methods for extraction of metals depend directly on their position in the reactivity series."
+      ],
+      "id": "6n537tn"
+    },
+    {
+      "type": "paragraph",
+      "id": "jll45kl",
+      "content": "• Metals are elements that are generally hard, shiny and good conductors of heat and electricity."
+    },
+    {
+      "type": "paragraph",
+      "id": "k754hmf",
+      "content": "• They are usually solid at room temperature (except mercury)."
+    },
+    {
+      "type": "paragraph",
+      "id": "3uj3497",
+      "content": "• Examples: Iron, Copper, Aluminium, Gold, Silver."
+    },
+    {
+      "id": "vd4rcdr",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Physical Properties of Metals"
+    },
+    {
+      "id": "1zs4ol9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lustre</p>",
+            "<p>Metals have shiny surfaces.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Malleability</p>",
+            "<p>Metals can be hammered into thin sheets.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ductility</p>",
+            "<p>Metals can be drawn into wires.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Conductivity</p>",
+            "<p>Good conductors of heat and electricity.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>High melting point</p>",
+            "<p>Most metals have high melting points.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "x5bzdh3",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Chemical Properties of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "bmuqe5w",
+      "content": "• Metals react with oxygen to form metal oxides."
+    },
+    {
+      "type": "paragraph",
+      "id": "u2usq4h",
+      "content": "• Metals react with water to produce hydrogen gas."
+    },
+    {
+      "type": "paragraph",
+      "id": "dugw076",
+      "content": "• Metals react with acids to produce hydrogen gas."
+    },
+    {
+      "type": "paragraph",
+      "id": "9o28ynw",
+      "content": "• Metals lose electrons to form positive ions."
+    },
+    {
+      "id": "pt1rj3v",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Non-metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "hbvv99j",
+      "content": "• Non-metals are elements that are generally dull and poor conductors of heat and electricity."
+    },
+    {
+      "type": "paragraph",
+      "id": "xlag2wk",
+      "content": "• They may exist in solid, liquid or gaseous state."
+    },
+    {
+      "type": "paragraph",
+      "id": "vrcx65m",
+      "content": "• Examples: Oxygen, Nitrogen, Carbon, Sulfur."
+    },
+    {
+      "id": "y3u8yta",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Physical Properties of Non-metals"
+    },
+    {
+      "id": "qbose7q",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>No lustre</p>",
+            "<p>Non-metals are generally dull.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Brittle</p>",
+            "<p>They break easily when hammered.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Poor conductors</p>",
+            "<p>Bad conductors of heat and electricity.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Low melting points</p>",
+            "<p>Most non-metals have lower melting points.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2ce0to3",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Chemical Properties of Non-metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "160tr5d",
+      "content": "• Non-metals react with oxygen to form non-metal oxides."
+    },
+    {
+      "type": "paragraph",
+      "id": "py8uc6y",
+      "content": "• Non-metals gain electrons to form negative ions."
+    },
+    {
+      "type": "paragraph",
+      "id": "emal2ew",
+      "content": "• They usually do not react with acids."
+    },
+    {
+      "id": "o3lqw4c",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Reactivity Series of Metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "2o63cht",
+      "content": "The reactivity series is a list of metals arranged in decreasing order of reactivity."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4jsjxvv",
+      "content": "• Potassium"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Metals",
+        "Non-metals"
+      ],
+      "rows": [
+        [
+          "Physical State",
+          "Solids at room temperature (except Mercury)",
+          "Solids, liquids (Bromine), or gases"
+        ],
+        [
+          "Conductivity",
+          "Good conductors of heat and electricity",
+          "Poor conductors (except Graphite)"
+        ],
+        [
+          "Malleability & Ductility",
+          "Malleable and ductile",
+          "Brittle and non-ductile"
+        ],
+        [
+          "Nature of Oxides",
+          "Basic or amphoteric oxides",
+          "Acidic or neutral oxides"
+        ]
+      ],
+      "id": "unu680h"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "myudxof",
+      "content": "• Sodium"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ngaoyne",
+      "content": "• Calcium"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "e7dnz1q",
+      "content": "• Magnesium"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9egpfyo",
+      "content": "• Aluminium"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vqboiu2",
+      "content": "• Zinc"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u3nahm5",
+      "content": "• Iron"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "p9f7mqz",
+      "content": "• Lead"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jh8ella",
+      "content": "• Copper"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ac9e8d9",
+      "content": "• Silver"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wxcvi40",
+      "content": "• Gold"
+    },
+    {
+      "id": "2wjijzh",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Extraction of Metals"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exceptions in physical properties (e.g., liquid metal Mercury, lustrous non-metal Iodine, soft metals Sodium/Potassium) are highly tested.",
+        "Order of elements in the Reactivity Series and displacement reactions frequently appear in multiple-choice questions.",
+        "Distinction between roasting (in presence of air) and calcination (in limited air) is a standard topic in metallurgical questions."
+      ],
+      "id": "tvekuaw"
+    },
+    {
+      "type": "paragraph",
+      "id": "6c1rie7",
+      "content": "• Highly reactive metals are extracted by electrolysis."
+    },
+    {
+      "type": "paragraph",
+      "id": "25np5p5",
+      "content": "• Moderately reactive metals are extracted by reduction using carbon."
+    },
+    {
+      "type": "paragraph",
+      "id": "686ubdi",
+      "content": "• Less reactive metals are often found in free state."
+    },
+    {
+      "id": "41xl5wv",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "vetec0y",
+      "content": "• Metals are good conductors of heat and electricity."
+    },
+    {
+      "type": "paragraph",
+      "id": "qse6dor",
+      "content": "• Non-metals are generally poor conductors."
+    },
+    {
+      "type": "paragraph",
+      "id": "l23gis3",
+      "content": "• Mercury is the only metal that is liquid at room temperature."
+    },
+    {
+      "type": "paragraph",
+      "id": "wa3tg06",
+      "content": "• Gold and silver are least reactive metals."
+    }
+  ],
+  "enriched": true
+}

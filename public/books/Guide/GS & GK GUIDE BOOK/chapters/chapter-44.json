@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "pakazh0"
+      "id": "pakazh0",
+      "content": "Agriculture is the backbone of the Indian economy. A large portion of India's population depends on agriculture for livelihood. Agriculture not only provides food for the population but also supplies raw materials to many industries such as textiles, sugar and food processing."
     },
     {
       "type": "statStrip",
@@ -53,23 +54,28 @@
     },
     {
       "type": "paragraph",
-      "id": "demex71"
+      "id": "demex71",
+      "content": "• Agriculture provides employment to a large part of India's population."
     },
     {
       "type": "paragraph",
-      "id": "tvh8hqq"
+      "id": "tvh8hqq",
+      "content": "• It contributes significantly to the national income."
     },
     {
       "type": "paragraph",
-      "id": "k4d2mik"
+      "id": "k4d2mik",
+      "content": "• It supplies raw materials to industries such as cotton, sugar and jute industries."
     },
     {
       "type": "paragraph",
-      "id": "spe11x0"
+      "id": "spe11x0",
+      "content": "• It ensures food security for the country."
     },
     {
       "type": "paragraph",
-      "id": "p3oqqfj"
+      "id": "p3oqqfj",
+      "content": "• It plays an important role in India's export earnings."
     },
     {
       "id": "b0lfr42",
@@ -84,33 +90,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Season</strong></p>",
+            "<p><strong>Time Period</strong></p>",
+            "<p><strong>Major Crops</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kharif</p>",
+            "<p>June – October</p>",
+            "<p>Rice, Maize, Cotton, Sugarcane</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rabi</p>",
+            "<p>October – March</p>",
+            "<p>Wheat, Barley, Mustard, Gram</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Zaid</p>",
+            "<p>March – June</p>",
+            "<p>Watermelon, Muskmelon, Vegetables</p>"
           ]
         }
       ]
@@ -128,41 +134,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Crop</strong></p>",
+            "<p><strong>Major Producing States</strong></p>",
+            "<p><strong>Climate Requirement</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rice</p>",
+            "<p>West Bengal, Uttar Pradesh, Punjab</p>",
+            "<p>High rainfall and warm climate</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Wheat</p>",
+            "<p>Punjab, Haryana, Uttar Pradesh</p>",
+            "<p>Cool climate during growth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Maize</p>",
+            "<p>Karnataka, Bihar, Madhya Pradesh</p>",
+            "<p>Moderate rainfall</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Millets</p>",
+            "<p>Rajasthan, Maharashtra</p>",
+            "<p>Dry climate</p>"
           ]
         }
       ]
@@ -180,49 +186,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Crop</strong></p>",
+            "<p><strong>Major States</strong></p>",
+            "<p><strong>Uses</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cotton</p>",
+            "<p>Maharashtra, Gujarat</p>",
+            "<p>Textile industry</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sugarcane</p>",
+            "<p>Uttar Pradesh, Maharashtra</p>",
+            "<p>Sugar production</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Jute</p>",
+            "<p>West Bengal</p>",
+            "<p>Jute industry</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tea</p>",
+            "<p>Assam, West Bengal</p>",
+            "<p>Beverage crop</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Coffee</p>",
+            "<p>Karnataka, Kerala</p>",
+            "<p>Beverage crop</p>"
           ]
         }
       ]
@@ -240,15 +246,18 @@
     },
     {
       "type": "paragraph",
-      "id": "hm2fa83"
+      "id": "hm2fa83",
+      "content": "• Subsistence Farming – Farmers grow crops mainly for their own consumption."
     },
     {
       "type": "paragraph",
-      "id": "1ge610d"
+      "id": "1ge610d",
+      "content": "• Commercial Farming – Crops are grown for sale in markets."
     },
     {
       "type": "paragraph",
-      "id": "npb4ois"
+      "id": "npb4ois",
+      "content": "• Plantation Farming – Large-scale farming of crops like tea, coffee and rubber."
     },
     {
       "id": "4mkkl0q",
@@ -258,15 +267,18 @@
     },
     {
       "type": "paragraph",
-      "id": "cjopeme"
+      "id": "cjopeme",
+      "content": "• The Green Revolution began in India in the 1960s."
     },
     {
       "type": "paragraph",
-      "id": "ugft805"
+      "id": "ugft805",
+      "content": "• It introduced high-yielding variety (HYV) seeds."
     },
     {
       "type": "paragraph",
-      "id": "j71mbs5"
+      "id": "j71mbs5",
+      "content": "• It increased agricultural production significantly."
     },
     {
       "type": "comparisonTable",
@@ -301,7 +313,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bxiattg"
+      "id": "bxiattg",
+      "content": "• Punjab, Haryana and western Uttar Pradesh benefited the most."
     },
     {
       "id": "q6g8hjq",
@@ -316,36 +329,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Source</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Canals</p>",
+            "<p>Water supplied through artificial channels</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wells and Tube wells</p>",
+            "<p>Groundwater irrigation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Tanks</p>",
+            "<p>Water stored in reservoirs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sprinkler and drip irrigation</p>",
+            "<p>Modern irrigation techniques</p>"
           ]
         }
       ]
@@ -358,19 +371,23 @@
     },
     {
       "type": "paragraph",
-      "id": "s5ddw1b"
+      "id": "s5ddw1b",
+      "content": "• Small land holdings."
     },
     {
       "type": "paragraph",
-      "id": "d4e34ak"
+      "id": "d4e34ak",
+      "content": "• Dependence on monsoon."
     },
     {
       "type": "paragraph",
-      "id": "z9k117s"
+      "id": "z9k117s",
+      "content": "• Low productivity."
     },
     {
       "type": "paragraph",
-      "id": "gt75ljy"
+      "id": "gt75ljy",
+      "content": "• Lack of modern technology."
     },
     {
       "id": "mhuhe28",
@@ -389,15 +406,18 @@
     },
     {
       "type": "paragraph",
-      "id": "xsjbv5p"
+      "id": "xsjbv5p",
+      "content": "• Pradhan Mantri Fasal Bima Yojana – crop insurance scheme."
     },
     {
       "type": "paragraph",
-      "id": "apwtxcg"
+      "id": "apwtxcg",
+      "content": "• Soil Health Card Scheme – improves soil fertility."
     },
     {
       "type": "paragraph",
-      "id": "a3ji723"
+      "id": "a3ji723",
+      "content": "• Pradhan Mantri Krishi Sinchai Yojana – irrigation development."
     },
     {
       "id": "xtd3ngv",
@@ -407,15 +427,18 @@
     },
     {
       "type": "paragraph",
-      "id": "tjbykyr"
+      "id": "tjbykyr",
+      "content": "• Kharif crops are sown with the onset of monsoon."
     },
     {
       "type": "paragraph",
-      "id": "2tcedp8"
+      "id": "2tcedp8",
+      "content": "• Punjab and Haryana benefited most from Green Revolution."
     },
     {
       "type": "paragraph",
-      "id": "gk4l47e"
+      "id": "gk4l47e",
+      "content": "• Rice is the staple food crop of India."
     }
   ],
   "enriched": true

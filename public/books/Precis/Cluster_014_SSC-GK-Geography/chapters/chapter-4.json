@@ -1,0 +1,252 @@
+{
+  "title": "Untitled Chapter",
+  "order": 4,
+  "blocks": [
+    {
+      "id": "xdqw5p5",
+      "type": "heading",
+      "level": 3,
+      "content": "Latitude: Meaning and Concept"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equator",
+          "value": "0° Latitude",
+          "icon": "info"
+        },
+        {
+          "label": "IST Longitude",
+          "value": "82½° E",
+          "icon": "check"
+        },
+        {
+          "label": "IST Difference",
+          "value": "+5h 30m GMT",
+          "icon": "clock"
+        },
+        {
+          "label": "1° Longitude",
+          "value": "4 Minutes",
+          "icon": "clock"
+        },
+        {
+          "label": "15° Longitude",
+          "value": "1 Hour",
+          "icon": "calendar"
+        }
+      ],
+      "id": "ndvg344"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Latitude is the angular distance north or south of the Equator (0°), running parallel and controlling climate and temperature distribution.",
+        "The Earth is divided into three heat zones: Torrid (maximum solar heat), Temperate (moderate temperatures), and Frigid (extremely cold).",
+        "Longitude is the angular distance east or west of the Prime Meridian (0° Greenwich), consisting of semi-circles that converge at the poles.",
+        "Earth rotates 360° in 24 hours, creating a direct time relationship where 15° longitude equals 1 hour and 1° longitude equals 4 minutes.",
+        "Indian Standard Time (IST) is based on 82½° East longitude passing near Mirzapur in UP, which is 5 hours and 30 minutes ahead of GMT.",
+        "The International Date Line roughly follows the 180° longitude, adding one day when crossed from east to west and subtracting one day when crossed from west to east."
+      ],
+      "id": "xm5f81n"
+    },
+    {
+      "type": "paragraph",
+      "content": "Latitude is the angular distance of a place measured north or south of the Equator. It is measured in degrees (°). Latitudes are imaginary lines drawn parallel to the Equator and hence are also called parallels of latitude. The Equator is the longest latitude and is assigned the value of 0°. All latitudes north of the Equator are called Northern Latitudes, and all latitudes south of the Equator are called Southern Latitudes. Latitudes increase from 0° at the Equator to 90° at the North Pole and South Pole respectively. Since latitudes are parallel, they never meet each other. ",
+      "id": "kl0m5l6"
+    },
+    {
+      "id": "knn36qz",
+      "type": "heading",
+      "level": 3,
+      "content": "Importance of Latitude"
+    },
+    {
+      "type": "paragraph",
+      "content": "Latitude plays a crucial role in determining the climate and temperature of a place. This is because latitude controls the angle at which the Sun’s rays fall on the Earth. Near the Equator, the Sun’s rays fall almost vertically, concentrating heat over a smaller area and making the region hotter. As we move towards the poles, the Sun’s rays fall at a slanting angle, spreading heat over a larger area and resulting in lower temperatures. Thus, latitude directly influences heat distribution, seasons, vegetation, and human activities.",
+      "id": "iejp5z1"
+    },
+    {
+      "id": "2q71qkp",
+      "type": "heading",
+      "level": 3,
+      "content": "Important Latitudes of the Earth"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Equator (0°) divides the Earth into the Northern Hemisphere and the Southern Hemisphere. The Tropic of Cancer (23½° North) marks the northernmost latitude where the Sun can be directly overhead at noon once a year. The Tropic of Capricorn (23½° South) marks the southernmost limit of vertical Sun rays. These two tropics are important because they define the Torrid Zone. The Arctic Circle (66½° North) and the Antarctic Circle (66½° South) mark regions where at least one day of 24 hours daylight and one day of 24 hours darkness occur annually.",
+      "id": "8zrfdyy"
+    },
+    {
+      "id": "3ugn8kf",
+      "type": "heading",
+      "level": 3,
+      "content": "Heat Zones of the Earth"
+    },
+    {
+      "type": "paragraph",
+      "content": "Based on the distribution of solar heat controlled by latitude, the Earth is divided into three heat zones. The Torrid Zone lies between the Tropic of Cancer and the Tropic of Capricorn and receives the maximum heat throughout the year. The Temperate Zones lie between the tropics and the polar circles and experience moderate temperatures and seasonal variations. The Frigid Zones lie beyond the Arctic and Antarctic Circles and remain extremely cold due to very slanting Sun rays.",
+      "id": "fs676gn"
+    },
+    {
+      "id": "kyogj9i",
+      "type": "heading",
+      "level": 3,
+      "content": "Longitude: Meaning and Concept"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Latitude and longitude together form the global grid system that helps in accurately locating places on Earth.",
+      "id": "vhnalnz"
+    },
+    {
+      "type": "paragraph",
+      "content": "Longitude is the angular distance of a place measured east or west of the Prime Meridian. Longitudes are imaginary semi-circles that run from the North Pole to the South Pole. Unlike latitudes, longitudes are not parallel and they converge at the poles. The Prime Meridian, assigned a value of 0° longitude, passes through Greenwich in England. It divides the Earth into the Eastern Hemisphere and the Western Hemisphere. Longitudes are measured up to 180° east and 180° west. ",
+      "id": "xbc0wp4"
+    },
+    {
+      "id": "dkppzk5",
+      "type": "heading",
+      "level": 3,
+      "content": "Importance of Longitude"
+    },
+    {
+      "type": "paragraph",
+      "content": "The primary importance of longitude lies in the calculation of time. Because the Earth rotates from west to east, places located to the east of the Prime Meridian experience sunrise earlier and are ahead in time, while places to the west experience sunrise later and are behind in time.",
+      "id": "h3xr4im"
+    },
+    {
+      "type": "paragraph",
+      "content": "Therefore, longitude is directly linked with local time and standard time.",
+      "id": "odc2d77"
+    },
+    {
+      "id": "r7j6mls",
+      "type": "heading",
+      "level": 3,
+      "content": "Relationship Between Longitude and Time"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitude",
+        "Longitude"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Angular distance north or south of Equator",
+          "Angular distance east or west of Prime Meridian"
+        ],
+        [
+          "Reference Line",
+          "Equator (0°)",
+          "Prime Meridian (0° Greenwich)"
+        ],
+        [
+          "Line Characteristics",
+          "Parallel circles that never meet",
+          "Semi-circles that converge at the poles"
+        ],
+        [
+          "Primary Function",
+          "Determines climate, heat zones, and temperature",
+          "Used for calculation of local time and standard time"
+        ],
+        [
+          "Maximum Range",
+          "0° to 90° North and South",
+          "0° to 180° East and West"
+        ]
+      ],
+      "id": "tiyfq9m"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Earth completes one rotation of 360° in 24 hours. This means that the Earth rotates 15° in one hour. Therefore, for every 15° change in longitude, there is a difference of one hour in time. Similarly, for every 1° change in longitude, there is a difference of 4 minutes in time. This relationship forms the basis of all time calculations used in geography.",
+      "id": "17nhvxl"
+    },
+    {
+      "id": "kos652j",
+      "type": "heading",
+      "level": 3,
+      "content": "Indian Standard Time (IST)"
+    },
+    {
+      "type": "paragraph",
+      "content": "India follows a single time standard known as Indian Standard Time. IST is calculated based on the longitude of 82½° East, which passes near Mirzapur in Uttar Pradesh. IST is 5 hours and 30 minutes ahead of Greenwich Mean Time. Although India extends over a large longitudinal range, a single time zone is followed to maintain administrative efficiency and national unity.",
+      "id": "mmc0s4p"
+    },
+    {
+      "id": "nmrqim3",
+      "type": "heading",
+      "level": 3,
+      "content": "Greenwich Mean Time (GMT)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Greenwich Mean Time is the mean solar time at the Prime Meridian (0° longitude). It is used as the global reference time for all countries. All standard times of the world are calculated by adding or subtracting time from GMT.",
+      "id": "qwttwoe"
+    },
+    {
+      "id": "1tac1xi",
+      "type": "heading",
+      "level": 3,
+      "content": "International Date Line (IDL)"
+    },
+    {
+      "type": "paragraph",
+      "content": "The International Date Line is an imaginary line that roughly follows the 180° longitude in the Pacific Ocean. It is not a straight line and bends to avoid cutting through countries and island groups. When a person crosses the International Date Line from east to west, one day is added, and when crossing from west to east, one day is subtracted. This adjustment is necessary to maintain consistency in dates across the world.",
+      "id": "2f9jvv8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Indian Standard Time (IST) is calculated from 82½° E longitude (Mirzapur, UP) and is exactly GMT + 5:30.",
+        "Time calculation formula: 1° longitude change = 4 minutes time difference; 15° longitude change = 1 hour time difference.",
+        "Crossing the International Date Line (≈180° longitude) from East to West adds one day (+1 day), while West to East subtracts one day (-1 day).",
+        "Latitudes are parallel lines that never intersect, while longitudes converge at the North and South Poles."
+      ],
+      "id": "cex9cjz"
+    },
+    {
+      "id": "ood8hpd",
+      "type": "heading",
+      "level": 3,
+      "content": "Importance of Latitude, Longitude and Time"
+    },
+    {
+      "type": "paragraph",
+      "content": "Latitude and longitude together form the global grid system that helps in accurately locating places on Earth. Latitude helps in understanding climate, vegetation, and heat distribution, while longitude is essential for time calculation, navigation, and communication. Modern technologies such as GPS, aviation, shipping, and satellite communication are all based on this coordinate system.",
+      "id": "l5td762"
+    },
+    {
+      "id": "zadx42v",
+      "type": "heading",
+      "level": 3,
+      "content": "Memorising Tips for SSC"
+    },
+    {
+      "id": "172j19k",
+      "type": "list",
+      "items": [
+        "Latitude controls heat and climate.",
+        "Longitude controls time.",
+        "360° rotation = 24 hours.",
+        "15° longitude = 1 hour.",
+        "1° longitude = 4 minutes.",
+        "IST = 82½° East = GMT + 5:30.",
+        "International Date Line ≈ 180° longitude."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Remember concepts in flow rather than isolated facts for better retention.",
+      "id": "brs1dj8"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,90 @@
+{
+  "title": "Chapter 2: Earth : Shape, Size and Motions",
+  "order": 16,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "The true shape of the Earth is a Geoid, meaning an Earth-like shape, which is slightly flattened at the poles and bulges at the equator.",
+      "id": "g9vzeav"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Rotation",
+        "Revolution"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Spinning of the Earth around its own imaginary axis",
+          "Movement of the Earth around the Sun along an elliptical orbit"
+        ],
+        [
+          "Time Taken",
+          "23 hours, 56 minutes, 4 seconds (Approx. 1 Solar Day)",
+          "365 days, 5 hours, 48 minutes (Approx. 1 Year)"
+        ],
+        [
+          "Direction",
+          "West to East",
+          "Counter-clockwise (West to East) along the orbit"
+        ],
+        [
+          "Primary Effect",
+          "Causes day and night, deflections of winds and ocean currents",
+          "Causes changing seasons and variations in the duration of day and night"
+        ]
+      ],
+      "id": "t6p82vy"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth Shape",
+          "value": "Geoid",
+          "icon": "book"
+        },
+        {
+          "label": "Orbital Inclination",
+          "value": "66.5°",
+          "icon": "info"
+        },
+        {
+          "label": "Rotation Period",
+          "value": "23h 56m 4s",
+          "icon": "clock"
+        },
+        {
+          "label": "Revolution Period",
+          "value": "365.25 Days",
+          "icon": "calendar"
+        }
+      ],
+      "id": "aig6yko"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish between axial inclination angles: 23.5° from the vertical perpendicular versus 66.5° from the orbital plane.",
+        "Summer Solstice occurs on June 21 (longest day in Northern Hemisphere), while Winter Solstice occurs on December 22.",
+        "Perihelion (Earth closest to the Sun) occurs around January 3, whereas Aphelion (Earth farthest from the Sun) occurs around July 4."
+      ],
+      "id": "p19wtws"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The true shape of the Earth is an oblate spheroid or 'Geoid', which is flattened at the poles and bulges at the equator.",
+        "The axis of the Earth is an imaginary line tilted at an angle of 66.5° to its orbital plane and 23.5° relative to the perpendicular.",
+        "Rotation is the spinning of the Earth on its axis from West to East, completed in 24 hours, which causes day and night.",
+        "Revolution is the movement of the Earth around the Sun in an elliptical orbit, taking 365¼ days and giving rise to seasons.",
+        "Equinoxes occur on March 21 and September 23, when the Sun's direct rays fall on the equator resulting in equal length of day and night worldwide."
+      ],
+      "id": "z10qq9b"
+    }
+  ],
+  "enriched": true
+}

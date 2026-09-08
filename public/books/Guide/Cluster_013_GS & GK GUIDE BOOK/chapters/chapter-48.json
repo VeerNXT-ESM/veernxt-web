@@ -1,0 +1,391 @@
+{
+  "id": "0xdw5fn",
+  "title": "Chapter 48: Budget and Taxation in India",
+  "order": 48,
+  "blocks": [
+    {
+      "id": "rck2q97",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Budget"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The financial year in India begins on 1st April and ends on 31st March of the following year.",
+        "The Union Budget is broadly classified into Revenue Budget and Capital Budget.",
+        "Revenue Receipts neither create liabilities nor reduce government assets, whereas Capital Receipts do.",
+        "Taxes are categorized into Direct Taxes (levied directly on income/wealth) and Indirect Taxes (levied on goods/services).",
+        "Goods and Services Tax (GST) is a unified indirect tax system operating across India.",
+        "Budget Deficit measures include Revenue Deficit, Fiscal Deficit, and Primary Deficit."
+      ],
+      "id": "8nelbjz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Financial Year",
+          "value": "1 April - 31 March",
+          "icon": "calendar"
+        },
+        {
+          "label": "Budget Components",
+          "value": "Revenue & Capital",
+          "icon": "book"
+        },
+        {
+          "label": "Tax System",
+          "value": "Direct & Indirect (GST)",
+          "icon": "award"
+        },
+        {
+          "label": "Key Deficit Metric",
+          "value": "Fiscal Deficit",
+          "icon": "info"
+        }
+      ],
+      "id": "ykusxhy"
+    },
+    {
+      "type": "paragraph",
+      "id": "xzwfnhd",
+      "content": "The budget is the annual financial statement of the government showing estimated revenue and expenditure for a financial year. In India, the Union Budget is presented by the Finance Minister in Parliament. According to Article 112 of the Constitution, the budget is known as the Annual Financial Statement."
+    },
+    {
+      "id": "syfmyd6",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Financial Year in India"
+    },
+    {
+      "type": "paragraph",
+      "id": "0dufvy2",
+      "content": "The financial year in India runs from 1 April to 31 March of the next year."
+    },
+    {
+      "id": "wb3nkld",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Objectives of Government Budget"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d5l704z",
+      "content": "• Economic growth and development"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lr3jaxx",
+      "content": "• Reduction of poverty"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jr339u4",
+      "content": "• Employment generation"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0wcswp2",
+      "content": "• Price stability"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xpt3c57",
+      "content": "• Reduction of income inequality"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hf8v6em",
+      "content": "• Infrastructure development"
+    },
+    {
+      "id": "bo29z1y",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Components of Government Budget"
+    },
+    {
+      "id": "oixw4ju",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Revenue Budget</p>",
+            "<p>Includes revenue receipts and revenue expenditure</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Capital Budget</p>",
+            "<p>Includes capital receipts and capital expenditure</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubw8ade",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Revenue Receipts"
+    },
+    {
+      "type": "paragraph",
+      "id": "3duis96",
+      "content": "Revenue receipts are income received by the government without creating liabilities."
+    },
+    {
+      "type": "paragraph",
+      "id": "fth3rn1",
+      "content": "Types:"
+    },
+    {
+      "type": "paragraph",
+      "id": "9s711sg",
+      "content": "• Tax Revenue – Income tax, GST, corporate tax"
+    },
+    {
+      "type": "paragraph",
+      "id": "4w0vx23",
+      "content": "• Non-Tax Revenue – Fees, fines, dividends"
+    },
+    {
+      "id": "betqrbh",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Capital Receipts"
+    },
+    {
+      "type": "paragraph",
+      "id": "jlra7xs",
+      "content": "Capital receipts create liabilities or reduce government assets."
+    },
+    {
+      "type": "paragraph",
+      "id": "hth3zp1",
+      "content": "Examples:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "w05vyu0",
+      "content": "• Borrowings"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xvvmtf1",
+      "content": "• Disinvestment"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "7m2kui8",
+      "content": "• Recovery of loans"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Revenue Receipts",
+        "Capital Receipts"
+      ],
+      "rows": [
+        [
+          "Liability Creation",
+          "Does not create any liability",
+          "Creates liability (e.g., borrowings)"
+        ],
+        [
+          "Asset Reduction",
+          "Does not lead to reduction in assets",
+          "Reduces assets (e.g., disinvestment)"
+        ],
+        [
+          "Nature & Frequency",
+          "Regular and recurring in nature",
+          "Irregular and non-recurring in nature"
+        ],
+        [
+          "Examples",
+          "Tax revenue, dividends, fees, fines",
+          "Market loans, recovery of loans, disinvestment"
+        ]
+      ],
+      "id": "aoiptig"
+    },
+    {
+      "id": "90qj6ku",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Government Expenditure"
+    },
+    {
+      "type": "paragraph",
+      "id": "dk5crau",
+      "content": "Government expenditure is divided into revenue expenditure and capital expenditure."
+    },
+    {
+      "type": "paragraph",
+      "id": "ucut1v0",
+      "content": "Revenue Expenditure Examples: Salaries, subsidies, interest payments."
+    },
+    {
+      "type": "paragraph",
+      "id": "n21ppx5",
+      "content": "Capital Expenditure Examples: Infrastructure projects, roads, dams."
+    },
+    {
+      "id": "y9qlwb2",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Types of Taxes"
+    },
+    {
+      "id": "5pz0dbx",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Tax Type</strong></p>",
+            "<p><strong>Examples</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Direct Taxes</p>",
+            "<p>Income tax, corporate tax</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Indirect Taxes</p>",
+            "<p>GST, customs duty, excise duty</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nq2238m",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Goods and Services Tax (GST)"
+    },
+    {
+      "type": "paragraph",
+      "id": "f0ey4g5",
+      "content": "• Introduced on 1 July 2017"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "4owo2og",
+      "content": "• Replaced many indirect taxes"
+    },
+    {
+      "type": "paragraph",
+      "id": "ddzl5hs",
+      "content": "• Known as 'One Nation One Tax' reform"
+    },
+    {
+      "type": "paragraph",
+      "id": "y1ot4u4",
+      "content": "• Types: CGST, SGST and IGST"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently tested: Primary Deficit is calculated as Fiscal Deficit minus Interest Payments.",
+        "Direct vs Indirect Tax classification is a high-frequency question topic in preliminary exams.",
+        "Distinction between Revenue Receipts (non-recurring vs recurring) and Capital Receipts (disinvestment, borrowings) is crucial for conceptual questions."
+      ],
+      "id": "bt50rr8"
+    },
+    {
+      "id": "8jz53am",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Budget Deficit"
+    },
+    {
+      "id": "kje79l9",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Deficit Type</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fiscal Deficit</p>",
+            "<p>Total expenditure minus total revenue</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Revenue Deficit</p>",
+            "<p>Revenue expenditure minus revenue receipts</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Primary Deficit</p>",
+            "<p>Fiscal deficit minus interest payments</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8y82pun",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "hfzfi7w",
+      "content": "• Union Budget is presented by the Finance Minister."
+    },
+    {
+      "type": "paragraph",
+      "id": "l8viayq",
+      "content": "• Financial year in India is April to March."
+    },
+    {
+      "type": "paragraph",
+      "id": "9s4zi0z",
+      "content": "• GST was implemented in India in 2017."
+    },
+    {
+      "type": "paragraph",
+      "id": "uquyc1z",
+      "content": "• Article 112 of the Constitution deals with the Union Budget."
+    }
+  ],
+  "enriched": true
+}

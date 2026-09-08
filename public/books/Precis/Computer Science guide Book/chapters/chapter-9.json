@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "281minq"
+      "id": "281minq",
+      "content": "Microsoft Office is a collection of application software developed by Microsoft to perform common office tasks such as document creation, data analysis, presentations, communication, and database management."
     },
     {
       "type": "statStrip",
@@ -58,43 +59,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Application</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MS Word</p>",
+            "<p>Word processing software used for creating and editing documents.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MS Excel</p>",
+            "<p>Spreadsheet software used for calculations and data analysis.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MS PowerPoint</p>",
+            "<p>Presentation software used for creating slideshows.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MS Access</p>",
+            "<p>Database management software.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>MS Outlook</p>",
+            "<p>Email and personal information manager.</p>"
           ]
         }
       ]
@@ -107,7 +108,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ox2g807"
+      "id": "ox2g807",
+      "content": "Microsoft Word is a word processing application used to create, edit, and format documents."
     },
     {
       "id": "sq93ntl",
@@ -119,11 +121,11 @@
       "id": "5gswxzz",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Creating and editing documents.",
+        "Formatting text and paragraphs.",
+        "Inserting images, tables, and charts.",
+        "Spell check and grammar check.",
+        "Page layout and printing."
       ]
     },
     {
@@ -144,43 +146,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Title Bar</p>",
+            "<p>Displays document name.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ribbon</p>",
+            "<p>Contains command groups and tools.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Quick Access Toolbar</p>",
+            "<p>Provides quick access to common commands.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Status Bar</p>",
+            "<p>Displays document information.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Scroll Bar</p>",
+            "<p>Allows navigation through the document.</p>"
           ]
         }
       ]
@@ -193,7 +195,8 @@
     },
     {
       "type": "paragraph",
-      "id": "fmo5tfx"
+      "id": "fmo5tfx",
+      "content": "Microsoft Excel is a spreadsheet application used for storing, organizing, and analyzing numerical data."
     },
     {
       "id": "bdv454h",
@@ -208,43 +211,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Workbook</p>",
+            "<p>Excel file containing worksheets.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Worksheet</p>",
+            "<p>Grid of rows and columns.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cell</p>",
+            "<p>Intersection of a row and column.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Row</p>",
+            "<p>Horizontal line of cells.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Column</p>",
+            "<p>Vertical line of cells.</p>"
           ]
         }
       ]
@@ -285,11 +288,11 @@
       "id": "90bpm4c",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "SUM",
+        "AVERAGE",
+        "COUNT",
+        "MAX",
+        "MIN"
       ]
     },
     {
@@ -300,7 +303,8 @@
     },
     {
       "type": "paragraph",
-      "id": "oywrq82"
+      "id": "oywrq82",
+      "content": "Microsoft PowerPoint is presentation software used to create slideshows for lectures, meetings, and business presentations."
     },
     {
       "id": "cofg4wr",
@@ -312,10 +316,10 @@
       "id": "bmyo5l2",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Creating slides.",
+        "Inserting images, charts, and videos.",
+        "Applying slide transitions and animations.",
+        "Presenting slides using slideshow mode."
       ]
     },
     {
@@ -340,36 +344,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Slides Pane</p>",
+            "<p>Displays slide thumbnails.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Slide Area</p>",
+            "<p>Area where slide content is edited.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Notes Pane</p>",
+            "<p>Used for speaker notes.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ribbon</p>",
+            "<p>Contains tools for editing slides.</p>"
           ]
         }
       ]
@@ -387,78 +391,78 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Shortcut</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctrl + C</p>",
+            "<p>Copy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctrl + V</p>",
+            "<p>Paste</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctrl + X</p>",
+            "<p>Cut</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctrl + Z</p>",
+            "<p>Undo</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctrl + S</p>",
+            "<p>Save</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctrl + P</p>",
+            "<p>Print</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctrl + A</p>",
+            "<p>Select All</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctrl + B</p>",
+            "<p>Bold Text</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctrl + I</p>",
+            "<p>Italic Text</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctrl + U</p>",
+            "<p>Underline Text</p>"
           ]
         }
       ]
@@ -473,11 +477,11 @@
       "id": "1oxmlbo",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "MS Word is used for word processing.",
+        "MS Excel is used for spreadsheets and calculations.",
+        "MS PowerPoint is used for presentations.",
+        "A workbook contains worksheets.",
+        "Cell is the intersection of row and column."
       ]
     }
   ],

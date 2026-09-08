@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "0l9gfoj"
+      "id": "0l9gfoj",
+      "content": "Revolution is Earth's orbital movement around the Sun along an elliptical path at an average speed of 29.8 km per second."
     },
     {
       "type": "statStrip",
@@ -35,29 +36,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Time Taken</p>",
+            "<p>365 days 5h 48m 46s</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Extra Time</p>",
+            "<p>~6 hours → leap year</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Orbit Shape</p>",
+            "<p>Elliptical</p>"
           ]
         }
       ]
@@ -85,7 +86,8 @@
     },
     {
       "type": "paragraph",
-      "id": "m2mvh6i"
+      "id": "m2mvh6i",
+      "content": "• Divisible by 4 → Leap year."
     },
     {
       "type": "examAlert",
@@ -97,11 +99,13 @@
     },
     {
       "type": "paragraph",
-      "id": "yaxb4p6"
+      "id": "yaxb4p6",
+      "content": "• Century year must be divisible by 400."
     },
     {
       "type": "paragraph",
-      "id": "7tt8egx"
+      "id": "7tt8egx",
+      "content": "• Example: 2000 leap; 1900 not."
     }
   ],
   "enriched": true

@@ -49,57 +49,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Signal</strong></p>",
+            "<p><strong>Meaning</strong></p>",
+            "<p><strong>What to Do</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RED</p>",
+            "<p>Stop</p>",
+            "<p>Stop completely before the stop line. Do not cross.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>YELLOW / AMBER</p>",
+            "<p>Caution</p>",
+            "<p>Slow down and prepare to stop. Do not speed up.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>GREEN</p>",
+            "<p>Go</p>",
+            "<p>Proceed, but check for pedestrians and crossing traffic first.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RED + YELLOW together</p>",
+            "<p>Prepare</p>",
+            "<p>Get ready to move. Engine on, but do not move yet.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Flashing AMBER</p>",
+            "<p>Caution</p>",
+            "<p>Slow down, look both ways, proceed carefully.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Flashing RED</p>",
+            "<p>Stop</p>",
+            "<p>Stop, check, proceed only when safe.</p>"
           ]
         }
       ]
@@ -143,15 +143,18 @@
     },
     {
       "type": "paragraph",
-      "id": "a8mm6c1"
+      "id": "a8mm6c1",
+      "content": "<strong>Mandatory Signs (Red circle border): </strong>These signs MUST be obeyed. Ignoring them is an offence. Examples: STOP, No Entry, Speed Limit, No Parking, No U-Turn, Give Way, No Overtaking, One Way."
     },
     {
       "type": "paragraph",
-      "id": "3gwnwtt"
+      "id": "3gwnwtt",
+      "content": "<strong>Cautionary / Warning Signs (Yellow diamond / triangle): </strong>These warn drivers of a hazard ahead. Examples: Sharp curve, Slippery road, School ahead, Speed breaker, Road narrows, Pedestrian crossing, Cattle crossing."
     },
     {
       "type": "paragraph",
-      "id": "wyrvhj7"
+      "id": "wyrvhj7",
+      "content": "<strong>Informatory Signs (Blue rectangle): </strong>These give helpful information. Examples: Parking, Hospital, Petrol pump, First Aid Post, Bus stop, Telephone."
     },
     {
       "type": "examAlert",
@@ -175,64 +178,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Marking</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>White continuous line (centre)</p>",
+            "<p>Do not cross. No overtaking allowed.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>White broken line (centre)</p>",
+            "<p>Overtaking allowed with caution.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Yellow line</p>",
+            "<p>Parking prohibited on that side of road.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Zebra crossing (black &amp; white)</p>",
+            "<p>Pedestrian crossing. Give way to pedestrians.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Stop line (thick white)</p>",
+            "<p>Stop your vehicle before this line at signals.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Arrow markings</p>",
+            "<p>Direction of traffic flow. Follow the arrow.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Box junction (yellow grid)</p>",
+            "<p>Do not enter unless exit is clear.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hatched markings</p>",
+            "<p>Do not drive on this area.</p>"
           ]
         }
       ]

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "d7yumo0"
+      "id": "d7yumo0",
+      "content": "Leaching: Downward movement of soluble minerals."
     },
     {
       "type": "statStrip",
@@ -52,7 +53,8 @@
     },
     {
       "type": "paragraph",
-      "id": "0xdq8j6"
+      "id": "0xdq8j6",
+      "content": "Eluviation: Removal of materials from upper horizon."
     },
     {
       "type": "comparisonTable",
@@ -92,11 +94,13 @@
     },
     {
       "type": "paragraph",
-      "id": "xr4ai7r"
+      "id": "xr4ai7r",
+      "content": "Illuviation: Deposition of materials in lower horizon."
     },
     {
       "type": "paragraph",
-      "id": "h8nm519"
+      "id": "h8nm519",
+      "content": "Calcification: Accumulation of calcium carbonate in dry regions."
     },
     {
       "type": "examAlert",
@@ -109,11 +113,13 @@
     },
     {
       "type": "paragraph",
-      "id": "6y4bydh"
+      "id": "6y4bydh",
+      "content": "Laterization: Intense leaching in tropical climates."
     },
     {
       "type": "paragraph",
-      "id": "jppvrt1"
+      "id": "jppvrt1",
+      "content": "Podzolization: Leaching in cold humid climates producing acidic soils."
     }
   ],
   "enriched": true

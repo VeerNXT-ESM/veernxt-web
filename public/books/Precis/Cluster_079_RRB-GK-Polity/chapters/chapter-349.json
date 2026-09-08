@@ -1,0 +1,84 @@
+{
+  "title": "12. Exam Traps",
+  "order": 349,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• TRAI is a statutory body.<br/>• Established in 1997.<br/>• TDSAT created in 2000.<br/>• Regulates telecom tariffs.<br/>• Headquarters in New Delhi.",
+      "id": "wsp3t9p"
+    },
+    {
+      "type": "pullQuote",
+      "content": "TRAI is a statutory body.",
+      "id": "m2q7njm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Body",
+        "Year Established",
+        "Key Attributes"
+      ],
+      "rows": [
+        [
+          "TRAI",
+          "1997",
+          "Statutory body, regulates telecom tariffs, HQ in New Delhi"
+        ],
+        [
+          "TDSAT",
+          "2000",
+          "Created after TRAI"
+        ]
+      ],
+      "id": "6999a8x"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Establishment Year",
+          "value": "1997",
+          "icon": "calendar"
+        },
+        {
+          "label": "TDSAT Created",
+          "value": "2000",
+          "icon": "clock"
+        },
+        {
+          "label": "Body Status",
+          "value": "Statutory",
+          "icon": "award"
+        },
+        {
+          "label": "Headquarters",
+          "value": "New Delhi",
+          "icon": "info"
+        }
+      ],
+      "id": "u3n8cqn"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "TRAI is a statutory body created in 1997, not a constitutional body.",
+        "Note the timeline trap: TRAI was established in 1997, whereas TDSAT was created in 2000.",
+        "TRAI regulates telecom tariffs and is headquartered in New Delhi."
+      ],
+      "id": "5watugd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "TRAI was established as a statutory body in 1997.",
+        "TDSAT was created later in the year 2000.",
+        "TRAI's primary mandate includes regulating telecom tariffs.",
+        "The headquarters of TRAI are located in New Delhi."
+      ],
+      "id": "nwegqiq"
+    }
+  ],
+  "enriched": true
+}

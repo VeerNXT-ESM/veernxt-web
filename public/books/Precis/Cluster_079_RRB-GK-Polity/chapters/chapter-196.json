@@ -1,0 +1,57 @@
+{
+  "title": "Grounds for Removal (VERY IMPORTANT)",
+  "order": 196,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The President can remove the Chairman or a member on the following grounds:<br/>• Misbehavior (after Supreme Court inquiry)<br/>• Insolvency<br/>• Engaging in paid employment outside official duties<br/>• Infirmity of mind or body<br/>• Conflict of financial interest",
+      "id": "bml34am"
+    },
+    {
+      "type": "pullQuote",
+      "content": "The President can remove the Chairman or a member on the following grounds:",
+      "id": "8ipnfw2"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Removing Authority",
+          "value": "President",
+          "icon": "award"
+        },
+        {
+          "label": "Total Grounds",
+          "value": "5 Grounds",
+          "icon": "check"
+        },
+        {
+          "label": "Inquiry Body",
+          "value": "Supreme Court",
+          "icon": "book"
+        }
+      ],
+      "id": "md3y5tw"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crucial distinction: Supreme Court inquiry is mandatory ONLY for removal on grounds of 'Misbehavior'.",
+        "Engaging in paid employment outside official duties is a direct ground for President-led removal.",
+        "Note that the removal authority is the President, not Parliament."
+      ],
+      "id": "ib3k4zi"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The President has the power to remove the Chairman or a member from office.",
+        "Removal on the specific ground of misbehavior requires an inquiry by the Supreme Court.",
+        "Other grounds for removal include insolvency, outside paid employment, infirmity of mind or body, and conflict of financial interest."
+      ],
+      "id": "6eielk4"
+    }
+  ],
+  "enriched": true
+}

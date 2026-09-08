@@ -1,0 +1,141 @@
+{
+  "title": "Comparison: Election Commission vs State Election Commission",
+  "order": 188,
+  "blocks": [
+    {
+      "id": "w44ztve",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Election Commission of India</strong></p>",
+            "<p><strong>State Election Commission</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article</p>",
+            "<p>324</p>",
+            "<p>243K</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Jurisdiction</p>",
+            "<p>National &amp; State Elections</p>",
+            "<p>Local Body Elections</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appointed By</p>",
+            "<p>President</p>",
+            "<p>Governor</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Removal</p>",
+            "<p>CEC like Supreme Court Judge</p>",
+            "<p>Similar to High Court Judge</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The State Election Commission is an independent constitutional body and is not subordinate to the Election Commission of India.",
+      "id": "5zyfixm"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Election Commission of India (ECI)",
+        "State Election Commission (SEC)"
+      ],
+      "rows": [
+        [
+          "Constitutional Provision",
+          "Article 324",
+          "Article 243K & Article 243ZA"
+        ],
+        [
+          "Elections Conducted",
+          "Parliament, State Legislatures, President, Vice-President",
+          "Panchayats and Municipalities (Local Bodies)"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Removal Process",
+          "Same grounds and manner as Supreme Court Judge (CEC)",
+          "Same grounds and manner as High Court Judge"
+        ],
+        [
+          "Hierarchy / Status",
+          "All-India Union Body",
+          "Independent State Body (Not subordinate to ECI)"
+        ]
+      ],
+      "id": "olyte30"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "ECI Article",
+          "value": "Article 324",
+          "icon": "book"
+        },
+        {
+          "label": "SEC Article",
+          "value": "Article 243K",
+          "icon": "info"
+        },
+        {
+          "label": "73rd/74th Amendment",
+          "value": "1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Relationship",
+          "value": "Independent",
+          "icon": "check"
+        }
+      ],
+      "id": "cp008ti"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "ECI does NOT conduct elections for Panchayats and Municipalities; local body elections are exclusively under the jurisdiction of the SEC.",
+        "The State Election Commissioner is appointed by the Governor, but removal can only be executed by the President in the same manner as a High Court Judge.",
+        "The electoral rolls prepared by ECI for Assembly elections are separate from the local body electoral rolls prepared by the SEC."
+      ],
+      "id": "xencts4"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Election Commission of India (ECI) operates under Article 324 and conducts elections to Parliament, State Assemblies, President, and Vice-President.",
+        "The State Election Commission (SEC) was created under Articles 243K and 243ZA following the 73rd and 74th Constitutional Amendment Acts of 1992.",
+        "The SEC is exclusively responsible for the preparation of electoral rolls and conducting elections to Panchayats and Municipalities.",
+        "The State Election Commissioner is appointed by the Governor of the state, but can only be removed in the same manner as a High Court Judge.",
+        "The State Election Commission is an independent constitutional body and is not subordinate to the Election Commission of India."
+      ],
+      "id": "80hdli5"
+    }
+  ],
+  "enriched": true
+}

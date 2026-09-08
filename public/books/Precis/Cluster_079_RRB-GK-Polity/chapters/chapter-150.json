@@ -1,0 +1,81 @@
+{
+  "title": "10. Legislative Procedure in State Legislature",
+  "order": 150,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Bills introduced in State Legislature may be:<br/>• Ordinary Bills<br/>• Money Bills<br/><br/>Money Bill:<br/>• Introduced only in Legislative Assembly<br/>• Requires prior recommendation of Governor<br/>• Legislative Council can only make recommendations",
+      "id": "4te2czw"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Requires prior recommendation of Governor",
+      "id": "01abx5u"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "House of Legislature",
+        "Authority Regarding Money Bills"
+      ],
+      "rows": [
+        [
+          "Legislative Assembly",
+          "Exclusive house for introduction of Money Bills"
+        ],
+        [
+          "Legislative Council",
+          "Can only make recommendations"
+        ]
+      ],
+      "id": "vqe6pfm"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Bill Types",
+          "value": "Ordinary & Money",
+          "icon": "book"
+        },
+        {
+          "label": "Money Bill Origin",
+          "value": "Legislative Assembly",
+          "icon": "check"
+        },
+        {
+          "label": "Prior Recommendation",
+          "value": "Governor",
+          "icon": "award"
+        },
+        {
+          "label": "Council's Role",
+          "value": "Recommendations Only",
+          "icon": "info"
+        }
+      ],
+      "id": "zhwqxse"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Money Bills CANNOT be introduced in the Legislative Council; origin is restricted solely to the Legislative Assembly.",
+        "Introduction of a Money Bill always requires the prior recommendation of the Governor.",
+        "The Legislative Council cannot amend or reject a Money Bill; its authority is restricted to making recommendations."
+      ],
+      "id": "5gemujq"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Bills introduced in the State Legislature are categorized into Ordinary Bills and Money Bills.",
+        "Money Bills can be introduced strictly in the Legislative Assembly only.",
+        "The prior recommendation of the Governor is mandatory for introducing a Money Bill.",
+        "The Legislative Council holds limited power over Money Bills and can only offer recommendations."
+      ],
+      "id": "t41nwcy"
+    }
+  ],
+  "enriched": true
+}

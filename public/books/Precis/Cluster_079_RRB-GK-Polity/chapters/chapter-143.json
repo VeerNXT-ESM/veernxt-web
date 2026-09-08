@@ -1,0 +1,62 @@
+{
+  "title": "3. Legislative Assembly (Vidhan Sabha)",
+  "order": 143,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Legislative Assembly is the lower house and represents the people of the State.<br/><br/>Composition:<br/>• Maximum strength – 500 members<br/>• Minimum strength – 60 members<br/>• Members are directly elected by the people.<br/><br/>Tenure:<br/>• Normal term – 5 years<br/>• Can be dissolved earlier by the Governor.",
+      "id": "zr4levh"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Legislative Assembly is the lower house and represents the people of the State.",
+      "id": "n9dlt25"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Maximum Strength",
+          "value": "500 Members",
+          "icon": "award"
+        },
+        {
+          "label": "Minimum Strength",
+          "value": "60 Members",
+          "icon": "info"
+        },
+        {
+          "label": "Normal Tenure",
+          "value": "5 Years",
+          "icon": "calendar"
+        },
+        {
+          "label": "Election Type",
+          "value": "Directly Elected",
+          "icon": "check"
+        }
+      ],
+      "id": "0ht9qo0"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Questions often test the maximum (500) and minimum (60) strength limits of the Vidhan Sabha.",
+        "Note that the Governor, not the Chief Minister, has the power to dissolve the Legislative Assembly earlier than its 5-year term."
+      ],
+      "id": "55dycs2"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Legislative Assembly (Vidhan Sabha) is the lower house that represents the people of the State.",
+        "The composition of the house ranges between a minimum of 60 members and a maximum of 500 members.",
+        "Members are directly elected by the citizens of the State.",
+        "While the normal term is 5 years, the Governor has the authority to dissolve the Assembly earlier."
+      ],
+      "id": "c46k4uf"
+    }
+  ],
+  "enriched": true
+}

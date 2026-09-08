@@ -1,0 +1,857 @@
+{
+  "id": "0u7hbm7",
+  "title": "सामान्य अंग्रेज़ी",
+  "order": 9,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gdvx3se",
+      "content": "<strong>अध्याय 9: सामान्य अंग्रेज़ी</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "vh2ho6g",
+      "content": "<em>Grammar, Vocabulary &amp; Comprehension for Paper 1</em>"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tvqhjnx",
+      "content": "<strong>  9.1 Parts of Speech</strong>"
+    },
+    {
+      "id": "33toe22",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Part of Speech</strong></p>",
+            "<p><strong>Definition</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Noun</p>",
+            "<p>Name of person/place/thing</p>",
+            "<p>Ram, Delhi, book, beauty</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pronoun</p>",
+            "<p>Used in place of noun</p>",
+            "<p>I, he, she, they, it</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Adjective</p>",
+            "<p>Modifies noun/pronoun</p>",
+            "<p>tall, beautiful, three</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Verb</p>",
+            "<p>Action or state of being</p>",
+            "<p>run, sing, is, was</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Adverb</p>",
+            "<p>Modifies verb/adjective/adverb</p>",
+            "<p>quickly, very, here, often</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Preposition</p>",
+            "<p>Shows relation between words</p>",
+            "<p>in, on, at, by, with, for</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Conjunction</p>",
+            "<p>Joins words or clauses</p>",
+            "<p>and, but, or, because, if</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Interjection</p>",
+            "<p>Exclamation</p>",
+            "<p>Oh! Ah! Wow! Alas!</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9y36xk2",
+      "content": "<strong>  9.2 Tenses — Quick Reference</strong>"
+    },
+    {
+      "id": "59ar718",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Tense</strong></p>",
+            "<p><strong>Structure</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Present</p>",
+            "<p>S + V1(s/es) + O</p>",
+            "<p>He writes a letter.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Present Continuous</p>",
+            "<p>S + is/am/are + V-ing + O</p>",
+            "<p>He is writing a letter.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Present Perfect</p>",
+            "<p>S + has/have + V3 + O</p>",
+            "<p>He has written a letter.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Present Perfect Continuous</p>",
+            "<p>S + has/have been + V-ing + O</p>",
+            "<p>He has been writing for 2 hours.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Past</p>",
+            "<p>S + V2 + O</p>",
+            "<p>He wrote a letter.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Past Continuous</p>",
+            "<p>S + was/were + V-ing + O</p>",
+            "<p>He was writing a letter.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Past Perfect</p>",
+            "<p>S + had + V3 + O</p>",
+            "<p>He had written the letter.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Past Perfect Continuous</p>",
+            "<p>S + had been + V-ing + O</p>",
+            "<p>He had been writing for 2 hours.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Simple Future</p>",
+            "<p>S + will + V1 + O</p>",
+            "<p>He will write a letter.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Future Continuous</p>",
+            "<p>S + will be + V-ing + O</p>",
+            "<p>He will be writing a letter.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Future Perfect</p>",
+            "<p>S + will have + V3 + O</p>",
+            "<p>He will have written.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Future Perfect Continuous</p>",
+            "<p>S + will have been + V-ing + O</p>",
+            "<p>He will have been writing.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "n697ese",
+      "content": "<strong>  9.3 Active &amp; Passive Voice</strong>"
+    },
+    {
+      "id": "g5a42ca",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Active Voice</strong></p>",
+            "<p><strong>Passive Voice</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ram writes a letter.</p>",
+            "<p>A letter is written by Ram.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>She is singing a song.</p>",
+            "<p>A song is being sung by her.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>They have completed the work.</p>",
+            "<p>The work has been completed by them.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>The manager approved the plan.</p>",
+            "<p>The plan was approved by the manager.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>He will finish the project.</p>",
+            "<p>The project will be finished by him.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xnutg6b",
+      "content": "<strong>  9.4 Reported Speech</strong>"
+    },
+    {
+      "id": "37dcjsg",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Direct Speech</strong></p>",
+            "<p><strong>Indirect Speech</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>He said, \"I am happy.\"</p>",
+            "<p>He said that he was happy.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>She said, \"I will come tomorrow.\"</p>",
+            "<p>She said that she would come the next day.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>He said, \"I went there yesterday.\"</p>",
+            "<p>He said that he had gone there the day before.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>He said to me, \"Are you well?\"</p>",
+            "<p>He asked me if I was well.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>She said, \"Please help me.\"</p>",
+            "<p>She requested me to help her.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "wh70vbr",
+      "content": "<strong>  9.5 Common Errors (Error Spotting)</strong>"
+    },
+    {
+      "id": "rg49su5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Incorrect</strong></p>",
+            "<p><strong>Correct</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>He is more better than me.</p>",
+            "<p>He is better than me. (No double comparative)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Each of the students have passed.</p>",
+            "<p>Each of the students has passed. (Each = singular)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Neither of them were present.</p>",
+            "<p>Neither of them was present. (Neither = singular)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>She is one of the best student.</p>",
+            "<p>She is one of the best students. (best + plural)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>He told that he was ill.</p>",
+            "<p>He said that he was ill. (told needs object)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>I have seen him yesterday.</p>",
+            "<p>I saw him yesterday. (yesterday = simple past)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>She is junior than me.</p>",
+            "<p>She is junior to me. (junior/senior + to)</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "oww3q86",
+      "content": "<strong>  9.6 Vocabulary — Synonyms &amp; Antonyms</strong>"
+    },
+    {
+      "id": "t4ut38p",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Word</strong></p>",
+            "<p><strong>Synonym</strong></p>",
+            "<p><strong>Antonym</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Abate</p>",
+            "<p>Reduce, Diminish</p>",
+            "<p>Increase, Intensify</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Benevolent</p>",
+            "<p>Kind, Charitable</p>",
+            "<p>Cruel, Unkind</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Candid</p>",
+            "<p>Frank, Honest</p>",
+            "<p>Deceptive, Evasive</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Dearth</p>",
+            "<p>Shortage, Scarcity</p>",
+            "<p>Abundance, Plenty</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Eminent</p>",
+            "<p>Prominent, Distinguished</p>",
+            "<p>Unknown, Obscure</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Furtive</p>",
+            "<p>Stealthy, Sly</p>",
+            "<p>Open, Frank</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Garrulous</p>",
+            "<p>Talkative, Loquacious</p>",
+            "<p>Taciturn, Silent</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Haughty</p>",
+            "<p>Arrogant, Proud</p>",
+            "<p>Humble, Modest</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Impede</p>",
+            "<p>Hinder, Obstruct</p>",
+            "<p>Facilitate, Aid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Jovial</p>",
+            "<p>Cheerful, Merry</p>",
+            "<p>Gloomy, Sad</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Kindle</p>",
+            "<p>Ignite, Arouse</p>",
+            "<p>Extinguish, Quench</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Languid</p>",
+            "<p>Sluggish, Weak</p>",
+            "<p>Energetic, Active</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Magnanimous</p>",
+            "<p>Generous, Noble</p>",
+            "<p>Mean, Petty</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Nefarious</p>",
+            "<p>Wicked, Villainous</p>",
+            "<p>Virtuous, Righteous</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Opulent</p>",
+            "<p>Wealthy, Affluent</p>",
+            "<p>Poor, Destitute</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Placid</p>",
+            "<p>Calm, Serene</p>",
+            "<p>Agitated, Restless</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rescind</p>",
+            "<p>Cancel, Revoke</p>",
+            "<p>Enforce, Uphold</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sagacious</p>",
+            "<p>Wise, Shrewd</p>",
+            "<p>Foolish, Unwise</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tenacious</p>",
+            "<p>Persistent, Determined</p>",
+            "<p>Yielding, Weak</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Verbose</p>",
+            "<p>Wordy, Long-winded</p>",
+            "<p>Concise, Brief</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "392xmg2",
+      "content": "<strong>  9.7 Idioms &amp; Phrases</strong>"
+    },
+    {
+      "id": "0ut3t23",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Idiom/Phrase</strong></p>",
+            "<p><strong>Meaning</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A bed of roses</p>",
+            "<p>A comfortable or easy situation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>A fish out of water</p>",
+            "<p>Uncomfortable in one's surroundings</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>At the drop of a hat</p>",
+            "<p>Immediately, without hesitation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Beat around the bush</p>",
+            "<p>Avoid the main topic</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Bite the bullet</p>",
+            "<p>Accept something painful/difficult</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Break the ice</p>",
+            "<p>Initiate conversation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Burn the midnight oil</p>",
+            "<p>Work late at night</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Call it a day</p>",
+            "<p>Stop working for the day</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Catch someone red-handed</p>",
+            "<p>Catch in the act of doing wrong</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Cost an arm and a leg</p>",
+            "<p>Very expensive</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Every cloud has a silver lining</p>",
+            "<p>Every bad situation has something good</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Hit the nail on the head</p>",
+            "<p>Say exactly the right thing</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>In the nick of time</p>",
+            "<p>Just in time</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Jump on the bandwagon</p>",
+            "<p>Follow the crowd</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Let the cat out of the bag</p>",
+            "<p>Reveal a secret accidentally</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Once in a blue moon</p>",
+            "<p>Very rarely</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Read between the lines</p>",
+            "<p>Understand the hidden meaning</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Spill the beans</p>",
+            "<p>Reveal secret information</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>The ball is in your court</p>",
+            "<p>The decision is now yours</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Under the weather</p>",
+            "<p>Feeling ill or unwell</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "64058c8",
+      "content": "<strong>  9.8 Reading Comprehension — Practice</strong>"
+    },
+    {
+      "id": "cfkfpp3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>[ Read the passage and answer the questions ]</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Artificial Intelligence (AI) is transforming every sector of the global economy. From healthcare to agriculture, from education to governance, AI-powered solutions are reshaping how humans live and work. Machine learning algorithms can now diagnose diseases with greater accuracy than trained doctors and predict weather patterns months in advance. India has recognized the enormous potential of AI and launched the National AI Strategy in 2018. The government's focus on AI for social good — including applications in agriculture, healthcare, and smart cities — distinguishes India's approach. However, concerns about job displacement, algorithmic bias, and data privacy must be addressed through thoughtful regulation.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "unmv5ag",
+      "content": "<strong>Q.1. </strong>What is the main theme of the passage?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "d62ic3g",
+      "content": "<strong>  (A) </strong>History of AI"
+    },
+    {
+      "type": "paragraph",
+      "id": "zt0iom1",
+      "content": "<strong>  (B) </strong>Transformative impact of AI and India's approach"
+    },
+    {
+      "type": "paragraph",
+      "id": "dek5rof",
+      "content": "<strong>  (C) </strong>AI and job loss only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "vw9aakl",
+      "content": "<strong>  (D) </strong>AI in education only"
+    },
+    {
+      "type": "paragraph",
+      "id": "9aeqey2",
+      "content": "<strong>  Ans: (B) Transformative impact of AI and India's approach   Explanation: </strong><em>The passage covers AI's broad impact across sectors and specifically highlights India's National AI Strategy.</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "is4tcpk",
+      "content": "<strong>Q.2. </strong>India launched its National AI Strategy in:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "977ng4u",
+      "content": "<strong>  (A) </strong>2015"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "22p5jp4",
+      "content": "<strong>  (B) </strong>2017"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8itbrpi",
+      "content": "<strong>  (C) </strong>2018"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0bya3wk",
+      "content": "<strong>  (D) </strong>2020"
+    },
+    {
+      "type": "paragraph",
+      "id": "timrgsr",
+      "content": "<strong>  Ans: (C) 2018   Explanation: </strong><em>The passage clearly states: 'India launched the National AI Strategy in 2018.'</em>"
+    },
+    {
+      "type": "paragraph",
+      "id": "c8x47ik",
+      "content": "<strong>Q.3. </strong>The word 'displacement' in the context of jobs means:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "2e3hd9y",
+      "content": "<strong>  (A) </strong>Creates new jobs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9rf7vxy",
+      "content": "<strong>  (B) </strong>Forces out/eliminates existing jobs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "u1e9lxi",
+      "content": "<strong>  (C) </strong>Improves jobs"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "o260cii",
+      "content": "<strong>  (D) </strong>Transfers jobs overseas"
+    },
+    {
+      "type": "paragraph",
+      "id": "xn8z8c1",
+      "content": "<strong>  Ans: (B) Forces out/eliminates existing jobs   Explanation: </strong><em>'Job displacement' refers to AI eliminating or replacing existing jobs — a concern mentioned in the passage.</em>"
+    }
+  ],
+  "enriched": true
+}

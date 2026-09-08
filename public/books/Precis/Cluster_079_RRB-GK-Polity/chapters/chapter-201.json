@@ -1,0 +1,149 @@
+{
+  "title": "Comparison: UPSC vs State Public Service Commission",
+  "order": 201,
+  "blocks": [
+    {
+      "id": "ssnz8ev",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>UPSC</strong></p>",
+            "<p><strong>State PSC</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Articles</p>",
+            "<p>315–323</p>",
+            "<p>315–323</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Jurisdiction</p>",
+            "<p>Central Services</p>",
+            "<p>State Services</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appointed By</p>",
+            "<p>President</p>",
+            "<p>Governor</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Removal</p>",
+            "<p>President after SC inquiry</p>",
+            "<p>President after SC inquiry</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Tenure</p>",
+            "<p>6 years / 65 years</p>",
+            "<p>6 years / 62 years</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Although the Governor appoints the members of the State Public Service Commission, they can be removed only by the President of India.",
+      "id": "08nev85"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "UPSC",
+        "SPSC"
+      ],
+      "rows": [
+        [
+          "Constitutional Provision",
+          "Articles 315–323 (Part XIV)",
+          "Articles 315–323 (Part XIV)"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Removal Authority",
+          "President of India",
+          "President of India"
+        ],
+        [
+          "Tenure & Retirement Age",
+          "6 Years or 65 Years of age",
+          "6 Years or 62 Years of age"
+        ],
+        [
+          "Annual Report Submitted To",
+          "President of India",
+          "Governor of the State"
+        ]
+      ],
+      "id": "ne7z85o"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Articles",
+          "value": "Articles 315–323",
+          "icon": "book"
+        },
+        {
+          "label": "Constitutional Part",
+          "value": "Part XIV",
+          "icon": "info"
+        },
+        {
+          "label": "UPSC Age Limit",
+          "value": "65 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "SPSC Age Limit",
+          "value": "62 Years",
+          "icon": "clock"
+        }
+      ],
+      "id": "3doh5fg"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Crucial distinction: SPSC members are appointed by the Governor, but their removal power lies exclusively with the President of India.",
+        "The retirement age for SPSC members was increased from 60 to 62 years by the 41st Constitutional Amendment Act, 1976.",
+        "Unlike UPSC and SPSC, a Joint State Public Service Commission (JSPSC) is a statutory body created by an Act of Parliament, not a constitutional body."
+      ],
+      "id": "hpqzzjz"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Both UPSC and State Public Service Commissions (SPSC) are constitutional bodies provided under Articles 315 to 323 in Part XIV of the Indian Constitution.",
+        "The Chairman and members of UPSC are appointed and removed by the President of India.",
+        "The Chairman and members of SPSC are appointed by the Governor of the state, but can be removed only by the President of India.",
+        "The retirement age for UPSC members is 65 years, whereas for SPSC members it is 62 years.",
+        "UPSC submits its annual report to the President, while SPSC submits its annual report to the Governor of the state."
+      ],
+      "id": "0ovsi2o"
+    }
+  ],
+  "enriched": true
+}

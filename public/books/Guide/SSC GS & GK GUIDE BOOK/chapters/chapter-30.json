@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "9vgxbwy"
+      "id": "9vgxbwy",
+      "content": "The Earth is made up of several concentric layers that differ in composition, density, temperature and physical state. Knowledge about the internal structure of the Earth is important for understanding earthquakes, volcanoes, plate tectonics and the formation of landforms."
     },
     {
       "type": "statStrip",
@@ -53,19 +54,23 @@
     },
     {
       "type": "paragraph",
-      "id": "u1j5gbz"
+      "id": "u1j5gbz",
+      "content": "• Average radius of Earth: about 6371 km."
     },
     {
       "type": "paragraph",
-      "id": "evx2vrx"
+      "id": "evx2vrx",
+      "content": "• Earth's interior temperature increases with depth (geothermal gradient)."
     },
     {
       "type": "paragraph",
-      "id": "n55ya42"
+      "id": "n55ya42",
+      "content": "• Density also increases toward the center."
     },
     {
       "type": "paragraph",
-      "id": "nsjkwvc"
+      "id": "nsjkwvc",
+      "content": "• The Earth is composed mainly of iron, oxygen, silicon, magnesium and nickel."
     },
     {
       "id": "svv1y3p",
@@ -76,36 +81,44 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "87l1qkl"
+      "id": "87l1qkl",
+      "content": "A. Direct Sources"
     },
     {
       "type": "paragraph",
-      "id": "6u6n0dw"
+      "id": "6u6n0dw",
+      "content": "• Mining and deep drilling projects."
     },
     {
       "type": "paragraph",
-      "id": "ybzj2qy"
+      "id": "ybzj2qy",
+      "content": "• Volcanic eruptions bring materials from inside the Earth."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "03m6fsy"
+      "id": "03m6fsy",
+      "content": "B. Indirect Sources"
     },
     {
       "type": "paragraph",
-      "id": "t7xlvy7"
+      "id": "t7xlvy7",
+      "content": "• Seismic waves produced by earthquakes."
     },
     {
       "type": "paragraph",
-      "id": "cevtqoo"
+      "id": "cevtqoo",
+      "content": "• Gravitational force studies."
     },
     {
       "type": "paragraph",
-      "id": "nxzc8bt"
+      "id": "nxzc8bt",
+      "content": "• Magnetic field observations."
     },
     {
       "type": "paragraph",
-      "id": "9ee9s59"
+      "id": "9ee9s59",
+      "content": "• Meteorite composition which is similar to Earth's interior."
     },
     {
       "id": "5v6mg03",
@@ -120,37 +133,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Layer</strong></p>",
+            "<p><strong>Depth</strong></p>",
+            "<p><strong>Composition</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Crust</p>",
+            "<p>0–35 km</p>",
+            "<p>Silica and Alumina (SIAL)</p>",
+            "<p>Outermost thin layer where humans live</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mantle</p>",
+            "<p>35–2900 km</p>",
+            "<p>Silicate minerals (SIMO)</p>",
+            "<p>Largest layer; semi-molten rocks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Core</p>",
+            "<p>2900–6371 km</p>",
+            "<p>Iron and Nickel (NIFE)</p>",
+            "<p>Innermost layer with highest density</p>"
           ]
         }
       ]
@@ -162,29 +175,29 @@
       "content": "4. Crust"
     },
     {
-      "type": "pullQuote",
-      "content": "Important Discontinuities inside the Earth",
-      "id": "m3ibpjw"
+      "type": "paragraph",
+      "id": "l0jvi6d",
+      "content": "• The crust is the outermost layer of the Earth."
     },
     {
       "type": "paragraph",
-      "id": "l0jvi6d"
+      "id": "z7y8yq4",
+      "content": "• It is very thin compared to other layers."
     },
     {
       "type": "paragraph",
-      "id": "z7y8yq4"
+      "id": "kny31oc",
+      "content": "• Average thickness is about 35 km under continents."
     },
     {
       "type": "paragraph",
-      "id": "kny31oc"
+      "id": "y38sthk",
+      "content": "• Oceanic crust is thinner (5–10 km)."
     },
     {
       "type": "paragraph",
-      "id": "y38sthk"
-    },
-    {
-      "type": "paragraph",
-      "id": "e87rboh"
+      "id": "e87rboh",
+      "content": "• Main elements are oxygen, silicon, aluminum, iron and calcium."
     },
     {
       "id": "866bc8n",
@@ -199,25 +212,25 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Thickness</strong></p>",
+            "<p><strong>Composition</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Continental Crust</p>",
+            "<p>30–70 km</p>",
+            "<p>Granite rocks rich in silica and alumina</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Oceanic Crust</p>",
+            "<p>5–10 km</p>",
+            "<p>Basalt rocks rich in silica and magnesium</p>"
           ]
         }
       ]
@@ -230,11 +243,13 @@
     },
     {
       "type": "paragraph",
-      "id": "qqkogej"
+      "id": "qqkogej",
+      "content": "• The mantle lies below the crust and extends up to about 2900 km depth."
     },
     {
       "type": "paragraph",
-      "id": "gvshmjf"
+      "id": "gvshmjf",
+      "content": "• It forms nearly 84% of Earth's volume."
     },
     {
       "type": "comparisonTable",
@@ -269,15 +284,18 @@
     },
     {
       "type": "paragraph",
-      "id": "826xkyp"
+      "id": "826xkyp",
+      "content": "• The upper part of the mantle with the crust forms the lithosphere."
     },
     {
       "type": "paragraph",
-      "id": "5y2plqa"
+      "id": "5y2plqa",
+      "content": "• Below it lies the asthenosphere which contains partially molten rocks."
     },
     {
       "type": "paragraph",
-      "id": "a2hwc6l"
+      "id": "a2hwc6l",
+      "content": "• The mantle plays a major role in plate tectonic movements."
     },
     {
       "id": "j2slw21",
@@ -287,15 +305,18 @@
     },
     {
       "type": "paragraph",
-      "id": "a0db2g9"
+      "id": "a0db2g9",
+      "content": "• Lithosphere – rigid outer layer including crust and upper mantle."
     },
     {
       "type": "paragraph",
-      "id": "6tjl3tp"
+      "id": "6tjl3tp",
+      "content": "• Asthenosphere – semi-molten layer where tectonic plates float."
     },
     {
       "type": "paragraph",
-      "id": "lxburpf"
+      "id": "lxburpf",
+      "content": "• Mesosphere – lower mantle with higher density."
     },
     {
       "id": "ainyvs6",
@@ -305,19 +326,23 @@
     },
     {
       "type": "paragraph",
-      "id": "rlt0ovx"
+      "id": "rlt0ovx",
+      "content": "• The core is the innermost part of the Earth."
     },
     {
       "type": "paragraph",
-      "id": "0as4k0q"
+      "id": "0as4k0q",
+      "content": "• It extends from 2900 km to the center at 6371 km."
     },
     {
       "type": "paragraph",
-      "id": "2g61xtu"
+      "id": "2g61xtu",
+      "content": "• It is mainly composed of iron and nickel."
     },
     {
       "type": "paragraph",
-      "id": "5e15nw9"
+      "id": "5e15nw9",
+      "content": "• The core is responsible for generating Earth's magnetic field."
     },
     {
       "id": "pn8vu4x",
@@ -341,28 +366,28 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Depth</strong></p>",
+            "<p><strong>State</strong></p>",
+            "<p><strong>Characteristics</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Outer Core</p>",
+            "<p>2900–5150 km</p>",
+            "<p>Liquid</p>",
+            "<p>Produces Earth's magnetic field</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Inner Core</p>",
+            "<p>5150–6371 km</p>",
+            "<p>Solid</p>",
+            "<p>Extremely high temperature and pressure</p>"
           ]
         }
       ]
@@ -380,33 +405,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Discontinuity</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mohorovicic Discontinuity (Moho)</p>",
+            "<p>Between crust and mantle</p>",
+            "<p>Sharp change in seismic wave velocity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gutenberg Discontinuity</p>",
+            "<p>Between mantle and core</p>",
+            "<p>Separates mantle from liquid outer core</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Lehmann Discontinuity</p>",
+            "<p>Between outer core and inner core</p>",
+            "<p>Separates liquid and solid core</p>"
           ]
         }
       ]
@@ -419,19 +444,23 @@
     },
     {
       "type": "paragraph",
-      "id": "aymwyu1"
+      "id": "aymwyu1",
+      "content": "• Earth's radius is approximately 6371 km."
     },
     {
       "type": "paragraph",
-      "id": "tk8t85o"
+      "id": "tk8t85o",
+      "content": "• Mantle is the thickest layer."
     },
     {
       "type": "paragraph",
-      "id": "vdk1k0c"
+      "id": "vdk1k0c",
+      "content": "• Outer core is liquid and inner core is solid."
     },
     {
       "type": "paragraph",
-      "id": "dd6t15d"
+      "id": "dd6t15d",
+      "content": "• Moho discontinuity separates crust and mantle."
     }
   ],
   "enriched": true

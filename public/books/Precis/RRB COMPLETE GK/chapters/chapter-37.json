@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "c66xw7z"
+      "id": "c66xw7z",
+      "content": "The International Date Line roughly follows 180° longitude in the Pacific Ocean."
     },
     {
       "type": "statStrip",
@@ -82,7 +83,8 @@
     },
     {
       "type": "paragraph",
-      "id": "v01rxda"
+      "id": "v01rxda",
+      "content": "• Crossing west → add one day."
     },
     {
       "type": "examAlert",
@@ -95,11 +97,13 @@
     },
     {
       "type": "paragraph",
-      "id": "nkqfgcp"
+      "id": "nkqfgcp",
+      "content": "• Crossing east → subtract one day."
     },
     {
       "type": "paragraph",
-      "id": "6ewaz5p"
+      "id": "6ewaz5p",
+      "content": "• It deviates to avoid splitting countries and islands."
     }
   ],
   "enriched": true

@@ -1,0 +1,95 @@
+{
+  "title": "MOST IMPORTANT EXAM TRAPS",
+  "order": 27,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Earth is a GEOID.<br/>• Seasons due to tilt mad revolution , NOT distance.<br/>• Sidereal day is shorter.<br/>• Coriolis zero at equator.<br/>• Northern winter near perihelion.",
+      "id": "fya13ez"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Earth is a GEOID.",
+      "id": "wg4fef7"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Geographic Concept",
+        "Common Exam Trap / Misconception",
+        "Correct Scientific Fact"
+      ],
+      "rows": [
+        [
+          "Earth's Shape",
+          "Perfect Sphere / Ellipsoid",
+          "GEOID"
+        ],
+        [
+          "Cause of Seasons",
+          "Distance from the Sun",
+          "Axial tilt and revolution"
+        ],
+        [
+          "Coriolis Force at Equator",
+          "Maximum deflection",
+          "Zero force"
+        ],
+        [
+          "Northern Winter Position",
+          "Aphelion (farthest distance)",
+          "Near Perihelion (closest distance)"
+        ]
+      ],
+      "id": "i1zu7xw"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Earth's Shape",
+          "value": "GEOID",
+          "icon": "info"
+        },
+        {
+          "label": "Coriolis at Equator",
+          "value": "Zero",
+          "icon": "check"
+        },
+        {
+          "label": "Sidereal Day",
+          "value": "Shorter",
+          "icon": "clock"
+        },
+        {
+          "label": "Northern Winter",
+          "value": "Near Perihelion",
+          "icon": "calendar"
+        }
+      ],
+      "id": "licskoy"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exams often trap students into thinking distance causes seasons; remember it is tilt and revolution.",
+        "Questions frequently test Coriolis force magnitude at the equator—it is always zero.",
+        "Counter-intuitively, Northern Hemisphere winter occurs when Earth is near perihelion (closest point to the Sun)."
+      ],
+      "id": "k5scvxh"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The true physical shape of the Earth is defined as a GEOID, not a perfect sphere.",
+        "Seasons are driven by axial tilt and orbital revolution, not by varying distance from the Sun.",
+        "A sidereal day is shorter in duration compared to a standard solar day.",
+        "The Coriolis force is completely absent (zero) at the equator.",
+        "The Northern Hemisphere experiences winter when Earth is near perihelion (closest to the Sun)."
+      ],
+      "id": "vuh9b9w"
+    }
+  ],
+  "enriched": true
+}

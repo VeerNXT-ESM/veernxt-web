@@ -1,0 +1,455 @@
+{
+  "title": "CHAPTER 10 : MAGNETISM & ELECTROMAGNETISM",
+  "order": 10,
+  "blocks": [
+    {
+      "id": "8ek2gd9",
+      "type": "heading",
+      "level": 2,
+      "content": "INTRODUCTION TO MAGNETISM"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Magnets always have two poles; like poles repel and unlike poles attract each other.",
+        "Magnetic field lines originate from the North pole, end at the South pole, are crowded near the poles, and never intersect.",
+        "Earth behaves like a giant magnet where geographic north is near magnetic south.",
+        "Electromagnets are temporary magnets whose strength depends on current and can be switched ON and OFF.",
+        "An electric motor converts electrical energy into mechanical energy, while a generator converts mechanical energy into electrical energy."
+      ],
+      "id": "gqgycc3"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Magnetic Poles",
+          "value": "2 (North & South)",
+          "icon": "compass"
+        },
+        {
+          "label": "Discovered EMI",
+          "value": "Michael Faraday",
+          "icon": "award"
+        },
+        {
+          "label": "Electromagnet Core",
+          "value": "Soft Iron",
+          "icon": "check"
+        },
+        {
+          "label": "Magnetic Field Line Path",
+          "value": "North to South Pole",
+          "icon": "info"
+        }
+      ],
+      "id": "zm0h1mk"
+    },
+    {
+      "type": "paragraph",
+      "content": "Magnetism is a physical phenomenon by which certain materials attract or repel each other. A magnet is an object that produces a magnetic field and attracts magnetic substances like:",
+      "id": "ockf6nu"
+    },
+    {
+      "id": "sqm0lb8",
+      "type": "list",
+      "items": [
+        "<ul><li>Iron</li><li>Cobalt</li><li>Nickel</li></ul>",
+        "Iron",
+        "Cobalt",
+        "Nickel"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Magnetism plays an important role in daily life such as:",
+      "id": "8vgn1gs"
+    },
+    {
+      "id": "doiifp8",
+      "type": "list",
+      "items": [
+        "<ul><li>Electric motors</li><li>Loudspeakers</li><li>Generators</li><li>Compass</li></ul>",
+        "Electric motors",
+        "Loudspeakers",
+        "Generators",
+        "Compass"
+      ]
+    },
+    {
+      "id": "v8sfmyd",
+      "type": "heading",
+      "level": 2,
+      "content": "MAGNET"
+    },
+    {
+      "type": "paragraph",
+      "content": "A magnet is a material that has the property of attracting iron and producing magnetic field. Magnets have two poles:",
+      "id": "tisbe3l"
+    },
+    {
+      "id": "bua5pmk",
+      "type": "list",
+      "items": [
+        "<ul><li>North Pole</li><li>South Pole</li></ul>",
+        "North Pole",
+        "South Pole"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Important rule:",
+      "id": "3lx0os1"
+    },
+    {
+      "type": "paragraph",
+      "content": "Like poles repel each other. Unlike poles attract each other.",
+      "id": "0f5e08r"
+    },
+    {
+      "id": "r1mryh4",
+      "type": "heading",
+      "level": 2,
+      "content": "PROPERTIES OF MAGNET"
+    },
+    {
+      "id": "my9519d",
+      "type": "numberedList",
+      "items": [
+        "A magnet always has two poles.",
+        "Like poles repel, unlike poles attract.",
+        "Magnetic poles always exist in pairs.",
+        "Magnetic strength is strongest at poles.",
+        "A freely suspended magnet aligns itself in North-South direction."
+      ]
+    },
+    {
+      "id": "yz5i27c",
+      "type": "heading",
+      "level": 2,
+      "content": "TYPES OF MAGNETS"
+    },
+    {
+      "type": "paragraph",
+      "content": "There are two main types of magnets:",
+      "id": "13qtkgv"
+    },
+    {
+      "id": "ouzehge",
+      "type": "numberedList",
+      "items": [
+        "Natural Magnets<ul><li>Example: Lodestone</li></ul>",
+        "Example: Lodestone",
+        "Artificial Magnets<ul><li>Bar magnet</li><li>Horseshoe magnet</li><li>Ring magnet</li></ul>",
+        "Bar magnet",
+        "Horseshoe magnet",
+        "Ring magnet"
+      ]
+    },
+    {
+      "id": "vx1r2b5",
+      "type": "heading",
+      "level": 2,
+      "content": "MAGNETIC FIELD"
+    },
+    {
+      "type": "paragraph",
+      "content": "Magnetic field is the region around a magnet where its magnetic force can be felt. Magnetic field lines:",
+      "id": "5yf5bhf"
+    },
+    {
+      "id": "c7ir6mk",
+      "type": "list",
+      "items": [
+        "<ul><li>Originate from North pole</li><li>End at South pole</li><li>Never intersect each other</li><li>Are crowded near the poles</li></ul>",
+        "Originate from North pole",
+        "End at South pole",
+        "Never intersect each other",
+        "Are crowded near the poles"
+      ]
+    },
+    {
+      "id": "5q1fn1k",
+      "type": "heading",
+      "level": 2,
+      "content": "EARTH AS A MAGNET"
+    },
+    {
+      "type": "paragraph",
+      "content": "Earth behaves like a giant magnet.",
+      "id": "un2vxn5"
+    },
+    {
+      "id": "9cxp8zj",
+      "type": "list",
+      "items": [
+        "<ul><li>Geographic north is near magnetic south</li><li>Geographic south is near magnetic north This is the reason why a compass works.</li></ul>",
+        "Geographic north is near magnetic south",
+        "Geographic south is near magnetic north This is the reason why a compass works."
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Electromagnetic induction is the phenomenon of production of electric current when magnetic flux linked with a conductor changes.",
+      "id": "2ikoim2"
+    },
+    {
+      "id": "gsg64hx",
+      "type": "heading",
+      "level": 2,
+      "content": "MAGNETIC COMPASS"
+    },
+    {
+      "type": "paragraph",
+      "content": "A magnetic compass is an instrument used to find directions. It works on the principle that a freely suspended magnet aligns itself in North-South direction.",
+      "id": "bg23e8t"
+    },
+    {
+      "id": "bmitnoo",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTROMAGNETISM"
+    },
+    {
+      "type": "paragraph",
+      "content": "Electromagnetism is the phenomenon where a magnetic field is produced due to electric current.",
+      "id": "kkwyj46"
+    },
+    {
+      "type": "paragraph",
+      "content": "When current flows through a conductor, it behaves like a magnet.",
+      "id": "h0l36gd"
+    },
+    {
+      "id": "o3t1cil",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTROMAGNET"
+    },
+    {
+      "type": "paragraph",
+      "content": "An electromagnet is a temporary magnet produced by passing electric current through a coil wound around a soft iron core.",
+      "id": "dvv4syy"
+    },
+    {
+      "type": "paragraph",
+      "content": "Characteristics: ",
+      "id": "npfcr4v"
+    },
+    {
+      "id": "opv2f17",
+      "type": "list",
+      "items": [
+        "<ul><li>Strong magnetic field</li><li>Can be switched ON and OFF</li><li>Strength depends on current</li></ul>",
+        "Strong magnetic field",
+        "Can be switched ON and OFF",
+        "Strength depends on current"
+      ]
+    },
+    {
+      "id": "28m1fu8",
+      "type": "heading",
+      "level": 2,
+      "content": "USES OF ELECTROMAGNET"
+    },
+    {
+      "id": "vnz1zdp",
+      "type": "list",
+      "items": [
+        "<ul><li>Electric bell</li><li>Electric motor</li><li>Cranes for lifting iron</li><li>Relay</li><li>Loudspeakers</li></ul>",
+        "Electric bell",
+        "Electric motor",
+        "Cranes for lifting iron",
+        "Relay",
+        "Loudspeakers"
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Permanent Magnet",
+        "Electromagnet"
+      ],
+      "rows": [
+        [
+          "Magnetism",
+          "Permanent magnetism",
+          "Temporary magnet"
+        ],
+        [
+          "Control",
+          "Cannot be switched off",
+          "Can be switched ON/OFF"
+        ],
+        [
+          "Field Strength",
+          "Weak magnetic field",
+          "Strong magnetic field"
+        ]
+      ],
+      "id": "220ho3m"
+    },
+    {
+      "id": "xht661l",
+      "type": "heading",
+      "level": 2,
+      "content": "DIFFERENCE BETWEEN PERMANENT MAGNET AND ELECTROMAGNET"
+    },
+    {
+      "type": "paragraph",
+      "content": "Permanent Magnet:",
+      "id": "k5y8n66"
+    },
+    {
+      "id": "lhdogsj",
+      "type": "list",
+      "items": [
+        "<ul><li>Permanent magnetism</li><li>Cannot be switched off</li><li>Weak magnetic field</li></ul>",
+        "Permanent magnetism",
+        "Cannot be switched off",
+        "Weak magnetic field"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Electromagnet:",
+      "id": "6iikudx"
+    },
+    {
+      "id": "kud6gi8",
+      "type": "list",
+      "items": [
+        "<ul><li>Temporary magnet</li><li>Can be switched ON/OFF</li><li>Strong magnetic field</li></ul>",
+        "Temporary magnet",
+        "Can be switched ON/OFF",
+        "Strong magnetic field"
+      ]
+    },
+    {
+      "id": "254e2mn",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC MOTOR"
+    },
+    {
+      "type": "paragraph",
+      "content": "An electric motor converts electrical energy into mechanical energy. Principle:",
+      "id": "9m8zp45"
+    },
+    {
+      "type": "paragraph",
+      "content": "A current carrying conductor placed in a magnetic field experiences a force.",
+      "id": "wsfge6l"
+    },
+    {
+      "type": "paragraph",
+      "content": "Uses: ",
+      "id": "or8i61y"
+    },
+    {
+      "id": "xljyl0g",
+      "type": "list",
+      "items": [
+        "<ul><li>Fans</li><li>Mixers</li><li>Washing machines</li></ul>",
+        "Fans",
+        "Mixers",
+        "Washing machines"
+      ]
+    },
+    {
+      "id": "lzvtvdj",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTROMAGNETIC INDUCTION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Electromagnetic induction is the phenomenon of production of electric current when magnetic flux linked with a conductor changes.",
+      "id": "bpwqccn"
+    },
+    {
+      "type": "paragraph",
+      "content": "Discovered by Michael Faraday.",
+      "id": "9i1vaos"
+    },
+    {
+      "id": "edwnby1",
+      "type": "heading",
+      "level": 2,
+      "content": "ELECTRIC GENERATOR"
+    },
+    {
+      "type": "paragraph",
+      "content": "An electric generator converts mechanical energy into electrical energy. It works on the principle of electromagnetic induction.",
+      "id": "vtfr9w4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Michael Faraday discovered the phenomenon of electromagnetic induction.",
+        "Soft iron is the material specifically used to make the core of an electromagnet.",
+        "Electric motor converts electrical energy into mechanical energy, whereas electric generator converts mechanical energy into electrical energy."
+      ],
+      "id": "afqaokk"
+    },
+    {
+      "id": "7bbruls",
+      "type": "heading",
+      "level": 2,
+      "content": "IMPORTANT SSC QUESTIONS"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q1. Who discovered electromagnetic induction? Ans: Michael Faraday",
+      "id": "dzy3rxx"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q2. Which device converts electrical energy into mechanical energy? Ans: Electric motor",
+      "id": "wsxscz6"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q3. Which device converts mechanical energy into electrical energy? Ans: Generator",
+      "id": "3a2iibv"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q4. Which material is used in electromagnet? Ans: Soft iron",
+      "id": "lz72e2n"
+    },
+    {
+      "type": "paragraph",
+      "content": "Q5. Which poles attract each other?",
+      "id": "vh21ac6"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "Ans: Unlike poles",
+      "id": "bytejyw"
+    },
+    {
+      "id": "g9x920q",
+      "type": "heading",
+      "level": 2,
+      "content": "QUICK REVISION POINTS"
+    },
+    {
+      "id": "cfqqz78",
+      "type": "list",
+      "items": [
+        "<ul><li>Magnet has two poles</li><li>Like poles repel</li><li>Earth acts as a magnet</li><li>Electromagnet works on electric current</li><li>Motor converts electrical energy to mechanical</li><li>Generator converts mechanical energy to electrical</li></ul>",
+        "Magnet has two poles",
+        "Like poles repel",
+        "Earth acts as a magnet",
+        "Electromagnet works on electric current",
+        "Motor converts electrical energy to mechanical",
+        "Generator converts mechanical energy to electrical"
+      ]
+    }
+  ],
+  "enriched": true
+}

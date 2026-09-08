@@ -55,7 +55,14 @@
     },
     {
       "type": "paragraph",
-      "id": "45jjw2d"
+      "id": "45jjw2d",
+      "content": "This chapter explains the structure and working of the human eye, defects of vision, optical phenomena in nature and scattering of light. "
+    },
+    {
+      "id": "ne2bnjf",
+      "type": "image",
+      "imageId": "efioi7h",
+      "src": "/books/Precis/RRB GS/images/image_efioi7h.png"
     },
     {
       "id": "ogfagwj",
@@ -70,72 +77,75 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Part</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Cornea</p>",
+            "<p>Transparent front layer; refracts most of the light</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Aqueous Humour</p>",
+            "<p>Fluid between cornea and lens; maintains pressure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Iris</p>",
+            "<p>Controls size of pupil</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pupil</p>",
+            "<p>Regulates amount of light entering eye</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Eye Lens</p>",
+            "<p>Focuses light on retina</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ciliary Muscles</p>",
+            "<p>Adjust focal length (accommodation)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Retina</p>",
+            "<p>Screen where image is formed</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "yvvet1u"
+      "id": "yvvet1u",
+      "content": "• Retina contains Rod cells (vision in dim light) and Cone cells (colour vision)."
     },
     {
       "type": "paragraph",
-      "id": "n8nc7hw"
+      "id": "n8nc7hw",
+      "content": "• Yellow Spot (Fovea): Region of sharp vision."
     },
     {
       "type": "paragraph",
-      "id": "armr0yd"
+      "id": "armr0yd",
+      "content": "• Blind Spot: No photoreceptor cells; optic nerve leaves eye."
     },
     {
       "id": "ilb4177",
@@ -145,19 +155,23 @@
     },
     {
       "type": "paragraph",
-      "id": "g25087k"
+      "id": "g25087k",
+      "content": "• Image formed is real, inverted and diminished."
     },
     {
       "type": "paragraph",
-      "id": "9wjxit1"
+      "id": "9wjxit1",
+      "content": "• Brain interprets inverted image as erect."
     },
     {
       "type": "paragraph",
-      "id": "utbhpkk"
+      "id": "utbhpkk",
+      "content": "• Least distance of distinct vision = 25 cm (Normal eye)."
     },
     {
       "type": "paragraph",
-      "id": "i6ome45"
+      "id": "i6ome45",
+      "content": "• Far point of normal eye = Infinity."
     },
     {
       "id": "10enous",
@@ -167,15 +181,18 @@
     },
     {
       "type": "paragraph",
-      "id": "li5zn7q"
+      "id": "li5zn7q",
+      "content": "Ability of eye lens to adjust focal length to see near and distant objects clearly."
     },
     {
       "type": "paragraph",
-      "id": "r6yk8wu"
+      "id": "r6yk8wu",
+      "content": "Controlled by ciliary muscles."
     },
     {
       "type": "paragraph",
-      "id": "bsvh9bs"
+      "id": "bsvh9bs",
+      "content": "Decreases with age."
     },
     {
       "id": "0td21e2",
@@ -190,46 +207,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Defect</strong></p>",
+            "<p><strong>Cause</strong></p>",
+            "<p><strong>Image Formation</strong></p>",
+            "<p><strong>Correction</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Myopia</p>",
+            "<p>Eyeball elongated</p>",
+            "<p>Before retina</p>",
+            "<p>Concave lens</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hypermetropia</p>",
+            "<p>Eyeball short</p>",
+            "<p>Behind retina</p>",
+            "<p>Convex lens</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Presbyopia</p>",
+            "<p>Weak ciliary muscles</p>",
+            "<p>Near objects unclear</p>",
+            "<p>Bifocal lens</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Astigmatism</p>",
+            "<p>Unequal curvature</p>",
+            "<p>Blurred vision</p>",
+            "<p>Cylindrical lens</p>"
           ]
         }
       ]
@@ -242,15 +259,18 @@
     },
     {
       "type": "paragraph",
-      "id": "mu8ee2j"
+      "id": "mu8ee2j",
+      "content": "• Light bends towards base of prism."
     },
     {
       "type": "paragraph",
-      "id": "ma2lim6"
+      "id": "ma2lim6",
+      "content": "• Angle between incident and emergent ray = Angle of deviation."
     },
     {
       "type": "paragraph",
-      "id": "h45v47y"
+      "id": "h45v47y",
+      "content": "• Violet deviates most, Red least."
     },
     {
       "id": "37b0c12",
@@ -260,15 +280,18 @@
     },
     {
       "type": "paragraph",
-      "id": "cjyloq5"
+      "id": "cjyloq5",
+      "content": "Splitting of white light into VIBGYOR."
     },
     {
       "type": "paragraph",
-      "id": "c45sd9r"
+      "id": "c45sd9r",
+      "content": "Red → Maximum wavelength."
     },
     {
       "type": "paragraph",
-      "id": "3a6hbz2"
+      "id": "3a6hbz2",
+      "content": "Violet → Minimum wavelength."
     },
     {
       "type": "pullQuote",
@@ -277,7 +300,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xeszxwi"
+      "id": "xeszxwi",
+      "content": "Cause: Different colours travel with different speeds in medium."
     },
     {
       "id": "drs9f9v",
@@ -287,15 +311,18 @@
     },
     {
       "type": "paragraph",
-      "id": "l308hbw"
+      "id": "l308hbw",
+      "content": "• Twinkling of stars."
     },
     {
       "type": "paragraph",
-      "id": "y8wy6yb"
+      "id": "y8wy6yb",
+      "content": "• Advanced sunrise and delayed sunset."
     },
     {
       "type": "paragraph",
-      "id": "hvg2d37"
+      "id": "hvg2d37",
+      "content": "• Sun appears oval at horizon."
     },
     {
       "id": "a55kplc",
@@ -305,19 +332,23 @@
     },
     {
       "type": "paragraph",
-      "id": "8ldgmmn"
+      "id": "8ldgmmn",
+      "content": "Scattering is deviation of light by particles in atmosphere."
     },
     {
       "type": "paragraph",
-      "id": "siyfa46"
+      "id": "siyfa46",
+      "content": "Short wavelength scatters more."
     },
     {
       "type": "paragraph",
-      "id": "ik04qaz"
+      "id": "ik04qaz",
+      "content": "Blue colour of sky due to scattering of blue light."
     },
     {
       "type": "paragraph",
-      "id": "116rmbi"
+      "id": "116rmbi",
+      "content": "Red colour at sunset due to longer path and scattering of shorter wavelengths."
     },
     {
       "id": "7eomyh4",
@@ -327,11 +358,13 @@
     },
     {
       "type": "paragraph",
-      "id": "kvblk5o"
+      "id": "kvblk5o",
+      "content": "Scattering of light by colloidal particles."
     },
     {
       "type": "paragraph",
-      "id": "2vuqchb"
+      "id": "2vuqchb",
+      "content": "Example: Beam of light visible in dusty room."
     },
     {
       "id": "zv8cqao",
@@ -377,15 +410,18 @@
     },
     {
       "type": "paragraph",
-      "id": "ikx49lf"
+      "id": "ikx49lf",
+      "content": "• Due to defective cone cells."
     },
     {
       "type": "paragraph",
-      "id": "g052kio"
+      "id": "g052kio",
+      "content": "• Person cannot distinguish certain colours (usually red-green)."
     },
     {
       "type": "paragraph",
-      "id": "lnsp509"
+      "id": "lnsp509",
+      "content": "• Genetic disorder (X-linked)."
     },
     {
       "id": "doj3urc",
@@ -395,7 +431,8 @@
     },
     {
       "type": "paragraph",
-      "id": "8qit3md"
+      "id": "8qit3md",
+      "content": "• Near point (normal eye) = 25 cm.<br></br>• Far point (normal eye) = Infinity.<br></br>• Myopia → Far point &lt; Infinity.<br></br>• Hypermetropia → Near point &gt; 25 cm."
     },
     {
       "id": "9ol2k41",
@@ -405,7 +442,8 @@
     },
     {
       "type": "paragraph",
-      "id": "xbx4vjy"
+      "id": "xbx4vjy",
+      "content": "• Use lens formula: 1/f = 1/v - 1/u.<br></br>• Power P = 1/f (in metre).<br></br>• Myopia → Negative power.<br></br>• Hypermetropia → Positive power."
     },
     {
       "id": "xxze2re",
@@ -415,7 +453,8 @@
     },
     {
       "type": "paragraph",
-      "id": "e0k8tzk"
+      "id": "e0k8tzk",
+      "content": "• Stars appear higher due to atmospheric refraction.<br></br>• Advanced sunrise &amp; delayed sunset."
     },
     {
       "id": "y8fi5l7",
@@ -425,7 +464,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qdm7ps0"
+      "id": "qdm7ps0",
+      "content": "• Stars twinkle (point sources).<br></br>• Planets do not twinkle (extended sources)."
     },
     {
       "id": "qdxs53y",
@@ -435,7 +475,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ogg1wpk"
+      "id": "ogg1wpk",
+      "content": "• Longer atmospheric path.<br></br>• Blue scatters away, red reaches observer."
     },
     {
       "id": "sdbj9nc",
@@ -445,7 +486,8 @@
     },
     {
       "type": "paragraph",
-      "id": "j817jt4"
+      "id": "j817jt4",
+      "content": "• Scattering ∝ 1/λ⁴.<br></br>• Shorter wavelength scatters more."
     },
     {
       "id": "03f1uih",
@@ -461,7 +503,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5bmwfei"
+      "id": "5bmwfei",
+      "content": "• Based on Total Internal Reflection.<br></br>• Used in communication &amp; medical field."
     },
     {
       "type": "examAlert",
@@ -481,7 +524,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qfvc9y0"
+      "id": "qfvc9y0",
+      "content": "• Clouding of eye lens.<br></br>• Treated surgically."
     },
     {
       "id": "hfajk3e",
@@ -491,7 +535,8 @@
     },
     {
       "type": "paragraph",
-      "id": "567grfn"
+      "id": "567grfn",
+      "content": "• Image remains on retina ~1/16 sec.<br></br>• Basis of motion pictures."
     },
     {
       "id": "z1smbxg",
@@ -506,36 +551,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Key Point</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Near Point</p>",
+            "<p>25 cm (normal eye)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Far Point</p>",
+            "<p>Infinity (normal eye)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Blue Sky</p>",
+            "<p>Scattering of blue light</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Red Sunset</p>",
+            "<p>Scattering of shorter wavelengths</p>"
           ]
         }
       ]
@@ -548,23 +593,28 @@
     },
     {
       "type": "paragraph",
-      "id": "m8gvf30"
+      "id": "m8gvf30",
+      "content": "• Rods are more sensitive than cones."
     },
     {
       "type": "paragraph",
-      "id": "yi4t9dq"
+      "id": "yi4t9dq",
+      "content": "• Critical angle inside eye helps total internal reflection."
     },
     {
       "type": "paragraph",
-      "id": "c09tbaj"
+      "id": "c09tbaj",
+      "content": "• Twinkling occurs due to atmospheric refraction."
     },
     {
       "type": "paragraph",
-      "id": "9up4g9i"
+      "id": "9up4g9i",
+      "content": "• Scattering ∝ 1/λ⁴ (Rayleigh scattering concept)."
     },
     {
       "type": "paragraph",
-      "id": "s4u39fy"
+      "id": "s4u39fy",
+      "content": "• Near point increases with age."
     }
   ],
   "enriched": true

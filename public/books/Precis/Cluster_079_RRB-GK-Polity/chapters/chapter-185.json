@@ -1,0 +1,132 @@
+{
+  "title": "Elections Conducted by ECI",
+  "order": 185,
+  "blocks": [
+    {
+      "id": "6gh8okd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Election</strong></p>",
+            "<p><strong>Conducted By</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lok Sabha</p>",
+            "<p>Election Commission</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Rajya Sabha</p>",
+            "<p>Election Commission</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>State Legislative Assemblies</p>",
+            "<p>Election Commission</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>President</p>",
+            "<p>Election Commission</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Vice-President</p>",
+            "<p>Election Commission</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The superintendence, direction and control of the preparation of the electoral rolls for, and the conduct of, all elections to Parliament and to the Legislature of every State and of elections to the offices of President and Vice-President shall be vested in the Election Commission.",
+      "id": "nj7jqdn"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Election Commission of India (ECI)",
+        "State Election Commission (SEC)"
+      ],
+      "rows": [
+        [
+          "Constitutional Provision",
+          "Article 324",
+          "Articles 243K & 243ZA"
+        ],
+        [
+          "Elections Conducted",
+          "Parliament, State Legislatures, President & Vice-President",
+          "Panchayats and Municipalities (Local Urban & Rural Bodies)"
+        ],
+        [
+          "Appointing Authority",
+          "President of India",
+          "Governor of the respective State"
+        ]
+      ],
+      "id": "qdjoli5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Provision",
+          "value": "Article 324",
+          "icon": "book"
+        },
+        {
+          "label": "Establishment Date",
+          "value": "25 Jan 1950",
+          "icon": "calendar"
+        },
+        {
+          "label": "National Voters' Day",
+          "value": "25th January",
+          "icon": "award"
+        },
+        {
+          "label": "Elections Administered",
+          "value": "6 Major Offices",
+          "icon": "check"
+        }
+      ],
+      "id": "3ujxm3h"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "ECI does NOT conduct elections for Panchayats and Municipalities; these are governed by State Election Commissions under Articles 243K and 243ZA.",
+        "Article 324 grants constitutional status and independent powers of superintendence, direction, and control of elections to the ECI.",
+        "The concept of National Voters' Day commemorates the foundation day of ECI on 25th January 1950."
+      ],
+      "id": "x5mfjnc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Election Commission of India (ECI) is an autonomous constitutional authority established under Article 324 of the Constitution.",
+        "ECI conducts elections to the Lok Sabha, Rajya Sabha, State Legislative Assemblies, State Legislative Councils, and the offices of the President and Vice-President of India.",
+        "Elections to local bodies (Panchayats and Municipalities) are NOT conducted by the ECI; they are managed by respective State Election Commissions.",
+        "The Chief Election Commissioner and other Election Commissioners are appointed by the President of India."
+      ],
+      "id": "1fj6ue6"
+    }
+  ],
+  "enriched": true
+}

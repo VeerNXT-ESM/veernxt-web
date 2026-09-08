@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "bn61lt2"
+      "id": "bn61lt2",
+      "content": "The Universe is the infinite expanse of space containing all matter and energy — galaxies, stars, planets, satellites, nebulae, black holes, dark matter, and cosmic radiation."
     },
     {
       "type": "statStrip",
@@ -35,36 +36,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Parameter</strong></p>",
+            "<p><strong>Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Estimated Age</p>",
+            "<p>13.8 Billion Years</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Origin Theory</p>",
+            "<p>Big Bang Theory</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nature</p>",
+            "<p>Continuously Expanding</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Study of Universe</p>",
+            "<p>Cosmology</p>"
           ]
         }
       ]
@@ -76,9 +77,10 @@
       "content": "Big Bang Theory (VERY FREQUENTLY ASKED)"
     },
     {
-      "type": "pullQuote",
-      "content": "Big Bang Theory (VERY FREQUENTLY ASKED)",
-      "id": "ed022k3"
+      "id": "ut5z4x5",
+      "type": "image",
+      "imageId": "6ccdnj1",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_6ccdnj1.jpeg"
     },
     {
       "type": "keyFacts",
@@ -92,19 +94,23 @@
     },
     {
       "type": "paragraph",
-      "id": "96iobx3"
+      "id": "96iobx3",
+      "content": "Proposed by Georges Lemaître and supported by Edwin Hubble’s observation that galaxies are moving away from each other (Red Shift phenomenon).<img></img>"
     },
     {
       "type": "paragraph",
-      "id": "6ijdetz"
+      "id": "6ijdetz",
+      "content": "• Universe began as an extremely hot and dense point called a singularity."
     },
     {
       "type": "paragraph",
-      "id": "q55225e"
+      "id": "q55225e",
+      "content": "• A massive explosion caused expansion of space."
     },
     {
       "type": "paragraph",
-      "id": "hn63ff8"
+      "id": "hn63ff8",
+      "content": "• Expansion continues today. "
     },
     {
       "type": "examAlert",
@@ -122,7 +128,8 @@
     },
     {
       "type": "paragraph",
-      "id": "be7w8uz"
+      "id": "be7w8uz",
+      "content": "Red shift refers to the increase in wavelength of light from galaxies moving away from us. It is the strongest evidence that the universe is expanding."
     }
   ],
   "enriched": true

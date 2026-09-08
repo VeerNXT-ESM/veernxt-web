@@ -1,0 +1,51 @@
+{
+  "title": "Untitled Chapter",
+  "order": 55,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "Structured revision and consistent practice of key concepts are essential for success in competitive examinations.",
+      "id": "j9blga3"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Focus Area",
+          "value": "Core Revision",
+          "icon": "book"
+        },
+        {
+          "label": "Exam Relevance",
+          "value": "High",
+          "icon": "award"
+        },
+        {
+          "label": "Target Exams",
+          "value": "UPSC / SSC / State PSC",
+          "icon": "check"
+        }
+      ],
+      "id": "ux3g7a1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Pay special attention to definitions, dates, and key terminology in standard reference material.",
+        "Direct questions are frequently framed from factual data and analytical comparisons."
+      ],
+      "id": "4a8fssc"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Thoroughly review core concepts and fundamental facts for competitive exams.",
+        "Focus on high-yield topics frequently asked in preliminary and main examinations.",
+        "Practice previous year questions (PYQs) to understand exam patterns and question trends."
+      ],
+      "id": "cb4mvjr"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,77 @@
+{
+  "title": "2. What is a Tribunal?",
+  "order": 432,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A tribunal is a body that exercises judicial or quasi-judicial functions. It is less formal than a court and is designed to handle technical matters requiring subject expertise.",
+      "id": "b9g0a2s"
+    },
+    {
+      "type": "pullQuote",
+      "content": "A tribunal is a body that exercises judicial or quasi-judicial functions.",
+      "id": "2arn64f"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Tribunal",
+        "Court"
+      ],
+      "rows": [
+        [
+          "Procedure",
+          "Less formal",
+          "More formal"
+        ],
+        [
+          "Focus Area",
+          "Technical matters requiring subject expertise",
+          "General legal matters"
+        ]
+      ],
+      "id": "wuoq2dy"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Primary Function",
+          "value": "Judicial / Quasi-Judicial",
+          "icon": "info"
+        },
+        {
+          "label": "Formality Level",
+          "value": "Less Formal",
+          "icon": "check"
+        },
+        {
+          "label": "Core Focus",
+          "value": "Subject Expertise",
+          "icon": "book"
+        }
+      ],
+      "id": "hbomma3"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Tribunals possess quasi-judicial functions, distinguishing them from ordinary administrative bodies.",
+        "The primary distinction between courts and tribunals lies in the degree of formality and the requirement of subject expertise for technical matters."
+      ],
+      "id": "3iyc5bd"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "A tribunal is a body responsible for exercising judicial or quasi-judicial functions.",
+        "Compared to traditional courts, tribunals operate in a less formal environment.",
+        "Tribunals are specifically designed to address technical matters that demand specialized subject expertise."
+      ],
+      "id": "ixcb1z7"
+    }
+  ],
+  "enriched": true
+}

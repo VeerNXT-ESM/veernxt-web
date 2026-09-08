@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "0kjjhdk"
+      "id": "0kjjhdk",
+      "content": "Coral reefs are limestone structures formed by marine organisms called polyps. They grow best in warm, shallow, clear tropical waters."
     },
     {
       "type": "statStrip",
@@ -40,37 +41,32 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Reef Type</strong></p>",
+            "<p><strong>Feature</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Fringing Reef</p>",
+            "<p>Attached directly to coast.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Barrier Reef</p>",
+            "<p>Separated from coast by lagoon.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Atoll</p>",
+            "<p>Ring-shaped reef enclosing lagoon.</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Conditions for Coral Growth",
-      "id": "z8vksnv"
     },
     {
       "id": "hbnuofm",
@@ -92,12 +88,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "6ejrop5"
+      "id": "6ejrop5",
+      "content": "• Temperature around 20–30°C"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nrcuhxj"
+      "id": "nrcuhxj",
+      "content": "• Clear, shallow water"
     },
     {
       "type": "examAlert",
@@ -111,12 +109,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "au2345k"
+      "id": "au2345k",
+      "content": "• Low sedimentation"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "6om4o6c"
+      "id": "6om4o6c",
+      "content": "• Salinity stability"
     }
   ],
   "enriched": true

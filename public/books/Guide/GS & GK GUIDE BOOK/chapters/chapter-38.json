@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "g1ld9gs"
+      "id": "g1ld9gs",
+      "content": "Natural vegetation refers to plant life that grows naturally in a region without human interference. It depends mainly on climate, rainfall, soil, altitude and relief. India's diverse geography supports a wide variety of vegetation types and wildlife."
     },
     {
       "type": "statStrip",
@@ -53,19 +54,23 @@
     },
     {
       "type": "paragraph",
-      "id": "mqqbers"
+      "id": "mqqbers",
+      "content": "• Climate – Temperature and rainfall determine vegetation."
     },
     {
       "type": "paragraph",
-      "id": "4prqufe"
+      "id": "4prqufe",
+      "content": "• Soil – Different soils support different plants."
     },
     {
       "type": "paragraph",
-      "id": "dr8kvp0"
+      "id": "dr8kvp0",
+      "content": "• Relief – Plains, plateaus and mountains influence vegetation."
     },
     {
       "type": "paragraph",
-      "id": "vvnzi4r"
+      "id": "vvnzi4r",
+      "content": "• Altitude – Vegetation changes with height in mountain regions."
     },
     {
       "id": "fg9wpjp",
@@ -80,55 +85,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Vegetation Type</strong></p>",
+            "<p><strong>Regions</strong></p>",
+            "<p><strong>Flora</strong></p>",
+            "<p><strong>Fauna</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Evergreen Forests</p>",
+            "<p>Western Ghats, Andaman &amp; Nicobar Islands, Northeastern states</p>",
+            "<p>Ebony, Mahogany, Rosewood, Bamboo, Rubber</p>",
+            "<p>Elephant, Leopard, Monkey, Hornbill</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Deciduous Forests</p>",
+            "<p>Central India, Northern plains, Eastern India</p>",
+            "<p>Teak, Sal, Bamboo, Sandalwood</p>",
+            "<p>Tiger, Deer, Elephant, Langur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Thorn Forests</p>",
+            "<p>Rajasthan, Gujarat, parts of Punjab and Haryana</p>",
+            "<p>Acacia, Cactus, Date Palm</p>",
+            "<p>Camel, Fox, Wild Goat</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mountain Forests</p>",
+            "<p>Himalayas (J&amp;K, Himachal, Uttarakhand)</p>",
+            "<p>Pine, Deodar, Fir, Spruce</p>",
+            "<p>Snow Leopard, Himalayan Bear, Yak</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mangrove Forests</p>",
+            "<p>Sundarbans and coastal deltas</p>",
+            "<p>Sundari, Palm, Coconut</p>",
+            "<p>Royal Bengal Tiger, Crocodile, Birds</p>"
           ]
         }
       ]
@@ -141,15 +146,18 @@
     },
     {
       "type": "paragraph",
-      "id": "rl7ofus"
+      "id": "rl7ofus",
+      "content": "Regions: Western Ghats, Northeast India, Andaman &amp; Nicobar."
     },
     {
       "type": "paragraph",
-      "id": "yb1hzn1"
+      "id": "yb1hzn1",
+      "content": "Flora: Ebony, Mahogany, Bamboo, Rubber."
     },
     {
       "type": "paragraph",
-      "id": "kbe10v8"
+      "id": "kbe10v8",
+      "content": "Fauna: Elephants, Leopards, Hornbills."
     },
     {
       "id": "mmv62ch",
@@ -164,15 +172,18 @@
     },
     {
       "type": "paragraph",
-      "id": "l2bedr7"
+      "id": "l2bedr7",
+      "content": "Regions: Madhya Pradesh, Uttar Pradesh, Bihar, Odisha."
     },
     {
       "type": "paragraph",
-      "id": "a3nzvdh"
+      "id": "a3nzvdh",
+      "content": "Flora: Teak, Sal, Bamboo."
     },
     {
       "type": "paragraph",
-      "id": "p5fkddw"
+      "id": "p5fkddw",
+      "content": "Fauna: Tigers, Deer, Elephants."
     },
     {
       "id": "2zpgm3q",
@@ -182,15 +193,18 @@
     },
     {
       "type": "paragraph",
-      "id": "cfr0aer"
+      "id": "cfr0aer",
+      "content": "Regions: Rajasthan, Gujarat, dry areas of Punjab and Haryana."
     },
     {
       "type": "paragraph",
-      "id": "wzn9jp8"
+      "id": "wzn9jp8",
+      "content": "Flora: Acacia, Cactus."
     },
     {
       "type": "paragraph",
-      "id": "jqxd13o"
+      "id": "jqxd13o",
+      "content": "Fauna: Camel, Fox."
     },
     {
       "id": "1oxn5ip",
@@ -231,15 +245,18 @@
     },
     {
       "type": "paragraph",
-      "id": "2fa7aqg"
+      "id": "2fa7aqg",
+      "content": "Regions: Himalayan states."
     },
     {
       "type": "paragraph",
-      "id": "udf5ucs"
+      "id": "udf5ucs",
+      "content": "Flora: Pine, Deodar, Fir."
     },
     {
       "type": "paragraph",
-      "id": "x2uqjgt"
+      "id": "x2uqjgt",
+      "content": "Fauna: Snow Leopard, Yak, Himalayan Bear."
     },
     {
       "id": "1lfu7ds",
@@ -249,15 +266,18 @@
     },
     {
       "type": "paragraph",
-      "id": "s18lnwc"
+      "id": "s18lnwc",
+      "content": "Regions: Sundarbans delta and coastal areas."
     },
     {
       "type": "paragraph",
-      "id": "pj9gt2v"
+      "id": "pj9gt2v",
+      "content": "Flora: Sundari trees."
     },
     {
       "type": "paragraph",
-      "id": "31916by"
+      "id": "31916by",
+      "content": "Fauna: Royal Bengal Tiger, Crocodiles."
     },
     {
       "id": "8prkyps",
@@ -267,7 +287,8 @@
     },
     {
       "type": "paragraph",
-      "id": "j4n7c49"
+      "id": "j4n7c49",
+      "content": "• Maintains ecological balance."
     },
     {
       "type": "examAlert",
@@ -280,15 +301,18 @@
     },
     {
       "type": "paragraph",
-      "id": "5hvtkf9"
+      "id": "5hvtkf9",
+      "content": "• Prevents soil erosion."
     },
     {
       "type": "paragraph",
-      "id": "enpwjdk"
+      "id": "enpwjdk",
+      "content": "• Provides habitat for wildlife."
     },
     {
       "type": "paragraph",
-      "id": "29wjzuy"
+      "id": "29wjzuy",
+      "content": "• Provides timber and medicinal plants."
     },
     {
       "id": "8k9puzm",
@@ -298,15 +322,18 @@
     },
     {
       "type": "paragraph",
-      "id": "l24dwuz"
+      "id": "l24dwuz",
+      "content": "• Tropical deciduous forests are the most widespread forests in India."
     },
     {
       "type": "paragraph",
-      "id": "rdri042"
+      "id": "rdri042",
+      "content": "• Sundarbans is the largest mangrove forest in the world."
     },
     {
       "type": "paragraph",
-      "id": "1q0jiqj"
+      "id": "1q0jiqj",
+      "content": "• Western Ghats contain dense evergreen forests."
     }
   ],
   "enriched": true

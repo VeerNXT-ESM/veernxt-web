@@ -1,0 +1,124 @@
+{
+  "title": "Independence of CVC",
+  "order": 270,
+  "blocks": [
+    {
+      "id": "hdhuf9s",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Safeguard</strong></p>",
+            "<p><strong>Importance</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Statutory Status</p>",
+            "<p>Ensures institutional autonomy</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Appointment Committee</p>",
+            "<p>Reduces political interference</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fixed Tenure</p>",
+            "<p>Provides stability</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Central Vigilance Commissioner and Vigilance Commissioners are appointed by the President by warrant under his hand and seal on the recommendation of a three-member committee.",
+      "id": "gq6iq62"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Vigilance Commission (CVC)",
+        "Union Public Service Commission (UPSC)"
+      ],
+      "rows": [
+        [
+          "Tenure",
+          "4 years or 65 years of age",
+          "6 years or 65 years of age"
+        ],
+        [
+          "Nature of Body",
+          "Statutory Body (CVC Act, 2003)",
+          "Constitutional Body (Article 315)"
+        ],
+        [
+          "Appointment Panel",
+          "3-member committee (PM, HM, LoP in Lok Sabha)",
+          "Appointed directly by President"
+        ],
+        [
+          "Further Employment",
+          "Ineligible for any further government employment",
+          "Chairman ineligible; members eligible for UPSC/SPSC Chairmanship"
+        ]
+      ],
+      "id": "j5ysopc"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Tenure",
+          "value": "4 Years / 65 Age",
+          "icon": "calendar"
+        },
+        {
+          "label": "Selection Panel",
+          "value": "3 Members",
+          "icon": "award"
+        },
+        {
+          "label": "Salary Status",
+          "value": "UPSC Chairman Equivalent",
+          "icon": "info"
+        },
+        {
+          "label": "Removal Process",
+          "value": "President (SC Inquiry)",
+          "icon": "check"
+        }
+      ],
+      "id": "qfze97e"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Tenure Trap: Unlike most statutory bodies which have a 5 or 6-year term, CVC members serve a unique tenure of 4 years or until 65 years of age.",
+        "Selection Committee Composition: Frequently asked in prelims—comprises the Prime Minister (Head), Union Minister of Home Affairs, and Leader of Opposition in the Lok Sabha.",
+        "Re-employment Bar: Members are completely barred from further employment under both Central and State governments after completing their term."
+      ],
+      "id": "q4shmxx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Central Vigilance Commissioner and Vigilance Commissioners hold office for a term of 4 years or until they attain the age of 65 years, whichever is earlier.",
+        "They are appointed by the President by warrant under his hand and seal on the recommendation of a three-member committee consisting of the Prime Minister, Union Minister of Home Affairs, and the Leader of the Opposition in the Lok Sabha.",
+        "They are provided with security of tenure and can only be removed from office by the President on the ground of proved misbehaviour or incapacity after an inquiry by the Supreme Court.",
+        "Upon ceasing to hold office, the Central Vigilance Commissioner and Vigilance Commissioners are ineligible for further employment under the Central or State government.",
+        "Their salary, allowances, and other service conditions are equivalent to those of the Chairman of the Union Public Service Commission and cannot be varied to their disadvantage after appointment."
+      ],
+      "id": "a8viopd"
+    }
+  ],
+  "enriched": true
+}

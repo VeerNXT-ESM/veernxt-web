@@ -4,6 +4,12 @@
   "order": 2,
   "blocks": [
     {
+      "id": "apkpi8p",
+      "type": "image",
+      "imageId": "qhrevcq",
+      "src": "/books/Guide/JK_GK SI/images/image_qhrevcq.jpeg"
+    },
+    {
       "id": "0c70mb7",
       "type": "heading",
       "level": 2,
@@ -48,7 +54,8 @@
     },
     {
       "type": "paragraph",
-      "id": "2xo3ozh"
+      "id": "2xo3ozh",
+      "content": "The region has been inhabited since prehistoric times. The Kashmir Valley is considered one of the oldest inhabited regions of South Asia."
     },
     {
       "id": "1hgp66i",
@@ -60,11 +67,11 @@
       "id": "j98e8if",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Burzahom (near Srinagar): Neolithic site (3000 BCE); pit-dwelling culture; unique hunting scene engraved on stone — oldest astronomical record in India",
+        "Gufkral: Another Neolithic site near Tral; pottery, bone tools",
+        "Maryandal: Chalcolithic site",
+        "Kashmir mentioned as 'Kashyapmira' in Vedic literature; supposedly created by sage Kashyapa",
+        "Nilamata Purana: Ancient text giving history/geography of Kashmir Valley"
       ]
     },
     {
@@ -77,9 +84,9 @@
       "id": "ebplrlm",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Founded by Durlabhavardhana; first important ruling dynasty",
+        "Lalitaditya Muktapida (724–760 CE): Greatest ruler; defeated Arabs, Tibetans &amp; Palas; built Martand Sun Temple (near Anantnag/Mattan); empire extended from Bengal to Central Asia",
+        "Martand Sun Temple: 8th century; greatest example of Kashmiri temple architecture; destroyed by Sikandar Shah Miri in 1400 CE"
       ]
     },
     {
@@ -92,9 +99,9 @@
       "id": "knny8bk",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Founded by Avantivarman",
+        "Suya (engineer): Built Awantipora; diverted floods of Jhelum; famous water engineer",
+        "Shankaravarman: Expanded territory but heavy taxation"
       ]
     },
     {
@@ -107,8 +114,8 @@
       "id": "guvqi1q",
       "type": "list",
       "items": [
-        null,
-        null
+        "Queen Didda (980–1003 CE): Powerful ruler; initially regent for grandson; de facto ruler for decades",
+        "Rajatarangini by Kalhana (1148–1150 CE): First historical chronicle of Kashmir; 8 tarangas (books); written in Sanskrit; primary source for ancient J&amp;K history"
       ]
     },
     {
@@ -116,11 +123,6 @@
       "type": "heading",
       "level": 2,
       "content": "2.2 Medieval Period"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Shah Mir Dynasty (1339–1561 CE) — First Muslim Rule",
-      "id": "wspfgn8"
     },
     {
       "id": "lvifi42",
@@ -132,10 +134,10 @@
       "id": "7jxflwy",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Shah Mir: Founded first Muslim sultanate in Kashmir (1339 CE); took title 'Sultan Shamsuddin Shah'",
+        "Shahabuddin (1354–1373): Extended empire; tolerant ruler",
+        "Sikandar Shah Miri (1389–1413): Known as 'But-Shikan' (Idol Breaker); destroyed temples including Martand; forced conversions; anti-Hindu",
+        "Zain-ul-Abidin (1420–1470): 'Budshah' (Great King); golden age of Kashmir; tolerant, patron of arts &amp; crafts; brought weaving, carpet-making from Central Asia; rebuilt temples; respected all religions"
       ]
     },
     {
@@ -148,7 +150,7 @@
       "id": "plvgr1s",
       "type": "list",
       "items": [
-        null
+        "Yaqub Shah Chak: Last ruler; submitted to Akbar in 1586"
       ]
     },
     {
@@ -161,10 +163,10 @@
       "id": "wnfywsf",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Akbar annexed Kashmir in 1586 CE",
+        "Jahangir: Great lover of Kashmir; famous quote: 'Agar firdaus bar-rue zamin ast, hamin ast, hamin ast, hamin ast' (If there is paradise on earth, it is this, it is this, it is this)",
+        "Shah Jahan: Built Shalimar Bagh and Nishat Bagh in Srinagar; Mughal gardens",
+        "Mughals built many gardens: Shalimar, Nishat, Achabal, Chashma Shahi, Pari Mahal"
       ]
     },
     {
@@ -213,9 +215,9 @@
       "id": "2cmj4bo",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Ahmad Shah Durrani (Abdali) conquered Kashmir in 1752",
+        "Period known for extreme oppression and misrule",
+        "67 years of harsh Afghan rule; heavy taxes, atrocities"
       ]
     },
     {
@@ -228,10 +230,10 @@
       "id": "0zgwj78",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Ranjit Singh conquered Kashmir in 1819 CE",
+        "Kashmir made a province of Sikh Empire; administered by Sikh governors",
+        "Gulab Singh (Dogra chieftain) helped Sikhs; was given Jammu as feudatory",
+        "Anglo-Sikh Wars: After Ranjit Singh's death, Sikhs weakened"
       ]
     },
     {
@@ -244,8 +246,8 @@
       "id": "orttepe",
       "type": "list",
       "items": [
-        null,
-        null
+        "Treaty of Lahore (1846): After First Anglo-Sikh War, Sikhs ceded territories to British",
+        "Treaty of Amritsar (March 16, 1846): British sold Kashmir to Gulab Singh for Rs. 75 lakh (7.5 million rupees) — called Nankashahi rupees; Gulab Singh became first Maharaja of Jammu &amp; Kashmir"
       ]
     },
     {
@@ -255,36 +257,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Ruler</strong></p>",
+            "<p><strong>Key Facts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Gulab Singh (1846–1857)</strong></p>",
+            "<p>Founded Dogra rule; Treaty of Amritsar; included Ladakh, Baltistan; subdued border areas</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Ranbir Singh (1857–1885)</strong></p>",
+            "<p>Expanded territory; Gilgit acquired; supported British during 1857 mutiny; opened schools</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Pratap Singh (1885–1925)</strong></p>",
+            "<p>Long reign; British influence strong; State Subject law introduced (1927 — actually by Hari Singh)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Hari Singh (1925–1949)</strong></p>",
+            "<p>Last Maharaja; signed Instrument of Accession on 26 Oct 1947</p>"
           ]
         }
       ]
@@ -293,9 +295,9 @@
       "id": "l00nv3t",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "State Subject Laws (Hereditary State Subjects Order, 1927): Enacted by Maharaja Hari Singh; defined 'state subjects'; protected land rights from outsiders — later became basis for Article 35A",
+        "Sheikh Muhammad Abdullah: 'Lion of Kashmir'; National Conference founded 1932; demanded responsible government",
+        "Quit Kashmir Movement (1946): Led by National Conference against Maharaja's rule"
       ]
     },
     {
@@ -317,15 +319,15 @@
       "id": "rp3oqzg",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "After Independence (Aug 15, 1947), Maharaja Hari Singh hesitated between India, Pakistan &amp; independence",
+        "Pakistan sent tribal raiders (Kabailies) backed by Pakistani Army in October 1947",
+        "Tribal invasion started ~22 October 1947; raiders reached outskirts of Srinagar",
+        "Maharaja Hari Singh signed the Instrument of Accession to India on 26 October 1947",
+        "Lord Mountbatten accepted accession on 27 October 1947",
+        "Indian Army airlifted to Srinagar on 27 October 1947 — stopped the raiders",
+        "UN ceasefire: 1 January 1949; Line of Control (LoC) established",
+        "Pakistan still occupies 'Azad Kashmir' (POK) and 'Gilgit-Baltistan'",
+        "Jawaharlal Nehru referred the matter to UN Security Council (mistake, as per many historians)"
       ]
     },
     {
@@ -338,19 +340,19 @@
       "id": "9a6wkj3",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Sheikh Abdullah became Prime Minister of J&amp;K after accession",
+        "Delhi Agreement (1952): Defined relationship between J&amp;K and India",
+        "Sheikh Abdullah arrested in 1953; Bakshi Ghulam Mohammad became PM",
+        "Indo-Pakistan War 1965: Infiltrators launched Operation Gibraltar; full-scale war; Tashkent Agreement (1966)",
+        "1971 War: Shimla Agreement (1972): LoC converted to international-style ceasefire line",
+        "Insurgency Period (1989–2000s): Armed insurgency began 1989; thousands of Kashmiri Pandits fled the Valley (Exodus of 1990)",
+        "Kargil War (1999): Pakistan occupied strategic heights in Kargil district; Operation Vijay; India recaptured all peaks; July 26, 1999 = Kargil Vijay Diwas",
+        "Uri Attack (Sep 18, 2016): 18 soldiers killed; India conducted 'Surgical Strikes' across LoC",
+        "Pulwama Attack (Feb 14, 2019): CRPF convoy attacked; 40 jawans killed; India conducted Balakot airstrikes",
+        "Abrogation of Article 370 (August 5, 2019): Both Article 370 and 35A abrogated; J&amp;K bifurcated into 2 UTs",
+        "October 31, 2019: J&amp;K became UT (with legislature); Ladakh became UT (without legislature)",
+        "Delimitation Commission Report (2022): Increased assembly seats from 83 to 90; added 6 seats in Jammu, 1 in Kashmir",
+        "J&amp;K Assembly Elections (Sept–Oct 2024): First elections after Art 370 abrogation; National Conference won majority"
       ]
     },
     {
@@ -366,127 +368,127 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Year/Date</strong></p>",
+            "<p><strong>Event</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1339 CE</strong></p>",
+            "<p>Shah Mir founds first Muslim sultanate in Kashmir</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1586 CE</strong></p>",
+            "<p>Akbar annexes Kashmir</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1846</strong></p>",
+            "<p>Treaty of Amritsar; Gulab Singh becomes Maharaja</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1927</strong></p>",
+            "<p>State Subject Laws enacted by Hari Singh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Oct 26, 1947</strong></p>",
+            "<p>Instrument of Accession signed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Nov 17, 1952</strong></p>",
+            "<p>Delhi Agreement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1956</strong></p>",
+            "<p>J&amp;K Constitution adopted (came into force Jan 26, 1957)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1966</strong></p>",
+            "<p>Tashkent Agreement after 1965 war</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1972</strong></p>",
+            "<p>Shimla Agreement; LoC defined</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1989</strong></p>",
+            "<p>Start of armed insurgency in Kashmir</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>1990</strong></p>",
+            "<p>Exodus of Kashmiri Pandits from valley</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>July 26, 1999</strong></p>",
+            "<p>Kargil Vijay Diwas — Operation Vijay concluded</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>2002</strong></p>",
+            "<p>J&amp;K Prevention of Terrorism Act enacted</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Aug 5, 2019</strong></p>",
+            "<p>Article 370 abrogated; J&amp;K Reorganisation Act passed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Oct 31, 2019</strong></p>",
+            "<p>J&amp;K UT and Ladakh UT formed</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>Feb 2020</strong></p>",
+            "<p>5 new official languages added (Kashmiri, Dogri, Hindi, Urdu, English)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p><strong>2024</strong></p>",
+            "<p>First Assembly elections after Art 370 abrogation</p>"
           ]
         }
       ]

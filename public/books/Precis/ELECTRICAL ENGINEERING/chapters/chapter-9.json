@@ -1,0 +1,751 @@
+{
+  "id": "yvwku7y",
+  "title": "Power Electronics",
+  "order": 9,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "53vkwj8",
+      "content": "<strong>CHAPTER 9 — POWER ELECTRONICS</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "8qgols2",
+      "content": "Power Electronics deals with the conversion and control of electrical power using semiconductor devices. It bridges electrical engineering and electronics. Power electronic circuits are used in variable-speed drives, inverters for renewable energy, HVDC transmission, UPS systems, and electric vehicle chargers. This is one of the highest-weightage modern topics in PSU exams."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oz53fnp",
+      "content": "<strong>9.1  Power Semiconductor Devices</strong>"
+    },
+    {
+      "id": "aon1zrd",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Device</strong></p>",
+            "<p><strong>Full Form</strong></p>",
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Gate Control</strong></p>",
+            "<p><strong>Commutation</strong></p>",
+            "<p><strong>Key Application</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Diode</p>",
+            "<p>—</p>",
+            "<p>D</p>",
+            "<p>No gate</p>",
+            "<p>Natural (AC)</p>",
+            "<p>Rectifiers, free-wheeling</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>SCR</p>",
+            "<p>Silicon Controlled Rectifier (Thyristor)</p>",
+            "<p>T or SCR</p>",
+            "<p>Turn-ON by gate pulse; turn-OFF by forced/natural commutation</p>",
+            "<p>Forced or natural</p>",
+            "<p>Controlled rectifiers, AC controllers, HVDC</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>TRIAC</p>",
+            "<p>Triode AC Switch</p>",
+            "<p>T₁T₂G</p>",
+            "<p>Gate pulse; fires in both directions</p>",
+            "<p>Natural</p>",
+            "<p>AC power control, light dimmers, fan regulators</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>DIAC</p>",
+            "<p>Diode AC Switch</p>",
+            "<p>—</p>",
+            "<p>No gate; fires at breakover voltage</p>",
+            "<p>—</p>",
+            "<p>TRIAC triggering</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>GTO</p>",
+            "<p>Gate Turn-Off Thyristor</p>",
+            "<p>GTO</p>",
+            "<p>Turn-ON and turn-OFF by gate</p>",
+            "<p>Gate controlled</p>",
+            "<p>High-power inverters, drives</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>MOSFET</p>",
+            "<p>Metal Oxide Semiconductor FET</p>",
+            "<p>—</p>",
+            "<p>Voltage controlled gate</p>",
+            "<p>Gate signal</p>",
+            "<p>High-frequency switching, SMPS, low power drives</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>IGBT</p>",
+            "<p>Insulated Gate Bipolar Transistor</p>",
+            "<p>—</p>",
+            "<p>Voltage controlled gate</p>",
+            "<p>Gate signal</p>",
+            "<p>Most popular: drives, inverters, UPS, solar inverters</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>IGCT</p>",
+            "<p>Integrated Gate Commutated Thyristor</p>",
+            "<p>—</p>",
+            "<p>Gate controlled</p>",
+            "<p>Gate controlled</p>",
+            "<p>Ultra-high power applications</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "ykxnd9m",
+      "content": "<strong>9.2  Rectifiers (AC to DC Conversion)</strong>"
+    },
+    {
+      "id": "kzbybnv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Rectifier Type</strong></p>",
+            "<p><strong>Circuit</strong></p>",
+            "<p><strong>V_dc / V_m</strong></p>",
+            "<p><strong>Ripple Factor</strong></p>",
+            "<p><strong>Efficiency</strong></p>",
+            "<p><strong>Applications</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Half-wave (single diode)</p>",
+            "<p>1 diode</p>",
+            "<p>0.318</p>",
+            "<p>1.21</p>",
+            "<p>40.6%</p>",
+            "<p>Very low power; battery chargers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Full-wave (centre tap)</p>",
+            "<p>2 diodes + CT transformer</p>",
+            "<p>0.636</p>",
+            "<p>0.482</p>",
+            "<p>81.2%</p>",
+            "<p>Medium power; requires CT transformer</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Full-wave bridge</p>",
+            "<p>4 diodes</p>",
+            "<p>0.636</p>",
+            "<p>0.482</p>",
+            "<p>81.2%</p>",
+            "<p>Most common; no CT transformer needed</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>3-phase half-wave</p>",
+            "<p>3 diodes</p>",
+            "<p>0.827</p>",
+            "<p>0.177</p>",
+            "<p>96.8%</p>",
+            "<p>Industrial power supplies</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>3-phase full-wave bridge</p>",
+            "<p>6 diodes</p>",
+            "<p>0.955</p>",
+            "<p>0.042</p>",
+            "<p>99.8%</p>",
+            "<p>High-power drives; best ripple performance</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Controlled (SCR) rectifier</p>",
+            "<p>SCRs replace diodes</p>",
+            "<p>V_dc = 0.636V_m·cosα</p>",
+            "<p>Varies with α</p>",
+            "<p>Good</p>",
+            "<p>Variable DC from AC; motor drives</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6cvzu0y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>For single-phase bridge rectifier: V_dc = (2V_m)/π = 0.636V_m</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>For controlled rectifier: V_dc = (2V_m/π)·cosα  (α = firing angle)</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "n7o153n",
+      "content": "<strong>9.3  DC Choppers (DC to DC Conversion)</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "vdcfnx1",
+      "content": "A DC chopper converts fixed DC to variable DC by controlling the ON-OFF time of a switch (usually IGBT or MOSFET). It is used in DC motor drives, battery-operated vehicles, and solar MPPT systems."
+    },
+    {
+      "id": "vs5hk4a",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Chopper Type</strong></p>",
+            "<p><strong>Output Voltage</strong></p>",
+            "<p><strong>Duty Cycle D</strong></p>",
+            "<p><strong>Use Case</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Step-Down (Buck) Chopper</p>",
+            "<p>V_o = D × V_s</p>",
+            "<p>D = T_on/T  (0 &lt; D &lt; 1)</p>",
+            "<p>Reduces voltage; DC motor (braking speed control)</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Step-Up (Boost) Chopper</p>",
+            "<p>V_o = V_s/(1−D)</p>",
+            "<p>D close to 1 → high V_o</p>",
+            "<p>Increases voltage; battery chargers, PV systems</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Step Down-Up (Buck-Boost)</p>",
+            "<p>V_o = −DV_s/(1−D)</p>",
+            "<p>—</p>",
+            "<p>Inverts and scales; SMPS</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Two-quadrant Chopper</p>",
+            "<p>V_o varies; I can reverse</p>",
+            "<p>Controlled D</p>",
+            "<p>Regenerative braking drives</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Four-quadrant Chopper</p>",
+            "<p>V_o and I both vary</p>",
+            "<p>Full H-bridge control</p>",
+            "<p>Servo drives, electric vehicles</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "af14oqd",
+      "content": "<strong>9.4  Inverters (DC to AC Conversion)</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "wcjqbaz",
+      "content": "An inverter converts DC to AC. It is used in UPS systems, solar PV grid connection, variable frequency drives (VFD), and HVDC back-to-back stations. Key parameters are output voltage waveform quality (THD), switching frequency, and efficiency."
+    },
+    {
+      "id": "hp4fgqa",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Inverter Type</strong></p>",
+            "<p><strong>Output Waveform</strong></p>",
+            "<p><strong>Switching Method</strong></p>",
+            "<p><strong>Application</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Square wave inverter</p>",
+            "<p>Square wave</p>",
+            "<p>Simple ON-OFF</p>",
+            "<p>Low-cost UPS; fans, heaters</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Modified sine wave inverter</p>",
+            "<p>Stepped waveform</p>",
+            "<p>PWM with few levels</p>",
+            "<p>Home UPS; some appliances</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Pure sine wave (PWM)</p>",
+            "<p>Sinusoidal (low THD)</p>",
+            "<p>SPWM or SVM</p>",
+            "<p>Grid-tie solar, VFD, medical equipment</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Multi-level inverter</p>",
+            "<p>Nearly sinusoidal</p>",
+            "<p>Multiple DC levels switched</p>",
+            "<p>High-power drives, FACTS devices</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Resonant inverter</p>",
+            "<p>Sinusoidal output</p>",
+            "<p>LC resonance for ZVS/ZCS switching</p>",
+            "<p>Induction heating, high-frequency</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7czqonb",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>SPWM (Sinusoidal Pulse Width Modulation): modulation index m_a = V_ref / V_tri</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p><strong>Output fundamental voltage: V₁ = m_a × (V_dc/2)  for single-phase half-bridge</strong></p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "bko7omb",
+      "content": "<strong>9.5  Practice MCQs — Power Electronics</strong>"
+    },
+    {
+      "type": "paragraph",
+      "id": "bdzcq3z",
+      "content": "<strong>Q1.  </strong>Which device can be turned OFF by gate signal?"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yjtobqw",
+      "content": "        (A)  SCR (Thyristor)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "g6yrpdy",
+      "content": "        (B)  TRIAC"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8dz7yhr",
+      "content": "        (C)  DIAC"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "w3vhwrn",
+      "content": "        (D)  GTO (Gate Turn-Off Thyristor)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "c18te79",
+      "content": "<strong>Answer: </strong>(D)"
+    },
+    {
+      "type": "paragraph",
+      "id": "imap18b",
+      "content": "<strong>Q2.  </strong>The firing angle α of an SCR controls:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "qzcsjkq",
+      "content": "        (A)  The frequency of output"
+    },
+    {
+      "type": "paragraph",
+      "id": "pa17q8i",
+      "content": "        (B)  The magnitude of output DC voltage"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a36exdb",
+      "content": "        (C)  The current waveform only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "0x39rcj",
+      "content": "        (D)  The power factor only"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bz18o5m",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "hzoa5ps",
+      "content": "<strong>Q3.  </strong>In a DC-DC buck (step-down) chopper, output voltage V_o ="
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lwug0le",
+      "content": "        (A)  V_s/(1−D)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hz6vqme",
+      "content": "        (B)  D × V_s"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fdbmpr1",
+      "content": "        (C)  V_s × (1+D)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "cfigsu3",
+      "content": "        (D)  V_s / D"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "yi8hd08",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "hlvy4tl",
+      "content": "<strong>Q4.  </strong>The ripple factor of a 3-phase full-wave rectifier is approximately:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zaggjwm",
+      "content": "        (A)  1.21"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "b1u230r",
+      "content": "        (B)  0.482"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Fundamental definitions from introductory sections are frequently tested in preliminary examination stages.",
+        "Conceptual clarity established in foundational chapters is crucial for solving multi-statement assertion questions."
+      ],
+      "id": "uo765xf"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "nr0x1cd",
+      "content": "        (C)  0.177"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5nvldhp",
+      "content": "        (D)  0.042"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "8y7nxqc",
+      "content": "<strong>Answer: </strong>(D)"
+    },
+    {
+      "type": "paragraph",
+      "id": "xex8qqx",
+      "content": "<strong>Q5.  </strong>IGBT is preferred over MOSFET in high-power drives because:"
+    },
+    {
+      "type": "paragraph",
+      "id": "ghbzf6y",
+      "content": "        (A)  Lower on-state losses at high current"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fap1rb6",
+      "content": "        (B)  Higher switching frequency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9ytmz5h",
+      "content": "        (C)  Lower gate drive requirement"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "svm3h80",
+      "content": "        (D)  Simpler circuit"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "1jlemfx",
+      "content": "<strong>Answer: </strong>(A)"
+    },
+    {
+      "type": "paragraph",
+      "id": "ny7hedw",
+      "content": "<strong>Q6.  </strong>SPWM (Sinusoidal PWM) is used in inverters to:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "78yi5ya",
+      "content": "        (A)  Reduce switching losses"
+    },
+    {
+      "type": "paragraph",
+      "id": "gumyq4n",
+      "content": "        (B)  Improve output voltage waveform (reduce THD)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "a3dgygj",
+      "content": "        (C)  Increase output frequency"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lsvpte9",
+      "content": "        (D)  Reduce DC bus voltage"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "zx70bs7",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "5hjymgd",
+      "content": "<strong>Q7.  </strong>A TRIAC is equivalent to:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "3p6rfpa",
+      "content": "        (A)  Two SCRs in parallel"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "s6mtwss",
+      "content": "        (B)  Two SCRs in anti-parallel"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lh08zfu",
+      "content": "        (C)  Two diodes in series"
+    },
+    {
+      "type": "paragraph",
+      "id": "wyc28u1",
+      "content": "        (D)  SCR + diode in parallel"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "clo8dpl",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "9w3tble",
+      "content": "<strong>Q8.  </strong>The average output voltage of a single-phase full-wave bridge rectifier is:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "i4e3xzj",
+      "content": "        (A)  V_m/π"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "fsh53ma",
+      "content": "        (B)  2V_m/π"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "seyoc8s",
+      "content": "        (C)  V_m/2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "pu5914r",
+      "content": "        (D)  V_m"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "oprc5fm",
+      "content": "<strong>Answer: </strong>(B)"
+    },
+    {
+      "type": "paragraph",
+      "id": "bi29wlj",
+      "content": "<strong>Q9.  </strong>For maximum output voltage from a controlled rectifier, firing angle α should be:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "t6oen79",
+      "content": "        (A)  90°"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "xm48r2s",
+      "content": "        (B)  180°"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "duve9m7",
+      "content": "        (C)  0°"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "863e89c",
+      "content": "        (D)  45°"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jr5khbs",
+      "content": "<strong>Answer: </strong>(C)"
+    },
+    {
+      "type": "paragraph",
+      "id": "gg3amn8",
+      "content": "<strong>Q10.  </strong>Free-wheeling diode in a chopper circuit:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "89e49ar",
+      "content": "        (A)  Increases output voltage"
+    },
+    {
+      "type": "paragraph",
+      "id": "ncmiy4k",
+      "content": "        (B)  Provides path for inductive load current when switch is OFF"
+    },
+    {
+      "type": "paragraph",
+      "id": "bsc10u5",
+      "content": "        (C)  Prevents reverse current into source"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "glvmfsp",
+      "content": "        (D)  Filters output ripple"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "bxe5ce8",
+      "content": "<strong>Answer: </strong>(B)"
+    }
+  ],
+  "enriched": true
+}

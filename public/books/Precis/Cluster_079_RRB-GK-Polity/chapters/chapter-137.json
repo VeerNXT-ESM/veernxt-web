@@ -1,0 +1,136 @@
+{
+  "title": "Comparison: State Executive vs Union Executive",
+  "order": 137,
+  "blocks": [
+    {
+      "id": "9xuo85y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>State Executive</strong></p>",
+            "<p><strong>Union Executive</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Governor – Nominal head</p>",
+            "<p>President – Nominal head</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>CM – Real executive</p>",
+            "<p>PM – Real executive</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 153–167</p>",
+            "<p>Article 52–78</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article 161 – Pardon</p>",
+            "<p>Article 72 – Pardon</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Governor is not an employee of the Central Government; it is an independent constitutional office.",
+      "id": "k8gu89o"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Union Executive",
+        "State Executive"
+      ],
+      "rows": [
+        [
+          "Nominal / Constitutional Head",
+          "President of India",
+          "Governor of the State"
+        ],
+        [
+          "Real Executive Head",
+          "Prime Minister",
+          "Chief Minister"
+        ],
+        [
+          "Mode of Appointment / Election",
+          "Indirectly elected by Electoral College",
+          "Appointed by the President of India"
+        ],
+        [
+          "Chief Law Officer",
+          "Attorney General of India (Article 76)",
+          "Advocate General for the State (Article 165)"
+        ],
+        [
+          "Pardoning Powers",
+          "Can pardon death sentences and court-martial (Article 72)",
+          "Cannot pardon death sentences or court-martial (Article 161)"
+        ]
+      ],
+      "id": "81awsp8"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Union Executive",
+          "value": "Articles 52–78",
+          "icon": "book"
+        },
+        {
+          "label": "State Executive",
+          "value": "Articles 153–167",
+          "icon": "book"
+        },
+        {
+          "label": "Union Law Officer",
+          "value": "Attorney General",
+          "icon": "award"
+        },
+        {
+          "label": "State Law Officer",
+          "value": "Advocate General",
+          "icon": "award"
+        }
+      ],
+      "id": "msu0pwu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Articles 52 to 78 in Part V deal with the Union Executive, while Articles 153 to 167 in Part VI deal with the State Executive.",
+        "The Governor cannot pardon a death sentence even if a state law prescribes it, but can suspend, remit, or commute it.",
+        "The Attorney General is appointed under Article 76, whereas the Advocate General for the State is appointed under Article 165."
+      ],
+      "id": "8w0pou1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Union Executive consists of the President, Vice-President, Prime Minister, Council of Ministers, and Attorney General of India.",
+        "The State Executive consists of the Governor, Chief Minister, Council of Ministers, and Advocate General for the State.",
+        "While the President is elected indirectly by an electoral college, the Governor is appointed directly by the President of India.",
+        "There is no constitutional position of Vice-Governor in the states, unlike the office of the Vice-President at the Centre.",
+        "Pardoning powers of the President extend to court-martial sentences and death sentences, whereas the Governor cannot pardon a death sentence."
+      ],
+      "id": "52oye28"
+    }
+  ],
+  "enriched": true
+}

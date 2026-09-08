@@ -49,7 +49,26 @@
     },
     {
       "type": "paragraph",
-      "id": "f07e1sq"
+      "id": "f07e1sq",
+      "content": "Force is a push or pull acting on a body which can change its state of rest or motion or can change its shape. Force is a vector quantity because it has both magnitude and direction."
+    },
+    {
+      "id": "4o8piex",
+      "type": "image",
+      "imageId": "r3linbx",
+      "src": "/books/Precis/RRB GS/images/image_r3linbx.gif"
+    },
+    {
+      "id": "uwqxa97",
+      "type": "image",
+      "imageId": "3cw2kzv",
+      "src": "/books/Precis/RRB GS/images/image_3cw2kzv.png"
+    },
+    {
+      "id": "psloscx",
+      "type": "image",
+      "imageId": "4t3pnzi",
+      "src": "/books/Precis/RRB GS/images/image_4t3pnzi.jpeg"
     },
     {
       "id": "xkdcrma",
@@ -59,38 +78,46 @@
     },
     {
       "type": "paragraph",
-      "id": "cvm8228"
+      "id": "cvm8228",
+      "content": "• SI Unit of Force = Newton (N)"
     },
     {
       "type": "paragraph",
-      "id": "fujp50m"
+      "id": "fujp50m",
+      "content": "• 1 Newton = Force required to produce acceleration of 1 m/s² in a body of mass 1 kg."
     },
     {
       "type": "paragraph",
-      "id": "y5hkqxm"
+      "id": "y5hkqxm",
+      "content": "• Formula: F = m × a"
     },
     {
       "type": "paragraph",
-      "id": "9jihh39"
+      "id": "9jihh39",
+      "content": "• Dimension of Force = [M¹L¹T⁻²]"
     },
     {
       "type": "paragraph",
-      "id": "ser3vsm"
+      "id": "ser3vsm",
+      "content": "Effects of Force:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kj8vlky"
+      "id": "kj8vlky",
+      "content": "1. Change in speed"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1yjte4z"
+      "id": "1yjte4z",
+      "content": "2. Change in direction"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tyxsdgb"
+      "id": "tyxsdgb",
+      "content": "3. Change in shape"
     },
     {
       "id": "ux368gl",
@@ -105,57 +132,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Contact / Non-contact</strong></p>",
+            "<p><strong>Example</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Muscular Force</p>",
+            "<p>Contact</p>",
+            "<p>Pushing cart</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Frictional Force</p>",
+            "<p>Contact</p>",
+            "<p>Tyre-road friction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Normal Reaction</p>",
+            "<p>Contact</p>",
+            "<p>Book on table</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gravitational Force</p>",
+            "<p>Non-contact</p>",
+            "<p>Earth pulling objects</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Magnetic Force</p>",
+            "<p>Non-contact</p>",
+            "<p>Magnet attracting iron</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Electrostatic Force</p>",
+            "<p>Non-contact</p>",
+            "<p>Charged bodies</p>"
           ]
         }
       ]
@@ -168,11 +195,13 @@
     },
     {
       "type": "paragraph",
-      "id": "4ae2ogh"
+      "id": "4ae2ogh",
+      "content": "• Balanced Forces: Net force = 0 → No change in motion."
     },
     {
       "type": "paragraph",
-      "id": "43htlva"
+      "id": "43htlva",
+      "content": "• Unbalanced Forces: Net force ≠ 0 → Acceleration produced."
     },
     {
       "id": "fhpfi11",
@@ -182,30 +211,36 @@
     },
     {
       "type": "paragraph",
-      "id": "vw0b6v6"
+      "id": "vw0b6v6",
+      "content": "Inertia is the property of a body to resist change in its state of rest or motion."
     },
     {
       "type": "paragraph",
-      "id": "7slu47q"
+      "id": "7slu47q",
+      "content": "Mass is the measure of inertia."
     },
     {
       "type": "paragraph",
-      "id": "j9l8pnm"
+      "id": "j9l8pnm",
+      "content": "Types of Inertia:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nvjwuns"
+      "id": "nvjwuns",
+      "content": "• Inertia of Rest"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "womh9fo"
+      "id": "womh9fo",
+      "content": "• Inertia of Motion"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9y7xmk6"
+      "id": "9y7xmk6",
+      "content": "• Inertia of Direction"
     },
     {
       "id": "ueye0q0",
@@ -215,26 +250,31 @@
     },
     {
       "type": "paragraph",
-      "id": "l7c4eb2"
+      "id": "l7c4eb2",
+      "content": "Momentum (p) = Mass × Velocity"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "808z18w"
+      "id": "808z18w",
+      "content": "p = m × v"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e2ldns4"
+      "id": "e2ldns4",
+      "content": "SI Unit = kg m/s"
     },
     {
       "type": "paragraph",
-      "id": "ahtoakv"
+      "id": "ahtoakv",
+      "content": "Momentum is a vector quantity."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "71qapgv"
+      "id": "71qapgv",
+      "content": "Dimension of Momentum = [M¹L¹T⁻¹]"
     },
     {
       "id": "mc0r8nj",
@@ -245,21 +285,25 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "3ohpt6a"
+      "id": "3ohpt6a",
+      "content": "Impulse = Force × Time"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "iw3tj65"
+      "id": "iw3tj65",
+      "content": "Impulse = Change in Momentum"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e8ux1za"
+      "id": "e8ux1za",
+      "content": "SI Unit = Newton-second (Ns)"
     },
     {
       "type": "paragraph",
-      "id": "owekkbf"
+      "id": "owekkbf",
+      "content": "Example: Pulling hands backward while catching a cricket ball reduces force."
     },
     {
       "id": "0bmlypq",
@@ -269,36 +313,44 @@
     },
     {
       "type": "paragraph",
-      "id": "4mig40b"
+      "id": "4mig40b",
+      "content": "First Law (Law of Inertia):"
     },
     {
       "type": "paragraph",
-      "id": "et66t87"
+      "id": "et66t87",
+      "content": "A body remains at rest or in uniform motion unless acted upon by external force.<img></img>"
     },
     {
       "type": "paragraph",
-      "id": "pblt498"
+      "id": "pblt498",
+      "content": "Second Law:"
     },
     {
       "type": "paragraph",
-      "id": "6ml8qr9"
+      "id": "6ml8qr9",
+      "content": "Rate of change of momentum is directly proportional to applied force."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gzb5qwf"
+      "id": "gzb5qwf",
+      "content": "F = ma"
     },
     {
       "type": "paragraph",
-      "id": "opb3ird"
+      "id": "opb3ird",
+      "content": "Third Law:"
     },
     {
       "type": "paragraph",
-      "id": "8x2t3yp"
+      "id": "8x2t3yp",
+      "content": "For every action, there is equal and opposite reaction."
     },
     {
       "type": "paragraph",
-      "id": "ra0ziqz"
+      "id": "ra0ziqz",
+      "content": "Action and reaction act on different bodies."
     },
     {
       "id": "k6mi7t7",
@@ -308,7 +360,8 @@
     },
     {
       "type": "paragraph",
-      "id": "u7cb48q"
+      "id": "u7cb48q",
+      "content": "In absence of external force, total momentum before collision = total momentum after collision."
     },
     {
       "id": "0j1baot",
@@ -318,11 +371,13 @@
     },
     {
       "type": "paragraph",
-      "id": "j2jbzts"
+      "id": "j2jbzts",
+      "content": "Rocket works on Newton’s Third Law and Conservation of Momentum."
     },
     {
       "type": "paragraph",
-      "id": "pq9s73p"
+      "id": "pq9s73p",
+      "content": "Gases expelled backward → Rocket moves forward."
     },
     {
       "id": "4enn5dd",
@@ -332,38 +387,46 @@
     },
     {
       "type": "paragraph",
-      "id": "5p7rvco"
+      "id": "5p7rvco",
+      "content": "Friction is the force opposing relative motion between surfaces in contact."
     },
     {
       "type": "paragraph",
-      "id": "ky29d1q"
+      "id": "ky29d1q",
+      "content": "Types: Static, Sliding, Rolling, Fluid friction."
     },
     {
       "type": "paragraph",
-      "id": "xc720vc"
+      "id": "xc720vc",
+      "content": "Advantages: Walking, writing, braking."
     },
     {
       "type": "paragraph",
-      "id": "uy81mds"
+      "id": "uy81mds",
+      "content": "Disadvantages: Heat production, wear and tear."
     },
     {
       "type": "paragraph",
-      "id": "aadvwas"
+      "id": "aadvwas",
+      "content": "Ways to Reduce Friction:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0ndxadd"
+      "id": "0ndxadd",
+      "content": "• Use lubricants"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uwuopvo"
+      "id": "uwuopvo",
+      "content": "• Use ball bearings"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "87qeglb"
+      "id": "87qeglb",
+      "content": "• Polishing surfaces"
     },
     {
       "id": "1nph252",
@@ -374,17 +437,20 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "l2q3dm2"
+      "id": "l2q3dm2",
+      "content": "Pressure = Force / Area"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d0k9gow"
+      "id": "d0k9gow",
+      "content": "SI Unit = Pascal (Pa)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pvmqvq5"
+      "id": "pvmqvq5",
+      "content": "1 Pascal = 1 N/m²"
     },
     {
       "id": "4sma9zc",
@@ -394,15 +460,18 @@
     },
     {
       "type": "paragraph",
-      "id": "48lykso"
+      "id": "48lykso",
+      "content": "A frame of reference is a coordinate system with respect to which motion is measured. There are two types of frames: Inertial and Non-Inertial."
     },
     {
       "type": "paragraph",
-      "id": "pl2qvcu"
+      "id": "pl2qvcu",
+      "content": "• Inertial Frame: Newton’s laws are valid (no acceleration of frame)."
     },
     {
       "type": "paragraph",
-      "id": "wphg0jo"
+      "id": "wphg0jo",
+      "content": "• Non-Inertial Frame: Frame is accelerating; pseudo force appears."
     },
     {
       "id": "yg481p4",
@@ -412,19 +481,23 @@
     },
     {
       "type": "paragraph",
-      "id": "ftzuv4f"
+      "id": "ftzuv4f",
+      "content": "Pseudo force is an apparent force observed in a non-inertial frame. It does not arise due to physical interaction but due to acceleration of the frame."
     },
     {
       "type": "paragraph",
-      "id": "8t8p9m8"
+      "id": "8t8p9m8",
+      "content": "Formula: F_pseudo = m × a_frame"
     },
     {
       "type": "paragraph",
-      "id": "odlmsi8"
+      "id": "odlmsi8",
+      "content": "Example: Feeling pushed backward in an accelerating bus."
     },
     {
       "type": "paragraph",
-      "id": "1oosmnj"
+      "id": "1oosmnj",
+      "content": "Direction: Opposite to acceleration of the frame."
     },
     {
       "id": "hd7t2jg",
@@ -434,36 +507,38 @@
     },
     {
       "type": "paragraph",
-      "id": "uoqorjn"
+      "id": "uoqorjn",
+      "content": "A Free Body Diagram shows all forces acting on a body separately. It is essential for solving Newton’s Law numericals."
     },
     {
       "type": "paragraph",
-      "id": "2l7ckuk"
+      "id": "2l7ckuk",
+      "content": "Steps to Draw FBD:"
     },
     {
       "type": "paragraph",
-      "id": "csioo25"
+      "id": "csioo25",
+      "content": "1. Isolate the object from surroundings."
     },
     {
       "type": "paragraph",
-      "id": "plwps1o"
+      "id": "plwps1o",
+      "content": "2. Represent object as a dot or box."
     },
     {
       "type": "paragraph",
-      "id": "hbopdml"
+      "id": "hbopdml",
+      "content": "3. Draw all external forces (Weight, Normal, Friction, Tension, Applied Force)."
     },
     {
       "type": "paragraph",
-      "id": "ugvbqr1"
-    },
-    {
-      "type": "pullQuote",
-      "content": "MASS VS WEIGHT (DETAILED COMPARISON)",
-      "id": "ley954d"
+      "id": "ugvbqr1",
+      "content": "4. Mark direction clearly."
     },
     {
       "type": "paragraph",
-      "id": "5okycp5"
+      "id": "5okycp5",
+      "content": "5. Apply ∑F = ma."
     },
     {
       "id": "xd64093",
@@ -473,28 +548,34 @@
     },
     {
       "type": "paragraph",
-      "id": "amzfqap"
+      "id": "amzfqap",
+      "content": "A body is said to be in equilibrium when the net external force acting on it is zero."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ptnm48w"
+      "id": "ptnm48w",
+      "content": "Mathematical Condition: ∑F = 0"
     },
     {
       "type": "paragraph",
-      "id": "0ot1nl9"
+      "id": "0ot1nl9",
+      "content": "If ∑F = 0 → Acceleration = 0"
     },
     {
       "type": "paragraph",
-      "id": "3cwb1py"
+      "id": "3cwb1py",
+      "content": "Types of Equilibrium:"
     },
     {
       "type": "paragraph",
-      "id": "rlw4d9x"
+      "id": "rlw4d9x",
+      "content": "• Static Equilibrium (Body at rest)"
     },
     {
       "type": "paragraph",
-      "id": "sh9sot2"
+      "id": "sh9sot2",
+      "content": "• Dynamic Equilibrium (Body in uniform motion)"
     },
     {
       "id": "uetqb05",
@@ -509,49 +590,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Mass</strong></p>",
+            "<p><strong>Weight</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Definition</p>",
+            "<p>Amount of matter in a body</p>",
+            "<p>Force with which Earth attracts a body</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Formula</p>",
+            "<p>m</p>",
+            "<p>W = mg</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SI Unit</p>",
+            "<p>Kilogram (kg)</p>",
+            "<p>Newton (N)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Nature</p>",
+            "<p>Scalar Quantity</p>",
+            "<p>Vector Quantity</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dependence</p>",
+            "<p>Constant everywhere</p>",
+            "<p>Varies with gravity</p>"
           ]
         }
       ]
@@ -564,7 +645,8 @@
     },
     {
       "type": "paragraph",
-      "id": "m4mplg0"
+      "id": "m4mplg0",
+      "content": "Friction is the force opposing relative motion between two surfaces in contact."
     },
     {
       "id": "78pawkb",
@@ -573,56 +655,59 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>When It Acts</strong></p>",
+            "<p><strong>Relative Magnitude</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Static Friction</p>",
+            "<p>Before motion starts</p>",
+            "<p>Maximum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sliding Friction</p>",
+            "<p>During sliding motion</p>",
+            "<p>Less than static</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Rolling Friction</p>",
+            "<p>During rolling motion</p>",
+            "<p>Least</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Fluid Friction</p>",
+            "<p>Motion in fluids</p>",
+            "<p>Depends on speed &amp; shape</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "dafibnr"
+      "id": "dafibnr",
+      "content": "Formula: Frictional Force (F) = μ × N"
     },
     {
       "type": "paragraph",
-      "id": "fa52yhl"
+      "id": "fa52yhl",
+      "content": "Where μ = Coefficient of friction, N = Normal reaction"
     },
     {
       "type": "paragraph",
-      "id": "g1hervl"
+      "id": "g1hervl",
+      "content": "μ has no unit (dimensionless quantity)."
     },
     {
       "id": "3nc2kym",
@@ -632,23 +717,28 @@
     },
     {
       "type": "paragraph",
-      "id": "i0x4q9e"
+      "id": "i0x4q9e",
+      "content": "According to Newton’s Second Law, Force = Rate of change of momentum."
     },
     {
       "type": "paragraph",
-      "id": "wj43jrs"
+      "id": "wj43jrs",
+      "content": "F = (mv - mu) / t"
     },
     {
       "type": "paragraph",
-      "id": "2i67asz"
+      "id": "2i67asz",
+      "content": "Multiplying both sides by t:"
     },
     {
       "type": "paragraph",
-      "id": "ld55r67"
+      "id": "ld55r67",
+      "content": "F × t = m(v - u)"
     },
     {
       "type": "paragraph",
-      "id": "vtsy4s8"
+      "id": "vtsy4s8",
+      "content": "Thus, Impulse = Change in Momentum"
     },
     {
       "id": "ezv4ykf",
@@ -663,33 +753,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Momentum</strong></p>",
+            "<p><strong>Kinetic Energy</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Elastic Collision</p>",
+            "<p>Conserved</p>",
+            "<p>Conserved</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Inelastic Collision</p>",
+            "<p>Conserved</p>",
+            "<p>Not conserved</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Perfectly Inelastic</p>",
+            "<p>Conserved</p>",
+            "<p>Maximum KE loss</p>"
           ]
         }
       ]
@@ -702,15 +792,18 @@
     },
     {
       "type": "paragraph",
-      "id": "cy158g9"
+      "id": "cy158g9",
+      "content": "Centripetal Force = mv² / r"
     },
     {
       "type": "paragraph",
-      "id": "qkag4q8"
+      "id": "qkag4q8",
+      "content": "Direction: Always towards centre of circle."
     },
     {
       "type": "paragraph",
-      "id": "kdqumhk"
+      "id": "kdqumhk",
+      "content": "If centripetal force is removed, body moves tangentially."
     },
     {
       "id": "m9yoe3t",
@@ -720,23 +813,28 @@
     },
     {
       "type": "paragraph",
-      "id": "gpo1roz"
+      "id": "gpo1roz",
+      "content": "• Nuclear force is strongest force in nature."
     },
     {
       "type": "paragraph",
-      "id": "zagwp1u"
+      "id": "zagwp1u",
+      "content": "• Gravitational force is weakest fundamental force."
     },
     {
       "type": "paragraph",
-      "id": "a9v3sm1"
+      "id": "a9v3sm1",
+      "content": "• Action and reaction act on different bodies simultaneously."
     },
     {
       "type": "paragraph",
-      "id": "0alkfjv"
+      "id": "0alkfjv",
+      "content": "• If net force = 0, momentum remains constant."
     },
     {
       "type": "paragraph",
-      "id": "wr1pkpn"
+      "id": "wr1pkpn",
+      "content": "• Friction is self-adjusting up to limiting value."
     },
     {
       "id": "ewljv3l",
@@ -752,22 +850,26 @@
     },
     {
       "type": "paragraph",
-      "id": "o2tcqt9"
+      "id": "o2tcqt9",
+      "content": "A 6 kg body is acted upon by a force producing acceleration of 3 m/s². The force applied is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "1n0ow19"
+      "id": "1n0ow19",
+      "content": "A) 9 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pv25kp5"
+      "id": "pv25kp5",
+      "content": "B) 12 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "utnfae6"
+      "id": "utnfae6",
+      "content": "C) 18 N"
     },
     {
       "type": "comparisonTable",
@@ -803,62 +905,75 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "1j8pff7"
+      "id": "1j8pff7",
+      "content": "D) 24 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "rz98ijf"
+      "id": "rz98ijf",
+      "content": "<br></br>Correct Answer: C (18 N)"
     },
     {
       "type": "paragraph",
-      "id": "mz748ic"
+      "id": "mz748ic",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "wk2fy2o"
+      "id": "wk2fy2o",
+      "content": "Step 1: Apply Newton’s Second Law of Motion."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "r8hux8c"
+      "id": "r8hux8c",
+      "content": "F = m × a"
     },
     {
       "type": "paragraph",
-      "id": "s47yron"
+      "id": "s47yron",
+      "content": "Step 2: Substitute given values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "eandk04"
+      "id": "eandk04",
+      "content": "m = 6 kg"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qhqpxop"
+      "id": "qhqpxop",
+      "content": "a = 3 m/s²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z8yfp3x"
+      "id": "z8yfp3x",
+      "content": "F = 6 × 3"
     },
     {
       "type": "paragraph",
-      "id": "4t3dw8f"
+      "id": "4t3dw8f",
+      "content": "Step 3: Multiply carefully."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3hqockv"
+      "id": "3hqockv",
+      "content": "F = 18"
     },
     {
       "type": "paragraph",
-      "id": "orbikqp"
+      "id": "orbikqp",
+      "content": "Unit Check: kg × m/s² = Newton (N)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "f59brua"
+      "id": "f59brua",
+      "content": "Final Answer = 18 N"
     },
     {
       "id": "isk7tm9",
@@ -868,70 +983,85 @@
     },
     {
       "type": "paragraph",
-      "id": "1f0or5g"
+      "id": "1f0or5g",
+      "content": "The momentum of a 20 kg body moving at 2 m/s is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pjkasq8"
+      "id": "pjkasq8",
+      "content": "A) 10 kg m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wou0vot"
+      "id": "wou0vot",
+      "content": "B) 20 kg m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8rnsvzp"
+      "id": "8rnsvzp",
+      "content": "C) 40 kg m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gfeflex"
+      "id": "gfeflex",
+      "content": "D) 80 kg m/s"
     },
     {
       "type": "paragraph",
-      "id": "f9txj80"
+      "id": "f9txj80",
+      "content": "<br></br>Correct Answer: C (40 kg m/s)"
     },
     {
       "type": "paragraph",
-      "id": "1fqyggf"
+      "id": "1fqyggf",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "089z6gi"
+      "id": "089z6gi",
+      "content": "Step 1: Formula of momentum."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "yaz2zov"
+      "id": "yaz2zov",
+      "content": "p = m × v"
     },
     {
       "type": "paragraph",
-      "id": "4vjwz2t"
+      "id": "4vjwz2t",
+      "content": "Step 2: Substitute values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hg9j35q"
+      "id": "hg9j35q",
+      "content": "p = 20 × 2"
     },
     {
       "type": "paragraph",
-      "id": "4b9feff"
+      "id": "4b9feff",
+      "content": "Step 3: Multiply."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "l2s9bwo"
+      "id": "l2s9bwo",
+      "content": "p = 40 kg m/s"
     },
     {
       "type": "paragraph",
-      "id": "nd4w5bh"
+      "id": "nd4w5bh",
+      "content": "Momentum is vector quantity."
     },
     {
       "type": "paragraph",
-      "id": "qh0skko"
+      "id": "qh0skko",
+      "content": "Final Answer = 40 kg m/s"
     },
     {
       "id": "ua1k3ve",
@@ -941,72 +1071,87 @@
     },
     {
       "type": "paragraph",
-      "id": "ly3fapi"
+      "id": "ly3fapi",
+      "content": "A force of 50 N acts on a body for 0.2 seconds. The impulse produced is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ffq1qw4"
+      "id": "ffq1qw4",
+      "content": "A) 5 Ns"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "sna8pbn"
+      "id": "sna8pbn",
+      "content": "B) 10 Ns"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "caj8uqh"
+      "id": "caj8uqh",
+      "content": "C) 20 Ns"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ovhzetj"
+      "id": "ovhzetj",
+      "content": "D) 100 Ns"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nmvwfcv"
+      "id": "nmvwfcv",
+      "content": "<br></br>Correct Answer: B (10 Ns)"
     },
     {
       "type": "paragraph",
-      "id": "6hex8c3"
+      "id": "6hex8c3",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "934ex3r"
+      "id": "934ex3r",
+      "content": "Step 1: Formula of impulse."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "h1o88pf"
+      "id": "h1o88pf",
+      "content": "Impulse = Force × Time"
     },
     {
       "type": "paragraph",
-      "id": "n41bc1y"
+      "id": "n41bc1y",
+      "content": "Step 2: Substitute values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "mhhiwgr"
+      "id": "mhhiwgr",
+      "content": "Impulse = 50 × 0.2"
     },
     {
       "type": "paragraph",
-      "id": "lvc0e5g"
+      "id": "lvc0e5g",
+      "content": "Step 3: Multiply."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "bg64y49"
+      "id": "bg64y49",
+      "content": "Impulse = 10 Ns"
     },
     {
       "type": "paragraph",
-      "id": "25fwr4i"
+      "id": "25fwr4i",
+      "content": "Impulse equals change in momentum."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "h35x18c"
+      "id": "h35x18c",
+      "content": "Final Answer = 10 Ns"
     },
     {
       "id": "0oxi4ps",
@@ -1016,17 +1161,20 @@
     },
     {
       "type": "paragraph",
-      "id": "ukms5k4"
+      "id": "ukms5k4",
+      "content": "A 1 kg ball moving at 10 m/s collides with a wall and rebounds with velocity 6 m/s in opposite direction. Change in momentum is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wkww4k6"
+      "id": "wkww4k6",
+      "content": "A) 4 kg m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gnsdzgb"
+      "id": "gnsdzgb",
+      "content": "B) 10 kg m/s"
     },
     {
       "type": "examAlert",
@@ -1040,63 +1188,77 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "y5iqi30"
+      "id": "y5iqi30",
+      "content": "C) 16 kg m/s"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zrrso38"
+      "id": "zrrso38",
+      "content": "D) 20 kg m/s"
     },
     {
       "type": "paragraph",
-      "id": "d5w9dci"
+      "id": "d5w9dci",
+      "content": "<br></br>Correct Answer: C (16 kg m/s)"
     },
     {
       "type": "paragraph",
-      "id": "uf5px64"
+      "id": "uf5px64",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "thtlymv"
+      "id": "thtlymv",
+      "content": "Step 1: Assign directions carefully."
     },
     {
       "type": "paragraph",
-      "id": "h1ogbjf"
+      "id": "h1ogbjf",
+      "content": "Initial velocity (u) = +10 m/s"
     },
     {
       "type": "paragraph",
-      "id": "iomqu88"
+      "id": "iomqu88",
+      "content": "Final velocity (v) = -6 m/s (opposite direction)"
     },
     {
       "type": "paragraph",
-      "id": "sbthjfb"
+      "id": "sbthjfb",
+      "content": "Step 2: Formula of change in momentum."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "9p4cbrk"
+      "id": "9p4cbrk",
+      "content": "Δp = m(v - u)"
     },
     {
       "type": "paragraph",
-      "id": "fm8of59"
+      "id": "fm8of59",
+      "content": "Step 3: Substitute values."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ef266or"
+      "id": "ef266or",
+      "content": "Δp = 1(-6 - 10)"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "reaquxs"
+      "id": "reaquxs",
+      "content": "Δp = -16 kg m/s"
     },
     {
       "type": "paragraph",
-      "id": "4h0hwkx"
+      "id": "4h0hwkx",
+      "content": "Magnitude of change = 16 kg m/s"
     },
     {
       "type": "paragraph",
-      "id": "vcc6izg"
+      "id": "vcc6izg",
+      "content": "Final Answer = 16 kg m/s"
     },
     {
       "id": "hxj5qp9",
@@ -1106,77 +1268,93 @@
     },
     {
       "type": "paragraph",
-      "id": "yzpyfuc"
+      "id": "yzpyfuc",
+      "content": "A 5 kg block rests on a horizontal surface (g = 10 m/s²). If coefficient of friction is 0.4, frictional force is:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hsvu3j8"
+      "id": "hsvu3j8",
+      "content": "A) 10 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m0i3ror"
+      "id": "m0i3ror",
+      "content": "B) 15 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4gdrmte"
+      "id": "4gdrmte",
+      "content": "C) 20 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8xt9clz"
+      "id": "8xt9clz",
+      "content": "D) 25 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wy5akzk"
+      "id": "wy5akzk",
+      "content": "<br></br>Correct Answer: C (20 N)"
     },
     {
       "type": "paragraph",
-      "id": "8lqcbq2"
+      "id": "8lqcbq2",
+      "content": "Detailed Solution:"
     },
     {
       "type": "paragraph",
-      "id": "j34mghy"
+      "id": "j34mghy",
+      "content": "Step 1: Calculate Normal Reaction."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "utni357"
+      "id": "utni357",
+      "content": "N = mg"
     },
     {
       "type": "paragraph",
-      "id": "q5w667y"
+      "id": "q5w667y",
+      "content": "N = 5 × 10 = 50 N"
     },
     {
       "type": "paragraph",
-      "id": "onk3j3e"
+      "id": "onk3j3e",
+      "content": "Step 2: Apply friction formula."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ddn5hmk"
+      "id": "ddn5hmk",
+      "content": "F = μ × N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "e50kcxe"
+      "id": "e50kcxe",
+      "content": "F = 0.4 × 50"
     },
     {
       "type": "paragraph",
-      "id": "l150o20"
+      "id": "l150o20",
+      "content": "Step 3: Multiply."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g5ymruf"
+      "id": "g5ymruf",
+      "content": "F = 20 N"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pgeqltj"
+      "id": "pgeqltj",
+      "content": "Final Answer = 20 N"
     }
   ],
   "enriched": true

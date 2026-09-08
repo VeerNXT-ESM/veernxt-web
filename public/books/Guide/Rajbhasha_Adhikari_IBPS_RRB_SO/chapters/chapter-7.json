@@ -58,73 +58,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Hindi Name</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Used For</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Office Order</p>",
+            "<p>कार्यालय आदेश</p>",
+            "<p>Internal order within an organisation; addressed to subordinate; numbered; no salutation</p>",
+            "<p>Transfer orders, posting orders, disciplinary orders, duty assignments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Office Memorandum (OM)</p>",
+            "<p>कार्यालय ज्ञापन</p>",
+            "<p>Communication between two Government offices at same level; no salutation; no complimentary close; impersonal</p>",
+            "<p>Seeking clarification, sending information between departments/offices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Circular</p>",
+            "<p>परिपत्र</p>",
+            "<p>Instructions/information sent to many offices simultaneously; number assigned; reference to relevant rules</p>",
+            "<p>Policy circulars, training programmes, compliance requirements</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Notification</p>",
+            "<p>अधिसूचना</p>",
+            "<p>Published in Gazette; formal legal notice; for information of all concerned; standard format</p>",
+            "<p>Appointment notifications, rule amendments, statutory orders</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Formal Letter (Semi-formal)</p>",
+            "<p>पत्र / शासकीय पत्र</p>",
+            "<p>Between organisations of different status; has salutation (महोदय) and complimentary close (भवदीय)</p>",
+            "<p>State Govt to Central Govt; bank to customer; bank to regulatory body</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Demi-Official Letter (DO)</p>",
+            "<p>अर्ध-शासकीय पत्र / डी.ओ. पत्र</p>",
+            "<p>Personal touch but official purpose; officer to officer; 'My Dear' or 'महोदय' opening; first person</p>",
+            "<p>Senior officer to peer on official matter; softer tone than OM; seeks cooperation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Endorsement</p>",
+            "<p>अग्रेषण</p>",
+            "<p>Pass a letter to next authority; brief note; original letter attached</p>",
+            "<p>Forwarding a complaint or application to appropriate authority</p>"
           ]
         }
       ]
@@ -142,97 +142,97 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Component</strong></p>",
+            "<p><strong>Hindi</strong></p>",
+            "<p><strong>Placement / Content</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Letter Number and Date</p>",
+            "<p>पत्र संख्या और दिनांक</p>",
+            "<p>Top left: Office letter number and date in Hindi numerals (or both Hindi and English)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>From (Sender)</p>",
+            "<p>प्रेषक</p>",
+            "<p>Name and designation of sender; office name and address</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>To (Recipient)</p>",
+            "<p>प्रति / सेवा में</p>",
+            "<p>Name, designation, and address of recipient; 'सेवा में' above recipient's details</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Subject</p>",
+            "<p>विषय</p>",
+            "<p>Brief one-line subject of letter; followed by colon; bold or underlined</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Reference</p>",
+            "<p>संदर्भ (यदि कोई हो)</p>",
+            "<p>Previous correspondence being referred to; optional</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Salutation</p>",
+            "<p>संबोधन</p>",
+            "<p>महोदय (formal/neutral); महोदया (for women); श्रीमान / आदरणीय (respectful)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Body of Letter</p>",
+            "<p>मुख्य विषय</p>",
+            "<p>Paragraph 1: reference/background; Paragraph 2: main matter; Paragraph 3: conclusion/request/expected action</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Complimentary Close</p>",
+            "<p>धन्यवाद / समापन</p>",
+            "<p>भवदीय (yours faithfully :to superior or peer); आपका (more informal); ends with name and designation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Signature</p>",
+            "<p>हस्ताक्षर</p>",
+            "<p>Handwritten signature; name in brackets below; designation; office stamp if required</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Enclosures</p>",
+            "<p>संलग्न</p>",
+            "<p>List of documents enclosed; if any; at bottom left</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Copy to</p>",
+            "<p>प्रतिलिपि</p>",
+            "<p>Names of others receiving copies; at bottom</p>"
           ]
         }
       ]
@@ -254,7 +254,8 @@
     },
     {
       "type": "paragraph",
-      "id": "5hasld0"
+      "id": "5hasld0",
+      "content": "Noting refers to the process of recording facts, analysis, and recommendations on a file that goes through the official hierarchy. Drafting means preparing the text of outgoing communication based on the decision reached through noting. For Rajbhasha Adhikari, doing noting and drafting directly in Hindi (as opposed to first writing in English and then translating) is the ideal."
     },
     {
       "id": "vpm10sq",
@@ -263,43 +264,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>Key Points</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Noting Style</p>",
+            "<p>Written in first person or third person; should be factual; avoid long sentences; paragraph per point; should lead logically to a conclusion/recommendation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Noting Language</p>",
+            "<p>Should be in Hindi for Region A offices; in Hindi or English for Region B; in English for Region C; original Hindi noting preferred over translated noting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Draft preparation</p>",
+            "<p>Draft should match tone of communication (formal/informal/urgent); follow prescribed format; clearly state action required</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bilingual noting</p>",
+            "<p>Some sensitive matters: noting may be done in both languages; Hindi version is primary where both present</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hindi noting quality</p>",
+            "<p>Should use standard vocabulary; avoid anglicisms where Hindi word exists; use approved technical terms from CSTT glossaries</p>"
           ]
         }
       ]

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "14dbhbr"
+      "id": "14dbhbr",
+      "content": "Computer software refers to a collection of programs, procedures, and related documentation that instructs a computer on how to perform specific tasks. Software acts as an interface between the user and the hardware. Without software, computer hardware cannot function."
     },
     {
       "type": "statStrip",
@@ -47,7 +48,8 @@
     },
     {
       "type": "paragraph",
-      "id": "njzps5z"
+      "id": "njzps5z",
+      "content": "Software is a set of instructions or programs written using programming languages that tell a computer how to perform tasks. It enables communication between the user and the computer hardware."
     },
     {
       "id": "49nhtrc",
@@ -59,11 +61,11 @@
       "id": "w505ar1",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Software is intangible – it cannot be physically touched.",
+        "It consists of programs and instructions.",
+        "It controls the working of hardware.",
+        "It can be easily copied and distributed.",
+        "It requires updates and maintenance."
       ]
     },
     {
@@ -79,29 +81,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type of Software</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>System Software</p>",
+            "<p>Controls and manages computer hardware.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Application Software</p>",
+            "<p>Used by users to perform specific tasks.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Utility Software</p>",
+            "<p>Helps maintain and optimize computer performance.</p>"
           ]
         }
       ]
@@ -114,7 +116,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ktxzuhg"
+      "id": "ktxzuhg",
+      "content": "System software is a type of computer software that manages and controls the hardware of a computer system. It provides a platform for running application software."
     },
     {
       "id": "g6yaph9",
@@ -126,11 +129,11 @@
       "id": "0au2m83",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Controls and manages hardware resources.",
+        "Provides an interface between user and hardware.",
+        "Manages memory and processing tasks.",
+        "Handles input and output operations.",
+        "Controls file management."
       ]
     },
     {
@@ -151,29 +154,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>System Software Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Operating System</p>",
+            "<p>Main system software that manages computer hardware and software resources.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Device Drivers</p>",
+            "<p>Programs that allow the operating system to communicate with hardware devices.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Language Translators</p>",
+            "<p>Convert programming languages into machine language.</p>"
           ]
         }
       ]
@@ -188,10 +191,10 @@
       "id": "emr9rg1",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Windows",
+        "Linux",
+        "macOS",
+        "Android"
       ]
     },
     {
@@ -202,7 +205,8 @@
     },
     {
       "type": "paragraph",
-      "id": "6syyrgz"
+      "id": "6syyrgz",
+      "content": "Application software is designed to help users perform specific tasks such as writing documents, creating presentations, browsing the internet, or managing data."
     },
     {
       "type": "comparisonTable",
@@ -248,50 +252,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Application Software Type</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Word Processing Software</p>",
+            "<p>MS Word, Google Docs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Spreadsheet Software</p>",
+            "<p>MS Excel, Google Sheets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Presentation Software</p>",
+            "<p>MS PowerPoint</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Database Software</p>",
+            "<p>MS Access, Oracle</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Web Browsers</p>",
+            "<p>Google Chrome, Mozilla Firefox</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Media Players</p>",
+            "<p>VLC Media Player</p>"
           ]
         }
       ]
@@ -306,9 +310,9 @@
       "id": "rrriggt",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Designed for specific user tasks.",
+        "Requires system software to run.",
+        "User-friendly interface."
       ]
     },
     {
@@ -319,7 +323,8 @@
     },
     {
       "type": "paragraph",
-      "id": "yb1vsor"
+      "id": "yb1vsor",
+      "content": "Utility software is a type of system software that helps maintain, manage, and optimize the performance of a computer system."
     },
     {
       "id": "opasiqe",
@@ -331,10 +336,10 @@
       "id": "oruyfwf",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Improves system performance.",
+        "Protects the system from viruses.",
+        "Manages files and storage.",
+        "Backs up important data."
       ]
     },
     {
@@ -359,36 +364,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Utility Tool</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Antivirus Software</p>",
+            "<p>Protects computer from viruses and malware.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Disk Cleanup</p>",
+            "<p>Removes unnecessary files.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Disk Defragmenter</p>",
+            "<p>Improves disk performance.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Backup Software</p>",
+            "<p>Creates backup copies of data.</p>"
           ]
         }
       ]
@@ -406,29 +411,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>System Software</strong></p>",
+            "<p><strong>Application Software</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Controls hardware</p>",
+            "<p>Performs user tasks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Runs in background</p>",
+            "<p>Runs when user needs it</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Example: Operating System</p>",
+            "<p>Example: MS Word</p>"
           ]
         }
       ]
@@ -443,11 +448,11 @@
       "id": "v1zmzoy",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Software is a set of programs that control computer operations.",
+        "System software manages hardware resources.",
+        "Operating System is the most important system software.",
+        "Application software performs specific tasks for users.",
+        "Utility software helps maintain system performance."
       ]
     }
   ],

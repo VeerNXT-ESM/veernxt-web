@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dwolta4"
+      "id": "dwolta4",
+      "content": "Engineering drawings use standardized lines, symbols, and views to represent objects clearly and accurately. These elements help engineers, technicians, and workers understand the shape, size, features, and assembly of machine parts. In technical trades such as fitting, machining, and mechanical maintenance, correct interpretation of drawing lines and symbols is essential."
     },
     {
       "id": "nwnugqk",
@@ -61,11 +62,11 @@
       "id": "j35e36g",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Represent different features of objects",
+        "Help identify visible and hidden parts",
+        "Provide accurate dimensions and instructions",
+        "Ensure clear communication between engineers and workers",
+        "Reduce manufacturing errors"
       ]
     },
     {
@@ -81,73 +82,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Line Type</strong></p>",
+            "<p><strong>Appearance</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Object Line</p>",
+            "<p>Thick continuous line</p>",
+            "<p>Shows visible edges of objects</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hidden Line</p>",
+            "<p>Short dashed line</p>",
+            "<p>Shows hidden edges</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Center Line</p>",
+            "<p>Long dash – short dash</p>",
+            "<p>Represents axis or center</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Dimension Line</p>",
+            "<p>Thin line with arrowheads</p>",
+            "<p>Shows measurement</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Extension Line</p>",
+            "<p>Thin continuous line</p>",
+            "<p>Extends from object to dimension</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Leader Line</p>",
+            "<p>Thin line with arrow</p>",
+            "<p>Indicates notes or labels</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Cutting Plane Line</p>",
+            "<p>Thick dashed line</p>",
+            "<p>Shows where section is taken</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Section Line</p>",
+            "<p>Thin diagonal lines</p>",
+            "<p>Indicates cut surface</p>"
           ]
         }
       ]
@@ -165,72 +166,67 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ø</p>",
+            "<p>Diameter</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>R</p>",
+            "<p>Radius</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>°</p>",
+            "<p>Angle (degrees)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>⌀</p>",
+            "<p>Circular dimension</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>⊥</p>",
+            "<p>Perpendicular</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>∥</p>",
+            "<p>Parallel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>⌴</p>",
+            "<p>Counterbore</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>⌵</p>",
+            "<p>Countersink</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "Importance of Lines and Symbols in Engineering Drawing",
-      "id": "scivyi8"
     },
     {
       "id": "xlddg2f",
@@ -245,29 +241,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>√</p>",
+            "<p>Surface finish required</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>√ with bar</p>",
+            "<p>Machining required</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>√ with circle</p>",
+            "<p>No material removal allowed</p>"
           ]
         }
       ]
@@ -280,7 +276,8 @@
     },
     {
       "type": "paragraph",
-      "id": "pn83l6d"
+      "id": "pn83l6d",
+      "content": "Orthographic views are used to represent three-dimensional objects using two-dimensional drawings. Each view shows the object from a specific direction."
     },
     {
       "id": "g2cdk0l",
@@ -289,29 +286,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>View</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Front View</p>",
+            "<p>Shows height and width of the object</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Top View</p>",
+            "<p>Shows width and depth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Side View</p>",
+            "<p>Shows height and depth</p>"
           ]
         }
       ]
@@ -355,7 +352,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vcmm2kr"
+      "id": "vcmm2kr",
+      "content": "Isometric drawing is a pictorial method of representing three-dimensional objects on a two-dimensional surface. In isometric view, the three principal axes are equally inclined at 120°."
     },
     {
       "id": "zedc02p",
@@ -365,7 +363,8 @@
     },
     {
       "type": "paragraph",
-      "id": "vcfbg4v"
+      "id": "vcfbg4v",
+      "content": "Sectional views are used to show internal features of objects by imagining the object cut by a cutting plane."
     },
     {
       "id": "b9frqcm",
@@ -374,36 +373,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Section Type</strong></p>",
+            "<p><strong>Purpose</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Full Section</p>",
+            "<p>Entire object cut along a plane</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Half Section</p>",
+            "<p>Half object shown in section</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Offset Section</p>",
+            "<p>Cutting plane bends to show multiple features</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Broken Section</p>",
+            "<p>Small portion of object shown in section</p>"
           ]
         }
       ]
@@ -430,50 +429,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Abbreviation</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Dia</p>",
+            "<p>Diameter</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rad</p>",
+            "<p>Radius</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Thk</p>",
+            "<p>Thickness</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ctr</p>",
+            "<p>Center</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>No.</p>",
+            "<p>Number</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Typ</p>",
+            "<p>Typical</p>"
           ]
         }
       ]
@@ -488,11 +487,11 @@
       "id": "6c6wew4",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Keep instruments clean and dry",
+        "Avoid dropping instruments",
+        "Store tools properly in instrument boxes",
+        "Use proper pencils and sharpen regularly",
+        "Handle compasses and dividers carefully"
       ]
     },
     {
@@ -505,11 +504,11 @@
       "id": "blt9p7s",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Object lines represent visible edges.",
+        "Hidden lines represent invisible edges.",
+        "Center lines indicate axis of symmetry.",
+        "Orthographic projection includes front, top, and side views.",
+        "Sectional views show internal features of objects."
       ]
     }
   ],

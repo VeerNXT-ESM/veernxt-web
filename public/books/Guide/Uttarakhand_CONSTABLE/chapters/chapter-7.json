@@ -54,57 +54,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Symbol</strong></p>",
+            "<p><strong>Name</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Animal</p>",
+            "<p>Alpine Musk Deer (Moschus leucogaster)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Bird</p>",
+            "<p>Himalayan Monal (Lophophorus impejanus) — 'Danphe' locally</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Tree</p>",
+            "<p>Buransh / Rhododendron (Rhododendron arboreum)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Flower</p>",
+            "<p>Brahma Kamal (Saussurea obvallata)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Fish</p>",
+            "<p>Golden Mahseer (Tor putitora)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Insect</p>",
+            "<p>Alpine Bumblebee (Bombus sp.)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>State Butterfly</p>",
+            "<p>Common Peacock / Swallowtail butterfly</p>"
           ]
         }
       ]
@@ -122,7 +122,8 @@
     },
     {
       "type": "paragraph",
-      "id": "t2ogrlj"
+      "id": "t2ogrlj",
+      "content": "About 71% of Uttarakhand's area is forested — among the highest proportions in India. Forest types range from tropical moist deciduous in the Terai to subalpine conifer and alpine meadows (Bugiyal) at high altitudes. The state has significant Van Panchayat (community forest councils) — over 12,000 Van Panchayats manage community forests."
     },
     {
       "id": "23iovif",
@@ -131,57 +132,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Forest Type</strong></p>",
+            "<p><strong>Zone</strong></p>",
+            "<p><strong>Key Species</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Tropical Moist Deciduous</p>",
+            "<p>Terai, foothills (&lt;700 m)</p>",
+            "<p>Sal, Shisham, Teak, Amla, Bamboo</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sub-tropical Pine</p>",
+            "<p>700–1500 m</p>",
+            "<p>Chir Pine (Pinus roxburghii); resin extraction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Temperate Broadleaf</p>",
+            "<p>1500–2500 m</p>",
+            "<p>Oak (Banj), Rhododendron (Buransh), Deodar, Maple</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sub-alpine Conifer</p>",
+            "<p>2500–3500 m</p>",
+            "<p>Deodar, Fir (Abies), Spruce (Picea), Birch (Bhojpatra)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Alpine Meadows (Bugiyal)</p>",
+            "<p>3500–4500 m</p>",
+            "<p>Brahma Kamal, Primula, Gentiana; summer grazing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Glacial / Barren</p>",
+            "<p>&gt;4500 m</p>",
+            "<p>Lichens, mosses; snow and ice cover</p>"
           ]
         }
       ]
@@ -225,131 +226,131 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Name</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>District</strong></p>",
+            "<p><strong>Area (sq km)</strong></p>",
+            "<p><strong>Key Species</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Jim Corbett National Park</p>",
+            "<p>NP (est. 1936)</p>",
+            "<p>Nainital/Pauri</p>",
+            "<p>520</p>",
+            "<p>Tiger, Elephant, Leopard, Gharial; first NP of India</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Rajaji National Park</p>",
+            "<p>NP (est. 1983)</p>",
+            "<p>Haridwar/Dehradun/Pauri</p>",
+            "<p>820</p>",
+            "<p>Elephant, Tiger, Leopard, King Cobra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Nanda Devi National Park</p>",
+            "<p>NP + Biosphere Reserve</p>",
+            "<p>Chamoli</p>",
+            "<p>630</p>",
+            "<p>Snow Leopard, Musk Deer, Brown Bear; UNESCO WHS</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Valley of Flowers National Park</p>",
+            "<p>NP</p>",
+            "<p>Chamoli</p>",
+            "<p>87.5</p>",
+            "<p>Alpine flowers; Himalayan Black Bear; UNESCO WHS</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Gangotri National Park</p>",
+            "<p>NP</p>",
+            "<p>Uttarkashi</p>",
+            "<p>2390</p>",
+            "<p>Snow Leopard, Himalayan Tahr, Brown Bear; largest NP in UK</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Kedarnath WLS</p>",
+            "<p>WLS</p>",
+            "<p>Rudraprayag/Chamoli</p>",
+            "<p>975</p>",
+            "<p>Musk Deer, Snow Leopard, Bharal (Blue Sheep)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Govind Pashu Vihar NP &amp; WLS</p>",
+            "<p>NP + WLS</p>",
+            "<p>Uttarkashi</p>",
+            "<p>953+485</p>",
+            "<p>Snow Leopard, Himalayan Brown Bear, Musk Deer</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Binsar WLS</p>",
+            "<p>WLS</p>",
+            "<p>Almora</p>",
+            "<p>47</p>",
+            "<p>Leopard, Himalayan Monal, diverse birds; 200+ bird species</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Sonanadi WLS</p>",
+            "<p>WLS</p>",
+            "<p>Nainital</p>",
+            "<p>301</p>",
+            "<p>Elephant, Tiger, Leopard; buffer of Corbett</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Askot Musk Deer Sanctuary</p>",
+            "<p>WLS</p>",
+            "<p>Pithoragarh</p>",
+            "<p>599</p>",
+            "<p>Alpine Musk Deer; establishment near Nepal border</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Kedarnath Musk Deer Sanctuary</p>",
+            "<p>WLS</p>",
+            "<p>Chamoli</p>",
+            "<p>967</p>",
+            "<p>Musk Deer conservation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>Nandhaur WLS</p>",
+            "<p>WLS</p>",
+            "<p>Nainital/Champawat</p>",
+            "<p>269</p>",
+            "<p>Tiger, Elephant; part of Terai Arc Landscape</p>"
           ]
         }
       ]
@@ -367,28 +368,28 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Site</strong></p>",
+            "<p><strong>Year</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>District</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Nanda Devi National Park</p>",
+            "<p>1988 (NP); 2005 (extended as Biosphere Reserve)</p>",
+            "<p>Natural WHS</p>",
+            "<p>Chamoli</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Valley of Flowers National Park</p>",
+            "<p>2005 (added to existing NP WHS nomination)</p>",
+            "<p>Natural WHS</p>",
+            "<p>Chamoli</p>"
           ]
         }
       ]
@@ -410,11 +411,25 @@
     },
     {
       "type": "paragraph",
-      "id": "ykxd13v"
+      "id": "ykxd13v",
+      "content": "Uttarakhand has over 12,000 Van Panchayats (community forest councils), which manage about 5 lakh hectares of 'community forests'. This institution dates back to 1931 (UP Panchayat Forest Rules). Van Panchayats have played a crucial role in forest conservation and are considered a model of community-based management."
     },
     {
       "type": "paragraph",
-      "id": "w048yap"
+      "id": "w048yap",
+      "content": "Chipko Movement: Born in Uttarakhand (1973–74). Villagers of Reni village (Chamoli) — led by Gaura Devi and Chandi Prasad Bhatt — hugged trees to prevent commercial felling. The movement spread globally as an environmental protest symbol. Sundarlal Bahuguna was a key organizer. 'Chipko' means 'to stick/hug'."
+    },
+    {
+      "id": "g0jldky",
+      "type": "image",
+      "imageId": "cn9rizt",
+      "src": "/books/Guide/Uttarakhand_CONSTABLE/images/image_cn9rizt.jpeg"
+    },
+    {
+      "id": "xaaq4w3",
+      "type": "image",
+      "imageId": "lbild4j",
+      "src": "/books/Guide/Uttarakhand_CONSTABLE/images/image_lbild4j.jpeg"
     }
   ],
   "enriched": true

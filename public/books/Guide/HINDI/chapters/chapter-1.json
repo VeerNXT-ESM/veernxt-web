@@ -1,12 +1,19 @@
 {
-  "id": "9vxqyis",
-  "title": "Introduction",
+  "id": "67wvhvy",
+  "title": "परीक्षा परिचय एवं पाठ्यक्रम",
   "order": 1,
   "blocks": [
     {
+      "id": "5i75q3e",
+      "type": "image",
+      "imageId": "hjt9zt3",
+      "src": "/books/Guide/HINDI/images/image_hjt9zt3.png"
+    },
+    {
       "type": "heading",
       "level": 4,
-      "id": "jqov47e"
+      "id": "jqov47e",
+      "content": "<strong>HINDI GUIDEBOOK</strong>"
     },
     {
       "type": "statStrip",
@@ -47,93 +54,110 @@
     },
     {
       "type": "paragraph",
-      "id": "dnmr5zj"
+      "id": "dnmr5zj",
+      "content": "<strong>JHARKHAND GRAMIN BANK OFFICER SCALE I-II</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wksl44v"
+      "id": "wksl44v",
+      "content": "<strong>2026</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "w1zavvf"
+      "id": "w1zavvf",
+      "content": "<strong>SSC JHT</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "sgvq24i"
+      "id": "sgvq24i",
+      "content": "<strong>सम्पूर्ण हिन्दी</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tkw3dn1"
+      "id": "tkw3dn1",
+      "content": "<strong>Junior Hindi Translator</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uqn3d0c"
+      "id": "uqn3d0c",
+      "content": "<em>Complete Study Guide</em>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "vfbouw0"
+      "id": "vfbouw0",
+      "content": "─────────────────────────────────"
     },
     {
       "type": "paragraph",
-      "id": "kgbe0dr"
+      "id": "kgbe0dr",
+      "content": "<strong>✦ सम्पूर्ण हिन्दी व्याकरण  ✦ अनुवाद कौशल  ✦ निबन्ध लेखन  ✦ शब्द-भण्डार</strong>"
     },
     {
       "type": "paragraph",
-      "id": "zx99xhf"
+      "id": "zx99xhf",
+      "content": "<strong>✦ पर्यायवाची  ✦ विलोम शब्द  ✦ मुहावरे  ✦ अभ्यास प्रश्न</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nyc520t"
+      "id": "nyc520t",
+      "content": "─────────────────────────────────"
     },
     {
       "type": "paragraph",
-      "id": "4g1y0i0"
+      "id": "4g1y0i0",
+      "content": "<strong>पेपर 1 एवं पेपर 2 हेतु सम्पूर्ण तैयारी</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "69jhllj"
+      "id": "69jhllj",
+      "content": "<em>2025-26 संस्करण</em>"
     },
     {
       "type": "paragraph",
-      "id": "rysu27u"
+      "id": "rysu27u",
+      "content": "<strong>अध्याय 1: परीक्षा परिचय एवं पाठ्यक्रम</strong>"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wkgfbv7"
+      "id": "wkgfbv7",
+      "content": "<strong>  SSC JHT परीक्षा का परिचय  </strong>"
     },
     {
       "type": "paragraph",
-      "id": "u5v8bdd"
+      "id": "u5v8bdd",
+      "content": "SSC JHT (Junior Hindi Translator) परीक्षा कर्मचारी चयन आयोग द्वारा आयोजित एक राष्ट्रीय स्तरीय परीक्षा है। इस परीक्षा के माध्यम से केन्द्र सरकार के विभिन्न मन्त्रालयों और विभागों में कनिष्ठ हिन्दी अनुवादक, कनिष्ठ अनुवादक एवं वरिष्ठ हिन्दी अनुवादक के पदों पर भर्ती की जाती है।"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uvopytg"
+      "id": "uvopytg",
+      "content": "<strong>भर्ती पद</strong>"
     },
     {
       "id": "i55h8ol",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "कनिष्ठ हिन्दी अनुवादक (Junior Hindi Translator)",
+        "कनिष्ठ अनुवाद अधिकारी (Junior Translation Officer)",
+        "कनिष्ठ अनुवादक (Junior Translator)",
+        "वरिष्ठ हिन्दी अनुवादक (Senior Hindi Translator)",
+        "वरिष्ठ अनुवादक (Senior Translator)"
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "m6yy17u"
+      "id": "m6yy17u",
+      "content": "<strong>  परीक्षा प्रारूप (Exam Pattern)  </strong>"
     },
     {
       "id": "2060pbl",
@@ -142,36 +166,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>पेपर</strong></p>",
+            "<p><strong>विवरण</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पेपर-1 (वस्तुनिष्ठ)</p>",
+            "<p>200 MCQ (सामान्य हिन्दी + सामान्य अंग्रेज़ी)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>पेपर-2 (वर्णनात्मक)</p>",
+            "<p>अनुवाद + निबन्ध (हिन्दी-अंग्रेज़ी)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>कुल अंक</p>",
+            "<p>200 + 200 = 400 अंक</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>परीक्षा अवधि (प्रत्येक)</p>",
+            "<p>2 घण्टे (लिपिक के साथ 2 घण्टे 40 मिनट)</p>"
           ]
         }
       ]
@@ -183,63 +207,66 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>महत्त्वपूर्ण: नकारात्मक अंकन</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
+            "<p>पेपर-1 में प्रत्येक गलत उत्तर के लिए 0.25 अंक काटे जाते हैं। पेपर-2 में कोई नकारात्मक अंकन नहीं है।</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "o32necs"
+      "id": "o32necs",
+      "content": "<strong>पाठ्यक्रम - पेपर 1: सामान्य हिन्दी</strong>"
     },
     {
       "id": "h0v268b",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "हिन्दी व्याकरण — संज्ञा, सर्वनाम, विशेषण, क्रिया, क्रियाविशेषण",
+        "सन्धि एवं समास",
+        "पर्यायवाची एवं विलोम शब्द",
+        "मुहावरे एवं लोकोक्तियाँ",
+        "वाक्य शुद्धि एवं शब्द शुद्धि",
+        "अपठित गद्यांश",
+        "शब्द भण्डार एवं वाक्य रचना"
       ]
     },
     {
       "type": "paragraph",
-      "id": "moulpaw"
+      "id": "moulpaw",
+      "content": "<strong>पाठ्यक्रम - पेपर 1: सामान्य अंग्रेज़ी</strong>"
     },
     {
       "id": "i69108s",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Reading Comprehension",
+        "Grammar — Tenses, Voice, Narration",
+        "Vocabulary — Synonyms, Antonyms",
+        "Idioms &amp; Phrases",
+        "Error Spotting &amp; Sentence Correction",
+        "Para Jumbles"
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "i1kkf6u"
+      "id": "i1kkf6u",
+      "content": "<strong>पाठ्यक्रम - पेपर 2: वर्णनात्मक</strong>"
     },
     {
       "id": "j3xuhiy",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "हिन्दी से अंग्रेज़ी अनुवाद (एक गद्यांश)",
+        "अंग्रेज़ी से हिन्दी अनुवाद (एक गद्यांश)",
+        "हिन्दी में निबन्ध लेखन",
+        "अंग्रेज़ी में निबन्ध लेखन"
       ]
     },
     {
@@ -249,1374 +276,13 @@
         {
           "isHeader": true,
           "cells": [
-            null
+            "<p><strong>परीक्षा रणनीति (Exam Strategy)</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vgxnqr3"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dsxlp9u"
-    },
-    {
-      "type": "paragraph",
-      "id": "hh742f6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "heetx96"
-    },
-    {
-      "id": "bjfmx3h",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "7xofzyt",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "5j5y6ov"
-    },
-    {
-      "type": "paragraph",
-      "id": "5kcc39p"
-    },
-    {
-      "id": "zztl504",
-      "type": "list",
-      "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jabul10"
-    },
-    {
-      "type": "paragraph",
-      "id": "sxulg49"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fouk381"
-    },
-    {
-      "id": "xlvlz10",
-      "type": "list",
-      "items": [
-        null,
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "kx6o63e"
-    },
-    {
-      "type": "paragraph",
-      "id": "lb780vy"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "sg1ctlb"
-    },
-    {
-      "id": "i72ybof",
-      "type": "list",
-      "items": [
-        null,
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ew155rd"
-    },
-    {
-      "type": "paragraph",
-      "id": "t9tog6d"
-    },
-    {
-      "id": "fet8cm2",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2eqr4o7"
-    },
-    {
-      "id": "zjhiyn4",
-      "type": "list",
-      "items": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2o6jzp4"
-    },
-    {
-      "id": "ma0b7fj",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "6eog46b",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "uwrjfwb"
-    },
-    {
-      "type": "pullQuote",
-      "content": "The Constitution is not a mere lawyers' document, it is a vehicle of Life, and its spirit is always the spirit of Age.",
-      "id": "fcg85fc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m6jnqpc"
-    },
-    {
-      "type": "paragraph",
-      "id": "da3fv4k"
-    },
-    {
-      "id": "kx2fnc9",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "t28cwrz"
-    },
-    {
-      "id": "v5tmb13",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "hiys6s4"
-    },
-    {
-      "type": "paragraph",
-      "id": "3fseova"
-    },
-    {
-      "id": "umrda7l",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "28kwcj0"
-    },
-    {
-      "id": "31e41yb",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "c5s4ryz"
-    },
-    {
-      "id": "o6wu830",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "5ka2q7s",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a1y10xe"
-    },
-    {
-      "type": "paragraph",
-      "id": "8tj8803"
-    },
-    {
-      "type": "paragraph",
-      "id": "bcgow89"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "et27zwe"
-    },
-    {
-      "id": "ug6raz1",
-      "type": "list",
-      "items": [
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "f12womx"
-    },
-    {
-      "id": "9h62omv",
-      "type": "numberedList",
-      "items": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cfwmt1g"
-    },
-    {
-      "type": "paragraph",
-      "id": "2h4novr"
-    },
-    {
-      "id": "5lakitb",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "jtjlcqf"
-    },
-    {
-      "id": "h1zgalv",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ugbwjpg",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "xwz7sv3"
-    },
-    {
-      "id": "uqs90b9",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "comparisonTable",
-      "headers": [
-        "Feature",
-        "Written Constitution (e.g., India, USA)",
-        "Unwritten Constitution (e.g., UK)"
-      ],
-      "rows": [
-        [
-          "Origin",
-          "Framed and enacted by a constituent body at a specific time",
-          "Evolved gradually through conventions, customs, and judicial decisions"
-        ],
-        [
-          "Supremacy",
-          "Constitution is supreme over all legislative and executive organs",
-          "Parliament is supreme; no single constitutional document exists"
-        ],
-        [
-          "Flexibility",
-          "Rigid or a blend of rigidity and flexibility",
-          "Flexible; can be altered by simple parliamentary legislation"
-        ]
-      ],
-      "id": "bekuh92"
-    },
-    {
-      "id": "rc3lvbd",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "7lfbb68"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "67gy0t2"
-    },
-    {
-      "type": "paragraph",
-      "id": "sdjj6ln"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fhjjvw1"
-    },
-    {
-      "id": "5epwbt8",
-      "type": "numberedList",
-      "items": [
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m9sak6j"
-    },
-    {
-      "id": "hscw6ne",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null,
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "lo1w4bx"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2y7t8xw"
-    },
-    {
-      "type": "paragraph",
-      "id": "sfvd9x6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "m7t1r3v"
-    },
-    {
-      "type": "paragraph",
-      "id": "d1pw7l0"
-    },
-    {
-      "type": "paragraph",
-      "id": "bhavg4z"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "h2aufke"
-    },
-    {
-      "type": "paragraph",
-      "id": "p8n0i6y"
-    },
-    {
-      "id": "aedcj4q",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "gbwe27b"
-    },
-    {
-      "type": "paragraph",
-      "id": "yhkl74g"
-    },
-    {
-      "type": "paragraph",
-      "id": "6jug2v3"
-    },
-    {
-      "type": "paragraph",
-      "id": "zd8xd8p"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "z9dhx2j"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xzu2pax"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "orh1frp"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "dr7vwfv"
-    },
-    {
-      "type": "paragraph",
-      "id": "2bsctq9"
-    },
-    {
-      "type": "paragraph",
-      "id": "nxqxta5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "39ygyha"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "h0i52h0"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "cru4eby"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "tuqgyou"
-    },
-    {
-      "type": "paragraph",
-      "id": "xhlqjh0"
-    },
-    {
-      "type": "paragraph",
-      "id": "59d50vn"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4wuywjv"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "bkajdgi"
-    },
-    {
-      "type": "examAlert",
-      "items": [
-        "November 26 is celebrated officially as Constitution Day (Samvidhan Divas) across India.",
-        "Dr. Sachchidananda Sinha was appointed as the interim President of the Constituent Assembly before Dr. Rajendra Prasad was elected permanent President.",
-        "The original Constitution was handwritten by Prem Behari Narain Raizada in a flowing italic style."
-      ],
-      "id": "05qrqe7"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "x8qyuek"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "2r3bdqh"
-    },
-    {
-      "type": "paragraph",
-      "id": "fluqshh"
-    },
-    {
-      "type": "paragraph",
-      "id": "0go52e2"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "jhwu6oe"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "a00p7n6"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "xtfu0ix"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "vnoed7h"
-    },
-    {
-      "type": "paragraph",
-      "id": "9khm0l8"
-    },
-    {
-      "type": "paragraph",
-      "id": "np5moyu"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "50db0h5"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "4tz117o"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "fvvxtye"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "ynqz76i"
-    },
-    {
-      "type": "paragraph",
-      "id": "hi0ei1q"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "n2rteee"
-    },
-    {
-      "type": "paragraph",
-      "id": "33mr4xj"
-    },
-    {
-      "id": "0l2n597",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "g4k33d3",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "id": "qeltosa"
-    },
-    {
-      "id": "ip2ji94",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
-          ]
-        }
-      ]
-    },
-    {
-      "id": "hkplayj",
-      "type": "table",
-      "rows": [
-        {
-          "isHeader": true,
-          "cells": [
-            null
-          ]
-        },
-        {
-          "isHeader": false,
-          "cells": [
-            null
+            "<p>पेपर-1 में हिन्दी और अंग्रेज़ी दोनों विषयों पर समान ध्यान दें। पेपर-2 के लिए अनुवाद का नियमित अभ्यास करें। प्रतिदिन हिन्दी समाचारपत्र पढ़ें जिससे शब्द-भण्डार और अनुवाद कौशल दोनों सुधरेंगे।</p>"
           ]
         }
       ]

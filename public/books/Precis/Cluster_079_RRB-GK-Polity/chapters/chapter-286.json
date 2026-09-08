@@ -1,0 +1,134 @@
+{
+  "title": "Difference Between CBI and NIA",
+  "order": 286,
+  "blocks": [
+    {
+      "id": "idr3jk8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p>Feature</p>",
+            "<p>CBI</p>",
+            "<p>NIA</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Legal Basis</p>",
+            "<p>DSPE Act, 1946</p>",
+            "<p>NIA Act, 2008</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Focus</p>",
+            "<p>Corruption &amp; economic crimes</p>",
+            "<p>Terrorism and national security</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>State Consent</p>",
+            "<p>Required</p>",
+            "<p>Not required</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "While the CBI requires state consent to investigate cases within a state, the NIA possesses statutory concurrent jurisdiction across India to investigate terror-related scheduled offenses without state permission.",
+      "id": "51vuxv5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Central Bureau of Investigation (CBI)",
+        "National Investigation Agency (NIA)"
+      ],
+      "rows": [
+        [
+          "Year of Formation",
+          "1963",
+          "2009"
+        ],
+        [
+          "Statutory Status",
+          "Non-statutory (Derives power from DSPE Act, 1946)",
+          "Statutory Body (Established under NIA Act, 2008)"
+        ],
+        [
+          "Nodal Ministry",
+          "Ministry of Personnel, Public Grievances and Pensions (DoPT)",
+          "Ministry of Home Affairs (MHA)"
+        ],
+        [
+          "State Consent",
+          "Mandatory (General or Specific Consent required)",
+          "Not required for Scheduled Offenses"
+        ],
+        [
+          "Primary Focus",
+          "Corruption, Economic Offenses, and Special Crimes",
+          "Terrorism, Cyber-terrorism, and Anti-national Activities"
+        ]
+      ],
+      "id": "ekzs8jt"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "CBI Established",
+          "value": "1963",
+          "icon": "calendar"
+        },
+        {
+          "label": "CBI Governing Act",
+          "value": "DSPE Act 1946",
+          "icon": "book"
+        },
+        {
+          "label": "NIA Established",
+          "value": "2009",
+          "icon": "calendar"
+        },
+        {
+          "label": "NIA Jurisdiction",
+          "value": "Pan-India",
+          "icon": "check"
+        }
+      ],
+      "id": "19kmrrh"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "CBI is NOT a statutory body; it was created by an executive resolution of the Ministry of Home Affairs in 1963.",
+        "NIA IS a statutory body created by the NIA Act, 2008.",
+        "CBI requires state consent (General or Specific) to investigate in a state, unless directed by the High Court or Supreme Court.",
+        "NIA does NOT require state consent to register and investigate scheduled offenses anywhere in India."
+      ],
+      "id": "ix5o7wk"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "CBI operates under the Department of Personnel and Training (DoPT), whereas NIA functions under the Ministry of Home Affairs (MHA).",
+        "CBI derives its investigative powers from the Delhi Special Police Establishment (DSPE) Act, 1946, and is not a statutory body.",
+        "NIA is a statutory body constituted under the National Investigation Agency Act, 2008, following the 26/11 Mumbai terror attacks.",
+        "CBI requires state consent to investigate crimes within state territory, whereas NIA has statutory concurrent jurisdiction nationwide for scheduled offenses.",
+        "CBI primarily deals with corruption, economic crimes, and complex special crimes, while NIA focuses specifically on counter-terrorism and national security offenses."
+      ],
+      "id": "gkt9a9m"
+    }
+  ],
+  "enriched": true
+}

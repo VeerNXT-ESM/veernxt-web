@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "dhoi1ty"
+      "id": "dhoi1ty",
+      "content": "The National Pension System is a voluntary, long-term retirement savings scheme regulated by PFRDA."
     },
     {
       "type": "pullQuote",
@@ -98,36 +99,36 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Launched</p>",
+            "<p>2004 (for government employees); later opened to all citizens)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nature</p>",
+            "<p>Defined Contribution Scheme</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Regulator</p>",
+            "<p>PFRDA</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Portable</p>",
+            "<p>Across jobs and locations</p>"
           ]
         }
       ]

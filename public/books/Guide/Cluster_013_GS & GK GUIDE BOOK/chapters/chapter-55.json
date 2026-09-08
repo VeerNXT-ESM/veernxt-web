@@ -1,0 +1,403 @@
+{
+  "id": "4xax29d",
+  "title": "Chapter 6: Sound",
+  "order": 55,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "53xnijc",
+      "content": "Sound is a form of mechanical energy that produces the sensation of hearing. It is produced due to vibrations of objects and travels through a medium in the form of sound waves. Sound is essential for communication, music and many scientific applications."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Speed in Air (0°C)",
+          "value": "331 m/s",
+          "icon": "clock"
+        },
+        {
+          "label": "Audible Frequency Range",
+          "value": "20 Hz - 20 kHz",
+          "icon": "info"
+        },
+        {
+          "label": "Min Distance for Echo",
+          "value": "17.2 m",
+          "icon": "check"
+        },
+        {
+          "label": "Hearing Persistence",
+          "value": "0.1 sec",
+          "icon": "award"
+        }
+      ],
+      "id": "4159dvn"
+    },
+    {
+      "id": "66aaygb",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Sound"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Sound is a mechanical longitudinal wave produced by vibrating objects and requires a material medium for propagation.",
+        "Human hearing is sensitive to frequencies between 20 Hz and 20,000 Hz (20 kHz).",
+        "Speed of sound is maximum in solids, moderate in liquids, minimum in gases, and zero in a vacuum.",
+        "An echo requires a minimum distance of 17.2 meters between the sound source and the reflecting surface.",
+        "Ultrasound (frequency > 20 kHz) is used in medical imaging, SONAR, and cleaning hard-to-reach industrial parts."
+      ],
+      "id": "us787a7"
+    },
+    {
+      "type": "paragraph",
+      "id": "ecqmeyc",
+      "content": "• Sound is a form of energy that produces the sensation of hearing."
+    },
+    {
+      "type": "paragraph",
+      "id": "exdaiom",
+      "content": "• It is produced by vibrating objects."
+    },
+    {
+      "type": "paragraph",
+      "id": "60nuby4",
+      "content": "• Sound travels through a medium in the form of waves."
+    },
+    {
+      "type": "paragraph",
+      "id": "10pgifg",
+      "content": "• It cannot travel through vacuum because it requires a material medium."
+    },
+    {
+      "id": "ufyle0m",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Production of Sound"
+    },
+    {
+      "type": "paragraph",
+      "id": "qqh6ctf",
+      "content": "• Sound is produced when an object vibrates."
+    },
+    {
+      "type": "paragraph",
+      "id": "9xbz5d7",
+      "content": "• The vibrating object causes nearby particles of the medium to vibrate."
+    },
+    {
+      "type": "paragraph",
+      "id": "bq249pg",
+      "content": "• These vibrations travel through the medium as sound waves."
+    },
+    {
+      "id": "wu6yn51",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Sound Waves"
+    },
+    {
+      "type": "paragraph",
+      "id": "0goyqv8",
+      "content": "Sound waves are longitudinal waves consisting of compressions and rarefactions."
+    },
+    {
+      "type": "paragraph",
+      "id": "um35sk2",
+      "content": "• Compression – region of high pressure."
+    },
+    {
+      "type": "paragraph",
+      "id": "nbfl4ek",
+      "content": "• Rarefaction – region of low pressure."
+    },
+    {
+      "id": "hygncsr",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Characteristics of Sound Waves"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Sound waves are longitudinal mechanical waves that require a material medium for their propagation and cannot travel through a vacuum.",
+      "id": "y7peuzq"
+    },
+    {
+      "id": "rvyfj7l",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Characteristic</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Amplitude</p>",
+            "<p>Maximum displacement of particles; determines loudness</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Frequency</p>",
+            "<p>Number of vibrations per second</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Wavelength</p>",
+            "<p>Distance between two compressions</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Time Period</p>",
+            "<p>Time taken for one complete vibration</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w9jwchl",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Types of Sound"
+    },
+    {
+      "id": "088yvv0",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Frequency Range</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Infrasonic</p>",
+            "<p>Less than 20 Hz</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Audible Sound</p>",
+            "<p>20 Hz – 20,000 Hz</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Ultrasonic</p>",
+            "<p>Greater than 20,000 Hz</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ysnmux7",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Speed of Sound"
+    },
+    {
+      "type": "paragraph",
+      "id": "0riht37",
+      "content": "The speed of sound depends on the medium and temperature. It travels fastest in solids and slowest in gases."
+    },
+    {
+      "id": "iw6iqb8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Medium</strong></p>",
+            "<p><strong>Speed</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Air</p>",
+            "<p>343 m/s</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Water</p>",
+            "<p>1500 m/s</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Steel</p>",
+            "<p>5000 m/s</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e9m558q",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Reflection of Sound"
+    },
+    {
+      "type": "paragraph",
+      "id": "qf36pai",
+      "content": "When sound waves strike a surface, they bounce back. This phenomenon is called reflection of sound."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Category",
+        "Infrasonic Sound",
+        "Audible Sound",
+        "Ultrasonic Sound"
+      ],
+      "rows": [
+        [
+          "Frequency Range",
+          "Below 20 Hz",
+          "20 Hz to 20,000 Hz",
+          "Above 20,000 Hz"
+        ],
+        [
+          "Human Audibility",
+          "Inaudible",
+          "Audible",
+          "Inaudible"
+        ],
+        [
+          "Key Examples / Applications",
+          "Earthquakes, Elephants, Rhinoceroses",
+          "Human Speech, Musical Instruments",
+          "Bats, Dolphins, SONAR, Ultrasonography"
+        ]
+      ],
+      "id": "di0ao3s"
+    },
+    {
+      "id": "hn94huu",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Echo"
+    },
+    {
+      "type": "paragraph",
+      "id": "q4u4qx3",
+      "content": "• Echo is the repetition of sound caused by reflection of sound waves."
+    },
+    {
+      "type": "paragraph",
+      "id": "44j9hkr",
+      "content": "• It is heard when sound reflects from a distant surface."
+    },
+    {
+      "type": "paragraph",
+      "id": "8wtt32b",
+      "content": "• The minimum distance required to hear echo is about 17 meters."
+    },
+    {
+      "id": "o6dhk4k",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Uses of Ultrasound"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "9a4orwv",
+      "content": "• Medical imaging (ultrasound scanning)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "crjl9ob",
+      "content": "• Detecting cracks in metals"
+    },
+    {
+      "type": "paragraph",
+      "id": "0sfdrxl",
+      "content": "• SONAR used by ships to detect underwater objects"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "tfx4mjw",
+      "content": "• Cleaning delicate electronic components"
+    },
+    {
+      "id": "kuqotw8",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Noise Pollution"
+    },
+    {
+      "type": "paragraph",
+      "id": "2j10boo",
+      "content": "• Noise pollution refers to unwanted or harmful sound."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Sound cannot travel in a vacuum; light can.",
+        "Persistence of hearing in humans is 0.1 seconds, which dictates the 17.2 m echo distance rule.",
+        "SONAR utilizes ultrasonic waves to measure underwater depth and locate submerged objects."
+      ],
+      "id": "trehy7w"
+    },
+    {
+      "type": "paragraph",
+      "id": "twkewty",
+      "content": "• It can cause hearing problems and stress."
+    },
+    {
+      "type": "paragraph",
+      "id": "pqciyjh",
+      "content": "• Sources include traffic, industrial machines and loudspeakers."
+    },
+    {
+      "id": "jl155ak",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "aa06jda",
+      "content": "• Sound cannot travel in vacuum."
+    },
+    {
+      "type": "paragraph",
+      "id": "u1ev3h3",
+      "content": "• Human hearing range is 20 Hz to 20,000 Hz."
+    },
+    {
+      "type": "paragraph",
+      "id": "qq6x54o",
+      "content": "• Sound waves are longitudinal waves."
+    },
+    {
+      "type": "paragraph",
+      "id": "5rgtihe",
+      "content": "• Speed of sound in air is about 343 m/s."
+    }
+  ],
+  "enriched": true
+}

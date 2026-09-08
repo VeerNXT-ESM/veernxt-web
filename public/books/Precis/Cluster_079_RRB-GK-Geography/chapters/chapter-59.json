@@ -1,0 +1,133 @@
+{
+  "title": "7. Major Discontinuities",
+  "order": 59,
+  "blocks": [
+    {
+      "id": "jkt92pz",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Discontinuity</strong></p>",
+            "<p><strong>Depth</strong></p>",
+            "<p><strong>Separates</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mohorovicic (Moho)</p>",
+            "<p>~35 km</p>",
+            "<p>Crust and Mantle</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Gutenberg</p>",
+            "<p>~2900 km</p>",
+            "<p>Mantle and Outer Core</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Lehmann</p>",
+            "<p>~5150 km</p>",
+            "<p>Outer Core and Inner Core</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "Discontinuities in Earth's interior represent sharp changes in seismic wave velocities due to variations in material density and composition.",
+      "id": "s394hg6"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Discontinuity",
+        "Separates Layers",
+        "Approx. Depth"
+      ],
+      "rows": [
+        [
+          "Conrad",
+          "Outer Crust & Inner Crust",
+          "15 - 20 km"
+        ],
+        [
+          "Mohorovicic (Moho)",
+          "Crust & Mantle",
+          "35 km"
+        ],
+        [
+          "Repetti",
+          "Upper Mantle & Lower Mantle",
+          "700 km"
+        ],
+        [
+          "Gutenberg",
+          "Mantle & Outer Core",
+          "2900 km"
+        ],
+        [
+          "Lehmann",
+          "Outer Core & Inner Core",
+          "5150 km"
+        ]
+      ],
+      "id": "cjg1qr9"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Major Discontinuities",
+          "value": "5",
+          "icon": "check"
+        },
+        {
+          "label": "Moho Depth",
+          "value": "~35 km",
+          "icon": "info"
+        },
+        {
+          "label": "Gutenberg Depth",
+          "value": "~2900 km",
+          "icon": "calendar"
+        },
+        {
+          "label": "Lehmann Depth",
+          "value": "~5150 km",
+          "icon": "award"
+        }
+      ],
+      "id": "kozwi5j"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Remember the top-to-bottom sequence using the mnemonic CMRGL: Conrad, Mohorovicic, Repetti, Gutenberg, Lehmann.",
+        "Gutenberg Discontinuity at ~2900 km marks the depth where S-waves stop propagating because the outer core is liquid.",
+        "Moho discontinuity depth varies significantly: ~35 km beneath continents versus ~5-10 km beneath ocean basins."
+      ],
+      "id": "543rnnb"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Conrad Discontinuity separates the upper crust (Sial) from the lower crust (Sima).",
+        "Mohorovicic (Moho) Discontinuity forms the boundary between the Earth's crust and the upper mantle.",
+        "Repetti Discontinuity marks the transition between the upper mantle and the lower mantle.",
+        "Gutenberg Discontinuity separates the solid lower mantle from the liquid outer core.",
+        "Lehmann Discontinuity separates the liquid outer core from the solid inner core."
+      ],
+      "id": "uzcyi9m"
+    }
+  ],
+  "enriched": true
+}

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "x92rw80"
+      "id": "x92rw80",
+      "content": "At first glance, the Earth appears spherical. However, scientific measurements show that it is not a perfect sphere. The Earth is slightly flattened at the poles and bulges at the equator. This unique shape is called a GEOID, meaning 'earth-like shape.' "
     },
     {
       "type": "statStrip",
@@ -30,12 +31,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3akt5lv"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Why Earth is NOT a Perfect Sphere",
-      "id": "0aojfqy"
+      "id": "3akt5lv",
+      "content": "The reason behind this shape is Earth's rotation. When a body rotates, centrifugal force pushes material outward. Because the equator experiences the highest rotational speed, the outward force is strongest there, causing the equatorial bulge. The poles experience almost no centrifugal force, so they remain flattened."
     },
     {
       "id": "vv0814s",
@@ -44,22 +41,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Proper Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Geoid</p>",
+            "<p>Actual irregular shape of Earth based on gravity and mean sea level.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Oblate Spheroid</p>",
+            "<p>Mathematical model — sphere flattened at poles.</p>"
           ]
         }
       ]
@@ -82,7 +79,8 @@
     },
     {
       "type": "paragraph",
-      "id": "2s2poau"
+      "id": "2s2poau",
+      "content": "• Rotation creates centrifugal force."
     },
     {
       "type": "examAlert",
@@ -94,11 +92,13 @@
     },
     {
       "type": "paragraph",
-      "id": "2aziic5"
+      "id": "2aziic5",
+      "content": "• Mass distribution inside Earth is uneven."
     },
     {
       "type": "paragraph",
-      "id": "4s83rtd"
+      "id": "4s83rtd",
+      "content": "• Mountains, ocean trenches, and plate movements distort perfect symmetry."
     }
   ],
   "enriched": true

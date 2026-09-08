@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "d6v7ndl"
+      "id": "d6v7ndl",
+      "content": "HP has 12 districts reorganised on 1 September 1972 from the original 4 districts. They are grouped into 3 administrative divisions."
     },
     {
       "type": "statStrip",
@@ -103,29 +104,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Division</strong></p>",
+            "<p><strong>Districts Included</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Shimla Division</p>",
+            "<p>Shimla, Sirmaur, Solan, Kinnaur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mandi Division</p>",
+            "<p>Mandi, Bilaspur, Hamirpur, Una</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kangra (Dharamshala) Division</p>",
+            "<p>Kangra, Chamba, Kullu, Lahaul-Spiti</p>"
           ]
         }
       ]
@@ -137,118 +138,118 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>District</strong></p>",
+            "<p><strong>HQ</strong></p>",
+            "<p><strong>Area (sq km)</strong></p>",
+            "<p><strong>Important Facts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Shimla</p>",
+            "<p>Shimla</p>",
+            "<p>5131</p>",
+            "<p>State capital; HPCA Cricket Stadium; Jakhu Hill (2455m); Kufri skiing; Lavi Fair (Rampur)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kangra</p>",
+            "<p>Dharamshala</p>",
+            "<p>5739</p>",
+            "<p>Largest by population; Dalai Lama; Kangra Fort; Pong Dam Ramsar site; Bir Billing paragliding; Masrur temples</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mandi</p>",
+            "<p>Mandi</p>",
+            "<p>3950</p>",
+            "<p>International Shivratri Fair; Prashar Lake; Pandoh Dam; Rewalsar Lake</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kullu</p>",
+            "<p>Kullu</p>",
+            "<p>5503</p>",
+            "<p>Kullu Dussehra; Great Himalayan NP (UNESCO); Rohtang Pass; Hidimba Temple (Manali)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Chamba</p>",
+            "<p>Chamba</p>",
+            "<p>6528</p>",
+            "<p>Minjar Fair; Chamba Rumal (GI); Khajjiar 'Mini Switzerland'; Manimahesh Yatra; Pangi Valley</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Lahaul-Spiti</p>",
+            "<p>Keylong</p>",
+            "<p>13835</p>",
+            "<p>Largest district (25% of HP area); least populated; Atal Tunnel; Tabo Monastery; Key Monastery; cold desert</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Kinnaur</p>",
+            "<p>Reckong Peo</p>",
+            "<p>6401</p>",
+            "<p>Highest peak (Reo Purgyil 6816m); Shipkila Pass; Sangla Valley; Kinnaur-China border</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hamirpur</p>",
+            "<p>Hamirpur</p>",
+            "<p>1118</p>",
+            "<p>Smallest district by area; highest road density; Baba Balak Nath temple (Deotsidh); NIT Hamirpur</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Una</p>",
+            "<p>Una</p>",
+            "<p>1540</p>",
+            "<p>Chintpurni Shakti Peeth; industrial area (Mehatpur, Tahliwal); Una–Anandpur Sahib border</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Bilaspur</p>",
+            "<p>Bilaspur</p>",
+            "<p>1167</p>",
+            "<p>Gobind Sagar Lake (Bhakra Dam); Naina Devi Shakti Peeth; HP's youngest district (joined 1954)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Solan</p>",
+            "<p>Solan</p>",
+            "<p>1936</p>",
+            "<p>BBN industrial hub (pharma); Chail (world's highest cricket ground); Kasauli; Mushroom City</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Sirmaur</p>",
+            "<p>Nahan</p>",
+            "<p>2825</p>",
+            "<p>Renuka Lake (largest natural lake); Paonta Sahib (Yamuna bank); Shillai; Churdhar peak (3647m)</p>"
           ]
         }
       ]

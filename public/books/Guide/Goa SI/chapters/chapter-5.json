@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dete123"
+      "id": "dete123",
+      "content": "Goa is a multilingual state with a rich linguistic heritage. Konkani is the official language, but Marathi, English, Portuguese, and Hindi are widely spoken."
     },
     {
       "id": "ri5jba7",
@@ -58,57 +59,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Language</strong></p>",
+            "<p><strong>Script</strong></p>",
+            "<p><strong>Status / Notes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Konkani</p>",
+            "<p>Devanagari (official), Latin, Kannada</p>",
+            "<p>Official State Language; 8th Schedule language (1992); mother tongue of majority Goans</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Marathi</p>",
+            "<p>Devanagari</p>",
+            "<p>Widely spoken; co-official for some purposes; important for competitive exams</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>English</p>",
+            "<p>Latin</p>",
+            "<p>Language of administration, education, and business</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Portuguese</p>",
+            "<p>Latin</p>",
+            "<p>Legacy of colonial rule; spoken by older generation and in literature</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hindi</p>",
+            "<p>Devanagari</p>",
+            "<p>Growing use due to migration and national media</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kannada</p>",
+            "<p>Kannada</p>",
+            "<p>Spoken in border areas with Karnataka</p>"
           ]
         }
       ]
@@ -121,7 +122,8 @@
     },
     {
       "type": "paragraph",
-      "id": "3oucy9a"
+      "id": "3oucy9a",
+      "content": "Goa is unique in India for its harmonious blend of Hindu, Christian, and Muslim communities, a legacy of its complex history."
     },
     {
       "id": "v0ax346",
@@ -130,41 +132,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Religion</strong></p>",
+            "<p><strong>Population %</strong></p>",
+            "<p><strong>Key Facts</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Hinduism</p>",
+            "<p>~65%</p>",
+            "<p>Largest group; 350+ temples; Shantadurga, Mangeshi are major temples</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Christianity (Roman Catholic)</p>",
+            "<p>~26%</p>",
+            "<p>Legacy of Portuguese rule; beautiful churches including UNESCO World Heritage churches</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Islam</p>",
+            "<p>~8%</p>",
+            "<p>Small but significant community; mosques in Panaji, Ponda, Bicholim</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Others</p>",
+            "<p>&lt;1%</p>",
+            "<p>Buddhism, Sikhism, Jainism in small numbers</p>"
           ]
         }
       ]
@@ -182,7 +184,8 @@
     },
     {
       "type": "paragraph",
-      "id": "wjrwuqg"
+      "id": "wjrwuqg",
+      "content": "The Churches and Convents of Old Goa are inscribed as a UNESCO World Heritage Site (1986). This is Goa's only UNESCO World Heritage Site."
     },
     {
       "id": "6cy7u5q",
@@ -191,65 +194,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Monument</strong></p>",
+            "<p><strong>Year Built</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Basilica of Bom Jesus</p>",
+            "<p>1605</p>",
+            "<p>Contains the mortal remains of St. Francis Xavier; UNESCO WHS; Baroque architecture</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Se Cathedral (Cathedral of Santa Catarina)</p>",
+            "<p>1619</p>",
+            "<p>Largest church in Asia; built in Portuguese-Gothic style; Bell of Goa (Golden Bell) is one of the largest bells in Asia</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Church of St. Francis of Assisi</p>",
+            "<p>1661</p>",
+            "<p>Important for its museum; built on ruins of old chapel</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Church of St. Cajetan</p>",
+            "<p>17th Century</p>",
+            "<p>Modelled on St. Peter's Basilica, Rome; Corinthian style</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chapel of St. Catherine</p>",
+            "<p>1510</p>",
+            "<p>First church built in Goa after Portuguese conquest; originally a temporary structure</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Convent of St. Monica</p>",
+            "<p>1627</p>",
+            "<p>First convent in India; now museum of Christian art</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Archaeological Museum, Old Goa</p>",
+            "<p>N/A</p>",
+            "<p>Houses artefacts from Portuguese era and Hindu temples</p>"
           ]
         }
       ]
@@ -267,81 +270,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Temple</strong></p>",
+            "<p><strong>Location</strong></p>",
+            "<p><strong>Deity / Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shri Mahalsa Temple</p>",
+            "<p>Mardol, Ponda</p>",
+            "<p>Goddess Mahalsa (Mohini form of Vishnu); ancient idol rescued during Inquisition</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shri Mangeshi Temple</p>",
+            "<p>Priol, Ponda</p>",
+            "<p>Lord Mangesh (form of Shiva); most visited temple in Goa; white-washed tower (deepastambha)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shri Shantadurga Temple</p>",
+            "<p>Kavlem, Ponda</p>",
+            "<p>Goddess Shantadurga; one of Goa's most important temples</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shri Ramnath Temple</p>",
+            "<p>Bandivade, Ponda</p>",
+            "<p>Lord Ramnath; rescued idols from Salsete</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shri Nagesh Temple</p>",
+            "<p>Bandode, Ponda</p>",
+            "<p>Lord Nagesh; one of the oldest in Goa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shri Mahadeva Temple</p>",
+            "<p>Tambdi Surla, Bhagwan Mahavir NP</p>",
+            "<p>12th century Kadamba-era Hemadpanthi temple; oldest and best-preserved temple in Goa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shri Sapta Koteshwar Temple</p>",
+            "<p>Narve, Bicholim</p>",
+            "<p>Lord Shiva; one of the richest temples of Goa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shri Chandreshwar Bhutnath</p>",
+            "<p>Paroda Hill, Quepem</p>",
+            "<p>Sited on a hill; ancient temple</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shri Mhalsa Temple (Original Site)</p>",
+            "<p>Mormugao</p>",
+            "<p>Historical origin of the deity now in Mardol</p>"
           ]
         }
       ]
@@ -393,13 +396,13 @@
       "id": "ljgk7fj",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "Dekhnni — Traditional Goan dance performed by female dancers; semi-classical style",
+        "Fugdi — Folk dance performed by women during festivals like Ganesh Chaturthi",
+        "Corridinho — Ballroom folk dance of Portuguese origin",
+        "Mando — Lyrical romantic song and dance form; sentimental ballad of Goa",
+        "Dhalo — Folk dance performed exclusively by women during the month of Paush (winter)",
+        "Kunbi Dance — Dance of the Kunbi (original tribal community of Goa)",
+        "Shigmo — Spring festival with elaborate folk dances and floats"
       ]
     },
     {
@@ -412,11 +415,11 @@
       "id": "dkh78r3",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Mando — Most famous musical form; represents blending of Hindu and Christian cultures",
+        "Dulpod — Folk songs with lively rhythms, often humorous",
+        "Ovi — Songs sung by women while grinding grain; part of oral tradition",
+        "Dekhni and Fado (of Portuguese origin) — Goa's musical heritage is unique",
+        "Tiatr — Popular Konkani theatre form with songs and dialogue"
       ]
     },
     {
@@ -427,7 +430,8 @@
     },
     {
       "type": "paragraph",
-      "id": "s08aygj"
+      "id": "s08aygj",
+      "content": "Goan cuisine is one of the most distinctive in India. It blends indigenous Saraswat Brahmin cooking with Portuguese influences, resulting in unique dishes."
     },
     {
       "type": "examAlert",
@@ -446,64 +450,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Dishes / Items</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Seafood</p>",
+            "<p>Fish curry-rice (most iconic), Prawn balchao, Crab Xec-Xec, Ambot-tik, Caldeirada</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Non-vegetarian</p>",
+            "<p>Sorpotel (pork dish), Vindaloo, Chourico (Goan sausage), Xacuti, Cafreal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Vegetarian (Hindu)</p>",
+            "<p>Saraswat food: Foogath, Ghee rice, Sol kadhi, Banana flower curry</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bread</p>",
+            "<p>Pao (daily bread), Poi (bread from wheat bran), Kankonn</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sweets</p>",
+            "<p>Bebinca (Queen of Goan desserts — 16-layer coconut milk pudding), Dodol, Kulkul, Neureo (Neureos — fried pastry)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Drinks</p>",
+            "<p>Feni (State Heritage Drink — Cashew Feni and Coconut Feni), Toddy, Urak</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Spices Used</p>",
+            "<p>Coconut, Kokum, Vinegar, Red chilies, Turmeric, Goa's famous spice blend</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "o765srb"
+      "id": "o765srb",
+      "content": "Feni has been granted a Geographical Indication (GI) tag and is recognized as Goa's Heritage Drink. Cashew Feni is made from cashew apple juice; Coconut Feni (Mado) is made from coconut toddy."
     },
     {
       "id": "m8if2jv",
@@ -518,92 +523,98 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Festival</strong></p>",
+            "<p><strong>When</strong></p>",
+            "<p><strong>Significance</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Goa Carnival</p>",
+            "<p>February (before Lent)</p>",
+            "<p>Four-day street festival; Portuguese legacy; floats, dances, music</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shigmo (Holi of Goa)</p>",
+            "<p>February/March</p>",
+            "<p>Hindu spring festival; folk dances and processions for 14 days</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Sao Joao</p>",
+            "<p>June 24</p>",
+            "<p>Feast of St. John the Baptist; men jump into wells; villages fill with fern crowns</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ganesh Chaturthi</p>",
+            "<p>August/September</p>",
+            "<p>Major Hindu festival; Fugdi and other dances</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Bonderam Festival</p>",
+            "<p>August</p>",
+            "<p>Flag festival on Divar Island; celebrates old boundary disputes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Feast of St. Francis Xavier</p>",
+            "<p>December 3</p>",
+            "<p>Major Christian festival at Bom Jesus Basilica</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Christmas and New Year</p>",
+            "<p>December 25 – Jan 1</p>",
+            "<p>Peak tourist season; midnight mass; parties</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Diwali</p>",
+            "<p>October/November</p>",
+            "<p>Celebrated with effigies of Narkasur (demon) — unique to Goa</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Exposition of St. Francis Xavier</p>",
+            "<p>Every 10 years</p>",
+            "<p>Body of St. Francis Xavier publicly displayed; last in 2024</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>IFFI (Int'l Film Festival of India)</p>",
+            "<p>November</p>",
+            "<p>Held in Panaji every November; one of India's most prestigious film festivals</p>"
           ]
         }
       ]
+    },
+    {
+      "id": "mpxd7hq",
+      "type": "image",
+      "imageId": "j6hlbg9",
+      "src": "/books/Guide/Goa SI/images/image_j6hlbg9.jpeg"
     }
   ],
   "enriched": true

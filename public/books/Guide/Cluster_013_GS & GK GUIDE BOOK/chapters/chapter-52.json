@@ -1,0 +1,357 @@
+{
+  "id": "lkfhkgh",
+  "title": "Chapter 3: Energy and Power",
+  "order": 52,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "91vvama",
+      "content": "Energy and power are fundamental concepts in physics that explain the ability to do work and the rate at which work is done. Energy exists in many forms and can be converted from one form to another."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "SI Unit of Energy",
+          "value": "Joule (J)",
+          "icon": "award"
+        },
+        {
+          "label": "SI Unit of Power",
+          "value": "Watt (W)",
+          "icon": "clock"
+        },
+        {
+          "label": "1 Horsepower",
+          "value": "746 W",
+          "icon": "info"
+        },
+        {
+          "label": "1 kWh Value",
+          "value": "3.6 × 10⁶ J",
+          "icon": "check"
+        }
+      ],
+      "id": "472b6i8"
+    },
+    {
+      "id": "yc4y4rq",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Meaning of Energy"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Energy is defined as the capacity of a body to do work and is a scalar quantity.",
+        "Kinetic Energy is the energy possessed by an object due to its motion (KE = 1/2 m v²).",
+        "Potential Energy is the stored energy in an object due to its position or shape (PE = mgh).",
+        "The Law of Conservation of Energy states that energy can neither be created nor destroyed, only transformed.",
+        "Power is the rate at which work is done or energy is consumed (P = Work / Time)."
+      ],
+      "id": "s6h4344"
+    },
+    {
+      "type": "paragraph",
+      "id": "6ovn0rl",
+      "content": "• Energy is the capacity to do work."
+    },
+    {
+      "type": "paragraph",
+      "id": "z5khy1d",
+      "content": "• Energy can exist in different forms such as mechanical energy, heat energy, electrical energy and chemical energy."
+    },
+    {
+      "type": "paragraph",
+      "id": "ohj7gfp",
+      "content": "• The SI unit of energy is Joule (J)."
+    },
+    {
+      "id": "6am0xvq",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Forms of Energy"
+    },
+    {
+      "id": "mxic3hn",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Energy</strong></p>",
+            "<p><strong>Example</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mechanical Energy</p>",
+            "<p>Energy of moving objects</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Heat Energy</p>",
+            "<p>Energy produced by heat</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Electrical Energy</p>",
+            "<p>Energy from electric current</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chemical Energy</p>",
+            "<p>Energy stored in fuels and food</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Light Energy</p>",
+            "<p>Energy from sunlight</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lqfewwr",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Kinetic Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "fgd0ijz",
+      "content": "Kinetic energy is the energy possessed by an object due to its motion."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "suvytfo",
+      "content": "Formula: KE = ½ mv²"
+    },
+    {
+      "type": "paragraph",
+      "id": "menkcxz",
+      "content": "Where:"
+    },
+    {
+      "type": "paragraph",
+      "id": "szsya3e",
+      "content": "m = mass of the object"
+    },
+    {
+      "type": "paragraph",
+      "id": "1o75nxz",
+      "content": "v = velocity of the object"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Energy can neither be created nor destroyed; it can only be transformed from one form to another.",
+      "id": "lsukwc4"
+    },
+    {
+      "id": "fe59y5d",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Potential Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "6ojy8fi",
+      "content": "Potential energy is the energy possessed by an object due to its position or configuration."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "hy9aaur",
+      "content": "Formula: PE = mgh"
+    },
+    {
+      "type": "paragraph",
+      "id": "f43mz2q",
+      "content": "Where:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "ribwrgo",
+      "content": "m = mass"
+    },
+    {
+      "type": "paragraph",
+      "id": "xgwywxx",
+      "content": "g = acceleration due to gravity"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "gzc7ofj",
+      "content": "h = height"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "Energy",
+        "Power"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Capacity to do work",
+          "Rate of doing work"
+        ],
+        [
+          "SI Unit",
+          "Joule (J)",
+          "Watt (W) or J/s"
+        ],
+        [
+          "Time Factor",
+          "Independent of time taken",
+          "Inverse to time taken"
+        ],
+        [
+          "Commercial Unit",
+          "Kilowatt-hour (kWh)",
+          "Kilowatt (kW)"
+        ]
+      ],
+      "id": "z9xj86u"
+    },
+    {
+      "id": "ezc1yhr",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Law of Conservation of Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "3728zs7",
+      "content": "The law of conservation of energy states that energy can neither be created nor destroyed; it can only be converted from one form to another."
+    },
+    {
+      "id": "s1ar9m8",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Mechanical Energy"
+    },
+    {
+      "type": "paragraph",
+      "id": "3pf26i0",
+      "content": "Mechanical energy is the sum of kinetic energy and potential energy."
+    },
+    {
+      "type": "paragraph",
+      "id": "w7h8vxx",
+      "content": "Mechanical Energy = KE + PE"
+    },
+    {
+      "id": "y8uoaz6",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Meaning of Power"
+    },
+    {
+      "type": "paragraph",
+      "id": "0lp4qbv",
+      "content": "Power is the rate at which work is done or energy is transferred."
+    },
+    {
+      "type": "paragraph",
+      "id": "au4i7az",
+      "content": "Formula: Power = Work / Time"
+    },
+    {
+      "type": "paragraph",
+      "id": "iywcz3i",
+      "content": "SI Unit of Power = Watt (W)"
+    },
+    {
+      "id": "uzep8qf",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Units of Power"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Doubling the velocity of a moving object increases its Kinetic Energy by a factor of 4.",
+        "Kilowatt-hour (kWh) is the commercial unit of electrical energy, NOT power.",
+        "1 Horsepower (HP) is equal to exactly 746 Watts.",
+        "Total Mechanical Energy (KE + PE) of a freely falling body remains constant at all points."
+      ],
+      "id": "fz6drkc"
+    },
+    {
+      "id": "u5hdzou",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Unit</strong></p>",
+            "<p><strong>Description</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Watt</p>",
+            "<p>SI unit of power</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Kilowatt</p>",
+            "<p>1000 watts</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Horsepower</p>",
+            "<p>Unit used in engines</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "00fc13m",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "rb6icxi",
+      "content": "• Energy is the capacity to do work."
+    },
+    {
+      "type": "paragraph",
+      "id": "iz8y6e8",
+      "content": "• SI unit of energy is Joule."
+    },
+    {
+      "type": "paragraph",
+      "id": "yyp2max",
+      "content": "• Kinetic energy formula is ½ mv²."
+    },
+    {
+      "type": "paragraph",
+      "id": "o2z894s",
+      "content": "• SI unit of power is Watt."
+    }
+  ],
+  "enriched": true
+}

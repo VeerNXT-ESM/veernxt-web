@@ -1,0 +1,132 @@
+{
+  "title": "Establishment and Legal Framework",
+  "order": 415,
+  "blocks": [
+    {
+      "id": "ksa3p4y",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Details</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Act</p>",
+            "<p>Food Corporations Act, 1964</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Established</p>",
+            "<p>1965</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Type</p>",
+            "<p>Statutory Corporation</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Administrative Ministry</p>",
+            "<p>Ministry of Consumer Affairs, Food and Public Distribution</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Headquarters</p>",
+            "<p>New Delhi</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Reserve Bank of India was established on April 1, 1935 in accordance with the provisions of the Reserve Bank of India Act, 1934.",
+      "id": "a52zoqi"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Pre-Nationalisation (1935–1948)",
+        "Post-Nationalisation (1949–Present)"
+      ],
+      "rows": [
+        [
+          "Ownership",
+          "Private Shareholders",
+          "100% Government of India"
+        ],
+        [
+          "Primary Legislation",
+          "RBI Act, 1934",
+          "RBI Act, 1934 & RBI (Transfer to Public Ownership) Act, 1948"
+        ],
+        [
+          "Headquarters Location",
+          "Kolkata (1935–1937), Mumbai (from 1937)",
+          "Mumbai"
+        ]
+      ],
+      "id": "0nbg6or"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Establishment Date",
+          "value": "April 1, 1935",
+          "icon": "calendar"
+        },
+        {
+          "label": "Governing Act",
+          "value": "RBI Act, 1934",
+          "icon": "book"
+        },
+        {
+          "label": "Nationalisation",
+          "value": "January 1, 1949",
+          "icon": "check"
+        },
+        {
+          "label": "Initial Capital",
+          "value": "₹5 Crore",
+          "icon": "award"
+        }
+      ],
+      "id": "ntibfm6"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Hilton Young Commission (Royal Commission on Indian Currency and Finance, 1926) recommended the creation of the central bank.",
+        "RBI was nationalised on January 1, 1949, making it fully government-owned.",
+        "Section 7 of the RBI Act empowers the Central Government to issue directions to the Bank in the public interest after consultation with the Governor."
+      ],
+      "id": "klx5ns0"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Reserve Bank of India was established on April 1, 1935, following the recommendations of the Hilton Young Commission (1926).",
+        "Operations commenced under the Reserve Bank of India Act, 1934, with an initial share capital of ₹5 crore divided into shares of ₹100 each.",
+        "Initially established as a private shareholders' bank, the RBI was nationalised on January 1, 1949, under the RBI (Transfer to Public Ownership) Act, 1948.",
+        "The Central Office was originally set up in Kolkata but was permanently relocated to Mumbai in 1937."
+      ],
+      "id": "syowa9o"
+    }
+  ],
+  "enriched": true
+}

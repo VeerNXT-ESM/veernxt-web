@@ -1,0 +1,138 @@
+{
+  "title": "8. Soils of India (Detailed)",
+  "order": 187,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Alluvial Soil: Formed by river deposition; rich in potash and lime.",
+      "id": "tazl9h1"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Soil Categories",
+          "value": "6 Major Types",
+          "icon": "book"
+        },
+        {
+          "label": "Cotton Soil",
+          "value": "Black Soil",
+          "icon": "check"
+        },
+        {
+          "label": "Tea & Coffee",
+          "value": "Laterite Soil",
+          "icon": "award"
+        },
+        {
+          "label": "Deposition Type",
+          "value": "Alluvial Soil",
+          "icon": "info"
+        }
+      ],
+      "id": "s08ijuq"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Alluvial soil is formed by river deposition and contains high amounts of potash and lime.",
+        "Black soil possesses high clay content, swells upon absorbing water, and is optimal for cotton cultivation.",
+        "Red soil gets its characteristic color from iron content, has low humus, and requires fertilizer application.",
+        "Laterite soil is created through intense leaching and supports cash crops like tea and coffee.",
+        "Desert soil is characterized by its sandy texture and low organic matter content.",
+        "Mountain soil characteristics fluctuate depending on elevation changes and local vegetation."
+      ],
+      "id": "vl0j7va"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Black Soil: High clay content; swells when wet; ideal for cotton.",
+      "id": "gxsvn1f"
+    },
+    {
+      "type": "paragraph",
+      "content": "Black Soil: High clay content; swells when wet; ideal for cotton.",
+      "id": "ef207fv"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Soil Type",
+        "Key Characteristic",
+        "Nutrient / Feature Profile",
+        "Suitable Crops / Usage"
+      ],
+      "rows": [
+        [
+          "Alluvial Soil",
+          "River deposition",
+          "Rich in potash and lime",
+          "General agriculture"
+        ],
+        [
+          "Black Soil",
+          "High clay content",
+          "Swells when wet",
+          "Ideal for cotton"
+        ],
+        [
+          "Red Soil",
+          "Iron-rich",
+          "Low humus",
+          "Requires fertilizers"
+        ],
+        [
+          "Laterite Soil",
+          "Strongly leached",
+          "Leached mineral profile",
+          "Suitable for tea, coffee"
+        ],
+        [
+          "Desert Soil",
+          "Sandy texture",
+          "Low organic matter",
+          "Drought-resistant crops"
+        ],
+        [
+          "Mountain Soil",
+          "Altitude dependent",
+          "Varies with vegetation",
+          "Forestry and hill crops"
+        ]
+      ],
+      "id": "y17sf0j"
+    },
+    {
+      "type": "paragraph",
+      "content": "Red Soil: Iron-rich; low humus; requires fertilizers.",
+      "id": "c0ebfbs"
+    },
+    {
+      "type": "paragraph",
+      "content": "Laterite Soil: Strongly leached; suitable for tea, coffee.",
+      "id": "3at2hqq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Black soil is frequently asked about in exams due to its unique property of swelling when wet and its high suitability for cotton.",
+        "Laterite soil is a common topic regarding strongly leached soils suitable for tea and coffee plantations.",
+        "Alluvial soil is heavily tested regarding river deposition processes and rich potash/lime composition."
+      ],
+      "id": "9mqflbl"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desert Soil: Sandy; low organic matter.",
+      "id": "q958qno"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mountain Soil: Varies with altitude and vegetation.",
+      "id": "2wi7pck"
+    }
+  ],
+  "enriched": true
+}

@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "aabunhp"
+      "id": "aabunhp",
+      "content": "Input devices are hardware components used to enter data, instructions, or commands into a computer system. They allow users to interact with the computer and provide the raw data that the computer processes."
     },
     {
       "type": "statStrip",
@@ -52,7 +53,8 @@
     },
     {
       "type": "paragraph",
-      "id": "tkwvcp2"
+      "id": "tkwvcp2",
+      "content": "A keyboard is the most commonly used input device. It is used to type text, numbers, and commands into the computer."
     },
     {
       "id": "1i7gmiy",
@@ -67,58 +69,59 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Key Type</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Alphanumeric Keys</p>",
+            "<p>Used for typing letters and numbers.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Function Keys (F1–F12)</p>",
+            "<p>Used for special functions depending on the software.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Control Keys</p>",
+            "<p>Keys such as Ctrl, Alt, Esc used for command operations.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Navigation Keys</p>",
+            "<p>Arrow keys, Home, End used for moving the cursor.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Numeric Keypad</p>",
+            "<p>Used for entering numbers quickly.</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "yho5yf7"
+      "id": "yho5yf7",
+      "content": "Important Exam Points:"
     },
     {
       "id": "fkzf5k6",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Keyboard is the primary input device.",
+        "Standard keyboard has around 104 keys.",
+        "Function keys are located at the top of the keyboard."
       ]
     },
     {
@@ -129,7 +132,8 @@
     },
     {
       "type": "paragraph",
-      "id": "s53i0gp"
+      "id": "s53i0gp",
+      "content": "A mouse is a pointing device used to move the cursor on the computer screen and select objects."
     },
     {
       "type": "pullQuote",
@@ -149,46 +153,47 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mechanical Mouse</p>",
+            "<p>Uses a rubber ball to detect movement.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Optical Mouse</p>",
+            "<p>Uses light sensors to detect movement.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wireless Mouse</p>",
+            "<p>Works without cable using Bluetooth or RF.</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "4oix3hl"
+      "id": "4oix3hl",
+      "content": "Common Mouse Operations:"
     },
     {
       "id": "midkkuy",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Click",
+        "Double Click",
+        "Right Click",
+        "Drag and Drop",
+        "Scroll"
       ]
     },
     {
@@ -199,7 +204,8 @@
     },
     {
       "type": "paragraph",
-      "id": "l8p91gb"
+      "id": "l8p91gb",
+      "content": "A scanner is an input device used to convert physical documents or images into digital format."
     },
     {
       "type": "comparisonTable",
@@ -240,29 +246,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Scanner Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Flatbed Scanner</p>",
+            "<p>Most common scanner used for documents and photos.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Handheld Scanner</p>",
+            "<p>Portable scanner moved manually over the document.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Drum Scanner</p>",
+            "<p>Used for high-quality image scanning in publishing.</p>"
           ]
         }
       ]
@@ -275,20 +281,22 @@
     },
     {
       "type": "paragraph",
-      "id": "spcmski"
+      "id": "spcmski",
+      "content": "A barcode reader is an input device used to read barcodes printed on products. It converts barcode patterns into digital data."
     },
     {
       "type": "paragraph",
-      "id": "n8kb5z0"
+      "id": "n8kb5z0",
+      "content": "Common Uses:"
     },
     {
       "id": "lkbby66",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null
+        "Retail stores",
+        "Inventory management",
+        "Libraries",
+        "Logistics tracking"
       ]
     },
     {
@@ -313,33 +321,33 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Technology</strong></p>",
+            "<p><strong>Full Form</strong></p>",
+            "<p><strong>Usage</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>OMR</p>",
+            "<p>Optical Mark Recognition</p>",
+            "<p>Used for reading marked answers in exams.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>OCR</p>",
+            "<p>Optical Character Recognition</p>",
+            "<p>Converts printed text into editable digital text.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>MICR</p>",
+            "<p>Magnetic Ink Character Recognition</p>",
+            "<p>Used in banking to read cheque numbers.</p>"
           ]
         }
       ]
@@ -357,29 +365,29 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Device</strong></p>",
+            "<p><strong>Function</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Joystick</p>",
+            "<p>Used mainly in gaming and simulations.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Light Pen</p>",
+            "<p>Used to draw directly on the screen.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Touch Screen</p>",
+            "<p>Allows users to interact by touching the display.</p>"
           ]
         }
       ]
@@ -394,11 +402,11 @@
       "id": "tqa1ep6",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "Keyboard is the most common input device.",
+        "OMR is used for reading answer sheets in exams.",
+        "OCR converts printed text into digital text.",
+        "MICR is used by banks to process cheques.",
+        "Touch screens are widely used in smartphones."
       ]
     }
   ],

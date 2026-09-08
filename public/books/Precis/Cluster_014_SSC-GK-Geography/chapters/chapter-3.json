@@ -1,0 +1,96 @@
+{
+  "title": "CHAPTER 3: LATITUDE, LONGITUDE & TIME",
+  "order": 3,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "The Earth rotates from west to east, so places east of Greenwich are ahead of Greenwich time and those to the west are behind it.",
+      "id": "dsns2dc"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Latitude (Parallels)",
+        "Longitude (Meridians)"
+      ],
+      "rows": [
+        [
+          "Direction",
+          "Runs East to West",
+          "Runs North to South"
+        ],
+        [
+          "Reference Base",
+          "Equator (0°)",
+          "Prime Meridian (0°)"
+        ],
+        [
+          "Total Range",
+          "0° to 90° N / 90° S (180° total)",
+          "0° to 180° E / 180° W (360° total)"
+        ],
+        [
+          "Spacing",
+          "Equal distance everywhere (~111 km)",
+          "Decreases towards poles, zero at poles"
+        ],
+        [
+          "Primary Function",
+          "Determines heat/climate zones",
+          "Calculates local time and time zones"
+        ]
+      ],
+      "id": "3ratr3r"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Longitudes",
+          "value": "360°",
+          "icon": "globe"
+        },
+        {
+          "label": "Time per 1° Longitude",
+          "value": "4 Minutes",
+          "icon": "clock"
+        },
+        {
+          "label": "Standard Meridian (India)",
+          "value": "82.5° E",
+          "icon": "info"
+        },
+        {
+          "label": "IST Offset from GMT",
+          "value": "+5h 30m",
+          "icon": "calendar"
+        }
+      ],
+      "id": "l6tlst8"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "The Tropic of Cancer (23.5° N) passes through 8 Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+        "IST is 5 hours 30 minutes ahead of Greenwich Mean Time (GMT/UTC).",
+        "Distance between lines of longitude is maximum at the Equator (~111 km) and converges to zero at the poles.",
+        "The International Date Line zigzags to avoid landmasses so political boundaries remain within a single calendar day."
+      ],
+      "id": "rulmh8k"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Latitudes are parallel circles running east-west from the Equator (0°) to the Poles (90° N/S).",
+        "Longitudes are semi-circles running from the North Pole to the South Pole, anchored by the Prime Meridian (0°) in Greenwich.",
+        "The Earth rotates 360° in 24 hours, establishing a rate of 15° per hour or 1° every 4 minutes.",
+        "Indian Standard Time (IST) is calculated from the 82°30' E longitude passing through Mirzapur, Uttar Pradesh.",
+        "The International Date Line roughly follows the 180° meridian where calendar days change upon crossing."
+      ],
+      "id": "mcvdwl1"
+    }
+  ],
+  "enriched": true
+}

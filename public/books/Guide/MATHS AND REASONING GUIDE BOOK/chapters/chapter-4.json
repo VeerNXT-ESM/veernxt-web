@@ -6,7 +6,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "cy1upe9"
+      "id": "cy1upe9",
+      "content": "PERCENTAGE <br></br>"
     },
     {
       "type": "statStrip",
@@ -56,8 +57,8 @@
       "id": "bvxc5sa",
       "type": "list",
       "items": [
-        null,
-        null
+        "Percentage means 'per hundred'.<br></br>1% = 1/100",
+        "Percentage is used to express increase or decrease, comparison, profit and loss, marks, population, growth, etc.<br></br><br></br><em>In SBIexamination, percentage questions are direct, formula-based, and often linked with Ratio, Profit–Loss and Simple Interest.</em>"
       ]
     },
     {
@@ -70,9 +71,9 @@
       "id": "nj3fk2s",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Fraction to Percentage:<br></br>(a/b) × 100<br></br>Example: 3/5 = 60%",
+        "Percentage to Fraction:<br></br>x% = x/100<br></br>Example: 25% = 1/4",
+        "Decimal to Percentage:<br></br>Multiply the decimal by 100<br></br>Example: 0.75 = 75%"
       ]
     },
     {
@@ -88,50 +89,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Fraction</strong></p>",
+            "<p><strong>Percentage</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1/2</p>",
+            "<p>50%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1/3</p>",
+            "<p>33⅓%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1/4</p>",
+            "<p>25%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1/5</p>",
+            "<p>20%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>1/8</p>",
+            "<p>12.5%</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>3/4</p>",
+            "<p>75%</p>"
           ]
         }
       ]
@@ -143,17 +144,12 @@
       "content": "4. PERCENTAGE INCREASE & DECREASE"
     },
     {
-      "type": "pullQuote",
-      "content": "SUCCESSIVE PERCENTAGE CHANGE",
-      "id": "uoouyyd"
-    },
-    {
       "id": "vypat5n",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Increase Percentage:<br></br>(Increase / Original) × 100",
+        "Decrease Percentage:<br></br>(Decrease / Original) × 100<br></br>",
+        "Example:<br></br>Price increases from ₹200 to ₹250.<br></br>Increase = 50<br></br>(50/200) × 100 = 25%<br></br>Increase = 25%"
       ]
     },
     {
@@ -164,14 +160,15 @@
     },
     {
       "type": "paragraph",
-      "id": "6qe9osx"
+      "id": "6qe9osx",
+      "content": "When two percentage changes occur successively:"
     },
     {
       "id": "f5ivvh3",
       "type": "list",
       "items": [
-        null,
-        null
+        "Net % = a + b + (ab/100)",
+        "Use negative sign for decrease.<br></br>Example:<br></br>Increase by 10% and then decrease by 10%.<br></br>Net = 10 – 10 – (100/100)<br></br>Net decrease = 1%"
       ]
     },
     {
@@ -182,13 +179,14 @@
     },
     {
       "type": "paragraph",
-      "id": "paidl3j"
+      "id": "paidl3j",
+      "content": "Formula:"
     },
     {
       "id": "694g30n",
       "type": "list",
       "items": [
-        null
+        "x% of y = (x/100) × y<br></br>Example:<br></br>15% of 400 = (15/100) × 400 = 60"
       ]
     },
     {
@@ -199,7 +197,8 @@
     },
     {
       "type": "paragraph",
-      "id": "qgdmqzf"
+      "id": "qgdmqzf",
+      "content": "Example:<br></br>If 20% of a number is 50, find the number.<br></br>(20/100) × x = 50<br></br>x = 250"
     },
     {
       "id": "a5c09re",
@@ -209,7 +208,8 @@
     },
     {
       "type": "paragraph",
-      "id": "q26u1et"
+      "id": "q26u1et",
+      "content": "<strong>Example 1:</strong><br></br>A student scored 360 marks out of 450. Find the percentage.<br></br>(360/450) × 100 = 80%<br></br><br></br><strong>Example 2:</strong><br></br>Population of a town is 40,000. It increases by 5%.<br></br>Increase = 2,000<br></br>New population = 42,000"
     },
     {
       "type": "examAlert",
@@ -228,7 +228,8 @@
     },
     {
       "type": "paragraph",
-      "id": "bqd8b2v"
+      "id": "bqd8b2v",
+      "content": "Q1. What is 25% of 640?<br></br>A. 120   B. 140   C. 160   D. 180<br></br><br></br>Q2. Price decreases from ₹500 to ₹450. Find the percentage decrease.<br></br>A. 8%   B. 9%   C. 10%   D. 12%<br></br><br></br>Q3. A number is increased by 20% and then decreased by 10%. Find the net change.<br></br>A. 8% increase   B. 10% decrease   C. No change   D. 2% increase"
     },
     {
       "id": "vt1for6",
@@ -239,7 +240,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "bubvcve"
+      "id": "bubvcve",
+      "content": "Q1. C<br></br>Q2. C<br></br>Q3. A"
     }
   ],
   "enriched": true

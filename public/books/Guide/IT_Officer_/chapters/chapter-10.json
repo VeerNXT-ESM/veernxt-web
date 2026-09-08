@@ -54,73 +54,68 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Architecture</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Examples</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Monolithic</p>",
+            "<p>Single deployable unit; all features in one application; tightly coupled</p>",
+            "<p>Traditional banking core systems, ERP systems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>SOA (Service-Oriented Architecture)</p>",
+            "<p>Loosely coupled services; communicate over enterprise bus (ESB)</p>",
+            "<p>Enterprise integration; legacy bank modernisation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Microservices</p>",
+            "<p>Small independent services; each with own DB; communicate via API</p>",
+            "<p>Netflix, Amazon, modern cloud-native banking apps</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Serverless</p>",
+            "<p>Event-driven functions; no server management; scale to zero</p>",
+            "<p>Notification services, batch jobs, webhooks</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Event-Driven Architecture</p>",
+            "<p>Services communicate via events; decoupled; async</p>",
+            "<p>Real-time fraud detection, payment processing, IoT</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CQRS (Command Query Responsibility Segregation)</p>",
+            "<p>Separate read and write models</p>",
+            "<p>High-scale systems; financial ledger systems</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Event Sourcing</p>",
+            "<p>Store events (not current state); rebuild state from events</p>",
+            "<p>Audit trails, banking transaction history</p>"
           ]
         }
       ]
-    },
-    {
-      "type": "pullQuote",
-      "content": "10.4 Web Security — OWASP Top 10",
-      "id": "jwnt2wh"
     },
     {
       "id": "7z6uwaz",
@@ -135,81 +130,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p><strong>HTTP Method</strong></p>",
+            "<p><strong>Purpose</strong></p>",
+            "<p><strong>Request Body?</strong></p>",
+            "<p><strong>Idempotent?</strong></p>",
+            "<p><strong>Safe?</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>GET</p>",
+            "<p>Retrieve resource</p>",
+            "<p>No</p>",
+            "<p>Yes</p>",
+            "<p>Yes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>POST</p>",
+            "<p>Create new resource</p>",
+            "<p>Yes</p>",
+            "<p>No</p>",
+            "<p>No</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>PUT</p>",
+            "<p>Replace/update entire resource</p>",
+            "<p>Yes</p>",
+            "<p>Yes</p>",
+            "<p>No</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>PATCH</p>",
+            "<p>Partially update resource</p>",
+            "<p>Yes</p>",
+            "<p>No</p>",
+            "<p>No</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>DELETE</p>",
+            "<p>Delete resource</p>",
+            "<p>No</p>",
+            "<p>Yes</p>",
+            "<p>No</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>HEAD</p>",
+            "<p>Like GET but returns headers only</p>",
+            "<p>No</p>",
+            "<p>Yes</p>",
+            "<p>Yes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null,
-            null
+            "<p>OPTIONS</p>",
+            "<p>Describe communication options</p>",
+            "<p>No</p>",
+            "<p>Yes</p>",
+            "<p>Yes</p>"
           ]
         }
       ]
@@ -263,49 +258,49 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Code Range</strong></p>",
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Key Codes</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>1xx</p>",
+            "<p>Informational</p>",
+            "<p>100 Continue; 101 Switching Protocols</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>2xx</p>",
+            "<p>Success</p>",
+            "<p>200 OK; 201 Created; 204 No Content</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>3xx</p>",
+            "<p>Redirection</p>",
+            "<p>301 Moved Permanently; 302 Found; 304 Not Modified</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>4xx</p>",
+            "<p>Client Error</p>",
+            "<p>400 Bad Request; 401 Unauthorized; 403 Forbidden; 404 Not Found; 429 Too Many Requests</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>5xx</p>",
+            "<p>Server Error</p>",
+            "<p>500 Internal Server Error; 502 Bad Gateway; 503 Service Unavailable; 504 Gateway Timeout</p>"
           ]
         }
       ]
@@ -332,91 +327,91 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>REST</strong></p>",
+            "<p><strong>GraphQL</strong></p>",
+            "<p><strong>gRPC</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Protocol</p>",
+            "<p>HTTP</p>",
+            "<p>HTTP (POST)</p>",
+            "<p>HTTP/2</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Data Format</p>",
+            "<p>JSON/XML</p>",
+            "<p>JSON</p>",
+            "<p>Protocol Buffers (binary)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Query Flexibility</p>",
+            "<p>Fixed endpoints; fixed response shape</p>",
+            "<p>Client specifies exact data needed</p>",
+            "<p>Strongly typed; defined in .proto files</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Over/Under-fetching</p>",
+            "<p>Common issues</p>",
+            "<p>Solves exactly — fetch precisely what needed</p>",
+            "<p>Efficient; no over-fetching</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Real-time</p>",
+            "<p>Long polling or SSE needed</p>",
+            "<p>Subscriptions built-in</p>",
+            "<p>Streaming built-in (unary/bidirectional)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Type Safety</p>",
+            "<p>Optional (OpenAPI/Swagger)</p>",
+            "<p>Strongly typed schema</p>",
+            "<p>Strongly typed by design</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Performance</p>",
+            "<p>Good</p>",
+            "<p>Good for complex queries</p>",
+            "<p>Excellent; binary; low latency</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Best For</p>",
+            "<p>Simple CRUD APIs; widely understood</p>",
+            "<p>Complex data graphs; mobile (Facebook API)</p>",
+            "<p>High-performance microservice-to-microservice communication</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Examples</p>",
+            "<p>Most banking APIs, Open Banking (OCEN)</p>",
+            "<p>GitHub API, Shopify API</p>",
+            "<p>Google internal services, Netflix, gRPC-web</p>"
           ]
         }
       ]
@@ -434,100 +429,100 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>OWASP Rank</strong></p>",
+            "<p><strong>Vulnerability</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Prevention</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>A01</p>",
+            "<p>Broken Access Control</p>",
+            "<p>User can access unauthorised resources; privilege escalation</p>",
+            "<p>RBAC; deny by default; access control checks at server</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>A02</p>",
+            "<p>Cryptographic Failures</p>",
+            "<p>Weak/absent encryption; transmitting sensitive data in clear</p>",
+            "<p>TLS everywhere; strong algorithms (AES-256, SHA-256)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>A03</p>",
+            "<p>Injection</p>",
+            "<p>SQL, NoSQL, LDAP, OS injection via untrusted input</p>",
+            "<p>Parameterised queries; input validation; ORMs</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>A04</p>",
+            "<p>Insecure Design</p>",
+            "<p>Design flaws; missing threat modelling</p>",
+            "<p>Secure design principles; threat modelling; abuse cases</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>A05</p>",
+            "<p>Security Misconfiguration</p>",
+            "<p>Default settings; unnecessary features enabled; verbose errors</p>",
+            "<p>Harden configurations; disable defaults; use IaC</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>A06</p>",
+            "<p>Vulnerable Components</p>",
+            "<p>Using outdated libraries with known CVEs</p>",
+            "<p>SCA tools; patch management; dependency tracking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>A07</p>",
+            "<p>Authentication Failures</p>",
+            "<p>Weak passwords; no MFA; exposed credentials</p>",
+            "<p>MFA; strong session management; credential stuffing protection</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>A08</p>",
+            "<p>Integrity Failures</p>",
+            "<p>Insecure deserialization; software update without integrity check</p>",
+            "<p>Digital signatures; SRI (Subresource Integrity); CI/CD security</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>A09</p>",
+            "<p>Logging Failures</p>",
+            "<p>Insufficient logging; no monitoring; late breach discovery</p>",
+            "<p>Comprehensive logging; SIEM; alert on anomalies</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>A10</p>",
+            "<p>SSRF (Server-Side Request Forgery)</p>",
+            "<p>Server makes requests to unintended locations</p>",
+            "<p>Input validation; allowlist for URLs; network segmentation</p>"
           ]
         }
       ]

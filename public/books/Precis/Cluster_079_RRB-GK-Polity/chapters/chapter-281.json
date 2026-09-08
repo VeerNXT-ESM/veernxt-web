@@ -1,0 +1,76 @@
+{
+  "title": "State Consent (VERY FREQUENTLY ASKED)",
+  "order": 281,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "CBI requires the consent of the concerned state government to investigate cases within that state.<br/><br/>Two types of consent exist:<br/>• General Consent – Allows CBI to investigate without case-specific permission.<br/>• Specific Consent – Required for each individual case.<br/><br/>However, the Supreme Court and High Courts can order a CBI investigation without state consent.",
+      "id": "y6zvlby"
+    },
+    {
+      "type": "pullQuote",
+      "content": "CBI requires the consent of the concerned state government to investigate cases within that state.",
+      "id": "iumc2px"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Consent Type",
+        "Permission Requirement"
+      ],
+      "rows": [
+        [
+          "General Consent",
+          "Allows CBI to investigate without case-specific permission."
+        ],
+        [
+          "Specific Consent",
+          "Required for each individual case."
+        ]
+      ],
+      "id": "u0m9glt"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Types of Consent",
+          "value": "2 Types",
+          "icon": "book"
+        },
+        {
+          "label": "Investigating Agency",
+          "value": "CBI",
+          "icon": "check"
+        },
+        {
+          "label": "Exempting Authorities",
+          "value": "SC & High Courts",
+          "icon": "award"
+        }
+      ],
+      "id": "7g6e2a1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Judicial Order Exception: Supreme Court and High Courts can direct CBI probes without needing state consent.",
+        "Difference between General and Specific Consent is a frequently asked objective question in Polity.",
+        "State consent requirement stems from the statutory provisions governing the functioning of the CBI."
+      ],
+      "id": "1vriq5u"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "CBI must obtain state government consent before conducting investigations within a state's territorial jurisdiction.",
+        "General Consent grants the CBI standing permission to investigate cases without case-by-case approvals.",
+        "Specific Consent forces the CBI to seek explicit permission from the state government for every individual case.",
+        "The Supreme Court and High Courts hold constitutional authority to mandate CBI investigations without state consent."
+      ],
+      "id": "5js8jgm"
+    }
+  ],
+  "enriched": true
+}

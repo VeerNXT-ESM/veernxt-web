@@ -4,70 +4,76 @@
   "order": 184,
   "blocks": [
     {
+      "id": "zktepa1",
+      "type": "image",
+      "imageId": "pko5i57",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_pko5i57.png"
+    },
+    {
       "id": "hlneazk",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Forest Type</strong></p>",
+            "<p><strong>Rainfall</strong></p>",
+            "<p><strong>Regions</strong></p>",
+            "<p><strong>Important Trees</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Evergreen</p>",
+            "<p>&gt;200 cm</p>",
+            "<p>Western Ghats, Northeast, Andaman</p>",
+            "<p>Ebony, mahogany, rosewood</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Moist Deciduous</p>",
+            "<p>100–200 cm</p>",
+            "<p>Eastern India, foothills</p>",
+            "<p>Teak, sal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Tropical Dry Deciduous</p>",
+            "<p>70–100 cm</p>",
+            "<p>Central India</p>",
+            "<p>Bamboo, neem</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Thorn Forest</p>",
+            "<p>&lt;70 cm</p>",
+            "<p>Rajasthan, Gujarat</p>",
+            "<p>Acacia, babool</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Montane Forest</p>",
+            "<p>Varies with altitude</p>",
+            "<p>Himalayas</p>",
+            "<p>Pine, deodar, fir</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Mangrove</p>",
+            "<p>Tidal coasts</p>",
+            "<p>Sundarbans</p>",
+            "<p>Sundari tree</p>"
           ]
         }
       ]
@@ -117,19 +123,16 @@
       "id": "lf939tm"
     },
     {
-      "type": "pullQuote",
-      "content": "Montane Forest Altitudinal Zones",
-      "id": "zvs870d"
+      "type": "heading",
+      "level": 4,
+      "id": "88378gc",
+      "content": "• 1000–2000 m: Subtropical forests"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "88378gc"
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "id": "6svem91"
+      "id": "6svem91",
+      "content": "• 2000–3000 m: Temperate forests"
     },
     {
       "type": "comparisonTable",
@@ -160,12 +163,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "0xllbna"
+      "id": "0xllbna",
+      "content": "• 3000–4000 m: Coniferous forests"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "k5pry0d"
+      "id": "k5pry0d",
+      "content": "• &gt;4000 m: Alpine vegetation"
     },
     {
       "id": "mbc9hfc",
@@ -184,15 +189,18 @@
     },
     {
       "type": "paragraph",
-      "id": "bcmwd69"
+      "id": "bcmwd69",
+      "content": "• Pneumatophores (breathing roots)."
     },
     {
       "type": "paragraph",
-      "id": "8zox50b"
+      "id": "8zox50b",
+      "content": "• Vivipary – seeds germinate while attached to parent tree."
     },
     {
       "type": "paragraph",
-      "id": "xsa5sqw"
+      "id": "xsa5sqw",
+      "content": "• Salt filtration mechanisms."
     }
   ],
   "enriched": true

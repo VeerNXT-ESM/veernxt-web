@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "28em8bk"
+      "id": "28em8bk",
+      "content": "Extrusive Landforms:"
     },
     {
       "type": "statStrip",
@@ -47,7 +48,8 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "8iguumh"
+      "id": "8iguumh",
+      "content": "• Volcanic cones"
     },
     {
       "type": "pullQuote",
@@ -57,12 +59,14 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "r6ffzip"
+      "id": "r6ffzip",
+      "content": "• Lava plateaus"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5ux9h9f"
+      "id": "5ux9h9f",
+      "content": "• Calderas"
     },
     {
       "type": "comparisonTable",
@@ -92,15 +96,18 @@
     },
     {
       "type": "paragraph",
-      "id": "99e79in"
+      "id": "99e79in",
+      "content": "Intrusive Landforms:"
     },
     {
       "type": "paragraph",
-      "id": "46vtudb"
+      "id": "46vtudb",
+      "content": "• Batholiths — massive intrusive bodies."
     },
     {
       "type": "paragraph",
-      "id": "rqbo75a"
+      "id": "rqbo75a",
+      "content": "• Laccoliths — dome-shaped intrusions."
     },
     {
       "type": "examAlert",
@@ -113,11 +120,13 @@
     },
     {
       "type": "paragraph",
-      "id": "89erpjw"
+      "id": "89erpjw",
+      "content": "• Sills — horizontal sheets."
     },
     {
       "type": "paragraph",
-      "id": "cl9xw9n"
+      "id": "cl9xw9n",
+      "content": "• Dikes — vertical intrusions."
     }
   ],
   "enriched": true

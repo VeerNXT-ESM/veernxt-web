@@ -1,0 +1,131 @@
+{
+  "title": "Powers of CCI (EXTREMELY IMPORTANT)",
+  "order": 370,
+  "blocks": [
+    {
+      "id": "g6lck3x",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Power Type</strong></p>",
+            "<p><strong>Explanation</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Regulatory</p>",
+            "<p>Regulates anti-competitive agreements.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Investigative</p>",
+            "<p>Directs the Director General to investigate.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Quasi-Judicial</p>",
+            "<p>Imposes penalties and issues binding orders.</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Advisory</p>",
+            "<p>Provides recommendations to the government.</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Competition Commission of India possesses powers equivalent to a Civil Court under the Code of Civil Procedure, 1908 while trying a suit.",
+      "id": "5pr0qek"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Section",
+        "Nature of Power",
+        "Scope & Key Enforcement Action"
+      ],
+      "rows": [
+        [
+          "Section 19",
+          "Inquiry Power",
+          "Inquire into anti-competitive agreements or abuse of dominant position (suo motu or on information)"
+        ],
+        [
+          "Section 27",
+          "Penal & Restrictive Power",
+          "Pass Cease & Desist orders, modify agreements, and levy penalty up to 10% average turnover"
+        ],
+        [
+          "Section 28",
+          "Structural Remedial Power",
+          "Order division of enterprise enjoying dominant position to ensure fair competition"
+        ],
+        [
+          "Section 33",
+          "Interim Relief Power",
+          "Issue temporary injunctions against anti-competitive practices during pending inquiry"
+        ]
+      ],
+      "id": "m5qchgu"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Governing Act",
+          "value": "Competition Act, 2002",
+          "icon": "book"
+        },
+        {
+          "label": "Max Penalty Limit",
+          "value": "10% Avg Turnover",
+          "icon": "award"
+        },
+        {
+          "label": "Commission Composition",
+          "value": "1 Chair + 2 to 6 Members",
+          "icon": "info"
+        },
+        {
+          "label": "Civil Court Status",
+          "value": "Section 36",
+          "icon": "check"
+        }
+      ],
+      "id": "e07xg80"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Frequently asked penalty rule: Under Section 27, maximum monetary penalty is capped at 10% of the average turnover for the preceding three financial years.",
+        "Procedural jurisdiction: Under Section 36, CCI has powers to summon witnesses, examine on oath, require discovery of documents, and requisition public records.",
+        "Interim Order Section: Section 33 allows CCI to pass temporary injunctions before completing the full inquiry."
+      ],
+      "id": "v4z9ul1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Competition Commission of India (CCI) holds statutory powers under Section 19 to inquire into anti-competitive agreements and abuse of dominant position.",
+        "Section 27 empowers CCI to pass 'Cease and Desist' orders and impose monetary penalties up to 10% of the average turnover of the preceding three financial years.",
+        "Under Section 36, CCI is vested with the powers of a Civil Court under the Code of Civil Procedure, 1908 regarding summoning, discovery, and receiving evidence.",
+        "Section 28 allows CCI to direct the structural division of an enterprise enjoying a dominant position to prevent its abuse.",
+        "Section 33 grants CCI the power to issue interim orders to temporarily restrain any party from carrying out anti-competitive acts during an ongoing inquiry."
+      ],
+      "id": "n13dp1b"
+    }
+  ],
+  "enriched": true
+}

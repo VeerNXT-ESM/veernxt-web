@@ -1,0 +1,102 @@
+{
+  "title": "ULTRA QUICK REVISION",
+  "order": 50,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "0° — Equator<br/>23.5° — Tropics<br/>66.5° — Polar Circles<br/>15° = 1 hour<br/>1° = 4 minutes<br/>IST — 82.5°E",
+      "id": "aefzyog"
+    },
+    {
+      "type": "pullQuote",
+      "content": "1° = 4 minutes",
+      "id": "r0gioed"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Degree / Value",
+        "Geographical Marker / Time Equivalent"
+      ],
+      "rows": [
+        [
+          "0°",
+          "Equator"
+        ],
+        [
+          "23.5°",
+          "Tropics"
+        ],
+        [
+          "66.5°",
+          "Polar Circles"
+        ],
+        [
+          "82.5°E",
+          "IST (Indian Standard Time)"
+        ],
+        [
+          "15°",
+          "1 hour"
+        ],
+        [
+          "1°",
+          "4 minutes"
+        ]
+      ],
+      "id": "7uttbov"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Equator",
+          "value": "0°",
+          "icon": "info"
+        },
+        {
+          "label": "Tropics",
+          "value": "23.5°",
+          "icon": "info"
+        },
+        {
+          "label": "1 Hour Difference",
+          "value": "15°",
+          "icon": "clock"
+        },
+        {
+          "label": "1° Time Equivalent",
+          "value": "4 minutes",
+          "icon": "clock"
+        },
+        {
+          "label": "IST Longitude",
+          "value": "82.5°E",
+          "icon": "check"
+        }
+      ],
+      "id": "pnpd40f"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Indian Standard Time (IST) meridian (82.5°E) is a frequently asked factual question in UPSC/SSC exams.",
+        "Time difference conversion formulas (15° = 1 hour, 1° = 4 minutes) are essential for solving longitude-time numerical problems."
+      ],
+      "id": "8j2ytvo"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Equator is positioned at 0° latitude.",
+        "The Tropics lie at 23.5° and the Polar Circles are located at 66.5°.",
+        "A longitudinal movement of 15° corresponds to a 1-hour time shift.",
+        "A 1° longitudinal change is equal to a 4-minute time difference.",
+        "Indian Standard Time (IST) is calculated from the 82.5°E meridian."
+      ],
+      "id": "hwwxiaj"
+    }
+  ],
+  "enriched": true
+}

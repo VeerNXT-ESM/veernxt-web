@@ -1,0 +1,262 @@
+{
+  "title": "CHAPTER 12: NUTRITION, VITAMINS AND DEFICIENCY DISEASES",
+  "order": 11,
+  "blocks": [
+    {
+      "id": "m94ll3s",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Nutrition – Concept and Role in Life"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Carbohydrates serve as the primary and quickest energy source, stored as starch in plants and glycogen or fat in animals.",
+        "Proteins are built from amino acids and are vital for tissue growth, repair, and synthesis of enzymes, hormones, antibodies, and hemoglobin.",
+        "Fats yield twice the energy of carbohydrates, assist in fat-soluble vitamin absorption, and reserve energy in body tissue.",
+        "Fat-soluble vitamins (A, D, E, K) accumulate in the liver and fat tissues, whereas water-soluble vitamins (B-complex, C) are not stored and require regular dietary intake.",
+        "Deficiencies in key minerals lead to conditions such as anemia (iron), goitre (iodine), osteoporosis (calcium), and dental issues (fluoride)."
+      ],
+      "id": "nh3dbnq"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Nutrient Types",
+          "value": "2 Categories (Macro & Micro)",
+          "icon": "book"
+        },
+        {
+          "label": "Fat-Soluble Vitamins",
+          "value": "4 Types (A, D, E, K)",
+          "icon": "check"
+        },
+        {
+          "label": "Fat Energy Yield",
+          "value": "2x Carbohydrates",
+          "icon": "info"
+        },
+        {
+          "label": "Protein Deficiencies",
+          "value": "Kwashiorkor & Marasmus",
+          "icon": "award"
+        }
+      ],
+      "id": "op93jbm"
+    },
+    {
+      "type": "paragraph",
+      "content": "Nutrition is the fundamental life process by which organisms take in food and utilize it for energy, growth, repair, and regulation of body processes.<br/>All living organisms require nutrition to carry out metabolism.<br/>Food provides raw materials for building tissues, repairing damaged cells, and producing energy.<br/>Proper nutrition ensures normal physical growth, mental development, immunity, and longevity.<br/>Poor nutrition leads to weakness, stunted growth, low immunity, and various deficiency diseases.<br/>Nutrition involves a series of steps such as ingestion, digestion, absorption, assimilation, and egestion.",
+      "id": "cven22n"
+    },
+    {
+      "id": "3nex2b9",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Types of Nutrition"
+    },
+    {
+      "type": "paragraph",
+      "content": "Nutrition is broadly classified into autotrophic and heterotrophic nutrition.<br/>Autotrophic nutrition is found in green plants which prepare their own food by photosynthesis.<br/>Heterotrophic nutrition is found in animals and non-green plants.<br/>Heterotrophic nutrition includes holozoic, saprophytic, and parasitic nutrition.<br/>Humans follow holozoic nutrition where food is ingested, digested, absorbed, and assimilated.<br/>Understanding types of nutrition helps in understanding food habits of organisms.",
+      "id": "rgxbfw1"
+    },
+    {
+      "id": "u9pl9sp",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Nutrients – Definition and Classification"
+    },
+    {
+      "type": "paragraph",
+      "content": "Nutrients are chemical substances present in food that are required by the body.<br/>They provide energy, build body tissues, and regulate metabolic activities.<br/>Nutrients are classified into macronutrients and micronutrients.<br/>Macronutrients include carbohydrates, proteins, and fats.<br/>Micronutrients include vitamins and minerals.<br/>Water and roughage are also essential components of diet.",
+      "id": "hpoal8t"
+    },
+    {
+      "id": "sd5v51o",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Carbohydrates – Structure, Types and Functions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Carbohydrates are organic compounds made of carbon, hydrogen, and oxygen.<br/>They are the primary and quickest source of energy for the body.<br/>Carbohydrates are of three types: monosaccharides, disaccharides, and polysaccharides.<br/>Glucose is the most important monosaccharide.<br/>Starch is the main storage carbohydrate in plants.<br/>Excess carbohydrates are stored as glycogen or fat.<br/>Deficiency leads to fatigue and ketosis.",
+      "id": "64gsdx9"
+    },
+    {
+      "id": "8ukbfdj",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Proteins – Importance and Biological Value"
+    },
+    {
+      "type": "paragraph",
+      "content": "Proteins are complex organic compounds made of amino acids.<br/>They are essential for growth, repair, and maintenance of tissues.<br/>Proteins form enzymes, hormones, antibodies, and hemoglobin.<br/>Proteins are classified as first-class (animal proteins) and second-class (plant proteins).<br/>Protein deficiency causes diseases like kwashiorkor and marasmus.<br/>Proteins cannot be stored and must be taken regularly.",
+      "id": "22rp43w"
+    },
+    {
+      "id": "inikwy6",
+      "type": "heading",
+      "level": 2,
+      "content": "6. Fats – Role and Metabolism"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Vitamins do not provide energy but are essential for health.",
+      "id": "fxl2ipg"
+    },
+    {
+      "type": "paragraph",
+      "content": "Fats are concentrated sources of energy.<br/>They provide twice the energy of carbohydrates.<br/>Fats help in absorption of fat-soluble vitamins.<br/>They protect organs and help maintain body temperature.<br/>Fats are stored as reserve energy.<br/>Deficiency causes dry skin and poor growth, while excess leads to obesity.",
+      "id": "p6n5ie5"
+    },
+    {
+      "id": "9ojpz08",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Vitamins – Definition and General Functions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Vitamins are organic compounds required in small quantities.<br/>They regulate metabolism and prevent deficiency diseases.<br/>Vitamins do not provide energy but are essential for health.<br/>They act as coenzymes in biochemical reactions.<br/>Vitamins are sensitive to heat, light, and air.<br/>Balanced diet supplies sufficient vitamins.",
+      "id": "bh7xy2d"
+    },
+    {
+      "id": "2bu9k1p",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Fat-Soluble Vitamins (A, D, E, K)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Fat-soluble vitamins are stored in liver and body fat.<br/>Vitamin A is essential for vision and epithelial health.<br/>Vitamin D regulates calcium and phosphorus metabolism.<br/>Vitamin E protects cells from oxidative damage.<br/>Vitamin K is essential for blood clotting.<br/>Excess intake may cause toxicity.",
+      "id": "8163dpf"
+    },
+    {
+      "id": "ecdx2ul",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Water-Soluble Vitamins (B-complex and C)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Water-soluble vitamins are not stored in body.<br/>Vitamin B-complex includes B1, B2, B3, B6, and B12.<br/>They are essential for metabolism and nervous system.<br/>Vitamin C helps in wound healing and immunity.<br/>Deficiency of water-soluble vitamins occurs easily.",
+      "id": "6rzjbve"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Fat-Soluble Vitamins",
+        "Water-Soluble Vitamins"
+      ],
+      "rows": [
+        [
+          "Vitamins Included",
+          "Vitamins A, D, E, and K",
+          "Vitamin B-complex (B1, B2, B3, B6, B12) and Vitamin C"
+        ],
+        [
+          "Storage in Body",
+          "Stored in the liver and body fat",
+          "Not stored in the body"
+        ],
+        [
+          "Risk Factor",
+          "Excess intake may cause toxicity",
+          "Deficiency occurs easily due to lack of storage"
+        ]
+      ],
+      "id": "yfts499"
+    },
+    {
+      "id": "5pj4j2o",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Vitamin Deficiency Diseases"
+    },
+    {
+      "type": "paragraph",
+      "content": "Vitamin deficiencies lead to characteristic diseases.<br/>Vitamin A deficiency causes night blindness.<br/>Vitamin D deficiency causes rickets and osteomalacia.<br/>Vitamin C deficiency causes scurvy.<br/>Vitamin B1 deficiency causes beriberi.<br/>Vitamin B12 deficiency causes pernicious anemia.",
+      "id": "98dhb6r"
+    },
+    {
+      "id": "305osm3",
+      "type": "heading",
+      "level": 2,
+      "content": "11. Minerals – Role and Classification"
+    },
+    {
+      "type": "paragraph",
+      "content": "Minerals are inorganic nutrients required for normal body functions.<br/>They are classified into macro-minerals and micro-minerals.<br/>Calcium and phosphorus are required for bones and teeth.<br/>Iron is required for hemoglobin.<br/>Iodine is required for thyroid hormone.<br/>Minerals regulate enzyme activities.",
+      "id": "a4zwckp"
+    },
+    {
+      "id": "3rmppm4",
+      "type": "heading",
+      "level": 2,
+      "content": "12. Mineral Deficiency Disorders"
+    },
+    {
+      "type": "paragraph",
+      "content": "Iron deficiency leads to anemia.<br/>Iodine deficiency causes goitre.<br/>Calcium deficiency causes osteoporosis.<br/>Fluoride deficiency leads to dental problems.<br/>Mineral imbalance affects metabolism and growth.",
+      "id": "ugl4f4d"
+    },
+    {
+      "id": "z9vsqns",
+      "type": "heading",
+      "level": 2,
+      "content": "13. Water and Roughage"
+    },
+    {
+      "type": "paragraph",
+      "content": "Water is essential for all metabolic reactions.<br/>It helps in digestion, absorption, and excretion.<br/>Roughage adds bulk to food and prevents constipation.<br/>It improves intestinal movement.<br/>Adequate water intake is essential for health.",
+      "id": "lpf3te1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Vitamin B1 deficiency causes beriberi, whereas Vitamin B12 deficiency results in pernicious anemia.",
+        "Vitamin C deficiency leads to scurvy, and Vitamin D deficiency causes rickets in children and osteomalacia in adults.",
+        "Iron deficiency causes anemia, while iodine deficiency leads to goitre through thyroid dysfunction.",
+        "Proteins are body-building nutrients that cannot be stored in the human body and must be consumed regularly."
+      ],
+      "id": "xgoc6v8"
+    },
+    {
+      "id": "quznnh3",
+      "type": "heading",
+      "level": 2,
+      "content": "14. Balanced Diet – Concept and Importance"
+    },
+    {
+      "type": "paragraph",
+      "content": "Balanced diet contains all nutrients in appropriate proportions.<br/>It depends on age, sex, occupation, and climate.<br/>Balanced diet prevents malnutrition.<br/>It maintains ideal body weight.<br/>It improves immunity and work efficiency.",
+      "id": "lqwmy31"
+    },
+    {
+      "id": "t6gi9o1",
+      "type": "heading",
+      "level": 2,
+      "content": "15. Malnutrition – Types and Effects"
+    },
+    {
+      "type": "paragraph",
+      "content": "Malnutrition is caused by inadequate or excess nutrition.<br/>Undernutrition leads to deficiency diseases.<br/>Overnutrition leads to obesity and lifestyle diseases.<br/>Children and pregnant women are highly affected.<br/>Malnutrition affects physical and mental development.",
+      "id": "fbg541r"
+    },
+    {
+      "id": "q81kr7l",
+      "type": "heading",
+      "level": 2,
+      "content": "16. IMPORTANT FACTS – SSC FOCUS"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Nutrition is essential for life.<br/>• Carbohydrates are main energy source.<br/>• Proteins are body-building nutrients.<br/>• Fats provide maximum energy.<br/>• Vitamin A deficiency causes night blindness.<br/>• Vitamin D deficiency causes rickets.<br/>• Vitamin C deficiency causes scurvy.<br/>• Iron deficiency causes anemia.<br/>• Iodine deficiency causes goitre.<br/>• Balanced diet maintains health.",
+      "id": "z1z4awh"
+    }
+  ],
+  "enriched": true
+}

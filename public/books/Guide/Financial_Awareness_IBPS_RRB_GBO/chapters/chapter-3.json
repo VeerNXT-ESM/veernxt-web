@@ -49,7 +49,8 @@
     },
     {
       "type": "paragraph",
-      "id": "x11hmcs"
+      "id": "x11hmcs",
+      "content": "SEBI was established on April 12, 1988 as a non-statutory body and given statutory powers through the SEBI Act, 1992. Headquartered in Mumbai, it regulates the securities markets in India."
     },
     {
       "id": "b8o4ew9",
@@ -61,9 +62,9 @@
       "id": "v4ru5ri",
       "type": "list",
       "items": [
-        null,
-        null,
-        null
+        "Protective Function – Prohibits insider trading, price rigging, fraudulent practices",
+        "Developmental Function – Promotes investor education, training of intermediaries",
+        "Regulatory Function – Registers and regulates brokers, merchant bankers, FIIs, mutual funds"
       ]
     },
     {
@@ -84,46 +85,46 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Exchange</strong></p>",
+            "<p><strong>Founded</strong></p>",
+            "<p><strong>Benchmark Index</strong></p>",
+            "<p><strong>Headquarters</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>BSE (Bombay Stock Exchange)</p>",
+            "<p>1875</p>",
+            "<p>SENSEX (30 stocks)</p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>NSE (National Stock Exchange)</p>",
+            "<p>1992</p>",
+            "<p>NIFTY 50</p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>MCX (Multi Commodity Exchange)</p>",
+            "<p>2003</p>",
+            "<p>MCX iCOMDEX</p>",
+            "<p>Mumbai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>NCDEX</p>",
+            "<p>2003</p>",
+            "<p>Agri commodity index</p>",
+            "<p>Mumbai</p>"
           ]
         }
       ]
@@ -161,7 +162,8 @@
     },
     {
       "type": "paragraph",
-      "id": "gwmacbm"
+      "id": "gwmacbm",
+      "content": "<strong>Note: </strong><em>BSE is Asia's oldest stock exchange. NSE is the largest by trading volume in India.</em>"
     },
     {
       "id": "nhsv5y4",
@@ -176,73 +178,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Instrument</strong></p>",
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Equity Shares</p>",
+            "<p>Ownership</p>",
+            "<p>Voting rights; dividend not guaranteed; residual claim on assets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Preference Shares</p>",
+            "<p>Hybrid</p>",
+            "<p>Fixed dividend; priority over equity in winding up; usually no voting rights</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Debentures/Bonds</p>",
+            "<p>Debt</p>",
+            "<p>Fixed interest; no voting rights; types: convertible, non-convertible</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Government Securities (G-Secs)</p>",
+            "<p>Debt (GBOvereign)</p>",
+            "<p>Issued by Central/State Govt; zero credit risk; benchmark for interest rates</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Treasury Bills (T-Bills)</p>",
+            "<p>Money Market</p>",
+            "<p>Short-term (91/182/364 days); issued at discount; zero coupon</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Commercial Paper (CP)</p>",
+            "<p>Money Market</p>",
+            "<p>Short-term unsecured; issued by corporates; min Rs.5 lakh face value</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Certificate of Deposit (CD)</p>",
+            "<p>Money Market</p>",
+            "<p>Issued by scheduled banks; 7 days to 1 year; tradeable</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Mutual Funds</p>",
+            "<p>Pooled vehicle</p>",
+            "<p>NAV-based; regulated by SEBI; various types: equity, debt, hybrid</p>"
           ]
         }
       ]
@@ -266,11 +268,11 @@
       "id": "90hzfy3",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<strong>Fresh issuance of securities (IPO, FPO, Rights Issue); capital flows to issuer: </strong>Primary Market",
+        "<strong>Trading of existing securities on stock exchanges; capital flows between investors: </strong>Secondary Market",
+        "<strong>Short-term funds (&lt; 1 year); RBI, banks, corporates; instruments: T-Bills, CP, CD, CBLO: </strong>Money Market",
+        "<strong>Long-term funds (&gt; 1 year); equities and long-term bonds: </strong>Capital Market",
+        "<strong>Currency exchange; India has a managed float system; RBI intervenes when needed: </strong>Forex Market"
       ]
     },
     {
@@ -286,64 +288,64 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>IPO (Initial Public Offering)</p>",
+            "<p>First-time sale of shares to the public by a company</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>FPO (Follow-on Public Offer)</p>",
+            "<p>Additional shares issued by a listed company to the public</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Rights Issue</p>",
+            "<p>Additional shares offered to existing shareholders at discount</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Book Building</p>",
+            "<p>Price discovery mechanism; bids collected in a price band</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Green Shoe Option</p>",
+            "<p>Over-allotment option to stabilise post-listing price</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lock-in Period</p>",
+            "<p>Period during which promoters cannot sell shares post-IPO</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>DRHP</p>",
+            "<p>Draft Red Herring Prospectus; filed with SEBI before IPO</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Red Herring Prospectus</p>",
+            "<p>Prospectus without final price/issue size; filed before bidding opens</p>"
           ]
         }
       ]

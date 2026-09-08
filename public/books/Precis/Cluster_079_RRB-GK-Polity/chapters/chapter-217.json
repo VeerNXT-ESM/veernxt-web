@@ -1,0 +1,141 @@
+{
+  "title": "Finance Commission vs NITI Aayog",
+  "order": 217,
+  "blocks": [
+    {
+      "id": "wfmynh5",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Finance Commission</strong></p>",
+            "<p><strong>NITI Aayog</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Status</p>",
+            "<p>Constitutional</p>",
+            "<p>Executive Body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Article</p>",
+            "<p>280</p>",
+            "<p>No article</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Role</p>",
+            "<p>Recommend tax sharing</p>",
+            "<p>Policy think tank</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Binding Nature</p>",
+            "<p>Advisory</p>",
+            "<p>Advisory</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "While the Finance Commission is a constitutional body mandated to recommend fiscal devolution, NITI Aayog acts as a non-constitutional think tank driving cooperative federalism.",
+      "id": "iolrmvg"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Finance Commission",
+        "NITI Aayog"
+      ],
+      "rows": [
+        [
+          "Status",
+          "Constitutional Body (Article 280)",
+          "Non-Constitutional, Executive Body"
+        ],
+        [
+          "Primary Function",
+          "Fiscal devolution & tax revenue sharing",
+          "Policy think tank providing strategic advice"
+        ],
+        [
+          "Financial Allocation",
+          "Recommends tax share and grants-in-aid",
+          "No power to allocate central financial funds"
+        ],
+        [
+          "Structure / Term",
+          "Constituted every 5 years by the President",
+          "Permanent body with continuous operations"
+        ],
+        [
+          "State Participation",
+          "States present demands via memoranda",
+          "Active involvement via Governing Council"
+        ]
+      ],
+      "id": "6fla6h5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "FC Provision",
+          "value": "Article 280",
+          "icon": "book"
+        },
+        {
+          "label": "NITI Aayog Est.",
+          "value": "1 Jan 2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "FC Tenure",
+          "value": "5 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Fund Allocation",
+          "value": "FC Only",
+          "icon": "check"
+        }
+      ],
+      "id": "8hj0tzq"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 280 mandates the constitution of the Finance Commission by the President every fifth year or earlier.",
+        "NITI Aayog lacks fund allocation powers; fiscal transfers are handled via the Finance Commission and the Ministry of Finance.",
+        "The Prime Minister serves as the ex-officio Chairperson of NITI Aayog."
+      ],
+      "id": "r31cblx"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Finance Commission is a constitutional body created under Article 280 of the Constitution to advise on tax revenue distribution between the Centre and States.",
+        "NITI Aayog replaced the Planning Commission on January 1, 2015, functioning as an extra-constitutional, non-statutory executive policy think tank.",
+        "Unlike the former Planning Commission, NITI Aayog does not possess powers to allocate central funds to state governments or ministries.",
+        "The Finance Commission submits its fiscal recommendations directly to the President of India every five years.",
+        "NITI Aayog promotes cooperative federalism through a bottom-up approach, featuring a Governing Council comprising all state Chief Ministers and UT Lt. Governors."
+      ],
+      "id": "vnuvyf8"
+    }
+  ],
+  "enriched": true
+}

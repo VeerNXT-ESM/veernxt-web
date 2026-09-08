@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "0br78fu"
+      "id": "0br78fu",
+      "content": "Stars are self-luminous celestial bodies that produce energy through nuclear fusion of hydrogen into helium."
     },
     {
       "type": "statStrip",
@@ -29,40 +30,35 @@
       "id": "zt97m6h"
     },
     {
-      "type": "pullQuote",
-      "content": "Constellation",
-      "id": "twvy68j"
-    },
-    {
       "id": "d5vtvli",
       "type": "table",
       "rows": [
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Star</strong></p>",
+            "<p><strong>Exam Fact</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Sun</p>",
+            "<p>Nearest star to Earth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Proxima Centauri</p>",
+            "<p>Nearest star after Sun</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pole Star (Polaris)</p>",
+            "<p>Almost fixed position; shows north direction</p>"
           ]
         }
       ]
@@ -93,7 +89,8 @@
     },
     {
       "type": "paragraph",
-      "id": "2un6o3c"
+      "id": "2un6o3c",
+      "content": "A constellation is a group of stars forming a recognizable pattern. Example: Ursa Major (Great Bear)."
     }
   ],
   "enriched": true

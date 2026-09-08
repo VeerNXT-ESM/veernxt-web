@@ -1,0 +1,82 @@
+{
+  "title": "10. Volcanoes in India",
+  "order": 123,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Barren Island — only active volcano in India.",
+      "id": "dbwiom1"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Barren Island — only active volcano in India.",
+      "id": "xjs5z53"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Active Volcanoes",
+          "value": "1",
+          "icon": "check"
+        },
+        {
+          "label": "Deccan Traps Type",
+          "value": "Basalt Plateau",
+          "icon": "info"
+        },
+        {
+          "label": "Formation Style",
+          "value": "Fissure Eruptions",
+          "icon": "book"
+        }
+      ],
+      "id": "9y54hk4"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Barren Island",
+        "Deccan Traps"
+      ],
+      "rows": [
+        [
+          "Status / Type",
+          "Only active volcano",
+          "Vast basalt plateau"
+        ],
+        [
+          "Eruption Mechanism",
+          "Volcanic eruption",
+          "Fissure eruptions"
+        ]
+      ],
+      "id": "zdvzp9a"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Barren Island stands as the only active volcano present in India.",
+        "The Deccan Traps represent a vast basalt plateau region.",
+        "The formation of the Deccan Traps is attributed to large-scale fissure eruptions."
+      ],
+      "id": "1cjvcuu"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Direct question alert: Barren Island is frequently tested as India's sole active volcano.",
+        "Geological origin alert: Deccan Traps were formed by fissure eruptions resulting in a vast basalt plateau."
+      ],
+      "id": "mmlkgqb"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Deccan Traps — vast basalt plateau formed by fissure eruptions.",
+      "id": "ujd3haw"
+    }
+  ],
+  "enriched": true
+}

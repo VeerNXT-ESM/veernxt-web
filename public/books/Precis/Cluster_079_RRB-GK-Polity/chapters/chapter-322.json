@@ -1,0 +1,63 @@
+{
+  "title": "13. Exam Traps",
+  "order": 322,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• SEBI is NOT constitutional.<br/>• Became statutory in 1992.<br/>• RBI has one member on SEBI board.<br/>• Prevents insider trading.<br/>• Regulates mutual funds and intermediaries.",
+      "id": "b1ucxd0"
+    },
+    {
+      "type": "pullQuote",
+      "content": "SEBI is NOT constitutional.",
+      "id": "9k3ssd5"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Statutory Status",
+          "value": "1992",
+          "icon": "calendar"
+        },
+        {
+          "label": "Constitutional Body",
+          "value": "No",
+          "icon": "info"
+        },
+        {
+          "label": "RBI Representation",
+          "value": "1 Member",
+          "icon": "check"
+        },
+        {
+          "label": "Key Function",
+          "value": "Market Regulator",
+          "icon": "award"
+        }
+      ],
+      "id": "9tq6651"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Exam Trap: Questions frequently test whether SEBI is constitutional. Remember it is STATUTORY (1992), NOT constitutional.",
+        "Board Composition Trap: Remember that RBI has exactly ONE member on the SEBI board.",
+        "Regulatory Scope: SEBI regulates both mutual funds and intermediaries while working to prevent insider trading."
+      ],
+      "id": "t1fi0zi"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "SEBI is a non-constitutional body that became statutory in 1992.",
+        "The Reserve Bank of India (RBI) has one representative member on the SEBI board.",
+        "SEBI actively prevents insider trading in capital markets.",
+        "SEBI regulates financial market intermediaries and mutual funds."
+      ],
+      "id": "z0cwufe"
+    }
+  ],
+  "enriched": true
+}

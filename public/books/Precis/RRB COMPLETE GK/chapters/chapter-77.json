@@ -4,8 +4,15 @@
   "order": 77,
   "blocks": [
     {
+      "id": "j99pj6x",
+      "type": "image",
+      "imageId": "g0xo6b8",
+      "src": "/books/Precis/RRB COMPLETE GK/images/image_g0xo6b8.png"
+    },
+    {
       "type": "paragraph",
-      "id": "pf9403r"
+      "id": "pf9403r",
+      "content": "The Continental Drift Theory was proposed by Alfred Wegener in 1912. According to this theory, the present continents were once part of a single massive landform that gradually fragmented and drifted apart. <img></img>"
     },
     {
       "type": "statStrip",
@@ -58,22 +65,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Term</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Pangaea</p>",
+            "<p>A supercontinent that existed about 300 million years ago during the late Paleozoic era.</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Panthalassa</p>",
+            "<p>The vast global ocean that surrounded Pangaea.</p>"
           ]
         }
       ]
@@ -86,11 +93,13 @@
     },
     {
       "type": "paragraph",
-      "id": "yv1n5p2"
+      "id": "yv1n5p2",
+      "content": "• Around 200 million years ago, Pangaea began to break apart due to internal forces."
     },
     {
       "type": "paragraph",
-      "id": "wsd86qt"
+      "id": "wsd86qt",
+      "content": "• It first divided into Laurasia in the north and Gondwanaland in the south."
     },
     {
       "type": "pullQuote",
@@ -99,11 +108,13 @@
     },
     {
       "type": "paragraph",
-      "id": "4us5qbm"
+      "id": "4us5qbm",
+      "content": "• Subsequent fragmentation produced the present continents."
     },
     {
       "type": "paragraph",
-      "id": "b42sb3c"
+      "id": "b42sb3c",
+      "content": "• The Atlantic Ocean formed as the Americas drifted away from Europe and Africa."
     },
     {
       "id": "0etsrei",
@@ -112,22 +123,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Landmass</strong></p>",
+            "<p><strong>Modern Regions</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Laurasia</p>",
+            "<p>North America, Europe, Asia (except India)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Gondwanaland</p>",
+            "<p>South America, Africa, India, Australia, Antarctica</p>"
           ]
         }
       ]
@@ -166,23 +177,28 @@
     },
     {
       "type": "paragraph",
-      "id": "6djph5l"
+      "id": "6djph5l",
+      "content": "• Jigsaw Fit: The coastlines of South America and Africa match remarkably well."
     },
     {
       "type": "paragraph",
-      "id": "o0c9gax"
+      "id": "o0c9gax",
+      "content": "• Fossil Evidence: Fossils of Mesosaurus, Glossopteris, and Lystrosaurus are found on continents now separated by oceans."
     },
     {
       "type": "paragraph",
-      "id": "k5vouh2"
+      "id": "k5vouh2",
+      "content": "• Geological Similarity: Mountain ranges such as the Appalachians align with those in Scotland and Scandinavia."
     },
     {
       "type": "paragraph",
-      "id": "wnv35ja"
+      "id": "wnv35ja",
+      "content": "• Paleoclimatic Evidence: Glacial deposits in India, Africa, and Australia indicate they were once near the South Pole."
     },
     {
       "type": "paragraph",
-      "id": "tgocyp7"
+      "id": "tgocyp7",
+      "content": "• Mineral Distribution: Similar mineral belts occur across different continents."
     },
     {
       "type": "examAlert",
@@ -201,15 +217,18 @@
     },
     {
       "type": "paragraph",
-      "id": "ufg1boz"
+      "id": "ufg1boz",
+      "content": "• Wegener could not identify the exact force responsible for continental movement."
     },
     {
       "type": "paragraph",
-      "id": "dw6j3fm"
+      "id": "dw6j3fm",
+      "content": "• He proposed tidal forces and pole-fleeing forces, which were too weak."
     },
     {
       "type": "paragraph",
-      "id": "fp0wh9q"
+      "id": "fp0wh9q",
+      "content": "• The idea that continents plowed through ocean crust was scientifically incorrect."
     }
   ],
   "enriched": true

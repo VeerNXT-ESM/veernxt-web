@@ -1,0 +1,275 @@
+{
+  "title": "1. Weathering",
+  "order": 128,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Weathering refers to the in-situ disintegration and decomposition of rocks at or near the Earth's surface without transportation. It is the first step in soil formation and sediment production.",
+      "id": "rlliuqc"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Process Nature",
+          "value": "In-Situ",
+          "icon": "info"
+        },
+        {
+          "label": "Mechanical Types",
+          "value": "7 Processes",
+          "icon": "check"
+        },
+        {
+          "label": "Chemical Types",
+          "value": "5 Processes",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Outcome",
+          "value": "Soil Formation",
+          "icon": "award"
+        }
+      ],
+      "id": "j2cr0qz"
+    },
+    {
+      "id": "ayc29gu",
+      "type": "heading",
+      "level": 2,
+      "content": "Types of Weathering"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Weathering is the in-situ disintegration and decomposition of rocks at or near the Earth's surface without transportation.",
+        "It represents the initial step in both soil formation and sediment production.",
+        "Mechanical weathering physically breaks rocks apart through mechanisms like freeze-thaw, exfoliation, and thermal expansion.",
+        "Chemical weathering decomposes rock minerals via oxidation, carbonation, hydrolysis, hydration, and solution.",
+        "Factors influencing weathering include climate, rock composition, rock structure, relief, vegetation, and duration of exposure."
+      ],
+      "id": "mb9tif7"
+    },
+    {
+      "id": "n2lexty",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type</strong></p>",
+            "<p><strong>Nature</strong></p>",
+            "<p><strong>Dominant Climate</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Mechanical (Physical)</p>",
+            "<p>Breakdown without chemical change</p>",
+            "<p>Cold &amp; arid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Chemical</p>",
+            "<p>Mineral alteration</p>",
+            "<p>Hot &amp; humid</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Biological</p>",
+            "<p>Caused by organisms</p>",
+            "<p>Humid vegetated areas</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "luqw3lj",
+      "type": "heading",
+      "level": 2,
+      "content": "B. Mechanical Weathering Processes"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Freeze–Thaw (Frost Wedging)",
+      "id": "gvbr7b9"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Exfoliation (Onion Peeling)",
+      "id": "7l33qx3"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Thermal Expansion and Contraction",
+      "id": "onoi4sz"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Salt Crystallization",
+      "id": "lugje3g"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Pressure Release (Unloading)",
+      "id": "xxeriv2"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Block Disintegration",
+      "id": "mi3jaup"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Weathering refers to the in-situ disintegration and decomposition of rocks at or near the Earth's surface without transportation.",
+      "id": "e1488nv"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Granular Disintegration",
+      "id": "37syj3m"
+    },
+    {
+      "id": "msiqb4g",
+      "type": "heading",
+      "level": 2,
+      "content": "C. Chemical Weathering Processes"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Oxidation – reaction with oxygen (iron-rich rocks).",
+      "id": "09i2ltb"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Carbonation – carbonic acid dissolves limestone (karst landscapes).",
+      "id": "qwve908"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Hydrolysis – formation of clay minerals.",
+      "id": "mk1asta"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Mechanical Weathering",
+        "Chemical Weathering"
+      ],
+      "rows": [
+        [
+          "Primary Process",
+          "Physical disintegration without altering mineral composition",
+          "Decomposition accompanied by chemical changes in rock minerals"
+        ],
+        [
+          "Key Examples",
+          "Freeze-Thaw, Exfoliation, Salt Crystallization, Unloading",
+          "Oxidation, Carbonation, Hydrolysis, Hydration, Solution"
+        ],
+        [
+          "Resulting Products",
+          "Smaller rock fragments, block and granular debris",
+          "Clay minerals, dissolved ions, altered rock faces (e.g., karst)"
+        ]
+      ],
+      "id": "xsrqzyf"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Hydration – absorption of water causing expansion.",
+      "id": "pjgixkr"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Solution – complete dissolution of soluble minerals.",
+      "id": "falwqgg"
+    },
+    {
+      "id": "6p6vqyl",
+      "type": "heading",
+      "level": 2,
+      "content": "D. Special Forms of Weathering"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Spheroidal Weathering – rounded rock forms due to chemical attack at corners.",
+      "id": "9aoo7xf"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Laterization – intense leaching in tropical climates forming laterite soils.",
+      "id": "t5ayxbw"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Differential Weathering – softer rocks weather faster than hard rocks.",
+      "id": "8gbodly"
+    },
+    {
+      "id": "dvo23cx",
+      "type": "heading",
+      "level": 2,
+      "content": "E. Factors Affecting Weathering"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Climate (temperature &amp; rainfall)",
+      "id": "uvlvkm4"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Weathering is an 'in-situ' process—meaning no movement or transportation takes place, distinguishing it from erosion.",
+        "Carbonation action on limestone produces karst landscapes, a frequent topic in competitive geography exams.",
+        "Hydrolysis specifically leads to the formation of clay minerals.",
+        "Laterization is associated with intense leaching under tropical climate conditions."
+      ],
+      "id": "l2d7xjo"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Rock type &amp; mineral composition",
+      "id": "zb3knj3"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Rock structure (joints &amp; fractures)",
+      "id": "lrhlskm"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Relief &amp; slope",
+      "id": "czvz697"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Vegetation",
+      "id": "wqiy4dn"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "• Time duration",
+      "id": "bq7z5jz"
+    }
+  ],
+  "enriched": true
+}

@@ -1,0 +1,439 @@
+{
+  "id": "uiq948s",
+  "title": "Chapter 10: Acids, Bases and Salts",
+  "order": 59,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "id": "2xolvi4",
+      "content": "Acids, bases and salts are important classes of chemical compounds that play a crucial role in chemistry and daily life. These substances participate in numerous chemical reactions and are widely used in industries, laboratories and households."
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Core Topics",
+          "value": "10 Sections",
+          "icon": "book"
+        },
+        {
+          "label": "Key Reaction",
+          "value": "Neutralization",
+          "icon": "award"
+        },
+        {
+          "label": "Measurement Tool",
+          "value": "pH Scale",
+          "icon": "info"
+        },
+        {
+          "label": "Primary Classes",
+          "value": "Acids, Bases & Salts",
+          "icon": "check"
+        }
+      ],
+      "id": "kns38ne"
+    },
+    {
+      "id": "t1jp3ws",
+      "type": "heading",
+      "level": 2,
+      "content": "1. Acids"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Acids and bases represent complementary chemical classes characterized by distinct chemical properties and strengths.",
+        "Alkalis are a specific subset of bases that dissolve in water.",
+        "The pH scale is used to measure the relative strength and concentration of acidic and basic solutions.",
+        "Indicators are essential chemical tools used to identify and distinguish acids from bases.",
+        "A neutralization reaction takes place when an acid reacts with a base, resulting in the formation of salt and water."
+      ],
+      "id": "y996vc9"
+    },
+    {
+      "type": "paragraph",
+      "id": "5k8a2w0",
+      "content": "• Acids are substances that produce hydrogen ions (H⁺) when dissolved in water."
+    },
+    {
+      "type": "paragraph",
+      "id": "flbcsor",
+      "content": "• They have a sour taste."
+    },
+    {
+      "type": "paragraph",
+      "id": "9e4h96p",
+      "content": "• They turn blue litmus paper red."
+    },
+    {
+      "type": "paragraph",
+      "id": "yf9gu2l",
+      "content": "• They react with metals to produce hydrogen gas."
+    },
+    {
+      "type": "paragraph",
+      "id": "6jifknl",
+      "content": "Examples of common acids:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "jtggcj6",
+      "content": "• Hydrochloric acid (HCl)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "iya753e",
+      "content": "• Sulphuric acid (H₂SO₄)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5ob0gss",
+      "content": "• Nitric acid (HNO₃)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "lnwgug5",
+      "content": "• Acetic acid (CH₃COOH)"
+    },
+    {
+      "id": "9vyp42j",
+      "type": "heading",
+      "level": 2,
+      "content": "2. Bases"
+    },
+    {
+      "type": "paragraph",
+      "id": "hmrns97",
+      "content": "• Bases are substances that produce hydroxide ions (OH⁻) in aqueous solution."
+    },
+    {
+      "type": "paragraph",
+      "id": "are75pz",
+      "content": "• They taste bitter and feel slippery."
+    },
+    {
+      "type": "paragraph",
+      "id": "7bncl54",
+      "content": "• They turn red litmus paper blue."
+    },
+    {
+      "type": "paragraph",
+      "id": "r6hbf2m",
+      "content": "Examples of bases:"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "rpytsmk",
+      "content": "• Sodium hydroxide (NaOH)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "eu2kr3m",
+      "content": "• Potassium hydroxide (KOH)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "5q2fio3",
+      "content": "• Calcium hydroxide Ca(OH)₂"
+    },
+    {
+      "id": "3rz8u2x",
+      "type": "heading",
+      "level": 2,
+      "content": "3. Alkalis"
+    },
+    {
+      "type": "paragraph",
+      "id": "2zjvn53",
+      "content": "Alkalis are bases that dissolve in water and produce hydroxide ions. All alkalis are bases but all bases are not alkalis."
+    },
+    {
+      "id": "q3whtox",
+      "type": "heading",
+      "level": 2,
+      "content": "4. Properties of Acids and Bases"
+    },
+    {
+      "id": "rcaont1",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Property</strong></p>",
+            "<p><strong>Acids</strong></p>",
+            "<p><strong>Bases</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Taste</p>",
+            "<p>Sour</p>",
+            "<p>Bitter</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Litmus test</p>",
+            "<p>Blue → Red</p>",
+            "<p>Red → Blue</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>pH value</p>",
+            "<p>Less than 7</p>",
+            "<p>Greater than 7</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Reaction with metals</p>",
+            "<p>Produces hydrogen gas</p>",
+            "<p>Usually no reaction</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yisyr5j",
+      "type": "heading",
+      "level": 2,
+      "content": "5. Strength of Acids and Bases"
+    },
+    {
+      "type": "paragraph",
+      "id": "nue9v6x",
+      "content": "• Strong acids completely ionize in water."
+    },
+    {
+      "type": "paragraph",
+      "id": "v8ykadm",
+      "content": "• Weak acids partially ionize in water."
+    },
+    {
+      "type": "paragraph",
+      "id": "1t3m1zt",
+      "content": "• Strong bases completely ionize in water."
+    },
+    {
+      "type": "paragraph",
+      "id": "obqk6tb",
+      "content": "• Weak bases partially ionize."
+    },
+    {
+      "id": "uuwaixp",
+      "type": "heading",
+      "level": 2,
+      "content": "6. pH Scale"
+    },
+    {
+      "type": "paragraph",
+      "id": "sn171co",
+      "content": "The pH scale measures the acidity or basicity of a solution and ranges from 0 to 14."
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Property",
+        "Acids",
+        "Bases"
+      ],
+      "rows": [
+        [
+          "Definition & Nature",
+          "Substances that yield H+ ions in solution",
+          "Substances that yield OH- ions in solution"
+        ],
+        [
+          "pH Range",
+          "pH < 7",
+          "pH > 7"
+        ],
+        [
+          "Water Solubility",
+          "Generally soluble in water",
+          "Soluble bases are called Alkalis"
+        ],
+        [
+          "Reaction Outcome",
+          "Reacts with bases to form salt and water",
+          "Reacts with acids to form salt and water"
+        ]
+      ],
+      "id": "y1rexsf"
+    },
+    {
+      "type": "paragraph",
+      "id": "rmo6pfb",
+      "content": "pH &lt; 7 : Acidic solution"
+    },
+    {
+      "type": "paragraph",
+      "id": "qf09967",
+      "content": "pH = 7 : Neutral solution"
+    },
+    {
+      "type": "paragraph",
+      "id": "xbq7zpu",
+      "content": "pH &gt; 7 : Basic solution"
+    },
+    {
+      "id": "s1ve9rw",
+      "type": "heading",
+      "level": 2,
+      "content": "7. Indicators"
+    },
+    {
+      "id": "m1nb8ni",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Indicator</strong></p>",
+            "<p><strong>Acid</strong></p>",
+            "<p><strong>Base</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Litmus</p>",
+            "<p>Red</p>",
+            "<p>Blue</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Phenolphthalein</p>",
+            "<p>Colorless</p>",
+            "<p>Pink</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Methyl orange</p>",
+            "<p>Red</p>",
+            "<p>Yellow</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3w9ww7b",
+      "type": "heading",
+      "level": 2,
+      "content": "8. Neutralization Reaction"
+    },
+    {
+      "type": "paragraph",
+      "id": "m51gh68",
+      "content": "Neutralization is the reaction between an acid and a base to form salt and water."
+    },
+    {
+      "type": "paragraph",
+      "id": "9rtgm63",
+      "content": "Example:"
+    },
+    {
+      "type": "paragraph",
+      "id": "umcpjii",
+      "content": "HCl + NaOH → NaCl + H₂O"
+    },
+    {
+      "id": "8fgdyt9",
+      "type": "heading",
+      "level": 2,
+      "content": "9. Salts"
+    },
+    {
+      "type": "paragraph",
+      "id": "2l4it8t",
+      "content": "• Salts are ionic compounds formed from neutralization reactions."
+    },
+    {
+      "type": "paragraph",
+      "id": "7bgyqvj",
+      "content": "• They may be acidic, basic or neutral."
+    },
+    {
+      "type": "paragraph",
+      "id": "bje7hgp",
+      "content": "• Examples include sodium chloride, copper sulfate and ammonium chloride."
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Distinguish clearly between water-soluble bases (alkalis) and insoluble bases for conceptual chemistry questions.",
+        "Be prepared to identify color shifts of common indicators in acidic, neutral, and basic mediums.",
+        "Master the pH scale definitions: pH < 7 indicates acidity, pH = 7 is neutral, and pH > 7 indicates basicity.",
+        "Neutralization reactions and practical uses of salts are frequently tested in competitive exam questions."
+      ],
+      "id": "xaezrxt"
+    },
+    {
+      "id": "d15c0gv",
+      "type": "heading",
+      "level": 2,
+      "content": "10. Uses of Acids, Bases and Salts"
+    },
+    {
+      "type": "paragraph",
+      "id": "wnoa3hl",
+      "content": "• Acids are used in batteries and fertilizers."
+    },
+    {
+      "type": "paragraph",
+      "id": "zio2it4",
+      "content": "• Bases are used in soap making and cleaning agents."
+    },
+    {
+      "type": "paragraph",
+      "id": "juzd8a7",
+      "content": "• Salts are used in food preservation and fertilizers."
+    },
+    {
+      "id": "dvdodf0",
+      "type": "heading",
+      "level": 2,
+      "content": "Important Facts"
+    },
+    {
+      "type": "paragraph",
+      "id": "z4fworr",
+      "content": "• Acids produce hydrogen ions in water."
+    },
+    {
+      "type": "paragraph",
+      "id": "r8z56wc",
+      "content": "• Bases produce hydroxide ions."
+    },
+    {
+      "type": "paragraph",
+      "id": "54dbira",
+      "content": "• pH scale ranges from 0 to 14."
+    },
+    {
+      "type": "paragraph",
+      "id": "5aml71i",
+      "content": "• Neutralization produces salt and water."
+    }
+  ],
+  "enriched": true
+}

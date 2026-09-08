@@ -1,0 +1,109 @@
+{
+  "title": "3. Measurement of Biodiversity",
+  "order": 204,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "• Species Richness – total number of species in a region.",
+      "id": "rd5hq0z"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Diversity Scales",
+          "value": "3 Levels",
+          "icon": "book"
+        },
+        {
+          "label": "Primary Metrics",
+          "value": "Richness & Evenness",
+          "icon": "check"
+        },
+        {
+          "label": "Restricted Species",
+          "value": "Endemism",
+          "icon": "info"
+        }
+      ],
+      "id": "0uxmgnu"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Species Richness measures the total number of species present in a specific region.",
+        "Species Evenness evaluates how individual organisms are distributed among species.",
+        "Alpha, Beta, and Gamma diversity measure ecological diversity at local, comparative, and regional scales.",
+        "Endemism refers to species that are exclusive to a defined geographic area."
+      ],
+      "id": "j7m46oe"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Endemism – species restricted to a specific geographic area.",
+      "id": "11m73ci"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Species Evenness – distribution of individuals among species.",
+      "id": "mg9jp5w"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Diversity Level",
+        "Scale",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Alpha Diversity",
+          "Local (Single Habitat)",
+          "Diversity within a particular habitat."
+        ],
+        [
+          "Beta Diversity",
+          "Comparative (Inter-Ecosystem)",
+          "Comparison of diversity between ecosystems."
+        ],
+        [
+          "Gamma Diversity",
+          "Regional (Large Landscape)",
+          "Overall diversity within a large geographic region."
+        ]
+      ],
+      "id": "8362cnw"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Alpha Diversity – diversity within a particular habitat.",
+      "id": "va5ou8b"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Beta Diversity – comparison of diversity between ecosystems.",
+      "id": "vaektmd"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Alpha Diversity is measured within a specific habitat, whereas Beta Diversity compares changes between ecosystems.",
+        "Gamma Diversity encompasses the total overall diversity across a broad geographic area.",
+        "Questions often distinguish between Species Richness (count of species) and Species Evenness (relative abundance of each species)."
+      ],
+      "id": "zv2sctf"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Gamma Diversity – overall diversity within a large geographic region.",
+      "id": "5b28b5y"
+    },
+    {
+      "type": "paragraph",
+      "content": "• Endemism – species restricted to a specific geographic area.",
+      "id": "wa3d36v"
+    }
+  ],
+  "enriched": true
+}

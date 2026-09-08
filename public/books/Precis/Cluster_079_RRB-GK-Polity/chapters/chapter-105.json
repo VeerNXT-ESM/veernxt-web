@@ -1,0 +1,64 @@
+{
+  "title": "RRB Quick Revision Box",
+  "order": 105,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Articles 124–147 – Supreme Court<br/>Established – 28 January 1950<br/>Retirement age – 65 years<br/>Court of Record – Article 129<br/>Advisory jurisdiction – Article 143<br/>Removal – Impeachment<br/>Highest judicial authority",
+      "id": "jb8y9m4"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Highest judicial authority",
+      "id": "8qd0bwz"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Constitutional Articles",
+          "value": "124–147",
+          "icon": "book"
+        },
+        {
+          "label": "Established Date",
+          "value": "28 January 1950",
+          "icon": "calendar"
+        },
+        {
+          "label": "Retirement Age",
+          "value": "65 years",
+          "icon": "clock"
+        },
+        {
+          "label": "Advisory Jurisdiction",
+          "value": "Article 143",
+          "icon": "info"
+        }
+      ],
+      "id": "yw2kx3o"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 129 designates the Supreme Court as a Court of Record.",
+        "Article 143 provides for the Advisory jurisdiction of the Supreme Court.",
+        "The retirement age for Supreme Court judges is 65 years, and their removal method is Impeachment."
+      ],
+      "id": "5poh7e1"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Articles 124–147 of the Indian Constitution deal with the Supreme Court.",
+        "The Supreme Court was established on 28 January 1950.",
+        "It acts as the highest judicial authority in the country.",
+        "Under Article 129, the Supreme Court functions as a Court of Record.",
+        "Supreme Court judges serve until they reach the retirement age of 65 years and can be removed via Impeachment."
+      ],
+      "id": "vgib5rb"
+    }
+  ],
+  "enriched": true
+}

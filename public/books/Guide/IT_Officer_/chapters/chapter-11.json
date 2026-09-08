@@ -54,55 +54,55 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>ML Category</strong></p>",
+            "<p><strong>Description</strong></p>",
+            "<p><strong>Algorithms / Techniques</strong></p>",
+            "<p><strong>Banking Use Cases</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Supervised Learning</p>",
+            "<p>Train on labelled data; predict output for new data</p>",
+            "<p>Linear Regression, Logistic Regression, Decision Tree, Random Forest, SVM, Neural Networks, XGBoost</p>",
+            "<p>Credit scoring, fraud detection, loan default prediction, churn prediction</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Unsupervised Learning</p>",
+            "<p>Find patterns in unlabelled data; no target variable</p>",
+            "<p>K-Means Clustering, DBSCAN, PCA, Autoencoders, Apriori (association rules)</p>",
+            "<p>Customer segmentation, anomaly detection, market basket analysis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Reinforcement Learning</p>",
+            "<p>Agent learns by trial-and-error; reward/penalty feedback</p>",
+            "<p>Q-Learning, Deep Q-Network (DQN), Policy Gradient, PPO</p>",
+            "<p>Algorithmic trading, dynamic pricing, portfolio optimisation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Deep Learning</p>",
+            "<p>Multi-layer neural networks; learns hierarchical features</p>",
+            "<p>CNN (images), RNN/LSTM (sequences), Transformer, BERT, GPT</p>",
+            "<p>Document analysis, NLP for chatbots, voice authentication</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>NLP (Natural Language Processing)</p>",
+            "<p>Process and understand human language</p>",
+            "<p>Tokenisation, Named Entity Recognition, Sentiment Analysis, LLMs</p>",
+            "<p>Chatbots, contract analysis, regulatory compliance, sentiment for trading</p>"
           ]
         }
       ]
@@ -120,65 +120,65 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Metric</strong></p>",
+            "<p><strong>Formula</strong></p>",
+            "<p><strong>Use</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Accuracy</p>",
+            "<p>(TP+TN)/(TP+TN+FP+FN)</p>",
+            "<p>Overall correctness; misleading for imbalanced datasets</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Precision</p>",
+            "<p>TP/(TP+FP)</p>",
+            "<p>Of predicted positives, how many are actually positive; important when FP is costly</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Recall (Sensitivity)</p>",
+            "<p>TP/(TP+FN)</p>",
+            "<p>Of actual positives, how many were correctly predicted; important when FN is costly (fraud detection)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>F1 Score</p>",
+            "<p>2×(Precision×Recall)/(Precision+Recall)</p>",
+            "<p>Harmonic mean; balance precision and recall; fraud, medical diagnosis</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>AUC-ROC</p>",
+            "<p>Area Under ROC Curve</p>",
+            "<p>Measures model's discrimination ability across thresholds; 0.5=random, 1=perfect</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>RMSE</p>",
+            "<p>√(mean of (predicted−actual)²)</p>",
+            "<p>For regression; penalises large errors more</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Confusion Matrix</p>",
+            "<p>2×2 (or n×n) table of actual vs predicted</p>",
+            "<p>Full picture of classification performance</p>"
           ]
         }
       ]
@@ -196,7 +196,8 @@
     },
     {
       "type": "paragraph",
-      "id": "i3k3wkx"
+      "id": "i3k3wkx",
+      "content": "Blockchain is a distributed, immutable ledger that records transactions across a network of computers. Each block contains a cryptographic hash of the previous block, timestamp, and transaction data, forming a chain."
     },
     {
       "id": "muk6ups",
@@ -205,85 +206,85 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Distributed Ledger</p>",
+            "<p>Copy of ledger maintained by all participants; no central authority</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Immutability</p>",
+            "<p>Once recorded, data cannot be altered without consensus of network</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hash (SHA-256)</p>",
+            "<p>Cryptographic function; each block contains hash of previous block — creates chain</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Consensus Mechanisms</p>",
+            "<p>PoW (Proof of Work — Bitcoin; energy intensive), PoS (Proof of Stake — Ethereum 2.0), DPoS, PoA</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Smart Contracts</p>",
+            "<p>Self-executing code on blockchain; trigger automatically when conditions met; Ethereum (Solidity)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Public Blockchain</p>",
+            "<p>Open to all; permissionless; Bitcoin, Ethereum</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Private Blockchain</p>",
+            "<p>Restricted access; permissioned; one organisation controls</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Consortium Blockchain</p>",
+            "<p>Semi-private; multiple organisations share control</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Hyperledger Fabric</p>",
+            "<p>Enterprise private/consortium blockchain; used in banking, supply chain; IBM, Linux Foundation</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>CBDC (Central Bank Digital Currency)</p>",
+            "<p>Digital currency issued by central bank; RBI's e-Rupee (retail + wholesale)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>DeFi (Decentralised Finance)</p>",
+            "<p>Financial services on blockchain without intermediaries; lending, trading, yield farming</p>"
           ]
         }
       ]
@@ -301,57 +302,57 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>Details</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Definition</p>",
+            "<p>Network of physical devices embedded with sensors, software, connectivity to exchange data</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Architecture</p>",
+            "<p>Edge devices → Gateway → Cloud/Fog → Application</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Protocols</p>",
+            "<p>MQTT (lightweight publish-subscribe), CoAP, Zigbee, Z-Wave, LoRaWAN, NB-IoT</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Security Challenges</p>",
+            "<p>Weak default passwords; unpatched firmware; large attack surface; resource-constrained devices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Banking IoT Uses</p>",
+            "<p>ATM monitoring, branch security, smart vaults, contactless payments, wearable payments</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Industrial IoT (IIoT)</p>",
+            "<p>Manufacturing, agriculture monitoring, smart grid, predictive maintenance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Edge Computing</p>",
+            "<p>Process data near source (edge) rather than sending all to cloud; low latency; bandwidth efficient</p>"
           ]
         }
       ]
@@ -378,73 +379,73 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p><strong>Technology</strong></p>",
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Purpose</strong></p>",
+            "<p><strong>Key Features</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Hadoop (HDFS + MapReduce)</p>",
+            "<p>Distributed Storage + Processing</p>",
+            "<p>Process massive datasets on commodity hardware</p>",
+            "<p>Write-once-read-many; NameNode + DataNode; MapReduce programming model</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Apache Spark</p>",
+            "<p>In-memory Processing</p>",
+            "<p>Fast batch + streaming analytics; replaces MapReduce</p>",
+            "<p>100x faster than Hadoop; RDD, DataFrames; Spark SQL, MLlib, Streaming</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Apache Kafka</p>",
+            "<p>Message Streaming</p>",
+            "<p>High-throughput distributed message queue; real-time data pipelines</p>",
+            "<p>Topics, Partitions, Producers, Consumers; Zookeeper/KRaft; used in fintech for real-time events</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Apache Hive</p>",
+            "<p>Data Warehouse</p>",
+            "<p>SQL-like queries on Hadoop (HiveQL); batch analytics</p>",
+            "<p>Schema on read; partitioning; ORC/Parquet formats</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Apache HBase</p>",
+            "<p>NoSQL Database on Hadoop</p>",
+            "<p>Random read/write access to big data; column-family store</p>",
+            "<p>Wide-column; scalable; used for time-series, event data in banking</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Elasticsearch</p>",
+            "<p>Search + Analytics Engine</p>",
+            "<p>Full-text search; log analytics; near real-time search</p>",
+            "<p>Inverted index; JSON documents; ELK Stack (with Logstash + Kibana)</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null,
-            null
+            "<p>Apache Flink</p>",
+            "<p>Stream Processing</p>",
+            "<p>Real-time stateful stream processing; exactly-once semantics</p>",
+            "<p>Lower latency than Spark Streaming; event-time processing; CEP</p>"
           ]
         }
       ]
@@ -462,113 +463,113 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Concept / Tool</strong></p>",
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>DevOps</p>",
+            "<p>Culture/Practice</p>",
+            "<p>Combines Dev + Ops; shared responsibility; automate everything; faster delivery</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CI (Continuous Integration)</p>",
+            "<p>Practice</p>",
+            "<p>Developers merge code frequently; automated build + test on each merge</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CD (Continuous Delivery)</p>",
+            "<p>Practice</p>",
+            "<p>Software always ready to deploy; manual trigger for production</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>CD (Continuous Deployment)</p>",
+            "<p>Practice</p>",
+            "<p>Every passing build automatically deployed to production</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Jenkins</p>",
+            "<p>CI/CD Tool</p>",
+            "<p>Open-source; pipeline as code (Jenkinsfile); huge plugin ecosystem</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>GitLab CI/CD</p>",
+            "<p>CI/CD Tool</p>",
+            "<p>Built into GitLab; .gitlab-ci.yml; tight source code integration</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>GitHub Actions</p>",
+            "<p>CI/CD Tool</p>",
+            "<p>GitHub-native CI/CD; YAML workflows; marketplace for actions</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Docker</p>",
+            "<p>Containerisation</p>",
+            "<p>Package apps with dependencies; build once, run anywhere</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kubernetes (K8s)</p>",
+            "<p>Container Orchestration</p>",
+            "<p>Deploy, scale, manage containers; self-healing; auto-scaling</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Terraform</p>",
+            "<p>Infrastructure as Code (IaC)</p>",
+            "<p>Provision cloud infrastructure declaratively; multi-cloud; HCL language</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Ansible</p>",
+            "<p>Configuration Management</p>",
+            "<p>Agentless; YAML playbooks; automate configuration and deployment</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Prometheus + Grafana</p>",
+            "<p>Monitoring + Visualisation</p>",
+            "<p>Collect metrics (Prometheus); visualise dashboards (Grafana); alerting</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>ELK Stack</p>",
+            "<p>Log Management</p>",
+            "<p>Elasticsearch + Logstash + Kibana; centralised logging; security monitoring</p>"
           ]
         }
       ]

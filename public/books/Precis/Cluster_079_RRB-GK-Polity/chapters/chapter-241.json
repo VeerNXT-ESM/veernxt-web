@@ -1,0 +1,148 @@
+{
+  "title": "NITI Aayog vs Planning Commission",
+  "order": 241,
+  "blocks": [
+    {
+      "id": "n5dp5xv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>Planning Commission</strong></p>",
+            "<p><strong>NITI Aayog</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Status</p>",
+            "<p>Executive Body</p>",
+            "<p>Executive Body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Approach</p>",
+            "<p>Top-down</p>",
+            "<p>Bottom-up</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Fund Allocation</p>",
+            "<p>Had power to allocate funds</p>",
+            "<p>No financial powers</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Focus</p>",
+            "<p>Five-Year Plans</p>",
+            "<p>Policy and strategy</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Federalism</p>",
+            "<p>Centralized</p>",
+            "<p>Cooperative &amp; Competitive</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "NITI Aayog serves as a think tank of the Government of India, fostering cooperative federalism through a bottom-up approach.",
+      "id": "hwd3s44"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Planning Commission",
+        "NITI Aayog"
+      ],
+      "rows": [
+        [
+          "Establishment",
+          "15 March 1950 (Dissolved 2014)",
+          "1 January 2015"
+        ],
+        [
+          "Nature of Body",
+          "Extra-constitutional body",
+          "Non-constitutional, policy think tank"
+        ],
+        [
+          "Planning Approach",
+          "Top-Down approach",
+          "Bottom-Up approach"
+        ],
+        [
+          "Financial Allocation",
+          "Empowered to allocate funds to states",
+          "No power to allocate funds (handled by Finance Ministry)"
+        ],
+        [
+          "State Participation",
+          "States interacted primarily via NDC",
+          "States directly included in the Governing Council"
+        ]
+      ],
+      "id": "rzrcyca"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Planning Commission Formed",
+          "value": "1950",
+          "icon": "calendar"
+        },
+        {
+          "label": "NITI Aayog Established",
+          "value": "1 Jan 2015",
+          "icon": "calendar"
+        },
+        {
+          "label": "NITI Aayog Approach",
+          "value": "Bottom-Up",
+          "icon": "check"
+        },
+        {
+          "label": "Ex-Officio Chairperson",
+          "value": "Prime Minister",
+          "icon": "award"
+        }
+      ],
+      "id": "ttwhkhi"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "NITI Aayog does not have the authority to allocate funds; financial resource allocation is handled directly by the Ministry of Finance.",
+        "The Prime Minister serves as the ex-officio Chairperson of NITI Aayog.",
+        "Planning Commission relied on Five-Year Plans, whereas NITI Aayog works with 3-year Action Agendas, 7-year Medium Term Strategies, and 15-year Vision Documents."
+      ],
+      "id": "jjh5bwv"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "NITI Aayog (National Institution for Transforming India) replaced the 65-year-old Planning Commission on January 1, 2015.",
+        "Unlike the Planning Commission which followed a top-down model, NITI Aayog operates on a bottom-up approach to foster cooperative federalism.",
+        "The Planning Commission had the power to allocate funds to state governments and central ministries, whereas NITI Aayog is an advisory think tank with no financial allocation powers.",
+        "The Governing Council of NITI Aayog comprises Chief Ministers of all States and Lt. Governors of Union Territories, ensuring direct state representation."
+      ],
+      "id": "tj35y1s"
+    }
+  ],
+  "enriched": true
+}

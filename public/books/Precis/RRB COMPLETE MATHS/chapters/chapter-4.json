@@ -48,26 +48,29 @@
     },
     {
       "type": "paragraph",
-      "id": "cz8xslk"
+      "id": "cz8xslk",
+      "content": "Simplification is one of the highest return topics in RRB mathematics because it directly affects speed. Many arithmetic questions become manageable only when calculations are performed efficiently."
     },
     {
       "type": "paragraph",
-      "id": "tn8tomk"
+      "id": "tn8tomk",
+      "content": "Students who master simplification:"
     },
     {
       "id": "6icvhqq",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Attempt more questions</li><li>Save time for difficult problems</li><li>Reduce calculation errors</li><li>Gain confidence during the exam</li></ul>",
+        "Attempt more questions",
+        "Save time for difficult problems",
+        "Reduce calculation errors",
+        "Gain confidence during the exam"
       ]
     },
     {
       "type": "paragraph",
-      "id": "bz0myom"
+      "id": "bz0myom",
+      "content": "Simplification is not about difficult mathematics — it is about smart mathematics."
     },
     {
       "id": "drz2lm2",
@@ -77,7 +80,8 @@
     },
     {
       "type": "paragraph",
-      "id": "dodi6oj"
+      "id": "dodi6oj",
+      "content": "Whenever an expression contains multiple operations, they must be solved in the correct order:"
     },
     {
       "id": "2diom9c",
@@ -87,31 +91,38 @@
     },
     {
       "type": "paragraph",
-      "id": "5jj5q9o"
+      "id": "5jj5q9o",
+      "content": "Important Note:"
     },
     {
       "type": "paragraph",
-      "id": "2fbe9h9"
+      "id": "2fbe9h9",
+      "content": "Division and multiplication are performed from left to right. The same rule applies to addition and subtraction."
     },
     {
       "type": "paragraph",
-      "id": "ggz1f2k"
+      "id": "ggz1f2k",
+      "content": "Example:"
     },
     {
       "type": "paragraph",
-      "id": "vqw9ucc"
+      "id": "vqw9ucc",
+      "content": "20 – 6 ÷ 3 × 2"
     },
     {
       "type": "paragraph",
-      "id": "hdpgt4r"
+      "id": "hdpgt4r",
+      "content": "Step 1: Division → 6 ÷ 3 = 2"
     },
     {
       "type": "paragraph",
-      "id": "y1qbrmy"
+      "id": "y1qbrmy",
+      "content": "Step 2: Multiplication → 2 × 2 = 4"
     },
     {
       "type": "paragraph",
-      "id": "p5va6ib"
+      "id": "p5va6ib",
+      "content": "Step 3: Subtraction → 20 – 4 = 16"
     },
     {
       "id": "ug11eyr",
@@ -121,11 +132,13 @@
     },
     {
       "type": "paragraph",
-      "id": "ep8x0nd"
+      "id": "ep8x0nd",
+      "content": "When multiple brackets appear, solve them in this order:"
     },
     {
       "type": "paragraph",
-      "id": "fuys5bc"
+      "id": "fuys5bc",
+      "content": "Vinculum (—) → Parentheses ( ) → Curly braces { } → Square brackets [ ] Always simplify inner brackets first before moving outward."
     },
     {
       "id": "dk65o0w",
@@ -135,60 +148,71 @@
     },
     {
       "type": "paragraph",
-      "id": "mfntw6y"
+      "id": "mfntw6y",
+      "content": "Fractions should always be reduced before multiplication whenever possible. Example:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ht3vfca"
+      "id": "ht3vfca",
+      "content": "(24 × 15) / 6"
     },
     {
       "type": "paragraph",
-      "id": "l8uwb2f"
+      "id": "l8uwb2f",
+      "content": "Cancel first:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "o7vihz5"
+      "id": "o7vihz5",
+      "content": "24 ÷ 6 = 4"
     },
     {
       "type": "paragraph",
-      "id": "yzcylfm"
+      "id": "yzcylfm",
+      "content": "Now multiply:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wrzo6a7"
+      "id": "wrzo6a7",
+      "content": "4 × 15 = 60"
     },
     {
       "type": "paragraph",
-      "id": "0sofc3o"
+      "id": "0sofc3o",
+      "content": "This saves time and prevents large-number multiplication."
     },
     {
       "id": "nhigrp6",
       "type": "numberedList",
       "items": [
-        null
+        "<strong>Decimal Simplification Trick </strong>Convert decimals into fractions when helpful. Example:"
       ]
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "u4wlbtf"
+      "id": "u4wlbtf",
+      "content": "0.25 × 64"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "zp2g4os"
+      "id": "zp2g4os",
+      "content": "0.25 = 1/4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "09gv9ug"
+      "id": "09gv9ug",
+      "content": "64 ÷ 4 = 16"
     },
     {
       "type": "paragraph",
-      "id": "axydldw"
+      "id": "axydldw",
+      "content": "Answer = 16."
     },
     {
       "id": "0qkh3d4",
@@ -198,36 +222,43 @@
     },
     {
       "type": "paragraph",
-      "id": "tijs2tf"
+      "id": "tijs2tf",
+      "content": "Convert percentages into fractions for faster solving. 125% = 5/4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "nnod7ub"
+      "id": "nnod7ub",
+      "content": "150% = 3/2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "n9htk99"
+      "id": "n9htk99",
+      "content": "12.5% = 1/8"
     },
     {
       "type": "paragraph",
-      "id": "k10imo3"
+      "id": "k10imo3",
+      "content": "Example:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "uw3m6d6"
+      "id": "uw3m6d6",
+      "content": "150% of 48"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8s58031"
+      "id": "8s58031",
+      "content": "= (3/2) × 48"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "gyct3i2"
+      "id": "gyct3i2",
+      "content": "= 72"
     },
     {
       "id": "rerl35b",
@@ -237,21 +268,25 @@
     },
     {
       "type": "paragraph",
-      "id": "a7vuqjo"
+      "id": "a7vuqjo",
+      "content": "Expressions involving ratios can often be simplified through cancellation. Example:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qmd03ue"
+      "id": "qmd03ue",
+      "content": "(48 × 25) ÷ 16"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "4ipg006"
+      "id": "4ipg006",
+      "content": "48 ÷ 16 = 3"
     },
     {
       "type": "paragraph",
-      "id": "7hz1cxb"
+      "id": "7hz1cxb",
+      "content": "3 × 25 = 75."
     },
     {
       "id": "8gzouhi",
@@ -261,25 +296,30 @@
     },
     {
       "type": "paragraph",
-      "id": "rl7fk3t"
+      "id": "rl7fk3t",
+      "content": "Multiply by 5 → multiply by 10 and divide by 2. Multiply by 25 → multiply by 100 and divide by 4."
     },
     {
       "type": "paragraph",
-      "id": "1lonb52"
+      "id": "1lonb52",
+      "content": "Multiply by 125 → multiply by 1000 and divide by 8. Example:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "hn48pir"
+      "id": "hn48pir",
+      "content": "64 × 125"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dw2tsmp"
+      "id": "dw2tsmp",
+      "content": "= 64000 ÷ 8"
     },
     {
       "type": "paragraph",
-      "id": "ia08jtk"
+      "id": "ia08jtk",
+      "content": "= 8000."
     },
     {
       "id": "y4fdu9s",
@@ -288,31 +328,31 @@
       "content": "Approximation Strategy"
     },
     {
-      "type": "pullQuote",
-      "content": "Brackets → Orders (powers/roots) → Division → Multiplication → Addition → Subtraction.",
-      "id": "x44sjt2"
-    },
-    {
       "type": "paragraph",
-      "id": "wdqdwg9"
+      "id": "wdqdwg9",
+      "content": "Approximation is extremely useful when answer options are far apart. Example:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "neuq5uk"
+      "id": "neuq5uk",
+      "content": "498 × 19"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "n9hfcq0"
+      "id": "n9hfcq0",
+      "content": "=500 × 20"
     },
     {
       "type": "paragraph",
-      "id": "dw4gx73"
+      "id": "dw4gx73",
+      "content": "= 10000."
     },
     {
       "type": "paragraph",
-      "id": "gzl8j04"
+      "id": "gzl8j04",
+      "content": "Use approximation only when precision is unnecessary."
     },
     {
       "id": "96xo0bb",
@@ -322,25 +362,30 @@
     },
     {
       "type": "paragraph",
-      "id": "b2bwjlj"
+      "id": "b2bwjlj",
+      "content": "Break the number into perfect square factors."
     },
     {
       "type": "paragraph",
-      "id": "mlsm30t"
+      "id": "mlsm30t",
+      "content": "Example:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "fy83oon"
+      "id": "fy83oon",
+      "content": "√98"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "51lc10i"
+      "id": "51lc10i",
+      "content": "= √(49 × 2)"
     },
     {
       "type": "paragraph",
-      "id": "me04pvs"
+      "id": "me04pvs",
+      "content": "= 7√2."
     },
     {
       "id": "6o7atr8",
@@ -350,25 +395,30 @@
     },
     {
       "type": "paragraph",
-      "id": "61hqu41"
+      "id": "61hqu41",
+      "content": "(a + b)² = a² + b² + 2ab (a – b)² = a² + b² – 2ab (a + b)(a – b) = a² – b² Example:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "z4mcxgt"
+      "id": "z4mcxgt",
+      "content": "102²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d6skbwo"
+      "id": "d6skbwo",
+      "content": "= (100 + 2)²"
     },
     {
       "type": "paragraph",
-      "id": "j3z7gqm"
+      "id": "j3z7gqm",
+      "content": "= 10000 + 4 + 400"
     },
     {
       "type": "paragraph",
-      "id": "ls15aix"
+      "id": "ls15aix",
+      "content": "= 10404."
     },
     {
       "id": "4l77ixq",
@@ -380,12 +430,12 @@
       "id": "rmny118",
       "type": "list",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "<ul><li>Cancel early.</li><li>Convert percentages into fractions.</li><li>Look for powers of 10.</li><li>Approximate when possible.</li><li>Apply identities for large numbers.</li></ul>",
+        "Cancel early.",
+        "Convert percentages into fractions.",
+        "Look for powers of 10.",
+        "Approximate when possible.",
+        "Apply identities for large numbers."
       ]
     },
     {
@@ -396,80 +446,98 @@
     },
     {
       "type": "paragraph",
-      "id": "zmvnhms"
+      "id": "zmvnhms",
+      "content": "Example 1:"
     },
     {
       "type": "paragraph",
-      "id": "eymnpzw"
+      "id": "eymnpzw",
+      "content": "Evaluate: 48 ÷ 4 × 5 + 6"
     },
     {
       "type": "paragraph",
-      "id": "lsz78ew"
+      "id": "lsz78ew",
+      "content": "Step 1: Division → 48 ÷ 4 = 12"
     },
     {
       "type": "paragraph",
-      "id": "0a50esk"
+      "id": "0a50esk",
+      "content": "Step 2: Multiplication → 12 × 5 = 60"
     },
     {
       "type": "paragraph",
-      "id": "uavwb5l"
+      "id": "uavwb5l",
+      "content": "Step 3: Addition → 60 + 6 = 66."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2rqm396"
+      "id": "2rqm396",
+      "content": "Final Answer: 66"
     },
     {
       "type": "paragraph",
-      "id": "i7znqfh"
+      "id": "i7znqfh",
+      "content": "Example 2:"
     },
     {
       "type": "paragraph",
-      "id": "bw8gbge"
+      "id": "bw8gbge",
+      "content": "Simplify: (75 × 16) ÷ 25 Cancel first:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "cro2f82"
+      "id": "cro2f82",
+      "content": "75 ÷ 25 = 3"
     },
     {
       "type": "paragraph",
-      "id": "adhj6xj"
+      "id": "adhj6xj",
+      "content": "Now multiply:"
     },
     {
       "type": "paragraph",
-      "id": "gv1t7z3"
+      "id": "gv1t7z3",
+      "content": "3 × 16 = 48."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tnh2xxz"
+      "id": "tnh2xxz",
+      "content": "Final Answer: 48"
     },
     {
       "type": "paragraph",
-      "id": "yphco2x"
+      "id": "yphco2x",
+      "content": "Example 3:"
     },
     {
       "type": "paragraph",
-      "id": "m6y7ld5"
+      "id": "m6y7ld5",
+      "content": "Find the value of √144 + 12²."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "li08dlo"
+      "id": "li08dlo",
+      "content": "√144 = 12"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "qanlawg"
+      "id": "qanlawg",
+      "content": "12² = 144"
     },
     {
       "type": "paragraph",
-      "id": "fm9j4zl"
+      "id": "fm9j4zl",
+      "content": "Total = 12 + 144 = 156."
     },
     {
       "type": "paragraph",
-      "id": "i4lwehq"
+      "id": "i4lwehq",
+      "content": "Final Answer: 156."
     },
     {
       "id": "abipshl",
@@ -479,88 +547,108 @@
     },
     {
       "type": "paragraph",
-      "id": "fxa0x6l"
+      "id": "fxa0x6l",
+      "content": "Question 1:"
     },
     {
       "type": "paragraph",
-      "id": "dztuj6v"
+      "id": "dztuj6v",
+      "content": "Evaluate: 36 + 24 ÷ 6 × 5."
     },
     {
       "type": "paragraph",
-      "id": "6cqy7uk"
+      "id": "6cqy7uk",
+      "content": "Step 1: Apply BODMAS."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "2x2zh1g"
+      "id": "2x2zh1g",
+      "content": "24 ÷ 6 = 4"
     },
     {
       "type": "paragraph",
-      "id": "tfg17ba"
+      "id": "tfg17ba",
+      "content": "Step 2: Multiply."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "so115n9"
+      "id": "so115n9",
+      "content": "4 × 5 = 20"
     },
     {
       "type": "paragraph",
-      "id": "2yri2lc"
+      "id": "2yri2lc",
+      "content": "Step 3: Add."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "oyn7v0w"
+      "id": "oyn7v0w",
+      "content": "36 + 20 = 56"
     },
     {
       "type": "paragraph",
-      "id": "xkmjqou"
+      "id": "xkmjqou",
+      "content": "Final Answer: 56."
     },
     {
       "type": "paragraph",
-      "id": "lv21m75"
+      "id": "lv21m75",
+      "content": "Question 2: Simplify: (64 × 25) ÷ 8."
     },
     {
       "type": "paragraph",
-      "id": "op88kxv"
+      "id": "op88kxv",
+      "content": "Step 1: Cancel before multiplying. 64 ÷ 8 = 8"
     },
     {
       "type": "paragraph",
-      "id": "3jx7f8q"
+      "id": "3jx7f8q",
+      "content": "Step 2: Multiply."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "iibat80"
+      "id": "iibat80",
+      "content": "8 × 25 = 200"
     },
     {
       "type": "paragraph",
-      "id": "9z6r08i"
+      "id": "9z6r08i",
+      "content": "Final Answer: 200."
     },
     {
       "type": "paragraph",
-      "id": "fqjlgtg"
+      "id": "fqjlgtg",
+      "content": "Question 3: Find 12.5% of 96."
     },
     {
       "type": "paragraph",
-      "id": "cz237bx"
+      "id": "cz237bx",
+      "content": "Step 1: Convert percentage into fraction. 12.5% = 1/8"
     },
     {
       "type": "paragraph",
-      "id": "mvzkk69"
+      "id": "mvzkk69",
+      "content": "Step 2: Divide."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "tigigo3"
+      "id": "tigigo3",
+      "content": "96 ÷ 8 = 12"
     },
     {
       "type": "paragraph",
-      "id": "yfp7m0d"
+      "id": "yfp7m0d",
+      "content": "Final Answer: 12."
     },
     {
       "type": "paragraph",
-      "id": "jva7hci"
+      "id": "jva7hci",
+      "content": "Question 4:Evaluate: 102 × 98."
     },
     {
       "type": "examAlert",
@@ -573,84 +661,102 @@
     },
     {
       "type": "paragraph",
-      "id": "k9sr5ec"
+      "id": "k9sr5ec",
+      "content": "Step 1: Use identity (a+b)(a-b) = a² – b². Let a = 100, b = 2."
     },
     {
       "type": "paragraph",
-      "id": "3xazr6p"
+      "id": "3xazr6p",
+      "content": "Step 2:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "dlsyjlv"
+      "id": "dlsyjlv",
+      "content": "100² – 2²"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "b0qmd7t"
+      "id": "b0qmd7t",
+      "content": "= 10000 – 4"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "8kx2dbu"
+      "id": "8kx2dbu",
+      "content": "= 9996"
     },
     {
       "type": "paragraph",
-      "id": "upgxfgc"
+      "id": "upgxfgc",
+      "content": "Final Answer: 9996."
     },
     {
       "type": "paragraph",
-      "id": "o2ujctw"
+      "id": "o2ujctw",
+      "content": "Question 5:Approximate 497 × 21. Step 1: Round the numbers."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wpipxnf"
+      "id": "wpipxnf",
+      "content": "497≈ 500"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "3rs6qx1"
+      "id": "3rs6qx1",
+      "content": "21 ≈ 20"
     },
     {
       "type": "paragraph",
-      "id": "m2m3zvn"
+      "id": "m2m3zvn",
+      "content": "Step 2: Multiply."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "jkbcxf4"
+      "id": "jkbcxf4",
+      "content": "500 × 20 = 10000"
     },
     {
       "type": "paragraph",
-      "id": "8c3u3xi"
+      "id": "8c3u3xi",
+      "content": "Final Answer: Approximately 10,000. Question 6: Simplify √50 + √18."
     },
     {
       "type": "paragraph",
-      "id": "lwg5by7"
+      "id": "lwg5by7",
+      "content": "Step 1: Break into perfect squares."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "n86ih28"
+      "id": "n86ih28",
+      "content": "√50 = √(25×2) = 5√2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "sv3ev4v"
+      "id": "sv3ev4v",
+      "content": "√18 = √(9×2) = 3√2"
     },
     {
       "type": "paragraph",
-      "id": "zd932bu"
+      "id": "zd932bu",
+      "content": "Step 2: Add like surds. 5√2"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "0pbmgeh"
+      "id": "0pbmgeh",
+      "content": "+ 3√2 = 8√2"
     },
     {
       "type": "paragraph",
-      "id": "7bao852"
+      "id": "7bao852",
+      "content": "Final Answer: 8√2."
     },
     {
       "id": "zn4pcjd",
@@ -660,11 +766,13 @@
     },
     {
       "type": "paragraph",
-      "id": "jo95brz"
+      "id": "jo95brz",
+      "content": "Simplification is not just a topic — it is a competitive advantage."
     },
     {
       "type": "paragraph",
-      "id": "5rguja6"
+      "id": "5rguja6",
+      "content": "Students who develop fast calculation instincts conserve mental energy for difficult questions and maintain accuracy under time pressure.Master this chapter, and you will notice a visible jump in your solving speed across the entire mathematics section."
     }
   ],
   "enriched": true

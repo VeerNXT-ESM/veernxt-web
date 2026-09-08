@@ -1,0 +1,84 @@
+{
+  "title": "8. Pacific Ring of Fire",
+  "order": 91,
+  "blocks": [
+    {
+      "type": "pullQuote",
+      "content": "Nearly 75% of the Earth's active volcanoes and 90% of all earthquakes occur along the Pacific Ring of Fire.",
+      "id": "jdunsx5"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Oceanic-Oceanic Subduction",
+        "Oceanic-Continental Subduction"
+      ],
+      "rows": [
+        [
+          "Resulting Feature",
+          "Island Arcs (e.g., Japan, Aleutians)",
+          "Continental Volcanic Arcs (e.g., Andes)"
+        ],
+        [
+          "Trench Example",
+          "Mariana Trench",
+          "Peru-Chile Trench"
+        ],
+        [
+          "Tectonic Mechanism",
+          "Denser oceanic plate subducts under lighter oceanic plate",
+          "Dense oceanic plate subducts under lighter continental plate"
+        ]
+      ],
+      "id": "yhcf7re"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Total Length",
+          "value": "40,000 km",
+          "icon": "book"
+        },
+        {
+          "label": "Active Volcanoes",
+          "value": "75%",
+          "icon": "award"
+        },
+        {
+          "label": "Global Earthquakes",
+          "value": "90%",
+          "icon": "check"
+        },
+        {
+          "label": "Primary Ocean",
+          "value": "Pacific Ocean",
+          "icon": "info"
+        }
+      ],
+      "id": "u3xniww"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Subduction zones along convergent boundaries are the primary driver of volcanic arcs and deep ocean trenches in the Ring of Fire.",
+        "The Mariana Trench, the deepest point on Earth, formed due to the subduction of the Pacific Plate beneath the Philippine Sea Plate.",
+        "Distinguish between Island Arcs (Oceanic-Oceanic subduction) and Continental Volcanic Arcs (Oceanic-Continental subduction) for prelims questions."
+      ],
+      "id": "cm7y6cw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "The Pacific Ring of Fire is a 40,000 km horseshoe-shaped region along the Pacific Ocean basin prone to frequent earthquakes and volcanic activity.",
+        "It is primarily defined by convergent plate boundaries where tectonic subduction occurs.",
+        "Over 75% of the world's active volcanoes and 90% of all earthquakes occur within this seismic belt.",
+        "Famous geological features in this zone include the Mariana Trench, the Andes Mountain Range, and the Japanese Archipelago."
+      ],
+      "id": "yfxycxg"
+    }
+  ],
+  "enriched": true
+}

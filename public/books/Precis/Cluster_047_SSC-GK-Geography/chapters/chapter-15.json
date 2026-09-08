@@ -1,0 +1,368 @@
+{
+  "title": "CHAPTER 13: TEMPERATURE, PRESSURE & WINDS",
+  "order": 15,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Temperature, air pressure, and winds together form the backbone of atmospheric dynamics. No weather or climate phenomenon is possible without the interaction of these three elements.",
+      "id": "u4dorm0"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Normal Lapse Rate",
+          "value": "6.5°C / 1000m",
+          "icon": "info"
+        },
+        {
+          "label": "Wind Movement Flow",
+          "value": "High → Low Pressure",
+          "icon": "check"
+        },
+        {
+          "label": "Coriolis (Northern Hem.)",
+          "value": "Deflects Right",
+          "icon": "award"
+        },
+        {
+          "label": "Coriolis (Southern Hem.)",
+          "value": "Deflects Left",
+          "icon": "book"
+        }
+      ],
+      "id": "7s6yy67"
+    },
+    {
+      "type": "paragraph",
+      "content": "Unequal heating of the Earth produces temperature differences; temperature differences lead to pressure differences; and pressure differences generate winds. This chapter is one of the MOST IMPORTANT chapters for SSC because it forms the base of monsoon, cyclones, anticyclones, rainfall, desert formation, and climatic regions.",
+      "id": "gd3d7co"
+    },
+    {
+      "id": "ahxymrn",
+      "type": "heading",
+      "level": 2,
+      "content": "PART A: TEMPERATURE (EXTREMELY DETAILED)"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Unequal heating of the Earth creates temperature differences, driving pressure differences that generate winds.",
+        "Air temperature decreases with altitude at the normal lapse rate of 6.5°C per 1000 metres.",
+        "Temperature inversion occurs when temperature increases with height, trapping pollutants near the ground and causing smog.",
+        "Air pressure is highest at sea level and varies based on temperature, altitude, and water vapour content.",
+        "Coriolis force deflects winds to the right in the Northern Hemisphere and to the left in the Southern Hemisphere.",
+        "Seasonal shifting of global pressure belts with the Sun's apparent movement drives the monsoon wind system."
+      ],
+      "id": "ic5e4v2"
+    },
+    {
+      "id": "ds00w4p",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Temperature"
+    },
+    {
+      "type": "paragraph",
+      "content": "Temperature is the measure of the degree of hotness or coldness of air. It directly affects air density, pressure, humidity, cloud formation, and wind movement. Warm air expands, becomes lighter, and rises, whereas cold air contracts, becomes heavier, and sinks. This vertical movement of air is fundamental to atmospheric circulation.",
+      "id": "7mvfm1y"
+    },
+    {
+      "id": "77dttsp",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Temperature (Cause–Effect)"
+    },
+    {
+      "id": "8mx14cl",
+      "type": "heading",
+      "level": 3,
+      "content": "Latitude"
+    },
+    {
+      "type": "paragraph",
+      "content": "Latitude controls the angle of solar rays. Near the equator, rays are vertical and concentrated, leading to higher temperatures. Towards the poles, rays are slanting, spread over larger areas, and lose heat while passing through thicker atmosphere, resulting in lower temperatures.",
+      "id": "kitsaff"
+    },
+    {
+      "id": "jly1xkd",
+      "type": "heading",
+      "level": 3,
+      "content": "Altitude"
+    },
+    {
+      "type": "paragraph",
+      "content": "Temperature decreases with increase in altitude due to reduction in air density. The normal lapse rate is 6.5°C per 1000 metres. This is why hill stations are cooler than plains.",
+      "id": "u6f37j2"
+    },
+    {
+      "id": "nublfae",
+      "type": "heading",
+      "level": 3,
+      "content": "Distance from the Sea (Continentality)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Land heats and cools faster than water. Coastal areas experience moderate temperatures due to the influence of sea breezes, while interior regions show extreme temperatures.",
+      "id": "w8m2mdr"
+    },
+    {
+      "id": "bs8wyiy",
+      "type": "heading",
+      "level": 3,
+      "content": "Ocean Currents"
+    },
+    {
+      "type": "paragraph",
+      "content": "Warm ocean currents raise coastal temperatures and increase humidity, whereas cold ocean currents lower temperatures and reduce rainfall.",
+      "id": "p2z4b45"
+    },
+    {
+      "type": "pullQuote",
+      "content": "Unequal heating of the Earth produces temperature differences; temperature differences lead to pressure differences; and pressure differences generate winds.",
+      "id": "yvlbe7w"
+    },
+    {
+      "id": "tpnnl5v",
+      "type": "heading",
+      "level": 3,
+      "content": "Cloud Cover & Winds"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clouds reduce daytime temperature by reflecting solar radiation and reduce night-time cooling by trapping heat. Winds transfer heat horizontally from one region to another.",
+      "id": "3qaee1y"
+    },
+    {
+      "id": "pwnye4r",
+      "type": "heading",
+      "level": 3,
+      "content": "Temperature Inversion (SSC Favourite)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Temperature inversion is a condition in which temperature increases with height instead of decreasing. It usually occurs during long winter nights, in valleys, and under calm conditions. Inversion traps pollutants near the ground, causing smog and health hazards.",
+      "id": "8igsw7k"
+    },
+    {
+      "id": "4dhvqls",
+      "type": "heading",
+      "level": 2,
+      "content": "PART B: AIR PRESSURE (EXTREMELY DETAILED)"
+    },
+    {
+      "id": "1x746mw",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Air Pressure"
+    },
+    {
+      "type": "paragraph",
+      "content": "Air pressure is the force exerted by the weight of air on the Earth’s surface. It is highest at sea level and decreases with altitude.",
+      "id": "0isqw3j"
+    },
+    {
+      "id": "ugfzgye",
+      "type": "heading",
+      "level": 3,
+      "content": "Factors Affecting Air Pressure"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Warm Air",
+        "Cold Air"
+      ],
+      "rows": [
+        [
+          "Density & Volume",
+          "Expands and becomes lighter",
+          "Contracts and becomes heavier"
+        ],
+        [
+          "Vertical Movement",
+          "Rises upwards",
+          "Sinks downwards"
+        ],
+        [
+          "Pressure Generated",
+          "Low Pressure",
+          "High Pressure"
+        ]
+      ],
+      "id": "zcfgg3f"
+    },
+    {
+      "type": "paragraph",
+      "content": "Temperature (warm air – low pressure, cold air – high pressure), altitude, and water vapour content significantly influence air pressure.",
+      "id": "aq6svld"
+    },
+    {
+      "id": "6g3do2u",
+      "type": "heading",
+      "level": 3,
+      "content": "Pressure Belts of the World (Cause–Effect)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Equatorial Low Pressure Belt forms due to intense heating and rising air. Subtropical High Pressure Belts form due to descending air. Subpolar Low Pressure Belts form due to convergence of westerlies and polar winds. Polar High Pressure Belts exist due to extremely cold and dense air.",
+      "id": "umtjrnx"
+    },
+    {
+      "id": "ehd80fs",
+      "type": "heading",
+      "level": 3,
+      "content": "Seasonal Shifting of Pressure Belts"
+    },
+    {
+      "type": "paragraph",
+      "content": "<img alt=\"Local Winds of the World - List of Local Winds, Different Types &amp; Its  Importance\" src=\"/books/Precis/Cluster_014_SSC-GK-Geography/images/image_mg1cgpm.png\"/>Pressure belts shift northward and southward with the apparent movement of the Sun. This shifting is responsible for the origin and reversal of monsoon winds.",
+      "id": "gvnuzrn"
+    },
+    {
+      "id": "nadd7tz",
+      "type": "heading",
+      "level": 2,
+      "content": "PART C: WINDS (EXTREMELY DETAILED)"
+    },
+    {
+      "id": "dqqhx03",
+      "type": "heading",
+      "level": 3,
+      "content": "Meaning of Wind"
+    },
+    {
+      "type": "paragraph",
+      "content": "Wind is the horizontal movement of air from areas of high pressure to areas of low pressure. Wind speed and direction depend on pressure gradient, Coriolis force, and friction.",
+      "id": "xuc8itx"
+    },
+    {
+      "id": "8460su2",
+      "type": "heading",
+      "level": 3,
+      "content": "Forces Affecting Winds"
+    },
+    {
+      "type": "paragraph",
+      "content": "Pressure Gradient Force initiates wind movement. Coriolis Force deflects wind to the right in the Northern Hemisphere and to the left in the Southern Hemisphere. Frictional Force reduces wind speed near the Earth’s surface.",
+      "id": "wlgcwp1"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Temperature Inversion: High-frequency SSC question where temperature increases with height instead of decreasing, occurring in calm winter conditions and trapping smog.",
+        "Coriolis Force Direction: Remember that winds deflect to the RIGHT in the Northern Hemisphere and to the LEFT in the Southern Hemisphere.",
+        "Normal Lapse Rate Value: Standard rate of temperature decrease is exactly 6.5°C per 1000 metres of elevation.",
+        "Monsoon Origin: Seasonal shifting of global pressure belts due to the apparent movement of the Sun is responsible for the origin and reversal of monsoon winds."
+      ],
+      "id": "ym28zvr"
+    },
+    {
+      "id": "56fiwod",
+      "type": "list",
+      "items": [
+        "<strong>Classification of Winds (COMPLETE TABLE)</strong>"
+      ]
+    },
+    {
+      "id": "m3lkmg8",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Type of Wind</strong></p>",
+            "<p><strong>Origin / Cause</strong></p>",
+            "<p><strong>Direction</strong></p>",
+            "<p><strong>Region</strong></p>",
+            "<p><strong>Examples</strong></p>",
+            "<p><strong>SSC Exam Importance</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Permanent Winds</p>",
+            "<p>Global pressure belts</p>",
+            "<p>Fixed direction</p>",
+            "<p>Global</p>",
+            "<p>Trade Winds, Westerlies, Polar Easterlies</p>",
+            "<p>Asked directly</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Periodic Winds</p>",
+            "<p>Seasonal pressure change</p>",
+            "<p>Seasonal reversal</p>",
+            "<p>Regional</p>",
+            "<p>Monsoon, Land–Sea Breeze</p>",
+            "<p>Conceptual</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Local Winds</p>",
+            "<p>Local temperature</p>",
+            "<p>Short duration</p>",
+            "<p>Local</p>",
+            "<p>Loo, Chinook,</p>",
+            "<p>One-liners</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "svzbgld",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "",
+            "<p>difference</p>",
+            "",
+            "",
+            "<p>Foehn</p>",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fn9il6z",
+      "type": "heading",
+      "level": 2,
+      "content": "PART D: INTERRELATIONSHIP (EXAM GOLD)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Unequal heating → Temperature difference → Pressure difference → Winds. This chain reaction explains global circulation, rainfall patterns, monsoon system, cyclones, anticyclones, and climatic regions.",
+      "id": "7vr6oyn"
+    },
+    {
+      "id": "f3ha9mf",
+      "type": "heading",
+      "level": 3,
+      "content": "Ultra-Revision Points (SSC)"
+    },
+    {
+      "id": "vqtb820",
+      "type": "list",
+      "items": [
+        "<ol><li>Temperature controls pressure</li><li>Warm air rises – low pressure</li><li>Cold air sinks – high pressure</li><li>Winds move high → low pressure</li><li>Coriolis causes deflection</li><li>Monsoon = seasonal wind reversal</li></ol>",
+        "Temperature controls pressure",
+        "Warm air rises – low pressure",
+        "Cold air sinks – high pressure",
+        "Winds move high → low pressure",
+        "Coriolis causes deflection",
+        "Monsoon = seasonal wind reversal"
+      ]
+    }
+  ],
+  "enriched": true
+}

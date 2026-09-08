@@ -1,0 +1,154 @@
+{
+  "title": "Comparison: Lok Sabha vs Rajya Sabha",
+  "order": 81,
+  "blocks": [
+    {
+      "id": "fm0mzy4",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Lok Sabha</strong></p>",
+            "<p><strong>Rajya Sabha</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Directly elected</p>",
+            "<p>Indirectly elected</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Represents people</p>",
+            "<p>Represents states</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Term – 5 years</p>",
+            "<p>Permanent House</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Minimum age – 25 years</p>",
+            "<p>Minimum age – 30 years</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Can be dissolved</p>",
+            "<p>Cannot be dissolved</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "The Lok Sabha represents the people of India as a whole, while the Rajya Sabha represents the states and union territories of India.",
+      "id": "6a9tqs1"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Lok Sabha (House of the People)",
+        "Rajya Sabha (Council of States)"
+      ],
+      "rows": [
+        [
+          "Nature of House",
+          "Temporary (Dissolvable after 5 years or earlier)",
+          "Permanent (1/3rd members retire every 2 years)"
+        ],
+        [
+          "Minimum Qualification Age",
+          "25 Years",
+          "30 Years"
+        ],
+        [
+          "Method of Election",
+          "Direct election via Universal Adult Suffrage (First-Past-The-Post)",
+          "Indirect election by elected MLAs (Single Transferable Vote)"
+        ],
+        [
+          "Money Bill Jurisdiction",
+          "Sole power to introduce and pass Money Bills",
+          "Limited to 14 days delay; cannot amend or reject"
+        ],
+        [
+          "Presiding Officer",
+          "Speaker (Elected from amongst its own members)",
+          "Chairman (Vice-President of India, ex-officio)"
+        ],
+        [
+          "No-Confidence Motion",
+          "Can be introduced and passed ONLY in Lok Sabha",
+          "No power to pass a No-Confidence Motion"
+        ]
+      ],
+      "id": "s8ky694"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Lok Sabha Max Seats",
+          "value": "550",
+          "icon": "info"
+        },
+        {
+          "label": "Rajya Sabha Max Seats",
+          "value": "250",
+          "icon": "book"
+        },
+        {
+          "label": "Lok Sabha Term",
+          "value": "5 Years",
+          "icon": "clock"
+        },
+        {
+          "label": "Rajya Sabha Status",
+          "value": "Permanent",
+          "icon": "calendar"
+        },
+        {
+          "label": "Min Age (LS / RS)",
+          "value": "25 / 30 Yrs",
+          "icon": "check"
+        }
+      ],
+      "id": "82pu5rm"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Rajya Sabha cannot vote on Demands for Grants; this privilege belongs exclusively to the Lok Sabha.",
+        "A resolution for the creation of All-India Services under Article 312 can ONLY be originated in the Rajya Sabha by a 2/3rd majority.",
+        "The Vice-President of India is the ex-officio Chairman of Rajya Sabha, but is not a member of either House of Parliament.",
+        "Money Bills can only be introduced in the Lok Sabha and require the prior recommendation of the President."
+      ],
+      "id": "7l5wusw"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Lok Sabha is the Lower House directly elected by the people of India, whereas Rajya Sabha is the Upper House indirectly elected by the elected members of State Legislative Assemblies.",
+        "Lok Sabha has exclusive authority over Money Bills under Article 110; Rajya Sabha can only delay a Money Bill for up to 14 days without power to reject or amend it.",
+        "Rajya Sabha is a permanent body not subject to dissolution, with one-third of its members retiring every second year.",
+        "Rajya Sabha possesses exclusive constitutional powers under Article 249 (to authorize legislation on State List) and Article 312 (to create All-India Services).",
+        "In a joint sitting of Parliament under Article 108, the Speaker of Lok Sabha presides over the session, giving Lok Sabha numerical superiority."
+      ],
+      "id": "xe75rjr"
+    }
+  ],
+  "enriched": true
+}

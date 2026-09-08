@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "najzafu"
+      "id": "najzafu",
+      "content": "The period of Mahajanapadas marks a very important phase in ancient Indian history. It represents the transition from a tribal society to a more settled, territorial, and state-based political system. The Mahajanapadas emerged during the Later Vedic period and became prominent around the 6th century BC."
     },
     {
       "type": "statStrip",
@@ -46,19 +47,23 @@
     },
     {
       "type": "paragraph",
-      "id": "kyx8zyp"
+      "id": "kyx8zyp",
+      "content": "The term Janapada is derived from two words: 'Jana' meaning people or tribe, and 'Pada' meaning foothold or territory. Thus, Janapada refers to the land occupied by a tribe."
     },
     {
       "type": "paragraph",
-      "id": "gxgrqao"
+      "id": "gxgrqao",
+      "content": "When some Janapadas became large, powerful, and well-organized, they were called Mahajanapadas."
     },
     {
       "type": "paragraph",
-      "id": "rcnl4v7"
+      "id": "rcnl4v7",
+      "content": "Information about the Mahajanapadas is obtained from literary and archaeological sources. Important literary sources include the Buddhist texts like Anguttara Nikaya and Jain texts. The Anguttara Nikaya mentions a list of sixteen Mahajanapadas."
     },
     {
       "type": "paragraph",
-      "id": "suli1g5"
+      "id": "suli1g5",
+      "content": "According to the Anguttara Nikaya, there were sixteen Mahajanapadas in ancient India. These were spread across northern and central India."
     },
     {
       "id": "o4d8g2k",
@@ -67,81 +72,81 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Mahajanapada</strong></p>",
+            "<p><strong>Capital</strong></p>",
+            "<p><strong>Modern Region</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Anga</p>",
+            "<p>Champa</p>",
+            "<p>Bihar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Magadha</p>",
+            "<p>Rajgir / Pataliputra</p>",
+            "<p>Bihar</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kashi</p>",
+            "<p>Varanasi</p>",
+            "<p>Uttar Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kosala</p>",
+            "<p>Shravasti</p>",
+            "<p>Uttar Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vatsa</p>",
+            "<p>Kaushambi</p>",
+            "<p>Uttar Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Avanti</p>",
+            "<p>Ujjain / Mahishmati</p>",
+            "<p>Madhya Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Chedi</p>",
+            "<p>Shuktimati</p>",
+            "<p>Madhya Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Malla</p>",
+            "<p>Kushinagar / Pava</p>",
+            "<p>Uttar Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Vrijji</p>",
+            "<p>Vaishali</p>",
+            "<p>Bihar</p>"
           ]
         }
       ]
@@ -153,96 +158,105 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kuru</p>",
+            "<p>Indraprastha</p>",
+            "<p>Delhi</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Panchala</p>",
+            "<p>Ahichchhatra / Kampilya</p>",
+            "<p>Uttar Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Matsya</p>",
+            "<p>Viratanagar</p>",
+            "<p>Rajasthan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Surasena</p>",
+            "<p>Mathura</p>",
+            "<p>Uttar Pradesh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Assaka</p>",
+            "<p>Potana</p>",
+            "<p>Maharashtra</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Gandhara</p>",
+            "<p>Taxila</p>",
+            "<p>Pakistan</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Kamboja</p>",
+            "<p>Rajapura</p>",
+            "<p>Afghanistan</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "4c37x9m"
+      "id": "4c37x9m",
+      "content": "The Mahajanapadas had two main types of political systems: monarchies and republics. Monarchies were ruled by kings, while republics were governed by assemblies."
     },
     {
       "type": "paragraph",
-      "id": "wtj6sn1"
+      "id": "wtj6sn1",
+      "content": "Most Mahajanapadas were monarchies. The king exercised supreme authority and was supported by ministers, army, and officials."
     },
     {
       "type": "paragraph",
-      "id": "wbju7k6"
+      "id": "wbju7k6",
+      "content": "Some Mahajanapadas like Vrijji and Malla followed a republican form of government. Power was vested in an assembly, and decisions were taken collectively."
     },
     {
       "type": "paragraph",
-      "id": "jq53j98"
+      "id": "jq53j98",
+      "content": "Agriculture was the main occupation during this period. The use of iron tools improved agricultural productivity. Trade and commerce also expanded significantly."
     },
     {
       "type": "paragraph",
-      "id": "64q0hkj"
+      "id": "64q0hkj",
+      "content": "Iron ploughshares were used extensively. Rice cultivation became common in the Gangetic plains."
     },
     {
       "type": "paragraph",
-      "id": "qzwqopr"
+      "id": "qzwqopr",
+      "content": "Trade flourished both internally and externally. The introduction of punch-marked coins facilitated trade and economic transactions."
     },
     {
       "type": "paragraph",
-      "id": "v81qwtp"
+      "id": "v81qwtp",
+      "content": "The period of Mahajanapadas witnessed the second phase of urbanization in India. Cities like Rajgir, Pataliputra, Kaushambi, and Vaishali became important urban centers."
     },
     {
       "type": "paragraph",
-      "id": "9r7hjct"
+      "id": "9r7hjct",
+      "content": "Among all Mahajanapadas, Magadha emerged as the most powerful. Several factors contributed to the rise of Magadha."
     },
     {
       "type": "paragraph",
-      "id": "6mxkez5"
+      "id": "6mxkez5",
+      "content": "The rise of Magadha was due to its strategic location, fertile land, availability of iron ore, strong rulers, and efficient administration."
     },
     {
       "type": "pullQuote",
@@ -251,26 +265,30 @@
     },
     {
       "type": "paragraph",
-      "id": "hjvngbs"
+      "id": "hjvngbs",
+      "content": "The period saw the rise of new religious movements like Buddhism and Jainism, which opposed excessive rituals and caste rigidity."
     },
     {
       "type": "paragraph",
-      "id": "46r580c"
+      "id": "46r580c",
+      "content": "Sixteen Mahajanapadas mentioned in Anguttara Nikaya. Most powerful Mahajanapada – Magadha. Republican states – Vrijji and Malla. Punch-marked coins used during this period. Second urbanization – Mahajanapada period."
     },
     {
       "id": "7p3lpor",
       "type": "numberedList",
       "items": [
-        null
+        "<strong>Introduction</strong>"
       ]
     },
     {
       "type": "paragraph",
-      "id": "b8ywu1b"
+      "id": "b8ywu1b",
+      "content": "The 6th century BC marked a significant turning point in Indian religious and philosophical life. During this period, dissatisfaction with the rigid rituals, animal sacrifices, and dominance of the Brahmanical order led to the rise of new reformist religious movements. The most prominent among them were Jainism and Buddhism. Both religions emphasized ethical living, non-violence, and salvation through self-effort."
     },
     {
       "type": "paragraph",
-      "id": "wch79w2"
+      "id": "wch79w2",
+      "content": "Several social, economic, and religious factors contributed to the rise of Jainism and Buddhism."
     },
     {
       "id": "4v21e6u",
@@ -279,43 +297,43 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Factors</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Religious</p>",
+            "<p>Reaction against costly Vedic rituals and animal sacrifices</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Social</p>",
+            "<p>Opposition to rigid Varna system and Brahmanical dominance</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Economic</p>",
+            "<p>Growth of trade and urbanization demanded simpler religion</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Political</p>",
+            "<p>Support from kings and merchants</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Language</p>",
+            "<p>Teachings in Pali and Prakrit instead of Sanskrit</p>"
           ]
         }
       ]
@@ -324,17 +342,19 @@
       "id": "xhk1mog",
       "type": "list",
       "items": [
-        null,
-        null
+        "<ol><li><strong>Founder and Tirthankaras</strong></li></ol>",
+        "<strong>Founder and Tirthankaras</strong>"
       ]
     },
     {
       "type": "paragraph",
-      "id": "kaz8kca"
+      "id": "kaz8kca",
+      "content": "Jainism believes in the existence of 24 Tirthankaras. The first Tirthankara was Rishabhanatha, while the last and most important Tirthankara was Vardhamana Mahavira."
     },
     {
       "type": "paragraph",
-      "id": "6fogimu"
+      "id": "6fogimu",
+      "content": "Vardhamana Mahavira was born in 599 BC at Kundagrama near Vaishali. He belonged to the Kshatriya clan. At the age of 30, he renounced worldly life and practiced severe austerities. After 12 years of penance, he attained Kaivalya (supreme knowledge). He attained Nirvana at Pavapuri in 527 BC."
     },
     {
       "type": "comparisonTable",
@@ -364,7 +384,8 @@
     },
     {
       "type": "paragraph",
-      "id": "ufchz9s"
+      "id": "ufchz9s",
+      "content": "The core teachings of Jainism revolve around non-violence and self-discipline."
     },
     {
       "id": "5lnb492",
@@ -373,57 +394,58 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Concept</strong></p>",
+            "<p><strong>Explanation</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Triratna</p>",
+            "<p>Right faith, Right knowledge, Right conduct</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ahimsa</p>",
+            "<p>Non-violence</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Satya</p>",
+            "<p>Truth</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Asteya</p>",
+            "<p>Non-stealing</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Brahmacharya</p>",
+            "<p>Celibacy</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Aparigraha</p>",
+            "<p>Non-possession</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "a139czi"
+      "id": "a139czi",
+      "content": "Jainism later split into two major sects: Digambara and Shvetambara."
     },
     {
       "id": "t6sb3mx",
@@ -432,48 +454,51 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Sect</strong></p>",
+            "<p><strong>Meaning</strong></p>",
+            "<p><strong>Key Belief</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Digambara</p>",
+            "<p>Sky-clad</p>",
+            "<p>Monks do not wear clothes</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Shvetambara</p>",
+            "<p>White-clad</p>",
+            "<p>Monks wear white clothes</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "yeuby5c"
+      "id": "yeuby5c",
+      "content": "Jain teachings were compiled in the form of Agamas. The Jain councils were held to preserve these teachings."
     },
     {
       "id": "3f4ilqe",
       "type": "list",
       "items": [
-        null,
-        null
+        "<ol><li><strong>Life of Gautama Buddha</strong></li></ol>",
+        "<strong>Life of Gautama Buddha</strong>"
       ]
     },
     {
       "type": "paragraph",
-      "id": "pc3wbnt"
+      "id": "pc3wbnt",
+      "content": "Gautama Buddha was born in 563 BC at Lumbini near Kapilavastu. His childhood name was Siddhartha. He belonged to the Sakya clan. He renounced worldly life at the age of 29 and attained enlightenment at Bodh Gaya under the Bodhi tree. He delivered his first sermon at Sarnath and attained Mahaparinirvana at Kushinagar."
     },
     {
       "type": "paragraph",
-      "id": "fygg9ti"
+      "id": "fygg9ti",
+      "content": "The foundation of Buddhism lies in the Four Noble Truths."
     },
     {
       "id": "1kdodfx",
@@ -482,8 +507,8 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Truth</strong></p>",
+            "<p><strong>Meaning</strong></p>"
           ]
         }
       ]
@@ -495,36 +520,37 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p>Dukkha</p>",
+            "<p>Life is full of suffering</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Samudaya</p>",
+            "<p>Desire is the cause of suffering</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Nirodha</p>",
+            "<p>End of suffering is possible</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Magga</p>",
+            "<p>Path leading to end of suffering</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "emxao2f"
+      "id": "emxao2f",
+      "content": "The Eightfold Path provides the way to liberation from suffering."
     },
     {
       "type": "examAlert",
@@ -542,40 +568,42 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Category</strong></p>",
+            "<p><strong>Components</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Wisdom</p>",
+            "<p>Right View, Right Intention</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Ethical Conduct</p>",
+            "<p>Right Speech, Right Action, Right Livelihood</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Mental Discipline</p>",
+            "<p>Right Effort, Right Mindfulness, Right Concentration</p>"
           ]
         }
       ]
     },
     {
       "type": "paragraph",
-      "id": "hgeea5x"
+      "id": "hgeea5x",
+      "content": "Buddhist Councils were held to preserve and spread Buddha’s teachings."
     },
     {
       "type": "paragraph",
-      "id": "inejgqb"
+      "id": "inejgqb",
+      "content": "Buddhism later divided into Hinayana, Mahayana, and Vajrayana."
     },
     {
       "id": "gcx7crk",
@@ -584,41 +612,41 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null,
-            null
+            "<p><strong>Aspect</strong></p>",
+            "<p><strong>Jainism</strong></p>",
+            "<p><strong>Buddhism</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Founder</p>",
+            "<p>Mahavira</p>",
+            "<p>Gautama Buddha</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>God</p>",
+            "<p>No creator god</p>",
+            "<p>No creator god</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Main Principle</p>",
+            "<p>Ahimsa</p>",
+            "<p>Middle Path</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null,
-            null
+            "<p>Language</p>",
+            "<p>Prakrit</p>",
+            "<p>Pali</p>"
           ]
         }
       ]
@@ -627,20 +655,23 @@
       "id": "52k00go",
       "type": "numberedList",
       "items": [
-        null
+        "<strong>Spread and Patronage</strong>"
       ]
     },
     {
       "type": "paragraph",
-      "id": "s9lfrnd"
+      "id": "s9lfrnd",
+      "content": "Both Jainism and Buddhism received royal patronage. Ashoka played a major role in the spread of Buddhism beyond India."
     },
     {
       "type": "paragraph",
-      "id": "hu7tv2h"
+      "id": "hu7tv2h",
+      "content": "Buddhism declined in India due to revival of Brahmanism, lack of royal patronage, and invasions."
     },
     {
       "type": "paragraph",
-      "id": "knjkvz1"
+      "id": "knjkvz1",
+      "content": "24th Tirthankara – Mahavira. Place of Buddha’s enlightenment – Bodh Gaya. First sermon – Sarnath. Jain triratna – Right faith, knowledge, conduct. Eightfold path – Buddhism."
     }
   ],
   "enriched": true

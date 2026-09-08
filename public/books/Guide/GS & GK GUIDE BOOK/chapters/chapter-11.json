@@ -4,8 +4,15 @@
   "order": 11,
   "blocks": [
     {
+      "id": "o1lnaei",
+      "type": "image",
+      "imageId": "il7upug",
+      "src": "/books/Guide/GS & GK GUIDE BOOK/images/image_il7upug.png"
+    },
+    {
       "type": "paragraph",
-      "id": "75vjc0a"
+      "id": "75vjc0a",
+      "content": "<img></img>The Revolt of 1857 was the first major armed uprising against British rule in India. It marked the beginning of a large-scale resistance against colonial domination. The revolt involved soldiers, peasants, princes and common people. Although it ultimately failed, it had far-reaching consequences for the future of India."
     },
     {
       "type": "statStrip",
@@ -53,15 +60,18 @@
     },
     {
       "type": "paragraph",
-      "id": "otyuw9h"
+      "id": "otyuw9h",
+      "content": "• It was the first large-scale rebellion against British rule."
     },
     {
       "type": "paragraph",
-      "id": "8ckz4cn"
+      "id": "8ckz4cn",
+      "content": "• It involved various sections of society including soldiers, rulers and peasants."
     },
     {
       "type": "paragraph",
-      "id": "oyamic6"
+      "id": "oyamic6",
+      "content": "• Some historians call it the Sepoy Mutiny while Indian historians call it the First War of Independence."
     },
     {
       "id": "z9nos78",
@@ -77,15 +87,18 @@
     },
     {
       "type": "paragraph",
-      "id": "crnarz3"
+      "id": "crnarz3",
+      "content": "• The annexation of Indian states through the Doctrine of Lapse created resentment."
     },
     {
       "type": "paragraph",
-      "id": "2v5k3kg"
+      "id": "2v5k3kg",
+      "content": "• Important states like Jhansi, Satara and Nagpur were annexed."
     },
     {
       "type": "paragraph",
-      "id": "kcr4257"
+      "id": "kcr4257",
+      "content": "• The Mughal emperor Bahadur Shah II was treated disrespectfully by the British."
     },
     {
       "id": "cfd6p7j",
@@ -95,15 +108,18 @@
     },
     {
       "type": "paragraph",
-      "id": "gm7ed2i"
+      "id": "gm7ed2i",
+      "content": "• Heavy land revenue policies exploited peasants."
     },
     {
       "type": "paragraph",
-      "id": "am48mq7"
+      "id": "am48mq7",
+      "content": "• Indian handicrafts declined due to British industrial goods."
     },
     {
       "type": "paragraph",
-      "id": "glojpgu"
+      "id": "glojpgu",
+      "content": "• Many artisans and craftsmen lost their livelihood."
     },
     {
       "id": "4ze81tc",
@@ -113,15 +129,18 @@
     },
     {
       "type": "paragraph",
-      "id": "ltyem4t"
+      "id": "ltyem4t",
+      "content": "• The British introduced social reforms which created suspicion among Indians."
     },
     {
       "type": "paragraph",
-      "id": "w6ia3gw"
+      "id": "w6ia3gw",
+      "content": "• The activities of Christian missionaries caused fear among people."
     },
     {
       "type": "paragraph",
-      "id": "ab7h1pi"
+      "id": "ab7h1pi",
+      "content": "• People believed the British were interfering with traditional customs."
     },
     {
       "id": "wjjdxgu",
@@ -131,20 +150,18 @@
     },
     {
       "type": "paragraph",
-      "id": "3dlgvsn"
-    },
-    {
-      "type": "pullQuote",
-      "content": "Government of India Act 1858",
-      "id": "0bcyfqk"
+      "id": "3dlgvsn",
+      "content": "• Indian soldiers received lower pay than British soldiers."
     },
     {
       "type": "paragraph",
-      "id": "4l9ucy6"
+      "id": "4l9ucy6",
+      "content": "• There was discrimination in promotions."
     },
     {
       "type": "paragraph",
-      "id": "saqa3fk"
+      "id": "saqa3fk",
+      "content": "• The General Service Enlistment Act required soldiers to serve overseas."
     },
     {
       "id": "crtw34v",
@@ -154,7 +171,8 @@
     },
     {
       "type": "paragraph",
-      "id": "m0goz8g"
+      "id": "m0goz8g",
+      "content": "The immediate cause of the revolt was the introduction of the Enfield rifle. The cartridges were rumored to be greased with cow and pig fat. Since soldiers had to bite the cartridges before using them, this offended both Hindu and Muslim religious beliefs."
     },
     {
       "id": "6y632lq",
@@ -164,15 +182,18 @@
     },
     {
       "type": "paragraph",
-      "id": "ngg8d73"
+      "id": "ngg8d73",
+      "content": "• The revolt began on 10 May 1857 at Meerut."
     },
     {
       "type": "paragraph",
-      "id": "epkywl3"
+      "id": "epkywl3",
+      "content": "• Indian soldiers attacked British officers and freed imprisoned comrades."
     },
     {
       "type": "paragraph",
-      "id": "7e6evjd"
+      "id": "7e6evjd",
+      "content": "• The rebels marched to Delhi and declared Bahadur Shah II as the emperor of India."
     },
     {
       "id": "22adnjg",
@@ -187,50 +208,50 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Centre</strong></p>",
+            "<p><strong>Leader</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Delhi</p>",
+            "<p>Bahadur Shah II</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Kanpur</p>",
+            "<p>Nana Sahib</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Jhansi</p>",
+            "<p>Rani Lakshmibai</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Lucknow</p>",
+            "<p>Begum Hazrat Mahal</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bihar</p>",
+            "<p>Kunwar Singh</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Bareilly</p>",
+            "<p>Khan Bahadur Khan</p>"
           ]
         }
       ]
@@ -269,15 +290,18 @@
     },
     {
       "type": "paragraph",
-      "id": "ckoexhh"
+      "id": "ckoexhh",
+      "content": "• The revolt spread to Delhi, Kanpur, Lucknow, Jhansi and other regions."
     },
     {
       "type": "paragraph",
-      "id": "lnnp3hp"
+      "id": "lnnp3hp",
+      "content": "• Large areas of northern and central India were affected."
     },
     {
       "type": "paragraph",
-      "id": "v5mnxwr"
+      "id": "v5mnxwr",
+      "content": "• However southern and eastern India remained mostly unaffected."
     },
     {
       "id": "b1bgdn9",
@@ -287,19 +311,23 @@
     },
     {
       "type": "paragraph",
-      "id": "c2rm9l3"
+      "id": "c2rm9l3",
+      "content": "• The rebels lacked a unified leadership."
     },
     {
       "type": "paragraph",
-      "id": "1s9vyxd"
+      "id": "1s9vyxd",
+      "content": "• There was no clear planning or coordination."
     },
     {
       "type": "paragraph",
-      "id": "2e8di6s"
+      "id": "2e8di6s",
+      "content": "• Many Indian rulers supported the British."
     },
     {
       "type": "paragraph",
-      "id": "i8d75gl"
+      "id": "i8d75gl",
+      "content": "• The British had superior military strength and communication."
     },
     {
       "id": "opkhraa",
@@ -309,19 +337,23 @@
     },
     {
       "type": "paragraph",
-      "id": "p5gn9gb"
+      "id": "p5gn9gb",
+      "content": "• The rule of the East India Company ended in 1858."
     },
     {
       "type": "paragraph",
-      "id": "g71uqyt"
+      "id": "g71uqyt",
+      "content": "• The British Crown took direct control over India."
     },
     {
       "type": "paragraph",
-      "id": "ba0izw5"
+      "id": "ba0izw5",
+      "content": "• The Mughal dynasty came to an end."
     },
     {
       "type": "paragraph",
-      "id": "m42izj4"
+      "id": "m42izj4",
+      "content": "• The British reorganized the army and administration."
     },
     {
       "id": "dwtxtf5",
@@ -340,15 +372,18 @@
     },
     {
       "type": "paragraph",
-      "id": "5fllomj"
+      "id": "5fllomj",
+      "content": "• The administration of India was transferred from the East India Company to the British Crown."
     },
     {
       "type": "paragraph",
-      "id": "uy2oe5k"
+      "id": "uy2oe5k",
+      "content": "• The office of the Secretary of State for India was created."
     },
     {
       "type": "paragraph",
-      "id": "6efasbt"
+      "id": "6efasbt",
+      "content": "• The Governor-General of India became the Viceroy."
     },
     {
       "id": "ag81olj",
@@ -358,23 +393,28 @@
     },
     {
       "type": "paragraph",
-      "id": "7f8e34x"
+      "id": "7f8e34x",
+      "content": "• The Revolt of 1857 began at Meerut."
     },
     {
       "type": "paragraph",
-      "id": "rgpysg7"
+      "id": "rgpysg7",
+      "content": "• Bahadur Shah II was the symbolic leader."
     },
     {
       "type": "paragraph",
-      "id": "r18hg6w"
+      "id": "r18hg6w",
+      "content": "• Rani Lakshmibai fought bravely at Jhansi."
     },
     {
       "type": "paragraph",
-      "id": "zecscst"
+      "id": "zecscst",
+      "content": "• The revolt ended the rule of the East India Company."
     },
     {
       "type": "paragraph",
-      "id": "jbz86bt"
+      "id": "jbz86bt",
+      "content": "• It led to the Government of India Act 1858."
     }
   ],
   "enriched": true

@@ -1,0 +1,136 @@
+{
+  "title": "Comparison: IRDAI vs SEBI vs RBI",
+  "order": 331,
+  "blocks": [
+    {
+      "id": "dba8yd3",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Feature</strong></p>",
+            "<p><strong>IRDAI</strong></p>",
+            "<p><strong>SEBI</strong></p>",
+            "<p><strong>RBI</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Sector</p>",
+            "<p>Insurance</p>",
+            "<p>Capital Market</p>",
+            "<p>Banking</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Act</p>",
+            "<p>1999</p>",
+            "<p>1992</p>",
+            "<p>1934</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Main Objective</p>",
+            "<p>Policyholder Protection</p>",
+            "<p>Investor Protection</p>",
+            "<p>Financial Stability</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "RBI regulates banking, SEBI oversees capital markets, and IRDAI governs the insurance sector in India.",
+      "id": "m8qq4gr"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Parameter",
+        "RBI",
+        "SEBI",
+        "IRDAI"
+      ],
+      "rows": [
+        [
+          "Primary Sector",
+          "Banking & Monetary System",
+          "Capital & Securities Market",
+          "Insurance Industry"
+        ],
+        [
+          "Governing Act",
+          "RBI Act, 1934",
+          "SEBI Act, 1992",
+          "IRDA Act, 1999"
+        ],
+        [
+          "Establishment",
+          "1935",
+          "1988 (Statutory 1992)",
+          "1999"
+        ],
+        [
+          "Headquarters",
+          "Mumbai, Maharashtra",
+          "Mumbai, Maharashtra",
+          "Hyderabad, Telangana"
+        ]
+      ],
+      "id": "a9u9nfp"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "RBI Established",
+          "value": "1935",
+          "icon": "calendar"
+        },
+        {
+          "label": "SEBI Statutory Year",
+          "value": "1992",
+          "icon": "award"
+        },
+        {
+          "label": "IRDAI Established",
+          "value": "1999",
+          "icon": "check"
+        },
+        {
+          "label": "Regulators Compared",
+          "value": "3 Key Bodies",
+          "icon": "info"
+        }
+      ],
+      "id": "7no5nba"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Headquarters Trap: IRDAI is headquartered in Hyderabad, whereas RBI and SEBI are based in Mumbai.",
+        "Statutory vs Non-Statutory: SEBI was non-statutory when formed in 1988 and gained statutory status in 1992.",
+        "Apex Functions: RBI acts as the lender of last resort, SEBI regulates stock exchanges, and IRDAI mandates solvency margins for insurers."
+      ],
+      "id": "udf2ojq"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "RBI regulates the banking sector, monetary policy, and foreign exchange reserves under the RBI Act, 1934.",
+        "SEBI oversees the capital and securities markets to protect investor interests under the SEBI Act, 1992.",
+        "IRDAI regulates and promotes the insurance and reinsurance industry under the IRDA Act, 1999.",
+        "While RBI and SEBI are headquartered in Mumbai, IRDAI is headquartered in Hyderabad."
+      ],
+      "id": "xpmzi3b"
+    }
+  ],
+  "enriched": true
+}

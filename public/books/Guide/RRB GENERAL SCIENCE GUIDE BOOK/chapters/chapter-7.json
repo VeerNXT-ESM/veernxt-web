@@ -5,7 +5,8 @@
   "blocks": [
     {
       "type": "paragraph",
-      "id": "35hi4da"
+      "id": "35hi4da",
+      "content": "Electricity and magnetism are closely related branches of physics. Electricity deals with the flow of electric charges, while magnetism deals with the magnetic properties of materials and magnetic fields produced by electric currents."
     },
     {
       "type": "statStrip",
@@ -54,19 +55,23 @@
     },
     {
       "type": "paragraph",
-      "id": "50ujpth"
+      "id": "50ujpth",
+      "content": "Electricity is the flow of electric charge through a conductor. Electric current is the movement of electrons through a conductor such as copper wire."
     },
     {
       "type": "paragraph",
-      "id": "aze59lp"
+      "id": "aze59lp",
+      "content": "• Electric charge is a fundamental property of matter."
     },
     {
       "type": "paragraph",
-      "id": "u5v2zfg"
+      "id": "u5v2zfg",
+      "content": "• Electric current is the flow of electric charge."
     },
     {
       "type": "paragraph",
-      "id": "isqr1d2"
+      "id": "isqr1d2",
+      "content": "• The SI unit of electric current is Ampere (A)."
     },
     {
       "id": "q18kkk4",
@@ -76,30 +81,36 @@
     },
     {
       "type": "paragraph",
-      "id": "29solr3"
+      "id": "29solr3",
+      "content": "Electric current is defined as the rate of flow of electric charge."
     },
     {
       "type": "paragraph",
-      "id": "spgl7wi"
+      "id": "spgl7wi",
+      "content": "Formula: I = Q / t"
     },
     {
       "type": "paragraph",
-      "id": "70rqgty"
+      "id": "70rqgty",
+      "content": "Where:"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "wqftkp2"
+      "id": "wqftkp2",
+      "content": "I = Electric current"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "pg2y5cs"
+      "id": "pg2y5cs",
+      "content": "Q = Electric charge"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "d5597mn"
+      "id": "d5597mn",
+      "content": "t = Time"
     },
     {
       "id": "mj3anig",
@@ -109,11 +120,13 @@
     },
     {
       "type": "paragraph",
-      "id": "uztw2eh"
+      "id": "uztw2eh",
+      "content": "Voltage is the potential difference between two points in an electric circuit."
     },
     {
       "type": "paragraph",
-      "id": "gylfbt3"
+      "id": "gylfbt3",
+      "content": "SI Unit of Voltage = Volt (V)"
     },
     {
       "id": "d8px8bq",
@@ -128,11 +141,13 @@
     },
     {
       "type": "paragraph",
-      "id": "cfba5e7"
+      "id": "cfba5e7",
+      "content": "Resistance is the opposition offered by a conductor to the flow of electric current."
     },
     {
       "type": "paragraph",
-      "id": "6qv5u3g"
+      "id": "6qv5u3g",
+      "content": "SI Unit of Resistance = Ohm (Ω)"
     },
     {
       "id": "3lohfyg",
@@ -142,12 +157,14 @@
     },
     {
       "type": "paragraph",
-      "id": "06egeex"
+      "id": "06egeex",
+      "content": "Ohm’s Law states that the current flowing through a conductor is directly proportional to the voltage across it, provided temperature remains constant."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "ijm7715"
+      "id": "ijm7715",
+      "content": "Formula: V = IR"
     },
     {
       "id": "rbdzp44",
@@ -157,17 +174,20 @@
     },
     {
       "type": "paragraph",
-      "id": "ryryc7x"
+      "id": "ryryc7x",
+      "content": "Electric power is the rate at which electrical energy is consumed."
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "g5tgcoo"
+      "id": "g5tgcoo",
+      "content": "Formula: P = VI"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "5ggihfe"
+      "id": "5ggihfe",
+      "content": "SI Unit = Watt (W)"
     },
     {
       "id": "f3w82r0",
@@ -213,22 +233,22 @@
         {
           "isHeader": true,
           "cells": [
-            null,
-            null
+            "<p><strong>Circuit Type</strong></p>",
+            "<p><strong>Description</strong></p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Series Circuit</p>",
+            "<p>Components connected in a single path</p>"
           ]
         },
         {
           "isHeader": false,
           "cells": [
-            null,
-            null
+            "<p>Parallel Circuit</p>",
+            "<p>Components connected in multiple paths</p>"
           ]
         }
       ]
@@ -241,11 +261,13 @@
     },
     {
       "type": "paragraph",
-      "id": "3c5x0zr"
+      "id": "3c5x0zr",
+      "content": "Magnetism is the property of materials that attract iron and other magnetic materials."
     },
     {
       "type": "paragraph",
-      "id": "wa4eqtz"
+      "id": "wa4eqtz",
+      "content": "Magnets have two poles: North pole and South pole."
     },
     {
       "id": "wkzu0mm",
@@ -255,19 +277,23 @@
     },
     {
       "type": "paragraph",
-      "id": "wzaevjl"
+      "id": "wzaevjl",
+      "content": "• Like poles repel each other."
     },
     {
       "type": "paragraph",
-      "id": "hy1fmh5"
+      "id": "hy1fmh5",
+      "content": "• Unlike poles attract each other."
     },
     {
       "type": "paragraph",
-      "id": "2djt5m3"
+      "id": "2djt5m3",
+      "content": "• Magnetic poles always exist in pairs."
     },
     {
       "type": "paragraph",
-      "id": "mzxmz40"
+      "id": "mzxmz40",
+      "content": "• Magnetic force is strongest at the poles."
     },
     {
       "id": "en0rj79",
@@ -277,11 +303,13 @@
     },
     {
       "type": "paragraph",
-      "id": "lglxeqs"
+      "id": "lglxeqs",
+      "content": "An electromagnet is a magnet produced by passing electric current through a coil of wire."
     },
     {
       "type": "paragraph",
-      "id": "lu7wx9m"
+      "id": "lu7wx9m",
+      "content": "Applications:"
     },
     {
       "type": "examAlert",
@@ -296,17 +324,20 @@
     {
       "type": "heading",
       "level": 4,
-      "id": "iaporf6"
+      "id": "iaporf6",
+      "content": "• Electric bell"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "kk681gm"
+      "id": "kk681gm",
+      "content": "• Electric motors"
     },
     {
       "type": "heading",
       "level": 4,
-      "id": "00xe629"
+      "id": "00xe629",
+      "content": "• Magnetic cranes"
     },
     {
       "id": "c3qxp5i",
@@ -316,19 +347,23 @@
     },
     {
       "type": "paragraph",
-      "id": "c6jq1dp"
+      "id": "c6jq1dp",
+      "content": "• SI unit of electric current is Ampere."
     },
     {
       "type": "paragraph",
-      "id": "xr18u6u"
+      "id": "xr18u6u",
+      "content": "• Ohm’s law formula is V = IR."
     },
     {
       "type": "paragraph",
-      "id": "t7yydm5"
+      "id": "t7yydm5",
+      "content": "• SI unit of resistance is Ohm."
     },
     {
       "type": "paragraph",
-      "id": "osf76vl"
+      "id": "osf76vl",
+      "content": "• Like poles repel and unlike poles attract."
     }
   ],
   "enriched": true

@@ -1,0 +1,136 @@
+{
+  "title": "Court vs Tribunal (EXAM FAVORITE)",
+  "order": 438,
+  "blocks": [
+    {
+      "id": "ol79ihv",
+      "type": "table",
+      "rows": [
+        {
+          "isHeader": true,
+          "cells": [
+            "<p><strong>Court</strong></p>",
+            "<p><strong>Tribunal</strong></p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Part of traditional judiciary</p>",
+            "<p>Specialized quasi-judicial body</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Follows strict procedures</p>",
+            "<p>Flexible procedures</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>General jurisdiction</p>",
+            "<p>Specific jurisdiction</p>"
+          ]
+        },
+        {
+          "isHeader": false,
+          "cells": [
+            "<p>Judges only</p>",
+            "<p>Judicial + Technical members</p>"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "content": "While a court of law is bound by the strict rules of evidence and procedure, a tribunal is guided by the principles of natural justice.",
+      "id": "1s3rzan"
+    },
+    {
+      "type": "comparisonTable",
+      "headers": [
+        "Feature",
+        "Court of Law",
+        "Tribunal"
+      ],
+      "rows": [
+        [
+          "Origin & Nature",
+          "Part of traditional judiciary",
+          "Quasi-judicial body created by statute"
+        ],
+        [
+          "Composition",
+          "Exclusively judicial officers",
+          "Both judicial and technical/administrative members"
+        ],
+        [
+          "Procedure",
+          "Strictly bound by Evidence Act and CPC/CrPC",
+          "Guided by Principles of Natural Justice"
+        ],
+        [
+          "Jurisdiction",
+          "General civil and criminal jurisdiction",
+          "Limited strictly to specified statutory matters"
+        ],
+        [
+          "Inherent Powers",
+          "Possesses inherent powers under civil law",
+          "Lacks inherent powers; limited to statutory provisions"
+        ]
+      ],
+      "id": "ppt4uv4"
+    },
+    {
+      "type": "statStrip",
+      "stats": [
+        {
+          "label": "Added By",
+          "value": "42nd Amendment (1976)",
+          "icon": "calendar"
+        },
+        {
+          "label": "Constitutional Part",
+          "value": "Part XIV-A",
+          "icon": "book"
+        },
+        {
+          "label": "Admin Tribunals",
+          "value": "Article 323A",
+          "icon": "info"
+        },
+        {
+          "label": "Other Tribunals",
+          "value": "Article 323B",
+          "icon": "check"
+        }
+      ],
+      "id": "7vhe5l9"
+    },
+    {
+      "type": "examAlert",
+      "items": [
+        "Article 323A tribunals can ONLY be created by Parliament; state legislatures have no power under 323A.",
+        "L. Chandra Kumar Case (1997): Appeals against Tribunal decisions must first go to the Division Bench of the concerned High Court, as judicial review under Article 226/227 is a basic feature of the Constitution.",
+        "Swaran Singh Committee recommended the insertion of Part XIV-A (Tribunals) into the Constitution."
+      ],
+      "id": "ppdi21j"
+    },
+    {
+      "type": "keyFacts",
+      "title": "Key Takeaways",
+      "items": [
+        "Courts are part of the traditional judicial system established to administer justice according to strict legal procedures.",
+        "Tribunals are quasi-judicial bodies created under Part XIV-A of the Constitution for speedy disposal of administrative and specialized disputes.",
+        "Courts are bound strictly by the Indian Evidence Act and the Code of Civil Procedure, whereas Tribunals follow the Principles of Natural Justice.",
+        "Article 323A empowers ONLY Parliament to establish Administrative Tribunals, whereas Article 323B allows both Parliament and State Legislatures to set up tribunals for specific matters.",
+        "Courts are presided over solely by judicial officers, while Tribunals consist of both judicial and technical/administrative members."
+      ],
+      "id": "cqf33c7"
+    }
+  ],
+  "enriched": true
+}
