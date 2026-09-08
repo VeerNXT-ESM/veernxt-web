@@ -29,3 +29,8 @@ __pycache__
 
 # Regenerable QA reports (scripts/scan_content_issues.mjs, etc.)
 content-issues-report.json
+
+# Raw production data dumps taken before destructive DB changes -- not
+# source, shouldn't be in history, kept locally in case a restore is
+# ever needed.
+backups/
