@@ -5,9 +5,11 @@
  * Runs a .sql file against the project's Postgres database via the
  * Supabase Management API (POST /v1/projects/{ref}/database/query),
  * authenticated with a personal access token (SUPABASE_ACCESS_TOKEN) --
- * not the service-role key, which can't run DDL over PostgREST. This is
- * the one-time path for applying sql/learning_center_schema.sql without
- * needing the Supabase CLI or a direct Postgres connection string.
+ * not the service-role key, which can't run DDL over PostgREST. The
+ * standing path for applying any sql/*.sql migration/DDL file without
+ * needing the Supabase CLI or a direct Postgres connection string --
+ * every DDL change in this repo's history has gone through this script,
+ * not a one-time tool for any single migration.
  *
  * Usage: node scripts/apply_sql_via_management_api.mjs <path-to-sql-file>
  */
