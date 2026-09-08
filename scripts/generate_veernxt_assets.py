@@ -12,7 +12,11 @@ from datetime import datetime
 
 API_URL = "https://api.openai.com/v1/images/generations"
 MODEL = "gpt-image-2"
-BASE_DIR = "veernxt_assets"
+# public/ so Vite actually serves these -- Dashboard.jsx references them as
+# absolute paths (/veernxt_assets/icons/..., /veernxt_assets/banners/...),
+# which only resolve if the folder lives under public/. A stray duplicate
+# at the repo root (pre-dating this fix) was cleaned up 2026-09-08.
+BASE_DIR = os.path.join("public", "veernxt_assets")
 
 SHARED_PROMPT = (
     "Premium editorial 3D illustration, modern Indian enterprise, subtle military precision. "
@@ -236,7 +240,7 @@ def main():
         time.sleep(2)
 
     print("=" * 60)
-    print("Generation complete! Check veernxt_assets/manifest.json for details.")
+    print("Generation complete! Check public/veernxt_assets/manifest.json for details.")
 
 if __name__ == "__main__":
     main()
