@@ -1817,7 +1817,16 @@ Same session, one more round of cleanup on the same "no deprecated stuff lying a
 
 `scripts/` went from ~75 files to 46; nothing in the kept set lost a real importer (checked via grep across `src/`/`api`/`scripts`/`docs` before each deletion batch, not assumed from filenames). `npm run build` clean after every commit in this section.
 
-### 43.10 Next session starts here
+### 43.10 One more cleanup round: `public/` prototype HTML files and unused hero images
+
+User asked to remove six named `.html` files under `public/` plus the whole `public/hero/` folder ("not used"), citing they have a backup elsewhere. Checked each rather than trusting the "not used" framing given how often that assumption broke this session (§43.2, §43.7) — two real exceptions turned up:
+
+- **`public/legal_aid_cell_prototype.html` is not actually a prototype** — despite the name, `src/pages/LegalAidCell.jsx` renders it live via iframe (`src="/legal_aid_cell_prototype.html"`). Deleting it would have broken the real Legal Aid Cell feature. Kept.
+- **`public/hero/` was only partially unused** — `hero_image.jpg` (video poster) and `about.png` are both referenced live by `LandingPage.jsx`, the page every signed-out visitor sees. The other 6 files in that folder (`career_mapping.png`, `community_support.png`, `financial_guidance.png`, `our_story.png`, `hero_image_old_white.png`, `merchandise.png`, plus `README.txt`) had zero references and were removed.
+
+The other 5 named HTML files (`chatbot_prototype.html`, `chatbot_prototype.local-draft.html`, `CGPT VeerNXT_Civil_Career_Prototype.html`, `Claude placement_cell_prototype.html`, `Civ Job Prototype ChatGPT.html`) were confirmed genuinely dead — the real chatbot is a live React component (`AiChatbotWidget`, global in `App.jsx`) that superseded the static prototype, and the other three were never wired to any route. Removed. `npm run build` clean after both commits.
+
+### 43.11 Next session starts here
 
 **Rotate the credentials found hardcoded in `check_messages_schema.cjs`/`query_r2.js` before anything else touches this repo's security posture** (§43.9) — a Postgres password and a full Cloudflare R2 key set were committed in plaintext; unknown whether they're still live.
 
