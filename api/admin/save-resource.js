@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import { S3Client, PutObjectCommand, ListObjectsV2Command, DeleteObjectsCommand, CopyObjectCommand } from '@aws-sdk/client-s3';
 import fs from 'node:fs';
 import path from 'node:path';
-import { getS3Client, uploadToR2, generateResourceId } from '../../scripts/ingest-drive-content.js';
+import { getS3Client, uploadToR2, generateResourceId } from '../../scripts/lib/ingest-drive-content.js';
 
 const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
