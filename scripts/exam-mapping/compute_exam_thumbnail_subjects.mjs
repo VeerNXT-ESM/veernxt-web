@@ -17,7 +17,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { createClient } from '@supabase/supabase-js';
-import { resolveThumbnailSubject } from '../src/lib/thumbnailTaxonomy.js';
+import { resolveThumbnailSubject } from '../../src/lib/thumbnailTaxonomy.js';
 
 function loadEnv() {
   const envPath = path.resolve(process.cwd(), '.env');

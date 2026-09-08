@@ -70,7 +70,7 @@
 
 import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
-import { CORE_TITLE_TO_SUBJECT, REGION_GS_TITLE_PATTERN } from '../src/lib/thumbnailTaxonomy.js';
+import { CORE_TITLE_TO_SUBJECT, REGION_GS_TITLE_PATTERN } from '../../src/lib/thumbnailTaxonomy.js';
 
 const args = process.argv.slice(2);
 const EXECUTE = args.includes('--execute');

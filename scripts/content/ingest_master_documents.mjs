@@ -31,7 +31,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { createClient } from '@supabase/supabase-js';
-import { processDocxBuffer, getS3Client, uploadToR2, generateSimpleHash } from './ingest-drive-content.js';
+import { processDocxBuffer, getS3Client, uploadToR2, generateSimpleHash } from '../lib/ingest-drive-content.js';
 
 function loadEnv() {
   const envPath = path.resolve(process.cwd(), '.env');

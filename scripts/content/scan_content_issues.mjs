@@ -35,13 +35,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const BOOKS_ROOT = path.resolve(__dirname, '..', 'public', 'books');
+const BOOKS_ROOT = path.resolve(__dirname, '..', '..', 'public', 'books');
 const CATEGORY_DIRS = ['Guide', 'Precis'];
 
 const outArgIndex = process.argv.indexOf('--out');
 const OUT_PATH = outArgIndex !== -1 && process.argv[outArgIndex + 1]
   ? path.resolve(process.argv[outArgIndex + 1])
-  : path.resolve(__dirname, '..', 'content-issues-report.json');
+  : path.resolve(__dirname, '..', '..', 'content-issues-report.json');
 
 const TEXT_BLOCK_TYPES = new Set([
   'paragraph', 'important', 'examTip', 'definition', 'example', 'callout', 'pullQuote',
@@ -166,7 +166,7 @@ function checkChapterBlocks(blocks, chapterLabel, bookDir, issues) {
       if (!b.src) {
         addIssue(issues, { ...where, issue: 'missing_image_src', severity: 'high', detail: 'image block has no src' });
       } else if (b.src.startsWith('/books/')) {
-        const absolute = path.resolve(__dirname, '..', 'public', b.src.replace(/^\//, ''));
+        const absolute = path.resolve(__dirname, '..', '..', 'public', b.src.replace(/^\//, ''));
         if (!fs.existsSync(absolute)) {
           addIssue(issues, { ...where, issue: 'missing_image_file', severity: 'high', detail: `${b.src} does not exist on disk` });
         }

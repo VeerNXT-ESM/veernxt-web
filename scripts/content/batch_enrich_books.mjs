@@ -13,7 +13,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { generateId, parseDocxToSemanticModelNode } from './docxParser.mjs';
+import { generateId, parseDocxToSemanticModelNode } from '../lib/docxParser.mjs';
 
 // Load environment variables
 function loadEnv() {

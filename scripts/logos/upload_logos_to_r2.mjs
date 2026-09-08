@@ -22,7 +22,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createClient } from '@supabase/supabase-js';
-import { getS3Client, uploadToR2 } from './ingest-drive-content.js';
+import { getS3Client, uploadToR2 } from '../lib/ingest-drive-content.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const EXECUTE = process.argv.includes('--execute');
@@ -78,7 +78,7 @@ function buildMatcher(bodies) {
 async function main() {
   console.log(`Mode: ${EXECUTE ? 'EXECUTE (uploading to R2)' : 'DRY RUN'}\n`);
 
-  const repoRoot = path.join(__dirname, '..');
+  const repoRoot = path.join(__dirname, '..', '..');
   const manifestPath = path.join(repoRoot, 'exam-logos', 'manifest.json');
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
   const bodies = await fetchAllRows('lc_conducting_bodies', 'id,name');

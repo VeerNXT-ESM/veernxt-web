@@ -72,11 +72,11 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { createClient } from '@supabase/supabase-js';
-import { getS3Client, uploadToR2 } from './ingest-drive-content.js';
+import { getS3Client, uploadToR2 } from '../lib/ingest-drive-content.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const EXECUTE = process.argv.includes('--execute');
-const SOURCE_ROOT = path.join(__dirname, '..', 'public', 'books');
+const SOURCE_ROOT = path.join(__dirname, '..', '..', 'public', 'books');
 const TOP_LEVEL_CATEGORIES = ['Guide', 'Precis'];
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);

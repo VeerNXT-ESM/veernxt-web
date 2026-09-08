@@ -85,7 +85,7 @@ async function main() {
   console.log(`Mode: ${EXECUTE ? 'EXECUTE (writing lc_conducting_bodies.logo_path)' : 'DRY RUN'}`);
   console.log(`Logo base URL: ${LOGO_BASE_URL}\n`);
 
-  const manifestPath = path.join(__dirname, '..', 'exam-logos', 'manifest.json');
+  const manifestPath = path.join(__dirname, '..', '..', 'exam-logos', 'manifest.json');
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
   const bodies = await fetchAllRows('lc_conducting_bodies', 'id,name,logo_path');
   const findMatch = buildMatcher(bodies);
