@@ -4,8 +4,6 @@ import { supabase } from '../lib/supabase';
 import { BookOpen, Landmark, MapPin, RefreshCw, ArrowRight, Target, Rocket, PlayCircle, HelpCircle, CheckCircle2 } from 'lucide-react';
 import { getEffectiveTier, TIERS } from '../lib/subscriptionAccess';
 import ExamContentPreview from '../components/ExamContentPreview';
-import TodayObjectiveCard from '../components/learning/TodayObjectiveCard';
-import { useExamContent, countProgress } from '../hooks/useExamContent';
 import Card from '../components/ui/Card';
 import ExamThumbnail from './admin/ExamThumbnail';
 import './ExamSyllabus.css';
@@ -20,14 +18,6 @@ const ExamSyllabus = () => {
   const [freeQuizUsed, setFreeQuizUsed] = useState(false);
   const [isPrimaryTarget, setIsPrimaryTarget] = useState(false);
   const [preparingLoading, setPreparingLoading] = useState(false);
-
-  // Real progress for the Mission Objective banner below — a second call to
-  // the same hook ExamContentPreview already uses internally with these
-  // identical args. Duplicates one fetch per page load; accepted tradeoff
-  // over prop-drilling ExamContentPreview's internal state (it's also
-  // consumed by JobBoard.jsx/Dashboard.jsx with different data needs).
-  const { byCategory: objectiveByCategory, completedResourceIds: objectiveCompletedIds } =
-    useExamContent(exam?.name, exam?.careerTrack, examId);
 
   useEffect(() => {
     let mounted = true;
@@ -129,25 +119,6 @@ const ExamSyllabus = () => {
 
   const subjects = Object.entries(exam.subjects || {}).filter(([, v]) => String(v).toLowerCase() === 'yes').map(([k]) => k);
 
-  const { completedCount, totalCount } = countProgress(objectiveByCategory, objectiveCompletedIds);
-  const objective = totalCount > 0 && completedCount === totalCount
-    ? {
-        type: 'complete',
-        title: `You've completed the ${exam.name} prep material`,
-        subtitle: 'Keep your edge sharp with a mock test or past-year paper.',
-        targetUrl: `/quiz-center?exam=${examId}`,
-        completedCount,
-        totalCount,
-      }
-    : {
-        type: 'read',
-        title: `Explore ${exam.name} Syllabus`,
-        subtitle: 'Review subjects, guidebooks, précis, and past question papers for your exam.',
-        targetUrl: '#section-guide',
-        completedCount,
-        totalCount,
-      };
-
   return (
     <div style={{ padding: '3rem 1.5rem', maxWidth: '900px', margin: '0 auto' }}>
       <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
@@ -196,8 +167,6 @@ const ExamSyllabus = () => {
           </div>
         </div>
       </div>
-
-      <TodayObjectiveCard examId={examId} examName={exam.name} objective={objective} compact />
 
       {subjects.length > 0 && (
         <Card padding="sm" style={{ marginBottom: '1.75rem' }}>
