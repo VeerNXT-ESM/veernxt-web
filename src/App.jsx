@@ -51,7 +51,6 @@ import UsersPage from './pages/admin/UsersPage';
 import RolesPermissionsPage from './pages/admin/RolesPermissionsPage';
 import QuizzesPage from './pages/admin/QuizzesPage';
 import PyqPapersPage from './pages/admin/PyqPapersPage';
-import AdminContentEditor from './pages/admin/AdminContentEditor';
 import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import BooksPage from './pages/admin/BooksPage';
 import BookChapterBrowser from './pages/admin/BookChapterBrowser';
@@ -201,7 +200,6 @@ function App() {
           <Route path="/admin/rewards" element={<AdminRewardsQueue />} />
           <Route path="/admin/private-sector" element={<AdminPrivateSector />} />
         </Route>
-        <Route path="/admin/content/:id?" element={<AdminContentEditor />} />
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
         <Route path="/admin/books/:category/:book" element={<BookChapterBrowser />} />
       </Routes>
