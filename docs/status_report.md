@@ -1826,7 +1826,16 @@ User asked to remove six named `.html` files under `public/` plus the whole `pub
 
 The other 5 named HTML files (`chatbot_prototype.html`, `chatbot_prototype.local-draft.html`, `CGPT VeerNXT_Civil_Career_Prototype.html`, `Claude placement_cell_prototype.html`, `Civ Job Prototype ChatGPT.html`) were confirmed genuinely dead — the real chatbot is a live React component (`AiChatbotWidget`, global in `App.jsx`) that superseded the static prototype, and the other three were never wired to any route. Removed. `npm run build` clean after both commits.
 
-### 43.11 Next session starts here
+### 43.11 Two more rounds, same theme, in follow-up messages: a live-code close call and a 294MB dead folder
+
+User kept naming more files to remove across several follow-up messages. Two more real exceptions turned up, checked the same way as §43.10 rather than trusting the "not needed" framing on sight:
+
+- **`public/legal_aid_cell_prototype.html` was named for removal a second time**, explicitly, after already being flagged live in §43.10. Held off and asked again rather than complying — it's still the entire `/legal-aid` route (`src/pages/LegalAidCell.jsx` iframes it directly), and no replacement exists. The user believed it had been "converted into tsx" — checked and found no `.tsx` files exist anywhere in this repo (plain JS/JSX project) and no separate React implementation of the Legal Aid Cell content; `src/pages/Legal.jsx` is a same-word-different-feature Terms & Conditions page, not a conversion of this one. Left untouched, route still depends on it.
+- **`public/hero/about.png` was named for removal too**, still live at the time (LandingPage.jsx's CTA section background — purely decorative, `alt=""`, `brightness(0.15)`). Confirmed with the user this time before deleting; removed both the file and its `<img>` element, keeping the existing gradient overlay as the section's background treatment so nothing visibly broke.
+
+Also removed: `public/VeerNXT_Flow.pdf` and `public/test-book.docx` (the latter only referenced by `src/pages/sandbox/BookReaderV2.jsx`, which isn't routed anywhere — fully unreachable), 7 more `public/homepage/` images with zero references, and the entire root-level `exam-logos/` folder (294MB, 1,026 files) — verified live first that all 671 `lc_conducting_bodies` rows already have `logo_path` pointing to real R2 URLs, confirming the user's "already ingested, content team replaced these" claim rather than assuming it. That folder sat outside `public/` anyway, so it was never served by the live app regardless of DB state — its only consumers were the bulk logo-sourcing/upload scripts, which stay (still useful for any future conducting body needing a logo) even with nothing local left to read.
+
+### 43.12 Next session starts here
 
 **Rotate the credentials found hardcoded in `check_messages_schema.cjs`/`query_r2.js` before anything else touches this repo's security posture** (§43.9) — a Postgres password and a full Cloudflare R2 key set were committed in plaintext; unknown whether they're still live.
 
