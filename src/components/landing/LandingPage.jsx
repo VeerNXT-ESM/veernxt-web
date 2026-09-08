@@ -483,12 +483,6 @@ const CTASection = () => {
   return (
     <section className="relative py-32 overflow-hidden border-t border-white/5">
       <div className="absolute inset-0 z-0">
-        <img
-          src="/hero/about.png"
-          className="w-full h-full object-cover"
-          alt=""
-          style={{ filter: 'brightness(0.15)' }}
-        />
         <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-ios-olive/30" />
       </div>
 
