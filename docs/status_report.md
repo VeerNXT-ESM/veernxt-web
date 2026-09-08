@@ -1861,5 +1861,7 @@ More rounds of the same theme via follow-up messages. `GEMINI.md` (generic `grap
 
 **`veernxt_assets/` (root, empty but undeletable due to a Windows file-handle lock on `veernxt_assets/banners/`) is fine to remove once the user closes this project** — every file under it is already safely duplicated at `public/veernxt_assets/` (§43.12), nothing left to lose.
 
+**`reports/` (root, 10 files, all dated 2026-08-17 to 08-20) removed as stale** — confirmed nothing reads it and its generating scripts (`dedupe_exam_list.py`, `build_master_datamap.py`, `logo_sourcer/`) are already gone; regenerating it would mean rebuilding those tools first, not a re-run.
+
 **Open, not touched this session**: whether `public/books` itself is safe to archive/delete now that it's confirmed not the live path (§43.4) — user said explicitly not to touch it this session. Real MSG91 WhatsApp credentials for the Private Sector module (§39.4), still not provisioned. The PYPS/OCR pipeline files found already uncommitted at the start of this session are still exactly where this session left them (§43 opening paragraph, reconfirmed untouched through §43.9's scripts/ cleanup) — nothing further was decided about them.
 
