@@ -6,6 +6,7 @@ import ExamThumbnail from './ExamThumbnail';
 import ExamEditorPanel from './ExamEditorPanel';
 import ExamIntroCard from './ExamIntroCard';
 import ExamStatusCard from './ExamStatusCard';
+import ExamResourcesPanel from './ExamResourcesPanel';
 import { PAGE_SIZE, useDebounced, StatusBadge } from './lcShared';
 import { Search, Plus, ChevronLeft, ChevronRight, ShieldAlert } from 'lucide-react';
 
@@ -223,12 +224,15 @@ const ExamsPage = () => {
 
         <div className="lc-exams-editor-col">
           {(selectedExamId || isCreatingNew) ? (
-            <ExamEditorPanel
-              key={selectedExamId || 'new'}
-              examId={selectedExamId}
-              onCreated={(newExam) => { selectExam(newExam.id); fetchExams(); }}
-              onSaved={fetchExams}
-            />
+            <>
+              <ExamEditorPanel
+                key={selectedExamId || 'new'}
+                examId={selectedExamId}
+                onCreated={(newExam) => { selectExam(newExam.id); fetchExams(); }}
+                onSaved={fetchExams}
+              />
+              <ExamResourcesPanel examId={selectedExamId} />
+            </>
           ) : (
             <div className="lc-card lc-empty-editor">
               <p className="lc-muted-note">Select an exam from the list to view and edit it, or click "Add Exam" to create one.</p>

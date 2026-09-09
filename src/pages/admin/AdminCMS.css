@@ -274,7 +274,12 @@
 /* ------------------------------------------------------------------ */
 .lc-exams-workspace { display: grid; grid-template-columns: 1.7fr 2fr 1.1fr; gap: 1.75rem; align-items: start; }
 .lc-exams-list-col, .lc-exams-editor-col, .lc-exams-rail-col { min-width: 0; }
-.lc-exams-list-scroll { max-height: calc(100vh - 24rem); overflow-y: auto; }
+/* Editor column now stacks Exam Details + Resources mapped to this exam --
+   scrolls internally (matching the list column) so a long resource list
+   doesn't push the whole page down. */
+.lc-exams-editor-col { display: flex; flex-direction: column; gap: 1.25rem; max-height: calc(100vh - 31rem); overflow-y: auto; }
+.lc-exams-rail-col { max-height: calc(100vh - 31rem); overflow-y: auto; }
+.lc-exams-list-scroll { max-height: calc(100vh - 31rem); overflow-y: auto; }
 .lc-table tr.clickable.selected { background: var(--admin-accent-soft); }
 .lc-table tr.clickable.selected td { color: var(--admin-text); }
 .lc-empty-editor { text-align: center; padding: 3rem 1.5rem; }
@@ -327,6 +332,7 @@
   .lc-stat-grid { grid-template-columns: repeat(2, 1fr); }
   .lc-exams-workspace { grid-template-columns: 1fr; }
   .lc-exams-list-scroll { max-height: 420px; }
+  .lc-exams-editor-col, .lc-exams-rail-col { max-height: none; overflow-y: visible; }
   .lc-editor-identity { grid-template-columns: 1fr; }
   .admin-sidebar:not(.collapsed) { position: fixed; z-index: 200; }
 }
