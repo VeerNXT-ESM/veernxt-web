@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronUp, ChevronDown, Copy, Trash2, Plus, X } from 'lucide-react';
+import { cleanHeadingContent } from '../book/BookBlocks';
 
 // Phase 2 of the book-content-editor plan: one edit form per block type,
 // matching the shapes BlockRenderer.jsx already knows how to render (see
@@ -88,7 +89,8 @@ const BlockFields = ({ block, onChange }) => {
   const set = (patch) => onChange({ ...block, ...patch });
 
   switch (block.type) {
-    case 'heading':
+    case 'heading': {
+      const isDirtyHtml = /<\/?(?:strong|b|br|p)\b/i.test(block.content || '');
       return (
         <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start' }}>
           <div style={{ width: 90 }}>
@@ -98,11 +100,34 @@ const BlockFields = ({ block, onChange }) => {
             </select>
           </div>
           <div style={{ flex: 1 }}>
-            <label style={labelStyle}>Heading text</label>
-            <input type="text" style={fieldStyle} value={block.content || ''} onChange={(e) => set({ content: e.target.value })} />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <label style={labelStyle}>Heading text</label>
+              {isDirtyHtml && (
+                <button
+                  type="button"
+                  onClick={() => set({ content: cleanHeadingContent(block.content) })}
+                  style={{ background: 'transparent', border: 'none', color: '#0f766e', fontSize: '0.72rem', fontWeight: 700, cursor: 'pointer', padding: 0 }}
+                  title="Strip HTML tags like <strong> and <br>"
+                >
+                  🧹 Clean HTML tags
+                </button>
+              )}
+            </div>
+            <input
+              type="text"
+              style={fieldStyle}
+              value={block.content || ''}
+              onChange={(e) => set({ content: e.target.value })}
+              onBlur={() => {
+                if (isDirtyHtml) {
+                  set({ content: cleanHeadingContent(block.content) });
+                }
+              }}
+            />
           </div>
         </div>
       );
+    }
 
     case 'paragraph': case 'important': case 'examTip': case 'definition': case 'example': case 'callout': case 'pullQuote':
       return <TextAreaField label="Content" value={block.content} onChange={(v) => set({ content: v })} rows={block.type === 'pullQuote' ? 2 : 4} />;

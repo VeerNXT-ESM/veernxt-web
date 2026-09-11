@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
@@ -35,9 +35,57 @@ const ExamsPage = () => {
 
   const [level, setLevel] = useState('');
   const [regionId, setRegionId] = useState('');
+  const [category, setCategory] = useState('');
   const [bodyId, setBodyId] = useState('');
   const [regionOptions, setRegionOptions] = useState([]);
-  const [bodyOptions, setBodyOptions] = useState([]);
+
+  // Whole lc_exams catalog, fetched once — the same catalog the candidate
+  // Learning Center loads, and Category/Conducting Body are derived from it
+  // client-side exactly the way that page derives them, so the two stay in
+  // sync (only the handful of categories actually in use there show up
+  // here, and Conducting Body cascades to just the bodies under whichever
+  // category is selected).
+  const [catalog, setCatalog] = useState([]);
+  useEffect(() => {
+    (async () => {
+      const { data } = await supabase
+        .from('lc_exams')
+        .select('id,name,category,conducting_body_id,conducting_body:lc_conducting_bodies(id,name),region:lc_regions(id,name,level)');
+      setCatalog(data || []);
+    })();
+  }, []);
+
+  // Exams satisfying the current Level/State-UT gate — same rule the
+  // candidate page applies (region_id match when a specific state/UT is
+  // picked, region.level match otherwise; "All Levels" leaves every exam in).
+  const levelExams = useMemo(() => catalog.filter((exam) => {
+    if (!exam.region) return false;
+    if (regionId) return exam.region.id === regionId;
+    if (level) return exam.region.level === level;
+    return true;
+  }), [catalog, level, regionId]);
+
+  const categoryOptions = useMemo(() => {
+    const seen = new Set();
+    for (const exam of levelExams) {
+      const c = (exam.category || '').trim();
+      if (c) seen.add(c);
+    }
+    return [...seen].sort((a, b) => a.localeCompare(b));
+  }, [levelExams]);
+
+  // Conducting bodies cascaded to the selected category, mirroring the
+  // candidate page's bodyOptions.
+  const bodyOptions = useMemo(() => {
+    const pool = category
+      ? levelExams.filter((exam) => (exam.category || '').trim() === category)
+      : levelExams;
+    const seen = new Map();
+    for (const exam of pool) {
+      if (exam.conducting_body && !seen.has(exam.conducting_body.id)) seen.set(exam.conducting_body.id, exam.conducting_body);
+    }
+    return [...seen.values()].sort((a, b) => a.name.localeCompare(b.name));
+  }, [levelExams, category]);
 
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search);
@@ -59,25 +107,7 @@ const ExamsPage = () => {
     })();
   }, [level]);
 
-  // Conducting bodies are deliberately not region-scoped in the schema (a
-  // few genuinely span regions) — re-derive the live set from lc_exams for
-  // whatever level/region is currently selected, rather than assume a
-  // fixed body→region mapping.
-  useEffect(() => {
-    (async () => {
-      let query = supabase.from('lc_exams').select('conducting_body_id, conducting_body:lc_conducting_bodies(id,name), region:lc_regions!inner(level)');
-      if (regionId) query = query.eq('region_id', regionId);
-      else if (level) query = query.eq('region.level', level);
-      const { data } = await query;
-      const seen = new Map();
-      for (const row of data || []) {
-        if (row.conducting_body && !seen.has(row.conducting_body.id)) seen.set(row.conducting_body.id, row.conducting_body);
-      }
-      setBodyOptions([...seen.values()].sort((a, b) => a.name.localeCompare(b.name)));
-    })();
-  }, [level, regionId]);
-
-  useEffect(() => { setPage(1); }, [debouncedSearch, bodyId, regionId, level]);
+  useEffect(() => { setPage(1); }, [debouncedSearch, bodyId, category, regionId, level]);
 
   // Same out-of-order-response guard used elsewhere in this CMS.
   const requestIdRef = useRef(0);
@@ -92,6 +122,7 @@ const ExamsPage = () => {
 
       if (debouncedSearch) query = query.ilike('name', `%${debouncedSearch}%`);
       if (bodyId) query = query.eq('conducting_body_id', bodyId);
+      if (category) query = query.eq('category', category);
       if (regionId) query = query.eq('region_id', regionId);
       else if (level) query = query.eq('region.level', level);
 
@@ -109,7 +140,7 @@ const ExamsPage = () => {
     } finally {
       if (requestId === requestIdRef.current) setLoading(false);
     }
-  }, [debouncedSearch, bodyId, regionId, level, page]);
+  }, [debouncedSearch, bodyId, category, regionId, level, page]);
 
   useEffect(() => { fetchExams(); }, [fetchExams]);
 
@@ -127,10 +158,11 @@ const ExamsPage = () => {
     setSearchParams({}, { replace: true });
   };
 
-  const chooseLevel = (v) => { setLevel(v); setRegionId(''); setBodyId(''); };
-  const chooseRegion = (v) => { setRegionId(v); setBodyId(''); };
+  const chooseLevel = (v) => { setLevel(v); setRegionId(''); setCategory(''); setBodyId(''); };
+  const chooseRegion = (v) => { setRegionId(v); setCategory(''); setBodyId(''); };
+  const chooseCategory = (v) => { setCategory(v); setBodyId(''); };
 
-  const clearFilters = () => { setSearch(''); setBodyId(''); setRegionId(''); setLevel(''); };
+  const clearFilters = () => { setSearch(''); setBodyId(''); setCategory(''); setRegionId(''); setLevel(''); };
 
   return (
     <div>
@@ -158,8 +190,12 @@ const ExamsPage = () => {
           </div>
         )}
         <div className="lc-filter-field">
+          <label>Category</label>
+          <Select searchable placeholder="All Categories" value={category} onChange={(e) => chooseCategory(e.target.value)} options={[{ value: '', label: 'All Categories' }, ...categoryOptions.map((c) => ({ value: c, label: c }))]} />
+        </div>
+        <div className="lc-filter-field">
           <label>Conducting Body</label>
-          <Select searchable placeholder="All Conducting Bodies" value={bodyId} onChange={(e) => setBodyId(e.target.value)} options={[{ value: '', label: 'All Conducting Bodies' }, ...bodyOptions.map((b) => ({ value: b.id, label: b.name }))]} />
+          <Select searchable placeholder={category ? `Bodies for ${category} (${bodyOptions.length})` : 'All Conducting Bodies'} value={bodyId} onChange={(e) => setBodyId(e.target.value)} options={[{ value: '', label: 'All Conducting Bodies' }, ...bodyOptions.map((b) => ({ value: b.id, label: b.name }))]} />
         </div>
         <div className="lc-filter-field">
           <label>Search Exam Name</label>

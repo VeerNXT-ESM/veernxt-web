@@ -1,6 +1,6 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, AlertTriangle, RefreshCw, Pencil, Eye, Save, X, Copy, Trash2 } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, RefreshCw, Pencil, Eye, Save, X, Copy, Trash2, Columns } from 'lucide-react';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
 import '../../components/book/BookBlocks.css';
@@ -49,6 +49,7 @@ const BookChapterBrowser = () => {
   const [chapterError, setChapterError] = useState(null);
 
   const [mode, setMode] = useState('preview'); // 'preview' | 'edit'
+  const [editViewLayout, setEditViewLayout] = useState('split'); // 'split' | 'editor' | 'preview'
   const [editTitle, setEditTitle] = useState('');
   const [editBlocks, setEditBlocks] = useState([]);
   const [dirty, setDirty] = useState(false);
@@ -57,6 +58,13 @@ const BookChapterBrowser = () => {
   const [topPickerOpen, setTopPickerOpen] = useState(false);
   const [showDuplicateModal, setShowDuplicateModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const mainRef = useRef(null);
+
+  useEffect(() => {
+    if (mainRef.current) {
+      mainRef.current.scrollTop = 0;
+    }
+  }, [activeOrder]);
 
   useEffect(() => {
     if (!localStorage.getItem('admin_session')) navigate('/admin/login');
@@ -159,6 +167,7 @@ const BookChapterBrowser = () => {
     setDirty(false);
     setSaveError(null);
     setMode('edit');
+    setEditViewLayout('split');
   };
 
   const cancelEdit = () => {
@@ -215,8 +224,8 @@ const BookChapterBrowser = () => {
     : [];
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f4f5f7', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 2rem', background: 'white', borderBottom: '1px solid #e2e8f0', position: 'sticky', top: 0, zIndex: 50 }}>
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', background: '#f4f5f7', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', overflow: 'hidden' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 2rem', background: 'white', borderBottom: '1px solid #e2e8f0', flexShrink: 0, zIndex: 50 }}>
         <button onClick={() => { if (dirty && !window.confirm('Discard unsaved changes?')) return; navigate('/admin/books'); }} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: 'transparent', border: 'none', color: '#64748b', fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer' }}>
           <ArrowLeft size={18} /> Book Content
         </button>
@@ -246,6 +255,69 @@ const BookChapterBrowser = () => {
         )}
         {mode === 'edit' && (
           <>
+            <div style={{ display: 'inline-flex', background: '#f1f5f9', padding: '3px', borderRadius: 8, border: '1px solid #e2e8f0', marginRight: '0.5rem' }}>
+              <button
+                type="button"
+                onClick={() => setEditViewLayout('split')}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: '0.35rem',
+                  padding: '0.4rem 0.75rem',
+                  borderRadius: 6,
+                  border: 'none',
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  background: editViewLayout === 'split' ? 'white' : 'transparent',
+                  color: editViewLayout === 'split' ? '#0f172a' : '#64748b',
+                  boxShadow: editViewLayout === 'split' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                  transition: 'all 0.15s',
+                }}
+                title="Side-by-side Editor and Live Preview"
+              >
+                <Columns size={13} /> Split View
+              </button>
+              <button
+                type="button"
+                onClick={() => setEditViewLayout('editor')}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: '0.35rem',
+                  padding: '0.4rem 0.75rem',
+                  borderRadius: 6,
+                  border: 'none',
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  background: editViewLayout === 'editor' ? 'white' : 'transparent',
+                  color: editViewLayout === 'editor' ? '#0f172a' : '#64748b',
+                  boxShadow: editViewLayout === 'editor' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                  transition: 'all 0.15s',
+                }}
+                title="Editor only"
+              >
+                <Pencil size={13} /> Editor
+              </button>
+              <button
+                type="button"
+                onClick={() => setEditViewLayout('preview')}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: '0.35rem',
+                  padding: '0.4rem 0.75rem',
+                  borderRadius: 6,
+                  border: 'none',
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  background: editViewLayout === 'preview' ? 'white' : 'transparent',
+                  color: editViewLayout === 'preview' ? '#0f172a' : '#64748b',
+                  boxShadow: editViewLayout === 'preview' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                  transition: 'all 0.15s',
+                }}
+                title="Preview only"
+              >
+                <Eye size={13} /> Preview
+              </button>
+            </div>
+
             <button onClick={cancelEdit} disabled={saving} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.5rem 1rem', background: 'white', color: '#64748b', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}>
               <X size={14} /> Cancel
             </button>
@@ -259,8 +331,8 @@ const BookChapterBrowser = () => {
       {bookError && <div style={{ padding: '2rem' }}>Failed to load this book: {bookError}</div>}
 
       {metadata && book && (
-        <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', minHeight: 'calc(100vh - 65px)' }}>
-          <aside style={{ borderRight: '1px solid #e2e8f0', background: 'white', overflowY: 'auto', padding: '0.75rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', flex: 1, minHeight: 0, overflow: 'hidden' }}>
+          <aside style={{ borderRight: '1px solid #e2e8f0', background: 'white', overflowY: 'auto', padding: '0.75rem', height: '100%' }}>
             {(metadata.chapters || []).map((c) => {
               const chapterIssues = issuesByChapterFile[c.file_name.replace('chapters/', '')] || [];
               const highCount = chapterIssues.filter((i) => i.severity === 'high').length;
@@ -289,97 +361,218 @@ const BookChapterBrowser = () => {
             })}
           </aside>
 
-          <main style={{ padding: '2rem', overflowY: 'auto' }}>
-            <div style={{ background: 'white', borderRadius: 16, padding: '2rem', boxShadow: '0 2px 20px rgba(0,0,0,0.04)', border: '1px solid #e8eaed', maxWidth: 820, margin: '0 auto' }}>
+          {mode === 'preview' ? (
+            <main ref={mainRef} style={{ padding: '2rem', overflowY: 'auto', height: '100%' }}>
+              <div style={{ background: 'white', borderRadius: 16, padding: '2rem', boxShadow: '0 2px 20px rgba(0,0,0,0.04)', border: '1px solid #e8eaed', maxWidth: 820, margin: '0 auto' }}>
+                {chapterLoading && <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem' }}><RefreshCw className="animate-spin" size={24} /></div>}
+                {chapterError && <p>Unable to load this chapter ({chapterError}).</p>}
+
+                {chapterData && !chapterLoading && (
+                  <>
+                    <ChapterHeader title={chapterData.title} order={chapterData.order} />
+                    {chapterLevelIssues.length > 0 && (
+                      <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 10, padding: '0.85rem 1rem', marginBottom: '1.25rem' }}>
+                        <strong style={{ color: '#b91c1c', fontSize: '0.82rem' }}>Chapter-level issues</strong>
+                        <ul style={{ margin: '0.4rem 0 0', paddingLeft: '1.1rem', fontSize: '0.78rem', color: '#7f1d1d' }}>
+                          {chapterLevelIssues.map((iss, i) => <li key={i}>{iss.issue}: {iss.detail}</li>)}
+                        </ul>
+                      </div>
+                    )}
+                    {(chapterData.blocks || []).map((block, idx) => {
+                      const blockIssues = issuesByBlockId[`${activeChapterMeta.file_name.replace('chapters/', '')}::${block.id}`] || [];
+                      const worst = blockIssues.find((i) => i.severity === 'high') || blockIssues[0];
+                      const style = worst ? SEVERITY_STYLE[worst.severity] : null;
+                      return (
+                        <div
+                          key={block.id || idx}
+                          style={style ? { border: `1.5px dashed ${style.border}`, background: style.bg, borderRadius: 8, padding: '0.6rem 0.75rem', marginBottom: '0.5rem' } : undefined}
+                        >
+                          {blockIssues.length > 0 && (
+                            <div style={{ fontSize: '0.7rem', fontWeight: 800, color: SEVERITY_STYLE[worst.severity].label, marginBottom: '0.3rem', textTransform: 'uppercase', letterSpacing: '0.03em' }}>
+                              <AlertTriangle size={11} style={{ verticalAlign: '-1px', marginRight: 4 }} />
+                              {blockIssues.map((i) => i.issue).join(', ')}
+                            </div>
+                          )}
+                          <BlockRenderer block={block} />
+                        </div>
+                      );
+                    })}
+                    {(chapterData.blocks || []).length === 0 && <p style={{ color: '#94a3b8' }}>This chapter has no blocks.</p>}
+                  </>
+                )}
+              </div>
+            </main>
+          ) : (
+            <main style={{ padding: '1.25rem', height: '100%', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
               {chapterLoading && <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem' }}><RefreshCw className="animate-spin" size={24} /></div>}
               {chapterError && <p>Unable to load this chapter ({chapterError}).</p>}
 
-              {chapterData && !chapterLoading && mode === 'preview' && (
-                <>
-                  <ChapterHeader title={chapterData.title} order={chapterData.order} />
-                  {chapterLevelIssues.length > 0 && (
-                    <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 10, padding: '0.85rem 1rem', marginBottom: '1.25rem' }}>
-                      <strong style={{ color: '#b91c1c', fontSize: '0.82rem' }}>Chapter-level issues</strong>
-                      <ul style={{ margin: '0.4rem 0 0', paddingLeft: '1.1rem', fontSize: '0.78rem', color: '#7f1d1d' }}>
-                        {chapterLevelIssues.map((iss, i) => <li key={i}>{iss.issue}: {iss.detail}</li>)}
-                      </ul>
-                    </div>
-                  )}
-                  {(chapterData.blocks || []).map((block, idx) => {
-                    const blockIssues = issuesByBlockId[`${activeChapterMeta.file_name.replace('chapters/', '')}::${block.id}`] || [];
-                    const worst = blockIssues.find((i) => i.severity === 'high') || blockIssues[0];
-                    const style = worst ? SEVERITY_STYLE[worst.severity] : null;
-                    return (
-                      <div
-                        key={block.id || idx}
-                        style={style ? { border: `1.5px dashed ${style.border}`, background: style.bg, borderRadius: 8, padding: '0.6rem 0.75rem', marginBottom: '0.5rem' } : undefined}
-                      >
-                        {blockIssues.length > 0 && (
-                          <div style={{ fontSize: '0.7rem', fontWeight: 800, color: SEVERITY_STYLE[worst.severity].label, marginBottom: '0.3rem', textTransform: 'uppercase', letterSpacing: '0.03em' }}>
-                            <AlertTriangle size={11} style={{ verticalAlign: '-1px', marginRight: 4 }} />
-                            {blockIssues.map((i) => i.issue).join(', ')}
+              {chapterData && !chapterLoading && (
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: editViewLayout === 'split' ? 'minmax(0, 1fr) minmax(0, 1fr)' : 'minmax(0, 1fr)',
+                  gap: '1.25rem',
+                  flex: 1,
+                  minHeight: 0,
+                  height: '100%',
+                  maxWidth: editViewLayout === 'split' ? 'none' : '860px',
+                  margin: editViewLayout === 'split' ? '0' : '0 auto',
+                  width: '100%',
+                }}>
+                  {/* Left Column: Chapter Editor */}
+                  {(editViewLayout === 'split' || editViewLayout === 'editor') && (
+                    <div style={{
+                      background: 'white',
+                      borderRadius: 14,
+                      border: '1px solid #e2e8f0',
+                      boxShadow: '0 2px 14px rgba(0,0,0,0.03)',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      height: '100%',
+                      minHeight: 0,
+                      overflow: 'hidden'
+                    }}>
+                      <div style={{
+                        padding: '0.85rem 1.25rem',
+                        borderBottom: '1px solid #e2e8f0',
+                        background: '#f8fafc',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        flexShrink: 0
+                      }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                          <Pencil size={15} style={{ color: '#1F3A2E' }} />
+                          <span style={{ fontWeight: 800, fontSize: '0.88rem', color: '#0f172a' }}>Chapter Editor</span>
+                          <span style={{ fontSize: '0.72rem', color: '#64748b' }}>({editBlocks.length} blocks)</span>
+                        </div>
+                        {dirty ? (
+                          <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#d97706', background: '#fffbeb', border: '1px solid #fef3c7', padding: '0.2rem 0.55rem', borderRadius: 6 }}>
+                            Unsaved changes
+                          </span>
+                        ) : (
+                          <span style={{ fontSize: '0.72rem', fontWeight: 600, color: '#64748b' }}>
+                            Saved
+                          </span>
+                        )}
+                      </div>
+
+                      <div style={{ padding: '1.25rem', overflowY: 'auto', flex: 1 }}>
+                        {saveError && (
+                          <div style={{ background: '#fef2f2', border: '1px solid #fecaca', color: '#b91c1c', borderRadius: 8, padding: '0.6rem 0.85rem', marginBottom: '1rem', fontSize: '0.8rem' }}>
+                            Save failed: {saveError}
                           </div>
                         )}
-                        <BlockRenderer block={block} />
-                      </div>
-                    );
-                  })}
-                  {(chapterData.blocks || []).length === 0 && <p style={{ color: '#94a3b8' }}>This chapter has no blocks.</p>}
-                </>
-              )}
+                        <div style={{ marginBottom: '1.25rem' }}>
+                          <label style={{ fontSize: '0.72rem', fontWeight: 700, color: '#475569', display: 'block', marginBottom: '0.35rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                            Chapter title
+                          </label>
+                          <input
+                            type="text"
+                            value={editTitle}
+                            onChange={(e) => { setEditTitle(e.target.value); setDirty(true); }}
+                            placeholder="Enter chapter title..."
+                            style={{ width: '100%', padding: '0.65rem 0.85rem', border: '1px solid #cbd5e1', borderRadius: 8, fontSize: '0.95rem', fontWeight: 700, boxSizing: 'border-box', background: '#f8fafc' }}
+                          />
+                        </div>
 
-              {chapterData && !chapterLoading && mode === 'edit' && (
-                <>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: '#4b6b32', fontSize: '0.78rem', fontWeight: 700 }}>
-                    <Eye size={14} /> Edit mode — Save Chapter publishes these changes immediately.
-                  </div>
-                  {saveError && (
-                    <div style={{ background: '#fef2f2', border: '1px solid #fecaca', color: '#b91c1c', borderRadius: 8, padding: '0.6rem 0.85rem', marginBottom: '1rem', fontSize: '0.8rem' }}>
-                      Save failed: {saveError}
+                        {editBlocks.length === 0 && (
+                          <div style={{ textAlign: 'center', padding: '2rem 1rem', background: '#f8fafc', borderRadius: 8, border: '1px dashed #cbd5e1', color: '#64748b', fontSize: '0.85rem' }}>
+                            This chapter has no blocks yet. Click below to add your first block.
+                          </div>
+                        )}
+
+                        {editBlocks.map((block, idx) => (
+                          <BlockEditForm
+                            key={block.id || idx}
+                            block={block}
+                            onChange={(updated) => updateBlock(idx, updated)}
+                            onDelete={() => deleteBlock(idx)}
+                            onDuplicate={() => duplicateBlock(idx)}
+                            onMoveUp={() => moveBlock(idx, -1)}
+                            onMoveDown={() => moveBlock(idx, 1)}
+                            canMoveUp={idx > 0}
+                            canMoveDown={idx < editBlocks.length - 1}
+                            onInsertAfter={(type) => insertBlockAt(idx + 1, type)}
+                          />
+                        ))}
+
+                        <div style={{ marginTop: '1rem', paddingBottom: '1.5rem' }}>
+                          {topPickerOpen ? (
+                            <BlockTypePicker onPick={(type) => { insertBlockAt(editBlocks.length, type); setTopPickerOpen(false); }} onCancel={() => setTopPickerOpen(false)} />
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={() => setTopPickerOpen(true)}
+                              style={{ width: '100%', padding: '0.75rem', border: '1.5px dashed #94a3b8', borderRadius: 8, background: '#f8fafc', color: '#1F3A2E', fontWeight: 700, fontSize: '0.82rem', cursor: 'pointer', transition: 'all 0.15s' }}
+                            >
+                              + Add block at end
+                            </button>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   )}
-                  <div style={{ marginBottom: '1rem' }}>
-                    <label style={{ fontSize: '0.7rem', fontWeight: 700, color: '#64748b', display: 'block', marginBottom: '0.25rem' }}>Chapter title</label>
-                    <input
-                      type="text" value={editTitle}
-                      onChange={(e) => { setEditTitle(e.target.value); setDirty(true); }}
-                      style={{ width: '100%', padding: '0.6rem 0.75rem', border: '1px solid #e2e8f0', borderRadius: 8, fontSize: '0.95rem', fontWeight: 700, boxSizing: 'border-box' }}
-                    />
-                  </div>
 
-                  {editBlocks.length === 0 && <p style={{ color: '#94a3b8' }}>This chapter has no blocks yet.</p>}
+                  {/* Right Column: Live Preview ("when edited how it looks") */}
+                  {(editViewLayout === 'split' || editViewLayout === 'preview') && (
+                    <div style={{
+                      background: 'white',
+                      borderRadius: 14,
+                      border: '1px solid #e2e8f0',
+                      boxShadow: '0 2px 14px rgba(0,0,0,0.03)',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      height: '100%',
+                      minHeight: 0,
+                      overflow: 'hidden'
+                    }}>
+                      <div style={{
+                        padding: '0.85rem 1.25rem',
+                        borderBottom: '1px solid #e2e8f0',
+                        background: '#f8fafc',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        flexShrink: 0
+                      }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                          <Eye size={15} style={{ color: '#0f766e' }} />
+                          <span style={{ fontWeight: 800, fontSize: '0.88rem', color: '#0f172a' }}>Live Preview</span>
+                          <span style={{ fontSize: '0.7rem', color: '#0f766e', background: '#f0fdfa', border: '1px solid #ccfbf1', padding: '0.15rem 0.45rem', borderRadius: 999, fontWeight: 700 }}>
+                            Updates in real-time
+                          </span>
+                        </div>
+                        <span style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: 600 }}>
+                          Chapter #{chapterData?.order}
+                        </span>
+                      </div>
 
-                  {editBlocks.map((block, idx) => (
-                    <BlockEditForm
-                      key={block.id || idx}
-                      block={block}
-                      onChange={(updated) => updateBlock(idx, updated)}
-                      onDelete={() => deleteBlock(idx)}
-                      onDuplicate={() => duplicateBlock(idx)}
-                      onMoveUp={() => moveBlock(idx, -1)}
-                      onMoveDown={() => moveBlock(idx, 1)}
-                      canMoveUp={idx > 0}
-                      canMoveDown={idx < editBlocks.length - 1}
-                      onInsertAfter={(type) => insertBlockAt(idx + 1, type)}
-                    />
-                  ))}
+                      <div style={{ padding: '1.75rem', overflowY: 'auto', flex: 1, background: '#ffffff' }}>
+                        <ChapterHeader title={editTitle || 'Untitled Chapter'} order={chapterData?.order || 1} />
 
-                  <div style={{ marginTop: '0.75rem' }}>
-                    {topPickerOpen ? (
-                      <BlockTypePicker onPick={(type) => { insertBlockAt(editBlocks.length, type); setTopPickerOpen(false); }} onCancel={() => setTopPickerOpen(false)} />
-                    ) : (
-                      <button
-                        type="button" onClick={() => setTopPickerOpen(true)}
-                        style={{ width: '100%', padding: '0.6rem', border: '1px dashed #cbd5e1', borderRadius: 8, background: 'transparent', color: '#64748b', fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}
-                      >
-                        + Add block at end
-                      </button>
-                    )}
-                  </div>
-                </>
+                        <div className="bk-blocks-container" style={{ marginTop: '1.25rem' }}>
+                          {editBlocks.map((block, idx) => (
+                            <div key={block.id || idx} style={{ marginBottom: '0.75rem' }}>
+                              <BlockRenderer block={block} />
+                            </div>
+                          ))}
+                        </div>
+
+                        {editBlocks.length === 0 && (
+                          <div style={{ textAlign: 'center', padding: '3.5rem 1.5rem', color: '#94a3b8' }}>
+                            <Eye size={32} style={{ opacity: 0.35, marginBottom: '0.75rem' }} />
+                            <p style={{ margin: 0, fontWeight: 700, fontSize: '0.9rem', color: '#64748b' }}>Live preview will appear here</p>
+                            <p style={{ margin: '0.35rem 0 0', fontSize: '0.8rem', color: '#94a3b8' }}>Add blocks on the left editor to preview how candidates see them.</p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
               )}
-            </div>
-          </main>
+            </main>
+          )}
         </div>
       )}
 

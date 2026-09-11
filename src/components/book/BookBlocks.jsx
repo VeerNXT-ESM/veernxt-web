@@ -6,9 +6,35 @@ export const ParagraphBlock = ({ content }) => {
   return <div className="bk-paragraph" dangerouslySetInnerHTML={{ __html: content }} />;
 };
 
+export function cleanHeadingContent(content) {
+  if (!content || typeof content !== 'string') return content;
+  let text = content.trim();
+
+  // Strip leading and trailing break tags (including malformed <br></br>, </br>, <br/>)
+  const stripBreaks = (s) => s
+    .replace(/^(\s*<\/?br\s*\/?>\s*)+/gi, '')
+    .replace(/(\s*<\/?br\s*\/?>\s*)+$/gi, '')
+    .trim();
+
+  let prev;
+  do {
+    prev = text;
+    text = stripBreaks(text);
+    text = text.replace(/^<p\b[^>]*>([\s\S]*?)<\/p>$/i, (_, inner) => inner.trim());
+    text = text.replace(/^<(?:strong|b)\b[^>]*>([\s\S]*?)<\/(?:strong|b)>$/i, (_, inner) => inner.trim());
+    text = stripBreaks(text);
+  } while (text !== prev);
+
+  // Normalize any remaining internal <br></br> or </br> into <br />
+  text = text.replace(/<br\s*><\/br>|<\/br>/gi, '<br />');
+
+  return text;
+}
+
 export const HeadingBlock = ({ level, content }) => {
   const Tag = `h${level}`;
-  return <Tag className={`bk-heading bk-h${level}`}>{content}</Tag>;
+  const cleaned = cleanHeadingContent(content);
+  return <Tag className={`bk-heading bk-h${level}`} dangerouslySetInnerHTML={{ __html: cleaned }} />;
 };
 
 export const ImageBlock = ({ src, alt, caption }) => {
@@ -121,12 +147,13 @@ export const TableBlock = ({ rows }) => {
 };
 
 export const ChapterHeader = ({ title, order }) => {
+  const cleaned = cleanHeadingContent(title);
   return (
     <header className="bk-chapter-header">
       <div className="bk-chapter-number-huge">{String(order).padStart(2, '0')}</div>
       <div className="bk-chapter-title-wrapper">
         <span className="bk-chapter-eyebrow">CHAPTER</span>
-        <h1 className="bk-chapter-title">{title}</h1>
+        <h1 className="bk-chapter-title" dangerouslySetInnerHTML={{ __html: cleaned }} />
       </div>
     </header>
   );
@@ -157,7 +184,7 @@ export const KeyFactsBlock = ({ title = 'Key Facts', items }) => {
         {items.map((item, i) => (
           <li key={i}>
             <span className="bk-keyfacts-bullet">{String(i + 1).padStart(2, '0')}</span>
-            <span>{item}</span>
+            <span dangerouslySetInnerHTML={{ __html: item }} />
           </li>
         ))}
       </ul>
@@ -168,7 +195,7 @@ export const KeyFactsBlock = ({ title = 'Key Facts', items }) => {
 export const PullQuoteBlock = ({ content }) => (
   <blockquote className="bk-pullquote">
     <span className="bk-pullquote-mark">&ldquo;</span>
-    <p>{content}</p>
+    <p dangerouslySetInnerHTML={{ __html: content }} />
   </blockquote>
 );
 
@@ -182,7 +209,7 @@ export const ExamAlertBlock = ({ items }) => {
       </div>
       <ul className="bk-exam-alert-list">
         {items.map((item, i) => (
-          <li key={i}>{item}</li>
+          <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
         ))}
       </ul>
     </div>
@@ -197,7 +224,7 @@ export const ComparisonTableBlock = ({ headers, rows }) => {
         {headers && headers.length > 0 && (
           <thead>
             <tr>
-              {headers.map((h, i) => <th key={i}>{h}</th>)}
+              {headers.map((h, i) => <th key={i} dangerouslySetInnerHTML={{ __html: h }} />)}
             </tr>
           </thead>
         )}
@@ -205,8 +232,8 @@ export const ComparisonTableBlock = ({ headers, rows }) => {
           {rows.map((row, i) => (
             <tr key={i}>
               {Array.isArray(row) 
-                ? row.map((cell, j) => <td key={j}>{cell}</td>)
-                : Object.values(row).map((cell, j) => <td key={j}>{cell}</td>)
+                ? row.map((cell, j) => <td key={j} dangerouslySetInnerHTML={{ __html: cell }} />)
+                : Object.values(row).map((cell, j) => <td key={j} dangerouslySetInnerHTML={{ __html: cell }} />)
               }
             </tr>
           ))}

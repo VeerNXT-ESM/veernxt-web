@@ -10,20 +10,25 @@ import { ChevronDown } from 'lucide-react';
  *
  * options: [{ value, label }]
  */
-export default function Select({ options, value, onChange, placeholder, disabled, name, searchable = false, className, style }) {
+export default function Select({ options, value, onChange, placeholder, disabled, name, searchable = false, className, style, menuPortalTarget, menuPosition }) {
   if (searchable) {
     return (
       <ReactSelect
         value={options.find((opt) => opt.value === value) || null}
         onChange={(selected) => onChange({ target: { name, value: selected ? selected.value : '', type: 'select-one' } })}
         options={options}
-        styles={reactSelectStyles}
+        styles={{
+          ...reactSelectStyles,
+          ...(menuPortalTarget ? { menuPortal: (base) => ({ ...base, zIndex: 99999 }) } : {}),
+        }}
         placeholder={placeholder || 'Select...'}
         isDisabled={disabled}
         components={{ DropdownIndicator }}
         isClearable={false}
         isSearchable
         menuPlacement="auto"
+        menuPortalTarget={menuPortalTarget}
+        menuPosition={menuPosition || (menuPortalTarget ? 'fixed' : 'absolute')}
         className={className}
       />
     );

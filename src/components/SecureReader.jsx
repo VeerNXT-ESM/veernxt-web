@@ -243,7 +243,7 @@ const SecureReader = () => {
       
       {isBlocksFormat ? (
         <div className="bk-reader-layout" style={{ minHeight: 'auto' }}>
-          <aside className="bk-sidebar" style={{ position: 'static', height: 'auto', maxHeight: 'calc(100vh - 65px)' }}>
+          <aside className="bk-sidebar" style={{ position: 'sticky', top: '80px', height: 'calc(100vh - 80px)', maxHeight: 'calc(100vh - 80px)', overflowY: 'auto', alignSelf: 'flex-start' }}>
             <div className="bk-sidebar-header">
               <BookOpen size={20} style={{ color: '#0f766e', flexShrink: 0 }} />
               <h3>{cleanContentTitle(resource.title, resource.exam_name)}</h3>
