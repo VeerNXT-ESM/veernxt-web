@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import ExamThumbnail from './ExamThumbnail';
-import { Save, Plus, X } from 'lucide-react';
+import { Save, Plus, X, Trash2 } from 'lucide-react';
 
 const ACCENT_COLORS = ['#4b6b32', '#1F3A2E', '#b89047', '#2563eb', '#7c3aed', '#dc2626'];
 
@@ -13,10 +13,11 @@ const ACCENT_COLORS = ['#4b6b32', '#1F3A2E', '#b89047', '#2563eb', '#7c3aed', '#
  *
  * examId === null means "creating a new exam" (isNew mode).
  */
-const ExamEditorPanel = ({ examId, onCreated, onSaved }) => {
+const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   const isNew = !examId;
   const [loading, setLoading] = useState(!isNew);
   const [saving, setSaving] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   const [conductingBodies, setConductingBodies] = useState([]);
   const [regions, setRegions] = useState([]);
@@ -118,6 +119,28 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved }) => {
     }
   };
 
+  const handleDeleteExam = async () => {
+    if (!examId) return;
+    const confirmMessage = `Are you sure you want to delete "${form.name || 'this exam'}"?\n\nThis will remove the exam along with its linked tags, intros, and resource links.`;
+    if (!window.confirm(confirmMessage)) return;
+
+    setDeleting(true);
+    try {
+      await supabase.from('lc_exam_tags').delete().eq('exam_id', examId);
+      await supabase.from('lc_exam_resources').delete().eq('exam_id', examId);
+      await supabase.from('lc_exam_intros').delete().eq('exam_id', examId);
+
+      const { error } = await supabase.from('lc_exams').delete().eq('id', examId);
+      if (error) throw error;
+
+      onDeleted?.(examId);
+    } catch (err) {
+      alert('Failed to delete exam: ' + err.message);
+    } finally {
+      setDeleting(false);
+    }
+  };
+
   // --- Tags ---------------------------------------------------------
   const addTag = async (name) => {
     const trimmed = name.trim();
@@ -149,8 +172,20 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved }) => {
     <div className="lc-editor-panel">
       <div className="lc-editor-toolbar">
         <h2>{isNew ? 'New Exam' : 'Exam Details'}</h2>
-        <div className="lc-editor-toolbar-actions">
-          <button className="lc-btn primary" onClick={handleSave} disabled={saving}><Save size={14} /> {saving ? 'Saving…' : 'Save Changes'}</button>
+        <div className="lc-editor-toolbar-actions" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+          {!isNew && (
+            <button
+              className="lc-btn danger"
+              onClick={handleDeleteExam}
+              disabled={deleting || saving}
+              title="Delete this exam"
+            >
+              <Trash2 size={14} /> {deleting ? 'Deleting…' : 'Delete Exam'}
+            </button>
+          )}
+          <button className="lc-btn primary" onClick={handleSave} disabled={saving || deleting}>
+            <Save size={14} /> {saving ? 'Saving…' : 'Save Changes'}
+          </button>
         </div>
       </div>
 

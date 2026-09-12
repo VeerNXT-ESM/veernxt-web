@@ -210,3 +210,71 @@ export const ConfirmDeleteModal = ({ book, onClose, onDeleted }) => {
     </ModalShell>
   );
 };
+
+export const RenameBookModal = ({ book, onClose, onRenamed }) => {
+  const [newTitle, setNewTitle] = useState(book?.title || '');
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleRename = async () => {
+    const trimmed = newTitle.trim();
+    if (!trimmed || trimmed === book?.title) {
+      onClose();
+      return;
+    }
+    setSaving(true);
+    setError(null);
+    try {
+      const data = await postBooksAction({
+        type: 'books-rename',
+        resourceId: book.resourceId,
+        newTitle: trimmed,
+      });
+      onRenamed(data.newTitle || trimmed);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <ModalShell
+      title="Rename Book"
+      onClose={onClose}
+      footer={<>
+        <button style={btnSecondary} onClick={onClose} disabled={saving}>Cancel</button>
+        <button
+          style={{ ...btnPrimary, opacity: newTitle.trim() && newTitle.trim() !== book?.title ? 1 : 0.5 }}
+          onClick={handleRename}
+          disabled={saving || !newTitle.trim() || newTitle.trim() === book?.title}
+        >
+          {saving ? 'Saving…' : 'Rename'}
+        </button>
+      </>}
+    >
+      {error && <div style={errorStyle}>{error}</div>}
+      <div>
+        <label style={labelStyle}>Book Title</label>
+        <input
+          type="text"
+          style={fieldStyle}
+          value={newTitle}
+          onChange={(e) => setNewTitle(e.target.value)}
+          placeholder="e.g. Quantitative Aptitude"
+          autoFocus
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              handleRename();
+            }
+          }}
+        />
+      </div>
+      <p style={{ fontSize: '0.78rem', color: '#94a3b8', margin: 0 }}>
+        Updates the book title across all connected exams and in the live reader metadata.
+      </p>
+    </ModalShell>
+  );
+};
+

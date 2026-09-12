@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, AlertTriangle, CheckCircle2, Plus, Copy } from 'lucide-react';
+import { Search, AlertTriangle, CheckCircle2, Plus, Copy, Pencil } from 'lucide-react';
 import { useDebounced } from './lcShared';
-import { NewBookModal, DuplicateBookModal } from '../../components/admin/BookFormModals';
+import { NewBookModal, DuplicateBookModal, RenameBookModal } from '../../components/admin/BookFormModals';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
@@ -35,6 +35,7 @@ const BooksPage = () => {
   const [sort, setSort] = useState('issues');
   const [showNewModal, setShowNewModal] = useState(false);
   const [duplicateSource, setDuplicateSource] = useState(null);
+  const [renameSource, setRenameSource] = useState(null);
 
   const fetchBooks = useCallback(async () => {
     try {
@@ -151,12 +152,20 @@ const BooksPage = () => {
                   )}
                 </td>
                 <td onClick={(e) => e.stopPropagation()}>
-                  <button
-                    className="lc-icon-btn" title="Duplicate this book"
-                    onClick={() => setDuplicateSource(b)}
-                  >
-                    <Copy size={14} />
-                  </button>
+                  <div style={{ display: 'flex', gap: '0.4rem', justifyContent: 'flex-end' }}>
+                    <button
+                      className="lc-icon-btn" title="Rename this book"
+                      onClick={() => setRenameSource(b)}
+                    >
+                      <Pencil size={14} />
+                    </button>
+                    <button
+                      className="lc-icon-btn" title="Duplicate this book"
+                      onClick={() => setDuplicateSource(b)}
+                    >
+                      <Copy size={14} />
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}
@@ -178,6 +187,13 @@ const BooksPage = () => {
           source={duplicateSource}
           onClose={() => setDuplicateSource(null)}
           onDuplicated={(cat, resourceId, newTitle) => { setDuplicateSource(null); fetchBooks(); navigate(`/admin/books/${cat}/${resourceId}`, { state: { bookTitle: newTitle } }); }}
+        />
+      )}
+      {renameSource && (
+        <RenameBookModal
+          book={renameSource}
+          onClose={() => setRenameSource(null)}
+          onRenamed={() => { setRenameSource(null); fetchBooks(); }}
         />
       )}
     </div>

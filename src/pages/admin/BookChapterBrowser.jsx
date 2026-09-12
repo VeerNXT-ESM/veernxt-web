@@ -5,7 +5,7 @@ import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
 import '../../components/book/BookBlocks.css';
 import BlockEditForm, { BlockTypePicker, createBlock, genBlockId } from '../../components/admin/BlockEditForm';
-import { DuplicateBookModal, ConfirmDeleteModal } from '../../components/admin/BookFormModals';
+import { DuplicateBookModal, ConfirmDeleteModal, RenameBookModal } from '../../components/admin/BookFormModals';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
@@ -57,6 +57,7 @@ const BookChapterBrowser = () => {
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState(null);
   const [topPickerOpen, setTopPickerOpen] = useState(false);
+  const [showRenameModal, setShowRenameModal] = useState(false);
   const [showDuplicateModal, setShowDuplicateModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const mainRef = useRef(null);
@@ -243,6 +244,9 @@ const BookChapterBrowser = () => {
         )}
         {book && mode === 'preview' && (
           <>
+            <button onClick={() => setShowRenameModal(true)} title="Rename this book" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.5rem 0.85rem', background: 'white', color: '#64748b', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}>
+              <Pencil size={14} /> Rename
+            </button>
             <button onClick={() => setShowDuplicateModal(true)} title="Duplicate this book" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.5rem 0.85rem', background: 'white', color: '#64748b', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}>
               <Copy size={14} /> Duplicate
             </button>
@@ -579,6 +583,17 @@ const BookChapterBrowser = () => {
         </div>
       )}
 
+      {showRenameModal && book && (
+        <RenameBookModal
+          book={book}
+          onClose={() => setShowRenameModal(false)}
+          onRenamed={(newTitle) => {
+            setShowRenameModal(false);
+            setBook((prev) => ({ ...prev, title: newTitle }));
+            setMetadata((prev) => (prev ? { ...prev, title: newTitle } : prev));
+          }}
+        />
+      )}
       {showDuplicateModal && book && (
         <DuplicateBookModal
           source={book}

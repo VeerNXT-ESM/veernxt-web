@@ -272,6 +272,11 @@ const ExamsPage = () => {
                 examId={selectedExamId}
                 onCreated={(newExam) => { selectExam(newExam.id); fetchExams(); }}
                 onSaved={fetchExams}
+                onDeleted={(deletedId) => {
+                  setCatalog((prev) => prev.filter((e) => e.id !== deletedId));
+                  selectExam(null);
+                  fetchExams();
+                }}
               />
               <ExamResourcesPanel examId={selectedExamId} />
             </>

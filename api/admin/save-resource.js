@@ -633,6 +633,65 @@ async function handleBooksDelete(req, res) {
   }
 }
 
+/**
+ * POST /api/admin/save-resource with
+ * { type: 'books-rename', resourceId, newTitle }
+ *
+ * Renames a book by updating:
+ * 1. `metadata.json` in R2 (`metadata.title = newTitle.trim()`)
+ * 2. All duplicate/linked rows in `resources` table for this category + old title
+ */
+async function handleBooksRename(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+
+  const { resourceId, newTitle } = req.body || {};
+  if (!resourceId || !newTitle || !newTitle.trim()) {
+    return res.status(400).json({ ok: false, error: 'Missing resourceId or newTitle' });
+  }
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+  const publicUrl = getR2PublicUrl();
+  const bucket = getR2Bucket();
+  if (!publicUrl || !bucket) return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 env vars not set' });
+
+  const trimmedNewTitle = newTitle.trim();
+
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
+
+    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
+    const prefix = prefixFromStorageBaseUrl(canonicalUrl, publicUrl);
+
+    // Patch metadata.json in R2 if prefix is resolvable
+    if (prefix) {
+      try {
+        const metadata = await fetchJson(`${canonicalUrl}metadata.json`);
+        metadata.title = trimmedNewTitle;
+        const s3 = getS3Client();
+        await uploadToR2(s3, bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
+      } catch (e) {
+        console.error('[admin/save-resource:books-rename] metadata.json patch failed:', e.message);
+      }
+    }
+
+    // Update DB rows for this book
+    const { error: updateError } = await supabase
+      .from('resources')
+      .update({ title: trimmedNewTitle, updated_at: new Date().toISOString() })
+      .eq('category', row.category)
+      .ilike('title', escapeIlike(row.title));
+    if (updateError) throw new Error(updateError.message);
+
+    return res.status(200).json({ ok: true, newTitle: trimmedNewTitle });
+  } catch (e) {
+    console.error('[admin/save-resource:books-rename] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -664,6 +723,10 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-duplicate') {
     return handleBooksDuplicate(req, res);
+  }
+
+  if (req.body?.type === 'books-rename') {
+    return handleBooksRename(req, res);
   }
 
   if (req.body?.type === 'books-delete') {
