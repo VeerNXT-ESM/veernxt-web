@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import mammoth from 'mammoth';
-import { FileText, Upload, X } from 'lucide-react';
+import { FileText, Upload, X, Eye } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import AdminResourcePreview from './AdminResourcePreview';
 
@@ -38,6 +38,7 @@ const ExamIntroCard = ({ examId }) => {
   const [introTitleDraft, setIntroTitleDraft] = useState('');
   const [introSaving, setIntroSaving] = useState(false);
   const [introPreviewOpen, setIntroPreviewOpen] = useState(false);
+  const [pendingPreviewOpen, setPendingPreviewOpen] = useState(false);
   const [introFileName, setIntroFileName] = useState(null); // name of the .docx last converted, for display
   const [pendingHtml, setPendingHtml] = useState(null); // HTML string from the last converted docx, awaiting Save
   const [parsingDocx, setParsingDocx] = useState(false);
@@ -218,6 +219,7 @@ const ExamIntroCard = ({ examId }) => {
             <FileText size={15} color="var(--ios-olive)" /> {introResourceTitle || 'Untitled resource'}
           </p>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <button className="lc-btn" onClick={() => setIntroPreviewOpen(true)}><Eye size={14} /> Preview</button>
             <button className="lc-btn" onClick={() => setEditing(true)}>Replace Document</button>
             <button className="lc-btn" style={{ color: '#dc2626' }} disabled={introSaving} onClick={removeIntro}>Remove</button>
           </div>
@@ -232,6 +234,7 @@ const ExamIntroCard = ({ examId }) => {
             <FileText size={15} color="var(--ios-olive)" /> {examIntro.manual_title || 'Introduction'}
           </p>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <button className="lc-btn" onClick={() => setIntroPreviewOpen(true)}><Eye size={14} /> Preview</button>
             <button className="lc-btn" onClick={() => setEditing(true)}>Replace Document</button>
             <button className="lc-btn" style={{ color: '#dc2626' }} disabled={introSaving} onClick={removeIntro}>Remove</button>
           </div>
@@ -286,7 +289,7 @@ const ExamIntroCard = ({ examId }) => {
             </div>
           )}
 
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
             <button
               className="lc-btn primary"
               disabled={introSaving || parsingDocx || !pendingHtml}
@@ -294,6 +297,15 @@ const ExamIntroCard = ({ examId }) => {
             >
               {introSaving ? 'Saving…' : 'Save Introduction'}
             </button>
+            {pendingHtml && (
+              <button
+                type="button"
+                className="lc-btn"
+                onClick={() => setPendingPreviewOpen(true)}
+              >
+                <Eye size={14} /> Preview
+              </button>
+            )}
             {examIntro?.source && examIntro.source !== 'unset' && <button className="lc-btn" onClick={cancelEditing}>Cancel</button>}
           </div>
         </div>
@@ -333,6 +345,25 @@ const ExamIntroCard = ({ examId }) => {
             <div style={{ flex: 1, overflowY: 'auto', padding: '2rem' }}>
               <div className="glass-panel reader-card">
                 <div className="reader-content" dangerouslySetInnerHTML={{ __html: examIntro.manual_body || '' }} />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {pendingPreviewOpen && pendingHtml && (
+        <div className="lc-drawer-backdrop" onClick={() => setPendingPreviewOpen(false)}>
+          <div className="lc-drawer-panel" style={{ width: 'min(900px, 92vw)', height: '85vh', display: 'flex', flexDirection: 'column' }} onClick={(e) => e.stopPropagation()}>
+            <div className="lc-drawer-header">
+              <div>
+                <h3>Introduction Preview (Draft)</h3>
+                <p>{introTitleDraft || introFileName || 'Introduction'}</p>
+              </div>
+              <button className="lc-close-btn" onClick={() => setPendingPreviewOpen(false)}><X size={20} /></button>
+            </div>
+            <div style={{ flex: 1, overflowY: 'auto', padding: '2rem' }}>
+              <div className="glass-panel reader-card">
+                <div className="reader-content" dangerouslySetInnerHTML={{ __html: pendingHtml }} />
               </div>
             </div>
           </div>

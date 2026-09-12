@@ -127,8 +127,9 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
     setDeleting(true);
     try {
       await supabase.from('lc_exam_tags').delete().eq('exam_id', examId);
-      await supabase.from('lc_exam_resources').delete().eq('exam_id', examId);
-      await supabase.from('lc_exam_intros').delete().eq('exam_id', examId);
+      await supabase.from('lc_exam_resource_map').delete().eq('exam_id', examId);
+      await supabase.from('lc_exam_intro').delete().eq('exam_id', examId);
+      await supabase.from('lc_exam_quiz_map').delete().eq('exam_id', examId);
 
       const { error } = await supabase.from('lc_exams').delete().eq('id', examId);
       if (error) throw error;

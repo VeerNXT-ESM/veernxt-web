@@ -410,7 +410,7 @@ const BookChapterBrowser = () => {
               </div>
             </main>
           ) : (
-            <main style={{ padding: '1.25rem', height: '100%', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+            <main ref={mainRef} style={{ padding: '1.25rem', height: '100%', overflowY: 'auto' }}>
               {chapterLoading && <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem' }}><RefreshCw className="animate-spin" size={24} /></div>}
               {chapterError && <p>Unable to load this chapter ({chapterError}).</p>}
 
@@ -419,9 +419,7 @@ const BookChapterBrowser = () => {
                   display: 'grid',
                   gridTemplateColumns: editViewLayout === 'split' ? 'minmax(0, 1fr) minmax(0, 1fr)' : 'minmax(0, 1fr)',
                   gap: '1.25rem',
-                  flex: 1,
-                  minHeight: 0,
-                  height: '100%',
+                  alignItems: 'start',
                   maxWidth: editViewLayout === 'split' ? 'none' : '860px',
                   margin: editViewLayout === 'split' ? '0' : '0 auto',
                   width: '100%',
@@ -435,14 +433,13 @@ const BookChapterBrowser = () => {
                       boxShadow: '0 2px 14px rgba(0,0,0,0.03)',
                       display: 'flex',
                       flexDirection: 'column',
-                      height: '100%',
-                      minHeight: 0,
-                      overflow: 'hidden'
                     }}>
                       <div style={{
                         padding: '0.85rem 1.25rem',
                         borderBottom: '1px solid #e2e8f0',
                         background: '#f8fafc',
+                        borderTopLeftRadius: 13,
+                        borderTopRightRadius: 13,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
@@ -464,7 +461,7 @@ const BookChapterBrowser = () => {
                         )}
                       </div>
 
-                      <div style={{ padding: '1.25rem', overflowY: 'auto', flex: 1 }}>
+                      <div style={{ padding: '1.25rem' }}>
                         {saveError && (
                           <div style={{ background: '#fef2f2', border: '1px solid #fecaca', color: '#b91c1c', borderRadius: 8, padding: '0.6rem 0.85rem', marginBottom: '1rem', fontSize: '0.8rem' }}>
                             Save failed: {saveError}
@@ -521,7 +518,7 @@ const BookChapterBrowser = () => {
                     </div>
                   )}
 
-                  {/* Right Column: Live Preview ("when edited how it looks") */}
+                  {/* Right Column: Preview */}
                   {(editViewLayout === 'split' || editViewLayout === 'preview') && (
                     <div style={{
                       background: 'white',
@@ -530,32 +527,8 @@ const BookChapterBrowser = () => {
                       boxShadow: '0 2px 14px rgba(0,0,0,0.03)',
                       display: 'flex',
                       flexDirection: 'column',
-                      height: '100%',
-                      minHeight: 0,
-                      overflow: 'hidden'
                     }}>
-                      <div style={{
-                        padding: '0.85rem 1.25rem',
-                        borderBottom: '1px solid #e2e8f0',
-                        background: '#f8fafc',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        flexShrink: 0
-                      }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                          <Eye size={15} style={{ color: '#0f766e' }} />
-                          <span style={{ fontWeight: 800, fontSize: '0.88rem', color: '#0f172a' }}>Live Preview</span>
-                          <span style={{ fontSize: '0.7rem', color: '#0f766e', background: '#f0fdfa', border: '1px solid #ccfbf1', padding: '0.15rem 0.45rem', borderRadius: 999, fontWeight: 700 }}>
-                            Updates in real-time
-                          </span>
-                        </div>
-                        <span style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: 600 }}>
-                          Chapter #{chapterData?.order}
-                        </span>
-                      </div>
-
-                      <div style={{ padding: '1.75rem', overflowY: 'auto', flex: 1, background: '#ffffff' }}>
+                      <div style={{ padding: '1.75rem', background: '#ffffff', borderRadius: 14 }}>
                         <ChapterHeader title={editTitle || 'Untitled Chapter'} order={chapterData?.order || 1} />
 
                         <div className="bk-blocks-container" style={{ marginTop: '1.25rem' }}>
@@ -569,7 +542,7 @@ const BookChapterBrowser = () => {
                         {editBlocks.length === 0 && (
                           <div style={{ textAlign: 'center', padding: '3.5rem 1.5rem', color: '#94a3b8' }}>
                             <Eye size={32} style={{ opacity: 0.35, marginBottom: '0.75rem' }} />
-                            <p style={{ margin: 0, fontWeight: 700, fontSize: '0.9rem', color: '#64748b' }}>Live preview will appear here</p>
+                            <p style={{ margin: 0, fontWeight: 700, fontSize: '0.9rem', color: '#64748b' }}>Preview will appear here</p>
                             <p style={{ margin: '0.35rem 0 0', fontSize: '0.8rem', color: '#94a3b8' }}>Add blocks on the left editor to preview how candidates see them.</p>
                           </div>
                         )}

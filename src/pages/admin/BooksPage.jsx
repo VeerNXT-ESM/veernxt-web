@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, AlertTriangle, CheckCircle2, Plus, Copy, Pencil } from 'lucide-react';
+import { Search, AlertTriangle, CheckCircle2, Plus, Copy, Pencil, Trash2 } from 'lucide-react';
 import { useDebounced } from './lcShared';
-import { NewBookModal, DuplicateBookModal, RenameBookModal } from '../../components/admin/BookFormModals';
+import { NewBookModal, DuplicateBookModal, RenameBookModal, ConfirmDeleteModal } from '../../components/admin/BookFormModals';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
@@ -36,6 +36,7 @@ const BooksPage = () => {
   const [showNewModal, setShowNewModal] = useState(false);
   const [duplicateSource, setDuplicateSource] = useState(null);
   const [renameSource, setRenameSource] = useState(null);
+  const [deleteSource, setDeleteSource] = useState(null);
 
   const fetchBooks = useCallback(async () => {
     try {
@@ -165,6 +166,13 @@ const BooksPage = () => {
                     >
                       <Copy size={14} />
                     </button>
+                    <button
+                      className="lc-icon-btn" title="Delete this book"
+                      onClick={() => setDeleteSource(b)}
+                      style={{ color: '#dc2626' }}
+                    >
+                      <Trash2 size={14} />
+                    </button>
                   </div>
                 </td>
               </tr>
@@ -194,6 +202,13 @@ const BooksPage = () => {
           book={renameSource}
           onClose={() => setRenameSource(null)}
           onRenamed={() => { setRenameSource(null); fetchBooks(); }}
+        />
+      )}
+      {deleteSource && (
+        <ConfirmDeleteModal
+          book={deleteSource}
+          onClose={() => setDeleteSource(null)}
+          onDeleted={() => { setDeleteSource(null); fetchBooks(); }}
         />
       )}
     </div>
