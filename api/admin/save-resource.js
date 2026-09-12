@@ -184,7 +184,7 @@ async function handleBooksList(req, res) {
     for (let from = 0; ; from += 1000) {
       const { data, error } = await supabase
         .from('resources')
-        .select('resource_id,title,category,storage_base_url,chapter_count')
+        .select('resource_id,title,category,storage_base_url,chapter_count,status')
         .in('category', BOOK_CATEGORIES)
         .eq('format', 'blocks')
         .range(from, from + 999);
@@ -224,6 +224,7 @@ async function handleBooksList(req, res) {
       if (!canonicalUrl || !prefixFromStorageBaseUrl(canonicalUrl, publicUrl)) continue; // broken/unresolvable -- nothing to open
       const canonicalRow = group.rows.find((r) => r.storage_base_url === canonicalUrl) || group.rows[0];
       const issueKey = `${group.category}::${group.title.toLowerCase()}`;
+      const isArchived = group.rows.some((r) => ['draft', 'archived'].includes((r.status || '').toLowerCase()));
       books.push({
         resourceId: canonicalRow.resource_id,
         title: group.title,
@@ -231,6 +232,8 @@ async function handleBooksList(req, res) {
         storageBaseUrl: canonicalUrl,
         chapterCount: canonicalRow.chapter_count ?? null,
         duplicateRowCount: group.rows.length,
+        status: isArchived ? 'Draft' : (canonicalRow.status || 'Published'),
+        isArchived,
         issueCounts: issuesByTitle ? (issuesByTitle[issueKey] || { high: 0, medium: 0, low: 0 }) : null,
       });
     }
@@ -258,15 +261,22 @@ async function handleBooksGet(req, res) {
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error } = await supabase.from('resources').select('resource_id,title,category,storage_base_url,status').eq('resource_id', resourceId).maybeSingle();
     if (error) throw new Error(error.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
     const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
     const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
-    if (!canonicalUrl) return res.status(500).json({ ok: false, error: 'Could not resolve storage location for this book' });
-
-    return res.status(200).json({ ok: true, resourceId: row.resource_id, title: row.title, category: row.category, storageBaseUrl: canonicalUrl });
+    const isArchived = ['draft', 'archived'].includes((row.status || '').toLowerCase()) || groupRows.some((r) => ['draft', 'archived'].includes((r.status || '').toLowerCase()));
+    return res.status(200).json({
+      ok: true,
+      resourceId: row.resource_id,
+      title: row.title,
+      category: row.category,
+      storageBaseUrl: canonicalUrl,
+      status: isArchived ? 'Draft' : (row.status || 'Published'),
+      isArchived,
+    });
   } catch (e) {
     console.error('[admin/save-resource:books-get] failed:', e.message);
     return res.status(500).json({ ok: false, error: e.message });
@@ -692,6 +702,68 @@ async function handleBooksRename(req, res) {
   }
 }
 
+/**
+ * POST /api/admin/save-resource with { type: 'books-archive', resourceId }
+ *
+ * Sets status = 'Draft' on all resources rows for this book (hides from candidates & active list)
+ */
+async function handleBooksArchive(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { resourceId } = req.body || {};
+  if (!resourceId) return res.status(400).json({ ok: false, error: 'Missing resourceId' });
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
+
+    const { error: updateError } = await supabase
+      .from('resources')
+      .update({ status: 'Draft', updated_at: new Date().toISOString() })
+      .eq('category', row.category)
+      .ilike('title', escapeIlike(row.title));
+    if (updateError) throw new Error(updateError.message);
+
+    return res.status(200).json({ ok: true, status: 'Draft' });
+  } catch (e) {
+    console.error('[admin/save-resource:books-archive] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
+/**
+ * POST /api/admin/save-resource with { type: 'books-unarchive', resourceId }
+ *
+ * Sets status = 'Published' on all resources rows for this book
+ */
+async function handleBooksUnarchive(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { resourceId } = req.body || {};
+  if (!resourceId) return res.status(400).json({ ok: false, error: 'Missing resourceId' });
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
+
+    const { error: updateError } = await supabase
+      .from('resources')
+      .update({ status: 'Published', updated_at: new Date().toISOString() })
+      .eq('category', row.category)
+      .ilike('title', escapeIlike(row.title));
+    if (updateError) throw new Error(updateError.message);
+
+    return res.status(200).json({ ok: true, status: 'Published' });
+  } catch (e) {
+    console.error('[admin/save-resource:books-unarchive] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -727,6 +799,14 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-rename') {
     return handleBooksRename(req, res);
+  }
+
+  if (req.body?.type === 'books-archive') {
+    return handleBooksArchive(req, res);
+  }
+
+  if (req.body?.type === 'books-unarchive') {
+    return handleBooksUnarchive(req, res);
   }
 
   if (req.body?.type === 'books-delete') {

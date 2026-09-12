@@ -1,11 +1,11 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { ArrowLeft, AlertTriangle, RefreshCw, Pencil, Eye, Save, X, Copy, Trash2, Columns } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, RefreshCw, Pencil, Eye, Save, X, Copy, Trash2, Columns, Archive, ArchiveRestore } from 'lucide-react';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
 import '../../components/book/BookBlocks.css';
 import BlockEditForm, { BlockTypePicker, createBlock, genBlockId } from '../../components/admin/BlockEditForm';
-import { DuplicateBookModal, ConfirmDeleteModal, RenameBookModal } from '../../components/admin/BookFormModals';
+import { DuplicateBookModal, ConfirmDeleteModal, RenameBookModal, ConfirmArchiveModal } from '../../components/admin/BookFormModals';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
@@ -58,6 +58,7 @@ const BookChapterBrowser = () => {
   const [saveError, setSaveError] = useState(null);
   const [topPickerOpen, setTopPickerOpen] = useState(false);
   const [showRenameModal, setShowRenameModal] = useState(false);
+  const [showArchiveModal, setShowArchiveModal] = useState(false);
   const [showDuplicateModal, setShowDuplicateModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const mainRef = useRef(null);
@@ -232,9 +233,16 @@ const BookChapterBrowser = () => {
           <ArrowLeft size={18} /> Back
         </button>
         <div style={{ flex: 1 }}>
-          <h1 style={{ fontSize: '1.15rem', margin: 0, fontWeight: 800, color: '#0f172a' }}>
-            {book?.title || location.state?.bookTitle || (bookError ? 'Book not found' : 'Loading…')}
-          </h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <h1 style={{ fontSize: '1.15rem', margin: 0, fontWeight: 800, color: '#0f172a' }}>
+              {book?.title || location.state?.bookTitle || (bookError ? 'Book not found' : 'Loading…')}
+            </h1>
+            {book?.isArchived && (
+              <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#b45309', background: '#fffbeb', border: '1px solid #fef3c7', padding: '0.15rem 0.5rem', borderRadius: 6 }}>
+                Archived
+              </span>
+            )}
+          </div>
           <div style={{ fontSize: '0.78rem', color: '#94a3b8' }}>{category}</div>
         </div>
         {issues.length > 0 && (
@@ -247,6 +255,26 @@ const BookChapterBrowser = () => {
             <button onClick={() => setShowRenameModal(true)} title="Rename this book" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.5rem 0.85rem', background: 'white', color: '#64748b', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}>
               <Pencil size={14} /> Rename
             </button>
+            {book.isArchived ? (
+              <button
+                onClick={async () => {
+                  try {
+                    await postBooksAction({ type: 'books-unarchive', resourceId: book.resourceId });
+                    setBook((prev) => ({ ...prev, isArchived: false, status: 'Published' }));
+                  } catch (err) {
+                    alert('Failed to unarchive: ' + err.message);
+                  }
+                }}
+                title="Restore this book to active catalog"
+                style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.5rem 0.85rem', background: '#ecfdf5', color: '#059669', border: '1px solid #a7f3d0', borderRadius: 8, fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}
+              >
+                <ArchiveRestore size={14} /> Unarchive
+              </button>
+            ) : (
+              <button onClick={() => setShowArchiveModal(true)} title="Archive this book" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.5rem 0.85rem', background: 'white', color: '#d97706', border: '1px solid #fed7aa', borderRadius: 8, fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}>
+                <Archive size={14} /> Archive
+              </button>
+            )}
             <button onClick={() => setShowDuplicateModal(true)} title="Duplicate this book" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.5rem 0.85rem', background: 'white', color: '#64748b', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 700, fontSize: '0.8rem', cursor: 'pointer' }}>
               <Copy size={14} /> Duplicate
             </button>
@@ -564,6 +592,16 @@ const BookChapterBrowser = () => {
             setShowRenameModal(false);
             setBook((prev) => ({ ...prev, title: newTitle }));
             setMetadata((prev) => (prev ? { ...prev, title: newTitle } : prev));
+          }}
+        />
+      )}
+      {showArchiveModal && book && (
+        <ConfirmArchiveModal
+          book={book}
+          onClose={() => setShowArchiveModal(false)}
+          onArchived={() => {
+            setShowArchiveModal(false);
+            setBook((prev) => ({ ...prev, isArchived: true, status: 'Archived' }));
           }}
         />
       )}

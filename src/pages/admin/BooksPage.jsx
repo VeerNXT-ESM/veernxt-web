@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, AlertTriangle, CheckCircle2, Plus, Copy, Pencil, Trash2 } from 'lucide-react';
+import { Search, AlertTriangle, CheckCircle2, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink } from 'lucide-react';
 import { useDebounced } from './lcShared';
-import { NewBookModal, DuplicateBookModal, RenameBookModal, ConfirmDeleteModal } from '../../components/admin/BookFormModals';
+import { NewBookModal, DuplicateBookModal, RenameBookModal, ConfirmDeleteModal, ConfirmArchiveModal } from '../../components/admin/BookFormModals';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
@@ -20,11 +20,7 @@ const SORT_OPTIONS = [
 // Book browser/editor over resources (format='blocks') + R2 -- R2 is the
 // only source of truth for book content, so there's no local filesystem
 // involved anywhere in this feature and it works identically whether the
-// admin site is running locally or deployed. This is deliberately a
-// different data model from AdminContentEditor.jsx (resources.body_html,
-// Quill HTML). The other parallel system, lc_resources/lc_subjects (an
-// orphaned, admin-only CMS never fed by the live pipeline), was removed --
-// see project-dual-admin-content-systems memory.
+// admin site is running locally or deployed.
 const BooksPage = () => {
   const navigate = useNavigate();
   const [books, setBooks] = useState(null);
@@ -33,9 +29,11 @@ const BooksPage = () => {
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search);
   const [sort, setSort] = useState('issues');
+  const [showArchived, setShowArchived] = useState(false);
   const [showNewModal, setShowNewModal] = useState(false);
   const [duplicateSource, setDuplicateSource] = useState(null);
   const [renameSource, setRenameSource] = useState(null);
+  const [archiveSource, setArchiveSource] = useState(null);
   const [deleteSource, setDeleteSource] = useState(null);
 
   const fetchBooks = useCallback(async () => {
@@ -55,9 +53,16 @@ const BooksPage = () => {
 
   useEffect(() => { fetchBooks(); }, [fetchBooks]);
 
+  const openInNewTab = useCallback((b) => {
+    window.open(`/admin/books/${b.category}/${b.resourceId}`, '_blank');
+  }, []);
+
+  const activeCount = useMemo(() => (books || []).filter((b) => !b.isArchived).length, [books]);
+  const archivedCount = useMemo(() => (books || []).filter((b) => b.isArchived).length, [books]);
+
   const filtered = useMemo(() => {
     if (!books) return [];
-    let list = books;
+    let list = books.filter((b) => (showArchived ? b.isArchived : !b.isArchived));
     if (category) list = list.filter((b) => b.category === category);
     if (debouncedSearch.trim()) {
       const q = debouncedSearch.trim().toLowerCase();
@@ -65,24 +70,58 @@ const BooksPage = () => {
     }
     const issueScore = (b) => (b.issueCounts?.high || 0) * 1000 + (b.issueCounts?.medium || 0);
     return [...list].sort((a, b) => (sort === 'title' ? a.title.localeCompare(b.title) : issueScore(b) - issueScore(a)));
-  }, [books, category, debouncedSearch, sort]);
+  }, [books, category, debouncedSearch, sort, showArchived]);
 
   const totals = useMemo(() => {
     if (!books) return null;
     return {
       count: books.length,
-      withIssues: books.filter((b) => (b.issueCounts?.high || 0) + (b.issueCounts?.medium || 0) > 0).length,
+      withIssues: books.filter((b) => !b.isArchived && (b.issueCounts?.high || 0) + (b.issueCounts?.medium || 0) > 0).length,
     };
   }, [books]);
+
+  const handleUnarchive = async (b) => {
+    if (!window.confirm(`Restore "${b.title}" back to active books?`)) return;
+    try {
+      const res = await fetch('/api/admin/save-resource', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
+        body: JSON.stringify({ type: 'books-unarchive', resourceId: b.resourceId }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || 'Failed to unarchive');
+      fetchBooks();
+    } catch (err) {
+      alert('Restore failed: ' + err.message);
+    }
+  };
 
   return (
     <div>
       <div className="lc-section-header">
         <div>
-          <h2>Book Content</h2>
-          <p>Guide &amp; Precis books, live from R2 — {totals ? `${totals.count} books, ${totals.withIssues} flagged by the last QA scan.` : 'loading…'}</p>
+          <h2>{showArchived ? 'Archived Books' : 'Book Content'}</h2>
+          <p>
+            {showArchived
+              ? `Showing ${archivedCount} archived book${archivedCount === 1 ? '' : 's'}. These are hidden from candidates and the active catalog.`
+              : totals
+              ? `${activeCount} active book${activeCount === 1 ? '' : 's'}, ${totals.withIssues} flagged by the last QA scan.`
+              : 'loading…'}
+          </p>
         </div>
-        <button className="lc-btn primary" onClick={() => setShowNewModal(true)}><Plus size={16} /> New Book</button>
+        <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center' }}>
+          <button
+            className={`lc-btn ${showArchived ? 'primary' : ''}`}
+            onClick={() => setShowArchived((prev) => !prev)}
+            title={showArchived ? 'Switch to active books' : 'View archived books'}
+            style={showArchived ? { background: '#d97706', borderColor: '#d97706', color: 'white' } : undefined}
+          >
+            <Archive size={16} /> {showArchived ? 'Show Active Books' : `Show Archived (${archivedCount})`}
+          </button>
+          <button className="lc-btn primary" onClick={() => setShowNewModal(true)}>
+            <Plus size={16} /> New Book
+          </button>
+        </div>
       </div>
 
       <div className="lc-filter-bar" style={{ gridTemplateColumns: '1fr auto auto' }}>
@@ -128,9 +167,20 @@ const BooksPage = () => {
           </thead>
           <tbody>
             {filtered.map((b) => (
-              <tr key={b.resourceId} className="clickable" onClick={() => navigate(`/admin/books/${b.category}/${b.resourceId}`, { state: { bookTitle: b.title } })}>
+              <tr
+                key={b.resourceId}
+                className="clickable"
+                onClick={() => navigate(`/admin/books/${b.category}/${b.resourceId}`, { state: { bookTitle: b.title } })}
+              >
                 <td>
-                  <span className="lc-table-title">{b.title}</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <span className="lc-table-title">{b.title}</span>
+                    {b.isArchived && (
+                      <span style={{ fontSize: '0.68rem', fontWeight: 700, color: '#b45309', background: '#fffbeb', border: '1px solid #fef3c7', padding: '0.1rem 0.4rem', borderRadius: 4 }}>
+                        Archived
+                      </span>
+                    )}
+                  </div>
                   {b.duplicateRowCount > 1 && <span className="lc-table-sub">{b.duplicateRowCount} linked exam entries</span>}
                 </td>
                 <td>{b.category}</td>
@@ -155,19 +205,54 @@ const BooksPage = () => {
                 <td onClick={(e) => e.stopPropagation()}>
                   <div style={{ display: 'flex', gap: '0.4rem', justifyContent: 'flex-end' }}>
                     <button
-                      className="lc-icon-btn" title="Rename this book"
-                      onClick={() => setRenameSource(b)}
+                      className="lc-icon-btn"
+                      title="Open in new tab"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openInNewTab(b);
+                      }}
+                      style={{ color: 'var(--admin-accent)' }}
                     >
-                      <Pencil size={14} />
+                      <ExternalLink size={14} />
                     </button>
+                    {showArchived ? (
+                      <button
+                        className="lc-icon-btn"
+                        title="Restore / Unarchive this book"
+                        onClick={() => handleUnarchive(b)}
+                        style={{ color: '#059669' }}
+                      >
+                        <ArchiveRestore size={14} />
+                      </button>
+                    ) : (
+                      <>
+                        <button
+                          className="lc-icon-btn"
+                          title="Rename this book"
+                          onClick={() => setRenameSource(b)}
+                        >
+                          <Pencil size={14} />
+                        </button>
+                        <button
+                          className="lc-icon-btn"
+                          title="Archive this book"
+                          onClick={() => setArchiveSource(b)}
+                          style={{ color: '#d97706' }}
+                        >
+                          <Archive size={14} />
+                        </button>
+                      </>
+                    )}
                     <button
-                      className="lc-icon-btn" title="Duplicate this book"
+                      className="lc-icon-btn"
+                      title="Duplicate this book"
                       onClick={() => setDuplicateSource(b)}
                     >
                       <Copy size={14} />
                     </button>
                     <button
-                      className="lc-icon-btn" title="Delete this book"
+                      className="lc-icon-btn"
+                      title="Delete this book"
                       onClick={() => setDeleteSource(b)}
                       style={{ color: '#dc2626' }}
                     >
@@ -181,7 +266,11 @@ const BooksPage = () => {
         </table>
 
         {books === null && !error && <div className="lc-loading-state">Loading books…</div>}
-        {books !== null && filtered.length === 0 && <div className="lc-empty-state"><p>No books match the current filters.</p></div>}
+        {books !== null && filtered.length === 0 && (
+          <div className="lc-empty-state">
+            <p>{showArchived ? 'No archived books.' : 'No books match the current filters.'}</p>
+          </div>
+        )}
       </div>
 
       {showNewModal && (
@@ -202,6 +291,13 @@ const BooksPage = () => {
           book={renameSource}
           onClose={() => setRenameSource(null)}
           onRenamed={() => { setRenameSource(null); fetchBooks(); }}
+        />
+      )}
+      {archiveSource && (
+        <ConfirmArchiveModal
+          book={archiveSource}
+          onClose={() => setArchiveSource(null)}
+          onArchived={() => { setArchiveSource(null); fetchBooks(); }}
         />
       )}
       {deleteSource && (

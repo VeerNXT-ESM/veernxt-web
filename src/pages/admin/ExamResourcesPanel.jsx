@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { Plus, Trash2, Search, X, Eye } from 'lucide-react';
+import { Plus, Trash2, Search, X, Eye, ExternalLink } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import AdminResourcePreview from './AdminResourcePreview';
 
@@ -131,20 +131,33 @@ const ExamResourcesPanel = ({ examId }) => {
   );
 };
 
-const ResourceMapRow = ({ mapping, onRemove, onPreview }) => (
-  <div className="lc-drawer-list-item">
-    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0 }}>
-      <span className="lc-truncate" title={mapping.resource?.title}>{mapping.resource?.title || 'Untitled resource'}</span>
-      <ConfidenceBadge confidence={mapping.confidence} />
-      <span className="lc-muted-note">{mapping.source}</span>
-      {mapping.resource?.status && mapping.resource.status !== 'Published' && <span className="lc-muted-note">({mapping.resource.status})</span>}
-    </span>
-    <span style={{ display: 'flex', gap: '0.4rem', flexShrink: 0 }}>
-      <button className="lc-icon-btn" title="Preview" onClick={onPreview}><Eye size={14} /></button>
-      <button className="lc-icon-btn danger" title="Remove" onClick={onRemove}><Trash2 size={14} /></button>
-    </span>
-  </div>
-);
+const ResourceMapRow = ({ mapping, onRemove, onPreview }) => {
+  const isBook = mapping.resource?.category && ['Guide', 'Precis'].includes(mapping.resource.category);
+  return (
+    <div className="lc-drawer-list-item">
+      <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0 }}>
+        <span className="lc-truncate" title={mapping.resource?.title}>{mapping.resource?.title || 'Untitled resource'}</span>
+        <ConfidenceBadge confidence={mapping.confidence} />
+        <span className="lc-muted-note">{mapping.source}</span>
+        {mapping.resource?.status && mapping.resource.status !== 'Published' && <span className="lc-muted-note">({mapping.resource.status})</span>}
+      </span>
+      <span style={{ display: 'flex', gap: '0.4rem', flexShrink: 0 }}>
+        {isBook && (
+          <button
+            className="lc-icon-btn"
+            title="Open book in new tab"
+            onClick={() => window.open(`/admin/books/${mapping.resource.category}/${mapping.resource.resource_id}`, '_blank')}
+            style={{ color: 'var(--admin-accent)' }}
+          >
+            <ExternalLink size={14} />
+          </button>
+        )}
+        <button className="lc-icon-btn" title="Preview" onClick={onPreview}><Eye size={14} /></button>
+        <button className="lc-icon-btn danger" title="Remove" onClick={onRemove}><Trash2 size={14} /></button>
+      </span>
+    </div>
+  );
+};
 
 const AddResourceMapDrawer = ({ examId, existingResourceIds, onClose, onAdded }) => {
   const [search, setSearch] = useState('');

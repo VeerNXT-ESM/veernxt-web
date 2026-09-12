@@ -278,3 +278,47 @@ export const RenameBookModal = ({ book, onClose, onRenamed }) => {
   );
 };
 
+export const ConfirmArchiveModal = ({ book, onClose, onArchived }) => {
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleArchive = async () => {
+    setSaving(true);
+    setError(null);
+    try {
+      await postBooksAction({ type: 'books-archive', resourceId: book.resourceId });
+      onArchived();
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <ModalShell
+      title="Archive Book"
+      onClose={onClose}
+      footer={<>
+        <button style={btnSecondary} onClick={onClose} disabled={saving}>Cancel</button>
+        <button
+          style={{ ...btnPrimary, background: '#d97706' }}
+          onClick={handleArchive}
+          disabled={saving}
+        >
+          {saving ? 'Archiving…' : 'Archive Book'}
+        </button>
+      </>}
+    >
+      {error && <div style={errorStyle}>{error}</div>}
+      <p style={{ margin: 0, fontSize: '0.88rem', color: '#334155' }}>
+        Are you sure you want to archive <strong>"{book.title}"</strong>?
+      </p>
+      <p style={{ fontSize: '0.78rem', color: '#94a3b8', margin: 0 }}>
+        This book will be removed from the active catalog and candidate views. You can view, access, and unarchive it anytime from the "Show Archived" view.
+      </p>
+    </ModalShell>
+  );
+};
+
+
