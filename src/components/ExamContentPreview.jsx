@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, RefreshCw, ArrowRight, CheckCircle2, Check } from 'lucide-react';
+import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, RefreshCw, ArrowRight, CheckCircle2, Check, X } from 'lucide-react';
 import { isResourceLockedForUser, canTakeQuiz } from '../lib/subscriptionAccess';
 import { useExamContent } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
@@ -132,6 +133,69 @@ function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplet
   );
 }
 
+// Book-tile look for a manual (docx-uploaded, HTML-body) Introduction --
+// same cover/lock-badge/title layout as ResourceTile above so Intro sits
+// in the grid looking like just another book, but since there's no
+// resource_id to route to /reader/:id, clicking it opens the content in
+// a lightweight in-page overlay instead.
+function IntroManualTile({ intro, locked }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+        <div onClick={() => setOpen(true)} style={{ position: 'relative', display: 'block', cursor: 'pointer' }}>
+          <span
+            style={{
+              aspectRatio: '3 / 4', borderRadius: '10px', display: 'flex', alignItems: 'flex-end',
+              padding: '0.5rem', fontWeight: 800, fontSize: '0.62rem', color: '#fff', textTransform: 'uppercase',
+              background: 'linear-gradient(160deg, var(--ios-olive) 0%, #33481f 100%)',
+            }}
+          >
+            Intro
+          </span>
+          <span style={{
+            position: 'absolute', top: '0.4rem', right: '0.4rem', width: '20px', height: '20px', borderRadius: '50%',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', background: locked ? '#ef4444' : '#16a34a',
+          }}>
+            {locked ? <Lock size={11} color="white" /> : <Unlock size={11} color="white" />}
+          </span>
+        </div>
+        <span style={{ fontSize: '0.74rem', fontWeight: 500, lineHeight: 1.3, color: '#0f172a' }}>
+          {intro.title || 'Introduction'}
+        </span>
+      </div>
+
+      {open && (
+        <div
+          onClick={() => setOpen(false)}
+          style={{ position: 'fixed', inset: 0, background: 'rgba(15,23,42,0.55)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem' }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ background: '#fff', borderRadius: '14px', width: 'min(760px, 100%)', maxHeight: '85vh', overflowY: 'auto', padding: '2rem', position: 'relative' }}
+          >
+            <button
+              onClick={() => setOpen(false)}
+              style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'transparent', border: 'none', cursor: 'pointer', color: '#64748b' }}
+            >
+              <X size={20} />
+            </button>
+            {intro.title && <h3 style={{ marginTop: 0, color: 'var(--ios-olive)' }}>{intro.title}</h3>}
+            <div className="intro-manual-body" style={{ fontSize: '0.95rem', color: '#334155' }} dangerouslySetInnerHTML={{ __html: intro.body || '' }} />
+            <style dangerouslySetInnerHTML={{ __html: `
+              .intro-manual-body img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0.75rem 0; }
+              .intro-manual-body p { margin: 0 0 0.75rem; }
+              .intro-manual-body h1, .intro-manual-body h2, .intro-manual-body h3, .intro-manual-body h4 { color: var(--ios-olive); margin: 1rem 0 0.5rem; }
+              .intro-manual-body table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; }
+              .intro-manual-body th, .intro-manual-body td { border: 1px solid var(--border, #e2e8f0); padding: 0.5rem 0.65rem; text-align: left; }
+            `}} />
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 function QuizRow({ quiz, examName, locked }) {
   return (
     <Link
@@ -255,21 +319,20 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
       <div style={{ padding: '0.5rem 0 0' }}>
         {intro && (
           <div id="section-intro" style={{ marginBottom: '1.5rem', scrollMarginTop: '1.5rem' }}>
-            <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Introduction</h4>
-            {intro.source === 'auto' ? (
-              <ResourceRow
-                resource={intro.resource}
-                examName={examName}
-                locked={false}
-                isCompleted={completedResourceIds?.has(intro.resource.resource_id)}
-                onToggleComplete={(id, completed) => markAsCompleted(id, null, completed)}
-              />
-            ) : (
-              <div style={{ padding: '0.9rem 1rem', borderRadius: 'var(--radius-sm, 10px)', border: '1px solid var(--border, #e2e8f0)', background: '#fff' }}>
-                {intro.title && <h5 style={{ margin: '0 0 0.5rem', fontSize: '0.9rem' }}>{intro.title}</h5>}
-                {intro.body && <p style={{ margin: 0, fontSize: '0.85rem', color: '#334155', whiteSpace: 'pre-wrap' }}>{intro.body}</p>}
-              </div>
-            )}
+            <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.75rem', textTransform: 'uppercase' }}>Introduction</h4>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: '0.85rem' }}>
+              {intro.source === 'auto' ? (
+                <ResourceTile
+                  resource={intro.resource}
+                  examName={examName}
+                  locked={isResourceLockedForUser(tier, 'Intro')}
+                  isCompleted={completedResourceIds?.has(intro.resource.resource_id)}
+                  onToggleComplete={(id, completed) => markAsCompleted(id, null, completed)}
+                />
+              ) : (
+                <IntroManualTile intro={intro} locked={isResourceLockedForUser(tier, 'Intro')} />
+              )}
+            </div>
           </div>
         )}
 

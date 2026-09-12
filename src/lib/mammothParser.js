@@ -34,7 +34,7 @@ export async function parseDocxToSemanticModel(arrayBuffer, fileName) {
 
   const result = await mammoth.convertToHtml({ arrayBuffer }, options);
   const html = result.value;
-  
+
   // 2. Parse the HTML into a DOM tree
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
@@ -67,7 +67,7 @@ export async function parseDocxToSemanticModel(arrayBuffer, fileName) {
   // Helper to classify paragraphs
   const classifyParagraph = (element) => {
     // Remove non-breaking spaces as well to catch "empty" paragraphs
-    const text = element.textContent.replace(/\u00A0/g, ' ').trim();
+    const text = element.textContent.replace(/ /g, ' ').trim();
     if (!text) return null;
 
     // Check for bold prefixes (e.g. "IMPORTANT:", "NOTE:")
@@ -75,7 +75,7 @@ export async function parseDocxToSemanticModel(arrayBuffer, fileName) {
     if (firstChild && (firstChild.nodeName === 'STRONG' || firstChild.nodeName === 'B')) {
       const prefix = firstChild.textContent.trim().toUpperCase();
       const content = element.innerHTML;
-      
+
       if (prefix.includes('IMPORTANT') || prefix.includes('WARNING')) {
         return { type: 'important', content };
       }
@@ -92,7 +92,7 @@ export async function parseDocxToSemanticModel(arrayBuffer, fileName) {
         return { type: 'callout', content };
       }
     }
-    
+
     // Auto-detect subheadings: If a paragraph is very short and doesn't end in punctuation
     const wordCount = text.split(/\s+/).length;
     if (wordCount <= 5 && !text.endsWith('.') && !text.endsWith('?') && !text.endsWith(':') && !text.endsWith(';')) {
@@ -104,7 +104,7 @@ export async function parseDocxToSemanticModel(arrayBuffer, fileName) {
 
   // 4. Walk the top-level elements and map to blocks
   const elements = Array.from(doc.body.children);
-  
+
   for (const el of elements) {
     const nodeName = el.nodeName;
 
@@ -193,7 +193,7 @@ export async function parseDocxToSemanticModel(arrayBuffer, fileName) {
       // Convert HTML table back to a simple nested array structure
       const rows = [];
       const trs = Array.from(el.getElementsByTagName('tr'));
-      
+
       let isHeader = true; // First row is header by default
       for (const tr of trs) {
         const cells = Array.from(tr.children).map(td => td.innerHTML);
@@ -201,7 +201,7 @@ export async function parseDocxToSemanticModel(arrayBuffer, fileName) {
           isHeader,
           cells
         });
-        isHeader = false; 
+        isHeader = false;
       }
 
       if (rows.length > 0) {

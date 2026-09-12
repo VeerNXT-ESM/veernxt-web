@@ -57,7 +57,7 @@ export const NewBookModal = ({ onClose, onCreated }) => {
     setError(null);
     try {
       const data = await postBooksAction({ type: 'books-create', category, title: title.trim() });
-      onCreated(category, data.resourceId);
+      onCreated(category, data.resourceId, title.trim());
     } catch (err) {
       setError(err.message);
     } finally {
@@ -116,7 +116,7 @@ export const DuplicateBookModal = ({ source, onClose, onDuplicated }) => {
         newTitle: newTitle.trim(),
         findReplace: findReplace.filter((p) => p.find.trim()),
       });
-      onDuplicated(destCategory, data.resourceId);
+      onDuplicated(destCategory, data.resourceId, newTitle.trim());
     } catch (err) {
       setError(err.message);
     } finally {

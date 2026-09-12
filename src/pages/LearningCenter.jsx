@@ -40,10 +40,11 @@ const LearningCenter = () => {
   const [allTargetIds, setAllTargetIds] = useState(new Set()); // all saved exam IDs
   const [preparingExamId, setPreparingExamId] = useState(null); // loading state for CTA
 
-  // Catalog + filters. The whole lc_exams catalog (~1k rows) is fetched
-  // once; every filter/level/derived list comes from it client-side.
+  // Catalog + filters. The whole lc_exams catalog (~1.5k rows) is fetched
+  // paginated; every filter/level/derived list comes from it client-side.
   const [regionMode, setRegionMode] = useState('central'); // 'central' | 'state' | 'ut'
   const [catalog, setCatalog] = useState([]);
+  const [regions, setRegions] = useState([]);
   const [catalogLoading, setCatalogLoading] = useState(true);
   const [catalogError, setCatalogError] = useState(null);
   const [regionFilterId, setRegionFilterId] = useState('');
@@ -108,22 +109,54 @@ const LearningCenter = () => {
     let cancelled = false;
     (async () => {
       setCatalogLoading(true);
-      const { data, error: catErr } = await supabase
-        .from('lc_exams')
-        .select('id,name,category,accent_color,thumbnail_subject,conducting_body_id,conducting_body:lc_conducting_bodies(id,name),region:lc_regions(id,name,level)');
-      if (cancelled) return;
-      if (catErr) setCatalogError('Unable to load the exam catalog.');
-      else setCatalog(data || []);
-      setCatalogLoading(false);
+      try {
+        // Fetch canonical regions so all 28 states and 8 UTs are immediately available
+        const { data: regData } = await supabase
+          .from('lc_regions')
+          .select('id,name,level')
+          .order('name');
+        if (!cancelled && regData) {
+          setRegions(regData);
+        }
+
+        // Supabase caps unpaginated selects at 1000 rows. Paginate to fetch all ~1,530 exams.
+        let allExams = [];
+        for (let from = 0; ; from += 1000) {
+          const { data, error: catErr } = await supabase
+            .from('lc_exams')
+            .select('id,name,category,accent_color,thumbnail_subject,conducting_body_id,conducting_body:lc_conducting_bodies(id,name),region:lc_regions(id,name,level)')
+            .range(from, from + 999);
+          if (catErr) throw catErr;
+          allExams = allExams.concat(data || []);
+          if (!data || data.length < 1000) break;
+        }
+
+        if (!cancelled) {
+          setCatalog(allExams);
+          setCatalogLoading(false);
+        }
+      } catch (err) {
+        if (!cancelled) {
+          console.error('Failed to load exam catalog:', err);
+          setCatalogError('Unable to load the exam catalog.');
+          setCatalogLoading(false);
+        }
+      }
     })();
     return () => { cancelled = true; };
   }, []);
 
-  // State/UT filter options: scoped to the active level's own regions in
-  // State/UT mode (picking one is required there), but spans both in
-  // Central mode since it's an optional cross-filter onto bodies that also
-  // run a state-linked exam.
+  // State/UT filter options: sourced from canonical lc_regions (guaranteeing all 28 states
+  // and all 8 UTs appear), with fallback to catalog exams if regions query is empty.
   const regionFilterOptions = useMemo(() => {
+    if (regions.length > 0) {
+      return regions
+        .filter((r) => regionMode === 'central'
+          ? (r.level === 'state' || r.level === 'ut')
+          : r.level === regionMode
+        )
+        .sort((a, b) => a.name.localeCompare(b.name));
+    }
     const seen = new Map();
     for (const exam of catalog) {
       if (!exam.region) continue;
@@ -133,7 +166,7 @@ const LearningCenter = () => {
       if (relevant && !seen.has(exam.region.id)) seen.set(exam.region.id, exam.region);
     }
     return [...seen.values()].sort((a, b) => a.name.localeCompare(b.name));
-  }, [catalog, regionMode]);
+  }, [regions, catalog, regionMode]);
 
   // Exams satisfying the level gate: Central takes every central exam;
   // State/UT requires a specific region pick first.

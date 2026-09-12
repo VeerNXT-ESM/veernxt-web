@@ -48,10 +48,16 @@ const ExamsPage = () => {
   const [catalog, setCatalog] = useState([]);
   useEffect(() => {
     (async () => {
-      const { data } = await supabase
-        .from('lc_exams')
-        .select('id,name,category,conducting_body_id,conducting_body:lc_conducting_bodies(id,name),region:lc_regions(id,name,level)');
-      setCatalog(data || []);
+      let allExams = [];
+      for (let from = 0; ; from += 1000) {
+        const { data } = await supabase
+          .from('lc_exams')
+          .select('id,name,category,conducting_body_id,conducting_body:lc_conducting_bodies(id,name),region:lc_regions(id,name,level)')
+          .range(from, from + 999);
+        allExams = allExams.concat(data || []);
+        if (!data || data.length < 1000) break;
+      }
+      setCatalog(allExams);
     })();
   }, []);
 

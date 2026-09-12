@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, AlertTriangle, RefreshCw, Pencil, Eye, Save, X, Copy, Trash2, Columns } from 'lucide-react';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
@@ -39,6 +39,7 @@ async function postBooksAction(body) {
 const BookChapterBrowser = () => {
   const { category, book: resourceId } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const [book, setBook] = useState(null); // { resourceId, title, category, storageBaseUrl }
   const [bookError, setBookError] = useState(null);
   const [metadata, setMetadata] = useState(null);
@@ -227,10 +228,12 @@ const BookChapterBrowser = () => {
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', background: '#f4f5f7', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', overflow: 'hidden' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 2rem', background: 'white', borderBottom: '1px solid #e2e8f0', flexShrink: 0, zIndex: 50 }}>
         <button onClick={() => { if (dirty && !window.confirm('Discard unsaved changes?')) return; navigate('/admin/books'); }} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: 'transparent', border: 'none', color: '#64748b', fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer' }}>
-          <ArrowLeft size={18} /> Book Content
+          <ArrowLeft size={18} /> Back
         </button>
         <div style={{ flex: 1 }}>
-          <h1 style={{ fontSize: '1.15rem', margin: 0, fontWeight: 800, color: '#0f172a' }}>{book?.title || resourceId}</h1>
+          <h1 style={{ fontSize: '1.15rem', margin: 0, fontWeight: 800, color: '#0f172a' }}>
+            {book?.title || location.state?.bookTitle || (bookError ? 'Book not found' : 'Loading…')}
+          </h1>
           <div style={{ fontSize: '0.78rem', color: '#94a3b8' }}>{category}</div>
         </div>
         {issues.length > 0 && (
@@ -580,7 +583,7 @@ const BookChapterBrowser = () => {
         <DuplicateBookModal
           source={book}
           onClose={() => setShowDuplicateModal(false)}
-          onDuplicated={(cat, newResourceId) => { setShowDuplicateModal(false); navigate(`/admin/books/${cat}/${newResourceId}`); }}
+          onDuplicated={(cat, newResourceId, dupTitle) => { setShowDuplicateModal(false); navigate(`/admin/books/${cat}/${newResourceId}`, { state: { bookTitle: dupTitle } }); }}
         />
       )}
       {showDeleteModal && book && (

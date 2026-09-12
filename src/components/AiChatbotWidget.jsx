@@ -4,18 +4,9 @@ import {
   Bot, 
   X, 
   Send, 
-  Sparkles, 
   RotateCcw, 
   ChevronRight,
-  User,
-  Briefcase,
-  ShieldCheck,
-  Award,
-  TrendingUp,
-  FileText,
-  CheckCircle2,
-  Cpu,
-  LogIn
+  User
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
@@ -330,7 +321,6 @@ export default function AiChatbotWidget() {
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [thinkingText, setThinkingText] = useState('VeerNXT AI is thinking...');
   const chatEndRef = useRef(null);
 
   // Fetch logged in user profile from Supabase
@@ -441,7 +431,7 @@ export default function AiChatbotWidget() {
   }, [userProfile, messages.length]);
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && (messages.length > 1 || isTyping)) {
       chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages, isOpen, isTyping]);
@@ -450,20 +440,18 @@ export default function AiChatbotWidget() {
     let initialMsg;
 
     if (prof?.isLoggedIn && !prof.isEmployer) {
-      const rankName = `${prof.rank !== 'Ex-Serviceman' ? prof.rank + ' ' : ''}${prof.name}`;
+      const rankName = `${prof.rank && prof.rank !== 'Ex-Serviceman' ? prof.rank + ' ' : ''}${prof.name || 'Veteran'}`;
 
       initialMsg = {
         id: 'msg-init',
         sender: 'bot',
         isAi: true,
-        text: `**Jai Hind, ${rankName}!** 🇮🇳\n\nWelcome to VeerNXT AI Support. I've synced your defense profile:\n- **Branch & Corps**: ${prof.branch} ${prof.corps ? '• ' + prof.corps : ''}\n- **Service Duration**: ${prof.yearsOfService} Years\n\nHow can I assist your career mission today? Select a personalized option below or ask any question!`,
+        text: `Hi ${rankName}, how can I help you today? Ask any question or choose a topic:`,
         options: [
-          { id: 'p_career', label: `🎯 Career Roadmap`, optionType: 'personalized' },
-          { id: 'p_ats', label: `📜 ATS CV Translation (${prof.corps || prof.branch})`, optionType: 'personalized' },
-          { id: 'p_sewa', label: `💰 Sewa Nidhi Plan (${prof.yearsOfService} Yrs Service)`, optionType: 'personalized' },
-          { id: 'p_exams', label: `📝 Exams & Mocks (${prof.education})`, optionType: 'personalized' },
-          { id: 'p_legal', label: `⚖️ Pension & Legal Aid (${prof.rank})`, optionType: 'personalized' },
-          { id: 'p_all', label: `🌐 Browse All Platform Topics`, optionType: 'show_all_categories' }
+          { id: 'p_career', label: `Career & ATS CV`, optionType: 'personalized' },
+          { id: 'p_sewa', label: `Sewa Nidhi Plan`, optionType: 'personalized' },
+          { id: 'p_exams', label: `Exams & Mock Tests`, optionType: 'personalized' },
+          { id: 'p_legal', label: `Pension & Legal Aid`, optionType: 'personalized' }
         ],
         timestamp: new Date()
       };
@@ -472,12 +460,11 @@ export default function AiChatbotWidget() {
         id: 'msg-init',
         sender: 'bot',
         isAi: true,
-        text: `**Welcome, ${prof.name}!** 🏢\n\nVeerNXT AI Assistant is synced with your **${prof.companyName || 'Employer Workspace'}** (${prof.industry}). How can I assist your defense veteran recruitment today?`,
+        text: `Hi ${prof.name || 'Employer'}, how can I help with veteran recruitment today?`,
         options: [
-          { id: 'emp_search', label: `🔍 Match Verified Veterans (${prof.industry})`, optionType: 'employer' },
-          { id: 'emp_post', label: `💼 Post Veteran Job Opening`, optionType: 'employer' },
-          { id: 'emp_rank_map', label: `📊 Military Rank to Corporate Mapping`, optionType: 'employer' },
-          { id: 'p_all', label: `🌐 Browse All Platform Topics`, optionType: 'show_all_categories' }
+          { id: 'emp_search', label: `Match Verified Veterans`, optionType: 'employer' },
+          { id: 'emp_post', label: `Post Job Opening`, optionType: 'employer' },
+          { id: 'emp_rank_map', label: `Rank to Corporate Mapping`, optionType: 'employer' }
         ],
         timestamp: new Date()
       };
@@ -486,9 +473,12 @@ export default function AiChatbotWidget() {
         id: 'msg-init',
         sender: 'bot',
         isAi: true,
-        text: `**Jai Hind! Welcome to VeerNXT** 🇮🇳 — India's premier Defence Reintegration AI Platform.\n\n🔐 **Please log in to unlock answers.** Your profile (rank, service branch, education) lets us give you accurate guidance on exams, careers, Sewa Nidhi & legal aid.`,
+        text: `Welcome to VeerNXT. Ask about competitive exams, Sewa Nidhi, corporate careers, or legal aid.`,
         options: [
-          { id: 'g_login', label: '🔐 Log In / Sign Up', optionType: 'login' }
+          { id: 'cat_exams', label: 'Exams & Mock Tests', categoryKey: 'exams' },
+          { id: 'cat_finance', label: 'Sewa Nidhi Planning', categoryKey: 'finance' },
+          { id: 'cat_jobs', label: 'Corporate Jobs & CV', categoryKey: 'jobs' },
+          { id: 'g_login', label: 'Log In / Sign Up', optionType: 'login' }
         ],
         timestamp: new Date()
       };
@@ -497,8 +487,8 @@ export default function AiChatbotWidget() {
     setMessages([initialMsg]);
   };
 
-  // Helper to trigger thinking state with buffering dots
-  const triggerThinkingResponse = (userMsgText, botResponseGenerator, statusText) => {
+  // Helper to trigger typing state
+  const triggerThinkingResponse = (userMsgText, botResponseGenerator) => {
     if (isTyping) return;
 
     // 1. Instantly append user message if provided
@@ -512,12 +502,11 @@ export default function AiChatbotWidget() {
       setMessages(prev => [...prev, userMsg]);
     }
 
-    // 2. Start buffering dots state
-    setThinkingText(statusText || (userProfile?.isLoggedIn ? `Analyzing ${userProfile.name}'s profile & generating response...` : 'VeerNXT AI is thinking...'));
+    // 2. Start typing indicator
     setIsTyping(true);
 
-    // 3. Realistic delay for thinking animation
-    const delayMs = Math.floor(Math.random() * 500) + 1400; // 1400ms - 1900ms
+    // 3. Snappy, natural typing delay
+    const delayMs = Math.floor(Math.random() * 250) + 450; // 450ms - 700ms
 
     setTimeout(() => {
       const botMsg = botResponseGenerator();
@@ -682,7 +671,7 @@ function synthesizeIntelligentResponse(query, profile) {
     text += `- **Defense Trade Advantage**: Your background in **${branch} ${corps ? '(' + corps + ')' : ''}** qualifies you for executive roles in Supply Chain, Telecom & IT Infrastructure, Corporate Security, and Fleet Operations.\n`;
     text += `- **ATS Resume Optimizer**: Standard corporate HR portals use Applicant Tracking Systems (ATS). Our tool automatically converts military terms like *"Squad Commander / MT In-charge"* into recruiter-preferred keywords.\n`;
     if (name) {
-      text += `\n💡 **Personalized Note for ${rank} ${name}**: Open the ATS Resume Builder below to convert your ${branch} service experience into an executive PDF CV!`;
+      text += `\n**Note**: Open the ATS Resume Builder below to convert your ${branch} service experience into a PDF CV.`;
     }
 
     return {
@@ -715,7 +704,7 @@ function synthesizeIntelligentResponse(query, profile) {
     text += `  • **RPF Sub-Inspector & Constable**: Direct recruitment with physical PET relaxations.\n`;
     text += `- **VeerNXT Test Engine**: Access 450+ interactive Mock Tests (Learning & Speed Modes) and 400+ authentic Past Year Papers with official answer keys.\n`;
     if (name) {
-      text += `\n💡 **Personalized Note for ${name}**: Your profile is pre-configured for exam eligibility matching.`;
+      text += `\n**Note**: Your profile is already set up for exam eligibility matching.`;
     }
 
     return {
@@ -772,7 +761,7 @@ function synthesizeIntelligentResponse(query, profile) {
     text += `- **CSD Canteen Smart Card**: Online registration for liquor & grocery canteen cards.\n`;
     text += `- **Pro-Bono Legal Advocacy**: Representation in Armed Forces Tribunal (AFT) for disability pension claims and civil/land disputes.\n`;
     if (name) {
-      text += `\n💡 **Personalized Note for ${rank} ${name}**: You can request priority 1-on-1 legal advocacy through the Legal Cell.`;
+      text += `\n**Note**: You can request 1-on-1 legal advocacy through the Legal Cell.`;
     }
 
     return {
@@ -825,7 +814,7 @@ function synthesizeIntelligentResponse(query, profile) {
   if (highestScore > 0 && bestMatch) {
     let botText = bestMatch.answer;
     if (profile?.isLoggedIn && !profile.isEmployer) {
-      botText += `\n\n💡 **Personalized Note for ${name}**: As a **${rank}** (${branch}), your credentials qualify for direct ESM quotas and preferential matching on VeerNXT.`;
+      botText += `\n\n**Note**: As a ${rank} (${branch}), you qualify for direct ESM quotas and preferential matching on VeerNXT.`;
     }
     return {
       text: botText,
@@ -877,9 +866,9 @@ function synthesizeIntelligentResponse(query, profile) {
             id: 'msg-' + Date.now(),
             sender: 'bot',
             isAi: true,
-            text: `**Login Required** 🔐\n\nTo get answers for **"${query}"**, please log in. Your profile (rank, service branch, education) lets VeerNXT give you accurate, personalized guidance for exams, careers, Sewa Nidhi & legal aid.`,
+            text: `**Login Required**\n\nTo get an answer for "${query}", please log in. Your profile (rank, service branch, education) lets VeerNXT give accurate guidance for exams, careers, Sewa Nidhi, and legal aid.`,
             options: [
-              { id: 'g_login', label: '🔐 Log In / Sign Up', optionType: 'login' }
+              { id: 'g_login', label: 'Log In / Sign Up', optionType: 'login' }
             ],
             timestamp: new Date()
           };
@@ -897,14 +886,14 @@ function synthesizeIntelligentResponse(query, profile) {
 
         if (GREETINGS.includes(lowerQ)) {
           botText = userProfile?.isLoggedIn
-            ? `**Jai Hind, ${userProfile.rank} ${userProfile.name}!** 🇮🇳\n\nHow can I assist your mission today? Feel free to select any category below or ask a specific question!`
-            : `**Jai Hind!**\n\nHow can I assist your mission today? Feel free to select any category below or ask a specific question!`;
+            ? `Hi ${userProfile.rank} ${userProfile.name}, how can I help? Pick a category below or ask a question.`
+            : `Hi! How can I help? Pick a category below or ask a question.`;
           isConversational = true;
         } else if (AFFIRMATIONS.includes(lowerQ)) {
-          botText = `You're very welcome!\n\nLet me know if you need help with competitive exams, Sewa Nidhi financial planning, legal advocacy, or corporate ATS resume building.`;
+          botText = `You're welcome. Let me know if you need help with exams, Sewa Nidhi planning, legal aid, or resume building.`;
           isConversational = true;
         } else if (FAREWELLS.includes(lowerQ)) {
-          botText = `**Jai Hind!** Have a great day ahead. Best wishes for your career journey!`;
+          botText = `Take care, and good luck with your career.`;
           isConversational = true;
         }
 
@@ -945,36 +934,34 @@ function synthesizeIntelligentResponse(query, profile) {
 
   return (
     <>
-      {/* Floating AWS Connect Widget Launcher Button */}
+      {/* Floating Chatbot Launcher Button - Circular with Open App Olive (#4B6B32) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle VeerNXT AI Support"
         className={`chatbot-fab ${isOpen ? 'active' : ''}`}
       >
         {isOpen ? (
-          <X size={24} />
+          <X size={22} />
         ) : (
-          <Bot size={26} />
+          <Bot size={24} />
         )}
       </button>
 
       {/* Chat Drawer */}
       {isOpen && (
         <div className="chatbot-drawer">
-          {/* Header */}
+          {/* Clean, Simple Header */}
           <div className="drawer-header">
             <div className="header-left">
               <div className="bot-avatar">
-                <Bot size={20} />
+                <Bot size={18} />
               </div>
               <div className="bot-titles">
-                <div className="title-row">
-                  <h3>VeerNXT AI Assistant</h3>
-                </div>
-                <div className="online-indicator">
+                <h3>VeerNXT Assistant</h3>
+                <span className="online-indicator">
                   <span className="dot" />
-                  <span>Virtual Support Assistant • Online</span>
-                </div>
+                  <span>Online</span>
+                </span>
               </div>
             </div>
 
@@ -985,39 +972,17 @@ function synthesizeIntelligentResponse(query, profile) {
                 title="Reset Conversation"
                 disabled={isTyping}
               >
-                <RotateCcw size={16} />
+                <RotateCcw size={15} />
               </button>
               <button 
                 onClick={() => setIsOpen(false)} 
                 className="btn-icon-head" 
                 title="Close"
               >
-                <X size={18} />
+                <X size={17} />
               </button>
             </div>
           </div>
-
-          {/* User Profile Context Strip (If Logged In) */}
-          {userProfile?.isLoggedIn && (
-            <div className="profile-context-strip">
-              <div className="strip-item">
-                <ShieldCheck size={13} className="strip-icon" />
-                <span>{userProfile.branch || 'Defense Veteran'}</span>
-              </div>
-              {userProfile.corps && (
-                <div className="strip-item">
-                  <Award size={13} className="strip-icon" />
-                  <span>{userProfile.corps}</span>
-                </div>
-              )}
-              {userProfile.targetRole && (
-                <div className="strip-item highlight">
-                  <TrendingUp size={13} className="strip-icon" />
-                  <span>Target: {userProfile.targetRole}</span>
-                </div>
-              )}
-            </div>
-          )}
 
           {/* Messages Stream */}
           <div className="drawer-body">
@@ -1028,18 +993,11 @@ function synthesizeIntelligentResponse(query, profile) {
               >
                 {msg.sender === 'bot' && (
                   <div className="msg-avatar bot">
-                    {msg.isAi ? <Sparkles size={14} color="#34D399" /> : <Bot size={14} />}
+                    <Bot size={14} />
                   </div>
                 )}
 
-                <div className={`msg-bubble ${msg.sender} ${msg.isAi ? 'ai-bubble' : ''}`}>
-                  {msg.isAi && (
-                    <div className="ai-tag">
-                      <Cpu size={12} />
-                      <span>VeerNXT AI Assistant</span>
-                    </div>
-                  )}
-
+                <div className={`msg-bubble ${msg.sender}`}>
                   {/* Formatted Text */}
                   <div className="msg-text-content">
                     {renderFormattedMessage(msg.text)}
@@ -1054,7 +1012,7 @@ function synthesizeIntelligentResponse(query, profile) {
                           className="btn-nav-action primary"
                         >
                           <span>{msg.navLabel || 'Open Section'}</span>
-                          <ChevronRight size={14} />
+                          <ChevronRight size={13} />
                         </button>
                       )}
                       {msg.secondaryLink && (
@@ -1062,16 +1020,16 @@ function synthesizeIntelligentResponse(query, profile) {
                           onClick={() => { navigate(msg.secondaryLink); setIsOpen(false); }}
                           className="btn-nav-action secondary"
                         >
-                          <span>{msg.secondaryLabel || 'View Secondary'}</span>
-                          <ChevronRight size={14} />
+                          <span>{msg.secondaryLabel || 'View Details'}</span>
+                          <ChevronRight size={13} />
                         </button>
                       )}
                     </div>
                   )}
 
-                  {/* Option Chips */}
+                  {/* Option Chips as Clean, Minimalist Pills */}
                   {msg.options && msg.options.length > 0 && (
-                    <div className="msg-chips-grid">
+                    <div className="msg-chips-wrap">
                       {msg.options.map(opt => {
                         const isCat = opt.categoryKey !== undefined;
                         const isPersonalized = opt.optionType === 'personalized' || opt.optionType === 'employer';
@@ -1095,10 +1053,9 @@ function synthesizeIntelligentResponse(query, profile) {
                                 handleSubTopicClick(opt.id, opt.label);
                               }
                             }}
-                            className={`chip-btn ${isPersonalized ? 'personalized-chip' : ''}`}
+                            className="chip-pill"
                           >
-                            <span className="chip-label">{opt.label}</span>
-                            <ChevronRight size={14} className="chip-chevron" />
+                            <span>{opt.label}</span>
                           </button>
                         );
                       })}
@@ -1114,28 +1071,16 @@ function synthesizeIntelligentResponse(query, profile) {
               </div>
             ))}
 
-            {/* Buffering Dots / Thinking State Animation */}
+            {/* Minimalist 3-Dot Typing Indicator */}
             {isTyping && (
-              <div className="chat-bubble-row bot-row thinking-row">
-                <div className="msg-avatar bot aws-avatar">
-                  <Sparkles size={14} className="aws-sparkle-spin" />
+              <div className="chat-bubble-row bot-row">
+                <div className="msg-avatar bot">
+                  <Bot size={14} />
                 </div>
-                <div className="msg-bubble bot aws-thinking-bubble">
-                  <div className="aws-thinking-header">
-                    <Cpu size={13} className="thinking-icon" />
-                    <span className="thinking-title">VeerNXT AI Engine</span>
-                  </div>
-
-                  {/* Three Animated Buffering Dots */}
-                  <div className="aws-thinking-dots" aria-label="Buffering response">
-                    <span className="dot dot-1" />
-                    <span className="dot dot-2" />
-                    <span className="dot dot-3" />
-                  </div>
-
-                  <span className="thinking-status">
-                    {thinkingText}
-                  </span>
+                <div className="msg-bubble bot typing-bubble">
+                  <span className="typing-dot" />
+                  <span className="typing-dot" />
+                  <span className="typing-dot" />
                 </div>
               </div>
             )}
@@ -1143,22 +1088,11 @@ function synthesizeIntelligentResponse(query, profile) {
             <div ref={chatEndRef} />
           </div>
 
-          {/* Guest Log-in prompt banner if guest */}
-          {userProfile !== null && !userProfile.isLoggedIn && (
-            <div className="guest-login-banner">
-              <span>Log in to personalize chat with your profile & rank</span>
-              <button onClick={() => { navigate('/login'); setIsOpen(false); }} className="btn-guest-login">
-                <LogIn size={13} />
-                <span>Log In</span>
-              </button>
-            </div>
-          )}
-
           {/* Footer Input */}
           <form onSubmit={handleSendMessage} className="drawer-footer">
             <input
               type="text"
-              placeholder={userProfile?.isLoggedIn ? `Ask about exams, Sewa Nidhi, ATS CV...` : "Ask any question..."}
+              placeholder={userProfile?.isLoggedIn ? "Ask about exams, Sewa Nidhi, ATS CV..." : "Ask any question..."}
               value={inputText}
               disabled={isTyping}
               onChange={(e) => setInputText(e.target.value)}
@@ -1170,41 +1104,43 @@ function synthesizeIntelligentResponse(query, profile) {
               className="btn-send"
               aria-label="Send query"
             >
-              <Send size={16} />
+              <Send size={15} />
             </button>
           </form>
         </div>
       )}
 
-      {/* Styled CSS */}
+      {/* Modern, Clean & Simple Styles with Open App Olive (#4B6B32) */}
       <style dangerouslySetInnerHTML={{ __html: `
+        /* Launcher Floating Action Button - Plain Circle in Open App Olive */
         .chatbot-fab {
           position: fixed;
           bottom: 85px;
           right: 24px;
-          width: 54px;
-          height: 54px;
-          border-radius: 50%;
-          background: #10B981;
-          color: #FFFFFF;
-          border: 1px solid rgba(255, 255, 255, 0.15);
+          width: 56px;
+          height: 56px;
+          border-radius: 50% !important;
+          background: linear-gradient(135deg, #5A803D 0%, #4B6B32 50%, #3D5728 100%) !important;
+          color: #FFFFFF !important;
+          border: 2px solid rgba(255, 255, 255, 0.3) !important;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+          box-shadow: 0 10px 26px rgba(75, 107, 50, 0.42), 0 2px 6px rgba(0, 0, 0, 0.12) !important;
           z-index: 9999;
-          transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+          transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
         }
 
         .chatbot-fab:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 14px 30px rgba(16, 185, 129, 0.42);
+          transform: translateY(-3px) scale(1.06);
+          box-shadow: 0 14px 32px rgba(75, 107, 50, 0.52), 0 4px 10px rgba(0, 0, 0, 0.16) !important;
+          filter: brightness(1.05);
         }
 
         .chatbot-fab.active {
-          background: #0F172A;
-          box-shadow: 0 8px 24px rgba(15, 23, 42, 0.28);
+          background: #2E421E !important;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3) !important;
         }
 
         /* Drawer Styling */
@@ -1212,172 +1148,131 @@ function synthesizeIntelligentResponse(query, profile) {
           position: fixed;
           bottom: 155px;
           right: 24px;
-          width: 400px;
+          width: 380px;
           max-width: calc(100vw - 32px);
-          height: 600px;
+          height: 550px;
           max-height: calc(100vh - 180px);
-          background: #FFFFFF;
-          border-radius: 20px;
-          border: 1px solid #EEF2F7;
-          box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+          background: #FFFFFF !important;
+          border-radius: 18px !important;
+          border: 1px solid rgba(0, 0, 0, 0.08) !important;
+          box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14) !important;
           display: flex;
           flex-direction: column;
           z-index: 9998;
-          overflow: hidden;
-          animation: drawerSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+          overflow: hidden !important;
+          animation: drawerSlideUp 0.24s cubic-bezier(0.16, 1, 0.3, 1);
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         @keyframes drawerSlideUp {
-          from { opacity: 0; transform: translateY(16px) scale(0.98); }
+          from { opacity: 0; transform: translateY(12px) scale(0.98); }
           to { opacity: 1; transform: translateY(0) scale(1); }
         }
 
+        /* Header in Open App Olive */
         .drawer-header {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 1rem 1.15rem;
-          background: #0F172A;
-          color: #F8FAFC;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+          padding: 0.85rem 1rem;
+          background: #4B6B32 !important;
+          color: #FFFFFF !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
         }
 
         .header-left {
           display: flex;
           align-items: center;
-          gap: 0.7rem;
+          gap: 0.65rem;
         }
 
         .bot-avatar {
-          width: 36px;
-          height: 36px;
-          border-radius: 10px;
-          background: rgba(16, 185, 129, 0.16);
-          border: 1px solid rgba(16, 185, 129, 0.28);
+          width: 34px;
+          height: 34px;
+          border-radius: 50% !important;
+          background: rgba(255, 255, 255, 0.2) !important;
+          border: 1px solid rgba(255, 255, 255, 0.35) !important;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #34D399;
+          color: #FFFFFF !important;
+          flex-shrink: 0;
         }
 
         .bot-titles {
           display: flex;
           flex-direction: column;
-          gap: 0.15rem;
+          gap: 1px;
         }
 
-        .title-row {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-        }
-
-        .title-row h3 {
+        .bot-titles h3 {
           margin: 0;
           font-size: 0.92rem;
-          font-weight: 650;
+          font-weight: 700;
+          color: #FFFFFF !important;
           line-height: 1.2;
-          color: #F8FAFC;
-          letter-spacing: -0.01em;
         }
 
         .online-indicator {
           display: flex;
           align-items: center;
-          gap: 0.35rem;
-          font-size: 0.7rem;
-          color: #94A3B8;
+          gap: 0.3rem;
+          font-size: 0.68rem;
+          color: rgba(255, 255, 255, 0.85) !important;
         }
 
         .online-indicator .dot {
           width: 6px;
           height: 6px;
-          border-radius: 50%;
-          background: #34D399;
-          box-shadow: 0 0 6px rgba(52, 211, 153, 0.6);
+          border-radius: 50% !important;
+          background: #A3E635 !important;
+          box-shadow: 0 0 5px #A3E635 !important;
         }
 
         .header-right {
           display: flex;
-          gap: 0.4rem;
+          gap: 0.35rem;
         }
 
         .btn-icon-head {
-          background: rgba(255, 255, 255, 0.06);
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          color: #94A3B8;
-          width: 32px;
-          height: 32px;
-          border-radius: 8px;
+          background: rgba(255, 255, 255, 0.15) !important;
+          border: none !important;
+          color: #FFFFFF !important;
+          width: 28px;
+          height: 28px;
+          border-radius: 50% !important;
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
-          transition: all 0.15s ease;
+          transition: background-color 0.15s ease;
         }
 
         .btn-icon-head:hover:not(:disabled) {
-          background: rgba(255, 255, 255, 0.12);
-          color: #FFFFFF;
+          background: rgba(255, 255, 255, 0.28) !important;
         }
 
         .btn-icon-head:disabled {
-          opacity: 0.5;
+          opacity: 0.4;
           cursor: not-allowed;
-        }
-
-        /* Profile Context Strip */
-        .profile-context-strip {
-          display: flex;
-          align-items: center;
-          gap: 0.4rem;
-          padding: 0.45rem 1rem;
-          background: #F8FAFC;
-          border-bottom: 1px solid #EEF2F7;
-          overflow-x: auto;
-        }
-
-        .strip-item {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.3rem;
-          font-size: 0.68rem;
-          font-weight: 600;
-          color: #475569;
-          white-space: nowrap;
-          background: #FFFFFF;
-          padding: 3px 9px;
-          border-radius: 999px;
-          border: 1px solid #E2E8F0;
-        }
-
-        .strip-item.highlight {
-          background: #ECFDF5;
-          color: #047857;
-          border-color: #A7F3D0;
-        }
-
-        .strip-icon {
-          color: #10B981;
         }
 
         /* Body & Messages */
         .drawer-body {
           flex: 1;
-          padding: 1rem;
+          padding: 0.9rem;
           overflow-y: auto;
           display: flex;
           flex-direction: column;
-          gap: 0.9rem;
-          background: #FBFCFE;
+          gap: 0.75rem;
+          background: #FAFBF9 !important;
         }
 
         .chat-bubble-row {
           display: flex;
           align-items: flex-start;
-          gap: 0.55rem;
-          max-width: 92%;
+          gap: 0.5rem;
+          max-width: 90%;
         }
 
         .chat-bubble-row.user-row {
@@ -1392,94 +1287,73 @@ function synthesizeIntelligentResponse(query, profile) {
         .msg-avatar {
           width: 26px;
           height: 26px;
-          border-radius: 50%;
+          border-radius: 50% !important;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
-          margin-top: 3px;
+          margin-top: 2px;
         }
 
         .msg-avatar.bot {
-          background: #0F172A;
-          color: #34D399;
-          border: 1px solid rgba(16, 185, 129, 0.2);
+          background: #4B6B32 !important;
+          color: #FFFFFF !important;
         }
 
         .msg-avatar.user {
-          background: #10B981;
-          color: #FFFFFF;
+          background: #1F2937 !important;
+          color: #FFFFFF !important;
         }
 
         .msg-bubble {
-          padding: 0.7rem 0.9rem;
-          border-radius: 14px;
-          font-size: 0.84rem;
-          line-height: 1.5;
+          padding: 0.65rem 0.85rem;
+          border-radius: 14px !important;
+          font-size: 0.82rem;
+          line-height: 1.45;
           word-break: break-word;
-          position: relative;
         }
 
         .msg-bubble.bot {
-          background: #FFFFFF;
-          color: #1E293B;
-          border: 1px solid #E9EEF5;
-          box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
-          border-top-left-radius: 4px;
+          background: #FFFFFF !important;
+          color: #1F2937 !important;
+          border: 1px solid #E5E7EB !important;
+          border-top-left-radius: 3px !important;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
         }
 
         .msg-bubble.user {
-          background: #0F172A;
-          color: #FFFFFF;
-          border-top-right-radius: 4px;
-        }
-
-        .msg-bubble.ai-bubble {
-          border-left: none;
-        }
-
-        .ai-tag {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.3rem;
-          font-size: 0.62rem;
-          font-weight: 600;
-          color: #047857;
-          background: #ECFDF5;
-          padding: 2px 8px;
-          border-radius: 999px;
-          margin-bottom: 0.45rem;
-          letter-spacing: 0.05em;
-          text-transform: uppercase;
+          background: #4B6B32 !important;
+          color: #FFFFFF !important;
+          border-top-right-radius: 3px !important;
         }
 
         .chat-bold {
           font-weight: 700;
-          color: #0F172A;
+          color: #111827;
         }
 
         .user .chat-bold {
-          color: #F8FAFC;
+          color: #FFFFFF;
         }
 
         .chat-bullet-item {
           display: flex;
           align-items: flex-start;
           gap: 0.4rem;
-          margin: 0.2rem 0;
+          margin: 0.15rem 0;
         }
 
         .bullet-dot {
-          color: #10B981;
+          color: #4B6B32 !important;
           font-weight: bold;
         }
 
         .chat-spacer {
-          height: 0.35rem;
+          height: 0.3rem;
         }
 
         .chat-paragraph {
-          margin: 0 0 0.3rem 0;
+          margin: 0 0 0.25rem 0;
         }
 
         .chat-paragraph:last-child {
@@ -1490,268 +1364,157 @@ function synthesizeIntelligentResponse(query, profile) {
         .msg-actions-wrap {
           display: flex;
           flex-wrap: wrap;
-          gap: 0.5rem;
-          margin-top: 0.7rem;
-          padding-top: 0.5rem;
-          border-top: 1px solid #F1F5F9;
+          gap: 0.35rem;
+          margin-top: 0.55rem;
+          padding-top: 0.45rem;
+          border-top: 1px solid #F3F4F6 !important;
         }
 
         .btn-nav-action {
           display: inline-flex;
           align-items: center;
-          gap: 0.35rem;
-          padding: 0.4rem 0.75rem;
-          border-radius: 10px;
-          font-size: 0.74rem;
+          gap: 0.25rem;
+          padding: 0.35rem 0.65rem;
+          border-radius: 8px !important;
+          font-size: 0.72rem;
           font-weight: 600;
           cursor: pointer;
           transition: all 0.15s ease;
         }
 
         .btn-nav-action.primary {
-          background: #0F172A;
-          color: #FFFFFF;
-          border: none;
+          background: #4B6B32 !important;
+          color: #FFFFFF !important;
+          border: none !important;
         }
 
         .btn-nav-action.primary:hover {
-          background: #1E293B;
+          background: #3D5728 !important;
         }
 
         .btn-nav-action.secondary {
-          background: #F1F5F9;
-          color: #475569;
-          border: 1px solid #E2E8F0;
+          background: #F3F4F6 !important;
+          color: #374151 !important;
+          border: 1px solid #E5E7EB !important;
         }
 
         .btn-nav-action.secondary:hover {
-          background: #E2E8F0;
+          background: #E5E7EB !important;
         }
 
-        /* Chips Grid */
-        .msg-chips-grid {
+        /* Option Chips as Clean, Rounded Pills */
+        .msg-chips-wrap {
           display: flex;
-          flex-direction: column;
-          gap: 0.4rem;
-          margin-top: 0.7rem;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 0.55rem;
         }
 
-        .chip-btn {
-          display: flex;
+        .chip-pill {
+          display: inline-flex;
           align-items: center;
-          gap: 0.5rem;
-          padding: 0.45rem 0.7rem;
-          background: #F8FAFC;
-          border: 1px solid #E8EEF5;
-          border-radius: 10px;
-          font-size: 0.76rem;
+          padding: 0.32rem 0.65rem;
+          background: #F4F7F0 !important;
+          border: 1px solid #D5E1CE !important;
+          border-radius: 9999px !important;
+          font-size: 0.72rem;
           font-weight: 500;
-          color: #334155;
+          color: #364D24 !important;
           cursor: pointer;
-          text-align: left;
           transition: all 0.15s ease;
         }
 
-        .chip-btn:hover:not(:disabled) {
-          background: #F0FDF4;
-          border-color: #BBF7D0;
-          color: #047857;
+        .chip-pill:hover:not(:disabled) {
+          background: #4B6B32 !important;
+          border-color: #4B6B32 !important;
+          color: #FFFFFF !important;
         }
 
-        .chip-btn:disabled {
-          opacity: 0.6;
+        .chip-pill:disabled {
+          opacity: 0.5;
           cursor: not-allowed;
         }
 
-        .chip-btn.personalized-chip {
-          background: #F0FDF4;
-          border-color: #BBF7D0;
-          color: #047857;
-          font-weight: 600;
-        }
-
-        .chip-btn.personalized-chip:hover:not(:disabled) {
-          background: #DCFCE7;
-          border-color: #86EFAC;
-        }
-
-        .chip-label {
-          flex: 1;
-        }
-
-        .chip-chevron {
-          color: #94A3B8;
-          flex-shrink: 0;
-          transition: color 0.15s ease, transform 0.15s ease;
-        }
-
-        .chip-btn:hover:not(:disabled) .chip-chevron {
-          color: #10B981;
-          transform: translateX(1px);
-        }
-
-        /* Buffering Dots / Thinking State Bubble */
-        .aws-thinking-bubble {
-          background: #FFFFFF !important;
-          border: 1px solid #E9EEF5 !important;
-          box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06) !important;
-          min-width: 220px;
-        }
-
-        .aws-thinking-header {
-          display: flex;
+        /* Minimal 3-Dot Typing Bubble */
+        .typing-bubble {
+          display: flex !important;
           align-items: center;
-          gap: 0.35rem;
-          color: #10B981;
-          font-size: 0.68rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.04em;
-          margin-bottom: 0.3rem;
+          gap: 5px;
+          padding: 0.6rem 0.8rem !important;
+          width: fit-content;
         }
 
-        .aws-sparkle-spin {
-          animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-          to { transform: rotate(360deg); }
-        }
-
-        .aws-thinking-dots {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          padding: 6px 0;
-        }
-
-        .aws-thinking-dots .dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
+        .typing-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50% !important;
+          background: #4B6B32 !important;
           display: inline-block;
-          animation: awsPulseWave 1.4s infinite ease-in-out both;
+          animation: typingBounce 1.2s infinite ease-in-out both;
         }
 
-        .aws-thinking-dots .dot-1 {
-          animation-delay: -0.32s;
-          background: #10B981;
-        }
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+        .typing-dot:nth-child(3) { animation-delay: 0s; }
 
-        .aws-thinking-dots .dot-2 {
-          animation-delay: -0.16s;
-          background: #34D399;
-        }
-
-        .aws-thinking-dots .dot-3 {
-          animation-delay: 0s;
-          background: #6EE7B7;
-        }
-
-        @keyframes awsPulseWave {
-          0%, 80%, 100% {
-            transform: scale(0.4);
-            opacity: 0.3;
-          }
-          40% {
-            transform: scale(1.15);
-            opacity: 1;
-            box-shadow: 0 0 8px currentColor;
-          }
-        }
-
-        .thinking-status {
-          display: block;
-          font-size: 0.72rem;
-          color: #64748B;
-          font-style: italic;
-          margin-top: 0.2rem;
-        }
-
-        /* Guest Banner */
-        .guest-login-banner {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 0.5rem 1rem;
-          background: #F8FAFC;
-          border-top: 1px solid #EEF2F7;
-          font-size: 0.72rem;
-          color: #475569;
-          font-weight: 500;
-        }
-
-        .btn-guest-login {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.25rem;
-          background: #0F172A;
-          color: #FFFFFF;
-          border: none;
-          padding: 4px 10px;
-          border-radius: 8px;
-          font-size: 0.7rem;
-          font-weight: 600;
-          cursor: pointer;
-          transition: background-color 0.15s ease;
-        }
-
-        .btn-guest-login:hover {
-          background: #1E293B;
+        @keyframes typingBounce {
+          0%, 80%, 100% { transform: scale(0.6); opacity: 0.35; }
+          40% { transform: scale(1); opacity: 1; }
         }
 
         /* Drawer Footer */
         .drawer-footer {
           display: flex;
           align-items: center;
-          gap: 0.5rem;
-          padding: 0.8rem 1rem;
-          background: #FFFFFF;
-          border-top: 1px solid #EEF2F7;
+          gap: 0.45rem;
+          padding: 0.65rem 0.85rem;
+          background: #FFFFFF !important;
+          border-top: 1px solid #E5E7EB !important;
         }
 
         .chat-input {
           flex: 1;
-          padding: 0.6rem 0.8rem;
-          border: 1px solid #E2E8F0;
-          border-radius: 12px;
-          font-size: 0.84rem;
+          padding: 0.55rem 0.8rem;
+          border: 1px solid #D1D5DB !important;
+          border-radius: 20px !important;
+          font-size: 0.82rem;
           outline: none;
-          background: #F8FAFC;
-          transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+          background: #F9FAFB !important;
+          transition: border-color 0.15s ease, box-shadow 0.15s ease;
         }
 
         .chat-input::placeholder {
-          color: #94A3B8;
+          color: #9CA3AF;
         }
 
         .chat-input:focus {
-          border-color: #34D399;
-          background: #FFFFFF;
-          box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+          border-color: #4B6B32 !important;
+          background: #FFFFFF !important;
+          box-shadow: 0 0 0 2px rgba(75, 107, 50, 0.15) !important;
         }
 
         .btn-send {
-          width: 38px;
-          height: 38px;
-          border-radius: 12px;
-          background: #10B981;
-          color: #FFFFFF;
-          border: none;
+          width: 34px;
+          height: 34px;
+          border-radius: 50% !important;
+          background: #4B6B32 !important;
+          color: #FFFFFF !important;
+          border: none !important;
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
           transition: background-color 0.15s ease;
+          flex-shrink: 0;
         }
 
         .btn-send:hover:not(:disabled) {
-          background: #059669;
+          background: #3D5728 !important;
         }
 
         .btn-send:disabled {
-          background: #E2E8F0;
-          color: #94A3B8;
+          background: #E5E7EB !important;
+          color: #9CA3AF !important;
           cursor: not-allowed;
         }
       `}} />

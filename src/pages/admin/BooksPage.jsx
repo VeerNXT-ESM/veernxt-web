@@ -126,7 +126,7 @@ const BooksPage = () => {
           </thead>
           <tbody>
             {filtered.map((b) => (
-              <tr key={b.resourceId} className="clickable" onClick={() => navigate(`/admin/books/${b.category}/${b.resourceId}`)}>
+              <tr key={b.resourceId} className="clickable" onClick={() => navigate(`/admin/books/${b.category}/${b.resourceId}`, { state: { bookTitle: b.title } })}>
                 <td>
                   <span className="lc-table-title">{b.title}</span>
                   {b.duplicateRowCount > 1 && <span className="lc-table-sub">{b.duplicateRowCount} linked exam entries</span>}
@@ -170,14 +170,14 @@ const BooksPage = () => {
       {showNewModal && (
         <NewBookModal
           onClose={() => setShowNewModal(false)}
-          onCreated={(cat, resourceId) => { setShowNewModal(false); navigate(`/admin/books/${cat}/${resourceId}`); }}
+          onCreated={(cat, resourceId, newTitle) => { setShowNewModal(false); navigate(`/admin/books/${cat}/${resourceId}`, { state: { bookTitle: newTitle } }); }}
         />
       )}
       {duplicateSource && (
         <DuplicateBookModal
           source={duplicateSource}
           onClose={() => setDuplicateSource(null)}
-          onDuplicated={(cat, resourceId) => { setDuplicateSource(null); fetchBooks(); navigate(`/admin/books/${cat}/${resourceId}`); }}
+          onDuplicated={(cat, resourceId, newTitle) => { setDuplicateSource(null); fetchBooks(); navigate(`/admin/books/${cat}/${resourceId}`, { state: { bookTitle: newTitle } }); }}
         />
       )}
     </div>

@@ -99,20 +99,33 @@ async function upgradeToCanonicalFormat(resources) {
 // Guaranteed one-row-per-exam Intro slot (sql/lc_exam_intro.sql, admin CMS
 // housekeeping) -- the single curated source of truth for the exam's
 // Introduction, independent of lc_exam_resource_map's ambiguity and RLS
-// gap. 'unset' rows (472 exams with no Intro document yet) return null so
-// the syllabus page simply omits the section rather than showing an empty
-// placeholder.
+// gap. When there's no dedicated Introduction (never set, or removed by
+// admin), falls back to whatever resource is linked as category 'Intro'
+// via the general Add Resource mapping (lc_exam_resource_map), if any --
+// so removing the dedicated one doesn't blank the section out while an
+// Add Resource Intro is still sitting there. Only when neither exists
+// does this return null, so the syllabus page omits the section entirely
+// rather than showing an empty placeholder.
 async function fetchExamIntro(examId) {
   const { data: intro } = await supabase.from('lc_exam_intro').select('*').eq('exam_id', examId).maybeSingle();
-  if (!intro) return null;
 
-  if (intro.source === 'auto' && intro.resource_id) {
+  if (intro?.source === 'auto' && intro.resource_id) {
     const { data: resource } = await supabase.from('resources').select('*').eq('resource_id', intro.resource_id).maybeSingle();
-    return resource ? { source: 'auto', resource } : null;
+    if (resource) return { source: 'auto', resource };
+  } else if (intro?.source === 'manual' && (intro.manual_title || intro.manual_body)) {
+    return { source: 'manual', title: intro.manual_title, body: intro.manual_body };
   }
 
-  if (intro.source === 'manual' && (intro.manual_title || intro.manual_body)) {
-    return { source: 'manual', title: intro.manual_title, body: intro.manual_body };
+  const { data: mapRows } = await supabase
+    .from('lc_exam_resource_map')
+    .select('resource_id')
+    .eq('exam_id', examId)
+    .eq('category', 'Intro')
+    .limit(1);
+  const fallbackResourceId = mapRows?.[0]?.resource_id;
+  if (fallbackResourceId) {
+    const { data: resource } = await supabase.from('resources').select('*').eq('resource_id', fallbackResourceId).maybeSingle();
+    if (resource) return { source: 'auto', resource };
   }
 
   return null;
