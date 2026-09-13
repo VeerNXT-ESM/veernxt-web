@@ -4,12 +4,19 @@ import { ChapterHeader } from '../../components/book/BookBlocks';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
 import './BookReaderV2.css';
 
+// Sample books served straight from R2 (production storage) rather than a
+// local public/books/ copy -- that local copy was 1.3GB sitting in the
+// deploy bundle for exactly one consumer (this page), so it was moved out
+// of public/ entirely. English/Hindi don't have a blocks-format "Guide"
+// row, so their samples here are the closest blocks-format equivalent
+// (Précis) instead -- still real, representative content for exercising
+// the reader, just not the identical title the old local copy had.
 const AVAILABLE_BOOKS = [
-  { id: 'english', title: 'English Grammar Guide', path: '/books/Guide/ENGLISH' },
-  { id: 'gs-gk', title: 'GS & GK Guide Book', path: '/books/Guide/GS & GK GUIDE BOOK' },
-  { id: 'reasoning', title: 'Reasoning Guide Book', path: '/books/Guide/REASONING' },
-  { id: 'computer', title: 'Computer Science Guide', path: '/books/Guide/Computer Science guide Book' },
-  { id: 'hindi', title: 'Hindi Language Book', path: '/books/Guide/HINDI' }
+  { id: 'english', title: 'English Précis (sample)', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/1b0cedf2-7476-4747-a747-1b0cedf27476' },
+  { id: 'gs-gk', title: 'GS & GK Guide Book', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/4f39098f-651c-4651-a651-4f39098f651c' },
+  { id: 'reasoning', title: 'Reasoning Guide Book', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/272dbb7c-12ac-412a-a12a-272dbb7c12ac' },
+  { id: 'computer', title: 'Computer Science Guide', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/1359761c-5d2b-45d2-a5d2-1359761c5d2b' },
+  { id: 'hindi', title: 'Hindi Précis (sample)', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/16e4d9bb-0eea-40ee-a0ee-16e4d9bb0eea' }
 ];
 
 export default function DevReader() {

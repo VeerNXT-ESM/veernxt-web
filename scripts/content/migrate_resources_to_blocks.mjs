@@ -76,7 +76,11 @@ import { getS3Client, uploadToR2 } from '../lib/ingest-drive-content.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const EXECUTE = process.argv.includes('--execute');
-const SOURCE_ROOT = path.join(__dirname, '..', '..', 'public', 'books');
+// Moved out of public/ -- this 1.3GB source tree only ever needed to be
+// readable by this Node script (which uploads it to R2) and by
+// DevReader.jsx (which now fetches its samples from R2 directly instead),
+// so it no longer needs to sit inside the deployed app's static bundle.
+const SOURCE_ROOT = path.join(__dirname, '..', '..', 'books');
 const TOP_LEVEL_CATEGORIES = ['Guide', 'Precis'];
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
