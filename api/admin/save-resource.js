@@ -158,6 +158,44 @@ function deepReplaceStrings(value, pairs) {
   return value;
 }
 
+function replaceTextInValue(value, findStr, replaceStr, { matchCase = false, matchWholeWord = false } = {}) {
+  if (!findStr || typeof findStr !== 'string') return { value, count: 0 };
+  const escaped = findStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const pattern = matchWholeWord ? `\\b${escaped}\\b` : escaped;
+  const flags = matchCase ? 'g' : 'gi';
+  const regex = new RegExp(pattern, flags);
+
+  let count = 0;
+  function walk(node) {
+    if (typeof node === 'string') {
+      const matches = node.match(regex);
+      if (matches) {
+        count += matches.length;
+        return node.replace(regex, replaceStr ?? '');
+      }
+      return node;
+    }
+    if (Array.isArray(node)) {
+      return node.map(walk);
+    }
+    if (node && typeof node === 'object') {
+      const out = {};
+      for (const [k, v] of Object.entries(node)) {
+        if (k === 'id' || k === 'type' || k === 'order') {
+          out[k] = v;
+        } else {
+          out[k] = walk(v);
+        }
+      }
+      return out;
+    }
+    return node;
+  }
+
+  const result = walk(value);
+  return { value: result, count };
+}
+
 /**
  * POST /api/admin/save-resource with { type: 'books-list' }
  *
@@ -764,6 +802,94 @@ async function handleBooksUnarchive(req, res) {
   }
 }
 
+/**
+ * POST /api/admin/save-resource with
+ * { type: 'books-find-replace', resourceId, find, replace, matchCase, matchWholeWord, scope, chapterFileName }
+ *
+ * Finds and replaces text across chapters and metadata directly in R2.
+ */
+async function handleBooksFindReplace(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { resourceId, find, replace = '', matchCase = false, matchWholeWord = false, scope = 'all', chapterFileName } = req.body || {};
+  if (!resourceId || !find || typeof find !== 'string' || !find.trim()) {
+    return res.status(400).json({ ok: false, error: 'Missing or invalid search term' });
+  }
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+  const publicUrl = getR2PublicUrl();
+  const bucket = getR2Bucket();
+  if (!publicUrl || !bucket) return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 env vars not set' });
+
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
+
+    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
+    const prefix = prefixFromStorageBaseUrl(canonicalUrl, publicUrl);
+    if (!prefix) return res.status(500).json({ ok: false, error: 'Could not resolve storage location for this book' });
+
+    const s3 = getS3Client();
+    const metadata = await fetchJson(`${canonicalUrl}metadata.json`);
+    const chapters = metadata.chapters || [];
+
+    const targetChapters = scope === 'chapter' && chapterFileName
+      ? chapters.filter((c) => c.file_name === chapterFileName)
+      : chapters;
+
+    let totalReplacements = 0;
+    const modifiedChapters = [];
+
+    for (const chapterMeta of targetChapters) {
+      try {
+        const chapterData = await fetchJson(`${canonicalUrl}${chapterMeta.file_name}`);
+        const { value: updatedChapter, count: chapterCount } = replaceTextInValue(chapterData, find, replace, { matchCase, matchWholeWord });
+
+        if (chapterCount > 0) {
+          totalReplacements += chapterCount;
+          await uploadToR2(s3, bucket, `${prefix}/${chapterMeta.file_name}`, Buffer.from(JSON.stringify(updatedChapter, null, 2)), 'application/json');
+          
+          if (updatedChapter.title && updatedChapter.title !== chapterMeta.title) {
+            chapterMeta.title = updatedChapter.title;
+          }
+          modifiedChapters.push({
+            fileName: chapterMeta.file_name,
+            title: updatedChapter.title || chapterMeta.title,
+            count: chapterCount,
+          });
+        }
+      } catch (err) {
+        console.error(`[books-find-replace] Error updating ${chapterMeta.file_name}:`, err.message);
+      }
+    }
+
+    let metadataChanged = false;
+    if (scope === 'all') {
+      const { value: updatedMetaTitle, count: metaTitleCount } = replaceTextInValue(metadata.title, find, replace, { matchCase, matchWholeWord });
+      if (metaTitleCount > 0) {
+        metadata.title = updatedMetaTitle;
+        metadataChanged = true;
+        totalReplacements += metaTitleCount;
+      }
+    }
+    if (modifiedChapters.length > 0 || metadataChanged) {
+      await uploadToR2(s3, bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
+    }
+
+    return res.status(200).json({
+      ok: true,
+      totalReplacements,
+      chaptersModified: modifiedChapters.length,
+      modifiedChapters,
+      metadata,
+    });
+  } catch (e) {
+    console.error('[admin/save-resource:books-find-replace] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -811,6 +937,10 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-delete') {
     return handleBooksDelete(req, res);
+  }
+
+  if (req.body?.type === 'books-find-replace') {
+    return handleBooksFindReplace(req, res);
   }
 
   if (!supabaseUrl) {

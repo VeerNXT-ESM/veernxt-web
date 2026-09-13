@@ -1,11 +1,12 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { ArrowLeft, AlertTriangle, RefreshCw, Pencil, Eye, Save, X, Copy, Trash2, Columns, Archive, ArchiveRestore } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, RefreshCw, Pencil, Eye, Save, X, Copy, Trash2, Columns, Archive, ArchiveRestore, Replace } from 'lucide-react';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
 import '../../components/book/BookBlocks.css';
 import BlockEditForm, { BlockTypePicker, createBlock, genBlockId } from '../../components/admin/BlockEditForm';
 import { DuplicateBookModal, ConfirmDeleteModal, RenameBookModal, ConfirmArchiveModal } from '../../components/admin/BookFormModals';
+import { FindReplaceModal } from '../../components/admin/FindReplaceModal';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
@@ -61,7 +62,19 @@ const BookChapterBrowser = () => {
   const [showArchiveModal, setShowArchiveModal] = useState(false);
   const [showDuplicateModal, setShowDuplicateModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showFindReplaceModal, setShowFindReplaceModal] = useState(false);
   const mainRef = useRef(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'h' || e.key === 'H')) {
+        e.preventDefault();
+        setShowFindReplaceModal((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   useEffect(() => {
     if (mainRef.current) {
@@ -249,6 +262,28 @@ const BookChapterBrowser = () => {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8rem', color: '#b91c1c', fontWeight: 700 }}>
             <AlertTriangle size={16} /> {issues.filter((i) => i.severity === 'high').length} high · {issues.filter((i) => i.severity === 'medium').length} medium
           </div>
+        )}
+        {book && (
+          <button
+            onClick={() => setShowFindReplaceModal(true)}
+            title="Find & Replace across document (Ctrl+H)"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              padding: '0.5rem 0.85rem',
+              background: 'white',
+              color: '#0f172a',
+              border: '1px solid #cbd5e1',
+              borderRadius: 8,
+              fontWeight: 700,
+              fontSize: '0.8rem',
+              cursor: 'pointer',
+              boxShadow: '0 1px 2px rgba(0,0,0,0.04)',
+            }}
+          >
+            <Replace size={14} style={{ color: '#1F3A2E' }} /> Find &amp; Replace
+          </button>
         )}
         {book && mode === 'preview' && (
           <>
@@ -617,6 +652,43 @@ const BookChapterBrowser = () => {
           book={book}
           onClose={() => setShowDeleteModal(false)}
           onDeleted={() => navigate('/admin/books')}
+        />
+      )}
+      {showFindReplaceModal && book && (
+        <FindReplaceModal
+          book={book}
+          metadata={metadata}
+          activeChapterMeta={activeChapterMeta}
+          currentChapterData={chapterData}
+          onClose={() => setShowFindReplaceModal(false)}
+          onSuccess={async (result) => {
+            if (result.metadata) {
+              setMetadata(result.metadata);
+              if (result.metadata.title && result.metadata.title !== book.title) {
+                setBook((prev) => ({ ...prev, title: result.metadata.title }));
+              }
+            } else {
+              try {
+                const meta = await fetch(`${book.storageBaseUrl}metadata.json?t=${Date.now()}`).then((r) => r.json());
+                setMetadata(meta);
+              } catch {}
+            }
+
+            if (activeChapterMeta) {
+              try {
+                const res = await fetch(`${book.storageBaseUrl}${activeChapterMeta.file_name}?t=${Date.now()}`);
+                if (res.ok) {
+                  const data = await res.json();
+                  setChapterData(data);
+                  if (mode === 'edit') {
+                    setEditTitle(data.title || '');
+                    setEditBlocks(cloneBlocks(data.blocks));
+                    setDirty(false);
+                  }
+                }
+              } catch {}
+            }
+          }}
         />
       )}
     </div>
