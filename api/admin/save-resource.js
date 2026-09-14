@@ -20,7 +20,23 @@ function checkAdminSecret(req, res) {
   return true;
 }
 
-const BOOK_CATEGORIES = ['Guide', 'Precis'];
+const BOOK_CATEGORIES = ['Guide', 'Precis', 'Intro'];
+
+// Guide/Precis legitimately have many resources rows sharing one
+// (category, title) -- the same book linked from many exams -- so every
+// action on "this book" groups and mutates by title. Intro resources
+// don't share that pattern: they're independently-authored, exam-specific
+// documents that often happen to carry a generic filename-derived title
+// like "Introduction" or "1.MTS_INTRO" across dozens of unrelated exams
+// (see docs/status_report.md §48.1's mislinked-Introduction audit).
+// Grouping/mutating Intro rows by title would silently merge unrelated
+// exams' content in the list, or worse, rename/archive/delete every one
+// of them at once when only one was meant. Intro books are always scoped
+// to exactly their own resource_id instead.
+const TITLE_DEDUPED_CATEGORIES = ['Guide', 'Precis'];
+function isTitleDedupedCategory(category) {
+  return TITLE_DEDUPED_CATEGORIES.includes(category);
+}
 
 // R2 is the only source of truth for book content -- these actions read
 // and write Cloudflare R2 + the resources table directly, nothing on
@@ -68,6 +84,25 @@ async function fetchRowsByTitle(supabase, category, title) {
     if (data.length < 1000) break;
   }
   return rows;
+}
+
+// Every resources row this "book" actually spans. Title-deduped
+// categories (Guide/Precis) genuinely group by title; Intro never does
+// (see TITLE_DEDUPED_CATEGORIES) -- an Intro book is always exactly the
+// one row matching `row`, regardless of what its title happens to be.
+async function fetchBookRows(supabase, row) {
+  if (!isTitleDedupedCategory(row.category)) return [row];
+  return fetchRowsByTitle(supabase, row.category, row.title);
+}
+
+// Scopes a resources-table query (an .update(...) or .delete() builder)
+// to every row this book spans, same rule as fetchBookRows -- title+category
+// for Guide/Precis, this one resource_id only for Intro. Use for every
+// mutation that should apply to "this book" rather than "this row".
+function bookRowsFilter(query, row) {
+  return isTitleDedupedCategory(row.category)
+    ? query.eq('category', row.category).ilike('title', escapeIlike(row.title))
+    : query.eq('resource_id', row.resource_id);
 }
 
 // Of however many resources rows share a title, picks the storage
@@ -234,7 +269,13 @@ async function handleBooksList(req, res) {
     const groups = new Map();
     for (const r of rows) {
       if (!r.title) continue;
-      const key = `${r.category}::${r.title.trim().toLowerCase()}`;
+      // Intro rows are never merged by title (see TITLE_DEDUPED_CATEGORIES) --
+      // each keeps its own group keyed by resource_id so distinct exams'
+      // Introductions that happen to share a generic title (e.g. every
+      // "Introduction.docx") still show up as separate rows here.
+      const key = isTitleDedupedCategory(r.category)
+        ? `${r.category}::${r.title.trim().toLowerCase()}`
+        : `${r.category}::id::${r.resource_id}`;
       if (!groups.has(key)) groups.set(key, { title: r.title.trim(), category: r.category, rows: [] });
       groups.get(key).rows.push(r);
     }
@@ -303,7 +344,7 @@ async function handleBooksGet(req, res) {
     if (error) throw new Error(error.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const groupRows = await fetchBookRows(supabase, row);
     const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
     const isArchived = ['draft', 'archived'].includes((row.status || '').toLowerCase()) || groupRows.some((r) => ['draft', 'archived'].includes((r.status || '').toLowerCase()));
     return res.status(200).json({
@@ -436,7 +477,7 @@ async function handleBooksSaveChapter(req, res) {
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const groupRows = await fetchBookRows(supabase, row);
     const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
     const prefix = prefixFromStorageBaseUrl(canonicalUrl, publicUrl);
     if (!prefix) return res.status(500).json({ ok: false, error: 'Could not resolve storage location for this book' });
@@ -463,7 +504,7 @@ async function handleBooksSaveChapter(req, res) {
 
     const updatePatch = { format: 'blocks', storage_base_url: canonicalUrl, metadata_url: `${canonicalUrl}metadata.json` };
     if (realChapterCount !== null) updatePatch.chapter_count = realChapterCount;
-    const { error: updateError } = await supabase.from('resources').update(updatePatch).eq('category', row.category).ilike('title', escapeIlike(row.title));
+    const { error: updateError } = await bookRowsFilter(supabase.from('resources').update(updatePatch), row);
     if (updateError) console.error('[admin/save-resource:books-save-chapter] row consolidation update failed (content still saved):', updateError.message);
 
     return res.status(200).json({ ok: true });
@@ -498,9 +539,13 @@ async function handleBooksCreate(req, res) {
 
     // Refuse a duplicate title+category rather than silently adding to the
     // pile -- Duplicate Book is the path for "another one like this", New
-    // Book is for something that doesn't exist yet.
-    const existing = await fetchRowsByTitle(supabase, category, title.trim());
-    if (existing.length > 0) return res.status(409).json({ ok: false, error: `A ${category} book titled "${title.trim()}" already exists` });
+    // Book is for something that doesn't exist yet. Doesn't apply to Intro:
+    // sharing a generic title (e.g. "Introduction") across unrelated exams
+    // is normal there, not a collision (see TITLE_DEDUPED_CATEGORIES).
+    if (isTitleDedupedCategory(category)) {
+      const existing = await fetchRowsByTitle(supabase, category, title.trim());
+      if (existing.length > 0) return res.status(409).json({ ok: false, error: `A ${category} book titled "${title.trim()}" already exists` });
+    }
 
     const newResourceId = generateResourceId(title.trim(), '', category, '');
     const storageBaseUrl = `${publicUrl}/structured_resources/blocks/${category}/${newResourceId}/`;
@@ -572,13 +617,15 @@ async function handleBooksDuplicate(req, res) {
     if (rowError) throw new Error(rowError.message);
     if (!sourceRow) return res.status(404).json({ ok: false, error: 'Source book not found' });
 
-    const sourceGroupRows = await fetchRowsByTitle(supabase, sourceRow.category, sourceRow.title);
+    const sourceGroupRows = await fetchBookRows(supabase, sourceRow);
     const sourceCanonicalUrl = pickCanonicalStorageBaseUrl(sourceGroupRows.length ? sourceGroupRows : [sourceRow]);
     const sourcePrefix = prefixFromStorageBaseUrl(sourceCanonicalUrl, publicUrl);
     if (!sourcePrefix) return res.status(500).json({ ok: false, error: 'Could not resolve source storage location' });
 
-    const existingDest = await fetchRowsByTitle(supabase, destCategory, newTitle.trim());
-    if (existingDest.length > 0) return res.status(409).json({ ok: false, error: `A ${destCategory} book titled "${newTitle.trim()}" already exists` });
+    if (isTitleDedupedCategory(destCategory)) {
+      const existingDest = await fetchRowsByTitle(supabase, destCategory, newTitle.trim());
+      if (existingDest.length > 0) return res.status(409).json({ ok: false, error: `A ${destCategory} book titled "${newTitle.trim()}" already exists` });
+    }
 
     const s3 = getS3Client();
     const objectKeys = await listR2Keys(s3, bucket, sourcePrefix);
@@ -661,7 +708,7 @@ async function handleBooksDelete(req, res) {
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const groupRows = await fetchBookRows(supabase, row);
     const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
     const prefix = prefixFromStorageBaseUrl(canonicalUrl, publicUrl);
 
@@ -671,7 +718,7 @@ async function handleBooksDelete(req, res) {
       if (keys.length > 0) await deleteR2Keys(s3, bucket, keys);
     }
 
-    const { error } = await supabase.from('resources').delete().eq('category', row.category).ilike('title', escapeIlike(row.title));
+    const { error } = await bookRowsFilter(supabase.from('resources').delete(), row);
     if (error) throw new Error(error.message);
 
     return res.status(200).json({ ok: true });
@@ -709,7 +756,7 @@ async function handleBooksRename(req, res) {
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const groupRows = await fetchBookRows(supabase, row);
     const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
     const prefix = prefixFromStorageBaseUrl(canonicalUrl, publicUrl);
 
@@ -726,16 +773,63 @@ async function handleBooksRename(req, res) {
     }
 
     // Update DB rows for this book
-    const { error: updateError } = await supabase
-      .from('resources')
-      .update({ title: trimmedNewTitle, updated_at: new Date().toISOString() })
-      .eq('category', row.category)
-      .ilike('title', escapeIlike(row.title));
+    const { error: updateError } = await bookRowsFilter(
+      supabase.from('resources').update({ title: trimmedNewTitle, updated_at: new Date().toISOString() }),
+      row
+    );
     if (updateError) throw new Error(updateError.message);
 
     return res.status(200).json({ ok: true, newTitle: trimmedNewTitle });
   } catch (e) {
     console.error('[admin/save-resource:books-rename] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
+/**
+ * POST /api/admin/save-resource with
+ * { type: 'books-set-category', resourceId, newCategory }
+ *
+ * Re-labels a book's category (e.g. a Precis wrongly tagged as a Guide).
+ * Content stays exactly where it already lives in R2 -- storage_base_url
+ * is stored per-row rather than recomputed from category at read time, so
+ * nothing downstream needs the R2 path's own category segment to match.
+ * Only the `resources.category` column changes.
+ *
+ * Deliberately does NOT reject a destination title that already exists --
+ * unlike books-create/books-duplicate, where a title clash means "these
+ * are two different things that shouldn't share a name," a mis-tagged
+ * book landing on a title the destination category already has is the
+ * exact case this action exists to fix (e.g. "Haryana_GS" split with some
+ * rows wrongly left in Guide while the real book lives in Precis). It
+ * merges into that existing group the same way any other duplicate-titled
+ * row already does -- pickCanonicalStorageBaseUrl resolves which content
+ * wins if they disagree, nothing is deleted.
+ */
+async function handleBooksSetCategory(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { resourceId, newCategory } = req.body || {};
+  if (!resourceId || !BOOK_CATEGORIES.includes(newCategory)) {
+    return res.status(400).json({ ok: false, error: 'Missing resourceId or invalid newCategory' });
+  }
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
+    if (row.category === newCategory) return res.status(200).json({ ok: true, category: newCategory });
+
+    const { error: updateError } = await bookRowsFilter(
+      supabase.from('resources').update({ category: newCategory, updated_at: new Date().toISOString() }),
+      row
+    );
+    if (updateError) throw new Error(updateError.message);
+
+    return res.status(200).json({ ok: true, category: newCategory });
+  } catch (e) {
+    console.error('[admin/save-resource:books-set-category] failed:', e.message);
     return res.status(500).json({ ok: false, error: e.message });
   }
 }
@@ -757,11 +851,10 @@ async function handleBooksArchive(req, res) {
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const { error: updateError } = await supabase
-      .from('resources')
-      .update({ status: 'Draft', updated_at: new Date().toISOString() })
-      .eq('category', row.category)
-      .ilike('title', escapeIlike(row.title));
+    const { error: updateError } = await bookRowsFilter(
+      supabase.from('resources').update({ status: 'Draft', updated_at: new Date().toISOString() }),
+      row
+    );
     if (updateError) throw new Error(updateError.message);
 
     return res.status(200).json({ ok: true, status: 'Draft' });
@@ -788,11 +881,10 @@ async function handleBooksUnarchive(req, res) {
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const { error: updateError } = await supabase
-      .from('resources')
-      .update({ status: 'Published', updated_at: new Date().toISOString() })
-      .eq('category', row.category)
-      .ilike('title', escapeIlike(row.title));
+    const { error: updateError } = await bookRowsFilter(
+      supabase.from('resources').update({ status: 'Published', updated_at: new Date().toISOString() }),
+      row
+    );
     if (updateError) throw new Error(updateError.message);
 
     return res.status(200).json({ ok: true, status: 'Published' });
@@ -825,7 +917,7 @@ async function handleBooksFindReplace(req, res) {
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const groupRows = await fetchBookRows(supabase, row);
     const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
     const prefix = prefixFromStorageBaseUrl(canonicalUrl, publicUrl);
     if (!prefix) return res.status(500).json({ ok: false, error: 'Could not resolve storage location for this book' });
@@ -925,6 +1017,10 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-rename') {
     return handleBooksRename(req, res);
+  }
+
+  if (req.body?.type === 'books-set-category') {
+    return handleBooksSetCategory(req, res);
   }
 
   if (req.body?.type === 'books-archive') {

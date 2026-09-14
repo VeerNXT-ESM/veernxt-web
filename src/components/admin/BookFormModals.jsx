@@ -82,6 +82,7 @@ export const NewBookModal = ({ onClose, onCreated }) => {
         <select style={fieldStyle} value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="Guide">Guide</option>
           <option value="Precis">Precis</option>
+          <option value="Intro">Intro</option>
         </select>
       </div>
       <div>
@@ -141,6 +142,7 @@ export const DuplicateBookModal = ({ source, onClose, onDuplicated }) => {
         <select style={fieldStyle} value={destCategory} onChange={(e) => setDestCategory(e.target.value)}>
           <option value="Guide">Guide</option>
           <option value="Precis">Precis</option>
+          <option value="Intro">Intro</option>
         </select>
       </div>
       <div>

@@ -6,10 +6,14 @@ import { NewBookModal, DuplicateBookModal, RenameBookModal, ConfirmDeleteModal, 
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
+// No "All" tab -- Type is a required drill-down, same reasoning
+// ExamsPage.jsx's Level field uses: the list shouldn't render every
+// category unscoped, and a single active pill always makes it obvious
+// which type is currently on screen.
 const CATEGORY_TABS = [
-  { value: '', label: 'All' },
   { value: 'Guide', label: 'Guide' },
   { value: 'Precis', label: 'Precis' },
+  { value: 'Intro', label: 'Intro' },
 ];
 
 const SORT_OPTIONS = [
@@ -25,7 +29,7 @@ const BooksPage = () => {
   const navigate = useNavigate();
   const [books, setBooks] = useState(null);
   const [error, setError] = useState(null);
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('Guide');
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search);
   const [sort, setSort] = useState('issues');
@@ -35,6 +39,7 @@ const BooksPage = () => {
   const [renameSource, setRenameSource] = useState(null);
   const [archiveSource, setArchiveSource] = useState(null);
   const [deleteSource, setDeleteSource] = useState(null);
+  const [categorySavingId, setCategorySavingId] = useState(null);
 
   const fetchBooks = useCallback(async () => {
     try {
@@ -57,13 +62,12 @@ const BooksPage = () => {
     window.open(`/admin/books/${b.category}/${b.resourceId}`, '_blank');
   }, []);
 
-  const activeCount = useMemo(() => (books || []).filter((b) => !b.isArchived).length, [books]);
   const archivedCount = useMemo(() => (books || []).filter((b) => b.isArchived).length, [books]);
 
   const filtered = useMemo(() => {
     if (!books) return [];
     let list = books.filter((b) => (showArchived ? b.isArchived : !b.isArchived));
-    if (category) list = list.filter((b) => b.category === category);
+    list = list.filter((b) => b.category === category);
     if (debouncedSearch.trim()) {
       const q = debouncedSearch.trim().toLowerCase();
       list = list.filter((b) => b.title.toLowerCase().includes(q));
@@ -71,14 +75,6 @@ const BooksPage = () => {
     const issueScore = (b) => (b.issueCounts?.high || 0) * 1000 + (b.issueCounts?.medium || 0);
     return [...list].sort((a, b) => (sort === 'title' ? a.title.localeCompare(b.title) : issueScore(b) - issueScore(a)));
   }, [books, category, debouncedSearch, sort, showArchived]);
-
-  const totals = useMemo(() => {
-    if (!books) return null;
-    return {
-      count: books.length,
-      withIssues: books.filter((b) => !b.isArchived && (b.issueCounts?.high || 0) + (b.issueCounts?.medium || 0) > 0).length,
-    };
-  }, [books]);
 
   const handleUnarchive = async (b) => {
     if (!window.confirm(`Restore "${b.title}" back to active books?`)) return;
@@ -96,41 +92,49 @@ const BooksPage = () => {
     }
   };
 
+  // Fixes the "wrongly assigned to Precis when it's a Guide" case directly
+  // from the table -- picking a new category re-labels the book in place
+  // (content stays exactly where it is in R2, see the API's own docstring)
+  // rather than requiring a delete-and-recreate.
+  const handleChangeCategory = async (b, newCategory) => {
+    if (newCategory === b.category) return;
+    if (b.duplicateRowCount > 1) {
+      const ok = window.confirm(`"${b.title}" has ${b.duplicateRowCount} linked exam entries. Moving it to ${newCategory} re-labels all of them. Continue?`);
+      if (!ok) return;
+    }
+    setCategorySavingId(b.resourceId);
+    try {
+      const res = await fetch('/api/admin/save-resource', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
+        body: JSON.stringify({ type: 'books-set-category', resourceId: b.resourceId, newCategory }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || 'Failed to change category');
+      setBooks((prev) => prev.map((x) => (x.resourceId === b.resourceId ? { ...x, category: newCategory } : x)));
+    } catch (err) {
+      alert('Category change failed: ' + err.message);
+    } finally {
+      setCategorySavingId(null);
+    }
+  };
+
   return (
     <div>
       <div className="lc-section-header">
         <div>
           <h2>{showArchived ? 'Archived Books' : 'Book Content'}</h2>
-          <p>
-            {showArchived
-              ? `Showing ${archivedCount} archived book${archivedCount === 1 ? '' : 's'}. These are hidden from candidates and the active catalog.`
-              : totals
-              ? `${activeCount} active book${activeCount === 1 ? '' : 's'}, ${totals.withIssues} flagged by the last QA scan.`
-              : 'loading…'}
-          </p>
-        </div>
-        <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center' }}>
-          <button
-            className={`lc-btn ${showArchived ? 'primary' : ''}`}
-            onClick={() => setShowArchived((prev) => !prev)}
-            title={showArchived ? 'Switch to active books' : 'View archived books'}
-            style={showArchived ? { background: '#d97706', borderColor: '#d97706', color: 'white' } : undefined}
-          >
-            <Archive size={16} /> {showArchived ? 'Show Active Books' : `Show Archived (${archivedCount})`}
-          </button>
-          <button className="lc-btn primary" onClick={() => setShowNewModal(true)}>
-            <Plus size={16} /> New Book
-          </button>
+          <p>{showArchived ? 'Hidden from candidates and the active catalog.' : 'Browse, edit, and manage Guide, Precis, and Intro content.'}</p>
         </div>
       </div>
 
-      <div className="lc-filter-bar" style={{ gridTemplateColumns: '1fr auto auto' }}>
-        <div className="lc-filter-field lc-search-input-wrapper">
+      <div className="lc-filter-bar-single">
+        <div className="lc-filter-field lc-filter-search lc-search-input-wrapper">
           <Search size={16} />
           <input type="text" placeholder="Search book title..." value={search} onChange={(e) => setSearch(e.target.value)} />
         </div>
         <div className="lc-filter-field">
-          <label>Category</label>
+          <label>Type</label>
           <div style={{ display: 'flex', gap: '0.4rem' }}>
             {CATEGORY_TABS.map((t) => (
               <button
@@ -150,6 +154,17 @@ const BooksPage = () => {
             {SORT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         </div>
+        <button
+          className={`lc-btn ${showArchived ? 'primary' : ''}`}
+          onClick={() => setShowArchived((prev) => !prev)}
+          title={showArchived ? 'Switch to active books' : 'View archived books'}
+          style={showArchived ? { background: '#d97706', borderColor: '#d97706', color: 'white' } : undefined}
+        >
+          <Archive size={16} /> {showArchived ? 'Show Active Books' : `Show Archived (${archivedCount})`}
+        </button>
+        <button className="lc-btn primary" onClick={() => setShowNewModal(true)}>
+          <Plus size={16} /> New Book
+        </button>
       </div>
 
       {error && <div className="lc-empty-state">Failed to load books: {error}</div>}
@@ -183,7 +198,17 @@ const BooksPage = () => {
                   </div>
                   {b.duplicateRowCount > 1 && <span className="lc-table-sub">{b.duplicateRowCount} linked exam entries</span>}
                 </td>
-                <td>{b.category}</td>
+                <td onClick={(e) => e.stopPropagation()}>
+                  <select
+                    value={b.category}
+                    disabled={categorySavingId === b.resourceId}
+                    onChange={(e) => handleChangeCategory(b, e.target.value)}
+                    title="Change this book's category"
+                    style={{ padding: '0.35rem 0.5rem', borderRadius: 6, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)', fontSize: '0.82rem' }}
+                  >
+                    {CATEGORY_TABS.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                  </select>
+                </td>
                 <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{b.chapterCount ?? '—'}</span></td>
                 <td>
                   {(b.issueCounts?.high || 0) > 0 ? (
