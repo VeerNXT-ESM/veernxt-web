@@ -4,7 +4,9 @@
 
 **Most of this session (§1–§20) is content-audit/tooling work, not app code** — it happened on the local `CLIENT ASSETS` content library (`K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\`), **outside this git repo**; only the analysis scripts, reports, and prompts that resulted live in the repo. See §18 for exactly what's tracked where. **§21 is different** — it's real application architecture: a new schema applied directly to the production Supabase database and seeded with live data (still additive/non-destructive, nothing existing was touched, but it's not just local analysis anymore).
 
-**🎯 Next session starts here**: §45.9 — a from-scratch exam-Introduction linking pass (647/1,534 exams → 837/1,534, 54.6%) plus a full legacy-format-to-JSON-blocks conversion (900/900 Intro resources now `format='blocks'`) and a live-caught leaked API key. The user's own words: "we will tackle these orphans in a new chat" — §45.7's 319 orphaned resources are fully closed out (0 need linking), but the punch list's ~32 remaining items (duplicate `exams` rows, missing `exams` rows, a few approve-on-sight matches) are still open and are almost certainly what "orphans" refers to next. Read §45 in full before touching `scripts/link_intros_to_exams.mjs`, `scripts/link_orphaned_intros_to_exams.mjs`, or `scripts/reformat_legacy_intros.mjs` again — several rounds of self-caught matching bugs are recorded there.
+**🎯 Next session starts here**: §48.6's closing note — no specific scope given yet. §48.1's 117-vs-32 categorized breakdown of the mislinked Introductions is ready but **not yet remediated** — read it before running any fix, since the remediation approach (unlink-and-reassign vs. unlink-and-leave-empty, per row) hasn't been decided yet. Also still open: credential rotation, now five sessions with zero rotated (§46.5, §45.8, §43.9). §48.2 (State/UT filter, Exams page) and §48.4 (Add Conducting Body) both shipped this session, live-verified with Playwright, both pushed.
+
+*(Prior pointer, now superseded — kept for history)* §45.9 — a from-scratch exam-Introduction linking pass (647/1,534 exams → 837/1,534, 54.6%) plus a full legacy-format-to-JSON-blocks conversion (900/900 Intro resources now `format='blocks'`) and a live-caught leaked API key. The user's own words: "we will tackle these orphans in a new chat" — §45.7's 319 orphaned resources are fully closed out (0 need linking), but the punch list's ~32 remaining items (duplicate `exams` rows, missing `exams` rows, a few approve-on-sight matches) are still open and are almost certainly what "orphans" refers to next. Read §45 in full before touching `scripts/link_intros_to_exams.mjs`, `scripts/link_orphaned_intros_to_exams.mjs`, or `scripts/reformat_legacy_intros.mjs` again — several rounds of self-caught matching bugs are recorded there.
 
 *(Prior pointer, now superseded — kept for history)* §44.8 — Legal Aid Cell rebuilt as a real React component (branch `feature/legal-aid-cell-react`, pushed, not merged), a new `docs/learning_center_handoff.md` written for Shreya's handoff, and a live investigation into "resource allocation disappeared" that surfaced the admin CMS's fake auth as the top open item (branch `feature/learning-center-admin-panel`, pushed, not merged). Read §44 before assuming either branch is merged or before touching `ExamsPage.jsx`/`ExamResourcesPanel.jsx` again.
 
@@ -2031,4 +2033,119 @@ Flagged proactively at the start of this session per §45.10's own note. Confirm
 All writes (4 exam-row merges/deletes, 7 direct resource-links, 7 new `exams`/`lc_exams`/`lc_conducting_bodies` rows + their resource uploads and links) are live in production Supabase/R2, independent of git. This session's own investigation/one-off scripts were deleted after use (not committed) — no new script files added to the working tree; `git status` at session end matches session start plus the pre-existing uncommitted PYQ-pipeline changes, untouched as always.
 
 **Next session**: the §45.2 punch list is now fully closed except for 3 items with no source content at all (Sikkim Police DSP/Constable, Meghalaya MPSC DSP — need the content team, not more matching work) and one low-priority ambiguity (Puducherry Teaching vs. Non-Teaching Staff body — both candidates already have *some* intro, so not urgent). The `lc_exams` FK landmine (§46.3) should get a real fix — either drop the constraint if `lc_exams` is truly dead, or document/build a proper dual-insert helper — before the next person creates a new `exams` row by hand and hits the same 400. Credential rotation (three, zero rotated) is still open.
+
+---
+
+## 47. Same session, second thread — admin "Exams Management" CMS rebuilt to a client mockup, plus a real dark-on-dark rendering bug found along the way
+
+Separate from §46's data work: the user shared a screenshot of the live admin CMS's Introduction Preview showing near-unreadable text, which turned into (a) a genuine bug fix, then (b) a full rebuild of the Exams Management page to match a supplied mockup, then (c) several rounds of follow-up polish. All committed and pushed by session's end — see §47.7.
+
+### 47.1 Real bug: admin resource previews rendered light-theme text on the CMS's dark background
+
+The user's screenshot showed Introduction Preview content that was essentially invisible except where a browser text-selection highlight lit it up. Traced to `AdminResourcePreview.jsx`: it renders `BlockRenderer`/`BookBlocks.css` content directly inside the admin CMS's dark drawer (`--surface: #141a21`), but `BookBlocks.css` hardcodes near-black text/light backgrounds throughout (`#1e293b`, `#0f172a`, `#ffffff` callout boxes, etc.) because it's shared with the candidate-facing reader, which *is* on a light page. Fixed by wrapping the rendered content in a white "paper" card inside `AdminResourcePreview.jsx` — the same fix pattern `ExamIntroCard.jsx` (since deleted, §47.4) already used for its own manual/draft preview paths. Verified live via a Playwright-driven headless Chromium session (login → Exams → open a preview → screenshot) rather than trusting the build alone, since this was a pure rendering bug a compile can't catch.
+
+Separately, and while looking at that same screenshot: **Goa ANM's Introduction was showing Tamil Nadu's content** — a genuine wrong-content link from an early bulk-seeding pass (`lc_exam_intro`, `source: 'auto'`, all timestamped `2026-09-02T07:29:22` to the microsecond across many rows), long predating this week's careful matching work. A quick scan found **149 of 533 (28%) state/UT-level auto-linked exams** show zero trace of their own state anywhere in the linked resource — e.g. Himachal Pradesh/Sikkim/Punjab/Tamil Nadu/J&K/Ladakh/Lakshadweep/Chhattisgarh/Puducherry's "Staff Nurse" postings *all* show Jharkhand's content; a dozen+ states' TGT/PGT show Bihar's. **Flagged to the user, not yet remediated** — a real, sizeable content-correctness problem sitting underneath the UI work, separate from anything this session's own linking touched.
+
+### 47.2 Introduction Preview made full-screen, chatbot widget removed from `/admin/*`
+
+Two quick, independently-requested fixes ahead of the bigger rebuild:
+- The Introduction Preview drawer (and, later, every other resource-preview drawer) was a `min(900px, 92vw)` panel floating on the right; changed to `100vw`/`100vh` per explicit direction ("let it overlay over the full screen"), overriding `.lc-drawer-panel`'s own `max-width: 92vw` which would otherwise have silently capped it back down.
+- `AiChatbotWidget.jsx` (the candidate-facing exam-prep/career assistant) is mounted globally in `App.jsx` outside `<Routes>`, so it rendered on every admin page too. Added a `useLocation()`-based guard (`if (location.pathname.startsWith('/admin')) return null;`, placed after all hooks per rules-of-hooks) rather than touching the global mount point. Verified with a real browser: present on `/`, absent on `/admin`.
+
+### 47.3 Full Exams Management rebuild to a supplied client mockup
+
+The user supplied a high-fidelity mockup (plus a companion ASCII wireframe) and a detailed 14-point spec. Rebuilt across `ExamsPage.jsx`, `ExamEditorPanel.jsx`, `ExamResourcesPanel.jsx`, `AdminShell.jsx`, and `AdminCMS.css`:
+
+- **Removed the top `Exams | Users | Settings` tab bar** (`AdminShell.jsx`'s `HORIZONTAL_NAV`) sitewide, not just on this page — its own code comment said it was required by an *earlier* mockup ("Do NOT remove this horizontal navigation"); the sidebar already covers the same navigation everywhere, and the new mockup explicitly called it redundant.
+- **Filter bar** collapsed from a two-row Level-pills-plus-secondary-filters layout to one row: Search / Category / Conducting Body / Level. Level is now a **required** field with only Central/State/UT (no "All Levels") — deliberately, so the exam list is never rendered unscoped against the full 1,500+ row catalog.
+- **Exam list** rewritten from a `<table>` to card-style rows (colour thumbnail, name, body, `category • level`, status badge) with **no internal scrollbar** — bounded by pagination, not `overflow-y: auto`.
+- **Three columns stretch to equal height** (`align-items: stretch` on the grid) so Exams list / Basic Information / Resources bottom edges line up instead of each sizing to its own content.
+- **Exam header**: title + `body • category • level` subtitle, with a Published toggle (moved here from the deleted `ExamStatusCard.jsx` rail card — still saves immediately, independent of Save Changes), a new **Duplicate** button (copies identity fields only — deliberately not tags/resources/Introduction, to avoid silently cloning content mappings that might not apply), Delete, Save Changes.
+- **Basic Information**: Level split out of the old combined Region dropdown into its own Level + State/UT pair; Category/Level/State-UT in one row; Website got an external-link icon; **Change Image** is now a toggle button revealing the Template/Accent-color controls instead of always showing them.
+- **Resources** moved to the right column (previously it sat in the centre column under the editor, and the rail held Introduction + Status instead).
+- Deleted `ExamStatusCard.jsx` (fully absorbed into the editor header) once nothing referenced it any more.
+
+Verified the whole rebuild with a real headless-browser walkthrough (Playwright via `chromium/index.mjs`, since `chromium-cli` isn't available in this Windows environment) — caught one real bug this way: the Published toggle's track/thumb rendered overlapping its own label text, because `.lc-toggle`'s flex/gap CSS was scoped to `.lc-input-group .lc-toggle` and the new header placement wasn't inside one. Fixed by unscoping the rule to plain `.lc-toggle`.
+
+### 47.4 Introduction folded into the Resources panel as its own assignable category; docx upload retired
+
+Follow-up request: move "Introduction Document" out of Basic Information and into the Resources panel, positioned above Guide; replace the docx-upload flow with an "assign from our Intro DB" mechanism matching Guide/Precis; give Intro/Guide/Precis each their own "+" instead of one generic "Add Resource" button.
+
+Turned out `AddResourceMapDrawer` (Guide/Precis's existing assign-picker) already fetches published `category='Intro'` resources and already has category-filter pills — the "assign from an existing library" mechanism the user asked for already existed, just wasn't wired to the Introduction slot. Deleted `ExamIntroCard.jsx` (the old upload-docx-convert-to-HTML-store-as-`lc_exam_intro.manual_body` flow) entirely rather than keep two parallel intro mechanisms; going forward, Introductions are just `lc_exam_resource_map` rows with `category='Intro'`, exactly like Guide/Precis, read by the candidate app's existing `lc_exam_resource_map` fallback path (no candidate-side change needed — that fallback already existed). `ExamResourcesPanel.jsx`'s three canonical categories now always render (even at zero items) so there's a "+" to click before anything's assigned; `AddResourceMapDrawer` gained an `initialCategory` prop so each category's own "+" opens the drawer pre-filtered and relabeled ("Assign Intro" / "Assign Guide" / "Assign Precis").
+
+Also removed the redundant **State/UT dropdown for Central-level exams** (it was permanently disabled and showing "Central" a second time right next to a Level field that already said "Central") while keeping it for State/UT-level exams, where it's a real, necessary choice — verified both cases with screenshots. And removed the HIGH/MEDIUM confidence badges and `gemini`/source text from every resource row per explicit direction ("useless info") — deleted the now-unused `ConfidenceBadge` component too.
+
+### 47.5 Final polish round: page chrome, pagination size, full width
+
+A few more explicit, small requests, each verified visually:
+- Removed the "Exams / Central / State / UT → State → Conducting Body..." page heading entirely; moved "Add Exam" into the filter row (replacing the "Clear" button, which the user said wasn't needed).
+- Exams list capped to **10 per page**, not the shared `lcShared.PAGE_SIZE` (20) — added a page-local `EXAMS_PAGE_SIZE` constant instead of changing the shared one, since `AdminJobs.jsx` also uses it and wasn't part of this ask.
+- `.admin-content`'s `max-width: 1680px` cap removed — was leaving dead space on wider/laptop screens instead of the three columns always using the full available width. Verified at both 1440px (laptop) and 1920px (wide monitor).
+- The **Resource Preview** drawer (the generalized viewer all Intro/Guide/Precis rows now use) still had the old `min(900px, 92vw)` floating-panel style, missed during §47.2's full-screen pass since it predated Introduction being folded into Resources — fixed to `100vw`/`100vh` like every other preview drawer.
+
+### 47.6 Not actioned, flagged for a future round
+
+- **149 mislinked exam Introductions** (§47.1) — real content is showing under the wrong exam for over a quarter of state/UT-level auto-linked exams. Not touched this session; needs a deliberate pass to separate genuinely-shared national content (e.g. UGC-NET for Assistant Professor postings, plausibly intentional) from wrong state-specific narrative (the Goa/Tamil Nadu ANM case, clearly not).
+- **Credential rotation** — still three, still zero rotated, still open (see §46.5, §45.8, §43.9).
+- **`lc_exams` FK landmine** (§46.3) — still unresolved.
+
+### 47.7 Git/production state
+
+Committed (`d3ee4a5`, following `87738cf` which a teammate pushed directly, unrelated to this session) and pushed to `origin/main`. Staged only the files this session actually touched (`.gitignore`, this file, and the 9 admin CMS files including the 2 deletions) — the pre-existing uncommitted PYQ-pipeline scripts and this session's own untracked one-off scripts/exports were deliberately left alone, per the standing convention every session since they first appeared has followed. User asked for a rundown of exactly what remained untracked and why before confirming the push scope was right.
+
+**Next session ("round 2")**: no specific scope given yet beyond "get ready" — the user said the current round is done and to prepare the status report, without naming what's next. Worth raising proactively at the start of the next session: the 149-mislink content problem (§47.1/§47.6) and credential rotation (§46.5) are both still open and neither has been actioned across multiple sessions now.
+
+---
+
+## 48. New session — the 149 mislinked Introductions re-derived and categorized, a State/UT filter added to the admin Exams list
+
+### 48.1 149 mislinked exam Introductions, re-derived live and split into two real categories
+
+Picked up exactly where §47.6 left off, but re-derived the count live rather than trusting it, per the prior session's own explicit caution ("don't trust the 149 count as still-accurate — the exams table has changed shape before"). Live count: **149 of 534** state/UT-level exams with an auto-linked Introduction show zero trace of their own state (last session: 149/533 — one new exam row had appeared since, the pattern held exactly).
+
+- **The naive check isn't a reliable A/B split on its own.** "Does the exam's own state name appear anywhere in the linked content?" reproduces the same headline 149, but caught real content on both sides of the line wrong:
+  - **False positive it would have caused:** the NIC (National Informatics Centre) Scientist intro mentions "Delhi" only because NIC is headquartered there and interviews happen there — genuinely shared central content across A&N/Ladakh/Chandigarh/DNH's own Scientist postings, not a leak.
+  - **False negatives it would have missed:** a state PSC's own Group D/Peon posting silently showing **India Post's own MTS intro** instead (19 exams), or a state Health Department's Pharmacist posting showing the **Railway Recruitment Board's** Pharmacist intro instead (10 exams) — neither mentions any state name at all, so a text-only check calls both "clean."
+- **Fix:** cross-checked every flagged resource's own `resources.conducting_body` field against the exam's real conducting body. That single check both cleared the NIC/IBPS/SBI/India-Post-GDS false positives *and* caught the India-Post-MTS/RRB-Pharmacist/KVS-Assistant-Commissioner/UPSC-state-CSE false negatives that the text-only check missed.
+- **Final split: 117 genuine content errors** (need a real fix — unlink, then either find the correct state-specific source or leave empty) **vs. 32 plausibly-intentional shared/central content** (leave alone). UGC-NET Assistant Professor is 23 of the 32 — the exact case the user named unprompted as the model "probably fine" example, independently confirmed correct by the conducting_body cross-check.
+- All 149 trace to the exact same seeding-pass timestamp already identified in §47.1 (`2026-09-02T07:29:22` to the microsecond), confirming this is one bad historical pass, not new or ongoing damage.
+- Delivered as a categorized report (grouped by posting type — MTS/TGT/ANM/Staff Nurse/Pharmacist/PGT/Medical Officer/etc. on the error side, Assistant Professor/NIC Scientist/SBI PO/Postal GDS on the shared-content side, each with a real example naming the donor state or body) plus the full 149-row detail (exam_id, resource_id, source_file, donor conducting_body, link timestamp) saved to this session's scratchpad. **Nothing in the database was touched** — explicitly scoped as categorization only, per the user's own instruction to report back before bulk-fixing anything.
+- All investigation was one-off scripts against live Supabase plus the public R2 content URLs (`chapters/chapter-1.json` per resource), deleted after use per the standing convention — `git status` at the end of this sub-task matched `git status` at the start.
+
+### 48.2 State/UT filter added to the admin Exams list (`ExamsPage.jsx`)
+
+User request: when Level is set to State or UT in the Exams filter bar, add a further State/UT dropdown to narrow the ~1,100-row state/UT catalog down to one state — the same Level → State/UT cascade `ExamEditorPanel.jsx`'s own Basic Information form already uses per-exam (§47.4), just not present yet at the list/filter level.
+
+- Added a `regions` fetch (`lc_regions`, same table/shape the editor panel already reads) and a `regionId` filter state, cascaded to whichever Level is currently selected via `regionOptions = regions.filter(r => r.level === level)`, and reset whenever Level changes (same pattern `chooseLevel` already used for Category/Conducting Body).
+- Wired into the exam-list query as a plain `region_id` equality filter; added to the page-reset effect's dependency array so changing state resets to page 1.
+- Field renders only for Level ≠ Central (labelled "State" or "UT" to match which one is selected) — same reasoning already used in §47.4 to hide the analogous field in the editor panel for Central-level exams, which have exactly one fixed region.
+- Confirmed via `git show HEAD:...` + `eslint` that the two `react-hooks/set-state-in-effect` errors on this file are pre-existing on the already-committed version, not introduced by this change.
+- First verification attempt (login → Exams → switch Level → confirm the State/UT dropdown appears/filters/resets) was interrupted by the user mid-run before any screenshot was taken, then superseded by the port-cleanup request in §48.3 — committed and pushed (`54a23eb`) on code-review + lint alone at that point. **Actually browser-verified afterward**, same session, once the dev server was relaunched clean on 8080 (§48.3): Level=State correctly reveals a "State" combobox and filtering to Goa narrows the list to exactly the 30 Goa exams; Level=UT correctly flips the label to "UT" and clears the prior selection; Level=Central correctly hides the field entirely. No console errors.
+- Committed (`54a23eb`) and pushed to `origin/main`, staging only this one file — the pre-existing uncommitted PYQ-pipeline scripts, this file's own pending edits, and this session's untracked one-off scripts were left alone, per the standing convention every session since they first appeared has followed.
+
+### 48.3 Dev-server port cleanup
+
+Eight stale `node.exe` Vite dev-server processes from prior sessions were found squatting ports 8080–8087 (each confirmed as `node.exe` via `tasklist` before killing, not assumed). Killed all eight on the user's explicit instruction and relaunched fresh — now serving cleanly on `8080` with no port-hunting fallback needed.
+
+### 48.4 "Add Conducting Body" capability built for the admin Conducting Bodies page
+
+User's next request: `ConductingBodiesPage.jsx` (`lc_conducting_bodies`, 676 rows) was a pure logo-management grid — no way to create a new body anywhere in the admin CMS except inserting into the table directly. `ExamEditorPanel.jsx`'s own conducting-body picker (§47.3) only ever selects from existing rows.
+
+- Added an "Add Conducting Body" button in the page header, opening a modal built on the same `.lc-modal-*` CSS pattern `RolesPermissionsPage.jsx`'s "Add Administrator" flow already uses — kept the new page visually and structurally consistent with an existing pattern rather than inventing a new one. Fields: Name (required) and Website (optional) — the only two real columns on `lc_conducting_bodies` besides `logo_path`, which is deliberately left to the existing per-card upload flow (`LogoCell`) right after creation rather than duplicating that upload logic inside the modal.
+- **Live-verified with Playwright caught a real race condition**, not just a cosmetic issue: the client-side duplicate-name check compares against the `bodies` state loaded once on mount (676 rows, one paginated fetch) — clicking "Add Conducting Body" before that fetch resolves leaves the check with nothing to compare against, so a genuine duplicate (tested with the pre-existing "CTU" row) sailed past the client check and hit `lc_conducting_bodies`'s real unique constraint on `name` directly, surfacing the raw Postgres error (`duplicate key value violates unique constraint "lc_conducting_bodies_name_key"`) inside the modal instead of a friendly message.
+- Fixed by also catching Postgres error code `23505` in the submit handler's `catch` block and mapping it to the same friendly "already exists" message the client-side pre-check shows — so the two-layer guard (instant client check when data has loaded, DB constraint as the real backstop) now degrades gracefully either way instead of leaking SQL to the user.
+- Re-verified after the fix: the same fast-click-before-load race against "CTU" now shows the friendly message with no raw error text, and a genuine new entry still saves, appears in the grid, and closes the modal correctly. Both test rows created during verification (`Test Conducting Body …`) were deleted from the live table afterward.
+- Committed (`4c70603`) and pushed to `origin/main`, staging only this one file, same convention as §48.2.
+
+### 48.5 Not actioned, flagged for a future round
+
+- **117 genuine Introduction content errors** (§48.1) — categorized, not yet fixed. Remediation approach not yet decided (likely unlink-and-reassign where a correct state-specific source can be found, unlink-and-leave-empty otherwise) — ask before assuming which.
+- **Credential rotation** — still three, still zero rotated, now five sessions running (§46.5, §45.8, §43.9).
+- **`lc_exams` FK landmine** (§46.3) — still unresolved. Newly relevant here: `ExamsPage.jsx`/`ExamEditorPanel.jsx`/`ConductingBodiesPage.jsx` all operate entirely on the legacy `lc_exams`/`lc_regions`/`lc_conducting_bodies` tables, while §48.1's Introduction-mismatch audit operates on the separate `exams`/`state_ut`/`metadata.level` schema — the dual-admin-content-system pattern already known for `resources`/`resources_v2`/`lc_resources` extends to the region/state modeling too, not just resources.
+
+### 48.6 Git/production state
+
+Two commits this session, both pushed to `origin/main`: `54a23eb` (§48.2, State/UT filter) and `4c70603` (§48.4, Add Conducting Body). Each staged only the one file it touched — the pre-existing uncommitted PYQ-pipeline scripts, this file's own pending edits mid-session, and this session's untracked one-off investigation scripts (§48.1, all deleted after use) were left alone throughout, per the standing convention every session since they first appeared has followed.
+
+**Next session**: no specific scope given yet as of this writing. Worth raising proactively: §48.1's 117 genuine Introduction content errors are categorized but not remediated, and credential rotation is still open across five sessions now.
 
