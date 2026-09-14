@@ -36,6 +36,7 @@ const ExamsPage = () => {
   const [level, setLevel] = useState('central');
   const [category, setCategory] = useState('');
   const [bodyId, setBodyId] = useState('');
+  const [regionId, setRegionId] = useState('');
 
   // Whole lc_exams catalog, fetched once — Category/Conducting Body options
   // are derived from it client-side, cascaded to whichever Level/Category
@@ -57,7 +58,22 @@ const ExamsPage = () => {
     })();
   }, []);
 
+  // All regions, fetched once — same table/shape ExamEditorPanel.jsx's own
+  // Level -> State/UT cascade already uses, so the two stay consistent.
+  const [regions, setRegions] = useState([]);
+  useEffect(() => {
+    (async () => {
+      const { data } = await supabase.from('lc_regions').select('id,name,level').order('name');
+      setRegions(data || []);
+    })();
+  }, []);
+
   const levelExams = useMemo(() => catalog.filter((exam) => exam.region?.level === level), [catalog, level]);
+
+  // State/UT filter only makes sense once Level narrows to 'state' or 'ut' —
+  // Central has exactly one fixed region, same reasoning ExamEditorPanel.jsx
+  // uses to hide its own State/UT field for Central-level exams.
+  const regionOptions = useMemo(() => regions.filter((r) => r.level === level), [regions, level]);
 
   const categoryOptions = useMemo(() => {
     const seen = new Set();
@@ -89,7 +105,7 @@ const ExamsPage = () => {
   const [selectedExamId, setSelectedExamId] = useState(searchParams.get('exam') || null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
 
-  useEffect(() => { setPage(1); }, [debouncedSearch, bodyId, category, level]);
+  useEffect(() => { setPage(1); }, [debouncedSearch, bodyId, category, level, regionId]);
 
   // Same out-of-order-response guard used elsewhere in this CMS.
   const requestIdRef = useRef(0);
@@ -106,6 +122,7 @@ const ExamsPage = () => {
       if (debouncedSearch) query = query.ilike('name', `%${debouncedSearch}%`);
       if (bodyId) query = query.eq('conducting_body_id', bodyId);
       if (category) query = query.eq('category', category);
+      if (regionId) query = query.eq('region_id', regionId);
 
       const from = (page - 1) * EXAMS_PAGE_SIZE;
       query = query.order('name', { ascending: true }).range(from, from + EXAMS_PAGE_SIZE - 1);
@@ -121,7 +138,7 @@ const ExamsPage = () => {
     } finally {
       if (requestId === requestIdRef.current) setLoading(false);
     }
-  }, [debouncedSearch, bodyId, category, level, page]);
+  }, [debouncedSearch, bodyId, category, level, regionId, page]);
 
   useEffect(() => { fetchExams(); }, [fetchExams]);
 
@@ -139,7 +156,7 @@ const ExamsPage = () => {
     setSearchParams({}, { replace: true });
   };
 
-  const chooseLevel = (v) => { setLevel(v); setCategory(''); setBodyId(''); };
+  const chooseLevel = (v) => { setLevel(v); setCategory(''); setBodyId(''); setRegionId(''); };
   const chooseCategory = (v) => { setCategory(v); setBodyId(''); };
 
   return (
@@ -164,6 +181,18 @@ const ExamsPage = () => {
           <label>Level</label>
           <Select value={level} onChange={(e) => chooseLevel(e.target.value)} options={LEVELS} />
         </div>
+        {level !== 'central' && (
+          <div className="lc-filter-field">
+            <label>{level === 'state' ? 'State' : 'UT'}</label>
+            <Select
+              searchable
+              placeholder={`All ${level === 'state' ? 'States' : 'UTs'}`}
+              value={regionId}
+              onChange={(e) => setRegionId(e.target.value)}
+              options={[{ value: '', label: `All ${level === 'state' ? 'States' : 'UTs'}` }, ...regionOptions.map((r) => ({ value: r.id, label: r.name }))]}
+            />
+          </div>
+        )}
         <button className="lc-btn primary" onClick={startNewExam}><Plus size={16} /> Add Exam</button>
       </div>
 
