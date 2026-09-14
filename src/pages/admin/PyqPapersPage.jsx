@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import { useDebounced } from './lcShared';
-import { Search, Save, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, Save, X, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { THUMBNAIL_SUBJECTS } from '../../lib/thumbnailTaxonomy';
 
 const SUBJECT_OPTIONS = Object.values(THUMBNAIL_SUBJECTS).map((s) => s.label).sort();
@@ -40,6 +41,7 @@ const LEVEL_TAG_OPTIONS = [
 // field going forward; a row whose old `subject` already WAS a valid
 // taxonomy value (a minority) still shows correctly selected.
 const PyqPapersPage = () => {
+  const navigate = useNavigate();
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search, 300);
   const [levelFilter, setLevelFilter] = useState('');
@@ -53,19 +55,27 @@ const PyqPapersPage = () => {
 
   // Same lc_regions/lc_conducting_bodies tables Book Content and Exams
   // already read, for the identical Level -> State/UT cascade and
-  // Conducting Body picker.
+  // Conducting Body picker. lc_exams (not the separate, service-role-only
+  // `exams` table -- see sql/pyq_quizzes_lc_exam_link.sql) is the same
+  // 1,536-row catalog ExamsPage.jsx/ExamEditorPanel.jsx/AdminJobs.jsx
+  // already treat as canonical and browser-readable.
   const [regions, setRegions] = useState([]);
   const [conductingBodies, setConductingBodies] = useState([]);
+  const [exams, setExams] = useState([]);
   useEffect(() => {
     (async () => {
-      const [{ data: regionRows }, { data: bodyRows }] = await Promise.all([
+      const [{ data: regionRows }, { data: bodyRows }, { data: examRows }] = await Promise.all([
         supabase.from('lc_regions').select('id,name,level').order('name'),
         supabase.from('lc_conducting_bodies').select('id,name').order('name'),
+        supabase.from('lc_exams').select('id,name').order('name'),
       ]);
       setRegions(regionRows || []);
       setConductingBodies(bodyRows || []);
+      setExams(examRows || []);
     })();
   }, []);
+  const examsById = {};
+  for (const e of exams) examsById[e.id] = e;
 
   // Every inline-editable field is staged here per row id rather than
   // written on each keystroke/dropdown change -- one explicit Save per
@@ -77,7 +87,7 @@ const PyqPapersPage = () => {
     setLoading(true);
     let query = supabase
       .from('pyq_papers')
-      .select('id,title,exam_name,subject,details,total_questions,level,state_ut,conducting_body,created_at', { count: 'exact' })
+      .select('id,title,exam_name,lc_exam_id,subject,details,total_questions,level,state_ut,conducting_body,created_at', { count: 'exact' })
       .order('created_at', { ascending: false });
     if (debouncedSearch) query = query.ilike('title', `%${debouncedSearch}%`);
     if (levelFilter) query = query.eq('level', levelFilter);
@@ -123,7 +133,7 @@ const PyqPapersPage = () => {
   // Pending-edit keys are camelCase (stateUt, conductingBody, examName) but
   // the actual row columns are snake_case -- this is the one place that
   // mapping is defined, reused by every read/write below it.
-  const FIELD_TO_COLUMN = { title: 'title', examName: 'exam_name', subject: 'subject', details: 'details', level: 'level', stateUt: 'state_ut', conductingBody: 'conducting_body' };
+  const FIELD_TO_COLUMN = { title: 'title', examName: 'exam_name', lcExamId: 'lc_exam_id', subject: 'subject', details: 'details', level: 'level', stateUt: 'state_ut', conductingBody: 'conducting_body' };
   const baseValue = (p, field) => p[FIELD_TO_COLUMN[field] || field] || '';
   const effectiveValue = (p, field) => {
     const pending = pendingEdits[p.id];
@@ -138,6 +148,17 @@ const PyqPapersPage = () => {
     setPendingEdits((prev) => {
       const next = { ...(prev[p.id] || {}), [field]: value };
       if (field === 'level' && value !== 'state' && value !== 'ut') next.stateUt = '';
+      return { ...prev, [p.id]: next };
+    });
+  };
+  // Picking a real exam also syncs the free-text exam_name display field to
+  // match -- exam_name stays independently editable afterward (candidate-
+  // facing code still matches on it by name, not yet on lc_exam_id).
+  const handleExamPick = (p, examId) => {
+    const picked = examsById[examId];
+    setPendingEdits((prev) => {
+      const next = { ...(prev[p.id] || {}), lcExamId: examId };
+      if (picked) next.examName = picked.name;
       return { ...prev, [p.id]: next };
     });
   };
@@ -252,15 +273,22 @@ const PyqPapersPage = () => {
                     style={{ ...inputStyle, fontSize: '0.75rem', color: 'var(--admin-text-muted)' }}
                   />
                 </td>
-                <td>
+                <td style={{ minWidth: '200px' }}>
                   <input
                     type="text"
                     value={effectiveValue(p, 'examName')}
                     disabled={savingRowId === p.id}
                     onChange={(e) => updatePendingEdit(p, 'examName', e.target.value)}
                     placeholder="—"
-                    title="Exam name"
-                    style={inputStyle}
+                    title="Exam name (display text)"
+                    style={{ ...inputStyle, marginBottom: '0.3rem' }}
+                  />
+                  <Select
+                    searchable
+                    placeholder="Link to exam..."
+                    value={effectiveValue(p, 'lcExamId')}
+                    onChange={(e) => handleExamPick(p, e.target.value)}
+                    options={[{ value: '', label: '— Not linked' }, ...exams.map((ex) => ({ value: ex.id, label: ex.name }))]}
                   />
                 </td>
                 <td>
@@ -316,27 +344,37 @@ const PyqPapersPage = () => {
                   />
                 </td>
                 <td>
-                  {hasPending(p) && (
-                    <div style={{ display: 'flex', gap: '0.4rem' }}>
-                      <button
-                        className="lc-btn primary"
-                        title="Save changes to the database"
-                        disabled={savingRowId === p.id}
-                        onClick={() => handleSaveRow(p)}
-                        style={{ padding: '0.35rem 0.7rem', fontSize: '0.78rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}
-                      >
-                        <Save size={13} /> {savingRowId === p.id ? 'Saving…' : 'Save'}
-                      </button>
-                      <button
-                        className="lc-icon-btn"
-                        title="Discard unsaved changes"
-                        disabled={savingRowId === p.id}
-                        onClick={() => handleDiscardRow(p)}
-                      >
-                        <X size={14} />
-                      </button>
-                    </div>
-                  )}
+                  <div style={{ display: 'flex', gap: '0.4rem' }}>
+                    {hasPending(p) && (
+                      <>
+                        <button
+                          className="lc-btn primary"
+                          title="Save changes to the database"
+                          disabled={savingRowId === p.id}
+                          onClick={() => handleSaveRow(p)}
+                          style={{ padding: '0.35rem 0.7rem', fontSize: '0.78rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}
+                        >
+                          <Save size={13} /> {savingRowId === p.id ? 'Saving…' : 'Save'}
+                        </button>
+                        <button
+                          className="lc-icon-btn"
+                          title="Discard unsaved changes"
+                          disabled={savingRowId === p.id}
+                          onClick={() => handleDiscardRow(p)}
+                        >
+                          <X size={14} />
+                        </button>
+                      </>
+                    )}
+                    <button
+                      className="lc-icon-btn"
+                      title="Open paper preview/question editor"
+                      onClick={() => navigate(`/admin/pyq/${p.id}`)}
+                      style={{ color: 'var(--admin-accent)' }}
+                    >
+                      <ExternalLink size={14} />
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}

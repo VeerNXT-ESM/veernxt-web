@@ -52,6 +52,7 @@ import RolesPermissionsPage from './pages/admin/RolesPermissionsPage';
 import QuizzesPage from './pages/admin/QuizzesPage';
 import PyqPapersPage from './pages/admin/PyqPapersPage';
 import AdminQuizEditor from './pages/admin/AdminQuizEditor';
+import PyqPaperEditor from './pages/admin/PyqPaperEditor';
 import BooksPage from './pages/admin/BooksPage';
 import BookChapterBrowser from './pages/admin/BookChapterBrowser';
 import CVBuilder from './pages/CVBuilder';
@@ -201,6 +202,7 @@ function App() {
           <Route path="/admin/private-sector" element={<AdminPrivateSector />} />
         </Route>
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
+        <Route path="/admin/pyq/:id" element={<PyqPaperEditor />} />
         <Route path="/admin/books/:category/:book" element={<BookChapterBrowser />} />
       </Routes>
     </Router>

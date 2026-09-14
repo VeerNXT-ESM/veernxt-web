@@ -47,19 +47,27 @@ const QuizzesPage = () => {
 
   // Same lc_regions/lc_conducting_bodies tables Book Content and Exams
   // already read, for the identical Level -> State/UT cascade and
-  // Conducting Body picker.
+  // Conducting Body picker. lc_exams (not the separate, service-role-only
+  // `exams` table -- see sql/pyq_quizzes_lc_exam_link.sql) is the same
+  // 1,536-row catalog ExamsPage.jsx/ExamEditorPanel.jsx/AdminJobs.jsx
+  // already treat as canonical and browser-readable.
   const [regions, setRegions] = useState([]);
   const [conductingBodies, setConductingBodies] = useState([]);
+  const [exams, setExams] = useState([]);
   useEffect(() => {
     (async () => {
-      const [{ data: regionRows }, { data: bodyRows }] = await Promise.all([
+      const [{ data: regionRows }, { data: bodyRows }, { data: examRows }] = await Promise.all([
         supabase.from('lc_regions').select('id,name,level').order('name'),
         supabase.from('lc_conducting_bodies').select('id,name').order('name'),
+        supabase.from('lc_exams').select('id,name').order('name'),
       ]);
       setRegions(regionRows || []);
       setConductingBodies(bodyRows || []);
+      setExams(examRows || []);
     })();
   }, []);
+  const examsById = {};
+  for (const e of exams) examsById[e.id] = e;
 
   // Every inline-editable field is staged here per row id rather than
   // written on each keystroke/dropdown change -- one explicit Save per
@@ -71,7 +79,7 @@ const QuizzesPage = () => {
     setLoading(true);
     let query = supabase
       .from('quizzes')
-      .select('id,title,exam_name,category,subject,details,is_locked,total_questions,level,state_ut,conducting_body,created_at', { count: 'exact' })
+      .select('id,title,exam_name,lc_exam_id,category,subject,details,is_locked,total_questions,level,state_ut,conducting_body,created_at', { count: 'exact' })
       .order('created_at', { ascending: false });
     if (debouncedSearch) query = query.ilike('title', `%${debouncedSearch}%`);
     if (categoryTab !== 'All') query = query.eq('category', categoryTab);
@@ -118,7 +126,7 @@ const QuizzesPage = () => {
   // Pending-edit keys are camelCase (stateUt, conductingBody, examName) but
   // the actual row columns are snake_case -- this is the one place that
   // mapping is defined, reused by every read/write below it.
-  const FIELD_TO_COLUMN = { title: 'title', examName: 'exam_name', subject: 'subject', details: 'details', level: 'level', stateUt: 'state_ut', conductingBody: 'conducting_body' };
+  const FIELD_TO_COLUMN = { title: 'title', examName: 'exam_name', lcExamId: 'lc_exam_id', subject: 'subject', details: 'details', level: 'level', stateUt: 'state_ut', conductingBody: 'conducting_body' };
   const baseValue = (q, field) => q[FIELD_TO_COLUMN[field] || field] || '';
   const effectiveValue = (q, field) => {
     const pending = pendingEdits[q.id];
@@ -133,6 +141,17 @@ const QuizzesPage = () => {
     setPendingEdits((prev) => {
       const next = { ...(prev[q.id] || {}), [field]: value };
       if (field === 'level' && value !== 'state' && value !== 'ut') next.stateUt = '';
+      return { ...prev, [q.id]: next };
+    });
+  };
+  // Picking a real exam also syncs the free-text exam_name display field to
+  // match -- exam_name stays independently editable afterward (candidate-
+  // facing code still matches on it by name, not yet on lc_exam_id).
+  const handleExamPick = (q, examId) => {
+    const picked = examsById[examId];
+    setPendingEdits((prev) => {
+      const next = { ...(prev[q.id] || {}), lcExamId: examId };
+      if (picked) next.examName = picked.name;
       return { ...prev, [q.id]: next };
     });
   };
@@ -270,15 +289,22 @@ const QuizzesPage = () => {
                     style={{ ...inputStyle, fontSize: '0.75rem', color: 'var(--admin-text-muted)' }}
                   />
                 </td>
-                <td>
+                <td style={{ minWidth: '200px' }}>
                   <input
                     type="text"
                     value={effectiveValue(q, 'examName')}
                     disabled={savingRowId === q.id}
                     onChange={(e) => updatePendingEdit(q, 'examName', e.target.value)}
                     placeholder="—"
-                    title="Exam name"
-                    style={inputStyle}
+                    title="Exam name (display text)"
+                    style={{ ...inputStyle, marginBottom: '0.3rem' }}
+                  />
+                  <Select
+                    searchable
+                    placeholder="Link to exam..."
+                    value={effectiveValue(q, 'lcExamId')}
+                    onChange={(e) => handleExamPick(q, e.target.value)}
+                    options={[{ value: '', label: '— Not linked' }, ...exams.map((ex) => ({ value: ex.id, label: ex.name }))]}
                   />
                 </td>
                 <td>{q.category || '—'}</td>
