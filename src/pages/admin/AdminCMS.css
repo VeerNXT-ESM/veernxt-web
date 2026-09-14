@@ -112,21 +112,10 @@
 }
 .admin-logout-btn:hover { color: var(--admin-danger); border-color: var(--admin-danger); }
 
-/* Horizontal section nav, directly under the top header. Present on every
-   admin page per the mockup ("Do NOT remove this horizontal navigation"),
-   even though it duplicates most of the left sidebar. */
-.admin-horizontal-nav {
-  display: flex; flex-wrap: wrap; gap: 0.2rem; padding: 0.6rem 2rem;
-  border-bottom: 1px solid var(--border); background: var(--admin-sidebar-bg);
-}
-.admin-horizontal-nav button {
-  background: none; border: none; border-radius: 6px; padding: 0.4rem 0.7rem;
-  font-size: 0.8rem; font-weight: 600; color: var(--admin-text-muted); cursor: pointer;
-}
-.admin-horizontal-nav button:hover { color: var(--admin-text); background: var(--surface-alt); }
-.admin-horizontal-nav button.active { color: var(--admin-accent); background: var(--admin-accent-soft); }
-
-.admin-content { padding: 2.5rem; max-width: 1680px; }
+/* No max-width cap -- the workspace should always use the full remaining
+   width beside the sidebar, laptop screens included, rather than getting
+   capped and centred/left-aligned with dead space. */
+.admin-content { padding: 2.5rem; width: 100%; box-sizing: border-box; }
 
 .lc-section-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.75rem; gap: 1rem; flex-wrap: wrap; }
 .lc-section-header h2 { margin: 0 0 0.3rem; font-size: 1.4rem; color: var(--admin-text); }
@@ -135,16 +124,13 @@
 .lc-filter-bar { display: grid; grid-template-columns: 1.4fr 1fr 1.4fr; gap: 1.1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.4rem; margin-bottom: 1.5rem; }
 .lc-filter-field label { display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--admin-text-muted); margin-bottom: 0.4rem; }
 
-/* Primary (level) + secondary (state/body/search) filter bars — ExamsPage.jsx.
-   Level is a prominent drill-down step of its own, not just another field
-   in the grid, per explicit direction. */
-.lc-filter-bar-primary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
-.lc-level-pills { display: flex; gap: 0.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.4rem; }
-.lc-level-pills button { background: none; border: none; border-radius: 8px; padding: 0.55rem 1.1rem; font-size: 0.85rem; font-weight: 700; color: var(--admin-text-muted); cursor: pointer; }
-.lc-level-pills button:hover { color: var(--admin-text); }
-.lc-level-pills button.active { background: var(--admin-accent); color: #06281c; }
-.lc-filter-bar-secondary { display: flex; flex-wrap: wrap; gap: 1.1rem; }
-.lc-filter-bar-secondary .lc-filter-field { flex: 1 1 240px; }
+/* Single compact filter row (ExamsPage.jsx) — Search | Category | Conducting
+   Body | Level, Clear at the far right. Level is a required drill-down
+   field here (Central/State/UT only, no "All Levels"), not optional. */
+.lc-filter-bar-single { display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.lc-filter-bar-single .lc-filter-field { flex: 1 1 200px; min-width: 0; }
+.lc-filter-bar-single .lc-filter-field.lc-filter-search { flex: 1.6 1 260px; }
+.lc-filter-bar-single .lc-btn { flex-shrink: 0; }
 
 /* Variable-length colour-coded pill row (JobsPage.jsx career-track filter) —
    unlike .lc-level-pills (fixed 3-item strip), each pill carries its own
@@ -269,34 +255,60 @@
 .lc-inline-input { flex: 1; padding: 0.6rem 0.85rem; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.85rem; background: var(--surface-alt); color: var(--admin-text); }
 
 /* ------------------------------------------------------------------ */
-/* Exams workspace: the three-zone master-detail-summary layout        */
-/* (ExamsPage.jsx) — Exam List | Exam Editor | Contextual Info Rail    */
+/* Exams workspace: the three-column layout (ExamsPage.jsx) —          */
+/* Exam List | Exam Editor (Basic Information) | Resources             */
+/* All three columns stretch to the tallest one's height so their      */
+/* bottom edges line up — no per-column max-height/scroll clamp; the   */
+/* list is bounded by pagination (PAGE_SIZE rows), not a scrollbar.    */
 /* ------------------------------------------------------------------ */
-.lc-exams-workspace { display: grid; grid-template-columns: 1.7fr 2fr 1.1fr; gap: 1.75rem; align-items: start; }
-.lc-exams-list-col, .lc-exams-editor-col, .lc-exams-rail-col { min-width: 0; }
-/* Editor column now stacks Exam Details + Resources mapped to this exam --
-   scrolls internally (matching the list column) so a long resource list
-   doesn't push the whole page down. */
-.lc-exams-editor-col { display: flex; flex-direction: column; gap: 1.25rem; max-height: calc(100vh - 31rem); overflow-y: auto; }
-.lc-exams-rail-col { max-height: calc(100vh - 31rem); overflow-y: auto; }
-.lc-exams-list-scroll { max-height: calc(100vh - 31rem); overflow-y: auto; }
+.lc-exams-workspace { display: grid; grid-template-columns: 1.7fr 2fr 1.1fr; gap: 1.75rem; align-items: stretch; }
+.lc-exams-list-col, .lc-exams-editor-col, .lc-exams-rail-col { min-width: 0; display: flex; flex-direction: column; }
+.lc-exams-editor-col { gap: 1.25rem; }
+.lc-exams-list-col { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; }
 .lc-table tr.clickable.selected { background: var(--admin-accent-soft); }
 .lc-table tr.clickable.selected td { color: var(--admin-text); }
 .lc-empty-editor { text-align: center; padding: 3rem 1.5rem; }
 
+/* Card-style exam list rows (replaces the old plain <table>) — icon,
+   name, conducting body, category • level, status badge, no header row. */
+.lc-exam-row-list { flex: 1; display: flex; flex-direction: column; }
+.lc-exam-row {
+  display: flex; align-items: center; gap: 0.75rem; padding: 0.7rem 0.5rem; border-radius: 8px;
+  cursor: pointer; border-bottom: 1px solid var(--border);
+}
+.lc-exam-row:last-child { border-bottom: none; }
+.lc-exam-row:hover { background: var(--surface-alt); }
+.lc-exam-row.selected { background: var(--admin-accent-soft); }
+.lc-exam-row-body { flex: 1; min-width: 0; }
+.lc-exam-row-name { display: block; font-weight: 700; font-size: 0.86rem; color: var(--admin-text); }
+.lc-exam-row-meta { display: block; font-size: 0.75rem; color: var(--admin-text-muted); margin-top: 0.15rem; }
+.lc-exam-row-badge { flex-shrink: 0; }
+
 /* Exam Editor Panel (ExamEditorPanel.jsx) — embedded, no page chrome */
-.lc-editor-panel { display: flex; flex-direction: column; gap: 1.5rem; }
-.lc-editor-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-.lc-editor-toolbar h2 { margin: 0; font-size: 1.1rem; color: var(--admin-text); }
-.lc-editor-toolbar-actions { display: flex; gap: 0.5rem; }
-.lc-editor-identity { display: grid; grid-template-columns: 1fr 200px; gap: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1.6rem; }
+.lc-editor-panel { display: flex; flex-direction: column; gap: 1.25rem; flex: 1; }
+.lc-editor-toolbar { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.lc-editor-toolbar h2 { margin: 0; font-size: 1.2rem; color: var(--admin-text); }
+.lc-editor-toolbar-subtitle { margin: 0.3rem 0 0; font-size: 0.8rem; color: var(--admin-text-muted); }
+.lc-editor-toolbar-actions { display: flex; gap: 0.5rem; align-items: center; }
+.lc-editor-toolbar-actions .lc-toggle { margin-right: 0.35rem; }
+.lc-editor-identity { display: grid; grid-template-columns: 1fr 200px; gap: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1.6rem; flex: 1; }
 .lc-editor-identity-fields { display: flex; flex-direction: column; gap: 1.1rem; }
+.lc-editor-identity-row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.1rem; }
+.lc-editor-identity-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
 .lc-editor-thumbnail { display: flex; flex-direction: column; }
+
+/* Compact "document row" (ExamIntroCard.jsx, embedded in Basic Information) */
+.lc-doc-row { display: flex; align-items: center; gap: 0.75rem; }
+.lc-doc-row-icon {
+  width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  background: var(--admin-danger-bg); color: var(--admin-danger);
+}
+.lc-doc-row-title { font-weight: 700; font-size: 0.85rem; color: var(--admin-text); }
 
 /* Status toggle (ExamEditorPanel.jsx) — replaces the old Draft/Published/
    Archived dropdown; reuses --radius-pill (currently 0px, matching the
    site-wide sharp-corners design) rather than a hardcoded pill shape. */
-.lc-input-group .lc-toggle { display: inline-flex; align-items: center; gap: 0.6rem; cursor: pointer; user-select: none; }
+.lc-toggle { display: inline-flex; align-items: center; gap: 0.6rem; cursor: pointer; user-select: none; }
 .lc-toggle input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .lc-toggle-track { width: 40px; height: 22px; border-radius: var(--radius-pill); background: var(--surface-alt); border: 1px solid var(--border); position: relative; flex-shrink: 0; transition: background 0.15s, border-color 0.15s; }
 .lc-toggle-thumb { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--admin-text-muted); transition: transform 0.15s, background 0.15s; }
@@ -315,8 +327,12 @@
 .lc-color-swatch { width: 26px; height: 26px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; }
 .lc-color-swatch.active { border-color: var(--admin-text); box-shadow: 0 0 0 2px var(--surface) inset; }
 
-/* Contextual Information Rail (ExamIntroCard.jsx, ExamStatusCard.jsx) */
-.lc-rail { display: flex; flex-direction: column; gap: 1.25rem; }
+/* Resources column (ExamResourcesPanel.jsx) — the .lc-card fills the
+   column height (matching Basic Information/Exam List) with its own
+   internal scroll on the row list only, so a long resource list doesn't
+   push the column past the other two. */
+.lc-exams-rail-col .lc-card { flex: 1; display: flex; flex-direction: column; }
+.lc-resource-rows-scroll { flex: 1; overflow-y: auto; }
 
 @media (max-width: 1500px) {
   .lc-exams-workspace { grid-template-columns: 1.5fr 1.7fr 1fr; }
@@ -329,10 +345,10 @@
 @media (max-width: 900px) {
   .lc-filter-bar { grid-template-columns: 1fr; }
   .lc-filter-bar-4col { grid-template-columns: 1fr; }
+  .lc-filter-bar-single { flex-direction: column; align-items: stretch; }
   .lc-stat-grid { grid-template-columns: repeat(2, 1fr); }
   .lc-exams-workspace { grid-template-columns: 1fr; }
-  .lc-exams-list-scroll { max-height: 420px; }
-  .lc-exams-editor-col, .lc-exams-rail-col { max-height: none; overflow-y: visible; }
   .lc-editor-identity { grid-template-columns: 1fr; }
+  .lc-editor-identity-row3, .lc-editor-identity-row2 { grid-template-columns: 1fr; }
   .admin-sidebar:not(.collapsed) { position: fixed; z-index: 200; }
 }

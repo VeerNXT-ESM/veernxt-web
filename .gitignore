@@ -34,3 +34,10 @@ content-issues-report.json
 # source, shouldn't be in history, kept locally in case a restore is
 # ever needed.
 backups/
+
+# Internal-only reference docs that must never ship in the deployed
+# bundle or land in git history -- moved here from public/ 2026-09-13
+# after finding a live AI API key hardcoded in AI_API_USAGE.md, publicly
+# downloadable at <site>/AI_API_USAGE.md. Key rotation is still pending;
+# this stops the doc from being re-committed in the meantime.
+internal/

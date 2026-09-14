@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { 
   Bot, 
   X, 
@@ -316,6 +316,7 @@ function renderFormattedMessage(text) {
 
 export default function AiChatbotWidget() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [userProfile, setUserProfile] = useState(null); // null = loading, object = loaded
   const [messages, setMessages] = useState([]);
@@ -931,6 +932,12 @@ function synthesizeIntelligentResponse(query, profile) {
   const handleResetChat = () => {
     resetChatToInitial(userProfile);
   };
+
+  // This widget is candidate-facing (exam prep / Sewa Nidhi / job-search
+  // guidance) -- it's mounted globally in App.jsx so it's available on
+  // every candidate route without threading it through each page, but that
+  // means it also renders on /admin/* unless explicitly excluded here.
+  if (location.pathname.startsWith('/admin')) return null;
 
   return (
     <>

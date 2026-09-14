@@ -9,18 +9,6 @@ import './AdminCMS.css';
 
 const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked };
 
-// Horizontal section nav, directly under the top header — required by the
-// CMS mockup ("Do NOT remove this horizontal navigation") even though it
-// duplicates most of the left sidebar. Settings aliases to Roles &
-// Permissions (the closest thing to system configuration that exists
-// today). Exams is first — it's the actual admin landing page (see the
-// /admin redirect in App.jsx).
-const HORIZONTAL_NAV = [
-  { label: 'Exams', path: '/admin/exams' },
-  { label: 'Users', path: '/admin/users' },
-  { label: 'Settings', path: '/admin/roles' },
-];
-
 // Page title + one-line description shown in the top header, keyed by path.
 const PAGE_META = {
   '/admin/exams': { title: 'Exams Management', description: 'Organize exams, map syllabus and assign content resources.' },
@@ -125,17 +113,6 @@ const AdminShell = () => {
             </button>
           </div>
         </header>
-        <nav className="admin-horizontal-nav">
-          {HORIZONTAL_NAV.map((item) => (
-            <button
-              key={item.label}
-              className={location.pathname === item.path ? 'active' : ''}
-              onClick={() => navigate(item.path)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </nav>
         <main className="admin-content">
           <Outlet />
         </main>

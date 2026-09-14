@@ -88,7 +88,7 @@ const AdminResourcePreview = ({ resourceId }) => {
   const isBlocksFormat = resource.format === 'blocks';
 
   return (
-    <div style={{ padding: '1.25rem 1.5rem', overflowY: 'auto', flex: 1 }}>
+    <div style={{ padding: '1.25rem 1.5rem', overflowY: 'auto', flex: 1, background: 'var(--surface)' }}>
       {chapters && chapters.length > 1 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
           <button className="lc-btn" disabled={activeIndex === 0} onClick={() => setActiveIndex((i) => i - 1)}><ChevronLeft size={14} /></button>
@@ -99,15 +99,26 @@ const AdminResourcePreview = ({ resourceId }) => {
 
       {chapterLoading && !activeChapter?.loaded ? (
         <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem' }}><RefreshCw className="animate-spin" size={24} color="var(--ios-olive)" /></div>
-      ) : isBlocksFormat ? (
-        <>
-          <ChapterHeader title={activeChapter?.title} order={activeIndex + 1} />
-          <div className="bk-blocks-container">
-            {(activeChapter?.blocks || []).map((block) => <BlockRenderer key={block.id} block={block} />)}
-          </div>
-        </>
       ) : (
-        <div dangerouslySetInnerHTML={{ __html: activeChapter?.body_html || '' }} />
+        // BookBlocks.css / the raw body_html both hardcode dark, light-page-only
+        // text/background colors (shared with the candidate-facing reader, which
+        // IS on a light page) -- so on this admin CMS's dark drawer (--surface:
+        // #141a21) that text rendered near-black-on-near-black, unreadable except
+        // for the browser's own text-selection highlight. Give it the light
+        // "paper" it was designed for, same as the manual/draft preview paths in
+        // ExamIntroCard.jsx already do with their own .reader-card wrapper.
+        <div style={{ background: '#ffffff', borderRadius: '12px', border: '1px solid #e2e8f0', padding: '2rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)' }}>
+          {isBlocksFormat ? (
+            <>
+              <ChapterHeader title={activeChapter?.title} order={activeIndex + 1} />
+              <div className="bk-blocks-container">
+                {(activeChapter?.blocks || []).map((block) => <BlockRenderer key={block.id} block={block} />)}
+              </div>
+            </>
+          ) : (
+            <div style={{ color: '#1e293b' }} dangerouslySetInnerHTML={{ __html: activeChapter?.body_html || '' }} />
+          )}
+        </div>
       )}
     </div>
   );

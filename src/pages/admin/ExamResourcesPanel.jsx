@@ -7,17 +7,6 @@ const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
 const CATEGORY_ORDER = ['Intro', 'Guide', 'Precis'];
 
-const confidenceColors = {
-  high: { bg: 'var(--admin-accent-soft)', color: 'var(--admin-accent)' },
-  medium: { bg: 'var(--surface-alt)', color: 'var(--admin-text-muted)' },
-  low: { bg: 'var(--admin-danger-bg)', color: 'var(--admin-danger)' },
-};
-
-const ConfidenceBadge = ({ confidence }) => {
-  const c = confidenceColors[confidence] || confidenceColors.medium;
-  return <span className="lc-status-badge" style={{ background: c.bg, color: c.color }}>{confidence || 'n/a'}</span>;
-};
-
 /**
  * Full-width section below the Exams workspace grid — shows what's actually
  * mapped to this exam in the live content system (lc_exam_resource_map +
@@ -30,7 +19,11 @@ const ConfidenceBadge = ({ confidence }) => {
 const ExamResourcesPanel = ({ examId }) => {
   const [mappings, setMappings] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [addDrawerOpen, setAddDrawerOpen] = useState(false);
+  // Which category's "+" was clicked -- null means the drawer is closed,
+  // otherwise it's the category the drawer opens pre-filtered to (Intro,
+  // Guide, or Precis each get their own + now, instead of one generic
+  // "Add Resource" button the admin had to filter by hand).
+  const [addDrawerCategory, setAddDrawerCategory] = useState(null);
   const [previewResourceId, setPreviewResourceId] = useState(null);
 
   const fetchMappings = async (id) => {
@@ -55,7 +48,7 @@ const ExamResourcesPanel = ({ examId }) => {
   };
 
   useEffect(() => {
-    setAddDrawerOpen(false);
+    setAddDrawerCategory(null);
     setPreviewResourceId(null);
     if (!examId) { setMappings([]); return; }
     fetchMappings(examId);
@@ -68,32 +61,34 @@ const ExamResourcesPanel = ({ examId }) => {
     setMappings((prev) => prev.filter((m) => m.id !== mapping.id));
   };
 
-  const grouped = CATEGORY_ORDER
-    .map((category) => ({ category, items: mappings.filter((m) => m.category === category) }))
-    .filter((g) => g.items.length > 0);
+  // Always show all three canonical categories, even at zero -- that's the
+  // point of a per-category "+": there needs to be somewhere to click even
+  // before this exam has an Intro/Guide/Precis assigned yet.
+  const grouped = CATEGORY_ORDER.map((category) => ({ category, items: mappings.filter((m) => m.category === category) }));
   const other = mappings.filter((m) => !CATEGORY_ORDER.includes(m.category));
 
   return (
     <div className="lc-card">
       <div className="lc-card-row-header">
-        <h3 style={{ margin: 0 }}>Resources mapped to this exam</h3>
-        {examId && <button className="lc-btn" onClick={() => setAddDrawerOpen(true)}><Plus size={14} /> Add Resource</button>}
+        <h3 style={{ margin: 0 }}>Resources ({mappings.length})</h3>
       </div>
 
       {!examId ? (
-        <span className="lc-muted-note">Save the exam first to view its mapped resources.</span>
+        <span className="lc-muted-note">Save the exam first to assign resources.</span>
       ) : loading ? (
         <span className="lc-muted-note">Loading…</span>
-      ) : mappings.length === 0 ? (
-        <p className="lc-muted-note">No resources mapped yet — until something's mapped here, the candidate app falls back to matching resources by exam name.</p>
       ) : (
-        <>
+        <div className="lc-resource-rows-scroll">
           {grouped.map((g) => (
             <div key={g.category} style={{ marginTop: '0.85rem' }}>
-              <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--admin-text-muted)', marginBottom: '0.4rem' }}>{g.category} ({g.items.length})</label>
+              <div className="lc-card-row-header" style={{ marginBottom: '0.4rem' }}>
+                <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--admin-text-muted)' }}>{g.category} ({g.items.length})</label>
+                <button className="lc-icon-btn" title={`Assign ${g.category}`} onClick={() => setAddDrawerCategory(g.category)}><Plus size={14} /></button>
+              </div>
               {g.items.map((m) => (
                 <ResourceMapRow key={m.id} mapping={m} onRemove={() => removeMapping(m)} onPreview={() => setPreviewResourceId(m.resource?.resource_id)} />
               ))}
+              {g.items.length === 0 && <p className="lc-muted-note" style={{ margin: 0 }}>None assigned yet.</p>}
             </div>
           ))}
           {other.length > 0 && (
@@ -104,21 +99,22 @@ const ExamResourcesPanel = ({ examId }) => {
               ))}
             </div>
           )}
-        </>
+        </div>
       )}
 
-      {addDrawerOpen && (
+      {addDrawerCategory && (
         <AddResourceMapDrawer
           examId={examId}
+          initialCategory={addDrawerCategory}
           existingResourceIds={mappings.map((m) => m.resource?.resource_id).filter(Boolean)}
-          onClose={() => setAddDrawerOpen(false)}
-          onAdded={() => { setAddDrawerOpen(false); fetchMappings(examId); }}
+          onClose={() => setAddDrawerCategory(null)}
+          onAdded={() => { setAddDrawerCategory(null); fetchMappings(examId); }}
         />
       )}
 
       {previewResourceId && (
         <div className="lc-drawer-backdrop" onClick={() => setPreviewResourceId(null)}>
-          <div className="lc-drawer-panel" style={{ width: 'min(900px, 92vw)', height: '85vh', display: 'flex', flexDirection: 'column' }} onClick={(e) => e.stopPropagation()}>
+          <div className="lc-drawer-panel" style={{ width: '100vw', height: '100vh', maxWidth: 'none', display: 'flex', flexDirection: 'column' }} onClick={(e) => e.stopPropagation()}>
             <div className="lc-drawer-header">
               <div><h3>Resource Preview</h3></div>
               <button className="lc-close-btn" onClick={() => setPreviewResourceId(null)}><X size={20} /></button>
@@ -137,8 +133,6 @@ const ResourceMapRow = ({ mapping, onRemove, onPreview }) => {
     <div className="lc-drawer-list-item">
       <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0 }}>
         <span className="lc-truncate" title={mapping.resource?.title}>{mapping.resource?.title || 'Untitled resource'}</span>
-        <ConfidenceBadge confidence={mapping.confidence} />
-        <span className="lc-muted-note">{mapping.source}</span>
         {mapping.resource?.status && mapping.resource.status !== 'Published' && <span className="lc-muted-note">({mapping.resource.status})</span>}
       </span>
       <span style={{ display: 'flex', gap: '0.4rem', flexShrink: 0 }}>
@@ -159,9 +153,9 @@ const ResourceMapRow = ({ mapping, onRemove, onPreview }) => {
   );
 };
 
-const AddResourceMapDrawer = ({ examId, existingResourceIds, onClose, onAdded }) => {
+const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, onClose, onAdded }) => {
   const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState(initialCategory || '');
   const [allResources, setAllResources] = useState([]);
   const [supplementary, setSupplementary] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -431,8 +425,8 @@ const AddResourceMapDrawer = ({ examId, existingResourceIds, onClose, onAdded })
       <div className="lc-drawer-panel" style={{ width: 'min(580px, 94vw)' }} onClick={(e) => e.stopPropagation()}>
         <div className="lc-drawer-header">
           <div>
-            <h3>Add Resource</h3>
-            <p>Select canonical books and intros to link to this exam.</p>
+            <h3>{initialCategory ? `Assign ${initialCategory}` : 'Add Resource'}</h3>
+            <p>{initialCategory ? `Select a published ${initialCategory} to assign to this exam.` : 'Select canonical books and intros to link to this exam.'}</p>
           </div>
           <button className="lc-close-btn" onClick={onClose}><X size={20} /></button>
         </div>
@@ -553,7 +547,7 @@ const AddResourceMapDrawer = ({ examId, existingResourceIds, onClose, onAdded })
           </span>
           <button className="lc-btn" onClick={onClose} disabled={saving}>Cancel</button>
           <button className="lc-btn primary" onClick={handleAdd} disabled={saving || selected.size === 0}>
-            {saving ? 'Adding…' : 'Add Resources'}
+            {saving ? 'Assigning…' : 'Assign'}
           </button>
         </div>
       </div>
