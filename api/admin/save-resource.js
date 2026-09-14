@@ -257,7 +257,7 @@ async function handleBooksList(req, res) {
     for (let from = 0; ; from += 1000) {
       const { data, error } = await supabase
         .from('resources')
-        .select('resource_id,title,category,storage_base_url,chapter_count,status')
+        .select('resource_id,title,category,storage_base_url,chapter_count,status,level,state_ut,conducting_body')
         .in('category', BOOK_CATEGORIES)
         .eq('format', 'blocks')
         .range(from, from + 999);
@@ -308,6 +308,9 @@ async function handleBooksList(req, res) {
         resourceId: canonicalRow.resource_id,
         title: group.title,
         category: group.category,
+        level: canonicalRow.level || null,
+        stateUt: canonicalRow.state_ut || null,
+        conductingBody: canonicalRow.conducting_body || null,
         storageBaseUrl: canonicalUrl,
         chapterCount: canonicalRow.chapter_count ?? null,
         duplicateRowCount: group.rows.length,
@@ -786,31 +789,41 @@ async function handleBooksRename(req, res) {
   }
 }
 
+const BOOK_LEVELS = ['central', 'state', 'ut'];
+
 /**
  * POST /api/admin/save-resource with
- * { type: 'books-set-category', resourceId, newCategory }
+ * { type: 'books-save-tags', resourceId, category?, level?, stateUt?, conductingBody? }
  *
- * Re-labels a book's category (e.g. a Precis wrongly tagged as a Guide).
- * Content stays exactly where it already lives in R2 -- storage_base_url
- * is stored per-row rather than recomputed from category at read time, so
- * nothing downstream needs the R2 path's own category segment to match.
- * Only the `resources.category` column changes.
+ * One combined save for every tag the admin table lets you edit inline
+ * (Category, Level, State/UT, Conducting Body) -- the frontend stages all
+ * of them locally as the admin changes dropdowns and sends one request on
+ * an explicit "Save" click, rather than a separate round trip per field.
+ * Only the fields actually present in the request body are touched
+ * (`undefined` means "leave alone"; pass `null` to clear a tag).
  *
- * Deliberately does NOT reject a destination title that already exists --
- * unlike books-create/books-duplicate, where a title clash means "these
- * are two different things that shouldn't share a name," a mis-tagged
- * book landing on a title the destination category already has is the
- * exact case this action exists to fix (e.g. "Haryana_GS" split with some
- * rows wrongly left in Guide while the real book lives in Precis). It
- * merges into that existing group the same way any other duplicate-titled
- * row already does -- pickCanonicalStorageBaseUrl resolves which content
- * wins if they disagree, nothing is deleted.
+ * Category changes re-label in place -- content stays exactly where it
+ * already lives in R2 (storage_base_url is stored per-row, not recomputed
+ * from category at read time). Deliberately does NOT reject a destination
+ * title that already exists: unlike books-create/books-duplicate, where a
+ * title clash means "these are two different things," a mis-tagged book
+ * landing on a title the destination category already has is exactly the
+ * case this exists to fix (e.g. "Haryana_GS" split with some rows wrongly
+ * left in Guide while the real book lives in Precis) -- it merges into
+ * that group the same way any other duplicate-titled row already does.
+ *
+ * Level/State-UT/Conducting Body are plain labels for future exam<->book
+ * mapping -- they don't affect content, category grouping, or R2 at all.
  */
-async function handleBooksSetCategory(req, res) {
+async function handleBooksSaveTags(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  const { resourceId, newCategory } = req.body || {};
-  if (!resourceId || !BOOK_CATEGORIES.includes(newCategory)) {
-    return res.status(400).json({ ok: false, error: 'Missing resourceId or invalid newCategory' });
+  const { resourceId, category: newCategory, level: newLevel, stateUt: newStateUt, conductingBody: newConductingBody } = req.body || {};
+  if (!resourceId) return res.status(400).json({ ok: false, error: 'Missing resourceId' });
+  if (newCategory !== undefined && !BOOK_CATEGORIES.includes(newCategory)) {
+    return res.status(400).json({ ok: false, error: 'Invalid category' });
+  }
+  if (newLevel !== undefined && newLevel !== null && !BOOK_LEVELS.includes(newLevel)) {
+    return res.status(400).json({ ok: false, error: 'Invalid level' });
   }
   if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
 
@@ -819,17 +832,23 @@ async function handleBooksSetCategory(req, res) {
     const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
-    if (row.category === newCategory) return res.status(200).json({ ok: true, category: newCategory });
 
-    const { error: updateError } = await bookRowsFilter(
-      supabase.from('resources').update({ category: newCategory, updated_at: new Date().toISOString() }),
-      row
-    );
+    const patch = { updated_at: new Date().toISOString() };
+    if (newCategory !== undefined) patch.category = newCategory;
+    if (newLevel !== undefined) patch.level = newLevel;
+    if (newStateUt !== undefined) patch.state_ut = newStateUt;
+    if (newConductingBody !== undefined) patch.conducting_body = newConductingBody;
+
+    // bookRowsFilter scopes by `row`'s CURRENT category/title (Guide/Precis
+    // title-grouped, Intro resource_id-only) -- correct even when this same
+    // patch also changes `category`, since the WHERE clause is built before
+    // the UPDATE's SET values apply.
+    const { error: updateError } = await bookRowsFilter(supabase.from('resources').update(patch), row);
     if (updateError) throw new Error(updateError.message);
 
-    return res.status(200).json({ ok: true, category: newCategory });
+    return res.status(200).json({ ok: true, ...patch });
   } catch (e) {
-    console.error('[admin/save-resource:books-set-category] failed:', e.message);
+    console.error('[admin/save-resource:books-save-tags] failed:', e.message);
     return res.status(500).json({ ok: false, error: e.message });
   }
 }
@@ -1019,8 +1038,8 @@ export default async function handler(req, res) {
     return handleBooksRename(req, res);
   }
 
-  if (req.body?.type === 'books-set-category') {
-    return handleBooksSetCategory(req, res);
+  if (req.body?.type === 'books-save-tags') {
+    return handleBooksSaveTags(req, res);
   }
 
   if (req.body?.type === 'books-archive') {
