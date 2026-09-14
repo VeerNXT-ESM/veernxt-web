@@ -12,11 +12,11 @@ const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landm
 // Page title + one-line description shown in the top header, keyed by path.
 const PAGE_META = {
   '/admin/exams': { title: 'Exams Management', description: 'Organize exams, map syllabus and assign content resources.' },
-  '/admin/books': { title: 'Book Content', description: 'Browse and QA the Guide/Precis book JSON that actually ships to candidates.' },
+  '/admin/books': { title: 'Book Content' },
   '/admin/users': { title: 'Users', description: 'Registered service personnel and platform accounts.' },
   '/admin/roles': { title: 'Roles & Permissions', description: 'Assign roles and curate access control lists.' },
-  '/admin/quizzes': { title: 'Quizzes', description: 'Manually authored assessments.' },
-  '/admin/pyq-papers': { title: 'PYQ Papers', description: 'Previous year question papers — read-only content, not quizzes.' },
+  '/admin/quizzes': { title: 'Quizzes' },
+  '/admin/pyq-papers': { title: 'PYQ Papers' },
   '/admin/jobs': { title: 'Job Board', description: 'Aggregated vacancy notifications.' },
   '/admin/rewards': { title: 'Rewards', description: 'Redemption queue for the points program.' },
   '/admin/private-sector': { title: 'Private Sector — HR Console', description: 'Employer requirements, service verification and the candidate matching pipeline.' },
