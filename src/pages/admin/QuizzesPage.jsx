@@ -97,9 +97,9 @@ const QuizzesPage = () => {
       </div>
 
       {selectedIds.length > 0 && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', padding: '0.6rem 0.9rem', marginBottom: '1rem', background: '#f8fafc', border: '1px solid #e2e8f0' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', padding: '0.6rem 0.9rem', marginBottom: '1rem', background: '#f8fafc', border: '1px solid #e2e8f0', color: '#0f172a' }}>
           <span style={{ fontSize: '0.85rem', fontWeight: 700 }}>{selectedIds.length} selected</span>
-          <select value={bulkSubject} onChange={(e) => setBulkSubject(e.target.value)} style={{ padding: '0.35rem 0.5rem' }}>
+          <select value={bulkSubject} onChange={(e) => setBulkSubject(e.target.value)} style={{ padding: '0.35rem 0.5rem', color: '#0f172a', background: '#fff' }}>
             <option value="">Set subject...</option>
             {SUBJECT_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
           </select>
