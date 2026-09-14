@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { supabase } from '../../lib/supabase';
 import { uploadFilesToR2 } from '../../lib/r2Uploader';
 import { useDebounced } from './lcShared';
-import { Search, Landmark, Upload, RefreshCw, CheckCircle2, XCircle } from 'lucide-react';
+import { Search, Landmark, Upload, RefreshCw, CheckCircle2, XCircle, Plus, X } from 'lucide-react';
 
 // Manual logo replacements land under a distinct R2 prefix (not
 // exam-logos/, which scripts/upload_logos_to_r2.mjs owns and could
@@ -86,6 +86,11 @@ const ConductingBodiesPage = () => {
   const debouncedSearch = useDebounced(search);
   const [onlyMissing, setOnlyMissing] = useState(false);
 
+  const [showAddModal, setShowAddModal] = useState(false);
+  const [newBody, setNewBody] = useState({ name: '', website: '' });
+  const [addError, setAddError] = useState('');
+  const [adding, setAdding] = useState(false);
+
   const fetchBodies = useCallback(async () => {
     setLoading(true);
     let all = [];
@@ -108,6 +113,46 @@ const ConductingBodiesPage = () => {
     setBodies((prev) => prev.map((b) => (b.id === id ? { ...b, logo_path: url } : b)));
   };
 
+  const openAddModal = () => {
+    setNewBody({ name: '', website: '' });
+    setAddError('');
+    setShowAddModal(true);
+  };
+
+  const handleAddBody = async (e) => {
+    e.preventDefault();
+    const name = newBody.name.trim();
+    if (!name) return;
+
+    // Quick client-side check against the already-loaded `bodies` list, so
+    // the common case gets an instant, friendly message instead of a round
+    // trip. Not the only guard -- if this fires before the initial fetch
+    // finishes (bodies still []), it can't catch anything, so `name` also
+    // has a real unique constraint in the DB; the catch block below turns
+    // that into the same message rather than surfacing the raw Postgres error.
+    const clash = bodies.find((b) => b.name.trim().toLowerCase() === name.toLowerCase());
+    if (clash) {
+      setAddError(`"${clash.name}" already exists — pick a more specific name if this is a different body.`);
+      return;
+    }
+
+    setAdding(true);
+    setAddError('');
+    try {
+      const website = newBody.website.trim() || null;
+      const { data, error } = await supabase.from('lc_conducting_bodies').insert({ name, website }).select('id,name,logo_path').single();
+      if (error) throw error;
+      setBodies((prev) => [...prev, data].sort((a, b) => a.name.localeCompare(b.name)));
+      setShowAddModal(false);
+    } catch (err) {
+      console.error('Error adding conducting body:', err);
+      const isDuplicate = err.code === '23505';
+      setAddError(isDuplicate ? `"${name}" already exists — pick a more specific name if this is a different body.` : (err.message || 'Failed to add conducting body.'));
+    } finally {
+      setAdding(false);
+    }
+  };
+
   const filtered = bodies
     .filter((b) => !debouncedSearch || b.name.toLowerCase().includes(debouncedSearch.toLowerCase()))
     .filter((b) => !onlyMissing || !b.logo_path);
@@ -121,6 +166,7 @@ const ConductingBodiesPage = () => {
           <h2>Conducting Bodies</h2>
           <p>{withLogoCount} of {bodies.length} bodies have a logo. Upload or replace one below — swap in a higher-resolution version any time.</p>
         </div>
+        <button className="lc-btn primary" onClick={openAddModal}><Plus size={16} /> Add Conducting Body</button>
       </div>
 
       <div className="lc-filter-bar">
@@ -146,6 +192,53 @@ const ConductingBodiesPage = () => {
               <span style={{ fontSize: '0.78rem', textAlign: 'center', color: 'var(--admin-text, #0f172a)', lineHeight: 1.3 }}>{body.name}</span>
             </div>
           ))}
+        </div>
+      )}
+
+      {showAddModal && (
+        <div className="lc-modal-backdrop">
+          <form onSubmit={handleAddBody} className="lc-modal-card">
+            <div className="lc-modal-header">
+              <h3>Add Conducting Body</h3>
+              <button type="button" className="lc-close-btn" onClick={() => setShowAddModal(false)}><X size={20} /></button>
+            </div>
+            <div className="lc-modal-body">
+              <div className="lc-input-group">
+                <label>Name *</label>
+                <input
+                  type="text"
+                  placeholder="e.g. Punjab Public Service Commission"
+                  value={newBody.name}
+                  onChange={(e) => { setNewBody({ ...newBody, name: e.target.value }); setAddError(''); }}
+                  autoFocus
+                  required
+                />
+              </div>
+              <div className="lc-input-group">
+                <label>Website</label>
+                <input
+                  type="url"
+                  placeholder="https://..."
+                  value={newBody.website}
+                  onChange={(e) => setNewBody({ ...newBody, website: e.target.value })}
+                />
+              </div>
+              {addError && (
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.8rem', color: '#ef4444' }}>
+                  <XCircle size={13} /> {addError}
+                </span>
+              )}
+              <p style={{ fontSize: '0.78rem', color: 'var(--admin-text-muted, #64748b)', margin: 0 }}>
+                Logo can be added right after, from this body's card in the grid.
+              </p>
+            </div>
+            <div className="lc-modal-footer">
+              <button type="button" className="lc-btn" onClick={() => setShowAddModal(false)}>Cancel</button>
+              <button type="submit" className="lc-btn primary" disabled={adding || !newBody.name.trim()}>
+                {adding ? 'Adding…' : 'Add Conducting Body'}
+              </button>
+            </div>
+          </form>
         </div>
       )}
     </div>
