@@ -379,13 +379,16 @@ function getS3Client() {
   });
 }
 
-async function uploadToR2(s3, bucket, key, body, contentType) {
+async function uploadToR2(s3, bucket, key, body, contentType, cacheControl) {
+  const defaultCacheControl = contentType === 'application/json'
+    ? 'no-cache, no-store, must-revalidate'
+    : 'public, max-age=31536000';
   await s3.send(new PutObjectCommand({
     Bucket: bucket,
     Key: key,
     Body: body,
     ContentType: contentType,
-    CacheControl: 'public, max-age=31536000',
+    CacheControl: cacheControl || defaultCacheControl,
   }));
 }
 

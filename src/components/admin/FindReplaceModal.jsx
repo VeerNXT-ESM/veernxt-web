@@ -115,8 +115,8 @@ export const FindReplaceModal = ({
   const [replaceText, setReplaceText] = useState('');
   const [chapterOnly, setChapterOnly] = useState(false);
 
-  const [scanning, setScanning] = useState(false);
-  const [chaptersCache, setChaptersCache] = useState({});
+  const [counting, setCounting] = useState(false);
+  const [bookMatches, setBookMatches] = useState(null);
   const [replacing, setReplacing] = useState(false);
   const [replaceResult, setReplaceResult] = useState(null);
   const [error, setError] = useState(null);
@@ -127,67 +127,66 @@ export const FindReplaceModal = ({
     searchInputRef.current?.focus();
   }, []);
 
-  // Pre-populate chapters cache with current chapter if available
-  useEffect(() => {
-    if (activeChapterMeta?.file_name && currentChapterData) {
-      setChaptersCache((prev) => ({ ...prev, [activeChapterMeta.file_name]: currentChapterData }));
-    }
-  }, [activeChapterMeta, currentChapterData]);
-
-  // Load all chapters into cache when searching across the whole book
-  useEffect(() => {
-    if (!book?.storageBaseUrl || !metadata?.chapters || !findText.trim() || chapterOnly) return;
-
-    let isMounted = true;
-    const missing = metadata.chapters.filter((c) => !chaptersCache[c.file_name]);
-    if (missing.length === 0) return;
-
-    (async () => {
-      setScanning(true);
-      try {
-        const fetched = {};
-        await Promise.all(
-          missing.map(async (c) => {
-            try {
-              const res = await fetch(`${book.storageBaseUrl}${c.file_name}`);
-              if (res.ok) fetched[c.file_name] = await res.json();
-            } catch {
-              // Ignore single chapter fetch failure during scan preview
-            }
-          })
-        );
-        if (isMounted) setChaptersCache((prev) => ({ ...prev, ...fetched }));
-      } finally {
-        if (isMounted) setScanning(false);
-      }
-    })();
-
-    return () => { isMounted = false; };
-  }, [book, metadata, findText, chapterOnly, chaptersCache]);
-
-  const totalMatches = useMemo(() => {
-    if (!findText.trim()) return 0;
+  // Instant count for active chapter (0ms)
+  const chapterMatches = useMemo(() => {
+    if (!findText.trim() || !currentChapterData) return 0;
     try {
-      const escaped = findText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const escaped = findText.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const regex = new RegExp(escaped, 'gi');
-
-      const targetChapters = chapterOnly && activeChapterMeta
-        ? (metadata?.chapters || []).filter((c) => c.file_name === activeChapterMeta.file_name)
-        : metadata?.chapters || [];
-
-      let total = 0;
-      for (const chap of targetChapters) {
-        const data = chaptersCache[chap.file_name];
-        if (data) total += countMatches(data, regex);
-      }
-      return total;
+      return countMatches(currentChapterData, regex);
     } catch {
       return 0;
     }
-  }, [findText, chapterOnly, activeChapterMeta, metadata, chaptersCache]);
+  }, [findText, currentChapterData]);
+
+  // Fast server-side count across the whole book (single 150ms request)
+  useEffect(() => {
+    if (chapterOnly || !book?.resourceId || !findText.trim()) {
+      setBookMatches(null);
+      setCounting(false);
+      return;
+    }
+
+    let isMounted = true;
+    setCounting(true);
+
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch('/api/admin/save-resource', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
+          body: JSON.stringify({
+            type: 'books-find-count',
+            resourceId: book.resourceId,
+            find: findText.trim(),
+            scope: 'all',
+          }),
+        });
+        const data = await res.json();
+        if (isMounted) {
+          if (res.ok && data.ok) {
+            setBookMatches(data.totalMatches);
+          } else {
+            setBookMatches(0);
+          }
+        }
+      } catch {
+        if (isMounted) setBookMatches(0);
+      } finally {
+        if (isMounted) setCounting(false);
+      }
+    }, 200);
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timer);
+    };
+  }, [findText, chapterOnly, book?.resourceId]);
+
+  const activeMatches = chapterOnly ? chapterMatches : (bookMatches ?? 0);
 
   const handleExecuteReplace = async () => {
-    if (!findText.trim()) return;
+    if (!findText.trim() || replacing || counting) return;
     setReplacing(true);
     setError(null);
     setReplaceResult(null);
@@ -199,7 +198,7 @@ export const FindReplaceModal = ({
         body: JSON.stringify({
           type: 'books-find-replace',
           resourceId: book.resourceId,
-          find: findText,
+          find: findText.trim(),
           replace: replaceText,
           scope: chapterOnly ? 'chapter' : 'all',
           chapterFileName: chapterOnly ? activeChapterMeta?.file_name : undefined,
@@ -210,7 +209,7 @@ export const FindReplaceModal = ({
       if (!res.ok || !data.ok) throw new Error(data.error || `HTTP ${res.status}`);
 
       setReplaceResult(data);
-      setChaptersCache({}); // reload fresh with updated text next time
+      setBookMatches(0);
       onSuccess?.(data);
     } catch (err) {
       setError(err.message);
@@ -218,6 +217,8 @@ export const FindReplaceModal = ({
       setReplacing(false);
     }
   };
+
+  const isButtonDisabled = replacing || counting || !findText.trim() || activeMatches === 0;
 
   return (
     <div style={backdropStyle} onClick={onClose}>
@@ -238,12 +239,9 @@ export const FindReplaceModal = ({
           )}
 
           {replaceResult && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', background: '#ecfdf5', border: '1px solid #a7f3d0', color: '#065f46', borderRadius: 8, padding: '0.85rem 1.1rem', fontSize: '0.85rem', fontWeight: 600 }}>
-              <CheckCircle2 size={18} style={{ color: '#059669', flexShrink: 0 }} />
-              <div>
-                Replaced <strong>{replaceResult.totalReplacements}</strong> occurrence(s) across{' '}
-                <strong>{replaceResult.chaptersModified}</strong> chapter(s).
-              </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#059669', fontSize: '0.85rem', fontWeight: 600 }}>
+              <CheckCircle2 size={16} style={{ color: '#059669', flexShrink: 0 }} />
+              <span>{replaceText ? 'Successfully replaced' : 'Successfully deleted'}</span>
             </div>
           )}
 
@@ -267,18 +265,32 @@ export const FindReplaceModal = ({
               placeholder="Replacement text (leave empty to delete)"
               value={replaceText}
               onChange={(e) => { setReplaceText(e.target.value); setReplaceResult(null); }}
-              onKeyDown={(e) => { if (e.key === 'Enter' && totalMatches > 0 && !replacing) handleExecuteReplace(); }}
+              onKeyDown={(e) => { if (e.key === 'Enter' && !isButtonDisabled) handleExecuteReplace(); }}
             />
           </div>
 
           <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem', color: '#334155', cursor: 'pointer' }}>
-            <input type="checkbox" checked={chapterOnly} onChange={(e) => setChapterOnly(e.target.checked)} />
+            <input
+              type="checkbox"
+              checked={chapterOnly}
+              onChange={(e) => { setChapterOnly(e.target.checked); setReplaceResult(null); }}
+            />
             Only this chapter{activeChapterMeta?.order ? ` (Ch ${activeChapterMeta.order})` : ''}
           </label>
 
           {findText.trim() && (
-            <div style={{ fontSize: '0.82rem', color: totalMatches > 0 ? '#15803d' : '#64748b', fontWeight: 600 }}>
-              {scanning ? 'Scanning…' : `${totalMatches} match${totalMatches === 1 ? '' : 'es'} found`}
+            <div style={{ fontSize: '0.82rem', fontWeight: 600 }}>
+              {counting ? (
+                <span style={{ color: '#64748b', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                  <Loader2 size={13} className="animate-spin" /> Counting matches…
+                </span>
+              ) : activeMatches > 0 ? (
+                <span style={{ color: '#15803d' }}>
+                  {activeMatches} match{activeMatches === 1 ? '' : 'es'} found {chapterOnly ? 'in this chapter' : 'across book'}
+                </span>
+              ) : (
+                <span style={{ color: '#94a3b8' }}>No matches found</span>
+              )}
             </div>
           )}
         </div>
@@ -295,19 +307,19 @@ export const FindReplaceModal = ({
           <button
             type="button"
             onClick={handleExecuteReplace}
-            disabled={replacing || totalMatches === 0 || !findText.trim()}
+            disabled={isButtonDisabled}
             style={{
               display: 'flex', alignItems: 'center', gap: '0.45rem',
               padding: '0.55rem 1.35rem',
-              background: totalMatches > 0 && findText.trim() ? '#1F3A2E' : '#94a3b8',
+              background: !isButtonDisabled ? '#1F3A2E' : '#94a3b8',
               color: 'white', border: 'none', borderRadius: 8, fontWeight: 700, fontSize: '0.82rem',
-              cursor: totalMatches > 0 && findText.trim() && !replacing ? 'pointer' : 'not-allowed',
+              cursor: !isButtonDisabled ? 'pointer' : 'not-allowed',
             }}
           >
             {replacing ? (
               <><Loader2 size={15} className="animate-spin" /> Replacing…</>
             ) : (
-              <><Replace size={15} /> Replace All ({totalMatches})</>
+              <><Replace size={15} /> {chapterOnly ? 'Replace in Chapter' : 'Replace All'} {activeMatches > 0 && !counting ? `(${activeMatches})` : ''}</>
             )}
           </button>
         </div>
