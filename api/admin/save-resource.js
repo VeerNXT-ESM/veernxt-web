@@ -171,7 +171,7 @@ function replaceTextInValue(value, findStr, replaceStr, { matchCase = false, mat
       const matches = node.match(regex);
       if (matches) {
         count += matches.length;
-        return node.replace(regex, replaceStr ?? '');
+        return node.replace(regex, () => (replaceStr ?? ''));
       }
       return node;
     }
@@ -831,7 +831,7 @@ async function handleBooksFindReplace(req, res) {
     if (!prefix) return res.status(500).json({ ok: false, error: 'Could not resolve storage location for this book' });
 
     const s3 = getS3Client();
-    const metadata = await fetchJson(`${canonicalUrl}metadata.json`);
+    const metadata = await fetchJson(`${canonicalUrl}metadata.json?t=${Date.now()}`);
     const chapters = metadata.chapters || [];
 
     const targetChapters = scope === 'chapter' && chapterFileName
@@ -841,40 +841,66 @@ async function handleBooksFindReplace(req, res) {
     let totalReplacements = 0;
     const modifiedChapters = [];
 
-    for (const chapterMeta of targetChapters) {
-      try {
-        const chapterData = await fetchJson(`${canonicalUrl}${chapterMeta.file_name}`);
-        const { value: updatedChapter, count: chapterCount } = replaceTextInValue(chapterData, find, replace, { matchCase, matchWholeWord });
+    // Process all chapters concurrently so replace happens everywhere at once
+    const chapterResults = await Promise.all(
+      targetChapters.map(async (chapterMeta) => {
+        try {
+          const chapterData = await fetchJson(`${canonicalUrl}${chapterMeta.file_name}?t=${Date.now()}`);
+          const { value: updatedChapter, count: chapterCount } = replaceTextInValue(chapterData, find, replace, { matchCase, matchWholeWord });
 
-        if (chapterCount > 0) {
-          totalReplacements += chapterCount;
-          await uploadToR2(s3, bucket, `${prefix}/${chapterMeta.file_name}`, Buffer.from(JSON.stringify(updatedChapter, null, 2)), 'application/json');
-          
-          if (updatedChapter.title && updatedChapter.title !== chapterMeta.title) {
-            chapterMeta.title = updatedChapter.title;
+          if (chapterCount > 0) {
+            await uploadToR2(s3, bucket, `${prefix}/${chapterMeta.file_name}`, Buffer.from(JSON.stringify(updatedChapter, null, 2)), 'application/json', 'no-cache, no-store, must-revalidate');
+
+            if (updatedChapter.title && updatedChapter.title !== chapterMeta.title) {
+              chapterMeta.title = updatedChapter.title;
+            }
+            return {
+              fileName: chapterMeta.file_name,
+              title: updatedChapter.title || chapterMeta.title,
+              count: chapterCount,
+            };
           }
-          modifiedChapters.push({
-            fileName: chapterMeta.file_name,
-            title: updatedChapter.title || chapterMeta.title,
-            count: chapterCount,
-          });
+          return null;
+        } catch (err) {
+          console.error(`[books-find-replace] Error updating ${chapterMeta.file_name}:`, err.message);
+          return null;
         }
-      } catch (err) {
-        console.error(`[books-find-replace] Error updating ${chapterMeta.file_name}:`, err.message);
+      })
+    );
+
+    for (const resItem of chapterResults) {
+      if (resItem) {
+        totalReplacements += resItem.count;
+        modifiedChapters.push(resItem);
       }
     }
 
     let metadataChanged = false;
+    let oldTitle = row.title;
+    let newTitle = metadata.title;
     if (scope === 'all') {
       const { value: updatedMetaTitle, count: metaTitleCount } = replaceTextInValue(metadata.title, find, replace, { matchCase, matchWholeWord });
       if (metaTitleCount > 0) {
         metadata.title = updatedMetaTitle;
+        newTitle = updatedMetaTitle;
         metadataChanged = true;
         totalReplacements += metaTitleCount;
       }
     }
     if (modifiedChapters.length > 0 || metadataChanged) {
-      await uploadToR2(s3, bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
+      await uploadToR2(s3, bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json', 'no-cache, no-store, must-revalidate');
+    }
+
+    if (metadataChanged && newTitle !== oldTitle) {
+      try {
+        await supabase
+          .from('resources')
+          .update({ title: newTitle, updated_at: new Date().toISOString() })
+          .eq('category', row.category)
+          .ilike('title', escapeIlike(oldTitle));
+      } catch (dbErr) {
+        console.error('[books-find-replace] Failed to update resources table title:', dbErr.message);
+      }
     }
 
     return res.status(200).json({
@@ -886,6 +912,72 @@ async function handleBooksFindReplace(req, res) {
     });
   } catch (e) {
     console.error('[admin/save-resource:books-find-replace] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
+/**
+ * POST /api/admin/save-resource with
+ * { type: 'books-find-count', resourceId, find, matchCase, matchWholeWord, scope, chapterFileName }
+ *
+ * Fast server-side match count across chapters in R2 without modifying anything.
+ */
+async function handleBooksFindCount(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { resourceId, find, matchCase = false, matchWholeWord = false, scope = 'all', chapterFileName } = req.body || {};
+  if (!resourceId || !find || typeof find !== 'string' || !find.trim()) {
+    return res.status(200).json({ ok: true, totalMatches: 0, chapterMatches: {} });
+  }
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+  const publicUrl = getR2PublicUrl();
+  if (!publicUrl) return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 env vars not set' });
+
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
+
+    const groupRows = await fetchRowsByTitle(supabase, row.category, row.title);
+    const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
+
+    const metadata = await fetchJson(`${canonicalUrl}metadata.json?t=${Date.now()}`);
+    const chapters = metadata.chapters || [];
+
+    const targetChapters = scope === 'chapter' && chapterFileName
+      ? chapters.filter((c) => c.file_name === chapterFileName)
+      : chapters;
+
+    let totalMatches = 0;
+    const chapterMatches = {};
+
+    await Promise.all(
+      targetChapters.map(async (chapterMeta) => {
+        try {
+          const chapterData = await fetchJson(`${canonicalUrl}${chapterMeta.file_name}?t=${Date.now()}`);
+          const { count } = replaceTextInValue(chapterData, find, '', { matchCase, matchWholeWord });
+          if (count > 0) {
+            totalMatches += count;
+            chapterMatches[chapterMeta.file_name] = count;
+          }
+        } catch {}
+      })
+    );
+
+    if (scope === 'all') {
+      const { count: metaTitleCount } = replaceTextInValue(metadata.title, find, '', { matchCase, matchWholeWord });
+      if (metaTitleCount > 0) {
+        totalMatches += metaTitleCount;
+      }
+    }
+
+    return res.status(200).json({
+      ok: true,
+      totalMatches,
+      chapterMatches,
+    });
+  } catch (e) {
+    console.error('[admin/save-resource:books-find-count] failed:', e.message);
     return res.status(500).json({ ok: false, error: e.message });
   }
 }
@@ -937,6 +1029,10 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-delete') {
     return handleBooksDelete(req, res);
+  }
+
+  if (req.body?.type === 'books-find-count') {
+    return handleBooksFindCount(req, res);
   }
 
   if (req.body?.type === 'books-find-replace') {

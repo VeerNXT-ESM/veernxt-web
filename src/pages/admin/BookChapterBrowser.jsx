@@ -98,7 +98,7 @@ const BookChapterBrowser = () => {
       try {
         const data = await postBooksAction({ type: 'books-get', resourceId });
         setBook(data);
-        const meta = await fetch(`${data.storageBaseUrl}metadata.json`).then((r) => {
+        const meta = await fetch(`${data.storageBaseUrl}metadata.json?t=${Date.now()}`, { cache: 'no-store' }).then((r) => {
           if (!r.ok) throw new Error(`HTTP ${r.status}`);
           return r.json();
         });
@@ -160,7 +160,7 @@ const BookChapterBrowser = () => {
       setDirty(false);
       setSaveError(null);
       try {
-        const res = await fetch(`${book.storageBaseUrl}${activeChapterMeta.file_name}`);
+        const res = await fetch(`${book.storageBaseUrl}${activeChapterMeta.file_name}?t=${Date.now()}`, { cache: 'no-store' });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         setChapterData(data);
@@ -669,14 +669,14 @@ const BookChapterBrowser = () => {
               }
             } else {
               try {
-                const meta = await fetch(`${book.storageBaseUrl}metadata.json?t=${Date.now()}`).then((r) => r.json());
+                const meta = await fetch(`${book.storageBaseUrl}metadata.json?t=${Date.now()}`, { cache: 'no-store' }).then((r) => r.json());
                 setMetadata(meta);
               } catch {}
             }
 
             if (activeChapterMeta) {
               try {
-                const res = await fetch(`${book.storageBaseUrl}${activeChapterMeta.file_name}?t=${Date.now()}`);
+                const res = await fetch(`${book.storageBaseUrl}${activeChapterMeta.file_name}?t=${Date.now()}`, { cache: 'no-store' });
                 if (res.ok) {
                   const data = await res.json();
                   setChapterData(data);
