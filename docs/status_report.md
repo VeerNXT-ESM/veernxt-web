@@ -2305,5 +2305,19 @@ Same environment constraint as §49.6 (no `chromium-cli`/Playwright — see the 
 
 ### 50.4 Git/production state
 
-Not committed yet as of this write-up — awaiting the user's next explicit ask, per standing practice.
+Committed (`2bac9c7`) and pushed to `origin/main` after the user asked.
+
+### 50.5 A second, related bug the fix itself surfaced: a pre-existing loading-state race, now visible
+
+User reported (same session, right after §50.1-50.4 shipped): the preview now visibly "flashes half-rendered, then shows the full preview" instead of just being blank.
+
+**Root cause: a genuine pre-existing race in both `AdminResourcePreview.jsx` and `SecureReader.jsx`, unmasked (not caused) by the cache-busting fix.** Both components gated their loading spinner on `chapterLoading && !activeChapter?.loaded`. `chapterLoading` only flips to `true` inside a `useEffect` that runs *after* the render where `resource`/`chapters` (an unloaded stub) first get set — so there's one render in the gap where `chapterLoading` is still its stale initial `false` but the chapter body hasn't loaded yet. In that gap frame the spinner condition is false, so it fell through to the "real content" branch and rendered `ChapterHeader` with an empty body (blocks/body_html both undefined on the stub) -- the "half rendered" flash. This bug has existed since these components were written; it was invisible before because a cache-hit `fetch()` resolved in under a millisecond, collapsing the gap frame to nothing perceptible. Forcing every fetch through the real network (§50.1's fix) stretched that same gap to real, visible duration.
+
+**Fix**: dropped the `chapterLoading &&` from both conditions in both files -- the spinner now shows whenever `!activeChapter?.loaded`, full stop, regardless of whether the loading-effect has technically fired yet. This closes the gap frame entirely rather than just narrowing it. `chapterLoading` state itself was now fully unused (only ever written, never read) in both files, so removed rather than left as dead state -- `SecureReader.jsx` also had an in-memory `chapterCache` early-return path that never set `chapterLoading` at all, so this fix is also more consistent than before (that path behaves identically to a freshly-loaded chapter now, whereas previously it happened to avoid the bug only by accident).
+
+Verified the same way as §50.3: `eslint` clean on `AdminResourcePreview.jsx`, `SecureReader.jsx`'s two pre-existing unrelated errors (hoisting, an unused param) confirmed identical to the committed version; both files transform cleanly through the running Vite dev server. No live browser click-through (same environment gap).
+
+### 50.6 Git/production state
+
+Committed and pushed to `origin/main` after the user asked.
 

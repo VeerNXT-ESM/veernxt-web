@@ -16,7 +16,6 @@ const AdminResourcePreview = ({ resourceId }) => {
   const [loading, setLoading] = useState(true);
   const [chapters, setChapters] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [chapterLoading, setChapterLoading] = useState(false);
 
   useEffect(() => {
     let mounted = true;
@@ -42,7 +41,6 @@ const AdminResourcePreview = ({ resourceId }) => {
   useEffect(() => {
     if (!resource || !chapters || chapters[activeIndex]?.loaded) return;
     let mounted = true;
-    setChapterLoading(true);
 
     (async () => {
       try {
@@ -73,8 +71,6 @@ const AdminResourcePreview = ({ resourceId }) => {
           next[activeIndex] = { ...next[activeIndex], body_html: `<p>Unable to load this chapter (${err.message}).</p>`, loaded: true };
           return next;
         });
-      } finally {
-        if (mounted) setChapterLoading(false);
       }
     })();
 
@@ -101,7 +97,7 @@ const AdminResourcePreview = ({ resourceId }) => {
         </div>
       )}
 
-      {chapterLoading && !activeChapter?.loaded ? (
+      {!activeChapter?.loaded ? (
         <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem' }}><RefreshCw className="animate-spin" size={24} color="var(--ios-olive)" /></div>
       ) : (
         // BookBlocks.css / the raw body_html both hardcode dark, light-page-only
