@@ -46,7 +46,11 @@ const AdminResourcePreview = ({ resourceId }) => {
 
     (async () => {
       try {
-        const chapterUrl = `${resource.storage_base_url}chapters/chapter-${activeIndex + 1}.json`;
+        // Cache-bust -- see the matching comment in SecureReader.jsx's
+        // loadChapter: this exact URL can be served stale (from a browser's
+        // or Cloudflare's cache) for up to a year after a real content edit,
+        // with nothing in the save path purging it.
+        const chapterUrl = `${resource.storage_base_url}chapters/chapter-${activeIndex + 1}.json?t=${Date.now()}`;
         const response = await fetch(chapterUrl);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const chapterData = await response.json();

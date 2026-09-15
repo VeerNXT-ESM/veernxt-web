@@ -98,7 +98,12 @@ const BookChapterBrowser = () => {
       try {
         const data = await postBooksAction({ type: 'books-get', resourceId });
         setBook(data);
-        const meta = await fetch(`${data.storageBaseUrl}metadata.json`).then((r) => {
+        // Cache-bust -- see the matching comment in SecureReader.jsx's
+        // loadChapter: this exact URL can be served stale (from a browser's
+        // or Cloudflare's cache) for up to a year after a real content edit.
+        // The Find & Replace success handler below already did this for its
+        // own re-fetch; this is the same fix applied to the initial load.
+        const meta = await fetch(`${data.storageBaseUrl}metadata.json?t=${Date.now()}`).then((r) => {
           if (!r.ok) throw new Error(`HTTP ${r.status}`);
           return r.json();
         });
@@ -160,7 +165,8 @@ const BookChapterBrowser = () => {
       setDirty(false);
       setSaveError(null);
       try {
-        const res = await fetch(`${book.storageBaseUrl}${activeChapterMeta.file_name}`);
+        // Cache-bust -- same reason as the metadata.json fetch above.
+        const res = await fetch(`${book.storageBaseUrl}${activeChapterMeta.file_name}?t=${Date.now()}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         setChapterData(data);
