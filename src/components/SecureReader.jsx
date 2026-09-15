@@ -18,7 +18,6 @@ const SecureReader = () => {
   const [isRead, setIsRead] = useState(false);
   const [chapters, setChapters] = useState(null);
   const [activeChapterIndex, setActiveChapterIndex] = useState(0);
-  const [chapterLoading, setChapterLoading] = useState(false);
   const [effectiveTier, setEffectiveTier] = useState('FREE');
   const chapterCache = React.useRef({});
 
@@ -99,9 +98,16 @@ const SecureReader = () => {
       return;
     }
 
-    setChapterLoading(true);
     try {
-      const chapterUrl = `${res.storage_base_url}chapters/chapter-${index + 1}.json`;
+      // Cache-bust: R2 uploads (including chapter re-saves) all carry a
+      // 1-year Cache-Control (scripts/lib/ingest-drive-content.js's
+      // uploadToR2), with nothing purging a browser's or Cloudflare's
+      // cached copy of this exact URL when the underlying content is
+      // edited in place. Without this, a candidate who opened this chapter
+      // once keeps seeing whatever it looked like on that first load,
+      // indefinitely, even after a real content edit -- confirmed live
+      // 2026-09-15 against a just-enriched Intro (see docs/status_report.md).
+      const chapterUrl = `${res.storage_base_url}chapters/chapter-${index + 1}.json?t=${Date.now()}`;
       const response = await fetch(chapterUrl);
       if (!response.ok) throw new Error(`Failed to load chapter ${index + 1}`);
       
@@ -140,8 +146,6 @@ const SecureReader = () => {
         };
         return updated;
       });
-    } finally {
-      setChapterLoading(false);
     }
   };
 
@@ -267,7 +271,7 @@ const SecureReader = () => {
 
           <main className="bk-main-content">
             <article className="bk-article">
-              {!access.allowed ? lockedOverlay : chapterLoading && !activeChapter?.loaded ? (
+              {!access.allowed ? lockedOverlay : !activeChapter?.loaded ? (
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '4rem' }}>
                   <RefreshCw className="animate-spin" size={28} color="var(--ios-olive)" />
                 </div>
@@ -366,7 +370,7 @@ const SecureReader = () => {
 
             <div className="glass-panel reader-card">
               <div className="reader-content ql-snow">
-                {!access.allowed ? lockedOverlay : chapterLoading && !chapters?.[activeChapterIndex]?.loaded ? (
+                {!access.allowed ? lockedOverlay : !chapters?.[activeChapterIndex]?.loaded ? (
                   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '4rem' }}>
                     <RefreshCw className="animate-spin" size={28} color="var(--ios-olive)" />
                   </div>

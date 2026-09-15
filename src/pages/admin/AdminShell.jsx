@@ -9,26 +9,14 @@ import './AdminCMS.css';
 
 const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked };
 
-// Horizontal section nav, directly under the top header — required by the
-// CMS mockup ("Do NOT remove this horizontal navigation") even though it
-// duplicates most of the left sidebar. Settings aliases to Roles &
-// Permissions (the closest thing to system configuration that exists
-// today). Exams is first — it's the actual admin landing page (see the
-// /admin redirect in App.jsx).
-const HORIZONTAL_NAV = [
-  { label: 'Exams', path: '/admin/exams' },
-  { label: 'Users', path: '/admin/users' },
-  { label: 'Settings', path: '/admin/roles' },
-];
-
 // Page title + one-line description shown in the top header, keyed by path.
 const PAGE_META = {
   '/admin/exams': { title: 'Exams Management', description: 'Organize exams, map syllabus and assign content resources.' },
-  '/admin/books': { title: 'Book Content', description: 'Browse and QA the Guide/Precis book JSON that actually ships to candidates.' },
+  '/admin/books': { title: 'Book Content' },
   '/admin/users': { title: 'Users', description: 'Registered service personnel and platform accounts.' },
   '/admin/roles': { title: 'Roles & Permissions', description: 'Assign roles and curate access control lists.' },
-  '/admin/quizzes': { title: 'Quizzes', description: 'Manually authored assessments.' },
-  '/admin/pyq-papers': { title: 'PYQ Papers', description: 'Previous year question papers — read-only content, not quizzes.' },
+  '/admin/quizzes': { title: 'Quizzes' },
+  '/admin/pyq-papers': { title: 'PYQ Papers' },
   '/admin/jobs': { title: 'Job Board', description: 'Aggregated vacancy notifications.' },
   '/admin/rewards': { title: 'Rewards', description: 'Redemption queue for the points program.' },
   '/admin/private-sector': { title: 'Private Sector — HR Console', description: 'Employer requirements, service verification and the candidate matching pipeline.' },
@@ -125,17 +113,6 @@ const AdminShell = () => {
             </button>
           </div>
         </header>
-        <nav className="admin-horizontal-nav">
-          {HORIZONTAL_NAV.map((item) => (
-            <button
-              key={item.label}
-              className={location.pathname === item.path ? 'active' : ''}
-              onClick={() => navigate(item.path)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </nav>
         <main className="admin-content">
           <Outlet />
         </main>

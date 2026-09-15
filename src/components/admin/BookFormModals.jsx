@@ -16,7 +16,14 @@ const headerStyle = { display: 'flex', alignItems: 'center', justifyContent: 'sp
 const bodyStyle = { padding: '1.4rem', display: 'flex', flexDirection: 'column', gap: '0.9rem' };
 const footerStyle = { display: 'flex', justifyContent: 'flex-end', gap: '0.6rem', padding: '1rem 1.4rem', borderTop: '1px solid #e2e8f0' };
 const labelStyle = { fontSize: '0.75rem', fontWeight: 700, color: '#64748b', display: 'block', marginBottom: '0.3rem' };
-const fieldStyle = { width: '100%', padding: '0.6rem 0.75rem', border: '1px solid #e2e8f0', borderRadius: 8, fontSize: '0.88rem', boxSizing: 'border-box', fontFamily: 'inherit' };
+// color/background pinned explicitly, not left to inherit -- this card is
+// meant to look the same whether it's opened from BookChapterBrowser.jsx's
+// standalone route or from here inside AdminShell's dark theme, but an
+// unset `color` still inherits through every div in between. Left unset,
+// AdminShell's own light-on-dark text color (~rgb(230,237,243), meant for
+// its own dark background) landed on this white card's inputs instead,
+// rendering pre-filled text like a book's current title nearly invisible.
+const fieldStyle = { width: '100%', padding: '0.6rem 0.75rem', border: '1px solid #e2e8f0', borderRadius: 8, fontSize: '0.88rem', boxSizing: 'border-box', fontFamily: 'inherit', color: '#0f172a', background: '#fff' };
 const btnPrimary = { padding: '0.55rem 1.2rem', background: '#1F3A2E', color: 'white', border: 'none', borderRadius: 8, fontWeight: 700, fontSize: '0.82rem', cursor: 'pointer' };
 const btnSecondary = { padding: '0.55rem 1.2rem', background: 'white', color: '#64748b', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 700, fontSize: '0.82rem', cursor: 'pointer' };
 const errorStyle = { background: '#fef2f2', border: '1px solid #fecaca', color: '#b91c1c', borderRadius: 8, padding: '0.6rem 0.85rem', fontSize: '0.8rem' };
@@ -82,6 +89,7 @@ export const NewBookModal = ({ onClose, onCreated }) => {
         <select style={fieldStyle} value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="Guide">Guide</option>
           <option value="Precis">Precis</option>
+          <option value="Intro">Intro</option>
         </select>
       </div>
       <div>
@@ -141,6 +149,7 @@ export const DuplicateBookModal = ({ source, onClose, onDuplicated }) => {
         <select style={fieldStyle} value={destCategory} onChange={(e) => setDestCategory(e.target.value)}>
           <option value="Guide">Guide</option>
           <option value="Precis">Precis</option>
+          <option value="Intro">Intro</option>
         </select>
       </div>
       <div>

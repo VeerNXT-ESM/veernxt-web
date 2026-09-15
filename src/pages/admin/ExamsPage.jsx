@@ -4,47 +4,44 @@ import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import ExamThumbnail from './ExamThumbnail';
 import ExamEditorPanel from './ExamEditorPanel';
-import ExamIntroCard from './ExamIntroCard';
-import ExamStatusCard from './ExamStatusCard';
 import ExamResourcesPanel from './ExamResourcesPanel';
-import { PAGE_SIZE, useDebounced, StatusBadge } from './lcShared';
+import { useDebounced, StatusBadge } from './lcShared';
 import { Search, Plus, ChevronLeft, ChevronRight, ShieldAlert } from 'lucide-react';
 
+// Deliberately smaller than the shared lcShared.PAGE_SIZE (20, used by
+// AdminJobs.jsx etc.) — the dense card-row layout here reads better with
+// fewer rows per page, not a site-wide pagination change.
+const EXAMS_PAGE_SIZE = 10;
+
+// No "All Levels" — Level is a required drill-down step, not an optional
+// filter, so the exam list never has to render the whole 1,500+ row
+// catalog unscoped.
 const LEVELS = [
-  { value: '', label: 'All Levels' },
   { value: 'central', label: 'Central' },
   { value: 'state', label: 'State' },
   { value: 'ut', label: 'UT' },
 ];
+const LEVEL_LABELS = { central: 'Central', state: 'State', ut: 'UT' };
 
 /**
- * The Exams workspace — a persistent three-zone master-detail-summary
- * layout (Exam List | Exam Editor | Contextual Information Rail), per the
- * client mockup ("VEERNXT - CMS Mockup Design.pdf"). Selecting a row never
- * navigates away; the editor and rail beside it just update in place.
- *
- * Filtering is a drill-down, per explicit direction (supersedes the mockup's
- * literal "Conducting Body → Region" ordering): Level (Central/State/UT) is
- * the primary filter, then State/UT within it, then Conducting Body — since
- * conducting bodies aren't region-scoped in the schema (a handful legitimately
- * span regions), the body list is re-queried from live exam data every time
- * the level/state filter changes, rather than assumed static.
+ * The Exams workspace — a persistent three-column master-detail-summary
+ * layout (Exam List | Basic Information | Resources). Selecting a row never
+ * navigates away; the editor and resources panel beside it just update in
+ * place. Dense by design: pagination instead of an internal scrollbar on
+ * the list, and all three columns stretch to the same height.
  */
 const ExamsPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const [level, setLevel] = useState('');
-  const [regionId, setRegionId] = useState('');
+  const [level, setLevel] = useState('central');
   const [category, setCategory] = useState('');
   const [bodyId, setBodyId] = useState('');
-  const [regionOptions, setRegionOptions] = useState([]);
+  const [regionId, setRegionId] = useState('');
 
-  // Whole lc_exams catalog, fetched once — the same catalog the candidate
-  // Learning Center loads, and Category/Conducting Body are derived from it
-  // client-side exactly the way that page derives them, so the two stay in
-  // sync (only the handful of categories actually in use there show up
-  // here, and Conducting Body cascades to just the bodies under whichever
-  // category is selected).
+  // Whole lc_exams catalog, fetched once — Category/Conducting Body options
+  // are derived from it client-side, cascaded to whichever Level/Category
+  // is currently selected (conducting bodies aren't region-scoped in the
+  // schema, so this is re-derived from live data rather than assumed static).
   const [catalog, setCatalog] = useState([]);
   useEffect(() => {
     (async () => {
@@ -61,15 +58,22 @@ const ExamsPage = () => {
     })();
   }, []);
 
-  // Exams satisfying the current Level/State-UT gate — same rule the
-  // candidate page applies (region_id match when a specific state/UT is
-  // picked, region.level match otherwise; "All Levels" leaves every exam in).
-  const levelExams = useMemo(() => catalog.filter((exam) => {
-    if (!exam.region) return false;
-    if (regionId) return exam.region.id === regionId;
-    if (level) return exam.region.level === level;
-    return true;
-  }), [catalog, level, regionId]);
+  // All regions, fetched once — same table/shape ExamEditorPanel.jsx's own
+  // Level -> State/UT cascade already uses, so the two stay consistent.
+  const [regions, setRegions] = useState([]);
+  useEffect(() => {
+    (async () => {
+      const { data } = await supabase.from('lc_regions').select('id,name,level').order('name');
+      setRegions(data || []);
+    })();
+  }, []);
+
+  const levelExams = useMemo(() => catalog.filter((exam) => exam.region?.level === level), [catalog, level]);
+
+  // State/UT filter only makes sense once Level narrows to 'state' or 'ut' —
+  // Central has exactly one fixed region, same reasoning ExamEditorPanel.jsx
+  // uses to hide its own State/UT field for Central-level exams.
+  const regionOptions = useMemo(() => regions.filter((r) => r.level === level), [regions, level]);
 
   const categoryOptions = useMemo(() => {
     const seen = new Set();
@@ -80,8 +84,6 @@ const ExamsPage = () => {
     return [...seen].sort((a, b) => a.localeCompare(b));
   }, [levelExams]);
 
-  // Conducting bodies cascaded to the selected category, mirroring the
-  // candidate page's bodyOptions.
   const bodyOptions = useMemo(() => {
     const pool = category
       ? levelExams.filter((exam) => (exam.category || '').trim() === category)
@@ -103,17 +105,7 @@ const ExamsPage = () => {
   const [selectedExamId, setSelectedExamId] = useState(searchParams.get('exam') || null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
 
-  // States/UTs available under the current level (empty when level is
-  // '' or 'central' — Central has no sub-region picker).
-  useEffect(() => {
-    if (level !== 'state' && level !== 'ut') { setRegionOptions([]); return; }
-    (async () => {
-      const { data } = await supabase.from('lc_regions').select('id,name').eq('level', level).order('name');
-      setRegionOptions(data || []);
-    })();
-  }, [level]);
-
-  useEffect(() => { setPage(1); }, [debouncedSearch, bodyId, category, regionId, level]);
+  useEffect(() => { setPage(1); }, [debouncedSearch, bodyId, category, level, regionId]);
 
   // Same out-of-order-response guard used elsewhere in this CMS.
   const requestIdRef = useRef(0);
@@ -124,16 +116,16 @@ const ExamsPage = () => {
     try {
       let query = supabase
         .from('lc_exams')
-        .select('id,name,category,status,accent_color,thumbnail_subject,conducting_body:lc_conducting_bodies(id,name),region:lc_regions!inner(id,name,level)', { count: 'exact' });
+        .select('id,name,category,status,accent_color,thumbnail_subject,conducting_body:lc_conducting_bodies(id,name),region:lc_regions!inner(id,name,level)', { count: 'exact' })
+        .eq('region.level', level);
 
       if (debouncedSearch) query = query.ilike('name', `%${debouncedSearch}%`);
       if (bodyId) query = query.eq('conducting_body_id', bodyId);
       if (category) query = query.eq('category', category);
       if (regionId) query = query.eq('region_id', regionId);
-      else if (level) query = query.eq('region.level', level);
 
-      const from = (page - 1) * PAGE_SIZE;
-      query = query.order('name', { ascending: true }).range(from, from + PAGE_SIZE - 1);
+      const from = (page - 1) * EXAMS_PAGE_SIZE;
+      query = query.order('name', { ascending: true }).range(from, from + EXAMS_PAGE_SIZE - 1);
 
       const { data, count, error } = await query;
       if (error) throw error;
@@ -146,11 +138,11 @@ const ExamsPage = () => {
     } finally {
       if (requestId === requestIdRef.current) setLoading(false);
     }
-  }, [debouncedSearch, bodyId, category, regionId, level, page]);
+  }, [debouncedSearch, bodyId, category, level, regionId, page]);
 
   useEffect(() => { fetchExams(); }, [fetchExams]);
 
-  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(total / EXAMS_PAGE_SIZE));
 
   const selectExam = (id) => {
     setIsCreatingNew(false);
@@ -164,37 +156,19 @@ const ExamsPage = () => {
     setSearchParams({}, { replace: true });
   };
 
-  const chooseLevel = (v) => { setLevel(v); setRegionId(''); setCategory(''); setBodyId(''); };
-  const chooseRegion = (v) => { setRegionId(v); setCategory(''); setBodyId(''); };
+  const chooseLevel = (v) => { setLevel(v); setCategory(''); setBodyId(''); setRegionId(''); };
   const chooseCategory = (v) => { setCategory(v); setBodyId(''); };
-
-  const clearFilters = () => { setSearch(''); setBodyId(''); setCategory(''); setRegionId(''); setLevel(''); };
 
   return (
     <div>
-      <div className="lc-section-header">
-        <div>
-          <h2>Exams</h2>
-          <p>Central / State / UT → State → Conducting Body — drill down, not a flat list.</p>
-        </div>
-      </div>
-
-      <div className="lc-filter-bar-primary">
-        <div className="lc-level-pills">
-          {LEVELS.map((l) => (
-            <button key={l.value} className={level === l.value ? 'active' : ''} onClick={() => chooseLevel(l.value)}>{l.label}</button>
-          ))}
-        </div>
-        <button className="lc-btn" onClick={clearFilters}>Clear Filters</button>
-      </div>
-
-      <div className="lc-filter-bar lc-filter-bar-secondary">
-        {(level === 'state' || level === 'ut') && (
-          <div className="lc-filter-field">
-            <label>{level === 'state' ? 'State' : 'UT'}</label>
-            <Select searchable placeholder={`All ${level === 'state' ? 'States' : 'UTs'}`} value={regionId} onChange={(e) => chooseRegion(e.target.value)} options={[{ value: '', label: `All ${level === 'state' ? 'States' : 'UTs'}` }, ...regionOptions.map((r) => ({ value: r.id, label: r.name }))]} />
+      <div className="lc-filter-bar-single">
+        <div className="lc-filter-field lc-filter-search">
+          <label>Search Exam Name</label>
+          <div className="lc-search-input-wrapper">
+            <Search size={16} />
+            <input type="text" placeholder="e.g. AFCAT, CDS, NDA..." value={search} onChange={(e) => setSearch(e.target.value)} />
           </div>
-        )}
+        </div>
         <div className="lc-filter-field">
           <label>Category</label>
           <Select searchable placeholder="All Categories" value={category} onChange={(e) => chooseCategory(e.target.value)} options={[{ value: '', label: 'All Categories' }, ...categoryOptions.map((c) => ({ value: c, label: c }))]} />
@@ -204,48 +178,43 @@ const ExamsPage = () => {
           <Select searchable placeholder={category ? `Bodies for ${category} (${bodyOptions.length})` : 'All Conducting Bodies'} value={bodyId} onChange={(e) => setBodyId(e.target.value)} options={[{ value: '', label: 'All Conducting Bodies' }, ...bodyOptions.map((b) => ({ value: b.id, label: b.name }))]} />
         </div>
         <div className="lc-filter-field">
-          <label>Search Exam Name</label>
-          <div className="lc-search-input-wrapper">
-            <Search size={16} />
-            <input type="text" placeholder="e.g. CGL, PO, AFCAT..." value={search} onChange={(e) => setSearch(e.target.value)} />
-          </div>
+          <label>Level</label>
+          <Select value={level} onChange={(e) => chooseLevel(e.target.value)} options={LEVELS} />
         </div>
+        {level !== 'central' && (
+          <div className="lc-filter-field">
+            <label>{level === 'state' ? 'State' : 'UT'}</label>
+            <Select
+              searchable
+              placeholder={`All ${level === 'state' ? 'States' : 'UTs'}`}
+              value={regionId}
+              onChange={(e) => setRegionId(e.target.value)}
+              options={[{ value: '', label: `All ${level === 'state' ? 'States' : 'UTs'}` }, ...regionOptions.map((r) => ({ value: r.id, label: r.name }))]}
+            />
+          </div>
+        )}
+        <button className="lc-btn primary" onClick={startNewExam}><Plus size={16} /> Add Exam</button>
       </div>
 
       <div className="lc-exams-workspace">
         <div className="lc-exams-list-col">
-          <div className="lc-card-row-header" style={{ marginBottom: '0.85rem' }}>
+          <div className="lc-card-row-header" style={{ marginBottom: '0.6rem' }}>
             <h3 style={{ margin: 0 }}>Exams ({total})</h3>
-            <button className="lc-btn primary" onClick={startNewExam}><Plus size={16} /> Add Exam</button>
+            <span className="lc-muted-note">Sort by: Name A-Z</span>
           </div>
 
-          <div className="lc-table-responsive lc-exams-list-scroll">
-            <table className="lc-table lc-table-compact">
-              <thead>
-                <tr>
-                  <th style={{ width: '52%' }}>Exam</th>
-                  <th style={{ width: '38%' }}>Body</th>
-                  <th style={{ width: '10%' }}>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {exams.map((exam) => (
-                  <tr key={exam.id} className={`clickable ${selectedExamId === exam.id ? 'selected' : ''}`} onClick={() => selectExam(exam.id)}>
-                    <td>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', minWidth: 0 }}>
-                        <ExamThumbnail conductingBodyName={exam.conducting_body?.name} thumbnailSubject={exam.thumbnail_subject} accentColor={exam.accent_color} size="sm" />
-                        <div style={{ minWidth: 0 }}>
-                          <span className="lc-table-title lc-truncate" title={exam.name}>{exam.name}</span>
-                          {exam.category && <span className="lc-table-sub lc-truncate" title={exam.category}>{exam.category}</span>}
-                        </div>
-                      </div>
-                    </td>
-                    <td className="lc-table-sub lc-truncate" title={exam.conducting_body?.name}>{exam.conducting_body?.name || '—'}</td>
-                    <td><StatusBadge status={exam.status} /></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="lc-exam-row-list">
+            {exams.map((exam) => (
+              <div key={exam.id} className={`lc-exam-row ${selectedExamId === exam.id ? 'selected' : ''}`} onClick={() => selectExam(exam.id)}>
+                <ExamThumbnail conductingBodyName={exam.conducting_body?.name} thumbnailSubject={exam.thumbnail_subject} accentColor={exam.accent_color} size="sm" />
+                <div className="lc-exam-row-body">
+                  <span className="lc-exam-row-name lc-truncate" title={exam.name}>{exam.name}</span>
+                  <span className="lc-exam-row-meta lc-truncate">{exam.conducting_body?.name || '—'}</span>
+                  <span className="lc-exam-row-meta">{[exam.category, LEVEL_LABELS[exam.region?.level]].filter(Boolean).join(' • ')}</span>
+                </div>
+                <span className="lc-exam-row-badge"><StatusBadge status={exam.status} /></span>
+              </div>
+            ))}
 
             {loading && <div className="lc-loading-state">Loading exams…</div>}
             {!loading && exams.length === 0 && (
@@ -266,32 +235,26 @@ const ExamsPage = () => {
 
         <div className="lc-exams-editor-col">
           {(selectedExamId || isCreatingNew) ? (
-            <>
-              <ExamEditorPanel
-                key={selectedExamId || 'new'}
-                examId={selectedExamId}
-                onCreated={(newExam) => { selectExam(newExam.id); fetchExams(); }}
-                onSaved={fetchExams}
-                onDeleted={(deletedId) => {
-                  setCatalog((prev) => prev.filter((e) => e.id !== deletedId));
-                  selectExam(null);
-                  fetchExams();
-                }}
-              />
-              <ExamResourcesPanel examId={selectedExamId} />
-            </>
+            <ExamEditorPanel
+              key={selectedExamId || 'new'}
+              examId={selectedExamId}
+              onCreated={(newExam) => { selectExam(newExam.id); fetchExams(); }}
+              onSaved={fetchExams}
+              onDeleted={(deletedId) => {
+                setCatalog((prev) => prev.filter((e) => e.id !== deletedId));
+                selectExam(null);
+                fetchExams();
+              }}
+            />
           ) : (
-            <div className="lc-card lc-empty-editor">
+            <div className="lc-card lc-empty-editor" style={{ flex: 1 }}>
               <p className="lc-muted-note">Select an exam from the list to view and edit it, or click "Add Exam" to create one.</p>
             </div>
           )}
         </div>
 
         <div className="lc-exams-rail-col">
-          <div className="lc-rail">
-            <ExamIntroCard examId={selectedExamId} />
-            <ExamStatusCard examId={selectedExamId} />
-          </div>
+          <ExamResourcesPanel examId={selectedExamId} />
         </div>
       </div>
     </div>

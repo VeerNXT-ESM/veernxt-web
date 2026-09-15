@@ -1,15 +1,38 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, AlertTriangle, CheckCircle2, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink } from 'lucide-react';
+import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Save, X } from 'lucide-react';
+import { supabase } from '../../lib/supabase';
+import Select from '../../components/ui/Select';
 import { useDebounced } from './lcShared';
 import { NewBookModal, DuplicateBookModal, RenameBookModal, ConfirmDeleteModal, ConfirmArchiveModal } from '../../components/admin/BookFormModals';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
+const BOOKS_PAGE_SIZE = 10;
 
+// No "All" tab -- Type is a required drill-down, same reasoning
+// ExamsPage.jsx's Level field uses: the list shouldn't render every
+// category unscoped, and a single active pill always makes it obvious
+// which type is currently on screen.
 const CATEGORY_TABS = [
-  { value: '', label: 'All' },
   { value: 'Guide', label: 'Guide' },
   { value: 'Precis', label: 'Precis' },
+  { value: 'Intro', label: 'Intro' },
+];
+
+// Unlike Type, most books have no Level tag yet -- "All Levels" is a
+// real, useful state here (not an unscoped-render footgun), since Type
+// already keeps the list bounded to one content type at a time.
+const LEVEL_FILTER_OPTIONS = [
+  { value: '', label: 'All Levels' },
+  { value: 'central', label: 'Central' },
+  { value: 'state', label: 'State' },
+  { value: 'ut', label: 'UT' },
+];
+const LEVEL_TAG_OPTIONS = [
+  { value: '', label: '— Untagged' },
+  { value: 'central', label: 'Central' },
+  { value: 'state', label: 'State' },
+  { value: 'ut', label: 'UT' },
 ];
 
 const SORT_OPTIONS = [
@@ -25,16 +48,43 @@ const BooksPage = () => {
   const navigate = useNavigate();
   const [books, setBooks] = useState(null);
   const [error, setError] = useState(null);
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('Guide');
+  const [levelFilter, setLevelFilter] = useState('');
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search);
   const [sort, setSort] = useState('issues');
   const [showArchived, setShowArchived] = useState(false);
+  const [page, setPage] = useState(1);
   const [showNewModal, setShowNewModal] = useState(false);
   const [duplicateSource, setDuplicateSource] = useState(null);
   const [renameSource, setRenameSource] = useState(null);
   const [archiveSource, setArchiveSource] = useState(null);
   const [deleteSource, setDeleteSource] = useState(null);
+
+  // Every inline-editable tag (Category, Level, State/UT, Conducting Body)
+  // is staged here per resourceId rather than written on each dropdown
+  // change -- the user asked for one explicit "Save" per row so it's clear
+  // when something actually commits to the DB, rather than each field
+  // firing its own silent round trip.
+  const [pendingEdits, setPendingEdits] = useState({});
+  const [savingRowId, setSavingRowId] = useState(null);
+
+  // Same lc_regions/lc_conducting_bodies tables ExamsPage.jsx already reads
+  // for the identical Level->State/UT cascade and Conducting Body picker --
+  // reused here so a book's tags line up with the same names exams use,
+  // which is the whole point ("better mapping later").
+  const [regions, setRegions] = useState([]);
+  const [conductingBodies, setConductingBodies] = useState([]);
+  useEffect(() => {
+    (async () => {
+      const [{ data: regionRows }, { data: bodyRows }] = await Promise.all([
+        supabase.from('lc_regions').select('id,name,level').order('name'),
+        supabase.from('lc_conducting_bodies').select('id,name').order('name'),
+      ]);
+      setRegions(regionRows || []);
+      setConductingBodies(bodyRows || []);
+    })();
+  }, []);
 
   const fetchBooks = useCallback(async () => {
     try {
@@ -57,28 +107,28 @@ const BooksPage = () => {
     window.open(`/admin/books/${b.category}/${b.resourceId}`, '_blank');
   }, []);
 
-  const activeCount = useMemo(() => (books || []).filter((b) => !b.isArchived).length, [books]);
   const archivedCount = useMemo(() => (books || []).filter((b) => b.isArchived).length, [books]);
 
   const filtered = useMemo(() => {
     if (!books) return [];
     let list = books.filter((b) => (showArchived ? b.isArchived : !b.isArchived));
-    if (category) list = list.filter((b) => b.category === category);
+    list = list.filter((b) => b.category === category);
+    if (levelFilter) list = list.filter((b) => b.level === levelFilter);
     if (debouncedSearch.trim()) {
       const q = debouncedSearch.trim().toLowerCase();
       list = list.filter((b) => b.title.toLowerCase().includes(q));
     }
     const issueScore = (b) => (b.issueCounts?.high || 0) * 1000 + (b.issueCounts?.medium || 0);
     return [...list].sort((a, b) => (sort === 'title' ? a.title.localeCompare(b.title) : issueScore(b) - issueScore(a)));
-  }, [books, category, debouncedSearch, sort, showArchived]);
+  }, [books, category, levelFilter, debouncedSearch, sort, showArchived]);
 
-  const totals = useMemo(() => {
-    if (!books) return null;
-    return {
-      count: books.length,
-      withIssues: books.filter((b) => !b.isArchived && (b.issueCounts?.high || 0) + (b.issueCounts?.medium || 0) > 0).length,
-    };
-  }, [books]);
+  useEffect(() => { setPage(1); }, [category, levelFilter, debouncedSearch, sort, showArchived]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / BOOKS_PAGE_SIZE));
+  const paginated = useMemo(() => {
+    const from = (page - 1) * BOOKS_PAGE_SIZE;
+    return filtered.slice(from, from + BOOKS_PAGE_SIZE);
+  }, [filtered, page]);
 
   const handleUnarchive = async (b) => {
     if (!window.confirm(`Restore "${b.title}" back to active books?`)) return;
@@ -96,41 +146,98 @@ const BooksPage = () => {
     }
   };
 
+  // Current on-screen value for a tag field -- the pending edit if the
+  // admin has touched it this session, otherwise the last-saved value.
+  const baseValue = (b, field) => {
+    if (field === 'category') return b.category;
+    return b[field] || '';
+  };
+  const effectiveValue = (b, field) => {
+    const pending = pendingEdits[b.resourceId];
+    return pending && field in pending ? pending[field] : baseValue(b, field);
+  };
+  const hasPending = (b) => {
+    const pending = pendingEdits[b.resourceId];
+    if (!pending) return false;
+    return Object.keys(pending).some((field) => pending[field] !== baseValue(b, field));
+  };
+
+  const updatePendingEdit = (b, field, value) => {
+    setPendingEdits((prev) => {
+      const next = { ...(prev[b.resourceId] || {}), [field]: value };
+      // A book that's no longer State/UT-level doesn't keep a stale state tag.
+      if (field === 'level' && value !== 'state' && value !== 'ut') next.stateUt = '';
+      return { ...prev, [b.resourceId]: next };
+    });
+  };
+
+  const handleDiscardRow = (b) => {
+    setPendingEdits((prev) => {
+      const next = { ...prev };
+      delete next[b.resourceId];
+      return next;
+    });
+  };
+
+  // The one place any of Category/Level/State-UT/Conducting Body actually
+  // reaches the DB -- everything else just stages a local edit. Fixes the
+  // "wrongly assigned to Precis when it's a Guide" case too: a category
+  // change re-labels the book in place (content stays exactly where it is
+  // in R2, see the API's own docstring) rather than requiring a delete-
+  // and-recreate.
+  const handleSaveRow = async (b) => {
+    const pending = pendingEdits[b.resourceId];
+    if (!pending) return;
+    const patch = {};
+    for (const field of Object.keys(pending)) {
+      if (pending[field] !== baseValue(b, field)) patch[field] = pending[field] || (field === 'category' ? b.category : null);
+    }
+    if (Object.keys(patch).length === 0) { handleDiscardRow(b); return; }
+
+    if (patch.category && patch.category !== b.category && b.duplicateRowCount > 1) {
+      const ok = window.confirm(`"${b.title}" has ${b.duplicateRowCount} linked exam entries. Moving it to ${patch.category} re-labels all of them. Continue?`);
+      if (!ok) return;
+    }
+
+    setSavingRowId(b.resourceId);
+    try {
+      const res = await fetch('/api/admin/save-resource', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
+        body: JSON.stringify({ type: 'books-save-tags', resourceId: b.resourceId, ...patch }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || 'Failed to save changes');
+      setBooks((prev) => prev.map((x) => (x.resourceId === b.resourceId ? {
+        ...x,
+        category: patch.category ?? x.category,
+        level: 'level' in patch ? patch.level : x.level,
+        stateUt: 'stateUt' in patch ? patch.stateUt : x.stateUt,
+        conductingBody: 'conductingBody' in patch ? patch.conductingBody : x.conductingBody,
+      } : x)));
+      handleDiscardRow(b);
+    } catch (err) {
+      alert('Save failed: ' + err.message);
+    } finally {
+      setSavingRowId(null);
+    }
+  };
+
   return (
     <div>
       <div className="lc-section-header">
         <div>
           <h2>{showArchived ? 'Archived Books' : 'Book Content'}</h2>
-          <p>
-            {showArchived
-              ? `Showing ${archivedCount} archived book${archivedCount === 1 ? '' : 's'}. These are hidden from candidates and the active catalog.`
-              : totals
-              ? `${activeCount} active book${activeCount === 1 ? '' : 's'}, ${totals.withIssues} flagged by the last QA scan.`
-              : 'loading…'}
-          </p>
-        </div>
-        <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center' }}>
-          <button
-            className={`lc-btn ${showArchived ? 'primary' : ''}`}
-            onClick={() => setShowArchived((prev) => !prev)}
-            title={showArchived ? 'Switch to active books' : 'View archived books'}
-            style={showArchived ? { background: '#d97706', borderColor: '#d97706', color: 'white' } : undefined}
-          >
-            <Archive size={16} /> {showArchived ? 'Show Active Books' : `Show Archived (${archivedCount})`}
-          </button>
-          <button className="lc-btn primary" onClick={() => setShowNewModal(true)}>
-            <Plus size={16} /> New Book
-          </button>
         </div>
       </div>
 
-      <div className="lc-filter-bar" style={{ gridTemplateColumns: '1fr auto auto' }}>
-        <div className="lc-filter-field lc-search-input-wrapper">
+      <div className="lc-filter-bar-single">
+        <div className="lc-filter-field lc-filter-search lc-search-input-wrapper">
           <Search size={16} />
           <input type="text" placeholder="Search book title..." value={search} onChange={(e) => setSearch(e.target.value)} />
         </div>
         <div className="lc-filter-field">
-          <label>Category</label>
+          <label>Type</label>
           <div style={{ display: 'flex', gap: '0.4rem' }}>
             {CATEGORY_TABS.map((t) => (
               <button
@@ -145,11 +252,28 @@ const BooksPage = () => {
           </div>
         </div>
         <div className="lc-filter-field">
+          <label>Level</label>
+          <select value={levelFilter} onChange={(e) => setLevelFilter(e.target.value)} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
+            {LEVEL_FILTER_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+          </select>
+        </div>
+        <div className="lc-filter-field">
           <label>Sort</label>
           <select value={sort} onChange={(e) => setSort(e.target.value)} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
             {SORT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         </div>
+        <button
+          className={`lc-btn ${showArchived ? 'primary' : ''}`}
+          onClick={() => setShowArchived((prev) => !prev)}
+          title={showArchived ? 'Switch to active books' : 'View archived books'}
+          style={showArchived ? { background: '#d97706', borderColor: '#d97706', color: 'white' } : undefined}
+        >
+          <Archive size={16} /> {showArchived ? 'Show Active Books' : `Show Archived (${archivedCount})`}
+        </button>
+        <button className="lc-btn primary" onClick={() => setShowNewModal(true)}>
+          <Plus size={16} /> New Book
+        </button>
       </div>
 
       {error && <div className="lc-empty-state">Failed to load books: {error}</div>}
@@ -160,13 +284,16 @@ const BooksPage = () => {
             <tr>
               <th>Book</th>
               <th>Category</th>
+              <th>Level</th>
+              <th>State/UT</th>
+              <th>Conducting Body</th>
               <th style={{ textAlign: 'right' }}>Chapters</th>
-              <th>QA Status</th>
+              <th style={{ textAlign: 'right' }}>Linked Exam Entries</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
-            {filtered.map((b) => (
+            {paginated.map((b) => (
               <tr
                 key={b.resourceId}
                 className="clickable"
@@ -181,29 +308,88 @@ const BooksPage = () => {
                       </span>
                     )}
                   </div>
-                  {b.duplicateRowCount > 1 && <span className="lc-table-sub">{b.duplicateRowCount} linked exam entries</span>}
                 </td>
-                <td>{b.category}</td>
+                <td onClick={(e) => e.stopPropagation()}>
+                  <select
+                    value={effectiveValue(b, 'category')}
+                    disabled={savingRowId === b.resourceId}
+                    onChange={(e) => updatePendingEdit(b, 'category', e.target.value)}
+                    title="Change this book's category"
+                    style={{ padding: '0.35rem 0.5rem', borderRadius: 6, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)', fontSize: '0.82rem' }}
+                  >
+                    {CATEGORY_TABS.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                  </select>
+                </td>
+                <td onClick={(e) => e.stopPropagation()}>
+                  <select
+                    value={effectiveValue(b, 'level')}
+                    disabled={savingRowId === b.resourceId}
+                    onChange={(e) => updatePendingEdit(b, 'level', e.target.value)}
+                    title="Tag this book's level"
+                    style={{ padding: '0.35rem 0.5rem', borderRadius: 6, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)', fontSize: '0.82rem' }}
+                  >
+                    {LEVEL_TAG_OPTIONS.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                  </select>
+                </td>
+                <td onClick={(e) => e.stopPropagation()}>
+                  {(() => {
+                    const currentLevel = effectiveValue(b, 'level');
+                    if (currentLevel !== 'state' && currentLevel !== 'ut') {
+                      return <span className="lc-table-sub">—</span>;
+                    }
+                    const options = regions.filter((r) => r.level === currentLevel);
+                    return (
+                      <select
+                        value={effectiveValue(b, 'stateUt')}
+                        disabled={savingRowId === b.resourceId}
+                        onChange={(e) => updatePendingEdit(b, 'stateUt', e.target.value)}
+                        title="Tag which state/UT"
+                        style={{ padding: '0.35rem 0.5rem', borderRadius: 6, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)', fontSize: '0.82rem' }}
+                      >
+                        <option value="">— Untagged</option>
+                        {options.map((r) => <option key={r.id} value={r.name}>{r.name}</option>)}
+                      </select>
+                    );
+                  })()}
+                </td>
+                <td onClick={(e) => e.stopPropagation()} style={{ minWidth: '200px' }}>
+                  <Select
+                    searchable
+                    placeholder="— None"
+                    value={effectiveValue(b, 'conductingBody')}
+                    onChange={(e) => updatePendingEdit(b, 'conductingBody', e.target.value)}
+                    options={[{ value: '', label: '— None' }, ...conductingBodies.map((cb) => ({ value: cb.name, label: cb.name }))]}
+                  />
+                </td>
                 <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{b.chapterCount ?? '—'}</span></td>
-                <td>
-                  {(b.issueCounts?.high || 0) > 0 ? (
-                    <span className="lc-status-badge" style={{ background: 'var(--admin-danger-bg)', color: 'var(--admin-danger)' }}>
-                      <AlertTriangle size={12} style={{ verticalAlign: '-2px', marginRight: 4 }} />{b.issueCounts.high} high
-                    </span>
-                  ) : (b.issueCounts?.medium || 0) > 0 ? (
-                    <span className="lc-status-badge" style={{ background: '#fdf6e2', color: '#b89047' }}>
-                      {b.issueCounts.medium} to review
-                    </span>
-                  ) : b.issueCounts ? (
-                    <span className="lc-status-badge" style={{ background: 'var(--admin-accent-soft)', color: 'var(--admin-accent)' }}>
-                      <CheckCircle2 size={12} style={{ verticalAlign: '-2px', marginRight: 4 }} />Clean
-                    </span>
-                  ) : (
-                    <span className="lc-table-sub">Not scanned</span>
-                  )}
+                <td style={{ textAlign: 'right' }}>
+                  <span className="lc-count-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                    <Link2 size={11} />{b.duplicateRowCount}
+                  </span>
                 </td>
                 <td onClick={(e) => e.stopPropagation()}>
                   <div style={{ display: 'flex', gap: '0.4rem', justifyContent: 'flex-end' }}>
+                    {hasPending(b) && (
+                      <>
+                        <button
+                          className="lc-btn primary"
+                          title="Save changes to the database"
+                          disabled={savingRowId === b.resourceId}
+                          onClick={() => handleSaveRow(b)}
+                          style={{ padding: '0.35rem 0.7rem', fontSize: '0.78rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}
+                        >
+                          <Save size={13} /> {savingRowId === b.resourceId ? 'Saving…' : 'Save'}
+                        </button>
+                        <button
+                          className="lc-icon-btn"
+                          title="Discard unsaved changes"
+                          disabled={savingRowId === b.resourceId}
+                          onClick={() => handleDiscardRow(b)}
+                        >
+                          <X size={14} />
+                        </button>
+                      </>
+                    )}
                     <button
                       className="lc-icon-btn"
                       title="Open in new tab"
@@ -272,6 +458,16 @@ const BooksPage = () => {
           </div>
         )}
       </div>
+
+      {filtered.length > 0 && (
+        <div className="lc-pagination-bar">
+          <span className="lc-pagination-info">{filtered.length} book{filtered.length === 1 ? '' : 's'} — page {page} of {totalPages}</span>
+          <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <button className="lc-pagination-btn" disabled={page === 1} onClick={() => setPage((p) => p - 1)}><ChevronLeft size={14} /></button>
+            <button className="lc-pagination-btn" disabled={page === totalPages} onClick={() => setPage((p) => p + 1)}><ChevronRight size={14} /></button>
+          </div>
+        </div>
+      )}
 
       {showNewModal && (
         <NewBookModal
