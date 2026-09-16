@@ -2,8 +2,11 @@ import { createClient } from '@supabase/supabase-js';
 import { S3Client, PutObjectCommand, ListObjectsV2Command, DeleteObjectsCommand, CopyObjectCommand } from '@aws-sdk/client-s3';
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
+import mammoth from 'mammoth';
 import { getS3Client, uploadToR2, generateResourceId } from '../../scripts/lib/ingest-drive-content.js';
 import { parseDocxToSemanticModelNode } from '../../scripts/lib/docxParser.mjs';
+import { parseHtmlToBlocks, generateId as generateIntroBlockId, STYLE_MAP as INTRO_STYLE_MAP } from '../../scripts/convert_docx_intros_to_blocks.mjs';
 
 const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -60,16 +63,28 @@ function getSupabaseAdmin() {
 }
 
 /**
- * POST /api/admin/save-resource with { type: 'docx-preview-convert', fileName, dataBase64 }
+ * POST /api/admin/save-resource with { type: 'docx-preview-convert', fileName, dataBase64, category }
  *
- * Runs one uploaded .docx through the same non-AI mechanical parser
- * scripts/convert_docx_books_to_blocks.mjs and scripts/content/
+ * Runs one uploaded .docx through a parser chosen by `category`, and
+ * returns the resulting book/chapters/blocks directly in the response --
+ * no R2 upload, no Supabase write, nothing persisted. First step of
+ * PublishContentPage.jsx's upload -> preview -> publish flow (see
+ * content-publish below for the second step).
+ *
+ * category 'Guide'/'Precis' (or omitted): the same non-AI mechanical
+ * parser scripts/convert_docx_books_to_blocks.mjs and scripts/content/
  * batch_enrich_books.mjs's own first step already use
- * (parseDocxToSemanticModelNode, scripts/lib/docxParser.mjs) and returns
- * the resulting book/chapters/blocks directly in the response -- no R2
- * upload, no Supabase write, nothing persisted. Exists purely so the
- * content team can try a real docx against the converter from the admin
- * UI (DocxConverterPage.jsx) without running a CLI script.
+ * (parseDocxToSemanticModelNode, scripts/lib/docxParser.mjs) -- a
+ * multi-chapter book, splitting on Word's Heading 1 style.
+ *
+ * category 'Intro': a DIFFERENT parser (mammoth + the table-aware
+ * scripts/convert_docx_intros_to_blocks.mjs) instead of
+ * parseDocxToSemanticModelNode -- an Introduction is "a single simple
+ * document" (see that script's own docstring), so Word H1/H2/H3 headings
+ * become heading blocks at different levels rather than splitting into
+ * new chapters, and <w:tbl> tables are parsed into real table blocks (the
+ * book parser above never looks at tables at all). Same `{ buffer }`
+ * mammoth call docxParser.mjs already uses in this same function.
  *
  * Real constraint, not fixed here: a deployed Vercel serverless function
  * caps the request body at ~4.5MB, and real master book docx files run up
@@ -77,21 +92,169 @@ function getSupabaseAdmin() {
  * against the local dev server (vite.config.js's vercelApiPlugin runs
  * this file's handler directly in Node with no such cap), but a large
  * file will 413 against the actual deployed veernxt.in admin site --
- * DocxConverterPage.jsx warns the client about this before sending
+ * PublishContentPage.jsx warns the client about this before sending
  * rather than let it fail silently.
  */
 async function handleDocxPreviewConvert(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  const { fileName, dataBase64 } = req.body || {};
+  const { fileName, dataBase64, category } = req.body || {};
   if (!fileName || !dataBase64) {
     return res.status(400).json({ ok: false, error: 'Missing fileName or dataBase64' });
   }
   try {
     const buffer = Buffer.from(dataBase64, 'base64');
+    if (category === 'Intro') {
+      const result = await mammoth.convertToHtml({ buffer }, { styleMap: INTRO_STYLE_MAP });
+      const { blocks } = parseHtmlToBlocks(result.value);
+      const title = fileName.replace(/\.[^/.]+$/, '');
+      const book = { title, chapters: [{ id: generateIntroBlockId(), title, order: 1, blocks }] };
+      return res.status(200).json({ ok: true, book });
+    }
     const { book } = await parseDocxToSemanticModelNode(buffer, fileName);
     return res.status(200).json({ ok: true, book });
   } catch (e) {
     console.error('[admin/save-resource:docx-preview-convert] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
+/**
+ * POST /api/admin/save-resource with
+ * { type: 'content-publish', category, fileName, book, examId?, overwrite? }
+ *
+ * Publishes an already-converted book/Introduction (the exact
+ * { title, chapters } shape docx-preview-convert returns above -- the docx
+ * itself isn't resent, just its already-parsed blocks) as a fresh
+ * `resources` row. Built because the content team otherwise has no way to
+ * turn a new docx into a live resource short of a developer running a CLI
+ * script: see docs/status_report.md §52-53 for why -- a system-wide scan
+ * found zero unconverted-but-real Intro docx left anywhere, so closing
+ * content gaps depends entirely on the content team writing new ones.
+ *
+ * Intro and Guide/Precis attach to exams differently, so only the resource
+ * creation (R2 upload + `resources` insert, works for any chapter count)
+ * is shared here:
+ *   - category 'Intro' is exam-specific 1:1 -- `examId` is required, and
+ *     this action also upserts `lc_exam_intro` server-side (never a silent
+ *     overwrite: 409 `ALREADY_HAS_INTRO` unless `overwrite: true`, same
+ *     principle link_intros_to_exams.mjs already enforces).
+ *   - category 'Guide'/'Precis' books are legitimately shared across many
+ *     exams (the same book linked from dozens of them), so this action
+ *     just creates the resource and returns its id -- the client attaches
+ *     it to whichever exam(s) were picked via a direct
+ *     `lc_exam_resource_map` insert, the exact same table/shape
+ *     ExamResourcesPanel.jsx's own "Add Resource" flow already writes to
+ *     (that table already grants browser/anon writes; `resources` and
+ *     `lc_exam_intro` don't, hence this server action for those).
+ *
+ * Mirrors link_intros_to_exams.mjs's own resourceRow/introRow shapes (its
+ * lines ~422-460) and handleBooksCreate's resource-defaults convention
+ * above, against `lc_exams` (the browser-reachable exam catalog
+ * `lc_exam_intro.exam_id` itself FKs to) rather than the service-role-only
+ * `exams` table those CLI scripts use.
+ */
+async function handleContentPublish(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { category, examId, fileName, book, overwrite } = req.body || {};
+  const chapters = book?.chapters || [];
+  if (!BOOK_CATEGORIES.includes(category) || !fileName || !chapters.length || !chapters.some((c) => c.blocks?.length)) {
+    return res.status(400).json({ ok: false, error: 'Missing/invalid category, fileName, or a converted chapter with blocks' });
+  }
+  if (category === 'Intro' && !examId) {
+    return res.status(400).json({ ok: false, error: 'Missing examId (required for Intro)' });
+  }
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+  const publicUrl = getR2PublicUrl();
+  const bucket = getR2Bucket();
+  if (!publicUrl || !bucket) return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 env vars not set' });
+
+  try {
+    const supabase = getSupabaseAdmin();
+
+    let examName = '';
+    let conductingBody = '';
+    if (category === 'Intro') {
+      const { data: exam, error: examError } = await supabase
+        .from('lc_exams')
+        .select('id, name, conducting_body:lc_conducting_bodies(name)')
+        .eq('id', examId)
+        .maybeSingle();
+      if (examError) throw new Error(examError.message);
+      if (!exam) return res.status(404).json({ ok: false, error: 'Exam not found' });
+      examName = exam.name || '';
+      conductingBody = exam.conducting_body?.name || '';
+
+      // Never a silent overwrite -- checked against both places a live
+      // intro can come from (see useExamContent.js's own fallback order).
+      const [{ data: introRows }, { data: mapRows }] = await Promise.all([
+        supabase.from('lc_exam_intro').select('resource_id').eq('exam_id', examId).limit(1),
+        supabase.from('lc_exam_resource_map').select('resource_id').eq('exam_id', examId).eq('category', 'Intro').limit(1),
+      ]);
+      const existingResourceId = introRows?.[0]?.resource_id || mapRows?.[0]?.resource_id || null;
+      if (existingResourceId && !overwrite) {
+        const { data: existingResource } = await supabase.from('resources').select('title').eq('resource_id', existingResourceId).maybeSingle();
+        return res.status(409).json({ ok: false, code: 'ALREADY_HAS_INTRO', existingTitle: existingResource?.title || '(untitled)' });
+      }
+    }
+
+    const resourceId = generateResourceId(fileName, examName, category, '');
+    const prefix = `structured_resources/blocks/${category}/${resourceId}`;
+    const storageBaseUrl = `${publicUrl}/${prefix}/`;
+
+    const metadata = {
+      book_id: genBookId(),
+      title: book.title,
+      source_file: fileName,
+      category,
+      chapter_count: chapters.length,
+      image_count: 0,
+      chapters: chapters.map((ch, i) => ({ title: ch.title, order: ch.order ?? i + 1, enriched: false, blocks_count: ch.blocks.length, file_name: `chapters/chapter-${ch.order ?? i + 1}.json` })),
+    };
+    const s3 = getS3Client();
+    await uploadToR2(s3, bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
+    for (const ch of chapters) {
+      await uploadToR2(s3, bucket, `${prefix}/chapters/chapter-${ch.order}.json`, Buffer.from(JSON.stringify(ch, null, 2)), 'application/json');
+    }
+
+    // Same is_freemium/is_locked convention handleBooksCreate above uses:
+    // Intro is always free/unlocked, Guide/Precis default to paid/locked.
+    const { error: resErr } = await supabase.from('resources').insert({
+      resource_id: resourceId,
+      file_hash: crypto.createHash('sha256').update(JSON.stringify(chapters)).digest('hex'),
+      source_file: fileName,
+      title: book.title,
+      exam_name: examName,
+      subject: 'General',
+      category,
+      conducting_body: conductingBody,
+      website_url: '',
+      chapter_count: chapters.length,
+      format: 'blocks',
+      storage_base_url: storageBaseUrl,
+      metadata_url: `${storageBaseUrl}metadata.json`,
+      thumbnail_url: null,
+      is_freemium: category === 'Intro',
+      is_locked: category !== 'Intro',
+      status: 'Published',
+      updated_at: new Date().toISOString(),
+    });
+    if (resErr) throw new Error(resErr.message);
+
+    if (category !== 'Intro') {
+      invalidateBooksCache();
+      return res.status(200).json({ ok: true, resourceId });
+    }
+
+    const { error: introErr } = await supabase.from('lc_exam_intro').upsert(
+      { exam_id: examId, resource_id: resourceId, manual_title: null, manual_body: null, source: 'auto', updated_at: new Date().toISOString() },
+      { onConflict: 'exam_id' }
+    );
+    if (introErr) throw new Error(introErr.message);
+
+    invalidateBooksCache();
+    return res.status(200).json({ ok: true, resourceId });
+  } catch (e) {
+    console.error('[admin/save-resource:content-publish] failed:', e.message);
     return res.status(500).json({ ok: false, error: e.message });
   }
 }
@@ -1209,6 +1372,9 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'docx-preview-convert') {
     return handleDocxPreviewConvert(req, res);
+  }
+  if (req.body?.type === 'content-publish') {
+    return handleContentPublish(req, res);
   }
 
   if (req.body?.type === 'books-list') {
