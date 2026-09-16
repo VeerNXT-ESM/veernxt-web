@@ -38,6 +38,14 @@ function isTitleDedupedCategory(category) {
   return TITLE_DEDUPED_CATEGORIES.includes(category);
 }
 
+// In-memory cache for books-list responses (TTL: 60s)
+const booksListCache = new Map();
+const BOOKS_CACHE_TTL_MS = 60 * 1000;
+
+function invalidateBooksCache() {
+  booksListCache.clear();
+}
+
 // R2 is the only source of truth for book content -- these actions read
 // and write Cloudflare R2 + the resources table directly, nothing on
 // local disk, so they work identically whether this runs on `npm run dev`
@@ -232,47 +240,70 @@ function replaceTextInValue(value, findStr, replaceStr, { matchCase = false, mat
 }
 
 /**
- * POST /api/admin/save-resource with { type: 'books-list' }
+ * POST /api/admin/save-resource with { type: 'books-list', category? }
  *
- * Lists every Guide/Precis book by grouping resources rows by
- * (title, category) -- this table has heavy pre-existing duplication (the
- * same book linked from many exams, one row per link; some titles have
- * 1000+ rows), so this shows one representative per group, not one row
- * per DB row. Paginated past PostgREST's 1000-row response cap.
- *
- * Also attaches each book's issue counts from content-issues-report.json
- * (scripts/scan_content_issues.mjs) when that report exists, matched by
- * title -- that report is generated from a local snapshot of these books
- * and can go stale as content gets edited here, but it's still a useful
- * starting point for "which books need work."
+ * Lists books by grouping resources rows by (title, category) for Guide/Precis
+ * and by resource_id for Intro. Supports optional category filtering for fast
+ * scoped queries and in-memory caching.
  */
 async function handleBooksList(req, res) {
   if (!checkAdminSecret(req, res)) return;
   if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
 
+  const reqCategory = req.body?.category;
+  const categoriesToFetch = (reqCategory && BOOK_CATEGORIES.includes(reqCategory))
+    ? [reqCategory]
+    : BOOK_CATEGORIES;
+
+  const cacheKey = reqCategory && BOOK_CATEGORIES.includes(reqCategory) ? reqCategory : 'all';
+  const cached = booksListCache.get(cacheKey);
+  const now = Date.now();
+  if (cached && (now - cached.timestamp < BOOKS_CACHE_TTL_MS)) {
+    return res.status(200).json({ ok: true, books: cached.books, cached: true });
+  }
+
   try {
     const supabase = getSupabaseAdmin();
+    const selectFields = 'resource_id,title,category,storage_base_url,chapter_count,status,level,state_ut,conducting_body';
 
-    let rows = [];
-    for (let from = 0; ; from += 1000) {
-      const { data, error } = await supabase
+    const fetchCategoryRows = async (cat) => {
+      const { data: firstBatch, count, error } = await supabase
         .from('resources')
-        .select('resource_id,title,category,storage_base_url,chapter_count,status,level,state_ut,conducting_body')
-        .in('category', BOOK_CATEGORIES)
+        .select(selectFields, { count: 'exact' })
+        .eq('category', cat)
         .eq('format', 'blocks')
-        .range(from, from + 999);
+        .range(0, 999);
+
       if (error) throw new Error(error.message);
-      rows = rows.concat(data);
-      if (data.length < 1000) break;
-    }
+      let catRows = firstBatch || [];
+
+      if (count && count > 1000) {
+        const promises = [];
+        for (let from = 1000; from < count; from += 1000) {
+          promises.push(
+            supabase
+              .from('resources')
+              .select(selectFields)
+              .eq('category', cat)
+              .eq('format', 'blocks')
+              .range(from, from + 999)
+          );
+        }
+        const results = await Promise.all(promises);
+        for (const r of results) {
+          if (r.error) throw new Error(r.error.message);
+          if (r.data) catRows = catRows.concat(r.data);
+        }
+      }
+      return catRows;
+    };
+
+    const catResults = await Promise.all(categoriesToFetch.map(fetchCategoryRows));
+    const rows = catResults.flat();
 
     const groups = new Map();
     for (const r of rows) {
       if (!r.title) continue;
-      // Intro rows are never merged by title (see TITLE_DEDUPED_CATEGORIES) --
-      // each keeps its own group keyed by resource_id so distinct exams'
-      // Introductions that happen to share a generic title (e.g. every
-      // "Introduction.docx") still show up as separate rows here.
       const key = isTitleDedupedCategory(r.category)
         ? `${r.category}::${r.title.trim().toLowerCase()}`
         : `${r.category}::id::${r.resource_id}`;
@@ -320,6 +351,7 @@ async function handleBooksList(req, res) {
       });
     }
 
+    booksListCache.set(cacheKey, { timestamp: Date.now(), books });
     return res.status(200).json({ ok: true, books });
   } catch (e) {
     console.error('[admin/save-resource:books-list] failed:', e.message);
@@ -510,6 +542,7 @@ async function handleBooksSaveChapter(req, res) {
     const { error: updateError } = await bookRowsFilter(supabase.from('resources').update(updatePatch), row);
     if (updateError) console.error('[admin/save-resource:books-save-chapter] row consolidation update failed (content still saved):', updateError.message);
 
+    invalidateBooksCache();
     return res.status(200).json({ ok: true });
   } catch (e) {
     console.error('[admin/save-resource:books-save-chapter] failed:', e.message);
@@ -583,6 +616,7 @@ async function handleBooksCreate(req, res) {
     });
     if (error) throw new Error(error.message);
 
+    invalidateBooksCache();
     return res.status(200).json({ ok: true, resourceId: newResourceId });
   } catch (e) {
     console.error('[admin/save-resource:books-create] failed:', e.message);
@@ -680,6 +714,7 @@ async function handleBooksDuplicate(req, res) {
     });
     if (error) throw new Error(error.message);
 
+    invalidateBooksCache();
     return res.status(200).json({ ok: true, resourceId: newResourceId });
   } catch (e) {
     console.error('[admin/save-resource:books-duplicate] failed:', e.message);
@@ -724,6 +759,7 @@ async function handleBooksDelete(req, res) {
     const { error } = await bookRowsFilter(supabase.from('resources').delete(), row);
     if (error) throw new Error(error.message);
 
+    invalidateBooksCache();
     return res.status(200).json({ ok: true });
   } catch (e) {
     console.error('[admin/save-resource:books-delete] failed:', e.message);
@@ -782,6 +818,7 @@ async function handleBooksRename(req, res) {
     );
     if (updateError) throw new Error(updateError.message);
 
+    invalidateBooksCache();
     return res.status(200).json({ ok: true, newTitle: trimmedNewTitle });
   } catch (e) {
     console.error('[admin/save-resource:books-rename] failed:', e.message);
@@ -817,7 +854,7 @@ const BOOK_LEVELS = ['central', 'state', 'ut'];
  */
 async function handleBooksSaveTags(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  const { resourceId, category: newCategory, level: newLevel, stateUt: newStateUt, conductingBody: newConductingBody } = req.body || {};
+  const { resourceId, title: newTitle, category: newCategory, level: newLevel, stateUt: newStateUt, conductingBody: newConductingBody } = req.body || {};
   if (!resourceId) return res.status(400).json({ ok: false, error: 'Missing resourceId' });
   if (newCategory !== undefined && !BOOK_CATEGORIES.includes(newCategory)) {
     return res.status(400).json({ ok: false, error: 'Invalid category' });
@@ -825,15 +862,41 @@ async function handleBooksSaveTags(req, res) {
   if (newLevel !== undefined && newLevel !== null && !BOOK_LEVELS.includes(newLevel)) {
     return res.status(400).json({ ok: false, error: 'Invalid level' });
   }
+  if (newTitle !== undefined && (!newTitle || !newTitle.trim())) {
+    return res.status(400).json({ ok: false, error: 'Title cannot be empty' });
+  }
   if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
     const patch = { updated_at: new Date().toISOString() };
+    if (newTitle !== undefined && newTitle.trim() !== row.title) {
+      const trimmedTitle = newTitle.trim();
+      patch.title = trimmedTitle;
+
+      // Update metadata.json in R2 if storage location is resolvable
+      const publicUrl = getR2PublicUrl();
+      const bucket = getR2Bucket();
+      if (publicUrl && bucket) {
+        try {
+          const groupRows = await fetchBookRows(supabase, row);
+          const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
+          const prefix = prefixFromStorageBaseUrl(canonicalUrl, publicUrl);
+          if (prefix) {
+            const metadata = await fetchJson(`${canonicalUrl}metadata.json`);
+            metadata.title = trimmedTitle;
+            const s3 = getS3Client();
+            await uploadToR2(s3, bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
+          }
+        } catch (e) {
+          console.error('[admin/save-resource:books-save-tags] metadata.json title patch failed:', e.message);
+        }
+      }
+    }
     if (newCategory !== undefined) patch.category = newCategory;
     if (newLevel !== undefined) patch.level = newLevel;
     if (newStateUt !== undefined) patch.state_ut = newStateUt;
@@ -841,11 +904,12 @@ async function handleBooksSaveTags(req, res) {
 
     // bookRowsFilter scopes by `row`'s CURRENT category/title (Guide/Precis
     // title-grouped, Intro resource_id-only) -- correct even when this same
-    // patch also changes `category`, since the WHERE clause is built before
+    // patch also changes `category` or `title`, since the WHERE clause is built before
     // the UPDATE's SET values apply.
     const { error: updateError } = await bookRowsFilter(supabase.from('resources').update(patch), row);
     if (updateError) throw new Error(updateError.message);
 
+    invalidateBooksCache();
     return res.status(200).json({ ok: true, ...patch });
   } catch (e) {
     console.error('[admin/save-resource:books-save-tags] failed:', e.message);
@@ -876,6 +940,7 @@ async function handleBooksArchive(req, res) {
     );
     if (updateError) throw new Error(updateError.message);
 
+    invalidateBooksCache();
     return res.status(200).json({ ok: true, status: 'Draft' });
   } catch (e) {
     console.error('[admin/save-resource:books-archive] failed:', e.message);
@@ -906,6 +971,7 @@ async function handleBooksUnarchive(req, res) {
     );
     if (updateError) throw new Error(updateError.message);
 
+    invalidateBooksCache();
     return res.status(200).json({ ok: true, status: 'Published' });
   } catch (e) {
     console.error('[admin/save-resource:books-unarchive] failed:', e.message);
@@ -1014,6 +1080,7 @@ async function handleBooksFindReplace(req, res) {
       }
     }
 
+    invalidateBooksCache();
     return res.status(200).json({
       ok: true,
       totalReplacements,
@@ -1198,6 +1265,7 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: error.message });
       }
 
+      invalidateBooksCache();
       return res.status(200).json({ success: true, data });
     }
 

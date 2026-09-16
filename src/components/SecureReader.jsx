@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { ArrowLeft, CheckCircle, Clock, BookOpen, Share2, RefreshCw, Lock, Crown, ChevronLeft, ChevronRight } from 'lucide-react';
 import 'react-quill-new/dist/quill.snow.css';
@@ -13,6 +13,8 @@ import '../pages/sandbox/BookReaderV2.css';
 
 const SecureReader = () => {
   const { id } = useParams(); // This is now resource_id
+  const navigate = useNavigate();
+  const location = useLocation();
   const [resource, setResource] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isRead, setIsRead] = useState(false);
@@ -20,6 +22,20 @@ const SecureReader = () => {
   const [activeChapterIndex, setActiveChapterIndex] = useState(0);
   const [effectiveTier, setEffectiveTier] = useState('FREE');
   const chapterCache = React.useRef({});
+
+  const handleBack = () => {
+    if (location.state?.from) {
+      // replace, not push -- otherwise this reader page stays on the
+      // history stack and a second "back" press (browser button or this
+      // same button again from the exam page) lands right back in it
+      // instead of continuing on to Dashboard/Learning Center.
+      navigate(location.state.from, { replace: true });
+    } else if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate('/learning-center');
+    }
+  };
 
   // Fetch resource metadata from resources and user subscription
   useEffect(() => {
@@ -235,9 +251,24 @@ const SecureReader = () => {
     <div className="reader-container animate-fade-in">
       <div className="reader-nav">
         <div className="nav-inner">
-          <Link to="/learning-center" className="back-link">
-            <ArrowLeft size={18} /> Back to Library
-          </Link>
+          <button
+            type="button"
+            onClick={handleBack}
+            className="back-link"
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: 0,
+              font: 'inherit',
+              color: 'inherit',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+            }}
+          >
+            <ArrowLeft size={18} /> Back
+          </button>
           <div className="nav-actions">
             <button onClick={() => window.print()} className="nav-icon-btn"><Clock size={18} /></button>
             <button className="nav-icon-btn"><Share2 size={18} /></button>

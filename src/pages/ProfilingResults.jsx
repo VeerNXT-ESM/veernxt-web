@@ -126,7 +126,7 @@ const ExamPrepSection = ({ exam }) => {
           <div className="results-prep-list">
             {resources.length === 0 && <span className="results-prep-none">None yet</span>}
             {resources.map(res => (
-              <Link key={res.id} to={`/reader/${res.resource_id}`} className="results-prep-item">
+              <Link key={res.id} to={`/reader/${res.resource_id}`} state={{ from: window.location.pathname + window.location.search }} className="results-prep-item">
                 <FileText size={14} /> <span>{res.title}</span>
               </Link>
             ))}

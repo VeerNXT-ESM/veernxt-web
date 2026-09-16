@@ -30,7 +30,7 @@ const LIST_SECTIONS = [
 const SUBJECT_CATEGORY_ORDER = ['Intro', 'Guide', 'Precis', 'PYQ'];
 const SUBJECT_CATEGORY_LABELS = { Intro: 'Intro', Guide: 'Guide', Precis: 'Précis', PYQ: 'PYQ' };
 
-function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete }) {
+function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete, backTo }) {
   return (
     <div
       style={{
@@ -68,6 +68,7 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
       <FileText size={15} color={isCompleted ? "#16a34a" : "var(--ios-olive)"} style={{ flexShrink: 0 }} />
       <Link
         to={`/reader/${resource.resource_id}`}
+        state={backTo ? { from: backTo } : undefined}
         style={{ flex: 1, fontSize: '0.85rem', textDecoration: 'none', color: 'inherit', fontWeight: isCompleted ? 600 : 400 }}
       >
         {cleanContentTitle(resource.title, examName)}
@@ -83,14 +84,14 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
 // subject-tile grouping used, just applied per-document instead of once
 // per subject so a Guide and its sibling Précis each get their own tile
 // and label instead of sharing one tile captioned "Guide • Précis".
-function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplete }) {
+function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplete, backTo }) {
   const subject = resolveSubjectForTitle(resource.title);
   const bg = getFamilyHex(subject.family);
   const image = getSubjectThumbnailImage(subject.key);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-      <Link to={`/reader/${resource.resource_id}`} style={{ position: 'relative', display: 'block', textDecoration: 'none' }}>
+      <Link to={`/reader/${resource.resource_id}`} state={backTo ? { from: backTo } : undefined} style={{ position: 'relative', display: 'block', textDecoration: 'none' }}>
         <span
           style={{
             aspectRatio: '3 / 4', borderRadius: '10px', display: 'flex', alignItems: 'flex-end',
@@ -229,6 +230,15 @@ function QuizRow({ quiz, examName, locked }) {
 const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed, splitPyqQuiz = false, showEmptyCategories = false, variant = 'tiles' }) => {
   const { byCategory, quizzes, intro, completedResourceIds, markAsCompleted, loading, error } = useExamContent(examName, careerTrack, examId);
 
+  // Where the reader's own Back button should return to: the "list" variant
+  // is always rendered inline on Learning Center itself (LearningCenter.jsx's
+  // expandable "my exam" cards), so its books' natural back target is the
+  // Learning Center page; "subjects" is ExamSyllabus.jsx's full-page grid,
+  // so its books should return to that specific exam's page, not wherever
+  // the user was before that (see SecureReader.jsx's handleBack, which reads
+  // this from location.state.from before falling back to browser history).
+  const readerBackTo = variant === 'list' ? '/learning-center' : (examId ? `/exam/${examId}` : undefined);
+
   if (loading) {
     return (
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 0', color: '#94a3b8', fontSize: '0.85rem' }}>
@@ -265,6 +275,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                   locked={isResourceLockedForUser(tier, res.category)}
                   isCompleted={completedResourceIds?.has(res.resource_id)}
                   onToggleComplete={(id, completed) => markAsCompleted(id, null, completed)}
+                  backTo={readerBackTo}
                 />
               ))}
             </div>
@@ -328,6 +339,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                   locked={isResourceLockedForUser(tier, 'Intro')}
                   isCompleted={completedResourceIds?.has(intro.resource.resource_id)}
                   onToggleComplete={(id, completed) => markAsCompleted(id, null, completed)}
+                  backTo={readerBackTo}
                 />
               ) : (
                 <IntroManualTile intro={intro} locked={isResourceLockedForUser(tier, 'Intro')} />
@@ -351,6 +363,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                     locked={isResourceLockedForUser(tier, catKey)}
                     isCompleted={completedResourceIds?.has(res.resource_id)}
                     onToggleComplete={(id, completed) => markAsCompleted(id, resolveSubjectForTitle(res.title).key, completed)}
+                    backTo={readerBackTo}
                   />
                 ))}
               </div>

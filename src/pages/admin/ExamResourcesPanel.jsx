@@ -162,16 +162,18 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
   const [selected, setSelected] = useState(new Set());
   const [saving, setSaving] = useState(false);
 
-  // Load canonical books (Guide/Precis) and verified published Intros,
-  // excluding unwanted mock tests. The books-list API call, the Intro
-  // fetch, and the metadata backfill query don't depend on each other, so
-  // they're fired together instead of one after another — the fallback
-  // block-books query is the only one that stays sequential, since it's
-  // only needed on the rare occasion the API call comes back empty.
+  // Same books-list call, and the same active/archived split, that Book
+  // Content (BooksPage.jsx) uses -- one source of truth for what counts
+  // as a real Intro/Guide/Precis, so a book showing up (or not) in Book
+  // Content is exactly what shows up (or doesn't) here too. No separate
+  // Intro query, no fallback DB query, no metadata backfill -- all of
+  // that lived here only because this drawer used to build its own list
+  // independently; now it just asks Book Content's own API for its list.
   useEffect(() => {
     let cancelled = false;
 
-    const fetchBooksFromApi = async () => {
+    const loadAll = async () => {
+      setLoading(true);
       try {
         const res = await fetch('/api/admin/save-resource', {
           method: 'POST',
@@ -179,140 +181,29 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
           body: JSON.stringify({ type: 'books-list' }),
         });
         const data = await res.json();
-        if (data?.ok && Array.isArray(data.books)) {
-          return data.books.map((b) => ({
+        const books = (data?.ok && Array.isArray(data.books)) ? data.books : [];
+
+        const list = books
+          .filter((b) => b.title && !b.isArchived) // same default view Book Content shows
+          .map((b) => ({
             resource_id: b.resourceId,
             title: b.title.trim(),
             category: b.category,
-            conducting_body: '',
+            conducting_body: b.conductingBody || '',
             exam_name: '',
             format: 'blocks',
-            status: 'Published',
+            status: b.status,
           }));
+
+        if (!cancelled) {
+          list.sort((a, b) => a.title.localeCompare(b.title));
+          setAllResources(list);
         }
       } catch (err) {
-        console.warn('Failed to fetch books-list from API, falling back to database query:', err);
-      }
-      return [];
-    };
-
-    // Fallback for Guide/Precis: only hit the database directly if the API
-    // returned nothing.
-    const fetchBlockBooksFromDb = async () => {
-      try {
-        let blockRows = [];
-        for (let from = 0; ; from += 1000) {
-          const { data } = await supabase
-            .from('resources')
-            .select('resource_id, title, category, conducting_body, exam_name, format, status')
-            .in('category', ['Guide', 'Precis'])
-            .eq('format', 'blocks')
-            .range(from, from + 999);
-          blockRows = blockRows.concat(data || []);
-          if ((data || []).length < 1000) break;
-        }
-        return blockRows.filter((r) => r.title).map((r) => ({
-          resource_id: r.resource_id,
-          title: r.title.trim(),
-          category: r.category,
-          conducting_body: r.conducting_body || '',
-          exam_name: r.exam_name || '',
-          format: 'blocks',
-          status: 'Published',
-        }));
-      } catch (e) {
-        console.error('Error in fallback block books query:', e);
-        return [];
-      }
-    };
-
-    // Published Exam Intros, excluding legacy mock tests/junk.
-    const fetchPublishedIntros = async () => {
-      try {
-        let introRows = [];
-        for (let from = 0; ; from += 1000) {
-          const { data } = await supabase
-            .from('resources')
-            .select('resource_id, title, category, conducting_body, exam_name, format, status')
-            .eq('category', 'Intro')
-            .eq('status', 'Published')
-            .range(from, from + 999);
-          introRows = introRows.concat(data || []);
-          if ((data || []).length < 1000) break;
-        }
-        return introRows
-          .filter((r) => r.title)
-          .filter((r) => {
-            const t = r.title.trim().toLowerCase();
-            return !(t.startsWith('veernxt_mock_test') || t.includes('mock_test') || t.endsWith('.docx 2') || t === 'test');
-          })
-          .map((r) => ({
-            resource_id: r.resource_id,
-            title: r.title.trim(),
-            category: 'Intro',
-            conducting_body: r.conducting_body || '',
-            exam_name: r.exam_name || '',
-            format: r.format || 'html',
-            status: 'Published',
-          }));
-      } catch (err) {
-        console.error('Error loading published Intros:', err);
-        return [];
-      }
-    };
-
-    // conducting_body/exam_name metadata to backfill onto canonical books
-    // that are missing it.
-    const fetchBookMetadata = async () => {
-      try {
-        const { data } = await supabase
-          .from('resources')
-          .select('title, category, conducting_body, exam_name')
-          .eq('format', 'blocks')
-          .not('conducting_body', 'is', null)
-          .limit(1000);
-        return data || [];
-      } catch (e) {
-        console.warn('Could not backfill metadata for books:', e);
-        return [];
-      }
-    };
-
-    const loadAll = async () => {
-      setLoading(true);
-
-      const [apiBooks, introRows, metaRows] = await Promise.all([
-        fetchBooksFromApi(),
-        fetchPublishedIntros(),
-        fetchBookMetadata(),
-      ]);
-
-      const books = apiBooks.some((r) => r.category === 'Guide' || r.category === 'Precis')
-        ? apiBooks
-        : await fetchBlockBooksFromDb();
-
-      const seen = new Set();
-      const list = [];
-      for (const r of [...books, ...introRows]) {
-        const key = `${r.category}::${r.title.trim().toLowerCase()}`;
-        if (seen.has(key)) continue;
-        seen.add(key);
-        list.push(r);
-      }
-
-      for (const m of metaRows) {
-        const key = `${m.category}::${m.title?.trim().toLowerCase()}`;
-        const existing = list.find((item) => `${item.category}::${item.title.trim().toLowerCase()}` === key);
-        if (existing) {
-          if (!existing.conducting_body && m.conducting_body) existing.conducting_body = m.conducting_body;
-          if (!existing.exam_name && m.exam_name) existing.exam_name = m.exam_name;
-        }
-      }
-
-      if (!cancelled) {
-        list.sort((a, b) => a.title.localeCompare(b.title));
-        setAllResources(list);
-        setLoading(false);
+        console.error('Failed to load books-list for Add Resource:', err);
+        if (!cancelled) setAllResources([]);
+      } finally {
+        if (!cancelled) setLoading(false);
       }
     };
 
@@ -373,7 +264,10 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
     const merged = [];
 
     for (const r of pool) {
-      const key = `${r.category}::${r.title.trim().toLowerCase()}`;
+      const isDedupedByTitle = r.category === 'Guide' || r.category === 'Precis';
+      const key = isDedupedByTitle
+        ? `${r.category}::${r.title.trim().toLowerCase()}`
+        : `${r.category}::${r.resource_id}`;
       if (!seen.has(key)) {
         seen.add(key);
         merged.push(r);
@@ -382,7 +276,10 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
 
     for (const r of supplementary) {
       if (category && r.category !== category) continue;
-      const key = `${r.category}::${r.title.trim().toLowerCase()}`;
+      const isDedupedByTitle = r.category === 'Guide' || r.category === 'Precis';
+      const key = isDedupedByTitle
+        ? `${r.category}::${r.title.trim().toLowerCase()}`
+        : `${r.category}::${r.resource_id}`;
       if (!seen.has(key)) {
         seen.add(key);
         merged.push(r);

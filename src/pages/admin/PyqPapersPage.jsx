@@ -386,10 +386,24 @@ const PyqPapersPage = () => {
 
       {totalCount > 0 && (
         <div className="lc-pagination-bar">
-          <span className="lc-pagination-info">{totalCount} paper{totalCount === 1 ? '' : 's'} — page {page} of {totalPages}</span>
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <button className="lc-pagination-btn" disabled={page === 1} onClick={() => setPage((p) => p - 1)}><ChevronLeft size={14} /></button>
-            <button className="lc-pagination-btn" disabled={page === totalPages} onClick={() => setPage((p) => p + 1)}><ChevronRight size={14} /></button>
+          <span className="lc-pagination-info">{totalCount} paper{totalCount === 1 ? '' : 's'}</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <button className="lc-pagination-btn" disabled={page === 1} onClick={() => setPage((p) => p - 1)} title="Previous page"><ChevronLeft size={14} /></button>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.8rem', color: 'var(--admin-text-muted)' }}>
+              <span>Page</span>
+              <select
+                value={page}
+                onChange={(e) => setPage(Number(e.target.value))}
+                className="lc-pagination-select"
+              >
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                  <option key={p} value={p}>
+                    {p} of {totalPages}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <button className="lc-pagination-btn" disabled={page === totalPages} onClick={() => setPage((p) => p + 1)} title="Next page"><ChevronRight size={14} /></button>
           </div>
         </div>
       )}

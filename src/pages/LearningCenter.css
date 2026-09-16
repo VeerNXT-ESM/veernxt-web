@@ -251,6 +251,7 @@
 .search-box {
   position: relative;
   max-width: 600px;
+  margin-bottom: 1.5rem;
 }
 .search-icon {
   position: absolute;

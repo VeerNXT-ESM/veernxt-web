@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { BookOpen, Landmark, MapPin, RefreshCw, ArrowRight, Target, Rocket, PlayCircle, HelpCircle, CheckCircle2 } from 'lucide-react';
+import { BookOpen, Landmark, MapPin, RefreshCw, ArrowRight, Target, Rocket, PlayCircle, HelpCircle, CheckCircle2, ArrowLeft } from 'lucide-react';
 import { getEffectiveTier, TIERS } from '../lib/subscriptionAccess';
 import ExamContentPreview from '../components/ExamContentPreview';
 import Card from '../components/ui/Card';
@@ -11,6 +11,7 @@ import './ExamSyllabus.css';
 const ExamSyllabus = () => {
   const { examId } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const [exam, setExam] = useState(null);
   const [examLoading, setExamLoading] = useState(true);
   const [examError, setExamError] = useState(null);
@@ -121,6 +122,45 @@ const ExamSyllabus = () => {
 
   return (
     <div style={{ padding: '3rem 1.5rem', maxWidth: '900px', margin: '0 auto' }}>
+      <button
+        type="button"
+        onClick={() => {
+          // Prefer the specific page we were opened from (set as
+          // state.from by whoever linked here — Dashboard's "Continue
+          // Preparation", Learning Center's "Continue Preparing", etc.)
+          // over raw browser history, which can land somewhere unrelated
+          // if this page was reached indirectly.
+          if (location.state?.from) {
+            // replace, not push -- keeps this exam page off the stack so a
+            // second "back" press continues on to Dashboard/Learning
+            // Center instead of bouncing back into this same page.
+            navigate(location.state.from, { replace: true });
+          } else if (window.history.length > 1) {
+            navigate(-1);
+          } else {
+            navigate('/learning-center');
+          }
+        }}
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.45rem',
+          background: 'none',
+          border: 'none',
+          color: '#64748b',
+          fontSize: '0.9rem',
+          fontWeight: 600,
+          cursor: 'pointer',
+          padding: '0.4rem 0',
+          marginBottom: '1.25rem',
+          transition: 'color 0.15s ease',
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--ios-olive, #4b6b32)')}
+        onMouseLeave={(e) => (e.currentTarget.style.color = '#64748b')}
+      >
+        <ArrowLeft size={18} /> Back
+      </button>
+
       <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
         <div style={{ width: '110px', flexShrink: 0 }}>
           <ExamThumbnail

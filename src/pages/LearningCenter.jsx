@@ -76,7 +76,7 @@ const LearningCenter = () => {
       console.warn('Could not save exam target:', err);
     } finally {
       setPreparingExamId(null);
-      navigate(`/exam/${examId}`);
+      navigate(`/exam/${examId}`, { state: { from: '/learning-center' } });
     }
   }, [navigate]);
 
@@ -110,7 +110,7 @@ const LearningCenter = () => {
     (async () => {
       setCatalogLoading(true);
       try {
-        // Fetch canonical regions so all 28 states and 8 UTs are immediately available
+        // Fetch canonical regions
         const { data: regData } = await supabase
           .from('lc_regions')
           .select('id,name,level')
@@ -146,33 +146,28 @@ const LearningCenter = () => {
     return () => { cancelled = true; };
   }, []);
 
-  // State/UT filter options: sourced from canonical lc_regions (guaranteeing all 28 states
-  // and all 8 UTs appear), with fallback to catalog exams if regions query is empty.
+  // State / UT filter options for dropdown
   const regionFilterOptions = useMemo(() => {
     if (regions.length > 0) {
       return regions
-        .filter((r) => regionMode === 'central'
-          ? (r.level === 'state' || r.level === 'ut')
-          : r.level === regionMode
-        )
+        .filter((r) => r.level === regionMode)
         .sort((a, b) => a.name.localeCompare(b.name));
     }
     const seen = new Map();
     for (const exam of catalog) {
       if (!exam.region) continue;
-      const relevant = regionMode === 'central'
-        ? (exam.region.level === 'state' || exam.region.level === 'ut')
-        : exam.region.level === regionMode;
-      if (relevant && !seen.has(exam.region.id)) seen.set(exam.region.id, exam.region);
+      if (exam.region.level === regionMode && !seen.has(exam.region.id)) {
+        seen.set(exam.region.id, exam.region);
+      }
     }
     return [...seen.values()].sort((a, b) => a.name.localeCompare(b.name));
   }, [regions, catalog, regionMode]);
 
-  // Exams satisfying the level gate: Central takes every central exam;
-  // State/UT requires a specific region pick first.
+  // Exams satisfying the level gate (Central / State / UT)
   const levelExams = useMemo(() => catalog.filter((exam) => {
     if (!exam.region) return false;
     if (regionMode === 'central') return exam.region.level === 'central';
+    if (!regionFilterId) return exam.region.level === regionMode;
     return exam.region.id === regionFilterId;
   }), [catalog, regionMode, regionFilterId]);
 
@@ -193,27 +188,15 @@ const LearningCenter = () => {
     for (const exam of pool) {
       if (exam.conducting_body && !seen.has(exam.conducting_body.id)) seen.set(exam.conducting_body.id, exam.conducting_body);
     }
-    let bodies = [...seen.values()];
-    if (regionMode === 'central' && regionFilterId) {
-      const crossBodyIds = new Set(catalog.filter((exam) => exam.region?.id === regionFilterId).map((exam) => exam.conducting_body_id));
-      bodies = bodies.filter((b) => crossBodyIds.has(b.id));
-    }
-    return bodies.sort((a, b) => a.name.localeCompare(b.name));
-  }, [levelExams, categoryFilter, regionMode, regionFilterId, catalog]);
+    return [...seen.values()].sort((a, b) => a.name.localeCompare(b.name));
+  }, [levelExams, categoryFilter]);
 
-  // The single result list driving "Search Results" — always computed
-  // (cheap, memoized); whether it's actually shown vs. the personalized
-  // fallback is decided by filtersActive below.
+  // The single result list driving "Search Results"
   const searchResults = useMemo(() => {
-    if (regionMode !== 'central' && !regionFilterId) return [];
     let pool = categoryFilter
       ? levelExams.filter((exam) => (exam.category || '').trim() === categoryFilter)
       : levelExams;
     if (selectedBodyId) pool = pool.filter((exam) => exam.conducting_body_id === selectedBodyId);
-    if (regionMode === 'central' && regionFilterId) {
-      const crossBodyIds = new Set(catalog.filter((exam) => exam.region?.id === regionFilterId).map((exam) => exam.conducting_body_id));
-      pool = pool.filter((exam) => crossBodyIds.has(exam.conducting_body_id));
-    }
     const q = searchText.trim().toLowerCase();
     if (q) {
       pool = pool.filter((exam) =>
@@ -223,7 +206,7 @@ const LearningCenter = () => {
       );
     }
     return pool.slice().sort((a, b) => a.name.localeCompare(b.name));
-  }, [regionMode, regionFilterId, levelExams, categoryFilter, selectedBodyId, catalog, searchText]);
+  }, [levelExams, categoryFilter, selectedBodyId, searchText]);
 
   const filtersActive = regionMode !== 'central' || Boolean(searchText.trim()) || Boolean(regionFilterId) || Boolean(categoryFilter) || Boolean(selectedBodyId);
 
@@ -391,57 +374,67 @@ const LearningCenter = () => {
               </button>
             </div>
 
-            <div className="browse-group filter-row">
-              <div className="filter-col">
-                <h4 className="browse-group-title">{regionMode === 'central' ? 'State / UT (optional)' : regionMode === 'state' ? 'State' : 'Union Territory'}</h4>
-                <Select
-                  searchable
-                  value={regionFilterId}
-                  onChange={(e) => handleRegionFilterChange(e.target.value)}
-                  placeholder={regionMode === 'central' ? 'All States/UTs' : `Select a ${regionMode === 'state' ? 'state' : 'UT'}...`}
-                  options={[{ value: '', label: regionMode === 'central' ? 'All States/UTs' : `Select a ${regionMode === 'state' ? 'state' : 'UT'}...` }, ...regionFilterOptions.map(r => ({ value: r.id, label: r.name }))]}
-                />
+            {regionMode === 'central' ? (
+              <div className="browse-group filter-row" style={{ maxWidth: '360px' }}>
+                <div className="filter-col">
+                  <h4 className="browse-group-title">Category</h4>
+                  <Select
+                    searchable
+                    value={categoryFilter}
+                    onChange={(e) => handleCategoryFilterChange(e.target.value)}
+                    placeholder="All categories"
+                    disabled={categoryOptions.length === 0}
+                    options={[{ value: '', label: 'All categories' }, ...categoryOptions.map(c => ({ value: c, label: c }))]}
+                  />
+                </div>
               </div>
-              <div className="filter-col">
-                <h4 className="browse-group-title">Category</h4>
-                <Select
-                  searchable
-                  value={categoryFilter}
-                  onChange={(e) => handleCategoryFilterChange(e.target.value)}
-                  placeholder="All categories"
-                  disabled={categoryOptions.length === 0}
-                  options={[{ value: '', label: 'All categories' }, ...categoryOptions.map(c => ({ value: c, label: c }))]}
-                />
+            ) : (
+              <div className="browse-group filter-row">
+                <div className="filter-col">
+                  <h4 className="browse-group-title">{regionMode === 'state' ? 'State' : 'Union Territory'}</h4>
+                  <Select
+                    searchable
+                    value={regionFilterId}
+                    onChange={(e) => handleRegionFilterChange(e.target.value)}
+                    placeholder={regionMode === 'state' ? 'Select a state...' : 'Select a UT...'}
+                    options={[{ value: '', label: regionMode === 'state' ? 'All States' : 'All UTs' }, ...regionFilterOptions.map(r => ({ value: r.id, label: r.name }))]}
+                  />
+                </div>
+                <div className="filter-col">
+                  <h4 className="browse-group-title">Category</h4>
+                  <Select
+                    searchable
+                    value={categoryFilter}
+                    onChange={(e) => handleCategoryFilterChange(e.target.value)}
+                    placeholder="All categories"
+                    disabled={categoryOptions.length === 0}
+                    options={[{ value: '', label: 'All categories' }, ...categoryOptions.map(c => ({ value: c, label: c }))]}
+                  />
+                </div>
               </div>
+            )}
+
+            <div className="browse-group">
+              <h4 className="browse-group-title">Conducting Body</h4>
+              {catalogLoading ? (
+                <p className="filter-empty-note">Loading…</p>
+              ) : catalogError ? (
+                <p className="filter-empty-note">{catalogError}</p>
+              ) : (
+                <div className="body-grid">
+                  {bodyOptions.map(body => (
+                    <button
+                      key={body.id}
+                      onClick={() => setSelectedBodyId(selectedBodyId === body.id ? '' : body.id)}
+                      className={`body-grid-btn ${selectedBodyId === body.id ? 'active' : ''}`}
+                    >
+                      {body.name}
+                    </button>
+                  ))}
+                  {bodyOptions.length === 0 && <p className="filter-empty-note">No conducting bodies match these filters.</p>}
+                </div>
+              )}
             </div>
-
-            {(regionMode === 'central' || regionFilterId) && (
-              <div className="browse-group">
-                <h4 className="browse-group-title">Conducting Body</h4>
-                {catalogLoading ? (
-                  <p className="filter-empty-note">Loading…</p>
-                ) : catalogError ? (
-                  <p className="filter-empty-note">{catalogError}</p>
-                ) : (
-                  <div className="body-grid">
-                    {bodyOptions.map(body => (
-                      <button
-                        key={body.id}
-                        onClick={() => setSelectedBodyId(selectedBodyId === body.id ? '' : body.id)}
-                        className={`body-grid-btn ${selectedBodyId === body.id ? 'active' : ''}`}
-                      >
-                        {body.name}
-                      </button>
-                    ))}
-                    {bodyOptions.length === 0 && <p className="filter-empty-note">No conducting bodies match these filters.</p>}
-                  </div>
-                )}
-              </div>
-            )}
-
-            {regionMode !== 'central' && !regionFilterId && (
-              <p className="filter-empty-note" style={{ marginTop: '1.5rem' }}>Pick a {regionMode === 'state' ? 'state' : 'UT'} above to see its conducting bodies.</p>
-            )}
           </div>
 
           {error ? (
@@ -474,6 +467,7 @@ const LearningCenter = () => {
                   <div className="lc-prep-hero-right">
                     <Link
                       to={`/exam/${primaryTarget.exam_id}`}
+                      state={{ from: '/learning-center' }}
                       className="lc-prep-hero-continue-btn"
                     >
                       Continue Preparing <ArrowRight size={15} />
