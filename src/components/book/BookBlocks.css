@@ -198,6 +198,22 @@
   line-height: 1.6;
 }
 
+/* Cell content is raw injected HTML (mammoth-parsed table cells come in as
+   plain, class-less <p>/<strong> tags -- see convert_docx_intros_to_blocks.mjs),
+   so unlike every other block here it has no element of its own to carry a
+   color and just inherits whatever the surrounding page set. That's fine on
+   the candidate-facing reader's light page, but on a dark host (e.g. the
+   admin CMS's drawer, which only repaints the background to white for this
+   preview, not the text color) it inherited the host's light/muted text,
+   landing as unreadable grey-on-white. Pin it explicitly so the table never
+   depends on ambient color. */
+.bk-table td {
+  color: #1e293b;
+}
+.bk-table td p {
+  color: inherit;
+}
+
 .bk-table th {
   background-color: #0f766e; /* Teal header */
   font-weight: 700;
