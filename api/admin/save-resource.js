@@ -3,6 +3,7 @@ import { S3Client, PutObjectCommand, ListObjectsV2Command, DeleteObjectsCommand,
 import fs from 'node:fs';
 import path from 'node:path';
 import { getS3Client, uploadToR2, generateResourceId } from '../../scripts/lib/ingest-drive-content.js';
+import { parseDocxToSemanticModelNode } from '../../scripts/lib/docxParser.mjs';
 
 const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -56,6 +57,43 @@ function invalidateBooksCache() {
 
 function getSupabaseAdmin() {
   return createClient(supabaseUrl, supabaseServiceKey || process.env.VITE_SUPABASE_ANON_KEY);
+}
+
+/**
+ * POST /api/admin/save-resource with { type: 'docx-preview-convert', fileName, dataBase64 }
+ *
+ * Runs one uploaded .docx through the same non-AI mechanical parser
+ * scripts/convert_docx_books_to_blocks.mjs and scripts/content/
+ * batch_enrich_books.mjs's own first step already use
+ * (parseDocxToSemanticModelNode, scripts/lib/docxParser.mjs) and returns
+ * the resulting book/chapters/blocks directly in the response -- no R2
+ * upload, no Supabase write, nothing persisted. Exists purely so the
+ * content team can try a real docx against the converter from the admin
+ * UI (DocxConverterPage.jsx) without running a CLI script.
+ *
+ * Real constraint, not fixed here: a deployed Vercel serverless function
+ * caps the request body at ~4.5MB, and real master book docx files run up
+ * to ~39MB (base64-encoding adds another ~33% on top). This works fully
+ * against the local dev server (vite.config.js's vercelApiPlugin runs
+ * this file's handler directly in Node with no such cap), but a large
+ * file will 413 against the actual deployed veernxt.in admin site --
+ * DocxConverterPage.jsx warns the client about this before sending
+ * rather than let it fail silently.
+ */
+async function handleDocxPreviewConvert(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { fileName, dataBase64 } = req.body || {};
+  if (!fileName || !dataBase64) {
+    return res.status(400).json({ ok: false, error: 'Missing fileName or dataBase64' });
+  }
+  try {
+    const buffer = Buffer.from(dataBase64, 'base64');
+    const { book } = await parseDocxToSemanticModelNode(buffer, fileName);
+    return res.status(200).json({ ok: true, book });
+  } catch (e) {
+    console.error('[admin/save-resource:docx-preview-convert] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
 }
 
 function getR2PublicUrl() {
@@ -1167,6 +1205,10 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'r2-upload') {
     return handleR2Upload(req, res);
+  }
+
+  if (req.body?.type === 'docx-preview-convert') {
+    return handleDocxPreviewConvert(req, res);
   }
 
   if (req.body?.type === 'books-list') {

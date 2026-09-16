@@ -47,6 +47,7 @@ import AdminLogin from './pages/admin/AdminLogin';
 import AdminShell from './pages/admin/AdminShell';
 import ExamsPage from './pages/admin/ExamsPage';
 import ConductingBodiesPage from './pages/admin/ConductingBodiesPage';
+import DocxConverterPage from './pages/admin/DocxConverterPage';
 import UsersPage from './pages/admin/UsersPage';
 import RolesPermissionsPage from './pages/admin/RolesPermissionsPage';
 import QuizzesPage from './pages/admin/QuizzesPage';
@@ -193,6 +194,7 @@ function App() {
           <Route path="/admin/exams" element={<ExamsPage />} />
           <Route path="/admin/books" element={<BooksPage />} />
           <Route path="/admin/conducting-bodies" element={<ConductingBodiesPage />} />
+          <Route path="/admin/docx-converter" element={<DocxConverterPage />} />
           <Route path="/admin/users" element={<UsersPage />} />
           <Route path="/admin/roles" element={<RolesPermissionsPage />} />
           <Route path="/admin/quizzes" element={<QuizzesPage />} />
