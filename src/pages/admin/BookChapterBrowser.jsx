@@ -29,6 +29,15 @@ async function postBooksAction(body) {
   return data;
 }
 
+async function fetchContentJson(url, fallbackBody) {
+  try {
+    const res = await fetch(`${url}${url.includes('?') ? '&' : '?'}t=${Date.now()}`, { cache: 'no-store' });
+    if (res.ok) return await res.json();
+  } catch {}
+  const data = await postBooksAction({ type: 'books-fetch-content', url, ...fallbackBody });
+  return data.data;
+}
+
 // Full-page chapter browser/editor for one book. R2 is the only source of
 // truth for book content -- this reads metadata.json/chapter JSON straight
 // from the book's storage_base_url (a public R2 URL, same as the
@@ -103,10 +112,12 @@ const BookChapterBrowser = () => {
         // or Cloudflare's cache) for up to a year after a real content edit.
         // The Find & Replace success handler below already did this for its
         // own re-fetch; this is the same fix applied to the initial load.
-        const meta = await fetch(`${data.storageBaseUrl}metadata.json?t=${Date.now()}`, { cache: 'no-store' }).then((r) => {
-          if (!r.ok) throw new Error(`HTTP ${r.status}`);
-          return r.json();
+        const meta = await fetchContentJson(`${data.storageBaseUrl}metadata.json`, {
+          storageBaseUrl: data.storageBaseUrl,
+          fileName: 'metadata.json',
+          resourceId: data.resourceId,
         });
+        if (!meta) throw new Error('Failed to load book metadata');
         setMetadata(meta);
         const chapters = meta.chapters || [];
         if (chapters.length > 0) setActiveOrder(chapters[0].order);
@@ -165,10 +176,12 @@ const BookChapterBrowser = () => {
       setDirty(false);
       setSaveError(null);
       try {
-        // Cache-bust -- same reason as the metadata.json fetch above.
-        const res = await fetch(`${book.storageBaseUrl}${activeChapterMeta.file_name}?t=${Date.now()}`, { cache: 'no-store' });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
+        const data = await fetchContentJson(`${book.storageBaseUrl}${activeChapterMeta.file_name}`, {
+          storageBaseUrl: book.storageBaseUrl,
+          fileName: activeChapterMeta.file_name,
+          resourceId: book.resourceId,
+        });
+        if (!data) throw new Error('Failed to load chapter content');
         setChapterData(data);
       } catch (err) {
         setChapterError(err.message);
@@ -675,16 +688,23 @@ const BookChapterBrowser = () => {
               }
             } else {
               try {
-                const meta = await fetch(`${book.storageBaseUrl}metadata.json?t=${Date.now()}`, { cache: 'no-store' }).then((r) => r.json());
-                setMetadata(meta);
+                const meta = await fetchContentJson(`${book.storageBaseUrl}metadata.json`, {
+                  storageBaseUrl: book.storageBaseUrl,
+                  fileName: 'metadata.json',
+                  resourceId: book.resourceId,
+                });
+                if (meta) setMetadata(meta);
               } catch {}
             }
 
             if (activeChapterMeta) {
               try {
-                const res = await fetch(`${book.storageBaseUrl}${activeChapterMeta.file_name}?t=${Date.now()}`, { cache: 'no-store' });
-                if (res.ok) {
-                  const data = await res.json();
+                const data = await fetchContentJson(`${book.storageBaseUrl}${activeChapterMeta.file_name}`, {
+                  storageBaseUrl: book.storageBaseUrl,
+                  fileName: activeChapterMeta.file_name,
+                  resourceId: book.resourceId,
+                });
+                if (data) {
                   setChapterData(data);
                   if (mode === 'edit') {
                     setEditTitle(data.title || '');

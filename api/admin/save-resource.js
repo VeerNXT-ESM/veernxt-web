@@ -468,14 +468,12 @@ async function handleBooksList(req, res) {
     const selectFields = 'resource_id,title,category,storage_base_url,chapter_count,status,level,state_ut,conducting_body';
 
     const fetchCategoryRows = async (cat) => {
-      let query = supabase
+      const { data: firstBatch, count, error } = await supabase
         .from('resources')
         .select(selectFields, { count: 'exact' })
-        .eq('category', cat);
-      if (cat !== 'Intro') {
-        query = query.eq('format', 'blocks');
-      }
-      const { data: firstBatch, count, error } = await query.range(0, 999);
+        .eq('category', cat)
+        .eq('format', 'blocks')
+        .range(0, 999);
 
       if (error) throw new Error(error.message);
       let catRows = firstBatch || [];
@@ -483,14 +481,14 @@ async function handleBooksList(req, res) {
       if (count && count > 1000) {
         const promises = [];
         for (let from = 1000; from < count; from += 1000) {
-          let pQuery = supabase
-            .from('resources')
-            .select(selectFields)
-            .eq('category', cat);
-          if (cat !== 'Intro') {
-            pQuery = pQuery.eq('format', 'blocks');
-          }
-          promises.push(pQuery.range(from, from + 999));
+          promises.push(
+            supabase
+              .from('resources')
+              .select(selectFields)
+              .eq('category', cat)
+              .eq('format', 'blocks')
+              .range(from, from + 999)
+          );
         }
         const results = await Promise.all(promises);
         for (const r of results) {
@@ -507,9 +505,8 @@ async function handleBooksList(req, res) {
     const groups = new Map();
     for (const r of rows) {
       if (!r.title) continue;
-      const isRowArchived = ['draft', 'archived'].includes((r.status || '').toLowerCase());
       const key = isTitleDedupedCategory(r.category)
-        ? `${r.category}::${r.title.trim().toLowerCase()}::${isRowArchived ? 'archived' : 'active'}`
+        ? `${r.category}::${r.title.trim().toLowerCase()}`
         : `${r.category}::id::${r.resource_id}`;
       if (!groups.has(key)) groups.set(key, { title: r.title.trim(), category: r.category, rows: [] });
       groups.get(key).rows.push(r);
@@ -599,6 +596,56 @@ async function handleBooksGet(req, res) {
     });
   } catch (e) {
     console.error('[admin/save-resource:books-get] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
+/**
+ * POST /api/admin/save-resource with
+ * { type: 'books-fetch-content', url?, storageBaseUrl?, resourceId?, fileName? }
+ *
+ * Fetches JSON content (metadata.json or chapter JSON) server-side from R2
+ * to bypass browser CORS and network restrictions.
+ */
+async function handleBooksFetchContent(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { url, storageBaseUrl, resourceId, fileName } = req.body || {};
+  let targetUrl = url;
+
+  if (!targetUrl && storageBaseUrl) {
+    const base = storageBaseUrl.replace(/\/+$/, '') + '/';
+    const rel = (fileName || 'metadata.json').replace(/^\/+/, '');
+    targetUrl = `${base}${rel}`;
+  }
+
+  if (!targetUrl && resourceId) {
+    try {
+      const supabase = getSupabaseAdmin();
+      const { data: row, error } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+      if (!error && row) {
+        const groupRows = await fetchBookRows(supabase, row);
+        const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
+        if (canonicalUrl) {
+          const base = canonicalUrl.replace(/\/+$/, '') + '/';
+          const rel = (fileName || 'metadata.json').replace(/^\/+/, '');
+          targetUrl = `${base}${rel}`;
+        }
+      }
+    } catch (err) {
+      console.warn('[admin/save-resource:books-fetch-content] failed to resolve resourceId:', err.message);
+    }
+  }
+
+  if (!targetUrl) {
+    return res.status(400).json({ ok: false, error: 'Missing url, storageBaseUrl, or valid resourceId' });
+  }
+
+  try {
+    const cleanUrl = targetUrl.includes('?') ? targetUrl : `${targetUrl}?t=${Date.now()}`;
+    const data = await fetchJson(cleanUrl);
+    return res.status(200).json({ ok: true, data });
+  } catch (e) {
+    console.error('[admin/save-resource:books-fetch-content] fetch failed for ' + targetUrl + ':', e.message);
     return res.status(500).json({ ok: false, error: e.message });
   }
 }
@@ -1130,32 +1177,21 @@ async function handleBooksSaveTags(req, res) {
  */
 async function handleBooksArchive(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  const { resourceId, excludeResourceId } = req.body || {};
+  const { resourceId } = req.body || {};
   if (!resourceId) return res.status(400).json({ ok: false, error: 'Missing resourceId' });
   if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
     if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    if (!row) {
-      await supabase.from('resources').update({ status: 'Draft', updated_at: new Date().toISOString() }).eq('resource_id', resourceId);
-      invalidateBooksCache();
-      return res.status(200).json({ ok: true, status: 'Draft' });
-    }
-
-    let updateQuery = supabase.from('resources').update({ status: 'Draft', updated_at: new Date().toISOString() });
-    if (row.storage_base_url) {
-      updateQuery = updateQuery.eq('category', row.category).eq('storage_base_url', row.storage_base_url);
-    } else {
-      updateQuery = updateQuery.eq('resource_id', row.resource_id);
-    }
-    if (excludeResourceId) {
-      updateQuery = updateQuery.neq('resource_id', excludeResourceId);
-    }
-    await updateQuery;
-    await supabase.from('resources').update({ status: 'Draft', updated_at: new Date().toISOString() }).eq('resource_id', row.resource_id);
+    const { error: updateError } = await bookRowsFilter(
+      supabase.from('resources').update({ status: 'Draft', updated_at: new Date().toISOString() }),
+      row
+    );
+    if (updateError) throw new Error(updateError.message);
 
     invalidateBooksCache();
     return res.status(200).json({ ok: true, status: 'Draft' });
@@ -1178,18 +1214,15 @@ async function handleBooksUnarchive(req, res) {
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    let updateQuery = supabase.from('resources').update({ status: 'Published', updated_at: new Date().toISOString() });
-    if (row.storage_base_url) {
-      updateQuery = updateQuery.eq('category', row.category).eq('storage_base_url', row.storage_base_url);
-    } else {
-      updateQuery = updateQuery.eq('resource_id', row.resource_id);
-    }
-    await updateQuery;
-    await supabase.from('resources').update({ status: 'Published', updated_at: new Date().toISOString() }).eq('resource_id', row.resource_id);
+    const { error: updateError } = await bookRowsFilter(
+      supabase.from('resources').update({ status: 'Published', updated_at: new Date().toISOString() }),
+      row
+    );
+    if (updateError) throw new Error(updateError.message);
 
     invalidateBooksCache();
     return res.status(200).json({ ok: true, status: 'Published' });
@@ -1358,9 +1391,7 @@ async function handleBooksFindCount(req, res) {
             totalMatches += count;
             chapterMatches[chapterMeta.file_name] = count;
           }
-        } catch {
-          // Ignore missing or unparseable individual chapter files
-        }
+        } catch {}
       })
     );
 
@@ -1404,6 +1435,10 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-get') {
     return handleBooksGet(req, res);
+  }
+
+  if (req.body?.type === 'books-fetch-content') {
+    return handleBooksFetchContent(req, res);
   }
 
   if (req.body?.type === 'books-issues') {
