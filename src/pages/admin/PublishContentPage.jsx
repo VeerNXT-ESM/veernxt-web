@@ -77,6 +77,7 @@ const PublishContentPage = () => {
   const [level, setLevel] = useState('central');
   const [regions, setRegions] = useState([]);
   const [regionId, setRegionId] = useState('');
+  const [examCategory, setExamCategory] = useState(''); // lc_exams.category -- Banking/Agriculture/Police/etc, same ~21 values ExamsPage.jsx's own filter uses
   const [allExamsInScope, setAllExamsInScope] = useState([]); // every exam matching level(+region) -- the actual dropdown list
   const [loadingExams, setLoadingExams] = useState(false);
   const [examQuery, setExamQuery] = useState(''); // multi-select mode only: client-side filter over allExamsInScope
@@ -145,6 +146,7 @@ const PublishContentPage = () => {
   const handleLevelChange = (e) => {
     setLevel(e.target.value);
     setRegionId('');
+    setExamCategory('');
     setExamQuery('');
   };
 
@@ -270,7 +272,7 @@ const PublishContentPage = () => {
       setLoadingExams(true);
       let query = supabase
         .from('lc_exams')
-        .select('id, name, conducting_body:lc_conducting_bodies(name), region:lc_regions!inner(name, level)')
+        .select('id, name, category, conducting_body:lc_conducting_bodies(name), region:lc_regions!inner(name, level)')
         .eq('region.level', level)
         .order('name')
         .limit(1000);
@@ -284,14 +286,16 @@ const PublishContentPage = () => {
     return () => { cancelled = true; clearTimeout(t); };
   }, [level, regionId]);
 
-  const examOptions = allExamsInScope.map((exam) => ({
+  const examCategoryOptions = [...new Set(allExamsInScope.map((exam) => (exam.category || '').trim()).filter(Boolean))].sort();
+  const examsInCategory = examCategory ? allExamsInScope.filter((exam) => (exam.category || '').trim() === examCategory) : allExamsInScope;
+  const examOptions = examsInCategory.map((exam) => ({
     value: exam.id,
     label: exam.conducting_body?.name ? `${exam.name} — ${exam.conducting_body.name}` : exam.name,
   }));
   const filteredExamsForMulti = (() => {
     const q = examQuery.trim().toLowerCase();
-    if (!q) return allExamsInScope;
-    return allExamsInScope.filter((exam) => exam.name.toLowerCase().includes(q) || exam.conducting_body?.name?.toLowerCase().includes(q));
+    if (!q) return examsInCategory;
+    return examsInCategory.filter((exam) => exam.name.toLowerCase().includes(q) || exam.conducting_body?.name?.toLowerCase().includes(q));
   })();
 
   const fetchExistingIntro = async (examId) => {
@@ -698,6 +702,15 @@ const PublishContentPage = () => {
                       />
                     </div>
                   )}
+                  <div style={{ minWidth: 190 }}>
+                    <Select
+                      searchable
+                      value={examCategory}
+                      onChange={(e) => setExamCategory(e.target.value)}
+                      placeholder={`All Categories (${examCategoryOptions.length})`}
+                      options={[{ value: '', label: 'All Categories' }, ...examCategoryOptions.map((c) => ({ value: c, label: c }))]}
+                    />
+                  </div>
                 </div>
 
                 {!isMulti ? (
@@ -713,7 +726,7 @@ const PublishContentPage = () => {
                       if (exam) pickExam(exam);
                     }}
                     disabled={loadingExams}
-                    placeholder={loadingExams ? 'Loading exams…' : `Select an exam (${allExamsInScope.length} in scope)…`}
+                    placeholder={loadingExams ? 'Loading exams…' : `Select an exam (${examsInCategory.length} in scope)…`}
                     options={examOptions}
                   />
                 ) : (
@@ -734,7 +747,7 @@ const PublishContentPage = () => {
                         type="text"
                         value={examQuery}
                         onChange={(e) => setExamQuery(e.target.value)}
-                        placeholder={loadingExams ? 'Loading exams…' : `Filter ${allExamsInScope.length} exam(s) in scope…`}
+                        placeholder={loadingExams ? 'Loading exams…' : `Filter ${examsInCategory.length} exam(s) in scope…`}
                         className="lc-input"
                         style={{ flex: 1 }}
                       />

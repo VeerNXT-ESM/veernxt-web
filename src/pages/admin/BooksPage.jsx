@@ -881,7 +881,7 @@ const BooksPage = () => {
         <LinkExamsDrawer
           book={linkExamsSource}
           onClose={() => setLinkExamsSource(null)}
-          onLinked={(addedCount) => {
+          onLinked={(netChange) => {
             setBooksByCategory((prev) => {
               const catBooks = prev[linkExamsSource.category];
               if (!catBooks) return prev;
@@ -889,7 +889,7 @@ const BooksPage = () => {
                 ...prev,
                 [linkExamsSource.category]: catBooks.map((x) => (
                   x.resourceId === linkExamsSource.resourceId
-                    ? { ...x, duplicateRowCount: x.duplicateRowCount + addedCount }
+                    ? { ...x, duplicateRowCount: x.duplicateRowCount + netChange }
                     : x
                 )),
               };
