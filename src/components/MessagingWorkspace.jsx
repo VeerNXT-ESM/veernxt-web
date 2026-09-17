@@ -627,7 +627,8 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           display: grid;
           grid-template-columns: 340px 1fr;
           height: calc(100vh - 120px);
-          max-width: 1200px;
+          width: calc(100% - clamp(2.5rem, 6vw, 5rem));
+          max-width: 1800px;
           margin: 2rem auto;
           background: white;
           border-radius: 20px;

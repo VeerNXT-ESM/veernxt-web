@@ -455,9 +455,10 @@ const FindCandidates = () => {
 
       <style dangerouslySetInnerHTML={{ __html: `
         .employer-portal-view {
-          max-width: 1200px;
+          width: 100%;
+          max-width: 1800px;
           margin: 0 auto;
-          padding: 2.5rem 1.5rem;
+          padding: 2.5rem clamp(1.25rem, 3vw, 2.5rem);
         }
         .employer-portal-header {
           margin-bottom: 2rem;

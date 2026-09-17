@@ -24,7 +24,7 @@
 .legal-aid-cell .eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; color: #9b742a; }
 .legal-aid-cell h1 { font-size: 44px; line-height: 1.1; letter-spacing: -.035em; margin: 12px 0 14px; }
 
-.legal-aid-cell .flow { max-width: 1400px; margin: auto; padding: 28px; display: grid; grid-template-columns: 250px 1fr; }
+.legal-aid-cell .flow { width: 100%; max-width: 1800px; margin: auto; padding: 28px clamp(1.25rem, 3vw, 2.5rem); display: grid; grid-template-columns: 250px 1fr; }
 .legal-aid-cell .side { background: var(--green); color: white; border-radius: 28px 0 0 28px; padding: 28px; }
 .legal-aid-cell .exit { border: 0; background: none; color: #c7d3cb; }
 .legal-aid-cell .side h2 { font-size: 24px; line-height: 1.25; }

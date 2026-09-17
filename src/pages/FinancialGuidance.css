@@ -39,7 +39,7 @@ html {
 .finance-site-root a { color: inherit; text-decoration: none; }
 
 /* ── UTILITIES ─────────────────────────────────────────────── */
-.container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.container { width: 100%; max-width: 1800px; margin: 0 auto; padding: 0 clamp(1.25rem, 3vw, 2.5rem); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 .badge {
   display: inline-block; padding: 3px 10px;
@@ -59,7 +59,8 @@ html {
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 10px 64px; max-width: 1280px; margin: 0 auto;
+  width: 100%;
+  padding: 10px clamp(1.25rem, 3vw, 2.5rem);
   gap: 20px;
 }
 .nav-logo {
@@ -124,8 +125,8 @@ html {
   position: relative; z-index: 2;
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 48px; align-items: center;
-  max-width: 1080px; margin: 0 auto;
-  padding: 80px 20px;
+  width: 100%; max-width: 1800px; margin: 0 auto;
+  padding: 80px clamp(1.25rem, 3vw, 2.5rem);
 }
 .hero-left { padding-right: 20px; }
 .hero-eyebrow {
@@ -664,7 +665,8 @@ html {
 
 /* ── INVESTOR PORTAL (PHASE.PORTAL) ────────────────────────── */
 .portal-container {
-  max-width: 1080px; margin: 40px auto 80px; padding: 0 20px;
+  width: 100%; max-width: 1800px; margin: 40px auto 80px;
+  padding: 0 clamp(1.25rem, 3vw, 2.5rem);
   text-align: center;
 }
 .portal-back-btn {

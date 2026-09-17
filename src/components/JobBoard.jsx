@@ -498,9 +498,10 @@ const JobBoard = () => {
 
       <style dangerouslySetInnerHTML={{ __html: `
         .jobs-container {
-          padding: 4rem 2rem;
-          max-width: 1200px;
+          width: 100%;
+          max-width: 1800px;
           margin: 0 auto;
+          padding: 4rem clamp(1.25rem, 3vw, 2.5rem);
         }
         .jobs-header {
           display: flex;

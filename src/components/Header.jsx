@@ -146,10 +146,8 @@ const Header = () => {
           box-shadow: 0 4px 12px rgba(0,0,0,0.02);
         }
         .header-container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 1.5rem;
           width: 100%;
+          padding: 0 clamp(1.25rem, 3vw, 2.5rem);
           display: flex;
           align-items: center;
           justify-content: space-between;

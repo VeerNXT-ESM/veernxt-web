@@ -353,9 +353,10 @@ const RewardsCenter = () => {
           min-height: calc(100vh - 64px);
         }
         .rewards-wrapper {
-          padding: 3rem 1.5rem;
-          max-width: 1100px;
+          width: 100%;
+          max-width: 1800px;
           margin: 0 auto;
+          padding: 2.5rem clamp(1.25rem, 3vw, 2.5rem);
         }
         .rewards-hero {
           display: flex;

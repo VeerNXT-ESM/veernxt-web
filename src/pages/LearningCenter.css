@@ -8,9 +8,10 @@
    in the main content flow, not a side rail; it's the primary navigation
    for this page, not a secondary filter. */
 .learning-layout-full {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1800px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem clamp(1.25rem, 3vw, 2.5rem);
 }
 
 /* ── Release 1: Current Mission Hero Banner ── */
