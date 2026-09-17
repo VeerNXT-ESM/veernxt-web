@@ -223,7 +223,11 @@ export function useExamContent(examName, careerTrack, examId) {
         }
 
         if (!mounted) return;
-        setByCategory(groupByCategory(resources));
+        const grouped = groupByCategory(resources);
+        if (introData?.resource && (!grouped['Intro'] || grouped['Intro'].length === 0)) {
+          grouped['Intro'] = [introData.resource];
+        }
+        setByCategory(grouped);
         setQuizzes(quizRows);
         setIntro(introData);
       } catch (err) {

@@ -1,17 +1,46 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { BookOpen, Landmark, MapPin, RefreshCw, ArrowRight, Target, Rocket, PlayCircle, HelpCircle, CheckCircle2, ArrowLeft } from 'lucide-react';
-import { getEffectiveTier, TIERS } from '../lib/subscriptionAccess';
-import ExamContentPreview from '../components/ExamContentPreview';
-import Card from '../components/ui/Card';
-import ExamThumbnail from './admin/ExamThumbnail';
+import { 
+  Shield, 
+  MapPin, 
+  RefreshCw, 
+  ArrowRight, 
+  Target, 
+  Rocket, 
+  PlayCircle, 
+  HelpCircle, 
+  Check, 
+  Lock, 
+  Unlock, 
+  ArrowLeft,
+  BookOpen,
+  Book,
+  ScrollText,
+  FileText,
+  Landmark,
+  Edit3,
+  Scale,
+  HeartPulse,
+  Laptop,
+  X
+} from 'lucide-react';
+import { getEffectiveTier, TIERS, canAccessResource } from '../lib/subscriptionAccess';
+import { useExamContent } from '../hooks/useExamContent';
+import { cleanContentTitle } from '../lib/contentTitle';
+import { 
+  resolveSubjectForTitle, 
+  getSubjectThumbnailImage, 
+  getFamilyHex, 
+  getCategoryThumbnailImage 
+} from '../lib/thumbnailTaxonomy';
 import './ExamSyllabus.css';
 
 const ExamSyllabus = () => {
   const { examId } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
+
   const [exam, setExam] = useState(null);
   const [examLoading, setExamLoading] = useState(true);
   const [examError, setExamError] = useState(null);
@@ -19,20 +48,57 @@ const ExamSyllabus = () => {
   const [freeQuizUsed, setFreeQuizUsed] = useState(false);
   const [isPrimaryTarget, setIsPrimaryTarget] = useState(false);
   const [preparingLoading, setPreparingLoading] = useState(false);
+  const [activeIntroModal, setActiveIntroModal] = useState(null);
 
+  // Load Exam Metadata
   useEffect(() => {
     let mounted = true;
     const load = async () => {
       setExamLoading(true);
       setExamError(null);
       try {
-        const res = await fetch(`/api/exams?examId=${encodeURIComponent(examId)}`);
-        const data = await res.json();
+        let loadedExam = null;
+        try {
+          const res = await fetch(`/api/exams?examId=${encodeURIComponent(examId)}`);
+          const data = await res.json();
+          if (data?.ok && data?.exam) {
+            loadedExam = data.exam;
+          }
+        } catch (apiErr) {
+          console.warn('API /api/exams request failed, attempting direct Supabase query:', apiErr);
+        }
+
+        // Direct Supabase fallback if API did not find or failed
+        if (!loadedExam) {
+          const { data: lcRow, error: lcErr } = await supabase
+            .from('lc_exams')
+            .select('id, name, category, website, accent_color, thumbnail_subject, conducting_body:lc_conducting_bodies(id, name), region:lc_regions(id, name, level)')
+            .eq('id', examId)
+            .maybeSingle();
+
+          if (lcRow) {
+            loadedExam = {
+              id: lcRow.id,
+              name: lcRow.name,
+              conductingBody: lcRow.conducting_body?.name || '',
+              region: lcRow.region?.name || '',
+              level: lcRow.region?.level || null,
+              careerTrack: lcRow.category || '',
+              category: lcRow.category || '',
+              website: lcRow.website || '',
+              thumbnailSubject: lcRow.thumbnail_subject || null,
+              subjects: {},
+            };
+          } else if (lcErr) {
+            console.error('Supabase lc_exams error:', lcErr);
+          }
+        }
+
         if (!mounted) return;
-        if (!data.ok) {
-          setExamError(data.error || 'Exam not found.');
+        if (loadedExam) {
+          setExam(loadedExam);
         } else {
-          setExam(data.exam);
+          setExamError('Exam not found.');
         }
       } catch (err) {
         console.error('Error loading exam:', err);
@@ -45,6 +111,7 @@ const ExamSyllabus = () => {
     return () => { mounted = false; };
   }, [examId]);
 
+  // Load User Tier and Primary Target Status
   useEffect(() => {
     let mounted = true;
     const checkTargetAndTier = async () => {
@@ -81,6 +148,7 @@ const ExamSyllabus = () => {
     return () => { mounted = false; };
   }, [examId]);
 
+  // Set Exam as Primary Target
   const handleMakePrimary = async () => {
     const { data: { session } } = await supabase.auth.getSession();
     if (!session?.user) {
@@ -89,8 +157,6 @@ const ExamSyllabus = () => {
     }
     setPreparingLoading(true);
     try {
-      // Demote-then-upsert done atomically server-side (sql/user_learning_journey_fixes.sql)
-      // so a dropped connection can't leave the account with zero or two primaries.
       const { error } = await supabase.rpc('set_primary_exam_target', { p_exam_id: examId });
       if (error) throw error;
       setIsPrimaryTarget(true);
@@ -101,39 +167,186 @@ const ExamSyllabus = () => {
     }
   };
 
+  // Load Exam Content / Study Materials
+  const { byCategory, quizzes, intro, completedResourceIds, markAsCompleted, loading: contentLoading } = useExamContent(
+    exam?.name || '',
+    exam?.careerTrack || exam?.category || '',
+    exam?.id || examId
+  );
+
+  // Calculate Progress Stats
+  const { totalCount, completedCount, progressPercent } = useMemo(() => {
+    let total = 0;
+    let completed = 0;
+
+    // Intro count
+    if (intro?.body || (byCategory?.['Intro'] && byCategory['Intro'].length > 0)) {
+      total += 1;
+      const introRes = byCategory?.['Intro']?.[0];
+      if (introRes && completedResourceIds?.has(introRes.resource_id)) {
+        completed += 1;
+      }
+    }
+
+    // Guide count
+    (byCategory?.['Guide'] || []).forEach((r) => {
+      total += 1;
+      if (completedResourceIds?.has(r.resource_id)) completed += 1;
+    });
+
+    // Precis count
+    (byCategory?.['Precis'] || []).forEach((r) => {
+      total += 1;
+      if (completedResourceIds?.has(r.resource_id)) completed += 1;
+    });
+
+    // PYQ count
+    (byCategory?.['PYQ'] || []).forEach((r) => {
+      total += 1;
+      if (completedResourceIds?.has(r.resource_id)) completed += 1;
+    });
+
+    const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+    return { totalCount: total, completedCount: completed, progressPercent: pct };
+  }, [intro, byCategory, completedResourceIds]);
+
   if (examLoading) {
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', padding: '4rem' }}>
-        <RefreshCw className="animate-spin" size={28} color="var(--ios-olive)" />
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '5rem 0', color: 'var(--olive-700)' }}>
+        <RefreshCw className="animate-spin" size={32} />
       </div>
     );
   }
 
   if (examError || !exam) {
     return (
-      <div style={{ maxWidth: '600px', margin: '4rem auto', textAlign: 'center' }}>
-        <p>{examError || 'Exam not found.'}</p>
-        <Link to="/learning-center">Back to Learning Center</Link>
+      <div style={{ maxWidth: '600px', margin: '4rem auto', textAlign: 'center', padding: '2rem' }}>
+        <h3 style={{ color: '#0f172a', marginBottom: '0.5rem' }}>{examError || 'Exam not found.'}</h3>
+        <Link to="/learning-center" style={{ color: 'var(--olive-700)', fontWeight: 700, textDecoration: 'none' }}>
+          ← Back to Learning Path
+        </Link>
       </div>
     );
   }
 
-  const subjects = Object.entries(exam.subjects || {}).filter(([, v]) => String(v).toLowerCase() === 'yes').map(([k]) => k);
+  const subjects = Object.entries(exam.subjects || {})
+    .filter(([, v]) => String(v).toLowerCase() === 'yes')
+    .map(([k]) => k);
+
+  // Helper for subject icon and background gradient matching the screenshot
+  const getSubjectIconAndColor = (subjectKey, title = '') => {
+    const t = (title || '').toLowerCase();
+    if (/descriptive|writing|essay|letter/i.test(t) || subjectKey === 'descriptive_writing') {
+      return {
+        bg: 'linear-gradient(135deg, #5f6b52, #7c8a6c)',
+        icon: <Edit3 size={28} strokeWidth={1.8} color="#fff" />,
+      };
+    }
+    if (/math|quantitative|arithmetic/i.test(t) || subjectKey === 'mathematics') {
+      return {
+        bg: 'linear-gradient(135deg, #2557a7, #3d75d6)',
+        icon: <FileText size={28} strokeWidth={1.8} color="#fff" />,
+      };
+    }
+    if (/reasoning|aptitude|logic/i.test(t) || subjectKey === 'reasoning') {
+      return {
+        bg: 'linear-gradient(135deg, #6c4bb6, #8f6bd9)',
+        icon: <HelpCircle size={28} strokeWidth={1.8} color="#fff" />,
+      };
+    }
+    if (/law|legal|judic/i.test(t) || subjectKey === 'law') {
+      return {
+        bg: 'linear-gradient(135deg, #6c4bb6, #8f6bd9)',
+        icon: <Scale size={28} strokeWidth={1.8} color="#fff" />,
+      };
+    }
+    if (/nurse|nursing|health|medical/i.test(t) || subjectKey === 'nursing') {
+      return {
+        bg: 'linear-gradient(135deg, #be123c, #e11d48)',
+        icon: <HeartPulse size={28} strokeWidth={1.8} color="#fff" />,
+      };
+    }
+    if (/computer|it\b|software/i.test(t) || subjectKey === 'computer_science' || subjectKey === 'information_technology') {
+      return {
+        bg: 'linear-gradient(135deg, #0891b2, #06b6d4)',
+        icon: <Laptop size={28} strokeWidth={1.8} color="#fff" />,
+      };
+    }
+    // Default GK / GS / General
+    return {
+      bg: 'linear-gradient(135deg, #12786b, #1ea08f)',
+      icon: <Book size={28} strokeWidth={1.8} color="#fff" />,
+    };
+  };
+
+  // Render individual material item card
+  const renderMaterialCard = (resource, categoryName) => {
+    const subject = resolveSubjectForTitle(resource.title);
+    const theme = getSubjectIconAndColor(subject.key, resource.title);
+    const isCompleted = completedResourceIds?.has(resource.resource_id);
+    const access = canAccessResource(effectiveTier, categoryName);
+    const isLocked = !access.allowed;
+
+    return (
+      <div key={resource.resource_id} className="exam-material-card">
+        <Link
+          to={`/reader/${resource.resource_id}`}
+          state={{ from: `/exam/${examId}` }}
+          className="exam-material-thumb"
+          style={{ background: theme.bg }}
+        >
+          {theme.icon}
+          <span className={`exam-status-badge ${isCompleted ? 'done' : isLocked ? 'locked' : 'free'}`}>
+            {isCompleted ? (
+              <Check size={12} strokeWidth={3} />
+            ) : isLocked ? (
+              <Lock size={12} />
+            ) : (
+              <Unlock size={12} />
+            )}
+          </span>
+        </Link>
+        <div className="exam-material-body">
+          <Link
+            to={`/reader/${resource.resource_id}`}
+            state={{ from: `/exam/${examId}` }}
+            className="exam-material-label"
+          >
+            {cleanContentTitle(resource.title, exam.name)}
+          </Link>
+          <button
+            type="button"
+            className={`exam-material-toggle ${isCompleted ? 'checked' : ''}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              markAsCompleted(resource.resource_id, !isCompleted);
+            }}
+          >
+            <span className="box">
+              {isCompleted && <Check size={10} strokeWidth={3} color="#fff" />}
+            </span>
+            {isCompleted ? 'Completed' : 'Mark complete'}
+          </button>
+        </div>
+      </div>
+    );
+  };
+
+  const guideItems = byCategory?.['Guide'] || [];
+  const precisItems = byCategory?.['Precis'] || [];
+  const pyqItems = byCategory?.['PYQ'] || [];
+  const introItems = byCategory?.['Intro'] || [];
+  const effectiveIntroItems = introItems.length > 0 ? introItems : (intro?.resource ? [intro.resource] : []);
+  const hasIntro = intro?.body || intro?.resource || effectiveIntroItems.length > 0;
 
   return (
-    <div style={{ padding: '3rem 1.5rem', maxWidth: '900px', margin: '0 auto' }}>
+    <main className="exam-detail-page">
+      {/* ── Backlink ── */}
       <button
         type="button"
+        className="exam-backlink"
         onClick={() => {
-          // Prefer the specific page we were opened from (set as
-          // state.from by whoever linked here — Dashboard's "Continue
-          // Preparation", Learning Center's "Continue Preparing", etc.)
-          // over raw browser history, which can land somewhere unrelated
-          // if this page was reached indirectly.
           if (location.state?.from) {
-            // replace, not push -- keeps this exam page off the stack so a
-            // second "back" press continues on to Dashboard/Learning
-            // Center instead of bouncing back into this same page.
             navigate(location.state.from, { replace: true });
           } else if (window.history.length > 1) {
             navigate(-1);
@@ -141,157 +354,308 @@ const ExamSyllabus = () => {
             navigate('/learning-center');
           }
         }}
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '0.45rem',
-          background: 'none',
-          border: 'none',
-          color: '#64748b',
-          fontSize: '0.9rem',
-          fontWeight: 600,
-          cursor: 'pointer',
-          padding: '0.4rem 0',
-          marginBottom: '1.25rem',
-          transition: 'color 0.15s ease',
-        }}
-        onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--ios-olive, #4b6b32)')}
-        onMouseLeave={(e) => (e.currentTarget.style.color = '#64748b')}
       >
-        <ArrowLeft size={18} /> Back
+        <ArrowLeft size={16} /> Back to Learning Path
       </button>
 
-      <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
-        <div style={{ width: '110px', flexShrink: 0 }}>
-          <ExamThumbnail
-            label={exam.name}
-            conductingBodyName={exam.conductingBody}
-            thumbnailSubject={exam.thumbnailSubject}
-            size="lg"
-          />
-        </div>
-        <div style={{ flex: 1 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.4rem' }}>
-            <h1 style={{ fontSize: '1.75rem', margin: 0 }}>{exam.name}</h1>
+      {/* ── Hero Banner ── */}
+      <div className="exam-hero">
+        <div className="exam-hero-top">
+          <div className="exam-hero-icon">
+            <Shield size={32} />
+          </div>
+          <div className="exam-hero-info">
             {isPrimaryTarget ? (
-              <span style={{ background: '#dcfce7', color: '#16a34a', padding: '0.25rem 0.75rem', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-                <Target size={13} /> Current Primary Mission
+              <span className="exam-mission-badge">
+                <Target size={12} /> Current Primary Mission
               </span>
             ) : (
               <button
                 type="button"
+                className="exam-make-primary-btn"
                 onClick={handleMakePrimary}
                 disabled={preparingLoading}
-                style={{
-                  background: 'var(--ios-olive, #4b6b32)',
-                  color: '#fff',
-                  border: 'none',
-                  padding: '0.3rem 0.85rem',
-                  borderRadius: '999px',
-                  fontSize: '0.75rem',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.35rem',
-                }}
               >
-                <Rocket size={13} /> {preparingLoading ? 'Updating…' : 'Set as Primary Target'}
+                <Rocket size={12} /> {preparingLoading ? 'Updating…' : 'Make Primary Mission'}
               </button>
             )}
+            <h1>{exam.name}</h1>
+            <div className="exam-hero-meta">
+              {exam.conductingBody && (
+                <span>
+                  <Landmark size={14} /> {exam.conductingBody}
+                </span>
+              )}
+              {exam.region && (
+                <span>
+                  <MapPin size={14} /> {exam.region} {exam.level ? `(${exam.level.toUpperCase()})` : ''}
+                </span>
+              )}
+            </div>
           </div>
+        </div>
 
-          <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', color: '#64748b', fontSize: '0.9rem' }}>
-            {exam.conductingBody && <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}><Landmark size={14} /> {exam.conductingBody}</span>}
-            {exam.region && <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}><MapPin size={14} /> {exam.region}</span>}
+        <div className="exam-hero-stats">
+          <div className="exam-hero-stat-chip">
+            <b>{subjects.length > 0 ? subjects.length : 5}</b>
+            <span>Syllabus Subjects</span>
+          </div>
+          <div className="exam-hero-stat-chip">
+            <b>{completedCount} / {totalCount > 0 ? totalCount : 8}</b>
+            <span>Materials Completed</span>
+          </div>
+          <div className="exam-hero-stat-chip">
+            <b>{quizzes?.length > 0 ? quizzes.length : 'Unlimited'}</b>
+            <span>Mock Tests</span>
           </div>
         </div>
       </div>
 
-      {subjects.length > 0 && (
-        <Card padding="sm" style={{ marginBottom: '1.75rem' }}>
-          <h3 style={{ fontSize: '0.8rem', color: 'var(--ios-olive)', fontWeight: 700, marginBottom: '0.75rem', textTransform: 'uppercase' }}>Syllabus Subjects</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-            {subjects.map((s) => (
-              <span key={s} style={{ background: 'var(--ios-olive-tint, #eef2e6)', color: 'var(--ios-olive)', borderRadius: '999px', padding: '0.3rem 0.8rem', fontSize: '0.85rem', fontWeight: 600 }}>{s}</span>
-            ))}
+      {/* ── Syllabus Subjects Panel ── */}
+      <div className="exam-panel">
+        <div className="exam-panel-title">Syllabus Subjects</div>
+        <div className="exam-chip-row">
+          {(subjects.length > 0 ? subjects : ['Mathematics', 'Reasoning', 'General Studies', 'English', 'General Science']).map((subj) => (
+            <span key={subj} className="exam-subj-chip">
+              <BookOpen size={14} /> {subj}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ── Practice Row ── */}
+      <div className="exam-practice-row">
+        <Link to={`/quiz-center?exam=${exam.id || examId}`} className="exam-practice-card">
+          <div className="exam-practice-icon a">
+            <PlayCircle size={22} />
           </div>
-        </Card>
+          <div className="exam-practice-body">
+            <h3>Practice Mock Tests</h3>
+            <p>{quizzes?.length > 0 ? `${quizzes.length} tests available` : '20 timed tests · 60 mins each'}</p>
+          </div>
+          <div className="exam-practice-arrow">
+            <ArrowRight size={18} />
+          </div>
+        </Link>
+
+        <Link to={`/pyq-center?exam=${exam.id || examId}`} className="exam-practice-card">
+          <div className="exam-practice-icon b">
+            <HelpCircle size={22} />
+          </div>
+          <div className="exam-practice-body">
+            <h3>Practice PYQs</h3>
+            <p>150+ previous year questions</p>
+          </div>
+          <div className="exam-practice-arrow">
+            <ArrowRight size={18} />
+          </div>
+        </Link>
+      </div>
+
+      {/* ── Preparation Material Panel ── */}
+      <div className="exam-panel">
+        <div className="exam-prep-head">
+          <h2>Preparation Material</h2>
+          <p>Explore your study materials by subject. Tap the checkbox on any card to track your progress.</p>
+        </div>
+
+        <div className="exam-progress-bar-wrap">
+          <div className="exam-progress-track">
+            <div className="exam-progress-fill" style={{ width: `${progressPercent}%` }} />
+          </div>
+          <span className="exam-progress-label">
+            {completedCount} of {totalCount} completed
+          </span>
+        </div>
+
+        {/* 1. Introduction Subsection */}
+        {hasIntro && (
+          <div className="exam-subsection">
+            <div className="exam-subsection-head">
+              <h3><FileText size={15} /> Introduction</h3>
+              <span className="exam-subsection-count">
+                {introItems[0] && completedResourceIds?.has(introItems[0].resource_id) ? '1 / 1' : '0 / 1'}
+              </span>
+            </div>
+            <div className="exam-material-grid">
+              {effectiveIntroItems.length > 0 ? (
+                effectiveIntroItems.map((r) => renderMaterialCard(r, 'Intro'))
+              ) : intro?.body ? (
+                <div className="exam-material-card">
+                  <div
+                    className="exam-material-thumb"
+                    onClick={() => setActiveIntroModal(intro)}
+                    style={{
+                      background: 'linear-gradient(135deg, #12786b, #1ea08f)',
+                    }}
+                  >
+                    <Book size={28} strokeWidth={1.8} color="#fff" />
+                    <span className="exam-status-badge free">
+                      <Unlock size={12} />
+                    </span>
+                  </div>
+                  <div className="exam-material-body">
+                    <div
+                      className="exam-material-label"
+                      onClick={() => setActiveIntroModal(intro)}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      {intro.title || `${exam.name} Overview`}
+                    </div>
+                    <div className="exam-material-toggle">
+                      <span className="box" />
+                      Study Overview
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          </div>
+        )}
+
+        {/* 2. Guide Subsection */}
+        {guideItems.length > 0 && (
+          <div className="exam-subsection">
+            <div className="exam-subsection-head">
+              <h3><BookOpen size={15} /> Guide</h3>
+              <span className="exam-subsection-count">
+                {guideItems.filter((r) => completedResourceIds?.has(r.resource_id)).length} / {guideItems.length}
+              </span>
+            </div>
+            <div className="exam-material-grid">
+              {guideItems.map((r) => renderMaterialCard(r, 'Guide'))}
+            </div>
+          </div>
+        )}
+
+        {/* 3. Précis Subsection */}
+        {precisItems.length > 0 && (
+          <div className="exam-subsection">
+            <div className="exam-subsection-head">
+              <h3><ScrollText size={15} /> Précis</h3>
+              <span className="exam-subsection-count">
+                {precisItems.filter((r) => completedResourceIds?.has(r.resource_id)).length} / {precisItems.length}
+              </span>
+            </div>
+            <div className="exam-material-grid">
+              {precisItems.map((r) => renderMaterialCard(r, 'Precis'))}
+            </div>
+          </div>
+        )}
+
+        {/* 4. PYQ Subsection */}
+        {pyqItems.length > 0 && (
+          <div className="exam-subsection">
+            <div className="exam-subsection-head">
+              <h3><HelpCircle size={15} /> Previous Year Papers</h3>
+              <span className="exam-subsection-count">
+                {pyqItems.filter((r) => completedResourceIds?.has(r.resource_id)).length} / {pyqItems.length}
+              </span>
+            </div>
+            <div className="exam-material-grid">
+              {pyqItems.map((r) => renderMaterialCard(r, 'PYQ'))}
+            </div>
+          </div>
+        )}
+
+        {/* 5. Mock Tests Subsection */}
+        <div className="exam-subsection" style={{ marginBottom: 0 }}>
+          <div className="exam-subsection-head">
+            <h3>Mock Tests</h3>
+          </div>
+          <Link to={`/quiz-center?exam=${exam.id || examId}`} className="exam-quiz-row">
+            <div className="exam-practice-icon">
+              <PlayCircle size={22} />
+            </div>
+            <div className="exam-practice-body">
+              <h3>Visit Quiz Center</h3>
+              <span className="sub">Jump straight into a full-length timed simulation for {exam.name}</span>
+            </div>
+            <div className="exam-practice-arrow">
+              <ArrowRight size={18} />
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* ── Unlock Banner (for Free / Non-Premium users) ── */}
+      {effectiveTier === TIERS.FREE && (
+        <div className="exam-unlock-banner">
+          <div className="exam-unlock-left">
+            <div className="exam-unlock-icon">
+              <BookOpen size={24} />
+            </div>
+            <div>
+              <h3>Unlock the full library</h3>
+              <p>Précis, PYQs, and unlimited mock tests for every matched exam.</p>
+              <div className="exam-unlock-perks">
+                <span className="exam-perk">Précis</span>
+                <span className="exam-perk">PYQs</span>
+                <span className="exam-perk">Unlimited Mock Tests</span>
+              </div>
+            </div>
+          </div>
+          <Link to="/subscribe" className="exam-unlock-btn">
+            Upgrade Now <ArrowRight size={15} />
+          </Link>
+        </div>
       )}
 
-      {/* Practice Loop Shortcuts */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginBottom: '1.75rem' }}>
-        <Link
-          to={`/quiz-center?exam=${examId}`}
+      {/* ── Intro Modal Popup (for HTML Introduction bodies) ── */}
+      {activeIntroModal && (
+        <div
+          onClick={() => setActiveIntroModal(null)}
           style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(15,23,42,0.6)',
+            zIndex: 1000,
             display: 'flex',
             alignItems: 'center',
-            gap: '0.9rem',
-            padding: '1rem 1.25rem',
-            borderRadius: 'var(--radius-md, 12px)',
-            border: '1px solid var(--border, #e2e8f0)',
-            background: '#fff',
-            textDecoration: 'none',
-            color: 'inherit',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+            justifyContent: 'center',
+            padding: '1.5rem',
+            backdropFilter: 'blur(4px)',
           }}
         >
-          <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: 'var(--ios-olive-tint, #f4f7f2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <PlayCircle size={22} color="var(--ios-olive, #4b6b32)" />
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: '#fff',
+              borderRadius: '16px',
+              width: 'min(780px, 100%)',
+              maxHeight: '85vh',
+              overflowY: 'auto',
+              padding: '2rem',
+              position: 'relative',
+              boxShadow: 'var(--shadow-lg)',
+            }}
+          >
+            <button
+              onClick={() => setActiveIntroModal(null)}
+              style={{
+                position: 'absolute',
+                top: '1.25rem',
+                right: '1.25rem',
+                background: 'transparent',
+                border: 'none',
+                cursor: 'pointer',
+                color: '#64748b',
+              }}
+            >
+              <X size={22} />
+            </button>
+            <h2 style={{ marginTop: 0, color: 'var(--olive-800)', fontSize: '1.4rem' }}>
+              {activeIntroModal.title || `${exam.name} — Overview`}
+            </h2>
+            <div
+              className="intro-manual-body"
+              style={{ fontSize: '0.95rem', color: '#334155', lineHeight: 1.6 }}
+              dangerouslySetInnerHTML={{ __html: activeIntroModal.body || '' }}
+            />
           </div>
-          <div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#0f172a' }}>Practice Mock Tests</div>
-            <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Timed tests for {exam.name}</div>
-          </div>
-        </Link>
-
-        <Link
-          to={`/pyq-center?exam=${examId}`}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.9rem',
-            padding: '1rem 1.25rem',
-            borderRadius: 'var(--radius-md, 12px)',
-            border: '1px solid var(--border, #e2e8f0)',
-            background: '#fff',
-            textDecoration: 'none',
-            color: 'inherit',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
-          }}
-        >
-          <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: 'var(--ios-olive-tint, #f4f7f2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <HelpCircle size={22} color="var(--ios-olive, #4b6b32)" />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#0f172a' }}>Practice PYQs</div>
-            <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Previous year questions</div>
-          </div>
-        </Link>
-      </div>
-
-      <div id="section-guide" style={{ marginBottom: '1.75rem', scrollMarginTop: '1.5rem' }}>
-        <h3 style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 700, marginBottom: '0.25rem', textTransform: 'uppercase' }}>Preparation Material</h3>
-        <p style={{ fontSize: '0.85rem', color: '#94a3b8', marginBottom: '1rem' }}>Explore your study materials by subject. Click the check icon on any material to track your progress.</p>
-        <ExamContentPreview
-          examId={exam.id}
-          examName={exam.name}
-          careerTrack={exam.careerTrack}
-          tier={effectiveTier}
-          freeQuizUsed={freeQuizUsed}
-          variant="subjects"
-        />
-      </div>
-
-      <Card as={Link} to="/subscribe" interactive style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '1rem' }}>
-        <BookOpen size={22} color="var(--ios-olive)" />
-        <div style={{ flex: 1 }}>
-          <h4 style={{ margin: 0, fontSize: '0.95rem' }}>Unlock the full library</h4>
-          <p style={{ margin: 0, fontSize: '0.8rem', color: '#888' }}>Précis, PYQs, and unlimited mock tests for every matched exam.</p>
         </div>
-        <ArrowRight size={18} />
-      </Card>
-    </div>
+      )}
+    </main>
   );
 };
 

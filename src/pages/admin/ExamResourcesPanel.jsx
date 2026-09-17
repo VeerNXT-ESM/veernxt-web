@@ -28,22 +28,40 @@ const ExamResourcesPanel = ({ examId }) => {
 
   const fetchMappings = async (id) => {
     setLoading(true);
-    // lc_exam_resource_map.resource_id has no FK to resources.resource_id
-    // (only exam_id is FK'd, to lc_exams) -- so PostgREST can't embed the
-    // join with resource:resources(...), it 400s. Two-step fetch + merge
-    // in JS instead.
-    const { data: rows } = await supabase
-      .from('lc_exam_resource_map')
-      .select('id, resource_id, category, confidence, source')
-      .eq('exam_id', id)
-      .order('category', { ascending: true });
-    const resourceIds = [...new Set((rows || []).map((r) => r.resource_id))];
+    const [{ data: rows }, { data: introRow }] = await Promise.all([
+      supabase
+        .from('lc_exam_resource_map')
+        .select('id, resource_id, category, confidence, source')
+        .eq('exam_id', id)
+        .order('category', { ascending: true }),
+      supabase
+        .from('lc_exam_intro')
+        .select('resource_id, manual_title')
+        .eq('exam_id', id)
+        .maybeSingle(),
+    ]);
+
+    let combinedRows = [...(rows || [])];
+    if (introRow?.resource_id && !combinedRows.some((r) => r.resource_id === introRow.resource_id && r.category === 'Intro')) {
+      combinedRows.push({
+        id: `intro-${id}`,
+        resource_id: introRow.resource_id,
+        category: 'Intro',
+        confidence: 'high',
+        source: 'auto',
+      });
+    }
+
+    const resourceIds = [...new Set(combinedRows.map((r) => r.resource_id).filter(Boolean))];
     let resourcesById = {};
     if (resourceIds.length) {
-      const { data: resourceRows } = await supabase.from('resources').select('resource_id, title, status').in('resource_id', resourceIds);
+      const { data: resourceRows } = await supabase.from('resources').select('resource_id, title, status, category').in('resource_id', resourceIds);
       resourcesById = (resourceRows || []).reduce((acc, r) => { acc[r.resource_id] = r; return acc; }, {});
     }
-    setMappings((rows || []).map((r) => ({ ...r, resource: resourcesById[r.resource_id] || null })));
+    setMappings(combinedRows.map((r) => ({
+      ...r,
+      resource: resourcesById[r.resource_id] || (r.id === `intro-${id}` && introRow?.manual_title ? { resource_id: r.resource_id, title: introRow.manual_title, status: 'Published' } : null),
+    })));
     setLoading(false);
   };
 

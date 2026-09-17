@@ -468,12 +468,14 @@ async function handleBooksList(req, res) {
     const selectFields = 'resource_id,title,category,storage_base_url,chapter_count,status,level,state_ut,conducting_body';
 
     const fetchCategoryRows = async (cat) => {
-      const { data: firstBatch, count, error } = await supabase
+      let query = supabase
         .from('resources')
         .select(selectFields, { count: 'exact' })
-        .eq('category', cat)
-        .eq('format', 'blocks')
-        .range(0, 999);
+        .eq('category', cat);
+      if (cat !== 'Intro') {
+        query = query.eq('format', 'blocks');
+      }
+      const { data: firstBatch, count, error } = await query.range(0, 999);
 
       if (error) throw new Error(error.message);
       let catRows = firstBatch || [];
@@ -481,14 +483,14 @@ async function handleBooksList(req, res) {
       if (count && count > 1000) {
         const promises = [];
         for (let from = 1000; from < count; from += 1000) {
-          promises.push(
-            supabase
-              .from('resources')
-              .select(selectFields)
-              .eq('category', cat)
-              .eq('format', 'blocks')
-              .range(from, from + 999)
-          );
+          let pQuery = supabase
+            .from('resources')
+            .select(selectFields)
+            .eq('category', cat);
+          if (cat !== 'Intro') {
+            pQuery = pQuery.eq('format', 'blocks');
+          }
+          promises.push(pQuery.range(from, from + 999));
         }
         const results = await Promise.all(promises);
         for (const r of results) {
@@ -505,8 +507,9 @@ async function handleBooksList(req, res) {
     const groups = new Map();
     for (const r of rows) {
       if (!r.title) continue;
+      const isRowArchived = ['draft', 'archived'].includes((r.status || '').toLowerCase());
       const key = isTitleDedupedCategory(r.category)
-        ? `${r.category}::${r.title.trim().toLowerCase()}`
+        ? `${r.category}::${r.title.trim().toLowerCase()}::${isRowArchived ? 'archived' : 'active'}`
         : `${r.category}::id::${r.resource_id}`;
       if (!groups.has(key)) groups.set(key, { title: r.title.trim(), category: r.category, rows: [] });
       groups.get(key).rows.push(r);
@@ -1125,21 +1128,32 @@ async function handleBooksSaveTags(req, res) {
  */
 async function handleBooksArchive(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  const { resourceId } = req.body || {};
+  const { resourceId, excludeResourceId } = req.body || {};
   if (!resourceId) return res.status(400).json({ ok: false, error: 'Missing resourceId' });
   if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
     if (rowError) throw new Error(rowError.message);
-    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const { error: updateError } = await bookRowsFilter(
-      supabase.from('resources').update({ status: 'Draft', updated_at: new Date().toISOString() }),
-      row
-    );
-    if (updateError) throw new Error(updateError.message);
+    if (!row) {
+      await supabase.from('resources').update({ status: 'Draft', updated_at: new Date().toISOString() }).eq('resource_id', resourceId);
+      invalidateBooksCache();
+      return res.status(200).json({ ok: true, status: 'Draft' });
+    }
+
+    let updateQuery = supabase.from('resources').update({ status: 'Draft', updated_at: new Date().toISOString() });
+    if (row.storage_base_url) {
+      updateQuery = updateQuery.eq('category', row.category).eq('storage_base_url', row.storage_base_url);
+    } else {
+      updateQuery = updateQuery.eq('resource_id', row.resource_id);
+    }
+    if (excludeResourceId) {
+      updateQuery = updateQuery.neq('resource_id', excludeResourceId);
+    }
+    await updateQuery;
+    await supabase.from('resources').update({ status: 'Draft', updated_at: new Date().toISOString() }).eq('resource_id', row.resource_id);
 
     invalidateBooksCache();
     return res.status(200).json({ ok: true, status: 'Draft' });
@@ -1162,15 +1176,18 @@ async function handleBooksUnarchive(req, res) {
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const { error: updateError } = await bookRowsFilter(
-      supabase.from('resources').update({ status: 'Published', updated_at: new Date().toISOString() }),
-      row
-    );
-    if (updateError) throw new Error(updateError.message);
+    let updateQuery = supabase.from('resources').update({ status: 'Published', updated_at: new Date().toISOString() });
+    if (row.storage_base_url) {
+      updateQuery = updateQuery.eq('category', row.category).eq('storage_base_url', row.storage_base_url);
+    } else {
+      updateQuery = updateQuery.eq('resource_id', row.resource_id);
+    }
+    await updateQuery;
+    await supabase.from('resources').update({ status: 'Published', updated_at: new Date().toISOString() }).eq('resource_id', row.resource_id);
 
     invalidateBooksCache();
     return res.status(200).json({ ok: true, status: 'Published' });
