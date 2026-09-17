@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { UploadCloud, RefreshCw, Search, CheckCircle2, AlertTriangle, X, Repeat } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
@@ -62,6 +63,7 @@ async function callSaveResource(body) {
 // anywhere, so closing content gaps depends entirely on the content team
 // writing new ones and needing a safe way to publish them.
 const PublishContentPage = () => {
+  const location = useLocation();
   const [category, setCategory] = useState(null); // chosen only after a file is uploaded
   const isMulti = category ? category !== 'Intro' : false;
 
@@ -101,6 +103,20 @@ const PublishContentPage = () => {
     })();
   }, []);
 
+  // Arrived here from Book Content's own "Replace" button (BooksPage.jsx) --
+  // jump straight into Replace mode with that exact book pre-selected,
+  // instead of making the admin re-find it in the dropdown below. Runs once
+  // on mount only; nothing re-applies this if the admin navigates away and
+  // back without a fresh replaceBook in the route state.
+  useEffect(() => {
+    const incoming = location.state?.replaceBook;
+    if (!incoming) return;
+    setCategory(incoming.category);
+    setAssignMode('replace');
+    fetchExistingBooksForCategory(incoming.category, incoming.resourceId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Shared by both "picked a different category" (keeps the already-
   // uploaded file -- no need to re-upload just to correct a category
   // mistake) and "picked a new file" (below, additionally clears category
@@ -132,7 +148,7 @@ const PublishContentPage = () => {
     setExamQuery('');
   };
 
-  const fetchExistingBooksForCategory = async (cat) => {
+  const fetchExistingBooksForCategory = async (cat, preselectResourceId) => {
     if (!cat) {
       setExistingBooksToReplace([]);
       setSelectedBookToReplace(null);
@@ -198,7 +214,7 @@ const PublishContentPage = () => {
 
         list.sort((a, b) => a.title.localeCompare(b.title));
         setExistingBooksToReplace(list);
-        setSelectedBookToReplace(list[0] || null);
+        setSelectedBookToReplace((preselectResourceId && list.find((b) => b.resourceId === preselectResourceId)) || list[0] || null);
       } else {
         // Guide or Precis
         const { data: mapRows } = await supabase
@@ -236,7 +252,7 @@ const PublishContentPage = () => {
 
         list.sort((a, b) => a.title.localeCompare(b.title));
         setExistingBooksToReplace(list);
-        setSelectedBookToReplace(list[0] || null);
+        setSelectedBookToReplace((preselectResourceId && list.find((b) => b.resourceId === preselectResourceId)) || list[0] || null);
       }
     } catch (err) {
       console.error('Failed to fetch existing books to replace:', err);

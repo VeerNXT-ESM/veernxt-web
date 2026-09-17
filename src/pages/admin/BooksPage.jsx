@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Save, X, Columns3, Eye } from 'lucide-react';
+import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Repeat, Save, X, Columns3, Eye } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import { useDebounced } from './lcShared';
@@ -731,6 +731,14 @@ const BooksPage = () => {
                       style={{ color: b.category === 'Intro' ? undefined : '#7c3aed' }}
                     >
                       <Link2 size={14} />
+                    </button>
+                    <button
+                      className="lc-icon-btn"
+                      title="Replace this book with a new upload (Publish Content's Replace flow, pre-selected)"
+                      onClick={() => navigate('/admin/publish-content', { state: { replaceBook: { resourceId: b.resourceId, category: b.category, title: b.title } } })}
+                      style={{ color: '#d97706' }}
+                    >
+                      <Repeat size={14} />
                     </button>
                     {showArchived ? (
                       <button
