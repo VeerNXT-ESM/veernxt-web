@@ -1358,7 +1358,9 @@ async function handleBooksFindCount(req, res) {
             totalMatches += count;
             chapterMatches[chapterMeta.file_name] = count;
           }
-        } catch {}
+        } catch {
+          // Ignore missing or unparseable individual chapter files
+        }
       })
     );
 

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Plus, Trash2, Search, X, Eye, ExternalLink } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import AdminResourcePreview from './AdminResourcePreview';

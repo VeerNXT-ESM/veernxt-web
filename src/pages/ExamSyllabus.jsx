@@ -28,12 +28,7 @@ import {
 import { getEffectiveTier, TIERS, canAccessResource } from '../lib/subscriptionAccess';
 import { useExamContent } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
-import { 
-  resolveSubjectForTitle, 
-  getSubjectThumbnailImage, 
-  getFamilyHex, 
-  getCategoryThumbnailImage 
-} from '../lib/thumbnailTaxonomy';
+import { resolveSubjectForTitle } from '../lib/thumbnailTaxonomy';
 import './ExamSyllabus.css';
 
 const ExamSyllabus = () => {
@@ -45,7 +40,6 @@ const ExamSyllabus = () => {
   const [examLoading, setExamLoading] = useState(true);
   const [examError, setExamError] = useState(null);
   const [effectiveTier, setEffectiveTier] = useState(TIERS.FREE);
-  const [freeQuizUsed, setFreeQuizUsed] = useState(false);
   const [isPrimaryTarget, setIsPrimaryTarget] = useState(false);
   const [preparingLoading, setPreparingLoading] = useState(false);
   const [activeIntroModal, setActiveIntroModal] = useState(null);
@@ -126,7 +120,6 @@ const ExamSyllabus = () => {
         .maybeSingle();
       if (mounted && profile) {
         setEffectiveTier(getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at));
-        setFreeQuizUsed(!!profile.free_quiz_used);
       }
 
       // Exam target check
@@ -168,7 +161,7 @@ const ExamSyllabus = () => {
   };
 
   // Load Exam Content / Study Materials
-  const { byCategory, quizzes, intro, completedResourceIds, markAsCompleted, loading: contentLoading } = useExamContent(
+  const { byCategory, quizzes, intro, completedResourceIds, markAsCompleted } = useExamContent(
     exam?.name || '',
     exam?.careerTrack || exam?.category || '',
     exam?.id || examId
