@@ -134,16 +134,20 @@ async function handleDocxPreviewConvert(req, res) {
  * Intro and Guide/Precis attach to exams differently, so only the resource
  * creation (R2 upload + `resources` insert, works for any chapter count)
  * is shared here:
- *   - category 'Intro' is exam-specific 1:1 -- `examId` is required, and
- *     this action also upserts `lc_exam_intro` server-side (never a silent
- *     overwrite: 409 `ALREADY_HAS_INTRO` unless `overwrite: true`, same
- *     principle link_intros_to_exams.mjs already enforces).
+ *   - category 'Intro' is exam-specific 1:1, never more than one exam --
+ *     `examId` is optional (the exam it belongs to may not exist in the
+ *     catalog yet); when given, this action also upserts `lc_exam_intro`
+ *     server-side (never a silent overwrite: 409 `ALREADY_HAS_INTRO`
+ *     unless `overwrite: true`, same principle link_intros_to_exams.mjs
+ *     already enforces). When omitted, the resource is created unlinked,
+ *     to be attached later via the exam's own Resources panel once a
+ *     matching exam exists.
  *   - category 'Guide'/'Precis' books are legitimately shared across many
  *     exams (the same book linked from dozens of them), so this action
  *     just creates the resource and returns its id -- the client attaches
  *     it to whichever exam(s) were picked via a direct
  *     `lc_exam_resource_map` insert, the exact same table/shape
- *     ExamResourcesPanel.jsx's own "Add Resource" flow already writes to
+ *     ExamResourcesPanel.jsx's own "Add Resource" flow already uses
  *     (that table already grants browser/anon writes; `resources` and
  *     `lc_exam_intro` don't, hence this server action for those).
  *
@@ -160,9 +164,6 @@ async function handleContentPublish(req, res) {
   if (!BOOK_CATEGORIES.includes(category) || !fileName || !chapters.length || !chapters.some((c) => c.blocks?.length)) {
     return res.status(400).json({ ok: false, error: 'Missing/invalid category, fileName, or a converted chapter with blocks' });
   }
-  if (category === 'Intro' && !examId) {
-    return res.status(400).json({ ok: false, error: 'Missing examId (required for Intro)' });
-  }
   if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
   const publicUrl = getR2PublicUrl();
   const bucket = getR2Bucket();
@@ -173,7 +174,7 @@ async function handleContentPublish(req, res) {
 
     let examName = '';
     let conductingBody = '';
-    if (category === 'Intro') {
+    if (category === 'Intro' && examId) {
       const { data: exam, error: examError } = await supabase
         .from('lc_exams')
         .select('id, name, conducting_body:lc_conducting_bodies(name)')
@@ -240,7 +241,7 @@ async function handleContentPublish(req, res) {
     });
     if (resErr) throw new Error(resErr.message);
 
-    if (category !== 'Intro') {
+    if (category !== 'Intro' || !examId) {
       invalidateBooksCache();
       return res.status(200).json({ ok: true, resourceId });
     }
@@ -533,9 +534,22 @@ async function handleBooksList(req, res) {
     for (const group of groups.values()) {
       const canonicalUrl = pickCanonicalStorageBaseUrl(group.rows);
       if (!canonicalUrl || !prefixFromStorageBaseUrl(canonicalUrl, publicUrl)) continue; // broken/unresolvable -- nothing to open
-      const canonicalRow = group.rows.find((r) => r.storage_base_url === canonicalUrl) || group.rows[0];
+      // A title can have many duplicate rows at the same canonical URL (the
+      // legacy one-row-per-exam pattern, mostly archived now -- see
+      // docs/status_report.md §60.5) alongside exactly one live one. Picking
+      // whichever row .find() happens to hit first would surface an
+      // archived duplicate as "the book" at random -- prefer a live
+      // (non-Draft/Archived) row at that URL when one exists.
+      const rowsAtCanonicalUrl = group.rows.filter((r) => r.storage_base_url === canonicalUrl);
+      const canonicalRow = rowsAtCanonicalUrl.find((r) => !['draft', 'archived'].includes((r.status || '').toLowerCase())) || rowsAtCanonicalUrl[0] || group.rows[0];
       const issueKey = `${group.category}::${group.title.toLowerCase()}`;
-      const isArchived = group.rows.some((r) => ['draft', 'archived'].includes((r.status || '').toLowerCase()));
+      // Archived means the book itself (its live/canonical row) is Draft or
+      // Archived -- not "does this title happen to have an archived
+      // duplicate sitting next to its live row." The old `.some(...)` check
+      // treated every book as archived the moment ANY of its legacy
+      // duplicates got archived, hiding fully-live books from the default
+      // view entirely (found live 2026-09-17: 53 Guide + 29 Precis books).
+      const isArchived = ['draft', 'archived'].includes((canonicalRow.status || '').toLowerCase());
       books.push({
         resourceId: canonicalRow.resource_id,
         title: group.title,
@@ -582,7 +596,10 @@ async function handleBooksGet(req, res) {
 
     const groupRows = await fetchBookRows(supabase, row);
     const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
-    const isArchived = ['draft', 'archived'].includes((row.status || '').toLowerCase()) || groupRows.some((r) => ['draft', 'archived'].includes((r.status || '').toLowerCase()));
+    // Same fix as books-list above: whether THIS row (the one actually
+    // being opened) is archived, not whether some sibling duplicate row
+    // happens to be -- see its comment for the live bug this caused.
+    const isArchived = ['draft', 'archived'].includes((row.status || '').toLowerCase());
     return res.status(200).json({
       ok: true,
       resourceId: row.resource_id,

@@ -5,6 +5,7 @@ import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import { useDebounced } from './lcShared';
 import AdminResourcePreview from './AdminResourcePreview';
+import LinkExamsDrawer from './LinkExamsDrawer';
 import { NewBookModal, DuplicateBookModal, RenameBookModal, ConfirmDeleteModal, ConfirmArchiveModal } from '../../components/admin/BookFormModals';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
@@ -100,6 +101,7 @@ const BooksPage = () => {
   const [deleteSource, setDeleteSource] = useState(null);
   const [previewBook, setPreviewBook] = useState(null);
   const [selectedBookId, setSelectedBookId] = useState(null);
+  const [linkExamsSource, setLinkExamsSource] = useState(null); // book to bulk-link exams to -- never offered for Intro, see the button's own guard below
 
   const transformText = (text, transformType) => {
     if (!text) return '';
@@ -568,12 +570,8 @@ const BooksPage = () => {
           </thead>
           <tbody>
             {paginated.map((b) => (
-              <tr
-                key={b.resourceId}
-                className="clickable"
-                onClick={() => navigate(`/admin/books/${b.category}/${b.resourceId}`, { state: { bookTitle: b.title } })}
-              >
-                <td className="lc-col-book" onClick={(e) => e.stopPropagation()}>
+              <tr key={b.resourceId}>
+                <td className="lc-col-book">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
                     <input
                       type="text"
@@ -725,6 +723,15 @@ const BooksPage = () => {
                     >
                       <ExternalLink size={14} />
                     </button>
+                    <button
+                      className="lc-icon-btn"
+                      title={b.category === 'Intro' ? "Intro can only link to one exam — use Publish Content or the exam's own Resources panel instead" : 'Link this book to exams in bulk'}
+                      disabled={b.category === 'Intro'}
+                      onClick={() => setLinkExamsSource(b)}
+                      style={{ color: b.category === 'Intro' ? undefined : '#7c3aed' }}
+                    >
+                      <Link2 size={14} />
+                    </button>
                     {showArchived ? (
                       <button
                         className="lc-icon-btn"
@@ -859,6 +866,28 @@ const BooksPage = () => {
           book={deleteSource}
           onClose={() => setDeleteSource(null)}
           onDeleted={() => { setDeleteSource(null); refreshCurrentCategory(); }}
+        />
+      )}
+
+      {linkExamsSource && (
+        <LinkExamsDrawer
+          book={linkExamsSource}
+          onClose={() => setLinkExamsSource(null)}
+          onLinked={(addedCount) => {
+            setBooksByCategory((prev) => {
+              const catBooks = prev[linkExamsSource.category];
+              if (!catBooks) return prev;
+              return {
+                ...prev,
+                [linkExamsSource.category]: catBooks.map((x) => (
+                  x.resourceId === linkExamsSource.resourceId
+                    ? { ...x, duplicateRowCount: x.duplicateRowCount + addedCount }
+                    : x
+                )),
+              };
+            });
+            setLinkExamsSource(null);
+          }}
         />
       )}
 

@@ -21,31 +21,41 @@ export function countProgress(byCategory, completedResourceIds) {
 
 const RESOURCE_CATEGORIES = ['Intro', 'Guide', 'Precis', 'PYQ'];
 
-// Precomputed, Gemini-verified exam -> resources mapping (see
-// scripts/map_exam_resources_gemini.mjs, status_report.md §29.3) —
-// checked first when an examId is available. No FK to resources (that
-// table has no unique constraint Postgres can target), so this is two
-// queries: mapping rows, then the resources they point at.
+// Precomputed exam -> resources mapping (lc_exam_resource_map, built up by
+// PublishContentPage.jsx/LinkExamsDrawer.jsx/ExamResourcesPanel.jsx as well
+// as the older Gemini scripts) — checked first when an examId is
+// available. No FK to resources (that table has no unique constraint
+// Postgres can target), so this is two queries: mapping rows, then the
+// resources they point at.
+//
+// Returns which CATEGORIES this exam has a real map row for, not just
+// whether it has any row at all -- the caller falls back to exam-name
+// matching per category, only for whichever categories aren't covered
+// here. An earlier version returned null/non-null for the whole exam: any
+// single mapped row (e.g. just Intro) silently hid every other category
+// that was otherwise only reachable via the fallback, since the fallback
+// never ran at all once the exam had *a* mapping. Confirmed live 2026-09-17:
+// 18 exams had real Guide/Precis content sitting unreachable this way.
 async function fetchMappedResources(examId) {
   const { data: mappings } = await supabase
     .from('lc_exam_resource_map')
-    .select('resource_id')
+    .select('resource_id, category')
     .eq('exam_id', examId);
-  if (!mappings || mappings.length === 0) return null; // no mapping yet -> caller falls back
+  if (!mappings || mappings.length === 0) return { resources: [], mappedCategories: new Set() };
 
   const resourceIds = mappings.map((m) => m.resource_id);
   const { data: resources } = await supabase.from('resources').select('*').in('resource_id', resourceIds);
-  return resources || [];
+  return { resources: resources || [], mappedCategories: new Set(mappings.map((m) => m.category)) };
 }
 
 // resources exam_name carries a "N. " ordinal prefix from CMS ingestion
 // that the unified exams.exam_name never has, so an exact match misses
 // real, published content — exact -> ilike substring -> career-track
 // keyword fallback, same chain proven in Dashboard.jsx's old
-// PreparationPanel. Used for resources only when lc_exam_resource_map has
-// no rows for this exam yet (see fetchMappedResources above); quizzes
-// always use this chain since Phase 1 of the mapping work didn't cover
-// quizzes.
+// PreparationPanel. Used only for whichever categories fetchMappedResources
+// above didn't already have a real map row for (see its own comment);
+// quizzes always use this chain since lc_exam_quiz_map has never actually
+// been populated (0 rows as of 2026-09-17, see status_report.md).
 async function fetchResourcesFallback(examName, careerTrack) {
   let resData = await supabase.from('resources').select('*').eq('exam_name', examName);
 
@@ -169,12 +179,13 @@ function groupByCategory(resources) {
  * Full (non-teaser) content lookup for an exam, grouped by category —
  * used by the exam syllabus page (src/pages/ExamSyllabus.jsx) and
  * ExamContentPreview.jsx. Prefers the precomputed lc_exam_resource_map
- * (examId) for resources when available; falls back to the exam-name
- * matching chain otherwise, so nothing regresses for exams the mapping
- * script hasn't covered. `intro` is separate from `byCategory.Intro` --
- * sourced from lc_exam_intro, the guaranteed one-row-per-exam table the
- * admin CMS's Introduction card manages, rather than the ambiguous
- * multi-row Intro category in the resource-mapping chain above.
+ * (examId) for resources, per category -- falls back to the exam-name
+ * matching chain only for whichever categories aren't mapped yet, so
+ * nothing regresses for exams/categories the mapping work hasn't reached.
+ * `intro` is separate from `byCategory.Intro` -- sourced from
+ * lc_exam_intro, the guaranteed one-row-per-exam table the admin CMS's
+ * Introduction card manages, rather than the ambiguous multi-row Intro
+ * category in the resource-mapping chain above.
  */
 export function useExamContent(examName, careerTrack, examId) {
   const navigate = useNavigate();
@@ -196,13 +207,18 @@ export function useExamContent(examName, careerTrack, examId) {
 
     (async () => {
       try {
-        const [mappedResources, quizRows, introData] = await Promise.all([
-          examId ? fetchMappedResources(examId) : Promise.resolve(null),
+        const [mappedResult, quizRows, introData] = await Promise.all([
+          examId ? fetchMappedResources(examId) : Promise.resolve({ resources: [], mappedCategories: new Set() }),
           fetchQuizzesByExamName(examName, careerTrack),
           examId ? fetchExamIntro(examId) : Promise.resolve(null),
         ]);
 
-        const rawResources = mappedResources !== null ? mappedResources : await fetchResourcesFallback(examName, careerTrack);
+        const uncoveredCategories = RESOURCE_CATEGORIES.filter((c) => !mappedResult.mappedCategories.has(c));
+        const fallbackResources = uncoveredCategories.length > 0 ? await fetchResourcesFallback(examName, careerTrack) : [];
+        const rawResources = [
+          ...mappedResult.resources,
+          ...fallbackResources.filter((r) => uncoveredCategories.some((c) => c.toLowerCase() === (r.category || '').toLowerCase().trim())),
+        ];
         const resources = await upgradeToCanonicalFormat(rawResources);
 
         // Fetch completed resources for current user

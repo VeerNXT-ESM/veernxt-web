@@ -75,10 +75,12 @@ const PublishContentPage = () => {
   const [level, setLevel] = useState('central');
   const [regions, setRegions] = useState([]);
   const [regionId, setRegionId] = useState('');
-  const [allExamsInScope, setAllExamsInScope] = useState([]); // every exam matching level(+region) -- the actual dropdown list
+  const [allExamsInScope, setAllExamsInScope] = useState([]); // every exam matching level(+region) -- the default list
   const [loadingExams, setLoadingExams] = useState(false);
-  const [examQuery, setExamQuery] = useState(''); // multi-select mode only: client-side filter over allExamsInScope
-  const [selectedExams, setSelectedExams] = useState([]); // Intro: length 0-1; Guide/Precis: 0-N
+  const [examQuery, setExamQuery] = useState(''); // client-side filter over allExamsInScope; 2+ chars also triggers a cross-level DB search below
+  const [examSearchResults, setExamSearchResults] = useState(null); // null = not searching (use scoped list); array = live cross-level search results
+  const [searchingExams, setSearchingExams] = useState(false);
+  const [selectedExams, setSelectedExams] = useState([]); // Intro: length 0-1; Guide/Precis: 0-N -- linkage is optional for both, an exam may not exist in the catalog yet
   const [existingIntroTitle, setExistingIntroTitle] = useState(null); // Intro-only "already has one" badge
 
   const [publishing, setPublishing] = useState(false);
@@ -154,15 +156,35 @@ const PublishContentPage = () => {
     return () => { cancelled = true; clearTimeout(t); };
   }, [level, regionId]);
 
-  const examOptions = allExamsInScope.map((exam) => ({
-    value: exam.id,
-    label: exam.conducting_body?.name ? `${exam.name} — ${exam.conducting_body.name}` : exam.name,
-  }));
-  const filteredExamsForMulti = (() => {
+  // 2+ chars searches lc_exams across every level/region, not just the
+  // current Level/Region scope -- the point being that whoever's publishing
+  // often doesn't know (or the exam doesn't have) a level/region yet.
+  // Below 2 chars, a plain client-side filter over the already-loaded
+  // scoped list is instant and cheap enough not to need a DB round trip.
+  useEffect(() => {
+    const q = examQuery.trim();
+    if (q.length < 2) { setExamSearchResults(null); setSearchingExams(false); return; }
+    let cancelled = false;
+    setSearchingExams(true);
+    const t = setTimeout(async () => {
+      const { data } = await supabase
+        .from('lc_exams')
+        .select('id, name, conducting_body:lc_conducting_bodies(name), region:lc_regions(name, level)')
+        .ilike('name', `%${q}%`)
+        .order('name')
+        .limit(100);
+      if (!cancelled) { setExamSearchResults(data || []); setSearchingExams(false); }
+    }, 300);
+    return () => { cancelled = true; clearTimeout(t); };
+  }, [examQuery]);
+
+  const displayedExams = (() => {
+    if (examSearchResults !== null) return examSearchResults;
     const q = examQuery.trim().toLowerCase();
     if (!q) return allExamsInScope;
     return allExamsInScope.filter((exam) => exam.name.toLowerCase().includes(q) || exam.conducting_body?.name?.toLowerCase().includes(q));
   })();
+  const isCrossLevelSearch = examSearchResults !== null;
 
   const fetchExistingIntro = async (examId) => {
     const [{ data: introRows }, { data: mapRows }] = await Promise.all([
@@ -180,6 +202,11 @@ const PublishContentPage = () => {
     setPublishError(null);
     setConfirmOverwrite(false);
     if (!isMulti) {
+      if (selectedExams[0]?.id === exam.id) {
+        setSelectedExams([]);
+        setExistingIntroTitle(null);
+        return;
+      }
       setSelectedExams([exam]);
       fetchExistingIntro(exam.id);
       return;
@@ -187,7 +214,10 @@ const PublishContentPage = () => {
     setSelectedExams((prev) => (prev.some((e) => e.id === exam.id) ? prev.filter((e) => e.id !== exam.id) : [...prev, exam]));
   };
 
-  const removeSelectedExam = (examId) => setSelectedExams((prev) => prev.filter((e) => e.id !== examId));
+  const removeSelectedExam = (examId) => {
+    setSelectedExams((prev) => prev.filter((e) => e.id !== examId));
+    if (!isMulti) setExistingIntroTitle(null);
+  };
 
   const handleFileChange = (e) => {
     const f = e.target.files?.[0];
@@ -226,24 +256,28 @@ const PublishContentPage = () => {
       if (isMulti) {
         const { ok, data } = await callSaveResource({ type: 'content-publish', category, fileName: file.name, book });
         if (!ok || !data.ok) throw new Error(data.error || 'Convert & Link failed');
-        const rows = selectedExams.map((exam) => ({
-          exam_id: exam.id,
-          resource_id: data.resourceId,
-          category,
-          confidence: 'high',
-          reasoning: 'Manually added by admin',
-          source: 'manual',
-        }));
-        const { error: mapErr } = await supabase.from('lc_exam_resource_map').insert(rows);
-        if (mapErr) {
-          throw new Error(`Resource published, but attaching to exam(s) failed: ${mapErr.message}. Attach it manually via each exam's Resources panel.`);
+        if (selectedExams.length > 0) {
+          const rows = selectedExams.map((exam) => ({
+            exam_id: exam.id,
+            resource_id: data.resourceId,
+            category,
+            confidence: 'high',
+            reasoning: 'Manually added by admin',
+            source: 'manual',
+          }));
+          const { error: mapErr } = await supabase.from('lc_exam_resource_map').insert(rows);
+          if (mapErr) {
+            throw new Error(`Resource published, but attaching to exam(s) failed: ${mapErr.message}. Attach it manually via each exam's Resources panel.`);
+          }
         }
         setPublished({ resourceId: data.resourceId, examNames: selectedExams.map((e) => e.name) });
       } else {
+        // examId omitted entirely (not just falsy) when nothing's picked --
+        // linkage is optional, the exam may not exist in the catalog yet.
         const { ok, status, data } = await callSaveResource({
           type: 'content-publish',
           category: 'Intro',
-          examId: selectedExams[0].id,
+          ...(selectedExams[0] ? { examId: selectedExams[0].id } : {}),
           fileName: file.name,
           book,
           overwrite,
@@ -255,7 +289,7 @@ const PublishContentPage = () => {
         }
         if (!ok || !data.ok) throw new Error(data.error || 'Convert & Link failed');
         setConfirmOverwrite(false);
-        setPublished({ resourceId: data.resourceId, examNames: [selectedExams[0].name] });
+        setPublished({ resourceId: data.resourceId, examNames: selectedExams[0] ? [selectedExams[0].name] : [] });
       }
     } catch (err) {
       setPublishError(err.message);
@@ -271,10 +305,12 @@ const PublishContentPage = () => {
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
-  const canPublish = selectedExams.length > 0 && book && !publishing;
-  const publishLabel = isMulti
-    ? `Convert & Link to ${selectedExams.length || 0} exam${selectedExams.length === 1 ? '' : 's'}`
-    : `Convert & Link to ${selectedExams[0]?.name || 'exam'}`;
+  const canPublish = book && !publishing;
+  const publishLabel = selectedExams.length === 0
+    ? 'Publish without linking'
+    : isMulti
+      ? `Convert & Link to ${selectedExams.length} exam${selectedExams.length === 1 ? '' : 's'}`
+      : `Convert & Link to ${selectedExams[0]?.name || 'exam'}`;
 
   return (
     <div>
@@ -293,9 +329,11 @@ const PublishContentPage = () => {
           <CheckCircle2 size={32} color="#16a34a" style={{ marginBottom: '0.5rem' }} />
           <h3 style={{ margin: 0 }}>Published!</h3>
           <p className="lc-muted-note" style={{ marginTop: '0.4rem' }}>
-            {isMulti
-              ? <>Attached to <strong>{published.examNames.length}</strong> exam{published.examNames.length === 1 ? '' : 's'}: {published.examNames.join(', ')}</>
-              : <><strong>{published.examNames[0]}</strong> now has this Introduction live.</>}
+            {published.examNames.length === 0
+              ? <>Published without linking to an exam — attach it later via the exam&apos;s Resources panel once it exists.</>
+              : isMulti
+                ? <>Attached to <strong>{published.examNames.length}</strong> exam{published.examNames.length === 1 ? '' : 's'}: {published.examNames.join(', ')}</>
+                : <><strong>{published.examNames[0]}</strong> now has this Introduction live.</>}
           </p>
           <button className="lc-btn primary" style={{ marginTop: '1rem' }} onClick={startAnother}>
             Publish another
@@ -358,7 +396,7 @@ const PublishContentPage = () => {
 
           <div className="lc-card" style={{ padding: '1.25rem', margin: '1.25rem 0', opacity: book ? 1 : 0.5, pointerEvents: book ? 'auto' : 'none' }}>
             <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 600, marginBottom: '0.5rem' }}>
-              3. Assign to exam{isMulti ? '(s)' : ''}
+              3. Assign to exam{isMulti ? '(s)' : ''} <span className="lc-muted-note" style={{ fontWeight: 400 }}>— optional, publish without linking if the exam doesn&apos;t exist yet</span>
             </label>
 
             <div style={{ display: 'flex', gap: '0.6rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
@@ -378,69 +416,54 @@ const PublishContentPage = () => {
               )}
             </div>
 
-            {!isMulti ? (
-              // Single exam (Intro): the shared searchable Select IS the
-              // dropdown-of-all-exams-in-scope, with react-select's own
-              // built-in type-to-filter as the search -- no separate
-              // "Change" button needed, clicking the box re-opens it.
-              <Select
-                searchable
-                value={selectedExams[0]?.id || ''}
-                onChange={(e) => {
-                  const exam = allExamsInScope.find((x) => x.id === e.target.value);
-                  if (exam) pickExam(exam);
-                }}
-                disabled={loadingExams}
-                placeholder={loadingExams ? 'Loading exams…' : `Select an exam (${allExamsInScope.length} in scope)…`}
-                options={examOptions}
-              />
-            ) : (
-              <>
-                {selectedExams.length > 0 && (
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '0.6rem' }}>
-                    {selectedExams.map((exam) => (
-                      <span key={exam.id} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.8rem', padding: '0.25rem 0.5rem', borderRadius: 999, background: 'var(--admin-hover-bg, #f1f5f9)' }}>
-                        {exam.name}
-                        <X size={12} style={{ cursor: 'pointer' }} onClick={() => removeSelectedExam(exam.id)} />
-                      </span>
-                    ))}
-                  </div>
-                )}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                  <Search size={16} color="var(--admin-text-muted)" />
-                  <input
-                    type="text"
-                    value={examQuery}
-                    onChange={(e) => setExamQuery(e.target.value)}
-                    placeholder={loadingExams ? 'Loading exams…' : `Filter ${allExamsInScope.length} exam(s) in scope…`}
-                    className="lc-input"
-                    style={{ flex: 1 }}
-                  />
-                </div>
-                {/* Full dropdown-of-all-exams-in-scope, narrowed live by the filter above -- shows everything when it's empty. */}
-                <div className="lc-card" style={{ maxHeight: 260, overflowY: 'auto', padding: '0.35rem' }}>
-                  {filteredExamsForMulti.map((exam) => {
-                    const isSelected = selectedExams.some((e) => e.id === exam.id);
-                    return (
-                      <div
-                        key={exam.id}
-                        onClick={() => pickExam(exam)}
-                        style={{ padding: '0.5rem 0.65rem', borderRadius: 6, cursor: 'pointer', fontSize: '0.85rem', background: isSelected ? 'var(--admin-hover-bg, #f1f5f9)' : 'transparent' }}
-                        onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--admin-hover-bg, #f1f5f9)'; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.background = isSelected ? 'var(--admin-hover-bg, #f1f5f9)' : 'transparent'; }}
-                      >
-                        {isSelected && '✓ '}
-                        <strong>{exam.name}</strong>
-                        {exam.conducting_body?.name && <span className="lc-muted-note"> — {exam.conducting_body.name}</span>}
-                      </div>
-                    );
-                  })}
-                  {filteredExamsForMulti.length === 0 && !loadingExams && (
-                    <div style={{ padding: '0.5rem 0.65rem', fontSize: '0.85rem' }} className="lc-muted-note">No exams match.</div>
-                  )}
-                </div>
-              </>
+            {selectedExams.length > 0 && (
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '0.6rem' }}>
+                {selectedExams.map((exam) => (
+                  <span key={exam.id} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.8rem', padding: '0.25rem 0.5rem', borderRadius: 999, background: 'var(--admin-hover-bg, #f1f5f9)' }}>
+                    {exam.name}
+                    <X size={12} style={{ cursor: 'pointer' }} onClick={() => removeSelectedExam(exam.id)} />
+                  </span>
+                ))}
+              </div>
             )}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+              <Search size={16} color="var(--admin-text-muted)" />
+              <input
+                type="text"
+                value={examQuery}
+                onChange={(e) => setExamQuery(e.target.value)}
+                placeholder={loadingExams ? 'Loading exams…' : `Search exams by name — type 2+ chars to search every level…`}
+                className="lc-input"
+                style={{ flex: 1 }}
+              />
+            </div>
+            {/* Below 2 chars: the level/region-scoped list, filtered client-side. At 2+ chars: live results from every level/region, since the exam may not be in the currently selected scope at all. */}
+            <div className="lc-card" style={{ maxHeight: 260, overflowY: 'auto', padding: '0.35rem' }}>
+              {displayedExams.map((exam) => {
+                const isSelected = selectedExams.some((e) => e.id === exam.id);
+                return (
+                  <div
+                    key={exam.id}
+                    onClick={() => pickExam(exam)}
+                    style={{ padding: '0.5rem 0.65rem', borderRadius: 6, cursor: 'pointer', fontSize: '0.85rem', background: isSelected ? 'var(--admin-hover-bg, #f1f5f9)' : 'transparent' }}
+                    onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--admin-hover-bg, #f1f5f9)'; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.background = isSelected ? 'var(--admin-hover-bg, #f1f5f9)' : 'transparent'; }}
+                  >
+                    {isSelected && '✓ '}
+                    <strong>{exam.name}</strong>
+                    {exam.conducting_body?.name && <span className="lc-muted-note"> — {exam.conducting_body.name}</span>}
+                    {isCrossLevelSearch && exam.region?.level && (
+                      <span className="lc-muted-note"> · {exam.region.level}{exam.region.name ? ` (${exam.region.name})` : ''}</span>
+                    )}
+                  </div>
+                );
+              })}
+              {displayedExams.length === 0 && !loadingExams && !searchingExams && (
+                <div style={{ padding: '0.5rem 0.65rem', fontSize: '0.85rem' }} className="lc-muted-note">
+                  {examQuery.trim().length >= 2 ? "No exams found — publish without linking, then attach it once the exam exists." : 'No exams match.'}
+                </div>
+              )}
+            </div>
 
             {!isMulti && selectedExams.length > 0 && existingIntroTitle && (
               <div style={{ marginTop: '0.85rem', padding: '0.65rem 0.9rem', background: 'var(--admin-warn-bg, #fffbeb)', border: '1px solid #fde68a', borderRadius: 8, fontSize: '0.8rem', color: '#92400e', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

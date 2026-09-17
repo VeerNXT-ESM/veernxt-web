@@ -2462,5 +2462,337 @@ User: "I want a drop down of all exams and the search of course." The Level/Regi
 
 ### 53.8 Git/production state
 
-Not yet committed/pushed -- pending the user's go-ahead (same pattern as every other push this session).
+Committed (`9c07922`) and pushed to `origin/main` after the user asked. Staged only this feature's own files: `api/admin/save-resource.js`, `docs/status_report.md`, `src/App.jsx`, `src/pages/admin/AdminShell.jsx`, `src/pages/admin/adminNavConfig.js`, deleted `src/pages/admin/DocxConverterPage.jsx`, added `src/pages/admin/DocxPreview.jsx` + `PublishContentPage.jsx` -- same 6 pre-existing modified PYQ scripts and generated content dirs deliberately left alone as every prior push.
 
+## 54. First live Drive folder-by-folder audit (SSC), a real wrong-intro caught, and a systematic plan for the rest
+
+User asked to check Google Drive again (`G:\My Drive\VeerNXT_Final_Content`), starting with `CENTRAL EXAMS\01.SSC`, exam by exam.
+
+### 54.1 Folder vs. DB comparison
+
+13 exam folders under `01.SSC`, all 13 matched a real `exams` row (`conducting_body = 'SSC'`, level central) by name -- full coverage, nothing missing. Found 4 EXTRA DB rows with no corresponding folder (`Delhi Police Constable`, `Delhi Police Driver`, `Delhi Police Head Constable`, `Delhi Police MTS` -- bare names, no "SSC" prefix) that look like stale duplicates of the properly-named folder-matched rows, left alone (not asked to clean up, just flagged).
+
+### 54.2 Went folder by folder checking Intro linkage + content correctness
+
+All 13 SSC exams already had SOME intro linked, with tables present (confirms the linked ones are already-fixed survivors of §52). But checking each one's actual title/content (not just "is something linked") caught a real bug §51-53's audits never covered because they only scanped UT/State docs: **SSC CHSL (a Central exam) was showing an Andaman & Nicobar-specific regional intro** (`AN_02_SSC_CHSL_Introduction`, `conducting_body: "Andaman and Nicobar Islands — SSC"`, opening text literally says "ANDAMAN & NICOBAR ISLANDS") instead of the real national one. The correct docx (`CHSL.docx`) was sitting right in the same folder. Converted and relinked (new `resource_id` `5bace296-23fe-423f-a23f-5bace29623fe`, 36 blocks/1 table) -- verified the new content correctly describes the national exam with no regional mention. Old wrong resource row left in place, unlinked (same convention as §52.3 -- never delete, just re-point `lc_exam_intro`).
+
+### 54.3 Next session: systematic folder-by-folder audit across all of Drive
+
+User wants this done exam-by-exam across the ENTIRE `CENTRAL EXAMS`, `STATE EXAMS`, and `UT EXAMS` trees on Drive, not just SSC -- a large, multi-session undertaking. A ready-to-paste starter prompt for the next session is provided in this same conversation turn (not duplicated here) -- see the chat itself for its exact text; it codifies: per-folder docx discovery (skip `_PENDING_CONTENT.docx`/lock files), exact (never fuzzy) folder-to-exam_id resolution, convert via `convert_docx_intros_to_blocks.mjs`, link via the same `resources` insert + `lc_exam_intro` upsert pattern as §54.2, and a **content-based** correctness check (not just "is something linked") for exams that already have an intro -- reading the actual opening text/conducting_body for a region/state mismatch like §54.2 found, replacing only when genuinely wrong, otherwise leaving it and moving on.
+
+## 55. The full Drive-vs-DB Introduction audit finished -- every category, every state, every UT
+
+Continuation of §54's plan, run start-to-finish in one long session (with a mid-session break) once the user said "we work sequentially, every time we finish a folder we ingest" and later "finish all the folders now in batch." Went through `CENTRAL EXAMS` (21 categories), then `STATE EXAMS` (28 states), then `UT EXAMS` (8 UTs) -- every real Introduction docx on the Drive checked against the DB, every wrong or missing link fixed on the spot before moving to the next folder, with a table reported after each category/state/UT rather than one silent end-of-session dump.
+
+### 55.1 Methodology (same pattern for all ~1,560 exam folders)
+
+For each top-level folder: discover every exam subfolder with a real (non-placeholder, non-lock-file) Intro docx via the new `scripts/audit_drive_intro_folders.mjs` (see §55.8); resolve the exact matching `exams` row by conducting_body/exam_name/state_ut (never fuzzy-guessed -- ambiguous cases were skipped and flagged, not picked); check `lc_exam_intro` (and the `lc_exam_resource_map` fallback); for anything already linked, fetch the linked resource's actual opening content from R2 and sanity-check it's genuinely about the right exam/state, not just "something is linked"; convert + publish + relink anything wrong or missing via the exact `mammoth` → `parseHtmlToBlocks` → R2 upload → `resources` insert → `lc_exam_intro` upsert pattern used since §52, generating titles that never contain underscores per explicit user directive (mid-session -- see §55.4); never delete an old wrong resource row, only re-point `lc_exam_intro` away from it.
+
+### 55.2 CENTRAL EXAMS -- 21 categories, ~438 exam folders, ~196 fixes
+
+| Category | Folders | Fixed | Already correct |
+|---|---|---|---|
+| 01.SSC (prior session, §54) | 13 | 1 | 12 |
+| 02.BANKING | 37 | 11 | 26 |
+| 03.TEACHING | 70 | 16 | 54 |
+| 04.RRB | 9 | 0 | 9 |
+| 05.UGC-NET | 3 | 0 | 3 |
+| 06.NURSING | 78 | 49 | 29 |
+| 07.CIVIL SERVICES | 2 | 0 | 2 |
+| 08.ENGINEERING RECRUITMENT | 6 | 1 | 5 |
+| 09.DEFENCE | 19 | 19 | 0 |
+| 10.JUDICIARY EXAMS | 24 | 17 | 7 |
+| 11.INSURANCE EXAMS | 16 | 13 | 3 |
+| 12.OTHER GOVERNMENT EXAMS | 21 | 19 | 2 |
+| 13.INDIA POST | 4 | 0 | 4 |
+| 14.BARC | 5 | 5 | 0 |
+| 15.ICAR-IARI | 1 | 1 | 0 |
+| 16.NATIONAL INFORMATICS CENTRE | 3 | 1 | 2 |
+| 17.ACCOUNTS AND COMMERCE | 5 | 0 | 5 |
+| 18.POLICE EXAMS | 63 | 43 | ~14 |
+| 19.PSU MAHARATNA | 14 | 0 | 14 |
+| 20.PSU NAVRATNA | 25 | 1 | 24 |
+| 21.METRO RAIL | 20 | 0 | 20 |
+
+`06.NURSING` was the single worst category: a handful of resources (`Tamil Nadu Staff Nurse Exam` reused across 16 different states, `Karnataka CHO Exam` across 6, an Andaman-specific ANM doc across 5) had been auto-matched onto dozens of unrelated states' exams purely by job-title overlap. `18.POLICE EXAMS` was the largest by folder count (64) and found a genuine source-file bug: J&K's own Police Drive folders literally contain Haryana's docx (misfiled at the source, not a DB bug -- flagged for the content team, left unlinked since the DB link was already correct from elsewhere).
+
+### 55.3 STATE EXAMS -- 28 states, ~829 exam folders, ~664 fixes
+
+| State | Folders | Fixed | State | Folders | Fixed |
+|---|---|---|---|---|---|
+| Andhra Pradesh | 19 | 0 | Maharashtra | 30 | 28 |
+| Arunachal Pradesh | 34 | 0 | Manipur | 30 | 29 |
+| Assam | 36 | 3 | Meghalaya | 30 | 28 |
+| Bihar | 31 | 2 (unlink only) | Mizoram | 28 | 26 |
+| Chhattisgarh | 35 | 33 | Nagaland | 32 | 29 |
+| Goa | 30 | 28 | Odisha | 30 | 27 |
+| Gujarat | 33 | 31 | Punjab | 29 | 26 |
+| Haryana | 29 | 26 | Rajasthan | 46 | 44 |
+| Himachal Pradesh | 30 | 26 | Sikkim | 24 | 22 |
+| Jharkhand | 33 | 29 | Tamil Nadu | 32 | 31 |
+| Karnataka | 32 | 31 | Telangana | 25 | 25 |
+| Kerala | 27 | 25 | Tripura | 22 | 21 |
+| Madhya Pradesh | 30 | 29 | Uttar Pradesh | 27 | 23 |
+| — | — | — | Uttarakhand | 23 | 22 |
+| — | — | — | West Bengal | 22 | 20 |
+
+This is where the audit found the real damage: Andhra Pradesh and Arunachal Pradesh were the only two states already fully correct going in. Most of the rest (Chhattisgarh, Gujarat, Rajasthan, Telangana most severely) were **almost entirely unlinked** despite having real, ready-to-use Introduction docx sitting on Drive the whole time -- not a wrong-content bug, just never connected. On top of that, the same small set of generic resources (`UGC Assistant Professor`, `BPSC TRE TGT/PGT/PRT`, `Tamil Nadu ANM Exam`, `Jharkhand Staff Nurse`, `RRB Pharmacist`, `1.MTS_INTRO` from India Post, `Gujarat CHO Exam`, `Patna High Court Stenographer`, `AN Primary Teacher`) kept recurring as the wrong link across a dozen-plus states. Two more source-file mistakes were caught: Jharkhand's own "Group D/Peon" folder contains a mislabeled Clerk docx, and Odisha's "Agriculture Services (ASO/AO)" folder contains a mislabeled CGLRE docx -- both left unlinked rather than propagated.
+
+### 55.4 UT EXAMS -- 8 UTs, ~295 exam folders, ~22 fixes
+
+| UT | Folders | Fixed |
+|---|---|---|
+| Andaman and Nicobar Islands | 34 | 0 |
+| Chandigarh | 34 | 2 |
+| Dadra and Nagar Haveli and Daman and Diu | 34 | 0 |
+| Jammu and Kashmir | 43 | 11 |
+| Delhi | 42 | 1 |
+| Ladakh | 40 | 4 |
+| Lakshadweep | 30 | 1 |
+| Puducherry | 38 | 2 |
+
+Unlike the states, most UTs were already ~90%+ correct going in -- confirms the UT-specific wrong-intro cleanup from §52.3 (done in an earlier session, before this one) actually held. The remaining bugs here were smaller and more scattered: `NIC Scientist` content reused for 3 different Ladakh research-institute exams (DRDO-SASE, DRDO-DIHAR, Pollution Control), `UGC Assistant Professor` reused for Chandigarh/Lakshadweep/Puducherry/Ladakh college-lecturer exams, and one Puducherry exam showing Ladakh's own Social Welfare content.
+
+### 55.5 A real miss, caught by post-hoc verification, not by the pass itself
+
+After declaring the audit complete, the user asked to *confirm* the intros were actually live -- not just take the summary at face value. Ran a DB-wide fan-out check (`lc_exam_intro` grouped by `resource_id`, flagging any resource shared by exams with different conducting_body/state_ut -- the exact signature hunted all session) across all 1,523 linked exams. 19 flagged; 18 reviewed and confirmed legitimate (same-state duplicate `exams` rows, or deliberately-accepted national content like SBI/India Post GDS). The 19th was real: **Ladakh's own "Assistant Professor / Lecturer" exam was still showing generic UGC content** -- it had been correctly identified as wrong during the Ladakh UT pass (§ in-chat) but left out of that category's fix plan by a transcription slip. Fixed immediately once caught. Also verified: a spread of resources created across the session (earliest to latest) all return HTTP 200 with real block content from their live R2 URLs, and zero of the 1,523 `lc_exam_intro` rows point at a `resource_id` that doesn't exist in `resources` -- no dangling writes. Lesson for future passes of this kind: a same-pattern DB-wide sweep at the end is worth doing even after a careful category-by-category pass, since a single missed item in a 40-exam plan is easy to lose track of across a session this long.
+
+### 55.6 Genuine data-modeling gaps found, flagged, not fixed
+
+Two cases where one `exams` row maps to more than one real docx, which isn't fixable by relinking: ISRO's combined "Scientist/Engineer Technical Assistant" exam row has two distinct real docx (Scientist and Technical Assistant) but only one can be linked; ESIC's combined "Technical & Medical JE, Nursing Officer/Staff Nurse, Doctors" exam row has three real docx for its three sub-roles. Both left as-is (the ESIC one was unlinked from its previously-wrong content rather than guessing which of the three docx to pick) -- these need a data-modeling decision (split into separate exam rows) that isn't this audit's call to make unilaterally.
+
+### 55.7 A blanket "no underscores in generated titles" directive, applied retroactively too
+
+Partway through, user gave a standing instruction: no underscores in resource titles going forward. The reusable fix template (§55.8) was updated to strip underscores unconditionally and fall back to `"<conducting body> - <exam label>"` whenever the raw docx filename is literally "Introduction" (extremely common -- most STATE/UT folders use that generic filename). Also went back and fixed the 44 resources already created earlier in the session whose titles had underscores baked in from source docx filenames (Banking cooperative-bank items, all of Defence, Judiciary, Engineering's RRB JE) -- DB title, R2 `metadata.json` title, and the chapter's own title all patched to match. Did not retroactively touch older underscored titles from unrelated earlier-today work (outside this task's scope).
+
+### 55.8 Tooling built and kept (committed as reusable, not one-off `_tmp_` scripts)
+
+- **`scripts/audit_drive_intro_folders.mjs`** -- discovers every real exam-Introduction folder under a given Drive root. Went through two real bugs during use, both fixed: (1) `fs.readdirSync` order over a mounted Drive filesystem isn't alphabetical, so when a folder has 2+ subfolders matching `/intro/i` (a genuine content-team duplication -- e.g. a stray "5. INTRODUCTION" folder full of mock-test docx sitting alongside the real "1. INTRODUCTION") it now always picks the lowest-numbered one and prints a `[WARN]` rather than picking whichever the filesystem lists first; (2) the "is this an exam folder" heuristic now matches on a direct `/intro/i` folder name OR a GUIDE/PRECIS/PYQ/TEST-SERIES sibling signature, after an earlier version either mis-triggered on parent category folders or missed genuine typo'd folders (e.g. "1. INTODUCTION").
+- **`scripts/fix_wrong_intros_template.mjs`** -- the reusable relink/new-link script, copied per category to a `_tmp_fix_<category>_intros.mjs` and pointed at that category's plan JSON. Dry-run by default, `--execute` to write. Bakes in the underscore-free title rule from §55.7.
+
+Every per-category plan file and its copy of the fix script were deleted after that category's writes were verified -- only these two genuinely reusable tools were kept untracked-but-real in `scripts/`.
+
+### 55.9 Git/production state
+
+`docs/status_report.md` (this entry) plus the two new scripts (`scripts/audit_drive_intro_folders.mjs`, `scripts/fix_wrong_intros_template.mjs`) are the only file changes from this session -- everything else was Supabase/R2 writes, not code. Not committed yet; user has not asked to commit or push this session. Standing rules followed throughout: no hardcoded secrets (all scripts read from `.env`), no generated content directories touched, confirmed with the user before each large batch of writes until they explicitly waived that for the remainder of the run.
+
+**Next session, if anything is left**: the two data-modeling gaps in §55.6 need a decision; the handful of genuine source-file mistakes flagged in §55.2/§55.3 (J&K Police folder, Jharkhand Group D folder, Odisha Agriculture Services folder, Gujarat Police Constable with no matching DB row, Rajasthan Informatics Assistant with no matching Drive folder) need the content team to supply the real file or the DB row, whichever is missing -- nothing more Claude can do on these without inventing content.
+
+## 56. The §55 fixes were invisible in admin -- found and closed a second linking gap, then produced the final missing-Intro list
+
+Right after §55 was reported done, the user checked the actual admin Exams page and the Intro links didn't appear to be there. Root cause: the admin "Resources" panel (`src/pages/admin/ExamResourcesPanel.jsx`) only ever reads `lc_exam_resource_map` (category='Intro') -- the older, Gemini-auto-matched mapping table -- and never reads `lc_exam_intro`, the guaranteed one-row-per-exam table §52 onward (and all of §54-55) actually wrote to. The candidate-facing site was correct the whole time (`useExamContent.js`'s `fetchExamIntro` checks `lc_exam_intro` first, exactly by design), but admin had zero visibility into it, so from the admin's chair the whole audit looked like it hadn't happened.
+
+Confirmed concretely on the Ladakh Assistant Professor/Lecturer exam fixed at the very end of §55: `lc_exam_intro` correctly pointed at the new resource, but `lc_exam_resource_map` still had its old August 23 Gemini-matched (wrong) resource sitting in the Intro slot -- because nothing in this whole audit had ever touched that table.
+
+**Fix**: wrote a one-off sync (`scripts/_tmp_sync_intro_map*.mjs`, not kept -- see §55.8's two permanent tools for what *is* kept) that, for every `lc_exam_intro` row with a real `resource_id`, makes `lc_exam_resource_map`'s Intro-category row for that `exam_id` match it exactly -- deleting any stale/wrong Intro row for that exam first, then inserting the correct one. First pass silently truncated at PostgREST's default 1000-row page cap (`lc_exam_intro` actually has 1,492 rows with a `resource_id`, not 1,000 -- confirmed the hard way when the Ladakh exam, used as the live verification case, still showed the old row after "success"). Re-ran with proper `.range()` pagination on both the `lc_exam_intro` and `lc_exam_resource_map` fetches; the corrected run found the 492 rows the first pass missed and finished the sync. Combined across both passes: 265 stale rows deleted, 1,121 new rows inserted, `lc_exam_resource_map` now carries 1,499 Intro rows against 1,492 `lc_exam_intro` rows (the small excess is pre-existing legitimate duplicates, not a new bug). Verified the Ladakh exam specifically now shows the correct resource in both tables.
+
+**Lesson for future one-off sync/backfill scripts against this DB**: never trust an unfiltered `.select()` to return everything -- PostgREST silently caps at 1000 rows with no error, so a row count landing suspiciously close to a round 1000 is itself a signal to add `.range()` pagination before trusting the result.
+
+Also ran `scripts/export_missing_intros.mjs` (an existing tool from an earlier session, untouched) fresh to get a current punch-list: of 1,537 total exams, **37 still have no Introduction at all** -- written to `docs/exams_missing_intro.xlsx`. Of those, most are either genuinely missing real content (7 have blank `exam_name`, worth a data-quality look on their own) or fall into the already-flagged §55.2/§55.3 gaps (Rajasthan Informatics Assistant, Odisha Agriculture Services). The rest are smaller/rarer exams the Drive tree audit's folder-discovery heuristic never surfaced a folder for at all (as opposed to surfacing one with wrong/no content) -- a genuinely different, smaller follow-up than the main §55 sweep, left for whenever the content team supplies the missing folders.
+
+Permission note: applying the corrected sync script's `--execute` run required the user to manually add a Bash permission rule to `.claude/settings.local.json` -- the auto-mode classifier blocks Claude from editing its own permission file (self-modification), by design.
+
+## 57. Next session's plan: the same audit, extended to PYQs then Quizzes
+
+User's direction for the next chat: apply the exact same Drive-vs-DB methodology from §54-56 to **PYQs first, then Quizzes last** -- go exam by exam, compare what's on Drive against what's actually linked in the DB, relink whatever's wrong or missing, and (per the standing §55.7 rule) never leave underscores in a generated title. This section is the starting plan so the next session can begin immediately without re-deriving context.
+
+### 57.1 Known complication to resolve first: which table is actually live for PYQs
+
+Unlike Intro (where §52-56 already nailed down `lc_exam_intro` as the one true source), PYQ content is split across **two different systems** and it isn't yet confirmed which one candidates actually see:
+
+- **`pyq_papers` / `pyq_questions`** (`sql/pyq_papers.sql`) -- dedicated structured Q&A tables (question/options/answer/explanation), populated by the OCR/reconstruction pipeline (`scripts/ocr_reconstruct_pyps*.py`, `scripts/reconstruct_all_pyps*.py`, `scripts/structure_pyps_replicate.py`, `scripts/ingest_structured_pyps.mjs`, output into the untracked `FINAL_PYPS_STRUCTURED/`/`books/` dirs). Rendered candidate-side by `PyqReader.jsx`/`PyqCenter.jsx`. Has an additive `lc_exam_id` FK column (`sql/pyq_quizzes_lc_exam_link.sql`) alongside a free-text `exam_name` column -- but as of this session, `PyqCenter.jsx`'s actual exam filter (`matchesExamFilter`, line 64) still matches on `exam_name` substring only, **not** `lc_exam_id`. Confirm whether that's changed before assuming `lc_exam_id` is what to write to.
+- **`resources` with `category='PYQ'`**, linked the same way Intro/Guide/Precis are via `lc_exam_resource_map` -- the sql comment in `pyq_papers.sql` itself says PYQs "previously landed in quizzes/questions (category='PYQ') by mistake" and were moved out, which suggests this pathway may now be legacy/dead for PYQ specifically, but that needs to be confirmed live (check whether any exam's `byCategory.PYQ` in `useExamContent.js` is non-empty and actually rendered anywhere), not assumed.
+
+First task of the next session: read `PyqReader.jsx`/`PyqCenter.jsx` and `useExamContent.js`'s PYQ handling closely enough to state definitively which table+column is the real write target before touching any data, the same way lc_exam_intro's authority was established before §54's first write.
+
+### 57.2 Quizzes: the write target is already known
+
+Two separate quiz-mapping surfaces already exist and both matter: `lc_exam_quiz_map` (`sql/lc_exam_quiz_map.sql`, exam_id -> quiz_id, mirrors `lc_exam_resource_map`) is what `QuizCenter.jsx` (the candidate-facing quiz browse page) prefers, falling back to the old subject-overlap filter only when a given exam has no rows there yet. `quizzes.lc_exam_id` (`sql/pyq_quizzes_lc_exam_link.sql`) is a second, additive per-quiz FK column. Next session should confirm both are checked/kept in sync the same way §56 just did for Intro (`lc_exam_resource_map` vs `lc_exam_intro`) -- don't repeat the same two-tables-diverge mistake for quizzes.
+
+### 57.3 Methodology (reuse, don't rebuild)
+
+Same pattern as §54-55, applied per category folder, PYQs first then Quizzes, one category fully audited and fixed before moving to the next (§ standing "sequential folder ingest" rule): discover the real PYQ/Quiz-relevant files under each exam's Drive folder (the "4. PYQ" and "5. TEST SERIES" numbered subfolders `audit_drive_intro_folders.mjs` already detects as the content-signature siblings -- that script's discovery logic should extend directly to these, not need reinventing); resolve exact exam_id (never fuzzy); check current linkage in whichever table §57.1/§57.2 confirms is authoritative; content-sanity-check anything already linked (not just "is something linked") the same way §54.2's SSC CHSL bug and the whole of §55 was caught; fix and relink immediately per category, no underscores in any generated title (bake `cleanTitle()` from `scripts/fix_wrong_intros_template.mjs` into whatever new fix script this needs, don't regenerate that logic from scratch); report a per-category table; and -- the new lesson from §56 -- **sync both the authoritative table and whatever legacy/admin-facing table mirrors it in the same pass this time**, so this session doesn't end with the same "looks unlinked in admin" surprise §56 had to catch after the fact. Track elapsed time per category for an ETA the same way the STATE EXAMS pass did in §55.
+
+## 58. §57's plan executed for CENTRAL EXAMS (all 21 categories), then a bigger architectural bug found and fixed: `exams.exam_name` collisions, not just wrong links
+
+### 58.1 §57.1 answered: `pyq_papers`/`pyq_questions` is the real table, `resources` category='PYQ' is a live code path with zero rows
+
+Read `PyqReader.jsx`/`PyqCenter.jsx` directly: both query `pyq_papers`/`pyq_questions` exclusively, matched by `exam_name` substring (`PyqCenter.jsx`'s `matchesExamFilter`), never `lc_exam_id` before this session. Separately, `useExamContent.js` → `ExamContentPreview.jsx` reads `resources` where `category='PYQ'` and renders it inline on `ExamSyllabus.jsx` alongside a dedicated `/pyq-center` link -- genuinely live code, but a DB check found **zero** `resources` rows with `category='PYQ'` exist right now, so that path is currently a no-op for every exam, not a second real content source to reconcile against.
+
+### 58.2 New reusable tooling, same spirit as §55.8
+
+- **`scripts/audit_drive_pyq_folders.mjs`** -- Drive discovery for the "N. ... PYQ" folder per exam, counting real paper files by distinct stem (docx+pdf pair = one paper). Handles two real folder-naming quirks found live: a stray space before the numbering dot ("4 . 10 YEARS PYQs"), and exams that split PYQ papers into subject subfolders (SSC JE's Civil/Electrical/Mechanical) instead of dumping files directly in the PYQ folder.
+- **`scripts/audit_pyq_linkage.mjs`** -- cross-references Drive discovery against `pyq_papers`, matching Drive folder labels to `exams` rows by normalized name or `conducting_body`+`exam_name` combo (BANKING-style short generic names need the combo; career_track turned out too fragmented/overlapping to use as a hard filter -- one Drive category like TEACHING spans TEACHING, TEACHER RECRUITMENT, TEACHER ELIGIBILITY, EDUCATION SERVICES as separate `career_track` values -- so it's now only a tie-break hint, never a scope filter). Flags `AMBIGUOUS_LABEL` when 2+ Drive folders in one run normalize to the same label, which is what surfaced §58.4.
+- **`scripts/backfill_pyq_lc_exam_id.mjs`** -- the real fix for §58.4, see below.
+
+### 58.3 All 21 CENTRAL EXAMS categories audited -- 432 exams, 122 (~28%) fully linked with real content
+
+| # | Category | Exams | OK | Partial | Missing/no-source |
+|---|---|---|---|---|---|
+| 01 | SSC | 13 | 10 | 0 | 3 |
+| 02 | BANKING | 37 | 14 | 7 | 16 |
+| 03 | TEACHING | 72 | 39 | 5 | 28 |
+| 04 | RRB | 9 | 4 | 5 | 0 |
+| 05 | UGC-NET | 3 | 3 | 0 | 0 |
+| 06 | NURSING | 78 | 17 | 1 | 60 |
+| 07 | CIVIL SERVICES | 2 | 0 | 1 | 1 |
+| 08 | ENGINEERING RECRUITMENT | 6 | 1 | 1 | 4 |
+| 09 | DEFENCE | 19 | 2 | 2 | 15 |
+| 10 | JUDICIARY EXAMS | 27 | 0 | 0 | 27 (no source) |
+| 11 | INSURANCE EXAMS | 17 | 5 | 0 | 12 |
+| 12 | OTHER GOVERNMENT EXAMS | 21 | 14 | 0 | 7 |
+| 13 | INDIA POST | 4 | 3 | 0 | 1 |
+| 14 | BARC | 5 | 1 | 0 | 4 |
+| 15 | ICAR-IARI | 1 | 0 | 0 | 1 |
+| 16 | NATIONAL INFORMATICS CENTRE | 3 | 2 | 0 | 1 |
+| 17 | ACCOUNTS AND COMMERCE | 5 | 2 | 0 | 3 |
+| 18 | POLICE EXAMS | 51 | 0 | 0 | 51 (mostly no source) |
+| 19 | PSU MAHARATNA | 14 | 5 | 0 | 9 |
+| 20 | PSU NAVRATNA | 25 | 0 | 0 | 25 |
+| 21 | METRO RAIL | 20 | 0 | 0 | 20 (mostly no source) |
+
+**"Missing/no-source" is two different problems, not one.** Most of it is a real OCR backlog (Drive has real docx/PDF papers, nothing's been reconstructed into `pyq_papers` yet -- deferred this session, no working free OCR pipeline right now: Gemini's out of credits, the Vertex/fal/replicate/flex scripts in the working tree from an earlier session look like unfinished experiments). But three categories (JUDICIARY EXAMS fully, most of POLICE EXAMS, most of METRO RAIL) have Drive folders containing only a `[PLACEHOLDER -- Replace with actual content]` .txt file, not real source material at all -- the content team hasn't supplied anything to OCR yet, which needs a different ask than "run the reconstruction pipeline."
+
+### 58.4 Bigger finding: cross-exam content bleed traces to `exams.exam_name` itself, not just wrong `pyq_papers` links
+
+Content-sanity-checking the "linked" papers (not just counting them, same lesson as §54.2/§55) found real mislinks fixed by unlink (non-destructive, `exam_name` set to null, no rows deleted): SSC Scientific Assistant (IMD)'s only paper was actually an SSC JE paper; UPSC Civil Services' two "papers" were Bhutan's and the Philippines' civil service exams; two "Community Health Officer" papers were Kenya's TVET community-health curriculum assessments, not an Indian CHO recruitment exam.
+
+Deeper than that: several papers were ingested with a bare generic `exam_name` ("Staff Nurse", "ANM", "Community Health Officer", "Nursing Officer", plain "TGT"/"PGT") instead of the institution-qualified label every other paper uses. `PyqCenter.jsx`'s matching is bidirectional substring (`paper.exam_name` vs `exam.exam_name`), so exactly 2 real "Staff Nurse" papers (RRB-titled, SGPGI-titled) were showing as "linked" on **18 different states'** Staff Nurse pages. Renaming those papers to institution-qualified labels seemed like the fix -- until checking why one rename (UIIC's "Administrative Officer (AO)") still didn't resolve cleanly revealed the real root cause: **the `exams` table itself has massive non-unique `exam_name` values.** Measured live: **117 exam_name values are shared by 2+ different real exams, covering 380 of 1,537 exams (24.7%)** -- "Staff Nurse" ×20, "Sub-Inspector" ×9, "ANM" ×7, "Constables" ×7, plus a long tail of Agriculture/Home Guard/Civil Defence titles at ×6 each. When the *target* exams themselves share one name, no amount of `pyq_papers.exam_name` rewriting can disambiguate -- the two exams are equally valid substring matches by construction. This isn't a PYQ-only bug; it risks the same substring-matching convention anywhere else it's used (Guide/Precis fallback, Quiz fallback) wherever `lc_exam_resource_map`/`lc_exam_id` linking doesn't already cover it.
+
+### 58.5 The real fix: `pyq_papers.lc_exam_id` backfilled, `PyqCenter.jsx` changed to prefer it
+
+`pyq_papers.lc_exam_id` already existed (`sql/pyq_quizzes_lc_exam_link.sql`, added §49.2) but was essentially unused (1/754 rows set) and `PyqCenter.jsx` never read it. Verified live that `exams.exam_id` and `lc_exams.id` share the same UUID for 1,531/1,537 rows (`api/exams.js`'s own header comment already relies on this), so `lc_exam_id` can be backfilled by resolving against `exams` directly and writing that same uuid.
+
+`scripts/backfill_pyq_lc_exam_id.mjs` resolves conservatively -- exact normalized `exam_name` match, else `conducting_body`+`exam_name` combo, else unique-prefix match against the real ingestion convention (`"<exam name> 10 YEARS PYQ PAPER N"`) -- and only writes when exactly one `exams` row qualifies; ambiguous (2+ candidates) or unmatched rows are left null rather than guessed. First pass: 534/747 resolved and written (71%). This session's own manually-renamed rows (institution-name-first, so they don't fit the automated resolver's patterns) were then individually resolved and backfilled by hand (UIIC, NIACL, GIC, MP ANM, NIC, BTSC, OSSSC, FCI ×3). Final coverage: **548/754 (72.7%)** `pyq_papers` rows now carry a real `lc_exam_id`; 200 remain unresolved (genuinely ambiguous or no matching `exams` row) rather than fuzzy-guessed; 6 have no `exam_name` at all (this session's confirmed-wrong-content unlinks).
+
+`PyqCenter.jsx`'s `matchesExamFilter` now checks `lc_exam_id` first (exact FK, no ambiguity) and only falls back to the substring text match when it's null -- same pattern `useExamContent.js` already uses for Guide/Precis via `lc_exam_resource_map`. Fixed a second, real bug found while touching this function: the old code's `!p.exam_name` clause made any unlinked paper match *every* exam's filtered view (not just the unfiltered "all papers" list) -- meaning this session's own unlink-fixes (Bhutan/Philippines/Kenya content) were about to leak onto every exam's PYQ page instead of disappearing. Now a null-`exam_name` paper only shows in the unfiltered view. Verified with a clean `vite build`; no live browser check available in this environment (standing gap, see memory).
+
+`src/pages/admin/PyqPapersPage.jsx`'s exam-picker code comment (written at §49) claimed "candidate-facing code still matches on it by name, not yet on lc_exam_id" -- updated to reflect the new reality so a future session doesn't read stale context there.
+
+### 58.6 Git/production state
+
+Changed this session: `docs/status_report.md` (this entry), two new scripts (`scripts/audit_drive_pyq_folders.mjs`, `scripts/audit_pyq_linkage.mjs`), one new script (`scripts/backfill_pyq_lc_exam_id.mjs`), `src/pages/PyqCenter.jsx` (matching logic), `src/pages/admin/PyqPapersPage.jsx` (comment only). All Supabase writes (unlinks, renames, the `lc_exam_id` backfill) already applied live against production. Not committed yet -- user has not asked to commit or push this session. Standing rules followed: no hardcoded secrets, no generated content directories touched, every write was either a rename/unlink of a specific already-identified-wrong row or a conservative non-guessed backfill.
+
+### 58.7 (Superseded by §59 -- both STATE and UT were finished same session)
+
+## 59. Same session, continued: STATE EXAMS (28 states) and UT EXAMS (8 UTs) audited, closing out the full PYQ Drive-vs-DB pass
+
+### 59.1 STATE EXAMS -- 28 states, 835 exams, 206 (~24.7%) fully linked
+
+| State | Exams | OK | State | Exams | OK |
+|---|---|---|---|---|---|
+| Andhra Pradesh | 20 | 18 | Maharashtra | 30 | 1 |
+| Arunachal Pradesh | 34 | 19 | Manipur | 30 | 0 |
+| Assam | 36 | 18 | Meghalaya | 30 | 0 |
+| Bihar | 31 | 19 | Mizoram | 28 | 0 |
+| Chhattisgarh | 35 | 20 | Nagaland | 32 | 3 |
+| Goa | 30 | 17 | Odisha | 31 | 0 |
+| Gujarat | 33 | 21 | Punjab | 30 | 1 |
+| Haryana | 29 | 20 | Rajasthan | 47 | 0 |
+| Himachal Pradesh | 30 | 8 | Sikkim | 24 | 2 |
+| Jharkhand | 33 | 11 | Tamil Nadu | 32 | 1 |
+| Karnataka | 32 | 7 | Telangana | 25 | 1 |
+| Kerala | 27 | 3 | Tripura | 24 | 2 |
+| Madhya Pradesh | 30 | 0 | Uttar Pradesh | 27 | 10 |
+| — | — | — | Uttarakhand | 23 | 3 |
+| — | — | — | West Bengal | 22 | 1 |
+
+Andhra Pradesh and Arunachal Pradesh are again (as they were for Intro, §55.3) the best-covered states -- everything else drops off sharply, with Madhya Pradesh, Manipur, Meghalaya, Mizoram, Odisha, and Rajasthan showing **zero** real PYQ content despite every one of those states' Drive folders having genuine, ready-to-source docx/PDF papers sitting there unused. Same finding as Intro's §55.3, just worse for PYQ: the Northeast states and MP/Odisha/Rajasthan are where the OCR backlog is concentrated.
+
+### 59.2 UT EXAMS -- 8 UTs, ~308 exams, 100% no real source content anywhere
+
+Andaman & Nicobar, Chandigarh, Dadra & Nagar Haveli/Daman & Diu, Jammu & Kashmir, Delhi, Ladakh, Lakshadweep, and Puducherry **every single one** came back `NO_DRIVE_CONTENT` for every exam folder -- no real docx/PDF PYQ papers exist on Drive for any UT exam at all, only placeholder files or nothing. This is a cleaner, simpler finding than STATE/CENTRAL's mix: there's no OCR work possible here yet at all -- the content team needs to supply real source papers before this category can be touched, category-wide, not exam-by-exam.
+
+### 59.3 A few more cross-exam mislinks found and fixed the same way as §58.4
+
+Spot-checking "OK" results while auditing states surfaced the exact same generic-`exam_name` bleed pattern again: Haryana's "Agriculture Development Officer" (2 papers) turned out to be Punjab's and Himachal's content, not Haryana's at all; a bare "Agriculture Supervisor" mixed one Rajasthan-specific paper (RSMSSB) with one unidentifiable one. Fixed the same way -- renamed to institution-qualified labels, backfilled `lc_exam_id` where a matching `exams` row could be found without guessing (Himachal's row resolved; Punjab's and the unidentified one could not, and were left honestly unresolved rather than guessed).
+
+**A real lesson from doing this over ~35 categories/states now**: renaming a paper to `"<Institution> (<full name>) <original generic label>"` (institution-first) breaks the automated backfill script's matching (which expects the real ingestion convention, `"<label> ... PAPER N"`, label-first) *and* can break the paper's own correct match against its real Drive folder if that folder's label doesn't also happen to be a full sentence containing the institution name verbatim. Where the institution was already knowable and confirmed, resolving `lc_exam_id` by hand (as done throughout §58-59) sidesteps this; a few generic-labeled papers from this session (RSMSSB Agriculture Supervisor, Punjab Agriculture Development Officer, IB Security Assistant, SGPGI Staff Nurse) are renamed correctly for human readability but don't yet resolve to a real `exams` row, either because none exists yet or the resolution wasn't attempted by hand. Worth a final cleanup pass before this is called fully done.
+
+### 59.4 Overall PYQ audit totals, CENTRAL + STATE + UT combined
+
+**1,575 exams audited, 328 (~20.8%) with real, correctly-linked PYQ content.** `pyq_papers.lc_exam_id` coverage: 549/754 rows (72.8%). The remaining ~1,247 exams need either real OCR reconstruction (most of CENTRAL/STATE) or the content team to supply source material that doesn't exist yet at all (JUDICIARY EXAMS, most of POLICE EXAMS, most of METRO RAIL, and the entire UT EXAMS category).
+
+### 59.5 Git/production state
+
+Same file set as §58.6 plus this entry -- no additional scripts needed for STATE/UT, the same `audit_drive_pyq_folders.mjs`/`audit_pyq_linkage.mjs`/`backfill_pyq_lc_exam_id.mjs` tooling covered all three tiers unchanged. All writes (renames, unlinks, `lc_exam_id` backfills) applied live. Not committed -- user has not asked to commit or push this session.
+
+### 59.6 Next session starts here
+
+The full Drive-vs-DB PYQ *linkage* audit (discover, cross-reference, fix cheap mislinks, flag OCR/no-source gaps) is done for all of CENTRAL + STATE + UT. What's left, in the order the user's been working through this: (1) **Quizzes** (§57.2) -- not started yet, flagged this session as lower priority per the user's own words ("quizzes are in better shape than the PYQs"), but `lc_exam_quiz_map` vs `quizzes.lc_exam_id` sync should still be checked the same way §56 caught it for Intro. (2) **The OCR reconstruction decision** -- deferred all session; no working free pipeline confirmed (Gemini exhausted, Vertex/fal/replicate/flex scripts in the tree are unverified experiments from an earlier session) -- needs a real decision on provider/budget before any of the ~1,000+ missing-content exams can actually be closed. (3) The content-team ask for JUDICIARY EXAMS, most of POLICE EXAMS, most of METRO RAIL, and all of UT EXAMS is a different, non-Claude-actionable item -- there's no source material to work with at all, not a linking or OCR problem.
+
+## 60. Book Content admin work: row-click regression fix, bulk Link Exams, and a much bigger find -- most Guide/Precis content was running on a legacy text-match fallback, not real links
+
+### 60.1 BooksPage.jsx: row click no longer opens the book editor
+
+Clicking anywhere on a row in Book Content (`src/pages/admin/BooksPage.jsx`) used to `navigate()` into the chapter editor -- redundant with the existing "Open in new tab" (`ExternalLink`) button and the Preview (`Eye`) button, and an accidental click while editing an inline field was easy to trigger. Removed the row's `onClick`/`clickable` class entirely; the two existing buttons are now the only way in.
+
+### 60.2 New: bulk "Link Exams" -- the mirror of the exam page's own "Add Resource" drawer
+
+User wanted to link one Guide/Precis book to many exams at once from the book's own row, without going exam-by-exam through each exam's Resources panel. `src/pages/admin/ExamResourcesPanel.jsx` already had almost exactly this (`AddResourceMapDrawer` -- fixed exam, multi-select resources); built `src/pages/admin/LinkExamsDrawer.jsx` as its mirror image (fixed book, multi-select exams, same search/level-filter/checkbox-list UI, same `lc_exam_resource_map` insert shape), wired to a new purple Link2 button per row in BooksPage.jsx. **Disabled for Intro rows** with an explanatory tooltip -- Intro is a hard 1:1 (one exam per resource, never more), a rule the user restated emphatically after an earlier in-session attempt to generalize it, which was reverted. The drawer only *adds* links; it doesn't unlink or replace an exam's existing resource (removal still goes through ExamResourcesPanel's own trash icon, one exam at a time).
+
+### 60.3 Investigating a "swap this book out" request surfaced the real finding
+
+User wanted to replace "HINDI JHT" (596 linked entries) with a different book. Checking what "596" actually meant before building a swap feature: those are 596 duplicate `resources` rows all sharing one title and one real R2 location (`storage_base_url`) -- a legacy ingestion pattern (one row created per exam at ingestion time) predating `lc_exam_resource_map`. Of those 596, only 455 had an explicit `lc_exam_resource_map` row; the other 141 were reachable only through `useExamContent.js`'s `exam_name` ilike-text-match fallback.
+
+Widening the check to all of Guide/Precis found this wasn't a one-book problem: **of 14,655 total Guide/Precis `resources` rows, only 611 distinct resource_ids had any `lc_exam_resource_map` row at all (10,045 map rows total, reused across many exams each -- the modern one-resource/many-exams pattern this year's tooling uses). The other 14,044 rows, across 533 real book titles, had zero map row and were served entirely by the legacy fallback** -- not an edge case, the large majority of live Guide/Precis content. Quizzes were worse: `lc_exam_quiz_map` had **zero** rows despite being built (§42) -- every quiz link was 100% fallback, no exceptions (still blocked on Gemini credits per §36/§42).
+
+User's direction: remove the legacy fallback entirely and run on real linkage only, then later clean up whatever tables/rows become dead. That can't happen in one step without breaking live content for whatever isn't backfilled first.
+
+### 60.4 A live bug found in the fallback gate itself, fixed first
+
+Before backfilling anything, found and fixed a real bug in `useExamContent.js`: `fetchMappedResources(examId)` checked for *any* `lc_exam_resource_map` row for the exam across *all* categories combined -- so an exam with, say, only an Intro map row (1,499 exams have one, per §56) would short-circuit the fallback for *every* category, including Guide/Precis rows that were never mapped and had no other way to be found. Verified live: 18 exams had real Guide/Precis content sitting completely unreachable this way (sample: RRB Nursing Superintendent, SBI PO/Clerk, several "Medical Officer"/"Assistant Professor" postings). Rewrote it to return which *categories* are actually mapped (`{ resources, mappedCategories }`), and the hook now only calls the fallback for whichever categories aren't covered -- a strict improvement over the old behavior (fixes the 18 live cases) and a necessary prerequisite for the backfill below (partial coverage no longer silently blacks out unmapped categories for the same exam).
+
+### 60.5 Guide/Precis backfill: `scripts/backfill_guide_precis_resource_map.mjs`
+
+Built (kept, reusable, same convention as `backfill_pyq_lc_exam_id.mjs`) rather than one-off `_tmp_`. Groups `resources` rows by **(category, title, storage_base_url)** -- title alone isn't safe: 66 titles (e.g. "ENGLISH" with 7, "GENERAL KNOWLEDGE" with 464) turned out to be several genuinely *different* real books sharing one generic name. An earlier draft of this script grouped by title alone and would have picked one arbitrary "canonical" resource per title, silently cross-linking exams to the wrong book's content -- the same class of bug the PYQ audit already found once (§58.4, generic `exam_name` values shared by unrelated exams). Caught in dry-run before any writes.
+
+Per (category, title, content) group: pick a canonical resource_id (prefer one an existing map row already points at), resolve every duplicate row's `exam_name` to a real `lc_exams.id` via the same conservative exact → conducting-body-combo → unique-prefix chain `backfill_pyq_lc_exam_id.mjs` uses (never guessed -- ambiguous or no-match rows are skipped), insert an `lc_exam_resource_map` row per resolved exam pointing at the canonical resource, and archive (`status='Draft'`) every non-canonical row in the group (confirmed byte-for-byte identical content by construction of the group key).
+
+Dry run first, reviewed with the user, then executed. Result: **8,517 new `lc_exam_resource_map` rows** resolved and written (10,458 exact-name matches + 4 prefix matches, minus in-group dedup; 3,575 ambiguous and 592 no-match rows correctly left unresolved rather than guessed), **13,270 duplicate legacy rows archived**. One real snag mid-execute: `lc_exam_resource_map` has a unique constraint on `(exam_id, resource_id)` alone, not including `category` -- a plain `.insert()` fails an *entire* 500-row batch on a single conflict, which silently dropped ~1,000 otherwise-valid rows in the first two batches. Fixed by switching to `.upsert(..., { onConflict: 'exam_id,resource_id', ignoreDuplicates: true })` and re-running (idempotent -- already-written rows and already-Draft archives just no-op); the retry picked up the missing ~1,000. Verified live afterward: Guide/Precis `lc_exam_resource_map` row count went from 10,045 to 18,530 (+8,485, matching expectations); HINDI JHT specifically now has exactly 1 Published row (was 596) with the rest archived.
+
+### 60.6 What's left before the fallback code can actually be deleted
+
+Real remaining gap: **3,575 ambiguous + 592 no-match Guide/Precis rows** (the same generic-shared-exam-name problem PYQ hit) are still only reachable via the fallback -- until each is manually resolved or flagged for the content team, removing `fetchResourcesFallback` would blank those exams' Guide/Precis sections. Quizzes haven't been touched at all yet (still 0 rows in `lc_exam_quiz_map`) -- same backfill approach needs to be built for `quizzes`/`lc_exam_quiz_map` before its own fallback (`fetchQuizzesByExamName`) can go. Only once both are as complete as conservative matching allows should the fallback functions actually be deleted from `useExamContent.js`; after that, the now-fully-archived duplicate `resources` rows (13,270 and counting) are the "later, remove deprecated tables and rows" cleanup the user asked for.
+
+### 60.7 Git/production state
+
+Changed: `src/pages/admin/BooksPage.jsx`, new `src/pages/admin/LinkExamsDrawer.jsx`, `src/hooks/useExamContent.js` (per-category mapped/fallback fix), new `scripts/backfill_guide_precis_resource_map.mjs` (kept, reusable), this status_report entry. All Guide/Precis backfill writes (8,517 map inserts, 13,270 archives) already applied live against production. Not committed -- user has not asked to commit or push this session.
+
+### 60.8 Live incident: the archive step broke real, pre-existing links -- found via "Untitled Resource" reports, root-caused and fixed same session
+
+Right after §60.5's backfill, user reported the admin's exam-level Resources panel showing "Untitled Resource" for content the team had already linked, and books missing from view generally.
+
+**Root cause**: `resources` has RLS that hides `status='Draft'` rows from the anon key -- confirmed directly (queried the same resource_id via service-role key, got the row; via anon key, got `[]`). `ExamResourcesPanel.jsx` and `useExamContent.js` both read `resources` with the anon client (browser-side), unlike the admin's `books-list`/`books-get` API actions, which go through the service-role key and never showed a problem. §60.5's archive step picked ONE arbitrary "canonical" resource_id per (title, content) group and archived every other resource_id in that group -- but some of those other resource_ids weren't just unused legacy junk, they were resource_ids that a *different* exam's admin had already, correctly, linked to before this session ever started (two exams independently pointing at two different duplicate rows of the same real content, both valid). Archiving the one this run's arbitrary pick didn't choose silently broke that other exam's link, invisibly to the service-role scripts that verified the backfill (which never checked visibility through the anon key/RLS).
+
+**Blast radius, confirmed live**: 8,881 pre-existing (real, team-created) `lc_exam_resource_map` rows across 1,460 exams ended up pointing at a resource archived by mistake -- collapsing to 202 distinct resource_ids once you cut duplicates. 5 of my own 8,517 backfilled rows hit the identical bug pointing at each other's un-picked duplicate.
+
+**Fix, applied live**: re-published (`status='Published'`) exactly the 202 resource_ids that were both (a) currently Draft and (b) referenced by at least one real `lc_exam_resource_map` row -- i.e. "un-archive anything actually in use, leave archived only what nothing points to." Verified after: zero `lc_exam_resource_map` rows (any category) still pointing at a Draft resource, except one pre-existing, unrelated Intro-category row (`resource_id 02ee...`, exam `e2ee...`) that predates this session's work entirely and wasn't touched.
+
+**`scripts/backfill_guide_precis_resource_map.mjs` fixed for next time**, two bugs: (1) the archive-candidate check now also excludes any resource_id in `mappedResourceIds` (referenced by ANY pre-existing map row), not just the one this run picked as canonical -- the actual fix for the incident above. (2) Canonical selection was picking via `.find()` over Postgres's non-guaranteed row order, so a second run of the script could pick a *different* resource_id as canonical than the first run and generate a redundant second set of links instead of recognizing the first run's as already covering those exams -- switched to a deterministic sort. A re-run after the fix still shows ~3,197 "new" inserts (down from the ~4,700 an intermediate, only-partially-fixed version showed) -- these are cases where a content group genuinely has 2+ different resource_ids each already linked to different exams; correctly resolving that without creating redundant duplicate links for exams that already have working access via a different resource_id in the same group needs another pass, deliberately not executed this session given the live incident just closed.
+
+**Lesson for any future bulk status/archival script against this schema**: verify visibility through the same client (anon key, RLS-subject) real users/admin pages actually read with, not just the service-role script's own view -- a service-role verification pass can look completely clean while RLS silently hides the result from everyone else. Same category of lesson as PYQ's PostgREST 1000-row cap (§56) and the Intro/lc_exam_resource_map divergence (§56) -- a write that looks correct from the tool that made it isn't verified until checked from the same angle the real consumers use.
+
+### 60.9 Same incident, second and larger wave: archiving broke the fallback path itself for thousands of never-resolved exams
+
+Minutes after §60.8's fix, user reported the "ENGLISH" Precis book specifically missing. Investigating found the real scope was much bigger than the 202-resource fix covered.
+
+**Root cause, continued**: "ENGLISH" is one of the 66 titles that's actually 2+ genuinely different real books sharing a name (§60.5) -- 6 distinct physical books after dedup, 2,422 duplicate rows total. §60.5's archive step correctly kept exactly one Published survivor per distinct book -- but for the **3,575 ambiguous + 592 no-match rows that never resolved to an explicit exam link**, that specific row -- tagged with that specific exam's own `exam_name` -- was each exam's *only* path to the content, via `useExamContent.js`'s exam-name fallback. Archiving anything except the one arbitrary survivor per book silently cut off every other exam that depended on the fallback finding its own differently-tagged duplicate row of the same content. The earlier 202-resource fix only covered resource_ids with an *existing explicit* `lc_exam_resource_map` row; it didn't account for exams with no explicit link at all, which was most of the still-ambiguous/no-match set.
+
+**Confirmed scope**: of 13,109 archived Guide/Precis rows, **3,420 belonged to an exam with zero other path to that content** (no explicit link, and its own `exam_name` didn't resolve to anything this session) -- these had just lost their only way to be found. 9,671 were safe (their exam now has a real explicit link from §60.5). 18 had no `exam_name` at all (harmless either way).
+
+**Fixed live**: restored `status='Published'` on those 3,420 rows. Verified via the anon key directly afterward: "ENGLISH" (Precis) now returns real rows again for a spread of exam_name values (Veterinary Assistant, MPSC Stenographer, NDA, SSC JHT, etc.) Current Guide/Precis split: 4,966 Published, 9,689 Draft (versus 611 Published pre-session, so still a large, real reduction in duplicate row count -- just a correct one now).
+
+**`scripts/backfill_guide_precis_resource_map.mjs` hardened a third time**: a row may now only be archived if it has a real alternate path -- either its resource_id is already in `mappedResourceIds`, or its own `exam_name` resolved to a real exam *this run* (getting a fresh explicit link to the canonical resource_id, replacing its fallback dependency). Ambiguous, no-match, and blank-exam_name rows are never archived, full stop. Re-run in dry mode afterward: archive candidates dropped from 13,270 (the original, unsafe number) to 3,402 -- that's the actual safe number a from-scratch run should have produced from the start.
+
+**Deliberately not re-executed this session**: the dry run still shows 3,197 "new" map-row inserts available (content groups where 2+ different resource_ids already have independent real links to different exams, and some unresolved rows in the same group could now get their own explicit link too). Left for a future session with a clearer head, given two live incidents already happened today from moving too fast on the same script.
+
+**Real lesson, sharper than §60.8's**: "this row is a duplicate of the canonical" was never really the right question. The right question was "does the exam that depends on this specific row have anywhere else to go if it disappears" -- for most of this schema's legacy content, before this session, the answer was no, because the fallback *is* the primary access path, not a backup. Any future archival pass against legacy exam_name-tagged rows must check the actual dependency (explicit link, successful resolution this run, or nothing) per row, never infer safety from "some other row in the same content group survived."
+
+### 60.10 A genuinely separate, pre-existing bug found while chasing §60.9: "ENGLISH" was never tagged as a Guide book at all
+
+Following up on "ENGLISH is missing from Guide" specifically (as opposed to Precis, which §60.9 fixed) -- not a fallout of today's archiving. User pointed at the local `books/Guide/ENGLISH/` staging folder (26 real chapters, `source_file: Cluster_087_ENGLISH.docx`) to check whether it had been lost. Traced that exact source file in the DB: it *was* ingested, at some point before this session, but with `resources.category='Precis'` even though its own R2 storage path is `structured_resources/blocks/Guide/...` -- a pre-existing mistagging at ingestion time, unrelated to anything this session touched. 3 duplicate rows existed for it, all Published, zero existing `lc_exam_resource_map` links on any of them (so it had never actually been linked to any exam as Guide *or* Precis via the explicit table -- whatever exposure it had was through the fallback, under the wrong category).
+
+Per user's direction: recategorized the canonical row (`345ae2f4-...`) to `category='Guide'`, title kept as "ENGLISH"; archived its 2 exact duplicates (safe -- zero links existed on any of the 3 to begin with, confirmed before touching anything); then linked it to **every exam that currently has an ENGLISH Precis resource** (1,010 distinct exams, all newly linked via `lc_exam_resource_map` category='Guide'). Verified through the anon key directly afterward (given §60.8/60.9's lesson): resource visible, category correctly 'Guide', all 1,010 links visible.
+
+Separate, still-open finding: "ENGLISH" (Precis) has one much larger sub-group (1,177 duplicate rows) also stored under a `blocks/Guide/...` R2 path, not yet checked for the same mistagging -- deliberately left alone this session, flagged for a future look rather than guessed at.
