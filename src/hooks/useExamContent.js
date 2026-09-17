@@ -193,14 +193,11 @@ export function useExamContent(examName, careerTrack, examId) {
   const [quizzes, setQuizzes] = useState([]);
   const [intro, setIntro] = useState(null);
   const [completedResourceIds, setCompletedResourceIds] = useState(new Set());
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(Boolean(examName));
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!examName) {
-      setLoading(false);
-      return;
-    }
+    if (!examName) return;
     let mounted = true;
     setLoading(true);
     setError(null);
@@ -239,7 +236,11 @@ export function useExamContent(examName, careerTrack, examId) {
         }
 
         if (!mounted) return;
-        setByCategory(groupByCategory(resources));
+        const grouped = groupByCategory(resources);
+        if (introData?.resource && (!grouped['Intro'] || grouped['Intro'].length === 0)) {
+          grouped['Intro'] = [introData.resource];
+        }
+        setByCategory(grouped);
         setQuizzes(quizRows);
         setIntro(introData);
       } catch (err) {

@@ -905,7 +905,7 @@ const BooksPage = () => {
               </div>
               <button className="lc-close-btn" onClick={() => setPreviewBook(null)}><X size={20} /></button>
             </div>
-            <AdminResourcePreview resourceId={previewBook.resourceId} />
+            <AdminResourcePreview resourceId={previewBook.resourceId} book={previewBook} />
           </div>
         </div>
       )}

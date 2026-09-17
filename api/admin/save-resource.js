@@ -590,7 +590,7 @@ async function handleBooksGet(req, res) {
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error } = await supabase.from('resources').select('resource_id,title,category,storage_base_url,status').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error } = await supabase.from('resources').select('resource_id,title,category,storage_base_url,status,format,chapter_count').eq('resource_id', resourceId).maybeSingle();
     if (error) throw new Error(error.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
@@ -606,11 +606,63 @@ async function handleBooksGet(req, res) {
       title: row.title,
       category: row.category,
       storageBaseUrl: canonicalUrl,
+      format: row.format || (groupRows.find((r) => r.format)?.format) || 'blocks',
+      chapterCount: row.chapter_count ?? (groupRows.find((r) => r.chapter_count != null)?.chapter_count) ?? 1,
       status: isArchived ? 'Draft' : (row.status || 'Published'),
       isArchived,
     });
   } catch (e) {
     console.error('[admin/save-resource:books-get] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
+/**
+ * POST /api/admin/save-resource with
+ * { type: 'books-fetch-content', url?, storageBaseUrl?, resourceId?, fileName? }
+ *
+ * Fetches JSON content (metadata.json or chapter JSON) server-side from R2
+ * to bypass browser CORS and network restrictions.
+ */
+async function handleBooksFetchContent(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { url, storageBaseUrl, resourceId, fileName } = req.body || {};
+  let targetUrl = url;
+
+  if (!targetUrl && storageBaseUrl) {
+    const base = storageBaseUrl.replace(/\/+$/, '') + '/';
+    const rel = (fileName || 'metadata.json').replace(/^\/+/, '');
+    targetUrl = `${base}${rel}`;
+  }
+
+  if (!targetUrl && resourceId) {
+    try {
+      const supabase = getSupabaseAdmin();
+      const { data: row, error } = await supabase.from('resources').select('resource_id,title,category,storage_base_url').eq('resource_id', resourceId).maybeSingle();
+      if (!error && row) {
+        const groupRows = await fetchBookRows(supabase, row);
+        const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows.length ? groupRows : [row]);
+        if (canonicalUrl) {
+          const base = canonicalUrl.replace(/\/+$/, '') + '/';
+          const rel = (fileName || 'metadata.json').replace(/^\/+/, '');
+          targetUrl = `${base}${rel}`;
+        }
+      }
+    } catch (err) {
+      console.warn('[admin/save-resource:books-fetch-content] failed to resolve resourceId:', err.message);
+    }
+  }
+
+  if (!targetUrl) {
+    return res.status(400).json({ ok: false, error: 'Missing url, storageBaseUrl, or valid resourceId' });
+  }
+
+  try {
+    const cleanUrl = targetUrl.includes('?') ? targetUrl : `${targetUrl}?t=${Date.now()}`;
+    const data = await fetchJson(cleanUrl);
+    return res.status(200).json({ ok: true, data });
+  } catch (e) {
+    console.error('[admin/save-resource:books-fetch-content] fetch failed for ' + targetUrl + ':', e.message);
     return res.status(500).json({ ok: false, error: e.message });
   }
 }
@@ -1400,6 +1452,10 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-get') {
     return handleBooksGet(req, res);
+  }
+
+  if (req.body?.type === 'books-fetch-content') {
+    return handleBooksFetchContent(req, res);
   }
 
   if (req.body?.type === 'books-issues') {
