@@ -579,7 +579,7 @@ async function handleBooksGet(req, res) {
 
   try {
     const supabase = getSupabaseAdmin();
-    const { data: row, error } = await supabase.from('resources').select('resource_id,title,category,storage_base_url,status').eq('resource_id', resourceId).maybeSingle();
+    const { data: row, error } = await supabase.from('resources').select('resource_id,title,category,storage_base_url,status,format,chapter_count').eq('resource_id', resourceId).maybeSingle();
     if (error) throw new Error(error.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
@@ -592,6 +592,8 @@ async function handleBooksGet(req, res) {
       title: row.title,
       category: row.category,
       storageBaseUrl: canonicalUrl,
+      format: row.format || (groupRows.find((r) => r.format)?.format) || 'blocks',
+      chapterCount: row.chapter_count ?? (groupRows.find((r) => r.chapter_count != null)?.chapter_count) ?? 1,
       status: isArchived ? 'Draft' : (row.status || 'Published'),
       isArchived,
     });
