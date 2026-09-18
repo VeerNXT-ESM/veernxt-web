@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../../lib/supabase';
 import { useDebounced } from './lcShared';
-import { Search, Plus, Pencil, Trash2, X, Tags, AlertTriangle } from 'lucide-react';
+import { Search, Plus, Pencil, Trash2, X, Tags, AlertTriangle, Link2 } from 'lucide-react';
+import LinkCategoryExamsDrawer from './LinkCategoryExamsDrawer';
 
 /**
  * Lets the content team manage the lc_exams.category list themselves,
@@ -35,6 +36,7 @@ const CategoriesPage = () => {
   const [renameError, setRenameError] = useState('');
 
   const [deleteTarget, setDeleteTarget] = useState(null); // category row pending delete confirmation
+  const [managingExamsFor, setManagingExamsFor] = useState(null); // category row whose "Manage Exams" drawer is open
 
   const fetchAll = useCallback(async () => {
     setLoading(true);
@@ -194,6 +196,7 @@ const CategoriesPage = () => {
                   <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{examCounts[cat.name] || 0}</span></td>
                   <td className="lc-col-nowrap">
                     <div style={{ display: 'flex', gap: '0.4rem', justifyContent: 'flex-end' }}>
+                      <button className="lc-icon-btn" title="Manage exams in this category" style={{ color: '#7c3aed' }} onClick={() => setManagingExamsFor(cat)}><Link2 size={14} /></button>
                       <button className="lc-icon-btn" title="Rename" onClick={() => openRename(cat)}><Pencil size={14} /></button>
                       <button className="lc-icon-btn" title="Delete" style={{ color: '#dc2626' }} onClick={() => setDeleteTarget(cat)}><Trash2 size={14} /></button>
                     </div>
@@ -309,6 +312,15 @@ const CategoriesPage = () => {
             </div>
           </div>
         </div>
+      )}
+
+      {managingExamsFor && (
+        <LinkCategoryExamsDrawer
+          category={managingExamsFor}
+          allCategories={categories}
+          onClose={() => setManagingExamsFor(null)}
+          onLinked={() => { setManagingExamsFor(null); fetchAll(); }}
+        />
       )}
     </div>
   );
