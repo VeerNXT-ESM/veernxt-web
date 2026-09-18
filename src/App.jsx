@@ -47,6 +47,7 @@ import AdminLogin from './pages/admin/AdminLogin';
 import AdminShell from './pages/admin/AdminShell';
 import ExamsPage from './pages/admin/ExamsPage';
 import ConductingBodiesPage from './pages/admin/ConductingBodiesPage';
+import CategoriesPage from './pages/admin/CategoriesPage';
 import PublishContentPage from './pages/admin/PublishContentPage';
 import UsersPage from './pages/admin/UsersPage';
 import RolesPermissionsPage from './pages/admin/RolesPermissionsPage';
@@ -172,7 +173,6 @@ function App() {
           <Route path="/find-candidates" element={<AuthGuard><FindCandidates /></AuthGuard>} />
           <Route path="/messaging" element={<AuthGuard><MessagingWorkspace /></AuthGuard>} />
           <Route path="/network" element={<AuthGuard><Network /></AuthGuard>} />
-          <Route path="/reader/:id" element={<AuthGuard><SecureReader /></AuthGuard>} />
           <Route path="/quiz/:id" element={<AuthGuard><InteractiveQuiz /></AuthGuard>} />
           <Route path="/quiz-center" element={<AuthGuard><QuizCenter /></AuthGuard>} />
           <Route path="/pyq-center" element={<AuthGuard><PyqCenter /></AuthGuard>} />
@@ -185,6 +185,10 @@ function App() {
           <Route path="/rewards" element={<AuthGuard><RewardsCenter /></AuthGuard>} />
         </Route>
 
+        {/* Full-screen reader — no global Header/Footer/BottomNav chrome,
+            so its own nav bar (Back / Scroll / Flipbook toggle) is the
+            only bar on the page. */}
+        <Route path="/reader/:id" element={<AuthGuard><SecureReader /></AuthGuard>} />
         <Route path="/dev-reader" element={<DevReader />} />
 
         {/* Admin Routes */}
@@ -194,6 +198,7 @@ function App() {
           <Route path="/admin/exams" element={<ExamsPage />} />
           <Route path="/admin/books" element={<BooksPage />} />
           <Route path="/admin/conducting-bodies" element={<ConductingBodiesPage />} />
+          <Route path="/admin/categories" element={<CategoriesPage />} />
           <Route path="/admin/publish-content" element={<PublishContentPage />} />
           <Route path="/admin/users" element={<UsersPage />} />
           <Route path="/admin/roles" element={<RolesPermissionsPage />} />

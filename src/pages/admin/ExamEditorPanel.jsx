@@ -2,10 +2,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import ExamThumbnail from './ExamThumbnail';
-import { EXAM_CATEGORIES } from '../../lib/examCategoryTaxonomy';
 import { Save, Plus, X, Trash2, Copy, ExternalLink } from 'lucide-react';
-
-const CATEGORY_OPTIONS = EXAM_CATEGORIES.map((c) => ({ value: c, label: c }));
 
 const ACCENT_COLORS = ['#4b6b32', '#1F3A2E', '#b89047', '#2563eb', '#7c3aed', '#dc2626'];
 const LEVEL_OPTIONS = [
@@ -40,6 +37,10 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   const [regions, setRegions] = useState([]);
   const [thumbnailTemplates, setThumbnailTemplates] = useState([]);
   const [allTags, setAllTags] = useState([]);
+  // lc_exam_categories -- editable by the content team from CategoriesPage.jsx,
+  // not a hardcoded list. Read live here so a category added there shows up
+  // in this dropdown immediately, no code change or deploy needed.
+  const [categoryOptions, setCategoryOptions] = useState([]);
 
   const [form, setForm] = useState({
     conducting_body_id: '', region_id: '', name: '', category: '', category_detail: '', website: '',
@@ -71,16 +72,18 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   }, [examId]);
 
   const loadReferenceData = async () => {
-    const [{ data: bodies }, { data: regs }, { data: templates }, { data: tags }] = await Promise.all([
+    const [{ data: bodies }, { data: regs }, { data: templates }, { data: tags }, { data: cats }] = await Promise.all([
       supabase.from('lc_conducting_bodies').select('id,name').order('name'),
       supabase.from('lc_regions').select('id,name,level').order('name'),
       supabase.from('lc_thumbnail_templates').select('id,name,background_image_path').order('name'),
       supabase.from('lc_tags').select('id,name').order('name'),
+      supabase.from('lc_exam_categories').select('name').order('name'),
     ]);
     setConductingBodies(bodies || []);
     setRegions(regs || []);
     setThumbnailTemplates(templates || []);
     setAllTags(tags || []);
+    setCategoryOptions((cats || []).map((c) => ({ value: c.name, label: c.name })));
   };
 
   const fetchExam = async (id) => {
@@ -329,7 +332,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
                 placeholder="Select category..."
                 value={form.category}
                 onChange={(e) => updateForm({ category: e.target.value })}
-                options={CATEGORY_OPTIONS}
+                options={categoryOptions}
               />
             </div>
             <div className="lc-input-group">

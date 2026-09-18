@@ -9,6 +9,7 @@ export const ADMIN_NAV = [
       { key: 'exams', label: 'Exams', path: '/admin/exams', icon: 'GraduationCap' },
       { key: 'books', label: 'Book Content', path: '/admin/books', icon: 'BookMarked' },
       { key: 'conducting-bodies', label: 'Conducting Bodies', path: '/admin/conducting-bodies', icon: 'Landmark' },
+      { key: 'categories', label: 'Categories', path: '/admin/categories', icon: 'Tags' },
       { key: 'publish-content', label: 'Publish Content', path: '/admin/publish-content', icon: 'FileUp' },
     ],
   },
