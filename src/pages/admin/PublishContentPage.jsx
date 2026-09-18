@@ -88,6 +88,12 @@ const PublishContentPage = () => {
   const [existingBooksToReplace, setExistingBooksToReplace] = useState([]);
   const [loadingExistingBooks, setLoadingExistingBooks] = useState(false);
   const [selectedBookToReplace, setSelectedBookToReplace] = useState(null);
+  // Narrows the Replace picker by the book's own Level/State-UT tags (from
+  // books-list, same fields BooksPage.jsx's own filter bar and columns use)
+  // -- distinct from the exam Level/Region/Category fields above, which pick
+  // exam(s) to link a NEW upload to, not which existing book to replace.
+  const [replaceLevelFilter, setReplaceLevelFilter] = useState('');
+  const [replaceStateUtFilter, setReplaceStateUtFilter] = useState('');
 
   const [publishing, setPublishing] = useState(false);
   const [publishError, setPublishError] = useState(null);
@@ -130,6 +136,8 @@ const PublishContentPage = () => {
     setExistingIntroTitle(null);
     setExistingBooksToReplace([]);
     setSelectedBookToReplace(null);
+    setReplaceLevelFilter('');
+    setReplaceStateUtFilter('');
     setExamQuery('');
     setPublished(null);
     setPublishError(null);
@@ -190,6 +198,8 @@ const PublishContentPage = () => {
             title: b.title,
             category: 'Intro',
             chapterCount: b.chapterCount || 1,
+            level: b.level || null,
+            stateUt: b.stateUt || null,
             examId: examInfo?.examId || null,
             examName: examInfo?.examName || null,
             mapId: examInfo?.mapId || null,
@@ -246,6 +256,8 @@ const PublishContentPage = () => {
             category: cat,
             chapterCount: b.chapterCount,
             format: 'blocks',
+            level: b.level || null,
+            stateUt: b.stateUt || null,
             examName: examSummary || null,
             linkedExams: linked,
             examId: linked[0]?.examId || null,
@@ -297,6 +309,13 @@ const PublishContentPage = () => {
     if (!q) return examsInCategory;
     return examsInCategory.filter((exam) => exam.name.toLowerCase().includes(q) || exam.conducting_body?.name?.toLowerCase().includes(q));
   })();
+
+  const filteredBooksToReplace = existingBooksToReplace.filter((b) => {
+    if (replaceLevelFilter && b.level !== replaceLevelFilter) return false;
+    if (replaceStateUtFilter && b.stateUt !== replaceStateUtFilter) return false;
+    return true;
+  });
+  const replaceRegionOptions = regions.filter((r) => r.level === replaceLevelFilter);
 
   const fetchExistingIntro = async (examId) => {
     const [{ data: introRows }, { data: mapRows }] = await Promise.all([
@@ -669,6 +688,27 @@ const PublishContentPage = () => {
                   </div>
                 ) : (
                   <div>
+                    <div style={{ display: 'flex', gap: '0.6rem', marginBottom: '0.6rem', flexWrap: 'wrap' }}>
+                      <div style={{ minWidth: 140 }}>
+                        <Select
+                          value={replaceLevelFilter}
+                          onChange={(e) => { setReplaceLevelFilter(e.target.value); setReplaceStateUtFilter(''); }}
+                          placeholder="All Levels"
+                          options={[{ value: '', label: 'All Levels' }, ...LEVELS]}
+                        />
+                      </div>
+                      {(replaceLevelFilter === 'state' || replaceLevelFilter === 'ut') && (
+                        <div style={{ minWidth: 190 }}>
+                          <Select
+                            searchable
+                            value={replaceStateUtFilter}
+                            onChange={(e) => setReplaceStateUtFilter(e.target.value)}
+                            placeholder={`All ${replaceLevelFilter === 'state' ? 'States' : 'UTs'}`}
+                            options={[{ value: '', label: `All ${replaceLevelFilter === 'state' ? 'States' : 'UTs'}` }, ...replaceRegionOptions.map((r) => ({ value: r.name, label: r.name }))]}
+                          />
+                        </div>
+                      )}
+                    </div>
                     <Select
                       searchable
                       value={selectedBookToReplace?.id || ''}
@@ -676,8 +716,8 @@ const PublishContentPage = () => {
                         const found = existingBooksToReplace.find((b) => b.id === e.target.value);
                         if (found) setSelectedBookToReplace(found);
                       }}
-                      placeholder={`Search & select an existing ${category} book (${existingBooksToReplace.length} available)…`}
-                      options={existingBooksToReplace.map((b) => ({
+                      placeholder={`Search & select an existing ${category} book (${filteredBooksToReplace.length} of ${existingBooksToReplace.length})…`}
+                      options={filteredBooksToReplace.map((b) => ({
                         value: b.id,
                         label: `${b.title}${b.chapterCount ? ` (${b.chapterCount} ch)` : ''}${b.examName ? ` — [Exam: ${b.examName}]` : ''}`,
                       }))}

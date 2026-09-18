@@ -37,6 +37,7 @@ const QuizzesPage = () => {
   const debouncedSearch = useDebounced(search, 300);
   const [categoryTab, setCategoryTab] = useState('All');
   const [levelFilter, setLevelFilter] = useState('');
+  const [stateUtFilter, setStateUtFilter] = useState('');
   const [quizzes, setQuizzes] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
   const [page, setPage] = useState(1);
@@ -84,6 +85,7 @@ const QuizzesPage = () => {
     if (debouncedSearch) query = query.ilike('title', `%${debouncedSearch}%`);
     if (categoryTab !== 'All') query = query.eq('category', categoryTab);
     if (levelFilter) query = query.eq('level', levelFilter);
+    if (stateUtFilter) query = query.eq('state_ut', stateUtFilter);
     const from = (page - 1) * PAGE_SIZE;
     query = query.range(from, from + PAGE_SIZE - 1);
     const { data, count, error } = await query;
@@ -97,9 +99,9 @@ const QuizzesPage = () => {
   useEffect(() => {
     reload();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debouncedSearch, categoryTab, levelFilter, page]);
+  }, [debouncedSearch, categoryTab, levelFilter, stateUtFilter, page]);
 
-  useEffect(() => { setPage(1); }, [debouncedSearch, categoryTab, levelFilter]);
+  useEffect(() => { setPage(1); }, [debouncedSearch, categoryTab, levelFilter, stateUtFilter]);
 
   const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
 
@@ -224,10 +226,24 @@ const QuizzesPage = () => {
         </div>
         <div className="lc-filter-field">
           <label>Level</label>
-          <select value={levelFilter} onChange={(e) => setLevelFilter(e.target.value)} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
+          <select value={levelFilter} onChange={(e) => { setLevelFilter(e.target.value); setStateUtFilter(''); }} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
             {LEVEL_FILTER_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         </div>
+        {(levelFilter === 'state' || levelFilter === 'ut') && (
+          <div className="lc-filter-field">
+            <label>{levelFilter === 'state' ? 'State' : 'UT'}</label>
+            <div style={{ minWidth: 170 }}>
+              <Select
+                searchable
+                value={stateUtFilter}
+                onChange={(e) => setStateUtFilter(e.target.value)}
+                placeholder={`All ${levelFilter === 'state' ? 'States' : 'UTs'}`}
+                options={[{ value: '', label: `All ${levelFilter === 'state' ? 'States' : 'UTs'}` }, ...regions.filter((r) => r.level === levelFilter).map((r) => ({ value: r.name, label: r.name }))]}
+              />
+            </div>
+          </div>
+        )}
         <Link to="/admin/quiz" className="lc-btn primary"><Plus size={16} /> New Quiz</Link>
       </div>
 

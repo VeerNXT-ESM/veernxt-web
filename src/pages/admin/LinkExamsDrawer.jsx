@@ -29,6 +29,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   const [search, setSearch] = useState('');
   const [level, setLevel] = useState('');
   const [examCategory, setExamCategory] = useState('');
+  const [examRegion, setExamRegion] = useState(''); // region name -- only meaningful once level is 'state' or 'ut', same cascade ExamsPage.jsx's own State/UT field uses
   const [allExams, setAllExams] = useState([]);
   const [loading, setLoading] = useState(true);
   const [existingExamIds, setExistingExamIds] = useState([]);
@@ -71,14 +72,24 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     return [...new Set(pool.map((e) => (e.category || '').trim()).filter(Boolean))].sort();
   }, [allExams, level]);
 
+  // State/UT names -- derived from the same preloaded exams list rather than
+  // a separate lc_regions fetch, since every region in play already shows up
+  // on at least one exam here.
+  const regionOptions = useMemo(() => {
+    if (level !== 'state' && level !== 'ut') return [];
+    const pool = allExams.filter((e) => e.region?.level === level);
+    return [...new Set(pool.map((e) => e.region?.name).filter(Boolean))].sort();
+  }, [allExams, level]);
+
   const results = useMemo(() => {
     let pool = allExams;
     if (level) pool = pool.filter((e) => e.region?.level === level);
     if (examCategory) pool = pool.filter((e) => (e.category || '').trim() === examCategory);
+    if (examRegion) pool = pool.filter((e) => e.region?.name === examRegion);
     const q = search.trim().toLowerCase();
     if (q) pool = pool.filter((e) => e.name.toLowerCase().includes(q) || e.conducting_body?.name?.toLowerCase().includes(q));
     return pool;
-  }, [allExams, level, examCategory, search]);
+  }, [allExams, level, examCategory, examRegion, search]);
 
   const toggle = (examId) => setSelected((prev) => {
     const next = new Set(prev);
@@ -114,7 +125,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     onLinked(toAdd.length - toRemove.length);
   };
 
-  const handleClearFilters = () => { setSearch(''); setLevel(''); setExamCategory(''); };
+  const handleClearFilters = () => { setSearch(''); setLevel(''); setExamCategory(''); setExamRegion(''); };
 
   return (
     <div className="lc-drawer-backdrop" onClick={onClose}>
@@ -149,7 +160,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                 type="button"
                 className={`lc-btn ${level === id ? 'primary' : ''}`}
                 style={{ padding: '0.3rem 0.65rem', fontSize: '0.75rem', borderRadius: '6px' }}
-                onClick={() => { setLevel(id); setExamCategory(''); }}
+                onClick={() => { setLevel(id); setExamCategory(''); setExamRegion(''); }}
               >
                 {label}
               </button>
@@ -163,9 +174,20 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                 options={[{ value: '', label: 'All Categories' }, ...categoryOptions.map((c) => ({ value: c, label: c }))]}
               />
             </div>
+            {(level === 'state' || level === 'ut') && (
+              <div style={{ minWidth: 170 }}>
+                <Select
+                  searchable
+                  value={examRegion}
+                  onChange={(e) => setExamRegion(e.target.value)}
+                  placeholder={`All ${level === 'state' ? 'States' : 'UTs'} (${regionOptions.length})`}
+                  options={[{ value: '', label: `All ${level === 'state' ? 'States' : 'UTs'}` }, ...regionOptions.map((r) => ({ value: r, label: r }))]}
+                />
+              </div>
+            )}
           </div>
 
-          {(search || level || examCategory) && (
+          {(search || level || examCategory || examRegion) && (
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', fontSize: '0.75rem', color: 'var(--admin-text-muted)', padding: '0.2rem 0' }}>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', alignItems: 'center' }}>
                 <span>Filters:</span>
@@ -179,6 +201,12 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                   <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                     {examCategory}
                     <X size={11} style={{ cursor: 'pointer' }} onClick={() => setExamCategory('')} />
+                  </span>
+                )}
+                {examRegion && (
+                  <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    {examRegion}
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setExamRegion('')} />
                   </span>
                 )}
                 {search && (

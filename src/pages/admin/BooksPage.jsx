@@ -89,6 +89,7 @@ const BooksPage = () => {
   const [error, setError] = useState(null);
   const [category, setCategory] = useState(readStoredCategory);
   const [levelFilter, setLevelFilter] = useState('');
+  const [stateUtFilter, setStateUtFilter] = useState(''); // only meaningful once levelFilter is 'state' or 'ut' -- same cascade ExamsPage.jsx's own State/UT field uses
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search);
   const [sort, setSort] = useState('issues');
@@ -267,13 +268,14 @@ const BooksPage = () => {
     if (!books) return [];
     let list = books.filter((b) => (showArchived ? b.isArchived : !b.isArchived));
     if (levelFilter) list = list.filter((b) => b.level === levelFilter);
+    if (stateUtFilter) list = list.filter((b) => b.stateUt === stateUtFilter);
     if (debouncedSearch.trim()) {
       const q = debouncedSearch.trim().toLowerCase();
       list = list.filter((b) => b.title.toLowerCase().includes(q));
     }
     const issueScore = (b) => (b.issueCounts?.high || 0) * 1000 + (b.issueCounts?.medium || 0);
     return [...list].sort((a, b) => (sort === 'title' ? a.title.localeCompare(b.title) : issueScore(b) - issueScore(a)));
-  }, [books, levelFilter, debouncedSearch, sort, showArchived]);
+  }, [books, levelFilter, stateUtFilter, debouncedSearch, sort, showArchived]);
 
   // Reset to page 1 only when one of these actually CHANGES from its
   // previous value -- not merely "this effect has run before". A plain
@@ -287,7 +289,7 @@ const BooksPage = () => {
   // neither looks like a change.
   const prevResetKeyRef = useRef(null);
   useEffect(() => {
-    const key = JSON.stringify([category, levelFilter, debouncedSearch, sort, showArchived]);
+    const key = JSON.stringify([category, levelFilter, stateUtFilter, debouncedSearch, sort, showArchived]);
     if (prevResetKeyRef.current === null) {
       prevResetKeyRef.current = key;
       return;
@@ -296,7 +298,7 @@ const BooksPage = () => {
       prevResetKeyRef.current = key;
       setPage(1);
     }
-  }, [category, levelFilter, debouncedSearch, sort, showArchived]);
+  }, [category, levelFilter, stateUtFilter, debouncedSearch, sort, showArchived]);
 
   useEffect(() => {
     try { sessionStorage.setItem(STORAGE_KEY_CATEGORY, category); } catch { /* storage unavailable -- fall back silently */ }
@@ -460,10 +462,24 @@ const BooksPage = () => {
         </div>
         <div className="lc-filter-field">
           <label>Level</label>
-          <select value={levelFilter} onChange={(e) => setLevelFilter(e.target.value)} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
+          <select value={levelFilter} onChange={(e) => { setLevelFilter(e.target.value); setStateUtFilter(''); }} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
             {LEVEL_FILTER_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         </div>
+        {(levelFilter === 'state' || levelFilter === 'ut') && (
+          <div className="lc-filter-field">
+            <label>{levelFilter === 'state' ? 'State' : 'UT'}</label>
+            <div style={{ minWidth: 170 }}>
+              <Select
+                searchable
+                value={stateUtFilter}
+                onChange={(e) => setStateUtFilter(e.target.value)}
+                placeholder={`All ${levelFilter === 'state' ? 'States' : 'UTs'}`}
+                options={[{ value: '', label: `All ${levelFilter === 'state' ? 'States' : 'UTs'}` }, ...regions.filter((r) => r.level === levelFilter).map((r) => ({ value: r.name, label: r.name }))]}
+              />
+            </div>
+          </div>
+        )}
         <div className="lc-filter-field">
           <label>Format Title</label>
           <select

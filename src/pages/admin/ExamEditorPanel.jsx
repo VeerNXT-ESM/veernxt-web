@@ -2,7 +2,10 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import ExamThumbnail from './ExamThumbnail';
+import { EXAM_CATEGORIES } from '../../lib/examCategoryTaxonomy';
 import { Save, Plus, X, Trash2, Copy, ExternalLink } from 'lucide-react';
+
+const CATEGORY_OPTIONS = EXAM_CATEGORIES.map((c) => ({ value: c, label: c }));
 
 const ACCENT_COLORS = ['#4b6b32', '#1F3A2E', '#b89047', '#2563eb', '#7c3aed', '#dc2626'];
 const LEVEL_OPTIONS = [
@@ -39,7 +42,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   const [allTags, setAllTags] = useState([]);
 
   const [form, setForm] = useState({
-    conducting_body_id: '', region_id: '', name: '', category: '', website: '',
+    conducting_body_id: '', region_id: '', name: '', category: '', category_detail: '', website: '',
     thumbnail_template_id: '', accent_color: ACCENT_COLORS[0],
   });
   // UI-only: which region.level is selected, so the State/UT dropdown can
@@ -58,7 +61,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
     if (examId) {
       fetchExam(examId);
     } else {
-      setForm({ conducting_body_id: '', region_id: '', name: '', category: '', website: '', thumbnail_template_id: '', accent_color: ACCENT_COLORS[0] });
+      setForm({ conducting_body_id: '', region_id: '', name: '', category: '', category_detail: '', website: '', thumbnail_template_id: '', accent_color: ACCENT_COLORS[0] });
       setLevel('central');
       setStatus('draft');
       setExamTags([]);
@@ -90,6 +93,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
         region_id: exam.region_id || '',
         name: exam.name || '',
         category: exam.category || '',
+        category_detail: exam.category_detail || '',
         website: exam.website || '',
         thumbnail_template_id: exam.thumbnail_template_id || '',
         thumbnail_subject: exam.thumbnail_subject || '',
@@ -137,6 +141,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
         region_id: form.region_id,
         name: form.name.trim(),
         category: form.category.trim() || null,
+        category_detail: form.category_detail.trim() || null,
         website: form.website.trim() || null,
         thumbnail_template_id: form.thumbnail_template_id || null,
         accent_color: form.accent_color,
@@ -195,6 +200,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
         region_id: form.region_id,
         name: `${form.name} (Copy)`,
         category: form.category.trim() || null,
+        category_detail: form.category_detail.trim() || null,
         website: form.website.trim() || null,
         thumbnail_template_id: form.thumbnail_template_id || null,
         accent_color: form.accent_color,
@@ -302,7 +308,13 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
           <div className={level === 'central' ? 'lc-editor-identity-row2' : 'lc-editor-identity-row3'}>
             <div className="lc-input-group">
               <label>Category *</label>
-              <input type="text" value={form.category} onChange={(e) => updateForm({ category: e.target.value })} placeholder="e.g. SSC, Banking" />
+              <Select
+                searchable
+                placeholder="Select category..."
+                value={form.category}
+                onChange={(e) => updateForm({ category: e.target.value })}
+                options={CATEGORY_OPTIONS}
+              />
             </div>
             <div className="lc-input-group">
               <label>Level *</label>
@@ -320,6 +332,16 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
                 />
               </div>
             )}
+          </div>
+
+          <div className="lc-input-group">
+            <label>Category Detail</label>
+            <input
+              type="text"
+              value={form.category_detail}
+              onChange={(e) => updateForm({ category_detail: e.target.value })}
+              placeholder="Optional — the specific post/sub-type, e.g. &quot;Police SI&quot; (Category itself stays a fixed list for clean filtering)"
+            />
           </div>
 
           <div className="lc-input-group">

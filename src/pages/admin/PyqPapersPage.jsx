@@ -45,6 +45,7 @@ const PyqPapersPage = () => {
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search, 300);
   const [levelFilter, setLevelFilter] = useState('');
+  const [stateUtFilter, setStateUtFilter] = useState('');
   const [papers, setPapers] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
   const [page, setPage] = useState(1);
@@ -91,6 +92,7 @@ const PyqPapersPage = () => {
       .order('created_at', { ascending: false });
     if (debouncedSearch) query = query.ilike('title', `%${debouncedSearch}%`);
     if (levelFilter) query = query.eq('level', levelFilter);
+    if (stateUtFilter) query = query.eq('state_ut', stateUtFilter);
     const from = (page - 1) * PAGE_SIZE;
     query = query.range(from, from + PAGE_SIZE - 1);
     const { data, count, error } = await query;
@@ -104,9 +106,9 @@ const PyqPapersPage = () => {
   useEffect(() => {
     reload();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debouncedSearch, levelFilter, page]);
+  }, [debouncedSearch, levelFilter, stateUtFilter, page]);
 
-  useEffect(() => { setPage(1); }, [debouncedSearch, levelFilter]);
+  useEffect(() => { setPage(1); }, [debouncedSearch, levelFilter, stateUtFilter]);
 
   const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
 
@@ -152,8 +154,12 @@ const PyqPapersPage = () => {
     });
   };
   // Picking a real exam also syncs the free-text exam_name display field to
-  // match -- exam_name stays independently editable afterward (candidate-
-  // facing code still matches on it by name, not yet on lc_exam_id).
+  // match -- exam_name stays independently editable afterward. PyqCenter.jsx
+  // now prefers lc_exam_id when set (exact FK match), falling back to the
+  // exam_name substring match only when it's null -- see
+  // scripts/backfill_pyq_lc_exam_id.mjs and docs/status_report.md's PYQ
+  // audit section for why (many exam_name values collide across different
+  // real exams, e.g. "Staff Nurse" used by 19 unrelated states).
   const handleExamPick = (p, examId) => {
     const picked = examsById[examId];
     setPendingEdits((prev) => {
@@ -211,10 +217,24 @@ const PyqPapersPage = () => {
         </div>
         <div className="lc-filter-field">
           <label>Level</label>
-          <select value={levelFilter} onChange={(e) => setLevelFilter(e.target.value)} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
+          <select value={levelFilter} onChange={(e) => { setLevelFilter(e.target.value); setStateUtFilter(''); }} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
             {LEVEL_FILTER_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         </div>
+        {(levelFilter === 'state' || levelFilter === 'ut') && (
+          <div className="lc-filter-field">
+            <label>{levelFilter === 'state' ? 'State' : 'UT'}</label>
+            <div style={{ minWidth: 170 }}>
+              <Select
+                searchable
+                value={stateUtFilter}
+                onChange={(e) => setStateUtFilter(e.target.value)}
+                placeholder={`All ${levelFilter === 'state' ? 'States' : 'UTs'}`}
+                options={[{ value: '', label: `All ${levelFilter === 'state' ? 'States' : 'UTs'}` }, ...regions.filter((r) => r.level === levelFilter).map((r) => ({ value: r.name, label: r.name }))]}
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       {selectedIds.length > 0 && (
