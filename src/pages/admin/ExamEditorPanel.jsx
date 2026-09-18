@@ -119,6 +119,22 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   // auto-selects that region rather than making the admin pick from a
   // list of one.
   const regionsForLevel = regions.filter((r) => r.level === level);
+
+  // Also runs on its own (not just from changeLevel below) -- the "new
+  // exam" reset effect defaults level to 'central' directly, and `regions`
+  // may still be loading at that moment, so region_id can be left blank
+  // with no visible field to fix it (State/UT is hidden for Central). That
+  // silently failed Save with "Conducting Body, State/UT, and Exam Name are
+  // required" even though all three looked filled in. This picks up the
+  // Central region id as soon as both level==='central' and regions have
+  // loaded, however that state was reached.
+  useEffect(() => {
+    if (level === 'central' && !form.region_id && regions.length > 0) {
+      const centralRegion = regions.find((r) => r.level === 'central');
+      if (centralRegion) updateForm({ region_id: centralRegion.id });
+    }
+  }, [level, regions, form.region_id]);
+
   const changeLevel = (newLevel) => {
     setLevel(newLevel);
     if (newLevel === 'central') {
