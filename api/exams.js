@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'https://jtcyeufhvpieyngracpo.supabase.co';
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -23,13 +23,51 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { data: exam, error } = await supabase
+    let { data: exam, error } = await supabase
       .from('exams')
       .select('exam_id, exam_name, conducting_body, state_ut, career_track, subject_requirements, base_url, region_id, conducting_body_id, thumbnail_subject')
       .eq('exam_id', examId)
       .maybeSingle();
 
     if (error) throw error;
+
+    // Fallback: If not found directly in `exams`, check `lc_exams`
+    if (!exam) {
+      const { data: lcExam } = await supabase
+        .from('lc_exams')
+        .select('id, name, category, thumbnail_subject, conducting_body_id, region_id, conducting_body:lc_conducting_bodies(name), region:lc_regions(name, level)')
+        .eq('id', examId)
+        .maybeSingle();
+
+      if (lcExam) {
+        // Try finding content-rich row in `exams` table by name
+        const cleanName = lcExam.name.replace(/\([^)]*\)/g, '').trim();
+        const { data: matchByName } = await supabase
+          .from('exams')
+          .select('exam_id, exam_name, conducting_body, state_ut, career_track, subject_requirements, base_url, region_id, conducting_body_id, thumbnail_subject')
+          .ilike('exam_name', `%${cleanName}%`)
+          .limit(1)
+          .maybeSingle();
+
+        if (matchByName) {
+          exam = matchByName;
+        } else {
+          exam = {
+            exam_id: lcExam.id,
+            exam_name: lcExam.name,
+            conducting_body: lcExam.conducting_body?.name || '',
+            state_ut: lcExam.region?.name || '',
+            career_track: lcExam.category || 'Government Exams',
+            subject_requirements: {},
+            base_url: null,
+            region_id: lcExam.region_id,
+            conducting_body_id: lcExam.conducting_body_id,
+            thumbnail_subject: lcExam.thumbnail_subject || 'general',
+          };
+        }
+      }
+    }
+
     if (!exam) {
       return res.status(404).json({ ok: false, error: 'Exam not found' });
     }
