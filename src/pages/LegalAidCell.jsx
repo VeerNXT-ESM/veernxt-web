@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import {
@@ -31,10 +31,27 @@ const initialState = {
   caseRef: null,
 };
 
+/* ─── Category labels (same as admin) ─── */
+const CATEGORY_LABELS = {
+  pension: 'Pension / Pay', housing: 'Housing / Land',
+  service_matter: 'Service Matter', fraud: 'Fraud / Cyber',
+  family: 'Family / Succession', disability: 'Disability',
+  court: 'Court / Legal Proceedings', unknown: 'Not Classified',
+};
+
+const STATUS_STYLE = {
+  new:       { label: 'Submitted',   color: '#e3c677', bg: 'rgba(227,198,119,0.15)', border: 'rgba(227,198,119,0.3)' },
+  in_review: { label: 'In Review',   color: '#f0a04b', bg: 'rgba(240,160,75,0.15)',  border: 'rgba(240,160,75,0.3)'  },
+  responded: { label: 'Responded',   color: '#6fcf97', bg: 'rgba(111,207,151,0.15)', border: 'rgba(111,207,151,0.3)' },
+  closed:    { label: 'Closed',      color: '#8b9aad', bg: 'rgba(139,154,173,0.12)', border: 'rgba(139,154,173,0.25)'},
+};
+
 const LegalAidCell = () => {
   const navigate = useNavigate();
   const [current, setCurrent] = useState(1);
   const [state, setState] = useState(initialState);
+  const [history, setHistory] = useState([]);
+  const [historyLoading, setHistoryLoading] = useState(true);
 
   const patch = (updater) => setState((s) => ({ ...s, ...(typeof updater === 'function' ? updater(s) : updater) }));
 
@@ -42,6 +59,28 @@ const LegalAidCell = () => {
     () => ({ qa: state.qa, profile: state.profile, category: state.category, situation: state.situation, profileData: state.profileData }),
     [state.qa, state.profile, state.category, state.situation, state.profileData]
   );
+
+  /* Load the authenticated user's past submissions */
+  useEffect(() => {
+    let cancelled = false;
+    const load = async () => {
+      setHistoryLoading(true);
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) { setHistoryLoading(false); return; }
+        const { data } = await supabase
+          .from('legal_aid_queries')
+          .select('id, case_ref, created_at, category, situation, urgency, status')
+          .eq('user_id', user.id)
+          .order('created_at', { ascending: false })
+          .limit(10);
+        if (!cancelled) setHistory(data || []);
+      } catch (_) { /* silently ignore */ }
+      finally { if (!cancelled) setHistoryLoading(false); }
+    };
+    load();
+    return () => { cancelled = true; };
+  }, []);
 
   const exitAssistance = () => navigate(-1);
 
@@ -109,6 +148,26 @@ const LegalAidCell = () => {
               </li>
             ))}
           </ol>
+
+          {/* My past submissions in sidebar */}
+          {history.length > 0 && (
+            <div style={{ marginTop: 28, borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 20 }}>
+              <p style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#e3c677', marginBottom: 10 }}>My Submissions</p>
+              {history.map((h) => {
+                const sm = STATUS_STYLE[h.status] || STATUS_STYLE.new;
+                return (
+                  <div key={h.id} style={{ marginBottom: 8, background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '8px 10px', border: '1px solid rgba(255,255,255,0.07)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 4 }}>
+                      <span style={{ fontFamily: 'monospace', fontSize: 11, fontWeight: 700, color: '#e3c677' }}>{h.case_ref}</span>
+                      <span style={{ fontSize: 10, fontWeight: 700, padding: '2px 7px', borderRadius: 999, color: sm.color, background: sm.bg, border: `1px solid ${sm.border}`, whiteSpace: 'nowrap' }}>{sm.label}</span>
+                    </div>
+                    <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', marginTop: 3 }}>{CATEGORY_LABELS[h.category] || h.category}</div>
+                    <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.3)', marginTop: 1 }}>{new Date(h.created_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })}</div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
           <div className="privacy">🔒 Your information is private and can only be seen by authorised support personnel.</div>
         </aside>
 
@@ -426,6 +485,7 @@ const Screen8 = ({ state, go, exitAssistance }) => {
     setSubmitting(true);
     setError(null);
     try {
+      const { data: { user } } = await supabase.auth.getUser();
       const { error: dbError } = await supabase.from('legal_aid_queries').insert({
         case_ref: state.caseRef,
         profile: state.profile,
@@ -440,6 +500,7 @@ const Screen8 = ({ state, go, exitAssistance }) => {
         email: email || null,
         consent,
         status: 'new',
+        user_id: user?.id || null,
       });
       if (dbError) throw dbError;
       setSubmitted(true);
@@ -538,6 +599,36 @@ const Screen8 = ({ state, go, exitAssistance }) => {
       <div className="actions">
         <button type="button" className="back" onClick={() => go(7)}>← Back</button>
         <span />
+      </div>
+    </div>
+  );
+};
+/* ────────────────────────────────────────────────────────────
+   MyHistory — mobile-only banner shown above the step panel
+   (Sidebar version is rendered inline in the aside for desktop)
+──────────────────────────────────────────────────────────── */
+const MyHistory = ({ entries, loading }) => {
+  if (loading) return null;
+  if (!entries || entries.length === 0) return null;
+
+  return (
+    <div style={{
+      display: 'none', /* hidden on desktop — sidebar handles it */
+    }} className="my-history-mobile">
+      <div style={{ padding: '12px 16px', background: 'rgba(255,255,255,0.04)', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+        <p style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#e3c677', margin: '0 0 8px' }}>My Previous Queries</p>
+        <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
+          {entries.map((h) => {
+            const sm = STATUS_STYLE[h.status] || STATUS_STYLE.new;
+            return (
+              <div key={h.id} style={{ flexShrink: 0, background: 'rgba(255,255,255,0.05)', borderRadius: 8, padding: '6px 10px', border: '1px solid rgba(255,255,255,0.08)', minWidth: 140 }}>
+                <div style={{ fontFamily: 'monospace', fontSize: 11, fontWeight: 700, color: '#e3c677', marginBottom: 2 }}>{h.case_ref}</div>
+                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.5)', marginBottom: 4 }}>{CATEGORY_LABELS[h.category] || h.category}</div>
+                <span style={{ fontSize: 9, fontWeight: 700, padding: '2px 6px', borderRadius: 999, color: sm.color, background: sm.bg, border: `1px solid ${sm.border}` }}>{sm.label}</span>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -101,3 +101,9 @@
   .legal-aid-cell .content { padding: 28px 20px; }
   .legal-aid-cell .flow { padding: 8px; }
 }
+
+/* Show mobile history strip on small screens (sidebar is hidden) */
+@media (max-width: 980px) {
+  .legal-aid-cell .my-history-mobile { display: block !important; }
+}
+
