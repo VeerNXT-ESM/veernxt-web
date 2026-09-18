@@ -60,7 +60,12 @@ const RECOMMENDED_EXAMS = [
   },
   {
     id: 'delhi-police-guide',
-    searchTerm: 'police',
+    // Was just 'police' -- matched whichever police exam happened to come
+    // first in the fetched catalog (e.g. a different state's Police exam),
+    // so clicking this card could open a completely unrelated exam. Every
+    // state runs its own Police recruitment, so the term has to name the
+    // state to stay unambiguous.
+    searchTerm: 'delhi police',
     title: 'Delhi Police Constable Complete Guide',
     conductingBody: 'SSC',
     badge: 'New',
@@ -68,16 +73,11 @@ const RECOMMENDED_EXAMS = [
     badgeColor: '#3730a3',
     image: '/thumbnails/Reasoning.png',
   },
-  {
-    id: 'railway-ntpc-prep',
-    searchTerm: 'railway',
-    title: 'Railway NTPC Preparation',
-    conductingBody: 'Railway Recruitment Board',
-    badge: 'Bestseller',
-    badgeBg: '#fee2e2',
-    badgeColor: '#991b1b',
-    image: '/thumbnails/Technical Trades.png',
-  },
+  // 'railway-ntpc-prep' removed: confirmed live (searching "NTPC" and
+  // "railway" in Learning Center both return zero exams) that there is no
+  // Railway exam in the catalog at all yet, so this card could never open a
+  // real exam page. Re-add it once a Railway/NTPC exam exists in lc_exams --
+  // pick a searchTerm from that exam's actual name at that point.
   {
     id: 'agri-dept-exams',
     searchTerm: 'agriculture',
@@ -97,6 +97,16 @@ const RECOMMENDED_EXAMS = [
     badgeBg: '#f3e8ff',
     badgeColor: '#6b21a8',
     image: '/thumbnails/Computer Science.png',
+  },
+  {
+    id: 'banking-prep',
+    searchTerm: 'bank',
+    title: 'Banking & Financial Sector Exams',
+    conductingBody: 'IBPS / State Bank of India',
+    badge: 'High Vacancy',
+    badgeBg: '#fef9c3',
+    badgeColor: '#854d0e',
+    image: '/thumbnails/Financial Awareness.png',
   },
 ];
 
@@ -438,9 +448,7 @@ const LearningCenter = () => {
     if (course.examId) {
       navigate(`/exam/${course.examId}`, { state: { from: '/learning-center' } });
     } else if (course.searchTerm) {
-      const match = catalog.find((e) =>
-        e.name.toLowerCase().includes(course.searchTerm.toLowerCase())
-      );
+      const match = findCatalogMatch(course.searchTerm);
       if (match) {
         navigate(`/exam/${match.id}`, { state: { from: '/learning-center' } });
       } else {
@@ -481,9 +489,7 @@ const LearningCenter = () => {
       return;
     }
 
-    const match = catalog.find((e) =>
-      e.name.toLowerCase().includes((card.searchTerm || '').toLowerCase())
-    );
+    const match = findCatalogMatch(card.searchTerm);
     const examId = match?.id || null;
     const examName = match?.name || card.title;
 
@@ -503,7 +509,16 @@ const LearningCenter = () => {
     } else if (searchResults.length > 0) {
       handleStartPreparing(searchResults[0].id, searchResults[0].name);
     } else {
+      // No catalog match for this card's term at all -- rather than
+      // silently updating the (possibly off-screen) search box and doing
+      // nothing else visible, which reads as "the card is broken", fall
+      // back to showing the filtered search results so the click always
+      // does *something* the person can see.
       setSearchText(card.searchTerm);
+      const resultsEl = document.getElementById('lc-search-results-section');
+      if (resultsEl) {
+        resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
@@ -736,22 +751,139 @@ const LearningCenter = () => {
   // finds the real catalog exam each one is standing in for (same fuzzy
   // match used when the card is actually clicked) so the real published
   // resource total can be shown instead of a made-up number.
+  // Single source of truth for every "curated card -> real catalog exam"
+  // lookup on this page (recommended/popular card previews, Resume/Continue
+  // Learning, and the actual navigate-on-click handlers below all call this
+  // instead of each rolling their own .find()). A single-word term like
+  // 'police' or 'railway' used to substring-match the exam_name and return
+  // whichever exam happened to sit first in the fetched catalog order --
+  // e.g. clicking the "Delhi Police" card could silently open a different
+  // state's Police exam because that one's name happened to come first.
+  // Splitting into words and requiring every word to appear (in any order)
+  // means a term like 'delhi police' only matches exams whose name actually
+  // contains both "delhi" and "police" -- still not a database-level fix,
+  // but it stops a generic single word from resolving to an unrelated exam.
   const findCatalogMatch = useCallback((term) => {
     if (!term || catalog.length === 0) return null;
-    const t = term.toLowerCase();
-    return catalog.find((e) => e.name.toLowerCase().includes(t)) || null;
+    const words = term.toLowerCase().split(/\s+/).filter(Boolean);
+    if (words.length === 0) return null;
+    return catalog.find((e) => {
+      const name = e.name.toLowerCase();
+      return words.every((w) => name.includes(w));
+    }) || null;
   }, [catalog]);
 
-  const recommendedCards = useMemo(() => {
-    if (!recommendedFiltersActive) {
-      return RECOMMENDED_EXAMS.map((card) => {
-        const match = findCatalogMatch(card.searchTerm);
-        const resourcesCount = match ? (examProgress[match.name]?.total ?? null) : null;
-        return { ...card, type: CONTENT_COVERAGE_LABEL, resourcesCount };
-      });
+  const recToRecommendedCard = useCallback((rec, index) => {
+    let match = null;
+    if (rec.exam_id) {
+      match = catalog.find((e) => e.id === rec.exam_id);
     }
-    return searchResults.slice(0, 10).map(examToRecommendedCard);
-  }, [recommendedFiltersActive, searchResults, examToRecommendedCard, findCatalogMatch, examProgress]);
+    if (!match && rec.exam_name) {
+      const nameLower = rec.exam_name.trim().toLowerCase();
+      match = catalog.find((e) => e.name.trim().toLowerCase() === nameLower);
+    }
+    if (!match && rec.exam_name) {
+      match = findCatalogMatch(rec.exam_name);
+    }
+
+    const subject = match?.thumbnail_subject ? getSubjectByKey(match.thumbnail_subject) : null;
+    const familyHex = subject ? getFamilyHex(subject.family) : '#466931';
+    const examName = match?.name || rec.exam_name;
+    const resourcesCount = examName ? (examProgress[examName]?.total ?? null) : null;
+
+    const scorePercent = rec.score ? Math.min(Math.round(rec.score), 100) : null;
+    const badgeLabel = scorePercent
+      ? `${scorePercent}% Match`
+      : (match?.category || rec.career_track || 'Recommended');
+
+    return {
+      id: match?.id || rec.exam_id || `rec-${index}`,
+      examId: match?.id || rec.exam_id,
+      title: examName,
+      conductingBody:
+        match?.conducting_body?.name ||
+        rec.conducting_body ||
+        (match?.region?.level ? `${match.region.level.toUpperCase()} Exam` : 'Central Exam'),
+      badge: badgeLabel,
+      badgeBg: scorePercent ? '#dcfce7' : `${familyHex}22`,
+      badgeColor: scorePercent ? '#166534' : familyHex,
+      resourcesCount,
+      type: CONTENT_COVERAGE_LABEL,
+      image:
+        (match?.thumbnail_subject ? getSubjectThumbnailImage(match.thumbnail_subject) : null) ||
+        '/homepage/F5A.png',
+      searchTerm: examName,
+      score: rec.score,
+    };
+  }, [catalog, findCatalogMatch, examProgress]);
+
+  const recommendedCards = useMemo(() => {
+    if (recommendedFiltersActive) {
+      return searchResults.slice(0, 5).map(examToRecommendedCard);
+    }
+
+    // 1. Personalised: Show top 5 exams based on candidate's joining/profiling
+    if (examMatches && examMatches.length > 0) {
+      const topRecs = examMatches.slice(0, 5).map((rec, i) => recToRecommendedCard(rec, i));
+      if (topRecs.length < 5 && catalog.length > 0) {
+        const existingIds = new Set(topRecs.map((r) => r.id));
+        for (const exam of catalog) {
+          if (!existingIds.has(exam.id)) {
+            topRecs.push(examToRecommendedCard(exam));
+            existingIds.add(exam.id);
+            if (topRecs.length >= 5) break;
+          }
+        }
+      }
+      return topRecs;
+    }
+
+    // 2. Secondary: If raw profile data exists with preferences/domicile
+    if (profile?.raw_profile_data && catalog.length > 0) {
+      const prefs = (profile.raw_profile_data.careerPreferences || []).map((p) => p.toLowerCase());
+      const state = (profile.raw_profile_data.stateOfDomicile || '').toLowerCase();
+      const matchedFromPrefs = catalog.filter((e) => {
+        const cat = (e.category || '').toLowerCase();
+        const name = (e.name || '').toLowerCase();
+        const reg = (e.region?.name || '').toLowerCase();
+        const matchesPref = prefs.some((p) => cat.includes(p) || name.includes(p));
+        const matchesState = state && reg.includes(state);
+        return matchesPref || matchesState;
+      });
+      if (matchedFromPrefs.length > 0) {
+        const prefCards = matchedFromPrefs.slice(0, 5).map(examToRecommendedCard);
+        if (prefCards.length < 5) {
+          const existingIds = new Set(prefCards.map((r) => r.id));
+          for (const card of RECOMMENDED_EXAMS) {
+            const match = findCatalogMatch(card.searchTerm);
+            if (match && !existingIds.has(match.id)) {
+              prefCards.push(examToRecommendedCard(match));
+              existingIds.add(match.id);
+              if (prefCards.length >= 5) break;
+            }
+          }
+        }
+        return prefCards.slice(0, 5);
+      }
+    }
+
+    // 3. Fallback: 5 curated exams for guests or un-profiled candidates
+    return RECOMMENDED_EXAMS.slice(0, 5).map((card) => {
+      const match = findCatalogMatch(card.searchTerm);
+      const resourcesCount = match ? (examProgress[match.name]?.total ?? null) : null;
+      return { ...card, type: CONTENT_COVERAGE_LABEL, resourcesCount };
+    });
+  }, [
+    recommendedFiltersActive,
+    searchResults,
+    examMatches,
+    profile,
+    catalog,
+    recToRecommendedCard,
+    examToRecommendedCard,
+    findCatalogMatch,
+    examProgress,
+  ]);
 
   const popularExamCards = useMemo(() => {
     return POPULAR_EXAMS.map((exam) => {
@@ -761,18 +893,23 @@ const LearningCenter = () => {
     });
   }, [findCatalogMatch, examProgress]);
 
-  // Real published-resource counts for the exams behind the curated cards
-  // above, fetched once the catalog is loaded and merged into examProgress
-  // (the same place Continue Learning's real progress lives) — never a
-  // fabricated number.
+  // Real published-resource counts for the exams behind the curated/recommended
+  // cards, fetched once the catalog is loaded and merged into examProgress.
   const staticCardExamNames = useMemo(() => {
     const names = new Set();
+    recommendedCards.forEach((card) => {
+      if (card.title) names.add(card.title);
+      if (card.searchTerm) {
+        const match = findCatalogMatch(card.searchTerm);
+        if (match) names.add(match.name);
+      }
+    });
     [...RECOMMENDED_EXAMS, ...POPULAR_EXAMS].forEach((card) => {
       const match = findCatalogMatch(card.searchTerm || card.searchQuery);
       if (match) names.add(match.name);
     });
     return Array.from(names);
-  }, [findCatalogMatch]);
+  }, [recommendedCards, findCatalogMatch]);
 
   const fetchResourceTotals = async (examNames) => {
     const names = examNames.filter(Boolean);
@@ -823,24 +960,32 @@ const LearningCenter = () => {
   const loadPersonalization = async (userId, matches, extraExamNames = []) => {
     let openedIds = [];
     try {
-      const { data: opens, error: opensErr } = await supabase
-        .from('point_transactions')
-        .select('ref_id, created_at')
+      const { data: reads } = await supabase
+        .from('user_resource_reads')
+        .select('resource_id')
         .eq('user_id', userId)
-        .eq('action_code', 'RESOURCE_OPENED')
-        .order('created_at', { ascending: false })
-        .limit(50);
+        .in('status', ['in_progress', 'completed']);
 
-      if (opensErr) {
-         console.warn('Supabase error loading personalization signals:', opensErr.message);
-      } else if (opens) {
-         openedIds = opens.map(o => o.ref_id).filter(Boolean);
+      if (reads && reads.length > 0) {
+        openedIds = reads.map((r) => r.resource_id).filter(Boolean);
+      } else {
+        const { data: opens, error: opensErr } = await supabase
+          .from('point_transactions')
+          .select('ref_id, created_at')
+          .eq('user_id', userId)
+          .eq('action_code', 'RESOURCE_OPENED')
+          .order('created_at', { ascending: false })
+          .limit(50);
+
+        if (!opensErr && opens) {
+          openedIds = opens.map((o) => o.ref_id).filter(Boolean);
+        }
       }
     } catch (err) {
-      console.warn('Could not load learning personalization signals (point_transactions may not exist):', err);
+      console.warn('Could not load learning personalization signals:', err);
     }
 
-    const matchExamNames = matches.slice(0, 4).map(m => m.exam_name).filter(Boolean);
+    const matchExamNames = matches.slice(0, 5).map((m) => m.exam_name).filter(Boolean);
     const allExamNames = Array.from(new Set([...matchExamNames, ...extraExamNames.filter(Boolean)]));
 
     try {
@@ -1375,10 +1520,16 @@ const LearningCenter = () => {
                 <div className="lc-section-header">
                   <div className="lc-section-header-left">
                     <h2 className="lc-section-title">Recommended for you</h2>
-                    {recommendedFiltersActive && (
+                    {recommendedFiltersActive ? (
                       <p className="lc-section-subtitle">
                         {[categoryFilter && 'Category', selectedBodyId && 'Conducting Body'].filter(Boolean).join(' & ')} filter applied
                       </p>
+                    ) : (
+                      examMatches && examMatches.length > 0 ? (
+                        <p className="lc-section-subtitle">
+                          Top 5 exams tailored to your profiling and background
+                        </p>
+                      ) : null
                     )}
                   </div>
                   <div className="lc-section-header-right">
@@ -1432,10 +1583,13 @@ const LearningCenter = () => {
                 ) : (
                 <div className="lc-cards-carousel" ref={recommendedScrollRef}>
                   {recommendedCards.map((card) => {
-                    const isLearning = isLearningCard(card);
                     return (
                       <div key={card.id} className="lc-exam-card">
-                        <div className="lc-card-thumb-wrap">
+                        <div
+                          className="lc-card-thumb-wrap"
+                          style={{ cursor: 'pointer' }}
+                          onClick={() => handleStartCardExam(card)}
+                        >
                           <img
                             src={card.image}
                             alt={card.title}
@@ -1452,11 +1606,6 @@ const LearningCenter = () => {
                           >
                             {card.badge}
                           </div>
-                          {isLearning && (
-                            <div className="lc-card-learning-badge">
-                              <CheckCircle2 size={12} /> Learning
-                            </div>
-                          )}
                           <button
                             type="button"
                             className={`lc-card-bookmark-btn ${bookmarkedIds.has(card.id) ? 'bookmarked' : ''}`}
@@ -1471,7 +1620,12 @@ const LearningCenter = () => {
                         </div>
 
                         <div className="lc-card-body">
-                          <h3 className="lc-card-title" title={card.title}>
+                          <h3
+                            className="lc-card-title"
+                            title={card.title}
+                            style={{ cursor: 'pointer' }}
+                            onClick={() => handleStartCardExam(card)}
+                          >
                             {card.title}
                           </h3>
                           <p className="lc-card-conductor">{card.conductingBody}</p>
@@ -1489,25 +1643,10 @@ const LearningCenter = () => {
 
                           <button
                             type="button"
-                            className={`lc-card-start-btn ${isLearning ? 'is-active' : ''}`}
-                            onClick={() => {
-                              if (isLearning) {
-                                const activeItem = activeLearningCourses.find(
-                                  (c) => c.id === card.id || (c.title && c.title.toLowerCase() === card.title.toLowerCase())
-                                );
-                                handleResumeCourse(activeItem || card);
-                              } else {
-                                handleStartCardExam(card);
-                              }
-                            }}
+                            className="lc-card-start-btn"
+                            onClick={() => handleStartCardExam(card)}
                           >
-                            {isLearning ? (
-                              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.35rem' }}>
-                                <Play size={12} fill="currentColor" /> Resume
-                              </span>
-                            ) : (
-                              'Start Learning'
-                            )}
+                            Start Learning
                           </button>
                         </div>
                       </div>

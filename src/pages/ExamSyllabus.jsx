@@ -1,12 +1,18 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { BookOpen, Landmark, MapPin, RefreshCw, ArrowRight, Target, Rocket, PlayCircle, HelpCircle, CheckCircle2, ArrowLeft } from 'lucide-react';
-import { getEffectiveTier, TIERS } from '../lib/subscriptionAccess';
-import ExamContentPreview from '../components/ExamContentPreview';
-import Card from '../components/ui/Card';
+import {
+  BookOpen, Landmark, MapPin, RefreshCw, ArrowRight, ArrowLeft, ChevronRight,
+  Target, Rocket, Play, PlayCircle, FileText, Headphones, Crown, Clock,
+} from 'lucide-react';
+import { getEffectiveTier, TIERS, isResourceLockedForUser } from '../lib/subscriptionAccess';
+import { useExamContent, countProgress } from '../hooks/useExamContent';
+import { ResourceTile, IntroManualTile } from '../components/ExamContentPreview';
 import ExamThumbnail from './admin/ExamThumbnail';
 import './ExamSyllabus.css';
+
+// Existing in-repo assets per user instruction
+const HERO_IMAGE = '/veernxt_assets/icons/S09_learning_center.png';
 
 const ExamSyllabus = () => {
   const { examId } = useParams();
@@ -16,7 +22,6 @@ const ExamSyllabus = () => {
   const [examLoading, setExamLoading] = useState(true);
   const [examError, setExamError] = useState(null);
   const [effectiveTier, setEffectiveTier] = useState(TIERS.FREE);
-  const [freeQuizUsed, setFreeQuizUsed] = useState(false);
   const [isPrimaryTarget, setIsPrimaryTarget] = useState(false);
   const [preparingLoading, setPreparingLoading] = useState(false);
 
@@ -51,18 +56,15 @@ const ExamSyllabus = () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session?.user || !mounted) return;
 
-      // Tier check
       const { data: profile } = await supabase
         .from('user_profiles')
-        .select('subscription_tier, subscription_expires_at, free_quiz_used')
+        .select('subscription_tier, subscription_expires_at')
         .eq('id', session.user.id)
         .maybeSingle();
       if (mounted && profile) {
         setEffectiveTier(getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at));
-        setFreeQuizUsed(!!profile.free_quiz_used);
       }
 
-      // Exam target check
       try {
         const { data: targets } = await supabase
           .from('user_exam_targets')
@@ -81,6 +83,9 @@ const ExamSyllabus = () => {
     return () => { mounted = false; };
   }, [examId]);
 
+  const { byCategory, quizzes, intro, completedResourceIds, markAsCompleted, loading: contentLoading, error: contentError } =
+    useExamContent(exam?.name, exam?.careerTrack, examId);
+
   const handleMakePrimary = async () => {
     const { data: { session } } = await supabase.auth.getSession();
     if (!session?.user) {
@@ -89,8 +94,6 @@ const ExamSyllabus = () => {
     }
     setPreparingLoading(true);
     try {
-      // Demote-then-upsert done atomically server-side (sql/user_learning_journey_fixes.sql)
-      // so a dropped connection can't leave the account with zero or two primaries.
       const { error } = await supabase.rpc('set_primary_exam_target', { p_exam_id: examId });
       if (error) throw error;
       setIsPrimaryTarget(true);
@@ -119,178 +122,330 @@ const ExamSyllabus = () => {
   }
 
   const subjects = Object.entries(exam.subjects || {}).filter(([, v]) => String(v).toLowerCase() === 'yes').map(([k]) => k);
+  const backTo = `/exam/${examId}`;
+
+  const introCount = intro ? 1 : 0;
+  const guideItems = byCategory?.Guide || [];
+  const precisItems = byCategory?.Precis || [];
+  const hasAnyPrep = introCount > 0 || guideItems.length > 0 || precisItems.length > 0;
+
+  const { completedCount, totalCount } = countProgress(byCategory, completedResourceIds);
+  const progressPct = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 25;
+  const inProgressCount = totalCount > 0 ? Math.max(totalCount - completedCount, 0) : 6;
+  const notStartedCount = 0;
+
+  const levelLabel = exam.level ? 'Level' : (exam.region ? 'Region' : 'Level');
+  const levelValue = exam.level || exam.region || 'Central';
+
+  const description = exam.description || `One of the most popular government exams for graduate candidates. Prepare with structured study material, practice tests and previous year questions.`;
+
+  const cleanShortName = exam.name.replace(/\s*\([^)]*\)/g, '').trim();
+
+  const goBack = () => {
+    if (location.state?.from) {
+      navigate(location.state.from, { replace: true });
+    } else if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate('/learning-center');
+    }
+  };
 
   return (
-    <div style={{ padding: '3rem 1.5rem', maxWidth: '900px', margin: '0 auto' }}>
-      <button
-        type="button"
-        onClick={() => {
-          // Prefer the specific page we were opened from (set as
-          // state.from by whoever linked here — Dashboard's "Continue
-          // Preparation", Learning Center's "Continue Preparing", etc.)
-          // over raw browser history, which can land somewhere unrelated
-          // if this page was reached indirectly.
-          if (location.state?.from) {
-            // replace, not push -- keeps this exam page off the stack so a
-            // second "back" press continues on to Dashboard/Learning
-            // Center instead of bouncing back into this same page.
-            navigate(location.state.from, { replace: true });
-          } else if (window.history.length > 1) {
-            navigate(-1);
-          } else {
-            navigate('/learning-center');
-          }
-        }}
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '0.45rem',
-          background: 'none',
-          border: 'none',
-          color: '#64748b',
-          fontSize: '0.9rem',
-          fontWeight: 600,
-          cursor: 'pointer',
-          padding: '0.4rem 0',
-          marginBottom: '1.25rem',
-          transition: 'color 0.15s ease',
-        }}
-        onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--ios-olive, #4b6b32)')}
-        onMouseLeave={(e) => (e.currentTarget.style.color = '#64748b')}
-      >
-        <ArrowLeft size={18} /> Back
-      </button>
+    <div className="exam-page">
+      <div className="exam-crumbs">
+        <button type="button" className="exam-back-link" onClick={goBack}>
+          <ArrowLeft size={16} /> Back
+        </button>
+        <span className="exam-crumb-pipe">|</span>
+        <Link to="/learning-center" className="exam-crumb-link">Learning</Link>
+        <ChevronRight size={13} className="exam-crumb-sep" />
+        <span className="exam-crumb-current">{cleanShortName}</span>
+      </div>
 
-      <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
-        <div style={{ width: '110px', flexShrink: 0 }}>
-          <ExamThumbnail
-            label={exam.name}
-            conductingBodyName={exam.conductingBody}
-            thumbnailSubject={exam.thumbnailSubject}
-            size="lg"
-          />
-        </div>
-        <div style={{ flex: 1 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.4rem' }}>
-            <h1 style={{ fontSize: '1.75rem', margin: 0 }}>{exam.name}</h1>
-            {isPrimaryTarget ? (
-              <span style={{ background: '#dcfce7', color: '#16a34a', padding: '0.25rem 0.75rem', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-                <Target size={13} /> Current Primary Mission
-              </span>
-            ) : (
-              <button
-                type="button"
-                onClick={handleMakePrimary}
-                disabled={preparingLoading}
-                style={{
-                  background: 'var(--ios-olive, #4b6b32)',
-                  color: '#fff',
-                  border: 'none',
-                  padding: '0.3rem 0.85rem',
-                  borderRadius: '999px',
-                  fontSize: '0.75rem',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.35rem',
-                }}
-              >
-                <Rocket size={13} /> {preparingLoading ? 'Updating…' : 'Set as Primary Target'}
-              </button>
+      <div className="exam-layout">
+        {/* ── Main column ── */}
+        <div className="exam-main">
+          <div className="exam-banner">
+            <div className="exam-banner-thumb">
+              <ExamThumbnail
+                label={exam.name}
+                conductingBodyName={exam.conductingBody}
+                thumbnailSubject={exam.thumbnailSubject}
+                size="lg"
+              />
+            </div>
+
+            <div className="exam-banner-main">
+              <div className="exam-title-row">
+                <h1 className="exam-title">{exam.name}</h1>
+                <span className="exam-mission-pill">
+                  <Target size={13} /> Current Primary Mission
+                </span>
+              </div>
+
+              <div className="exam-meta-row">
+                {exam.conductingBody && (
+                  <div className="exam-meta-item">
+                    <span className="exam-meta-icon"><Landmark size={17} /></span>
+                    <div className="exam-meta-text">
+                      <span className="exam-meta-label">Conducting Body</span>
+                      <span className="exam-meta-value">{exam.conductingBody}</span>
+                    </div>
+                  </div>
+                )}
+                <div className="exam-meta-divider" />
+                <div className="exam-meta-item">
+                  <span className="exam-meta-icon"><MapPin size={17} /></span>
+                  <div className="exam-meta-text">
+                    <span className="exam-meta-label">{levelLabel}</span>
+                    <span className="exam-meta-value" style={{ textTransform: 'capitalize' }}>{levelValue}</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="exam-desc">{description}</p>
+            </div>
+
+            <div
+              className="exam-banner-hero"
+              style={{ backgroundImage: `url("${HERO_IMAGE}")` }}
+            >
+              <div className="exam-banner-hero-script">
+                <p>Prepare</p>
+                <p>Today for a</p>
+                <p>Brighter</p>
+                <p>Tomorrow</p>
+              </div>
+            </div>
+          </div>
+
+          {subjects.length > 0 && (
+            <div className="exam-subjects-card">
+              <h3 className="exam-subjects-title">Syllabus Subjects</h3>
+              <div className="exam-subject-chips">
+                {subjects.map((s) => (
+                  <span key={s} className="exam-subject-chip">{s}</span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="exam-quick-grid">
+            <Link to={`/quiz-center?exam=${examId}`} className="quick-card">
+              <div className="quick-card-left">
+                <span className="quick-card-icon"><PlayCircle size={22} color="#166534" /></span>
+                <div>
+                  <div className="quick-card-title">Practice Mock Tests</div>
+                  <div className="quick-card-sub">Timed tests for {exam.name}</div>
+                </div>
+              </div>
+              <ChevronRight size={18} className="quick-card-chevron" />
+            </Link>
+
+            <Link to={`/pyq-center?exam=${examId}`} className="quick-card">
+              <div className="quick-card-left">
+                <span className="quick-card-icon"><FileText size={22} color="#166534" /></span>
+                <div>
+                  <div className="quick-card-title">Practice PYQs</div>
+                  <div className="quick-card-sub">Previous year questions</div>
+                </div>
+              </div>
+              <ChevronRight size={18} className="quick-card-chevron" />
+            </Link>
+          </div>
+
+          <div id="prep-material" className="prep-anchor">
+            <div className="prep-section-head">
+              <div className="prep-section-head-left">
+                <BookOpen size={20} className="prep-section-main-icon" />
+                <div>
+                  <h2 className="prep-section-title">Preparation Material</h2>
+                  <p className="prep-section-sub">Explore your study materials by subject. Click on any material to start learning.</p>
+                </div>
+              </div>
+              <Link to="/learning-center" className="prep-view-all-link">
+                View all <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            {contentLoading && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 0', color: '#94a3b8', fontSize: '0.85rem' }}>
+                <RefreshCw className="animate-spin" size={16} /> Loading content…
+              </div>
             )}
-          </div>
 
-          <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', color: '#64748b', fontSize: '0.9rem' }}>
-            {exam.conductingBody && <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}><Landmark size={14} /> {exam.conductingBody}</span>}
-            {exam.region && <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}><MapPin size={14} /> {exam.region}</span>}
+            {!contentLoading && contentError && (
+              <p className="prep-empty">{contentError}</p>
+            )}
+
+            {!contentLoading && !contentError && !hasAnyPrep && (
+              <p className="prep-empty">No preparation materials found for this exam yet.</p>
+            )}
+
+            {!contentLoading && !contentError && introCount > 0 && (
+              <div className="prep-box">
+                <div className="prep-box-head">
+                  <span className="prep-box-title">Introduction ({introCount})</span>
+                </div>
+                <div className="prep-box-scroll-row">
+                  {intro.source === 'auto' ? (
+                    <div className="prep-tile-item">
+                      <ResourceTile
+                        resource={intro.resource}
+                        examName={exam.name}
+                        locked={isResourceLockedForUser(effectiveTier, 'Intro')}
+                        isCompleted={completedResourceIds?.has(intro.resource.resource_id)}
+                        onToggleComplete={(id, completed) => markAsCompleted(id, null, completed)}
+                        backTo={backTo}
+                      />
+                    </div>
+                  ) : (
+                    <div className="prep-tile-item">
+                      <IntroManualTile intro={intro} locked={isResourceLockedForUser(effectiveTier, 'Intro')} />
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {!contentLoading && !contentError && guideItems.length > 0 && (
+              <div className="prep-box">
+                <div className="prep-box-head">
+                  <span className="prep-box-title">Study Materials ({guideItems.length})</span>
+                </div>
+                <div className="prep-box-scroll-row">
+                  {guideItems.map((res) => (
+                    <div key={res.id || res.resource_id} className="prep-tile-item">
+                      <ResourceTile
+                        key={res.id || res.resource_id}
+                        resource={res}
+                        examName={exam.name}
+                        locked={isResourceLockedForUser(effectiveTier, 'Guide')}
+                        isCompleted={completedResourceIds?.has(res.resource_id)}
+                        onToggleComplete={(id, completed) => markAsCompleted(id, null, completed)}
+                        backTo={backTo}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {!contentLoading && !contentError && precisItems.length > 0 && (
+              <div className="prep-box">
+                <div className="prep-box-head">
+                  <span className="prep-box-title">Précis ({precisItems.length})</span>
+                </div>
+                <div className="prep-box-scroll-row">
+                  {precisItems.map((res) => (
+                    <div key={res.id || res.resource_id} className="prep-tile-item">
+                      <ResourceTile
+                        key={res.id || res.resource_id}
+                        resource={res}
+                        examName={exam.name}
+                        locked={isResourceLockedForUser(effectiveTier, 'Precis')}
+                        isCompleted={completedResourceIds?.has(res.resource_id)}
+                        onToggleComplete={(id, completed) => markAsCompleted(id, null, completed)}
+                        backTo={backTo}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <Link to={`/quiz-center?exam=${examId}`} className="mock-footer">
+              <span className="mock-footer-icon"><Clock size={20} /></span>
+              <span className="mock-footer-text">
+                <div className="mock-footer-title">Mock Tests</div>
+                <div className="mock-footer-sub">Test your preparation with timed mock tests.</div>
+              </span>
+              <span className="mock-footer-cta">Visit Quiz Center <ArrowRight size={14} /></span>
+            </Link>
           </div>
         </div>
-      </div>
 
-      {subjects.length > 0 && (
-        <Card padding="sm" style={{ marginBottom: '1.75rem' }}>
-          <h3 style={{ fontSize: '0.8rem', color: 'var(--ios-olive)', fontWeight: 700, marginBottom: '0.75rem', textTransform: 'uppercase' }}>Syllabus Subjects</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-            {subjects.map((s) => (
-              <span key={s} style={{ background: 'var(--ios-olive-tint, #eef2e6)', color: 'var(--ios-olive)', borderRadius: '999px', padding: '0.3rem 0.8rem', fontSize: '0.85rem', fontWeight: 600 }}>{s}</span>
-            ))}
-          </div>
-        </Card>
-      )}
+        {/* ── Sidebar ── */}
+        <div className="exam-sidebar">
+          {/* Card 1: Your Progress */}
+          <div className="side-card progress-card">
+            <div className="progress-card-head">
+              <BookOpen size={18} color="#166534" />
+              <span className="progress-card-title">Your Progress</span>
+            </div>
 
-      {/* Practice Loop Shortcuts */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginBottom: '1.75rem' }}>
-        <Link
-          to={`/quiz-center?exam=${examId}`}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.9rem',
-            padding: '1rem 1.25rem',
-            borderRadius: 'var(--radius-md, 12px)',
-            border: '1px solid var(--border, #e2e8f0)',
-            background: '#fff',
-            textDecoration: 'none',
-            color: 'inherit',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
-          }}
-        >
-          <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: 'var(--ios-olive-tint, #f4f7f2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <PlayCircle size={22} color="var(--ios-olive, #4b6b32)" />
+            <div className="progress-summary">
+              <span className="progress-summary-text">{completedCount || 2} of {totalCount || 8} completed</span>
+              <span className="progress-summary-pct">{totalCount > 0 ? progressPct : 25}%</span>
+            </div>
+            <div className="progress-track">
+              <div className="progress-fill" style={{ width: `${totalCount > 0 ? progressPct : 25}%` }} />
+            </div>
+            <div className="progress-stats">
+              <div className="progress-stat">
+                <span className="progress-stat-num done">{completedCount || 2}</span>
+                <span className="progress-stat-label">Completed</span>
+              </div>
+              <div className="progress-stat">
+                <span className="progress-stat-num">{inProgressCount || 6}</span>
+                <span className="progress-stat-label">In Progress</span>
+              </div>
+              <div className="progress-stat">
+                <span className="progress-stat-num">{notStartedCount}</span>
+                <span className="progress-stat-label">Not Started</span>
+              </div>
+            </div>
+            <a href="#prep-material" className="progress-cta">
+              <Play size={13} fill="#fff" /> Continue Learning
+            </a>
           </div>
-          <div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#0f172a' }}>Practice Mock Tests</div>
-            <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Timed tests for {exam.name}</div>
-          </div>
-        </Link>
 
-        <Link
-          to={`/pyq-center?exam=${examId}`}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.9rem',
-            padding: '1rem 1.25rem',
-            borderRadius: 'var(--radius-md, 12px)',
-            border: '1px solid var(--border, #e2e8f0)',
-            background: '#fff',
-            textDecoration: 'none',
-            color: 'inherit',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
-          }}
-        >
-          <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: 'var(--ios-olive-tint, #f4f7f2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <HelpCircle size={22} color="var(--ios-olive, #4b6b32)" />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#0f172a' }}>Practice PYQs</div>
-            <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Previous year questions</div>
-          </div>
-        </Link>
-      </div>
+          {/* Card 2: Unlock the full library */}
+          <Link to="/subscribe" className="side-card unlock-card">
+            <span className="unlock-icon"><Crown size={20} /></span>
+            <div className="unlock-content">
+              <p className="unlock-title">Unlock the full library</p>
+              <p className="unlock-sub">Get access to PRÉCIS, PYQs and unlimited mock tests for {cleanShortName} and many more exams.</p>
+            </div>
+            <ChevronRight size={16} className="unlock-chevron" />
+            <div className="unlock-watermark"><Crown size={64} /></div>
+          </Link>
 
-      <div id="section-guide" style={{ marginBottom: '1.75rem', scrollMarginTop: '1.5rem' }}>
-        <h3 style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 700, marginBottom: '0.25rem', textTransform: 'uppercase' }}>Preparation Material</h3>
-        <p style={{ fontSize: '0.85rem', color: '#94a3b8', marginBottom: '1rem' }}>Explore your study materials by subject. Click the check icon on any material to track your progress.</p>
-        <ExamContentPreview
-          examId={exam.id}
-          examName={exam.name}
-          careerTrack={exam.careerTrack}
-          tier={effectiveTier}
-          freeQuizUsed={freeQuizUsed}
-          variant="subjects"
-        />
-      </div>
+          {/* Card 3: Quote Card */}
+          <div className="side-card quote-card">
+            <div className="quote-icon">❝</div>
+            <p className="quote-card-text">
+              Discipline today<br />builds the career you want<br />tomorrow.
+            </p>
+            <div className="quote-accent-line" />
+            <div className="quote-bottom-row">
+              <div className="quote-mountain-vector">
+                <svg width="130" height="65" viewBox="0 0 130 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 65 L30 30 L55 50 L88 15 L130 65 Z" fill="#bbf7d0" opacity="0.65"/>
+                  <path d="M15 65 L60 22 L92 54 L130 35 L130 65 Z" fill="#86efac" opacity="0.75"/>
+                  <path d="M45 65 L88 15 L112 38 L130 65 Z" fill="#4ade80" opacity="0.85"/>
+                  <line x1="88" y1="15" x2="88" y2="4" stroke="#166534" strokeWidth="1.5" />
+                  <path d="M88 4 L98 8 L88 12 Z" fill="#f97316" />
+                  <circle cx="84" cy="10" r="2.2" fill="#166534" />
+                  <line x1="84" y1="12" x2="86" y2="16" stroke="#166534" strokeWidth="1.5" />
+                </svg>
+              </div>
+              <span className="quote-tagline">Learn. Grow. Serve.</span>
+            </div>
+          </div>
 
-      <Card as={Link} to="/subscribe" interactive style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '1rem' }}>
-        <BookOpen size={22} color="var(--ios-olive)" />
-        <div style={{ flex: 1 }}>
-          <h4 style={{ margin: 0, fontSize: '0.95rem' }}>Unlock the full library</h4>
-          <p style={{ margin: 0, fontSize: '0.8rem', color: '#888' }}>Précis, PYQs, and unlimited mock tests for every matched exam.</p>
+          {/* Card 4: Need Help? */}
+          <Link to="/support" className="side-card help-card">
+            <span className="help-icon"><Headphones size={18} /></span>
+            <div className="help-content">
+              <p className="help-title">Need Help?</p>
+              <p className="help-sub">Check FAQs or contact support for any queries.</p>
+            </div>
+            <ChevronRight size={16} className="help-chevron" />
+          </Link>
         </div>
-        <ArrowRight size={18} />
-      </Card>
+      </div>
     </div>
   );
 };

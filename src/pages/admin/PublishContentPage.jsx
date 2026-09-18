@@ -626,7 +626,7 @@ const PublishContentPage = () => {
               <label style={{ fontSize: '0.82rem', fontWeight: 600, margin: 0 }}>
                 {assignMode === 'replace' ? `3. Select existing ${category || 'book'} to replace` : `3. Assign to exam${isMulti ? '(s)' : ''}`}
               </label>
-              <div style={{ display: 'inline-flex', background: 'var(--admin-hover-bg, #f1f5f9)', padding: '3px', borderRadius: 8, gap: '3px' }}>
+              <div style={{ display: 'inline-flex', background: 'var(--surface-alt)', padding: '3px', borderRadius: 8, gap: '3px' }}>
                 <button
                   type="button"
                   className={`lc-btn${assignMode === 'new' ? ' primary' : ''}`}
@@ -732,47 +732,49 @@ const PublishContentPage = () => {
                 ) : (
                   <>
                     {selectedExams.length > 0 && (
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '0.6rem' }}>
+                      <div className="assign-exam-chip-row">
                         {selectedExams.map((exam) => (
-                          <span key={exam.id} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.8rem', padding: '0.25rem 0.5rem', borderRadius: 999, background: 'var(--admin-hover-bg, #f1f5f9)' }}>
+                          <span key={exam.id} className="assign-exam-chip">
                             {exam.name}
-                            <X size={12} style={{ cursor: 'pointer' }} onClick={() => removeSelectedExam(exam.id)} />
+                            <X size={12} className="assign-exam-chip-remove" onClick={() => removeSelectedExam(exam.id)} />
                           </span>
                         ))}
                       </div>
                     )}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                      <Search size={16} color="var(--admin-text-muted)" />
-                      <input
-                        type="text"
-                        value={examQuery}
-                        onChange={(e) => setExamQuery(e.target.value)}
-                        placeholder={loadingExams ? 'Loading exams…' : `Filter ${examsInCategory.length} exam(s) in scope…`}
-                        className="lc-input"
-                        style={{ flex: 1 }}
-                      />
-                    </div>
-                    {/* Full dropdown-of-all-exams-in-scope, narrowed live by the filter above -- shows everything when it's empty. */}
-                    <div className="lc-card" style={{ maxHeight: 260, overflowY: 'auto', padding: '0.35rem' }}>
-                      {filteredExamsForMulti.map((exam) => {
-                        const isSelected = selectedExams.some((e) => e.id === exam.id);
-                        return (
-                          <div
-                            key={exam.id}
-                            onClick={() => pickExam(exam)}
-                            style={{ padding: '0.5rem 0.65rem', borderRadius: 6, cursor: 'pointer', fontSize: '0.85rem', background: isSelected ? 'var(--admin-hover-bg, #f1f5f9)' : 'transparent' }}
-                            onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--admin-hover-bg, #f1f5f9)'; }}
-                            onMouseLeave={(e) => { e.currentTarget.style.background = isSelected ? 'var(--admin-hover-bg, #f1f5f9)' : 'transparent'; }}
-                          >
-                            {isSelected && '✓ '}
-                            <strong>{exam.name}</strong>
-                            {exam.conducting_body?.name && <span className="lc-muted-note"> — {exam.conducting_body.name}</span>}
-                          </div>
-                        );
-                      })}
-                      {filteredExamsForMulti.length === 0 && !loadingExams && (
-                        <div style={{ padding: '0.5rem 0.65rem', fontSize: '0.85rem' }} className="lc-muted-note">No exams match.</div>
-                      )}
+                    {/* Polished dropdown-style picker (search bar + results list act as one
+                        control) so this matches the react-select "search & select" UI used
+                        elsewhere on this page, instead of a plain input + plain list. */}
+                    <div className="assign-exam-picker">
+                      <div className="assign-exam-search">
+                        <Search size={16} className="assign-exam-search-icon" />
+                        <input
+                          type="text"
+                          value={examQuery}
+                          onChange={(e) => setExamQuery(e.target.value)}
+                          placeholder={loadingExams ? 'Loading exams…' : 'Select any book…'}
+                          className="assign-exam-search-input"
+                        />
+                      </div>
+                      {/* Full dropdown-of-all-exams-in-scope, narrowed live by the search above -- shows everything when it's empty. */}
+                      <div className="assign-exam-menu">
+                        {filteredExamsForMulti.map((exam) => {
+                          const isSelected = selectedExams.some((e) => e.id === exam.id);
+                          return (
+                            <div
+                              key={exam.id}
+                              onClick={() => pickExam(exam)}
+                              className={`assign-exam-option${isSelected ? ' selected' : ''}`}
+                            >
+                              {isSelected && <CheckCircle2 size={14} className="assign-exam-option-check" />}
+                              <strong className="assign-exam-option-name">{exam.name}</strong>
+                              {exam.conducting_body?.name && <span className="lc-muted-note"> — {exam.conducting_body.name}</span>}
+                            </div>
+                          );
+                        })}
+                        {filteredExamsForMulti.length === 0 && !loadingExams && (
+                          <div className="assign-exam-empty lc-muted-note">No exams match.</div>
+                        )}
+                      </div>
                     </div>
                   </>
                 )}
