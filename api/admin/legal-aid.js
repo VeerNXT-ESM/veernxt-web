@@ -8,7 +8,7 @@
 
 import { createClient } from '@supabase/supabase-js';
 import nodemailer from 'nodemailer';
-import { getSmtpCredentials } from '../private-sector/emailBroadcaster.js';
+import { getSmtpCredentials } from '../_lib/emailBroadcaster.js';
 
 function getSupabaseAdmin() {
   if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) return null;

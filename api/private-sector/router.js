@@ -41,7 +41,7 @@
 
 import { createClient } from '@supabase/supabase-js';
 import Joi from 'joi';
-import { broadcastJobApprovalEmail } from './emailBroadcaster.js';
+import { broadcastJobApprovalEmail } from '../_lib/emailBroadcaster.js';
 
 function getSupabaseAdmin() {
   const url = process.env.SUPABASE_URL;
