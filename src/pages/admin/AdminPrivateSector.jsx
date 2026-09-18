@@ -55,10 +55,43 @@ const AdminPrivateSector = () => {
   useEffect(() => { fetchAll(); }, []);
 
   const updateRequirement = async (id, status) => {
+    let notifyUsers = true;
+    if (status === 'approved') {
+      notifyUsers = window.confirm(
+        'Approve this job requirement and broadcast email alerts to all subscribed civilian candidates via Gmail SMTP?'
+      );
+    }
     setSaving(true);
     try {
-      await call('admin_update_requirement', { id, status });
+      const res = await call('admin_update_requirement', { id, status, notify_users: notifyUsers });
+      if (res.emailBroadcast) {
+        if (res.emailBroadcast.ok) {
+          alert(`Job approved! Broadcast email sent to ${res.emailBroadcast.totalSent} subscribed candidate(s) across ${res.emailBroadcast.batches} batch(es).`);
+        } else if (res.emailBroadcast.simulated) {
+          alert(`Job approved! Email broadcast simulated for ${res.emailBroadcast.count} subscribers.`);
+        } else {
+          alert(`Job approved, but email broadcast encountered an issue: ${res.emailBroadcast.error || 'Check notification logs'}`);
+        }
+      }
       setSelected(null);
+      await fetchAll();
+    } catch (err) {
+      alert(err.response?.data?.error || err.message);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const broadcastJobEmail = async (id) => {
+    if (!window.confirm('Send broadcast email to all subscribed civil job candidates for this requirement?')) return;
+    setSaving(true);
+    try {
+      const res = await call('admin_broadcast_requirement_email', { id });
+      if (res.emailBroadcast?.ok) {
+        alert(`Success! Broadcast email sent to ${res.emailBroadcast.totalSent} candidate(s).`);
+      } else {
+        alert(`Email broadcast result: ${res.emailBroadcast?.reason || res.emailBroadcast?.error || 'Simulated/Completed'}`);
+      }
       await fetchAll();
     } catch (err) {
       alert(err.response?.data?.error || err.message);
@@ -138,11 +171,25 @@ const AdminPrivateSector = () => {
         <>
           {section === 'requirements' && (
             <table className="aps-table">
-              <thead><tr><th>Role(s)</th><th>Positions</th><th>Locations</th><th>Employer</th><th>Job Class</th><th>Status</th><th></th></tr></thead>
+              <thead><tr><th>Role(s)</th><th>Sector</th><th>Tags</th><th>Positions</th><th>Locations</th><th>Employer</th><th>Job Class</th><th>Status</th><th></th></tr></thead>
               <tbody>
                 {requirements.map((r) => (
                   <tr key={r.id} className="aps-row" onClick={() => setSelected({ type: 'requirement', row: r })}>
                     <td className="aps-strong">{(r.role_titles || []).join(', ')}</td>
+                    <td style={{ fontWeight: 600, color: 'var(--admin-accent, #10b981)' }}>{r.sector || '—'}</td>
+                    <td>
+                      {Array.isArray(r.tags) && r.tags.length > 0 ? (
+                        <div style={{ display: 'flex', gap: '0.25rem', flexWrap: 'wrap' }}>
+                          {r.tags.slice(0, 2).map((t, tIdx) => {
+                            const label = typeof t === 'string' ? t : (t?.label || t?.name || '');
+                            return label ? (
+                              <span key={tIdx} style={{ fontSize: '0.7rem', padding: '0.1rem 0.35rem', borderRadius: '4px', background: 'rgba(255,255,255,0.06)' }}>#{label}</span>
+                            ) : null;
+                          })}
+                          {r.tags.length > 2 && <span style={{ fontSize: '0.7rem', opacity: 0.6 }}>+{r.tags.length - 2}</span>}
+                        </div>
+                      ) : '—'}
+                    </td>
                     <td>{r.quantity}</td>
                     <td>{(r.locations || []).join(', ')}</td>
                     <td>{r.employer_profiles?.company_name || '—'}</td>
@@ -151,7 +198,7 @@ const AdminPrivateSector = () => {
                     <td className="aps-view">Review →</td>
                   </tr>
                 ))}
-                {requirements.length === 0 && <tr><td colSpan={7} className="aps-empty">No requirements submitted yet.</td></tr>}
+                {requirements.length === 0 && <tr><td colSpan={9} className="aps-empty">No requirements submitted yet.</td></tr>}
               </tbody>
             </table>
           )}
@@ -193,33 +240,38 @@ const AdminPrivateSector = () => {
 
           {section === 'senior' && (
             <table className="aps-table">
-              <thead><tr><th>Candidate</th><th>Mobile</th><th>Submitted</th></tr></thead>
+              <thead><tr><th>Candidate</th><th>Sectors</th><th>Roles / Tags</th><th>Mobile</th><th>Submitted</th></tr></thead>
               <tbody>
                 {seniorProfiles.map((p) => (
                   <tr key={p.id}>
                     <td className="aps-strong">{p.candidate_name || p.user_id.slice(0, 8)}</td>
-                    <td>{p.raw_profile?.mobile || '—'}</td>
+                    <td>{(p.sectors || []).join(', ') || '—'}</td>
+                    <td>
+                      {[...(p.work_types || []), ...(p.tags || []).map((t) => `#${typeof t === 'string' ? t : (t?.label || '')}`)].filter(Boolean).join(', ') || '—'}
+                    </td>
+                    <td>{typeof p.raw_profile?.mobile === 'string' ? p.raw_profile.mobile : '—'}</td>
                     <td className="aps-muted">{new Date(p.created_at).toLocaleDateString()}</td>
                   </tr>
                 ))}
-                {seniorProfiles.length === 0 && <tr><td colSpan={3} className="aps-empty">No senior/professional referrals yet.</td></tr>}
+                {seniorProfiles.length === 0 && <tr><td colSpan={5} className="aps-empty">No senior/professional referrals yet.</td></tr>}
               </tbody>
             </table>
           )}
 
           {section === 'notifications' && (
             <table className="aps-table">
-              <thead><tr><th>Subject</th><th>Channel</th><th>Status</th><th>When</th></tr></thead>
+              <thead><tr><th>Subject</th><th>Channel</th><th>Recipients</th><th>Status</th><th>When</th></tr></thead>
               <tbody>
                 {notifications.map((n) => (
                   <tr key={n.id}>
                     <td className="aps-strong">{n.subject}</td>
                     <td>{n.channel}</td>
+                    <td>{n.recipient_count ? `${n.recipient_count} users` : (n.recipient || '—')}</td>
                     <td><span className={`aps-status aps-status-${n.status}`}>{n.status}</span></td>
                     <td className="aps-muted">{new Date(n.created_at).toLocaleString()}</td>
                   </tr>
                 ))}
-                {notifications.length === 0 && <tr><td colSpan={4} className="aps-empty">No notifications yet.</td></tr>}
+                {notifications.length === 0 && <tr><td colSpan={5} className="aps-empty">No notifications yet.</td></tr>}
               </tbody>
             </table>
           )}
@@ -243,6 +295,10 @@ const AdminPrivateSector = () => {
                 <>
                   <div className="aps-detail-row"><span>Positions</span><span>{selected.row.quantity}</span></div>
                   <div className="aps-detail-row"><span>Locations</span><span>{(selected.row.locations || []).join(', ')}</span></div>
+                  {selected.row.sector && <div className="aps-detail-row"><span>Sector</span><span style={{ fontWeight: 700 }}>{selected.row.sector}</span></div>}
+                  {selected.row.tags && selected.row.tags.length > 0 && (
+                    <div className="aps-detail-row"><span>Tags</span><span>{selected.row.tags.map((t) => `#${t}`).join(', ')}</span></div>
+                  )}
                   {selected.row.salary_range && <div className="aps-detail-row"><span>Salary</span><span>{selected.row.salary_range}</span></div>}
                   {selected.row.description && <div className="aps-detail-row"><span>Description</span><span>{selected.row.description}</span></div>}
                   {selected.row.requirements_text && <div className="aps-detail-row"><span>Requirements</span><span>{selected.row.requirements_text}</span></div>}
@@ -264,9 +320,18 @@ const AdminPrivateSector = () => {
             </div>
 
             <div className="aps-modal-footer">
-              {selected.type === 'requirement' && REQUIREMENT_STATUSES.map((s) => (
-                <button key={s} disabled={saving} onClick={() => updateRequirement(selected.row.id, s)} className={`aps-btn ${s === 'approved' ? 'aps-btn-primary' : s === 'rejected' ? 'aps-btn-danger' : ''}`}>{s.replace(/_/g, ' ')}</button>
-              ))}
+              {selected.type === 'requirement' && (
+                <>
+                  {REQUIREMENT_STATUSES.map((s) => (
+                    <button key={s} disabled={saving} onClick={() => updateRequirement(selected.row.id, s)} className={`aps-btn ${s === 'approved' ? 'aps-btn-primary' : s === 'rejected' ? 'aps-btn-danger' : ''}`}>{s.replace(/_/g, ' ')}</button>
+                  ))}
+                  {selected.row.status === 'approved' && (
+                    <button type="button" disabled={saving} onClick={() => broadcastJobEmail(selected.row.id)} className="aps-btn" style={{ background: '#0284c7', color: 'white' }}>
+                      ✉️ Broadcast Email
+                    </button>
+                  )}
+                </>
+              )}
               {selected.type === 'verification' && (
                 <>
                   <button disabled={saving} onClick={() => updateVerification(selected.row.id, 'verified')} className="aps-btn aps-btn-primary"><CheckCircle2 size={14} /> Verify</button>

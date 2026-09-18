@@ -9,9 +9,16 @@ import { ChoiceGroup, MultiChoiceGroup } from '../components/ui/ChoiceGroup';
 import { getEmployerInsights } from '../lib/employerInsights';
 import { useLocalDraft } from '../lib/useLocalDraft';
 import { STATE_DISTRICTS } from '../lib/districts';
+import {
+  SECTOR_OPTIONS,
+  getRolesForSector,
+  getSkillsForSectors,
+  ROLE_OPTIONS,
+  SKILL_OPTIONS,
+} from '../lib/privateSectorTaxonomy';
 
-const HIRING_ROLE_OPTIONS = ['Security Supervisor', 'Logistics Coordinator', 'Administration / Clerk', 'IT Support', 'Facility Manager', 'Operations Manager', 'Warehouse Manager', 'Driver / Transport', 'Customer Service', 'Sales Executive', 'Other'];
-const REQUIRED_SKILL_OPTIONS = ['Convoy / Fleet Operations', 'Warehouse Management', 'Network / IT Security', 'Physical Security', 'Team Leadership', 'Administration', 'Technical / Mechanical', 'Communication', 'Other'];
+const HIRING_ROLE_OPTIONS = ROLE_OPTIONS;
+const REQUIRED_SKILL_OPTIONS = SKILL_OPTIONS;
 const BRANCH_PREFERENCE_OPTIONS = ['Any', 'Indian Army', 'Indian Navy', 'Indian Air Force'];
 const EXPERIENCE_RANGE_OPTIONS = ['Any', '0-2 years', '3-5 years', '5+ years'];
 
@@ -245,8 +252,12 @@ const EmployerOnboarding = () => {
         return <input className="vx-field" type="text" value={d.designation} onChange={(e) => setField('designation', e.target.value)} placeholder="e.g. Head of Talent Acquisition" />;
       case 4:
         return (
-          <Select searchable value={d.industry} onChange={(e) => setField('industry', e.target.value)} placeholder="Select or search an industry…"
-            options={['IT & Software', 'Security Services', 'Aerospace & Defence', 'Logistics & Supply Chain', 'Manufacturing', 'Finance & Banking', 'Retail & E-commerce', 'Other'].map((i) => ({ value: i, label: i }))} />
+          <Select searchable value={d.industry} onChange={(e) => {
+            setField('industry', e.target.value);
+            // Clear prior selected roles if switching industry
+            setFormData(prev => ({ ...prev, industry: e.target.value, hiringRoles: [], requiredSkills: [] }));
+          }} placeholder="Select or search an industry…"
+            options={SECTOR_OPTIONS.map((i) => ({ value: i, label: i }))} />
         );
       case 5:
         return (
@@ -261,26 +272,40 @@ const EmployerOnboarding = () => {
         );
       case 6:
         return <textarea className="vx-field" rows={4} value={d.about} onChange={(e) => setField('about', e.target.value)} placeholder="Tell us about the roles you are hiring for and how military talent fits into your team..." />;
-      case 7:
+      case 7: {
+        const rolesForIndustry = d.industry ? getRolesForSector(d.industry) : HIRING_ROLE_OPTIONS;
         return (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+            {d.industry && (
+              <div style={{ padding: '0.6rem 0.85rem', background: '#f8fafc', borderRadius: '6px', fontSize: '0.82rem', color: '#475569', border: '1px solid #e2e8f0' }}>
+                Showing roles for <strong>{d.industry}</strong>
+              </div>
+            )}
             <MultiChoiceGroup columns={2} values={d.hiringRoles} onToggle={(v) => toggleMulti('hiringRoles', v)}
-              options={HIRING_ROLE_OPTIONS.map((r) => ({ value: r, label: r }))} />
+              options={rolesForIndustry.map((r) => ({ value: r, label: r }))} />
             {d.hiringRoles.includes('Other') && (
               <input className="vx-field" type="text" value={d.hiringRolesOther} onChange={(e) => setField('hiringRolesOther', e.target.value)} placeholder="Tell us which other role(s)" />
             )}
           </div>
         );
-      case 8:
+      }
+      case 8: {
+        const skillsForIndustry = d.industry ? getSkillsForSectors([d.industry]) : REQUIRED_SKILL_OPTIONS;
         return (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+            {d.industry && (
+              <div style={{ padding: '0.6rem 0.85rem', background: '#f8fafc', borderRadius: '6px', fontSize: '0.82rem', color: '#475569', border: '1px solid #e2e8f0' }}>
+                Showing recommended skills for <strong>{d.industry}</strong>
+              </div>
+            )}
             <MultiChoiceGroup columns={2} values={d.requiredSkills} onToggle={(v) => toggleMulti('requiredSkills', v)}
-              options={REQUIRED_SKILL_OPTIONS.map((s) => ({ value: s, label: s }))} />
+              options={skillsForIndustry.map((s) => ({ value: s, label: s }))} />
             {d.requiredSkills.includes('Other') && (
               <input className="vx-field" type="text" value={d.requiredSkillsOther} onChange={(e) => setField('requiredSkillsOther', e.target.value)} placeholder="Tell us which other skill(s)" />
             )}
           </div>
         );
+      }
       case 9:
         return (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
