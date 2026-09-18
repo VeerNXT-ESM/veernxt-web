@@ -3,16 +3,29 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { ADMIN_NAV } from './adminNavConfig';
 import {
   GraduationCap, Users, Shield,
-  HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck, BookMarked, FileUp,
+  HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale,
 } from 'lucide-react';
 import './AdminCMS.css';
 
-const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp };
+const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale };
+
+// Horizontal section nav, directly under the top header — required by the
+// CMS mockup ("Do NOT remove this horizontal navigation") even though it
+// duplicates most of the left sidebar. Settings aliases to Roles &
+// Permissions (the closest thing to system configuration that exists
+// today). Exams is first — it's the actual admin landing page (see the
+// /admin redirect in App.jsx).
+const HORIZONTAL_NAV = [
+  { label: 'Exams', path: '/admin/exams' },
+  { label: 'Users', path: '/admin/users' },
+  { label: 'Settings', path: '/admin/roles' },
+];
 
 // Page title + one-line description shown in the top header, keyed by path.
 const PAGE_META = {
   '/admin/exams': { title: 'Exams Management', description: 'Organize exams, map syllabus and assign content resources.' },
   '/admin/books': { title: 'Book Content' },
+  '/admin/categories': { title: 'Categories', description: 'The sector classification used on every exam — add, rename, or delete categories here.' },
   '/admin/publish-content': { title: 'Publish Content', description: 'Upload a .docx, pick Intro/Guide/Precis, preview the conversion, attach it to exam(s), and publish it live.' },
   '/admin/users': { title: 'Users', description: 'Registered service personnel and platform accounts.' },
   '/admin/roles': { title: 'Roles & Permissions', description: 'Assign roles and curate access control lists.' },
@@ -21,6 +34,7 @@ const PAGE_META = {
   '/admin/jobs': { title: 'Job Board', description: 'Aggregated vacancy notifications.' },
   '/admin/rewards': { title: 'Rewards', description: 'Redemption queue for the points program.' },
   '/admin/private-sector': { title: 'Private Sector — HR Console', description: 'Employer requirements, service verification and the candidate matching pipeline.' },
+  '/admin/legal-aid': { title: 'Legal Aid Queries', description: 'View submitted legal aid queries and send email responses to veterans.' },
 };
 
 const AdminShell = () => {

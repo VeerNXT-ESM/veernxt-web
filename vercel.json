@@ -6,6 +6,8 @@
     { "source": "/api/payments/verify-payment", "destination": "/api/payments/actions?fn=verify-payment" },
     { "source": "/api/auth/register", "destination": "/api/auth/account?fn=register" },
     { "source": "/api/auth/reset-password", "destination": "/api/auth/account?fn=reset-password" },
+    { "source": "/api/admin/admins", "destination": "/api/admin/misc?fn=admins" },
+    { "source": "/api/admin/redemptions", "destination": "/api/admin/misc?fn=redemptions" },
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],

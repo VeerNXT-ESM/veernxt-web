@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Search, X } from 'lucide-react';
+import { Search, X, ArrowRight, Undo2 } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 
@@ -11,75 +11,65 @@ const LEVEL_PILLS = [
 ];
 
 /**
- * The mirror image of ExamResourcesPanel.jsx's own AddResourceMapDrawer:
- * that one is exam-centric (fixed exam, multi-select resources), this one
- * is resource-centric (fixed book, multi-select exams) -- same
- * preload-then-filter list, same `lc_exam_resource_map` insert shape.
- * Built for Guide/Precis, where a book is genuinely shared across many
- * exams; never offered for Intro, which is strictly one exam per resource
- * (see BooksPage.jsx's own guard on the button that opens this).
+ * The "reverse" side of category linking -- CategoriesPage.jsx's own
+ * "Manage Exams" button, mirroring LinkExamsDrawer.jsx's book-side
+ * bulk-link drawer, but for categories instead of books. The direct side
+ * (an exam picking its own category) is ExamEditorPanel.jsx's Category
+ * dropdown.
  *
- * Already-linked exams show up checked, not disabled -- unlike the first
- * version of this drawer, which greyed them out. Unchecking one un-links
- * it; this is a full manage-links view (add and remove together), not
- * add-only, since the admin may as easily need to drop a few exams from a
- * book with hundreds of links as add new ones.
+ * Unlike book<->exam (a real many-to-many via lc_exam_resource_map),
+ * category<->exam is one required text field on lc_exams -- an exam can't
+ * be "unlinked" into nothing. So unchecking an exam that's already in this
+ * category doesn't remove it outright; it opens an inline picker asking
+ * which OTHER category to move it to, and the move only takes effect once
+ * that's chosen (re-checking cancels the pending move). Checking an exam
+ * currently in a different category just queues it to move into this one.
  */
-const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
+const LinkCategoryExamsDrawer = ({ category, allCategories, onClose, onLinked }) => {
   const [search, setSearch] = useState('');
   const [level, setLevel] = useState('');
-  const [examCategory, setExamCategory] = useState('');
-  // Separate State and UT pickers, always visible (not gated behind the
-  // Level pills) -- same reasoning ExamsPage.jsx's own State/UT split uses.
-  // Picking one sets `level` to match and clears the other.
+  const [currentCategoryFilter, setCurrentCategoryFilter] = useState('');
   const [examState, setExamState] = useState('');
   const [examUt, setExamUt] = useState('');
   const [allExams, setAllExams] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [existingExamIds, setExistingExamIds] = useState([]);
-  const [selected, setSelected] = useState(new Set());
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
 
-  // Total exam catalog is ~1,500-2,000 rows -- comfortably one preload, no
-  // pagination needed (same reasoning AddResourceMapDrawer's books-list
-  // preload uses on the other side of this same table).
+  const [selected, setSelected] = useState(new Set()); // exam ids that should end up in `category` after save
+  const [replacements, setReplacements] = useState(new Map()); // exam id -> chosen replacement category (for exams being moved OUT)
+  const [pickingReplacementFor, setPickingReplacementFor] = useState(null); // exam id whose inline picker is open
+
+  // Total exam catalog is ~1,500-2,000 rows -- one preload, same reasoning
+  // LinkExamsDrawer.jsx's own preload uses.
   useEffect(() => {
     let cancelled = false;
     (async () => {
       setLoading(true);
-      const [{ data: exams }, { data: mapRows }] = await Promise.all([
-        supabase
-          .from('lc_exams')
-          .select('id, name, category, conducting_body:lc_conducting_bodies(name), region:lc_regions(name, level)')
-          .order('name')
-          .limit(2000),
-        supabase.from('lc_exam_resource_map').select('exam_id').eq('resource_id', book.resourceId).eq('category', book.category),
-      ]);
+      const { data: exams } = await supabase
+        .from('lc_exams')
+        .select('id, name, category, conducting_body:lc_conducting_bodies(name), region:lc_regions(name, level)')
+        .order('name')
+        .limit(2000);
       if (!cancelled) {
         setAllExams(exams || []);
-        const existing = (mapRows || []).map((r) => r.exam_id);
-        setExistingExamIds(existing);
-        setSelected(new Set(existing)); // pre-checked, not disabled -- see the component's own doc comment
+        const existing = (exams || []).filter((e) => e.category === category.name).map((e) => e.id);
+        setSelected(new Set(existing));
         setLoading(false);
       }
     })();
     return () => { cancelled = true; };
-  }, [book.resourceId, book.category]);
+  }, [category.name]);
 
-  // lc_exams.category -- the ~21-value Banking/Agriculture/Police/etc.
-  // classification ExamsPage.jsx's own Category filter already uses, not
-  // the book's Guide/Precis/Intro category (an unrelated field despite the
-  // shared column name).
-  const categoryOptions = useMemo(() => {
-    const pool = level ? allExams.filter((e) => e.region?.level === level) : allExams;
-    return [...new Set(pool.map((e) => (e.category || '').trim()).filter(Boolean))].sort();
-  }, [allExams, level]);
+  const originalCategorySet = useMemo(
+    () => new Set(allExams.filter((e) => e.category === category.name).map((e) => e.id)),
+    [allExams, category.name]
+  );
 
-  // State/UT names -- derived from the same preloaded exams list rather than
-  // a separate lc_regions fetch, since every region in play already shows up
-  // on at least one exam here. Independent of the Level pills, so both are
-  // always populated and pickable.
+  const currentCategoryOptions = useMemo(
+    () => [...new Set(allExams.map((e) => (e.category || '').trim()).filter(Boolean))].sort(),
+    [allExams]
+  );
   const stateOptions = useMemo(() => {
     const pool = allExams.filter((e) => e.region?.level === 'state');
     return [...new Set(pool.map((e) => e.region?.name).filter(Boolean))].sort();
@@ -94,58 +84,67 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   const results = useMemo(() => {
     let pool = allExams;
     if (level) pool = pool.filter((e) => e.region?.level === level);
-    if (examCategory) pool = pool.filter((e) => (e.category || '').trim() === examCategory);
+    if (currentCategoryFilter) pool = pool.filter((e) => (e.category || '').trim() === currentCategoryFilter);
     if (examRegion) pool = pool.filter((e) => e.region?.name === examRegion);
     const q = search.trim().toLowerCase();
     if (q) pool = pool.filter((e) => e.name.toLowerCase().includes(q) || e.conducting_body?.name?.toLowerCase().includes(q));
     return pool;
-  }, [allExams, level, examCategory, examRegion, search]);
+  }, [allExams, level, currentCategoryFilter, examRegion, search]);
 
-  const toggle = (examId) => setSelected((prev) => {
-    const next = new Set(prev);
-    if (next.has(examId)) next.delete(examId); else next.add(examId);
-    return next;
-  });
+  const toggle = (examId) => {
+    if (selected.has(examId)) {
+      if (originalCategorySet.has(examId)) {
+        // Was already in this category -- can't uncheck into nothing, ask where it should go instead.
+        setPickingReplacementFor(examId);
+        return;
+      }
+      setSelected((prev) => { const next = new Set(prev); next.delete(examId); return next; });
+    } else {
+      setSelected((prev) => new Set(prev).add(examId));
+      setReplacements((prev) => { if (!prev.has(examId)) return prev; const next = new Map(prev); next.delete(examId); return next; });
+      if (pickingReplacementFor === examId) setPickingReplacementFor(null);
+    }
+  };
 
-  const toAdd = [...selected].filter((id) => !existingExamIds.includes(id));
-  const toRemove = existingExamIds.filter((id) => !selected.has(id));
-  const hasChanges = toAdd.length > 0 || toRemove.length > 0;
+  const confirmReplacement = (examId, newCategory) => {
+    if (!newCategory) return;
+    setReplacements((prev) => new Map(prev).set(examId, newCategory));
+    setSelected((prev) => { const next = new Set(prev); next.delete(examId); return next; });
+    setPickingReplacementFor(null);
+  };
+
+  const toAdd = [...selected].filter((id) => !originalCategorySet.has(id));
+  const hasChanges = toAdd.length > 0 || replacements.size > 0;
 
   const handleSave = async () => {
     if (!hasChanges) { onClose(); return; }
     setSaving(true);
     setError(null);
     if (toAdd.length > 0) {
-      const { error: insErr } = await supabase.from('lc_exam_resource_map').insert(toAdd.map((examId) => ({
-        exam_id: examId,
-        resource_id: book.resourceId,
-        category: book.category,
-        confidence: 'high',
-        reasoning: 'Manually added by admin',
-        source: 'manual',
-      })));
-      if (insErr) { setSaving(false); setError(insErr.message); return; }
+      const { error: addErr } = await supabase.from('lc_exams').update({ category: category.name }).in('id', toAdd);
+      if (addErr) { setSaving(false); setError(addErr.message); return; }
     }
-    if (toRemove.length > 0) {
-      const { error: delErr } = await supabase.from('lc_exam_resource_map').delete()
-        .eq('resource_id', book.resourceId).eq('category', book.category).in('exam_id', toRemove);
-      if (delErr) { setSaving(false); setError(delErr.message); return; }
+    for (const [examId, newCategory] of replacements) {
+      const { error: moveErr } = await supabase.from('lc_exams').update({ category: newCategory }).eq('id', examId);
+      if (moveErr) { setSaving(false); setError(moveErr.message); return; }
     }
     setSaving(false);
-    onLinked(toAdd.length - toRemove.length);
+    onLinked({ added: toAdd.length, moved: replacements.size });
   };
 
   const pickExamState = (name) => { setExamState(name); setExamUt(''); if (name) setLevel('state'); };
   const pickExamUt = (name) => { setExamUt(name); setExamState(''); if (name) setLevel('ut'); };
-  const handleClearFilters = () => { setSearch(''); setLevel(''); setExamCategory(''); setExamState(''); setExamUt(''); };
+  const handleClearFilters = () => { setSearch(''); setLevel(''); setCurrentCategoryFilter(''); setExamState(''); setExamUt(''); };
+
+  const replacementOptions = allCategories.filter((c) => c.name !== category.name).map((c) => ({ value: c.name, label: c.name }));
 
   return (
     <div className="lc-drawer-backdrop" onClick={onClose}>
-      <div className="lc-drawer-panel" style={{ width: 'min(580px, 94vw)' }} onClick={(e) => e.stopPropagation()}>
+      <div className="lc-drawer-panel" style={{ width: 'min(620px, 94vw)' }} onClick={(e) => e.stopPropagation()}>
         <div className="lc-drawer-header">
           <div>
-            <h3>Link Exams</h3>
-            <p>Check exams to link <strong>&quot;{book.title}&quot;</strong> to, uncheck to unlink -- in bulk.</p>
+            <h3>Manage Exams — {category.name}</h3>
+            <p>Check exams to move them into <strong>&quot;{category.name}&quot;</strong>. Uncheck one already here to move it to a different category instead.</p>
           </div>
           <button className="lc-close-btn" onClick={onClose}><X size={20} /></button>
         </div>
@@ -172,18 +171,18 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                 type="button"
                 className={`lc-btn ${level === id ? 'primary' : ''}`}
                 style={{ padding: '0.3rem 0.65rem', fontSize: '0.75rem', borderRadius: '6px' }}
-                onClick={() => { setLevel(id); setExamCategory(''); setExamState(''); setExamUt(''); }}
+                onClick={() => { setLevel(id); setExamState(''); setExamUt(''); }}
               >
                 {label}
               </button>
             ))}
-            <div style={{ minWidth: 170 }}>
+            <div style={{ minWidth: 190 }}>
               <Select
                 searchable
-                value={examCategory}
-                onChange={(e) => setExamCategory(e.target.value)}
-                placeholder={`All Categories (${categoryOptions.length})`}
-                options={[{ value: '', label: 'All Categories' }, ...categoryOptions.map((c) => ({ value: c, label: c }))]}
+                value={currentCategoryFilter}
+                onChange={(e) => setCurrentCategoryFilter(e.target.value)}
+                placeholder={`Current Category (${currentCategoryOptions.length})`}
+                options={[{ value: '', label: 'Any Current Category' }, ...currentCategoryOptions.map((c) => ({ value: c, label: c }))]}
               />
             </div>
             <div style={{ minWidth: 150 }}>
@@ -206,7 +205,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
             </div>
           </div>
 
-          {(search || level || examCategory || examState || examUt) && (
+          {(search || level || currentCategoryFilter || examState || examUt) && (
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', fontSize: '0.75rem', color: 'var(--admin-text-muted)', padding: '0.2rem 0' }}>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', alignItems: 'center' }}>
                 <span>Filters:</span>
@@ -216,10 +215,10 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                     <X size={11} style={{ cursor: 'pointer' }} onClick={() => setLevel('')} />
                   </span>
                 )}
-                {examCategory && (
+                {currentCategoryFilter && (
                   <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                    {examCategory}
-                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setExamCategory('')} />
+                    {currentCategoryFilter}
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setCurrentCategoryFilter('')} />
                   </span>
                 )}
                 {examState && (
@@ -259,33 +258,74 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontSize: '0.75rem', color: 'var(--admin-text-muted)' }}>
                 <span>{results.length} exam{results.length === 1 ? '' : 's'}</span>
-                {level && <span>Filtered by: {LEVEL_PILLS.find((p) => p.id === level)?.label}</span>}
               </div>
               {results.map((exam) => {
-                const wasLinked = existingExamIds.includes(exam.id);
+                const wasHere = originalCategorySet.has(exam.id);
                 const isChecked = selected.has(exam.id);
+                const isMoving = replacements.has(exam.id);
+                const isPickingReplacement = pickingReplacementFor === exam.id;
+
                 return (
-                  <label key={exam.id} className="lc-drawer-list-item" style={{ cursor: 'pointer' }}>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0 }}>
+                  <div key={exam.id} className="lc-drawer-list-item" style={{ flexDirection: 'column', alignItems: 'stretch', gap: isPickingReplacement ? '0.4rem' : 0 }}>
+                    <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0, cursor: 'pointer' }}>
                       <input
                         type="checkbox"
                         checked={isChecked}
                         onChange={() => toggle(exam.id)}
                         style={{ marginRight: '0.3rem', flexShrink: 0 }}
                       />
-                      <span className="lc-truncate" title={exam.name}>{exam.name}</span>
+                      <span className="lc-truncate" title={exam.name} style={{ flex: 1, minWidth: 0 }}>{exam.name}</span>
                       {exam.conducting_body?.name && (
                         <span className="lc-muted-note lc-truncate" style={{ maxWidth: '140px', fontSize: '0.72rem', background: 'var(--surface-alt)', padding: '0.1rem 0.4rem', borderRadius: '4px', flexShrink: 0 }} title={exam.conducting_body.name}>
                           {exam.conducting_body.name}
                         </span>
                       )}
-                      {exam.category && <span className="lc-muted-note" style={{ flexShrink: 0 }}>· {exam.category}</span>}
+                      {!wasHere && exam.category && <span className="lc-muted-note" style={{ flexShrink: 0 }}>· {exam.category}</span>}
                       {exam.region?.level && <span className="lc-muted-note" style={{ flexShrink: 0 }}>· {exam.region.level}{exam.region.name ? ` (${exam.region.name})` : ''}</span>}
-                    </span>
-                    {wasLinked && isChecked && <span className="lc-muted-note" style={{ flexShrink: 0, marginLeft: '0.5rem' }}>Linked</span>}
-                    {wasLinked && !isChecked && <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: '#dc2626', fontWeight: 700 }}>Will unlink</span>}
-                    {!wasLinked && isChecked && <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: '#059669', fontWeight: 700 }}>Will link</span>}
-                  </label>
+
+                      {wasHere && isChecked && <span className="lc-muted-note" style={{ flexShrink: 0, marginLeft: '0.5rem' }}>Already here</span>}
+                      {!wasHere && isChecked && (
+                        <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: '#059669', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+                          <ArrowRight size={11} /> Moving in{exam.category ? ` from ${exam.category}` : ''}
+                        </span>
+                      )}
+                      {isMoving && (
+                        <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: '#dc2626', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+                          <ArrowRight size={11} /> Moving to {replacements.get(exam.id)}
+                          <button
+                            type="button"
+                            title="Undo -- keep it here"
+                            onClick={(e) => { e.preventDefault(); toggle(exam.id); }}
+                            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', padding: 0, display: 'flex' }}
+                          >
+                            <Undo2 size={12} />
+                          </button>
+                        </span>
+                      )}
+                    </label>
+                    {isPickingReplacement && (
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', paddingLeft: '1.7rem' }}>
+                        <span className="lc-muted-note" style={{ fontSize: '0.75rem', flexShrink: 0 }}>Move to:</span>
+                        <div style={{ minWidth: 220 }}>
+                          <Select
+                            searchable
+                            value=""
+                            onChange={(e) => confirmReplacement(exam.id, e.target.value)}
+                            placeholder="Choose a category..."
+                            options={replacementOptions}
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          className="lc-icon-btn"
+                          title="Cancel -- keep it here"
+                          onClick={() => setPickingReplacementFor(null)}
+                        >
+                          <X size={13} />
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 );
               })}
               {results.length === 0 && <p className="lc-muted-note">No matching exams found.</p>}
@@ -294,8 +334,9 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
         </div>
         <div className="lc-modal-footer">
           <span style={{ marginRight: 'auto', fontSize: '0.8rem', color: 'var(--admin-text-muted)', alignSelf: 'center' }}>
-            {selected.size} exam{selected.size === 1 ? '' : 's'} selected
-            {hasChanges && ` (${toAdd.length ? `+${toAdd.length}` : ''}${toAdd.length && toRemove.length ? ' / ' : ''}${toRemove.length ? `-${toRemove.length}` : ''})`}
+            {hasChanges
+              ? `${toAdd.length ? `${toAdd.length} moving in` : ''}${toAdd.length && replacements.size ? ', ' : ''}${replacements.size ? `${replacements.size} moving out` : ''}`
+              : `${selected.size} exam${selected.size === 1 ? '' : 's'} in this category`}
           </span>
           <button className="lc-btn" onClick={onClose} disabled={saving}>Cancel</button>
           <button className="lc-btn primary" onClick={handleSave} disabled={saving || !hasChanges}>
@@ -307,4 +348,4 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   );
 };
 
-export default LinkExamsDrawer;
+export default LinkCategoryExamsDrawer;

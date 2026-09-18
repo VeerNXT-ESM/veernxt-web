@@ -37,6 +37,11 @@ const QuizzesPage = () => {
   const debouncedSearch = useDebounced(search, 300);
   const [categoryTab, setCategoryTab] = useState('All');
   const [levelFilter, setLevelFilter] = useState('');
+  // Separate State and UT filters, always visible (not gated behind
+  // Level) -- same split ExamsPage.jsx's own State/UT filter uses.
+  const [stateFilter, setStateFilter] = useState('');
+  const [utFilter, setUtFilter] = useState('');
+  const stateUtFilter = stateFilter || utFilter;
   const [quizzes, setQuizzes] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
   const [page, setPage] = useState(1);
@@ -84,6 +89,7 @@ const QuizzesPage = () => {
     if (debouncedSearch) query = query.ilike('title', `%${debouncedSearch}%`);
     if (categoryTab !== 'All') query = query.eq('category', categoryTab);
     if (levelFilter) query = query.eq('level', levelFilter);
+    if (stateUtFilter) query = query.eq('state_ut', stateUtFilter);
     const from = (page - 1) * PAGE_SIZE;
     query = query.range(from, from + PAGE_SIZE - 1);
     const { data, count, error } = await query;
@@ -97,9 +103,9 @@ const QuizzesPage = () => {
   useEffect(() => {
     reload();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debouncedSearch, categoryTab, levelFilter, page]);
+  }, [debouncedSearch, categoryTab, levelFilter, stateUtFilter, page]);
 
-  useEffect(() => { setPage(1); }, [debouncedSearch, categoryTab, levelFilter]);
+  useEffect(() => { setPage(1); }, [debouncedSearch, categoryTab, levelFilter, stateUtFilter]);
 
   const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
 
@@ -224,9 +230,33 @@ const QuizzesPage = () => {
         </div>
         <div className="lc-filter-field">
           <label>Level</label>
-          <select value={levelFilter} onChange={(e) => setLevelFilter(e.target.value)} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
+          <select value={levelFilter} onChange={(e) => { setLevelFilter(e.target.value); setStateFilter(''); setUtFilter(''); }} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
             {LEVEL_FILTER_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
+        </div>
+        <div className="lc-filter-field">
+          <label>State</label>
+          <div style={{ minWidth: 150 }}>
+            <Select
+              searchable
+              value={stateFilter}
+              onChange={(e) => { setStateFilter(e.target.value); setUtFilter(''); if (e.target.value) setLevelFilter('state'); }}
+              placeholder="All States"
+              options={[{ value: '', label: 'All States' }, ...regions.filter((r) => r.level === 'state').map((r) => ({ value: r.name, label: r.name }))]}
+            />
+          </div>
+        </div>
+        <div className="lc-filter-field">
+          <label>UT</label>
+          <div style={{ minWidth: 150 }}>
+            <Select
+              searchable
+              value={utFilter}
+              onChange={(e) => { setUtFilter(e.target.value); setStateFilter(''); if (e.target.value) setLevelFilter('ut'); }}
+              placeholder="All UTs"
+              options={[{ value: '', label: 'All UTs' }, ...regions.filter((r) => r.level === 'ut').map((r) => ({ value: r.name, label: r.name }))]}
+            />
+          </div>
         </div>
         <Link to="/admin/quiz" className="lc-btn primary"><Plus size={16} /> New Quiz</Link>
       </div>

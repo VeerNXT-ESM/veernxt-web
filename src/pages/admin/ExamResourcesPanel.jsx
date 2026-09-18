@@ -1,11 +1,20 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Plus, Trash2, Search, X, Eye, ExternalLink } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
+import Select from '../../components/ui/Select';
 import AdminResourcePreview from './AdminResourcePreview';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
 const CATEGORY_ORDER = ['Intro', 'Guide', 'Precis'];
+
+// Same Level convention every other admin list uses.
+const LEVEL_OPTIONS = [
+  { value: '', label: 'All Levels' },
+  { value: 'central', label: 'Central' },
+  { value: 'state', label: 'State' },
+  { value: 'ut', label: 'UT' },
+];
 
 /**
  * Full-width section below the Exams workspace grid — shows what's actually
@@ -174,11 +183,25 @@ const ResourceMapRow = ({ mapping, onRemove, onPreview }) => {
 const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, onClose, onAdded }) => {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState(initialCategory || '');
+  const [level, setLevel] = useState(''); // book's own Level tag (BooksPage.jsx), not the fixed exam's
+  // Separate State and UT filters, always visible (not gated behind
+  // Level) -- same split ExamsPage.jsx's own State/UT filter uses.
+  const [stateFilter, setStateFilter] = useState('');
+  const [utFilter, setUtFilter] = useState('');
+  const stateUt = stateFilter || utFilter;
+  const [regions, setRegions] = useState([]);
   const [allResources, setAllResources] = useState([]);
   const [supplementary, setSupplementary] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState(new Set());
   const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await supabase.from('lc_regions').select('id,name,level').order('name');
+      setRegions(data || []);
+    })();
+  }, []);
 
   // Same books-list call, and the same active/archived split, that Book
   // Content (BooksPage.jsx) uses -- one source of truth for what counts
@@ -207,6 +230,8 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
             resource_id: b.resourceId,
             title: b.title.trim(),
             category: b.category,
+            level: b.level || '',
+            state_ut: b.stateUt || '',
             conducting_body: b.conductingBody || '',
             exam_name: '',
             format: 'blocks',
@@ -240,7 +265,7 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
       try {
         let query = supabase
           .from('resources')
-          .select('resource_id, title, category, conducting_body, exam_name, format, status')
+          .select('resource_id, title, category, level, state_ut, conducting_body, exam_name, format, status')
           .eq('status', 'Published')
           .ilike('title', `%${q}%`)
           .limit(80);
@@ -267,6 +292,14 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
 
     if (category) {
       pool = pool.filter((r) => r.category === category);
+    }
+
+    if (level) {
+      pool = pool.filter((r) => r.level === level);
+    }
+
+    if (stateUt) {
+      pool = pool.filter((r) => r.state_ut === stateUt);
     }
 
     if (search.trim()) {
@@ -305,7 +338,7 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
     }
 
     return merged.sort((a, b) => a.title.localeCompare(b.title));
-  }, [allResources, supplementary, category, search]);
+  }, [allResources, supplementary, category, level, stateUt, search]);
 
   const toggle = (resourceId) => setSelected((prev) => {
     const next = new Set(prev);
@@ -333,6 +366,9 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
   const handleClearFilters = () => {
     setSearch('');
     setCategory('');
+    setLevel('');
+    setStateFilter('');
+    setUtFilter('');
   };
 
   return (
@@ -387,8 +423,37 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
             ))}
           </div>
 
+          {/* Book's own Level / State / UT tags */}
+          <div style={{ display: 'flex', gap: '0.4rem', margin: '0.25rem 0', flexWrap: 'wrap' }}>
+            <div style={{ minWidth: 130 }}>
+              <Select
+                value={level}
+                onChange={(e) => { setLevel(e.target.value); setStateFilter(''); setUtFilter(''); }}
+                options={LEVEL_OPTIONS}
+              />
+            </div>
+            <div style={{ minWidth: 150 }}>
+              <Select
+                searchable
+                value={stateFilter}
+                onChange={(e) => { setStateFilter(e.target.value); setUtFilter(''); if (e.target.value) setLevel('state'); }}
+                placeholder="All States"
+                options={[{ value: '', label: 'All States' }, ...regions.filter((r) => r.level === 'state').map((r) => ({ value: r.name, label: r.name }))]}
+              />
+            </div>
+            <div style={{ minWidth: 150 }}>
+              <Select
+                searchable
+                value={utFilter}
+                onChange={(e) => { setUtFilter(e.target.value); setStateFilter(''); if (e.target.value) setLevel('ut'); }}
+                placeholder="All UTs"
+                options={[{ value: '', label: 'All UTs' }, ...regions.filter((r) => r.level === 'ut').map((r) => ({ value: r.name, label: r.name }))]}
+              />
+            </div>
+          </div>
+
           {/* Active filter badges / reset */}
-          {(search || category) && (
+          {(search || category || level || stateUt) && (
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', fontSize: '0.75rem', color: 'var(--admin-text-muted)', padding: '0.2rem 0' }}>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', alignItems: 'center' }}>
                 <span>Filters:</span>
@@ -396,6 +461,24 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
                   <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                     {category}
                     <X size={11} style={{ cursor: 'pointer' }} onClick={() => setCategory('')} />
+                  </span>
+                )}
+                {level && (
+                  <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    {LEVEL_OPTIONS.find((o) => o.value === level)?.label}
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => { setLevel(''); setStateFilter(''); setUtFilter(''); }} />
+                  </span>
+                )}
+                {stateFilter && (
+                  <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    {stateFilter}
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setStateFilter('')} />
+                  </span>
+                )}
+                {utFilter && (
+                  <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    {utFilter}
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setUtFilter('')} />
                   </span>
                 )}
                 {search && (

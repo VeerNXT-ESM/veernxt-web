@@ -89,6 +89,12 @@ const BooksPage = () => {
   const [error, setError] = useState(null);
   const [category, setCategory] = useState(readStoredCategory);
   const [levelFilter, setLevelFilter] = useState('');
+  // Separate State and UT filters, always visible (not gated behind
+  // Level) -- same split ExamsPage.jsx's own State/UT filter uses. Picking
+  // one sets levelFilter to match and clears the other.
+  const [stateFilter, setStateFilter] = useState('');
+  const [utFilter, setUtFilter] = useState('');
+  const stateUtFilter = stateFilter || utFilter;
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search);
   const [sort, setSort] = useState('issues');
@@ -267,13 +273,14 @@ const BooksPage = () => {
     if (!books) return [];
     let list = books.filter((b) => (showArchived ? b.isArchived : !b.isArchived));
     if (levelFilter) list = list.filter((b) => b.level === levelFilter);
+    if (stateUtFilter) list = list.filter((b) => b.stateUt === stateUtFilter);
     if (debouncedSearch.trim()) {
       const q = debouncedSearch.trim().toLowerCase();
       list = list.filter((b) => b.title.toLowerCase().includes(q));
     }
     const issueScore = (b) => (b.issueCounts?.high || 0) * 1000 + (b.issueCounts?.medium || 0);
     return [...list].sort((a, b) => (sort === 'title' ? a.title.localeCompare(b.title) : issueScore(b) - issueScore(a)));
-  }, [books, levelFilter, debouncedSearch, sort, showArchived]);
+  }, [books, levelFilter, stateUtFilter, debouncedSearch, sort, showArchived]);
 
   // Reset to page 1 only when one of these actually CHANGES from its
   // previous value -- not merely "this effect has run before". A plain
@@ -287,7 +294,7 @@ const BooksPage = () => {
   // neither looks like a change.
   const prevResetKeyRef = useRef(null);
   useEffect(() => {
-    const key = JSON.stringify([category, levelFilter, debouncedSearch, sort, showArchived]);
+    const key = JSON.stringify([category, levelFilter, stateUtFilter, debouncedSearch, sort, showArchived]);
     if (prevResetKeyRef.current === null) {
       prevResetKeyRef.current = key;
       return;
@@ -296,7 +303,7 @@ const BooksPage = () => {
       prevResetKeyRef.current = key;
       setPage(1);
     }
-  }, [category, levelFilter, debouncedSearch, sort, showArchived]);
+  }, [category, levelFilter, stateUtFilter, debouncedSearch, sort, showArchived]);
 
   useEffect(() => {
     try { sessionStorage.setItem(STORAGE_KEY_CATEGORY, category); } catch { /* storage unavailable -- fall back silently */ }
@@ -460,9 +467,33 @@ const BooksPage = () => {
         </div>
         <div className="lc-filter-field">
           <label>Level</label>
-          <select value={levelFilter} onChange={(e) => setLevelFilter(e.target.value)} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
+          <select value={levelFilter} onChange={(e) => { setLevelFilter(e.target.value); setStateFilter(''); setUtFilter(''); }} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
             {LEVEL_FILTER_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
+        </div>
+        <div className="lc-filter-field">
+          <label>State</label>
+          <div style={{ minWidth: 150 }}>
+            <Select
+              searchable
+              value={stateFilter}
+              onChange={(e) => { setStateFilter(e.target.value); setUtFilter(''); if (e.target.value) setLevelFilter('state'); }}
+              placeholder="All States"
+              options={[{ value: '', label: 'All States' }, ...regions.filter((r) => r.level === 'state').map((r) => ({ value: r.name, label: r.name }))]}
+            />
+          </div>
+        </div>
+        <div className="lc-filter-field">
+          <label>UT</label>
+          <div style={{ minWidth: 150 }}>
+            <Select
+              searchable
+              value={utFilter}
+              onChange={(e) => { setUtFilter(e.target.value); setStateFilter(''); if (e.target.value) setLevelFilter('ut'); }}
+              placeholder="All UTs"
+              options={[{ value: '', label: 'All UTs' }, ...regions.filter((r) => r.level === 'ut').map((r) => ({ value: r.name, label: r.name }))]}
+            />
+          </div>
         </div>
         <div className="lc-filter-field">
           <label>Format Title</label>

@@ -37,9 +37,13 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   const [regions, setRegions] = useState([]);
   const [thumbnailTemplates, setThumbnailTemplates] = useState([]);
   const [allTags, setAllTags] = useState([]);
+  // lc_exam_categories -- editable by the content team from CategoriesPage.jsx,
+  // not a hardcoded list. Read live here so a category added there shows up
+  // in this dropdown immediately, no code change or deploy needed.
+  const [categoryOptions, setCategoryOptions] = useState([]);
 
   const [form, setForm] = useState({
-    conducting_body_id: '', region_id: '', name: '', category: '', website: '',
+    conducting_body_id: '', region_id: '', name: '', category: '', category_detail: '', website: '',
     thumbnail_template_id: '', accent_color: ACCENT_COLORS[0],
   });
   // UI-only: which region.level is selected, so the State/UT dropdown can
@@ -58,7 +62,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
     if (examId) {
       fetchExam(examId);
     } else {
-      setForm({ conducting_body_id: '', region_id: '', name: '', category: '', website: '', thumbnail_template_id: '', accent_color: ACCENT_COLORS[0] });
+      setForm({ conducting_body_id: '', region_id: '', name: '', category: '', category_detail: '', website: '', thumbnail_template_id: '', accent_color: ACCENT_COLORS[0] });
       setLevel('central');
       setStatus('draft');
       setExamTags([]);
@@ -68,16 +72,18 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   }, [examId]);
 
   const loadReferenceData = async () => {
-    const [{ data: bodies }, { data: regs }, { data: templates }, { data: tags }] = await Promise.all([
+    const [{ data: bodies }, { data: regs }, { data: templates }, { data: tags }, { data: cats }] = await Promise.all([
       supabase.from('lc_conducting_bodies').select('id,name').order('name'),
       supabase.from('lc_regions').select('id,name,level').order('name'),
       supabase.from('lc_thumbnail_templates').select('id,name,background_image_path').order('name'),
       supabase.from('lc_tags').select('id,name').order('name'),
+      supabase.from('lc_exam_categories').select('name').order('name'),
     ]);
     setConductingBodies(bodies || []);
     setRegions(regs || []);
     setThumbnailTemplates(templates || []);
     setAllTags(tags || []);
+    setCategoryOptions((cats || []).map((c) => ({ value: c.name, label: c.name })));
   };
 
   const fetchExam = async (id) => {
@@ -90,6 +96,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
         region_id: exam.region_id || '',
         name: exam.name || '',
         category: exam.category || '',
+        category_detail: exam.category_detail || '',
         website: exam.website || '',
         thumbnail_template_id: exam.thumbnail_template_id || '',
         thumbnail_subject: exam.thumbnail_subject || '',
@@ -115,6 +122,22 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   // auto-selects that region rather than making the admin pick from a
   // list of one.
   const regionsForLevel = regions.filter((r) => r.level === level);
+
+  // Also runs on its own (not just from changeLevel below) -- the "new
+  // exam" reset effect defaults level to 'central' directly, and `regions`
+  // may still be loading at that moment, so region_id can be left blank
+  // with no visible field to fix it (State/UT is hidden for Central). That
+  // silently failed Save with "Conducting Body, State/UT, and Exam Name are
+  // required" even though all three looked filled in. This picks up the
+  // Central region id as soon as both level==='central' and regions have
+  // loaded, however that state was reached.
+  useEffect(() => {
+    if (level === 'central' && !form.region_id && regions.length > 0) {
+      const centralRegion = regions.find((r) => r.level === 'central');
+      if (centralRegion) updateForm({ region_id: centralRegion.id });
+    }
+  }, [level, regions, form.region_id]);
+
   const changeLevel = (newLevel) => {
     setLevel(newLevel);
     if (newLevel === 'central') {
@@ -137,6 +160,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
         region_id: form.region_id,
         name: form.name.trim(),
         category: form.category.trim() || null,
+        category_detail: form.category_detail.trim() || null,
         website: form.website.trim() || null,
         thumbnail_template_id: form.thumbnail_template_id || null,
         accent_color: form.accent_color,
@@ -195,6 +219,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
         region_id: form.region_id,
         name: `${form.name} (Copy)`,
         category: form.category.trim() || null,
+        category_detail: form.category_detail.trim() || null,
         website: form.website.trim() || null,
         thumbnail_template_id: form.thumbnail_template_id || null,
         accent_color: form.accent_color,
@@ -302,7 +327,13 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
           <div className={level === 'central' ? 'lc-editor-identity-row2' : 'lc-editor-identity-row3'}>
             <div className="lc-input-group">
               <label>Category *</label>
-              <input type="text" value={form.category} onChange={(e) => updateForm({ category: e.target.value })} placeholder="e.g. SSC, Banking" />
+              <Select
+                searchable
+                placeholder="Select category..."
+                value={form.category}
+                onChange={(e) => updateForm({ category: e.target.value })}
+                options={categoryOptions}
+              />
             </div>
             <div className="lc-input-group">
               <label>Level *</label>
@@ -320,6 +351,16 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
                 />
               </div>
             )}
+          </div>
+
+          <div className="lc-input-group">
+            <label>Category Detail</label>
+            <input
+              type="text"
+              value={form.category_detail}
+              onChange={(e) => updateForm({ category_detail: e.target.value })}
+              placeholder="Optional — the specific post/sub-type, e.g. &quot;Police SI&quot; (Category itself stays a fixed list for clean filtering)"
+            />
           </div>
 
           <div className="lc-input-group">
