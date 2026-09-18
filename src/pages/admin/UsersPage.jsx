@@ -114,20 +114,30 @@ const UsersPage = () => {
           </thead>
           <tbody>
             {paginated.map((user, idx) => {
-              const name = user.full_name || user.raw_profile_data?.fullName || user.name || 'Unknown';
-              const state = user.raw_profile_data?.stateOfDomicile || user.state || '—';
-              const district = user.raw_profile_data?.district || user.district || '—';
-              const category = user.raw_profile_data?.category || user.category || '—';
-              const qualification = user.education_level || user.raw_profile_data?.highestQualification || user.qualification || '—';
-              const skills = Array.isArray(user.raw_profile_data?.specificSkills) ? user.raw_profile_data.specificSkills.join(', ') : (user.raw_profile_data?.skills || user.skills || '—');
+              const name = typeof user.full_name === 'string' ? user.full_name : (user.raw_profile_data?.fullName || user.name || 'Unknown');
+              const state = typeof user.raw_profile_data?.stateOfDomicile === 'string' ? user.raw_profile_data.stateOfDomicile : (typeof user.state === 'string' ? user.state : '—');
+              const district = typeof user.raw_profile_data?.district === 'string' ? user.raw_profile_data.district : (typeof user.district === 'string' ? user.district : '—');
+              const categoryStr = typeof user.raw_profile_data?.category === 'string' ? user.raw_profile_data.category : (typeof user.category === 'string' ? user.category : '—');
+              const qualification = typeof user.education_level === 'string' ? user.education_level : (typeof user.raw_profile_data?.highestQualification === 'string' ? user.raw_profile_data.highestQualification : (typeof user.qualification === 'string' ? user.qualification : '—'));
+              
+              let skills = '—';
+              const rawSkills = user.raw_profile_data?.specificSkills || user.raw_profile_data?.skills || user.skills;
+              if (Array.isArray(rawSkills)) {
+                skills = rawSkills.filter(Boolean).map(s => typeof s === 'string' ? s : (s?.label || s?.name || '')).filter(Boolean).join(', ') || '—';
+              } else if (typeof rawSkills === 'string') {
+                skills = rawSkills.trim() || '—';
+              } else if (typeof rawSkills === 'object' && rawSkills !== null) {
+                skills = Object.values(rawSkills).filter(v => typeof v === 'string' || typeof v === 'number').join(', ') || '—';
+              }
+
               return (
                 <tr key={idx} className="clickable" onClick={() => setSelectedProfile(user)}>
                   <td>
                     <span className="lc-table-title">{name}</span>
-                    <span className="lc-table-sub">{user.service_branch || user.raw_profile_data?.serviceBranch || 'Indian Army'}</span>
+                    <span className="lc-table-sub">{typeof user.service_branch === 'string' ? user.service_branch : (user.raw_profile_data?.serviceBranch || 'Indian Army')}</span>
                   </td>
                   <td>{state} <span className="lc-table-sub">{district}</span></td>
-                  <td>{category.replace(' (Non-creamy layer)', '')}</td>
+                  <td>{String(categoryStr).replace(' (Non-creamy layer)', '')}</td>
                   <td>{qualification}</td>
                   <td style={{ maxWidth: 220, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={skills}>{skills}</td>
                   <td style={{ textAlign: 'right' }} onClick={(e) => e.stopPropagation()}>

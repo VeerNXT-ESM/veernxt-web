@@ -28,6 +28,7 @@ export const ADMIN_NAV = [
       { key: 'jobs', label: 'Job Board', path: '/admin/jobs', icon: 'Briefcase' },
       { key: 'rewards', label: 'Rewards', path: '/admin/rewards', icon: 'Gift' },
       { key: 'private-sector', label: 'Private Sector', path: '/admin/private-sector', icon: 'UserCheck' },
+      { key: 'legal-aid', label: 'Legal Aid', path: '/admin/legal-aid', icon: 'Scale' },
     ],
   },
 ];

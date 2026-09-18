@@ -1,5 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '../lib/supabase';
 import {
   stepLabels,
   profiles,
@@ -30,10 +31,27 @@ const initialState = {
   caseRef: null,
 };
 
+/* ─── Category labels (same as admin) ─── */
+const CATEGORY_LABELS = {
+  pension: 'Pension / Pay', housing: 'Housing / Land',
+  service_matter: 'Service Matter', fraud: 'Fraud / Cyber',
+  family: 'Family / Succession', disability: 'Disability',
+  court: 'Court / Legal Proceedings', unknown: 'Not Classified',
+};
+
+const STATUS_STYLE = {
+  new:       { label: 'Submitted',   color: '#e3c677', bg: 'rgba(227,198,119,0.15)', border: 'rgba(227,198,119,0.3)' },
+  in_review: { label: 'In Review',   color: '#f0a04b', bg: 'rgba(240,160,75,0.15)',  border: 'rgba(240,160,75,0.3)'  },
+  responded: { label: 'Responded',   color: '#6fcf97', bg: 'rgba(111,207,151,0.15)', border: 'rgba(111,207,151,0.3)' },
+  closed:    { label: 'Closed',      color: '#8b9aad', bg: 'rgba(139,154,173,0.12)', border: 'rgba(139,154,173,0.25)'},
+};
+
 const LegalAidCell = () => {
   const navigate = useNavigate();
   const [current, setCurrent] = useState(1);
   const [state, setState] = useState(initialState);
+  const [history, setHistory] = useState([]);
+  const [historyLoading, setHistoryLoading] = useState(true);
 
   const patch = (updater) => setState((s) => ({ ...s, ...(typeof updater === 'function' ? updater(s) : updater) }));
 
@@ -41,6 +59,28 @@ const LegalAidCell = () => {
     () => ({ qa: state.qa, profile: state.profile, category: state.category, situation: state.situation, profileData: state.profileData }),
     [state.qa, state.profile, state.category, state.situation, state.profileData]
   );
+
+  /* Load the authenticated user's past submissions */
+  useEffect(() => {
+    let cancelled = false;
+    const load = async () => {
+      setHistoryLoading(true);
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) { setHistoryLoading(false); return; }
+        const { data } = await supabase
+          .from('legal_aid_queries')
+          .select('id, case_ref, created_at, category, situation, urgency, status')
+          .eq('user_id', user.id)
+          .order('created_at', { ascending: false })
+          .limit(10);
+        if (!cancelled) setHistory(data || []);
+      } catch (_) { /* silently ignore */ }
+      finally { if (!cancelled) setHistoryLoading(false); }
+    };
+    load();
+    return () => { cancelled = true; };
+  }, []);
 
   const exitAssistance = () => navigate(-1);
 
@@ -108,6 +148,26 @@ const LegalAidCell = () => {
               </li>
             ))}
           </ol>
+
+          {/* My past submissions in sidebar */}
+          {history.length > 0 && (
+            <div style={{ marginTop: 28, borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 20 }}>
+              <p style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#e3c677', marginBottom: 10 }}>My Submissions</p>
+              {history.map((h) => {
+                const sm = STATUS_STYLE[h.status] || STATUS_STYLE.new;
+                return (
+                  <div key={h.id} style={{ marginBottom: 8, background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '8px 10px', border: '1px solid rgba(255,255,255,0.07)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 4 }}>
+                      <span style={{ fontFamily: 'monospace', fontSize: 11, fontWeight: 700, color: '#e3c677' }}>{h.case_ref}</span>
+                      <span style={{ fontSize: 10, fontWeight: 700, padding: '2px 7px', borderRadius: 999, color: sm.color, background: sm.bg, border: `1px solid ${sm.border}`, whiteSpace: 'nowrap' }}>{sm.label}</span>
+                    </div>
+                    <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', marginTop: 3 }}>{CATEGORY_LABELS[h.category] || h.category}</div>
+                    <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.3)', marginTop: 1 }}>{new Date(h.created_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })}</div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
           <div className="privacy">🔒 Your information is private and can only be seen by authorised support personnel.</div>
         </aside>
 
@@ -411,6 +471,76 @@ const LegalAidCell = () => {
 const Screen8 = ({ state, go, exitAssistance }) => {
   const [contactMethod, setContactMethod] = useState('phone');
   const [consent, setConsent] = useState(true);
+  const [mobile, setMobile] = useState('');
+  const [email, setEmail] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async () => {
+    if (!consent) {
+      setError('Please consent to proceed.');
+      return;
+    }
+    setSubmitting(true);
+    setError(null);
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      const { error: dbError } = await supabase.from('legal_aid_queries').insert({
+        case_ref: state.caseRef,
+        profile: state.profile,
+        service: state.service,
+        category: state.category,
+        situation: state.situation,
+        urgency: computeUrgency(state),
+        route: recommendRoute(state),
+        qa_summary: state.qa || {},
+        contact_method: contactMethod,
+        mobile: mobile || null,
+        email: email || null,
+        consent,
+        status: 'new',
+        user_id: user?.id || null,
+      });
+      if (dbError) throw dbError;
+      setSubmitted(true);
+    } catch (err) {
+      console.error('[LegalAidCell] Submission error:', err);
+      setError('Failed to submit your query. Please try again or contact support@veernxt.in');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  if (submitted) {
+    return (
+      <div className="content">
+        <div className="body" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
+          <div style={{ fontSize: 64, marginBottom: 16 }}>✅</div>
+          <p className="eyebrow" style={{ color: '#4b6b32', justifyContent: 'center', display: 'flex' }}>Request Submitted</p>
+          <h1 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>Your case has been registered.</h1>
+          <p className="intro" style={{ maxWidth: 480, margin: '0 auto 1.5rem' }}>
+            Your Case Reference is <strong>{state.caseRef}</strong>. A VeerNXT Legal Support Desk coordinator will reach out to you shortly via your preferred contact method.
+          </p>
+          <div style={{ background: '#f0f7ea', border: '1.5px solid #b6d9a0', borderRadius: 14, padding: '1.25rem 1.5rem', maxWidth: 400, margin: '0 auto 2rem', textAlign: 'left' }}>
+            <p style={{ margin: 0, fontSize: 13, color: '#2d5a27', fontWeight: 700, marginBottom: 6 }}>What happens next?</p>
+            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, color: '#3d6b33', lineHeight: 1.8 }}>
+              <li>Our coordinator reviews your case summary</li>
+              <li>They contact you via {contactMethod === 'phone' ? 'phone call' : 'WhatsApp'}</li>
+              <li>You're connected with the right legal professional</li>
+            </ul>
+          </div>
+          <p style={{ fontSize: 11, color: '#94a3b8', margin: '1rem auto 0', maxWidth: 400 }}>
+            🔒 Your information is private and shared only with authorised VeerNXT support personnel.
+          </p>
+        </div>
+        <div className="actions">
+          <span />
+          <button type="button" className="next" onClick={exitAssistance}>Done →</button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="content">
@@ -426,17 +556,79 @@ const Screen8 = ({ state, go, exitAssistance }) => {
             <span>◉</span><strong>Continue on WhatsApp</strong><small>Receive your case reference and secure instructions.</small>
           </button>
         </div>
-        <label className="field" style={{ marginTop: 22 }}>Mobile number<input defaultValue="+91 98••• ••432" /></label>
-        <label className="consent">
+        <div className="fields" style={{ marginTop: 22, gap: 12, display: 'flex', flexDirection: 'column' }}>
+          <label className="field">
+            Mobile number
+            <input
+              type="tel"
+              placeholder="+91 98765 43210"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+            />
+          </label>
+          <label className="field">
+            Email address <span style={{ fontWeight: 400, color: '#94a3b8', fontSize: 12 }}>(so we can send you case updates)</span>
+            <input
+              type="email"
+              placeholder="your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
+        </div>
+        <label className="consent" style={{ marginTop: 20 }}>
           <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
           I consent to VeerNXT contacting me and sharing this case summary only with authorised support personnel or the legal professional assigned to me.
         </label>
-        <button type="button" className="confirm" onClick={() => alert('This is a prototype. No callback request has been sent. Reference: ' + state.caseRef)}>Confirm callback request</button>
-        <p className="prototype">🔒 This is only a prototype. No request is sent and no personal information is saved.</p>
+        {error && (
+          <div className="notice" style={{ background: '#fff0f0', borderColor: '#f5c6cb', color: '#7b2230', marginTop: 12 }}>
+            {error}
+          </div>
+        )}
+        <button
+          type="button"
+          className="confirm"
+          onClick={handleSubmit}
+          disabled={submitting}
+          style={{ opacity: submitting ? 0.7 : 1, cursor: submitting ? 'not-allowed' : 'pointer' }}
+        >
+          {submitting ? 'Submitting...' : 'Confirm callback request'}
+        </button>
+        <p className="prototype">🔒 Your information is encrypted and only accessible to authorised VeerNXT support personnel.</p>
       </div>
       <div className="actions">
         <button type="button" className="back" onClick={() => go(7)}>← Back</button>
-        <button type="button" className="next" onClick={exitAssistance}>Finish</button>
+        <span />
+      </div>
+    </div>
+  );
+};
+/* ────────────────────────────────────────────────────────────
+   MyHistory — mobile-only banner shown above the step panel
+   (Sidebar version is rendered inline in the aside for desktop)
+──────────────────────────────────────────────────────────── */
+const MyHistory = ({ entries, loading }) => {
+  if (loading) return null;
+  if (!entries || entries.length === 0) return null;
+
+  return (
+    <div style={{
+      display: 'none', /* hidden on desktop — sidebar handles it */
+    }} className="my-history-mobile">
+      <div style={{ padding: '12px 16px', background: 'rgba(255,255,255,0.04)', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+        <p style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#e3c677', margin: '0 0 8px' }}>My Previous Queries</p>
+        <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
+          {entries.map((h) => {
+            const sm = STATUS_STYLE[h.status] || STATUS_STYLE.new;
+            return (
+              <div key={h.id} style={{ flexShrink: 0, background: 'rgba(255,255,255,0.05)', borderRadius: 8, padding: '6px 10px', border: '1px solid rgba(255,255,255,0.08)', minWidth: 140 }}>
+                <div style={{ fontFamily: 'monospace', fontSize: 11, fontWeight: 700, color: '#e3c677', marginBottom: 2 }}>{h.case_ref}</div>
+                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.5)', marginBottom: 4 }}>{CATEGORY_LABELS[h.category] || h.category}</div>
+                <span style={{ fontSize: 9, fontWeight: 700, padding: '2px 6px', borderRadius: 999, color: sm.color, background: sm.bg, border: `1px solid ${sm.border}` }}>{sm.label}</span>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

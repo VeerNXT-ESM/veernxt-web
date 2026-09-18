@@ -1,26 +1,24 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { Award, Briefcase, MessageSquare, Plus, RefreshCw, ShieldCheck, User, Users } from 'lucide-react';
+import { 
+  Award, Briefcase, MessageSquare, Plus, RefreshCw, ShieldCheck, 
+  User, Users, Phone, Mail, CheckCircle2, Clock, ChevronRight,
+  Unlock, Lock, Sparkles, Filter, ExternalLink
+} from 'lucide-react';
 import Button from '../components/ui/Button';
 import { hexToRgba } from '../lib/careerTrack';
 
-// Friendly, employer-facing status labels — the stored enum
-// (ps_job_requirements.status) stays internal/precise; candidates and
-// employers see the plain-language version per
-// docs/VeerNXT_Private_Sector_Implementation_Improvements.md §16.
+// Friendly, employer-facing status labels
 const REQUIREMENT_STATUS_LABEL = {
   submitted: 'Under Review',
   under_review: 'Under Review',
-  approved: 'Matching',
+  approved: 'Matching Active',
   rejected: 'Not Approved',
   filled: 'Filled',
   closed: 'Closed',
 };
 
-// Military branch -> tag colour, for the Veteran Talent Spotlight list.
-// Deliberately separate from careerTrack.js's CAREER_TRACK_META (that's
-// civilian job-sector tags for the Job Board; these are service branches).
 const BRANCH_TAG = {
   'Indian Army': '#15803d',
   'Indian Navy': '#1d4ed8',
@@ -55,6 +53,11 @@ const EmployerDashboard = () => {
   const [spotlightCandidates, setSpotlightCandidates] = useState([]);
   const [requirements, setRequirements] = useState([]);
 
+  // Recruiter pipeline requests state
+  const [pipelineRequests, setPipelineRequests] = useState([]);
+  const [pipelineFilter, setPipelineFilter] = useState('all');
+  const [pipelineActionLoading, setPipelineActionLoading] = useState({});
+
   const [showEditModal, setShowEditModal] = useState(false);
   const [editFormData, setEditFormData] = useState({});
   const [avatarUploading, setAvatarUploading] = useState(false);
@@ -82,9 +85,28 @@ const EmployerDashboard = () => {
         setConnectionsCount(cCount || 0);
         setActivePostingsCount(jCount || 0);
 
+        // Fetch requirements
         const { data: requirementRows } = await supabase
-          .from('ps_job_requirements').select('id, role_titles, quantity, status').eq('employer_id', currentSession.user.id).order('created_at', { ascending: false });
+          .from('ps_job_requirements').select('id, role_titles, sector, tags, quantity, status, created_at').eq('employer_id', currentSession.user.id).order('created_at', { ascending: false });
         setRequirements(requirementRows || []);
+
+        // Fetch recruiter pipeline requests
+        try {
+          const res = await fetch('/api/private-sector/router', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${currentSession.access_token}`
+            },
+            body: JSON.stringify({ action: 'get_recruiter_requests' })
+          });
+          const reqData = await res.json();
+          if (reqData.ok) {
+            setPipelineRequests(reqData.requests || []);
+          }
+        } catch (e) {
+          console.warn('Failed to load pipeline requests:', e);
+        }
 
         const { data: sentMsgs } = await supabase.from('chat_messages').select('receiver_id').eq('sender_id', currentSession.user.id);
         setShortlistedCount(new Set((sentMsgs || []).map((m) => m.receiver_id).filter(Boolean)).size);
@@ -120,6 +142,24 @@ const EmployerDashboard = () => {
       }
     })();
   }, [navigate]);
+
+  const handleUpdatePipelineStatus = async (requestId, newStatus) => {
+    setPipelineActionLoading(prev => ({ ...prev, [requestId]: true }));
+    try {
+      const { error } = await supabase
+        .from('ps_recruiter_requests')
+        .update({ status: newStatus, updated_at: new Date().toISOString() })
+        .eq('id', requestId);
+
+      if (error) throw error;
+
+      setPipelineRequests(prev => prev.map(r => r.id === requestId ? { ...r, status: newStatus } : r));
+    } catch (err) {
+      alert('Error updating status: ' + err.message);
+    } finally {
+      setPipelineActionLoading(prev => ({ ...prev, [requestId]: false }));
+    }
+  };
 
   const handleOpenEditModal = () => {
     if (!profile) return;
@@ -189,22 +229,36 @@ const EmployerDashboard = () => {
   const designation = profile?.designation || 'TA Lead';
   const candidatesToRender = spotlightCandidates.length > 0 ? spotlightCandidates : FALLBACK_SPOTLIGHT;
 
+  // Filter pipeline requests
+  const filteredPipeline = pipelineRequests.filter(r => {
+    if (pipelineFilter === 'all') return true;
+    if (pipelineFilter === 'pending') return r.status === 'interest_sent';
+    if (pipelineFilter === 'unlocked') return ['accepted', 'interview', 'hired'].includes(r.status);
+    if (pipelineFilter === 'interview') return r.status === 'interview';
+    if (pipelineFilter === 'hired') return r.status === 'hired';
+    return true;
+  });
+
+  const unlockedCount = pipelineRequests.filter(r => ['accepted', 'interview', 'hired'].includes(r.status)).length;
+  const pendingCount = pipelineRequests.filter(r => r.status === 'interest_sent').length;
+
   return (
     <div className="dashboard-wrapper">
       <div className="dashboard-content animate-fade-in">
+        {/* Recruiter Hero Header */}
         <div className="emp-hero animate-fade-in">
           <div className="emp-hero-row">
             <div className="emp-avatar">
               {profile?.avatar_url ? <img src={profile.avatar_url} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : <User size={38} color="white" />}
             </div>
             <div className="emp-identity">
-              <span className="emp-eyebrow">Recruiter Portal</span>
+              <span className="emp-eyebrow">Recruiter & Corporate Talent Portal</span>
               <h1 className="emp-name">{repName}</h1>
               <span className="emp-subtitle">{designation} at <strong>{companyName}</strong></span>
             </div>
             <div className="emp-actions">
               <Link to="/find-candidates" className="btn-secondary ios-pill" style={{ textDecoration: 'none', background: 'white', color: '#1F3A2E', fontWeight: 700, padding: '0.65rem 1.25rem' }}>
-                Search Talent
+                Search Military Talent
               </Link>
               <Button variant="ghost" onClick={handleOpenEditModal} style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }}>
                 Edit Profile
@@ -217,31 +271,223 @@ const EmployerDashboard = () => {
 
           <div className="emp-stat-row">
             <div className="emp-stat">
-              <span className="emp-stat-value">{activePostingsCount}</span>
-              <span className="emp-stat-label"><Briefcase size={11} /> Active Postings</span>
+              <span className="emp-stat-value">{requirements.length}</span>
+              <span className="emp-stat-label"><Briefcase size={11} /> Requirements</span>
             </div>
             <div className="emp-stat">
-              <span className="emp-stat-value">{shortlistedCount}</span>
-              <span className="emp-stat-label"><Users size={11} /> Shortlisted</span>
+              <span className="emp-stat-value">{pipelineRequests.length}</span>
+              <span className="emp-stat-label"><Users size={11} /> Requests Sent</span>
+            </div>
+            <div className="emp-stat">
+              <span className="emp-stat-value" style={{ color: '#86efac' }}>{unlockedCount}</span>
+              <span className="emp-stat-label"><Unlock size={11} /> Unlocked Profiles</span>
             </div>
             <div className="emp-stat">
               <span className="emp-stat-value">{activeChatsCount}</span>
               <span className="emp-stat-label"><MessageSquare size={11} /> Active Chats</span>
             </div>
             <div className="emp-stat">
-              <Link to="/network" className="emp-stat-value" style={{ color: '#fff', textDecoration: 'none' }}>{connectionsCount}</Link>
-              <span className="emp-stat-label"><Users size={11} /> Network</span>
-            </div>
-            <div className="emp-stat">
               <span className="emp-stat-value" style={{ fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}><Award size={16} /> Verified</span>
-              <span className="emp-stat-label"><ShieldCheck size={11} /> Trust Status</span>
+              <span className="emp-stat-label"><ShieldCheck size={11} /> Fair Hiring Partner</span>
             </div>
           </div>
         </div>
 
+        {/* Recruiter Talent Pipeline & Introductions Section */}
         <div className="ios-card" style={{ padding: '2rem', background: 'white', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)', marginBottom: '1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
-            <h2 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>Active Requirements</h2>
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Sparkles size={18} color="var(--ios-olive)" />
+                <h2 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
+                  Candidate Pipeline & Introductions
+                </h2>
+              </div>
+              <p style={{ color: '#64748b', fontSize: '0.86rem', margin: '0.2rem 0 0' }}>
+                Veterans you have invited for introductions. Contact details unlock immediately upon candidate acceptance.
+              </p>
+            </div>
+
+            {/* Pipeline status filter tabs */}
+            <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
+              {[
+                { id: 'all', label: `All (${pipelineRequests.length})` },
+                { id: 'pending', label: `Pending Consent (${pendingCount})` },
+                { id: 'unlocked', label: `Unlocked / Accepted (${unlockedCount})` },
+                { id: 'interview', label: 'Interviewing' },
+                { id: 'hired', label: 'Hired' },
+              ].map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => setPipelineFilter(tab.id)}
+                  style={{
+                    padding: '0.35rem 0.75rem',
+                    borderRadius: '999px',
+                    fontSize: '0.78rem',
+                    fontWeight: 700,
+                    border: pipelineFilter === tab.id ? '1.5px solid var(--ios-olive)' : '1px solid #e2e8f0',
+                    background: pipelineFilter === tab.id ? 'rgba(75, 107, 50, 0.1)' : '#f8fafc',
+                    color: pipelineFilter === tab.id ? 'var(--ios-olive)' : '#475569',
+                    cursor: 'pointer'
+                  }}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {pipelineRequests.length === 0 ? (
+            <div style={{ textAlign: 'center', padding: '2.5rem 1rem', background: '#f8fafc', borderRadius: '16px', border: '1px dashed #cbd5e1' }}>
+              <Users size={32} color="#94a3b8" style={{ margin: '0 auto 0.5rem' }} />
+              <h4 style={{ margin: '0 0 0.35rem', color: '#0f172a' }}>Your Talent Pipeline is Empty</h4>
+              <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '0 0 1rem', maxWidth: '480px', marginLeft: 'auto', marginRight: 'auto' }}>
+                Search through verified military profiles and send introduction requests. Candidates will be notified on WhatsApp.
+              </p>
+              <Button size="sm" onClick={() => navigate('/find-candidates')}>Search Candidate Profiles</Button>
+            </div>
+          ) : filteredPipeline.length === 0 ? (
+            <div style={{ textAlign: 'center', padding: '2rem', color: '#64748b', fontSize: '0.88rem' }}>
+              No candidate requests in the "{pipelineFilter}" tab.
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+              {filteredPipeline.map(item => {
+                const c = item.candidate || {};
+                const isUnlocked = c.is_unlocked || ['accepted', 'interview', 'hired'].includes(item.status);
+                const reqTitle = (item.ps_job_requirements?.role_titles || []).join(' / ') || 'General Role';
+
+                return (
+                  <div 
+                    key={item.id}
+                    style={{
+                      background: isUnlocked ? '#fcfdfa' : '#ffffff',
+                      border: isUnlocked ? '1.5px solid #cce5c4' : '1px solid #e2e8f0',
+                      borderRadius: '16px',
+                      padding: '1.15rem 1.35rem',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      flexWrap: 'wrap',
+                      gap: '1rem'
+                    }}
+                  >
+                    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                      <div style={{
+                        width: '44px',
+                        height: '44px',
+                        borderRadius: '12px',
+                        background: isUnlocked ? '#eef4ea' : '#f1f5f9',
+                        color: isUnlocked ? '#2d5a27' : '#64748b',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontWeight: 800,
+                        fontSize: '0.95rem'
+                      }}>
+                        {isUnlocked ? (c.name || 'VN').slice(0, 2).toUpperCase() : (c.maskedCode || 'VN').slice(3)}
+                      </div>
+
+                      <div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                          <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 800, color: '#0f172a' }}>
+                            {c.name || `Candidate ${c.maskedCode}`}
+                          </h4>
+                          {isUnlocked ? (
+                            <span style={{ fontSize: '0.72rem', background: '#dcfce7', color: '#15803d', padding: '0.15rem 0.5rem', borderRadius: '999px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                              <Unlock size={11} /> Contact Unlocked
+                            </span>
+                          ) : (
+                            <span style={{ fontSize: '0.72rem', background: '#fef3c7', color: '#92400e', padding: '0.15rem 0.5rem', borderRadius: '999px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                              <Clock size={11} /> Awaiting Veteran Consent
+                            </span>
+                          )}
+                          {item.fit_score && (
+                            <span style={{ fontSize: '0.72rem', background: '#eef4ea', color: '#2d5a27', padding: '0.15rem 0.5rem', borderRadius: '999px', fontWeight: 800 }}>
+                              {item.fit_score}% Fit
+                            </span>
+                          )}
+                        </div>
+
+                        <p style={{ margin: '0.2rem 0 0', fontSize: '0.82rem', color: '#475569' }}>
+                          Role: <strong>{reqTitle}</strong> • {c.service || 'Armed Forces'} • {c.rank || 'Veteran'} ({c.trade || 'Specialist'})
+                        </p>
+
+                        {/* Unmasked Contact info */}
+                        {isUnlocked && (c.mobile || c.email) && (
+                          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '0.4rem', fontSize: '0.82rem', color: '#15803d' }}>
+                            {c.mobile && (
+                              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', fontWeight: 700 }}>
+                                <Phone size={13} /> {c.mobile}
+                              </span>
+                            )}
+                            {c.email && (
+                              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', fontWeight: 600 }}>
+                                <Mail size={13} /> {c.email}
+                              </span>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Pipeline Actions */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+                      {isUnlocked ? (
+                        <>
+                          {c.mobile && (
+                            <a
+                              href={`tel:${c.mobile}`}
+                              className="btn-primary"
+                              style={{ textDecoration: 'none', padding: '0.45rem 0.85rem', fontSize: '0.8rem', borderRadius: '8px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}
+                            >
+                              <Phone size={13} /> Call
+                            </a>
+                          )}
+                          {item.status !== 'interview' && item.status !== 'hired' && (
+                            <Button 
+                              size="sm" 
+                              variant="secondary"
+                              onClick={() => handleUpdatePipelineStatus(item.id, 'interview')}
+                              disabled={pipelineActionLoading[item.id]}
+                              style={{ fontSize: '0.8rem', fontWeight: 700 }}
+                            >
+                              Advance to Interview
+                            </Button>
+                          )}
+                          {item.status !== 'hired' && (
+                            <Button 
+                              size="sm"
+                              onClick={() => handleUpdatePipelineStatus(item.id, 'hired')}
+                              disabled={pipelineActionLoading[item.id]}
+                              style={{ fontSize: '0.8rem', fontWeight: 700, background: '#15803d' }}
+                            >
+                              Mark as Hired
+                            </Button>
+                          )}
+                          {item.status === 'hired' && (
+                            <span style={{ fontSize: '0.82rem', fontWeight: 800, color: '#15803d', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                              <CheckCircle2 size={16} /> Hired via VeerNXT
+                            </span>
+                          )}
+                        </>
+                      ) : (
+                        <span style={{ fontSize: '0.78rem', color: '#64748b' }}>
+                          Notified via WhatsApp
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+
+        {/* Active Requirements Card */}
+        <div className="ios-card" style={{ padding: '2rem', background: 'white', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)', marginBottom: '1.5rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
+            <h2 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>Active Job Requirements</h2>
             <Button size="sm" icon={Plus} onClick={() => navigate('/employer/post-job')}>Post Another Job</Button>
           </div>
           {requirements.length === 0 ? (
@@ -251,20 +497,56 @@ const EmployerDashboard = () => {
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
                 <thead>
                   <tr style={{ textAlign: 'left', color: '#64748b', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.03em' }}>
-                    <th style={{ padding: '0.5rem 0.75rem 0.5rem 0' }}>Role</th>
+                    <th style={{ padding: '0.5rem 0.75rem 0.5rem 0' }}>Role & Sector</th>
+                    <th style={{ padding: '0.5rem 0.75rem' }}>Tags</th>
                     <th style={{ padding: '0.5rem 0.75rem', textAlign: 'right' }}>Positions</th>
-                    <th style={{ padding: '0.5rem 0 0.5rem 0.75rem' }}>Status</th>
+                    <th style={{ padding: '0.5rem 0.75rem', textAlign: 'center' }}>Status</th>
+                    <th style={{ padding: '0.5rem 0 0.5rem 0.75rem', textAlign: 'right' }}>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   {requirements.map((r) => (
                     <tr key={r.id} style={{ borderTop: '1px solid #f1f5f9' }}>
-                      <td style={{ padding: '0.65rem 0.75rem 0.65rem 0', fontWeight: 700, color: '#0f172a' }}>{(r.role_titles || []).join(' / ')}</td>
-                      <td style={{ padding: '0.65rem 0.75rem', textAlign: 'right' }}>{r.quantity}</td>
-                      <td style={{ padding: '0.65rem 0 0.65rem 0.75rem' }}>
+                      <td style={{ padding: '0.65rem 0.75rem 0.65rem 0', color: '#0f172a' }}>
+                        <div style={{ fontWeight: 700 }}>{Array.isArray(r.role_titles) ? r.role_titles.map(rt => typeof rt === 'string' ? rt : (rt?.title || '')).filter(Boolean).join(' / ') : (typeof r.role_titles === 'string' ? r.role_titles : 'Role')}</div>
+                        {r.sector && typeof r.sector === 'string' && (
+                          <div style={{ fontSize: '0.75rem', color: 'var(--ios-olive)', fontWeight: 600, marginTop: '0.15rem' }}>
+                            {r.sector}
+                          </div>
+                        )}
+                      </td>
+                      <td style={{ padding: '0.65rem 0.75rem' }}>
+                        {Array.isArray(r.tags) && r.tags.length > 0 ? (
+                          <div style={{ display: 'flex', gap: '0.25rem', flexWrap: 'wrap' }}>
+                            {r.tags.slice(0, 3).map((t, tIdx) => {
+                              const label = typeof t === 'string' ? t : (t?.label || t?.name || '');
+                              return label ? (
+                                <span key={tIdx} style={{ fontSize: '0.7rem', background: '#f1f5f9', border: '1px solid #e2e8f0', padding: '0.15rem 0.4rem', borderRadius: '4px', color: '#475569' }}>
+                                  #{label}
+                                </span>
+                              ) : null;
+                            })}
+                            {r.tags.length > 3 && <span style={{ fontSize: '0.7rem', color: '#94a3b8' }}>+{r.tags.length - 3}</span>}
+                          </div>
+                        ) : (
+                          <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>—</span>
+                        )}
+                      </td>
+                      <td style={{ padding: '0.65rem 0.75rem', textAlign: 'right', fontWeight: 600 }}>{r.quantity}</td>
+                      <td style={{ padding: '0.65rem 0.75rem', textAlign: 'center' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, padding: '0.2rem 0.6rem', borderRadius: 999, background: 'rgba(75,107,50,0.1)', color: 'var(--ios-olive)' }}>
                           {REQUIREMENT_STATUS_LABEL[r.status] || r.status}
                         </span>
+                      </td>
+                      <td style={{ padding: '0.65rem 0 0.65rem 0.75rem', textAlign: 'right' }}>
+                        <Button 
+                          size="sm" 
+                          variant="secondary"
+                          onClick={() => navigate(`/find-candidates?requirementId=${r.id}`)}
+                          style={{ fontSize: '0.78rem', padding: '0.25rem 0.6rem' }}
+                        >
+                          Find Matches →
+                        </Button>
                       </td>
                     </tr>
                   ))}
@@ -274,6 +556,7 @@ const EmployerDashboard = () => {
           )}
         </div>
 
+        {/* Veteran Talent Spotlight Card */}
         <div className="ios-card" style={{ padding: '2rem', background: 'white', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '0.75rem' }}>
             <div style={{ textAlign: 'left' }}>
