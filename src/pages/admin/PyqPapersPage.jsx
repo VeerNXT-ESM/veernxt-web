@@ -45,7 +45,11 @@ const PyqPapersPage = () => {
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search, 300);
   const [levelFilter, setLevelFilter] = useState('');
-  const [stateUtFilter, setStateUtFilter] = useState('');
+  // Separate State and UT filters, always visible (not gated behind
+  // Level) -- same split ExamsPage.jsx's own State/UT filter uses.
+  const [stateFilter, setStateFilter] = useState('');
+  const [utFilter, setUtFilter] = useState('');
+  const stateUtFilter = stateFilter || utFilter;
   const [papers, setPapers] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
   const [page, setPage] = useState(1);
@@ -217,24 +221,34 @@ const PyqPapersPage = () => {
         </div>
         <div className="lc-filter-field">
           <label>Level</label>
-          <select value={levelFilter} onChange={(e) => { setLevelFilter(e.target.value); setStateUtFilter(''); }} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
+          <select value={levelFilter} onChange={(e) => { setLevelFilter(e.target.value); setStateFilter(''); setUtFilter(''); }} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
             {LEVEL_FILTER_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         </div>
-        {(levelFilter === 'state' || levelFilter === 'ut') && (
-          <div className="lc-filter-field">
-            <label>{levelFilter === 'state' ? 'State' : 'UT'}</label>
-            <div style={{ minWidth: 170 }}>
-              <Select
-                searchable
-                value={stateUtFilter}
-                onChange={(e) => setStateUtFilter(e.target.value)}
-                placeholder={`All ${levelFilter === 'state' ? 'States' : 'UTs'}`}
-                options={[{ value: '', label: `All ${levelFilter === 'state' ? 'States' : 'UTs'}` }, ...regions.filter((r) => r.level === levelFilter).map((r) => ({ value: r.name, label: r.name }))]}
-              />
-            </div>
+        <div className="lc-filter-field">
+          <label>State</label>
+          <div style={{ minWidth: 150 }}>
+            <Select
+              searchable
+              value={stateFilter}
+              onChange={(e) => { setStateFilter(e.target.value); setUtFilter(''); if (e.target.value) setLevelFilter('state'); }}
+              placeholder="All States"
+              options={[{ value: '', label: 'All States' }, ...regions.filter((r) => r.level === 'state').map((r) => ({ value: r.name, label: r.name }))]}
+            />
           </div>
-        )}
+        </div>
+        <div className="lc-filter-field">
+          <label>UT</label>
+          <div style={{ minWidth: 150 }}>
+            <Select
+              searchable
+              value={utFilter}
+              onChange={(e) => { setUtFilter(e.target.value); setStateFilter(''); if (e.target.value) setLevelFilter('ut'); }}
+              placeholder="All UTs"
+              options={[{ value: '', label: 'All UTs' }, ...regions.filter((r) => r.level === 'ut').map((r) => ({ value: r.name, label: r.name }))]}
+            />
+          </div>
+        </div>
       </div>
 
       {selectedIds.length > 0 && (

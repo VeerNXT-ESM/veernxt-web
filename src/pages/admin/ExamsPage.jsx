@@ -36,7 +36,15 @@ const ExamsPage = () => {
   const [level, setLevel] = useState('central');
   const [category, setCategory] = useState('');
   const [bodyId, setBodyId] = useState('');
-  const [regionId, setRegionId] = useState('');
+  // Separate State and UT pickers -- not one dropdown that only appears
+  // once Level is narrowed, so an admin can jump straight to a specific
+  // state or UT without a Level click first. Picking one sets `level` to
+  // match and clears the other (a region is either a state or a UT, never
+  // both); picking Level directly clears both back to "any region at that
+  // level".
+  const [stateId, setStateId] = useState('');
+  const [utId, setUtId] = useState('');
+  const regionId = stateId || utId;
 
   // Whole lc_exams catalog, fetched once — Category/Conducting Body options
   // are derived from it client-side, cascaded to whichever Level/Category
@@ -70,10 +78,8 @@ const ExamsPage = () => {
 
   const levelExams = useMemo(() => catalog.filter((exam) => exam.region?.level === level), [catalog, level]);
 
-  // State/UT filter only makes sense once Level narrows to 'state' or 'ut' —
-  // Central has exactly one fixed region, same reasoning ExamEditorPanel.jsx
-  // uses to hide its own State/UT field for Central-level exams.
-  const regionOptions = useMemo(() => regions.filter((r) => r.level === level), [regions, level]);
+  const stateOptions = useMemo(() => regions.filter((r) => r.level === 'state'), [regions]);
+  const utOptions = useMemo(() => regions.filter((r) => r.level === 'ut'), [regions]);
 
   const categoryOptions = useMemo(() => {
     const seen = new Set();
@@ -105,7 +111,7 @@ const ExamsPage = () => {
   const [selectedExamId, setSelectedExamId] = useState(searchParams.get('exam') || null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
 
-  useEffect(() => { setPage(1); }, [debouncedSearch, bodyId, category, level, regionId]);
+  useEffect(() => { setPage(1); }, [debouncedSearch, bodyId, category, level, stateId, utId]);
 
   // Same out-of-order-response guard used elsewhere in this CMS.
   const requestIdRef = useRef(0);
@@ -156,8 +162,10 @@ const ExamsPage = () => {
     setSearchParams({}, { replace: true });
   };
 
-  const chooseLevel = (v) => { setLevel(v); setCategory(''); setBodyId(''); setRegionId(''); };
+  const chooseLevel = (v) => { setLevel(v); setCategory(''); setBodyId(''); setStateId(''); setUtId(''); };
   const chooseCategory = (v) => { setCategory(v); setBodyId(''); };
+  const pickState = (id) => { setStateId(id); setUtId(''); if (id) setLevel('state'); };
+  const pickUt = (id) => { setUtId(id); setStateId(''); if (id) setLevel('ut'); };
 
   return (
     <div>
@@ -181,18 +189,26 @@ const ExamsPage = () => {
           <label>Level</label>
           <Select value={level} onChange={(e) => chooseLevel(e.target.value)} options={LEVELS} />
         </div>
-        {level !== 'central' && (
-          <div className="lc-filter-field">
-            <label>{level === 'state' ? 'State' : 'UT'}</label>
-            <Select
-              searchable
-              placeholder={`All ${level === 'state' ? 'States' : 'UTs'}`}
-              value={regionId}
-              onChange={(e) => setRegionId(e.target.value)}
-              options={[{ value: '', label: `All ${level === 'state' ? 'States' : 'UTs'}` }, ...regionOptions.map((r) => ({ value: r.id, label: r.name }))]}
-            />
-          </div>
-        )}
+        <div className="lc-filter-field">
+          <label>State</label>
+          <Select
+            searchable
+            placeholder="All States"
+            value={stateId}
+            onChange={(e) => pickState(e.target.value)}
+            options={[{ value: '', label: 'All States' }, ...stateOptions.map((r) => ({ value: r.id, label: r.name }))]}
+          />
+        </div>
+        <div className="lc-filter-field">
+          <label>UT</label>
+          <Select
+            searchable
+            placeholder="All UTs"
+            value={utId}
+            onChange={(e) => pickUt(e.target.value)}
+            options={[{ value: '', label: 'All UTs' }, ...utOptions.map((r) => ({ value: r.id, label: r.name }))]}
+          />
+        </div>
         <button className="lc-btn primary" onClick={startNewExam}><Plus size={16} /> Add Exam</button>
       </div>
 

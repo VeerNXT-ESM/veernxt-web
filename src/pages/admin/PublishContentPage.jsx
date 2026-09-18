@@ -76,8 +76,13 @@ const PublishContentPage = () => {
 
   const [level, setLevel] = useState('central');
   const [regions, setRegions] = useState([]);
-  const [regionId, setRegionId] = useState('');
-  const [examCategory, setExamCategory] = useState(''); // lc_exams.category -- Banking/Agriculture/Police/etc, same ~21 values ExamsPage.jsx's own filter uses
+  // Separate State and UT pickers, always visible (not gated behind Level)
+  // -- same split ExamsPage.jsx's own State/UT filter uses. Picking one
+  // sets `level` to match and clears the other.
+  const [stateId, setStateId] = useState('');
+  const [utId, setUtId] = useState('');
+  const regionId = stateId || utId;
+  const [examCategory, setExamCategory] = useState(''); // lc_exams.category -- canonical taxonomy, same values ExamsPage.jsx's own filter uses
   const [allExamsInScope, setAllExamsInScope] = useState([]); // every exam matching level(+region) -- the actual dropdown list
   const [loadingExams, setLoadingExams] = useState(false);
   const [examQuery, setExamQuery] = useState(''); // multi-select mode only: client-side filter over allExamsInScope
@@ -93,7 +98,11 @@ const PublishContentPage = () => {
   // -- distinct from the exam Level/Region/Category fields above, which pick
   // exam(s) to link a NEW upload to, not which existing book to replace.
   const [replaceLevelFilter, setReplaceLevelFilter] = useState('');
-  const [replaceStateUtFilter, setReplaceStateUtFilter] = useState('');
+  // Separate State and UT filters, always visible (not gated behind
+  // Level) -- same split ExamsPage.jsx's own State/UT filter uses.
+  const [replaceStateFilter, setReplaceStateFilter] = useState('');
+  const [replaceUtFilter, setReplaceUtFilter] = useState('');
+  const replaceStateUtFilter = replaceStateFilter || replaceUtFilter;
 
   const [publishing, setPublishing] = useState(false);
   const [publishError, setPublishError] = useState(null);
@@ -101,7 +110,8 @@ const PublishContentPage = () => {
   const [published, setPublished] = useState(null); // { resourceId, examNames, replacedTitle, isReplace }
 
   const oversized = file && file.size > VERCEL_SAFE_BYTES;
-  const regionOptions = regions.filter((r) => r.level === level);
+  const stateOptions = regions.filter((r) => r.level === 'state');
+  const utOptions = regions.filter((r) => r.level === 'ut');
 
   useEffect(() => {
     (async () => {
@@ -137,7 +147,8 @@ const PublishContentPage = () => {
     setExistingBooksToReplace([]);
     setSelectedBookToReplace(null);
     setReplaceLevelFilter('');
-    setReplaceStateUtFilter('');
+    setReplaceStateFilter('');
+    setReplaceUtFilter('');
     setExamQuery('');
     setPublished(null);
     setPublishError(null);
@@ -153,10 +164,13 @@ const PublishContentPage = () => {
 
   const handleLevelChange = (e) => {
     setLevel(e.target.value);
-    setRegionId('');
+    setStateId('');
+    setUtId('');
     setExamCategory('');
     setExamQuery('');
   };
+  const pickState = (id) => { setStateId(id); setUtId(''); if (id) setLevel('state'); };
+  const pickUt = (id) => { setUtId(id); setStateId(''); if (id) setLevel('ut'); };
 
   const fetchExistingBooksForCategory = async (cat, preselectResourceId) => {
     if (!cat) {
@@ -315,7 +329,8 @@ const PublishContentPage = () => {
     if (replaceStateUtFilter && b.stateUt !== replaceStateUtFilter) return false;
     return true;
   });
-  const replaceRegionOptions = regions.filter((r) => r.level === replaceLevelFilter);
+  const replaceStateOptions = regions.filter((r) => r.level === 'state');
+  const replaceUtOptions = regions.filter((r) => r.level === 'ut');
 
   const fetchExistingIntro = async (examId) => {
     const [{ data: introRows }, { data: mapRows }] = await Promise.all([
@@ -692,22 +707,29 @@ const PublishContentPage = () => {
                       <div style={{ minWidth: 140 }}>
                         <Select
                           value={replaceLevelFilter}
-                          onChange={(e) => { setReplaceLevelFilter(e.target.value); setReplaceStateUtFilter(''); }}
+                          onChange={(e) => { setReplaceLevelFilter(e.target.value); setReplaceStateFilter(''); setReplaceUtFilter(''); }}
                           placeholder="All Levels"
                           options={[{ value: '', label: 'All Levels' }, ...LEVELS]}
                         />
                       </div>
-                      {(replaceLevelFilter === 'state' || replaceLevelFilter === 'ut') && (
-                        <div style={{ minWidth: 190 }}>
-                          <Select
-                            searchable
-                            value={replaceStateUtFilter}
-                            onChange={(e) => setReplaceStateUtFilter(e.target.value)}
-                            placeholder={`All ${replaceLevelFilter === 'state' ? 'States' : 'UTs'}`}
-                            options={[{ value: '', label: `All ${replaceLevelFilter === 'state' ? 'States' : 'UTs'}` }, ...replaceRegionOptions.map((r) => ({ value: r.name, label: r.name }))]}
-                          />
-                        </div>
-                      )}
+                      <div style={{ minWidth: 170 }}>
+                        <Select
+                          searchable
+                          value={replaceStateFilter}
+                          onChange={(e) => { setReplaceStateFilter(e.target.value); setReplaceUtFilter(''); if (e.target.value) setReplaceLevelFilter('state'); }}
+                          placeholder="All States"
+                          options={[{ value: '', label: 'All States' }, ...replaceStateOptions.map((r) => ({ value: r.name, label: r.name }))]}
+                        />
+                      </div>
+                      <div style={{ minWidth: 170 }}>
+                        <Select
+                          searchable
+                          value={replaceUtFilter}
+                          onChange={(e) => { setReplaceUtFilter(e.target.value); setReplaceStateFilter(''); if (e.target.value) setReplaceLevelFilter('ut'); }}
+                          placeholder="All UTs"
+                          options={[{ value: '', label: 'All UTs' }, ...replaceUtOptions.map((r) => ({ value: r.name, label: r.name }))]}
+                        />
+                      </div>
                     </div>
                     <Select
                       searchable
@@ -731,17 +753,24 @@ const PublishContentPage = () => {
                   <div style={{ minWidth: 140 }}>
                     <Select value={level} onChange={handleLevelChange} options={LEVELS} />
                   </div>
-                  {level !== 'central' && (
-                    <div style={{ minWidth: 200 }}>
-                      <Select
-                        value={regionId}
-                        onChange={(e) => setRegionId(e.target.value)}
-                        searchable
-                        placeholder={`All ${level === 'state' ? 'States' : 'UTs'}`}
-                        options={[{ value: '', label: `All ${level === 'state' ? 'States' : 'UTs'}` }, ...regionOptions.map((r) => ({ value: r.id, label: r.name }))]}
-                      />
-                    </div>
-                  )}
+                  <div style={{ minWidth: 180 }}>
+                    <Select
+                      value={stateId}
+                      onChange={(e) => pickState(e.target.value)}
+                      searchable
+                      placeholder="All States"
+                      options={[{ value: '', label: 'All States' }, ...stateOptions.map((r) => ({ value: r.id, label: r.name }))]}
+                    />
+                  </div>
+                  <div style={{ minWidth: 180 }}>
+                    <Select
+                      value={utId}
+                      onChange={(e) => pickUt(e.target.value)}
+                      searchable
+                      placeholder="All UTs"
+                      options={[{ value: '', label: 'All UTs' }, ...utOptions.map((r) => ({ value: r.id, label: r.name }))]}
+                    />
+                  </div>
                   <div style={{ minWidth: 190 }}>
                     <Select
                       searchable

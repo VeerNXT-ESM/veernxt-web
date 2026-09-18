@@ -29,7 +29,11 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   const [search, setSearch] = useState('');
   const [level, setLevel] = useState('');
   const [examCategory, setExamCategory] = useState('');
-  const [examRegion, setExamRegion] = useState(''); // region name -- only meaningful once level is 'state' or 'ut', same cascade ExamsPage.jsx's own State/UT field uses
+  // Separate State and UT pickers, always visible (not gated behind the
+  // Level pills) -- same reasoning ExamsPage.jsx's own State/UT split uses.
+  // Picking one sets `level` to match and clears the other.
+  const [examState, setExamState] = useState('');
+  const [examUt, setExamUt] = useState('');
   const [allExams, setAllExams] = useState([]);
   const [loading, setLoading] = useState(true);
   const [existingExamIds, setExistingExamIds] = useState([]);
@@ -74,12 +78,18 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
 
   // State/UT names -- derived from the same preloaded exams list rather than
   // a separate lc_regions fetch, since every region in play already shows up
-  // on at least one exam here.
-  const regionOptions = useMemo(() => {
-    if (level !== 'state' && level !== 'ut') return [];
-    const pool = allExams.filter((e) => e.region?.level === level);
+  // on at least one exam here. Independent of the Level pills, so both are
+  // always populated and pickable.
+  const stateOptions = useMemo(() => {
+    const pool = allExams.filter((e) => e.region?.level === 'state');
     return [...new Set(pool.map((e) => e.region?.name).filter(Boolean))].sort();
-  }, [allExams, level]);
+  }, [allExams]);
+  const utOptions = useMemo(() => {
+    const pool = allExams.filter((e) => e.region?.level === 'ut');
+    return [...new Set(pool.map((e) => e.region?.name).filter(Boolean))].sort();
+  }, [allExams]);
+
+  const examRegion = examState || examUt;
 
   const results = useMemo(() => {
     let pool = allExams;
@@ -125,7 +135,9 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     onLinked(toAdd.length - toRemove.length);
   };
 
-  const handleClearFilters = () => { setSearch(''); setLevel(''); setExamCategory(''); setExamRegion(''); };
+  const pickExamState = (name) => { setExamState(name); setExamUt(''); if (name) setLevel('state'); };
+  const pickExamUt = (name) => { setExamUt(name); setExamState(''); if (name) setLevel('ut'); };
+  const handleClearFilters = () => { setSearch(''); setLevel(''); setExamCategory(''); setExamState(''); setExamUt(''); };
 
   return (
     <div className="lc-drawer-backdrop" onClick={onClose}>
@@ -160,7 +172,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                 type="button"
                 className={`lc-btn ${level === id ? 'primary' : ''}`}
                 style={{ padding: '0.3rem 0.65rem', fontSize: '0.75rem', borderRadius: '6px' }}
-                onClick={() => { setLevel(id); setExamCategory(''); setExamRegion(''); }}
+                onClick={() => { setLevel(id); setExamCategory(''); setExamState(''); setExamUt(''); }}
               >
                 {label}
               </button>
@@ -174,20 +186,27 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                 options={[{ value: '', label: 'All Categories' }, ...categoryOptions.map((c) => ({ value: c, label: c }))]}
               />
             </div>
-            {(level === 'state' || level === 'ut') && (
-              <div style={{ minWidth: 170 }}>
-                <Select
-                  searchable
-                  value={examRegion}
-                  onChange={(e) => setExamRegion(e.target.value)}
-                  placeholder={`All ${level === 'state' ? 'States' : 'UTs'} (${regionOptions.length})`}
-                  options={[{ value: '', label: `All ${level === 'state' ? 'States' : 'UTs'}` }, ...regionOptions.map((r) => ({ value: r, label: r }))]}
-                />
-              </div>
-            )}
+            <div style={{ minWidth: 150 }}>
+              <Select
+                searchable
+                value={examState}
+                onChange={(e) => pickExamState(e.target.value)}
+                placeholder={`All States (${stateOptions.length})`}
+                options={[{ value: '', label: 'All States' }, ...stateOptions.map((r) => ({ value: r, label: r }))]}
+              />
+            </div>
+            <div style={{ minWidth: 150 }}>
+              <Select
+                searchable
+                value={examUt}
+                onChange={(e) => pickExamUt(e.target.value)}
+                placeholder={`All UTs (${utOptions.length})`}
+                options={[{ value: '', label: 'All UTs' }, ...utOptions.map((r) => ({ value: r, label: r }))]}
+              />
+            </div>
           </div>
 
-          {(search || level || examCategory || examRegion) && (
+          {(search || level || examCategory || examState || examUt) && (
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', fontSize: '0.75rem', color: 'var(--admin-text-muted)', padding: '0.2rem 0' }}>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', alignItems: 'center' }}>
                 <span>Filters:</span>
@@ -203,10 +222,16 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                     <X size={11} style={{ cursor: 'pointer' }} onClick={() => setExamCategory('')} />
                   </span>
                 )}
-                {examRegion && (
+                {examState && (
                   <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                    {examRegion}
-                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setExamRegion('')} />
+                    {examState}
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setExamState('')} />
+                  </span>
+                )}
+                {examUt && (
+                  <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    {examUt}
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setExamUt('')} />
                   </span>
                 )}
                 {search && (

@@ -184,7 +184,11 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState(initialCategory || '');
   const [level, setLevel] = useState(''); // book's own Level tag (BooksPage.jsx), not the fixed exam's
-  const [stateUt, setStateUt] = useState('');
+  // Separate State and UT filters, always visible (not gated behind
+  // Level) -- same split ExamsPage.jsx's own State/UT filter uses.
+  const [stateFilter, setStateFilter] = useState('');
+  const [utFilter, setUtFilter] = useState('');
+  const stateUt = stateFilter || utFilter;
   const [regions, setRegions] = useState([]);
   const [allResources, setAllResources] = useState([]);
   const [supplementary, setSupplementary] = useState([]);
@@ -363,7 +367,8 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
     setSearch('');
     setCategory('');
     setLevel('');
-    setStateUt('');
+    setStateFilter('');
+    setUtFilter('');
   };
 
   return (
@@ -418,26 +423,33 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
             ))}
           </div>
 
-          {/* Book's own Level / State-UT tags */}
+          {/* Book's own Level / State / UT tags */}
           <div style={{ display: 'flex', gap: '0.4rem', margin: '0.25rem 0', flexWrap: 'wrap' }}>
             <div style={{ minWidth: 130 }}>
               <Select
                 value={level}
-                onChange={(e) => { setLevel(e.target.value); setStateUt(''); }}
+                onChange={(e) => { setLevel(e.target.value); setStateFilter(''); setUtFilter(''); }}
                 options={LEVEL_OPTIONS}
               />
             </div>
-            {(level === 'state' || level === 'ut') && (
-              <div style={{ minWidth: 170 }}>
-                <Select
-                  searchable
-                  value={stateUt}
-                  onChange={(e) => setStateUt(e.target.value)}
-                  placeholder={`All ${level === 'state' ? 'States' : 'UTs'}`}
-                  options={[{ value: '', label: `All ${level === 'state' ? 'States' : 'UTs'}` }, ...regions.filter((r) => r.level === level).map((r) => ({ value: r.name, label: r.name }))]}
-                />
-              </div>
-            )}
+            <div style={{ minWidth: 150 }}>
+              <Select
+                searchable
+                value={stateFilter}
+                onChange={(e) => { setStateFilter(e.target.value); setUtFilter(''); if (e.target.value) setLevel('state'); }}
+                placeholder="All States"
+                options={[{ value: '', label: 'All States' }, ...regions.filter((r) => r.level === 'state').map((r) => ({ value: r.name, label: r.name }))]}
+              />
+            </div>
+            <div style={{ minWidth: 150 }}>
+              <Select
+                searchable
+                value={utFilter}
+                onChange={(e) => { setUtFilter(e.target.value); setStateFilter(''); if (e.target.value) setLevel('ut'); }}
+                placeholder="All UTs"
+                options={[{ value: '', label: 'All UTs' }, ...regions.filter((r) => r.level === 'ut').map((r) => ({ value: r.name, label: r.name }))]}
+              />
+            </div>
           </div>
 
           {/* Active filter badges / reset */}
@@ -454,13 +466,19 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
                 {level && (
                   <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                     {LEVEL_OPTIONS.find((o) => o.value === level)?.label}
-                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => { setLevel(''); setStateUt(''); }} />
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => { setLevel(''); setStateFilter(''); setUtFilter(''); }} />
                   </span>
                 )}
-                {stateUt && (
+                {stateFilter && (
                   <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                    {stateUt}
-                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setStateUt('')} />
+                    {stateFilter}
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setStateFilter('')} />
+                  </span>
+                )}
+                {utFilter && (
+                  <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    {utFilter}
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setUtFilter('')} />
                   </span>
                 )}
                 {search && (
