@@ -23,6 +23,7 @@ import Footer from './components/Footer';
 import AdminJobs from './pages/admin/AdminJobs';
 import AdminRewardsQueue from './pages/admin/AdminRewardsQueue';
 import AdminPrivateSector from './pages/admin/AdminPrivateSector';
+import AdminLegalAid from './pages/admin/AdminLegalAid';
 import PublicJobs from './pages/PublicJobs';
 import FindCandidates from './pages/FindCandidates';
 import MessagingWorkspace from './components/MessagingWorkspace';
@@ -202,6 +203,7 @@ function App() {
           <Route path="/admin/jobs" element={<AdminJobs />} />
           <Route path="/admin/rewards" element={<AdminRewardsQueue />} />
           <Route path="/admin/private-sector" element={<AdminPrivateSector />} />
+          <Route path="/admin/legal-aid" element={<AdminLegalAid />} />
         </Route>
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
         <Route path="/admin/pyq/:id" element={<PyqPaperEditor />} />
