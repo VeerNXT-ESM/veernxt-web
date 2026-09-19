@@ -84,30 +84,34 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
 // subject-tile grouping used, just applied per-document instead of once
 // per subject so a Guide and its sibling Précis each get their own tile
 // and label instead of sharing one tile captioned "Guide • Précis".
-function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplete, backTo }) {
+export function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplete, backTo }) {
   const subject = resolveSubjectForTitle(resource.title);
   const bg = getFamilyHex(subject.family);
   const image = getSubjectThumbnailImage(subject.key);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem' }}>
       <Link to={`/reader/${resource.resource_id}`} state={backTo ? { from: backTo } : undefined} style={{ position: 'relative', display: 'block', textDecoration: 'none' }}>
         <span
           style={{
-            aspectRatio: '3 / 4', borderRadius: '10px', display: 'flex', alignItems: 'flex-end',
-            padding: '0.5rem', fontWeight: 800, fontSize: '0.62rem', color: '#fff', textTransform: 'uppercase',
-            textShadow: image ? '0 1px 4px rgba(0,0,0,0.65)' : 'none',
-            background: image ? `linear-gradient(160deg, ${bg}40 0%, ${bg}59 100%), url("${image}")` : `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)`,
+            aspectRatio: '3 / 4', borderRadius: '8px', display: 'flex', alignItems: 'flex-end',
+            padding: '0.4rem 0.45rem', fontWeight: 800, fontSize: '0.62rem', color: '#fff', textTransform: 'uppercase',
+            letterSpacing: '0.04em',
+            textShadow: '0 1px 3px rgba(0,0,0,0.85)',
+            background: image
+              ? `linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.75) 100%), url("${image}")`
+              : `linear-gradient(160deg, ${bg} 0%, #134e4a 100%)`,
             backgroundSize: image ? 'cover' : undefined,
             backgroundPosition: image ? 'center' : undefined,
-            boxShadow: isCompleted ? '0 0 0 3px #16a34a' : 'none',
+            boxShadow: isCompleted ? '0 0 0 2px #16a34a' : '0 2px 8px rgba(0,0,0,0.06)',
           }}
         >
-          {subject.label}
+          {image ? (subject.label || 'STUDY MATERIAL') : 'STUDY MATERIAL'}
         </span>
         <span style={{
-          position: 'absolute', top: '0.4rem', right: '0.4rem', width: '20px', height: '20px', borderRadius: '50%',
+          position: 'absolute', top: '0.35rem', right: '0.35rem', width: '20px', height: '20px', borderRadius: '5px',
           display: 'flex', alignItems: 'center', justifyContent: 'center', background: locked ? '#ef4444' : '#16a34a',
+          boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
         }}>
           {locked ? <Lock size={11} color="white" /> : <Unlock size={11} color="white" />}
         </span>
@@ -119,14 +123,14 @@ function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplet
           title={isCompleted ? 'Marked as Complete — click to undo' : 'Mark as Complete'}
           style={{
             background: isCompleted ? '#16a34a' : 'transparent',
-            border: isCompleted ? 'none' : '2px solid #cbd5e1',
-            borderRadius: '50%', width: '18px', height: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-            cursor: 'pointer', padding: 0, flexShrink: 0, marginTop: '0.1rem',
+            border: isCompleted ? 'none' : '1.5px solid #cbd5e1',
+            borderRadius: '3px', width: '15px', height: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+            cursor: 'pointer', padding: 0, flexShrink: 0, marginTop: '0.15rem',
           }}
         >
-          {isCompleted && <Check size={11} color="#fff" strokeWidth={3} />}
+          {isCompleted && <Check size={10} color="#fff" strokeWidth={3.5} />}
         </button>
-        <span style={{ fontSize: '0.74rem', fontWeight: isCompleted ? 600 : 500, lineHeight: 1.3, color: isCompleted ? '#16a34a' : '#0f172a' }}>
+        <span style={{ fontSize: '0.74rem', fontWeight: isCompleted ? 700 : 500, lineHeight: 1.3, color: isCompleted ? '#16a34a' : '#0f172a' }}>
           {cleanContentTitle(resource.title, examName)}
         </span>
       </div>
@@ -139,31 +143,40 @@ function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplet
 // in the grid looking like just another book, but since there's no
 // resource_id to route to /reader/:id, clicking it opens the content in
 // a lightweight in-page overlay instead.
-function IntroManualTile({ intro, locked }) {
+export function IntroManualTile({ intro, locked }) {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem' }}>
         <div onClick={() => setOpen(true)} style={{ position: 'relative', display: 'block', cursor: 'pointer' }}>
           <span
             style={{
-              aspectRatio: '3 / 4', borderRadius: '10px', display: 'flex', alignItems: 'flex-end',
-              padding: '0.5rem', fontWeight: 800, fontSize: '0.62rem', color: '#fff', textTransform: 'uppercase',
-              background: 'linear-gradient(160deg, var(--ios-olive) 0%, #33481f 100%)',
+              aspectRatio: '3 / 4', borderRadius: '8px', display: 'flex', alignItems: 'flex-end',
+              padding: '0.4rem 0.45rem', fontWeight: 800, fontSize: '0.62rem', color: '#fff', textTransform: 'uppercase',
+              letterSpacing: '0.04em',
+              background: 'linear-gradient(160deg, #0d9488 0%, #115e59 100%)',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
             }}
           >
-            Intro
+            STUDY MATERIAL
           </span>
           <span style={{
-            position: 'absolute', top: '0.4rem', right: '0.4rem', width: '20px', height: '20px', borderRadius: '50%',
+            position: 'absolute', top: '0.35rem', right: '0.35rem', width: '20px', height: '20px', borderRadius: '5px',
             display: 'flex', alignItems: 'center', justifyContent: 'center', background: locked ? '#ef4444' : '#16a34a',
+            boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
           }}>
             {locked ? <Lock size={11} color="white" /> : <Unlock size={11} color="white" />}
           </span>
         </div>
-        <span style={{ fontSize: '0.74rem', fontWeight: 500, lineHeight: 1.3, color: '#0f172a' }}>
-          {intro.title || 'Introduction'}
-        </span>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.4rem' }}>
+          <span style={{
+            width: '15px', height: '15px', border: '1.5px solid #cbd5e1', borderRadius: '3px',
+            display: 'inline-block', flexShrink: 0, marginTop: '0.15rem',
+          }} />
+          <span style={{ fontSize: '0.74rem', fontWeight: 600, lineHeight: 1.3, color: '#0f172a' }}>
+            {intro.title || 'Introduction'}
+          </span>
+        </div>
       </div>
 
       {open && (
