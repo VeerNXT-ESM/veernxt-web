@@ -21,7 +21,8 @@ import LinkCategoryExamsDrawer from './LinkCategoryExamsDrawer';
  */
 const CategoriesPage = () => {
   const [categories, setCategories] = useState([]);
-  const [examCounts, setExamCounts] = useState({}); // category name -> count of lc_exams using it
+  const [examCounts, setExamCounts] = useState({}); // category name -> count of lc_exams using it (all levels)
+  const [levelCounts, setLevelCounts] = useState({}); // category name -> { central, state, ut } exam counts
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search);
@@ -40,20 +41,40 @@ const CategoriesPage = () => {
 
   const fetchAll = useCallback(async () => {
     setLoading(true);
+    // lc_exams is past PostgREST's 1000-row default page, so page through it
+    // -- a single select() silently undercounted every category.
+    const fetchExamRows = async () => {
+      const pageSize = 1000;
+      let all = [];
+      for (let from = 0; ; from += pageSize) {
+        const { data, error } = await supabase.from('lc_exams').select('category, region:lc_regions(level)').range(from, from + pageSize - 1);
+        if (error) return { data: null, error };
+        all = all.concat(data || []);
+        if (!data || data.length < pageSize) return { data: all, error: null };
+      }
+    };
     const [{ data: cats, error: catErr }, { data: examRows, error: examErr }] = await Promise.all([
       supabase.from('lc_exam_categories').select('id,name,created_at').order('name'),
-      supabase.from('lc_exams').select('category'),
+      fetchExamRows(),
     ]);
     if (catErr) console.error('Error fetching categories:', catErr);
     if (examErr) console.error('Error fetching exam category counts:', examErr);
 
     const counts = {};
+    const byLevel = {};
     for (const row of examRows || []) {
       const c = (row.category || '').trim();
-      if (c) counts[c] = (counts[c] || 0) + 1;
+      if (!c) continue;
+      counts[c] = (counts[c] || 0) + 1;
+      const level = row.region?.level;
+      if (level === 'central' || level === 'state' || level === 'ut') {
+        byLevel[c] = byLevel[c] || { central: 0, state: 0, ut: 0 };
+        byLevel[c][level] += 1;
+      }
     }
     setCategories(cats || []);
     setExamCounts(counts);
+    setLevelCounts(byLevel);
     setLoading(false);
   }, []);
 
@@ -185,7 +206,10 @@ const CategoriesPage = () => {
             <thead>
               <tr>
                 <th><Tags size={13} style={{ marginRight: '0.35rem', verticalAlign: '-2px' }} />Category</th>
-                <th style={{ textAlign: 'right' }}>Exams</th>
+                <th style={{ textAlign: 'right' }}>Central</th>
+                <th style={{ textAlign: 'right' }}>State</th>
+                <th style={{ textAlign: 'right' }}>UT</th>
+                <th style={{ textAlign: 'right' }}>Total</th>
                 <th className="lc-col-nowrap"></th>
               </tr>
             </thead>
@@ -193,6 +217,9 @@ const CategoriesPage = () => {
               {filtered.map((cat) => (
                 <tr key={cat.id}>
                   <td>{cat.name}</td>
+                  <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.central || 0}</span></td>
+                  <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.state || 0}</span></td>
+                  <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.ut || 0}</span></td>
                   <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{examCounts[cat.name] || 0}</span></td>
                   <td className="lc-col-nowrap">
                     <div style={{ display: 'flex', gap: '0.4rem', justifyContent: 'flex-end' }}>

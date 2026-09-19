@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { CENTRAL_EXAM_CATEGORIES } from '../../lib/centralExamCategories';
+import { STATE_EXAM_CATEGORIES } from '../../lib/stateExamCategories';
+import { UT_EXAM_CATEGORIES } from '../../lib/utExamCategories';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import ExamThumbnail from './ExamThumbnail';
@@ -122,6 +125,16 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   // auto-selects that region rather than making the admin pick from a
   // list of one.
   const regionsForLevel = regions.filter((r) => r.level === level);
+
+  // Each level has its own category list, taken from its own source doc, so
+  // the three never overlap. An exam's saved category is always kept
+  // selectable so editing a legacy row never silently blanks the dropdown.
+  const LEVEL_CATEGORIES = { central: CENTRAL_EXAM_CATEGORIES, state: STATE_EXAM_CATEGORIES, ut: UT_EXAM_CATEGORIES };
+  const LEVEL_LABEL = { central: 'Central', state: 'State', ut: 'UT' };
+  const allowedCategoryOptions = categoryOptions.filter((o) => (LEVEL_CATEGORIES[level] || []).includes(o.value));
+  const visibleCategoryOptions = form.category && !allowedCategoryOptions.some((o) => o.value === form.category)
+    ? [...allowedCategoryOptions, { value: form.category, label: `${form.category} (not a ${LEVEL_LABEL[level] || ''} category)` }]
+    : allowedCategoryOptions;
 
   // Also runs on its own (not just from changeLevel below) -- the "new
   // exam" reset effect defaults level to 'central' directly, and `regions`
@@ -332,7 +345,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
                 placeholder="Select category..."
                 value={form.category}
                 onChange={(e) => updateForm({ category: e.target.value })}
-                options={categoryOptions}
+                options={visibleCategoryOptions}
               />
             </div>
             <div className="lc-input-group">
