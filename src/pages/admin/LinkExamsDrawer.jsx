@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Search, X } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
+import { examsAlreadyHavingResource } from '../../lib/resourceDuplicates';
 import Select from '../../components/ui/Select';
 
 const LEVEL_PILLS = [
@@ -115,8 +116,16 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     if (!hasChanges) { onClose(); return; }
     setSaving(true);
     setError(null);
-    if (toAdd.length > 0) {
-      const { error: insErr } = await supabase.from('lc_exam_resource_map').insert(toAdd.map((examId) => ({
+    // Skip exams that already have this resource under another resource_id
+    // (identical file/content) -- linking it again would show it twice.
+    const dupes = toAdd.length > 0 ? await examsAlreadyHavingResource(book.resourceId, toAdd, book.category) : new Map();
+    const addable = toAdd.filter((id) => !dupes.has(id));
+    if (dupes.size > 0) {
+      const names = allExams.filter((e) => dupes.has(e.id)).map((e) => e.name);
+      alert(`${dupes.size} exam${dupes.size === 1 ? '' : 's'} already ha${dupes.size === 1 ? 's' : 've'} an identical copy of this resource and ${dupes.size === 1 ? 'was' : 'were'} skipped: ${names.slice(0, 8).join(', ')}${names.length > 8 ? ` +${names.length - 8} more` : ''}`);
+    }
+    if (addable.length > 0) {
+      const { error: insErr } = await supabase.from('lc_exam_resource_map').insert(addable.map((examId) => ({
         exam_id: examId,
         resource_id: book.resourceId,
         category: book.category,
@@ -132,7 +141,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
       if (delErr) { setSaving(false); setError(delErr.message); return; }
     }
     setSaving(false);
-    onLinked(toAdd.length - toRemove.length);
+    onLinked(addable.length - toRemove.length);
   };
 
   const pickExamState = (name) => { setExamState(name); setExamUt(''); if (name) setLevel('state'); };

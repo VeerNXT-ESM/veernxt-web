@@ -1,7 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../../lib/supabase';
 import { useDebounced } from './lcShared';
-import { Search, Plus, Pencil, Trash2, X, Tags, AlertTriangle, Link2 } from 'lucide-react';
+import { Search, Plus, Pencil, Trash2, X, Tags, AlertTriangle, Link2, ChevronLeft, ChevronRight } from 'lucide-react';
+import Select from '../../components/ui/Select';
+import { CENTRAL_EXAM_CATEGORIES } from '../../lib/centralExamCategories';
+import { STATE_EXAM_CATEGORIES } from '../../lib/stateExamCategories';
+import { UT_EXAM_CATEGORIES } from '../../lib/utExamCategories';
 import LinkCategoryExamsDrawer from './LinkCategoryExamsDrawer';
 
 /**
@@ -19,6 +23,21 @@ import LinkCategoryExamsDrawer from './LinkCategoryExamsDrawer';
  * here explicitly cascades an UPDATE onto every lc_exams row using the old
  * name, and delete is blocked while any exam still references it.
  */
+const PAGE_SIZE = 25;
+const LEVEL_FILTER_OPTIONS = [
+  { value: '', label: 'All Levels' },
+  { value: 'central', label: 'Central' },
+  { value: 'state', label: 'State' },
+  { value: 'ut', label: 'UT' },
+];
+const LEVEL_LABELS = { central: 'Central', state: 'State', ut: 'UT' };
+// Which level list a category belongs to. The three lists never share a name
+// (see the retag_*_exams.mjs scripts); a category in none of them shows "—".
+const LEVEL_OF_CATEGORY = {};
+CENTRAL_EXAM_CATEGORIES.forEach((n) => { LEVEL_OF_CATEGORY[n] = 'central'; });
+STATE_EXAM_CATEGORIES.forEach((n) => { LEVEL_OF_CATEGORY[n] = 'state'; });
+UT_EXAM_CATEGORIES.forEach((n) => { LEVEL_OF_CATEGORY[n] = 'ut'; });
+
 const CategoriesPage = () => {
   const [categories, setCategories] = useState([]);
   const [examCounts, setExamCounts] = useState({}); // category name -> count of lc_exams using it (all levels)
@@ -26,6 +45,8 @@ const CategoriesPage = () => {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search);
+  const [levelFilter, setLevelFilter] = useState('');
+  const [page, setPage] = useState(1);
 
   const [showAddModal, setShowAddModal] = useState(false);
   const [newName, setNewName] = useState('');
@@ -80,7 +101,17 @@ const CategoriesPage = () => {
 
   useEffect(() => { fetchAll(); }, [fetchAll]);
 
-  const filtered = categories.filter((c) => !debouncedSearch || c.name.toLowerCase().includes(debouncedSearch.toLowerCase()));
+  const filtered = categories.filter((c) => (
+    (!debouncedSearch || c.name.toLowerCase().includes(debouncedSearch.toLowerCase()))
+    && (!levelFilter || LEVEL_OF_CATEGORY[c.name] === levelFilter)
+  ));
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  // Back to page 1 when the search/filter changes; clamp if a delete/rename
+  // shrinks the list under the current page.
+  useEffect(() => { setPage(1); }, [debouncedSearch, levelFilter]);
+  useEffect(() => { if (page > totalPages) setPage(totalPages); }, [page, totalPages]);
+  const pageRows = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   const openAddModal = () => {
     setNewName('');
@@ -194,18 +225,22 @@ const CategoriesPage = () => {
           <Search size={16} />
           <input type="text" placeholder="Search categories..." value={search} onChange={(e) => setSearch(e.target.value)} />
         </div>
+        <div className="lc-filter-field">
+          <Select value={levelFilter} onChange={(e) => setLevelFilter(e.target.value)} options={LEVEL_FILTER_OPTIONS} />
+        </div>
       </div>
 
       {loading ? (
         <div className="lc-loading-state">Loading categories…</div>
       ) : filtered.length === 0 ? (
-        <div className="lc-empty-state"><p>No categories match the current search.</p></div>
+        <div className="lc-empty-state"><p>No categories match the current search or level filter.</p></div>
       ) : (
         <div className="lc-table-responsive" style={{ marginTop: '1.25rem' }}>
           <table className="lc-table">
             <thead>
               <tr>
                 <th><Tags size={13} style={{ marginRight: '0.35rem', verticalAlign: '-2px' }} />Category</th>
+                <th>Level</th>
                 <th style={{ textAlign: 'right' }}>Central</th>
                 <th style={{ textAlign: 'right' }}>State</th>
                 <th style={{ textAlign: 'right' }}>UT</th>
@@ -214,9 +249,10 @@ const CategoriesPage = () => {
               </tr>
             </thead>
             <tbody>
-              {filtered.map((cat) => (
+              {pageRows.map((cat) => (
                 <tr key={cat.id}>
                   <td>{cat.name}</td>
+                  <td>{LEVEL_LABELS[LEVEL_OF_CATEGORY[cat.name]] || '—'}</td>
                   <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.central || 0}</span></td>
                   <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.state || 0}</span></td>
                   <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.ut || 0}</span></td>
@@ -232,6 +268,28 @@ const CategoriesPage = () => {
               ))}
             </tbody>
           </table>
+        </div>
+      )}
+
+      {!loading && filtered.length > 0 && (
+        <div className="lc-pagination-bar">
+          <span className="lc-pagination-info">{filtered.length} categor{filtered.length === 1 ? 'y' : 'ies'}</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <button className="lc-pagination-btn" disabled={page === 1} onClick={() => setPage((p) => p - 1)} title="Previous page">
+              <ChevronLeft size={14} />
+            </button>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.8rem', color: 'var(--admin-text-muted)' }}>
+              <span>Page</span>
+              <select value={page} onChange={(e) => setPage(Number(e.target.value))} className="lc-pagination-select">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+                  <option key={n} value={n}>{n} of {totalPages}</option>
+                ))}
+              </select>
+            </div>
+            <button className="lc-pagination-btn" disabled={page === totalPages} onClick={() => setPage((p) => p + 1)} title="Next page">
+              <ChevronRight size={14} />
+            </button>
+          </div>
         </div>
       )}
 

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { UploadCloud, RefreshCw, Search, CheckCircle2, AlertTriangle, X, Repeat } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
+import { examsAlreadyHavingResource } from '../../lib/resourceDuplicates';
 import Select from '../../components/ui/Select';
 import { DocxPreview } from './DocxPreview';
 
@@ -509,7 +510,11 @@ const PublishContentPage = () => {
       } else if (isMulti) {
         const { ok, data } = await callSaveResource({ type: 'content-publish', category, fileName: file.name, book });
         if (!ok || !data.ok) throw new Error(data.error || 'Convert & Link failed');
-        const rows = selectedExams.map((exam) => ({
+        // An exam that already has an identical copy of this resource is skipped
+        // rather than given a second link.
+        const dupes = await examsAlreadyHavingResource(data.resourceId, selectedExams.map((e) => e.id), category);
+        const linkable = selectedExams.filter((exam) => !dupes.has(exam.id));
+        const rows = linkable.map((exam) => ({
           exam_id: exam.id,
           resource_id: data.resourceId,
           category,
@@ -517,11 +522,16 @@ const PublishContentPage = () => {
           reasoning: 'Manually added by admin',
           source: 'manual',
         }));
-        const { error: mapErr } = await supabase.from('lc_exam_resource_map').insert(rows);
-        if (mapErr) {
-          throw new Error(`Resource published, but attaching to exam(s) failed: ${mapErr.message}. Attach it manually via each exam's Resources panel.`);
+        if (rows.length > 0) {
+          const { error: mapErr } = await supabase.from('lc_exam_resource_map').insert(rows);
+          if (mapErr) {
+            throw new Error(`Resource published, but attaching to exam(s) failed: ${mapErr.message}. Attach it manually via each exam's Resources panel.`);
+          }
         }
-        setPublished({ resourceId: data.resourceId, examNames: selectedExams.map((e) => e.name), isReplace: false });
+        if (dupes.size > 0) {
+          alert(`Skipped ${dupes.size} exam${dupes.size === 1 ? '' : 's'} that already ha${dupes.size === 1 ? 's' : 've'} an identical copy: ${selectedExams.filter((e) => dupes.has(e.id)).map((e) => e.name).slice(0, 8).join(', ')}`);
+        }
+        setPublished({ resourceId: data.resourceId, examNames: linkable.map((e) => e.name), isReplace: false });
       } else {
         const { ok, status, data } = await callSaveResource({
           type: 'content-publish',
