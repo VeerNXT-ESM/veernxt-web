@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
-import { S3Client, PutObjectCommand, ListObjectsV2Command, DeleteObjectsCommand, CopyObjectCommand } from '@aws-sdk/client-s3';
+import { S3Client, PutObjectCommand, GetObjectCommand, DeleteObjectCommand, ListObjectsV2Command, DeleteObjectsCommand, CopyObjectCommand } from '@aws-sdk/client-s3';
+import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -86,23 +87,64 @@ function getSupabaseAdmin() {
  * book parser above never looks at tables at all). Same `{ buffer }`
  * mammoth call docxParser.mjs already uses in this same function.
  *
- * Real constraint, not fixed here: a deployed Vercel serverless function
- * caps the request body at ~4.5MB, and real master book docx files run up
- * to ~39MB (base64-encoding adds another ~33% on top). This works fully
- * against the local dev server (vite.config.js's vercelApiPlugin runs
- * this file's handler directly in Node with no such cap), but a large
- * file will 413 against the actual deployed veernxt.in admin site --
- * PublishContentPage.jsx warns the client about this before sending
- * rather than let it fail silently.
+ * Input is either `dataBase64` (small files -- a deployed Vercel function
+ * caps the request body at ~4.5MB, base64 adds ~33%) or `tmpKey`, the R2
+ * key of a file the browser already uploaded directly via the presigned
+ * URL from 'docx-upload-url' below, which has no such cap (real master
+ * book docx files run up to ~39MB). The temp object is deleted once read.
  */
+const DOCX_TMP_PREFIX = 'tmp/publish-uploads/';
+
+function getR2Config() {
+  const { R2_ACCOUNT_ID, R2_BUCKET_NAME, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY } = process.env;
+  if (!R2_ACCOUNT_ID || !R2_BUCKET_NAME || !R2_ACCESS_KEY_ID || !R2_SECRET_ACCESS_KEY) return null;
+  return { bucket: R2_BUCKET_NAME, s3: getS3Client() };
+}
+
+/**
+ * POST /api/admin/save-resource with { type: 'docx-upload-url' }
+ * Returns { uploadUrl, key }: a short-lived presigned PUT URL for a
+ * throwaway object under tmp/publish-uploads/, so the browser can send a
+ * large docx straight to R2 instead of through this function's body cap.
+ */
+async function handleDocxUploadUrl(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const r2 = getR2Config();
+  if (!r2) return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 credentials not set' });
+  try {
+    const key = `${DOCX_TMP_PREFIX}${crypto.randomUUID()}.docx`;
+    const uploadUrl = await getSignedUrl(
+      r2.s3,
+      new PutObjectCommand({ Bucket: r2.bucket, Key: key, ContentType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' }),
+      { expiresIn: 600 },
+    );
+    return res.status(200).json({ ok: true, uploadUrl, key });
+  } catch (e) {
+    console.error('[admin/save-resource:docx-upload-url] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
 async function handleDocxPreviewConvert(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  const { fileName, dataBase64, category } = req.body || {};
-  if (!fileName || !dataBase64) {
-    return res.status(400).json({ ok: false, error: 'Missing fileName or dataBase64' });
+  const { fileName, dataBase64, tmpKey, category } = req.body || {};
+  if (!fileName || (!dataBase64 && !tmpKey)) {
+    return res.status(400).json({ ok: false, error: 'Missing fileName or file data' });
   }
+  if (tmpKey && (!tmpKey.startsWith(DOCX_TMP_PREFIX) || tmpKey.includes('..'))) {
+    return res.status(400).json({ ok: false, error: 'Invalid tmpKey' });
+  }
+  let r2 = null;
   try {
-    const buffer = Buffer.from(dataBase64, 'base64');
+    let buffer;
+    if (tmpKey) {
+      r2 = getR2Config();
+      if (!r2) return res.status(500).json({ ok: false, error: 'Server misconfiguration: R2 credentials not set' });
+      const obj = await r2.s3.send(new GetObjectCommand({ Bucket: r2.bucket, Key: tmpKey }));
+      buffer = Buffer.from(await obj.Body.transformToByteArray());
+    } else {
+      buffer = Buffer.from(dataBase64, 'base64');
+    }
     if (category === 'Intro') {
       const result = await mammoth.convertToHtml({ buffer }, { styleMap: INTRO_STYLE_MAP });
       const { blocks } = parseHtmlToBlocks(result.value);
@@ -115,6 +157,11 @@ async function handleDocxPreviewConvert(req, res) {
   } catch (e) {
     console.error('[admin/save-resource:docx-preview-convert] failed:', e.message);
     return res.status(500).json({ ok: false, error: e.message });
+  } finally {
+    if (r2 && tmpKey) {
+      r2.s3.send(new DeleteObjectCommand({ Bucket: r2.bucket, Key: tmpKey }))
+        .catch((e) => console.error('[admin/save-resource:docx-preview-convert] temp cleanup failed:', e.message));
+    }
   }
 }
 
@@ -1439,6 +1486,9 @@ export default async function handler(req, res) {
     return handleR2Upload(req, res);
   }
 
+  if (req.body?.type === 'docx-upload-url') {
+    return handleDocxUploadUrl(req, res);
+  }
   if (req.body?.type === 'docx-preview-convert') {
     return handleDocxPreviewConvert(req, res);
   }

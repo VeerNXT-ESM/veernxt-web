@@ -7,7 +7,7 @@ import Select from '../../components/ui/Select';
 import { DocxPreview } from './DocxPreview';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
-const VERCEL_SAFE_BYTES = 3.3 * 1024 * 1024; // deployed Vercel functions cap request bodies ~4.5MB; base64 adds ~33%
+const VERCEL_SAFE_BYTES = 3.3 * 1024 * 1024; // deployed Vercel functions cap request bodies ~4.5MB; base64 adds ~33% -- larger files go straight to R2 instead
 const CATEGORIES = ['Intro', 'Guide', 'Precis'];
 // Same Level convention ExamsPage.jsx's own filter uses, against the same
 // lc_regions table.
@@ -41,6 +41,26 @@ async function callSaveResource(body) {
   });
   const data = await res.json();
   return { ok: res.ok, status: res.status, data };
+}
+
+// Files over the Vercel body cap skip the function entirely: get a
+// short-lived presigned R2 URL, PUT the docx straight to it, and let the
+// server read it back by key (and delete it) during docx-preview-convert.
+async function uploadDocxToTemp(file) {
+  const { ok, data } = await callSaveResource({ type: 'docx-upload-url' });
+  if (!ok || !data.ok) throw new Error(data.error || 'Could not get an upload URL');
+  let put;
+  try {
+    put = await fetch(data.uploadUrl, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' },
+      body: file,
+    });
+  } catch {
+    throw new Error("Couldn't upload the file to storage -- the R2 bucket's CORS policy probably doesn't allow PUT from this site yet.");
+  }
+  if (!put.ok) throw new Error(`Upload to storage failed (${put.status})`);
+  return data.key;
 }
 
 // One tool for turning a real .docx into a live resource: upload it, THEN
@@ -371,11 +391,16 @@ const PublishContentPage = () => {
     setConvertError(null);
     setBook(null);
     try {
-      const buffer = await file.arrayBuffer();
+      let fileField;
+      if (oversized) {
+        fileField = { tmpKey: await uploadDocxToTemp(file) };
+      } else {
+        fileField = { dataBase64: arrayBufferToBase64(await file.arrayBuffer()) };
+      }
       const { ok, data } = await callSaveResource({
         type: 'docx-preview-convert',
         fileName: file.name,
-        dataBase64: arrayBufferToBase64(buffer),
+        ...fileField,
         category,
       });
       if (!ok || !data.ok) throw new Error(data.error || 'Conversion failed');
@@ -625,12 +650,6 @@ const PublishContentPage = () => {
                 </span>
               )}
             </div>
-
-            {oversized && (
-              <div style={{ marginTop: '0.85rem', padding: '0.65rem 0.9rem', background: 'var(--admin-warn-bg, #fffbeb)', border: '1px solid #fde68a', borderRadius: 8, fontSize: '0.8rem', color: '#92400e' }}>
-                This file is {formatBytes(file.size)} — larger than the deployed admin site's ~3.3MB safe limit. It will still work against the local dev server, but would fail against the live veernxt.in admin site.
-              </div>
-            )}
           </div>
 
           <div className="lc-card" style={{ padding: '1.25rem', marginBottom: '1.25rem', opacity: file ? 1 : 0.5, pointerEvents: file ? 'auto' : 'none' }}>
