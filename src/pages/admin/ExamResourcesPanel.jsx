@@ -84,8 +84,19 @@ const ExamResourcesPanel = ({ examId }) => {
 
   const removeMapping = async (mapping) => {
     if (!window.confirm(`Remove "${mapping.resource?.title || 'this resource'}" from this exam? The resource itself is untouched — this only removes the link.`)) return;
-    const { error } = await supabase.from('lc_exam_resource_map').delete().eq('id', mapping.id);
+    // An Intro stored only in lc_exam_intro is shown as a synthetic row (fake
+    // id `intro-<examId>`, see fetchMappings) with no lc_exam_resource_map
+    // row behind it -- its link lives in lc_exam_intro, keyed by exam_id.
+    const isSyntheticIntro = mapping.id === `intro-${examId}`;
+    const { error } = isSyntheticIntro
+      ? await supabase.from('lc_exam_intro').delete().eq('exam_id', examId)
+      : await supabase.from('lc_exam_resource_map').delete().eq('id', mapping.id);
     if (error) { alert('Failed: ' + error.message); return; }
+    // A real Intro map row can also have a matching lc_exam_intro row; leave
+    // it and the Intro would reappear (as a synthetic row) on the next fetch.
+    if (!isSyntheticIntro && mapping.category === 'Intro' && mapping.resource_id) {
+      await supabase.from('lc_exam_intro').delete().eq('exam_id', examId).eq('resource_id', mapping.resource_id);
+    }
     setMappings((prev) => prev.filter((m) => m.id !== mapping.id));
   };
 
