@@ -33,39 +33,14 @@ CREATE INDEX IF NOT EXISTS ps_recruiter_requests_employer_id_idx ON ps_recruiter
 CREATE INDEX IF NOT EXISTS ps_recruiter_requests_user_id_idx     ON ps_recruiter_requests(user_id);
 CREATE INDEX IF NOT EXISTS ps_recruiter_requests_status_idx      ON ps_recruiter_requests(status);
 
--- 3. Drop ONLY the user_id FK (candidates can be fallback/demo UUIDs not in auth.users).
---    Keep employer_id -> employer_profiles and requirement_id -> ps_job_requirements FKs so
---    PostgREST can resolve the admin panel joins on those columns.
+-- 3. Drop ALL FK constraints — employer_profiles FK blocks inserts when the
+--    employer hasn't fully completed onboarding. The admin panel fetches
+--    employer/requirement data via separate queries instead of PostgREST joins.
 ALTER TABLE ps_recruiter_requests DROP CONSTRAINT IF EXISTS ps_recruiter_requests_user_id_fkey;
+ALTER TABLE ps_recruiter_requests DROP CONSTRAINT IF EXISTS ps_recruiter_requests_employer_id_fkey;
+ALTER TABLE ps_recruiter_requests DROP CONSTRAINT IF EXISTS ps_recruiter_requests_requirement_id_fkey;
 ALTER TABLE ps_recruiter_requests DROP CONSTRAINT IF EXISTS ps_recruiter_requests_requirement_id_user_id_key;
 
--- Add employer_id FK if not present (needed for PostgREST join in admin_list_recruiter_requests)
-DO $$
-BEGIN
-  IF NOT EXISTS (
-    SELECT 1 FROM information_schema.table_constraints
-    WHERE constraint_name = 'ps_recruiter_requests_employer_id_fkey'
-      AND table_name = 'ps_recruiter_requests'
-  ) THEN
-    ALTER TABLE ps_recruiter_requests
-      ADD CONSTRAINT ps_recruiter_requests_employer_id_fkey
-      FOREIGN KEY (employer_id) REFERENCES employer_profiles(id) ON DELETE CASCADE;
-  END IF;
-END $$;
-
--- Add requirement_id FK if not present (needed for PostgREST join)
-DO $$
-BEGIN
-  IF NOT EXISTS (
-    SELECT 1 FROM information_schema.table_constraints
-    WHERE constraint_name = 'ps_recruiter_requests_requirement_id_fkey'
-      AND table_name = 'ps_recruiter_requests'
-  ) THEN
-    ALTER TABLE ps_recruiter_requests
-      ADD CONSTRAINT ps_recruiter_requests_requirement_id_fkey
-      FOREIGN KEY (requirement_id) REFERENCES ps_job_requirements(id) ON DELETE SET NULL;
-  END IF;
-END $$;
 
 -- 4. Add any columns that might be missing if table existed in a prior form
 ALTER TABLE ps_recruiter_requests ADD COLUMN IF NOT EXISTS role_title            text;

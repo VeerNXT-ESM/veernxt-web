@@ -1061,37 +1061,59 @@ async function handleAdminBroadcastRequirementEmail(req, res) {
 
 async function handleAdminListRecruiterRequests(req, res) {
   const supabaseAdmin = getSupabaseAdmin();
+
+  // No FK joins — constraints were dropped to allow fallback/demo UUIDs and
+  // employers without fully completed profiles. Fetch the base rows, then
+  // enrich with separate queries using the service-role key.
   const { data, error } = await supabaseAdmin
     .from('ps_recruiter_requests')
-    .select('*, employer_profiles(company_name, contact_name, contact_email, contact_phone), ps_job_requirements(role_titles, sector, quantity, locations)')
+    .select('*')
     .order('created_at', { ascending: false });
 
   if (error) return res.status(500).json({ ok: false, error: error.message });
 
-  const candidateUserIds = [...new Set((data || []).map((r) => r.user_id))];
-  let profilesById = {};
-  if (candidateUserIds.length > 0) {
-    const { data: uProfiles } = await supabaseAdmin
-      .from('user_profiles')
-      .select('id, full_name, raw_profile_data')
-      .in('id', candidateUserIds);
-    profilesById = Object.fromEntries((uProfiles || []).map((p) => [p.id, p]));
-  }
+  const rows = data || [];
 
-  const enriched = (data || []).map((r) => {
-    const u = profilesById[r.user_id];
+  // Collect unique IDs for batch lookups
+  const candidateUserIds = [...new Set(rows.map((r) => r.user_id))];
+  const employerIds      = [...new Set(rows.map((r) => r.employer_id))];
+  const requirementIds   = [...new Set(rows.map((r) => r.requirement_id).filter(Boolean))];
+
+  // Parallel enrichment fetches
+  const [uProfilesRes, empProfilesRes, reqsRes] = await Promise.all([
+    candidateUserIds.length
+      ? supabaseAdmin.from('user_profiles').select('id, full_name, raw_profile_data').in('id', candidateUserIds)
+      : Promise.resolve({ data: [] }),
+    employerIds.length
+      ? supabaseAdmin.from('employer_profiles').select('id, company_name, contact_name, contact_email, contact_phone').in('id', employerIds)
+      : Promise.resolve({ data: [] }),
+    requirementIds.length
+      ? supabaseAdmin.from('ps_job_requirements').select('id, role_titles, sector, quantity, locations').in('id', requirementIds)
+      : Promise.resolve({ data: [] }),
+  ]);
+
+  const candidateById = Object.fromEntries((uProfilesRes.data || []).map((p) => [p.id, p]));
+  const employerById  = Object.fromEntries((empProfilesRes.data || []).map((p) => [p.id, p]));
+  const requirementById = Object.fromEntries((reqsRes.data || []).map((r) => [r.id, r]));
+
+  const enriched = rows.map((r) => {
+    const u   = candidateById[r.user_id];
+    const emp = employerById[r.employer_id];
+    const req = r.requirement_id ? requirementById[r.requirement_id] : null;
     const maskedCode = r.candidate_masked_code || `VN-${r.user_id.slice(0, 4).toUpperCase()}`;
+
     return {
       ...r,
-      candidate_name: u?.full_name || maskedCode,
+      candidate_name:   u?.full_name || maskedCode,
       candidate_mobile: u?.raw_profile_data?.mobile || null,
-      candidate_email: u?.raw_profile_data?.email || null,
-      company_name: r.employer_company || r.employer_profiles?.company_name || 'Employer',
-      contact_name: r.employer_name || r.employer_profiles?.contact_name || 'Recruiter',
-      contact_email: r.employer_profiles?.contact_email || null,
-      contact_phone: r.employer_profiles?.contact_phone || null,
-      role_display: r.role_title || (r.ps_job_requirements?.role_titles || []).join(', ') || 'Custom Role',
-      sector_display: r.sector || r.ps_job_requirements?.sector || 'Private Sector',
+      candidate_email:  u?.raw_profile_data?.email  || null,
+      // Prefer denormalized snapshot stored at insert time, fall back to live profile
+      company_name:  r.employer_company || emp?.company_name  || 'Employer',
+      contact_name:  r.employer_name    || emp?.contact_name  || 'Recruiter',
+      contact_email: emp?.contact_email  || null,
+      contact_phone: emp?.contact_phone  || null,
+      role_display:   r.role_title || (req?.role_titles || []).join(', ') || 'Custom Role',
+      sector_display: r.sector     || req?.sector || 'Private Sector',
     };
   });
 
