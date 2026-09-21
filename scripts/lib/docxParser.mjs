@@ -75,8 +75,9 @@ function classifyParagraph(element) {
 /**
  * Parses a DOCX buffer into the semantic block structure locally in Node.js.
  * Returns { book, imagesDb } -- imagesDb is always empty here (text-only pass).
+ * Pass `{ onImage }` to also get `image` blocks (see the opt-in note inside).
  */
-export async function parseDocxToSemanticModelNode(buffer, fileName) {
+export async function parseDocxToSemanticModelNode(buffer, fileName, { onImage } = {}) {
   const options = {
     styleMap: [
       "p[style-name='Heading 1'] => h1:fresh",
@@ -88,6 +89,16 @@ export async function parseDocxToSemanticModelNode(buffer, fileName) {
       "p[style-name='Intense Quote'] => blockquote:fresh"
     ]
   };
+  // Opt-in image support. By default images are dropped (an image-only paragraph
+  // has no text, so it never becomes a block) -- existing callers are unchanged.
+  // With `onImage(buffer, contentType)` (may be async) returning the final URL,
+  // each image becomes an `image` block at its place in the document.
+  if (onImage) {
+    options.convertImage = mammoth.images.inline(async (element) => {
+      const bytes = await element.read();
+      return { src: await onImage(bytes, element.contentType) };
+    });
+  }
 
   const result = await mammoth.convertToHtml({ buffer }, options);
   const html = result.value;
@@ -155,6 +166,12 @@ export async function parseDocxToSemanticModelNode(buffer, fileName) {
       if (block) {
         block.id = generateId();
         currentChapter.blocks.push(block);
+      } else if (onImage) {
+        // A paragraph with no text that holds picture(s): emit them as image blocks.
+        for (const img of Array.from(el.getElementsByTagName('img'))) {
+          const src = img.getAttribute('src');
+          if (src) currentChapter.blocks.push({ id: generateId(), type: 'image', imageId: generateId(), src });
+        }
       }
     }
     else if (nodeName === 'UL') {
