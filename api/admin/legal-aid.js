@@ -102,7 +102,7 @@ async function handleSendEmail(req, res) {
     <div class="body">${body.replace(/\n/g, '<br>')}</div>
     <div class="footer">
       VeerNXT Legal Aid Cell — Supporting Indian Armed Forces Veterans &amp; their families.<br>
-      © ${new Date().getFullYear()} VETERAN WORKS PRIVATE LIMITED. All rights reserved.
+      © ${new Date().getFullYear()} VeerNXT. All rights reserved.
     </div>
   </div>
 </body>

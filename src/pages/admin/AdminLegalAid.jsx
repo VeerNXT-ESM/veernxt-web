@@ -82,9 +82,7 @@ If this matter is urgent or there has been any update from your end, please do n
 We stand with our veterans.
 
 Warm regards,
-VeerNXT Legal Support Desk
-VETERAN WORKS PRIVATE LIMITED
-CIN: U85499KA2024PTC184428`;
+VeerNXT Legal Support Desk`;
 }
 
 function buildAdvocateSubject(q) {
@@ -101,7 +99,7 @@ function buildAdvocateBody(q) {
 
   return `Dear Advocate / Legal Professional,
 
-I am writing to you on behalf of the VeerNXT Legal Aid Cell (operated by VETERAN WORKS PRIVATE LIMITED, CIN: U85499KA2024PTC184428), a platform dedicated to supporting Indian Armed Forces veterans, Agniveers, and their families in legal and administrative matters.
+I am writing to you on behalf of the VeerNXT Legal Aid Cell, a platform dedicated to supporting Indian Armed Forces veterans, Agniveers, and their families in legal and administrative matters.
 
 We are referring a veteran case to your office for professional legal review and guidance.
 
@@ -136,8 +134,7 @@ The veteran has consented to their case summary being shared with authorised leg
 Please reply to this email or contact our support desk at support@veernxt.in / +91-7889530025 to proceed.
 
 With respect,
-VeerNXT Legal Aid Cell
-VETERAN WORKS PRIVATE LIMITED`;
+VeerNXT Legal Aid Cell`;
 }
 
 /* ─── Reusable small components ─── */
