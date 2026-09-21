@@ -141,7 +141,7 @@ const ExamResourcesPanel = ({ examId }) => {
 
       {previewResourceId && (
         <div className="lc-drawer-backdrop" onClick={() => setPreviewResourceId(null)}>
-          <div className="lc-drawer-panel" style={{ width: '100vw', height: '100vh', maxWidth: 'none', display: 'flex', flexDirection: 'column' }} onClick={(e) => e.stopPropagation()}>
+          <div className="lc-drawer-panel" style={{ width: '50vw', height: '100vh', maxWidth: 'none', display: 'flex', flexDirection: 'column' }} onClick={(e) => e.stopPropagation()}>
             <div className="lc-drawer-header">
               <div><h3>Resource Preview</h3></div>
               <button className="lc-close-btn" onClick={() => setPreviewResourceId(null)}><X size={20} /></button>
