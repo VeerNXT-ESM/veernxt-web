@@ -17,7 +17,7 @@ const COLUMN_CONFIG = [
   { key: 'stateUt', label: 'State/UT' },
   { key: 'conductingBody', label: 'Conducting Body' },
   { key: 'chapters', label: 'Chapters' },
-  { key: 'linkedExams', label: 'Linked Exam Entries' },
+  { key: 'linkedExams', label: 'Linked Exams' },
 ];
 
 const DEFAULT_VISIBLE_COLUMNS = {
@@ -397,7 +397,7 @@ const BooksPage = () => {
     if (Object.keys(patch).length === 0) { handleDiscardRow(b); return; }
 
     if (patch.category && patch.category !== b.category && b.duplicateRowCount > 1) {
-      const ok = window.confirm(`"${b.title}" has ${b.duplicateRowCount} linked exam entries. Moving it to ${patch.category} re-labels all of them. Continue?`);
+      const ok = window.confirm(`"${b.title}" has ${b.duplicateRowCount} database rows. Moving it to ${patch.category} re-labels all of them. Continue?`);
       if (!ok) return;
     }
 
@@ -595,7 +595,7 @@ const BooksPage = () => {
               {visibleColumns.stateUt && <th className="lc-col-nowrap">State/UT</th>}
               {visibleColumns.conductingBody && <th style={{ minWidth: '150px', maxWidth: '220px' }}>Conducting Body</th>}
               {visibleColumns.chapters && <th style={{ textAlign: 'right' }}>Chapters</th>}
-              {visibleColumns.linkedExams && <th className="lc-col-nowrap" style={{ textAlign: 'right' }}>Linked Exam Entries</th>}
+              {visibleColumns.linkedExams && <th className="lc-col-nowrap" style={{ textAlign: 'right' }}>Linked Exams</th>}
               <th className="lc-col-nowrap"></th>
             </tr>
           </thead>
@@ -705,7 +705,7 @@ const BooksPage = () => {
                 {visibleColumns.linkedExams && (
                   <td className="lc-col-nowrap" style={{ textAlign: 'right' }}>
                     <span className="lc-count-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
-                      <Link2 size={11} />{b.duplicateRowCount}
+                      <Link2 size={11} />{b.linkedExamCount ?? b.duplicateRowCount}
                     </span>
                   </td>
                 )}
@@ -920,7 +920,7 @@ const BooksPage = () => {
                 ...prev,
                 [linkExamsSource.category]: catBooks.map((x) => (
                   x.resourceId === linkExamsSource.resourceId
-                    ? { ...x, duplicateRowCount: x.duplicateRowCount + netChange }
+                    ? { ...x, linkedExamCount: (x.linkedExamCount ?? 0) + netChange }
                     : x
                 )),
               };

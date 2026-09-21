@@ -547,8 +547,48 @@ async function handleBooksList(req, res) {
       return catRows;
     };
 
-    const catResults = await Promise.all(categoriesToFetch.map(fetchCategoryRows));
+    // Real exam links live in lc_exam_resource_map (one resources row can be
+    // linked to hundreds of exams) -- NOT in how many resources rows share a
+    // title, which is what duplicateRowCount below measures. Fetched
+    // separately so the table can show the true number of exams a book serves.
+    const fetchMapRows = async (cat) => {
+      let all = [];
+      for (let from = 0; ; from += 1000) {
+        const { data, error } = await supabase
+          .from('lc_exam_resource_map')
+          .select('exam_id,resource_id')
+          .eq('category', cat)
+          .range(from, from + 999);
+        if (error) throw new Error(error.message);
+        all = all.concat(data || []);
+        if (!data || data.length < 1000) break;
+      }
+      if (cat === 'Intro') {
+        // An Intro is also linked straight through lc_exam_intro.
+        for (let from = 0; ; from += 1000) {
+          const { data, error } = await supabase
+            .from('lc_exam_intro')
+            .select('exam_id,resource_id')
+            .not('resource_id', 'is', null)
+            .range(from, from + 999);
+          if (error) throw new Error(error.message);
+          all = all.concat(data || []);
+          if (!data || data.length < 1000) break;
+        }
+      }
+      return all;
+    };
+
+    const [catResults, mapResults] = await Promise.all([
+      Promise.all(categoriesToFetch.map(fetchCategoryRows)),
+      Promise.all(categoriesToFetch.map(fetchMapRows)),
+    ]);
     const rows = catResults.flat();
+    const examsByResourceId = new Map();
+    for (const m of mapResults.flat()) {
+      if (!examsByResourceId.has(m.resource_id)) examsByResourceId.set(m.resource_id, new Set());
+      examsByResourceId.get(m.resource_id).add(m.exam_id);
+    }
 
     const groups = new Map();
     for (const r of rows) {
@@ -590,6 +630,10 @@ async function handleBooksList(req, res) {
       const rowsAtCanonicalUrl = group.rows.filter((r) => r.storage_base_url === canonicalUrl);
       const canonicalRow = rowsAtCanonicalUrl.find((r) => !['draft', 'archived'].includes((r.status || '').toLowerCase())) || rowsAtCanonicalUrl[0] || group.rows[0];
       const issueKey = `${group.category}::${group.title.toLowerCase()}`;
+      // Distinct exams linked to any row of this title (a title can have
+      // several rows, each carrying some of the links).
+      const linkedExamIds = new Set();
+      for (const r of group.rows) for (const id of examsByResourceId.get(r.resource_id) || []) linkedExamIds.add(id);
       // Archived means the book itself (its live/canonical row) is Draft or
       // Archived -- not "does this title happen to have an archived
       // duplicate sitting next to its live row." The old `.some(...)` check
@@ -607,6 +651,7 @@ async function handleBooksList(req, res) {
         storageBaseUrl: canonicalUrl,
         chapterCount: canonicalRow.chapter_count ?? null,
         duplicateRowCount: group.rows.length,
+        linkedExamCount: linkedExamIds.size,
         status: isArchived ? 'Draft' : (canonicalRow.status || 'Published'),
         isArchived,
         issueCounts: issuesByTitle ? (issuesByTitle[issueKey] || { high: 0, medium: 0, low: 0 }) : null,
