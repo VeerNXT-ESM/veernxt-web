@@ -182,14 +182,16 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     return next;
   });
 
-  // Both scoped to the currently visible/filtered list ("results"), not the
-  // whole catalog -- so narrowing to a Category/Body before selecting all
-  // doesn't select exams the admin can't even see, and Deselect All doesn't
-  // wipe out selections made earlier under a different filter.
-  const selectAllVisible = () => setSelected((prev) => new Set([...prev, ...results.map((e) => e.id)]));
-  const deselectAllVisible = () => setSelected((prev) => {
+  // Scoped to a given (already-filtered) list, never the whole catalog --
+  // narrowing to a Category/Body before selecting all doesn't select exams
+  // the admin can't even see. Called separately for the "Already linked"
+  // and "Other exams" groups (see the render below) so the two work
+  // independently: selecting/deselecting one group never touches the
+  // other's checkboxes.
+  const selectAllIn = (list) => setSelected((prev) => new Set([...prev, ...list.map((e) => e.id)]));
+  const deselectAllIn = (list) => setSelected((prev) => {
     const next = new Set(prev);
-    results.forEach((e) => next.delete(e.id));
+    list.forEach((e) => next.delete(e.id));
     return next;
   });
 
@@ -402,46 +404,66 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
           ) : (
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', fontSize: '0.75rem', color: 'var(--admin-text-muted)' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  <span>{results.length} exam{results.length === 1 ? '' : 's'}</span>
-                  {results.length > 0 && (
-                    <>
-                      <button
-                        type="button"
-                        onClick={selectAllVisible}
-                        style={{ background: 'none', border: 'none', color: 'var(--admin-accent)', cursor: 'pointer', fontSize: '0.75rem', textDecoration: 'underline', padding: 0 }}
-                      >
-                        Select all
-                      </button>
-                      <button
-                        type="button"
-                        onClick={deselectAllVisible}
-                        style={{ background: 'none', border: 'none', color: 'var(--admin-accent)', cursor: 'pointer', fontSize: '0.75rem', textDecoration: 'underline', padding: 0 }}
-                      >
-                        Deselect all
-                      </button>
-                    </>
-                  )}
-                </span>
+                <span>{results.length} exam{results.length === 1 ? '' : 's'}</span>
                 {level && <span>Filtered by: {LEVEL_PILLS.find((p) => p.id === level)?.label}</span>}
               </div>
               {linkedResults.length > 0 && (
                 <>
-                  <button
-                    type="button"
-                    onClick={() => setShowLinked((v) => !v)}
-                    aria-expanded={showLinked}
-                    style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', width: '100%', background: LINKED_TINT, border: `1px solid ${LINKED_BORDER}`, borderRadius: 8, padding: '0.5rem 0.7rem', margin: '0.25rem 0', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 700, color: LINKED_BLUE, textAlign: 'left' }}
-                  >
-                    {showLinked ? <ChevronDown size={15} /> : <ChevronRight size={15} />}
-                    Already linked ({linkedResults.length})
-                    <span className="lc-muted-note" style={{ marginLeft: 'auto', fontWeight: 400 }}>{showLinked ? 'Click to collapse' : 'Click to expand'}</span>
-                  </button>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', margin: '0.25rem 0' }}>
+                    <button
+                      type="button"
+                      onClick={() => setShowLinked((v) => !v)}
+                      aria-expanded={showLinked}
+                      style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flex: 1, minWidth: 0, background: LINKED_TINT, border: `1px solid ${LINKED_BORDER}`, borderRadius: 8, padding: '0.5rem 0.7rem', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 700, color: LINKED_BLUE, textAlign: 'left' }}
+                    >
+                      {showLinked ? <ChevronDown size={15} /> : <ChevronRight size={15} />}
+                      Already linked ({linkedResults.length})
+                    </button>
+                    {/* Independent of the "Other exams" pair below -- only ever
+                        touches linkedResults, so it never selects/deselects
+                        anything in the Other exams group. */}
+                    <button
+                      type="button"
+                      onClick={() => selectAllIn(linkedResults)}
+                      style={{ background: 'none', border: 'none', color: 'var(--admin-accent)', cursor: 'pointer', fontSize: '0.72rem', textDecoration: 'underline', padding: 0, flexShrink: 0 }}
+                    >
+                      Select all
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => deselectAllIn(linkedResults)}
+                      style={{ background: 'none', border: 'none', color: 'var(--admin-accent)', cursor: 'pointer', fontSize: '0.72rem', textDecoration: 'underline', padding: 0, flexShrink: 0 }}
+                    >
+                      Deselect all
+                    </button>
+                  </div>
                   {showLinked && linkedResults.map((exam) => renderExamRow(exam, true))}
                 </>
               )}
-              {otherResults.length > 0 && linkedResults.length > 0 && (
-                <div className="lc-muted-note" style={{ margin: '0.6rem 0 0.25rem', fontSize: '0.75rem', fontWeight: 700 }}>Other exams ({otherResults.length})</div>
+              {otherResults.length > 0 && (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', margin: linkedResults.length > 0 ? '0.6rem 0 0.25rem' : '0 0 0.25rem' }}>
+                  <span className="lc-muted-note" style={{ fontSize: '0.75rem', fontWeight: 700 }}>
+                    {linkedResults.length > 0 ? `Other exams (${otherResults.length})` : `Exams (${otherResults.length})`}
+                  </span>
+                  {/* Independent of the "Already linked" pair above -- only
+                      ever touches otherResults. */}
+                  <span style={{ display: 'flex', gap: '0.6rem' }}>
+                    <button
+                      type="button"
+                      onClick={() => selectAllIn(otherResults)}
+                      style={{ background: 'none', border: 'none', color: 'var(--admin-accent)', cursor: 'pointer', fontSize: '0.72rem', textDecoration: 'underline', padding: 0 }}
+                    >
+                      Select all
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => deselectAllIn(otherResults)}
+                      style={{ background: 'none', border: 'none', color: 'var(--admin-accent)', cursor: 'pointer', fontSize: '0.72rem', textDecoration: 'underline', padding: 0 }}
+                    >
+                      Deselect all
+                    </button>
+                  </span>
+                </div>
               )}
               {otherResults.map((exam) => renderExamRow(exam))}
               {results.length === 0 && <p className="lc-muted-note">No matching exams found.</p>}
