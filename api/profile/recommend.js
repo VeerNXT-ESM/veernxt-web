@@ -16,47 +16,47 @@ import { resolvePoints, buildIdempotencyKey } from '../../backend/points/pointsC
 
 // --- Profile validation schema ---
 const profileSchema = Joi.object({
-  fullName:         Joi.string().min(2).required(),
-  dateOfBirth:      Joi.date().iso().required(),
-  category:         Joi.string().valid('General','OBC','SC','ST','EWS').required(),
-  disabilityStatus: Joi.string().valid('No','Yes').required(),
-  disabilityType:   Joi.string().valid('Locomotor','Visual','Hearing','Intellectual','Multiple','Other').allow('', null),
-  disabilityPercentage: Joi.string().valid('40-49%','50-69%','70-100%').allow('', null),
-  stateOfDomicile:  Joi.string().required(),
-  district:         Joi.string().allow('', null),
-  maritalStatus:    Joi.string().valid('Single','Married').required(),
-  email:            Joi.string().email().required(),
-  mobile:           Joi.string().pattern(/^[0-9+\-\s]{7,15}$/).required(),
+  fullName: Joi.string().min(2).required(),
+  dateOfBirth: Joi.date().iso().required(),
+  category: Joi.string().valid('General', 'OBC', 'SC', 'ST', 'EWS').required(),
+  disabilityStatus: Joi.string().valid('No', 'Yes').required(),
+  disabilityType: Joi.string().valid('Locomotor', 'Visual', 'Hearing', 'Intellectual', 'Multiple', 'Other').allow('', null),
+  disabilityPercentage: Joi.string().valid('40-49%', '50-69%', '70-100%').allow('', null),
+  stateOfDomicile: Joi.string().required(),
+  district: Joi.string().allow('', null),
+  maritalStatus: Joi.string().valid('Single', 'Married').required(),
+  email: Joi.string().email().required(),
+  mobile: Joi.string().pattern(/^[0-9+\-\s]{7,15}$/).required(),
 
-  serviceBranch:    Joi.string().valid('Indian Army','Indian Navy','Indian Air Force').required(),
-  armCorpsTrade:    Joi.string().required(),
-  roleAppointment:  Joi.string().required(),
+  serviceBranch: Joi.string().valid('Indian Army', 'Indian Navy', 'Indian Air Force').required(),
+  armCorpsTrade: Joi.string().required(),
+  roleAppointment: Joi.string().required(),
   totalServiceDuration: Joi.string().required(),
-  militaryCourses:  Joi.array().items(Joi.string()).default([]),
-  characterOnDischarge: Joi.string().valid('Exemplary','Very Good','Good').required(),
-  specificSkills:   Joi.array().items(Joi.string()).default([]),
+  militaryCourses: Joi.array().items(Joi.string()).default([]),
+  characterOnDischarge: Joi.string().valid('Exemplary', 'Very Good', 'Good').required(),
+  specificSkills: Joi.array().items(Joi.string()).default([]),
 
-  highestQualification: Joi.string().valid('Class 10','Class 12','Graduate','Post-Graduate').required(),
+  highestQualification: Joi.string().valid('Class 10', 'Class 12', 'Graduate', 'Post-Graduate').required(),
   completedDuringService: Joi.boolean().default(false),
-  nccCertification: Joi.string().valid('None','A Certificate','B Certificate','C Certificate').default('None'),
-  sportsAchievement: Joi.string().valid('None','District','State','National','International/Services').default('None'),
-  mathInClass12:    Joi.boolean().default(false),
+  nccCertification: Joi.string().valid('None', 'A Certificate', 'B Certificate', 'C Certificate').default('None'),
+  sportsAchievement: Joi.string().valid('None', 'District', 'State', 'National', 'International/Services').default('None'),
+  mathInClass12: Joi.boolean().default(false),
 
-  heightCm:         Joi.number().min(100).max(250).required(),
-  weightKg:         Joi.number().min(30).max(200).allow(null),
-  chestCm:          Joi.number().allow(null),
-  chestExpansion:   Joi.number().allow(null),
-  vision:           Joi.string().allow('', null),
-  colourBlind:      Joi.boolean().default(false),
-  medicalCategory:  Joi.string().default('SHAPE-1'),
-  physicalProficiency: Joi.string().valid('Excellent','Good','Satisfactory').default('Good'),
+  heightCm: Joi.number().min(100).max(250).required(),
+  weightKg: Joi.number().min(30).max(200).allow(null),
+  chestCm: Joi.number().allow(null),
+  chestExpansion: Joi.number().allow(null),
+  vision: Joi.string().allow('', null),
+  colourBlind: Joi.boolean().default(false),
+  medicalCategory: Joi.string().default('SHAPE-1'),
+  physicalProficiency: Joi.string().valid('Excellent', 'Good', 'Satisfactory').default('Good'),
 
   careerPreferences: Joi.array().items(Joi.string()).min(1).required(),
-  relocation:       Joi.string().valid('Home District','Home State','Anywhere in India').default('Home State'),
-  englishComfort:   Joi.string().valid('Basic','Intermediate','Fluent').default('Basic'),
+  relocation: Joi.string().valid('Home District', 'Home State', 'Anywhere in India').default('Home State'),
+  englishComfort: Joi.string().valid('Basic', 'Intermediate', 'Fluent').default('Basic'),
 
   sewaNidhiInterests: Joi.array().items(Joi.string()).default([]),
-  consent:          Joi.boolean().valid(true).required(),
+  consent: Joi.boolean().valid(true).required(),
 });
 
 // --- Fetch exams from Supabase with pre-filtering for scalability ---
@@ -94,13 +94,13 @@ async function loadAllExams() {
   }
   EXAM_CACHE = rows.map(row => ({
     ...(row.metadata || {}),
-    exam_id:          row.exam_id,
-    exam_name:        row.exam_name,
-    conducting_body:  row.conducting_body,
-    career_track:     row.career_track,
-    state_ut:         row.state_ut,
-    website:          row.base_url || row.metadata?.website || null,
-    level:            row.metadata?.level || null,
+    exam_id: row.exam_id,
+    exam_name: row.exam_name,
+    conducting_body: row.conducting_body,
+    career_track: row.career_track,
+    state_ut: row.state_ut,
+    website: row.base_url || row.metadata?.website || null,
+    level: row.metadata?.level || null,
     domicile_required: row.is_state_specific ?? row.metadata?.domicile_required ?? false,
   }));
   console.log(`[recommend] Cached ${EXAM_CACHE.length} exams.`);
@@ -109,7 +109,7 @@ async function loadAllExams() {
 
 // Qualification rank map (mirrors eligibility.js QUAL_RANK)
 const QUAL_RANK_MAP = { 'Class 10': 1, 'Class 12': 2, 'Graduate': 3, 'Post-Graduate': 4 };
-const QUAL_DB_RANK  = { '10': 1, '12': 2, 'graduate': 3, 'post_graduate': 4 };
+const QUAL_DB_RANK = { '10': 1, '12': 2, 'graduate': 3, 'post_graduate': 4 };
 
 /**
  * Returns the subset of exams that CANNOT be ruled out by fast JS checks.
@@ -119,9 +119,9 @@ const QUAL_DB_RANK  = { '10': 1, '12': 2, 'graduate': 3, 'post_graduate': 4 };
 async function fetchPreFilteredExams(profile) {
   const allExams = await loadAllExams();
   const userQualRank = QUAL_RANK_MAP[profile.highestQualification] || 0;
-  const isNonSHAPE1  = profile.medicalCategory && profile.medicalCategory !== 'SHAPE-1';
+  const isNonSHAPE1 = profile.medicalCategory && profile.medicalCategory !== 'SHAPE-1';
   const wantsAnyState = profile.relocation === 'Anywhere in India';
-  const userState    = (profile.stateOfDomicile || '').toLowerCase().trim();
+  const userState = (profile.stateOfDomicile || '').toLowerCase().trim();
 
   return allExams.filter(exam => {
     // 1. Qualification pre-filter: drop exams whose requirement exceeds user's level
@@ -328,21 +328,21 @@ export default async function handler(req, res) {
       skillGaps: summariseSkillGaps(rejected, profile.highestQualification),
       recommendations: diversified.map((r, i) => ({
         rank: i + 1,
-        exam_id:         r.exam.exam_id,
-        exam_name:       r.exam.exam_name,
+        exam_id: r.exam.exam_id,
+        exam_name: r.exam.exam_name,
         conducting_body: r.exam.conducting_body,
-        level:           r.exam.level,
-        state_ut:        r.exam.state_ut,
-        career_track:    r.exam.career_track,
-        website:         r.exam.website,
-        score:           Math.round(r.score * 10) / 10,
-        breakdown:       r.breakdown,
+        level: r.exam.level,
+        state_ut: r.exam.state_ut,
+        career_track: r.exam.career_track,
+        website: r.exam.website,
+        score: Math.round(r.score * 10) / 10,
+        breakdown: r.breakdown,
         eligibilityFlags: {
-          ex_servicemen_quota:  r.exam.ex_servicemen_quota,
-          ncc_bonus:            r.exam.ncc_bonus,
-          physical_required:    r.exam.physical_required,
-          min_qualification:    r.exam.min_qualification,
-          domicile_required:    r.exam.domicile_required,
+          ex_servicemen_quota: r.exam.ex_servicemen_quota,
+          ncc_bonus: r.exam.ncc_bonus,
+          physical_required: r.exam.physical_required,
+          min_qualification: r.exam.min_qualification,
+          domicile_required: r.exam.domicile_required,
         },
       })),
     };

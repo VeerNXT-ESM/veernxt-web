@@ -1127,6 +1127,78 @@ const LearningCenter = () => {
   const topExamName = topExam?.exam_name || searchResults[0]?.name || null;
   const topExamCareerTrack = topExam?.career_track;
 
+  // Shared by "Recommended for you" and "Search Results" so both sections
+  // render the identical card, instead of two copies of this JSX drifting
+  // apart over time.
+  const renderExamCard = (card) => (
+    <div key={card.id} className="lc-exam-card">
+      <div
+        className="lc-card-thumb-wrap"
+        style={{ cursor: 'pointer' }}
+        onClick={() => handleStartCardExam(card)}
+      >
+        <img
+          src={card.image}
+          alt={card.title}
+          className="lc-card-thumb-img"
+          loading="lazy"
+          onError={(e) => {
+            e.target.style.display = 'none';
+            e.target.parentElement.classList.add('lc-thumb-fallback');
+          }}
+        />
+        <div
+          className="lc-card-badge"
+          style={{ backgroundColor: card.badgeBg, color: card.badgeColor }}
+        >
+          {card.badge}
+        </div>
+        <button
+          type="button"
+          className={`lc-card-bookmark-btn ${bookmarkedIds.has(card.id) ? 'bookmarked' : ''}`}
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleBookmark(card.id);
+          }}
+          aria-label="Bookmark course"
+        >
+          <Bookmark size={15} fill={bookmarkedIds.has(card.id) ? '#466931' : 'none'} />
+        </button>
+      </div>
+
+      <div className="lc-card-body">
+        <h3
+          className="lc-card-title"
+          title={card.title}
+          style={{ cursor: 'pointer' }}
+          onClick={() => handleStartCardExam(card)}
+        >
+          {card.title}
+        </h3>
+        <p className="lc-card-conductor">{card.conductingBody}</p>
+
+        <div className="lc-card-meta-row">
+          {card.resourcesCount != null && (
+            <span className="lc-card-meta-item">
+              <FileText size={13} /> {card.resourcesCount} resources
+            </span>
+          )}
+          <span className="lc-card-meta-item">
+            <Layers size={13} /> {card.type}
+          </span>
+        </div>
+
+        <button
+          type="button"
+          className="lc-card-start-btn"
+          onClick={() => handleStartCardExam(card)}
+        >
+          Start Learning
+        </button>
+      </div>
+    </div>
+  );
+
   return (
     <div className="learning-wrapper">
       <div className="learning-layout-full">
@@ -1149,7 +1221,10 @@ const LearningCenter = () => {
 
               <form
                 className="lc-hero-search-bar"
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  document.getElementById('lc-search-results-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
                 role="search"
               >
                 <div className="lc-hero-search-input-wrap">
@@ -1582,79 +1657,47 @@ const LearningCenter = () => {
                   </div>
                 ) : (
                 <div className="lc-cards-carousel" ref={recommendedScrollRef}>
-                  {recommendedCards.map((card) => {
-                    return (
-                      <div key={card.id} className="lc-exam-card">
-                        <div
-                          className="lc-card-thumb-wrap"
-                          style={{ cursor: 'pointer' }}
-                          onClick={() => handleStartCardExam(card)}
-                        >
-                          <img
-                            src={card.image}
-                            alt={card.title}
-                            className="lc-card-thumb-img"
-                            loading="lazy"
-                            onError={(e) => {
-                              e.target.style.display = 'none';
-                              e.target.parentElement.classList.add('lc-thumb-fallback');
-                            }}
-                          />
-                          <div
-                            className="lc-card-badge"
-                            style={{ backgroundColor: card.badgeBg, color: card.badgeColor }}
-                          >
-                            {card.badge}
-                          </div>
-                          <button
-                            type="button"
-                            className={`lc-card-bookmark-btn ${bookmarkedIds.has(card.id) ? 'bookmarked' : ''}`}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              toggleBookmark(card.id);
-                            }}
-                            aria-label="Bookmark course"
-                          >
-                            <Bookmark size={15} fill={bookmarkedIds.has(card.id) ? '#466931' : 'none'} />
-                          </button>
-                        </div>
-
-                        <div className="lc-card-body">
-                          <h3
-                            className="lc-card-title"
-                            title={card.title}
-                            style={{ cursor: 'pointer' }}
-                            onClick={() => handleStartCardExam(card)}
-                          >
-                            {card.title}
-                          </h3>
-                          <p className="lc-card-conductor">{card.conductingBody}</p>
-
-                          <div className="lc-card-meta-row">
-                            {card.resourcesCount != null && (
-                              <span className="lc-card-meta-item">
-                                <FileText size={13} /> {card.resourcesCount} resources
-                              </span>
-                            )}
-                            <span className="lc-card-meta-item">
-                              <Layers size={13} /> {card.type}
-                            </span>
-                          </div>
-
-                          <button
-                            type="button"
-                            className="lc-card-start-btn"
-                            onClick={() => handleStartCardExam(card)}
-                          >
-                            Start Learning
-                          </button>
-                        </div>
-                      </div>
-                    );
-                  })}
+                  {recommendedCards.map(renderExamCard)}
                 </div>
                 )}
               </div>
+
+              {/* ── Search Results Section ──
+                  Appears once the person has actually searched or filtered
+                  (hero search box, or any sidebar filter) -- see
+                  handleSubjectTileClick / handlePopularExamClick /
+                  handleResumeCourse / handleStartCardExam, which all scroll
+                  here by id after setting a filter. */}
+              {filtersActive && (
+                <div className="lc-section-box" id="lc-search-results-section">
+                  <div className="lc-section-header">
+                    <div className="lc-section-header-left">
+                      <h2 className="lc-section-title">Search Results</h2>
+                      <p className="lc-section-subtitle">
+                        {searchResults.length} exam{searchResults.length === 1 ? '' : 's'} found
+                      </p>
+                    </div>
+                    <div className="lc-section-header-right">
+                      <button type="button" className="lc-view-all-link" onClick={handleClearFilters}>
+                        Clear filters
+                      </button>
+                    </div>
+                  </div>
+
+                  {searchResults.length === 0 ? (
+                    <div className="filter-empty-note">
+                      No exams match your search. Try a different keyword or{' '}
+                      <button type="button" className="lc-view-all-link" style={{ display: 'inline', padding: 0 }} onClick={handleClearFilters}>
+                        clear filters
+                      </button>.
+                    </div>
+                  ) : (
+                    <div className="lc-search-results-grid">
+                      {searchResults.map(examToRecommendedCard).map(renderExamCard)}
+                    </div>
+                  )}
+                </div>
+              )}
 
               {/* ── Continue Learning Section ── */}
               <div className="lc-section-box">

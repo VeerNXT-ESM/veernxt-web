@@ -3,6 +3,9 @@ import { Search, X, ChevronDown, ChevronRight } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import { examsAlreadyHavingResource, loadBookLinks } from '../../lib/resourceDuplicates';
 import Select from '../../components/ui/Select';
+import { CENTRAL_EXAM_CATEGORIES } from '../../lib/centralExamCategories';
+import { STATE_EXAM_CATEGORIES } from '../../lib/stateExamCategories';
+import { UT_EXAM_CATEGORIES } from '../../lib/utExamCategories';
 
 // Blue marks everything that is already linked to the book, so it's easy to tell
 // apart from the rest of the list. rgba tints so it reads on dark and light admin themes.
@@ -41,6 +44,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   // Picking one sets `level` to match and clears the other.
   const [examState, setExamState] = useState('');
   const [examUt, setExamUt] = useState('');
+  const [conductingBody, setConductingBody] = useState('');
   const [allExams, setAllExams] = useState([]);
   const [loading, setLoading] = useState(true);
   const [existingExamIds, setExistingExamIds] = useState([]);
@@ -56,19 +60,38 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   // Total exam catalog is ~1,500-2,000 rows -- comfortably one preload, no
   // pagination needed (same reasoning AddResourceMapDrawer's books-list
   // preload uses on the other side of this same table).
+  //
+  // ...except a single select() still silently undercounts: PostgREST caps
+  // a response at 1000 rows regardless of the client's own .limit(), so an
+  // ordered-by-name fetch of ~1,587 rows dropped every exam whose name
+  // sorted past row 1000 -- e.g. every "SSC ..." exam, which is why SSC
+  // appeared as a selectable Category but never actually listed anything.
+  // Same bug CategoriesPage.jsx's own fetchExamRows already had to page
+  // around; mirrored here.
   useEffect(() => {
     let cancelled = false;
+    const fetchAllExams = async () => {
+      const pageSize = 1000;
+      let all = [];
+      for (let from = 0; ; from += pageSize) {
+        const { data, error } = await supabase
+          .from('lc_exams')
+          .select('id, name, category, conducting_body_id, conducting_body:lc_conducting_bodies(id, name), region:lc_regions(name, level)')
+          .order('name')
+          .range(from, from + pageSize - 1);
+        if (error) return { data: null, error };
+        all = all.concat(data || []);
+        if (!data || data.length < pageSize) return { data: all, error: null };
+      }
+    };
     (async () => {
       setLoading(true);
       try {
-        const [{ data: exams }, links] = await Promise.all([
-          supabase
-            .from('lc_exams')
-            .select('id, name, category, conducting_body:lc_conducting_bodies(name), region:lc_regions(name, level)')
-            .order('name')
-            .limit(2000),
+        const [{ data: exams, error: fetchErr }, links] = await Promise.all([
+          fetchAllExams(),
           loadBookLinks(book),
         ]);
+        if (fetchErr) throw fetchErr;
         if (!cancelled) {
           setAllExams(exams || []);
           setExistingExamIds(links.examIds);
@@ -90,7 +113,18 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   // shared column name).
   const categoryOptions = useMemo(() => {
     const pool = level ? allExams.filter((e) => e.region?.level === level) : allExams;
-    return [...new Set(pool.map((e) => (e.category || '').trim()).filter(Boolean))].sort();
+    const live = new Set(pool.map((e) => (e.category || '').trim()).filter(Boolean));
+    // Union with the canonical Central/State/UT taxonomy (src/lib/*ExamCategories.js
+    // -- the same source CategoriesPage.jsx's own Level filter uses) so a real
+    // category like "SSC" is always selectable here even when the exam pool
+    // currently visible (e.g. a sparsely-tagged level) doesn't yet contain one.
+    const canonical =
+      level === 'state' ? STATE_EXAM_CATEGORIES :
+      level === 'ut' ? UT_EXAM_CATEGORIES :
+      level === 'central' ? CENTRAL_EXAM_CATEGORIES :
+      [...CENTRAL_EXAM_CATEGORIES, ...STATE_EXAM_CATEGORIES, ...UT_EXAM_CATEGORIES];
+    canonical.forEach((c) => live.add(c));
+    return [...live].sort();
   }, [allExams, level]);
 
   // State/UT names -- derived from the same preloaded exams list rather than
@@ -106,6 +140,18 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     return [...new Set(pool.map((e) => e.region?.name).filter(Boolean))].sort();
   }, [allExams]);
 
+  // Conducting Body names -- same live-derived, level-scoped pattern as
+  // Category/State/UT above, deduped by id (a body's name alone isn't
+  // guaranteed unique) the same way ExamsPage.jsx's own body filter does.
+  const conductingBodyOptions = useMemo(() => {
+    const pool = level ? allExams.filter((e) => e.region?.level === level) : allExams;
+    const seen = new Map();
+    for (const e of pool) {
+      if (e.conducting_body?.id && !seen.has(e.conducting_body.id)) seen.set(e.conducting_body.id, e.conducting_body.name);
+    }
+    return [...seen.entries()].map(([id, name]) => ({ id, name })).sort((a, b) => a.name.localeCompare(b.name));
+  }, [allExams, level]);
+
   const examRegion = examState || examUt;
 
   const results = useMemo(() => {
@@ -113,6 +159,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     if (level) pool = pool.filter((e) => e.region?.level === level);
     if (examCategory) pool = pool.filter((e) => (e.category || '').trim() === examCategory);
     if (examRegion) pool = pool.filter((e) => e.region?.name === examRegion);
+    if (conductingBody) pool = pool.filter((e) => e.conducting_body?.id === conductingBody);
     const q = search.trim().toLowerCase();
     if (q) pool = pool.filter((e) => e.name.toLowerCase().includes(q) || e.conducting_body?.name?.toLowerCase().includes(q));
     // Already-linked exams first so a book with hundreds of candidates doesn't
@@ -121,7 +168,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     // out from under the cursor; it moves to the top once saved and reopened.
     const linked = new Set(existingExamIds);
     return [...pool].sort((a, b) => (linked.has(b.id) - linked.has(a.id)) || a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
-  }, [allExams, existingExamIds, level, examCategory, examRegion, search]);
+  }, [allExams, existingExamIds, level, examCategory, examRegion, conductingBody, search]);
 
   // `results` is already linked-first (see above); split it so the linked
   // block can be collapsed on its own.
@@ -132,6 +179,17 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   const toggle = (examId) => setSelected((prev) => {
     const next = new Set(prev);
     if (next.has(examId)) next.delete(examId); else next.add(examId);
+    return next;
+  });
+
+  // Both scoped to the currently visible/filtered list ("results"), not the
+  // whole catalog -- so narrowing to a Category/Body before selecting all
+  // doesn't select exams the admin can't even see, and Deselect All doesn't
+  // wipe out selections made earlier under a different filter.
+  const selectAllVisible = () => setSelected((prev) => new Set([...prev, ...results.map((e) => e.id)]));
+  const deselectAllVisible = () => setSelected((prev) => {
+    const next = new Set(prev);
+    results.forEach((e) => next.delete(e.id));
     return next;
   });
 
@@ -174,7 +232,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
 
   const pickExamState = (name) => { setExamState(name); setExamUt(''); if (name) setLevel('state'); };
   const pickExamUt = (name) => { setExamUt(name); setExamState(''); if (name) setLevel('ut'); };
-  const handleClearFilters = () => { setSearch(''); setLevel(''); setExamCategory(''); setExamState(''); setExamUt(''); };
+  const handleClearFilters = () => { setSearch(''); setLevel(''); setExamCategory(''); setExamState(''); setExamUt(''); setConductingBody(''); };
 
   const renderExamRow = (exam, inLinkedSection = false) => {
     const wasLinked = linkedSet.has(exam.id);
@@ -243,7 +301,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                 type="button"
                 className={`lc-btn ${level === id ? 'primary' : ''}`}
                 style={{ padding: '0.3rem 0.65rem', fontSize: '0.75rem', borderRadius: '6px' }}
-                onClick={() => { setLevel(id); setExamCategory(''); setExamState(''); setExamUt(''); }}
+                onClick={() => { setLevel(id); setExamCategory(''); setExamState(''); setExamUt(''); setConductingBody(''); }}
               >
                 {label}
               </button>
@@ -255,6 +313,15 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                 onChange={(e) => setExamCategory(e.target.value)}
                 placeholder={`All Categories (${categoryOptions.length})`}
                 options={[{ value: '', label: 'All Categories' }, ...categoryOptions.map((c) => ({ value: c, label: c }))]}
+              />
+            </div>
+            <div style={{ minWidth: 170 }}>
+              <Select
+                searchable
+                value={conductingBody}
+                onChange={(e) => setConductingBody(e.target.value)}
+                placeholder={`All Conducting Bodies (${conductingBodyOptions.length})`}
+                options={[{ value: '', label: 'All Conducting Bodies' }, ...conductingBodyOptions.map((b) => ({ value: b.id, label: b.name }))]}
               />
             </div>
             <div style={{ minWidth: 150 }}>
@@ -277,7 +344,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
             </div>
           </div>
 
-          {(search || level || examCategory || examState || examUt) && (
+          {(search || level || examCategory || examState || examUt || conductingBody) && (
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', fontSize: '0.75rem', color: 'var(--admin-text-muted)', padding: '0.2rem 0' }}>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', alignItems: 'center' }}>
                 <span>Filters:</span>
@@ -291,6 +358,12 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                   <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                     {examCategory}
                     <X size={11} style={{ cursor: 'pointer' }} onClick={() => setExamCategory('')} />
+                  </span>
+                )}
+                {conductingBody && (
+                  <span className="lc-status-badge" style={{ background: 'var(--surface-alt)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    {conductingBodyOptions.find((b) => b.id === conductingBody)?.name || 'Conducting Body'}
+                    <X size={11} style={{ cursor: 'pointer' }} onClick={() => setConductingBody('')} />
                   </span>
                 )}
                 {examState && (
@@ -328,8 +401,28 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
             <p className="lc-muted-note" style={{ margin: '1rem 0' }}>Loading exams…</p>
           ) : (
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontSize: '0.75rem', color: 'var(--admin-text-muted)' }}>
-                <span>{results.length} exam{results.length === 1 ? '' : 's'}</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', fontSize: '0.75rem', color: 'var(--admin-text-muted)' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  <span>{results.length} exam{results.length === 1 ? '' : 's'}</span>
+                  {results.length > 0 && (
+                    <>
+                      <button
+                        type="button"
+                        onClick={selectAllVisible}
+                        style={{ background: 'none', border: 'none', color: 'var(--admin-accent)', cursor: 'pointer', fontSize: '0.75rem', textDecoration: 'underline', padding: 0 }}
+                      >
+                        Select all
+                      </button>
+                      <button
+                        type="button"
+                        onClick={deselectAllVisible}
+                        style={{ background: 'none', border: 'none', color: 'var(--admin-accent)', cursor: 'pointer', fontSize: '0.75rem', textDecoration: 'underline', padding: 0 }}
+                      >
+                        Deselect all
+                      </button>
+                    </>
+                  )}
+                </span>
                 {level && <span>Filtered by: {LEVEL_PILLS.find((p) => p.id === level)?.label}</span>}
               </div>
               {linkedResults.length > 0 && (
