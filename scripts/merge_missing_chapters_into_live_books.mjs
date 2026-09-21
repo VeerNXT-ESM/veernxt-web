@@ -41,6 +41,7 @@ import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
 import { createClient } from '@supabase/supabase-js';
 import { getS3Client, uploadToR2 } from './lib/ingest-drive-content.js';
 import { parseDocxToSemanticModelNode } from './lib/docxParser.mjs';
@@ -60,7 +61,7 @@ const R2_PUBLIC_URL = process.env.R2_PUBLIC_URL;
 // copy is the storage_base_url with the most resource rows among rows whose
 // title AND source_file match (titles alone are not safe: 999 live rows are
 // titled "Descriptive Writing Bank Exams" but hold the REASONING book).
-const BOOKS = [
+export const BOOKS = [
   { key: 'general-knowledge', category: 'Guide', title: 'GENERAL KNOWLEDGE', srcLike: '%GENERAL KNOWLEDGE%', srcFile: 'Cluster_062_GENERAL KNOWLEDGE.docx' },
   { key: 'gk-gs', category: 'Precis', title: 'GK-GS', srcLike: '%SSC COMPLETE GK%', srcFile: 'Cluster_001_SSC COMPLETE GK.docx' },
   { key: 'iti', category: 'Guide', title: 'ITI Technical Trade Literacy', srcLike: '%ITI_Technical_Trade_Literacy%', srcFile: 'Cluster_058_ITI_Technical_Trade_Literacy_GUIDE BOOK.docx' },
@@ -71,7 +72,7 @@ const BOOKS = [
 // Blocks the plain parser produces; anything else in a live chapter is enrichment.
 const ORIGINAL_TYPES = new Set(['heading', 'paragraph', 'table', 'list', 'numberedList', 'callout']);
 const IMG_EXT = { 'image/png': 'png', 'image/jpeg': 'jpg', 'image/jpg': 'jpg', 'image/gif': 'gif', 'image/webp': 'webp', 'image/svg+xml': 'svg' };
-const IMG_CT = { png: 'image/png', jpg: 'image/jpeg', gif: 'image/gif', webp: 'image/webp', svg: 'image/svg+xml' };
+export const IMG_CT = { png: 'image/png', jpg: 'image/jpeg', gif: 'image/gif', webp: 'image/webp', svg: 'image/svg+xml' };
 const MATCH_WINDOW = 2; // a source chapter may only match a live chapter this close to the current position
 
 const norm = (s) => String(s).toLowerCase().replace(/\b(ssc|rrb)\b/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
@@ -84,7 +85,7 @@ function stringsOf(o, out = []) {
   else if (typeof o === 'object') for (const [k, v] of Object.entries(o)) if (k !== 'id' && k !== 'type' && k !== 'level') stringsOf(v, out);
   return out;
 }
-const textOf = (blocks) => stringsOf(blocks).join(' ').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ');
+export const textOf = (blocks) => stringsOf(blocks).join(' ').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ');
 
 // Same edit the branded-stripped live copies show: the token is deleted, nothing else changes.
 function deleteBrandWords(value) {
@@ -98,13 +99,25 @@ function deleteBrandWords(value) {
   return value;
 }
 
-async function fetchJson(url) {
-  const res = await fetch(`${url}${url.includes('?') ? '&' : '?'}t=${Date.now()}`, { cache: 'no-store' });
+// R2's public r2.dev endpoint rate-limits bursts (HTTP 429), so reads retry with backoff.
+export async function fetchRetry(url, init) {
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(url, init);
+    if ((res.status === 429 || res.status >= 500) && attempt < 6) {
+      await new Promise((r) => setTimeout(r, 1000 * 2 ** attempt));
+      continue;
+    }
+    return res;
+  }
+}
+
+export async function fetchJson(url) {
+  const res = await fetchRetry(`${url}${url.includes('?') ? '&' : '?'}t=${Date.now()}`, { cache: 'no-store' });
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
   return res.json();
 }
 
-async function pool(items, n, fn) {
+export async function pool(items, n, fn) {
   const out = new Array(items.length);
   let i = 0;
   await Promise.all(Array.from({ length: n }, async () => { while (i < items.length) { const k = i++; out[k] = await fn(items[k], k); } }));
@@ -127,7 +140,7 @@ function findSourceFile(name) {
 // Same rule BooksPage/save-resource use: a book is archived when its rows are
 // Draft or Archived. A copy (storage_base_url) counts as active when at least one
 // of its rows is neither -- this script only ever touches active copies.
-const isArchivedStatus = (st) => ['draft', 'archived'].includes(String(st || '').toLowerCase());
+export const isArchivedStatus = (st) => ['draft', 'archived'].includes(String(st || '').toLowerCase());
 
 async function pickLiveCopy(b) {
   const { data, error } = await supabase
@@ -156,7 +169,7 @@ function r2Prefix(url) {
   return url.slice(base.length).replace(/\/+$/, '');
 }
 
-async function planBook(b) {
+export async function planBook(b) {
   const live = await pickLiveCopy(b);
   if (!live) return { b, skip: 'no live copy found' };
   if (live.archivedOnly) return { b, skip: `ARCHIVED -- every matching copy is Draft/Archived (${live.all.map((g) => `${g.rows} row(s) ${JSON.stringify(g.statuses)}`).join('; ')}); not touched` };
@@ -164,7 +177,7 @@ async function planBook(b) {
   if (!srcPath) return { b, skip: `source docx not found: ${b.srcFile}` };
 
   const meta = await fetchJson(`${live.url}metadata.json`);
-  const liveChapters = await pool(meta.chapters || [], 16, async (c) => ({ meta: c, json: await fetchJson(`${live.url}${c.file_name}`) }));
+  const liveChapters = await pool(meta.chapters || [], 6, async (c) => ({ meta: c, json: await fetchJson(`${live.url}${c.file_name}`) }));
   // Keep the pictures in inserted chapters: every embedded image is stored next to the book
   // (<prefix>/images/image_<hash>.<ext>, the layout the live books already use). Only the images
   // referenced by chapters we actually insert get uploaded.
@@ -306,4 +319,7 @@ async function main() {
   if (!EXECUTE) console.log('\nDry run only -- re-run with --execute to write.');
 }
 
-main().catch((err) => { console.error('Fatal error:', err); process.exit(1); });
+// Only run when executed directly (create_2026_book_copies.mjs imports planBook from here).
+if (process.argv[1] && path.resolve(process.argv[1]).toLowerCase() === fileURLToPath(import.meta.url).toLowerCase()) {
+  main().catch((err) => { console.error('Fatal error:', err); process.exit(1); });
+}
