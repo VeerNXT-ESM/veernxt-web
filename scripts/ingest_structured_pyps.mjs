@@ -2,9 +2,19 @@ import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
 import { createClient } from '@supabase/supabase-js';
 
-const STRUCTURED_PYPS_DIR = 'K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_PYPS_STRUCTURED';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+// Content team now drops structured PYP JSON directly into the repo
+// (FINAL_PYPS_STRUCTURED, 754 files) instead of the old K:-drive staging
+// path -- that K: drive folder is now empty (0 files), same relocation
+// pattern books went through into public/books/. Verified 2026-09-13: all
+// 754 files already ingested (pyq_papers/pyq_questions row-for-row match,
+// every paper has real questions) -- moved OUT of public/ since it's pure
+// local staging input for this script, not something the deployed app
+// needs to serve (same reasoning as public/books's removal).
+const STRUCTURED_PYPS_DIR = path.join(__dirname, '..', 'FINAL_PYPS_STRUCTURED');
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 const EXECUTE = process.argv.includes('--execute');

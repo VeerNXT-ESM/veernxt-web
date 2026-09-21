@@ -4,8 +4,8 @@ import re
 import json
 import fitz
 import time
-import google.generativeai as genai
-from concurrent.futures import ProcessPoolExecutor, as_completed
+import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
 INPUT_DIR = r"K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\MASTER_PYPS"
@@ -24,9 +24,7 @@ if not api_key:
     print("Error: GEMINI_API_KEY not found in .env")
     sys.exit(1)
 
-genai.configure(api_key=api_key)
-
-# MuPDF warnings suppression
+# Suppress MuPDF warnings
 try:
     fitz.TOOLS.mupdf_display_errors(False)
 except Exception:
@@ -66,35 +64,11 @@ def extract_pdf_text(pdf_path):
     doc.close()
     return "\n\n=== NEW PAGE ===\n\n".join(full_text)
 
-def process_single_pdf_manifest(pdf_path, api_key, output_dir):
-    """
-    Worker function to structure a single PDF.
-    Runs inside a child process.
-    """
-    try:
-        fitz.TOOLS.mupdf_display_errors(False)
-    except:
-        pass
-        
-    rel_path = os.path.relpath(pdf_path, INPUT_DIR)
-    new_name = derive_rebranded_name(rel_path)
-    output_path = os.path.join(output_dir, new_name)
+def query_gemini_flex_rest(raw_text, api_key):
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key={api_key}"
+    headers = {"Content-Type": "application/json"}
     
-    # Resumable skip
-    if os.path.exists(output_path):
-        return {"status": "skipped", "file": rel_path, "out": new_name}
-        
-    try:
-        # Configure Gemini inside worker process
-        genai.configure(api_key=api_key)
-        
-        # 1. Extract text
-        raw_text = extract_pdf_text(pdf_path)
-        if len(raw_text.strip()) < 50:
-            return {"status": "error", "file": rel_path, "error": "Extracted text is too short or empty."}
-            
-        # 2. Query Gemini
-        prompt = f"""
+    prompt = f"""
 You are an expert exam content compiler. Your task is to extract all questions, multiple-choice options, correct answers, and explanations from the provided exam paper text and structure them into a valid JSON document.
 
 Do NOT summarize the questions. Maintain the exact text.
@@ -132,14 +106,55 @@ Here is the raw text of the exam paper:
 {raw_text}
 ---
 """
-        model = genai.GenerativeModel("gemini-3.6-flash")
-        response = model.generate_content(
-            prompt,
-            generation_config={"response_mime_type": "application/json"}
-        )
+
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "serviceTier": "flex",
+        "generationConfig": {
+            "responseMimeType": "application/json"
+        }
+    }
+
+    max_retries = 5
+    for attempt in range(1, max_retries + 1):
+        try:
+            res = requests.post(url, json=payload, headers=headers, timeout=300)
+            if res.status_code == 200:
+                data = res.json()
+                # Parse generated response text
+                text_out = data['candidates'][0]['content']['parts'][0]['text']
+                # Validate it is parseable JSON
+                return json.loads(text_out)
+            elif res.status_code in [429, 500, 503]:
+                print(f"      [Gemini REST] Received {res.status_code}. Retrying in 15s (Attempt {attempt}/{max_retries})...")
+                time.sleep(15)
+            else:
+                raise Exception(f"HTTP {res.status_code}: {res.text}")
+        except Exception as e:
+            if attempt == max_retries:
+                raise e
+            print(f"      [Gemini REST] Error: {e}. Retrying in 15s (Attempt {attempt}/{max_retries})...")
+            time.sleep(15)
+
+    raise Exception("Max retries reached without success.")
+
+def process_single_pdf(pdf_path, api_key, output_dir):
+    rel_path = os.path.relpath(pdf_path, INPUT_DIR)
+    new_name = derive_rebranded_name(rel_path)
+    output_path = os.path.join(output_dir, new_name)
+    
+    # Resumable skip
+    if os.path.exists(output_path):
+        return {"status": "skipped", "file": rel_path, "out": new_name}
         
-        # Validate output is parseable JSON
-        structured_json = json.loads(response.text)
+    try:
+        # 1. Extract text
+        raw_text = extract_pdf_text(pdf_path)
+        if len(raw_text.strip()) < 50:
+            return {"status": "error", "file": rel_path, "error": "Extracted text is too short or empty."}
+            
+        # 2. Query Gemini Flex REST
+        structured_json = query_gemini_flex_rest(raw_text, api_key)
         
         # 3. Save output
         with open(output_path, "w", encoding="utf-8") as f:
@@ -150,7 +165,7 @@ Here is the raw text of the exam paper:
         return {"status": "error", "file": rel_path, "error": str(e)}
 
 def main():
-    print("=== VEERNXT PYP TEXT RECONSTRUCTION PIPELINE ===")
+    print("=== VEERNXT PYP TEXT RECONSTRUCTION PIPELINE (FLEX TIER REST) ===")
     print(f"Input Directory:  {INPUT_DIR}")
     print(f"Output Directory: {OUTPUT_DIR}")
     
@@ -176,18 +191,37 @@ def main():
         print("No PDF files found.")
         sys.exit(0)
 
-    # Process in parallel using a ProcessPoolExecutor
-    # 4 workers is a safe default to avoid rate limiting on the Gemini key
+    # Process in parallel using a ThreadPoolExecutor (non-blocking network IO)
+    # 4 workers runs quickly while avoiding hitting standard service-role resource limits
     max_workers = 4
-    print(f"Starting ProcessPoolExecutor with {max_workers} workers...")
+    print(f"Starting ThreadPoolExecutor with {max_workers} worker threads...")
     
     success_count = 0
     skipped_count = 0
     error_count = 0
     start_time = time.time()
     
-    with ProcessPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(process_single_pdf_manifest, pdf, api_key, OUTPUT_DIR): pdf for pdf in pdf_files}
+    # Filter out already processed files in the main thread first
+    pending_files = []
+    for pdf in pdf_files:
+        rel_path = os.path.relpath(pdf, INPUT_DIR)
+        new_name = derive_rebranded_name(rel_path)
+        output_path = os.path.join(OUTPUT_DIR, new_name)
+        if os.path.exists(output_path):
+            skipped_count += 1
+        else:
+            pending_files.append(pdf)
+            
+    print(f"Skipped {skipped_count} already structured papers.", flush=True)
+    print(f"Pending papers to process: {len(pending_files)}", flush=True)
+    
+    total_pending = len(pending_files)
+    if total_pending == 0:
+        print("All papers have already been structured!", flush=True)
+        sys.exit(0)
+        
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(process_single_pdf, pdf, api_key, OUTPUT_DIR): pdf for pdf in pending_files}
         
         for idx, future in enumerate(as_completed(futures), 1):
             res = future.result()
@@ -195,22 +229,20 @@ def main():
             
             if status == "success":
                 success_count += 1
-                print(f"[{idx}/{total_files}] STRUCTURED: {res['out']}")
+                print(f"[{idx}/{total_pending}] STRUCTURED: {res['out']}", flush=True)
             elif status == "skipped":
                 skipped_count += 1
-                if idx % 50 == 0 or idx == total_files:
-                    print(f"[{idx}/{total_files}] (Skipped/Existing: {skipped_count} files)")
             elif status == "error":
                 error_count += 1
-                print(f"[{idx}/{total_files}] ERROR on {res['file']}: {res['error']}")
+                print(f"[{idx}/{total_pending}] ERROR on {res['file']}: {res['error']}", flush=True)
                 
     elapsed_time = time.time() - start_time
-    print("\n=== PIPELINE SUMMATION ===")
-    print(f"Total Files Processed: {total_files}")
-    print(f"  Successfully Structured: {success_count}")
-    print(f"  Skipped (Already Done):  {skipped_count}")
-    print(f"  Failed with Errors:      {error_count}")
-    print(f"Elapsed Time: {elapsed_time:.2f} seconds ({elapsed_time/60:.2f} minutes)")
+    print("\n=== PIPELINE SUMMATION ===", flush=True)
+    print(f"Total Files Processed: {total_files}", flush=True)
+    print(f"  Successfully Structured: {success_count}", flush=True)
+    print(f"  Skipped (Already Done):  {skipped_count}", flush=True)
+    print(f"  Failed with Errors:      {error_count}", flush=True)
+    print(f"Elapsed Time: {elapsed_time:.2f} seconds ({elapsed_time/60:.2f} minutes)", flush=True)
 
 if __name__ == "__main__":
     main()

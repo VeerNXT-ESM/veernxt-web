@@ -9,7 +9,7 @@ import io
 import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
-INPUT_DIR = r"K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\MASTER PYP_superseded_20260822"
+INPUT_DIR = r"K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\MASTER_PYPS"
 MANIFEST_PATH = r"K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\pyp_metadata_manifest.json"
 TESSERACT_CMD = r"K:\I DRIVE\Tesseract-OCR\tesseract.exe"
 

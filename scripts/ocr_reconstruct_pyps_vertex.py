@@ -1,33 +1,15 @@
 """
 scripts/ocr_reconstruct_pyps_vertex.py
 
-Structures the ~424 scanned PYP PDFs that reconstruct_all_pyps_flex.py
+Structures the ~414 scanned PYP PDFs that reconstruct_all_pyps_flex.py
 couldn't handle (its PyMuPDF-only text extraction bails before ever
 calling Gemini when a page has no embedded text layer). This script
 OCRs those PDFs with Tesseract (same setup as extract_pyps_manifest.py)
-then sends the full document text to Gemini via Vertex AI -- one call
-per document, same schema/prompt as reconstruct_all_pyps_flex.py (full
-original schema with correct_option/explanation, matching the 530
-papers already uploaded), using Application Default Credentials (the
-user authenticated via `gcloud auth application-default login` against
-the VeerNXT GCP project).
+then sends the page texts in chunks to Gemini via Developer API --
+using the GEMINI_API_KEY from .env and the flex tier to minimize cost.
 
-Two prior approaches were tried and rejected first (see git history /
-conversation): per-page rule-based regex parsing failed on real OCR
-noise, and per-page segmentation via Groq's free tier hit an 8000
-tokens/min ceiling that made a reliable multi-day run impractical.
-Going back to one-call-per-document (like the original pipeline) with
-a real Gemini model via a paid GCP project sidesteps both problems.
-
-The actual API call shells out to `curl` rather than using Python's
-`requests` library -- an unexplained multi-minute hang was observed
-with `requests.post` against this exact endpoint, while curl reached
-it reliably in ~2s in direct testing. Not worth debugging further given
-this needs to run unattended for hours.
-
-Output goes to the same FINAL_PYPS_STRUCTURED directory, same JSON
-shape and filename convention as reconstruct_all_pyps_flex.py, so the
-existing ingest_structured_pyps.mjs picks these up unchanged.
+No question solving: correct_option is set to null, explanation is set to "".
+Subject mapping: categorizes questions under correct subject section_names.
 """
 
 import os
@@ -38,34 +20,39 @@ import time
 import subprocess
 import fitz
 import pytesseract
-import google.auth
-import google.auth.transport.requests
 from PIL import Image
 import io
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
-INPUT_DIR = r"K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\MASTER PYP_superseded_20260822"
+INPUT_DIR = r"K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\MASTER_PYPS"
 OUTPUT_DIR = r"K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\FINAL_PYPS_STRUCTURED"
 MANIFEST_PATH = r"K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\pyp_metadata_manifest.json"
 TESSERACT_CMD = r"K:\I DRIVE\Tesseract-OCR\tesseract.exe"
+ENV_PATH = r"K:\H DRIVE\Quantum Climb\APPS\VeerNXT\VeerNXT Main Repo\VeerNXT APP\veernxt-web\.env"
 
-GCP_PROJECT = "gen-lang-client-0835887886"
-GCP_LOCATION = "us-central1"
-GCP_MODEL = "gemini-2.5-flash"
-VERTEX_URL = (
-    f"https://{GCP_LOCATION}-aiplatform.googleapis.com/v1/projects/{GCP_PROJECT}"
-    f"/locations/{GCP_LOCATION}/publishers/google/models/{GCP_MODEL}:generateContent"
-)
+# Load Gemini API Key
+api_key = None
+if os.path.exists(ENV_PATH):
+    with open(ENV_PATH, "r", encoding="utf-8") as f:
+        for line in f:
+            if line.startswith("GEMINI_API_KEY="):
+                api_key = line.split("=", 1)[1].strip()
+
+if not api_key:
+    print("Error: GEMINI_API_KEY not found in .env")
+    sys.exit(1)
+
+GEMINI_MODEL = "gemini-3.6-flash"
+GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={api_key}"
 
 pytesseract.pytesseract.tesseract_cmd = TESSERACT_CMD
 
-PROMPT_TEMPLATE = """You are an expert exam content compiler. Your task is to extract all questions, multiple-choice options, correct answers, and explanations from the provided exam paper text and structure them into a valid JSON document.
+PROMPT_TEMPLATE = """You are an expert exam content compiler. Your task is to extract all questions and multiple-choice options from the provided exam paper text and structure them into a valid JSON document.
 
-This text was extracted via OCR from a scanned PDF and may contain typos/noise -- clean up obvious OCR errors where you can, but do NOT invent content that isn't implied by the text.
+Do NOT solve or answer the questions, and do NOT write explanations. For every question, set "correct_option" to null and "explanation" to "" in the JSON response.
 
 Do NOT summarize the questions. Maintain the exact text.
-If the document contains answers at the end, match them to the correct questions.
-If no explanation is in the source text, write a brief, highly professional explanation of why the correct option is right.
+For each group of questions, identify the subject/section of the questions and group them under the correct "section_name" (e.g., General Intelligence & Reasoning, Quantitative Aptitude, General Awareness, English Language, Hindi Language, Law & Constitution, etc.). If the exam paper only has a single subject, group all questions under that subject's name.
 
 Return ONLY a JSON object conforming to the following structure:
 {{
@@ -74,7 +61,7 @@ Return ONLY a JSON object conforming to the following structure:
   }},
   "sections": [
     {{
-      "section_name": "Subject/Section Name (e.g., General Intelligence & Reasoning)",
+      "section_name": "Subject/Section Name",
       "questions": [
         {{
           "question_number": 1,
@@ -85,8 +72,8 @@ Return ONLY a JSON object conforming to the following structure:
             "C) Option C text",
             "D) Option D text"
           ],
-          "correct_option": "B",
-          "explanation": "Clear, step-by-step logical explanation..."
+          "correct_option": null,
+          "explanation": ""
         }}
       ]
     }}
@@ -95,7 +82,7 @@ Return ONLY a JSON object conforming to the following structure:
 
 If the text has no readable exam questions at all, return {{"metadata": {{"title": "UNREADABLE"}}, "sections": []}}.
 
-Here is the raw OCR text of the exam paper:
+Here is the raw OCR text of the exam paper chunk:
 ---
 {raw_text}
 ---
@@ -130,7 +117,7 @@ def derive_rebranded_name(rel_path):
     return final_name
 
 
-def ocr_pdf_text(pdf_path):
+def ocr_pdf_pages(pdf_path):
     doc = fitz.open(pdf_path)
     pages_text = []
     for page in doc:
@@ -138,29 +125,19 @@ def ocr_pdf_text(pdf_path):
         img = Image.open(io.BytesIO(pix.tobytes("png")))
         pages_text.append(pytesseract.image_to_string(img, lang="eng+hin"))
     doc.close()
-    return "\n\n=== NEW PAGE ===\n\n".join(pages_text)
+    return pages_text
 
 
-def get_fresh_token():
-    creds, _ = google.auth.default(scopes=["https://www.googleapis.com/auth/cloud-platform"])
-    creds.refresh(google.auth.transport.requests.Request())
-    return creds.token
-
-
-def call_vertex_via_curl(prompt, token, timeout=480):
-    """Shell out to curl rather than Python's requests -- see module
-    docstring for why. Returns the parsed response dict or raises."""
+def call_gemini_via_curl(prompt, timeout=120):
     payload = json.dumps({
-        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "contents": [{"parts": [{"text": prompt}]}],
+        "serviceTier": "flex",
         "generationConfig": {
-            "temperature": 0.05,
-            "responseMimeType": "application/json",
-            "maxOutputTokens": 65536
+            "responseMimeType": "application/json"
         }
     })
     result = subprocess.run(
-        ["curl", "-s", "--max-time", str(timeout), "-X", "POST", VERTEX_URL,
-         "-H", f"Authorization: Bearer {token}",
+        ["curl.exe", "-s", "--max-time", str(timeout), "-X", "POST", GEMINI_URL,
          "-H", "Content-Type: application/json",
          "-d", "@-"],
         input=payload, capture_output=True, text=True, encoding="utf-8", timeout=timeout + 10
@@ -170,18 +147,28 @@ def call_vertex_via_curl(prompt, token, timeout=480):
     return json.loads(result.stdout)
 
 
-def structure_with_gemini(raw_text, token):
+def structure_with_gemini(raw_text):
     prompt = PROMPT_TEMPLATE.replace("{raw_text}", raw_text[:100000])
-    body = call_vertex_via_curl(prompt, token)
-    if "error" in body:
-        raise RuntimeError(f"Vertex error: {body['error']}")
-    text_out = body["candidates"][0]["content"]["parts"][0]["text"].strip()
-    if text_out.startswith("```"):
-        text_out = "\n".join(text_out.split("\n")[1:])
-        if text_out.endswith("```"):
-            text_out = text_out[:-3]
-        text_out = text_out.strip()
-    return json.loads(text_out)
+    
+    max_retries = 3
+    for attempt in range(1, max_retries + 1):
+        try:
+            body = call_gemini_via_curl(prompt)
+            if "error" in body:
+                raise RuntimeError(f"Gemini API error: {body['error'].get('message')}")
+            
+            text_out = body["candidates"][0]["content"]["parts"][0]["text"].strip()
+            if text_out.startswith("```"):
+                text_out = "\n".join(text_out.split("\n")[1:])
+                if text_out.endswith("```"):
+                    text_out = text_out[:-3]
+                text_out = text_out.strip()
+            return json.loads(text_out)
+        except Exception as e:
+            if attempt == max_retries:
+                raise e
+            print(f"      [Retrying] API attempt {attempt} failed: {e}. Sleeping 10s...")
+            time.sleep(10)
 
 
 def process_single_pdf(rel_path):
@@ -204,24 +191,89 @@ def process_single_pdf(rel_path):
         if not os.path.exists(pdf_path):
             return {"status": "error", "file": rel_path, "error": "source PDF not found"}
 
-        raw_text = ocr_pdf_text(pdf_path)
-        if len(raw_text.strip()) < 50:
-            return {"status": "error", "file": rel_path, "error": "OCR produced no usable text"}
+        pages_text = ocr_pdf_pages(pdf_path)
+        total_pages = len(pages_text)
+        
+        # Partition pages into chunks of at most 6 pages
+        chunk_size = 6
+        page_chunks = [pages_text[i:i + chunk_size] for i in range(0, total_pages, chunk_size)]
+        
+        merged_title = os.path.splitext(os.path.basename(rel_path))[0]
+        merged_sections_map = {}
+        
+        for chunk_idx, chunk_pages in enumerate(page_chunks):
+            chunk_text = "\n\n=== NEW PAGE ===\n\n".join(chunk_pages)
+            if len(chunk_text.strip()) < 50:
+                continue
+            
+            structured_chunk = structure_with_gemini(chunk_text)
+            
+            # Extract clean title from first chunk
+            if chunk_idx == 0 and structured_chunk.get("metadata", {}).get("title") not in [None, "UNREADABLE"]:
+                merged_title = structured_chunk["metadata"]["title"]
+            
+            for section in structured_chunk.get("sections", []):
+                sec_name = section.get("section_name") or "General Studies"
+                sec_name = sec_name.strip()
+                if not sec_name:
+                    sec_name = "General Studies"
+                
+                if sec_name not in merged_sections_map:
+                    merged_sections_map[sec_name] = []
+                
+                for q in section.get("questions", []):
+                    q_text = (q.get("question_text") or "").strip()
+                    opts = q.get("options") or []
+                    if q_text and len(opts) == 4:
+                        merged_sections_map[sec_name].append({
+                            "question_text": q_text,
+                            "options": [o.strip() for o in opts]
+                        })
+            
+            # Pacing sleep between chunks
+            if len(page_chunks) > 1:
+                time.sleep(1.5)
 
-        token = get_fresh_token()
-        structured = structure_with_gemini(raw_text, token)
+        merged_sections = []
+        global_q_num = 1
+        
+        for sec_name, questions in merged_sections_map.items():
+            if not questions:
+                continue
+            sec_questions = []
+            for q in questions:
+                formatted_opts = []
+                labels = ["A", "B", "C", "D"]
+                for i, opt in enumerate(q["options"]):
+                    cleaned_opt = re.sub(r'^\s*[A-D][\)\.\s\-]+', '', opt).strip()
+                    formatted_opts.append(f"{labels[i]}) {cleaned_opt}")
+                
+                sec_questions.append({
+                    "question_number": global_q_num,
+                    "question_text": q["question_text"],
+                    "options": formatted_opts,
+                    "correct_option": None,
+                    "explanation": ""
+                })
+                global_q_num += 1
+            
+            merged_sections.append({
+                "section_name": sec_name,
+                "questions": sec_questions
+            })
 
-        if structured.get("metadata", {}).get("title") == "UNREADABLE":
-            return {"status": "error", "file": rel_path, "error": "model reported unreadable"}
+        if global_q_num == 1:
+            return {"status": "error", "file": rel_path, "error": "0 questions parsed from all chunks"}
 
-        total_qs = sum(len(s.get("questions", [])) for s in structured.get("sections", []))
-        if total_qs == 0:
-            return {"status": "error", "file": rel_path, "error": "0 questions in model response"}
+        final_structured = {
+            "metadata": {"title": merged_title},
+            "sections": merged_sections
+        }
 
         with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(structured, f, indent=2, ensure_ascii=False)
+            json.dump(final_structured, f, indent=2, ensure_ascii=False)
 
-        return {"status": "success", "file": rel_path, "out": new_name, "questions": total_qs}
+        return {"status": "success", "file": rel_path, "out": new_name, "questions": global_q_num - 1}
     except Exception as e:
         return {"status": "error", "file": rel_path, "error": str(e)}
 
@@ -239,7 +291,7 @@ def main():
     if len(sys.argv) > 1 and sys.argv[1].startswith("--limit="):
         limit = int(sys.argv[1].split("=", 1)[1])
 
-    print("=== VEERNXT PYP OCR RECONSTRUCTION (VERTEX AI GEMINI) ===")
+    print("=== VEERNXT PYP OCR RECONSTRUCTION (GEMINI DEVELOPER API) ===")
     with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
         manifest = json.load(f)
 
@@ -256,10 +308,9 @@ def main():
     done = 0
     start_time = time.time()
 
-    # Vertex AI on a real GCP project has much higher throughput than
-    # Groq's free tier -- no special pacing needed, just a reasonable
-    # worker count.
-    with ProcessPoolExecutor(max_workers=4, initializer=_init_worker) as executor:
+    # Developer API via flex tier has strong concurrency, but ProcessPoolExecutor
+    # needs to stay reasonable to avoid local CPU bounds during Tesseract OCR.
+    with ProcessPoolExecutor(max_workers=3, initializer=_init_worker) as executor:
         futures = {executor.submit(process_single_pdf, rel): rel for rel in targets}
         for fut in as_completed(futures):
             result = fut.result()
