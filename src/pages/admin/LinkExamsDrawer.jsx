@@ -4,6 +4,12 @@ import { supabase } from '../../lib/supabase';
 import { examsAlreadyHavingResource, loadBookLinks } from '../../lib/resourceDuplicates';
 import Select from '../../components/ui/Select';
 
+// Blue marks everything that is already linked to the book, so it's easy to tell
+// apart from the rest of the list. rgba tints so it reads on dark and light admin themes.
+const LINKED_BLUE = '#3b82f6';
+const LINKED_TINT = 'rgba(59, 130, 246, 0.12)';
+const LINKED_BORDER = 'rgba(59, 130, 246, 0.45)';
+
 const LEVEL_PILLS = [
   { id: '', label: 'All' },
   { id: 'central', label: 'Central' },
@@ -170,11 +176,17 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   const pickExamUt = (name) => { setExamUt(name); setExamState(''); if (name) setLevel('ut'); };
   const handleClearFilters = () => { setSearch(''); setLevel(''); setExamCategory(''); setExamState(''); setExamUt(''); };
 
-  const renderExamRow = (exam) => {
+  const renderExamRow = (exam, inLinkedSection = false) => {
     const wasLinked = linkedSet.has(exam.id);
     const isChecked = selected.has(exam.id);
     return (
-      <label key={exam.id} className="lc-drawer-list-item" style={{ cursor: 'pointer' }}>
+      <label
+        key={exam.id}
+        className="lc-drawer-list-item"
+        style={inLinkedSection
+          ? { cursor: 'pointer', background: LINKED_TINT, borderLeft: `3px solid ${LINKED_BLUE}` }
+          : { cursor: 'pointer' }}
+      >
         <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0 }}>
           <input
             type="checkbox"
@@ -191,7 +203,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
           {exam.category && <span className="lc-muted-note" style={{ flexShrink: 0 }}>· {exam.category}</span>}
           {exam.region?.level && <span className="lc-muted-note" style={{ flexShrink: 0 }}>· {exam.region.level}{exam.region.name ? ` (${exam.region.name})` : ''}</span>}
         </span>
-        {wasLinked && isChecked && <span className="lc-muted-note" style={{ flexShrink: 0, marginLeft: '0.5rem' }}>Linked</span>}
+        {wasLinked && isChecked && <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: LINKED_BLUE, fontWeight: 700 }}>Linked</span>}
         {wasLinked && !isChecked && <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: '#dc2626', fontWeight: 700 }}>Will unlink</span>}
         {!wasLinked && isChecked && <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: '#059669', fontWeight: 700 }}>Will link</span>}
       </label>
@@ -326,19 +338,19 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                     type="button"
                     onClick={() => setShowLinked((v) => !v)}
                     aria-expanded={showLinked}
-                    style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', width: '100%', background: 'var(--surface-alt)', border: '1px solid var(--admin-border, transparent)', borderRadius: 8, padding: '0.5rem 0.7rem', margin: '0.25rem 0', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 700, color: 'inherit', textAlign: 'left' }}
+                    style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', width: '100%', background: LINKED_TINT, border: `1px solid ${LINKED_BORDER}`, borderRadius: 8, padding: '0.5rem 0.7rem', margin: '0.25rem 0', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 700, color: LINKED_BLUE, textAlign: 'left' }}
                   >
                     {showLinked ? <ChevronDown size={15} /> : <ChevronRight size={15} />}
                     Already linked ({linkedResults.length})
                     <span className="lc-muted-note" style={{ marginLeft: 'auto', fontWeight: 400 }}>{showLinked ? 'Click to collapse' : 'Click to expand'}</span>
                   </button>
-                  {showLinked && linkedResults.map(renderExamRow)}
+                  {showLinked && linkedResults.map((exam) => renderExamRow(exam, true))}
                 </>
               )}
               {otherResults.length > 0 && linkedResults.length > 0 && (
                 <div className="lc-muted-note" style={{ margin: '0.6rem 0 0.25rem', fontSize: '0.75rem', fontWeight: 700 }}>Other exams ({otherResults.length})</div>
               )}
-              {otherResults.map(renderExamRow)}
+              {otherResults.map((exam) => renderExamRow(exam))}
               {results.length === 0 && <p className="lc-muted-note">No matching exams found.</p>}
             </div>
           )}
