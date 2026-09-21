@@ -11,81 +11,197 @@ import {
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-import { 
-  computeCapabilityFit, 
-  WORK_TYPES, 
-  SERVICES, 
-  SECTOR_CAPABILITY_MAP, 
-  SECTOR_DEFAULT_CAPS, 
-  resolveSectorKey, 
-  getRecommendedWorkTypeIds 
-} from '../lib/militaryTaxonomy';
-import { 
-  SECTOR_OPTIONS, 
-  getRolesForSector, 
-  getRoleSpecification, 
-  ROLE_SPECIFICATIONS, 
-  findSector 
-} from '../lib/privateSectorTaxonomy';
+import { computeCapabilityFit, WORK_TYPES, SERVICES, SECTOR_CAPABILITY_MAP, resolveSectorKey } from '../lib/militaryTaxonomy';
+import { SECTOR_OPTIONS, getRolesForSector, getSkillsForSectors, getRoleSpecification } from '../lib/privateSectorTaxonomy';
 
-const SECTOR_CHOICES = [
-  'Corporate Security & Facility Management',
-  'Logistics, Supply Chain & Transport',
-  'Engineering, Manufacturing & Technical Ops',
-  'Information Technology & Communications',
-  'Administration, Operations & Facility Management',
-  'Aviation, Aerospace & Marine',
-  'Healthcare, Paramedic & Disaster Response',
-  'Corporate, HR, Sales & Field Services'
-];
+const SECTORS = SECTOR_OPTIONS;
 
-const WORK_TYPE_ICONS = {
-  wt_guard: '🛡️',
-  wt_weapon: '🎯',
-  wt_command: '👥',
-  wt_facility: '🏢',
-  wt_intel: '🔍',
-  wt_driver: '🚚',
-  wt_store: '📦',
-  wt_maint: '🛠️',
-  wt_comms: '📡',
-  wt_engineer: '🏗️',
-  wt_aviation: '✈️',
-  wt_armour: '🚜',
-  wt_eod: '🦺',
-  wt_survey: '📐',
-  wt_seamanship: '⚓',
-  wt_medical: '🏥',
-  wt_medic: '🚑',
-  wt_catering: '🍳',
-  wt_animal: '🐕',
-  wt_admin: '📋',
-  wt_instructor: '🎓'
+// Domain-accurate sector configuration mapping:
+// Roles, popular suggestions, domain-curated capabilities, and default active capabilities
+export const SECTOR_CONFIG = {
+  it_telecom: {
+    sectorLabel: 'IT, Software & Telecom',
+    defaultRole: 'Network Administrator / Engineer',
+    popularRoles: [
+      'Network Administrator / Engineer',
+      'IT Support & Desktop Engineer',
+      'Cyber Security Analyst / SOC',
+      'System / Linux Administrator',
+      'Cloud & DevOps Specialist',
+      'Telecom / RF Technician'
+    ],
+    defaultSelectedCaps: ['wt_comms', 'wt_intel', 'wt_maint'],
+    capabilities: [
+      { id: 'wt_comms', label: 'IT, Networks & Tactical Comms', icon: '📡' },
+      { id: 'wt_intel', label: 'Cyber Security, SOC & Threat Analysis', icon: '🛡️' },
+      { id: 'wt_maint', label: 'Hardware Diagnostics & Systems Tech', icon: '💻' },
+      { id: 'wt_admin', label: 'MIS, Database & Records Admin', icon: '📑' },
+      { id: 'wt_command', label: 'IT Project & Team Leadership', icon: '👥' },
+      { id: 'wt_instructor', label: 'Technical Training & Instruction', icon: '👨‍🏫' },
+      { id: 'wt_survey', label: 'RF Testing & Technical Instrumentation', icon: '🛰️' }
+    ]
+  },
+  security_defence: {
+    sectorLabel: 'Security, Defence & Surveillance',
+    defaultRole: 'Security Supervisor',
+    popularRoles: [
+      'Security Supervisor',
+      'Chief Security Officer',
+      'CCTV & Control Room Operator',
+      'Loss Prevention / Vigilance Executive',
+      'Fire & Industrial Safety Officer',
+      'Armed Guard / PSO'
+    ],
+    defaultSelectedCaps: ['wt_guard', 'wt_intel', 'wt_command'],
+    capabilities: [
+      { id: 'wt_guard', label: 'Physical Security & Access Control', icon: '🛡️' },
+      { id: 'wt_intel', label: 'CCTV Surveillance & Loss Prevention', icon: '🔍' },
+      { id: 'wt_command', label: 'Guard Force Supervision & Shift Lead', icon: '👥' },
+      { id: 'wt_eod', label: 'Industrial Safety & Fire Response', icon: '🦺' },
+      { id: 'wt_weapon', label: 'Armed Escort & Weapon Protocol', icon: '🎯' },
+      { id: 'wt_facility', label: 'Facility Protection & Asset Security', icon: '🏢' },
+      { id: 'wt_animal', label: 'K9 Handling & Perimeter Patrols', icon: '🐕' },
+      { id: 'wt_comms', label: 'Control Room Comms & Dispatch', icon: '📻' }
+    ]
+  },
+  logistics_transport: {
+    sectorLabel: 'Logistics, Supply Chain & Transport',
+    defaultRole: 'Fleet Supervisor',
+    popularRoles: [
+      'Fleet Supervisor',
+      'Warehouse Supervisor',
+      'Logistics & Dispatch Coordinator',
+      'Inventory Controller / Storekeeper',
+      'Forklift & Equipment Operator',
+      'Driver (HMV/LMV)'
+    ],
+    defaultSelectedCaps: ['wt_driver', 'wt_store', 'wt_command'],
+    capabilities: [
+      { id: 'wt_driver', label: 'Heavy Fleet & Commercial Driving', icon: '🚚' },
+      { id: 'wt_store', label: 'Warehouse & Inventory ERP Systems', icon: '📦' },
+      { id: 'wt_command', label: 'Fleet Operations & Shift Leadership', icon: '👥' },
+      { id: 'wt_armour', label: 'Heavy Machinery & MHE Operation', icon: '🚜' },
+      { id: 'wt_facility', label: 'Depot & Dispatch Center In-Charge', icon: '🏭' },
+      { id: 'wt_maint', label: 'Fleet Preventive Maintenance', icon: '🛠️' },
+      { id: 'wt_admin', label: 'Transit Documentation & Compliance', icon: '📋' }
+    ]
+  },
+  engineering_manufacturing: {
+    sectorLabel: 'Engineering, Technical & Manufacturing',
+    defaultRole: 'Maintenance Engineer / Supervisor',
+    popularRoles: [
+      'Maintenance Engineer / Supervisor',
+      'Plant Operations Supervisor',
+      'Electrical Technician / Electrician',
+      'QA/QC Inspector',
+      'Mechanical Technician',
+      'Welder / Fabricator'
+    ],
+    defaultSelectedCaps: ['wt_maint', 'wt_engineer', 'wt_survey'],
+    capabilities: [
+      { id: 'wt_maint', label: 'Technical Maintenance & Overhaul', icon: '🛠️' },
+      { id: 'wt_engineer', label: 'Plant & Electrical Infrastructure', icon: '🏗️' },
+      { id: 'wt_survey', label: 'QA/QC Inspection & Metrology', icon: '🔬' },
+      { id: 'wt_armour', label: 'Heavy Plant & Machinery Operation', icon: '⚙️' },
+      { id: 'wt_facility', label: 'Workshop Floor & Bay Management', icon: '🏭' },
+      { id: 'wt_command', label: 'Technical Shift & Crew Supervision', icon: '👥' },
+      { id: 'wt_instructor', label: 'Technical Trade & Safety Training', icon: '👨‍🏫' }
+    ]
+  },
+  admin_facilities: {
+    sectorLabel: 'Administration, Operations & Facility Management',
+    defaultRole: 'Facility Supervisor',
+    popularRoles: [
+      'Facility Supervisor',
+      'Site Manager',
+      'Administrative Officer / Clerk',
+      'Operations Supervisor',
+      'Procurement & Vendor Executive',
+      'Quartermaster / Store Incharge'
+    ],
+    defaultSelectedCaps: ['wt_facility', 'wt_admin', 'wt_command'],
+    capabilities: [
+      { id: 'wt_facility', label: 'Facility Operations & Site In-Charge', icon: '🏢' },
+      { id: 'wt_admin', label: 'Office Administration & Records', icon: '📋' },
+      { id: 'wt_command', label: 'Operations & Team Leadership', icon: '👥' },
+      { id: 'wt_store', label: 'Stores, Inventory & Asset Registry', icon: '📦' },
+      { id: 'wt_engineer', label: 'Facility Infrastructure & Civil Works', icon: '🔌' },
+      { id: 'wt_guard', label: 'Site Security & Access Coordination', icon: '🛡️' }
+    ]
+  },
+  aviation_marine: {
+    sectorLabel: 'Aviation, Aerospace & Marine',
+    defaultRole: 'Aircraft Maintenance Technician',
+    popularRoles: [
+      'Aircraft Maintenance Technician',
+      'Avionics & Radar Technician',
+      'Airfield Safety & Marshal Officer',
+      'Ground Handling & Ramp Personnel',
+      'Drone Operator / Specialist',
+      'Marine Vessel Operations Specialist'
+    ],
+    defaultSelectedCaps: ['wt_aviation', 'wt_maint', 'wt_comms'],
+    capabilities: [
+      { id: 'wt_aviation', label: 'Airfield Ramp & Ground Handling', icon: '✈️' },
+      { id: 'wt_maint', label: 'Airframe, Engine & Marine Overhaul', icon: '🔧' },
+      { id: 'wt_comms', label: 'Avionics, Radar & Air Traffic Comms', icon: '📡' },
+      { id: 'wt_seamanship', label: 'Marine Deck & Vessel Operations', icon: '⚓' },
+      { id: 'wt_survey', label: 'Drone Operations & Precision Testing', icon: '🛰️' },
+      { id: 'wt_command', label: 'Flight Deck & Hangar Shift Lead', icon: '👥' },
+      { id: 'wt_medic', label: 'Airfield & Vessel Emergency Response', icon: '🦺' }
+    ]
+  },
+  healthcare_hospitality: {
+    sectorLabel: 'Healthcare, Emergency & Hospitality',
+    defaultRole: 'First Aid & Disaster Response Specialist',
+    popularRoles: [
+      'First Aid & Disaster Response Specialist',
+      'Paramedic / Emergency Medical Assistant',
+      'Hospitality / Mess Supervisor',
+      'Ambulance & Patient Transport Driver',
+      'Health & Sanitation Inspector'
+    ],
+    defaultSelectedCaps: ['wt_medic', 'wt_medical', 'wt_catering'],
+    capabilities: [
+      { id: 'wt_medic', label: 'Emergency Trauma & Disaster Response', icon: '🚑' },
+      { id: 'wt_medical', label: 'Clinical, Paramedical & Lab Support', icon: '🩺' },
+      { id: 'wt_catering', label: 'Institutional Mess & Hospitality Ops', icon: '🍲' },
+      { id: 'wt_driver', label: 'Ambulance & Emergency Transport', icon: '🚐' },
+      { id: 'wt_facility', label: 'Hospital & Ward Facility Support', icon: '🏥' },
+      { id: 'wt_command', label: 'Medical Detachment & Shift Lead', icon: '👥' }
+    ]
+  },
+  corporate_sales: {
+    sectorLabel: 'Corporate, HR, Sales & Field Services',
+    defaultRole: 'HR & Veteran Talent Recruiter',
+    popularRoles: [
+      'HR & Veteran Talent Recruiter',
+      'Field Operations Executive',
+      'Business Development / Sales Executive',
+      'Accounts & Billing Assistant',
+      'Customer Relations Executive'
+    ],
+    defaultSelectedCaps: ['wt_admin', 'wt_intel', 'wt_command'],
+    capabilities: [
+      { id: 'wt_admin', label: 'HR, Talent Onboarding & Payroll', icon: '📋' },
+      { id: 'wt_intel', label: 'Field Verification & Risk Auditing', icon: '📊' },
+      { id: 'wt_command', label: 'Field Team & Client Relationship Lead', icon: '👥' },
+      { id: 'wt_instructor', label: 'Corporate Training Delivery', icon: '🗣️' },
+      { id: 'wt_comms', label: 'Client Communications & Helpdesk', icon: '📞' }
+    ]
+  }
 };
 
-const CAPABILITY_KEYWORDS = {
-  wt_guard: ['security', 'guard', 'sentry', 'provost', 'surveillance', 'access control', 'patrol', 'defence', 'dsc', 'military police', 'physical security'],
-  wt_weapon: ['weapon', 'arms', 'gunner', 'marksman', 'firing', 'armament', 'infantry', 'small arms'],
-  wt_command: ['leadership', 'command', 'supervisor', 'supervision', 'nco', 'jco', 'havildar', 'subedar', 'sergeant', 'petty officer', 'warrant officer', 'team lead'],
-  wt_facility: ['facility', 'quartermaster', 'site', 'depot', 'barracks', 'hangar', 'kote', 'site manager'],
-  wt_intel: ['intelligence', 'vigilance', 'investigation', 'sib', 'vetting', 'reconnaissance', 'recce', 'loss prevention'],
-  wt_driver: ['driver', 'driving', 'mt', 'transport', 'convoy', 'hmv', 'lmv', 'bowser', 'vehicle', 'fleet'],
-  wt_store: ['store', 'inventory', 'warehouse', 'supply', 'quartermaster', 'stock', 'depot', 'ordnance', 'aoc', 'asc'],
-  wt_maint: ['maintenance', 'repair', 'diagnostics', 'mechanic', 'fitter', 'artificer', 'eme', 'overhaul', 'technician', 'instrumentation'],
-  wt_comms: ['signals', 'comms', 'communications', 'network', 'radio', 'satcom', 'telecom', 'radar', 'cctv', 'it infrastructure'],
-  wt_engineer: ['engineer', 'engineering', 'construction', 'mes', 'infrastructure', 'civil', 'electrical', 'bridge', 'plant'],
-  wt_aviation: ['aviation', 'airframe', 'avionics', 'flight line', 'airfield', 'marshaller', 'aircraft', 'rotorcraft'],
-  wt_armour: ['armoured', 'tank', 'ifv', 'bmp', 'tracked', 'forklift', 'mhe', 'crane'],
-  wt_eod: ['eod', 'demolition', 'bomb', 'mine', 'hazard', 'fire', 'fire fighting', 'safety'],
-  wt_survey: ['survey', 'theodolite', 'gis', 'mapping', 'metrology', 'instrumentation', 'quality'],
-  wt_seamanship: ['marine', 'vessel', 'seaman', 'bridge', 'port', 'deck', 'naval'],
-  wt_medical: ['medical', 'paramedic', 'nursing', 'amc', 'pharmacy', 'hospital', 'clinical'],
-  wt_medic: ['medic', 'first aid', 'casevac', 'trauma', 'ambulance', 'triage', 'emergency'],
-  wt_catering: ['catering', 'cook', 'mess', 'hospitality', 'food', 'kitchen'],
-  wt_animal: ['k9', 'dog handler', 'animal', 'patrol dog'],
-  wt_admin: ['clerk', 'admin', 'administration', 'records', 'payroll', 'accounts', 'writer', 'mis'],
-  wt_instructor: ['instructor', 'training', 'drill', 'cadre', 'teacher']
-};
+// Unified map of all known capabilities for lookups and cross-domain references
+export const ALL_CAPABILITIES_MAP = {};
+Object.values(SECTOR_CONFIG).forEach(sec => {
+  sec.capabilities.forEach(c => {
+    if (!ALL_CAPABILITIES_MAP[c.id]) {
+      ALL_CAPABILITIES_MAP[c.id] = c;
+    }
+  });
+});
+export const ALL_CAPABILITIES_LIST = Object.values(ALL_CAPABILITIES_MAP);
 
 const FALLBACK_CANDIDATES = [
   {
@@ -201,68 +317,46 @@ const FALLBACK_CANDIDATES = [
   {
     id: 'f1a2b3c4-0006-4000-a000-000000000006',
     user_id: 'f1a2b3c4-0006-4000-a000-000000000006',
-    maskedCode: 'VN-1055',
+    maskedCode: 'VN-6140',
     service: 'Indian Army',
-    branch: 'Infantry / Defence Security Corps (DSC)',
-    trade: 'Security & Vigilance Platoon Commander',
-    rank: 'Subedar',
-    service_years: '22 Years Active Service',
-    trade_proficiency: 'Class I Senior JCO Grade',
-    highest_working_level: 'Unit Security & Vigilance Officer (USVO)',
-    team_size_supervised: 32,
-    civil_licences: ['Security Guard Licence (PSARA)', 'Fire Safety Certification', 'First Aid Certification'],
-    work_types: ['Physical Security, Surveillance & Access Control', 'Frontline Team Leadership, Shift & Crew Supervision', 'Risk Investigation, Vigilance & Information Analysis', 'Armed Security & Weapons Handling'],
-    skills: ['Perimeter Security Grids', 'Access Control Systems', 'Guard Force Roster Deployment', 'Loss Prevention & Anti-pilferage', 'Crisis Emergency Escalation', 'VIP Close Escort'],
+    branch: 'Corps of Military Police (CMP)',
+    trade: 'Security & Vigilance Supervisor',
+    rank: 'Havildar',
+    service_years: '17 Years Active Service',
+    trade_proficiency: 'Class I Military Police / Security',
+    highest_working_level: 'Base Security Detachment Commander',
+    team_size_supervised: 24,
+    civil_licences: ['PSARA Certified Security Supervisor', 'Industrial Fire Safety & First Aid'],
+    work_types: ['Physical Security, Surveillance & Access Control', 'Frontline Team Leadership, Shift & Crew Supervision', 'Risk Investigation, Vigilance & Information Analysis', 'Facility, Stores & Site In-Charge / Quartermaster'],
+    skills: ['Access Control Systems', 'CCTV & Perimeter Monitoring', 'Incident Triage & Crisis Response', 'VIP Protection Protocol', 'Fire & Industrial Safety', 'Vigilance & Loss Prevention'],
     duties: [
-      { text: 'Commanded security platoon of 32 personnel responsible for multi-tier perimeter defence, access control, and anti-sabotage checks at vital installations.' },
-      { text: 'Conducted quarterly security vulnerability audits, perimeter lighting inspections, and night vigilance surprise checks.' },
-      { text: 'Instituted zero-breach access protocols, visitor identity vetting, and coordinated emergency containment drills with civil police.' }
+      { text: 'Supervised armed perimeter security detachment of 24 personnel across high-security defence cantonment and ammunition depot.' },
+      { text: 'Implemented 24/7 CCTV surveillance room protocol, biometric access control logs, and visitor vehicle inspection systems.' },
+      { text: 'Executed monthly industrial fire fighting drills, emergency evacuation readiness plans, and security threat audits.' }
     ],
-    preferred_locations: ['Delhi NCR', 'Chandigarh', 'Jaipur', 'Lucknow'],
+    preferred_locations: ['Delhi NCR', 'Chandigarh', 'Lucknow', 'Jaipur'],
   },
   {
     id: 'f1a2b3c4-0007-4000-a000-000000000007',
     user_id: 'f1a2b3c4-0007-4000-a000-000000000007',
-    maskedCode: 'VN-6320',
-    service: 'Indian Army',
-    branch: 'Corps of Engineers / Military Engineer Services (MES)',
-    trade: 'Facility Operations & Infrastructure Superintendent',
-    rank: 'Naib Subedar',
-    service_years: '19 Years Active Service',
-    trade_proficiency: 'Class I Master Engineering Technician',
-    highest_working_level: 'Senior Barracks & Utility Incharge',
-    team_size_supervised: 24,
-    civil_licences: ['Electrical Wireman License', 'Fire Safety Certification', 'Heavy Transport Vehicle (HTV)'],
-    work_types: ['Facility, Stores & Site In-Charge / Quartermaster', 'Construction, Infrastructure & Facilities Engineering', 'Frontline Team Leadership, Shift & Crew Supervision', 'Technical Maintenance, Diagnostics & Repair'],
-    skills: ['High Voltage DG Sets', 'HVAC & Industrial Chiller Maintenance', 'Building Plumbing Networks', 'Vendor AMC Oversight', 'Preventative Facility Maintenance', 'Statutory Fire NOC Compliance'],
+    maskedCode: 'VN-3319',
+    service: 'Indian Air Force',
+    branch: 'Administration & Accounts',
+    trade: 'Office Administration & Records In-Charge',
+    rank: 'Junior Warrant Officer (JWO)',
+    service_years: '16 Years Active Service',
+    trade_proficiency: 'Class I Admin & Accounts',
+    highest_working_level: 'Station Administrative Officer Assistant',
+    team_size_supervised: 12,
+    civil_licences: ['Advanced Office Management & ERP Certification', 'Commercial Accounting & Payroll Fundamentals'],
+    work_types: ['Office Administration, Records & Payroll Management', 'Facility, Stores & Site In-Charge / Quartermaster', 'Frontline Team Leadership, Shift & Crew Supervision'],
+    skills: ['Personnel Records Management', 'Payroll Processing', 'Vendor Billing & Invoicing', 'Office Administration', 'Compliance Audits', 'Team Supervision'],
     duties: [
-      { text: 'Supervised round-the-clock facility operations, diesel generator synchronisation, and utility water purification for cantonment complexes.' },
-      { text: 'Managed technical maintenance desk resolving over 400 service tickets monthly across electrical, plumbing, and civil repairs.' },
-      { text: 'Led vendor SLA tracking, annual maintenance contract (AMC) inspections, and energy conservation audits.' }
+      { text: 'Directed administrative office managing documentation, service records, and attendance for 350+ base personnel.' },
+      { text: 'Audited monthly vendor billing, supply contracts, and expenditure registers with zero audit objections.' },
+      { text: 'Coordinated station facility maintenance allocations, accommodation records, and annual compliance paperwork.' }
     ],
-    preferred_locations: ['Bengaluru', 'Hyderabad', 'Pune', 'Chennai'],
-  },
-  {
-    id: 'f1a2b3c4-0008-4000-a000-000000000008',
-    user_id: 'f1a2b3c4-0008-4000-a000-000000000008',
-    maskedCode: 'VN-3190',
-    service: 'Indian Army',
-    branch: 'Army Medical Corps (AMC)',
-    trade: 'Senior Paramedic & Emergency Medical Assistant',
-    rank: 'Havildar',
-    service_years: '14 Years Active Service',
-    trade_proficiency: 'Class I Nursing Assistant Grade',
-    highest_working_level: 'Medical Evacuation / Casualty Care Lead',
-    team_size_supervised: 8,
-    civil_licences: ['BLS / ACLS Certification', 'First Aid & Emergency Response Certification', 'Commercial Driving Licence (Ambulance)'],
-    work_types: ['Emergency Medical Response & Patient Transport', 'Clinical, Paramedical & Laboratory Support', 'Frontline Team Leadership, Shift & Crew Supervision'],
-    skills: ['Battlefield Trauma Care', 'Emergency Resuscitation (CPR/AED)', 'Triage & Casualty Evacuation', 'Wound Management & Suturing', 'Patient Vital Telemetry', 'First Aid Warden Training'],
-    duties: [
-      { text: 'Managed regimental aid post handling acute trauma triage, wound suturing, intravenous therapy, and stabilization.' },
-      { text: 'Operated emergency advance life-support ambulances during high-altitude operations with zero transit mortality.' },
-      { text: 'Delivered certified basic life support (BLS) and combat first-aid training to over 600 active personnel.' }
-    ],
-    preferred_locations: ['Delhi NCR', 'Dehradun', 'Kolkata', 'Pune'],
+    preferred_locations: ['Bengaluru', 'Delhi NCR', 'Hyderabad', 'Pune'],
   }
 ];
 
@@ -280,12 +374,17 @@ const FindCandidates = () => {
   const [selectedRequirementId, setSelectedRequirementId] = useState(initialReqId);
   const [selectedRequirement, setSelectedRequirement] = useState(null);
 
-  // Dynamic Preferences State: Default to Corporate Security & Facility Management with Security Supervisor
-  const [dynamicSector, setDynamicSector] = useState(SECTOR_CHOICES[0]);
-  const [dynamicRoleTitle, setDynamicRoleTitle] = useState('Chief Security Officer');
-  const [dynamicCapabilities, setDynamicCapabilities] = useState(['wt_guard', 'wt_command', 'wt_intel', 'wt_weapon']);
+  // Dynamic Preferences State initialized to domain-accurate sector defaults
+  const initialSector = SECTORS[0] || 'IT, Software & Telecom';
+  const initialSecKey = resolveSectorKey(initialSector) || 'it_telecom';
+  const initialConfig = SECTOR_CONFIG[initialSecKey] || SECTOR_CONFIG.it_telecom;
+
+  const [dynamicSector, setDynamicSector] = useState(initialSector);
+  const [dynamicRoleTitle, setDynamicRoleTitle] = useState(initialConfig.defaultRole);
+  const [dynamicCapabilities, setDynamicCapabilities] = useState([...initialConfig.defaultSelectedCaps]);
+  const [showAllCaps, setShowAllCaps] = useState(false);
   const [selectedBranch, setSelectedBranch] = useState('All');
-  const [minSupervised, setMinSupervised] = useState(10);
+  const [minSupervised, setMinSupervised] = useState(0);
   const [selectedLocation, setSelectedLocation] = useState('All');
   const [minScore, setMinScore] = useState(45);
   const [searchQuery, setSearchQuery] = useState('');
@@ -407,64 +506,35 @@ const FindCandidates = () => {
     );
   };
 
-  // Handle Sector Change: auto-update Role Title, Responsibilities, and Capabilities
+  // Handle sector change: updates sector, default role title, and domain-curated capabilities
   const handleSectorChange = (newSector) => {
     setDynamicSector(newSector);
-    const secRoles = getRolesForSector(newSector);
-    const defaultRole = secRoles.find(r => !r.toLowerCase().includes('other')) || secRoles[0] || 'Operations Lead';
-    setDynamicRoleTitle(defaultRole);
-    
-    const spec = getRoleSpecification(defaultRole, newSector);
-    if (spec?.capabilities?.length > 0) {
-      setDynamicCapabilities(spec.capabilities);
-    } else {
-      const key = resolveSectorKey(newSector);
-      const rec = (key && SECTOR_CAPABILITY_MAP[key]) ? SECTOR_CAPABILITY_MAP[key].slice(0, 4) : ['wt_command'];
-      setDynamicCapabilities(rec);
-    }
+    const secKey = resolveSectorKey(newSector) || 'it_telecom';
+    const cfg = SECTOR_CONFIG[secKey] || SECTOR_CONFIG.it_telecom;
+    setDynamicRoleTitle(cfg.defaultRole);
+    setDynamicCapabilities([...cfg.defaultSelectedCaps]);
+  };
 
-    if (spec?.defaultMinSupervised !== undefined) {
-      setMinSupervised(spec.defaultMinSupervised);
+  // Reset capabilities to the active sector's defaults
+  const handleResetSectorDefaults = () => {
+    const secKey = resolveSectorKey(dynamicSector) || 'it_telecom';
+    const cfg = SECTOR_CONFIG[secKey] || SECTOR_CONFIG.it_telecom;
+    setDynamicCapabilities([...cfg.defaultSelectedCaps]);
+  };
+
+  // Select a role: updates target role and automatically maps domain capabilities
+  const handleSelectRole = (roleTitle) => {
+    setDynamicRoleTitle(roleTitle);
+    const spec = getRoleSpecification(roleTitle, dynamicSector);
+    if (spec?.capabilities && spec.capabilities.length > 0) {
+      setDynamicCapabilities(spec.capabilities);
     }
   };
 
-  // Handle Role Change: auto-update Responsibilities and Capabilities for that role
-  const handleRoleChange = (newRoleTitle) => {
-    setDynamicRoleTitle(newRoleTitle);
-    const spec = getRoleSpecification(newRoleTitle, dynamicSector);
-    if (spec?.capabilities?.length > 0) {
-      setDynamicCapabilities(spec.capabilities);
-    }
-    if (spec?.defaultMinSupervised !== undefined) {
-      setMinSupervised(spec.defaultMinSupervised);
-    }
-  };
-
-  // Reset to Role & Sector Defaults
-  const handleResetRoleDefaults = () => {
-    const spec = getRoleSpecification(dynamicRoleTitle, dynamicSector);
-    if (spec?.capabilities?.length > 0) {
-      setDynamicCapabilities(spec.capabilities);
-    } else {
-      const key = resolveSectorKey(dynamicSector);
-      const rec = (key && SECTOR_CAPABILITY_MAP[key]) ? SECTOR_CAPABILITY_MAP[key].slice(0, 4) : ['wt_command'];
-      setDynamicCapabilities(rec);
-    }
-    if (spec?.defaultMinSupervised !== undefined) {
-      setMinSupervised(spec.defaultMinSupervised);
-    }
-  };
-
-  // Active Role Specification
+  // Active role specification (responsibilities, requirements, licenses)
   const activeRoleSpec = useMemo(() => {
     return getRoleSpecification(dynamicRoleTitle, dynamicSector);
   }, [dynamicRoleTitle, dynamicSector]);
-
-  // Roles for current sector
-  const popularRolesForSector = useMemo(() => {
-    const roles = getRolesForSector(dynamicSector);
-    return roles.filter(r => !r.toLowerCase().includes('other')).slice(0, 8);
-  }, [dynamicSector]);
 
   // Active matching criteria
   const activeCriteria = useMemo(() => {
@@ -484,45 +554,80 @@ const FindCandidates = () => {
       role_titles: [dynamicRoleTitle || 'Specialist Role'],
       essential_capabilities: dynamicCapabilities,
       min_team_supervised: minSupervised,
-      required_licences: activeRoleSpec?.recommendedLicences || [],
+      required_licences: [],
       isPosted: false,
       id: null,
     };
-  }, [searchMode, selectedRequirement, dynamicSector, dynamicRoleTitle, dynamicCapabilities, minSupervised, activeRoleSpec]);
+  }, [searchMode, selectedRequirement, dynamicSector, dynamicRoleTitle, dynamicCapabilities, minSupervised]);
 
-  // Robust capability & responsibility match evaluator
+  // Robust domain-intelligent capability match evaluator
   const evaluateFit = (cand, criteria) => {
     const essential = criteria.essential_capabilities || [];
     const candCaps = (cand.work_types || []).map(w => w.toLowerCase());
     const candSkills = (cand.skills || []).map(s => s.toLowerCase());
     const candTrade = (cand.trade || '').toLowerCase();
-    const candBranch = (cand.branch || '').toLowerCase();
     const candDuties = (cand.duties || []).map(d => (typeof d === 'string' ? d : d.text || '').toLowerCase()).join(' ');
-    const candLicences = (cand.civil_licences || []).map(l => l.toLowerCase());
+    const candLicences = (cand.civil_licences || []).map(l => l.toLowerCase()).join(' ');
+    const candBranch = (cand.branch || '').toLowerCase();
+    const candService = (cand.service || '').toLowerCase();
 
     const reqHit = [];
     const gaps = [];
 
-    essential.forEach(capId => {
-      const capObj = WORK_TYPES.find(w => w.id === capId);
-      const label = (capObj?.civil || capId);
-      const capKey = (capObj?.capKey || '').toLowerCase();
-      const keywords = CAPABILITY_KEYWORDS[capId] || [capKey, label.toLowerCase()];
+    // Domain keywords dictionary for bulletproof military-to-civilian crosswalk
+    const CAP_KEYWORDS = {
+      wt_comms: ['signal', 'satcom', 'radio', 'telecom', 'network', 'ccna', 'cisco', 'lan', 'wan', 'cipher', 'it', 'computer', 'rf', 'data', 'tcp', 'ip', 'ethernet'],
+      wt_intel: ['cyber', 'soc', 'surveillance', 'intelligence', 'vigilance', 'threat', 'investigation', 'audit', 'vetting', 'cctv', 'loss prevention', 'security audit', 'counter intel'],
+      wt_maint: ['maintenance', 'diagnostics', 'overhaul', 'repair', 'mechanic', 'fitter', 'electrical', 'technician', 'artificer', 'preventive', 'breakdown', 'tool', 'machinist'],
+      wt_driver: ['driver', 'driving', 'transport', 'convoy', 'htv', 'hmv', 'lmv', 'mt', 'vehicle', 'bowser', 'fleet', 'haulage', 'truck', 'carrier'],
+      wt_store: ['store', 'warehouse', 'inventory', 'supply', 'logistics', 'depot', 'erp', 'dispatch', 'sap', 'stock', 'storekeeper', 'pallet', 'cargo'],
+      wt_guard: ['security', 'guard', 'sentry', 'access control', 'patrol', 'dsc', 'police', 'provost', 'psara', 'asset protection', 'perimeter', 'vip escort'],
+      wt_command: ['leadership', 'commander', 'supervisor', 'havildar', 'subedar', 'sergeant', 'nco', 'jco', 'lead', 'incharge', 'crew', 'shift', 'warrant officer', 'officer'],
+      wt_eod: ['fire', 'firefighting', 'safety', 'hazard', 'eod', 'demolition', 'cbrn', 'ehs', 'industrial safety', 'first aid', 'stcw', 'emergency response'],
+      wt_facility: ['facility', 'site', 'quartermaster', 'depot', 'barracks', 'infrastructure', 'caretaker', 'camp', 'premises', 'kote'],
+      wt_aviation: ['aviation', 'airframe', 'airfield', 'flight line', 'ramp', 'aircraft', 'avionics', 'marshaller', 'dgca', 'drone', 'rotorcraft', 'hangar'],
+      wt_survey: ['survey', 'metrology', 'inspection', 'qa', 'qc', 'quality', 'radar', 'synoptic', 'gis', 'calibration', 'theodolite', 'ndt', 'testing'],
+      wt_medic: ['medic', 'paramedical', 'nursing', 'first aid', 'trauma', 'hospital', 'ambulance', 'triage', 'casevac', 'clinical', 'bls'],
+      wt_medical: ['medic', 'paramedical', 'nursing', 'clinical', 'pharmacy', 'laboratory', 'pathology', 'hospital'],
+      wt_catering: ['catering', 'mess', 'kitchen', 'food', 'hospitality', 'ration', 'cook', 'chef', 'steward', 'dining'],
+      wt_weapon: ['weapon', 'gunnery', 'rifleman', 'marksman', 'firing', 'armament', 'armorer', 'support weapon', 'small arms'],
+      wt_seamanship: ['marine', 'vessel', 'ship', 'naval', 'sea', 'seamanship', 'port', 'dockyard', 'watchkeeping', 'deck'],
+      wt_admin: ['admin', 'clerk', 'payroll', 'records', 'office', 'documentation', 'accounts', 'mis', 'ledger', 'compliance', 'excel'],
+      wt_engineer: ['construction', 'civil', 'infrastructure', 'bridge', 'mes', 'electrical', 'wireman', 'plumbing', 'structural', 'plant'],
+      wt_armour: ['armoured', 'tank', 'bmp', 'tracked', 'heavy machinery', 'hemm', 'winch', 'crane', 'recovery vehicle', 'forklift', 'mhe'],
+      wt_animal: ['k9', 'dog', 'animal', 'veterinary', 'farrier', 'patrol dog'],
+      wt_instructor: ['instructor', 'training', 'drill', 'lecturer', 'teaching', 'cadre', 'coaching', 'trade training']
+    };
 
-      // Match against candidate work types, skills, trade, branch, or duties
-      const matches = candCaps.some(cc => 
+    essential.forEach(capId => {
+      const capObj = ALL_CAPABILITIES_MAP[capId] || WORK_TYPES.find(w => w.id === capId);
+      const capName = capObj?.label || capObj?.civil || capId;
+      const label = capName.toLowerCase();
+      const capKey = (capObj?.capKey || '').toLowerCase();
+      const keywords = CAP_KEYWORDS[capId] || [];
+
+      // Check direct candidate work types match
+      const workTypeMatch = candCaps.some(cc => 
         cc === capId.toLowerCase() || 
         cc.includes(capId.toLowerCase()) || 
-        keywords.some(k => cc.includes(k) || k.includes(cc))
-      )
-      || candSkills.some(s => keywords.some(k => s.includes(k) || k.includes(s)))
-      || keywords.some(k => candTrade.includes(k) || candBranch.includes(k))
-      || keywords.some(k => candDuties.includes(k));
+        (capKey && cc.includes(capKey)) || 
+        label.includes(cc) || 
+        cc.includes(label)
+      );
 
-      if (matches) {
-        reqHit.push(label);
+      // Check keywords against trade, branch, skills, duties, licences
+      const keywordMatch = keywords.some(kw => 
+        candTrade.includes(kw) ||
+        candBranch.includes(kw) ||
+        candSkills.some(s => s.includes(kw)) ||
+        candDuties.includes(kw) ||
+        candLicences.includes(kw)
+      );
+
+      if (workTypeMatch || keywordMatch) {
+        reqHit.push(capName);
       } else {
-        gaps.push(label);
+        gaps.push(capName);
       }
     });
 
@@ -532,37 +637,38 @@ const FindCandidates = () => {
     // Supervisory scale score
     const reqSupervised = Number(criteria.min_team_supervised || 0);
     const candSupervised = Number(cand.team_size_supervised || 0);
-    let teamScore = reqSupervised > 0 ? (candSupervised >= reqSupervised ? 1.0 : Math.max(0.45, candSupervised / reqSupervised)) : 1.0;
+    let teamScore = reqSupervised > 0 ? (candSupervised >= reqSupervised ? 1.0 : Math.max(0.4, candSupervised / reqSupervised)) : 1.0;
 
-    // Role-trade synergy bonus
-    const roleWords = (criteria.role_titles?.[0] || '').toLowerCase().split(/[\s/,-]+/);
-    const hasTradeSynergy = roleWords.some(w => w.length > 3 && (candTrade.includes(w) || candBranch.includes(w) || candSkills.some(s => s.includes(w))));
-    const synergyBonus = hasTradeSynergy ? 0.08 : 0;
+    // Role title alignment bonus
+    const targetRole = (criteria.role_titles?.[0] || '').toLowerCase();
+    let roleBonus = 0;
+    if (targetRole) {
+      const roleTokens = targetRole.split(/[\s/,-]+/).filter(t => t.length > 3);
+      const hasRoleOverlap = roleTokens.some(t => candTrade.includes(t) || candDuties.includes(t) || candSkills.some(s => s.includes(t)));
+      if (hasRoleOverlap) roleBonus = 0.06;
+    }
 
-    let totalScore = Math.round((capScore * 0.60 + teamScore * 0.32 + synergyBonus) * 100);
+    let totalScore = Math.round(((capScore * 0.65 + teamScore * 0.30 + roleBonus) * 100));
     if (essential.length > 0 && reqHit.length === 0) {
-      totalScore = Math.min(totalScore, 42);
+      totalScore = Math.min(totalScore, 38);
     }
 
     const matchReasons = [];
     if (reqHit.length > 0) {
       matchReasons.push(`${reqHit.length} of ${essential.length} target capabilities verified in military service records`);
     }
-    if (hasTradeSynergy) {
-      matchReasons.push(`Direct military trade alignment: ${cand.trade}`);
-    }
     if (candSupervised > 0) {
-      matchReasons.push(`Command & supervisory span: ${candSupervised} personnel managed (${cand.highest_working_level})`);
+      matchReasons.push(`Command & supervisory span: ${candSupervised} personnel managed`);
     }
     if (cand.civil_licences && cand.civil_licences.length > 0) {
-      matchReasons.push(`Civil credential verified: ${cand.civil_licences[0]}`);
+      matchReasons.push(`Verified civil certification: ${cand.civil_licences[0]}`);
     }
     if (matchReasons.length === 0) {
       matchReasons.push('Verified ex-serviceman with honourable discharge credentials');
     }
 
     return {
-      score: Math.min(98, Math.max(38, totalScore)),
+      score: Math.min(98, Math.max(35, totalScore)),
       reqHit,
       gaps,
       matchReasons
@@ -762,226 +868,176 @@ const FindCandidates = () => {
                   onChange={(e) => handleSectorChange(e.target.value)}
                   style={{ width: '100%', padding: '0.55rem 0.75rem', borderRadius: '10px', border: '1.5px solid #cbd5e1', fontSize: '0.88rem', fontWeight: 600, background: 'white' }}
                 >
-                  {SECTOR_CHOICES.map(s => <option key={s} value={s}>{s}</option>)}
+                  {SECTORS.map(s => <option key={s} value={s}>{s}</option>)}
                 </select>
               </div>
 
-              {/* Target Role Title with quick dropdown & manual override */}
+              {/* Target Role Title */}
               <div>
                 <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#475569', marginBottom: '0.35rem' }}>
                   Target Role Title:
                 </label>
-                <div style={{ display: 'flex', gap: '0.5rem' }}>
-                  <input
-                    type="text"
-                    value={dynamicRoleTitle}
-                    onChange={(e) => handleRoleChange(e.target.value)}
-                    placeholder="e.g. Security Supervisor, Chief Security Officer..."
-                    style={{ flex: 1, padding: '0.55rem 0.75rem', borderRadius: '10px', border: '1.5px solid #cbd5e1', fontSize: '0.88rem', fontWeight: 600, background: 'white' }}
-                  />
-                  <select
-                    value=""
-                    onChange={(e) => e.target.value && handleRoleChange(e.target.value)}
-                    title="Select standard role for this sector"
-                    style={{ padding: '0.55rem 0.6rem', borderRadius: '10px', border: '1.5px solid #cbd5e1', fontSize: '0.82rem', fontWeight: 600, background: 'white', maxWidth: '140px' }}
-                  >
-                    <option value="">Role Menu...</option>
-                    {popularRolesForSector.map(r => (
-                      <option key={r} value={r}>{r}</option>
-                    ))}
-                  </select>
-                </div>
+                <input
+                  type="text"
+                  value={dynamicRoleTitle}
+                  onChange={(e) => setDynamicRoleTitle(e.target.value)}
+                  placeholder="e.g. Network Administrator, Security Lead..."
+                  style={{ width: '100%', padding: '0.55rem 0.75rem', borderRadius: '10px', border: '1.5px solid #cbd5e1', fontSize: '0.88rem', fontWeight: 600, background: 'white' }}
+                />
               </div>
             </div>
 
             {/* Quick Role Suggestions */}
-            {popularRolesForSector.length > 0 && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap', marginBottom: '1.1rem' }}>
-                <span style={{ fontSize: '0.74rem', color: '#64748b', fontWeight: 700 }}>Popular Roles in Sector:</span>
-                {popularRolesForSector.map(role => {
-                  const isActive = dynamicRoleTitle.toLowerCase().trim() === role.toLowerCase().trim();
-                  return (
+            {(() => {
+              const secKey = resolveSectorKey(dynamicSector) || 'it_telecom';
+              const cfg = SECTOR_CONFIG[secKey] || SECTOR_CONFIG.it_telecom;
+              const rolesList = cfg.popularRoles || [];
+              if (rolesList.length === 0) return null;
+              return (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap', marginBottom: '0.9rem' }}>
+                  <span style={{ fontSize: '0.74rem', color: '#64748b', fontWeight: 700 }}>Popular {cfg.sectorLabel} Roles:</span>
+                  {rolesList.map(tag => (
                     <button
-                      key={role}
+                      key={tag}
                       type="button"
-                      onClick={() => handleRoleChange(role)}
+                      onClick={() => handleSelectRole(tag)}
                       style={{
                         padding: '0.22rem 0.65rem',
                         borderRadius: '999px',
                         fontSize: '0.75rem',
-                        fontWeight: 700,
-                        background: isActive ? 'var(--ios-olive)' : 'white',
-                        color: isActive ? 'white' : '#475569',
-                        border: isActive ? '1px solid var(--ios-olive)' : '1px solid #cbd5e1',
+                        fontWeight: 600,
+                        background: dynamicRoleTitle === tag ? 'var(--ios-olive)' : 'white',
+                        color: dynamicRoleTitle === tag ? 'white' : '#475569',
+                        border: dynamicRoleTitle === tag ? '1px solid var(--ios-olive)' : '1px solid #cbd5e1',
                         cursor: 'pointer',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '0.25rem',
                         transition: 'all 0.15s ease'
                       }}
                     >
-                      {isActive && <Check size={12} style={{ strokeWidth: 3 }} />}
-                      {role}
+                      {tag}
                     </button>
-                  );
-                })}
-              </div>
-            )}
+                  ))}
+                </div>
+              );
+            })()}
 
-            {/* Role Blueprint Card: Key Responsibilities & Veteran Requirements */}
+            {/* Role Responsibilities & Requirements Banner */}
             {activeRoleSpec && (
-              <div style={{
-                background: 'white',
-                borderRadius: '14px',
-                border: '1.5px solid #e2e8f0',
-                padding: '1rem 1.25rem',
-                marginBottom: '1.25rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.02)'
-              }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.75rem', borderBottom: '1px solid #f1f5f9', paddingBottom: '0.5rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ fontSize: '1.15rem' }}>🎯</span>
-                    <div>
-                      <strong style={{ fontSize: '0.95rem', color: '#0f172a' }}>
-                        {activeRoleSpec.role}
-                      </strong>
-                      <span style={{ fontSize: '0.75rem', color: '#64748b', marginLeft: '0.5rem', background: '#f1f5f9', padding: '0.15rem 0.5rem', borderRadius: '999px', fontWeight: 600 }}>
-                        {activeRoleSpec.sector}
-                      </span>
-                    </div>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={handleResetRoleDefaults}
-                    style={{
-                      background: 'none',
-                      border: 'none',
-                      color: 'var(--ios-olive)',
-                      fontSize: '0.76rem',
-                      fontWeight: 700,
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.25rem'
-                    }}
-                  >
-                    <RotateCcw size={12} /> Reset to Role Defaults
-                  </button>
-                </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: '1rem' }}>
-                  {/* Key Civilian Responsibilities */}
-                  <div style={{ background: '#f8fafc', padding: '0.85rem 1rem', borderRadius: '10px', border: '1px solid #edf2f7' }}>
-                    <span style={{ fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', color: '#1e293b', letterSpacing: '0.04em', display: 'flex', alignItems: 'center', gap: '0.35rem', marginBottom: '0.45rem' }}>
-                      📋 Key Civilian Responsibilities
-                    </span>
-                    <ul style={{ margin: 0, paddingLeft: '1.1rem', fontSize: '0.78rem', color: '#334155', lineHeight: 1.45 }}>
-                      {(activeRoleSpec.responsibilities || []).map((resp, idx) => (
-                        <li key={idx} style={{ marginBottom: '0.25rem' }}>{resp}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Veteran Prerequisites & Requirements */}
-                  <div style={{ background: '#f8fafc', padding: '0.85rem 1rem', borderRadius: '10px', border: '1px solid #edf2f7' }}>
-                    <span style={{ fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', color: '#1e293b', letterSpacing: '0.04em', display: 'flex', alignItems: 'center', gap: '0.35rem', marginBottom: '0.45rem' }}>
-                      🎖️ Military Veteran Prerequisites
-                    </span>
-                    <ul style={{ margin: 0, paddingLeft: '1.1rem', fontSize: '0.78rem', color: '#334155', lineHeight: 1.45 }}>
-                      {(activeRoleSpec.requirements || []).map((req, idx) => (
-                        <li key={idx} style={{ marginBottom: '0.25rem' }}>{req}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Auto-aligned capabilities summary */}
-                <div style={{ marginTop: '0.85rem', paddingTop: '0.75rem', borderTop: '1px dashed #e2e8f0', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: '0.73rem', fontWeight: 800, color: 'var(--ios-olive)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                    ⚡ Auto-Aligned Competencies for this Role:
+              <div style={{ background: 'white', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '0.85rem 1rem', marginBottom: '1.1rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.45rem', flexWrap: 'wrap', gap: '0.4rem' }}>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#1e293b', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                    <Briefcase size={14} color="var(--ios-olive)" /> Domain Scope: {activeRoleSpec.role}
                   </span>
-                  {(activeRoleSpec.capabilities || []).map(cid => {
-                    const wt = WORK_TYPES.find(w => w.id === cid);
-                    const icon = WORK_TYPE_ICONS[cid] || '🎖️';
-                    return (
-                      <span
-                        key={cid}
-                        style={{
-                          fontSize: '0.72rem',
-                          background: 'rgba(75, 107, 50, 0.10)',
-                          color: 'var(--ios-olive)',
-                          fontWeight: 700,
-                          padding: '0.15rem 0.5rem',
-                          borderRadius: '6px',
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '0.25rem'
-                        }}
-                      >
-                        {icon} {wt?.civil || cid}
-                      </span>
-                    );
-                  })}
+                  {activeRoleSpec.recommendedLicences?.length > 0 && (
+                    <span style={{ fontSize: '0.72rem', color: '#475569', background: '#f1f5f9', padding: '0.15rem 0.5rem', borderRadius: '6px', fontWeight: 600 }}>
+                      Recommended: {activeRoleSpec.recommendedLicences.join(', ')}
+                    </span>
+                  )}
+                </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '0.75rem', fontSize: '0.78rem' }}>
+                  {activeRoleSpec.responsibilities?.length > 0 && (
+                    <div>
+                      <strong style={{ color: '#334155', display: 'block', marginBottom: '0.2rem', fontSize: '0.72rem', textTransform: 'uppercase' }}>Key Responsibilities:</strong>
+                      <ul style={{ margin: 0, paddingLeft: '1.1rem', color: '#475569', lineHeight: 1.35 }}>
+                        {activeRoleSpec.responsibilities.slice(0, 2).map((r, i) => (
+                          <li key={i}>{r}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {activeRoleSpec.requirements?.length > 0 && (
+                    <div>
+                      <strong style={{ color: '#334155', display: 'block', marginBottom: '0.2rem', fontSize: '0.72rem', textTransform: 'uppercase' }}>Military / Trade Requirements:</strong>
+                      <ul style={{ margin: 0, paddingLeft: '1.1rem', color: '#475569', lineHeight: 1.35 }}>
+                        {activeRoleSpec.requirements.slice(0, 2).map((req, i) => (
+                          <li key={i}>{req}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
             )}
 
             {/* Capability Toggle Matrix */}
-            <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.6rem' }}>
-                <span style={{ fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#1e293b' }}>
-                  Target Military Competencies & Capabilities ({dynamicCapabilities.length} selected):
-                </span>
-                <button
-                  type="button"
-                  onClick={handleResetRoleDefaults}
-                  style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontSize: '0.76rem', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem' }}
-                >
-                  <RotateCcw size={12} /> Reset to Role Defaults
-                </button>
-              </div>
+            {(() => {
+              const secKey = resolveSectorKey(dynamicSector) || 'it_telecom';
+              const cfg = SECTOR_CONFIG[secKey] || SECTOR_CONFIG.it_telecom;
+              const capabilitiesList = showAllCaps ? ALL_CAPABILITIES_LIST : cfg.capabilities;
 
-              <div style={{ display: 'flex', gap: '0.45rem', flexWrap: 'wrap' }}>
-                {WORK_TYPES.map(cap => {
-                  const isSelected = dynamicCapabilities.includes(cap.id);
-                  const isRecommendedForRole = activeRoleSpec?.capabilities?.includes(cap.id);
-                  const icon = WORK_TYPE_ICONS[cap.id] || '🎖️';
+              return (
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+                    <div>
+                      <span style={{ fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#1e293b' }}>
+                        Target Military Competencies & Capabilities ({dynamicCapabilities.length} selected):
+                      </span>
+                      <span style={{ display: 'block', fontSize: '0.72rem', color: '#64748b', fontWeight: 600, marginTop: '2px' }}>
+                        {showAllCaps ? 'Showing all military capability areas across services' : `Curated specifically for ${cfg.sectorLabel} domain`}
+                      </span>
+                    </div>
 
-                  return (
-                    <button
-                      key={cap.id}
-                      type="button"
-                      onClick={() => toggleCapability(cap.id)}
-                      title={cap.civilDesc}
-                      style={{
-                        padding: '0.4rem 0.75rem',
-                        borderRadius: '999px',
-                        fontSize: '0.8rem',
-                        fontWeight: 700,
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '0.35rem',
-                        cursor: 'pointer',
-                        transition: 'all 0.15s ease',
-                        background: isSelected ? 'rgba(75,107,50,0.12)' : isRecommendedForRole ? '#f8fafc' : 'white',
-                        color: isSelected ? 'var(--ios-olive)' : '#475569',
-                        border: isSelected ? '1.8px solid var(--ios-olive)' : isRecommendedForRole ? '1.2px dashed #94a3b8' : '1px solid #cbd5e1',
-                      }}
-                    >
-                      <span>{icon}</span>
-                      <span>{cap.civil}</span>
-                      {isRecommendedForRole && !isSelected && (
-                        <span style={{ fontSize: '0.65rem', padding: '0.1rem 0.35rem', borderRadius: '4px', background: '#e2e8f0', color: '#475569', fontWeight: 800 }}>
-                          Recommended
-                        </span>
-                      )}
-                      {isSelected && <Check size={13} style={{ strokeWidth: 3 }} />}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                      <button
+                        type="button"
+                        onClick={handleResetSectorDefaults}
+                        style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontSize: '0.76rem', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem' }}
+                      >
+                        <RotateCcw size={12} /> Reset to Sector Defaults
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setShowAllCaps(prev => !prev)}
+                        style={{
+                          background: showAllCaps ? '#e2e8f0' : 'white',
+                          border: '1px solid #cbd5e1',
+                          borderRadius: '8px',
+                          padding: '0.25rem 0.6rem',
+                          color: '#334155',
+                          fontSize: '0.72rem',
+                          fontWeight: 700,
+                          cursor: 'pointer'
+                        }}
+                      >
+                        {showAllCaps ? 'Show Sector Curated Only' : 'Show All Military Capabilities'}
+                      </button>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', gap: '0.45rem', flexWrap: 'wrap' }}>
+                    {capabilitiesList.map(cap => {
+                      const isSelected = dynamicCapabilities.includes(cap.id);
+                      return (
+                        <button
+                          key={cap.id}
+                          type="button"
+                          onClick={() => toggleCapability(cap.id)}
+                          style={{
+                            padding: '0.42rem 0.75rem',
+                            borderRadius: '999px',
+                            fontSize: '0.8rem',
+                            fontWeight: 700,
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '0.35rem',
+                            cursor: 'pointer',
+                            transition: 'all 0.15s ease',
+                            background: isSelected ? 'rgba(75,107,50,0.12)' : 'white',
+                            color: isSelected ? 'var(--ios-olive)' : '#475569',
+                            border: isSelected ? '1.8px solid var(--ios-olive)' : '1px solid #cbd5e1',
+                          }}
+                        >
+                          <span>{cap.icon}</span>
+                          <span>{cap.label}</span>
+                          {isSelected && <Check size={13} style={{ strokeWidth: 3 }} />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         ) : (
           /* Match against posted job requirement */
