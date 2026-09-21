@@ -36,12 +36,9 @@ const ExamsPage = () => {
   const [level, setLevel] = useState('central');
   const [category, setCategory] = useState('');
   const [bodyId, setBodyId] = useState('');
-  // Separate State and UT pickers -- not one dropdown that only appears
-  // once Level is narrowed, so an admin can jump straight to a specific
-  // state or UT without a Level click first. Picking one sets `level` to
-  // match and clears the other (a region is either a state or a UT, never
-  // both); picking Level directly clears both back to "any region at that
-  // level".
+  // Separate State and UT pickers, each shown only when Level matches it
+  // (Central shows neither). Changing Level clears both back to "any region
+  // at that level"; a region is either a state or a UT, never both.
   const [stateId, setStateId] = useState('');
   const [utId, setUtId] = useState('');
   const regionId = stateId || utId;
@@ -189,6 +186,7 @@ const ExamsPage = () => {
           <label>Level</label>
           <Select value={level} onChange={(e) => chooseLevel(e.target.value)} options={LEVELS} />
         </div>
+        {level === 'state' && (
         <div className="lc-filter-field">
           <label>State</label>
           <Select
@@ -199,6 +197,8 @@ const ExamsPage = () => {
             options={[{ value: '', label: 'All States' }, ...stateOptions.map((r) => ({ value: r.id, label: r.name }))]}
           />
         </div>
+        )}
+        {level === 'ut' && (
         <div className="lc-filter-field">
           <label>UT</label>
           <Select
@@ -209,6 +209,7 @@ const ExamsPage = () => {
             options={[{ value: '', label: 'All UTs' }, ...utOptions.map((r) => ({ value: r.id, label: r.name }))]}
           />
         </div>
+        )}
         <button className="lc-btn primary" onClick={startNewExam}><Plus size={16} /> Add Exam</button>
       </div>
 

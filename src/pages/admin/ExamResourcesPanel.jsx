@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Plus, Trash2, Search, X, Eye, ExternalLink } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
+import { examsAlreadyHavingResource, loadResourceKeys, isSameResource } from '../../lib/resourceDuplicates';
 import Select from '../../components/ui/Select';
 import AdminResourcePreview from './AdminResourcePreview';
 
@@ -83,8 +84,19 @@ const ExamResourcesPanel = ({ examId }) => {
 
   const removeMapping = async (mapping) => {
     if (!window.confirm(`Remove "${mapping.resource?.title || 'this resource'}" from this exam? The resource itself is untouched — this only removes the link.`)) return;
-    const { error } = await supabase.from('lc_exam_resource_map').delete().eq('id', mapping.id);
+    // An Intro stored only in lc_exam_intro is shown as a synthetic row (fake
+    // id `intro-<examId>`, see fetchMappings) with no lc_exam_resource_map
+    // row behind it -- its link lives in lc_exam_intro, keyed by exam_id.
+    const isSyntheticIntro = mapping.id === `intro-${examId}`;
+    const { error } = isSyntheticIntro
+      ? await supabase.from('lc_exam_intro').delete().eq('exam_id', examId)
+      : await supabase.from('lc_exam_resource_map').delete().eq('id', mapping.id);
     if (error) { alert('Failed: ' + error.message); return; }
+    // A real Intro map row can also have a matching lc_exam_intro row; leave
+    // it and the Intro would reappear (as a synthetic row) on the next fetch.
+    if (!isSyntheticIntro && mapping.category === 'Intro' && mapping.resource_id) {
+      await supabase.from('lc_exam_intro').delete().eq('exam_id', examId).eq('resource_id', mapping.resource_id);
+    }
     setMappings((prev) => prev.filter((m) => m.id !== mapping.id));
   };
 
@@ -347,9 +359,22 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
   });
 
   const handleAdd = async () => {
-    const toAdd = results.filter((r) => selected.has(r.resource_id) && !existingResourceIds.includes(r.resource_id));
-    if (toAdd.length === 0) { onClose(); return; }
+    const picked = results.filter((r) => selected.has(r.resource_id) && !existingResourceIds.includes(r.resource_id));
+    if (picked.length === 0) { onClose(); return; }
     setSaving(true);
+    // Same resource under another resource_id (identical file/content) must not be
+    // linked twice: drop any pick that duplicates one already on this exam, or
+    // one earlier in this same selection.
+    const keys = await loadResourceKeys(picked.map((r) => r.resource_id));
+    const toAdd = [];
+    const skipped = [];
+    for (const r of picked) {
+      const dupes = await examsAlreadyHavingResource(r.resource_id, [examId], r.category);
+      const twinInSelection = toAdd.some((a) => a.category === r.category && isSameResource(keys.get(a.resource_id), keys.get(r.resource_id)));
+      if (dupes.size > 0 || twinInSelection) skipped.push(r.title); else toAdd.push(r);
+    }
+    if (skipped.length > 0) alert(`Not added -- this exam already has the same resource: ${skipped.join(', ')}`);
+    if (toAdd.length === 0) { setSaving(false); onClose(); return; }
     const { error } = await supabase.from('lc_exam_resource_map').insert(toAdd.map((r) => ({
       exam_id: examId,
       resource_id: r.resource_id,
