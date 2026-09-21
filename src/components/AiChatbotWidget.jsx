@@ -1,14 +1,84 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { 
-  Bot, 
-  X, 
-  Send, 
-  RotateCcw, 
+import {
+  Bot,
+  X,
+  Send,
+  RotateCcw,
+  Minus,
   ChevronRight,
-  User
+  User,
+  Briefcase,
+  GraduationCap,
+  Coins,
+  Scale,
+  Users,
+  Info,
+  LogIn,
+  ArrowLeftRight,
+  Sparkles,
+  ShieldCheck,
+  Paperclip,
+  MessageCircle,
+  Mountain,
+  Quote
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+
+// Presentational metadata only (icon + colorway + short description) for the
+// richer "action card" options — derived from each option's own existing
+// title/answer content (CATEGORY_OVERVIEWS / SPECIFIC_KNOWLEDGE_NODES below),
+// never new facts. Keyed by option id or categoryKey. Anything not listed
+// here (e.g. plain sub-topic chips) renders as a plain title+arrow card.
+// `nav_network` and `cat_about` extend the candidate welcome to 6 cards,
+// both routing to real, already-existing pages (/network, the About topic).
+const OPTION_META = {
+  // Candidate personalized options
+  p_career: { icon: Briefcase, color: 'green', desc: 'Build an ATS-ready CV and explore corporate roles' },
+  p_exams: { icon: GraduationCap, color: 'gold', desc: 'Government exams, mock tests and PYQs' },
+  p_sewa: { icon: Coins, color: 'blue', desc: 'Plan your Sewa Nidhi corpus and long-term wealth' },
+  p_legal: { icon: Scale, color: 'purple', desc: 'OROP, SPARSH, ECHS/CSD and legal support' },
+  nav_network: { icon: Users, color: 'green', desc: 'Connect with veterans, mentors and recruiters' },
+  cat_about: { icon: Info, color: 'red', desc: 'Our mission, services and contact support' },
+  // Employer options
+  emp_search: { icon: Users, color: 'green', desc: 'Match verified veteran and Agniveer profiles' },
+  emp_post: { icon: Briefcase, color: 'gold', desc: 'Reach qualified veteran talent through VeerNXT' },
+  emp_rank_map: { icon: ArrowLeftRight, color: 'blue', desc: 'Equivalent corporate roles, skills and experience' },
+  // Logged-out options
+  cat_exams: { icon: GraduationCap, color: 'gold', desc: 'Syllabi, mock tests and past papers' },
+  cat_finance: { icon: Coins, color: 'blue', desc: 'Sewa Nidhi planning frameworks' },
+  cat_jobs: { icon: Briefcase, color: 'green', desc: 'ATS CV builder and the job board' },
+  g_login: { icon: LogIn, color: 'purple', desc: 'Sign in for guidance personalized to your profile' },
+  // Top-level categories (by categoryKey) — used when browsing/answers list all topics
+  exams: { icon: GraduationCap, color: 'gold', desc: 'Mock tests, PYQs and exam prep' },
+  finance: { icon: Coins, color: 'blue', desc: 'Sewa Nidhi and wealth planning' },
+  legal: { icon: Scale, color: 'purple', desc: 'Pension, OROP and legal aid' },
+  jobs: { icon: Briefcase, color: 'green', desc: 'ATS CV and the corporate job board' },
+  pricing: { icon: Sparkles, color: 'teal', desc: 'Compare FREE, PLUS and PRO plans' },
+  about: { icon: Info, color: 'red', desc: 'Mission, HQ and support contact' }
+};
+
+// Popular Questions — real, verified-routing prompts that reach a genuine
+// keyword-matched answer through the existing synthesizeIntelligentResponse /
+// SPECIFIC_KNOWLEDGE_NODES pipeline below (same engine as free-form typing).
+const POPULAR_QUESTIONS = [
+  'How do I build an ATS resume?',
+  'Latest government job notifications',
+  'What is Sewa Nidhi and how to invest?',
+  'How can I get legal support for OROP?'
+];
+
+// Pulls a short, real excerpt from an existing knowledge node's own answer
+// (the line right after its bold heading) instead of inventing new copy.
+function getNodeSummary(nodeId) {
+  const node = SPECIFIC_KNOWLEDGE_NODES.find(n => n.id === nodeId);
+  if (!node) return null;
+  const secondLine = node.answer
+    .split('\n')
+    .filter(l => l.trim())
+    .map(l => l.replace(/\*\*/g, '').replace(/^[-•]\s*/, ''))[1];
+  return secondLine ? secondLine.slice(0, 78).trim() : null;
+}
 
 /**
  * Dedicated Category Overview Answers
@@ -447,12 +517,15 @@ export default function AiChatbotWidget() {
         id: 'msg-init',
         sender: 'bot',
         isAi: true,
-        text: `Hi ${rankName}, how can I help you today? Ask any question or choose a topic:`,
+        text: `Hi ${rankName}! 👋\nI'm your VeerNXT Assistant.\n\nI can help you with exams, career transition, Sewa Nidhi planning, legal aid, and much more. Choose a topic below or ask me anything.`,
         options: [
           { id: 'p_career', label: `Career & ATS CV`, optionType: 'personalized' },
-          { id: 'p_sewa', label: `Sewa Nidhi Plan`, optionType: 'personalized' },
           { id: 'p_exams', label: `Exams & Mock Tests`, optionType: 'personalized' },
-          { id: 'p_legal', label: `Pension & Legal Aid`, optionType: 'personalized' }
+          { id: 'p_sewa', label: `Sewa Nidhi Plan`, optionType: 'personalized' },
+          { id: 'p_legal', label: `Pension & Legal Aid`, optionType: 'personalized' },
+          { id: 'nav_network', label: 'Network & Community', optionType: 'route', routeTo: '/network' },
+          { id: 'cat_about', label: 'About VeerNXT', categoryKey: 'about' },
+          { id: 'browse_all', label: 'Browse all VeerNXT topics', optionType: 'show_all_categories' }
         ],
         timestamp: new Date()
       };
@@ -461,11 +534,12 @@ export default function AiChatbotWidget() {
         id: 'msg-init',
         sender: 'bot',
         isAi: true,
-        text: `Hi ${prof.name || 'Employer'}, how can I help with veteran recruitment today?`,
+        text: `Hi ${prof.name || 'Employer'}! 👋\nI'm your VeerNXT Assistant.\n\nI can help with veteran recruitment, job postings and rank-to-corporate mapping. Choose a topic below or ask me anything.`,
         options: [
           { id: 'emp_search', label: `Match Verified Veterans`, optionType: 'employer' },
           { id: 'emp_post', label: `Post Job Opening`, optionType: 'employer' },
-          { id: 'emp_rank_map', label: `Rank to Corporate Mapping`, optionType: 'employer' }
+          { id: 'emp_rank_map', label: `Rank to Corporate Mapping`, optionType: 'employer' },
+          { id: 'browse_all', label: 'Browse all VeerNXT topics', optionType: 'show_all_categories' }
         ],
         timestamp: new Date()
       };
@@ -474,7 +548,7 @@ export default function AiChatbotWidget() {
         id: 'msg-init',
         sender: 'bot',
         isAi: true,
-        text: `Welcome to VeerNXT. Ask about competitive exams, Sewa Nidhi, corporate careers, or legal aid.`,
+        text: `Welcome to VeerNXT! 👋\nI'm your VeerNXT Assistant.\n\nI can help with competitive exams, Sewa Nidhi, corporate careers and veteran support. Log in for guidance personalized to your profile.`,
         options: [
           { id: 'cat_exams', label: 'Exams & Mock Tests', categoryKey: 'exams' },
           { id: 'cat_finance', label: 'Sewa Nidhi Planning', categoryKey: 'finance' },
@@ -529,6 +603,7 @@ export default function AiChatbotWidget() {
         let secondaryLink = null;
         let secondaryLabel = null;
         let options = TOPIC_CATEGORIES;
+        const personalized = optId !== 'p_all';
 
         if (optId === 'p_career') {
           botText = `**Personalized Career Blueprint for ${userProfile?.rank || ''} ${userProfile?.name || 'Veteran'}**\n\nBased on your service in **${userProfile?.branch || 'Armed Forces'}** ${userProfile?.corps ? '(' + userProfile.corps + ')' : ''}:\n- **Industry Alignment**: Telecom, Defense Tech, Supply Chain & Logistics, Corporate Operations.\n- **Veer Score Match**: High eligibility rating (${userProfile?.veerScore || 750}+ Points).\n- **Action Recommended**: Translate military service terms into corporate ATS keywords and explore verified corporate job openings.`;
@@ -581,6 +656,7 @@ export default function AiChatbotWidget() {
           navLabel,
           secondaryLink,
           secondaryLabel,
+          personalized,
           timestamp: new Date()
         };
       },
@@ -852,12 +928,11 @@ function synthesizeIntelligentResponse(query, profile) {
 }
 
   // Smart Query Search Engine for Free-Form Typed Questions
-  const handleSendMessage = (e) => {
-    e?.preventDefault();
-    const query = inputText.trim();
+  // Shared free-form query pipeline — used by both the input composer and the
+  // Popular Questions prompts, so canned prompts get exactly the same real
+  // routing/answers as anything a user types themselves.
+  const processQuery = (query) => {
     if (!query || isTyping) return;
-
-    setInputText('');
 
     triggerThinkingResponse(
       query,
@@ -929,6 +1004,14 @@ function synthesizeIntelligentResponse(query, profile) {
     );
   };
 
+  const handleSendMessage = (e) => {
+    e?.preventDefault();
+    const query = inputText.trim();
+    if (!query || isTyping) return;
+    setInputText('');
+    processQuery(query);
+  };
+
   const handleResetChat = () => {
     resetChatToInitial(userProfile);
   };
@@ -941,52 +1024,61 @@ function synthesizeIntelligentResponse(query, profile) {
 
   return (
     <>
-      {/* Floating Chatbot Launcher Button - Circular with Open App Olive (#4B6B32) */}
+      {/* Floating Chatbot Launcher Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle VeerNXT AI Support"
         className={`chatbot-fab ${isOpen ? 'active' : ''}`}
       >
         {isOpen ? (
-          <X size={22} />
+          <X size={24} />
         ) : (
-          <Bot size={24} />
+          <Bot size={26} />
         )}
       </button>
 
       {/* Chat Drawer */}
       {isOpen && (
         <div className="chatbot-drawer">
-          {/* Clean, Simple Header */}
           <div className="drawer-header">
+            <span className="header-ribbon">For Veterans<br />By Veterans</span>
             <div className="header-left">
               <div className="bot-avatar">
-                <Bot size={18} />
+                <Bot size={19} />
               </div>
               <div className="bot-titles">
                 <h3>VeerNXT Assistant</h3>
                 <span className="online-indicator">
-                  <span className="dot" />
-                  <span>Online</span>
+                  <span className="dot" /> Online • Here to help 24/7
                 </span>
               </div>
             </div>
 
             <div className="header-right">
-              <button 
-                onClick={handleResetChat} 
-                className="btn-icon-head" 
+              <button
+                onClick={handleResetChat}
+                className="btn-icon-head"
                 title="Reset Conversation"
+                aria-label="Reset conversation"
                 disabled={isTyping}
               >
-                <RotateCcw size={15} />
+                <RotateCcw size={14} />
               </button>
-              <button 
-                onClick={() => setIsOpen(false)} 
-                className="btn-icon-head" 
-                title="Close"
+              <button
+                onClick={() => setIsOpen(false)}
+                className="btn-icon-head"
+                title="Minimize"
+                aria-label="Minimize assistant"
               >
-                <X size={17} />
+                <Minus size={16} />
+              </button>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="btn-icon-head"
+                title="Close"
+                aria-label="Close assistant"
+              >
+                <X size={16} />
               </button>
             </div>
           </div>
@@ -994,8 +1086,8 @@ function synthesizeIntelligentResponse(query, profile) {
           {/* Messages Stream */}
           <div className="drawer-body">
             {messages.map((msg) => (
-              <div 
-                key={msg.id} 
+              <div
+                key={msg.id}
                 className={`chat-bubble-row ${msg.sender === 'user' ? 'user-row' : 'bot-row'}`}
               >
                 {msg.sender === 'bot' && (
@@ -1004,17 +1096,32 @@ function synthesizeIntelligentResponse(query, profile) {
                   </div>
                 )}
 
-                <div className={`msg-bubble ${msg.sender}`}>
-                  {/* Formatted Text */}
-                  <div className="msg-text-content">
-                    {renderFormattedMessage(msg.text)}
-                  </div>
+                <div className={`msg-bubble ${msg.sender} ${msg.id === 'msg-init' ? 'msg-bubble-plain' : ''}`}>
+                  {msg.id === 'msg-init' ? (
+                    <div className="chat-greeting-box">
+                      <div className="msg-text-content">
+                        {renderFormattedMessage(msg.text)}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="msg-text-content">
+                      {renderFormattedMessage(msg.text)}
+                    </div>
+                  )}
+
+                  {msg.id === 'msg-init' && (
+                    <div className="chat-quote-card">
+                      <Quote size={16} className="chat-quote-mark" />
+                      <p>New beginnings. Same discipline.<br />Let's build your next chapter together.</p>
+                      <Mountain size={40} className="chat-quote-illustration" />
+                    </div>
+                  )}
 
                   {/* Internal Navigation Action Buttons */}
                   {(msg.navLink || msg.secondaryLink) && (
                     <div className="msg-actions-wrap">
                       {msg.navLink && (
-                        <button 
+                        <button
                           onClick={() => { navigate(msg.navLink); setIsOpen(false); }}
                           className="btn-nav-action primary"
                         >
@@ -1023,7 +1130,7 @@ function synthesizeIntelligentResponse(query, profile) {
                         </button>
                       )}
                       {msg.secondaryLink && (
-                        <button 
+                        <button
                           onClick={() => { navigate(msg.secondaryLink); setIsOpen(false); }}
                           className="btn-nav-action secondary"
                         >
@@ -1034,38 +1141,94 @@ function synthesizeIntelligentResponse(query, profile) {
                     </div>
                   )}
 
-                  {/* Option Chips as Clean, Minimalist Pills */}
-                  {msg.options && msg.options.length > 0 && (
-                    <div className="msg-chips-wrap">
-                      {msg.options.map(opt => {
-                        const isCat = opt.categoryKey !== undefined;
-                        const isPersonalized = opt.optionType === 'personalized' || opt.optionType === 'employer';
-                        const isShowAll = opt.optionType === 'show_all_categories';
+                  {/* Options: rich color-coded action cards for top-level/personalized/
+                      employer/login/route choices (2-column grid), plain topic cards
+                      for sub-topic drill-downs (single column), and a slim "browse
+                      all" link when present. */}
+                  {msg.options && msg.options.length > 0 && (() => {
+                    const realOptions = msg.options.filter(o => o.optionType !== 'show_all_categories');
+                    const allCards = realOptions.every(o =>
+                      o.categoryKey !== undefined || o.optionType === 'personalized' ||
+                      o.optionType === 'employer' || o.optionType === 'login' || o.optionType === 'route'
+                    );
 
-                        return (
+                    return (
+                      <div className={`chat-topic-grid ${allCards ? 'cards-2col' : ''}`}>
+                        {realOptions.map(opt => {
+                          const isCat = opt.categoryKey !== undefined;
+                          const isPersonalized = opt.optionType === 'personalized' || opt.optionType === 'employer';
+                          const isLogin = opt.optionType === 'login';
+                          const isRoute = opt.optionType === 'route';
+                          const meta = OPTION_META[opt.id] || (isCat ? OPTION_META[opt.categoryKey] : null);
+                          const Icon = meta?.icon;
+                          const desc = meta?.desc || (!isCat && !isPersonalized && !isLogin && !isRoute ? getNodeSummary(opt.id) : null);
+                          const isCard = !!meta || isCat || isPersonalized || isRoute;
+
+                          return (
+                            <button
+                              key={opt.id}
+                              type="button"
+                              disabled={isTyping}
+                              onClick={() => {
+                                if (isLogin) {
+                                  navigate('/login');
+                                  setIsOpen(false);
+                                } else if (isRoute) {
+                                  navigate(opt.routeTo);
+                                  setIsOpen(false);
+                                } else if (isPersonalized) {
+                                  handlePersonalizedOptionClick(opt.id, opt.label);
+                                } else if (isCat) {
+                                  handleCategoryClick(opt.categoryKey, opt.label);
+                                } else {
+                                  handleSubTopicClick(opt.id, opt.label);
+                                }
+                              }}
+                              className={isCard ? `chat-action-card color-${meta?.color || 'green'}` : 'chat-topic-card'}
+                            >
+                              {isCard && Icon && (
+                                <span className={`chat-action-icon color-${meta?.color || 'green'}`}><Icon size={17} /></span>
+                              )}
+                              <span className="chat-action-body">
+                                <span className="chat-action-title">{opt.label}</span>
+                                {desc && <span className="chat-action-desc">{desc}</span>}
+                              </span>
+                              <ChevronRight size={15} className="chat-action-chevron" />
+                            </button>
+                          );
+                        })}
+
+                        {msg.options.some(o => o.optionType === 'show_all_categories') && (
                           <button
-                            key={opt.id}
+                            type="button"
+                            className="chat-browse-all"
                             disabled={isTyping}
-                            onClick={() => {
-                              if (opt.optionType === 'login') {
-                                navigate('/login');
-                                setIsOpen(false);
-                              } else if (isPersonalized) {
-                                handlePersonalizedOptionClick(opt.id, opt.label);
-                              } else if (isShowAll) {
-                                handlePersonalizedOptionClick('p_all', opt.label);
-                              } else if (isCat) {
-                                handleCategoryClick(opt.categoryKey, opt.label);
-                              } else {
-                                handleSubTopicClick(opt.id, opt.label);
-                              }
-                            }}
-                            className="chip-pill"
+                            onClick={() => handlePersonalizedOptionClick('p_all', 'Browse all VeerNXT topics')}
                           >
-                            <span>{opt.label}</span>
+                            Browse all VeerNXT topics <ChevronRight size={13} />
                           </button>
-                        );
-                      })}
+                        )}
+                      </div>
+                    );
+                  })()}
+
+                  {msg.id === 'msg-init' && (
+                    <div className="chat-popular-questions">
+                      <div className="chat-popular-divider"><span>Popular Questions</span></div>
+                      <div className="chat-popular-grid">
+                        {POPULAR_QUESTIONS.map(q => (
+                          <button
+                            key={q}
+                            type="button"
+                            className="chat-popular-pill"
+                            disabled={isTyping}
+                            onClick={() => processQuery(q)}
+                          >
+                            <MessageCircle size={13} />
+                            <span>{q}</span>
+                          </button>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
@@ -1078,13 +1241,14 @@ function synthesizeIntelligentResponse(query, profile) {
               </div>
             ))}
 
-            {/* Minimalist 3-Dot Typing Indicator */}
+            {/* Typing Indicator */}
             {isTyping && (
               <div className="chat-bubble-row bot-row">
                 <div className="msg-avatar bot">
                   <Bot size={14} />
                 </div>
                 <div className="msg-bubble bot typing-bubble">
+                  <span>VeerNXT Assistant is thinking</span>
                   <span className="typing-dot" />
                   <span className="typing-dot" />
                   <span className="typing-dot" />
@@ -1096,109 +1260,150 @@ function synthesizeIntelligentResponse(query, profile) {
           </div>
 
           {/* Footer Input */}
-          <form onSubmit={handleSendMessage} className="drawer-footer">
-            <input
-              type="text"
-              placeholder={userProfile?.isLoggedIn ? "Ask about exams, Sewa Nidhi, ATS CV..." : "Ask any question..."}
-              value={inputText}
-              disabled={isTyping}
-              onChange={(e) => setInputText(e.target.value)}
-              className="chat-input"
-            />
-            <button
-              type="submit"
-              disabled={!inputText.trim() || isTyping}
-              className="btn-send"
-              aria-label="Send query"
-            >
-              <Send size={15} />
-            </button>
-          </form>
+          <div className="drawer-footer-wrap">
+            <form onSubmit={handleSendMessage} className="drawer-footer">
+              <div className="chat-input-shell">
+                <Paperclip size={15} className="chat-input-clip" />
+                <input
+                  type="text"
+                  aria-label="Ask the VeerNXT Assistant"
+                  placeholder={userProfile?.isLoggedIn ? "Ask anything about exams, jobs, Sewa Nidhi, legal aid..." : "Ask about exams, careers or veteran support..."}
+                  value={inputText}
+                  disabled={isTyping}
+                  onChange={(e) => setInputText(e.target.value)}
+                  className="chat-input"
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={!inputText.trim() || isTyping}
+                className="btn-send"
+                aria-label="Send query"
+              >
+                <Send size={15} />
+              </button>
+            </form>
+            <div className="chat-trust-line">
+              <ShieldCheck size={12} /> Trusted • Accurate • Veteran Focused
+            </div>
+          </div>
         </div>
       )}
 
-      {/* Modern, Clean & Simple Styles with Open App Olive (#4B6B32) */}
+      {/* VeerNXT Assistant — premium presentation layer. Uses `!important` to
+          opt out of the app-wide `* { border-radius: 0 !important }` rule
+          (src/index.css) the same way this widget already did before this
+          redesign — a floating chat widget reads better with soft, rounded
+          chrome regardless of the flat page chrome around it. */}
       <style dangerouslySetInnerHTML={{ __html: `
-        /* Launcher Floating Action Button - Plain Circle in Open App Olive */
         .chatbot-fab {
           position: fixed;
           bottom: 85px;
           right: 24px;
-          width: 56px;
-          height: 56px;
+          width: 58px;
+          height: 58px;
           border-radius: 50% !important;
-          background: linear-gradient(135deg, #5A803D 0%, #4B6B32 50%, #3D5728 100%) !important;
+          background: linear-gradient(135deg, var(--ios-olive, #54733a), #2e4a1f) !important;
           color: #FFFFFF !important;
-          border: 2px solid rgba(255, 255, 255, 0.3) !important;
+          border: none !important;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 10px 26px rgba(75, 107, 50, 0.42), 0 2px 6px rgba(0, 0, 0, 0.12) !important;
+          box-shadow: 0 8px 24px rgba(20, 46, 31, 0.32), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
           z-index: 9999;
-          transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .chatbot-fab:hover {
-          transform: translateY(-3px) scale(1.06);
-          box-shadow: 0 14px 32px rgba(75, 107, 50, 0.52), 0 4px 10px rgba(0, 0, 0, 0.16) !important;
-          filter: brightness(1.05);
+          transform: translateY(-2px);
+          box-shadow: 0 12px 30px rgba(20, 46, 31, 0.4), 0 4px 10px rgba(0, 0, 0, 0.14) !important;
         }
 
         .chatbot-fab.active {
-          background: #2E421E !important;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3) !important;
+          background: #16281a !important;
         }
 
-        /* Drawer Styling */
+        /* Drawer */
         .chatbot-drawer {
           position: fixed;
           bottom: 155px;
           right: 24px;
-          width: 380px;
-          max-width: calc(100vw - 32px);
-          height: 550px;
-          max-height: calc(100vh - 180px);
-          background: #FFFFFF !important;
+          width: min(420px, calc(100vw - 28px));
+          height: min(700px, calc(100vh - 190px));
+          background: var(--surface, #fff) !important;
           border-radius: 18px !important;
-          border: 1px solid rgba(0, 0, 0, 0.08) !important;
-          box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14) !important;
+          border: 1px solid var(--border-strong);
+          box-shadow: 0 24px 60px rgba(15, 40, 28, 0.20), 0 4px 16px rgba(15, 40, 28, 0.08) !important;
           display: flex;
           flex-direction: column;
           z-index: 9998;
           overflow: hidden !important;
-          animation: drawerSlideUp 0.24s cubic-bezier(0.16, 1, 0.3, 1);
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          animation: assistantOpen 0.22s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        @keyframes drawerSlideUp {
+        @keyframes assistantOpen {
           from { opacity: 0; transform: translateY(12px) scale(0.98); }
           to { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        /* Header in Open App Olive */
+        @media (max-width: 480px) {
+          .chatbot-drawer {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100dvh;
+            max-height: 100dvh;
+            border-radius: 0 !important;
+          }
+          .chatbot-fab { bottom: 20px; right: 20px; }
+        }
+
+        /* Header */
         .drawer-header {
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 0.85rem 1rem;
-          background: #4B6B32 !important;
+          gap: 0.5rem;
+          padding: 0.9rem 1rem 1.5rem;
+          background: linear-gradient(120deg, var(--ios-olive, #54733a), #1f331a) !important;
           color: #FFFFFF !important;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+          overflow: hidden;
+        }
+
+        .header-ribbon {
+          position: absolute;
+          bottom: 0.3rem;
+          right: 0.85rem;
+          font-family: 'Brush Script MT', 'Segoe Script', cursive;
+          font-size: 0.72rem;
+          line-height: 1.05;
+          color: rgba(255, 255, 255, 0.35) !important;
+          text-align: right;
+          transform: rotate(-3deg);
+          pointer-events: none;
+        }
+
+        @media (max-width: 480px) {
+          .header-ribbon { display: none; }
         }
 
         .header-left {
           display: flex;
           align-items: center;
           gap: 0.65rem;
+          min-width: 0;
         }
 
         .bot-avatar {
-          width: 34px;
-          height: 34px;
-          border-radius: 50% !important;
-          background: rgba(255, 255, 255, 0.2) !important;
-          border: 1px solid rgba(255, 255, 255, 0.35) !important;
+          width: 36px;
+          height: 36px;
+          border-radius: 10px !important;
+          background: rgba(255, 255, 255, 0.16) !important;
+          border: 1px solid rgba(255, 255, 255, 0.3) !important;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1210,14 +1415,22 @@ function synthesizeIntelligentResponse(query, profile) {
           display: flex;
           flex-direction: column;
           gap: 1px;
+          min-width: 0;
         }
 
         .bot-titles h3 {
           margin: 0;
           font-size: 0.92rem;
-          font-weight: 700;
+          font-weight: 800;
           color: #FFFFFF !important;
           line-height: 1.2;
+        }
+
+        .header-right {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          flex-shrink: 0;
         }
 
         .online-indicator {
@@ -1236,18 +1449,13 @@ function synthesizeIntelligentResponse(query, profile) {
           box-shadow: 0 0 5px #A3E635 !important;
         }
 
-        .header-right {
-          display: flex;
-          gap: 0.35rem;
-        }
-
         .btn-icon-head {
-          background: rgba(255, 255, 255, 0.15) !important;
+          background: rgba(255, 255, 255, 0.14) !important;
           border: none !important;
           color: #FFFFFF !important;
           width: 28px;
           height: 28px;
-          border-radius: 50% !important;
+          border-radius: 8px !important;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1256,7 +1464,7 @@ function synthesizeIntelligentResponse(query, profile) {
         }
 
         .btn-icon-head:hover:not(:disabled) {
-          background: rgba(255, 255, 255, 0.28) !important;
+          background: rgba(255, 255, 255, 0.26) !important;
         }
 
         .btn-icon-head:disabled {
@@ -1267,19 +1475,21 @@ function synthesizeIntelligentResponse(query, profile) {
         /* Body & Messages */
         .drawer-body {
           flex: 1;
-          padding: 0.9rem;
+          padding: 1rem;
           overflow-y: auto;
           display: flex;
           flex-direction: column;
-          gap: 0.75rem;
-          background: #FAFBF9 !important;
+          gap: 0.8rem;
+          background:
+            radial-gradient(circle at top right, rgba(84, 115, 58, 0.06), transparent 40%),
+            var(--surface-alt, #f5f7f5) !important;
         }
 
         .chat-bubble-row {
           display: flex;
           align-items: flex-start;
           gap: 0.5rem;
-          max-width: 90%;
+          max-width: 92%;
         }
 
         .chat-bubble-row.user-row {
@@ -1289,12 +1499,13 @@ function synthesizeIntelligentResponse(query, profile) {
 
         .chat-bubble-row.bot-row {
           align-self: flex-start;
+          max-width: 96%;
         }
 
         .msg-avatar {
           width: 26px;
           height: 26px;
-          border-radius: 50% !important;
+          border-radius: 8px !important;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1303,44 +1514,46 @@ function synthesizeIntelligentResponse(query, profile) {
         }
 
         .msg-avatar.bot {
-          background: #4B6B32 !important;
+          background: var(--ios-olive, #54733a) !important;
           color: #FFFFFF !important;
         }
 
         .msg-avatar.user {
-          background: #1F2937 !important;
+          background: #9aa39a !important;
           color: #FFFFFF !important;
         }
 
         .msg-bubble {
-          padding: 0.65rem 0.85rem;
+          padding: 0.7rem 0.9rem;
           border-radius: 14px !important;
-          font-size: 0.82rem;
-          line-height: 1.45;
+          font-size: 0.83rem;
+          line-height: 1.5;
           word-break: break-word;
+          animation: assistantMsgIn 0.18s ease-out;
+        }
+
+        @keyframes assistantMsgIn {
+          from { opacity: 0; transform: translateY(4px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
         .msg-bubble.bot {
-          background: #FFFFFF !important;
-          color: #1F2937 !important;
-          border: 1px solid #E5E7EB !important;
-          border-top-left-radius: 3px !important;
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+          background: var(--surface, #fff) !important;
+          color: var(--ios-text, #16221b) !important;
+          border: 1px solid var(--border-strong) !important;
+          border-top-left-radius: 4px !important;
+          box-shadow: var(--shadow-1);
         }
 
         .msg-bubble.user {
-          background: #4B6B32 !important;
-          color: #FFFFFF !important;
-          border-top-right-radius: 3px !important;
+          background: #e8efe5 !important;
+          color: #1f3928 !important;
+          border-top-right-radius: 4px !important;
         }
 
         .chat-bold {
           font-weight: 700;
-          color: #111827;
-        }
-
-        .user .chat-bold {
-          color: #FFFFFF;
+          color: inherit;
         }
 
         .chat-bullet-item {
@@ -1351,7 +1564,7 @@ function synthesizeIntelligentResponse(query, profile) {
         }
 
         .bullet-dot {
-          color: #4B6B32 !important;
+          color: var(--ios-olive, #54733a) !important;
           font-weight: bold;
         }
 
@@ -1367,102 +1580,309 @@ function synthesizeIntelligentResponse(query, profile) {
           margin-bottom: 0;
         }
 
+        /* Welcome message: no boxed bubble — its content (quote card, action
+           cards, popular questions) sits directly on the drawer background
+           instead of nested inside one bordered container. */
+        .msg-bubble.bot.msg-bubble-plain {
+          background: transparent !important;
+          border: none !important;
+          box-shadow: none !important;
+          padding: 0 !important;
+          border-radius: 0 !important;
+        }
+
+        .chat-greeting-box {
+          display: inline-block;
+          background: var(--success-bg, rgba(26, 156, 94, 0.1));
+          border-radius: 12px !important;
+          padding: 0.6rem 0.8rem;
+        }
+
         /* Nav Action Buttons */
         .msg-actions-wrap {
           display: flex;
           flex-wrap: wrap;
-          gap: 0.35rem;
-          margin-top: 0.55rem;
-          padding-top: 0.45rem;
-          border-top: 1px solid #F3F4F6 !important;
+          gap: 0.4rem;
+          margin-top: 0.6rem;
+          padding-top: 0.5rem;
+          border-top: 1px solid var(--border);
         }
 
         .btn-nav-action {
           display: inline-flex;
           align-items: center;
           gap: 0.25rem;
-          padding: 0.35rem 0.65rem;
+          padding: 0.4rem 0.7rem;
           border-radius: 8px !important;
-          font-size: 0.72rem;
-          font-weight: 600;
+          font-size: 0.74rem;
+          font-weight: 700;
           cursor: pointer;
           transition: all 0.15s ease;
         }
 
         .btn-nav-action.primary {
-          background: #4B6B32 !important;
+          background: var(--ios-olive, #54733a) !important;
           color: #FFFFFF !important;
           border: none !important;
         }
 
         .btn-nav-action.primary:hover {
-          background: #3D5728 !important;
+          background: #3f612c !important;
         }
 
         .btn-nav-action.secondary {
-          background: #F3F4F6 !important;
-          color: #374151 !important;
-          border: 1px solid #E5E7EB !important;
+          background: var(--surface-alt) !important;
+          color: var(--ios-olive, #54733a) !important;
+          border: 1px solid var(--border-strong) !important;
         }
 
         .btn-nav-action.secondary:hover {
-          background: #E5E7EB !important;
+          background: var(--border) !important;
         }
 
-        /* Option Chips as Clean, Rounded Pills */
-        .msg-chips-wrap {
+        /* Motivational quote card (welcome message only) */
+        .chat-quote-card {
+          position: relative;
+          overflow: hidden;
+          background: var(--success-bg, rgba(26, 156, 94, 0.08));
+          border: 1px solid var(--border-strong);
+          border-radius: 12px !important;
+          padding: 0.75rem 0.9rem;
+          margin: 0.7rem 0;
+        }
+
+        .chat-quote-mark {
+          color: var(--ios-olive, #54733a);
+          opacity: 0.5;
+          margin-bottom: 0.2rem;
+        }
+
+        .chat-quote-card p {
+          margin: 0;
+          font-size: 0.8rem;
+          font-style: italic;
+          font-weight: 600;
+          color: var(--ios-text);
+          line-height: 1.45;
+          max-width: 80%;
+        }
+
+        .chat-quote-illustration {
+          position: absolute;
+          right: 0.6rem;
+          bottom: 0.5rem;
+          color: var(--ios-olive, #54733a);
+          opacity: 0.16;
+        }
+
+        /* Action cards (top-level / personalized / employer / login / route options) */
+        .chat-topic-grid {
           display: flex;
-          flex-wrap: wrap;
-          gap: 0.35rem;
-          margin-top: 0.55rem;
+          flex-direction: column;
+          gap: 0.5rem;
+          margin-top: 0.6rem;
         }
 
-        .chip-pill {
-          display: inline-flex;
+        .chat-topic-grid.cards-2col {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.55rem;
+        }
+
+        .chat-action-card, .chat-topic-card {
+          position: relative;
+          display: flex;
           align-items: center;
-          padding: 0.32rem 0.65rem;
-          background: #F4F7F0 !important;
-          border: 1px solid #D5E1CE !important;
-          border-radius: 9999px !important;
-          font-size: 0.72rem;
-          font-weight: 500;
-          color: #364D24 !important;
+          gap: 0.65rem;
+          width: 100%;
+          text-align: left;
+          background: var(--surface, #fff) !important;
+          border: 1px solid var(--border-strong) !important;
+          border-radius: 12px !important;
+          padding: 0.65rem 0.75rem;
           cursor: pointer;
-          transition: all 0.15s ease;
+          transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
         }
 
-        .chip-pill:hover:not(:disabled) {
-          background: #4B6B32 !important;
-          border-color: #4B6B32 !important;
-          color: #FFFFFF !important;
+        .cards-2col .chat-action-card {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+          padding: 0.75rem 0.7rem;
         }
 
-        .chip-pill:disabled {
+        .cards-2col .chat-action-chevron {
+          position: absolute;
+          top: 0.7rem;
+          right: 0.65rem;
+        }
+
+        .chat-action-card:hover:not(:disabled), .chat-topic-card:hover:not(:disabled) {
+          border-color: var(--ios-olive, #54733a) !important;
+          box-shadow: var(--shadow-1);
+          transform: translateY(-1px);
+        }
+
+        .chat-action-card:disabled, .chat-topic-card:disabled {
           opacity: 0.5;
           cursor: not-allowed;
         }
 
-        /* Minimal 3-Dot Typing Bubble */
+        .chat-action-icon {
+          width: 34px;
+          height: 34px;
+          flex-shrink: 0;
+          border-radius: 9px !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .chat-action-icon.color-green { background: rgba(26, 156, 94, 0.12); color: #1a7a4a; }
+        .chat-action-icon.color-gold { background: rgba(217, 166, 42, 0.16); color: #a3760f; }
+        .chat-action-icon.color-blue { background: rgba(37, 99, 235, 0.12); color: #2054c4; }
+        .chat-action-icon.color-purple { background: rgba(147, 51, 234, 0.12); color: #7e22ce; }
+        .chat-action-icon.color-red { background: rgba(220, 38, 38, 0.1); color: #dc2626; }
+        .chat-action-icon.color-teal { background: rgba(13, 148, 136, 0.12); color: #0d9488; }
+
+        .chat-action-body {
+          flex: 1;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.1rem;
+        }
+
+        .cards-2col .chat-action-body { padding-right: 1rem; }
+
+        .chat-action-title {
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: var(--ios-text);
+        }
+
+        .chat-action-desc {
+          font-size: 0.72rem;
+          color: var(--text-secondary, #718078);
+          line-height: 1.35;
+        }
+
+        .chat-action-chevron {
+          flex-shrink: 0;
+          color: var(--text-secondary, #718078);
+        }
+
+        /* Popular Questions */
+        .chat-popular-questions {
+          margin-top: 0.9rem;
+        }
+
+        .chat-popular-divider {
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .chat-popular-divider::before, .chat-popular-divider::after {
+          content: '';
+          flex: 1;
+          height: 1px;
+          background: var(--border-strong);
+        }
+
+        .chat-popular-divider span {
+          font-size: 0.64rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: var(--text-secondary, #718078);
+          white-space: nowrap;
+        }
+
+        .chat-popular-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.5rem;
+        }
+
+        .chat-popular-pill {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          background: var(--surface, #fff) !important;
+          border: 1px solid var(--border-strong) !important;
+          border-radius: 999px !important;
+          padding: 0.5rem 0.7rem;
+          font-size: 0.7rem;
+          font-weight: 600;
+          color: var(--ios-text);
+          cursor: pointer;
+          text-align: left;
+          transition: border-color 0.15s ease, background 0.15s ease;
+        }
+
+        .chat-popular-pill svg {
+          color: var(--ios-olive, #54733a);
+          flex-shrink: 0;
+        }
+
+        .chat-popular-pill:hover:not(:disabled) {
+          border-color: var(--ios-olive, #54733a) !important;
+          background: var(--surface-alt) !important;
+        }
+
+        .chat-popular-pill:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        @media (max-width: 380px) {
+          .chat-topic-grid.cards-2col, .chat-popular-grid { grid-template-columns: 1fr; }
+        }
+
+        .chat-browse-all {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.3rem;
+          background: none !important;
+          border: none !important;
+          color: var(--ios-olive, #54733a) !important;
+          font-size: 0.76rem;
+          font-weight: 700;
+          padding: 0.4rem;
+          cursor: pointer;
+          align-self: center;
+        }
+
+        .chat-browse-all:hover:not(:disabled) {
+          text-decoration: underline;
+        }
+
+        /* Typing indicator */
         .typing-bubble {
           display: flex !important;
           align-items: center;
-          gap: 5px;
-          padding: 0.6rem 0.8rem !important;
+          gap: 6px;
+          padding: 0.65rem 0.9rem !important;
           width: fit-content;
+          font-size: 0.76rem;
+          color: var(--text-secondary, #718078);
         }
 
         .typing-dot {
-          width: 6px;
-          height: 6px;
+          width: 5px;
+          height: 5px;
           border-radius: 50% !important;
-          background: #4B6B32 !important;
+          background: var(--ios-olive, #54733a) !important;
           display: inline-block;
           animation: typingBounce 1.2s infinite ease-in-out both;
         }
 
-        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
-        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
-        .typing-dot:nth-child(3) { animation-delay: 0s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(3) { animation-delay: -0.16s; }
+        .typing-dot:nth-child(4) { animation-delay: 0s; }
 
         @keyframes typingBounce {
           0%, 80%, 100% { transform: scale(0.6); opacity: 0.35; }
@@ -1470,41 +1890,77 @@ function synthesizeIntelligentResponse(query, profile) {
         }
 
         /* Drawer Footer */
+        .drawer-footer-wrap {
+          background: var(--surface, #fff) !important;
+          border-top: 1px solid var(--border);
+        }
+
         .drawer-footer {
           display: flex;
           align-items: center;
-          gap: 0.45rem;
-          padding: 0.65rem 0.85rem;
-          background: #FFFFFF !important;
-          border-top: 1px solid #E5E7EB !important;
+          gap: 0.5rem;
+          padding: 0.75rem 0.85rem 0.4rem;
+        }
+
+        .chat-input-shell {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          min-width: 0;
+          padding: 0 0.75rem;
+          border: 1px solid var(--border-strong) !important;
+          border-radius: 10px !important;
+          background: var(--surface-alt, #f5f7f5) !important;
+          transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .chat-input-shell:focus-within {
+          border-color: var(--ios-olive, #54733a) !important;
+          background: var(--surface, #fff) !important;
+          box-shadow: 0 0 0 2px rgba(84, 115, 58, 0.15) !important;
+        }
+
+        .chat-input-clip {
+          color: var(--text-secondary, #9CA3AF);
+          flex-shrink: 0;
         }
 
         .chat-input {
           flex: 1;
-          padding: 0.55rem 0.8rem;
-          border: 1px solid #D1D5DB !important;
-          border-radius: 20px !important;
-          font-size: 0.82rem;
+          min-width: 0;
+          padding: 0.6rem 0;
+          border: none !important;
           outline: none;
-          background: #F9FAFB !important;
-          transition: border-color 0.15s ease, box-shadow 0.15s ease;
+          font-size: 0.83rem;
+          background: transparent !important;
+          color: var(--ios-text);
         }
 
         .chat-input::placeholder {
-          color: #9CA3AF;
+          color: var(--text-secondary, #9CA3AF);
         }
 
-        .chat-input:focus {
-          border-color: #4B6B32 !important;
-          background: #FFFFFF !important;
-          box-shadow: 0 0 0 2px rgba(75, 107, 50, 0.15) !important;
+        .chat-trust-line {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.35rem;
+          font-size: 0.66rem;
+          font-weight: 600;
+          color: var(--text-secondary, #718078);
+          padding: 0.3rem 0 0.65rem;
+        }
+
+        .chat-trust-line svg {
+          color: var(--ios-olive, #54733a);
         }
 
         .btn-send {
-          width: 34px;
-          height: 34px;
-          border-radius: 50% !important;
-          background: #4B6B32 !important;
+          width: 38px;
+          height: 38px;
+          border-radius: 10px !important;
+          background: var(--ios-olive, #54733a) !important;
           color: #FFFFFF !important;
           border: none !important;
           display: flex;
@@ -1516,11 +1972,11 @@ function synthesizeIntelligentResponse(query, profile) {
         }
 
         .btn-send:hover:not(:disabled) {
-          background: #3D5728 !important;
+          background: #3f612c !important;
         }
 
         .btn-send:disabled {
-          background: #E5E7EB !important;
+          background: var(--border-strong) !important;
           color: #9CA3AF !important;
           cursor: not-allowed;
         }
