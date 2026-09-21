@@ -518,61 +518,131 @@ async function handleSubmitRequirement(req, res) {
 async function handleSendRecruiterRequest(req, res) {
   const user = await requireUser(req);
   if (!user) return res.status(401).json({ ok: false, error: 'Not authenticated' });
-  const { requirement_id, candidate_user_id, fit_score, match_reasons } = req.body || {};
-  if (!requirement_id || !candidate_user_id) {
-    return res.status(400).json({ ok: false, error: 'requirement_id and candidate_user_id are required' });
+  const {
+    requirement_id,
+    candidate_user_id,
+    fit_score,
+    match_reasons,
+    role_title,
+    sector,
+    notes,
+    candidate_masked_code,
+    candidate_trade,
+    candidate_service,
+    candidate_rank,
+  } = req.body || {};
+
+  if (!candidate_user_id) {
+    return res.status(400).json({ ok: false, error: 'candidate_user_id is required' });
   }
 
   const supabaseAdmin = getSupabaseAdmin();
-  // Ensure requirement belongs to this employer
-  const { data: requirement } = await supabaseAdmin
-    .from('ps_job_requirements')
-    .select('id, employer_id, role_titles, locations, employer_profiles(company_name)')
-    .eq('id', requirement_id)
-    .maybeSingle();
+  let requirement = null;
 
-  if (!requirement || requirement.employer_id !== user.id) {
-    return res.status(403).json({ ok: false, error: 'Requirement not found or unauthorized' });
+  if (requirement_id) {
+    const { data: reqData } = await supabaseAdmin
+      .from('ps_job_requirements')
+      .select('id, employer_id, role_titles, locations, sector, employer_profiles(company_name, contact_name)')
+      .eq('id', requirement_id)
+      .maybeSingle();
+
+    if (!reqData || reqData.employer_id !== user.id) {
+      return res.status(403).json({ ok: false, error: 'Requirement not found or unauthorized' });
+    }
+    requirement = reqData;
   }
 
-  const { data, error } = await supabaseAdmin
+  // Fetch employer profile info
+  const { data: employerProfile } = await supabaseAdmin
+    .from('employer_profiles')
+    .select('company_name, contact_name, contact_phone, contact_email')
+    .eq('id', user.id)
+    .maybeSingle();
+
+  const finalRoleTitle = role_title || (requirement?.role_titles || []).join(' / ') || 'Specialized Role';
+  const finalSector = sector || requirement?.sector || 'Private Sector';
+  const finalCompanyName = requirement?.employer_profiles?.company_name || employerProfile?.company_name || 'Corporate Partner';
+  const finalEmployerName = requirement?.employer_profiles?.contact_name || employerProfile?.contact_name || user.email || 'Recruiter';
+  const finalMaskedCode = candidate_masked_code || `VN-${candidate_user_id.slice(0, 4).toUpperCase()}`;
+
+  const payload = {
+    requirement_id: requirement_id || null,
+    employer_id: user.id,
+    user_id: candidate_user_id,
+    status: 'interest_sent',
+    fit_score: fit_score || null,
+    match_reasons: match_reasons || {},
+    role_title: finalRoleTitle,
+    sector: finalSector,
+    notes: notes || null,
+    employer_name: finalEmployerName,
+    employer_company: finalCompanyName,
+    candidate_masked_code: finalMaskedCode,
+    candidate_trade: candidate_trade || null,
+    candidate_service: candidate_service || null,
+    candidate_rank: candidate_rank || null,
+    updated_at: new Date().toISOString(),
+  };
+
+  // Check if an existing request exists for this employer and candidate
+  let existingQuery = supabaseAdmin
     .from('ps_recruiter_requests')
-    .upsert(
-      {
-        requirement_id,
-        employer_id: user.id,
-        user_id: candidate_user_id,
-        status: 'interest_sent',
-        fit_score: fit_score || null,
-        match_reasons: match_reasons || {},
-        updated_at: new Date().toISOString(),
-      },
-      { onConflict: 'requirement_id,user_id' }
-    )
-    .select('*')
-    .single();
+    .select('id')
+    .eq('employer_id', user.id)
+    .eq('user_id', candidate_user_id);
+
+  if (requirement_id) {
+    existingQuery = existingQuery.eq('requirement_id', requirement_id);
+  } else {
+    existingQuery = existingQuery.is('requirement_id', null);
+  }
+
+  const { data: existingRows } = await existingQuery;
+  let data, error;
+
+  if (existingRows && existingRows.length > 0) {
+    const resUp = await supabaseAdmin
+      .from('ps_recruiter_requests')
+      .update(payload)
+      .eq('id', existingRows[0].id)
+      .select('*')
+      .single();
+    data = resUp.data;
+    error = resUp.error;
+  } else {
+    const resIns = await supabaseAdmin
+      .from('ps_recruiter_requests')
+      .insert(payload)
+      .select('*')
+      .single();
+    data = resIns.data;
+    error = resIns.error;
+  }
 
   if (error) return res.status(500).json({ ok: false, error: error.message });
 
   // Notify candidate (fetch candidate mobile best-effort)
-  const { data: candidateUser } = await supabaseAdmin
-    .from('user_profiles')
-    .select('raw_profile_data')
-    .eq('id', candidate_user_id)
-    .maybeSingle();
+  try {
+    const { data: candidateUser } = await supabaseAdmin
+      .from('user_profiles')
+      .select('raw_profile_data')
+      .eq('id', candidate_user_id)
+      .maybeSingle();
 
-  const mobile = candidateUser?.raw_profile_data?.mobile;
-  const companyName = requirement.employer_profiles?.company_name || 'A corporate partner';
-  const roleTitle = (requirement.role_titles || []).join(', ') || 'Civilian Role';
-
-  await sendWhatsAppNotification(supabaseAdmin, {
-    eventType: 'candidate_interest_expressed',
-    subject: `[VNXT-INTEREST-REQUEST] New Job Opportunity from ${companyName}`,
-    message: `${companyName} has expressed interest in your profile for the role of ${roleTitle}. Log in to review the terms and accept or decline. Your contact details remain masked until you accept.`,
-    recipient: mobile,
-    relatedRequirementId: requirement_id,
-    relatedUserId: candidate_user_id,
-  });
+    const mobile = candidateUser?.raw_profile_data?.mobile;
+    if (mobile) {
+      await sendWhatsAppNotification(supabaseAdmin, {
+        eventType: 'candidate_interest_expressed',
+        subject: `[VNXT-INTEREST-REQUEST] New Job Opportunity from ${finalCompanyName}`,
+        message: `${finalCompanyName} has expressed interest in your profile for the role of ${finalRoleTitle}. Log in to review the terms and accept or decline. Your contact details remain masked until you accept.`,
+        recipient: mobile,
+        relatedRequirementId: requirement_id || null,
+        relatedUserId: candidate_user_id,
+      });
+    }
+  } catch (notifErr) {
+    console.warn('[router] candidate notification error:', notifErr.message);
+  }
 
   return res.status(200).json({ ok: true, request: data });
 }
@@ -989,6 +1059,65 @@ async function handleAdminBroadcastRequirementEmail(req, res) {
   return res.status(200).json({ ok: true, emailBroadcast: emailBroadcastResult });
 }
 
+async function handleAdminListRecruiterRequests(req, res) {
+  const supabaseAdmin = getSupabaseAdmin();
+  const { data, error } = await supabaseAdmin
+    .from('ps_recruiter_requests')
+    .select('*, employer_profiles(company_name, contact_name, contact_email, contact_phone), ps_job_requirements(role_titles, sector, quantity, locations)')
+    .order('created_at', { ascending: false });
+
+  if (error) return res.status(500).json({ ok: false, error: error.message });
+
+  const candidateUserIds = [...new Set((data || []).map((r) => r.user_id))];
+  let profilesById = {};
+  if (candidateUserIds.length > 0) {
+    const { data: uProfiles } = await supabaseAdmin
+      .from('user_profiles')
+      .select('id, full_name, raw_profile_data')
+      .in('id', candidateUserIds);
+    profilesById = Object.fromEntries((uProfiles || []).map((p) => [p.id, p]));
+  }
+
+  const enriched = (data || []).map((r) => {
+    const u = profilesById[r.user_id];
+    const maskedCode = r.candidate_masked_code || `VN-${r.user_id.slice(0, 4).toUpperCase()}`;
+    return {
+      ...r,
+      candidate_name: u?.full_name || maskedCode,
+      candidate_mobile: u?.raw_profile_data?.mobile || null,
+      candidate_email: u?.raw_profile_data?.email || null,
+      company_name: r.employer_company || r.employer_profiles?.company_name || 'Employer',
+      contact_name: r.employer_name || r.employer_profiles?.contact_name || 'Recruiter',
+      contact_email: r.employer_profiles?.contact_email || null,
+      contact_phone: r.employer_profiles?.contact_phone || null,
+      role_display: r.role_title || (r.ps_job_requirements?.role_titles || []).join(', ') || 'Custom Role',
+      sector_display: r.sector || r.ps_job_requirements?.sector || 'Private Sector',
+    };
+  });
+
+  return res.status(200).json({ ok: true, requests: enriched });
+}
+
+async function handleAdminUpdateRecruiterRequest(req, res) {
+  const { id, status, admin_notes } = req.body || {};
+  if (!id || !status) return res.status(400).json({ ok: false, error: 'id and status are required' });
+  const supabaseAdmin = getSupabaseAdmin();
+  const { data, error } = await supabaseAdmin
+    .from('ps_recruiter_requests')
+    .update({
+      status,
+      admin_notes: admin_notes !== undefined ? admin_notes : null,
+      updated_at: new Date().toISOString(),
+      ...(status === 'accepted' ? { unlocked_at: new Date().toISOString() } : {})
+    })
+    .eq('id', id)
+    .select('*')
+    .single();
+
+  if (error) return res.status(500).json({ ok: false, error: error.message });
+  return res.status(200).json({ ok: true, request: data });
+}
+
 const ADMIN_ACTIONS = {
   admin_list_requirements: handleAdminListRequirements,
   admin_update_requirement: handleAdminUpdateRequirement,
@@ -999,6 +1128,8 @@ const ADMIN_ACTIONS = {
   admin_get_requirement_doc_url: handleAdminGetRequirementDocUrl,
   admin_list_interest: handleAdminListInterest,
   admin_update_interest: handleAdminUpdateInterest,
+  admin_list_recruiter_requests: handleAdminListRecruiterRequests,
+  admin_update_recruiter_request: handleAdminUpdateRecruiterRequest,
   admin_list_senior_review: handleAdminListSeniorReview,
   admin_list_notifications: handleAdminListNotifications,
 };

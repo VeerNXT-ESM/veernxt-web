@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { RefreshCw, X, CheckCircle2, Ban, FileText, Users, ShieldCheck, Briefcase, Bell } from 'lucide-react';
+import { RefreshCw, X, CheckCircle2, Ban, FileText, Users, ShieldCheck, Briefcase, Bell, Send } from 'lucide-react';
 import { summarizeJobClasses } from '../../lib/privateSectorTaxonomy';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
@@ -11,6 +11,7 @@ const call = (action, body = {}) =>
 const SECTIONS = [
   { key: 'requirements', label: 'Requirements', icon: Briefcase },
   { key: 'verifications', label: 'Verification', icon: ShieldCheck },
+  { key: 'employer_interest', label: 'Employer Introductions', icon: Send },
   { key: 'interest', label: 'Candidate Interest', icon: Users },
   { key: 'senior', label: 'Senior / Professional', icon: FileText },
   { key: 'notifications', label: 'Notification Log', icon: Bell },
@@ -24,6 +25,7 @@ const AdminPrivateSector = () => {
   const [loading, setLoading] = useState(true);
   const [requirements, setRequirements] = useState([]);
   const [verifications, setVerifications] = useState([]);
+  const [recruiterRequests, setRecruiterRequests] = useState([]);
   const [interest, setInterest] = useState([]);
   const [seniorProfiles, setSeniorProfiles] = useState([]);
   const [notifications, setNotifications] = useState([]);
@@ -33,18 +35,20 @@ const AdminPrivateSector = () => {
   const fetchAll = async () => {
     setLoading(true);
     try {
-      const [reqs, vers, ints, seniors, notifs] = await Promise.all([
+      const [reqs, vers, ints, seniors, notifs, recReqs] = await Promise.all([
         call('admin_list_requirements'),
         call('admin_list_verifications'),
         call('admin_list_interest'),
         call('admin_list_senior_review'),
         call('admin_list_notifications'),
+        call('admin_list_recruiter_requests').catch(() => ({ requests: [] })),
       ]);
       setRequirements(reqs.requirements || []);
       setVerifications(vers.verifications || []);
       setInterest(ints.interest || []);
       setSeniorProfiles(seniors.profiles || []);
       setNotifications(notifs.events || []);
+      setRecruiterRequests(recReqs.requests || []);
     } catch (err) {
       console.error('Failed to load private sector admin data:', err);
     } finally {
@@ -53,6 +57,19 @@ const AdminPrivateSector = () => {
   };
 
   useEffect(() => { fetchAll(); }, []);
+
+  const updateRecruiterRequest = async (id, status, admin_notes) => {
+    setSaving(true);
+    try {
+      await call('admin_update_recruiter_request', { id, status, admin_notes });
+      setSelected(null);
+      await fetchAll();
+    } catch (err) {
+      alert(err.response?.data?.error || err.message);
+    } finally {
+      setSaving(false);
+    }
+  };
 
   const updateRequirement = async (id, status) => {
     let notifyUsers = true;
@@ -156,7 +173,14 @@ const AdminPrivateSector = () => {
       <div className="aps-tabs">
         {SECTIONS.map((s) => {
           const Icon = s.icon;
-          const counts = { requirements: requirements.length, verifications: verifications.filter((v) => v.status === 'pending').length, interest: interest.length, senior: seniorProfiles.length, notifications: notifications.length };
+          const counts = {
+            requirements: requirements.length,
+            verifications: verifications.filter((v) => v.status === 'pending').length,
+            employer_interest: recruiterRequests.length,
+            interest: interest.length,
+            senior: seniorProfiles.length,
+            notifications: notifications.length
+          };
           return (
             <button key={s.key} className={`aps-tab ${section === s.key ? 'active' : ''}`} onClick={() => setSection(s.key)}>
               <Icon size={14} /> {s.label} <span className="aps-tab-count">{counts[s.key]}</span>
@@ -217,6 +241,51 @@ const AdminPrivateSector = () => {
                   </tr>
                 ))}
                 {verifications.length === 0 && <tr><td colSpan={5} className="aps-empty">No verification submissions yet.</td></tr>}
+              </tbody>
+            </table>
+          )}
+
+          {section === 'employer_interest' && (
+            <table className="aps-table">
+              <thead><tr><th>Employer / Company</th><th>Role & Sector</th><th>Candidate</th><th>Fit %</th><th>Recruiter Note</th><th>Status</th><th>Submitted</th><th></th></tr></thead>
+              <tbody>
+                {recruiterRequests.map((r) => (
+                  <tr key={r.id} className="aps-row" onClick={() => setSelected({ type: 'employer_interest', row: r })}>
+                    <td className="aps-strong">
+                      {r.company_name}
+                      <div className="aps-muted" style={{ fontSize: '0.75rem' }}>{r.contact_name}</div>
+                    </td>
+                    <td>
+                      <span style={{ fontWeight: 600 }}>{r.role_display}</span>
+                      <div className="aps-muted" style={{ fontSize: '0.75rem' }}>{r.sector_display}</div>
+                    </td>
+                    <td>
+                      <span className="aps-strong">{r.candidate_masked_code}</span>
+                      <div className="aps-muted" style={{ fontSize: '0.75rem' }}>
+                        {[r.candidate_rank, r.candidate_trade, r.candidate_service].filter(Boolean).join(' • ') || r.candidate_name}
+                      </div>
+                    </td>
+                    <td>
+                      <span style={{
+                        padding: '2px 8px',
+                        borderRadius: '999px',
+                        fontSize: '0.75rem',
+                        fontWeight: 700,
+                        background: (r.fit_score || 80) >= 80 ? 'rgba(16, 185, 129, 0.15)' : 'rgba(234, 179, 8, 0.15)',
+                        color: (r.fit_score || 80) >= 80 ? '#10b981' : '#eab308'
+                      }}>
+                        {r.fit_score ? `${r.fit_score}% Fit` : 'Matched'}
+                      </span>
+                    </td>
+                    <td style={{ maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={r.notes || '—'}>
+                      {r.notes || '—'}
+                    </td>
+                    <td><span className={`aps-status aps-status-${r.status}`}>{r.status.replace(/_/g, ' ')}</span></td>
+                    <td className="aps-muted">{new Date(r.created_at).toLocaleDateString()}</td>
+                    <td className="aps-view">Review & Coordinate →</td>
+                  </tr>
+                ))}
+                {recruiterRequests.length === 0 && <tr><td colSpan={8} className="aps-empty">No employer introduction requests yet.</td></tr>}
               </tbody>
             </table>
           )}
@@ -285,6 +354,7 @@ const AdminPrivateSector = () => {
               <h3>
                 {selected.type === 'requirement' && (selected.row.role_titles || []).join(', ')}
                 {selected.type === 'verification' && (selected.row.candidate_name || 'Verification')}
+                {selected.type === 'employer_interest' && (selected.row.company_name ? `${selected.row.company_name} → ${selected.row.candidate_masked_code}` : 'Employer Introduction')}
                 {selected.type === 'interest' && (selected.row.candidate_name || 'Candidate interest')}
               </h3>
               <button type="button" onClick={() => setSelected(null)} className="aps-modal-close"><X size={20} /></button>
@@ -312,6 +382,64 @@ const AdminPrivateSector = () => {
                 <>
                   <div className="aps-detail-row"><span>Service number</span><span>{selected.row.service_number}</span></div>
                   <button type="button" className="aps-link-btn" onClick={() => viewVerificationDoc(selected.row.id)}>View uploaded document</button>
+                </>
+              )}
+              {selected.type === 'employer_interest' && (
+                <>
+                  <div className="aps-detail-row"><span>Employer Company</span><span className="aps-strong">{selected.row.company_name}</span></div>
+                  <div className="aps-detail-row"><span>Recruiter Contact</span><span>{selected.row.contact_name} {selected.row.contact_phone ? `(${selected.row.contact_phone})` : ''} {selected.row.contact_email ? `• ${selected.row.contact_email}` : ''}</span></div>
+                  <div className="aps-detail-row"><span>Target Role</span><span style={{ fontWeight: 700, color: 'var(--admin-accent, #10b981)' }}>{selected.row.role_display}</span></div>
+                  <div className="aps-detail-row"><span>Industry Sector</span><span>{selected.row.sector_display}</span></div>
+                  <div className="aps-detail-row"><span>Candidate Masked Code</span><span className="aps-strong">{selected.row.candidate_masked_code}</span></div>
+                  <div className="aps-detail-row"><span>Candidate Background</span><span>{[selected.row.candidate_rank, selected.row.candidate_trade, selected.row.candidate_service].filter(Boolean).join(' • ') || '—'}</span></div>
+                  <div className="aps-detail-row"><span>Candidate Direct (Admin Only)</span><span>{selected.row.candidate_name} {selected.row.candidate_mobile ? `(${selected.row.candidate_mobile})` : ''} {selected.row.candidate_email ? `• ${selected.row.candidate_email}` : ''}</span></div>
+                  {selected.row.fit_score && <div className="aps-detail-row"><span>Calculated Fit Score</span><span><strong>{selected.row.fit_score}%</strong> Match</span></div>}
+                  {selected.row.notes && (
+                    <div style={{ marginTop: '0.75rem', padding: '0.75rem', borderRadius: '8px', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                      <span className="aps-muted" style={{ display: 'block', marginBottom: '0.25rem', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Employer's Note to Candidate:</span>
+                      <p style={{ margin: 0, fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.5 }}>{selected.row.notes}</p>
+                    </div>
+                  )}
+
+                  <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                    <label style={{ display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.4rem', color: '#94a3b8' }}>Update Introduction Status</label>
+                    <select
+                      defaultValue={selected.row.status}
+                      id="recruiter-status-select"
+                      style={{ width: '100%', padding: '0.55rem', borderRadius: '8px', background: '#1e293b', color: '#f8fafc', border: '1px solid #334155', marginBottom: '0.75rem', fontSize: '0.85rem' }}
+                    >
+                      <option value="interest_sent">Interest Sent (Awaiting Candidate Response)</option>
+                      <option value="candidate_contacted">Candidate Contacted by VeerNXT HR</option>
+                      <option value="accepted">Accepted / Introduction Approved (Contact Unlocked)</option>
+                      <option value="interview">Interview Scheduled</option>
+                      <option value="hired">Hired / Selection Confirmed</option>
+                      <option value="declined">Declined</option>
+                      <option value="not_selected">Not Selected</option>
+                    </select>
+
+                    <label style={{ display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.4rem', color: '#94a3b8' }}>Internal Admin Remarks</label>
+                    <textarea
+                      id="recruiter-admin-notes"
+                      defaultValue={selected.row.admin_notes || ''}
+                      placeholder="Add administrative notes on candidate coordination, briefing, or interview dates..."
+                      rows={3}
+                      style={{ width: '100%', padding: '0.55rem', borderRadius: '8px', background: '#1e293b', color: '#f8fafc', border: '1px solid #334155', fontFamily: 'inherit', fontSize: '0.85rem' }}
+                    />
+
+                    <button
+                      type="button"
+                      className="aps-btn aps-btn-primary"
+                      style={{ width: '100%', marginTop: '0.75rem', padding: '0.65rem', justifyContent: 'center' }}
+                      disabled={saving}
+                      onClick={() => {
+                        const newStatus = document.getElementById('recruiter-status-select').value;
+                        const notes = document.getElementById('recruiter-admin-notes').value;
+                        updateRecruiterRequest(selected.row.id, newStatus, notes);
+                      }}
+                    >
+                      {saving ? 'Updating...' : 'Save & Update Introduction Status'}
+                    </button>
+                  </div>
                 </>
               )}
               {selected.type === 'interest' && (
