@@ -106,6 +106,11 @@ export async function parseDocxToSemanticModelNode(buffer, fileName) {
 
   let currentChapter = null;
   const imagesDb = [];
+  // The one auto-created "Introduction" chapter that collects whatever sits
+  // before the book's first Heading 1 (cover, contents page). Tracked by
+  // identity so cleanup below can drop exactly this chapter -- not any real
+  // chapter that merely has "introduction" in its title.
+  let frontMatterPlaceholder = null;
 
   const ensureChapter = () => {
     if (!currentChapter) {
@@ -115,6 +120,7 @@ export async function parseDocxToSemanticModelNode(buffer, fileName) {
         order: book.chapters.length + 1,
         blocks: []
       };
+      frontMatterPlaceholder = currentChapter;
       book.chapters.push(currentChapter);
     }
   };
@@ -179,13 +185,15 @@ export async function parseDocxToSemanticModelNode(buffer, fileName) {
     }
   }
 
-  // Cleanup -- same rule batch_enrich_books.mjs always applied: drop empty
-  // chapters, and drop a placeholder "Introduction" chapter if real chapters
-  // exist alongside it.
-  const hasOtherChapters = book.chapters.some((ch) => !ch.title.toLowerCase().includes('introduction'));
+  // Cleanup: drop empty chapters, and drop the auto-created front-matter
+  // placeholder if real chapters exist alongside it. This used to drop ANY
+  // chapter whose title merely contained "introduction" (batch_enrich_books.mjs's
+  // original rule), which silently deleted real content such as "Chapter 1:
+  // Introduction to Andhra Pradesh" or a book's "N.1 Introduction" sections.
+  const hasOtherChapters = book.chapters.some((ch) => ch !== frontMatterPlaceholder);
   book.chapters = book.chapters.filter((ch) => {
-    const isIntro = ch.title.toLowerCase().includes('introduction');
-    return ch.blocks.length > 0 && (!isIntro || !hasOtherChapters);
+    if (ch.blocks.length === 0) return false;
+    return ch !== frontMatterPlaceholder || !hasOtherChapters;
   });
   book.chapters.forEach((ch, idx) => { ch.order = idx + 1; });
 
