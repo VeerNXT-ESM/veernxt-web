@@ -630,10 +630,11 @@ async function handleBooksList(req, res) {
       const rowsAtCanonicalUrl = group.rows.filter((r) => r.storage_base_url === canonicalUrl);
       const canonicalRow = rowsAtCanonicalUrl.find((r) => !['draft', 'archived'].includes((r.status || '').toLowerCase())) || rowsAtCanonicalUrl[0] || group.rows[0];
       const issueKey = `${group.category}::${group.title.toLowerCase()}`;
-      // Distinct exams linked to any row of this title (a title can have
-      // several rows, each carrying some of the links).
+      // Distinct exams linked to any row serving this book's content (same
+      // storage_base_url -- the same definition the Link Exams drawer uses; a
+      // book can have several rows, each carrying some of the links).
       const linkedExamIds = new Set();
-      for (const r of group.rows) for (const id of examsByResourceId.get(r.resource_id) || []) linkedExamIds.add(id);
+      for (const r of rowsAtCanonicalUrl) for (const id of examsByResourceId.get(r.resource_id) || []) linkedExamIds.add(id);
       // Archived means the book itself (its live/canonical row) is Draft or
       // Archived -- not "does this title happen to have an archived
       // duplicate sitting next to its live row." The old `.some(...)` check

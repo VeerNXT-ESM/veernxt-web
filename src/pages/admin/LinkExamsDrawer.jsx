@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Search, X } from 'lucide-react';
+import { Search, X, ChevronDown, ChevronRight } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
-import { examsAlreadyHavingResource } from '../../lib/resourceDuplicates';
+import { examsAlreadyHavingResource, loadBookLinks } from '../../lib/resourceDuplicates';
 import Select from '../../components/ui/Select';
 
 const LEVEL_PILLS = [
@@ -38,7 +38,12 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   const [allExams, setAllExams] = useState([]);
   const [loading, setLoading] = useState(true);
   const [existingExamIds, setExistingExamIds] = useState([]);
+  // resources rows that carry at least one of this book's links -- an unlink has to target these, not just book.resourceId
+  const [linkedResourceIds, setLinkedResourceIds] = useState([]);
   const [selected, setSelected] = useState(new Set());
+  // The already-linked exams can run to the hundreds/thousands, so that section is
+  // collapsed by default -- the admin is usually here to add new links.
+  const [showLinked, setShowLinked] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
 
@@ -49,24 +54,29 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     let cancelled = false;
     (async () => {
       setLoading(true);
-      const [{ data: exams }, { data: mapRows }] = await Promise.all([
-        supabase
-          .from('lc_exams')
-          .select('id, name, category, conducting_body:lc_conducting_bodies(name), region:lc_regions(name, level)')
-          .order('name')
-          .limit(2000),
-        supabase.from('lc_exam_resource_map').select('exam_id').eq('resource_id', book.resourceId).eq('category', book.category),
-      ]);
-      if (!cancelled) {
-        setAllExams(exams || []);
-        const existing = (mapRows || []).map((r) => r.exam_id);
-        setExistingExamIds(existing);
-        setSelected(new Set(existing)); // pre-checked, not disabled -- see the component's own doc comment
-        setLoading(false);
+      try {
+        const [{ data: exams }, links] = await Promise.all([
+          supabase
+            .from('lc_exams')
+            .select('id, name, category, conducting_body:lc_conducting_bodies(name), region:lc_regions(name, level)')
+            .order('name')
+            .limit(2000),
+          loadBookLinks(book),
+        ]);
+        if (!cancelled) {
+          setAllExams(exams || []);
+          setExistingExamIds(links.examIds);
+          setLinkedResourceIds(links.resourceIds);
+          setSelected(new Set(links.examIds)); // pre-checked, not disabled -- see the component's own doc comment
+        }
+      } catch (err) {
+        if (!cancelled) setError(`Could not load this book's linked exams: ${err.message}`);
+      } finally {
+        if (!cancelled) setLoading(false);
       }
     })();
     return () => { cancelled = true; };
-  }, [book.resourceId, book.category]);
+  }, [book]);
 
   // lc_exams.category -- the ~21-value Banking/Agriculture/Police/etc.
   // classification ExamsPage.jsx's own Category filter already uses, not
@@ -107,6 +117,12 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     return [...pool].sort((a, b) => (linked.has(b.id) - linked.has(a.id)) || a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
   }, [allExams, existingExamIds, level, examCategory, examRegion, search]);
 
+  // `results` is already linked-first (see above); split it so the linked
+  // block can be collapsed on its own.
+  const linkedSet = useMemo(() => new Set(existingExamIds), [existingExamIds]);
+  const linkedResults = useMemo(() => results.filter((e) => linkedSet.has(e.id)), [results, linkedSet]);
+  const otherResults = useMemo(() => results.filter((e) => !linkedSet.has(e.id)), [results, linkedSet]);
+
   const toggle = (examId) => setSelected((prev) => {
     const next = new Set(prev);
     if (next.has(examId)) next.delete(examId); else next.add(examId);
@@ -141,8 +157,9 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
       if (insErr) { setSaving(false); setError(insErr.message); return; }
     }
     if (toRemove.length > 0) {
+      // Links can sit on any resources row serving this book's content, so unlink across all of them.
       const { error: delErr } = await supabase.from('lc_exam_resource_map').delete()
-        .eq('resource_id', book.resourceId).eq('category', book.category).in('exam_id', toRemove);
+        .in('resource_id', linkedResourceIds).eq('category', book.category).in('exam_id', toRemove);
       if (delErr) { setSaving(false); setError(delErr.message); return; }
     }
     setSaving(false);
@@ -152,6 +169,34 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   const pickExamState = (name) => { setExamState(name); setExamUt(''); if (name) setLevel('state'); };
   const pickExamUt = (name) => { setExamUt(name); setExamState(''); if (name) setLevel('ut'); };
   const handleClearFilters = () => { setSearch(''); setLevel(''); setExamCategory(''); setExamState(''); setExamUt(''); };
+
+  const renderExamRow = (exam) => {
+    const wasLinked = linkedSet.has(exam.id);
+    const isChecked = selected.has(exam.id);
+    return (
+      <label key={exam.id} className="lc-drawer-list-item" style={{ cursor: 'pointer' }}>
+        <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0 }}>
+          <input
+            type="checkbox"
+            checked={isChecked}
+            onChange={() => toggle(exam.id)}
+            style={{ marginRight: '0.3rem', flexShrink: 0 }}
+          />
+          <span className="lc-truncate" title={exam.name}>{exam.name}</span>
+          {exam.conducting_body?.name && (
+            <span className="lc-muted-note lc-truncate" style={{ maxWidth: '140px', fontSize: '0.72rem', background: 'var(--surface-alt)', padding: '0.1rem 0.4rem', borderRadius: '4px', flexShrink: 0 }} title={exam.conducting_body.name}>
+              {exam.conducting_body.name}
+            </span>
+          )}
+          {exam.category && <span className="lc-muted-note" style={{ flexShrink: 0 }}>· {exam.category}</span>}
+          {exam.region?.level && <span className="lc-muted-note" style={{ flexShrink: 0 }}>· {exam.region.level}{exam.region.name ? ` (${exam.region.name})` : ''}</span>}
+        </span>
+        {wasLinked && isChecked && <span className="lc-muted-note" style={{ flexShrink: 0, marginLeft: '0.5rem' }}>Linked</span>}
+        {wasLinked && !isChecked && <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: '#dc2626', fontWeight: 700 }}>Will unlink</span>}
+        {!wasLinked && isChecked && <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: '#059669', fontWeight: 700 }}>Will link</span>}
+      </label>
+    );
+  };
 
   return (
     <div className="lc-drawer-backdrop" onClick={onClose}>
@@ -275,33 +320,25 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
                 <span>{results.length} exam{results.length === 1 ? '' : 's'}</span>
                 {level && <span>Filtered by: {LEVEL_PILLS.find((p) => p.id === level)?.label}</span>}
               </div>
-              {results.map((exam) => {
-                const wasLinked = existingExamIds.includes(exam.id);
-                const isChecked = selected.has(exam.id);
-                return (
-                  <label key={exam.id} className="lc-drawer-list-item" style={{ cursor: 'pointer' }}>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0 }}>
-                      <input
-                        type="checkbox"
-                        checked={isChecked}
-                        onChange={() => toggle(exam.id)}
-                        style={{ marginRight: '0.3rem', flexShrink: 0 }}
-                      />
-                      <span className="lc-truncate" title={exam.name}>{exam.name}</span>
-                      {exam.conducting_body?.name && (
-                        <span className="lc-muted-note lc-truncate" style={{ maxWidth: '140px', fontSize: '0.72rem', background: 'var(--surface-alt)', padding: '0.1rem 0.4rem', borderRadius: '4px', flexShrink: 0 }} title={exam.conducting_body.name}>
-                          {exam.conducting_body.name}
-                        </span>
-                      )}
-                      {exam.category && <span className="lc-muted-note" style={{ flexShrink: 0 }}>· {exam.category}</span>}
-                      {exam.region?.level && <span className="lc-muted-note" style={{ flexShrink: 0 }}>· {exam.region.level}{exam.region.name ? ` (${exam.region.name})` : ''}</span>}
-                    </span>
-                    {wasLinked && isChecked && <span className="lc-muted-note" style={{ flexShrink: 0, marginLeft: '0.5rem' }}>Linked</span>}
-                    {wasLinked && !isChecked && <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: '#dc2626', fontWeight: 700 }}>Will unlink</span>}
-                    {!wasLinked && isChecked && <span style={{ flexShrink: 0, marginLeft: '0.5rem', fontSize: '0.72rem', color: '#059669', fontWeight: 700 }}>Will link</span>}
-                  </label>
-                );
-              })}
+              {linkedResults.length > 0 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => setShowLinked((v) => !v)}
+                    aria-expanded={showLinked}
+                    style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', width: '100%', background: 'var(--surface-alt)', border: '1px solid var(--admin-border, transparent)', borderRadius: 8, padding: '0.5rem 0.7rem', margin: '0.25rem 0', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 700, color: 'inherit', textAlign: 'left' }}
+                  >
+                    {showLinked ? <ChevronDown size={15} /> : <ChevronRight size={15} />}
+                    Already linked ({linkedResults.length})
+                    <span className="lc-muted-note" style={{ marginLeft: 'auto', fontWeight: 400 }}>{showLinked ? 'Click to collapse' : 'Click to expand'}</span>
+                  </button>
+                  {showLinked && linkedResults.map(renderExamRow)}
+                </>
+              )}
+              {otherResults.length > 0 && linkedResults.length > 0 && (
+                <div className="lc-muted-note" style={{ margin: '0.6rem 0 0.25rem', fontSize: '0.75rem', fontWeight: 700 }}>Other exams ({otherResults.length})</div>
+              )}
+              {otherResults.map(renderExamRow)}
               {results.length === 0 && <p className="lc-muted-note">No matching exams found.</p>}
             </div>
           )}

@@ -69,3 +69,54 @@ export async function examsAlreadyHavingResource(resourceId, examIds, category) 
   }
   return dupes;
 }
+
+/**
+ * Every exam link of a book, across ALL resources rows that serve its content.
+ *
+ * A "book" in Book Content is identified by its stored content
+ * (storage_base_url), but the links to exams are spread over however many
+ * resources rows share that content (the legacy one-row-per-link pattern plus
+ * newer rows), so reading links for just the canonical resource_id misses most
+ * of them. Returns { examIds, resourceIds } where resourceIds are only the rows
+ * that actually carry at least one link -- the set an unlink has to target.
+ */
+export async function loadBookLinks(book) {
+  const siblingIds = new Set([book.resourceId]);
+  if (book.storageBaseUrl) {
+    for (let from = 0; ; from += 1000) {
+      const { data, error } = await supabase
+        .from('resources')
+        .select('resource_id')
+        .eq('category', book.category)
+        .eq('storage_base_url', book.storageBaseUrl)
+        .range(from, from + 999);
+      if (error) throw error;
+      (data || []).forEach((r) => siblingIds.add(r.resource_id));
+      if (!data || data.length < 1000) break;
+    }
+  }
+
+  const ids = [...siblingIds];
+  const chunks = [];
+  for (let i = 0; i < ids.length; i += CHUNK) chunks.push(ids.slice(i, i + CHUNK));
+  const perChunk = await Promise.all(chunks.map(async (chunk) => {
+    const rows = [];
+    for (let from = 0; ; from += 1000) {
+      const { data, error } = await supabase
+        .from('lc_exam_resource_map')
+        .select('exam_id,resource_id')
+        .eq('category', book.category)
+        .in('resource_id', chunk)
+        .range(from, from + 999);
+      if (error) throw error;
+      rows.push(...(data || []));
+      if (!data || data.length < 1000) break;
+    }
+    return rows;
+  }));
+
+  const examIds = new Set();
+  const resourceIds = new Set();
+  for (const r of perChunk.flat()) { examIds.add(r.exam_id); resourceIds.add(r.resource_id); }
+  return { examIds: [...examIds], resourceIds: [...resourceIds] };
+}
