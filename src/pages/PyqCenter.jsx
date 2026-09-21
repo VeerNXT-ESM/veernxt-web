@@ -61,7 +61,22 @@ export default function PyqCenter() {
 
   const subjects = ['All', ...new Set(papers.map(p => p.subject).filter(Boolean))];
 
-  const matchesExamFilter = (p) => !targetExam || !p.exam_name || p.exam_name.toLowerCase().includes(targetExam.name.toLowerCase()) || targetExam.name.toLowerCase().includes((p.exam_name || '').toLowerCase());
+  // lc_exam_id (backfilled via scripts/backfill_pyq_lc_exam_id.mjs) is an
+  // exact FK match and takes priority over the free-text exam_name
+  // fallback -- the exams table has 117 exam_name values shared by 2+
+  // different real exams (e.g. "Staff Nurse" used by 19 unrelated states),
+  // so substring matching alone cross-contaminates unrelated exams' PYQ
+  // pages. A paper with no exam_name at all (deliberately unlinked --
+  // see docs/status_report.md's PYQ audit) only appears in the unfiltered
+  // "all papers" view, never under a specific exam.
+  const matchesExamFilter = (p) => {
+    if (!targetExam) return true;
+    if (p.lc_exam_id) return p.lc_exam_id === targetExam.id;
+    if (!p.exam_name) return false;
+    const examName = targetExam.name.toLowerCase();
+    const paperName = p.exam_name.toLowerCase();
+    return paperName.includes(examName) || examName.includes(paperName);
+  };
 
   const filteredPapers = papers.filter(p => {
     const matchesSearch = p.title.toLowerCase().includes(searchText.toLowerCase()) ||
