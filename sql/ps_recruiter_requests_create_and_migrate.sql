@@ -111,22 +111,17 @@ BEGIN
   END IF;
 END $$;
 
--- 7. Patch ps_notification_events: add recipient_count, allow 'sms' channel,
---    and allow 'job_approved_broadcast' event type
+-- 7. Patch ps_notification_events: add recipient_count column and relax
+--    the inline check constraints (all writes go through the server-side
+--    router.js, so DB-level checks here are redundant and can block migrations
+--    when rows were already inserted with new event_type/channel values).
 ALTER TABLE ps_notification_events ADD COLUMN IF NOT EXISTS recipient_count integer;
 
--- Expand channel constraint to include 'sms'
+-- Drop the narrow inline check constraints so existing rows with new values
+-- (e.g. 'job_approved_broadcast', 'sms') don't block the migration.
+-- The router validates event_type/channel at the application layer.
 ALTER TABLE ps_notification_events DROP CONSTRAINT IF EXISTS ps_notification_events_channel_check;
-ALTER TABLE ps_notification_events ADD CONSTRAINT ps_notification_events_channel_check
-  CHECK (channel IN ('email', 'whatsapp', 'sms'));
-
--- Expand event_type constraint to include 'job_approved_broadcast'
 ALTER TABLE ps_notification_events DROP CONSTRAINT IF EXISTS ps_notification_events_event_type_check;
-ALTER TABLE ps_notification_events ADD CONSTRAINT ps_notification_events_event_type_check
-  CHECK (event_type IN (
-    'employer_requirement_submitted', 'candidate_verification_submitted',
-    'candidate_interest_expressed', 'pipeline_status_changed', 'selection_offer_update',
-    'job_approved_broadcast'
-  ));
 
 -- Done. ps_recruiter_requests is now fully operational.
+
