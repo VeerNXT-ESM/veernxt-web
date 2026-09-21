@@ -99,8 +99,13 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     if (examRegion) pool = pool.filter((e) => e.region?.name === examRegion);
     const q = search.trim().toLowerCase();
     if (q) pool = pool.filter((e) => e.name.toLowerCase().includes(q) || e.conducting_body?.name?.toLowerCase().includes(q));
-    return pool;
-  }, [allExams, level, examCategory, examRegion, search]);
+    // Already-linked exams first so a book with hundreds of candidates doesn't
+    // bury its links, then A-Z. Keyed on the *saved* links (existingExamIds),
+    // not the live checkbox state, so ticking a box doesn't make the row jump
+    // out from under the cursor; it moves to the top once saved and reopened.
+    const linked = new Set(existingExamIds);
+    return [...pool].sort((a, b) => (linked.has(b.id) - linked.has(a.id)) || a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
+  }, [allExams, existingExamIds, level, examCategory, examRegion, search]);
 
   const toggle = (examId) => setSelected((prev) => {
     const next = new Set(prev);
