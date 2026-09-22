@@ -99,12 +99,19 @@ async function handleChatCompletions(req, res) {
       try { errorData = await response.json(); } catch (e) { errorData = { message: response.statusText }; }
       const statusCode = response.status;
       let errorCode = 'AI_PROVIDER_ERROR';
+      if (statusCode === 404) errorCode = 'AI_MODEL_NOT_FOUND';
       if (statusCode === 429) errorCode = 'RATE_LIMIT_EXCEEDED';
       if (statusCode >= 500) errorCode = 'AI_PROVIDER_UNAVAILABLE';
-      console.error('[Error] AI Provider Failed:', errorData);
+      console.error(`[Error] AI Provider Failed [HTTP ${statusCode}]:`, JSON.stringify(errorData));
 
-      return res.status(statusCode === 429 ? 429 : 502).json({
-        error: { code: errorCode, message: 'Unable to generate a response at this time.' }
+      // Surface 404 (model not found) as 400 Bad Request so callers know it's
+      // their model name that's wrong, not a transient upstream outage.
+      let outboundStatus = 502;
+      if (statusCode === 429) outboundStatus = 429;
+      if (statusCode === 404) outboundStatus = 400;
+
+      return res.status(outboundStatus).json({
+        error: { code: errorCode, message: 'Unable to generate a response at this time.', upstream_status: statusCode }
       });
     }
 
