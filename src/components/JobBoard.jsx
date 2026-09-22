@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {
   Briefcase, ExternalLink, RefreshCw, Search, AlertCircle, Clock,
-  MapPin, X, Sliders, Bookmark, Award, ChevronDown, ChevronUp, Sparkles, BookOpen,
+  MapPin, X, Sliders, Award, ChevronDown, ChevronUp, Sparkles, BookOpen,
   Building2, ShieldCheck
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +13,6 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { CAREER_TRACK_META, CAREER_TRACK_ORDER, hexToRgba } from '../lib/careerTrack';
 
-const SAVED_JOBS_STORAGE_KEY = 'veernxt_saved_job_ids';
 const RESULTS_PER_PAGE = 10;
 
 // Ex-servicemen reservation quotas are well established in Defence, PSU,
@@ -53,7 +52,7 @@ const FilterSection = ({ title, children, defaultOpen = false, disabled = false 
   );
 };
 
-const JobCard = ({ job, idx, isActive, isSaved, onSelect, onDismiss, onToggleSave, getAvatarColor, calculateDaysAgo }) => {
+const JobCard = ({ job, idx, isActive, onSelect, onDismiss, getAvatarColor, calculateDaysAgo }) => {
   const deadlineLabel = job.publishedOn ? calculateDaysAgo(job.publishedOn) : 'Recent';
   return (
     <div className={`job-card ${isActive ? 'active' : ''}`} onClick={onSelect}>
@@ -82,14 +81,6 @@ const JobCard = ({ job, idx, isActive, isSaved, onSelect, onDismiss, onToggleSav
         <div className="job-card-footer">
           <span className="job-card-deadline"><Clock size={12} /> {deadlineLabel}</span>
           <div className="job-card-actions">
-            <button
-              type="button"
-              className={`job-card-save-btn ${isSaved ? 'saved' : ''}`}
-              onClick={onToggleSave}
-              aria-label={isSaved ? 'Unsave job' : 'Save job'}
-            >
-              <Bookmark size={14} fill={isSaved ? 'currentColor' : 'none'} />
-            </button>
             <button type="button" className="btn-secondary job-card-view-btn" onClick={(e) => { e.stopPropagation(); onSelect(); }}>
               View Details
             </button>
@@ -121,7 +112,7 @@ const JobCard = ({ job, idx, isActive, isSaved, onSelect, onDismiss, onToggleSav
 
 const JobDetailPanel = ({
   job, profileData, detailTab, setDetailTab, examAccordionOpen, setExamAccordionOpen,
-  isSaved, onToggleSave, getAvatarColor, calculateDaysAgo, navigate
+  getAvatarColor, calculateDaysAgo, navigate
 }) => {
   if (!job) {
     return (
@@ -184,9 +175,6 @@ const JobDetailPanel = ({
             Easy Apply
           </button>
         )}
-        <button type="button" className="btn-secondary job-detail-save-btn" onClick={onToggleSave}>
-          <Bookmark size={14} fill={isSaved ? 'currentColor' : 'none'} /> {isSaved ? 'Saved' : 'Save Job'}
-        </button>
       </div>
 
       {veteranFriendly && (
@@ -325,14 +313,6 @@ const JobBoard = () => {
   const [resultTab, setResultTab] = useState('recommended');
   const [sortBy, setSortBy] = useState('relevance');
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [savedJobIds, setSavedJobIds] = useState(() => {
-    try {
-      const raw = localStorage.getItem(SAVED_JOBS_STORAGE_KEY);
-      return raw ? JSON.parse(raw) : [];
-    } catch {
-      return [];
-    }
-  });
 
   const fetchJobs = async () => {
     setLoading(true);
@@ -392,20 +372,8 @@ const JobBoard = () => {
     setDetailTab('overview');
   }, [selectedJob?.id]);
 
-  useEffect(() => {
-    try {
-      localStorage.setItem(SAVED_JOBS_STORAGE_KEY, JSON.stringify(savedJobIds));
-    } catch {
-      // localStorage may be unavailable (private browsing, blocked storage) — non-fatal.
-    }
-  }, [savedJobIds]);
-
   const dismissJob = (jobId) => {
     setDismissedJobIds(prev => [...prev, jobId]);
-  };
-
-  const toggleSaveJob = (jobId) => {
-    setSavedJobIds(prev => prev.includes(jobId) ? prev.filter(id => id !== jobId) : [...prev, jobId]);
   };
 
   const calculateDaysAgo = (publishedOn) => {
@@ -576,11 +544,6 @@ const JobBoard = () => {
               <div className="jobs-stat-value">{closingSoonJobs.length}</div>
               <div className="jobs-stat-label">Closing Soon</div>
             </div>
-            <div className="jobs-stat-card">
-              <Bookmark size={20} className="jobs-stat-icon" />
-              <div className="jobs-stat-value">{savedJobIds.length}</div>
-              <div className="jobs-stat-label">Saved Jobs</div>
-            </div>
             <div className="jobs-stat-card jobs-stat-card-veteran">
               <ShieldCheck size={20} className="jobs-stat-icon" />
               <div className="jobs-stat-value">{veteranFriendlyEmployerCount}</div>
@@ -634,12 +597,6 @@ const JobBoard = () => {
                   />
                 </div>
               </FilterSection>
-
-              {['Location', 'Work Mode', 'Experience Level', 'Eligibility', 'Salary Range'].map(label => (
-                <FilterSection key={label} title={label} disabled>
-                  <p className="jobs-filter-soon">Coming soon</p>
-                </FilterSection>
-              ))}
             </aside>
 
             <main className="jobs-results" id="jobs-results-anchor">
@@ -677,10 +634,8 @@ const JobBoard = () => {
                       job={job}
                       idx={idx}
                       isActive={isActive}
-                      isSaved={savedJobIds.includes(jobId)}
                       onSelect={() => setSelectedJob(job)}
                       onDismiss={() => dismissJob(jobId)}
-                      onToggleSave={(e) => { e.stopPropagation(); toggleSaveJob(jobId); }}
                       getAvatarColor={getAvatarColor}
                       calculateDaysAgo={calculateDaysAgo}
                     />
@@ -711,8 +666,6 @@ const JobBoard = () => {
               setDetailTab={setDetailTab}
               examAccordionOpen={examAccordionOpen}
               setExamAccordionOpen={setExamAccordionOpen}
-              isSaved={!!selectedJob && savedJobIds.includes(selectedJob.id || selectedJob._id || selectedJob.title)}
-              onToggleSave={() => selectedJob && toggleSaveJob(selectedJob.id || selectedJob._id || selectedJob.title)}
               getAvatarColor={getAvatarColor}
               calculateDaysAgo={calculateDaysAgo}
               navigate={navigate}
@@ -822,7 +775,7 @@ const JobBoard = () => {
         /* Stats */
         .jobs-stats {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 1rem;
           margin-top: 1.75rem;
         }

@@ -150,7 +150,30 @@ function careerTrackKeyword(examName, careerTrack) {
   return examName.split(' ')[0];
 }
 
-async function fetchQuizzesByExamName(examName, careerTrack, category = 'Mock Test') {
+async function fetchQuizzesForExam(examName, careerTrack, examId, category = 'Mock Test') {
+  try {
+    if (examId) {
+      const { data: mapRows } = await supabase
+        .from('lc_exam_quiz_map')
+        .select('quiz_id')
+        .eq('exam_id', examId);
+      if (mapRows && mapRows.length > 0) {
+        const quizIds = mapRows.map((r) => r.quiz_id).filter(Boolean);
+        if (quizIds.length > 0) {
+          const { data: mappedQuizzes } = await supabase
+            .from('quizzes')
+            .select('*')
+            .in('id', quizIds);
+          if (mappedQuizzes && mappedQuizzes.length > 0) {
+            return mappedQuizzes;
+          }
+        }
+      }
+    }
+  } catch (e) {
+    console.warn('lc_exam_quiz_map query error:', e);
+  }
+
   let quizData = await supabase.from('quizzes').select('*').eq('exam_name', examName).eq('category', category);
 
   if (!quizData.data || quizData.data.length === 0) {
@@ -173,6 +196,25 @@ function groupByCategory(resources) {
     (byCategory[cat] || (byCategory.Other ||= [])).push(res);
   }
   return byCategory;
+}
+
+// Same mapped-resources-first, name-matching-fallback resolution
+// useExamContent uses for its full content lookup, but count-only -- lets
+// any card/badge that just needs "how many resources does this exam have"
+// (Recommended for You, Popular Exams) get the real number without a plain
+// `resources.exam_name` exact-match count, which undercounts (often to 0)
+// because resources.exam_name carries a "N. " ordinal prefix the catalog's
+// exam name never has (see fetchResourcesFallback above).
+export async function getExamResourceCount(examId, examName) {
+  if (!examName) return 0;
+  const mapped = examId ? await fetchMappedResources(examId) : { resources: [], mappedCategories: new Set() };
+  const uncoveredCategories = RESOURCE_CATEGORIES.filter((c) => !mapped.mappedCategories.has(c));
+  if (uncoveredCategories.length === 0) return mapped.resources.length;
+  const fallbackResources = await fetchResourcesFallback(examName, null);
+  const fallbackCount = fallbackResources.filter((r) =>
+    uncoveredCategories.some((c) => c.toLowerCase() === (r.category || '').toLowerCase().trim())
+  ).length;
+  return mapped.resources.length + fallbackCount;
 }
 
 /**
@@ -206,7 +248,7 @@ export function useExamContent(examName, careerTrack, examId) {
       try {
         const [mappedResult, quizRows, introData] = await Promise.all([
           examId ? fetchMappedResources(examId) : Promise.resolve({ resources: [], mappedCategories: new Set() }),
-          fetchQuizzesByExamName(examName, careerTrack),
+          fetchQuizzesForExam(examName, careerTrack, examId),
           examId ? fetchExamIntro(examId) : Promise.resolve(null),
         ]);
 
