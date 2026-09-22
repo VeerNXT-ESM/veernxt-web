@@ -41,7 +41,7 @@
 
 import { createClient } from '@supabase/supabase-js';
 import Joi from 'joi';
-import { broadcastJobApprovalEmail } from '../_lib/emailBroadcaster.js';
+import { broadcastJobApprovalEmail, getSmtpCredentials } from '../_lib/emailBroadcaster.js';
 
 function getSupabaseAdmin() {
   const url = process.env.SUPABASE_URL;
@@ -1140,6 +1140,62 @@ async function handleAdminUpdateRecruiterRequest(req, res) {
   return res.status(200).json({ ok: true, request: data });
 }
 
+/**
+ * admin_send_email
+ * Sends a one-off transactional email from the admin panel.
+ * Used for "Email to Veteran" and "Reply to Employer" actions.
+ */
+async function handleAdminSendEmail(req, res) {
+  const adminSecret = req.headers['x-admin-api-secret'];
+  if (adminSecret !== process.env.ADMIN_API_SECRET) {
+    return res.status(403).json({ ok: false, error: 'Forbidden' });
+  }
+
+  const { to, subject, body } = req.body || {};
+  if (!to || !subject || !body) {
+    return res.status(400).json({ ok: false, error: 'to, subject, and body are required.' });
+  }
+
+  // Basic email validation
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(to)) {
+    return res.status(400).json({ ok: false, error: `Invalid email address: ${to}` });
+  }
+
+  try {
+    const { user, pass, from } = getSmtpCredentials();
+    if (!pass) {
+      console.warn('[admin_send_email] No SMTP password configured — simulating send.');
+      return res.status(200).json({ ok: true, simulated: true, to, message: 'Email simulated (no SMTP password configured).' });
+    }
+
+    const nodemailer = (await import('nodemailer')).default;
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: { user, pass },
+    });
+
+    const adminFromLabel = `VeerNXT HR Admin <${user}>`;
+
+    await transporter.sendMail({
+      from: adminFromLabel,
+      to,
+      subject,
+      text: body,
+      html: body
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\n/g, '<br>'),
+    });
+
+    console.log(`[admin_send_email] Email sent to ${to} | Subject: ${subject}`);
+    return res.status(200).json({ ok: true, to, subject });
+  } catch (err) {
+    console.error('[admin_send_email] Error:', err.message);
+    return res.status(500).json({ ok: false, error: err.message });
+  }
+}
+
 const ADMIN_ACTIONS = {
   admin_list_requirements: handleAdminListRequirements,
   admin_update_requirement: handleAdminUpdateRequirement,
@@ -1154,6 +1210,7 @@ const ADMIN_ACTIONS = {
   admin_update_recruiter_request: handleAdminUpdateRecruiterRequest,
   admin_list_senior_review: handleAdminListSeniorReview,
   admin_list_notifications: handleAdminListNotifications,
+  admin_send_email: handleAdminSendEmail,
 };
 
 const CANDIDATE_EMPLOYER_ACTIONS = {

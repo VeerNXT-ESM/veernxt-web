@@ -31,6 +31,7 @@ const AdminPrivateSector = () => {
   const [notifications, setNotifications] = useState([]);
   const [selected, setSelected] = useState(null);
   const [saving, setSaving] = useState(false);
+  const [emailModal, setEmailModal] = useState(null); // { to, subject, body, label }
 
   const fetchAll = async () => {
     setLoading(true);
@@ -64,6 +65,24 @@ const AdminPrivateSector = () => {
       await call('admin_update_recruiter_request', { id, status, admin_notes });
       setSelected(null);
       await fetchAll();
+    } catch (err) {
+      alert(err.response?.data?.error || err.message);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const sendAdminEmail = async ({ to, subject, body }) => {
+    if (!to) { alert('No email address available for this recipient.'); return; }
+    setSaving(true);
+    try {
+      const res = await call('admin_send_email', { to, subject, body });
+      if (res.ok) {
+        alert(`✅ Email sent successfully to ${to}`);
+        setEmailModal(null);
+      } else {
+        alert(`Failed to send: ${res.error || 'Unknown error'}`);
+      }
     } catch (err) {
       alert(err.response?.data?.error || err.message);
     } finally {
@@ -401,6 +420,36 @@ const AdminPrivateSector = () => {
                     </div>
                   )}
 
+                  {/* ── Email Action Buttons ── */}
+                  <div style={{ display: 'flex', gap: '0.6rem', marginTop: '0.75rem', flexWrap: 'wrap' }}>
+                    <button
+                      type="button"
+                      className="aps-btn"
+                      style={{ background: 'rgba(99,102,241,0.15)', color: '#a5b4fc', borderColor: 'rgba(99,102,241,0.3)', gap: '0.4rem' }}
+                      onClick={() => setEmailModal({
+                        label: 'Email to Veteran',
+                        to: selected.row.candidate_email || '',
+                        subject: `VeerNXT: Employer Interest — ${selected.row.role_display || 'Role'}`,
+                        body: `Dear Veteran,\n\nWe would like to inform you that ${selected.row.company_name || 'a Corporate Partner'} has expressed interest in your profile for the role of ${selected.row.role_display || 'an open position'} in the ${selected.row.sector_display || 'Private Sector'}.\n\nOur team at VeerNXT will coordinate the introduction process. Please ensure your profile is complete and up to date.\n\nIf you have any questions, feel free to reach out to us.\n\nRegards,\nVeerNXT HR Team`,
+                      })}
+                    >
+                      ✉️ Email to Veteran
+                    </button>
+                    <button
+                      type="button"
+                      className="aps-btn"
+                      style={{ background: 'rgba(16,185,129,0.15)', color: '#34d399', borderColor: 'rgba(16,185,129,0.3)', gap: '0.4rem' }}
+                      onClick={() => setEmailModal({
+                        label: 'Reply to Employer',
+                        to: selected.row.contact_email || '',
+                        subject: `VeerNXT: Update on Introduction Request — ${selected.row.candidate_masked_code || 'Candidate'}`,
+                        body: `Dear ${selected.row.contact_name || 'Recruiter'},\n\nThank you for expressing interest in candidate ${selected.row.candidate_masked_code || 'VN-XXXX'} through the VeerNXT platform.\n\nWe have received your introduction request for the role of ${selected.row.role_display || 'the open position'} and our team is currently reviewing and coordinating with the candidate.\n\nCurrent Status: ${(selected.row.status || 'interest_sent').replace(/_/g, ' ').toUpperCase()}\n\nWe will keep you updated on the progress. For any urgent queries, please reply to this email.\n\nRegards,\nVeerNXT HR Team`,
+                      })}
+                    >
+                      ↩️ Reply to Employer
+                    </button>
+                  </div>
+
                   <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
                     <label style={{ display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.4rem', color: '#94a3b8' }}>Update Introduction Status</label>
                     <select
@@ -469,6 +518,68 @@ const AdminPrivateSector = () => {
               {selected.type === 'interest' && PIPELINE_STATUSES.map((s) => (
                 <button key={s} disabled={saving} onClick={() => updateInterest(selected.row.id, s)} className="aps-btn">{s.replace(/_/g, ' ')}</button>
               ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Email Compose Modal ── */}
+      {emailModal && (
+        <div className="aps-modal-backdrop" onClick={() => setEmailModal(null)} style={{ zIndex: 1100 }}>
+          <div className="aps-modal-card" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '580px' }}>
+            <div className="aps-modal-header">
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                ✉️ {emailModal.label}
+              </h3>
+              <button type="button" onClick={() => setEmailModal(null)} className="aps-modal-close"><X size={20} /></button>
+            </div>
+            <div className="aps-modal-body" style={{ gap: '0.85rem' }}>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#94a3b8', marginBottom: '0.35rem', fontWeight: 700 }}>To</label>
+                <input
+                  id="email-to"
+                  type="email"
+                  defaultValue={emailModal.to}
+                  placeholder="recipient@email.com"
+                  style={{ width: '100%', padding: '0.55rem 0.75rem', borderRadius: '8px', background: '#1e293b', color: '#f8fafc', border: '1px solid #334155', fontSize: '0.85rem', fontFamily: 'inherit' }}
+                />
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#94a3b8', marginBottom: '0.35rem', fontWeight: 700 }}>Subject</label>
+                <input
+                  id="email-subject"
+                  type="text"
+                  defaultValue={emailModal.subject}
+                  style={{ width: '100%', padding: '0.55rem 0.75rem', borderRadius: '8px', background: '#1e293b', color: '#f8fafc', border: '1px solid #334155', fontSize: '0.85rem', fontFamily: 'inherit' }}
+                />
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#94a3b8', marginBottom: '0.35rem', fontWeight: 700 }}>Message</label>
+                <textarea
+                  id="email-body"
+                  defaultValue={emailModal.body}
+                  rows={9}
+                  style={{ width: '100%', padding: '0.6rem 0.75rem', borderRadius: '8px', background: '#1e293b', color: '#f8fafc', border: '1px solid #334155', fontSize: '0.82rem', fontFamily: 'inherit', lineHeight: 1.65, resize: 'vertical' }}
+                />
+              </div>
+              <p style={{ fontSize: '0.72rem', color: '#64748b', margin: 0 }}>
+                ℹ️ Email will be sent via VeerNXT Gmail SMTP. Edit To, Subject, and body before sending.
+              </p>
+            </div>
+            <div className="aps-modal-footer" style={{ justifyContent: 'flex-end', gap: '0.6rem' }}>
+              <button type="button" className="aps-btn" onClick={() => setEmailModal(null)}>Cancel</button>
+              <button
+                type="button"
+                className="aps-btn aps-btn-primary"
+                disabled={saving}
+                onClick={() => sendAdminEmail({
+                  to: document.getElementById('email-to').value.trim(),
+                  subject: document.getElementById('email-subject').value.trim(),
+                  body: document.getElementById('email-body').value.trim(),
+                })}
+              >
+                {saving ? 'Sending…' : '✉️ Send Email'}
+              </button>
             </div>
           </div>
         </div>
