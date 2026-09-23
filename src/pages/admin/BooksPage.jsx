@@ -58,6 +58,7 @@ const LEVEL_TAG_OPTIONS = [
 ];
 
 const SORT_OPTIONS = [
+  { value: 'linked', label: 'Linked first' },
   { value: 'issues', label: 'Most issues first' },
   { value: 'title', label: 'Title (A-Z)' },
 ];
@@ -99,7 +100,7 @@ const BooksPage = () => {
   const stateUtFilter = stateFilter || utFilter;
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search);
-  const [sort, setSort] = useState('issues');
+  const [sort, setSort] = useState('linked');
   const [showArchived, setShowArchived] = useState(false);
   const [page, setPage] = useState(readStoredPage);
   const [showNewModal, setShowNewModal] = useState(false);
@@ -286,9 +287,56 @@ const BooksPage = () => {
       const q = debouncedSearch.trim().toLowerCase();
       list = list.filter((b) => b.title.toLowerCase().includes(q));
     }
+
+    const oppCat = category === 'Guide' ? 'Precis' : category === 'Precis' ? 'Guide' : null;
+    const oppBooks = oppCat ? booksByCategory[oppCat] : null;
+
+    const getLinkedCount = (b) => (b.linkedExamCount ?? b.duplicateRowCount ?? 0);
+    const getCounterpart = (b) => (oppBooks ? findMatchingCounterpartBook(b, oppBooks) : null);
     const issueScore = (b) => (b.issueCounts?.high || 0) * 1000 + (b.issueCounts?.medium || 0);
-    return [...list].sort((a, b) => (sort === 'title' ? a.title.localeCompare(b.title) : issueScore(b) - issueScore(a)));
-  }, [books, levelFilter, stateUtFilter, debouncedSearch, sort, showArchived]);
+
+    const getPairTier = (book) => {
+      const cp = getCounterpart(book);
+      const cpLinks = cp ? getLinkedCount(cp) : 0;
+      const bLinks = getLinkedCount(book);
+      // Tier 4: Has counterpart AND both are linked
+      if (cp && cpLinks > 0 && bLinks > 0) return 4;
+      // Tier 3: Has counterpart (at least one has links or counterpart exists)
+      if (cp) return 3;
+      // Tier 2: No counterpart, but this book has exam links
+      if (bLinks > 0) return 2;
+      // Tier 1: No counterpart and 0 links
+      return 1;
+    };
+
+    return [...list].sort((a, b) => {
+      const aTier = getPairTier(a);
+      const bTier = getPairTier(b);
+      const aLinks = getLinkedCount(a);
+      const bLinks = getLinkedCount(b);
+
+      // Always place higher tier (paired/linked books) above lower tier
+      if (bTier !== aTier) return bTier - aTier;
+
+      if (sort === 'linked') {
+        const countDiff = bLinks - aLinks;
+        if (countDiff !== 0) return countDiff;
+        return a.title.localeCompare(b.title);
+      }
+
+      if (sort === 'title') {
+        return a.title.localeCompare(b.title);
+      }
+
+      if (sort === 'issues') {
+        const scoreDiff = issueScore(b) - issueScore(a);
+        if (scoreDiff !== 0) return scoreDiff;
+        return a.title.localeCompare(b.title);
+      }
+
+      return (bLinks - aLinks) || a.title.localeCompare(b.title);
+    });
+  }, [books, booksByCategory, category, levelFilter, stateUtFilter, debouncedSearch, sort, showArchived]);
 
   // Reset to page 1 only when one of these actually CHANGES from its
   // previous value -- not merely "this effect has run before". A plain
