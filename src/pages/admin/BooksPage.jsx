@@ -1,11 +1,13 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Repeat, Save, X, Columns3, Eye } from 'lucide-react';
+import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Repeat, Save, X, Columns3, Eye, Layers } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import { useDebounced } from './lcShared';
 import AdminResourcePreview from './AdminResourcePreview';
 import LinkExamsDrawer from './LinkExamsDrawer';
+import BatchSyncBooksModal from '../../components/admin/BatchSyncBooksModal';
+import { findMatchingCounterpartBook, syncBookPairLinks } from '../../lib/resourceDuplicates';
 import { NewBookModal, DuplicateBookModal, RenameBookModal, ConfirmDeleteModal, ConfirmArchiveModal } from '../../components/admin/BookFormModals';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
@@ -101,6 +103,7 @@ const BooksPage = () => {
   const [showArchived, setShowArchived] = useState(false);
   const [page, setPage] = useState(readStoredPage);
   const [showNewModal, setShowNewModal] = useState(false);
+  const [showBatchSyncModal, setShowBatchSyncModal] = useState(false);
   const [duplicateSource, setDuplicateSource] = useState(null);
   const [renameSource, setRenameSource] = useState(null);
   const [archiveSource, setArchiveSource] = useState(null);
@@ -255,7 +258,12 @@ const BooksPage = () => {
 
   useEffect(() => {
     fetchBooks(category);
-  }, [category, fetchBooks]);
+    // Preload counterpart category in background for instant sync indicators
+    const oppCat = category === 'Guide' ? 'Precis' : category === 'Precis' ? 'Guide' : null;
+    if (oppCat && !booksByCategory[oppCat]) {
+      fetchBooks(oppCat);
+    }
+  }, [category, fetchBooks, booksByCategory]);
 
   const refreshCurrentCategory = useCallback(() => {
     fetchBooks(category, true);
@@ -570,6 +578,16 @@ const BooksPage = () => {
           )}
         </div>
 
+        {(category === 'Guide' || category === 'Precis') && (
+          <button
+            className="lc-btn"
+            onClick={() => setShowBatchSyncModal(true)}
+            title="Batch match and synchronize Guide & Precis books to the same exams"
+            style={{ color: '#3b82f6', borderColor: 'rgba(59, 130, 246, 0.4)', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
+          >
+            <Layers size={15} /> Sync Guide &amp; Precis Pairs
+          </button>
+        )}
         <button
           className={`lc-btn ${showArchived ? 'primary' : ''}`}
           onClick={() => setShowArchived((prev) => !prev)}
@@ -638,6 +656,55 @@ const BooksPage = () => {
                       </span>
                     )}
                   </div>
+                  {(() => {
+                    const oppCat = b.category === 'Guide' ? 'Precis' : b.category === 'Precis' ? 'Guide' : null;
+                    const oppBooks = oppCat ? booksByCategory[oppCat] : null;
+                    const cp = oppBooks ? findMatchingCounterpartBook(b, oppBooks) : null;
+                    if (!cp) return null;
+                    const bLinks = b.linkedExamCount ?? 0;
+                    const cpLinks = cp.linkedExamCount ?? 0;
+                    const isInSync = bLinks === cpLinks;
+                    return (
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', marginTop: '3px', fontSize: '0.72rem' }}>
+                        <span style={{ color: 'var(--admin-text-muted)' }}>
+                          Matching {cp.category}: <strong>{cp.linkedExamCount ?? 0} links</strong>
+                        </span>
+                        {!isInSync && (
+                          <button
+                            type="button"
+                            className="lc-link-btn"
+                            style={{
+                              fontSize: '0.7rem',
+                              color: '#3b82f6',
+                              fontWeight: 600,
+                              textDecoration: 'underline',
+                              background: 'none',
+                              border: 'none',
+                              padding: 0,
+                              cursor: 'pointer',
+                            }}
+                            title={`Sync links with matching ${cp.category} ("${cp.title}")`}
+                            onClick={async (e) => {
+                              e.stopPropagation();
+                              if (!window.confirm(`Sync exam links between ${b.category} and ${cp.category} for "${b.title}"? Both will be linked to the union of all their exams.`)) return;
+                              try {
+                                const guide = b.category === 'Guide' ? b : cp;
+                                const precis = b.category === 'Precis' ? b : cp;
+                                const res = await syncBookPairLinks(guide, precis);
+                                alert(`Synchronized! ${res.guideAdded} new exam(s) linked to Guide, ${res.precisAdded} new exam(s) linked to Precis.`);
+                                refreshCurrentCategory();
+                                if (oppCat) fetchBooks(oppCat, true);
+                              } catch (err) {
+                                alert('Failed to sync: ' + err.message);
+                              }
+                            }}
+                          >
+                            Sync Links
+                          </button>
+                        )}
+                      </div>
+                    );
+                  })()}
                 </td>
                 {visibleColumns.category && (
                   <td className="lc-col-nowrap" onClick={(e) => e.stopPropagation()}>
@@ -911,21 +978,42 @@ const BooksPage = () => {
       {linkExamsSource && (
         <LinkExamsDrawer
           book={linkExamsSource}
+          allBooks={Object.values(booksByCategory).flat().filter(Boolean)}
           onClose={() => setLinkExamsSource(null)}
-          onLinked={(netChange) => {
+          onLinked={({ netChange, counterpartBook, counterpartNetChange } = {}) => {
             setBooksByCategory((prev) => {
               const catBooks = prev[linkExamsSource.category];
-              if (!catBooks) return prev;
-              return {
-                ...prev,
-                [linkExamsSource.category]: catBooks.map((x) => (
+              const nextState = { ...prev };
+              if (catBooks) {
+                nextState[linkExamsSource.category] = catBooks.map((x) => (
                   x.resourceId === linkExamsSource.resourceId
-                    ? { ...x, linkedExamCount: (x.linkedExamCount ?? 0) + netChange }
+                    ? { ...x, linkedExamCount: (x.linkedExamCount ?? 0) + (typeof netChange === 'number' ? netChange : 0) }
                     : x
-                )),
-              };
+                ));
+              }
+              if (counterpartBook && typeof counterpartNetChange === 'number') {
+                const cpCatBooks = prev[counterpartBook.category];
+                if (cpCatBooks) {
+                  nextState[counterpartBook.category] = cpCatBooks.map((x) => (
+                    x.resourceId === counterpartBook.resourceId
+                      ? { ...x, linkedExamCount: (x.linkedExamCount ?? 0) + counterpartNetChange }
+                      : x
+                  ));
+                }
+              }
+              return nextState;
             });
             setLinkExamsSource(null);
+          }}
+        />
+      )}
+
+      {showBatchSyncModal && (
+        <BatchSyncBooksModal
+          onClose={() => setShowBatchSyncModal(false)}
+          onCompleted={() => {
+            fetchBooks('Guide', true);
+            fetchBooks('Precis', true);
           }}
         />
       )}

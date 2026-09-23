@@ -1,11 +1,13 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Search, X, ChevronDown, ChevronRight } from 'lucide-react';
+import { Search, X, ChevronDown, ChevronRight, Layers } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
-import { examsAlreadyHavingResource, loadBookLinks } from '../../lib/resourceDuplicates';
+import { examsAlreadyHavingResource, loadBookLinks, findMatchingCounterpartBook } from '../../lib/resourceDuplicates';
 import Select from '../../components/ui/Select';
 import { CENTRAL_EXAM_CATEGORIES } from '../../lib/centralExamCategories';
 import { STATE_EXAM_CATEGORIES } from '../../lib/stateExamCategories';
 import { UT_EXAM_CATEGORIES } from '../../lib/utExamCategories';
+
+const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
 // Blue marks everything that is already linked to the book, so it's easy to tell
 // apart from the rest of the list. rgba tints so it reads on dark and light admin themes.
@@ -34,8 +36,12 @@ const LEVEL_PILLS = [
  * it; this is a full manage-links view (add and remove together), not
  * add-only, since the admin may as easily need to drop a few exams from a
  * book with hundreds of links as add new ones.
+ *
+ * Supports Co-Linking: When a matching counterpart (Guide <-> Precis) exists
+ * with the same title, the admin can check "Also apply to matching Precis/Guide"
+ * to sync exams across both simultaneously.
  */
-const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
+const LinkExamsDrawer = ({ book, allBooks = [], onClose, onLinked }) => {
   const [search, setSearch] = useState('');
   const [level, setLevel] = useState('');
   const [examCategory, setExamCategory] = useState('');
@@ -56,6 +62,12 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
   const [showLinked, setShowLinked] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
+
+  // Counterpart (Guide <-> Precis) matching
+  const [counterpartBook, setCounterpartBook] = useState(null);
+  const [counterpartExamIds, setCounterpartExamIds] = useState([]);
+  const [counterpartLinkedResourceIds, setCounterpartLinkedResourceIds] = useState([]);
+  const [coLinkCounterpart, setCoLinkCounterpart] = useState(true);
 
   // Total exam catalog is ~1,500-2,000 rows -- comfortably one preload, no
   // pagination needed (same reasoning AddResourceMapDrawer's books-list
@@ -84,12 +96,38 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
         if (!data || data.length < pageSize) return { data: all, error: null };
       }
     };
+
+    const findCounterpart = async () => {
+      const oppCategory = book.category === 'Guide' ? 'Precis' : book.category === 'Precis' ? 'Guide' : null;
+      if (!oppCategory) return null;
+
+      let candidateList = allBooks.filter((b) => b.category === oppCategory);
+      if (candidateList.length === 0) {
+        try {
+          const res = await fetch('/api/admin/save-resource', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
+            body: JSON.stringify({ type: 'books-list', category: oppCategory }),
+          });
+          const data = await res.json();
+          if (data?.ok && Array.isArray(data.books)) {
+            candidateList = data.books;
+          }
+        } catch (e) {
+          console.warn('Could not fetch counterpart books list:', e);
+        }
+      }
+
+      return findMatchingCounterpartBook(book, candidateList);
+    };
+
     (async () => {
       setLoading(true);
       try {
-        const [{ data: exams, error: fetchErr }, links] = await Promise.all([
+        const [{ data: exams, error: fetchErr }, links, matchedCounterpart] = await Promise.all([
           fetchAllExams(),
           loadBookLinks(book),
+          findCounterpart(),
         ]);
         if (fetchErr) throw fetchErr;
         if (!cancelled) {
@@ -97,6 +135,19 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
           setExistingExamIds(links.examIds);
           setLinkedResourceIds(links.resourceIds);
           setSelected(new Set(links.examIds)); // pre-checked, not disabled -- see the component's own doc comment
+
+          if (matchedCounterpart) {
+            setCounterpartBook(matchedCounterpart);
+            const cpLinks = await loadBookLinks(matchedCounterpart);
+            if (!cancelled) {
+              setCounterpartExamIds(cpLinks.examIds);
+              setCounterpartLinkedResourceIds(cpLinks.resourceIds);
+            }
+          } else {
+            setCounterpartBook(null);
+            setCounterpartExamIds([]);
+            setCounterpartLinkedResourceIds([]);
+          }
         }
       } catch (err) {
         if (!cancelled) setError(`Could not load this book's linked exams: ${err.message}`);
@@ -105,7 +156,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
       }
     })();
     return () => { cancelled = true; };
-  }, [book]);
+  }, [book, allBooks]);
 
   // lc_exams.category -- the ~21-value Banking/Agriculture/Police/etc.
   // classification ExamsPage.jsx's own Category filter already uses, not
@@ -203,33 +254,73 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     if (!hasChanges) { onClose(); return; }
     setSaving(true);
     setError(null);
-    // Skip exams that already have this resource under another resource_id
-    // (identical file/content) -- linking it again would show it twice.
-    const dupes = toAdd.length > 0 ? await examsAlreadyHavingResource(book.resourceId, toAdd, book.category) : new Map();
-    const addable = toAdd.filter((id) => !dupes.has(id));
-    if (dupes.size > 0) {
-      const names = allExams.filter((e) => dupes.has(e.id)).map((e) => e.name);
-      alert(`${dupes.size} exam${dupes.size === 1 ? '' : 's'} already ha${dupes.size === 1 ? 's' : 've'} an identical copy of this resource and ${dupes.size === 1 ? 'was' : 'were'} skipped: ${names.slice(0, 8).join(', ')}${names.length > 8 ? ` +${names.length - 8} more` : ''}`);
+    try {
+      // 1. Process current book additions
+      const dupes = toAdd.length > 0 ? await examsAlreadyHavingResource(book.resourceId, toAdd, book.category) : new Map();
+      const addable = toAdd.filter((id) => !dupes.has(id));
+      if (dupes.size > 0) {
+        const names = allExams.filter((e) => dupes.has(e.id)).map((e) => e.name);
+        alert(`${dupes.size} exam${dupes.size === 1 ? '' : 's'} already ha${dupes.size === 1 ? 's' : 've'} an identical copy of this resource and ${dupes.size === 1 ? 'was' : 'were'} skipped: ${names.slice(0, 8).join(', ')}${names.length > 8 ? ` +${names.length - 8} more` : ''}`);
+      }
+
+      if (addable.length > 0) {
+        const { error: insErr } = await supabase.from('lc_exam_resource_map').insert(addable.map((examId) => ({
+          exam_id: examId,
+          resource_id: book.resourceId,
+          category: book.category,
+          confidence: 'high',
+          reasoning: 'Manually added by admin',
+          source: 'manual',
+        })));
+        if (insErr) throw insErr;
+      }
+
+      // 2. Process current book unlinks
+      if (toRemove.length > 0) {
+        // Links can sit on any resources row serving this book's content, so unlink across all of them.
+        const { error: delErr } = await supabase.from('lc_exam_resource_map').delete()
+          .in('resource_id', linkedResourceIds).eq('category', book.category).in('exam_id', toRemove);
+        if (delErr) throw delErr;
+      }
+
+      let counterpartNetChange = 0;
+      // 3. Process counterpart book if co-linking is enabled
+      if (coLinkCounterpart && counterpartBook) {
+        if (toAdd.length > 0) {
+          const cpDupes = await examsAlreadyHavingResource(counterpartBook.resourceId, toAdd, counterpartBook.category);
+          const cpAddable = toAdd.filter((id) => !cpDupes.has(id));
+          if (cpAddable.length > 0) {
+            const { error: cpInsErr } = await supabase.from('lc_exam_resource_map').insert(cpAddable.map((examId) => ({
+              exam_id: examId,
+              resource_id: counterpartBook.resourceId,
+              category: counterpartBook.category,
+              confidence: 'high',
+              reasoning: `Co-linked with ${book.category} "${book.title}"`,
+              source: 'manual',
+            })));
+            if (cpInsErr) throw cpInsErr;
+            counterpartNetChange += cpAddable.length;
+          }
+        }
+
+        if (toRemove.length > 0 && counterpartLinkedResourceIds.length > 0) {
+          const { error: cpDelErr } = await supabase.from('lc_exam_resource_map').delete()
+            .in('resource_id', counterpartLinkedResourceIds).eq('category', counterpartBook.category).in('exam_id', toRemove);
+          if (cpDelErr) throw cpDelErr;
+          counterpartNetChange -= toRemove.length;
+        }
+      }
+
+      setSaving(false);
+      onLinked({
+        netChange: addable.length - toRemove.length,
+        counterpartBook: counterpartBook && coLinkCounterpart ? counterpartBook : null,
+        counterpartNetChange,
+      });
+    } catch (err) {
+      setSaving(false);
+      setError(err.message || 'Failed to save changes');
     }
-    if (addable.length > 0) {
-      const { error: insErr } = await supabase.from('lc_exam_resource_map').insert(addable.map((examId) => ({
-        exam_id: examId,
-        resource_id: book.resourceId,
-        category: book.category,
-        confidence: 'high',
-        reasoning: 'Manually added by admin',
-        source: 'manual',
-      })));
-      if (insErr) { setSaving(false); setError(insErr.message); return; }
-    }
-    if (toRemove.length > 0) {
-      // Links can sit on any resources row serving this book's content, so unlink across all of them.
-      const { error: delErr } = await supabase.from('lc_exam_resource_map').delete()
-        .in('resource_id', linkedResourceIds).eq('category', book.category).in('exam_id', toRemove);
-      if (delErr) { setSaving(false); setError(delErr.message); return; }
-    }
-    setSaving(false);
-    onLinked(addable.length - toRemove.length);
   };
 
   const pickExamState = (name) => { setExamState(name); setExamUt(''); if (name) setLevel('state'); };
@@ -281,6 +372,33 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
           <button className="lc-close-btn" onClick={onClose}><X size={20} /></button>
         </div>
         <div className="lc-drawer-body" style={{ gap: '0.85rem' }}>
+          {counterpartBook && (
+            <div style={{
+              background: 'var(--surface-alt, #f8fafc)',
+              border: '1px solid var(--border, #e2e8f0)',
+              borderRadius: '8px',
+              padding: '0.65rem 0.85rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+            }}>
+              <input
+                type="checkbox"
+                id="colink-checkbox"
+                checked={coLinkCounterpart}
+                onChange={(e) => setCoLinkCounterpart(e.target.checked)}
+                style={{ width: '16px', height: '16px', cursor: 'pointer', flexShrink: 0 }}
+              />
+              <label htmlFor="colink-checkbox" style={{ cursor: 'pointer', margin: 0, fontSize: '0.82rem', color: 'var(--admin-text)' }}>
+                <div style={{ fontWeight: 600 }}>
+                  Also link matching {counterpartBook.category}: &ldquo;{counterpartBook.title}&rdquo;
+                </div>
+                <div style={{ fontSize: '0.74rem', color: 'var(--admin-text-muted, #64748b)', marginTop: '2px' }}>
+                  Currently linked to {counterpartExamIds.length} exam{counterpartExamIds.length === 1 ? '' : 's'}. Applying will sync both books to the selected exams.
+                </div>
+              </label>
+            </div>
+          )}
           <div className="lc-search-input-wrapper">
             <Search size={16} />
             <input
