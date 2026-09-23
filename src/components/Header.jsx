@@ -30,7 +30,7 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Right Side: LinkedIn-styled Navigation links (Icon only with active indicator lines) */}
+        {/* Right Side: Navigation links */}
         <div className="header-right">
           <Link to="/dashboard" className={`nav-link-item ${window.location.pathname === '/dashboard' ? 'active' : ''}`} title="Home">
             <Home size={22} />
@@ -133,14 +133,14 @@ const Header = () => {
 
       <style dangerouslySetInnerHTML={{ __html: `
         .linkedin-header {
-          background: #FFFFFF; /* Pure white header background */
+          background: #FFFFFF;
           border-bottom: 1px solid #e2e8f0;
           position: sticky;
           top: 0;
           z-index: 100;
           width: 100%;
           font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
-          padding: calc(1rem + env(safe-area-inset-top, 0px)) 0 1rem; /* Tightened layout spacing */
+          padding: calc(1rem + env(safe-area-inset-top, 0px)) 0 1rem;
           display: flex;
           align-items: center;
           box-shadow: 0 4px 12px rgba(0,0,0,0.02);
@@ -160,7 +160,7 @@ const Header = () => {
           flex-shrink: 0;
         }
         .logo-img {
-          height: 74px; /* 15% larger logo size */
+          height: 74px;
           width: auto;
           object-fit: contain;
           border-radius: 4px;
@@ -204,17 +204,23 @@ const Header = () => {
           left: 10%;
           right: 10%;
           height: 3px;
-          background: #1F3A2E; /* VeerNXT active green active line */
+          background: #1F3A2E;
           border-radius: 99px;
         }
         .dot-badge {
           position: absolute;
           top: 6px;
-          right: 2px;
-          width: 6px;
-          height: 6px;
+          right: 3px;
+          width: 7px;
+          height: 7px;
+          min-width: 7px;
+          min-height: 7px;
+          aspect-ratio: 1 / 1;
           background: #ef4444;
-          border-radius: 50%;
+          border-radius: 50% !important;
+          display: block;
+          box-sizing: border-box;
+          box-shadow: 0 0 0 1.5px #ffffff;
         }
         .points-pill {
           display: flex;
@@ -288,9 +294,6 @@ const Header = () => {
           opacity: 1;
         }
 
-        /* Below 768px, primary navigation lives in the fixed BottomNav
-           instead — keep just the logo, points pill and profile trigger
-           in the header so it doesn't duplicate the tab bar. */
         @media (max-width: 767px) {
           .nav-link-item {
             display: none;
@@ -298,6 +301,11 @@ const Header = () => {
           .header-right {
             gap: 0.75rem;
           }
+        }
+        @media (max-width: 380px) {
+          .header-container { padding: 0 0.75rem; }
+          .header-right { gap: 0.35rem; }
+          .points-pill { padding: 0.35rem 0.5rem; }
         }
       `}} />
     </header>

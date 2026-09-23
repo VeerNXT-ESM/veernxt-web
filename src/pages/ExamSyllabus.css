@@ -672,3 +672,98 @@
   flex-shrink: 0;
 }
 
+/* Phone-first exam hub: the study page is a readable, single-column journey
+   with compact metadata and touch-sized actions. */
+@media (max-width: 768px) {
+  .exam-page {
+    padding: 0.9rem 0.75rem 2rem;
+    overflow-x: clip;
+  }
+
+  .exam-crumbs {
+    margin-bottom: 0.85rem;
+    gap: 0.35rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .exam-crumb-pipe,
+  .exam-crumb-link,
+  .exam-crumb-sep { display: none; }
+  .exam-crumb-current {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .exam-back-link {
+    flex-shrink: 0;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid #d8e2da;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .exam-layout { display: block; }
+  .exam-banner {
+    padding: 1rem;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+    border-radius: 12px !important;
+  }
+  .exam-banner-thumb { width: 82px; align-self: flex-start; }
+  .lc-thumb-lg { padding: 0.7rem 0.4rem 0.55rem; border-radius: 8px !important; }
+  .lc-thumb-lg-label { font-size: 0.62rem; }
+  .lc-thumb-lg-subject { font-size: 0.48rem; }
+  .lc-thumb-lg-badge { width: 20px; height: 20px; font-size: 0.6rem; }
+  .exam-banner-main { min-width: 0; flex-basis: auto; }
+  .exam-title-row { gap: 0.45rem; margin-bottom: 0.6rem; }
+  .exam-title { font-size: 1.2rem; line-height: 1.2; }
+  .exam-mission-pill { font-size: 0.65rem; padding: 0.22rem 0.5rem; }
+  .exam-meta-row { flex-wrap: wrap; gap: 0.65rem; margin-bottom: 0.65rem; }
+  .exam-meta-divider { display: none; }
+  .exam-meta-item { min-width: 0; gap: 0.35rem; }
+  .exam-meta-value { font-size: 0.78rem; overflow-wrap: anywhere; }
+  .exam-desc { font-size: 0.8rem; line-height: 1.45; }
+
+  .exam-subjects-card { padding: 0.95rem; margin-bottom: 1rem; border-radius: 12px !important; }
+  .exam-subjects-title { margin-bottom: 0.65rem; }
+  .exam-subject-chips { gap: 0.4rem; }
+  .exam-subject-chip { padding: 0.35rem 0.6rem; font-size: 0.73rem; }
+
+  .exam-quick-grid { gap: 0.75rem; margin-bottom: 1rem; }
+  .quick-card { padding: 0.85rem; border-radius: 12px !important; }
+  .quick-card-left { gap: 0.65rem; min-width: 0; }
+  .quick-card-icon { width: 36px; height: 36px; }
+  .quick-card-icon svg { width: 18px; height: 18px; }
+  .quick-card-title { font-size: 0.84rem; }
+  .quick-card-sub { font-size: 0.7rem; }
+
+  .prep-section-head { align-items: flex-start; gap: 0.75rem; margin-bottom: 0.8rem; }
+  .prep-section-head-left { gap: 0.5rem; }
+  .prep-section-title { font-size: 1rem; }
+  .prep-section-sub { font-size: 0.72rem; line-height: 1.35; }
+  .prep-view-all-link { flex-shrink: 0; font-size: 0.74rem; }
+  .prep-box { padding: 0.95rem; margin-bottom: 0.85rem; border-radius: 12px !important; }
+  .prep-box-scroll-row { gap: 0.65rem; }
+  .prep-tile-item { width: 88px; }
+  .mock-footer { gap: 0.65rem; padding: 0.85rem; margin-bottom: 1rem; border-radius: 12px !important; }
+  .mock-footer-icon { width: 36px; height: 36px; }
+  .mock-footer-title { font-size: 0.84rem; }
+  .mock-footer-sub { font-size: 0.7rem; }
+  .mock-footer-cta { font-size: 0; }
+  .mock-footer-cta svg { width: 18px; height: 18px; }
+
+  .exam-sidebar { position: static; gap: 0.75rem; margin-top: 1rem; }
+  .side-card { padding: 1rem; border-radius: 12px !important; }
+  .quote-card { display: none; }
+  .progress-stats { gap: 0.35rem; }
+  .progress-stat { padding: 0.45rem 0.15rem; }
+}
+
+@media (max-width: 380px) {
+  .exam-banner-thumb { width: 70px; }
+  .exam-title { font-size: 1.08rem; }
+  .exam-mission-pill { width: 100%; justify-content: center; }
+  .exam-meta-row { flex-direction: column; align-items: flex-start; }
+  .prep-section-head { flex-wrap: wrap; }
+  .prep-view-all-link { margin-left: 2rem; }
+}

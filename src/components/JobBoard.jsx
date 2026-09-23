@@ -3,7 +3,7 @@ import axios from 'axios';
 import {
   Briefcase, ExternalLink, RefreshCw, Search, AlertCircle, Clock,
   MapPin, X, Sliders, Award, ChevronDown, ChevronUp, Sparkles, BookOpen,
-  Building2, ShieldCheck
+  Building2, ShieldCheck, ArrowLeft
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
@@ -112,7 +112,7 @@ const JobCard = ({ job, idx, isActive, onSelect, onDismiss, getAvatarColor, calc
 
 const JobDetailPanel = ({
   job, profileData, detailTab, setDetailTab, examAccordionOpen, setExamAccordionOpen,
-  getAvatarColor, calculateDaysAgo, navigate
+  getAvatarColor, calculateDaysAgo, navigate, onBack
 }) => {
   if (!job) {
     return (
@@ -131,6 +131,11 @@ const JobDetailPanel = ({
 
   return (
     <aside className="job-detail-panel">
+      {onBack && (
+        <button type="button" className="job-detail-back" onClick={onBack}>
+          <ArrowLeft size={18} /> Back to jobs
+        </button>
+      )}
       <div className="job-detail-header">
         <div className="job-detail-logo" style={{ backgroundColor: getAvatarColor(job.body) }}>
           {job.body ? job.body.substring(0, 2).toUpperCase() : 'JO'}
@@ -313,6 +318,7 @@ const JobBoard = () => {
   const [resultTab, setResultTab] = useState('recommended');
   const [sortBy, setSortBy] = useState('relevance');
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [mobileDetailOpen, setMobileDetailOpen] = useState(false);
 
   const fetchJobs = async () => {
     setLoading(true);
@@ -474,8 +480,15 @@ const JobBoard = () => {
     setBodySearch('');
   };
 
+  const selectJob = (job) => {
+    setSelectedJob(job);
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      setMobileDetailOpen(true);
+    }
+  };
+
   return (
-    <div className="jobs-page">
+    <div className={`jobs-page ${mobileDetailOpen ? 'mobile-job-detail-open' : ''}`}>
       <section className="jobs-hero">
         <div className="jobs-hero-content">
           <span className="jobs-hero-eyebrow">Careers for Veterans</span>
@@ -486,10 +499,10 @@ const JobBoard = () => {
 
           <div className="jobs-search-panel">
             <div className="jobs-search-field">
-              <Search size={18} className="jobs-search-icon" />
+              <Search size={16} className="jobs-search-icon" />
               <input
                 type="text"
-                placeholder="Search by exam name, department or keyword..."
+                placeholder="Search by role, department or exam..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -634,7 +647,7 @@ const JobBoard = () => {
                       job={job}
                       idx={idx}
                       isActive={isActive}
-                      onSelect={() => setSelectedJob(job)}
+                      onSelect={() => selectJob(job)}
                       onDismiss={() => dismissJob(jobId)}
                       getAvatarColor={getAvatarColor}
                       calculateDaysAgo={calculateDaysAgo}
@@ -669,6 +682,7 @@ const JobBoard = () => {
               getAvatarColor={getAvatarColor}
               calculateDaysAgo={calculateDaysAgo}
               navigate={navigate}
+              onBack={mobileDetailOpen ? () => setMobileDetailOpen(false) : undefined}
             />
           </div>
         </>
@@ -689,7 +703,7 @@ const JobBoard = () => {
             url('/veernxt_assets/banners/B13_next_mission.png');
           background-size: cover;
           background-position: right center;
-          padding: 3rem;
+          padding: 1.8rem 2rem;
           box-shadow: var(--shadow-3);
         }
         .jobs-hero-content {
@@ -702,20 +716,20 @@ const JobBoard = () => {
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: var(--accent-gold, #fbbf24);
-          margin-bottom: 0.75rem;
+          margin-bottom: 0.45rem;
         }
         .jobs-hero-title {
-          margin: 0 0 0.75rem 0;
-          font-size: clamp(1.9rem, 3.6vw, 3rem);
+          margin: 0 0 0.45rem 0;
+          font-size: clamp(1.65rem, 3vw, 2.45rem);
           line-height: 1.08;
           font-weight: 800;
           letter-spacing: -0.02em;
           color: #ffffff;
         }
         .jobs-hero-subtitle {
-          margin: 0 0 1.75rem 0;
-          font-size: 1rem;
-          line-height: 1.55;
+          margin: 0 0 1rem 0;
+          font-size: 0.9rem;
+          line-height: 1.45;
           color: rgba(255, 255, 255, 0.82);
           max-width: 560px;
         }
@@ -724,7 +738,7 @@ const JobBoard = () => {
           grid-template-columns: minmax(0, 1fr) 150px 130px auto;
           gap: 2px;
           background: rgba(255, 255, 255, 0.14);
-          padding: 6px;
+          padding: 4px;
         }
         .jobs-search-field {
           position: relative;
@@ -741,8 +755,8 @@ const JobBoard = () => {
           width: 100%;
           border: none;
           background: transparent;
-          padding: 0.85rem 0.9rem 0.85rem 2.6rem;
-          font-size: 0.9rem;
+          padding: 0.7rem 0.8rem 0.7rem 2.4rem;
+          font-size: 0.84rem;
           color: var(--ios-text, #1f2937);
         }
         .jobs-search-field input:focus {
@@ -757,19 +771,14 @@ const JobBoard = () => {
           font-size: 0.82rem;
           font-weight: 600;
           color: var(--text-secondary, #64748b);
-          padding: 0.85rem 0.5rem;
+          padding: 0.7rem 0.5rem;
         }
         .jobs-search-btn {
-          padding: 0.85rem 1.5rem;
-          font-size: 0.88rem;
+          padding: 0.7rem 1.15rem;
+          font-size: 0.82rem;
           font-weight: 700;
           border: none;
           cursor: pointer;
-        }
-        @media (max-width: 760px) {
-          .jobs-search-panel {
-            grid-template-columns: 1fr;
-          }
         }
 
         /* Stats */
@@ -1228,6 +1237,19 @@ const JobBoard = () => {
           max-height: calc(100vh - 2rem);
           overflow-y: auto;
         }
+        .job-detail-back {
+          display: none;
+          align-items: center;
+          gap: 0.4rem;
+          background: none;
+          border: none;
+          color: var(--ios-text);
+          font-size: 0.88rem;
+          font-weight: 750;
+          padding: 0;
+          margin: 0 0 1rem;
+          cursor: pointer;
+        }
         .job-detail-empty {
           display: flex;
           flex-direction: column;
@@ -1527,8 +1549,84 @@ const JobBoard = () => {
           }
         }
         @media (max-width: 768px) {
-          .jobs-hero { padding: 2.25rem 1.5rem; }
+          .jobs-page { padding: 0.9rem 0.75rem calc(5.5rem + env(safe-area-inset-bottom, 0px)); }
+          .jobs-hero { padding: 1.25rem 1rem; border-radius: 12px; }
+          .jobs-hero-eyebrow { margin-bottom: 0.25rem; font-size: 0.64rem; }
+          .jobs-hero-title { font-size: clamp(1.45rem, 6.5vw, 1.8rem); margin-bottom: 0.3rem; line-height: 1.1; }
+          .jobs-hero-subtitle { margin-bottom: 0.65rem; font-size: 0.8rem; line-height: 1.35; max-width: 35ch; }
+          
+          /* Compact unified mobile search bar */
+          .jobs-search-panel {
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 0.2rem 0.25rem 0.2rem 0.65rem;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            min-height: 38px;
+            gap: 0.4rem;
+            width: 100%;
+            box-sizing: border-box;
+          }
+          .jobs-search-static {
+            display: none;
+          }
+          .jobs-search-field {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            background: transparent;
+            position: relative;
+          }
+          .jobs-search-icon {
+            position: static;
+            margin-right: 0.45rem;
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+          }
+          .jobs-search-field input {
+            width: 100%;
+            border: none;
+            background: transparent;
+            padding: 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--ios-text, #0f172a);
+          }
+          .jobs-search-field input::placeholder {
+            font-size: 0.8rem;
+          }
+          .jobs-search-btn {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            border-radius: 6px;
+            flex-shrink: 0;
+            min-height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .jobs-stats { display: none; }
           .job-fact-grid { grid-template-columns: 1fr; }
+          .mobile-job-detail-open { padding: 0; }
+          .mobile-job-detail-open .jobs-hero,
+          .mobile-job-detail-open .jobs-stats,
+          .mobile-job-detail-open .jobs-filter-toggle,
+          .mobile-job-detail-open .jobs-filter-sidebar,
+          .mobile-job-detail-open .jobs-results { display: none; }
+          .mobile-job-detail-open .jobs-discovery-shell { display: block; margin-top: 0; }
+          .mobile-job-detail-open .job-detail-panel { border: none; padding: 1rem; }
+          .mobile-job-detail-open .job-detail-back { display: inline-flex; }
+        }
+        @media (max-width: 420px) {
+          .jobs-hero { padding: 1rem 0.85rem; }
+          .jobs-hero-title { font-size: 1.35rem; }
+          .jobs-hero-subtitle { display: none; }
+          .jobs-search-panel { margin-top: 0.45rem; }
+          .jobs-search-btn { padding-inline: 0.7rem; }
         }
       `}} />
     </div>

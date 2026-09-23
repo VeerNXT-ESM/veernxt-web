@@ -53,6 +53,8 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
         borderRadius: 'var(--radius-sm, 10px)',
         border: (isCompleted && !isPyq) ? '1px solid #bbf7d0' : '1px solid var(--border, #e2e8f0)',
         marginBottom: '0.5rem', background: (isCompleted && !isPyq) ? '#f0fdf4' : '#fff',
+        minWidth: 0,
+        boxSizing: 'border-box',
       }}
     >
       {onToggleComplete && !isPyq && (
@@ -100,12 +102,22 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
       <Link
         to={targetLink}
         state={backTo ? { from: backTo } : undefined}
-        style={{ flex: 1, fontSize: '0.85rem', textDecoration: 'none', color: 'inherit', fontWeight: (isCompleted && !isPyq) ? 600 : 500 }}
+        style={{
+          flex: 1,
+          minWidth: 0,
+          fontSize: '0.85rem',
+          textDecoration: 'none',
+          color: 'inherit',
+          fontWeight: (isCompleted && !isPyq) ? 600 : 500,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+        }}
       >
         {cleanContentTitle(resource.title, examName)}
       </Link>
-      {isCompleted && !isPyq && <span style={{ fontSize: '0.7rem', color: '#16a34a', fontWeight: 700, background: '#dcfce7', padding: '0.15rem 0.5rem', borderRadius: '999px' }}>Done</span>}
-      {locked ? <Lock size={13} color="#ef4444" /> : <Unlock size={13} color="#16a34a" />}
+      {isCompleted && !isPyq && <span style={{ fontSize: '0.7rem', color: '#16a34a', fontWeight: 700, background: '#dcfce7', padding: '0.15rem 0.5rem', borderRadius: '999px', flexShrink: 0 }}>Done</span>}
+      {locked ? <Lock size={13} color="#ef4444" style={{ flexShrink: 0 }} /> : <Unlock size={13} color="#16a34a" style={{ flexShrink: 0 }} />}
     </div>
   );
 }
@@ -252,6 +264,8 @@ function QuizRow({ quiz, examName, locked, examId }) {
         display: 'flex', alignItems: 'center', gap: '0.65rem', padding: '0.65rem 0.9rem',
         borderRadius: 'var(--radius-sm, 10px)', textDecoration: 'none', color: 'inherit',
         border: '1px solid var(--border, #e2e8f0)', marginBottom: '0.5rem', background: '#fff',
+        minWidth: 0,
+        boxSizing: 'border-box',
       }}
     >
       <PlayCircle size={15} color="var(--ios-olive)" style={{ flexShrink: 0 }} />
@@ -271,8 +285,20 @@ function QuizRow({ quiz, examName, locked, examId }) {
       >
         Mock Test
       </span>
-      <span style={{ flex: 1, fontSize: '0.85rem', fontWeight: 500 }}>{cleanContentTitle(quiz.title, examName)}</span>
-      {locked ? <Lock size={13} color="#ef4444" /> : <Unlock size={13} color="#16a34a" />}
+      <span
+        style={{
+          flex: 1,
+          minWidth: 0,
+          fontSize: '0.85rem',
+          fontWeight: 500,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        {cleanContentTitle(quiz.title, examName)}
+      </span>
+      {locked ? <Lock size={13} color="#ef4444" style={{ flexShrink: 0 }} /> : <Unlock size={13} color="#16a34a" style={{ flexShrink: 0 }} />}
     </Link>
   );
 }

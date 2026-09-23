@@ -20,6 +20,9 @@ import {
   Layers,
   Play,
   CheckCircle2,
+  MoreVertical,
+  SlidersHorizontal,
+  Filter,
 } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
 import { getSubjectByKey, getFamilyHex, getSubjectThumbnailImage } from '../lib/thumbnailTaxonomy';
@@ -482,6 +485,13 @@ const LearningCenter = () => {
     body: true,
   });
 
+  // Mobile side-drawer filter state (mobile/tablet <1100px only)
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const [openDrawerFilters, setOpenDrawerFilters] = useState({
+    category: true,
+    body: false,
+  });
+
   // Active learning courses (courses/exams the candidate has started learning)
   const [activeLearningCourses, setActiveLearningCourses] = useState(getInitialActiveLearning);
 
@@ -704,6 +714,28 @@ const LearningCenter = () => {
     setBodySearch('');
   };
 
+  // Lock body scrolling when mobile drawer is open
+  useEffect(() => {
+    if (mobileDrawerOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileDrawerOpen]);
+
+  // Escape key closes mobile filter drawer
+  useEffect(() => {
+    if (!mobileDrawerOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setMobileDrawerOpen(false);
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [mobileDrawerOpen]);
+
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -802,6 +834,16 @@ const LearningCenter = () => {
     Boolean(regionFilterId) ||
     Boolean(categoryFilter) ||
     Boolean(selectedBodyId);
+
+  // Count of active Filter Results sidebar controls specifically (not the
+  // hero search box), shown on the mobile "Filters" toggle so it's clear
+  // something is applied before the sidebar is even opened.
+  const activeFilterCount = [
+    regionMode !== 'central',
+    Boolean(regionFilterId),
+    Boolean(categoryFilter),
+    Boolean(selectedBodyId),
+  ].filter(Boolean).length;
 
   // "Recommended for you" shows the curated marketing cards by default, but
   // the moment the person actually searches or narrows things down by
@@ -1356,11 +1398,11 @@ const LearningCenter = () => {
                 role="search"
               >
                 <div className="lc-hero-search-input-wrap">
-                  <Search size={18} className="lc-hero-search-icon" aria-hidden="true" />
+                  <Search size={16} className="lc-hero-search-icon" aria-hidden="true" />
                   <input
                     type="text"
                     className="lc-hero-search-input"
-                    placeholder="Search exams, subjects, conducting bodies or skills..."
+                    placeholder="Search exams, subjects, skills..."
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                     aria-label="Search exams, subjects, conducting bodies or skills"
@@ -1403,10 +1445,63 @@ const LearningCenter = () => {
             </div>
           </section>
 
+          {/* ── Mobile Filters Trigger Section (Mobile <1100px only) ── */}
+          <div className="lc-mobile-filter-bar" aria-label="Mobile Filters">
+            <button
+              type="button"
+              className={`lc-mobile-filter-trigger-btn ${filtersActive ? 'active' : ''}`}
+              onClick={() => setMobileDrawerOpen(true)}
+              aria-label="Open Filter Results"
+            >
+              <SlidersHorizontal size={15} />
+              <span>Filters</span>
+              {activeFilterCount > 0 && (
+                <span className="lc-mobile-filter-badge">{activeFilterCount}</span>
+              )}
+            </button>
 
+            <div className="lc-mobile-active-chips-scroll">
+              {categoryFilter && (
+                <span className="lc-mobile-active-chip">
+                  <span>{categoryFilter}</span>
+                  <button
+                    type="button"
+                    onClick={() => setCategoryFilter('')}
+                    aria-label={`Remove ${categoryFilter} filter`}
+                  >
+                    <X size={12} />
+                  </button>
+                </span>
+              )}
+              {selectedBodyId && (
+                <span className="lc-mobile-active-chip">
+                  <span>{bodyOptions.find((b) => b.id === selectedBodyId)?.name || 'Conducting Body'}</span>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedBodyId('')}
+                    aria-label="Remove conducting body filter"
+                  >
+                    <X size={12} />
+                  </button>
+                </span>
+              )}
+              {filtersActive && (
+                <button
+                  type="button"
+                  className="lc-mobile-clear-btn"
+                  onClick={handleClearFilters}
+                >
+                  Clear all
+                </button>
+              )}
+            </div>
+          </div>
 
           <div className="lc-main-grid">
-            {/* Left Column: Filter Results Sidebar */}
+            {/* Left Column: Filter Results Sidebar — desktop (>=1100px)
+                only; below that it's hidden in favor of the compact ⋮
+                overflow popover next to "Recommended for you" (same filter
+                state/handlers, see mobileMenuOpen/activeFilterMenu). */}
             <aside className="lc-filter-sidebar" aria-label="Filter Results">
               <div className="lc-filter-sidebar-header">
                 <h3 className="lc-filter-sidebar-title">Filter Results</h3>
@@ -1522,9 +1617,6 @@ const LearningCenter = () => {
                   </div>
                 )}
               </div>
-
-
-
             </aside>
 
             {/* Right Column: Content Rail */}
@@ -1598,6 +1690,19 @@ const LearningCenter = () => {
                         </button>
                       </div>
                     )}
+
+                    {/* Tablet/mobile (<1100px) filter button in header */}
+                    <button
+                      type="button"
+                      className="lc-mobile-header-filter-btn"
+                      aria-label="Open filter results"
+                      onClick={() => setMobileDrawerOpen(true)}
+                    >
+                      <SlidersHorizontal size={17} />
+                      {activeFilterCount > 0 && (
+                        <span className="lc-overflow-badge">{activeFilterCount}</span>
+                      )}
+                    </button>
                   </div>
                 </div>
 
@@ -2013,6 +2118,164 @@ const LearningCenter = () => {
             </div>
           </section>
         </main>
+
+        {/* ── Mobile Slide-In Filter Drawer (Sideways from left, Mobile <1100px Only) ── */}
+        <div
+          className={`lc-mobile-drawer-root ${mobileDrawerOpen ? 'is-open' : ''}`}
+          aria-hidden={!mobileDrawerOpen}
+        >
+          <div
+            className="lc-mobile-drawer-backdrop"
+            onClick={() => setMobileDrawerOpen(false)}
+            aria-label="Close filters backdrop"
+          />
+          <aside className="lc-mobile-drawer-panel" role="dialog" aria-modal="true" aria-label="Filter Results">
+            {/* Drawer Header */}
+            <div className="lc-mobile-drawer-header">
+              <h3 className="lc-mobile-drawer-title">FILTER RESULTS</h3>
+              <div className="lc-mobile-drawer-header-actions">
+                {filtersActive && (
+                  <button
+                    type="button"
+                    className="lc-mobile-drawer-clear-btn"
+                    onClick={handleClearFilters}
+                  >
+                    Clear All
+                  </button>
+                )}
+                <button
+                  type="button"
+                  className="lc-mobile-drawer-close-btn"
+                  onClick={() => setMobileDrawerOpen(false)}
+                  aria-label="Close filter drawer"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+            </div>
+
+            {/* Drawer Body */}
+            <div className="lc-mobile-drawer-body">
+              {/* Category Accordion */}
+              <div className="lc-mobile-drawer-accordion">
+                <button
+                  type="button"
+                  className="lc-mobile-accordion-header"
+                  onClick={() => setOpenDrawerFilters((prev) => ({ ...prev, category: !prev.category }))}
+                  aria-expanded={openDrawerFilters.category}
+                >
+                  <span className="lc-mobile-accordion-title">Category</span>
+                  {openDrawerFilters.category ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                </button>
+
+                {openDrawerFilters.category && (
+                  <div className="lc-mobile-accordion-list">
+                    <label className="lc-mobile-checkbox-item">
+                      <input
+                        type="checkbox"
+                        checked={!categoryFilter}
+                        onChange={() => setCategoryFilter('')}
+                      />
+                      <span className="lc-mobile-checkbox-box" />
+                      <span className="lc-mobile-checkbox-text">All Categories</span>
+                      <span className="lc-mobile-checkbox-count">{levelExams.length}</span>
+                    </label>
+
+                    {categoryOptions.map((cat) => (
+                      <label key={cat} className="lc-mobile-checkbox-item">
+                        <input
+                          type="checkbox"
+                          checked={categoryFilter === cat}
+                          onChange={() => setCategoryFilter(categoryFilter === cat ? '' : cat)}
+                        />
+                        <span className="lc-mobile-checkbox-box" />
+                        <span className="lc-mobile-checkbox-text">{cat}</span>
+                        <span className="lc-mobile-checkbox-count">{categoryCounts[cat] || 0}</span>
+                      </label>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Conducting Body Accordion */}
+              <div className="lc-mobile-drawer-accordion">
+                <button
+                  type="button"
+                  className="lc-mobile-accordion-header"
+                  onClick={() => setOpenDrawerFilters((prev) => ({ ...prev, body: !prev.body }))}
+                  aria-expanded={openDrawerFilters.body}
+                >
+                  <span className="lc-mobile-accordion-title">Conducting Body</span>
+                  {openDrawerFilters.body ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                </button>
+
+                {openDrawerFilters.body && (
+                  <div className="lc-mobile-accordion-list">
+                    <div className="lc-mobile-drawer-search-box">
+                      <Search size={14} className="lc-mobile-drawer-search-icon" />
+                      <input
+                        type="text"
+                        placeholder="Search conducting body..."
+                        value={bodySearch}
+                        onChange={(e) => setBodySearch(e.target.value)}
+                        className="lc-mobile-drawer-search-input"
+                      />
+                      {bodySearch && (
+                        <button
+                          type="button"
+                          className="lc-mobile-search-clear-btn"
+                          onClick={() => setBodySearch('')}
+                          aria-label="Clear body search"
+                        >
+                          <X size={13} />
+                        </button>
+                      )}
+                    </div>
+
+                    <div className="lc-mobile-body-scroll-list">
+                      <label className="lc-mobile-checkbox-item">
+                        <input
+                          type="checkbox"
+                          checked={!selectedBodyId}
+                          onChange={() => setSelectedBodyId('')}
+                        />
+                        <span className="lc-mobile-checkbox-box" />
+                        <span className="lc-mobile-checkbox-text">All Bodies</span>
+                        <span className="lc-mobile-checkbox-count">{bodyOptions.length}</span>
+                      </label>
+
+                      {filteredBodyOptions.map((body) => (
+                        <label key={body.id} className="lc-mobile-checkbox-item">
+                          <input
+                            type="checkbox"
+                            checked={selectedBodyId === body.id}
+                            onChange={() => setSelectedBodyId(selectedBodyId === body.id ? '' : body.id)}
+                          />
+                          <span className="lc-mobile-checkbox-box" />
+                          <span className="lc-mobile-checkbox-text">{body.name}</span>
+                        </label>
+                      ))}
+                      {filteredBodyOptions.length === 0 && (
+                        <p className="filter-empty-note">No bodies found.</p>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Drawer Footer */}
+            <div className="lc-mobile-drawer-footer">
+              <button
+                type="button"
+                className="lc-mobile-drawer-apply-btn"
+                onClick={() => setMobileDrawerOpen(false)}
+              >
+                View {recommendedCards.length} Result{recommendedCards.length === 1 ? '' : 's'}
+              </button>
+            </div>
+          </aside>
+        </div>
       </div>
     </div>
   );

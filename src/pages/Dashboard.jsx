@@ -292,11 +292,10 @@ const Dashboard = () => {
       }}>
         <div className="ios-card" style={{
           background: 'white',
-          borderRadius: 'var(--radius-lg)',
-          width: '100%',
-          maxWidth: '550px',
+          borderRadius: 'var(--radius-lg, 16px)',
+          width: 'min(550px, calc(100vw - 24px))',
           boxShadow: 'var(--shadow-3)',
-          maxHeight: '90vh',
+          maxHeight: '90dvh',
           overflowY: 'auto',
           display: 'flex',
           flexDirection: 'column'
@@ -306,7 +305,7 @@ const Dashboard = () => {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            padding: '1.5rem 1.75rem',
+            padding: '1.25rem 1.5rem',
             borderBottom: '1px solid #f1f5f9'
           }}>
             <h3 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 800, color: '#0f172a' }}>
@@ -573,7 +572,7 @@ const Dashboard = () => {
               <Button
                 variant="ghost"
                 onClick={handleOpenEditModal}
-                style={{ background: 'rgba(255,255,255,0.22)', color: 'white', border: '1px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(6px)', whiteSpace: 'nowrap' }}
+                className="welcome-action-btn"
               >
                 Edit Profile
               </Button>
@@ -582,7 +581,7 @@ const Dashboard = () => {
                   variant="ghost"
                   onClick={handleRecalculate}
                   disabled={loading}
-                  style={{ background: 'rgba(255,255,255,0.12)', color: 'white', border: '1px solid rgba(255,255,255,0.3)', backdropFilter: 'blur(6px)', whiteSpace: 'nowrap' }}
+                  className="welcome-action-btn-secondary"
                 >
                   {loading ? <RefreshCw className="animate-spin" size={14} /> : <RefreshCw size={14} />}
                   Recalculate Matches
@@ -929,14 +928,15 @@ const Dashboard = () => {
           max-width: 1800px;
           margin: 0 auto;
           padding: 2.5rem clamp(1.25rem, 3vw, 2.5rem);
+          box-sizing: border-box;
         }
         .welcome-hero {
-          margin-bottom: 3rem;
-          background-image: linear-gradient(rgba(10,30,10,0.7), rgba(10,30,10,0.7)), url("/veernxt_assets/banners/B14_next_chapter.png");
+          margin-bottom: 2.5rem;
+          background-image: linear-gradient(rgba(10,30,10,0.72), rgba(10,30,10,0.72)), url("/veernxt_assets/banners/B14_next_chapter.png");
           background-size: cover;
           background-position: center;
           padding: 2rem;
-          border-radius: var(--radius-lg);
+          border-radius: var(--radius-lg, 16px);
           position: relative;
           overflow: hidden;
           box-shadow: var(--shadow-3);
@@ -968,9 +968,10 @@ const Dashboard = () => {
         .welcome-identity {
           display: flex;
           flex-direction: column;
-          gap: 0.4rem;
+          gap: 0.35rem;
           min-width: 0;
           margin-right: auto;
+          flex: 1;
         }
         .welcome-name {
           font-size: 1.9rem;
@@ -978,9 +979,8 @@ const Dashboard = () => {
           letter-spacing: -0.02em;
           color: white;
           margin: 0;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
+          line-height: 1.2;
+          word-break: break-word;
         }
         .welcome-status {
           display: inline-flex;
@@ -1009,6 +1009,30 @@ const Dashboard = () => {
           display: flex;
           gap: 0.75rem;
           flex-wrap: wrap;
+        }
+        .welcome-action-btn {
+          background: rgba(255,255,255,0.22) !important;
+          color: white !important;
+          border: 1px solid rgba(255,255,255,0.4) !important;
+          backdrop-filter: blur(6px);
+          white-space: nowrap;
+          transition: all 0.15s ease;
+        }
+        .welcome-action-btn:hover {
+          background: rgba(255,255,255,0.32) !important;
+          transform: translateY(-1px);
+        }
+        .welcome-action-btn-secondary {
+          background: rgba(255,255,255,0.12) !important;
+          color: white !important;
+          border: 1px solid rgba(255,255,255,0.3) !important;
+          backdrop-filter: blur(6px);
+          white-space: nowrap;
+          transition: all 0.15s ease;
+        }
+        .welcome-action-btn-secondary:hover {
+          background: rgba(255,255,255,0.22) !important;
+          transform: translateY(-1px);
         }
         .welcome-stat-row {
           position: relative;
@@ -1066,11 +1090,7 @@ const Dashboard = () => {
           display: flex;
           flex-direction: column;
           gap: 1.25rem;
-        }
-        @media (max-width: 992px) {
-          .dashboard-body {
-            grid-template-columns: 1fr;
-          }
+          min-width: 0;
         }
 
         .rail-card {
@@ -1130,7 +1150,7 @@ const Dashboard = () => {
         }
         .rail-bar-row {
           display: grid;
-          grid-template-columns: 90px 1fr 34px;
+          grid-template-columns: 85px 1fr 34px;
           align-items: center;
           gap: 0.5rem;
         }
@@ -1153,7 +1173,7 @@ const Dashboard = () => {
           background-size: cover;
           background-position: center;
           color: #fff;
-          border-radius: var(--radius-lg);
+          border-radius: var(--radius-lg, 16px);
           padding: 1.25rem;
           text-decoration: none;
           box-shadow: var(--shadow-2);
@@ -1193,7 +1213,7 @@ const Dashboard = () => {
           gap: 0.4rem;
           background: var(--ios-secondary, #f8fafc);
           border: 1px solid rgba(0,0,0,0.05);
-          border-radius: var(--radius-md);
+          border-radius: var(--radius-md, 10px);
           padding: 0.75rem;
           font-size: 0.75rem;
           font-weight: 600;
@@ -1236,9 +1256,6 @@ const Dashboard = () => {
           font-weight: 600;
         }
 
-        /* Compact plain-text section headers, replacing the old cinematic
-           image banners on every section — those are reserved for the
-           profile header only now (see .welcome-hero). */
         .section-header-plain {
           margin-bottom: 1rem;
         }
@@ -1256,20 +1273,19 @@ const Dashboard = () => {
 
         .next-step-card {
           background: var(--ios-card);
-          border: 1px solid rgba(0,0,0,0.05);
-          border-radius: var(--radius-lg);
+          border: 1px solid rgba(0,0,0,0.06);
+          border-radius: var(--radius-lg, 16px);
           padding: 1.5rem;
           box-shadow: var(--shadow-2);
           display: flex;
           flex-direction: column;
-          gap: 1rem;
+          gap: 1.15rem;
         }
         .next-step-top {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
-          gap: 1rem;
-          flex-wrap: wrap;
+          gap: 1.15rem;
         }
         .next-step-thumb {
           width: 84px;
@@ -1277,14 +1293,9 @@ const Dashboard = () => {
         }
         .next-step-info {
           flex: 1;
-          min-width: 200px;
+          min-width: 0;
         }
 
-        /* ExamThumbnail (src/pages/admin/ExamThumbnail.jsx) styling — same
-           .lc-thumb-* rules duplicated per-page in this codebase (see also
-           ExamSyllabus.css, AdminCMS.css) rather than shared, since the
-           component is presentational only and each host page's CSS module
-           is scoped to itself. */
         .lc-thumb-sm { width: 34px; height: 34px; border-radius: 7px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 800; color: rgba(255,255,255,0.92); }
         .lc-thumb-lg { width: 100%; aspect-ratio: 3 / 4; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0.75rem; gap: 0.5rem; }
         .lc-thumb-lg-subject { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; color: rgba(255,255,255,0.9); text-transform: uppercase; text-shadow: 0 1px 4px rgba(0,0,0,0.65); }
@@ -1305,6 +1316,7 @@ const Dashboard = () => {
           font-weight: 800;
           color: var(--ios-text);
           margin: 0;
+          line-height: 1.25;
         }
         .next-step-body {
           display: flex;
@@ -1327,15 +1339,19 @@ const Dashboard = () => {
         .next-step-subjects {
           display: flex;
           flex-wrap: wrap;
-          gap: 0.5rem 1.25rem;
+          gap: 0.5rem 1rem;
         }
         .next-step-subject {
           display: inline-flex;
           align-items: center;
           gap: 0.4rem;
-          font-size: 0.85rem;
+          font-size: 0.82rem;
           color: var(--ios-text);
           font-weight: 600;
+          background: var(--ios-secondary, #f8fafc);
+          padding: 0.25rem 0.6rem;
+          border-radius: 6px;
+          border: 1px solid rgba(0,0,0,0.04);
         }
         .next-step-cta {
           align-self: flex-start;
@@ -1371,18 +1387,18 @@ const Dashboard = () => {
 
         .category-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
           gap: 1rem;
         }
         .category-card {
           background: var(--ios-card);
-          border-radius: var(--radius-md);
+          border-radius: var(--radius-md, 12px);
           overflow: hidden;
           display: flex;
           flex-direction: column;
-          transition: transform 0.2s, box-shadow 0.2s;
+          transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
           cursor: pointer;
-          border: 1px solid rgba(0,0,0,0.05);
+          border: 1px solid rgba(0,0,0,0.06);
           box-shadow: var(--shadow-1);
         }
         .category-card:hover {
@@ -1392,22 +1408,27 @@ const Dashboard = () => {
         }
         .category-card img {
           width: 100%;
-          height: 140px;
+          height: 135px;
           object-fit: cover;
           display: block;
         }
         .category-card-content {
-          padding: 1rem 1.1rem 1.1rem;
+          padding: 0.95rem 1.1rem 1.1rem;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
         }
         .category-card-content h3 {
-          font-size: 1rem;
-          margin-bottom: 0.25rem;
+          font-size: 0.98rem;
+          font-weight: 700;
+          margin: 0 0 0.25rem;
           color: var(--ios-text);
         }
         .category-card-content p {
           font-size: 0.8rem;
           color: #64748b;
-          margin: 0;
+          margin: 0 0 0.5rem;
+          line-height: 1.35;
         }
         
         .card-top {
@@ -1449,37 +1470,50 @@ const Dashboard = () => {
         .recommendation-item {
           display: flex;
           align-items: center;
-          gap: 1.25rem;
-          padding: 1rem;
-          background: var(--ios-secondary);
-          border-radius: var(--radius-md);
-          transition: transform 0.2s;
+          gap: 1.15rem;
+          padding: 1rem 1.15rem;
+          background: var(--ios-secondary, #f8fafc);
+          border: 1px solid rgba(0,0,0,0.05);
+          border-radius: var(--radius-md, 12px);
+          transition: transform 0.2s, box-shadow 0.2s;
           text-decoration: none;
           color: inherit;
         }
         .recommendation-item:hover {
-          transform: scale(1.01);
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-1);
+          border-color: var(--ios-olive);
         }
         .rec-rank {
           width: 32px;
           height: 32px;
           background: white;
-          border-radius: var(--radius-sm);
+          border-radius: var(--radius-sm, 8px);
           display: flex;
           align-items: center;
           justify-content: center;
           font-weight: 800;
           color: var(--ios-olive);
-          font-size: 0.9rem;
+          font-size: 0.88rem;
+          flex-shrink: 0;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.06);
         }
         .rec-info {
           flex: 1;
+          min-width: 0;
+        }
+        .rec-info h3 {
+          font-size: 1.05rem;
+          font-weight: 700;
+          margin-bottom: 0.2rem;
+          color: var(--ios-text);
         }
         .rec-meta {
           display: flex;
-          gap: 1rem;
+          gap: 0.85rem;
           font-size: 0.75rem;
-          color: #888;
+          color: #64748b;
+          flex-wrap: wrap;
         }
         .rec-meta span {
           display: flex;
@@ -1487,24 +1521,25 @@ const Dashboard = () => {
           gap: 0.25rem;
         }
         .rec-score-section {
-          width: 140px;
+          width: 130px;
           display: flex;
           flex-direction: column;
           gap: 0.35rem;
+          flex-shrink: 0;
         }
         .score-bar-bg {
           height: 6px;
-          background: rgba(0,0,0,0.05);
-          border-radius: 3px;
+          background: rgba(0,0,0,0.07);
+          border-radius: 999px;
           overflow: hidden;
         }
         .score-bar-fill {
           height: 100%;
           background: var(--ios-olive);
-          border-radius: 3px;
+          border-radius: 999px;
         }
         .score-text {
-          font-size: 0.7rem;
+          font-size: 0.72rem;
           font-weight: 700;
           color: var(--ios-olive);
           text-align: right;
@@ -1516,33 +1551,156 @@ const Dashboard = () => {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }
         }
-        @media (max-width: 850px) {
-          .recommendation-item { flex-wrap: wrap; gap: 0.75rem; }
-          .rec-score-section { width: 100%; order: 3; }
+
+        /* ── Responsive Mobile & Tablet Breakpoints ── */
+        @media (max-width: 992px) {
+          .dashboard-body {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+          }
         }
-        @media (max-width: 640px) {
+
+        @media (max-width: 768px) {
+          .dashboard-wrapper {
+            padding: 1rem 0.85rem 5.5rem;
+          }
           .welcome-hero {
-            padding: 1.5rem;
+            padding: 1.35rem 1.15rem;
+            margin-bottom: 1.5rem;
+            border-radius: 14px;
+            gap: 1rem;
+          }
+          .welcome-profile-row {
+            gap: 1rem;
           }
           .welcome-avatar {
-            width: 56px;
-            height: 56px;
+            width: 62px;
+            height: 62px;
           }
           .welcome-name {
             font-size: 1.5rem;
           }
+          .welcome-actions {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+          }
+          .welcome-actions button {
+            width: 100%;
+            justify-content: center;
+            padding: 0.55rem 0.65rem;
+            font-size: 0.8rem;
+          }
           .welcome-stat-row {
-            gap: 1.25rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            padding-top: 1rem;
+          }
+          .welcome-stat {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.65rem 0.75rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+          }
+          .welcome-stat-value {
+            font-size: 1.45rem;
+          }
+          .welcome-stat-label {
+            font-size: 0.68rem;
           }
           .card-illustration {
-            width: 100px;
-            height: 100px;
-            bottom: -5px;
-            right: -5px;
-            opacity: 0.7;
+            display: none;
+          }
+          .dashboard-main {
+            gap: 1.75rem;
+          }
+          .category-grid {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
           }
         }
 
+        @media (max-width: 580px) {
+          .dashboard-wrapper {
+            padding: 0.75rem 0.65rem 5.5rem;
+          }
+          .welcome-hero {
+            padding: 1.15rem 1rem;
+          }
+          .welcome-profile-row {
+            gap: 0.85rem;
+          }
+          .welcome-avatar {
+            width: 52px;
+            height: 52px;
+          }
+          .welcome-name {
+            font-size: 1.3rem;
+          }
+          .welcome-actions {
+            grid-template-columns: 1fr;
+          }
+          .next-step-card {
+            padding: 1.15rem 1rem;
+          }
+          .next-step-top {
+            flex-direction: column;
+            gap: 0.85rem;
+          }
+          .next-step-thumb {
+            width: 60px;
+          }
+          .next-step-top h3 {
+            font-size: 1.15rem;
+          }
+          .match-ring {
+            width: 56px;
+            height: 56px;
+            align-self: flex-start;
+          }
+          .match-ring svg {
+            width: 56px;
+            height: 56px;
+          }
+          .match-ring-label strong {
+            font-size: 0.82rem;
+          }
+          .next-step-cta {
+            width: 100%;
+            justify-content: center;
+            padding: 0.65rem 1rem;
+          }
+          .recommendation-item {
+            padding: 0.75rem 0.85rem;
+            gap: 0.65rem;
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .rec-info h3 {
+            font-size: 0.95rem;
+          }
+          .rec-score-section {
+            width: 100%;
+            order: 3;
+            margin-top: 0.2rem;
+          }
+          .quick-actions-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 0.45rem;
+          }
+          .quick-action-btn {
+            padding: 0.6rem;
+            font-size: 0.72rem;
+          }
+          .rail-promo {
+            padding: 1.15rem 1rem;
+          }
+          .rail-promo h3 {
+            font-size: 0.95rem;
+          }
+        }
       `}} />
     </div>
   );
