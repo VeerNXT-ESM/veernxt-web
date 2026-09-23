@@ -61,6 +61,7 @@ const LinkExamsDrawer = ({ book, allBooks = [], onClose, onLinked }) => {
   // collapsed by default -- the admin is usually here to add new links.
   const [showLinked, setShowLinked] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [saveSuccess, setSaveSuccess] = useState(false);
   const [error, setError] = useState(null);
 
   // Counterpart (Guide <-> Precis) matching
@@ -251,8 +252,9 @@ const LinkExamsDrawer = ({ book, allBooks = [], onClose, onLinked }) => {
   const hasChanges = toAdd.length > 0 || toRemove.length > 0;
 
   const handleSave = async () => {
-    if (!hasChanges) { onClose(); return; }
+    if (!hasChanges) { return; }
     setSaving(true);
+    setSaveSuccess(false);
     setError(null);
     try {
       // 1. Process current book additions
@@ -309,10 +311,22 @@ const LinkExamsDrawer = ({ book, allBooks = [], onClose, onLinked }) => {
           if (cpDelErr) throw cpDelErr;
           counterpartNetChange -= toRemove.length;
         }
+
+        setCounterpartExamIds((prev) => {
+          const removedSet = new Set(toRemove);
+          const remaining = prev.filter((id) => !removedSet.has(id));
+          return [...new Set([...remaining, ...toAdd])];
+        });
       }
 
+      // Update existing saved exams in local state so the drawer stays in sync
+      const nextExisting = [...selected];
+      setExistingExamIds(nextExisting);
+      setSaveSuccess(true);
+      setTimeout(() => setSaveSuccess(false), 3000);
+
       setSaving(false);
-      onLinked({
+      onLinked?.({
         netChange: addable.length - toRemove.length,
         counterpartBook: counterpartBook && coLinkCounterpart ? counterpartBook : null,
         counterpartNetChange,
@@ -590,10 +604,18 @@ const LinkExamsDrawer = ({ book, allBooks = [], onClose, onLinked }) => {
         </div>
         <div className="lc-modal-footer">
           <span style={{ marginRight: 'auto', fontSize: '0.8rem', color: 'var(--admin-text-muted)', alignSelf: 'center' }}>
-            {selected.size} exam{selected.size === 1 ? '' : 's'} selected
-            {hasChanges && ` (${toAdd.length ? `+${toAdd.length}` : ''}${toAdd.length && toRemove.length ? ' / ' : ''}${toRemove.length ? `-${toRemove.length}` : ''})`}
+            {saveSuccess ? (
+              <span style={{ color: '#10b981', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                ✓ Changes saved successfully!
+              </span>
+            ) : (
+              <>
+                {selected.size} exam{selected.size === 1 ? '' : 's'} selected
+                {hasChanges && ` (${toAdd.length ? `+${toAdd.length}` : ''}${toAdd.length && toRemove.length ? ' / ' : ''}${toRemove.length ? `-${toRemove.length}` : ''})`}
+              </>
+            )}
           </span>
-          <button className="lc-btn" onClick={onClose} disabled={saving}>Cancel</button>
+          <button className="lc-btn" onClick={onClose} disabled={saving}>Close</button>
           <button className="lc-btn primary" onClick={handleSave} disabled={saving || !hasChanges}>
             {saving ? 'Saving…' : 'Save changes'}
           </button>

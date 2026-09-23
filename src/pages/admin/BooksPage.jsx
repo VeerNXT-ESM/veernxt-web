@@ -1051,7 +1051,6 @@ const BooksPage = () => {
               }
               return nextState;
             });
-            setLinkExamsSource(null);
           }}
         />
       )}
