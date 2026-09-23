@@ -39,6 +39,17 @@ async function handleHealth(req, res) {
   return res.status(200).json({ status: 'ok' });
 }
 
+// Retain active key index across invocations in warm serverless containers
+let currentKeyIndex = 0;
+
+function getAiApiKeys() {
+  const raw = process.env.AI_API_KEYS || process.env.VITE_AI_API_KEYS || process.env.AI_API_KEY || process.env.VITE_AI_API_KEY || '';
+  return raw
+    .split(/[\n,;]+/)
+    .map(k => k.trim())
+    .filter(k => k.length > 10);
+}
+
 async function handleChatCompletions(req, res) {
   // 1. Enforce POST
   if (req.method !== 'POST') {
@@ -71,64 +82,93 @@ async function handleChatCompletions(req, res) {
     });
   }
 
-  // 4. Forward Request to AI Provider
-  try {
-    const aiBaseUrl = process.env.VITE_AI_BASE_URL || process.env.AI_BASE_URL;
-    const aiApiKey = process.env.VITE_AI_API_KEY || process.env.AI_API_KEY;
+  // 4. Forward Request to AI Provider with Automatic Key Failover
+  const aiBaseUrl = process.env.VITE_AI_BASE_URL || process.env.AI_BASE_URL;
+  const keys = getAiApiKeys();
 
-    if (!aiBaseUrl || !aiApiKey) {
-      console.error('[Error] AI Provider configuration is missing.');
-      return res.status(500).json({
-        error: { code: 'INTERNAL_SERVER_ERROR', message: 'API configuration error.' }
-      });
-    }
-
-    const providerUrl = `${aiBaseUrl.replace(/\/+$/, '')}/chat/completions`;
-
-    const response = await fetch(providerUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${aiApiKey}`,
-      },
-      body: JSON.stringify(value),
+  if (!aiBaseUrl || keys.length === 0) {
+    console.error('[Error] AI Provider configuration or keys missing.');
+    return res.status(500).json({
+      error: { code: 'INTERNAL_SERVER_ERROR', message: 'API configuration error: no provider keys configured.' }
     });
+  }
 
-    if (!response.ok) {
+  const providerUrl = `${aiBaseUrl.replace(/\/+$/, '')}/chat/completions`;
+  const totalKeys = keys.length;
+  const startIndex = currentKeyIndex % totalKeys;
+
+  let lastStatusCode = 500;
+  let lastErrorData = null;
+
+  for (let attempt = 0; attempt < totalKeys; attempt++) {
+    const keyIdx = (startIndex + attempt) % totalKeys;
+    const apiKey = keys[keyIdx];
+    const keyLabel = `${apiKey.slice(0, 10)}...${apiKey.slice(-4)}`;
+
+    try {
+      const response = await fetch(providerUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify(value),
+      });
+
+      if (response.ok) {
+        // Success! Keep active pointer at this working key
+        currentKeyIndex = keyIdx;
+        const data = await response.json();
+        return res.status(200).json(data);
+      }
+
       let errorData;
       try { errorData = await response.json(); } catch (e) { errorData = { message: response.statusText }; }
       const statusCode = response.status;
-      let errorCode = 'AI_PROVIDER_ERROR';
-      if (statusCode === 404) errorCode = 'AI_MODEL_NOT_FOUND';
-      if (statusCode === 429) errorCode = 'RATE_LIMIT_EXCEEDED';
-      if (statusCode >= 500) errorCode = 'AI_PROVIDER_UNAVAILABLE';
-      console.error(`[Error] AI Provider Failed [HTTP ${statusCode}]:`, JSON.stringify(errorData));
+      lastStatusCode = statusCode;
+      lastErrorData = errorData;
 
-      // Surface 404 (model not found) as 400 Bad Request so callers know it's
-      // their model name that's wrong, not a transient upstream outage.
-      let outboundStatus = 502;
-      if (statusCode === 429) outboundStatus = 429;
-      if (statusCode === 404) outboundStatus = 400;
+      console.warn(`[AI Key Failover] Key [${keyIdx + 1}/${totalKeys}] (${keyLabel}) failed with HTTP ${statusCode}:`, JSON.stringify(errorData));
 
-      return res.status(outboundStatus).json({
-        error: { code: errorCode, message: 'Unable to generate a response at this time.', upstream_status: statusCode }
-      });
+      // If the model itself doesn't exist (404), switching keys will not help — return immediately
+      if (statusCode === 404 && JSON.stringify(errorData).toLowerCase().includes('model')) {
+        return res.status(400).json({
+          error: { code: 'AI_MODEL_NOT_FOUND', message: 'The requested model does not exist or is not available.', upstream_status: 404 }
+        });
+      }
+
+      // If rate limited (429), quota/unauthorized (401/402/403), or upstream error (5xx), advance pointer and try next key!
+      currentKeyIndex = (keyIdx + 1) % totalKeys;
+
+    } catch (err) {
+      console.warn(`[AI Key Failover] Key [${keyIdx + 1}/${totalKeys}] (${keyLabel}) threw exception: ${err.message}`);
+      lastStatusCode = (err.name === 'AbortError' || err.name === 'FetchError' || err.message.includes('fetch')) ? 504 : 502;
+      lastErrorData = { message: err.message };
+      currentKeyIndex = (keyIdx + 1) % totalKeys;
     }
-
-    const data = await response.json();
-    return res.status(200).json(data);
-
-  } catch (err) {
-    console.error('[Error] AI Proxy Exception:', err.message);
-    if (err.name === 'AbortError' || err.name === 'FetchError' || err.message.includes('fetch')) {
-       return res.status(504).json({
-         error: { code: 'AI_PROVIDER_TIMEOUT', message: 'The AI provider took too long to respond.' }
-       });
-    }
-    return res.status(500).json({
-      error: { code: 'INTERNAL_SERVER_ERROR', message: 'An unexpected error occurred.' }
-    });
   }
+
+  // All keys failed
+  console.error(`[AI Key Failover] Exhausted all ${totalKeys} keys without success. Last error [HTTP ${lastStatusCode}]:`, JSON.stringify(lastErrorData));
+
+  let errorCode = 'AI_PROVIDER_ERROR';
+  if (lastStatusCode === 429) errorCode = 'RATE_LIMIT_EXCEEDED';
+  if (lastStatusCode >= 500) errorCode = 'AI_PROVIDER_UNAVAILABLE';
+  if (lastStatusCode === 504) errorCode = 'AI_PROVIDER_TIMEOUT';
+
+  let outboundStatus = 502;
+  if (lastStatusCode === 429) outboundStatus = 429;
+  if (lastStatusCode === 504) outboundStatus = 504;
+
+  return res.status(outboundStatus).json({
+    error: {
+      code: errorCode,
+      message: `All ${totalKeys} AI provider keys failed or were rate-limited.`,
+      upstream_status: lastStatusCode,
+      keys_tried: totalKeys,
+      last_error: lastErrorData
+    }
+  });
 }
 
 export default async function handler(req, res) {
