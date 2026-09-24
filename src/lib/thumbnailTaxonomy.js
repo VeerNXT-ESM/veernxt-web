@@ -25,8 +25,10 @@ export const COLOR_FAMILIES = {
   earth: { name: 'Earth', hex: '#78350f' },
 };
 
-// 17 reusable thumbnail subjects, each assigned to one of the 8 colour
-// families above (two subjects per family, per the user's spec).
+// Reusable thumbnail subjects (the original 17 from the user's spec plus the
+// split-book subjects: History, Physics, Banking, ...), each assigned to one of
+// the 8 colour families above. Labels are also the values used by
+// quizzes.subject and the quiz/PYQ subject dropdowns, so don't rename them.
 export const THUMBNAIL_SUBJECTS = {
   english: { label: 'English', family: 'blue' },
   computer_science: { label: 'Computer Science', family: 'blue' },
@@ -34,12 +36,23 @@ export const THUMBNAIL_SUBJECTS = {
   law: { label: 'Law', family: 'purple' },
   mathematics: { label: 'Mathematics', family: 'orange' },
   electrical_engineering: { label: 'Electrical Engineering', family: 'orange' },
+  civil_engineering: { label: 'Civil Engineering', family: 'orange' },
   general_studies: { label: 'General Studies', family: 'teal' },
   general_science: { label: 'General Science', family: 'teal' },
+  physics: { label: 'Physics', family: 'cyan' },
+  chemistry: { label: 'Chemistry', family: 'teal' },
+  biology: { label: 'Biology', family: 'teal' },
+  environment: { label: 'Environment & Ecology', family: 'earth' },
+  history: { label: 'History', family: 'gold' },
+  geography: { label: 'Geography', family: 'earth' },
+  polity: { label: 'Polity & Constitution', family: 'purple' },
+  economy: { label: 'Indian Economy', family: 'gold' },
   reasoning: { label: 'Reasoning', family: 'crimson' },
   nursing: { label: 'Nursing', family: 'crimson' },
   gk_general_awareness: { label: 'GK & General Awareness', family: 'gold' },
   financial_awareness: { label: 'Financial Awareness', family: 'gold' },
+  banking: { label: 'Banking', family: 'gold' },
+  accounting: { label: 'Accounting', family: 'gold' },
   technical_trades: { label: 'Technical Trades', family: 'cyan' },
   information_technology: { label: 'Information Technology', family: 'cyan' },
   agriculture_rural_dev: { label: 'Agriculture & Rural Development', family: 'earth' },
@@ -93,7 +106,9 @@ export const REGION_GS_TITLE_PATTERN = /_GS(_Book)?$|GS$|CONSTABLE$|SI$/i;
 // English just because English happened to load first.
 const SUBJECT_PRIORITY = [
   'general_studies', 'gk_general_awareness', 'reasoning', 'mathematics',
-  'english', 'computer_science', 'hindi',
+  'english', 'computer_science', 'hindi', 'history', 'geography', 'polity',
+  'economy', 'general_science', 'physics', 'chemistry', 'biology',
+  'environment', 'information_technology', 'banking', 'accounting',
 ];
 
 // Single-title -> subject key lookup, shared by resolveThumbnailSubject
@@ -110,13 +125,40 @@ const NORMALIZED_CORE_TITLES = Object.fromEntries(
 const TITLE_KEYWORD_SUBJECTS = [
   [/descriptive writing/, 'descriptive_writing'],
   [/computer science/, 'computer_science'],
-  [/^(\d{4} )?(mathematics|maths?)(?![a-z])/, 'mathematics'],
-  [/^(\d{4} )?hindi(?![a-z])/, 'hindi'],
+  [/information technology|(^|\s)it (officer|manager)/, 'information_technology'],
+  [/electrical engineering/, 'electrical_engineering'],
+  [/financial awareness/, 'financial_awareness'],
+  [/hr personnel|hr & personnel/, 'hr_personnel'],
+  [/law officer|^law$|judiciary/, 'law'],
+  [/technical trade|technical knowledge/, 'technical_trades'],
+  [/rajbhasha/, 'hindi'],
+  [/(^|[^a-z])(maths?|mathematics)([^a-z]|$)/, 'mathematics'],
+  [/(^|[^a-z])hindi([^a-z]|$)/, 'hindi'],
   [/^(\d{4} )?english(?![a-z])/, 'english'],
-  [/^(\d{4} )?reasoning(?![a-z])/, 'reasoning'],
-  [/^(\d{4} )?(gs ?& ?gk|general knowledge)(?![a-z])|(^|[^a-z])gk([^a-z]|$)/, 'gk_general_awareness'],
+  [/(^|[^a-z])reasoning([^a-z]|$)/, 'reasoning'],
+  // Split GK books ("SSC-GK-History", "GK Polity") get their own subject
+  // before the generic GK match at the end.
+  [/history/, 'history'],
+  [/geography/, 'geography'],
+  [/polity|constitution|civics/, 'polity'],
+  [/economy|economics/, 'economy'],
+  [/general science/, 'general_science'],
+  [/physics/, 'physics'],
+  [/chemistry/, 'chemistry'],
+  [/biology|botany|zoology/, 'biology'],
+  [/environment|ecology/, 'environment'],
+  [/banking|bank exams/, 'banking'],
+  [/accounting|auditing/, 'accounting'],
+  [/nursing/, 'nursing'],
+  [/agriculture|rural dev/, 'agriculture_rural_dev'],
+  [/traffic|road safety/, 'traffic_road_safety'],
+  [/^(\d{4} )?(gs ?& ?gk|general knowledge|gen(eral)? awareness)(?![a-z])|(^|[^a-z])gk([^a-z]|$)/, 'gk_general_awareness'],
 ];
 const GS_BOOK_TITLE_PATTERN = /[ _]GS[ _]Book$/i;
+
+// Intro documents are titled by exam ("Banking - SBI PO - Clerk"), not by
+// subject, so subject keywords in their titles must not give them a subject.
+const isIntroCategory = (category) => /^intro/i.test(category || '');
 
 function subjectKeyForTitle(title) {
   if (CORE_TITLE_TO_SUBJECT[title]) return CORE_TITLE_TO_SUBJECT[title];
@@ -137,11 +179,11 @@ function subjectKeyForTitle(title) {
  * content, or no content at all) falls back to the neutral default.
  */
 export function resolveThumbnailSubject(resourceRows = []) {
-  const titles = resourceRows.map((r) => (r.title || '').trim());
   const present = new Set();
 
-  for (const title of titles) {
-    const key = subjectKeyForTitle(title);
+  for (const r of resourceRows) {
+    if (isIntroCategory(r.category)) continue;
+    const key = subjectKeyForTitle((r.title || '').trim());
     if (key) present.add(key);
   }
 
@@ -159,7 +201,8 @@ export function resolveThumbnailSubject(resourceRows = []) {
  * unmatched falls back to the neutral default so it still gets a tile
  * instead of being silently dropped.
  */
-export function resolveSubjectForTitle(title) {
+export function resolveSubjectForTitle(title, category) {
+  if (isIntroCategory(category)) return DEFAULT_THUMBNAIL_SUBJECT;
   const key = subjectKeyForTitle((title || '').trim());
   return key ? { key, ...THUMBNAIL_SUBJECTS[key] } : DEFAULT_THUMBNAIL_SUBJECT;
 }
@@ -198,6 +241,8 @@ const LABEL_ALIASES = {
   'gs': 'general_studies',
   'hindi / regional language': 'hindi',
   'computer knowledge': 'computer_science',
+  'it officer': 'information_technology',
+  'pcb': 'general_science',
 };
 
 const LABEL_TO_KEY = Object.fromEntries(
@@ -215,25 +260,38 @@ export function getFamilyHex(familyKey) {
   return COLOR_FAMILIES[familyKey]?.hex || COLOR_FAMILIES.teal.hex;
 }
 
-// Art originally shipped in public/thumbnails/, used ONLY to seed
+// Art shipped in public/thumbnails/ (400x600 WebP), used ONLY to seed
 // lc_subjects.thumbnail_url (scripts/seed_thumbnail_urls.mjs). At runtime the
 // thumbnail for a subject comes from lc_subjects via src/lib/thumbnailStore.js
 // and is changed on the admin Subjects page. Subjects with none fall back to
 // a solid colour.
 export const SUBJECT_THUMBNAIL_FILES = {
-  english: 'English.png',
-  computer_science: 'Computer Science.png',
-  hindi: 'Hindi.png',
-  law: 'LAw.png',
-  mathematics: 'Mathematics.png',
-  electrical_engineering: 'Electrical Engineering.png',
-  reasoning: 'Reasoning.png',
-  nursing: 'Nursing.png',
-  gk_general_awareness: 'General Knowledge.png',
-  financial_awareness: 'Financial Awareness.png',
-  technical_trades: 'Technical Trades.png',
-  agriculture_rural_dev: 'Agriculture.png',
-  descriptive_writing: 'Descriptive Writing.png',
-  hr_personnel: 'HR-Personnel.png',
-  traffic_road_safety: 'Traffic-Road Safety.png',
+  english: 'English.webp',
+  computer_science: 'Computer Science.webp',
+  hindi: 'Hindi.webp',
+  law: 'LAw.webp',
+  mathematics: 'Mathematics.webp',
+  electrical_engineering: 'Electrical Engineering.webp',
+  general_studies: 'General Studies.webp',
+  general_science: 'General Science.webp',
+  physics: 'Physics.webp',
+  chemistry: 'Chemistry.webp',
+  biology: 'Biology.webp',
+  environment: 'Environment.webp',
+  history: 'History.webp',
+  geography: 'Geography.webp',
+  polity: 'Polity.webp',
+  economy: 'Economy.webp',
+  reasoning: 'Reasoning.webp',
+  nursing: 'Nursing.webp',
+  gk_general_awareness: 'General Knowledge.webp',
+  financial_awareness: 'Financial Awareness.webp',
+  banking: 'Banking.webp',
+  accounting: 'Accounting.webp',
+  technical_trades: 'Technical Trades.webp',
+  information_technology: 'Information Technology.webp',
+  agriculture_rural_dev: 'Agriculture.webp',
+  descriptive_writing: 'Descriptive Writing.webp',
+  hr_personnel: 'HR-Personnel.webp',
+  traffic_road_safety: 'Traffic-Road Safety.webp',
 };

@@ -129,7 +129,7 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
 // per subject so a Guide and its sibling Précis each get their own tile
 // and label instead of sharing one tile captioned "Guide • Précis".
 export function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplete, backTo }) {
-  const subject = resolveSubjectForTitle(resource.title);
+  const subject = resolveSubjectForTitle(resource.title, resource.category);
   const bg = getFamilyHex(subject.family);
   const { subjectUrl } = useThumbnails();
   const image = subjectUrl(subject.key);
@@ -526,7 +526,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                     examName={examName}
                     locked={isResourceLockedForUser(tier, catKey)}
                     isCompleted={catKey !== 'PYQ' && completedResourceIds?.has(res.resource_id)}
-                    onToggleComplete={catKey === 'PYQ' ? null : ((id, completed) => markAsCompleted(id, resolveSubjectForTitle(res.title).key, completed))}
+                    onToggleComplete={catKey === 'PYQ' ? null : ((id, completed) => markAsCompleted(id, resolveSubjectForTitle(res.title, res.category).key, completed))}
                     backTo={readerBackTo}
                   />
                 ))}
