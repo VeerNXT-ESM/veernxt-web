@@ -153,62 +153,113 @@
   display: flex;
   gap: var(--reader-space-md);
   margin: var(--reader-space-xl) 0;
-  padding: var(--reader-space-md) 0;
+  padding: var(--reader-space-md) var(--reader-space-lg);
   font-family: var(--reader-heading-font);
-  border-top: 4px solid var(--reader-primary);
-  border-bottom: 1px solid var(--reader-border-strong);
+  background: var(--reader-surface);
+  border: 1px solid var(--reader-border);
+  border-left: 4px solid var(--reader-primary);
+  border-radius: var(--reader-radius-md);
+  box-shadow: var(--reader-shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.bk-callout:hover {
+  box-shadow: var(--reader-shadow-md);
 }
 
 .bk-callout-icon {
   flex-shrink: 0;
   display: flex;
-  align-items: flex-start;
-  padding-top: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--reader-radius-sm);
+  background: var(--reader-primary-soft);
+  color: var(--reader-primary);
+  margin-top: 0.1rem;
 }
 
 .bk-callout-title {
   font-size: 0.85rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   margin-bottom: var(--reader-space-xs);
   margin-top: 0;
+  color: var(--reader-heading);
 }
 
 .bk-callout-content {
   flex: 1;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.65;
   font-family: var(--reader-body-font);
-  font-style: italic;
   color: var(--reader-text);
 }
 
 .bk-callout-content p { margin-bottom: var(--reader-space-sm); }
 .bk-callout-content p:last-child { margin-bottom: 0; }
 
-/* Important Box */
-.bk-important { border-top-color: var(--reader-danger); }
-.bk-important .bk-callout-icon { color: var(--reader-danger); }
+/* Important Box (Danger) */
+.bk-important {
+  border-left-color: var(--reader-danger);
+  border-color: color-mix(in srgb, var(--reader-danger) 22%, var(--reader-border));
+  background: color-mix(in srgb, var(--reader-danger) 5%, var(--reader-surface));
+}
+.bk-important .bk-callout-icon {
+  background: color-mix(in srgb, var(--reader-danger) 15%, transparent);
+  color: var(--reader-danger);
+}
 .bk-important .bk-callout-title { color: var(--reader-danger); }
 
-/* Exam Tip Box */
-.bk-exam-tip { border-top-color: var(--reader-warning); }
-.bk-exam-tip .bk-callout-icon { color: var(--reader-warning); }
+/* Exam Tip Box (Warning) */
+.bk-exam-tip {
+  border-left-color: var(--reader-warning);
+  border-color: color-mix(in srgb, var(--reader-warning) 25%, var(--reader-border));
+  background: color-mix(in srgb, var(--reader-warning) 6%, var(--reader-surface));
+}
+.bk-exam-tip .bk-callout-icon {
+  background: color-mix(in srgb, var(--reader-warning) 16%, transparent);
+  color: var(--reader-warning);
+}
 .bk-exam-tip .bk-callout-title { color: var(--reader-warning); }
 
-/* Definition Box */
-.bk-definition { border-top-color: var(--reader-info); }
-.bk-definition .bk-callout-icon { color: var(--reader-info); }
+/* Definition Box (Info / Primary) */
+.bk-definition {
+  border-left-color: var(--reader-info);
+  border-color: color-mix(in srgb, var(--reader-info) 22%, var(--reader-border));
+  background: color-mix(in srgb, var(--reader-info) 5%, var(--reader-surface));
+}
+.bk-definition .bk-callout-icon {
+  background: color-mix(in srgb, var(--reader-info) 15%, transparent);
+  color: var(--reader-info);
+}
 .bk-definition .bk-callout-title { color: var(--reader-info); }
 
-/* Example Box */
-.bk-example { border-top-color: var(--reader-border-strong); }
-.bk-example .bk-callout-title { color: var(--reader-text-muted); }
+/* Example Box (Secondary) */
+.bk-example {
+  border-left-color: var(--reader-secondary);
+  border-color: var(--reader-border-strong);
+  background: var(--reader-surface-alt);
+}
+.bk-example .bk-callout-icon {
+  background: color-mix(in srgb, var(--reader-secondary) 12%, transparent);
+  color: var(--reader-secondary);
+}
+.bk-example .bk-callout-title { color: var(--reader-secondary); }
 
 /* Generic Callout */
-.bk-generic { border-top-color: var(--reader-border-strong); }
-.bk-generic .bk-callout-icon { color: var(--reader-text-muted); }
+.bk-generic {
+  border-left-color: var(--reader-primary);
+  border-color: color-mix(in srgb, var(--reader-primary) 20%, var(--reader-border));
+  background: var(--reader-primary-soft);
+}
+.bk-generic .bk-callout-icon {
+  background: color-mix(in srgb, var(--reader-primary) 15%, transparent);
+  color: var(--reader-primary);
+}
+.bk-generic .bk-callout-title { color: var(--reader-primary); }
 
 /* Lists */
 .bk-list, .bk-numbered-list {
@@ -227,7 +278,7 @@
   border-bottom: 1px dashed var(--reader-border);
 }
 .bk-list li:last-child, .bk-numbered-list li:last-child { border-bottom: none; }
-.bk-list li::marker, .bk-numbered-list li::marker { color: var(--reader-primary); }
+.bk-list li::marker, .bk-numbered-list li::marker { color: var(--reader-primary); font-weight: 700; }
 
 /* Tables */
 .bk-table-wrapper {
@@ -237,43 +288,42 @@
   border-radius: var(--reader-radius-md);
   border: 1px solid var(--reader-border-strong);
   box-shadow: var(--reader-shadow-sm);
+  background: var(--reader-surface);
 }
 
 .bk-table {
   width: 100%;
   border-collapse: collapse;
   font-family: var(--reader-heading-font);
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .bk-table th, .bk-table td {
-  padding: 1.25rem var(--reader-space-md);
+  padding: 1.1rem var(--reader-space-md);
   text-align: left;
   border-bottom: 1px solid var(--reader-border);
   line-height: 1.6;
 }
 
-/* Cell content is raw injected HTML (mammoth-parsed table cells come in as
-   plain, class-less <p>/<strong> tags -- see convert_docx_intros_to_blocks.mjs),
-   so unlike every other block here it has no element of its own to carry a
-   color and just inherits whatever the surrounding page set. Pin it
-   explicitly so the table never depends on ambient color (e.g. a dark host
-   repainting only the background, not the text, for a preview). */
-.bk-table td { color: var(--reader-text); }
-.bk-table td p { color: inherit; }
+.bk-table td {
+  color: var(--reader-text);
+  font-family: var(--reader-body-font);
+  font-size: 0.98rem;
+}
+.bk-table td p { color: inherit; margin: 0; }
 
 .bk-table th {
   background-color: var(--reader-primary);
-  font-weight: 700;
+  font-weight: 800;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
 }
 
 .bk-table tr:nth-child(even) td { background-color: var(--reader-background); }
 .bk-table tr:nth-child(odd) td { background-color: var(--reader-surface); }
-.bk-table tr:hover td { background-color: var(--reader-surface-alt); }
+.bk-table tr:hover td { background-color: var(--reader-surface-alt); transition: background 0.12s ease; }
 .bk-table tr:last-child td { border-bottom: none; }
 
 /* Chapter Header */
@@ -414,33 +464,60 @@
 
 /* Pull Quote */
 .bk-pullquote {
-  margin: var(--reader-space-xl) 0;
-  padding: 0 var(--reader-space-lg);
-  border: none;
+  margin: var(--reader-space-2xl) 0;
+  padding: var(--reader-space-lg) var(--reader-space-xl);
+  background: var(--reader-primary-soft);
+  border: 1px solid color-mix(in srgb, var(--reader-primary) 15%, var(--reader-border));
+  border-left: 5px solid var(--reader-primary);
+  border-radius: 0 var(--reader-radius-md) var(--reader-radius-md) 0;
   position: relative;
+  box-shadow: var(--reader-shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.bk-pullquote:hover {
+  box-shadow: var(--reader-shadow-md);
 }
 
 .bk-pullquote-mark {
   font-family: var(--reader-dropcap-font);
-  font-size: 6rem;
+  font-size: 5.5rem;
   line-height: 1;
   color: var(--reader-primary);
-  opacity: 0.2;
+  opacity: 0.25;
   position: absolute;
-  top: -1.5rem;
-  left: 0;
+  top: -0.5rem;
+  left: var(--reader-space-md);
+  user-select: none;
+  pointer-events: none;
 }
 
 .bk-pullquote p {
   font-family: var(--reader-body-font);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--reader-heading);
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
   position: relative;
   z-index: 1;
+  padding-left: 2rem;
+}
+
+.bk-pullquote figcaption,
+.bk-pullquote cite,
+.bk-pullquote .bk-pullquote-author {
+  display: block;
+  margin-top: var(--reader-space-sm);
+  font-family: var(--reader-heading-font);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--reader-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-left: 2rem;
+  font-style: normal;
 }
 
 /* Exam Alert */
