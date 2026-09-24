@@ -72,13 +72,15 @@ export default async function handler(req, res) {
       return res.status(404).json({ ok: false, error: 'Exam not found' });
     }
 
-    const [bodyResult, regionResult] = await Promise.all([
+    const [bodyResult, regionResult, categoryResult] = await Promise.all([
       exam.conducting_body_id
         ? supabase.from('lc_conducting_bodies').select('id, name').eq('id', exam.conducting_body_id).maybeSingle()
         : Promise.resolve({ data: null }),
       exam.region_id
         ? supabase.from('lc_regions').select('id, name, level').eq('id', exam.region_id).maybeSingle()
         : Promise.resolve({ data: null }),
+      // lc_exams.category drives the category thumbnail image (see thumbnailTaxonomy.js).
+      supabase.from('lc_exams').select('category').eq('id', examId).maybeSingle(),
     ]);
 
     return res.status(200).json({
@@ -89,6 +91,7 @@ export default async function handler(req, res) {
         conductingBody: bodyResult.data?.name || exam.conducting_body,
         region: regionResult.data?.name || exam.state_ut,
         level: regionResult.data?.level || null,
+        category: categoryResult.data?.category || null,
         careerTrack: exam.career_track,
         website: exam.base_url,
         thumbnailSubject: exam.thumbnail_subject,

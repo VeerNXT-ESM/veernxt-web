@@ -25,7 +25,8 @@ import {
   Filter,
 } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
-import { getSubjectByKey, getFamilyHex, getSubjectThumbnailImage } from '../lib/thumbnailTaxonomy';
+import { getSubjectByKey, getFamilyHex } from '../lib/thumbnailTaxonomy';
+import { useThumbnails } from '../lib/thumbnailStore';
 import { getEffectiveTier } from '../lib/subscriptionAccess';
 import ExamContentPreview from '../components/ExamContentPreview';
 import { useExamContent, getExamResourceCount } from '../hooks/useExamContent';
@@ -52,7 +53,7 @@ const RECOMMENDED_EXAMS = [
     badge: 'Popular',
     badgeBg: '#fef3c7',
     badgeColor: '#92400e',
-    image: '/homepage/F5A.png',
+    category: 'SSC',
   },
   {
     id: 'delhi-police-guide',
@@ -67,7 +68,7 @@ const RECOMMENDED_EXAMS = [
     badge: 'New',
     badgeBg: '#e0e7ff',
     badgeColor: '#3730a3',
-    image: '/thumbnails/Reasoning.png',
+    category: 'Police (UT)',
   },
   // 'railway-ntpc-prep' removed: confirmed live (searching "NTPC" and
   // "railway" in Learning Center both return zero exams) that there is no
@@ -82,7 +83,7 @@ const RECOMMENDED_EXAMS = [
     badge: 'Trending',
     badgeBg: '#dcfce7',
     badgeColor: '#166534',
-    image: '/thumbnails/Agriculture.png',
+    category: 'Agriculture Department',
   },
   {
     id: 'cs-comp-exams',
@@ -92,7 +93,7 @@ const RECOMMENDED_EXAMS = [
     badge: 'Featured',
     badgeBg: '#f3e8ff',
     badgeColor: '#6b21a8',
-    image: '/thumbnails/Computer Science.png',
+    category: 'NIC',
   },
   {
     id: 'banking-prep',
@@ -102,7 +103,7 @@ const RECOMMENDED_EXAMS = [
     badge: 'High Vacancy',
     badgeBg: '#fef9c3',
     badgeColor: '#854d0e',
-    image: '/thumbnails/Financial Awareness.png',
+    category: 'Banking',
   },
 ];
 
@@ -175,7 +176,7 @@ const POPULAR_EXAMS = [
     badge: 'Premier',
     badgeBg: '#fef3c7',
     badgeColor: '#92400e',
-    image: '/homepage/F4_A.png',
+    category: 'Civil Services',
     matchCategory: 'Civil Services',
     matchNameHint: 'civil service',
     searchQuery: 'upsc',
@@ -212,7 +213,7 @@ const POPULAR_EXAMS = [
     badge: 'High Vacancy',
     badgeBg: '#dcfce7',
     badgeColor: '#166534',
-    image: '/homepage/F5A.png',
+    category: 'SSC',
     searchQuery: 'ssc',
   },
   {
@@ -247,7 +248,7 @@ const POPULAR_EXAMS = [
     badge: 'State Level',
     badgeBg: '#e0e7ff',
     badgeColor: '#3730a3',
-    image: '/thumbnails/Agriculture.png',
+    category: 'Administrative Services',
     searchQuery: 'psc',
   },
   {
@@ -282,7 +283,7 @@ const POPULAR_EXAMS = [
     badge: 'Veteran Favorite',
     badgeBg: '#fee2e2',
     badgeColor: '#991b1b',
-    image: '/thumbnails/Reasoning.png',
+    category: 'Police',
     searchQuery: 'police',
   },
   {
@@ -317,7 +318,7 @@ const POPULAR_EXAMS = [
     badge: 'Fast Track',
     badgeBg: '#fef9c3',
     badgeColor: '#854d0e',
-    image: '/thumbnails/Financial Awareness.png',
+    category: 'Banking',
     searchQuery: 'bank',
   },
   {
@@ -352,7 +353,7 @@ const POPULAR_EXAMS = [
     badge: 'Popular',
     badgeBg: '#f3e8ff',
     badgeColor: '#6b21a8',
-    image: '/thumbnails/English.png',
+    category: 'Teaching & Education',
     searchQuery: 'teaching',
   },
 ];
@@ -371,6 +372,7 @@ function buildExamSummary({ examName, category, conductingBodyName, regionLevel 
 
 // 3-column Overview tab for the Popular Exams details panel
 function PopularExamOverview({ exam, relatedExams, navigate }) {
+  const { categoryUrl } = useThumbnails();
   const { intro, loading } = useExamContent(exam?.matchedName, undefined, exam?.examId);
 
   return (
@@ -426,7 +428,7 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
                   }
                 }}
               >
-                <img src={rel.image || '/homepage/F4_A.png'} alt={rel.name} className="lc-related-exam-img" />
+                <img src={categoryUrl(exam?.category) || ''} alt={rel.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
                 <div className="lc-related-exam-info">
                   <div className="lc-related-exam-name">{rel.name}</div>
                   <div className="lc-related-exam-level">{rel.level}</div>
@@ -440,7 +442,7 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
                 className="lc-related-exam-card"
                 onClick={() => navigate(`/exam/${e.id}`, { state: { from: '/learning-center' } })}
               >
-                <img src="/homepage/F4_A.png" alt={e.name} className="lc-related-exam-img" />
+                <img src={categoryUrl(e.category) || ''} alt={e.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
                 <div className="lc-related-exam-info">
                   <div className="lc-related-exam-name">{e.name}</div>
                   <div className="lc-related-exam-level">{e.category || 'Competitive Exam'}</div>
@@ -461,6 +463,9 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
  * Preparation Centers (Syllabus / PYQ / Quiz) -> Skill Development.
  */
 const LearningCenter = () => {
+  // Exam thumbnails come from the category's thumbnail (admin > Categories).
+  const { categoryUrl } = useThumbnails();
+  const cardImage = (card) => card.image || categoryUrl(card.category) || '';
   const navigate = useNavigate();
   const recommendedScrollRef = useRef(null);
   const continueScrollRef = useRef(null);
@@ -618,7 +623,7 @@ const LearningCenter = () => {
         examId: card.examId,
         title: card.title,
         category: card.conductingBody || card.type || 'Central Exam',
-        image: card.image,
+        image: cardImage(card),
         progress: 0,
         lastAccessedAt: Date.now(),
       });
@@ -635,7 +640,7 @@ const LearningCenter = () => {
       examId,
       title: card.title,
       category: card.conductingBody || card.type || 'Central Exam',
-      image: card.image,
+      image: cardImage(card),
       progress: 0,
       lastAccessedAt: Date.now(),
       searchTerm: card.searchTerm,
@@ -669,7 +674,7 @@ const LearningCenter = () => {
       examId,
       title: examName || examItem?.name || 'Competitive Exam',
       category: examItem?.conducting_body?.name || examItem?.category || 'Central Exam',
-      image: examItem?.thumbnail_subject ? `/thumbnails/${examItem.thumbnail_subject}.png` : '/homepage/F5A.png',
+      image: categoryUrl(examItem?.category) || '/homepage/F5A.png',
       progress: 0,
       lastAccessedAt: Date.now(),
       searchTerm: examName || examItem?.name,
@@ -691,7 +696,7 @@ const LearningCenter = () => {
       setPreparingExamId(null);
       navigate(`/exam/${examId}`, { state: { from: '/learning-center' } });
     }
-  }, [navigate, catalog, recordActiveLearning]);
+  }, [navigate, catalog, recordActiveLearning, categoryUrl]);
 
   const handleRegionModeChange = (mode) => {
     setRegionMode(mode);
@@ -867,7 +872,7 @@ const LearningCenter = () => {
       badgeColor: familyHex,
       resourcesCount,
       type: CONTENT_COVERAGE_LABEL,
-      image: getSubjectThumbnailImage(exam.thumbnail_subject) || '',
+      category: exam.category,
     };
   }, [examProgress]);
 
@@ -934,9 +939,7 @@ const LearningCenter = () => {
       badgeColor: scorePercent ? '#166534' : familyHex,
       resourcesCount,
       type: CONTENT_COVERAGE_LABEL,
-      image:
-        (match?.thumbnail_subject ? getSubjectThumbnailImage(match.thumbnail_subject) : null) ||
-        '/homepage/F5A.png',
+      category: match?.category,
       searchTerm: examName,
       score: rec.score,
     };
@@ -1319,7 +1322,7 @@ const LearningCenter = () => {
         onClick={() => handleStartCardExam(card)}
       >
         <img
-          src={card.image}
+          src={cardImage(card)}
           alt={card.title}
           className="lc-card-thumb-img"
           loading="lazy"
@@ -1894,7 +1897,7 @@ const LearningCenter = () => {
                       >
                         <div className="lc-card-thumb-wrap">
                           <img
-                            src={exam.image}
+                            src={cardImage(exam)}
                             alt={exam.name}
                             className="lc-card-thumb-img"
                             loading="lazy"
@@ -1927,7 +1930,7 @@ const LearningCenter = () => {
                     <div className="lc-exam-details-header">
                       <div className="lc-exam-details-logo-wrap">
                         <img
-                          src={selectedPopularExam.image}
+                          src={cardImage(selectedPopularExam)}
                           alt={selectedPopularExam.name}
                           className="lc-exam-details-img"
                           onError={(e) => { e.target.style.display = 'none'; }}

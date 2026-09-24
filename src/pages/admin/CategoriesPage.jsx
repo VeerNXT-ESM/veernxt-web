@@ -7,6 +7,11 @@ import { CENTRAL_EXAM_CATEGORIES } from '../../lib/centralExamCategories';
 import { STATE_EXAM_CATEGORIES } from '../../lib/stateExamCategories';
 import { UT_EXAM_CATEGORIES } from '../../lib/utExamCategories';
 import LinkCategoryExamsDrawer from './LinkCategoryExamsDrawer';
+import ThumbnailCell from './ThumbnailCell';
+import { refreshThumbnails } from '../../lib/thumbnailStore';
+import { bundledCategoryThumbnail } from '../../lib/bundledThumbnails';
+
+const thumbOf = (c) => c.thumbnail_url || bundledCategoryThumbnail(c.name);
 
 /**
  * Lets the content team manage the lc_exams.category list themselves,
@@ -30,6 +35,8 @@ const LEVEL_FILTER_OPTIONS = [
   { value: 'state', label: 'State' },
   { value: 'ut', label: 'UT' },
 ];
+const THUMB_W = 640;
+const THUMB_H = 360; // 16:9 landscape, same shape as the existing category art
 const LEVEL_LABELS = { central: 'Central', state: 'State', ut: 'UT' };
 // Which level list a category belongs to. The three lists never share a name
 // (see the retag_*_exams.mjs scripts); a category in none of them shows "—".
@@ -46,6 +53,7 @@ const CategoriesPage = () => {
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search);
   const [levelFilter, setLevelFilter] = useState('');
+  const [onlyMissing, setOnlyMissing] = useState(false);
   const [page, setPage] = useState(1);
 
   const [showAddModal, setShowAddModal] = useState(false);
@@ -74,8 +82,16 @@ const CategoriesPage = () => {
         if (!data || data.length < pageSize) return { data: all, error: null };
       }
     };
+    // thumbnail_url comes from sql/lc_thumbnails.sql; until that has been run
+    // the column doesn't exist, so fall back to the plain list rather than
+    // showing an empty page.
+    const fetchCategories = async () => {
+      const withThumb = await supabase.from('lc_exam_categories').select('id,name,created_at,thumbnail_url').order('name');
+      if (!withThumb.error) return withThumb;
+      return supabase.from('lc_exam_categories').select('id,name,created_at').order('name');
+    };
     const [{ data: cats, error: catErr }, { data: examRows, error: examErr }] = await Promise.all([
-      supabase.from('lc_exam_categories').select('id,name,created_at').order('name'),
+      fetchCategories(),
       fetchExamRows(),
     ]);
     if (catErr) console.error('Error fetching categories:', catErr);
@@ -104,12 +120,13 @@ const CategoriesPage = () => {
   const filtered = categories.filter((c) => (
     (!debouncedSearch || c.name.toLowerCase().includes(debouncedSearch.toLowerCase()))
     && (!levelFilter || LEVEL_OF_CATEGORY[c.name] === levelFilter)
+    && (!onlyMissing || !thumbOf(c))
   ));
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   // Back to page 1 when the search/filter changes; clamp if a delete/rename
   // shrinks the list under the current page.
-  useEffect(() => { setPage(1); }, [debouncedSearch, levelFilter]);
+  useEffect(() => { setPage(1); }, [debouncedSearch, levelFilter, onlyMissing]);
   useEffect(() => { if (page > totalPages) setPage(totalPages); }, [page, totalPages]);
   const pageRows = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
@@ -117,6 +134,13 @@ const CategoriesPage = () => {
     setNewName('');
     setAddError('');
     setShowAddModal(true);
+  };
+
+  const saveThumbnail = async (cat, url) => {
+    const { error } = await supabase.from('lc_exam_categories').update({ thumbnail_url: url }).eq('id', cat.id);
+    if (error) throw error;
+    setCategories((prev) => prev.map((c) => (c.id === cat.id ? { ...c, thumbnail_url: url } : c)));
+    refreshThumbnails();
   };
 
   const handleAdd = async (e) => {
@@ -133,7 +157,7 @@ const CategoriesPage = () => {
     setSaving(true);
     setAddError('');
     try {
-      const { data, error } = await supabase.from('lc_exam_categories').insert({ name }).select('id,name,created_at').single();
+      const { data, error } = await supabase.from('lc_exam_categories').insert({ name }).select('id,name,created_at,thumbnail_url').single();
       if (error) throw error;
       setCategories((prev) => [...prev, data].sort((a, b) => a.name.localeCompare(b.name)));
       setShowAddModal(false);
@@ -228,6 +252,10 @@ const CategoriesPage = () => {
         <div className="lc-filter-field">
           <Select value={levelFilter} onChange={(e) => setLevelFilter(e.target.value)} options={LEVEL_FILTER_OPTIONS} />
         </div>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--admin-text-muted, #64748b)' }}>
+          <input type="checkbox" checked={onlyMissing} onChange={(e) => setOnlyMissing(e.target.checked)} />
+          Missing thumbnail only
+        </label>
       </div>
 
       {loading ? (
@@ -240,6 +268,7 @@ const CategoriesPage = () => {
             <thead>
               <tr>
                 <th><Tags size={13} style={{ marginRight: '0.35rem', verticalAlign: '-2px' }} />Category</th>
+                <th>Thumbnail</th>
                 <th>Level</th>
                 <th style={{ textAlign: 'right' }}>Central</th>
                 <th style={{ textAlign: 'right' }}>State</th>
@@ -252,6 +281,17 @@ const CategoriesPage = () => {
               {pageRows.map((cat) => (
                 <tr key={cat.id}>
                   <td>{cat.name}</td>
+                  <td>
+                    <ThumbnailCell
+                      url={thumbOf(cat)}
+                      name={cat.name}
+                      keyPrefix="category-thumbnails"
+                      width={THUMB_W}
+                      height={THUMB_H}
+                      previewWidth={112}
+                      onSave={(url) => saveThumbnail(cat, url)}
+                    />
+                  </td>
                   <td>{LEVEL_LABELS[LEVEL_OF_CATEGORY[cat.name]] || '—'}</td>
                   <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.central || 0}</span></td>
                   <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.state || 0}</span></td>

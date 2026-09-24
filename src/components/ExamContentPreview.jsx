@@ -4,7 +4,8 @@ import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, R
 import { isResourceLockedForUser, canTakeQuiz } from '../lib/subscriptionAccess';
 import { useExamContent } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
-import { resolveSubjectForTitle, getFamilyHex, getSubjectThumbnailImage } from '../lib/thumbnailTaxonomy';
+import { resolveSubjectForTitle, getFamilyHex } from '../lib/thumbnailTaxonomy';
+import { useThumbnails } from '../lib/thumbnailStore';
 
 const BUCKETS = [
   { key: 'Intro', label: 'Intro', icon: FileText, anchor: 'section-intro' },
@@ -130,7 +131,8 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
 export function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplete, backTo }) {
   const subject = resolveSubjectForTitle(resource.title);
   const bg = getFamilyHex(subject.family);
-  const image = getSubjectThumbnailImage(subject.key);
+  const { subjectUrl } = useThumbnails();
+  const image = subjectUrl(subject.key);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem' }}>

@@ -34,11 +34,9 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   const [duplicating, setDuplicating] = useState(false);
   const [status, setStatus] = useState('draft');
   const [statusSaving, setStatusSaving] = useState(false);
-  const [showImageControls, setShowImageControls] = useState(false);
 
   const [conductingBodies, setConductingBodies] = useState([]);
   const [regions, setRegions] = useState([]);
-  const [thumbnailTemplates, setThumbnailTemplates] = useState([]);
   const [allTags, setAllTags] = useState([]);
   // lc_exam_categories -- editable by the content team from CategoriesPage.jsx,
   // not a hardcoded list. Read live here so a category added there shows up
@@ -69,22 +67,19 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
       setLevel('central');
       setStatus('draft');
       setExamTags([]);
-      setShowImageControls(false);
       setLoading(false);
     }
   }, [examId]);
 
   const loadReferenceData = async () => {
-    const [{ data: bodies }, { data: regs }, { data: templates }, { data: tags }, { data: cats }] = await Promise.all([
+    const [{ data: bodies }, { data: regs }, { data: tags }, { data: cats }] = await Promise.all([
       supabase.from('lc_conducting_bodies').select('id,name').order('name'),
       supabase.from('lc_regions').select('id,name,level').order('name'),
-      supabase.from('lc_thumbnail_templates').select('id,name,background_image_path').order('name'),
       supabase.from('lc_tags').select('id,name').order('name'),
       supabase.from('lc_exam_categories').select('name').order('name'),
     ]);
     setConductingBodies(bodies || []);
     setRegions(regs || []);
-    setThumbnailTemplates(templates || []);
     setAllTags(tags || []);
     setCategoryOptions((cats || []).map((c) => ({ value: c.name, label: c.name })));
   };
@@ -107,7 +102,6 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
       });
       setLevel(exam.region?.level || 'central');
       setStatus(exam.status || 'draft');
-      setShowImageControls(false);
 
       const { data: tagLinks } = await supabase.from('lc_exam_tags').select('tag:lc_tags(id,name)').eq('exam_id', id);
       setExamTags((tagLinks || []).map((t) => t.tag).filter(Boolean));
@@ -413,27 +407,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
         </div>
 
         <div className="lc-editor-thumbnail">
-          <ExamThumbnail label={form.category || form.name} conductingBodyName={bodyName} thumbnailSubject={form.thumbnail_subject} accentColor={form.accent_color} size="lg" />
-          <button className="lc-btn" style={{ marginTop: '0.85rem' }} onClick={() => setShowImageControls((v) => !v)}>
-            {showImageControls ? 'Hide Image Options' : 'Change Image'}
-          </button>
-          {showImageControls && (
-            <>
-              <div className="lc-input-group" style={{ marginTop: '0.85rem' }}>
-                <label>Template</label>
-                <Select placeholder="No thumbnail" value={form.thumbnail_template_id} onChange={(e) => updateForm({ thumbnail_template_id: e.target.value })} options={[{ value: '', label: 'No thumbnail' }, ...thumbnailTemplates.map((t) => ({ value: t.id, label: t.name }))]} />
-              </div>
-              <div className="lc-input-group">
-                <label>Accent Color</label>
-                <div className="lc-color-swatches">
-                  {ACCENT_COLORS.map((c) => (
-                    <button key={c} onClick={() => updateForm({ accent_color: c })} className={`lc-color-swatch ${form.accent_color === c ? 'active' : ''}`} style={{ background: c }} />
-                  ))}
-                </div>
-              </div>
-              <p className="lc-muted-note">Colour-coded for now — generated image thumbnails come later.</p>
-            </>
-          )}
+          <ExamThumbnail label={form.name} thumbnailSubject={form.thumbnail_subject} accentColor={form.accent_color} categoryName={form.category} level={level} size="lg" />
         </div>
       </div>
     </div>

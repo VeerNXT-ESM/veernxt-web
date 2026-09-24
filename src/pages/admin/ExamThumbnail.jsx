@@ -7,7 +7,9 @@
 // exams.thumbnail_subject — replacing the earlier conducting-body hash so
 // every exam reads by what it's actually about (English, GK, General
 // Studies, ...), not which department runs it. See status_report.md §27.10.
-import { getSubjectByKey, getFamilyHex, getSubjectThumbnailImage } from '../../lib/thumbnailTaxonomy';
+import { useState, useEffect } from 'react';
+import { getSubjectByKey, getFamilyHex } from '../../lib/thumbnailTaxonomy';
+import { useThumbnails } from '../../lib/thumbnailStore';
 
 function abbreviate(name) {
   if (!name) return '';
@@ -15,37 +17,55 @@ function abbreviate(name) {
   return name.split(/\s+/).filter((w) => w && !stopWords.has(w.toLowerCase())).map((w) => w[0].toUpperCase()).join('').slice(0, 5);
 }
 
+const LEVEL_BADGE = { central: 'CENTRAL', state: 'STATE', ut: 'UT' };
+
 /**
- * size: 'sm' (list-row badge, square) | 'lg' (editor preview panel)
- * thumbnailSubject: one of the keys in THUMBNAIL_SUBJECTS (exams.thumbnail_subject)
+ * size: 'sm' (list-row badge, square) | 'lg' (landscape 16:9 card)
+ * lg shows only the level badge + exam name. Background is a solid colour
+ * until the exam's category has a thumbnail (set on admin > Categories),
+ * which then replaces it (no wash or overlay). A missing/broken image keeps
+ * the solid colour.
+ * level: 'central' | 'state' | 'ut'
  */
-const ExamThumbnail = ({ label, conductingBodyName, thumbnailSubject, accentColor, size = 'sm' }) => {
+const ExamThumbnail = ({ label, conductingBodyName, thumbnailSubject, accentColor, categoryName, level, size = 'sm' }) => {
   const subject = getSubjectByKey(thumbnailSubject);
   const bg = accentColor || getFamilyHex(subject.family);
-  const abbr = abbreviate(conductingBodyName);
+  const { categoryUrl } = useThumbnails();
+  const image = size === 'lg' ? categoryUrl(categoryName) : null;
+  const [failedImage, setFailedImage] = useState(null);
+  useEffect(() => { setFailedImage(null); }, [image]);
 
   if (size === 'sm') {
+    const abbr = abbreviate(conductingBodyName);
     return (
-      <div className="lc-thumb-sm" style={{ background: bg }} title={`${subject.label}${conductingBodyName ? ` — ${conductingBodyName}` : ''}`}>
+      <div className="lc-thumb-sm" style={{ background: bg }} title={conductingBodyName || ''}>
         {abbr.slice(0, 2)}
       </div>
     );
   }
 
-  const image = getSubjectThumbnailImage(subject.key);
-  // A light tint over the photo (not a heavy scrim) -- just enough to keep
-  // the subject colour identity and give the overlaid text a legible base;
-  // text itself carries a drop-shadow (see .lc-thumb-lg-subject/-label/
-  // -badge) instead of relying on darkening the image to make it readable.
-  const background = image
-    ? `linear-gradient(160deg, ${bg}40 0%, ${bg}59 100%), url("${image}")`
-    : `linear-gradient(160deg, ${bg} 0%, ${bg}cc 100%)`;
+  const shown = image && failedImage !== image ? image : null;
+  const badge = LEVEL_BADGE[(level || '').toLowerCase()];
+  const textShadow = shown ? '0 1px 4px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.8)' : 'none';
 
   return (
-    <div className="lc-thumb-lg" style={{ background, backgroundSize: image ? 'cover' : undefined, backgroundPosition: image ? 'center' : undefined }}>
-      <div className="lc-thumb-lg-subject">{subject.label.toUpperCase()}</div>
-      <div className="lc-thumb-lg-label">{(label || 'STUDY MATERIAL').toUpperCase()}</div>
-      {abbr && <div className="lc-thumb-lg-badge">{abbr}</div>}
+    <div style={{ position: 'relative', width: '100%', aspectRatio: '16 / 9', borderRadius: 10, overflow: 'hidden', background: bg, boxSizing: 'border-box' }}>
+      {shown && (
+        <img
+          src={shown}
+          alt=""
+          onError={() => setFailedImage(shown)}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+      )}
+      {badge && (
+        <span style={{ position: 'absolute', top: 8, left: 8, padding: '0.2rem 0.55rem', borderRadius: 999, background: '#fff', color: '#0f172a', fontSize: '0.62rem', fontWeight: 800, letterSpacing: '0.06em' }}>
+          {badge}
+        </span>
+      )}
+      <div style={{ position: 'absolute', inset: 0, padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: '#fff', fontWeight: 800, fontSize: '0.85rem', lineHeight: 1.25, textShadow }}>
+        {label || ''}
+      </div>
     </div>
   );
 };

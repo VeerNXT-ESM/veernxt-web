@@ -99,9 +99,33 @@ const SUBJECT_PRIORITY = [
 // Single-title -> subject key lookup, shared by resolveThumbnailSubject
 // (one dominant subject per exam) and resolveSubjectForTitle (one subject
 // per individual resource, for the per-subject syllabus thumbnail grid).
+// Real titles vary in case/spacing ("MATHEMATICS" vs "Mathematics", "Computer
+// Science" vs "Computer Science guide Book", "HINDI JHT", "GS & GK",
+// "Descriptive Writing Bank Exams", optionally year-prefixed), so exact-match
+// on CORE_TITLE_TO_SUBJECT alone left most books with no subject thumbnail.
+const normalizeTitle = (t) => (t || '').toLowerCase().replace(/[_\s]+/g, ' ').trim();
+const NORMALIZED_CORE_TITLES = Object.fromEntries(
+  Object.entries(CORE_TITLE_TO_SUBJECT).map(([title, key]) => [normalizeTitle(title), key])
+);
+const TITLE_KEYWORD_SUBJECTS = [
+  [/descriptive writing/, 'descriptive_writing'],
+  [/computer science/, 'computer_science'],
+  [/^(\d{4} )?(mathematics|maths?)(?![a-z])/, 'mathematics'],
+  [/^(\d{4} )?hindi(?![a-z])/, 'hindi'],
+  [/^(\d{4} )?english(?![a-z])/, 'english'],
+  [/^(\d{4} )?reasoning(?![a-z])/, 'reasoning'],
+  [/^(\d{4} )?(gs ?& ?gk|general knowledge)(?![a-z])|(^|[^a-z])gk([^a-z]|$)/, 'gk_general_awareness'],
+];
+const GS_BOOK_TITLE_PATTERN = /[ _]GS[ _]Book$/i;
+
 function subjectKeyForTitle(title) {
   if (CORE_TITLE_TO_SUBJECT[title]) return CORE_TITLE_TO_SUBJECT[title];
-  if (REGION_GS_TITLE_PATTERN.test(title)) return 'general_studies';
+  if (REGION_GS_TITLE_PATTERN.test(title) || GS_BOOK_TITLE_PATTERN.test(title)) return 'general_studies';
+  const norm = normalizeTitle(title);
+  if (NORMALIZED_CORE_TITLES[norm]) return NORMALIZED_CORE_TITLES[norm];
+  for (const [pattern, key] of TITLE_KEYWORD_SUBJECTS) {
+    if (pattern.test(norm)) return key;
+  }
   return null;
 }
 
@@ -191,12 +215,12 @@ export function getFamilyHex(familyKey) {
   return COLOR_FAMILIES[familyKey]?.hex || COLOR_FAMILIES.teal.hex;
 }
 
-// Real thumbnail art (public/thumbnails/), one per subject key where the
-// user has supplied one. Only 15 of the 18 subjects have art so far --
-// general_studies, general_science, and information_technology (plus the
-// neutral 'general' default) still fall back to the colour-block gradient
-// in ExamThumbnail.jsx/ExamContentPreview.jsx until art exists for them.
-const SUBJECT_THUMBNAIL_IMAGE = {
+// Art originally shipped in public/thumbnails/, used ONLY to seed
+// lc_subjects.thumbnail_url (scripts/seed_thumbnail_urls.mjs). At runtime the
+// thumbnail for a subject comes from lc_subjects via src/lib/thumbnailStore.js
+// and is changed on the admin Subjects page. Subjects with none fall back to
+// a solid colour.
+export const SUBJECT_THUMBNAIL_FILES = {
   english: 'English.png',
   computer_science: 'Computer Science.png',
   hindi: 'Hindi.png',
@@ -213,9 +237,3 @@ const SUBJECT_THUMBNAIL_IMAGE = {
   hr_personnel: 'HR-Personnel.png',
   traffic_road_safety: 'Traffic-Road Safety.png',
 };
-
-/** Real thumbnail image URL for a subject key, or null if only the colour-block fallback is available. */
-export function getSubjectThumbnailImage(key) {
-  const filename = SUBJECT_THUMBNAIL_IMAGE[key];
-  return filename ? `/thumbnails/${encodeURIComponent(filename)}` : null;
-}
