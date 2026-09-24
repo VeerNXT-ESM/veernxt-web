@@ -3,7 +3,7 @@ import axios from 'axios';
 import {
   Briefcase, ExternalLink, RefreshCw, Search, AlertCircle, Clock,
   MapPin, X, Sliders, Award, ChevronDown, ChevronUp, Sparkles, BookOpen,
-  Building2, ShieldCheck, ArrowLeft
+  Building2, ShieldCheck, ArrowLeft, Tag, Zap
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
@@ -54,6 +54,9 @@ const FilterSection = ({ title, children, defaultOpen = false, disabled = false 
 
 const JobCard = ({ job, idx, isActive, onSelect, onDismiss, getAvatarColor, calculateDaysAgo }) => {
   const deadlineLabel = job.publishedOn ? calculateDaysAgo(job.publishedOn) : 'Recent';
+  const isV2 = job._source === 'jobs_v2';
+  const displayTags = isV2 && Array.isArray(job.tags) ? job.tags.slice(0, 4) : [];
+  const extraTagCount = isV2 && Array.isArray(job.tags) ? Math.max(0, job.tags.length - 4) : 0;
   return (
     <div className={`job-card ${isActive ? 'active' : ''}`} onClick={onSelect}>
       <div className="job-card-logo" style={{ backgroundColor: getAvatarColor(job.body) }}>
@@ -73,10 +76,21 @@ const JobCard = ({ job, idx, isActive, onSelect, onDismiss, getAvatarColor, calc
           {isVeteranFriendly(job) && (
             <span className="job-veteran-badge"><ShieldCheck size={11} /> Veteran Friendly</span>
           )}
-          {idx % 3 === 0 && (
+          {isV2 && <span className="job-v2-badge"><Zap size={10} /> AI Enhanced</span>}
+          {!isV2 && idx % 3 === 0 && (
             <span className="job-card-insight-badge"><Award size={11} /> Actively reviewing</span>
           )}
         </div>
+
+        {/* V2-only: hashtag chips */}
+        {displayTags.length > 0 && (
+          <div className="job-card-hashtags">
+            {displayTags.map(tag => (
+              <span key={tag} className="job-hashtag">#{tag}</span>
+            ))}
+            {extraTagCount > 0 && <span className="job-hashtag job-hashtag-more">+{extraTagCount}</span>}
+          </div>
+        )}
 
         <div className="job-card-footer">
           <span className="job-card-deadline"><Clock size={12} /> {deadlineLabel}</span>
@@ -128,6 +142,8 @@ const JobDetailPanel = ({
 
   const veteranFriendly = isVeteranFriendly(job);
   const hasStandardDetails = !!job.standard_details;
+  const isV2 = job._source === 'jobs_v2';
+  const v2Tags = isV2 && Array.isArray(job.tags) ? job.tags : [];
 
   return (
     <aside className="job-detail-panel">
@@ -148,6 +164,7 @@ const JobDetailPanel = ({
           <div className="job-detail-tags">
             {job.careerTrack && <CategoryTag track={job.careerTrack} />}
             {veteranFriendly && <span className="job-veteran-badge"><ShieldCheck size={11} /> Veteran Friendly</span>}
+            {isV2 && <span className="job-v2-badge"><Zap size={10} /> AI Enhanced</span>}
           </div>
           {job.examId && (
             <button
@@ -169,6 +186,18 @@ const JobDetailPanel = ({
           )}
         </div>
       </div>
+
+      {/* V2-only: tags section */}
+      {isV2 && v2Tags.length > 0 && (
+        <div className="job-detail-v2-tags">
+          <span className="job-detail-v2-tags-label"><Tag size={12} /> Tags</span>
+          <div className="job-detail-hashtags">
+            {v2Tags.map(tag => (
+              <span key={tag} className="job-hashtag"># {tag}</span>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="job-detail-actions">
         {job.url ? (
@@ -223,18 +252,31 @@ const JobDetailPanel = ({
         {detailTab === 'overview' && (
           <div className="job-detail-section">
             <h3>About the role</h3>
-            <p className="job-detail-notes">
-              {job.notes || 'No additional overview was provided for this listing.'}
-            </p>
-            {!hasStandardDetails && job.detailed_markdown && (
-              <div className="markdown-body">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>{job.detailed_markdown}</ReactMarkdown>
+            {/* V2: AI description rendered as markdown */}
+            {isV2 && job.aiDescription ? (
+              <div className="job-detail-ai-desc">
+                <div className="job-detail-ai-desc-badge"><Zap size={11} /> AI-Generated Description</div>
+                <div className="markdown-body">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{job.aiDescription}</ReactMarkdown>
+                </div>
               </div>
+            ) : (
+              <>
+                <p className="job-detail-notes">
+                  {job.notes || 'No additional overview was provided for this listing.'}
+                </p>
+                {!hasStandardDetails && job.detailed_markdown && (
+                  <div className="markdown-body">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{job.detailed_markdown}</ReactMarkdown>
+                  </div>
+                )}
+              </>
             )}
             <div className="job-fact-grid">
               {job.id && <div className="job-fact"><span>Requisition ID</span><strong>{job.id}</strong></div>}
               {job.standard_details?.exam_centers && <div className="job-fact"><span>Location</span><strong>{job.standard_details.exam_centers}</strong></div>}
               {job.vacancies != null && <div className="job-fact"><span>Vacancies</span><strong>{job.vacancies}</strong></div>}
+              {job.ageRange && <div className="job-fact"><span>Age Range</span><strong>{job.ageRange}</strong></div>}
               {job.lastDate && <div className="job-fact"><span>Last Date</span><strong>{new Date(job.lastDate).toLocaleDateString('en-IN')}</strong></div>}
             </div>
           </div>
@@ -242,7 +284,7 @@ const JobDetailPanel = ({
 
         {detailTab === 'eligibility' && (
           <div className="job-detail-section">
-            <h3>Eligibility & Documents</h3>
+            <h3>Eligibility &amp; Documents</h3>
             {Array.isArray(job.standard_details?.documents_needed) && job.standard_details.documents_needed.length > 0 ? (
               <ul className="job-detail-list">
                 {job.standard_details.documents_needed.map((doc, i) => <li key={i}>{doc}</li>)}
@@ -303,12 +345,16 @@ const JobDetailPanel = ({
 
 const JobBoard = () => {
   const navigate = useNavigate();
+  const [jobSource, setJobSource] = useState('v2'); // 'legacy' | 'v2'
   const [jobs, setJobs] = useState([]);
+  const [jobsV2, setJobsV2] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [loadingV2, setLoadingV2] = useState(true);
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('ALL');
   const [bodySearch, setBodySearch] = useState('');
-  const [error, setError] = useState(null);
+  const [errorLegacy, setErrorLegacy] = useState(null);
+  const [errorV2, setErrorV2] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedJob, setSelectedJob] = useState(null);
   const [profileData, setProfileData] = useState(null);
@@ -322,31 +368,57 @@ const JobBoard = () => {
 
   const fetchJobs = async () => {
     setLoading(true);
+    setErrorLegacy(null);
     try {
       const response = await axios.get('/api/jobs');
       if (response.data.ok) {
-        // Sort by when the job was added/scraped (created_at) — newest first.
-        // publishedOn is the application deadline, NOT the notification date.
         const sortedJobs = (response.data.jobs || []).sort((a, b) => {
           const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
           const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
           return dateB - dateA;
         });
         setJobs(sortedJobs);
-        if (sortedJobs.length > 0) {
-          setSelectedJob(sortedJobs[0]);
-        }
+        if (jobSource === 'legacy' && sortedJobs.length > 0) setSelectedJob(sortedJobs[0]);
       }
     } catch (err) {
       console.error('Failed to fetch jobs:', err);
-      setError('Could not load jobs from database. Please try again later.');
+      setErrorLegacy('Could not load legacy jobs. Please try again.');
     } finally {
       setLoading(false);
     }
   };
 
+  const fetchJobsV2 = async () => {
+    setLoadingV2(true);
+    setErrorV2(null);
+    try {
+      const response = await axios.get('/api/jobs-v2');
+      if (response.data.ok) {
+        const sorted = (response.data.jobs || []).sort((a, b) => {
+          const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
+          const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
+          return dateB - dateA;
+        });
+        setJobsV2(sorted);
+        if (jobSource === 'v2' && sorted.length > 0) setSelectedJob(sorted[0]);
+      }
+    } catch (err) {
+      console.error('Failed to fetch jobs_v2:', err);
+      setErrorV2('Could not load enriched jobs. Please try again.');
+    } finally {
+      setLoadingV2(false);
+    }
+  };
+
+  // Active job list / loading / error depending on source tab
+  const activeJobs = jobSource === 'v2' ? jobsV2 : jobs;
+  const isLoading = jobSource === 'v2' ? loadingV2 : loading;
+  const activeError = jobSource === 'v2' ? errorV2 : errorLegacy;
+  const activeRefetch = jobSource === 'v2' ? fetchJobsV2 : fetchJobs;
+
   useEffect(() => {
     fetchJobs();
+    fetchJobsV2();
 
     // Fetch profile dynamically from Supabase
     const fetchProfile = async () => {
@@ -368,10 +440,18 @@ const JobBoard = () => {
     };
     fetchProfile();
   }, []);
-
+  // Reset page + selected job when switching source tabs
   useEffect(() => {
     setCurrentPage(1);
-  }, [search, categoryFilter, bodySearch, resultTab, sortBy]);
+    setSelectedJob(null);
+    setSearch('');
+    setCategoryFilter('ALL');
+    setBodySearch('');
+    const list = jobSource === 'v2' ? jobsV2 : jobs;
+    if (list.length > 0) setSelectedJob(list[0]);
+  }, [jobSource]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => { setCurrentPage(1); }, [search, categoryFilter, bodySearch, resultTab, sortBy]);
 
   useEffect(() => {
     setExamAccordionOpen(false);
@@ -417,7 +497,7 @@ const JobBoard = () => {
     return colors[Math.abs(hash) % colors.length];
   };
 
-  const searchMatchedJobs = jobs.filter(job => {
+  const searchMatchedJobs = activeJobs.filter(job => {
     if (!job) return false;
     const jobId = job.id || job._id || job.title || 'unknown';
     return !dismissedJobIds.includes(jobId) && (
@@ -520,7 +600,27 @@ const JobBoard = () => {
         </div>
       </section>
 
-      {loading ? (
+      {/* ── Source Tabs ── */}
+      <div className="jobs-source-tabs">
+        <button
+          className={`jobs-source-tab ${jobSource === 'v2' ? 'active' : ''}`}
+          onClick={() => setJobSource('v2')}
+        >
+          <Zap size={14} />
+          New Jobs
+          {loadingV2 ? <span className="jobs-source-count">…</span> : <span className="jobs-source-count">{jobsV2.length}</span>}
+        </button>
+        <button
+          className={`jobs-source-tab ${jobSource === 'legacy' ? 'active' : ''}`}
+          onClick={() => setJobSource('legacy')}
+        >
+          <Briefcase size={14} />
+          Legacy Jobs
+          {loading ? <span className="jobs-source-count">…</span> : <span className="jobs-source-count">{jobs.length}</span>}
+        </button>
+      </div>
+
+      {isLoading ? (
         <div className="jobs-skeleton-wrap">
           {[0, 1, 2, 3].map(i => (
             <div key={i} className="jobs-skeleton-card">
@@ -530,12 +630,12 @@ const JobBoard = () => {
             </div>
           ))}
         </div>
-      ) : error ? (
+      ) : activeError ? (
         <div className="jobs-error-state">
           <AlertCircle size={40} />
-          <h3>Unable to load current opportunities</h3>
-          <p>{error}</p>
-          <button type="button" className="btn-primary" onClick={fetchJobs}>
+          <h3>Unable to load {jobSource === 'v2' ? 'enriched' : 'legacy'} jobs</h3>
+          <p>{activeError}</p>
+          <button type="button" className="btn-primary" onClick={activeRefetch}>
             <RefreshCw size={14} /> Try Again
           </button>
         </div>
@@ -1176,6 +1276,156 @@ const JobBoard = () => {
           gap: 0.4rem;
           cursor: pointer;
         }
+
+        /* ── Source Tabs ── */
+        .jobs-source-tabs {
+          display: flex;
+          gap: 0;
+          border-bottom: 2px solid var(--border);
+          margin-top: 1.5rem;
+          margin-bottom: 0;
+        }
+        .jobs-source-tab {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          padding: 0.7rem 1.4rem;
+          font-size: 0.84rem;
+          font-weight: 600;
+          border: none;
+          border-bottom: 2px solid transparent;
+          margin-bottom: -2px;
+          background: transparent;
+          color: var(--text-secondary, #64748b);
+          cursor: pointer;
+          transition: color 0.15s, border-color 0.15s;
+        }
+        .jobs-source-tab:hover { color: var(--text-primary, #1f2937); }
+        .jobs-source-tab.active {
+          color: var(--accent-green, #22c55e);
+          border-bottom-color: var(--accent-green, #22c55e);
+        }
+        .jobs-source-count {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 22px;
+          padding: 1px 6px;
+          border-radius: 99px;
+          font-size: 0.72rem;
+          font-weight: 700;
+          background: var(--surface-alt, #f1f5f9);
+          color: var(--text-secondary, #64748b);
+        }
+        .jobs-source-tab.active .jobs-source-count {
+          background: rgba(34, 197, 94, 0.12);
+          color: var(--accent-green, #22c55e);
+        }
+
+        /* ── AI Enhanced badge ── */
+        .job-v2-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 3px;
+          padding: 2px 7px;
+          border-radius: 4px;
+          font-size: 0.67rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          background: rgba(99, 102, 241, 0.1);
+          color: #6366f1;
+          border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        /* ── Hashtag chips ── */
+        .job-card-hashtags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px;
+          margin-top: 4px;
+          margin-bottom: 2px;
+        }
+        .job-detail-hashtags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          margin-top: 0.4rem;
+        }
+        .job-hashtag {
+          display: inline-block;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 0.7rem;
+          font-weight: 600;
+          background: rgba(100, 116, 139, 0.08);
+          color: var(--text-secondary, #64748b);
+          border: 1px solid var(--border);
+          cursor: default;
+          transition: background 0.12s, color 0.12s;
+        }
+        .job-hashtag:hover {
+          background: rgba(34, 197, 94, 0.08);
+          color: var(--accent-green, #22c55e);
+          border-color: rgba(34, 197, 94, 0.25);
+        }
+        .job-hashtag-more {
+          background: rgba(99, 102, 241, 0.07);
+          color: #6366f1;
+          border-color: rgba(99, 102, 241, 0.15);
+        }
+
+        /* ── V2 detail tags section ── */
+        .job-detail-v2-tags {
+          padding: 0.75rem 1.5rem;
+          border-bottom: 1px solid var(--border);
+        }
+        .job-detail-v2-tags-label {
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          font-size: 0.72rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.07em;
+          color: var(--text-secondary, #64748b);
+          margin-bottom: 0.4rem;
+        }
+
+        /* ── AI description block in detail ── */
+        .job-detail-ai-desc {
+          margin-bottom: 1rem;
+        }
+        .job-detail-ai-desc-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          padding: 3px 9px;
+          border-radius: 4px;
+          font-size: 0.69rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          background: rgba(99, 102, 241, 0.09);
+          color: #6366f1;
+          border: 1px solid rgba(99, 102, 241, 0.18);
+          margin-bottom: 0.75rem;
+        }
+        .job-detail-ai-desc .markdown-body {
+          font-size: 0.87rem;
+          line-height: 1.65;
+          color: var(--text-primary, #1f2937);
+        }
+        .job-detail-ai-desc .markdown-body h2,
+        .job-detail-ai-desc .markdown-body h3,
+        .job-detail-ai-desc .markdown-body strong {
+          color: var(--text-primary, #1f2937);
+        }
+        .job-detail-ai-desc .markdown-body ul,
+        .job-detail-ai-desc .markdown-body ol {
+          padding-left: 1.2rem;
+        }
+
         .jobs-skeleton-wrap {
           display: flex;
           flex-direction: column;
