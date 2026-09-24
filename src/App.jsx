@@ -58,6 +58,8 @@ import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import PyqPaperEditor from './pages/admin/PyqPaperEditor';
 import BooksPage from './pages/admin/BooksPage';
 import BookChapterBrowser from './pages/admin/BookChapterBrowser';
+import ReaderThemesGallery from './pages/admin/ReaderThemesGallery';
+import ThemeEditor from './pages/admin/ThemeEditor';
 import CVBuilder from './pages/CVBuilder';
 import RewardsCenter from './pages/RewardsCenter';
 import PreviewFinanceSuites from './pages/PreviewFinanceSuites';
@@ -198,6 +200,7 @@ function App() {
           <Route path="/admin" element={<Navigate to="/admin/exams" replace />} />
           <Route path="/admin/exams" element={<ExamsPage />} />
           <Route path="/admin/books" element={<BooksPage />} />
+          <Route path="/admin/reader-themes" element={<ReaderThemesGallery />} />
           <Route path="/admin/conducting-bodies" element={<ConductingBodiesPage />} />
           <Route path="/admin/categories" element={<CategoriesPage />} />
           <Route path="/admin/publish-content" element={<PublishContentPage />} />
@@ -213,6 +216,8 @@ function App() {
         <Route path="/admin/quiz/:id?" element={<AdminQuizEditor />} />
         <Route path="/admin/pyq/:id" element={<PyqPaperEditor />} />
         <Route path="/admin/books/:category/:book" element={<BookChapterBrowser />} />
+        <Route path="/admin/reader-themes/new" element={<ThemeEditor />} />
+        <Route path="/admin/reader-themes/:themeId" element={<ThemeEditor />} />
       </Routes>
     </Router>
   );
