@@ -665,6 +665,8 @@ const Dashboard = () => {
                       label={topExam.exam_name}
                       conductingBodyName={examThumbnails[topExam.exam_id]?.conductingBody}
                       thumbnailSubject={examThumbnails[topExam.exam_id]?.thumbnailSubject}
+                      categoryName={examThumbnails[topExam.exam_id]?.category}
+                      level={examThumbnails[topExam.exam_id]?.level}
                       size="lg"
                     />
                   </div>
@@ -1272,7 +1274,7 @@ const Dashboard = () => {
           flex-wrap: wrap;
         }
         .next-step-thumb {
-          width: 84px;
+          width: 160px;
           flex-shrink: 0;
         }
         .next-step-info {

@@ -170,8 +170,9 @@ const ExamSyllabus = () => {
             <div className="exam-banner-thumb">
               <ExamThumbnail
                 label={exam.name}
-                conductingBodyName={exam.conductingBody}
                 thumbnailSubject={exam.thumbnailSubject}
+                categoryName={exam.category}
+                level={exam.level}
                 size="lg"
               />
             </div>

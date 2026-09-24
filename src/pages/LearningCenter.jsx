@@ -30,7 +30,8 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
-import { getSubjectByKey, getFamilyHex, getSubjectThumbnailImage } from '../lib/thumbnailTaxonomy';
+import { getSubjectByKey, getFamilyHex } from '../lib/thumbnailTaxonomy';
+import { useThumbnails } from '../lib/thumbnailStore';
 import { getEffectiveTier } from '../lib/subscriptionAccess';
 import Select from '../components/ui/Select';
 import ExamContentPreview from '../components/ExamContentPreview';
@@ -56,7 +57,7 @@ const RECOMMENDED_EXAMS = [
     badge: 'Popular',
     badgeBg: '#fef3c7',
     badgeColor: '#92400e',
-    image: '/homepage/F5A.png',
+    category: 'SSC',
   },
   {
     id: 'delhi-police-guide',
@@ -71,7 +72,7 @@ const RECOMMENDED_EXAMS = [
     badge: 'New',
     badgeBg: '#e0e7ff',
     badgeColor: '#3730a3',
-    image: '/thumbnails/Reasoning.png',
+    category: 'Police (UT)',
   },
   // 'railway-ntpc-prep' removed: confirmed live (searching "NTPC" and
   // "railway" in Learning Center both return zero exams) that there is no
@@ -86,7 +87,7 @@ const RECOMMENDED_EXAMS = [
     badge: 'Trending',
     badgeBg: '#dcfce7',
     badgeColor: '#166534',
-    image: '/thumbnails/Agriculture.png',
+    category: 'Agriculture Department',
   },
   {
     id: 'cs-comp-exams',
@@ -96,7 +97,7 @@ const RECOMMENDED_EXAMS = [
     badge: 'Featured',
     badgeBg: '#f3e8ff',
     badgeColor: '#6b21a8',
-    image: '/thumbnails/Computer Science.png',
+    category: 'NIC',
   },
   {
     id: 'banking-prep',
@@ -106,7 +107,7 @@ const RECOMMENDED_EXAMS = [
     badge: 'High Vacancy',
     badgeBg: '#fef9c3',
     badgeColor: '#854d0e',
-    image: '/thumbnails/Financial Awareness.png',
+    category: 'Banking',
   },
 ];
 
@@ -211,7 +212,7 @@ const POPULAR_EXAMS = [
     badge: 'Premier',
     badgeBg: '#fef3c7',
     badgeColor: '#92400e',
-    image: '/homepage/F4_A.png',
+    category: 'Civil Services',
     searchQuery: 'upsc',
   },
   {
@@ -222,7 +223,7 @@ const POPULAR_EXAMS = [
     badge: 'High Vacancy',
     badgeBg: '#dcfce7',
     badgeColor: '#166534',
-    image: '/homepage/F5A.png',
+    category: 'SSC',
     searchQuery: 'ssc',
   },
   {
@@ -233,7 +234,7 @@ const POPULAR_EXAMS = [
     badge: 'State Level',
     badgeBg: '#e0e7ff',
     badgeColor: '#3730a3',
-    image: '/thumbnails/Agriculture.png',
+    category: 'Administrative Services',
     searchQuery: 'psc',
   },
   {
@@ -244,7 +245,7 @@ const POPULAR_EXAMS = [
     badge: 'Veteran Favorite',
     badgeBg: '#fee2e2',
     badgeColor: '#991b1b',
-    image: '/thumbnails/Reasoning.png',
+    category: 'Police',
     searchQuery: 'police',
   },
   {
@@ -255,7 +256,7 @@ const POPULAR_EXAMS = [
     badge: 'Fast Track',
     badgeBg: '#fef9c3',
     badgeColor: '#854d0e',
-    image: '/thumbnails/Financial Awareness.png',
+    category: 'Banking',
     searchQuery: 'bank',
   },
   {
@@ -266,7 +267,7 @@ const POPULAR_EXAMS = [
     badge: 'Popular',
     badgeBg: '#f3e8ff',
     badgeColor: '#6b21a8',
-    image: '/thumbnails/English.png',
+    category: 'Teaching & Education',
     searchQuery: 'teaching',
   },
 ];
@@ -301,6 +302,9 @@ const SIDEBAR_LANGUAGES = ['English', 'Hindi', 'Tamil', 'Other'];
  * Preparation Centers (Syllabus / PYQ / Quiz) -> Skill Development.
  */
 const LearningCenter = () => {
+  // Exam thumbnails come from the category's thumbnail (admin > Categories).
+  const { categoryUrl } = useThumbnails();
+  const cardImage = (card) => card.image || categoryUrl(card.category) || '';
   const navigate = useNavigate();
   const recommendedScrollRef = useRef(null);
   const continueScrollRef = useRef(null);
@@ -481,7 +485,7 @@ const LearningCenter = () => {
         examId: card.examId,
         title: card.title,
         category: card.conductingBody || card.type || 'Central Exam',
-        image: card.image,
+        image: cardImage(card),
         progress: 0,
         lastAccessedAt: Date.now(),
       });
@@ -498,7 +502,7 @@ const LearningCenter = () => {
       examId,
       title: card.title,
       category: card.conductingBody || card.type || 'Central Exam',
-      image: card.image,
+      image: cardImage(card),
       progress: 0,
       lastAccessedAt: Date.now(),
       searchTerm: card.searchTerm,
@@ -532,7 +536,7 @@ const LearningCenter = () => {
       examId,
       title: examName || examItem?.name || 'Competitive Exam',
       category: examItem?.conducting_body?.name || examItem?.category || 'Central Exam',
-      image: examItem?.thumbnail_subject ? `/thumbnails/${examItem.thumbnail_subject}.png` : '/homepage/F5A.png',
+      image: categoryUrl(examItem?.category) || '/homepage/F5A.png',
       progress: 0,
       lastAccessedAt: Date.now(),
       searchTerm: examName || examItem?.name,
@@ -554,7 +558,7 @@ const LearningCenter = () => {
       setPreparingExamId(null);
       navigate(`/exam/${examId}`, { state: { from: '/learning-center' } });
     }
-  }, [navigate, catalog, recordActiveLearning]);
+  }, [navigate, catalog, recordActiveLearning, categoryUrl]);
 
   const handleRegionModeChange = (mode) => {
     setRegionMode(mode);
@@ -742,7 +746,7 @@ const LearningCenter = () => {
       badgeColor: familyHex,
       resourcesCount,
       type: CONTENT_COVERAGE_LABEL,
-      image: getSubjectThumbnailImage(exam.thumbnail_subject) || '',
+      category: exam.category,
     };
   }, [examProgress]);
 
@@ -809,9 +813,7 @@ const LearningCenter = () => {
       badgeColor: scorePercent ? '#166534' : familyHex,
       resourcesCount,
       type: CONTENT_COVERAGE_LABEL,
-      image:
-        (match?.thumbnail_subject ? getSubjectThumbnailImage(match.thumbnail_subject) : null) ||
-        '/homepage/F5A.png',
+      category: match?.category,
       searchTerm: examName,
       score: rec.score,
     };
@@ -1138,7 +1140,7 @@ const LearningCenter = () => {
         onClick={() => handleStartCardExam(card)}
       >
         <img
-          src={card.image}
+          src={cardImage(card)}
           alt={card.title}
           className="lc-card-thumb-img"
           loading="lazy"
@@ -1915,7 +1917,7 @@ const LearningCenter = () => {
                     <div key={exam.id} className="lc-exam-card">
                       <div className="lc-card-thumb-wrap">
                         <img
-                          src={exam.image}
+                          src={cardImage(exam)}
                           alt={exam.name}
                           className="lc-card-thumb-img"
                           loading="lazy"
