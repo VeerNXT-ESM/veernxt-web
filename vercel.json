@@ -8,6 +8,7 @@
     { "source": "/api/auth/reset-password", "destination": "/api/auth/account?fn=reset-password" },
     { "source": "/api/admin/admins", "destination": "/api/admin/misc?fn=admins" },
     { "source": "/api/admin/redemptions", "destination": "/api/admin/misc?fn=redemptions" },
+    { "source": "/api/jobs-v2", "destination": "/api/jobs?source=v2" },
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
