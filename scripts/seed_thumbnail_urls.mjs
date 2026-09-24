@@ -41,7 +41,8 @@ async function main() {
     key,
     label: s.label,
     color_family: s.family,
-    thumbnail_url: have.get(key) || (SUBJECT_THUMBNAIL_FILES[key] ? `/thumbnails/${encodeURIComponent(SUBJECT_THUMBNAIL_FILES[key])}` : null),
+    // Keep an uploaded (R2) thumbnail; refresh anything still pointing at a bundled /thumbnails/ file.
+    thumbnail_url: (have.get(key) && !have.get(key).startsWith('/thumbnails/') ? have.get(key) : null) || (SUBJECT_THUMBNAIL_FILES[key] ? `/thumbnails/${encodeURIComponent(SUBJECT_THUMBNAIL_FILES[key])}` : null),
   }));
   const { error: upErr } = await sb.from('lc_subjects').upsert(rows, { onConflict: 'key' });
   if (upErr) throw upErr;

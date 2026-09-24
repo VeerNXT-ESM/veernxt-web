@@ -542,7 +542,7 @@ const Dashboard = () => {
   const topExamSubjects = (() => {
     const seen = new Map();
     topExamResources.forEach((res) => {
-      const subject = resolveSubjectForTitle(res.title);
+      const subject = resolveSubjectForTitle(res.title, res.category);
       if (!seen.has(subject.key)) seen.set(subject.key, subject.label);
     });
     return [...seen.values()];
