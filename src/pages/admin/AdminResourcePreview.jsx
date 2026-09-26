@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
-import { RefreshCw, ChevronLeft, ChevronRight } from 'lucide-react';
+import { RefreshCw, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
+import { ReaderThemeProvider } from '../../components/book/theme/ReaderThemeProvider';
+import { useReaderTheme } from '../../components/book/theme/useReaderTheme';
+import ThemeSwitcher from '../../components/book/theme/ThemeSwitcher';
+import { READER_THEME_LIST } from '../../components/book/theme/readerThemeRegistry';
 import '../../components/book/BookBlocks.css';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
@@ -44,6 +48,33 @@ const AdminResourcePreview = ({ resourceId, book: propBook }) => {
   const [loadError, setLoadError] = useState(null);
   const [chapters, setChapters] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [savingTheme, setSavingTheme] = useState(false);
+  const [themeSaved, setThemeSaved] = useState(false);
+
+  // Persists which theme this specific resource opens with for every
+  // candidate (ThemeEditor_UI.md §12-13: "apply a theme to whatever book
+  // you want") -- separate from the ThemeSwitcher above the preview, which
+  // only previews other themes without saving anything.
+  const handleAssignTheme = async (themeId) => {
+    if (!resource) return;
+    setSavingTheme(true);
+    setThemeSaved(false);
+    try {
+      const { error } = await supabase
+        .from('resources')
+        .update({ reader_theme_id: themeId || null })
+        .eq('resource_id', resource.resourceId || resource.resource_id);
+      if (error) throw error;
+      setResource((prev) => ({ ...prev, reader_theme_id: themeId || null }));
+      setThemeSaved(true);
+      setTimeout(() => setThemeSaved(false), 2500);
+    } catch (err) {
+      console.error('Failed to assign reader theme:', err);
+      window.alert(`Could not save the reader theme for this resource. If this is the first time, run sql/reader_themes.sql in the Supabase SQL Editor first.\n\n${err.message}`);
+    } finally {
+      setSavingTheme(false);
+    }
+  };
 
   useEffect(() => {
     let mounted = true;
@@ -219,26 +250,46 @@ const AdminResourcePreview = ({ resourceId, book: propBook }) => {
   const isBlocksFormat = resource.format === 'blocks' || (Array.isArray(activeChapter?.blocks) && activeChapter.blocks.length > 0);
 
   return (
-    <div style={{ padding: '1.25rem 1.5rem', overflowY: 'auto', flex: 1, background: 'var(--surface)' }}>
-      {chapters && chapters.length > 1 && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-          <button className="lc-btn" disabled={activeIndex === 0} onClick={() => setActiveIndex((i) => i - 1)}><ChevronLeft size={14} /></button>
-          <span style={{ fontSize: '0.8rem', color: 'var(--admin-text-muted)' }}>Chapter {activeIndex + 1} of {chapters.length}: {activeChapter?.title}</span>
-          <button className="lc-btn" disabled={activeIndex === chapters.length - 1} onClick={() => setActiveIndex((i) => i + 1)}><ChevronRight size={14} /></button>
+    // One shared provider for both the switcher and the previewed content
+    // below -- they must be the same context instance, or picking a theme
+    // in the switcher would have nothing to actually apply to.
+    // persist=false: switching themes here previews other options without
+    // overwriting the admin's own candidate-mode reading preference, which
+    // lives in the same browser's localStorage under the same key.
+    <ReaderThemeProvider
+      theme={resource.reader_theme_id || resource.readerThemeId || undefined}
+      persist={false}
+      style={{ padding: '1.25rem 1.5rem', overflowY: 'auto', flex: 1, background: 'var(--surface)' }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+        {chapters && chapters.length > 1 ? (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <button className="lc-btn" disabled={activeIndex === 0} onClick={() => setActiveIndex((i) => i - 1)}><ChevronLeft size={14} /></button>
+            <span style={{ fontSize: '0.8rem', color: 'var(--admin-text-muted)' }}>Chapter {activeIndex + 1} of {chapters.length}: {activeChapter?.title}</span>
+            <button className="lc-btn" disabled={activeIndex === chapters.length - 1} onClick={() => setActiveIndex((i) => i + 1)}><ChevronRight size={14} /></button>
+          </div>
+        ) : <span />}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.1rem', flexWrap: 'wrap' }}>
+          <AssignedThemeControl
+            resource={resource}
+            onAssign={handleAssignTheme}
+            savingTheme={savingTheme}
+            themeSaved={themeSaved}
+          />
+          <span style={{ fontSize: '0.72rem', color: 'var(--admin-text-muted)' }}>Preview:</span>
+          <ThemeSwitcher />
         </div>
-      )}
+      </div>
 
       {!activeChapter?.loaded ? (
         <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem' }}><RefreshCw className="animate-spin" size={24} color="var(--ios-olive)" /></div>
       ) : (
-        // BookBlocks.css / the raw body_html both hardcode dark, light-page-only
-        // text/background colors (shared with the candidate-facing reader, which
-        // IS on a light page) -- so on this admin CMS's dark drawer (--surface:
-        // #141a21) that text rendered near-black-on-near-black, unreadable except
-        // for the browser's own text-selection highlight. Give it the light
-        // "paper" it was designed for, same as the manual/draft preview paths in
-        // ExamIntroCard.jsx already do with their own .reader-card wrapper.
-        <div style={{ background: '#ffffff', borderRadius: '12px', border: '1px solid #e2e8f0', padding: '2rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)' }}>
+        // BookBlocks.css's own token fallbacks are all light-page values, but
+        // this admin CMS's own chrome around it is dark (--surface: #141a21)
+        // -- the provider above gives this preview its own real light-theme
+        // token scope (matching the candidate reader, not a fake white box
+        // wrapper) so admin preview == real reader.
+        <div style={{ background: 'var(--reader-surface)', borderRadius: '12px', border: '1px solid var(--reader-border)', padding: '2rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)' }}>
           {isBlocksFormat ? (
             <>
               <ChapterHeader title={activeChapter?.title} order={activeIndex + 1} />
@@ -247,12 +298,42 @@ const AdminResourcePreview = ({ resourceId, book: propBook }) => {
               </div>
             </>
           ) : (
-            <div style={{ color: '#1e293b' }} dangerouslySetInnerHTML={{ __html: activeChapter?.body_html || '' }} />
+            <div dangerouslySetInnerHTML={{ __html: activeChapter?.body_html || '' }} />
           )}
         </div>
       )}
-    </div>
+    </ReaderThemeProvider>
   );
 };
+
+// Lives inside ReaderThemeProvider (unlike the parent component) so
+// picking a theme here can call setThemeId for instant visual feedback,
+// alongside onAssign's real DB write -- the dropdown doesn't wait for the
+// round-trip to reflect the choice.
+function AssignedThemeControl({ resource, onAssign, savingTheme, themeSaved }) {
+  const { setThemeId } = useReaderTheme();
+  return (
+    <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.78rem', color: 'var(--admin-text-muted)' }}>
+      Assigned Theme
+      <select
+        value={resource.reader_theme_id || ''}
+        onChange={(e) => {
+          const id = e.target.value;
+          setThemeId(id || 'academic');
+          onAssign(id);
+        }}
+        disabled={savingTheme}
+        style={{ padding: '0.35rem 0.5rem', borderRadius: '6px', border: '1px solid var(--border)', background: 'var(--surface)', color: 'var(--admin-text)', fontSize: '0.8rem', fontWeight: 600 }}
+      >
+        <option value="">Candidate's own preference</option>
+        {READER_THEME_LIST.map((t) => (
+          <option key={t.id} value={t.id}>{t.name}</option>
+        ))}
+      </select>
+      {savingTheme && <RefreshCw size={13} className="animate-spin" />}
+      {themeSaved && <CheckCircle2 size={13} color="#16a34a" />}
+    </label>
+  );
+}
 
 export default AdminResourcePreview;

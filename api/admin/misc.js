@@ -293,7 +293,7 @@ const tableWriteSchema = Joi.object({
   values: Joi.alternatives(Joi.object(), Joi.array().max(5000).items(Joi.object())).when('op', { is: 'delete', then: Joi.forbidden(), otherwise: Joi.required() }),
   options: Joi.object({ onConflict: Joi.string().pattern(/^[a-z_][a-z0-9_,]*$/) }).default({}),
   filters: Joi.array().max(10).items(Joi.object({
-    type: Joi.string().valid('eq', 'in').required(),
+    type: Joi.string().valid('eq', 'neq', 'in').required(),
     column: Joi.string().pattern(IDENT).required(),
     value: Joi.when('type', { is: 'in', then: Joi.array().max(20000).items(Joi.alternatives(Joi.string(), Joi.number())).required(), otherwise: Joi.alternatives(Joi.string(), Joi.number(), Joi.boolean()).required() }),
   })).default([]),
@@ -312,7 +312,7 @@ async function handleTableWrite(req, res, supabaseAdmin) {
   else if (value.op === 'update') q = q.update(value.values);
   else if (value.op === 'upsert') q = q.upsert(value.values, value.options?.onConflict ? { onConflict: value.options.onConflict } : undefined);
   else q = q.delete();
-  for (const f of value.filters) q = f.type === 'in' ? q.in(f.column, f.value) : q.eq(f.column, f.value);
+  for (const f of value.filters) q = f.type === 'in' ? q.in(f.column, f.value) : f.type === 'neq' ? q.neq(f.column, f.value) : q.eq(f.column, f.value);
   if (value.select) q = q.select(value.select);
   const { data, error: dbErr } = await q;
   if (dbErr) {

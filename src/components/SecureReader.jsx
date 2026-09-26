@@ -1,15 +1,54 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { ArrowLeft, CheckCircle, Clock, BookOpen, Share2, RefreshCw, Lock, Crown, ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  ArrowLeft, CheckCircle, Clock, BookOpen, Share2, RefreshCw, Lock, Crown, ChevronLeft, ChevronRight,
+  Printer, Maximize, Minimize, ScrollText, BookText,
+} from 'lucide-react';
 import 'react-quill-new/dist/quill.snow.css';
 import { getEffectiveTier, canAccessResource } from '../lib/subscriptionAccess';
 import { awardPoints } from '../lib/awardPoints';
 import { cleanContentTitle } from '../lib/contentTitle';
 import { BlockRenderer } from './book/BlockRenderer';
 import { ChapterHeader } from './book/BookBlocks';
+import { ReaderThemeProvider } from './book/theme/ReaderThemeProvider';
+import { useReaderTheme } from './book/theme/useReaderTheme';
+import { FONT_SCALE_STEP, FONT_SCALE_MIN, FONT_SCALE_MAX } from './book/theme/readerThemeTokens';
+import ThemeSwitcher from './book/theme/ThemeSwitcher';
 import './book/BookBlocks.css';
 import '../pages/sandbox/BookReaderV2.css';
+
+// Font-size A-/A+ control -- separate from ThemeSwitcher's own popover
+// (ThemeEditor_UI.md keeps the reader picker to just the theme list; this
+// sits as its own compact control in the nav, same as the reference
+// layout's "A- A+" pair next to the theme dropdown).
+function FontSizeControl() {
+  const { fontScale, setFontScale } = useReaderTheme();
+  return (
+    <div className="reader-fontsize-group">
+      <button
+        type="button"
+        className="nav-icon-btn"
+        onClick={() => setFontScale(fontScale - FONT_SCALE_STEP)}
+        disabled={fontScale <= FONT_SCALE_MIN}
+        aria-label="Decrease font size"
+        title="Decrease font size"
+      >
+        A-
+      </button>
+      <button
+        type="button"
+        className="nav-icon-btn"
+        onClick={() => setFontScale(fontScale + FONT_SCALE_STEP)}
+        disabled={fontScale >= FONT_SCALE_MAX}
+        aria-label="Increase font size"
+        title="Increase font size"
+      >
+        A+
+      </button>
+    </div>
+  );
+}
 
 const SecureReader = () => {
   const { id } = useParams(); // This is now resource_id
@@ -22,6 +61,27 @@ const SecureReader = () => {
   const [activeChapterIndex, setActiveChapterIndex] = useState(0);
   const [effectiveTier, setEffectiveTier] = useState('FREE');
   const chapterCache = React.useRef({});
+
+  // "Flipbook" has no real page-turn implementation anywhere in this
+  // codebase yet (confirmed -- only Scroll actually renders content); the
+  // toggle is honest about that rather than pretending to switch modes.
+  const [readerMode] = useState('scroll');
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const readerRootRef = React.useRef(null);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
+  const toggleFullscreen = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      readerRootRef.current?.requestFullscreen?.();
+    }
+  };
 
   const handleBack = () => {
     if (location.state?.from) {
@@ -248,34 +308,57 @@ const SecureReader = () => {
   if (!resource) return <div style={{ padding: '4rem', textAlign: 'center' }}>Document not found.</div>;
 
   return (
-    <div className="reader-container animate-fade-in">
+    <ReaderThemeProvider
+      theme={resource?.reader_theme_id || undefined}
+      subjectAccent={resource?.subject_accent || null}
+      className="reader-container animate-fade-in"
+    >
+      <div className="reader-body-root" ref={readerRootRef}>
       <div className="reader-nav">
         <div className="nav-inner">
-          <button
-            type="button"
-            onClick={handleBack}
-            className="back-link"
-            style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              padding: 0,
-              font: 'inherit',
-              color: 'inherit',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-            }}
-          >
-            <ArrowLeft size={18} /> Back
-          </button>
+          <div className="nav-left-group">
+            <button
+              type="button"
+              onClick={handleBack}
+              className="back-link"
+              style={{
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: 0,
+                font: 'inherit',
+                color: 'inherit',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+              }}
+            >
+              <ArrowLeft size={18} /> Back
+            </button>
+            {chapters && chapters.length > 1 && (
+              <span className="nav-chapter-counter">Chapter {activeChapterIndex + 1} of {chapters.length}</span>
+            )}
+          </div>
           <div className="nav-actions">
-            <button onClick={() => window.print()} className="nav-icon-btn"><Clock size={18} /></button>
-            <button className="nav-icon-btn"><Share2 size={18} /></button>
+            <ThemeSwitcher />
+            <FontSizeControl />
+            <div className="reader-mode-toggle">
+              <button type="button" className={`reader-mode-btn ${readerMode === 'scroll' ? 'active' : ''}`} title="Scroll view">
+                <ScrollText size={14} /> Scroll
+              </button>
+              <button type="button" className="reader-mode-btn" disabled title="3D Flipbook — coming soon">
+                <BookText size={14} /> Flipbook
+              </button>
+            </div>
+            <button onClick={() => window.print()} className="nav-icon-btn" title="Print" aria-label="Print"><Printer size={18} /></button>
+            <button className="nav-icon-btn" title="Share" aria-label="Share"><Share2 size={18} /></button>
+            <button onClick={toggleFullscreen} className="nav-icon-btn" title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'} aria-label={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}>
+              {isFullscreen ? <Minimize size={18} /> : <Maximize size={18} />}
+            </button>
           </div>
         </div>
       </div>
-      
+
       {isBlocksFormat ? (
         <div className="bk-reader-layout" style={{ minHeight: 'auto' }}>
           <aside className="bk-sidebar" style={{ position: 'sticky', top: '80px', height: 'calc(100vh - 80px)', maxHeight: 'calc(100vh - 80px)', overflowY: 'auto', alignSelf: 'flex-start' }}>
@@ -451,63 +534,68 @@ const SecureReader = () => {
       <style dangerouslySetInnerHTML={{ __html: `
         .reader-container {
           min-height: 100vh;
-          background: #f8fafc;
-          padding-bottom: 5rem;
-          padding-top: 80px;
+          background: var(--reader-background, #f8fafc);
         }
-        .scroll-progress-container {
-          position: fixed;
-          top: 64px; /* Header height */
-          left: 0;
-          width: 100%;
-          height: 4px;
-          background: rgba(0,0,0,0.05);
-          z-index: 100;
-        }
-        .scroll-progress-bar {
-          height: 100%;
-          background: var(--ios-olive);
-          transition: width 0.1s ease-out;
-        }
+        .reader-body-root { padding-bottom: 5rem; padding-top: 80px; }
         .reader-nav {
-          background: white;
-          border-bottom: 1px solid rgba(0,0,0,0.05);
+          background: var(--reader-surface, white);
+          border-bottom: 1px solid var(--reader-border, rgba(0,0,0,0.05));
           padding: 1rem 0;
           margin-bottom: 3rem;
+          font-family: var(--reader-ui-font, 'Inter', sans-serif);
         }
         .nav-inner {
-          max-width: 1000px;
+          max-width: var(--reader-content-width, 1000px);
           margin: 0 auto;
           display: flex;
           justify-content: space-between;
           align-items: center;
           padding: 0 1.5rem;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        }
+        .nav-left-group { display: flex; align-items: center; gap: 1rem; }
+        .nav-chapter-counter {
+          font-size: 0.82rem; font-weight: 600; color: var(--reader-text-muted, #94a3b8);
+          padding-left: 1rem; border-left: 1px solid var(--reader-border, #e2e8f0);
         }
         .back-link {
           display: flex;
           align-items: center;
           gap: 0.5rem;
-          color: #64748b;
+          color: var(--reader-text-muted, #64748b);
           text-decoration: none;
           font-weight: 600;
           font-size: 0.9rem;
           transition: color 0.2s;
         }
-        .back-link:hover { color: var(--ios-olive); }
-        .nav-actions { display: flex; gap: 0.5rem; }
+        .back-link:hover { color: var(--reader-primary, var(--ios-olive)); }
+        .nav-actions { display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; }
         .nav-icon-btn {
           background: none;
           border: none;
-          color: #94a3b8;
+          color: var(--reader-text-muted, #94a3b8);
           cursor: pointer;
           padding: 0.5rem;
-          border-radius: 8px;
+          border-radius: var(--reader-radius-sm, 8px);
           transition: all 0.2s;
+          font-size: 0.8rem;
+          font-weight: 800;
+          font-family: inherit;
         }
-        .nav-icon-btn:hover { background: #f1f5f9; color: var(--ios-olive); }
-        
+        .nav-icon-btn:hover:not(:disabled) { background: var(--reader-surface-alt, #f1f5f9); color: var(--reader-primary, var(--ios-olive)); }
+        .nav-icon-btn:disabled { opacity: 0.4; cursor: default; }
+        .reader-fontsize-group { display: flex; gap: 0.15rem; align-items: center; border: 1px solid var(--reader-border, #e2e8f0); border-radius: var(--reader-radius-sm, 8px); padding: 0.1rem; }
+        .reader-mode-toggle { display: flex; border: 1px solid var(--reader-border, #e2e8f0); border-radius: var(--reader-radius-sm, 8px); overflow: hidden; }
+        .reader-mode-btn {
+          display: flex; align-items: center; gap: 0.35rem; background: none; border: none; padding: 0.5rem 0.75rem;
+          font-size: 0.78rem; font-weight: 700; color: var(--reader-text-muted, #94a3b8); cursor: pointer; font-family: inherit;
+        }
+        .reader-mode-btn.active { background: var(--reader-primary-soft, rgba(75,107,50,0.1)); color: var(--reader-primary, var(--ios-olive)); }
+        .reader-mode-btn:disabled { opacity: 0.4; cursor: default; }
+
         .reader-main {
-          max-width: 1000px;
+          max-width: var(--reader-content-width, 1000px);
           margin: 0 auto;
           padding: 0 1.5rem;
         }
@@ -522,8 +610,8 @@ const SecureReader = () => {
           margin-bottom: 1rem;
         }
         .subject-tag {
-          background: rgba(75, 107, 50, 0.1);
-          color: var(--ios-olive);
+          background: var(--reader-primary-soft, rgba(75, 107, 50, 0.1));
+          color: var(--reader-primary, var(--ios-olive));
           padding: 0.25rem 0.75rem;
           border-radius: 99px;
           font-size: 0.75rem;
@@ -531,16 +619,17 @@ const SecureReader = () => {
           text-transform: uppercase;
         }
         .category-tag {
-          color: #94a3b8;
+          color: var(--reader-text-muted, #94a3b8);
           font-size: 0.75rem;
           font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 0.05em;
         }
         .resource-title {
-          font-size: 2.5rem;
-          font-weight: 800;
-          color: #1e293b;
+          font-family: var(--reader-heading-font, 'Inter', sans-serif);
+          font-size: var(--reader-h1-size, 2.5rem);
+          font-weight: var(--reader-heading-weight, 800);
+          color: var(--reader-heading, #1e293b);
           line-height: 1.2;
           margin-bottom: 1rem;
           letter-spacing: -0.03em;
@@ -550,42 +639,42 @@ const SecureReader = () => {
           align-items: center;
           justify-content: center;
           gap: 0.5rem;
-          color: #94a3b8;
+          color: var(--reader-text-muted, #94a3b8);
           font-size: 0.85rem;
         }
-        
+
         .reader-card {
           padding: 4rem 5rem;
           user-select: none;
-          background: #ffffff;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-          border-radius: 12px;
-          border: 1px solid #e2e8f0;
+          background: var(--reader-surface, #ffffff);
+          box-shadow: var(--reader-shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.05));
+          border-radius: var(--reader-radius-lg, 12px);
+          border: 1px solid var(--reader-border, #e2e8f0);
           min-width: 0;
           overflow-wrap: break-word;
           word-wrap: break-word;
         }
         .reader-content {
-          font-family: 'Merriweather', serif;
-          line-height: 1.8;
-          font-size: 1.1rem;
-          color: #1e293b;
+          font-family: var(--reader-body-font, 'Merriweather', serif);
+          line-height: var(--reader-body-line-height, 1.8);
+          font-size: var(--reader-body-size, 1.1rem);
+          color: var(--reader-text, #1e293b);
         }
         .reader-content h1, .reader-content h2, .reader-content h3, .reader-content h4 {
-          font-family: 'Inter', sans-serif;
-          color: var(--ios-olive);
-          font-weight: 700;
+          font-family: var(--reader-heading-font, 'Inter', sans-serif);
+          color: var(--reader-primary, var(--ios-olive));
+          font-weight: var(--reader-heading-weight, 700);
           letter-spacing: -0.02em;
           margin-top: 2.5rem;
           margin-bottom: 1.25rem;
           line-height: 1.3;
         }
-        .reader-content h1 { font-size: 2.25rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem; }
+        .reader-content h1 { font-size: var(--reader-h2-size, 2.25rem); border-bottom: 1px solid var(--reader-border, #e2e8f0); padding-bottom: 0.5rem; }
         .reader-content h2 { font-size: 1.75rem; }
-        .reader-content h3 { font-size: 1.4rem; }
-        
+        .reader-content h3 { font-size: var(--reader-h3-size, 1.4rem); }
+
         .reader-content p { margin-bottom: 1.5rem; }
-        
+
         /* Drop Cap for first paragraph of a chapter */
         .reader-content > p:first-of-type::first-letter {
           float: left;
@@ -594,135 +683,135 @@ const SecureReader = () => {
           padding-top: 4px;
           padding-right: 8px;
           padding-left: 3px;
-          font-family: 'Inter', sans-serif;
+          font-family: var(--reader-dropcap-font, 'Inter', sans-serif);
           font-weight: 800;
-          color: var(--ios-olive);
+          color: var(--reader-primary, var(--ios-olive));
         }
-        
+
         /* Premium Blockquote / Pull Quote styling */
         .reader-content blockquote {
           margin: 2.5rem -1.5rem;
           padding: 1.5rem 2rem;
-          background: #f8fafc;
-          border-left: 4px solid var(--ios-olive);
+          background: var(--reader-background, #f8fafc);
+          border-left: 4px solid var(--reader-primary, var(--ios-olive));
           font-style: italic;
-          color: #334155;
+          color: var(--reader-text, #334155);
           font-size: 1.25rem;
           line-height: 1.6;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+          box-shadow: var(--reader-shadow-sm, 0 4px 6px -1px rgba(0, 0, 0, 0.02));
         }
-        
+
         /* Educational Callout Boxes (e.g. DID YOU KNOW?) */
         .reader-content blockquote:has(strong:first-child:contains('DID YOU KNOW')),
         .reader-content blockquote:has(strong:first-child:contains('💡')) {
           margin: 2.5rem 0;
           padding: 1.5rem;
-          background: rgba(75, 107, 50, 0.05);
-          border: 1px solid rgba(75, 107, 50, 0.2);
-          border-left: 4px solid var(--ios-olive);
-          border-radius: 8px;
+          background: var(--reader-primary-soft, rgba(75, 107, 50, 0.05));
+          border: 1px solid var(--reader-border-strong, rgba(75, 107, 50, 0.2));
+          border-left: 4px solid var(--reader-primary, var(--ios-olive));
+          border-radius: var(--reader-radius-md, 8px);
           font-style: normal;
-          color: #1e293b;
+          color: var(--reader-text, #1e293b);
           font-size: 1.05rem;
         }
-        
+
         .reader-content blockquote p:last-child { margin-bottom: 0; }
-        
+
         /* Highlight EX / Solution bolding */
         .reader-content p strong:first-child {
-          color: var(--ios-olive);
+          color: var(--reader-primary, var(--ios-olive));
         }
-        
+
         /* Lists */
         .reader-content ul, .reader-content ol {
           margin-bottom: 1.5rem;
           padding-left: 1.5rem;
         }
         .reader-content li { margin-bottom: 0.5rem; }
-        .reader-content li::marker { color: var(--ios-olive); font-weight: 600; }
-        
+        .reader-content li::marker { color: var(--reader-primary, var(--ios-olive)); font-weight: 600; }
+
         /* Inline code */
         .reader-content code {
-          background: #f1f5f9;
+          background: var(--reader-surface-alt, #f1f5f9);
           padding: 0.2rem 0.4rem;
           border-radius: 4px;
           font-family: monospace;
           font-size: 0.9em;
-          color: #ef4444;
+          color: var(--reader-danger, #ef4444);
         }
 
         /* Image Styling - Magazine layout */
-        .reader-content img { 
-          max-width: calc(100% + 3rem); 
+        .reader-content img {
+          max-width: calc(100% + 3rem);
           width: calc(100% + 3rem);
-          margin: 2.5rem -1.5rem; 
-          height: auto; 
-          border-radius: 0; 
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+          margin: 2.5rem -1.5rem;
+          height: auto;
+          border-radius: 0;
+          box-shadow: var(--reader-shadow-md, 0 4px 15px rgba(0, 0, 0, 0.08));
           display: block;
         }
-        
+
         @media (min-width: 768px) {
           .reader-content img {
             max-width: 100%;
             width: 100%;
             margin: 3rem 0;
-            border-radius: 12px;
+            border-radius: var(--reader-radius-lg, 12px);
           }
           .reader-content blockquote {
             margin: 2.5rem 0;
-            border-radius: 0 8px 8px 0;
+            border-radius: 0 var(--reader-radius-md, 8px) var(--reader-radius-md, 8px) 0;
           }
         }
-        
+
         /* Image Captions (if italic text follows image) */
         .reader-content img + p > em {
           display: block;
           text-align: center;
           font-size: 0.9rem;
-          color: #64748b;
+          color: var(--reader-text-muted, #64748b);
           margin-top: -1.5rem;
           margin-bottom: 2.5rem;
         }
-        
-        .reader-content pre { 
-          white-space: pre-wrap; 
-          word-break: break-all; 
-          overflow-x: auto; 
-          max-width: 100%; 
-          background: #0f172a;
-          color: #f8fafc;
+
+        .reader-content pre {
+          white-space: pre-wrap;
+          word-break: break-all;
+          overflow-x: auto;
+          max-width: 100%;
+          background: var(--reader-heading, #0f172a);
+          color: var(--reader-background, #f8fafc);
           padding: 1.5rem;
-          border-radius: 8px;
+          border-radius: var(--reader-radius-md, 8px);
           font-family: monospace;
           font-size: 0.95rem;
           margin-bottom: 1.5rem;
         }
-        
+
         /* Table Styling - Premium */
         .reader-content .table-responsive-wrapper {
           width: 100%;
           overflow-x: auto;
           -webkit-overflow-scrolling: touch;
           margin: 2.5rem 0;
-          box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-          border-radius: 12px;
-          border: 1px solid #e2e8f0;
+          box-shadow: var(--reader-shadow-sm, 0 4px 6px -1px rgba(0,0,0,0.05));
+          border-radius: var(--reader-radius-lg, 12px);
+          border: 1px solid var(--reader-border, #e2e8f0);
         }
-        
-        .reader-content table { 
-          width: 100%; 
-          border-collapse: separate; 
+
+        .reader-content table {
+          width: 100%;
+          border-collapse: separate;
           border-spacing: 0;
-          font-family: 'Inter', sans-serif;
+          font-family: var(--reader-heading-font, 'Inter', sans-serif);
           font-size: 0.95rem;
           min-width: 600px;
         }
-        .reader-content th, .reader-content td { 
-          padding: 1rem 1.25rem; 
-          text-align: left; 
-          border-bottom: 1px solid #e2e8f0;
-          border-right: 1px solid #e2e8f0;
+        .reader-content th, .reader-content td {
+          padding: 1rem 1.25rem;
+          text-align: left;
+          border-bottom: 1px solid var(--reader-border, #e2e8f0);
+          border-right: 1px solid var(--reader-border, #e2e8f0);
         }
         .reader-content th:last-child, .reader-content td:last-child {
           border-right: none;
@@ -730,19 +819,19 @@ const SecureReader = () => {
         .reader-content tr:last-child td {
           border-bottom: none;
         }
-        .reader-content th { 
-          background-color: #f8fafc; 
-          font-weight: 600; 
-          color: #334155; 
+        .reader-content th {
+          background-color: var(--reader-background, #f8fafc);
+          font-weight: 600;
+          color: var(--reader-secondary, #334155);
         }
         .reader-content tr:nth-child(even) td {
-          background-color: #fcfcfd;
+          background-color: var(--reader-surface-alt, #fcfcfd);
         }
-        
+
         .reader-footer {
           margin-top: 4rem;
           padding-top: 2rem;
-          border-top: 1px solid #f1f5f9;
+          border-top: 1px solid var(--reader-border, #f1f5f9);
           display: flex;
           justify-content: center;
         }
@@ -755,30 +844,30 @@ const SecureReader = () => {
           font-weight: 700;
           border-radius: 99px;
           border: none;
-          background: var(--ios-olive);
+          background: var(--reader-primary, var(--ios-olive));
           color: white;
           cursor: pointer;
           transition: all 0.3s;
-          box-shadow: 0 10px 20px rgba(75, 107, 50, 0.2);
+          box-shadow: var(--reader-shadow-md, 0 10px 20px rgba(75, 107, 50, 0.2));
         }
-        .mark-read-btn:hover { transform: translateY(-2px); box-shadow: 0 15px 25px rgba(75, 107, 50, 0.3); }
+        .mark-read-btn:hover { transform: translateY(-2px); box-shadow: var(--reader-shadow-lg, 0 15px 25px rgba(75, 107, 50, 0.3)); }
         .mark-read-btn.completed {
-          background: #22c55e;
+          background: var(--reader-success, #22c55e);
           cursor: default;
           box-shadow: none;
         }
-        
+
         .empty-state {
           text-align: center;
           padding: 4rem 2rem;
-          background: #f8fafc;
-          border-radius: 16px;
-          border: 2px dashed #e2e8f0;
-          color: #94a3b8;
+          background: var(--reader-background, #f8fafc);
+          border-radius: var(--reader-radius-lg, 16px);
+          border: 2px dashed var(--reader-border, #e2e8f0);
+          color: var(--reader-text-muted, #94a3b8);
         }
 
         .reader-layout { display: flex; flex-direction: column; gap: 1.5rem; align-items: stretch; }
-        
+
         .toc-tabs {
           width: 100%;
           overflow-x: auto;
@@ -798,9 +887,9 @@ const SecureReader = () => {
           gap: 0.5rem;
           padding: 0.6rem 1.25rem;
           border-radius: 99px;
-          border: 1px solid #e2e8f0;
-          background: white;
-          color: #475569;
+          border: 1px solid var(--reader-border, #e2e8f0);
+          background: var(--reader-surface, white);
+          color: var(--reader-secondary, #475569);
           font-size: 0.9rem;
           font-weight: 600;
           cursor: pointer;
@@ -808,38 +897,40 @@ const SecureReader = () => {
           white-space: nowrap;
           box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
-        .tab-btn:hover { background: #f8fafc; color: var(--ios-olive); border-color: #cbd5e1; }
-        .tab-btn.active { background: var(--ios-olive); color: white; border-color: var(--ios-olive); box-shadow: 0 4px 10px rgba(75, 107, 50, 0.25); }
-        .tab-btn .chap-num { width: 22px; height: 22px; background: #e2e8f0; border-radius: 100px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: #64748b; }
+        .tab-btn:hover { background: var(--reader-background, #f8fafc); color: var(--reader-primary, var(--ios-olive)); border-color: var(--reader-border-strong, #cbd5e1); }
+        .tab-btn.active { background: var(--reader-primary, var(--ios-olive)); color: white; border-color: var(--reader-primary, var(--ios-olive)); box-shadow: var(--reader-shadow-sm); }
+        .tab-btn .chap-num { width: 22px; height: 22px; background: var(--reader-border, #e2e8f0); border-radius: 100px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--reader-text-muted, #64748b); }
         .tab-btn.active .chap-num { background: rgba(255,255,255,0.25); color: white; }
-        
-        .chapter-title { font-size: 2rem; color: #0f172a; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #f1f5f9; }
-        
+
+        .chapter-title { font-size: 2rem; color: var(--reader-heading, #0f172a); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--reader-border, #f1f5f9); }
+
         .btn-paginate {
           display: flex;
           align-items: center;
           gap: 0.5rem;
           padding: 1rem 2rem;
           border-radius: 99px;
-          border: 1px solid #e2e8f0;
-          background: white;
-          color: #475569;
+          border: 1px solid var(--reader-border, #e2e8f0);
+          background: var(--reader-surface, white);
+          color: var(--reader-secondary, #475569);
           font-weight: 700;
           cursor: pointer;
           transition: all 0.2s;
         }
-        .btn-paginate:hover { background: #f8fafc; color: var(--ios-olive); }
-        .btn-paginate.primary { background: var(--ios-olive); color: white; border: none; box-shadow: 0 4px 6px -1px rgba(75, 107, 50, 0.2); }
-        .btn-paginate.primary:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(75, 107, 50, 0.3); color: white; }
-        
+        .btn-paginate:hover { background: var(--reader-background, #f8fafc); color: var(--reader-primary, var(--ios-olive)); }
+        .btn-paginate.primary { background: var(--reader-primary, var(--ios-olive)); color: white; border: none; box-shadow: var(--reader-shadow-sm); }
+        .btn-paginate.primary:hover { transform: translateY(-2px); box-shadow: var(--reader-shadow-md); color: white; }
+
         @media (max-width: 600px) {
           .reader-card { padding: 2rem 1.5rem; }
           .resource-title { font-size: 1.75rem; }
           .reader-footer { flex-direction: column; gap: 1rem; }
           .reader-footer button { width: 100%; justify-content: center; }
+          .nav-inner { flex-wrap: wrap; }
         }
       `}} />
-    </div>
+      </div>
+    </ReaderThemeProvider>
   );
 };
 

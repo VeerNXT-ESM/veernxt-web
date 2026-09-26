@@ -9,12 +9,13 @@
     { "source": "/api/admin/admins", "destination": "/api/admin/misc?fn=admins" },
     { "source": "/api/admin/redemptions", "destination": "/api/admin/misc?fn=redemptions" },
     { "source": "/api/admin/content-writes", "destination": "/api/admin/misc?fn=content-writes" },
+    { "source": "/api/jobs-v2", "destination": "/api/jobs?source=v2" },
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "functions": {
     "api/**/*.js": {
-      "maxDuration": 30
+      "maxDuration": 60
     }
   }
 }

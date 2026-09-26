@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {
   Briefcase, ExternalLink, RefreshCw, Search, AlertCircle, Clock,
-  MapPin, X, Sliders, Bookmark, Award, ChevronDown, ChevronUp, Sparkles, BookOpen,
-  Building2, ShieldCheck
+  MapPin, X, Sliders, Award, ChevronDown, ChevronUp, Sparkles, BookOpen,
+  Building2, ShieldCheck, ArrowLeft, Tag, Zap
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
@@ -13,7 +13,6 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { CAREER_TRACK_META, CAREER_TRACK_ORDER, hexToRgba } from '../lib/careerTrack';
 
-const SAVED_JOBS_STORAGE_KEY = 'veernxt_saved_job_ids';
 const RESULTS_PER_PAGE = 10;
 
 // Ex-servicemen reservation quotas are well established in Defence, PSU,
@@ -53,8 +52,11 @@ const FilterSection = ({ title, children, defaultOpen = false, disabled = false 
   );
 };
 
-const JobCard = ({ job, idx, isActive, isSaved, onSelect, onDismiss, onToggleSave, getAvatarColor, calculateDaysAgo }) => {
+const JobCard = ({ job, idx, isActive, onSelect, onDismiss, getAvatarColor, calculateDaysAgo }) => {
   const deadlineLabel = job.publishedOn ? calculateDaysAgo(job.publishedOn) : 'Recent';
+  const isV2 = job._source === 'jobs_v2';
+  const displayTags = isV2 && Array.isArray(job.tags) ? job.tags.slice(0, 4) : [];
+  const extraTagCount = isV2 && Array.isArray(job.tags) ? Math.max(0, job.tags.length - 4) : 0;
   return (
     <div className={`job-card ${isActive ? 'active' : ''}`} onClick={onSelect}>
       <div className="job-card-logo" style={{ backgroundColor: getAvatarColor(job.body) }}>
@@ -74,22 +76,25 @@ const JobCard = ({ job, idx, isActive, isSaved, onSelect, onDismiss, onToggleSav
           {isVeteranFriendly(job) && (
             <span className="job-veteran-badge"><ShieldCheck size={11} /> Veteran Friendly</span>
           )}
-          {idx % 3 === 0 && (
+          {isV2 && <span className="job-v2-badge"><Zap size={10} /> AI Enhanced</span>}
+          {!isV2 && idx % 3 === 0 && (
             <span className="job-card-insight-badge"><Award size={11} /> Actively reviewing</span>
           )}
         </div>
 
+        {/* V2-only: hashtag chips */}
+        {displayTags.length > 0 && (
+          <div className="job-card-hashtags">
+            {displayTags.map(tag => (
+              <span key={tag} className="job-hashtag">#{tag}</span>
+            ))}
+            {extraTagCount > 0 && <span className="job-hashtag job-hashtag-more">+{extraTagCount}</span>}
+          </div>
+        )}
+
         <div className="job-card-footer">
           <span className="job-card-deadline"><Clock size={12} /> {deadlineLabel}</span>
           <div className="job-card-actions">
-            <button
-              type="button"
-              className={`job-card-save-btn ${isSaved ? 'saved' : ''}`}
-              onClick={onToggleSave}
-              aria-label={isSaved ? 'Unsave job' : 'Save job'}
-            >
-              <Bookmark size={14} fill={isSaved ? 'currentColor' : 'none'} />
-            </button>
             <button type="button" className="btn-secondary job-card-view-btn" onClick={(e) => { e.stopPropagation(); onSelect(); }}>
               View Details
             </button>
@@ -121,7 +126,7 @@ const JobCard = ({ job, idx, isActive, isSaved, onSelect, onDismiss, onToggleSav
 
 const JobDetailPanel = ({
   job, profileData, detailTab, setDetailTab, examAccordionOpen, setExamAccordionOpen,
-  isSaved, onToggleSave, getAvatarColor, calculateDaysAgo, navigate
+  getAvatarColor, calculateDaysAgo, navigate, onBack
 }) => {
   if (!job) {
     return (
@@ -137,9 +142,16 @@ const JobDetailPanel = ({
 
   const veteranFriendly = isVeteranFriendly(job);
   const hasStandardDetails = !!job.standard_details;
+  const isV2 = job._source === 'jobs_v2';
+  const v2Tags = isV2 && Array.isArray(job.tags) ? job.tags : [];
 
   return (
     <aside className="job-detail-panel">
+      {onBack && (
+        <button type="button" className="job-detail-back" onClick={onBack}>
+          <ArrowLeft size={18} /> Back to jobs
+        </button>
+      )}
       <div className="job-detail-header">
         <div className="job-detail-logo" style={{ backgroundColor: getAvatarColor(job.body) }}>
           {job.body ? job.body.substring(0, 2).toUpperCase() : 'JO'}
@@ -152,6 +164,7 @@ const JobDetailPanel = ({
           <div className="job-detail-tags">
             {job.careerTrack && <CategoryTag track={job.careerTrack} />}
             {veteranFriendly && <span className="job-veteran-badge"><ShieldCheck size={11} /> Veteran Friendly</span>}
+            {isV2 && <span className="job-v2-badge"><Zap size={10} /> AI Enhanced</span>}
           </div>
           {job.examId && (
             <button
@@ -174,6 +187,18 @@ const JobDetailPanel = ({
         </div>
       </div>
 
+      {/* V2-only: tags section */}
+      {isV2 && v2Tags.length > 0 && (
+        <div className="job-detail-v2-tags">
+          <span className="job-detail-v2-tags-label"><Tag size={12} /> Tags</span>
+          <div className="job-detail-hashtags">
+            {v2Tags.map(tag => (
+              <span key={tag} className="job-hashtag"># {tag}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="job-detail-actions">
         {job.url ? (
           <a href={job.url} target="_blank" rel="noopener noreferrer" className="btn-primary job-detail-apply-btn">
@@ -184,9 +209,6 @@ const JobDetailPanel = ({
             Easy Apply
           </button>
         )}
-        <button type="button" className="btn-secondary job-detail-save-btn" onClick={onToggleSave}>
-          <Bookmark size={14} fill={isSaved ? 'currentColor' : 'none'} /> {isSaved ? 'Saved' : 'Save Job'}
-        </button>
       </div>
 
       {veteranFriendly && (
@@ -230,18 +252,31 @@ const JobDetailPanel = ({
         {detailTab === 'overview' && (
           <div className="job-detail-section">
             <h3>About the role</h3>
-            <p className="job-detail-notes">
-              {job.notes || 'No additional overview was provided for this listing.'}
-            </p>
-            {!hasStandardDetails && job.detailed_markdown && (
-              <div className="markdown-body">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>{job.detailed_markdown}</ReactMarkdown>
+            {/* V2: AI description rendered as markdown */}
+            {isV2 && job.aiDescription ? (
+              <div className="job-detail-ai-desc">
+                <div className="job-detail-ai-desc-badge"><Zap size={11} /> AI-Generated Description</div>
+                <div className="markdown-body">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{job.aiDescription}</ReactMarkdown>
+                </div>
               </div>
+            ) : (
+              <>
+                <p className="job-detail-notes">
+                  {job.notes || 'No additional overview was provided for this listing.'}
+                </p>
+                {!hasStandardDetails && job.detailed_markdown && (
+                  <div className="markdown-body">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{job.detailed_markdown}</ReactMarkdown>
+                  </div>
+                )}
+              </>
             )}
             <div className="job-fact-grid">
               {job.id && <div className="job-fact"><span>Requisition ID</span><strong>{job.id}</strong></div>}
               {job.standard_details?.exam_centers && <div className="job-fact"><span>Location</span><strong>{job.standard_details.exam_centers}</strong></div>}
               {job.vacancies != null && <div className="job-fact"><span>Vacancies</span><strong>{job.vacancies}</strong></div>}
+              {job.ageRange && <div className="job-fact"><span>Age Range</span><strong>{job.ageRange}</strong></div>}
               {job.lastDate && <div className="job-fact"><span>Last Date</span><strong>{new Date(job.lastDate).toLocaleDateString('en-IN')}</strong></div>}
             </div>
           </div>
@@ -249,7 +284,7 @@ const JobDetailPanel = ({
 
         {detailTab === 'eligibility' && (
           <div className="job-detail-section">
-            <h3>Eligibility & Documents</h3>
+            <h3>Eligibility &amp; Documents</h3>
             {Array.isArray(job.standard_details?.documents_needed) && job.standard_details.documents_needed.length > 0 ? (
               <ul className="job-detail-list">
                 {job.standard_details.documents_needed.map((doc, i) => <li key={i}>{doc}</li>)}
@@ -310,12 +345,16 @@ const JobDetailPanel = ({
 
 const JobBoard = () => {
   const navigate = useNavigate();
+  const [jobSource, setJobSource] = useState('v2'); // 'legacy' | 'v2'
   const [jobs, setJobs] = useState([]);
+  const [jobsV2, setJobsV2] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [loadingV2, setLoadingV2] = useState(true);
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('ALL');
   const [bodySearch, setBodySearch] = useState('');
-  const [error, setError] = useState(null);
+  const [errorLegacy, setErrorLegacy] = useState(null);
+  const [errorV2, setErrorV2] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedJob, setSelectedJob] = useState(null);
   const [profileData, setProfileData] = useState(null);
@@ -325,42 +364,61 @@ const JobBoard = () => {
   const [resultTab, setResultTab] = useState('recommended');
   const [sortBy, setSortBy] = useState('relevance');
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [savedJobIds, setSavedJobIds] = useState(() => {
-    try {
-      const raw = localStorage.getItem(SAVED_JOBS_STORAGE_KEY);
-      return raw ? JSON.parse(raw) : [];
-    } catch {
-      return [];
-    }
-  });
+  const [mobileDetailOpen, setMobileDetailOpen] = useState(false);
 
   const fetchJobs = async () => {
     setLoading(true);
+    setErrorLegacy(null);
     try {
       const response = await axios.get('/api/jobs');
       if (response.data.ok) {
-        // Sort by when the job was added/scraped (created_at) — newest first.
-        // publishedOn is the application deadline, NOT the notification date.
         const sortedJobs = (response.data.jobs || []).sort((a, b) => {
           const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
           const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
           return dateB - dateA;
         });
         setJobs(sortedJobs);
-        if (sortedJobs.length > 0) {
-          setSelectedJob(sortedJobs[0]);
-        }
+        if (jobSource === 'legacy' && sortedJobs.length > 0) setSelectedJob(sortedJobs[0]);
       }
     } catch (err) {
       console.error('Failed to fetch jobs:', err);
-      setError('Could not load jobs from database. Please try again later.');
+      setErrorLegacy('Could not load legacy jobs. Please try again.');
     } finally {
       setLoading(false);
     }
   };
 
+  const fetchJobsV2 = async () => {
+    setLoadingV2(true);
+    setErrorV2(null);
+    try {
+      const response = await axios.get('/api/jobs-v2');
+      if (response.data.ok) {
+        const sorted = (response.data.jobs || []).sort((a, b) => {
+          const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
+          const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
+          return dateB - dateA;
+        });
+        setJobsV2(sorted);
+        if (jobSource === 'v2' && sorted.length > 0) setSelectedJob(sorted[0]);
+      }
+    } catch (err) {
+      console.error('Failed to fetch jobs_v2:', err);
+      setErrorV2('Could not load enriched jobs. Please try again.');
+    } finally {
+      setLoadingV2(false);
+    }
+  };
+
+  // Active job list / loading / error depending on source tab
+  const activeJobs = jobSource === 'v2' ? jobsV2 : jobs;
+  const isLoading = jobSource === 'v2' ? loadingV2 : loading;
+  const activeError = jobSource === 'v2' ? errorV2 : errorLegacy;
+  const activeRefetch = jobSource === 'v2' ? fetchJobsV2 : fetchJobs;
+
   useEffect(() => {
     fetchJobs();
+    fetchJobsV2();
 
     // Fetch profile dynamically from Supabase
     const fetchProfile = async () => {
@@ -382,30 +440,26 @@ const JobBoard = () => {
     };
     fetchProfile();
   }, []);
-
+  // Reset page + selected job when switching source tabs
   useEffect(() => {
     setCurrentPage(1);
-  }, [search, categoryFilter, bodySearch, resultTab, sortBy]);
+    setSelectedJob(null);
+    setSearch('');
+    setCategoryFilter('ALL');
+    setBodySearch('');
+    const list = jobSource === 'v2' ? jobsV2 : jobs;
+    if (list.length > 0) setSelectedJob(list[0]);
+  }, [jobSource]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => { setCurrentPage(1); }, [search, categoryFilter, bodySearch, resultTab, sortBy]);
 
   useEffect(() => {
     setExamAccordionOpen(false);
     setDetailTab('overview');
   }, [selectedJob?.id]);
 
-  useEffect(() => {
-    try {
-      localStorage.setItem(SAVED_JOBS_STORAGE_KEY, JSON.stringify(savedJobIds));
-    } catch {
-      // localStorage may be unavailable (private browsing, blocked storage) — non-fatal.
-    }
-  }, [savedJobIds]);
-
   const dismissJob = (jobId) => {
     setDismissedJobIds(prev => [...prev, jobId]);
-  };
-
-  const toggleSaveJob = (jobId) => {
-    setSavedJobIds(prev => prev.includes(jobId) ? prev.filter(id => id !== jobId) : [...prev, jobId]);
   };
 
   const calculateDaysAgo = (publishedOn) => {
@@ -443,7 +497,7 @@ const JobBoard = () => {
     return colors[Math.abs(hash) % colors.length];
   };
 
-  const searchMatchedJobs = jobs.filter(job => {
+  const searchMatchedJobs = activeJobs.filter(job => {
     if (!job) return false;
     const jobId = job.id || job._id || job.title || 'unknown';
     return !dismissedJobIds.includes(jobId) && (
@@ -506,8 +560,15 @@ const JobBoard = () => {
     setBodySearch('');
   };
 
+  const selectJob = (job) => {
+    setSelectedJob(job);
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      setMobileDetailOpen(true);
+    }
+  };
+
   return (
-    <div className="jobs-page">
+    <div className={`jobs-page ${mobileDetailOpen ? 'mobile-job-detail-open' : ''}`}>
       <section className="jobs-hero">
         <div className="jobs-hero-content">
           <span className="jobs-hero-eyebrow">Careers for Veterans</span>
@@ -518,10 +579,10 @@ const JobBoard = () => {
 
           <div className="jobs-search-panel">
             <div className="jobs-search-field">
-              <Search size={18} className="jobs-search-icon" />
+              <Search size={16} className="jobs-search-icon" />
               <input
                 type="text"
-                placeholder="Search by exam name, department or keyword..."
+                placeholder="Search by role, department or exam..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -539,7 +600,27 @@ const JobBoard = () => {
         </div>
       </section>
 
-      {loading ? (
+      {/* ── Source Tabs ── */}
+      <div className="jobs-source-tabs">
+        <button
+          className={`jobs-source-tab ${jobSource === 'v2' ? 'active' : ''}`}
+          onClick={() => setJobSource('v2')}
+        >
+          <Zap size={14} />
+          New Jobs
+          {loadingV2 ? <span className="jobs-source-count">…</span> : <span className="jobs-source-count">{jobsV2.length}</span>}
+        </button>
+        <button
+          className={`jobs-source-tab ${jobSource === 'legacy' ? 'active' : ''}`}
+          onClick={() => setJobSource('legacy')}
+        >
+          <Briefcase size={14} />
+          Legacy Jobs
+          {loading ? <span className="jobs-source-count">…</span> : <span className="jobs-source-count">{jobs.length}</span>}
+        </button>
+      </div>
+
+      {isLoading ? (
         <div className="jobs-skeleton-wrap">
           {[0, 1, 2, 3].map(i => (
             <div key={i} className="jobs-skeleton-card">
@@ -549,12 +630,12 @@ const JobBoard = () => {
             </div>
           ))}
         </div>
-      ) : error ? (
+      ) : activeError ? (
         <div className="jobs-error-state">
           <AlertCircle size={40} />
-          <h3>Unable to load current opportunities</h3>
-          <p>{error}</p>
-          <button type="button" className="btn-primary" onClick={fetchJobs}>
+          <h3>Unable to load {jobSource === 'v2' ? 'enriched' : 'legacy'} jobs</h3>
+          <p>{activeError}</p>
+          <button type="button" className="btn-primary" onClick={activeRefetch}>
             <RefreshCw size={14} /> Try Again
           </button>
         </div>
@@ -575,11 +656,6 @@ const JobBoard = () => {
               <Clock size={20} className="jobs-stat-icon" />
               <div className="jobs-stat-value">{closingSoonJobs.length}</div>
               <div className="jobs-stat-label">Closing Soon</div>
-            </div>
-            <div className="jobs-stat-card">
-              <Bookmark size={20} className="jobs-stat-icon" />
-              <div className="jobs-stat-value">{savedJobIds.length}</div>
-              <div className="jobs-stat-label">Saved Jobs</div>
             </div>
             <div className="jobs-stat-card jobs-stat-card-veteran">
               <ShieldCheck size={20} className="jobs-stat-icon" />
@@ -634,12 +710,6 @@ const JobBoard = () => {
                   />
                 </div>
               </FilterSection>
-
-              {['Location', 'Work Mode', 'Experience Level', 'Eligibility', 'Salary Range'].map(label => (
-                <FilterSection key={label} title={label} disabled>
-                  <p className="jobs-filter-soon">Coming soon</p>
-                </FilterSection>
-              ))}
             </aside>
 
             <main className="jobs-results" id="jobs-results-anchor">
@@ -677,10 +747,8 @@ const JobBoard = () => {
                       job={job}
                       idx={idx}
                       isActive={isActive}
-                      isSaved={savedJobIds.includes(jobId)}
-                      onSelect={() => setSelectedJob(job)}
+                      onSelect={() => selectJob(job)}
                       onDismiss={() => dismissJob(jobId)}
-                      onToggleSave={(e) => { e.stopPropagation(); toggleSaveJob(jobId); }}
                       getAvatarColor={getAvatarColor}
                       calculateDaysAgo={calculateDaysAgo}
                     />
@@ -711,11 +779,10 @@ const JobBoard = () => {
               setDetailTab={setDetailTab}
               examAccordionOpen={examAccordionOpen}
               setExamAccordionOpen={setExamAccordionOpen}
-              isSaved={!!selectedJob && savedJobIds.includes(selectedJob.id || selectedJob._id || selectedJob.title)}
-              onToggleSave={() => selectedJob && toggleSaveJob(selectedJob.id || selectedJob._id || selectedJob.title)}
               getAvatarColor={getAvatarColor}
               calculateDaysAgo={calculateDaysAgo}
               navigate={navigate}
+              onBack={mobileDetailOpen ? () => setMobileDetailOpen(false) : undefined}
             />
           </div>
         </>
@@ -736,7 +803,7 @@ const JobBoard = () => {
             url('/veernxt_assets/banners/B13_next_mission.png');
           background-size: cover;
           background-position: right center;
-          padding: 3rem;
+          padding: 1.8rem 2rem;
           box-shadow: var(--shadow-3);
         }
         .jobs-hero-content {
@@ -749,20 +816,20 @@ const JobBoard = () => {
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: var(--accent-gold, #fbbf24);
-          margin-bottom: 0.75rem;
+          margin-bottom: 0.45rem;
         }
         .jobs-hero-title {
-          margin: 0 0 0.75rem 0;
-          font-size: clamp(1.9rem, 3.6vw, 3rem);
+          margin: 0 0 0.45rem 0;
+          font-size: clamp(1.65rem, 3vw, 2.45rem);
           line-height: 1.08;
           font-weight: 800;
           letter-spacing: -0.02em;
           color: #ffffff;
         }
         .jobs-hero-subtitle {
-          margin: 0 0 1.75rem 0;
-          font-size: 1rem;
-          line-height: 1.55;
+          margin: 0 0 1rem 0;
+          font-size: 0.9rem;
+          line-height: 1.45;
           color: rgba(255, 255, 255, 0.82);
           max-width: 560px;
         }
@@ -771,7 +838,7 @@ const JobBoard = () => {
           grid-template-columns: minmax(0, 1fr) 150px 130px auto;
           gap: 2px;
           background: rgba(255, 255, 255, 0.14);
-          padding: 6px;
+          padding: 4px;
         }
         .jobs-search-field {
           position: relative;
@@ -788,8 +855,8 @@ const JobBoard = () => {
           width: 100%;
           border: none;
           background: transparent;
-          padding: 0.85rem 0.9rem 0.85rem 2.6rem;
-          font-size: 0.9rem;
+          padding: 0.7rem 0.8rem 0.7rem 2.4rem;
+          font-size: 0.84rem;
           color: var(--ios-text, #1f2937);
         }
         .jobs-search-field input:focus {
@@ -804,25 +871,20 @@ const JobBoard = () => {
           font-size: 0.82rem;
           font-weight: 600;
           color: var(--text-secondary, #64748b);
-          padding: 0.85rem 0.5rem;
+          padding: 0.7rem 0.5rem;
         }
         .jobs-search-btn {
-          padding: 0.85rem 1.5rem;
-          font-size: 0.88rem;
+          padding: 0.7rem 1.15rem;
+          font-size: 0.82rem;
           font-weight: 700;
           border: none;
           cursor: pointer;
-        }
-        @media (max-width: 760px) {
-          .jobs-search-panel {
-            grid-template-columns: 1fr;
-          }
         }
 
         /* Stats */
         .jobs-stats {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 1rem;
           margin-top: 1.75rem;
         }
@@ -1214,6 +1276,156 @@ const JobBoard = () => {
           gap: 0.4rem;
           cursor: pointer;
         }
+
+        /* ── Source Tabs ── */
+        .jobs-source-tabs {
+          display: flex;
+          gap: 0;
+          border-bottom: 2px solid var(--border);
+          margin-top: 1.5rem;
+          margin-bottom: 0;
+        }
+        .jobs-source-tab {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          padding: 0.7rem 1.4rem;
+          font-size: 0.84rem;
+          font-weight: 600;
+          border: none;
+          border-bottom: 2px solid transparent;
+          margin-bottom: -2px;
+          background: transparent;
+          color: var(--text-secondary, #64748b);
+          cursor: pointer;
+          transition: color 0.15s, border-color 0.15s;
+        }
+        .jobs-source-tab:hover { color: var(--text-primary, #1f2937); }
+        .jobs-source-tab.active {
+          color: var(--accent-green, #22c55e);
+          border-bottom-color: var(--accent-green, #22c55e);
+        }
+        .jobs-source-count {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 22px;
+          padding: 1px 6px;
+          border-radius: 99px;
+          font-size: 0.72rem;
+          font-weight: 700;
+          background: var(--surface-alt, #f1f5f9);
+          color: var(--text-secondary, #64748b);
+        }
+        .jobs-source-tab.active .jobs-source-count {
+          background: rgba(34, 197, 94, 0.12);
+          color: var(--accent-green, #22c55e);
+        }
+
+        /* ── AI Enhanced badge ── */
+        .job-v2-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 3px;
+          padding: 2px 7px;
+          border-radius: 4px;
+          font-size: 0.67rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          background: rgba(99, 102, 241, 0.1);
+          color: #6366f1;
+          border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        /* ── Hashtag chips ── */
+        .job-card-hashtags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px;
+          margin-top: 4px;
+          margin-bottom: 2px;
+        }
+        .job-detail-hashtags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          margin-top: 0.4rem;
+        }
+        .job-hashtag {
+          display: inline-block;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 0.7rem;
+          font-weight: 600;
+          background: rgba(100, 116, 139, 0.08);
+          color: var(--text-secondary, #64748b);
+          border: 1px solid var(--border);
+          cursor: default;
+          transition: background 0.12s, color 0.12s;
+        }
+        .job-hashtag:hover {
+          background: rgba(34, 197, 94, 0.08);
+          color: var(--accent-green, #22c55e);
+          border-color: rgba(34, 197, 94, 0.25);
+        }
+        .job-hashtag-more {
+          background: rgba(99, 102, 241, 0.07);
+          color: #6366f1;
+          border-color: rgba(99, 102, 241, 0.15);
+        }
+
+        /* ── V2 detail tags section ── */
+        .job-detail-v2-tags {
+          padding: 0.75rem 1.5rem;
+          border-bottom: 1px solid var(--border);
+        }
+        .job-detail-v2-tags-label {
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          font-size: 0.72rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.07em;
+          color: var(--text-secondary, #64748b);
+          margin-bottom: 0.4rem;
+        }
+
+        /* ── AI description block in detail ── */
+        .job-detail-ai-desc {
+          margin-bottom: 1rem;
+        }
+        .job-detail-ai-desc-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          padding: 3px 9px;
+          border-radius: 4px;
+          font-size: 0.69rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          background: rgba(99, 102, 241, 0.09);
+          color: #6366f1;
+          border: 1px solid rgba(99, 102, 241, 0.18);
+          margin-bottom: 0.75rem;
+        }
+        .job-detail-ai-desc .markdown-body {
+          font-size: 0.87rem;
+          line-height: 1.65;
+          color: var(--text-primary, #1f2937);
+        }
+        .job-detail-ai-desc .markdown-body h2,
+        .job-detail-ai-desc .markdown-body h3,
+        .job-detail-ai-desc .markdown-body strong {
+          color: var(--text-primary, #1f2937);
+        }
+        .job-detail-ai-desc .markdown-body ul,
+        .job-detail-ai-desc .markdown-body ol {
+          padding-left: 1.2rem;
+        }
+
         .jobs-skeleton-wrap {
           display: flex;
           flex-direction: column;
@@ -1274,6 +1486,19 @@ const JobBoard = () => {
           top: 1rem;
           max-height: calc(100vh - 2rem);
           overflow-y: auto;
+        }
+        .job-detail-back {
+          display: none;
+          align-items: center;
+          gap: 0.4rem;
+          background: none;
+          border: none;
+          color: var(--ios-text);
+          font-size: 0.88rem;
+          font-weight: 750;
+          padding: 0;
+          margin: 0 0 1rem;
+          cursor: pointer;
         }
         .job-detail-empty {
           display: flex;
@@ -1574,8 +1799,84 @@ const JobBoard = () => {
           }
         }
         @media (max-width: 768px) {
-          .jobs-hero { padding: 2.25rem 1.5rem; }
+          .jobs-page { padding: 0.9rem 0.75rem calc(5.5rem + env(safe-area-inset-bottom, 0px)); }
+          .jobs-hero { padding: 1.25rem 1rem; border-radius: 12px; }
+          .jobs-hero-eyebrow { margin-bottom: 0.25rem; font-size: 0.64rem; }
+          .jobs-hero-title { font-size: clamp(1.45rem, 6.5vw, 1.8rem); margin-bottom: 0.3rem; line-height: 1.1; }
+          .jobs-hero-subtitle { margin-bottom: 0.65rem; font-size: 0.8rem; line-height: 1.35; max-width: 35ch; }
+          
+          /* Compact unified mobile search bar */
+          .jobs-search-panel {
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 0.2rem 0.25rem 0.2rem 0.65rem;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            min-height: 38px;
+            gap: 0.4rem;
+            width: 100%;
+            box-sizing: border-box;
+          }
+          .jobs-search-static {
+            display: none;
+          }
+          .jobs-search-field {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            background: transparent;
+            position: relative;
+          }
+          .jobs-search-icon {
+            position: static;
+            margin-right: 0.45rem;
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+          }
+          .jobs-search-field input {
+            width: 100%;
+            border: none;
+            background: transparent;
+            padding: 0.4rem 0;
+            font-size: 0.8rem;
+            color: var(--ios-text, #0f172a);
+          }
+          .jobs-search-field input::placeholder {
+            font-size: 0.8rem;
+          }
+          .jobs-search-btn {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            border-radius: 6px;
+            flex-shrink: 0;
+            min-height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .jobs-stats { display: none; }
           .job-fact-grid { grid-template-columns: 1fr; }
+          .mobile-job-detail-open { padding: 0; }
+          .mobile-job-detail-open .jobs-hero,
+          .mobile-job-detail-open .jobs-stats,
+          .mobile-job-detail-open .jobs-filter-toggle,
+          .mobile-job-detail-open .jobs-filter-sidebar,
+          .mobile-job-detail-open .jobs-results { display: none; }
+          .mobile-job-detail-open .jobs-discovery-shell { display: block; margin-top: 0; }
+          .mobile-job-detail-open .job-detail-panel { border: none; padding: 1rem; }
+          .mobile-job-detail-open .job-detail-back { display: inline-flex; }
+        }
+        @media (max-width: 420px) {
+          .jobs-hero { padding: 1rem 0.85rem; }
+          .jobs-hero-title { font-size: 1.35rem; }
+          .jobs-hero-subtitle { display: none; }
+          .jobs-search-panel { margin-top: 0.45rem; }
+          .jobs-search-btn { padding-inline: 0.7rem; }
         }
       `}} />
     </div>

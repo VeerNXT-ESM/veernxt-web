@@ -9,32 +9,28 @@ import {
   ChevronUp,
   BookOpen,
   ScrollText,
-  Brain,
   X,
   Target,
   Rocket,
   ArrowRight,
   ShieldCheck,
-  Clock,
   FileText,
-  Briefcase,
   ChevronLeft,
   ChevronRight,
-  Bookmark,
   Layers,
   Play,
-  Globe,
-  Calculator,
-  Atom,
-  Laptop,
   CheckCircle2,
+  MoreVertical,
+  SlidersHorizontal,
+  Filter,
 } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
 import { getSubjectByKey, getFamilyHex } from '../lib/thumbnailTaxonomy';
 import { useThumbnails } from '../lib/thumbnailStore';
 import { getEffectiveTier } from '../lib/subscriptionAccess';
-import Select from '../components/ui/Select';
 import ExamContentPreview from '../components/ExamContentPreview';
+import { useExamContent, getExamResourceCount } from '../hooks/useExamContent';
+import { cleanContentTitle } from '../lib/contentTitle';
 import './LearningCenter.css';
 
 // A handful of representative subjects for the Syllabus teaser card's chip
@@ -140,86 +136,80 @@ const formatTimeAgo = (timestamp) => {
   return `${Math.floor(days / 7)}w ago`;
 };
 
-const BROWSE_SUBJECTS = [
-  {
-    id: 'sub-english',
-    label: 'English',
-    filterKey: 'English Language',
-    count: '140+ Topics',
-    icon: BookOpen,
-    color: '#0284c7',
-    bgColor: '#f0f9ff',
-    borderColor: '#bae6fd',
-  },
-  {
-    id: 'sub-gk',
-    label: 'GK & Current Affairs',
-    filterKey: 'Current Affairs',
-    count: '280+ Topics',
-    icon: Globe,
-    color: '#ea580c',
-    bgColor: '#fff7ed',
-    borderColor: '#fed7aa',
-  },
-  {
-    id: 'sub-reasoning',
-    label: 'Reasoning',
-    filterKey: 'Reasoning',
-    count: '190+ Topics',
-    icon: Brain,
-    color: '#7c3aed',
-    bgColor: '#faf5ff',
-    borderColor: '#e9d5ff',
-  },
-  {
-    id: 'sub-maths',
-    label: 'Mathematics',
-    filterKey: 'Mathematics',
-    count: '210+ Topics',
-    icon: Calculator,
-    color: '#16a34a',
-    bgColor: '#f0fdf4',
-    borderColor: '#bbf7d0',
-  },
-  {
-    id: 'sub-science',
-    label: 'General Science',
-    filterKey: 'General Science',
-    count: '160+ Topics',
-    icon: Atom,
-    color: '#0d9488',
-    bgColor: '#f0fdfa',
-    borderColor: '#99f6e4',
-  },
-  {
-    id: 'sub-cs',
-    label: 'Computer Science',
-    filterKey: 'Computer Science',
-    count: '115+ Topics',
-    icon: Laptop,
-    color: '#4f46e5',
-    bgColor: '#eef2ff',
-    borderColor: '#c7d2fe',
-  },
+const POPULAR_EXAM_TABS = [
+  { key: 'overview', label: 'Overview' },
+  { key: 'syllabus', label: 'Syllabus' },
+  { key: 'mock', label: 'Mock Tests & Quizzes' },
+  { key: 'pyq', label: 'PYQs' },
 ];
 
 const POPULAR_EXAMS = [
   {
     id: 'pop-upsc',
     name: 'UPSC Civil Services',
-    subtitle: 'IAS, IPS, IFS & Central Services',
-    conductingBody: 'Union Public Service Commission',
+    subtitle: 'Union Public Service Commission (UPSC)',
+    description: 'UPSC conducts the Civil Services Examination for premier administrative, diplomatic, and police roles across India. It is the gold standard for public service leadership and nation-building.',
+    aboutText: 'The Union Public Service Commission (UPSC) conducts the Civil Services Examination (CSE) annually to select officers for all-India and premier central services. The exam features Preliminary, Mains, and Personality Test stages.',
+    aboutHighlights: [
+      'Premier administrative & diplomatic services in the country',
+      'High policy impact and direct governance responsibilities',
+      'Open to graduates across all academic disciplines',
+      'Prestigious cadre progression with national recognition',
+      'Structured 3-stage objective & subjective evaluation',
+    ],
+    topPosts: [
+      'Indian Administrative Service (IAS)',
+      'Indian Police Service (IPS)',
+      'Indian Foreign Service (IFS)',
+      'Indian Revenue Service (IRS)',
+      'Indian Audit & Accounts Service (IAAS)',
+      'Assistant Commandant (CAPF)',
+    ],
+    relatedExamsList: [
+      { name: 'UPSC Civil Services', level: 'Graduate Level', image: '/homepage/F4_A.png' },
+      { name: 'UPSC CAPF (AC)', level: 'Graduate Level', image: '/homepage/F5A.png' },
+      { name: 'UPSC CDS Exam', level: 'Graduate Level', image: '/thumbnails/Reasoning.png' },
+      { name: 'UPSC NDA Exam', level: '12th Pass', image: '/thumbnails/English.png' },
+      { name: 'Indian Economic Service', level: 'Post Graduate', image: '/thumbnails/Financial Awareness.png' },
+    ],
+    conductingBody: 'Union Public Service Commission (UPSC)',
     badge: 'Premier',
     badgeBg: '#fef3c7',
     badgeColor: '#92400e',
     category: 'Civil Services',
+    matchCategory: 'Civil Services',
+    matchNameHint: 'civil service',
     searchQuery: 'upsc',
   },
   {
     id: 'pop-ssc',
     name: 'SSC Examinations',
-    subtitle: 'CGL, CHSL, MTS, CPO, GD Constable',
-    conductingBody: 'Staff Selection Commission',
+    subtitle: 'Staff Selection Commission (SSC)',
+    description: 'SSC conducts various recruitment examinations for Group B and Group C posts in central government ministries, departments and organizations. These exams provide excellent opportunities for a stable and rewarding career in public service.',
+    aboutText: 'The Staff Selection Commission (SSC) conducts recruitment exams like CGL, CHSL, MTS, CPO, GD Constable and more. These exams recruit candidates for various Group B and Group C posts across central government ministries and departments.',
+    aboutHighlights: [
+      'High number of vacancies every year',
+      'Wide range of job profiles across central departments',
+      'Opportunity for candidates from diverse educational backgrounds',
+      'Stable career with growth & departmental promotion paths',
+      'Exams conducted in multiple stages with objective pattern',
+    ],
+    topPosts: [
+      'Assistant Section Officer (CGL)',
+      'Lower Division Clerk (CHSL)',
+      'Sub-Inspector (CPO)',
+      'Multi Tasking Staff (MTS)',
+      'Constable (GD)',
+      'Junior Secretariat Assistant (JSA)',
+    ],
+    relatedExamsList: [
+      { name: 'SSC CGL', level: 'Graduate Level', image: '/homepage/F4_A.png' },
+      { name: 'SSC CHSL', level: '12th Pass', image: '/homepage/F5A.png' },
+      { name: 'SSC MTS', level: '10th Pass', image: '/thumbnails/Reasoning.png' },
+      { name: 'SSC GD Constable', level: '10th Pass', image: '/homepage/F4_A.png' },
+      { name: 'SSC CPO', level: 'Graduate Level', image: '/thumbnails/Agriculture.png' },
+    ],
+    conductingBody: 'Staff Selection Commission (SSC)',
     badge: 'High Vacancy',
     badgeBg: '#dcfce7',
     badgeColor: '#166534',
@@ -230,6 +220,30 @@ const POPULAR_EXAMS = [
     id: 'pop-state-psc',
     name: 'State PSC Exams',
     subtitle: 'State Administrative & Police Services',
+    description: 'State Public Service Commissions conduct recruitment for prestigious administrative, executive, and provincial civil service roles across states.',
+    aboutText: 'State PSCs (such as BPSC, UPPSC, MPPSC, MPSC, TNPSC, KPSC, etc.) recruit executive officers to drive state administration, revenue management, policing, and local governance.',
+    aboutHighlights: [
+      'Executive cadre posts directly under state government',
+      'Key administrative authority across districts and tehsils',
+      'State language and general studies oriented syllabus',
+      'Fast-track promotions to IAS/IPS cadre nominations',
+      'Regular recruitment cycles for provincial civil services',
+    ],
+    topPosts: [
+      'Deputy Collector / SDM',
+      'Deputy Superintendent of Police (DSP)',
+      'Block Development Officer (BDO)',
+      'Commercial Tax Officer (CTO)',
+      'Assistant Conservator of Forests (ACF)',
+      'Naib Tehsildar',
+    ],
+    relatedExamsList: [
+      { name: 'Combined State Civil Services', level: 'Graduate Level', image: '/homepage/F4_A.png' },
+      { name: 'State Judicial Services', level: 'Law Graduate', image: '/thumbnails/Reasoning.png' },
+      { name: 'State Forest Service', level: 'Science Graduate', image: '/thumbnails/Agriculture.png' },
+      { name: 'State Assistant Engineer', level: 'B.Tech / B.E.', image: '/thumbnails/Computer Science.png' },
+      { name: 'State Revenue Inspector', level: 'Graduate Level', image: '/thumbnails/General Studies.png' },
+    ],
     conductingBody: 'State Public Service Commissions',
     badge: 'State Level',
     badgeBg: '#e0e7ff',
@@ -240,7 +254,31 @@ const POPULAR_EXAMS = [
   {
     id: 'pop-police',
     name: 'Police Examinations',
-    subtitle: 'SI, Constable, CAPF, Delhi Police',
+    subtitle: 'State & Central Police Boards',
+    description: 'Police recruitment boards conduct regular examinations for Constables, Sub-Inspectors, and CAPF personnel ensuring law enforcement, safety, and security.',
+    aboutText: 'Police recruitment examinations select personnel for state police forces, central armed police forces (BSF, CRPF, CISF, ITBP, SSB), and specialized enforcement bureaus.',
+    aboutHighlights: [
+      'Direct law enforcement, public safety, and border security duties',
+      'Well-suited for defense personnel and ESM transitioning out',
+      'Physical efficiency and objective written examination pattern',
+      'Special reservations and age relaxations for veterans',
+      'Stable salary, accommodation, and defense canteen facilities',
+    ],
+    topPosts: [
+      'Sub-Inspector (Civil Police)',
+      'Head Constable / Constable',
+      'Assistant Sub-Inspector (ASI)',
+      'CAPF Sub-Inspector',
+      'Armed Police Constable',
+      'Wireless Operator / Driver',
+    ],
+    relatedExamsList: [
+      { name: 'Delhi Police Constable & SI', level: '12th / Graduate', image: '/thumbnails/Reasoning.png' },
+      { name: 'State Police SI Exam', level: 'Graduate Level', image: '/homepage/F4_A.png' },
+      { name: 'SSC GD Paramilitary', level: '10th Pass', image: '/homepage/F5A.png' },
+      { name: 'RPF SI & Constable', level: '10th / Graduate', image: '/thumbnails/General Studies.png' },
+      { name: 'State Police Constable', level: '12th Pass', image: '/thumbnails/English.png' },
+    ],
     conductingBody: 'State & Central Police Boards',
     badge: 'Veteran Favorite',
     badgeBg: '#fee2e2',
@@ -251,7 +289,31 @@ const POPULAR_EXAMS = [
   {
     id: 'pop-banking',
     name: 'Banking & Insurance',
-    subtitle: 'IBPS PO/Clerk, SBI, RBI Grade B',
+    subtitle: 'IBPS / State Bank of India',
+    description: 'Banking examinations recruit Probationary Officers, Clerks, and Specialist Officers for public sector banks, RBI, NABARD, and national insurance corporations.',
+    aboutText: 'The Institute of Banking Personnel Selection (IBPS) and SBI conduct fast-paced recruitment exams with predictable schedules, objective tests, and swift joining timelines.',
+    aboutHighlights: [
+      'Fastest recruitment timelines from prelims to final allotment',
+      'Lucrative allowances, perks, and performance incentives',
+      'Clear career progression to managerial and leadership ranks',
+      'Ex-servicemen quota available across clerical and PO cadres',
+      'Nationwide postings with public sector banking benefits',
+    ],
+    topPosts: [
+      'Probationary Officer (PO)',
+      'Clerk / Junior Associate',
+      'Specialist Officer (IT / Law / Agri)',
+      'RBI Grade B Officer',
+      'NABARD Grade A Officer',
+      'RRB Office Assistant',
+    ],
+    relatedExamsList: [
+      { name: 'SBI PO & Clerk', level: 'Graduate Level', image: '/thumbnails/Financial Awareness.png' },
+      { name: 'IBPS PO & Clerk', level: 'Graduate Level', image: '/homepage/F5A.png' },
+      { name: 'RBI Grade B Officer', level: 'Graduate (60%)', image: '/homepage/F4_A.png' },
+      { name: 'IBPS RRB Scale I & Asst', level: 'Graduate Level', image: '/thumbnails/English.png' },
+      { name: 'LIC AAO & ADO', level: 'Graduate Level', image: '/thumbnails/Reasoning.png' },
+    ],
     conductingBody: 'IBPS / State Bank of India',
     badge: 'Fast Track',
     badgeBg: '#fef9c3',
@@ -262,7 +324,31 @@ const POPULAR_EXAMS = [
   {
     id: 'pop-teaching',
     name: 'Teaching Exams',
-    subtitle: 'CTET, State TET, KVS, NVS, B.Ed',
+    subtitle: 'CBSE & Central/State Boards',
+    description: 'National and state teacher eligibility tests and recruitment drives for faculty positions in Kendriya Vidyalayas, Navodaya Vidyalayas, and state government schools.',
+    aboutText: 'Central and state teacher eligibility tests (CTET, State TET) certify candidates for teaching positions from primary to senior secondary levels with stable hours and societal impact.',
+    aboutHighlights: [
+      'Balanced work-life schedule with stable government benefits',
+      'National recognition through CTET qualification',
+      'Opportunities in premier schools like KVS, NVS, and Army Public Schools',
+      'Merit-based selection with specialized subject focus',
+      'Lifelong validity for central teacher eligibility certificates',
+    ],
+    topPosts: [
+      'Primary Teacher (PRT)',
+      'Trained Graduate Teacher (TGT)',
+      'Post Graduate Teacher (PGT)',
+      'Kendriya Vidyalaya Faculty',
+      'Navodaya Vidyalaya Teacher',
+      'Special Education Teacher',
+    ],
+    relatedExamsList: [
+      { name: 'CTET (Paper 1 & Paper 2)', level: 'D.El.Ed / B.Ed', image: '/thumbnails/English.png' },
+      { name: 'KVS PRT, TGT & PGT', level: 'Graduate + B.Ed', image: '/thumbnails/General Studies.png' },
+      { name: 'NVS Teacher Recruitment', level: 'Graduate + B.Ed', image: '/homepage/F4_A.png' },
+      { name: 'State TET Exams', level: 'Teacher Training', image: '/thumbnails/Reasoning.png' },
+      { name: 'Army Public School CSB', level: 'Graduate + B.Ed', image: '/thumbnails/English.png' },
+    ],
     conductingBody: 'CBSE & Central/State Boards',
     badge: 'Popular',
     badgeBg: '#f3e8ff',
@@ -272,30 +358,105 @@ const POPULAR_EXAMS = [
   },
 ];
 
-const SIDEBAR_SUBJECTS = [
-  'General Awareness',
-  'Reasoning',
-  'Quantitative Aptitude',
-  'English Language',
-  'Computer Science',
-  'General Science',
-  'Current Affairs',
-  'Hindi',
-  'Mathematics',
-  'Technical Trades',
-];
+// Built entirely from real lc_exams fields (name/category/conducting body/
+// region) -- never guesses at content, but guarantees the Overview tab always
+// has at least one honest sentence instead of sitting empty for the many
+// exams that don't have a curated lc_exam_intro row yet.
+function buildExamSummary({ examName, category, conductingBodyName, regionLevel }) {
+  const levelLabel = regionLevel === 'central' ? 'central' : regionLevel === 'state' ? 'state' : regionLevel === 'ut' ? 'union territory' : null;
+  let sentence = conductingBodyName ? `${conductingBodyName} conducts ${examName}` : `${examName} is a recruitment exam`;
+  if (category) sentence += ` under the ${category} category`;
+  if (levelLabel) sentence += `, at the ${levelLabel} level`;
+  return `${sentence}.`;
+}
 
-const SIDEBAR_CONTENT_TYPES = [
-  'Full Courses',
-  'Syllabus',
-  'PYQs',
-  'Notes',
-  'Practice Tests',
-  'Video Lectures',
-  'Downloads',
-];
+// 3-column Overview tab for the Popular Exams details panel
+function PopularExamOverview({ exam, relatedExams, navigate }) {
+  const { categoryUrl } = useThumbnails();
+  const { intro, loading } = useExamContent(exam?.matchedName, undefined, exam?.examId);
 
-const SIDEBAR_LANGUAGES = ['English', 'Hindi', 'Tamil', 'Other'];
+  return (
+    <div className="lc-exam-overview-grid-3col">
+      {/* Col 1: About the Exam */}
+      <div className="lc-overview-col">
+        <h4 className="lc-overview-col-title">About the Exam</h4>
+        <p className="lc-overview-col-desc">
+          {exam?.aboutText || buildExamSummary({ examName: exam?.matchedName, category: exam?.category, conductingBodyName: exam?.conductingBodyName, regionLevel: exam?.regionLevel })}
+        </p>
+
+        {exam?.aboutHighlights?.length > 0 && (
+          <ul className="lc-overview-highlights-list">
+            {exam.aboutHighlights.map((hl, i) => (
+              <li key={i} className="lc-overview-highlight-item">
+                <CheckCircle2 size={16} className="lc-highlight-check" />
+                <span>{hl}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {intro?.source === 'manual' && intro.body && (
+          <div className="lc-exam-intro-text" dangerouslySetInnerHTML={{ __html: intro.body }} />
+        )}
+      </div>
+
+      {/* Col 2: Top Posts */}
+      <div className="lc-overview-col">
+        <h4 className="lc-overview-col-title">Top Posts</h4>
+        <div className="lc-overview-posts-list">
+          {(exam?.topPosts || ['Assistant Section Officer', 'Sub-Inspector', 'Multi Tasking Staff', 'Junior Secretariat Assistant', 'Executive Officer']).map((post, i) => (
+            <div key={i} className="lc-overview-post-card">
+              <CheckCircle2 size={15} className="lc-post-check-icon" />
+              <span className="lc-post-card-title">{post}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Col 3: Related Exams */}
+      <div className="lc-overview-col">
+        <h4 className="lc-overview-col-title">Related Exams</h4>
+        <div className="lc-overview-related-list">
+          {exam?.relatedExamsList?.length > 0 ? (
+            exam.relatedExamsList.map((rel, i) => (
+              <div
+                key={i}
+                className="lc-related-exam-card"
+                onClick={() => {
+                  if (exam?.examId) {
+                    navigate(`/exam/${exam.examId}`, { state: { from: '/learning-center' } });
+                  }
+                }}
+              >
+                <img src={categoryUrl(exam?.category) || ''} alt={rel.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
+                <div className="lc-related-exam-info">
+                  <div className="lc-related-exam-name">{rel.name}</div>
+                  <div className="lc-related-exam-level">{rel.level}</div>
+                </div>
+              </div>
+            ))
+          ) : relatedExams?.length > 0 ? (
+            relatedExams.map((e) => (
+              <div
+                key={e.id}
+                className="lc-related-exam-card"
+                onClick={() => navigate(`/exam/${e.id}`, { state: { from: '/learning-center' } })}
+              >
+                <img src={categoryUrl(e.category) || ''} alt={e.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
+                <div className="lc-related-exam-info">
+                  <div className="lc-related-exam-name">{e.name}</div>
+                  <div className="lc-related-exam-level">{e.category || 'Competitive Exam'}</div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p className="lc-exam-details-empty-inline">No related exams found yet.</p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 /**
  * One coherent flow: Search + Filters -> Recommended For You -> Search Results -> My Exams ->
@@ -323,17 +484,17 @@ const LearningCenter = () => {
   const [allTargetIds, setAllTargetIds] = useState(new Set()); // all saved exam IDs
   const [preparingExamId, setPreparingExamId] = useState(null); // loading state for CTA
 
-  // Saved bookmarks state
-  const [bookmarkedIds, setBookmarkedIds] = useState(new Set(['ssc-cgl-prep', 'cs-comp-exams']));
-
   // Sidebar accordions open state
   const [openFilters, setOpenFilters] = useState({
     category: true,
     body: true,
-    subject: true,
-    level: true,
-    contentType: true,
-    language: true,
+  });
+
+  // Mobile side-drawer filter state (mobile/tablet <1100px only)
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const [openDrawerFilters, setOpenDrawerFilters] = useState({
+    category: true,
+    body: false,
   });
 
   // Active learning courses (courses/exams the candidate has started learning)
@@ -380,16 +541,11 @@ const LearningCenter = () => {
   const [bodySearch, setBodySearch] = useState('');
   const [showAllBodies, setShowAllBodies] = useState(false);
   const [showAllCategories, setShowAllCategories] = useState(false);
-  const [showAllSubjects, setShowAllSubjects] = useState(false);
-  const [selectedSubject, setSelectedSubject] = useState('');
-  const [selectedContentType, setSelectedContentType] = useState('');
-  const [selectedLanguage, setSelectedLanguage] = useState('');
 
   // Catalog + filters. The whole lc_exams catalog (~1.5k rows) is fetched
   // paginated; every filter/level/derived list comes from it client-side.
   const [regionMode, setRegionMode] = useState('central'); // 'central' | 'state' | 'ut'
   const [catalog, setCatalog] = useState([]);
-  const [regions, setRegions] = useState([]);
   const [catalogLoading, setCatalogLoading] = useState(true);
   const [catalogError, setCatalogError] = useState(null);
   const [regionFilterId, setRegionFilterId] = useState('');
@@ -398,20 +554,17 @@ const LearningCenter = () => {
   const [searchText, setSearchText] = useState('');
 
   const [expandedExamId, setExpandedExamId] = useState(null);
+
+  // Popular Exams inline details panel — clicking a card selects it and
+  // expands its real data below the carousel, instead of navigating away.
+  const [selectedPopularExamId, setSelectedPopularExamId] = useState(null);
+  const [activePopularExamTab, setActivePopularExamTab] = useState('overview');
+
   const [profile, setProfile] = useState(null);
   const effectiveTier = getEffectiveTier(profile?.subscription_tier, profile?.subscription_expires_at);
   const freeQuizUsed = !!profile?.free_quiz_used;
 
   const toggleExpanded = (examId) => setExpandedExamId((prev) => (prev === examId ? null : examId));
-
-  const toggleBookmark = (id) => {
-    setBookmarkedIds((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  };
 
   const toggleFilterGroup = (key) => {
     setOpenFilters((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -424,24 +577,9 @@ const LearningCenter = () => {
     }
   };
 
-  const handleSubjectTileClick = (filterKey) => {
-    if (selectedSubject === filterKey) {
-      setSelectedSubject('');
-    } else {
-      setSelectedSubject(filterKey);
-      const resultsEl = document.getElementById('lc-search-results-section');
-      if (resultsEl) {
-        resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  };
-
-  const handlePopularExamClick = (exam) => {
-    setSearchText(exam.searchQuery);
-    const resultsEl = document.getElementById('lc-search-results-section');
-    if (resultsEl) {
-      resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+  const handlePopularExamSelect = (exam) => {
+    setSelectedPopularExamId((prev) => (prev === exam.id ? null : exam.id));
+    setActivePopularExamTab('overview');
   };
 
   const handleResumeCourse = (course) => {
@@ -567,12 +705,6 @@ const LearningCenter = () => {
     setSelectedBodyId('');
   };
 
-  const handleRegionFilterChange = (regionId) => {
-    setRegionFilterId(regionId);
-    setCategoryFilter('');
-    setSelectedBodyId('');
-  };
-
   const handleCategoryFilterChange = (category) => {
     setCategoryFilter(category);
     setSelectedBodyId('');
@@ -583,27 +715,37 @@ const LearningCenter = () => {
     setRegionFilterId('');
     setCategoryFilter('');
     setSelectedBodyId('');
-    setSelectedSubject('');
-    setSelectedContentType('');
-    setSelectedLanguage('');
     setSearchText('');
     setBodySearch('');
   };
+
+  // Lock body scrolling when mobile drawer is open
+  useEffect(() => {
+    if (mobileDrawerOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileDrawerOpen]);
+
+  // Escape key closes mobile filter drawer
+  useEffect(() => {
+    if (!mobileDrawerOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setMobileDrawerOpen(false);
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [mobileDrawerOpen]);
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       setCatalogLoading(true);
       try {
-        // Fetch canonical regions
-        const { data: regData } = await supabase
-          .from('lc_regions')
-          .select('id,name,level')
-          .order('name');
-        if (!cancelled && regData) {
-          setRegions(regData);
-        }
-
         // Supabase caps unpaginated selects at 1000 rows. Paginate to fetch all ~1,530 exams.
         let allExams = [];
         for (let from = 0; ; from += 1000) {
@@ -630,23 +772,6 @@ const LearningCenter = () => {
     })();
     return () => { cancelled = true; };
   }, []);
-
-  // State / UT filter options for dropdown
-  const regionFilterOptions = useMemo(() => {
-    if (regions.length > 0) {
-      return regions
-        .filter((r) => r.level === regionMode)
-        .sort((a, b) => a.name.localeCompare(b.name));
-    }
-    const seen = new Map();
-    for (const exam of catalog) {
-      if (!exam.region) continue;
-      if (exam.region.level === regionMode && !seen.has(exam.region.id)) {
-        seen.set(exam.region.id, exam.region);
-      }
-    }
-    return [...seen.values()].sort((a, b) => a.name.localeCompare(b.name));
-  }, [regions, catalog, regionMode]);
 
   // Exams satisfying the level gate (Central / State / UT)
   const levelExams = useMemo(() => catalog.filter((exam) => {
@@ -697,14 +822,6 @@ const LearningCenter = () => {
       ? levelExams.filter((exam) => (exam.category || '').trim() === categoryFilter)
       : levelExams;
     if (selectedBodyId) pool = pool.filter((exam) => exam.conducting_body_id === selectedBodyId);
-    if (selectedSubject) {
-      const s = selectedSubject.toLowerCase();
-      pool = pool.filter((exam) =>
-        (exam.name || '').toLowerCase().includes(s) ||
-        (exam.thumbnail_subject || '').toLowerCase().includes(s) ||
-        (exam.category || '').toLowerCase().includes(s)
-      );
-    }
     const q = searchText.trim().toLowerCase();
     if (q) {
       pool = pool.filter((exam) =>
@@ -714,23 +831,32 @@ const LearningCenter = () => {
       );
     }
     return pool.slice().sort((a, b) => a.name.localeCompare(b.name));
-  }, [levelExams, categoryFilter, selectedBodyId, selectedSubject, searchText]);
+  }, [levelExams, categoryFilter, selectedBodyId, searchText]);
 
   const filtersActive =
     regionMode !== 'central' ||
     Boolean(searchText.trim()) ||
     Boolean(regionFilterId) ||
     Boolean(categoryFilter) ||
-    Boolean(selectedBodyId) ||
-    Boolean(selectedSubject) ||
-    Boolean(selectedContentType) ||
-    Boolean(selectedLanguage);
+    Boolean(selectedBodyId);
+
+  // Count of active Filter Results sidebar controls specifically (not the
+  // hero search box), shown on the mobile "Filters" toggle so it's clear
+  // something is applied before the sidebar is even opened.
+  const activeFilterCount = [
+    regionMode !== 'central',
+    Boolean(regionFilterId),
+    Boolean(categoryFilter),
+    Boolean(selectedBodyId),
+  ].filter(Boolean).length;
 
   // "Recommended for you" shows the curated marketing cards by default, but
-  // the moment the person actually narrows things down by Category or
-  // Conducting Body, it should reflect *their* filters instead of always
-  // showing the same five cards — so it switches to real catalog matches.
-  const recommendedFiltersActive = Boolean(categoryFilter) || Boolean(selectedBodyId);
+  // the moment the person actually searches or narrows things down by
+  // Category / Conducting Body, it should reflect *their* results instead of
+  // always showing the same five cards — so it switches to real catalog
+  // matches and doubles as the page's search results, rather than showing a
+  // separate "Search Results" section underneath.
+  const recommendedFiltersActive = Boolean(categoryFilter) || Boolean(selectedBodyId) || Boolean(searchText.trim());
 
   const examToRecommendedCard = useCallback((exam) => {
     const subject = getSubjectByKey(exam.thumbnail_subject);
@@ -820,8 +946,11 @@ const LearningCenter = () => {
   }, [catalog, findCatalogMatch, examProgress]);
 
   const recommendedCards = useMemo(() => {
+    // Driven by a real search/filter -- show every match, not just a
+    // 5-card teaser, since this is now also acting as the page's search
+    // results (see the section render below).
     if (recommendedFiltersActive) {
-      return searchResults.slice(0, 5).map(examToRecommendedCard);
+      return searchResults.map(examToRecommendedCard);
     }
 
     // 1. Personalised: Show top 5 exams based on candidate's joining/profiling
@@ -889,44 +1018,88 @@ const LearningCenter = () => {
 
   const popularExamCards = useMemo(() => {
     return POPULAR_EXAMS.map((exam) => {
-      const match = findCatalogMatch(exam.searchQuery);
+      let match = null;
+      if (exam.matchCategory) {
+        const inCategory = catalog.filter((e) => e.category === exam.matchCategory);
+        // Prefer the exam whose own name reads as the flagship of the
+        // category (e.g. "Civil Service examination" over "Indian Economic
+        // Service" under category "Civil Services") -- falls back to the
+        // first real row in that category either way.
+        match = inCategory.find((e) => e.name.toLowerCase().includes(exam.matchNameHint || exam.searchQuery)) || inCategory[0] || null;
+      }
+      if (!match) match = findCatalogMatch(exam.searchQuery);
       const resourcesCount = match ? (examProgress[match.name]?.total ?? null) : null;
-      return { ...exam, type: CONTENT_COVERAGE_LABEL, resourcesCount };
+      return {
+        ...exam,
+        type: CONTENT_COVERAGE_LABEL,
+        resourcesCount,
+        examId: match?.id || null,
+        matchedName: match?.name || null,
+        category: match?.category || null,
+        conductingBodyName: match?.conducting_body?.name || null,
+        regionLevel: match?.region?.level || null,
+      };
     });
-  }, [findCatalogMatch, examProgress]);
+  }, [catalog, findCatalogMatch, examProgress]);
+
+  const selectedPopularExam = useMemo(
+    () => popularExamCards.find((e) => e.id === selectedPopularExamId) || null,
+    [popularExamCards, selectedPopularExamId]
+  );
+
+  // Other catalog exams sharing the selected exam's real category — the
+  // only honest basis for "related exams" this data model supports (no
+  // curated relation table exists).
+  const relatedPopularExams = useMemo(() => {
+    if (!selectedPopularExam?.category || !selectedPopularExam?.examId) return [];
+    return catalog
+      .filter((e) => e.category === selectedPopularExam.category && e.id !== selectedPopularExam.examId)
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .slice(0, 5);
+  }, [catalog, selectedPopularExam]);
 
   // Real published-resource counts for the exams behind the curated/recommended
   // cards, fetched once the catalog is loaded and merged into examProgress.
-  const staticCardExamNames = useMemo(() => {
-    const names = new Set();
+  // Carries each exam's real id alongside its name so the count can use the
+  // same mapped-resources-first resolution useExamContent uses (see
+  // getExamResourceCount) instead of a plain resources.exam_name exact
+  // match, which undercounts (often to 0) because resources.exam_name
+  // carries a "N. " ordinal prefix the catalog's exam name never has.
+  const staticCardExamRefs = useMemo(() => {
+    const refs = new Map(); // exam name -> exam id (best known)
+    const addRef = (name, id) => {
+      if (!name) return;
+      if (id || !refs.has(name)) refs.set(name, id || refs.get(name) || null);
+    };
     recommendedCards.forEach((card) => {
-      if (card.title) names.add(card.title);
+      addRef(card.title, card.examId);
       if (card.searchTerm) {
         const match = findCatalogMatch(card.searchTerm);
-        if (match) names.add(match.name);
+        if (match) addRef(match.name, match.id);
       }
+    });
+    popularExamCards.forEach((card) => {
+      addRef(card.matchedName, card.examId);
     });
     [...RECOMMENDED_EXAMS, ...POPULAR_EXAMS].forEach((card) => {
       const match = findCatalogMatch(card.searchTerm || card.searchQuery);
-      if (match) names.add(match.name);
+      if (match) addRef(match.name, match.id);
     });
-    return Array.from(names);
-  }, [recommendedCards, findCatalogMatch]);
+    return Array.from(refs.entries()).map(([name, id]) => ({ name, id }));
+  }, [recommendedCards, popularExamCards, findCatalogMatch]);
 
-  const fetchResourceTotals = async (examNames) => {
-    const names = examNames.filter(Boolean);
-    if (!names.length) return;
+  const fetchResourceTotals = async (examRefs) => {
+    const targets = examRefs.filter((r) => r.name);
+    if (!targets.length) return;
     try {
-      const counts = await Promise.all(
-        names.map((name) =>
-          supabase.from('resources').select('*', { count: 'exact', head: true }).eq('status', 'Published').eq('exam_name', name)
-        )
+      const results = await Promise.all(
+        targets.map(async ({ name, id }) => ({ name, total: await getExamResourceCount(id, name) }))
       );
       setExamProgress((prev) => {
         const next = { ...prev };
-        names.forEach((name, i) => {
+        results.forEach(({ name, total }) => {
           next[name] = {
-            total: counts[i]?.count ?? null,
+            total,
             explored: prev[name]?.explored || 0,
           };
         });
@@ -938,11 +1111,11 @@ const LearningCenter = () => {
   };
 
   useEffect(() => {
-    const missing = staticCardExamNames.filter((name) => !(name in examProgress));
+    const missing = staticCardExamRefs.filter((ref) => !(ref.name in examProgress));
     if (missing.length === 0) return;
     fetchResourceTotals(missing);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [staticCardExamNames]);
+  }, [staticCardExamRefs]);
 
   const matchByExamId = useMemo(() => {
     const m = new Map();
@@ -959,7 +1132,7 @@ const LearningCenter = () => {
   // in exams the person has actually started (Continue Learning) even when
   // they aren't one of the top profile matches, so "resume" always reflects
   // documents they've genuinely opened rather than a made-up number.
-  const loadPersonalization = async (userId, matches, extraExamNames = []) => {
+  const loadPersonalization = async (userId, matches, extraExamRefs = []) => {
     let openedIds = [];
     try {
       const { data: reads } = await supabase
@@ -987,8 +1160,19 @@ const LearningCenter = () => {
       console.warn('Could not load learning personalization signals:', err);
     }
 
-    const matchExamNames = matches.slice(0, 5).map((m) => m.exam_name).filter(Boolean);
-    const allExamNames = Array.from(new Set([...matchExamNames, ...extraExamNames.filter(Boolean)]));
+    // Carries each exam's real id (when known) alongside its name so the
+    // count below can use getExamResourceCount's mapped-resources-first
+    // resolution instead of a plain exact-name match against
+    // resources.exam_name (see staticCardExamRefs above for why that
+    // undercounts).
+    const refsByName = new Map();
+    matches.slice(0, 5).forEach((m) => {
+      if (m.exam_name) refsByName.set(m.exam_name, m.exam_id || refsByName.get(m.exam_name) || null);
+    });
+    extraExamRefs.filter((r) => r?.name).forEach((r) => {
+      if (r.id || !refsByName.has(r.name)) refsByName.set(r.name, r.id || refsByName.get(r.name) || null);
+    });
+    const allExamRefs = Array.from(refsByName.entries()).map(([name, id]) => ({ name, id }));
 
     try {
       const exploredRes = openedIds.length
@@ -1001,16 +1185,14 @@ const LearningCenter = () => {
         exploredByExam[r.exam_name] = (exploredByExam[r.exam_name] || 0) + 1;
       });
 
-      if (allExamNames.length) {
+      if (allExamRefs.length) {
         const counts = await Promise.all(
-          allExamNames.map(name =>
-            supabase.from('resources').select('*', { count: 'exact', head: true }).eq('status', 'Published').eq('exam_name', name)
-          )
+          allExamRefs.map(({ id, name }) => getExamResourceCount(id, name))
         );
         const progress = {};
-        allExamNames.forEach((name, i) => {
+        allExamRefs.forEach(({ name }, i) => {
           progress[name] = {
-            total: counts[i]?.count ?? null,
+            total: counts[i] ?? null,
             explored: exploredByExam[name] || 0,
           };
         });
@@ -1046,7 +1228,7 @@ const LearningCenter = () => {
             }
             // Also pull real progress for anything already sitting in Continue
             // Learning from a previous session (persisted in localStorage).
-            loadPersonalization(session.user.id, matches, activeLearningCourses.map((c) => c.title));
+            loadPersonalization(session.user.id, matches, activeLearningCourses.map((c) => ({ name: c.title, id: c.examId || null })));
           }
 
           // Load the candidate's exam targets (primary + all saved)
@@ -1116,11 +1298,11 @@ const LearningCenter = () => {
   // are merged into examProgress, never re-fetched once known.
   useEffect(() => {
     if (!authUserId) return;
-    const missingNames = activeLearningCourses
-      .map((c) => c.title)
-      .filter((name) => name && !(name in examProgress));
-    if (missingNames.length === 0) return;
-    loadPersonalization(authUserId, examMatches, missingNames);
+    const missingRefs = activeLearningCourses
+      .map((c) => ({ name: c.title, id: c.examId || null }))
+      .filter((ref) => ref.name && !(ref.name in examProgress));
+    if (missingRefs.length === 0) return;
+    loadPersonalization(authUserId, examMatches, missingRefs);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeLearningCourses, authUserId]);
 
@@ -1155,17 +1337,6 @@ const LearningCenter = () => {
         >
           {card.badge}
         </div>
-        <button
-          type="button"
-          className={`lc-card-bookmark-btn ${bookmarkedIds.has(card.id) ? 'bookmarked' : ''}`}
-          onClick={(e) => {
-            e.stopPropagation();
-            toggleBookmark(card.id);
-          }}
-          aria-label="Bookmark course"
-        >
-          <Bookmark size={15} fill={bookmarkedIds.has(card.id) ? '#466931' : 'none'} />
-        </button>
       </div>
 
       <div className="lc-card-body">
@@ -1230,11 +1401,11 @@ const LearningCenter = () => {
                 role="search"
               >
                 <div className="lc-hero-search-input-wrap">
-                  <Search size={18} className="lc-hero-search-icon" aria-hidden="true" />
+                  <Search size={16} className="lc-hero-search-icon" aria-hidden="true" />
                   <input
                     type="text"
                     className="lc-hero-search-input"
-                    placeholder="Search exams, subjects, conducting bodies or skills..."
+                    placeholder="Search exams, subjects, skills..."
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                     aria-label="Search exams, subjects, conducting bodies or skills"
@@ -1277,51 +1448,63 @@ const LearningCenter = () => {
             </div>
           </section>
 
-          {/* Value Propositions */}
-          <section className="lc-value-props" aria-label="Key Benefits">
-            <div className="lc-prop-card">
-              <div className="lc-prop-icon-wrap">
-                <ShieldCheck size={22} className="lc-prop-icon" />
-              </div>
-              <div className="lc-prop-text">
-                <h3 className="lc-prop-title">Curated for Veterans</h3>
-                <p className="lc-prop-sub">Relevant &amp; Updated</p>
-              </div>
-            </div>
+          {/* ── Mobile Filters Trigger Section (Mobile <1100px only) ── */}
+          <div className="lc-mobile-filter-bar" aria-label="Mobile Filters">
+            <button
+              type="button"
+              className={`lc-mobile-filter-trigger-btn ${filtersActive ? 'active' : ''}`}
+              onClick={() => setMobileDrawerOpen(true)}
+              aria-label="Open Filter Results"
+            >
+              <SlidersHorizontal size={15} />
+              <span>Filters</span>
+              {activeFilterCount > 0 && (
+                <span className="lc-mobile-filter-badge">{activeFilterCount}</span>
+              )}
+            </button>
 
-            <div className="lc-prop-card">
-              <div className="lc-prop-icon-wrap">
-                <Clock size={22} className="lc-prop-icon" />
-              </div>
-              <div className="lc-prop-text">
-                <h3 className="lc-prop-title">Learn at Your Pace</h3>
-                <p className="lc-prop-sub">Anytime, Anywhere</p>
-              </div>
+            <div className="lc-mobile-active-chips-scroll">
+              {categoryFilter && (
+                <span className="lc-mobile-active-chip">
+                  <span>{categoryFilter}</span>
+                  <button
+                    type="button"
+                    onClick={() => setCategoryFilter('')}
+                    aria-label={`Remove ${categoryFilter} filter`}
+                  >
+                    <X size={12} />
+                  </button>
+                </span>
+              )}
+              {selectedBodyId && (
+                <span className="lc-mobile-active-chip">
+                  <span>{bodyOptions.find((b) => b.id === selectedBodyId)?.name || 'Conducting Body'}</span>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedBodyId('')}
+                    aria-label="Remove conducting body filter"
+                  >
+                    <X size={12} />
+                  </button>
+                </span>
+              )}
+              {filtersActive && (
+                <button
+                  type="button"
+                  className="lc-mobile-clear-btn"
+                  onClick={handleClearFilters}
+                >
+                  Clear all
+                </button>
+              )}
             </div>
-
-            <div className="lc-prop-card">
-              <div className="lc-prop-icon-wrap">
-                <FileText size={22} className="lc-prop-icon" />
-              </div>
-              <div className="lc-prop-text">
-                <h3 className="lc-prop-title">Exam Focused</h3>
-                <p className="lc-prop-sub">PYQs, Notes &amp; Tests</p>
-              </div>
-            </div>
-
-            <div className="lc-prop-card">
-              <div className="lc-prop-icon-wrap">
-                <Briefcase size={22} className="lc-prop-icon" />
-              </div>
-              <div className="lc-prop-text">
-                <h3 className="lc-prop-title">Career Ready</h3>
-                <p className="lc-prop-sub">Skills for Civilian Life</p>
-              </div>
-            </div>
-          </section>
+          </div>
 
           <div className="lc-main-grid">
-            {/* Left Column: Filter Results Sidebar */}
+            {/* Left Column: Filter Results Sidebar — desktop (>=1100px)
+                only; below that it's hidden in favor of the compact ⋮
+                overflow popover next to "Recommended for you" (same filter
+                state/handlers, see mobileMenuOpen/activeFilterMenu). */}
             <aside className="lc-filter-sidebar" aria-label="Filter Results">
               <div className="lc-filter-sidebar-header">
                 <h3 className="lc-filter-sidebar-title">Filter Results</h3>
@@ -1437,169 +1620,28 @@ const LearningCenter = () => {
                   </div>
                 )}
               </div>
-
-              {/* Accordion 3: Subject */}
-              <div className="lc-filter-accordion">
-                <button
-                  type="button"
-                  className="lc-accordion-btn"
-                  onClick={() => toggleFilterGroup('subject')}
-                  aria-expanded={openFilters.subject}
-                >
-                  <span>Subject</span>
-                  {openFilters.subject ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
-                {openFilters.subject && (
-                  <div className="lc-accordion-content">
-                    <div className="lc-filter-scroll-list">
-                      {(showAllSubjects ? SIDEBAR_SUBJECTS : SIDEBAR_SUBJECTS.slice(0, 6)).map((sub) => (
-                        <label key={sub} className="lc-checkbox-item">
-                          <input
-                            type="checkbox"
-                            checked={selectedSubject === sub}
-                            onChange={() => setSelectedSubject(selectedSubject === sub ? '' : sub)}
-                          />
-                          <span className="lc-checkbox-box" />
-                          <span className="lc-checkbox-text">{sub}</span>
-                        </label>
-                      ))}
-                    </div>
-                    {SIDEBAR_SUBJECTS.length > 6 && (
-                      <button
-                        type="button"
-                        className="lc-show-more-btn"
-                        onClick={() => setShowAllSubjects(!showAllSubjects)}
-                      >
-                        {showAllSubjects ? 'Show less' : `Show more (${SIDEBAR_SUBJECTS.length - 6})`}
-                        {showAllSubjects ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
-                      </button>
-                    )}
-                  </div>
-                )}
-              </div>
-
-              {/* Accordion 4: Level */}
-              <div className="lc-filter-accordion">
-                <button
-                  type="button"
-                  className="lc-accordion-btn"
-                  onClick={() => toggleFilterGroup('level')}
-                  aria-expanded={openFilters.level}
-                >
-                  <span>Level</span>
-                  {openFilters.level ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
-                {openFilters.level && (
-                  <div className="lc-accordion-content">
-                    <label className="lc-checkbox-item">
-                      <input
-                        type="checkbox"
-                        checked={regionMode === 'central'}
-                        onChange={() => handleRegionModeChange('central')}
-                      />
-                      <span className="lc-checkbox-box" />
-                      <span className="lc-checkbox-text">Central</span>
-                    </label>
-                    <label className="lc-checkbox-item">
-                      <input
-                        type="checkbox"
-                        checked={regionMode === 'state'}
-                        onChange={() => handleRegionModeChange('state')}
-                      />
-                      <span className="lc-checkbox-box" />
-                      <span className="lc-checkbox-text">State</span>
-                    </label>
-                    <label className="lc-checkbox-item">
-                      <input
-                        type="checkbox"
-                        checked={regionMode === 'ut'}
-                        onChange={() => handleRegionModeChange('ut')}
-                      />
-                      <span className="lc-checkbox-box" />
-                      <span className="lc-checkbox-text">UT</span>
-                    </label>
-                    {regionMode !== 'central' && (
-                      <div style={{ marginTop: '0.65rem' }}>
-                        <Select
-                          searchable
-                          value={regionFilterId}
-                          onChange={(e) => handleRegionFilterChange(e.target.value)}
-                          placeholder={regionMode === 'state' ? 'Select state...' : 'Select UT...'}
-                          options={[{ value: '', label: regionMode === 'state' ? 'All States' : 'All UTs' }, ...regionFilterOptions.map(r => ({ value: r.id, label: r.name }))]}
-                        />
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-
-              {/* Accordion 5: Content Type */}
-              <div className="lc-filter-accordion">
-                <button
-                  type="button"
-                  className="lc-accordion-btn"
-                  onClick={() => toggleFilterGroup('contentType')}
-                  aria-expanded={openFilters.contentType}
-                >
-                  <span>Content Type</span>
-                  {openFilters.contentType ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
-                {openFilters.contentType && (
-                  <div className="lc-accordion-content">
-                    {SIDEBAR_CONTENT_TYPES.map((type) => (
-                      <label key={type} className="lc-checkbox-item">
-                        <input
-                          type="checkbox"
-                          checked={selectedContentType === type}
-                          onChange={() => setSelectedContentType(selectedContentType === type ? '' : type)}
-                        />
-                        <span className="lc-checkbox-box" />
-                        <span className="lc-checkbox-text">{type}</span>
-                      </label>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Accordion 6: Language */}
-              <div className="lc-filter-accordion">
-                <button
-                  type="button"
-                  className="lc-accordion-btn"
-                  onClick={() => toggleFilterGroup('language')}
-                  aria-expanded={openFilters.language}
-                >
-                  <span>Language</span>
-                  {openFilters.language ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
-                {openFilters.language && (
-                  <div className="lc-accordion-content">
-                    {SIDEBAR_LANGUAGES.map((lang) => (
-                      <label key={lang} className="lc-checkbox-item">
-                        <input
-                          type="checkbox"
-                          checked={selectedLanguage === lang}
-                          onChange={() => setSelectedLanguage(selectedLanguage === lang ? '' : lang)}
-                        />
-                        <span className="lc-checkbox-box" />
-                        <span className="lc-checkbox-text">{lang}</span>
-                      </label>
-                    ))}
-                  </div>
-                )}
-              </div>
             </aside>
 
             {/* Right Column: Content Rail */}
             <section className="lc-content-rail">
-              {/* ── Recommended For You Section ── */}
-              <div className="lc-section-box">
+              {/* ── Recommended For You Section ──
+                  Doubles as the page's search results: the moment the
+                  person searches (hero search box) or narrows things down
+                  by Category / Conducting Body (sidebar), this switches
+                  from the curated 5-card teaser to every real match --
+                  no separate "Search Results" section below it. Kept the
+                  stable id so handlePopularExamClick / handleResumeCourse /
+                  handleStartCardExam, which set a filter and then scroll
+                  here, still land in the right place. */}
+              <div className="lc-section-box" id="lc-search-results-section">
                 <div className="lc-section-header">
                   <div className="lc-section-header-left">
                     <h2 className="lc-section-title">Recommended for you</h2>
                     {recommendedFiltersActive ? (
                       <p className="lc-section-subtitle">
-                        {[categoryFilter && 'Category', selectedBodyId && 'Conducting Body'].filter(Boolean).join(' & ')} filter applied
+                        {recommendedCards.length} exam{recommendedCards.length === 1 ? '' : 's'} found
+                        {searchText.trim() && ` for "${searchText.trim()}"`}
+                        {(categoryFilter || selectedBodyId) && ` · ${[categoryFilter && 'Category', selectedBodyId && 'Conducting Body'].filter(Boolean).join(' & ')} filter applied`}
                       </p>
                     ) : (
                       examMatches && examMatches.length > 0 ? (
@@ -1619,87 +1661,71 @@ const LearningCenter = () => {
                         Clear filters
                       </button>
                     )}
+                    {!recommendedFiltersActive && (
+                      <button
+                        type="button"
+                        className="lc-view-all-link"
+                        onClick={() => {
+                          handleClearFilters();
+                          window.scrollTo({ top: 680, behavior: 'smooth' });
+                        }}
+                      >
+                        View all
+                      </button>
+                    )}
+                    {!recommendedFiltersActive && (
+                      <div className="lc-carousel-controls">
+                        <button
+                          type="button"
+                          className="lc-carousel-arrow-btn"
+                          onClick={() => scrollTrack(recommendedScrollRef, 'left')}
+                          aria-label="Scroll left"
+                        >
+                          <ChevronLeft size={16} />
+                        </button>
+                        <button
+                          type="button"
+                          className="lc-carousel-arrow-btn"
+                          onClick={() => scrollTrack(recommendedScrollRef, 'right')}
+                          aria-label="Scroll right"
+                        >
+                          <ChevronRight size={16} />
+                        </button>
+                      </div>
+                    )}
+
+                    {/* Tablet/mobile (<1100px) filter button in header */}
                     <button
                       type="button"
-                      className="lc-view-all-link"
-                      onClick={() => {
-                        handleClearFilters();
-                        window.scrollTo({ top: 680, behavior: 'smooth' });
-                      }}
+                      className="lc-mobile-header-filter-btn"
+                      aria-label="Open filter results"
+                      onClick={() => setMobileDrawerOpen(true)}
                     >
-                      View all
+                      <SlidersHorizontal size={17} />
+                      {activeFilterCount > 0 && (
+                        <span className="lc-overflow-badge">{activeFilterCount}</span>
+                      )}
                     </button>
-                    <div className="lc-carousel-controls">
-                      <button
-                        type="button"
-                        className="lc-carousel-arrow-btn"
-                        onClick={() => scrollTrack(recommendedScrollRef, 'left')}
-                        aria-label="Scroll left"
-                      >
-                        <ChevronLeft size={16} />
-                      </button>
-                      <button
-                        type="button"
-                        className="lc-carousel-arrow-btn"
-                        onClick={() => scrollTrack(recommendedScrollRef, 'right')}
-                        aria-label="Scroll right"
-                      >
-                        <ChevronRight size={16} />
-                      </button>
-                    </div>
                   </div>
                 </div>
 
                 {recommendedFiltersActive && recommendedCards.length === 0 ? (
                   <div className="filter-empty-note">
-                    No exams match your current Category / Conducting Body selection. Try a different combination or{' '}
+                    No exams match your search or filters. Try a different combination or{' '}
                     <button type="button" className="lc-view-all-link" style={{ display: 'inline', padding: 0 }} onClick={handleClearFilters}>
                       clear filters
                     </button>.
                   </div>
+                ) : recommendedFiltersActive ? (
+                  <div className="lc-search-results-grid">
+                    {recommendedCards.map(renderExamCard)}
+                  </div>
                 ) : (
-                <div className="lc-cards-carousel" ref={recommendedScrollRef}>
-                  {recommendedCards.map(renderExamCard)}
-                </div>
+                  <div className="lc-cards-carousel" ref={recommendedScrollRef}>
+                    {recommendedCards.map(renderExamCard)}
+                  </div>
                 )}
               </div>
-
-              {/* ── Search Results Section ──
-                  Appears once the person has actually searched or filtered
-                  (hero search box, or any sidebar filter) -- see
-                  handleSubjectTileClick / handlePopularExamClick /
-                  handleResumeCourse / handleStartCardExam, which all scroll
-                  here by id after setting a filter. */}
-              {filtersActive && (
-                <div className="lc-section-box" id="lc-search-results-section">
-                  <div className="lc-section-header">
-                    <div className="lc-section-header-left">
-                      <h2 className="lc-section-title">Search Results</h2>
-                      <p className="lc-section-subtitle">
-                        {searchResults.length} exam{searchResults.length === 1 ? '' : 's'} found
-                      </p>
-                    </div>
-                    <div className="lc-section-header-right">
-                      <button type="button" className="lc-view-all-link" onClick={handleClearFilters}>
-                        Clear filters
-                      </button>
-                    </div>
-                  </div>
-
-                  {searchResults.length === 0 ? (
-                    <div className="filter-empty-note">
-                      No exams match your search. Try a different keyword or{' '}
-                      <button type="button" className="lc-view-all-link" style={{ display: 'inline', padding: 0 }} onClick={handleClearFilters}>
-                        clear filters
-                      </button>.
-                    </div>
-                  ) : (
-                    <div className="lc-search-results-grid">
-                      {searchResults.map(examToRecommendedCard).map(renderExamCard)}
-                    </div>
-                  )}
-                </div>
-              )}
 
               {/* ── Continue Learning Section ── */}
               <div className="lc-section-box">
@@ -1778,17 +1804,6 @@ const LearningCenter = () => {
                                 e.target.parentElement.classList.add('lc-thumb-fallback');
                               }}
                             />
-                            <button
-                              type="button"
-                              className={`lc-card-bookmark-btn ${bookmarkedIds.has(course.id) ? 'bookmarked' : ''}`}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                toggleBookmark(course.id);
-                              }}
-                              aria-label="Bookmark course"
-                            >
-                              <Bookmark size={14} fill={bookmarkedIds.has(course.id) ? '#466931' : 'none'} />
-                            </button>
                           </div>
 
                           <div className="lc-cont-body">
@@ -1833,56 +1848,6 @@ const LearningCenter = () => {
                 )}
               </div>
 
-              {/* ── Browse By Subject Section ── */}
-              <div className="lc-section-box">
-                <div className="lc-section-header">
-                  <div className="lc-section-header-left">
-                    <h2 className="lc-section-title">Browse by Subject</h2>
-                    <p className="lc-section-subtitle">Select a subject to filter exams & study material</p>
-                  </div>
-                  {selectedSubject && (
-                    <button
-                      type="button"
-                      className="lc-view-all-link"
-                      onClick={() => setSelectedSubject('')}
-                    >
-                      Clear subject
-                    </button>
-                  )}
-                </div>
-
-                <div className="lc-subject-grid">
-                  {BROWSE_SUBJECTS.map((sub) => {
-                    const IconComponent = sub.icon;
-                    const isSelected = selectedSubject === sub.filterKey;
-                    return (
-                      <button
-                        key={sub.id}
-                        type="button"
-                        className={`lc-subject-tile ${isSelected ? 'active' : ''}`}
-                        style={{
-                          '--tile-color': sub.color,
-                          '--tile-bg': sub.bgColor,
-                          '--tile-border': sub.borderColor,
-                        }}
-                        onClick={() => handleSubjectTileClick(sub.filterKey)}
-                      >
-                        <div className="lc-subject-tile-icon">
-                          <IconComponent size={24} />
-                        </div>
-                        <div className="lc-subject-tile-info">
-                          <h3 className="lc-subject-tile-title">{sub.label}</h3>
-                          <span className="lc-subject-tile-count">{sub.count}</span>
-                        </div>
-                        {isSelected && (
-                          <span className="lc-subject-tile-active-badge">Active</span>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
               {/* ── Popular Exams Section ── */}
               <div className="lc-section-box">
                 <div className="lc-section-header">
@@ -1913,66 +1878,199 @@ const LearningCenter = () => {
                 </div>
 
                 <div className="lc-cards-carousel" ref={popularExamsScrollRef}>
-                  {popularExamCards.map((exam) => (
-                    <div key={exam.id} className="lc-exam-card">
-                      <div className="lc-card-thumb-wrap">
-                        <img
-                          src={cardImage(exam)}
-                          alt={exam.name}
-                          className="lc-card-thumb-img"
-                          loading="lazy"
-                          onError={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.parentElement.classList.add('lc-thumb-fallback');
-                          }}
-                        />
-                        <div
-                          className="lc-card-badge"
-                          style={{ backgroundColor: exam.badgeBg, color: exam.badgeColor }}
-                        >
-                          {exam.badge}
+                  {popularExamCards.map((exam) => {
+                    const isSelected = selectedPopularExamId === exam.id;
+                    return (
+                      <div
+                        key={exam.id}
+                        className={`lc-exam-card lc-popular-exam-card ${isSelected ? 'active' : ''}`}
+                        role="button"
+                        tabIndex={0}
+                        aria-pressed={isSelected}
+                        onClick={() => handlePopularExamSelect(exam)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            handlePopularExamSelect(exam);
+                          }
+                        }}
+                      >
+                        <div className="lc-card-thumb-wrap">
+                          <img
+                            src={cardImage(exam)}
+                            alt={exam.name}
+                            className="lc-card-thumb-img"
+                            loading="lazy"
+                            onError={(e) => {
+                              e.target.style.display = 'none';
+                              e.target.parentElement.classList.add('lc-thumb-fallback');
+                            }}
+                          />
+                          <div
+                            className="lc-card-badge"
+                            style={{ backgroundColor: exam.badgeBg, color: exam.badgeColor }}
+                          >
+                            {exam.badge}
+                          </div>
                         </div>
-                        <button
-                          type="button"
-                          className={`lc-card-bookmark-btn ${bookmarkedIds.has(exam.id) ? 'bookmarked' : ''}`}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleBookmark(exam.id);
-                          }}
-                          aria-label="Bookmark exam"
-                        >
-                          <Bookmark size={15} fill={bookmarkedIds.has(exam.id) ? '#466931' : 'none'} />
-                        </button>
+
+                        <div className="lc-card-body">
+                          <h3 className="lc-card-title" title={exam.name}>
+                            {exam.name}
+                          </h3>
+                          <p className="lc-card-conductor">{exam.subtitle}</p>
+                        </div>
                       </div>
+                    );
+                  })}
+                </div>
 
-                      <div className="lc-card-body">
-                        <h3 className="lc-card-title" title={exam.name}>
-                          {exam.name}
-                        </h3>
-                        <p className="lc-card-conductor">{exam.subtitle}</p>
-
-                        <div className="lc-card-meta-row">
-                          {exam.resourcesCount != null && (
-                            <span className="lc-card-meta-item">
-                              <FileText size={13} /> {exam.resourcesCount} resources
+                {selectedPopularExam && (
+                  <div className="lc-exam-details-panel">
+                    <div className="lc-exam-details-header">
+                      <div className="lc-exam-details-logo-wrap">
+                        <img
+                          src={cardImage(selectedPopularExam)}
+                          alt={selectedPopularExam.name}
+                          className="lc-exam-details-img"
+                          onError={(e) => { e.target.style.display = 'none'; }}
+                        />
+                      </div>
+                      <div className="lc-exam-details-headline">
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '0.2rem' }}>
+                          <h3 style={{ margin: 0 }}>{selectedPopularExam.name}</h3>
+                          {selectedPopularExam.badge && (
+                            <span
+                              className="lc-exam-details-badge"
+                              style={{
+                                backgroundColor: selectedPopularExam.badgeBg || '#dcfce7',
+                                color: selectedPopularExam.badgeColor || '#166534',
+                              }}
+                            >
+                              {selectedPopularExam.badge}
                             </span>
                           )}
-                          <span className="lc-card-meta-item">
-                            <Layers size={13} /> {exam.type}
-                          </span>
                         </div>
-
+                        <p className="lc-exam-details-conductor">
+                          {selectedPopularExam.conductingBodyName || selectedPopularExam.conductingBody}
+                        </p>
+                        {selectedPopularExam.description && (
+                          <p className="lc-exam-details-desc">
+                            {selectedPopularExam.description}
+                          </p>
+                        )}
+                        <div className="lc-exam-details-meta-row">
+                          {selectedPopularExam.category && (
+                            <span className="lc-exam-meta-chip">{selectedPopularExam.category}</span>
+                          )}
+                          {selectedPopularExam.regionLevel && (
+                            <span className="lc-exam-meta-chip">
+                              {selectedPopularExam.regionLevel === 'central'
+                                ? 'Central'
+                                : selectedPopularExam.regionLevel === 'state'
+                                ? 'State'
+                                : 'UT'}{' '}
+                              Level
+                            </span>
+                          )}
+                          <span className="lc-exam-meta-chip">Full Course Coverage</span>
+                          <span className="lc-exam-meta-chip">Syllabus + Notes + Tests + PYQs</span>
+                        </div>
+                      </div>
+                      <div className="lc-exam-details-header-right">
                         <button
                           type="button"
-                          className="lc-card-start-btn"
-                          onClick={() => handlePopularExamClick(exam)}
+                          className="lc-exam-details-close"
+                          onClick={() => setSelectedPopularExamId(null)}
+                          aria-label="Close exam details"
                         >
-                          Explore Exam
+                          <X size={18} />
                         </button>
+                        {selectedPopularExam.examId && (
+                          <div className="lc-exam-details-actions-stacked">
+                            <button
+                              type="button"
+                              className="lc-exam-details-primary-btn"
+                              onClick={() => handleStartPreparing(selectedPopularExam.examId, selectedPopularExam.matchedName)}
+                              disabled={preparingExamId === selectedPopularExam.examId}
+                            >
+                              <Play size={14} /> Start Learning
+                            </button>
+                            <button
+                              type="button"
+                              className="lc-exam-details-secondary-btn"
+                              onClick={() => navigate(`/exam/${selectedPopularExam.examId}`, { state: { from: '/learning-center' } })}
+                            >
+                              View Syllabus
+                            </button>
+                          </div>
+                        )}
                       </div>
                     </div>
-                  ))}
-                </div>
+
+                    {!selectedPopularExam.examId ? (
+                      <p className="lc-exam-details-empty">This exam isn't in our catalog yet — check back soon.</p>
+                    ) : (
+                      <>
+                        <div className="lc-exam-details-tabs">
+                          {POPULAR_EXAM_TABS.map((tab) => (
+                            <button
+                              key={tab.key}
+                              type="button"
+                              className={`lc-exam-details-tab ${activePopularExamTab === tab.key ? 'active' : ''}`}
+                              onClick={() => setActivePopularExamTab(tab.key)}
+                            >
+                              {tab.label}
+                            </button>
+                          ))}
+                        </div>
+
+                        <div className="lc-exam-details-tab-content">
+                          {activePopularExamTab === 'overview' && (
+                            <PopularExamOverview
+                              exam={selectedPopularExam}
+                              relatedExams={relatedPopularExams}
+                              navigate={navigate}
+                            />
+                          )}
+                          {activePopularExamTab === 'syllabus' && (
+                            <ExamContentPreview
+                              examId={selectedPopularExam.examId}
+                              examName={selectedPopularExam.matchedName}
+                              tier={effectiveTier}
+                              freeQuizUsed={freeQuizUsed}
+                              variant="list"
+                              categories={['Guide', 'Precis']}
+                              showMockTests={false}
+                            />
+                          )}
+                          {activePopularExamTab === 'mock' && (
+                            <ExamContentPreview
+                              examId={selectedPopularExam.examId}
+                              examName={selectedPopularExam.matchedName}
+                              tier={effectiveTier}
+                              freeQuizUsed={freeQuizUsed}
+                              variant="list"
+                              categories={[]}
+                              showMockTests
+                            />
+                          )}
+                          {activePopularExamTab === 'pyq' && (
+                            <ExamContentPreview
+                              examId={selectedPopularExam.examId}
+                              examName={selectedPopularExam.matchedName}
+                              tier={effectiveTier}
+                              freeQuizUsed={freeQuizUsed}
+                              variant="list"
+                              categories={['PYQ']}
+                              showMockTests={false}
+                            />
+                          )}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                )}
               </div>
             </section>
           </div>
@@ -2023,6 +2121,164 @@ const LearningCenter = () => {
             </div>
           </section>
         </main>
+
+        {/* ── Mobile Slide-In Filter Drawer (Sideways from left, Mobile <1100px Only) ── */}
+        <div
+          className={`lc-mobile-drawer-root ${mobileDrawerOpen ? 'is-open' : ''}`}
+          aria-hidden={!mobileDrawerOpen}
+        >
+          <div
+            className="lc-mobile-drawer-backdrop"
+            onClick={() => setMobileDrawerOpen(false)}
+            aria-label="Close filters backdrop"
+          />
+          <aside className="lc-mobile-drawer-panel" role="dialog" aria-modal="true" aria-label="Filter Results">
+            {/* Drawer Header */}
+            <div className="lc-mobile-drawer-header">
+              <h3 className="lc-mobile-drawer-title">FILTER RESULTS</h3>
+              <div className="lc-mobile-drawer-header-actions">
+                {filtersActive && (
+                  <button
+                    type="button"
+                    className="lc-mobile-drawer-clear-btn"
+                    onClick={handleClearFilters}
+                  >
+                    Clear All
+                  </button>
+                )}
+                <button
+                  type="button"
+                  className="lc-mobile-drawer-close-btn"
+                  onClick={() => setMobileDrawerOpen(false)}
+                  aria-label="Close filter drawer"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+            </div>
+
+            {/* Drawer Body */}
+            <div className="lc-mobile-drawer-body">
+              {/* Category Accordion */}
+              <div className="lc-mobile-drawer-accordion">
+                <button
+                  type="button"
+                  className="lc-mobile-accordion-header"
+                  onClick={() => setOpenDrawerFilters((prev) => ({ ...prev, category: !prev.category }))}
+                  aria-expanded={openDrawerFilters.category}
+                >
+                  <span className="lc-mobile-accordion-title">Category</span>
+                  {openDrawerFilters.category ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                </button>
+
+                {openDrawerFilters.category && (
+                  <div className="lc-mobile-accordion-list">
+                    <label className="lc-mobile-checkbox-item">
+                      <input
+                        type="checkbox"
+                        checked={!categoryFilter}
+                        onChange={() => setCategoryFilter('')}
+                      />
+                      <span className="lc-mobile-checkbox-box" />
+                      <span className="lc-mobile-checkbox-text">All Categories</span>
+                      <span className="lc-mobile-checkbox-count">{levelExams.length}</span>
+                    </label>
+
+                    {categoryOptions.map((cat) => (
+                      <label key={cat} className="lc-mobile-checkbox-item">
+                        <input
+                          type="checkbox"
+                          checked={categoryFilter === cat}
+                          onChange={() => setCategoryFilter(categoryFilter === cat ? '' : cat)}
+                        />
+                        <span className="lc-mobile-checkbox-box" />
+                        <span className="lc-mobile-checkbox-text">{cat}</span>
+                        <span className="lc-mobile-checkbox-count">{categoryCounts[cat] || 0}</span>
+                      </label>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Conducting Body Accordion */}
+              <div className="lc-mobile-drawer-accordion">
+                <button
+                  type="button"
+                  className="lc-mobile-accordion-header"
+                  onClick={() => setOpenDrawerFilters((prev) => ({ ...prev, body: !prev.body }))}
+                  aria-expanded={openDrawerFilters.body}
+                >
+                  <span className="lc-mobile-accordion-title">Conducting Body</span>
+                  {openDrawerFilters.body ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                </button>
+
+                {openDrawerFilters.body && (
+                  <div className="lc-mobile-accordion-list">
+                    <div className="lc-mobile-drawer-search-box">
+                      <Search size={14} className="lc-mobile-drawer-search-icon" />
+                      <input
+                        type="text"
+                        placeholder="Search conducting body..."
+                        value={bodySearch}
+                        onChange={(e) => setBodySearch(e.target.value)}
+                        className="lc-mobile-drawer-search-input"
+                      />
+                      {bodySearch && (
+                        <button
+                          type="button"
+                          className="lc-mobile-search-clear-btn"
+                          onClick={() => setBodySearch('')}
+                          aria-label="Clear body search"
+                        >
+                          <X size={13} />
+                        </button>
+                      )}
+                    </div>
+
+                    <div className="lc-mobile-body-scroll-list">
+                      <label className="lc-mobile-checkbox-item">
+                        <input
+                          type="checkbox"
+                          checked={!selectedBodyId}
+                          onChange={() => setSelectedBodyId('')}
+                        />
+                        <span className="lc-mobile-checkbox-box" />
+                        <span className="lc-mobile-checkbox-text">All Bodies</span>
+                        <span className="lc-mobile-checkbox-count">{bodyOptions.length}</span>
+                      </label>
+
+                      {filteredBodyOptions.map((body) => (
+                        <label key={body.id} className="lc-mobile-checkbox-item">
+                          <input
+                            type="checkbox"
+                            checked={selectedBodyId === body.id}
+                            onChange={() => setSelectedBodyId(selectedBodyId === body.id ? '' : body.id)}
+                          />
+                          <span className="lc-mobile-checkbox-box" />
+                          <span className="lc-mobile-checkbox-text">{body.name}</span>
+                        </label>
+                      ))}
+                      {filteredBodyOptions.length === 0 && (
+                        <p className="filter-empty-note">No bodies found.</p>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Drawer Footer */}
+            <div className="lc-mobile-drawer-footer">
+              <button
+                type="button"
+                className="lc-mobile-drawer-apply-btn"
+                onClick={() => setMobileDrawerOpen(false)}
+              >
+                View {recommendedCards.length} Result{recommendedCards.length === 1 ? '' : 's'}
+              </button>
+            </div>
+          </aside>
+        </div>
       </div>
     </div>
   );

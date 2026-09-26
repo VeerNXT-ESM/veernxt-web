@@ -8,6 +8,7 @@ export const ADMIN_NAV = [
     items: [
       { key: 'exams', label: 'Exams', path: '/admin/exams', icon: 'GraduationCap' },
       { key: 'books', label: 'Book Content', path: '/admin/books', icon: 'BookMarked' },
+      { key: 'reader-themes', label: 'Reader Themes', path: '/admin/reader-themes', icon: 'Palette' },
       { key: 'conducting-bodies', label: 'Conducting Bodies', path: '/admin/conducting-bodies', icon: 'Landmark' },
       { key: 'categories', label: 'Categories', path: '/admin/categories', icon: 'Tags' },
       { key: 'subjects', label: 'Subjects', path: '/admin/subjects', icon: 'BookOpen' },

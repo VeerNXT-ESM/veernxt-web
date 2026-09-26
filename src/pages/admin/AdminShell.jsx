@@ -3,11 +3,11 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { ADMIN_NAV } from './adminNavConfig';
 import {
   GraduationCap, Users, Shield,
-  HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, BookOpen,
+  HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen,
 } from 'lucide-react';
 import './AdminCMS.css';
 
-const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, BookOpen };
+const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen };
 
 // Horizontal section nav, directly under the top header — required by the
 // CMS mockup ("Do NOT remove this horizontal navigation") even though it
@@ -25,6 +25,7 @@ const HORIZONTAL_NAV = [
 const PAGE_META = {
   '/admin/exams': { title: 'Exams Management', description: 'Organize exams, map syllabus and assign content resources.' },
   '/admin/books': { title: 'Book Content' },
+  '/admin/reader-themes': { title: 'Reader Themes', description: 'Configure how VeerNXT books look across the Learning Center.' },
   '/admin/categories': { title: 'Categories', description: 'The sector classification used on every exam — add, rename, or delete categories here.' },
   '/admin/publish-content': { title: 'Publish Content', description: 'Upload a .docx, pick Intro/Guide/Precis, preview the conversion, attach it to exam(s), and publish it live.' },
   '/admin/users': { title: 'Users', description: 'Registered service personnel and platform accounts.' },

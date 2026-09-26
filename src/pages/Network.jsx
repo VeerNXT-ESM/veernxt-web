@@ -307,6 +307,15 @@ const Network = () => {
     return () => document.removeEventListener('click', handler);
   }, [openMenuId]);
 
+  useEffect(() => {
+    if (!navOpen) return;
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setNavOpen(false);
+    };
+    document.addEventListener('keydown', closeOnEscape);
+    return () => document.removeEventListener('keydown', closeOnEscape);
+  }, [navOpen]);
+
   const goTo = (path) => {
     setNavOpen(false);
     navigate(path);
@@ -365,14 +374,20 @@ const Network = () => {
         ))}
       </div>
 
-      <button type="button" className="network-nav-toggle" onClick={() => setNavOpen(true)}>
+      <button
+        type="button"
+        className="network-nav-toggle"
+        onClick={() => setNavOpen(true)}
+        aria-expanded={navOpen}
+        aria-controls="network-sidebar"
+      >
         <Menu size={16} /> My Network
       </button>
 
       {navOpen && <div className="network-nav-backdrop" onClick={() => setNavOpen(false)} />}
 
       <div className="network-layout">
-        <aside className={`network-sidebar ${navOpen ? 'open' : ''}`}>
+        <aside id="network-sidebar" className={`network-sidebar ${navOpen ? 'open' : ''}`}>
           <div className="network-sidebar-close-row">
             <button type="button" className="network-nav-close" onClick={() => setNavOpen(false)} aria-label="Close menu">
               <X size={16} />
@@ -661,7 +676,13 @@ const Network = () => {
           cursor: pointer;
         }
         @media (max-width: 600px) {
-          .network-search { grid-template-columns: minmax(0, 1fr) auto; }
+          .network-search {
+            grid-template-columns: auto minmax(0, 1fr) auto;
+            gap: 0.45rem;
+          }
+          .network-search button {
+            padding: 0.65rem 0.8rem;
+          }
         }
 
         /* Role strip */
@@ -709,7 +730,7 @@ const Network = () => {
         /* Layout */
         .network-layout {
           display: grid;
-          grid-template-columns: 250px minmax(0, 1fr) 290px;
+          grid-template-columns: minmax(220px, 250px) minmax(0, 1fr) minmax(260px, 290px);
           gap: 1.25rem;
           align-items: start;
         }
@@ -791,7 +812,14 @@ const Network = () => {
           color: #fff;
           font-size: 0.68rem;
           font-weight: 800;
-          padding: 0.05rem 0.4rem;
+          padding: 0.1rem 0.45rem;
+          border-radius: 9999px;
+          min-width: 18px;
+          height: 18px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
         }
         .network-verify-card {
           background: var(--surface-alt);
@@ -819,6 +847,12 @@ const Network = () => {
         .network-btn-secondary { background: var(--surface, #fff); color: var(--ios-text); border: 1px solid var(--border-strong); }
         .network-btn-accent { background: var(--accent-gold, #fbbf24); color: #1c281f; border: none; }
         .network-btn-primary:disabled, .network-btn-secondary:disabled { opacity: 0.6; cursor: not-allowed; }
+        .network-page button:focus-visible,
+        .network-page a:focus-visible,
+        .network-page input:focus-visible {
+          outline: 3px solid var(--accent-gold, #fbbf24);
+          outline-offset: 2px;
+        }
 
         /* Cards */
         .network-card {
@@ -1027,10 +1061,10 @@ const Network = () => {
           font-weight: 800;
         }
 
-        /* Responsive collapse */
-        @media (max-width: 992px) {
+        /* Tablet: retain the overview rail while moving the account navigation into a drawer. */
+        @media (max-width: 1100px) {
           .network-layout {
-            grid-template-columns: minmax(0, 1fr);
+            grid-template-columns: minmax(0, 1fr) minmax(250px, 300px);
           }
           .network-nav-toggle { display: inline-flex; }
           .network-sidebar {
@@ -1039,12 +1073,13 @@ const Network = () => {
           .network-sidebar.open {
             display: block;
             position: fixed;
-            top: 107px;
+            top: 0;
             left: 0;
-            bottom: 0;
+            height: 100dvh;
             width: min(320px, 85vw);
-            z-index: 60;
+            z-index: 100;
             overflow-y: auto;
+            box-shadow: 12px 0 32px rgba(15, 23, 42, 0.2);
           }
           .network-sidebar-close-row { display: flex; justify-content: flex-end; margin-bottom: 0.5rem; }
           .network-nav-close { background: none; border: none; cursor: pointer; color: var(--text-secondary); }
@@ -1053,13 +1088,44 @@ const Network = () => {
             position: fixed;
             inset: 0;
             background: rgba(15, 23, 42, 0.45);
-            z-index: 55;
+            z-index: 90;
           }
-          .network-aside { order: 3; }
         }
-        @media (max-width: 768px) {
-          .network-hero { padding: 2.25rem 1.5rem; }
-          .network-person-grid { grid-template-columns: 1fr; }
+
+        /* Phone: one calm reading column, touch-friendly actions, and no horizontal squeeze. */
+        @media (max-width: 780px) {
+          .network-page { padding: 1rem; }
+          .network-hero {
+            padding: 1.25rem 1rem;
+            margin-bottom: 1rem;
+            background-position: center;
+          }
+          .network-eyebrow { margin-bottom: 0.45rem; }
+          .network-hero-title { font-size: clamp(1.6rem, 8vw, 2rem); margin-bottom: 0.5rem; }
+          .network-hero-copy { margin-bottom: 0.9rem; font-size: 0.88rem; line-height: 1.45; }
+          .network-role-strip { display: none; }
+          .network-layout { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+          .network-aside { order: 3; }
+          .network-card { padding: 1.1rem; margin-bottom: 1rem; }
+          .network-person-grid {
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+            gap: 0.75rem;
+          }
+          .person-card, .connection-card { padding: 1rem 0.75rem; }
+          .person-name, .person-headline { overflow-wrap: anywhere; }
+          .pending-row { align-items: stretch; padding: 0.85rem; }
+          .pending-row-actions { width: 100%; }
+          .pending-row-actions button { flex: 1; }
+          .network-overview-grid { gap: 0.65rem; }
+        }
+        @media (max-width: 420px) {
+          .network-hero-title { font-size: 1.55rem; }
+          .network-profile-stats { gap: 1rem; }
+          .network-overview-grid { grid-template-columns: 1fr 1fr; }
+          .network-btn-primary, .network-btn-secondary, .network-btn-accent { min-height: 42px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .network-skeleton-line, .animate-spin { animation: none; }
         }
       `}} />
     </div>

@@ -20,7 +20,7 @@ function extractCompany(job) {
   return title.split(' ')[0] || 'Unknown';
 }
 
-export default async function handler(req, res) {
+async function handleLegacyJobs(req, res) {
   try {
     const { data, error } = await supabase
       .from('jobs')
@@ -61,4 +61,69 @@ export default async function handler(req, res) {
     console.error('jobs API catch:', err);
     return res.status(500).json({ ok: false, error: err.message });
   }
+}
+
+// jobs_v2 table (New Jobs tab). Lives in this file rather than its own
+// api/jobs-v2.js because Vercel's Hobby plan caps a deployment at 12
+// serverless functions; /api/jobs-v2 is rewritten to /api/jobs?source=v2 in
+// vercel.json so the client URL is unchanged.
+function extractBodyFromTitle(title = '') {
+  const match = title.match(/^(.*?)(?=\s+(?:Recruitment|Notification|Apprentice|Online Form|Admit Card|Result|Vacancy|Various|Officer|Clerk|PO|SO|Manager|Engineer|Trainee|Intake|Staff|Assistant))/i);
+  if (match && match[1].trim().length > 1) return match[1].trim();
+  return title.split(' ')[0] || 'Unknown';
+}
+
+async function handleJobsV2(req, res) {
+  try {
+    // Paginate in chunks to get all rows
+    const PAGE_SIZE = 1000;
+    let allRows = [];
+    let page = 0;
+
+    while (true) {
+      const { data, error } = await supabase
+        .from('jobs_v2')
+        .select('*')
+        .order('created_at', { ascending: false, nullsFirst: false })
+        .range(page * PAGE_SIZE, (page + 1) * PAGE_SIZE - 1);
+
+      if (error) {
+        console.error('jobs-v2 API error:', error);
+        return res.status(500).json({ ok: false, error: error.message });
+      }
+
+      if (!data || data.length === 0) break;
+      allRows.push(...data);
+      if (data.length < PAGE_SIZE) break;
+      page++;
+    }
+
+    const mappedJobs = allRows.map(job => ({
+      ...job,
+      id: job.id,
+      title: job.title,
+      body: job.conducting_body || extractBodyFromTitle(job.title),
+      careerTrack: job.career_track || null,
+      publishedOn: job.published_on,
+      lastDate: job.last_date,
+      vacancies: job.vacancies,
+      ageRange: job.age_range,
+      url: job.url,
+      tags: Array.isArray(job.tags) ? job.tags : [],
+      aiDescription: job.ai_description || null,
+      isExpired: job.is_expired || false,
+      // V2 marker for UI
+      _source: 'jobs_v2',
+    }));
+
+    return res.status(200).json({ ok: true, jobs: mappedJobs });
+  } catch (err) {
+    console.error('jobs-v2 API catch:', err);
+    return res.status(500).json({ ok: false, error: err.message });
+  }
+}
+
+export default async function handler(req, res) {
+  if (req.query?.source === 'v2') return handleJobsV2(req, res);
+  return handleLegacyJobs(req, res);
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { RefreshCw, Lock, Crown } from 'lucide-react';
+import { RefreshCw, Lock, Crown, PlayCircle } from 'lucide-react';
 import { getEffectiveTier, canTakeQuiz } from '../lib/subscriptionAccess';
 import { awardPoints } from '../lib/awardPoints';
 import { QuizSetup } from './quiz/QuizSetup';
@@ -52,8 +52,23 @@ const InteractiveQuiz = () => {
           console.error('Error fetching subscription tier:', err);
         }
 
-        const quizDataRes = await supabase.from('quizzes').select('*').eq('id', id).single();
-        const quizData = quizDataRes.data;
+        let quizData = null;
+        if (id) {
+          const quizDataRes = await supabase.from('quizzes').select('*').eq('id', id).maybeSingle();
+          quizData = quizDataRes?.data || null;
+        }
+
+        // If not found (e.g. non-UUID fallback string), attempt to fetch a general mock test from catalog
+        if (!quizData) {
+          const { data: fallbackList } = await supabase
+            .from('quizzes')
+            .select('*')
+            .eq('category', 'Mock Test')
+            .limit(1);
+          if (fallbackList && fallbackList.length > 0) {
+            quizData = fallbackList[0];
+          }
+        }
 
         if (!quizData) {
           setLoading(false);
@@ -73,7 +88,7 @@ const InteractiveQuiz = () => {
         const { data: questionsData } = await supabase
           .from('questions')
           .select('*')
-          .eq('quiz_id', id)
+          .eq('quiz_id', quizData.id)
           .not('review_flags', 'ov', BLOCKING_FLAGS_FILTER)
           .not('correct_answer', 'is', null)
           .order('question_number');
@@ -314,7 +329,79 @@ const InteractiveQuiz = () => {
     </div>
   );
 
-  if (!quiz) return <div style={{ padding: '4rem', textAlign: 'center' }}>Quiz not found.</div>;
+  if (!quiz || questions.length === 0) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1F3A2E 100%)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '2rem 1.5rem',
+        fontFamily: "'Inter', sans-serif"
+      }}>
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.98)',
+          borderRadius: '24px',
+          padding: '3rem 2.25rem',
+          maxWidth: '460px',
+          width: '100%',
+          textAlign: 'center',
+          boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+        }}>
+          <div style={{
+            width: '60px', height: '60px', borderRadius: '50%',
+            background: '#f0fdf4', display: 'flex',
+            alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem',
+            color: '#16a34a'
+          }}>
+            <PlayCircle size={32} />
+          </div>
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>
+            Explore All Mock Tests
+          </h3>
+          <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.5 }}>
+            This specific mock test is currently being updated. You can access hundreds of full-length mock tests and sectional practice sets in the Quiz Center.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <button
+              onClick={() => navigate('/quiz-center')}
+              style={{
+                background: '#466931',
+                color: '#ffffff',
+                border: 'none',
+                borderRadius: '999px',
+                padding: '0.85rem 2rem',
+                fontSize: '0.95rem',
+                fontWeight: 700,
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+                cursor: 'pointer'
+              }}
+            >
+              <PlayCircle size={16} /> Open Quiz Center
+            </button>
+            <button
+              onClick={() => navigate('/learning-center')}
+              style={{
+                background: 'none',
+                border: 'none',
+                color: '#64748b',
+                fontSize: '0.85rem',
+                fontWeight: 600,
+                marginTop: '0.5rem',
+                cursor: 'pointer'
+              }}
+            >
+              Back to Learning Center
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!access.allowed) {
     return (

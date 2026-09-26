@@ -5,7 +5,7 @@ import {
   Send, Search, RefreshCw, MessageSquare,
   ShieldCheck, ArrowLeft, Users,
   Image, Paperclip, Edit3, Star,
-  MoreHorizontal, ChevronDown, ExternalLink, FileText
+  MoreHorizontal, ChevronDown, ChevronRight, ExternalLink, FileText, Briefcase
 } from 'lucide-react';
 
 const MessagingWorkspace = ({ initialRecipient = null }) => {
@@ -614,24 +614,62 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
             )}
           </>
         ) : (
-          <div className="no-chat-selected-wrapper">
-            <MessageSquare size={48} style={{ opacity: 0.2 }} />
-            <h3>Start a Connection</h3>
-            <p>Select a contact from the Focused categories list to review transit pathway dialogue threads.</p>
+          <div className="no-chat-selected-wrapper plain-message-empty-state">
+            <span className="plain-empty-icon"><MessageSquare size={28} /></span>
+            <span className="plain-empty-eyebrow">VeerNXT Messaging</span>
+            <h3>Start a conversation</h3>
+            <p>Select a conversation on the left, or build your network to connect with veterans, mentors and recruiters.</p>
+            <Link to={isEmployer ? '/find-candidates' : '/network'} className="plain-empty-cta">
+              <Users size={16} /> Find contacts
+            </Link>
           </div>
         )}
       </div>
 
+      <aside className="messaging-insights-panel" aria-label="Messaging tools">
+        {selectedRecipient ? (
+          <>
+            <section className="message-contact-card">
+              <div className="insights-heading-row">
+                <h3>Contact info</h3>
+                <MoreHorizontal size={18} />
+              </div>
+              <div className="insights-contact-avatar">{getInitials(selectedRecipient.full_name)}</div>
+              <h4>{selectedRecipient.full_name}</h4>
+              <p>{selectedRecipient.headline || 'VeerNXT member'}</p>
+              <span className="insights-role-label">{selectedRecipient.role === 'employer' ? 'Recruiter' : 'Veteran'}</span>
+              <Link to="/network" className="insights-primary-link">View network <ChevronRight size={15} /></Link>
+            </section>
+            <section className="message-action-card">
+              <h3>Quick actions</h3>
+              <Link to="/network"><Users size={17} /> Manage network <ChevronRight size={15} /></Link>
+              <Link to="/jobs"><Briefcase size={17} /> Explore opportunities <ChevronRight size={15} /></Link>
+            </section>
+          </>
+        ) : (
+          <section className="message-action-card message-action-card-empty">
+            <h3>More than messages</h3>
+            <p>Professional conversations can lead to stronger opportunities.</p>
+            <Link to={isEmployer ? '/find-candidates' : '/network'}><Users size={17} /> Find contacts <ChevronRight size={15} /></Link>
+            <Link to="/jobs"><Briefcase size={17} /> Explore opportunities <ChevronRight size={15} /></Link>
+          </section>
+        )}
+        <section className="message-tips-card">
+          <h3><ShieldCheck size={17} /> Messaging tips</h3>
+          <p>Be professional, concise and clear about why you are reaching out.</p>
+        </section>
+      </aside>
+
       <style dangerouslySetInnerHTML={{ __html: `
         .messaging-workspace-container {
           display: grid;
-          grid-template-columns: 340px 1fr;
+          grid-template-columns: 320px minmax(0, 1fr) 260px;
           height: calc(100vh - 120px);
           width: calc(100% - clamp(2.5rem, 6vw, 5rem));
           max-width: 1800px;
           margin: 2rem auto;
-          background: white;
-          border-radius: 20px;
+          background: #ffffff;
+          border-radius: 14px;
           border: 1px solid #e2e8f0;
           overflow: hidden;
           box-shadow: var(--shadow-ios);
@@ -979,6 +1017,22 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           flex: 1;
           color: #64748b;
         }
+        .plain-message-empty-state {
+          padding: 2rem;
+          text-align: center;
+          background: #ffffff;
+        }
+        .plain-empty-icon {
+          width: 54px; height: 54px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+          color: #466931; background: #edf4e9; margin-bottom: 0.9rem;
+        }
+        .plain-empty-eyebrow { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #65805a; }
+        .plain-message-empty-state h3 { margin: 0.35rem 0; color: #0f172a; font-size: 1.35rem; }
+        .plain-message-empty-state p { max-width: 380px; margin: 0 0 1rem; font-size: 0.86rem; line-height: 1.5; }
+        .plain-empty-cta {
+          display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.7rem 1rem; border-radius: 8px;
+          background: #315e27; color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 700;
+        }
 
         .no-contacts-empty-state {
           display: flex;
@@ -1011,21 +1065,114 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           font-size: 0.85rem;
         }
 
+        @media (max-width: 1200px) {
+          .messaging-workspace-container { grid-template-columns: 320px minmax(0, 1fr); }
+          .messaging-insights-panel { display: none; }
+        }
+
         /* Mobile: master-detail — one pane fills the screen at a time,
            switched by the mobile-list/mobile-chat class on the
            container (set from mobileView state). Desktop is untouched;
            both panes always render side by side above this breakpoint. */
         @media (max-width: 768px) {
+          /* Without a bounded height here, .dialogue-chat-panel (flex:1)
+             has nothing to flex against, so .chat-history-container never
+             gets its own scroll region — it just grows to fit every
+             message instead, pushing the compose box and even the chat
+             header off screen on any real conversation. 107px is this
+             app's global sticky header (Header.jsx, measured); 64px is the
+             fixed mobile bottom nav's reserved body padding
+             (BottomNav.jsx) -- together they're what's left of 100dvh once
+             both chrome bars are accounted for. 100vh first as a fallback
+             for browsers without dvh support. */
           .messaging-workspace-container {
             grid-template-columns: 1fr;
-            height: auto;
-            min-height: 70vh;
+            /* Without an explicit row track, the grid's implicit row stays
+               auto-sized (content-driven) even with a bounded container
+               height, so the visible pane never actually stretches to fill
+               it -- minmax(0, 1fr) is what lets .dialogue-chat-panel's own
+               overflow:hidden/flex children create a real internal scroll
+               region instead of growing past the viewport. */
+            grid-template-rows: minmax(0, 1fr);
+            height: calc(100vh - 171px);
+            height: calc(100dvh - 171px);
+            min-height: 420px;
             margin: 0;
+            /* Override the desktop card width (100% minus side gutters).
+               A phone conversation list should own the entire available
+               content width, just like WhatsApp, rather than exposing the
+               page background beside it. */
+            width: 100%;
             border-radius: 0;
             border: none;
             box-shadow: none;
             max-width: 100%;
+            background: #fff;
           }
+          .conversations-sidebar-panel,
+          .dialogue-chat-panel { min-height: 0; }
+          .messaging-insights-panel { display: none; }
+          .conversations-sidebar-panel { border-right: none; width: 100%; background: #fff; }
+          .sidebar-top-branding { padding: 0.9rem 1rem 0.45rem; }
+          .brand-title { font-size: 1.05rem; }
+          .sidebar-search-box { padding: 0.45rem 1rem; }
+          .search-icon-inside { left: 1.7rem; }
+          .sidebar-search-input { padding-block: 0.7rem; border-radius: 10px; }
+          .category-toggles-bar { padding: 0.65rem 1rem; gap: 0.45rem; background: #fff; }
+          .conversation-partner-item {
+            padding: 0.8rem 1rem;
+            gap: 0.65rem;
+            background: #fff;
+          }
+          .conversation-partner-item.active { border-left-width: 3px; }
+          .partner-avatar { width: 42px; height: 42px; }
+          .partner-name { font-size: 0.86rem; }
+          .partner-snippet { max-width: none !important; font-size: 0.75rem; }
+
+          .chat-header-bar { padding: 0.75rem 1rem; min-height: 56px; }
+          .partner-header-title {
+            max-width: calc(100vw - 145px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .header-actions-row { gap: 0.1rem; }
+          .chat-history-container { padding: 1rem; gap: 0.9rem; background: #f8fafc; }
+          .message-bubble-wrapper { max-width: 94%; gap: 0.45rem; }
+          .bubble-avatar-small { width: 28px; height: 28px; font-size: 0.68rem; }
+          .message-meta-row { flex-wrap: wrap; margin-bottom: 0.15rem; }
+          .sender-name-bold { font-size: 0.78rem; }
+          .msg-time-stamp { font-size: 0.66rem; }
+          .msg-text-paragraph {
+            margin: 0;
+            padding: 0.7rem 0.8rem;
+            border-radius: 12px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            font-size: 0.84rem;
+            line-height: 1.45;
+            overflow-wrap: anywhere;
+          }
+          .message-bubble-wrapper.sent .msg-text-paragraph {
+            background: #e8f0e4;
+            border-color: #d4e2cd;
+          }
+          .suggestion-chips-row {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 0.6rem 1rem;
+            gap: 0.45rem;
+            scrollbar-width: none;
+            background: #fff;
+          }
+          .suggestion-chips-row::-webkit-scrollbar { display: none; }
+          .suggestion-reply-chip { flex: 0 0 auto; padding: 0.38rem 0.75rem; font-size: 0.74rem; }
+          .chat-input-form-bar { padding: 0.65rem 0.85rem calc(0.65rem + env(safe-area-inset-bottom, 0px)); }
+          .chat-keyboard-textarea { min-height: 42px; padding: 0.4rem 0; font-size: 0.84rem; }
+          .input-toolbar-menu { margin-top: 0.25rem; padding-top: 0.35rem; }
+          .press-enter-hint { display: none; }
+          .plain-message-empty-state { padding: 1.5rem; }
+          .plain-message-empty-state h3 { font-size: 1.15rem; }
           .mobile-list .dialogue-chat-panel {
             display: none;
           }
@@ -1035,10 +1182,7 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           .back-to-list-btn {
             display: flex;
           }
-          .conversation-partner-item {
-            min-height: 44px;
-            padding: 0.85rem 1.25rem;
-          }
+          .conversation-partner-item { min-height: 58px; }
           .small-action-btn,
           .icon-action-btn,
           .toolbar-btn {
@@ -1051,6 +1195,54 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           .category-toggle-chip {
             min-height: 36px;
           }
+        }
+        .messaging-insights-panel {
+          padding: 0.9rem;
+          border-left: 1px solid #e2e8f0;
+          background: #fbfcfb;
+          overflow-y: auto;
+        }
+        .message-contact-card,
+        .message-action-card,
+        .message-tips-card {
+          background: #fff;
+          border: 1px solid #e2e8f0;
+          border-radius: 12px;
+          padding: 1rem;
+          margin-bottom: 0.75rem;
+        }
+        .insights-heading-row { display: flex; align-items: center; justify-content: space-between; color: #64748b; }
+        .insights-heading-row h3,
+        .message-action-card h3,
+        .message-tips-card h3 { margin: 0; font-size: 0.88rem; color: #0f172a; font-weight: 800; }
+        .insights-contact-avatar {
+          width: 56px; height: 56px; border-radius: 50%; margin: 1rem auto 0.65rem;
+          display: flex; align-items: center; justify-content: center; background: #edf4e9;
+          border: 1px solid #d5e5cc; color: #315e27; font-weight: 800;
+        }
+        .message-contact-card h4 { margin: 0; font-size: 0.9rem; text-align: center; color: #0f172a; }
+        .message-contact-card p { margin: 0.3rem 0 0.65rem; font-size: 0.75rem; text-align: center; color: #64748b; line-height: 1.4; }
+        .insights-role-label { display: block; text-align: center; font-size: 0.68rem; color: #466931; font-weight: 800; text-transform: uppercase; }
+        .insights-primary-link {
+          display: flex; align-items: center; justify-content: center; gap: 0.35rem; margin-top: 0.9rem;
+          padding: 0.6rem; border-radius: 8px; background: #315e27; color: #fff; font-size: 0.78rem; font-weight: 700; text-decoration: none;
+        }
+        .message-action-card { display: flex; flex-direction: column; gap: 0.15rem; }
+        .message-action-card h3 { margin-bottom: 0.45rem; }
+        .message-action-card p, .message-tips-card p { margin: 0 0 0.55rem; font-size: 0.76rem; line-height: 1.45; color: #64748b; }
+        .message-action-card a {
+          display: flex; align-items: center; gap: 0.55rem; padding: 0.6rem 0; text-decoration: none;
+          color: #334155; font-size: 0.78rem; font-weight: 650; border-top: 1px solid #f1f5f9;
+        }
+        .message-action-card a svg:last-child { margin-left: auto; }
+        .message-action-card a svg:first-child, .message-tips-card h3 svg { color: #466931; }
+        .message-tips-card { background: #f7faf5; border-color: #dce8d7; }
+        .message-tips-card h3 { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.5rem; }
+        @media (max-width: 380px) {
+          .messaging-workspace-container { height: calc(100dvh - 154px); min-height: 360px; }
+          .icon-action-btn:last-child { display: none; }
+          .chat-history-container { padding: 0.75rem; }
+          .message-bubble-wrapper { max-width: 97%; }
         }
       `}} />
     </div>

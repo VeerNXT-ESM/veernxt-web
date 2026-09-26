@@ -566,6 +566,466 @@
   transform: translateY(-1px);
 }
 
+/* ── Mobile Filter Trigger Bar (Mobile/Tablet <1100px only) ── */
+.lc-mobile-filter-bar {
+  display: none;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 0.25rem;
+}
+
+.lc-mobile-filter-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.lc-mobile-filter-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+}
+
+.lc-mobile-filter-trigger-btn:hover {
+  border-color: #466931;
+  color: #466931;
+}
+
+.lc-mobile-filter-trigger-btn.active {
+  border-color: #466931;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.lc-mobile-filter-badge {
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #466931;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.lc-mobile-active-chips-scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.lc-mobile-active-chips-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.lc-mobile-active-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.lc-mobile-active-chip button {
+  background: none;
+  border: none;
+  color: #166534;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.lc-mobile-active-chip button:hover {
+  color: #0d2115;
+}
+
+.lc-mobile-clear-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0.3rem 0.5rem;
+  text-decoration: underline;
+  flex-shrink: 0;
+}
+
+.lc-mobile-clear-btn:hover {
+  color: #0f172a;
+}
+
+/* Header filter icon button on mobile */
+.lc-mobile-header-filter-btn {
+  display: none;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #dce4de;
+  border-radius: 8px;
+  color: #183b2b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.lc-mobile-header-filter-btn:hover {
+  border-color: #466931;
+  color: #466931;
+}
+
+.lc-overflow-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #466931;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ── Mobile Slide-In Filter Drawer (Sideways from Left) ── */
+.lc-mobile-drawer-root {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  visibility: hidden;
+  transition: visibility 0.28s ease;
+}
+
+.lc-mobile-drawer-root.is-open {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.lc-mobile-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.lc-mobile-drawer-root.is-open .lc-mobile-drawer-backdrop {
+  opacity: 1;
+}
+
+.lc-mobile-drawer-panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 310px;
+  max-width: 86vw;
+  height: 100vh;
+  height: 100dvh;
+  background: #ffffff;
+  box-shadow: 4px 0 28px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lc-mobile-drawer-root.is-open .lc-mobile-drawer-panel {
+  transform: translateX(0);
+}
+
+.lc-mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.15rem 1.25rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.lc-mobile-drawer-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.lc-mobile-drawer-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lc-mobile-drawer-clear-btn {
+  background: none;
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #466931;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.lc-mobile-drawer-clear-btn:hover {
+  color: #2e4720;
+  text-decoration: underline;
+}
+
+.lc-mobile-drawer-close-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.15s ease;
+}
+
+.lc-mobile-drawer-close-btn:hover {
+  color: #0f172a;
+}
+
+.lc-mobile-drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 1.25rem 1.5rem;
+}
+
+.lc-mobile-drawer-accordion {
+  border-bottom: 1px solid #f1f5f9;
+  padding: 1rem 0;
+}
+
+.lc-mobile-drawer-accordion:last-child {
+  border-bottom: none;
+}
+
+.lc-mobile-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lc-mobile-accordion-header:hover {
+  color: #466931;
+}
+
+.lc-mobile-accordion-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.lc-mobile-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.lc-mobile-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+}
+
+.lc-mobile-checkbox-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.lc-mobile-checkbox-box {
+  width: 17px;
+  height: 17px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  transition: all 0.18s ease;
+  flex-shrink: 0;
+}
+
+.lc-mobile-checkbox-item input:checked ~ .lc-mobile-checkbox-box {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.lc-mobile-checkbox-item input:checked ~ .lc-mobile-checkbox-box::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+.lc-mobile-checkbox-text {
+  font-size: 0.88rem;
+  color: #334155;
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.15s ease;
+}
+
+.lc-mobile-checkbox-item input:checked ~ .lc-mobile-checkbox-text {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.lc-mobile-checkbox-count {
+  font-size: 0.85rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin-left: auto;
+  padding-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.lc-mobile-drawer-search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.45rem 0.7rem;
+  margin-bottom: 0.4rem;
+}
+
+.lc-mobile-drawer-search-icon {
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.lc-mobile-drawer-search-input {
+  border: none;
+  background: transparent;
+  font-size: 0.84rem;
+  color: #0f172a;
+  width: 100%;
+  outline: none;
+}
+
+.lc-mobile-drawer-search-input::placeholder {
+  color: #94a3b8;
+}
+
+.lc-mobile-search-clear-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.lc-mobile-body-scroll-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.lc-mobile-drawer-footer {
+  padding: 0.85rem 1.25rem calc(0.85rem + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid #f1f5f9;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.lc-mobile-drawer-apply-btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #466931;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(70, 105, 49, 0.2);
+  transition: all 0.18s ease;
+}
+
+.lc-mobile-drawer-apply-btn:hover {
+  background: #385526;
+  transform: translateY(-1px);
+}
+
 /* Cards Carousel Track */
 .lc-cards-carousel {
   display: flex;
@@ -699,6 +1159,18 @@
   text-overflow: ellipsis;
 }
 
+.lc-card-about {
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .lc-card-rating-row {
   display: flex;
   align-items: center;
@@ -790,6 +1262,480 @@
   align-items: center;
   gap: 0.3rem;
   z-index: 2;
+}
+
+/* Popular Exams — clickable card + inline details panel */
+.lc-popular-exam-card {
+  flex: 0 0 200px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.lc-popular-exam-card .lc-card-thumb-wrap {
+  height: 115px;
+}
+
+.lc-popular-exam-card .lc-card-body {
+  padding: 0.75rem 0.85rem;
+}
+
+.lc-popular-exam-card .lc-card-title {
+  font-size: 0.88rem;
+  margin-bottom: 0.2rem;
+  min-height: auto;
+  line-height: 1.3;
+}
+
+.lc-popular-exam-card .lc-card-conductor {
+  font-size: 0.74rem;
+  margin-bottom: 0;
+}
+
+.lc-popular-exam-card:hover {
+  border-color: #466931;
+  box-shadow: 0 0 0 1px rgba(70, 105, 49, 0.25), 0 0 20px rgba(70, 105, 49, 0.28), 0 12px 28px -4px rgba(15, 23, 42, 0.12);
+}
+
+.lc-popular-exam-card.active {
+  border-color: #466931;
+  box-shadow: 0 0 0 2px rgba(70, 105, 49, 0.4), 0 0 24px rgba(70, 105, 49, 0.35), 0 12px 28px -4px rgba(15, 23, 42, 0.12);
+}
+
+.lc-exam-details-panel {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.lc-exam-details-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.lc-exam-details-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #0f2317;
+}
+
+.lc-exam-details-headline {
+  flex: 1;
+  min-width: 0;
+  padding-right: 0.5rem;
+}
+
+.lc-exam-details-headline h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.lc-exam-details-conductor {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.lc-exam-details-desc {
+  margin: 0 0 0.6rem;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: #475569;
+}
+
+.lc-exam-details-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.lc-exam-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: #f4f8f1;
+  color: #466931;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.lc-exam-details-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin-left: auto;
+  padding-left: 1.5rem;
+  flex-shrink: 0;
+}
+
+.lc-exam-details-close {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0.25rem;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+
+.lc-exam-details-close:hover {
+  color: #0f172a;
+}
+
+.lc-exam-details-actions-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: 145px;
+}
+
+.lc-exam-details-empty {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  padding: 0.5rem 0 0.25rem;
+}
+
+.lc-exam-details-empty-inline {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.lc-exam-details-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  background: #466931;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+  box-shadow: 0 1px 3px rgba(70, 105, 49, 0.2);
+}
+
+.lc-exam-details-primary-btn:hover {
+  background: #35501f;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(70, 105, 49, 0.3);
+}
+
+.lc-exam-details-primary-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+}
+
+.lc-exam-details-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.15rem;
+  background: #ffffff;
+  color: #334155;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+}
+
+.lc-exam-details-secondary-btn:hover {
+  border-color: #466931;
+  color: #466931;
+  background: #f8faf6;
+}
+
+.lc-exam-details-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.lc-exam-details-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.lc-exam-details-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.65rem 0.25rem;
+  margin-right: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.lc-exam-details-tab:hover {
+  color: #0f172a;
+}
+
+.lc-exam-details-tab.active {
+  color: #466931;
+  border-bottom-color: #466931;
+}
+
+.lc-exam-details-logo-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  background: #f8fafc;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lc-exam-details-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lc-exam-details-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.lc-exam-details-desc {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 0.65rem;
+}
+
+/* 3-Column Overview Grid */
+.lc-exam-overview-grid-3col {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 1.75rem;
+  align-items: flex-start;
+}
+
+.lc-overview-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.lc-overview-col-title {
+  margin: 0 0 0.85rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.lc-overview-col-desc {
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0 0 0.85rem;
+}
+
+.lc-overview-highlights-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lc-overview-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.82rem;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.lc-highlight-check {
+  color: #16a34a;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* Top Posts - Light Green Pill list */
+.lc-overview-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lc-overview-post-card {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  transition: all 0.15s ease;
+}
+
+.lc-overview-post-card:hover {
+  background: #e1f7e6;
+  border-color: #bbf7d0;
+  transform: translateX(2px);
+}
+
+.lc-post-check-icon {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.lc-post-card-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #166534;
+}
+
+/* Related Exams - Cards with image + title + level */
+.lc-overview-related-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lc-related-exam-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.45rem 0.65rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.lc-related-exam-card:hover {
+  border-color: #466931;
+  background: #fbfdf9;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  transform: translateY(-1px);
+}
+
+.lc-related-exam-img {
+  width: 52px;
+  height: 38px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #0f2317;
+}
+
+.lc-related-exam-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.lc-related-exam-name {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lc-related-exam-level {
+  font-size: 0.73rem;
+  color: #64748b;
+  margin-top: 0.1rem;
+}
+
+.lc-exam-intro-text {
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.55;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .lc-exam-overview-grid-3col {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .lc-exam-details-header {
+    flex-wrap: wrap;
+  }
+
+  .lc-exam-details-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Below ~640px there isn't room for image + headline + action buttons
+     side by side -- flex-wrap alone doesn't help here because
+     .lc-exam-details-headline's min-width:0 lets it get crushed to a
+     sliver (one word per line) instead of actually wrapping onto a new
+     row. Stack the header explicitly instead. */
+  .lc-exam-details-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .lc-exam-details-headline {
+    padding-right: 0;
+  }
+  .lc-exam-details-header-right {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    gap: 0.75rem;
+  }
+  .lc-exam-details-actions-stacked {
+    flex: 1;
+    flex-direction: row;
+    min-width: 0;
+  }
+  .lc-exam-details-actions-stacked .lc-exam-details-primary-btn,
+  .lc-exam-details-actions-stacked .lc-exam-details-secondary-btn {
+    width: auto;
+    flex: 1;
+  }
 }
 
 .lc-section-subtitle {
@@ -1161,9 +2107,18 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+  /* Desktop Filter Results sidebar is hidden in favor of mobile filter bar and sideways drawer */
   .lc-filter-sidebar {
-    position: static;
-    max-height: none;
+    display: none;
+  }
+  .lc-mobile-filter-bar {
+    display: flex;
+  }
+  .lc-mobile-header-filter-btn {
+    display: inline-flex;
+  }
+  .lc-mobile-drawer-root {
+    display: block;
   }
   .lc-value-props {
     grid-template-columns: repeat(2, 1fr);
@@ -1196,6 +2151,15 @@
     padding: 0.55rem 1.1rem;
     font-size: 0.82rem;
   }
+  .lc-section-box {
+    padding: 1.15rem 1.1rem;
+  }
+  .lc-section-title {
+    font-size: 1.15rem;
+  }
+  .lc-promo-content {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 540px) {
@@ -1212,6 +2176,29 @@
   .lc-hero-chip {
     padding: 0.45rem 0.95rem;
     font-size: 0.78rem;
+  }
+  .lc-section-header {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .lc-section-header-right {
+    gap: 0.65rem;
+    /* When it wraps onto its own line below the title, keep it hugging the
+       right edge (matching non-wrapped space-between) -- otherwise it sits
+       flex-start/left, which drags the anchored .lc-mobile-menu popover's
+       right:0 off the left edge of the viewport with it. */
+    margin-left: auto;
+  }
+  /* Touch swipe drives the carousels at this width; the prev/next buttons
+     mostly just crowd the section header next to "View all". */
+  .lc-carousel-controls {
+    display: none;
+  }
+  .lc-exam-card,
+  .lc-continue-card {
+    flex-basis: 78vw;
+    width: 78vw;
+    max-width: 300px;
   }
 }
 
@@ -2235,5 +3222,482 @@
   .lc-search-results-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+}
+
+/* ── Mobile Responsive Rules (Phones & Tablets) ── */
+@media (max-width: 768px) {
+  .learning-wrapper {
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .learning-layout-full {
+    padding: 0.9rem 0.75rem calc(5.5rem + env(safe-area-inset-bottom, 0px));
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ── Hero Banner on Mobile ── */
+  .lc-hero-banner {
+    padding: 1.5rem 1.15rem 1.35rem;
+    margin-bottom: 1rem;
+    border-radius: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .lc-hero-overlay {
+    background: linear-gradient(
+      100deg,
+      rgba(14, 30, 20, 0.98) 0%,
+      rgba(14, 30, 20, 0.92) 55%,
+      rgba(14, 30, 20, 0.65) 100%
+    );
+  }
+
+  .lc-hero-title {
+    font-size: clamp(1.5rem, 6.5vw, 1.85rem);
+    line-height: 1.15;
+    margin-bottom: 0.35rem;
+    word-break: break-word;
+  }
+
+  .lc-hero-tagline {
+    font-size: 0.88rem;
+    margin-bottom: 0.4rem;
+    color: #cbe3bf;
+  }
+
+  .lc-hero-description {
+    font-size: 0.84rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+    color: #cbd5e1;
+  }
+
+  .lc-hero-search-bar {
+    margin-bottom: 0.75rem;
+    padding: 0.2rem 0.25rem 0.2rem 0.65rem;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    min-height: 38px;
+  }
+
+  .lc-hero-search-input-wrap {
+    gap: 0.45rem;
+    min-width: 0;
+  }
+
+  .lc-hero-search-icon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  .lc-hero-search-input,
+  .lc-hero-search-input::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .lc-hero-search-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border-radius: 6px;
+    flex-shrink: 0;
+    min-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lc-hero-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    gap: 0.5rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .lc-hero-chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lc-hero-chip {
+    flex: 0 0 auto;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+
+  /* ── Filter Bar & Side Drawer on Mobile ── */
+  .lc-mobile-filter-bar {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .lc-main-grid {
+    gap: 1.15rem;
+    width: 100%;
+  }
+
+  .lc-content-rail {
+    gap: 1.15rem;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .lc-section-box {
+    padding: 1.15rem 1rem;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .lc-section-header {
+    align-items: flex-start;
+    margin-bottom: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .lc-section-title {
+    font-size: 1.1rem;
+    line-height: 1.25;
+  }
+
+  .lc-section-subtitle {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .lc-section-header-right {
+    gap: 0.55rem;
+  }
+
+  .lc-view-all-link {
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  /* ── Swipeable Cards Carousel on Mobile ── */
+  .lc-cards-carousel {
+    gap: 0.85rem;
+    padding: 0.25rem 0.25rem 0.75rem;
+    margin: -0.25rem -0.25rem 0;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .lc-exam-card,
+  .lc-continue-card {
+    flex: 0 0 min(78vw, 270px);
+    width: min(78vw, 270px);
+    border-radius: 10px;
+    scroll-snap-align: start;
+  }
+
+  .lc-popular-exam-card {
+    flex: 0 0 min(68vw, 210px);
+    width: min(68vw, 210px);
+    border-radius: 10px;
+    scroll-snap-align: start;
+  }
+
+  .lc-card-thumb-wrap,
+  .lc-cont-thumb-wrap {
+    height: 135px;
+  }
+
+  .lc-popular-exam-card .lc-card-thumb-wrap {
+    height: 115px;
+  }
+
+  .lc-card-body,
+  .lc-cont-body {
+    padding: 0.9rem;
+  }
+
+  .lc-card-title,
+  .lc-cont-title {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .lc-card-conductor {
+    font-size: 0.76rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .lc-card-meta-row,
+  .lc-cont-cat-row {
+    gap: 0.35rem;
+  }
+
+  .lc-card-start-btn,
+  .lc-cont-resume-btn {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.82rem;
+    min-height: 40px;
+    box-sizing: border-box;
+  }
+
+  /* ── Filtered Search Results Grid on Mobile ── */
+  .lc-search-results-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 0.25rem 0 0.5rem;
+    width: 100%;
+  }
+
+  .lc-search-results-grid .lc-exam-card {
+    width: 100%;
+    max-width: none;
+    flex: none;
+  }
+
+  .lc-search-results-grid .lc-card-thumb-wrap {
+    height: 140px;
+  }
+
+  /* ── Popular Exam Inline Details Panel on Mobile ── */
+  .lc-exam-details-panel {
+    padding: 1.15rem 1rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .lc-exam-details-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .lc-exam-details-logo-wrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .lc-exam-details-headline {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .lc-exam-details-headline h3 {
+    font-size: 1.05rem;
+    word-break: break-word;
+  }
+
+  .lc-exam-details-meta-row {
+    gap: 0.35rem;
+  }
+
+  .lc-exam-meta-chip {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .lc-exam-details-header-right {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  .lc-exam-details-actions-stacked {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
+  .lc-exam-details-primary-btn,
+  .lc-exam-details-secondary-btn {
+    flex: 1;
+    min-width: 0;
+    min-height: 40px;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.82rem;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .lc-exam-details-tabs {
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .lc-exam-details-tab {
+    font-size: 0.82rem;
+    padding: 0.55rem 0.2rem;
+    margin-right: 0.85rem;
+  }
+
+  .lc-exam-overview-grid-3col {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .lc-overview-col-title {
+    font-size: 0.88rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .lc-overview-post-card {
+    padding: 0.6rem 0.85rem;
+  }
+
+  .lc-related-exam-card {
+    padding: 0.55rem 0.75rem;
+  }
+
+  .lc-related-exam-img {
+    width: 48px;
+    height: 36px;
+  }
+
+  /* ── Side Filter Drawer on Mobile ── */
+  .lc-mobile-drawer-panel {
+    width: min(340px, 88vw);
+  }
+
+  .lc-mobile-drawer-body {
+    padding: 0.75rem 1rem 1.25rem;
+  }
+
+  .lc-mobile-accordion-header {
+    padding: 0.4rem 0;
+  }
+
+  .lc-mobile-checkbox-item {
+    padding: 0.2rem 0;
+  }
+
+  /* ── Promotional Banner on Mobile ── */
+  .lc-promo-banner {
+    margin-top: 1.15rem;
+    border-radius: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .lc-promo-content {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .lc-promo-eyebrow {
+    font-size: 0.72rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .lc-promo-title {
+    font-size: clamp(1.35rem, 5.5vw, 1.75rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
+  }
+
+  .lc-promo-desc {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    margin-bottom: 1.15rem;
+  }
+
+  .lc-promo-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .lc-promo-stat-item {
+    font-size: 0.82rem;
+  }
+
+  .lc-promo-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1.25rem;
+    font-size: 0.88rem;
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+}
+
+/* ── Fluid 2-Column Search Results for Standard Mobile Viewports (>= 420px and <= 768px) ── */
+@media (min-width: 420px) and (max-width: 768px) {
+  .lc-search-results-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+  .lc-search-results-grid .lc-card-thumb-wrap {
+    height: 110px;
+  }
+  .lc-search-results-grid .lc-card-body {
+    padding: 0.75rem;
+  }
+  .lc-search-results-grid .lc-card-title {
+    font-size: 0.82rem;
+    line-height: 1.3;
+    min-height: 2.6em;
+  }
+  .lc-search-results-grid .lc-card-conductor {
+    font-size: 0.72rem;
+    margin-bottom: 0.4rem;
+  }
+  .lc-search-results-grid .lc-card-meta-row {
+    font-size: 0.72rem;
+    margin-bottom: 0.75rem;
+  }
+  .lc-search-results-grid .lc-card-start-btn {
+    padding: 0.55rem 0.5rem;
+    font-size: 0.76rem;
+    min-height: 36px;
+  }
+}
+
+/* ── Narrow Mobile Screens (<= 400px) ── */
+@media (max-width: 400px) {
+  .lc-section-header {
+    flex-wrap: wrap;
+  }
+
+  .lc-section-header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lc-exam-card,
+  .lc-continue-card {
+    flex-basis: calc(100vw - 2.5rem);
+    width: calc(100vw - 2.5rem);
+  }
+
+  .lc-popular-exam-card {
+    flex-basis: calc(100vw - 3.5rem);
+    width: calc(100vw - 3.5rem);
+  }
+
+  .lc-exam-details-actions-stacked {
+    flex-direction: column;
+  }
+
+  .lc-hero-banner {
+    padding: 1.35rem 0.95rem;
+  }
+
+  .lc-section-box {
+    padding: 1rem 0.85rem;
   }
 }

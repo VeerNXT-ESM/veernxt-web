@@ -131,15 +131,21 @@ export const TableBlock = ({ rows }) => {
     <div className="bk-table-wrapper">
       <table className="bk-table">
         <tbody>
-          {rows.map((row, i) => (
-            <tr key={i}>
-              {row.cells.map((cell, j) => (
-                row.isHeader ? 
-                  <th key={j} dangerouslySetInnerHTML={{ __html: cell }} /> : 
-                  <td key={j} dangerouslySetInnerHTML={{ __html: cell }} />
-              ))}
-            </tr>
-          ))}
+          {rows.map((row, i) => {
+            const isArray = Array.isArray(row);
+            const cells = isArray ? row : (row.cells || (typeof row === 'object' ? Object.values(row) : [row]));
+            const isHeader = isArray ? (i === 0) : !!row.isHeader;
+
+            return (
+              <tr key={i}>
+                {cells.map((cell, j) => (
+                  isHeader ? 
+                    <th key={j} dangerouslySetInnerHTML={{ __html: String(cell ?? '') }} /> : 
+                    <td key={j} dangerouslySetInnerHTML={{ __html: String(cell ?? '') }} />
+                ))}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

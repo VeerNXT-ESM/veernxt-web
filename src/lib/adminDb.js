@@ -16,6 +16,7 @@ class AdminWrite {
   upsert(values, options = {}) { this.op = 'upsert'; this.values = values; this.options = options; return this; }
   delete() { this.op = 'delete'; return this; }
   eq(column, value) { this.filters.push({ type: 'eq', column, value }); return this; }
+  neq(column, value) { this.filters.push({ type: 'neq', column, value }); return this; }
   in(column, value) { this.filters.push({ type: 'in', column, value: Array.from(value) }); return this; }
   select(cols = '*') { this.selectCols = cols; return this; }
   single() { this.mode = 'single'; if (!this.selectCols) this.selectCols = '*'; return this; }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, RefreshCw, ArrowRight, CheckCircle2, Check, X } from 'lucide-react';
+import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, RefreshCw, ArrowRight, CheckCircle2, Check, X, Crown, ChevronRight } from 'lucide-react';
 import { isResourceLockedForUser, canTakeQuiz } from '../lib/subscriptionAccess';
 import { useExamContent } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
@@ -31,17 +31,34 @@ const LIST_SECTIONS = [
 const SUBJECT_CATEGORY_ORDER = ['Intro', 'Guide', 'Precis', 'PYQ'];
 const SUBJECT_CATEGORY_LABELS = { Intro: 'Intro', Guide: 'Guide', Precis: 'Précis', PYQ: 'PYQ' };
 
-function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete, backTo }) {
+const CATEGORY_BADGES = {
+  Guide: { label: 'Guidebook', bg: '#eff6ff', color: '#1d4ed8', border: '#bfdbfe' },
+  Precis: { label: 'Précis', bg: '#faf5ff', color: '#7e22ce', border: '#e9d5ff' },
+  PYQ: { label: 'PYQ', bg: '#f0fdf4', color: '#15803d', border: '#bbf7d0' },
+  Intro: { label: 'Introduction', bg: '#fffbeb', color: '#b45309', border: '#fde68a' },
+  Mock: { label: 'Mock Test', bg: '#f0fdf4', color: '#15803d', border: '#bbf7d0' },
+};
+
+function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete, backTo, badgeLabel, examId }) {
+  const cat = badgeLabel || resource.category || 'Guide';
+  const badgeConfig = CATEGORY_BADGES[cat] || { label: cat, bg: '#f1f5f9', color: '#475569', border: '#e2e8f0' };
+  const isPyq = cat === 'PYQ' || resource.category === 'PYQ';
+  const targetLink = isPyq
+    ? (resource.link || `/pyq-center?exam=${encodeURIComponent(examId || examName || '')}`)
+    : (resource.link || `/reader/${resource.resource_id}`);
+
   return (
     <div
       style={{
-        display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.65rem 0.9rem',
+        display: 'flex', alignItems: 'center', gap: '0.65rem', padding: '0.65rem 0.9rem',
         borderRadius: 'var(--radius-sm, 10px)',
-        border: isCompleted ? '1px solid #bbf7d0' : '1px solid var(--border, #e2e8f0)',
-        marginBottom: '0.5rem', background: isCompleted ? '#f0fdf4' : '#fff',
+        border: (isCompleted && !isPyq) ? '1px solid #bbf7d0' : '1px solid var(--border, #e2e8f0)',
+        marginBottom: '0.5rem', background: (isCompleted && !isPyq) ? '#f0fdf4' : '#fff',
+        minWidth: 0,
+        boxSizing: 'border-box',
       }}
     >
-      {onToggleComplete && (
+      {onToggleComplete && !isPyq && (
         <button
           type="button"
           onClick={(e) => {
@@ -66,16 +83,42 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
           {isCompleted && <Check size={13} color="#fff" strokeWidth={3} />}
         </button>
       )}
-      <FileText size={15} color={isCompleted ? "#16a34a" : "var(--ios-olive)"} style={{ flexShrink: 0 }} />
+      <FileText size={15} color={(isCompleted && !isPyq) ? "#16a34a" : "var(--ios-olive)"} style={{ flexShrink: 0 }} />
+      <span
+        style={{
+          fontSize: '0.68rem',
+          fontWeight: 700,
+          padding: '0.15rem 0.45rem',
+          borderRadius: '4px',
+          background: badgeConfig.bg,
+          color: badgeConfig.color,
+          border: `1px solid ${badgeConfig.border}`,
+          textTransform: 'uppercase',
+          letterSpacing: '0.02em',
+          flexShrink: 0,
+        }}
+      >
+        {badgeConfig.label}
+      </span>
       <Link
-        to={`/reader/${resource.resource_id}`}
+        to={targetLink}
         state={backTo ? { from: backTo } : undefined}
-        style={{ flex: 1, fontSize: '0.85rem', textDecoration: 'none', color: 'inherit', fontWeight: isCompleted ? 600 : 400 }}
+        style={{
+          flex: 1,
+          minWidth: 0,
+          fontSize: '0.85rem',
+          textDecoration: 'none',
+          color: 'inherit',
+          fontWeight: (isCompleted && !isPyq) ? 600 : 500,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+        }}
       >
         {cleanContentTitle(resource.title, examName)}
       </Link>
-      {isCompleted && <span style={{ fontSize: '0.7rem', color: '#16a34a', fontWeight: 700, background: '#dcfce7', padding: '0.15rem 0.5rem', borderRadius: '999px' }}>Done</span>}
-      {locked ? <Lock size={13} color="#ef4444" /> : <Unlock size={13} color="#16a34a" />}
+      {isCompleted && !isPyq && <span style={{ fontSize: '0.7rem', color: '#16a34a', fontWeight: 700, background: '#dcfce7', padding: '0.15rem 0.5rem', borderRadius: '999px', flexShrink: 0 }}>Done</span>}
+      {locked ? <Lock size={13} color="#ef4444" style={{ flexShrink: 0 }} /> : <Unlock size={13} color="#16a34a" style={{ flexShrink: 0 }} />}
     </div>
   );
 }
@@ -212,19 +255,52 @@ export function IntroManualTile({ intro, locked }) {
   );
 }
 
-function QuizRow({ quiz, examName, locked }) {
+function QuizRow({ quiz, examName, locked, examId }) {
+  const isFallbackMock = quiz.id && String(quiz.id).startsWith('mock-');
+  const targetUrl = quiz.link || (isFallbackMock ? `/quiz-center?exam=${encodeURIComponent(examId || examName || '')}` : `/quiz/${quiz.id}`);
+
   return (
     <Link
-      to={`/quiz/${quiz.id}`}
+      to={targetUrl}
       style={{
-        display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.65rem 0.9rem',
+        display: 'flex', alignItems: 'center', gap: '0.65rem', padding: '0.65rem 0.9rem',
         borderRadius: 'var(--radius-sm, 10px)', textDecoration: 'none', color: 'inherit',
         border: '1px solid var(--border, #e2e8f0)', marginBottom: '0.5rem', background: '#fff',
+        minWidth: 0,
+        boxSizing: 'border-box',
       }}
     >
       <PlayCircle size={15} color="var(--ios-olive)" style={{ flexShrink: 0 }} />
-      <span style={{ flex: 1, fontSize: '0.85rem' }}>{cleanContentTitle(quiz.title, examName)}</span>
-      {locked ? <Lock size={13} color="#ef4444" /> : <Unlock size={13} color="#16a34a" />}
+      <span
+        style={{
+          fontSize: '0.68rem',
+          fontWeight: 700,
+          padding: '0.15rem 0.45rem',
+          borderRadius: '4px',
+          background: '#f0fdf4',
+          color: '#15803d',
+          border: '1px solid #bbf7d0',
+          textTransform: 'uppercase',
+          letterSpacing: '0.02em',
+          flexShrink: 0,
+        }}
+      >
+        Mock Test
+      </span>
+      <span
+        style={{
+          flex: 1,
+          minWidth: 0,
+          fontSize: '0.85rem',
+          fontWeight: 500,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        {cleanContentTitle(quiz.title, examName)}
+      </span>
+      {locked ? <Lock size={13} color="#ef4444" style={{ flexShrink: 0 }} /> : <Unlock size={13} color="#16a34a" style={{ flexShrink: 0 }} />}
     </Link>
   );
 }
@@ -242,7 +318,7 @@ function QuizRow({ quiz, examName, locked }) {
  * existing call site (4 cards, PYQ+Quiz combined, empty categories omitted)
  * is unaffected — Dashboard.jsx opts into both for its 5-category view.
  */
-const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed, splitPyqQuiz = false, showEmptyCategories = false, variant = 'tiles' }) => {
+const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed, splitPyqQuiz = false, showEmptyCategories = false, variant = 'tiles', categories = null, showMockTests = true }) => {
   const { byCategory, quizzes, intro, completedResourceIds, markAsCompleted, loading, error } = useExamContent(examName, careerTrack, examId);
 
   // Where the reader's own Back button should return to: the "list" variant
@@ -268,16 +344,26 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
 
   if (variant === 'list') {
     const quizAccess = canTakeQuiz(tier, freeQuizUsed);
-    const hasAnything = LIST_SECTIONS.some(({ key }) => (byCategory[key]?.length || 0) > 0) || quizzes.length > 0;
+    const visibleSections = categories ? LIST_SECTIONS.filter(({ key }) => categories.includes(key)) : LIST_SECTIONS;
 
-    if (!hasAnything) {
-      return <p style={{ color: '#94a3b8', fontSize: '0.85rem', padding: '0.5rem 0' }}>No preparation materials found for this exam yet.</p>;
-    }
+    // Fallback Mock Tests list if none found in DB for this exam
+    const mockTestList = quizzes.length > 0 ? quizzes : (showMockTests ? [
+      { id: `mock-${examId || 'general'}-1`, title: `${examName} Full Length Mock Test 1`, link: `/quiz-center?exam=${encodeURIComponent(examId || examName || '')}` },
+      { id: `mock-${examId || 'general'}-2`, title: `${examName} Sectional Test (General Studies & Reasoning)`, link: `/quiz-center?exam=${encodeURIComponent(examId || examName || '')}` },
+      { id: `mock-${examId || 'general'}-3`, title: `${examName} Speed Practice Test`, link: `/quiz-center?exam=${encodeURIComponent(examId || examName || '')}` },
+    ] : []);
 
     return (
       <div style={{ padding: '0.5rem 0 0' }}>
-        {LIST_SECTIONS.map(({ key, label }) => {
-          const items = byCategory[key] || [];
+        {visibleSections.map(({ key, label }) => {
+          let items = byCategory[key] || [];
+          if (key === 'PYQ' && items.length === 0) {
+            items = [
+              { resource_id: `pyq-${examId || 'general'}-1`, title: `${examName} Previous Year Solved Paper (Prelims / Tier 1)`, category: 'PYQ', link: `/pyq-center?exam=${encodeURIComponent(examId || examName || '')}` },
+              { resource_id: `pyq-${examId || 'general'}-2`, title: `${examName} 5-Year Question Bank with Explanations`, category: 'PYQ', link: `/pyq-center?exam=${encodeURIComponent(examId || examName || '')}` },
+              { resource_id: `pyq-${examId || 'general'}-3`, title: `${examName} Official Model Paper Set`, category: 'PYQ', link: `/pyq-center?exam=${encodeURIComponent(examId || examName || '')}` },
+            ];
+          }
           if (items.length === 0) return null;
           return (
             <div key={key} style={{ marginBottom: '1.1rem' }}>
@@ -287,30 +373,54 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                   key={res.id || res.resource_id}
                   resource={res}
                   examName={examName}
+                  examId={examId}
                   locked={isResourceLockedForUser(tier, res.category)}
-                  isCompleted={completedResourceIds?.has(res.resource_id)}
-                  onToggleComplete={(id, completed) => markAsCompleted(id, null, completed)}
+                  isCompleted={key !== 'PYQ' && completedResourceIds?.has(res.resource_id)}
+                  onToggleComplete={key === 'PYQ' ? null : ((id, completed) => markAsCompleted(id, null, completed))}
                   backTo={readerBackTo}
                 />
               ))}
+              {key === 'PYQ' && (
+                <Link
+                  to={`/pyq-center?exam=${encodeURIComponent(examId || examName || '')}`}
+                  style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.5rem 0.9rem',
+                    borderRadius: '8px', textDecoration: 'none', color: '#166534',
+                    border: '1px dashed #86efac', marginTop: '0.4rem', background: '#f0fdf4',
+                    fontSize: '0.8rem', fontWeight: 700
+                  }}
+                >
+                  <ScrollText size={14} />
+                  <span>Explore All {examName} PYQs in PYQ Center</span>
+                </Link>
+              )}
             </div>
           );
         })}
 
-        {quizzes.length > 0 && (
+        {showMockTests && mockTestList.length > 0 && (
           <div style={{ marginBottom: '1.1rem' }}>
             <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Mock Tests</h4>
+            {mockTestList.map((quiz) => (
+              <QuizRow
+                key={quiz.id}
+                quiz={quiz}
+                examName={examName}
+                examId={examId}
+                locked={!quizAccess.allowed}
+              />
+            ))}
             <Link
-              to="/quiz-center"
+              to={`/quiz-center?exam=${examId || examName}`}
               style={{
-                display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.65rem 0.9rem',
-                borderRadius: 0, textDecoration: 'none', color: 'inherit',
-                border: '1px solid var(--border, #e2e8f0)', marginBottom: '0.5rem', background: '#fff',
-                fontSize: '0.85rem', fontWeight: 'bold'
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.5rem 0.9rem',
+                borderRadius: '8px', textDecoration: 'none', color: '#166534',
+                border: '1px dashed #86efac', marginTop: '0.4rem', background: '#f0fdf4',
+                fontSize: '0.8rem', fontWeight: 700
               }}
             >
-              <PlayCircle size={15} color="var(--ios-olive)" style={{ flexShrink: 0 }} />
-              <span>Visit Quiz Center</span>
+              <PlayCircle size={14} />
+              <span>Explore All {examName} Tests in Quiz Center</span>
             </Link>
           </div>
         )}
@@ -318,17 +428,56 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
         <Link
           to="/subscribe"
           style={{
-            display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.85rem 1rem',
-            borderRadius: 'var(--radius-md, 12px)', border: '1px solid var(--border, #e2e8f0)',
-            textDecoration: 'none', color: 'inherit', background: '#f8fafc',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.85rem',
+            padding: '0.9rem 1.15rem',
+            borderRadius: '12px',
+            border: '1px solid #86efac',
+            textDecoration: 'none',
+            color: 'inherit',
+            background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
+            position: 'relative',
+            overflow: 'hidden',
+            marginTop: '0.75rem',
+            boxShadow: '0 2px 8px rgba(22, 101, 52, 0.08)',
           }}
         >
-          <BookOpen size={18} color="var(--ios-olive)" />
-          <div style={{ flex: 1 }}>
-            <div style={{ fontSize: '0.85rem', fontWeight: 700 }}>Unlock the full library</div>
-            <div style={{ fontSize: '0.75rem', color: '#888' }}>Précis, PYQs, and unlimited mock tests for every matched exam.</div>
+          <div
+            style={{
+              width: '38px',
+              height: '38px',
+              borderRadius: '10px',
+              background: '#bbf7d0',
+              color: '#15803d',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexShrink: 0,
+            }}
+          >
+            <Crown size={20} />
           </div>
-          <ArrowRight size={16} />
+          <div style={{ flex: 1, zIndex: 1 }}>
+            <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#14532d', marginBottom: '0.15rem' }}>
+              Unlock the full library
+            </div>
+            <div style={{ fontSize: '0.75rem', color: '#166534', lineHeight: 1.35 }}>
+              Get access to PRÉCIS, PYQs, and unlimited mock tests for every exam.
+            </div>
+          </div>
+          <ChevronRight size={18} color="#15803d" style={{ flexShrink: 0, zIndex: 1 }} />
+          <Crown
+            size={68}
+            style={{
+              position: 'absolute',
+              right: '-10px',
+              bottom: '-12px',
+              color: '#16a34a',
+              opacity: 0.12,
+              pointerEvents: 'none',
+            }}
+          />
         </Link>
       </div>
     );
@@ -376,8 +525,8 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                     resource={res}
                     examName={examName}
                     locked={isResourceLockedForUser(tier, catKey)}
-                    isCompleted={completedResourceIds?.has(res.resource_id)}
-                    onToggleComplete={(id, completed) => markAsCompleted(id, resolveSubjectForTitle(res.title, res.category).key, completed)}
+                    isCompleted={catKey !== 'PYQ' && completedResourceIds?.has(res.resource_id)}
+                    onToggleComplete={catKey === 'PYQ' ? null : ((id, completed) => markAsCompleted(id, resolveSubjectForTitle(res.title, res.category).key, completed))}
                     backTo={readerBackTo}
                   />
                 ))}

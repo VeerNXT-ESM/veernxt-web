@@ -1,4 +1,5 @@
 import { supabase } from './supabase';
+import { adminFrom } from './adminDb';
 
 /**
  * Stops the same Guide/Precis being linked to an exam twice.
@@ -12,7 +13,7 @@ import { supabase } from './supabase';
  * the content team reviews those separately). This is the exact rule
  * scripts/exam-mapping/dedupe_exam_resources.mjs used to clean the existing data.
  */
-const normTitle = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+export const normTitle = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
 export function isSameResource(a, b) {
   if (!a || !b) return false;
@@ -120,3 +121,101 @@ export async function loadBookLinks(book) {
   for (const r of perChunk.flat()) { examIds.add(r.exam_id); resourceIds.add(r.resource_id); }
   return { examIds: [...examIds], resourceIds: [...resourceIds] };
 }
+
+/**
+ * Finds the counterpart book (Guide <-> Precis) that shares the same normalized title.
+ * Returns the matching book object from candidateBooks or null.
+ */
+export function findMatchingCounterpartBook(book, candidateBooks) {
+  if (!book || !book.title || !Array.isArray(candidateBooks)) return null;
+  const targetCategory = book.category === 'Guide' ? 'Precis' : book.category === 'Precis' ? 'Guide' : null;
+  if (!targetCategory) return null;
+
+  const targetNorm = normTitle(book.title);
+  if (!targetNorm) return null;
+
+  // Filter candidates for the opposite category with matching normalized title
+  const matches = candidateBooks.filter(
+    (b) => b && b.category === targetCategory && normTitle(b.title) === targetNorm
+  );
+
+  if (matches.length === 0) return null;
+
+  // Prefer active (non-archived) match if book itself is active
+  if (!book.isArchived) {
+    const activeMatch = matches.find((b) => !b.isArchived);
+    if (activeMatch) return activeMatch;
+  }
+
+  return matches[0];
+}
+
+/**
+ * Synchronizes exam links between a Guide and a Precis book.
+ * Computes the union of exam IDs linked to either book, then links both books to all exams in the union.
+ */
+export async function syncBookPairLinks(guideBook, precisBook) {
+  if (!guideBook || !precisBook) throw new Error('Both Guide and Precis books are required to sync links.');
+
+  const [guideLinks, precisLinks] = await Promise.all([
+    loadBookLinks(guideBook),
+    loadBookLinks(precisBook),
+  ]);
+
+  const guideExamSet = new Set(guideLinks.examIds);
+  const precisExamSet = new Set(precisLinks.examIds);
+  const unionExamIds = [...new Set([...guideLinks.examIds, ...precisLinks.examIds])];
+
+  const toAddToGuide = unionExamIds.filter((id) => !guideExamSet.has(id));
+  const toAddToPrecis = unionExamIds.filter((id) => !precisExamSet.has(id));
+
+  // Check duplicates and insert for Guide
+  let guideAdded = 0;
+  if (toAddToGuide.length > 0) {
+    const dupes = await examsAlreadyHavingResource(guideBook.resourceId, toAddToGuide, guideBook.category);
+    const addable = toAddToGuide.filter((id) => !dupes.has(id));
+    if (addable.length > 0) {
+      const { error } = await adminFrom('lc_exam_resource_map').insert(
+        addable.map((examId) => ({
+          exam_id: examId,
+          resource_id: guideBook.resourceId,
+          category: guideBook.category,
+          confidence: 'high',
+          reasoning: 'Synced from counterpart precis link',
+          source: 'manual',
+        }))
+      );
+      if (error) throw error;
+      guideAdded = addable.length;
+    }
+  }
+
+  // Check duplicates and insert for Precis
+  let precisAdded = 0;
+  if (toAddToPrecis.length > 0) {
+    const dupes = await examsAlreadyHavingResource(precisBook.resourceId, toAddToPrecis, precisBook.category);
+    const addable = toAddToPrecis.filter((id) => !dupes.has(id));
+    if (addable.length > 0) {
+      const { error } = await adminFrom('lc_exam_resource_map').insert(
+        addable.map((examId) => ({
+          exam_id: examId,
+          resource_id: precisBook.resourceId,
+          category: precisBook.category,
+          confidence: 'high',
+          reasoning: 'Synced from counterpart guide link',
+          source: 'manual',
+        }))
+      );
+      if (error) throw error;
+      precisAdded = addable.length;
+    }
+  }
+
+  return {
+    success: true,
+    totalUnion: unionExamIds.length,
+    guideAdded,
+    precisAdded,
+  };
+}
+

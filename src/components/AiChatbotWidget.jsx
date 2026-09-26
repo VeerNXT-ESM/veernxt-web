@@ -392,7 +392,9 @@ export default function AiChatbotWidget() {
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [launcherPosition, setLauncherPosition] = useState(null);
   const chatEndRef = useRef(null);
+  const launcherDragRef = useRef(null);
 
   // Fetch logged in user profile from Supabase
   const fetchUserProfile = useCallback(async () => {
@@ -1016,6 +1018,42 @@ function synthesizeIntelligentResponse(query, profile) {
     resetChatToInitial(userProfile);
   };
 
+  const handleLauncherPointerDown = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    launcherDragRef.current = {
+      pointerId: event.pointerId,
+      offsetX: event.clientX - rect.left,
+      offsetY: event.clientY - rect.top,
+      moved: false,
+    };
+    event.currentTarget.setPointerCapture?.(event.pointerId);
+  };
+
+  const handleLauncherPointerMove = (event) => {
+    const drag = launcherDragRef.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    const size = 58;
+    const margin = 12;
+    const left = Math.min(Math.max(margin, event.clientX - drag.offsetX), window.innerWidth - size - margin);
+    const top = Math.min(Math.max(margin, event.clientY - drag.offsetY), window.innerHeight - size - margin);
+    drag.moved = true;
+    setLauncherPosition({ left, top });
+  };
+
+  const handleLauncherPointerUp = (event) => {
+    const drag = launcherDragRef.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    event.currentTarget.releasePointerCapture?.(event.pointerId);
+  };
+
+  const handleLauncherClick = () => {
+    if (launcherDragRef.current?.moved) {
+      launcherDragRef.current = null;
+      return;
+    }
+    setIsOpen((open) => !open);
+  };
+
   // This widget is candidate-facing (exam prep / Sewa Nidhi / job-search
   // guidance) -- it's mounted globally in App.jsx so it's available on
   // every candidate route without threading it through each page, but that
@@ -1026,9 +1064,15 @@ function synthesizeIntelligentResponse(query, profile) {
     <>
       {/* Floating Chatbot Launcher Button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleLauncherClick}
+        onPointerDown={handleLauncherPointerDown}
+        onPointerMove={handleLauncherPointerMove}
+        onPointerUp={handleLauncherPointerUp}
         aria-label="Toggle VeerNXT AI Support"
+        aria-pressed={isOpen}
+        title="Drag to move • Tap to chat"
         className={`chatbot-fab ${isOpen ? 'active' : ''}`}
+        style={launcherPosition ? { left: `${launcherPosition.left}px`, top: `${launcherPosition.top}px`, right: 'auto', bottom: 'auto' } : undefined}
       >
         {isOpen ? (
           <X size={24} />
@@ -1313,6 +1357,24 @@ function synthesizeIntelligentResponse(query, profile) {
           box-shadow: 0 8px 24px rgba(20, 46, 31, 0.32), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
           z-index: 9999;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
+          touch-action: none;
+          user-select: none;
+        }
+
+        .chatbot-fab::after {
+          content: '';
+          position: absolute;
+          inset: -5px;
+          border: 1px solid rgba(84, 115, 58, 0.28);
+          border-radius: 50% !important;
+          animation: assistantPulse 2.8s ease-out infinite;
+          pointer-events: none;
+        }
+
+        @keyframes assistantPulse {
+          0%, 65%, 100% { transform: scale(1); opacity: 0; }
+          15% { opacity: 0.7; }
+          45% { transform: scale(1.18); opacity: 0; }
         }
 
         .chatbot-fab:hover {
@@ -1323,6 +1385,7 @@ function synthesizeIntelligentResponse(query, profile) {
         .chatbot-fab.active {
           background: #16281a !important;
         }
+        .chatbot-fab.active::after { display: none; }
 
         /* Drawer */
         .chatbot-drawer {
@@ -1372,6 +1435,18 @@ function synthesizeIntelligentResponse(query, profile) {
           background: linear-gradient(120deg, var(--ios-olive, #54733a), #1f331a) !important;
           color: #FFFFFF !important;
           overflow: hidden;
+        }
+        .drawer-header::after {
+          content: '';
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          right: -65px;
+          top: -92px;
+          border: 1px solid rgba(255,255,255,0.16);
+          border-radius: 50% !important;
+          box-shadow: 0 0 0 24px rgba(255,255,255,0.05), 0 0 0 48px rgba(255,255,255,0.035);
+          pointer-events: none;
         }
 
         .header-ribbon {
@@ -1484,6 +1559,9 @@ function synthesizeIntelligentResponse(query, profile) {
             radial-gradient(circle at top right, rgba(84, 115, 58, 0.06), transparent 40%),
             var(--surface-alt, #f5f7f5) !important;
         }
+
+        .drawer-body::-webkit-scrollbar { width: 6px; }
+        .drawer-body::-webkit-scrollbar-thumb { background: rgba(84, 115, 58, 0.28); border-radius: 999px !important; }
 
         .chat-bubble-row {
           display: flex;
@@ -1839,6 +1917,13 @@ function synthesizeIntelligentResponse(query, profile) {
 
         @media (max-width: 380px) {
           .chat-topic-grid.cards-2col, .chat-popular-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .chatbot-fab::after,
+          .msg-bubble,
+          .chatbot-drawer,
+          .typing-dot { animation: none !important; }
         }
 
         .chat-browse-all {

@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Home, Target, Briefcase, Search, MessageSquare, Landmark } from 'lucide-react';
+import { Home, Target, Briefcase, Search, MessageSquare, Landmark, UserCheck } from 'lucide-react';
 import { useAccountSummary } from '../../lib/useAccountSummary';
 
 /**
@@ -23,6 +23,7 @@ export default function BottomNav() {
       ? { key: 'find', label: 'Find', icon: Search, to: '/find-candidates' }
       : { key: 'jobs', label: 'Jobs', icon: Briefcase, to: '/jobs' },
     { key: 'messages', label: 'Messages', icon: MessageSquare, to: '/messaging' },
+    !isEmployer && { key: 'private-sector', label: 'Private Sector', icon: UserCheck, to: '/private-sector' },
     !isEmployer && { key: 'finance', label: 'Finance', icon: Landmark, to: '/financial-guidance' },
   ].filter(Boolean);
 
