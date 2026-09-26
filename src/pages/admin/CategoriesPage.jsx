@@ -10,6 +10,7 @@ import LinkCategoryExamsDrawer from './LinkCategoryExamsDrawer';
 import ThumbnailCell from './ThumbnailCell';
 import { refreshThumbnails } from '../../lib/thumbnailStore';
 import { bundledCategoryThumbnail } from '../../lib/bundledThumbnails';
+import { adminFrom } from '../../lib/adminDb';
 
 const thumbOf = (c) => c.thumbnail_url || bundledCategoryThumbnail(c.name);
 
@@ -137,7 +138,7 @@ const CategoriesPage = () => {
   };
 
   const saveThumbnail = async (cat, url) => {
-    const { error } = await supabase.from('lc_exam_categories').update({ thumbnail_url: url }).eq('id', cat.id);
+    const { error } = await adminFrom('lc_exam_categories').update({ thumbnail_url: url }).eq('id', cat.id);
     if (error) throw error;
     setCategories((prev) => prev.map((c) => (c.id === cat.id ? { ...c, thumbnail_url: url } : c)));
     refreshThumbnails();
@@ -157,7 +158,7 @@ const CategoriesPage = () => {
     setSaving(true);
     setAddError('');
     try {
-      const { data, error } = await supabase.from('lc_exam_categories').insert({ name }).select('id,name,created_at,thumbnail_url').single();
+      const { data, error } = await adminFrom('lc_exam_categories').insert({ name }).select('id,name,created_at,thumbnail_url').single();
       if (error) throw error;
       setCategories((prev) => [...prev, data].sort((a, b) => a.name.localeCompare(b.name)));
       setShowAddModal(false);
@@ -190,7 +191,7 @@ const CategoriesPage = () => {
     setSaving(true);
     setRenameError('');
     try {
-      const { error: catUpdateErr } = await supabase.from('lc_exam_categories').update({ name }).eq('id', renaming.id);
+      const { error: catUpdateErr } = await adminFrom('lc_exam_categories').update({ name }).eq('id', renaming.id);
       if (catUpdateErr) throw catUpdateErr;
 
       // Cascade the rename onto every exam currently using the old name --
@@ -198,7 +199,7 @@ const CategoriesPage = () => {
       // sync automatically.
       const affectedCount = examCounts[renaming.name] || 0;
       if (affectedCount > 0) {
-        const { error: examUpdateErr } = await supabase.from('lc_exams').update({ category: name }).eq('category', renaming.name);
+        const { error: examUpdateErr } = await adminFrom('lc_exams').update({ category: name }).eq('category', renaming.name);
         if (examUpdateErr) throw examUpdateErr;
       }
 
@@ -223,7 +224,7 @@ const CategoriesPage = () => {
     if (!deleteTarget) return;
     setSaving(true);
     try {
-      const { error } = await supabase.from('lc_exam_categories').delete().eq('id', deleteTarget.id);
+      const { error } = await adminFrom('lc_exam_categories').delete().eq('id', deleteTarget.id);
       if (error) throw error;
       setCategories((prev) => prev.filter((c) => c.id !== deleteTarget.id));
       setDeleteTarget(null);

@@ -5,6 +5,7 @@ import { supabase } from '../../lib/supabase';
 import { examsAlreadyHavingResource } from '../../lib/resourceDuplicates';
 import Select from '../../components/ui/Select';
 import { DocxPreview } from './DocxPreview';
+import { adminFrom } from '../../lib/adminDb';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 const VERCEL_SAFE_BYTES = 3.3 * 1024 * 1024; // deployed Vercel functions cap request bodies ~4.5MB; base64 adds ~33% -- larger files go straight to R2 instead
@@ -438,19 +439,16 @@ const PublishContentPage = () => {
         if (category === 'Intro') {
           // If associated with an exam, update lc_exam_intro and lc_exam_resource_map
           if (selectedBookToReplace.examId) {
-            await supabase
-              .from('lc_exam_intro')
+            await adminFrom('lc_exam_intro')
               .upsert(
                 { exam_id: selectedBookToReplace.examId, resource_id: data.resourceId, manual_title: null, manual_body: null, source: 'auto', updated_at: new Date().toISOString() },
                 { onConflict: 'exam_id' }
               );
-            await supabase
-              .from('lc_exam_resource_map')
+            await adminFrom('lc_exam_resource_map')
               .delete()
               .eq('exam_id', selectedBookToReplace.examId)
               .eq('category', 'Intro');
-            await supabase
-              .from('lc_exam_resource_map')
+            await adminFrom('lc_exam_resource_map')
               .insert({
                 exam_id: selectedBookToReplace.examId,
                 resource_id: data.resourceId,
@@ -473,8 +471,7 @@ const PublishContentPage = () => {
           ];
 
           if (allOldResIds.length > 0) {
-            await supabase
-              .from('lc_exam_resource_map')
+            await adminFrom('lc_exam_resource_map')
               .update({
                 resource_id: data.resourceId,
                 confidence: 'high',
@@ -499,7 +496,7 @@ const PublishContentPage = () => {
                 .eq('resource_id', data.resourceId)
                 .maybeSingle();
               if (!existingLink) {
-                await supabase.from('lc_exam_resource_map').insert({
+                await adminFrom('lc_exam_resource_map').insert({
                   exam_id: link.examId,
                   resource_id: data.resourceId,
                   category,
@@ -548,7 +545,7 @@ const PublishContentPage = () => {
           source: 'manual',
         }));
         if (rows.length > 0) {
-          const { error: mapErr } = await supabase.from('lc_exam_resource_map').insert(rows);
+          const { error: mapErr } = await adminFrom('lc_exam_resource_map').insert(rows);
           if (mapErr) {
             throw new Error(`Resource published, but attaching to exam(s) failed: ${mapErr.message}. Attach it manually via each exam's Resources panel.`);
           }

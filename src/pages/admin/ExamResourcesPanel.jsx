@@ -4,6 +4,7 @@ import { supabase } from '../../lib/supabase';
 import { examsAlreadyHavingResource, loadResourceKeys, isSameResource } from '../../lib/resourceDuplicates';
 import Select from '../../components/ui/Select';
 import AdminResourcePreview from './AdminResourcePreview';
+import { adminFrom } from '../../lib/adminDb';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
@@ -89,13 +90,13 @@ const ExamResourcesPanel = ({ examId }) => {
     // row behind it -- its link lives in lc_exam_intro, keyed by exam_id.
     const isSyntheticIntro = mapping.id === `intro-${examId}`;
     const { error } = isSyntheticIntro
-      ? await supabase.from('lc_exam_intro').delete().eq('exam_id', examId)
-      : await supabase.from('lc_exam_resource_map').delete().eq('id', mapping.id);
+      ? await adminFrom('lc_exam_intro').delete().eq('exam_id', examId)
+      : await adminFrom('lc_exam_resource_map').delete().eq('id', mapping.id);
     if (error) { alert('Failed: ' + error.message); return; }
     // A real Intro map row can also have a matching lc_exam_intro row; leave
     // it and the Intro would reappear (as a synthetic row) on the next fetch.
     if (!isSyntheticIntro && mapping.category === 'Intro' && mapping.resource_id) {
-      await supabase.from('lc_exam_intro').delete().eq('exam_id', examId).eq('resource_id', mapping.resource_id);
+      await adminFrom('lc_exam_intro').delete().eq('exam_id', examId).eq('resource_id', mapping.resource_id);
     }
     setMappings((prev) => prev.filter((m) => m.id !== mapping.id));
   };
@@ -375,7 +376,7 @@ const AddResourceMapDrawer = ({ examId, initialCategory, existingResourceIds, on
     }
     if (skipped.length > 0) alert(`Not added -- this exam already has the same resource: ${skipped.join(', ')}`);
     if (toAdd.length === 0) { setSaving(false); onClose(); return; }
-    const { error } = await supabase.from('lc_exam_resource_map').insert(toAdd.map((r) => ({
+    const { error } = await adminFrom('lc_exam_resource_map').insert(toAdd.map((r) => ({
       exam_id: examId,
       resource_id: r.resource_id,
       category: r.category,

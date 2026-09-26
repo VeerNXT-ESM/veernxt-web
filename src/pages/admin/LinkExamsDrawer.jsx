@@ -6,6 +6,7 @@ import Select from '../../components/ui/Select';
 import { CENTRAL_EXAM_CATEGORIES } from '../../lib/centralExamCategories';
 import { STATE_EXAM_CATEGORIES } from '../../lib/stateExamCategories';
 import { UT_EXAM_CATEGORIES } from '../../lib/utExamCategories';
+import { adminFrom } from '../../lib/adminDb';
 
 // Blue marks everything that is already linked to the book, so it's easy to tell
 // apart from the rest of the list. rgba tints so it reads on dark and light admin themes.
@@ -212,7 +213,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
       alert(`${dupes.size} exam${dupes.size === 1 ? '' : 's'} already ha${dupes.size === 1 ? 's' : 've'} an identical copy of this resource and ${dupes.size === 1 ? 'was' : 'were'} skipped: ${names.slice(0, 8).join(', ')}${names.length > 8 ? ` +${names.length - 8} more` : ''}`);
     }
     if (addable.length > 0) {
-      const { error: insErr } = await supabase.from('lc_exam_resource_map').insert(addable.map((examId) => ({
+      const { error: insErr } = await adminFrom('lc_exam_resource_map').insert(addable.map((examId) => ({
         exam_id: examId,
         resource_id: book.resourceId,
         category: book.category,
@@ -224,7 +225,7 @@ const LinkExamsDrawer = ({ book, onClose, onLinked }) => {
     }
     if (toRemove.length > 0) {
       // Links can sit on any resources row serving this book's content, so unlink across all of them.
-      const { error: delErr } = await supabase.from('lc_exam_resource_map').delete()
+      const { error: delErr } = await adminFrom('lc_exam_resource_map').delete()
         .in('resource_id', linkedResourceIds).eq('category', book.category).in('exam_id', toRemove);
       if (delErr) { setSaving(false); setError(delErr.message); return; }
     }

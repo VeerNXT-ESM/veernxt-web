@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
+
+const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 import { ArrowLeft, Save, Eye, Pencil, RefreshCw } from 'lucide-react';
 import QuestionEditorList from '../../components/admin/QuestionEditorList';
 import QuestionSetPreview from '../../components/admin/QuestionSetPreview';
@@ -69,28 +71,22 @@ const PyqPaperEditor = () => {
     setSaving(true);
     setSaveError(null);
     try {
-      // Delete-and-reinsert per paper -- same pattern AdminQuizEditor
-      // already uses for the sibling `questions` table; scoped to one
-      // paper's own rows (typically well under 200), not the full
-      // 76,900-row table.
-      const { error: delErr } = await supabase.from('pyq_questions').delete().eq('paper_id', id);
-      if (delErr) throw delErr;
-
+      // pyq_questions is read-only for the anon key (RLS), so the replace runs server-side
+      // (api/admin/misc.js fn=content-writes): new rows are inserted first, old ones deleted after.
       const rows = questions.map((q, idx) => ({
-        paper_id: id,
         question_number: q.question_number ?? idx + 1,
         question_text: q.question_text || '',
         options: q.options || { A: '', B: '', C: '', D: '' },
         correct_answer: q.correct_answer || null,
         explanation: q.explanation || null,
       }));
-      if (rows.length > 0) {
-        const { error: insErr } = await supabase.from('pyq_questions').insert(rows);
-        if (insErr) throw insErr;
-      }
-
-      const { error: countErr } = await supabase.from('pyq_papers').update({ total_questions: rows.length }).eq('id', id);
-      if (countErr) throw countErr;
+      const res = await fetch('/api/admin/content-writes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
+        body: JSON.stringify({ action: 'pyq-questions-replace', paper_id: id, questions: rows }),
+      });
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok || !out.ok) throw new Error(out.error || `Save failed (${res.status})`);
 
       setPaper((prev) => ({ ...prev, total_questions: rows.length }));
       // Re-fetch so locally-held rows pick up real DB ids for their new rows.

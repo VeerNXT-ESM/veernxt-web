@@ -6,6 +6,7 @@ import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import ExamThumbnail from './ExamThumbnail';
 import { Save, Plus, X, Trash2, Copy, ExternalLink } from 'lucide-react';
+import { adminFrom } from '../../lib/adminDb';
 
 const ACCENT_COLORS = ['#4b6b32', '#1F3A2E', '#b89047', '#2563eb', '#7c3aed', '#dc2626'];
 const LEVEL_OPTIONS = [
@@ -174,11 +175,11 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
       };
 
       if (isNew) {
-        const { data, error } = await supabase.from('lc_exams').insert(payload).select().single();
+        const { data, error } = await adminFrom('lc_exams').insert(payload).select().single();
         if (error) throw error;
         onCreated?.(data);
       } else {
-        const { error } = await supabase.from('lc_exams').update({ ...payload, updated_at: new Date().toISOString() }).eq('id', examId);
+        const { error } = await adminFrom('lc_exams').update({ ...payload, updated_at: new Date().toISOString() }).eq('id', examId);
         if (error) throw error;
         onSaved?.();
         fetchExam(examId);
@@ -197,12 +198,12 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
 
     setDeleting(true);
     try {
-      await supabase.from('lc_exam_tags').delete().eq('exam_id', examId);
-      await supabase.from('lc_exam_resource_map').delete().eq('exam_id', examId);
-      await supabase.from('lc_exam_intro').delete().eq('exam_id', examId);
-      await supabase.from('lc_exam_quiz_map').delete().eq('exam_id', examId);
+      await adminFrom('lc_exam_tags').delete().eq('exam_id', examId);
+      await adminFrom('lc_exam_resource_map').delete().eq('exam_id', examId);
+      await adminFrom('lc_exam_intro').delete().eq('exam_id', examId);
+      await adminFrom('lc_exam_quiz_map').delete().eq('exam_id', examId);
 
-      const { error } = await supabase.from('lc_exams').delete().eq('id', examId);
+      const { error } = await adminFrom('lc_exams').delete().eq('id', examId);
       if (error) throw error;
 
       onDeleted?.(examId);
@@ -232,7 +233,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
         accent_color: form.accent_color,
         status: 'draft',
       };
-      const { data, error } = await supabase.from('lc_exams').insert(payload).select().single();
+      const { data, error } = await adminFrom('lc_exams').insert(payload).select().single();
       if (error) throw error;
       onCreated?.(data);
     } catch (err) {
@@ -247,7 +248,7 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
     const nextStatus = e.target.checked ? 'published' : 'draft';
     setStatus(nextStatus);
     setStatusSaving(true);
-    const { error } = await supabase.from('lc_exams').update({ status: nextStatus, updated_at: new Date().toISOString() }).eq('id', examId);
+    const { error } = await adminFrom('lc_exams').update({ status: nextStatus, updated_at: new Date().toISOString() }).eq('id', examId);
     setStatusSaving(false);
     if (error) { alert('Failed to update status: ' + error.message); setStatus((s) => (s === 'published' ? 'draft' : 'published')); }
   };
@@ -259,19 +260,19 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
     setTagInput('');
     let tag = allTags.find((t) => t.name.toLowerCase() === trimmed.toLowerCase());
     if (!tag) {
-      const { data, error } = await supabase.from('lc_tags').insert({ name: trimmed }).select().single();
+      const { data, error } = await adminFrom('lc_tags').insert({ name: trimmed }).select().single();
       if (error) { alert('Failed to create tag: ' + error.message); return; }
       tag = data;
       setAllTags((prev) => [...prev, tag]);
     }
     if (examTags.some((t) => t.id === tag.id)) return;
-    const { error } = await supabase.from('lc_exam_tags').insert({ exam_id: examId, tag_id: tag.id });
+    const { error } = await adminFrom('lc_exam_tags').insert({ exam_id: examId, tag_id: tag.id });
     if (error) { alert('Failed to attach tag: ' + error.message); return; }
     setExamTags((prev) => [...prev, tag]);
   };
 
   const removeTag = async (tag) => {
-    await supabase.from('lc_exam_tags').delete().eq('exam_id', examId).eq('tag_id', tag.id);
+    await adminFrom('lc_exam_tags').delete().eq('exam_id', examId).eq('tag_id', tag.id);
     setExamTags((prev) => prev.filter((t) => t.id !== tag.id));
   };
 

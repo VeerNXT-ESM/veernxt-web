@@ -3,6 +3,7 @@ import { supabase } from '../../lib/supabase';
 import { uploadFilesToR2 } from '../../lib/r2Uploader';
 import { useDebounced } from './lcShared';
 import { Search, Landmark, Upload, RefreshCw, CheckCircle2, XCircle, Plus, X } from 'lucide-react';
+import { adminFrom } from '../../lib/adminDb';
 
 // Manual logo replacements land under a distinct R2 prefix (not
 // exam-logos/, which scripts/upload_logos_to_r2.mjs owns and could
@@ -29,7 +30,7 @@ function LogoCell({ body, onReplaced }) {
     try {
       const urls = await uploadFilesToR2([{ key: r2KeyFor(body.id, file), body: file, contentType: file.type || 'image/png' }]);
       const url = Object.values(urls)[0];
-      const { error } = await supabase.from('lc_conducting_bodies').update({ logo_path: url }).eq('id', body.id);
+      const { error } = await adminFrom('lc_conducting_bodies').update({ logo_path: url }).eq('id', body.id);
       if (error) throw error;
       onReplaced(body.id, url);
       setFeedback('ok');
@@ -140,7 +141,7 @@ const ConductingBodiesPage = () => {
     setAddError('');
     try {
       const website = newBody.website.trim() || null;
-      const { data, error } = await supabase.from('lc_conducting_bodies').insert({ name, website }).select('id,name,logo_path').single();
+      const { data, error } = await adminFrom('lc_conducting_bodies').insert({ name, website }).select('id,name,logo_path').single();
       if (error) throw error;
       setBodies((prev) => [...prev, data].sort((a, b) => a.name.localeCompare(b.name)));
       setShowAddModal(false);

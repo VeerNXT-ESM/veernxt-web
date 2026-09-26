@@ -5,6 +5,7 @@ import Select from '../../components/ui/Select';
 import { useDebounced } from './lcShared';
 import { Search, Save, X, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { THUMBNAIL_SUBJECTS } from '../../lib/thumbnailTaxonomy';
+import { adminFrom } from '../../lib/adminDb';
 
 const SUBJECT_OPTIONS = Object.values(THUMBNAIL_SUBJECTS).map((s) => s.label).sort();
 const PAGE_SIZE = 10;
@@ -127,7 +128,7 @@ const PyqPapersPage = () => {
   const applyBulkSubject = async () => {
     if (!bulkSubject || selectedIds.length === 0) return;
     setApplying(true);
-    const { error } = await supabase.from('pyq_papers').update({ subject: bulkSubject }).in('id', selectedIds);
+    const { error } = await adminFrom('pyq_papers').update({ subject: bulkSubject }).in('id', selectedIds);
     setApplying(false);
     if (error) {
       alert('Error applying subject: ' + error.message);
@@ -193,7 +194,7 @@ const PyqPapersPage = () => {
 
     setSavingRowId(p.id);
     try {
-      const { error } = await supabase.from('pyq_papers').update(patch).eq('id', p.id);
+      const { error } = await adminFrom('pyq_papers').update(patch).eq('id', p.id);
       if (error) throw error;
       setPapers((prev) => prev.map((x) => (x.id === p.id ? { ...x, ...patch } : x)));
       handleDiscardRow(p);

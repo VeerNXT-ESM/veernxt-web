@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../../lib/supabase';
+
+const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 import { Search, BookOpen } from 'lucide-react';
 import { THUMBNAIL_SUBJECTS, COLOR_FAMILIES } from '../../lib/thumbnailTaxonomy';
 import { refreshThumbnails, bundledSubjectThumbnail } from '../../lib/thumbnailStore';
@@ -35,10 +37,14 @@ const SubjectsPage = () => {
 
   const saveThumbnail = async (key, url) => {
     const subject = THUMBNAIL_SUBJECTS[key];
-    const { error } = await supabase
-      .from('lc_subjects')
-      .upsert({ key, label: subject.label, color_family: subject.family, thumbnail_url: url }, { onConflict: 'key' });
-    if (error) throw error;
+    // lc_subjects is read-only for the anon key (RLS), so the write goes through the admin API.
+    const res = await fetch('/api/admin/content-writes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
+      body: JSON.stringify({ action: 'subject-thumbnail', key, label: subject.label, color_family: subject.family, thumbnail_url: url }),
+    });
+    const out = await res.json().catch(() => ({}));
+    if (!res.ok || !out.ok) throw new Error(out.error || `Save failed (${res.status})`);
     setUrls((prev) => ({ ...prev, [key]: url }));
     refreshThumbnails();
   };

@@ -17,6 +17,14 @@
  * fn=redemptions:
  *   GET                                  -> list all redemptions
  *   POST { redemption_id, status, ... }  -> update redemption status
+ *
+ * fn=content-writes  (lc_subjects / pyq_questions have RLS on with public read only,
+ *                     so admin edits go through the service role here):
+ *   POST { action: 'subject-thumbnail', key, label, color_family, thumbnail_url }
+ *   POST { action: 'pyq-questions-replace', paper_id, questions: [...] }
+ *   POST { action: 'table-write', table, op, values, options, filters, select }
+ *        generic insert/update/upsert/delete for the lc_* catalogue tables + pyq_papers
+ *        (see WRITABLE_TABLES); reached from the browser via src/lib/adminDb.js
  */
 
 import Joi from 'joi';
@@ -243,10 +251,136 @@ async function routeRedemptions(req, res) {
 }
 
 // ---------------------------------------------------------------------
+// fn=content-writes
+//
+// lc_subjects and pyq_questions have RLS enabled with a public-read policy only
+// (sql/lc_subjects_pyq_questions_rls.sql), so the anon key can no longer write
+// them. The two admin pages that edit them post here instead. Gated by the same
+// shared x-admin-api-secret header as fn=redemptions (not real auth).
+// ---------------------------------------------------------------------
+
+const subjectSchema = Joi.object({
+  action: Joi.string().valid('subject-thumbnail').required(),
+  key: Joi.string().max(100).required(),
+  label: Joi.string().max(200).required(),
+  color_family: Joi.string().max(100).allow('', null),
+  thumbnail_url: Joi.string().max(2000).allow('', null),
+});
+
+const pyqSchema = Joi.object({
+  action: Joi.string().valid('pyq-questions-replace').required(),
+  paper_id: Joi.string().uuid().required(),
+  questions: Joi.array().max(2000).items(Joi.object({
+    question_number: Joi.number().integer().required(),
+    question_text: Joi.string().allow('').required(),
+    options: Joi.object().required(),
+    correct_answer: Joi.string().allow('', null),
+    explanation: Joi.string().allow('', null),
+  })).required(),
+});
+
+// Tables the admin panel edits from the browser. RLS is on for all of them with a public-read policy
+// only (sql/lc_tables_rls.sql), so every write goes through this route with the service role.
+const WRITABLE_TABLES = [
+  'lc_conducting_bodies', 'lc_exam_categories', 'lc_exam_intro', 'lc_exam_quiz_map', 'lc_exam_resource_map',
+  'lc_exam_tags', 'lc_exams', 'lc_reader_themes', 'lc_regions', 'lc_tags', 'lc_thumbnail_templates', 'pyq_papers',
+];
+const IDENT = /^[a-z_][a-z0-9_]*$/;
+const tableWriteSchema = Joi.object({
+  action: Joi.string().valid('table-write').required(),
+  table: Joi.string().valid(...WRITABLE_TABLES).required(),
+  op: Joi.string().valid('insert', 'update', 'upsert', 'delete').required(),
+  values: Joi.alternatives(Joi.object(), Joi.array().max(5000).items(Joi.object())).when('op', { is: 'delete', then: Joi.forbidden(), otherwise: Joi.required() }),
+  options: Joi.object({ onConflict: Joi.string().pattern(/^[a-z_][a-z0-9_,]*$/) }).default({}),
+  filters: Joi.array().max(10).items(Joi.object({
+    type: Joi.string().valid('eq', 'in').required(),
+    column: Joi.string().pattern(IDENT).required(),
+    value: Joi.when('type', { is: 'in', then: Joi.array().max(20000).items(Joi.alternatives(Joi.string(), Joi.number())).required(), otherwise: Joi.alternatives(Joi.string(), Joi.number(), Joi.boolean()).required() }),
+  })).default([]),
+  select: Joi.string().pattern(/^[a-z0-9_,*\s]+$/i).allow(null),
+});
+
+async function handleTableWrite(req, res, supabaseAdmin) {
+  const { error, value } = tableWriteSchema.validate(req.body, { stripUnknown: true });
+  if (error) return res.status(400).json({ ok: false, error: { message: error.message } });
+  // A bare update/delete would hit every row -- always require at least one filter.
+  if ((value.op === 'update' || value.op === 'delete') && value.filters.length === 0) {
+    return res.status(400).json({ ok: false, error: { message: `${value.op} requires at least one filter` } });
+  }
+  let q = supabaseAdmin.from(value.table);
+  if (value.op === 'insert') q = q.insert(value.values);
+  else if (value.op === 'update') q = q.update(value.values);
+  else if (value.op === 'upsert') q = q.upsert(value.values, value.options?.onConflict ? { onConflict: value.options.onConflict } : undefined);
+  else q = q.delete();
+  for (const f of value.filters) q = f.type === 'in' ? q.in(f.column, f.value) : q.eq(f.column, f.value);
+  if (value.select) q = q.select(value.select);
+  const { data, error: dbErr } = await q;
+  if (dbErr) {
+    console.error(`[admin/misc:table-write:${value.table}.${value.op}]`, dbErr.message);
+    return res.status(200).json({ ok: true, data: null, error: { message: dbErr.message, code: dbErr.code, details: dbErr.details } });
+  }
+  return res.status(200).json({ ok: true, data: data ?? null, error: null });
+}
+
+async function routeContentWrites(req, res) {
+  if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'Method not allowed' });
+
+  const expectedSecret = process.env.ADMIN_API_SECRET;
+  if (!expectedSecret || req.headers['x-admin-api-secret'] !== expectedSecret) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized' });
+  }
+  const supabaseAdmin = getSupabaseAdmin();
+  if (!supabaseAdmin) return res.status(500).json({ ok: false, error: 'Server misconfiguration' });
+
+  const action = req.body?.action;
+
+  if (action === 'table-write') return handleTableWrite(req, res, supabaseAdmin);
+
+  if (action === 'subject-thumbnail') {
+    const { error, value } = subjectSchema.validate(req.body, { stripUnknown: true });
+    if (error) return res.status(400).json({ ok: false, error: error.message });
+    const { error: dbErr } = await supabaseAdmin.from('lc_subjects').upsert({
+      key: value.key, label: value.label, color_family: value.color_family || null, thumbnail_url: value.thumbnail_url || null,
+    }, { onConflict: 'key' });
+    if (dbErr) { console.error('[admin/misc:content-writes:subject]', dbErr.message); return res.status(500).json({ ok: false, error: 'Failed to save subject' }); }
+    return res.status(200).json({ ok: true });
+  }
+
+  if (action === 'pyq-questions-replace') {
+    const { error, value } = pyqSchema.validate(req.body, { stripUnknown: true });
+    if (error) return res.status(400).json({ ok: false, error: error.message });
+    try {
+      // Insert the new rows first and delete the old ones only after that succeeded,
+      // so a failed insert can never leave the paper with no questions.
+      const { data: old, error: oldErr } = await supabaseAdmin.from('pyq_questions').select('id').eq('paper_id', value.paper_id);
+      if (oldErr) throw oldErr;
+      const rows = value.questions.map((q) => ({
+        paper_id: value.paper_id, question_number: q.question_number, question_text: q.question_text,
+        options: q.options, correct_answer: q.correct_answer || null, explanation: q.explanation || null,
+      }));
+      if (rows.length) { const { error: insErr } = await supabaseAdmin.from('pyq_questions').insert(rows); if (insErr) throw insErr; }
+      const oldIds = (old || []).map((r) => r.id);
+      for (let i = 0; i < oldIds.length; i += 200) {
+        const { error: delErr } = await supabaseAdmin.from('pyq_questions').delete().in('id', oldIds.slice(i, i + 200)); if (delErr) throw delErr;
+      }
+      const { error: cErr } = await supabaseAdmin.from('pyq_papers').update({ total_questions: rows.length }).eq('id', value.paper_id);
+      if (cErr) throw cErr;
+      return res.status(200).json({ ok: true, total_questions: rows.length });
+    } catch (err) {
+      console.error('[admin/misc:content-writes:pyq]', err.message);
+      return res.status(500).json({ ok: false, error: 'Failed to save questions' });
+    }
+  }
+
+  return res.status(400).json({ ok: false, error: "action must be 'subject-thumbnail', 'pyq-questions-replace' or 'table-write'" });
+}
+
+// ---------------------------------------------------------------------
 
 export default async function handler(req, res) {
   const fn = req.query?.fn;
   if (fn === 'admins') return routeAdmins(req, res);
   if (fn === 'redemptions') return routeRedemptions(req, res);
-  return res.status(400).json({ ok: false, error: "Missing or unknown ?fn= (expected 'admins' or 'redemptions')" });
+  if (fn === 'content-writes') return routeContentWrites(req, res);
+  return res.status(400).json({ ok: false, error: "Missing or unknown ?fn= (expected 'admins', 'redemptions' or 'content-writes')" });
 }

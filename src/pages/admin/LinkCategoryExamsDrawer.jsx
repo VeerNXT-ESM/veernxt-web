@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Search, X, ArrowRight, Undo2 } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
+import { adminFrom } from '../../lib/adminDb';
 
 const LEVEL_PILLS = [
   { id: '', label: 'All' },
@@ -121,11 +122,11 @@ const LinkCategoryExamsDrawer = ({ category, allCategories, onClose, onLinked })
     setSaving(true);
     setError(null);
     if (toAdd.length > 0) {
-      const { error: addErr } = await supabase.from('lc_exams').update({ category: category.name }).in('id', toAdd);
+      const { error: addErr } = await adminFrom('lc_exams').update({ category: category.name }).in('id', toAdd);
       if (addErr) { setSaving(false); setError(addErr.message); return; }
     }
     for (const [examId, newCategory] of replacements) {
-      const { error: moveErr } = await supabase.from('lc_exams').update({ category: newCategory }).eq('id', examId);
+      const { error: moveErr } = await adminFrom('lc_exams').update({ category: newCategory }).eq('id', examId);
       if (moveErr) { setSaving(false); setError(moveErr.message); return; }
     }
     setSaving(false);
