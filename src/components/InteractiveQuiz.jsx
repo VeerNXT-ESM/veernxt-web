@@ -7,6 +7,7 @@ import { awardPoints } from '../lib/awardPoints';
 import { QuizSetup } from './quiz/QuizSetup';
 import { QuizView } from './quiz/QuizView';
 import { QuizResults } from './quiz/QuizResults';
+import { BLOCKING_FLAGS_FILTER } from '../lib/quizQuality';
 
 const MAX_QUIZ_QUESTIONS = 6;
 
@@ -68,7 +69,14 @@ const InteractiveQuiz = () => {
 
         setIsFreeAttempt(!!quizAccess.isFreeAttempt);
 
-        const { data: questionsData } = await supabase.from('questions').select('*').eq('quiz_id', id).order('question_number');
+        // Skip questions the content team still has to fix (wrong/missing key, broken options, duplicates...)
+        const { data: questionsData } = await supabase
+          .from('questions')
+          .select('*')
+          .eq('quiz_id', id)
+          .not('review_flags', 'ov', BLOCKING_FLAGS_FILTER)
+          .not('correct_answer', 'is', null)
+          .order('question_number');
         
         // Clean options and extract dynamic explanations
         const parsedQuestions = (questionsData || []).map(q => {
@@ -359,6 +367,24 @@ const InteractiveQuiz = () => {
               Back to Learning Center
             </button>
           </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Quizzes with no playable questions yet are listed on purpose (so the content team can see and fix
+  // them); opening one must not start an empty session (0/0 scores, NaN percentages).
+  if (quizPhase === 'setup' && questions.length === 0 && !savedQuiz) {
+    return (
+      <div style={{ minHeight: '100vh', background: 'var(--ios-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem 1.5rem' }}>
+        <div style={{ background: '#fff', borderRadius: '24px', padding: '2.5rem 2rem', maxWidth: '440px', width: '100%', textAlign: 'center', boxShadow: '0 12px 32px rgba(0,0,0,0.12)' }}>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>{quiz.title}</h3>
+          <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '1.75rem', lineHeight: 1.5 }}>
+            This mock test is being prepared. Its questions are still being reviewed, so it can't be attempted yet. Please check back soon.
+          </p>
+          <button onClick={() => navigate('/learning-center')} className="btn-primary ios-pill" style={{ border: 'none', padding: '0.85rem 2rem', fontSize: '0.95rem', color: 'white', cursor: 'pointer' }}>
+            Back to Learning Center
+          </button>
         </div>
       </div>
     );

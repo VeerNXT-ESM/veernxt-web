@@ -4,6 +4,7 @@ import { supabase } from '../lib/supabase';
 import { Brain, Search, RefreshCw, Lock, ArrowLeft } from 'lucide-react';
 import { getEffectiveTier, canTakeQuiz } from '../lib/subscriptionAccess';
 import { resolveCanonicalSubjectLabel, getFamilyHex } from '../lib/thumbnailTaxonomy';
+import { MIN_PLAYABLE_QUESTIONS } from '../lib/quizQuality';
 
 export default function QuizCenter() {
   const [quizzes, setQuizzes] = useState([]);
@@ -60,6 +61,14 @@ export default function QuizCenter() {
                   .eq('exam_id', examIdToLoad);
                 if (mapRows && mapRows.length > 0) {
                   setMappedQuizIds(new Set(mapRows.map((r) => r.quiz_id)));
+                } else {
+                  // No curated map yet: mock tests are linked directly to their exam via quizzes.lc_exam_id.
+                  const { data: linked } = await supabase
+                    .from('quizzes')
+                    .select('id')
+                    .eq('lc_exam_id', examIdToLoad)
+                    .eq('category', 'Mock Test');
+                  if (linked && linked.length > 0) setMappedQuizIds(new Set(linked.map((r) => r.id)));
                 }
               } catch (e) {
                 console.warn('lc_exam_quiz_map query fallback:', e);
@@ -68,14 +77,23 @@ export default function QuizCenter() {
           }
         }
 
-        const { data, error } = await supabase
-          .from('quizzes')
-          .select('*')
-          .eq('category', 'Mock Test')
-          .order('title');
-
-        if (error) throw error;
-        setQuizzes(data || []);
+        // PostgREST caps a single response at 1,000 rows and there are ~1,900 mock tests: page through
+        // them all. Quizzes are listed even when few/no questions are playable yet (MIN_PLAYABLE_QUESTIONS = 0).
+        const all = [];
+        for (let from = 0; ; from += 1000) {
+          const { data, error } = await supabase
+            .from('quizzes')
+            .select('*')
+            .eq('category', 'Mock Test')
+            .gte('playable_questions', MIN_PLAYABLE_QUESTIONS)
+            .order('title')
+            .order('id')
+            .range(from, from + 999);
+          if (error) throw error;
+          all.push(...(data || []));
+          if (!data || data.length < 1000) break;
+        }
+        setQuizzes(all);
       } catch (err) {
         console.error('Error fetching quizzes:', err);
       } finally {

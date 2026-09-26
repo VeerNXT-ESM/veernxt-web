@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import { MIN_PLAYABLE_QUESTIONS } from '../lib/quizQuality';
 
 const TRACKABLE_CATEGORIES = ['Guide', 'Precis', 'PYQ'];
 
@@ -150,17 +151,32 @@ function careerTrackKeyword(examName, careerTrack) {
   return examName.split(' ')[0];
 }
 
-async function fetchQuizzesByExamName(examName, careerTrack, category = 'Mock Test') {
-  let quizData = await supabase.from('quizzes').select('*').eq('exam_name', examName).eq('category', category);
+async function fetchQuizzesByExamName(examName, careerTrack, category = 'Mock Test', examId = null) {
+  // 1. Exact link: quizzes.lc_exam_id (set when the mock test was ingested from the exam's own Drive folder).
+  //    Quizzes with too few playable questions are held back until the content team fixes them.
+  if (examId) {
+    const linked = await supabase
+      .from('quizzes')
+      .select('*')
+      .eq('lc_exam_id', examId)
+      .eq('category', category)
+      .gte('playable_questions', MIN_PLAYABLE_QUESTIONS)
+      .order('title');
+    if (linked.data && linked.data.length > 0) return linked.data;
+  }
+
+  // 2. Legacy name matching -- ONLY for quizzes not linked to a specific exam, so a quiz linked to one exam
+  //    (e.g. West Bengal Police "Constable") can never show up under another exam that shares the name.
+  let quizData = await supabase.from('quizzes').select('*').is('lc_exam_id', null).eq('exam_name', examName).eq('category', category);
 
   if (!quizData.data || quizData.data.length === 0) {
     const escaped = examName.replace(/[%_]/g, (c) => `\\${c}`);
-    quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${escaped}%`).eq('category', category);
+    quizData = await supabase.from('quizzes').select('*').is('lc_exam_id', null).ilike('exam_name', `%${escaped}%`).eq('category', category);
   }
 
   if ((!quizData.data || quizData.data.length === 0) && careerTrack) {
     const fallbackTerm = careerTrackKeyword(examName, careerTrack);
-    quizData = await supabase.from('quizzes').select('*').ilike('exam_name', `%${fallbackTerm}%`).eq('category', category);
+    quizData = await supabase.from('quizzes').select('*').is('lc_exam_id', null).ilike('exam_name', `%${fallbackTerm}%`).eq('category', category);
   }
 
   return quizData.data || [];
@@ -206,7 +222,7 @@ export function useExamContent(examName, careerTrack, examId) {
       try {
         const [mappedResult, quizRows, introData] = await Promise.all([
           examId ? fetchMappedResources(examId) : Promise.resolve({ resources: [], mappedCategories: new Set() }),
-          fetchQuizzesByExamName(examName, careerTrack),
+          fetchQuizzesByExamName(examName, careerTrack, 'Mock Test', examId),
           examId ? fetchExamIntro(examId) : Promise.resolve(null),
         ]);
 
