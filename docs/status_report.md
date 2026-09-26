@@ -3118,3 +3118,6 @@ Pushed `904dc0d..de4ef31` to `main`. The merge with 24 origin commits conflicted
 
 ### 68.6 Open
 The Reasoning names (68.1), the canonical English Precis, the five "2026 ..." copies (66.2), applying the content team's 09-23/24 links again once the duplicate rule is agreed, and a `git pull` of local main once `SecureReader.jsx` is committed. The unique index `sql/lc_exam_resource_map_unique.sql` is still not run.
+
+### 68.7 Outcome (user review, 2026-09-26)
+The user reviewed the result and accepted it ("this looks good"): Guide/Precis stay at the 09-23 09:00 UTC state with the English dedupe applied (68.2, 68.3), and the RLS change stays in place (68.4). This is the user's own review of the data and the change list; it is **not** a sign-off from the content team, who have not yet been asked to re-check the duplicates. No further rollback is planned. If the content team still reports repeats, the remaining known sources are the Reasoning pair and the exams that hold only the older English books (68.3), and the 09-23 sync feature can recreate duplicates (68.1).
