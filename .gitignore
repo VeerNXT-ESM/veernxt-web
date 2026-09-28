@@ -41,3 +41,7 @@ backups/
 # downloadable at <site>/AI_API_USAGE.md. Key rotation is still pending;
 # this stops the doc from being re-committed in the meantime.
 internal/
+
+# Profiling-engine test personas: derived from real survey responses (anonymised, but
+# still cohort data) -- regenerate with scripts/testdata/build_personas.py, never commit.
+test-data/

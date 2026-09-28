@@ -15,7 +15,7 @@ import { scoreExam } from '../../backend/engine/scoring.js';
 import { resolvePoints, buildIdempotencyKey } from '../../backend/points/pointsCatalog.js';
 
 // --- Profile validation schema ---
-const profileSchema = Joi.object({
+export const profileSchema = Joi.object({
   fullName: Joi.string().min(2).required(),
   dateOfBirth: Joi.date().iso().required(),
   category: Joi.string().valid('General', 'OBC', 'SC', 'ST', 'EWS').required(),
