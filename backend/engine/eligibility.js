@@ -72,8 +72,26 @@ export function mapQual(q) {
   return null;
 }
 
+// Known data-quality aliases: maps bad/legacy spellings → canonical normalised form.
+// Entries are compared AFTER the standard normalisation (lowercase, trim, etc.).
+const STATE_ALIASES = {
+  'lakshadwee p':            'lakshadweep',
+  'lakshadweep':             'lakshadweep',
+  'jammu and kashmir':       'jammu & kashmir',
+  'j&k':                     'jammu & kashmir',
+  'uttaranchal':             'uttarakhand',
+  'pondicherry':             'puducherry',
+  'orissa':                  'odisha',
+  'andaman & nicobar islands': 'andaman and nicobar islands',
+  'andaman & nicobar':       'andaman and nicobar islands',
+  'dadra & nagar haveli':    'dadra & nagar haveli and daman & diu',
+  'daman & diu':             'dadra & nagar haveli and daman & diu',
+};
+
 export function normalizeState(s) {
-  return (s || '').toString().trim().toLowerCase()
+  let normalized = (s || '').toString().trim().toLowerCase()
     .replace(/\s+and\s+/g, ' & ')
     .replace(/\s+/g, ' ');
+  return STATE_ALIASES[normalized] || normalized;
 }
+

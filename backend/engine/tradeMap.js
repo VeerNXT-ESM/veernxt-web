@@ -141,24 +141,41 @@ try {
   console.warn('Warning: Could not load designations.json from path, fallback to empty lookup:', err.message);
 }
 
+// Words that carry no trade signal — skip so they don't pollute substring matching
+const VAGUE_INPUTS = new Set(['unspecified', 'other', 'n/a', 'na', '', 'nil', 'none']);
+
 /**
  * Resolve trade to tracks with graceful fallback for partial string matches.
  * Hierarchically checks specific designations, resolving their parent Arms/Corps
- * to civilian career tracks.
+ * to civilian career tracks.  Each input (armCorpsTrade, roleAppointment, skills)
+ * is tried independently so that 'Unspecified' doesn't block 'General Duty'.
  */
 export function resolveTradeTracks(tradeString = '', skills = []) {
-  const inputs = [tradeString, ...skills]
-    .filter(Boolean)
-    .map(s => s.toLowerCase().trim());
-  
+  // Split the joined tradeString back into individual tokens (scoring.js concatenates them)
+  const rawInputs = [
+    ...(tradeString ? tradeString.split(/\s{2,}|\|/).map(s => s.trim()) : []),
+    ...skills,
+  ].filter(s => s && !VAGUE_INPUTS.has(s.toLowerCase().trim()));
+
   const matched = { strong: new Set(), soft: new Set() };
 
-  // 1. Hierarchical specific designation match
+  // 1. Exact ARM_CORPS_MAP lookup on each input token
+  for (const raw of rawInputs) {
+    const upperRaw = raw.trim().toUpperCase();
+    if (ARM_CORPS_MAP[upperRaw]) {
+      const key = ARM_CORPS_MAP[upperRaw];
+      if (TRADE_MAP[key]) {
+        TRADE_MAP[key].strong.forEach(t => matched.strong.add(t));
+        TRADE_MAP[key].soft.forEach(t => matched.soft.add(t));
+      }
+    }
+  }
+
+  // 2. Hierarchical specific designation match (each input tried separately)
+  const inputsLower = rawInputs.map(s => s.toLowerCase().trim());
   compiledDesignations.forEach(des => {
     const desLower = des.trade.toLowerCase().trim();
-    
-    // Check if user inputs match specific designation (substring match)
-    if (inputs.some(s => s.includes(desLower) || desLower.includes(s))) {
+    if (inputsLower.some(s => s === desLower || (s.length > 3 && (s.includes(desLower) || desLower.includes(s))))) {
       const parentArmKey = ARM_CORPS_MAP[des.arm_corps];
       if (parentArmKey && TRADE_MAP[parentArmKey]) {
         TRADE_MAP[parentArmKey].strong.forEach(t => matched.strong.add(t));
@@ -167,10 +184,10 @@ export function resolveTradeTracks(tradeString = '', skills = []) {
     }
   });
 
-  // 2. Direct default TRADE_MAP key match (preserves backwards compatibility)
+  // 3. Direct TRADE_MAP key match on each input independently
   for (const key of Object.keys(TRADE_MAP)) {
     const k = key.toLowerCase();
-    if (inputs.some(s => s.includes(k) || k.includes(s))) {
+    if (inputsLower.some(s => s.length > 2 && (s === k || s.includes(k) || k.includes(s)))) {
       TRADE_MAP[key].strong.forEach(t => matched.strong.add(t));
       TRADE_MAP[key].soft.forEach(t => matched.soft.add(t));
     }
@@ -178,6 +195,7 @@ export function resolveTradeTracks(tradeString = '', skills = []) {
 
   return {
     strong: [...matched.strong],
-    soft:   [...matched.soft],
+    soft:   [...matched.soft].filter(t => !matched.strong.has(t)),
   };
 }
+

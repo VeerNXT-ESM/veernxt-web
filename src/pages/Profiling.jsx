@@ -26,11 +26,26 @@ const STAGES = [
 // stageId drives the progress-rail highlight; everything else about
 // rendering/validating that question lives in renderQuestion()/
 // validateQuestion() below, keyed by the same index.
+//
+// Step layout:
+//  0-8  Identity  (name, dob, category, disability, marital, domicile, district, email, mobile)
+//  9-13 Service   (branch, arm/corps, role/appointment, duration, discharge)
+//  14   Service   (specific skills — needed for trade→track mapping)
+//  15-16 Academics (qualification, NCC)
+//  17   Academics (sports achievement)
+//  18   Physical  (height/weight/chest)
+//  19   Career    (preferences)
+//  20   Career    (relocation)
+//  21   Interests (sewaNidhi)
+//  22   Review
 const QUESTION_STAGE = [
   'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity',
   'service', 'service', 'service', 'service', 'service',
+  'service',
   'academics', 'academics',
+  'academics',
   'physical',
+  'career',
   'career',
   'interests',
   'review',
@@ -179,12 +194,15 @@ const Profiling = () => {
       case 11: return !!d.roleAppointment;
       case 12: return d.serviceYears !== '' && d.serviceMonths !== '';
       case 13: return !!d.characterOnDischarge;
-      case 14: return !!d.highestQualification;
-      case 15: return true; // NCC — optional
-      case 16: return !!(d.heightCm && d.weightKg && d.chestCm && d.chestExpansion);
-      case 17: return d.careerPreferences.length > 0;
-      case 18: return true; // interests — optional
-      case 19: return d.consent;
+      case 14: return true; // specificSkills — optional but valuable
+      case 15: return !!d.highestQualification;
+      case 16: return true; // NCC — optional
+      case 17: return true; // sportsAchievement — optional
+      case 18: return !!(d.heightCm && d.weightKg && d.chestCm && d.chestExpansion);
+      case 19: return d.careerPreferences.length > 0;
+      case 20: return !!d.relocation; // always has a default
+      case 21: return true; // interests — optional
+      case 22: return d.consent;
       default: return true;
     }
   };
@@ -373,17 +391,42 @@ const Profiling = () => {
 
       case 14:
         return (
+          <MultiChoiceGroup columns={2} values={d.specificSkills} onToggle={(v) => handleMultiSelect('specificSkills', v)}
+            options={[
+              { value: 'Weapons Handling', label: 'Weapons Handling' },
+              { value: 'Driving (LMV/HMV)', label: 'Driving (LMV/HMV)' },
+              { value: 'Office Admin/Computer Work', label: 'Office / Computer' },
+              { value: 'Technical Repair/Maintenance', label: 'Technical Repair' },
+              { value: 'Inventory/Store Management', label: 'Store Management' },
+              { value: 'Instruction/Training', label: 'Training / Instruction' },
+            ]} />
+        );
+
+      case 15:
+        return (
           <ChoiceGroup columns={2} value={d.highestQualification} onChange={(v) => setField('highestQualification', v)}
             options={['Class 10', 'Class 12', 'Graduate', 'Post-Graduate'].map(q => ({ value: q, label: q }))} />
         );
 
-      case 15:
+      case 16:
         return (
           <ChoiceGroup columns={2} value={d.nccCertification} onChange={(v) => setField('nccCertification', v)}
             options={['None', 'A Certificate', 'B Certificate', 'C Certificate'].map(c => ({ value: c, label: c }))} />
         );
 
-      case 16:
+      case 17:
+        return (
+          <ChoiceGroup columns={2} value={d.sportsAchievement} onChange={(v) => setField('sportsAchievement', v)}
+            options={[
+              { value: 'None', label: 'None' },
+              { value: 'District', label: 'District level' },
+              { value: 'State', label: 'State level' },
+              { value: 'National', label: 'National level' },
+              { value: 'International/Services', label: 'International / Services' },
+            ]} />
+        );
+
+      case 18:
         return (
           <div className="pf-vitals-grid">
             <div className="pf-vitals-field">
@@ -405,19 +448,29 @@ const Profiling = () => {
           </div>
         );
 
-      case 17:
+      case 19:
         return (
           <MultiChoiceGroup columns={2} values={d.careerPreferences} onToggle={(v) => handleMultiSelect('careerPreferences', v)}
             options={['POLICE_CAPF', 'SSC', 'BANKING', 'RAILWAYS', 'TEACHING', 'ENGINEERING', 'NURSING'].map(p => ({ value: p, label: p.replace('_', ' ') }))} />
         );
 
-      case 18:
+      case 20:
+        return (
+          <ChoiceGroup columns={1} value={d.relocation} onChange={(v) => setField('relocation', v)}
+            options={[
+              { value: 'Home State', label: 'Home state only — I want to stay close to family' },
+              { value: 'Home District', label: 'My district only — I prefer to stay very local' },
+              { value: 'Anywhere in India', label: 'Anywhere in India — open to all locations' },
+            ]} />
+        );
+
+      case 21:
         return (
           <MultiChoiceGroup columns={2} values={d.sewaNidhiInterests} onToggle={(v) => handleMultiSelect('sewaNidhiInterests', v)}
             options={['Agriculture', 'Small Business', 'Security Agency', 'Transport', 'Skill Training', 'Tourism'].map(i => ({ value: i, label: i }))} />
         );
 
-      case 19:
+      case 22:
         return (
           <div>
             <div className="pf-summary-card">
@@ -563,10 +616,13 @@ const QUESTION_TITLES = [
   'What was your role or appointment?',
   'How long did you serve?',
   'What was your character on discharge?',
+  'Any key skills from your service?',
   "What's your highest qualification?",
   'Do you hold an NCC certification?',
+  'Did you represent in sports?',
   'A few physical fitness details',
-  "Which career tracks interest you most?",
+  'Which career tracks interest you most?',
+  'Where are you open to relocating for a job?',
   'Interested in Sewa Nidhi opportunities?',
   'Review and confirm',
 ];
@@ -586,10 +642,13 @@ const QUESTION_HELP = [
   'This is filtered to roles that exist within your arm/corps.',
   'Total time in service — a strong signal on many exams.',
   undefined,
+  'Optional — select all that apply. These help us match you to civilian roles aligned with your military trade.',
   undefined,
   'Optional — NCC certification is a small scoring bonus on many exams.',
+  'Optional — sports representation is a meaningful bonus for police, defence, and railways exams.',
   'These map against physical eligibility standards for specific exams.',
   'Select every track you would seriously consider — the more, the better we can match you.',
+  "This controls which state-level exams we show you. Selecting 'Anywhere in India' opens the full national pool.",
   'Optional — entrepreneurship and reintegration support programmes.',
   "Take one last look before we calculate your VeerScore and matches.",
 ];
@@ -634,6 +693,10 @@ function ApplicationSummary({ d }) {
       <ApplicationSummarySection title="Academics" rows={[
         ['Highest qualification', d.highestQualification],
         ['NCC certification', d.nccCertification],
+        ['Sports achievement', d.sportsAchievement !== 'None' ? d.sportsAchievement : 'None'],
+      ]} />
+      <ApplicationSummarySection title="Skills" rows={[
+        ['Specific skills', d.specificSkills?.length ? d.specificSkills.join(', ') : 'None selected'],
       ]} />
       <ApplicationSummarySection title="Physical" rows={[
         ['Height', d.heightCm ? `${d.heightCm} cm` : ''],
@@ -642,6 +705,7 @@ function ApplicationSummary({ d }) {
       ]} />
       <ApplicationSummarySection title="Career & interests" rows={[
         ['Career preferences', d.careerPreferences?.length ? d.careerPreferences.join(', ') : ''],
+        ['Relocation preference', d.relocation],
         ['Sewa Nidhi interests', d.sewaNidhiInterests?.length ? d.sewaNidhiInterests.join(', ') : ''],
       ]} />
     </div>

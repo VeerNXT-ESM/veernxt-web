@@ -14,18 +14,63 @@ function add(breakdown, key, value) {
 }
 
 /**
+ * Maps the live profiling form's code values (e.g. 'POLICE_CAPF', 'SSC') to the
+ * preference bucket keys the scorer uses.  The form sends these codes; the
+ * Excel test data sends human-readable strings like 'Central Government'.
+ * Both are handled below so scores are consistent across both paths.
+ */
+const FORM_CODE_TO_BUCKET = {
+  // Central-government tracks
+  POLICE_CAPF:    'CENTRAL_GOVT',
+  SSC:            'CENTRAL_GOVT',
+  RAILWAYS:       'CENTRAL_GOVT',
+  ENGINEERING:    'CENTRAL_GOVT',
+  CIVIL_SERVICES: 'CENTRAL_GOVT',
+  DEFENCE:        'CENTRAL_GOVT',
+  POSTAL:         'CENTRAL_GOVT',
+  PSU:            'CENTRAL_GOVT',
+  // State-government tracks
+  TEACHING:       'STATE_GOVT',
+  NURSING:        'STATE_GOVT',
+  REVENUE:        'STATE_GOVT',
+  FOREST:         'STATE_GOVT',
+  HEALTH:         'STATE_GOVT',
+  AGRICULTURE:    'STATE_GOVT',
+  MUNICIPAL:      'STATE_GOVT',
+  FIRE:           'STATE_GOVT',
+  GROUP_C:        'STATE_GOVT',
+  GROUP_D:        'STATE_GOVT',
+  // Banking / PSU tracks
+  BANKING:        'BANKING_PSU',
+  INSURANCE:      'BANKING_PSU',
+  // Private tracks
+  PRIVATE:        'PRIVATE',
+  TRANSPORT:      'PRIVATE',
+  // Entrepreneurship
+  ENTREPRENEURSHIP: 'ENTREPRENEURSHIP',
+};
+
+/**
  * Normalise the user's Section-E preferences (array of labels) into our
- * internal preference bucket keys.
+ * internal preference bucket keys.  Accepts BOTH the live form's career-track
+ * codes (e.g. 'POLICE_CAPF') AND human-readable strings (e.g. 'Central Government').
  */
 export function normalisePreferences(prefs = []) {
   const out = new Set();
   for (const p of prefs) {
+    // 1. Direct code match first (live form)
+    const upper = p.trim().toUpperCase().replace(/\s+/g, '_');
+    if (FORM_CODE_TO_BUCKET[upper]) {
+      out.add(FORM_CODE_TO_BUCKET[upper]);
+      continue;
+    }
+    // 2. Substring match for human-readable strings (Excel / legacy)
     const s = p.toLowerCase();
-    if (s.includes('central')) out.add('CENTRAL_GOVT');
-    else if (s.includes('state')) out.add('STATE_GOVT');
+    if (s.includes('central'))            out.add('CENTRAL_GOVT');
+    else if (s.includes('state'))         out.add('STATE_GOVT');
     else if (s.includes('bank') || s.includes('psu')) out.add('BANKING_PSU');
-    else if (s.includes('private')) out.add('PRIVATE');
-    else if (s.includes('entrepren')) out.add('ENTREPRENEURSHIP');
+    else if (s.includes('private'))       out.add('PRIVATE');
+    else if (s.includes('entrepren'))     out.add('ENTREPRENEURSHIP');
   }
   return [...out];
 }

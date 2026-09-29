@@ -199,14 +199,23 @@ function summariseSkillGaps(rejected, userQualification) {
 
 function diversify(scored, topN, capPerTrack) {
   const out = [];
-  const counts = {};
+  const trackCounts = {};
+  // Secondary: cap state-level vs central-level so results are balanced.
+  // Allow at most ceil(topN * 0.6) from either level so neither dominates.
+  const levelCap = Math.ceil(topN * 0.6);
+  const levelCounts = {};
+
   for (const row of scored) {
     const t = row.exam.career_track;
-    if ((counts[t] || 0) >= capPerTrack) continue;
+    const lvl = row.exam.level || 'central';
+    if ((trackCounts[t] || 0) >= capPerTrack) continue;
+    if ((levelCounts[lvl] || 0) >= levelCap) continue;
     out.push(row);
-    counts[t] = (counts[t] || 0) + 1;
+    trackCounts[t] = (trackCounts[t] || 0) + 1;
+    levelCounts[lvl] = (levelCounts[lvl] || 0) + 1;
     if (out.length >= topN) break;
   }
+  // Fill any remaining slots without level/track constraints
   if (out.length < topN) {
     const chosen = new Set(out.map(r => r.exam.exam_id));
     for (const row of scored) {
@@ -316,7 +325,31 @@ export default async function handler(req, res) {
     // 4. Diversify
     const diversified = diversify(scored, topN, 4);
 
-    // 5. Build response
+    // 5. Resolve lc_exam_id for each recommendation via lc_exam_legacy_map.
+    // This allows the frontend to navigate to the correct Learning Center exam
+    // page and call set_primary_exam_target (which expects an lc_exams UUID).
+    let lcExamIdMap = {};
+    if (supabaseAdmin && diversified.length > 0) {
+      try {
+        const legacyIds = diversified.map(r => r.exam.exam_id).filter(Boolean);
+        const { data: lcMaps } = await supabaseAdmin
+          .from('lc_exam_legacy_map')
+          .select('lc_exam_id, legacy_exam_id')
+          .in('legacy_exam_id', legacyIds);
+        if (lcMaps) {
+          for (const row of lcMaps) {
+            // Keep the highest-confidence match (first found is fine here)
+            if (!lcExamIdMap[row.legacy_exam_id]) {
+              lcExamIdMap[row.legacy_exam_id] = row.lc_exam_id;
+            }
+          }
+        }
+      } catch (lcErr) {
+        console.warn('[recommend] lc_exam_legacy_map lookup failed (non-fatal):', lcErr.message);
+      }
+    }
+
+    // 6. Build response
     const result = {
       ok: true,
       summary: {
@@ -329,6 +362,7 @@ export default async function handler(req, res) {
       recommendations: diversified.map((r, i) => ({
         rank: i + 1,
         exam_id: r.exam.exam_id,
+        lc_exam_id: lcExamIdMap[r.exam.exam_id] || null,
         exam_name: r.exam.exam_name,
         conducting_body: r.exam.conducting_body,
         level: r.exam.level,

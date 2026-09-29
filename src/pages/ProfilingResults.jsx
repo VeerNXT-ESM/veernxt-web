@@ -61,10 +61,12 @@ const ExamPrepSection = ({ exam }) => {
       setLoading(true);
       try {
         let resData = await supabase.from('resources').select('*').eq('exam_name', exam.exam_name).limit(3);
-        // Exact link first (quizzes.lc_exam_id); the name-based fallbacks below only consider quizzes that are
-        // not linked to any specific exam, so a linked quiz never appears under a different exam with the same name.
+        // Exact link first (quizzes.lc_exam_id); use the resolved lc_exam_id from the recommendation.
         let quizData = { data: [] };
-        if (exam.exam_id) {
+        if (exam.lc_exam_id) {
+          quizData = await supabase.from('quizzes').select('*').eq('lc_exam_id', exam.lc_exam_id).eq('category', 'Mock Test').gte('playable_questions', MIN_PLAYABLE_QUESTIONS).order('title').limit(3);
+        } else if (exam.exam_id) {
+          // Legacy fallback: try matching by old exam_id stored in quizzes.lc_exam_id
           quizData = await supabase.from('quizzes').select('*').eq('lc_exam_id', exam.exam_id).eq('category', 'Mock Test').gte('playable_questions', MIN_PLAYABLE_QUESTIONS).order('title').limit(3);
         }
         if (!quizData.data || quizData.data.length === 0) {
@@ -170,25 +172,34 @@ const ProfilingResults = () => {
   const [preparingExamId, setPreparingExamId] = useState(null);
 
   // Sets the candidate's active preparation target and navigates to the Exam Journey.
-  // If they already have a primary target, this exam becomes their new primary.
+  // Uses lc_exam_id (UUID from lc_exams table) — NOT the old varchar exam_id.
   const handleStartPreparing = async (rec) => {
-    if (!rec?.exam_id) return;
+    // lc_exam_id comes from the recommend.js lc_exam_legacy_map resolution.
+    // Fall back to exam_id for display but we can't set a target without lc_exam_id.
+    const targetId = rec?.lc_exam_id || rec?.exam_id;
+    if (!targetId) return;
     const { data: { session } } = await supabase.auth.getSession();
     if (!session?.user) {
       navigate('/login');
       return;
     }
-    setPreparingExamId(rec.exam_id);
+    setPreparingExamId(targetId);
     try {
-      // Demote-then-upsert done atomically server-side (sql/user_learning_journey_fixes.sql)
-      // so a dropped connection can't leave the account with zero or two primaries.
-      await supabase.rpc('set_primary_exam_target', { p_exam_id: rec.exam_id });
+      if (rec.lc_exam_id) {
+        // Demote-then-upsert done atomically server-side
+        await supabase.rpc('set_primary_exam_target', { p_exam_id: rec.lc_exam_id });
+      }
     } catch (err) {
       console.warn('Could not save exam target:', err);
       // Navigate anyway — the journey page can still show content.
     } finally {
       setPreparingExamId(null);
-      navigate(`/exam/${rec.exam_id}`);
+      if (rec.lc_exam_id) {
+        navigate(`/exam/${rec.lc_exam_id}`);
+      } else {
+        // No LC exam linked yet — go to learning center as fallback
+        navigate('/learning-center');
+      }
     }
   };
 
@@ -395,9 +406,9 @@ const ProfilingResults = () => {
                           type="button"
                           className="results-start-preparing-btn"
                           onClick={() => handleStartPreparing(rec)}
-                          disabled={preparingExamId === rec.exam_id}
+                          disabled={preparingExamId === (rec.lc_exam_id || rec.exam_id)}
                         >
-                          {preparingExamId === rec.exam_id ? (
+                          {preparingExamId === (rec.lc_exam_id || rec.exam_id) ? (
                             <RefreshCw size={14} className="results-animate-spin" />
                           ) : (
                             <Rocket size={14} />
