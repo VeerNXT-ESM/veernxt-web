@@ -91,6 +91,9 @@ export function scoreExam(profile, exam, options = {}) {
 
   // 3. Preference alignment
   const prefs = normalisePreferences(profile.careerPreferences);
+  if (profile.relocation === 'Anywhere in India' && !prefs.includes('CENTRAL_GOVT')) {
+    prefs.push('CENTRAL_GOVT');
+  }
   for (const p of prefs) {
     if ((PREF_MAP[p] || []).includes(exam.career_track)) {
       add(breakdown, `preference_${p.toLowerCase()}`, W.PREFERENCE_WEIGHTS[p]);

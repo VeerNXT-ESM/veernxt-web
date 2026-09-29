@@ -66,10 +66,10 @@ function preFilter(profile, exams) {
     if (isNonSHAPE1 && exam.physical_required) return false;
 
     const examState = exam.state_ut ? normalizeState(exam.state_ut) : null;
-    if (!wantsAnyState && examState && examState !== userState) return false;
+    if (examState && examState !== userState) return false;
 
     // Government level preference
-    if (wantsStateOnly && exam.level === 'central') return false;
+    if (wantsStateOnly && !wantsAnyState && exam.level === 'central') return false;
     if (wantsCentralOnly && (exam.level === 'state' || exam.level === 'ut')) return false;
 
     return true;

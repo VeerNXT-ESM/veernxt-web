@@ -145,14 +145,15 @@ async function fetchPreFilteredExams(profile) {
     // 2. Physical pre-filter: drop physical-required exams if user is non-SHAPE-1
     if (isNonSHAPE1 && exam.physical_required) return false;
 
-    // 3. Domicile pre-filter: drop state/UT exams from other regions (unless open to all India)
-    if (!wantsAnyState && exam.state_ut) {
+    // 3. Domicile pre-filter: State/UT exams are strictly for candidates from that state/UT.
+    // Even if relocation is "Anywhere in India", other states' exams (e.g. UP state exams for Kerala) are dropped.
+    if (exam.state_ut) {
       if (normalizeState(exam.state_ut) !== userState) return false;
     }
 
     // 4. Level preference pre-filter:
-    // If candidate specifically chose State Government only, exclude Central exams
-    if (wantsStateOnly && exam.level === 'central') return false;
+    // If candidate chose State Govt only, exclude Central exams EXCEPT when relocation is 'Anywhere in India'
+    if (wantsStateOnly && !wantsAnyState && exam.level === 'central') return false;
     // If candidate specifically chose Central Government only, exclude State/UT exams
     if (wantsCentralOnly && (exam.level === 'state' || exam.level === 'ut')) return false;
 

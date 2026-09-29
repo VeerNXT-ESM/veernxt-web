@@ -31,15 +31,15 @@ export function checkEligibility(profile, exam) {
   }
 
   // ---- Domicile gate (state/UT exams only) ----
+  // State/UT exams are strictly for candidates from that state/UT.
+  // Even if candidate chooses "Anywhere in India", other states' exams (e.g. UP state exams for Kerala)
+  // are never recommended; instead, "Anywhere in India" unlocks All-India Central Government exams.
   const effectiveState = exam.state_ut || inferState(exam.exam_name, exam.conducting_body, null);
   if (effectiveState) {
     if (!profile.stateOfDomicile) {
       reasons.push('state of domicile missing');
     } else if (normalizeState(profile.stateOfDomicile) !== normalizeState(effectiveState)) {
-      // Domicile mismatch = hard filter UNLESS user opted "Anywhere in India"
-      if (profile.relocation !== 'Anywhere in India') {
-        reasons.push(`state/UT mismatch: exam is for ${effectiveState}, user is from ${profile.stateOfDomicile}`);
-      }
+      reasons.push(`state/UT mismatch: exam is for ${effectiveState}, user is from ${profile.stateOfDomicile}`);
     }
   }
 
@@ -47,9 +47,11 @@ export function checkEligibility(profile, exam) {
   if (Array.isArray(profile.careerPreferences) && profile.careerPreferences.length > 0) {
     const wantsState = profile.careerPreferences.some(p => /state/i.test(String(p)));
     const wantsCentral = profile.careerPreferences.some(p => /central/i.test(String(p)));
+    const isAnywhereInIndia = profile.relocation === 'Anywhere in India';
     
-    // User explicitly chose ONLY State Government (not Central)
-    if (wantsState && !wantsCentral && exam.level === 'central') {
+    // User chose ONLY State Government (not Central).
+    // EXCEPTION: If relocation is 'Anywhere in India', Central exams are AUTOMATICALLY unlocked!
+    if (wantsState && !wantsCentral && !isAnywhereInIndia && exam.level === 'central') {
       reasons.push('candidate preferred State Government only; Central exam skipped');
     }
     // User explicitly chose ONLY Central Government (not State)
@@ -112,29 +114,29 @@ export function normalizeState(s) {
 }
 
 export const STATE_INFERENCE_RULES = [
-  { pattern: /uttar\s*pradesh|upsssc|uprvunl|uppsc|upsi|uptgt|up\s*police|up\s*jail/i, state: 'Uttar Pradesh' },
-  { pattern: /west\s*bengal|wbpsc|wbssc|wb\s*police|wbhrb|wbcs/i, state: 'West Bengal' },
-  { pattern: /bihar|bpsc|bpssc|btsc|bihar\s*police/i, state: 'Bihar' },
-  { pattern: /rajasthan|rpsc|rsmssb/i, state: 'Rajasthan' },
-  { pattern: /punjab|ppsc|psssb|pstet/i, state: 'Punjab' },
-  { pattern: /haryana|hpsc|hssc|htet/i, state: 'Haryana' },
-  { pattern: /delhi|dsssb|delhi\s*police/i, state: 'Delhi' },
-  { pattern: /kerala|kpsc|ktet|kerala\s*police/i, state: 'Kerala' },
-  { pattern: /tamil\s*nadu|tnpsc|tnusrb/i, state: 'Tamil Nadu' },
-  { pattern: /maharashtra|mpsc|mahagenco/i, state: 'Maharashtra' },
-  { pattern: /madhya\s*pradesh|mppsc|mpesb|vyapam|mp\s*police|mpro/i, state: 'Madhya Pradesh' },
-  { pattern: /jammu|kashmir|jkpsc|jkssb|jktet/i, state: 'Jammu & Kashmir' },
-  { pattern: /odisha|opsc|ossc|osssc/i, state: 'Odisha' },
-  { pattern: /karnataka|kpsc|ksp/i, state: 'Karnataka' },
-  { pattern: /andhra|appsc/i, state: 'Andhra Pradesh' },
-  { pattern: /telangana|tspsc|tslprb/i, state: 'Telangana' },
-  { pattern: /gujarat|gpsc|gsssb/i, state: 'Gujarat' },
-  { pattern: /assam|apsc|slprb\s*assam/i, state: 'Assam' },
-  { pattern: /jharkhand|jpsc|jssc/i, state: 'Jharkhand' },
-  { pattern: /chhattisgarh|cgpsc|cgvyapam/i, state: 'Chhattisgarh' },
-  { pattern: /uttarakhand|ukpsc|uksssc/i, state: 'Uttarakhand' },
-  { pattern: /himachal|hppsc|hpssc/i, state: 'Himachal Pradesh' },
-  { pattern: /goa|gpsc/i, state: 'Goa' },
+  { pattern: /uttar\s*pradesh|\bupsssc\b|\buprvunl\b|\buppsc\b|\bupsi\b|\buptgt\b|up\s*police|up\s*jail/i, state: 'Uttar Pradesh' },
+  { pattern: /west\s*bengal|\bwbpsc\b|\bwbssc\b|wb\s*police|\bwbhrb\b|\bwbcs\b/i, state: 'West Bengal' },
+  { pattern: /bihar|\bbpsc\b|\bbpssc\b|\bbtsc\b|bihar\s*police/i, state: 'Bihar' },
+  { pattern: /rajasthan|\brpsc\b|\brsmssb\b/i, state: 'Rajasthan' },
+  { pattern: /punjab|\bppsc\b|\bpsssb\b|\bpstet\b/i, state: 'Punjab' },
+  { pattern: /haryana|\bhpsc\b|\bhssc\b|\bhtet\b/i, state: 'Haryana' },
+  { pattern: /delhi|\bdsssb\b|delhi\s*police/i, state: 'Delhi' },
+  { pattern: /jammu|kashmir|\bjkpsc\b|\bjkssb\b|\bjktet\b/i, state: 'Jammu & Kashmir' },
+  { pattern: /himachal|\bhppsc\b|\bhpssc\b/i, state: 'Himachal Pradesh' },
+  { pattern: /andhra|\bappsc\b/i, state: 'Andhra Pradesh' },
+  { pattern: /telangana|\btspsc\b|\btslprb\b/i, state: 'Telangana' },
+  { pattern: /kerala|\bkpsc\b|\bktet\b|kerala\s*police/i, state: 'Kerala' },
+  { pattern: /tamil\s*nadu|\btnpsc\b|\btnusrb\b/i, state: 'Tamil Nadu' },
+  { pattern: /maharashtra|\bmpsc\b|\bmahagenco\b/i, state: 'Maharashtra' },
+  { pattern: /madhya\s*pradesh|\bmppsc\b|\bmpesb\b|\bvyapam\b|mp\s*police|\bmpro\b/i, state: 'Madhya Pradesh' },
+  { pattern: /odisha|\bopsc\b|\bossc\b|\bosssc\b/i, state: 'Odisha' },
+  { pattern: /karnataka|\bkpsc\b|\bksp\b/i, state: 'Karnataka' },
+  { pattern: /gujarat|\bgpsc\b|\bgsssb\b/i, state: 'Gujarat' },
+  { pattern: /assam|\bapsc\b|slprb\s*assam/i, state: 'Assam' },
+  { pattern: /jharkhand|\bjpsc\b|\bjssc\b/i, state: 'Jharkhand' },
+  { pattern: /chhattisgarh|\bcgpsc\b|\bcgvyapam\b/i, state: 'Chhattisgarh' },
+  { pattern: /uttarakhand|\bukpsc\b|\buksssc\b/i, state: 'Uttarakhand' },
+  { pattern: /goa|\bgpsc\b/i, state: 'Goa' },
   { pattern: /lakshadweep/i, state: 'Lakshadweep' },
   { pattern: /puducherry|pondicherry/i, state: 'Puducherry' },
   { pattern: /andaman/i, state: 'Andaman and Nicobar Islands' },
