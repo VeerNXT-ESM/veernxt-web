@@ -10,7 +10,7 @@
 
 import Joi from 'joi';
 import { createClient } from '@supabase/supabase-js';
-import { checkEligibility } from '../../backend/engine/eligibility.js';
+import { checkEligibility, normalizeState, inferState } from '../../backend/engine/eligibility.js';
 import { scoreExam } from '../../backend/engine/scoring.js';
 import { resolvePoints, buildIdempotencyKey } from '../../backend/points/pointsCatalog.js';
 
@@ -92,17 +92,27 @@ async function loadAllExams() {
     if (data.length < pageSize) break;
     from += pageSize;
   }
-  EXAM_CACHE = rows.map(row => ({
-    ...(row.metadata || {}),
-    exam_id: row.exam_id,
-    exam_name: row.exam_name,
-    conducting_body: row.conducting_body,
-    career_track: row.career_track,
-    state_ut: row.state_ut,
-    website: row.base_url || row.metadata?.website || null,
-    level: row.metadata?.level || null,
-    domicile_required: row.is_state_specific ?? row.metadata?.domicile_required ?? false,
-  }));
+  EXAM_CACHE = rows.map(row => {
+    const inferredState = inferState(row.exam_name, row.conducting_body, row.state_ut);
+    let level = row.metadata?.level || null;
+    if (inferredState) {
+      const isUT = /delhi|chandigarh|lakshadweep|puducherry|andaman|ladakh|jammu/i.test(inferredState);
+      level = isUT ? 'ut' : 'state';
+    } else if (!level) {
+      level = 'central';
+    }
+    return {
+      ...(row.metadata || {}),
+      exam_id: row.exam_id,
+      exam_name: row.exam_name,
+      conducting_body: row.conducting_body,
+      career_track: row.career_track,
+      state_ut: inferredState,
+      website: row.base_url || row.metadata?.website || null,
+      level,
+      domicile_required: Boolean(inferredState) || Boolean(row.is_state_specific) || Boolean(row.metadata?.domicile_required),
+    };
+  });
   console.log(`[recommend] Cached ${EXAM_CACHE.length} exams.`);
   return EXAM_CACHE;
 }
@@ -121,7 +131,11 @@ async function fetchPreFilteredExams(profile) {
   const userQualRank = QUAL_RANK_MAP[profile.highestQualification] || 0;
   const isNonSHAPE1 = profile.medicalCategory && profile.medicalCategory !== 'SHAPE-1';
   const wantsAnyState = profile.relocation === 'Anywhere in India';
-  const userState = (profile.stateOfDomicile || '').toLowerCase().trim();
+  const userState = normalizeState(profile.stateOfDomicile || '');
+
+  const prefs = profile.careerPreferences || [];
+  const wantsStateOnly = prefs.some(p => /state/i.test(String(p))) && !prefs.some(p => /central/i.test(String(p)));
+  const wantsCentralOnly = prefs.some(p => /central/i.test(String(p))) && !prefs.some(p => /state/i.test(String(p)));
 
   return allExams.filter(exam => {
     // 1. Qualification pre-filter: drop exams whose requirement exceeds user's level
@@ -131,11 +145,16 @@ async function fetchPreFilteredExams(profile) {
     // 2. Physical pre-filter: drop physical-required exams if user is non-SHAPE-1
     if (isNonSHAPE1 && exam.physical_required) return false;
 
-    // 3. Domicile pre-filter: drop state exams from other states (unless open to all India)
-    if (!wantsAnyState && exam.domicile_required && exam.state_ut) {
-      const examState = (exam.state_ut || '').toLowerCase().trim();
-      if (examState && examState !== userState) return false;
+    // 3. Domicile pre-filter: drop state/UT exams from other regions (unless open to all India)
+    if (!wantsAnyState && exam.state_ut) {
+      if (normalizeState(exam.state_ut) !== userState) return false;
     }
+
+    // 4. Level preference pre-filter:
+    // If candidate specifically chose State Government only, exclude Central exams
+    if (wantsStateOnly && exam.level === 'central') return false;
+    // If candidate specifically chose Central Government only, exclude State/UT exams
+    if (wantsCentralOnly && (exam.level === 'state' || exam.level === 'ut')) return false;
 
     return true;
   });

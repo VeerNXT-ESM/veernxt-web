@@ -56,14 +56,22 @@ function preFilter(profile, exams) {
   const wantsAnyState = profile.relocation === 'Anywhere in India';
   const userState     = normalizeState(profile.stateOfDomicile || '');
 
+  const prefs = profile.careerPreferences || [];
+  const wantsStateOnly = prefs.some(p => /state/i.test(String(p))) && !prefs.some(p => /central/i.test(String(p)));
+  const wantsCentralOnly = prefs.some(p => /central/i.test(String(p))) && !prefs.some(p => /state/i.test(String(p)));
+
   return exams.filter(exam => {
     const needRank = QUAL_DB_RANK[exam.min_qualification] || 0;
     if (needRank && userQualRank < needRank) return false;
     if (isNonSHAPE1 && exam.physical_required) return false;
-    if (!wantsAnyState && exam.domicile_required && exam.state_ut) {
-      const examState = normalizeState(exam.state_ut);
-      if (examState && examState !== userState) return false;
-    }
+
+    const examState = exam.state_ut ? normalizeState(exam.state_ut) : null;
+    if (!wantsAnyState && examState && examState !== userState) return false;
+
+    // Government level preference
+    if (wantsStateOnly && exam.level === 'central') return false;
+    if (wantsCentralOnly && (exam.level === 'state' || exam.level === 'ut')) return false;
+
     return true;
   });
 }

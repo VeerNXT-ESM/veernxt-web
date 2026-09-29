@@ -31,14 +31,30 @@ export function checkEligibility(profile, exam) {
   }
 
   // ---- Domicile gate (state/UT exams only) ----
-  if (exam.domicile_required && exam.state_ut) {
+  const effectiveState = exam.state_ut || inferState(exam.exam_name, exam.conducting_body, null);
+  if (effectiveState) {
     if (!profile.stateOfDomicile) {
       reasons.push('state of domicile missing');
-    } else if (normalizeState(profile.stateOfDomicile) !== normalizeState(exam.state_ut)) {
+    } else if (normalizeState(profile.stateOfDomicile) !== normalizeState(effectiveState)) {
       // Domicile mismatch = hard filter UNLESS user opted "Anywhere in India"
       if (profile.relocation !== 'Anywhere in India') {
-        reasons.push(`state-only exam (${exam.state_ut})`);
+        reasons.push(`state/UT mismatch: exam is for ${effectiveState}, user is from ${profile.stateOfDomicile}`);
       }
+    }
+  }
+
+  // ---- Career Preference Level gate (State vs Central Govt) ----
+  if (Array.isArray(profile.careerPreferences) && profile.careerPreferences.length > 0) {
+    const wantsState = profile.careerPreferences.some(p => /state/i.test(String(p)));
+    const wantsCentral = profile.careerPreferences.some(p => /central/i.test(String(p)));
+    
+    // User explicitly chose ONLY State Government (not Central)
+    if (wantsState && !wantsCentral && exam.level === 'central') {
+      reasons.push('candidate preferred State Government only; Central exam skipped');
+    }
+    // User explicitly chose ONLY Central Government (not State)
+    if (wantsCentral && !wantsState && (exam.level === 'state' || exam.level === 'ut')) {
+      reasons.push('candidate preferred Central Government only; State/UT exam skipped');
     }
   }
 
@@ -93,5 +109,45 @@ export function normalizeState(s) {
     .replace(/\s+and\s+/g, ' & ')
     .replace(/\s+/g, ' ');
   return STATE_ALIASES[normalized] || normalized;
+}
+
+export const STATE_INFERENCE_RULES = [
+  { pattern: /uttar\s*pradesh|upsssc|uprvunl|uppsc|upsi|uptgt|up\s*police|up\s*jail/i, state: 'Uttar Pradesh' },
+  { pattern: /west\s*bengal|wbpsc|wbssc|wb\s*police|wbhrb|wbcs/i, state: 'West Bengal' },
+  { pattern: /bihar|bpsc|bpssc|btsc|bihar\s*police/i, state: 'Bihar' },
+  { pattern: /rajasthan|rpsc|rsmssb/i, state: 'Rajasthan' },
+  { pattern: /punjab|ppsc|psssb|pstet/i, state: 'Punjab' },
+  { pattern: /haryana|hpsc|hssc|htet/i, state: 'Haryana' },
+  { pattern: /delhi|dsssb|delhi\s*police/i, state: 'Delhi' },
+  { pattern: /kerala|kpsc|ktet|kerala\s*police/i, state: 'Kerala' },
+  { pattern: /tamil\s*nadu|tnpsc|tnusrb/i, state: 'Tamil Nadu' },
+  { pattern: /maharashtra|mpsc|mahagenco/i, state: 'Maharashtra' },
+  { pattern: /madhya\s*pradesh|mppsc|mpesb|vyapam|mp\s*police|mpro/i, state: 'Madhya Pradesh' },
+  { pattern: /jammu|kashmir|jkpsc|jkssb|jktet/i, state: 'Jammu & Kashmir' },
+  { pattern: /odisha|opsc|ossc|osssc/i, state: 'Odisha' },
+  { pattern: /karnataka|kpsc|ksp/i, state: 'Karnataka' },
+  { pattern: /andhra|appsc/i, state: 'Andhra Pradesh' },
+  { pattern: /telangana|tspsc|tslprb/i, state: 'Telangana' },
+  { pattern: /gujarat|gpsc|gsssb/i, state: 'Gujarat' },
+  { pattern: /assam|apsc|slprb\s*assam/i, state: 'Assam' },
+  { pattern: /jharkhand|jpsc|jssc/i, state: 'Jharkhand' },
+  { pattern: /chhattisgarh|cgpsc|cgvyapam/i, state: 'Chhattisgarh' },
+  { pattern: /uttarakhand|ukpsc|uksssc/i, state: 'Uttarakhand' },
+  { pattern: /himachal|hppsc|hpssc/i, state: 'Himachal Pradesh' },
+  { pattern: /goa|gpsc/i, state: 'Goa' },
+  { pattern: /lakshadweep/i, state: 'Lakshadweep' },
+  { pattern: /puducherry|pondicherry/i, state: 'Puducherry' },
+  { pattern: /andaman/i, state: 'Andaman and Nicobar Islands' },
+  { pattern: /ladakh/i, state: 'Ladakh' },
+  { pattern: /chandigarh/i, state: 'Chandigarh' },
+];
+
+export function inferState(name, body, current) {
+  if (current) return current;
+  const text = `${name || ''} ${body || ''}`;
+  for (const rule of STATE_INFERENCE_RULES) {
+    if (rule.pattern.test(text)) return rule.state;
+  }
+  return null;
 }
 
