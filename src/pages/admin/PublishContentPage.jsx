@@ -599,16 +599,6 @@ const PublishContentPage = () => {
 
   return (
     <div>
-      <div className="lc-section-header">
-        <div>
-          <h2>Publish Content</h2>
-          <p className="lc-muted-note" style={{ marginTop: '0.3rem' }}>
-            Upload a real .docx, pick its category once you've seen it, check the preview (tables included), then assign it to exam(s) and Convert &amp; Link.
-            No matching or guessing — you pick the category and exam(s) yourself.
-          </p>
-        </div>
-      </div>
-
       {published ? (
         <div className="lc-card" style={{ padding: '1.5rem', textAlign: 'center' }}>
           <CheckCircle2 size={32} color="#16a34a" style={{ marginBottom: '0.5rem' }} />

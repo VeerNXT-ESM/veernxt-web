@@ -1,17 +1,24 @@
 import { useEffect, useState, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
 import {
   ChevronLeft, Monitor, Tablet, Smartphone, Sun, Moon, RotateCcw, Save,
   Palette, Type, LayoutGrid, RefreshCw, CheckCircle2, MessageSquareQuote,
-  Table, Quote, Layers,
+  Table, Quote, Layers, BookOpen, FileText, BookMarked, Sparkles,
 } from 'lucide-react';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
 import '../../components/book/BookBlocks.css';
 import { ALL_TOKEN_KEYS, tokenToCssVar, DEFAULT_TOKENS } from '../../components/book/theme/readerThemeTokens';
 import { getRegistryTheme, readerThemes } from '../../components/book/theme/readerThemeRegistry';
-import { fetchThemeById, saveCustomTheme } from '../../components/book/theme/customThemeStore';
+import {
+  fetchThemeById,
+  saveCustomTheme,
+  READER_CATEGORIES,
+  normalizeReaderCategory,
+  setCategoryDefaultTheme,
+  getCategoryDefaultThemeId,
+} from '../../components/book/theme/customThemeStore';
 
 const ACADEMIC = readerThemes.academic;
 
@@ -31,75 +38,149 @@ const VIEWPORTS = {
   mobile: { label: 'Mobile', icon: Smartphone, width: '400px' },
 };
 
-// Rich sample chapter blocks demonstrating Tables, Pull Quotes, Callouts, Key Facts, and Exam Alerts
-const SAMPLE_PREVIEW_BLOCKS = [
-  {
-    id: 'sample-p1',
-    type: 'paragraph',
-    content: 'The architectural foundations of modern institutional frameworks require a disciplined understanding of strategic principles, regulatory governance, and quantitative benchmarking methods.',
-  },
-  {
-    id: 'sample-h2',
-    type: 'heading',
-    level: 2,
-    content: 'Key Structural Concepts & Methodologies',
-  },
-  {
-    id: 'sample-callout-1',
-    type: 'examTip',
-    content: 'Candidates must memorize the distinct classification criteria for Tier-1 and Tier-2 asset allocation under Basel III regulatory compliance frameworks.',
-  },
-  {
-    id: 'sample-p2',
-    type: 'paragraph',
-    content: 'The following comparative matrix establishes standard metric variations observed across institutional evaluation cycles.',
-  },
-  {
-    id: 'sample-table',
-    type: 'table',
-    rows: [
-      ['Dimension', 'Standard Model', 'Advanced Paradigm', 'Target Threshold'],
-      ['Capital Adequacy Ratio', '8.0%', '11.5%', '≥ 12.0%'],
-      ['Liquidity Coverage Ratio', '90.0%', '115.0%', '≥ 100.0%'],
-      ['Leverage Ratio', '3.0%', '4.5%', '≥ 4.0%'],
-      ['Net Stable Funding Ratio', '85.0%', '105.0%', '≥ 100.0%'],
+// Rich category-specific preview blocks
+const CATEGORY_PREVIEWS = {
+  Intro: {
+    title: 'Exam Syllabus & Structural Overview',
+    blocks: [
+      {
+        id: 'intro-p1',
+        type: 'paragraph',
+        content: 'This introductory overview provides comprehensive structural orientation for aspirants. It establishes standard examination timelines, subject-weightage matrices, and foundational scoring criteria.',
+      },
+      {
+        id: 'intro-statstrip',
+        type: 'statStrip',
+        stats: [
+          { value: '24 Modules', label: 'Syllabus Units' },
+          { value: '100%', label: 'Exam Aligned' },
+          { value: 'Stage 1 & 2', label: 'Coverage Tier' },
+        ],
+      },
+      {
+        id: 'intro-h2',
+        type: 'heading',
+        level: 2,
+        content: 'Examination Pattern & Scoring Architecture',
+      },
+      {
+        id: 'intro-callout-tip',
+        type: 'examTip',
+        content: 'Strategic Rule: Sectional cutoffs apply independently across all parts. Ensure baseline competency in General Awareness before attempting advanced quantitative analysis.',
+      },
+      {
+        id: 'intro-table',
+        type: 'table',
+        rows: [
+          ['Paper / Section', 'Subject Focus', 'Questions', 'Maximum Score', 'Duration'],
+          ['Paper I', 'General Knowledge & Current Affairs', '100', '100 Marks', '120 Min'],
+          ['Paper II', 'Quantitative & Mathematical Ability', '100', '100 Marks', '120 Min'],
+          ['Paper III', 'English Language Comprehension', '120', '100 Marks', '120 Min'],
+        ],
+      },
+      {
+        id: 'intro-keyfacts',
+        type: 'keyFacts',
+        title: 'Core Syllabus Highlights',
+        items: [
+          'Negative marking of 0.33 marks is deducted for every incorrect response.',
+          'Qualifying score in written examination qualifies candidate for psychological review.',
+          'Official notifications and syllabus amendments are refreshed quarterly.',
+        ],
+      },
     ],
   },
-  {
-    id: 'sample-quote',
-    type: 'pullQuote',
-    content: '“Discipline is the bridge between operational goals and sustained strategic execution.” — VeerNXT Leadership',
-  },
-  {
-    id: 'sample-callout-2',
-    type: 'important',
-    content: 'Critical Rule: Direct regulatory audits will automatically trigger if the capital adequacy buffer dips below statutory limits during consecutive quarterly filings.',
-  },
-  {
-    id: 'sample-callout-3',
-    type: 'definition',
-    content: 'Statutory Liquidity Ratio (SLR): The mandatory percentage of total deposits that commercial institutions must maintain in high-grade sovereign securities.',
-  },
-  {
-    id: 'sample-keyfacts',
-    type: 'keyFacts',
-    title: 'Core Revision Summary',
-    items: [
-      'Statutory ratio adjustments take effect within 14 calendar days of monetary notification.',
-      'Tier-1 reserves must consist of paid-up equity capital and audited statutory reserves.',
-      'Risk-weighted assets determine minimum capital buffer thresholds across all lending divisions.',
+  Precis: {
+    title: 'High-Yield Precis & Rapid Revision Summary',
+    blocks: [
+      {
+        id: 'precis-quote',
+        type: 'pullQuote',
+        content: '“Brevity and accuracy form the foundation of high-scoring revision summaries.” — VeerNXT Editorial',
+      },
+      {
+        id: 'precis-keyfacts',
+        type: 'keyFacts',
+        title: 'High-Yield Takeaways & Formulas',
+        items: [
+          'Statutory Capital Ratio = (Tier 1 Equity + Tier 2 Reserve) ÷ Total Risk-Weighted Assets.',
+          'Mandatory reporting cycle takes effect within 14 calendar days of quarterly close.',
+          'Direct regulatory review triggers automatically if liquidity buffer dips below 8.5%.',
+        ],
+      },
+      {
+        id: 'precis-def',
+        type: 'definition',
+        content: 'Statutory Liquidity Ratio (SLR): The mandatory percentage of total demand and time liabilities that financial institutions must maintain in approved securities.',
+      },
+      {
+        id: 'precis-important',
+        type: 'important',
+        content: 'Critical Revision Rule: When summarizing institutional doctrine, preserve original terminology while eliminating descriptive filler and subjective clauses.',
+      },
+      {
+        id: 'precis-statstrip',
+        type: 'statStrip',
+        stats: [
+          { value: '5 Min Read', label: 'Average Time' },
+          { value: '98.8%', label: 'Key Facts Yield' },
+          { value: '10 Points', label: 'Core Summary' },
+        ],
+      },
     ],
   },
-  {
-    id: 'sample-statstrip',
-    type: 'statStrip',
-    stats: [
-      { value: '1,250+', label: 'Veterans Placed' },
-      { value: '99.4%', label: 'Exam Accuracy' },
-      { value: '100%', label: 'Syllabus Coverage' },
+  Guide: {
+    title: 'Chapter 01: Core Institutional Frameworks & Governance',
+    blocks: [
+      {
+        id: 'sample-p1',
+        type: 'paragraph',
+        content: 'The architectural foundations of modern institutional frameworks require a disciplined understanding of strategic principles, regulatory governance, and quantitative benchmarking methods.',
+      },
+      {
+        id: 'sample-h2',
+        type: 'heading',
+        level: 2,
+        content: 'Key Structural Concepts & Methodologies',
+      },
+      {
+        id: 'sample-callout-1',
+        type: 'examTip',
+        content: 'Candidates must memorize the distinct classification criteria for Tier-1 and Tier-2 asset allocation under Basel III regulatory compliance frameworks.',
+      },
+      {
+        id: 'sample-table',
+        type: 'table',
+        rows: [
+          ['Dimension', 'Standard Model', 'Advanced Paradigm', 'Target Threshold'],
+          ['Capital Adequacy Ratio', '8.0%', '11.5%', '≥ 12.0%'],
+          ['Liquidity Coverage Ratio', '90.0%', '115.0%', '≥ 100.0%'],
+          ['Leverage Ratio', '3.0%', '4.5%', '≥ 4.0%'],
+        ],
+      },
+      {
+        id: 'sample-quote',
+        type: 'pullQuote',
+        content: '“Discipline is the bridge between operational goals and sustained strategic execution.” — VeerNXT Leadership',
+      },
+      {
+        id: 'sample-callout-2',
+        type: 'important',
+        content: 'Critical Rule: Direct regulatory audits will automatically trigger if the capital adequacy buffer dips below statutory limits.',
+      },
+      {
+        id: 'sample-keyfacts',
+        type: 'keyFacts',
+        title: 'Core Revision Summary',
+        items: [
+          'Statutory ratio adjustments take effect within 14 calendar days of monetary notification.',
+          'Tier-1 reserves must consist of paid-up equity capital and audited statutory reserves.',
+          'Risk-weighted assets determine minimum capital buffer thresholds across all lending divisions.',
+        ],
+      },
     ],
   },
-];
+};
 
 const DARK_SURFACE_OVERRIDE = {
   background: '#0f172a',
@@ -136,8 +217,12 @@ function sliderField(label, value, unit, min, max, step, onChange) {
 
 const ThemeEditor = () => {
   const { themeId } = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const isNew = !themeId || themeId === 'new';
+
+  const initialCat = normalizeReaderCategory(searchParams.get('category') || 'Intro');
+  const [targetCategory, setTargetCategory] = useState(initialCat);
 
   const [theme, setTheme] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -146,51 +231,46 @@ const ThemeEditor = () => {
   const [darkPreview, setDarkPreview] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [makeDefaultForCategory, setMakeDefaultForCategory] = useState(true);
 
-  const [previewBlocks, setPreviewBlocks] = useState(SAMPLE_PREVIEW_BLOCKS);
-  const [previewTitle, setPreviewTitle] = useState('Chapter 01: Core Frameworks & Principles');
-  const [previewLoading, setPreviewLoading] = useState(false);
   const previewRootRef = useRef(null);
+
+  const categoryPreviewData = CATEGORY_PREVIEWS[targetCategory] || CATEGORY_PREVIEWS.Guide;
+  const previewBlocks = categoryPreviewData.blocks;
+  const previewTitle = categoryPreviewData.title;
 
   useEffect(() => {
     (async () => {
       setLoading(true);
       if (isNew) {
-        setTheme({ id: null, name: 'New Theme', description: '', tokens: { ...ACADEMIC.tokens } });
+        setTheme({
+          id: null,
+          name: `${targetCategory} Custom Theme`,
+          description: `Customized reader theme optimized for ${targetCategory} documents`,
+          category: targetCategory,
+          tokens: { ...ACADEMIC.tokens },
+        });
       } else {
         const found = await fetchThemeById(themeId);
-        setTheme(found ? { ...found, tokens: { ...found.tokens } } : { id: null, name: 'New Theme', description: '', tokens: { ...ACADEMIC.tokens } });
+        if (found) {
+          const cat = found.category || found.tokens?.category || targetCategory;
+          setTheme({ ...found, tokens: { ...found.tokens } });
+          if (found.category && found.category !== 'All') {
+            setTargetCategory(normalizeReaderCategory(found.category));
+          }
+        } else {
+          setTheme({
+            id: null,
+            name: `${targetCategory} Theme`,
+            description: '',
+            category: targetCategory,
+            tokens: { ...ACADEMIC.tokens },
+          });
+        }
       }
       setLoading(false);
     })();
   }, [themeId, isNew]);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const { data: resource } = await supabase
-          .from('resources')
-          .select('resource_id, title, exam_name, storage_base_url')
-          .eq('format', 'blocks')
-          .eq('status', 'Published')
-          .limit(1)
-          .maybeSingle();
-
-        if (resource?.storage_base_url) {
-          const res = await fetch(`${resource.storage_base_url}chapters/chapter-1.json`);
-          if (res.ok) {
-            const chapterData = await res.json();
-            if (Array.isArray(chapterData.blocks) && chapterData.blocks.length > 0) {
-              setPreviewBlocks(chapterData.blocks);
-              setPreviewTitle(chapterData.title || resource.title);
-            }
-          }
-        }
-      } catch (err) {
-        console.warn('Could not load real chapter from database, using rich sample preview blocks:', err.message);
-      }
-    })();
-  }, []);
 
   useEffect(() => {
     if (!theme || !previewRootRef.current) return;
@@ -200,7 +280,7 @@ const ThemeEditor = () => {
       const value = tokens[key];
       if (value != null) root.style.setProperty(tokenToCssVar(key), value);
     });
-  }, [theme, darkPreview]);
+  }, [theme, darkPreview, targetCategory]);
 
   const updateToken = (key, value) => {
     setTheme((prev) => ({ ...prev, tokens: { ...prev.tokens, [key]: value } }));
@@ -211,20 +291,53 @@ const ThemeEditor = () => {
     setTheme((prev) => ({ ...prev, tokens: { ...DEFAULT_TOKENS } }));
   };
 
+  const handleCategorySwitch = (cat) => {
+    setTargetCategory(cat);
+    setSearchParams({ category: cat });
+    if (isNew && theme) {
+      setTheme((prev) => ({
+        ...prev,
+        name: `${cat} Custom Theme`,
+        description: `Customized reader theme optimized for ${cat} documents`,
+        category: cat,
+      }));
+    }
+  };
+
   const handleSave = async () => {
     setSaving(true);
     setSaved(false);
     try {
+      // A theme row can currently be the live default for more than one
+      // category (e.g. an admin previously pointed both Guide and Precis at
+      // the same custom theme). Saving in place here would silently change
+      // what every OTHER category using this same row looks like too --
+      // exactly the cross-category leak this editor must not allow. If this
+      // row is still serving as another category's default, fork: save as a
+      // brand-new row scoped to targetCategory instead of updating shared
+      // rows in place, so "changes made under Intro only affect Intro".
+      const sharedWithOtherCategory = !!theme.id && READER_CATEGORIES.some(
+        (cat) => cat !== targetCategory && getCategoryDefaultThemeId(cat) === theme.id
+      );
+
       const savedTheme = await saveCustomTheme({
-        id: theme.id,
+        id: sharedWithOtherCategory ? null : theme.id,
         name: theme.name,
         description: theme.description,
-        tokens: theme.tokens,
-      });
-      setTheme((prev) => ({ ...prev, id: savedTheme.id }));
+        category: targetCategory,
+        tokens: { ...theme.tokens, category: targetCategory },
+      }, targetCategory);
+
+      if (makeDefaultForCategory) {
+        await setCategoryDefaultTheme(targetCategory, savedTheme.id);
+      }
+
+      setTheme((prev) => ({ ...prev, id: savedTheme.id, category: targetCategory }));
       setSaved(true);
       setTimeout(() => setSaved(false), 3000);
-      if (savedTheme.id !== themeId) navigate(`/admin/reader-themes/${savedTheme.id}`, { replace: true });
+      if (savedTheme.id !== themeId) {
+        navigate(`/admin/reader-themes/${savedTheme.id}?category=${targetCategory}`, { replace: true });
+      }
     } catch (err) {
       console.error('Failed to save theme:', err);
       window.alert(`Could not save this theme: ${err.message}`);
@@ -248,7 +361,7 @@ const ThemeEditor = () => {
     <div className="te-root">
       <header className="te-topbar">
         <div className="te-topbar-left">
-          <button className="te-back-btn" onClick={() => navigate('/admin/reader-themes')} title="Back to themes gallery">
+          <button className="te-back-btn" onClick={() => navigate(`/admin/reader-themes?category=${targetCategory}`)} title="Back to themes gallery">
             <ChevronLeft size={18} />
           </button>
           <div>
@@ -259,19 +372,40 @@ const ThemeEditor = () => {
                 onChange={(e) => setTheme((p) => ({ ...p, name: e.target.value }))}
                 placeholder="Theme name"
               />
-              {theme.isDefault && <span className="rtg-default-badge">Default</span>}
+              <div className="te-category-pill-group">
+                <span className="te-category-label">Category:</span>
+                {READER_CATEGORIES.map((cat) => (
+                  <button
+                    key={cat}
+                    type="button"
+                    className={`te-category-pill ${targetCategory === cat ? 'active' : ''}`}
+                    onClick={() => handleCategorySwitch(cat)}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
               {isSystemTheme && <span className="te-system-badge">System Preset</span>}
             </div>
             <input
               className="te-desc-input"
               value={theme.description || ''}
               onChange={(e) => setTheme((p) => ({ ...p, description: e.target.value }))}
-              placeholder="Short description for this theme…"
+              placeholder={`Theme tailored for ${targetCategory} reader content…`}
             />
           </div>
         </div>
 
         <div className="te-topbar-right">
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', color: '#94a3b8', cursor: 'pointer', marginRight: '0.2rem' }}>
+            <input
+              type="checkbox"
+              checked={makeDefaultForCategory}
+              onChange={(e) => setMakeDefaultForCategory(e.target.checked)}
+            />
+            <span>Set as live <strong>{targetCategory}</strong> theme</span>
+          </label>
+
           <div className="te-viewport-toggle">
             {Object.entries(VIEWPORTS).map(([k, v]) => {
               const Icon = v.icon;
@@ -304,13 +438,17 @@ const ThemeEditor = () => {
 
           <button className="te-btn primary" onClick={handleSave} disabled={saving}>
             {saving ? <RefreshCw size={15} className="animate-spin" /> : saved ? <CheckCircle2 size={15} /> : <Save size={15} />}
-            {saved ? 'Saved!' : 'Save Theme'}
+            {saved ? `Saved for ${targetCategory}!` : `Save & Apply to ${targetCategory}`}
           </button>
         </div>
       </header>
 
       <div className="te-body">
         <aside className="te-side-nav">
+          <div className="te-side-category-info">
+            <Sparkles size={14} color="#10b981" />
+            <span>Editing for: <strong>{targetCategory}</strong>. Saving only updates {targetCategory} readers — Intro, Precis, and Guide always save independently.</span>
+          </div>
           <button className={`te-side-nav-item ${activePanel === 'colors' ? 'active' : ''}`} onClick={() => setActivePanel('colors')}>
             <Palette size={16} /> Colors
           </button>
@@ -335,9 +473,7 @@ const ThemeEditor = () => {
               ref={previewRootRef}
               style={{ background: darkPreview ? DARK_SURFACE_OVERRIDE.background : tokens.background }}
             >
-              {previewLoading ? (
-                <div className="te-preview-loading"><RefreshCw size={22} className="animate-spin" /></div>
-              ) : previewBlocks && previewBlocks.length > 0 ? (
+              {previewBlocks && previewBlocks.length > 0 ? (
                 <div className="bk-article" style={{ padding: '2.5rem 3rem' }}>
                   <ChapterHeader title={previewTitle} order={1} />
                   <div className="bk-blocks-container">
@@ -482,10 +618,16 @@ const ThemeEditor = () => {
         .te-topbar-title-row { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
         .te-name-input { background: none; border: none; font-size: 1.05rem; font-weight: 800; color: #e6edf3; padding: 0.15rem 0.3rem; border-radius: 6px; min-width: 120px; }
         .te-name-input:focus { outline: 1px solid #10b981; background: rgba(255,255,255,0.04); }
+        .te-category-pill-group { display: inline-flex; align-items: center; gap: 0.3rem; background: rgba(255,255,255,0.05); padding: 0.2rem 0.4rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.1); }
+        .te-category-label { font-size: 0.68rem; font-weight: 700; color: #8b949e; text-transform: uppercase; margin-right: 0.1rem; }
+        .te-category-pill { background: transparent; border: none; font-size: 0.72rem; font-weight: 700; color: #8b949e; padding: 0.15rem 0.55rem; border-radius: 999px; cursor: pointer; transition: all 0.12s ease; }
+        .te-category-pill:hover { color: #e6edf3; }
+        .te-category-pill.active { background: #10b981; color: #06281c; }
         .te-desc-input { display: block; background: none; border: none; font-size: 0.78rem; color: #8b949e; width: 100%; padding: 0.1rem 0.3rem; border-radius: 6px; }
         .te-desc-input:focus { outline: 1px solid #10b981; background: rgba(255,255,255,0.04); }
         .rtg-default-badge { font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; background: #10b981; color: #06281c; padding: 0.15rem 0.5rem; border-radius: 4px; }
         .te-system-badge { font-size: 0.62rem; font-weight: 700; color: #8b949e; background: rgba(255,255,255,0.06); padding: 0.15rem 0.5rem; border-radius: 4px; }
+        .te-side-category-info { display: flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.75rem; margin-bottom: 0.5rem; background: rgba(16, 185, 129, 0.1); border-radius: 8px; font-size: 0.76rem; color: #a7f3d0; }
 
         .te-topbar-right { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
         .te-viewport-toggle { display: flex; gap: 0.2rem; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 0.2rem; }

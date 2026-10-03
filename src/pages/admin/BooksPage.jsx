@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Repeat, Save, X, Columns3, Eye, Layers } from 'lucide-react';
+import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Repeat, Save, X, Columns3, Eye, Layers, BookOpen } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import { useDebounced } from './lcShared';
@@ -113,48 +113,9 @@ const BooksPage = () => {
   const [selectedBookId, setSelectedBookId] = useState(null);
   const [linkExamsSource, setLinkExamsSource] = useState(null); // book to bulk-link exams to -- never offered for Intro, see the button's own guard below
 
-  const transformText = (text, transformType) => {
-    if (!text) return '';
-    switch (transformType) {
-      case 'uppercase':
-        return text.toUpperCase();
-      case 'sentence': {
-        const lower = text.toLowerCase();
-        return lower.charAt(0).toUpperCase() + lower.slice(1);
-      }
-      case 'lowercase':
-        return text.toLowerCase();
-      case 'titlecase':
-        return text
-          .toLowerCase()
-          .split(' ')
-          .map((word) => (word ? word.charAt(0).toUpperCase() + word.slice(1) : ''))
-          .join(' ');
-      case 'remove-hyphen':
-        return text.replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
-      case 'remove-underscore':
-        return text.replace(/_/g, ' ').replace(/\s+/g, ' ').trim();
-      default:
-        return text;
-    }
-  };
-
-  const applyTextTransform = (transformType) => {
-    const targetBook = selectedBookId
-      ? paginated.find((b) => b.resourceId === selectedBookId) || (books || []).find((b) => b.resourceId === selectedBookId)
-      : null;
-
-    if (!targetBook) {
-      alert('Please tap on a book title first to format it.');
-      return;
-    }
-
-    const currentTitle = effectiveValue(targetBook, 'title');
-    const newTitle = transformText(currentTitle, transformType);
-    if (newTitle !== currentTitle) {
-      updatePendingEdit(targetBook, 'title', newTitle);
-    }
-  };
+  // The topbar keeps its normal page title for this route; this just keeps
+  // the browser tab itself accurate too.
+  useEffect(() => { document.title = 'VERNXT CMS — Book Content'; }, []);
 
   const [visibleColumns, setVisibleColumns] = useState(() => {
     try {
@@ -381,6 +342,14 @@ const BooksPage = () => {
     return filtered.slice(from, from + BOOKS_PAGE_SIZE);
   }, [filtered, page]);
 
+  const resetFilters = () => {
+    setSearch('');
+    setLevelFilter('');
+    setStateFilter('');
+    setUtFilter('');
+    setSort('linked');
+  };
+
   const handleUnarchive = async (b) => {
     if (!window.confirm(`Restore "${b.title}" back to active books?`)) return;
     try {
@@ -495,25 +464,21 @@ const BooksPage = () => {
 
   return (
     <div>
-      <div className="lc-section-header">
-        <div>
-          <h2>{showArchived ? 'Archived Books' : 'Book Content'}</h2>
-        </div>
-      </div>
-
       <div className="lc-filter-bar-single">
-        <div className="lc-filter-field lc-filter-search lc-search-input-wrapper">
+        <div className="lc-filter-field lc-filter-search lc-search-input-wrapper" style={{ flex: '1.1 1 200px' }}>
           <Search size={16} />
-          <input type="text" placeholder="Search book title..." value={search} onChange={(e) => setSearch(e.target.value)} />
+          <input type="text" placeholder="Search title, subject, category..." value={search} onChange={(e) => setSearch(e.target.value)} aria-label="Search books" />
         </div>
-        <div className="lc-filter-field">
-          <label>Type</label>
-          <div style={{ display: 'flex', gap: '0.4rem' }}>
+        <div className="lc-filter-field" style={{ flex: '0 0 auto' }}>
+          <label>Category</label>
+          <div className="lc-pill-switcher" role="tablist" aria-label="Category">
             {CATEGORY_TABS.map((t) => (
               <button
                 key={t.value}
-                className="lc-btn"
-                style={category === t.value ? { background: 'var(--admin-accent)', borderColor: 'var(--admin-accent)', color: '#06281c' } : undefined}
+                type="button"
+                role="tab"
+                aria-selected={category === t.value}
+                className={`lc-pill-switcher-tab ${category === t.value ? 'active' : ''}`}
                 onClick={() => setCategory(t.value)}
               >
                 {t.label}
@@ -521,132 +486,110 @@ const BooksPage = () => {
             ))}
           </div>
         </div>
-        <div className="lc-filter-field">
-          <label>Level</label>
-          <select value={levelFilter} onChange={(e) => { setLevelFilter(e.target.value); setStateFilter(''); setUtFilter(''); }} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
+        <div className="lc-filter-field" style={{ flex: '0 1 130px' }}>
+          <label htmlFor="books-filter-level">Level</label>
+          <select id="books-filter-level" value={levelFilter} onChange={(e) => { setLevelFilter(e.target.value); setStateFilter(''); setUtFilter(''); }} className="lc-native-select">
             {LEVEL_FILTER_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         </div>
-        <div className="lc-filter-field">
+        <div className="lc-filter-field" style={{ flex: '0 1 150px' }}>
           <label>State</label>
-          <div style={{ minWidth: 150 }}>
-            <Select
-              searchable
-              value={stateFilter}
-              onChange={(e) => { setStateFilter(e.target.value); setUtFilter(''); if (e.target.value) setLevelFilter('state'); }}
-              placeholder="All States"
-              options={[{ value: '', label: 'All States' }, ...regions.filter((r) => r.level === 'state').map((r) => ({ value: r.name, label: r.name }))]}
-            />
-          </div>
+          <Select
+            searchable
+            value={stateFilter}
+            onChange={(e) => { setStateFilter(e.target.value); setUtFilter(''); if (e.target.value) setLevelFilter('state'); }}
+            placeholder="All States"
+            options={[{ value: '', label: 'All States' }, ...regions.filter((r) => r.level === 'state').map((r) => ({ value: r.name, label: r.name }))]}
+          />
         </div>
-        <div className="lc-filter-field">
-          <label>UT</label>
-          <div style={{ minWidth: 150 }}>
-            <Select
-              searchable
-              value={utFilter}
-              onChange={(e) => { setUtFilter(e.target.value); setStateFilter(''); if (e.target.value) setLevelFilter('ut'); }}
-              placeholder="All UTs"
-              options={[{ value: '', label: 'All UTs' }, ...regions.filter((r) => r.level === 'ut').map((r) => ({ value: r.name, label: r.name }))]}
-            />
-          </div>
-        </div>
-        <div className="lc-filter-field">
-          <label>Format Title</label>
-          <select
-            value=""
-            onChange={(e) => {
-              if (e.target.value) {
-                applyTextTransform(e.target.value);
-              }
-            }}
-            title={selectedBookId ? 'Transform the title of the selected book' : 'Tap on a book title first to format it'}
-            style={{
-              padding: '0.6rem 0.75rem',
-              borderRadius: 8,
-              border: selectedBookId ? '1px solid var(--admin-accent)' : '1px solid var(--border)',
-              background: 'var(--surface-alt)',
-              color: selectedBookId ? 'var(--admin-text)' : 'var(--admin-text-muted)',
-              cursor: 'pointer',
-            }}
-          >
-            <option value="" disabled>
-              {selectedBookId ? '— Format Title —' : '— Tap a book first —'}
-            </option>
-            <option value="uppercase">CAPITAL CASE</option>
-            <option value="sentence">sentence case</option>
-            <option value="lowercase">smallcase</option>
-            <option value="titlecase">Title Case</option>
-            <option value="remove-hyphen">Remove Hyphen</option>
-            <option value="remove-underscore">Remove Underscore</option>
-          </select>
-        </div>
-        <div className="lc-filter-field">
-          <label>Sort</label>
-          <select value={sort} onChange={(e) => setSort(e.target.value)} style={{ padding: '0.6rem 0.75rem', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--surface-alt)', color: 'var(--admin-text)' }}>
-            {SORT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-          </select>
+        <div className="lc-filter-field" style={{ flex: '0 1 150px' }}>
+          <label>Union Territory</label>
+          <Select
+            searchable
+            value={utFilter}
+            onChange={(e) => { setUtFilter(e.target.value); setStateFilter(''); if (e.target.value) setLevelFilter('ut'); }}
+            placeholder="All UTs"
+            options={[{ value: '', label: 'All UTs' }, ...regions.filter((r) => r.level === 'ut').map((r) => ({ value: r.name, label: r.name }))]}
+          />
         </div>
 
-        {/* Columns filter dropdown */}
-        <div className="lc-col-picker-wrapper" ref={colPickerRef}>
-          <button
-            type="button"
-            className="lc-btn"
-            onClick={() => setShowColPicker((prev) => !prev)}
-            title="Choose which columns to show or hide"
-            style={showColPicker ? { borderColor: 'var(--admin-accent)', color: 'var(--admin-accent)' } : undefined}
-          >
-            <Columns3 size={15} /> Columns
-          </button>
-          {showColPicker && (
-            <div className="lc-col-picker-menu">
-              <div className="lc-col-picker-header">
-                <span>Display Columns</span>
-              </div>
-              {COLUMN_CONFIG.map((col) => (
-                <label key={col.key} className="lc-col-picker-item">
-                  <input
-                    type="checkbox"
-                    checked={!!visibleColumns[col.key]}
-                    onChange={() => toggleColumn(col.key)}
-                  />
-                  <span>{col.label}</span>
-                </label>
-              ))}
-              <div className="lc-col-picker-actions">
-                <button type="button" className="lc-col-picker-action-btn" onClick={resetColumns}>
-                  Reset
-                </button>
-                <button type="button" className="lc-col-picker-action-btn" onClick={showAllColumns}>
-                  Show All
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {(category === 'Guide' || category === 'Precis') && (
-          <button
-            className="lc-btn"
-            onClick={() => setShowBatchSyncModal(true)}
-            title="Batch match and synchronize Guide & Precis books to the same exams"
-            style={{ color: '#3b82f6', borderColor: 'rgba(59, 130, 246, 0.4)', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
-          >
-            <Layers size={15} /> Sync Guide &amp; Precis Pairs
-          </button>
-        )}
-        <button
-          className={`lc-btn ${showArchived ? 'primary' : ''}`}
-          onClick={() => setShowArchived((prev) => !prev)}
-          title={showArchived ? 'Switch to active books' : 'View archived books'}
-          style={showArchived ? { background: '#d97706', borderColor: '#d97706', color: 'white' } : undefined}
-        >
-          <Archive size={16} /> {showArchived ? 'Show Active Books' : `Show Archived (${archivedCount})`}
-        </button>
         <button className="lc-btn primary" onClick={() => setShowNewModal(true)}>
           <Plus size={16} /> New Book
         </button>
+        <button className="lc-btn" onClick={resetFilters} title="Reset filters" aria-label="Reset filters">
+          Clear
+        </button>
+      </div>
+
+      <div className="lc-card-row-header" style={{ marginBottom: '0.85rem' }}>
+        <div>
+          <h3 style={{ margin: 0 }}>{category} library</h3>
+          <p className="lc-muted-note" style={{ margin: '0.2rem 0 0' }}>Browse books, check chapter coverage, and manage linked exam content.</p>
+        </div>
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          {/* Columns filter dropdown */}
+          <div className="lc-col-picker-wrapper" ref={colPickerRef}>
+            <button
+              type="button"
+              className="lc-btn"
+              onClick={() => setShowColPicker((prev) => !prev)}
+              title="Choose which columns to show or hide"
+              aria-label="Choose which columns to show or hide"
+              aria-expanded={showColPicker}
+              style={showColPicker ? { borderColor: 'var(--admin-accent)', color: 'var(--admin-accent)' } : undefined}
+            >
+              <Columns3 size={15} /> Columns
+            </button>
+            {showColPicker && (
+              <div className="lc-col-picker-menu">
+                <div className="lc-col-picker-header">
+                  <span>Display Columns</span>
+                </div>
+                {COLUMN_CONFIG.map((col) => (
+                  <label key={col.key} className="lc-col-picker-item">
+                    <input
+                      type="checkbox"
+                      checked={!!visibleColumns[col.key]}
+                      onChange={() => toggleColumn(col.key)}
+                    />
+                    <span>{col.label}</span>
+                  </label>
+                ))}
+                <div className="lc-col-picker-actions">
+                  <button type="button" className="lc-col-picker-action-btn" onClick={resetColumns}>
+                    Reset
+                  </button>
+                  <button type="button" className="lc-col-picker-action-btn" onClick={showAllColumns}>
+                    Show All
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <select value={sort} onChange={(e) => setSort(e.target.value)} className="lc-native-select" aria-label="Sort by" title="Sort by" style={{ width: 'auto' }}>
+            {SORT_OPTIONS.map((o) => <option key={o.value} value={o.value}>Sort: {o.label}</option>)}
+          </select>
+
+          {(category === 'Guide' || category === 'Precis') && (
+            <button
+              className="lc-btn"
+              onClick={() => setShowBatchSyncModal(true)}
+              title="Batch match and synchronize Guide & Precis books to the same exams"
+              aria-label="Sync Guide and Precis pairs"
+            >
+              <Layers size={15} /> Sync Guide &amp; Precis Pairs
+            </button>
+          )}
+          <button
+            className={`lc-btn ${showArchived ? 'primary' : ''}`}
+            onClick={() => setShowArchived((prev) => !prev)}
+            title={showArchived ? 'Switch to active books' : 'View archived books'}
+            aria-label={showArchived ? 'Switch to active books' : 'View archived books'}
+          >
+            <Archive size={16} /> {showArchived ? 'Active Books' : `Archived (${archivedCount})`}
+          </button>
+        </div>
       </div>
 
       {error && <div className="lc-empty-state">Failed to load books: {error}</div>}
@@ -669,40 +612,48 @@ const BooksPage = () => {
             {paginated.map((b) => (
               <tr key={b.resourceId}>
                 <td className="lc-col-book">
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                    <input
-                      type="text"
-                      value={effectiveValue(b, 'title')}
-                      disabled={savingRowId === b.resourceId}
-                      onFocus={() => setSelectedBookId(b.resourceId)}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setSelectedBookId(b.resourceId);
-                      }}
-                      onChange={(e) => {
-                        setSelectedBookId(b.resourceId);
-                        updatePendingEdit(b, 'title', e.target.value);
-                      }}
-                      placeholder="Book title..."
-                      title="Click to edit or format title"
-                      style={{
-                        padding: '0.35rem 0.55rem',
-                        borderRadius: 6,
-                        border: selectedBookId === b.resourceId ? '1px solid var(--admin-accent)' : '1px solid var(--border)',
-                        background: selectedBookId === b.resourceId ? 'rgba(16, 185, 129, 0.08)' : 'var(--surface-alt)',
-                        color: 'var(--admin-text)',
-                        fontSize: '0.84rem',
-                        fontWeight: 700,
-                        width: '100%',
-                        boxSizing: 'border-box',
-                        transition: 'border-color 0.15s, background 0.15s',
-                      }}
-                    />
-                    {b.isArchived && (
-                      <span style={{ fontSize: '0.68rem', fontWeight: 700, color: '#b45309', background: '#fffbeb', border: '1px solid #fef3c7', padding: '0.1rem 0.4rem', borderRadius: 4, flexShrink: 0 }}>
-                        Archived
-                      </span>
-                    )}
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.55rem' }}>
+                    <span className="lc-resource-row-icon" style={{ background: 'var(--admin-accent-soft)', color: 'var(--admin-accent)', marginTop: '0.1rem' }} aria-hidden="true">
+                      <BookOpen size={15} />
+                    </span>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+                        <input
+                          type="text"
+                          value={effectiveValue(b, 'title')}
+                          disabled={savingRowId === b.resourceId}
+                          onFocus={() => setSelectedBookId(b.resourceId)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedBookId(b.resourceId);
+                          }}
+                          onChange={(e) => {
+                            setSelectedBookId(b.resourceId);
+                            updatePendingEdit(b, 'title', e.target.value);
+                          }}
+                          placeholder="Book title..."
+                          title="Click to edit title"
+                          aria-label={`Title for ${b.title || 'book'}`}
+                          style={{
+                            padding: '0.35rem 0.55rem',
+                            borderRadius: 6,
+                            border: selectedBookId === b.resourceId ? '1px solid var(--admin-accent)' : '1px solid var(--border)',
+                            background: selectedBookId === b.resourceId ? 'rgba(16, 185, 129, 0.08)' : 'var(--surface-alt)',
+                            color: 'var(--admin-text)',
+                            fontSize: '0.84rem',
+                            fontWeight: 700,
+                            width: '100%',
+                            boxSizing: 'border-box',
+                            transition: 'border-color 0.15s, background 0.15s',
+                          }}
+                        />
+                        {b.isArchived && (
+                          <span style={{ fontSize: '0.68rem', fontWeight: 700, color: '#b45309', background: '#fffbeb', border: '1px solid #fef3c7', padding: '0.1rem 0.4rem', borderRadius: 4, flexShrink: 0 }}>
+                            Archived
+                          </span>
+                        )}
+                      </div>
+                    </div>
                   </div>
                   {(() => {
                     const oppCat = b.category === 'Guide' ? 'Precis' : b.category === 'Precis' ? 'Guide' : null;
@@ -723,7 +674,7 @@ const BooksPage = () => {
                             className="lc-link-btn"
                             style={{
                               fontSize: '0.7rem',
-                              color: '#3b82f6',
+                              color: '#8b5cf6',
                               fontWeight: 600,
                               textDecoration: 'underline',
                               background: 'none',
@@ -732,6 +683,7 @@ const BooksPage = () => {
                               cursor: 'pointer',
                             }}
                             title={`Sync links with matching ${cp.category} ("${cp.title}")`}
+                            aria-label={`Sync links with matching ${cp.category} ${cp.title}`}
                             onClick={async (e) => {
                               e.stopPropagation();
                               if (!window.confirm(`Sync exam links between ${b.category} and ${cp.category} for "${b.title}"? Both will be linked to the union of all their exams.`)) return;
@@ -831,6 +783,7 @@ const BooksPage = () => {
                         <button
                           className="lc-btn primary"
                           title="Save changes to the database"
+                          aria-label={`Save changes to ${b.title || 'book'}`}
                           disabled={savingRowId === b.resourceId}
                           onClick={() => handleSaveRow(b)}
                           style={{ padding: '0.35rem 0.7rem', fontSize: '0.78rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}
@@ -840,6 +793,7 @@ const BooksPage = () => {
                         <button
                           className="lc-icon-btn"
                           title="Discard unsaved changes"
+                          aria-label={`Discard unsaved changes to ${b.title || 'book'}`}
                           disabled={savingRowId === b.resourceId}
                           onClick={() => handleDiscardRow(b)}
                         >
@@ -850,6 +804,7 @@ const BooksPage = () => {
                     <button
                       className="lc-icon-btn"
                       title="Preview book content"
+                      aria-label={`Preview ${b.title || 'book'}`}
                       onClick={(e) => {
                         e.stopPropagation();
                         setPreviewBook(b);
@@ -860,38 +815,39 @@ const BooksPage = () => {
                     </button>
                     <button
                       className="lc-icon-btn"
-                      title="Open in new tab"
+                      title="Open book in new tab"
+                      aria-label={`Open ${b.title || 'book'} in a new tab`}
                       onClick={(e) => {
                         e.stopPropagation();
                         openInNewTab(b);
                       }}
-                      style={{ color: 'var(--admin-accent)' }}
                     >
                       <ExternalLink size={14} />
                     </button>
                     <button
                       className="lc-icon-btn"
-                      title={b.category === 'Intro' ? "Intro can only link to one exam — use Publish Content or the exam's own Resources panel instead" : 'Link this book to exams in bulk'}
+                      title={b.category === 'Intro' ? "Intro can only link to one exam — use Publish Content or the exam's own Resources panel instead" : 'Manage links: bulk-link this book to exams'}
+                      aria-label={b.category === 'Intro' ? 'Manage links unavailable for Intro' : `Manage links for ${b.title || 'book'}`}
                       disabled={b.category === 'Intro'}
                       onClick={() => setLinkExamsSource(b)}
-                      style={{ color: b.category === 'Intro' ? undefined : '#7c3aed' }}
+                      style={{ color: b.category === 'Intro' ? undefined : 'var(--admin-accent)' }}
                     >
                       <Link2 size={14} />
                     </button>
                     <button
                       className="lc-icon-btn"
                       title="Replace this book with a new upload (Publish Content's Replace flow, pre-selected)"
+                      aria-label={`Replace ${b.title || 'book'} with a new upload`}
                       onClick={() => navigate('/admin/publish-content', { state: { replaceBook: { resourceId: b.resourceId, category: b.category, title: b.title } } })}
-                      style={{ color: '#d97706' }}
                     >
                       <Repeat size={14} />
                     </button>
                     {showArchived ? (
                       <button
                         className="lc-icon-btn"
-                        title="Restore / Unarchive this book"
+                        title="Restore / unarchive this book"
+                        aria-label={`Restore ${b.title || 'book'}`}
                         onClick={() => handleUnarchive(b)}
-                        style={{ color: '#059669' }}
                       >
                         <ArchiveRestore size={14} />
                       </button>
@@ -899,7 +855,8 @@ const BooksPage = () => {
                       <>
                         <button
                           className="lc-icon-btn"
-                          title="Rename this book"
+                          title="Edit / rename this book"
+                          aria-label={`Edit ${b.title || 'book'}`}
                           onClick={() => setRenameSource(b)}
                         >
                           <Pencil size={14} />
@@ -907,8 +864,8 @@ const BooksPage = () => {
                         <button
                           className="lc-icon-btn"
                           title="Archive this book"
+                          aria-label={`Archive ${b.title || 'book'}`}
                           onClick={() => setArchiveSource(b)}
-                          style={{ color: '#d97706' }}
                         >
                           <Archive size={14} />
                         </button>
@@ -917,6 +874,7 @@ const BooksPage = () => {
                     <button
                       className="lc-icon-btn"
                       title="Duplicate this book"
+                      aria-label={`Duplicate ${b.title || 'book'}`}
                       onClick={() => setDuplicateSource(b)}
                     >
                       <Copy size={14} />
@@ -924,8 +882,9 @@ const BooksPage = () => {
                     <button
                       className="lc-icon-btn"
                       title="Delete this book"
+                      aria-label={`Delete ${b.title || 'book'}`}
                       onClick={() => setDeleteSource(b)}
-                      style={{ color: '#dc2626' }}
+                      style={{ color: 'var(--admin-danger)' }}
                     >
                       <Trash2 size={14} />
                     </button>

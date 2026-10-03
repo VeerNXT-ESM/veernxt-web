@@ -56,19 +56,15 @@ const SubjectsPage = () => {
 
   return (
     <div>
-      <div className="lc-section-header">
-        <div>
-          <h2>Subjects</h2>
-          <p>{withThumb} of {Object.keys(THUMBNAIL_SUBJECTS).length} subjects have a thumbnail. Books and study materials show their subject's thumbnail; exams use their category's thumbnail instead.</p>
-        </div>
-      </div>
-
       <div className="lc-filter-bar">
         <div className="lc-filter-field lc-search-input-wrapper">
           <Search size={16} />
           <input type="text" placeholder="Search subjects..." value={search} onChange={(e) => setSearch(e.target.value)} />
         </div>
-        <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--admin-text-muted, #64748b)' }}>
+        <span style={{ fontSize: '0.82rem', color: 'var(--admin-text-muted, #64748b)', whiteSpace: 'nowrap' }}>
+          <strong style={{ color: 'var(--admin-text, #0f172a)' }}>{withThumb}</strong> of {Object.keys(THUMBNAIL_SUBJECTS).length} with thumbnail
+        </span>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--admin-text-muted, #64748b)', cursor: 'pointer', whiteSpace: 'nowrap' }}>
           <input type="checkbox" checked={onlyMissing} onChange={(e) => setOnlyMissing(e.target.checked)} />
           Missing thumbnail only
         </label>

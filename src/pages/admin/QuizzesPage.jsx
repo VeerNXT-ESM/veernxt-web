@@ -197,12 +197,6 @@ const QuizzesPage = () => {
 
   return (
     <div>
-      <div className="lc-section-header">
-        <div>
-          <h2>Quizzes</h2>
-        </div>
-      </div>
-
       <div className="lc-filter-bar-single">
         <div className="lc-filter-field lc-filter-search lc-search-input-wrapper">
           <Search size={16} />

@@ -76,13 +76,6 @@ const AdminJobs = () => {
 
   return (
     <div>
-      <div className="lc-section-header">
-        <div>
-          <h2>Job Board</h2>
-          <p>Aggregated vacancy notifications from SSC, IBPS, Railways, and State PSCs.</p>
-        </div>
-      </div>
-
       <div className="lc-filter-bar">
         <div className="lc-filter-field lc-search-input-wrapper">
           <Search size={16} />

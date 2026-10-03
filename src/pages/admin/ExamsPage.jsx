@@ -6,7 +6,44 @@ import ExamThumbnail from './ExamThumbnail';
 import ExamEditorPanel from './ExamEditorPanel';
 import ExamResourcesPanel from './ExamResourcesPanel';
 import { useDebounced, StatusBadge } from './lcShared';
-import { Search, Plus, ChevronLeft, ChevronRight, ShieldAlert } from 'lucide-react';
+import { duplicateExamRow, deleteExamRow } from './examActions';
+import { Search, Plus, ChevronLeft, ChevronRight, ShieldAlert, RotateCcw, MoreVertical } from 'lucide-react';
+
+const STATUS_OPTIONS = [
+  { value: '', label: 'All Statuses' },
+  { value: 'published', label: 'Published' },
+  { value: 'draft', label: 'Draft' },
+];
+
+// Per-row "..." action menu — Open/Duplicate/Delete without first selecting
+// the row into the editor panel. Closes on outside click, and stops its own
+// clicks from bubbling to the row's onClick (which would select the exam).
+const ExamRowMenu = ({ onOpen, onDuplicate, onDelete }) => {
+  const [open, setOpen] = useState(false);
+  const wrapperRef = useRef(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDocClick = (e) => { if (wrapperRef.current && !wrapperRef.current.contains(e.target)) setOpen(false); };
+    document.addEventListener('mousedown', onDocClick);
+    return () => document.removeEventListener('mousedown', onDocClick);
+  }, [open]);
+
+  return (
+    <div className="lc-col-picker-wrapper" ref={wrapperRef} onClick={(e) => e.stopPropagation()}>
+      <button className="lc-icon-btn" title="More actions" onClick={() => setOpen((o) => !o)}>
+        <MoreVertical size={14} />
+      </button>
+      {open && (
+        <div className="lc-col-picker-menu lc-row-menu">
+          <button className="lc-row-menu-item" onClick={() => { setOpen(false); onOpen(); }}>Open</button>
+          <button className="lc-row-menu-item" onClick={() => { setOpen(false); onDuplicate(); }}>Duplicate</button>
+          <button className="lc-row-menu-item danger" onClick={() => { setOpen(false); onDelete(); }}>Delete</button>
+        </div>
+      )}
+    </div>
+  );
+};
 
 // Deliberately smaller than the shared lcShared.PAGE_SIZE (20, used by
 // AdminJobs.jsx etc.) — the dense card-row layout here reads better with
@@ -42,6 +79,7 @@ const ExamsPage = () => {
   const [stateId, setStateId] = useState('');
   const [utId, setUtId] = useState('');
   const regionId = stateId || utId;
+  const [status, setStatus] = useState('');
 
   // Whole lc_exams catalog, fetched once — Category/Conducting Body options
   // are derived from it client-side, cascaded to whichever Level/Category
@@ -108,7 +146,7 @@ const ExamsPage = () => {
   const [selectedExamId, setSelectedExamId] = useState(searchParams.get('exam') || null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
 
-  useEffect(() => { setPage(1); }, [debouncedSearch, bodyId, category, level, stateId, utId]);
+  useEffect(() => { setPage(1); }, [debouncedSearch, bodyId, category, level, stateId, utId, status]);
 
   // Same out-of-order-response guard used elsewhere in this CMS.
   const requestIdRef = useRef(0);
@@ -126,6 +164,7 @@ const ExamsPage = () => {
       if (bodyId) query = query.eq('conducting_body_id', bodyId);
       if (category) query = query.eq('category', category);
       if (regionId) query = query.eq('region_id', regionId);
+      if (status) query = query.eq('status', status);
 
       const from = (page - 1) * EXAMS_PAGE_SIZE;
       query = query.order('name', { ascending: true }).range(from, from + EXAMS_PAGE_SIZE - 1);
@@ -141,7 +180,7 @@ const ExamsPage = () => {
     } finally {
       if (requestId === requestIdRef.current) setLoading(false);
     }
-  }, [debouncedSearch, bodyId, category, level, regionId, page]);
+  }, [debouncedSearch, bodyId, category, level, regionId, status, page]);
 
   useEffect(() => { fetchExams(); }, [fetchExams]);
 
@@ -163,6 +202,42 @@ const ExamsPage = () => {
   const chooseCategory = (v) => { setCategory(v); setBodyId(''); };
   const pickState = (id) => { setStateId(id); setUtId(''); if (id) setLevel('state'); };
   const pickUt = (id) => { setUtId(id); setStateId(''); if (id) setLevel('ut'); };
+
+  const resetFilters = () => {
+    setSearch('');
+    setCategory('');
+    setBodyId('');
+    setStateId('');
+    setUtId('');
+    setStatus('');
+    setLevel('central');
+  };
+
+  const handleRowDuplicate = async (exam) => {
+    try {
+      const newExam = await duplicateExamRow(supabase, exam.id);
+      setCatalog((prev) => [...prev, {
+        id: newExam.id, name: newExam.name, category: newExam.category,
+        conducting_body_id: newExam.conducting_body_id, conducting_body: exam.conducting_body, region: exam.region,
+      }]);
+      selectExam(newExam.id);
+      fetchExams();
+    } catch (err) {
+      alert('Duplicate failed: ' + err.message);
+    }
+  };
+
+  const handleRowDelete = async (exam) => {
+    if (!window.confirm(`Delete "${exam.name}"?\n\nThis will remove the exam along with its linked tags, intros, and resource links.`)) return;
+    try {
+      await deleteExamRow(supabase, exam.id);
+      setCatalog((prev) => prev.filter((e) => e.id !== exam.id));
+      if (selectedExamId === exam.id) selectExam(null);
+      fetchExams();
+    } catch (err) {
+      alert('Failed to delete exam: ' + err.message);
+    }
+  };
 
   return (
     <div>
@@ -187,29 +262,34 @@ const ExamsPage = () => {
           <Select value={level} onChange={(e) => chooseLevel(e.target.value)} options={LEVELS} />
         </div>
         {level === 'state' && (
-        <div className="lc-filter-field">
-          <label>State</label>
-          <Select
-            searchable
-            placeholder="All States"
-            value={stateId}
-            onChange={(e) => pickState(e.target.value)}
-            options={[{ value: '', label: 'All States' }, ...stateOptions.map((r) => ({ value: r.id, label: r.name }))]}
-          />
-        </div>
+          <div className="lc-filter-field">
+            <label>State</label>
+            <Select
+              searchable
+              placeholder="All States"
+              value={stateId}
+              onChange={(e) => pickState(e.target.value)}
+              options={[{ value: '', label: 'All States' }, ...stateOptions.map((r) => ({ value: r.id, label: r.name }))]}
+            />
+          </div>
         )}
         {level === 'ut' && (
-        <div className="lc-filter-field">
-          <label>UT</label>
-          <Select
-            searchable
-            placeholder="All UTs"
-            value={utId}
-            onChange={(e) => pickUt(e.target.value)}
-            options={[{ value: '', label: 'All UTs' }, ...utOptions.map((r) => ({ value: r.id, label: r.name }))]}
-          />
-        </div>
+          <div className="lc-filter-field">
+            <label>UT</label>
+            <Select
+              searchable
+              placeholder="All UTs"
+              value={utId}
+              onChange={(e) => pickUt(e.target.value)}
+              options={[{ value: '', label: 'All UTs' }, ...utOptions.map((r) => ({ value: r.id, label: r.name }))]}
+            />
+          </div>
         )}
+        <div className="lc-filter-field">
+          <label>Status</label>
+          <Select value={status} onChange={(e) => setStatus(e.target.value)} options={STATUS_OPTIONS} />
+        </div>
+        <button className="lc-btn" onClick={resetFilters} title="Reset all filters"><RotateCcw size={16} /> Reset</button>
         <button className="lc-btn primary" onClick={startNewExam}><Plus size={16} /> Add Exam</button>
       </div>
 
@@ -227,9 +307,14 @@ const ExamsPage = () => {
                 <div className="lc-exam-row-body">
                   <span className="lc-exam-row-name lc-truncate" title={exam.name}>{exam.name}</span>
                   <span className="lc-exam-row-meta lc-truncate">{exam.conducting_body?.name || '—'}</span>
-                  <span className="lc-exam-row-meta">{[exam.category, LEVEL_LABELS[exam.region?.level]].filter(Boolean).join(' • ')}</span>
+                  <span className="lc-exam-row-meta lc-truncate">{[exam.category, LEVEL_LABELS[exam.region?.level]].filter(Boolean).join(' • ')}</span>
                 </div>
                 <span className="lc-exam-row-badge"><StatusBadge status={exam.status} /></span>
+                <ExamRowMenu
+                  onOpen={() => selectExam(exam.id)}
+                  onDuplicate={() => handleRowDuplicate(exam)}
+                  onDelete={() => handleRowDelete(exam)}
+                />
               </div>
             ))}
 

@@ -13,6 +13,7 @@ import { BlockRenderer } from './book/BlockRenderer';
 import { ChapterHeader } from './book/BookBlocks';
 import { ReaderThemeProvider } from './book/theme/ReaderThemeProvider';
 import { useReaderTheme } from './book/theme/useReaderTheme';
+import { normalizeReaderCategory } from './book/theme/customThemeStore';
 import { FONT_SCALE_STEP, FONT_SCALE_MIN, FONT_SCALE_MAX } from './book/theme/readerThemeTokens';
 import ThemeSwitcher from './book/theme/ThemeSwitcher';
 import './book/BookBlocks.css';
@@ -309,6 +310,7 @@ const SecureReader = () => {
 
   return (
     <ReaderThemeProvider
+      category={normalizeReaderCategory(resource?.category, resource?.title)}
       theme={resource?.reader_theme_id || undefined}
       subjectAccent={resource?.subject_accent || null}
       className="reader-container animate-fade-in"
@@ -740,22 +742,19 @@ const SecureReader = () => {
           color: var(--reader-danger, #ef4444);
         }
 
-        /* Image Styling - Magazine layout */
+        /* Image Styling - Natural layout */
         .reader-content img {
-          max-width: calc(100% + 3rem);
-          width: calc(100% + 3rem);
-          margin: 2.5rem -1.5rem;
+          max-width: 100%;
+          width: auto;
           height: auto;
-          border-radius: 0;
+          margin: 2rem auto;
+          border-radius: var(--reader-radius-md, 8px);
           box-shadow: var(--reader-shadow-md, 0 4px 15px rgba(0, 0, 0, 0.08));
-          display: block;
+          display: inline-block;
         }
 
         @media (min-width: 768px) {
           .reader-content img {
-            max-width: 100%;
-            width: 100%;
-            margin: 3rem 0;
             border-radius: var(--reader-radius-lg, 12px);
           }
           .reader-content blockquote {

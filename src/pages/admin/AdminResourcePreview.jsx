@@ -5,6 +5,7 @@ import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
 import { ReaderThemeProvider } from '../../components/book/theme/ReaderThemeProvider';
 import { useReaderTheme } from '../../components/book/theme/useReaderTheme';
+import { normalizeReaderCategory } from '../../components/book/theme/customThemeStore';
 import ThemeSwitcher from '../../components/book/theme/ThemeSwitcher';
 import { READER_THEME_LIST } from '../../components/book/theme/readerThemeRegistry';
 import '../../components/book/BookBlocks.css';
@@ -257,6 +258,7 @@ const AdminResourcePreview = ({ resourceId, book: propBook }) => {
     // overwriting the admin's own candidate-mode reading preference, which
     // lives in the same browser's localStorage under the same key.
     <ReaderThemeProvider
+      category={normalizeReaderCategory(resource?.category, resource?.title)}
       theme={resource.reader_theme_id || resource.readerThemeId || undefined}
       persist={false}
       style={{ padding: '1.25rem 1.5rem', overflowY: 'auto', flex: 1, background: 'var(--surface)' }}

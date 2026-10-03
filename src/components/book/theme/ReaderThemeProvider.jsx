@@ -2,7 +2,13 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ALL_TOKEN_KEYS, tokenToCssVar, FONT_SCALE_MIN, FONT_SCALE_MAX } from './readerThemeTokens';
 import { getRegistryTheme, readerThemes, DEFAULT_THEME_ID } from './readerThemeRegistry';
 import { ReaderThemeContext } from './ReaderThemeContext';
-import { fetchThemeById } from './customThemeStore';
+import {
+  fetchThemeById,
+  normalizeReaderCategory,
+  getCategoryDefaultThemeId,
+  setCategoryDefaultTheme,
+  fetchCategoryDefaultThemes,
+} from './customThemeStore';
 
 const STORAGE_KEY = 'veernxt_reader_theme';
 const FONT_SCALE_STORAGE_KEY = 'veernxt_reader_font_scale';
@@ -26,62 +32,74 @@ function persistFontScale(scale) {
   }
 }
 
-function readStoredThemeId() {
+function readStoredThemeIdForCategory(category) {
+  const norm = normalizeReaderCategory(category);
   try {
-    return localStorage.getItem(STORAGE_KEY);
+    const catStored = localStorage.getItem(`veernxt_category_theme_${norm.toLowerCase()}`);
+    if (catStored) return catStored;
+    return getCategoryDefaultThemeId(norm);
   } catch {
-    return null;
+    return getCategoryDefaultThemeId(norm);
   }
 }
 
-function persistThemeId(id) {
+function persistThemeIdForCategory(category, id) {
+  const norm = normalizeReaderCategory(category);
   try {
-    localStorage.setItem(STORAGE_KEY, id);
+    localStorage.setItem(`veernxt_category_theme_${norm.toLowerCase()}`, id);
   } catch {
-    // localStorage unavailable (private browsing) -- selection just won't
-    // survive a reload, still applies for this session.
+    // localStorage unavailable
   }
 }
-
 
 /**
- * <ReaderThemeProvider theme="academic" subjectAccent="#2563eb">...</ReaderThemeProvider>
+ * <ReaderThemeProvider category="Intro" theme="modern" subjectAccent="#2563eb">...</ReaderThemeProvider>
  *
- * Resolves the active reader theme, exposes it through context, and applies
- * every --reader-* token as a real CSS custom property on its own root
- * element (not document.documentElement) so multiple providers can coexist
- * without fighting (e.g. the candidate reader and the admin CMS's own dark
- * chrome around AdminResourcePreview's instance).
- *
- * Precedence for the *starting* theme, resolved once on mount:
- *   1. The candidate's own last explicit choice (localStorage, if valid)
- *   2. The `theme` prop (e.g. a resource's admin-assigned default)
- *   3. Academic
- * Calling setThemeId (via useReaderTheme(), e.g. from ThemeSwitcher) always
- * persists the new choice, so it becomes step 1 for every reader from then on.
- *
- * `subjectAccent` is a separate layer on top of the resolved theme -- it
- * overrides only --reader-primary/--reader-primary-soft, never the theme's
- * other tokens, matching ThemeEditor.md §7's "theme vs subject identity"
- * split. `persist` can be set false (e.g. AdminResourcePreview) so preview
- * switching never clobbers a real candidate's saved preference.
+ * Resolves the active reader theme per content category (Intro, Precis, Guide).
  */
 export function ReaderThemeProvider({
-  theme: initialThemeId = DEFAULT_THEME_ID,
+  category = 'Guide',
+  theme: initialThemeId = null,
   subjectAccent = null,
   persist = true,
   className = '',
   style,
   children,
 }) {
+  const normCategory = normalizeReaderCategory(category);
+
   const [themeId, setThemeIdState] = useState(() => {
-    if (!persist) return initialThemeId || DEFAULT_THEME_ID;
-    const stored = readStoredThemeId();
-    return stored || initialThemeId || DEFAULT_THEME_ID;
+    if (initialThemeId) return initialThemeId;
+    if (!persist) return getCategoryDefaultThemeId(normCategory);
+    return readStoredThemeIdForCategory(normCategory);
   });
+
   const [customTheme, setCustomTheme] = useState(null);
   const [fontScale, setFontScaleState] = useState(() => (persist ? readStoredFontScale() : 1));
   const rootRef = useRef(null);
+
+  // If initialThemeId prop changes or category changes and no explicit initialThemeId was given
+  useEffect(() => {
+    if (initialThemeId) {
+      setThemeIdState(initialThemeId);
+    } else {
+      const activeForCat = readStoredThemeIdForCategory(normCategory);
+      setThemeIdState(activeForCat);
+    }
+  }, [initialThemeId, normCategory]);
+
+  // Sync category defaults from database once on mount
+  useEffect(() => {
+    let mounted = true;
+    fetchCategoryDefaultThemes().then((defaults) => {
+      if (!mounted || initialThemeId) return;
+      const dbDefault = defaults[normCategory];
+      if (dbDefault && dbDefault !== themeId) {
+        setThemeIdState(dbDefault);
+      }
+    });
+    return () => { mounted = false; };
+  }, [normCategory]);
 
   const registryTheme = getRegistryTheme(themeId);
 
@@ -97,8 +115,11 @@ export function ReaderThemeProvider({
 
   const setThemeId = useCallback((id) => {
     setThemeIdState(id);
-    if (persist) persistThemeId(id);
-  }, [persist]);
+    if (persist) {
+      persistThemeIdForCategory(normCategory, id);
+      setCategoryDefaultTheme(normCategory, id);
+    }
+  }, [persist, normCategory]);
 
   const setFontScale = useCallback((scale) => {
     const clamped = Math.min(FONT_SCALE_MAX, Math.max(FONT_SCALE_MIN, scale));
@@ -118,9 +139,6 @@ export function ReaderThemeProvider({
       const value = tokens[key];
       if (value != null) root.style.setProperty(tokenToCssVar(key), value);
     });
-    // Font scale only ever multiplies the theme's own body size -- headings
-    // stay at the theme's fixed hN sizes so scaling reading text doesn't
-    // also blow up chapter titles.
     const baseSize = parseFloat(tokens.bodySize) || 1.15;
     root.style.setProperty(tokenToCssVar('bodySize'), `${(baseSize * fontScale).toFixed(3)}rem`);
   }, [resolvedTheme, subjectAccent, fontScale]);
@@ -129,10 +147,11 @@ export function ReaderThemeProvider({
     theme: resolvedTheme,
     themeId,
     setThemeId,
+    category: normCategory,
     subjectAccent,
     fontScale,
     setFontScale,
-  }), [resolvedTheme, themeId, setThemeId, subjectAccent, fontScale, setFontScale]);
+  }), [resolvedTheme, themeId, setThemeId, normCategory, subjectAccent, fontScale, setFontScale]);
 
   return (
     <ReaderThemeContext.Provider value={contextValue}>

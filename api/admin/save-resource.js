@@ -1523,9 +1523,359 @@ async function handleBooksFindCount(req, res) {
   }
 }
 
+async function handleThemeSave(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { theme } = req.body;
+  if (!theme || !theme.name) {
+    return res.status(400).json({ ok: false, error: 'Theme name is required' });
+  }
+
+  try {
+    const supabaseAdmin = getSupabaseAdmin();
+    const row = {
+      name: theme.name,
+      slug: theme.slug || theme.name.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'theme',
+      description: theme.description || '',
+      is_system: false,
+      tokens: theme.tokens || {},
+      updated_at: new Date().toISOString(),
+    };
+
+    if (theme.id && typeof theme.id === 'string' && theme.id.length > 20) {
+      row.id = theme.id;
+    }
+
+    const { data, error } = await supabaseAdmin.from('lc_reader_themes').upsert(row).select().single();
+    if (error) {
+      return res.status(400).json({ ok: false, error: error.message });
+    }
+    return res.status(200).json({ ok: true, data });
+  } catch (err) {
+    return res.status(500).json({ ok: false, error: err.message });
+  }
+}
+
+/**
+ * POST /api/admin/save-resource with { type: 'books-sync-pairs', pairs? }
+ *
+ * Fast, service-role synchronization of exam links between same-named Guide and Precis books.
+ */
+async function handleBooksSyncPairs(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { pairs } = req.body || {};
+
+  try {
+    const supabase = getSupabaseAdmin();
+
+    // 1. Fetch all Guide & Precis resources
+    let allResources = [];
+    for (let from = 0; ; from += 1000) {
+      const { data, error } = await supabase
+        .from('resources')
+        .select('resource_id, title, category, format, status, storage_base_url')
+        .in('category', ['Guide', 'Precis'])
+        .range(from, from + 999);
+      if (error) throw error;
+      allResources = allResources.concat(data || []);
+      if (!data || data.length < 1000) break;
+    }
+
+    // 2. Fetch all mappings in lc_exam_resource_map for Guide and Precis
+    let allMaps = [];
+    for (let from = 0; ; from += 1000) {
+      const { data, error } = await supabase
+        .from('lc_exam_resource_map')
+        .select('id, exam_id, resource_id, category')
+        .in('category', ['Guide', 'Precis'])
+        .range(from, from + 999);
+      if (error) throw error;
+      allMaps = allMaps.concat(data || []);
+      if (!data || data.length < 1000) break;
+    }
+
+    const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+    // Index mappings by resource_id
+    const mapsByResourceId = new Map();
+    for (const m of allMaps) {
+      if (!mapsByResourceId.has(m.resource_id)) mapsByResourceId.set(m.resource_id, new Set());
+      mapsByResourceId.get(m.resource_id).add(m.exam_id);
+    }
+
+    // Index resources by (category, norm(title))
+    const resourcesByCategoryAndTitle = new Map();
+    for (const r of allResources) {
+      if (!r.title) continue;
+      const key = `${r.category}::${norm(r.title)}`;
+      if (!resourcesByCategoryAndTitle.has(key)) resourcesByCategoryAndTitle.set(key, []);
+      resourcesByCategoryAndTitle.get(key).push(r);
+    }
+
+    // Exams linked to the book = links on any row serving the canonical row's
+    // content (same storage_base_url) -- the definition the Books page count
+    // and the Link Exams drawer use. Counting every same-titled row instead
+    // treated links on a different stored copy (e.g. a second ENGLISH Precis)
+    // as covered, so Sync added nothing while the page counts stayed unequal.
+    function getExamIdsForBook(category, title, canonical) {
+      const examIds = new Set();
+      const rows = (resourcesByCategoryAndTitle.get(`${category}::${norm(title)}`) || [])
+        .filter(r => !canonical.storage_base_url || r.storage_base_url === canonical.storage_base_url);
+      for (const r of rows) {
+        for (const eid of mapsByResourceId.get(r.resource_id) || []) {
+          examIds.add(eid);
+        }
+      }
+      return examIds;
+    }
+
+    function getCanonicalResource(category, title, preferredResourceId) {
+      const rows = resourcesByCategoryAndTitle.get(`${category}::${norm(title)}`) || [];
+      if (preferredResourceId) {
+        const found = rows.find(r => r.resource_id === preferredResourceId);
+        if (found) return found;
+      }
+      return rows.find(r => r.format === 'blocks' && r.status === 'Published')
+        || rows.find(r => r.format === 'blocks')
+        || rows[0];
+    }
+
+    let targetPairs = [];
+    if (Array.isArray(pairs) && pairs.length > 0) {
+      for (const p of pairs) {
+        targetPairs.push({
+          title: p.title,
+          guideResourceId: p.guideResourceId || p.guide?.resourceId,
+          precisResourceId: p.precisResourceId || p.precis?.resourceId,
+        });
+      }
+    } else {
+      const guideTitles = new Set(
+        allResources.filter(r => r.category === 'Guide').map(r => norm(r.title)).filter(Boolean)
+      );
+      for (const titleNorm of guideTitles) {
+        const guideRows = resourcesByCategoryAndTitle.get(`Guide::${titleNorm}`);
+        const precisRows = resourcesByCategoryAndTitle.get(`Precis::${titleNorm}`);
+        if (guideRows?.length && precisRows?.length) {
+          targetPairs.push({
+            title: guideRows[0].title,
+            guideResourceId: guideRows[0].resource_id,
+            precisResourceId: precisRows[0].resource_id,
+          });
+        }
+      }
+    }
+
+    let guideAdded = 0;
+    let precisAdded = 0;
+    let pairsSynced = 0;
+    const errors = [];
+    const newMappings = [];
+
+    for (const pair of targetPairs) {
+      const guideCanonical = getCanonicalResource('Guide', pair.title, pair.guideResourceId);
+      const precisCanonical = getCanonicalResource('Precis', pair.title, pair.precisResourceId);
+
+      if (!guideCanonical || !precisCanonical) {
+        errors.push({ title: pair.title, error: 'Could not resolve canonical Guide or Precis book.' });
+        continue;
+      }
+
+      const guideExamIds = getExamIdsForBook('Guide', pair.title, guideCanonical);
+      const precisExamIds = getExamIdsForBook('Precis', pair.title, precisCanonical);
+      const unionExamIds = new Set([...guideExamIds, ...precisExamIds]);
+
+      for (const examId of unionExamIds) {
+        if (!guideExamIds.has(examId)) {
+          newMappings.push({
+            exam_id: examId,
+            resource_id: guideCanonical.resource_id,
+            category: 'Guide',
+            confidence: 'high',
+            reasoning: 'Synced from counterpart precis link',
+            source: 'manual',
+          });
+        }
+        if (!precisExamIds.has(examId)) {
+          newMappings.push({
+            exam_id: examId,
+            resource_id: precisCanonical.resource_id,
+            category: 'Precis',
+            confidence: 'high',
+            reasoning: 'Synced from counterpart guide link',
+            source: 'manual',
+          });
+        }
+      }
+      pairsSynced++;
+    }
+
+    // Upsert in batches of 100; on a batch failure retry row by row so one bad
+    // row doesn't sink the rest. Only rows that actually landed are counted.
+    const countAdded = (rows) => {
+      for (const r of rows) {
+        if (r.category === 'Guide') guideAdded++;
+        else precisAdded++;
+      }
+    };
+    const batchSize = 100;
+    for (let i = 0; i < newMappings.length; i += batchSize) {
+      const batch = newMappings.slice(i, i + batchSize);
+      const { error } = await supabase
+        .from('lc_exam_resource_map')
+        .upsert(batch, { onConflict: 'exam_id,resource_id', ignoreDuplicates: true });
+      if (!error) { countAdded(batch); continue; }
+      console.error('[books-sync-pairs] Batch upsert error:', error.message);
+      for (const item of batch) {
+        const { error: rowError } = await supabase
+          .from('lc_exam_resource_map')
+          .upsert(item, { onConflict: 'exam_id,resource_id', ignoreDuplicates: true });
+        if (rowError) errors.push({ examId: item.exam_id, resourceId: item.resource_id, error: rowError.message });
+        else countAdded([item]);
+      }
+    }
+
+    invalidateBooksCache();
+
+    return res.status(200).json({
+      ok: true,
+      pairsSynced,
+      totalAdded: guideAdded + precisAdded,
+      guideAdded,
+      precisAdded,
+      errors,
+    });
+  } catch (err) {
+    console.error('[admin/save-resource:books-sync-pairs] failed:', err.message);
+    return res.status(500).json({ ok: false, error: err.message });
+  }
+}
+
+async function handleThemeDelete(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { id } = req.body;
+  if (!id) return res.status(400).json({ ok: false, error: 'Theme ID is required' });
+
+  try {
+    const supabaseAdmin = getSupabaseAdmin();
+
+    // A category-default pointer (category-default-intro/precis/guide) can
+    // reference this theme as its live default. Deleting the theme without
+    // also clearing those pointers leaves them dangling -- the category
+    // silently falls back to Academic for every reader until someone
+    // notices, which looks exactly like "my change didn't apply" or "another
+    // category's look bled into mine". Repoint any pointer aimed at this
+    // theme back to that category's own system default before deleting it.
+    const { data: pointerRows } = await supabaseAdmin
+      .from('lc_reader_themes')
+      .select('id, slug, tokens')
+      .in('slug', ['category-default-intro', 'category-default-precis', 'category-default-guide']);
+
+    const SYSTEM_FALLBACK = { Intro: 'modern', Precis: 'examPrep', Guide: 'academic' };
+    for (const row of pointerRows || []) {
+      if (row.tokens?.targetThemeId !== id) continue;
+      const cat = row.tokens?.category;
+      await supabaseAdmin.from('lc_reader_themes').update({
+        tokens: { category: cat, targetThemeId: SYSTEM_FALLBACK[cat] || 'academic' },
+        updated_at: new Date().toISOString(),
+      }).eq('id', row.id);
+    }
+
+    const { error } = await supabaseAdmin.from('lc_reader_themes').delete().eq('id', id);
+    if (error) return res.status(400).json({ ok: false, error: error.message });
+    return res.status(200).json({ ok: true });
+  } catch (err) {
+    return res.status(500).json({ ok: false, error: err.message });
+  }
+}
+
+async function handleThemeCategoryDefault(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { category, themeId } = req.body;
+  if (!category || !themeId) return res.status(400).json({ ok: false, error: 'Category and themeId are required' });
+
+  try {
+    const supabaseAdmin = getSupabaseAdmin();
+    const slug = `category-default-${category.toLowerCase()}`;
+    const { data, error } = await supabaseAdmin.from('lc_reader_themes').upsert({
+      slug,
+      name: `${category} Active Theme`,
+      is_default: false,
+      is_system: true,
+      tokens: { category, targetThemeId: themeId },
+      updated_at: new Date().toISOString(),
+    }, { onConflict: 'slug' }).select().single();
+
+    if (error) return res.status(400).json({ ok: false, error: error.message });
+    return res.status(200).json({ ok: true, data });
+  } catch (err) {
+    return res.status(500).json({ ok: false, error: err.message });
+  }
+}
+
+async function handleThemeFetchAll(req, res) {
+  try {
+    const supabaseAdmin = getSupabaseAdmin();
+    const { data: themes, error: themesErr } = await supabaseAdmin
+      .from('lc_reader_themes')
+      .select('*')
+      .not('slug', 'like', 'category-default-%')
+      .order('created_at', { ascending: true });
+
+    if (themesErr) {
+      console.warn('[admin/save-resource:theme-fetch-all] themes warning:', themesErr.message);
+    }
+
+    const { data: defaults, error: defErr } = await supabaseAdmin
+      .from('lc_reader_themes')
+      .select('slug, tokens')
+      .in('slug', ['category-default-intro', 'category-default-precis', 'category-default-guide']);
+
+    if (defErr) {
+      console.warn('[admin/save-resource:theme-fetch-all] defaults warning:', defErr.message);
+    }
+
+    const categoryDefaults = {
+      Intro: 'modern',
+      Precis: 'examPrep',
+      Guide: 'academic',
+    };
+
+    if (defaults && defaults.length > 0) {
+      for (const row of defaults) {
+        const cat = row.tokens?.category;
+        const target = row.tokens?.targetThemeId;
+        if (cat && target) {
+          categoryDefaults[cat] = target;
+        }
+      }
+    }
+
+    return res.status(200).json({
+      ok: true,
+      themes: themes || [],
+      categoryDefaults,
+    });
+  } catch (err) {
+    return res.status(500).json({ ok: false, error: err.message });
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+
+  if (req.body?.type === 'theme-fetch-all') {
+    return handleThemeFetchAll(req, res);
+  }
+  if (req.body?.type === 'theme-save') {
+    return handleThemeSave(req, res);
+  }
+  if (req.body?.type === 'theme-delete') {
+    return handleThemeDelete(req, res);
+  }
+  if (req.body?.type === 'theme-category-default') {
+    return handleThemeCategoryDefault(req, res);
   }
 
   if (req.body?.type === 'r2-upload') {
@@ -1596,6 +1946,10 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-find-replace') {
     return handleBooksFindReplace(req, res);
+  }
+
+  if (req.body?.type === 'books-sync-pairs') {
+    return handleBooksSyncPairs(req, res);
   }
 
   if (!supabaseUrl) {

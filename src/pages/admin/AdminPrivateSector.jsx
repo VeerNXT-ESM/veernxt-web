@@ -182,30 +182,28 @@ const AdminPrivateSector = () => {
 
   return (
     <div className="aps-wrapper">
-      <header className="aps-header">
-        <h1>Private Sector — HR Console</h1>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+        <div className="aps-tabs" style={{ margin: 0 }}>
+          {SECTIONS.map((s) => {
+            const Icon = s.icon;
+            const counts = {
+              requirements: requirements.length,
+              verifications: verifications.filter((v) => v.status === 'pending').length,
+              employer_interest: recruiterRequests.length,
+              interest: interest.length,
+              senior: seniorProfiles.length,
+              notifications: notifications.length
+            };
+            return (
+              <button key={s.key} className={`aps-tab ${section === s.key ? 'active' : ''}`} onClick={() => setSection(s.key)}>
+                <Icon size={14} /> {s.label} <span className="aps-tab-count">{counts[s.key]}</span>
+              </button>
+            );
+          })}
+        </div>
         <button type="button" className="aps-refresh" onClick={fetchAll}>
           <RefreshCw size={14} className={loading ? 'aps-spin' : ''} /> Refresh
         </button>
-      </header>
-
-      <div className="aps-tabs">
-        {SECTIONS.map((s) => {
-          const Icon = s.icon;
-          const counts = {
-            requirements: requirements.length,
-            verifications: verifications.filter((v) => v.status === 'pending').length,
-            employer_interest: recruiterRequests.length,
-            interest: interest.length,
-            senior: seniorProfiles.length,
-            notifications: notifications.length
-          };
-          return (
-            <button key={s.key} className={`aps-tab ${section === s.key ? 'active' : ''}`} onClick={() => setSection(s.key)}>
-              <Icon size={14} /> {s.label} <span className="aps-tab-count">{counts[s.key]}</span>
-            </button>
-          );
-        })}
       </div>
 
       {loading ? (

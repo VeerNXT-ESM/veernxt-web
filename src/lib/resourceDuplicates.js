@@ -157,6 +157,46 @@ export function findMatchingCounterpartBook(book, candidateBooks) {
 export async function syncBookPairLinks(guideBook, precisBook) {
   if (!guideBook || !precisBook) throw new Error('Both Guide and Precis books are required to sync links.');
 
+  const adminSecret = typeof window !== 'undefined'
+    ? import.meta.env?.VITE_ADMIN_API_SECRET
+    : process.env?.ADMIN_API_SECRET;
+
+  if (adminSecret) {
+    let data = null;
+    try {
+      const res = await fetch('/api/admin/save-resource', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': adminSecret },
+        body: JSON.stringify({
+          type: 'books-sync-pairs',
+          pairs: [{
+            title: guideBook.title || precisBook.title,
+            guideResourceId: guideBook.resourceId || guideBook.resource_id,
+            precisResourceId: precisBook.resourceId || precisBook.resource_id,
+          }],
+        }),
+      });
+      data = await res.json();
+    } catch (apiErr) {
+      console.warn('API sync unreachable, falling back to client-side sync:', apiErr);
+    }
+    // The API answered: report its result/error rather than silently redoing
+    // the work client-side (which runs under the browser's RLS-limited client).
+    if (data) {
+      if (!data.ok) throw new Error(data.error || 'Sync failed on the server.');
+      const added = (data.guideAdded || 0) + (data.precisAdded || 0);
+      if (data.errors?.length && added === 0) {
+        throw new Error(data.errors[0].error || 'Sync failed on the server.');
+      }
+      return {
+        success: true,
+        totalUnion: added,
+        guideAdded: data.guideAdded || 0,
+        precisAdded: data.precisAdded || 0,
+      };
+    }
+  }
+
   const [guideLinks, precisLinks] = await Promise.all([
     loadBookLinks(guideBook),
     loadBookLinks(precisBook),
@@ -169,45 +209,45 @@ export async function syncBookPairLinks(guideBook, precisBook) {
   const toAddToGuide = unionExamIds.filter((id) => !guideExamSet.has(id));
   const toAddToPrecis = unionExamIds.filter((id) => !precisExamSet.has(id));
 
-  // Check duplicates and insert for Guide
   let guideAdded = 0;
   if (toAddToGuide.length > 0) {
-    const dupes = await examsAlreadyHavingResource(guideBook.resourceId, toAddToGuide, guideBook.category);
-    const addable = toAddToGuide.filter((id) => !dupes.has(id));
-    if (addable.length > 0) {
-      const { error } = await adminFrom('lc_exam_resource_map').insert(
-        addable.map((examId) => ({
+    const batchSize = 100;
+    for (let i = 0; i < toAddToGuide.length; i += batchSize) {
+      const batch = toAddToGuide.slice(i, i + batchSize);
+      const { error } = await adminFrom('lc_exam_resource_map').upsert(
+        batch.map((examId) => ({
           exam_id: examId,
-          resource_id: guideBook.resourceId,
-          category: guideBook.category,
+          resource_id: guideBook.resourceId || guideBook.resource_id,
+          category: 'Guide',
           confidence: 'high',
           reasoning: 'Synced from counterpart precis link',
           source: 'manual',
-        }))
+        })),
+        { onConflict: 'exam_id, resource_id', ignoreDuplicates: true }
       );
       if (error) throw error;
-      guideAdded = addable.length;
+      guideAdded += batch.length;
     }
   }
 
-  // Check duplicates and insert for Precis
   let precisAdded = 0;
   if (toAddToPrecis.length > 0) {
-    const dupes = await examsAlreadyHavingResource(precisBook.resourceId, toAddToPrecis, precisBook.category);
-    const addable = toAddToPrecis.filter((id) => !dupes.has(id));
-    if (addable.length > 0) {
-      const { error } = await adminFrom('lc_exam_resource_map').insert(
-        addable.map((examId) => ({
+    const batchSize = 100;
+    for (let i = 0; i < toAddToPrecis.length; i += batchSize) {
+      const batch = toAddToPrecis.slice(i, i + batchSize);
+      const { error } = await adminFrom('lc_exam_resource_map').upsert(
+        batch.map((examId) => ({
           exam_id: examId,
-          resource_id: precisBook.resourceId,
-          category: precisBook.category,
+          resource_id: precisBook.resourceId || precisBook.resource_id,
+          category: 'Precis',
           confidence: 'high',
           reasoning: 'Synced from counterpart guide link',
           source: 'manual',
-        }))
+        })),
+        { onConflict: 'exam_id, resource_id', ignoreDuplicates: true }
       );
       if (error) throw error;
-      precisAdded = addable.length;
+      precisAdded += batch.length;
     }
   }
 

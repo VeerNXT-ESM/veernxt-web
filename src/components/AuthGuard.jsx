@@ -21,18 +21,32 @@ const AuthGuard = ({ children, skipProfilingCheck = false }) => {
     let mounted = true;
 
     // Get initial session
-    supabase.auth.getSession().then(({ data: { session: s } }) => {
-      if (mounted) setSession(s);
+    supabase.auth.getSession().then(({ data, error }) => {
+      if (error) {
+        console.warn('Session check failed (clearing stale session):', error.message);
+        supabase.auth.signOut().catch(() => {});
+        if (mounted) setSession(null);
+        return;
+      }
+      if (mounted) setSession(data?.session || null);
+    }).catch((err) => {
+      console.warn('Session verification error:', err);
+      supabase.auth.signOut().catch(() => {});
+      if (mounted) setSession(null);
     });
 
     // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, s) => {
-      if (mounted) setSession(s);
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, s) => {
+      if (event === 'SIGNED_OUT' || !s) {
+        if (mounted) setSession(null);
+      } else {
+        if (mounted) setSession(s);
+      }
     });
 
     return () => {
       mounted = false;
-      subscription.unsubscribe();
+      subscription?.unsubscribe?.();
     };
   }, []);
 

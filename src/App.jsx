@@ -97,17 +97,29 @@ const RootRoute = () => {
   useEffect(() => {
     let mounted = true;
 
-    supabase.auth.getSession().then(({ data: { session: s } }) => {
-      if (mounted) setSession(s);
+    supabase.auth.getSession().then(({ data, error }) => {
+      if (error) {
+        supabase.auth.signOut().catch(() => {});
+        if (mounted) setSession(null);
+        return;
+      }
+      if (mounted) setSession(data?.session || null);
+    }).catch(() => {
+      supabase.auth.signOut().catch(() => {});
+      if (mounted) setSession(null);
     });
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, s) => {
-      if (mounted) setSession(s);
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, s) => {
+      if (event === 'SIGNED_OUT' || !s) {
+        if (mounted) setSession(null);
+      } else {
+        if (mounted) setSession(s);
+      }
     });
 
     return () => {
       mounted = false;
-      subscription.unsubscribe();
+      subscription?.unsubscribe?.();
     };
   }, []);
 

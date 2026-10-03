@@ -126,32 +126,59 @@ export default function BatchSyncBooksModal({ onClose, onCompleted }) {
     if (toSync.length === 0) return;
 
     setSyncing(true);
-    setSyncProgress({ current: 0, total: toSync.length, currentTitle: '' });
+    setSyncProgress({ current: 0, total: toSync.length, currentTitle: 'Processing synchronization...' });
     setError(null);
 
-    let completed = 0;
-    let totalAdded = 0;
-    const errors = [];
+    try {
+      const res = await fetch('/api/admin/save-resource', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
+        body: JSON.stringify({
+          type: 'books-sync-pairs',
+          pairs: toSync.map((p) => ({
+            title: p.title,
+            guideResourceId: p.guide?.resourceId,
+            precisResourceId: p.precis?.resourceId,
+          })),
+        }),
+      });
 
-    for (const pair of toSync) {
-      setSyncProgress({ current: completed + 1, total: toSync.length, currentTitle: pair.title });
-      try {
-        const res = await syncBookPairLinks(pair.guide, pair.precis);
-        totalAdded += (res.guideAdded || 0) + (res.precisAdded || 0);
-      } catch (err) {
-        console.error(`Failed to sync "${pair.title}":`, err);
-        errors.push({ title: pair.title, error: err.message });
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || 'Server synchronization failed');
+
+      setSyncing(false);
+      setSyncResults({
+        completedCount: data.pairsSynced || toSync.length,
+        totalCount: toSync.length,
+        totalAdded: data.totalAdded || 0,
+        errors: data.errors || [],
+      });
+    } catch (apiErr) {
+      console.warn('Batch API sync error, falling back to sequential sync:', apiErr);
+      let completed = 0;
+      let totalAdded = 0;
+      const errors = [];
+
+      for (const pair of toSync) {
+        setSyncProgress({ current: completed + 1, total: toSync.length, currentTitle: pair.title });
+        try {
+          const res = await syncBookPairLinks(pair.guide, pair.precis);
+          totalAdded += (res.guideAdded || 0) + (res.precisAdded || 0);
+        } catch (err) {
+          console.error(`Failed to sync "${pair.title}":`, err);
+          errors.push({ title: pair.title, error: err.message });
+        }
+        completed += 1;
       }
-      completed += 1;
-    }
 
-    setSyncing(false);
-    setSyncResults({
-      completedCount: completed - errors.length,
-      totalCount: toSync.length,
-      totalAdded,
-      errors,
-    });
+      setSyncing(false);
+      setSyncResults({
+        completedCount: completed - errors.length,
+        totalCount: toSync.length,
+        totalAdded,
+        errors,
+      });
+    }
   };
 
   return (

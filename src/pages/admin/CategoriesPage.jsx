@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../../lib/supabase';
 import { useDebounced } from './lcShared';
 import { Search, Plus, Pencil, Trash2, X, Tags, AlertTriangle, Link2, ChevronLeft, ChevronRight } from 'lucide-react';
-import Select from '../../components/ui/Select';
 import { CENTRAL_EXAM_CATEGORIES } from '../../lib/centralExamCategories';
 import { STATE_EXAM_CATEGORIES } from '../../lib/stateExamCategories';
 import { UT_EXAM_CATEGORIES } from '../../lib/utExamCategories';
@@ -39,6 +38,12 @@ const LEVEL_FILTER_OPTIONS = [
 const THUMB_W = 640;
 const THUMB_H = 360; // 16:9 landscape, same shape as the existing category art
 const LEVEL_LABELS = { central: 'Central', state: 'State', ut: 'UT' };
+const LEVEL_BADGE_COLOR = {
+  central: { bg: 'rgba(59, 130, 246, 0.16)', fg: '#3b82f6' },
+  state: { bg: 'rgba(16, 185, 129, 0.16)', fg: '#10b981' },
+  ut: { bg: 'rgba(139, 92, 246, 0.16)', fg: '#8b5cf6' },
+};
+const UNASSIGNED_BADGE_COLOR = { bg: 'var(--surface-alt)', fg: 'var(--admin-text-muted)' };
 // Which level list a category belongs to. The three lists never share a name
 // (see the retag_*_exams.mjs scripts); a category in none of them shows "—".
 const LEVEL_OF_CATEGORY = {};
@@ -237,26 +242,34 @@ const CategoriesPage = () => {
 
   return (
     <div>
-      <div className="lc-section-header">
-        <div>
-          <h2>Categories</h2>
-          <p>The sector classification (Banking, Police, Teaching, etc.) used on every exam. Add or rename categories here — they show up in every Category dropdown immediately.</p>
-        </div>
-        <button className="lc-btn primary" onClick={openAddModal}><Plus size={16} /> Add Category</button>
-      </div>
-
-      <div className="lc-filter-bar">
+      <div className="lc-filter-bar lc-filter-bar-4col">
         <div className="lc-filter-field lc-search-input-wrapper">
           <Search size={16} />
           <input type="text" placeholder="Search categories..." value={search} onChange={(e) => setSearch(e.target.value)} />
         </div>
         <div className="lc-filter-field">
-          <Select value={levelFilter} onChange={(e) => setLevelFilter(e.target.value)} options={LEVEL_FILTER_OPTIONS} />
+          <label>Filter by level</label>
+          <div className="lc-pill-switcher" role="tablist" aria-label="Filter by level">
+            {LEVEL_FILTER_OPTIONS.map((o) => (
+              <button
+                key={o.value}
+                type="button"
+                role="tab"
+                aria-selected={levelFilter === o.value}
+                className={`lc-pill-switcher-tab ${levelFilter === o.value ? 'active' : ''}`}
+                onClick={() => setLevelFilter(o.value)}
+              >
+                {o.label}
+              </button>
+            ))}
+          </div>
         </div>
-        <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--admin-text-muted, #64748b)' }}>
+        <label className="lc-toggle" title="Missing thumbnail only">
           <input type="checkbox" checked={onlyMissing} onChange={(e) => setOnlyMissing(e.target.checked)} />
-          Missing thumbnail only
+          <span className="lc-toggle-track"><span className="lc-toggle-thumb" /></span>
+          <span className="lc-toggle-label">Missing thumbnails only</span>
         </label>
+        <button className="lc-btn primary" onClick={openAddModal}><Plus size={16} /> Add Category</button>
       </div>
 
       {loading ? (
@@ -293,7 +306,13 @@ const CategoriesPage = () => {
                       onSave={(url) => saveThumbnail(cat, url)}
                     />
                   </td>
-                  <td>{LEVEL_LABELS[LEVEL_OF_CATEGORY[cat.name]] || '—'}</td>
+                  <td>
+                    {(() => {
+                      const lvl = LEVEL_OF_CATEGORY[cat.name];
+                      const color = LEVEL_BADGE_COLOR[lvl] || UNASSIGNED_BADGE_COLOR;
+                      return <span className="lc-level-badge" style={{ background: color.bg, color: color.fg }}>{LEVEL_LABELS[lvl] || 'Unassigned'}</span>;
+                    })()}
+                  </td>
                   <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.central || 0}</span></td>
                   <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.state || 0}</span></td>
                   <td style={{ textAlign: 'right' }}><span className="lc-count-pill">{levelCounts[cat.name]?.ut || 0}</span></td>

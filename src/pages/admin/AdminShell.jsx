@@ -3,7 +3,7 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { ADMIN_NAV } from './adminNavConfig';
 import {
   GraduationCap, Users, Shield,
-  HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen,
+  HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen, Sun, Moon,
 } from 'lucide-react';
 import './AdminCMS.css';
 
@@ -24,14 +24,16 @@ const HORIZONTAL_NAV = [
 // Page title + one-line description shown in the top header, keyed by path.
 const PAGE_META = {
   '/admin/exams': { title: 'Exams Management', description: 'Organize exams, map syllabus and assign content resources.' },
-  '/admin/books': { title: 'Book Content' },
+  '/admin/books': { title: 'Book Content', description: 'Organize books, guides, precis, and their exam links.' },
   '/admin/reader-themes': { title: 'Reader Themes', description: 'Configure how VeerNXT books look across the Learning Center.' },
+  '/admin/conducting-bodies': { title: 'Conducting Bodies', description: 'Manage exam conducting organizations and their logos.' },
   '/admin/categories': { title: 'Categories', description: 'The sector classification used on every exam — add, rename, or delete categories here.' },
+  '/admin/subjects': { title: 'Subjects', description: 'Manage subjects and the portrait thumbnails used on study materials.' },
   '/admin/publish-content': { title: 'Publish Content', description: 'Upload a .docx, pick Intro/Guide/Precis, preview the conversion, attach it to exam(s), and publish it live.' },
   '/admin/users': { title: 'Users', description: 'Registered service personnel and platform accounts.' },
   '/admin/roles': { title: 'Roles & Permissions', description: 'Assign roles and curate access control lists.' },
-  '/admin/quizzes': { title: 'Quizzes' },
-  '/admin/pyq-papers': { title: 'PYQ Papers' },
+  '/admin/quizzes': { title: 'Quizzes', description: 'Manage and categorize mock and topic tests across subjects and exams.' },
+  '/admin/pyq-papers': { title: 'PYQ Papers', description: 'Manage previous year question papers and tag them with exams and subjects.' },
   '/admin/jobs': { title: 'Job Board', description: 'Aggregated vacancy notifications.' },
   '/admin/rewards': { title: 'Rewards', description: 'Redemption queue for the points program.' },
   '/admin/private-sector': { title: 'Private Sector — HR Console', description: 'Employer requirements, service verification and the candidate matching pipeline.' },
@@ -43,6 +45,7 @@ const AdminShell = () => {
   const navigate = useNavigate();
   const [session, setSession] = useState(null);
   const [collapsed, setCollapsed] = useState(() => localStorage.getItem('admin_sidebar_collapsed') === 'true');
+  const [theme, setTheme] = useState(() => localStorage.getItem('admin_theme') === 'light' ? 'light' : 'dark');
 
   useEffect(() => {
     const raw = localStorage.getItem('admin_session');
@@ -58,6 +61,14 @@ const AdminShell = () => {
     });
   };
 
+  const toggleTheme = () => {
+    setTheme((prev) => {
+      const next = prev === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('admin_theme', next);
+      return next;
+    });
+  };
+
   const handleLogout = () => {
     localStorage.removeItem('admin_session');
     navigate('/admin/login');
@@ -69,7 +80,7 @@ const AdminShell = () => {
   if (!session) return null;
 
   return (
-    <div className="admin-shell">
+    <div className={`admin-shell ${theme === 'light' ? 'light' : ''}`}>
       <aside className={`admin-sidebar ${collapsed ? 'collapsed' : ''}`}>
         <div className="admin-sidebar-brand">
           <img src="/logo.png" alt="VeerNXT" />
@@ -80,10 +91,6 @@ const AdminShell = () => {
             </div>
           )}
         </div>
-
-        <button className="admin-sidebar-collapse-btn" onClick={toggleCollapsed} title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}>
-          {collapsed ? <ChevronsRight size={16} /> : <><ChevronsLeft size={16} /> <span>Collapse</span></>}
-        </button>
 
         <nav className="admin-sidebar-nav">
           {ADMIN_NAV.map((group) => (
@@ -108,6 +115,10 @@ const AdminShell = () => {
             </div>
           ))}
         </nav>
+
+        <button className="admin-sidebar-collapse-btn" onClick={toggleCollapsed} title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}>
+          {collapsed ? <ChevronsRight size={16} /> : <><ChevronsLeft size={16} /> <span>Collapse</span></>}
+        </button>
       </aside>
 
       <div className="admin-main">
@@ -117,6 +128,9 @@ const AdminShell = () => {
             {pageMeta?.description && <div className="admin-topbar-subtitle">{pageMeta.description}</div>}
           </div>
           <div className="admin-topbar-user">
+            <button className="admin-theme-toggle" title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={toggleTheme}>
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
             <div className="admin-avatar-initials">
               {session.name?.split(' ').map((n) => n[0]).join('').slice(0, 2)}
             </div>

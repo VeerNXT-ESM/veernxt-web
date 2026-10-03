@@ -6,6 +6,7 @@ import { useExamContent } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
 import { resolveSubjectForTitle, getFamilyHex } from '../lib/thumbnailTaxonomy';
 import { useThumbnails } from '../lib/thumbnailStore';
+import { ReaderThemeProvider } from './book/theme/ReaderThemeProvider';
 
 const BUCKETS = [
   { key: 'Intro', label: 'Intro', icon: FileText, anchor: 'section-intro' },
@@ -229,26 +230,25 @@ export function IntroManualTile({ intro, locked }) {
           onClick={() => setOpen(false)}
           style={{ position: 'fixed', inset: 0, background: 'rgba(15,23,42,0.55)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem' }}
         >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            style={{ background: '#fff', borderRadius: '14px', width: 'min(760px, 100%)', maxHeight: '85vh', overflowY: 'auto', padding: '2rem', position: 'relative' }}
-          >
-            <button
-              onClick={() => setOpen(false)}
-              style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'transparent', border: 'none', cursor: 'pointer', color: '#64748b' }}
-            >
-              <X size={20} />
-            </button>
-            {intro.title && <h3 style={{ marginTop: 0, color: 'var(--ios-olive)' }}>{intro.title}</h3>}
-            <div className="intro-manual-body" style={{ fontSize: '0.95rem', color: '#334155' }} dangerouslySetInnerHTML={{ __html: intro.body || '' }} />
-            <style dangerouslySetInnerHTML={{ __html: `
-              .intro-manual-body img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0.75rem 0; }
-              .intro-manual-body p { margin: 0 0 0.75rem; }
-              .intro-manual-body h1, .intro-manual-body h2, .intro-manual-body h3, .intro-manual-body h4 { color: var(--ios-olive); margin: 1rem 0 0.5rem; }
-              .intro-manual-body table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; }
-              .intro-manual-body th, .intro-manual-body td { border: 1px solid var(--border, #e2e8f0); padding: 0.5rem 0.65rem; text-align: left; }
-            `}} />
-          </div>
+          <ReaderThemeProvider category="Intro" style={{ background: 'var(--reader-surface, #fff)', borderRadius: '14px', width: 'min(760px, 100%)', maxHeight: '85vh', overflowY: 'auto', padding: '2rem', position: 'relative' }}>
+            <div onClick={(e) => e.stopPropagation()}>
+              <button
+                onClick={() => setOpen(false)}
+                style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'transparent', border: 'none', cursor: 'pointer', color: '#64748b' }}
+              >
+                <X size={20} />
+              </button>
+              {intro.title && <h3 style={{ marginTop: 0, color: 'var(--reader-heading, var(--ios-olive))', fontFamily: 'var(--reader-font-heading, inherit)' }}>{intro.title}</h3>}
+              <div className="intro-manual-body" style={{ fontSize: 'var(--reader-font-size, 0.95rem)', color: 'var(--reader-text, #334155)', fontFamily: 'var(--reader-font-body, inherit)', lineHeight: 'var(--reader-line-height, 1.6)' }} dangerouslySetInnerHTML={{ __html: intro.body || '' }} />
+              <style dangerouslySetInnerHTML={{ __html: `
+                .intro-manual-body img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0.75rem 0; }
+                .intro-manual-body p { margin: 0 0 0.75rem; }
+                .intro-manual-body h1, .intro-manual-body h2, .intro-manual-body h3, .intro-manual-body h4 { color: var(--reader-heading, var(--ios-olive)); margin: 1rem 0 0.5rem; font-family: var(--reader-font-heading, inherit); }
+                .intro-manual-body table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; }
+                .intro-manual-body th, .intro-manual-body td { border: 1px solid var(--reader-border, #e2e8f0); padding: 0.5rem 0.65rem; text-align: left; }
+              `}} />
+            </div>
+          </ReaderThemeProvider>
         </div>
       )}
     </>

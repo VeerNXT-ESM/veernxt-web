@@ -162,23 +162,28 @@ const ConductingBodiesPage = () => {
 
   return (
     <div>
-      <div className="lc-section-header">
-        <div>
-          <h2>Conducting Bodies</h2>
-          <p>{withLogoCount} of {bodies.length} bodies have a logo. Upload or replace one below — swap in a higher-resolution version any time.</p>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '12px', padding: '0.85rem 1.25rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: '1 1 320px', minWidth: '240px' }}>
+          <div className="lc-search-input-wrapper" style={{ flex: 1 }}>
+            <Search size={16} />
+            <input type="text" placeholder="Search conducting bodies..." value={search} onChange={(e) => setSearch(e.target.value)} />
+          </div>
         </div>
-        <button className="lc-btn primary" onClick={openAddModal}><Plus size={16} /> Add Conducting Body</button>
-      </div>
 
-      <div className="lc-filter-bar">
-        <div className="lc-filter-field lc-search-input-wrapper">
-          <Search size={16} />
-          <input type="text" placeholder="Search conducting bodies..." value={search} onChange={(e) => setSearch(e.target.value)} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexShrink: 0, flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '0.82rem', color: 'var(--admin-text-muted, #64748b)', whiteSpace: 'nowrap' }}>
+            <strong style={{ color: 'var(--admin-text, #0f172a)' }}>{withLogoCount}</strong> of {bodies.length} with logo
+          </span>
+
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--admin-text-muted, #64748b)', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+            <input type="checkbox" checked={onlyMissing} onChange={(e) => setOnlyMissing(e.target.checked)} />
+            Missing logo only
+          </label>
+
+          <button className="lc-btn primary" onClick={openAddModal} style={{ whiteSpace: 'nowrap' }}>
+            <Plus size={16} /> Add Conducting Body
+          </button>
         </div>
-        <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--admin-text-muted, #64748b)' }}>
-          <input type="checkbox" checked={onlyMissing} onChange={(e) => setOnlyMissing(e.target.checked)} />
-          Missing logo only
-        </label>
       </div>
 
       {loading ? (

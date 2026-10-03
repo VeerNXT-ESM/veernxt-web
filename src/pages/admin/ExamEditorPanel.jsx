@@ -5,7 +5,7 @@ import { UT_EXAM_CATEGORIES } from '../../lib/utExamCategories';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import ExamThumbnail from './ExamThumbnail';
-import { Save, Plus, X, Trash2, Copy, ExternalLink } from 'lucide-react';
+import { Save, Plus, X, Trash2, Copy, ExternalLink, Eye } from 'lucide-react';
 import { adminFrom } from '../../lib/adminDb';
 
 const ACCENT_COLORS = ['#4b6b32', '#1F3A2E', '#b89047', '#2563eb', '#7c3aed', '#dc2626'];
@@ -13,6 +13,17 @@ const LEVEL_OPTIONS = [
   { value: 'central', label: 'Central' },
   { value: 'state', label: 'State' },
   { value: 'ut', label: 'UT' },
+];
+
+const CONTENT_CATEGORY_ORDER = ['Intro', 'Guide', 'Precis'];
+
+const TABS = [
+  { key: 'basic', label: 'Basic Details' },
+  { key: 'syllabus', label: 'Syllabus' },
+  { key: 'pattern', label: 'Exam Pattern' },
+  { key: 'resources', label: 'Resources' },
+  { key: 'mapping', label: 'Content Mapping' },
+  { key: 'settings', label: 'Settings' },
 ];
 
 /**
@@ -55,19 +66,43 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
   const [level, setLevel] = useState('central');
   const [examTags, setExamTags] = useState([]);
   const [tagInput, setTagInput] = useState('');
+  const [activeTab, setActiveTab] = useState('basic');
+
+  // Read-only view of lc_exam_resource_map + resources, shared by the
+  // Syllabus/Resources/Content Mapping tabs — the same table the Resources
+  // rail (ExamResourcesPanel.jsx) manages, just summarised for reading here
+  // rather than duplicating its add/remove UI in the centre panel too.
+  const [resourceMap, setResourceMap] = useState([]);
+  const [resourceMapLoading, setResourceMapLoading] = useState(false);
+
+  const fetchResourceMap = async (id) => {
+    setResourceMapLoading(true);
+    const { data: rows } = await supabase.from('lc_exam_resource_map').select('id, resource_id, category').eq('exam_id', id);
+    const resourceIds = [...new Set((rows || []).map((r) => r.resource_id).filter(Boolean))];
+    let resourcesById = {};
+    if (resourceIds.length) {
+      const { data: resourceRows } = await supabase.from('resources').select('resource_id, title, status').in('resource_id', resourceIds);
+      resourcesById = (resourceRows || []).reduce((acc, r) => { acc[r.resource_id] = r; return acc; }, {});
+    }
+    setResourceMap((rows || []).map((r) => ({ ...r, resource: resourcesById[r.resource_id] || null })));
+    setResourceMapLoading(false);
+  };
 
   useEffect(() => {
     loadReferenceData();
   }, []);
 
   useEffect(() => {
+    setActiveTab('basic');
     if (examId) {
       fetchExam(examId);
+      fetchResourceMap(examId);
     } else {
       setForm({ conducting_body_id: '', region_id: '', name: '', category: '', category_detail: '', website: '', thumbnail_template_id: '', accent_color: ACCENT_COLORS[0] });
       setLevel('central');
       setStatus('draft');
       setExamTags([]);
+      setResourceMap([]);
       setLoading(false);
     }
   }, [examId]);
@@ -301,6 +336,11 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
             </label>
           )}
           {!isNew && (
+            <button className="lc-btn" onClick={() => window.open(`/exam/${examId}`, '_blank')} title="Preview this exam's public page">
+              <Eye size={14} /> Preview
+            </button>
+          )}
+          {!isNew && (
             <button className="lc-btn" onClick={handleDuplicate} disabled={duplicating || saving || deleting} title="Duplicate this exam">
               <Copy size={14} /> {duplicating ? 'Duplicating…' : 'Duplicate'}
             </button>
@@ -316,6 +356,21 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
         </div>
       </div>
 
+      <div className="lc-editor-tabs">
+        {TABS.map((tab) => (
+          <button
+            key={tab.key}
+            className={`lc-editor-tab ${activeTab === tab.key ? 'active' : ''}`}
+            onClick={() => setActiveTab(tab.key)}
+            disabled={tab.key !== 'basic' && isNew}
+            title={tab.key !== 'basic' && isNew ? 'Save the exam first' : undefined}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {activeTab === 'basic' && (
       <div className="lc-editor-identity">
         <div className="lc-editor-identity-fields">
           <div className="lc-input-group">
@@ -383,7 +438,12 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
             </div>
           </div>
 
-          <div className="lc-input-group">
+        </div>
+
+        <div className="lc-editor-thumbnail">
+          <ExamThumbnail label={form.name} thumbnailSubject={form.thumbnail_subject} accentColor={form.accent_color} categoryName={form.category} level={level} size="lg" />
+
+          <div className="lc-input-group" style={{ marginTop: '1.25rem' }}>
             <label>Tags</label>
             {!examId ? (
               <span className="lc-muted-note">Save the exam first to add tags.</span>
@@ -395,22 +455,132 @@ const ExamEditorPanel = ({ examId, onCreated, onSaved, onDeleted }) => {
                   ))}
                   {examTags.length === 0 && <span className="lc-muted-note">No tags yet.</span>}
                 </div>
-                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   <input type="text" list="lc-tag-suggestions" value={tagInput} onChange={(e) => setTagInput(e.target.value)}
                     onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); addTag(tagInput); } }}
-                    placeholder="Government, Graduate, Defence..." className="lc-inline-input" />
+                    placeholder="Government, Graduate, Defence..." className="lc-inline-input" style={{ width: '100%', boxSizing: 'border-box' }} />
                   <datalist id="lc-tag-suggestions">{allTags.map((t) => <option key={t.id} value={t.name} />)}</datalist>
-                  <button className="lc-btn" onClick={() => addTag(tagInput)} disabled={!tagInput.trim()}><Plus size={14} /> Add</button>
+                  <button className="lc-btn" onClick={() => addTag(tagInput)} disabled={!tagInput.trim()} style={{ justifyContent: 'center' }}><Plus size={14} /> Add Tag</button>
                 </div>
               </>
             )}
           </div>
         </div>
-
-        <div className="lc-editor-thumbnail">
-          <ExamThumbnail label={form.name} thumbnailSubject={form.thumbnail_subject} accentColor={form.accent_color} categoryName={form.category} level={level} size="lg" />
-        </div>
       </div>
+      )}
+
+      {activeTab === 'syllabus' && (
+        <div className="lc-card" style={{ flex: 1 }}>
+          <h3>Syllabus</h3>
+          <p className="lc-muted-note" style={{ marginTop: '-0.6rem', marginBottom: '1rem' }}>
+            Syllabus content for this exam is delivered through its Guide and Précis resources, not a separate syllabus field.
+          </p>
+          {resourceMapLoading ? (
+            <span className="lc-muted-note">Loading…</span>
+          ) : (
+            <>
+              {['Guide', 'Precis'].map((cat) => {
+                const items = resourceMap.filter((m) => m.category === cat);
+                return (
+                  <div key={cat} className="lc-mapping-group">
+                    <label className="lc-mapping-group-label">{cat} ({items.length})</label>
+                    {items.length === 0 && <p className="lc-muted-note" style={{ margin: 0 }}>None assigned yet — use the Resources panel to assign one.</p>}
+                    {items.map((m) => (
+                      <div key={m.id} className="lc-drawer-list-item">
+                        <span className="lc-truncate" title={m.resource?.title}>{m.resource?.title || 'Untitled resource'}</span>
+                        {m.resource?.resource_id && (
+                          <a className="lc-icon-btn" href={`/admin/books/${cat}/${m.resource.resource_id}`} target="_blank" rel="noreferrer" title="Open book">
+                            <ExternalLink size={14} />
+                          </a>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                );
+              })}
+            </>
+          )}
+        </div>
+      )}
+
+      {activeTab === 'pattern' && (
+        <div className="lc-card lc-empty-editor" style={{ flex: 1 }}>
+          <p className="lc-muted-note">Exam pattern details (stages, sections, marking scheme) aren't tracked in the system yet.</p>
+        </div>
+      )}
+
+      {activeTab === 'resources' && (
+        <div className="lc-card" style={{ flex: 1 }}>
+          <h3>Resources</h3>
+          {resourceMapLoading ? (
+            <span className="lc-muted-note">Loading…</span>
+          ) : (
+            <>
+              <p className="lc-muted-note" style={{ marginTop: '-0.6rem', marginBottom: '1rem' }}>
+                {resourceMap.length} resource{resourceMap.length === 1 ? '' : 's'} assigned to this exam. Use the Resources panel on the right to add or remove one.
+              </p>
+              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                {CONTENT_CATEGORY_ORDER.map((cat) => (
+                  <span key={cat} className="lc-status-badge" style={{ background: 'var(--surface-alt)' }}>
+                    {cat}: {resourceMap.filter((m) => m.category === cat).length}
+                  </span>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      )}
+
+      {activeTab === 'mapping' && (
+        <div className="lc-card" style={{ flex: 1 }}>
+          <h3>Content Mapping</h3>
+          {resourceMapLoading ? (
+            <span className="lc-muted-note">Loading…</span>
+          ) : resourceMap.length === 0 ? (
+            <p className="lc-muted-note">No content mapped to this exam yet.</p>
+          ) : (
+            CONTENT_CATEGORY_ORDER.concat(
+              [...new Set(resourceMap.map((m) => m.category))].filter((c) => !CONTENT_CATEGORY_ORDER.includes(c))
+            ).map((cat) => {
+              const items = resourceMap.filter((m) => m.category === cat);
+              if (items.length === 0) return null;
+              return (
+                <div key={cat} className="lc-mapping-group">
+                  <label className="lc-mapping-group-label">{cat} ({items.length})</label>
+                  {items.map((m) => (
+                    <div key={m.id} className="lc-drawer-list-item">
+                      <span className="lc-truncate" title={m.resource?.title}>{m.resource?.title || 'Untitled resource'}</span>
+                      {m.resource?.status && m.resource.status !== 'Published' && <span className="lc-muted-note">({m.resource.status})</span>}
+                    </div>
+                  ))}
+                </div>
+              );
+            })
+          )}
+        </div>
+      )}
+
+      {activeTab === 'settings' && (
+        <div className="lc-card" style={{ flex: 1 }}>
+          <h3>Settings</h3>
+          <div className="lc-input-group">
+            <label>Accent Color</label>
+            <div className="lc-color-swatches">
+              {ACCENT_COLORS.map((c) => (
+                <button
+                  key={c}
+                  type="button"
+                  className={`lc-color-swatch ${form.accent_color === c ? 'active' : ''}`}
+                  style={{ background: c }}
+                  onClick={() => updateForm({ accent_color: c })}
+                  title={c}
+                />
+              ))}
+            </div>
+            <p className="lc-muted-note" style={{ marginTop: '0.6rem' }}>Used as the thumbnail background color for this exam. Save Changes to apply.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

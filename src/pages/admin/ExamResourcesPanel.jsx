@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Plus, Trash2, Search, X, Eye, ExternalLink } from 'lucide-react';
+import { Plus, Trash2, Search, X, Eye, ExternalLink, Info, BookOpen, FileText, ClipboardList } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import { examsAlreadyHavingResource, loadResourceKeys, isSameResource } from '../../lib/resourceDuplicates';
 import Select from '../../components/ui/Select';
@@ -9,6 +9,30 @@ import { adminFrom } from '../../lib/adminDb';
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
 
 const CATEGORY_ORDER = ['Intro', 'Guide', 'Precis'];
+
+// Icon/colour per real lc_exam_resource_map.category value. PYQ is a real,
+// schema-backed 4th category (see that table's CHECK constraint) even
+// though it has no dedicated tab below -- it still gets a real icon/pill,
+// just reached via "All" or the type filter rather than its own tab.
+const CATEGORY_ICON = { Intro: Info, Guide: BookOpen, Precis: FileText, PYQ: ClipboardList };
+const CATEGORY_COLOR = {
+  Intro: { bg: 'rgba(59, 130, 246, 0.14)', fg: '#3b82f6' },
+  Guide: { bg: 'rgba(16, 185, 129, 0.14)', fg: '#10b981' },
+  Precis: { bg: 'rgba(139, 92, 246, 0.14)', fg: '#8b5cf6' },
+  PYQ: { bg: 'rgba(245, 158, 11, 0.14)', fg: '#f59e0b' },
+};
+const DEFAULT_CATEGORY_COLOR = { bg: 'var(--surface-alt)', fg: 'var(--admin-text-muted)' };
+
+// lc_exam_resource_map.source -- how this mapping was created, real and
+// already stored, just not surfaced anywhere in the UI before.
+const SOURCE_LABEL = { manual: 'Manually added', gemini: 'Auto-detected', exact_name: 'Auto-matched', auto: 'Auto-detected' };
+
+// Tabs mirror the categories the "+" buttons already used to manage
+// individually; "All" folds every mapped category (including PYQ / any
+// legacy value) into one flat, searchable list instead of stacked
+// per-category sections.
+const RESOURCE_TABS = [{ key: 'all', label: 'All' }, ...CATEGORY_ORDER.map((c) => ({ key: c, label: c }))];
+const TYPE_FILTER_OPTIONS = [{ value: '', label: 'All Types' }, ...CATEGORY_ORDER.map((c) => ({ value: c, label: c })), { value: 'PYQ', label: 'PYQ' }];
 
 // Same Level convention every other admin list uses.
 const LEVEL_OPTIONS = [
@@ -30,12 +54,21 @@ const LEVEL_OPTIONS = [
 const ExamResourcesPanel = ({ examId }) => {
   const [mappings, setMappings] = useState([]);
   const [loading, setLoading] = useState(false);
-  // Which category's "+" was clicked -- null means the drawer is closed,
-  // otherwise it's the category the drawer opens pre-filtered to (Intro,
-  // Guide, or Precis each get their own + now, instead of one generic
-  // "Add Resource" button the admin had to filter by hand).
+  // null means the Add-Resource drawer is closed; a string is the category
+  // it opens pre-filtered to ('' for no pre-filter, from the "All" tab).
   const [addDrawerCategory, setAddDrawerCategory] = useState(null);
   const [previewResourceId, setPreviewResourceId] = useState(null);
+  const [activeTab, setActiveTab] = useState('all');
+  const [typeFilter, setTypeFilter] = useState('');
+  const [search, setSearch] = useState('');
+
+  // Tab clicks and the type-filter dropdown drive the same underlying
+  // category filter (a category picked from either control fully expresses
+  // the other) -- kept as one shared value so the two controls can never
+  // disagree about what's currently shown.
+  const categoryFilter = typeFilter || (activeTab === 'all' ? '' : activeTab);
+  const chooseTab = (key) => { setActiveTab(key); setTypeFilter(''); };
+  const chooseType = (value) => { setTypeFilter(value); setActiveTab(value ? '' : 'all'); };
 
   const fetchMappings = async (id) => {
     setLoading(true);
@@ -101,16 +134,29 @@ const ExamResourcesPanel = ({ examId }) => {
     setMappings((prev) => prev.filter((m) => m.id !== mapping.id));
   };
 
-  // Always show all three canonical categories, even at zero -- that's the
-  // point of a per-category "+": there needs to be somewhere to click even
-  // before this exam has an Intro/Guide/Precis assigned yet.
-  const grouped = CATEGORY_ORDER.map((category) => ({ category, items: mappings.filter((m) => m.category === category) }));
-  const other = mappings.filter((m) => !CATEGORY_ORDER.includes(m.category));
+  const tabCounts = useMemo(() => ({
+    all: mappings.length,
+    ...Object.fromEntries(CATEGORY_ORDER.map((c) => [c, mappings.filter((m) => m.category === c).length])),
+  }), [mappings]);
+
+  const visibleMappings = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    return mappings.filter((m) => {
+      if (categoryFilter && m.category !== categoryFilter) return false;
+      if (q && !(m.resource?.title || '').toLowerCase().includes(q)) return false;
+      return true;
+    });
+  }, [mappings, categoryFilter, search]);
 
   return (
     <div className="lc-card">
       <div className="lc-card-row-header">
         <h3 style={{ margin: 0 }}>Resources ({mappings.length})</h3>
+        {examId && (
+          <button className="lc-btn primary" onClick={() => setAddDrawerCategory(categoryFilter || '')}>
+            <Plus size={14} /> Add Resource
+          </button>
+        )}
       </div>
 
       {!examId ? (
@@ -118,31 +164,43 @@ const ExamResourcesPanel = ({ examId }) => {
       ) : loading ? (
         <span className="lc-muted-note">Loading…</span>
       ) : (
-        <div className="lc-resource-rows-scroll">
-          {grouped.map((g) => (
-            <div key={g.category} style={{ marginTop: '0.85rem' }}>
-              <div className="lc-card-row-header" style={{ marginBottom: '0.4rem' }}>
-                <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--admin-text-muted)' }}>{g.category} ({g.items.length})</label>
-                <button className="lc-icon-btn" title={`Assign ${g.category}`} onClick={() => setAddDrawerCategory(g.category)}><Plus size={14} /></button>
-              </div>
-              {g.items.map((m) => (
-                <ResourceMapRow key={m.id} mapping={m} onRemove={() => removeMapping(m)} onPreview={() => setPreviewResourceId(m.resource?.resource_id)} />
-              ))}
-              {g.items.length === 0 && <p className="lc-muted-note" style={{ margin: 0 }}>None assigned yet.</p>}
+        <>
+          <div className="lc-editor-tabs" style={{ marginTop: '0.85rem' }}>
+            {RESOURCE_TABS.map((tab) => (
+              <button
+                key={tab.key}
+                className={`lc-editor-tab ${activeTab === tab.key ? 'active' : ''}`}
+                onClick={() => chooseTab(tab.key)}
+              >
+                {tab.label} ({tabCounts[tab.key] ?? 0})
+              </button>
+            ))}
+          </div>
+
+          <div style={{ display: 'flex', gap: '0.5rem', margin: '0.75rem 0' }}>
+            <div className="lc-search-input-wrapper" style={{ flex: 1 }}>
+              <Search size={16} />
+              <input type="text" placeholder="Search resources..." value={search} onChange={(e) => setSearch(e.target.value)} />
             </div>
-          ))}
-          {other.length > 0 && (
-            <div style={{ marginTop: '0.85rem' }}>
-              <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--admin-text-muted)', marginBottom: '0.4rem' }}>Other</label>
-              {other.map((m) => (
-                <ResourceMapRow key={m.id} mapping={m} onRemove={() => removeMapping(m)} onPreview={() => setPreviewResourceId(m.resource?.resource_id)} />
-              ))}
+            <div style={{ minWidth: 120 }}>
+              <Select value={typeFilter} onChange={(e) => chooseType(e.target.value)} options={TYPE_FILTER_OPTIONS} />
             </div>
-          )}
-        </div>
+          </div>
+
+          <div className="lc-resource-rows-scroll">
+            {visibleMappings.map((m) => (
+              <ResourceMapRow key={m.id} mapping={m} onRemove={() => removeMapping(m)} onPreview={() => setPreviewResourceId(m.resource?.resource_id)} />
+            ))}
+            {visibleMappings.length === 0 && (
+              <p className="lc-muted-note" style={{ margin: 0 }}>
+                {mappings.length === 0 ? 'No resources assigned yet.' : 'No resources match the current search/filter.'}
+              </p>
+            )}
+          </div>
+        </>
       )}
 
-      {addDrawerCategory && (
+      {addDrawerCategory !== null && (
         <AddResourceMapDrawer
           examId={examId}
           initialCategory={addDrawerCategory}
@@ -167,21 +225,35 @@ const ExamResourcesPanel = ({ examId }) => {
   );
 };
 
+// Preview and Remove stay one-click, always-visible icon buttons rather
+// than tucked behind a "..." menu -- both are used often enough (checking a
+// resource looks right, unlinking a wrong match) that hiding them behind an
+// extra click made the row slower to work with, not cleaner.
 const ResourceMapRow = ({ mapping, onRemove, onPreview }) => {
   const isBook = mapping.resource?.category && ['Guide', 'Precis'].includes(mapping.resource.category);
+  const Icon = CATEGORY_ICON[mapping.category] || FileText;
+  const color = CATEGORY_COLOR[mapping.category] || DEFAULT_CATEGORY_COLOR;
+  const sourceLabel = SOURCE_LABEL[mapping.source] || null;
+
   return (
-    <div className="lc-drawer-list-item">
-      <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0 }}>
-        <span className="lc-truncate" title={mapping.resource?.title}>{mapping.resource?.title || 'Untitled resource'}</span>
-        {mapping.resource?.status && mapping.resource.status !== 'Published' && <span className="lc-muted-note">({mapping.resource.status})</span>}
+    <div className="lc-resource-row">
+      <span className="lc-resource-row-icon" style={{ background: color.bg, color: color.fg }}>
+        <Icon size={16} />
       </span>
-      <span style={{ display: 'flex', gap: '0.4rem', flexShrink: 0 }}>
+      <span className="lc-resource-row-body">
+        <span className="lc-resource-row-title lc-truncate" title={mapping.resource?.title}>{mapping.resource?.title || 'Untitled resource'}</span>
+        <span className="lc-resource-row-meta">
+          <span className="lc-resource-pill" style={{ background: color.bg, color: color.fg }}>{mapping.category}</span>
+          {sourceLabel && <span>{sourceLabel}</span>}
+          {mapping.resource?.status && mapping.resource.status !== 'Published' && <span>{mapping.resource.status}</span>}
+        </span>
+      </span>
+      <span className="lc-resource-row-actions">
         {isBook && (
           <button
             className="lc-icon-btn"
             title="Open book in new tab"
             onClick={() => window.open(`/admin/books/${mapping.resource.category}/${mapping.resource.resource_id}`, '_blank')}
-            style={{ color: 'var(--admin-accent)' }}
           >
             <ExternalLink size={14} />
           </button>

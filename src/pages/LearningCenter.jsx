@@ -28,6 +28,7 @@ import { getTransferableSkills } from '../lib/profilingInsights';
 import { getSubjectByKey, getFamilyHex } from '../lib/thumbnailTaxonomy';
 import { useThumbnails } from '../lib/thumbnailStore';
 import { getEffectiveTier } from '../lib/subscriptionAccess';
+import { ReaderThemeProvider } from '../components/book/theme/ReaderThemeProvider';
 import ExamContentPreview from '../components/ExamContentPreview';
 import { useExamContent, getExamResourceCount } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
@@ -396,7 +397,9 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
         )}
 
         {intro?.source === 'manual' && intro.body && (
-          <div className="lc-exam-intro-text" dangerouslySetInnerHTML={{ __html: intro.body }} />
+          <ReaderThemeProvider category="Intro" style={{ background: 'transparent' }}>
+            <div className="lc-exam-intro-text" dangerouslySetInnerHTML={{ __html: intro.body }} />
+          </ReaderThemeProvider>
         )}
       </div>
 
@@ -622,7 +625,7 @@ const LearningCenter = () => {
         id: card.id,
         examId: card.examId,
         title: card.title,
-        category: card.conductingBody || card.type || 'Central Exam',
+        category: card.category || card.conductingBody || 'Central Exam',
         image: cardImage(card),
         progress: 0,
         lastAccessedAt: Date.now(),
@@ -639,7 +642,7 @@ const LearningCenter = () => {
       id: card.id,
       examId,
       title: card.title,
-      category: card.conductingBody || card.type || 'Central Exam',
+      category: match?.category || card.category || card.conductingBody || 'Central Exam',
       image: cardImage(card),
       progress: 0,
       lastAccessedAt: Date.now(),
@@ -902,6 +905,25 @@ const LearningCenter = () => {
       return words.every((w) => name.includes(w));
     }) || null;
   }, [catalog]);
+
+  const getCourseImage = useCallback((course) => {
+    const match = (course.examId && catalog.find((e) => e.id === course.examId))
+      || (course.title && catalog.find((e) => e.name.toLowerCase() === course.title.toLowerCase()))
+      || findCatalogMatch(course.searchTerm || course.title);
+
+    if (match?.category) {
+      const url = categoryUrl(match.category);
+      if (url) return url;
+    }
+    if (course.category) {
+      const url = categoryUrl(course.category);
+      if (url) return url;
+    }
+    if (course.image && course.image !== '/homepage/F5A.png') {
+      return course.image;
+    }
+    return '/homepage/F5A.png';
+  }, [catalog, findCatalogMatch, categoryUrl]);
 
   const recToRecommendedCard = useCallback((rec, index) => {
     let match = null;
@@ -1235,7 +1257,7 @@ const LearningCenter = () => {
           try {
             const { data: targets } = await supabase
               .from('user_exam_targets')
-              .select('exam_id, is_primary, status, exam:lc_exams(id, name, conducting_body:lc_conducting_bodies(name))')
+              .select('exam_id, is_primary, status, exam:lc_exams(id, name, category, conducting_body:lc_conducting_bodies(name))')
               .eq('user_id', session.user.id)
               .eq('status', 'active');
             if (targets?.length) {
@@ -1258,8 +1280,8 @@ const LearningCenter = () => {
                     id: t.exam_id,
                     examId: t.exam_id,
                     title: t.exam.name,
-                    category: t.exam.conducting_body?.name || 'Central Exam',
-                    image: '/homepage/F5A.png',
+                    category: t.exam.category || t.exam.conducting_body?.name || 'Central Exam',
+                    image: categoryUrl(t.exam.category) || '',
                     progress: 0,
                     lastAccessedAt: Date.now(),
                     searchTerm: t.exam.name,
@@ -1795,7 +1817,7 @@ const LearningCenter = () => {
                         <div key={course.id || course.examId || course.title} className="lc-continue-card">
                           <div className="lc-cont-thumb-wrap" onClick={() => handleResumeCourse(course)}>
                             <img
-                              src={course.image || '/homepage/F5A.png'}
+                              src={getCourseImage(course)}
                               alt={course.title}
                               className="lc-cont-thumb-img"
                               loading="lazy"
