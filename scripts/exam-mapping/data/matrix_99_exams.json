@@ -1,0 +1,1383 @@
+[
+ {
+  "sno": 1,
+  "name": "Assistant Branch Postmaster (ABPM)",
+  "state": "All India",
+  "level": "Central",
+  "domain": "Postal Services",
+  "present": [
+   "Regional / State Language"
+  ],
+  "remarks": "India Post GDS is merit-based on Class 10 marks; no written syllabus. Subjects shown = Class 10 merit subjects."
+ },
+ {
+  "sno": 2,
+  "name": "Dak Sevak",
+  "state": "All India",
+  "level": "Central",
+  "domain": "Postal Services",
+  "present": [
+   "Regional / State Language"
+  ],
+  "remarks": "Same as ABPM – merit-based, no written exam."
+ },
+ {
+  "sno": 3,
+  "name": "Judge Advocate General",
+  "state": "All India",
+  "level": "Central",
+  "domain": "Defence (Law)",
+  "present": [
+   "Law"
+  ],
+  "remarks": "Law graduates; shortlisting + SSB – confirm current criteria."
+ },
+ {
+  "sno": 4,
+  "name": "Gujarat GSET",
+  "state": "Gujarat",
+  "level": "Central",
+  "domain": "Teaching & Education",
+  "present": [
+   "English Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability",
+   "Computer Knowledge",
+   "Teaching Aptitude / Pedagogy",
+   "Subject Specialization (Teaching / Optional Subject)",
+   "Environment / Forestry / EVS"
+  ],
+  "remarks": "Kept as Central per database (conducted for Gujarat)."
+ },
+ {
+  "sno": 5,
+  "name": "Association of Chartered Certified Accountants",
+  "state": "International",
+  "level": "Central",
+  "domain": "Accounting & Commerce",
+  "present": [
+   "Law",
+   "Accounting / Audit / Taxation / Finance"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 6,
+  "name": "Certified Public Accountant (CPA)",
+  "state": "International",
+  "level": "Central",
+  "domain": "Accounting & Commerce",
+  "present": [
+   "Computer Knowledge",
+   "Law",
+   "Accounting / Audit / Taxation / Finance"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 7,
+  "name": "Contract Lecturers/GTs",
+  "state": "Not specified",
+  "level": "Central",
+  "domain": "Teaching & Education",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "Reasoning / Mental Ability",
+   "Teaching Aptitude / Pedagogy",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": "State/board not given in database – confirm."
+ },
+ {
+  "sno": 8,
+  "name": "Primary Teachers (PTs)",
+  "state": "Not specified",
+  "level": "Central",
+  "domain": "Teaching & Education",
+  "present": [
+   "General Knowledge / Awareness",
+   "English Language",
+   "Hindi Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability",
+   "Teaching Aptitude / Pedagogy",
+   "Environment / Forestry / EVS"
+  ],
+  "remarks": "State/board not given – typical PRT pattern assumed."
+ },
+ {
+  "sno": 9,
+  "name": "UP GIC Lecturer (Uttar Pradesh)",
+  "state": "Uttar Pradesh",
+  "level": "Central",
+  "domain": "Teaching & Education",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "General Science",
+   "State-Specific GK",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": "Kept as Central per database (Uttar Pradesh exam)."
+ },
+ {
+  "sno": 10,
+  "name": "UP LT (Uttar Pradesh)",
+  "state": "Uttar Pradesh",
+  "level": "Central",
+  "domain": "Teaching & Education",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "Hindi Language",
+   "Teaching Aptitude / Pedagogy",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": "Kept as Central per database (Uttar Pradesh exam)."
+ },
+ {
+  "sno": 11,
+  "name": "UP PGT (Uttar Pradesh)",
+  "state": "Uttar Pradesh",
+  "level": "Central",
+  "domain": "Teaching & Education",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "Hindi Language",
+   "Reasoning / Mental Ability",
+   "Teaching Aptitude / Pedagogy",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": "Kept as Central per database (Uttar Pradesh exam)."
+ },
+ {
+  "sno": 12,
+  "name": "UPTGT (Uttar Pradesh)",
+  "state": "Uttar Pradesh",
+  "level": "Central",
+  "domain": "Teaching & Education",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "Hindi Language",
+   "Reasoning / Mental Ability",
+   "Teaching Aptitude / Pedagogy",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": "Kept as Central per database (Uttar Pradesh exam)."
+ },
+ {
+  "sno": 13,
+  "name": "AAU Jorhat Technical Posts (Assam)",
+  "state": "Assam",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "English Language",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 14,
+  "name": "APSC Assistant Professor (Assam)",
+  "state": "Assam",
+  "level": "State",
+  "domain": "Teaching & Education",
+  "present": [
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "Teaching Aptitude / Pedagogy",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 15,
+  "name": "Assam CHO (Community Health Officer)",
+  "state": "Assam",
+  "level": "State",
+  "domain": "Health – Community Health",
+  "present": [
+   "General Knowledge / Awareness",
+   "Nursing & Midwifery",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 16,
+  "name": "Assam Junior Revenue Officer",
+  "state": "Assam",
+  "level": "State",
+  "domain": "Administrative / Revenue",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "English Language",
+   "Regional / State Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability",
+   "Revenue / Land Laws & Administration"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 17,
+  "name": "Assam Lab Technician/Pharmacist",
+  "state": "Assam",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "Pharmacy",
+   "Medical Lab Technology"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 18,
+  "name": "Assam Lecturer/Assistant Professor",
+  "state": "Assam",
+  "level": "State",
+  "domain": "Teaching & Education",
+  "present": [
+   "General Studies (History, Geography, Polity, Economy)",
+   "Teaching Aptitude / Pedagogy",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 19,
+  "name": "Assam Staff Nurse/MTS",
+  "state": "Assam",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "English Language",
+   "Nursing & Midwifery"
+  ],
+  "remarks": "Combined Staff Nurse + MTS listing."
+ },
+ {
+  "sno": 20,
+  "name": "DME Grade III (Technical) (Assam)",
+  "state": "Assam",
+  "level": "State",
+  "domain": "Health – Technical",
+  "present": [
+   "General Knowledge / Awareness",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 21,
+  "name": "DME Technician/Assistant (Assam)",
+  "state": "Assam",
+  "level": "State",
+  "domain": "Health – Technical",
+  "present": [
+   "General Knowledge / Awareness",
+   "Medical Lab Technology",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 22,
+  "name": "Deputy Project Director (Agriculture) (Assam)",
+  "state": "Assam",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 23,
+  "name": "Agriculture Coordinator (Bihar)",
+  "state": "Bihar",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 24,
+  "name": "Agriculture Technical Service (Bihar)",
+  "state": "Bihar",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 25,
+  "name": "BPSC Assistant Professor (Bihar)",
+  "state": "Bihar",
+  "level": "State",
+  "domain": "Teaching & Education",
+  "present": [
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "State-Specific GK",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 26,
+  "name": "Bihar Community Health Officer (CHO)",
+  "state": "Bihar",
+  "level": "State",
+  "domain": "Health – Community Health",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Nursing & Midwifery",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 27,
+  "name": "Bihar Pharmacist/Lab Technician",
+  "state": "Bihar",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Pharmacy",
+   "Medical Lab Technology"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 28,
+  "name": "Bihar Police Home Guard",
+  "state": "Bihar",
+  "level": "State",
+  "domain": "Police / Home Guard",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "General Science",
+   "State-Specific GK",
+   "Hindi Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 29,
+  "name": "Bihar Staff Nurse",
+  "state": "Bihar",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 30,
+  "name": "CG Home Guard (Chhattisgarh)",
+  "state": "Chhattisgarh",
+  "level": "State",
+  "domain": "Police / Home Guard",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Hindi Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 31,
+  "name": "CG Vyapam Forest Guard (Chhattisgarh)",
+  "state": "Chhattisgarh",
+  "level": "State",
+  "domain": "Forest Services",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "General Science",
+   "State-Specific GK",
+   "Hindi Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability",
+   "Environment / Forestry / EVS"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 32,
+  "name": "CG Vyapam Group 4 (Chhattisgarh)",
+  "state": "Chhattisgarh",
+  "level": "State",
+  "domain": "Group C/D / General",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Hindi Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 33,
+  "name": "CG Vyapam Lab Technician (Chhattisgarh)",
+  "state": "Chhattisgarh",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Medical Lab Technology"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 34,
+  "name": "CG Vyapam Pharmacist (Chhattisgarh)",
+  "state": "Chhattisgarh",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Pharmacy"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 35,
+  "name": "CG Vyapam Staff Nurse (Chhattisgarh)",
+  "state": "Chhattisgarh",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 36,
+  "name": "CGPSC Assistant Professor (Chhattisgarh)",
+  "state": "Chhattisgarh",
+  "level": "State",
+  "domain": "Teaching & Education",
+  "present": [
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "State-Specific GK",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 37,
+  "name": "CGPSC Peon (Chhattisgarh)",
+  "state": "Chhattisgarh",
+  "level": "State",
+  "domain": "Group C/D / General",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Hindi Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 38,
+  "name": "NHM Chhattisgarh CHO",
+  "state": "Chhattisgarh",
+  "level": "State",
+  "domain": "Health – Community Health",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 39,
+  "name": "District Court Clerk/Peon (Goa)",
+  "state": "Goa",
+  "level": "State",
+  "domain": "Judicial Services (Clerical)",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "English Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability",
+   "Computer Knowledge"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 40,
+  "name": "GPSC Assistant Professor (Goa)",
+  "state": "Goa",
+  "level": "State",
+  "domain": "Teaching & Education",
+  "present": [
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "State-Specific GK",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": "GPSC here = Goa PSC (region in database is Goa)."
+ },
+ {
+  "sno": 41,
+  "name": "GPSC Medical Officer (Goa)",
+  "state": "Goa",
+  "level": "State",
+  "domain": "Health – Medical Officer",
+  "present": [
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": "GPSC here = Goa PSC (region in database is Goa)."
+ },
+ {
+  "sno": 42,
+  "name": "Goa ANM",
+  "state": "Goa",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 43,
+  "name": "Goa Home Guard",
+  "state": "Goa",
+  "level": "State",
+  "domain": "Police / Home Guard",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "English Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 44,
+  "name": "Goa Pharmacist",
+  "state": "Goa",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "Pharmacy"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 45,
+  "name": "Goa Staff Nurse",
+  "state": "Goa",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 46,
+  "name": "Gujarat ANM",
+  "state": "Gujarat",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Regional / State Language",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 47,
+  "name": "Gujarat Group D / Peon",
+  "state": "Gujarat",
+  "level": "State",
+  "domain": "Group C/D / General",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Regional / State Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 48,
+  "name": "Gujarat Pharmacist",
+  "state": "Gujarat",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Pharmacy"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 49,
+  "name": "Gujarat Staff Nurse",
+  "state": "Gujarat",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 50,
+  "name": "NHM Gujarat CHO",
+  "state": "Gujarat",
+  "level": "State",
+  "domain": "Health – Community Health",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 51,
+  "name": "Haryana ANM",
+  "state": "Haryana",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 52,
+  "name": "Haryana Staff Nurse",
+  "state": "Haryana",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 53,
+  "name": "NHM Haryana CHO",
+  "state": "Haryana",
+  "level": "State",
+  "domain": "Health – Community Health",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 54,
+  "name": "Agriculture Development Officer (Himachal Pradesh)",
+  "state": "Himachal Pradesh",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 55,
+  "name": "HP ANM (Himachal Pradesh)",
+  "state": "Himachal Pradesh",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 56,
+  "name": "HP Group D / Peon (Himachal Pradesh)",
+  "state": "Himachal Pradesh",
+  "level": "State",
+  "domain": "Group C/D / General",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Hindi Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 57,
+  "name": "HP Staff Nurse (Himachal Pradesh)",
+  "state": "Himachal Pradesh",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": "Merged: \"HP Staff Nurse\" + \"HPSSSB Staff Nurse\" (same exam, HPSSSB conducts)."
+ },
+ {
+  "sno": 58,
+  "name": "HPPSC Assistant Director (Himachal Pradesh)",
+  "state": "Himachal Pradesh",
+  "level": "State",
+  "domain": "Administrative Services",
+  "present": [
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "State-Specific GK",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": "Department not given – confirm."
+ },
+ {
+  "sno": 59,
+  "name": "HPPSC Assistant Engineer (Himachal Pradesh)",
+  "state": "Himachal Pradesh",
+  "level": "State",
+  "domain": "Engineering",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Engineering (Technical)"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 60,
+  "name": "HPPSC Assistant Professor (Himachal Pradesh)",
+  "state": "Himachal Pradesh",
+  "level": "State",
+  "domain": "Teaching & Education",
+  "present": [
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "State-Specific GK",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 61,
+  "name": "NHM Himachal Pradesh CHO",
+  "state": "Himachal Pradesh",
+  "level": "State",
+  "domain": "Health – Community Health",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 62,
+  "name": "Agriculture Coordinator (Jharkhand)",
+  "state": "Jharkhand",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 63,
+  "name": "Agriculture Technical Service (Jharkhand)",
+  "state": "Jharkhand",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 64,
+  "name": "JPSC Assistant Professor (Jharkhand)",
+  "state": "Jharkhand",
+  "level": "State",
+  "domain": "Teaching & Education",
+  "present": [
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "State-Specific GK",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 65,
+  "name": "Jharkhand ANM",
+  "state": "Jharkhand",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 66,
+  "name": "Jharkhand Group D / Peon",
+  "state": "Jharkhand",
+  "level": "State",
+  "domain": "Group C/D / General",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "General Science",
+   "State-Specific GK",
+   "Hindi Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 67,
+  "name": "Jharkhand Police Home Guard",
+  "state": "Jharkhand",
+  "level": "State",
+  "domain": "Police / Home Guard",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Hindi Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 68,
+  "name": "Jharkhand Staff Nurse",
+  "state": "Jharkhand",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 69,
+  "name": "NHM Jharkhand CHO",
+  "state": "Jharkhand",
+  "level": "State",
+  "domain": "Health – Community Health",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 70,
+  "name": "Agriculture Assistant (Karnataka)",
+  "state": "Karnataka",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 71,
+  "name": "Agriculture Officer (Karnataka)",
+  "state": "Karnataka",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 72,
+  "name": "Group D (Peon/MTS) (Karnataka)",
+  "state": "Karnataka",
+  "level": "State",
+  "domain": "Group C/D / General",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "English Language",
+   "Regional / State Language",
+   "Quantitative Aptitude / Maths",
+   "Reasoning / Mental Ability"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 73,
+  "name": "KPSC Assistant Professor (Karnataka)",
+  "state": "Karnataka",
+  "level": "State",
+  "domain": "Teaching & Education",
+  "present": [
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "State-Specific GK",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": "KPSC = Karnataka PSC here."
+ },
+ {
+  "sno": 74,
+  "name": "Karnataka ANM",
+  "state": "Karnataka",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Regional / State Language",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 75,
+  "name": "Karnataka Pharmacist",
+  "state": "Karnataka",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Pharmacy"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 76,
+  "name": "Karnataka Staff Nurse",
+  "state": "Karnataka",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 77,
+  "name": "NHM Karnataka CHO",
+  "state": "Karnataka",
+  "level": "State",
+  "domain": "Health – Community Health",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 78,
+  "name": "Agricultural Assistant (Kerala)",
+  "state": "Kerala",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 79,
+  "name": "Agriculture Officer (Kerala)",
+  "state": "Kerala",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 80,
+  "name": "KPSC Assistant Engineer (Kerala)",
+  "state": "Kerala",
+  "level": "State",
+  "domain": "Engineering",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Engineering (Technical)"
+  ],
+  "remarks": "KPSC = Kerala PSC here."
+ },
+ {
+  "sno": 81,
+  "name": "KPSC Assistant Professor (Kerala)",
+  "state": "Kerala",
+  "level": "State",
+  "domain": "Teaching & Education",
+  "present": [
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "State-Specific GK",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": "KPSC = Kerala PSC here."
+ },
+ {
+  "sno": 82,
+  "name": "Kerala Pharmacist",
+  "state": "Kerala",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Pharmacy"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 83,
+  "name": "Agriculture Development Officer (Madhya Pradesh)",
+  "state": "Madhya Pradesh",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 84,
+  "name": "Agriculture Technical Assistant (Madhya Pradesh)",
+  "state": "Madhya Pradesh",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 85,
+  "name": "MP Pharmacist (Madhya Pradesh)",
+  "state": "Madhya Pradesh",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Pharmacy"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 86,
+  "name": "MP Staff Nurse (Madhya Pradesh)",
+  "state": "Madhya Pradesh",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 87,
+  "name": "MP Vyapam ANM/Staff Nurse (Madhya Pradesh)",
+  "state": "Madhya Pradesh",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 88,
+  "name": "NHM MP CHO (Madhya Pradesh)",
+  "state": "Madhya Pradesh",
+  "level": "State",
+  "domain": "Health – Community Health",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 89,
+  "name": "Agriculture Officer (AO) (Maharashtra)",
+  "state": "Maharashtra",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "Current Affairs",
+   "State-Specific GK",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 90,
+  "name": "MPSC Assistant Professor (Group B) (Maharashtra)",
+  "state": "Maharashtra",
+  "level": "State",
+  "domain": "Teaching & Education",
+  "present": [
+   "Current Affairs",
+   "General Studies (History, Geography, Polity, Economy)",
+   "State-Specific GK",
+   "Subject Specialization (Teaching / Optional Subject)"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 91,
+  "name": "Maharashtra ANM/Staff Nurse",
+  "state": "Maharashtra",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 92,
+  "name": "Maharashtra Pharmacist",
+  "state": "Maharashtra",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Pharmacy"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 93,
+  "name": "Maharashtra Staff Nurse",
+  "state": "Maharashtra",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 94,
+  "name": "NHM Maharashtra CHO (Community Health Officer)",
+  "state": "Maharashtra",
+  "level": "State",
+  "domain": "Health – Community Health",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "Nursing & Midwifery",
+   "Medicine / Public Health / Paramedical"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 95,
+  "name": "Agriculture Development Officer (Manipur)",
+  "state": "Manipur",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "English Language",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 96,
+  "name": "Agriculture Technical Assistant (Manipur)",
+  "state": "Manipur",
+  "level": "State",
+  "domain": "Agriculture",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "English Language",
+   "Agriculture & Allied Sciences"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 97,
+  "name": "Manipur ANM/Staff Nurse",
+  "state": "Manipur",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "English Language",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 98,
+  "name": "Manipur Pharmacist",
+  "state": "Manipur",
+  "level": "State",
+  "domain": "Health – Lab / Pharmacy",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "English Language",
+   "Pharmacy"
+  ],
+  "remarks": null
+ },
+ {
+  "sno": 99,
+  "name": "Manipur Staff Nurse",
+  "state": "Manipur",
+  "level": "State",
+  "domain": "Health – Nursing",
+  "present": [
+   "General Knowledge / Awareness",
+   "State-Specific GK",
+   "English Language",
+   "Nursing & Midwifery"
+  ],
+  "remarks": null
+ }
+]

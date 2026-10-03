@@ -3,7 +3,7 @@ import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, AlertTriangle, RefreshCw, Pencil, Eye, Save, X, Copy, Trash2, Columns, Archive, ArchiveRestore, Replace } from 'lucide-react';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
-import '../../components/book/BookBlocks.css';
+import '../../components/book/BookBlocksClassic.css';
 import BlockEditForm, { BlockTypePicker, createBlock, genBlockId } from '../../components/admin/BlockEditForm';
 import { DuplicateBookModal, ConfirmDeleteModal, RenameBookModal, ConfirmArchiveModal } from '../../components/admin/BookFormModals';
 import { FindReplaceModal } from '../../components/admin/FindReplaceModal';
@@ -452,7 +452,7 @@ const BookChapterBrowser = () => {
 
           {mode === 'preview' ? (
             <main ref={mainRef} style={{ padding: '2rem', overflowY: 'auto', height: '100%' }}>
-              <div style={{ background: 'white', borderRadius: 16, padding: '2rem', boxShadow: '0 2px 20px rgba(0,0,0,0.04)', border: '1px solid #e8eaed', maxWidth: 820, margin: '0 auto' }}>
+              <div className="bk-classic" style={{ background: 'white', borderRadius: 16, padding: '2rem', boxShadow: '0 2px 20px rgba(0,0,0,0.04)', border: '1px solid #e8eaed', maxWidth: 820, margin: '0 auto' }}>
                 {chapterLoading && <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem' }}><RefreshCw className="animate-spin" size={24} /></div>}
                 {chapterError && <p>Unable to load this chapter ({chapterError}).</p>}
 
@@ -610,7 +610,7 @@ const BookChapterBrowser = () => {
                       display: 'flex',
                       flexDirection: 'column',
                     }}>
-                      <div style={{ padding: '1.75rem', background: '#ffffff', borderRadius: 14 }}>
+                      <div className="bk-classic" style={{ padding: '1.75rem', background: '#ffffff', borderRadius: 14 }}>
                         <ChapterHeader title={editTitle || 'Untitled Chapter'} order={chapterData?.order || 1} />
 
                         <div className="bk-blocks-container" style={{ marginTop: '1.25rem' }}>

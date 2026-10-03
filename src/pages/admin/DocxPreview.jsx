@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronRight, Code2, Eye } from 'lucide-react';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
 import { ChapterHeader } from '../../components/book/BookBlocks';
-import '../../components/book/BookBlocks.css';
+import '../../components/book/BookBlocksClassic.css';
 
 const BLOCK_TYPE_COLORS = {
   heading: '#0f766e',
@@ -100,7 +100,7 @@ export const DocxPreview = ({ book }) => {
                     {JSON.stringify(ch, null, 2)}
                   </pre>
                 ) : (
-                  <div style={{ background: '#ffffff', borderRadius: 12, border: '1px solid #e2e8f0', padding: '2rem' }}>
+                  <div className="bk-classic" style={{ background: '#ffffff', borderRadius: 12, border: '1px solid #e2e8f0', padding: '2rem' }}>
                     <ChapterHeader title={ch.title} order={ch.order} />
                     <div className="bk-blocks-container">
                       {ch.blocks.map((block) => <BlockRenderer key={block.id} block={block} />)}

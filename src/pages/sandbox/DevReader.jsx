@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Book, ChevronLeft, ChevronRight, Menu, X, Loader2 } from 'lucide-react';
 import { ChapterHeader } from '../../components/book/BookBlocks';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
+import '../../components/book/BookBlocksClassic.css';
 import './BookReaderV2.css';
 
 // Sample books served straight from R2 (production storage) rather than a
@@ -80,7 +81,7 @@ export default function DevReader() {
   const totalChapters = metadata?.chapters?.length || 0;
 
   return (
-    <div className="bk-reader-layout">
+    <div className="bk-reader-layout bk-classic">
       {/* Mobile Top Bar */}
       <div className="bk-mobile-topbar">
         <button className="bk-menu-btn" onClick={() => setMobileMenuOpen(true)}>

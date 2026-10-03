@@ -1,0 +1,537 @@
+/* Classic (pre-reader-theme) book block styling, restored from d57031c.
+   Used by admin/editorial views (chapter browser, DOCX preview, dev reader):
+   applies only inside a .bk-classic ancestor, independent of reader themes.
+   Candidate-facing, themed styling lives in BookBlocks.css, scoped to
+   .reader-theme-container. :where() keeps specificity identical to the
+   original unscoped rules. */
+:where(.bk-classic) .bk-paragraph {
+  font-family: 'Merriweather', 'Palatino Linotype', serif;
+  line-height: 1.8;
+  font-size: 1.15rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Drop Cap for the first paragraph in the chapter */
+:where(.bk-classic) .bk-blocks-container > .bk-paragraph:first-of-type::first-letter {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  float: left;
+  font-size: 5rem;
+  line-height: 0.8;
+  padding-top: 0.25rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.2rem;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+/* Ensure strong text inside paragraphs is highlighted slightly */
+:where(.bk-classic) .bk-paragraph strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+:where(.bk-classic) .bk-heading {
+  font-family: 'Inter', sans-serif;
+  color: #0f766e; /* VEERNXT Teal/Green theme */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+:where(.bk-classic) .bk-h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.25rem;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  color: #0f766e; /* VEERNXT Teal */
+  border-bottom: 3px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+:where(.bk-classic) .bk-h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  color: #334155;
+}
+
+:where(.bk-classic) .bk-h4, :where(.bk-classic) .bk-h5, :where(.bk-classic) .bk-h6 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+
+/* Images */
+:where(.bk-classic) .bk-image-block {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+:where(.bk-classic) .bk-image-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+:where(.bk-classic) .bk-image-block figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Callouts */
+:where(.bk-classic) .bk-callout {
+  display: flex;
+  gap: 1.5rem;
+  margin: 3.5rem 0;
+  padding: 2rem 0;
+  font-family: 'Inter', sans-serif;
+  border-top: 4px solid #0f766e;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+:where(.bk-classic) .bk-callout-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.25rem;
+}
+
+:where(.bk-classic) .bk-callout-title {
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+:where(.bk-classic) .bk-callout-content {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  color: #334155;
+}
+
+:where(.bk-classic) .bk-callout-content p {
+  margin-bottom: 0.75rem;
+}
+:where(.bk-classic) .bk-callout-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Important Box */
+:where(.bk-classic) .bk-important { border-top-color: #ef4444; }
+:where(.bk-classic) .bk-important .bk-callout-icon { color: #ef4444; }
+:where(.bk-classic) .bk-important .bk-callout-title { color: #b91c1c; }
+
+/* Exam Tip Box */
+:where(.bk-classic) .bk-exam-tip { border-top-color: #eab308; }
+:where(.bk-classic) .bk-exam-tip .bk-callout-icon { color: #eab308; }
+:where(.bk-classic) .bk-exam-tip .bk-callout-title { color: #a16207; }
+
+/* Definition Box */
+:where(.bk-classic) .bk-definition { border-top-color: #14b8a6; }
+:where(.bk-classic) .bk-definition .bk-callout-icon { color: #14b8a6; }
+:where(.bk-classic) .bk-definition .bk-callout-title { color: #0f766e; }
+
+/* Example Box */
+:where(.bk-classic) .bk-example { border-top-color: #94a3b8; }
+:where(.bk-classic) .bk-example .bk-callout-title { color: #475569; }
+
+/* Generic Callout */
+:where(.bk-classic) .bk-generic { border-top-color: #cbd5e1; }
+:where(.bk-classic) .bk-generic .bk-callout-icon { color: #64748b; }
+
+/* Lists */
+:where(.bk-classic) .bk-list, :where(.bk-classic) .bk-numbered-list {
+  margin-bottom: 2rem;
+  padding-left: 0;
+  list-style-position: inside;
+  font-family: 'Merriweather', 'Palatino Linotype', serif;
+  line-height: 1.8;
+  font-size: 1.15rem;
+  color: #1e293b;
+}
+
+:where(.bk-classic) .bk-list li, :where(.bk-classic) .bk-numbered-list li {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed #e2e8f0;
+}
+:where(.bk-classic) .bk-list li:last-child, :where(.bk-classic) .bk-numbered-list li:last-child {
+  border-bottom: none;
+}
+
+/* Tables */
+:where(.bk-classic) .bk-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 3rem 0;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+:where(.bk-classic) .bk-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+}
+
+:where(.bk-classic) .bk-table th, :where(.bk-classic) .bk-table td {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  line-height: 1.6;
+}
+
+/* Cell content is raw injected HTML (mammoth-parsed table cells come in as
+   plain, class-less <p>/<strong> tags -- see convert_docx_intros_to_blocks.mjs),
+   so unlike every other block here it has no element of its own to carry a
+   color and just inherits whatever the surrounding page set. That's fine on
+   the candidate-facing reader's light page, but on a dark host (e.g. the
+   admin CMS's drawer, which only repaints the background to white for this
+   preview, not the text color) it inherited the host's light/muted text,
+   landing as unreadable grey-on-white. Pin it explicitly so the table never
+   depends on ambient color. */
+:where(.bk-classic) .bk-table td {
+  color: #1e293b;
+}
+:where(.bk-classic) .bk-table td p {
+  color: inherit;
+}
+
+:where(.bk-classic) .bk-table th {
+  background-color: #0f766e; /* Teal header */
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+:where(.bk-classic) .bk-table tr:nth-child(even) td {
+  background-color: #f8fafc; /* Very light slate */
+}
+
+:where(.bk-classic) .bk-table tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+:where(.bk-classic) .bk-table tr:hover td {
+  background-color: #f1f5f9;
+}
+
+:where(.bk-classic) .bk-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Chapter Header */
+:where(.bk-classic) .bk-chapter-header {
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 2rem;
+}
+
+:where(.bk-classic) .bk-chapter-number-huge {
+  font-family: 'Inter', sans-serif;
+  font-size: 7rem;
+  font-weight: 900;
+  color: #0f766e;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  margin-top: -0.5rem;
+}
+
+:where(.bk-classic) .bk-chapter-title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+:where(.bk-classic) .bk-chapter-eyebrow {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+:where(.bk-classic) .bk-chapter-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+/* Book Cover */
+:where(.bk-classic) .bk-cover {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 12px;
+  padding: 4rem 3rem;
+  margin-bottom: 4rem;
+  color: white;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+:where(.bk-classic) .bk-brand {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+:where(.bk-classic) .bk-cover-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 800px;
+}
+
+/* ── AI-ENRICHED BLOCK STYLES ───────────────────────────────── */
+
+/* Key Facts Box */
+:where(.bk-classic) .bk-keyfacts {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+  border: 1px solid #99f6e4;
+  border-left: 5px solid #0f766e;
+  border-radius: 8px;
+  padding: 2rem 2rem 1.5rem;
+  margin: 3rem 0;
+}
+
+:where(.bk-classic) .bk-keyfacts-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0f766e;
+  margin-bottom: 1.25rem;
+}
+
+:where(.bk-classic) .bk-keyfacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+:where(.bk-classic) .bk-keyfacts-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #134e4a;
+  line-height: 1.5;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+:where(.bk-classic) .bk-keyfacts-bullet {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #0f766e;
+  background: white;
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* Pull Quote */
+:where(.bk-classic) .bk-pullquote {
+  margin: 3.5rem 0;
+  padding: 0 2.5rem;
+  border: none;
+  position: relative;
+}
+
+:where(.bk-classic) .bk-pullquote-mark {
+  font-family: 'Georgia', serif;
+  font-size: 6rem;
+  line-height: 1;
+  color: #0f766e;
+  opacity: 0.2;
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+}
+
+:where(.bk-classic) .bk-pullquote p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #0f172a;
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Exam Alert */
+:where(.bk-classic) .bk-exam-alert {
+  background: #fefce8;
+  border: 1px solid #fde68a;
+  border-left: 5px solid #f59e0b;
+  border-radius: 8px;
+  padding: 1.75rem 2rem;
+  margin: 3rem 0;
+}
+
+:where(.bk-classic) .bk-exam-alert-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #92400e;
+  margin-bottom: 1rem;
+}
+
+:where(.bk-classic) .bk-exam-alert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+:where(.bk-classic) .bk-exam-alert-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.975rem;
+  color: #78350f;
+  line-height: 1.5;
+  padding-left: 1rem;
+  border-left: 2px solid #f59e0b;
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Stat Strip */
+:where(.bk-classic) .bk-stat-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  background: #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 3rem 0;
+  border: 1px solid #e2e8f0;
+}
+
+:where(.bk-classic) .bk-stat-item {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  gap: 0.4rem;
+  transition: background 0.15s;
+}
+
+:where(.bk-classic) .bk-stat-item:hover {
+  background: #f8fafc;
+}
+
+:where(.bk-classic) .bk-stat-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+:where(.bk-classic) .bk-stat-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #0f766e;
+  line-height: 1;
+}
+
+:where(.bk-classic) .bk-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Comparison Table special styling */
+:where(.bk-classic) .bk-comparison-table .bk-table th:first-child {
+  background-color: #134e4a;
+}
+
+/* AI Enrichment Loading State */
+:where(.bk-classic) .bk-enriching {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #64748b;
+  padding: 1rem 0;
+}
+
+:where(.bk-classic) .bk-enriching-dot {
+  width: 8px;
+  height: 8px;
+  background: #0f766e;
+  border-radius: 50%;
+  animation: bk-pulse 1.4s ease-in-out infinite;
+}
+:where(.bk-classic) .bk-enriching-dot:nth-child(2) { animation-delay: 0.2s; }
+:where(.bk-classic) .bk-enriching-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bk-pulse {
+  0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1); }
+}
