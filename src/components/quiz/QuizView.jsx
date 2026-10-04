@@ -373,51 +373,65 @@ export const QuizView = ({
       </div>
 
       {/* 3. Footer Bar with indicators */}
-      <div style={{
-        background: '#fff', border: '1px solid #e4e4e7', padding: '1rem 1.5rem',
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center'
-      }}>
-        {/* Left Stats */}
-        <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', color: '#71717a' }}>
-          <span>■ Mode: {state.config.mode}</span>
-          <span>■ Answered: {answeredCount}/{state.questions.length}</span>
-        </div>
+      {(() => {
+        // Long papers (mock tests have 100+ questions): stats on one row, the question map wraps beneath.
+        // In Learning mode every box is a jump link; boxes with a figure get a dot so they can be found.
+        const canJump = state.config.mode === 'learning';
+        return (
+          <div style={{
+            background: '#fff', border: '1px solid #e4e4e7', padding: '1rem 1.5rem',
+            display: 'flex', flexDirection: 'column', gap: '0.75rem', minWidth: 0
+          }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem 1.5rem', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', color: '#71717a' }}>
+              <span>■ Mode: {state.config.mode}</span>
+              <span>■ Answered: {answeredCount}/{state.questions.length}</span>
+              {canJump && <span>■ Click a box to jump{state.questions.some((q) => /<img/i.test(q.question || '')) ? ' · • = has a figure' : ''}</span>}
+            </div>
 
-        {/* Right Indicators (Square Status Boxes) */}
-        <div style={{ display: 'flex', gap: '0.35rem' }}>
-          {state.questions.map((q, idx) => {
-            const ans = state.answers[q.id];
-            const isActive = idx === state.currentIndex;
-            
-            let bg = '#e4e4e7';
-            let border = '1px solid #e4e4e7';
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', minWidth: 0 }}>
+              {state.questions.map((q, idx) => {
+                const ans = state.answers[q.id];
+                const isActive = idx === state.currentIndex;
+                const hasFigure = /<img/i.test(q.question || '');
 
-            if (ans) {
-              if (state.config.mode === 'learning') {
-                bg = ans.isCorrect ? '#22c55e' : '#ef4444';
-                border = `1px solid ${ans.isCorrect ? '#22c55e' : '#ef4444'}`;
-              } else {
-                bg = '#71717a';
-                border = '1px solid #71717a';
-              }
-            }
-            if (isActive) {
-              border = '2px solid #18181b';
-            }
+                let bg = '#e4e4e7';
+                let border = '1px solid #e4e4e7';
 
-            return (
-              <div 
-                key={q.id}
-                style={{
-                  width: '12px', height: '12px', background: bg, border: border,
-                  transition: 'all 0.15s'
-                }}
-                title={`Question ${idx + 1}`}
-              />
-            );
-          })}
-        </div>
-      </div>
+                if (ans) {
+                  if (state.config.mode === 'learning') {
+                    bg = ans.isCorrect ? '#22c55e' : '#ef4444';
+                    border = `1px solid ${ans.isCorrect ? '#22c55e' : '#ef4444'}`;
+                  } else {
+                    bg = '#71717a';
+                    border = '1px solid #71717a';
+                  }
+                }
+                if (isActive) {
+                  border = '2px solid #18181b';
+                }
+
+                return (
+                  <button
+                    type="button"
+                    key={q.id}
+                    disabled={!canJump}
+                    onClick={() => canJump && onUpdateAnswer(null, idx, state.score, state.currentStreak, state.maxStreak)}
+                    style={{
+                      width: '16px', height: '16px', padding: 0, background: bg, border: border, boxSizing: 'border-box',
+                      transition: 'all 0.15s', cursor: canJump ? 'pointer' : 'default', position: 'relative',
+                      display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+                    }}
+                    title={`Question ${idx + 1}${hasFigure ? ' (has a figure)' : ''}`}
+                    aria-label={`Question ${idx + 1}${hasFigure ? ', has a figure' : ''}`}
+                  >
+                    {hasFigure && <span style={{ width: 5, height: 5, borderRadius: '50%', background: ans ? '#fff' : '#f97316' }} />}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })()}
 
       {/* Baseline Footer */}
       <div style={{

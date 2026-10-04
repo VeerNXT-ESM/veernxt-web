@@ -121,8 +121,9 @@ const InteractiveQuiz = () => {
           };
         });
 
-        // Sample a subset of questions for the session
-        const sampled = parsedQuestions.length > MAX_QUIZ_QUESTIONS
+        // Sample a subset of questions for the session -- except full mock tests, whose whole point is the
+        // complete paper (a 160-question paper was being cut to 6). QuizSetup still lets the user pick a count.
+        const sampled = quizData.category !== 'Mock Test' && parsedQuestions.length > MAX_QUIZ_QUESTIONS
           ? [...parsedQuestions]
               .sort(() => Math.random() - 0.5)
               .slice(0, MAX_QUIZ_QUESTIONS)
@@ -174,11 +175,16 @@ const InteractiveQuiz = () => {
 
   // Handler: Start a new quiz session
   const handleStartQuiz = (config) => {
+    // Honour the question count picked in QuizSetup (it was previously ignored): random subset, kept in paper order.
+    const count = Number(config.questionCount);
+    const sessionQuestions = count > 0 && count < questions.length
+      ? [...questions].sort(() => Math.random() - 0.5).slice(0, count).sort((a, b) => questions.indexOf(a) - questions.indexOf(b))
+      : questions;
     const newQuizState = {
       id: 'quiz-' + Date.now(),
       startedAt: Date.now(),
       config,
-      questions: questions,
+      questions: sessionQuestions,
       currentIndex: 0,
       answers: {},
       score: 0,
@@ -251,13 +257,14 @@ const InteractiveQuiz = () => {
   const handleFinishQuiz = async () => {
     if (!activeQuiz) return;
 
+    const sessionQs = activeQuiz.questions || questions; // the subset actually played (QuizSetup count)
     const answersList = Object.values(activeQuiz.answers);
     const correctCount = answersList.filter(a => a.isCorrect).length;
-    const scorePercent = (correctCount / questions.length) * 100;
+    const scorePercent = (correctCount / sessionQs.length) * 100;
 
     // Build DB answer map
     const dbAnswersMap = {};
-    questions.forEach(q => {
+    sessionQs.forEach(q => {
       const ansObj = activeQuiz.answers[q.id];
       if (ansObj && ansObj.selectedIndex !== null) {
         dbAnswersMap[q.id] = q.originalKeys[ansObj.selectedIndex];
@@ -282,7 +289,7 @@ const InteractiveQuiz = () => {
         user_id: session.user.id,
         quiz_id: id,
         quiz_title: quiz.title,
-        total_questions: questions.length,
+        total_questions: sessionQs.length,
         answered_questions: answersList.length,
         correct_answers: correctCount,
         score_percent: scorePercent,
@@ -297,7 +304,7 @@ const InteractiveQuiz = () => {
           quiz_id: id,
           subject_key: quiz.subject || null,
           score_pct: scorePercent,
-          questions_total: questions.length,
+          questions_total: sessionQs.length,
           questions_correct: correctCount,
           attempted_at: new Date().toISOString()
         });

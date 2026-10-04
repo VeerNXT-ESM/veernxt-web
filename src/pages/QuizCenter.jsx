@@ -20,6 +20,8 @@ export default function QuizCenter() {
   // mapping (sql/lc_exam_quiz_map.sql, scripts/map_exam_quizzes_gemini.mjs)
   // and quizzes are restricted to exactly those quiz_ids.
   const [mappedQuizIds, setMappedQuizIds] = useState(null);
+  // The user's matched exam only *prioritises* quizzes; "Show all quizzes" lets them browse everything.
+  const [showAll, setShowAll] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const activeSubjectKey = searchParams.get('subject');
   const activeExamId = searchParams.get('exam');
@@ -123,10 +125,12 @@ export default function QuizCenter() {
     const map = new Map();
     for (const quiz of quizzes) {
       const canonical = resolveCanonicalSubjectLabel(quiz.subject);
-      if (mappedQuizIds) {
-        if (!mappedQuizIds.has(quiz.id)) continue;
-      } else if (allowedSubjectKeys && canonical && !allowedSubjectKeys.has(canonical.key)) {
-        continue;
+      if (!showAll) {
+        if (mappedQuizIds) {
+          if (!mappedQuizIds.has(quiz.id)) continue;
+        } else if (allowedSubjectKeys && canonical && !allowedSubjectKeys.has(canonical.key)) {
+          continue;
+        }
       }
       const key = canonical?.key || quiz.subject || 'uncategorized';
       if (!map.has(key)) {
@@ -140,7 +144,7 @@ export default function QuizCenter() {
       map.get(key).quizzes.push(quiz);
     }
     return [...map.values()].sort((a, b) => a.label.localeCompare(b.label));
-  }, [quizzes, allowedSubjectKeys, mappedQuizIds]);
+  }, [quizzes, allowedSubjectKeys, mappedQuizIds, showAll]);
 
   const activeGroup = groups.find((g) => g.key === activeSubjectKey) || null;
 
@@ -154,6 +158,54 @@ export default function QuizCenter() {
   const openSubject = (key) => {
     setSearchText('');
     setSearchParams(key ? { subject: key } : {});
+  };
+
+  // Top-level search also matches quiz titles (across every visible subject), not just subject folders.
+  const titleMatches = !activeGroup && searchText.trim()
+    ? groups.flatMap((g) => g.quizzes).filter((q) => q.title.toLowerCase().includes(searchText.trim().toLowerCase()))
+    : [];
+
+  const renderQuizCard = (quiz) => {
+      const locked = !quizAccess.allowed;
+      return (
+        <div
+          key={quiz.id}
+          style={{
+            background: 'white', border: '1px solid #e2e8f0', padding: '1.5rem',
+            display: 'flex', flexDirection: 'column', gap: '1rem', position: 'relative'
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+            {locked && (
+              <span style={{ color: '#ef4444', display: 'flex', alignItems: 'center', gap: '0.2rem', fontSize: '0.7rem', fontWeight: 700 }}>
+                <Lock size={12} /> LOCKED
+              </span>
+            )}
+          </div>
+
+          <div style={{ flex: 1 }}>
+            <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.05rem', fontWeight: 800, color: 'var(--ios-text)', lineHeight: 1.3 }}>
+              {quiz.title}
+            </h3>
+            <p style={{ margin: 0, fontSize: '0.8rem', color: '#64748b', lineHeight: 1.4 }}>
+              {quiz.description || 'Practice questions curated for examination preparation.'}
+            </p>
+          </div>
+
+          <Link
+            to={`/quiz/${quiz.id}`}
+            style={{
+              textDecoration: 'none', background: 'var(--ios-olive)', color: 'white',
+              textAlign: 'center', padding: '0.75rem', fontWeight: 800, fontSize: '0.85rem',
+              textTransform: 'uppercase', letterSpacing: '0.5px',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem',
+              border: 'none', cursor: 'pointer'
+            }}
+          >
+            Start Arena Session
+          </Link>
+        </div>
+      );
   };
 
   return (
@@ -218,25 +270,23 @@ export default function QuizCenter() {
               color: 'var(--ios-olive, #4b6b32)',
               fontWeight: 700,
             }}>
-              <span>{mappedQuizIds ? `🎯 Filtered for: ${targetExam.name}` : `Related subjects for: ${targetExam.name}`}</span>
-              {activeExamId && (
-                <button
-                  type="button"
-                  onClick={() => setSearchParams({})}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    color: '#64748b',
-                    cursor: 'pointer',
-                    fontSize: '0.75rem',
-                    fontWeight: 700,
-                    textDecoration: 'underline',
-                    padding: 0,
-                  }}
-                >
-                  Show All Exams
-                </button>
-              )}
+              <span>{showAll ? 'Showing all quizzes' : mappedQuizIds ? `🎯 Filtered for: ${targetExam.name}` : `Related subjects for: ${targetExam.name}`}</span>
+              <button
+                type="button"
+                onClick={() => setShowAll((v) => !v)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#64748b',
+                  cursor: 'pointer',
+                  fontSize: '0.75rem',
+                  fontWeight: 700,
+                  textDecoration: 'underline',
+                  padding: 0,
+                }}
+              >
+                {showAll ? `Only ${targetExam.name}` : 'Show all quizzes'}
+              </button>
             </div>
           )}
         </div>
@@ -250,7 +300,7 @@ export default function QuizCenter() {
             <Search size={16} color="#94a3b8" />
             <input
               type="text"
-              placeholder={activeGroup ? 'Search mock assessments...' : 'Search subjects...'}
+              placeholder={activeGroup ? 'Search mock assessments...' : 'Search subjects or mock tests...'}
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
               style={{ border: 'none', outline: 'none', width: '100%', fontSize: '0.85rem', fontWeight: 500 }}
@@ -264,13 +314,24 @@ export default function QuizCenter() {
           </div>
         ) : !activeGroup ? (
           /* ---- Subject landing view ---- */
-          visibleGroups.length === 0 ? (
+          visibleGroups.length === 0 && titleMatches.length === 0 ? (
             <div style={{ textAlign: 'center', padding: '4rem 2rem', background: 'white', border: '1px solid #e2e8f0' }}>
               <Brain size={48} color="#cbd5e1" style={{ marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--ios-text)' }}>No Mock Tests Found</h3>
               <p style={{ color: '#64748b', fontSize: '0.85rem', margin: 0 }}>Try a different search or check back later.</p>
             </div>
           ) : (
+            <>
+            {titleMatches.length > 0 && (
+              <div style={{ marginBottom: '2rem' }}>
+                <h3 style={{ fontSize: '0.8rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px', margin: '0 0 0.75rem' }}>
+                  Matching mock tests ({titleMatches.length})
+                </h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
+                  {titleMatches.slice(0, 60).map(renderQuizCard)}
+                </div>
+              </div>
+            )}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1rem' }}>
               {visibleGroups.map((g) => (
                 <div
@@ -288,6 +349,7 @@ export default function QuizCenter() {
                 </div>
               ))}
             </div>
+            </>
           )
         ) : visibleQuizzesInGroup.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '4rem 2rem', background: 'white', border: '1px solid #e2e8f0' }}>
@@ -298,48 +360,7 @@ export default function QuizCenter() {
         ) : (
           /* ---- Quiz grid for the selected subject ---- */
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
-            {visibleQuizzesInGroup.map(quiz => {
-              const locked = !quizAccess.allowed;
-              return (
-                <div
-                  key={quiz.id}
-                  style={{
-                    background: 'white', border: '1px solid #e2e8f0', padding: '1.5rem',
-                    display: 'flex', flexDirection: 'column', gap: '1rem', position: 'relative'
-                  }}
-                >
-                  <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-                    {locked && (
-                      <span style={{ color: '#ef4444', display: 'flex', alignItems: 'center', gap: '0.2rem', fontSize: '0.7rem', fontWeight: 700 }}>
-                        <Lock size={12} /> LOCKED
-                      </span>
-                    )}
-                  </div>
-
-                  <div style={{ flex: 1 }}>
-                    <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.05rem', fontWeight: 800, color: 'var(--ios-text)', lineHeight: 1.3 }}>
-                      {quiz.title}
-                    </h3>
-                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#64748b', lineHeight: 1.4 }}>
-                      {quiz.description || 'Practice questions curated for examination preparation.'}
-                    </p>
-                  </div>
-
-                  <Link
-                    to={`/quiz/${quiz.id}`}
-                    style={{
-                      textDecoration: 'none', background: 'var(--ios-olive)', color: 'white',
-                      textAlign: 'center', padding: '0.75rem', fontWeight: 800, fontSize: '0.85rem',
-                      textTransform: 'uppercase', letterSpacing: '0.5px',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem',
-                      border: 'none', cursor: 'pointer'
-                    }}
-                  >
-                    Start Arena Session
-                  </Link>
-                </div>
-              );
-            })}
+            {visibleQuizzesInGroup.map(renderQuizCard)}
           </div>
         )}
 
