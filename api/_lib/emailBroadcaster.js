@@ -97,7 +97,7 @@ export async function getCivilJobSubscribers(supabaseAdmin) {
 
     for (const p of userProfiles || []) {
       const isPs = psUserIds.has(p.id);
-      const isSubscribed = p.subscription_tier && p.subscription_tier !== 'FREE';
+      const isSubscribed = p.subscription_tier && p.subscription_tier !== 'FREE' && p.subscription_tier !== 'TESTER'; // TESTER = internal staff, not a paying subscriber
 
       // Candidate must be either registered for civil jobs or have an active subscription
       if (!isPs && !isSubscribed) continue;

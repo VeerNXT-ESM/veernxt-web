@@ -17,6 +17,8 @@ export const TIERS = {
   ANNUAL: 'ANNUAL',
   BIENNIAL: 'BIENNIAL',
   PREMIUM: 'PREMIUM',
+  // Internal QA/staff tier: full access to everything, never expires, not purchasable.
+  TESTER: 'TESTER',
 };
 
 // Higher number = higher tier. Used for >= comparisons.
@@ -28,6 +30,7 @@ export const TIER_RANK = {
   ANNUAL: 3,
   BIENNIAL: 3,
   PREMIUM: 4,
+  TESTER: 5,
 };
 
 // ═══════════════════════════════════════════
@@ -112,8 +115,8 @@ export function isSubscriptionActive(tier, expiresAt) {
   // Free tier is always "active"
   if (!tier || tier === TIERS.FREE) return true;
 
-  // One-time purchases never expire
-  if (tier === TIERS.SCORE_UNLOCK || tier === TIERS.SCORE_CV) return true;
+  // One-time purchases never expire; neither does the internal TESTER tier
+  if (tier === TIERS.SCORE_UNLOCK || tier === TIERS.SCORE_CV || tier === TIERS.TESTER) return true;
 
   // Time-based plans: check expiry
   if (!expiresAt) return true; // No expiry set = assume active (legacy data)
@@ -153,7 +156,7 @@ export function canGenerateCV() {
 
 /** Can user access live mentorship features? */
 export function canAccessMentorship(tier) {
-  return tier === TIERS.PREMIUM;
+  return tier === TIERS.PREMIUM || tier === TIERS.TESTER;
 }
 
 /**
