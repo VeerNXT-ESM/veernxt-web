@@ -12,7 +12,7 @@
 import mammoth from 'mammoth';
 
 const LETTERS = ['A', 'B', 'C', 'D'];
-const norm = (s) => (s || '').toLowerCase().replace(/[\s ]+/g, ' ').replace(/[^\p{L}\p{N}\p{M}. %₹-]/gu, '').trim();
+export const norm = (s) => (s || '').toLowerCase().replace(/[\s ]+/g, ' ').replace(/[^\p{L}\p{N}\p{M}. %₹-]/gu, '').trim();
 
 export async function docxText(file) {
   return (await mammoth.extractRawText({ path: file })).value.replace(/\r/g, '').replace(/ /g, ' ');
@@ -266,8 +266,8 @@ export function parseMockText(rawText) {
   return { declared, questions };
 }
 
-const CONTRADICTION = /\b(wait|recalc|recompute|reconsider(ing)?|actually|let me|hmm|correction|however,? (the )?(correct|answer)|standard is|options? (is|are) wrong|closest option|take [A-D]\)|likely (answer )?intended|approximately matches|assum(e|ing) (the )?(answer|typo))\b/i;
-const PLACEHOLDER_EXPL = /answer based on standard .{0,40}syllabus|please verify with official|explanation (not|to be) (available|provided|added)|^\s*(n\/a|tbd|na)\s*\.?\s*$/i;
+export const CONTRADICTION = /\b(wait|recalc|recompute|reconsider(ing)?|actually|let me|hmm|correction|however,? (the )?(correct|answer)|standard is|options? (is|are) wrong|closest option|take [A-D]\)|likely (answer )?intended|approximately matches|assum(e|ing) (the )?(answer|typo))\b/i;
+export const PLACEHOLDER_EXPL = /answer based on standard .{0,40}syllabus|please verify with official|explanation (not|to be) (available|provided|added)|^\s*(n\/a|tbd|na)\s*\.?\s*$/i;
 export const HARD_FLAGS = ['PLACEHOLDER_EXPLANATION','NO_STEM', 'OPTIONS_NOT_FOUND', 'EMPTY_OPTION', 'DUPLICATE_OPTIONS', 'IMAGE_OPTIONS', 'NEEDS_IMAGE', 'ANSWER_LEAKED_IN_OPTION', 'NO_ANSWER_KEY', 'KEY_TEXT_MISMATCH', 'EXPLANATION_SELF_CONTRADICTS', 'DUP_QUESTION', 'DUP_NUMBER'];
 
 export function gate(parsed, { expected = 10 } = {}) {

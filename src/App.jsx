@@ -65,6 +65,7 @@ import CVBuilder from './pages/CVBuilder';
 import RewardsCenter from './pages/RewardsCenter';
 import PreviewFinanceSuites from './pages/PreviewFinanceSuites';
 import DevReader from './pages/sandbox/DevReader';
+import QuizPreview from './pages/sandbox/QuizPreview';
 import ProfilingTester from './pages/ProfilingTester';
 import AiChatbotWidget from './components/AiChatbotWidget';
 import './index.css';
@@ -207,6 +208,7 @@ function App() {
             only bar on the page. */}
         <Route path="/reader/:id" element={<AuthGuard><SecureReader /></AuthGuard>} />
         <Route path="/dev-reader" element={<DevReader />} />
+        <Route path="/dev-quiz-preview" element={<QuizPreview />} />
         <Route path="/profiling-tester" element={<ProfilingTester />} />
 
         {/* Admin Routes */}
