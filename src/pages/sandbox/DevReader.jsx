@@ -12,7 +12,13 @@ import './BookReaderV2.css';
 // row, so their samples here are the closest blocks-format equivalent
 // (Précis) instead -- still real, representative content for exercising
 // the reader, just not the identical title the old local copy had.
+const PREVIEW_BASE = 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Preview';
 const AVAILABLE_BOOKS = [
+  // Content-team review copies: parsed straight from the DOCX (no AI enrichment).
+  // Link: /dev-reader?book=gkgs-2026   (add &ch=N to open a chapter)
+  { id: 'gkgs-2026', title: 'GKGS 2026 (Guide, DOCX reparse)', path: `${PREVIEW_BASE}/gkgs-2026` },
+  { id: 'gsgk-precis-2026', title: 'GSGK Precis 2026 (DOCX reparse, chapters fixed)', path: `${PREVIEW_BASE}/gsgk-precis-2026` },
+  { id: 'gkgs-precis-2026', title: 'GKGS Precis 2026 (first parse, superseded)', path: `${PREVIEW_BASE}/gkgs-precis-2026` },
   { id: 'english', title: 'English Précis (sample)', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/1b0cedf2-7476-4747-a747-1b0cedf27476' },
   { id: 'gs-gk', title: 'GS & GK Guide Book', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/4f39098f-651c-4651-a651-4f39098f651c' },
   { id: 'reasoning', title: 'Reasoning Guide Book', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/272dbb7c-12ac-412a-a12a-272dbb7c12ac' },
@@ -21,10 +27,12 @@ const AVAILABLE_BOOKS = [
 ];
 
 export default function DevReader() {
-  const [selectedBook, setSelectedBook] = useState(AVAILABLE_BOOKS[0]);
+  const params = new URLSearchParams(window.location.search);
+  const [selectedBook, setSelectedBook] = useState(AVAILABLE_BOOKS.find((b) => b.id === params.get('book')) || AVAILABLE_BOOKS[0]);
   const [metadata, setMetadata] = useState(null);
   const [chapter, setChapter] = useState(null);
-  const [activeChapterIndex, setActiveChapterIndex] = useState(0);
+  const [activeChapterIndex, setActiveChapterIndex] = useState(Math.max(0, (parseInt(params.get('ch'), 10) || 1) - 1));
+  const firstLoad = useRef(true);
   const [loading, setLoading] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
@@ -39,7 +47,7 @@ export default function DevReader() {
         if (!res.ok) throw new Error('Failed to load metadata');
         const data = await res.json();
         setMetadata(data);
-        setActiveChapterIndex(0);
+        if (firstLoad.current) firstLoad.current = false; else setActiveChapterIndex(0);
       } catch (err) {
         console.error(err);
         setMetadata(null);
@@ -71,6 +79,13 @@ export default function DevReader() {
     };
     fetchChapter();
   }, [metadata, activeChapterIndex, selectedBook]);
+
+  useEffect(() => {
+    const u = new URL(window.location.href);
+    u.searchParams.set('book', selectedBook.id);
+    u.searchParams.set('ch', String(activeChapterIndex + 1));
+    window.history.replaceState(null, '', u);
+  }, [selectedBook, activeChapterIndex]);
 
   const navigateTo = (index) => {
     if (!metadata || index < 0 || index >= metadata.chapters.length) return;
@@ -149,6 +164,7 @@ export default function DevReader() {
             </div>
           ) : chapter ? (
             <>
+              {chapter.part && <div style={{ fontSize: 12, letterSpacing: '.08em', textTransform: 'uppercase', color: '#64748b', marginBottom: 4 }}>{chapter.part}</div>}
               <ChapterHeader title={chapter.title} order={chapter.order} />
               <div className="bk-blocks-container">
                 {chapter.blocks && chapter.blocks.map((block) => (

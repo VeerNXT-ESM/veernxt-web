@@ -31,7 +31,7 @@ export const BlockRenderer = ({ block }) => {
     case 'example':         return <ExampleBlock content={block.content} />;
     case 'callout':         return <GenericCalloutBlock content={block.content} />;
     case 'list':            return <ListBlock items={block.items} />;
-    case 'numberedList':    return <NumberedListBlock items={block.items} />;
+    case 'numberedList':    return <NumberedListBlock items={block.items} start={block.start} format={block.format} />;
     case 'table':           return <TableBlock rows={block.rows} />;
     case 'keyFacts':        return <KeyFactsBlock title={block.title} items={block.items} />;
     case 'pullQuote':       return <PullQuoteBlock content={block.content} />;

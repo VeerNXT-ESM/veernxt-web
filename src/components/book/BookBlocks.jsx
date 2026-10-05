@@ -114,9 +114,11 @@ export const ListBlock = ({ items }) => {
   );
 };
 
-export const NumberedListBlock = ({ items }) => {
+const OL_TYPE = { upperLetter: 'A', lowerLetter: 'a', upperRoman: 'I', lowerRoman: 'i' };
+
+export const NumberedListBlock = ({ items, start, format }) => {
   return (
-    <ol className="bk-numbered-list">
+    <ol className="bk-numbered-list" start={start || undefined} type={OL_TYPE[format] || undefined}>
       {items.map((item, i) => (
         <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
       ))}
