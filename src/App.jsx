@@ -58,6 +58,7 @@ import PyqPapersPage from './pages/admin/PyqPapersPage';
 import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import PyqPaperEditor from './pages/admin/PyqPaperEditor';
 import BooksPage from './pages/admin/BooksPage';
+import AdminProfilePage from './pages/admin/AdminProfilePage';
 import BookChapterBrowser from './pages/admin/BookChapterBrowser';
 import ReaderThemesGallery from './pages/admin/ReaderThemesGallery';
 import ThemeEditor from './pages/admin/ThemeEditor';
@@ -224,6 +225,7 @@ function App() {
           <Route path="/admin/publish-content" element={<PublishContentPage />} />
           <Route path="/admin/users" element={<UsersPage />} />
           <Route path="/admin/roles" element={<RolesPermissionsPage />} />
+          <Route path="/admin/profile" element={<AdminProfilePage />} />
           <Route path="/admin/quizzes" element={<QuizzesPage />} />
           <Route path="/admin/pyq-papers" element={<PyqPapersPage />} />
           <Route path="/admin/jobs" element={<AdminJobs />} />

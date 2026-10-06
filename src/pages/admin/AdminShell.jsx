@@ -7,6 +7,8 @@ import {
 } from 'lucide-react';
 import './AdminCMS.css';
 
+import FirstLoginModal from '../../components/admin/FirstLoginModal';
+
 const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen };
 
 // Horizontal section nav, directly under the top header — required by the
@@ -19,6 +21,7 @@ const HORIZONTAL_NAV = [
   { label: 'Exams', path: '/admin/exams' },
   { label: 'Users', path: '/admin/users' },
   { label: 'Settings', path: '/admin/roles' },
+  { label: 'Profile', path: '/admin/profile' },
 ];
 
 // Page title + one-line description shown in the top header, keyed by path.
@@ -32,6 +35,7 @@ const PAGE_META = {
   '/admin/publish-content': { title: 'Publish Content', description: 'Upload a .docx, pick Intro/Guide/Precis, preview the conversion, attach it to exam(s), and publish it live.' },
   '/admin/users': { title: 'Users', description: 'Registered service personnel and platform accounts.' },
   '/admin/roles': { title: 'Roles & Permissions', description: 'Assign roles and curate access control lists.' },
+  '/admin/profile': { title: 'Admin Profile & Security', description: 'Manage your administrator account details, security credentials, and access permissions.' },
   '/admin/quizzes': { title: 'Quizzes', description: 'Manage and categorize mock and topic tests across subjects and exams.' },
   '/admin/pyq-papers': { title: 'PYQ Papers', description: 'Manage previous year question papers and tag them with exams and subjects.' },
   '/admin/jobs': { title: 'Job Board', description: 'Aggregated vacancy notifications.' },
@@ -81,6 +85,13 @@ const AdminShell = () => {
 
   return (
     <div className={`admin-shell ${theme === 'light' ? 'light' : ''}`}>
+      {/* Mandatory first-login security setup modal */}
+      {(session.is_first_login || session.must_change_password || session.must_change_name) && (
+        <FirstLoginModal 
+          session={session} 
+          onComplete={(updated) => setSession(updated)} 
+        />
+      )}
       <aside className={`admin-sidebar ${collapsed ? 'collapsed' : ''}`}>
         <div className="admin-sidebar-brand">
           <img src="/logo.png" alt="VeerNXT" />
@@ -131,12 +142,19 @@ const AdminShell = () => {
             <button className="admin-theme-toggle" title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={toggleTheme}>
               {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
             </button>
-            <div className="admin-avatar-initials">
-              {session.name?.split(' ').map((n) => n[0]).join('').slice(0, 2)}
-            </div>
-            <div className="admin-topbar-user-info">
-              <div className="admin-topbar-user-name">{session.name}</div>
-              <div className="admin-topbar-user-role">{session.role}</div>
+            <div 
+              className="admin-topbar-user-clickable" 
+              onClick={() => navigate('/admin/profile')} 
+              title="View / Edit Profile"
+              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }}
+            >
+              <div className="admin-avatar-initials">
+                {session.name?.split(' ').map((n) => n[0]).join('').slice(0, 2)}
+              </div>
+              <div className="admin-topbar-user-info">
+                <div className="admin-topbar-user-name">{session.name}</div>
+                <div className="admin-topbar-user-role">{session.role}</div>
+              </div>
             </div>
             <button className="admin-logout-btn" title="Log out" onClick={handleLogout}>
               <LogOut size={16} />

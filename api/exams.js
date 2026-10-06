@@ -5,8 +5,78 @@ const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SU
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+async function handleFetchChapter(req, res) {
+  const { resourceId, chapterIndex } = req.query;
+  const idx = parseInt(chapterIndex, 10);
+  if (!resourceId || isNaN(idx)) {
+    return res.status(400).json({ ok: false, error: 'resourceId and chapterIndex are required' });
+  }
+
+  try {
+    // 1. Fetch resource metadata from DB
+    const { data: resource, error: resErr } = await supabase
+      .from('resources')
+      .select('resource_id, title, category, storage_base_url, is_freemium')
+      .eq('resource_id', resourceId)
+      .maybeSingle();
+
+    if (resErr || !resource) {
+      return res.status(404).json({ ok: false, error: 'Resource not found' });
+    }
+
+    const cat = (resource.category || '').toLowerCase().trim();
+
+    // 2. Paid category gate: Precis, PYQ require active paid subscription
+    if (cat === 'precis' || cat === 'pyq') {
+      const authHeader = req.headers.authorization;
+      if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return res.status(403).json({ ok: false, error: 'Authentication and paid subscription required to access this resource', locked: true });
+      }
+
+      const token = authHeader.substring(7);
+      const { data: { user }, error: userErr } = await supabase.auth.getUser(token);
+      if (userErr || !user) {
+        return res.status(401).json({ ok: false, error: 'Invalid or expired session token', locked: true });
+      }
+
+      const { data: profile } = await supabase
+        .from('user_profiles')
+        .select('subscription_tier, subscription_expires_at')
+        .eq('id', user.id)
+        .maybeSingle();
+
+      const tier = profile?.subscription_tier;
+      const expiresAt = profile?.subscription_expires_at;
+      const isPaid = ['MONTHLY', 'ANNUAL', 'BIENNIAL', 'PREMIUM'].includes(tier) && (!expiresAt || new Date(expiresAt) > new Date());
+
+      if (!isPaid) {
+        return res.status(403).json({ ok: false, error: 'Upgrade to a paid subscription to view this resource', locked: true });
+      }
+    }
+
+    // 3. Fetch chapter content from storage
+    if (!resource.storage_base_url) {
+      return res.status(404).json({ ok: false, error: 'Resource storage URL missing' });
+    }
+
+    const base = resource.storage_base_url.endsWith('/') ? resource.storage_base_url : `${resource.storage_base_url}/`;
+    const chapterUrl = `${base}chapters/chapter-${idx + 1}.json`;
+    const resp = await fetch(chapterUrl);
+    if (!resp.ok) {
+      return res.status(404).json({ ok: false, error: 'Chapter content not found' });
+    }
+
+    const chapterData = await resp.json();
+    return res.status(200).json({ ok: true, chapter: chapterData });
+  } catch (err) {
+    console.error('handleFetchChapter error:', err);
+    return res.status(500).json({ ok: false, error: err.message });
+  }
+}
+
 /**
  * GET /api/exams?examId=<uuid>
+ * GET /api/exams?fn=chapter&resourceId=<id>&chapterIndex=<index>
  *
  * Exam header + syllabus for the learner-facing syllabus page
  * (src/pages/ExamSyllabus.jsx). Reads the unified `exams` table (exam_id ==
@@ -17,7 +87,9 @@ const supabase = createClient(supabaseUrl, supabaseKey);
  * pattern as api/jobs.js, so this sidesteps needing anon-role RLS on `exams`.
  */
 export default async function handler(req, res) {
-  const { examId } = req.query;
+  const { fn, examId } = req.query;
+  if (fn === 'chapter') return handleFetchChapter(req, res);
+
   if (!examId) {
     return res.status(400).json({ ok: false, error: 'Missing examId' });
   }

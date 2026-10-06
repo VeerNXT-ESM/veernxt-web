@@ -113,12 +113,48 @@ async function handleVerifyPayment(req, res) {
     return res.status(400).json({ ok: false, error: 'Payment verification failed — invalid signature' });
   }
 
+  // 2. Server-side Gateway Verification (prevent parameter tampering on planId / amount)
+  const keyId = process.env.RAZORPAY_KEY_ID;
+  const instance = new Razorpay({ key_id: keyId, key_secret: keySecret });
+  let verifiedPlanId = planId;
+  let verifiedUserId = userId;
+
+  if (razorpay_order_id) {
+    try {
+      const order = await instance.orders.fetch(razorpay_order_id);
+      if (!order) {
+        return res.status(400).json({ ok: false, error: 'Order not found in payment gateway' });
+      }
+
+      if (order.notes?.planId) {
+        verifiedPlanId = order.notes.planId;
+      }
+      if (order.notes?.userId && order.notes.userId !== 'unknown') {
+        if (userId && order.notes.userId !== userId) {
+          return res.status(400).json({ ok: false, error: 'Payment user identity mismatch' });
+        }
+        verifiedUserId = order.notes.userId;
+      }
+
+      // Confirm payment amount matches verified plan (unless DEVTEST mode)
+      if (process.env.DEVTEST !== 'true' && PLAN_AMOUNTS[verifiedPlanId]) {
+        if (order.amount !== PLAN_AMOUNTS[verifiedPlanId]) {
+          console.error(`Amount mismatch: expected ${PLAN_AMOUNTS[verifiedPlanId]} but order was ${order.amount}`);
+          return res.status(400).json({ ok: false, error: 'Payment amount mismatch for selected plan' });
+        }
+      }
+    } catch (orderErr) {
+      console.error('Failed to fetch Razorpay order:', orderErr);
+      return res.status(500).json({ ok: false, error: 'Failed to verify order details with gateway' });
+    }
+  }
+
   // CV_ADDON is a checkout SKU (the ₹1 post-unlock bonus), not a real tier —
   // it upgrades the user to the SCORE_CV tier that already exists.
-  const tierToPersist = planId === 'CV_ADDON' ? 'SCORE_CV' : (planId || 'FREE');
+  const tierToPersist = verifiedPlanId === 'CV_ADDON' ? 'SCORE_CV' : (verifiedPlanId || 'FREE');
 
-  // 2. Update user subscription in Supabase
-  if (userId) {
+  // 3. Update user subscription in Supabase with Replay Protection
+  if (verifiedUserId) {
     try {
       const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
       const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -126,14 +162,27 @@ async function handleVerifyPayment(req, res) {
       if (supabaseUrl && serviceKey) {
         const supabase = createClient(supabaseUrl, serviceKey);
 
+        // SEC-07: Prevent payment signature replay across multiple accounts
+        const { data: existingPayment } = await supabase
+          .from('user_profiles')
+          .select('id, email')
+          .eq('payment_id', razorpay_payment_id)
+          .neq('id', verifiedUserId)
+          .maybeSingle();
+
+        if (existingPayment) {
+          console.error(`Replay attempt: payment ${razorpay_payment_id} already consumed by ${existingPayment.id}`);
+          return res.status(409).json({ ok: false, error: 'This payment has already been credited to another account.' });
+        }
+
         // Calculate subscription expiry
         let expiresAt = null;
         const now = new Date();
-        if (planId === 'MONTHLY') {
+        if (verifiedPlanId === 'MONTHLY') {
           expiresAt = new Date(now.setMonth(now.getMonth() + 1)).toISOString();
-        } else if (planId === 'ANNUAL') {
+        } else if (verifiedPlanId === 'ANNUAL') {
           expiresAt = new Date(now.setFullYear(now.getFullYear() + 1)).toISOString();
-        } else if (planId === 'BIENNIAL' || planId === 'PREMIUM') {
+        } else if (verifiedPlanId === 'BIENNIAL' || verifiedPlanId === 'PREMIUM') {
           expiresAt = new Date(now.setFullYear(now.getFullYear() + 2)).toISOString();
         }
 
@@ -148,7 +197,7 @@ async function handleVerifyPayment(req, res) {
         const { error } = await supabase
           .from('user_profiles')
           .update(updatePayload)
-          .eq('id', userId);
+          .eq('id', verifiedUserId);
 
         if (error) {
           console.error('Supabase update error:', error);

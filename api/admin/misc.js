@@ -48,7 +48,7 @@ async function handleAdminsList(req, res) {
     if (error) throw error;
 
     const admins = users.users
-      .filter(u => u.user_metadata?.role && ['Super Admin', 'Content Curator', 'Employer Partner', 'Employer'].includes(u.user_metadata.role))
+      .filter(u => u.user_metadata?.role && ['Super Admin', 'Admin', 'Content Curator', 'Employer Partner', 'Employer'].includes(u.user_metadata.role))
       .map(u => ({
         id: u.id,
         name: u.user_metadata?.name || u.email.split('@')[0],
@@ -56,16 +56,6 @@ async function handleAdminsList(req, res) {
         role: u.user_metadata?.role,
         permissions: u.user_metadata?.permissions || [],
       }));
-
-    if (!admins.some(a => a.email === 'veernxt.esm@gmail.com')) {
-      admins.unshift({
-        id: 'super-admin-placeholder',
-        name: 'Vivek Talwar',
-        email: 'veernxt.esm@gmail.com',
-        role: 'Super Admin',
-        permissions: ['all']
-      });
-    }
 
     return res.status(200).json({ ok: true, admins });
   } catch (err) {
@@ -129,7 +119,7 @@ async function handleAdminRemove(req, res) {
   if (!email) {
     return res.status(400).json({ ok: false, error: 'Email is required' });
   }
-  if (email.toLowerCase() === 'veernxt.esm@gmail.com') {
+  if (email.toLowerCase() === 'superadmin@veernxt.in' || email.toLowerCase() === 'veernxt.esm@gmail.com') {
     return res.status(403).json({ ok: false, error: 'Cannot remove the primary Super Admin' });
   }
 
@@ -158,6 +148,34 @@ async function handleAdminRemove(req, res) {
 }
 
 async function routeAdmins(req, res) {
+  const expectedSecret = process.env.ADMIN_API_SECRET;
+  const providedSecret = req.headers['x-admin-api-secret'];
+  const authHeader = req.headers.authorization;
+
+  let isAuthorized = false;
+
+  if (expectedSecret && providedSecret === expectedSecret) {
+    isAuthorized = true;
+  }
+
+  if (!isAuthorized && authHeader && authHeader.startsWith('Bearer ')) {
+    const supabaseAdmin = getSupabaseAdmin();
+    if (supabaseAdmin) {
+      const token = authHeader.substring(7);
+      const { data: { user }, error } = await supabaseAdmin.auth.getUser(token);
+      if (!error && user) {
+        const role = user.user_metadata?.role;
+        if (role === 'Super Admin' || role === 'Admin' || user.email === 'superadmin@veernxt.in' || user.email === 'veernxt.esm@gmail.com') {
+          isAuthorized = true;
+        }
+      }
+    }
+  }
+
+  if (!isAuthorized) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized: Admin authentication required' });
+  }
+
   if (req.method === 'GET') return handleAdminsList(req, res);
 
   if (req.method === 'POST') {
@@ -307,6 +325,15 @@ async function handleTableWrite(req, res, supabaseAdmin) {
   if ((value.op === 'update' || value.op === 'delete') && value.filters.length === 0) {
     return res.status(400).json({ ok: false, error: { message: `${value.op} requires at least one filter` } });
   }
+
+  // Guard against wildcard/arbitrary mass deletion
+  if (value.op === 'delete') {
+    const hasSafeFilter = value.filters.some(f => (f.type === 'eq' || f.type === 'in') && ['id', 'resource_id', 'exam_id', 'paper_id', 'quiz_id', 'key', 'tag_id'].includes(f.column));
+    if (!hasSafeFilter) {
+      return res.status(400).json({ ok: false, error: { message: 'Delete operation requires an explicit eq or in filter on a primary identifier column.' } });
+    }
+  }
+
   let q = supabaseAdmin.from(value.table);
   if (value.op === 'insert') q = q.insert(value.values);
   else if (value.op === 'update') q = q.update(value.values);
@@ -326,11 +353,27 @@ async function routeContentWrites(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'Method not allowed' });
 
   const expectedSecret = process.env.ADMIN_API_SECRET;
-  if (!expectedSecret || req.headers['x-admin-api-secret'] !== expectedSecret) {
-    return res.status(401).json({ ok: false, error: 'Unauthorized' });
-  }
+  const providedSecret = req.headers['x-admin-api-secret'];
+  const authHeader = req.headers.authorization;
   const supabaseAdmin = getSupabaseAdmin();
   if (!supabaseAdmin) return res.status(500).json({ ok: false, error: 'Server misconfiguration' });
+
+  let isAuthorized = Boolean(expectedSecret && providedSecret === expectedSecret);
+
+  if (!isAuthorized && authHeader && authHeader.startsWith('Bearer ')) {
+    const token = authHeader.substring(7);
+    const { data: { user }, error } = await supabaseAdmin.auth.getUser(token);
+    if (!error && user) {
+      const role = user.user_metadata?.role;
+      if (role === 'Super Admin' || role === 'Admin' || role === 'Content Curator' || user.email === 'superadmin@veernxt.in' || user.email === 'veernxt.esm@gmail.com') {
+        isAuthorized = true;
+      }
+    }
+  }
+
+  if (!isAuthorized) {
+    return res.status(401).json({ ok: false, error: 'Unauthorized: Admin credentials required' });
+  }
 
   const action = req.body?.action;
 

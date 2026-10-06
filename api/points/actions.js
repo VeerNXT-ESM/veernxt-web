@@ -62,6 +62,40 @@ async function handleAward(req, res, user, supabaseAdmin) {
     return res.status(400).json({ ok: false, error: `${body.action_code} requires ref_id` });
   }
 
+  // SEC-06: Verify server-side conditions before awarding points
+  if (body.action_code === 'QUIZ_COMPLETE') {
+    const { data: attempt, error: attemptErr } = await supabaseAdmin
+      .from('quiz_attempts')
+      .select('id, percentage')
+      .eq('user_id', user.id)
+      .eq('quiz_id', body.ref_id)
+      .order('completed_at', { ascending: false })
+      .limit(1)
+      .maybeSingle();
+
+    if (attemptErr || !attempt) {
+      return res.status(400).json({ ok: false, error: 'Points rejected: No completed attempt found for this quiz.' });
+    }
+
+    // Overwrite client metadata score_percent with verified database percentage
+    body.metadata = {
+      ...body.metadata,
+      score_percent: Number(attempt.percentage) || 0,
+    };
+  }
+
+  if (body.action_code === 'RESOURCE_OPENED') {
+    const { data: resource, error: resErr } = await supabaseAdmin
+      .from('resources')
+      .select('resource_id')
+      .eq('resource_id', body.ref_id)
+      .maybeSingle();
+
+    if (resErr || !resource) {
+      return res.status(400).json({ ok: false, error: 'Points rejected: Resource does not exist.' });
+    }
+  }
+
   const points = resolvePoints(body.action_code, body.metadata);
   const idempotencyKey = buildIdempotencyKey(body.action_code, body.ref_id);
 
