@@ -25,7 +25,7 @@ if (!SRC || !TITLE) { console.error('Usage: --src <docx> --title <title> [--cate
 
 const slug = `${CATEGORY.toLowerCase()}-${TITLE.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`;
 const OUT = arg('--out') || path.join(__dirname, '..', 'FINAL_BOOKS_STRUCTURED', CATEGORY, slug);
-fs.rmSync(OUT, { recursive: true, force: true });
+fs.rmSync(OUT, { recursive: true, force: true, maxRetries: 8, retryDelay: 400 }); // Windows: editors/indexers briefly lock the folder
 fs.mkdirSync(path.join(OUT, 'chapters'), { recursive: true });
 fs.mkdirSync(path.join(OUT, 'images'), { recursive: true });
 

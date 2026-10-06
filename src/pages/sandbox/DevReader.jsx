@@ -196,14 +196,28 @@ export default function DevReader() {
                   </li>
                 ) : null))}
               </ol>
-              <div>
+              {/* same Previous / Next pager as every chapter: Next opens the first chapter of this subject */}
+              <nav className="bk-pagination">
                 <button
-                  onClick={() => setDismissedPart(activePart)}
-                  style={{ background: '#0f766e', color: '#fff', border: 'none', padding: '12px 28px', fontSize: 15, fontWeight: 700, cursor: 'pointer' }}
+                  className="bk-page-btn bk-page-prev"
+                  onClick={() => navigateTo(activeChapterIndex - 1)}
+                  disabled={activeChapterIndex === 0}
                 >
-                  Start this subject
+                  <ChevronLeft size={20} />
+                  <span>
+                    <small>Previous</small>
+                    <strong>{activeChapterIndex > 0 ? chapters[activeChapterIndex - 1].title : ''}</strong>
+                  </span>
                 </button>
-              </div>
+                <div className="bk-page-counter" />
+                <button className="bk-page-btn bk-page-next" onClick={() => setDismissedPart(activePart)}>
+                  <span>
+                    <small>Next</small>
+                    <strong>{chapters[activeChapterIndex]?.title}</strong>
+                  </span>
+                  <ChevronRight size={20} />
+                </button>
+              </nav>
             </section>
           ) : loading ? (
             <div className="loading-state" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '50vh', gap: '1rem' }}>

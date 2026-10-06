@@ -132,3 +132,10 @@ Gotcha hit while comparing: do not strip `<...>` from already-plain text (a lite
 ---
 ## UPDATE 3: Precis chapterisation fixed (GSGK PRECIS 2026.docx)
 Fixed copy of Cluster_001 made with `scripts/fix_gkgs_precis_chapters.mjs` (see docs/GKGS_Precis_Chapter_Issues_2026-10-05.md STATUS). Parsed to `FINAL_BOOKS_STRUCTURED/Precis/precis-gsgk-precis-2026/` (128 chapters, 214/214 images, text identical), uploaded to R2 `Preview/gsgk-precis-2026/`; DevReader lists it first, the first (127-chapter) parse is kept as "superseded". Nothing committed/deployed yet.
+
+---
+## UPDATE 4 (2026-10-06): "GS & GK 2026 NEW" books + Guide renumbering
+- Naming rule: reparsed books are suffixed "2026 NEW" (title "GS & GK 2026 NEW"); drop the suffix at swap time. Preview ids: `gsgk-guide-2026-new`, `gsgk-precis-2026-new` (R2 `Preview/...`), links `/dev-reader?book=<id>`.
+- Guide source = `GSGK GUIDE 2026.docx` (copy of the Selection Post original, made by `scripts/fix_gkgs_guide_chapters.mjs`): chapter numbers restart in each section (History 1-14, Polity 1-15 (was 14-28), Geography 1-11 (source skipped 37), Economics 1-9, Physics 1-7, Chemistry 1-5, Biology 1-5), titles normalised to "Chapter N: Name", TOC lines renumbered. Original untouched. **Ask the content team whether a Geography chapter 37 is missing** (the source jumps 36 -> 38).
+- Reader: the subject separator page no longer has a "Start this subject" button; it uses the normal Previous / Next pager (Next = first chapter of the subject).
+- Known cosmetic: General Science sub-sections read "GENERAL SCIENCE › SECTION A : PHYSICS", then "SECTION B : CHEMISTRY", "SECTION C : BIOLOGY" (parent label only on the first).
