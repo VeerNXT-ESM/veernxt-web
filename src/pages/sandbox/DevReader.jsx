@@ -2,6 +2,8 @@ import { Fragment, useState, useEffect, useRef } from 'react';
 import { Book, ChevronLeft, ChevronRight, Menu, X, Loader2 } from 'lucide-react';
 import { ChapterHeader } from '../../components/book/BookBlocks';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
+import { useThumbnails } from '../../lib/thumbnailStore';
+import { resolveCanonicalSubjectLabel, getFamilyHex } from '../../lib/thumbnailTaxonomy';
 import '../../components/book/BookBlocksClassic.css';
 import './BookReaderV2.css';
 
@@ -26,7 +28,20 @@ const AVAILABLE_BOOKS = [
   { id: 'hindi', title: 'Hindi Précis (sample)', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/16e4d9bb-0eea-40ee-a0ee-16e4d9bb0eea' }
 ];
 
+// Section names come from the DOCX ("SECTION B: INDIAN POLITY", "SSC COMPLETE HISTORY BOOK",
+// "GENERAL SCIENCE › SECTION A : PHYSICS"). Strip the decoration, then reuse the app's subject resolver
+// so the cover comes from lc_subjects (editable on Admin > Subjects).
+function subjectForPart(name) {
+  const cleaned = (name || '').split('›').pop()
+    .replace(/^\s*section\s+[a-z]\s*[-:–]\s*/i, '')
+    .replace(/^\s*ssc\s+/i, '')
+    .replace(/\b(complete|book)\b/gi, '')
+    .replace(/\s+/g, ' ').trim();
+  return resolveCanonicalSubjectLabel(cleaned);
+}
+
 export default function DevReader() {
+  const { subjectUrl } = useThumbnails();
   const params = new URLSearchParams(window.location.search);
   const [selectedBook, setSelectedBook] = useState(AVAILABLE_BOOKS.find((b) => b.id === params.get('book')) || AVAILABLE_BOOKS[0]);
   const [metadata, setMetadata] = useState(null);
@@ -175,14 +190,30 @@ export default function DevReader() {
       <main className="bk-main-content" ref={mainRef}>
         <article className="bk-article">
           {showDivider ? (
-            <section style={{ minHeight: '70vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 24, padding: '2rem 0' }}>
+            <section style={{ minHeight: '70vh', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', padding: '2rem 0' }}>
+              {/* Subject cover: image from lc_subjects.thumbnail_url (Admin > Subjects), solid colour block if none */}
+              {(() => {
+                const subj = subjectForPart(activePart);
+                const img = subj ? subjectUrl(subj.key) : null;
+                const hex = getFamilyHex(subj?.family);
+                return (
+                  <div style={{ flex: '0 0 auto', width: 'min(280px, 100%)', aspectRatio: '2 / 3', boxShadow: '0 18px 40px -12px rgba(15,23,42,.35)', background: hex, overflow: 'hidden', display: 'flex', alignItems: 'flex-end' }}>
+                    {img ? (
+                      <img src={img} alt={subj?.label || activePart} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    ) : (
+                      <div style={{ color: '#fff', fontWeight: 900, fontSize: 28, letterSpacing: '-0.02em', padding: 20, lineHeight: 1.1 }}>{subj?.label || activePart}</div>
+                    )}
+                  </div>
+                );
+              })()}
+              <div style={{ flex: '1 1 320px', display: 'flex', flexDirection: 'column', gap: 20, minWidth: 0 }}>
               <div style={{ fontSize: 13, fontWeight: 800, letterSpacing: '.2em', color: '#64748b' }}>
                 SUBJECT {partList.indexOf(activePart) + 1} OF {partList.length}
               </div>
               <h1 style={{ fontFamily: 'Inter, sans-serif', fontSize: '3.25rem', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.03em', color: '#0f172a', margin: 0 }}>
                 {activePart}
               </h1>
-              <div style={{ height: 4, width: 96, background: '#0f766e' }} />
+              <div style={{ height: 4, width: 96, background: getFamilyHex(subjectForPart(activePart)?.family) }} />
               <div style={{ color: '#475569', fontSize: 16 }}>{partSize(activePart)} chapters</div>
               <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 6 }}>
                 {chapters.map((c, i) => (c.part === activePart ? (
@@ -218,6 +249,7 @@ export default function DevReader() {
                   <ChevronRight size={20} />
                 </button>
               </nav>
+              </div>
             </section>
           ) : loading ? (
             <div className="loading-state" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '50vh', gap: '1rem' }}>

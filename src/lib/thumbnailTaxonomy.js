@@ -226,6 +226,10 @@ export function getSubjectByKey(key) {
 // fabricated match, so callers can decide how to handle it instead of
 // silently mis-grouping.
 const LABEL_ALIASES = {
+  // book section names ("INDIAN POLITY", "SSC ECONOMICS") used for subject cover pages
+  'polity': 'polity',
+  'indian polity': 'polity',
+  'economics': 'economy',
   'quantitative aptitude': 'mathematics',
   'maths': 'mathematics',
   'math': 'mathematics',
