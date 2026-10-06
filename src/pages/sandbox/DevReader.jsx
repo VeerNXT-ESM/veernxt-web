@@ -14,11 +14,11 @@ import './BookReaderV2.css';
 // the reader, just not the identical title the old local copy had.
 const PREVIEW_BASE = 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Preview';
 const AVAILABLE_BOOKS = [
-  // Content-team review copies: parsed straight from the DOCX (no AI enrichment).
-  // Link: /dev-reader?book=gkgs-2026   (add &ch=N to open a chapter)
-  { id: 'gkgs-2026', title: 'GKGS 2026 (Guide, DOCX reparse)', path: `${PREVIEW_BASE}/gkgs-2026` },
-  { id: 'gsgk-precis-2026', title: 'GSGK Precis 2026 (DOCX reparse, chapters fixed)', path: `${PREVIEW_BASE}/gsgk-precis-2026` },
-  { id: 'gkgs-precis-2026', title: 'GKGS Precis 2026 (first parse, superseded)', path: `${PREVIEW_BASE}/gkgs-precis-2026` },
+  // Content-team review copies: parsed straight from the DOCX (no AI enrichment). These are NEW books
+  // ("<title> 2026 NEW"); once signed off the suffix is dropped and they replace the old books.
+  // Links: /dev-reader?book=gsgk-guide-2026-new   /dev-reader?book=gsgk-precis-2026-new   (add &ch=N for a chapter)
+  { id: 'gsgk-guide-2026-new', title: 'GS & GK Guide 2026 NEW', path: `${PREVIEW_BASE}/gsgk-guide-2026-new` },
+  { id: 'gsgk-precis-2026-new', title: 'GS & GK Precis 2026 NEW', path: `${PREVIEW_BASE}/gsgk-precis-2026-new` },
   { id: 'english', title: 'English Précis (sample)', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/1b0cedf2-7476-4747-a747-1b0cedf27476' },
   { id: 'gs-gk', title: 'GS & GK Guide Book', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/4f39098f-651c-4651-a651-4f39098f651c' },
   { id: 'reasoning', title: 'Reasoning Guide Book', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/272dbb7c-12ac-412a-a12a-272dbb7c12ac' },
