@@ -4,7 +4,9 @@
 
 **Most of this session (§1–§20) is content-audit/tooling work, not app code** — it happened on the local `CLIENT ASSETS` content library (`K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\CONTENT\`), **outside this git repo**; only the analysis scripts, reports, and prompts that resulted live in the repo. See §18 for exactly what's tracked where. **§21 is different** — it's real application architecture: a new schema applied directly to the production Supabase database and seeded with live data (still additive/non-destructive, nothing existing was touched, but it's not just local analysis anymore).
 
-**🎯 Next session starts here**: §70.8 — the **Roles & Permissions / admin login** work. The admin login screen prints the shared admin username and password on the page, and the check is done in the browser. Replace it with real per-user admin accounts, first for the 7 core-team testers (§70.6), with a way to add more later.
+**🎯 Next session starts here**: §71.10 — the content team is reviewing the two **"GS & GK 2026 NEW"** preview books (links in §71.5); act on their feedback, then reparse the next linked book the same way (WYSIWYG parser §71.3, structure fixes on a DOCX copy, preview upload, no live replacement until sign-off §71.8). The earlier admin-login pointer (§70.8) may already be addressed by teammate commit `ed7a5de` (§71.10).
+
+*(Prior pointer, now superseded — kept for history)* §70.8 — the **Roles & Permissions / admin login** work. The admin login screen printed the shared admin username and password on the page, and the check was done in the browser; the plan was real per-user admin accounts, first for the 7 core-team testers (§70.6).
 
 *(Prior pointer, now superseded — kept for history)* §50 — suggested improvements for the PYQ Papers/Quizzes admin pages (bulk exam auto-link, bilingual-aware PYQ editing, a "new PYQ paper" flow, the `is_freemium`/`is_locked` mismatch, bulk question import, duplicate/clone). §50.1's stale-R2-cache fix (chapter/metadata fetches now cache-busted) should also get checked with the actual content-team members who reported the blank-Intro bug, to confirm it's actually resolved for them, not just verified at the HTTP level. Also still open: §48.1's 117-vs-32 categorized mislinked-Introduction breakdown, the live "Haryana_GS" Guide/Precis split (§48.5), and credential rotation (five sessions, zero rotated — §46.5, §45.8, §43.9).
 
@@ -3190,3 +3192,56 @@ Open: Souvik also has an employer-portal profile (`f3f254e8`, `916296489227+empl
 
 ### 70.9 Shipped and open
 Pushed `7cac9ad..c94d708` to `main` (`c74454c` parser/preview/ingest, `f86f49a` player and Quiz Center, `c94d708` TESTER); the deploy has not been checked. Open: the `public/` deletions (70.2); the two presence-column SQL files (70.1); the content team fixing the sample paper and agreeing the template; extending the admin Quiz Creator (`/admin/quiz/:id` has no sections, no images, no validation); re-ingesting UPSI 01-09 with the new parser; deleting or replacing the (TEST) quiz; committing `set_tester_tier.mjs`.
+
+
+## 71. Session of 2026-10-05/06: WYSIWYG DOCX parser, "GS & GK 2026 NEW" books, reader fixes, Vercel 12-function incident
+
+### 71.1 Which books are in use
+Linked, Published, block-format Guide/Precis: **58 storage folders = 54 distinct titles** (50 Guide, 8 Precis; Goa, Karnataka, Chhattisgarh and Himachal GS each have two variants; the product owner counts 53, not reproduced). No HTML-format book is linked. Source-DOCX list: `docs/Final_Book_Content_In_Use_2026-10-05.csv` (untracked export). Per-book structure flags: `docs/BOOK_STRUCTURE_SCAN_2026-10-06.md`.
+
+### 71.2 What was wrong with the live GS & GK books
+- The live books are **not built from the DOCX the database names**: the Guide's R2 metadata says Cluster_035 (66 ch) and the Precis Cluster_014 (124 ch), both in `DEPRECATED`; `resources.source_file` / `chapter_count` were relabelled (Cluster_006 / 76, Cluster_001 / 136) without re-ingesting. Cluster_006 ~ 035 and 001 ~ 014 (same text), and the three Guide DOCX (CGL original, Selection Post original, Cluster_006) are the same book with different covers.
+- Against the DOCX the live Guide has 22 of 41 images, 0 list blocks (1,513 typed bullets as plain paragraphs, 130 turned into H4 headings), no bold/italic in 1,606 paragraphs, and **295 Gemini-added blocks** (keyFacts, statStrip, examAlert, pullQuote, comparisonTable; some wrong, e.g. "Target Exam: ' Exams'"). Precis: 122 of ~215 images, 557 `<br>`-joined bullet paragraphs, 553 AI blocks, 3 chapters missing.
+- Correction made during the session: the DOCX has no real colour or shading (all colours `000000`, all fills `auto`); the real formatting is bold, centring, header rows. Details: `docs/GS_GK_Book_Comparison_2026-10-05.md`.
+- Root causes in `scripts/lib/docxParser.mjs` (mammoth): images only from text-less paragraphs, typed bullets not converted, a word-count rule making short lines H4, first table row always header, formatting dropped, plus the Gemini enrichment step.
+
+### 71.3 New WYSIWYG parser (no AI)
+- `scripts/lib/docxDirectParser.mjs`: ordered walk of `word/document.xml`. Headings from Word styles only; Word lists and typed bullets become nested `list`/`numberedList` blocks with Word's numbering counters (numbered headings get their "1.", "1.1" prefix; lists carry `start` and `format`); every drawing (anchored, inline, in tables) becomes an image at its place; bold/italic/underline/strike/sup/sub/colour/highlight/shading, centring; `tblHeader` rows; empty Heading 1 = subject divider stored as `chapter.part`; cover/TOC dropped; images in an empty heading open the next chapter.
+- `scripts/reparse_book_direct.mjs --src --title --category [--out]` (local output in the untracked `FINAL_BOOKS_STRUCTURED/`), `scripts/upload_book_preview.mjs` (R2 `Preview/<slug>/`, dry run by default, refuses to overwrite), verification against the DOCX XML (text order, image anchors, block types).
+- Chapter-structure fixes are done on **copies** of the DOCX, originals untouched (checksums verified): `scripts/fix_gkgs_precis_chapters.mjs` -> `GSGK PRECIS 2026.docx` (8 hidden chapters promoted to Heading 1, 7 sub-sections demoted, 24 Polity titles now "CHAPTER – n: NAME", duplicate "Chapter 3" removed, 81 Chemistry section lines to Heading 2; 127 -> 128 chapters); `scripts/fix_gkgs_guide_chapters.mjs` -> `GSGK GUIDE 2026.docx` (chapter numbers restart in every section; source ran 1-49 with "Chapter 14" twice and skipped 37). Both copies sit in `...\MASTER DOCUMENTS\Precis|Guide\GK-GS\`.
+
+### 71.4 Results (verified against the DOCX)
+| | Guide | Precis |
+|---|---|---|
+| Chapters (7 subjects each) | 66 | 128 |
+| Text and reading order | identical | identical |
+| Images placed after their anchor paragraph | 40 / 40 (+1 cover image dropped) | 214 / 214 |
+| List blocks | 416 (1,513 typed bullets) | 809 list + 186 numbered (11 nested) |
+| AI blocks | 0 | 0 |
+Preview books are named **"GS & GK 2026 NEW"** (Guide and Precis); dropping the suffix later restores the live title.
+
+### 71.5 Reader and CSS changes (pushed)
+- **Bullets and numbers were missing for every real list in every book**: Tailwind v4's preflight sets `ul, ol { list-style: none }` and `BookBlocks.css` / `BookBlocksClassic.css` never restored markers. Restored (disc / circle / square, decimal, lettered/roman, hanging indent, nested lists, lists in table cells). This affects the production reader too.
+- `ChapterHeader`: the huge book-wide number is gone (it showed "21" for the first chapter of the second subject); the eyebrow shows the subject when the book has one. Used by every reader.
+- `/dev-reader` (public sandbox reader): `?book=<id>&ch=N` deep links, subject grouping and per-subject numbering in the sidebar, and per subject a **full-page cover** (image from `lc_subjects.thumbnail_url`, editable on Admin > Subjects; solid colour-family block behind it), then a **contents page**, then the chapters. Mobile-friendly single column. Section names map to subjects via the existing resolver (aliases added for "polity", "indian polity", "economics").
+- Review links (after deploy): `https://www.veernxt.in/dev-reader?book=gsgk-guide-2026-new` and `?book=gsgk-precis-2026-new`. Not verified in a real browser (no browser automation here); lint and `vite build` pass.
+
+### 71.6 Vercel 12-function incident
+A teammate's commit `ed7a5de` (admin auth) added `api/admin/auth.js`, the 13th function; every deploy from then on failed (Hobby cap 12). Fixed in `856e758`: handler moved to `api/_lib/adminAuth.js`, dispatched from `api/admin/misc.js` (`?fn=auth`), rewrite in `vercel.json` keeps `/api/admin/auth`. Cause inferred from the failed status, the count and §36.3 (the Vercel log needs a login). `docs/VERCEL_FUNCTIONS.md` lists all 12 functions with optimisation ideas (move `save-resource.js` out, lazy imports, shared helpers, per-function `maxDuration`). Admin login itself was not tested by me. Note: repeated polling made Vercel's security checkpoint challenge my curl; deploys were checked via `gh api .../commits/<sha>/status`.
+
+### 71.7 Structure scan of the master DOCX files
+All 67 parse without error. Of the 58 linked rows: 13 clean, 17 only need a "skip Table of Contents chapter" rule, 7 multi-subject, 4 with no heading styles at all (Hindi Guide, Bihar GS, Assam GS, Electrical Engineering Precis) which currently parse to 0 chapters, ~7 with oversized or tiny chapters, and **11 whose source file name is not in the master folder** (live content was built from another copy). Not linked: Cluster_079 RRB COMPLETE GK (693 chapters, 590 tiny), duplicates filed twice (062 = GK Precis, 081 = 006, 009/040, 005 Guide/Precis, 059).
+
+### 71.8 Policy decided this session
+No live book is replaced until all linked books are reparsed and the content team signs off; reparsed books are NEW books suffixed "2026 NEW"; one book at a time, GSGK first. Nothing in Supabase (`resources`, `lc_exam_resource_map`) was touched. Saved in memory (`project_book_reparse_program_2026-10`).
+
+### 71.9 Pushed this session
+`afff8a1` parser, scripts, DevReader entries; `6fea884` + `efc7bfc` list-marker CSS (merge with `ed7a5de`); `856e758` Vercel 12 functions + doc; `013e409`, `b3df0ef` big number removed, subject separator, scan docs; `e8a9cb6`, `8df2a36` "2026 NEW" books, Guide renumbering; `ea94d9e`, `3586abf` subject covers and full-page cover. All deploys succeeded (`gh` status).
+
+### 71.10 Open / next
+- **Waiting for content-team feedback** on the two preview books. Questions for them: is Geography chapter 37 missing (source jumps 36 -> 38)? Chemistry has no Chapter 12 (11 -> 13); Economics repeats Public Finance (13, 21) and Economic Planning (14, 20); are the Physics Ch 12 / Chemistry Ch 14 environment chapters intended? Which DOCX is the right source for the 11 linked books whose file is not in the master folder?
+- Next books: parser rules (skip a "Table of Contents" chapter; structure detection for the 8 no-heading documents), then corrected DOCX copies for the oversized ones.
+- Cover limits: covers belong to the subject (Admin > Subjects), not to one book; a per-book override or editable cover text needs a small table + admin screen (not built). The cover/contents pages exist only in `/dev-reader`, not yet in `SecureReader`.
+- Cosmetic: General Science sub-sections read "GENERAL SCIENCE › SECTION A : PHYSICS", then "SECTION B : CHEMISTRY", "SECTION C : BIOLOGY".
+- Housekeeping: old preview prefixes on R2 (`Preview/gkgs-2026`, `gkgs-precis-2026`, `gsgk-precis-2026`) can be deleted; a half-deleted local folder `FINAL_BOOKS_STRUCTURED/Guide/guide-gs-gk-2026-new` is locked by Windows (the live copy is `.../Guide/gsgk-guide-2026-new`); the 105 `public/` deletions (§70.2) are still uncommitted and the generated folders (FINAL_*_STRUCTURED/, books/) stay untracked.
+- §70.8 (admin login hazard): teammate commit `ed7a5de` ("secure authentication system, profile management, first-login workflow") appears to address it; not reviewed or tested by me. Verify before treating §70.8 as done.
