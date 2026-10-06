@@ -95,3 +95,80 @@ GK/GS is **not** the only difficult book, and it is not the typical one either.
 
 Notes: "Typed bullets" are Normal paragraphs starting with a bullet character; "Word-list items" are real Word list paragraphs. Both become list blocks. Counts include table-cell content.
 Subjects = empty Heading 1 dividers found (the parser stores them as `chapter.part`).
+
+
+---
+# Scope: only the books linked to exams (decision 2026-10-06)
+
+Only books that are **Published, block format and linked to at least one exam** matter. Counted from the database:
+**58 linked storage folders = 54 distinct titles** (Goa, Karnataka, Chhattisgarh and Himachal GS each have two variants: GS and SI/Constable). The product owner's count is 53; I could not reproduce 53 exactly (likely the admin Book Content page, which merges duplicates differently). All 8 linked Precis and 50 linked Guides are in the table. No HTML-format book is linked.
+
+**Working order:** finish and get content-team approval for the current book (GSGK) first, then move the remaining linked books one by one. The other master DOCX files (not linked) are out of scope for now.
+
+| Exams | Cat | Title (as in app) | Live ch | DOCX ch | Structure flags |
+|---:|---|---|---:|---:|---|
+| 1130 | Guide | GS & GK | 76 | 66 | 7 subjects |
+| 1130 | Precis | GS & GK | 136 | 127 | oversized 249, 1 dup titles, 8 subjects |
+| 1013 | Precis | MATHEMATICS | 20 | - | SOURCE NOT IN MASTER FOLDER |
+| 1013 | Guide | Mathematics | 9 | 7 | 1 subjects |
+| 939 | Guide | ENGLISH | 26 | - | SOURCE NOT IN MASTER FOLDER |
+| 939 | Precis | ENGLISH | 1 | 21 | 4 tiny |
+| 920 | Precis | REASONING | 1 | - | SOURCE NOT IN MASTER FOLDER |
+| 920 | Guide | Reasoning | 12 | 6 | 5 subjects |
+| 341 | Precis | Computer Science | 15 | 14 | clean |
+| 341 | Guide | Computer Science | 15 | 14 | clean |
+| 340 | Precis | HINDI | 19 | 18 | oversized 545 |
+| 340 | Guide | HINDI | 6 | 0 | NO HEADINGS |
+| 109 | Guide | Nursing | 18 | 18 | clean |
+| 104 | Precis | 2026 GK-GS | 127 | 127 | oversized 249, 1 dup titles, 8 subjects |
+| 46 | Guide | RAJASTHAN GS | 24 | 23 | TOC chapter, 5 tiny |
+| 37 | Guide | Jammu_Kashmir_GS_Book | 36 | 35 | TOC chapter |
+| 37 | Guide | 2026 Descriptive Writing Bank Exams | 34 | 34 | clean |
+| 36 | Guide | Bihar GS | 1 | 0 | NO HEADINGS |
+| 35 | Guide | ARUNACHAL PRADESH SI | 16 | 15 | oversized 197 |
+| 34 | Guide | Jharkhand GS Book | 13 | 12 | TOC chapter |
+| 33 | Guide | Delhi GS Book | 14 | 13 | TOC chapter |
+| 31 | Guide | Gujarat GS | 15 | 14 | TOC chapter |
+| 31 | Guide | ARUNACHAL PRADESH GS | 16 | - | SOURCE NOT IN MASTER FOLDER |
+| 30 | Guide | Haryana GS | 12 | 11 | clean |
+| 30 | Guide | Assam GS | 1 | 0 | NO HEADINGS |
+| 28 | Guide | Madhya Pradesh GS | 16 | 13 | 1 subjects |
+| 26 | Guide | MAHARASHTRA GS | 13 | 12 | clean |
+| 24 | Guide | KERALA GS | 16 | 15 | clean |
+| 24 | Guide | TamilNadu GS | 12 | 11 | clean |
+| 23 | Guide | Chhattisgarh GS | 18 | - | SOURCE NOT IN MASTER FOLDER |
+| 22 | Guide | Manipur GS Book | 14 | 13 | TOC chapter |
+| 21 | Guide | Karnataka GS | 18 | - | SOURCE NOT IN MASTER FOLDER |
+| 21 | Guide | Andhra Pradesh GS | 17 | - | SOURCE NOT IN MASTER FOLDER |
+| 21 | Guide | Telangana GS 2026 | 11 | 10 | clean |
+| 20 | Guide | Odisha GS | 24 | 23 | TOC chapter, 5 tiny |
+| 18 | Guide | Ladakh GS | 16 | 15 | TOC chapter |
+| 18 | Guide | Himachal Pradesh GS | 14 | - | SOURCE NOT IN MASTER FOLDER |
+| 17 | Guide | Andaman Nicobar GS | 12 | 11 | TOC chapter |
+| 17 | Guide | Meghalaya GS | 13 | 12 | TOC chapter |
+| 17 | Guide | Mizoram GS | 13 | 12 | TOC chapter |
+| 16 | Guide | Dadra Nagar Haveli Daman Diu GS | 13 | 12 | TOC chapter |
+| 16 | Guide | Goa GS | 14 | 13 | clean |
+| 16 | Guide | PUNJAB GS | 13 | 12 | clean |
+| 16 | Guide | Uttarakhand GS | 14 | 13 | oversized 364 |
+| 16 | Guide | Tripura GS | 16 | 15 | oversized 204 |
+| 14 | Guide | Chandigarh GS | 13 | 12 | TOC chapter |
+| 13 | Guide | Puducherry GS | 14 | 13 | TOC chapter |
+| 13 | Guide | West Bengal GS | 28 | 27 | 13 tiny |
+| 12 | Guide | Lakshadweep GS | 13 | 12 | TOC chapter |
+| 11 | Guide | Chhattisgarh GS | 18 | 17 | TOC chapter |
+| 10 | Guide | Himachal Pradesh GS | 14 | 13 | clean |
+| 9 | Guide | Karnataka GS | 18 | 17 | clean |
+| 3 | Guide | Metro_Technical_Knowledge | 50 | - | SOURCE NOT IN MASTER FOLDER |
+| 2 | Guide | MATHS AND REASONING | 13 | 13 | 6 subjects |
+| 1 | Precis | ELECTRICAL ENGINEERING | 1 | 0 | NO HEADINGS |
+| 1 | Guide | Goa GS | 14 | - | SOURCE NOT IN MASTER FOLDER |
+| 1 | Guide | ELECTRICAL ENGINEERING | 1 | - | SOURCE NOT IN MASTER FOLDER |
+| 1 | Guide | Delhi Police Driver Traffic Rules | 14 | 14 | TOC chapter |
+
+Flag legend: **TOC chapter** = Table of Contents parsed as chapter 1 (parser rule fixes it). **NO HEADINGS** = DOCX has no heading styles (needs a styled copy or visual-structure detection). **subjects** = several subjects in one book (separator pages). **oversized / dup titles / tiny** = chapter structure to fix in the DOCX like GSGK. **SOURCE NOT IN MASTER FOLDER** = no file with that exact name in MASTER DOCUMENTS (the live content was built from another copy, e.g. under ORIGINAL CONTENT or DEPRECATED); the correct source must be confirmed by the content team before reparsing.
+
+## What the linked scope changes
+- Of the 58 linked rows: **13 are clean**, **17 only need the Table-of-Contents rule**, **7 have several subjects**, **4 have no headings** (Hindi Guide, Bihar GS, Assam GS, Electrical Engineering Precis), **11 have a source file that is not in the master folder**, and a handful are oversized or have tiny chapters (Arunachal SI, Uttarakhand, Tripura, West Bengal, Rajasthan, Odisha, Hindi Precis).
+- Live chapter counts in the app often differ from the DOCX (e.g. GS & GK Guide shows 76, the DOCX has 66; Precis shows 136, the DOCX 127). The database counts are stale; the reparse corrects them.
+- Not linked and not needed now: Cluster_079 RRB COMPLETE GK (693 chapters), Cluster_043 RRB GS, Cluster_034 RRB Maths, the duplicate files (Cluster_062, 081, 059, 058 ITI...), Base Book, Financial Awareness etc.
