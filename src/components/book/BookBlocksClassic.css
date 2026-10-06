@@ -535,3 +535,33 @@
   0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
   40% { opacity: 1; transform: scale(1); }
 }
+
+/* List markers.
+   Tailwind's preflight (imported globally in index.css) resets every ul/ol to list-style:none,
+   so bullets and numbers vanished even though the book data holds real list blocks.
+   Restore them here, including nested, lettered/roman and in-table lists. */
+:where(.bk-classic) .bk-list, :where(.bk-classic) .bk-numbered-list {
+  padding-left: 1.75rem;
+  list-style-position: outside;
+}
+:where(.bk-classic) .bk-list { list-style-type: disc; }
+:where(.bk-classic) .bk-numbered-list { list-style-type: decimal; }
+:where(.bk-classic) :is(.bk-list, .bk-numbered-list) :is(ul, ol) {
+  margin: 0.5rem 0 0;
+  padding-left: 1.5rem;
+  list-style-position: outside;
+}
+:where(.bk-classic) :is(.bk-list, .bk-numbered-list, .bk-table td) ul { list-style-type: disc; }
+:where(.bk-classic) :is(.bk-list, .bk-numbered-list, .bk-table td) ul ul { list-style-type: circle; }
+:where(.bk-classic) :is(.bk-list, .bk-numbered-list, .bk-table td) ul ul ul { list-style-type: square; }
+:where(.bk-classic) :is(.bk-list, .bk-numbered-list, .bk-table td) ol { list-style-type: decimal; }
+:where(.bk-classic) :is(.bk-list, .bk-numbered-list) li li {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0.35rem;
+}
+:where(.bk-classic) .bk-table td :is(ul, ol) { margin: 0.25rem 0; padding-left: 1.25rem; list-style-position: outside; }
+:where(.bk-classic) ol[type="A"] { list-style-type: upper-alpha; }
+:where(.bk-classic) ol[type="a"] { list-style-type: lower-alpha; }
+:where(.bk-classic) ol[type="I"] { list-style-type: upper-roman; }
+:where(.bk-classic) ol[type="i"] { list-style-type: lower-roman; }
