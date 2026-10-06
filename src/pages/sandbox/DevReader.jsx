@@ -50,7 +50,8 @@ export default function DevReader() {
   const firstLoad = useRef(true);
   const [loading, setLoading] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dismissedPart, setDismissedPart] = useState('');
+  // Entering a subject shows: cover (full page) -> contents -> first chapter. stageState remembers how far we got.
+  const [stageState, setStageState] = useState({ part: '', stage: '' });
   
   const mainRef = useRef(null);
 
@@ -116,7 +117,13 @@ export default function DevReader() {
   const partOf = (i) => chapters[i]?.part || '';
   const partList = [...new Set(chapters.map((c) => c.part || '').filter(Boolean))];
   const activePart = partOf(activeChapterIndex);
-  const showDivider = !!metadata && !!activePart && (activeChapterIndex === 0 || partOf(activeChapterIndex - 1) !== activePart) && dismissedPart !== activePart;
+  const isPartStart = !!metadata && !!activePart && (activeChapterIndex === 0 || partOf(activeChapterIndex - 1) !== activePart);
+  const stage = isPartStart ? (stageState.part === activePart ? stageState.stage : 'cover') : 'done';
+  const subj = activePart ? subjectForPart(activePart) : null;
+  const coverHex = getFamilyHex(subj?.family);
+  const coverImg = subj ? subjectUrl(subj.key) : null;
+  const goStage = (st) => setStageState({ part: activePart, stage: st });
+  useEffect(() => { if (mainRef.current) mainRef.current.scrollTo(0, 0); }, [stage, activePart]);
   const inPartNumber = (i) => (partOf(i) ? chapters.slice(0, i).filter((c) => (c.part || '') === partOf(i)).length + 1 : chapters[i]?.order);
   const partSize = (p) => chapters.filter((c) => (c.part || '') === p).length;
   const counterTotal = activePart ? partSize(activePart) : totalChapters;
@@ -168,7 +175,7 @@ export default function DevReader() {
                   </div>
                 )}
                 <button
-                  onClick={() => { if (ch.part) setDismissedPart(ch.part); navigateTo(idx); }}
+                  onClick={() => { if (ch.part) setStageState({ part: ch.part, stage: 'done' }); navigateTo(idx); }}
                   className={`bk-toc-item ${activeChapterIndex === idx ? 'active' : ''}`}
                 >
                   <span className="bk-toc-number">{inPartNumber(idx)}</span>
@@ -188,60 +195,76 @@ export default function DevReader() {
 
       {/* Main Content Area */}
       <main className="bk-main-content" ref={mainRef}>
-        <article className="bk-article">
-          {showDivider ? (
-            <section style={{ minHeight: '70vh', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2.5rem', padding: '2rem 0' }}>
-              {/* Subject cover: image from lc_subjects.thumbnail_url (Admin > Subjects), solid colour block if none */}
-              {(() => {
-                const subj = subjectForPart(activePart);
-                const img = subj ? subjectUrl(subj.key) : null;
-                const hex = getFamilyHex(subj?.family);
-                return (
-                  <div style={{ flex: '0 0 auto', width: 'min(280px, 100%)', aspectRatio: '2 / 3', boxShadow: '0 18px 40px -12px rgba(15,23,42,.35)', background: hex, overflow: 'hidden', display: 'flex', alignItems: 'flex-end' }}>
-                    {img ? (
-                      <img src={img} alt={subj?.label || activePart} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-                    ) : (
-                      <div style={{ color: '#fff', fontWeight: 900, fontSize: 28, letterSpacing: '-0.02em', padding: 20, lineHeight: 1.1 }}>{subj?.label || activePart}</div>
-                    )}
-                  </div>
-                );
-              })()}
-              <div style={{ flex: '1 1 320px', display: 'flex', flexDirection: 'column', gap: 20, minWidth: 0 }}>
-              <div style={{ fontSize: 13, fontWeight: 800, letterSpacing: '.2em', color: '#64748b' }}>
+        {stage === 'cover' ? (
+          /* 1. Subject cover: a full page of its own (image from lc_subjects, Admin > Subjects) */
+          <section style={{ width: '100%', minHeight: '100%', display: 'flex', flexDirection: 'column', background: coverHex, color: '#fff' }}>
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 20, padding: '2rem 1.25rem 1rem', textAlign: 'center' }}>
+              <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: '.22em', opacity: 0.85 }}>
                 SUBJECT {partList.indexOf(activePart) + 1} OF {partList.length}
               </div>
-              <h1 style={{ fontFamily: 'Inter, sans-serif', fontSize: '3.25rem', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.03em', color: '#0f172a', margin: 0 }}>
+              {coverImg ? (
+                <img
+                  src={coverImg}
+                  alt={subj?.label || activePart}
+                  style={{ width: 'min(300px, 78vw)', maxHeight: '58vh', aspectRatio: '2 / 3', objectFit: 'cover', boxShadow: '0 24px 50px -12px rgba(0,0,0,.55)', display: 'block' }}
+                />
+              ) : null}
+              <h1 style={{ fontFamily: 'Inter, sans-serif', fontSize: 'clamp(1.9rem, 6vw, 3.25rem)', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.03em', margin: 0, maxWidth: 760, overflowWrap: 'anywhere' }}>
                 {activePart}
               </h1>
-              <div style={{ height: 4, width: 96, background: getFamilyHex(subjectForPart(activePart)?.family) }} />
-              <div style={{ color: '#475569', fontSize: 16 }}>{partSize(activePart)} chapters</div>
-              <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 6 }}>
+              <div style={{ fontSize: 15, opacity: 0.9 }}>{partSize(activePart)} chapters</div>
+            </div>
+            <nav style={{ display: 'flex', gap: 12, padding: '1rem 1.25rem 1.5rem', justifyContent: 'space-between' }}>
+              <button
+                onClick={() => navigateTo(activeChapterIndex - 1)}
+                disabled={activeChapterIndex === 0}
+                style={{ minHeight: 48, padding: '0 16px', background: 'rgba(255,255,255,.16)', color: '#fff', border: '1px solid rgba(255,255,255,.4)', cursor: activeChapterIndex === 0 ? 'default' : 'pointer', opacity: activeChapterIndex === 0 ? 0.35 : 1, display: 'flex', alignItems: 'center', gap: 6, fontSize: 15, fontWeight: 600 }}
+              >
+                <ChevronLeft size={20} /> Previous
+              </button>
+              <button
+                onClick={() => goStage('contents')}
+                style={{ minHeight: 48, padding: '0 20px', background: '#fff', color: '#0f172a', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6, fontSize: 15, fontWeight: 700 }}
+              >
+                Contents <ChevronRight size={20} />
+              </button>
+            </nav>
+          </section>
+        ) : (
+        <article className="bk-article">
+          {stage === 'contents' ? (
+            /* 2. Subject contents page */
+            <section style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: '.2em', color: '#64748b' }}>
+                SUBJECT {partList.indexOf(activePart) + 1} OF {partList.length} &middot; CONTENTS
+              </div>
+              <h1 style={{ fontFamily: 'Inter, sans-serif', fontSize: 'clamp(1.7rem, 5.5vw, 2.5rem)', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-0.03em', color: '#0f172a', margin: 0, overflowWrap: 'anywhere' }}>
+                {activePart}
+              </h1>
+              <div style={{ height: 4, width: 96, background: coverHex }} />
+              <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 2 }}>
                 {chapters.map((c, i) => (c.part === activePart ? (
                   <li key={i}>
                     <button
-                      onClick={() => { setDismissedPart(activePart); navigateTo(i); }}
-                      style={{ background: 'none', border: 'none', padding: '4px 0', cursor: 'pointer', textAlign: 'left', fontSize: 15, color: '#0f172a' }}
+                      onClick={() => { goStage('done'); navigateTo(i); }}
+                      style={{ background: 'none', border: 'none', padding: '10px 0', minHeight: 44, cursor: 'pointer', textAlign: 'left', fontSize: 16, color: '#0f172a', width: '100%', display: 'flex', gap: 12 }}
                     >
-                      <span style={{ color: '#0f766e', fontWeight: 700, marginRight: 10 }}>{inPartNumber(i)}</span>{c.title}
+                      <span style={{ color: coverHex, fontWeight: 800, minWidth: 28 }}>{inPartNumber(i)}</span>
+                      <span style={{ overflowWrap: 'anywhere' }}>{c.title}</span>
                     </button>
                   </li>
                 ) : null))}
               </ol>
-              {/* same Previous / Next pager as every chapter: Next opens the first chapter of this subject */}
               <nav className="bk-pagination">
-                <button
-                  className="bk-page-btn bk-page-prev"
-                  onClick={() => navigateTo(activeChapterIndex - 1)}
-                  disabled={activeChapterIndex === 0}
-                >
+                <button className="bk-page-btn bk-page-prev" onClick={() => setStageState({ part: '', stage: '' })}>
                   <ChevronLeft size={20} />
                   <span>
                     <small>Previous</small>
-                    <strong>{activeChapterIndex > 0 ? chapters[activeChapterIndex - 1].title : ''}</strong>
+                    <strong>Cover</strong>
                   </span>
                 </button>
                 <div className="bk-page-counter" />
-                <button className="bk-page-btn bk-page-next" onClick={() => setDismissedPart(activePart)}>
+                <button className="bk-page-btn bk-page-next" onClick={() => goStage('done')}>
                   <span>
                     <small>Next</small>
                     <strong>{chapters[activeChapterIndex]?.title}</strong>
@@ -249,7 +272,6 @@ export default function DevReader() {
                   <ChevronRight size={20} />
                 </button>
               </nav>
-              </div>
             </section>
           ) : loading ? (
             <div className="loading-state" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '50vh', gap: '1rem' }}>
@@ -305,6 +327,7 @@ export default function DevReader() {
             </div>
           )}
         </article>
+        )}
       </main>
     </div>
   );
