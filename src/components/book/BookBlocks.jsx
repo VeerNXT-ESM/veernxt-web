@@ -154,13 +154,15 @@ export const TableBlock = ({ rows }) => {
   );
 };
 
-export const ChapterHeader = ({ title, order }) => {
+// The old huge book-wide number ("21" for the first chapter of the second subject) is gone:
+// it counted chapters across every subject in the book. `order` is still accepted so existing
+// callers need no change; `part` (the subject name, if the book has several) becomes the eyebrow.
+export const ChapterHeader = ({ title, part }) => {
   const cleaned = cleanHeadingContent(title);
   return (
     <header className="bk-chapter-header">
-      <div className="bk-chapter-number-huge">{String(order).padStart(2, '0')}</div>
       <div className="bk-chapter-title-wrapper">
-        <span className="bk-chapter-eyebrow">CHAPTER</span>
+        <span className="bk-chapter-eyebrow">{part || 'CHAPTER'}</span>
         <h1 className="bk-chapter-title" dangerouslySetInnerHTML={{ __html: cleaned }} />
       </div>
     </header>

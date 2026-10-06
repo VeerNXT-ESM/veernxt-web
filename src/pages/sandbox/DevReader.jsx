@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { Fragment, useState, useEffect, useRef } from 'react';
 import { Book, ChevronLeft, ChevronRight, Menu, X, Loader2 } from 'lucide-react';
 import { ChapterHeader } from '../../components/book/BookBlocks';
 import { BlockRenderer } from '../../components/book/BlockRenderer';
@@ -35,6 +35,7 @@ export default function DevReader() {
   const firstLoad = useRef(true);
   const [loading, setLoading] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dismissedPart, setDismissedPart] = useState('');
   
   const mainRef = useRef(null);
 
@@ -95,6 +96,17 @@ export default function DevReader() {
 
   const totalChapters = metadata?.chapters?.length || 0;
 
+  // Subjects: books with several subjects carry chapter.part (from the DOCX's empty Heading 1 dividers).
+  const chapters = metadata?.chapters || [];
+  const partOf = (i) => chapters[i]?.part || '';
+  const partList = [...new Set(chapters.map((c) => c.part || '').filter(Boolean))];
+  const activePart = partOf(activeChapterIndex);
+  const showDivider = !!metadata && !!activePart && (activeChapterIndex === 0 || partOf(activeChapterIndex - 1) !== activePart) && dismissedPart !== activePart;
+  const inPartNumber = (i) => (partOf(i) ? chapters.slice(0, i).filter((c) => (c.part || '') === partOf(i)).length + 1 : chapters[i]?.order);
+  const partSize = (p) => chapters.filter((c) => (c.part || '') === p).length;
+  const counterTotal = activePart ? partSize(activePart) : totalChapters;
+  const counterNow = activePart ? inPartNumber(activeChapterIndex) : activeChapterIndex + 1;
+
   return (
     <div className="bk-reader-layout bk-classic">
       {/* Mobile Top Bar */}
@@ -134,15 +146,21 @@ export default function DevReader() {
         <nav className="bk-toc">
           {metadata ? (
             metadata.chapters.map((ch, idx) => (
-              <button
-                key={idx}
-                onClick={() => navigateTo(idx)}
-                className={`bk-toc-item ${activeChapterIndex === idx ? 'active' : ''}`}
-              >
-                <span className="bk-toc-number">{ch.order}</span>
-                <span className="bk-toc-title">{ch.title}</span>
-                {ch.enriched && <span className="bk-toc-enriched" title="AI Enriched">✦</span>}
-              </button>
+              <Fragment key={idx}>
+                {ch.part && ch.part !== partOf(idx - 1) && (
+                  <div style={{ padding: '14px 16px 6px', fontSize: 11, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: '#0f766e', borderTop: idx ? '1px solid #e2e8f0' : 'none', marginTop: idx ? 8 : 0 }}>
+                    {ch.part}
+                  </div>
+                )}
+                <button
+                  onClick={() => { if (ch.part) setDismissedPart(ch.part); navigateTo(idx); }}
+                  className={`bk-toc-item ${activeChapterIndex === idx ? 'active' : ''}`}
+                >
+                  <span className="bk-toc-number">{inPartNumber(idx)}</span>
+                  <span className="bk-toc-title">{ch.title}</span>
+                  {ch.enriched && <span className="bk-toc-enriched" title="AI Enriched">✦</span>}
+                </button>
+              </Fragment>
             ))
           ) : (
             <div style={{ padding: '1rem', color: '#64748b' }}>Loading bookshelf...</div>
@@ -156,7 +174,38 @@ export default function DevReader() {
       {/* Main Content Area */}
       <main className="bk-main-content" ref={mainRef}>
         <article className="bk-article">
-          {loading ? (
+          {showDivider ? (
+            <section style={{ minHeight: '70vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 24, padding: '2rem 0' }}>
+              <div style={{ fontSize: 13, fontWeight: 800, letterSpacing: '.2em', color: '#64748b' }}>
+                SUBJECT {partList.indexOf(activePart) + 1} OF {partList.length}
+              </div>
+              <h1 style={{ fontFamily: 'Inter, sans-serif', fontSize: '3.25rem', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.03em', color: '#0f172a', margin: 0 }}>
+                {activePart}
+              </h1>
+              <div style={{ height: 4, width: 96, background: '#0f766e' }} />
+              <div style={{ color: '#475569', fontSize: 16 }}>{partSize(activePart)} chapters</div>
+              <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 6 }}>
+                {chapters.map((c, i) => (c.part === activePart ? (
+                  <li key={i}>
+                    <button
+                      onClick={() => { setDismissedPart(activePart); navigateTo(i); }}
+                      style={{ background: 'none', border: 'none', padding: '4px 0', cursor: 'pointer', textAlign: 'left', fontSize: 15, color: '#0f172a' }}
+                    >
+                      <span style={{ color: '#0f766e', fontWeight: 700, marginRight: 10 }}>{inPartNumber(i)}</span>{c.title}
+                    </button>
+                  </li>
+                ) : null))}
+              </ol>
+              <div>
+                <button
+                  onClick={() => setDismissedPart(activePart)}
+                  style={{ background: '#0f766e', color: '#fff', border: 'none', padding: '12px 28px', fontSize: 15, fontWeight: 700, cursor: 'pointer' }}
+                >
+                  Start this subject
+                </button>
+              </div>
+            </section>
+          ) : loading ? (
             <div className="loading-state" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '50vh', gap: '1rem' }}>
               <Loader2 className="spinner" style={{ animation: 'spin 1s linear infinite', color: '#0f766e' }} />
               <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
@@ -164,8 +213,7 @@ export default function DevReader() {
             </div>
           ) : chapter ? (
             <>
-              {chapter.part && <div style={{ fontSize: 12, letterSpacing: '.08em', textTransform: 'uppercase', color: '#64748b', marginBottom: 4 }}>{chapter.part}</div>}
-              <ChapterHeader title={chapter.title} order={chapter.order} />
+              <ChapterHeader title={chapter.title} part={chapter.part} />
               <div className="bk-blocks-container">
                 {chapter.blocks && chapter.blocks.map((block) => (
                   <BlockRenderer key={block.id} block={block} />
@@ -187,9 +235,9 @@ export default function DevReader() {
                 </button>
 
                 <div className="bk-page-counter">
-                  <span>{activeChapterIndex + 1}</span>
+                  <span>{counterNow}</span>
                   <span className="bk-page-sep">of</span>
-                  <span>{totalChapters}</span>
+                  <span>{counterTotal}</span>
                 </div>
 
                 <button
