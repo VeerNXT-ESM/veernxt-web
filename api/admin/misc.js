@@ -14,6 +14,12 @@
  *   POST { action: 'invite', ... }   -> invite-admin
  *   POST { action: 'remove', email } -> remove-admin
  *
+ * fn=auth  (admin login / session / first-login / profile / change-password; the handler
+ *            lives in api/_lib/adminAuth.js -- underscore dirs are not counted as functions):
+ *   POST { action: 'login' | 'first-login-setup' | 'update-profile' | 'change-password', ... }
+ *   GET  ?action=me
+ *   Reached via the /api/admin/auth rewrite in vercel.json, so the frontend URL is unchanged.
+ *
  * fn=redemptions:
  *   GET                                  -> list all redemptions
  *   POST { redemption_id, status, ... }  -> update redemption status
@@ -28,6 +34,7 @@
  */
 
 import Joi from 'joi';
+import adminAuthHandler from '../_lib/adminAuth.js';
 import { createClient } from '@supabase/supabase-js';
 
 function getSupabaseAdmin() {
@@ -425,5 +432,6 @@ export default async function handler(req, res) {
   if (fn === 'admins') return routeAdmins(req, res);
   if (fn === 'redemptions') return routeRedemptions(req, res);
   if (fn === 'content-writes') return routeContentWrites(req, res);
-  return res.status(400).json({ ok: false, error: "Missing or unknown ?fn= (expected 'admins', 'redemptions' or 'content-writes')" });
+  if (fn === 'auth') return adminAuthHandler(req, res);
+  return res.status(400).json({ ok: false, error: "Missing or unknown ?fn= (expected 'admins', 'redemptions', 'content-writes' or 'auth')" });
 }
