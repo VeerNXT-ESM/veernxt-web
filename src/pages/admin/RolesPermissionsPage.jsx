@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Plus, Shield, Trash2, X, Lock } from 'lucide-react';
 
+const ADMIN_SECRET = import.meta.env.VITE_ADMIN_API_SECRET;
+
 const RolesPermissionsPage = () => {
   const [currentSession, setCurrentSession] = useState(null);
   const [adminsList, setAdminsList] = useState([]);
@@ -18,7 +20,9 @@ const RolesPermissionsPage = () => {
 
   const initializeAdminRegistry = async () => {
     try {
-      const res = await fetch('/api/admin/admins');
+      const res = await fetch('/api/admin/admins', {
+        headers: { 'x-admin-api-secret': ADMIN_SECRET }
+      });
       const data = await res.json();
       if (data.ok) setAdminsList(data.admins);
     } catch (err) {
@@ -33,7 +37,7 @@ const RolesPermissionsPage = () => {
     try {
       const res = await fetch('/api/admin/admins', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
         body: JSON.stringify({ action: 'invite', name: newAdmin.name, email: newAdmin.email.trim().toLowerCase(), role: newAdmin.role, permissions: activePerms }),
       });
       const data = await res.json();
@@ -52,15 +56,15 @@ const RolesPermissionsPage = () => {
   };
 
   const handleDeleteAdmin = async (emailToDelete) => {
-    if (emailToDelete.toLowerCase() === 'veernxt.esm@gmail.com') {
-      alert('Access Denied: Super Admin Vivek Talwar cannot be removed to prevent portal lockouts.');
+    if (emailToDelete.toLowerCase() === 'superadmin@veernxt.in' || emailToDelete.toLowerCase() === 'veernxt.esm@gmail.com') {
+      alert('Access Denied: Super Admin cannot be removed to prevent portal lockouts.');
       return;
     }
     if (!window.confirm(`Are you sure you want to revoke administrative privileges for ${emailToDelete}?`)) return;
     try {
       const res = await fetch('/api/admin/admins', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-admin-api-secret': ADMIN_SECRET },
         body: JSON.stringify({ action: 'remove', email: emailToDelete }),
       });
       const data = await res.json();
@@ -117,8 +121,8 @@ const RolesPermissionsPage = () => {
                   <button
                     className="lc-icon-btn danger"
                     onClick={() => handleDeleteAdmin(admin.email)}
-                    disabled={admin.email.toLowerCase() === 'veernxt.esm@gmail.com' || !isSuperAdmin}
-                    title={admin.email.toLowerCase() === 'veernxt.esm@gmail.com' ? 'Cannot delete primary owner' : 'Revoke security credentials'}
+                    disabled={admin.email.toLowerCase() === 'superadmin@veernxt.in' || admin.email.toLowerCase() === 'veernxt.esm@gmail.com' || !isSuperAdmin}
+                    title={admin.email.toLowerCase() === 'superadmin@veernxt.in' || admin.email.toLowerCase() === 'veernxt.esm@gmail.com' ? 'Cannot delete primary owner' : 'Revoke security credentials'}
                   >
                     <Trash2 size={14} />
                   </button>

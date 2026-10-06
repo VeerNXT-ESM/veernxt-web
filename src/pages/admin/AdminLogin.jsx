@@ -11,39 +11,47 @@ const AdminLogin = () => {
   const [forgotEmail, setForgotEmail] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleLogin = async (e) => {
     e.preventDefault();
+    setError('');
     const cleanEmail = email.trim().toLowerCase();
 
-    // Default Super Admin credential
-    if (cleanEmail === 'veernxt.esm@gmail.com' && password === 'veernxtadmin2026') {
-      const sessionData = {
-        email: 'veernxt.esm@gmail.com',
-        name: 'Vivek Talwar',
-        role: 'Super Admin',
-        permissions: ['all']
-      };
-      localStorage.setItem('admin_session', JSON.stringify(sessionData));
-      
-      // Ensure local admin registry is initialized in localStorage
-      const existingAdmins = localStorage.getItem('admin_registry');
-      if (!existingAdmins) {
-        localStorage.setItem('admin_registry', JSON.stringify([sessionData]));
-      }
-      
-      navigate('/admin');
+    if (!cleanEmail || !password) {
+      setError('Please provide both administrator email and password.');
       return;
     }
 
-    // Check against dynamically added admins in local storage registry
-    const registry = JSON.parse(localStorage.getItem('admin_registry') || '[]');
-    const matchedAdmin = registry.find(a => a.email.toLowerCase() === cleanEmail && password === 'veernxtadmin2026'); // simplified password for test
-    
-    if (matchedAdmin) {
-      localStorage.setItem('admin_session', JSON.stringify(matchedAdmin));
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'login', email: cleanEmail, password }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.ok) {
+        setError(data.error || 'Invalid administrator email or password.');
+        setLoading(false);
+        return;
+      }
+
+      // Store authentic admin session from backend
+      const sessionData = {
+        ...data.session.user,
+        token: data.session.token,
+      };
+
+      localStorage.setItem('admin_session', JSON.stringify(sessionData));
       navigate('/admin');
-    } else {
-      setError('Invalid admin credentials. Please use Super Admin login or registered admin credentials.');
+    } catch (err) {
+      console.error('Admin login error:', err);
+      setError('Connection error. Unable to reach authentication server.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -77,9 +85,10 @@ const AdminLogin = () => {
                 <Mail size={18} className="input-icon" />
                 <input 
                   type="email" 
-                  placeholder="name@veernxt.in" 
+                  placeholder="admin.name@veernxt.in" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  disabled={loading}
                   required
                 />
               </div>
@@ -97,6 +106,7 @@ const AdminLogin = () => {
                   placeholder="••••••••••••" 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  disabled={loading}
                   required
                 />
               </div>
@@ -109,13 +119,9 @@ const AdminLogin = () => {
               </div>
             )}
 
-            <button type="submit" className="btn-primary">Access Control Panel</button>
-            
-            <div className="info-box">
-              <strong>Super Admin Login:</strong><br />
-              Email: <code>veernxt.esm@gmail.com</code><br />
-              Password: <code>veernxtadmin2026</code>
-            </div>
+            <button type="submit" className="btn-primary" disabled={loading}>
+              {loading ? 'Authenticating...' : 'Access Control Panel'}
+            </button>
           </form>
         ) : (
           <form onSubmit={handleForgotSubmit} className="login-form animate-fade-in">

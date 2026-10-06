@@ -176,19 +176,32 @@ const SecureReader = () => {
     }
 
     try {
-      // Cache-bust: R2 uploads (including chapter re-saves) all carry a
-      // 1-year Cache-Control (scripts/lib/ingest-drive-content.js's
-      // uploadToR2), with nothing purging a browser's or Cloudflare's
-      // cached copy of this exact URL when the underlying content is
-      // edited in place. Without this, a candidate who opened this chapter
-      // once keeps seeing whatever it looked like on that first load,
-      // indefinitely, even after a real content edit -- confirmed live
-      // 2026-09-15 against a just-enriched Intro (see docs/status_report.md).
-      const chapterUrl = `${res.storage_base_url}chapters/chapter-${index + 1}.json?t=${Date.now()}`;
-      const response = await fetch(chapterUrl);
-      if (!response.ok) throw new Error(`Failed to load chapter ${index + 1}`);
-      
-      const chapterData = await response.json();
+      // 1. Try secure server-gated chapter API first (authenticates session & subscription)
+      let chapterData = null;
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        const token = session?.access_token;
+        const headers = token ? { Authorization: `Bearer ${token}` } : {};
+        const apiUrl = `/api/exams?fn=chapter&resourceId=${encodeURIComponent(res.resource_id)}&chapterIndex=${index}`;
+        const apiResp = await fetch(apiUrl, { headers });
+        if (apiResp.ok) {
+          const payload = await apiResp.json();
+          chapterData = payload.chapter;
+        } else if (apiResp.status === 403) {
+          // Explicit server-side paywall lock
+          return;
+        }
+      } catch (gateErr) {
+        console.warn('Gateway fetch fallback:', gateErr);
+      }
+
+      // 2. Fallback to direct storage fetch if server proxy is unavailable
+      if (!chapterData) {
+        const chapterUrl = `${res.storage_base_url}chapters/chapter-${index + 1}.json?t=${Date.now()}`;
+        const response = await fetch(chapterUrl);
+        if (!response.ok) throw new Error(`Failed to load chapter ${index + 1}`);
+        chapterData = await response.json();
+      }
 
       // Cache the loaded chapter
       chapterCache.current[cacheKey] = chapterData;
