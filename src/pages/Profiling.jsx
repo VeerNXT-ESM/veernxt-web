@@ -39,16 +39,14 @@ const STAGES = [
 //  21   Interests (sewaNidhi)
 //  22   Review
 const QUESTION_STAGE = [
-  'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity',
-  'service', 'service', 'service', 'service', 'service',
-  'service',
-  'academics', 'academics',
-  'academics',
-  'physical',
-  'career',
-  'career',
-  'interests',
-  'review',
+  'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity', 'identity', // 0-8
+  'service', 'service', 'service', 'service', 'service',                                                        // 9-13
+  'service',                                                                                                      // 14 — specific skills
+  'academics', 'academics', 'academics', 'academics',                                                           // 15-18 — qual, NCC, math(NEW), sports
+  'physical',                                                                                                     // 19
+  'career', 'career', 'career',                                                                                  // 20-22 — prefs, relocation, english(NEW)
+  'interests',                                                                                                    // 23
+  'review',                                                                                                       // 24
 ];
 const TOTAL_STEPS = QUESTION_STAGE.length;
 
@@ -197,12 +195,14 @@ const Profiling = () => {
       case 14: return true; // specificSkills — optional but valuable
       case 15: return !!d.highestQualification;
       case 16: return true; // NCC — optional
-      case 17: return true; // sportsAchievement — optional
-      case 18: return !!(d.heightCm && d.weightKg && d.chestCm && d.chestExpansion);
-      case 19: return d.careerPreferences.length > 0;
-      case 20: return !!d.relocation; // always has a default
-      case 21: return true; // interests — optional
-      case 22: return d.consent;
+      case 17: return true; // math/computer in class 12 — optional (always has a default boolean)
+      case 18: return true; // sportsAchievement — optional
+      case 19: return !!(d.heightCm && d.weightKg && d.chestCm && d.chestExpansion);
+      case 20: return d.careerPreferences.length > 0;
+      case 21: return !!d.relocation; // always has a default
+      case 22: return !!d.englishComfort; // always has a default
+      case 23: return true; // interests — optional
+      case 24: return d.consent;
       default: return true;
     }
   };
@@ -416,6 +416,21 @@ const Profiling = () => {
 
       case 17:
         return (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div>
+              <p style={{ margin: '0 0 0.5rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.03em' }}>Did you study Mathematics in Class 12?</p>
+              <ChoiceGroup columns={2} value={d.mathInClass12 === true ? 'Yes' : d.mathInClass12 === false ? 'No' : ''}
+                onChange={(v) => setField('mathInClass12', v === 'Yes')}
+                options={[
+                  { value: 'Yes', label: 'Yes, I had Maths' },
+                  { value: 'No', label: 'No / Not applicable' },
+                ]} />
+            </div>
+          </div>
+        );
+
+      case 18:
+        return (
           <ChoiceGroup columns={2} value={d.sportsAchievement} onChange={(v) => setField('sportsAchievement', v)}
             options={[
               { value: 'None', label: 'None' },
@@ -426,7 +441,7 @@ const Profiling = () => {
             ]} />
         );
 
-      case 18:
+      case 19:
         return (
           <div className="pf-vitals-grid">
             <div className="pf-vitals-field">
@@ -448,13 +463,13 @@ const Profiling = () => {
           </div>
         );
 
-      case 19:
+      case 20:
         return (
           <MultiChoiceGroup columns={2} values={d.careerPreferences} onToggle={(v) => handleMultiSelect('careerPreferences', v)}
             options={['POLICE_CAPF', 'SSC', 'BANKING', 'RAILWAYS', 'TEACHING', 'ENGINEERING', 'NURSING'].map(p => ({ value: p, label: p.replace('_', ' ') }))} />
         );
 
-      case 20:
+      case 21:
         return (
           <ChoiceGroup columns={1} value={d.relocation} onChange={(v) => setField('relocation', v)}
             options={[
@@ -464,19 +479,30 @@ const Profiling = () => {
             ]} />
         );
 
-      case 21:
+      case 22:
+        return (
+          <ChoiceGroup columns={1} value={d.englishComfort} onChange={(v) => setField('englishComfort', v)}
+            options={[
+              { value: 'Basic', label: 'Basic — I can read simple notices in English' },
+              { value: 'Intermediate', label: 'Intermediate — I can write and speak reasonably well' },
+              { value: 'Fluent', label: 'Fluent — I am fully comfortable in written and spoken English' },
+            ]} />
+        );
+
+      case 23:
         return (
           <MultiChoiceGroup columns={2} values={d.sewaNidhiInterests} onToggle={(v) => handleMultiSelect('sewaNidhiInterests', v)}
             options={['Agriculture', 'Small Business', 'Security Agency', 'Transport', 'Skill Training', 'Tourism'].map(i => ({ value: i, label: i }))} />
         );
 
-      case 22:
+      case 24:
         return (
           <div>
             <div className="pf-summary-card">
               <p><strong>Name:</strong> {d.fullName || '—'}</p>
               <p><strong>Service branch:</strong> {d.serviceBranch || '—'}</p>
               <p><strong>Qualification:</strong> {d.highestQualification || '—'}</p>
+              <p><strong>English Comfort:</strong> {d.englishComfort || '—'}</p>
             </div>
             <Button type="button" variant="ghost" size="sm" onClick={() => setShowFullApplication(true)} style={{ marginBottom: '1.25rem' }}>
               View full application
@@ -602,29 +628,31 @@ const Profiling = () => {
 };
 
 const QUESTION_TITLES = [
-  "What's your full name?",
-  'When were you born?',
-  'Which reservation category do you belong to?',
-  'Do you have a disability (PwD)?',
-  "What's your marital status?",
-  "What's your state of domicile?",
-  'Which district?',
-  "What's your email address?",
-  "What's your mobile number?",
-  'Which service branch did you serve in?',
-  'Which arm or corps were you part of?',
-  'What was your role or appointment?',
-  'How long did you serve?',
-  'What was your character on discharge?',
-  'Any key skills from your service?',
-  "What's your highest qualification?",
-  'Do you hold an NCC certification?',
-  'Did you represent in sports?',
-  'A few physical fitness details',
-  'Which career tracks interest you most?',
-  'Where are you open to relocating for a job?',
-  'Interested in Sewa Nidhi opportunities?',
-  'Review and confirm',
+  "What's your full name?",                        // 0
+  'When were you born?',                            // 1
+  'Which reservation category do you belong to?',  // 2
+  'Do you have a disability (PwD)?',               // 3
+  "What's your marital status?",                   // 4
+  "What's your state of domicile?",                // 5
+  'Which district?',                               // 6
+  "What's your email address?",                    // 7
+  "What's your mobile number?",                    // 8
+  'Which service branch did you serve in?',        // 9
+  'Which arm or corps were you part of?',          // 10
+  'What was your role or appointment?',            // 11
+  'How long did you serve?',                       // 12
+  'What was your character on discharge?',         // 13
+  'Any key skills from your service?',             // 14
+  "What's your highest qualification?",            // 15
+  'Do you hold an NCC certification?',             // 16
+  'Did you study Maths or Computer Science in Class 12?', // 17 (NEW)
+  'Did you represent in sports?',                  // 18
+  'A few physical fitness details',                // 19
+  'Which career tracks interest you most?',        // 20
+  'Where are you open to relocating for a job?',   // 21
+  'How comfortable are you in English?',           // 22 (NEW)
+  'Interested in Sewa Nidhi opportunities?',       // 23
+  'Review and confirm',                            // 24
 ];
 
 const QUESTION_HELP = [
@@ -645,10 +673,12 @@ const QUESTION_HELP = [
   'Optional — select all that apply. These help us match you to civilian roles aligned with your military trade.',
   undefined,
   'Optional — NCC certification is a small scoring bonus on many exams.',
+  'Optional — having Maths or Computer Science in Class 12 opens certain technical and banking exams and can improve your score.',
   'Optional — sports representation is a meaningful bonus for police, defence, and railways exams.',
   'These map against physical eligibility standards for specific exams.',
   'Select every track you would seriously consider — the more, the better we can match you.',
   "This controls which state-level exams we show you. Selecting 'Anywhere in India' opens the full national pool.",
+  'This affects your score on banking exams (Officer vs Clerk track), civil services, and any English-intensive role — be honest for the most accurate match.',
   'Optional — entrepreneurship and reintegration support programmes.',
   "Take one last look before we calculate your VeerScore and matches.",
 ];

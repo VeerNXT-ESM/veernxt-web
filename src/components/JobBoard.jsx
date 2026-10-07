@@ -12,6 +12,7 @@ import ExamContentPreview from './ExamContentPreview';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { CAREER_TRACK_META, CAREER_TRACK_ORDER, hexToRgba } from '../lib/careerTrack';
+import { scoreJobsForProfile, isPersonalizationActive } from '../lib/jobMatcher';
 
 const RESULTS_PER_PAGE = 10;
 
@@ -77,10 +78,24 @@ const JobCard = ({ job, idx, isActive, onSelect, onDismiss, getAvatarColor, calc
             <span className="job-veteran-badge"><ShieldCheck size={11} /> Veteran Friendly</span>
           )}
           {isV2 && <span className="job-v2-badge"><Zap size={10} /> AI Enhanced</span>}
-          {!isV2 && idx % 3 === 0 && (
+          {job._matchScore > 0 && (
+            <span className="job-match-score-badge">
+              <Sparkles size={10} /> {job._matchScore}% match
+            </span>
+          )}
+          {!isV2 && !job._matchScore && idx % 3 === 0 && (
             <span className="job-card-insight-badge"><Award size={11} /> Actively reviewing</span>
           )}
         </div>
+
+        {/* Personalization match reasons — shown when profile-based scoring active */}
+        {Array.isArray(job._matchReasons) && job._matchReasons.length > 0 && (
+          <div className="job-match-reasons">
+            {job._matchReasons.slice(0, 2).map((reason, i) => (
+              <span key={i} className="job-match-reason-chip">{reason}</span>
+            ))}
+          </div>
+        )}
 
         {/* V2-only: hashtag chips */}
         {displayTags.length > 0 && (
@@ -522,11 +537,18 @@ const JobBoard = () => {
     !bodySearch.trim() || (job.body || '').toLowerCase().includes(bodySearch.trim().toLowerCase())
   );
 
-  const candidateKeywords = ['developer', 'graphic', 'game', 'designer', 'creative', 'artist', 'lip sync', 'dubbing', 'ai', 'intern', 'operations', 'video'];
-  const matchedList = visibleJobs.filter(job =>
-    job && job.title && candidateKeywords.some(keyword => job.title.toLowerCase().includes(keyword))
-  );
-  const profileMatchedList = matchedList.length > 0 ? matchedList : visibleJobs;
+  // Dynamic profile-based job scoring — replaces the hardcoded keyword filter.
+  // Uses the candidate's trade, qualifications, domicile and preferences to score every job.
+  const profileMatchedList = React.useMemo(() => {
+    if (!profileData) {
+      // No profile loaded yet — return by recency
+      return [...visibleJobs];
+    }
+    const scored = scoreJobsForProfile(visibleJobs, profileData);
+    return scored;
+  }, [visibleJobs, profileData]);
+
+  const personalizationActive = isPersonalizationActive(profileMatchedList);
 
   const closingSoonJobs = visibleJobs.filter(job => /^Closes/.test(calculateDaysAgo(job.publishedOn)));
   const veteranFriendlyJobs = visibleJobs.filter(isVeteranFriendly);
@@ -547,7 +569,12 @@ const JobBoard = () => {
       const db = b.publishedOn ? new Date(b.publishedOn).getTime() : Infinity;
       return da - db;
     }
-    return 0; // relevance = keep incoming order (already newest-scraped-first)
+    // relevance = keep score order when personalization is active (Recommended tab),
+    // otherwise keep incoming order (already newest-scraped-first)
+    if (sortBy === 'relevance' && resultTab === 'recommended' && personalizationActive) {
+      return (b._matchScore || 0) - (a._matchScore || 0);
+    }
+    return 0;
   });
 
   const totalPages = Math.ceil(sortedResultJobs.length / RESULTS_PER_PAGE) || 1;
@@ -1207,6 +1234,34 @@ const JobBoard = () => {
           font-size: 0.68rem;
           font-weight: 800;
           padding: 0.2rem 0.5rem;
+        }
+        .job-match-score-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.3rem;
+          background: linear-gradient(135deg, #1a472a, #2d6a4f);
+          color: #fff;
+          font-size: 0.68rem;
+          font-weight: 800;
+          padding: 0.2rem 0.55rem;
+          border-radius: 20px;
+          letter-spacing: 0.01em;
+        }
+        .job-match-reasons {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px;
+          margin-top: 0.4rem;
+          margin-bottom: 0.3rem;
+        }
+        .job-match-reason-chip {
+          font-size: 0.68rem;
+          padding: 0.15rem 0.5rem;
+          border-radius: 4px;
+          background: #f0fdf4;
+          color: #166534;
+          border: 1px solid #bbf7d0;
+          font-weight: 600;
         }
         .job-card-footer {
           display: flex;
