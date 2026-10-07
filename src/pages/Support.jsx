@@ -1,7 +1,14 @@
 import React from 'react';
 import { Mail, Phone, MapPin, ShieldCheck } from 'lucide-react';
+import { useSeo } from '../lib/useSeo';
 
 const Support = () => {
+  useSeo({
+    title: 'Support & Contact',
+    description: 'Get in touch with the VeerNXT team for help with profiling, preparation materials, or your account.',
+    path: '/support',
+  });
+
   return (
     <div className="animate-fade-in" style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto' }}>
       <div className="ios-card" style={{ padding: '3rem' }}>

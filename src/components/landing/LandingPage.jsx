@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
+import { useSeo } from '../../lib/useSeo';
 
 // ─── NAVBAR ──────────────────────────────────────────────────────────────────
 
@@ -605,16 +606,24 @@ const LandingFooter = () => {
 
 // ─── LANDING PAGE ─────────────────────────────────────────────────────────────
 
-export const LandingPage = () => (
-  <div className="bg-[#0a0a0a]">
-    <NavBar />
-    <Hero />
-    <WhatIsVeerNXT />
-    <PrimaryServiceOfferings />
-    <OnboardingProcess />
-    <RegulatoryCompliance />
-    <EmployerPortal />
-    <CTASection />
-    <LandingFooter />
-  </div>
-);
+export const LandingPage = () => {
+  useSeo({
+    title: 'VeerNXT Portal | Empowering Ex-Servicemen',
+    description: 'VeerNXT Portal provides intelligent career profiling, skill mapping, and job recommendations for ex-servicemen transitioning to civilian life.',
+    path: '/',
+  });
+
+  return (
+    <div className="bg-[#0a0a0a]">
+      <NavBar />
+      <Hero />
+      <WhatIsVeerNXT />
+      <PrimaryServiceOfferings />
+      <OnboardingProcess />
+      <RegulatoryCompliance />
+      <EmployerPortal />
+      <CTASection />
+      <LandingFooter />
+    </div>
+  );
+};

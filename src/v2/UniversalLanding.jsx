@@ -2,9 +2,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import SectionBanner from './SectionBanner';
 import { V2_SECTIONS } from './sections';
+import { useSeo } from '../lib/useSeo';
 
 /** The universal landing page: pick a section. Dashboard lives behind the avatar. */
 export default function UniversalLanding() {
+  useSeo({ noindex: true });
   return (
     <>
       <SectionBanner

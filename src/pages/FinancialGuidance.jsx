@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../lib/supabase';
+import { useSeo } from '../lib/useSeo';
 import {
   QUESTIONS,
   AMOUNT_OPTIONS,
@@ -67,6 +68,12 @@ const FinancialGuidance = () => {
   const [userEmail, setUserEmail] = useState('');
   const [userId, setUserId] = useState(null);
   const [saving, setSaving] = useState(false);
+
+  useSeo({
+    title: 'Financial Guidance for Ex-Servicemen',
+    description: 'Personalized financial planning, corpus allocation, and investment guidance to help veterans and Agniveers secure their second career.',
+    path: '/financial-guidance',
+  });
 
   // Load user profile from Supabase session
   useEffect(() => {

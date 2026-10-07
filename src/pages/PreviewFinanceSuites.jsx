@@ -3,6 +3,7 @@ import FinancialServicesSuite from '../components/finance/FinancialServicesSuite
 import GoalPlanningSuite from '../components/finance/GoalPlanningSuite';
 import FinancialPlanningSuite from '../components/finance/FinancialPlanningSuite';
 import { Sparkles, Layers, Landmark, TrendingUp, ShieldCheck } from 'lucide-react';
+import { useSeo } from '../lib/useSeo';
 
 /**
  * PreviewFinanceSuites
@@ -11,6 +12,8 @@ import { Sparkles, Layers, Landmark, TrendingUp, ShieldCheck } from 'lucide-reac
  */
 const PreviewFinanceSuites = () => {
   const [activeTab, setActiveTab] = useState('all');
+
+  useSeo({ noindex: true });
 
   return (
     <div className="min-h-screen bg-[#0f172a] text-white">

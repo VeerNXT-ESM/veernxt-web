@@ -5,6 +5,7 @@ import SectionBanner from './SectionBanner';
 import { ExamCard } from './ExamCard';
 import { useExamCatalog, LEVELS, regionsForLevel, categoriesForLevel } from './useExamCatalog';
 import { CENTRAL_EXAM_CATEGORIES } from '../lib/centralExamCategories';
+import { useSeo } from '../lib/useSeo';
 
 const PAGE_SIZE = 60;
 
@@ -16,6 +17,7 @@ const PAGE_SIZE = 60;
  *   /v2/learning/all?q=...              search across every level; side filter = level
  */
 export default function LearningBrowse() {
+  useSeo({ noindex: true });
   const { level } = useParams();
   const [params, setParams] = useSearchParams();
   const { catalog, loading, error } = useExamCatalog();

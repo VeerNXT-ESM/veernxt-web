@@ -5,6 +5,7 @@ import SectionBanner from './SectionBanner';
 import { GroupTile } from './ExamCard';
 import { useExamCatalog, LEVELS, regionsForLevel, categoriesForLevel } from './useExamCatalog';
 import { CENTRAL_EXAM_CATEGORIES } from '../lib/centralExamCategories';
+import { useSeo } from '../lib/useSeo';
 
 const FEATURES = [
   { icon: BookOpen, title: 'Comprehensive Study Material', text: 'Syllabus, notes and guides', to: null },
@@ -39,6 +40,7 @@ function Row({ level, items, loading, buildTo, imageCategory }) {
 }
 
 export default function LearningHome() {
+  useSeo({ noindex: true });
   const navigate = useNavigate();
   const { catalog, loading, error } = useExamCatalog();
   const [query, setQuery] = useState('');

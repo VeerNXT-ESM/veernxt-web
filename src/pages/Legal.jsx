@@ -1,6 +1,13 @@
 import React from 'react';
+import { useSeo } from '../lib/useSeo';
 
 const Legal = () => {
+  useSeo({
+    title: 'Legal & Terms',
+    description: "VeerNXT's Terms and Conditions covering use of the platform, intellectual property, payments, and liability.",
+    path: '/legal',
+  });
+
   return (
     <div className="animate-fade-in" style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto' }}>
       <div className="ios-card" style={{ padding: '3rem' }}>

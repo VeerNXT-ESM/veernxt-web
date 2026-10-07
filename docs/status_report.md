@@ -6,6 +6,8 @@
 
 **🎯 Next session starts here**: §71.10 — the content team is reviewing the two **"GS & GK 2026 NEW"** preview books (links in §71.5); act on their feedback, then reparse the next linked book the same way (WYSIWYG parser §71.3, structure fixes on a DOCX copy, preview upload, no live replacement until sign-off §71.8). The earlier admin-login pointer (§70.8) may already be addressed by teammate commit `ed7a5de` (§71.10).
 
+**🎯 Newest (2026-10-07, later)**: §73 — new `/v2` universal landing + Learning module is pushed to `main` (old routes untouched); **start with `docs/HANDOVER_V2_LEARNING_2026-10-07.md`** (written for Shreya). Not browser-tested yet. Phase 2 = Jobs module.
+
 **🎯 Latest (2026-10-07)**: §72 — 50 "2026 NEW" Draft books created and ready for content-team review; **start with `docs/BOOK_REPARSE_REFERENCE.md`** (runbook, mapping, open items); waiting for their feedback and the English Guide source (§72.5).
 
 *(Prior pointer, now superseded — kept for history)* §70.8 — the **Roles & Permissions / admin login** work. The admin login screen printed the shared admin username and password on the page, and the check was done in the browser; the plan was real per-user admin accounts, first for the 7 core-team testers (§70.6).
@@ -3277,3 +3279,27 @@ Swap (repoint `lc_exam_resource_map` to the new row per book, de-duplicated; dro
 - Discovered: in this app an **archived book is just status Draft**, so the new Draft books show under *Show archived* on admin Book Content (review them in `/dev-reader`).
 - New small scripts: `scripts/rebuild_review_index.mjs`, `scripts/build_swap_map.cjs`; `bulk_reparse_books.mjs --rollback <results> --only "<title>"` rolls back a single book (rollback still untested).
 - **Waiting for:** content-team feedback; the English Guide source decision. **Next after sign-off:** the swap and purge (planned, not built; see the reference, section 7).
+
+## 73. Session of 2026-10-07 (later): v2 universal landing + Learning module; SEO work committed
+
+### 73.1 Direction from the product owner
+Content team wants the learning area restructured. Signed-in users should not land on the student dashboard; they land on a **universal landing page** with four sections (Learning, Jobs, Finance, Legal). The dashboard is reached from the avatar; messaging is a chat icon beside the avatar; each section becomes its own module (like Finance) with its own links and a banner stating where you are. Learning home follows the approved screenshot; Central / State / UT exams appear as rows; the browse page's left filter is Central categories, States, or UTs. **Old files are not overwritten** — everything is a new `/v2` route set; extraneous files get removed later. Finance and Legal pages are fine and **must not be touched**. Jobs combines in Phase 2. Visibility: everyone (testers only today). Individual exam pages: later.
+
+### 73.2 Built (Phase 1 — Learning module only)
+New `src/v2/`: `V2Layout`, `sections.js`, `SectionBanner`, `UniversalLanding`, `LearningHome`, `LearningBrowse`, `ExamCard`, `useExamCatalog`, `v2.css`. Routes (in `App.jsx`, behind `AuthGuard`): `/v2`, `/v2/learning`, `/v2/learning/:level` (`central|state|ut|all`, filters by `?category=` / `?region=` / `?q=`), `/v2/me` (existing Dashboard), `/v2/messages` (existing MessagingWorkspace). `AccountMenu` got an optional `profilePath` prop (default unchanged). Reuses the `lc_exams` catalog query, `centralExamCategories.js`, and the category thumbnail store (solid colour block fallback). Full file/cookbook detail: **`docs/HANDOVER_V2_LEARNING_2026-10-07.md`** (written for Shreya).
+
+### 73.3 Verification (honest)
+ESLint clean on `src/v2` and `App.jsx`; production `vite build` succeeds. **Not click-tested in a browser** (no browser tool in this environment — same standing gap) and not checked against live data beyond the build. First task for whoever picks it up: click through the URL table in the handover §2, at desktop and phone width.
+
+### 73.4 Git
+- `5556a95` pushed to `main`: v2 module. The first push was rejected (teammate commits `31cdec4`, `2200518` — Engine/ProfilingTester); merged with `git merge origin/main` (no conflicts, no stash), re-linted and re-built, then pushed.
+- That commit initially dropped `useSeo` from the v2 pages (the file was untracked). Now the SEO work is committed too: `src/lib/useSeo.js`, `useSeo` calls in LandingPage, FinancialGuidance, Legal, LegalAidCell, PreviewFinanceSuites (noindex), PrivacyPolicy, Support, plus `public/robots.txt` (now also `Disallow: /v2`) and `public/sitemap.xml`; the three v2 pages use `useSeo({ noindex: true })` again. Lint: 0 errors (pre-existing unused-var warnings only); build OK. Note useSeo's own comment: it helps JS-executing crawlers only, not social-link previews, until routes are prerendered.
+- Deliberately still uncommitted: the 90+ `public/` image deletions (looks like a reorganisation — confirm before committing), `FINAL_*_STRUCTURED/`, `books/`, `docs/*.xlsx` exports, `FlipbookReader.*`, `scripts/set_tester_tier.mjs`.
+
+### 73.5 Open / next
+1. Click-test `/v2` flow; fix what the content team flags (Shreya).
+2. "← Home" link back to `/v2` on Finance and Legal pages — needs permission since they are off-limits.
+3. **Phase 2:** combine Jobs (JobBoard + Private Sector) into a `/v2/jobs` module.
+4. Cut-over: `RootRoute` → `/v2`; then remove old Learning Center/Header/BottomNav (handover §7).
+5. Employer accounts in v2; individual exam pages in v2 (both deferred).
+6. Still open from earlier: the English Guide source decision, content-team sign-off on the 50 "2026 NEW" books (§72), credential rotation.

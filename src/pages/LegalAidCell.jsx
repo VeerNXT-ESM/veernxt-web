@@ -16,6 +16,7 @@ import {
   composeProfileLine,
 } from '../lib/legalAidCellConfig';
 import './LegalAidCell.css';
+import { useSeo } from '../lib/useSeo';
 
 const initialState = {
   urgent: false,
@@ -52,6 +53,12 @@ const LegalAidCell = () => {
   const [state, setState] = useState(initialState);
   const [history, setHistory] = useState([]);
   const [historyLoading, setHistoryLoading] = useState(true);
+
+  useSeo({
+    title: 'Legal Aid Cell for Ex-Servicemen',
+    description: "Free and assisted legal aid services for ex-servicemen -- get guidance, raise a case, and track resolution with the VeerNXT Legal Aid Cell.",
+    path: '/legal-aid',
+  });
 
   const patch = (updater) => setState((s) => ({ ...s, ...(typeof updater === 'function' ? updater(s) : updater) }));
 

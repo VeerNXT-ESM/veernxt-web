@@ -1,6 +1,13 @@
 import React from 'react';
+import { useSeo } from '../lib/useSeo';
 
 const PrivacyPolicy = () => {
+  useSeo({
+    title: 'Privacy Policy',
+    description: "How VeerNXT collects, uses, and protects your personal data as an ex-servicemen career and benefits platform.",
+    path: '/privacy',
+  });
+
   return (
     <div className="animate-fade-in" style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto' }}>
       <div className="ios-card" style={{ padding: '3rem' }}>
