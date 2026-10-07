@@ -3303,3 +3303,11 @@ ESLint clean on `src/v2` and `App.jsx`; production `vite build` succeeds. **Not 
 4. Cut-over: `RootRoute` → `/v2`; then remove old Learning Center/Header/BottomNav (handover §7).
 5. Employer accounts in v2; individual exam pages in v2 (both deferred).
 6. Still open from earlier: the English Guide source decision, content-team sign-off on the 50 "2026 NEW" books (§72), credential rotation.
+
+### 73.6 End of day 2026-10-07 — scope confirmed, routing verified
+- **Scope (product owner):** only the `/v2` universal landing and the Learning module are new. Every other page (Finance, Legal Aid, Terms/Privacy/Support, Jobs, etc.) stays the original site and uses the old site as its return point. Other modules get looked at after the Learning center is fleshed out.
+- **Verified by git diff (0b02e38 → HEAD), not browser:** `App.jsx` has only the 4 v2 imports plus one `/v2/*` Route block added (the `/admin/profiling-tester` line is a teammate's); no old route edited/removed. `RootRoute` still sends signed-in users to `/dashboard`. `Header`, `BottomNav`, `LearningCenter`, `Dashboard` untouched. Finance/Legal Aid differ only by the approved `useSeo` calls and contain no `/v2` links. The Finance/Legal "← Home" link was rolled back (`c589ad9`).
+- **Incident:** `git add docs` in that revert commit staged and pushed 30 untracked exports (xlsx/docx audits, ThemeEditor docs). Untracked again in `2cc4a6c` (local files kept); they remain in git history. **Decision pending:** force-push history rewrite — recommended if `docs/Contact Information (Responses).xlsx` holds real personal data. Lesson: stage by explicit path only.
+- **Small open choice:** `/v2/me` and `/v2/messages` show the existing Dashboard/Messaging inside the v2 header (avatar → dashboard as requested). Can be pointed back to `/dashboard` and `/messaging` if only landing + Learning should be new.
+- **Not done / next:** browser click-through of `/v2` at desktop and phone width (first task, Shreya); Learning enhancements (Continue learning, Recommended, Popular rows; v2 exam pages); Phase 2 Jobs module; cut-over of `RootRoute` → `/v2` only after sign-off. Handover: `docs/HANDOVER_V2_LEARNING_2026-10-07.md`.
+- Still open from earlier: English Guide source decision, content-team sign-off on the 50 "2026 NEW" books (§72), credential rotation.
