@@ -1,6 +1,6 @@
 # Content-team review: the "2026 NEW" books (2026-10-07)
 
-48 books have been re-created from their DOCX files, as **NEW** books. The live books and every exam link are untouched. Nothing here is visible to learners (the new books are Drafts and linked to no exam). Please go through them and flag anything wrong; when you are happy, we swap them in for the old books.
+50 books have been re-created from their DOCX files, as **NEW** books. The live books and every exam link are untouched. Nothing here is visible to learners (the new books are Drafts and linked to no exam). Please go through them and flag anything wrong; when you are happy, we swap them in for the old books.
 
 ## How to review
 1. Open a link in the table below (a sidebar lists the chapters; the dropdown at the top of the sidebar switches book). Any book can also be opened at a chapter with `&ch=N` on the end of the link.
@@ -15,7 +15,7 @@
 - Tables: all columns and rows, no cut-off text. (Tables are now plain white with no outlines, as requested.)
 - The cover page picture for each subject.
 
-## The 48 books ready to review
+## The 50 books ready to review
 (Ordered by the number of exams the old book is linked to.)
 
 | Book | Exams (old book) | Chapters | Subjects | Things we noticed (please look here first) | Open |
@@ -23,6 +23,7 @@
 | GS & GK 2026 NEW (Guide) | 1130 | 66 | 7 | - | [open](https://www.veernxt.in/dev-reader?book=guide-gs-gk-2026-new) |
 | GS & GK 2026 NEW (Precis) | 1130 | 128 | 7 | - | [open](https://www.veernxt.in/dev-reader?book=precis-gs-gk-2026-new) |
 | Mathematics 2026 NEW (Guide) | 1013 | 7 | 1 | - | [open](https://www.veernxt.in/dev-reader?book=guide-mathematics-2026-new) |
+| MATHEMATICS 2026 NEW (Precis) | 1013 | 20 | - | - | [open](https://www.veernxt.in/dev-reader?book=precis-mathematics-2026-new) |
 | ENGLISH 2026 NEW (Precis) | 939 | 21 | - | 4 chapters with under 4 blocks | [open](https://www.veernxt.in/dev-reader?book=precis-english-2026-new) |
 | Reasoning 2026 NEW (Guide) | 920 | 6 | 5 | - | [open](https://www.veernxt.in/dev-reader?book=guide-reasoning-2026-new) |
 | REASONING 2026 NEW (Precis) | 920 | 15 | - | chapters detected from formatting (no heading styles): 15; oversized chapters: CHAPTER  15 FULL PRACTICE PAPE (376) | [open](https://www.veernxt.in/dev-reader?book=precis-reasoning-2026-new) |
@@ -65,17 +66,19 @@
 | Chhattisgarh GS (SI) 2026 NEW (Guide) | 11 | 16 | - | Table of Contents chapter dropped | [open](https://www.veernxt.in/dev-reader?book=guide-chhattisgarh-gs-si-2026-new) |
 | Himachal Pradesh GS (CONSTABLE) 2026 NEW (Guide) | 10 | 13 | - | - | [open](https://www.veernxt.in/dev-reader?book=guide-himachal-pradesh-gs-constable-2026-new) |
 | Karnataka GS (CONSTABLE) 2026 NEW (Guide) | 9 | 17 | - | - | [open](https://www.veernxt.in/dev-reader?book=guide-karnataka-gs-constable-2026-new) |
+| Metro_Technical_Knowledge 2026 NEW (Guide) | 3 | 51 | - | oversized chapters: Chapter 46: Practice MCQs - Se (306); Chapter 47: Practice MCQs - Se (362); Chapter 48: Practice MCQs - Se (378); Chapter 49: Practice MCQs - Se (357); Chapter 50: Practice MCQs - Se (311) | [open](https://www.veernxt.in/dev-reader?book=guide-metro-technical-knowledge-2026-new) |
 | MATHS AND REASONING 2026 NEW (Guide) | 2 | 13 | 6 | - | [open](https://www.veernxt.in/dev-reader?book=guide-maths-and-reasoning-2026-new) |
 | Delhi Police Driver Traffic Rules 2026 NEW (Guide) | 1 | 13 | - | Table of Contents chapter dropped | [open](https://www.veernxt.in/dev-reader?book=guide-delhi-police-driver-traffic-rules-2026-new) |
 | ELECTRICAL ENGINEERING 2026 NEW (Precis) | 1 | 20 | - | chapters detected from formatting (no heading styles): 20; 9 chapters with under 4 blocks | [open](https://www.veernxt.in/dev-reader?book=precis-electrical-engineering-2026-new) |
 
 ## Needed from the content team
-### A. Books we could not create yet: please name the final DOCX (put it in the MASTER DOCUMENTS folder or send the path)
-We compared the old live text with every file in MASTER DOCUMENTS: no file matches these two. The master Guide English is a different book (0.2% text overlap with the old live one), and nothing resembles Metro Technical Knowledge.
+### A. English (Guide): which file is final? (the only book still waiting)
+The live "ENGLISH" Guide (939 exams, 26 chapters) is really the **English Precis** content filed as a Guide: its stored title is "ENGLISH PRECIS", all 26 chapters were AI-enriched, and chapters 14 to 26 are broken (no chapter 14, and from 19 on sub-headings were turned into chapters).
+We compared its text with every English file in the library: it is **100% identical to `DEPRECATED/.../Precis/English/Cluster_002_ENGLISH.docx`** (and to copies such as `SSC Scientific Assistant (IMD)/3. PRECIS/ENGLISH.docx`). The newer master file `Precis/English/Cluster_005_ENGLISH.docx` (21 chapters, already built as "ENGLISH 2026 NEW (Precis)") shares only 0.2% of that text: it is a different, rewritten edition.
+**Decision needed:** should the English *Guide* be (a) the master English edition (Cluster_005, the same book as the Precis), (b) the old edition (Cluster_002, rebuilt cleanly), or (c) a different Guide document you will provide? Until then no "ENGLISH 2026 NEW (Guide)" exists.
 | Book | Exams | Old source file name | Note |
 |---|---:|---|---|
 | ENGLISH (Guide) | 939 | Cluster_087_ENGLISH.docx | The master folder has a newer Guide English (21 chapters) than the old live one (26 chapters): which is final? |
-| Metro_Technical_Knowledge (Guide) | 3 | Metro_Technical_Knowledge.docx |  |
 
 ### A2. Old books with IDENTICAL content to another book (one new book serves both)
 We compared the old live text with the files in MASTER DOCUMENTS (by text, not by file name). These pairs are the same book published twice under two names ("GS" and "SI / CONSTABLE"), so only one new book exists for each pair. At the swap, both old books' exams will point to that one new book. **Please confirm one title is right for each** (the new book carries the name of the master file).
@@ -88,8 +91,10 @@ We compared the old live text with the files in MASTER DOCUMENTS (by text, not b
 | Himachal Pradesh GS (Guide, 18 exams) | Himachal Pradesh GS (CONSTABLE) (Guide) 2026 NEW | 100% |
 | Karnataka GS (Guide, 21 exams) | Karnataka GS (CONSTABLE) (Guide) 2026 NEW | 99.4% |
 
-### B. Book with no usable structure
-- **Mathematics (Precis)**, file `Cluster_003_MATHEMATICS.docx`: the document has only "1.1, 1.2 ..." sub-section titles and no chapter names anywhere, so chapters cannot be built. The master file also shares only 9% of its text with the old live Mathematics Precis, so please confirm it is the final one. Please add the chapter titles (Heading 1) or tell us the chapter names and we will add them.
+### B. Found and built (for information)
+- **Mathematics (Precis):** the master file `Cluster_003_MATHEMATICS.docx` is NOT the source of the live book (it has no chapter names and only 9% of the live text). The live book was replaced on 2026-09-21 from `CLIENT ASSETS/VeerNXT/Mathematics_Precis_FULL_fixed.docx` (100% text match, 20 named chapters, 22 images). The new "MATHEMATICS 2026 NEW (Precis)" is built from that file.
+- **Metro Technical Knowledge (Guide):** its source `CLIENT ASSETS/VeerNXT/Metro_Technical_Knowledge.docx` (100% text match, 51 chapters, five "Practice MCQs" chapters of 300+ blocks each). Built as "Metro_Technical_Knowledge 2026 NEW".
+- Please make sure these two files are the final ones; if the content team has newer versions, put them in MASTER DOCUMENTS and tell us.
 
 ### C. Questions from the review so far
 - **GS & GK Guide, Geography:** chapter numbering jumps from 36 to 38. Is a chapter 37 missing?

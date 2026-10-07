@@ -111,6 +111,18 @@ const TEXT_MATCH = {
   'Guide|Karnataka GS': { file: 'Guide/GS BOOK STATE/Karnataka_CONSTABLE (1).docx', pct: 99.4, sameAs: 'Guide|Karnataka GS (CONSTABLE)' },
   'Guide|ELECTRICAL ENGINEERING': { file: 'Precis/Unlabeled/Cluster_044_ELECTRICAL ENGINEERING.docx', pct: 99.8, sameAs: 'Precis|ELECTRICAL ENGINEERING' },
 };
+// Sources that live OUTSIDE the content library (found 2026-10-07 by matching text against the live books; both are 100%):
+//  - Mathematics Precis: replaced live on 2026-09-21 by scripts/replace_mathematics_precis_book.mjs from this file (20 chapters, 22 images)
+//  - Metro Technical Knowledge: file sits next to it in CLIENT ASSETS/VeerNXT (the live book has 50 chapters)
+const EXTERNAL_SOURCES = {
+  'Precis|MATHEMATICS': { file: String.raw`K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\Mathematics_Precis_FULL_fixed.docx`, pct: 100 },
+  'Guide|Metro_Technical_Knowledge': { file: String.raw`K:\H DRIVE\Quantum Climb\CLIENT ASSETS\VeerNXT\Metro_Technical_Knowledge.docx`, pct: 100 },
+};
+for (const e of entries) {
+  const x = EXTERNAL_SOURCES[`${e.category}|${e.oldTitle}`];
+  if (x && fs.existsSync(x.file)) { e.source = x.file; e.status = 'ready'; e.textMatch = { file: x.file, pct: x.pct }; e.note = `source outside the content library, text matches the live book ${x.pct}%`; }
+}
+
 // titles and slugs (unique per category)
 const seen = new Map();
 entries.sort((a, b) => b.examsLinked - a.examsLinked);
