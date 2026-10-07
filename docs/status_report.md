@@ -6,6 +6,8 @@
 
 **🎯 Next session starts here**: §71.10 — the content team is reviewing the two **"GS & GK 2026 NEW"** preview books (links in §71.5); act on their feedback, then reparse the next linked book the same way (WYSIWYG parser §71.3, structure fixes on a DOCX copy, preview upload, no live replacement until sign-off §71.8). The earlier admin-login pointer (§70.8) may already be addressed by teammate commit `ed7a5de` (§71.10).
 
+**🎯 Latest (2026-10-07)**: §72 — 47 "2026 NEW" Draft books created and ready for content-team review (`docs/CONTENT_TEAM_REVIEW_2026_NEW_BOOKS.md`); waiting for their feedback; 10 books still need a source DOCX or a styled copy (§72.2).
+
 *(Prior pointer, now superseded — kept for history)* §70.8 — the **Roles & Permissions / admin login** work. The admin login screen printed the shared admin username and password on the page, and the check was done in the browser; the plan was real per-user admin accounts, first for the 7 core-team testers (§70.6).
 
 *(Prior pointer, now superseded — kept for history)* §50 — suggested improvements for the PYQ Papers/Quizzes admin pages (bulk exam auto-link, bilingual-aware PYQ editing, a "new PYQ paper" flow, the `is_freemium`/`is_locked` mismatch, bulk question import, duplicate/clone). §50.1's stale-R2-cache fix (chapter/metadata fetches now cache-busted) should also get checked with the actual content-team members who reported the blank-Intro bug, to confirm it's actually resolved for them, not just verified at the HTTP level. Also still open: §48.1's 117-vs-32 categorized mislinked-Introduction breakdown, the live "Haryana_GS" Guide/Precis split (§48.5), and credential rotation (five sessions, zero rotated — §46.5, §45.8, §43.9).
@@ -3245,3 +3247,20 @@ No live book is replaced until all linked books are reparsed and the content tea
 - Cosmetic: General Science sub-sections read "GENERAL SCIENCE › SECTION A : PHYSICS", then "SECTION B : CHEMISTRY", "SECTION C : BIOLOGY".
 - Housekeeping: old preview prefixes on R2 (`Preview/gkgs-2026`, `gkgs-precis-2026`, `gsgk-precis-2026`) can be deleted; a half-deleted local folder `FINAL_BOOKS_STRUCTURED/Guide/guide-gs-gk-2026-new` is locked by Windows (the live copy is `.../Guide/gsgk-guide-2026-new`); the 105 `public/` deletions (§70.2) are still uncommitted and the generated folders (FINAL_*_STRUCTURED/, books/) stay untracked.
 - §70.8 (admin login hazard): teammate commit `ed7a5de` ("secure authentication system, profile management, first-login workflow") appears to address it; not reviewed or tested by me. Verify before treating §70.8 as done.
+
+## 72. Session of 2026-10-07: bulk reparse executed, 47 "2026 NEW" Draft books created for content-team review
+
+### 72.1 What was done
+- Product-owner decisions: only linked Guide/Precis books; never overwrite; new entries titled "<old title> 2026 NEW", **Draft** rows linked to no exam; dry run first; visual-structure rule for books with no heading styles. Plan: `docs/BULK_REPARSE_PLAN_2026-10-07.md`; dry-run report: `docs/BULK_REPARSE_DRYRUN_2026-10-07.md`.
+- Tooling: `scripts/build_reparse_manifest.mjs` (read-only, 58 linked books), `scripts/bulk_reparse_books.mjs` (dry run by default; `--execute` is INSERT-only, a new R2 prefix per book, refuses existing rows/prefixes, stops on the first error, count and anon-visibility checks, `--rollback <results_*.json>`), `scripts/lib/verifyBook.mjs` (independent check against the DOCX XML gating every upload), parser rules in `docxDirectParser.mjs` (a "Table of Contents" chapter is dropped; visual-structure mode only for documents with no Heading 1).
+- Pilot (Assam GS, Delhi GS Book, Nursing) then the full run: **47 books created** (41 Guide, 6 Precis). Checks after the run: `resources` rows 16,631 -> 16,678 (+47 exactly), `lc_exam_resource_map` unchanged (11,990), 0 exam links to the new rows, 0 new rows visible to the anon key, 844 chapter files all load, every row Draft / blocks / exam_name null.
+- Review: `/dev-reader?book=<category>-<title slug>` (e.g. `guide-assam-gs-2026-new`); the book list comes from the R2 review index `structured_resources/blocks/_review/index.json`. Links, flags and open questions: `docs/CONTENT_TEAM_REVIEW_2026_NEW_BOOKS.md`.
+- Reader: tables are plain white with no outlines (content-team feedback), both stylesheets.
+- Bug found and fixed in the same session: the review index de-duplicated by title only, so the Guide/Precis pairs with the same new title (Computer Science, GS & GK, Hindi) overwrote each other; now category + title, and the index was rebuilt from the run records.
+- Housekeeping: a stale empty `.git/index.lock` (50 minutes old, no git process) was removed.
+
+### 72.2 Not created yet (needs the content team)
+9 books whose source DOCX cannot be inferred (the same file name = many different files): Andhra Pradesh GS, Arunachal Pradesh GS, Chhattisgarh GS, Electrical Engineering (Guide), English (Guide; the master Guide English has 21 chapters, the old live one 26), Goa SI, Himachal Pradesh GS, Karnataka GS, Metro Technical Knowledge. Mathematics Precis: no chapter names anywhere in the DOCX (needs Heading 1 titles). The old "2026 GK-GS" Precis has no separate new book (covered by GS & GK Precis).
+
+### 72.3 After sign-off (not done)
+Swap (repoint `lc_exam_resource_map` to the new row per book, de-duplicated; drop " 2026 NEW"; Published; keep the old row archived until verified; verify with the anon key), then purge bloat (the duplicate `resources` rows behind each book, orphan old R2 folders, the old `Preview/` folders), always with a backup first. Rollback of the new books: `node scripts/bulk_reparse_books.mjs --rollback FINAL_BOOKS_STRUCTURED/_bulk/results_<run>.json` for each results file (4 runs).

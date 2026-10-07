@@ -99,6 +99,8 @@ if (ONLY) entries = entries.filter((e) => (e.newTitle + ' ' + e.oldTitle).toLowe
 console.log(`${EXECUTE ? 'EXECUTE' : 'DRY RUN'}: ${entries.length} manifest entries (${entries.filter((e) => e.status === 'ready').length} with a source)`);
 
 const before = EXECUTE ? { resources: await countRows('resources'), map: await countRows('lc_exam_resource_map') } : null;
+const RUN_ID = new Date().toISOString().replace(/[:.]/g, '-');
+const RESULTS_FILE = path.join(BULK_DIR, EXECUTE ? `results_${RUN_ID}.json` : 'dryrun_results.json');
 const results = { startedAt: new Date().toISOString(), mode: EXECUTE ? 'execute' : 'dry-run', books: [] };
 const plain = (h) => String(h || '').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 let processed = 0;
@@ -186,13 +188,13 @@ for (const e of entries) {
     if (insErr) throw new Error('insert failed: ' + insErr.message + ' (R2 objects left under ' + prefix + ', see results.json)');
     rec.created = { resourceId, prefix, objects: objects.length };
     const idx = await readReviewIndex();
-    idx.books = idx.books.filter((x) => x.title !== e.newTitle).concat({ title: e.newTitle, category: e.category, resourceId, base, chapters: chapters.length, subjects: parts.length, flags, createdAt: new Date().toISOString() });
+    idx.books = idx.books.filter((x) => !(x.title === e.newTitle && x.category === e.category)).concat({ title: e.newTitle, category: e.category, resourceId, base, chapters: chapters.length, subjects: parts.length, flags, createdAt: new Date().toISOString() });
     await writeReviewIndex(idx);
     console.log(`   created Draft row ${resourceId} (${objects.length} objects)`);
   } catch (err) {
     rec.error = String(err.message).slice(0, 300);
     console.log(`✘ ${e.newTitle}: ERROR ${rec.error}`);
-    if (EXECUTE) { fs.writeFileSync(path.join(BULK_DIR, 'results.json'), JSON.stringify(results, null, 2)); console.log('Aborting the run on the first error (results.json written).'); break; }
+    if (EXECUTE) { fs.writeFileSync(RESULTS_FILE, JSON.stringify(results, null, 2)); console.log('Aborting the run on the first error (' + path.basename(RESULTS_FILE) + ' written).'); break; }
   }
 }
 
@@ -209,7 +211,8 @@ if (EXECUTE) {
   results.anonVisible = vis?.length || 0;
 }
 results.finishedAt = new Date().toISOString();
-fs.writeFileSync(path.join(BULK_DIR, EXECUTE ? 'results.json' : 'dryrun_results.json'), JSON.stringify(results, null, 2));
+fs.writeFileSync(RESULTS_FILE, JSON.stringify(results, null, 2));
+if (EXECUTE) console.log('Results (rollback list):', RESULTS_FILE);
 
 // report
 const ok = results.books.filter((b) => b.verify?.pass);
@@ -221,5 +224,5 @@ for (const b of results.books) {
   if (!b.stats) { md += `| ${b.newTitle} | ${b.examsLinked} | ERROR | | | | | | | ${b.error} |\n`; continue; }
   md += `| ${b.newTitle} | ${b.examsLinked} | ${b.verify.pass ? 'PASS' : 'FAIL'} ${b.verify.coveragePct}% | ${b.stats.chapters} | ${b.stats.subjects || '-'} | ${b.stats.images} | ${b.stats.listItems} | ${b.stats.tables} | ${b.stats.maxChapterBlocks} | ${[...b.verify.issues, ...b.verify.warnings, ...(b.flags || [])].join('; ').slice(0, 260)} |\n`;
 }
-fs.writeFileSync(path.join(BULK_DIR, EXECUTE ? 'report_execute.md' : 'report_dryrun.md'), md);
-console.log('\nReport:', path.join(BULK_DIR, EXECUTE ? 'report_execute.md' : 'report_dryrun.md'));
+fs.writeFileSync(path.join(BULK_DIR, EXECUTE ? `report_execute_${RUN_ID}.md` : 'report_dryrun.md'), md);
+console.log('\nReport:', path.join(BULK_DIR, EXECUTE ? `report_execute_${RUN_ID}.md` : 'report_dryrun.md'));
