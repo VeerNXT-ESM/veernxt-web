@@ -318,14 +318,24 @@ const FinancialGuidance = () => {
 };
 
 // ─── CLIENT NAVBAR ──────────────────────────────────────────────
-const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => (
+const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => {
+  // Signed-in users return to the universal landing (/v2); public visitors to the marketing site.
+  const [homeHref, setHomeHref] = useState('/');
+  useEffect(() => {
+    let mounted = true;
+    supabase.auth.getSession().then(({ data }) => {
+      if (mounted && data?.session) setHomeHref('/v2');
+    }).catch(() => {});
+    return () => { mounted = false; };
+  }, []);
+  return (
   <nav className="nav" role="navigation" aria-label="Main navigation">
     <div className="nav-inner">
       <div className="nav-logo" onClick={onGoLanding} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
         <img src="/logo.png" alt="VeerNXT Logo" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
       </div>
       <ul className="nav-links">
-        <li><a href="/" style={{ color: 'var(--g)', fontWeight: 700 }}>← Main Site</a></li>
+        <li><a href={homeHref} style={{ color: 'var(--g)', fontWeight: 700 }}>← Home</a></li>
         <li><a href="#pillars" onClick={onGoLanding}>What We Offer</a></li>
         <li><a href="#tools" onClick={onGoLanding}>Tools</a></li>
         <li><a href="#quiz-section" onClick={onGoLanding}>Quiz</a></li>
@@ -348,7 +358,8 @@ const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => (
       </div>
     </div>
   </nav>
-);
+  );
+};
 
 // ─── CLIENT FOOTER ──────────────────────────────────────────────
 const ClientFooter = () => (

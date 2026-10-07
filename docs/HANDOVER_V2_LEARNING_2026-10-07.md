@@ -86,7 +86,7 @@ and `Disallow: /v2`. `profilePath` is harmless to leave.
 
 ## 6. Known gaps and decisions (read before promising anything)
 
-1. **Finance and Legal pages were NOT touched (instruction).** Consequence: from those pages there is **no link back to `/v2`**. The v2 header/bottom nav link *out* to them fine. Agreed next step: a small "← Home" link on each — needs a go-ahead since they're off-limits.
+1. **Finance and Legal pages:** left as they were except for one approved addition — a **"← Home"** link back to the landing. Finance: the existing "← Main Site" nav link is now "← Home" and goes to `/v2` for signed-in users, `/` for public visitors (`ClientNavbar` in `FinancialGuidance.jsx`). Legal Aid Cell: a slim green bar with "← Home" → `/v2` at the top of `LegalAidCell.jsx`. Terms (`/legal`), Privacy and Support are unchanged. Not click-tested.
 2. **Jobs** still points at the old `/jobs` (JobBoard). Combining Jobs (incl. Private Sector) into a v2 module is **Phase 2**, not started.
 3. **`/` still redirects signed-in users to `/dashboard`** (`RootRoute` in `App.jsx`). Switch it to `/v2` only after the team signs off on the new flow, then repoint old links.
 4. **Employer accounts** see the same v2 header as students — no employer-specific handling yet (they have their own flow: Find Candidates, post a job).
