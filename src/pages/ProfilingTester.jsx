@@ -4,11 +4,182 @@ import {
   CheckCircle2, AlertTriangle, ShieldCheck, Play, RefreshCw, 
   ChevronRight, ArrowRight, User, Award, BookOpen, MapPin, 
   Briefcase, Activity, Check, Download, Layers, Sparkles,
-  Sliders, FileText, Search, UserCheck, Shield, Zap, RotateCcw
+  Sliders, FileText, Search, UserCheck, Shield, Zap, RotateCcw,
+  ExternalLink, Calendar, Users, ArrowUpRight, X
 } from 'lucide-react';
 import testProfiles from '../data/testProfiles20.json';
 import { STATE_DISTRICTS } from '../lib/districts';
 import { scoreJobsForProfile } from '../lib/jobMatcher';
+
+// Cache for live jobs_v2 items to avoid redundant network round-trips
+let jobsV2Cache = null;
+
+async function fetchJobsV2Cached() {
+  if (jobsV2Cache && jobsV2Cache.length > 0) return jobsV2Cache;
+  try {
+    const res = await axios.get('/api/jobs-v2');
+    if (res.data?.ok && Array.isArray(res.data.jobs)) {
+      jobsV2Cache = res.data.jobs;
+      return jobsV2Cache;
+    }
+  } catch (err) {
+    console.warn('Jobs_v2 fetch failed, fallback will be used:', err.message);
+  }
+  return [];
+}
+
+// Intelligent matcher linking jobs_v2 records directly to recommended exams
+function matchJobsV2ForExam(allJobs, exam) {
+  if (!allJobs || !allJobs.length || !exam) return [];
+
+  const recId = exam.exam_id;
+  const examName = (exam.exam_name || '').toLowerCase();
+  const conductingBody = (exam.conducting_body || '').toLowerCase();
+  const careerTrack = (exam.career_track || '').toUpperCase();
+
+  const bodyWords = conductingBody
+    .split(/[\s,./()\-]+/)
+    .filter(w => w.length > 2 && !['the', 'and', 'for', 'board', 'commission', 'govt', 'india', 'state', 'department', 'recruitment'].includes(w));
+  const examWords = examName
+    .split(/[\s,./()\-]+/)
+    .filter(w => w.length > 2 && !['recruitment', 'exam', 'examination', 'level', 'post', 'posts', 'online', 'form', 'various'].includes(w));
+
+  return allJobs
+    .map(job => {
+      const titleLower = (job.title || '').toLowerCase();
+      const tagsList = Array.isArray(job.tags) ? job.tags : [];
+      const tagsText = tagsList.join(' ').toLowerCase();
+      const jobTrack = (job.career_track || job.careerTrack || '').toUpperCase();
+      const descSnippet = (job.ai_description || job.aiDescription || '').slice(0, 400).toLowerCase();
+      const fullText = `${titleLower} ${tagsText} ${descSnippet}`;
+
+      let score = 0;
+      const reasons = [];
+
+      // 1. Direct link by exam_id
+      if (job.exam_id && (job.exam_id === recId || job.lc_exam_id === recId)) {
+        score += 60;
+        reasons.push('Linked Exam ID');
+      }
+
+      // 2. Conducting authority match (e.g. IBPS, SSC, Navy, Army, Railway, UPSC)
+      const matchedBody = bodyWords.filter(w => fullText.includes(w));
+      if (matchedBody.length > 0) {
+        score += Math.min(40, matchedBody.length * 20);
+        reasons.push(`Authority: ${matchedBody.slice(0, 2).join(', ')}`);
+      }
+
+      // 3. Exam role keyword match (e.g. Clerk, Constable, PO, Havildar, Apprentice)
+      const matchedExam = examWords.filter(w => fullText.includes(w));
+      if (matchedExam.length > 0) {
+        score += Math.min(35, matchedExam.length * 15);
+        reasons.push(`Role: ${matchedExam.slice(0, 2).join(', ')}`);
+      }
+
+      // 4. Career track alignment
+      if (careerTrack && jobTrack) {
+        if (careerTrack === jobTrack) {
+          score += 20;
+          reasons.push(`Track: ${careerTrack}`);
+        } else if (
+          (careerTrack === 'BANKING' && fullText.includes('bank')) ||
+          (careerTrack === 'RAILWAYS' && fullText.includes('railway')) ||
+          (careerTrack === 'DEFENCE' && (fullText.includes('army') || fullText.includes('navy') || fullText.includes('air force') || fullText.includes('defence') || fullText.includes('agniveer'))) ||
+          (careerTrack === 'POLICE_CAPF' && (fullText.includes('police') || fullText.includes('cisf') || fullText.includes('crpf') || fullText.includes('bsf') || fullText.includes('constable')))
+        ) {
+          score += 15;
+          reasons.push(`Aligned: ${careerTrack}`);
+        }
+      }
+
+      // 5. Ex-servicemen quota priority
+      if (tagsList.includes('ex_servicemen_job') || fullText.includes('ex-servicemen') || fullText.includes('esm')) {
+        score += 10;
+        reasons.push('ESM Quota Mentioned');
+      }
+
+      return {
+        ...job,
+        _matchScore: Math.min(99, score),
+        _matchReasons: reasons,
+      };
+    })
+    .filter(j => j._matchScore >= 45)
+    .sort((a, b) => b._matchScore - a._matchScore)
+    .slice(0, 3);
+}
+
+function matchJobsV2ForRecommendations(allJobs, recommendations, profile) {
+  if (!allJobs || !allJobs.length) return [];
+  if (!recommendations || !recommendations.length) return [];
+
+  const seenIds = new Set();
+  const collected = [];
+
+  recommendations.forEach(rec => {
+    const examJobs = matchJobsV2ForExam(allJobs, rec);
+    examJobs.forEach(job => {
+      const key = job.job_id || job.id || job.url;
+      if (!seenIds.has(key)) {
+        seenIds.add(key);
+        collected.push({
+          ...job,
+          _recommendedExam: rec.exam_name,
+          _examRank: rec.rank || 1,
+        });
+      }
+    });
+  });
+
+  if (collected.length >= 4) {
+    return collected.slice(0, 6);
+  }
+
+  // Supplement if fewer than 4 matched directly to the top exams
+  const candidateTracks = (profile.careerPreferences || []).map(t => t.toUpperCase());
+  const candidateTrade = (profile.armCorpsTrade || '').toLowerCase();
+
+  const supplement = allJobs
+    .filter(j => !seenIds.has(j.job_id || j.id || j.url))
+    .map(job => {
+      const fullText = `${job.title} ${(job.tags || []).join(' ')} ${job.ai_description || ''}`.toLowerCase();
+      let score = 30;
+      const reasons = [];
+
+      const jobTrack = (job.career_track || job.careerTrack || '').toUpperCase();
+      if (candidateTracks.some(t => t === jobTrack || fullText.includes(t.toLowerCase()))) {
+        score += 25;
+        reasons.push(`Career Preference: ${jobTrack}`);
+      }
+      if (candidateTrade && fullText.includes(candidateTrade)) {
+        score += 25;
+        reasons.push(`Trade Match: ${profile.armCorpsTrade}`);
+      }
+      if ((job.tags || []).includes('ex_servicemen_job')) {
+        score += 15;
+        reasons.push('ESM Quota Available');
+      }
+
+      return {
+        ...job,
+        _matchScore: Math.min(95, score),
+        _matchReasons: reasons,
+        _recommendedExam: job.conducting_body || jobTrack || 'Government Recruitment',
+      };
+    })
+    .filter(j => j._matchScore >= 45)
+    .sort((a, b) => b._matchScore - a._matchScore);
+
+  supplement.forEach(j => {
+    const key = j.job_id || j.id || j.url;
+    if (!seenIds.has(key) && collected.length < 6) {
+      seenIds.add(key);
+      collected.push(j);
+    }
+  });
+
+  return collected.slice(0, 6);
+}
 
 // Benchmark reference jobs for testing dynamic candidate matching
 const BENCHMARK_JOBS = [
@@ -199,19 +370,193 @@ function computeJaccardSimilarity(arrA, arrB) {
   return union === 0 ? 0 : intersection / union;
 }
 
+// Modal component to view full job description from jobs_v2
+const JobDescriptionViewer = ({ job, onClose }) => {
+  if (!job) return null;
+
+  const desc = job.ai_description || job.aiDescription || '';
+
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(15, 23, 42, 0.7)',
+        backdropFilter: 'blur(3px)',
+        zIndex: 99999,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '1.25rem'
+      }}
+      onClick={onClose}
+    >
+      <div
+        style={{
+          background: '#FFFFFF',
+          borderRadius: '12px',
+          width: '100%',
+          maxWidth: '720px',
+          maxHeight: '88vh',
+          display: 'flex',
+          flexDirection: 'column',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+          overflow: 'hidden'
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div style={{ padding: '1.15rem 1.25rem', borderBottom: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', background: '#f8fafc' }}>
+          <div style={{ flex: 1, paddingRight: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px', flexWrap: 'wrap' }}>
+              <span style={{ fontSize: '10px', padding: '2px 6px', borderRadius: '4px', background: '#e0e7ff', color: '#3730a3', fontWeight: 700 }}>
+                jobs_v2
+              </span>
+              <span style={{ fontSize: '10px', padding: '2px 6px', borderRadius: '4px', background: '#f1f5f9', color: '#475569', fontWeight: 600 }}>
+                {job.career_track || job.careerTrack || 'GOVERNMENT'}
+              </span>
+              {job._matchScore && (
+                <span style={{ fontSize: '10px', padding: '2px 6px', borderRadius: '4px', background: '#dcfce7', color: '#166534', fontWeight: 700 }}>
+                  {job._matchScore}% Match
+                </span>
+              )}
+            </div>
+            <h3 style={{ fontSize: '15px', fontWeight: 700, margin: 0, color: '#0f172a', lineHeight: 1.35 }}>
+              {job.title}
+            </h3>
+          </div>
+          <button
+            onClick={onClose}
+            style={{
+              background: '#f1f5f9',
+              border: 'none',
+              cursor: 'pointer',
+              color: '#475569',
+              padding: '6px',
+              borderRadius: '6px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            <X size={18} />
+          </button>
+        </div>
+
+        {/* Key Metrics Bar */}
+        <div style={{ display: 'flex', gap: '1rem', padding: '0.65rem 1.25rem', background: '#f8fafc', borderBottom: '1px solid #e2e8f0', fontSize: '12px', flexWrap: 'wrap' }}>
+          {job.vacancies && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#15803d', fontWeight: 700 }}>
+              <Users size={14} /> {Number(job.vacancies).toLocaleString()} Vacancies
+            </div>
+          )}
+          {job.last_date && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#475569' }}>
+              <Calendar size={14} /> Last Date: {new Date(job.last_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+            </div>
+          )}
+          {job.published_on && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#64748b' }}>
+              Posted: {new Date(job.published_on).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+            </div>
+          )}
+        </div>
+
+        {/* Scrollable Content Body */}
+        <div style={{ padding: '1.25rem', overflowY: 'auto', flex: 1, fontSize: '13px', color: '#334155', lineHeight: 1.65 }}>
+          {desc ? (
+            <div style={{ whiteSpace: 'pre-line', fontFamily: 'inherit' }}>
+              {desc}
+            </div>
+          ) : (
+            <div style={{ textAlign: 'center', padding: '2.5rem 1rem', color: '#64748b' }}>
+              <FileText size={36} style={{ margin: '0 auto 0.5rem auto', color: '#94a3b8' }} />
+              <p style={{ margin: 0, fontWeight: 600, color: '#334155' }}>Detailed recruitment overview is currently sourced from the official notification.</p>
+              <p style={{ fontSize: '12px', marginTop: '4px', color: '#64748b' }}>Click below to read the complete notification directly on the official portal.</p>
+            </div>
+          )}
+
+          {/* Tags */}
+          {Array.isArray(job.tags) && job.tags.length > 0 && (
+            <div style={{ marginTop: '1.25rem', paddingTop: '0.85rem', borderTop: '1px solid #e2e8f0' }}>
+              <div style={{ fontSize: '11px', fontWeight: 700, color: '#64748b', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                Tags &amp; Applicable Quotas
+              </div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+                {job.tags.map((t, idx) => (
+                  <span key={idx} style={{ fontSize: '11px', padding: '2px 7px', background: '#f1f5f9', color: '#334155', borderRadius: '4px', fontWeight: 500 }}>
+                    #{t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div style={{ padding: '0.85rem 1.25rem', borderTop: '1px solid #e2e8f0', display: 'flex', justifyContent: 'flex-end', gap: '8px', background: '#f8fafc' }}>
+          <button
+            onClick={onClose}
+            style={{
+              padding: '8px 15px',
+              borderRadius: '6px',
+              border: '1px solid #cbd5e1',
+              background: '#FFFFFF',
+              color: '#475569',
+              fontSize: '12px',
+              fontWeight: 600,
+              cursor: 'pointer'
+            }}
+          >
+            Close
+          </button>
+          {job.url && (
+            <a
+              href={job.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                padding: '8px 15px',
+                borderRadius: '6px',
+                border: 'none',
+                background: '#1a472a',
+                color: '#FFFFFF',
+                fontSize: '12px',
+                fontWeight: 700,
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '5px',
+                cursor: 'pointer',
+                boxShadow: '0 1px 3px rgba(26,71,42,0.2)'
+              }}
+            >
+              Open Official Notification <ExternalLink size={13} />
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const ProfilingTester = () => {
   const [activeTab, setActiveTab] = useState('custom'); // 'custom' | 'compare' | 'batch' | 'report'
   const [activeSection, setActiveSection] = useState('all'); // 'all' | 'identity' | 'service' | 'academics' | 'physical' | 'career'
 
   // Custom Profile Form State
   const [profile, setProfile] = useState(PRESETS.combat);
-  const [autoRecalc, setAutoRecalc] = useState(true);
+  const [autoRecalc, setAutoRecalc] = useState(false);
 
   // Recommendations state
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [matchedJobs, setMatchedJobs] = useState([]);
   const [error, setError] = useState(null);
+  const [selectedJobModal, setSelectedJobModal] = useState(null);
 
   // Side-by-Side Comparison state
   const [slotA, setSlotA] = useState(0);
@@ -275,15 +620,37 @@ const ProfilingTester = () => {
     setError(null);
     try {
       const payload = buildPayload(currentProfile);
-      const res = await axios.post('/api/profile/recommend?topN=5', payload);
+
+      // Fetch engine recommendations & live jobs_v2 records in parallel
+      const [res, liveJobs] = await Promise.all([
+        axios.post('/api/profile/recommend?topN=5', payload),
+        fetchJobsV2Cached()
+      ]);
+
       if (res.data && res.data.ok) {
-        setResult(res.data);
+        const rawRecs = res.data.recommendations || [];
+        // Map matching jobs_v2 records directly to each recommended exam
+        const enrichedRecs = rawRecs.map(rec => ({
+          ...rec,
+          matchedJobsV2: matchJobsV2ForExam(liveJobs, rec)
+        }));
+
+        setResult({
+          ...res.data,
+          recommendations: enrichedRecs
+        });
+
+        // Match live jobs_v2 records against the recommended exams and career preferences
+        const matchedV2 = matchJobsV2ForRecommendations(liveJobs, enrichedRecs, payload);
+        if (matchedV2.length > 0) {
+          setMatchedJobs(matchedV2);
+        } else {
+          const scored = scoreJobsForProfile(BENCHMARK_JOBS, payload);
+          setMatchedJobs(scored.slice(0, 4));
+        }
       } else {
         setError(res.data?.error || 'Engine returned an unsuccessful response.');
       }
-      // Also score private & PSU jobs dynamically
-      const scored = scoreJobsForProfile(BENCHMARK_JOBS, payload);
-      setMatchedJobs(scored.slice(0, 4));
     } catch (err) {
       setError(err.response?.data?.error || err.message || 'Failed to call recommendation engine');
     } finally {
@@ -291,12 +658,7 @@ const ProfilingTester = () => {
     }
   }, [buildPayload, profile]);
 
-  // Initial run on mount
-  useEffect(() => {
-    runEvaluation(PRESETS.combat);
-  }, []);
-
-  // Update field and auto-recalculate if enabled
+  // Update field and auto-recalculate only if explicitly enabled
   const updateField = (field, value) => {
     setProfile(prev => {
       const next = { ...prev, [field]: value };
@@ -331,7 +693,9 @@ const ProfilingTester = () => {
     const p = PRESETS[key];
     if (p) {
       setProfile(p);
-      runEvaluation(p);
+      if (autoRecalc) {
+        runEvaluation(p);
+      }
     }
   };
 
@@ -379,7 +743,9 @@ const ProfilingTester = () => {
       sewaNidhiInterests: raw.sewaNidhiInterests || [],
     };
     setProfile(mapped);
-    runEvaluation(mapped);
+    if (autoRecalc) {
+      runEvaluation(mapped);
+    }
   };
 
   // Run Side-by-Side Comparison of 3 personas
@@ -390,19 +756,28 @@ const ProfilingTester = () => {
       const pB = testProfiles[slotB];
       const pC = testProfiles[slotC];
 
-      const [resA, resB, resC] = await Promise.all([
+      const [resA, resB, resC, liveJobs] = await Promise.all([
         axios.post('/api/profile/recommend?topN=5', pA),
         axios.post('/api/profile/recommend?topN=5', pB),
-        axios.post('/api/profile/recommend?topN=5', pC)
+        axios.post('/api/profile/recommend?topN=5', pC),
+        fetchJobsV2Cached()
       ]);
 
-      const recsA = resA.data?.recommendations || [];
-      const recsB = resB.data?.recommendations || [];
-      const recsC = resC.data?.recommendations || [];
+      const rawRecsA = resA.data?.recommendations || [];
+      const rawRecsB = resB.data?.recommendations || [];
+      const rawRecsC = resC.data?.recommendations || [];
 
-      const jobsA = scoreJobsForProfile(BENCHMARK_JOBS, pA).slice(0, 3);
-      const jobsB = scoreJobsForProfile(BENCHMARK_JOBS, pB).slice(0, 3);
-      const jobsC = scoreJobsForProfile(BENCHMARK_JOBS, pC).slice(0, 3);
+      const recsA = rawRecsA.map(r => ({ ...r, matchedJobsV2: matchJobsV2ForExam(liveJobs, r) }));
+      const recsB = rawRecsB.map(r => ({ ...r, matchedJobsV2: matchJobsV2ForExam(liveJobs, r) }));
+      const recsC = rawRecsC.map(r => ({ ...r, matchedJobsV2: matchJobsV2ForExam(liveJobs, r) }));
+
+      const v2A = matchJobsV2ForRecommendations(liveJobs, recsA, pA).slice(0, 3);
+      const v2B = matchJobsV2ForRecommendations(liveJobs, recsB, pB).slice(0, 3);
+      const v2C = matchJobsV2ForRecommendations(liveJobs, recsC, pC).slice(0, 3);
+
+      const jobsA = v2A.length > 0 ? v2A : scoreJobsForProfile(BENCHMARK_JOBS, pA).slice(0, 3);
+      const jobsB = v2B.length > 0 ? v2B : scoreJobsForProfile(BENCHMARK_JOBS, pB).slice(0, 3);
+      const jobsC = v2C.length > 0 ? v2C : scoreJobsForProfile(BENCHMARK_JOBS, pC).slice(0, 3);
 
       const overlapAB = computeJaccardSimilarity(recsA, recsB) * 100;
       const overlapBC = computeJaccardSimilarity(recsB, recsC) * 100;
@@ -1237,7 +1612,7 @@ ${batchResults.map(r => `| **${r.id}** | ${r.name} | ${r.arm} | ${r.qual} | ${r.
                   }}
                 >
                   {loading ? <RefreshCw size={15} className="animate-spin" /> : <Play size={15} />}
-                  {loading ? 'Evaluating All 1,537 Exams...' : 'Calculate Live Recommendations'}
+                  {loading ? 'Evaluating All 1,537 Exams...' : 'Evaluate Profile & Recommendations'}
                 </button>
               </div>
 
@@ -1259,6 +1634,35 @@ ${batchResults.map(r => `| **${r.id}** | ${r.name} | ${r.arm} | ${r.qual} | ${r.
                   <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>
                     Matching trade, education, physical standards, and state eligibility...
                   </p>
+                </div>
+              )}
+
+              {!loading && !result && (
+                <div style={{ background: '#FFFFFF', padding: '3.5rem 2rem', borderRadius: '12px', border: '1px dashed #cbd5e1', textAlign: 'center' }}>
+                  <Play size={36} style={{ color: '#1a472a', margin: '0 auto 1rem auto', opacity: 0.75 }} />
+                  <h3 style={{ fontSize: '16px', fontWeight: 700, margin: '0 0 0.35rem 0', color: '#0f172a' }}>Ready to Evaluate</h3>
+                  <p style={{ fontSize: '13px', color: '#64748b', margin: '0 auto 1.25rem auto', maxWidth: '380px' }}>
+                    Adjust the candidate profile parameters on the left and click <strong>Evaluate Profile &amp; Recommendations</strong> to run the matching engine against all 1,537 exams.
+                  </p>
+                  <button
+                    onClick={() => runEvaluation(profile)}
+                    style={{
+                      padding: '10px 20px',
+                      borderRadius: '8px',
+                      border: 'none',
+                      background: '#1a472a',
+                      color: '#FFFFFF',
+                      fontSize: '13px',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      boxShadow: '0 2px 4px rgba(26,71,42,0.2)'
+                    }}
+                  >
+                    <Play size={14} /> Evaluate Profile Now
+                  </button>
                 </div>
               )}
 
@@ -1378,6 +1782,106 @@ ${batchResults.map(r => `| **${r.id}** | ${r.name} | ${r.arm} | ${r.qual} | ${r.
                                 );
                               })}
                             </div>
+
+                            {/* Live jobs_v2 Openings Matched to this Recommended Exam */}
+                            {rec.matchedJobsV2 && rec.matchedJobsV2.length > 0 && (
+                              <div style={{ marginTop: '0.75rem', paddingTop: '0.6rem', borderTop: '1px dashed #cbd5e1' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
+                                  <span style={{ fontSize: '11px', fontWeight: 700, color: '#166534', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                    <Zap size={13} style={{ color: '#16a34a' }} />
+                                    Active Openings from jobs_v2 ({rec.matchedJobsV2.length})
+                                  </span>
+                                  <span style={{ fontSize: '10px', color: '#64748b' }}>Live Database Matches</span>
+                                </div>
+
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                                  {rec.matchedJobsV2.map((j) => (
+                                    <div
+                                      key={j.job_id || j.id || j.url}
+                                      style={{
+                                        background: '#f8fafc',
+                                        border: '1px solid #e2e8f0',
+                                        borderRadius: '6px',
+                                        padding: '0.45rem 0.65rem',
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        alignItems: 'center',
+                                        gap: '0.6rem'
+                                      }}
+                                    >
+                                      <div style={{ minWidth: 0, flex: 1 }}>
+                                        <div style={{ fontSize: '12px', fontWeight: 600, color: '#0f172a', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                          {j.title}
+                                        </div>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '10px', color: '#64748b', marginTop: '2px', flexWrap: 'wrap' }}>
+                                          {j.vacancies && (
+                                            <span style={{ color: '#15803d', fontWeight: 700, background: '#dcfce7', padding: '1px 5px', borderRadius: '3px' }}>
+                                              👥 {Number(j.vacancies).toLocaleString()} Vacancies
+                                            </span>
+                                          )}
+                                          {j.last_date && (
+                                            <span>📅 Last Date: {new Date(j.last_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                                          )}
+                                          <span style={{ color: '#0284c7', fontWeight: 600 }}>
+                                            {j._matchScore}% Match
+                                          </span>
+                                        </div>
+                                      </div>
+
+                                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexShrink: 0 }}>
+                                        <button
+                                          type="button"
+                                          onClick={() => setSelectedJobModal(j)}
+                                          style={{
+                                            fontSize: '11px',
+                                            fontWeight: 600,
+                                            color: '#0f172a',
+                                            background: '#FFFFFF',
+                                            border: '1px solid #cbd5e1',
+                                            padding: '3px 8px',
+                                            borderRadius: '5px',
+                                            cursor: 'pointer',
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: '4px',
+                                            whiteSpace: 'nowrap',
+                                            boxShadow: '0 1px 2px rgba(0,0,0,0.03)'
+                                          }}
+                                          title="View complete recruitment description and eligibility"
+                                        >
+                                          <FileText size={11} style={{ color: '#16a34a' }} /> Description
+                                        </button>
+
+                                        {j.url && (
+                                          <a
+                                            href={j.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            style={{
+                                              fontSize: '11px',
+                                              fontWeight: 700,
+                                              color: '#1a472a',
+                                              background: '#FFFFFF',
+                                              border: '1px solid #cbd5e1',
+                                              padding: '3px 8px',
+                                              borderRadius: '5px',
+                                              textDecoration: 'none',
+                                              display: 'inline-flex',
+                                              alignItems: 'center',
+                                              gap: '3px',
+                                              whiteSpace: 'nowrap'
+                                            }}
+                                          >
+                                            Apply / Notice <ExternalLink size={11} />
+                                          </a>
+                                        )}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
                           </div>
 
                           <div style={{ textAlign: 'right', minWidth: '90px' }}>
@@ -1391,46 +1895,133 @@ ${batchResults.map(r => `| **${r.id}** | ${r.name} | ${r.arm} | ${r.qual} | ${r.
                     </div>
                   </div>
 
-                  {/* Section B: Dynamic Private & PSU Job Matches */}
+                  {/* Section B: Dynamic Live Job Matches from jobs_v2 */}
                   <div>
-                    <h3 style={{ fontSize: '14px', fontWeight: 800, color: '#0f172a', marginBottom: '0.6rem', display: 'flex', alignItems: 'center', gap: '5px' }}>
-                      <Briefcase size={15} style={{ color: '#1a472a' }} /> Matched Private &amp; PSU Corporate Jobs ({matchedJobs.length})
-                    </h3>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.6rem' }}>
+                      <h3 style={{ fontSize: '14px', fontWeight: 800, color: '#0f172a', margin: 0, display: 'flex', alignItems: 'center', gap: '5px' }}>
+                        <Briefcase size={15} style={{ color: '#1a472a' }} /> Live Jobs from jobs_v2 ({matchedJobs.length})
+                      </h3>
+                      <span style={{ fontSize: '11px', color: '#166534', fontWeight: 600 }}>
+                        Filtered by Recommended Exams &amp; Trade Profiles
+                      </span>
+                    </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '0.65rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.65rem' }}>
                       {matchedJobs.map((job) => (
                         <div
-                          key={job.id}
+                          key={job.job_id || job.id || job.url}
                           style={{
                             background: '#FFFFFF',
-                            padding: '0.85rem',
+                            padding: '0.9rem',
                             borderRadius: '9px',
                             border: '1px solid #e2e8f0',
-                            boxShadow: '0 1px 3px rgba(0,0,0,0.04)'
+                            boxShadow: '0 1px 3px rgba(0,0,0,0.04)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-between'
                           }}
                         >
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.25rem' }}>
-                            <span style={{ fontSize: '10px', padding: '1px 5px', borderRadius: '3px', background: '#f1f5f9', color: '#475569', fontWeight: 600 }}>
-                              {job.career_track}
-                            </span>
-                            <span style={{ fontSize: '11px', fontWeight: 800, color: '#1a472a', background: '#f0fdf4', padding: '1px 5px', borderRadius: '3px', border: '1px solid #bbf7d0' }}>
-                              {job._matchScore}% Match
-                            </span>
-                          </div>
-
-                          <h4 style={{ fontSize: '13px', fontWeight: 700, margin: '0 0 0.2rem 0', color: '#0f172a' }}>
-                            {job.title}
-                          </h4>
-                          <div style={{ fontSize: '11px', color: '#64748b', marginBottom: '0.4rem' }}>
-                            {job.company} • {job.location}
-                          </div>
-
-                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3px' }}>
-                            {job._matchReasons?.map((reason, i) => (
-                              <span key={i} style={{ fontSize: '10px', padding: '1px 4px', borderRadius: '3px', background: '#e0f2fe', color: '#0369a1', fontWeight: 600 }}>
-                                {reason}
+                          <div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.35rem' }}>
+                              <div style={{ display: 'flex', gap: '4px', alignItems: 'center', flexWrap: 'wrap' }}>
+                                <span style={{ fontSize: '10px', padding: '1px 5px', borderRadius: '3px', background: '#f1f5f9', color: '#475569', fontWeight: 600 }}>
+                                  {job.career_track || job.careerTrack || 'GOVT'}
+                                </span>
+                                <span style={{ fontSize: '9px', padding: '1px 4px', borderRadius: '3px', background: '#e0e7ff', color: '#3730a3', fontWeight: 700 }}>
+                                  jobs_v2
+                                </span>
+                              </div>
+                              <span style={{ fontSize: '11px', fontWeight: 800, color: '#1a472a', background: '#f0fdf4', padding: '1px 5px', borderRadius: '3px', border: '1px solid #bbf7d0' }}>
+                                {job._matchScore || 85}% Match
                               </span>
-                            ))}
+                            </div>
+
+                            <h4 style={{ fontSize: '13px', fontWeight: 700, margin: '0 0 0.25rem 0', color: '#0f172a', lineHeight: 1.35 }}>
+                              {job.title}
+                            </h4>
+
+                            {job._recommendedExam && (
+                              <div style={{ fontSize: '11px', color: '#166534', fontWeight: 600, marginBottom: '0.35rem' }}>
+                                🎯 Aligned with: {job._recommendedExam}
+                              </div>
+                            )}
+
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize: '11px', color: '#64748b', marginBottom: '0.45rem' }}>
+                              {job.vacancies && (
+                                <span style={{ color: '#15803d', fontWeight: 700 }}>
+                                  👥 {Number(job.vacancies).toLocaleString()} Vacancies
+                                </span>
+                              )}
+                              {job.last_date && (
+                                <span>
+                                  📅 Last Date: {new Date(job.last_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}
+                                </span>
+                              )}
+                            </div>
+
+                            {job.ai_description && (
+                              <p style={{ fontSize: '11px', color: '#475569', margin: '0 0 0.5rem 0', lineHeight: 1.4, display: '-webkit-box', WebKitLineClamp: 2, WebKitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                                {job.ai_description.replace(/About the Recruitment\s*/i, '').replace(/Available Posts & Vacancies\s*/i, '')}
+                              </p>
+                            )}
+
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3px', marginBottom: '0.5rem' }}>
+                              {job._matchReasons?.slice(0, 3).map((reason, i) => (
+                                <span key={i} style={{ fontSize: '10px', padding: '1px 4px', borderRadius: '3px', background: '#e0f2fe', color: '#0369a1', fontWeight: 600 }}>
+                                  {reason}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+
+                          <div style={{ display: 'flex', gap: '6px', marginTop: '0.45rem' }}>
+                            <button
+                              type="button"
+                              onClick={() => setSelectedJobModal(job)}
+                              style={{
+                                flex: 1,
+                                padding: '6px 10px',
+                                background: '#FFFFFF',
+                                border: '1px solid #cbd5e1',
+                                borderRadius: '6px',
+                                fontSize: '11px',
+                                fontWeight: 600,
+                                color: '#0f172a',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                gap: '4px',
+                                boxShadow: '0 1px 2px rgba(0,0,0,0.02)'
+                              }}
+                            >
+                              <FileText size={12} style={{ color: '#16a34a' }} /> Description
+                            </button>
+
+                            {job.url && (
+                              <a
+                                href={job.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                  flex: 1,
+                                  padding: '6px 10px',
+                                  background: '#f8fafc',
+                                  border: '1px solid #cbd5e1',
+                                  borderRadius: '6px',
+                                  fontSize: '11px',
+                                  fontWeight: 700,
+                                  color: '#1a472a',
+                                  textDecoration: 'none',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  gap: '4px'
+                                }}
+                              >
+                                Notice <ExternalLink size={12} />
+                              </a>
+                            )}
                           </div>
                         </div>
                       ))}
@@ -1953,6 +2544,14 @@ ${batchResults.map(r => `| **${r.id}** | ${r.name} | ${r.arm} | ${r.qual} | ${r.
             </div>
 
           </div>
+        )}
+
+        {/* ─── JOB DESCRIPTION MODAL (jobs_v2) ─────────────────────────── */}
+        {selectedJobModal && (
+          <JobDescriptionViewer
+            job={selectedJobModal}
+            onClose={() => setSelectedJobModal(null)}
+          />
         )}
 
       </div>
