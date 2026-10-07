@@ -69,6 +69,10 @@ import DevReader from './pages/sandbox/DevReader';
 import QuizPreview from './pages/sandbox/QuizPreview';
 import ProfilingTester from './pages/ProfilingTester';
 import AiChatbotWidget from './components/AiChatbotWidget';
+import V2Layout from './v2/V2Layout';
+import UniversalLanding from './v2/UniversalLanding';
+import LearningHome from './v2/LearningHome';
+import LearningBrowse from './v2/LearningBrowse';
 import './index.css';
 
 /**
@@ -202,6 +206,15 @@ function App() {
           <Route path="/legal-aid" element={<LegalAidCell />} />
           <Route path="/cv" element={<AuthGuard><CVBuilder /></AuthGuard>} />
           <Route path="/rewards" element={<AuthGuard><RewardsCenter /></AuthGuard>} />
+        </Route>
+
+        {/* v2 — new universal landing + section modules (old routes untouched) */}
+        <Route element={<AuthGuard><V2Layout /></AuthGuard>}>
+          <Route path="/v2" element={<UniversalLanding />} />
+          <Route path="/v2/learning" element={<LearningHome />} />
+          <Route path="/v2/learning/:level" element={<LearningBrowse />} />
+          <Route path="/v2/me" element={<Dashboard />} />
+          <Route path="/v2/messages" element={<MessagingWorkspace />} />
         </Route>
 
         {/* Full-screen reader — no global Header/Footer/BottomNav chrome,

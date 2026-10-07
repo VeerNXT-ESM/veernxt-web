@@ -18,6 +18,7 @@ export default function AccountMenu({
   profilingCompleted,
   onLogout,
   returnFocusRef,
+  profilePath = '/dashboard',
 }) {
   const navigate = useNavigate();
   const firstItemRef = useRef(null);
@@ -86,10 +87,10 @@ export default function AccountMenu({
 
         <div className="am-group">
           <span className="am-group-label">Account</span>
-          <button type="button" ref={firstItemRef} className="am-item" onClick={() => go('/dashboard')}>
+          <button type="button" ref={firstItemRef} className="am-item" onClick={() => go(profilePath)}>
             <User size={18} /> My Profile
           </button>
-          <button type="button" className="am-item" onClick={() => go('/dashboard', { openEditProfile: true })}>
+          <button type="button" className="am-item" onClick={() => go(profilePath, { openEditProfile: true })}>
             <Pencil size={18} /> Edit Profile
           </button>
         </div>
