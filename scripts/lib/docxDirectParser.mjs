@@ -117,7 +117,7 @@ export async function parseDocxDirect(buffer, { onImage } = {}) {
   // ── stats ────────────────────────────────────────────────────
   const stats = {
     paragraphs: 0, headings: 0, listItems: 0, typedBullets: 0, wordLists: 0, images: 0,
-    tables: 0, tableHeaderRows: 0, skippedEmpty: 0, frontMatterDropped: 0,
+    tables: 0, tableHeaderRows: 0, skippedEmpty: 0, frontMatterDropped: 0, tocChaptersDropped: 0, visualMode: false, visualChapters: 0,
   };
 
   // ── images ───────────────────────────────────────────────────
@@ -421,11 +421,76 @@ export async function parseDocxDirect(buffer, { onImage } = {}) {
     } else topLevel.push(el);
   }
 
-  for (const el of topLevel) {
+  // ── visual-structure mode ────────────────────────────────────
+  // Only for documents that have NO Heading 1 / Title style at all (structure exists only as formatting).
+  // Chapter = a prominent paragraph (bold, shaded or much larger than body text) that starts with
+  // CHAPTER / UNIT / PART / LESSON / अध्याय + number; a bare "CHAPTER 3" line is merged with the prominent
+  // paragraph right after it. Sub-headings = short bold lines larger than body text, levels from size tiers.
+  // Documents that do have Heading styles never use this.
+  const CHAPTER_RE = /^\s*(chapter|unit|part|lesson|अध्याय|इकाई)\s*[-–—:.]?\s*\d+/i;
+  const CHAPTER_BARE_RE = /^\s*(chapter|unit|part|lesson|अध्याय|इकाई)\s*[-–—:.]?\s*\d+\s*$/i;
+  const textOfEl = (el) => Array.from(el.getElementsByTagNameNS('*', 't')).map((t) => t.textContent).join('');
+  const maxSz = (el) => { let m = 0; for (const e of Array.from(el.getElementsByTagNameNS('*', 'sz'))) { const v = parseInt(e.getAttribute('w:val'), 10); if (v > m) m = v; } return m; };
+  const quickBold = (el) => {
+    const rs = Array.from(el.getElementsByTagNameNS('*', 'r')).filter((r) => Array.from(r.getElementsByTagNameNS('*', 't')).some((t) => t.textContent.trim()));
+    return rs.length > 0 && rs.every((r) => { const rPr = first(r, 'rPr'); const b = rPr && first(rPr, 'b'); return b ? !isOff(b) : false; });
+  };
+  const quickShaded = (el) => Array.from(el.getElementsByTagNameNS('*', 'shd')).some((e) => { const fl = e.getAttribute('w:fill'); return fl && !['auto', 'FFFFFF', 'ffffff'].includes(fl); });
+  const hasH1 = topLevel.some((el) => {
+    if (el.localName !== 'p') return false;
+    const pPr = first(el, 'pPr'); const sid = pPr && wv(first(pPr, 'pStyle'));
+    const nm = sid ? (styleMap[sid]?.name || sid) : '';
+    return /^heading\s*1$/i.test(nm) || /^title$/i.test(nm);
+  });
+  const visualMode = !hasH1;
+  const visualPlan = {}; // topLevel index -> { skip } | { level, title? }
+  if (visualMode) {
+    const dd = first(styles.documentElement, 'docDefaults');
+    const defaultSz = parseInt(wv(first(first(first(dd, 'rPrDefault') || dd, 'rPr') || dd, 'sz')) || '22', 10) || 22;
+    const q = topLevel.map((el) => (el.localName === 'p' ? { t: textOfEl(el).trim(), sz: maxSz(el) || defaultSz, bold: quickBold(el), shaded: quickShaded(el) } : null));
+    const hist = {};
+    for (const x of q) if (x && x.t && x.t.split(/\s+/).length >= 15) hist[x.sz] = (hist[x.sz] || 0) + 1;
+    const bodySz = parseInt(Object.entries(hist).sort((a, b) => b[1] - a[1])[0]?.[0] || String(defaultSz), 10);
+    const prominent = (x) => x && (x.bold || x.shaded || x.sz >= bodySz + 6);
+    const nextIdx = (i) => { for (let j = i + 1; j < q.length; j++) if (q[j] && q[j].t) return j; return -1; };
+    const chapterIdx = [];
+    for (let i = 0; i < q.length; i++) {
+      const x = q[i];
+      if (!x || !x.t || visualPlan[i]) continue;
+      if (CHAPTER_BARE_RE.test(x.t) && prominent(x)) {
+        const j = nextIdx(i);
+        if (j > -1 && prominent(q[j]) && !CHAPTER_RE.test(q[j].t)) { visualPlan[i] = { level: 1, title: x.t.replace(/\s+/g, ' ') + ': ' + q[j].t.replace(/\s+/g, ' '), sz: q[j].sz }; visualPlan[j] = { skip: true }; chapterIdx.push(i); }
+        else { visualPlan[i] = { level: 1, sz: x.sz }; chapterIdx.push(i); }
+      } else if (CHAPTER_RE.test(x.t) && x.t.length < 140 && prominent(x)) {
+        visualPlan[i] = { level: 1, sz: x.sz }; chapterIdx.push(i);
+      }
+    }
+    if (chapterIdx.length) {
+      const first1 = chapterIdx[0];
+      const chapterSizes = new Set(chapterIdx.map((i) => visualPlan[i].sz));
+      const cands = [];
+      for (let i = first1 + 1; i < q.length; i++) {
+        const x = q[i];
+        if (!x || !x.t || visualPlan[i]) continue;
+        const words = x.t.split(/\s+/).length;
+        if (x.bold && words <= 14 && !/[.:;?!]$/.test(x.t) && x.sz >= bodySz + 2 && !chapterSizes.has(x.sz)) cands.push({ i, sz: x.sz });
+      }
+      const tiers = [...new Set(cands.map((c) => c.sz))].sort((a, b) => b - a);
+      for (const c of cands) visualPlan[c.i] = { level: Math.min(2 + tiers.indexOf(c.sz), 4) };
+    }
+    stats.visualMode = true;
+    stats.visualChapters = chapterIdx.length;
+  }
+
+  for (let ti = 0; ti < topLevel.length; ti++) {
+    const el = topLevel[ti];
     if (el.localName === 'p') {
+      const plan = visualMode ? visualPlan[ti] : null;
+      if (plan?.skip) continue;
       const d = await describeParagraph(el);
+      if (plan?.level && !d.level) { d.level = plan.level; if (plan.title) d.titleOverride = plan.title; }
       if (d.level === 1) {
-        const title = plainOf(d.segs).trim();
+        const title = (d.titleOverride || plainOf(d.segs)).trim();
         if (!title) { carryImages.push(...d.images); continue; } // banner image in an empty heading: opens the NEXT chapter
         closeChapter();
         if (pendingDividers.length && chapters.length && current === null) { /* handled below */ }
@@ -467,6 +532,7 @@ export async function parseDocxDirect(buffer, { onImage } = {}) {
       currentPart = divs.slice(seen).join(' › ');
       seen = divs.length;
     }
+    if (/^\s*(table\s+of\s+)?contents\s*$/i.test(ch.title)) { stats.tocChaptersDropped++; continue; } // a Table of Contents styled as a chapter
     ch.part = currentPart;
     delete ch._dividersBefore;
     delete ch._pendingConsumed;

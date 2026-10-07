@@ -120,3 +120,15 @@ The old live content was built from other copies, and the same file name exists 
 | 4 | 3 | Guide | Metro_Technical_Knowledge | Metro_Technical_Knowledge 2026 NEW | 50 | - | Metro_Technical_Knowledge.docx | SOURCE NOT IN MASTER FOLDER |
 | 4 | 1 | Guide | Goa GS | Goa GS 2026 NEW | 14 | - | Goa SI.docx | SOURCE NOT IN MASTER FOLDER |
 | 4 | 1 | Guide | ELECTRICAL ENGINEERING | ELECTRICAL ENGINEERING 2026 NEW | 1 | - | Cluster_042_ELECTRICAL ENGINEERING.docx | SOURCE NOT IN MASTER FOLDER |
+
+---
+## 9. Status 2026-10-07: tooling built, DRY RUN done (nothing written to Supabase or R2)
+Decisions taken: scope = linked Guide/Precis only; new entries are **Draft**; books with no heading styles get a visual-structure rule (flagged for review); dry run first.
+
+Built (uncommitted until the pilot): `scripts/build_reparse_manifest.mjs` (read-only, 58 entries), `scripts/bulk_reparse_books.mjs` (dry run by default; `--execute`, `--only`, `--limit`, `--rollback`), `scripts/lib/verifyBook.mjs` (independent check against the DOCX XML), parser rules in `scripts/lib/docxDirectParser.mjs` (drop a "Table of Contents" chapter; visual-structure mode only for documents with no Heading 1), `/dev-reader` reads the review index so every new book appears automatically.
+
+Dry-run result (`docs/BULK_REPARSE_DRYRUN_2026-10-07.md`): **47 books parsed and verified** (text complete and in order, no invented text, images match, no AI blocks), **1 failed** (Mathematics Precis: no chapter names anywhere in the DOCX, only "1.1, 1.2..." sub-sections; needs a styled copy), **10 skipped** (9 need the content team to name the source file, 1 is the old "2026 GK-GS" Precis, covered by GS & GK).
+Rules proven on the 4 no-heading books: Assam 10 chapters, Bihar 11, Hindi Guide 6, Electrical Engineering Precis 20; 17 Table-of-Contents chapters dropped.
+Flags for the content team (per book in the report): oversized "Practice MCQs" chapters (Uttarakhand 364 blocks, Tripura 204, Arunachal SI 197, Hindi Precis 545, Reasoning Precis 376), tiny chapters (West Bengal 13, Electrical Engineering 9, Odisha and Rajasthan 4, English Precis 4), "chapter-like lines inside chapters" (Madhya Pradesh 12, Arunachal SI 11).
+Title note: the old row "Telangana GS 2026" becomes "Telangana GS 2026 2026 NEW".
+**Next:** pilot `--execute` on 3 books (Assam GS, Delhi GS Book, Nursing), check the counts, the anon-invisibility check and `/dev-reader`, then the rest of the verified books.

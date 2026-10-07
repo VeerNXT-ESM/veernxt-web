@@ -15,6 +15,10 @@ import './BookReaderV2.css';
 // (Précis) instead -- still real, representative content for exercising
 // the reader, just not the identical title the old local copy had.
 const PREVIEW_BASE = 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Preview';
+// Review list written by scripts/bulk_reparse_books.mjs: every "<title> 2026 NEW" book (Draft in the DB, not linked
+// to any exam). Link: /dev-reader?book=<category>-<title slug>, e.g. ?book=guide-assam-gs-2026-new
+const REVIEW_INDEX_URL = 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/_review/index.json';
+const reviewId = (b) => `${(b.category || '').toLowerCase()}-${(b.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`;
 const AVAILABLE_BOOKS = [
   // Content-team review copies: parsed straight from the DOCX (no AI enrichment). These are NEW books
   // ("<title> 2026 NEW"); once signed off the suffix is dropped and they replace the old books.
@@ -43,7 +47,22 @@ function subjectForPart(name) {
 export default function DevReader() {
   const { subjectUrl } = useThumbnails();
   const params = new URLSearchParams(window.location.search);
+  const [books, setBooks] = useState(AVAILABLE_BOOKS);
   const [selectedBook, setSelectedBook] = useState(AVAILABLE_BOOKS.find((b) => b.id === params.get('book')) || AVAILABLE_BOOKS[0]);
+  useEffect(() => {
+    fetch(REVIEW_INDEX_URL, { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((idx) => {
+        const extra = (idx?.books || []).map((b) => ({ id: reviewId(b), title: `${b.title} (${b.category})`, path: b.base.replace(/\/$/, '') }));
+        if (!extra.length) return;
+        extra.sort((a, b) => a.title.localeCompare(b.title));
+        setBooks((prev) => [...extra, ...prev.filter((p) => !extra.some((x) => x.id === p.id))]);
+        const want = new URLSearchParams(window.location.search).get('book');
+        const hit = extra.find((x) => x.id === want);
+        if (hit) { firstLoad.current = true; setSelectedBook(hit); } // keep ?ch= when the deep-linked book arrives late
+      })
+      .catch(() => {});
+  }, []);
   const [metadata, setMetadata] = useState(null);
   const [chapter, setChapter] = useState(null);
   const [activeChapterIndex, setActiveChapterIndex] = useState(Math.max(0, (parseInt(params.get('ch'), 10) || 1) - 1));
@@ -155,11 +174,11 @@ export default function DevReader() {
           <select 
             value={selectedBook.id} 
             onChange={(e) => {
-              const book = AVAILABLE_BOOKS.find(b => b.id === e.target.value);
+              const book = books.find(b => b.id === e.target.value);
               if (book) setSelectedBook(book);
             }}
           >
-            {AVAILABLE_BOOKS.map(b => (
+            {books.map(b => (
               <option key={b.id} value={b.id}>{b.title}</option>
             ))}
           </select>
