@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import {
   stepLabels,
@@ -143,9 +143,6 @@ const LegalAidCell = () => {
 
   return (
     <div className="legal-aid-cell">
-      <div style={{ background: '#173d29', padding: '8px 20px' }}>
-        <Link to="/v2" style={{ color: '#e9c878', fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>← Home</Link>
-      </div>
       <main className="flow">
         <aside className="side">
           <button type="button" className="exit" onClick={exitAssistance}>× Exit assistance</button>

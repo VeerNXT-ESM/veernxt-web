@@ -3298,7 +3298,7 @@ ESLint clean on `src/v2` and `App.jsx`; production `vite build` succeeds. **Not 
 
 ### 73.5 Open / next
 1. Click-test `/v2` flow; fix what the content team flags (Shreya).
-2. DONE (approved by product owner): "← Home" back to `/v2` on Finance (nav link, `/v2` if signed in else `/`) and Legal Aid Cell (top bar). Lint 0 errors, build OK, not click-tested.
+2. A "← Home" link on Finance/Legal Aid was added (`12b7222`) and **rolled back at the product owner's request**: only Learning is the new feature; all other pages stay original. Open question: keep the `/v2` landing/section tiles or only the Learning screens?
 3. **Phase 2:** combine Jobs (JobBoard + Private Sector) into a `/v2/jobs` module.
 4. Cut-over: `RootRoute` → `/v2`; then remove old Learning Center/Header/BottomNav (handover §7).
 5. Employer accounts in v2; individual exam pages in v2 (both deferred).
