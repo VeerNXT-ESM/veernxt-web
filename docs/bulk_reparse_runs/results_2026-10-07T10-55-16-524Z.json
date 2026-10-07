@@ -1,0 +1,57 @@
+{
+  "startedAt": "2026-10-07T10:55:16.525Z",
+  "mode": "execute",
+  "books": [
+    {
+      "id": "guide-nursing-2026-new",
+      "category": "Guide",
+      "oldTitle": "Nursing",
+      "newTitle": "Nursing 2026 NEW",
+      "status": "ready",
+      "examsLinked": 109,
+      "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\Unlabeled\\Cluster_078_Nursing Book.docx",
+      "sourceSha256": "53a45425fc2e64af486ea974b022319c2c4b0320995c99731dfe2918077a4a5c",
+      "stats": {
+        "chapters": 18,
+        "subjects": 0,
+        "blocks": 412,
+        "types": {
+          "heading": 189,
+          "paragraph": 52,
+          "table": 171
+        },
+        "images": 0,
+        "listItems": 0,
+        "tables": 171,
+        "maxChapterBlocks": 28
+      },
+      "verify": {
+        "pass": true,
+        "issues": [],
+        "warnings": [],
+        "coveragePct": 100
+      },
+      "flags": [
+        "cover/contents dropped (23 blocks)"
+      ],
+      "created": {
+        "resourceId": "06a72a5a-067a-4067-a067-06a72a5a067a",
+        "prefix": "structured_resources/blocks/Guide/06a72a5a-067a-4067-a067-06a72a5a067a",
+        "objects": 20
+      }
+    }
+  ],
+  "counts": {
+    "before": {
+      "resources": 16633,
+      "map": 11990
+    },
+    "after": {
+      "resources": 16634,
+      "map": 11990
+    },
+    "expectedNewRows": 1
+  },
+  "anonVisible": 0,
+  "finishedAt": "2026-10-07T10:55:21.738Z"
+}

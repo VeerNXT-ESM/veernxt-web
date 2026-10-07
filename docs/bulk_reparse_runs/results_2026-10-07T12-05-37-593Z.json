@@ -1,0 +1,96 @@
+{
+  "startedAt": "2026-10-07T12:05:37.595Z",
+  "mode": "execute",
+  "books": [
+    {
+      "id": "guide-mathematics-2026-new",
+      "category": "Guide",
+      "oldTitle": "Mathematics",
+      "newTitle": "Mathematics 2026 NEW",
+      "status": "ready",
+      "examsLinked": 1013,
+      "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\Mathematics\\Cluster_008_MATHEMATICS.docx",
+      "sourceSha256": "a1257feb568e4d956fe58bf7796b138cf6fc1943e4050321569092287431cff3",
+      "stats": {
+        "chapters": 7,
+        "subjects": 1,
+        "blocks": 179,
+        "types": {
+          "paragraph": 75,
+          "heading": 75,
+          "table": 4,
+          "list": 25
+        },
+        "images": 0,
+        "listItems": 51,
+        "tables": 4,
+        "maxChapterBlocks": 30
+      },
+      "verify": {
+        "pass": true,
+        "issues": [],
+        "warnings": [],
+        "coveragePct": 100
+      },
+      "flags": [
+        "1 subjects",
+        "cover/contents dropped (12 blocks)"
+      ],
+      "skipped": "a row with this title already exists"
+    },
+    {
+      "id": "precis-mathematics-2026-new",
+      "category": "Precis",
+      "oldTitle": "MATHEMATICS",
+      "newTitle": "MATHEMATICS 2026 NEW",
+      "status": "ready",
+      "examsLinked": 1013,
+      "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\Mathematics_Precis_FULL_fixed.docx",
+      "sourceSha256": "6f64f5ac0062782e1ed2d3c0f55c4310572e3d31d684390b01e0b4c447db7375",
+      "stats": {
+        "chapters": 20,
+        "subjects": 0,
+        "blocks": 416,
+        "types": {
+          "heading": 90,
+          "paragraph": 55,
+          "list": 3,
+          "image": 22,
+          "table": 226,
+          "numberedList": 20
+        },
+        "images": 22,
+        "listItems": 90,
+        "tables": 227,
+        "maxChapterBlocks": 34
+      },
+      "verify": {
+        "pass": true,
+        "issues": [],
+        "warnings": [],
+        "coveragePct": 100
+      },
+      "flags": [
+        "cover/contents dropped (3 blocks)"
+      ],
+      "created": {
+        "resourceId": "049a73af-47cc-447c-a47c-049a73af47cc",
+        "prefix": "structured_resources/blocks/Precis/049a73af-47cc-447c-a47c-049a73af47cc",
+        "objects": 44
+      }
+    }
+  ],
+  "counts": {
+    "before": {
+      "resources": 16679,
+      "map": 11990
+    },
+    "after": {
+      "resources": 16680,
+      "map": 11990
+    },
+    "expectedNewRows": 1
+  },
+  "anonVisible": 0,
+  "finishedAt": "2026-10-07T12:05:45.983Z"
+}

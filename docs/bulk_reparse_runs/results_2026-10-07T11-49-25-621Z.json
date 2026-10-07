@@ -1,0 +1,59 @@
+{
+  "startedAt": "2026-10-07T11:49:25.622Z",
+  "mode": "execute",
+  "books": [
+    {
+      "id": "guide-andhra-pradesh-gs-2026-new",
+      "category": "Guide",
+      "oldTitle": "Andhra Pradesh GS",
+      "newTitle": "Andhra Pradesh GS 2026 NEW",
+      "status": "ready",
+      "examsLinked": 21,
+      "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Andhra_Pradesh CONSTABLE (1).docx",
+      "sourceSha256": "b224c94611b1dc6d13898b974a1bec493199eebf0ec261618600666dac86f207",
+      "stats": {
+        "chapters": 16,
+        "subjects": 0,
+        "blocks": 301,
+        "types": {
+          "paragraph": 174,
+          "image": 18,
+          "heading": 72,
+          "table": 37
+        },
+        "images": 18,
+        "listItems": 0,
+        "tables": 37,
+        "maxChapterBlocks": 94
+      },
+      "verify": {
+        "pass": true,
+        "issues": [],
+        "warnings": [],
+        "coveragePct": 100
+      },
+      "flags": [
+        "13 chapter-like lines inside chapters (possibly merged chapters)",
+        "cover/contents dropped (5 blocks)"
+      ],
+      "created": {
+        "resourceId": "3765985b-0b9f-40b9-a0b9-3765985b0b9f",
+        "prefix": "structured_resources/blocks/Guide/3765985b-0b9f-40b9-a0b9-3765985b0b9f",
+        "objects": 36
+      }
+    }
+  ],
+  "counts": {
+    "before": {
+      "resources": 16678,
+      "map": 11990
+    },
+    "after": {
+      "resources": 16679,
+      "map": 11990
+    },
+    "expectedNewRows": 1
+  },
+  "anonVisible": 0,
+  "finishedAt": "2026-10-07T11:49:33.115Z"
+}

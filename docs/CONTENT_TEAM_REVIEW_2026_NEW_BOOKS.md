@@ -1,6 +1,6 @@
 # Content-team review: the "2026 NEW" books (2026-10-07)
 
-50 books have been re-created from their DOCX files, as **NEW** books. The live books and every exam link are untouched. Nothing here is visible to learners (the new books are Drafts and linked to no exam). Please go through them and flag anything wrong; when you are happy, we swap them in for the old books.
+50 books have been re-created from their DOCX files, as **NEW** books. The live books and every exam link are untouched. Nothing here is visible to learners (the new books are Drafts and linked to no exam). Note: in the admin **Book Content** page a Draft counts as "archived", so these books appear there only under *Show archived*; review them with the links below. Please go through them and flag anything wrong; when you are happy, we swap them in for the old books.
 
 ## How to review
 1. Open a link in the table below (a sidebar lists the chapters; the dropdown at the top of the sidebar switches book). Any book can also be opened at a chapter with `&ch=N` on the end of the link.

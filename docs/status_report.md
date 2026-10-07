@@ -6,7 +6,7 @@
 
 **🎯 Next session starts here**: §71.10 — the content team is reviewing the two **"GS & GK 2026 NEW"** preview books (links in §71.5); act on their feedback, then reparse the next linked book the same way (WYSIWYG parser §71.3, structure fixes on a DOCX copy, preview upload, no live replacement until sign-off §71.8). The earlier admin-login pointer (§70.8) may already be addressed by teammate commit `ed7a5de` (§71.10).
 
-**🎯 Latest (2026-10-07)**: §72 — 47 "2026 NEW" Draft books created and ready for content-team review (`docs/CONTENT_TEAM_REVIEW_2026_NEW_BOOKS.md`); waiting for their feedback; 10 books still need a source DOCX or a styled copy (§72.2).
+**🎯 Latest (2026-10-07)**: §72 — 50 "2026 NEW" Draft books created and ready for content-team review; **start with `docs/BOOK_REPARSE_REFERENCE.md`** (runbook, mapping, open items); waiting for their feedback and the English Guide source (§72.5).
 
 *(Prior pointer, now superseded — kept for history)* §70.8 — the **Roles & Permissions / admin login** work. The admin login screen printed the shared admin username and password on the page, and the check was done in the browser; the plan was real per-user admin accounts, first for the 7 core-team testers (§70.6).
 
@@ -3270,3 +3270,10 @@ Swap (repoint `lc_exam_resource_map` to the new row per book, de-duplicated; dro
 - Two sources live OUTSIDE the content library, in `CLIENT ASSETS/VeerNXT/`: `Mathematics_Precis_FULL_fixed.docx` (the 09-21 live replacement, 100% text match, 20 chapters, 22 images) and `Metro_Technical_Knowledge.docx` (100%). Both built ("MATHEMATICS 2026 NEW" Precis, "Metro_Technical_Knowledge 2026 NEW"). The master `Cluster_003_MATHEMATICS.docx` is NOT the live source (9% text overlap, no chapter names).
 - **English Guide** (939 exams) is English *Precis* content filed as a Guide (stored title "ENGLISH PRECIS", 26 AI-enriched chapters, chapters 14+ broken); its text is 100% identical to `DEPRECATED/.../Precis/English/Cluster_002_ENGLISH.docx`, while the master `Cluster_005_ENGLISH` (21 chapters) is a different rewritten edition (0.2%). Not built: the content team must choose the source (docs/CONTENT_TEAM_REVIEW_2026_NEW_BOOKS.md, section A).
 - Totals now: **50 new Draft books** (resources 16,631 -> 16,681, exam links unchanged); 1 book still waiting (English Guide); old "2026 GK-GS" Precis covered by GS & GK Precis.
+
+### 72.5 Reference document and final state of the day
+- **`docs/BOOK_REPARSE_REFERENCE.md`** is the distilled runbook for this whole programme (findings, tooling, policy, how to find a source DOCX, how to re-run or roll back one book, the swap/purge plan, gotchas, open items, and the old-book -> new-book table). Read it before re-analysing anything. Machine-readable mapping: `docs/book_swap_map_2026-10-07.json`; run records for rollback: `docs/bulk_reparse_runs/`.
+- Final state: **50 new Draft books**, `resources` 16,631 -> 16,681 rows, `lc_exam_resource_map` unchanged (11,990), 0 exam links to the new rows, 0 visible to the anon key, review list (R2 `_review/index.json`) holds 50 books, all metadata and chapter files load. Table-colour change and review page are deployed (last deploy checked: `359e59f`).
+- Discovered: in this app an **archived book is just status Draft**, so the new Draft books show under *Show archived* on admin Book Content (review them in `/dev-reader`).
+- New small scripts: `scripts/rebuild_review_index.mjs`, `scripts/build_swap_map.cjs`; `bulk_reparse_books.mjs --rollback <results> --only "<title>"` rolls back a single book (rollback still untested).
+- **Waiting for:** content-team feedback; the English Guide source decision. **Next after sign-off:** the swap and purge (planned, not built; see the reference, section 7).

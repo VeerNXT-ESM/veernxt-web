@@ -1,0 +1,60 @@
+{
+  "startedAt": "2026-10-07T12:05:47.977Z",
+  "mode": "execute",
+  "books": [
+    {
+      "id": "guide-metro-technical-knowledge-2026-new",
+      "category": "Guide",
+      "oldTitle": "Metro_Technical_Knowledge",
+      "newTitle": "Metro_Technical_Knowledge 2026 NEW",
+      "status": "ready",
+      "examsLinked": 3,
+      "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\Metro_Technical_Knowledge.docx",
+      "sourceSha256": "8b0fc8c206f97bfce54bbb04edea1b5a5abe4ab20496f259535f02ed06332d12",
+      "stats": {
+        "chapters": 51,
+        "subjects": 0,
+        "blocks": 2214,
+        "types": {
+          "paragraph": 1836,
+          "list": 85,
+          "heading": 205,
+          "table": 84,
+          "numberedList": 4
+        },
+        "images": 0,
+        "listItems": 372,
+        "tables": 84,
+        "maxChapterBlocks": 378
+      },
+      "verify": {
+        "pass": true,
+        "issues": [],
+        "warnings": [],
+        "coveragePct": 100
+      },
+      "flags": [
+        "oversized chapters: Chapter 46: Practice MCQs - Se (306); Chapter 47: Practice MCQs - Se (362); Chapter 48: Practice MCQs - Se (378); Chapter 49: Practice MCQs - Se (357); Chapter 50: Practice MCQs - Se (311)",
+        "cover/contents dropped (5 blocks)"
+      ],
+      "created": {
+        "resourceId": "690cc395-58ea-458e-a58e-690cc39558ea",
+        "prefix": "structured_resources/blocks/Guide/690cc395-58ea-458e-a58e-690cc39558ea",
+        "objects": 52
+      }
+    }
+  ],
+  "counts": {
+    "before": {
+      "resources": 16680,
+      "map": 11990
+    },
+    "after": {
+      "resources": 16681,
+      "map": 11990
+    },
+    "expectedNewRows": 1
+  },
+  "anonVisible": 0,
+  "finishedAt": "2026-10-07T12:05:56.283Z"
+}

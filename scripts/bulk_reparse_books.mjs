@@ -16,7 +16,7 @@
  *   node scripts/build_reparse_manifest.mjs                          # once, read-only
  *   node scripts/bulk_reparse_books.mjs [--only "Assam"] [--limit 5] [--wave 1]   # dry run
  *   node scripts/bulk_reparse_books.mjs --only "Assam" --execute                  # real pilot
- *   node scripts/bulk_reparse_books.mjs --rollback FINAL_BOOKS_STRUCTURED/_bulk/results.json
+ *   node scripts/bulk_reparse_books.mjs --rollback docs/bulk_reparse_runs/results_<run>.json [--only "<title>"]   # removes only what that run created (optionally one book)
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -76,7 +76,8 @@ async function countRows(table) { const { count, error } = await sb.from(table).
 // ── rollback ─────────────────────────────────────────────────
 if (ROLLBACK) {
   const res = JSON.parse(fs.readFileSync(ROLLBACK, 'utf8'));
-  const created = res.books.filter((b) => b.created);
+  let created = res.books.filter((b) => b.created);
+  if (ONLY) created = created.filter((b) => b.newTitle.toLowerCase().includes(ONLY.toLowerCase())); // roll back just one book of that run
   console.log(`Rollback: ${created.length} book(s) created by that run`);
   const idx = await readReviewIndex();
   for (const b of created) {

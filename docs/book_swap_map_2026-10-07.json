@@ -1,0 +1,1005 @@
+{
+ "generated": "2026-10-07T12:54:44.961Z",
+ "note": "old linked book -> new \"2026 NEW\" Draft book. Use for the swap: repoint lc_exam_resource_map from the old resource rows sharing oldStorageBaseUrl to newBook.resourceId.",
+ "books": [
+  {
+   "category": "Guide",
+   "oldTitle": "2026 Descriptive Writing Bank Exams",
+   "oldResourceId": "dd5e3b80-fdd2-454e-8711-d519e343e0a5",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/dd5e3b80-fdd2-454e-8711-d519e343e0a5/",
+   "examsLinked": 37,
+   "oldRowCount": 1,
+   "oldChapterCount": 34,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\Unlabeled\\Cluster_080_Descriptive_Writing_Bank_Exams.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "2026 Descriptive Writing Bank Exams 2026 NEW",
+    "resourceId": "1fe504eb-4548-4454-a454-1fe504eb4548",
+    "prefix": "structured_resources/blocks/Guide/1fe504eb-4548-4454-a454-1fe504eb4548",
+    "chapters": 34
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Andaman Nicobar GS",
+   "oldResourceId": "489f834b-6134-4613-a613-489f834b6134_7e78399e",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/489f834b-6134-4613-a613-489f834b6134/",
+   "examsLinked": 17,
+   "oldRowCount": 11,
+   "oldChapterCount": 12,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK UT\\Andaman_Nicobar_GS_Book (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Andaman Nicobar GS 2026 NEW",
+    "resourceId": "50299cf0-13c9-413c-a13c-50299cf013c9",
+    "prefix": "structured_resources/blocks/Guide/50299cf0-13c9-413c-a13c-50299cf013c9",
+    "chapters": 10
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Andhra Pradesh GS",
+   "oldResourceId": "70be19d4-399e-4399-a399-70be19d4399e",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/0a128e8d-3056-4305-a305-0a128e8d3056/",
+   "examsLinked": 21,
+   "oldRowCount": 1,
+   "oldChapterCount": 17,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Andhra_Pradesh CONSTABLE (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Andhra Pradesh GS 2026 NEW",
+    "resourceId": "3765985b-0b9f-40b9-a0b9-3765985b0b9f",
+    "prefix": "structured_resources/blocks/Guide/3765985b-0b9f-40b9-a0b9-3765985b0b9f",
+    "chapters": 16
+   },
+   "note": "source matched by text (100%): Guide/GS BOOK STATE/Andhra_Pradesh CONSTABLE (1).docx"
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "ARUNACHAL PRADESH GS",
+   "oldResourceId": "74750d3d-2b66-42b6-a2b6-74750d3d2b66",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/09ecb614-4197-4419-a419-09ecb6144197/",
+   "examsLinked": 31,
+   "oldRowCount": 2,
+   "oldChapterCount": 16,
+   "source": null,
+   "status": "covered",
+   "newBook": {
+    "title": "ARUNACHAL PRADESH SI 2026 NEW",
+    "resourceId": "4e9c2ad7-183c-4183-a183-4e9c2ad7183c",
+    "prefix": "structured_resources/blocks/Guide/4e9c2ad7-183c-4183-a183-4e9c2ad7183c",
+    "chapters": 15,
+    "via": "identical text"
+   },
+   "note": "identical text (100%) to the new book \"Guide|ARUNACHAL PRADESH SI\" (same file: Guide/GS BOOK STATE/ARUNACHAL PRADESH SI (1).docx); one new book serves both old rows"
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "ARUNACHAL PRADESH SI",
+   "oldResourceId": "40f537cc-2779-4277-a277-40f537cc2779_63c5c185",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/60a48946-3658-4365-a365-60a489463658/",
+   "examsLinked": 35,
+   "oldRowCount": 1,
+   "oldChapterCount": 16,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\ARUNACHAL PRADESH SI (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "ARUNACHAL PRADESH SI 2026 NEW",
+    "resourceId": "4e9c2ad7-183c-4183-a183-4e9c2ad7183c",
+    "prefix": "structured_resources/blocks/Guide/4e9c2ad7-183c-4183-a183-4e9c2ad7183c",
+    "chapters": 15
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Assam GS",
+   "oldResourceId": "53e01e37-23ae-423a-a23a-53e01e3723ae_777bea35",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/4869b2f1-2b37-42b3-a2b3-4869b2f12b37/",
+   "examsLinked": 30,
+   "oldRowCount": 4,
+   "oldChapterCount": 1,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Assam_GS (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Assam GS 2026 NEW",
+    "resourceId": "4ecd2c29-2fcd-42fc-a2fc-4ecd2c292fcd",
+    "prefix": "structured_resources/blocks/Guide/4ecd2c29-2fcd-42fc-a2fc-4ecd2c292fcd",
+    "chapters": 10
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Bihar GS",
+   "oldResourceId": "7afaca17-588f-4588-a588-7afaca17588f_489d4f05",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/322b5cad-54c6-454c-a54c-322b5cad54c6/",
+   "examsLinked": 36,
+   "oldRowCount": 5,
+   "oldChapterCount": 1,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Bihar_GS (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Bihar GS 2026 NEW",
+    "resourceId": "225a86b4-0a2c-40a2-a0a2-225a86b40a2c",
+    "prefix": "structured_resources/blocks/Guide/225a86b4-0a2c-40a2-a0a2-225a86b40a2c",
+    "chapters": 11
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Chandigarh GS",
+   "oldResourceId": "0622afa9-0835-4083-a083-0622afa90835_174a9890",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/0622afa9-0835-4083-a083-0622afa90835/",
+   "examsLinked": 14,
+   "oldRowCount": 1,
+   "oldChapterCount": 13,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK UT\\Chandigarh_GS_Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Chandigarh GS 2026 NEW",
+    "resourceId": "3ce4dae1-68e6-468e-a68e-3ce4dae168e6",
+    "prefix": "structured_resources/blocks/Guide/3ce4dae1-68e6-468e-a68e-3ce4dae168e6",
+    "chapters": 11
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Chhattisgarh GS",
+   "oldResourceId": "4d1e99b8-7fdf-47fd-a7fd-4d1e99b87fdf_13258dd4",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/6bbf8b88-7a0a-47a0-a7a0-6bbf8b887a0a/",
+   "examsLinked": 11,
+   "oldRowCount": 1,
+   "oldChapterCount": 18,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Chhattisgarh_SI (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Chhattisgarh GS (SI) 2026 NEW",
+    "resourceId": "5e0848d7-02e6-402e-a02e-5e0848d702e6",
+    "prefix": "structured_resources/blocks/Guide/5e0848d7-02e6-402e-a02e-5e0848d702e6",
+    "chapters": 16
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Chhattisgarh GS",
+   "oldResourceId": "73463d42-4554-4455-a455-73463d424554",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/049ed5a3-5840-4584-a584-049ed5a35840/",
+   "examsLinked": 23,
+   "oldRowCount": 1,
+   "oldChapterCount": 18,
+   "source": null,
+   "status": "covered",
+   "newBook": {
+    "title": "Chhattisgarh GS (SI) 2026 NEW",
+    "resourceId": "5e0848d7-02e6-402e-a02e-5e0848d702e6",
+    "prefix": "structured_resources/blocks/Guide/5e0848d7-02e6-402e-a02e-5e0848d702e6",
+    "chapters": 16,
+    "via": "identical text"
+   },
+   "note": "identical text (100%) to the new book \"Guide|Chhattisgarh GS (SI)\" (same file: Guide/GS BOOK STATE/Chhattisgarh_SI (1).docx); one new book serves both old rows"
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Computer Science",
+   "oldResourceId": "31cb6eed-1354-4135-a135-31cb6eed1354_1d174c11",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/1359761c-5d2b-45d2-a5d2-1359761c5d2b/",
+   "examsLinked": 341,
+   "oldRowCount": 3,
+   "oldChapterCount": 15,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\Computer\\Cluster_009_Computer Science guide Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Computer Science 2026 NEW",
+    "resourceId": "714a4117-47be-447b-a47b-714a411747be",
+    "prefix": "structured_resources/blocks/Guide/714a4117-47be-447b-a47b-714a411747be",
+    "chapters": 14
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Dadra Nagar Haveli Daman Diu GS",
+   "oldResourceId": "33399396-4b22-44b2-a4b2-333993964b22_4b9b274b",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/33399396-4b22-44b2-a4b2-333993964b22/",
+   "examsLinked": 16,
+   "oldRowCount": 12,
+   "oldChapterCount": 13,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK UT\\Dadra_Nagar_Haveli_Daman_Diu_GS_Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Dadra Nagar Haveli Daman Diu GS 2026 NEW",
+    "resourceId": "688dbca1-7c11-47c1-a7c1-688dbca17c11",
+    "prefix": "structured_resources/blocks/Guide/688dbca1-7c11-47c1-a7c1-688dbca17c11",
+    "chapters": 11
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Delhi GS Book",
+   "oldResourceId": "14ab519b-68e2-468e-a68e-14ab519b68e2_51ecbb18",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/14ab519b-68e2-468e-a68e-14ab519b68e2/",
+   "examsLinked": 33,
+   "oldRowCount": 3,
+   "oldChapterCount": 14,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK UT\\Delhi_GS_Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Delhi GS Book 2026 NEW",
+    "resourceId": "0a8eaf3d-5e60-45e6-a5e6-0a8eaf3d5e60",
+    "prefix": "structured_resources/blocks/Guide/0a8eaf3d-5e60-45e6-a5e6-0a8eaf3d5e60",
+    "chapters": 12
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Delhi Police Driver Traffic Rules",
+   "oldResourceId": "d9e23dad-112d-4e82-b284-733f46ed18a4",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/d9e23dad-112d-4e82-b284-733f46ed18a4/",
+   "examsLinked": 1,
+   "oldRowCount": 1,
+   "oldChapterCount": 14,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GK-GS\\Cluster_076_Delhi_Police_Driver_Traffic_Rules.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Delhi Police Driver Traffic Rules 2026 NEW",
+    "resourceId": "2fba9371-2b63-42b6-a2b6-2fba93712b63",
+    "prefix": "structured_resources/blocks/Guide/2fba9371-2b63-42b6-a2b6-2fba93712b63",
+    "chapters": 13
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "ELECTRICAL ENGINEERING",
+   "oldResourceId": "28505818-fc7b-47e1-a17c-dea90daa717a",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/28505818-fc7b-47e1-a17c-dea90daa717a/",
+   "examsLinked": 1,
+   "oldRowCount": 1,
+   "oldChapterCount": 1,
+   "source": null,
+   "status": "covered",
+   "newBook": {
+    "title": "ELECTRICAL ENGINEERING 2026 NEW",
+    "resourceId": "01fca38c-7561-4756-a756-01fca38c7561",
+    "prefix": "structured_resources/blocks/Precis/01fca38c-7561-4756-a756-01fca38c7561",
+    "chapters": 20,
+    "via": "identical text"
+   },
+   "note": "identical text (99.8%) to the new book \"Precis|ELECTRICAL ENGINEERING\" (same file: Precis/Unlabeled/Cluster_044_ELECTRICAL ENGINEERING.docx); one new book serves both old rows"
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "ENGLISH",
+   "oldResourceId": "345ae2f4-c7f8-4cc8-9926-578d005fe2d8",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/345ae2f4-c7f8-4cc8-9926-578d005fe2d8/",
+   "examsLinked": 939,
+   "oldRowCount": 1,
+   "oldChapterCount": 26,
+   "source": null,
+   "status": "source_needed",
+   "newBook": null,
+   "note": "no file named \"Cluster_087_ENGLISH.docx\" in MASTER DOCUMENTS; the content team must name the final DOCX"
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Goa GS",
+   "oldResourceId": "3af95599-61fa-461f-a61f-3af9559961fa",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/3af95599-61fa-461f-a61f-3af9559961fa/",
+   "examsLinked": 1,
+   "oldRowCount": 1,
+   "oldChapterCount": 14,
+   "source": null,
+   "status": "covered",
+   "newBook": {
+    "title": "Goa GS 2026 NEW",
+    "resourceId": "69e7fca2-7024-4702-a702-69e7fca27024",
+    "prefix": "structured_resources/blocks/Guide/69e7fca2-7024-4702-a702-69e7fca27024",
+    "chapters": 13,
+    "via": "identical text"
+   },
+   "note": "identical text (100%) to the new book \"Guide|Goa GS\" (same file: Guide/GS BOOK STATE/Goa GS (1).docx); one new book serves both old rows"
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Goa GS",
+   "oldResourceId": "0a84fa19-7d2e-47d2-a7d2-0a84fa197d2e_0378fdf2",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/7ec69231-1895-4189-a189-7ec692311895/",
+   "examsLinked": 16,
+   "oldRowCount": 2,
+   "oldChapterCount": 14,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Goa GS (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Goa GS 2026 NEW",
+    "resourceId": "69e7fca2-7024-4702-a702-69e7fca27024",
+    "prefix": "structured_resources/blocks/Guide/69e7fca2-7024-4702-a702-69e7fca27024",
+    "chapters": 13
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "GS & GK",
+   "oldResourceId": "125ec54d-0a3d-40a3-a0a3-125ec54d0a3d_1d174c11",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/4f39098f-651c-4651-a651-4f39098f651c/",
+   "examsLinked": 1130,
+   "oldRowCount": 4,
+   "oldChapterCount": 76,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GK-GS\\GSGK GUIDE 2026.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "GS & GK 2026 NEW",
+    "resourceId": "2933909f-556e-4556-a556-2933909f556e",
+    "prefix": "structured_resources/blocks/Guide/2933909f-556e-4556-a556-2933909f556e",
+    "chapters": 66
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Gujarat GS",
+   "oldResourceId": "0482fccc-1048-4104-a104-0482fccc1048_314547d2",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/611b9d82-7755-4775-a775-611b9d827755/",
+   "examsLinked": 31,
+   "oldRowCount": 2,
+   "oldChapterCount": 15,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Gujarat_GS (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Gujarat GS 2026 NEW",
+    "resourceId": "30350892-08ea-408e-a08e-3035089208ea",
+    "prefix": "structured_resources/blocks/Guide/30350892-08ea-408e-a08e-3035089208ea",
+    "chapters": 13
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Haryana GS",
+   "oldResourceId": "08d819d4-3339-4333-a333-08d819d43339_61c722d1",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/760dc80f-29bb-429b-a29b-760dc80f29bb/",
+   "examsLinked": 30,
+   "oldRowCount": 3,
+   "oldChapterCount": 12,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Haryana_GS (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Haryana GS 2026 NEW",
+    "resourceId": "5864e1d5-2d4c-42d4-a2d4-5864e1d52d4c",
+    "prefix": "structured_resources/blocks/Guide/5864e1d5-2d4c-42d4-a2d4-5864e1d52d4c",
+    "chapters": 11
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Himachal Pradesh GS",
+   "oldResourceId": "64176b06-4417-4441-a441-64176b064417_7c750442",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/740e95a6-5540-4554-a554-740e95a65540/",
+   "examsLinked": 10,
+   "oldRowCount": 1,
+   "oldChapterCount": 14,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Himachal_Pradesh_CONSTABLE (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Himachal Pradesh GS (CONSTABLE) 2026 NEW",
+    "resourceId": "02943cd6-5187-4518-a518-02943cd65187",
+    "prefix": "structured_resources/blocks/Guide/02943cd6-5187-4518-a518-02943cd65187",
+    "chapters": 13
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Himachal Pradesh GS",
+   "oldResourceId": "2ea775a3-22a0-422a-a22a-2ea775a322a0",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/011486d5-0e0e-40e0-a0e0-011486d50e0e/",
+   "examsLinked": 18,
+   "oldRowCount": 1,
+   "oldChapterCount": 14,
+   "source": null,
+   "status": "covered",
+   "newBook": {
+    "title": "Himachal Pradesh GS (CONSTABLE) 2026 NEW",
+    "resourceId": "02943cd6-5187-4518-a518-02943cd65187",
+    "prefix": "structured_resources/blocks/Guide/02943cd6-5187-4518-a518-02943cd65187",
+    "chapters": 13,
+    "via": "identical text"
+   },
+   "note": "identical text (100%) to the new book \"Guide|Himachal Pradesh GS (CONSTABLE)\" (same file: Guide/GS BOOK STATE/Himachal_Pradesh_CONSTABLE (1).docx); one new book serves both old rows"
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "HINDI",
+   "oldResourceId": "8f1d501f-cef0-4268-a112-883052142a15",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/8f1d501f-cef0-4268-a112-883052142a15/",
+   "examsLinked": 340,
+   "oldRowCount": 1,
+   "oldChapterCount": 6,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\Hindi\\Cluster_010_HINDI.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "HINDI 2026 NEW",
+    "resourceId": "4ae22552-1aee-41ae-a1ae-4ae225521aee",
+    "prefix": "structured_resources/blocks/Guide/4ae22552-1aee-41ae-a1ae-4ae225521aee",
+    "chapters": 6
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Jammu_Kashmir_GS_Book",
+   "oldResourceId": "53f3fb1a-26e1-426e-a26e-53f3fb1a26e1_087a1d1e",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/53f3fb1a-26e1-426e-a26e-53f3fb1a26e1/",
+   "examsLinked": 37,
+   "oldRowCount": 5,
+   "oldChapterCount": 36,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK UT\\Jammu_Kashmir_GS_Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Jammu_Kashmir_GS_Book 2026 NEW",
+    "resourceId": "11ea16c3-3fbf-43fb-a3fb-11ea16c33fbf",
+    "prefix": "structured_resources/blocks/Guide/11ea16c3-3fbf-43fb-a3fb-11ea16c33fbf",
+    "chapters": 34
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Jharkhand GS Book",
+   "oldResourceId": "317d179a-396a-4396-a396-317d179a396a_16dc2e86",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/317d179a-396a-4396-a396-317d179a396a/",
+   "examsLinked": 34,
+   "oldRowCount": 3,
+   "oldChapterCount": 13,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Jharkhand_GS_Book (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Jharkhand GS Book 2026 NEW",
+    "resourceId": "29d86906-1562-4156-a156-29d869061562",
+    "prefix": "structured_resources/blocks/Guide/29d86906-1562-4156-a156-29d869061562",
+    "chapters": 11
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Karnataka GS",
+   "oldResourceId": "5d133db9-653a-4653-a653-5d133db9653a_161197db",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/44dbb123-7cb3-47cb-a7cb-44dbb1237cb3/",
+   "examsLinked": 9,
+   "oldRowCount": 1,
+   "oldChapterCount": 18,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Karnataka_CONSTABLE (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Karnataka GS (CONSTABLE) 2026 NEW",
+    "resourceId": "26038f77-4ca2-44ca-a4ca-26038f774ca2",
+    "prefix": "structured_resources/blocks/Guide/26038f77-4ca2-44ca-a4ca-26038f774ca2",
+    "chapters": 17
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Karnataka GS",
+   "oldResourceId": "1d7bf23d-51b7-451b-a51b-1d7bf23d51b7",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/015ef2b5-256d-4256-a256-015ef2b5256d/",
+   "examsLinked": 21,
+   "oldRowCount": 1,
+   "oldChapterCount": 18,
+   "source": null,
+   "status": "covered",
+   "newBook": {
+    "title": "Karnataka GS (CONSTABLE) 2026 NEW",
+    "resourceId": "26038f77-4ca2-44ca-a4ca-26038f774ca2",
+    "prefix": "structured_resources/blocks/Guide/26038f77-4ca2-44ca-a4ca-26038f774ca2",
+    "chapters": 17,
+    "via": "identical text"
+   },
+   "note": "identical text (99.4%) to the new book \"Guide|Karnataka GS (CONSTABLE)\" (same file: Guide/GS BOOK STATE/Karnataka_CONSTABLE (1).docx); one new book serves both old rows"
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "KERALA GS",
+   "oldResourceId": "76b3b088-6776-4677-a677-76b3b0886776_0c8d1833",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/5f960869-2dca-42dc-a2dc-5f9608692dca/",
+   "examsLinked": 24,
+   "oldRowCount": 1,
+   "oldChapterCount": 16,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\KERALA CONSTABLE (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "KERALA GS 2026 NEW",
+    "resourceId": "635d5d65-017b-4017-a017-635d5d65017b",
+    "prefix": "structured_resources/blocks/Guide/635d5d65-017b-4017-a017-635d5d65017b",
+    "chapters": 15
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Ladakh GS",
+   "oldResourceId": "25f1a637-7020-4702-a702-25f1a6377020_3e5c1537",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/25f1a637-7020-4702-a702-25f1a6377020/",
+   "examsLinked": 18,
+   "oldRowCount": 1,
+   "oldChapterCount": 16,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK UT\\Ladakh_GS_Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Ladakh GS 2026 NEW",
+    "resourceId": "1903d603-1899-4189-a189-1903d6031899",
+    "prefix": "structured_resources/blocks/Guide/1903d603-1899-4189-a189-1903d6031899",
+    "chapters": 14
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Lakshadweep GS",
+   "oldResourceId": "29dec820-2d4d-42d4-a2d4-29dec8202d4d_4f0c555b",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/29dec820-2d4d-42d4-a2d4-29dec8202d4d/",
+   "examsLinked": 12,
+   "oldRowCount": 1,
+   "oldChapterCount": 13,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK UT\\Lakshadweep_GS_Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Lakshadweep GS 2026 NEW",
+    "resourceId": "0d9fccff-24e0-424e-a24e-0d9fccff24e0",
+    "prefix": "structured_resources/blocks/Guide/0d9fccff-24e0-424e-a24e-0d9fccff24e0",
+    "chapters": 11
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Madhya Pradesh GS",
+   "oldResourceId": "6216e61f-37f5-437f-a37f-6216e61f37f5_76e0f56c",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/6216e61f-37f5-437f-a37f-6216e61f37f5/",
+   "examsLinked": 28,
+   "oldRowCount": 1,
+   "oldChapterCount": 16,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Madhya_Pradesh_GS (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Madhya Pradesh GS 2026 NEW",
+    "resourceId": "3da05460-56dc-456d-a56d-3da0546056dc",
+    "prefix": "structured_resources/blocks/Guide/3da05460-56dc-456d-a56d-3da0546056dc",
+    "chapters": 13
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "MAHARASHTRA GS",
+   "oldResourceId": "20b8a4db-2add-42ad-a2ad-20b8a4db2add_65ec1d58",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/20b8a4db-2add-42ad-a2ad-20b8a4db2add/",
+   "examsLinked": 26,
+   "oldRowCount": 7,
+   "oldChapterCount": 13,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\MAHARSHTRA GS (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "MAHARASHTRA GS 2026 NEW",
+    "resourceId": "5e5377f1-1755-4175-a175-5e5377f11755",
+    "prefix": "structured_resources/blocks/Guide/5e5377f1-1755-4175-a175-5e5377f11755",
+    "chapters": 12
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Manipur GS Book",
+   "oldResourceId": "2eb2379d-4b02-44b0-a4b0-2eb2379d4b02_1d174c11",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/2eb2379d-4b02-44b0-a4b0-2eb2379d4b02/",
+   "examsLinked": 22,
+   "oldRowCount": 2,
+   "oldChapterCount": 14,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Manipur_GS_Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Manipur GS Book 2026 NEW",
+    "resourceId": "04f55e26-62e9-462e-a62e-04f55e2662e9",
+    "prefix": "structured_resources/blocks/Guide/04f55e26-62e9-462e-a62e-04f55e2662e9",
+    "chapters": 12
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Mathematics",
+   "oldResourceId": "20924968-4525-4452-a452-209249684525_1d174c11",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/5d7b7b17-1376-4137-a137-5d7b7b171376/",
+   "examsLinked": 1013,
+   "oldRowCount": 4,
+   "oldChapterCount": 9,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\Mathematics\\Cluster_008_MATHEMATICS.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Mathematics 2026 NEW",
+    "resourceId": "5e69a4a9-6a93-46a9-a6a9-5e69a4a96a93",
+    "prefix": "structured_resources/blocks/Guide/5e69a4a9-6a93-46a9-a6a9-5e69a4a96a93",
+    "chapters": 7
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "MATHS AND REASONING",
+   "oldResourceId": "7826dff8-69ab-41c4-aac9-f4792eed62ed",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/7826dff8-69ab-41c4-aac9-f4792eed62ed/",
+   "examsLinked": 2,
+   "oldRowCount": 1,
+   "oldChapterCount": 13,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\Mathematics\\Cluster_019_MATHS AND REASONING GUIDE BOOK.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "MATHS AND REASONING 2026 NEW",
+    "resourceId": "32861a4a-5697-4569-a569-32861a4a5697",
+    "prefix": "structured_resources/blocks/Guide/32861a4a-5697-4569-a569-32861a4a5697",
+    "chapters": 13
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Meghalaya GS",
+   "oldResourceId": "48561952-74ca-474c-a74c-4856195274ca_1e2d8340",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/48561952-74ca-474c-a74c-4856195274ca/",
+   "examsLinked": 17,
+   "oldRowCount": 2,
+   "oldChapterCount": 13,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Meghalaya_GS_Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Meghalaya GS 2026 NEW",
+    "resourceId": "6e3ec792-2654-4265-a265-6e3ec7922654",
+    "prefix": "structured_resources/blocks/Guide/6e3ec792-2654-4265-a265-6e3ec7922654",
+    "chapters": 11
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Metro_Technical_Knowledge",
+   "oldResourceId": "482fadc4-0504-4050-a050-482fadc40504",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/482fadc4-0504-4050-a050-482fadc40504/",
+   "examsLinked": 3,
+   "oldRowCount": 1,
+   "oldChapterCount": 50,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\Metro_Technical_Knowledge.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Metro_Technical_Knowledge 2026 NEW",
+    "resourceId": "690cc395-58ea-458e-a58e-690cc39558ea",
+    "prefix": "structured_resources/blocks/Guide/690cc395-58ea-458e-a58e-690cc39558ea",
+    "chapters": 51
+   },
+   "note": "source outside the content library, text matches the live book 100%"
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Mizoram GS",
+   "oldResourceId": "03f73970-1cf1-41cf-a1cf-03f739701cf1_6dba1b05",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/03f73970-1cf1-41cf-a1cf-03f739701cf1/",
+   "examsLinked": 17,
+   "oldRowCount": 2,
+   "oldChapterCount": 13,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Mizoram_GS_Book (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Mizoram GS 2026 NEW",
+    "resourceId": "3009b8d3-547e-4547-a547-3009b8d3547e",
+    "prefix": "structured_resources/blocks/Guide/3009b8d3-547e-4547-a547-3009b8d3547e",
+    "chapters": 11
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Nursing",
+   "oldResourceId": "0fc930ab-0140-4133-91be-15651aa7dbe5",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/0fc930ab-0140-4133-91be-15651aa7dbe5/",
+   "examsLinked": 109,
+   "oldRowCount": 1,
+   "oldChapterCount": 18,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\Unlabeled\\Cluster_078_Nursing Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Nursing 2026 NEW",
+    "resourceId": "06a72a5a-067a-4067-a067-06a72a5a067a",
+    "prefix": "structured_resources/blocks/Guide/06a72a5a-067a-4067-a067-06a72a5a067a",
+    "chapters": 18
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Odisha GS",
+   "oldResourceId": "5e0f8b4a-1859-4185-a185-5e0f8b4a1859_059ef870",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/58f193f2-1d23-41d2-a1d2-58f193f21d23/",
+   "examsLinked": 20,
+   "oldRowCount": 1,
+   "oldChapterCount": 24,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Odisha CONSTABLE (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Odisha GS 2026 NEW",
+    "resourceId": "14da93fd-4885-4488-a488-14da93fd4885",
+    "prefix": "structured_resources/blocks/Guide/14da93fd-4885-4488-a488-14da93fd4885",
+    "chapters": 22
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Puducherry GS",
+   "oldResourceId": "73cf1ee4-437c-4437-a437-73cf1ee4437c_7955396e",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/73cf1ee4-437c-4437-a437-73cf1ee4437c/",
+   "examsLinked": 13,
+   "oldRowCount": 1,
+   "oldChapterCount": 14,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK UT\\Puducherry_GS_Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Puducherry GS 2026 NEW",
+    "resourceId": "6b2bd0aa-4f7a-44f7-a4f7-6b2bd0aa4f7a",
+    "prefix": "structured_resources/blocks/Guide/6b2bd0aa-4f7a-44f7-a4f7-6b2bd0aa4f7a",
+    "chapters": 12
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "PUNJAB GS",
+   "oldResourceId": "7b55951d-03bb-403b-a03b-7b55951d03bb_315b590d",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/7396b36f-1748-4174-a174-7396b36f1748/",
+   "examsLinked": 16,
+   "oldRowCount": 1,
+   "oldChapterCount": 13,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\punjab si guide book (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "PUNJAB GS 2026 NEW",
+    "resourceId": "0406085c-1aa5-41aa-a1aa-0406085c1aa5",
+    "prefix": "structured_resources/blocks/Guide/0406085c-1aa5-41aa-a1aa-0406085c1aa5",
+    "chapters": 12
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "RAJASTHAN GS",
+   "oldResourceId": "3a68a75a-42dc-442d-a42d-3a68a75a42dc_74fc4fd1",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/78d84d9e-5c04-45c0-a5c0-78d84d9e5c04/",
+   "examsLinked": 46,
+   "oldRowCount": 1,
+   "oldChapterCount": 24,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\RAJASTHAN SI GS GUIDE (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "RAJASTHAN GS 2026 NEW",
+    "resourceId": "777a7ed9-7d29-47d2-a7d2-777a7ed97d29",
+    "prefix": "structured_resources/blocks/Guide/777a7ed9-7d29-47d2-a7d2-777a7ed97d29",
+    "chapters": 22
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Reasoning",
+   "oldResourceId": "756514fe-4f8c-44f8-a4f8-756514fe4f8c_47228b1e",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/272dbb7c-12ac-412a-a12a-272dbb7c12ac/",
+   "examsLinked": 920,
+   "oldRowCount": 2,
+   "oldChapterCount": 12,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\Reasoning\\Cluster_007_REASONING.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Reasoning 2026 NEW",
+    "resourceId": "6f3c6236-6e53-46e5-a6e5-6f3c62366e53",
+    "prefix": "structured_resources/blocks/Guide/6f3c6236-6e53-46e5-a6e5-6f3c62366e53",
+    "chapters": 6
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "TamilNadu GS",
+   "oldResourceId": "5623812b-5b47-45b4-a5b4-5623812b5b47_0918ee90",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/557779ed-2a7f-42a7-a2a7-557779ed2a7f/",
+   "examsLinked": 24,
+   "oldRowCount": 1,
+   "oldChapterCount": 12,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\TamilNadu CONSTABLE (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "TamilNadu GS 2026 NEW",
+    "resourceId": "3aff8dfe-7954-4795-a795-3aff8dfe7954",
+    "prefix": "structured_resources/blocks/Guide/3aff8dfe-7954-4795-a795-3aff8dfe7954",
+    "chapters": 11
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Telangana GS 2026",
+   "oldResourceId": "23275112-0968-4096-a096-232751120968_3f365d2c",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/258ce254-0a22-40a2-a0a2-258ce2540a22/",
+   "examsLinked": 21,
+   "oldRowCount": 1,
+   "oldChapterCount": 11,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Telangana_CONSTABLE.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Telangana GS 2026 2026 NEW",
+    "resourceId": "4b13df73-2a66-42a6-a2a6-4b13df732a66",
+    "prefix": "structured_resources/blocks/Guide/4b13df73-2a66-42a6-a2a6-4b13df732a66",
+    "chapters": 10
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Tripura GS",
+   "oldResourceId": "2d86f4e0-1862-4186-a186-2d86f4e01862_616fe1f9",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/45a5af83-72f7-472f-a72f-45a5af8372f7/",
+   "examsLinked": 16,
+   "oldRowCount": 1,
+   "oldChapterCount": 16,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Tripura_CONSTABLE.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Tripura GS 2026 NEW",
+    "resourceId": "20fd80f8-285e-4285-a285-20fd80f8285e",
+    "prefix": "structured_resources/blocks/Guide/20fd80f8-285e-4285-a285-20fd80f8285e",
+    "chapters": 15
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "Uttarakhand GS",
+   "oldResourceId": "75ac958c-4322-4432-a432-75ac958c4322_58b6af96",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/3ca61eab-5466-4546-a546-3ca61eab5466/",
+   "examsLinked": 16,
+   "oldRowCount": 1,
+   "oldChapterCount": 14,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\Uttarakhand_CONSTABLE (1).docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Uttarakhand GS 2026 NEW",
+    "resourceId": "399940e1-384c-4384-a384-399940e1384c",
+    "prefix": "structured_resources/blocks/Guide/399940e1-384c-4384-a384-399940e1384c",
+    "chapters": 13
+   }
+  },
+  {
+   "category": "Guide",
+   "oldTitle": "West Bengal GS",
+   "oldResourceId": "14484429-2347-4234-a234-144844292347_02bbef62",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/0e7cde27-62bd-462b-a62b-0e7cde2762bd/",
+   "examsLinked": 13,
+   "oldRowCount": 1,
+   "oldChapterCount": 28,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK STATE\\WB_Police_ SI.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "West Bengal GS 2026 NEW",
+    "resourceId": "2af1f30a-3641-4364-a364-2af1f30a3641",
+    "prefix": "structured_resources/blocks/Guide/2af1f30a-3641-4364-a364-2af1f30a3641",
+    "chapters": 27
+   }
+  },
+  {
+   "category": "Precis",
+   "oldTitle": "2026 GK-GS",
+   "oldResourceId": "050f4eea-49b4-483c-b396-948ae6480b45",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/050f4eea-49b4-483c-b396-948ae6480b45/",
+   "examsLinked": 104,
+   "oldRowCount": 1,
+   "oldChapterCount": 127,
+   "source": null,
+   "status": "covered",
+   "newBook": {
+    "title": "GS & GK 2026 NEW",
+    "resourceId": "088a411c-0efe-40ef-a0ef-088a411c0efe",
+    "prefix": "structured_resources/blocks/Precis/088a411c-0efe-40ef-a0ef-088a411c0efe",
+    "chapters": 128,
+    "via": "replaced by GS & GK Precis"
+   },
+   "note": "old Gemini copy of the GS & GK Precis; replaced by \"GS & GK 2026 NEW\" (Precis), no separate book"
+  },
+  {
+   "category": "Precis",
+   "oldTitle": "Computer Science",
+   "oldResourceId": "77a55f03-23c9-423c-a23c-77a55f0323c9_1d174c11",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/2df20d44-79a3-479a-a79a-2df20d4479a3/",
+   "examsLinked": 341,
+   "oldRowCount": 3,
+   "oldChapterCount": 15,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Precis\\Computer\\Cluster_040_Computer Science guide Book.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "Computer Science 2026 NEW",
+    "resourceId": "101d1a4c-7d3f-47d3-a7d3-101d1a4c7d3f",
+    "prefix": "structured_resources/blocks/Precis/101d1a4c-7d3f-47d3-a7d3-101d1a4c7d3f",
+    "chapters": 14
+   }
+  },
+  {
+   "category": "Precis",
+   "oldTitle": "ELECTRICAL ENGINEERING",
+   "oldResourceId": "b73afd42-f681-453c-8d04-32d2d172656c",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/b73afd42-f681-453c-8d04-32d2d172656c/",
+   "examsLinked": 1,
+   "oldRowCount": 1,
+   "oldChapterCount": 1,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Precis\\Unlabeled\\Cluster_044_ELECTRICAL ENGINEERING.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "ELECTRICAL ENGINEERING 2026 NEW",
+    "resourceId": "01fca38c-7561-4756-a756-01fca38c7561",
+    "prefix": "structured_resources/blocks/Precis/01fca38c-7561-4756-a756-01fca38c7561",
+    "chapters": 20
+   }
+  },
+  {
+   "category": "Precis",
+   "oldTitle": "ENGLISH",
+   "oldResourceId": "0503abd3-2d38-42d3-a2d3-0503abd32d38",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/1b0cedf2-7476-4747-a747-1b0cedf27476/",
+   "examsLinked": 939,
+   "oldRowCount": 4,
+   "oldChapterCount": 30,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Precis\\English\\Cluster_005_ENGLISH.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "ENGLISH 2026 NEW",
+    "resourceId": "62442489-1e32-41e3-a1e3-624424891e32",
+    "prefix": "structured_resources/blocks/Precis/62442489-1e32-41e3-a1e3-624424891e32",
+    "chapters": 21
+   }
+  },
+  {
+   "category": "Precis",
+   "oldTitle": "GS & GK",
+   "oldResourceId": "349e75e0-7927-4792-a792-349e75e07927_7101afd1",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/349e75e0-7927-4792-a792-349e75e07927/",
+   "examsLinked": 1130,
+   "oldRowCount": 1,
+   "oldChapterCount": 136,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Precis\\GK-GS\\GSGK PRECIS 2026.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "GS & GK 2026 NEW",
+    "resourceId": "088a411c-0efe-40ef-a0ef-088a411c0efe",
+    "prefix": "structured_resources/blocks/Precis/088a411c-0efe-40ef-a0ef-088a411c0efe",
+    "chapters": 128
+   }
+  },
+  {
+   "category": "Precis",
+   "oldTitle": "HINDI",
+   "oldResourceId": "472e55b9-34ef-434e-a34e-472e55b934ef_7c149f88",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/16e4d9bb-0eea-40ee-a0ee-16e4d9bb0eea/",
+   "examsLinked": 340,
+   "oldRowCount": 3,
+   "oldChapterCount": 19,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Precis\\Hindi\\Cluster_012_HINDI.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "HINDI 2026 NEW",
+    "resourceId": "7bb8ae90-7047-4704-a704-7bb8ae907047",
+    "prefix": "structured_resources/blocks/Precis/7bb8ae90-7047-4704-a704-7bb8ae907047",
+    "chapters": 18
+   }
+  },
+  {
+   "category": "Precis",
+   "oldTitle": "MATHEMATICS",
+   "oldResourceId": "7c4ebdfc-5c68-45c6-a5c6-7c4ebdfc5c68",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/0568526f-4c9d-44c9-a4c9-0568526f4c9d/",
+   "examsLinked": 1013,
+   "oldRowCount": 4,
+   "oldChapterCount": 20,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\Mathematics_Precis_FULL_fixed.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "MATHEMATICS 2026 NEW",
+    "resourceId": "049a73af-47cc-447c-a47c-049a73af47cc",
+    "prefix": "structured_resources/blocks/Precis/049a73af-47cc-447c-a47c-049a73af47cc",
+    "chapters": 20
+   },
+   "note": "source outside the content library, text matches the live book 100%"
+  },
+  {
+   "category": "Precis",
+   "oldTitle": "REASONING",
+   "oldResourceId": "4aaea18f-598c-4598-a598-4aaea18f598c_47228b1e",
+   "oldStorageBaseUrl": "https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/0fd51a63-6ef8-46ef-a6ef-0fd51a636ef8/",
+   "examsLinked": 920,
+   "oldRowCount": 3,
+   "oldChapterCount": 1,
+   "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Precis\\Reasoning\\Cluster_004_REASONING.docx",
+   "status": "ready",
+   "newBook": {
+    "title": "REASONING 2026 NEW",
+    "resourceId": "36dcf839-0c80-40c8-a0c8-36dcf8390c80",
+    "prefix": "structured_resources/blocks/Precis/36dcf839-0c80-40c8-a0c8-36dcf8390c80",
+    "chapters": 15
+   }
+  }
+ ]
+}

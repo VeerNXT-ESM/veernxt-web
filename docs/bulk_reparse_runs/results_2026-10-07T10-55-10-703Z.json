@@ -1,0 +1,59 @@
+{
+  "startedAt": "2026-10-07T10:55:10.704Z",
+  "mode": "execute",
+  "books": [
+    {
+      "id": "guide-delhi-gs-book-2026-new",
+      "category": "Guide",
+      "oldTitle": "Delhi GS Book",
+      "newTitle": "Delhi GS Book 2026 NEW",
+      "status": "ready",
+      "examsLinked": 33,
+      "source": "K:\\H DRIVE\\Quantum Climb\\CLIENT ASSETS\\VeerNXT\\CONTENT\\FINAL_CONTENT\\Final Documents\\MASTER DOCUMENTS\\Guide\\GS BOOK UT\\Delhi_GS_Book.docx",
+      "sourceSha256": "aa9f1dcfb2f954c5087af884752e9e3927148396e1cb451a7f5fa3186d554d9c",
+      "stats": {
+        "chapters": 12,
+        "subjects": 0,
+        "blocks": 176,
+        "types": {
+          "paragraph": 85,
+          "heading": 46,
+          "table": 18,
+          "list": 27
+        },
+        "images": 0,
+        "listItems": 101,
+        "tables": 18,
+        "maxChapterBlocks": 24
+      },
+      "verify": {
+        "pass": true,
+        "issues": [],
+        "warnings": [],
+        "coveragePct": 100
+      },
+      "flags": [
+        "Table of Contents chapter dropped",
+        "cover/contents dropped (3 blocks)"
+      ],
+      "created": {
+        "resourceId": "0a8eaf3d-5e60-45e6-a5e6-0a8eaf3d5e60",
+        "prefix": "structured_resources/blocks/Guide/0a8eaf3d-5e60-45e6-a5e6-0a8eaf3d5e60",
+        "objects": 14
+      }
+    }
+  ],
+  "counts": {
+    "before": {
+      "resources": 16632,
+      "map": 11990
+    },
+    "after": {
+      "resources": 16633,
+      "map": 11990
+    },
+    "expectedNewRows": 1
+  },
+  "anonVisible": 0,
+  "finishedAt": "2026-10-07T10:55:15.460Z"
+}
