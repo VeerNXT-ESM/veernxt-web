@@ -14,17 +14,11 @@ import './BookReaderV2.css';
 // row, so their samples here are the closest blocks-format equivalent
 // (Précis) instead -- still real, representative content for exercising
 // the reader, just not the identical title the old local copy had.
-const PREVIEW_BASE = 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Preview';
 // Review list written by scripts/bulk_reparse_books.mjs: every "<title> 2026 NEW" book (Draft in the DB, not linked
 // to any exam). Link: /dev-reader?book=<category>-<title slug>, e.g. ?book=guide-assam-gs-2026-new
 const REVIEW_INDEX_URL = 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/_review/index.json';
 const reviewId = (b) => `${(b.category || '').toLowerCase()}-${(b.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`;
 const AVAILABLE_BOOKS = [
-  // Content-team review copies: parsed straight from the DOCX (no AI enrichment). These are NEW books
-  // ("<title> 2026 NEW"); once signed off the suffix is dropped and they replace the old books.
-  // Links: /dev-reader?book=gsgk-guide-2026-new   /dev-reader?book=gsgk-precis-2026-new   (add &ch=N for a chapter)
-  { id: 'gsgk-guide-2026-new', title: 'GS & GK Guide 2026 NEW', path: `${PREVIEW_BASE}/gsgk-guide-2026-new` },
-  { id: 'gsgk-precis-2026-new', title: 'GS & GK Precis 2026 NEW', path: `${PREVIEW_BASE}/gsgk-precis-2026-new` },
   { id: 'english', title: 'English Précis (sample)', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Precis/1b0cedf2-7476-4747-a747-1b0cedf27476' },
   { id: 'gs-gk', title: 'GS & GK Guide Book', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/4f39098f-651c-4651-a651-4f39098f651c' },
   { id: 'reasoning', title: 'Reasoning Guide Book', path: 'https://pub-8c123d43246448199bbe4a14bffa2c06.r2.dev/structured_resources/blocks/Guide/272dbb7c-12ac-412a-a12a-272dbb7c12ac' },
@@ -57,8 +51,11 @@ export default function DevReader() {
         if (!extra.length) return;
         extra.sort((a, b) => a.title.localeCompare(b.title));
         setBooks((prev) => [...extra, ...prev.filter((p) => !extra.some((x) => x.id === p.id))]);
-        const want = new URLSearchParams(window.location.search).get('book');
-        const hit = extra.find((x) => x.id === want);
+        // links shared earlier (hand-made preview ids) still open the same books
+        const ALIAS = { 'gsgk-guide-2026-new': 'guide-gs-gk-2026-new', 'gsgk-precis-2026-new': 'precis-gs-gk-2026-new' };
+        const raw = new URLSearchParams(window.location.search).get('book');
+        const want = ALIAS[raw] || raw;
+        const hit = extra.find((x) => x.id === want) || (!want ? extra[0] : null);
         if (hit) { firstLoad.current = true; setSelectedBook(hit); } // keep ?ch= when the deep-linked book arrives late
       })
       .catch(() => {});
