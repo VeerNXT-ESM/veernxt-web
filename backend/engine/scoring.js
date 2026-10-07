@@ -179,8 +179,77 @@ export function scoreExam(profile, exam, options = {}) {
     add(breakdown, 'technical_trade_alignment', 8);
   }
 
+  // 16. Banking Post-Tier Differentiation
+  // ─────────────────────────────────────────────────────────────────────
+  // India's banking sector has DISTINCT ESM quota tracks depending on post:
+  //   • Security Guard / Sub-Staff: strong ESM quota, prefers combat trades,
+  //     Class 10 eligible — heavily favored for Infantry/GD/combat arms
+  //   • Clerical / Office Assistant: ESM preferred, Clerk/Admin/Storekeeper trades
+  //   • Officer (PO / SO): Open competition, Graduate + Fluent English strongly needed
+  //
+  // Without this tier-differentiation, all BANKING exams get the same score regardless
+  // of trade/qualification — causing a Sepoy to see the same exams as a Graduate Clerk.
+  if (exam.career_track === 'BANKING') {
+    const examNameLower = (exam.exam_name || '').toLowerCase();
+    const conductingBodyLower = (exam.conducting_body || '').toLowerCase();
+    const examText = `${examNameLower} ${conductingBodyLower}`;
+    const haveRankForBanking = QUAL_RANK[mapQual(profile.highestQualification)] || 0;
+
+    // Detect banking post tier from exam name heuristics
+    const isSecurityPost = /security|guard|watchman|cash.?in.?transit|armed|peon|sub.?staff|group.?d/i.test(examText);
+    const isClerkPost    = /clerk|office.?assistant|single.?window|mts|assistant.*bank|bank.*assistant/i.test(examText);
+    const isOfficerPost  = /officer|po\b|probationary|specialist|so\b|manager|scale.?ii|grade.?b|rbi.*grade/i.test(examText);
+
+    const isCombatTrade = tracks.strong.some(t => ['POLICE_CAPF'].includes(t));
+    const isAdminTrade  = tracks.strong.some(t => ['SSC', 'ACCOUNTING', 'ADMINISTRATIVE', 'SECRETARIAT', 'POSTAL'].includes(t));
+    const isGradOrAbove = haveRankForBanking >= 3;
+    const isFluent      = profile.englishComfort === 'Fluent';
+    const isIntermediate = profile.englishComfort === 'Intermediate';
+
+    if (isSecurityPost) {
+      // Best match for combat/security-trade Agniveers regardless of qualification
+      if (isCombatTrade) {
+        add(breakdown, 'banking_security_strong', 20);
+      } else {
+        add(breakdown, 'banking_security_soft', 8);
+      }
+    } else if (isClerkPost) {
+      // Best match for admin/clerk/storekeeper trades with good English
+      if (isAdminTrade && (isFluent || isIntermediate)) {
+        add(breakdown, 'banking_clerk_strong', 18);
+      } else if (isAdminTrade) {
+        add(breakdown, 'banking_clerk_moderate', 10);
+      } else if (isCombatTrade) {
+        // Combat trade applying for clerk post — possible but not ideal
+        add(breakdown, 'banking_clerk_mismatch', -5);
+      }
+    } else if (isOfficerPost) {
+      // Officer posts strongly favor Graduate + Fluent English
+      if (isGradOrAbove && isFluent) {
+        add(breakdown, 'banking_officer_strong', 15);
+      } else if (isGradOrAbove && isIntermediate) {
+        add(breakdown, 'banking_officer_moderate', 8);
+      } else if (!isGradOrAbove) {
+        // Under-qualified for officer post — de-emphasise
+        add(breakdown, 'banking_officer_underqualified', -10);
+      }
+    }
+    // Unknown post type: no tier bonus/penalty — neutral
+  }
+
+  // 17. Combat/Police Trade Security Bonus
+  // Agniveers from combat trades (Infantry, GD, Rifleman, Armoured) should score
+  // higher for Police/CAPF and Security posts even when preference isn't selected,
+  // because ex-serviceman quota in these tracks is the single strongest employment route.
+  if (['POLICE_CAPF', 'DEFENCE', 'SECURITY', 'FIRE'].includes(exam.career_track)) {
+    const combatTrades = ['POLICE_CAPF'];
+    if (tracks.strong.some(t => combatTrades.includes(t))) {
+      add(breakdown, 'combat_trade_security_affinity', 12);
+    }
+  }
+
   let score = Object.values(breakdown).reduce((a, b) => a + b, 0);
-  score = Math.min(score, 100);
+  score = Math.max(0, Math.min(score, 100)); // clamp to [0, 100]
   return { score, breakdown };
 }
 

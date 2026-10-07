@@ -75,46 +75,61 @@ function getSupabaseClient() {
 
 async function loadAllExams() {
   if (EXAM_CACHE) return EXAM_CACHE;
-  const client = getSupabaseClient();
-  console.log('[recommend] Loading all exams from Supabase (cold start)...');
-  // Unranged .select('*') is silently capped at 1,000 rows by PostgREST --
-  // with 1,534 exams in the table, this was truncating the pool for any
-  // profile that isn't domicile-filtered down below 1,000 (e.g. relocation
-  // === 'Anywhere in India'), same bug already found/fixed for
-  // AdminDashboard.jsx's resource fetch (status_report.md §4).
-  let rows = [];
-  let from = 0;
-  const pageSize = 1000;
-  while (true) {
-    const { data, error } = await client.from('exams').select('*').range(from, from + pageSize - 1);
-    if (error) throw new Error(`Failed to fetch exams: ${error.message}`);
-    rows = rows.concat(data);
-    if (data.length < pageSize) break;
-    from += pageSize;
-  }
-  EXAM_CACHE = rows.map(row => {
-    const inferredState = inferState(row.exam_name, row.conducting_body, row.state_ut);
-    let level = row.metadata?.level || null;
-    if (inferredState) {
-      const isUT = /delhi|chandigarh|lakshadweep|puducherry|andaman|ladakh|jammu/i.test(inferredState);
-      level = isUT ? 'ut' : 'state';
-    } else if (!level) {
-      level = 'central';
+  try {
+    const client = getSupabaseClient();
+    console.log('[recommend] Loading all exams from Supabase (cold start)...');
+    let rows = [];
+    let from = 0;
+    const pageSize = 1000;
+    while (true) {
+      const { data, error } = await client.from('exams').select('*').range(from, from + pageSize - 1);
+      if (error) throw new Error(`Failed to fetch exams: ${error.message}`);
+      rows = rows.concat(data);
+      if (data.length < pageSize) break;
+      from += pageSize;
     }
-    return {
-      ...(row.metadata || {}),
-      exam_id: row.exam_id,
-      exam_name: row.exam_name,
-      conducting_body: row.conducting_body,
-      career_track: row.career_track,
-      state_ut: inferredState,
-      website: row.base_url || row.metadata?.website || null,
-      level,
-      domicile_required: Boolean(inferredState) || Boolean(row.is_state_specific) || Boolean(row.metadata?.domicile_required),
-    };
-  });
-  console.log(`[recommend] Cached ${EXAM_CACHE.length} exams.`);
-  return EXAM_CACHE;
+    EXAM_CACHE = rows.map(row => {
+      const inferredState = inferState(row.exam_name, row.conducting_body, row.state_ut);
+      let level = row.metadata?.level || null;
+      if (inferredState) {
+        const isUT = /delhi|chandigarh|lakshadweep|puducherry|andaman|ladakh|jammu/i.test(inferredState);
+        level = isUT ? 'ut' : 'state';
+      } else if (!level) {
+        level = 'central';
+      }
+      return {
+        ...(row.metadata || {}),
+        exam_id: row.exam_id,
+        exam_name: row.exam_name,
+        conducting_body: row.conducting_body,
+        career_track: row.career_track,
+        state_ut: inferredState,
+        website: row.base_url || row.metadata?.website || null,
+        level,
+        domicile_required: Boolean(inferredState) || Boolean(row.is_state_specific) || Boolean(row.metadata?.domicile_required),
+      };
+    });
+    console.log(`[recommend] Cached ${EXAM_CACHE.length} exams.`);
+    return EXAM_CACHE;
+  } catch (err) {
+    console.warn('[recommend] Supabase fetch failed, attempting local exam_master.json fallback:', err.message);
+    try {
+      const fs = await import('fs');
+      const path = await import('path');
+      const { fileURLToPath } = await import('url');
+      const localDir = path.dirname(fileURLToPath(import.meta.url));
+      const localPath = path.resolve(localDir, '../../backend/engine/data/exam_master.json');
+      if (fs.existsSync(localPath)) {
+        const raw = JSON.parse(fs.readFileSync(localPath, 'utf-8'));
+        EXAM_CACHE = raw.exams || [];
+        console.log(`[recommend] Fallback loaded ${EXAM_CACHE.length} exams from exam_master.json.`);
+        return EXAM_CACHE;
+      }
+    } catch (fallbackErr) {
+      console.error('[recommend] Local fallback failed too:', fallbackErr.message);
+    }
+    throw err;
+  }
 }
 
 // Qualification rank map (mirrors eligibility.js QUAL_RANK)
@@ -272,7 +287,7 @@ export default async function handler(req, res) {
   }
 
   // Extract and verify Supabase authorization token
-  const authHeader = req.headers.authorization;
+  const authHeader = req.headers?.authorization;
   let userId = null;
   let supabaseAdmin = null;
 

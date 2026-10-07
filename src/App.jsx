@@ -224,6 +224,7 @@ function App() {
         <Route path="/dev-reader" element={<DevReader />} />
         <Route path="/dev-quiz-preview" element={<QuizPreview />} />
         <Route path="/profiling-tester" element={<ProfilingTester />} />
+        <Route path="/admin/profiling-tester" element={<ProfilingTester />} />
 
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
