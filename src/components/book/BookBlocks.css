@@ -673,3 +673,22 @@
 :where(.reader-theme-container) ol[type="a"] { list-style-type: lower-alpha; }
 :where(.reader-theme-container) ol[type="I"] { list-style-type: upper-roman; }
 :where(.reader-theme-container) ol[type="i"] { list-style-type: lower-roman; }
+
+/* Tables: plain white, no outlines (content-team feedback 2026-10-07).
+   Overrides the bordered / zebra / hover styling above; !important because those rules are more specific. */
+:where(.reader-theme-container) .bk-table-wrapper {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+}
+:where(.reader-theme-container) .bk-table,
+:where(.reader-theme-container) .bk-table th,
+:where(.reader-theme-container) .bk-table td,
+:where(.reader-theme-container) .bk-table tr {
+  border: none !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+:where(.reader-theme-container) .bk-table tr:hover td { background: #fff !important; }
+:where(.reader-theme-container) .bk-table th { color: inherit; font-weight: 700; text-align: left; }
