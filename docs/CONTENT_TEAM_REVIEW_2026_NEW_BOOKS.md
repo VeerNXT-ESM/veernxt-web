@@ -1,6 +1,6 @@
 # Content-team review: the "2026 NEW" books (2026-10-07)
 
-47 books have been re-created from their DOCX files, as **NEW** books. The live books and every exam link are untouched. Nothing here is visible to learners (the new books are Drafts and linked to no exam). Please go through them and flag anything wrong; when you are happy, we swap them in for the old books.
+48 books have been re-created from their DOCX files, as **NEW** books. The live books and every exam link are untouched. Nothing here is visible to learners (the new books are Drafts and linked to no exam). Please go through them and flag anything wrong; when you are happy, we swap them in for the old books.
 
 ## How to review
 1. Open a link in the table below (a sidebar lists the chapters; the dropdown at the top of the sidebar switches book). Any book can also be opened at a chapter with `&ch=N` on the end of the link.
@@ -15,7 +15,7 @@
 - Tables: all columns and rows, no cut-off text. (Tables are now plain white with no outlines, as requested.)
 - The cover page picture for each subject.
 
-## The 47 books ready to review
+## The 48 books ready to review
 (Ordered by the number of exams the old book is linked to.)
 
 | Book | Exams (old book) | Chapters | Subjects | Things we noticed (please look here first) | Open |
@@ -46,6 +46,7 @@
 | KERALA GS 2026 NEW (Guide) | 24 | 15 | - | - | [open](https://www.veernxt.in/dev-reader?book=guide-kerala-gs-2026-new) |
 | TamilNadu GS 2026 NEW (Guide) | 24 | 11 | - | 1 chapter-like lines inside chapters (possibly merged chapters) | [open](https://www.veernxt.in/dev-reader?book=guide-tamilnadu-gs-2026-new) |
 | Manipur GS Book 2026 NEW (Guide) | 22 | 12 | - | Table of Contents chapter dropped | [open](https://www.veernxt.in/dev-reader?book=guide-manipur-gs-book-2026-new) |
+| Andhra Pradesh GS 2026 NEW (Guide) | 21 | 16 | - | 13 chapter-like lines inside chapters (possibly merged chapters) | [open](https://www.veernxt.in/dev-reader?book=guide-andhra-pradesh-gs-2026-new) |
 | Telangana GS 2026 2026 NEW (Guide) | 21 | 10 | - | - | [open](https://www.veernxt.in/dev-reader?book=guide-telangana-gs-2026-2026-new) |
 | Odisha GS 2026 NEW (Guide) | 20 | 22 | - | Table of Contents chapter dropped; 4 chapters with under 4 blocks | [open](https://www.veernxt.in/dev-reader?book=guide-odisha-gs-2026-new) |
 | Ladakh GS 2026 NEW (Guide) | 18 | 14 | - | Table of Contents chapter dropped | [open](https://www.veernxt.in/dev-reader?book=guide-ladakh-gs-2026-new) |
@@ -70,27 +71,31 @@
 
 ## Needed from the content team
 ### A. Books we could not create yet: please name the final DOCX (put it in the MASTER DOCUMENTS folder or send the path)
-The same file name exists as many *different* files in the old folders, so we cannot tell which one is final.
+We compared the old live text with every file in MASTER DOCUMENTS: no file matches these two. The master Guide English is a different book (0.2% text overlap with the old live one), and nothing resembles Metro Technical Knowledge.
 | Book | Exams | Old source file name | Note |
 |---|---:|---|---|
-| Andhra Pradesh GS (Guide) | 21 | Andhra_Pradesh GS.docx |  |
-| ARUNACHAL PRADESH GS (Guide) | 31 | ARUNACHAL PRADESH GS.docx |  |
-| Chhattisgarh GS (Guide) | 23 | Chhattisgarh_GS.docx |  |
-| ELECTRICAL ENGINEERING (Guide) | 1 | Cluster_042_ELECTRICAL ENGINEERING.docx |  |
 | ENGLISH (Guide) | 939 | Cluster_087_ENGLISH.docx | The master folder has a newer Guide English (21 chapters) than the old live one (26 chapters): which is final? |
-| Goa GS (Guide) | 1 | Goa SI.docx |  |
-| Himachal Pradesh GS (Guide) | 18 | Himachal_Pradesh_GS.docx |  |
-| Karnataka GS (Guide) | 21 | Karnataka_GS.docx |  |
 | Metro_Technical_Knowledge (Guide) | 3 | Metro_Technical_Knowledge.docx |  |
 
+### A2. Old books with IDENTICAL content to another book (one new book serves both)
+We compared the old live text with the files in MASTER DOCUMENTS (by text, not by file name). These pairs are the same book published twice under two names ("GS" and "SI / CONSTABLE"), so only one new book exists for each pair. At the swap, both old books' exams will point to that one new book. **Please confirm one title is right for each** (the new book carries the name of the master file).
+| Old book | Same text as new book | Match |
+|---|---|---|
+| ARUNACHAL PRADESH GS (Guide, 31 exams) | ARUNACHAL PRADESH SI (Guide) 2026 NEW | 100% |
+| Chhattisgarh GS (Guide, 23 exams) | Chhattisgarh GS (SI) (Guide) 2026 NEW | 100% |
+| ELECTRICAL ENGINEERING (Guide, 1 exams) | ELECTRICAL ENGINEERING (Precis) 2026 NEW | 99.8% |
+| Goa GS (Guide, 1 exams) | Goa GS (Guide) 2026 NEW | 100% |
+| Himachal Pradesh GS (Guide, 18 exams) | Himachal Pradesh GS (CONSTABLE) (Guide) 2026 NEW | 100% |
+| Karnataka GS (Guide, 21 exams) | Karnataka GS (CONSTABLE) (Guide) 2026 NEW | 99.4% |
+
 ### B. Book with no usable structure
-- **Mathematics (Precis)**, file `Cluster_003_MATHEMATICS.docx`: the document has only "1.1, 1.2 ..." sub-section titles and no chapter names anywhere, so chapters cannot be built. Please add the chapter titles (Heading 1) or tell us the chapter names and we will add them.
+- **Mathematics (Precis)**, file `Cluster_003_MATHEMATICS.docx`: the document has only "1.1, 1.2 ..." sub-section titles and no chapter names anywhere, so chapters cannot be built. The master file also shares only 9% of its text with the old live Mathematics Precis, so please confirm it is the final one. Please add the chapter titles (Heading 1) or tell us the chapter names and we will add them.
 
 ### C. Questions from the review so far
 - **GS & GK Guide, Geography:** chapter numbering jumps from 36 to 38. Is a chapter 37 missing?
 - **GS & GK Precis, Chemistry:** no Chapter 12 (11 goes to 13). Economics repeats Public Finance (Ch 13 and 21) and Economic Planning (Ch 14 and 20). Are the Physics Ch 12 and Chemistry Ch 14 environment chapters meant to be there?
 - **Chapters that look merged** (a book that shows "chapter-like lines inside chapters" or a very large last chapter such as "Practice MCQs"): is the big chapter really one chapter? If not, give the Heading 1 to each real chapter in the DOCX and we re-run that book in minutes.
-- **Several books** (Goa, Karnataka, Chhattisgarh, Himachal) have two old versions (GS and SI/Constable). We built the one with a file in the master folder; the other is in list A. If the two are really the same book with a different cover, tell us and we will keep one.
+- **Pairs in A2:** Arunachal, Chhattisgarh, Himachal, Karnataka and Goa (plus the Electrical Engineering Guide and Precis) are the same text under two old titles. Is it right that one new book replaces both, and which title should it keep (for example "Chhattisgarh GS" or "Chhattisgarh SI")?
 
 ## What happens next
 When you have flagged the issues we fix the DOCX copies (or the parser) and re-run only the affected books. When you sign off, we repoint the exams to the new books, drop the " 2026 NEW" from the titles, and remove the old duplicate rows and files (with a backup first).

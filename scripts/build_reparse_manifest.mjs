@@ -100,6 +100,17 @@ for (const e of entries) {
   else e.note = `no file named ${names.map((n) => `"${n}"`).join(' / ')} in MASTER DOCUMENTS; the content team must name the final DOCX`;
 }
 
+// Matched BY TEXT (scripts: FINAL_BOOKS_STRUCTURED/_bulk/match_sources.cjs, 2026-10-07): the old live book's text equals a
+// master file that has a DIFFERENT file name (the state books exist twice, as "GS" and "SI/CONSTABLE", with identical content).
+const TEXT_MATCH = {
+  'Guide|Andhra Pradesh GS': { file: 'Guide/GS BOOK STATE/Andhra_Pradesh CONSTABLE (1).docx', pct: 100, create: true },
+  'Guide|ARUNACHAL PRADESH GS': { file: 'Guide/GS BOOK STATE/ARUNACHAL PRADESH SI (1).docx', pct: 100, sameAs: 'Guide|ARUNACHAL PRADESH SI' },
+  'Guide|Chhattisgarh GS': { file: 'Guide/GS BOOK STATE/Chhattisgarh_SI (1).docx', pct: 100, sameAs: 'Guide|Chhattisgarh GS (SI)' },
+  'Guide|Goa GS (SI)': { file: 'Guide/GS BOOK STATE/Goa GS (1).docx', pct: 100, sameAs: 'Guide|Goa GS' },
+  'Guide|Himachal Pradesh GS': { file: 'Guide/GS BOOK STATE/Himachal_Pradesh_CONSTABLE (1).docx', pct: 100, sameAs: 'Guide|Himachal Pradesh GS (CONSTABLE)' },
+  'Guide|Karnataka GS': { file: 'Guide/GS BOOK STATE/Karnataka_CONSTABLE (1).docx', pct: 99.4, sameAs: 'Guide|Karnataka GS (CONSTABLE)' },
+  'Guide|ELECTRICAL ENGINEERING': { file: 'Precis/Unlabeled/Cluster_044_ELECTRICAL ENGINEERING.docx', pct: 99.8, sameAs: 'Precis|ELECTRICAL ENGINEERING' },
+};
 // titles and slugs (unique per category)
 const seen = new Map();
 entries.sort((a, b) => b.examsLinked - a.examsLinked);
@@ -110,6 +121,16 @@ for (const e of entries) {
   seen.set(`${e.category}|${t.toLowerCase()}`, true); seen.set(k, true);
   e.newTitle = t + SUFFIX;
   e.id = `${e.category.toLowerCase()}-${slugify(t)}-2026-new`;
+}
+for (const e of entries) {
+  const key = `${e.category}|${e.newTitle.replace(SUFFIX, '')}`;
+  const m = TEXT_MATCH[key];
+  if (!m) continue;
+  const p = path.join(MASTER, ...m.file.split('/'));
+  if (!fs.existsSync(p)) continue;
+  e.textMatch = { file: m.file, pct: m.pct };
+  if (m.create) { e.source = p; e.status = 'ready'; e.note = `source matched by text (${m.pct}%): ${m.file}`; }
+  else { e.status = 'covered'; e.coveredBy = m.sameAs; e.source = null; e.note = `identical text (${m.pct}%) to the new book "${m.sameAs}" (same file: ${m.file}); one new book serves both old rows`; }
 }
 entries.sort((a, b) => (a.category + a.newTitle).localeCompare(b.category + b.newTitle));
 
