@@ -7,16 +7,17 @@
 
 ## 1. Read this first — what actually exists
 
-The brief said "we already have a thumbnail generation program". Checked carefully:
+The brief said "we already have a thumbnail generation program". What the repo, git history and status report actually show:
 
-| Thing | Exists? |
+| Thing | Finding |
 |---|---|
-| An OpenAI image program | **Yes, one** — `scripts/assets/generate_veernxt_assets.py`. But it generates the **dashboard banners/icons/premium/promo graphics** (84 prompts → `public/veernxt_assets/`), **not exam or category thumbnails**. It is the working pattern to copy, not a ready tool. |
-| A program that generates **category/exam thumbnails** | **No.** The 187 category WebPs and 29 subject covers already in the repo were supplied by the user (made outside the repo; the generation prompt/model is not recorded anywhere I could find). `thumbnail_generation_prompt.md` is referenced in `docs/status_report.md` §8 but is **not in the repo** — ask Hari for it. |
-| Plumbing to put an image on the site | **Yes** — admin upload (`ThumbnailCell.jsx`), R2 upload, the `thumbnail_url` columns, and a front-end store that reads them. See §3–§4. |
-| Planned intent | `status_report.md` §65.4: *"content team generates a thumbnail with the existing OpenAI key — it can write into the same `thumbnail_url` columns; nothing here needs redoing."* So the DB and UI are ready; only the generator is missing. |
+| `scripts/assets/generate_veernxt_assets.py` | The only OpenAI image program in the repo (`gpt-image-2`, 84 prompts, writes `public/veernxt_assets/`). It produced the **dashboard banners / icons / premium / promo graphics**. It is **not** what produced the category images. Status report calls it "a separate visual-asset-generation workstream" (§ list of untracked files). |
+| The 187 category images + 29 subject covers | **How they were made is not recorded** in the status report or git. §65.2 only says the user "supplied" them (the 65 state ones arrived the same day); the commit that added them (`e47b80c`, 2026-09-24) contains no generator script. The full-size PNG originals (`public/category_thumbnails/png/`, 438 MB; `public/thumbnails/png/`, 71 MB — §65.7) were never committed and the folders are now **empty**; `CLIENT ASSETS/VeerNXT/CONTENT/Thumbnails/` is empty too. **Ask Hari where the originals and the prompts/tool used live.** |
+| Earlier prompt work (Aug 2026) | `thumbnail_generation_prompt.md` **is recoverable from git history** (`git show e92baca:thumbnail_generation_prompt.md`, also `d513cad^:docs/thumbnail_generation_prompt.md`) and `docs/image-generation.txt` (`git show d513cad^:docs/image-generation.txt`). Status report §(content handoff, ~line 154): it was handed to the content team and "the user is running it directly via Gemini". **That prompt is for 5 document-type background templates (Intro / Guide / Precis / PYQ / Mock Test), portrait 1024×1536 — not the 187 categories.** But it is the best written record of the method: a shared style prompt written in `generate_veernxt_assets.py`'s `ASSETS` format, AI draws background + a motif only, and the VeerNXT crest/wordmark is **composited by code afterwards** (the AI is never asked to redraw the logo). The category images carry the same faint centred shield, so they were very likely made the same way. |
+| Plumbing to show an image on the site | Yes — admin upload (`ThumbnailCell.jsx`), R2, the `thumbnail_url` columns, the front-end store (§3–§4). |
+| Planned intent | `status_report.md` §65.4 / §65.8 item 4: content team to generate with the OpenAI key and write into the same `thumbnail_url` columns; "nothing here needs redoing". |
 
-So the job is: **write a small generation script (modelled on the existing Python one) that produces the images, then load them through the same path the admin pages use.**
+So: **the "program" is the pattern in `generate_veernxt_assets.py` + the Aug prompt file (both in the repo/history); there is no recorded script that generated the category thumbnails.** The job is to write a small generator in that same pattern, produce the images, and load them through the existing path.
 
 ## 2. What a "thumbnail" is in this app (important — it is NOT per exam)
 
@@ -66,7 +67,7 @@ I looked at `public/category_thumbnails/central/banking.webp` and `public/thumbn
 
 ## 7. Suggested plan
 
-1. **Get answers (Hari):** scope (§2), whether to replace the existing 187 or only fill gaps, the original `thumbnail_generation_prompt.md`, budget ceiling.
+1. **Get answers (Hari):** scope (§2), whether to replace the existing 187 or only fill gaps, **where the original category-image PNGs and the prompt/tool used for them are** (§1), budget ceiling. Recover the Aug prompt file from git (§1) in the meantime.
 2. **Pilot: 3 categories + `civil_engineering`.** Generate, crop, review by eye. Do not touch the DB yet.
 3. **Agree the style** with Hari/Gargi on the pilot, then lock the shared prompt.
 4. **Backup first:** `node scripts/db/backup_catalog_tables.mjs` (read-only; it saves the `lc_*` tables) so every old `thumbnail_url` can be restored.
