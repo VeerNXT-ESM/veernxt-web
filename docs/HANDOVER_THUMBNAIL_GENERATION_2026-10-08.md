@@ -108,3 +108,126 @@ src/pages/admin/{ThumbnailCell,CategoriesPage,SubjectsPage}.jsx   the manual upl
 public/category_thumbnails/{central,state,ut}/  current 187 images;  public/thumbnails/  current 29 subject covers
 docs/status_report.md  §65 (thumbnail system design), §27.10 (older colour-family system)
 ```
+
+## 11. Appendix — the prompt Hari supplied (2026-10-08), verbatim
+
+Hari's statement: this is the prompt used on 2026-09-24 ("GPT Starburst Medium", generated on Hari's machine). Placeholders in `[BRACKETS]` are filled per image. (`->` replaces the original arrow characters; nothing else was changed.)
+
+```text
+Create a premium educational exam-resource thumbnail designed to look like the front cover of a high-quality competitive-exam preparation book.
+
+FORMAT:
+Vertical 3:4 aspect ratio.
+Portrait book-cover composition.
+Centered composition with generous margins.
+The finished artwork should resemble a professionally photographed or rendered physical study guide standing upright.
+
+VISUAL STYLE:
+Premium Indian competitive-exam publishing aesthetic.
+Clean, authoritative, academic and trustworthy.
+Minimal but visually rich.
+High-end realistic 3D book cover / product render.
+Soft studio lighting.
+Subtle shadows.
+Slightly rounded book corners.
+Visible book spine on the left side.
+Very subtle paper and cover texture.
+No clutter.
+
+BOOK DESIGN:
+Use a solid or subtly textured primary cover color: [PRIMARY COLOR].
+Use a complementary secondary/accent color: [ACCENT COLOR].
+Typography should be large, extremely legible and professionally typeset.
+
+At the very top, leave a small area for the brand mark:
+"[BRAND NAME]"
+Do NOT invent, redraw, modify or stylize the logo. If an actual logo asset is supplied, preserve it exactly.
+
+MAIN TITLE:
+"[EXAM NAME]"
+
+SUBTITLE:
+"[SUBTITLE]"
+
+OPTIONAL YEAR:
+"[YEAR]"
+
+OPTIONAL CATEGORY:
+"[CATEGORY]"
+
+The main exam title must be the dominant typographic element.
+Use strong editorial typography with clear hierarchy:
+small brand -> large exam name -> supporting title -> year/category.
+
+VISUAL SYMBOL:
+Include ONE elegant, relevant visual illustration associated with the examination or subject.
+
+Examples:
+- UPSC / Civil Services -> Indian government / Parliament / Supreme Court / administrative architecture
+- SSC -> subtle government/administrative architecture
+- Banking -> bank building, financial architecture or refined financial symbol
+- Railway -> elegant railway station or locomotive detail
+- Defence -> restrained military architectural or ceremonial element
+- Teaching -> books, classroom architecture or academic symbolism
+- Engineering -> technical blueprint / engineering structure
+- Medical -> subtle medical/academic symbolism
+- Law -> courthouse, law books or classical legal architecture
+- Agriculture -> refined agricultural landscape or crop symbolism
+
+The visual symbol should occupy the lower or middle portion of the cover and remain subordinate to the title.
+
+COMPOSITION:
+Front-facing or very slightly angled book.
+Book should fill approximately 75-85% of the vertical frame.
+Centered horizontally.
+Clean neutral background.
+Soft contact shadow underneath.
+No people.
+No hands.
+No desk clutter.
+No extra objects.
+No decorative borders unless they are extremely subtle.
+
+TYPOGRAPHY:
+Crisp, professional, editorial typography.
+Excellent kerning and spacing.
+High contrast between title and background.
+Do not use excessive fonts.
+Maximum 2 typefaces.
+Make all supplied text accurately spelled and completely readable.
+
+REALISM:
+Photorealistic premium product visualization.
+High-quality commercial publishing mockup.
+Sharp edges.
+Natural paper/cover materials.
+Subtle realistic depth.
+Soft studio illumination.
+No exaggerated reflections.
+
+IMPORTANT:
+This is a SERIES.
+The generated cover must look like it belongs to the same publishing family as the other exam covers.
+Maintain the same layout, typography hierarchy, proportions, lighting, book geometry and visual sophistication across every generated thumbnail.
+
+Do not add any text that was not explicitly supplied.
+Do not invent exam names, subtitles, dates or claims.
+Do not use watermarks.
+Do not use random symbols.
+Do not distort typography.
+Do not create a fake logo.
+```
+
+### 11.1 Caution — read before assuming this reproduces the 187 images
+
+I compared this prompt with the files it supposedly produced (looked at `public/category_thumbnails/central/banking.webp` and `public/thumbnails/Mathematics.webp`):
+
+- The prompt asks for a **3:4 portrait, photorealistic 3D book cover with visible spine and printed title text**. The category files are **16:9 landscape (640×360) scenic backgrounds with no book, no spine and no text** (Banking: vault door, gold currency symbols, rising chart, faint shield emblem). The subject covers are portrait 400×600 but are also scenes with props and the shield, not a rendered book.
+- So this prompt is most likely **the book-cover/subject-cover template (or an early version of it)**, or it was adapted/followed by other steps. It does **not** by itself explain the landscape category images. **Ask Hari which image set it was run for, and whether a second prompt (landscape category scenes) exists.**
+- If the aim is the existing look for **category thumbnails**, generate a landscape scene with the same family of wording (premium, studio-lit, restrained, one relevant symbol, no text) and the real crest composited afterwards (§6). If the aim is **book covers / subject covers**, this prompt applies as written.
+- Practical points for either: AI models misspell printed text, so **check every title by eye** or, better, composite the title text with code over a text-free background; never let the model draw the logo (the prompt already says so — supply the real asset and place it yourself).
+- Fill placeholders from the DB (category name → `[EXAM NAME]`/`[CATEGORY]`; colours from the colour family in `src/lib/thumbnailTaxonomy.js`), and keep the symbol list (UPSC, SSC, Banking, Railway, Defence, Teaching, Engineering, Medical, Law, Agriculture) as a lookup so each category gets one relevant symbol.
+
+### 11.2 Using `generate_veernxt_assets.py` (Hari's instruction: reuse it)
+
+Reuse it as the base. Changes needed: (1) replace the `ASSETS` list with one entry per category/subject built from the DB, each with the filled prompt; (2) set `size` to a portrait or landscape size the API actually supports (it only uses `1024x1024` today) and crop to 640×360 or 400×600 afterwards; (3) confirm the model ID with the key (§5); (4) write into a new folder (e.g. `generated_thumbnails/<run-date>/`, not `public/veernxt_assets/`) and keep the manifest; (5) keep skip-if-exists; add retries, a dry-run and a cost cap; (6) keep it out of git until reviewed (§9).
