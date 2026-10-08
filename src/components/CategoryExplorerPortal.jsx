@@ -322,6 +322,11 @@ export default function CategoryExplorerPortal({
       ? 'CGL, CHSL, MTS, CPO, GD, JE, etc.'
       : profile.major_exams || profile.category_name;
 
+  // Clean tagline to match reference design
+  const displayTagline = profile.tagline
+    ? profile.tagline.replace(/\s+in\s+([A-Za-z\s&]+)$/i, '').trim() || profile.tagline
+    : 'Your Gateway to a Stable and Rewarding Government Career';
+
   return (
     <div className="cep-container" aria-label={`${profile.category_name} Exam Preparation Portal`}>
       {/* ── Breadcrumb Bar ── */}
@@ -340,7 +345,7 @@ export default function CategoryExplorerPortal({
             <h1 className="cep-hero-abbr">{profile.category_name}</h1>
           </div>
           <h2 className="cep-hero-fullname">{profile.full_name}</h2>
-          <p className="cep-hero-tagline">{profile.tagline}</p>
+          <p className="cep-hero-tagline">{displayTagline}</p>
 
           <div className="cep-hero-badges-row">
             {badges.map((badge, idx) => (
