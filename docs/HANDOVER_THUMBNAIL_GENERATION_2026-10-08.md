@@ -397,3 +397,33 @@ match the CSV exactly.
 8. **Size, cost, storage.** 1,575 high-quality 1024×1536 PNGs is likely several GB (assume ~2–3 MB each, unverified) and the most expensive quality tier. **Pilot with ~10 exams first**, read the actual per-image price from your usage dashboard, then multiply by exams × ~1.3 for retries and get Hari's OK. Convert to WebP (e.g. 600×900) before upload; R2 key suggestion `exam-thumbnails/<exam_id>.webp`. Keep the PNGs and `prompts/` out of git (standing rule: generated content stays untracked).
 9. **Retry one exam:** `generate()` as written overwrites `images/{id}.png`. Build the loop to **skip existing files** by default and take `--only <id>` / `--force` to redo a single exam; log every attempt (id, prompt hash, model, status, error) to a manifest, as `generate_veernxt_assets.py` does.
 10. **Does not match the 187 category images.** These covers are 3:4 book renders with printed titles; the existing category art is 16:9 title-free scenes (see §11.1). They will be a **new, different look** alongside the old one — confirm that's intended.
+
+### 12.5 The CSV is already built (Step 1 is done) — `docs/Exam_Thumbnail_Input_2026-10-08.csv`
+
+Hari asked me to generate it so Shreya doesn't have to. **It is a file Hari forwards; it is not committed to git** (standing rule: exports stay untracked). Encoding UTF-8 with BOM, so Excel opens it correctly.
+
+**How it was made:** read-only query of the live `lc_exams` table (+ conducting body name and region), 2026-10-08. **1,575 rows, one per exam, unique ids** — Central 429, State 836, UT 310 (all status `published`). No exam name was changed, stripped or invented; `exam_name` is exactly `lc_exams.name`. Sorted by level, region, name.
+
+**Columns.** The first 11 are the ones the pipeline brief asks for, in its order; the rest are extras:
+
+| Column | Source |
+|---|---|
+| `id`, `exam_name`, `conducting_body`, `level` (Central / State / Union Territory), `category` | **Straight from the database** |
+| `subtitle` | Rule, no claims: Central → `Study Guide`; State/UT → `<Region> Study Guide` (e.g. "Karnataka Study Guide"). Hari/Shreya can change the wording in one place before generating. |
+| `year` | **Blank for every row** — not in the database, and we do not invent it. Drop the YEAR line from the prompt if you leave it blank. |
+| `primary_color`, `accent_color`, `visual_theme`, `hero_visual` | **Draft, rule-based** (see below), same colours and symbol for all exams in a group so the series looks related |
+| `region`, `visual_group`, `same_name_exams` | Helper columns: region name, which rule matched, how many exams share this exact name |
+| `needs_review`, `review_reason` | `YES` + why, for the **65 rows** that can affect what gets printed (below) |
+| `data_check_level` | **173 rows** — a data-quality note, not a printing issue (below) |
+
+**The visual rules** are keyword matches on category + exam name, first match wins, and use the symbol list from the supplied prompt (Parliament-style architecture for civil services/SSC, bank building, railway station, restrained ceremonial defence element, books and classroom architecture, blueprint, courthouse, crop landscape, medical motif, …). Groups and counts: civil 295, teaching 237, medical 207, police 202, legal 136, banking 127, engineering 120, agriculture 117, PSU 39, defence 35, railways 35, postal 13, IT 6, default 6. **These are drafts, not facts** — a person should skim the groups and the `default` rows. Heuristics can be wrong (e.g. "Marine" exams land under engineering; "Health" categories under medical).
+
+**The 65 `needs_review` rows:**
+- **49** — another exam has the **same name and the same conducting body**, so two covers would be identical. Give them distinguishing text or confirm they are true duplicates (this may be a data problem to fix in `lc_exams`, not a cover problem).
+- **8** — the name has non-ASCII characters (curly quotes ‘ ’, en dashes, non-breaking hyphens). The image model may substitute plain characters, and an OCR check against the exact string will then "fail". Normalise both sides, or review by eye.
+- **2** — very long titles (78 and 85 characters): the text will shrink or wrap.
+- **6** — no keyword matched, so the hero visual is the generic default (categories: Drug Control, Hostel Management, Junior Scale Officer, Storekeeper). Pick a visual by hand.
+
+**`data_check_level` (173 rows)** — the exam's level is **Central**, but its conducting body names a state or UT (e.g. several "ANM" / "Staff Nurse" rows run by state commissions). This may be how the content team files them, or a mis-tag. **It does not block generation** (the cover prints the conducting body and exam name, not the level in the §12.3 template) but tell Hari: it affects which row of the new `/v2` Learning page these exams appear in.
+
+**Still true:** this CSV answers the *1,550 vs 1,575* question only by being complete — it contains all 1,575. If Hari wants 1,550, filter by `id`, and note which 25 were dropped.
