@@ -17,6 +17,8 @@ The brief said "we already have a thumbnail generation program". What the repo, 
 | Plumbing to show an image on the site | Yes — admin upload (`ThumbnailCell.jsx`), R2, the `thumbnail_url` columns, the front-end store (§3–§4). |
 | Planned intent | `status_report.md` §65.4 / §65.8 item 4: content team to generate with the OpenAI key and write into the same `thumbnail_url` columns; "nothing here needs redoing". |
 
+**Provenance, as told by Hari on 2026-10-08:** the category images were made with **"gptimages 2.5 sunburst"**. Recorded verbatim — I could not verify it from the repo. It is not clear whether "2.5" is the OpenAI image-model version and "sunburst" a style/prompt/preset name (or the tool they used); **ask Hari to confirm both and to share the exact prompt.** Practical consequence: `generate_veernxt_assets.py` hard-codes `gpt-image-2`; the model actually used may be a different ID. **Call the API's model list (or one test image) with the key you are given and use whatever ID it really offers — do not assume either name.** If "sunburst" is a visual style (a radiating-light look is not obvious in the Banking image I viewed), get the prompt wording from Hari before generating anything new, so new images match the old 187.
+
 So: **the "program" is the pattern in `generate_veernxt_assets.py` + the Aug prompt file (both in the repo/history); there is no recorded script that generated the category thumbnails.** The job is to write a small generator in that same pattern, produce the images, and load them through the existing path.
 
 ## 2. What a "thumbnail" is in this app (important — it is NOT per exam)
