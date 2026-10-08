@@ -1,0 +1,1174 @@
+/* ── CategoryExplorerPortal.css ── */
+
+.cep-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  animation: cepFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cepFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Breadcrumbs ── */
+.cep-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+  padding: 2px 4px;
+}
+
+.cep-bc-link {
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.cep-bc-link:hover {
+  color: #0f172a;
+}
+
+.cep-bc-sep {
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.cep-bc-current {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* ── Hero Banner Section (Reference Image Split Card) ── */
+.cep-hero-card {
+  display: flex;
+  align-items: stretch;
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  min-height: 230px;
+  position: relative;
+}
+
+.cep-hero-content {
+  flex: 0 0 56%;
+  padding: 34px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  min-width: 0;
+  background: #ffffff;
+}
+
+.cep-hero-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.cep-hero-abbr {
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #0c2340;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.cep-hero-fullname {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: #d97706;
+  margin: 4px 0 10px 0;
+  line-height: 1.2;
+}
+
+.cep-hero-tagline {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #334155;
+  margin: 0 0 20px 0;
+  line-height: 1.45;
+  max-width: 440px;
+}
+
+.cep-hero-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.cep-hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #334155;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  transition: all 0.15s ease;
+}
+
+.cep-hero-badge-pill:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.cep-badge-icon {
+  flex-shrink: 0;
+}
+
+.badge-orange { color: #ea580c; }
+.badge-yellow { color: #f59e0b; }
+.badge-amber  { color: #d97706; }
+.badge-gold   { color: #ca8a04; }
+
+/* ── Hero Banner Visual (Smooth Seamless Blend) ── */
+.cep-hero-visual-wrap {
+  flex: 1 1 44%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  min-width: 0;
+  background: #f8fafc;
+}
+
+.cep-hero-image-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cep-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 15%, black 40%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 15%, black 40%);
+}
+
+.cep-hero-card:hover .cep-hero-img {
+  transform: scale(1.03);
+}
+
+/* Gradient fade overlay from content into image */
+.cep-hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.75) 12%,
+    rgba(255, 255, 255, 0) 35%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Script handwriting text in sky area */
+.cep-hero-script-overlay {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.cep-script-line {
+  font-family: 'Playfair Display', 'Merriweather', 'Georgia', serif;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0b3b32;
+  line-height: 1.15;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.cep-script-brand {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-style: normal;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #059669;
+  margin-top: 3px;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.cep-hero-placeholder-box {
+  width: 100%;
+  min-height: 200px;
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cep-hero-ph-emblem {
+  opacity: 0.2;
+  color: #ffffff;
+}
+
+/* ── 5 Quick Action Cards Row (Soft Pastel Colors, Generous Rounded Corners) ── */
+.cep-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.cep-action-card {
+  border-radius: 20px;
+  padding: 22px 20px 48px 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: default;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  border-width: 1px;
+  border-style: solid;
+  user-select: none;
+  min-height: 165px;
+}
+
+.cep-action-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.06);
+}
+
+.cep-action-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.cep-action-card:hover .cep-action-icon-wrap {
+  transform: scale(1.05);
+}
+
+.cep-action-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.cep-action-desc {
+  font-size: 11.5px;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0;
+  flex: 1;
+}
+
+.cep-action-arrow-circle {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 9999px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.cep-action-card:hover .cep-action-arrow-circle {
+  transform: translateX(2px);
+}
+
+/* Exact Pastel Colors from Reference Image */
+/* 1. Introduction: Warm Peach */
+.cep-card-peach {
+  background: #fff8ed;
+  border-color: #fed7aa;
+}
+.icon-peach {
+  background: #ffedd5;
+  color: #ea580c;
+}
+.btn-peach {
+  background: #f97316;
+}
+
+/* 2. Guidebooks: Mint Green */
+.cep-card-mint {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+}
+.icon-mint {
+  background: #d1fae5;
+  color: #059669;
+}
+.btn-mint {
+  background: #10b981;
+}
+
+/* 3. Preci: Rose Blush */
+.cep-card-rose {
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+.icon-rose {
+  background: #ffe4e6;
+  color: #e11d48;
+}
+.btn-rose {
+  background: #f43f5e;
+}
+
+/* 4. PYQs: Soft Sky Blue */
+.cep-card-sky {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+.icon-sky {
+  background: #dbeafe;
+  color: #2563eb;
+}
+.btn-sky {
+  background: #3b82f6;
+}
+
+/* 5. Mock Tests: Lavender */
+.cep-card-lavender {
+  background: #faf5ff;
+  border-color: #e9d5ff;
+}
+.icon-lavender {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+.btn-lavender {
+  background: #a855f7;
+}
+
+/* ── 3-Column Content Details Section (Single White Rounded Card Container) ── */
+.cep-details-card {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 0.95fr;
+  gap: 0;
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
+}
+
+.cep-about-col {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 28px;
+  border-right: 1px solid #edf2f7;
+}
+
+.cep-top-exams-col {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px;
+  border-right: 1px solid #edf2f7;
+}
+
+.cep-related-exams-col {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px;
+}
+
+.cep-col-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.cep-header-bar {
+  width: 3.5px;
+  height: 18px;
+  border-radius: 2px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.cep-header-bar.green-bar {
+  background: #059669;
+}
+
+.cep-col-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* Column 1: About Category */
+.cep-about-paragraph {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 18px 0;
+}
+
+/* 2x2 Meta Grid with Icons */
+.cep-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.cep-meta-box {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.02);
+  transition: all 0.15s ease;
+}
+
+.cep-meta-box:hover {
+  background: #ffffff;
+  border-color: #e2e8f0;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+}
+
+.cep-meta-box.span-2 {
+  grid-column: span 2;
+}
+
+.cep-meta-box-highlight {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.cep-meta-box-highlight:hover {
+  background: #ecfdf5;
+  border-color: #86efac;
+}
+
+.cep-meta-value.highlight-value {
+  color: #065f46;
+  font-size: 13.5px;
+  font-weight: 800;
+}
+
+.cep-meta-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: #ecfdf5;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cep-meta-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cep-meta-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1.2;
+}
+
+.cep-meta-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cep-detailed-info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #064e3b;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 24px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: auto;
+}
+
+.cep-detailed-info-btn:hover {
+  background: #047857;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(6, 78, 59, 0.25);
+}
+
+/* Column 2 & 3: Exams List */
+.cep-exams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cep-exam-item-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 14px;
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.cep-exam-item-row:hover {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  transform: translateX(2px);
+}
+
+.cep-check-icon-wrap {
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.cep-seal-icon-wrap {
+  flex-shrink: 0;
+}
+
+.cep-gold-seal {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  color: #b45309;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cep-exam-text-box {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cep-exam-row-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cep-exam-row-subtitle {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cep-exam-level-sub {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.cep-row-chevron {
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.cep-exam-item-row:hover .cep-row-chevron {
+  color: #0f172a;
+  transform: translateX(2px);
+}
+
+.cep-see-all-exams-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #064e3b;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 26px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: auto;
+  box-shadow: 0 2px 6px rgba(6, 78, 59, 0.2);
+}
+
+.cep-see-all-exams-btn:hover {
+  background: #047857;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(6, 78, 59, 0.3);
+}
+
+/* ── Full Width All Exams Card (Replaces .cep-details-card on click) ── */
+.cep-all-exams-card {
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 24px;
+  padding: 28px 32px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: cepFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cepFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cep-all-exams-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.cep-all-exams-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cep-back-to-overview-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.18s ease;
+}
+
+.cep-back-to-overview-btn:hover {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.cep-all-exams-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cep-all-exams-count-badge {
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  border: 1px solid #d1fae5;
+}
+
+.cep-all-exams-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.cep-all-exams-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 8px 14px;
+  width: 280px;
+  transition: all 0.18s ease;
+}
+
+.cep-all-exams-search-box:focus-within {
+  background: #ffffff;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12);
+}
+
+.cep-search-icon {
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.cep-search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 13px;
+  color: #0f172a;
+  width: 100%;
+}
+
+.cep-search-input::placeholder {
+  color: #94a3b8;
+}
+
+.cep-search-clear-btn {
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cep-search-clear-btn:hover {
+  color: #475569;
+}
+
+.cep-all-exams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 640px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.cep-all-exams-list::-webkit-scrollbar {
+  width: 6px;
+}
+.cep-all-exams-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.cep-all-exams-list::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.cep-full-exam-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cep-full-exam-row:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.cep-full-exam-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: #ecfdf5;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.18s ease;
+}
+
+.cep-full-exam-row:hover .cep-full-exam-icon-wrap {
+  transform: scale(1.05);
+  background: #059669;
+  color: #ffffff;
+}
+
+.cep-full-exam-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.cep-full-exam-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cep-full-exam-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cep-full-exam-subtitle-tag {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.cep-full-exam-tags-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cep-full-exam-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+.cep-full-exam-tag.conducting-tag {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.cep-full-exam-tag.category-tag {
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.cep-full-exam-tag.region-tag {
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.cep-full-exam-action {
+  flex-shrink: 0;
+}
+
+.cep-continue-prep-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #064e3b;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.cep-full-exam-row:hover .cep-continue-prep-btn {
+  background: #047857;
+  transform: translateX(2px);
+  box-shadow: 0 3px 10px rgba(6, 78, 59, 0.25);
+}
+
+.cep-all-exams-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.cep-empty-icon {
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.cep-empty-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.cep-empty-desc {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0 0 16px 0;
+}
+
+.cep-reset-search-btn {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cep-reset-search-btn:hover {
+  background: #e2e8f0;
+}
+
+/* ── Bottom Section: Why Choose Veer Next (Clean Rounded White Card + 4 Pillars) ── */
+.cep-why-choose-card {
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 24px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
+}
+
+.cep-why-header {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cep-why-header .cep-col-header {
+  margin-bottom: 0;
+}
+
+.cep-why-subtitle {
+  font-size: 12.5px;
+  color: #64748b;
+  margin: 0;
+  margin-left: 12px;
+}
+
+.cep-why-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.cep-why-pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 16px;
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  border-radius: 18px;
+  transition: all 0.15s ease;
+}
+
+.cep-why-pillar-item:hover {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+.cep-why-icon-bubble {
+  width: 38px;
+  height: 38px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bubble-green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.bubble-blue {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.bubble-indigo {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+
+.bubble-purple {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.cep-why-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cep-why-item-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 3px 0;
+  line-height: 1.25;
+}
+
+.cep-why-item-desc {
+  font-size: 11.5px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* ── Loading Spinner ── */
+.cep-loading-box {
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 24px;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.cep-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #059669;
+  border-radius: 50%;
+  animation: cepSpin 0.7s linear infinite;
+}
+
+@keyframes cepSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Responsive Adaptations ── */
+@media (max-width: 1280px) {
+  .cep-actions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cep-details-card {
+    grid-template-columns: 1fr;
+  }
+  .cep-about-col,
+  .cep-top-exams-col {
+    border-right: none;
+    border-bottom: 1px solid #edf2f7;
+  }
+  .cep-why-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cep-hero-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .cep-hero-visual-wrap {
+    height: 190px;
+    flex: none;
+  }
+  .cep-hero-gradient-overlay {
+    display: none;
+  }
+  .cep-hero-content {
+    flex: none;
+    padding: 24px 20px;
+  }
+  .cep-hero-abbr {
+    font-size: 34px;
+  }
+  .cep-hero-fullname {
+    font-size: 20px;
+  }
+  .cep-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cep-why-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}

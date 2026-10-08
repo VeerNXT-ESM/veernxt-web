@@ -13,6 +13,8 @@ import {
   Target,
   Rocket,
   ArrowRight,
+  Shield,
+  ShieldAlert,
   ShieldCheck,
   FileText,
   ChevronLeft,
@@ -23,6 +25,17 @@ import {
   MoreVertical,
   SlidersHorizontal,
   Filter,
+  Compass,
+  Sparkles,
+  Train,
+  HeartPulse,
+  Umbrella,
+  GraduationCap,
+  Cog,
+  Landmark,
+  Building,
+  Scale,
+  ClipboardList,
 } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
 import { getSubjectByKey, getFamilyHex } from '../lib/thumbnailTaxonomy';
@@ -30,6 +43,7 @@ import { useThumbnails } from '../lib/thumbnailStore';
 import { getEffectiveTier } from '../lib/subscriptionAccess';
 import { ReaderThemeProvider } from '../components/book/theme/ReaderThemeProvider';
 import ExamContentPreview from '../components/ExamContentPreview';
+import CategoryExplorerPortal from '../components/CategoryExplorerPortal';
 import { useExamContent, getExamResourceCount } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
 import './LearningCenter.css';
@@ -44,6 +58,42 @@ const TEASER_SUBJECT_KEYS = ['english', 'gk_general_awareness', 'reasoning', 'ma
 // "Full Course" / "Tier 1 & Tier 2" style labels with what's actually
 // available for every exam: syllabus, notes, mock tests and PYQs.
 const CONTENT_COVERAGE_LABEL = 'Syllabus + Notes + Mock Test + PYQ';
+
+// Comprehensive icon and styling mapper for ALL categories in the left panel
+function getCategoryIconMeta(cat) {
+  const c = (cat || '').toLowerCase();
+  if (c.includes('ssc')) return { icon: ShieldCheck, color: '#d97706', bg: '#fef3c7' };
+  if (c.includes('civil') || c.includes('upsc')) return { icon: Landmark, color: '#1e3a8a', bg: '#dbeafe' };
+  if (c.includes('psc') || c.includes('state')) return { icon: Building, color: '#047857', bg: '#d1fae5' };
+  if (c.includes('bank') || c.includes('finance') || c.includes('commerce') || c.includes('account')) return { icon: Landmark, color: '#0284c7', bg: '#e0f2fe' };
+  if (c.includes('railway') || c.includes('metro') || c.includes('train')) return { icon: Train, color: '#4338ca', bg: '#e0e7ff' };
+  if (c.includes('defence') || c.includes('army') || c.includes('navy') || c.includes('air') || c.includes('armed')) return { icon: Shield, color: '#15803d', bg: '#dcfce7' };
+  if (c.includes('police') || c.includes('cpo') || c.includes('si') || c.includes('constable') || c.includes('guard') || c.includes('intel')) return { icon: ShieldAlert, color: '#1d4ed8', bg: '#dbeafe' };
+  if (c.includes('teach') || c.includes('educat') || c.includes('lectur') || c.includes('master') || c.includes('ugc') || c.includes('net')) return { icon: GraduationCap, color: '#7c3aed', bg: '#ede9fe' };
+  if (c.includes('nurs') || c.includes('medic') || c.includes('health') || c.includes('pharma') || c.includes('cho') || c.includes('hospital')) return { icon: HeartPulse, color: '#e11d48', bg: '#ffe4e6' };
+  if (c.includes('engin') || c.includes('je') || c.includes('technic') || c.includes(' it')) return { icon: Cog, color: '#475569', bg: '#f1f5f9' };
+  if (c.includes('insur') || c.includes('lic') || c.includes('gic')) return { icon: Umbrella, color: '#0891b2', bg: '#cffafe' };
+  if (c.includes('judic') || c.includes('court') || c.includes('law') || c.includes('legal')) return { icon: Scale, color: '#b45309', bg: '#fef3c7' };
+  if (c.includes('forest') || c.includes('agri') || c.includes('hortic') || c.includes('fisher')) return { icon: Compass, color: '#059669', bg: '#d1fae5' };
+  if (c.includes('panchayat') || c.includes('rural') || c.includes('admin')) return { icon: Building, color: '#0284c7', bg: '#e0f2fe' };
+  return { icon: ClipboardList, color: '#64748b', bg: '#f1f5f9' };
+}
+
+// Clean categories preset list matching the design reference layout
+const EXPLORER_CATEGORIES_PRESETS = [
+  { key: 'SSC', label: 'SSC', icon: ShieldCheck, color: '#d97706', bg: '#fef3c7' },
+  { key: 'Civil Services', altKey: 'UPSC', label: 'UPSC', icon: Landmark, color: '#1e3a8a', bg: '#dbeafe' },
+  { key: 'State PSC', altKey: 'State Civil Services', label: 'State PSC', icon: Building, color: '#047857', bg: '#d1fae5' },
+  { key: 'Banking', label: 'Banking', icon: Landmark, color: '#0284c7', bg: '#e0f2fe' },
+  { key: 'Railways', label: 'Railways', icon: Train, color: '#4338ca', bg: '#e0e7ff' },
+  { key: 'Defence', label: 'Defence', icon: Shield, color: '#15803d', bg: '#dcfce7' },
+  { key: 'Police', label: 'Police', icon: ShieldAlert, color: '#1d4ed8', bg: '#dbeafe' },
+  { key: 'Teaching & Education', altKey: 'Teaching', label: 'Teaching', icon: GraduationCap, color: '#7c3aed', bg: '#ede9fe' },
+  { key: 'Nursing', altKey: 'Nursing & Medical', label: 'Nursing & Medical', icon: HeartPulse, color: '#e11d48', bg: '#ffe4e6' },
+  { key: 'Engineering Recruitment', altKey: 'Engineering', label: 'Engineering', icon: Cog, color: '#475569', bg: '#f1f5f9' },
+  { key: 'Insurance', label: 'Insurance', icon: Umbrella, color: '#0891b2', bg: '#cffafe' },
+  { key: 'Other Government Exams', altKey: 'Other Govt. Exams', label: 'Other Govt. Exams', icon: ClipboardList, color: '#64748b', bg: '#f1f5f9' },
+];
 
 const RECOMMENDED_EXAMS = [
   {
@@ -553,6 +603,8 @@ const LearningCenter = () => {
   const [catalogError, setCatalogError] = useState(null);
   const [regionFilterId, setRegionFilterId] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('');
+  const [rightTab, setRightTab] = useState('explorer'); // 'explorer' | 'recommended'
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [selectedBodyId, setSelectedBodyId] = useState('');
   const [searchText, setSearchText] = useState('');
 
@@ -711,6 +763,9 @@ const LearningCenter = () => {
   const handleCategoryFilterChange = (category) => {
     setCategoryFilter(category);
     setSelectedBodyId('');
+    if (category) {
+      setRightTab('explorer');
+    }
   };
 
   const handleClearFilters = () => {
@@ -720,6 +775,7 @@ const LearningCenter = () => {
     setSelectedBodyId('');
     setSearchText('');
     setBodySearch('');
+    setRightTab('recommended');
   };
 
   // Lock body scrolling when mobile drawer is open
@@ -801,6 +857,60 @@ const LearningCenter = () => {
     }
     return counts;
   }, [levelExams]);
+
+  const activeCategoryForExplorer = useMemo(() => {
+    if (categoryFilter) return categoryFilter;
+    if (regionMode === 'central') {
+      return categoryOptions.includes('SSC') ? 'SSC' : categoryOptions[0] || 'SSC';
+    }
+    if (regionMode === 'state') {
+      return (
+        categoryOptions.find((c) => c.includes('Civil Services') || c.includes('Administrative')) ||
+        categoryOptions[0] ||
+        'State Civil Services'
+      );
+    }
+    if (regionMode === 'ut') {
+      return (
+        categoryOptions.find((c) => c.includes('Administration') || c.includes('Police')) ||
+        categoryOptions[0] ||
+        'Administration'
+      );
+    }
+    return categoryOptions[0] || 'SSC';
+  }, [categoryFilter, regionMode, categoryOptions]);
+
+  const explorerCategoryList = useMemo(() => {
+    if (regionMode === 'central') {
+      const list = [...EXPLORER_CATEGORIES_PRESETS];
+      categoryOptions.forEach((cat) => {
+        const isCovered = EXPLORER_CATEGORIES_PRESETS.some(
+          (p) =>
+            p.key.toLowerCase() === cat.toLowerCase() ||
+            (p.altKey && p.altKey.toLowerCase() === cat.toLowerCase()) ||
+            p.label.toLowerCase() === cat.toLowerCase()
+        );
+        if (!isCovered) {
+          const meta = getCategoryIconMeta(cat);
+          list.push({
+            key: cat,
+            label: cat,
+            ...meta,
+          });
+        }
+      });
+      return list;
+    }
+
+    return categoryOptions.map((cat) => {
+      const meta = getCategoryIconMeta(cat);
+      return {
+        key: cat,
+        label: cat,
+        ...meta,
+      };
+    });
+  }, [regionMode, categoryOptions]);
 
   const bodyOptions = useMemo(() => {
     const pool = categoryFilter
@@ -1398,264 +1508,449 @@ const LearningCenter = () => {
     <div className="learning-wrapper">
       <div className="learning-layout-full">
         <main className="main-content">
-          {/* Hero: Your Learning Center */}
-          <section className="lc-hero-banner" aria-label="Learning Center Hero">
-            <div className="lc-hero-bg-layer" />
-            <div className="lc-hero-overlay" />
-            <div className="lc-hero-watermark">
-              <span className="lc-script-line1">New Skills</span>
-              <span className="lc-script-line2">New Horizons</span>
-            </div>
-
-            <div className="lc-hero-content">
-              <h1 className="lc-hero-title">Your Learning Center</h1>
-              <p className="lc-hero-tagline">Prepare. Learn. Grow. Serve Beyond.</p>
-              <p className="lc-hero-description">
-                Find exams, study material and skills training tailored to your profile.
-              </p>
-
-              <form
-                className="lc-hero-search-bar"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  document.getElementById('lc-search-results-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }}
-                role="search"
-              >
-                <div className="lc-hero-search-input-wrap">
-                  <Search size={16} className="lc-hero-search-icon" aria-hidden="true" />
-                  <input
-                    type="text"
-                    className="lc-hero-search-input"
-                    placeholder="Search exams, subjects, skills..."
-                    value={searchText}
-                    onChange={(e) => setSearchText(e.target.value)}
-                    aria-label="Search exams, subjects, conducting bodies or skills"
-                  />
-                </div>
-                <button type="submit" className="lc-hero-search-btn">
-                  Search
-                </button>
-              </form>
-
-              <div className="lc-hero-chips" role="tablist" aria-label="Exam Region Level">
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={regionMode === 'central'}
-                  onClick={() => handleRegionModeChange('central')}
-                  className={`lc-hero-chip ${regionMode === 'central' ? 'active' : ''}`}
-                >
-                  Central Exams
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={regionMode === 'state'}
-                  onClick={() => handleRegionModeChange('state')}
-                  className={`lc-hero-chip ${regionMode === 'state' ? 'active' : ''}`}
-                >
-                  State Exams
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={regionMode === 'ut'}
-                  onClick={() => handleRegionModeChange('ut')}
-                  className={`lc-hero-chip ${regionMode === 'ut' ? 'active' : ''}`}
-                >
-                  UT Exams
-                </button>
+          {/* Hero: Your Learning Center (Only shown in Recommended mode so Explorer mode is flush at top) */}
+          {rightTab === 'recommended' && (
+            <section className="lc-hero-banner" aria-label="Learning Center Hero">
+              <div className="lc-hero-bg-layer" />
+              <div className="lc-hero-overlay" />
+              <div className="lc-hero-watermark">
+                <span className="lc-script-line1">New Skills</span>
+                <span className="lc-script-line2">New Horizons</span>
               </div>
-            </div>
-          </section>
 
-          {/* ── Mobile Filters Trigger Section (Mobile <1100px only) ── */}
-          <div className="lc-mobile-filter-bar" aria-label="Mobile Filters">
-            <button
-              type="button"
-              className={`lc-mobile-filter-trigger-btn ${filtersActive ? 'active' : ''}`}
-              onClick={() => setMobileDrawerOpen(true)}
-              aria-label="Open Filter Results"
-            >
-              <SlidersHorizontal size={15} />
-              <span>Filters</span>
-              {activeFilterCount > 0 && (
-                <span className="lc-mobile-filter-badge">{activeFilterCount}</span>
-              )}
-            </button>
+              <div className="lc-hero-content">
+                <h1 className="lc-hero-title">Your Learning Center</h1>
+                <p className="lc-hero-tagline">Prepare. Learn. Grow. Serve Beyond.</p>
+                <p className="lc-hero-description">
+                  Find exams, study material and skills training tailored to your profile.
+                </p>
 
-            <div className="lc-mobile-active-chips-scroll">
-              {categoryFilter && (
-                <span className="lc-mobile-active-chip">
-                  <span>{categoryFilter}</span>
-                  <button
-                    type="button"
-                    onClick={() => setCategoryFilter('')}
-                    aria-label={`Remove ${categoryFilter} filter`}
-                  >
-                    <X size={12} />
-                  </button>
-                </span>
-              )}
-              {selectedBodyId && (
-                <span className="lc-mobile-active-chip">
-                  <span>{bodyOptions.find((b) => b.id === selectedBodyId)?.name || 'Conducting Body'}</span>
-                  <button
-                    type="button"
-                    onClick={() => setSelectedBodyId('')}
-                    aria-label="Remove conducting body filter"
-                  >
-                    <X size={12} />
-                  </button>
-                </span>
-              )}
-              {filtersActive && (
-                <button
-                  type="button"
-                  className="lc-mobile-clear-btn"
-                  onClick={handleClearFilters}
+                <form
+                  className="lc-hero-search-bar"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    document.getElementById('lc-search-results-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }}
+                  role="search"
                 >
-                  Clear all
-                </button>
-              )}
-            </div>
-          </div>
+                  <div className="lc-hero-search-input-wrap">
+                    <Search size={16} className="lc-hero-search-icon" aria-hidden="true" />
+                    <input
+                      type="text"
+                      className="lc-hero-search-input"
+                      placeholder="Search exams, subjects, skills..."
+                      value={searchText}
+                      onChange={(e) => setSearchText(e.target.value)}
+                      aria-label="Search exams, subjects, conducting bodies or skills"
+                    />
+                  </div>
+                  <button type="submit" className="lc-hero-search-btn">
+                    Search
+                  </button>
+                </form>
 
-          <div className="lc-main-grid">
-            {/* Left Column: Filter Results Sidebar — desktop (>=1100px)
-                only; below that it's hidden in favor of the compact ⋮
-                overflow popover next to "Recommended for you" (same filter
-                state/handlers, see mobileMenuOpen/activeFilterMenu). */}
-            <aside className="lc-filter-sidebar" aria-label="Filter Results">
-              <div className="lc-filter-sidebar-header">
-                <h3 className="lc-filter-sidebar-title">Filter Results</h3>
+                <div className="lc-hero-chips" role="tablist" aria-label="Exam Region Level">
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={regionMode === 'central'}
+                    onClick={() => handleRegionModeChange('central')}
+                    className={`lc-hero-chip ${regionMode === 'central' ? 'active' : ''}`}
+                  >
+                    Central Exams
+                  </button>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={regionMode === 'state'}
+                    onClick={() => handleRegionModeChange('state')}
+                    className={`lc-hero-chip ${regionMode === 'state' ? 'active' : ''}`}
+                  >
+                    State Exams
+                  </button>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={regionMode === 'ut'}
+                    onClick={() => handleRegionModeChange('ut')}
+                    className={`lc-hero-chip ${regionMode === 'ut' ? 'active' : ''}`}
+                  >
+                    UT Exams
+                  </button>
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* ── Mobile Filters Trigger Section (Mobile <1100px only in recommended mode) ── */}
+          {rightTab === 'recommended' && (
+            <div className="lc-mobile-filter-bar" aria-label="Mobile Filters">
+              <button
+                type="button"
+                className={`lc-mobile-filter-trigger-btn ${filtersActive ? 'active' : ''}`}
+                onClick={() => setMobileDrawerOpen(true)}
+                aria-label="Open Filter Results"
+              >
+                <SlidersHorizontal size={15} />
+                <span>Filters</span>
+                {activeFilterCount > 0 && (
+                  <span className="lc-mobile-filter-badge">{activeFilterCount}</span>
+                )}
+              </button>
+
+              <div className="lc-mobile-active-chips-scroll">
+                {categoryFilter && (
+                  <span className="lc-mobile-active-chip">
+                    <span>{categoryFilter}</span>
+                    <button
+                      type="button"
+                      onClick={() => setCategoryFilter('')}
+                      aria-label={`Remove ${categoryFilter} filter`}
+                    >
+                      <X size={12} />
+                    </button>
+                  </span>
+                )}
+                {selectedBodyId && (
+                  <span className="lc-mobile-active-chip">
+                    <span>{bodyOptions.find((b) => b.id === selectedBodyId)?.name || 'Conducting Body'}</span>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedBodyId('')}
+                      aria-label="Remove conducting body filter"
+                    >
+                      <X size={12} />
+                    </button>
+                  </span>
+                )}
                 {filtersActive && (
                   <button
                     type="button"
+                    className="lc-mobile-clear-btn"
                     onClick={handleClearFilters}
-                    className="lc-filter-clear-btn"
                   >
                     Clear all
                   </button>
                 )}
               </div>
+            </div>
+          )}
 
-              {/* Accordion 1: Category */}
-              <div className="lc-filter-accordion">
-                <button
-                  type="button"
-                  className="lc-accordion-btn"
-                  onClick={() => toggleFilterGroup('category')}
-                  aria-expanded={openFilters.category}
-                >
-                  <span>Category</span>
-                  {openFilters.category ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
-                {openFilters.category && (
-                  <div className="lc-accordion-content">
-                    <label className="lc-checkbox-item">
-                      <input
-                        type="checkbox"
-                        checked={!categoryFilter}
-                        onChange={() => setCategoryFilter('')}
-                      />
-                      <span className="lc-checkbox-box" />
-                      <span className="lc-checkbox-text">All categories</span>
-                      <span className="lc-filter-count">({levelExams.length})</span>
-                    </label>
-                    {(showAllCategories ? categoryOptions : categoryOptions.slice(0, 8)).map((cat) => (
-                      <label key={cat} className="lc-checkbox-item">
-                        <input
-                          type="checkbox"
-                          checked={categoryFilter === cat}
-                          onChange={() => setCategoryFilter(categoryFilter === cat ? '' : cat)}
-                        />
-                        <span className="lc-checkbox-box" />
-                        <span className="lc-checkbox-text">{cat}</span>
-                        <span className="lc-filter-count">({categoryCounts[cat] || 0})</span>
-                      </label>
-                    ))}
-                    {categoryOptions.length > 8 && (
+          <div className={`lc-main-grid ${isSidebarCollapsed ? 'sidebar-collapsed' : ''} ${rightTab === 'explorer' ? 'lc-main-grid-explorer' : ''}`}>
+            {/* Left Column: Sidebar — Explorer Nav in explorer mode, Filter Sidebar in recommended mode */}
+            <aside
+              className={`lc-filter-sidebar ${rightTab === 'explorer' ? 'lc-explorer-sidebar' : ''} ${isSidebarCollapsed ? 'lc-explorer-sidebar-collapsed' : ''}`}
+              aria-label={rightTab === 'explorer' ? 'Exam Categories' : 'Filter Results'}
+            >
+              {rightTab === 'explorer' ? (
+                /* ── Explorer Mode: Clean Category Nav List with Collapse Option & SVG Icons ── */
+                <>
+                  <div className="lc-explorer-sidebar-header">
+                    <button
+                      type="button"
+                      className="lc-explorer-collapse-toggle"
+                      onClick={() => setIsSidebarCollapsed((prev) => !prev)}
+                      aria-label={isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+                      title={isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+                    >
+                      {isSidebarCollapsed ? <ChevronRight size={17} /> : <ChevronLeft size={17} />}
+                    </button>
+                    {!isSidebarCollapsed && (
                       <button
                         type="button"
-                        className="lc-show-more-btn"
-                        onClick={() => setShowAllCategories(!showAllCategories)}
+                        className="lc-explorer-title-btn"
+                        onClick={() => setIsSidebarCollapsed(true)}
+                        title="Collapse sidebar"
                       >
-                        {showAllCategories ? 'Show less' : `Show more (${categoryOptions.length - 8})`}
-                        {showAllCategories ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+                        <span className="lc-explorer-sidebar-title">All Exams</span>
                       </button>
                     )}
                   </div>
-                )}
-              </div>
+                  <nav className="lc-explorer-nav" aria-label="Exam categories">
+                    {explorerCategoryList.map((item) => {
+                      const currentCategory = categoryFilter || activeCategoryForExplorer;
+                      const isActive =
+                        currentCategory.toLowerCase() === item.key.toLowerCase() ||
+                        (item.altKey && currentCategory.toLowerCase() === item.altKey.toLowerCase()) ||
+                        currentCategory.toLowerCase() === item.label.toLowerCase() ||
+                        (item.key === 'SSC' && !categoryFilter && activeCategoryForExplorer === 'SSC');
+                      const IconComponent = item.icon || ClipboardList;
 
-              {/* Accordion 2: Conducting Body */}
-              <div className="lc-filter-accordion">
-                <button
-                  type="button"
-                  className="lc-accordion-btn"
-                  onClick={() => toggleFilterGroup('body')}
-                  aria-expanded={openFilters.body}
-                >
-                  <span>Conducting Body</span>
-                  {openFilters.body ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
-                {openFilters.body && (
-                  <div className="lc-accordion-content">
-                    <div className="lc-filter-search-box">
-                      <Search size={14} className="lc-filter-search-icon" />
-                      <input
-                        type="text"
-                        placeholder="Search conducting body..."
-                        value={bodySearch}
-                        onChange={(e) => setBodySearch(e.target.value)}
-                        className="lc-filter-search-input"
-                      />
-                    </div>
-                    <div className="lc-filter-scroll-list">
-                      {(showAllBodies ? filteredBodyOptions : filteredBodyOptions.slice(0, 8)).map((body) => (
-                        <label key={body.id} className="lc-checkbox-item">
+                      return (
+                        <button
+                          key={item.key}
+                          type="button"
+                          className={`lc-explorer-nav-item ${isActive ? 'lc-explorer-nav-active' : ''}`}
+                          onClick={() => {
+                            const matching = categoryOptions.find(
+                              (c) =>
+                                c.toLowerCase() === item.key.toLowerCase() ||
+                                c.toLowerCase() === (item.altKey || '').toLowerCase() ||
+                                c.toLowerCase() === item.label.toLowerCase()
+                            );
+                            setCategoryFilter(matching || item.key);
+                          }}
+                          title={item.label}
+                          aria-current={isActive ? 'page' : undefined}
+                        >
+                          <span
+                            className="lc-explorer-nav-icon-wrap"
+                            style={{
+                              backgroundColor: isActive ? '#fef3c7' : item.bg || '#f1f5f9',
+                              color: isActive ? '#b45309' : item.color || '#475569',
+                            }}
+                          >
+                            <IconComponent size={17} strokeWidth={2.2} />
+                          </span>
+                          {!isSidebarCollapsed && (
+                            <>
+                              <span className="lc-explorer-nav-label">{item.label}</span>
+                              <ChevronRight size={14} className="lc-explorer-nav-chevron" />
+                            </>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </nav>
+                </>
+              ) : (
+                /* ── Recommended Mode: Filter Accordions with Category Icons ── */
+                <>
+                  <div className="lc-filter-sidebar-header">
+                    <h3 className="lc-filter-sidebar-title">Filter Results</h3>
+                    {filtersActive && (
+                      <button
+                        type="button"
+                        onClick={handleClearFilters}
+                        className="lc-filter-clear-btn"
+                      >
+                        Clear all
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Accordion 1: Category */}
+                  <div className="lc-filter-accordion">
+                    <button
+                      type="button"
+                      className="lc-accordion-btn"
+                      onClick={() => toggleFilterGroup('category')}
+                      aria-expanded={openFilters.category}
+                    >
+                      <span>Category</span>
+                      {openFilters.category ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                    </button>
+                    {openFilters.category && (
+                      <div className="lc-accordion-content">
+                        <label className={`lc-checkbox-item ${!categoryFilter ? 'active-cat-item' : ''}`}>
                           <input
                             type="checkbox"
-                            checked={selectedBodyId === body.id}
-                            onChange={() => setSelectedBodyId(selectedBodyId === body.id ? '' : body.id)}
+                            checked={!categoryFilter}
+                            onChange={() => {
+                              setCategoryFilter('');
+                            }}
                           />
                           <span className="lc-checkbox-box" />
-                          <span className="lc-checkbox-text">{body.name}</span>
+                          <span className="lc-checkbox-text">All categories</span>
+                          <span className="lc-filter-count">({levelExams.length})</span>
                         </label>
-                      ))}
-                      {filteredBodyOptions.length === 0 && (
-                        <p className="filter-empty-note">No bodies found.</p>
-                      )}
-                    </div>
-                    {filteredBodyOptions.length > 8 && (
-                      <button
-                        type="button"
-                        className="lc-show-more-btn"
-                        onClick={() => setShowAllBodies(!showAllBodies)}
-                      >
-                        {showAllBodies ? 'Show less' : `Show more (${filteredBodyOptions.length - 8})`}
-                        {showAllBodies ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
-                      </button>
+                        {(showAllCategories ? categoryOptions : categoryOptions.slice(0, 10)).map((cat) => {
+                          const meta = getCategoryIconMeta(cat);
+                          const IconCmp = meta.icon || ClipboardList;
+                          return (
+                            <label
+                              key={cat}
+                              className={`lc-checkbox-item ${categoryFilter === cat ? 'active-cat-item' : ''}`}
+                            >
+                              <input
+                                type="checkbox"
+                                checked={categoryFilter === cat}
+                                onChange={() => {
+                                  const next = categoryFilter === cat ? '' : cat;
+                                  setCategoryFilter(next);
+                                }}
+                              />
+                              <span className="lc-checkbox-box" />
+                              <span
+                                className="lc-filter-cat-icon-badge"
+                                style={{ color: meta.color, backgroundColor: meta.bg }}
+                              >
+                                <IconCmp size={13} strokeWidth={2.2} />
+                              </span>
+                              <span className="lc-checkbox-text">{cat}</span>
+                              <span className="lc-filter-count">({categoryCounts[cat] || 0})</span>
+                              {categoryFilter === cat && <ChevronRight size={14} className="lc-cat-active-chevron" />}
+                            </label>
+                          );
+                        })}
+                        {categoryOptions.length > 10 && (
+                          <button
+                            type="button"
+                            className="lc-show-more-btn"
+                            onClick={() => setShowAllCategories(!showAllCategories)}
+                          >
+                            {showAllCategories ? 'Show less' : `Show more (${categoryOptions.length - 10})`}
+                            {showAllCategories ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+                          </button>
+                        )}
+                      </div>
                     )}
                   </div>
-                )}
-              </div>
+
+                  {/* Accordion 2: Conducting Body */}
+                  <div className="lc-filter-accordion">
+                    <button
+                      type="button"
+                      className="lc-accordion-btn"
+                      onClick={() => toggleFilterGroup('body')}
+                      aria-expanded={openFilters.body}
+                    >
+                      <span>Conducting Body</span>
+                      {openFilters.body ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                    </button>
+                    {openFilters.body && (
+                      <div className="lc-accordion-content">
+                        <div className="lc-filter-search-box">
+                          <Search size={14} className="lc-filter-search-icon" />
+                          <input
+                            type="text"
+                            placeholder="Search conducting body..."
+                            value={bodySearch}
+                            onChange={(e) => setBodySearch(e.target.value)}
+                            className="lc-filter-search-input"
+                          />
+                        </div>
+                        <div className="lc-filter-scroll-list">
+                          {(showAllBodies ? filteredBodyOptions : filteredBodyOptions.slice(0, 8)).map((body) => (
+                            <label key={body.id} className="lc-checkbox-item">
+                              <input
+                                type="checkbox"
+                                checked={selectedBodyId === body.id}
+                                onChange={() => setSelectedBodyId(selectedBodyId === body.id ? '' : body.id)}
+                              />
+                              <span className="lc-checkbox-box" />
+                              <span className="lc-checkbox-text">{body.name}</span>
+                            </label>
+                          ))}
+                          {filteredBodyOptions.length === 0 && (
+                            <p className="filter-empty-note">No bodies found.</p>
+                          )}
+                        </div>
+                        {filteredBodyOptions.length > 8 && (
+                          <button
+                            type="button"
+                            className="lc-show-more-btn"
+                            onClick={() => setShowAllBodies(!showAllBodies)}
+                          >
+                            {showAllBodies ? 'Show less' : `Show more (${filteredBodyOptions.length - 8})`}
+                            {showAllBodies ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+                          </button>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </>
+              )}
             </aside>
 
             {/* Right Column: Content Rail */}
             <section className="lc-content-rail">
-              {/* ── Recommended For You Section ──
-                  Doubles as the page's search results: the moment the
-                  person searches (hero search box) or narrows things down
-                  by Category / Conducting Body (sidebar), this switches
-                  from the curated 5-card teaser to every real match --
-                  no separate "Search Results" section below it. Kept the
-                  stable id so handlePopularExamClick / handleResumeCourse /
-                  handleStartCardExam, which set a filter and then scroll
-                  here, still land in the right place. */}
-              <div className="lc-section-box" id="lc-search-results-section">
+              {/* ── Top Bar: Mode Tabs + Region Selector Pills ── */}
+              <div className="lc-explorer-top-bar">
+                <div className="lc-top-tabs-bar" role="tablist" aria-label="Learning View Mode">
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={rightTab === 'explorer'}
+                    className={`lc-top-tab-btn ${rightTab === 'explorer' ? 'active' : ''}`}
+                    onClick={() => setRightTab('explorer')}
+                  >
+                    <Compass size={16} className="lc-top-tab-icon" />
+                    <span>Explorer Mode</span>
+                    <span className="lc-top-tab-pill">
+                      {categoryFilter || activeCategoryForExplorer}
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={rightTab === 'recommended'}
+                    className={`lc-top-tab-btn ${rightTab === 'recommended' ? 'active' : ''}`}
+                    onClick={() => setRightTab('recommended')}
+                  >
+                    <Sparkles size={16} className="lc-top-tab-icon" />
+                    <span>Recommended Exams</span>
+                  </button>
+                </div>
+
+                {rightTab === 'explorer' && (
+                  <div className="lc-explorer-region-chips" role="tablist" aria-label="Exam Region Level">
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={regionMode === 'central'}
+                      onClick={() => handleRegionModeChange('central')}
+                      className={`lc-region-chip ${regionMode === 'central' ? 'active' : ''}`}
+                    >
+                      Central Exams
+                    </button>
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={regionMode === 'state'}
+                      onClick={() => handleRegionModeChange('state')}
+                      className={`lc-region-chip ${regionMode === 'state' ? 'active' : ''}`}
+                    >
+                      State Exams
+                    </button>
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={regionMode === 'ut'}
+                      onClick={() => handleRegionModeChange('ut')}
+                      className={`lc-region-chip ${regionMode === 'ut' ? 'active' : ''}`}
+                    >
+                      UT Exams
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* View 1: Explorer Mode (Rich Portal matching Design Reference) */}
+              {rightTab === 'explorer' ? (
+                <CategoryExplorerPortal
+                  categoryName={categoryFilter || activeCategoryForExplorer}
+                  division={regionMode}
+                  levelExams={levelExams}
+                  allCatalog={catalog}
+                  onSelectExam={(exam) => {
+                    const id = exam.examId || exam.id;
+                    if (id) {
+                      navigate(`/exam/${id}`, { state: { from: '/learning-center' } });
+                    } else {
+                      setSearchText(exam.title || exam.name || '');
+                      setRightTab('recommended');
+                    }
+                  }}
+                  onExploreContent={(contentType, profileData) => {
+                    if (contentType === 'pyqs') {
+                      navigate('/pyq-center');
+                    } else if (contentType === 'mocks') {
+                      navigate('/quiz-center');
+                    } else {
+                      const firstId = profileData?.top_exams?.[0]?.examId;
+                      if (firstId) {
+                        navigate(`/exam/${firstId}`, { state: { from: '/learning-center' } });
+                      } else {
+                        setSearchText(profileData?.category_name || '');
+                        setRightTab('recommended');
+                      }
+                    }
+                  }}
+                />
+              ) : (
+                /* View 2: Recommended For You Section */
+                <div className="lc-section-box" id="lc-search-results-section">
                 <div className="lc-section-header">
                   <div className="lc-section-header-left">
                     <h2 className="lc-section-title">Recommended for you</h2>
@@ -1748,6 +2043,7 @@ const LearningCenter = () => {
                   </div>
                 )}
               </div>
+              )}
 
               {/* ── Continue Learning Section ── */}
               <div className="lc-section-box">
@@ -1918,16 +2214,20 @@ const LearningCenter = () => {
                         }}
                       >
                         <div className="lc-card-thumb-wrap">
-                          <img
-                            src={cardImage(exam)}
-                            alt={exam.name}
-                            className="lc-card-thumb-img"
-                            loading="lazy"
-                            onError={(e) => {
-                              e.target.style.display = 'none';
-                              e.target.parentElement.classList.add('lc-thumb-fallback');
-                            }}
-                          />
+                          {cardImage(exam) ? (
+                            <img
+                              src={cardImage(exam)}
+                              alt={exam.name}
+                              className="lc-card-thumb-img"
+                              loading="lazy"
+                              onError={(e) => {
+                                e.target.style.display = 'none';
+                                e.target.parentElement.classList.add('lc-thumb-fallback');
+                              }}
+                            />
+                          ) : (
+                            <div className="lc-card-thumb-img lc-thumb-fallback" />
+                          )}
                           <div
                             className="lc-card-badge"
                             style={{ backgroundColor: exam.badgeBg, color: exam.badgeColor }}
@@ -2211,7 +2511,14 @@ const LearningCenter = () => {
                         <input
                           type="checkbox"
                           checked={categoryFilter === cat}
-                          onChange={() => setCategoryFilter(categoryFilter === cat ? '' : cat)}
+                          onChange={() => {
+                            const next = categoryFilter === cat ? '' : cat;
+                            setCategoryFilter(next);
+                            if (next) {
+                              setRightTab('explorer');
+                              setMobileDrawerOpen(false);
+                            }
+                          }}
                         />
                         <span className="lc-mobile-checkbox-box" />
                         <span className="lc-mobile-checkbox-text">{cat}</span>
