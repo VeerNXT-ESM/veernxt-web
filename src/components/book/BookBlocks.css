@@ -291,46 +291,54 @@
 :where(.reader-theme-container) .bk-table-wrapper {
   width: 100%;
   overflow-x: auto;
-  margin: var(--reader-space-xl) 0;
-  border-radius: var(--reader-radius-md);
-  border: 1px solid var(--reader-border-strong);
-  box-shadow: var(--reader-shadow-sm);
-  background: var(--reader-surface);
+  -webkit-overflow-scrolling: touch;
+  margin: var(--reader-space-xl, 2rem) 0;
+  border-radius: var(--reader-radius-md, 10px);
+  border: 1px solid var(--reader-border-strong, #cbd5e1);
+  box-shadow: var(--reader-shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.05));
+  background: var(--reader-surface, #ffffff);
 }
 
 :where(.reader-theme-container) .bk-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--reader-heading-font);
-  font-size: 1rem;
+  font-family: var(--reader-heading-font, 'Inter', sans-serif);
+  font-size: 0.95rem;
 }
 
 :where(.reader-theme-container) .bk-table th, :where(.reader-theme-container) .bk-table td {
-  padding: 1.1rem var(--reader-space-md);
+  padding: 0.95rem 1.25rem;
   text-align: left;
-  border-bottom: 1px solid var(--reader-border);
+  border-bottom: 1px solid var(--reader-border, #e2e8f0);
+  border-right: 1px solid var(--reader-border, #e2e8f0);
   line-height: 1.6;
 }
 
+:where(.reader-theme-container) .bk-table th:last-child,
+:where(.reader-theme-container) .bk-table td:last-child {
+  border-right: none;
+}
+
 :where(.reader-theme-container) .bk-table td {
-  color: var(--reader-text);
-  font-family: var(--reader-body-font);
-  font-size: 0.98rem;
+  color: var(--reader-text, #1e293b);
+  font-family: var(--reader-body-font, 'Inter', sans-serif);
+  font-size: 0.93rem;
 }
 :where(.reader-theme-container) .bk-table td p { color: inherit; margin: 0; }
 
 :where(.reader-theme-container) .bk-table th {
-  background-color: var(--reader-primary);
-  font-weight: 800;
-  color: #ffffff;
+  background-color: var(--reader-background, #f8fafc);
+  font-weight: 700;
+  color: var(--reader-heading, #0f172a);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  font-size: 0.82rem;
+  border-bottom: 2px solid var(--reader-border-strong, #cbd5e1);
 }
 
-:where(.reader-theme-container) .bk-table tr:nth-child(even) td { background-color: var(--reader-background); }
-:where(.reader-theme-container) .bk-table tr:nth-child(odd) td { background-color: var(--reader-surface); }
-:where(.reader-theme-container) .bk-table tr:hover td { background-color: var(--reader-surface-alt); transition: background 0.12s ease; }
+:where(.reader-theme-container) .bk-table tr:nth-child(even) td { background-color: var(--reader-background, #fbfcfe); }
+:where(.reader-theme-container) .bk-table tr:nth-child(odd) td { background-color: var(--reader-surface, #ffffff); }
+:where(.reader-theme-container) .bk-table tr:hover td { background-color: var(--reader-surface-alt, #f1f5f9); transition: background 0.12s ease; }
 :where(.reader-theme-container) .bk-table tr:last-child td { border-bottom: none; }
 
 /* Chapter Header */
@@ -673,22 +681,3 @@
 :where(.reader-theme-container) ol[type="a"] { list-style-type: lower-alpha; }
 :where(.reader-theme-container) ol[type="I"] { list-style-type: upper-roman; }
 :where(.reader-theme-container) ol[type="i"] { list-style-type: lower-roman; }
-
-/* Tables: plain white, no outlines (content-team feedback 2026-10-07).
-   Overrides the bordered / zebra / hover styling above; !important because those rules are more specific. */
-:where(.reader-theme-container) .bk-table-wrapper {
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  background: #fff !important;
-}
-:where(.reader-theme-container) .bk-table,
-:where(.reader-theme-container) .bk-table th,
-:where(.reader-theme-container) .bk-table td,
-:where(.reader-theme-container) .bk-table tr {
-  border: none !important;
-  background: #fff !important;
-  box-shadow: none !important;
-}
-:where(.reader-theme-container) .bk-table tr:hover td { background: #fff !important; }
-:where(.reader-theme-container) .bk-table th { color: inherit; font-weight: 700; text-align: left; }

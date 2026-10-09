@@ -184,24 +184,32 @@
 :where(.bk-classic) .bk-table-wrapper {
   width: 100%;
   overflow-x: auto;
-  margin: 3rem 0;
-  border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
+  margin: 2.5rem 0;
+  border-radius: 10px;
   border: 1px solid #cbd5e1;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
 }
 
 :where(.bk-classic) .bk-table {
   width: 100%;
   border-collapse: collapse;
   font-family: 'Inter', sans-serif;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 
 :where(.bk-classic) .bk-table th, :where(.bk-classic) .bk-table td {
-  padding: 1.25rem 1.5rem;
+  padding: 0.95rem 1.25rem;
   text-align: left;
   border-bottom: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
   line-height: 1.6;
+}
+
+:where(.bk-classic) .bk-table th:last-child,
+:where(.bk-classic) .bk-table td:last-child {
+  border-right: none;
 }
 
 /* Cell content is raw injected HTML (mammoth-parsed table cells come in as
@@ -215,22 +223,25 @@
    depends on ambient color. */
 :where(.bk-classic) .bk-table td {
   color: #1e293b;
+  font-size: 0.93rem;
 }
 :where(.bk-classic) .bk-table td p {
   color: inherit;
+  margin: 0;
 }
 
 :where(.bk-classic) .bk-table th {
-  background-color: #0f766e; /* Teal header */
+  background-color: #f8fafc;
   font-weight: 700;
-  color: white;
+  color: #0f172a;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+  border-bottom: 2px solid #cbd5e1;
 }
 
 :where(.bk-classic) .bk-table tr:nth-child(even) td {
-  background-color: #f8fafc; /* Very light slate */
+  background-color: #fbfcfe;
 }
 
 :where(.bk-classic) .bk-table tr:nth-child(odd) td {
@@ -239,6 +250,7 @@
 
 :where(.bk-classic) .bk-table tr:hover td {
   background-color: #f1f5f9;
+  transition: background-color 0.12s ease;
 }
 
 :where(.bk-classic) .bk-table tr:last-child td {
@@ -565,22 +577,3 @@
 :where(.bk-classic) ol[type="a"] { list-style-type: lower-alpha; }
 :where(.bk-classic) ol[type="I"] { list-style-type: upper-roman; }
 :where(.bk-classic) ol[type="i"] { list-style-type: lower-roman; }
-
-/* Tables: plain white, no outlines (content-team feedback 2026-10-07).
-   Overrides the bordered / zebra / hover styling above; !important because those rules are more specific. */
-:where(.bk-classic) .bk-table-wrapper {
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  background: #fff !important;
-}
-:where(.bk-classic) .bk-table,
-:where(.bk-classic) .bk-table th,
-:where(.bk-classic) .bk-table td,
-:where(.bk-classic) .bk-table tr {
-  border: none !important;
-  background: #fff !important;
-  box-shadow: none !important;
-}
-:where(.bk-classic) .bk-table tr:hover td { background: #fff !important; }
-:where(.bk-classic) .bk-table th { color: inherit; font-weight: 700; text-align: left; }
