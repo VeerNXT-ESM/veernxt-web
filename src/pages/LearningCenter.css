@@ -4002,3 +4002,485 @@
   flex-shrink: 0;
 }
 
+/* ── State & UT Division Explorer Navigation Styles ── */
+.lc-explorer-title-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.lc-explorer-sidebar-count {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.lc-explorer-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  margin: 4px 6px 8px 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+
+.lc-explorer-search-bar:focus-within {
+  border-color: #466931;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(70, 105, 49, 0.12);
+}
+
+.lc-explorer-search-icon {
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.lc-explorer-search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 12.5px;
+  color: #0f172a;
+  width: 100%;
+}
+
+.lc-explorer-search-clear {
+  border: none;
+  background: none;
+  padding: 2px;
+  cursor: pointer;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+}
+
+.lc-explorer-search-clear:hover {
+  color: #0f172a;
+}
+
+.lc-explorer-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #466931;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.lc-explorer-back-btn:hover {
+  background: #edf5e9;
+  color: #2e4a1e;
+}
+
+.lc-explorer-state-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  margin: 4px 6px 10px 6px;
+  background: #f1f7ed;
+  border: 1px solid #d4e7cd;
+  border-radius: 12px;
+}
+
+.lc-explorer-state-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #27491d;
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.lc-explorer-state-exams-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: #466931;
+  background: #ffffff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #d4e7cd;
+}
+
+.lc-explorer-nav-count {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748b;
+  margin-left: auto;
+  margin-right: 4px;
+}
+
+/* State monogram badge in sidebar */
+.lc-explorer-nav-state-code {
+  font-size: 11.5px;
+  font-weight: 800;
+  border-radius: 9px;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── State Directory Main Hero ── */
+.lc-state-directory-container {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lc-state-directory-hero {
+  position: relative;
+  background-image: url('/category_banners/state_psc.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -6px rgba(15, 23, 42, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lc-state-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.90) 0%, rgba(22, 45, 28, 0.85) 60%, rgba(15, 23, 42, 0.92) 100%);
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+.lc-state-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 38px 40px;
+}
+
+.lc-state-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #cbe3bf;
+  border: 1px solid rgba(203, 227, 191, 0.35);
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.lc-state-directory-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.lc-state-directory-subtitle {
+  font-size: 14.5px;
+  color: #cbd5e1;
+  margin: 0 0 24px 0;
+  max-width: 740px;
+  line-height: 1.55;
+}
+
+.lc-state-search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  padding: 12px 18px;
+  max-width: 560px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(12px);
+  margin-bottom: 20px;
+}
+
+.lc-state-search-box:focus-within {
+  border-color: #466931;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(70, 105, 49, 0.28);
+}
+
+.lc-state-search-icon {
+  color: #475569;
+  flex-shrink: 0;
+}
+
+.lc-state-search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #0f172a;
+  width: 100%;
+  font-weight: 500;
+}
+
+.lc-state-search-input::placeholder {
+  color: #94a3b8;
+}
+
+.lc-state-search-clear {
+  border: none;
+  background: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.lc-state-search-clear:hover {
+  color: #0f172a;
+}
+
+/* Zone Filter Chips */
+.lc-state-zone-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lc-state-zone-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  backdrop-filter: blur(4px);
+}
+
+.lc-state-zone-chip:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.lc-state-zone-chip.active {
+  background: #cbe3bf;
+  color: #17381e;
+  border-color: #cbe3bf;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ── State Cards Grid (with 20% blended image banners) ── */
+.lc-state-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 22px;
+}
+
+.lc-state-card {
+  background: #ffffff;
+  border: 1.5px solid #edf2f7;
+  border-radius: 20px;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
+}
+
+.lc-state-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.12);
+}
+
+/* Full Width Image Banner Container */
+.lc-state-card-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.lc-state-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lc-state-card:hover .lc-state-card-img {
+  transform: scale(1.06);
+}
+
+.lc-state-card-placeholder-banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.lc-state-watermark-text {
+  font-size: 64px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  user-select: none;
+}
+
+/* 20% Gradient Fade into the card body */
+.lc-state-card-image-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.55) 75%, #ffffff 100%);
+  pointer-events: none;
+}
+
+/* Floating Badges over the image */
+.lc-state-card-floating-bar {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.lc-state-code-badge {
+  font-size: 12px;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 10px;
+  border-radius: 9px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(8px);
+}
+
+.lc-state-card-count-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(15, 23, 42, 0.82);
+  padding: 4px 11px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Card Body Content */
+.lc-state-card-body {
+  padding: 4px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.lc-state-card-header-row {
+  margin-bottom: 12px;
+}
+
+.lc-state-card-name {
+  font-size: 18.5px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 3px 0;
+  letter-spacing: -0.015em;
+  transition: color 0.15s ease;
+}
+
+.lc-state-card:hover .lc-state-card-name {
+  color: #466931;
+}
+
+.lc-state-card-meta-line {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  display: block;
+}
+
+.lc-state-card-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.lc-state-cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 4px 8px;
+  border-radius: 7px;
+  transition: all 0.15s ease;
+}
+
+.lc-state-card:hover .lc-state-cat-pill {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.lc-state-cat-more {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  align-self: center;
+  padding: 2px 4px;
+}
+
+.lc-state-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 13px;
+  font-weight: 700;
+  color: #466931;
+  transition: all 0.2s ease;
+}
+
+.lc-state-card-arrow {
+  transition: transform 0.2s ease;
+}
+
+.lc-state-card:hover .lc-state-card-arrow {
+  transform: translateX(4px);
+}
+
+.lc-state-card:hover .lc-state-card-footer {
+  color: #2e4a1e;
+}
+
+
+

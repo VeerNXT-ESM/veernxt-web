@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, RefreshCw, ArrowRight, CheckCircle2, Check, X, Crown, ChevronRight } from 'lucide-react';
+import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, RefreshCw, ArrowRight, CheckCircle2, Check, X, Crown, ChevronRight, Shield } from 'lucide-react';
 import { isResourceLockedForUser, canTakeQuiz } from '../lib/subscriptionAccess';
 import { useExamContent } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
 import { resolveSubjectForTitle, getFamilyHex } from '../lib/thumbnailTaxonomy';
 import { useThumbnails } from '../lib/thumbnailStore';
 import { ReaderThemeProvider } from './book/theme/ReaderThemeProvider';
+import './book/Book3D.css';
 
 const BUCKETS = [
   { key: 'Intro', label: 'Intro', icon: FileText, anchor: 'section-intro' },
@@ -129,97 +130,173 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
 // subject-tile grouping used, just applied per-document instead of once
 // per subject so a Guide and its sibling Précis each get their own tile
 // and label instead of sharing one tile captioned "Guide • Précis".
-export function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplete, backTo }) {
+export function ResourceTile({ resource, examName, locked, isCompleted, onToggleComplete, backTo, onOpenResource }) {
   const subject = resolveSubjectForTitle(resource.title, resource.category);
   const bg = getFamilyHex(subject.family);
   const { subjectUrl } = useThumbnails();
   const image = subjectUrl(subject.key);
+  const cleanTitle = cleanContentTitle(resource.title, examName);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem' }}>
-      <Link to={`/reader/${resource.resource_id}`} state={backTo ? { from: backTo } : undefined} style={{ position: 'relative', display: 'block', textDecoration: 'none' }}>
-        <span
-          style={{
-            aspectRatio: '3 / 4', borderRadius: '8px', display: 'flex', alignItems: 'flex-end',
-            padding: '0.4rem 0.45rem', fontWeight: 800, fontSize: '0.62rem', color: '#fff', textTransform: 'uppercase',
-            letterSpacing: '0.04em',
-            textShadow: '0 1px 3px rgba(0,0,0,0.85)',
-            background: image
-              ? `linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.75) 100%), url("${image}")`
-              : `linear-gradient(160deg, ${bg} 0%, #134e4a 100%)`,
-            backgroundSize: image ? 'cover' : undefined,
-            backgroundPosition: image ? 'center' : undefined,
-            boxShadow: isCompleted ? '0 0 0 2px #16a34a' : '0 2px 8px rgba(0,0,0,0.06)',
-          }}
-        >
-          {image ? (subject.label || 'STUDY MATERIAL') : 'STUDY MATERIAL'}
-        </span>
-        <span style={{
-          position: 'absolute', top: '0.35rem', right: '0.35rem', width: '20px', height: '20px', borderRadius: '5px',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', background: locked ? '#ef4444' : '#16a34a',
-          boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
-        }}>
-          {locked ? <Lock size={11} color="white" /> : <Unlock size={11} color="white" />}
-        </span>
+    <div className="vn-book-3d-scene">
+      <Link
+        to={`/reader/${resource.resource_id}`}
+        state={backTo ? { from: backTo } : undefined}
+        onClick={onOpenResource ? (e) => { e.preventDefault(); onOpenResource(resource); } : undefined}
+        style={{ textDecoration: 'none', width: '100%', display: 'block' }}
+      >
+        <div className="vn-book-3d-item">
+          {/* Rear hardcover base */}
+          <div className="vn-book-3d-back" style={{ background: bg || '#042f28' }} />
+
+          {/* Left extruded spine */}
+          <div className="vn-book-3d-spine" style={{ background: bg || '#042f28' }}>
+            <div className="vn-book-spine-gold-ring" />
+            <span className="vn-book-3d-spine-text">{cleanTitle || subject.label}</span>
+            <div className="vn-book-spine-gold-ring" />
+            <div className="vn-book-3d-spine-light" />
+          </div>
+
+          {/* Right paper block thickness */}
+          <div className="vn-book-3d-pages-right" />
+
+          {/* Bottom paper block thickness */}
+          <div className="vn-book-3d-pages-bottom" />
+
+          {/* Front cover */}
+          <div
+            className="vn-book-3d-front"
+            style={{
+              backgroundImage: image
+                ? `linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.85) 100%), url("${image}")`
+                : `linear-gradient(160deg, ${bg || '#065f46'} 0%, #042f28 100%)`,
+            }}
+          >
+            {/* Hardcover hinge crease line */}
+            <div className="vn-book-3d-crease" />
+
+            {/* Glossy light reflection sheen */}
+            <div className="vn-book-3d-sheen" />
+
+            {/* Top header: VeerNXT emblem + Lock Pill */}
+            <div className="vn-book-cover-header">
+              <div className="vn-book-cover-crest-badge">
+                <Shield size={10} style={{ color: '#b45309' }} />
+                <span className="vn-book-cover-crest-text">VEERNXT</span>
+              </div>
+              <div className={`vn-book-lock-pill ${locked ? 'locked' : 'unlocked'}`}>
+                {locked ? <Lock size={11} color="white" /> : <Unlock size={11} color="white" />}
+              </div>
+            </div>
+
+            {/* Center Cover Typography Banner */}
+            <div className="vn-book-cover-center-banner">
+              <span className="vn-book-cover-exam-tag">{examName || 'EXAM PREP'}</span>
+              <h4 className="vn-book-cover-main-title">{cleanTitle}</h4>
+              <span className="vn-book-cover-sub-bar">{subject.label || 'COMPLETE GUIDE'}</span>
+            </div>
+
+            {/* Bottom Category Chip */}
+            <div className="vn-book-cover-footer">
+              <span className="vn-book-cover-category-chip">{resource.category || 'GUIDEBOOK'}</span>
+            </div>
+          </div>
+        </div>
       </Link>
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.4rem' }}>
+
+      {/* Ground cast shadow */}
+      <div className="vn-book-3d-ground-shadow" />
+
+      {/* Bottom Checkbox & Title Row */}
+      <div className="vn-book-bottom-info">
         <button
           type="button"
-          onClick={() => onToggleComplete(resource.resource_id, !isCompleted)}
+          onClick={() => onToggleComplete?.(resource.resource_id, !isCompleted)}
           title={isCompleted ? 'Marked as Complete — click to undo' : 'Mark as Complete'}
-          style={{
-            background: isCompleted ? '#16a34a' : 'transparent',
-            border: isCompleted ? 'none' : '1.5px solid #cbd5e1',
-            borderRadius: '3px', width: '15px', height: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-            cursor: 'pointer', padding: 0, flexShrink: 0, marginTop: '0.15rem',
-          }}
+          className={`vn-book-checkbox ${isCompleted ? 'completed' : ''}`}
         >
-          {isCompleted && <Check size={10} color="#fff" strokeWidth={3.5} />}
+          {isCompleted && <Check size={11} color="#fff" strokeWidth={3.5} />}
         </button>
-        <span style={{ fontSize: '0.74rem', fontWeight: isCompleted ? 700 : 500, lineHeight: 1.3, color: isCompleted ? '#16a34a' : '#0f172a' }}>
-          {cleanContentTitle(resource.title, examName)}
+        <span className={`vn-book-title-label ${isCompleted ? 'completed' : ''}`}>
+          {cleanTitle}
         </span>
       </div>
     </div>
   );
 }
 
-// Book-tile look for a manual (docx-uploaded, HTML-body) Introduction --
-// same cover/lock-badge/title layout as ResourceTile above so Intro sits
-// in the grid looking like just another book, but since there's no
-// resource_id to route to /reader/:id, clicking it opens the content in
-// a lightweight in-page overlay instead.
-export function IntroManualTile({ intro, locked }) {
+// 3D Book look for a manual (docx-uploaded, HTML-body) Introduction
+export function IntroManualTile({ intro, locked, onOpen }) {
   const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    if (onOpen) onOpen(intro);
+    else setOpen(true);
+  };
+
   return (
     <>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem' }}>
-        <div onClick={() => setOpen(true)} style={{ position: 'relative', display: 'block', cursor: 'pointer' }}>
+      <div className="vn-book-3d-scene">
+        <div onClick={handleClick} style={{ width: '100%', cursor: 'pointer' }}>
+          <div className="vn-book-3d-item">
+            <div className="vn-book-3d-back" style={{ background: '#042f28' }} />
+
+            <div className="vn-book-3d-spine" style={{ background: '#042f28' }}>
+              <div className="vn-book-spine-gold-ring" />
+              <span className="vn-book-3d-spine-text">{intro.title || 'INTRODUCTION'}</span>
+              <div className="vn-book-spine-gold-ring" />
+              <div className="vn-book-3d-spine-light" />
+            </div>
+
+            <div className="vn-book-3d-pages-right" />
+            <div className="vn-book-3d-pages-bottom" />
+
+            <div
+              className="vn-book-3d-front"
+              style={{
+                background: 'linear-gradient(160deg, #0d9488 0%, #115e59 50%, #042f28 100%)',
+              }}
+            >
+              <div className="vn-book-3d-crease" />
+              <div className="vn-book-3d-sheen" />
+
+              <div className="vn-book-cover-header">
+                <div className="vn-book-cover-crest-badge">
+                  <Shield size={10} style={{ color: '#b45309' }} />
+                  <span className="vn-book-cover-crest-text">VEERNXT</span>
+                </div>
+                <div className={`vn-book-lock-pill ${locked ? 'locked' : 'unlocked'}`}>
+                  {locked ? <Lock size={11} color="white" /> : <Unlock size={11} color="white" />}
+                </div>
+              </div>
+
+              <div className="vn-book-cover-center-banner">
+                <span className="vn-book-cover-exam-tag">OFFICIAL SYLLABUS</span>
+                <h4 className="vn-book-cover-main-title">{intro.title || 'INTRODUCTION'}</h4>
+                <span className="vn-book-cover-sub-bar">STUDY GUIDE</span>
+              </div>
+
+              <div className="vn-book-cover-footer">
+                <span className="vn-book-cover-category-chip">MANUAL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="vn-book-3d-ground-shadow" />
+
+        <div className="vn-book-bottom-info">
           <span
             style={{
-              aspectRatio: '3 / 4', borderRadius: '8px', display: 'flex', alignItems: 'flex-end',
-              padding: '0.4rem 0.45rem', fontWeight: 800, fontSize: '0.62rem', color: '#fff', textTransform: 'uppercase',
-              letterSpacing: '0.04em',
-              background: 'linear-gradient(160deg, #0d9488 0%, #115e59 100%)',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+              width: '16px',
+              height: '16px',
+              border: '1.5px solid #cbd5e1',
+              borderRadius: '4px',
+              display: 'inline-block',
+              flexShrink: 0,
+              marginTop: '2px',
             }}
-          >
-            STUDY MATERIAL
-          </span>
-          <span style={{
-            position: 'absolute', top: '0.35rem', right: '0.35rem', width: '20px', height: '20px', borderRadius: '5px',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', background: locked ? '#ef4444' : '#16a34a',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
-          }}>
-            {locked ? <Lock size={11} color="white" /> : <Unlock size={11} color="white" />}
-          </span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.4rem' }}>
-          <span style={{
-            width: '15px', height: '15px', border: '1.5px solid #cbd5e1', borderRadius: '3px',
-            display: 'inline-block', flexShrink: 0, marginTop: '0.15rem',
-          }} />
-          <span style={{ fontSize: '0.74rem', fontWeight: 600, lineHeight: 1.3, color: '#0f172a' }}>
+          />
+          <span className="vn-book-title-label">
             {intro.title || 'Introduction'}
           </span>
         </div>

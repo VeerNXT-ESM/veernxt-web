@@ -1,0 +1,389 @@
+/* ── Realistic 3D Hardcover Book Design System ── */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+.vn-book-3d-scene {
+  perspective: 900px;
+  perspective-origin: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  position: relative;
+  padding: 10px 4px 14px 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.vn-book-3d-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.48;
+  transform-style: preserve-3d;
+  transform: rotateY(-18deg) rotateX(4deg);
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), filter 0.38s ease;
+  filter: drop-shadow(-8px 14px 16px rgba(15, 23, 42, 0.28))
+          drop-shadow(-2px 4px 6px rgba(15, 23, 42, 0.16));
+}
+
+.vn-book-3d-scene:hover .vn-book-3d-item {
+  transform: rotateY(-8deg) rotateX(2deg) translateY(-8px) scale(1.03);
+  filter: drop-shadow(-12px 22px 24px rgba(15, 23, 42, 0.35))
+          drop-shadow(-4px 8px 10px rgba(15, 23, 42, 0.2));
+}
+
+/* ── Front Cover Face ── */
+.vn-book-3d-front {
+  position: absolute;
+  inset: 0;
+  border-radius: 2px 8px 8px 2px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  transform: translateZ(9px);
+  box-shadow: 
+    inset 5px 0 7px -1px rgba(0, 0, 0, 0.55),     /* Deep spine shadow */
+    inset 14px 0 8px -7px rgba(0, 0, 0, 0.35),    /* Hardcover hinge groove */
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.45),/* Top board edge highlight */
+    inset -1px 0 1.5px rgba(255, 255, 255, 0.25); /* Right board edge highlight */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px 10px 18px; /* Extra left padding to clear spine groove */
+  z-index: 2;
+}
+
+/* Vertical Hinge / Crease indentation line */
+.vn-book-3d-crease {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 11px;
+  width: 3px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(255, 255, 255, 0.3) 45%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Glossy reflection sheen across cover */
+.vn-book-3d-sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.12) 26%,
+    transparent 42%,
+    rgba(0, 0, 0, 0.22) 100%
+  );
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* ── Front Cover Rich Elements (Matching Image 2 Reference) ── */
+.vn-book-cover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  z-index: 3;
+}
+
+.vn-book-cover-crest-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.vn-book-cover-crest-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(254, 243, 199, 0.8);
+  border-radius: 9999px;
+  padding: 2px 7px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.vn-book-cover-crest-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 8px;
+  font-weight: 800;
+  color: #064e3b;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.vn-book-lock-pill {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 6;
+  flex-shrink: 0;
+}
+
+.vn-book-lock-pill.unlocked {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+.vn-book-lock-pill.locked {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+/* Center Cover Typography Banner */
+.vn-book-cover-center-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgb(255 255 255 / 0%);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 8px 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  margin: auto 0;
+}
+
+.vn-book-cover-exam-tag {
+  font-family: 'Outfit', sans-serif;
+  font-size: 7.5px;
+  font-weight: 800;
+  color: #b45309;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.vn-book-cover-main-title {
+  font-family: 'Outfit', 'Playfair Display', serif;
+  font-size: 13px;
+  font-weight: 900;
+  color: #d0e5df;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.vn-book-cover-sub-bar {
+  display: inline-block;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 7px;
+  font-weight: 800;
+  color: #92400e;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Cover Footer Badge */
+.vn-book-cover-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.vn-book-cover-category-chip {
+  background: rgba(6, 78, 59, 0.9);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+  padding: 2.5px 8px;
+  font-size: 7.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* ── 3D Left Spine (Extruded physical edge) ── */
+.vn-book-3d-spine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 18px;
+  transform-origin: left center;
+  transform: rotateY(-90deg);
+  border-radius: 3px 0 0 3px;
+  background: #042f28; /* Rich deep leather tone */
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 2px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.vn-book-3d-spine-light {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(255, 255, 255, 0.22) 35%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  pointer-events: none;
+}
+
+.vn-book-3d-spine-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: 'Outfit', sans-serif;
+  font-size: 7.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fef3c7;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 80%;
+  z-index: 2;
+}
+
+.vn-book-spine-gold-ring {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #b45309, #fde68a, #b45309);
+  z-index: 2;
+}
+
+/* ── Right Edge: Thick Paper Block ── */
+.vn-book-3d-pages-right {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  right: 0;
+  width: 17px;
+  transform-origin: right center;
+  transform: rotateY(90deg);
+  background: repeating-linear-gradient(
+    to bottom,
+    #ffffff 0px,
+    #ffffff 1px,
+    #f4f4f5 1px,
+    #e4e4e7 2px
+  );
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.28);
+}
+
+/* ── Bottom Edge: Paper Block ── */
+.vn-book-3d-pages-bottom {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 0;
+  height: 17px;
+  transform-origin: center bottom;
+  transform: rotateX(-90deg);
+  background: repeating-linear-gradient(
+    to right,
+    #ffffff 0px,
+    #ffffff 1px,
+    #f4f4f5 1px,
+    #e4e4e7 2px
+  );
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.28);
+}
+
+/* ── Rear Hardcover Base ── */
+.vn-book-3d-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 2px 8px 8px 2px;
+  background: #042f28;
+  transform: translateZ(-9px);
+  box-shadow: -4px 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Soft Table / Ground Shadow ── */
+.vn-book-3d-ground-shadow {
+  position: absolute;
+  bottom: -6px;
+  left: 8%;
+  right: 12%;
+  height: 12px;
+  background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.38) 0%, rgba(15, 23, 42, 0) 70%);
+  filter: blur(4px);
+  pointer-events: none;
+  transition: all 0.38s ease;
+  transform: rotateX(75deg);
+}
+
+.vn-book-3d-scene:hover .vn-book-3d-ground-shadow {
+  bottom: -10px;
+  left: 2%;
+  right: 6%;
+  height: 16px;
+  background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.48) 0%, rgba(15, 23, 42, 0) 70%);
+  filter: blur(6px);
+}
+
+/* Bottom Label Row */
+.vn-book-bottom-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.vn-book-checkbox {
+  background: transparent;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 4px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.15s ease;
+}
+
+.vn-book-checkbox.completed {
+  background: #16a34a;
+  border-color: #16a34a;
+}
+
+.vn-book-title-label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #0f172a;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vn-book-title-label.completed {
+  color: #16a34a;
+}

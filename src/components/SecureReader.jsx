@@ -51,8 +51,9 @@ function FontSizeControl() {
   );
 }
 
-const SecureReader = () => {
-  const { id } = useParams(); // This is now resource_id
+const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
+  const params = useParams();
+  const id = resourceId || params?.id; // This is now resource_id
   const navigate = useNavigate();
   const location = useLocation();
   const [resource, setResource] = useState(null);
@@ -85,6 +86,10 @@ const SecureReader = () => {
   };
 
   const handleBack = () => {
+    if (onBack) {
+      onBack();
+      return;
+    }
     if (location.state?.from) {
       // replace, not push -- otherwise this reader page stays on the
       // history stack and a second "back" press (browser button or this
@@ -314,19 +319,41 @@ const SecureReader = () => {
   );
 
   if (loading) return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'var(--ios-bg)' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: isEmbedded ? '380px' : '100vh', background: 'var(--ios-bg)' }}>
       <RefreshCw className="animate-spin" size={32} color="var(--ios-olive)" />
     </div>
   );
   
-  if (!resource) return <div style={{ padding: '4rem', textAlign: 'center' }}>Document not found.</div>;
+  if (!resource) return (
+    <div style={{ padding: '4rem', textAlign: 'center' }}>
+      <p style={{ color: '#64748b', marginBottom: '1rem' }}>Document not found.</p>
+      {onBack && (
+        <button
+          type="button"
+          onClick={onBack}
+          style={{
+            padding: '8px 16px',
+            borderRadius: '9999px',
+            background: '#064e3b',
+            color: '#fff',
+            border: 'none',
+            cursor: 'pointer',
+            fontSize: '13px',
+            fontWeight: 600,
+          }}
+        >
+          Back to Exam Overview
+        </button>
+      )}
+    </div>
+  );
 
   return (
     <ReaderThemeProvider
       category={normalizeReaderCategory(resource?.category, resource?.title)}
       theme={resource?.reader_theme_id || undefined}
       subjectAccent={resource?.subject_accent || null}
-      className="reader-container animate-fade-in"
+      className={`reader-container animate-fade-in ${isEmbedded ? 'reader-container-embedded' : ''}`}
     >
       <div className="reader-body-root" ref={readerRootRef}>
       <div className="reader-nav">

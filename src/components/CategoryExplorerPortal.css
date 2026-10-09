@@ -1184,3 +1184,659 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Level 2: In-Place Selected Exam Preview & Hub ── */
+.cep-exam-hub-card {
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 24px;
+  padding: 28px 32px;
+  box-shadow: 0 4px 24px -2px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: cepFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cep-exam-hub-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  flex-wrap: wrap;
+}
+
+.cep-exam-hub-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  flex-wrap: wrap;
+}
+
+.cep-exam-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f8fafc;
+  color: #065f46;
+  border: 1px solid #d1fae5;
+  border-radius: 10px;
+  padding: 7px 14px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.cep-exam-back-btn:hover {
+  background: #ecfdf5;
+  border-color: #059669;
+  transform: translateX(-2px);
+}
+
+.cep-crumb-pipe {
+  color: #cbd5e1;
+  font-weight: 300;
+}
+
+.cep-crumb-trail {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.cep-crumb-active {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+/* Exam Hero Banner in Hub */
+.cep-exam-showcase-banner {
+  display: flex;
+  align-items: stretch;
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  min-height: 200px;
+  position: relative;
+}
+
+.cep-exam-showcase-banner:hover .cep-hero-img {
+  transform: scale(1.03);
+}
+
+.cep-exam-showcase-left-wrap {
+  flex: 1 1 65%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  z-index: 2;
+  min-width: 0;
+  background: #ffffff;
+}
+
+.cep-exam-thumb-holder {
+  width: 220px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+.cep-exam-banner-visual-wrap {
+  flex: 0 0 320px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  min-width: 0;
+  background: #f8fafc;
+}
+
+@media (max-width: 1100px) {
+  .cep-exam-banner-visual-wrap {
+    display: none;
+  }
+  .cep-exam-showcase-left-wrap {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cep-exam-showcase-left-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 16px;
+  }
+  .cep-exam-thumb-holder {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.cep-exam-showcase-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.cep-exam-showcase-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cep-exam-showcase-title {
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.cep-exam-primary-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  border-radius: 9999px;
+  padding: 3px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.cep-exam-meta-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cep-meta-pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.cep-meta-pill-item svg {
+  color: #059669;
+}
+
+.cep-exam-showcase-desc {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cep-exam-banner-side-art {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  border-left: 1px dashed #cbd5e1;
+}
+
+.cep-side-art-script {
+  font-family: 'Caveat', cursive;
+  font-size: 26px;
+  font-weight: 700;
+  color: #065f46;
+  line-height: 1.15;
+}
+
+.cep-side-art-brand {
+  font-size: 11px;
+  font-weight: 700;
+  color: #059669;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 5 Action Cards in Hub */
+.cep-action-card-clickable {
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.cep-action-card-clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.cep-action-card-active {
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 2px #059669, 0 10px 24px rgba(5, 150, 105, 0.12) !important;
+}
+
+.cep-action-card-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  margin-top: 6px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.badge-peach { background: #ffedd5; color: #9a3412; }
+.badge-mint { background: #dcfce7; color: #166534; }
+.badge-rose { background: #ffe4e6; color: #9f1239; }
+.badge-sky { background: #e0f2fe; color: #075985; }
+.badge-lavender { background: #f3e8ff; color: #6b21a8; }
+
+/* Study Materials Showcase */
+.cep-materials-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 20px;
+  padding: 22px 24px;
+}
+
+.cep-materials-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cep-materials-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cep-materials-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.cep-materials-tabs-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.cep-material-tab-btn {
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.cep-material-tab-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.cep-material-tab-btn.active {
+  background: #064e3b;
+  border-color: #064e3b;
+  color: #ffffff;
+}
+
+.cep-materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 20px 16px;
+  margin-top: 10px;
+}
+
+.cep-materials-empty {
+  padding: 28px;
+  text-align: center;
+  color: #64748b;
+  font-size: 13.5px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px dashed #cbd5e1;
+}
+
+/* ── Jobs Matching Section ── */
+.cep-exam-jobs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.cep-jobs-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cep-jobs-head-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cep-jobs-icon-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #ecfdf5;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cep-jobs-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.cep-jobs-sub {
+  font-size: 12.5px;
+  color: #64748b;
+  margin: 2px 0 0;
+}
+
+.cep-jobs-count-tag {
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  border: 1px solid #a7f3d0;
+}
+
+.cep-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.cep-job-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+}
+
+.cep-job-card:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.cep-job-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cep-job-card-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cep-job-card-dept {
+  font-size: 12px;
+  font-weight: 600;
+  color: #059669;
+  margin-top: 2px;
+}
+
+.cep-job-card-tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.cep-job-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.cep-job-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.cep-job-date {
+  font-size: 11.5px;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cep-job-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #064e3b;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.cep-job-apply-btn:hover {
+  background: #047857;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(6, 78, 59, 0.25);
+}
+
+.cep-jobs-empty {
+  padding: 32px 20px;
+  text-align: center;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+  color: #64748b;
+  font-size: 13.5px;
+}
+
+/* ── Level 3: In-Place Embedded Book Reader ── */
+.cep-in-place-reader-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 24px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 24px -2px rgba(15, 23, 42, 0.04);
+  animation: cepFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cep-reader-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f1f5f9;
+  flex-wrap: wrap;
+}
+
+.cep-back-to-exam-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.cep-back-to-exam-btn:hover {
+  background: #065f46;
+  color: #ffffff;
+  border-color: #065f46;
+}
+
+.cep-reader-title-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.cep-reader-cat-pill {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.cep-reader-frame {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+.reader-container-embedded {
+  min-height: 520px;
+  max-height: 820px;
+  overflow-y: auto;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Manual Intro Reader styling */
+.cep-manual-reader-body {
+  padding: 32px 36px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.cep-manual-reader-header {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.cep-manual-title {
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #064e3b;
+  margin: 0 0 6px;
+}
+
+.cep-manual-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.cep-manual-content {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #334155;
+}
+
+.cep-manual-content h2,
+.cep-manual-content h3 {
+  color: #065f46;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.cep-manual-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+}
+
+.cep-manual-content th,
+.cep-manual-content td {
+  border: 1px solid #e2e8f0;
+  padding: 8px 12px;
+}
+
+.cep-manual-content th {
+  background: #f8fafc;
+  font-weight: 700;
+}
+

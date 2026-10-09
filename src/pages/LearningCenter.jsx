@@ -36,6 +36,10 @@ import {
   Building,
   Scale,
   ClipboardList,
+  Mail,
+  Cpu,
+  Atom,
+  MapPin,
 } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
 import { getSubjectByKey, getFamilyHex } from '../lib/thumbnailTaxonomy';
@@ -59,6 +63,20 @@ const TEASER_SUBJECT_KEYS = ['english', 'gk_general_awareness', 'reasoning', 'ma
 // available for every exam: syllabus, notes, mock tests and PYQs.
 const CONTENT_COVERAGE_LABEL = 'Syllabus + Notes + Mock Test + PYQ';
 
+// Dynamic color palette fallback for any newly added categories
+const DYNAMIC_PALETTE = [
+  { color: '#0284c7', bg: '#e0f2fe' },
+  { color: '#15803d', bg: '#dcfce7' },
+  { color: '#7c3aed', bg: '#ede9fe' },
+  { color: '#d97706', bg: '#fef3c7' },
+  { color: '#e11d48', bg: '#ffe4e6' },
+  { color: '#0891b2', bg: '#cffafe' },
+  { color: '#4338ca', bg: '#e0e7ff' },
+  { color: '#0d9488', bg: '#ccfbf1' },
+  { color: '#b45309', bg: '#fef3c7' },
+  { color: '#475569', bg: '#f1f5f9' },
+];
+
 // Comprehensive icon and styling mapper for ALL categories in the left panel
 function getCategoryIconMeta(cat) {
   const c = (cat || '').toLowerCase();
@@ -72,27 +90,95 @@ function getCategoryIconMeta(cat) {
   if (c.includes('teach') || c.includes('educat') || c.includes('lectur') || c.includes('master') || c.includes('ugc') || c.includes('net')) return { icon: GraduationCap, color: '#7c3aed', bg: '#ede9fe' };
   if (c.includes('nurs') || c.includes('medic') || c.includes('health') || c.includes('pharma') || c.includes('cho') || c.includes('hospital')) return { icon: HeartPulse, color: '#e11d48', bg: '#ffe4e6' };
   if (c.includes('engin') || c.includes('je') || c.includes('technic') || c.includes(' it')) return { icon: Cog, color: '#475569', bg: '#f1f5f9' };
+  if (c.includes('barc') || c.includes('drdo') || c.includes('isro') || c.includes('atom') || c.includes('research')) return { icon: Atom, color: '#0284c7', bg: '#e0f2fe' };
+  if (c.includes('nic') || c.includes('computer') || c.includes('software')) return { icon: Cpu, color: '#0369a1', bg: '#e0f2fe' };
+  if (c.includes('post') || c.includes('mail')) return { icon: Mail, color: '#b45309', bg: '#fef3c7' };
+  if (c.includes('psu') || c.includes('maharatna') || c.includes('navratna')) return { icon: Building, color: '#0d9488', bg: '#ccfbf1' };
   if (c.includes('insur') || c.includes('lic') || c.includes('gic')) return { icon: Umbrella, color: '#0891b2', bg: '#cffafe' };
   if (c.includes('judic') || c.includes('court') || c.includes('law') || c.includes('legal')) return { icon: Scale, color: '#b45309', bg: '#fef3c7' };
-  if (c.includes('forest') || c.includes('agri') || c.includes('hortic') || c.includes('fisher')) return { icon: Compass, color: '#059669', bg: '#d1fae5' };
+  if (c.includes('forest') || c.includes('agri') || c.includes('hortic') || c.includes('fisher') || c.includes('icar') || c.includes('iari')) return { icon: Compass, color: '#059669', bg: '#d1fae5' };
   if (c.includes('panchayat') || c.includes('rural') || c.includes('admin')) return { icon: Building, color: '#0284c7', bg: '#e0f2fe' };
-  return { icon: ClipboardList, color: '#64748b', bg: '#f1f5f9' };
+
+  // Dynamic hashing fallback for any newly added category
+  let hash = 0;
+  for (let i = 0; i < c.length; i++) hash = (hash * 31 + c.charCodeAt(i)) >>> 0;
+  const palette = DYNAMIC_PALETTE[hash % DYNAMIC_PALETTE.length];
+  return { icon: ClipboardList, color: palette.color, bg: palette.bg };
 }
 
-// Clean categories preset list matching the design reference layout
-const EXPLORER_CATEGORIES_PRESETS = [
-  { key: 'SSC', label: 'SSC', icon: ShieldCheck, color: '#d97706', bg: '#fef3c7' },
-  { key: 'Civil Services', altKey: 'UPSC', label: 'UPSC', icon: Landmark, color: '#1e3a8a', bg: '#dbeafe' },
-  { key: 'State PSC', altKey: 'State Civil Services', label: 'State PSC', icon: Building, color: '#047857', bg: '#d1fae5' },
-  { key: 'Banking', label: 'Banking', icon: Landmark, color: '#0284c7', bg: '#e0f2fe' },
-  { key: 'Railways', label: 'Railways', icon: Train, color: '#4338ca', bg: '#e0e7ff' },
-  { key: 'Defence', label: 'Defence', icon: Shield, color: '#15803d', bg: '#dcfce7' },
-  { key: 'Police', label: 'Police', icon: ShieldAlert, color: '#1d4ed8', bg: '#dbeafe' },
-  { key: 'Teaching & Education', altKey: 'Teaching', label: 'Teaching', icon: GraduationCap, color: '#7c3aed', bg: '#ede9fe' },
-  { key: 'Nursing', altKey: 'Nursing & Medical', label: 'Nursing & Medical', icon: HeartPulse, color: '#e11d48', bg: '#ffe4e6' },
-  { key: 'Engineering Recruitment', altKey: 'Engineering', label: 'Engineering', icon: Cog, color: '#475569', bg: '#f1f5f9' },
-  { key: 'Insurance', label: 'Insurance', icon: Umbrella, color: '#0891b2', bg: '#cffafe' },
-  { key: 'Other Government Exams', altKey: 'Other Govt. Exams', label: 'Other Govt. Exams', icon: ClipboardList, color: '#64748b', bg: '#f1f5f9' },
+// State images mapping for generated state landscape banners
+const STATE_IMAGES = {
+  'Andhra Pradesh': '/state_images/andhra_pradesh.jpg',
+  'Arunachal Pradesh': '/state_images/arunachal_pradesh.jpg',
+  'Assam': '/state_images/assam.jpg',
+  'Bihar': '/state_images/bihar.jpg',
+  'Chhattisgarh': '/state_images/chhattisgarh.jpg',
+};
+
+// Rich state branding metadata for monogram badges, commission names and zone filters
+const STATE_META = {
+  'Rajasthan': { code: 'RJ', body: 'RPSC · RSMSSB', color: '#b45309', bg: '#fef3c7', zone: 'central_west' },
+  'Uttar Pradesh': { code: 'UP', body: 'UPPSC · UPSSSC', color: '#1d4ed8', bg: '#dbeafe', zone: 'north' },
+  'Bihar': { code: 'BR', body: 'BPSC · BSSC', color: '#15803d', bg: '#dcfce7', zone: 'east' },
+  'Maharashtra': { code: 'MH', body: 'MPSC', color: '#0284c7', bg: '#e0f2fe', zone: 'central_west' },
+  'Madhya Pradesh': { code: 'MP', body: 'MPPSC · MPESB', color: '#0d9488', bg: '#ccfbf1', zone: 'central_west' },
+  'Tamil Nadu': { code: 'TN', body: 'TNPSC · TNUSRB', color: '#be123c', bg: '#ffe4e6', zone: 'south' },
+  'Karnataka': { code: 'KA', body: 'KPSC · KSP', color: '#6d28d9', bg: '#ede9fe', zone: 'south' },
+  'West Bengal': { code: 'WB', body: 'WBPSC · WBP', color: '#0891b2', bg: '#cffafe', zone: 'east' },
+  'Gujarat': { code: 'GJ', body: 'GPSC · GSSSB', color: '#c2410c', bg: '#ffedd5', zone: 'central_west' },
+  'Punjab': { code: 'PB', body: 'PPSC · PSSSB', color: '#b45309', bg: '#fef3c7', zone: 'north' },
+  'Haryana': { code: 'HR', body: 'HPSC · HSSC', color: '#4338ca', bg: '#e0e7ff', zone: 'north' },
+  'Kerala': { code: 'KL', body: 'Kerala PSC', color: '#047857', bg: '#d1fae5', zone: 'south' },
+  'Andhra Pradesh': { code: 'AP', body: 'APPSC · SLPRB', color: '#0369a1', bg: '#e0f2fe', zone: 'south' },
+  'Telangana': { code: 'TS', body: 'TSPSC · TSLPRB', color: '#7c3aed', bg: '#ede9fe', zone: 'south' },
+  'Odisha': { code: 'OD', body: 'OPSC · OSSSC', color: '#0f766e', bg: '#ccfbf1', zone: 'east' },
+  'Jharkhand': { code: 'JH', body: 'JPSC · JSSC', color: '#166534', bg: '#dcfce7', zone: 'east' },
+  'Chhattisgarh': { code: 'CG', body: 'CGPSC · CG Vyapam', color: '#b45309', bg: '#fef3c7', zone: 'central_west' },
+  'Assam': { code: 'AS', body: 'APSC · SLPRB', color: '#059669', bg: '#d1fae5', zone: 'northeast' },
+  'Himachal Pradesh': { code: 'HP', body: 'HPPSC · HPSSC', color: '#0284c7', bg: '#e0f2fe', zone: 'north' },
+  'Uttarakhand': { code: 'UK', body: 'UKPSC · UKSSSC', color: '#0369a1', bg: '#e0f2fe', zone: 'north' },
+  'Goa': { code: 'GA', body: 'GPSC', color: '#0d9488', bg: '#ccfbf1', zone: 'central_west' },
+  'Tripura': { code: 'TR', body: 'TPSC', color: '#7c3aed', bg: '#ede9fe', zone: 'northeast' },
+  'Meghalaya': { code: 'ML', body: 'MPSC', color: '#047857', bg: '#d1fae5', zone: 'northeast' },
+  'Manipur': { code: 'MN', body: 'MPSC', color: '#0891b2', bg: '#cffafe', zone: 'northeast' },
+  'Nagaland': { code: 'NL', body: 'NPSC', color: '#b45309', bg: '#fef3c7', zone: 'northeast' },
+  'Mizoram': { code: 'MZ', body: 'MPSC', color: '#15803d', bg: '#dcfce7', zone: 'northeast' },
+  'Arunachal Pradesh': { code: 'AR', body: 'APPSC', color: '#0f766e', bg: '#ccfbf1', zone: 'northeast' },
+  'Sikkim': { code: 'SK', body: 'SPSC', color: '#0284c7', bg: '#e0f2fe', zone: 'northeast' },
+  // UTs
+  'Delhi': { code: 'DL', body: 'DSSSB', color: '#b91c1c', bg: '#fee2e2', zone: 'north' },
+  'Jammu & Kashmir': { code: 'JK', body: 'JKPSC · JKSSB', color: '#0284c7', bg: '#e0f2fe', zone: 'north' },
+  'Ladakh': { code: 'LA', body: 'LAHD-SSRB', color: '#0369a1', bg: '#e0f2fe', zone: 'north' },
+  'Chandigarh': { code: 'CH', body: 'Chandigarh Admin', color: '#4338ca', bg: '#e0e7ff', zone: 'north' },
+  'Puducherry': { code: 'PY', body: 'Puducherry PSC', color: '#7c3aed', bg: '#ede9fe', zone: 'south' },
+  'Andaman and Nicobar Islands': { code: 'AN', body: 'A&N Administration', color: '#0d9488', bg: '#ccfbf1', zone: 'south' },
+  'Dadra & Nagar Haveli and Daman & Diu': { code: 'DN', body: 'DD Administration', color: '#b45309', bg: '#fef3c7', zone: 'central_west' },
+  'Lakshadweep': { code: 'LD', body: 'Lakshadweep Admin', color: '#0891b2', bg: '#cffafe', zone: 'south' },
+};
+
+function getStateMeta(name) {
+  if (STATE_META[name]) return STATE_META[name];
+  const words = (name || '').trim().split(/\s+/);
+  const code = words.length > 1 ? (words[0][0] + words[1][0]).toUpperCase() : (name || '').slice(0, 2).toUpperCase();
+  let hash = 0;
+  for (let i = 0; i < (name || '').length; i++) hash = (hash * 31 + name.charCodeAt(i)) >>> 0;
+  const palette = DYNAMIC_PALETTE[hash % DYNAMIC_PALETTE.length];
+  return {
+    code,
+    body: `${name} Public Service Commission`,
+    color: palette.color,
+    bg: palette.bg,
+    zone: 'all',
+  };
+}
+
+const STATE_ZONES = [
+  { id: 'all', label: 'All States' },
+  { id: 'north', label: 'North' },
+  { id: 'south', label: 'South' },
+  { id: 'east', label: 'East' },
+  { id: 'central_west', label: 'West & Central' },
+  { id: 'northeast', label: 'North-East' },
 ];
 
 const RECOMMENDED_EXAMS = [
@@ -607,6 +693,8 @@ const LearningCenter = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [selectedBodyId, setSelectedBodyId] = useState('');
   const [searchText, setSearchText] = useState('');
+  const [stateSearchText, setStateSearchText] = useState('');
+  const [selectedZone, setSelectedZone] = useState('all');
 
   const [expandedExamId, setExpandedExamId] = useState(null);
 
@@ -832,6 +920,63 @@ const LearningCenter = () => {
     return () => { cancelled = true; };
   }, []);
 
+  // Dynamic state/UT regions list derived from catalog
+  const stateList = useMemo(() => {
+    if (regionMode !== 'state' && regionMode !== 'ut') return [];
+    const map = new Map();
+    for (const exam of catalog) {
+      if (exam.region && exam.region.level === regionMode) {
+        if (!map.has(exam.region.id)) {
+          map.set(exam.region.id, {
+            id: exam.region.id,
+            name: exam.region.name,
+            count: 0,
+            categories: new Set(),
+            image: STATE_IMAGES[exam.region.name] || null,
+          });
+        }
+        const item = map.get(exam.region.id);
+        item.count += 1;
+        if (exam.category) item.categories.add(exam.category.trim());
+      }
+    }
+    return [...map.values()]
+      .map((item) => ({
+        ...item,
+        categories: [...item.categories].sort((a, b) => a.localeCompare(b)),
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [catalog, regionMode]);
+
+  const filteredStateList = useMemo(() => {
+    let list = stateList;
+    if (selectedZone !== 'all') {
+      list = list.filter((s) => {
+        const meta = getStateMeta(s.name);
+        return meta.zone === selectedZone;
+      });
+    }
+    const q = stateSearchText.trim().toLowerCase();
+    if (!q) return list;
+    return list.filter((s) => s.name.toLowerCase().includes(q));
+  }, [stateList, stateSearchText, selectedZone]);
+
+  const activeState = useMemo(() => {
+    if (!regionFilterId) return null;
+    return stateList.find((s) => s.id === regionFilterId) || null;
+  }, [stateList, regionFilterId]);
+
+  const handleSelectState = (stateItem) => {
+    setRegionFilterId(stateItem.id);
+    setCategoryFilter('');
+    setStateSearchText('');
+  };
+
+  const handleBackToStates = () => {
+    setRegionFilterId('');
+    setCategoryFilter('');
+  };
+
   // Exams satisfying the level gate (Central / State / UT)
   const levelExams = useMemo(() => catalog.filter((exam) => {
     if (!exam.region) return false;
@@ -859,58 +1004,24 @@ const LearningCenter = () => {
   }, [levelExams]);
 
   const activeCategoryForExplorer = useMemo(() => {
-    if (categoryFilter) return categoryFilter;
+    if (categoryFilter && categoryOptions.includes(categoryFilter)) return categoryFilter;
     if (regionMode === 'central') {
-      return categoryOptions.includes('SSC') ? 'SSC' : categoryOptions[0] || 'SSC';
+      return categoryOptions.includes('SSC') ? 'SSC' : categoryOptions[0] || '';
     }
-    if (regionMode === 'state') {
-      return (
-        categoryOptions.find((c) => c.includes('Civil Services') || c.includes('Administrative')) ||
-        categoryOptions[0] ||
-        'State Civil Services'
-      );
-    }
-    if (regionMode === 'ut') {
-      return (
-        categoryOptions.find((c) => c.includes('Administration') || c.includes('Police')) ||
-        categoryOptions[0] ||
-        'Administration'
-      );
-    }
-    return categoryOptions[0] || 'SSC';
-  }, [categoryFilter, regionMode, categoryOptions]);
+    return categoryOptions[0] || '';
+  }, [categoryFilter, categoryOptions, regionMode]);
 
   const explorerCategoryList = useMemo(() => {
-    if (regionMode === 'central') {
-      const list = [...EXPLORER_CATEGORIES_PRESETS];
-      categoryOptions.forEach((cat) => {
-        const isCovered = EXPLORER_CATEGORIES_PRESETS.some(
-          (p) =>
-            p.key.toLowerCase() === cat.toLowerCase() ||
-            (p.altKey && p.altKey.toLowerCase() === cat.toLowerCase()) ||
-            p.label.toLowerCase() === cat.toLowerCase()
-        );
-        if (!isCovered) {
-          const meta = getCategoryIconMeta(cat);
-          list.push({
-            key: cat,
-            label: cat,
-            ...meta,
-          });
-        }
-      });
-      return list;
-    }
-
     return categoryOptions.map((cat) => {
       const meta = getCategoryIconMeta(cat);
       return {
         key: cat,
         label: cat,
+        count: categoryCounts[cat] || 0,
         ...meta,
       };
     });
-  }, [regionMode, categoryOptions]);
+  }, [categoryOptions, categoryCounts]);
 
   const bodyOptions = useMemo(() => {
     const pool = categoryFilter
@@ -1645,73 +1756,184 @@ const LearningCenter = () => {
               {rightTab === 'explorer' ? (
                 /* ── Explorer Mode: Clean Category Nav List with Collapse Option & SVG Icons ── */
                 <>
-                  <div className="lc-explorer-sidebar-header">
-                    <button
-                      type="button"
-                      className="lc-explorer-collapse-toggle"
-                      onClick={() => setIsSidebarCollapsed((prev) => !prev)}
-                      aria-label={isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-                      title={isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-                    >
-                      {isSidebarCollapsed ? <ChevronRight size={17} /> : <ChevronLeft size={17} />}
-                    </button>
-                    {!isSidebarCollapsed && (
-                      <button
-                        type="button"
-                        className="lc-explorer-title-btn"
-                        onClick={() => setIsSidebarCollapsed(true)}
-                        title="Collapse sidebar"
-                      >
-                        <span className="lc-explorer-sidebar-title">All Exams</span>
-                      </button>
-                    )}
-                  </div>
-                  <nav className="lc-explorer-nav" aria-label="Exam categories">
-                    {explorerCategoryList.map((item) => {
-                      const currentCategory = categoryFilter || activeCategoryForExplorer;
-                      const isActive =
-                        currentCategory.toLowerCase() === item.key.toLowerCase() ||
-                        (item.altKey && currentCategory.toLowerCase() === item.altKey.toLowerCase()) ||
-                        currentCategory.toLowerCase() === item.label.toLowerCase() ||
-                        (item.key === 'SSC' && !categoryFilter && activeCategoryForExplorer === 'SSC');
-                      const IconComponent = item.icon || ClipboardList;
-
-                      return (
+                  {/* Case A: State/UT mode AND no state selected yet: show list of States */}
+                  {(regionMode === 'state' || regionMode === 'ut') && !regionFilterId ? (
+                    <>
+                      <div className="lc-explorer-sidebar-header">
                         <button
-                          key={item.key}
                           type="button"
-                          className={`lc-explorer-nav-item ${isActive ? 'lc-explorer-nav-active' : ''}`}
-                          onClick={() => {
-                            const matching = categoryOptions.find(
-                              (c) =>
-                                c.toLowerCase() === item.key.toLowerCase() ||
-                                c.toLowerCase() === (item.altKey || '').toLowerCase() ||
-                                c.toLowerCase() === item.label.toLowerCase()
-                            );
-                            setCategoryFilter(matching || item.key);
-                          }}
-                          title={item.label}
-                          aria-current={isActive ? 'page' : undefined}
+                          className="lc-explorer-collapse-toggle"
+                          onClick={() => setIsSidebarCollapsed((prev) => !prev)}
+                          aria-label={isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+                          title={isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
                         >
-                          <span
-                            className="lc-explorer-nav-icon-wrap"
-                            style={{
-                              backgroundColor: isActive ? '#fef3c7' : item.bg || '#f1f5f9',
-                              color: isActive ? '#b45309' : item.color || '#475569',
-                            }}
-                          >
-                            <IconComponent size={17} strokeWidth={2.2} />
-                          </span>
-                          {!isSidebarCollapsed && (
-                            <>
-                              <span className="lc-explorer-nav-label">{item.label}</span>
-                              <ChevronRight size={14} className="lc-explorer-nav-chevron" />
-                            </>
-                          )}
+                          {isSidebarCollapsed ? <ChevronRight size={17} /> : <ChevronLeft size={17} />}
                         </button>
-                      );
-                    })}
-                  </nav>
+                        {!isSidebarCollapsed && (
+                          <div className="lc-explorer-title-box">
+                            <span className="lc-explorer-sidebar-title">
+                              {regionMode === 'ut' ? 'UT Exams' : 'State Exams'}
+                            </span>
+                            <span className="lc-explorer-sidebar-count">({stateList.length})</span>
+                          </div>
+                        )}
+                      </div>
+
+                      {!isSidebarCollapsed && (
+                        <div className="lc-explorer-search-bar">
+                          <Search size={14} className="lc-explorer-search-icon" />
+                          <input
+                            type="text"
+                            placeholder={`Filter ${regionMode === 'ut' ? 'UT' : 'state'}...`}
+                            value={stateSearchText}
+                            onChange={(e) => setStateSearchText(e.target.value)}
+                            className="lc-explorer-search-input"
+                          />
+                          {stateSearchText && (
+                            <button
+                              type="button"
+                              onClick={() => setStateSearchText('')}
+                              className="lc-explorer-search-clear"
+                            >
+                              <X size={12} />
+                            </button>
+                          )}
+                        </div>
+                      )}
+
+                      <nav className="lc-explorer-nav" aria-label="States list">
+                        {filteredStateList.map((st) => {
+                          const stMeta = getStateMeta(st.name);
+                          return (
+                            <button
+                              key={st.id}
+                              type="button"
+                              className="lc-explorer-nav-item"
+                              onClick={() => handleSelectState(st)}
+                              title={`${st.name} (${st.count} Exams)`}
+                            >
+                              <span
+                                className="lc-explorer-nav-icon-wrap lc-explorer-nav-state-code"
+                                style={{ backgroundColor: stMeta.bg, color: stMeta.color }}
+                              >
+                                {stMeta.code}
+                              </span>
+                              {!isSidebarCollapsed && (
+                                <>
+                                  <span className="lc-explorer-nav-label">{st.name}</span>
+                                  <span className="lc-explorer-nav-count">({st.count})</span>
+                                  <ChevronRight size={14} className="lc-explorer-nav-chevron" />
+                                </>
+                              )}
+                            </button>
+                          );
+                        })}
+                      </nav>
+                    </>
+                  ) : (
+                    /* Case B: Central mode OR State/UT with a selected state: show Categories list */
+                    <>
+                      <div className={`lc-explorer-sidebar-header ${(regionMode === 'state' || regionMode === 'ut') && activeState ? 'lc-explorer-state-header' : ''}`}>
+                        {(regionMode === 'state' || regionMode === 'ut') && activeState ? (
+                          <button
+                            type="button"
+                            className="lc-explorer-back-btn"
+                            onClick={handleBackToStates}
+                            title="Back to all states"
+                          >
+                            <ChevronLeft size={16} />
+                            <span>All {regionMode === 'ut' ? 'UTs' : 'States'}</span>
+                          </button>
+                        ) : (
+                          <button
+                            type="button"
+                            className="lc-explorer-collapse-toggle"
+                            onClick={() => setIsSidebarCollapsed((prev) => !prev)}
+                            aria-label={isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+                            title={isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+                          >
+                            {isSidebarCollapsed ? <ChevronRight size={17} /> : <ChevronLeft size={17} />}
+                          </button>
+                        )}
+
+                        {!isSidebarCollapsed && (
+                          (regionMode === 'state' || regionMode === 'ut') && activeState ? (
+                            <button
+                              type="button"
+                              className="lc-explorer-collapse-toggle"
+                              onClick={() => setIsSidebarCollapsed((prev) => !prev)}
+                              aria-label={isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+                              title={isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+                            >
+                              {isSidebarCollapsed ? <ChevronRight size={17} /> : <ChevronLeft size={17} />}
+                            </button>
+                          ) : (
+                            <button
+                              type="button"
+                              className="lc-explorer-title-btn"
+                              onClick={() => setIsSidebarCollapsed(true)}
+                              title="Collapse sidebar"
+                            >
+                              <span className="lc-explorer-sidebar-title">All Exams</span>
+                            </button>
+                          )
+                        )}
+                      </div>
+
+                      {/* Active State Pill Header inside sidebar if State is chosen */}
+                      {!isSidebarCollapsed && (regionMode === 'state' || regionMode === 'ut') && activeState && (
+                        <div className="lc-explorer-state-badge">
+                          <div className="lc-explorer-state-pill">
+                            <MapPin size={13} />
+                            <span className="lc-explorer-state-name">{activeState.name}</span>
+                          </div>
+                          <span className="lc-explorer-state-exams-count">{activeState.count} Exams</span>
+                        </div>
+                      )}
+
+                      <nav className="lc-explorer-nav" aria-label="Exam categories">
+                        {explorerCategoryList.map((item) => {
+                          const currentCategory = categoryFilter || activeCategoryForExplorer;
+                          const isActive =
+                            Boolean(currentCategory) &&
+                            currentCategory.toLowerCase() === item.key.toLowerCase();
+                          const IconComponent = item.icon || ClipboardList;
+
+                          return (
+                            <button
+                              key={item.key}
+                              type="button"
+                              className={`lc-explorer-nav-item ${isActive ? 'lc-explorer-nav-active' : ''}`}
+                              onClick={() => {
+                                setCategoryFilter(item.key);
+                              }}
+                              title={item.label}
+                              aria-current={isActive ? 'page' : undefined}
+                            >
+                              <span
+                                className="lc-explorer-nav-icon-wrap"
+                                style={{
+                                  backgroundColor: isActive ? '#fef3c7' : item.bg || '#f1f5f9',
+                                  color: isActive ? '#b45309' : item.color || '#475569',
+                                }}
+                              >
+                                <IconComponent size={17} strokeWidth={2.2} />
+                              </span>
+                              {!isSidebarCollapsed && (
+                                <>
+                                  <span className="lc-explorer-nav-label">{item.label}</span>
+                                  {item.count !== undefined && (
+                                    <span className="lc-explorer-nav-count">({item.count})</span>
+                                  )}
+                                  <ChevronRight size={14} className="lc-explorer-nav-chevron" />
+                                </>
+                              )}
+                            </button>
+                          );
+                        })}
+                      </nav>
+                    </>
+                  )}
                 </>
               ) : (
                 /* ── Recommended Mode: Filter Accordions with Category Icons ── */
@@ -1918,36 +2140,176 @@ const LearningCenter = () => {
 
               {/* View 1: Explorer Mode (Rich Portal matching Design Reference) */}
               {rightTab === 'explorer' ? (
-                <CategoryExplorerPortal
-                  categoryName={categoryFilter || activeCategoryForExplorer}
-                  division={regionMode}
-                  levelExams={levelExams}
-                  allCatalog={catalog}
-                  onSelectExam={(exam) => {
-                    const id = exam.examId || exam.id;
-                    if (id) {
-                      navigate(`/exam/${id}`, { state: { from: '/learning-center' } });
-                    } else {
-                      setSearchText(exam.title || exam.name || '');
-                      setRightTab('recommended');
-                    }
-                  }}
-                  onExploreContent={(contentType, profileData) => {
-                    if (contentType === 'pyqs') {
-                      navigate('/pyq-center');
-                    } else if (contentType === 'mocks') {
-                      navigate('/quiz-center');
-                    } else {
-                      const firstId = profileData?.top_exams?.[0]?.examId;
-                      if (firstId) {
-                        navigate(`/exam/${firstId}`, { state: { from: '/learning-center' } });
+                (regionMode === 'state' || regionMode === 'ut') && !regionFilterId ? (
+                  /* State/UT Directory Landing Grid when user is on State mode and hasn't picked a state yet */
+                  <div className="lc-state-directory-container">
+                    <div className="lc-state-directory-hero">
+                      <div className="lc-state-hero-overlay" />
+                      <div className="lc-state-hero-content">
+                        <div className="lc-state-hero-badge">
+                          <MapPin size={14} />
+                          <span>{regionMode === 'ut' ? 'Union Territory Examinations' : 'State Level Examinations'} · {stateList.length} {regionMode === 'ut' ? 'UTs' : 'States'} & 521+ Exams</span>
+                        </div>
+                        <h1 className="lc-state-directory-title">
+                          Select a {regionMode === 'ut' ? 'Union Territory' : 'State'} to Explore Examinations
+                        </h1>
+                        <p className="lc-state-directory-subtitle">
+                          Official state recruitment portals, localized syllabus breakdowns, previous year papers, and curated study materials across {stateList.length} {regionMode === 'ut' ? 'union territories' : 'states'}.
+                        </p>
+
+                        <div className="lc-state-search-box">
+                          <Search size={18} className="lc-state-search-icon" />
+                          <input
+                            type="text"
+                            className="lc-state-search-input"
+                            placeholder={`Search ${regionMode === 'ut' ? 'union territory' : 'state'} (e.g. Rajasthan, UP, Bihar, Maharashtra)...`}
+                            value={stateSearchText}
+                            onChange={(e) => setStateSearchText(e.target.value)}
+                          />
+                          {stateSearchText && (
+                            <button
+                              type="button"
+                              className="lc-state-search-clear"
+                              onClick={() => setStateSearchText('')}
+                            >
+                              <X size={16} />
+                            </button>
+                          )}
+                        </div>
+
+                        {/* Zone Filter Chips */}
+                        <div className="lc-state-zone-chips">
+                          {STATE_ZONES.map((zone) => (
+                            <button
+                              key={zone.id}
+                              type="button"
+                              className={`lc-state-zone-chip ${selectedZone === zone.id ? 'active' : ''}`}
+                              onClick={() => setSelectedZone(zone.id)}
+                            >
+                              {zone.label}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="lc-state-directory-grid">
+                      {filteredStateList.map((st) => {
+                        const stMeta = getStateMeta(st.name);
+                        return (
+                          <button
+                            key={st.id}
+                            type="button"
+                            className="lc-state-card"
+                            onClick={() => handleSelectState(st)}
+                          >
+                            <div className="lc-state-card-image-wrap">
+                              {st.image ? (
+                                <img
+                                  src={st.image}
+                                  alt={st.name}
+                                  className="lc-state-card-img"
+                                  loading="lazy"
+                                />
+                              ) : (
+                                <div
+                                  className="lc-state-card-placeholder-banner"
+                                  style={{
+                                    background: `linear-gradient(135deg, ${stMeta.bg} 0%, ${stMeta.color}33 50%, ${stMeta.bg} 100%)`,
+                                  }}
+                                >
+                                  <span
+                                    className="lc-state-watermark-text"
+                                    style={{ color: `${stMeta.color}25` }}
+                                  >
+                                    {stMeta.code}
+                                  </span>
+                                </div>
+                              )}
+                              {/* 20% smooth gradient fade into the card */}
+                              <div className="lc-state-card-image-fade" />
+
+                              {/* Floating badges on top of image */}
+                              <div className="lc-state-card-floating-bar">
+                                <span
+                                  className="lc-state-code-badge"
+                                  style={{
+                                    color: stMeta.color,
+                                  }}
+                                >
+                                  {stMeta.code}
+                                </span>
+                                <span className="lc-state-card-count-badge">
+                                  {st.count} Exams
+                                </span>
+                              </div>
+                            </div>
+
+                            <div className="lc-state-card-body">
+                              <div className="lc-state-card-header-row">
+                                <h3 className="lc-state-card-name">{st.name}</h3>
+                                <span className="lc-state-card-meta-line">{stMeta.body}</span>
+                              </div>
+
+                              <div className="lc-state-card-categories">
+                                {st.categories.slice(0, 3).map((cat) => {
+                                  const catMeta = getCategoryIconMeta(cat);
+                                  const CatIcon = catMeta.icon || ClipboardList;
+                                  return (
+                                    <span key={cat} className="lc-state-cat-pill">
+                                      <CatIcon size={11} style={{ color: catMeta.color }} />
+                                      <span>{cat}</span>
+                                    </span>
+                                  );
+                                })}
+                                {st.categories.length > 3 && (
+                                  <span className="lc-state-cat-more">+{st.categories.length - 3} more</span>
+                                )}
+                              </div>
+
+                              <div className="lc-state-card-footer">
+                                <span className="lc-state-card-cta">Explore State Categories</span>
+                                <ArrowRight size={14} className="lc-state-card-arrow" />
+                              </div>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ) : (
+                  <CategoryExplorerPortal
+                    categoryName={categoryFilter || activeCategoryForExplorer}
+                    stateName={activeState?.name || ''}
+                    division={regionMode}
+                    levelExams={levelExams}
+                    allCatalog={catalog}
+                    onSelectExam={(exam) => {
+                      const id = exam.examId || exam.id;
+                      if (id) {
+                        navigate(`/exam/${id}`, { state: { from: '/learning-center' } });
                       } else {
-                        setSearchText(profileData?.category_name || '');
+                        setSearchText(exam.title || exam.name || '');
                         setRightTab('recommended');
                       }
-                    }
-                  }}
-                />
+                    }}
+                    onExploreContent={(contentType, profileData) => {
+                      if (contentType === 'pyqs') {
+                        navigate('/pyq-center');
+                      } else if (contentType === 'mocks') {
+                        navigate('/quiz-center');
+                      } else {
+                        const firstId = profileData?.top_exams?.[0]?.examId;
+                        if (firstId) {
+                          navigate(`/exam/${firstId}`, { state: { from: '/learning-center' } });
+                        } else {
+                          setSearchText(profileData?.category_name || '');
+                          setRightTab('recommended');
+                        }
+                      }
+                    }}
+                  />
+                )
               ) : (
                 /* View 2: Recommended For You Section */
                 <div className="lc-section-box" id="lc-search-results-section">
