@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { Brain, Search, RefreshCw, Lock, ArrowLeft } from 'lucide-react';
 import { getEffectiveTier, canTakeQuiz } from '../lib/subscriptionAccess';
@@ -23,6 +23,7 @@ export default function QuizCenter() {
   // The user's matched exam only *prioritises* quizzes; "Show all quizzes" lets them browse everything.
   const [showAll, setShowAll] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
   const activeSubjectKey = searchParams.get('subject');
   const activeExamId = searchParams.get('exam');
 
@@ -226,7 +227,7 @@ export default function QuizCenter() {
           </button>
         ) : (
           <Link
-            to="/learning-center"
+            to={location.state?.from || "/learning-center"}
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.4rem', textDecoration: 'none',
               color: '#64748b', fontSize: '0.85rem', fontWeight: 700, marginBottom: '1.5rem',

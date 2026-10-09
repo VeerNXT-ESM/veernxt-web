@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import { useNavigate, useSearchParams, useLocation } from 'react-router-dom';
 import {
   BookOpen,
   ScrollText,
@@ -538,9 +538,20 @@ export default function CategoryExplorerPortal({
   onExploreContent,
 }) {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
+
+  // Internal navigation depth tracker so in-app back pops history
+  const internalPortalDepthRef = useRef(0);
+
+  const urlViewParam = searchParams.get('view');
+  const urlExamParam = searchParams.get('exam');
+  const urlResourceParam = searchParams.get('resource');
+  const urlManualParam = searchParams.get('manual');
+
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [showAllExams, setShowAllExams] = useState(false);
+  const [showAllExams, setShowAllExams] = useState(urlViewParam === 'all');
   const [examSearch, setExamSearch] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const EXAMS_PER_PAGE = 6;
@@ -554,9 +565,39 @@ export default function CategoryExplorerPortal({
   const [jobsLoading, setJobsLoading] = useState(false);
   const [effectiveTier, setEffectiveTier] = useState('FREE');
 
+  // URL search parameter updater helper
+  const updatePortalParams = useCallback((updates, { replace = false } = {}) => {
+    if (!replace) {
+      internalPortalDepthRef.current += 1;
+    }
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev);
+      Object.entries(updates).forEach(([k, v]) => {
+        if (v === undefined || v === null || v === '') {
+          next.delete(k);
+        } else {
+          next.set(k, String(v));
+        }
+      });
+      return next;
+    }, { replace });
+  }, [setSearchParams]);
+
+  // Track browser popstate (back button, forward button, or swipe gesture)
+  useEffect(() => {
+    const handlePopState = () => {
+      if (internalPortalDepthRef.current > 0) {
+        internalPortalDepthRef.current -= 1;
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   const handleViewAllExams = () => {
     setShowAllExams(true);
     setCurrentPage(1);
+    updatePortalParams({ view: 'all' });
     onSetSidebarCollapsed?.(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     const rail = document.querySelector('.lc-content-rail');
@@ -564,25 +605,69 @@ export default function CategoryExplorerPortal({
   };
 
   const handleBackToOverview = () => {
-    setShowAllExams(false);
-    onSetSidebarCollapsed?.(false);
+    if (internalPortalDepthRef.current > 0) {
+      internalPortalDepthRef.current -= 1;
+      navigate(-1);
+    } else {
+      setShowAllExams(false);
+      updatePortalParams({ view: undefined }, { replace: true });
+      onSetSidebarCollapsed?.(false);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
     const rail = document.querySelector('.lc-content-rail');
     if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Reset states when switching category or division
-  useEffect(() => {
-    setShowAllExams(false);
-    setExamSearch('');
-    setCurrentPage(1);
-    setSelectedExam(null);
-    setActiveReadingResource(null);
-    setActiveResourceTab('intro');
-    onSetSidebarCollapsed?.(false);
+  const handleBackFromExam = () => {
+    if (internalPortalDepthRef.current > 0) {
+      internalPortalDepthRef.current -= 1;
+      navigate(-1);
+    } else {
+      setSelectedExam(null);
+      updatePortalParams({ exam: undefined }, { replace: true });
+      if (urlViewParam !== 'all') onSetSidebarCollapsed?.(false);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     const rail = document.querySelector('.lc-content-rail');
     if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [categoryName, division]);
+  };
+
+  const handleBackFromReader = () => {
+    if (internalPortalDepthRef.current > 0) {
+      internalPortalDepthRef.current -= 1;
+      navigate(-1);
+    } else {
+      setActiveReadingResource(null);
+      updatePortalParams({ resource: undefined, manual: undefined }, { replace: true });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const rail = document.querySelector('.lc-content-rail');
+    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Sync showAllExams when URL view param changes
+  useEffect(() => {
+    const isAll = urlViewParam === 'all';
+    setShowAllExams(isAll);
+    if (isAll && !urlExamParam) {
+      onSetSidebarCollapsed?.(true);
+    }
+  }, [urlViewParam, urlExamParam, onSetSidebarCollapsed]);
+
+  // Reset states when switching category or division
+  useEffect(() => {
+    setExamSearch('');
+    setCurrentPage(1);
+    if (!urlExamParam) setSelectedExam(null);
+    if (!urlResourceParam && urlManualParam !== '1') setActiveReadingResource(null);
+    setActiveResourceTab('intro');
+    if (!urlViewParam) {
+      setShowAllExams(false);
+      onSetSidebarCollapsed?.(false);
+    }
+    const rail = document.querySelector('.lc-content-rail');
+    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [categoryName, division, urlExamParam, urlResourceParam, urlManualParam, urlViewParam, onSetSidebarCollapsed]);
 
   // Fetch subscription tier
   useEffect(() => {
@@ -760,6 +845,84 @@ export default function CategoryExplorerPortal({
     }
   }, [selectedExam, intro, guideItems.length, contentLoading]);
 
+  // Sync selectedExam with URL exam param (on popstate / browser back / gesture back)
+  useEffect(() => {
+    if (!urlExamParam) {
+      if (selectedExam !== null) {
+        setSelectedExam(null);
+        if (urlViewParam !== 'all') {
+          onSetSidebarCollapsed?.(false);
+        }
+      }
+      return;
+    }
+
+    if (selectedExam && String(selectedExam.id || selectedExam.exam_id) === String(urlExamParam)) {
+      return;
+    }
+
+    const pool = [...allCategoryExams, ...(levelExams || []), ...(allCatalog || []), ...localDbExams];
+    const match = pool.find(
+      (e) =>
+        String(e.id || e.exam_id) === String(urlExamParam) ||
+        String(e.name || e.title || '').toLowerCase() === String(urlExamParam).toLowerCase()
+    );
+
+    if (match) {
+      setSelectedExam(match);
+    } else {
+      let cancelled = false;
+      supabase
+        .from('lc_exams')
+        .select('id, name, category, description, conducting_body:lc_conducting_bodies(id, name), region:lc_regions(id, name, level)')
+        .eq('id', urlExamParam)
+        .maybeSingle()
+        .then(({ data }) => {
+          if (!cancelled && data) setSelectedExam(data);
+        })
+        .catch((err) => console.warn('Could not fetch exam for URL param:', err));
+      return () => { cancelled = true; };
+    }
+  }, [urlExamParam, allCategoryExams, levelExams, allCatalog, localDbExams, urlViewParam, onSetSidebarCollapsed]);
+
+  // Sync activeReadingResource with URL resource and manual params
+  useEffect(() => {
+    if (!urlResourceParam && urlManualParam !== '1') {
+      if (activeReadingResource !== null) {
+        setActiveReadingResource(null);
+      }
+      return;
+    }
+
+    if (urlManualParam === '1') {
+      if (!activeReadingResource?.isManual && selectedExam) {
+        setActiveReadingResource({
+          isManual: true,
+          title: intro?.title || `${selectedExam.name} - Official Syllabus & Guide`,
+          body: intro?.body || '',
+          category: 'Intro',
+        });
+      }
+      return;
+    }
+
+    if (urlResourceParam) {
+      if (activeReadingResource?.resource_id === urlResourceParam) return;
+
+      const allRes = [...guideItems, ...precisItems, ...pyqItems, ...(intro?.resource ? [intro.resource] : [])];
+      const found = allRes.find((r) => String(r.resource_id) === String(urlResourceParam));
+      if (found) {
+        setActiveReadingResource(found);
+      } else {
+        setActiveReadingResource({
+          resource_id: urlResourceParam,
+          title: 'Study Material',
+          category: selectedExam?.category || 'Guide',
+        });
+      }
+    }
+  }, [urlResourceParam, urlManualParam, guideItems, precisItems, pyqItems, intro, selectedExam]);
+
   // Fetch jobs matched to selectedExam from jobs_v2
   useEffect(() => {
     if (!selectedExam) {
@@ -898,36 +1061,54 @@ export default function CategoryExplorerPortal({
     },
   ];
 
+  // Open Resource handler: transitions to Level 3 Reader
+  const handleOpenResource = (r) => {
+    setActiveReadingResource(r);
+    updatePortalParams({ resource: r.resource_id, manual: undefined });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const rail = document.querySelector('.lc-content-rail');
+    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   // Continue Prep button handler: transitions to Level 2
   const handleContinuePrep = (exam) => {
     setSelectedExam(exam);
+    const examId = exam.id || exam.exam_id;
+    updatePortalParams({ exam: examId });
     setActiveReadingResource(null);
     setActiveResourceTab('intro');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const rail = document.querySelector('.lc-content-rail');
+    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Open Introduction handler: transitions to Level 3
   const handleIntroCardClick = () => {
     if (intro?.source === 'auto' && intro.resource) {
-      setActiveReadingResource(intro.resource);
+      handleOpenResource(intro.resource);
     } else if (intro?.source === 'manual') {
       setActiveReadingResource({
         isManual: true,
-        title: intro.title || `${selectedExam.name} - Introduction & Syllabus`,
+        title: intro.title || `${selectedExam?.name || 'Exam'} - Introduction & Syllabus`,
         body: intro.body,
         category: 'Intro',
       });
+      updatePortalParams({ manual: '1', resource: undefined });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       setActiveReadingResource({
         isManual: true,
-        title: `${selectedExam.name} - Official Syllabus & Examination Guide`,
+        title: `${selectedExam?.name || 'Exam'} - Official Syllabus & Examination Guide`,
         body: `
           <div style="font-size: 15px; line-height: 1.8;">
-            <p><strong>Conducting Body:</strong> ${selectedExam.conducting_body?.name || selectedExam.conductingBody || 'Government Selection Board'}</p>
-            <p><strong>Category:</strong> ${selectedExam.category || profile?.category_name || 'Competitive Examination'}</p>
-            <p><strong>Recruitment Level:</strong> ${selectedExam.region?.level || selectedExam.level || 'Central / State'}</p>
+            <p><strong>Conducting Body:</strong> ${selectedExam?.conducting_body?.name || selectedExam?.conductingBody || 'Government Selection Board'}</p>
+            <p><strong>Category:</strong> ${selectedExam?.category || profile?.category_name || 'Competitive Examination'}</p>
+            <p><strong>Recruitment Level:</strong> ${selectedExam?.region?.level || selectedExam?.level || 'Central / State'}</p>
             <hr style="margin: 20px 0; border: none; border-top: 1px solid #e2e8f0;" />
             <h3 style="color: #065f46; font-size: 19px; margin-bottom: 8px;">Examination Overview</h3>
-            <p>${selectedExam.description || profile?.about_text || 'Comprehensive exam preparation syllabus provided by Veer Next.'}</p>
+            <p>${selectedExam?.description || profile?.about_text || 'Comprehensive exam preparation syllabus provided by Veer Next.'}</p>
             <h3 style="color: #065f46; font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Selection Process & Pattern</h3>
             <p>The recruitment process comprises multi-stage evaluations including Computer-Based Written Tests (CBT), skill assessments, and document verification. Structured module notes and previous year papers are compiled below.</p>
             <h3 style="color: #065f46; font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Recommended Preparation Strategy</h3>
@@ -936,6 +1117,10 @@ export default function CategoryExplorerPortal({
         `,
         category: 'Intro',
       });
+      updatePortalParams({ manual: '1', resource: undefined });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -960,11 +1145,15 @@ export default function CategoryExplorerPortal({
       <div className="cep-container">
         {/* Breadcrumb Navigation */}
         <nav className="cep-breadcrumbs" aria-label="Breadcrumb">
-          <span className="cep-bc-link" onClick={() => { setSelectedExam(null); setActiveReadingResource(null); }}>
+          <span className="cep-bc-link" onClick={handleBackToOverview}>
+            Home
+          </span>
+          <ChevronRight size={13} className="cep-bc-sep" />
+          <span className="cep-bc-link" onClick={handleBackFromExam}>
             {profile.category_name}
           </span>
           <ChevronRight size={13} className="cep-bc-sep" />
-          <span className="cep-bc-link" onClick={() => setActiveReadingResource(null)}>
+          <span className="cep-bc-link" onClick={handleBackFromReader}>
             {selectedExam.name}
           </span>
           <ChevronRight size={13} className="cep-bc-sep" />
@@ -976,7 +1165,7 @@ export default function CategoryExplorerPortal({
             <button
               type="button"
               className="cep-back-to-exam-btn"
-              onClick={() => setActiveReadingResource(null)}
+              onClick={handleBackFromReader}
             >
               <ArrowLeft size={16} />
               <span>Back to {selectedExam.name} Overview</span>
@@ -1017,7 +1206,7 @@ export default function CategoryExplorerPortal({
               <SecureReader
                 resourceId={activeReadingResource.resource_id}
                 isEmbedded={true}
-                onBack={() => setActiveReadingResource(null)}
+                onBack={handleBackFromReader}
               />
             )}
           </div>
@@ -1037,11 +1226,11 @@ export default function CategoryExplorerPortal({
       <div className="cep-container">
         {/* Breadcrumb Navigation */}
         <nav className="cep-breadcrumbs" aria-label="Breadcrumb">
-          <span className="cep-bc-link" onClick={() => setSelectedExam(null)}>
+          <span className="cep-bc-link" onClick={handleBackToOverview}>
             Home
           </span>
           <ChevronRight size={13} className="cep-bc-sep" />
-          <span className="cep-bc-link" onClick={() => setSelectedExam(null)}>
+          <span className="cep-bc-link" onClick={handleBackFromExam}>
             {profile.category_name}
           </span>
           <ChevronRight size={13} className="cep-bc-sep" />
@@ -1055,10 +1244,7 @@ export default function CategoryExplorerPortal({
               <button
                 type="button"
                 className="cep-exam-back-btn"
-                onClick={() => {
-                  setSelectedExam(null);
-                  if (!showAllExams) onSetSidebarCollapsed?.(false);
-                }}
+                onClick={handleBackFromExam}
               >
                 <ArrowLeft size={14} />
                 <span>Back to {showAllExams ? `All ${profile.category_name} Exams` : `${profile.category_name} Overview`}</span>
@@ -1224,7 +1410,7 @@ export default function CategoryExplorerPortal({
             {/* 4. PYQs -> Links to PYQ Center */}
             <div
               className={`cep-action-card cep-card-sky cep-action-card-clickable ${activeResourceTab === 'pyq' ? 'cep-action-card-active' : ''}`}
-              onClick={() => navigate(`/pyq-center?exam=${examTargetId}`)}
+              onClick={() => navigate(`/pyq-center?exam=${examTargetId}`, { state: { from: location.pathname + location.search } })}
               role="button"
               tabIndex={0}
             >
@@ -1246,7 +1432,7 @@ export default function CategoryExplorerPortal({
             {/* 5. Mock Tests & Quizzes -> Links to Quiz Center */}
             <div
               className={`cep-action-card cep-card-lavender cep-action-card-clickable ${activeResourceTab === 'mock' ? 'cep-action-card-active' : ''}`}
-              onClick={() => navigate(`/quiz-center?exam=${examTargetId}`)}
+              onClick={() => navigate(`/quiz-center?exam=${examTargetId}`, { state: { from: location.pathname + location.search } })}
               role="button"
               tabIndex={0}
             >
@@ -1319,21 +1505,14 @@ export default function CategoryExplorerPortal({
                         locked={isResourceLockedForUser(effectiveTier, 'Intro')}
                         isCompleted={completedResourceIds?.has(intro.resource?.resource_id)}
                         onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
-                        onOpenResource={(r) => setActiveReadingResource(r)}
+                        onOpenResource={(r) => handleOpenResource(r)}
                       />
                     ) : (
                       <IntroManualTile
                         key="intro-manual"
                         intro={intro}
                         locked={isResourceLockedForUser(effectiveTier, 'Intro')}
-                        onOpen={(i) => {
-                          setActiveReadingResource({
-                            isManual: true,
-                            title: i.title || `${selectedExam.name} - Introduction`,
-                            body: i.body || '',
-                            category: 'Intro',
-                          });
-                        }}
+                        onOpen={() => handleIntroCardClick()}
                       />
                     )
                   ) : (
@@ -1360,7 +1539,7 @@ export default function CategoryExplorerPortal({
                         locked={isResourceLockedForUser(effectiveTier, 'Guide')}
                         isCompleted={completedResourceIds?.has(res.resource_id)}
                         onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
-                        onOpenResource={(r) => setActiveReadingResource(r)}
+                        onOpenResource={(r) => handleOpenResource(r)}
                       />
                     ))
                   ) : (
@@ -1387,7 +1566,7 @@ export default function CategoryExplorerPortal({
                         locked={isResourceLockedForUser(effectiveTier, 'Precis')}
                         isCompleted={completedResourceIds?.has(res.resource_id)}
                         onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
-                        onOpenResource={(r) => setActiveReadingResource(r)}
+                        onOpenResource={(r) => handleOpenResource(r)}
                       />
                     ))
                   ) : (

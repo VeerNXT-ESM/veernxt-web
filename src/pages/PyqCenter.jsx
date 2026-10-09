@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { ScrollText, Search, RefreshCw, Lock, ArrowLeft } from 'lucide-react';
 import { getEffectiveTier, canAccessResource } from '../lib/subscriptionAccess';
 
 export default function PyqCenter() {
+  const location = useLocation();
   const [papers, setPapers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState('');
@@ -96,7 +97,7 @@ export default function PyqCenter() {
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
 
         <Link
-          to="/learning-center"
+          to={location.state?.from || "/learning-center"}
           style={{
             display: 'inline-flex', alignItems: 'center', gap: '0.4rem', textDecoration: 'none',
             color: '#64748b', fontSize: '0.85rem', fontWeight: 700, marginBottom: '1.5rem',

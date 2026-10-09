@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect, useCallback, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import {
   Book,
@@ -13,6 +13,7 @@ import {
   Target,
   Rocket,
   ArrowRight,
+  ArrowLeft,
   Shield,
   ShieldAlert,
   ShieldCheck,
@@ -509,6 +510,7 @@ function buildExamSummary({ examName, category, conductingBodyName, regionLevel 
 
 // 3-column Overview tab for the Popular Exams details panel
 function PopularExamOverview({ exam, relatedExams, navigate }) {
+  const location = useLocation();
   const { categoryUrl } = useThumbnails();
   const { intro, loading } = useExamContent(exam?.matchedName, undefined, exam?.examId);
 
@@ -563,7 +565,7 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
                 className="lc-related-exam-card"
                 onClick={() => {
                   if (exam?.examId) {
-                    navigate(`/exam/${exam.examId}`, { state: { from: '/learning-center' } });
+                    navigate(`/exam/${exam.examId}`, { state: { from: location.pathname + location.search } });
                   }
                 }}
               >
@@ -579,7 +581,7 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
               <div
                 key={e.id}
                 className="lc-related-exam-card"
-                onClick={() => navigate(`/exam/${e.id}`, { state: { from: '/learning-center' } })}
+                onClick={() => navigate(`/exam/${e.id}`, { state: { from: location.pathname + location.search } })}
               >
                 <img src={categoryUrl(e.category) || ''} alt={e.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
                 <div className="lc-related-exam-info">
@@ -681,15 +683,27 @@ const LearningCenter = () => {
   const [showAllBodies, setShowAllBodies] = useState(false);
   const [showAllCategories, setShowAllCategories] = useState(false);
 
+  const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
+
+  // Internal navigation depth tracker so in-app back pops history
+  const internalNavDepthRef = useRef(0);
+
+  // URL-driven query parameters
+  const paramTab = searchParams.get('tab') || 'explorer';
+  const paramMode = searchParams.get('mode') || 'central';
+  const paramState = searchParams.get('state') || '';
+  const paramCategory = searchParams.get('category') || '';
+
   // Catalog + filters. The whole lc_exams catalog (~1.5k rows) is fetched
   // paginated; every filter/level/derived list comes from it client-side.
-  const [regionMode, setRegionMode] = useState('central'); // 'central' | 'state' | 'ut'
+  const [regionMode, setRegionMode] = useState(paramMode); // 'central' | 'state' | 'ut'
   const [catalog, setCatalog] = useState([]);
   const [catalogLoading, setCatalogLoading] = useState(true);
   const [catalogError, setCatalogError] = useState(null);
-  const [regionFilterId, setRegionFilterId] = useState('');
-  const [categoryFilter, setCategoryFilter] = useState('');
-  const [rightTab, setRightTab] = useState('explorer'); // 'explorer' | 'recommended'
+  const [regionFilterId, setRegionFilterId] = useState(paramState);
+  const [categoryFilter, setCategoryFilter] = useState(paramCategory);
+  const [rightTab, setRightTab] = useState(paramTab); // 'explorer' | 'recommended'
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [selectedBodyId, setSelectedBodyId] = useState('');
   const [searchText, setSearchText] = useState('');
@@ -697,6 +711,52 @@ const LearningCenter = () => {
   const [selectedZone, setSelectedZone] = useState('all');
 
   const [expandedExamId, setExpandedExamId] = useState(null);
+
+  // Update search parameters helper (pushes by default, creating history steps for gesture/browser back)
+  const updateSearchParams = useCallback((updates, { replace = false } = {}) => {
+    if (!replace) {
+      internalNavDepthRef.current += 1;
+    }
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev);
+      Object.entries(updates).forEach(([k, v]) => {
+        if (v === undefined || v === null || v === '') {
+          next.delete(k);
+        } else {
+          next.set(k, String(v));
+        }
+      });
+      return next;
+    }, { replace });
+  }, [setSearchParams]);
+
+  // Track browser popstate (back button, forward button, or swipe gesture)
+  useEffect(() => {
+    const handlePopState = () => {
+      if (internalNavDepthRef.current > 0) {
+        internalNavDepthRef.current -= 1;
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Sync state when URL searchParams change
+  useEffect(() => {
+    if (paramTab !== rightTab) setRightTab(paramTab);
+  }, [paramTab]);
+
+  useEffect(() => {
+    if (paramMode !== regionMode) setRegionMode(paramMode);
+  }, [paramMode]);
+
+  useEffect(() => {
+    if (paramState !== regionFilterId) setRegionFilterId(paramState);
+  }, [paramState]);
+
+  useEffect(() => {
+    if (paramCategory !== categoryFilter) setCategoryFilter(paramCategory);
+  }, [paramCategory]);
 
   // Popular Exams inline details panel — clicking a card selects it and
   // expands its real data below the carousel, instead of navigating away.
@@ -731,11 +791,11 @@ const LearningCenter = () => {
       lastAccessedAt: Date.now(),
     });
     if (course.examId) {
-      navigate(`/exam/${course.examId}`, { state: { from: '/learning-center' } });
+      navigate(`/exam/${course.examId}`, { state: { from: location.pathname + location.search } });
     } else if (course.searchTerm) {
       const match = findCatalogMatch(course.searchTerm);
       if (match) {
-        navigate(`/exam/${match.id}`, { state: { from: '/learning-center' } });
+        navigate(`/exam/${match.id}`, { state: { from: location.pathname + location.search } });
       } else {
         setSearchText(course.searchTerm);
         const resultsEl = document.getElementById('lc-search-results-section');
@@ -825,7 +885,7 @@ const LearningCenter = () => {
 
     const { data: { session } } = await supabase.auth.getSession();
     if (!session?.user) {
-      navigate(`/exam/${examId}`, { state: { from: '/learning-center' } });
+      navigate(`/exam/${examId}`, { state: { from: location.pathname + location.search } });
       return;
     }
     setPreparingExamId(examId);
@@ -837,15 +897,31 @@ const LearningCenter = () => {
       console.warn('Could not save exam target:', err);
     } finally {
       setPreparingExamId(null);
-      navigate(`/exam/${examId}`, { state: { from: '/learning-center' } });
+      navigate(`/exam/${examId}`, { state: { from: location.pathname + location.search } });
     }
-  }, [navigate, catalog, recordActiveLearning, categoryUrl]);
+  }, [navigate, catalog, recordActiveLearning, categoryUrl, location.pathname, location.search]);
+
+  const handleTabChange = (tab) => {
+    setRightTab(tab);
+    updateSearchParams({
+      tab: tab === 'explorer' ? undefined : tab,
+    });
+  };
 
   const handleRegionModeChange = (mode) => {
     setRegionMode(mode);
     setRegionFilterId('');
     setCategoryFilter('');
     setSelectedBodyId('');
+    updateSearchParams({
+      mode: mode === 'central' ? undefined : mode,
+      state: undefined,
+      category: undefined,
+      view: undefined,
+      exam: undefined,
+      resource: undefined,
+      manual: undefined,
+    });
   };
 
   const handleCategoryFilterChange = (category) => {
@@ -854,6 +930,14 @@ const LearningCenter = () => {
     if (category) {
       setRightTab('explorer');
     }
+    updateSearchParams({
+      category: category || undefined,
+      tab: category ? undefined : undefined,
+      view: undefined,
+      exam: undefined,
+      resource: undefined,
+      manual: undefined,
+    });
   };
 
   const handleClearFilters = () => {
@@ -864,6 +948,16 @@ const LearningCenter = () => {
     setSearchText('');
     setBodySearch('');
     setRightTab('recommended');
+    updateSearchParams({
+      mode: undefined,
+      state: undefined,
+      category: undefined,
+      tab: 'recommended',
+      view: undefined,
+      exam: undefined,
+      resource: undefined,
+      manual: undefined,
+    });
   };
 
   // Lock body scrolling when mobile drawer is open
@@ -970,11 +1064,32 @@ const LearningCenter = () => {
     setRegionFilterId(stateItem.id);
     setCategoryFilter('');
     setStateSearchText('');
+    updateSearchParams({
+      state: stateItem.id,
+      category: undefined,
+      view: undefined,
+      exam: undefined,
+      resource: undefined,
+      manual: undefined,
+    });
   };
 
   const handleBackToStates = () => {
-    setRegionFilterId('');
-    setCategoryFilter('');
+    if (internalNavDepthRef.current > 0) {
+      internalNavDepthRef.current -= 1;
+      navigate(-1);
+    } else {
+      setRegionFilterId('');
+      setCategoryFilter('');
+      updateSearchParams({
+        state: undefined,
+        category: undefined,
+        view: undefined,
+        exam: undefined,
+        resource: undefined,
+        manual: undefined,
+      }, { replace: true });
+    }
   };
 
   // Exams satisfying the level gate (Central / State / UT)
@@ -1010,6 +1125,13 @@ const LearningCenter = () => {
     }
     return categoryOptions[0] || '';
   }, [categoryFilter, categoryOptions, regionMode]);
+
+  // Normalize initial default category in URL without adding extra history step
+  useEffect(() => {
+    if (!paramCategory && activeCategoryForExplorer && rightTab === 'explorer') {
+      updateSearchParams({ category: activeCategoryForExplorer }, { replace: true });
+    }
+  }, [paramCategory, activeCategoryForExplorer, rightTab, updateSearchParams]);
 
   const explorerCategoryList = useMemo(() => {
     return categoryOptions.map((cat) => {
@@ -1887,6 +2009,15 @@ const LearningCenter = () => {
                             <MapPin size={13} />
                             <span className="lc-explorer-state-name">{activeState.name}</span>
                           </div>
+                          <button
+                            type="button"
+                            className="lc-explorer-state-back-btn"
+                            onClick={handleBackToStates}
+                            title="Back to all states"
+                          >
+                            <ArrowLeft size={12} />
+                            <span>All {regionMode === 'ut' ? 'UTs' : 'States'}</span>
+                          </button>
                           <span className="lc-explorer-state-exams-count">{activeState.count} Exams</span>
                         </div>
                       )}
@@ -1905,7 +2036,7 @@ const LearningCenter = () => {
                               type="button"
                               className={`lc-explorer-nav-item ${isActive ? 'lc-explorer-nav-active' : ''}`}
                               onClick={() => {
-                                setCategoryFilter(item.key);
+                                handleCategoryFilterChange(item.key);
                               }}
                               title={item.label}
                               aria-current={isActive ? 'page' : undefined}
@@ -2085,7 +2216,7 @@ const LearningCenter = () => {
                     role="tab"
                     aria-selected={rightTab === 'explorer'}
                     className={`lc-top-tab-btn ${rightTab === 'explorer' ? 'active' : ''}`}
-                    onClick={() => setRightTab('explorer')}
+                    onClick={() => handleTabChange('explorer')}
                   >
                     <Compass size={16} className="lc-top-tab-icon" />
                     <span>Explorer Mode</span>
@@ -2098,7 +2229,7 @@ const LearningCenter = () => {
                     role="tab"
                     aria-selected={rightTab === 'recommended'}
                     className={`lc-top-tab-btn ${rightTab === 'recommended' ? 'active' : ''}`}
-                    onClick={() => setRightTab('recommended')}
+                    onClick={() => handleTabChange('recommended')}
                   >
                     <Sparkles size={16} className="lc-top-tab-icon" />
                     <span>Recommended Exams</span>
@@ -2289,24 +2420,24 @@ const LearningCenter = () => {
                     onSelectExam={(exam) => {
                       const id = exam.examId || exam.id;
                       if (id) {
-                        navigate(`/exam/${id}`, { state: { from: '/learning-center' } });
+                        navigate(`/exam/${id}`, { state: { from: location.pathname + location.search } });
                       } else {
                         setSearchText(exam.title || exam.name || '');
-                        setRightTab('recommended');
+                        handleTabChange('recommended');
                       }
                     }}
                     onExploreContent={(contentType, profileData) => {
                       if (contentType === 'pyqs') {
-                        navigate('/pyq-center');
+                        navigate('/pyq-center', { state: { from: location.pathname + location.search } });
                       } else if (contentType === 'mocks') {
-                        navigate('/quiz-center');
+                        navigate('/quiz-center', { state: { from: location.pathname + location.search } });
                       } else {
                         const firstId = profileData?.top_exams?.[0]?.examId;
                         if (firstId) {
-                          navigate(`/exam/${firstId}`, { state: { from: '/learning-center' } });
+                          navigate(`/exam/${firstId}`, { state: { from: location.pathname + location.search } });
                         } else {
                           setSearchText(profileData?.category_name || '');
-                          setRightTab('recommended');
+                          handleTabChange('recommended');
                         }
                       }
                     }}
@@ -2688,7 +2819,7 @@ const LearningCenter = () => {
                             <button
                               type="button"
                               className="lc-exam-details-secondary-btn"
-                              onClick={() => navigate(`/exam/${selectedPopularExam.examId}`, { state: { from: '/learning-center' } })}
+                              onClick={() => navigate(`/exam/${selectedPopularExam.examId}`, { state: { from: location.pathname + location.search } })}
                             >
                               View Syllabus
                             </button>

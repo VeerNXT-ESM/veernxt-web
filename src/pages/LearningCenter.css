@@ -4195,6 +4195,29 @@
   border: 1px solid #d4e7cd;
 }
 
+.lc-explorer-state-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #ffffff;
+  border: 1px solid #c9dec2;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #27491d;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-left: auto;
+  margin-right: 6px;
+}
+
+.lc-explorer-state-back-btn:hover {
+  background: #e2f0dc;
+  border-color: #27491d;
+  color: #1e3a15;
+}
+
 .lc-explorer-nav-count {
   font-size: 11.5px;
   font-weight: 600;
