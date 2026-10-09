@@ -476,19 +476,7 @@ export default function CategoryExplorerPortal({
 
     const matched = pool.filter((e) => {
       const ec = (e.category || '').toLowerCase().trim();
-      const en = (e.name || '').toLowerCase().trim();
-      const cb = (e.conducting_body?.name || '').toLowerCase().trim();
-      if (ec === cLow) return true;
-      if (ec.includes(cLow) || cLow.includes(ec)) return true;
-      if (cLow === 'banking' && (ec.includes('bank') || en.includes('bank') || cb.includes('ibps') || cb.includes('sbi') || cb.includes('rbi'))) return true;
-      if (cLow === 'ssc' && (ec.includes('ssc') || en.includes('ssc') || cb.includes('ssc'))) return true;
-      if ((cLow === 'civil services' || cLow === 'upsc') && (ec.includes('civil') || ec.includes('upsc') || en.includes('upsc') || en.includes('ias') || cb.includes('upsc'))) return true;
-      if (cLow === 'defence' && (ec.includes('defence') || ec.includes('defense') || en.includes('nda') || en.includes('cds') || en.includes('afcat') || en.includes('navy') || en.includes('army'))) return true;
-      if (cLow === 'railways' && (ec.includes('rail') || en.includes('rrb') || en.includes('railway') || cb.includes('railway') || cb.includes('rrb'))) return true;
-      if (cLow === 'police' && (ec.includes('police') || en.includes('police') || en.includes('constable') || en.includes('si '))) return true;
-      if (cLow === 'teaching' && (ec.includes('teach') || ec.includes('education') || en.includes('tet') || en.includes('pgt') || en.includes('tgt') || en.includes('ctet'))) return true;
-      if (cLow === 'judiciary' && (ec.includes('judic') || ec.includes('court') || en.includes('judge') || en.includes('law'))) return true;
-      return false;
+      return ec === cLow;
     });
 
     const seenIds = new Set();
@@ -499,21 +487,6 @@ export default function CategoryExplorerPortal({
       if (!seenIds.has(idKey)) {
         seenIds.add(idKey);
         result.push(m);
-      }
-    });
-
-    const profileExtras = [...(profile?.top_exams || []), ...(profile?.related_exams || [])];
-    profileExtras.forEach((extra) => {
-      const eId = extra.examId;
-      const titleKey = extra.title;
-      if (eId && !seenIds.has(eId) && !seenIds.has(titleKey)) {
-        seenIds.add(eId);
-        result.push({
-          id: eId,
-          name: extra.title,
-          category: profile?.category_name || categoryName,
-          conducting_body: { name: profile?.category_name || 'Commission' },
-        });
       }
     });
 
