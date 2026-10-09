@@ -547,7 +547,7 @@ export default function CategoryExplorerPortal({
   // Sequential drilldown states
   const [selectedExam, setSelectedExam] = useState(null);
   const [activeReadingResource, setActiveReadingResource] = useState(null);
-  const [activeResourceTab, setActiveResourceTab] = useState('all');
+  const [activeResourceTab, setActiveResourceTab] = useState('intro');
   const [examJobs, setExamJobs] = useState([]);
   const [jobsLoading, setJobsLoading] = useState(false);
   const [effectiveTier, setEffectiveTier] = useState('FREE');
@@ -559,7 +559,7 @@ export default function CategoryExplorerPortal({
     setCurrentPage(1);
     setSelectedExam(null);
     setActiveReadingResource(null);
-    setActiveResourceTab('all');
+    setActiveResourceTab('intro');
   }, [categoryName, division]);
 
   // Fetch subscription tier
@@ -729,6 +729,15 @@ export default function CategoryExplorerPortal({
   const introCount = intro ? 1 : 0;
   const mockCount = quizzes?.length || 0;
 
+  // Default to guide tab if exam has no intro but has guidebooks
+  useEffect(() => {
+    if (selectedExam && !contentLoading) {
+      if (!intro && guideItems.length > 0 && activeResourceTab === 'intro') {
+        setActiveResourceTab('guide');
+      }
+    }
+  }, [selectedExam, intro, guideItems.length, contentLoading]);
+
   // Fetch jobs matched to selectedExam from jobs_v2
   useEffect(() => {
     if (!selectedExam) {
@@ -871,7 +880,7 @@ export default function CategoryExplorerPortal({
   const handleContinuePrep = (exam) => {
     setSelectedExam(exam);
     setActiveReadingResource(null);
-    setActiveResourceTab('all');
+    setActiveResourceTab('intro');
   };
 
   // Open Introduction handler: transitions to Level 3
@@ -1245,13 +1254,6 @@ export default function CategoryExplorerPortal({
               <div className="cep-materials-tabs-row">
                 <button
                   type="button"
-                  className={`cep-material-tab-btn ${activeResourceTab === 'all' ? 'active' : ''}`}
-                  onClick={() => setActiveResourceTab('all')}
-                >
-                  All Materials ({introCount + guideItems.length + precisItems.length})
-                </button>
-                <button
-                  type="button"
                   className={`cep-material-tab-btn ${activeResourceTab === 'intro' ? 'active' : ''}`}
                   onClick={() => setActiveResourceTab('intro')}
                 >
@@ -1282,73 +1284,98 @@ export default function CategoryExplorerPortal({
             ) : (
               <div className="cep-materials-grid">
                 {/* 1. Introduction Tile */}
-                {(activeResourceTab === 'all' || activeResourceTab === 'intro') && intro && (
-                  intro.source === 'auto' ? (
-                    <ResourceTile
-                      key="intro-auto"
-                      resource={intro.resource}
-                      examName={selectedExam.name}
-                      locked={isResourceLockedForUser(effectiveTier, 'Intro')}
-                      isCompleted={completedResourceIds?.has(intro.resource?.resource_id)}
-                      onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
-                      onOpenResource={(r) => setActiveReadingResource(r)}
-                    />
+                {activeResourceTab === 'intro' && (
+                  intro ? (
+                    intro.source === 'auto' ? (
+                      <ResourceTile
+                        key="intro-auto"
+                        resource={intro.resource}
+                        examName={selectedExam.name}
+                        locked={isResourceLockedForUser(effectiveTier, 'Intro')}
+                        isCompleted={completedResourceIds?.has(intro.resource?.resource_id)}
+                        onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
+                        onOpenResource={(r) => setActiveReadingResource(r)}
+                      />
+                    ) : (
+                      <IntroManualTile
+                        key="intro-manual"
+                        intro={intro}
+                        locked={isResourceLockedForUser(effectiveTier, 'Intro')}
+                        onOpen={(i) => {
+                          setActiveReadingResource({
+                            isManual: true,
+                            title: i.title || `${selectedExam.name} - Introduction`,
+                            body: i.body || '',
+                            category: 'Intro',
+                          });
+                        }}
+                      />
+                    )
                   ) : (
-                    <IntroManualTile
-                      key="intro-manual"
-                      intro={intro}
-                      locked={isResourceLockedForUser(effectiveTier, 'Intro')}
-                      onOpen={(i) => {
-                        setActiveReadingResource({
-                          isManual: true,
-                          title: i.title || `${selectedExam.name} - Introduction`,
-                          body: i.body || '',
-                          category: 'Intro',
-                        });
-                      }}
-                    />
+                    <div className="cep-materials-empty" style={{ gridColumn: '1 / -1' }}>
+                      <BookOpen size={28} style={{ color: '#059669', marginBottom: '8px' }} />
+                      <p style={{ fontWeight: 600, color: '#0f172a', margin: '0 0 4px' }}>
+                        Introduction guide is being prepared
+                      </p>
+                      <p style={{ color: '#64748b', fontSize: '12.5px', margin: 0 }}>
+                        Check out the Guidebooks and Préci tabs for available study material.
+                      </p>
+                    </div>
                   )
                 )}
 
                 {/* 2. Guidebook Tiles */}
-                {(activeResourceTab === 'all' || activeResourceTab === 'guide') &&
-                  guideItems.map((res) => (
-                    <ResourceTile
-                      key={res.id || res.resource_id}
-                      resource={res}
-                      examName={selectedExam.name}
-                      locked={isResourceLockedForUser(effectiveTier, 'Guide')}
-                      isCompleted={completedResourceIds?.has(res.resource_id)}
-                      onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
-                      onOpenResource={(r) => setActiveReadingResource(r)}
-                    />
-                  ))}
+                {activeResourceTab === 'guide' && (
+                  guideItems.length > 0 ? (
+                    guideItems.map((res) => (
+                      <ResourceTile
+                        key={res.id || res.resource_id}
+                        resource={res}
+                        examName={selectedExam.name}
+                        locked={isResourceLockedForUser(effectiveTier, 'Guide')}
+                        isCompleted={completedResourceIds?.has(res.resource_id)}
+                        onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
+                        onOpenResource={(r) => setActiveReadingResource(r)}
+                      />
+                    ))
+                  ) : (
+                    <div className="cep-materials-empty" style={{ gridColumn: '1 / -1' }}>
+                      <Layers size={28} style={{ color: '#059669', marginBottom: '8px' }} />
+                      <p style={{ fontWeight: 600, color: '#0f172a', margin: '0 0 4px' }}>
+                        No guidebooks available yet
+                      </p>
+                      <p style={{ color: '#64748b', fontSize: '12.5px', margin: 0 }}>
+                        Study books for this examination are being uploaded soon.
+                      </p>
+                    </div>
+                  )
+                )}
 
                 {/* 3. Preci Tiles */}
-                {(activeResourceTab === 'all' || activeResourceTab === 'precis') &&
-                  precisItems.map((res) => (
-                    <ResourceTile
-                      key={res.id || res.resource_id}
-                      resource={res}
-                      examName={selectedExam.name}
-                      locked={isResourceLockedForUser(effectiveTier, 'Precis')}
-                      isCompleted={completedResourceIds?.has(res.resource_id)}
-                      onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
-                      onOpenResource={(r) => setActiveReadingResource(r)}
-                    />
-                  ))}
-
-                {/* Empty State */}
-                {guideItems.length === 0 && precisItems.length === 0 && !intro && (
-                  <div className="cep-materials-empty" style={{ gridColumn: '1 / -1' }}>
-                    <BookOpen size={28} style={{ color: '#059669', marginBottom: '8px' }} />
-                    <p style={{ fontWeight: 600, color: '#0f172a', margin: '0 0 4px' }}>
-                      Materials for {selectedExam.name} are being prepared
-                    </p>
-                    <p style={{ color: '#64748b', fontSize: '12.5px', margin: 0 }}>
-                      You can still explore standard syllabus guidelines in the Introduction module.
-                    </p>
-                  </div>
+                {activeResourceTab === 'precis' && (
+                  precisItems.length > 0 ? (
+                    precisItems.map((res) => (
+                      <ResourceTile
+                        key={res.id || res.resource_id}
+                        resource={res}
+                        examName={selectedExam.name}
+                        locked={isResourceLockedForUser(effectiveTier, 'Precis')}
+                        isCompleted={completedResourceIds?.has(res.resource_id)}
+                        onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
+                        onOpenResource={(r) => setActiveReadingResource(r)}
+                      />
+                    ))
+                  ) : (
+                    <div className="cep-materials-empty" style={{ gridColumn: '1 / -1' }}>
+                      <Target size={28} style={{ color: '#059669', marginBottom: '8px' }} />
+                      <p style={{ fontWeight: 600, color: '#0f172a', margin: '0 0 4px' }}>
+                        No précis revision notes available yet
+                      </p>
+                      <p style={{ color: '#64748b', fontSize: '12.5px', margin: 0 }}>
+                        Concise summary notes for this examination are being prepared.
+                      </p>
+                    </div>
+                  )
                 )}
               </div>
             )}
