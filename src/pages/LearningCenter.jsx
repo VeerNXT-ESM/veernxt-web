@@ -2284,6 +2284,8 @@ const LearningCenter = () => {
                     division={regionMode}
                     levelExams={levelExams}
                     allCatalog={catalog}
+                    isSidebarCollapsed={isSidebarCollapsed}
+                    onSetSidebarCollapsed={setIsSidebarCollapsed}
                     onSelectExam={(exam) => {
                       const id = exam.examId || exam.id;
                       if (id) {

@@ -532,6 +532,8 @@ export default function CategoryExplorerPortal({
   division = 'central',
   levelExams = [],
   allCatalog = [],
+  isSidebarCollapsed,
+  onSetSidebarCollapsed,
   onSelectExam,
   onExploreContent,
 }) {
@@ -552,6 +554,19 @@ export default function CategoryExplorerPortal({
   const [jobsLoading, setJobsLoading] = useState(false);
   const [effectiveTier, setEffectiveTier] = useState('FREE');
 
+  const handleViewAllExams = () => {
+    setShowAllExams(true);
+    setCurrentPage(1);
+    onSetSidebarCollapsed?.(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBackToOverview = () => {
+    setShowAllExams(false);
+    onSetSidebarCollapsed?.(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   // Reset states when switching category or division
   useEffect(() => {
     setShowAllExams(false);
@@ -560,6 +575,7 @@ export default function CategoryExplorerPortal({
     setSelectedExam(null);
     setActiveReadingResource(null);
     setActiveResourceTab('intro');
+    onSetSidebarCollapsed?.(false);
   }, [categoryName, division]);
 
   // Fetch subscription tier
@@ -1033,10 +1049,13 @@ export default function CategoryExplorerPortal({
               <button
                 type="button"
                 className="cep-exam-back-btn"
-                onClick={() => setSelectedExam(null)}
+                onClick={() => {
+                  setSelectedExam(null);
+                  if (!showAllExams) onSetSidebarCollapsed?.(false);
+                }}
               >
                 <ArrowLeft size={14} />
-                <span>Back to All {profile.category_name} Exams</span>
+                <span>Back to {showAllExams ? `All ${profile.category_name} Exams` : `${profile.category_name} Overview`}</span>
               </button>
               <span className="cep-crumb-pipe">|</span>
               <span className="cep-crumb-trail">{profile.category_name}</span>
@@ -1590,7 +1609,7 @@ export default function CategoryExplorerPortal({
             if (topExams[0]?.examId) {
               handleContinuePrep(topExams[0]);
             } else {
-              setShowAllExams(true);
+              handleViewAllExams();
             }
           }}
         >
@@ -1609,7 +1628,7 @@ export default function CategoryExplorerPortal({
         {/* 2. Guidebooks */}
         <div
           className="cep-action-card cep-card-mint cep-action-card-clickable"
-          onClick={() => setShowAllExams(true)}
+          onClick={handleViewAllExams}
         >
           <div className="cep-action-icon-wrap icon-mint">
             <Layers size={26} strokeWidth={2.2} />
@@ -1626,7 +1645,7 @@ export default function CategoryExplorerPortal({
         {/* 3. Préci */}
         <div
           className="cep-action-card cep-card-rose cep-action-card-clickable"
-          onClick={() => setShowAllExams(true)}
+          onClick={handleViewAllExams}
         >
           <div className="cep-action-icon-wrap icon-rose">
             <Target size={26} strokeWidth={2.2} />
@@ -1683,7 +1702,7 @@ export default function CategoryExplorerPortal({
               <button
                 type="button"
                 className="cep-back-to-overview-btn"
-                onClick={() => setShowAllExams(false)}
+                onClick={handleBackToOverview}
               >
                 <ArrowLeft size={14} />
                 <span>Back to Overview</span>
@@ -1910,7 +1929,7 @@ export default function CategoryExplorerPortal({
             <button
               type="button"
               className="cep-see-all-exams-btn"
-              onClick={() => setShowAllExams(true)}
+              onClick={handleViewAllExams}
             >
               <span>View all {allCategoryExams.length} examinations</span>
               <ArrowRight size={15} />
