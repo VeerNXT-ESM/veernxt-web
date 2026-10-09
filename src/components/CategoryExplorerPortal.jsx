@@ -538,7 +538,7 @@ export default function CategoryExplorerPortal({
   const navigate = useNavigate();
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [showAllExams, setShowAllExams] = useState(true);
+  const [showAllExams, setShowAllExams] = useState(false);
   const [examSearch, setExamSearch] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const EXAMS_PER_PAGE = 6;
@@ -554,7 +554,7 @@ export default function CategoryExplorerPortal({
 
   // Reset states when switching category or division
   useEffect(() => {
-    setShowAllExams(true);
+    setShowAllExams(false);
     setExamSearch('');
     setCurrentPage(1);
     setSelectedExam(null);
