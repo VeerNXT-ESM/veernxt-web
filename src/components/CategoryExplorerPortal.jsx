@@ -8,6 +8,7 @@ import {
   ArrowRight,
   ArrowLeft,
   ChevronRight,
+  ChevronLeft,
   Shield,
   ShieldCheck,
   Layers,
@@ -32,6 +33,7 @@ import {
   RefreshCw,
   Lock,
   Unlock,
+  Settings,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import ExamThumbnail from '../pages/admin/ExamThumbnail';
@@ -302,6 +304,219 @@ function matchJobsForExam(allJobs, selectedExam) {
   return [];
 }
 
+// Helper: Generates pixel-perfect card metadata matching reference design
+function getExamRichCardData(exam, categoryName, division) {
+  const rawName = exam.name || exam.title || '';
+  const nameLower = rawName.toLowerCase();
+  const conducting = exam.conducting_body?.name || exam.conductingBody || '';
+  const regionLevel = exam.region?.name || exam.region?.level || exam.level || (division === 'central' ? 'Central' : 'State');
+
+  // 1. Short Display Title matching reference design
+  let displayTitle = rawName;
+  if (nameLower.startsWith('ssc cgl')) displayTitle = 'SSC CGL';
+  else if (nameLower.startsWith('ssc chsl')) displayTitle = 'SSC CHSL';
+  else if (nameLower.startsWith('ssc mts')) displayTitle = 'SSC MTS & Havaldar';
+  else if (nameLower.startsWith('ssc gd')) displayTitle = 'SSC GD Constable';
+  else if (nameLower.includes('junior engineer') || nameLower.startsWith('ssc je')) displayTitle = 'SSC Junior Engineer (JE)';
+  else if (nameLower.startsWith('ssc steno')) displayTitle = 'SSC Stenographer';
+  else if (nameLower.startsWith('ssc cpo')) displayTitle = 'SSC CPO';
+  else if (nameLower.startsWith('ssc jht')) displayTitle = 'SSC JHT';
+  else if (nameLower.startsWith('ssc selection post')) displayTitle = 'SSC Selection Post';
+  else if (nameLower.includes('scientific assistant')) displayTitle = 'SSC Scientific Assistant';
+  else if (nameLower.startsWith('nda')) displayTitle = 'NDA – National Defence Academy';
+  else if (nameLower.startsWith('cds')) displayTitle = 'CDS – Combined Defense Services';
+  else if (nameLower.startsWith('afcat')) displayTitle = 'AFCAT – Air Force Common Admission Test';
+  else if (nameLower.startsWith('capf')) displayTitle = 'CAPF – Central Armed Police Force';
+  else if (nameLower.startsWith('ibps po')) displayTitle = 'IBPS PO';
+  else if (nameLower.startsWith('ibps clerk')) displayTitle = 'IBPS Clerk';
+  else if (nameLower.startsWith('sbi po')) displayTitle = 'SBI PO';
+  else if (nameLower.startsWith('sbi clerk')) displayTitle = 'SBI Clerk';
+  else {
+    const stripped = rawName.replace(/\s*\([^)]*\)$/, '').trim();
+    displayTitle = stripped.length >= 4 ? stripped : rawName;
+  }
+
+  // 2. Comprehensive Description matching reference design
+  let description = '';
+  if (nameLower.includes('cgl')) {
+    description = 'Combined Graduate Level Examination for various Group B & C posts.';
+  } else if (nameLower.includes('chsl')) {
+    description = 'Combined Higher Secondary Level Examination for LDC, JSA, DEO etc.';
+  } else if (nameLower.includes('mts') || nameLower.includes('multi tasking')) {
+    description = 'Multi-Tasking (Non-Technical) Staff and Havaldar (CBIC & CBN) Examination.';
+  } else if (nameLower.includes('gd constable') || nameLower.includes('general duty')) {
+    description = 'Constable (General Duty) in CAPFs, SSF, Rifleman (ASSAM RIFLES) and NCB.';
+  } else if (nameLower.includes('engineer') || nameLower.includes('je ')) {
+    description = 'Junior Engineer Examination for Civil, Mechanical, Electrical and Quantity Surveying.';
+  } else if (nameLower.includes('steno')) {
+    description = 'Stenographer Grade ‘C’ & ‘D’ Examination in various Ministries/Departments.';
+  } else if (nameLower.includes('cpo')) {
+    description = 'Sub-Inspector in Delhi Police, CAPFs and Central Armed Police Forces.';
+  } else if (nameLower.includes('jht') || nameLower.includes('translator')) {
+    description = 'Junior Hindi Translator, Junior Translator and Senior Hindi Translator Exam.';
+  } else if (nameLower.includes('selection post')) {
+    description = 'Selection Posts Examination for Phase recruitments across Union Ministries.';
+  } else if (nameLower.includes('scientific assistant')) {
+    description = 'Scientific Assistant in India Meteorological Department (IMD) Recruitment.';
+  } else if (nameLower.includes('nda')) {
+    description = 'National Defence Academy & Naval Academy Examination for Officer Entry.';
+  } else if (nameLower.includes('cds')) {
+    description = 'Combined Defence Services Examination for Commissioned Officers in Armed Forces.';
+  } else if (nameLower.includes('afcat')) {
+    description = 'Air Force Common Admission Test for Flying and Ground Duty Branches.';
+  } else if (nameLower.includes('capf')) {
+    description = 'Central Armed Police Forces Assistant Commandants Competitive Examination.';
+  } else if (nameLower.includes('jag') || nameLower.includes('advocate general')) {
+    description = 'Judge Advocate General Entry Scheme for Law Graduates in the Indian Army.';
+  } else if (nameLower.includes('po') || nameLower.includes('probationary')) {
+    description = 'Probationary Officer / Management Trainee recruitment across Nationalized Banks.';
+  } else if (nameLower.includes('clerk') || nameLower.includes('assistant')) {
+    description = 'Clerical Cadre and Junior Associate Examination for Banking Operations.';
+  } else if (nameLower.includes('constable')) {
+    description = 'Executive Constable recruitment examination for law enforcement and security services.';
+  } else if (nameLower.includes('sub inspector') || nameLower.includes(' si ')) {
+    description = 'Sub-Inspector executive cadre competitive examination for investigation & law enforcement.';
+  } else if (nameLower.includes('teacher') || nameLower.includes('tgt') || nameLower.includes('pgt') || nameLower.includes('prt')) {
+    description = 'Teaching recruitment qualification examination for government schools and educational institutions.';
+  } else {
+    description = `Recruitment examination conducted by ${conducting || 'Commission'} for ${categoryName || 'Government'} cadres.`;
+  }
+
+  // 3. Icon and Color Theme
+  let theme = 'green';
+  let iconName = 'file';
+  if (nameLower.includes('chsl') || nameLower.includes('clerk') || nameLower.includes('computer')) {
+    theme = 'orange';
+    iconName = 'monitor';
+  } else if (nameLower.includes('mts') || nameLower.includes('group d') || nameLower.includes('staff')) {
+    theme = 'purple';
+    iconName = 'users';
+  } else if (nameLower.includes('constable') || nameLower.includes('police') || nameLower.includes('defence') || nameLower.includes('army') || nameLower.includes('navy') || nameLower.includes('air force') || nameLower.includes('capf') || nameLower.includes('nda') || nameLower.includes('cds')) {
+    theme = 'blue';
+    iconName = 'shield';
+  } else if (nameLower.includes('engineer') || nameLower.includes('technical') || nameLower.includes('je ') || nameLower.includes('scientific')) {
+    theme = 'teal';
+    iconName = 'settings';
+  } else if (nameLower.includes('steno') || nameLower.includes('typist') || nameLower.includes('jht') || nameLower.includes('translator')) {
+    theme = 'red';
+    iconName = 'scroll';
+  } else if (nameLower.includes('cgl') || nameLower.includes('graduate') || nameLower.includes('officer') || nameLower.includes('po ') || nameLower.includes('civil')) {
+    theme = 'green';
+    iconName = 'file';
+  } else {
+    const themes = ['green', 'orange', 'purple', 'blue', 'teal', 'red'];
+    const charSum = rawName.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
+    theme = themes[charSum % themes.length];
+    iconName = ['file', 'monitor', 'users', 'shield', 'settings', 'scroll'][charSum % 6];
+  }
+
+  // 4. Qualification Pill
+  let qualText = 'Graduate Level';
+  let qualTheme = 'qual-green';
+  let qualIcon = 'grad';
+  if (nameLower.includes('10+2') || nameLower.includes('chsl') || nameLower.includes('clerk') || nameLower.includes('intermediate') || nameLower.includes('stenographer')) {
+    qualText = '10+2 Level';
+    qualTheme = 'qual-orange';
+    qualIcon = 'grad';
+  } else if (nameLower.includes('mts') || nameLower.includes('matric') || nameLower.includes('group d') || nameLower.includes('peon')) {
+    qualText = 'Matriculation';
+    qualTheme = 'qual-purple';
+    qualIcon = 'grad';
+  } else if (nameLower.includes('gd constable') || nameLower.includes('police') || nameLower.includes('defence') || nameLower.includes('constable')) {
+    qualText = 'Police & Defence';
+    qualTheme = 'qual-blue';
+    qualIcon = 'shield';
+  } else if (nameLower.includes('engineer') || nameLower.includes('je ') || nameLower.includes('technical') || nameLower.includes('scientific')) {
+    qualText = 'Technical';
+    qualTheme = 'qual-teal';
+    qualIcon = 'settings';
+  } else if (nameLower.includes('cgl') || nameLower.includes('po') || nameLower.includes('officer') || nameLower.includes('civil') || nameLower.includes('cds')) {
+    qualText = 'Graduate Level';
+    qualTheme = 'qual-green';
+    qualIcon = 'grad';
+  } else {
+    qualText = 'Eligible Candidates';
+    qualTheme = 'qual-green';
+    qualIcon = 'grad';
+  }
+
+  // 5. Region / Level Pill
+  let levelText = 'Central';
+  if (typeof regionLevel === 'string' && regionLevel.toLowerCase().includes('central')) {
+    levelText = 'Central';
+  } else if (division === 'central') {
+    levelText = 'Central';
+  } else if (typeof regionLevel === 'string' && regionLevel.trim()) {
+    levelText = regionLevel;
+  } else {
+    levelText = division === 'ut' ? 'UT' : division === 'state' ? 'State' : 'Central';
+  }
+
+  // 6. Role / Posts Info (Footer Left)
+  let postText = 'Various Posts';
+  if (nameLower.includes('cgl')) postText = 'Various Posts';
+  else if (nameLower.includes('chsl')) postText = 'LDC, JSA, DEO';
+  else if (nameLower.includes('mts')) postText = 'MTS, Havaldar';
+  else if (nameLower.includes('gd constable') || nameLower.includes('constable')) postText = 'Constable (GD)';
+  else if (nameLower.includes('engineer') || nameLower.includes('je ')) postText = 'JE (Civil/Mech/Elec)';
+  else if (nameLower.includes('steno')) postText = 'Stenographer';
+  else if (nameLower.includes('cpo')) postText = 'Sub-Inspector';
+  else if (nameLower.includes('nda')) postText = 'Army, Navy, Air Force';
+  else if (nameLower.includes('cds')) postText = 'IMA, INA, AFA, OTA';
+  else if (nameLower.includes('po')) postText = 'Scale I Officers';
+  else if (nameLower.includes('clerk')) postText = 'Clerical Cadre';
+  else postText = conducting || 'Recruitment Posts';
+
+  // 7. Frequency Info
+  let freqText = 'Once a Year';
+  if (nameLower.includes('nda') || nameLower.includes('cds') || nameLower.includes('afcat')) {
+    freqText = 'Twice a Year';
+  }
+
+  return {
+    displayTitle,
+    description,
+    theme,
+    iconName,
+    qualText,
+    qualTheme,
+    qualIcon,
+    levelText,
+    postText,
+    freqText,
+  };
+}
+
+function renderCardIcon(iconName) {
+  switch (iconName) {
+    case 'monitor':
+      return <Monitor size={24} strokeWidth={2.2} />;
+    case 'users':
+      return <Users size={24} strokeWidth={2.2} />;
+    case 'shield':
+      return <Shield size={24} strokeWidth={2.2} />;
+    case 'settings':
+      return <Settings size={24} strokeWidth={2.2} />;
+    case 'scroll':
+      return <ScrollText size={24} strokeWidth={2.2} />;
+    case 'file':
+    default:
+      return <FileText size={24} strokeWidth={2.2} />;
+  }
+}
+
+function renderQualIcon(qualIcon) {
+  switch (qualIcon) {
+    case 'shield':
+      return <Shield size={12} strokeWidth={2.2} />;
+    case 'settings':
+      return <Settings size={12} strokeWidth={2.2} />;
+    case 'grad':
+    default:
+      return <GraduationCap size={12} strokeWidth={2.2} />;
+  }
+}
+
 /**
  * CategoryExplorerPortal
  *
@@ -323,8 +538,10 @@ export default function CategoryExplorerPortal({
   const navigate = useNavigate();
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [showAllExams, setShowAllExams] = useState(false);
+  const [showAllExams, setShowAllExams] = useState(true);
   const [examSearch, setExamSearch] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const EXAMS_PER_PAGE = 6;
   const [localDbExams, setLocalDbExams] = useState([]);
 
   // Sequential drilldown states
@@ -337,8 +554,9 @@ export default function CategoryExplorerPortal({
 
   // Reset states when switching category or division
   useEffect(() => {
-    setShowAllExams(false);
+    setShowAllExams(true);
     setExamSearch('');
+    setCurrentPage(1);
     setSelectedExam(null);
     setActiveReadingResource(null);
     setActiveResourceTab('all');
@@ -548,6 +766,35 @@ export default function CategoryExplorerPortal({
       return n.includes(q) || c.includes(q) || b.includes(q) || r.includes(q);
     });
   }, [allCategoryExams, examSearch]);
+
+  const handleSearchChange = (e) => {
+    setExamSearch(e.target.value);
+    setCurrentPage(1);
+  };
+
+  const totalPages = Math.max(1, Math.ceil(filteredAllExams.length / EXAMS_PER_PAGE));
+  const paginatedExams = useMemo(() => {
+    const start = (currentPage - 1) * EXAMS_PER_PAGE;
+    return filteredAllExams.slice(start, start + EXAMS_PER_PAGE);
+  }, [filteredAllExams, currentPage]);
+
+  const startIndex = filteredAllExams.length > 0 ? (currentPage - 1) * EXAMS_PER_PAGE + 1 : 0;
+  const endIndex = Math.min(currentPage * EXAMS_PER_PAGE, filteredAllExams.length);
+
+  const pageNumbers = useMemo(() => {
+    if (totalPages <= 5) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+    const pages = [];
+    pages.push(1);
+    if (currentPage > 3) pages.push('...');
+    for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+      pages.push(i);
+    }
+    if (currentPage < totalPages - 2) pages.push('...');
+    pages.push(totalPages);
+    return pages;
+  }, [currentPage, totalPages]);
 
   if (loading || !profile) {
     return (
@@ -1447,93 +1694,136 @@ export default function CategoryExplorerPortal({
             </div>
           </div>
 
-          <div className="cep-all-exams-list">
-            {filteredAllExams.length > 0 ? (
-              filteredAllExams.map((exam, idx) => {
-                const conductingName = exam.conducting_body?.name;
-                const regionName = exam.region?.name;
-                const subtitle = exam.subtitle || exam.category;
+          {filteredAllExams.length > 0 ? (
+            <>
+              <div className="cep-exams-card-grid">
+                {paginatedExams.map((exam, idx) => {
+                  const cardData = getExamRichCardData(exam, profile.category_name, division);
+                  return (
+                    <div
+                      key={exam.id || exam.examId || idx}
+                      className="cep-exam-card"
+                      onClick={() => handleContinuePrep(exam)}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      <div className="cep-card-header-row">
+                        <div className={`cep-card-icon-badge cep-badge-${cardData.theme}`}>
+                          {renderCardIcon(cardData.iconName)}
+                        </div>
+                        <div className="cep-card-title-box">
+                          <h4 className="cep-card-title">{cardData.displayTitle}</h4>
+                          <p className="cep-card-desc">{cardData.description}</p>
 
-                return (
-                  <div
-                    key={exam.id || exam.examId || idx}
-                    className="cep-full-exam-row"
-                    onClick={() => handleContinuePrep(exam)}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    {/* Preserved Thumbnail */}
-                    <div className="cep-full-exam-icon-wrap" style={{ padding: 0, overflow: 'hidden' }}>
-                      <ExamThumbnail
-                        label={exam.name || exam.title}
-                        conductingBodyName={conductingName}
-                        thumbnailSubject={exam.thumbnailSubject}
-                        accentColor={exam.accentColor}
-                        categoryName={exam.category || profile.category_name}
-                        level={exam.region?.level || exam.level}
-                        size="sm"
-                      />
-                    </div>
-
-                    <div className="cep-full-exam-info">
-                      <div className="cep-full-exam-title-row">
-                        <h4 className="cep-full-exam-title">{exam.name || exam.title}</h4>
-                        {subtitle && subtitle !== (exam.name || exam.title) && (
-                          <span className="cep-full-exam-subtitle-tag">{subtitle}</span>
-                        )}
+                          <div className="cep-card-pills-row">
+                            <span className={`cep-pill ${cardData.qualTheme}`}>
+                              {renderQualIcon(cardData.qualIcon)}
+                              <span>{cardData.qualText}</span>
+                            </span>
+                            <span className="cep-pill cep-pill-level">
+                              <Landmark size={12} strokeWidth={2.2} />
+                              <span>{cardData.levelText}</span>
+                            </span>
+                          </div>
+                        </div>
                       </div>
 
-                      <div className="cep-full-exam-tags-row">
-                        {conductingName && (
-                          <span className="cep-full-exam-tag conducting-tag">
-                            <Briefcase size={12} />
-                            {conductingName}
-                          </span>
-                        )}
-                        <span className="cep-full-exam-tag category-tag">
-                          {exam.category || profile.category_name}
-                        </span>
-                        {regionName && (
-                          <span className="cep-full-exam-tag region-tag">
-                            {regionName}
-                          </span>
-                        )}
+                      <div className="cep-card-footer-row">
+                        <div className="cep-card-meta-left">
+                          <div className="cep-meta-item">
+                            <Users size={13} className="cep-meta-icon" />
+                            <span>{cardData.postText}</span>
+                          </div>
+                          <span className="cep-meta-divider">|</span>
+                          <div className="cep-meta-item">
+                            <Calendar size={13} className="cep-meta-icon" />
+                            <span>{cardData.freqText}</span>
+                          </div>
+                        </div>
+
+                        <button
+                          type="button"
+                          className="cep-card-circle-btn"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleContinuePrep(exam);
+                          }}
+                          aria-label={`View ${cardData.displayTitle}`}
+                        >
+                          <ArrowRight size={15} strokeWidth={2.4} />
+                        </button>
                       </div>
                     </div>
-
-                    <div className="cep-full-exam-action">
-                      <button
-                        type="button"
-                        className="cep-continue-prep-btn"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleContinuePrep(exam);
-                        }}
-                      >
-                        <span>Continue Prep</span>
-                        <ArrowRight size={14} />
-                      </button>
-                    </div>
-                  </div>
-                );
-              })
-            ) : (
-              <div className="cep-all-exams-empty">
-                <Search size={32} className="cep-empty-icon" />
-                <p className="cep-empty-title">No exams found</p>
-                <p className="cep-empty-desc">
-                  No examinations matched &ldquo;{examSearch}&rdquo; in {profile.category_name}.
-                </p>
-                <button
-                  type="button"
-                  className="cep-reset-search-btn"
-                  onClick={() => setExamSearch('')}
-                >
-                  Clear search filter
-                </button>
+                  );
+                })}
               </div>
-            )}
-          </div>
+
+              <div className="cep-pagination-bar">
+                <div className="cep-pagination-info">
+                  Showing {startIndex} – {endIndex} of {filteredAllExams.length} examinations
+                </div>
+                {totalPages > 1 && (
+                  <div className="cep-pagination-controls">
+                    <button
+                      type="button"
+                      className="cep-page-nav-btn"
+                      disabled={currentPage === 1}
+                      onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                      aria-label="Previous page"
+                    >
+                      <ChevronLeft size={16} />
+                    </button>
+                    {pageNumbers.map((p, pIdx) => {
+                      if (p === '...') {
+                        return (
+                          <span key={`dots-${pIdx}`} className="cep-page-dots">
+                            ...
+                          </span>
+                        );
+                      }
+                      return (
+                        <button
+                          key={p}
+                          type="button"
+                          className={`cep-page-num-btn ${currentPage === p ? 'active' : ''}`}
+                          onClick={() => setCurrentPage(p)}
+                        >
+                          {p}
+                        </button>
+                      );
+                    })}
+                    <button
+                      type="button"
+                      className="cep-page-nav-btn"
+                      disabled={currentPage === totalPages}
+                      onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                      aria-label="Next page"
+                    >
+                      <ChevronRight size={16} />
+                    </button>
+                  </div>
+                )}
+              </div>
+            </>
+          ) : (
+            <div className="cep-all-exams-empty">
+              <Search size={32} className="cep-empty-icon" />
+              <p className="cep-empty-title">No exams found</p>
+              <p className="cep-empty-desc">
+                No examinations matched &ldquo;{examSearch}&rdquo; in {profile.category_name}.
+              </p>
+              <button
+                type="button"
+                className="cep-reset-search-btn"
+                onClick={() => {
+                  setExamSearch('');
+                  setCurrentPage(1);
+                }}
+              >
+                Clear search filter
+              </button>
+            </div>
+          )}
         </section>
       ) : (
         <section className="cep-details-card" aria-label={`${profile.category_name} Overview`}>
