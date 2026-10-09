@@ -1617,7 +1617,7 @@ const LearningCenter = () => {
 
   return (
     <div className="learning-wrapper">
-      <div className="learning-layout-full">
+      <div className={`learning-layout-full ${rightTab === 'explorer' ? 'learning-layout-explorer' : ''}`}>
         <main className="main-content">
           {/* Hero: Your Learning Center (Only shown in Recommended mode so Explorer mode is flush at top) */}
           {rightTab === 'recommended' && (
@@ -2766,51 +2766,53 @@ const LearningCenter = () => {
         </section>
           </div>
 
-          {/* ── Section 10: Full-Width Promotional Banner ── */}
-          <section className="lc-promo-banner" aria-label="VeerNXT Career Progression">
-            <div className="lc-promo-bg-layer" />
-            <div className="lc-promo-overlay" />
-            <div className="lc-promo-content">
-              <div className="lc-promo-left">
-                <span className="lc-promo-eyebrow">
-                  <ShieldCheck size={16} className="lc-promo-eyebrow-icon" /> VeerNXT Career Transition
-                </span>
-                <h2 className="lc-promo-title">
-                  Discipline built you.
-                  <span className="lc-promo-highlight"> Learning takes you further.</span>
-                </h2>
-                <p className="lc-promo-desc">
-                  Access structured courses, practice tests and expert content to achieve your next career goal.
-                  Built specifically for armed forces personnel transitioning into civilian leadership and public service.
-                </p>
+          {/* ── Section 10: Full-Width Promotional Banner (Only in Recommended Mode, since Explorer Mode has it inside portal below Why Choose Veer Next) ── */}
+          {rightTab === 'recommended' && (
+            <section className="lc-promo-banner" aria-label="VeerNXT Career Progression">
+              <div className="lc-promo-bg-layer" />
+              <div className="lc-promo-overlay" />
+              <div className="lc-promo-content">
+                <div className="lc-promo-left">
+                  <span className="lc-promo-eyebrow">
+                    <ShieldCheck size={16} className="lc-promo-eyebrow-icon" /> VeerNXT Career Transition
+                  </span>
+                  <h2 className="lc-promo-title">
+                    Discipline built you.
+                    <span className="lc-promo-highlight"> Learning takes you further.</span>
+                  </h2>
+                  <p className="lc-promo-desc">
+                    Access structured courses, practice tests and expert content to achieve your next career goal.
+                    Built specifically for armed forces personnel transitioning into civilian leadership and public service.
+                  </p>
 
-                <div className="lc-promo-stats">
-                  <div className="lc-promo-stat-item">
-                    <CheckCircle2 size={16} className="lc-promo-stat-icon" />
-                    <span>1,500+ Curated Resources</span>
+                  <div className="lc-promo-stats">
+                    <div className="lc-promo-stat-item">
+                      <CheckCircle2 size={16} className="lc-promo-stat-icon" />
+                      <span>1,500+ Curated Resources</span>
+                    </div>
+                    <div className="lc-promo-stat-item">
+                      <CheckCircle2 size={16} className="lc-promo-stat-icon" />
+                      <span>50+ Government Exams</span>
+                    </div>
+                    <div className="lc-promo-stat-item">
+                      <CheckCircle2 size={16} className="lc-promo-stat-icon" />
+                      <span>100% Free for Ex-Servicemen</span>
+                    </div>
                   </div>
-                  <div className="lc-promo-stat-item">
-                    <CheckCircle2 size={16} className="lc-promo-stat-icon" />
-                    <span>50+ Government Exams</span>
-                  </div>
-                  <div className="lc-promo-stat-item">
-                    <CheckCircle2 size={16} className="lc-promo-stat-icon" />
-                    <span>100% Free for Ex-Servicemen</span>
-                  </div>
-                </div>
 
-                <div className="lc-promo-actions">
-                  <button
-                    type="button"
-                    className="lc-promo-cta-btn"
-                    onClick={handleExploreAllCourses}
-                  >
-                    Explore All Courses <ArrowRight size={17} />
-                  </button>
+                  <div className="lc-promo-actions">
+                    <button
+                      type="button"
+                      className="lc-promo-cta-btn"
+                      onClick={handleExploreAllCourses}
+                    >
+                      Explore All Courses <ArrowRight size={17} />
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          )}
         </main>
 
         {/* ── Mobile Slide-In Filter Drawer (Sideways from left, Mobile <1100px Only) ── */}

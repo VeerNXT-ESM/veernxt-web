@@ -559,12 +559,16 @@ export default function CategoryExplorerPortal({
     setCurrentPage(1);
     onSetSidebarCollapsed?.(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    const rail = document.querySelector('.lc-content-rail');
+    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleBackToOverview = () => {
     setShowAllExams(false);
     onSetSidebarCollapsed?.(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    const rail = document.querySelector('.lc-content-rail');
+    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Reset states when switching category or division
@@ -576,6 +580,8 @@ export default function CategoryExplorerPortal({
     setActiveReadingResource(null);
     setActiveResourceTab('intro');
     onSetSidebarCollapsed?.(false);
+    const rail = document.querySelector('.lc-content-rail');
+    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
   }, [categoryName, division]);
 
   // Fetch subscription tier
@@ -2029,6 +2035,52 @@ export default function CategoryExplorerPortal({
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* ── Section 10: Promotional Banner (brought below Why Choose Veer Next) ── */}
+      <section className="lc-promo-banner" aria-label="VeerNXT Career Progression">
+        <div className="lc-promo-bg-layer" />
+        <div className="lc-promo-overlay" />
+        <div className="lc-promo-content">
+          <div className="lc-promo-left">
+            <span className="lc-promo-eyebrow">
+              <ShieldCheck size={16} className="lc-promo-eyebrow-icon" /> VeerNXT Career Transition
+            </span>
+            <h2 className="lc-promo-title">
+              Discipline built you.
+              <span className="lc-promo-highlight"> Learning takes you further.</span>
+            </h2>
+            <p className="lc-promo-desc">
+              Access structured courses, practice tests and expert content to achieve your next career goal.
+              Built specifically for armed forces personnel transitioning into civilian leadership and public service.
+            </p>
+
+            <div className="lc-promo-stats">
+              <div className="lc-promo-stat-item">
+                <CheckCircle2 size={16} className="lc-promo-stat-icon" />
+                <span>1,500+ Curated Resources</span>
+              </div>
+              <div className="lc-promo-stat-item">
+                <CheckCircle2 size={16} className="lc-promo-stat-icon" />
+                <span>50+ Government Exams</span>
+              </div>
+              <div className="lc-promo-stat-item">
+                <CheckCircle2 size={16} className="lc-promo-stat-icon" />
+                <span>100% Free for Ex-Servicemen</span>
+              </div>
+            </div>
+
+            <div className="lc-promo-actions">
+              <button
+                type="button"
+                className="lc-promo-cta-btn"
+                onClick={handleViewAllExams}
+              >
+                Explore All Courses <ArrowRight size={17} />
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </div>

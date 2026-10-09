@@ -3840,6 +3840,89 @@
   grid-template-columns: 74px 1fr !important;
 }
 
+/* ── Desktop Fixed Independent Two-Pane Layout for Explorer Mode ── */
+@media (min-width: 1024px) {
+  .learning-layout-explorer {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.5rem !important;
+    height: calc(100vh - 76px) !important;
+    max-height: calc(100vh - 76px) !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .learning-layout-explorer .main-content {
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .lc-main-grid-explorer {
+    grid-template-columns: 260px 1fr !important;
+    gap: 20px !important;
+    margin-top: 0 !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+    align-items: stretch !important;
+  }
+
+  .lc-main-grid-explorer.sidebar-collapsed {
+    grid-template-columns: 74px 1fr !important;
+  }
+
+  /* Left Panel: Fixed in place, scrolling inside its category content */
+  .lc-main-grid-explorer .lc-explorer-sidebar {
+    height: 100% !important;
+    max-height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    position: static !important;
+  }
+
+  .lc-main-grid-explorer .lc-explorer-sidebar-header {
+    flex-shrink: 0 !important;
+  }
+
+  .lc-main-grid-explorer .lc-explorer-nav {
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    max-height: none !important;
+    overscroll-behavior: contain !important;
+    padding-right: 4px !important;
+  }
+
+  /* Right Side: Fixed in place, scrolling by itself independently */
+  .lc-main-grid-explorer .lc-content-rail {
+    height: 100% !important;
+    max-height: 100% !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    padding-right: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Sleek, minimal custom scrollbars for independent scrolling panes */
+  .lc-main-grid-explorer .lc-content-rail::-webkit-scrollbar,
+  .lc-main-grid-explorer .lc-explorer-nav::-webkit-scrollbar {
+    width: 6px;
+  }
+  .lc-main-grid-explorer .lc-content-rail::-webkit-scrollbar-track,
+  .lc-main-grid-explorer .lc-explorer-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .lc-main-grid-explorer .lc-content-rail::-webkit-scrollbar-thumb,
+  .lc-main-grid-explorer .lc-explorer-nav::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+  }
+  .lc-main-grid-explorer .lc-content-rail::-webkit-scrollbar-thumb:hover,
+  .lc-main-grid-explorer .lc-explorer-nav::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
 /* ── Explorer Mode Sidebar (Modern Rounded Clean Card) ── */
 .lc-explorer-sidebar {
   padding: 12px 10px;
