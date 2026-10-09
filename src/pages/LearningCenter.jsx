@@ -2407,9 +2407,12 @@ const LearningCenter = () => {
               </div>
               )}
 
-              {/* ── Continue Learning Section ── */}
-              <div className="lc-section-box">
-                <div className="lc-section-header">
+              {/* ── Continue Learning & Popular Exams (Only in Recommended Mode, hidden in Explorer Mode) ── */}
+              {rightTab !== 'explorer' && (
+                <>
+                  {/* ── Continue Learning Section ── */}
+                  <div className="lc-section-box">
+                    <div className="lc-section-header">
                   <div className="lc-section-header-left">
                     <h2 className="lc-section-title">Continue Learning</h2>
                     <p className="lc-section-subtitle">Pick up right where you left off</p>
@@ -2756,7 +2759,9 @@ const LearningCenter = () => {
                   </div>
                 )}
               </div>
-            </section>
+            </>
+          )}
+        </section>
           </div>
 
           {/* ── Section 10: Full-Width Promotional Banner ── */}
