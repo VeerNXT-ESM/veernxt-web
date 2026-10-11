@@ -679,7 +679,6 @@ const LearningCenter = () => {
   );
 
   // Secondary sidebar filter criteria
-  const [bodySearch, setBodySearch] = useState('');
   const [showAllBodies, setShowAllBodies] = useState(false);
   const [showAllCategories, setShowAllCategories] = useState(false);
 
@@ -705,10 +704,96 @@ const LearningCenter = () => {
   const [categoryFilter, setCategoryFilter] = useState(paramCategory);
   const [rightTab, setRightTab] = useState(paramTab); // 'explorer' | 'recommended'
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
-  const [selectedBodyId, setSelectedBodyId] = useState('');
-  const [searchText, setSearchText] = useState('');
-  const [stateSearchText, setStateSearchText] = useState('');
-  const [selectedZone, setSelectedZone] = useState('all');
+  const [isPageTransitioning, setIsPageTransitioning] = useState(false);
+  // Per-division filter & search store to guarantee Central, State, and UT do not bleed into each other
+  const [divisionFilters, setDivisionFilters] = useState({
+    central: {
+      sidebarSearch: '',
+      sidebarFilterTab: 'all',
+      topSearchText: '',
+      selectedZone: 'all',
+      stateSearchText: '',
+      bodySearch: '',
+      selectedBodyId: '',
+      searchText: '',
+    },
+    state: {
+      sidebarSearch: '',
+      sidebarFilterTab: 'all',
+      topSearchText: '',
+      selectedZone: 'all',
+      stateSearchText: '',
+      bodySearch: '',
+      selectedBodyId: '',
+      searchText: '',
+    },
+    ut: {
+      sidebarSearch: '',
+      sidebarFilterTab: 'all',
+      topSearchText: '',
+      selectedZone: 'all',
+      stateSearchText: '',
+      bodySearch: '',
+      selectedBodyId: '',
+      searchText: '',
+    },
+  });
+
+  const activeModeKey = regionMode === 'state' ? 'state' : regionMode === 'ut' ? 'ut' : 'central';
+  const currentFilters = divisionFilters[activeModeKey] || divisionFilters.central;
+
+  const updateActiveDivisionFilter = useCallback((updates) => {
+    setDivisionFilters((prev) => {
+      const mode = activeModeKey;
+      return {
+        ...prev,
+        [mode]: {
+          ...(prev[mode] || prev.central),
+          ...updates,
+        },
+      };
+    });
+  }, [activeModeKey]);
+
+  const bodySearch = currentFilters.bodySearch;
+  const setBodySearch = useCallback((v) => {
+    updateActiveDivisionFilter({ bodySearch: typeof v === 'function' ? v(currentFilters.bodySearch) : v });
+  }, [updateActiveDivisionFilter, currentFilters.bodySearch]);
+
+  const selectedBodyId = currentFilters.selectedBodyId;
+  const setSelectedBodyId = useCallback((v) => {
+    updateActiveDivisionFilter({ selectedBodyId: typeof v === 'function' ? v(currentFilters.selectedBodyId) : v });
+  }, [updateActiveDivisionFilter, currentFilters.selectedBodyId]);
+
+  const searchText = currentFilters.searchText;
+  const setSearchText = useCallback((v) => {
+    updateActiveDivisionFilter({ searchText: typeof v === 'function' ? v(currentFilters.searchText) : v });
+  }, [updateActiveDivisionFilter, currentFilters.searchText]);
+
+  const stateSearchText = currentFilters.stateSearchText;
+  const setStateSearchText = useCallback((v) => {
+    updateActiveDivisionFilter({ stateSearchText: typeof v === 'function' ? v(currentFilters.stateSearchText) : v });
+  }, [updateActiveDivisionFilter, currentFilters.stateSearchText]);
+
+  const selectedZone = currentFilters.selectedZone;
+  const setSelectedZone = useCallback((v) => {
+    updateActiveDivisionFilter({ selectedZone: typeof v === 'function' ? v(currentFilters.selectedZone) : v });
+  }, [updateActiveDivisionFilter, currentFilters.selectedZone]);
+
+  const sidebarSearch = currentFilters.sidebarSearch;
+  const setSidebarSearch = useCallback((v) => {
+    updateActiveDivisionFilter({ sidebarSearch: typeof v === 'function' ? v(currentFilters.sidebarSearch) : v });
+  }, [updateActiveDivisionFilter, currentFilters.sidebarSearch]);
+
+  const sidebarFilterTab = currentFilters.sidebarFilterTab;
+  const setSidebarFilterTab = useCallback((v) => {
+    updateActiveDivisionFilter({ sidebarFilterTab: typeof v === 'function' ? v(currentFilters.sidebarFilterTab) : v });
+  }, [updateActiveDivisionFilter, currentFilters.sidebarFilterTab]);
+
+  const topSearchText = currentFilters.topSearchText;
+  const setTopSearchText = useCallback((v) => {
+    updateActiveDivisionFilter({ topSearchText: typeof v === 'function' ? v(currentFilters.topSearchText) : v });
+  }, [updateActiveDivisionFilter, currentFilters.topSearchText]);
 
   const [expandedExamId, setExpandedExamId] = useState(null);
 
@@ -902,42 +987,60 @@ const LearningCenter = () => {
   }, [navigate, catalog, recordActiveLearning, categoryUrl, location.pathname, location.search]);
 
   const handleTabChange = (tab) => {
-    setRightTab(tab);
-    updateSearchParams({
-      tab: tab === 'explorer' ? undefined : tab,
-    });
+    setIsPageTransitioning(true);
+    setTimeout(() => {
+      setRightTab(tab);
+      updateSearchParams({
+        tab: tab === 'explorer' ? undefined : tab,
+      });
+      setIsPageTransitioning(false);
+    }, 320);
   };
 
   const handleRegionModeChange = (mode) => {
-    setRegionMode(mode);
-    setRegionFilterId('');
-    setCategoryFilter('');
-    setSelectedBodyId('');
-    updateSearchParams({
-      mode: mode === 'central' ? undefined : mode,
-      state: undefined,
-      category: undefined,
-      view: undefined,
-      exam: undefined,
-      resource: undefined,
-      manual: undefined,
-    });
+    setIsPageTransitioning(true);
+    setTimeout(() => {
+      setRegionMode(mode);
+      setRegionFilterId('');
+      setCategoryFilter('');
+      setSelectedBodyId('');
+      updateSearchParams({
+        mode: mode === 'central' ? undefined : mode,
+        state: undefined,
+        category: undefined,
+        view: undefined,
+        exam: undefined,
+        resource: undefined,
+        manual: undefined,
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setIsPageTransitioning(false);
+    }, 350);
   };
 
   const handleCategoryFilterChange = (category) => {
-    setCategoryFilter(category);
-    setSelectedBodyId('');
-    if (category) {
-      setRightTab('explorer');
-    }
-    updateSearchParams({
-      category: category || undefined,
-      tab: category ? undefined : undefined,
-      view: undefined,
-      exam: undefined,
-      resource: undefined,
-      manual: undefined,
-    });
+    setIsPageTransitioning(true);
+    setTimeout(() => {
+      setCategoryFilter(category);
+      setSelectedBodyId('');
+      if (category) {
+        setRightTab('explorer');
+      }
+      updateSearchParams({
+        category: category || undefined,
+        tab: category ? undefined : undefined,
+        view: undefined,
+        exam: undefined,
+        resource: undefined,
+        manual: undefined,
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setIsPageTransitioning(false);
+    }, 350);
   };
 
   const handleClearFilters = () => {
@@ -1061,35 +1164,49 @@ const LearningCenter = () => {
   }, [stateList, regionFilterId]);
 
   const handleSelectState = (stateItem) => {
-    setRegionFilterId(stateItem.id);
-    setCategoryFilter('');
-    setStateSearchText('');
-    updateSearchParams({
-      state: stateItem.id,
-      category: undefined,
-      view: undefined,
-      exam: undefined,
-      resource: undefined,
-      manual: undefined,
-    });
-  };
-
-  const handleBackToStates = () => {
-    if (internalNavDepthRef.current > 0) {
-      internalNavDepthRef.current -= 1;
-      navigate(-1);
-    } else {
-      setRegionFilterId('');
+    setIsPageTransitioning(true);
+    setTimeout(() => {
+      setRegionFilterId(stateItem.id);
       setCategoryFilter('');
+      setStateSearchText('');
       updateSearchParams({
-        state: undefined,
+        state: stateItem.id,
         category: undefined,
         view: undefined,
         exam: undefined,
         resource: undefined,
         manual: undefined,
-      }, { replace: true });
-    }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setIsPageTransitioning(false);
+    }, 350);
+  };
+
+  const handleBackToStates = () => {
+    setIsPageTransitioning(true);
+    setTimeout(() => {
+      if (internalNavDepthRef.current > 0) {
+        internalNavDepthRef.current -= 1;
+        navigate(-1);
+      } else {
+        setRegionFilterId('');
+        setCategoryFilter('');
+        updateSearchParams({
+          state: undefined,
+          category: undefined,
+          view: undefined,
+          exam: undefined,
+          resource: undefined,
+          manual: undefined,
+        }, { replace: true });
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setIsPageTransitioning(false);
+    }, 320);
   };
 
   // Exams satisfying the level gate (Central / State / UT)
@@ -1144,6 +1261,43 @@ const LearningCenter = () => {
       };
     });
   }, [categoryOptions, categoryCounts]);
+
+  const filteredExplorerCategoryList = useMemo(() => {
+    let list = explorerCategoryList;
+
+    if (sidebarFilterTab === 'defense') {
+      list = list.filter((item) => {
+        const k = item.key.toLowerCase();
+        return k.includes('defence') || k.includes('police') || k.includes('cpo') || k.includes('army') || k.includes('navy') || k.includes('air');
+      });
+    } else if (sidebarFilterTab === 'technical') {
+      list = list.filter((item) => {
+        const k = item.key.toLowerCase();
+        return k.includes('engin') || k.includes('barc') || k.includes('drdo') || k.includes('isro') || k.includes('nic') || k.includes('tech');
+      });
+    } else if (sidebarFilterTab === 'popular') {
+      list = list.filter((item) => (item.count || 0) >= 4);
+    }
+
+    const q = sidebarSearch.trim().toLowerCase();
+    if (!q) return list;
+
+    // Collect category names where any exam name matches q
+    const examMatchedCats = new Set();
+    if (levelExams && levelExams.length > 0) {
+      for (const e of levelExams) {
+        if ((e.name || '').toLowerCase().includes(q)) {
+          if (e.category) examMatchedCats.add(e.category.toLowerCase().trim());
+        }
+      }
+    }
+
+    return list.filter((item) => {
+      const keyLow = item.key.toLowerCase().trim();
+      const labelLow = item.label.toLowerCase().trim();
+      return labelLow.includes(q) || keyLow.includes(q) || examMatchedCats.has(keyLow);
+    });
+  }, [explorerCategoryList, sidebarSearch, sidebarFilterTab, levelExams]);
 
   const bodyOptions = useMemo(() => {
     const pool = categoryFilter
@@ -2022,8 +2176,67 @@ const LearningCenter = () => {
                         </div>
                       )}
 
+                      {/* Search and Quick Filters in Sidebar */}
+                      {!isSidebarCollapsed && (
+                        <div className="lc-sidebar-search-container">
+                          <div className="lc-sidebar-search-box">
+                            <Search size={14} className="lc-sidebar-search-icon" />
+                            <input
+                              type="text"
+                              placeholder="Search categories & exams..."
+                              value={sidebarSearch}
+                              onChange={(e) => setSidebarSearch(e.target.value)}
+                              className="lc-sidebar-search-input"
+                              aria-label="Search categories and exams"
+                            />
+                            {sidebarSearch && (
+                              <button
+                                type="button"
+                                className="lc-sidebar-search-clear"
+                                onClick={() => setSidebarSearch('')}
+                                aria-label="Clear sidebar search"
+                              >
+                                <X size={12} />
+                              </button>
+                            )}
+                          </div>
+
+                          <div className="lc-sidebar-filter-tabs">
+                            <button
+                              type="button"
+                              className={`lc-sidebar-tab ${sidebarFilterTab === 'all' ? 'active' : ''}`}
+                              onClick={() => setSidebarFilterTab('all')}
+                            >
+                              All
+                            </button>
+                            <button
+                              type="button"
+                              className={`lc-sidebar-tab ${sidebarFilterTab === 'popular' ? 'active' : ''}`}
+                              onClick={() => setSidebarFilterTab('popular')}
+                            >
+                              Popular
+                            </button>
+                            <button
+                              type="button"
+                              className={`lc-sidebar-tab ${sidebarFilterTab === 'defense' ? 'active' : ''}`}
+                              onClick={() => setSidebarFilterTab('defense')}
+                            >
+                              Defense
+                            </button>
+                            <button
+                              type="button"
+                              className={`lc-sidebar-tab ${sidebarFilterTab === 'technical' ? 'active' : ''}`}
+                              onClick={() => setSidebarFilterTab('technical')}
+                            >
+                              Technical
+                            </button>
+                          </div>
+                        </div>
+                      )}
+
                       <nav className="lc-explorer-nav" aria-label="Exam categories">
-                        {explorerCategoryList.map((item) => {
+                        {filteredExplorerCategoryList.length > 0 ? (
+                          filteredExplorerCategoryList.map((item) => {
                           const currentCategory = categoryFilter || activeCategoryForExplorer;
                           const isActive =
                             Boolean(currentCategory) &&
@@ -2061,8 +2274,24 @@ const LearningCenter = () => {
                               )}
                             </button>
                           );
-                        })}
-                      </nav>
+                        })
+                      ) : (
+                        <div className="lc-sidebar-empty-state">
+                          <Search size={20} className="lc-sidebar-empty-icon" />
+                          <p className="lc-sidebar-empty-title">No categories found</p>
+                          <button
+                            type="button"
+                            className="lc-sidebar-reset-btn"
+                            onClick={() => {
+                              setSidebarSearch('');
+                              setSidebarFilterTab('all');
+                            }}
+                          >
+                            Reset filters
+                          </button>
+                        </div>
+                      )}
+                    </nav>
                     </>
                   )}
                 </>
@@ -2100,7 +2329,7 @@ const LearningCenter = () => {
                             type="checkbox"
                             checked={!categoryFilter}
                             onChange={() => {
-                              setCategoryFilter('');
+                              handleCategoryFilterChange('');
                             }}
                           />
                           <span className="lc-checkbox-box" />
@@ -2120,7 +2349,7 @@ const LearningCenter = () => {
                                 checked={categoryFilter === cat}
                                 onChange={() => {
                                   const next = categoryFilter === cat ? '' : cat;
-                                  setCategoryFilter(next);
+                                  handleCategoryFilterChange(next);
                                 }}
                               />
                               <span className="lc-checkbox-box" />
@@ -2236,6 +2465,29 @@ const LearningCenter = () => {
                   </button>
                 </div>
 
+                {/* Live Top Search across all exams */}
+                <div className="lc-top-search-wrap">
+                  <Search size={14} className="lc-top-search-icon" />
+                  <input
+                    type="text"
+                    placeholder="Search any exam, syllabus or role..."
+                    value={topSearchText}
+                    onChange={(e) => setTopSearchText(e.target.value)}
+                    className="lc-top-search-input"
+                    aria-label="Search all exams and syllabi"
+                  />
+                  {topSearchText && (
+                    <button
+                      type="button"
+                      className="lc-top-search-clear"
+                      onClick={() => setTopSearchText('')}
+                      aria-label="Clear top search"
+                    >
+                      <X size={13} />
+                    </button>
+                  )}
+                </div>
+
                 {rightTab === 'explorer' && (
                   <div className="lc-explorer-region-chips" role="tablist" aria-label="Exam Region Level">
                     <button
@@ -2271,7 +2523,55 @@ const LearningCenter = () => {
 
               {/* View 1: Explorer Mode (Rich Portal matching Design Reference) */}
               {rightTab === 'explorer' ? (
-                (regionMode === 'state' || regionMode === 'ut') && !regionFilterId ? (
+                isPageTransitioning ? (
+                  <div className="lc-transition-skeleton" aria-live="polite">
+                    <div className="lc-skeleton-banner">
+                      <div className="lc-skeleton-banner-inner">
+                        <div className="lc-skeleton-badge" />
+                        <div className="lc-skeleton-title" />
+                        <div className="lc-skeleton-desc" />
+                      </div>
+                    </div>
+                    <div className="lc-skeleton-toolbar">
+                      <div className="lc-skeleton-pill" />
+                      <div className="lc-skeleton-pill" />
+                      <div className="lc-skeleton-pill" />
+                      <div className="lc-skeleton-pill" />
+                    </div>
+                    <div className="lc-skeleton-grid">
+                      <div className="lc-skeleton-card">
+                        <div className="lc-skeleton-card-badge" />
+                        <div className="lc-skeleton-card-title" />
+                        <div className="lc-skeleton-card-line" />
+                      </div>
+                      <div className="lc-skeleton-card">
+                        <div className="lc-skeleton-card-badge" />
+                        <div className="lc-skeleton-card-title" />
+                        <div className="lc-skeleton-card-line" />
+                      </div>
+                      <div className="lc-skeleton-card">
+                        <div className="lc-skeleton-card-badge" />
+                        <div className="lc-skeleton-card-title" />
+                        <div className="lc-skeleton-card-line" />
+                      </div>
+                      <div className="lc-skeleton-card">
+                        <div className="lc-skeleton-card-badge" />
+                        <div className="lc-skeleton-card-title" />
+                        <div className="lc-skeleton-card-line" />
+                      </div>
+                      <div className="lc-skeleton-card">
+                        <div className="lc-skeleton-card-badge" />
+                        <div className="lc-skeleton-card-title" />
+                        <div className="lc-skeleton-card-line" />
+                      </div>
+                      <div className="lc-skeleton-card">
+                        <div className="lc-skeleton-card-badge" />
+                        <div className="lc-skeleton-card-title" />
+                        <div className="lc-skeleton-card-line" />
+                      </div>
+                    </div>
+                  </div>
+                ) : (regionMode === 'state' || regionMode === 'ut') && !regionFilterId ? (
                   /* State/UT Directory Landing Grid when user is on State mode and hasn't picked a state yet */
                   <div className="lc-state-directory-container">
                     <div className="lc-state-directory-hero">
@@ -2410,6 +2710,7 @@ const LearningCenter = () => {
                   </div>
                 ) : (
                   <CategoryExplorerPortal
+                    key={`${regionMode}-${categoryFilter || activeCategoryForExplorer || 'portal'}`}
                     categoryName={categoryFilter || activeCategoryForExplorer}
                     stateName={activeState?.name || ''}
                     division={regionMode}
@@ -2417,6 +2718,8 @@ const LearningCenter = () => {
                     allCatalog={catalog}
                     isSidebarCollapsed={isSidebarCollapsed}
                     onSetSidebarCollapsed={setIsSidebarCollapsed}
+                    globalSearch={topSearchText}
+                    onClearGlobalSearch={() => setTopSearchText('')}
                     onSelectExam={(exam) => {
                       const id = exam.examId || exam.id;
                       if (id) {
@@ -3001,7 +3304,10 @@ const LearningCenter = () => {
                       <input
                         type="checkbox"
                         checked={!categoryFilter}
-                        onChange={() => setCategoryFilter('')}
+                        onChange={() => {
+                          handleCategoryFilterChange('');
+                          setMobileDrawerOpen(false);
+                        }}
                       />
                       <span className="lc-mobile-checkbox-box" />
                       <span className="lc-mobile-checkbox-text">All Categories</span>
@@ -3015,11 +3321,8 @@ const LearningCenter = () => {
                           checked={categoryFilter === cat}
                           onChange={() => {
                             const next = categoryFilter === cat ? '' : cat;
-                            setCategoryFilter(next);
-                            if (next) {
-                              setRightTab('explorer');
-                              setMobileDrawerOpen(false);
-                            }
+                            handleCategoryFilterChange(next);
+                            setMobileDrawerOpen(false);
                           }}
                         />
                         <span className="lc-mobile-checkbox-box" />

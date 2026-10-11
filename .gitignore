@@ -26,6 +26,7 @@ __pycache__
 *.sw?
 .env
 .env.local
+*.docx
 
 # Regenerable QA reports (scripts/scan_content_issues.mjs, etc.)
 content-issues-report.json

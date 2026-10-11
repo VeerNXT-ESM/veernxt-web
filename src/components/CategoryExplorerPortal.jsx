@@ -34,6 +34,9 @@ import {
   Lock,
   Unlock,
   Settings,
+  Lightbulb,
+  Filter,
+  SlidersHorizontal,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import ExamThumbnail from '../pages/admin/ExamThumbnail';
@@ -43,6 +46,12 @@ import SecureReader from './SecureReader';
 import { ReaderThemeProvider } from './book/theme/ReaderThemeProvider';
 import { normalizeReaderCategory } from './book/theme/customThemeStore';
 import { getEffectiveTier, isResourceLockedForUser } from '../lib/subscriptionAccess';
+import {
+  getCategoryBannerImage,
+  getCategoryKicker,
+  getCategoryTitleParts,
+  getCategoryEmblem,
+} from '../lib/categoryBannerHelper';
 import './CategoryExplorerPortal.css';
 
 let jobsV2Cache = null;
@@ -517,6 +526,13 @@ function renderQualIcon(qualIcon) {
   }
 }
 
+// Global per-division cache to ensure Central, State, and UT filters remain completely independent
+const divisionFilterCache = {
+  central: { qualFilter: 'all', sortBy: 'relevance', overviewSearch: '', overviewQualFilter: 'all', examSearch: '' },
+  state: { qualFilter: 'all', sortBy: 'relevance', overviewSearch: '', overviewQualFilter: 'all', examSearch: '' },
+  ut: { qualFilter: 'all', sortBy: 'relevance', overviewSearch: '', overviewQualFilter: 'all', examSearch: '' },
+};
+
 /**
  * CategoryExplorerPortal
  *
@@ -536,6 +552,8 @@ export default function CategoryExplorerPortal({
   onSetSidebarCollapsed,
   onSelectExam,
   onExploreContent,
+  globalSearch = '',
+  onClearGlobalSearch,
 }) {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -549,13 +567,58 @@ export default function CategoryExplorerPortal({
   const urlResourceParam = searchParams.get('resource');
   const urlManualParam = searchParams.get('manual');
 
+  const divKey = (division || 'central').toLowerCase();
+  const cachedForDiv = divisionFilterCache[divKey] || divisionFilterCache.central;
+
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [viewTransitioning, setViewTransitioning] = useState(false);
   const [showAllExams, setShowAllExams] = useState(urlViewParam === 'all');
-  const [examSearch, setExamSearch] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const EXAMS_PER_PAGE = 6;
   const [localDbExams, setLocalDbExams] = useState([]);
+
+  // Multi-facet filter & search states scoped independently per division
+  const [qualFilter, setQualFilterState] = useState(cachedForDiv.qualFilter);
+  const [sortBy, setSortByState] = useState(cachedForDiv.sortBy);
+  const [overviewSearch, setOverviewSearchState] = useState(cachedForDiv.overviewSearch);
+  const [overviewQualFilter, setOverviewQualFilterState] = useState(cachedForDiv.overviewQualFilter);
+  const [examSearch, setExamSearchState] = useState(cachedForDiv.examSearch);
+  const [materialSearch, setMaterialSearch] = useState('');
+  const [jobSearch, setJobSearch] = useState('');
+
+  const setQualFilter = useCallback((val) => {
+    setQualFilterState(val);
+    if (divisionFilterCache[divKey]) divisionFilterCache[divKey].qualFilter = val;
+  }, [divKey]);
+
+  const setSortBy = useCallback((val) => {
+    setSortByState(val);
+    if (divisionFilterCache[divKey]) divisionFilterCache[divKey].sortBy = val;
+  }, [divKey]);
+
+  const setOverviewSearch = useCallback((val) => {
+    setOverviewSearchState(val);
+    if (divisionFilterCache[divKey]) divisionFilterCache[divKey].overviewSearch = val;
+  }, [divKey]);
+
+  const setOverviewQualFilter = useCallback((val) => {
+    setOverviewQualFilterState(val);
+    if (divisionFilterCache[divKey]) divisionFilterCache[divKey].overviewQualFilter = val;
+  }, [divKey]);
+
+  const setExamSearch = useCallback((val) => {
+    setExamSearchState(val);
+    if (divisionFilterCache[divKey]) divisionFilterCache[divKey].examSearch = val;
+  }, [divKey]);
+
+  // Sync global search into portal searches
+  useEffect(() => {
+    if (globalSearch !== undefined && globalSearch !== null && globalSearch.trim()) {
+      setExamSearch(globalSearch);
+      setOverviewSearch(globalSearch);
+    }
+  }, [globalSearch, setExamSearch, setOverviewSearch]);
 
   // Sequential drilldown states
   const [selectedExam, setSelectedExam] = useState(null);
@@ -595,41 +658,53 @@ export default function CategoryExplorerPortal({
   }, []);
 
   const handleViewAllExams = () => {
-    setShowAllExams(true);
-    setCurrentPage(1);
-    updatePortalParams({ view: 'all' });
-    onSetSidebarCollapsed?.(true);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    const rail = document.querySelector('.lc-content-rail');
-    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+    setViewTransitioning(true);
+    setTimeout(() => {
+      setShowAllExams(true);
+      setCurrentPage(1);
+      updatePortalParams({ view: 'all' });
+      onSetSidebarCollapsed?.(true);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setViewTransitioning(false);
+    }, 320);
   };
 
   const handleBackToOverview = () => {
-    if (internalPortalDepthRef.current > 0) {
-      internalPortalDepthRef.current -= 1;
-      navigate(-1);
-    } else {
-      setShowAllExams(false);
-      updatePortalParams({ view: undefined }, { replace: true });
-      onSetSidebarCollapsed?.(false);
-    }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    const rail = document.querySelector('.lc-content-rail');
-    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+    setViewTransitioning(true);
+    setTimeout(() => {
+      if (internalPortalDepthRef.current > 0) {
+        internalPortalDepthRef.current -= 1;
+        navigate(-1);
+      } else {
+        setShowAllExams(false);
+        updatePortalParams({ view: undefined }, { replace: true });
+        onSetSidebarCollapsed?.(false);
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setViewTransitioning(false);
+    }, 320);
   };
 
   const handleBackFromExam = () => {
-    if (internalPortalDepthRef.current > 0) {
-      internalPortalDepthRef.current -= 1;
-      navigate(-1);
-    } else {
-      setSelectedExam(null);
-      updatePortalParams({ exam: undefined }, { replace: true });
-      if (urlViewParam !== 'all') onSetSidebarCollapsed?.(false);
-    }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    const rail = document.querySelector('.lc-content-rail');
-    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+    setViewTransitioning(true);
+    setTimeout(() => {
+      if (internalPortalDepthRef.current > 0) {
+        internalPortalDepthRef.current -= 1;
+        navigate(-1);
+      } else {
+        setSelectedExam(null);
+        updatePortalParams({ exam: undefined }, { replace: true });
+        if (urlViewParam !== 'all') onSetSidebarCollapsed?.(false);
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setViewTransitioning(false);
+    }, 320);
   };
 
   const handleBackFromReader = () => {
@@ -722,6 +797,7 @@ export default function CategoryExplorerPortal({
     let isMounted = true;
     async function fetchProfile() {
       if (!categoryName) return;
+      const startTime = Date.now();
       setLoading(true);
       try {
         const { data, error } = await supabase
@@ -773,7 +849,11 @@ export default function CategoryExplorerPortal({
               });
             }
           }
-          setLoading(false);
+          const elapsed = Date.now() - startTime;
+          const remainingDelay = Math.max(0, 380 - elapsed);
+          setTimeout(() => {
+            if (isMounted) setLoading(false);
+          }, remainingDelay);
         }
       } catch (err) {
         console.error('Failed to load category profile:', err);
@@ -948,18 +1028,103 @@ export default function CategoryExplorerPortal({
     return () => { isMounted = false; };
   }, [selectedExam]);
 
-  // Search filter for all exams
+  // Helper matchers for qualifications and levels
+  const matchesQualification = (exam, qual) => {
+    if (!qual || qual === 'all') return true;
+    const text = `${exam.name || ''} ${exam.category || ''} ${exam.qualification || ''} ${exam.eligibility || ''} ${exam.qualification_level || ''} ${exam.minimum_qualification || ''}`.toLowerCase();
+    if (qual === 'graduate') {
+      return text.includes('graduate') || text.includes('degree') || text.includes('cgl') || text.includes('cpo') || text.includes('post-graduate') || text.includes('bachelor');
+    }
+    if (qual === '10+2') {
+      return text.includes('10+2') || text.includes('12th') || text.includes('higher secondary') || text.includes('chsl') || text.includes('intermediate') || text.includes('stenographer');
+    }
+    if (qual === 'matric') {
+      return text.includes('matric') || text.includes('10th') || text.includes('mts') || text.includes('gd') || text.includes('secondary');
+    }
+    if (qual === 'technical') {
+      return text.includes('tech') || text.includes('je') || text.includes('engineer') || text.includes('diploma') || text.includes('iti') || text.includes('scientific');
+    }
+    return true;
+  };
+
+  // Search & multi-facet filter for all exams grid view
   const filteredAllExams = useMemo(() => {
-    if (!examSearch.trim()) return allCategoryExams;
-    const q = examSearch.toLowerCase().trim();
-    return allCategoryExams.filter((e) => {
-      const n = (e.name || '').toLowerCase();
-      const c = (e.category || '').toLowerCase();
-      const b = (e.conducting_body?.name || '').toLowerCase();
-      const r = (e.region?.name || '').toLowerCase();
-      return n.includes(q) || c.includes(q) || b.includes(q) || r.includes(q);
+    let list = allCategoryExams;
+    if (examSearch.trim()) {
+      const q = examSearch.toLowerCase().trim();
+      list = list.filter((e) => {
+        const n = (e.name || '').toLowerCase();
+        const c = (e.category || '').toLowerCase();
+        const b = (e.conducting_body?.name || '').toLowerCase();
+        const r = (e.region?.name || '').toLowerCase();
+        return n.includes(q) || c.includes(q) || b.includes(q) || r.includes(q);
+      });
+    }
+    if (qualFilter !== 'all') {
+      list = list.filter((e) => matchesQualification(e, qualFilter));
+    }
+    if (sortBy === 'az') {
+      list = [...list].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    } else if (sortBy === 'za') {
+      list = [...list].sort((a, b) => (b.name || '').localeCompare(a.name || ''));
+    }
+    return list;
+  }, [allCategoryExams, examSearch, qualFilter, sortBy]);
+
+  // Overview filtered exams (matches overview search & qualification chips)
+  const filteredOverviewExams = useMemo(() => {
+    let list = allCategoryExams;
+    if (overviewSearch.trim()) {
+      const q = overviewSearch.toLowerCase().trim();
+      list = list.filter((e) => {
+        const n = (e.name || '').toLowerCase();
+        const c = (e.category || '').toLowerCase();
+        const b = (e.conducting_body?.name || '').toLowerCase();
+        return n.includes(q) || c.includes(q) || b.includes(q);
+      });
+    }
+    if (overviewQualFilter !== 'all') {
+      list = list.filter((e) => matchesQualification(e, overviewQualFilter));
+    }
+    return list;
+  }, [allCategoryExams, overviewSearch, overviewQualFilter]);
+
+  // Study materials (guidebooks) search filter
+  const filteredGuideItems = useMemo(() => {
+    if (!materialSearch.trim()) return guideItems;
+    const q = materialSearch.toLowerCase().trim();
+    return guideItems.filter((res) => {
+      const t = (res.title || '').toLowerCase();
+      const s = (res.subject || res.module || '').toLowerCase();
+      const d = (res.description || '').toLowerCase();
+      return t.includes(q) || s.includes(q) || d.includes(q);
     });
-  }, [allCategoryExams, examSearch]);
+  }, [guideItems, materialSearch]);
+
+  // Précis revision notes search filter
+  const filteredPrecisItems = useMemo(() => {
+    if (!materialSearch.trim()) return precisItems;
+    const q = materialSearch.toLowerCase().trim();
+    return precisItems.filter((res) => {
+      const t = (res.title || '').toLowerCase();
+      const s = (res.subject || res.module || '').toLowerCase();
+      const d = (res.description || '').toLowerCase();
+      return t.includes(q) || s.includes(q) || d.includes(q);
+    });
+  }, [precisItems, materialSearch]);
+
+  // Exam matching jobs search filter
+  const filteredJobs = useMemo(() => {
+    if (!jobSearch.trim()) return examJobs;
+    const q = jobSearch.toLowerCase().trim();
+    return examJobs.filter((job) => {
+      const t = (job.title || job.role || '').toLowerCase();
+      const c = (job.company || job.organization || '').toLowerCase();
+      const l = (job.location || '').toLowerCase();
+      const s = (job.skills || []).join(' ').toLowerCase();
+      return t.includes(q) || c.includes(q) || l.includes(q) || s.includes(q);
+    });
+  }, [examJobs, jobSearch]);
 
   const handleSearchChange = (e) => {
     setExamSearch(e.target.value);
@@ -990,45 +1155,89 @@ export default function CategoryExplorerPortal({
     return pages;
   }, [currentPage, totalPages]);
 
-  if (loading || !profile) {
+  if (loading || !profile || viewTransitioning) {
     return (
       <div className="cep-loading-skeleton" aria-live="polite">
-        <div className="cep-skeleton-hero" />
+        <div className="cep-skeleton-hero">
+          <div className="cep-skeleton-hero-inner">
+            <div className="cep-skeleton-hero-badge" />
+            <div className="cep-skeleton-hero-title" />
+            <div className="cep-skeleton-hero-desc" />
+          </div>
+        </div>
+        <div className="cep-skeleton-toolbar">
+          <div className="cep-skeleton-search" />
+          <div className="cep-skeleton-chip" />
+          <div className="cep-skeleton-chip" />
+          <div className="cep-skeleton-chip" />
+        </div>
         <div className="cep-skeleton-grid">
-          <div className="cep-skeleton-card" />
-          <div className="cep-skeleton-card" />
-          <div className="cep-skeleton-card" />
-          <div className="cep-skeleton-card" />
-          <div className="cep-skeleton-card" />
+          <div className="cep-skeleton-card">
+            <div className="cep-skeleton-card-badge" />
+            <div className="cep-skeleton-card-title" />
+            <div className="cep-skeleton-card-line" />
+            <div className="cep-skeleton-card-line" style={{ width: '60%' }} />
+          </div>
+          <div className="cep-skeleton-card">
+            <div className="cep-skeleton-card-badge" />
+            <div className="cep-skeleton-card-title" />
+            <div className="cep-skeleton-card-line" />
+            <div className="cep-skeleton-card-line" style={{ width: '60%' }} />
+          </div>
+          <div className="cep-skeleton-card">
+            <div className="cep-skeleton-card-badge" />
+            <div className="cep-skeleton-card-title" />
+            <div className="cep-skeleton-card-line" />
+            <div className="cep-skeleton-card-line" style={{ width: '60%' }} />
+          </div>
+          <div className="cep-skeleton-card">
+            <div className="cep-skeleton-card-badge" />
+            <div className="cep-skeleton-card-title" />
+            <div className="cep-skeleton-card-line" />
+            <div className="cep-skeleton-card-line" style={{ width: '60%' }} />
+          </div>
+          <div className="cep-skeleton-card">
+            <div className="cep-skeleton-card-badge" />
+            <div className="cep-skeleton-card-title" />
+            <div className="cep-skeleton-card-line" />
+            <div className="cep-skeleton-card-line" style={{ width: '60%' }} />
+          </div>
+          <div className="cep-skeleton-card">
+            <div className="cep-skeleton-card-badge" />
+            <div className="cep-skeleton-card-title" />
+            <div className="cep-skeleton-card-line" />
+            <div className="cep-skeleton-card-line" style={{ width: '60%' }} />
+          </div>
         </div>
       </div>
     );
   }
 
-  // Level 1: Top & Related fallback lists
+  // Level 1: Top & Related fallback lists (responsive to overview filters)
+  const isOverviewFiltered = Boolean(overviewSearch.trim() || overviewQualFilter !== 'all');
+  const topExamsPool = isOverviewFiltered ? filteredOverviewExams : allCategoryExams;
+
   const topExams =
-    allCategoryExams.length > 0
-      ? allCategoryExams.slice(0, 5).map((e) => ({
+    topExamsPool.length > 0
+      ? topExamsPool.slice(0, 5).map((e) => ({
           title: e.name,
           subtitle: e.conducting_body?.name || e.category || 'Commission',
           examId: e.id,
         }))
-      : Array.isArray(profile.top_exams) && profile.top_exams.length > 0
+      : !isOverviewFiltered && Array.isArray(profile.top_exams) && profile.top_exams.length > 0
         ? profile.top_exams
-        : [
-            { title: `${profile.category_name} Exam`, subtitle: 'Competitive Examination', examId: '' },
-          ];
+        : [];
 
   const relatedExams =
-    allCategoryExams.slice(5, 11).length > 0
-      ? allCategoryExams.slice(5, 11).map((e) => ({
+    topExamsPool.slice(5, 11).length > 0
+      ? topExamsPool.slice(5, 11).map((e) => ({
           title: e.name,
           badge: e.category || 'Competitive Exam',
           examId: e.id,
         }))
-      : Array.isArray(profile.related_exams) && profile.related_exams.length > 0
+      : !isOverviewFiltered && Array.isArray(profile.related_exams) && profile.related_exams.length > 0
         ? profile.related_exams
-        : allCategoryExams.slice(0, 6).map((e) => ({
+        : topExamsPool.slice(0, 6).map((e) => ({
             title: e.name,
             badge: e.category || 'Competitive Exam',
             examId: e.id,
@@ -1063,23 +1272,31 @@ export default function CategoryExplorerPortal({
 
   // Open Resource handler: transitions to Level 3 Reader
   const handleOpenResource = (r) => {
-    setActiveReadingResource(r);
-    updatePortalParams({ resource: r.resource_id, manual: undefined });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    const rail = document.querySelector('.lc-content-rail');
-    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+    setViewTransitioning(true);
+    setTimeout(() => {
+      setActiveReadingResource(r);
+      updatePortalParams({ resource: r.resource_id, manual: undefined });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setViewTransitioning(false);
+    }, 280);
   };
 
   // Continue Prep button handler: transitions to Level 2
   const handleContinuePrep = (exam) => {
-    setSelectedExam(exam);
-    const examId = exam.id || exam.exam_id;
-    updatePortalParams({ exam: examId });
-    setActiveReadingResource(null);
-    setActiveResourceTab('intro');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    const rail = document.querySelector('.lc-content-rail');
-    if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+    setViewTransitioning(true);
+    setTimeout(() => {
+      setSelectedExam(exam);
+      const examId = exam.id || exam.exam_id;
+      updatePortalParams({ exam: examId });
+      setActiveReadingResource(null);
+      setActiveResourceTab('intro');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setViewTransitioning(false);
+    }, 320);
   };
 
   // Open Introduction handler: transitions to Level 3
@@ -1087,40 +1304,48 @@ export default function CategoryExplorerPortal({
     if (intro?.source === 'auto' && intro.resource) {
       handleOpenResource(intro.resource);
     } else if (intro?.source === 'manual') {
-      setActiveReadingResource({
-        isManual: true,
-        title: intro.title || `${selectedExam?.name || 'Exam'} - Introduction & Syllabus`,
-        body: intro.body,
-        category: 'Intro',
-      });
-      updatePortalParams({ manual: '1', resource: undefined });
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      const rail = document.querySelector('.lc-content-rail');
-      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setViewTransitioning(true);
+      setTimeout(() => {
+        setActiveReadingResource({
+          isManual: true,
+          title: intro.title || `${selectedExam?.name || 'Exam'} - Introduction & Syllabus`,
+          body: intro.body,
+          category: 'Intro',
+        });
+        updatePortalParams({ manual: '1', resource: undefined });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const rail = document.querySelector('.lc-content-rail');
+        if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+        setViewTransitioning(false);
+      }, 280);
     } else {
-      setActiveReadingResource({
-        isManual: true,
-        title: `${selectedExam?.name || 'Exam'} - Official Syllabus & Examination Guide`,
-        body: `
-          <div style="font-size: 15px; line-height: 1.8;">
-            <p><strong>Conducting Body:</strong> ${selectedExam?.conducting_body?.name || selectedExam?.conductingBody || 'Government Selection Board'}</p>
-            <p><strong>Category:</strong> ${selectedExam?.category || profile?.category_name || 'Competitive Examination'}</p>
-            <p><strong>Recruitment Level:</strong> ${selectedExam?.region?.level || selectedExam?.level || 'Central / State'}</p>
-            <hr style="margin: 20px 0; border: none; border-top: 1px solid #e2e8f0;" />
-            <h3 style="color: #065f46; font-size: 19px; margin-bottom: 8px;">Examination Overview</h3>
-            <p>${selectedExam?.description || profile?.about_text || 'Comprehensive exam preparation syllabus provided by Veer Next.'}</p>
-            <h3 style="color: #065f46; font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Selection Process & Pattern</h3>
-            <p>The recruitment process comprises multi-stage evaluations including Computer-Based Written Tests (CBT), skill assessments, and document verification. Structured module notes and previous year papers are compiled below.</p>
-            <h3 style="color: #065f46; font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Recommended Preparation Strategy</h3>
-            <p>1. Complete the core topic chapters in the Guidebooks.<br/>2. Revise key formulae and summary points via Préci.<br/>3. Benchmark timing using full-length Mock Tests.</p>
-          </div>
-        `,
-        category: 'Intro',
-      });
-      updatePortalParams({ manual: '1', resource: undefined });
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      const rail = document.querySelector('.lc-content-rail');
-      if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+      setViewTransitioning(true);
+      setTimeout(() => {
+        setActiveReadingResource({
+          isManual: true,
+          title: `${selectedExam?.name || 'Exam'} - Official Syllabus & Examination Guide`,
+          body: `
+            <div style="font-size: 15px; line-height: 1.8;">
+              <p><strong>Conducting Body:</strong> ${selectedExam?.conducting_body?.name || selectedExam?.conductingBody || 'Government Selection Board'}</p>
+              <p><strong>Category:</strong> ${selectedExam?.category || profile?.category_name || 'Competitive Examination'}</p>
+              <p><strong>Recruitment Level:</strong> ${selectedExam?.region?.level || selectedExam?.level || 'Central / State'}</p>
+              <hr style="margin: 20px 0; border: none; border-top: 1px solid #e2e8f0;" />
+              <h3 style="color: #065f46; font-size: 19px; margin-bottom: 8px;">Examination Overview</h3>
+              <p>${selectedExam?.description || profile?.about_text || 'Comprehensive exam preparation syllabus provided by Veer Next.'}</p>
+              <h3 style="color: #065f46; font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Selection Process & Pattern</h3>
+              <p>The recruitment process comprises multi-stage evaluations including Computer-Based Written Tests (CBT), skill assessments, and document verification. Structured module notes and previous year papers are compiled below.</p>
+              <h3 style="color: #065f46; font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Recommended Preparation Strategy</h3>
+              <p>1. Complete the core topic chapters in the Guidebooks.<br/>2. Revise key formulae and summary points via Préci.<br/>3. Benchmark timing using full-length Mock Tests.</p>
+            </div>
+          `,
+          category: 'Intro',
+        });
+        updatePortalParams({ manual: '1', resource: undefined });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const rail = document.querySelector('.lc-content-rail');
+        if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
+        setViewTransitioning(false);
+      }, 280);
     }
   };
 
@@ -1234,7 +1459,7 @@ export default function CategoryExplorerPortal({
             {profile.category_name}
           </span>
           <ChevronRight size={13} className="cep-bc-sep" />
-          <span className="cep-bc-current">{selectedExam.name}</span>
+          <span className="cep-bc-current">{selectedExam.name || selectedExam.title || 'Examination'}</span>
         </nav>
 
         <section className="cep-exam-hub-card">
@@ -1252,7 +1477,7 @@ export default function CategoryExplorerPortal({
               <span className="cep-crumb-pipe">|</span>
               <span className="cep-crumb-trail">{profile.category_name}</span>
               <ChevronRight size={13} className="cep-bc-sep" />
-              <span className="cep-crumb-active">{selectedExam.name}</span>
+              <span className="cep-crumb-active">{selectedExam.name || selectedExam.title || 'Examination'}</span>
             </div>
           </div>
 
@@ -1261,7 +1486,7 @@ export default function CategoryExplorerPortal({
             <div className="cep-exam-showcase-left-wrap">
               <div className="cep-exam-thumb-holder">
                 <ExamThumbnail
-                  label={selectedExam.name}
+                  label={selectedExam.name || selectedExam.title || 'Examination'}
                   conductingBodyName={conductingName}
                   thumbnailSubject={selectedExam.thumbnailSubject}
                   accentColor={selectedExam.accentColor}
@@ -1273,7 +1498,7 @@ export default function CategoryExplorerPortal({
 
               <div className="cep-exam-showcase-main">
                 <div className="cep-exam-showcase-title-row">
-                  <h2 className="cep-exam-showcase-title">{selectedExam.name}</h2>
+                  <h2 className="cep-exam-showcase-title">{selectedExam.name || selectedExam.title || 'Official Examination'}</h2>
                   <span className="cep-exam-primary-pill">
                     <Target size={13} /> Active Preparation
                   </span>
@@ -1300,42 +1525,32 @@ export default function CategoryExplorerPortal({
 
                 <p className="cep-exam-showcase-desc">
                   {selectedExam.description ||
-                    `Comprehensive preparation curriculum for ${selectedExam.name}. Master core subjects, practice previous year papers and evaluate preparedness with timed mocks.`}
+                    `Comprehensive preparation curriculum for ${selectedExam.name || selectedExam.title || 'this examination'}. Master core subjects, practice previous year papers and evaluate preparedness with timed mocks.`}
                 </p>
               </div>
             </div>
 
             {/* Right side visual: same image and gradient fade style as category hero card */}
             <div className="cep-exam-banner-visual-wrap">
-              {profile?.hero_image_url ? (
-                <div className="cep-hero-image-box">
+              <div className="cep-hero-image-box">
+                <img
+                  src={
+                    profile?.hero_image_url ||
+                    getCategoryBannerImage(selectedExam.category || profile?.category_name, profile?.division)
+                  }
+                  alt={`${selectedExam.name} Preparation`}
+                  className="cep-hero-img"
+                  loading="eager"
+                />
+                <div className="cep-hero-gradient-overlay" />
+                <div className="cep-hero-emblem-badge" title="Official Recruitment Seal">
                   <img
-                    src={profile.hero_image_url}
-                    alt={`${selectedExam.name} Preparation`}
-                    className="cep-hero-img"
-                    loading="eager"
+                    src={getCategoryEmblem(selectedExam.category || profile?.category_name)}
+                    alt="Official Seal Emblem"
+                    className="cep-hero-emblem-img"
                   />
-                  <div className="cep-hero-gradient-overlay" />
-                  <div className="cep-hero-script-overlay">
-                    <span className="cep-script-line">Prepare</span>
-                    <span className="cep-script-line">Practice</span>
-                    <span className="cep-script-line">Progress</span>
-                    <span className="cep-script-brand">with Veer Next</span>
-                  </div>
                 </div>
-              ) : (
-                <div className="cep-hero-placeholder-box">
-                  <div className="cep-hero-ph-emblem">
-                    <Shield size={64} className="cep-ph-shield" />
-                  </div>
-                  <div className="cep-hero-script-overlay">
-                    <span className="cep-script-line">Prepare</span>
-                    <span className="cep-script-line">Practice</span>
-                    <span className="cep-script-line">Progress</span>
-                    <span className="cep-script-brand">with Veer Next</span>
-                  </div>
-                </div>
-              )}
+              </div>
             </div>
           </div>
 
@@ -1485,6 +1700,29 @@ export default function CategoryExplorerPortal({
                   Préci ({precisItems.length})
                 </button>
               </div>
+
+              {/* Study Materials Search Input */}
+              <div className="cep-materials-search-box">
+                <Search size={14} className="cep-search-icon" />
+                <input
+                  type="text"
+                  placeholder={`Search ${activeResourceTab === 'guide' ? 'guidebooks' : activeResourceTab === 'precis' ? 'précis notes' : 'topics'}...`}
+                  value={materialSearch}
+                  onChange={(e) => setMaterialSearch(e.target.value)}
+                  className="cep-materials-search-input"
+                  aria-label="Filter study materials"
+                />
+                {materialSearch && (
+                  <button
+                    type="button"
+                    className="cep-search-clear-btn"
+                    onClick={() => setMaterialSearch('')}
+                    aria-label="Clear material search"
+                  >
+                    <X size={12} />
+                  </button>
+                )}
+              </div>
             </div>
 
             {contentLoading ? (
@@ -1530,8 +1768,8 @@ export default function CategoryExplorerPortal({
 
                 {/* 2. Guidebook Tiles */}
                 {activeResourceTab === 'guide' && (
-                  guideItems.length > 0 ? (
-                    guideItems.map((res) => (
+                  filteredGuideItems.length > 0 ? (
+                    filteredGuideItems.map((res) => (
                       <ResourceTile
                         key={res.id || res.resource_id}
                         resource={res}
@@ -1546,19 +1784,29 @@ export default function CategoryExplorerPortal({
                     <div className="cep-materials-empty" style={{ gridColumn: '1 / -1' }}>
                       <Layers size={28} style={{ color: '#059669', marginBottom: '8px' }} />
                       <p style={{ fontWeight: 600, color: '#0f172a', margin: '0 0 4px' }}>
-                        No guidebooks available yet
+                        {materialSearch ? `No guidebooks match "${materialSearch}"` : 'No guidebooks available yet'}
                       </p>
                       <p style={{ color: '#64748b', fontSize: '12.5px', margin: 0 }}>
-                        Study books for this examination are being uploaded soon.
+                        {materialSearch ? 'Try clearing your search term.' : 'Study books for this examination are being uploaded soon.'}
                       </p>
+                      {materialSearch && (
+                        <button
+                          type="button"
+                          className="cep-reset-search-btn"
+                          style={{ marginTop: '10px' }}
+                          onClick={() => setMaterialSearch('')}
+                        >
+                          Clear search
+                        </button>
+                      )}
                     </div>
                   )
                 )}
 
                 {/* 3. Preci Tiles */}
                 {activeResourceTab === 'precis' && (
-                  precisItems.length > 0 ? (
-                    precisItems.map((res) => (
+                  filteredPrecisItems.length > 0 ? (
+                    filteredPrecisItems.map((res) => (
                       <ResourceTile
                         key={res.id || res.resource_id}
                         resource={res}
@@ -1573,11 +1821,21 @@ export default function CategoryExplorerPortal({
                     <div className="cep-materials-empty" style={{ gridColumn: '1 / -1' }}>
                       <Target size={28} style={{ color: '#059669', marginBottom: '8px' }} />
                       <p style={{ fontWeight: 600, color: '#0f172a', margin: '0 0 4px' }}>
-                        No précis revision notes available yet
+                        {materialSearch ? `No précis notes match "${materialSearch}"` : 'No précis revision notes available yet'}
                       </p>
                       <p style={{ color: '#64748b', fontSize: '12.5px', margin: 0 }}>
-                        Concise summary notes for this examination are being prepared.
+                        {materialSearch ? 'Try clearing your search term.' : 'Concise summary notes for this examination are being prepared.'}
                       </p>
+                      {materialSearch && (
+                        <button
+                          type="button"
+                          className="cep-reset-search-btn"
+                          style={{ marginTop: '10px' }}
+                          onClick={() => setMaterialSearch('')}
+                        >
+                          Clear search
+                        </button>
+                      )}
                     </div>
                   )
                 )}
@@ -1601,9 +1859,32 @@ export default function CategoryExplorerPortal({
                   </p>
                 </div>
               </div>
-              <span className="cep-jobs-count-tag">
-                {examJobs.length} {examJobs.length === 1 ? 'Opportunity Found' : 'Opportunities Found'}
-              </span>
+              <div className="cep-jobs-head-right">
+                <div className="cep-jobs-search-box">
+                  <Search size={14} className="cep-search-icon" />
+                  <input
+                    type="text"
+                    placeholder="Filter openings by role..."
+                    value={jobSearch}
+                    onChange={(e) => setJobSearch(e.target.value)}
+                    className="cep-jobs-search-input"
+                    aria-label="Filter job openings"
+                  />
+                  {jobSearch && (
+                    <button
+                      type="button"
+                      className="cep-search-clear-btn"
+                      onClick={() => setJobSearch('')}
+                      aria-label="Clear job search"
+                    >
+                      <X size={12} />
+                    </button>
+                  )}
+                </div>
+                <span className="cep-jobs-count-tag">
+                  {filteredJobs.length} {filteredJobs.length === 1 ? 'Opportunity Found' : 'Opportunities Found'}
+                </span>
+              </div>
             </div>
 
             {jobsLoading ? (
@@ -1611,9 +1892,9 @@ export default function CategoryExplorerPortal({
                 <RefreshCw size={18} className="animate-spin" />
                 <span>Searching active recruitment openings…</span>
               </div>
-            ) : examJobs.length > 0 ? (
+            ) : filteredJobs.length > 0 ? (
               <div className="cep-jobs-grid">
-                {examJobs.map((job, idx) => {
+                {filteredJobs.map((job, idx) => {
                   const jobCompany = job.body || job.conducting_body || job.raw_json?.conducting_body || conductingName || 'Government Department';
                   const rawDate = job.last_date || job.lastDate || job.published_on || job.publishedOn;
                   const isLastDate = Boolean(job.last_date || job.lastDate);
@@ -1722,162 +2003,139 @@ export default function CategoryExplorerPortal({
         <span className="cep-bc-current">{profile.category_name}</span>
       </nav>
 
-      {/* ── Hero Banner Section (Clean White Card + Building Photo Seamless Blend) ── */}
-      <section className="cep-hero-card">
-        <div className="cep-hero-content">
-          <div className="cep-hero-title-row">
-            <h1 className="cep-hero-abbr">{profile.category_name}</h1>
-          </div>
-          <h2 className="cep-hero-fullname">
-            {profile.full_name || (stateName ? `${stateName} ` : '') + profile.category_name}
-          </h2>
-          <p className="cep-hero-tagline">{displayTagline}</p>
+      {/* ── Hero Banner Section (VeerNext Dark Green to Category Image Gradient Blend) ── */}
+      {(() => {
+        const bannerImage =
+          profile.hero_image_url || getCategoryBannerImage(profile.category_name, profile.division);
+        const bannerKicker = getCategoryKicker(profile.category_name, profile.full_name, stateName);
+        const titleParts = getCategoryTitleParts(profile.category_name);
+        const categoryEmblem = getCategoryEmblem(profile.category_name);
 
-          <div className="cep-hero-badges-row">
-            {(profile.badges || [
-              'Multiple Job Opportunities',
-              'All India Recruitment',
-              'Graduate & 10+2 Level Exams',
-              'Stable Career & Growth',
-            ]).map((badge, idx) => (
-              <span key={idx} className="cep-hero-badge-pill">
-                {idx === 0 && <Users size={15} className="cep-badge-icon badge-orange" />}
-                {idx === 1 && <BarChart3 size={15} className="cep-badge-icon badge-yellow" />}
-                {idx === 2 && <ShieldCheck size={15} className="cep-badge-icon badge-amber" />}
-                {idx === 3 && <Trophy size={15} className="cep-badge-icon badge-gold" />}
-                <span>{badge}</span>
-              </span>
-            ))}
-          </div>
-        </div>
+        return (
+          <section className="cep-hero-card" aria-label={`${profile.category_name} Overview Banner`}>
+            <div className="cep-hero-content">
+              <span className="cep-hero-kicker">{bannerKicker}</span>
 
-        {/* Hero Banner Visual with smooth gradient blend */}
-        <div className="cep-hero-visual-wrap">
-          {profile.hero_image_url ? (
-            <div className="cep-hero-image-box">
-              <img
-                src={profile.hero_image_url}
-                alt={`${profile.category_name} Headquarters`}
-                className="cep-hero-img"
-                loading="eager"
-              />
-              <div className="cep-hero-gradient-overlay" />
-              <div className="cep-hero-script-overlay">
-                <span className="cep-script-line">Prepare</span>
-                <span className="cep-script-line">Practice</span>
-                <span className="cep-script-line">Progress</span>
-                <span className="cep-script-brand">with Veer Next</span>
+              <h1 className="cep-hero-title">
+                <span className="cep-hero-title-accent">{titleParts.accentWord}</span>
+                <span className="cep-hero-title-main">{titleParts.mainWords}</span>
+              </h1>
+
+              <div className="cep-hero-accent-line" />
+
+              <p className="cep-hero-tagline">{displayTagline}</p>
+
+              <div className="cep-hero-pills-row" role="list" aria-label="Category Key Offerings">
+                <div
+                  className="cep-hero-pill"
+                  role="listitem"
+                  onClick={() => {
+                    if (topExams[0]?.examId) {
+                      handleContinuePrep(topExams[0]);
+                    } else {
+                      handleViewAllExams();
+                    }
+                  }}
+                  title="Explore Study Material & Books"
+                >
+                  <div className="cep-hero-pill-icon">
+                    <BookOpen size={15} />
+                  </div>
+                  <div className="cep-hero-pill-texts">
+                    <span className="cep-hero-pill-title">Study Material</span>
+                    <span className="cep-hero-pill-sub">Notes & PDFs</span>
+                  </div>
+                </div>
+
+                <div
+                  className="cep-hero-pill"
+                  role="listitem"
+                  onClick={() => onExploreContent?.('pyqs', profile)}
+                  title="Practice Solved Previous Year Questions"
+                >
+                  <div className="cep-hero-pill-icon">
+                    <FileText size={15} />
+                  </div>
+                  <div className="cep-hero-pill-texts">
+                    <span className="cep-hero-pill-title">Previous Year Papers</span>
+                    <span className="cep-hero-pill-sub">Solved PYQs</span>
+                  </div>
+                </div>
+
+                <div
+                  className="cep-hero-pill"
+                  role="listitem"
+                  onClick={() => onExploreContent?.('mocks', profile)}
+                  title="Take Simulated Mock Tests"
+                >
+                  <div className="cep-hero-pill-icon">
+                    <CheckCircle2 size={15} />
+                  </div>
+                  <div className="cep-hero-pill-texts">
+                    <span className="cep-hero-pill-title">Mock Tests</span>
+                    <span className="cep-hero-pill-sub">Practice & Analysis</span>
+                  </div>
+                </div>
+
+                <div
+                  className="cep-hero-pill"
+                  role="listitem"
+                  onClick={() => {
+                    const whyChooseElem = document.querySelector('.cep-why-choose-section');
+                    if (whyChooseElem) {
+                      whyChooseElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                  title="Preparation Guidance & Strategy"
+                >
+                  <div className="cep-hero-pill-icon">
+                    <Lightbulb size={15} />
+                  </div>
+                  <div className="cep-hero-pill-texts">
+                    <span className="cep-hero-pill-title">Expert Guidance</span>
+                    <span className="cep-hero-pill-sub">Strategy & Updates</span>
+                  </div>
+                </div>
               </div>
             </div>
-          ) : (
-            <div className="cep-hero-placeholder-box">
-              <div className="cep-hero-ph-emblem">
-                <Shield size={64} className="cep-ph-shield" />
-              </div>
-              <div className="cep-hero-script-overlay">
-                <span className="cep-script-line">Prepare</span>
-                <span className="cep-script-line">Practice</span>
-                <span className="cep-script-line">Progress</span>
-                <span className="cep-script-brand">with Veer Next</span>
+
+            {/* Script text between color and image across banner */}
+            <div className="cep-hero-script-middle" aria-hidden="true">
+              <span className="cep-script-word">Same</span>
+              <span className="cep-script-word">Exam</span>
+              <span className="cep-script-word">Bigger</span>
+              <span className="cep-script-word">Opportunities</span>
+              <div className="cep-script-double-underline">
+                <span className="cep-script-u-line1" />
+                <span className="cep-script-u-line2" />
               </div>
             </div>
-          )}
-        </div>
-      </section>
 
-      {/* ── 5 Quick Action Cards Row (Visual Showcase matching Reference Image) ── */}
-      <section className="cep-actions-grid" aria-label="Exam Preparation Modules">
-        {/* 1. Introduction */}
-        <div
-          className="cep-action-card cep-card-peach cep-action-card-clickable"
-          onClick={() => {
-            if (topExams[0]?.examId) {
-              handleContinuePrep(topExams[0]);
-            } else {
-              handleViewAllExams();
-            }
-          }}
-        >
-          <div className="cep-action-icon-wrap icon-peach">
-            <BookOpen size={26} strokeWidth={2.2} />
-          </div>
-          <h3 className="cep-action-title">Introduction</h3>
-          <p className="cep-action-desc">
-            Exam overview, posts, eligibility, pattern and important dates
-          </p>
-          <div className="cep-action-arrow-circle btn-peach" aria-hidden="true">
-            <ArrowRight size={15} strokeWidth={2.5} />
-          </div>
-        </div>
+            {/* Hero Banner Visual with smooth gradient blend */}
+            <div className="cep-hero-visual-wrap">
+              <div className="cep-hero-image-box">
+                <img
+                  src={bannerImage}
+                  alt={`${profile.category_name} Headquarters`}
+                  className="cep-hero-img"
+                  loading="eager"
+                />
+                <div className="cep-hero-gradient-overlay" />
+                {categoryEmblem && (
+                  <div className="cep-hero-emblem-badge" title="Official Seal">
+                    <img
+                      src={categoryEmblem}
+                      alt="Official Seal Emblem"
+                      className="cep-hero-emblem-img"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
 
-        {/* 2. Guidebooks */}
-        <div
-          className="cep-action-card cep-card-mint cep-action-card-clickable"
-          onClick={handleViewAllExams}
-        >
-          <div className="cep-action-icon-wrap icon-mint">
-            <Layers size={26} strokeWidth={2.2} />
-          </div>
-          <h3 className="cep-action-title">Guidebooks</h3>
-          <p className="cep-action-desc">
-            Complete study material as per latest syllabus
-          </p>
-          <div className="cep-action-arrow-circle btn-mint" aria-hidden="true">
-            <ArrowRight size={15} strokeWidth={2.5} />
-          </div>
-        </div>
-
-        {/* 3. Préci */}
-        <div
-          className="cep-action-card cep-card-rose cep-action-card-clickable"
-          onClick={handleViewAllExams}
-        >
-          <div className="cep-action-icon-wrap icon-rose">
-            <Target size={26} strokeWidth={2.2} />
-          </div>
-          <h3 className="cep-action-title">Preci</h3>
-          <p className="cep-action-desc">
-            Topic-wise concise notes for quick revision
-          </p>
-          <div className="cep-action-arrow-circle btn-rose" aria-hidden="true">
-            <ArrowRight size={15} strokeWidth={2.5} />
-          </div>
-        </div>
-
-        {/* 4. PYQs */}
-        <div
-          className="cep-action-card cep-card-sky cep-action-card-clickable"
-          onClick={() => navigate('/pyq-center')}
-        >
-          <div className="cep-action-icon-wrap icon-sky">
-            <FileText size={26} strokeWidth={2.2} />
-          </div>
-          <h3 className="cep-action-title">Previous Year Papers (PYQs)</h3>
-          <p className="cep-action-desc">
-            Year-wise papers with detailed solutions
-          </p>
-          <div className="cep-action-arrow-circle btn-sky" aria-hidden="true">
-            <ArrowRight size={15} strokeWidth={2.5} />
-          </div>
-        </div>
-
-        {/* 5. Mock Tests & Quizzes */}
-        <div
-          className="cep-action-card cep-card-lavender cep-action-card-clickable"
-          onClick={() => navigate('/quiz-center')}
-        >
-          <div className="cep-action-icon-wrap icon-lavender">
-            <CheckCircle2 size={26} strokeWidth={2.2} />
-          </div>
-          <h3 className="cep-action-title">Mock Tests & Quizzes</h3>
-          <p className="cep-action-desc">
-            Topic-wise, section-wise and full-length tests
-          </p>
-          <div className="cep-action-arrow-circle btn-lavender" aria-hidden="true">
-            <ArrowRight size={15} strokeWidth={2.5} />
-          </div>
-        </div>
-      </section>
 
       {/* ── Conditional: Full Width All Exams View OR 3-Column Overview ── */}
       {showAllExams ? (
@@ -1903,7 +2161,9 @@ export default function CategoryExplorerPortal({
 
             <div className="cep-all-exams-header-right">
               <div className="cep-all-exams-search-box">
-                <Search size={15} className="cep-search-icon" />
+                <div className="cep-search-icon-pill">
+                  <Search size={15} />
+                </div>
                 <input
                   type="text"
                   placeholder={`Search ${profile.category_name} exams...`}
@@ -1915,7 +2175,10 @@ export default function CategoryExplorerPortal({
                   <button
                     type="button"
                     className="cep-search-clear-btn"
-                    onClick={() => setExamSearch('')}
+                    onClick={() => {
+                      setExamSearch('');
+                      if (onClearGlobalSearch) onClearGlobalSearch();
+                    }}
                     aria-label="Clear search"
                   >
                     <X size={13} />
@@ -1923,6 +2186,62 @@ export default function CategoryExplorerPortal({
                 )}
               </div>
             </div>
+          </div>
+
+          {/* ── Multi-Facet Filter & Sort Toolbar for All Exams ── */}
+          <div className="cep-all-exams-filter-bar">
+            <div className="cep-filter-chips-group">
+              <span className="cep-filter-label"><Filter size={13} /> Qualification:</span>
+              {[
+                { id: 'all', label: 'All Roles' },
+                { id: 'graduate', label: 'Graduate' },
+                { id: '10+2', label: '10+2 Level' },
+                { id: 'matric', label: 'Matriculation' },
+                { id: 'technical', label: 'Technical' },
+              ].map((q) => (
+                <button
+                  key={q.id}
+                  type="button"
+                  className={`cep-filter-chip ${qualFilter === q.id ? 'active' : ''}`}
+                  onClick={() => {
+                    setQualFilter(q.id);
+                    setCurrentPage(1);
+                  }}
+                >
+                  {q.label}
+                </button>
+              ))}
+            </div>
+
+            <div className="cep-sort-group">
+              <label htmlFor="cep-sort-select" className="cep-filter-label">Sort:</label>
+              <select
+                id="cep-sort-select"
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="cep-sort-select"
+              >
+                <option value="relevance">Default Order</option>
+                <option value="az">Name: A to Z</option>
+                <option value="za">Name: Z to A</option>
+              </select>
+            </div>
+
+            {(examSearch || qualFilter !== 'all') && (
+              <button
+                type="button"
+                className="cep-filter-clear-all"
+                onClick={() => {
+                  setExamSearch('');
+                  setQualFilter('all');
+                  setSortBy('relevance');
+                  setCurrentPage(1);
+                  if (onClearGlobalSearch) onClearGlobalSearch();
+                }}
+              >
+                Clear all filters
+              </button>
+            )}
           </div>
 
           {filteredAllExams.length > 0 ? (
@@ -2057,7 +2376,91 @@ export default function CategoryExplorerPortal({
           )}
         </section>
       ) : (
-        <section className="cep-details-card" aria-label={`${profile.category_name} Overview`}>
+        <>
+          {/* Quick Overview Search & Filter Toolbar */}
+          <div className="cep-overview-search-toolbar">
+            <div className="cep-overview-search-box">
+              <div className="cep-search-icon-pill">
+                <Search size={16} />
+              </div>
+              <input
+                type="text"
+                placeholder={`Search ${profile.category_name} exams (e.g. MTS, CGL, Constable, JE)...`}
+                value={overviewSearch}
+                onChange={(e) => setOverviewSearch(e.target.value)}
+                className="cep-overview-search-input"
+                aria-label="Search exams in this category"
+              />
+              {overviewSearch && (
+                <button
+                  type="button"
+                  className="cep-search-clear-btn"
+                  onClick={() => {
+                    setOverviewSearch('');
+                    if (onClearGlobalSearch) onClearGlobalSearch();
+                  }}
+                  aria-label="Clear overview search"
+                >
+                  <X size={14} />
+                </button>
+              )}
+            </div>
+
+            <div className="cep-overview-filter-row">
+              <div className="cep-overview-qual-chips">
+                <span className="cep-filter-label"><Filter size={13} /> Filter:</span>
+                {[
+                  { id: 'all', label: 'All Qualifications' },
+                  { id: 'graduate', label: 'Graduate' },
+                  { id: '10+2', label: '10+2 Level' },
+                  { id: 'matric', label: 'Matriculation' },
+                  { id: 'technical', label: 'Technical' },
+                ].map((opt) => (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    className={`cep-filter-chip ${overviewQualFilter === opt.id ? 'active' : ''}`}
+                    onClick={() => setOverviewQualFilter(opt.id)}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+
+              {(overviewSearch || overviewQualFilter !== 'all') && (
+                <div className="cep-overview-active-actions">
+                  <span className="cep-filtered-count-badge">
+                    {filteredOverviewExams.length} {filteredOverviewExams.length === 1 ? 'Exam' : 'Exams'} Found
+                  </span>
+                  <button
+                    type="button"
+                    className="cep-filter-clear-all"
+                    onClick={() => {
+                      setOverviewSearch('');
+                      setOverviewQualFilter('all');
+                      if (onClearGlobalSearch) onClearGlobalSearch();
+                    }}
+                  >
+                    Reset
+                  </button>
+                  <button
+                    type="button"
+                    className="cep-view-all-filtered-btn"
+                    onClick={() => {
+                      setExamSearch(overviewSearch);
+                      setQualFilter(overviewQualFilter);
+                      setShowAllExams(true);
+                    }}
+                  >
+                    <span>View in Grid</span>
+                    <ArrowRight size={13} />
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <section className="cep-details-card" aria-label={`${profile.category_name} Overview`}>
           {/* Column 1: About Category */}
           <div className="cep-about-col">
             <div className="cep-col-header">
@@ -2186,7 +2589,8 @@ export default function CategoryExplorerPortal({
               ))}
             </div>
           </div>
-        </section>
+          </section>
+        </>
       )}
 
       {/* ── Bottom Section: Why Choose Veer Next ── */}

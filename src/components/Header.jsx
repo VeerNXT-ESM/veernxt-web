@@ -147,7 +147,7 @@ const Header = () => {
         }
         .header-container {
           width: 100%;
-          padding: 0 clamp(1.25rem, 3vw, 2.5rem);
+          padding: 0 14px;
           display: flex;
           align-items: center;
           justify-content: space-between;

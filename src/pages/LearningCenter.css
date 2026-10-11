@@ -9,9 +9,9 @@
 /* Layout — expansive wide canvas utilizing full screen width */
 .learning-layout-full {
   width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 2rem clamp(1.25rem, 3vw, 2.5rem);
+  max-width: 100%;
+  margin: 0;
+  padding: 0.25rem 8px 0.75rem 8px;
   box-sizing: border-box;
 }
 
@@ -3792,8 +3792,9 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 8px;
+  margin-top: 0;
+  margin-bottom: 6px;
 }
 
 .lc-explorer-region-chips {
@@ -3843,8 +3844,13 @@
 /* ── Desktop Fixed Independent Two-Pane Layout for Explorer Mode ── */
 @media (min-width: 1024px) {
   .learning-layout-explorer {
-    padding-top: 0.75rem !important;
-    padding-bottom: 0.5rem !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
     height: calc(100vh - 76px) !important;
     max-height: calc(100vh - 76px) !important;
     overflow: hidden !important;
@@ -3857,8 +3863,8 @@
   }
 
   .lc-main-grid-explorer {
-    grid-template-columns: 260px 1fr !important;
-    gap: 20px !important;
+    grid-template-columns: 250px 1fr !important;
+    gap: 12px !important;
     margin-top: 0 !important;
     height: 100% !important;
     max-height: 100% !important;
@@ -3867,7 +3873,7 @@
   }
 
   .lc-main-grid-explorer.sidebar-collapsed {
-    grid-template-columns: 74px 1fr !important;
+    grid-template-columns: 70px 1fr !important;
   }
 
   /* Left Panel: Fixed in place, scrolling inside its category content */
@@ -3879,6 +3885,8 @@
     overflow: hidden !important;
     box-sizing: border-box !important;
     position: static !important;
+    padding: 10px 8px !important;
+    border-radius: 16px !important;
   }
 
   .lc-main-grid-explorer .lc-explorer-sidebar-header {
@@ -3899,7 +3907,7 @@
     max-height: 100% !important;
     overflow-y: auto !important;
     overscroll-behavior: contain !important;
-    padding-right: 10px !important;
+    padding-right: 4px !important;
     box-sizing: border-box !important;
   }
 
@@ -4259,8 +4267,13 @@
 .lc-state-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.90) 0%, rgba(22, 45, 28, 0.85) 60%, rgba(15, 23, 42, 0.92) 100%);
-  backdrop-filter: blur(2px);
+  background: linear-gradient(
+    to right,
+    #062316 0%,
+    rgba(6, 35, 22, 0.95) 25%,
+    rgba(6, 35, 22, 0.65) 55%,
+    rgba(6, 35, 22, 0.15) 85%
+  );
   pointer-events: none;
 }
 
@@ -4588,5 +4601,321 @@
   color: #2e4a1e;
 }
 
+/* ── Learning Center Explorer Sidebar Search & Filters ── */
+.lc-sidebar-search-container {
+  padding: 10px 12px 8px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
+.lc-sidebar-search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0 8px;
+  height: 36px;
+  transition: all 0.2s ease;
+}
 
+.lc-sidebar-search-box:focus-within {
+  border-color: #062819;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(6, 40, 25, 0.08);
+}
+
+.lc-sidebar-search-icon {
+  color: #64748b;
+  flex-shrink: 0;
+  margin-right: 6px;
+}
+
+.lc-sidebar-search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.82rem;
+  color: #1e293b;
+  width: 100%;
+}
+
+.lc-sidebar-search-input::placeholder {
+  color: #94a3b8;
+}
+
+.lc-sidebar-search-clear {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.lc-sidebar-search-clear:hover {
+  color: #1e293b;
+  background: #f1f5f9;
+}
+
+.lc-sidebar-filter-tabs {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+
+.lc-sidebar-filter-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.lc-sidebar-filter-chip {
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.lc-sidebar-filter-chip:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.lc-sidebar-filter-chip.active {
+  background: #062819;
+  color: #fbbf24;
+  border-color: #062819;
+  box-shadow: 0 1px 3px rgba(6, 40, 25, 0.2);
+}
+
+.lc-sidebar-empty-search {
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.lc-sidebar-empty-search button {
+  border: none;
+  background: #f1f5f9;
+  color: #062819;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.lc-sidebar-empty-search button:hover {
+  background: #e2e8f0;
+}
+
+/* ── Top Bar Search Wrap in Learning Center ── */
+.lc-top-search-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0 10px;
+  height: 38px;
+  min-width: 220px;
+  max-width: 320px;
+  flex: 1;
+  transition: all 0.2s ease;
+}
+
+.lc-top-search-wrap:focus-within {
+  border-color: #062819;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(6, 40, 25, 0.08);
+}
+
+.lc-top-search-icon {
+  color: #64748b;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.lc-top-search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.85rem;
+  color: #1e293b;
+  width: 100%;
+}
+
+.lc-top-search-input::placeholder {
+  color: #94a3b8;
+}
+
+.lc-top-search-clear {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.lc-top-search-clear:hover {
+  color: #1e293b;
+  background: #f1f5f9;
+}
+
+/* ── Page & State Transition Shimmer Skeleton ── */
+.lc-transition-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  animation: lcShimmerFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 4px 0;
+}
+
+@keyframes lcShimmerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lcShimmerAnim {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.lc-skeleton-banner {
+  width: 100%;
+  min-height: 200px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #132e22 0%, #1a3e2e 30%, #24523d 50%, #1a3e2e 70%, #132e22 100%);
+  background-size: 200% 100%;
+  animation: lcShimmerAnim 1.5s infinite ease-in-out;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.lc-skeleton-banner-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 620px;
+}
+
+.lc-skeleton-badge {
+  width: 140px;
+  height: 24px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.lc-skeleton-title {
+  width: 72%;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.lc-skeleton-desc {
+  width: 88%;
+  height: 16px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lc-skeleton-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 2px;
+}
+
+.lc-skeleton-pill {
+  width: 110px;
+  height: 38px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: lcShimmerAnim 1.5s infinite ease-in-out;
+  border: 1px solid #e2e8f0;
+}
+
+.lc-skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.lc-skeleton-card {
+  min-height: 190px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #ffffff 0%, #f8fafc 40%, #f1f5f9 50%, #f8fafc 60%, #ffffff 100%);
+  background-size: 200% 100%;
+  animation: lcShimmerAnim 1.5s infinite ease-in-out;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lc-skeleton-card-badge {
+  width: 70px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+}
+
+.lc-skeleton-card-title {
+  width: 65%;
+  height: 20px;
+  border-radius: 6px;
+  background: #e2e8f0;
+}
+
+.lc-skeleton-card-line {
+  width: 90%;
+  height: 14px;
+  border-radius: 4px;
+  background: #f1f5f9;
+}

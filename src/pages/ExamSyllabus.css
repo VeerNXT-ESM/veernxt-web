@@ -121,10 +121,10 @@
 }
 
 .exam-banner {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 4px rgba(15,23,42,0.04);
-  border-radius: 16px !important;
+  background: #062819;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 36px -6px rgba(4, 28, 17, 0.45);
+  border-radius: 20px !important;
   padding: 1.5rem 1.75rem;
   display: flex;
   gap: 1.5rem;
@@ -138,12 +138,18 @@
 }
 
 .exam-banner-thumb {
-  width: 220px;
+  width: 200px;
   flex-shrink: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 2;
 }
 .exam-banner-main {
   flex: 1 1 300px;
   min-width: 240px;
+  z-index: 2;
 }
 
 .exam-title-row {
@@ -154,16 +160,18 @@
   margin-bottom: 0.75rem;
 }
 .exam-title {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   margin: 0;
   line-height: 1.25;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 .exam-mission-pill {
-  background: #e8f5e9;
-  color: #16a34a;
+  background: rgba(16, 185, 129, 0.2);
+  color: #86efac;
+  border: 1px solid rgba(134, 239, 172, 0.35);
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.28rem 0.75rem;
@@ -179,14 +187,20 @@
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.85rem;
+  flex-wrap: wrap;
 }
 .exam-meta-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  background: rgba(0, 36, 20, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 4px 10px;
+  backdrop-filter: blur(8px);
 }
 .exam-meta-icon {
-  color: #475569;
+  color: #fad074;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,65 +212,111 @@
 }
 .exam-meta-label {
   font-size: 0.68rem;
-  color: #94a3b8;
+  color: #cbd5e1;
   font-weight: 600;
 }
 .exam-meta-value {
   font-size: 0.88rem;
-  color: #0f172a;
+  color: #ffffff;
   font-weight: 700;
 }
 .exam-meta-divider {
-  width: 1px;
-  height: 28px;
-  background: #e2e8f0;
-  margin: 0 0.5rem;
+  display: none;
 }
 
 .exam-desc {
   font-size: 0.86rem;
-  color: #64748b;
+  color: #cbd5e1;
   line-height: 1.5;
   margin: 0;
   max-width: 520px;
 }
 
-.exam-banner-hero {
-  width: 250px;
-  height: 140px;
-  flex-shrink: 0;
-  border-radius: 12px !important;
+.exam-banner-hero-visual-wrap {
+  width: 360px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
   overflow: hidden;
-  position: relative;
-  background-size: cover;
-  background-position: center;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 1.1rem;
+  align-items: stretch;
+  z-index: 1;
+  background: transparent;
 }
 @media (max-width: 900px) {
-  .exam-banner-hero { display: none; }
+  .exam-banner-hero-visual-wrap { display: none; }
 }
-.exam-banner-hero::before {
-  content: '';
+
+.exam-banner-image-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.exam-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.05) 12%,
+    rgba(0, 0, 0, 0.35) 30%,
+    rgba(0, 0, 0, 0.75) 55%,
+    rgba(0, 0, 0, 0.95) 80%,
+    black 95%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.05) 12%,
+    rgba(0, 0, 0, 0.35) 30%,
+    rgba(0, 0, 0, 0.75) 55%,
+    rgba(0, 0, 0, 0.95) 80%,
+    black 95%
+  );
+}
+
+.exam-banner-gradient-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.85) 100%);
+  background: linear-gradient(
+    to right,
+    #062819 0%,
+    rgba(6, 40, 25, 0.96) 15%,
+    rgba(6, 40, 25, 0.72) 35%,
+    rgba(6, 40, 25, 0.28) 60%,
+    rgba(6, 40, 25, 0) 85%
+  );
+  pointer-events: none;
+  z-index: 2;
 }
-.exam-banner-hero-script {
-  position: relative;
-  z-index: 1;
-  text-align: right;
-  font-family: 'Caveat', cursive, sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #1e293b;
-  line-height: 1.15;
-  transform: rotate(-3deg);
+
+.exam-banner-emblem-badge {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
+  pointer-events: none;
 }
-.exam-banner-hero-script p {
-  margin: 0;
+
+.exam-banner-emblem-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Syllabus Subjects Card */
@@ -767,3 +827,55 @@
   .prep-section-head { flex-wrap: wrap; }
   .prep-view-all-link { margin-left: 2rem; }
 }
+
+/* Script text between color and image in Exam Syllabus */
+.exam-banner .cep-hero-script-middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-5deg);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  pointer-events: none;
+  user-select: none;
+}
+
+.exam-banner .cep-script-word {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+}
+
+.exam-banner .cep-script-double-underline {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.exam-banner .cep-script-u-line1 {
+  width: 140px;
+  height: 4px;
+  background: #f59e0b;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+.exam-banner .cep-script-u-line2 {
+  width: 100px;
+  height: 3px;
+  background: #f59e0b;
+  border-radius: 999px;
+  margin-left: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+

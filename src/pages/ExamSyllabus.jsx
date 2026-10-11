@@ -9,10 +9,8 @@ import { getEffectiveTier, TIERS, isResourceLockedForUser } from '../lib/subscri
 import { useExamContent, countProgress } from '../hooks/useExamContent';
 import { ResourceTile, IntroManualTile } from '../components/ExamContentPreview';
 import ExamThumbnail from './admin/ExamThumbnail';
+import { getCategoryBannerImage, getCategoryEmblem } from '../lib/categoryBannerHelper';
 import './ExamSyllabus.css';
-
-// Existing in-repo assets per user instruction
-const HERO_IMAGE = '/veernxt_assets/icons/S09_learning_center.png';
 
 const ExamSyllabus = () => {
   const { examId } = useParams();
@@ -208,15 +206,34 @@ const ExamSyllabus = () => {
               <p className="exam-desc">{description}</p>
             </div>
 
-            <div
-              className="exam-banner-hero"
-              style={{ backgroundImage: `url("${HERO_IMAGE}")` }}
-            >
-              <div className="exam-banner-hero-script">
-                <p>Prepare</p>
-                <p>Today for a</p>
-                <p>Brighter</p>
-                <p>Tomorrow</p>
+            {/* Script text between color and image across banner */}
+            <div className="cep-hero-script-middle" aria-hidden="true">
+              <span className="cep-script-word">Same</span>
+              <span className="cep-script-word">Exam</span>
+              <span className="cep-script-word">Bigger</span>
+              <span className="cep-script-word">Opportunities</span>
+              <div className="cep-script-double-underline">
+                <span className="cep-script-u-line1" />
+                <span className="cep-script-u-line2" />
+              </div>
+            </div>
+
+            <div className="exam-banner-hero-visual-wrap">
+              <div className="exam-banner-image-box">
+                <img
+                  src={getCategoryBannerImage(exam.category, exam.level)}
+                  alt={`${exam.name} Category`}
+                  className="exam-banner-img"
+                  loading="eager"
+                />
+                <div className="exam-banner-gradient-overlay" />
+                <div className="exam-banner-emblem-badge" title="Official Seal">
+                  <img
+                    src={getCategoryEmblem(exam.category)}
+                    alt="Official Seal Emblem"
+                    className="exam-banner-emblem-img"
+                  />
+                </div>
               </div>
             </div>
           </div>
