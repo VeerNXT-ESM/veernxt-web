@@ -7,6 +7,7 @@ import {
 import { supabase } from '../lib/supabase';
 import { useAccountSummary } from '../lib/useAccountSummary';
 import AccountMenu from './ui/AccountMenu';
+import ThemeToggle from './ui/ThemeToggle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -98,6 +99,11 @@ const Header = () => {
             </Link>
           )}
 
+          {/* Theme Mode Toggle */}
+          <div className="header-theme-toggle-wrap">
+            <ThemeToggle />
+          </div>
+
           {/* User Profile / Account menu */}
           <div className="nav-profile-dropdown">
             <button
@@ -133,17 +139,18 @@ const Header = () => {
 
       <style dangerouslySetInnerHTML={{ __html: `
         .linkedin-header {
-          background: #FFFFFF;
-          border-bottom: 1px solid #e2e8f0;
+          background: var(--surface);
+          border-bottom: 1px solid var(--border);
           position: sticky;
           top: 0;
           z-index: 100;
           width: 100%;
           font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
-          padding: calc(1rem + env(safe-area-inset-top, 0px)) 0 1rem;
+          padding: calc(0.75rem + env(safe-area-inset-top, 0px)) 0 0.75rem;
           display: flex;
           align-items: center;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+          box-shadow: var(--shadow-1);
+          transition: background-color 0.2s ease, border-color 0.2s ease;
         }
         .header-container {
           width: 100%;
@@ -160,7 +167,7 @@ const Header = () => {
           flex-shrink: 0;
         }
         .logo-img {
-          height: 74px;
+          height: 60px;
           width: auto;
           object-fit: contain;
           border-radius: 4px;
@@ -169,7 +176,7 @@ const Header = () => {
         .header-right {
           display: flex;
           align-items: center;
-          gap: 1.5rem;
+          gap: 1.25rem;
           height: 100%;
         }
         .nav-link-item {
@@ -178,9 +185,9 @@ const Header = () => {
           align-items: center;
           justify-content: center;
           gap: 0.25rem;
-          color: #64748b;
+          color: var(--text-secondary);
           text-decoration: none;
-          padding: 0.75rem 0.5rem;
+          padding: 0.5rem 0.4rem;
           cursor: pointer;
           position: relative;
           transition: all 0.15s;
@@ -192,10 +199,10 @@ const Header = () => {
           white-space: nowrap;
         }
         .nav-link-item:hover {
-          color: #0f172a;
+          color: var(--ios-text);
         }
         .nav-link-item.active {
-          color: #1F3A2E;
+          color: var(--ios-olive);
         }
         .nav-link-item.active::after {
           content: '';
@@ -204,7 +211,7 @@ const Header = () => {
           left: 10%;
           right: 10%;
           height: 3px;
-          background: #1F3A2E;
+          background: var(--ios-olive);
           border-radius: 99px;
         }
         .dot-badge {
@@ -250,7 +257,7 @@ const Header = () => {
           flex-direction: column;
           align-items: center;
           gap: 0.15rem;
-          color: #666;
+          color: var(--text-secondary);
           background: none;
           border: none;
           font: inherit;
@@ -263,27 +270,27 @@ const Header = () => {
           border-radius: 6px;
         }
         .nav-profile-trigger:hover {
-          color: #191919;
+          color: var(--ios-text);
         }
         .nav-avatar-placeholder {
-          width: 44px;
-          height: 44px;
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
-          background: #eef3f8;
+          background: var(--surface-alt);
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #666;
-          border: 2px solid transparent;
+          color: var(--text-secondary);
+          border: 1px solid var(--border);
           transition: border-color 0.15s;
         }
         .nav-profile-trigger:hover .nav-avatar-placeholder {
-          border-color: #d8e0e6;
+          border-color: var(--ios-olive);
         }
         .vertical-divider {
           width: 1px;
-          height: 34px;
-          background: #eef3f8;
+          height: 28px;
+          background: var(--border);
           align-self: center;
           margin: 0 0.25rem;
         }

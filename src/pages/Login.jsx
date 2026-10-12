@@ -4,6 +4,7 @@ import { supabase } from '../lib/supabase';
 import { ShieldCheck, Mail, Phone as PhoneIcon, ArrowLeft, Briefcase, User, Eye, EyeOff, Lock, UserPlus, KeyRound } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Tabs from '../components/ui/Tabs';
+import ThemeToggle from '../components/ui/ThemeToggle';
 
 /**
  * Login Page — Production Auth Flow
@@ -813,15 +814,21 @@ const Login = () => {
       alignItems: 'center',
       minHeight: '100vh',
       padding: '1.5rem',
-      background: '#1F3A2E',
+      background: 'var(--ios-bg)',
+      position: 'relative',
     }}>
+      {/* Top right theme toggle */}
+      <div style={{ position: 'fixed', top: '1.25rem', right: '1.5rem', zIndex: 10 }}>
+        <ThemeToggle />
+      </div>
+
       <div className="login-modal-card" style={{
         padding: '2rem 1.5rem',
         maxWidth: '420px',
         width: '100%',
         textAlign: 'center',
-        background: '#ffffff',
-        border: '1px solid #e2e8f0',
+        background: 'var(--surface)',
+        border: '1px solid var(--border)',
         borderRadius: 'var(--radius-md)',
         boxShadow: 'var(--shadow-2)',
       }}>
@@ -831,8 +838,8 @@ const Login = () => {
           <img src="/logo.png" alt="VeerNXT" style={{ width: '56px', height: '56px', objectFit: 'contain', borderRadius: 'var(--radius-sm)' }} />
         </div>
 
-        <h1 style={{ fontSize: '1.35rem', fontWeight: 700, color: '#0f172a', marginBottom: '0.3rem', letterSpacing: '-0.01em' }}>VeerNXT Access</h1>
-        <p style={{ color: '#475569', marginBottom: '1.5rem', fontSize: '0.9rem' }}>National employment portal for veteran transitioning &amp; hiring</p>
+        <h1 style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--ios-text)', marginBottom: '0.3rem', letterSpacing: '-0.01em' }}>VeerNXT Access</h1>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '0.9rem' }}>National employment portal for veteran transitioning &amp; hiring</p>
 
         {/* Role Selector */}
         <div style={{ marginBottom: '1.5rem' }}>

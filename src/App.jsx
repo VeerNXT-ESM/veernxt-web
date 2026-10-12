@@ -73,24 +73,8 @@ import V2Layout from './v2/V2Layout';
 import UniversalLanding from './v2/UniversalLanding';
 import LearningHome from './v2/LearningHome';
 import LearningBrowse from './v2/LearningBrowse';
+import { ThemeProvider } from './context/ThemeContext';
 import './index.css';
-
-/**
- * index.html has an inline script that sets a dark <body> background on
- * first load if the URL is "/", so the dark landing page doesn't flash
- * light before React mounts. That's a one-time inline style (highest CSS
- * specificity) that's never otherwise cleared — so it silently stuck
- * around on every page reached via client-side navigation afterward (no
- * full reload resets it) until the user hard-refreshed. Keeps it in sync
- * with the actual current route instead.
- */
-const BodyThemeSync = () => {
-  const location = useLocation();
-  useEffect(() => {
-    document.body.style.background = location.pathname === '/' ? '#0a0a0a' : '';
-  }, [location.pathname]);
-  return null;
-};
 
 /**
  * RootRoute Component
@@ -164,10 +148,10 @@ const RootRoute = () => {
 
 function App() {
   return (
-    <Router>
-      <BodyThemeSync />
-      <AiChatbotWidget />
-      <Routes>
+    <ThemeProvider>
+      <Router>
+        <AiChatbotWidget />
+        <Routes>
         {/* Landing / Root Handler */}
         <Route path="/" element={<RootRoute />} />
         
@@ -254,6 +238,7 @@ function App() {
         <Route path="/admin/reader-themes/:themeId" element={<ThemeEditor />} />
       </Routes>
     </Router>
+  </ThemeProvider>
   );
 }
 

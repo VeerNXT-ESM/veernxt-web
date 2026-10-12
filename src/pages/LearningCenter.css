@@ -3841,8 +3841,10 @@
   grid-template-columns: 74px 1fr !important;
 }
 
-/* ── Desktop Fixed Independent Two-Pane Layout for Explorer Mode ── */
-@media (min-width: 1024px) {
+/* ── Desktop Fixed Independent Two-Pane Layout for Explorer Mode ──
+   Starts at 1101px to match where the sidebar column exists (it's
+   restacked below 1100px, see "Tablet & Phone Layout" at the end). */
+@media (min-width: 1101px) {
   .learning-layout-explorer {
     padding-top: 2px !important;
     padding-bottom: 2px !important;
@@ -4918,4 +4920,382 @@
   height: 14px;
   border-radius: 4px;
   background: #f1f5f9;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Tablet & Phone Layout (<= 1100px)
+   The two-column grid collapses to one column here. Explorer mode used
+   to keep its fixed 260px/74px column (via !important), which squeezed
+   the content rail into that column once the sidebar was hidden, and it
+   left phones/tablets with no way to switch exam categories. Below we
+   stack everything and turn the explorer sidebar into a horizontal,
+   swipeable category strip that sits under the top bar.
+   ══════════════════════════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .lc-main-grid,
+  .lc-main-grid-explorer,
+  .lc-main-grid.sidebar-collapsed {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1rem !important;
+    margin-top: 0;
+  }
+
+  /* Flatten the rail so the top bar (mode tabs + search + region chips)
+     can sit above the category strip, with the content below it. */
+  .lc-main-grid-explorer > .lc-content-rail {
+    display: contents;
+  }
+
+  .lc-main-grid-explorer .lc-explorer-top-bar {
+    order: -2;
+    margin-bottom: 0;
+  }
+
+  .lc-main-grid-explorer > .lc-explorer-sidebar {
+    order: -1;
+    display: block;
+    position: static;
+    max-height: none;
+    overflow: visible;
+    min-width: 0;
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+  /* State/UT list: the main content already shows the full state
+     directory with search and zone chips, so skip the duplicate strip. */
+  .lc-main-grid-explorer > .lc-explorer-sidebar:has(nav[aria-label="States list"]) {
+    display: none;
+  }
+
+  .lc-explorer-sidebar-header {
+    padding: 2px 4px 8px;
+    margin-bottom: 6px;
+  }
+
+  .lc-explorer-collapse-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .lc-explorer-state-badge {
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 8px;
+  }
+
+  .lc-explorer-state-back-btn {
+    margin-right: 0;
+  }
+
+  .lc-sidebar-search-container {
+    padding: 0 0 8px;
+    border-bottom: none;
+  }
+
+  .lc-sidebar-search-box {
+    height: 40px;
+  }
+
+  /* Category nav: vertical list → horizontal scroll strip of pills */
+  .lc-main-grid-explorer .lc-explorer-nav {
+    flex-direction: row;
+    gap: 8px;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px 2px 6px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  .lc-main-grid-explorer .lc-explorer-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lc-main-grid-explorer .lc-explorer-nav-item {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 240px;
+    gap: 8px;
+    padding: 5px 12px 5px 5px;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    background: #ffffff;
+    scroll-snap-align: start;
+  }
+
+  .lc-main-grid-explorer .lc-explorer-sidebar-collapsed .lc-explorer-nav-item {
+    padding: 4px;
+  }
+
+  .lc-main-grid-explorer .lc-explorer-nav-icon-wrap,
+  .lc-main-grid-explorer .lc-explorer-sidebar-collapsed .lc-explorer-nav-icon-wrap {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+  }
+
+  .lc-main-grid-explorer .lc-explorer-nav-label {
+    flex: 0 1 auto;
+    font-size: 13px;
+  }
+
+  .lc-main-grid-explorer .lc-explorer-nav-count {
+    margin: 0;
+  }
+
+  .lc-main-grid-explorer .lc-explorer-nav-chevron {
+    display: none;
+  }
+
+  .lc-main-grid-explorer .lc-sidebar-empty-state {
+    width: 100%;
+  }
+
+  /* Top bar: tabs + search share a row on tablets, region chips below */
+  .lc-explorer-top-bar {
+    gap: 10px;
+  }
+
+  .lc-top-tabs-bar {
+    margin-bottom: 0;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .lc-top-search-wrap {
+    flex: 1 1 240px;
+    min-width: 0;
+    max-width: none;
+    height: 42px;
+  }
+
+  .lc-explorer-region-chips {
+    flex: 1 1 100%;
+  }
+
+  /* Hero: give the copy room before the script watermark would collide */
+  .lc-hero-banner {
+    padding: 2.75rem 2.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lc-hero-watermark {
+    display: none;
+  }
+
+  .lc-hero-overlay {
+    background: linear-gradient(
+      100deg,
+      rgba(14, 30, 20, 0.98) 0%,
+      rgba(14, 30, 20, 0.9) 55%,
+      rgba(14, 30, 20, 0.6) 100%
+    );
+  }
+
+  .lc-state-hero-content {
+    padding: 30px 28px;
+  }
+
+  .lc-state-directory-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+    gap: 16px;
+  }
+}
+
+/* ── Phones (<= 768px) ── */
+@media (max-width: 768px) {
+  .lc-hero-banner {
+    padding: 1.5rem 1.15rem 1.35rem;
+  }
+
+  /* Mode tabs fill the row, each tab takes half */
+  .lc-top-tabs-bar {
+    flex: 1 1 100%;
+    width: 100%;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 14px;
+  }
+
+  .lc-top-tab-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    padding: 9px 10px;
+    font-size: 13px;
+    gap: 6px;
+    min-height: 40px;
+  }
+
+  .lc-top-tab-btn > span:not(.lc-top-tab-pill) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+
+  .lc-top-tab-pill {
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-shrink: 1;
+  }
+
+  .lc-top-search-wrap {
+    flex: 1 1 100%;
+  }
+
+  /* 16px inputs stop iOS Safari from zooming the page on focus */
+  .lc-top-search-input,
+  .lc-hero-search-input,
+  .lc-sidebar-search-input,
+  .lc-state-search-input,
+  .lc-explorer-search-input,
+  .lc-mobile-drawer-search-input {
+    font-size: 16px;
+  }
+
+  .lc-explorer-region-chips,
+  .lc-state-zone-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+  }
+
+  .lc-explorer-region-chips::-webkit-scrollbar,
+  .lc-state-zone-chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lc-region-chip,
+  .lc-state-zone-chip {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    min-height: 36px;
+  }
+
+  /* State directory */
+  .lc-state-directory-container {
+    gap: 16px;
+  }
+
+  .lc-state-directory-hero {
+    border-radius: 16px;
+  }
+
+  .lc-state-hero-overlay {
+    background: linear-gradient(
+      100deg,
+      #062316 0%,
+      rgba(6, 35, 22, 0.92) 55%,
+      rgba(6, 35, 22, 0.7) 100%
+    );
+  }
+
+  .lc-state-hero-content {
+    padding: 20px 16px;
+  }
+
+  .lc-state-directory-title {
+    font-size: clamp(1.3rem, 6vw, 1.6rem);
+    line-height: 1.2;
+  }
+
+  .lc-state-directory-subtitle {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .lc-state-search-box {
+    padding: 8px 12px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+
+  .lc-state-directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .lc-state-card {
+    border-radius: 14px;
+  }
+
+  .lc-state-card-image-wrap {
+    height: 110px;
+  }
+
+  .lc-state-watermark-text {
+    font-size: 44px;
+  }
+
+  .lc-state-card-body {
+    padding: 4px 14px 14px;
+  }
+
+  .lc-state-card-name {
+    font-size: 16px;
+  }
+
+  .lc-state-card-categories {
+    margin-bottom: 12px;
+  }
+
+  .lc-state-card-footer {
+    padding-top: 10px;
+  }
+
+  /* Transition skeleton */
+  .lc-skeleton-banner {
+    min-height: 150px;
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .lc-skeleton-toolbar {
+    overflow: hidden;
+  }
+
+  .lc-skeleton-pill {
+    flex-shrink: 0;
+    width: 90px;
+  }
+
+  .lc-skeleton-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  }
+
+  .lc-exam-details-actions-stacked {
+    min-width: 0;
+  }
+
+  /* Comfortable tap targets */
+  .lc-checkbox-item,
+  .lc-mobile-checkbox-item {
+    min-height: 36px;
+  }
+}
+
+/* ── Small phones (<= 480px) ── */
+@media (max-width: 480px) {
+  .lc-top-tab-pill,
+  .lc-top-tab-icon {
+    display: none;
+  }
+
+  .lc-state-directory-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lc-state-card-image-wrap {
+    height: 120px;
+  }
 }

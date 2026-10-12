@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { User, Pencil, LifeBuoy, ShieldCheck, Scale, LogOut, X } from 'lucide-react';
+import { User, Pencil, LifeBuoy, ShieldCheck, Scale, LogOut, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../../context/ThemeContext';
 
 /**
  * The "Me" account control — one shared markup tree for both surfaces.
@@ -22,6 +23,7 @@ export default function AccountMenu({
 }) {
   const navigate = useNavigate();
   const firstItemRef = useRef(null);
+  const { isDark, toggleTheme } = useTheme();
 
   useEffect(() => {
     if (!open) return undefined;
@@ -92,6 +94,34 @@ export default function AccountMenu({
           </button>
           <button type="button" className="am-item" onClick={() => go(profilePath, { openEditProfile: true })}>
             <Pencil size={18} /> Edit Profile
+          </button>
+        </div>
+
+        <div className="am-group">
+          <span className="am-group-label">Appearance</span>
+          <button
+            type="button"
+            className="am-item"
+            onClick={toggleTheme}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}
+          >
+            <span style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+              {isDark ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} className="text-slate-600" />}
+              <span>{isDark ? 'Light Mode' : 'Dark Mode'}</span>
+            </span>
+            <span style={{
+              fontSize: '0.72rem',
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+              padding: '0.2rem 0.5rem',
+              borderRadius: '9999px',
+              background: 'var(--surface-alt)',
+              color: 'var(--ios-olive)',
+              border: '1px solid var(--border)',
+            }}>
+              {isDark ? 'Dark' : 'Light'}
+            </span>
           </button>
         </div>
 

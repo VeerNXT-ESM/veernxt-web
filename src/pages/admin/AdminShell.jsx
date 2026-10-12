@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { ADMIN_NAV } from './adminNavConfig';
+import { useTheme } from '../../context/ThemeContext';
 import {
   GraduationCap, Users, Shield,
   HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen, Sun, Moon,
@@ -47,9 +48,9 @@ const PAGE_META = {
 const AdminShell = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { theme, toggleTheme } = useTheme();
   const [session, setSession] = useState(null);
   const [collapsed, setCollapsed] = useState(() => localStorage.getItem('admin_sidebar_collapsed') === 'true');
-  const [theme, setTheme] = useState(() => localStorage.getItem('admin_theme') === 'light' ? 'light' : 'dark');
 
   useEffect(() => {
     const raw = localStorage.getItem('admin_session');
@@ -61,14 +62,6 @@ const AdminShell = () => {
     setCollapsed((prev) => {
       const next = !prev;
       localStorage.setItem('admin_sidebar_collapsed', String(next));
-      return next;
-    });
-  };
-
-  const toggleTheme = () => {
-    setTheme((prev) => {
-      const next = prev === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('admin_theme', next);
       return next;
     });
   };

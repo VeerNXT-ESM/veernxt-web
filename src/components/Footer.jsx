@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer style={{
-      borderTop: '1px solid #e2e8f0',
-      background: 'white',
+      borderTop: '1px solid var(--border)',
+      background: 'var(--surface)',
       padding: '1.25rem 2rem',
-      marginTop: 'auto'
+      marginTop: 'auto',
+      transition: 'background-color 0.2s ease, border-color 0.2s ease',
     }}>
       <div style={{
         maxWidth: '100%',
@@ -20,7 +21,7 @@ const Footer = () => {
       }}>
         <div style={{ 
           fontSize: '0.85rem', 
-          color: '#64748b',
+          color: 'var(--text-secondary)',
           fontWeight: '500'
         }}>
           © 2026 VeerNXT. Veteran Works Private Limited. All Rights Reserved. Built with Discipline.
@@ -32,9 +33,9 @@ const Footer = () => {
           fontSize: '0.85rem',
           fontWeight: '600'
         }}>
-          <Link to="/privacy" style={{ color: '#475569', textDecoration: 'none' }} className="hover-link">Privacy Policy</Link>
-          <Link to="/support" style={{ color: '#475569', textDecoration: 'none' }} className="hover-link">Support</Link>
-          <Link to="/legal" style={{ color: '#475569', textDecoration: 'none' }} className="hover-link">Legal</Link>
+          <Link to="/privacy" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }} className="hover-link">Privacy Policy</Link>
+          <Link to="/support" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }} className="hover-link">Support</Link>
+          <Link to="/legal" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }} className="hover-link">Legal</Link>
         </div>
       </div>
 

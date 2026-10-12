@@ -2,6 +2,8 @@
 @import "tailwindcss";
 @source "./";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, .dark, .dark *));
+
 @theme {
   --color-ios-bg: #FFFFFF;
   --color-ios-secondary: #F2F2F7;
@@ -11,7 +13,10 @@
   --shadow-ios: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
-:root {
+:root,
+[data-theme="light"],
+.light {
+  color-scheme: light;
   /* Marketing Design Tokens */
   --ios-bg: #F4F4F8; /* High-contrast LinkedIn grey body background */
   --ios-secondary: #FFFFFF;
@@ -58,6 +63,50 @@
   --glass-bg: rgba(244, 244, 248, 0.85);
   --glass-border: rgba(0, 0, 0, 0.05);
   --glass-shadow: var(--shadow-ios);
+}
+
+[data-theme="dark"],
+.dark {
+  color-scheme: dark;
+  /* Dark Mode Design Tokens */
+  --ios-bg: #0d1117;
+  --ios-secondary: #161b22;
+  --ios-olive: #10b981;
+  --ios-olive-soft: rgba(16, 185, 129, 0.16);
+  --ios-text: #f0f6fc;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-pill: 0px;
+  --radius-ios: var(--radius-md);
+
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-3: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --shadow-ios: var(--shadow-2);
+
+  --surface: #161b22;
+  --surface-alt: #0d1117;
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+
+  --success: #34d399;
+  --success-bg: rgba(52, 211, 153, 0.14);
+  --warning: #fbbf24;
+  --warning-bg: rgba(251, 191, 36, 0.14);
+  --danger: #f87171;
+  --danger-bg: rgba(248, 113, 113, 0.14);
+
+  --primary-color: #0d1117;
+  --secondary-color: #161b22;
+  --text-primary: #f0f6fc;
+  --text-secondary: #8b949e;
+  --accent-green: #10b981;
+  --accent-gold: #fbbf24;
+  --glass-bg: rgba(22, 27, 34, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: var(--shadow-3);
 }
 
 @layer base {
@@ -239,3 +288,131 @@
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
+
+/* ── Global Theme Overrides ── */
+body, [data-theme] {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--ios-bg);
+  color: var(--ios-text);
+}
+
+[data-theme="dark"] .glass-header {
+  background: rgba(22, 27, 34, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .ios-card,
+[data-theme="dark"] .glass-panel {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: var(--shadow-2);
+}
+
+[data-theme="dark"] input:not([type="checkbox"]):not([type="radio"]),
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: var(--surface-alt);
+  color: var(--ios-text);
+  border-color: var(--border);
+}
+
+/* Learning center dark overrides */
+[data-theme="dark"] .learning-wrapper {
+  background-color: #0d1117 !important;
+  color: var(--ios-text);
+}
+
+[data-theme="dark"] .lc-hero-search-bar {
+  background-color: #161b22;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .lc-hero-search-input {
+  color: #f0f6fc;
+}
+
+[data-theme="dark"] .lc-prop-card,
+[data-theme="dark"] .lc-filter-sidebar,
+[data-theme="dark"] .lc-tab-card,
+[data-theme="dark"] .lc-resource-card {
+  background-color: #161b22 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .lc-prop-title {
+  color: #f0f6fc !important;
+}
+
+/* Exam syllabus dark overrides */
+[data-theme="dark"] .exam-page {
+  color: var(--ios-text);
+}
+[data-theme="dark"] .exam-banner,
+[data-theme="dark"] .exam-section-card,
+[data-theme="dark"] .exam-sidebar-card,
+[data-theme="dark"] .exam-card {
+  background-color: #161b22 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+[data-theme="dark"] .exam-title,
+[data-theme="dark"] .exam-section-title {
+  color: #f0f6fc !important;
+}
+[data-theme="dark"] .exam-crumbs,
+[data-theme="dark"] .exam-back-link {
+  color: #8b949e !important;
+}
+
+/* Financial guidance dark overrides */
+[data-theme="dark"] .finance-site-root {
+  background-color: #0d1117 !important;
+  color: #f0f6fc !important;
+}
+[data-theme="dark"] .finance-site-root .nav {
+  background-color: #161b22 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+[data-theme="dark"] .finance-site-root .panel,
+[data-theme="dark"] .finance-site-root .calc-card,
+[data-theme="dark"] .finance-site-root .suite-card,
+[data-theme="dark"] .finance-site-root .feature-card {
+  background-color: #161b22 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Legal aid dark overrides */
+[data-theme="dark"] .legal-aid-cell {
+  background-color: #0d1117 !important;
+  color: #f0f6fc !important;
+}
+[data-theme="dark"] .legal-aid-cell .panel,
+[data-theme="dark"] .legal-aid-cell .choice,
+[data-theme="dark"] .legal-aid-cell .issue,
+[data-theme="dark"] .legal-aid-cell .servicebtn {
+  background-color: #161b22 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #f0f6fc !important;
+}
+[data-theme="dark"] .legal-aid-cell .intro,
+[data-theme="dark"] .legal-aid-cell small {
+  color: #8b949e !important;
+}
+
+/* Login modal dark overrides */
+[data-theme="dark"] .login-splash-container {
+  background: #0d1117 !important;
+}
+[data-theme="dark"] .login-modal-card {
+  background: #161b22 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+[data-theme="dark"] .login-modal-card h1 {
+  color: #f0f6fc !important;
+}
+[data-theme="dark"] .login-modal-card p {
+  color: #8b949e !important;
+}
+

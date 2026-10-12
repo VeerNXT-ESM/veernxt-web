@@ -39,15 +39,18 @@
 
 <body>
   <script>
-    // LandingPage.jsx is dark (bg-[#0a0a0a]), but that class only exists once
-    // React mounts — until then the browser paints the global light body
-    // background from index.css, visible as a flash of white/light-grey on
-    // every fresh load of "/". This runs synchronously before the JS bundle
-    // downloads/parses, closing that gap. Scoped to "/" only so no other
-    // (light-themed) route is affected.
-    if (window.location.pathname === '/') {
-      document.body.style.background = '#0a0a0a';
-    }
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme') || localStorage.getItem('admin_theme');
+        var theme = saved === 'dark' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) {}
+    })();
   </script>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
