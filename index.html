@@ -51,6 +51,13 @@
         }
       } catch (e) {}
     })();
+    // LandingPage.jsx is always dark (bg-[#0a0a0a]), but that class only
+    // exists once React mounts — paint the body dark on "/" right away so
+    // the landing page doesn't flash light. BodyThemeSync in App.jsx clears
+    // it on client-side navigation away from "/".
+    if (window.location.pathname === '/') {
+      document.body.style.background = '#0a0a0a';
+    }
   </script>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>

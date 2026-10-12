@@ -77,6 +77,21 @@ import { ThemeProvider } from './context/ThemeContext';
 import './index.css';
 
 /**
+ * index.html has an inline script that sets a dark <body> background on
+ * first load if the URL is "/", so the dark landing page doesn't flash
+ * light before React mounts. That inline style would otherwise stick
+ * around on every page reached via client-side navigation afterward, so
+ * keep it in sync with the current route.
+ */
+const BodyThemeSync = () => {
+  const location = useLocation();
+  useEffect(() => {
+    document.body.style.background = location.pathname === '/' ? '#0a0a0a' : '';
+  }, [location.pathname]);
+  return null;
+};
+
+/**
  * RootRoute Component
  * - If user is NOT signed in -> Renders LandingPage.
  * - If user IS signed in -> Redirects directly to /dashboard.
@@ -150,6 +165,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
+        <BodyThemeSync />
         <AiChatbotWidget />
         <Routes>
         {/* Landing / Root Handler */}
