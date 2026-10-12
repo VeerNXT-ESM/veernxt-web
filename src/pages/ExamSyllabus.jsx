@@ -8,8 +8,7 @@ import {
 import { getEffectiveTier, TIERS, isResourceLockedForUser } from '../lib/subscriptionAccess';
 import { useExamContent, countProgress } from '../hooks/useExamContent';
 import { ResourceTile, IntroManualTile } from '../components/ExamContentPreview';
-import ExamThumbnail from './admin/ExamThumbnail';
-import { getCategoryBannerImage, getCategoryEmblem } from '../lib/categoryBannerHelper';
+import { getCategoryBannerImage } from '../lib/categoryBannerHelper';
 import './ExamSyllabus.css';
 
 const ExamSyllabus = () => {
@@ -227,13 +226,6 @@ const ExamSyllabus = () => {
                   loading="eager"
                 />
                 <div className="exam-banner-gradient-overlay" />
-                <div className="exam-banner-emblem-badge" title="Official Seal">
-                  <img
-                    src={getCategoryEmblem(exam.category)}
-                    alt="Official Seal Emblem"
-                    className="exam-banner-emblem-img"
-                  />
-                </div>
               </div>
             </div>
           </div>

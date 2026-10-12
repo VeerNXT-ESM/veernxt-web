@@ -266,7 +266,7 @@
 /* Script text between color and image */
 .cep-hero-script-middle {
   position: absolute;
-  left: 48%;
+  left: 53%;
   top: 50%;
   transform: translateY(-50%) rotate(-5deg);
   z-index: 5;

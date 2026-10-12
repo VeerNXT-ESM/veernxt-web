@@ -50,7 +50,6 @@ import {
   getCategoryBannerImage,
   getCategoryKicker,
   getCategoryTitleParts,
-  getCategoryEmblem,
 } from '../lib/categoryBannerHelper';
 import './CategoryExplorerPortal.css';
 
@@ -1484,18 +1483,6 @@ export default function CategoryExplorerPortal({
           {/* Exam Hero Showcase Banner */}
           <div className="cep-exam-showcase-banner">
             <div className="cep-exam-showcase-left-wrap">
-              <div className="cep-exam-thumb-holder">
-                <ExamThumbnail
-                  label={selectedExam.name || selectedExam.title || 'Examination'}
-                  conductingBodyName={conductingName}
-                  thumbnailSubject={selectedExam.thumbnailSubject}
-                  accentColor={selectedExam.accentColor}
-                  categoryName={selectedExam.category || profile.category_name}
-                  level={selectedExam.region?.level || selectedExam.level}
-                  size="lg"
-                />
-              </div>
-
               <div className="cep-exam-showcase-main">
                 <div className="cep-exam-showcase-title-row">
                   <h2 className="cep-exam-showcase-title">{selectedExam.name || selectedExam.title || 'Official Examination'}</h2>
@@ -1543,13 +1530,6 @@ export default function CategoryExplorerPortal({
                   loading="eager"
                 />
                 <div className="cep-hero-gradient-overlay" />
-                <div className="cep-hero-emblem-badge" title="Official Recruitment Seal">
-                  <img
-                    src={getCategoryEmblem(selectedExam.category || profile?.category_name)}
-                    alt="Official Seal Emblem"
-                    className="cep-hero-emblem-img"
-                  />
-                </div>
               </div>
             </div>
           </div>
@@ -2009,7 +1989,6 @@ export default function CategoryExplorerPortal({
           profile.hero_image_url || getCategoryBannerImage(profile.category_name, profile.division);
         const bannerKicker = getCategoryKicker(profile.category_name, profile.full_name, stateName);
         const titleParts = getCategoryTitleParts(profile.category_name);
-        const categoryEmblem = getCategoryEmblem(profile.category_name);
 
         return (
           <section className="cep-hero-card" aria-label={`${profile.category_name} Overview Banner`}>
@@ -2121,15 +2100,6 @@ export default function CategoryExplorerPortal({
                   loading="eager"
                 />
                 <div className="cep-hero-gradient-overlay" />
-                {categoryEmblem && (
-                  <div className="cep-hero-emblem-badge" title="Official Seal">
-                    <img
-                      src={categoryEmblem}
-                      alt="Official Seal Emblem"
-                      className="cep-hero-emblem-img"
-                    />
-                  </div>
-                )}
               </div>
             </div>
           </section>

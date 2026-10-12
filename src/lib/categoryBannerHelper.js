@@ -157,5 +157,5 @@ export function getCategoryTitleParts(categoryName = '') {
  * Returns emblem badge if available
  */
 export function getCategoryEmblem(categoryName = '') {
-  return '/category_banners/emblem_ssc.png';
+  return null;
 }
