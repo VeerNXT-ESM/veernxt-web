@@ -78,7 +78,7 @@ New dependency: `html-to-image`.
 ## Known limits and open items
 
 1. **Nothing uses the thumbnail on the learning pages yet.** Saving sets `resources.thumbnail_url`, but no Learning Center page reads it for books. Wire the book tiles to `book_covers.thumb_url` (or `resources.thumbnail_url`) to make it visible to learners.
-2. **Renaming a Guide or Precis orphans its saved cover**, because the key includes the title. Fix: re-key `book_covers` inside the rename action in `save-resource.js`.
+2. **Renaming a book breaks its cover. Decision pending (to be agreed with Shreya); see "Decision: book renames" below.**
 3. **Exams are typed by hand.** Prefilling them from the book's linked exams is straightforward but needs a look at the `lc_exam_resource_map` / `lc_exams` link tables first.
 4. **No overflow warning.** Long titles, many bullets or big fonts can push the bottom of the cover past the edge. A check that warns when the flow height exceeds 1480 would help.
 5. **The cover-picture library is manual.** Each book needs its picture uploaded. Reusing one picture per subject (for example "Computer Science") would save time and keep covers consistent.
@@ -94,3 +94,35 @@ New dependency: `html-to-image`.
 - `sql/book_covers.sql` must exist in the target Supabase project (done for production). It is safe to re-run.
 - The server actions need `ADMIN_API_SECRET` (server) and `VITE_ADMIN_API_SECRET` (client) to match, plus the existing R2 env vars used by `r2-upload`.
 - Run locally with `npm run dev`; open Book Content, click **Design cover**.
+
+## Decision: book renames (open, 2026-10-13)
+
+**The problem.** Two separate things go wrong when a book is renamed in Book Content:
+
+1. **The saved cover is no longer found.** `book_covers` is keyed by category + lowercased title (Intro: `resource_id`), so after a rename the book has no cover row.
+2. **The baked thumbnail is stale.** The title is printed into the image, so even a correctly linked cover shows the old name until it is re-saved.
+
+Making the title read-only would fix only the second problem. It does not fix the first.
+
+**Constraint.** Book titles in `resources` are often filename-derived (for example `Haryana_GS`, `1.MTS_INTRO`), so printing them verbatim on a cover looks bad. `cleanContentTitle` (`src/lib/contentTitle.js`) tidies some of this, but not everything.
+
+### Option A — editable name, re-key on rename, stale warning (recommended)
+
+- When a book is renamed, re-key its cover in the same operation: update `book_covers.book_key` and `title` in the rename action in `api/admin/save-resource.js` (`books-save-tags`, which also handles title changes).
+- Pre-fill the subject name in the studio from the book title, cleaned with `cleanContentTitle`. The field stays editable (line breaks, casing and wording such as "Computer Science" instead of `Computer_Science_Guide` are design decisions).
+- Store the book title the cover was last baked from (new `book_covers` column, for example `baked_from_title`). If it differs from the current book title, the studio shows "The book was renamed since this cover was saved. Re-save to update the thumbnail", and the Book Content row shows a small marker.
+- Pros: flexible, small change, fixes both problems. Cons: the cover name can still differ from the book title on purpose, so the team has to re-save after a rename.
+
+### Option B — locked name, sourced from the book
+
+- The subject name is derived from the book title and cannot be edited. Only the line break (which line the name wraps on) stays editable.
+- Still needs the re-key on rename (problem 1) and a re-bake after a rename (problem 2), for example automatically or via the stale marker.
+- Pros: the cover can never disagree with the book. Cons: only safe once book titles are tidy, which they are not today, and it removes the team's control over wording.
+
+### Open questions for Shreya
+
+1. Option A or B?
+2. For B: is there a clean display-title field on books (or should one be added to `resources`) so covers do not depend on messy filenames?
+3. Should a rename trigger an automatic re-bake of the thumbnail, or only the stale marker?
+4. Intro books are keyed by `resource_id` and are not affected by the re-key problem, only by the stale thumbnail. Is that acceptable?
+
