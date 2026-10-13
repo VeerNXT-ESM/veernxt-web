@@ -1,12 +1,13 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Repeat, Save, X, Columns3, Eye, Layers, BookOpen, ImagePlus } from 'lucide-react';
+import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Repeat, Save, X, Columns3, Eye, Layers, BookOpen, ImagePlus, ArrowRightLeft } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import { useDebounced } from './lcShared';
 import AdminResourcePreview from './AdminResourcePreview';
 import LinkExamsDrawer from './LinkExamsDrawer';
 import BatchSyncBooksModal from '../../components/admin/BatchSyncBooksModal';
+import ReplaceWithExistingModal from '../../components/admin/ReplaceWithExistingModal';
 import { findMatchingCounterpartBook, syncBookPairLinks } from '../../lib/resourceDuplicates';
 import { NewBookModal, DuplicateBookModal, RenameBookModal, ConfirmDeleteModal, ConfirmArchiveModal } from '../../components/admin/BookFormModals';
 
@@ -108,6 +109,7 @@ const BooksPage = () => {
   const [duplicateSource, setDuplicateSource] = useState(null);
   const [renameSource, setRenameSource] = useState(null);
   const [archiveSource, setArchiveSource] = useState(null);
+  const [replaceExistingSource, setReplaceExistingSource] = useState(null);
   const [deleteSource, setDeleteSource] = useState(null);
   const [previewBook, setPreviewBook] = useState(null);
   const [selectedBookId, setSelectedBookId] = useState(null);
@@ -854,6 +856,16 @@ const BooksPage = () => {
                     >
                       <Repeat size={14} />
                     </button>
+                    {b.category !== 'Intro' && !showArchived && (
+                      <button
+                        className="lc-icon-btn"
+                        title="Replace with an existing book (for example the reparsed 2026 NEW copy)"
+                        aria-label={`Replace ${b.title || 'book'} with an existing book`}
+                        onClick={() => setReplaceExistingSource(b)}
+                      >
+                        <ArrowRightLeft size={14} />
+                      </button>
+                    )}
                     {showArchived ? (
                       <button
                         className="lc-icon-btn"
@@ -977,6 +989,18 @@ const BooksPage = () => {
           book={renameSource}
           onClose={() => setRenameSource(null)}
           onRenamed={() => { setRenameSource(null); refreshCurrentCategory(); }}
+        />
+      )}
+      {replaceExistingSource && (
+        <ReplaceWithExistingModal
+          book={replaceExistingSource}
+          allBooks={Object.values(booksByCategory).flat().filter(Boolean)}
+          onClose={() => setReplaceExistingSource(null)}
+          onReplaced={() => {
+            setReplaceExistingSource(null);
+            // Both the old and the new book change status, so refetch rather than patch.
+            setBooksByCategory({});
+          }}
         />
       )}
       {archiveSource && (

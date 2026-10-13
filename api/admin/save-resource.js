@@ -332,7 +332,7 @@ async function fetchRowsByTitle(supabase, category, title) {
   for (let from = 0; ; from += 1000) {
     const { data, error } = await supabase
       .from('resources')
-      .select('resource_id,title,category,storage_base_url,format,chapter_count')
+      .select('resource_id,title,category,storage_base_url,format,chapter_count,status')
       .eq('category', category)
       .ilike('title', escaped)
       .range(from, from + 999);
@@ -1371,13 +1371,188 @@ async function handleBookCoverSave(req, res) {
 }
 
 /**
+ * POST /api/admin/save-resource with
+ * { type: 'books-replace-with-existing', oldResourceId, newResourceId, renameToOld?, dryRun? }
+ *
+ * Swaps a live Guide/Precis book for ANOTHER BOOK THAT ALREADY EXISTS in
+ * `resources` (for example the reparsed "<title> 2026 NEW" copies), instead of
+ * converting an uploaded .docx like Publish Content's Replace does:
+ *
+ *   - every exam linked to the old book (lc_exam_resource_map) is repointed to
+ *     the new book; an exam that already has the new book keeps one link only
+ *   - the new book is published; the old book is archived (status Draft)
+ *   - level / state_ut / conducting_body are copied onto the new book when it
+ *     has none
+ *   - optionally (renameToOld, default true) the new book takes the old book's
+ *     title, after the old rows are retitled "<title> (replaced <date>)" so the
+ *     two groups never share a title in Book Content
+ *
+ * dryRun (the default) writes nothing and returns the plan. A real run writes a
+ * rollback log to R2 (book-replace-log/) with every row it touched.
+ * Guide and Precis only: Intro is 1:1 with an exam and keeps its own flow.
+ */
+async function handleBooksReplaceWithExisting(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { oldResourceId, newResourceId, renameToOld = true, dryRun = true } = req.body || {};
+  if (!oldResourceId || !newResourceId) return res.status(400).json({ ok: false, error: 'Missing oldResourceId or newResourceId' });
+  if (oldResourceId === newResourceId) return res.status(400).json({ ok: false, error: 'A book cannot replace itself' });
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+
+  try {
+    const supabase = getSupabaseAdmin();
+    const cols = 'resource_id,title,category,status,level,state_ut,conducting_body,storage_base_url,chapter_count';
+    const [{ data: oldRow, error: e1 }, { data: newRow, error: e2 }] = await Promise.all([
+      supabase.from('resources').select(cols).eq('resource_id', oldResourceId).maybeSingle(),
+      supabase.from('resources').select(cols).eq('resource_id', newResourceId).maybeSingle(),
+    ]);
+    if (e1) throw new Error(e1.message);
+    if (e2) throw new Error(e2.message);
+    if (!oldRow || !newRow) return res.status(404).json({ ok: false, error: 'Book not found' });
+    if (!isTitleDedupedCategory(oldRow.category)) return res.status(400).json({ ok: false, error: 'Only Guide and Precis books can be replaced this way' });
+    if (newRow.category !== oldRow.category) return res.status(400).json({ ok: false, error: `Category mismatch: the new book is ${newRow.category}, the old one is ${oldRow.category}` });
+
+    const oldRows = await fetchBookRows(supabase, oldRow);
+    const newRows = await fetchBookRows(supabase, newRow);
+    const oldIds = oldRows.map((r) => r.resource_id);
+    const newIds = newRows.map((r) => r.resource_id);
+    if (oldIds.some((id) => newIds.includes(id))) return res.status(400).json({ ok: false, error: 'These two are the same book (they share a title)' });
+
+    const chunk = (arr, n) => { const out = []; for (let i = 0; i < arr.length; i += n) out.push(arr.slice(i, i + n)); return out; };
+    const fetchMap = async (ids) => {
+      let all = [];
+      for (const part of chunk(ids, 100)) {
+        for (let from = 0; ; from += 1000) {
+          const { data, error } = await supabase.from('lc_exam_resource_map').select('*').in('resource_id', part).eq('category', oldRow.category).range(from, from + 999);
+          if (error) throw new Error(error.message);
+          all = all.concat(data || []);
+          if (!data || data.length < 1000) break;
+        }
+      }
+      return all;
+    };
+    const [oldMap, newMap] = await Promise.all([fetchMap(oldIds), fetchMap(newIds)]);
+
+    // One surviving link per exam: repoint the first old link, drop extras and
+    // any exam that already has the new book.
+    const alreadyOnNew = new Set(newMap.map((m) => m.exam_id));
+    const seen = new Set();
+    const toRepoint = [];
+    const toDelete = [];
+    for (const m of oldMap) {
+      if (alreadyOnNew.has(m.exam_id) || seen.has(m.exam_id)) { toDelete.push(m); continue; }
+      seen.add(m.exam_id);
+      toRepoint.push(m);
+    }
+
+    const oldTitle = oldRow.title.trim();
+    const newTitle = newRow.title.trim();
+    const today = new Date().toISOString().slice(0, 10);
+    const willRename = Boolean(renameToOld) && newTitle.toLowerCase() !== oldTitle.toLowerCase();
+    const retitledOld = `${oldTitle} (replaced ${today})`;
+    const tagPatch = {};
+    if (!newRow.level && oldRow.level) tagPatch.level = oldRow.level;
+    if (!newRow.state_ut && oldRow.state_ut) tagPatch.state_ut = oldRow.state_ut;
+    if (!newRow.conducting_body && oldRow.conducting_body) tagPatch.conducting_body = oldRow.conducting_body;
+
+    const warnings = [];
+    if (oldMap.length === 0) warnings.push('The old book has no exam links in lc_exam_resource_map, so no exams will be repointed (exams served only by the legacy exam_name fallback are not touched).');
+    if (newRow.chapter_count != null && oldRow.chapter_count != null && newRow.chapter_count < oldRow.chapter_count) warnings.push(`The new book has fewer chapters (${newRow.chapter_count}) than the old one (${oldRow.chapter_count}).`);
+    if (oldRows.length > 1) warnings.push(`The old book spans ${oldRows.length} resources rows; all of them will be archived.`);
+    // Rows with no lc_exam_resource_map link may still be reaching an exam through
+    // the legacy resources.exam_name fallback; archiving them cuts that off.
+    const mappedRowIds = new Set(oldMap.map((m) => m.resource_id));
+    // Only rows that are live today can be serving an exam; Draft/Archived duplicates are not.
+    const unmappedOldRows = oldRows.filter((r) => !mappedRowIds.has(r.resource_id) && !['draft', 'archived'].includes((r.status || '').toLowerCase())).length;
+    if (unmappedOldRows > 0) warnings.push(`${unmappedOldRows} of the old book's ${oldRows.length} rows are live but have no exam link. Any exam that reaches this book only through the legacy exam_name fallback will lose it when the old rows are archived.`);
+
+    const plan = {
+      oldTitle, oldRowCount: oldRows.length, oldChapters: oldRow.chapter_count ?? null,
+      newTitle, newRowCount: newRows.length, newChapters: newRow.chapter_count ?? null, newStatus: newRow.status,
+      examsLinkedToOld: new Set(oldMap.map((m) => m.exam_id)).size,
+      linksRepointed: toRepoint.length, linksDropped: toDelete.length,
+      examsAlreadyOnNew: alreadyOnNew.size,
+      rename: willRename ? { newBookTitle: oldTitle, oldBookTitle: retitledOld } : null,
+      tagsCopied: Object.keys(tagPatch),
+      unmappedOldRows,
+      warnings,
+    };
+    if (dryRun) return res.status(200).json({ ok: true, dryRun: true, plan });
+
+    const now = new Date().toISOString();
+    // Order: links first (so no exam is ever without a book), then titles, then status.
+    for (const part of chunk(toRepoint.map((m) => m.id), 200)) {
+      const { error } = await supabase.from('lc_exam_resource_map').update({
+        resource_id: newRow.resource_id, confidence: 'high', source: 'manual',
+        reasoning: `Replaced "${oldTitle}" with existing book "${newTitle}"`,
+      }).in('id', part);
+      if (error) throw new Error(`Repointing exam links failed: ${error.message}`);
+    }
+    for (const part of chunk(toDelete.map((m) => m.id), 200)) {
+      const { error } = await supabase.from('lc_exam_resource_map').delete().in('id', part);
+      if (error) throw new Error(`Removing duplicate exam links failed: ${error.message}`);
+    }
+
+    if (willRename) {
+      const { error: oldTitleErr } = await supabase.from('resources').update({ title: retitledOld, updated_at: now }).in('resource_id', oldIds);
+      if (oldTitleErr) throw new Error(`Retitling the old book failed: ${oldTitleErr.message}`);
+      const { error: newTitleErr } = await supabase.from('resources').update({ title: oldTitle, updated_at: now }).in('resource_id', newIds);
+      if (newTitleErr) throw new Error(`Retitling the new book failed: ${newTitleErr.message}`);
+      // Keep the book's own metadata.json title in step (best effort).
+      try {
+        const publicUrl = getR2PublicUrl();
+        const bucket = getR2Bucket();
+        const canonicalUrl = pickCanonicalStorageBaseUrl(newRows);
+        const prefix = publicUrl && bucket ? prefixFromStorageBaseUrl(canonicalUrl, publicUrl) : null;
+        if (prefix) {
+          const metadata = await fetchJson(`${canonicalUrl}metadata.json`);
+          metadata.title = oldTitle;
+          await uploadToR2(getS3Client(), bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json');
+        }
+      } catch (e) {
+        console.error('[admin/save-resource:books-replace-with-existing] metadata.json title patch failed:', e.message);
+      }
+    }
+
+    const { error: pubErr } = await supabase.from('resources').update({ status: 'Published', ...tagPatch, updated_at: now }).in('resource_id', newIds);
+    if (pubErr) throw new Error(`Publishing the new book failed: ${pubErr.message}`);
+    const { error: archErr } = await supabase.from('resources').update({ status: 'Draft', updated_at: now }).in('resource_id', oldIds);
+    if (archErr) throw new Error(`Archiving the old book failed: ${archErr.message}`);
+
+    // Rollback log: everything needed to undo this swap.
+    let logKey = null;
+    try {
+      const bucket = getR2Bucket();
+      if (bucket) {
+        logKey = `book-replace-log/${now.replace(/[:.]/g, '-')}-${newRow.resource_id}.json`;
+        const log = {
+          at: now, plan,
+          old: oldRows.map((r) => ({ resource_id: r.resource_id, title: r.title, status: r.status })),
+          new: newRows.map((r) => ({ resource_id: r.resource_id, title: r.title, status: r.status, level: r.level, state_ut: r.state_ut, conducting_body: r.conducting_body })),
+          linksRepointed: toRepoint, linksDeleted: toDelete,
+        };
+        await uploadToR2(getS3Client(), bucket, logKey, Buffer.from(JSON.stringify(log, null, 2)), 'application/json');
+      }
+    } catch (e) {
+      console.error('[admin/save-resource:books-replace-with-existing] rollback log failed:', e.message);
+      logKey = null;
+    }
+
+    invalidateBooksCache();
+    return res.status(200).json({ ok: true, dryRun: false, plan, logKey, newResourceId: newRow.resource_id });
+  } catch (e) {
+    console.error('[admin/save-resource:books-replace-with-existing] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
+/**
  * POST /api/admin/save-resource with { type: 'books-archive', resourceId }
  *
  * Sets status = 'Draft' on all resources rows for this book (hides from candidates & active list)
  */
 async function handleBooksArchive(req, res) {
   if (!checkAdminSecret(req, res)) return;
-  const { resourceId } = req.body || {};
+  const { resourceId, excludeResourceId } = req.body || {};
   if (!resourceId) return res.status(400).json({ ok: false, error: 'Missing resourceId' });
   if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
 
@@ -1387,10 +1562,14 @@ async function handleBooksArchive(req, res) {
     if (rowError) throw new Error(rowError.message);
     if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
 
-    const { error: updateError } = await bookRowsFilter(
+    let archiveQuery = bookRowsFilter(
       supabase.from('resources').update({ status: 'Draft', updated_at: new Date().toISOString() }),
       row
     );
+    // Publish Content's Replace archives the old book right after publishing the
+    // new one; when both share a title the new row must not be archived with it.
+    if (excludeResourceId) archiveQuery = archiveQuery.neq('resource_id', excludeResourceId);
+    const { error: updateError } = await archiveQuery;
     if (updateError) throw new Error(updateError.message);
 
     invalidateBooksCache();
@@ -2024,6 +2203,10 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'book-cover-save') {
     return handleBookCoverSave(req, res);
+  }
+
+  if (req.body?.type === 'books-replace-with-existing') {
+    return handleBooksReplaceWithExisting(req, res);
   }
 
   if (req.body?.type === 'books-archive') {
