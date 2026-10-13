@@ -124,15 +124,68 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         console.error('Error fetching subscription tier:', err);
       }
 
-      const { data } = await supabase
+      let { data } = await supabase
         .from('resources')
         .select('*')
         .eq('resource_id', id)
-        .single();
-      
+        .maybeSingle();
+
+      // Fallback for slug-based or subject-based routes (e.g. /reader/english, /reader/gk-gs)
+      if (!data && id) {
+        const SLUG_TO_TITLE = {
+          'english': 'ENGLISH',
+          'gk-gs': 'GS & GK',
+          'gk': 'GS & GK',
+          'general-knowledge': 'GS & GK',
+          'mathematics': 'MATHEMATICS',
+          'maths': 'MATHEMATICS',
+          'math': 'MATHEMATICS',
+          'reasoning': 'REASONING',
+        };
+        const titleQuery = SLUG_TO_TITLE[id.toLowerCase()] || id.toLowerCase().replace(/[-_]/g, ' ');
+
+        // Try canonical blocks format first
+        const { data: blocksMatch } = await supabase
+          .from('resources')
+          .select('*')
+          .ilike('title', `%${titleQuery}%`)
+          .eq('format', 'blocks')
+          .limit(1)
+          .maybeSingle();
+
+        if (blocksMatch) {
+          data = blocksMatch;
+        } else {
+          const { data: fallbackRows } = await supabase
+            .from('resources')
+            .select('*')
+            .ilike('title', `%${titleQuery}%`)
+            .limit(1);
+
+          if (fallbackRows && fallbackRows.length > 0) {
+            data = fallbackRows[0];
+          }
+        }
+      }
+
       if (!data) {
         setLoading(false);
         return;
+      }
+
+      // Upgrade html to canonical blocks format if available
+      if (data.format !== 'blocks' && data.title) {
+        const { data: canonical } = await supabase
+          .from('resources')
+          .select('*')
+          .eq('title', data.title)
+          .eq('category', data.category)
+          .eq('format', 'blocks')
+          .limit(1)
+          .maybeSingle();
+        if (canonical) {
+          data = canonical;
+        }
       }
 
       setResource(data);

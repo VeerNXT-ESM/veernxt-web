@@ -324,19 +324,68 @@ export default function StudyMaterialsPage() {
     });
   };
 
+  // Mapped resources for the currently selected exam
+  const [examResources, setExamResources] = useState({});
+
+  useEffect(() => {
+    let cancelled = false;
+    async function loadResourcesForExam() {
+      if (!selectedExam?.id) return;
+      try {
+        const catFilter = isGuide ? 'Guide' : 'Precis';
+        const { data: mappings } = await supabase
+          .from('lc_exam_resource_map')
+          .select('resource_id, category')
+          .eq('exam_id', selectedExam.id)
+          .eq('category', catFilter);
+
+        if (cancelled) return;
+        if (mappings && mappings.length > 0) {
+          const resIds = mappings.map((m) => m.resource_id).filter(Boolean);
+          const { data: resRows } = await supabase
+            .from('resources')
+            .select('resource_id, title, category, format')
+            .in('resource_id', resIds);
+
+          if (!cancelled && resRows) {
+            const mapBySubject = {};
+            for (const r of resRows) {
+              const t = (r.title || '').toLowerCase();
+              if (t.includes('english')) mapBySubject['english'] = r.resource_id;
+              else if (t.includes('gk') || t.includes('gs') || t.includes('general awareness') || t.includes('general knowledge')) mapBySubject['gk-gs'] = r.resource_id;
+              else if (t.includes('math') || t.includes('quant')) mapBySubject['mathematics'] = r.resource_id;
+              else if (t.includes('reasoning')) mapBySubject['reasoning'] = r.resource_id;
+            }
+            setExamResources(mapBySubject);
+          }
+        } else {
+          setExamResources({});
+        }
+      } catch (err) {
+        console.warn('Error loading exam resources:', err);
+      }
+    }
+    loadResourcesForExam();
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedExam?.id, isGuide]);
+
   // Randomly assign one of the 5 combinations to each book card on mount
   const booksWithCombinations = useMemo(() => {
     return CATALOG_BOOKS.map((book, idx) => {
       const combo = getRandomCombination(idx); // ensures 5 distinct combinations across cards
       const formattedTitle = `${currentExamFullName} ${book.titleSuffix} ${isGuide ? 'Guidebook' : 'Préci'} 2026`;
+      const matchedResId = examResources[book.slug];
       return {
         ...book,
+        resourceId: matchedResId,
         displayTitle: formattedTitle,
         shortCoverTitle: `${book.titleSuffix} ${isGuide ? 'Guide' : 'Préci'}`,
         combo,
       };
     });
-  }, [currentExamFullName, isGuide]);
+  }, [currentExamFullName, isGuide, examResources]);
 
   return (
     <div className="smp-page-wrapper">
@@ -680,7 +729,7 @@ export default function StudyMaterialsPage() {
                           </button>
 
                           <Link
-                            to={`/reader/${book.slug || 'sample'}`}
+                            to={`/reader/${book.resourceId || book.slug || 'sample'}`}
                             className="smp-btn-explore"
                             style={{
                               background: combo.accentColor || '#064e3b',
@@ -952,7 +1001,7 @@ export default function StudyMaterialsPage() {
                     Close
                   </button>
                   <Link
-                    to={`/reader/${activeDetailsBook.slug}`}
+                    to={`/reader/${activeDetailsBook.resourceId || activeDetailsBook.slug || 'sample'}`}
                     className="smp-btn-explore"
                     style={{
                       background: activeDetailsBook.combo.accentColor,
