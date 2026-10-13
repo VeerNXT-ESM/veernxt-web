@@ -61,7 +61,6 @@ export const profileSchema = Joi.object({
 
 // --- Fetch exams from Supabase with pre-filtering for scalability ---
 // Cache the full exam list once per warm invocation, then JS-filter per profile.
-let EXAM_CACHE = null;
 let SUPABASE_CLIENT = null;
 
 function getSupabaseClient() {
@@ -74,21 +73,50 @@ function getSupabaseClient() {
 }
 
 async function loadAllExams() {
-  if (EXAM_CACHE) return EXAM_CACHE;
+  if (globalThis.__VEERNXT_EXAM_CACHE && globalThis.__VEERNXT_EXAM_CACHE.length > 0) {
+    return globalThis.__VEERNXT_EXAM_CACHE;
+  }
+
+  // 1. First try reading local exam_master.json if available (fastest, 0 Supabase Disk I/O)
+  try {
+    const fs = await import('fs');
+    const path = await import('path');
+    const { fileURLToPath } = await import('url');
+    const localDir = path.dirname(fileURLToPath(import.meta.url));
+    const localPath = path.resolve(localDir, '../../backend/engine/data/exam_master.json');
+    if (fs.existsSync(localPath)) {
+      const raw = JSON.parse(fs.readFileSync(localPath, 'utf-8'));
+      if (raw.exams && raw.exams.length > 0) {
+        globalThis.__VEERNXT_EXAM_CACHE = raw.exams;
+        console.log(`[recommend] Loaded ${globalThis.__VEERNXT_EXAM_CACHE.length} exams from local exam_master.json.`);
+        return globalThis.__VEERNXT_EXAM_CACHE;
+      }
+    }
+  } catch (_) {
+    // Continue to Supabase if local file is unavailable (e.g. bundle environment)
+  }
+
+  // 2. Fetch from Supabase with minimal columns to minimize memory & Disk I/O
   try {
     const client = getSupabaseClient();
-    console.log('[recommend] Loading all exams from Supabase (cold start)...');
+    console.log('[recommend] Loading exams from Supabase (lean columns)...');
     let rows = [];
     let from = 0;
     const pageSize = 1000;
     while (true) {
-      const { data, error } = await client.from('exams').select('*').range(from, from + pageSize - 1);
-      if (error) throw new Error(`Failed to fetch exams: ${error.message}`);
+      const { data, error } = await client
+        .from('exams')
+        .select('exam_id, exam_name, conducting_body, career_track, state_ut, base_url, is_state_specific, metadata')
+        .range(from, from + pageSize - 1);
+      if (error) {
+        const brief = (error.message || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 150);
+        throw new Error(`Failed to fetch exams: ${brief}`);
+      }
       rows = rows.concat(data);
       if (data.length < pageSize) break;
       from += pageSize;
     }
-    EXAM_CACHE = rows.map(row => {
+    globalThis.__VEERNXT_EXAM_CACHE = rows.map(row => {
       const inferredState = inferState(row.exam_name, row.conducting_body, row.state_ut);
       let level = row.metadata?.level || null;
       if (inferredState) {
@@ -109,24 +137,13 @@ async function loadAllExams() {
         domicile_required: Boolean(inferredState) || Boolean(row.is_state_specific) || Boolean(row.metadata?.domicile_required),
       };
     });
-    console.log(`[recommend] Cached ${EXAM_CACHE.length} exams.`);
-    return EXAM_CACHE;
+    console.log(`[recommend] Cached ${globalThis.__VEERNXT_EXAM_CACHE.length} exams from database.`);
+    return globalThis.__VEERNXT_EXAM_CACHE;
   } catch (err) {
-    console.warn('[recommend] Supabase fetch failed, attempting local exam_master.json fallback:', err.message);
-    try {
-      const fs = await import('fs');
-      const path = await import('path');
-      const { fileURLToPath } = await import('url');
-      const localDir = path.dirname(fileURLToPath(import.meta.url));
-      const localPath = path.resolve(localDir, '../../backend/engine/data/exam_master.json');
-      if (fs.existsSync(localPath)) {
-        const raw = JSON.parse(fs.readFileSync(localPath, 'utf-8'));
-        EXAM_CACHE = raw.exams || [];
-        console.log(`[recommend] Fallback loaded ${EXAM_CACHE.length} exams from exam_master.json.`);
-        return EXAM_CACHE;
-      }
-    } catch (fallbackErr) {
-      console.error('[recommend] Local fallback failed too:', fallbackErr.message);
+    const briefErr = (err.message || '').slice(0, 150);
+    console.warn('[recommend] Supabase fetch failed:', briefErr);
+    if (globalThis.__VEERNXT_EXAM_CACHE && globalThis.__VEERNXT_EXAM_CACHE.length > 0) {
+      return globalThis.__VEERNXT_EXAM_CACHE;
     }
     throw err;
   }

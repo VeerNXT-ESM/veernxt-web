@@ -70,17 +70,17 @@ const ExamPrepSection = ({ exam }) => {
     const fetchPrepData = async () => {
       setLoading(true);
       try {
-        let resData = await supabase.from('resources').select('*').eq('exam_name', exam.exam_name).limit(3);
+        let resData = await supabase.from('resources').select('id, resource_id, title').eq('exam_name', exam.exam_name).limit(3);
         // Exact link first (quizzes.lc_exam_id); use the resolved lc_exam_id from the recommendation.
         let quizData = { data: [] };
         if (exam.lc_exam_id) {
-          quizData = await supabase.from('quizzes').select('*').eq('lc_exam_id', exam.lc_exam_id).eq('category', 'Mock Test').gte('playable_questions', MIN_PLAYABLE_QUESTIONS).order('title').limit(3);
+          quizData = await supabase.from('quizzes').select('id, title').eq('lc_exam_id', exam.lc_exam_id).eq('category', 'Mock Test').gte('playable_questions', MIN_PLAYABLE_QUESTIONS).order('title').limit(3);
         } else if (exam.exam_id) {
           // Legacy fallback: try matching by old exam_id stored in quizzes.lc_exam_id
-          quizData = await supabase.from('quizzes').select('*').eq('lc_exam_id', exam.exam_id).eq('category', 'Mock Test').gte('playable_questions', MIN_PLAYABLE_QUESTIONS).order('title').limit(3);
+          quizData = await supabase.from('quizzes').select('id, title').eq('lc_exam_id', exam.exam_id).eq('category', 'Mock Test').gte('playable_questions', MIN_PLAYABLE_QUESTIONS).order('title').limit(3);
         }
         if (!quizData.data || quizData.data.length === 0) {
-          quizData = await supabase.from('quizzes').select('*').is('lc_exam_id', null).eq('exam_name', exam.exam_name).eq('category', 'Mock Test').limit(3);
+          quizData = await supabase.from('quizzes').select('id, title').is('lc_exam_id', null).eq('exam_name', exam.exam_name).eq('category', 'Mock Test').limit(3);
         }
 
         // resources/quizzes exam_name carries a "N. " ordinal prefix from
@@ -90,11 +90,11 @@ const ExamPrepSection = ({ exam }) => {
         // career_track keyword below.
         if (!resData.data || resData.data.length === 0) {
           const escaped = exam.exam_name.replace(/[%_]/g, (c) => `\\${c}`);
-          resData = await supabase.from('resources').select('*').ilike('exam_name', `%${escaped}%`).limit(3);
+          resData = await supabase.from('resources').select('id, resource_id, title').ilike('exam_name', `%${escaped}%`).limit(3);
         }
         if (!quizData.data || quizData.data.length === 0) {
           const escaped = exam.exam_name.replace(/[%_]/g, (c) => `\\${c}`);
-          quizData = await supabase.from('quizzes').select('*').is('lc_exam_id', null).ilike('exam_name', `%${escaped}%`).eq('category', 'Mock Test').limit(3);
+          quizData = await supabase.from('quizzes').select('id, title').is('lc_exam_id', null).ilike('exam_name', `%${escaped}%`).eq('category', 'Mock Test').limit(3);
         }
 
         if ((!resData.data || resData.data.length === 0) && exam.career_track) {
@@ -105,8 +105,8 @@ const ExamPrepSection = ({ exam }) => {
           else if (exam.career_track === 'BANKING') fallbackTerm = 'IBPS';
           else if (exam.career_track === 'DEFENCE') fallbackTerm = 'Defence';
 
-          resData = await supabase.from('resources').select('*').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
-          quizData = await supabase.from('quizzes').select('*').is('lc_exam_id', null).ilike('exam_name', `%${fallbackTerm}%`).eq('category', 'Mock Test').limit(3);
+          resData = await supabase.from('resources').select('id, resource_id, title').ilike('exam_name', `%${fallbackTerm}%`).limit(3);
+          quizData = await supabase.from('quizzes').select('id, title').is('lc_exam_id', null).ilike('exam_name', `%${fallbackTerm}%`).eq('category', 'Mock Test').limit(3);
         }
 
         if (mounted) {
