@@ -239,10 +239,18 @@ export function scoreJobsForProfile(jobs, profile) {
   // Veteran-friendly career tracks (where ESM quota exists or Agniveer preference is strong)
   const ESM_FRIENDLY_TRACKS = new Set(['DEFENCE', 'PSU', 'RAILWAYS', 'POLICE_CAPF', 'SECURITY', 'BANKING']);
 
+  // Extract recommended exams if candidate completed profiling
+  const candidateRecs = Array.isArray(profile.recommendations)
+    ? profile.recommendations
+    : Array.isArray(profile.raw_profile_data?.recommendations)
+      ? profile.raw_profile_data.recommendations
+      : [];
+
   // Score each job
   const scoredJobs = jobs.map(job => {
     const reasons = [];
     let score = 0;
+    let alignedExamName = null;
 
     const titleLower   = (job.title || '').toLowerCase();
     const bodyLower    = (job.body || '').toLowerCase();
@@ -347,10 +355,31 @@ export function scoreJobsForProfile(jobs, profile) {
       score += 5; // implicit ESM friendliness from track type
     }
 
+    // ── Signal 6: Candidate Recommended Exam Alignment (bonus up to 25 pts) ──
+    if (candidateRecs.length > 0) {
+      for (const rec of candidateRecs.slice(0, 5)) {
+        const rName = (rec.exam_name || '').toLowerCase();
+        const rBody = (rec.conducting_body || '').toLowerCase();
+        const rId   = rec.exam_id || rec.lc_exam_id;
+
+        const isIdMatch = rId && (job.exam_id === rId || job.lc_exam_id === rId || job.id === rId);
+        const isNameMatch = rName && rName.length > 3 && (titleLower.includes(rName) || allText.includes(rName));
+        const isBodyMatch = rBody && rBody.length > 3 && (bodyLower.includes(rBody) || allText.includes(rBody));
+
+        if (isIdMatch || isNameMatch || isBodyMatch) {
+          score += 25;
+          alignedExamName = rec.exam_name;
+          reasons.unshift(`🎯 Aligned with: ${rec.exam_name}`);
+          break;
+        }
+      }
+    }
+
     return {
       ...job,
       _matchScore: Math.min(score, 100),
       _matchReasons: reasons,
+      _recommendedExam: alignedExamName,
       _isPersonalized: score > 10,
     };
   });
@@ -381,3 +410,154 @@ export function isPersonalizationActive(scoredJobs) {
   const tracks = new Set(top3.map(j => j.careerTrack || j.career_track));
   return tracks.size > 1;
 }
+
+/**
+ * Intelligent matcher linking jobs_v2 records directly to a recommended exam.
+ */
+export function matchJobsV2ForExam(allJobs, exam) {
+  if (!allJobs || !allJobs.length || !exam) return [];
+
+  const recId = exam.exam_id || exam.lc_exam_id || exam.id;
+  const examName = (exam.exam_name || exam.name || '').toLowerCase();
+  const conductingBody = (exam.conducting_body || exam.conductingBody || '').toLowerCase();
+  const careerTrack = (exam.career_track || exam.careerTrack || '').toUpperCase();
+
+  const bodyWords = conductingBody
+    .split(/[\s,./()\-]+/)
+    .filter(w => w.length > 2 && !['the', 'and', 'for', 'board', 'commission', 'govt', 'india', 'state', 'department', 'recruitment'].includes(w));
+  const examWords = examName
+    .split(/[\s,./()\-]+/)
+    .filter(w => w.length > 2 && !['recruitment', 'exam', 'examination', 'level', 'post', 'posts', 'online', 'form', 'various'].includes(w));
+
+  return allJobs
+    .map(job => {
+      const titleLower = (job.title || '').toLowerCase();
+      const tagsList = Array.isArray(job.tags) ? job.tags : [];
+      const tagsText = tagsList.join(' ').toLowerCase();
+      const jobTrack = (job.career_track || job.careerTrack || '').toUpperCase();
+      const descSnippet = (job.ai_description || job.aiDescription || job.description || '').slice(0, 400).toLowerCase();
+      const fullText = `${titleLower} ${tagsText} ${descSnippet}`;
+
+      let score = 0;
+      const reasons = [];
+
+      // 1. Direct link by exam_id
+      if (recId && (job.exam_id === recId || job.lc_exam_id === recId || job.id === recId)) {
+        score += 60;
+        reasons.push('Linked Exam ID');
+      }
+
+      // 2. Conducting authority match (e.g. IBPS, SSC, Navy, Army, Railway, UPSC)
+      const matchedBody = bodyWords.filter(w => fullText.includes(w));
+      if (matchedBody.length > 0) {
+        score += Math.min(40, matchedBody.length * 20);
+        reasons.push(`Authority: ${matchedBody.slice(0, 2).join(', ')}`);
+      }
+
+      // 3. Exam role keyword match (e.g. Clerk, Constable, PO, Havildar, Apprentice)
+      const matchedExam = examWords.filter(w => fullText.includes(w));
+      if (matchedExam.length > 0) {
+        score += Math.min(35, matchedExam.length * 15);
+        reasons.push(`Role: ${matchedExam.slice(0, 2).join(', ')}`);
+      }
+
+      // 4. Career track alignment
+      if (careerTrack && jobTrack) {
+        if (careerTrack === jobTrack) {
+          score += 20;
+          reasons.push(`Track: ${careerTrack}`);
+        } else if (
+          (careerTrack === 'BANKING' && fullText.includes('bank')) ||
+          (careerTrack === 'RAILWAYS' && fullText.includes('railway')) ||
+          (careerTrack === 'DEFENCE' && (fullText.includes('army') || fullText.includes('navy') || fullText.includes('air force') || fullText.includes('defence') || fullText.includes('agniveer'))) ||
+          (careerTrack === 'POLICE_CAPF' && (fullText.includes('police') || fullText.includes('cisf') || fullText.includes('crpf') || fullText.includes('bsf') || fullText.includes('constable')))
+        ) {
+          score += 15;
+          reasons.push(`Aligned: ${careerTrack}`);
+        }
+      }
+
+      // 5. Ex-servicemen quota priority
+      if (tagsList.includes('ex_servicemen_job') || fullText.includes('ex-servicemen') || fullText.includes('esm')) {
+        score += 10;
+        reasons.push('ESM Quota Mentioned');
+      }
+
+      return {
+        ...job,
+        _matchScore: Math.min(99, score),
+        _matchReasons: reasons,
+        _recommendedExam: exam.exam_name || exam.name,
+      };
+    })
+    .filter(j => j._matchScore >= 45)
+    .sort((a, b) => b._matchScore - a._matchScore)
+    .slice(0, 3);
+}
+
+/**
+ * Match live jobs against the candidate's top recommended exams and background.
+ */
+export function matchJobsV2ForRecommendations(allJobs, recommendations, profile) {
+  if (!allJobs || !allJobs.length) return [];
+  if (!recommendations || !recommendations.length) return [];
+
+  const seenIds = new Set();
+  const collected = [];
+
+  recommendations.forEach(rec => {
+    const examJobs = matchJobsV2ForExam(allJobs, rec);
+    examJobs.forEach(job => {
+      const key = job.job_id || job.id || job.url;
+      if (!seenIds.has(key)) {
+        seenIds.add(key);
+        collected.push({
+          ...job,
+          _recommendedExam: rec.exam_name || rec.name,
+          _examRank: rec.rank || 1,
+        });
+      }
+    });
+  });
+
+  if (collected.length >= 4) {
+    return collected.slice(0, 6);
+  }
+
+  // Supplement if fewer than 4 matched directly to the top exams
+  const candidateTracks = (profile?.careerPreferences || profile?.preferred_sectors || []).map(t => String(t).toUpperCase());
+  const candidateTrade = (profile?.armCorpsTrade || profile?.trade || '').toLowerCase();
+
+  const supplement = allJobs
+    .filter(j => !seenIds.has(j.job_id || j.id || j.url))
+    .map(job => {
+      const fullText = `${job.title} ${(job.tags || []).join(' ')} ${job.ai_description || ''}`.toLowerCase();
+      let score = 30;
+      const reasons = [];
+
+      const jobTrack = (job.career_track || job.careerTrack || '').toUpperCase();
+      if (candidateTracks.some(t => t === jobTrack || fullText.includes(t.toLowerCase()))) {
+        score += 25;
+        reasons.push(`Career Preference: ${jobTrack}`);
+      }
+      if (candidateTrade && fullText.includes(candidateTrade)) {
+        score += 25;
+        reasons.push(`Trade Match: ${profile.armCorpsTrade || profile.trade}`);
+      }
+      if ((job.tags || []).includes('ex_servicemen_job')) {
+        score += 15;
+        reasons.push('ESM Quota Available');
+      }
+
+      return {
+        ...job,
+        _matchScore: Math.min(95, score),
+        _matchReasons: reasons,
+      };
+    })
+    .filter(j => j._matchScore >= 45)
+    .sort((a, b) => b._matchScore - a._matchScore);
+
+  return [...collected, ...supplement].slice(0, 6);
+}
+

@@ -51,6 +51,7 @@ import ExamContentPreview from '../components/ExamContentPreview';
 import CategoryExplorerPortal from '../components/CategoryExplorerPortal';
 import { useExamContent, getExamResourceCount } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
+import { STATE_IMAGES, getStateBannerImage } from '../lib/stateImages';
 import './LearningCenter.css';
 
 // A handful of representative subjects for the Syllabus teaser card's chip
@@ -106,15 +107,6 @@ function getCategoryIconMeta(cat) {
   const palette = DYNAMIC_PALETTE[hash % DYNAMIC_PALETTE.length];
   return { icon: ClipboardList, color: palette.color, bg: palette.bg };
 }
-
-// State images mapping for generated state landscape banners
-const STATE_IMAGES = {
-  'Andhra Pradesh': '/state_images/andhra_pradesh.jpg',
-  'Arunachal Pradesh': '/state_images/arunachal_pradesh.jpg',
-  'Assam': '/state_images/assam.jpg',
-  'Bihar': '/state_images/bihar.jpg',
-  'Chhattisgarh': '/state_images/chhattisgarh.jpg',
-};
 
 // Rich state branding metadata for monogram badges, commission names and zone filters
 const STATE_META = {
@@ -1129,7 +1121,7 @@ const LearningCenter = () => {
             name: exam.region.name,
             count: 0,
             categories: new Set(),
-            image: STATE_IMAGES[exam.region.name] || null,
+            image: getStateBannerImage(exam.region.name),
           });
         }
         const item = map.get(exam.region.id);

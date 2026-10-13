@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import { useNavigate, useLocation, Link, Navigate } from 'react-router-dom';
+import axios from 'axios';
 import { supabase } from '../lib/supabase';
-import { ShieldCheck, MapPin, Briefcase, RefreshCw, FileText, User, ArrowRight, CheckCircle2, Compass, BarChart3, Quote, Zap, MessageSquare } from 'lucide-react';
+import { ShieldCheck, MapPin, Briefcase, RefreshCw, FileText, User, ArrowRight, CheckCircle2, Compass, BarChart3, Quote, Zap, MessageSquare, Sparkles } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -37,7 +38,7 @@ const Dashboard = () => {
     if (isEmployer) return;
     const recs = profile?.recommendations;
     if (!recs || recs.length === 0) return;
-    const ids = [...new Set(recs.slice(0, 3).map((r) => r.exam_id).filter(Boolean))];
+    const ids = [...new Set(recs.slice(0, 10).map((r) => r.exam_id).filter(Boolean))];
     if (ids.length === 0) return;
     let cancelled = false;
     Promise.all(
@@ -153,8 +154,29 @@ const Dashboard = () => {
     fetchProfile();
   }, [navigate]);
 
-  const handleRecalculate = () => {
-    navigate('/profiling');
+  const handleRecalculate = async () => {
+    if (!profile?.raw_profile_data) {
+      navigate('/profiling');
+      return;
+    }
+    setLoading(true);
+    try {
+      const { data: { session: curSession } } = await supabase.auth.getSession();
+      const token = curSession?.access_token;
+      const res = await axios.post('/api/profile/recommend?topN=10', profile.raw_profile_data, {
+        headers: token ? { Authorization: `Bearer ${token}` } : {},
+      });
+      if (res.data?.ok) {
+        navigate('/profiling/results', { state: res.data });
+      } else {
+        navigate('/profiling');
+      }
+    } catch (err) {
+      console.warn('Fast recalculation error, falling back to full profiling:', err);
+      navigate('/profiling');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleOpenEditModal = () => {
@@ -747,18 +769,52 @@ const Dashboard = () => {
             </div>
           </section>
 
-          {/* Top Exam Matches — capped at 3; the full list lives on the
-              Learning Center page (Search Results / My Exams) now, so this
-              stays a teaser rather than duplicating that whole interface. */}
-          <section>
-            <div className="section-header-plain">
-              <h2>Top Exam Matches</h2>
-              <p>Personalised exam recommendations based on your profile</p>
+          {/* Top 10 Exam Matches Section */}
+          <section className="recommendations-section">
+            <div className="section-header-plain" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.75rem' }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem', flexWrap: 'wrap' }}>
+                  <h2>Top 10 Exam Recommendations</h2>
+                  <span className="rec-badge-pill">
+                    <Sparkles size={13} /> AI Matched
+                  </span>
+                </div>
+                <p>Personalised exam recommendations based on your preferences, qualifications, and active vacancies</p>
+              </div>
+              <Link to="/learning-center" className="rec-explore-lc-badge">
+                <Compass size={14} /> Open Learning Center <ArrowRight size={13} />
+              </Link>
             </div>
+
+            {/* Informational Guidance Callout */}
+            <div className="recommendations-guidance-card">
+              <div className="guidance-card-left">
+                <div className="guidance-icon-circle">
+                  <ShieldCheck size={22} color="var(--ios-olive)" />
+                </div>
+                <div className="guidance-text">
+                  <h4>Curated from your preferences & current vacancies</h4>
+                  <p>
+                    These <strong>top 10 recommendations</strong> are ranked dynamically based on your military background, educational qualification, preferred states, and current Ex-Servicemen (ESM) vacancy quotas.
+                  </p>
+                  <p className="guidance-secondary-note">
+                    <strong>Want to prepare for other exams?</strong> You can explore and prepare for any other examinations (SSC, Banking, Railways, State PSCs, and Defence) directly from our <Link to="/learning-center" className="guidance-inline-link">Learning Center <ArrowRight size={11} /></Link>.
+                  </p>
+                </div>
+              </div>
+              <div className="guidance-card-action">
+                <Link to="/learning-center" className="btn-guidance-lc">
+                  <Compass size={15} />
+                  <span>Explore All Exams</span>
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+
             {recommendations.length > 0 ? (
               <>
                 <div className="recommendations-list">
-                  {recommendations.slice(0, 3).map((rec, idx) => (
+                  {recommendations.slice(0, 10).map((rec, idx) => (
                     <Link
                       key={rec.exam_id || idx}
                       to={rec.exam_id ? `/exam/${rec.exam_id}` : '/learning-center'}
@@ -773,10 +829,15 @@ const Dashboard = () => {
                         size="sm"
                       />
                       <div className="rec-info">
-                        <h3 style={{ fontSize: '1.05rem', marginBottom: '0.2rem' }}>{rec.exam_name}</h3>
-                        <div className="rec-meta">
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', flexWrap: 'wrap' }}>
+                          <h3 style={{ fontSize: '1.05rem', margin: 0 }}>{rec.exam_name}</h3>
+                          {idx === 0 && <span className="rec-top-tag">Top Fit</span>}
+                          {rec.category && <span className="rec-cat-tag">{rec.category}</span>}
+                        </div>
+                        <div className="rec-meta" style={{ marginTop: '0.25rem' }}>
                           <span><Briefcase size={14} /> {rec.career_track}</span>
                           {rec.state_ut && <span><MapPin size={14} /> {rec.state_ut}</span>}
+                          {rec.vacancy_count ? <span><strong>{rec.vacancy_count}</strong> Vacancies</span> : null}
                         </div>
                       </div>
                       <div className="rec-score-section">
@@ -789,12 +850,23 @@ const Dashboard = () => {
                     </Link>
                   ))}
                 </div>
-                <Link to="/learning-center" className="view-all-link">View all exam matches <ArrowRight size={14} /></Link>
+
+                <div className="recommendations-footer-cta">
+                  <div>
+                    <span className="footer-cta-title">Looking for an exam not listed in your top 10?</span>
+                    <p className="footer-cta-sub">
+                      Discover syllabi, free study materials, and mock roadmaps for 100+ government and PSU exams in our Learning Center.
+                    </p>
+                  </div>
+                  <Link to="/learning-center" className="btn-primary ios-pill" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.65rem 1.25rem' }}>
+                    <Compass size={16} /> Open Learning Center <ArrowRight size={15} />
+                  </Link>
+                </div>
               </>
             ) : (
               <div className="empty-matches">
                 <p>No matches found yet.</p>
-                <Link to="/profiling" className="btn-primary ios-pill" style={{ textDecoration: 'none' }}>Update Profile</Link>
+                <Link to="/profiling" className="btn-primary ios-pill" style={{ textDecoration: 'none' }}>Complete Profiling</Link>
               </div>
             )}
           </section>
@@ -1546,6 +1618,154 @@ const Dashboard = () => {
           color: var(--ios-olive);
           text-align: right;
         }
+        .rec-badge-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.3rem;
+          background: rgba(75, 107, 50, 0.12);
+          color: var(--ios-olive);
+          font-size: 0.72rem;
+          font-weight: 700;
+          padding: 0.2rem 0.6rem;
+          border-radius: 999px;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+        }
+        .rec-explore-lc-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          color: var(--ios-olive);
+          font-size: 0.82rem;
+          font-weight: 700;
+          text-decoration: none;
+          padding: 0.45rem 0.85rem;
+          background: var(--ios-card);
+          border: 1px solid rgba(75, 107, 50, 0.25);
+          border-radius: 999px;
+          transition: all 0.2s;
+        }
+        .rec-explore-lc-badge:hover {
+          background: var(--ios-olive);
+          color: white;
+        }
+        .recommendations-guidance-card {
+          background: linear-gradient(135deg, rgba(75, 107, 50, 0.07) 0%, rgba(248, 250, 252, 0.98) 100%);
+          border: 1px solid rgba(75, 107, 50, 0.22);
+          border-radius: var(--radius-md, 12px);
+          padding: 1.15rem 1.35rem;
+          margin-bottom: 1.15rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1.25rem;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+        .guidance-card-left {
+          display: flex;
+          align-items: flex-start;
+          gap: 1rem;
+          flex: 1;
+        }
+        .guidance-icon-circle {
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          background: #ffffff;
+          border: 1px solid rgba(75, 107, 50, 0.25);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+        .guidance-text h4 {
+          font-size: 0.98rem;
+          font-weight: 700;
+          color: var(--ios-text);
+          margin: 0 0 0.25rem;
+        }
+        .guidance-text p {
+          font-size: 0.84rem;
+          color: #475569;
+          margin: 0 0 0.35rem;
+          line-height: 1.45;
+        }
+        .guidance-secondary-note {
+          font-size: 0.81rem;
+          color: #64748b;
+          margin: 0;
+          line-height: 1.45;
+        }
+        .guidance-inline-link {
+          color: var(--ios-olive);
+          font-weight: 700;
+          text-decoration: underline;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.2rem;
+        }
+        .btn-guidance-lc {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          background: var(--ios-olive);
+          color: #ffffff;
+          padding: 0.65rem 1.15rem;
+          border-radius: 999px;
+          font-size: 0.82rem;
+          font-weight: 700;
+          text-decoration: none;
+          white-space: nowrap;
+          box-shadow: 0 2px 6px rgba(75, 107, 50, 0.2);
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-guidance-lc:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 4px 12px rgba(75, 107, 50, 0.3);
+        }
+        .rec-top-tag {
+          background: rgba(75, 107, 50, 0.15);
+          color: var(--ios-olive);
+          font-size: 0.68rem;
+          font-weight: 800;
+          padding: 0.15rem 0.45rem;
+          border-radius: 4px;
+          text-transform: uppercase;
+          letter-spacing: 0.03em;
+        }
+        .rec-cat-tag {
+          background: rgba(0, 0, 0, 0.05);
+          color: #64748b;
+          font-size: 0.7rem;
+          font-weight: 600;
+          padding: 0.15rem 0.45rem;
+          border-radius: 4px;
+        }
+        .recommendations-footer-cta {
+          margin-top: 1.15rem;
+          padding: 1.15rem 1.35rem;
+          background: var(--ios-secondary, #f8fafc);
+          border: 1px dashed rgba(75, 107, 50, 0.35);
+          border-radius: var(--radius-md, 12px);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          flex-wrap: wrap;
+        }
+        .footer-cta-title {
+          font-size: 0.92rem;
+          font-weight: 700;
+          color: var(--ios-text);
+          display: block;
+        }
+        .footer-cta-sub {
+          font-size: 0.8rem;
+          color: #64748b;
+          margin: 0.2rem 0 0;
+        }
+
         .animate-spin {
           animation: spin 1s linear infinite;
         }
@@ -1621,6 +1841,25 @@ const Dashboard = () => {
           .category-grid {
             grid-template-columns: 1fr;
             gap: 0.75rem;
+          }
+          .recommendations-guidance-card {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 1rem;
+            gap: 0.85rem;
+          }
+          .btn-guidance-lc {
+            width: 100%;
+            justify-content: center;
+          }
+          .recommendations-footer-cta {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 1rem;
+          }
+          .recommendations-footer-cta a {
+            width: 100%;
+            justify-content: center;
           }
         }
 

@@ -5,6 +5,9 @@
  * and visual badges matching the VeerNext premium dark green gradient style.
  */
 
+import categoryBannersManifest from './categoryBannersManifest.json';
+import { getStateBannerImage } from './stateImages';
+
 export const CATEGORY_BANNER_MAP = {
   // Central Categories
   'SSC': '/category_banners/ssc.jpg',
@@ -32,12 +35,57 @@ export const CATEGORY_BANNER_MAP = {
   'Teaching': '/category_banners/teaching.jpg',
 };
 
+function slugifyKey(str = '') {
+  return String(str || '')
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 /**
- * Returns the best banner image URL for a given category name and division
+ * Returns the best banner image URL for a given category name, division, and optional state/UT name.
+ * Priority:
+ * 1. Cloudflare R2 Manifest exact lookup (division + region + category)
+ * 2. Cloudflare R2 Manifest slug lookup
+ * 3. Fallback category matching & defaults
  */
-export function getCategoryBannerImage(categoryName = '', division = 'central') {
-  if (!categoryName) return '/category_banners/ssc.jpg';
-  const trimmed = categoryName.trim();
+export function getCategoryBannerImage(categoryName = '', division = 'central', stateName = '') {
+  if (!categoryName && !stateName) return '/category_banners/ssc.jpg';
+  const trimmed = (categoryName || '').trim();
+  const divLower = (division || 'central').toLowerCase();
+  const regionName = (stateName || '').trim();
+  const catSlug = slugifyKey(trimmed);
+  const regSlug = slugifyKey(regionName);
+
+  // 1. Direct flat key lookup from Cloudflare R2 manifest
+  if (categoryBannersManifest?.flat) {
+    const flatKey = `${divLower}::${regionName.toLowerCase()}::${trimmed.toLowerCase()}`;
+    if (categoryBannersManifest.flat[flatKey]) {
+      return categoryBannersManifest.flat[flatKey];
+    }
+  }
+
+  // 2. Hierarchical lookup by division + region slug + category slug
+  if (categoryBannersManifest) {
+    if (divLower === 'central' && categoryBannersManifest.central?.[catSlug]?.url) {
+      return categoryBannersManifest.central[catSlug].url;
+    }
+    if (divLower === 'state' && regSlug && categoryBannersManifest.states?.[regSlug]?.[catSlug]?.url) {
+      return categoryBannersManifest.states[regSlug][catSlug].url;
+    }
+    if (divLower === 'ut' && regSlug && categoryBannersManifest.uts?.[regSlug]?.[catSlug]?.url) {
+      return categoryBannersManifest.uts[regSlug][catSlug].url;
+    }
+
+    // 3. Central category fallback if searching without state
+    if (categoryBannersManifest.central?.[catSlug]?.url) {
+      return categoryBannersManifest.central[catSlug].url;
+    }
+  }
+
+  // 4. Check static map
   if (CATEGORY_BANNER_MAP[trimmed]) {
     return CATEGORY_BANNER_MAP[trimmed];
   }
@@ -66,10 +114,10 @@ export function getCategoryBannerImage(categoryName = '', division = 'central') 
     return '/category_banners/defence.jpg';
   }
   if (lower.includes('police') || lower.includes('constable') || lower.includes('sub-inspector')) {
-    return division === 'central' ? '/category_banners/police.jpg' : '/category_banners/state_police.jpg';
+    return divLower === 'central' ? '/category_banners/police.jpg' : '/category_banners/state_police.jpg';
   }
   if (lower.includes('teach') || lower.includes('education') || lower.includes('tet') || lower.includes('ctet')) {
-    return division === 'central' ? '/category_banners/teaching.jpg' : '/category_banners/state_education.jpg';
+    return divLower === 'central' ? '/category_banners/teaching.jpg' : '/category_banners/state_education.jpg';
   }
   if (lower.includes('judic') || lower.includes('law') || lower.includes('court') || lower.includes('legal')) {
     return '/category_banners/judiciary.jpg';
@@ -78,11 +126,13 @@ export function getCategoryBannerImage(categoryName = '', division = 'central') 
     return '/category_banners/engineering.jpg';
   }
   if (lower.includes('admin') || lower.includes('psc')) {
-    return division === 'ut' ? '/category_banners/ut_admin.jpg' : '/category_banners/state_psc.jpg';
+    const stImg = getStateBannerImage(regionName);
+    if (stImg) return stImg;
+    return divLower === 'ut' ? '/category_banners/ut_admin.jpg' : '/category_banners/state_psc.jpg';
   }
 
-  if (division === 'state') return '/category_banners/state_psc.jpg';
-  if (division === 'ut') return '/category_banners/ut_admin.jpg';
+  if (divLower === 'state') return getStateBannerImage(regionName) || '/category_banners/state_psc.jpg';
+  if (divLower === 'ut') return getStateBannerImage(regionName) || '/category_banners/ut_admin.jpg';
   return '/category_banners/ssc.jpg';
 }
 

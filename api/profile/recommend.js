@@ -19,11 +19,11 @@ export const profileSchema = Joi.object({
   fullName: Joi.string().min(2).required(),
   dateOfBirth: Joi.date().iso().required(),
   category: Joi.string().valid('General', 'OBC', 'SC', 'ST', 'EWS').required(),
-  disabilityStatus: Joi.string().valid('No', 'Yes').required(),
-  disabilityType: Joi.string().valid('Locomotor', 'Visual', 'Hearing', 'Intellectual', 'Multiple', 'Other').allow('', null),
-  disabilityPercentage: Joi.string().valid('40-49%', '50-69%', '70-100%').allow('', null),
+  disabilityStatus: Joi.string().valid('No', 'Yes').default('No').allow('', null),
+  disabilityType: Joi.string().valid('Locomotor', 'Visual', 'Hearing', 'Intellectual', 'Multiple', 'Other').allow('', null).default(null),
+  disabilityPercentage: Joi.string().valid('40-49%', '50-69%', '70-100%').allow('', null).default(null),
   stateOfDomicile: Joi.string().required(),
-  district: Joi.string().allow('', null),
+  district: Joi.string().allow('', null).default(''),
   maritalStatus: Joi.string().valid('Single', 'Married').required(),
   email: Joi.string().email().required(),
   mobile: Joi.string().pattern(/^[0-9+\-\s]{7,15}$/).required(),
@@ -43,10 +43,10 @@ export const profileSchema = Joi.object({
   mathInClass12: Joi.boolean().default(false),
 
   heightCm: Joi.number().min(100).max(250).required(),
-  weightKg: Joi.number().min(30).max(200).allow(null),
-  chestCm: Joi.number().allow(null),
-  chestExpansion: Joi.number().allow(null),
-  vision: Joi.string().allow('', null),
+  weightKg: Joi.number().min(30).max(200).allow(null).default(null),
+  chestCm: Joi.number().allow(null).default(null),
+  chestExpansion: Joi.number().allow(null).default(null),
+  vision: Joi.string().allow('', null).default(''),
   colourBlind: Joi.boolean().default(false),
   medicalCategory: Joi.string().default('SHAPE-1'),
   physicalProficiency: Joi.string().valid('Excellent', 'Good', 'Satisfactory').default('Good'),
@@ -56,7 +56,7 @@ export const profileSchema = Joi.object({
   englishComfort: Joi.string().valid('Basic', 'Intermediate', 'Fluent').default('Basic'),
 
   sewaNidhiInterests: Joi.array().items(Joi.string()).default([]),
-  consent: Joi.boolean().valid(true).required(),
+  consent: Joi.boolean().default(true),
 });
 
 // --- Fetch exams from Supabase with pre-filtering for scalability ---

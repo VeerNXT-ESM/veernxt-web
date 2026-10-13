@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
+import axios from 'axios';
 import { supabase } from '../lib/supabase';
 import { MIN_PLAYABLE_QUESTIONS } from '../lib/quizQuality';
 import {
   Award, Target, Briefcase, MapPin, ExternalLink, Crown,
   FileText, PlayCircle, Sparkles, ArrowRight, RefreshCw,
   Compass, ListChecks, AlertCircle, CheckCircle2, Rocket,
+  Zap, Calendar, Users,
 } from 'lucide-react';
 import { getProfilingInsights, getTransferableSkills } from '../lib/profilingInsights';
+import { matchJobsV2ForExam, matchJobsV2ForRecommendations } from '../lib/jobMatcher';
+import { JobDescriptionModal } from '../components/JobDescriptionModal';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
@@ -38,6 +42,12 @@ const BREAKDOWN_LABELS = {
   preference_banking_psu: 'Banking/PSU Preference',
   preference_private: 'Private Sector Preference',
   preference_entrepreneurship: 'Entrepreneurship Preference',
+  banking_security_strong: 'Direct ESM Banking Quota',
+  banking_security_soft: 'Banking Security Alignment',
+  banking_clerk_strong: 'Clerical Cadre ESM Preference',
+  banking_clerk_moderate: 'Banking Clerical Fit',
+  banking_officer_strong: 'Officer Cadre Graduate Fit',
+  combat_trade_security_affinity: 'Combat Veteran Security Fit',
 };
 
 function topFactors(breakdown = {}, count = 3) {
@@ -170,6 +180,8 @@ const ProfilingResults = () => {
   const [pointsAwarded, setPointsAwarded] = useState(0);
   const [pointsBalance, setPointsBalance] = useState(null);
   const [preparingExamId, setPreparingExamId] = useState(null);
+  const [selectedJobModal, setSelectedJobModal] = useState(null);
+  const [matchedJobs, setMatchedJobs] = useState([]);
 
   // Sets the candidate's active preparation target and navigates to the Exam Journey.
   // Uses lc_exam_id (UUID from lc_exams table) — NOT the old varchar exam_id.
@@ -225,9 +237,32 @@ const ProfilingResults = () => {
             // back to the persisted profile for refreshes/back-navigation.
             const stateRecs = location.state?.recommendations;
             const stateScore = location.state?.summary?.overall_match_score;
+            const rawRecs = stateRecs?.length ? stateRecs : (profile.recommendations || []);
+            const userProfileObj = profile.raw_profile_data || profile;
 
-            setRecommendations(stateRecs?.length ? stateRecs : (profile.recommendations || []));
+            // Fetch live jobs_v2 records in parallel to enrich recommendations and profile matches
+            let liveJobs = [];
+            try {
+              const jobsRes = await axios.get('/api/jobs-v2');
+              if (jobsRes.data?.ok && Array.isArray(jobsRes.data.jobs)) {
+                liveJobs = jobsRes.data.jobs;
+              }
+            } catch (jobsErr) {
+              console.warn('Jobs_v2 fetch in profiling results warning:', jobsErr.message);
+            }
+
+            // Map matching jobs_v2 records directly to each recommended exam
+            const enrichedRecs = rawRecs.map(rec => ({
+              ...rec,
+              matchedJobsV2: matchJobsV2ForExam(liveJobs, rec)
+            }));
+
+            setRecommendations(enrichedRecs);
             setVeerScore(stateScore != null ? Math.round(stateScore) : profile.veer_score);
+
+            // Compute candidate's live matched jobs from jobs_v2
+            const matched = matchJobsV2ForRecommendations(liveJobs, enrichedRecs, userProfileObj);
+            setMatchedJobs(matched);
 
             // pointsAwarded/pointsBalance only exist in router state right
             // after a fresh /api/profile/recommend call (see recommend.js);
@@ -382,45 +417,100 @@ const ProfilingResults = () => {
                     transition={{ duration: 0.3, delay: 0.1 + idx * 0.06, ease: 'easeOut' }}
                   >
                     <Card padding="sm" elevated={false} className="results-rec-item">
-                      <div className="results-rec-rank">{idx + 1}</div>
-                      <div className="results-rec-info">
-                        <h3>{rec.exam_name}</h3>
-                        <div className="results-rec-meta">
-                          <span><Briefcase size={14} /> {rec.career_track}</span>
-                          {rec.state_ut && <span><MapPin size={14} /> {rec.state_ut}</span>}
+                      <div className="results-rec-main-row">
+                        <div className="results-rec-rank">{idx + 1}</div>
+                        <div className="results-rec-info">
+                          <h3>{rec.exam_name}</h3>
+                          <div className="results-rec-meta">
+                            <span><Briefcase size={14} /> {rec.career_track}</span>
+                            {rec.state_ut && <span><MapPin size={14} /> {rec.state_ut}</span>}
+                          </div>
+                          {topFactors(rec.breakdown).length > 0 && (
+                            <div className="results-chips">
+                              {topFactors(rec.breakdown).map((label, i) => (
+                                <span key={i} className="results-chip">{label}</span>
+                              ))}
+                            </div>
+                          )}
                         </div>
-                        {topFactors(rec.breakdown).length > 0 && (
-                          <div className="results-chips">
-                            {topFactors(rec.breakdown).map((label, i) => (
-                              <span key={i} className="results-chip">{label}</span>
+                        <div className="results-rec-score">
+                          <div className="results-score-bar-bg"><div className="results-score-bar-fill" style={{ width: `${Math.min(rec.score, 100)}%` }} /></div>
+                          <span>{Math.min(Math.round(rec.score), 100)}% Match</span>
+                        </div>
+                        <div className="results-rec-actions">
+                          <button
+                            type="button"
+                            className="results-start-preparing-btn"
+                            onClick={() => handleStartPreparing(rec)}
+                            disabled={preparingExamId === (rec.lc_exam_id || rec.exam_id)}
+                          >
+                            {preparingExamId === (rec.lc_exam_id || rec.exam_id) ? (
+                              <RefreshCw size={14} className="results-animate-spin" />
+                            ) : (
+                              <Rocket size={14} />
+                            )}
+                            Start Preparing
+                          </button>
+                          {rec.website && (
+                            <a href={rec.website} target="_blank" rel="noopener noreferrer" className="results-rec-link">
+                              <ExternalLink size={16} />
+                            </a>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Live jobs_v2 Openings Matched to this Recommended Exam */}
+                      {rec.matchedJobsV2 && rec.matchedJobsV2.length > 0 && (
+                        <div className="results-matched-jobs-panel">
+                          <div className="results-matched-jobs-header">
+                            <span className="results-matched-jobs-title">
+                              <Zap size={13} style={{ color: '#16a34a' }} /> Active Openings from jobs_v2 ({rec.matchedJobsV2.length})
+                            </span>
+                            <span className="results-matched-jobs-sub">Live Database Matches</span>
+                          </div>
+
+                          <div className="results-matched-jobs-list">
+                            {rec.matchedJobsV2.map((j) => (
+                              <div key={j.job_id || j.id || j.url} className="results-matched-job-row">
+                                <div className="results-matched-job-info">
+                                  <div className="results-matched-job-name">{j.title}</div>
+                                  <div className="results-matched-job-meta">
+                                    {j.vacancies && (
+                                      <span className="results-job-vacancies">
+                                        👥 {Number(j.vacancies).toLocaleString()} Vacancies
+                                      </span>
+                                    )}
+                                    {j.last_date && (
+                                      <span>📅 Last Date: {new Date(j.last_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                                    )}
+                                    <span className="results-job-score">{j._matchScore}% Match</span>
+                                  </div>
+                                </div>
+
+                                <div className="results-matched-job-actions">
+                                  <button
+                                    type="button"
+                                    className="results-job-desc-btn"
+                                    onClick={() => setSelectedJobModal(j)}
+                                  >
+                                    <FileText size={12} style={{ color: '#16a34a' }} /> Description
+                                  </button>
+                                  {j.url && (
+                                    <a
+                                      href={j.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="results-job-notice-btn"
+                                    >
+                                      Notice <ExternalLink size={11} />
+                                    </a>
+                                  )}
+                                </div>
+                              </div>
                             ))}
                           </div>
-                        )}
-                      </div>
-                      <div className="results-rec-score">
-                        <div className="results-score-bar-bg"><div className="results-score-bar-fill" style={{ width: `${Math.min(rec.score, 100)}%` }} /></div>
-                        <span>{Math.min(Math.round(rec.score), 100)}% Match</span>
-                      </div>
-                      <div className="results-rec-actions">
-                        <button
-                          type="button"
-                          className="results-start-preparing-btn"
-                          onClick={() => handleStartPreparing(rec)}
-                          disabled={preparingExamId === (rec.lc_exam_id || rec.exam_id)}
-                        >
-                          {preparingExamId === (rec.lc_exam_id || rec.exam_id) ? (
-                            <RefreshCw size={14} className="results-animate-spin" />
-                          ) : (
-                            <Rocket size={14} />
-                          )}
-                          Start Preparing
-                        </button>
-                        {rec.website && (
-                          <a href={rec.website} target="_blank" rel="noopener noreferrer" className="results-rec-link">
-                            <ExternalLink size={16} />
-                          </a>
-                        )}
-                      </div>
+                        </div>
+                      )}
                     </Card>
                   </motion.div>
                 ))}
@@ -434,6 +524,103 @@ const ProfilingResults = () => {
           </Card>
         </motion.div>
       </div>
+
+      {/* Dynamic Live Job Matches from jobs_v2 */}
+      {matchedJobs.length > 0 && (
+        <motion.div
+          className="results-live-jobs-container"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, delay: 0.2, ease: 'easeOut' }}
+        >
+          <Card className="results-live-jobs-card">
+            <div className="results-live-jobs-header">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                <Briefcase size={22} color="var(--ios-olive)" />
+                <h2 className="results-matches-title" style={{ margin: 0 }}>
+                  Live Job Matches from jobs_v2 ({matchedJobs.length})
+                </h2>
+              </div>
+              <span className="results-live-jobs-badge">
+                Filtered by Recommended Exams &amp; Trade Profiles
+              </span>
+            </div>
+
+            <div className="results-live-jobs-grid">
+              {matchedJobs.map((job) => (
+                <div key={job.job_id || job.id || job.url} className="results-live-job-item">
+                  <div>
+                    <div className="results-live-job-top">
+                      <div style={{ display: 'flex', gap: '4px', alignItems: 'center', flexWrap: 'wrap' }}>
+                        <span className="results-job-track-chip">
+                          {job.career_track || job.careerTrack || 'GOVT'}
+                        </span>
+                        <span className="results-job-v2-chip">jobs_v2</span>
+                      </div>
+                      <span className="results-job-match-badge">
+                        {job._matchScore || 85}% Match
+                      </span>
+                    </div>
+
+                    <h4 className="results-live-job-title">{job.title}</h4>
+
+                    {job._recommendedExam && (
+                      <div className="results-live-job-aligned">
+                        🎯 Aligned with: {job._recommendedExam}
+                      </div>
+                    )}
+
+                    <div className="results-live-job-stats">
+                      {job.vacancies && (
+                        <span className="results-job-vacancies">
+                          👥 {Number(job.vacancies).toLocaleString()} Vacancies
+                        </span>
+                      )}
+                      {job.last_date && (
+                        <span>
+                          📅 Last Date: {new Date(job.last_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}
+                        </span>
+                      )}
+                    </div>
+
+                    {job.ai_description && (
+                      <p className="results-live-job-desc">
+                        {job.ai_description.replace(/About the Recruitment\s*/i, '').replace(/Available Posts & Vacancies\s*/i, '')}
+                      </p>
+                    )}
+
+                    <div className="results-live-job-chips">
+                      {job._matchReasons?.slice(0, 3).map((reason, i) => (
+                        <span key={i} className="results-live-job-chip">{reason}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="results-live-job-actions">
+                    <button
+                      type="button"
+                      className="results-job-desc-btn"
+                      onClick={() => setSelectedJobModal(job)}
+                    >
+                      <FileText size={12} style={{ color: '#16a34a' }} /> Description
+                    </button>
+                    {job.url && (
+                      <a
+                        href={job.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="results-job-notice-btn"
+                      >
+                        Notice <ExternalLink size={11} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </motion.div>
+      )}
 
       {/* Career Opportunities reveal — skill gaps, CV, subscription */}
       <motion.div
@@ -494,6 +681,14 @@ const ProfilingResults = () => {
           </Link>
         </Card>
       </motion.div>
+
+      {/* Job Description Modal */}
+      {selectedJobModal && (
+        <JobDescriptionModal
+          job={selectedJobModal}
+          onClose={() => setSelectedJobModal(null)}
+        />
+      )}
 
       <style dangerouslySetInnerHTML={{ __html: `
         .results-loading {
@@ -635,11 +830,260 @@ const ProfilingResults = () => {
         }
         .results-rec-item {
           display: flex;
-          align-items: center;
-          gap: 1.25rem;
+          flex-direction: column;
+          gap: 0.75rem;
           padding: 1rem;
           background: var(--ios-secondary);
           border-radius: var(--radius-md);
+        }
+        .results-rec-main-row {
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+          width: 100%;
+        }
+        .results-matched-jobs-panel {
+          margin-top: 0.15rem;
+          padding-top: 0.65rem;
+          border-top: 1px dashed rgba(0,0,0,0.1);
+          width: 100%;
+        }
+        .results-matched-jobs-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 0.45rem;
+        }
+        .results-matched-jobs-title {
+          font-size: 11px;
+          font-weight: 700;
+          color: #166534;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+        .results-matched-jobs-sub {
+          font-size: 10px;
+          color: #64748b;
+        }
+        .results-matched-jobs-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+        }
+        .results-matched-job-row {
+          background: white;
+          border: 1px solid #e2e8f0;
+          border-radius: 6px;
+          padding: 0.45rem 0.65rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 0.6rem;
+        }
+        .results-matched-job-info {
+          min-width: 0;
+          flex: 1;
+        }
+        .results-matched-job-name {
+          font-size: 12px;
+          font-weight: 600;
+          color: #0f172a;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .results-matched-job-meta {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 10px;
+          color: #64748b;
+          margin-top: 2px;
+          flex-wrap: wrap;
+        }
+        .results-job-vacancies {
+          color: #15803d;
+          font-weight: 700;
+          background: #dcfce7;
+          padding: 1px 5px;
+          border-radius: 3px;
+        }
+        .results-job-score {
+          color: #0284c7;
+          font-weight: 600;
+        }
+        .results-matched-job-actions {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          flex-shrink: 0;
+        }
+        .results-job-desc-btn {
+          font-size: 11px;
+          font-weight: 600;
+          color: #0f172a;
+          background: #FFFFFF;
+          border: 1px solid #cbd5e1;
+          border-radius: 4px;
+          padding: 4px 8px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          transition: background 0.15s ease;
+        }
+        .results-job-desc-btn:hover {
+          background: #f8fafc;
+        }
+        .results-job-notice-btn {
+          font-size: 11px;
+          font-weight: 700;
+          color: #1a472a;
+          background: #f0fdf4;
+          border: 1px solid #bbf7d0;
+          border-radius: 4px;
+          padding: 4px 8px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          transition: background 0.15s ease;
+        }
+        .results-job-notice-btn:hover {
+          background: #dcfce7;
+        }
+
+        /* Live Jobs Grid Section */
+        .results-live-jobs-container {
+          margin-bottom: 1.5rem;
+        }
+        .results-live-jobs-card {
+          padding: 1.5rem;
+        }
+        .results-live-jobs-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1.25rem;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+        .results-live-jobs-badge {
+          font-size: 11px;
+          font-weight: 600;
+          color: #166534;
+          background: #f0fdf4;
+          padding: 3px 8px;
+          border-radius: 6px;
+          border: 1px solid #bbf7d0;
+        }
+        .results-live-jobs-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 0.85rem;
+        }
+        .results-live-job-item {
+          background: #ffffff;
+          padding: 1rem;
+          border-radius: 9px;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .results-live-job-item:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07);
+        }
+        .results-live-job-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 0.4rem;
+        }
+        .results-job-track-chip {
+          font-size: 10px;
+          padding: 1px 5px;
+          border-radius: 3px;
+          background: #f1f5f9;
+          color: #475569;
+          font-weight: 600;
+        }
+        .results-job-v2-chip {
+          font-size: 9px;
+          padding: 1px 4px;
+          border-radius: 3px;
+          background: #e0e7ff;
+          color: #3730a3;
+          font-weight: 700;
+        }
+        .results-job-match-badge {
+          font-size: 11px;
+          font-weight: 800;
+          color: #1a472a;
+          background: #f0fdf4;
+          padding: 1px 6px;
+          border-radius: 3px;
+          border: 1px solid #bbf7d0;
+        }
+        .results-live-job-title {
+          font-size: 13.5px;
+          font-weight: 700;
+          margin: 0 0 0.3rem 0;
+          color: #0f172a;
+          line-height: 1.35;
+        }
+        .results-live-job-aligned {
+          font-size: 11px;
+          color: #166534;
+          font-weight: 600;
+          margin-bottom: 0.35rem;
+        }
+        .results-live-job-stats {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          font-size: 11px;
+          color: #64748b;
+          margin-bottom: 0.45rem;
+        }
+        .results-live-job-desc {
+          font-size: 11.5px;
+          color: #475569;
+          margin: 0 0 0.5rem 0;
+          line-height: 1.45;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .results-live-job-chips {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 3px;
+          margin-bottom: 0.65rem;
+        }
+        .results-live-job-chip {
+          font-size: 10px;
+          padding: 1px 5px;
+          border-radius: 3px;
+          background: #e0f2fe;
+          color: #0369a1;
+          font-weight: 600;
+        }
+        .results-live-job-actions {
+          display: flex;
+          gap: 6px;
+          margin-top: 0.45rem;
+        }
+        .results-live-job-actions .results-job-desc-btn,
+        .results-live-job-actions .results-job-notice-btn {
+          flex: 1;
+          justify-content: center;
+          padding: 6px 10px;
         }
         .results-rec-rank {
           width: 32px;

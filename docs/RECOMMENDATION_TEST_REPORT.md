@@ -1,6 +1,6 @@
 # VeerNXT Recommendation Engine Diagnostic & Audit Report
 
-**Report Date:** 2026-10-07  
+**Report Date:** 2026-10-13  
 **Scope:** Profiling Engine, Banking Post-Tiering System, Dynamic Job Matcher  
 **Total Candidates Benchmarked:** 20 Ex-Servicemen & Agniveer Personas  
 **Total Exam Catalog:** 1629 Verified Central & State Opportunities  

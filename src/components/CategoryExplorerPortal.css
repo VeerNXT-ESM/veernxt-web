@@ -67,12 +67,14 @@
 }
 
 .cep-hero-content {
-  flex: 0 0 55%;
-  padding: 30px 36px;
+  position: relative;
+  z-index: 3;
+  flex: 0 0 auto;
+  max-width: 640px;
+  padding: 32px 38px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 3;
   min-width: 0;
   background: transparent;
 }
@@ -197,15 +199,16 @@
   white-space: nowrap;
 }
 
-/* ── Hero Banner Visual (Smooth Seamless Dark Green Blend) ── */
+/* ── Hero Banner Visual (Smooth Seamless Dark Green Blend Matching State Explorer Hero) ── */
 .cep-hero-visual-wrap {
-  flex: 1 1 45%;
-  position: relative;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  display: flex;
-  align-items: stretch;
-  min-width: 0;
-  background: transparent;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .cep-hero-image-box {
@@ -213,68 +216,39 @@
   height: 100%;
   position: relative;
   overflow: hidden;
-  background: transparent;
 }
 
 .cep-hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 35%;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   display: block;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.05) 12%,
-    rgba(0, 0, 0, 0.35) 30%,
-    rgba(0, 0, 0, 0.75) 55%,
-    rgba(0, 0, 0, 0.95) 80%,
-    black 95%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.05) 12%,
-    rgba(0, 0, 0, 0.35) 30%,
-    rgba(0, 0, 0, 0.75) 55%,
-    rgba(0, 0, 0, 0.95) 80%,
-    black 95%
-  );
 }
 
 .cep-hero-card:hover .cep-hero-img {
   transform: scale(1.03);
 }
 
-/* Gradient fade overlay from content into image */
+/* Gradient fade overlay from content into image matching State Explorer Hero */
 .cep-hero-gradient-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
-    #062819 0%,
-    rgba(6, 40, 25, 0.96) 15%,
-    rgba(6, 40, 25, 0.72) 35%,
-    rgba(6, 40, 25, 0.28) 60%,
-    rgba(6, 40, 25, 0) 85%
+    #062316 0%,
+    rgba(6, 35, 22, 0.95) 25%,
+    rgba(6, 35, 22, 0.65) 55%,
+    rgba(6, 35, 22, 0.15) 85%
   );
   pointer-events: none;
   z-index: 2;
 }
 
-/* Script text between color and image */
+/* Script text between color and image - Removed per request */
 .cep-hero-script-middle {
-  position: absolute;
-  left: 53%;
-  top: 50%;
-  transform: translateY(-50%) rotate(-5deg);
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  pointer-events: none;
-  user-select: none;
+  display: none !important;
 }
 
 .cep-script-word {
@@ -949,15 +923,22 @@
   color: #0f172a;
 }
 
-/* ── Modern 3-Column Exam Card Grid (Matching Reference Design) ── */
+/* ── Modern 4-Column Responsive Exam Card Grid (Matching Reference Design) ── */
 .cep-exams-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-top: 18px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
+  .cep-exams-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
   .cep-exams-card-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -973,71 +954,80 @@
 
 .cep-exam-card {
   background: #ffffff;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
-  padding: 22px 22px 18px 22px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   position: relative;
-  min-height: 204px;
 }
 
 .cep-exam-card:hover {
   background: #ffffff;
   border-color: #cbd5e1;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px -6px rgba(15, 23, 42, 0.1), 0 8px 12px -6px rgba(15, 23, 42, 0.04);
 }
 
-.cep-card-header-row {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  margin-bottom: 16px;
+/* 16:9 Photographic Banner with subtle zoom & motivational quote overlay */
+.cep-card-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  background: #0f172a;
 }
 
-.cep-card-icon-badge {
-  width: 50px;
-  height: 50px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  background: #062819;
-  color: #fbbf24;
-  border: 1px solid rgba(251, 191, 36, 0.28);
-  box-shadow: 0 4px 14px rgba(6, 40, 25, 0.22);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+.cep-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.cep-card-icon-badge svg {
-  color: #fbbf24;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.cep-exam-card:hover .cep-card-icon-badge {
-  transform: scale(1.08);
-  background: #0a3d25;
-  border-color: rgba(251, 191, 36, 0.55);
-  box-shadow: 0 6px 18px rgba(6, 40, 25, 0.32);
-}
-
-.cep-exam-card:hover .cep-card-icon-badge svg {
-  color: #ffffff;
+.cep-exam-card:hover .cep-card-image {
   transform: scale(1.05);
 }
 
-/* Unified dark green background (#062819) with lustrous gold/white icon across all exam types */
-.cep-badge-green,
-.cep-badge-orange,
-.cep-badge-purple,
-.cep-badge-blue,
-.cep-badge-teal,
+.cep-card-image-quote {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: italic;
+  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: right;
+  line-height: 1.25;
+  max-width: 140px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85), 0 1px 2px rgba(0, 0, 0, 0.95);
+  pointer-events: none;
+  letter-spacing: -0.01em;
+  z-index: 2;
+}
+
+.cep-card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #062819;
+  color: #fbbf24;
+}
+
+.cep-card-content {
+  padding: 16px 18px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .cep-badge-red {
   background: #062819;
   color: #fbbf24;
@@ -1738,13 +1728,14 @@
 }
 
 .cep-exam-banner-visual-wrap {
-  flex: 1 1 35%;
-  position: relative;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  display: flex;
-  align-items: stretch;
-  min-width: 0;
-  background: transparent;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .cep-exam-banner-visual-wrap .cep-hero-emblem-badge {
@@ -1761,7 +1752,7 @@
 
 @media (max-width: 1100px) {
   .cep-exam-banner-visual-wrap {
-    display: none;
+    opacity: 0.6;
   }
   .cep-exam-showcase-left-wrap {
     flex: 1 1 100%;
@@ -2787,6 +2778,392 @@
   height: 14px;
   border-radius: 4px;
   background: #f1f5f9;
+}
+
+/* ── Collapsible Examination Introduction Section ── */
+.cep-intro-collapsible-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 6px;
+}
+
+.cep-intro-collapsible-section:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 30px -4px rgba(15, 23, 42, 0.07);
+}
+
+.cep-intro-collapsible-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  cursor: pointer;
+  background: #f8fafc;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  user-select: none;
+}
+
+.cep-intro-collapsible-header:hover {
+  background: #f1f5f9;
+}
+
+.cep-intro-collapsible-section[aria-expanded="true"] .cep-intro-collapsible-header,
+.cep-intro-collapsible-header[aria-expanded="true"] {
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.cep-intro-header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;
+}
+
+.cep-intro-header-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #a7f3d0;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.1);
+}
+
+.cep-intro-header-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.cep-intro-header-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.01em;
+  font-family: 'Outfit', sans-serif;
+}
+
+.cep-intro-header-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  background: #e6f4ea;
+  color: #0f766e;
+  border: 1px solid #bbf7d0;
+}
+
+.cep-intro-header-desc {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.cep-intro-toggle-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 16px;
+  flex-shrink: 0;
+}
+
+.cep-intro-toggle-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f766e;
+}
+
+.cep-intro-toggle-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  transition: transform 0.25s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.cep-intro-toggle-arrow.open {
+  transform: rotate(180deg);
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #ffffff;
+}
+
+.cep-intro-collapsible-body {
+  padding: 24px;
+  background: #ffffff;
+}
+
+.cep-intro-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 16px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cep-intro-manual-container {
+  padding: 6px 0;
+}
+
+.intro-manual-body.cep-manual-content {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.intro-manual-body.cep-manual-content h1,
+.intro-manual-body.cep-manual-content h2,
+.intro-manual-body.cep-manual-content h3 {
+  color: #0f172a;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  font-family: 'Outfit', sans-serif;
+}
+
+.intro-manual-body.cep-manual-content p {
+  margin-bottom: 1em;
+}
+
+.intro-manual-body.cep-manual-content ul,
+.intro-manual-body.cep-manual-content ol {
+  padding-left: 24px;
+  margin-bottom: 1em;
+}
+
+.intro-manual-body.cep-manual-content li {
+  margin-bottom: 6px;
+}
+
+/* Auto Handbook Banner */
+.cep-intro-auto-container,
+.cep-intro-fallback-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cep-intro-auto-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f7fee7 100%);
+  border: 1px solid #bbf7d0;
+  border-radius: 16px;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+.cep-intro-auto-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.cep-intro-auto-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #059669;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.cep-intro-auto-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #064e3b;
+  margin: 0 0 8px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.cep-intro-auto-desc {
+  font-size: 13.5px;
+  color: #374151;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 680px;
+}
+
+.cep-intro-read-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: #043e35;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(4, 62, 53, 0.25);
+  flex-shrink: 0;
+}
+
+.cep-intro-read-btn:hover {
+  background: #065f46;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(4, 62, 53, 0.35);
+}
+
+/* Highlights Grid */
+.cep-intro-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.cep-intro-highlight-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cep-intro-highlight-card:hover {
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+
+.cep-highlight-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.cep-highlight-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.35;
+}
+
+/* Fallback Overview Prose */
+.cep-intro-overview-prose {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.cep-prose-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+.cep-intro-overview-prose p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cep-intro-prose-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.cep-prose-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.cep-prose-box h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #043e35;
+  margin: 0 0 10px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.cep-prose-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cep-prose-box li {
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 18px;
+}
+
+.cep-prose-box li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  top: -1px;
+  color: #059669;
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  .cep-intro-collapsible-header {
+    padding: 16px;
+  }
+  .cep-intro-header-left {
+    gap: 12px;
+  }
+  .cep-intro-header-icon-wrap {
+    width: 36px;
+    height: 36px;
+  }
+  .cep-intro-header-title {
+    font-size: 16px;
+  }
+  .cep-intro-collapsible-body {
+    padding: 16px;
+  }
+  .cep-intro-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+  .cep-intro-prose-boxes {
+    grid-template-columns: 1fr;
+  }
 }
 
 

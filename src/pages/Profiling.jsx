@@ -128,6 +128,24 @@ const Profiling = () => {
             Object.entries(profile.raw_profile_data).map(([k, v]) => [k, v === null || v === undefined ? '' : v])
           );
 
+          // Parse dateOfBirth into dobYear, dobMonth, dobDay if not present
+          if (cleanData.dateOfBirth && (!cleanData.dobYear || !cleanData.dobMonth || !cleanData.dobDay)) {
+            const dt = new Date(cleanData.dateOfBirth);
+            if (!isNaN(dt.getTime())) {
+              cleanData.dobYear = String(dt.getFullYear());
+              cleanData.dobMonth = String(dt.getMonth() + 1).padStart(2, '0');
+              cleanData.dobDay = String(dt.getDate()).padStart(2, '0');
+            }
+          }
+
+          // Parse totalServiceDuration into serviceYears, serviceMonths if not present
+          if (cleanData.totalServiceDuration && (!cleanData.serviceYears || !cleanData.serviceMonths)) {
+            const mY = cleanData.totalServiceDuration.match(/(\d+)\s*y/i);
+            const mM = cleanData.totalServiceDuration.match(/(\d+)\s*m/i);
+            if (mY) cleanData.serviceYears = mY[1];
+            if (mM) cleanData.serviceMonths = mM[1];
+          }
+
           setFormData(prev => ({
             ...prev,
             ...cleanData,
@@ -231,14 +249,22 @@ const Profiling = () => {
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
 
+      const dob = (formData.dobYear && formData.dobMonth && formData.dobDay)
+        ? `${formData.dobYear}-${formData.dobMonth}-${formData.dobDay}`
+        : (formData.dateOfBirth ? formData.dateOfBirth.split('T')[0] : null);
+
+      const dur = (formData.serviceYears || formData.serviceMonths)
+        ? `${formData.serviceYears || 0} years ${formData.serviceMonths || 0} months`
+        : (formData.totalServiceDuration || '4 years 0 months');
+
       const recommendResponse = await axios.post('/api/profile/recommend', {
         ...formData,
-        dateOfBirth: `${formData.dobYear}-${formData.dobMonth}-${formData.dobDay}`,
-        totalServiceDuration: `${formData.serviceYears} years ${formData.serviceMonths} months`,
-        heightCm: parseInt(formData.heightCm),
-        weightKg: parseInt(formData.weightKg),
-        chestCm: parseInt(formData.chestCm),
-        chestExpansion: parseInt(formData.chestExpansion),
+        dateOfBirth: dob,
+        totalServiceDuration: dur,
+        heightCm: parseInt(formData.heightCm) || 170,
+        weightKg: formData.weightKg ? parseInt(formData.weightKg) : null,
+        chestCm: formData.chestCm ? parseInt(formData.chestCm) : null,
+        chestExpansion: formData.chestExpansion ? parseInt(formData.chestExpansion) : null,
       }, {
         headers: token ? { 'Authorization': `Bearer ${token}` } : {},
       });

@@ -9,6 +9,7 @@ import {
   ArrowLeft,
   ChevronRight,
   ChevronLeft,
+  ChevronDown,
   Shield,
   ShieldCheck,
   Layers,
@@ -51,6 +52,7 @@ import {
   getCategoryKicker,
   getCategoryTitleParts,
 } from '../lib/categoryBannerHelper';
+import examCardImages from '../lib/examCardImages.json';
 import './CategoryExplorerPortal.css';
 
 let jobsV2Cache = null;
@@ -66,13 +68,15 @@ async function getJobsV2Cached() {
       if (!res.ok) {
         res = await fetch('/api/jobs?source=v2');
       }
-      const data = await res.json();
-      if (data?.ok && Array.isArray(data.jobs) && data.jobs.length > 0) {
-        jobsV2Cache = data.jobs;
-        return jobsV2Cache;
+      if (res.ok) {
+        const data = await res.json();
+        if (data?.ok && Array.isArray(data.jobs) && data.jobs.length > 0) {
+          jobsV2Cache = data.jobs;
+          return jobsV2Cache;
+        }
       }
-    } catch (err) {
-      console.warn('Jobs_v2 API fetch warning, attempting fallback:', err);
+    } catch {
+      // Fallback silently to direct Supabase query
     }
 
     try {
@@ -86,7 +90,7 @@ async function getJobsV2Cached() {
         jobsV2Cache = dbJobs.map(job => ({
           ...job,
           id: job.id || job.job_id,
-          body: job.conducting_body || job.raw_json?.conducting_body || 'Government Department',
+          body: (typeof job.conducting_body === 'string' ? job.conducting_body : job.conducting_body?.name) || job.raw_json?.conducting_body || 'Government Department',
           careerTrack: job.career_track,
           publishedOn: job.published_on,
           lastDate: job.last_date,
@@ -481,6 +485,61 @@ function getExamRichCardData(exam, categoryName, division) {
     freqText = 'Twice a Year';
   }
 
+  // 8. Photographic Banner and Motivational Quote (AI Generated on Cloudflare R2)
+  let cardImage = exam.card_image_url || exam.banner_url || exam.metadata?.card_image_url || '';
+  let cardQuote = exam.card_quote || exam.metadata?.card_quote || '';
+
+  const examId = exam.exam_id || exam.id;
+  if (!cardImage && examCardImages && examId && examCardImages[examId]?.url) {
+    cardImage = examCardImages[examId].url;
+    cardQuote = examCardImages[examId].quote;
+  }
+
+  if (!cardImage && examCardImages) {
+    const keyMap = [
+      { match: () => nameLower.includes('tier 2') || nameLower.includes('tier-2'), key: 'ssc-cgl-tier-2' },
+      { match: () => nameLower.includes('delhi police'), key: 'delhi-police-constable' },
+      { match: () => nameLower.includes('mts') || nameLower.includes('multi tasking'), key: 'ssc-mts' },
+      { match: () => nameLower.includes('cgl'), key: 'ssc-cgl' },
+      { match: () => nameLower.includes('gd constable') || nameLower.includes('general duty'), key: 'ssc-gd-constable' },
+      { match: () => nameLower.includes('chsl'), key: 'ssc-chsl' },
+      { match: () => nameLower.includes('jht') || nameLower.includes('translator'), key: 'ssc-jht' },
+      { match: () => nameLower.includes('steno'), key: 'ssc-stenographer' },
+      { match: () => nameLower.includes('selection post'), key: 'ssc-selection-post' },
+      { match: () => nameLower.includes('cpo'), key: 'ssc-cpo' },
+      { match: () => nameLower.includes('po') || nameLower.includes('probationary') || nameLower.includes('ibps'), key: 'ibps-po' },
+      { match: () => nameLower.includes('civil service') || nameLower.includes('upsc') || nameLower.includes('ias') || nameLower.includes('ips'), key: 'upsc-civil-services' },
+    ];
+
+    for (const item of keyMap) {
+      if (item.match()) {
+        const itemData = examCardImages[item.key];
+        if (itemData) {
+          cardImage = itemData.url;
+          cardQuote = itemData.quote;
+          break;
+        }
+      }
+    }
+
+    if (!cardImage) {
+      const cat = (categoryName || '').toLowerCase();
+      if (cat.includes('bank') || cat.includes('finance')) {
+        cardImage = examCardImages['ibps-po']?.url;
+        cardQuote = examCardImages['ibps-po']?.quote;
+      } else if (cat.includes('police') || cat.includes('defence')) {
+        cardImage = examCardImages['delhi-police-constable']?.url || examCardImages['ssc-gd-constable']?.url;
+        cardQuote = 'Serve Protect Build India';
+      } else if (cat.includes('civil') || cat.includes('administrative')) {
+        cardImage = examCardImages['upsc-civil-services']?.url;
+        cardQuote = examCardImages['upsc-civil-services']?.quote;
+      } else {
+        cardImage = examCardImages['ssc-cgl']?.url;
+        cardQuote = 'Your Next Step Higher';
+      }
+    }
+  }
+
   return {
     displayTitle,
     description,
@@ -492,6 +551,8 @@ function getExamRichCardData(exam, categoryName, division) {
     levelText,
     postText,
     freqText,
+    cardImage,
+    cardQuote,
   };
 }
 
@@ -574,7 +635,7 @@ export default function CategoryExplorerPortal({
   const [viewTransitioning, setViewTransitioning] = useState(false);
   const [showAllExams, setShowAllExams] = useState(urlViewParam === 'all');
   const [currentPage, setCurrentPage] = useState(1);
-  const EXAMS_PER_PAGE = 6;
+  const EXAMS_PER_PAGE = 12;
   const [localDbExams, setLocalDbExams] = useState([]);
 
   // Multi-facet filter & search states scoped independently per division
@@ -623,6 +684,7 @@ export default function CategoryExplorerPortal({
   const [selectedExam, setSelectedExam] = useState(null);
   const [activeReadingResource, setActiveReadingResource] = useState(null);
   const [activeResourceTab, setActiveResourceTab] = useState('intro');
+  const [isIntroExpanded, setIsIntroExpanded] = useState(true);
   const [examJobs, setExamJobs] = useState([]);
   const [jobsLoading, setJobsLoading] = useState(false);
   const [effectiveTier, setEffectiveTier] = useState('FREE');
@@ -776,7 +838,7 @@ export default function CategoryExplorerPortal({
       try {
         const { data, error } = await supabase
           .from('lc_exams')
-          .select('id, name, category, conducting_body:lc_conducting_bodies(id, name), region:lc_regions(id, name, level)')
+          .select('id, name, category, conducting_body_id, conducting_body:lc_conducting_bodies(id,name), region:lc_regions(id,name,level)')
           .limit(1000);
         if (!error && data && isMounted) {
           setLocalDbExams(data);
@@ -953,11 +1015,11 @@ export default function CategoryExplorerPortal({
       let cancelled = false;
       supabase
         .from('lc_exams')
-        .select('id, name, category, description, conducting_body:lc_conducting_bodies(id, name), region:lc_regions(id, name, level)')
+        .select('id, name, category, conducting_body_id, conducting_body:lc_conducting_bodies(id,name), region:lc_regions(id,name,level)')
         .eq('id', urlExamParam)
         .maybeSingle()
-        .then(({ data }) => {
-          if (!cancelled && data) setSelectedExam(data);
+        .then(({ data, error }) => {
+          if (!cancelled && data && !error) setSelectedExam(data);
         })
         .catch((err) => console.warn('Could not fetch exam for URL param:', err));
       return () => { cancelled = true; };
@@ -1443,8 +1505,15 @@ export default function CategoryExplorerPortal({
   // LEVEL 2: SELECTED EXAM PREVIEW & HUB (5 CARDS + RESOURCES + JOBS)
   // ══════════════════════════════════════════════════════════════════════════
   if (selectedExam) {
-    const conductingName = selectedExam.conducting_body?.name || selectedExam.conductingBody || 'Staff Selection Commission';
-    const regionName = selectedExam.region?.name || selectedExam.regionLevel || selectedExam.level || 'Central';
+    const conductingName = typeof selectedExam.conducting_body === 'string'
+      ? selectedExam.conducting_body
+      : selectedExam.conducting_body?.name || selectedExam.conductingBody || 'Staff Selection Commission';
+    const regionName = typeof selectedExam.region === 'string'
+      ? selectedExam.region
+      : selectedExam.region?.name || selectedExam.regionLevel || selectedExam.level || 'Central';
+    const safeRegionLevel = typeof selectedExam.region === 'string'
+      ? selectedExam.region
+      : selectedExam.region?.level || selectedExam.region?.name || selectedExam.level || selectedExam.state || 'All India';
 
     return (
       <div className="cep-container">
@@ -1523,7 +1592,7 @@ export default function CategoryExplorerPortal({
                 <img
                   src={
                     profile?.hero_image_url ||
-                    getCategoryBannerImage(selectedExam.category || profile?.category_name, profile?.division)
+                    getCategoryBannerImage(selectedExam.category || profile?.category_name, profile?.division, stateName)
                   }
                   alt={`${selectedExam.name} Preparation`}
                   className="cep-hero-img"
@@ -1536,10 +1605,14 @@ export default function CategoryExplorerPortal({
 
           {/* ── The 5 Action Cards Row (Visual Showcase with Real Working Links) ── */}
           <div className="cep-actions-grid" aria-label="Exam Preparation Modules">
-            {/* 1. Introduction -> Opens Book Reader */}
+            {/* 1. Introduction -> Expands and scrolls to collapsible introduction section */}
             <div
-              className={`cep-action-card cep-card-peach cep-action-card-clickable ${activeResourceTab === 'intro' ? 'cep-action-card-active' : ''}`}
-              onClick={handleIntroCardClick}
+              className={`cep-action-card cep-card-peach cep-action-card-clickable ${isIntroExpanded ? 'cep-action-card-active' : ''}`}
+              onClick={() => {
+                setIsIntroExpanded(true);
+                const elem = document.querySelector('.cep-intro-collapsible-section');
+                if (elem) elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
               role="button"
               tabIndex={0}
             >
@@ -1558,10 +1631,15 @@ export default function CategoryExplorerPortal({
               </div>
             </div>
 
-            {/* 2. Guidebooks -> Filters / Scrolls to Study Books */}
+            {/* 2. Guidebooks -> Opens Dedicated Study Materials Guidebooks Page */}
             <div
               className={`cep-action-card cep-card-mint cep-action-card-clickable ${activeResourceTab === 'guide' ? 'cep-action-card-active' : ''}`}
-              onClick={() => setActiveResourceTab('guide')}
+              onClick={() => {
+                const cat = profile?.category_name || selectedExam?.category || 'SSC';
+                const examId = selectedExam?.id || '';
+                const examName = selectedExam?.name || selectedExam?.title || '';
+                navigate(`/study-materials?category=${encodeURIComponent(cat)}&type=guide&exam=${encodeURIComponent(examId)}&examName=${encodeURIComponent(examName)}`);
+              }}
               role="button"
               tabIndex={0}
             >
@@ -1580,10 +1658,15 @@ export default function CategoryExplorerPortal({
               </div>
             </div>
 
-            {/* 3. Preci -> Filters / Scrolls to Revision Notes */}
+            {/* 3. Preci -> Opens Dedicated Study Materials Préci Page */}
             <div
               className={`cep-action-card cep-card-rose cep-action-card-clickable ${activeResourceTab === 'precis' ? 'cep-action-card-active' : ''}`}
-              onClick={() => setActiveResourceTab('precis')}
+              onClick={() => {
+                const cat = profile?.category_name || selectedExam?.category || 'SSC';
+                const examId = selectedExam?.id || '';
+                const examName = selectedExam?.name || selectedExam?.title || '';
+                navigate(`/study-materials?category=${encodeURIComponent(cat)}&type=precis&exam=${encodeURIComponent(examId)}&examName=${encodeURIComponent(examName)}`);
+              }}
               role="button"
               tabIndex={0}
             >
@@ -1647,181 +1730,155 @@ export default function CategoryExplorerPortal({
             </div>
           </div>
 
-          {/* ── Study Materials Showcase Grid (with authentic book cover thumbnails) ── */}
-          <div className="cep-materials-section">
-            <div className="cep-materials-header">
-              <div className="cep-materials-title-row">
-                <span className="cep-header-bar green-bar" />
-                <h4 className="cep-materials-title">
-                  Study Materials for {selectedExam.name}
-                </h4>
+          {/* ── Collapsible Examination Introduction & Overview Section ── */}
+          <section className="cep-intro-collapsible-section" aria-label={`Introduction for ${selectedExam.name}`}>
+            <div
+              className="cep-intro-collapsible-header"
+              onClick={() => setIsIntroExpanded(!isIntroExpanded)}
+              role="button"
+              tabIndex={0}
+              aria-expanded={isIntroExpanded}
+            >
+              <div className="cep-intro-header-left">
+                <div className="cep-intro-header-icon-wrap">
+                  <BookOpen size={20} />
+                </div>
+                <div>
+                  <div className="cep-intro-header-title-row">
+                    <span className="cep-header-bar green-bar" />
+                    <h3 className="cep-intro-header-title">
+                      Official Introduction & Examination Overview
+                    </h3>
+                    <span className="cep-intro-header-badge">
+                      {intro ? 'Official Handbook' : 'Curated Overview'}
+                    </span>
+                  </div>
+                  <p className="cep-intro-header-desc">
+                    Pattern, eligibility criteria, stages of examination and key requirements for {selectedExam.name}
+                  </p>
+                </div>
               </div>
 
-              <div className="cep-materials-tabs-row">
-                <button
-                  type="button"
-                  className={`cep-material-tab-btn ${activeResourceTab === 'intro' ? 'active' : ''}`}
-                  onClick={() => setActiveResourceTab('intro')}
-                >
-                  Introduction ({introCount})
-                </button>
-                <button
-                  type="button"
-                  className={`cep-material-tab-btn ${activeResourceTab === 'guide' ? 'active' : ''}`}
-                  onClick={() => setActiveResourceTab('guide')}
-                >
-                  Guidebooks ({guideItems.length})
-                </button>
-                <button
-                  type="button"
-                  className={`cep-material-tab-btn ${activeResourceTab === 'precis' ? 'active' : ''}`}
-                  onClick={() => setActiveResourceTab('precis')}
-                >
-                  Préci ({precisItems.length})
-                </button>
-              </div>
-
-              {/* Study Materials Search Input */}
-              <div className="cep-materials-search-box">
-                <Search size={14} className="cep-search-icon" />
-                <input
-                  type="text"
-                  placeholder={`Search ${activeResourceTab === 'guide' ? 'guidebooks' : activeResourceTab === 'precis' ? 'précis notes' : 'topics'}...`}
-                  value={materialSearch}
-                  onChange={(e) => setMaterialSearch(e.target.value)}
-                  className="cep-materials-search-input"
-                  aria-label="Filter study materials"
-                />
-                {materialSearch && (
-                  <button
-                    type="button"
-                    className="cep-search-clear-btn"
-                    onClick={() => setMaterialSearch('')}
-                    aria-label="Clear material search"
-                  >
-                    <X size={12} />
-                  </button>
-                )}
+              <div className="cep-intro-toggle-wrap">
+                <span className="cep-intro-toggle-text">
+                  {isIntroExpanded ? 'Collapse' : 'Expand'}
+                </span>
+                <div className={`cep-intro-toggle-arrow ${isIntroExpanded ? 'open' : ''}`}>
+                  <ChevronDown size={18} />
+                </div>
               </div>
             </div>
 
-            {contentLoading ? (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '24px 0', color: '#64748b' }}>
-                <RefreshCw size={18} className="animate-spin" />
-                <span>Loading examination study materials…</span>
-              </div>
-            ) : (
-              <div className="cep-materials-grid">
-                {/* 1. Introduction Tile */}
-                {activeResourceTab === 'intro' && (
-                  intro ? (
-                    intro.source === 'auto' ? (
-                      <ResourceTile
-                        key="intro-auto"
-                        resource={intro.resource}
-                        examName={selectedExam.name}
-                        locked={isResourceLockedForUser(effectiveTier, 'Intro')}
-                        isCompleted={completedResourceIds?.has(intro.resource?.resource_id)}
-                        onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
-                        onOpenResource={(r) => handleOpenResource(r)}
-                      />
-                    ) : (
-                      <IntroManualTile
-                        key="intro-manual"
-                        intro={intro}
-                        locked={isResourceLockedForUser(effectiveTier, 'Intro')}
-                        onOpen={() => handleIntroCardClick()}
-                      />
-                    )
-                  ) : (
-                    <div className="cep-materials-empty" style={{ gridColumn: '1 / -1' }}>
-                      <BookOpen size={28} style={{ color: '#059669', marginBottom: '8px' }} />
-                      <p style={{ fontWeight: 600, color: '#0f172a', margin: '0 0 4px' }}>
-                        Introduction guide is being prepared
-                      </p>
-                      <p style={{ color: '#64748b', fontSize: '12.5px', margin: 0 }}>
-                        Check out the Guidebooks and Préci tabs for available study material.
-                      </p>
+            {isIntroExpanded && (
+              <div className="cep-intro-collapsible-body animate-fade-in">
+                {contentLoading ? (
+                  <div className="cep-intro-loading">
+                    <RefreshCw size={18} className="animate-spin" />
+                    <span>Loading examination introduction…</span>
+                  </div>
+                ) : intro?.source === 'manual' && intro?.body ? (
+                  <div className="cep-intro-manual-container">
+                    <div
+                      className="intro-manual-body cep-manual-content"
+                      dangerouslySetInnerHTML={{ __html: intro.body }}
+                    />
+                  </div>
+                ) : intro?.source === 'auto' && intro?.resource ? (
+                  <div className="cep-intro-auto-container">
+                    <div className="cep-intro-auto-banner">
+                      <div className="cep-intro-auto-info">
+                        <span className="cep-intro-auto-kicker">COMPREHENSIVE HANDBOOK</span>
+                        <h4 className="cep-intro-auto-title">
+                          {intro.resource.title || `${selectedExam.name} Official Introduction`}
+                        </h4>
+                        <p className="cep-intro-auto-desc">
+                          Complete introduction covering recruitment notice, syllabus breakdown, qualification requirements, pattern, marking scheme, and cutoff trends.
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        className="cep-intro-read-btn"
+                        onClick={handleIntroCardClick}
+                      >
+                        <BookOpen size={16} />
+                        <span>Read in Book Reader</span>
+                        <ArrowRight size={14} />
+                      </button>
                     </div>
-                  )
-                )}
 
-                {/* 2. Guidebook Tiles */}
-                {activeResourceTab === 'guide' && (
-                  filteredGuideItems.length > 0 ? (
-                    filteredGuideItems.map((res) => (
-                      <ResourceTile
-                        key={res.id || res.resource_id}
-                        resource={res}
-                        examName={selectedExam.name}
-                        locked={isResourceLockedForUser(effectiveTier, 'Guide')}
-                        isCompleted={completedResourceIds?.has(res.resource_id)}
-                        onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
-                        onOpenResource={(r) => handleOpenResource(r)}
-                      />
-                    ))
-                  ) : (
-                    <div className="cep-materials-empty" style={{ gridColumn: '1 / -1' }}>
-                      <Layers size={28} style={{ color: '#059669', marginBottom: '8px' }} />
-                      <p style={{ fontWeight: 600, color: '#0f172a', margin: '0 0 4px' }}>
-                        {materialSearch ? `No guidebooks match "${materialSearch}"` : 'No guidebooks available yet'}
-                      </p>
-                      <p style={{ color: '#64748b', fontSize: '12.5px', margin: 0 }}>
-                        {materialSearch ? 'Try clearing your search term.' : 'Study books for this examination are being uploaded soon.'}
-                      </p>
-                      {materialSearch && (
-                        <button
-                          type="button"
-                          className="cep-reset-search-btn"
-                          style={{ marginTop: '10px' }}
-                          onClick={() => setMaterialSearch('')}
-                        >
-                          Clear search
-                        </button>
-                      )}
+                    {/* Key Highlights Grid */}
+                    <div className="cep-intro-highlights-grid">
+                      <div className="cep-intro-highlight-card">
+                        <span className="cep-highlight-label">Conducting Body</span>
+                        <span className="cep-highlight-value">{conductingName}</span>
+                      </div>
+                      <div className="cep-intro-highlight-card">
+                        <span className="cep-highlight-label">Examination Tier / Level</span>
+                        <span className="cep-highlight-value">{safeRegionLevel || 'Central Level'}</span>
+                      </div>
+                      <div className="cep-intro-highlight-card">
+                        <span className="cep-highlight-label">Minimum Qualification</span>
+                        <span className="cep-highlight-value">{selectedExam.educational_qualification || selectedExam.qualification || 'Graduate / 10+2 / Secondary'}</span>
+                      </div>
+                      <div className="cep-intro-highlight-card">
+                        <span className="cep-highlight-label">Selection Framework</span>
+                        <span className="cep-highlight-value">Computer Based Test (CBT) + Skill/Interview</span>
+                      </div>
                     </div>
-                  )
-                )}
+                  </div>
+                ) : (
+                  /* Fallback Comprehensive Overview when intro document is in processing */
+                  <div className="cep-intro-fallback-container">
+                    <div className="cep-intro-highlights-grid">
+                      <div className="cep-intro-highlight-card">
+                        <span className="cep-highlight-label">Examination</span>
+                        <span className="cep-highlight-value">{selectedExam.name || selectedExam.title || 'Examination'}</span>
+                      </div>
+                      <div className="cep-intro-highlight-card">
+                        <span className="cep-highlight-label">Cadre & Category</span>
+                        <span className="cep-highlight-value">{selectedExam.category || profile.category_name}</span>
+                      </div>
+                      <div className="cep-intro-highlight-card">
+                        <span className="cep-highlight-label">Level & Region</span>
+                        <span className="cep-highlight-value">{safeRegionLevel || 'All India'}</span>
+                      </div>
+                      <div className="cep-intro-highlight-card">
+                        <span className="cep-highlight-label">Mode of Test</span>
+                        <span className="cep-highlight-value">Computer Based Examination (CBT)</span>
+                      </div>
+                    </div>
 
-                {/* 3. Preci Tiles */}
-                {activeResourceTab === 'precis' && (
-                  filteredPrecisItems.length > 0 ? (
-                    filteredPrecisItems.map((res) => (
-                      <ResourceTile
-                        key={res.id || res.resource_id}
-                        resource={res}
-                        examName={selectedExam.name}
-                        locked={isResourceLockedForUser(effectiveTier, 'Precis')}
-                        isCompleted={completedResourceIds?.has(res.resource_id)}
-                        onToggleComplete={(id, comp) => markAsCompleted?.(id, null, comp)}
-                        onOpenResource={(r) => handleOpenResource(r)}
-                      />
-                    ))
-                  ) : (
-                    <div className="cep-materials-empty" style={{ gridColumn: '1 / -1' }}>
-                      <Target size={28} style={{ color: '#059669', marginBottom: '8px' }} />
-                      <p style={{ fontWeight: 600, color: '#0f172a', margin: '0 0 4px' }}>
-                        {materialSearch ? `No précis notes match "${materialSearch}"` : 'No précis revision notes available yet'}
+                    <div className="cep-intro-overview-prose">
+                      <h4 className="cep-prose-title">About {selectedExam.name}</h4>
+                      <p>
+                        {selectedExam.description ||
+                          `The ${selectedExam.name} is a premier government competitive examination offering coveted career opportunities with structured pay scales, medical benefits, and long-term security. Candidates are evaluated across general intelligence, awareness, quantitative aptitude, and core domain comprehension.`}
                       </p>
-                      <p style={{ color: '#64748b', fontSize: '12.5px', margin: 0 }}>
-                        {materialSearch ? 'Try clearing your search term.' : 'Concise summary notes for this examination are being prepared.'}
-                      </p>
-                      {materialSearch && (
-                        <button
-                          type="button"
-                          className="cep-reset-search-btn"
-                          style={{ marginTop: '10px' }}
-                          onClick={() => setMaterialSearch('')}
-                        >
-                          Clear search
-                        </button>
-                      )}
+
+                      <div className="cep-intro-prose-boxes">
+                        <div className="cep-prose-box">
+                          <h5>Examination Stages</h5>
+                          <ul>
+                            <li><strong>Tier / Phase 1:</strong> Preliminary screening test evaluating core aptitude and speed.</li>
+                            <li><strong>Tier / Phase 2:</strong> In-depth descriptive or sectional domain knowledge assessment.</li>
+                            <li><strong>Final Verification:</strong> Document verification and requisite medical/physical assessment.</li>
+                          </ul>
+                        </div>
+                        <div className="cep-prose-box">
+                          <h5>Recommended Strategy</h5>
+                          <ul>
+                            <li>Master fundamentals with the dedicated <strong>Guidebooks</strong>.</li>
+                            <li>Review high-yield formulas with concise <strong>Préci Notes</strong>.</li>
+                            <li>Solve authentic <strong>Previous Year Questions (PYQs)</strong> to identify trends.</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                  )
+                  </div>
                 )}
               </div>
             )}
-          </div>
+          </section>
 
           {/* ── Jobs Based on This Exam Section ── */}
           <div className="cep-exam-jobs-container">
@@ -1875,7 +1932,12 @@ export default function CategoryExplorerPortal({
             ) : filteredJobs.length > 0 ? (
               <div className="cep-jobs-grid">
                 {filteredJobs.map((job, idx) => {
-                  const jobCompany = job.body || job.conducting_body || job.raw_json?.conducting_body || conductingName || 'Government Department';
+                  const jobCompany = typeof job.body === 'string' && job.body
+                    ? job.body
+                    : (typeof job.conducting_body === 'string' ? job.conducting_body : job.conducting_body?.name) ||
+                      (typeof job.raw_json?.conducting_body === 'string' ? job.raw_json.conducting_body : job.raw_json?.conducting_body?.name) ||
+                      conductingName ||
+                      'Government Department';
                   const rawDate = job.last_date || job.lastDate || job.published_on || job.publishedOn;
                   const isLastDate = Boolean(job.last_date || job.lastDate);
                   const dateStr = rawDate
@@ -1914,7 +1976,7 @@ export default function CategoryExplorerPortal({
                         {cleanTags.length === 0 && (
                           <>
                             <span className="cep-job-tag">{job.category || 'Central Govt'}</span>
-                            <span className="cep-job-tag">{job.state || regionName || 'All India'}</span>
+                            <span className="cep-job-tag">{typeof job.state === 'string' ? job.state : job.state?.name || regionName || 'All India'}</span>
                           </>
                         )}
                       </div>
@@ -1986,7 +2048,7 @@ export default function CategoryExplorerPortal({
       {/* ── Hero Banner Section (VeerNext Dark Green to Category Image Gradient Blend) ── */}
       {(() => {
         const bannerImage =
-          profile.hero_image_url || getCategoryBannerImage(profile.category_name, profile.division);
+          profile.hero_image_url || getCategoryBannerImage(profile.category_name, profile.division, stateName);
         const bannerKicker = getCategoryKicker(profile.category_name, profile.full_name, stateName);
         const titleParts = getCategoryTitleParts(profile.category_name);
 
@@ -2009,11 +2071,7 @@ export default function CategoryExplorerPortal({
                   className="cep-hero-pill"
                   role="listitem"
                   onClick={() => {
-                    if (topExams[0]?.examId) {
-                      handleContinuePrep(topExams[0]);
-                    } else {
-                      handleViewAllExams();
-                    }
+                    navigate(`/study-materials?category=${encodeURIComponent(profile?.category_name || 'SSC')}&type=guide`);
                   }}
                   title="Explore Study Material & Books"
                 >
@@ -2075,18 +2133,6 @@ export default function CategoryExplorerPortal({
                     <span className="cep-hero-pill-sub">Strategy & Updates</span>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Script text between color and image across banner */}
-            <div className="cep-hero-script-middle" aria-hidden="true">
-              <span className="cep-script-word">Same</span>
-              <span className="cep-script-word">Exam</span>
-              <span className="cep-script-word">Bigger</span>
-              <span className="cep-script-word">Opportunities</span>
-              <div className="cep-script-double-underline">
-                <span className="cep-script-u-line1" />
-                <span className="cep-script-u-line2" />
               </div>
             </div>
 
@@ -2227,26 +2273,42 @@ export default function CategoryExplorerPortal({
                       role="button"
                       tabIndex={0}
                     >
-                      <div className="cep-card-header-row">
-                        <div className={`cep-card-icon-badge cep-badge-${cardData.theme}`}>
-                          {renderCardIcon(cardData.iconName)}
-                        </div>
-                        <div className="cep-card-title-box">
-                          <h4 className="cep-card-title">{cardData.displayTitle}</h4>
-                          <p className="cep-card-desc">{cardData.description}</p>
-
-                          <div className="cep-card-pills-row">
-                            <span className={`cep-pill ${cardData.qualTheme}`}>
-                              {renderQualIcon(cardData.qualIcon)}
-                              <span>{cardData.qualText}</span>
-                            </span>
-                            <span className="cep-pill cep-pill-level">
-                              <Landmark size={12} strokeWidth={2.2} />
-                              <span>{cardData.levelText}</span>
-                            </span>
+                      {/* Top 16:9 Photographic Banner with Motivational Quote Overlay */}
+                      <div className="cep-card-image-wrap">
+                        {cardData.cardImage ? (
+                          <img
+                            src={cardData.cardImage}
+                            alt={cardData.displayTitle}
+                            className="cep-card-image"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className={`cep-card-image-placeholder cep-badge-${cardData.theme}`}>
+                            {renderCardIcon(cardData.iconName)}
                           </div>
-                        </div>
+                        )}
+                        {cardData.cardQuote && (
+                          <span className="cep-card-image-quote">
+                            {cardData.cardQuote}
+                          </span>
+                        )}
                       </div>
+
+                      {/* Card Content Details */}
+                      <div className="cep-card-content">
+                        <h4 className="cep-card-title">{cardData.displayTitle}</h4>
+                        <p className="cep-card-desc">{cardData.description}</p>
+
+                        <div className="cep-card-pills-row">
+                          <span className={`cep-pill ${cardData.qualTheme}`}>
+                            {renderQualIcon(cardData.qualIcon)}
+                            <span>{cardData.qualText}</span>
+                          </span>
+                          <span className="cep-pill cep-pill-level">
+                            <Landmark size={12} strokeWidth={2.2} />
+                            <span>{cardData.levelText}</span>
+                          </span>
+                        </div>
 
                       <div className="cep-card-footer-row">
                         <div className="cep-card-meta-left">
@@ -2274,7 +2336,8 @@ export default function CategoryExplorerPortal({
                         </button>
                       </div>
                     </div>
-                  );
+                  </div>
+                );
                 })}
               </div>
 

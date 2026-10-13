@@ -205,22 +205,10 @@ const ExamSyllabus = () => {
               <p className="exam-desc">{description}</p>
             </div>
 
-            {/* Script text between color and image across banner */}
-            <div className="cep-hero-script-middle" aria-hidden="true">
-              <span className="cep-script-word">Same</span>
-              <span className="cep-script-word">Exam</span>
-              <span className="cep-script-word">Bigger</span>
-              <span className="cep-script-word">Opportunities</span>
-              <div className="cep-script-double-underline">
-                <span className="cep-script-u-line1" />
-                <span className="cep-script-u-line2" />
-              </div>
-            </div>
-
             <div className="exam-banner-hero-visual-wrap">
               <div className="exam-banner-image-box">
                 <img
-                  src={getCategoryBannerImage(exam.category, exam.level)}
+                  src={getCategoryBannerImage(exam.category, exam.level, exam.state || exam.state_name)}
                   alt={`${exam.name} Category`}
                   className="exam-banner-img"
                   loading="eager"

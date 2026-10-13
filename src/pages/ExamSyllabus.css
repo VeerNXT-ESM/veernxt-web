@@ -233,20 +233,19 @@
 }
 
 .exam-banner-hero-visual-wrap {
-  width: 360px;
-  height: 100%;
   position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   display: flex;
   align-items: stretch;
   z-index: 1;
   background: transparent;
+  pointer-events: none;
 }
 @media (max-width: 900px) {
-  .exam-banner-hero-visual-wrap { display: none; }
+  .exam-banner-hero-visual-wrap { opacity: 0.6; }
 }
 
 .exam-banner-image-box {
@@ -261,26 +260,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 35%;
   display: block;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.05) 12%,
-    rgba(0, 0, 0, 0.35) 30%,
-    rgba(0, 0, 0, 0.75) 55%,
-    rgba(0, 0, 0, 0.95) 80%,
-    black 95%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.05) 12%,
-    rgba(0, 0, 0, 0.35) 30%,
-    rgba(0, 0, 0, 0.75) 55%,
-    rgba(0, 0, 0, 0.95) 80%,
-    black 95%
-  );
 }
 
 .exam-banner-gradient-overlay {
@@ -288,11 +269,10 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    #062819 0%,
-    rgba(6, 40, 25, 0.96) 15%,
-    rgba(6, 40, 25, 0.72) 35%,
-    rgba(6, 40, 25, 0.28) 60%,
-    rgba(6, 40, 25, 0) 85%
+    #062316 0%,
+    rgba(6, 35, 22, 0.95) 25%,
+    rgba(6, 35, 22, 0.65) 55%,
+    rgba(6, 35, 22, 0.15) 85%
   );
   pointer-events: none;
   z-index: 2;

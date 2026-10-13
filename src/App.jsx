@@ -44,6 +44,8 @@ import InteractiveQuiz from './components/InteractiveQuiz';
 import QuizCenter from './pages/QuizCenter';
 import PyqCenter from './pages/PyqCenter';
 import PyqReader from './pages/PyqReader';
+import DemoExamCards from './pages/DemoExamCards';
+import StudyMaterialsPage from './pages/StudyMaterialsPage';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminShell from './pages/admin/AdminShell';
 import ExamsPage from './pages/admin/ExamsPage';
@@ -207,6 +209,8 @@ function App() {
           <Route path="/legal-aid" element={<LegalAidCell />} />
           <Route path="/cv" element={<AuthGuard><CVBuilder /></AuthGuard>} />
           <Route path="/rewards" element={<AuthGuard><RewardsCenter /></AuthGuard>} />
+          <Route path="/demo-cards" element={<DemoExamCards />} />
+          <Route path="/study-materials" element={<StudyMaterialsPage />} />
         </Route>
 
         {/* v2 — new universal landing + section modules (old routes untouched) */}
