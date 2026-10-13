@@ -29,6 +29,7 @@ const HORIZONTAL_NAV = [
 const PAGE_META = {
   '/admin/exams': { title: 'Exams Management', description: 'Organize exams, map syllabus and assign content resources.' },
   '/admin/books': { title: 'Book Content', description: 'Organize books, guides, precis, and their exam links.' },
+  '/admin/book-covers': { title: 'Book Cover Studio', description: 'Edit the cover details of a book, preview it, and bake the angled 3D thumbnail.' },
   '/admin/reader-themes': { title: 'Reader Themes', description: 'Configure how VeerNXT books look across the Learning Center.' },
   '/admin/conducting-bodies': { title: 'Conducting Bodies', description: 'Manage exam conducting organizations and their logos.' },
   '/admin/categories': { title: 'Categories', description: 'The sector classification used on every exam — add, rename, or delete categories here.' },

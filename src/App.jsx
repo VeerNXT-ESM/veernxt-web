@@ -59,6 +59,7 @@ import AdminQuizEditor from './pages/admin/AdminQuizEditor';
 import PyqPaperEditor from './pages/admin/PyqPaperEditor';
 import BooksPage from './pages/admin/BooksPage';
 import AdminProfilePage from './pages/admin/AdminProfilePage';
+import BookCoverStudio from './pages/admin/BookCoverStudio';
 import BookChapterBrowser from './pages/admin/BookChapterBrowser';
 import ReaderThemesGallery from './pages/admin/ReaderThemesGallery';
 import ThemeEditor from './pages/admin/ThemeEditor';
@@ -232,6 +233,7 @@ function App() {
           <Route path="/admin" element={<Navigate to="/admin/exams" replace />} />
           <Route path="/admin/exams" element={<ExamsPage />} />
           <Route path="/admin/books" element={<BooksPage />} />
+          <Route path="/admin/book-covers" element={<BookCoverStudio />} />
           <Route path="/admin/reader-themes" element={<ReaderThemesGallery />} />
           <Route path="/admin/conducting-bodies" element={<ConductingBodiesPage />} />
           <Route path="/admin/categories" element={<CategoriesPage />} />

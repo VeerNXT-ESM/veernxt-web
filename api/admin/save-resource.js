@@ -1280,6 +1280,96 @@ async function handleBooksSaveTags(req, res) {
   }
 }
 
+// Cover-studio persistence (src/pages/admin/BookCoverStudio.jsx). Text fields
+// live in book_covers.cover_data; the hero picture, logo and baked thumbnails
+// live in R2 (uploaded by the browser through r2-upload first) and only their
+// URLs are stored here. See sql/book_covers.sql.
+function bookCoverKey(row) {
+  return isTitleDedupedCategory(row.category)
+    ? `${row.category}::${row.title.trim().toLowerCase()}`
+    : `${row.category}::${row.resource_id}`;
+}
+
+// R2 is read server-side so the browser gets data URLs and never needs CORS
+// on the bucket (a cross-origin image would taint the canvas used to bake the
+// 3D thumbnail).
+async function urlToDataUrl(url) {
+  if (!url) return '';
+  try {
+    const r = await fetch(url);
+    if (!r.ok) return '';
+    const buf = Buffer.from(await r.arrayBuffer());
+    return `data:${r.headers.get('content-type') || 'image/jpeg'};base64,${buf.toString('base64')}`;
+  } catch (e) {
+    console.error('[admin/save-resource:book-cover] image fetch failed:', url, e.message);
+    return '';
+  }
+}
+
+/** POST { type: 'book-cover-get', resourceId } */
+async function handleBookCoverGet(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { resourceId } = req.body || {};
+  if (!resourceId) return res.status(400).json({ ok: false, error: 'Missing resourceId' });
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
+    const { data: cover, error } = await supabase.from('book_covers').select('*').eq('book_key', bookCoverKey(row)).maybeSingle();
+    if (error) throw new Error(error.message);
+    const [imageDataUrl, logoDataUrl] = cover ? await Promise.all([urlToDataUrl(cover.image_url), urlToDataUrl(cover.logo_url)]) : ['', ''];
+    return res.status(200).json({ ok: true, book: { resourceId: row.resource_id, title: row.title, category: row.category }, cover: cover || null, imageDataUrl, logoDataUrl });
+  } catch (e) {
+    console.error('[admin/save-resource:book-cover-get] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
+/**
+ * POST { type: 'book-cover-save', resourceId, coverData, logoUrl, imageUrl, thumbUrl, flatUrl, updatedBy }
+ * Upserts the book's cover row and points every resources row of the book at
+ * the baked 3D thumbnail (resources.thumbnail_url).
+ */
+async function handleBookCoverSave(req, res) {
+  if (!checkAdminSecret(req, res)) return;
+  const { resourceId, coverData, logoUrl, imageUrl, thumbUrl, flatUrl, updatedBy } = req.body || {};
+  if (!resourceId || !coverData || typeof coverData !== 'object') return res.status(400).json({ ok: false, error: 'Missing resourceId or coverData' });
+  if (!thumbUrl) return res.status(400).json({ ok: false, error: 'Missing thumbUrl' });
+  if (!supabaseUrl) return res.status(500).json({ ok: false, error: 'Missing Supabase credentials on server' });
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: row, error: rowError } = await supabase.from('resources').select('resource_id,title,category').eq('resource_id', resourceId).maybeSingle();
+    if (rowError) throw new Error(rowError.message);
+    if (!row) return res.status(404).json({ ok: false, error: 'Book not found' });
+
+    const { error: upsertError } = await supabase.from('book_covers').upsert({
+      book_key: bookCoverKey(row),
+      category: row.category,
+      title: row.title,
+      resource_id: row.resource_id,
+      cover_data: coverData,
+      logo_url: logoUrl || null,
+      image_url: imageUrl || null,
+      thumb_url: thumbUrl,
+      flat_url: flatUrl || null,
+      updated_by: updatedBy || null,
+      updated_at: new Date().toISOString(),
+    }, { onConflict: 'book_key' });
+    if (upsertError) throw new Error(upsertError.message);
+
+    const { error: thumbError } = await bookRowsFilter(supabase.from('resources').update({ thumbnail_url: thumbUrl }), row);
+    if (thumbError) throw new Error(thumbError.message);
+
+    invalidateBooksCache();
+    return res.status(200).json({ ok: true });
+  } catch (e) {
+    console.error('[admin/save-resource:book-cover-save] failed:', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
+  }
+}
+
 /**
  * POST /api/admin/save-resource with { type: 'books-archive', resourceId }
  *
@@ -1926,6 +2016,14 @@ export default async function handler(req, res) {
 
   if (req.body?.type === 'books-save-tags') {
     return handleBooksSaveTags(req, res);
+  }
+
+  if (req.body?.type === 'book-cover-get') {
+    return handleBookCoverGet(req, res);
+  }
+
+  if (req.body?.type === 'book-cover-save') {
+    return handleBookCoverSave(req, res);
   }
 
   if (req.body?.type === 'books-archive') {

@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Repeat, Save, X, Columns3, Eye, Layers, BookOpen } from 'lucide-react';
+import { Search, Plus, Copy, Pencil, Trash2, Archive, ArchiveRestore, ExternalLink, ChevronLeft, ChevronRight, Link2, Repeat, Save, X, Columns3, Eye, Layers, BookOpen, ImagePlus } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import Select from '../../components/ui/Select';
 import { useDebounced } from './lcShared';
@@ -801,6 +801,18 @@ const BooksPage = () => {
                         </button>
                       </>
                     )}
+                    <button
+                      className="lc-btn"
+                      title="Design this book's cover and 3D thumbnail"
+                      aria-label={`Design cover for ${b.title || 'book'}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigate(`/admin/book-covers?resourceId=${encodeURIComponent(b.resourceId)}`);
+                      }}
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '0.72rem', padding: '0.25rem 0.55rem', whiteSpace: 'nowrap' }}
+                    >
+                      <ImagePlus size={13} /> Design cover
+                    </button>
                     <button
                       className="lc-icon-btn"
                       title="Preview book content"
