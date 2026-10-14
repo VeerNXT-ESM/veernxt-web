@@ -1421,7 +1421,15 @@ function synthesizeIntelligentResponse(query, profile) {
             max-height: 100dvh;
             border-radius: 0 !important;
           }
-          .chatbot-fab { bottom: 20px; right: 20px; }
+        }
+        /* Phones: sit above the fixed bottom tab bar (BottomNav, ~64px + safe area) instead of covering it */
+        @media (max-width: 767px) {
+          .chatbot-fab {
+            bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+            right: 16px;
+            width: 52px;
+            height: 52px;
+          }
         }
 
         /* Header */

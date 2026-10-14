@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { useNavigate, useLocation, Link, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { supabase } from '../lib/supabase';
-import { ShieldCheck, MapPin, Briefcase, RefreshCw, FileText, User, ArrowRight, CheckCircle2, Compass, BarChart3, Quote, Zap, MessageSquare, Sparkles } from 'lucide-react';
+import { ShieldCheck, MapPin, Briefcase, RefreshCw, Pencil, FileText, User, ArrowRight, CheckCircle2, Compass, BarChart3, Quote, Zap, MessageSquare, Sparkles } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -596,6 +596,7 @@ const Dashboard = () => {
                 onClick={handleOpenEditModal}
                 className="welcome-action-btn"
               >
+                <Pencil size={14} aria-hidden="true" />
                 Edit Profile
               </Button>
               {!isEmployer && (
@@ -604,9 +605,11 @@ const Dashboard = () => {
                   onClick={handleRecalculate}
                   disabled={loading}
                   className="welcome-action-btn-secondary"
+                  aria-label="Recalculate Matches"
+                  title="Recalculate Matches"
                 >
                   {loading ? <RefreshCw className="animate-spin" size={14} /> : <RefreshCw size={14} />}
-                  Recalculate Matches
+                  <span className="welcome-action-label">Recalculate Matches</span>
                 </Button>
               )}
             </div>
@@ -678,7 +681,10 @@ const Dashboard = () => {
               center. Absent for employers and for anyone with no matches. */}
           {!isEmployer && topExam && (
             <section>
-              <div className="section-header-plain"><h2>Your Next Step</h2></div>
+              <div className="section-header-plain">
+                <div><h2>Your Next Step</h2></div>
+                <Link to="/learning-center" className="section-view-all">View All <ArrowRight size={14} /></Link>
+              </div>
               <div className="next-step-card">
                 <div className="next-step-top">
                   <div className="next-step-thumb">
@@ -748,8 +754,11 @@ const Dashboard = () => {
           {/* Learning Center Section */}
           <section>
             <div className="section-header-plain">
-              <h2>Learning Center</h2>
-              <p>Your preparation resources</p>
+              <div>
+                <h2>Learning Center</h2>
+                <p>Your preparation resources</p>
+              </div>
+              <Link to="/learning-center" className="section-view-all" aria-label="View all: Learning Center">View All <ArrowRight size={14} /></Link>
             </div>
             <div className="category-grid">
               {[
@@ -758,7 +767,7 @@ const Dashboard = () => {
                 { id: 'quiz', title: 'Quiz Center', icon: 'S11_mock_test.png', desc: 'Coming soon' }
               ].map(cat => (
                 <div key={cat.id} className="category-card" onClick={() => navigate('/learning-center')}>
-                  <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" />
+                  <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" loading="lazy" decoding="async" />
                   <div className="category-card-content">
                     <h3>{cat.title}</h3>
                     <p>{cat.desc}</p>
@@ -874,8 +883,11 @@ const Dashboard = () => {
           {/* My Network Section */}
           <section>
             <div className="section-header-plain">
-              <h2>My Network</h2>
-              <p>Build connections that help your transition</p>
+              <div>
+                <h2>My Network</h2>
+                <p>Build connections that help your transition</p>
+              </div>
+              <Link to="/network" className="section-view-all" aria-label="View all: My Network">View All <ArrowRight size={14} /></Link>
             </div>
             <div className="category-grid">
               {[
@@ -884,7 +896,7 @@ const Dashboard = () => {
                 { id: 'recruiters', title: 'Recruiters', icon: 'S29_recruiter.png', desc: 'Direct corporate connections' }
               ].map(cat => (
                 <div key={cat.id} className="category-card" onClick={() => navigate('/network')}>
-                  <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" />
+                  <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" loading="lazy" decoding="async" />
                   <div className="category-card-content">
                     <h3>{cat.title}</h3>
                     <p>{cat.desc}</p>
@@ -898,8 +910,11 @@ const Dashboard = () => {
           {/* Financial Guidance Section */}
           <section>
             <div className="section-header-plain">
-              <h2>Financial Guidance</h2>
-              <p>Schemes, loans, and pension support</p>
+              <div>
+                <h2>Financial Guidance</h2>
+                <p>Schemes, loans, and pension support</p>
+              </div>
+              <Link to="/financial-guidance" className="section-view-all" aria-label="View all: Financial Guidance">View All <ArrowRight size={14} /></Link>
             </div>
             <div className="category-grid">
               {[
@@ -908,7 +923,7 @@ const Dashboard = () => {
                 { id: 'pension', title: 'Pension Guidance', icon: 'S36_financial_readiness.png', desc: 'Maximize your benefits' }
               ].map(cat => (
                 <div key={cat.id} className="category-card" onClick={() => navigate('/financial-guidance')}>
-                  <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" />
+                  <img src={`/veernxt_assets/icons/${cat.icon}`} alt="" loading="lazy" decoding="async" />
                   <div className="category-card-content">
                     <h3>{cat.title}</h3>
                     <p>{cat.desc}</p>
@@ -1006,7 +1021,7 @@ const Dashboard = () => {
         }
         .welcome-hero {
           margin-bottom: 2.5rem;
-          background-image: linear-gradient(rgba(10,30,10,0.72), rgba(10,30,10,0.72)), url("/veernxt_assets/banners/B14_next_chapter.png");
+          background-image: linear-gradient(rgba(10,30,10,0.72), rgba(10,30,10,0.72)), var(--dash-welcome-img, url("/veernxt_assets/banners/B14_next_chapter.png"));
           background-size: cover;
           background-position: center;
           padding: 2rem;
@@ -1043,7 +1058,7 @@ const Dashboard = () => {
           display: flex;
           flex-direction: column;
           gap: 0.35rem;
-          min-width: 0;
+          min-width: min(220px, calc(100% - 90px));
           margin-right: auto;
           flex: 1;
         }
@@ -1243,7 +1258,7 @@ const Dashboard = () => {
           text-align: right;
         }
         .rail-promo {
-          background-image: linear-gradient(rgba(10,30,10,0.75), rgba(10,30,10,0.75)), url("/veernxt_assets/banners/B08_learning_path.png");
+          background-image: linear-gradient(rgba(10,30,10,0.75), rgba(10,30,10,0.75)), var(--dash-learning-promo-img, url("/veernxt_assets/banners/B08_learning_path.png"));
           background-size: cover;
           background-position: center;
           color: #fff;
@@ -1332,6 +1347,13 @@ const Dashboard = () => {
 
         .section-header-plain {
           margin-bottom: 1rem;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          gap: 0.75rem;
+        }
+        .section-header-plain > div {
+          min-width: 0;
         }
         .section-header-plain h2 {
           font-size: 1.15rem;
@@ -1445,18 +1467,25 @@ const Dashboard = () => {
           font-weight: 700;
         }
 
-        .view-all-link {
+        .section-view-all {
           display: inline-flex;
           align-items: center;
-          gap: 0.4rem;
-          margin-top: 0.85rem;
+          gap: 0.35rem;
+          flex-shrink: 0;
+          min-height: 32px;
           color: var(--ios-olive);
           font-size: 0.85rem;
           font-weight: 700;
           text-decoration: none;
+          white-space: nowrap;
         }
-        .view-all-link:hover {
+        .section-view-all:hover {
           text-decoration: underline;
+        }
+        .section-view-all:focus-visible,
+        .category-card:focus-visible {
+          outline: 2px solid var(--ios-olive);
+          outline-offset: 2px;
         }
 
         .category-grid {
@@ -1774,73 +1803,115 @@ const Dashboard = () => {
           to { transform: rotate(360deg); }
         }
 
-        /* ── Responsive Mobile & Tablet Breakpoints ── */
-        @media (max-width: 992px) {
+        /* ── Responsive breakpoints ──
+           >1200     desktop: content + 300px rail (base styles above)
+           993-1200  small desktop: narrower rail
+           <=992     tablet: single column, rail widgets in a 2-column grid below
+           <=767     phone: compact hero, 3-up compact cards, compact match rows
+           <=480     small phone; <=359 very narrow (2x2 stats, list-style cards) */
+        @media (max-width: 1200px) {
           .dashboard-body {
-            grid-template-columns: 1fr;
-            gap: 2rem;
+            grid-template-columns: minmax(0, 1fr) 260px;
+            gap: 1.5rem;
           }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
           .dashboard-wrapper {
-            padding: 1rem 0.85rem 5.5rem;
+            padding: 1.5rem 20px 2rem;
           }
-          .welcome-hero {
-            padding: 1.35rem 1.15rem;
-            margin-bottom: 1.5rem;
-            border-radius: 14px;
+          .dashboard-body {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 2rem;
+          }
+          .dashboard-rail {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 1rem;
+            align-items: start;
+          }
+          .category-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+          .category-card img {
+            height: 120px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .dashboard-wrapper {
+            padding: 0.85rem 14px 2rem;
+          }
+          .dashboard-main {
+            gap: 1.75rem;
+          }
+
+          /* Profile hero: avatar + name + compact actions on one row */
+          .welcome-hero {
+            padding: 1.1rem 1rem;
+            margin-bottom: 1rem;
+            border-radius: 14px;
+            gap: 0.9rem;
           }
           .welcome-profile-row {
-            gap: 1rem;
+            gap: 0.75rem;
           }
           .welcome-avatar {
-            width: 62px;
-            height: 62px;
+            width: 56px;
+            height: 56px;
+            border-width: 2px;
+          }
+          .welcome-avatar svg {
+            width: 28px;
+            height: 28px;
           }
           .welcome-name {
-            font-size: 1.5rem;
+            font-size: clamp(1.15rem, 5vw, 1.45rem);
           }
-          .welcome-actions {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.5rem;
-          }
-          .welcome-actions button {
-            width: 100%;
-            justify-content: center;
-            padding: 0.55rem 0.65rem;
+          .welcome-status {
             font-size: 0.8rem;
           }
+          .welcome-actions {
+            gap: 0.4rem;
+            flex-shrink: 0;
+            flex-wrap: nowrap;
+          }
+          .welcome-actions button {
+            min-height: 40px;
+            padding: 0.45rem 0.75rem !important;
+            font-size: 0.8rem !important;
+            gap: 0.4rem !important;
+          }
+          .welcome-action-btn-secondary {
+            min-width: 40px;
+          }
+
+          /* Stats: four compact columns with dividers */
           .welcome-stat-row {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-            padding-top: 1rem;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0;
+            padding-top: 0.85rem;
           }
           .welcome-stat {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 0.65rem 0.75rem;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 0 0.5rem;
+            border-left: 1px solid rgba(255,255,255,0.18);
+            min-width: 0;
+          }
+          .welcome-stat:first-child {
+            border-left: none;
+            padding-left: 0;
           }
           .welcome-stat-value {
             font-size: 1.45rem;
           }
           .welcome-stat-label {
-            font-size: 0.68rem;
+            font-size: 0.66rem;
+            letter-spacing: 0.02em;
+            line-height: 1.25;
           }
           .card-illustration {
             display: none;
-          }
-          .dashboard-main {
-            gap: 1.75rem;
-          }
-          .category-grid {
-            grid-template-columns: 1fr;
-            gap: 0.75rem;
           }
           .recommendations-guidance-card {
             flex-direction: column;
@@ -1851,6 +1922,7 @@ const Dashboard = () => {
           .btn-guidance-lc {
             width: 100%;
             justify-content: center;
+            min-height: 44px;
           }
           .recommendations-footer-cta {
             flex-direction: column;
@@ -1861,46 +1933,47 @@ const Dashboard = () => {
             width: 100%;
             justify-content: center;
           }
-        }
 
-        @media (max-width: 580px) {
-          .dashboard-wrapper {
-            padding: 0.75rem 0.65rem 5.5rem;
+          .section-header-plain {
+            align-items: center;
+            margin-bottom: 0.75rem;
           }
-          .welcome-hero {
-            padding: 1.15rem 1rem;
+          .section-header-plain h2 {
+            font-size: 1.1rem;
+            margin: 0;
           }
-          .welcome-profile-row {
-            gap: 0.85rem;
+          .section-header-plain p {
+            display: none;
           }
-          .welcome-avatar {
-            width: 52px;
-            height: 52px;
-          }
-          .welcome-name {
-            font-size: 1.3rem;
-          }
-          .welcome-actions {
-            grid-template-columns: 1fr;
-          }
+
+          /* Your Next Step: thumbnail, title and ring stay on one row */
           .next-step-card {
-            padding: 1.15rem 1rem;
+            padding: 1rem;
+            gap: 0.9rem;
           }
           .next-step-top {
-            flex-direction: column;
-            gap: 0.85rem;
+            gap: 0.75rem;
+            align-items: center;
           }
           .next-step-thumb {
-            width: 60px;
+            width: 120px;
+          }
+          /* ExamThumbnail sets its text sizes inline; scale them to the smaller card */
+          .next-step-thumb > div > div {
+            font-size: 0.72rem !important;
+            padding: 16px 6px 0 !important;
+          }
+          .next-step-thumb > div > span {
+            top: 4px !important;
+            left: 4px !important;
+            font-size: 0.5rem !important;
+            padding: 0.1rem 0.4rem !important;
           }
           .next-step-top h3 {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
+            overflow-wrap: anywhere;
           }
-          .match-ring {
-            width: 56px;
-            height: 56px;
-            align-self: flex-start;
-          }
+          .match-ring,
           .match-ring svg {
             width: 56px;
             height: 56px;
@@ -1908,38 +1981,165 @@ const Dashboard = () => {
           .match-ring-label strong {
             font-size: 0.82rem;
           }
+          .next-step-subjects {
+            gap: 0.4rem;
+          }
+          .next-step-subject {
+            font-size: 0.8rem;
+            min-height: 32px;
+            box-sizing: border-box;
+          }
           .next-step-cta {
             width: 100%;
             justify-content: center;
-            padding: 0.65rem 1rem;
+            min-height: 44px;
+            box-sizing: border-box;
           }
+
+          /* Content cards: three compact cards across */
+          .category-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.6rem;
+          }
+          .category-card img {
+            height: auto;
+            aspect-ratio: 16 / 10;
+          }
+          .category-card-content {
+            padding: 0.6rem 0.65rem 0.7rem;
+          }
+          .category-card-content h3 {
+            font-size: 0.85rem;
+            line-height: 1.25;
+          }
+          .category-card-content p {
+            font-size: 0.74rem;
+            margin-bottom: 0.35rem;
+          }
+          .nav-card-cta {
+            margin-top: auto;
+            min-height: 28px;
+          }
+
+          /* Top Exam Matches: rank, badge, title and score on one row */
           .recommendation-item {
-            padding: 0.75rem 0.85rem;
-            gap: 0.65rem;
-            display: flex;
-            flex-wrap: wrap;
+            padding: 0.7rem 0.75rem;
+            gap: 0.6rem;
+            min-height: 56px;
+          }
+          .rec-rank {
+            width: 28px;
+            height: 28px;
+            font-size: 0.8rem;
           }
           .rec-info h3 {
-            font-size: 0.95rem;
+            font-size: 0.92rem !important;
+            line-height: 1.3;
+            overflow-wrap: anywhere;
           }
-          .rec-score-section {
-            width: 100%;
-            order: 3;
-            margin-top: 0.2rem;
-          }
-          .quick-actions-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 0.45rem;
-          }
-          .quick-action-btn {
-            padding: 0.6rem;
+          .rec-meta {
+            gap: 0.2rem 0.6rem;
             font-size: 0.72rem;
           }
-          .rail-promo {
-            padding: 1.15rem 1rem;
+          .rec-score-section {
+            width: 76px;
           }
-          .rail-promo h3 {
-            font-size: 0.95rem;
+
+          .dashboard-rail {
+            gap: 0.85rem;
+          }
+          .quick-action-btn {
+            min-height: 64px;
+            font-size: 0.78rem;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .dashboard-rail {
+            grid-template-columns: minmax(0, 1fr);
+          }
+        }
+
+        @media (max-width: 480px) {
+          .dashboard-wrapper {
+            padding: 0.75rem 12px 1.5rem;
+          }
+          /* Recalculate becomes icon-only (accessible name via aria-label) */
+          .welcome-action-label {
+            display: none;
+          }
+          .rec-score-section {
+            width: 64px;
+          }
+          .score-text {
+            font-size: 0.7rem;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .next-step-thumb {
+            width: 96px;
+          }
+          /* No room for the level badge on the smallest thumbnail */
+          .next-step-thumb > div > span {
+            display: none;
+          }
+          .next-step-thumb > div > div {
+            font-size: 0.66rem !important;
+            padding: 0 5px !important;
+          }
+        }
+
+        @media (max-width: 359px) {
+          /* Stats: 2x2 once four columns get cramped */
+          .welcome-stat-row {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            row-gap: 0.75rem;
+          }
+          .welcome-stat:nth-child(3) {
+            border-left: none;
+            padding-left: 0;
+          }
+
+          /* Content cards: one per row, image beside the text */
+          .category-grid {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 0.5rem;
+          }
+          .category-card {
+            flex-direction: row;
+          }
+          .category-card img {
+            width: 104px;
+            height: auto;
+            aspect-ratio: auto;
+            min-height: 88px;
+            flex-shrink: 0;
+          }
+          .category-card-content {
+            justify-content: center;
+          }
+
+          /* Match score moves under the title instead of squeezing it */
+          .recommendation-item {
+            flex-wrap: wrap;
+          }
+          .rec-info {
+            flex-basis: calc(100% - 120px);
+          }
+          .rec-score-section {
+            order: 3;
+            width: 100%;
+            padding-left: 34px;
+            box-sizing: border-box;
+          }
+          .quick-actions-grid {
+            grid-template-columns: minmax(0, 1fr);
+          }
+          .quick-action-btn {
+            flex-direction: row;
+            align-items: center;
+            min-height: 48px;
           }
         }
       `}} />

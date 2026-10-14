@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import {
@@ -19,6 +19,9 @@ import {
   ThumbsUp,
   ThumbsDown,
   ChevronRight,
+  SlidersHorizontal,
+  ArrowUpDown,
+  X,
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -47,6 +50,12 @@ const PrivateSectorOpportunities = () => {
   const [selectedSector, setSelectedSector] = useState('All');
   const [selectedTag, setSelectedTag] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
+  // Display order only ('relevance' = matched-for-you first, then newest) and the
+  // phone/tablet filter sheet (the tag filter moves into it below 993px).
+  const [sortBy, setSortBy] = useState('relevance');
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const sheetRef = useRef(null);
+  const filtersBtnRef = useRef(null);
 
   useEffect(() => {
     (async () => {
@@ -108,6 +117,37 @@ const PrivateSectorOpportunities = () => {
       setLoading(false);
     })();
   }, [navigate]);
+
+  // Keep the selected sector chip in view when the strip scrolls sideways.
+  useEffect(() => {
+    document.querySelector('.ps-chip.selected')?.scrollIntoView({ inline: 'nearest', block: 'nearest' });
+  }, [selectedSector, activeTab]);
+
+  // Filter sheet: Escape closes it (focus returns to the Filters button), focus moves
+  // inside on open, and the page behind doesn't scroll. All undone on close/unmount.
+  useEffect(() => {
+    if (!sheetOpen) return undefined;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.body.classList.add('ps-sheet-open');
+    sheetRef.current?.querySelector('button')?.focus();
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        setSheetOpen(false);
+        filtersBtnRef.current?.focus();
+      }
+    };
+    const mq = window.matchMedia('(min-width: 993px)');
+    const onChange = () => { if (mq.matches) setSheetOpen(false); };
+    document.addEventListener('keydown', onKey);
+    mq.addEventListener?.('change', onChange);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      document.body.classList.remove('ps-sheet-open');
+      document.removeEventListener('keydown', onKey);
+      mq.removeEventListener?.('change', onChange);
+    };
+  }, [sheetOpen]);
 
   const handleRespondRequest = async (requestId, decision) => {
     setRespondingId(requestId);
@@ -233,13 +273,52 @@ const PrivateSectorOpportunities = () => {
 
   const pendingInvitationsCount = inboundRequests.filter((r) => r.status === 'interest_sent').length;
 
+  const sortedOpportunities = [...filtered].sort((a, b) => {
+    if (sortBy === 'newest') return new Date(b.created_at || 0) - new Date(a.created_at || 0);
+    if (sortBy === 'positions') return (b.quantity || 0) - (a.quantity || 0);
+    // relevance: opportunities matched to the candidate first; otherwise keep the fetched (newest-first) order
+    return Number(checkMatch(b)) - Number(checkMatch(a));
+  });
+  const filtersApplied = selectedSector !== 'All' || Boolean(selectedTag) || Boolean(searchQuery.trim());
+  const clearAllFilters = () => {
+    setSelectedSector('All');
+    setSelectedTag('');
+    setSearchQuery('');
+  };
+
+  // The tag filter: inline on desktop, inside the Filters sheet on tablets/phones (same state either way).
+  const renderTagFilter = () => allJobTags.length > 0 && (
+    <div className="ps-tags">
+      <span className="ps-tags-label">Filter by Tag:</span>
+      {selectedTag && (
+        <button type="button" className="ps-tag ps-tag-clear" onClick={() => setSelectedTag('')}>
+          Clear tag
+        </button>
+      )}
+      {allJobTags.slice(0, 12).map((tag) => {
+        const isSelected = selectedTag === tag;
+        return (
+          <button
+            key={tag}
+            type="button"
+            className={`ps-tag ${isSelected ? 'selected' : ''}`}
+            aria-pressed={isSelected}
+            onClick={() => setSelectedTag(isSelected ? '' : tag)}
+          >
+            #{tag}
+          </button>
+        );
+      })}
+    </div>
+  );
+
   return (
-    <div style={{ maxWidth: 920, margin: '0 auto', padding: '2rem 1.25rem 3.5rem' }}>
-      <div style={{ marginBottom: '1.5rem' }}>
-        <h1 style={{ fontSize: '1.75rem', fontWeight: 850, margin: '0 0 0.35rem', color: '#0f172a', letterSpacing: '-0.02em' }}>
+    <div className="ps-opps">
+      <div className="ps-opps-head">
+        <h1 className="ps-opps-title">
           Civilian & Corporate Opportunities
         </h1>
-        <p style={{ color: 'var(--text-secondary, #64748b)', margin: 0, fontSize: '0.94rem' }}>
+        <p className="ps-opps-sub">
           Verified private-sector positions mapped to your military trade experience and supervisory scale.
         </p>
       </div>
@@ -259,58 +338,27 @@ const PrivateSectorOpportunities = () => {
       )}
 
       {/* Main Mode Navigation Tabs */}
-      <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '1.5rem', borderBottom: '1.5px solid #e2e8f0', paddingBottom: '0.75rem' }}>
+      <div className="ps-tabs" role="tablist" aria-label="Opportunity views">
         <button
           type="button"
+          role="tab"
+          aria-selected={activeTab === 'opportunities'}
+          className={`ps-tab ${activeTab === 'opportunities' ? 'active' : ''}`}
           onClick={() => setActiveTab('opportunities')}
-          style={{
-            background: 'none',
-            border: 'none',
-            padding: '0.4rem 0.75rem',
-            fontSize: '0.95rem',
-            fontWeight: 800,
-            cursor: 'pointer',
-            color: activeTab === 'opportunities' ? 'var(--ios-olive, #4b6b32)' : '#64748b',
-            borderBottom: activeTab === 'opportunities' ? '2.5px solid var(--ios-olive, #4b6b32)' : 'none',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.4rem',
-          }}
         >
-          <Building2 size={16} /> Browse Open Roles ({opportunities.length})
+          <Building2 size={16} /> <span>Browse Open Roles ({opportunities.length})</span>
         </button>
 
         <button
           type="button"
+          role="tab"
+          aria-selected={activeTab === 'invitations'}
+          className={`ps-tab ${activeTab === 'invitations' ? 'active' : ''}`}
           onClick={() => setActiveTab('invitations')}
-          style={{
-            background: 'none',
-            border: 'none',
-            padding: '0.4rem 0.75rem',
-            fontSize: '0.95rem',
-            fontWeight: 800,
-            cursor: 'pointer',
-            color: activeTab === 'invitations' ? 'var(--ios-olive, #4b6b32)' : '#64748b',
-            borderBottom: activeTab === 'invitations' ? '2.5px solid var(--ios-olive, #4b6b32)' : 'none',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.45rem',
-          }}
         >
-          <Bell size={16} /> Direct Employer Invitations
+          <Bell size={16} /> <span>Direct Employer Invitations</span>
           {pendingInvitationsCount > 0 && (
-            <span
-              style={{
-                background: '#ef4444',
-                color: 'white',
-                fontSize: '0.7rem',
-                fontWeight: 800,
-                padding: '0.15rem 0.45rem',
-                borderRadius: '999px',
-              }}
-            >
-              {pendingInvitationsCount} New
-            </span>
+            <span className="ps-tab-badge">{pendingInvitationsCount} New</span>
           )}
         </button>
       </div>
@@ -337,7 +385,7 @@ const PrivateSectorOpportunities = () => {
           </div>
 
           {inboundRequests.length === 0 ? (
-            <Card padding="lg" style={{ textAlign: 'center', color: '#64748b', padding: '3.5rem 1.5rem' }}>
+            <Card padding="lg" className="ps-card" style={{ textAlign: 'center', color: '#64748b', padding: '3.5rem 1.5rem' }}>
               <Bell size={36} color="#94a3b8" style={{ margin: '0 auto 0.75rem', opacity: 0.4 }} />
               <h3 style={{ margin: '0 0 0.35rem', color: '#0f172a', fontSize: '1.1rem' }}>No Inbound Employer Requests Yet</h3>
               <p style={{ fontSize: '0.88rem', maxWidth: '480px', margin: '0 auto 1.25rem' }}>
@@ -354,9 +402,9 @@ const PrivateSectorOpportunities = () => {
               const isDeclined = req.status === 'declined';
 
               return (
-                <Card key={req.id} padding="lg" style={{ border: isPending ? '1.5px solid #d7e6d0' : '1px solid #e2e8f0', background: isPending ? '#fbfdf9' : 'white' }}>
+                <Card key={req.id} padding="lg" className="ps-card" style={{ border: isPending ? '1.5px solid #d7e6d0' : '1px solid #e2e8f0', background: isPending ? '#fbfdf9' : 'white' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
-                    <div>
+                    <div style={{ minWidth: 0, flex: '1 1 0' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.4rem' }}>
                         <span style={{ fontSize: '0.76rem', background: '#eef4ea', color: '#2d5a27', padding: '0.2rem 0.55rem', borderRadius: '4px', fontWeight: 800 }}>
                           Direct Corporate Invitation
@@ -371,7 +419,7 @@ const PrivateSectorOpportunities = () => {
                         </span>
                       </div>
 
-                      <h3 style={{ margin: '0 0 0.35rem', fontSize: '1.25rem', fontWeight: 850, color: '#0f172a' }}>
+                      <h3 className="ps-card-title" style={{ margin: '0 0 0.35rem', fontSize: '1.25rem', fontWeight: 850, color: '#0f172a' }}>
                         {(job.role_titles || []).join(' / ') || 'Position'}
                       </h3>
 
@@ -404,13 +452,13 @@ const PrivateSectorOpportunities = () => {
                   </div>
 
                   {/* Decision status bar */}
-                  <div style={{ marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+                  <div className="ps-decision" style={{ marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
                     {isPending ? (
                       <>
                         <div style={{ fontSize: '0.82rem', color: '#64748b', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
                           <Lock size={13} /> Your phone & email remain private until you accept.
                         </div>
-                        <div style={{ display: 'flex', gap: '0.65rem' }}>
+                        <div className="ps-decision-actions" style={{ display: 'flex', gap: '0.65rem' }}>
                           <Button
                             size="sm"
                             onClick={() => handleRespondRequest(req.id, 'accepted')}
@@ -450,28 +498,18 @@ const PrivateSectorOpportunities = () => {
       {/* VIEW 2: Browse Public Approved Requirements Tab */}
       {activeTab === 'opportunities' && (
         <div>
-          {/* Sector Filter Bar */}
-          <div style={{ marginBottom: '1rem', overflowX: 'auto', paddingBottom: '0.35rem' }}>
-            <div style={{ display: 'flex', gap: '0.45rem', minWidth: 'max-content' }}>
+          {/* Sector Filter Bar — swipeable on narrow screens; the selected chip is kept in view */}
+          <div className="ps-chips" role="group" aria-label="Sectors">
+            <div className="ps-chips-inner">
               {['All', ...SECTOR_OPTIONS].map((sec) => {
                 const isSelected = selectedSector === sec;
                 return (
                   <button
                     key={sec}
                     type="button"
+                    className={`ps-chip ${isSelected ? 'selected' : ''}`}
+                    aria-pressed={isSelected}
                     onClick={() => setSelectedSector(sec)}
-                    style={{
-                      padding: '0.45rem 0.9rem',
-                      borderRadius: '999px',
-                      border: isSelected ? '1.5px solid var(--ios-olive, #4b6b32)' : '1px solid #cbd5e1',
-                      background: isSelected ? 'var(--ios-olive, #4b6b32)' : '#ffffff',
-                      color: isSelected ? '#ffffff' : '#334155',
-                      fontSize: '0.82rem',
-                      fontWeight: 600,
-                      cursor: 'pointer',
-                      transition: 'all 0.15s ease',
-                      whiteSpace: 'nowrap',
-                    }}
                   >
                     {sec}
                   </button>
@@ -481,7 +519,7 @@ const PrivateSectorOpportunities = () => {
           </div>
 
           {/* Search and Tag filter controls */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.5rem' }}>
+          <div className="ps-controls">
             <div style={{ position: 'relative' }}>
               <Search size={16} color="#94a3b8" style={{ position: 'absolute', left: '0.9rem', top: '50%', transform: 'translateY(-50%)' }} />
               <input
@@ -490,6 +528,7 @@ const PrivateSectorOpportunities = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by role, sector, tags, or location…"
+                aria-label="Search opportunities"
                 style={{
                   width: '100%',
                   padding: '0.7rem 1rem 0.7rem 2.4rem',
@@ -502,68 +541,86 @@ const PrivateSectorOpportunities = () => {
               />
             </div>
 
-            {allJobTags.length > 0 && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#64748b' }}>Filter by Tag:</span>
-                {selectedTag && (
-                  <button
-                    type="button"
-                    onClick={() => setSelectedTag('')}
-                    style={{
-                      padding: '0.25rem 0.6rem',
-                      borderRadius: '999px',
-                      border: '1px solid #94a3b8',
-                      background: '#e2e8f0',
-                      color: '#334155',
-                      fontSize: '0.78rem',
-                      fontWeight: 600,
-                      cursor: 'pointer',
-                    }}
-                  >
-                    Clear tag
-                  </button>
-                )}
-                {allJobTags.slice(0, 12).map((tag) => {
-                  const isSelected = selectedTag === tag;
-                  return (
-                    <button
-                      key={tag}
-                      type="button"
-                      onClick={() => setSelectedTag(isSelected ? '' : tag)}
-                      style={{
-                        padding: '0.25rem 0.6rem',
-                        borderRadius: '999px',
-                        border: isSelected ? '1px solid var(--ios-olive, #4b6b32)' : '1px solid #e2e8f0',
-                        background: isSelected ? 'rgba(75,107,50,0.1)' : '#f8fafc',
-                        color: isSelected ? 'var(--ios-olive, #4b6b32)' : '#475569',
-                        fontSize: '0.78rem',
-                        fontWeight: 600,
-                        cursor: 'pointer',
-                      }}
-                    >
-                      #{tag}
-                    </button>
-                  );
-                })}
-              </div>
-            )}
+            {/* Desktop: tag chips inline. */}
+            <div className="ps-tags-inline">{renderTagFilter()}</div>
+
+            <div className="ps-toolbar">
+              {allJobTags.length > 0 && (
+                <button
+                  type="button"
+                  ref={filtersBtnRef}
+                  className="ps-filters-btn"
+                  onClick={() => setSheetOpen(true)}
+                  aria-expanded={sheetOpen}
+                  aria-controls="ps-filter-sheet"
+                >
+                  <SlidersHorizontal size={16} /> Filters
+                  {selectedTag && <span className="ps-count" aria-label="1 filter applied">1</span>}
+                </button>
+              )}
+              <label className="ps-sort">
+                <ArrowUpDown size={15} aria-hidden="true" />
+                <span className="ps-sort-label">Sort:</span>
+                <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} aria-label="Sort opportunities">
+                  <option value="relevance">Relevance</option>
+                  <option value="newest">Newest</option>
+                  <option value="positions">Most positions</option>
+                </select>
+              </label>
+            </div>
+
+            <div className="ps-results-row">
+              <span>Showing {sortedOpportunities.length} {sortedOpportunities.length === 1 ? 'opportunity' : 'opportunities'}</span>
+              {filtersApplied && (
+                <button type="button" className="ps-clear" onClick={clearAllFilters}>Clear filters</button>
+              )}
+            </div>
           </div>
+
+          {/* Tablets / phones: the tag filter lives in a sheet */}
+          {sheetOpen && <div className="ps-sheet-backdrop" onClick={() => setSheetOpen(false)} />}
+          {sheetOpen && (
+            <div
+              id="ps-filter-sheet"
+              ref={sheetRef}
+              className="ps-sheet"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Filter opportunities"
+            >
+              <div className="ps-sheet-head">
+                <h2>Filters</h2>
+                <button type="button" className="ps-sheet-close" onClick={() => { setSheetOpen(false); filtersBtnRef.current?.focus(); }} aria-label="Close filters">
+                  <X size={18} />
+                </button>
+              </div>
+              <div className="ps-sheet-body">
+                {renderTagFilter()}
+              </div>
+              <div className="ps-sheet-foot">
+                <button type="button" className="ps-sheet-reset" onClick={clearAllFilters}>Reset</button>
+                <button type="button" className="ps-sheet-apply" onClick={() => setSheetOpen(false)}>
+                  Apply Filters ({sortedOpportunities.length})
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Opportunities List */}
           {filtered.length === 0 ? (
-            <Card padding="lg" style={{ textAlign: 'center', color: 'var(--text-secondary, #64748b)', padding: '3rem' }}>
+            <Card padding="lg" className="ps-card ps-empty" style={{ textAlign: 'center', color: 'var(--text-secondary, #64748b)', padding: '3rem' }}>
               No opportunities match your current filters. Try changing your sector or clearing search filters.
             </Card>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              {filtered.map((opp) => {
+              {sortedOpportunities.map((opp) => {
                 const isInterested = interestedIds.has(opp.id);
                 const isMatched = checkMatch(opp);
 
                 return (
-                  <Card key={opp.id} padding="lg">
+                  <Card key={opp.id} padding="lg" className="ps-card">
                     <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
-                      <div style={{ flex: 1, minWidth: 240 }}>
+                      <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.45rem' }}>
                           {opp.sector && (
                             <span
@@ -603,11 +660,11 @@ const PrivateSectorOpportunities = () => {
                           )}
                         </div>
 
-                        <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.15rem', fontWeight: 800, color: '#0f172a' }}>
+                        <h3 className="ps-card-title" style={{ margin: '0 0 0.5rem', fontSize: '1.15rem', fontWeight: 800, color: '#0f172a' }}>
                           {(opp.role_titles || []).join(' / ')}
                         </h3>
 
-                        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.85rem', color: '#64748b', marginBottom: '0.75rem' }}>
+                        <div className="ps-meta" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.85rem', color: '#64748b', marginBottom: '0.75rem' }}>
                           <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
                             <Users size={14} /> {opp.quantity} positions
                           </span>
@@ -661,7 +718,7 @@ const PrivateSectorOpportunities = () => {
                       </div>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '0.6rem', marginTop: '1.1rem', paddingTop: '1rem', borderTop: '1px solid #e2e8f0' }}>
+                    <div className="ps-opp-actions" style={{ display: 'flex', gap: '0.6rem', marginTop: '1.1rem', paddingTop: '1rem', borderTop: '1px solid #e2e8f0' }}>
                       {dismissingId === opp.id ? (
                         <span style={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--text-secondary, #64748b)' }}>
                           Got it.
@@ -688,6 +745,386 @@ const PrivateSectorOpportunities = () => {
           )}
         </div>
       )}
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        .ps-opps {
+          max-width: 920px;
+          margin: 0 auto;
+          padding: 2rem 1.25rem 3.5rem;
+        }
+        .ps-opps-head { margin-bottom: 1.5rem; }
+        .ps-opps-title {
+          font-size: 1.75rem;
+          font-weight: 850;
+          margin: 0 0 0.35rem;
+          color: #0f172a;
+          letter-spacing: -0.02em;
+        }
+        .ps-opps-sub {
+          color: var(--text-secondary, #64748b);
+          margin: 0;
+          font-size: 0.94rem;
+        }
+
+        /* Tabs */
+        .ps-tabs {
+          display: flex;
+          gap: 0.75rem;
+          margin-bottom: 1.5rem;
+          border-bottom: 1.5px solid #e2e8f0;
+          padding-bottom: 0.75rem;
+        }
+        .ps-tab {
+          background: none;
+          border: none;
+          padding: 0.4rem 0.75rem;
+          font-size: 0.95rem;
+          font-weight: 800;
+          cursor: pointer;
+          color: #64748b;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+        }
+        .ps-tab.active {
+          color: var(--ios-olive, #4b6b32);
+          border-bottom: 2.5px solid var(--ios-olive, #4b6b32);
+        }
+        .ps-tab-badge {
+          background: #ef4444;
+          color: white;
+          font-size: 0.7rem;
+          font-weight: 800;
+          padding: 0.15rem 0.45rem;
+          border-radius: 999px;
+          white-space: nowrap;
+        }
+
+        /* Sector chips */
+        .ps-chips {
+          margin-bottom: 1rem;
+          overflow-x: auto;
+          padding-bottom: 0.35rem;
+        }
+        .ps-chips-inner {
+          display: flex;
+          gap: 0.45rem;
+          min-width: max-content;
+        }
+        .ps-chip {
+          padding: 0.45rem 0.9rem;
+          border-radius: 999px;
+          border: 1px solid #cbd5e1;
+          background: #ffffff;
+          color: #334155;
+          font-size: 0.82rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.15s ease;
+          white-space: nowrap;
+        }
+        .ps-chip.selected {
+          border: 1.5px solid var(--ios-olive, #4b6b32);
+          background: var(--ios-olive, #4b6b32);
+          color: #ffffff;
+        }
+
+        /* Search, tags, toolbar */
+        .ps-controls {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          margin-bottom: 1.5rem;
+        }
+        .ps-tags {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          flex-wrap: wrap;
+        }
+        .ps-tags-label {
+          font-size: 0.8rem;
+          font-weight: 700;
+          color: #64748b;
+        }
+        .ps-tag {
+          padding: 0.25rem 0.6rem;
+          border-radius: 999px;
+          border: 1px solid #e2e8f0;
+          background: #f8fafc;
+          color: #475569;
+          font-size: 0.78rem;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .ps-tag.selected {
+          border-color: var(--ios-olive, #4b6b32);
+          background: rgba(75, 107, 50, 0.1);
+          color: var(--ios-olive, #4b6b32);
+        }
+        .ps-tag-clear {
+          border-color: #94a3b8;
+          background: #e2e8f0;
+          color: #334155;
+        }
+        .ps-toolbar {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 0.6rem;
+        }
+        .ps-filters-btn {
+          display: none;
+          align-items: center;
+          gap: 0.45rem;
+          min-height: 44px;
+          padding: 0 1rem;
+          border: 1px solid #cbd5e1;
+          border-radius: 12px;
+          background: #ffffff;
+          color: #0f172a;
+          font-size: 0.92rem;
+          font-weight: 700;
+          cursor: pointer;
+        }
+        .ps-count {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 20px;
+          height: 20px;
+          padding: 0 6px;
+          border-radius: 999px;
+          background: var(--ios-olive, #4b6b32);
+          color: #fff;
+          font-size: 0.72rem;
+          font-weight: 800;
+        }
+        .ps-sort {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          min-height: 40px;
+          padding: 0 0.7rem;
+          border: 1px solid #cbd5e1;
+          border-radius: 10px;
+          background: #ffffff;
+          color: #0f172a;
+          font-size: 0.85rem;
+          font-weight: 700;
+        }
+        .ps-sort select {
+          border: none;
+          background: transparent;
+          font: inherit;
+          font-weight: 600;
+          color: #334155;
+          cursor: pointer;
+          padding: 4px 0;
+          outline: none;
+        }
+        .ps-sort:focus-within,
+        .ps-filters-btn:focus-visible,
+        .ps-chip:focus-visible,
+        .ps-tag:focus-visible,
+        .ps-tab:focus-visible,
+        .ps-clear:focus-visible {
+          outline: 2px solid var(--ios-olive, #4b6b32);
+          outline-offset: 2px;
+        }
+        .ps-results-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.75rem;
+          font-size: 0.85rem;
+          color: #64748b;
+          font-weight: 600;
+        }
+        .ps-clear {
+          background: none;
+          border: none;
+          padding: 0;
+          color: var(--ios-olive, #4b6b32);
+          font-size: 0.85rem;
+          font-weight: 800;
+          cursor: pointer;
+        }
+
+        /* Filter sheet: only on tablets / phones */
+        .ps-sheet,
+        .ps-sheet-backdrop {
+          display: none;
+        }
+        .ps-card-title,
+        .ps-meta span,
+        .ps-card p {
+          overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 992px) {
+          .ps-tags-inline { display: none; }
+          .ps-toolbar { justify-content: space-between; }
+          .ps-filters-btn { display: inline-flex; }
+          .ps-sheet-backdrop {
+            display: block;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.5);
+            z-index: 1000;
+          }
+          .ps-sheet {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-height: 85dvh;
+            z-index: 1001;
+            background: var(--surface, #fff);
+            border-radius: 18px 18px 0 0;
+            box-shadow: 0 -12px 36px rgba(15, 23, 42, 0.22);
+            animation: psSheetUp 0.24s ease-out;
+          }
+          .ps-sheet-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+          }
+          .ps-sheet-head h2 { margin: 0; font-size: 1.1rem; font-weight: 800; color: #0f172a; }
+          .ps-sheet-close {
+            width: 44px;
+            height: 44px;
+            margin: -6px -8px -6px 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            color: #475569;
+            cursor: pointer;
+          }
+          .ps-sheet-body {
+            padding: 1rem;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+          }
+          .ps-sheet-body .ps-tag {
+            min-height: 40px;
+            padding: 0.35rem 0.85rem;
+            font-size: 0.88rem;
+          }
+          .ps-sheet-foot {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 0.6rem;
+            padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+            border-top: 1px solid #e2e8f0;
+            background: var(--surface, #fff);
+          }
+          .ps-sheet-foot button {
+            min-height: 46px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+          }
+          .ps-sheet-reset { background: #ffffff; border: 1px solid #cbd5e1; color: #334155; }
+          .ps-sheet-apply { background: var(--ios-olive, #4b6b32); border: 1px solid var(--ios-olive, #4b6b32); color: #fff; }
+          body.ps-sheet-open .chatbot-fab { display: none !important; }
+        }
+        @keyframes psSheetUp {
+          from { transform: translateY(32px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 767px) {
+          .ps-opps { padding: 1rem 14px 2rem; }
+          .ps-opps-head { margin-bottom: 1rem; }
+          .ps-opps-title { font-size: 1.45rem; line-height: 1.2; }
+          .ps-opps-sub { font-size: 0.95rem; line-height: 1.4; }
+
+          /* Two tabs share the row; labels wrap instead of overflowing */
+          .ps-tabs { gap: 0; padding-bottom: 0; margin-bottom: 1rem; }
+          .ps-tab {
+            flex: 1 1 0;
+            min-width: 0;
+            min-height: 52px;
+            justify-content: center;
+            text-align: center;
+            padding: 0.4rem 0.35rem;
+            font-size: 0.85rem;
+            line-height: 1.2;
+            border-bottom: 2.5px solid transparent;
+            margin-bottom: -1.5px;
+            flex-wrap: wrap;
+            row-gap: 0.15rem;
+          }
+          .ps-tab.active { border-bottom-color: var(--ios-olive, #4b6b32); }
+          .ps-tab svg { flex-shrink: 0; }
+
+          /* Chips bleed to the screen edge and swipe */
+          .ps-chips {
+            margin: 0 -14px 0.75rem;
+            padding: 0 14px 0.35rem;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+          }
+          .ps-chips::-webkit-scrollbar { display: none; }
+          .ps-chip { min-height: 40px; font-size: 0.88rem; }
+
+          .ps-opps .vx-search-input {
+            font-size: 1rem !important; /* 16px: no iOS zoom on focus */
+            min-height: 46px;
+          }
+          .ps-sort { flex: 1; min-height: 44px; border-radius: 12px; justify-content: flex-start; }
+          .ps-sort select { flex: 1; min-width: 0; font-size: 1rem; }
+          .ps-filters-btn { flex: 0 0 auto; }
+
+          /* Cards */
+          .ps-card { padding: 1rem !important; border-radius: 14px !important; }
+          .ps-card-title { font-size: 1.05rem !important; line-height: 1.3; }
+          .ps-meta { gap: 0.4rem 0.9rem !important; font-size: 0.88rem !important; }
+          .ps-card p { font-size: 0.92rem !important; }
+          .ps-empty { padding: 2rem 1rem !important; }
+
+          .ps-opp-actions {
+            display: grid !important;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 0.5rem !important;
+            align-items: center;
+          }
+          .ps-opp-actions button {
+            min-height: 46px;
+            width: 100%;
+            font-size: 0.92rem !important;
+            justify-content: center;
+          }
+          .ps-opp-actions > span { grid-column: 1 / -1; }
+
+          /* Invitations: decisions stack full width */
+          .ps-decision { flex-direction: column; align-items: stretch !important; }
+          .ps-decision-actions { flex-direction: column; }
+          .ps-decision-actions button {
+            min-height: 48px;
+            width: 100%;
+            font-size: 0.92rem !important;
+            justify-content: center;
+            white-space: normal;
+            text-align: center;
+          }
+        }
+        @media (max-width: 359px) {
+          .ps-opp-actions { grid-template-columns: 1fr; }
+          .ps-sort-label { display: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .ps-sheet { animation: none; }
+        }
+      `}} />
     </div>
   );
 };

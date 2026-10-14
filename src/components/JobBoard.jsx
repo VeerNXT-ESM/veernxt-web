@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import {
   Briefcase, ExternalLink, RefreshCw, Search, AlertCircle, Clock,
@@ -66,7 +66,7 @@ const JobCard = ({ job, idx, isActive, onSelect, onDismiss, getAvatarColor, calc
       <div className="job-card-body">
         <div className="job-card-top-row">
           <h4 className="job-card-title">{job.title}</h4>
-          <button type="button" className="job-card-dismiss" onClick={(e) => { e.stopPropagation(); onDismiss(); }} aria-label="Dismiss job">
+          <button type="button" className="job-card-dismiss" onClick={(e) => { e.stopPropagation(); onDismiss(); }} aria-label={`Dismiss ${job.title}`}>
             <X size={14} />
           </button>
         </div>
@@ -380,6 +380,8 @@ const JobBoard = () => {
   const [sortBy, setSortBy] = useState('relevance');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [mobileDetailOpen, setMobileDetailOpen] = useState(false);
+  const filterToggleRef = useRef(null);
+  const filterSheetRef = useRef(null);
 
   const fetchJobs = async () => {
     setLoading(true);
@@ -472,6 +474,40 @@ const JobBoard = () => {
     setExamAccordionOpen(false);
     setDetailTab('overview');
   }, [selectedJob?.id]);
+
+  // Filter sheet (phones / tablets): Escape closes it and returns focus to the
+  // Filters button, focus moves into the sheet when it opens, and the page behind
+  // it doesn't scroll. Everything is undone when it closes or the page unmounts,
+  // so the page is never left locked.
+  useEffect(() => {
+    if (!sidebarOpen) return undefined;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.body.classList.add('jobs-sheet-open');
+    filterSheetRef.current?.querySelector('button, input')?.focus();
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        setSidebarOpen(false);
+        filterToggleRef.current?.focus();
+      }
+    };
+    const mq = window.matchMedia('(min-width: 993px)');
+    const onChange = () => { if (mq.matches) setSidebarOpen(false); };
+    document.addEventListener('keydown', onKey);
+    mq.addEventListener?.('change', onChange);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      document.body.classList.remove('jobs-sheet-open');
+      document.removeEventListener('keydown', onKey);
+      mq.removeEventListener?.('change', onChange);
+    };
+  }, [sidebarOpen]);
+
+  // While a job's details fill the screen, lift the floating assistant clear of the Apply bar.
+  useEffect(() => {
+    document.body.classList.toggle('jobs-detail-open', mobileDetailOpen);
+    return () => document.body.classList.remove('jobs-detail-open');
+  }, [mobileDetailOpen]);
 
   const dismissJob = (jobId) => {
     setDismissedJobIds(prev => [...prev, jobId]);
@@ -587,10 +623,13 @@ const JobBoard = () => {
     setBodySearch('');
   };
 
+  const activeFilterCount = (categoryFilter !== 'ALL' ? 1 : 0) + (bodySearch.trim() ? 1 : 0);
+
   const selectJob = (job) => {
     setSelectedJob(job);
-    if (window.matchMedia('(max-width: 768px)').matches) {
+    if (window.matchMedia('(max-width: 992px)').matches) {
       setMobileDetailOpen(true);
+      window.scrollTo({ top: 0 });
     }
   };
 
@@ -692,13 +731,28 @@ const JobBoard = () => {
           </div>
 
           <div className="jobs-discovery-shell">
-            <button type="button" className="jobs-filter-toggle" onClick={() => setSidebarOpen(o => !o)}>
+            <button
+              type="button"
+              ref={filterToggleRef}
+              className="jobs-filter-toggle"
+              onClick={() => setSidebarOpen(o => !o)}
+              aria-expanded={sidebarOpen}
+              aria-controls="jobs-filter-sheet"
+            >
               <Sliders size={16} /> Filters
+              {activeFilterCount > 0 && <span className="jobs-filter-count" aria-label={`${activeFilterCount} filters applied`}>{activeFilterCount}</span>}
             </button>
 
             {sidebarOpen && <div className="jobs-filter-backdrop" onClick={() => setSidebarOpen(false)} />}
 
-            <aside className={`jobs-filter-sidebar ${sidebarOpen ? 'open' : ''}`}>
+            <aside
+              id="jobs-filter-sheet"
+              ref={filterSheetRef}
+              className={`jobs-filter-sidebar ${sidebarOpen ? 'open' : ''}`}
+              role={sidebarOpen ? 'dialog' : undefined}
+              aria-modal={sidebarOpen ? 'true' : undefined}
+              aria-label="Filter jobs"
+            >
               <div className="jobs-filter-sidebar-header">
                 <h3>Filter Results</h3>
                 <div className="jobs-filter-sidebar-header-actions">
@@ -737,15 +791,23 @@ const JobBoard = () => {
                   />
                 </div>
               </FilterSection>
+
+              {/* Sheet footer — hidden on desktop. Filters apply immediately; Apply just closes the sheet. */}
+              <div className="jobs-filter-footer">
+                <button type="button" className="btn-secondary jobs-filter-reset" onClick={clearFilters}>Reset</button>
+                <button type="button" className="btn-primary jobs-filter-apply" onClick={() => setSidebarOpen(false)}>
+                  Apply Filters{sortedResultJobs.length ? ` (${sortedResultJobs.length})` : ''}
+                </button>
+              </div>
             </aside>
 
             <main className="jobs-results" id="jobs-results-anchor">
               <div className="jobs-results-toolbar">
-                <div className="jobs-result-tabs">
-                  <button className={resultTab === 'recommended' ? 'active' : ''} onClick={() => setResultTab('recommended')}>Recommended for You</button>
-                  <button className={resultTab === 'all' ? 'active' : ''} onClick={() => setResultTab('all')}>All Opportunities</button>
-                  <button className={resultTab === 'closing' ? 'active' : ''} onClick={() => setResultTab('closing')}>Closing Soon</button>
-                  <button className={resultTab === 'veteran' ? 'active' : ''} onClick={() => setResultTab('veteran')}>Veteran Friendly</button>
+                <div className="jobs-result-tabs" role="tablist" aria-label="Job lists">
+                  <button role="tab" aria-selected={resultTab === 'recommended'} className={resultTab === 'recommended' ? 'active' : ''} onClick={() => setResultTab('recommended')}>Recommended for You</button>
+                  <button role="tab" aria-selected={resultTab === 'all'} className={resultTab === 'all' ? 'active' : ''} onClick={() => setResultTab('all')}>All Opportunities</button>
+                  <button role="tab" aria-selected={resultTab === 'closing'} className={resultTab === 'closing' ? 'active' : ''} onClick={() => setResultTab('closing')}>Closing Soon</button>
+                  <button role="tab" aria-selected={resultTab === 'veteran'} className={resultTab === 'veteran' ? 'active' : ''} onClick={() => setResultTab('veteran')}>Veteran Friendly</button>
                 </div>
                 <div className="jobs-sort">
                   <label htmlFor="jobs-sort-select">Sort by</label>
@@ -791,11 +853,11 @@ const JobBoard = () => {
               </div>
 
               {sortedResultJobs.length > RESULTS_PER_PAGE && (
-                <div className="jobs-pagination">
+                <nav className="jobs-pagination" aria-label="Job results pages">
                   <button type="button" disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)}>Previous</button>
                   <span>Page {currentPage} of {totalPages}</span>
                   <button type="button" disabled={currentPage === totalPages} onClick={() => setCurrentPage(p => p + 1)}>Next</button>
-                </div>
+                </nav>
               )}
             </main>
 
@@ -827,7 +889,7 @@ const JobBoard = () => {
         .jobs-hero {
           position: relative;
           background: linear-gradient(120deg, rgba(11, 33, 24, 0.88) 0%, rgba(31, 58, 46, 0.82) 45%, rgba(75, 107, 50, 0.55) 100%),
-            url('/veernxt_assets/banners/B13_next_mission.png');
+            var(--jobs-hero-img, url('/veernxt_assets/banners/B13_next_mission.png'));
           background-size: cover;
           background-position: right center;
           padding: 1.8rem 2rem;
@@ -1809,7 +1871,30 @@ const JobBoard = () => {
           white-space: nowrap;
         }
 
-        /* Responsive collapse of the three-column shell */
+        /* Count badge on the Filters button + the filter sheet footer (only shown when the sidebar is a sheet) */
+        .jobs-filter-count {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 20px;
+          height: 20px;
+          padding: 0 6px;
+          margin-left: 0.15rem;
+          border-radius: 999px;
+          background: var(--ios-olive);
+          color: #fff;
+          font-size: 0.72rem;
+          font-weight: 800;
+        }
+        .jobs-filter-footer {
+          display: none;
+        }
+
+        /* Responsive collapse of the three-column shell.
+           >1200 desktop: filters | results | details
+           993-1200: narrower columns
+           <=992 tablet/phone: one column; filters become a sheet, details a full page
+           <=767 phone: compact hero, 2x2 metrics, chip-strip tabs, stacked card actions */
         @media (max-width: 1200px) {
           .jobs-discovery-shell {
             grid-template-columns: 220px minmax(0, 1fr) 380px;
@@ -1817,121 +1902,524 @@ const JobBoard = () => {
         }
         @media (max-width: 992px) {
           .jobs-discovery-shell {
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(0, 1fr);
           }
           .jobs-filter-toggle {
             display: inline-flex;
+            min-height: 44px;
+            border-radius: 12px;
           }
+
+          /* Filter sheet: slides in from the left on tablets (bottom sheet on phones, below).
+             Sits above the global header and bottom bar; the list scrolls inside it. */
           .jobs-filter-sidebar {
             display: none;
           }
           .jobs-filter-sidebar.open {
-            display: block;
+            display: flex;
+            flex-direction: column;
             position: fixed;
-            /* Global Header (.linkedin-header) is sticky at z-index: 100, above
-               this drawer's z-index: 60 — start below it so the drawer's own
-               title/close button aren't rendered underneath it. */
-            top: 107px;
+            top: 0;
             left: 0;
             bottom: 0;
-            width: min(320px, 85vw);
-            z-index: 60;
+            width: min(360px, 88vw);
+            height: 100dvh;
+            z-index: 1001;
+            padding: 0;
             overflow-y: auto;
+            overscroll-behavior: contain;
+            box-shadow: 12px 0 36px rgba(15, 23, 42, 0.22);
+            animation: jobsSheetInLeft 0.22s ease-out;
+          }
+          .jobs-filter-sidebar.open .jobs-filter-sidebar-header {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            flex-shrink: 0;
+            margin: 0;
+            padding: 0.9rem 1rem;
+            background: var(--surface, #fff);
+            border-bottom: 1px solid var(--border);
+          }
+          .jobs-filter-sidebar.open .jobs-filter-sidebar-header h3 {
+            font-size: 1rem;
+            text-transform: none;
+            letter-spacing: 0;
+          }
+          .jobs-filter-sidebar.open .jobs-filter-section {
+            padding: 0.9rem 1rem;
+          }
+          .jobs-filter-sidebar.open .jobs-filter-section:first-of-type {
+            padding-top: 0.9rem;
+          }
+          .jobs-filter-sidebar.open .jobs-filter-section-header {
+            min-height: 44px;
+            font-size: 0.95rem;
+          }
+          .jobs-filter-sidebar.open .jobs-filter-checkbox {
+            min-height: 44px;
+            font-size: 0.95rem;
+            gap: 0.7rem;
+          }
+          .jobs-filter-sidebar.open .jobs-filter-checkbox input {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            accent-color: var(--ios-olive);
+          }
+          .jobs-filter-sidebar.open .jobs-filter-search {
+            min-height: 46px;
+          }
+          .jobs-filter-sidebar.open .jobs-filter-search input {
+            font-size: 1rem;
+          }
+          .jobs-filter-sidebar.open .jobs-filter-footer {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 0.6rem;
+            position: sticky;
+            bottom: 0;
+            margin-top: auto;
+            padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+            background: var(--surface, #fff);
+            border-top: 1px solid var(--border);
+          }
+          .jobs-filter-footer button {
+            min-height: 46px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
           }
           .jobs-filter-close {
             display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            margin: -6px -8px -6px 0;
+          }
+          .jobs-filter-clear {
+            min-height: 44px;
+            font-size: 0.9rem;
           }
           .jobs-filter-backdrop {
             display: block;
             position: fixed;
             inset: 0;
-            background: rgba(15, 23, 42, 0.45);
-            z-index: 55;
+            background: rgba(15, 23, 42, 0.5);
+            z-index: 1000;
+          }
+          /* The floating assistant would sit on top of the sheet's buttons */
+          body.jobs-sheet-open .chatbot-fab {
+            display: none !important;
+          }
+
+          /* Job details: a full page instead of a long panel under the list */
+          .jobs-page:not(.mobile-job-detail-open) .job-detail-panel {
+            display: none;
           }
           .job-detail-panel {
             position: static;
             max-height: none;
           }
-        }
-        @media (max-width: 768px) {
-          .jobs-page { padding: 0.9rem 0.75rem calc(5.5rem + env(safe-area-inset-bottom, 0px)); }
-          .jobs-hero { padding: 1.25rem 1rem; border-radius: 12px; }
-          .jobs-hero-eyebrow { margin-bottom: 0.25rem; font-size: 0.64rem; }
-          .jobs-hero-title { font-size: clamp(1.45rem, 6.5vw, 1.8rem); margin-bottom: 0.3rem; line-height: 1.1; }
-          .jobs-hero-subtitle { margin-bottom: 0.65rem; font-size: 0.8rem; line-height: 1.35; max-width: 35ch; }
-          
-          /* Compact unified mobile search bar */
-          .jobs-search-panel {
-            display: flex;
-            align-items: center;
-            background: #ffffff;
-            border-radius: 8px;
-            padding: 0.2rem 0.25rem 0.2rem 0.65rem;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-            min-height: 38px;
-            gap: 0.4rem;
-            width: 100%;
-            box-sizing: border-box;
+          .mobile-job-detail-open {
+            padding: 0 0 8rem;
           }
-          .jobs-search-static {
+          .mobile-job-detail-open .jobs-hero,
+          .mobile-job-detail-open .jobs-stats,
+          .mobile-job-detail-open .jobs-source-tabs,
+          .mobile-job-detail-open .jobs-filter-toggle,
+          .mobile-job-detail-open .jobs-filter-sidebar,
+          .mobile-job-detail-open .jobs-results {
             display: none;
           }
-          .jobs-search-field {
-            flex: 1;
-            min-width: 0;
+          .mobile-job-detail-open .jobs-discovery-shell {
+            display: block;
+            margin-top: 0;
+          }
+          .mobile-job-detail-open .job-detail-panel {
+            border: none;
+            padding: 0.75rem 1rem 1rem;
+          }
+          .mobile-job-detail-open .job-detail-back {
+            display: inline-flex;
+            min-height: 44px;
+            margin-bottom: 0.5rem;
+          }
+          .mobile-job-detail-open .job-detail-heading h2 {
+            font-size: 1.15rem;
+            line-height: 1.25;
+            overflow-wrap: anywhere;
+          }
+          .mobile-job-detail-open .job-detail-tabs button {
+            min-height: 44px;
+          }
+          /* Apply stays reachable while reading: pinned above the bottom bar (tablets: bottom of screen) */
+          .mobile-job-detail-open .job-detail-actions {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: env(safe-area-inset-bottom, 0px);
+            z-index: 85;
+            margin: 0;
+            padding: 0.7rem 1rem;
+            background: var(--surface, #fff);
+            border-top: 1px solid var(--border);
+            box-shadow: 0 -6px 18px rgba(15, 23, 42, 0.08);
+          }
+          .mobile-job-detail-open .job-detail-apply-btn {
+            min-height: 48px;
+            border-radius: 10px;
+          }
+          body.jobs-detail-open .chatbot-fab {
+            bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+          }
+          .job-fact-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        @keyframes jobsSheetInLeft {
+          from { transform: translateX(-24px); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes jobsSheetInUp {
+          from { transform: translateY(32px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 767px) {
+          .jobs-page {
+            padding: 0.75rem 14px calc(5.5rem + env(safe-area-inset-bottom, 0px));
+          }
+          .mobile-job-detail-open {
+            padding: 0 0 calc(9rem + env(safe-area-inset-bottom, 0px));
+          }
+          /* Bottom bar (~64px) sits under the pinned Apply bar */
+          .mobile-job-detail-open .job-detail-actions {
+            bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+          }
+          body.jobs-detail-open .chatbot-fab {
+            bottom: calc(150px + env(safe-area-inset-bottom, 0px));
+          }
+
+          /* Hero: title + copy, then a search row and a selectors row */
+          .jobs-hero {
+            padding: 1.1rem 1rem;
+            border-radius: 14px;
+          }
+          .jobs-hero-eyebrow {
+            font-size: 0.7rem;
+            margin-bottom: 0.3rem;
+          }
+          .jobs-hero-title {
+            font-size: clamp(1.55rem, 7vw, 1.95rem);
+            line-height: 1.1;
+            margin-bottom: 0.4rem;
+          }
+          .jobs-hero-subtitle {
+            display: block;
+            max-width: none;
+            margin-bottom: 0.85rem;
+            font-size: 0.88rem;
+            line-height: 1.4;
+          }
+          .jobs-search-panel {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 0;
             background: transparent;
-            position: relative;
+            box-shadow: none;
+            min-height: 0;
+            border-radius: 0;
+          }
+          .jobs-search-field {
+            order: 1;
+            flex: 1 1 calc(100% - 9rem);
+            min-width: 0;
+            min-height: 48px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            padding-left: 0.85rem;
           }
           .jobs-search-icon {
             position: static;
-            margin-right: 0.45rem;
-            width: 15px;
-            height: 15px;
+            margin-right: 0.5rem;
             flex-shrink: 0;
           }
           .jobs-search-field input {
-            width: 100%;
-            border: none;
-            background: transparent;
-            padding: 0.4rem 0;
-            font-size: 0.8rem;
-            color: var(--ios-text, #0f172a);
-          }
-          .jobs-search-field input::placeholder {
-            font-size: 0.8rem;
+            padding: 0.5rem 0.5rem 0.5rem 0;
+            font-size: 1rem; /* 16px keeps iOS from zooming the page on focus */
           }
           .jobs-search-btn {
-            padding: 0.4rem 0.8rem;
-            font-size: 0.78rem;
-            font-weight: 700;
-            border-radius: 6px;
-            flex-shrink: 0;
-            min-height: 30px;
+            order: 2;
+            flex: 0 0 8.5rem;
+            min-height: 48px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+          }
+          .jobs-search-static {
+            display: flex;
+            order: 3;
+            flex: 1 1 calc(50% - 0.25rem);
+            min-height: 44px;
+            justify-content: flex-start;
+            padding: 0 0.85rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.94);
+            color: var(--ios-text, #0f172a);
+          }
+
+          /* New Jobs / Legacy Jobs */
+          /* Two tabs share the row equally (no scroll container, so the active underline isn't clipped) */
+          .jobs-source-tabs {
+            margin-top: 1rem;
+          }
+          .jobs-source-tab {
+            flex: 1 1 0;
+            min-width: 0;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0.7rem 0.5rem;
+            font-size: 0.92rem;
+          }
+
+          /* Summary metrics: 2x2, icon beside the number */
+          .jobs-stats {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.6rem;
+            margin-top: 1rem;
+          }
+          .jobs-stat-card {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr);
+            grid-template-rows: auto auto;
+            column-gap: 0.65rem;
+            align-items: center;
+            padding: 0.7rem 0.75rem;
+            border-radius: 12px;
+          }
+          .jobs-stat-icon {
+            grid-row: 1 / 3;
+            margin-bottom: 0;
+          }
+          .jobs-stat-value {
+            font-size: 1.4rem;
+            line-height: 1.1;
+          }
+          .jobs-stat-label {
+            margin-top: 0;
+            font-size: 0.76rem;
+            line-height: 1.25;
+          }
+
+          .jobs-discovery-shell {
+            margin-top: 1rem;
+          }
+          .jobs-filter-toggle {
+            width: 100%;
+            justify-content: flex-start;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+          }
+
+          /* Filters become a bottom sheet */
+          .jobs-filter-sidebar.open {
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            max-height: 88dvh;
+            border-radius: 18px 18px 0 0;
+            animation: jobsSheetInUp 0.24s ease-out;
+          }
+
+          /* Results toolbar: swipeable chip strip, sort on its own row */
+          .jobs-results-toolbar {
+            flex-direction: column;
+            flex-wrap: nowrap; /* wrap would size the column to the widest child (the tab strip) */
+            align-items: stretch;
+            gap: 0.6rem;
+          }
+          .jobs-result-tabs {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            margin: 0 -14px;
+            padding: 2px 14px;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+          }
+          .jobs-result-tabs::-webkit-scrollbar {
+            display: none;
+          }
+          .jobs-result-tabs button {
+            flex: 0 0 auto;
+            min-height: 40px;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+          }
+          .jobs-sort {
+            width: 100%;
+            justify-content: space-between;
+            font-size: 0.88rem;
+          }
+          .jobs-sort select {
+            flex: 1;
+            min-height: 44px;
+            max-width: 62%;
+            border-radius: 10px;
+            font-size: 1rem;
+          }
+          .jobs-results-subtitle {
+            font-size: 0.88rem;
+          }
+
+          /* Job cards: full width, wrapping text, tags on several lines */
+          .jobs-card-list {
+            gap: 0.65rem;
+          }
+          .job-card {
+            gap: 0.75rem;
+            padding: 0.85rem;
+            border-radius: 14px;
+            box-shadow: var(--shadow-1);
+          }
+          .job-card-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+          }
+          .job-card-title {
+            font-size: 1rem;
+            line-height: 1.3;
+            overflow-wrap: anywhere;
+          }
+          .job-card-dismiss {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin: -8px -8px 0 0;
+          }
+          .job-card-company {
+            font-size: 0.86rem;
+            overflow-wrap: anywhere;
+          }
+          .job-card-tags {
+            gap: 0.35rem;
+          }
+          .category-tag,
+          .job-veteran-badge,
+          .job-v2-badge,
+          .job-match-score-badge {
+            font-size: 0.7rem;
+          }
+          .job-match-reason-chip,
+          .job-hashtag {
+            font-size: 0.74rem;
+          }
+          .job-card-footer {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 0.6rem;
+          }
+          .job-card-deadline {
+            font-size: 0.82rem;
+          }
+          .job-card-actions {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 0.5rem;
+          }
+          .job-card-view-btn,
+          .job-card-apply-btn {
+            min-height: 44px;
+            justify-content: center;
+            font-size: 0.9rem;
+            border-radius: 10px;
           }
 
-          .jobs-stats { display: none; }
-          .job-fact-grid { grid-template-columns: 1fr; }
-          .mobile-job-detail-open { padding: 0; }
-          .mobile-job-detail-open .jobs-hero,
-          .mobile-job-detail-open .jobs-stats,
-          .mobile-job-detail-open .jobs-filter-toggle,
-          .mobile-job-detail-open .jobs-filter-sidebar,
-          .mobile-job-detail-open .jobs-results { display: none; }
-          .mobile-job-detail-open .jobs-discovery-shell { display: block; margin-top: 0; }
-          .mobile-job-detail-open .job-detail-panel { border: none; padding: 1rem; }
-          .mobile-job-detail-open .job-detail-back { display: inline-flex; }
+          /* Pagination */
+          .jobs-pagination {
+            flex-wrap: wrap;
+            gap: 0.6rem;
+          }
+          .jobs-pagination button {
+            min-height: 44px;
+            min-width: 96px;
+            border-radius: 10px;
+          }
+          .jobs-pagination > span {
+            order: -1;
+            flex: 1 1 100%;
+            text-align: center;
+          }
+          .jobs-pagination button:first-of-type,
+          .jobs-pagination button:last-of-type {
+            flex: 1 1 0;
+          }
+
+          .jobs-empty-state,
+          .jobs-error-state {
+            padding: 2.5rem 1rem;
+            border-radius: 14px;
+          }
+          .jobs-skeleton-card {
+            border-radius: 14px;
+          }
         }
-        @media (max-width: 420px) {
-          .jobs-hero { padding: 1rem 0.85rem; }
-          .jobs-hero-title { font-size: 1.35rem; }
-          .jobs-hero-subtitle { display: none; }
-          .jobs-search-panel { margin-top: 0.45rem; }
-          .jobs-search-btn { padding-inline: 0.7rem; }
+        @media (min-width: 480px) and (max-width: 767px) {
+          .job-card-footer {
+            grid-template-columns: minmax(0, 1fr) auto;
+            align-items: center;
+          }
+          .job-card-actions {
+            grid-template-columns: auto auto;
+          }
+          .job-card-view-btn,
+          .job-card-apply-btn {
+            padding-inline: 1.1rem;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 992px) {
+          .jobs-stats {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+          }
+          .jobs-search-panel {
+            grid-template-columns: minmax(0, 1fr) 140px 120px auto;
+          }
+        }
+        @media (max-width: 359px) {
+          .jobs-source-tab {
+            white-space: nowrap;
+            gap: 0.3rem;
+            padding-inline: 0.25rem;
+            font-size: 0.86rem;
+          }
+          .jobs-search-field {
+            flex-basis: 100%;
+          }
+          .jobs-search-btn {
+            flex: 1 1 100%;
+          }
+          .jobs-stats {
+            grid-template-columns: minmax(0, 1fr);
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .jobs-filter-sidebar.open {
+            animation: none;
+          }
         }
       `}} />
     </div>

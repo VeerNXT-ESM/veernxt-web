@@ -41,6 +41,7 @@ import {
   Cpu,
   Atom,
   MapPin,
+  ArrowUpDown,
 } from 'lucide-react';
 import { getTransferableSkills } from '../lib/profilingInsights';
 import { getSubjectByKey, getFamilyHex } from '../lib/thumbnailTaxonomy';
@@ -63,7 +64,7 @@ const TEASER_SUBJECT_KEYS = ['english', 'gk_general_awareness', 'reasoning', 'ma
 // What every exam card's coverage line reads, replacing the old made-up
 // "Full Course" / "Tier 1 & Tier 2" style labels with what's actually
 // available for every exam: syllabus, notes, mock tests and PYQs.
-const CONTENT_COVERAGE_LABEL = 'Syllabus + Notes + Mock Test + PYQ';
+const CONTENT_COVERAGE_LABEL = 'Syllabus • Notes • Mock Test + PYQ';
 
 // Dynamic color palette fallback for any newly added categories
 const DYNAMIC_PALETTE = [
@@ -561,7 +562,11 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
                   }
                 }}
               >
-                <img src={categoryUrl(exam?.category) || ''} alt={rel.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
+                {categoryUrl(exam?.category) ? (
+                  <img src={categoryUrl(exam?.category)} alt={rel.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
+                ) : (
+                  <div className="lc-related-exam-img" style={{ visibility: 'hidden' }} aria-hidden="true" />
+                )}
                 <div className="lc-related-exam-info">
                   <div className="lc-related-exam-name">{rel.name}</div>
                   <div className="lc-related-exam-level">{rel.level}</div>
@@ -575,7 +580,11 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
                 className="lc-related-exam-card"
                 onClick={() => navigate(`/exam/${e.id}`, { state: { from: location.pathname + location.search } })}
               >
-                <img src={categoryUrl(e.category) || ''} alt={e.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
+                {categoryUrl(e.category) ? (
+                  <img src={categoryUrl(e.category)} alt={e.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
+                ) : (
+                  <div className="lc-related-exam-img" style={{ visibility: 'hidden' }} aria-hidden="true" />
+                )}
                 <div className="lc-related-exam-info">
                   <div className="lc-related-exam-name">{e.name}</div>
                   <div className="lc-related-exam-level">{e.category || 'Competitive Exam'}</div>
@@ -696,6 +705,11 @@ const LearningCenter = () => {
   const [categoryFilter, setCategoryFilter] = useState(paramCategory);
   const [rightTab, setRightTab] = useState(paramTab); // 'explorer' | 'recommended'
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  // Below 1100px the explorer category sidebar becomes a drawer opened by "Browse categories".
+  const [explorerNavOpen, setExplorerNavOpen] = useState(false);
+  // Display order for "Recommended for you" — 'recommended' keeps the ranking as computed.
+  const [recommendedSort, setRecommendedSort] = useState('recommended');
+  const explorerNavToggleRef = useRef(null);
   const [isPageTransitioning, setIsPageTransitioning] = useState(false);
   // Per-division filter & search store to guarantee Central, State, and UT do not bleed into each other
   const [divisionFilters, setDivisionFilters] = useState({
@@ -1011,6 +1025,32 @@ const LearningCenter = () => {
       setIsPageTransitioning(false);
     }, 350);
   };
+
+  // Close the category drawer when a category / state / mode is picked.
+  useEffect(() => {
+    setExplorerNavOpen(false);
+  }, [categoryFilter, regionFilterId, regionMode, rightTab]);
+
+  // While the drawer is open: Escape closes it and returns focus to its button;
+  // widening past the drawer breakpoint closes it.
+  useEffect(() => {
+    if (!explorerNavOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        setExplorerNavOpen(false);
+        explorerNavToggleRef.current?.focus();
+      }
+    };
+    const mq = window.matchMedia('(min-width: 1101px)');
+    const onChange = () => { if (mq.matches) setExplorerNavOpen(false); };
+    document.addEventListener('keydown', onKey);
+    mq.addEventListener?.('change', onChange);
+    document.getElementById('lc-explorer-categories')?.querySelector('input, button')?.focus();
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      mq.removeEventListener?.('change', onChange);
+    };
+  }, [explorerNavOpen]);
 
   const handleCategoryFilterChange = (category) => {
     setIsPageTransitioning(true);
@@ -1527,6 +1567,16 @@ const LearningCenter = () => {
     examProgress,
   ]);
 
+  const sortedRecommendedCards = useMemo(() => {
+    if (recommendedSort === 'name') {
+      return [...recommendedCards].sort((a, b) => String(a.title || '').localeCompare(String(b.title || '')));
+    }
+    if (recommendedSort === 'resources') {
+      return [...recommendedCards].sort((a, b) => (b.resourcesCount ?? -1) - (a.resourcesCount ?? -1));
+    }
+    return recommendedCards;
+  }, [recommendedCards, recommendedSort]);
+
   const popularExamCards = useMemo(() => {
     return POPULAR_EXAMS.map((exam) => {
       let match = null;
@@ -1828,20 +1878,22 @@ const LearningCenter = () => {
   const renderExamCard = (card) => (
     <div key={card.id} className="lc-exam-card">
       <div
-        className="lc-card-thumb-wrap"
+        className={`lc-card-thumb-wrap${cardImage(card) ? '' : ' lc-thumb-fallback'}`}
         style={{ cursor: 'pointer' }}
         onClick={() => handleStartCardExam(card)}
       >
-        <img
-          src={cardImage(card)}
-          alt={card.title}
-          className="lc-card-thumb-img"
-          loading="lazy"
-          onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.parentElement.classList.add('lc-thumb-fallback');
-          }}
-        />
+        {cardImage(card) && (
+          <img
+            src={cardImage(card)}
+            alt={card.title}
+            className="lc-card-thumb-img"
+            loading="lazy"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.parentElement.classList.add('lc-thumb-fallback');
+            }}
+          />
+        )}
         <div
           className="lc-card-badge"
           style={{ backgroundColor: card.badgeBg, color: card.badgeColor }}
@@ -1864,7 +1916,7 @@ const LearningCenter = () => {
         <div className="lc-card-meta-row">
           {card.resourcesCount != null && (
             <span className="lc-card-meta-item">
-              <FileText size={13} /> {card.resourcesCount} resources
+              <FileText size={13} /> {card.resourcesCount} {card.resourcesCount === 1 ? 'resource' : 'resources'}
             </span>
           )}
           <span className="lc-card-meta-item">
@@ -1961,66 +2013,24 @@ const LearningCenter = () => {
             </section>
           )}
 
-          {/* ── Mobile Filters Trigger Section (Mobile <1100px only in recommended mode) ── */}
-          {rightTab === 'recommended' && (
-            <div className="lc-mobile-filter-bar" aria-label="Mobile Filters">
-              <button
-                type="button"
-                className={`lc-mobile-filter-trigger-btn ${filtersActive ? 'active' : ''}`}
-                onClick={() => setMobileDrawerOpen(true)}
-                aria-label="Open Filter Results"
-              >
-                <SlidersHorizontal size={15} />
-                <span>Filters</span>
-                {activeFilterCount > 0 && (
-                  <span className="lc-mobile-filter-badge">{activeFilterCount}</span>
-                )}
-              </button>
-
-              <div className="lc-mobile-active-chips-scroll">
-                {categoryFilter && (
-                  <span className="lc-mobile-active-chip">
-                    <span>{categoryFilter}</span>
-                    <button
-                      type="button"
-                      onClick={() => setCategoryFilter('')}
-                      aria-label={`Remove ${categoryFilter} filter`}
-                    >
-                      <X size={12} />
-                    </button>
-                  </span>
-                )}
-                {selectedBodyId && (
-                  <span className="lc-mobile-active-chip">
-                    <span>{bodyOptions.find((b) => b.id === selectedBodyId)?.name || 'Conducting Body'}</span>
-                    <button
-                      type="button"
-                      onClick={() => setSelectedBodyId('')}
-                      aria-label="Remove conducting body filter"
-                    >
-                      <X size={12} />
-                    </button>
-                  </span>
-                )}
-                {filtersActive && (
-                  <button
-                    type="button"
-                    className="lc-mobile-clear-btn"
-                    onClick={handleClearFilters}
-                  >
-                    Clear all
-                  </button>
-                )}
-              </div>
-            </div>
-          )}
-
           <div className={`lc-main-grid ${isSidebarCollapsed ? 'sidebar-collapsed' : ''} ${rightTab === 'explorer' ? 'lc-main-grid-explorer' : ''}`}>
             {/* Left Column: Sidebar — Explorer Nav in explorer mode, Filter Sidebar in recommended mode */}
+            {rightTab === 'explorer' && explorerNavOpen && (
+              <div className="lc-explorer-drawer-backdrop" onClick={() => setExplorerNavOpen(false)} aria-hidden="true" />
+            )}
             <aside
-              className={`lc-filter-sidebar ${rightTab === 'explorer' ? 'lc-explorer-sidebar' : ''} ${isSidebarCollapsed ? 'lc-explorer-sidebar-collapsed' : ''}`}
+              id={rightTab === 'explorer' ? 'lc-explorer-categories' : undefined}
+              className={`lc-filter-sidebar ${rightTab === 'explorer' ? 'lc-explorer-sidebar' : ''} ${isSidebarCollapsed ? 'lc-explorer-sidebar-collapsed' : ''} ${rightTab === 'explorer' && explorerNavOpen ? 'is-drawer-open' : ''}`}
               aria-label={rightTab === 'explorer' ? 'Exam Categories' : 'Filter Results'}
             >
+              {rightTab === 'explorer' && (
+                <div className="lc-explorer-drawer-head">
+                  <span>Browse categories</span>
+                  <button type="button" className="lc-explorer-drawer-close" onClick={() => setExplorerNavOpen(false)} aria-label="Close categories">
+                    <X size={18} />
+                  </button>
+                </div>
+              )}
               {rightTab === 'explorer' ? (
                 /* ── Explorer Mode: Clean Category Nav List with Collapse Option & SVG Icons ── */
                 <>
@@ -2511,7 +2521,98 @@ const LearningCenter = () => {
                     </button>
                   </div>
                 )}
+
+                {/* Tablet/phone: opens the category sidebar as a drawer (hidden on desktop via CSS).
+                    Not needed on the State/UT directory, which lists the states in the page itself. */}
+                {rightTab === 'explorer' && !((regionMode === 'state' || regionMode === 'ut') && !regionFilterId) && (
+                  <button
+                    type="button"
+                    ref={explorerNavToggleRef}
+                    className="lc-explorer-browse-btn"
+                    onClick={() => { setIsSidebarCollapsed(false); setExplorerNavOpen(true); }}
+                    aria-expanded={explorerNavOpen}
+                    aria-controls="lc-explorer-categories"
+                  >
+                    <Layers size={16} aria-hidden="true" />
+                    <span>Browse categories</span>
+                    {(categoryFilter || activeCategoryForExplorer) && (
+                      <span className="lc-explorer-browse-current">{categoryFilter || activeCategoryForExplorer}</span>
+                    )}
+                    <ChevronRight size={16} aria-hidden="true" className="lc-explorer-browse-chevron" />
+                  </button>
+                )}
               </div>
+
+              {/* ── Filters + Sort toolbar (<1100px, recommended mode) — sits under the mode tabs ── */}
+              {rightTab === 'recommended' && (
+                <div className="lc-mobile-filter-bar" aria-label="Mobile Filters">
+                  <button
+                    type="button"
+                    className={`lc-mobile-filter-trigger-btn ${filtersActive ? 'active' : ''}`}
+                    onClick={() => setMobileDrawerOpen(true)}
+                    aria-expanded={mobileDrawerOpen}
+                    aria-controls="lc-filter-drawer"
+                    aria-label="Open Filter Results"
+                  >
+                    <SlidersHorizontal size={15} />
+                    <span>Filters</span>
+                    {activeFilterCount > 0 && (
+                      <span className="lc-mobile-filter-badge">{activeFilterCount}</span>
+                    )}
+                  </button>
+
+                  <label className="lc-sort-control">
+                    <ArrowUpDown size={15} aria-hidden="true" />
+                    <span className="lc-sort-label">Sort</span>
+                    <select
+                      value={recommendedSort}
+                      onChange={(e) => setRecommendedSort(e.target.value)}
+                      aria-label="Sort recommended exams"
+                    >
+                      <option value="recommended">Recommended</option>
+                      <option value="name">Name (A–Z)</option>
+                      <option value="resources">Most resources</option>
+                    </select>
+                  </label>
+
+                  <div className="lc-mobile-active-chips-scroll">
+                    {categoryFilter && (
+                      <span className="lc-mobile-active-chip">
+                        <span>{categoryFilter}</span>
+                        <button
+                          type="button"
+                          onClick={() => setCategoryFilter('')}
+                          aria-label={`Remove ${categoryFilter} filter`}
+                        >
+                          <X size={12} />
+                        </button>
+                      </span>
+                    )}
+                    {selectedBodyId && (
+                      <span className="lc-mobile-active-chip">
+                        <span>{bodyOptions.find((b) => b.id === selectedBodyId)?.name || 'Conducting Body'}</span>
+                        <button
+                          type="button"
+                          onClick={() => setSelectedBodyId('')}
+                          aria-label="Remove conducting body filter"
+                        >
+                          <X size={12} />
+                        </button>
+                      </span>
+                    )}
+                    {filtersActive && (
+                      <button
+                        type="button"
+                        className="lc-mobile-clear-btn"
+                        onClick={handleClearFilters}
+                      >
+                        Clear all
+                      </button>
+                    )}
+                  </div>
+                </div>
+              )}
+
 
               {/* View 1: Explorer Mode (Rich Portal matching Design Reference) */}
               {rightTab === 'explorer' ? (
@@ -2777,7 +2878,7 @@ const LearningCenter = () => {
                           window.scrollTo({ top: 680, behavior: 'smooth' });
                         }}
                       >
-                        View all
+                        View All <ArrowRight size={15} aria-hidden="true" />
                       </button>
                     )}
                     {!recommendedFiltersActive && (
@@ -2801,12 +2902,28 @@ const LearningCenter = () => {
                       </div>
                     )}
 
+                    <label className="lc-sort-control lc-sort-control-desktop">
+                      <ArrowUpDown size={15} aria-hidden="true" />
+                      <span className="lc-sort-label">Sort</span>
+                      <select
+                        value={recommendedSort}
+                        onChange={(e) => setRecommendedSort(e.target.value)}
+                        aria-label="Sort recommended exams"
+                      >
+                        <option value="recommended">Recommended</option>
+                        <option value="name">Name (A–Z)</option>
+                        <option value="resources">Most resources</option>
+                      </select>
+                    </label>
+
                     {/* Tablet/mobile (<1100px) filter button in header */}
                     <button
                       type="button"
                       className="lc-mobile-header-filter-btn"
                       aria-label="Open filter results"
                       onClick={() => setMobileDrawerOpen(true)}
+                aria-expanded={mobileDrawerOpen}
+                aria-controls="lc-filter-drawer"
                     >
                       <SlidersHorizontal size={17} />
                       {activeFilterCount > 0 && (
@@ -2824,12 +2941,12 @@ const LearningCenter = () => {
                     </button>.
                   </div>
                 ) : recommendedFiltersActive ? (
-                  <div className="lc-search-results-grid">
-                    {recommendedCards.map(renderExamCard)}
+                  <div className="lc-search-results-grid lc-recommended-carousel">
+                    {sortedRecommendedCards.map(renderExamCard)}
                   </div>
                 ) : (
-                  <div className="lc-cards-carousel" ref={recommendedScrollRef}>
-                    {recommendedCards.map(renderExamCard)}
+                  <div className="lc-cards-carousel lc-recommended-carousel" ref={recommendedScrollRef}>
+                    {sortedRecommendedCards.map(renderExamCard)}
                   </div>
                 )}
               </div>
@@ -2904,17 +3021,19 @@ const LearningCenter = () => {
 
                       return (
                         <div key={course.id || course.examId || course.title} className="lc-continue-card">
-                          <div className="lc-cont-thumb-wrap" onClick={() => handleResumeCourse(course)}>
-                            <img
-                              src={getCourseImage(course)}
-                              alt={course.title}
-                              className="lc-cont-thumb-img"
-                              loading="lazy"
-                              onError={(e) => {
-                                e.target.style.display = 'none';
-                                e.target.parentElement.classList.add('lc-thumb-fallback');
-                              }}
-                            />
+                          <div className={`lc-cont-thumb-wrap${getCourseImage(course) ? '' : ' lc-thumb-fallback'}`} onClick={() => handleResumeCourse(course)}>
+                            {getCourseImage(course) && (
+                              <img
+                                src={getCourseImage(course)}
+                                alt={course.title}
+                                className="lc-cont-thumb-img"
+                                loading="lazy"
+                                onError={(e) => {
+                                  e.target.style.display = 'none';
+                                  e.target.parentElement.classList.add('lc-thumb-fallback');
+                                }}
+                              />
+                            )}
                           </div>
 
                           <div className="lc-cont-body">
@@ -3044,12 +3163,14 @@ const LearningCenter = () => {
                   <div className="lc-exam-details-panel">
                     <div className="lc-exam-details-header">
                       <div className="lc-exam-details-logo-wrap">
-                        <img
-                          src={cardImage(selectedPopularExam)}
-                          alt={selectedPopularExam.name}
-                          className="lc-exam-details-img"
-                          onError={(e) => { e.target.style.display = 'none'; }}
-                        />
+                        {cardImage(selectedPopularExam) && (
+                          <img
+                            src={cardImage(selectedPopularExam)}
+                            alt={selectedPopularExam.name}
+                            className="lc-exam-details-img"
+                            onError={(e) => { e.target.style.display = 'none'; }}
+                          />
+                        )}
                       </div>
                       <div className="lc-exam-details-headline">
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '0.2rem' }}>
@@ -3251,7 +3372,7 @@ const LearningCenter = () => {
             onClick={() => setMobileDrawerOpen(false)}
             aria-label="Close filters backdrop"
           />
-          <aside className="lc-mobile-drawer-panel" role="dialog" aria-modal="true" aria-label="Filter Results">
+          <aside id="lc-filter-drawer" className="lc-mobile-drawer-panel" role="dialog" aria-modal="true" aria-label="Filter Results">
             {/* Drawer Header */}
             <div className="lc-mobile-drawer-header">
               <h3 className="lc-mobile-drawer-title">FILTER RESULTS</h3>

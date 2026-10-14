@@ -382,6 +382,10 @@ const Network = () => {
         aria-controls="network-sidebar"
       >
         <Menu size={16} /> My Network
+        {pendingRequests.length > 0 && (
+          <span className="network-nav-badge" aria-label={`${pendingRequests.length} pending invitations`}>{pendingRequests.length}</span>
+        )}
+        <span className="network-nav-toggle-hint">Profile · Invitations · Messages</span>
       </button>
 
       {navOpen && <div className="network-nav-backdrop" onClick={() => setNavOpen(false)} />}
@@ -611,7 +615,7 @@ const Network = () => {
         /* Hero */
         .network-hero {
           background: linear-gradient(100deg, rgba(10, 33, 23, 0.92) 0%, rgba(16, 43, 32, 0.85) 45%, rgba(84, 115, 58, 0.55) 100%),
-            url('/veernxt_assets/banners/B12_my_network.png');
+            var(--network-hero-img, url('/veernxt_assets/banners/B12_my_network.png'));
           background-size: cover;
           background-position: center;
           padding: 3rem;
@@ -724,6 +728,9 @@ const Network = () => {
           margin-bottom: 1rem;
         }
         .network-nav-backdrop {
+          display: none;
+        }
+        .network-nav-toggle-hint {
           display: none;
         }
 
@@ -1117,6 +1124,117 @@ const Network = () => {
           .pending-row-actions { width: 100%; }
           .pending-row-actions button { flex: 1; }
           .network-overview-grid { gap: 0.65rem; }
+        }
+        /* Phone refinements: 2x2 shortcuts, full-width network menu button, and
+           compact list rows (avatar · name/role · action) instead of tall cards. */
+        @media (max-width: 780px) {
+          .network-page { padding: 0.85rem 14px 1.5rem; }
+          .network-role-strip {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+          }
+          .network-role-card { padding: 0.75rem; gap: 0.6rem; }
+          .network-role-card > div { min-width: 0; }
+          .network-role-card h4 { font-size: 0.84rem; overflow-wrap: anywhere; }
+          .network-role-card p {
+            font-size: 0.74rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          .network-nav-toggle {
+            width: 100%;
+            min-height: 46px;
+            box-sizing: border-box;
+          }
+          .network-nav-toggle-hint {
+            display: inline;
+            margin-left: auto;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 0;
+          }
+          .network-person-grid {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 0.6rem;
+          }
+          .person-card, .connection-card {
+            display: grid;
+            grid-template-columns: 44px minmax(0, 1fr) auto;
+            grid-template-areas:
+              "avatar name action"
+              "avatar meta action"
+              "avatar headline action";
+            align-items: center;
+            column-gap: 0.75rem;
+            text-align: left;
+            padding: 0.75rem;
+          }
+          .person-card > .person-avatar, .connection-card > .person-avatar {
+            grid-area: avatar;
+            width: 44px;
+            height: 44px;
+            margin: 0;
+            font-size: 0.92rem;
+            align-self: start;
+          }
+          .person-name { grid-area: name; margin: 0; font-size: 0.92rem; }
+          .person-role { grid-area: meta; justify-self: start; margin: 0.2rem 0; }
+          .person-headline { grid-area: headline; margin: 0; min-height: 0; font-size: 0.75rem; }
+          .person-connect-btn, .connection-message-btn {
+            grid-area: action;
+            width: auto;
+            min-height: 40px;
+            padding: 0.5rem 0.8rem;
+          }
+          /* Connections: overflow menu sits above the Message button */
+          .connection-card {
+            grid-template-areas:
+              "avatar name menu"
+              "avatar meta action"
+              "avatar headline action";
+          }
+          .connection-menu-btn {
+            position: static;
+            grid-area: menu;
+            justify-self: end;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .connection-menu { top: 2.6rem; }
+          .network-quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+          .network-quick-actions button { min-height: 52px; }
+        }
+        @media (min-width: 600px) and (max-width: 780px) {
+          .network-person-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 359px) {
+          .network-role-strip,
+          .network-quick-actions { grid-template-columns: minmax(0, 1fr); }
+          .network-nav-toggle-hint { display: none; }
+          /* Very narrow: the action drops under the text */
+          .person-card {
+            grid-template-areas:
+              "avatar name"
+              "avatar meta"
+              "avatar headline"
+              "action action";
+            grid-template-columns: 44px minmax(0, 1fr);
+          }
+          .person-connect-btn { width: 100%; margin-top: 0.6rem; }
         }
         @media (max-width: 420px) {
           .network-hero-title { font-size: 1.55rem; }

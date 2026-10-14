@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import {
@@ -248,6 +248,11 @@ const PrivateSectorProfile = () => {
   };
 
   const currentStepId = STEP_IDS[step] || 'service';
+  const railRef = useRef(null);
+  // On phones the step rail scrolls sideways; keep the current step in view.
+  useEffect(() => {
+    railRef.current?.querySelector('.psp-pill.active')?.scrollIntoView({ inline: 'center', block: 'nearest' });
+  }, [step]);
   const totalSteps = STEP_IDS.length - 1;
 
   const currentBranchOptions = Object.keys(SERVICE_TAXONOMY[formData.service] || {});
@@ -429,7 +434,7 @@ const PrivateSectorProfile = () => {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f8fafc', paddingBottom: '4rem' }}>
+    <div className="psp" style={{ minHeight: '100vh', background: '#f8fafc', paddingBottom: '4rem' }}>
       {/* OpSec Information Discipline Banner */}
       <div
         style={{
@@ -452,9 +457,9 @@ const PrivateSectorProfile = () => {
         </span>
       </div>
 
-      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '1.5rem 1rem' }}>
+      <div className="psp-wrap" style={{ maxWidth: '900px', margin: '0 auto', padding: '1.5rem 1rem' }}>
         {/* Header */}
-        <div style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
+        <div className="psp-head" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
           <span
             style={{
               display: 'inline-block',
@@ -468,7 +473,7 @@ const PrivateSectorProfile = () => {
           >
             VeerNXT Tri-Service Capability Bridge
           </span>
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.4rem' }}>
+          <h1 className="psp-title" style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.4rem' }}>
             Build Your Civilian Capability Profile
           </h1>
           <p style={{ fontSize: '0.92rem', color: '#64748b', maxWidth: '640px', margin: '0 auto' }}>
@@ -479,13 +484,21 @@ const PrivateSectorProfile = () => {
 
         {/* Step Progress Rail */}
         {currentStepId !== 'done' && (
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginBottom: '1.75rem', flexWrap: 'wrap' }}>
+          <p className="psp-step-count" aria-live="polite">
+            Step {Math.min(step + 1, STAGES.length)} of {STAGES.length} &middot; {STAGES[Math.min(step, STAGES.length - 1)]?.label}
+          </p>
+        )}
+        {currentStepId !== 'done' && (
+          <div className="psp-rail" ref={railRef} role="list" aria-label="Profile steps" style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginBottom: '1.75rem', flexWrap: 'wrap' }}>
             {STAGES.map((s, idx) => {
               const isActive = idx === step;
               const isDone = idx < step;
               return (
                 <div
                   key={s.id}
+                  role="listitem"
+                  aria-current={isActive ? 'step' : undefined}
+                  className={`psp-pill ${isActive ? 'active' : ''}`}
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -521,7 +534,7 @@ const PrivateSectorProfile = () => {
         )}
 
         {/* Form Container */}
-        <Card style={{ padding: '2rem', background: '#fff', borderRadius: '16px', border: '1px solid #e2e8f0', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}>
+        <Card className="psp-card" style={{ padding: '2rem', background: '#fff', borderRadius: '16px', border: '1px solid #e2e8f0', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}>
           {/* STEP 1: SERVICE RECORD */}
           {currentStepId === 'service' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
@@ -535,7 +548,7 @@ const PrivateSectorProfile = () => {
               </div>
 
               {/* Service Tabs */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem' }}>
+              <div className="psp-services" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem' }}>
                 {SERVICES.map((s) => {
                   const sel = formData.service === s;
                   return (
@@ -845,7 +858,7 @@ const PrivateSectorProfile = () => {
               </div>
 
               {/* Path Option */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+              <div className="psp-two" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
                 <button
                   type="button"
                   onClick={() => setField('path', 'operational')}
@@ -959,7 +972,7 @@ const PrivateSectorProfile = () => {
               {/* Translation Summary Box */}
               <div style={{ border: '1px solid #cbd5e1', borderRadius: '12px', overflow: 'hidden' }}>
                 <div style={{ padding: '0.85rem 1.15rem', background: '#f1f5f9', borderBottom: '1px solid #cbd5e1', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <strong style={{ fontSize: '0.9rem', color: '#0f172a' }}>Military Evidence $\rightarrow$ Civilian Capability</strong>
+                  <strong style={{ fontSize: '0.9rem', color: '#0f172a' }}>Military Evidence → Civilian Capability</strong>
                   <span style={{ fontSize: '0.78rem', color: 'var(--ios-olive, #4b6b32)', fontWeight: 700 }}>
                     {translatedCapabilities.length} Capability Areas
                   </span>
@@ -969,6 +982,7 @@ const PrivateSectorProfile = () => {
                   {translatedCapabilities.map((cap) => (
                     <div
                       key={cap.key}
+                      className="psp-cap"
                       style={{
                         display: 'grid',
                         gridTemplateColumns: '1fr 30px 1fr',
@@ -984,7 +998,7 @@ const PrivateSectorProfile = () => {
                           {cap.dutyCount} duty item{cap.dutyCount > 1 ? 's' : ''} confirmed
                         </span>
                       </div>
-                      <div style={{ textAlign: 'center', color: '#9C7A2E', fontWeight: 700 }}>$\rightarrow$</div>
+                      <div className="psp-arrow" style={{ textAlign: 'center', color: '#9C7A2E', fontWeight: 700 }}>→</div>
                       <div>
                         <strong style={{ fontSize: '0.85rem', color: 'var(--ios-olive, #4b6b32)' }}>{cap.civil}</strong>
                         <span style={{ fontSize: '0.75rem', color: '#64748b', display: 'block' }}>
@@ -1116,7 +1130,7 @@ const PrivateSectorProfile = () => {
 
               <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem' }}>
                 <Button variant="primary" onClick={finish}>
-                  Explore Matched Opportunities $\rightarrow$
+                  Explore Matched Opportunities →
                 </Button>
               </div>
             </div>
@@ -1125,6 +1139,7 @@ const PrivateSectorProfile = () => {
           {/* Action Buttons */}
           {currentStepId !== 'done' && (
             <div
+              className="psp-actions"
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
@@ -1136,6 +1151,7 @@ const PrivateSectorProfile = () => {
             >
               <button
                 type="button"
+                className="psp-back"
                 onClick={goBack}
                 disabled={step === 0 || saving || uploading}
                 style={{
@@ -1147,10 +1163,10 @@ const PrivateSectorProfile = () => {
                   fontSize: '0.88rem',
                 }}
               >
-                $\leftarrow$ Back
+                ← Back
               </button>
 
-              <div style={{ display: 'flex', gap: '0.75rem' }}>
+              <div className="psp-next" style={{ display: 'flex', gap: '0.75rem' }}>
                 <Button
                   variant="primary"
                   onClick={goNext}
@@ -1163,7 +1179,7 @@ const PrivateSectorProfile = () => {
                   ) : currentStepId === 'verification' ? (
                     'Submit & Activate Profile'
                   ) : (
-                    'Save & Continue $\rightarrow$'
+                    'Save & Continue →'
                   )}
                 </Button>
               </div>
@@ -1171,6 +1187,64 @@ const PrivateSectorProfile = () => {
           )}
         </Card>
       </div>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        .psp-step-count { display: none; }
+        .psp-arrow { white-space: nowrap; }
+        .psp button:focus-visible,
+        .psp input:focus-visible,
+        .psp select:focus-visible,
+        .psp textarea:focus-visible {
+          outline: 2px solid var(--ios-olive, #4b6b32);
+          outline-offset: 2px;
+        }
+
+        @media (max-width: 767px) {
+          .psp-wrap { padding: 1rem 14px !important; }
+          .psp-head { margin-bottom: 1rem !important; }
+          .psp-title { font-size: 1.45rem !important; line-height: 1.2; }
+
+          /* Step rail: one swipeable row, with a plain "Step n of N" line above it */
+          .psp-step-count {
+            display: block;
+            margin: 0 0 0.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--ios-olive, #4b6b32);
+          }
+          .psp-rail {
+            flex-wrap: nowrap !important;
+            justify-content: flex-start !important;
+            overflow-x: auto;
+            margin: 0 -14px 1.1rem !important;
+            padding: 0 14px 0.25rem;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+          }
+          .psp-rail::-webkit-scrollbar { display: none; }
+          .psp-pill { flex: 0 0 auto; white-space: nowrap; }
+
+          .psp-card { padding: 1.1rem !important; border-radius: 14px !important; }
+          .psp input, .psp select, .psp textarea { font-size: 1rem !important; }
+
+          .psp-two { grid-template-columns: minmax(0, 1fr) !important; }
+          .psp-cap { grid-template-columns: minmax(0, 1fr) !important; gap: 0.35rem !important; }
+          .psp-arrow { transform: rotate(90deg); justify-self: start; padding-left: 0.4rem; }
+
+          /* Back below a full-width primary action */
+          .psp-actions { flex-direction: column-reverse; align-items: stretch !important; gap: 0.5rem; }
+          .psp-next { display: block !important; }
+          .psp-next button { width: 100%; min-height: 48px; justify-content: center; font-size: 1rem !important; }
+          .psp-back { min-height: 44px; font-size: 0.95rem !important; }
+        }
+        @media (max-width: 400px) {
+          .psp-services { grid-template-columns: minmax(0, 1fr) !important; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .psp-rail { scroll-behavior: auto; }
+        }
+      `}} />
     </div>
   );
 };

@@ -3167,3 +3167,122 @@
 }
 
 
+
+/* ══════════════════════════════════════════════════════════════════
+   Phone / tablet refinements for the category portal
+   ══════════════════════════════════════════════════════════════════ */
+
+/* The stacked details card used a plain 1fr column, which let unwrapped exam
+   titles set its minimum width (~500px) and clipped the text on phones. */
+@media (max-width: 1280px) {
+  .cep-details-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Tablet: About across the top, Top Exams and Related Exams side by side */
+@media (min-width: 900px) and (max-width: 1280px) {
+  .cep-details-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cep-about-col {
+    grid-column: 1 / -1;
+  }
+  .cep-top-exams-col {
+    border-bottom: none;
+    border-right: 1px solid #edf2f7;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Compact hero: image sits behind the text instead of below it */
+  .cep-hero-card {
+    border-radius: 16px;
+  }
+  .cep-hero-visual-wrap {
+    position: absolute;
+    inset: 0;
+    height: auto;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .cep-hero-img {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .cep-hero-emblem-badge,
+  .cep-hero-script-middle {
+    display: none; /* decorative; competes with the title on small screens */
+  }
+  .cep-hero-content {
+    position: relative;
+    padding: 18px 16px;
+    background: linear-gradient(100deg, rgba(6, 40, 25, 0.96) 0%, rgba(6, 40, 25, 0.82) 60%, rgba(6, 40, 25, 0.55) 100%);
+  }
+  .cep-hero-title {
+    font-size: clamp(26px, 8vw, 34px);
+    gap: 8px;
+  }
+  .cep-hero-tagline {
+    font-size: 13.5px;
+    margin-bottom: 14px;
+  }
+  /* Offerings: four compact tiles across */
+  .cep-hero-pills-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .cep-hero-pill {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    padding: 8px 4px;
+    min-height: 64px;
+  }
+  .cep-hero-pill-texts {
+    align-items: center;
+  }
+  .cep-hero-pill-title {
+    white-space: normal;
+    font-size: 10.5px;
+    line-height: 1.2;
+  }
+  .cep-hero-pill-sub {
+    display: none;
+  }
+
+  /* Details: readable stacked lists, long exam names wrap */
+  .cep-details-card {
+    border-radius: 16px;
+  }
+  .cep-about-col,
+  .cep-top-exams-col,
+  .cep-related-exams-col {
+    padding: 18px 16px;
+  }
+  .cep-exam-item-row {
+    min-height: 48px;
+  }
+  .cep-exam-row-title {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: 13.5px;
+    line-height: 1.35;
+  }
+  .cep-meta-value {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 380px) {
+  .cep-hero-pills-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cep-hero-card:hover .cep-hero-img { transform: none; }
+}

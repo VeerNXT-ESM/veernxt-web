@@ -34,11 +34,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/hero/hero_image.jpg');
+  background-image: var(--lc-hero-img, url('/hero/hero_image.jpg')); /* --lc-hero-img: CMS banner (admin > Banners) */
   background-position: 8% 45%;
   background-size: cover;
   background-repeat: no-repeat;
-  transform: scaleX(-1); /* Flips mountain soldier to the right side of the hero */
+  transform: var(--lc-hero-flip, scaleX(-1)); /* Flips the default mountain soldier to the right side; uploaded banners are not flipped */
   z-index: 0;
   pointer-events: none;
 }
@@ -3060,7 +3060,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/hero/hero_image.jpg');
+  background-image: var(--lc-promo-img, url('/hero/hero_image.jpg'));
   background-position: 78% 40%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -4257,7 +4257,7 @@
 
 .lc-state-directory-hero {
   position: relative;
-  background-image: url('/category_banners/state_psc.jpg');
+  background-image: var(--lc-state-hero-img, url('/category_banners/state_psc.jpg'));
   background-size: cover;
   background-position: center 35%;
   border-radius: 24px;
@@ -4680,7 +4680,8 @@
   display: none;
 }
 
-.lc-sidebar-filter-chip {
+.lc-sidebar-filter-chip,
+.lc-sidebar-tab {
   border: 1px solid #e2e8f0;
   background: #f8fafc;
   color: #475569;
@@ -4693,12 +4694,14 @@
   transition: all 0.15s ease;
 }
 
-.lc-sidebar-filter-chip:hover {
+.lc-sidebar-filter-chip:hover,
+.lc-sidebar-tab:hover {
   background: #f1f5f9;
   color: #1e293b;
 }
 
-.lc-sidebar-filter-chip.active {
+.lc-sidebar-filter-chip.active,
+.lc-sidebar-tab.active {
   background: #062819;
   color: #fbbf24;
   border-color: #062819;
@@ -4926,11 +4929,16 @@
    Tablet & Phone Layout (<= 1100px)
    The two-column grid collapses to one column here. Explorer mode used
    to keep its fixed 260px/74px column (via !important), which squeezed
-   the content rail into that column once the sidebar was hidden, and it
-   left phones/tablets with no way to switch exam categories. Below we
-   stack everything and turn the explorer sidebar into a horizontal,
-   swipeable category strip that sits under the top bar.
+   the content rail into that column once the sidebar was hidden. Below
+   we stack everything; the explorer category sidebar becomes a drawer
+   opened from the "Browse categories" button in the top bar
+   (state: explorerNavOpen in LearningCenter.jsx).
    ══════════════════════════════════════════════════════════════════ */
+.lc-explorer-browse-btn,
+.lc-explorer-drawer-head {
+  display: none;
+}
+
 @media (max-width: 1100px) {
   .lc-main-grid,
   .lc-main-grid-explorer,
@@ -4940,42 +4948,86 @@
     margin-top: 0;
   }
 
-  /* Flatten the rail so the top bar (mode tabs + search + region chips)
-     can sit above the category strip, with the content below it. */
-  .lc-main-grid-explorer > .lc-content-rail {
-    display: contents;
-  }
-
-  .lc-main-grid-explorer .lc-explorer-top-bar {
-    order: -2;
-    margin-bottom: 0;
-  }
-
+  /* Category drawer */
   .lc-main-grid-explorer > .lc-explorer-sidebar {
-    order: -1;
-    display: block;
-    position: static;
-    max-height: none;
-    overflow: visible;
-    min-width: 0;
-    padding: 10px;
-    border-radius: 16px;
-  }
-
-  /* State/UT list: the main content already shows the full state
-     directory with search and zone chips, so skip the duplicate strip. */
-  .lc-main-grid-explorer > .lc-explorer-sidebar:has(nav[aria-label="States list"]) {
     display: none;
   }
 
-  .lc-explorer-sidebar-header {
+  .lc-main-grid-explorer > .lc-explorer-sidebar.is-drawer-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1001;
+    width: min(340px, 88vw);
+    height: 100dvh;
+    max-height: none;
+    box-sizing: border-box;
+    padding: 12px 10px calc(12px + env(safe-area-inset-bottom, 0px));
+    border-radius: 0 18px 18px 0;
+    overflow: hidden;
+    box-shadow: 12px 0 36px rgba(15, 23, 42, 0.22);
+    animation: lcDrawerIn 0.22s ease-out;
+  }
+
+  @keyframes lcDrawerIn {
+    from { transform: translateX(-24px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  .lc-explorer-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.45);
+  }
+
+  .lc-explorer-sidebar.is-drawer-open .lc-explorer-drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 2px 4px 10px 8px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0f172a;
+    flex-shrink: 0;
+  }
+
+  .lc-explorer-drawer-close {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #334155;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* Collapsing to icons makes no sense inside a drawer */
+  .lc-explorer-sidebar.is-drawer-open .lc-explorer-collapse-toggle,
+  .lc-explorer-sidebar.is-drawer-open .lc-explorer-title-btn {
+    display: none;
+  }
+
+  .lc-explorer-sidebar.is-drawer-open .lc-explorer-sidebar-header {
+    flex-shrink: 0;
     padding: 2px 4px 8px;
     margin-bottom: 6px;
   }
 
-  .lc-explorer-collapse-toggle {
-    width: 36px;
-    height: 36px;
+  .lc-explorer-sidebar.is-drawer-open .lc-explorer-sidebar-header:not(.lc-explorer-state-header) {
+    display: none;
+  }
+
+  .lc-explorer-sidebar.is-drawer-open .lc-explorer-state-badge,
+  .lc-explorer-sidebar.is-drawer-open .lc-sidebar-search-container {
+    flex-shrink: 0;
   }
 
   .lc-explorer-state-badge {
@@ -4994,65 +5046,73 @@
   }
 
   .lc-sidebar-search-box {
-    height: 40px;
+    height: 42px;
   }
 
-  /* Category nav: vertical list → horizontal scroll strip of pills */
-  .lc-main-grid-explorer .lc-explorer-nav {
-    flex-direction: row;
-    gap: 8px;
+  /* The category list scrolls on its own inside the drawer */
+  .lc-explorer-sidebar.is-drawer-open .lc-explorer-nav {
+    flex: 1 1 auto;
+    min-height: 0;
     max-height: none;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 2px 2px 6px;
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
   }
 
-  .lc-main-grid-explorer .lc-explorer-nav::-webkit-scrollbar {
-    display: none;
+  .lc-explorer-sidebar.is-drawer-open .lc-explorer-nav-item {
+    min-height: 48px;
   }
 
-  .lc-main-grid-explorer .lc-explorer-nav-item {
-    flex: 0 0 auto;
-    width: auto;
-    max-width: 240px;
-    gap: 8px;
-    padding: 5px 12px 5px 5px;
+  /* "Browse categories" button in the top bar */
+  .lc-explorer-browse-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 100%;
+    min-height: 46px;
+    padding: 0 14px;
     border: 1px solid #e2e8f0;
-    border-radius: 999px;
+    border-radius: 12px;
     background: #ffffff;
-    scroll-snap-align: start;
+    color: #0f172a;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    text-align: left;
   }
 
-  .lc-main-grid-explorer .lc-explorer-sidebar-collapsed .lc-explorer-nav-item {
-    padding: 4px;
+  .lc-explorer-browse-btn svg {
+    color: #466931;
+    flex-shrink: 0;
   }
 
-  .lc-main-grid-explorer .lc-explorer-nav-icon-wrap,
-  .lc-main-grid-explorer .lc-explorer-sidebar-collapsed .lc-explorer-nav-icon-wrap {
-    width: 30px;
-    height: 30px;
+  .lc-explorer-browse-current {
+    margin-left: auto;
+    min-width: 0;
+    max-width: 55%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #92400e;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
     border-radius: 999px;
+    padding: 3px 10px;
   }
 
-  .lc-main-grid-explorer .lc-explorer-nav-label {
-    flex: 0 1 auto;
-    font-size: 13px;
+  .lc-explorer-browse-btn:focus-visible,
+  .lc-explorer-drawer-close:focus-visible {
+    outline: 2px solid #466931;
+    outline-offset: 2px;
   }
 
-  .lc-main-grid-explorer .lc-explorer-nav-count {
-    margin: 0;
-  }
-
-  .lc-main-grid-explorer .lc-explorer-nav-chevron {
-    display: none;
-  }
-
-  .lc-main-grid-explorer .lc-sidebar-empty-state {
-    width: 100%;
+  @media (prefers-reduced-motion: reduce) {
+    .lc-main-grid-explorer > .lc-explorer-sidebar.is-drawer-open {
+      animation: none;
+    }
   }
 
   /* Top bar: tabs + search share a row on tablets, region chips below */
@@ -5291,11 +5351,433 @@
     display: none;
   }
 
+  /* Two compact state cards per row (one per row made a ~10,000px page) */
   .lc-state-directory-grid {
-    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
   }
 
   .lc-state-card-image-wrap {
-    height: 120px;
+    height: 84px;
+  }
+
+  .lc-state-watermark-text {
+    font-size: 34px;
+  }
+
+  .lc-state-card-floating-bar {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+  }
+
+  .lc-state-card-count-badge {
+    font-size: 10px;
+    padding: 3px 7px;
+  }
+
+  .lc-state-card-body {
+    padding: 2px 10px 10px;
+  }
+
+  .lc-state-card-name {
+    font-size: 14.5px;
+    overflow-wrap: anywhere;
+  }
+
+  .lc-state-card-meta-line {
+    font-size: 11px;
+  }
+
+  .lc-state-card-categories {
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+
+  .lc-state-cat-pill {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .lc-state-card-footer {
+    font-size: 12px;
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 359px) {
+  .lc-state-directory-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Learning Center — mobile refinements (mockup: carousels with a
+   peeking next card, Filters + Sort toolbar under the mode tabs)
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Sort control (Recommended for you). Desktop copy lives in the section
+   header; the < 1100px copy lives in the Filters toolbar. */
+.lc-sort-control {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 10px 0 12px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.lc-sort-control svg {
+  color: #466931;
+  flex-shrink: 0;
+}
+
+.lc-sort-control select {
+  appearance: auto;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  padding: 4px 0;
+  max-width: 150px;
+  outline: none;
+}
+
+.lc-sort-control:focus-within {
+  outline: 2px solid #466931;
+  outline-offset: 2px;
+}
+
+@media (max-width: 1100px) {
+  .lc-sort-control-desktop {
+    display: none;
+  }
+
+  /* Toolbar: Filters (wide) + Sort, active-filter chips on their own row */
+  .lc-content-rail > .lc-mobile-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lc-content-rail > .lc-mobile-filter-bar .lc-mobile-filter-trigger-btn {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    min-height: 44px;
+    border-radius: 12px;
+  }
+
+  .lc-content-rail > .lc-mobile-filter-bar .lc-sort-control {
+    min-height: 44px;
+  }
+
+  .lc-content-rail > .lc-mobile-filter-bar .lc-mobile-active-chips-scroll:not(:empty) {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .lc-content-rail > .lc-mobile-filter-bar .lc-mobile-active-chips-scroll:empty {
+    display: none;
+  }
+
+  /* The toolbar already has Filters; drop the duplicate icon in the section header */
+  #lc-search-results-section .lc-mobile-header-filter-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .lc-content-rail {
+    gap: 1rem;
+  }
+
+  /* Section headers: title left, "View all" right on one row.
+     Scoped to .learning-wrapper because the admin stylesheet (AdminCMS.css,
+     loaded app-wide) also defines .lc-section-header / .lc-section-header h2
+     with flex-wrap and a 1.5rem heading, which otherwise wins here. */
+  .learning-wrapper .lc-section-header {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .learning-wrapper .lc-section-header-left {
+    min-width: 0;
+  }
+
+  .learning-wrapper .lc-section-header-right {
+    width: auto;
+    flex-shrink: 0;
+    justify-content: flex-end;
+  }
+
+  .learning-wrapper .lc-section-header h2.lc-section-title {
+    font-size: 1.15rem;
+    line-height: 1.25;
+    margin: 0 0 0.2rem;
+  }
+
+  .learning-wrapper .lc-section-header p.lc-section-subtitle {
+    font-size: 0.82rem;
+  }
+
+  /* Swipe replaces the arrow buttons on touch screens; cards stay keyboard-focusable */
+  .lc-section-box .lc-carousel-controls {
+    display: none;
+  }
+
+  /* ── Recommended for you (matches the mobile mockup) ──
+     No outer panel: white cards sit straight on the page background, in a
+     swipeable row where the next card peeks in. Same flat treatment for the
+     Continue Learning / Popular Exams panels so the sections look consistent. */
+  .learning-wrapper .lc-section-box {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .learning-wrapper .lc-section-header h2.lc-section-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+
+  .learning-wrapper .lc-section-header-right .lc-view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    min-height: 32px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #3f6b2c;
+    white-space: nowrap;
+  }
+
+  .lc-recommended-carousel {
+    display: flex;
+    width: auto; /* the filtered-results grid also carries width:100% from its desktop rule */
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0.25rem; /* keep the first card aligned with the heading after snapping */
+    -webkit-overflow-scrolling: touch;
+    padding: 0.25rem 0.25rem 0.9rem;
+    margin: 0 -0.25rem;
+  }
+
+  .lc-recommended-carousel .lc-exam-card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 clamp(152px, 44vw, 200px);
+    width: clamp(152px, 44vw, 200px);
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    scroll-snap-align: start;
+  }
+
+  .lc-recommended-carousel .lc-card-thumb-wrap {
+    height: auto !important;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+  }
+
+  .lc-recommended-carousel .lc-card-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .lc-recommended-carousel .lc-card-badge {
+    top: 8px;
+    left: 8px;
+    font-size: 0.66rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .lc-recommended-carousel .lc-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.15rem;
+    padding: 0.7rem 0.65rem 0.75rem;
+  }
+
+  .lc-recommended-carousel .lc-card-title {
+    display: block;
+    -webkit-line-clamp: unset;
+    min-height: 0;
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 800;
+    line-height: 1.28;
+    color: #0f172a;
+    overflow-wrap: anywhere;
+  }
+
+  .lc-recommended-carousel .lc-card-conductor {
+    margin: 0 0 0.35rem;
+    font-size: 0.82rem;
+    color: #64748b;
+  }
+
+  .lc-recommended-carousel .lc-card-meta-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: #475569;
+  }
+
+  .lc-recommended-carousel .lc-card-meta-item {
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .lc-recommended-carousel .lc-card-meta-item svg {
+    margin-top: 0.12rem;
+    flex-shrink: 0;
+    color: #64748b;
+  }
+
+  .lc-recommended-carousel .lc-card-start-btn {
+    margin-top: auto;
+    min-height: 44px;
+    padding: 0.55rem 0.5rem;
+    background: #ffffff;
+    color: #0f172a;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  /* Keep the first card of every swipe row aligned with its heading after snapping */
+  .learning-wrapper .lc-cards-carousel {
+    scroll-padding-inline: 0.25rem;
+  }
+
+  /* Continue Learning: comfortable cards, next one peeking */
+  .lc-continue-card {
+    flex: 0 0 min(64vw, 240px);
+    width: min(64vw, 240px);
+  }
+
+  .lc-cont-thumb-wrap {
+    height: 112px;
+  }
+
+  .lc-cont-title {
+    overflow-wrap: anywhere;
+  }
+
+  .lc-cont-resume-btn {
+    min-height: 44px;
+  }
+
+  /* Popular Exams: smaller promotional cards, ~2.3 visible */
+  .lc-popular-exam-card {
+    flex: 0 0 min(42vw, 170px);
+    width: min(42vw, 170px);
+  }
+
+  .lc-popular-exam-card .lc-card-thumb-wrap {
+    height: 88px;
+  }
+
+  .lc-popular-exam-card .lc-card-body {
+    padding: 0.6rem 0.65rem;
+  }
+
+  .lc-popular-exam-card .lc-card-title {
+    font-size: 0.85rem;
+    min-height: 0;
+  }
+
+  .lc-popular-exam-card .lc-card-conductor {
+    font-size: 0.72rem;
+    margin: 0;
+  }
+
+  .lc-popular-exam-card .lc-card-badge {
+    font-size: 0.6rem;
+  }
+
+  /* Promo banner: compact, text full width, CTA below */
+  .lc-promo-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .lc-promo-title {
+    font-size: clamp(1.2rem, 5.4vw, 1.5rem);
+  }
+
+  .lc-promo-desc {
+    font-size: 0.86rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .lc-promo-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .lc-promo-stat-item {
+    font-size: 0.8rem;
+  }
+
+  .lc-promo-cta-btn {
+    width: auto;
+    align-self: flex-start;
+  }
+
+  .lc-promo-bg-layer {
+    background-position: 70% 30%;
+  }
+}
+
+@media (max-width: 359px) {
+  .lc-recommended-carousel .lc-exam-card,
+  .lc-continue-card {
+    flex-basis: 78vw;
+    width: 78vw;
+  }
+
+  .lc-popular-exam-card {
+    flex-basis: 56vw;
+    width: 56vw;
+  }
+
+  .lc-sort-label {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lc-recommended-carousel,
+  .lc-cards-carousel {
+    scroll-behavior: auto;
   }
 }

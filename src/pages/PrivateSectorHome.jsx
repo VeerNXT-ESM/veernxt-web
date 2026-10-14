@@ -42,45 +42,181 @@ const PrivateSectorHome = () => {
   const completed = !!profile?.profile_completed;
 
   return (
-    <div style={{ maxWidth: 720, margin: '0 auto', padding: '2.5rem 1.25rem' }}>
-      <Card padding="lg">
-        {!completed ? (
-          <>
-            <Briefcase size={28} color="var(--ios-olive)" />
-            <h1 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0.75rem 0 0.5rem' }}>Improve Your Profile</h1>
-            <p style={{ color: 'var(--text-secondary)', margin: '0 0 1.5rem' }}>
-              Complete your Private Sector Profile to discover opportunities that match your skills and experience.
-            </p>
-            <Button size="lg" onClick={() => navigate('/private-sector/profile')}>Complete Profile →</Button>
-          </>
-        ) : (
-          <>
-            <Briefcase size={28} color="var(--ios-olive)" />
-            <h1 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0.75rem 0 0.5rem' }}>Private Sector Opportunities</h1>
-            <p style={{ color: 'var(--text-secondary)', margin: '0 0 1.5rem' }}>
-              Opportunities matched to your skills, experience and preferences.
-            </p>
-            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
-              <Button size="lg" onClick={() => navigate('/private-sector/opportunities')}>View Opportunities →</Button>
-              <Link to="/private-sector/profile" style={{ fontSize: '0.85rem', color: 'var(--ios-olive)', fontWeight: 700, textDecoration: 'none' }}>Edit profile</Link>
-            </div>
-          </>
-        )}
+    <div className="ps-home">
+      <Card padding="lg" className="ps-home-card">
+        {/* On phones this block becomes the dark hero banner; on larger screens it is just the card's content. */}
+        <div className="ps-home-hero">
+          {!completed ? (
+            <>
+              <Briefcase size={28} className="ps-home-icon" />
+              <h1 className="ps-home-title">Improve Your Profile</h1>
+              <p className="ps-home-text">
+                Complete your Private Sector Profile to discover opportunities that match your skills and experience.
+              </p>
+              <div className="ps-home-actions">
+                <Button size="lg" onClick={() => navigate('/private-sector/profile')}>Complete Profile →</Button>
+              </div>
+            </>
+          ) : (
+            <>
+              <Briefcase size={28} className="ps-home-icon" />
+              <h1 className="ps-home-title">Private Sector Opportunities</h1>
+              <p className="ps-home-text">
+                Opportunities matched to your skills, experience and preferences.
+              </p>
+              <div className="ps-home-actions">
+                <Button size="lg" onClick={() => navigate('/private-sector/opportunities')}>View Opportunities →</Button>
+                <Link to="/private-sector/profile" className="ps-home-edit">Edit profile</Link>
+              </div>
+            </>
+          )}
+        </div>
 
-        <div style={{ marginTop: '1.75rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <div className="ps-home-verified">
           {verification?.status === 'verified' ? (
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', fontWeight: 700, color: '#15803d' }}>
+            <span className="ps-verified-ok">
               <ShieldCheck size={16} /> VeerNXT Verified
             </span>
           ) : verification ? (
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', fontWeight: 700, color: '#b45309' }}>
+            <span className="ps-verified-pending">
               <Clock size={16} /> Verification Pending
             </span>
           ) : (
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Service verification not started yet.</span>
+            <span className="ps-verified-none">Service verification not started yet.</span>
           )}
         </div>
       </Card>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        .ps-home {
+          max-width: 720px;
+          margin: 0 auto;
+          padding: 2.5rem 1.25rem;
+        }
+        .ps-home-icon {
+          color: var(--ios-olive);
+        }
+        .ps-home-title {
+          font-size: 1.5rem;
+          font-weight: 800;
+          margin: 0.75rem 0 0.5rem;
+        }
+        .ps-home-text {
+          color: var(--text-secondary);
+          margin: 0 0 1.5rem;
+        }
+        .ps-home-actions {
+          display: flex;
+          gap: 0.75rem;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+        .ps-home-edit {
+          font-size: 0.85rem;
+          color: var(--ios-olive);
+          font-weight: 700;
+          text-decoration: none;
+        }
+        .ps-home-verified {
+          margin-top: 1.75rem;
+          padding-top: 1.25rem;
+          border-top: 1px solid var(--border);
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .ps-verified-ok,
+        .ps-verified-pending {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: 0.85rem;
+          font-weight: 700;
+        }
+        .ps-verified-ok { color: #15803d; }
+        .ps-verified-pending { color: #b45309; }
+        .ps-verified-none {
+          font-size: 0.85rem;
+          color: var(--text-secondary);
+        }
+        .ps-home a:focus-visible {
+          outline: 3px solid var(--accent-gold, #fbbf24);
+          outline-offset: 2px;
+        }
+
+        /* Tablets and phones: dark hero banner, verified status beneath it */
+        @media (max-width: 992px) {
+          .ps-home {
+            padding: 1rem 14px 1.5rem;
+          }
+          .ps-home-card {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+          }
+          .ps-home-hero {
+            padding: 1.75rem 1.25rem 1.5rem;
+            border-radius: 16px;
+            color: #ffffff;
+            background:
+              linear-gradient(180deg, rgba(8, 28, 20, 0.78) 0%, rgba(8, 28, 20, 0.92) 100%),
+              url('/veernxt_assets/banners/B05_military_to_career.png') center / cover no-repeat;
+            box-shadow: var(--shadow-2);
+          }
+          .ps-home-icon {
+            color: var(--accent-gold, #fbbf24);
+          }
+          .ps-home-title {
+            font-size: clamp(1.6rem, 7.5vw, 2rem);
+            line-height: 1.12;
+            color: #ffffff;
+            margin: 0.6rem 0 0.5rem;
+          }
+          .ps-home-text {
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 1rem;
+            line-height: 1.45;
+            margin-bottom: 1.25rem;
+          }
+          .ps-home-actions button {
+            min-height: 48px;
+            justify-content: center;
+          }
+          .ps-home-edit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 1.5rem;
+            border: 1.5px solid rgba(255, 255, 255, 0.65);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.22);
+            color: #ffffff;
+            font-size: 0.95rem;
+          }
+          .ps-home-verified {
+            justify-content: center;
+            margin-top: 0.9rem;
+            padding-top: 0;
+            border-top: none;
+          }
+        }
+        @media (max-width: 767px) {
+          .ps-home-actions {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.65rem;
+          }
+          .ps-home-actions button {
+            width: 100%;
+          }
+          .ps-home-edit {
+            display: flex;
+            padding: 0;
+          }
+        }
+      `}} />
     </div>
   );
 };
