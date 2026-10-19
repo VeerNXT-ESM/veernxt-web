@@ -13,6 +13,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { CAREER_TRACK_META, CAREER_TRACK_ORDER, hexToRgba } from '../lib/careerTrack';
 import { scoreJobsForProfile, isPersonalizationActive } from '../lib/jobMatcher';
+import { useTheme } from '../context/ThemeContext';
 
 const RESULTS_PER_PAGE = 10;
 
