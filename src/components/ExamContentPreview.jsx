@@ -146,14 +146,22 @@ export function ResourceTile({ resource, examName, locked, isCompleted, onToggle
         style={{ textDecoration: 'none', width: '100%', display: 'block' }}
       >
         <div className="vn-book-3d-item">
-          {/* Rear hardcover base */}
-          <div className="vn-book-3d-back" style={{ background: bg || '#042f28' }} />
+          {/* Rear hardcover base (Consistent brand dark green) */}
+          <div className="vn-book-3d-back" style={{ background: '#032e23' }} />
 
-          {/* Left extruded spine */}
-          <div className="vn-book-3d-spine" style={{ background: bg || '#042f28' }}>
-            <div className="vn-book-spine-gold-ring" />
-            <span className="vn-book-3d-spine-text">{cleanTitle || subject.label}</span>
-            <div className="vn-book-spine-gold-ring" />
+          {/* Left extruded spine (Consistent brand green with official logo & authentic typography) */}
+          <div className="vn-book-3d-spine">
+            <div className="vn-book-spine-crest">
+              <img src="/logo.png" alt="VeerNXT" className="vn-spine-logo-img" />
+            </div>
+            <div className="vn-book-3d-spine-text-wrap">
+              <span className="vn-book-3d-spine-title">{cleanTitle || subject.label}</span>
+              <span className="vn-book-3d-spine-sub">COMPLETE GUIDE</span>
+            </div>
+            <div className="vn-book-spine-brand">
+              <span className="vn-spine-vn-logo">❖</span>
+              <span className="vn-spine-vn-text">VeerNXT</span>
+            </div>
             <div className="vn-book-3d-spine-light" />
           </div>
 
@@ -238,12 +246,20 @@ export function IntroManualTile({ intro, locked, onOpen }) {
       <div className="vn-book-3d-scene">
         <div onClick={handleClick} style={{ width: '100%', cursor: 'pointer' }}>
           <div className="vn-book-3d-item">
-            <div className="vn-book-3d-back" style={{ background: '#042f28' }} />
+            <div className="vn-book-3d-back" style={{ background: '#032e23' }} />
 
-            <div className="vn-book-3d-spine" style={{ background: '#042f28' }}>
-              <div className="vn-book-spine-gold-ring" />
-              <span className="vn-book-3d-spine-text">{intro.title || 'INTRODUCTION'}</span>
-              <div className="vn-book-spine-gold-ring" />
+            <div className="vn-book-3d-spine">
+              <div className="vn-book-spine-crest">
+                <img src="/logo.png" alt="VeerNXT" className="vn-spine-logo-img" />
+              </div>
+              <div className="vn-book-3d-spine-text-wrap">
+                <span className="vn-book-3d-spine-title">{intro.title || 'INTRODUCTION'}</span>
+                <span className="vn-book-3d-spine-sub">COMPLETE GUIDE</span>
+              </div>
+              <div className="vn-book-spine-brand">
+                <span className="vn-spine-vn-logo">❖</span>
+                <span className="vn-spine-vn-text">VeerNXT</span>
+              </div>
               <div className="vn-book-3d-spine-light" />
             </div>
 

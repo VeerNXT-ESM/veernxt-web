@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import {
   ArrowLeft, CheckCircle, Clock, BookOpen, Share2, RefreshCw, Lock, Crown, ChevronLeft, ChevronRight,
-  Printer, Maximize, Minimize, ScrollText, BookText,
+  Printer, Maximize, Minimize, ScrollText, BookText, FileText, Headphones,
 } from 'lucide-react';
 import 'react-quill-new/dist/quill.snow.css';
 import { getEffectiveTier, canAccessResource } from '../lib/subscriptionAccess';
@@ -16,8 +16,19 @@ import { useReaderTheme } from './book/theme/useReaderTheme';
 import { normalizeReaderCategory } from './book/theme/customThemeStore';
 import { FONT_SCALE_STEP, FONT_SCALE_MIN, FONT_SCALE_MAX } from './book/theme/readerThemeTokens';
 import ThemeSwitcher from './book/theme/ThemeSwitcher';
+import PaginatedReader from './book/reader/PaginatedReader';
+import { BookTTSController, extractSpeechSegments } from './book/reader/ttsService';
+import ReaderTTSBar from './book/reader/ReaderTTSBar';
 import './book/BookBlocks.css';
 import '../pages/sandbox/BookReaderV2.css';
+
+// Reader preferences + resume position (per browser).
+const LS_MODE = 'veernxt_reader_mode';
+const LS_SOUND = 'veernxt_reader_sound';
+const LS_SPEED = 'veernxt_reader_speed';
+const lsGet = (k, d) => { try { return localStorage.getItem(k) ?? d; } catch { return d; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch { /* ignore */ } };
+const readPos = (id) => { try { return JSON.parse(localStorage.getItem(`veernxt_reader_pos_${id}`)) || null; } catch { return null; } };
 
 // Font-size A-/A+ control -- separate from ThemeSwitcher's own popover
 // (ThemeEditor_UI.md keeps the reader picker to just the theme list; this
@@ -60,16 +71,32 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
   const [loading, setLoading] = useState(true);
   const [isRead, setIsRead] = useState(false);
   const [chapters, setChapters] = useState(null);
-  const [activeChapterIndex, setActiveChapterIndex] = useState(0);
+  const [activeChapterIndex, setActiveChapterIndex] = useState(() => {
+    if (lsGet(LS_MODE, 'scroll') === 'scroll') return 0;
+    const pos = readPos(resourceId || params?.id);
+    return pos && Number.isInteger(pos.chapter) ? pos.chapter : 0;
+  });
   const [effectiveTier, setEffectiveTier] = useState('FREE');
   const chapterCache = React.useRef({});
 
-  // "Flipbook" has no real page-turn implementation anywhere in this
-  // codebase yet (confirmed -- only Scroll actually renders content); the
-  // toggle is honest about that rather than pretending to switch modes.
-  const [readerMode] = useState('scroll');
+  // Reader modes are declared below (scroll / normal / traditional).
+  // Modes: 'scroll' (continuous), 'normal' (PDF-style pages), 'book' (traditional flip book).
+  const [readerMode, setReaderModeState] = useState(() => lsGet(LS_MODE, 'scroll'));
+  const [soundOn, setSoundOn] = useState(() => lsGet(LS_SOUND, '1') === '1');
+  const [flipSpeed, setFlipSpeed] = useState(() => lsGet(LS_SPEED, 'normal'));
+  const [pagedInitial, setPagedInitial] = useState(null);
+  const setReaderMode = (m) => { setReaderModeState(m); lsSet(LS_MODE, m); setPagedInitial(null); };
   const [isFullscreen, setIsFullscreen] = useState(false);
   const readerRootRef = React.useRef(null);
+
+  // Natural Audio TTS Engine Controller & State
+  const ttsControllerRef = React.useRef(null);
+  if (!ttsControllerRef.current) {
+    ttsControllerRef.current = new BookTTSController();
+  }
+  const [ttsOpen, setTtsOpen] = useState(false);
+  const [ttsState, setTtsState] = useState('idle');
+  const [activeBlockId, setActiveBlockId] = useState(null);
 
   useEffect(() => {
     const handleFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
@@ -304,7 +331,17 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         loadChapter(resource, activeChapterIndex, chapters);
       }
     }
-  }, [activeChapterIndex, resource, effectiveTier]);
+  }, [activeChapterIndex, resource, effectiveTier, chapters]);
+
+  // Pre-load the next chapter in the background so turning the last page transitions instantly
+  useEffect(() => {
+    if (resource && chapters && activeChapterIndex + 1 < chapters.length) {
+      const nextIdx = activeChapterIndex + 1;
+      if (!chapters[nextIdx]?.loaded && canAccessResource(effectiveTier, resource.category, nextIdx).allowed) {
+        loadChapter(resource, nextIdx, chapters);
+      }
+    }
+  }, [activeChapterIndex, resource, effectiveTier, chapters]);
 
   const handleMarkAsRead = () => {
     setIsRead(true);
@@ -332,10 +369,98 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
   const access = resource ? canAccessResource(effectiveTier, resource.category, activeChapterIndex) : { allowed: true };
   const isBlocksFormat = resource?.format === 'blocks';
 
+  // Keep TTS segments synced with the currently active chapter
+  useEffect(() => {
+    const contentToNarrate = activeBlocks || currentContent;
+    if (!contentToNarrate) return;
+    const segments = extractSpeechSegments(contentToNarrate, activeChapter?.title);
+    ttsControllerRef.current?.loadSegments(segments);
+  }, [activeBlocks, currentContent, activeChapter?.title]);
+
   const goToChapter = (index) => {
     setActiveChapterIndex(index);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  // ---- Paged modes (normal / book) ----
+  const isPaged = readerMode !== 'scroll';
+  const pagedItems = React.useMemo(() => {
+    if (!isPaged || !activeChapter?.loaded) return [];
+    if (isBlocksFormat && activeBlocks) {
+      const out = [
+        { key: 'chapter-header', el: <ChapterHeader title={activeChapter?.title} order={activeChapterIndex + 1} /> },
+      ];
+      // Long lists/tables are split into row chunks so they flow across pages
+      // instead of being squeezed or scrolled.
+      const CHUNK = 6;
+      let dropCapDone = false;
+      activeBlocks.forEach((b) => {
+        if ((b.type === 'list' || b.type === 'numberedList') && Array.isArray(b.items) && b.items.length > CHUNK) {
+          for (let s = 0; s < b.items.length; s += CHUNK) {
+            const part = { ...b, items: b.items.slice(s, s + CHUNK), start: (b.start || 1) + s };
+            out.push({ key: `${b.id}-c${s}`, el: <BlockRenderer block={part} /> });
+          }
+        } else if (b.type === 'table' && Array.isArray(b.rows) && b.rows.length > CHUNK + 1) {
+          const head = b.rows[0];
+          const body = b.rows.slice(1);
+          for (let s = 0; s < body.length; s += CHUNK) {
+            const part = { ...b, rows: [head, ...body.slice(s, s + CHUNK)] };
+            out.push({ key: `${b.id}-c${s}`, el: <BlockRenderer block={part} /> });
+          }
+        } else {
+          const cls = b.type === 'paragraph' && !dropCapDone ? 'pr-dropcap' : '';
+          if (b.type === 'paragraph') dropCapDone = true;
+          out.push({
+            key: b.id,
+            cls,
+            isHeading: b.type === 'heading',
+            splittable: b.type === 'paragraph' || b.type === 'list' || b.type === 'numberedList',
+            el: <BlockRenderer block={b} />
+          });
+        }
+      });
+      return out;
+    }
+    const doc = new DOMParser().parseFromString(`<div>${currentContent}</div>`, 'text/html');
+    return Array.from(doc.body.firstChild?.children || []).map((n, i) => ({
+      key: `h${i}`,
+      isHeading: ['H1', 'H2', 'H3', 'H4', 'H5'].includes(n.tagName),
+      splittable: ['P', 'UL', 'OL'].includes(n.tagName),
+      el: <div className="ql-snow"><div className="ql-editor" style={{ padding: 0 }} dangerouslySetInnerHTML={{ __html: n.outerHTML }} /></div>,
+    }));
+  }, [isPaged, activeChapter, activeBlocks, activeChapterIndex, currentContent, isBlocksFormat]);
+
+  const handlePageChange = React.useCallback((page) => {
+    try { localStorage.setItem(`veernxt_reader_pos_${id}`, JSON.stringify({ chapter: activeChapterIndex, page })); } catch { /* ignore */ }
+  }, [id, activeChapterIndex]);
+
+  const stepChapter = (dir) => {
+    setPagedInitial(dir < 0 ? 'end' : 0);
+    setActiveChapterIndex((i) => Math.max(0, Math.min((chapters?.length || 1) - 1, i + dir)));
+  };
+
+  // Handle TTS chapter completion (advance to next chapter automatically)
+  useEffect(() => {
+    const controller = ttsControllerRef.current;
+    if (!controller) return;
+
+    const unsubscribe = controller.subscribe({
+      onStateChange: (st) => setTtsState(st),
+      onFinish: () => {
+        if (activeChapterIndex < (chapters?.length || 1) - 1) {
+          stepChapter(1);
+        }
+      },
+    });
+
+    return unsubscribe;
+  }, [activeChapterIndex, chapters]);
+
+  const pagedInitialPage = (() => {
+    if (pagedInitial !== null) return pagedInitial;
+    const pos = readPos(id);
+    return pos && pos.chapter === activeChapterIndex && Number.isInteger(pos.page) ? pos.page : 0;
+  })();
 
   const lockedOverlay = (
     <div style={{
@@ -406,55 +531,102 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
       category={normalizeReaderCategory(resource?.category, resource?.title)}
       theme={resource?.reader_theme_id || undefined}
       subjectAccent={resource?.subject_accent || null}
-      className={`reader-container animate-fade-in ${isEmbedded ? 'reader-container-embedded' : ''}`}
+      className={`reader-container animate-fade-in ${isEmbedded ? 'reader-container-embedded' : ''} ${isPaged ? 'reader-container-paged' : ''}`}
     >
-      <div className="reader-body-root" ref={readerRootRef}>
-      <div className="reader-nav">
+      <div className="reader-body-root" ref={readerRootRef} style={isPaged ? { paddingBottom: 0, paddingTop: 0 } : { paddingTop: 0 }}>
+      <div className={`reader-nav ${isPaged ? 'reader-nav-paged' : ''}`}>
         <div className="nav-inner">
           <div className="nav-left-group">
             <button
               type="button"
               onClick={handleBack}
               className="back-link"
-              style={{
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                padding: 0,
-                font: 'inherit',
-                color: 'inherit',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-              }}
+              aria-label="Back to overview"
             >
-              <ArrowLeft size={18} /> Back
+              <ArrowLeft size={16} />
+              <span>Back</span>
             </button>
-            {chapters && chapters.length > 1 && (
-              <span className="nav-chapter-counter">Chapter {activeChapterIndex + 1} of {chapters.length}</span>
-            )}
+            <div className="nav-title-group">
+              <span className="nav-book-title" title={cleanContentTitle(resource?.title, resource?.exam_name)}>
+                {cleanContentTitle(resource?.title, resource?.exam_name)}
+              </span>
+              {chapters && chapters.length > 1 && (
+                <span className="nav-chapter-badge">Chapter {activeChapterIndex + 1} of {chapters.length}</span>
+              )}
+            </div>
           </div>
           <div className="nav-actions">
+            <button
+              type="button"
+              onClick={() => {
+                if (ttsOpen && ttsState === 'playing') {
+                  ttsControllerRef.current?.pause();
+                } else if (ttsOpen && ttsState === 'paused') {
+                  ttsControllerRef.current?.play();
+                } else {
+                  setTtsOpen(true);
+                  ttsControllerRef.current?.play();
+                }
+              }}
+              className={`nav-listen-btn ${ttsState === 'playing' ? 'active' : ''}`}
+              title={ttsState === 'playing' ? 'Pause narration' : 'Listen to chapter (Natural Text-to-Speech)'}
+              aria-label="Listen to chapter"
+            >
+              <Headphones size={15} />
+              <span>{ttsState === 'playing' ? 'Listening' : 'Listen'}</span>
+            </button>
             <ThemeSwitcher />
             <FontSizeControl />
             <div className="reader-mode-toggle">
-              <button type="button" className={`reader-mode-btn ${readerMode === 'scroll' ? 'active' : ''}`} title="Scroll view">
-                <ScrollText size={14} /> Scroll
+              <button type="button" onClick={() => setReaderMode('scroll')} className={`reader-mode-btn ${readerMode === 'scroll' ? 'active' : ''}`} title="Continuous scroll">
+                <ScrollText size={14} /> <span>Scroll</span>
               </button>
-              <button type="button" className="reader-mode-btn" disabled title="3D Flipbook — coming soon">
-                <BookText size={14} /> Flipbook
+              <button type="button" onClick={() => setReaderMode('normal')} className={`reader-mode-btn ${readerMode === 'normal' ? 'active' : ''}`} title="Page by page (PDF style)">
+                <FileText size={14} /> <span>Normal</span>
+              </button>
+              <button type="button" onClick={() => setReaderMode('book')} className={`reader-mode-btn ${readerMode === 'book' ? 'active' : ''}`} title="Traditional book with page-turn animation">
+                <BookText size={14} /> <span>Traditional</span>
               </button>
             </div>
-            <button onClick={() => window.print()} className="nav-icon-btn" title="Print" aria-label="Print"><Printer size={18} /></button>
-            <button className="nav-icon-btn" title="Share" aria-label="Share"><Share2 size={18} /></button>
+            <div className="nav-action-separator" />
+            <button onClick={() => window.print()} className="nav-icon-btn" title="Print" aria-label="Print"><Printer size={16} /></button>
+            <button className="nav-icon-btn" title="Share" aria-label="Share"><Share2 size={16} /></button>
             <button onClick={toggleFullscreen} className="nav-icon-btn" title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'} aria-label={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}>
-              {isFullscreen ? <Minimize size={18} /> : <Maximize size={18} />}
+              {isFullscreen ? <Minimize size={16} /> : <Maximize size={16} />}
             </button>
           </div>
         </div>
       </div>
 
-      {isBlocksFormat ? (
+      {isPaged ? (
+        <div className="reader-paged-wrap">
+          {!access.allowed ? lockedOverlay : !activeChapter?.loaded ? (
+            <div style={{ display: 'flex', justifyContent: 'center', padding: '4rem' }}>
+              <RefreshCw className="animate-spin" size={28} color="var(--ios-olive)" />
+            </div>
+          ) : (
+            <PaginatedReader
+              key={`${readerMode}-${activeChapterIndex}`}
+              mode={readerMode}
+              items={pagedItems}
+              bookTitle={cleanContentTitle(resource.title, resource.exam_name)}
+              chapterIndex={activeChapterIndex}
+              chapterCount={chapters?.length || 1}
+              chapterTitle={activeChapter?.title}
+              chapters={chapters}
+              onChapterSelect={(i) => { setPagedInitial(0); setActiveChapterIndex(i); }}
+              initialPage={pagedInitialPage}
+              onPageChange={handlePageChange}
+              onChapterStep={stepChapter}
+              soundOn={soundOn}
+              onSoundChange={(v) => { setSoundOn(v); lsSet(LS_SOUND, v ? '1' : '0'); }}
+              speed={flipSpeed}
+              onSpeedChange={(v) => { setFlipSpeed(v); lsSet(LS_SPEED, v); }}
+              activeBlockId={activeBlockId}
+            />
+          )}
+        </div>
+      ) : isBlocksFormat ? (
         <div className="bk-reader-layout" style={{ minHeight: 'auto' }}>
           <aside className="bk-sidebar" style={{ position: 'sticky', top: '80px', height: 'calc(100vh - 80px)', maxHeight: 'calc(100vh - 80px)', overflowY: 'auto', alignSelf: 'flex-start' }}>
             <div className="bk-sidebar-header">
@@ -488,7 +660,13 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
                 <>
                   <ChapterHeader title={activeChapter?.title} order={activeChapterIndex + 1} />
                   <div className="bk-blocks-container">
-                    {(activeBlocks || []).map((block) => <BlockRenderer key={block.id} block={block} />)}
+                    {(activeBlocks || []).map((block) => (
+                      <BlockRenderer
+                        key={block.id}
+                        block={block}
+                        isActive={activeBlockId === block.id}
+                      />
+                    ))}
                   </div>
 
                   <nav className="bk-pagination">
@@ -626,21 +804,52 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         </div>
       )}
 
+      {/* Natural Audio Reader Dock */}
+      <ReaderTTSBar
+        controller={ttsControllerRef.current}
+        isOpen={ttsOpen}
+        onClose={() => {
+          setTtsOpen(false);
+          setActiveBlockId(null);
+        }}
+        onBlockChange={(blockId) => {
+          setActiveBlockId(blockId);
+          if (readerMode === 'scroll') {
+            const el = document.querySelector(`[data-block-id="${blockId}"]`);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }}
+      />
+
       <style dangerouslySetInnerHTML={{ __html: `
         .reader-container {
           min-height: 100vh;
           background: var(--reader-background, #f8fafc);
         }
-        .reader-body-root { padding-bottom: 5rem; padding-top: 80px; }
+        .reader-container.reader-container-paged {
+          background: #18100a;
+        }
+        .reader-body-root {
+          padding-bottom: 5rem;
+          padding-top: 0;
+        }
+        .reader-paged-wrap { width: 100%; }
+
+        /* Standard Reader Nav */
         .reader-nav {
-          background: var(--reader-surface, white);
-          border-bottom: 1px solid var(--reader-border, rgba(0,0,0,0.05));
-          padding: 1rem 0;
-          margin-bottom: 3rem;
-          font-family: var(--reader-ui-font, 'Inter', sans-serif);
+          background: var(--reader-surface, rgba(255, 255, 255, 0.94));
+          border-bottom: 1px solid var(--reader-border, rgba(0, 0, 0, 0.08));
+          padding: 0.65rem 0;
+          font-family: var(--reader-ui-font, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+          position: sticky;
+          top: 0;
+          z-index: 50;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          transition: background 0.25s ease, border-color 0.25s ease;
         }
         .nav-inner {
-          max-width: var(--reader-content-width, 1000px);
+          max-width: 1400px;
           margin: 0 auto;
           display: flex;
           justify-content: space-between;
@@ -649,45 +858,261 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
           flex-wrap: wrap;
           gap: 0.75rem;
         }
-        .nav-left-group { display: flex; align-items: center; gap: 1rem; }
-        .nav-chapter-counter {
-          font-size: 0.82rem; font-weight: 600; color: var(--reader-text-muted, #94a3b8);
-          padding-left: 1rem; border-left: 1px solid var(--reader-border, #e2e8f0);
-        }
-        .back-link {
+        .nav-left-group {
           display: flex;
           align-items: center;
-          gap: 0.5rem;
+          gap: 0.85rem;
+          flex-shrink: 0;
+        }
+        .nav-title-group {
+          display: flex;
+          align-items: center;
+          gap: 0.65rem;
+        }
+        .nav-book-title {
+          font-weight: 700;
+          font-size: 0.95rem;
+          color: var(--reader-text-main, #1e293b);
+          max-width: 280px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .nav-chapter-badge {
+          font-size: 0.72rem;
+          font-weight: 700;
+          padding: 0.2rem 0.65rem;
+          border-radius: 9999px;
+          background: var(--reader-surface-alt, #f1f5f9);
           color: var(--reader-text-muted, #64748b);
-          text-decoration: none;
+          letter-spacing: 0.03em;
+        }
+        .back-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          color: var(--reader-text-muted, #64748b);
+          background: var(--reader-surface-alt, #f1f5f9);
+          border: 1px solid var(--reader-border, #e2e8f0);
+          border-radius: 9999px;
+          padding: 0.42rem 0.9rem;
           font-weight: 600;
-          font-size: 0.9rem;
-          transition: color 0.2s;
-        }
-        .back-link:hover { color: var(--reader-primary, var(--ios-olive)); }
-        .nav-actions { display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; }
-        .nav-icon-btn {
-          background: none;
-          border: none;
-          color: var(--reader-text-muted, #94a3b8);
+          font-size: 0.84rem;
           cursor: pointer;
-          padding: 0.5rem;
-          border-radius: var(--reader-radius-sm, 8px);
-          transition: all 0.2s;
-          font-size: 0.8rem;
-          font-weight: 800;
-          font-family: inherit;
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .nav-icon-btn:hover:not(:disabled) { background: var(--reader-surface-alt, #f1f5f9); color: var(--reader-primary, var(--ios-olive)); }
-        .nav-icon-btn:disabled { opacity: 0.4; cursor: default; }
-        .reader-fontsize-group { display: flex; gap: 0.15rem; align-items: center; border: 1px solid var(--reader-border, #e2e8f0); border-radius: var(--reader-radius-sm, 8px); padding: 0.1rem; }
-        .reader-mode-toggle { display: flex; border: 1px solid var(--reader-border, #e2e8f0); border-radius: var(--reader-radius-sm, 8px); overflow: hidden; }
+        .back-link:hover {
+          color: var(--reader-primary, #0f766e);
+          border-color: var(--reader-primary, #0f766e);
+          transform: translateX(-2px);
+        }
+        .nav-actions {
+          display: flex;
+          gap: 0.45rem;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .nav-action-separator {
+          width: 1px;
+          height: 20px;
+          background: var(--reader-border, #e2e8f0);
+          margin: 0 0.15rem;
+        }
+        .nav-icon-btn {
+          background: var(--reader-surface-alt, #f1f5f9);
+          border: 1px solid var(--reader-border, #e2e8f0);
+          color: var(--reader-text-muted, #64748b);
+          cursor: pointer;
+          padding: 0.45rem 0.55rem;
+          border-radius: 8px;
+          transition: all 0.2s ease;
+          font-size: 0.82rem;
+          font-weight: 700;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .nav-icon-btn:hover:not(:disabled) {
+          background: var(--reader-surface, #ffffff);
+          color: var(--reader-primary, #0f766e);
+          border-color: var(--reader-primary, #0f766e);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        }
+        .nav-icon-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+        .reader-fontsize-group {
+          display: inline-flex;
+          gap: 2px;
+          background: var(--reader-surface-alt, #f1f5f9);
+          border: 1px solid var(--reader-border, #e2e8f0);
+          border-radius: 8px;
+          padding: 2px;
+        }
+        .reader-fontsize-group .nav-icon-btn {
+          border: none;
+          background: transparent;
+          padding: 0.32rem 0.55rem;
+          font-size: 0.78rem;
+        }
+        .reader-fontsize-group .nav-icon-btn:hover:not(:disabled) {
+          background: var(--reader-surface, #ffffff);
+          color: var(--reader-primary, #0f766e);
+          border-radius: 6px;
+        }
+        .reader-mode-toggle {
+          display: inline-flex;
+          background: var(--reader-surface-alt, #f1f5f9);
+          border: 1px solid var(--reader-border, #e2e8f0);
+          border-radius: 9999px;
+          padding: 3px;
+          gap: 2px;
+        }
         .reader-mode-btn {
-          display: flex; align-items: center; gap: 0.35rem; background: none; border: none; padding: 0.5rem 0.75rem;
-          font-size: 0.78rem; font-weight: 700; color: var(--reader-text-muted, #94a3b8); cursor: pointer; font-family: inherit;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          background: transparent;
+          border: none;
+          padding: 0.38rem 0.75rem;
+          border-radius: 9999px;
+          font-size: 0.78rem;
+          font-weight: 600;
+          color: var(--reader-text-muted, #64748b);
+          cursor: pointer;
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .reader-mode-btn.active { background: var(--reader-primary-soft, rgba(75,107,50,0.1)); color: var(--reader-primary, var(--ios-olive)); }
-        .reader-mode-btn:disabled { opacity: 0.4; cursor: default; }
+        .reader-mode-btn:hover:not(.active) {
+          color: var(--reader-text-main, #1e293b);
+        }
+        .reader-mode-btn.active {
+          background: #064e3b;
+          color: #ffffff;
+          box-shadow: 0 2px 8px rgba(6, 78, 59, 0.25);
+          font-weight: 700;
+        }
+
+        /* ── Special Paged/Traditional Mode Dark Frosted-Glass Theme ── */
+        .reader-nav.reader-nav-paged {
+          background: rgba(22, 14, 9, 0.88);
+          backdrop-filter: blur(24px) saturate(160%);
+          -webkit-backdrop-filter: blur(24px) saturate(160%);
+          border-bottom: 1px solid rgba(212, 165, 87, 0.16);
+          box-shadow: 0 4px 28px rgba(0, 0, 0, 0.45);
+          padding: 0.55rem 0;
+          margin-bottom: 0;
+        }
+        .reader-nav-paged .nav-book-title {
+          font-family: 'Playfair Display', 'Cinzel', Georgia, serif;
+          font-size: 0.98rem;
+          letter-spacing: 0.02em;
+          color: #f7eedd;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .reader-nav-paged .nav-chapter-badge {
+          background: rgba(212, 165, 87, 0.16);
+          border: 1px solid rgba(212, 165, 87, 0.32);
+          color: #e8ca92;
+          font-family: 'Inter', sans-serif;
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          padding: 0.22rem 0.65rem;
+        }
+        .reader-nav-paged .back-link {
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          color: #f1ede4;
+        }
+        .reader-nav-paged .back-link:hover {
+          background: rgba(255, 255, 255, 0.16);
+          border-color: rgba(212, 165, 87, 0.45);
+          color: #ffffff;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .reader-nav-paged .rts-trigger {
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          color: #f5eedc;
+          border-radius: 8px;
+          padding: 0.4rem 0.8rem;
+          font-size: 0.82rem;
+          font-weight: 600;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+          transition: all 0.2s ease;
+        }
+        .reader-nav-paged .rts-trigger:hover {
+          background: rgba(255, 255, 255, 0.14);
+          border-color: rgba(212, 165, 87, 0.55);
+          color: #ffffff;
+        }
+        .reader-nav-paged .rts-panel {
+          background: #1e140d;
+          border: 1px solid rgba(212, 165, 87, 0.28);
+          box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.06);
+          color: #f5eedc;
+        }
+        .reader-nav-paged .rts-panel-heading {
+          color: #d4a557;
+          letter-spacing: 0.08em;
+        }
+        .reader-nav-paged .rts-theme-row:hover {
+          background: rgba(255, 255, 255, 0.08);
+        }
+        .reader-nav-paged .rts-theme-row.active {
+          background: rgba(212, 165, 87, 0.15);
+          border-color: rgba(212, 165, 87, 0.45);
+        }
+        .reader-nav-paged .rts-theme-name {
+          color: #f5eedc;
+        }
+        .reader-nav-paged .rts-theme-desc {
+          color: #b5a999;
+        }
+        .reader-nav-paged .rts-radio.checked {
+          background: #10b981;
+          border-color: #10b981;
+        }
+        .reader-nav-paged .reader-fontsize-group {
+          background: rgba(0, 0, 0, 0.35);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .reader-nav-paged .reader-fontsize-group .nav-icon-btn {
+          color: #d8cfc4;
+        }
+        .reader-nav-paged .reader-fontsize-group .nav-icon-btn:hover:not(:disabled) {
+          background: rgba(255, 255, 255, 0.12);
+          color: #ffffff;
+        }
+        .reader-nav-paged .reader-mode-toggle {
+          background: rgba(0, 0, 0, 0.4);
+          border: 1px solid rgba(255, 255, 255, 0.14);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+        .reader-nav-paged .reader-mode-btn {
+          color: #c4b9ac;
+        }
+        .reader-nav-paged .reader-mode-btn:hover:not(.active) {
+          color: #ffffff;
+          background: rgba(255, 255, 255, 0.07);
+        }
+        .reader-nav-paged .reader-mode-btn.active {
+          background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+          color: #ffffff;
+          box-shadow: 0 2px 12px rgba(16, 185, 129, 0.4);
+        }
+        .reader-nav-paged .nav-action-separator {
+          background: rgba(255, 255, 255, 0.12);
+        }
+        .reader-nav-paged .nav-icon-btn {
+          background: rgba(255, 255, 255, 0.07);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          color: #d8cfc4;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .reader-nav-paged .nav-icon-btn:hover:not(:disabled) {
+          background: rgba(255, 255, 255, 0.15);
+          color: #ffffff;
+          border-color: rgba(212, 165, 87, 0.45);
+        }
 
         .reader-main {
           max-width: var(--reader-content-width, 1000px);

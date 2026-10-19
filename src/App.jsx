@@ -225,7 +225,7 @@ function App() {
         {/* Full-screen reader — no global Header/Footer/BottomNav chrome,
             so its own nav bar (Back / Scroll / Flipbook toggle) is the
             only bar on the page. */}
-        <Route path="/reader/:id" element={<AuthGuard><SecureReader /></AuthGuard>} />
+        <Route path="/reader/:id" element={<AuthGuard skipProfilingCheck><SecureReader /></AuthGuard>} />
         <Route path="/dev-reader" element={<DevReader />} />
         <Route path="/dev-quiz-preview" element={<QuizPreview />} />
         <Route path="/profiling-tester" element={<ProfilingTester />} />

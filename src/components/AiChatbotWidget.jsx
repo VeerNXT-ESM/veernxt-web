@@ -1058,7 +1058,12 @@ function synthesizeIntelligentResponse(query, profile) {
   // guidance) -- it's mounted globally in App.jsx so it's available on
   // every candidate route without threading it through each page, but that
   // means it also renders on /admin/* unless explicitly excluded here.
-  if (location.pathname.startsWith('/admin')) return null;
+  if (
+    location.pathname.startsWith('/admin') ||
+    location.pathname.startsWith('/reader') ||
+    location.pathname.startsWith('/pyq-reader') ||
+    location.pathname.startsWith('/dev-reader')
+  ) return null;
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useSearchParams, useNavigate, Link } from 'react-router-dom';
 import {
   BookOpen,
@@ -10,6 +10,7 @@ import {
   Users,
   Star,
   Award,
+  ChevronLeft,
   ChevronRight,
   ChevronDown,
   ArrowRight,
@@ -34,6 +35,7 @@ import { supabase } from '../lib/supabase';
 import '../components/book/Book3D.css';
 import { resolveSubjectForTitle, getFamilyHex } from '../lib/thumbnailTaxonomy';
 import { useThumbnails } from '../lib/thumbnailStore';
+import { getBookCoverUrl } from '../lib/bookCatalogCovers';
 import './StudyMaterialsPage.css';
 
 // ══════════════════════════════════════════════════════════════════════════
@@ -224,6 +226,32 @@ export default function StudyMaterialsPage() {
 
   // Modal states
   const [activeDetailsBook, setActiveDetailsBook] = useState(null);
+  const [isCompareOpen, setIsCompareOpen] = useState(false);
+
+  // Horizontal Scroll for Books Section
+  const booksScrollRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScroll = () => {
+    if (booksScrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = booksScrollRef.current;
+      setCanScrollLeft(scrollLeft > 10);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  const scrollBooks = (direction) => {
+    if (booksScrollRef.current) {
+      const card = booksScrollRef.current.firstElementChild;
+      const scrollAmount = card ? card.offsetWidth + 22 : 540;
+      booksScrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+      setTimeout(checkScroll, 350);
+    }
+  };
 
   // Category Exams & Selection
   const [categoryExams, setCategoryExams] = useState([]);
@@ -375,7 +403,7 @@ export default function StudyMaterialsPage() {
   const booksWithCombinations = useMemo(() => {
     return CATALOG_BOOKS.map((book, idx) => {
       const combo = getRandomCombination(idx); // ensures 5 distinct combinations across cards
-      const formattedTitle = `${currentExamFullName} ${book.titleSuffix} ${isGuide ? 'Guidebook' : 'Préci'} 2026`;
+      const formattedTitle = `${currentExamShortName} ${book.titleSuffix} ${isGuide ? 'Guidebook' : 'Préci'} 2026`;
       const matchedResId = examResources[book.slug];
       return {
         ...book,
@@ -385,7 +413,13 @@ export default function StudyMaterialsPage() {
         combo,
       };
     });
-  }, [currentExamFullName, isGuide, examResources]);
+  }, [currentExamShortName, isGuide, examResources]);
+
+  useEffect(() => {
+    checkScroll();
+    window.addEventListener('resize', checkScroll);
+    return () => window.removeEventListener('resize', checkScroll);
+  }, [booksWithCombinations]);
 
   return (
     <div className="smp-page-wrapper">
@@ -594,15 +628,84 @@ export default function StudyMaterialsPage() {
                   </p>
                 </div>
               </div>
+
+              <div className="smp-section-head-right">
+                <button
+                  type="button"
+                  className="smp-compare-books-btn"
+                  onClick={() => setIsCompareOpen(true)}
+                  title="Compare features of all books"
+                >
+                  <Scale size={16} />
+                  <span>Compare Books</span>
+                </button>
+
+                <div className="smp-scroll-nav-group">
+                  <button
+                    type="button"
+                    className={`smp-scroll-nav-btn ${!canScrollLeft ? 'disabled' : ''}`}
+                    onClick={() => scrollBooks('left')}
+                    disabled={!canScrollLeft}
+                    aria-label="Previous books"
+                    title="Previous books"
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+                  <button
+                    type="button"
+                    className={`smp-scroll-nav-btn ${!canScrollRight ? 'disabled' : ''}`}
+                    onClick={() => scrollBooks('right')}
+                    disabled={!canScrollRight}
+                    aria-label="Next books"
+                    title="Next books"
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
+              </div>
             </div>
 
-            {/* Books Grid */}
-            <div className="smp-books-grid">
-              {booksWithCombinations.map((book) => {
+            {/* Horizontally Scrollable Books Track */}
+            <div className="smp-books-scroll-wrap">
+              <div
+                className="smp-books-scroll-track"
+                ref={booksScrollRef}
+                onScroll={checkScroll}
+              >
+                {booksWithCombinations.map((book) => {
                 const { combo } = book;
                 const subject = resolveSubjectForTitle(book.displayTitle, isGuide ? 'Guide' : 'Precis');
                 const bg = getFamilyHex(subject.family);
-                const image = subjectUrl(subject.key) || book.thumbnail;
+                const examStateName = selectedExam?.name || examNameParam || categoryParam || '';
+                const examStateCover =
+                  (book.slug === 'gk-gs' || book.slug === 'gs-gk') && examStateName
+                    ? getBookCoverUrl(examStateName)
+                    : null;
+                const customCover =
+                  examStateCover ||
+                  getBookCoverUrl(book.slug) ||
+                  getBookCoverUrl(book.displayTitle) ||
+                  (selectedExam?.name ? getBookCoverUrl(selectedExam.name) : null);
+                const image = customCover || subjectUrl(subject.key) || book.thumbnail;
+                const hasCustomCover = !!customCover;
+
+                const stateMatch = examStateName.match(
+                  /(Rajasthan|Madhya Pradesh|Maharashtra|Gujarat|Haryana|Himachal|Punjab|Odisha|West Bengal|Uttar Pradesh|Bihar|Jharkhand|Chhattisgarh|Assam|Karnataka|Kerala|Tamil Nadu|Andhra|Telangana|Arunachal|Delhi|Jammu|Ladakh|Uttarakhand|Goa)/i
+                );
+                let spineTitle = 'GUIDEBOOK';
+                if (book.slug === 'gk-gs' || book.slug === 'gs-gk') {
+                  spineTitle = stateMatch ? `${stateMatch[1].toUpperCase()} GS` : 'GENERAL STUDIES & GK';
+                } else if (book.slug === 'english') {
+                  spineTitle = 'ENGLISH LANGUAGE';
+                } else if (book.slug === 'mathematics' || book.slug === 'quant') {
+                  spineTitle = 'MATHEMATICS & QUANT';
+                } else if (book.slug === 'reasoning') {
+                  spineTitle = 'REASONING';
+                } else if (book.titleSuffix) {
+                  spineTitle = book.titleSuffix.toUpperCase();
+                } else if (subject.label) {
+                  spineTitle = subject.label.toUpperCase();
+                }
 
                 return (
                   <div key={book.id} className="smp-book-card">
@@ -616,16 +719,24 @@ export default function StudyMaterialsPage() {
                     <div className="smp-book-card-body">
                       {/* Left: Original 3D Book Cover from VeerNext Design System */}
                       <div className="smp-book-cover-wrap">
-                        <div className="vn-book-3d-scene" style={{ padding: 0, width: '136px' }}>
+                        <div className="vn-book-3d-scene" style={{ padding: '0 8px 0 50px', width: '298px' }}>
                           <div className="vn-book-3d-item">
-                            {/* Rear hardcover base */}
-                            <div className="vn-book-3d-back" style={{ background: bg || '#042f28' }} />
+                            {/* Rear hardcover base (Consistent brand dark green) */}
+                            <div className="vn-book-3d-back" style={{ background: '#032e23' }} />
 
-                            {/* Left extruded spine */}
-                            <div className="vn-book-3d-spine" style={{ background: bg || '#042f28' }}>
-                              <div className="vn-book-spine-gold-ring" />
-                              <span className="vn-book-3d-spine-text">{book.titleSuffix || subject.label}</span>
-                              <div className="vn-book-spine-gold-ring" />
+                            {/* Left extruded spine (Consistent brand green with official logo & authentic typography) */}
+                            <div className="vn-book-3d-spine">
+                              <div className="vn-book-spine-crest">
+                                <img src="/logo.png" alt="VeerNXT" className="vn-spine-logo-img" />
+                              </div>
+                              <div className="vn-book-3d-spine-text-wrap">
+                                <span className="vn-book-3d-spine-title">{spineTitle}</span>
+                                <span className="vn-book-3d-spine-sub">COMPLETE GUIDE</span>
+                              </div>
+                              <div className="vn-book-spine-brand">
+                                <span className="vn-spine-vn-logo">❖</span>
+                                <span className="vn-spine-vn-text">VeerNXT</span>
+                              </div>
                               <div className="vn-book-3d-spine-light" />
                             </div>
 
@@ -639,9 +750,14 @@ export default function StudyMaterialsPage() {
                             <div
                               className="vn-book-3d-front"
                               style={{
-                                backgroundImage: image
+                                backgroundImage: hasCustomCover
+                                  ? `url("${image}")`
+                                  : image
                                   ? `linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.85) 100%), url("${image}")`
                                   : `linear-gradient(160deg, ${bg || '#065f46'} 0%, #042f28 100%)`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center top',
+                                padding: hasCustomCover ? 0 : '10px 10px 10px 18px',
                               }}
                             >
                               {/* Hardcover hinge crease line */}
@@ -650,28 +766,32 @@ export default function StudyMaterialsPage() {
                               {/* Glossy light reflection sheen */}
                               <div className="vn-book-3d-sheen" />
 
-                              {/* Top header: VeerNXT emblem + Lock Pill */}
-                              <div className="vn-book-cover-header">
-                                <div className="vn-book-cover-crest-badge">
-                                  <Shield size={10} style={{ color: '#b45309' }} />
-                                  <span className="vn-book-cover-crest-text">VEERNXT</span>
-                                </div>
-                                <div className="vn-book-lock-pill unlocked">
-                                  <Unlock size={11} color="white" />
-                                </div>
-                              </div>
+                              {!hasCustomCover && (
+                                <>
+                                  {/* Top header: VeerNXT emblem + Lock Pill */}
+                                  <div className="vn-book-cover-header">
+                                    <div className="vn-book-cover-crest-badge">
+                                      <Shield size={10} style={{ color: '#b45309' }} />
+                                      <span className="vn-book-cover-crest-text">VEERNXT</span>
+                                    </div>
+                                    <div className="vn-book-lock-pill unlocked">
+                                      <Unlock size={11} color="white" />
+                                    </div>
+                                  </div>
 
-                              {/* Center Cover Typography Banner */}
-                              <div className="vn-book-cover-center-banner">
-                                <span className="vn-book-cover-exam-tag">{currentExamShortName}</span>
-                                <h4 className="vn-book-cover-main-title">{book.shortCoverTitle || book.displayTitle}</h4>
-                                <span className="vn-book-cover-sub-bar">{subject.label || (isGuide ? 'COMPLETE GUIDE' : 'PRECIS')}</span>
-                              </div>
+                                  {/* Center Cover Typography Banner */}
+                                  <div className="vn-book-cover-center-banner">
+                                    <span className="vn-book-cover-exam-tag">{currentExamShortName}</span>
+                                    <h4 className="vn-book-cover-main-title">{book.shortCoverTitle || book.displayTitle}</h4>
+                                    <span className="vn-book-cover-sub-bar">{subject.label || (isGuide ? 'COMPLETE GUIDE' : 'PRECIS')}</span>
+                                  </div>
 
-                              {/* Bottom Category Chip */}
-                              <div className="vn-book-cover-footer">
-                                <span className="vn-book-cover-category-chip">{isGuide ? 'GUIDEBOOK' : 'PRECIS'}</span>
-                              </div>
+                                  {/* Bottom Category Chip */}
+                                  <div className="vn-book-cover-footer">
+                                    <span className="vn-book-cover-category-chip">{isGuide ? 'GUIDEBOOK' : 'PRECIS'}</span>
+                                  </div>
+                                </>
+                              )}
                             </div>
                           </div>
                           {/* Ground cast shadow */}
@@ -745,6 +865,7 @@ export default function StudyMaterialsPage() {
                   </div>
                 );
               })}
+              </div>
             </div>
           </div>
 
@@ -1011,6 +1132,87 @@ export default function StudyMaterialsPage() {
                     <span>Open Reader</span>
                     <ArrowRight size={15} />
                   </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ── Compare Books Modal ── */}
+        {isCompareOpen && (
+          <div className="smp-modal-backdrop" onClick={() => setIsCompareOpen(false)}>
+            <div className="smp-modal-box" style={{ maxWidth: '880px' }} onClick={(e) => e.stopPropagation()}>
+              <div className="smp-modal-head">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <Scale size={20} color="#064e3b" />
+                  <h3 className="smp-modal-title">Compare {currentExamShortName} {pageTypeTitle}</h3>
+                </div>
+                <button
+                  type="button"
+                  className="smp-modal-close-btn"
+                  onClick={() => setIsCompareOpen(false)}
+                >
+                  <X size={18} />
+                </button>
+              </div>
+              <div className="smp-modal-body">
+                <p style={{ fontSize: '13.5px', color: '#64748b', marginBottom: '16px' }}>
+                  Quick side-by-side comparison of syllabus focus, coverage depth, and practice material across our {currentExamShortName} series.
+                </p>
+                <div style={{ overflowX: 'auto' }}>
+                  <table className="smp-compare-table">
+                    <thead>
+                      <tr>
+                        <th style={{ width: '24%' }}>Title</th>
+                        <th style={{ width: '30%' }}>Coverage & Core Focus</th>
+                        <th style={{ width: '26%' }}>Key Features</th>
+                        <th style={{ width: '20%' }}>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {booksWithCombinations.map((b) => (
+                        <tr key={b.id}>
+                          <td>
+                            <div style={{ fontWeight: 800, color: '#0f172a', fontSize: '13.5px' }}>{b.displayTitle}</div>
+                            {b.isBestSeller && (
+                              <span style={{ fontSize: '10px', color: '#92400e', background: '#fef3c7', padding: '1px 6px', borderRadius: '4px', fontWeight: 800, display: 'inline-block', marginTop: '4px' }}>
+                                ★ Best Seller
+                              </span>
+                            )}
+                          </td>
+                          <td style={{ fontSize: '13px', color: '#475569', lineHeight: 1.5 }}>
+                            {b.combo.description}
+                          </td>
+                          <td>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+                              {b.combo.stats.map((st, i) => (
+                                <span key={i} style={{ fontSize: '10.5px', background: '#f1f5f9', padding: '2.5px 6px', borderRadius: '4px', fontWeight: 700, color: '#334155' }}>
+                                  {st.label}
+                                </span>
+                              ))}
+                            </div>
+                          </td>
+                          <td>
+                            <Link
+                              to={`/reader/${b.resourceId || b.slug || 'sample'}`}
+                              className="smp-btn-explore"
+                              style={{
+                                background: b.combo.accentColor || '#064e3b',
+                                borderColor: b.combo.accentColor || '#064e3b',
+                                padding: '7px 12px',
+                                fontSize: '12px',
+                                display: 'inline-flex',
+                                width: '100%',
+                              }}
+                            >
+                              <span>Read Sample</span>
+                              <ArrowRight size={13} />
+                            </Link>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

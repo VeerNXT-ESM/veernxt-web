@@ -1,0 +1,989 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
+
+/* ── Reading Desk Background ── */
+.pr-desk {
+  width: 100%;
+  min-height: calc(100vh - 75px);
+  padding: 1.25rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Traditional hardcover library atmosphere */
+.pr-mode-book {
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(255, 230, 185, 0.12) 0%, transparent 65%),
+    repeating-linear-gradient(92deg, rgba(0, 0, 0, 0.04) 0 2px, transparent 2px 10px),
+    linear-gradient(180deg, #2c1e14 0%, #1c120a 100%);
+}
+
+/* Clean, modern slate desk for Normal PDF mode */
+.pr-mode-normal {
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(255, 255, 255, 0.08) 0%, transparent 70%),
+    linear-gradient(180deg, #374151 0%, #1f2937 100%);
+}
+
+/* Hidden measurer container */
+.pr-measure-clip {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+}
+.pr-measurer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.pr-item {
+  display: flow-root;
+  padding-bottom: 8px;
+}
+.pr-fit {
+  overflow: hidden;
+}
+
+.pr-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+  perspective: 2600px;
+}
+
+/* ── Navigation Chevrons ── */
+.pr-arrow {
+  flex: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 245, 225, 0.22);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  color: #f7ecd8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s, box-shadow 0.2s, opacity 0.2s;
+  z-index: 10;
+}
+.pr-arrow:hover:not(:disabled) {
+  transform: scale(1.12);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.45);
+}
+.pr-arrow:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+/* ── Traditional Hardcover Casing & Stacked Paper Edges ── */
+.pr-cover {
+  position: relative;
+  border-radius: 9px 12px 12px 9px;
+  background:
+    radial-gradient(ellipse at 35% 25%, rgba(255, 210, 150, 0.2), transparent 55%),
+    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0 1px, transparent 1px 4px),
+    linear-gradient(145deg, #5c2014 0%, #3e1208 55%, #250904 100%);
+  box-shadow:
+    0 34px 60px rgba(0, 0, 0, 0.65),
+    0 12px 24px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1.5px rgba(240, 205, 130, 0.4),
+    inset 0 0 24px rgba(0, 0, 0, 0.6);
+}
+
+/* The book block showing 3D stacked pages on edges */
+.pr-block {
+  position: relative;
+  background: #fbf6ea;
+  box-shadow:
+    1px 0 0 #dfd4b8,
+    2px 1px 0 #cfc3a5,
+    3px 2px 0 #ebd8bc,
+    4px 3px 0 #c2b595,
+    5px 4px 0 #e6d3b3,
+    6px 5px 0 #baa989,
+    -1px 0 0 #dfd4b8,
+    -2px 1px 0 #cfc3a5,
+    -3px 2px 0 #ebd8bc,
+    0 0 16px rgba(0, 0, 0, 0.35);
+}
+
+.pr-flipbook {
+  margin: 0 auto;
+}
+
+/* Center book spine shadow crease */
+.pr-spine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 72px;
+  margin-left: -36px;
+  pointer-events: none;
+  z-index: 6;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(50, 32, 14, 0.08) 25%,
+    rgba(30, 18, 6, 0.45) 50%,
+    rgba(50, 32, 14, 0.08) 75%,
+    transparent 100%
+  );
+}
+
+/* ── Paper Page & Fine Typography ── */
+.pr-paper-vars {
+  --reader-text: #281d14;
+  --reader-heading: #1a1007;
+  --reader-text-muted: #72604d;
+  --reader-border: rgba(90, 68, 42, 0.22);
+  --reader-surface: #fbf7ee;
+  --reader-body-font: 'Lora', 'Merriweather', 'Baskerville', serif;
+  --reader-heading-font: 'Playfair Display', Georgia, serif;
+  --reader-dropcap-font: 'Playfair Display', Georgia, serif;
+  --reader-body-line-height: 1.48;
+  --reader-space-xs: 0.2rem;
+  --reader-space-sm: 0.25rem;
+  --reader-space-md: 0.45rem;
+  --reader-space-lg: 0.65rem;
+  --reader-space-xl: 0.85rem;
+  --reader-space-2xl: 1rem;
+  --reader-h2-size: 1.35rem;
+  --reader-h3-size: 0.9rem;
+  font-family: var(--reader-body-font);
+  color: var(--reader-text);
+  font-size: 0.95rem;
+  line-height: 1.48;
+  letter-spacing: 0.005em;
+  text-rendering: optimizeLegibility;
+}
+
+.pr-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 46px 42px 48px;
+  background-color: #fbf7ec;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32  0 0 0 0 .22  0 0 0 0 .12  0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),
+    linear-gradient(135deg, #fefbf4 0%, #f7f0df 100%);
+  box-shadow: inset 0 0 38px rgba(120, 85, 40, 0.1);
+}
+
+.pr-page-inner {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Running header at page top */
+.pr-run {
+  position: absolute;
+  top: 16px;
+  left: 42px;
+  right: 42px;
+  z-index: 2;
+  text-align: center;
+  font: italic 500 0.72rem 'Lora', Georgia, serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8c785f;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(110, 84, 52, 0.22);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pr-side-left .pr-run { text-align: left; }
+.pr-side-right .pr-run { text-align: right; }
+
+/* Page folio at page bottom */
+.pr-foot {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  color: #8c785f;
+  font: 600 0.82rem 'Lora', Georgia, serif;
+}
+.pr-orn {
+  font-size: 0.65rem;
+  opacity: 0.6;
+}
+
+/* Spine gutter lighting */
+.pr-side-left::after,
+.pr-side-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 55px;
+  pointer-events: none;
+  z-index: 3;
+}
+.pr-side-left::after {
+  right: 0;
+  background: linear-gradient(90deg, transparent, rgba(65, 42, 18, 0.18));
+}
+.pr-side-right::before {
+  left: 0;
+  background: linear-gradient(270deg, transparent, rgba(65, 42, 18, 0.2));
+}
+.pr-mode-book .pr-side-single::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  pointer-events: none;
+  z-index: 3;
+  background: linear-gradient(270deg, transparent, rgba(65, 42, 18, 0.18));
+}
+
+/* ── Book Typography Formatting Overrides ── */
+.pr-paper-vars .bk-paragraph {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  orphans: 2;
+  widows: 2;
+  margin-bottom: 0.42rem;
+  line-height: 1.48;
+}
+
+/* ── Structured Study Content: Questions, Statements & Options ── */
+.pr-paper-vars .bk-section-banner {
+  font-family: var(--reader-heading-font);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-align: center;
+  color: #1a1007;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  margin: 10px 0 8px;
+  border-top: 1.5px solid #2b1f15;
+  border-bottom: 1.5px solid #2b1f15;
+  background: rgba(140, 100, 50, 0.06);
+  border-radius: 2px;
+}
+
+.pr-paper-vars .bk-q-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.pr-paper-vars .bk-q-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 9px;
+  background: #2b1f15;
+  color: #fdf8eb;
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.pr-paper-vars .bk-q-lead {
+  font-weight: 600;
+  color: #2b1f15;
+  font-size: 0.92rem;
+}
+
+.pr-paper-vars .bk-stmt-heading,
+.pr-paper-vars .bk-conclusion-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6d4a22;
+  margin-top: 7px;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pr-paper-vars .bk-stmt-heading::after,
+.pr-paper-vars .bk-conclusion-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(120, 85, 45, 0.22);
+}
+
+.pr-paper-vars .bk-bullet-stmt {
+  position: relative;
+  padding-left: 14px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #281d14;
+  margin-bottom: 2px;
+}
+
+.pr-paper-vars .bk-bullet-stmt::before {
+  content: '•';
+  position: absolute;
+  left: 3px;
+  color: #8c785f;
+  font-size: 0.9rem;
+}
+
+.pr-paper-vars .bk-roman-stmt {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding-left: 8px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #281d14;
+  margin-bottom: 2px;
+}
+
+.pr-paper-vars .bk-roman-tag {
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: #5a3e20;
+  min-width: 18px;
+}
+
+.pr-paper-vars .bk-num-stmt {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding-left: 8px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #281d14;
+  margin-bottom: 2px;
+}
+
+.pr-paper-vars .bk-num-tag {
+  font-weight: 800;
+  font-size: 0.84rem;
+  color: #5a3e20;
+  min-width: 18px;
+}
+
+.pr-paper-vars .bk-option-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 8px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background: rgba(140, 100, 50, 0.05);
+  border-radius: 4px;
+  border-left: 2px solid rgba(140, 100, 50, 0.35);
+}
+
+.pr-paper-vars .bk-opt-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: #2b1f15;
+  color: #fdf8eb;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pr-paper-vars .bk-opt-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #1a1007;
+  font-weight: 600;
+}
+
+.pr-paper-vars .bk-explanation-row {
+  margin-top: 6px;
+  margin-bottom: 4px;
+  padding: 4px 8px;
+  background: rgba(22, 101, 52, 0.08);
+  border-left: 3px solid #166534;
+  border-radius: 2px;
+  font-size: 0.88rem;
+  color: #14532d;
+  line-height: 1.42;
+}
+
+.pr-paper-vars .bk-expl-label {
+  color: #166534;
+  margin-right: 4px;
+}
+
+.pr-paper-vars .bk-chapter-header {
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(90, 68, 42, 0.25);
+}
+.pr-paper-vars .bk-chapter-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: #8c785f;
+}
+.pr-paper-vars .bk-chapter-title {
+  font-family: var(--reader-heading-font);
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #1a1007;
+  margin-top: 0.25rem;
+}
+
+.pr-paper-vars .bk-h2 {
+  font-family: var(--reader-heading-font);
+  font-size: 1.35rem;
+  text-align: center;
+  border-bottom: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.45rem;
+  letter-spacing: 0.02em;
+  color: #1a1007;
+}
+.pr-paper-vars .bk-h2::after {
+  content: '✦  ✦  ✦';
+  display: block;
+  font-size: 0.45em;
+  letter-spacing: 0.5em;
+  margin-top: 0.5em;
+  color: #8c785f;
+  opacity: 0.8;
+  font-family: serif;
+}
+
+.pr-paper-vars .bk-h3 {
+  font-family: var(--reader-heading-font);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  margin-bottom: 0.35rem;
+  color: #2b1f15;
+}
+
+.pr-paper-vars .bk-list,
+.pr-paper-vars .bk-numbered-list {
+  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
+  padding-left: 1.2rem;
+}
+.pr-paper-vars .bk-list li,
+.pr-paper-vars .bk-numbered-list li {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0.14rem !important;
+  line-height: 1.42 !important;
+}
+
+/* Elegant marginalia-style book callouts */
+.pr-paper-vars .bk-callout {
+  margin: 0.4rem 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  background: rgba(140, 100, 50, 0.06);
+  border: 1px solid rgba(120, 85, 45, 0.22);
+  box-shadow: none !important;
+}
+.pr-paper-vars .bk-callout-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  color: #5a3e20;
+}
+.pr-paper-vars .bk-callout-content {
+  font-size: 0.9rem;
+  line-height: 1.46;
+  color: #281d14;
+}
+
+.pr-paper-vars .bk-exam-alert {
+  margin: 0.35rem 0;
+  padding: 0.55rem 0.85rem;
+  border-radius: 4px;
+}
+.pr-paper-vars .bk-exam-alert-title {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.25rem;
+}
+.pr-paper-vars .bk-exam-alert ul {
+  margin: 0;
+  padding-left: 0;
+}
+.pr-paper-vars .bk-exam-alert li {
+  margin-bottom: 0.22rem;
+  line-height: 1.42;
+  font-size: 0.88rem;
+}
+
+.pr-paper-vars .bk-pullquote {
+  margin: 0.4rem 0;
+  padding: 0.5rem 0.95rem;
+  border-left: 3px solid #8c785f;
+  background: rgba(140, 100, 50, 0.05);
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.46;
+  color: #2c1f14;
+}
+
+.pr-paper-vars .bk-table-wrapper {
+  margin: 0.5rem 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+.pr-paper-vars .bk-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.pr-paper-vars .bk-table th {
+  border-top: 2px solid #281d14;
+  border-bottom: 1px solid #281d14;
+  padding: 0.4rem 0.5rem;
+  font-family: var(--reader-heading-font);
+  font-weight: 700;
+  color: #1a1007;
+  text-align: left;
+}
+.pr-paper-vars .bk-table td {
+  border-bottom: 1px solid rgba(90, 68, 42, 0.18);
+  padding: 0.35rem 0.5rem;
+  color: #281d14;
+}
+.pr-paper-vars .bk-table tr:last-child td {
+  border-bottom: 2px solid #281d14;
+}
+
+/* Drop cap on section start */
+.pr-dropcap .bk-paragraph::first-letter {
+  font-family: var(--reader-dropcap-font);
+  float: left;
+  font-size: 3.4em;
+  line-height: 0.82;
+  padding: 0.1em 0.12em 0 0;
+  color: #5c2014;
+  font-weight: 700;
+}
+
+/* ── Normal Mode (PDF Sheet) ── */
+.pr-single {
+  position: relative;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  touch-action: pan-y;
+  border-radius: 3px;
+}
+.pr-single-anim {
+  width: 100%;
+  height: 100%;
+  animation-timing-function: cubic-bezier(0.22, 0.8, 0.3, 1);
+  animation-fill-mode: both;
+}
+.pr-slide-next { animation-name: pr-in-right; }
+.pr-slide-prev { animation-name: pr-in-left; }
+.pr-fade { animation-name: pr-fade-in; animation-duration: 120ms !important; }
+@keyframes pr-in-right { from { opacity: 0; transform: translateX(36px); } to { opacity: 1; transform: none; } }
+@keyframes pr-in-left { from { opacity: 0; transform: translateX(-36px); } to { opacity: 1; transform: none; } }
+@keyframes pr-fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+.pr-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8c785f;
+  background: #fbf7ee;
+  border-radius: 4px;
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+}
+
+/* ── Bottom Reader Controls Bar ── */
+.pr-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  width: min(940px, calc(100% - 2rem));
+  padding: 0.5rem 1.15rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  font: 600 0.8rem 'Inter', system-ui, sans-serif;
+  color: #f7eedf;
+  z-index: 10;
+}
+.pr-count, .pr-pct { white-space: nowrap; }
+.pr-pct { min-width: 2.5rem; text-align: right; opacity: 0.85; }
+.pr-chapsel, .pr-speed select {
+  border: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  max-width: 200px;
+  text-overflow: ellipsis;
+}
+.pr-chapsel option, .pr-speed option { color: #1c120a; }
+
+.pr-progress {
+  flex: 1;
+  min-width: 80px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 99px;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #f59e0b var(--pr-fill, 0%), rgba(255, 255, 255, 0.22) var(--pr-fill, 0%));
+}
+.pr-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fbbf24;
+  border: 3px solid #451a03;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+.pr-progress::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fbbf24;
+  border: 3px solid #451a03;
+}
+
+.pr-ctl {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f7eedf;
+  display: flex;
+  padding: 0.35rem;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.pr-ctl:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.pr-speed {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* ── Chapter Conclusion / End Leaf ── */
+.pr-end-leaf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.pr-end-ornament {
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+  color: #8c785f;
+  margin-bottom: 0.75rem;
+}
+
+.pr-end-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #5a3e20;
+  margin: 0 0 0.4rem;
+}
+
+.pr-end-chap-name {
+  font-family: var(--reader-heading-font);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1007;
+  margin: 0 0 1.5rem;
+  max-width: 380px;
+  line-height: 1.35;
+}
+
+.pr-end-next-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: rgba(140, 100, 50, 0.08);
+  border: 1px solid rgba(120, 85, 45, 0.25);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+}
+
+.pr-end-next-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: #8c785f;
+  margin-bottom: 0.35rem;
+}
+
+.pr-end-next-title {
+  font-family: var(--reader-heading-font);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #281d14;
+  margin: 0 0 1rem;
+  line-height: 1.3;
+}
+
+.pr-end-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.35rem;
+  background: linear-gradient(135deg, #451a03 0%, #290f02 100%);
+  color: #fef3c7;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 999px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.pr-end-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  border-color: rgba(245, 158, 11, 0.7);
+}
+
+.pr-end-complete-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 8px;
+  max-width: 360px;
+}
+.pr-end-badge {
+  margin-bottom: 0.6rem;
+}
+.pr-end-complete-title {
+  font-family: var(--reader-heading-font);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #14532d;
+  margin: 0 0 0.4rem;
+}
+.pr-end-complete-sub {
+  font-size: 0.88rem;
+  color: #166534;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pr-end-summary-pane,
+.pr-end-action-pane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+}
+
+.pr-end-stats-card {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.25rem 0;
+  padding: 0.85rem 1.4rem;
+  background: rgba(140, 100, 50, 0.08);
+  border: 1px dashed rgba(120, 85, 45, 0.35);
+  border-radius: 8px;
+}
+
+.pr-end-stat-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pr-end-stat-lbl {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #785a38;
+}
+
+.pr-end-stat-val {
+  font-family: var(--reader-heading-font);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #281d14;
+}
+
+.pr-end-subtext {
+  font-size: 0.86rem;
+  color: #665038;
+  max-width: 320px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pr-end-hint {
+  font-size: 0.72rem;
+  color: #8c785f;
+  margin-top: 0.65rem;
+  font-style: italic;
+}
+
+/* ── Next Chapter Transition Leaf ── */
+.pr-next-chap-leaf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.pr-next-chap-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 360px;
+}
+
+.pr-next-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+  color: #926638;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.pr-next-head {
+  font-family: var(--reader-heading-font);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a1007;
+  margin: 0 0 0.5rem;
+}
+
+.pr-next-subhead {
+  font-family: var(--reader-body-font);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #4a3824;
+  margin: 0 0 1.75rem;
+  line-height: 1.4;
+}
+
+.pr-next-loading-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(140, 100, 50, 0.1);
+  border: 1px solid rgba(120, 85, 45, 0.25);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: #5a3e20;
+  font-weight: 600;
+}
+
+.pr-sparkle-anim {
+  animation: pr-spin 2s linear infinite;
+  color: #b45309;
+}
+
+@keyframes pr-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ── Smooth Chapter Transition ── */
+.pr-stage-transitioning {
+  pointer-events: none;
+  animation: pr-stage-fade-curl 0.4s cubic-bezier(0.22, 0.8, 0.3, 1) forwards;
+}
+@keyframes pr-stage-fade-curl {
+  0% { transform: scale(1) rotateY(0deg); opacity: 1; }
+  50% { transform: scale(0.97) rotateY(-4deg); opacity: 0.85; }
+  100% { transform: scale(1) rotateY(0deg); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .pr-arrow { display: none; }
+  .pr-controls { gap: 0.4rem; padding: 0.45rem 0.85rem; border-radius: 20px; }
+  .pr-page { padding: 42px 22px 42px; }
+  .pr-run { left: 22px; right: 22px; }
+}
+@media print {
+  .pr-controls, .pr-arrow { display: none; }
+}

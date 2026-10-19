@@ -2,8 +2,108 @@ import React from 'react';
 import { Info, AlertTriangle, Lightbulb, BookOpen, Star, Zap, TrendingUp } from 'lucide-react';
 import './BookBlocks.css';
 
+export function cleanParagraphContent(content) {
+  if (!content || typeof content !== 'string') return content;
+  let text = content.trim();
+
+  // Normalize all variations of <br></br>, </br>, <br/> into <br>
+  let s = text
+    .replace(/<br\s*><\/br>|<\/br>/gi, '<br>')
+    .replace(/<br\s*\/?>/gi, '<br>')
+    .replace(/^(\s*<br>\s*)+/gi, '')
+    .replace(/(\s*<br>\s*)+$/gi, '');
+
+  if (!s.includes('<br>')) {
+    return text;
+  }
+
+  // Split lines on <br>
+  const lines = s.split(/<br>/).map((l) => l.trim()).filter(Boolean);
+  if (lines.length <= 1) {
+    return text;
+  }
+
+  const out = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // Banner / Main Title like <strong>Practice Questions (Syllogism):</strong> or <strong>Solved Example:</strong>
+    if (/^<(?:strong|b)>(Practice Questions|Solved Example|Important Questions|Sample Questions)[^<]*<\/(?:strong|b)>$/i.test(line)) {
+      let title = line.replace(/<[^>]+>/g, '').trim().replace(/:\s*$/, '');
+      out.push(`<div class="bk-section-banner">${title}</div>`);
+      continue;
+    }
+
+    // Question number: Q1., Q2., Q4., Q5., etc.
+    const qMatch = line.match(/^(Q\d+)[\.:]?(.*)$/i);
+    if (qMatch) {
+      const qNum = qMatch[1];
+      const rest = qMatch[2] ? qMatch[2].trim() : '';
+      out.push(
+        `<div class="bk-q-row"><span class="bk-q-pill">${qNum}</span>${rest ? `<span class="bk-q-lead">${rest}</span>` : ''}</div>`
+      );
+      continue;
+    }
+
+    // Statements: or Statement: or Standard Statements:
+    if (/^(?:Standard\s+)?Statements?:/i.test(line)) {
+      out.push(`<div class="bk-stmt-heading">${line}</div>`);
+      continue;
+    }
+
+    // Conclusions: or Conclusion:
+    if (/^Conclusions?:/i.test(line)) {
+      out.push(`<div class="bk-conclusion-heading">${line}</div>`);
+      continue;
+    }
+
+    // Logic: or Answer:
+    if (/^(Logic|Answer):/i.test(line)) {
+      const m = line.match(/^(Logic|Answer):(.*)$/i);
+      out.push(
+        `<div class="bk-explanation-row"><strong class="bk-expl-label">${m[1]}:</strong> ${m[2].trim()}</div>`
+      );
+      continue;
+    }
+
+    // Roman numeral conclusions: I. , II. , III. , IV.
+    const romanMatch = line.match(/^((?:I|II|III|IV|V)\.)\s*(.*)$/i);
+    if (romanMatch) {
+      out.push(
+        `<div class="bk-roman-stmt"><span class="bk-roman-tag">${romanMatch[1]}</span><span class="bk-stmt-body">${romanMatch[2]}</span></div>`
+      );
+      continue;
+    }
+
+    // Multiple choice options: A., B., C., D. (with or without space, e.g. A.Only I follows)
+    const optMatch = line.match(/^([A-D])[\.\)]\s*(.*)$/i);
+    if (optMatch) {
+      out.push(
+        `<div class="bk-option-line"><span class="bk-opt-badge">${optMatch[1]}</span><span class="bk-opt-text">${optMatch[2].trim()}</span></div>`
+      );
+      continue;
+    }
+
+    // Numbered statement (1) All A are B, 2) Some A are B...
+    const numMatch = line.match(/^(\d+)[\.\)]\s*(.*)$/);
+    if (numMatch) {
+      out.push(
+        `<div class="bk-num-stmt"><span class="bk-num-tag">${numMatch[1]}.</span><span class="bk-stmt-body">${numMatch[2]}</span></div>`
+      );
+      continue;
+    }
+
+    // Bullet-like statement
+    out.push(`<div class="bk-bullet-stmt">${line}</div>`);
+  }
+
+  return out.join('');
+}
+
 export const ParagraphBlock = ({ content }) => {
-  return <div className="bk-paragraph" dangerouslySetInnerHTML={{ __html: content }} />;
+  const cleaned = cleanParagraphContent(content);
+  return <div className="bk-paragraph" dangerouslySetInnerHTML={{ __html: cleaned }} />;
 };
 
 export function cleanHeadingContent(content) {
