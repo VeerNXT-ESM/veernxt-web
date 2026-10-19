@@ -163,7 +163,7 @@ export default function GuidedStep({
           box-shadow: 0 0 0 4px rgba(75,107,50,0.12);
         }
         .gs-stage-node.done .gs-stage-dot {
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           border-color: var(--ios-olive);
           color: #fff;
         }
@@ -184,7 +184,7 @@ export default function GuidedStep({
         }
         .gs-progress-fill {
           height: 100%;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           border-radius: var(--radius-pill);
           transition: width 0.3s ease;
         }
@@ -247,8 +247,13 @@ export default function GuidedStep({
 
         @media (max-width: 760px) {
           .gs-body { grid-template-columns: 1fr; }
-          .gs-insight-card { position: static; }
-          .gs-stage-label { display: none; }
+          .gs-insight-col { display: none; }
+          .gs-wrap { padding: 1rem 0.9rem calc(2rem + env(safe-area-inset-bottom)); }
+          .gs-stage-node { min-width: 0; }
+          .gs-stage-label { white-space: normal; }
+          .gs-question-col, .gs-question-card { min-width: 0; }
+          .gs-question-title, .gs-question-help, .gs-question-content { overflow-wrap: anywhere; }
+          .gs-question-title { font-size: 1.15rem; }
         }
       `}</style>
     </div>

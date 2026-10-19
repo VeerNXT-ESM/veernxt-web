@@ -18,7 +18,7 @@ const CandidateProfileTemplate = ({
       <div style={{ 
         display: 'flex', flexDirection: 'column', alignItems: 'center', 
         justifyContent: 'center', height: '100%', padding: '3rem', 
-        color: '#666', background: '#fafafa', borderRadius: '16px' 
+        color: 'var(--c-ink-4, #666)', background: 'var(--c-bg-1, #fafafa)', borderRadius: '16px' 
       }}>
         <User size={48} style={{ opacity: 0.3, marginBottom: '1rem' }} />
         <h3 style={{ fontSize: '1.1rem', fontWeight: '700' }}>No Candidate Selected</h3>
@@ -57,18 +57,18 @@ const CandidateProfileTemplate = ({
 
   const getBranchBadgeColor = (branch) => {
     const b = branch?.toLowerCase() || '';
-    if (b.includes('army')) return { bg: '#efebe9', text: '#5d4037', border: '#d7ccc8' };
-    if (b.includes('navy')) return { bg: '#e0f2fe', text: '#0369a1', border: '#bae6fd' };
-    if (b.includes('force') || b.includes('air')) return { bg: '#f0fdf4', text: '#15803d', border: '#bbf7d0' };
-    return { bg: '#f1f5f9', text: '#475569', border: '#e2e8f0' };
+    if (b.includes('army')) return { bg: 'var(--c-bg-2, #efebe9)', text: '#5d4037', border: '#d7ccc8' };
+    if (b.includes('navy')) return { bg: 'var(--c-tint-blue, #e0f2fe)', text: '#0369a1', border: '#bae6fd' };
+    if (b.includes('force') || b.includes('air')) return { bg: 'var(--c-tint-green, #f0fdf4)', text: '#15803d', border: '#bbf7d0' };
+    return { bg: 'var(--c-bg-2, #f1f5f9)', text: '#475569', border: 'var(--c-line-2, #e2e8f0)' };
   };
 
   const getQuotaBadgeColor = (quota) => {
     const q = quota?.toLowerCase() || '';
-    if (q.includes('ews')) return { bg: '#fef3c7', text: '#b45309', border: '#fde68a' };
-    if (q.includes('obc')) return { bg: '#fae8ff', text: '#a21caf', border: '#f5d0fe' };
-    if (q.includes('sc') || q.includes('st')) return { bg: '#fee2e2', text: '#b91c1c', border: '#fecaca' };
-    return { bg: '#f1f5f9', text: '#4b6b32', border: '#cbd5e1' };
+    if (q.includes('ews')) return { bg: 'var(--c-tint-amber, #fef3c7)', text: '#b45309', border: '#fde68a' };
+    if (q.includes('obc')) return { bg: 'var(--c-tint-purple, #fae8ff)', text: '#a21caf', border: '#f5d0fe' };
+    if (q.includes('sc') || q.includes('st')) return { bg: 'var(--c-tint-red, #fee2e2)', text: '#b91c1c', border: '#fecaca' };
+    return { bg: 'var(--c-bg-2, #f1f5f9)', text: '#4b6b32', border: 'var(--c-line-3, #cbd5e1)' };
   };
 
   const colors = getBranchBadgeColor(service_branch);
@@ -89,12 +89,12 @@ const CandidateProfileTemplate = ({
             </div>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                <h2 style={{ fontSize: '1.5rem', margin: 0, fontWeight: '850', color: '#111827' }}>{full_name}</h2>
+                <h2 style={{ fontSize: '1.5rem', margin: 0, fontWeight: '850', color: 'var(--c-ink-1, #111827)' }}>{full_name}</h2>
                 <span className="verified-badge">
                   <Shield size={12} /> Verified Agniveer
                 </span>
               </div>
-              <p style={{ color: '#4b5563', fontWeight: 600, fontSize: '0.95rem', marginTop: '0.2rem' }}>
+              <p style={{ color: 'var(--c-ink-3, #4b5563)', fontWeight: 600, fontSize: '0.95rem', marginTop: '0.2rem' }}>
                 {role} • <span style={{ color: 'var(--ios-olive)' }}>{trade}</span>
               </p>
               
@@ -106,7 +106,7 @@ const CandidateProfileTemplate = ({
                   Quota: {reservation_category}
                 </span>
                 {disability_status === 'Yes' && (
-                  <span className="info-tag" style={{ background: '#fee2e2', color: '#b91c1c', borderColor: '#fecaca' }}>
+                  <span className="info-tag" style={{ background: 'var(--c-tint-red, #fee2e2)', color: 'var(--c-red, #b91c1c)', borderColor: '#fecaca' }}>
                     PwD{disability_type ? ` — ${disability_type}` : ''}
                   </span>
                 )}
@@ -121,22 +121,22 @@ const CandidateProfileTemplate = ({
             </button>
 
             {connectionStatus === 'connected' ? (
-              <button className="btn-secondary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: '#f1f5f9', color: '#1F3A2E', cursor: 'default', border: '1px solid #e2e8f0', padding: '0.65rem 1.25rem', height: '40px' }} disabled>
+              <button className="btn-secondary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: 'var(--c-bg-2, #f1f5f9)', color: 'var(--c-green, #1F3A2E)', cursor: 'default', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '0.65rem 1.25rem', height: '40px' }} disabled>
                 <UserCheck size={16} />
                 <span>Connected</span>
               </button>
             ) : connectionStatus === 'pending_sent' ? (
-              <button className="btn-secondary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: '#f8fafc', color: '#64748b', cursor: 'default', border: '1px solid #e2e8f0', padding: '0.65rem 1.25rem', height: '40px' }} disabled>
+              <button className="btn-secondary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: 'var(--c-bg-1, #f8fafc)', color: 'var(--c-ink-4, #64748b)', cursor: 'default', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '0.65rem 1.25rem', height: '40px' }} disabled>
                 <Clock size={16} />
                 <span>Pending</span>
               </button>
             ) : connectionStatus === 'pending_received' ? (
-              <button onClick={() => onAcceptConnection && onAcceptConnection(candidate)} className="btn-primary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: 'var(--ios-olive)', color: 'white', border: 'none', padding: '0.65rem 1.25rem', cursor: 'pointer', height: '40px' }}>
+              <button onClick={() => onAcceptConnection && onAcceptConnection(candidate)} className="btn-primary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: 'var(--ios-olive-fill, var(--ios-olive))', color: 'white', border: 'none', padding: '0.65rem 1.25rem', cursor: 'pointer', height: '40px' }}>
                 <UserPlus size={16} />
                 <span>Accept Request</span>
               </button>
             ) : (
-              <button onClick={() => onConnect && onConnect(candidate)} className="btn-secondary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', borderColor: 'var(--ios-olive)', color: 'var(--ios-olive)', background: 'white', borderStyle: 'solid', borderWidth: '1px', padding: '0.65rem 1.25rem', cursor: 'pointer', height: '40px' }}>
+              <button onClick={() => onConnect && onConnect(candidate)} className="btn-secondary ios-pill" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', borderColor: 'var(--ios-olive)', color: 'var(--ios-olive)', background: 'var(--c-bg-0, white)', borderStyle: 'solid', borderWidth: '1px', padding: '0.65rem 1.25rem', cursor: 'pointer', height: '40px' }}>
                 <UserPlus size={16} />
                 <span>Connect</span>
               </button>
@@ -162,7 +162,7 @@ const CandidateProfileTemplate = ({
               </div>
               <div className="score-status-desc">
                 <h4 style={{ color: 'var(--ios-olive)', fontSize: '0.95rem', fontWeight: 800 }}>EXCEPTIONAL TRANSITION RATING</h4>
-                <p style={{ fontSize: '0.8rem', color: '#666', marginTop: '0.2rem' }}>
+                <p style={{ fontSize: '0.8rem', color: 'var(--c-ink-4, #666)', marginTop: '0.2rem' }}>
                   Candidate scores in the top 10% of their military trade track for civilian career readiness.
                 </p>
               </div>
@@ -257,7 +257,7 @@ const CandidateProfileTemplate = ({
               Transition Pathway Recommendation
             </h3>
             <div className="pathway-insight-box">
-              <p style={{ fontSize: '0.85rem', color: '#374151' }}>
+              <p style={{ fontSize: '0.85rem', color: 'var(--c-ink-2, #374151)' }}>
                 Highly suitable for <strong>Corporate Security Management</strong>, <strong>Operations & Logistics Supervision</strong>, or <strong>Technical Fitter roles</strong> in the Banking/State Police sectors.
               </p>
               <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem' }}>
@@ -271,7 +271,7 @@ const CandidateProfileTemplate = ({
 
       <style dangerouslySetInnerHTML={{ __html: `
         .candidate-profile-view {
-          background: white;
+          background: var(--c-bg-0, white);
           border-radius: 24px;
           overflow: hidden;
           box-shadow: var(--shadow-ios);
@@ -279,7 +279,7 @@ const CandidateProfileTemplate = ({
         }
         .profile-banner {
           height: 120px;
-          background: linear-gradient(135deg, var(--ios-olive), #1F3A2E);
+          background: linear-gradient(135deg, var(--ios-olive-fill, var(--ios-olive)), #1F3A2E);
           position: relative;
           display: flex;
           align-items: flex-end;
@@ -299,8 +299,8 @@ const CandidateProfileTemplate = ({
         }
         .profile-header-card {
           padding: 1.5rem 2rem;
-          border-bottom: 1px solid #f3f4f6;
-          background: white;
+          border-bottom: 1px solid var(--c-line-1, #f3f4f6);
+          background: var(--c-bg-0, white);
         }
         .large-avatar {
           width: 72px;
@@ -321,8 +321,8 @@ const CandidateProfileTemplate = ({
           display: inline-flex;
           align-items: center;
           gap: 0.25rem;
-          background: #f0fdf4;
-          color: #16a34a;
+          background: var(--c-tint-green, #f0fdf4);
+          color: var(--c-green, #16a34a);
           padding: 0.2rem 0.5rem;
           border-radius: 99px;
           font-size: 0.7rem;
@@ -347,7 +347,7 @@ const CandidateProfileTemplate = ({
           grid-template-columns: 1fr 1fr;
           gap: 1.5rem;
           padding: 2rem;
-          background: #fafafa;
+          background: var(--c-bg-1, #fafafa);
         }
         .profile-column {
           display: flex;
@@ -359,7 +359,7 @@ const CandidateProfileTemplate = ({
           align-items: center;
           gap: 0.5rem;
           margin-bottom: 1.25rem;
-          border-bottom: 1px solid #f3f4f6;
+          border-bottom: 1px solid var(--c-line-1, #f3f4f6);
           padding-bottom: 0.75rem;
         }
         .veer-score-hero {
@@ -377,7 +377,7 @@ const CandidateProfileTemplate = ({
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          background: white;
+          background: var(--c-bg-0, white);
           box-shadow: 0 4px 10px rgba(0,0,0,0.05);
           flex-shrink: 0;
         }
@@ -390,7 +390,7 @@ const CandidateProfileTemplate = ({
         .score-label {
           font-size: 0.6rem;
           font-weight: 800;
-          color: #666;
+          color: var(--c-ink-4, #666);
         }
         .score-status-desc {
           flex: 1;
@@ -409,18 +409,18 @@ const CandidateProfileTemplate = ({
           display: flex;
           justify-content: space-between;
           font-size: 0.78rem;
-          color: #4b5563;
+          color: var(--c-ink-3, #4b5563);
           font-weight: 600;
         }
         .bar-bg {
           height: 8px;
-          background: #f3f4f6;
+          background: var(--c-bg-2, #f3f4f6);
           border-radius: 4px;
           overflow: hidden;
         }
         .bar-fill {
           height: 100%;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           border-radius: 4px;
         }
         .skills-cloud {
@@ -429,13 +429,13 @@ const CandidateProfileTemplate = ({
           gap: 0.5rem;
         }
         .skill-bubble {
-          background: #f1f5f9;
-          color: #334155;
+          background: var(--c-bg-2, #f1f5f9);
+          color: var(--c-ink-2, #334155);
           padding: 0.4rem 0.8rem;
           border-radius: 10px;
           font-size: 0.8rem;
           font-weight: 600;
-          border: 1px solid #e2e8f0;
+          border: 1px solid var(--c-line-2, #e2e8f0);
         }
         .profile-details-list {
           display: flex;
@@ -463,13 +463,13 @@ const CandidateProfileTemplate = ({
         }
         .detail-meta .label {
           font-size: 0.72rem;
-          color: #6b7280;
+          color: var(--c-ink-4, #6b7280);
           font-weight: 550;
         }
         .detail-meta .value {
           font-size: 0.88rem;
           font-weight: 700;
-          color: #111827;
+          color: var(--c-ink-1, #111827);
         }
         .pathway-insight-box {
           background: var(--ios-secondary);
@@ -479,7 +479,7 @@ const CandidateProfileTemplate = ({
         }
         .score-tag {
           font-size: 0.7rem;
-          background: white;
+          background: var(--c-bg-0, white);
           color: var(--ios-olive);
           padding: 0.25rem 0.5rem;
           border-radius: 6px;

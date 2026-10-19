@@ -177,7 +177,7 @@ export default function AccountMenu({
           border-radius: 50%;
           border: none;
           background: var(--surface-alt);
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -230,7 +230,7 @@ export default function AccountMenu({
           align-items: center;
           gap: 0.35rem;
           font-size: 0.75rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           font-weight: 600;
         }
         .am-dot {
@@ -254,7 +254,7 @@ export default function AccountMenu({
           font-size: 0.66rem;
           font-weight: 800;
           letter-spacing: 0.06em;
-          color: #94a3b8;
+          color: var(--c-ink-5, #94a3b8);
           text-transform: uppercase;
           padding: 0.5rem 0.5rem 0.3rem;
         }
@@ -276,7 +276,7 @@ export default function AccountMenu({
           cursor: pointer;
         }
         .am-item svg {
-          color: #94a3b8;
+          color: var(--c-ink-5, #94a3b8);
           flex-shrink: 0;
         }
         .am-item:hover {

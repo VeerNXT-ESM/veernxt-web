@@ -140,3 +140,54 @@ a.v2-feature:hover { background: #f4f7f2; }
   .v2-tile { flex-basis: 160px; }
   .v2-thumb { height: 90px; }
 }
+
+/* ── Dark mode (theme toggled via [data-theme="dark"] / .dark on <html>) ── */
+[data-theme="dark"] .v2-shell, .dark .v2-shell { background: #0d1117; color: #f0f6fc; }
+:is([data-theme="dark"], .dark) .v2-header { background: #161b22; border-bottom-color: rgba(255,255,255,.12); box-shadow: 0 4px 12px rgba(0,0,0,.35); }
+:is([data-theme="dark"], .dark) .v2-logo img { background: #fff; border-radius: 10px; padding: 2px; }
+:is([data-theme="dark"], .dark) .v2-nav-link { color: #b1bac4; }
+:is([data-theme="dark"], .dark) .v2-nav-link:hover { color: #f0f6fc; background: #21262d; }
+:is([data-theme="dark"], .dark) .v2-nav-link.active { color: #6ee7b7; }
+:is([data-theme="dark"], .dark) .v2-nav-link.active::after { background: #e3c26a; }
+:is([data-theme="dark"], .dark) .v2-icon-btn { color: #b1bac4; }
+:is([data-theme="dark"], .dark) .v2-icon-btn:hover, :is([data-theme="dark"], .dark) .v2-icon-btn.active { background: #21262d; color: #6ee7b7; }
+:is([data-theme="dark"], .dark) .v2-avatar-btn { background: #21262d; color: #b1bac4; }
+:is([data-theme="dark"], .dark) .v2-avatar-btn:hover { border-color: rgba(255,255,255,.2); }
+:is([data-theme="dark"], .dark) .v2-avatar-btn:focus-visible, :is([data-theme="dark"], .dark) .v2-nav-link:focus-visible,
+:is([data-theme="dark"], .dark) .v2-tile:focus-visible, :is([data-theme="dark"], .dark) .v2-exam-card:focus-visible { outline-color: #6ee7b7; }
+
+:is([data-theme="dark"], .dark) .v2-search { background: #161b22; color: #9da7b3; box-shadow: 0 6px 20px rgba(0,0,0,.4); }
+:is([data-theme="dark"], .dark) .v2-search input { color: #f0f6fc; }
+:is([data-theme="dark"], .dark) .v2-search button { background: #0b7a56; }
+:is([data-theme="dark"], .dark) .v2-search button:hover { background: #0f8f66; }
+:is([data-theme="dark"], .dark) .v2-level-tabs a.active { background: #161b22; color: #6ee7b7; }
+
+:is([data-theme="dark"], .dark) .v2-features, :is([data-theme="dark"], .dark) .v2-row, :is([data-theme="dark"], .dark) .v2-side {
+  background: #161b22; box-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+:is([data-theme="dark"], .dark) a.v2-feature:hover { background: #21262d; }
+:is([data-theme="dark"], .dark) .v2-feature small, :is([data-theme="dark"], .dark) .v2-tile-body span,
+:is([data-theme="dark"], .dark) .v2-exam-card-body p, :is([data-theme="dark"], .dark) .v2-count, :is([data-theme="dark"], .dark) .v2-empty { color: #9da7b3; }
+:is([data-theme="dark"], .dark) .v2-feature-icon { background: rgba(16,185,129,.16); color: #6ee7b7; }
+:is([data-theme="dark"], .dark) .v2-link { color: #6ee7b7; }
+:is([data-theme="dark"], .dark) .v2-arrow { background: #161b22; border-color: rgba(255,255,255,.14); color: #6ee7b7; }
+:is([data-theme="dark"], .dark) .v2-arrow:hover { background: #21262d; }
+
+:is([data-theme="dark"], .dark) .v2-tile, :is([data-theme="dark"], .dark) .v2-exam-card { background: #1c2128; border-color: rgba(255,255,255,.1); }
+:is([data-theme="dark"], .dark) .v2-tile:hover, :is([data-theme="dark"], .dark) .v2-exam-card:hover { box-shadow: 0 8px 18px rgba(0,0,0,.5); }
+:is([data-theme="dark"], .dark) .v2-tile-arrow { color: #6ee7b7; }
+:is([data-theme="dark"], .dark) .v2-chip { background: rgba(16,185,129,.16); color: #6ee7b7; }
+
+:is([data-theme="dark"], .dark) .v2-side li > button:hover, :is([data-theme="dark"], .dark) .v2-side li > a:hover { background: #21262d; }
+:is([data-theme="dark"], .dark) .v2-side li > button.active { background: #0b7a56; color: #fff; }
+:is([data-theme="dark"], .dark) .v2-inline-search, :is([data-theme="dark"], .dark) .v2-filter-btn { background: #161b22; border-color: rgba(255,255,255,.14); color: #b1bac4; }
+:is([data-theme="dark"], .dark) .v2-inline-search input { color: #f0f6fc; }
+:is([data-theme="dark"], .dark) .v2-more { background: #161b22; border-color: #6ee7b7; color: #6ee7b7; }
+:is([data-theme="dark"], .dark) .v2-more:hover { background: #0b7a56; color: #fff; border-color: #0b7a56; }
+:is([data-theme="dark"], .dark) .v2-skeleton { background: linear-gradient(90deg, #21262d 25%, #2a313a 50%, #21262d 75%); background-size: 200% 100%; }
+:is([data-theme="dark"], .dark) .v2-error { color: #fca5a5; background: rgba(239,68,68,.16); }
+@media (max-width: 767px) {
+  :is([data-theme="dark"], .dark) .v2-bottom-nav { background: #161b22; border-top-color: rgba(255,255,255,.12); }
+  :is([data-theme="dark"], .dark) .v2-bottom-item { color: #9da7b3; }
+  :is([data-theme="dark"], .dark) .v2-bottom-item.active { color: #6ee7b7; }
+}

@@ -101,13 +101,13 @@ const AuthGuard = ({ children, skipProfilingCheck = false }) => {
           <div style={{
             width: '40px',
             height: '40px',
-            border: '3px solid #e2e8f0',
+            border: '3px solid var(--c-line-2, #e2e8f0)',
             borderTop: '3px solid #4B6B32',
             borderRadius: '50%',
             animation: 'spin 0.8s linear infinite',
             margin: '0 auto 1rem',
           }} />
-          <p style={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem' }}>Verifying session...</p>
+          <p style={{ color: 'var(--c-ink-3, #475569)', fontWeight: 600, fontSize: '0.9rem' }}>Verifying session...</p>
           <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
         </div>
       </div>
@@ -155,13 +155,13 @@ const AuthGuard = ({ children, skipProfilingCheck = false }) => {
           <div style={{
             width: '40px',
             height: '40px',
-            border: '3px solid #e2e8f0',
+            border: '3px solid var(--c-line-2, #e2e8f0)',
             borderTop: '3px solid #4B6B32',
             borderRadius: '50%',
             animation: 'spin 0.8s linear infinite',
             margin: '0 auto 1rem',
           }} />
-          <p style={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem' }}>Loading profile...</p>
+          <p style={{ color: 'var(--c-ink-3, #475569)', fontWeight: 600, fontSize: '0.9rem' }}>Loading profile...</p>
           <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
         </div>
       </div>

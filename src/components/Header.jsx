@@ -67,7 +67,7 @@ const Header = () => {
   }, [isNavOpen]);
 
   return (
-    <header className="linkedin-header">
+    <header className={`linkedin-header${isEmployer ? ' is-employer' : ''}`}>
       <div className="header-container">
         {/* Left Side: Logo */}
         <div className="header-left">
@@ -268,7 +268,7 @@ const Header = () => {
           left: 10%;
           right: 10%;
           height: 3px;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           border-radius: 99px;
         }
         .dot-badge {
@@ -292,7 +292,7 @@ const Header = () => {
           gap: 0.35rem;
           padding: 0.4rem 0.75rem;
           background: rgba(75, 107, 50, 0.08);
-          color: #4b6b32;
+          color: var(--c-green, #4b6b32);
           border-radius: 999px;
           font-size: 0.8rem;
           font-weight: 700;
@@ -507,6 +507,12 @@ const Header = () => {
           }
           .header-menu-btn {
             display: inline-flex;
+          }
+          /* Recruiters: Home / Network / Find / Messages live in the bottom bar on phones */
+          .linkedin-header.is-employer .header-menu-btn,
+          .linkedin-header.is-employer .header-drawer,
+          .linkedin-header.is-employer .header-drawer-backdrop {
+            display: none !important;
           }
           .header-right {
             gap: 0.5rem;

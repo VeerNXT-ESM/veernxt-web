@@ -268,7 +268,7 @@ const ExamSyllabus = () => {
             </div>
 
             {contentLoading && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 0', color: '#94a3b8', fontSize: '0.85rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 0', color: 'var(--c-ink-5, #94a3b8)', fontSize: '0.85rem' }}>
                 <RefreshCw className="animate-spin" size={16} /> Loading content…
               </div>
             )}

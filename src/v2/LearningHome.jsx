@@ -102,19 +102,19 @@ export default function LearningHome() {
           items={central}
           loading={loading}
           imageCategory
-          buildTo={(it) => `/v2/learning/central?category=${encodeURIComponent(it.name)}`}
+          buildTo={(it) => `/learning-center?tab=explorer&mode=central&category=${encodeURIComponent(it.name)}`}
         />
         <Row
           level="state"
           items={states}
           loading={loading}
-          buildTo={(it) => `/v2/learning/state?region=${it.id}`}
+          buildTo={(it) => `/learning-center?tab=explorer&mode=state&state=${it.id}`}
         />
         <Row
           level="ut"
           items={uts}
           loading={loading}
-          buildTo={(it) => `/v2/learning/ut?region=${it.id}`}
+          buildTo={(it) => `/learning-center?tab=explorer&mode=ut&state=${it.id}`}
         />
       </div>
     </>

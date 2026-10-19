@@ -88,7 +88,7 @@ const FinancialPlanningSuite = () => {
               >
                 {/* Featured Tag */}
                 {isFeatured && (
-                  <div className="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-gradient-to-r from-[#10B981] to-[#059669] text-white font-extrabold text-[10px] uppercase tracking-wider shadow-md">
+                  <div className="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-gradient-to-r from-[#0b7a56] to-[#065f46] text-white font-extrabold text-[10px] uppercase tracking-wider shadow-md">
                     High Impact
                   </div>
                 )}

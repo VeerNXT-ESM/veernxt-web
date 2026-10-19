@@ -80,7 +80,7 @@ export const PaymentPage = () => {
           contact: contact,
         },
         theme: {
-          color: '#4b6b32', // Olive color theme
+          color: 'var(--c-green, #4b6b32)', // Olive color theme
         },
         modal: {
           ondismiss: function () {
@@ -109,14 +109,14 @@ export const PaymentPage = () => {
       justifyContent: 'center',
       alignItems: 'center',
       height: '100vh',
-      background: '#f8fafc',
+      background: 'var(--c-bg-1, #f8fafc)',
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      color: '#334155',
+      color: 'var(--c-ink-2, #334155)',
       textAlign: 'center',
       padding: '2rem'
     }}>
       <div style={{
-        background: 'white',
+        background: 'var(--c-bg-0, white)',
         padding: '3rem',
         borderRadius: '20px',
         boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
@@ -127,7 +127,7 @@ export const PaymentPage = () => {
           <>
             <div style={spinnerStyle}></div>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: '1.5rem 0 0.5rem' }}>Preparing Payment</h2>
-            <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Loading secure checkout window...</p>
+            <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.9rem' }}>Loading secure checkout window...</p>
           </>
         )}
 
@@ -135,15 +135,15 @@ export const PaymentPage = () => {
           <>
             <div style={spinnerStyle}></div>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: '1.5rem 0 0.5rem' }}>Checkout Window Open</h2>
-            <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Please complete your payment in the secure Razorpay overlay.</p>
+            <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.9rem' }}>Please complete your payment in the secure Razorpay overlay.</p>
           </>
         )}
 
         {status === 'success' && (
           <>
             <div style={successIconStyle}>✓</div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: '1.5rem 0 0.5rem', color: '#16a34a' }}>Payment Successful</h2>
-            <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Updating account details, closing window...</p>
+            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: '1.5rem 0 0.5rem', color: 'var(--c-green, #16a34a)' }}>Payment Successful</h2>
+            <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.9rem' }}>Updating account details, closing window...</p>
           </>
         )}
 
@@ -151,15 +151,15 @@ export const PaymentPage = () => {
           <>
             <div style={warningIconStyle}>!</div>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: '1.5rem 0 0.5rem', color: '#d97706' }}>Payment Cancelled</h2>
-            <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Returning to application...</p>
+            <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.9rem' }}>Returning to application...</p>
           </>
         )}
 
         {status === 'error' && (
           <>
             <div style={errorIconStyle}>✕</div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: '1.5rem 0 0.5rem', color: '#dc2626' }}>Payment Error</h2>
-            <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '1.5rem' }}>{errorMsg}</p>
+            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: '1.5rem 0 0.5rem', color: 'var(--c-red, #dc2626)' }}>Payment Error</h2>
+            <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>{errorMsg}</p>
             <button 
               onClick={() => window.close()} 
               style={{
@@ -192,8 +192,8 @@ const successIconStyle = {
   width: '60px',
   height: '60px',
   borderRadius: '50%',
-  background: '#f0fdf4',
-  color: '#16a34a',
+  background: 'var(--c-tint-green, #f0fdf4)',
+  color: 'var(--c-green, #16a34a)',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -206,7 +206,7 @@ const warningIconStyle = {
   width: '60px',
   height: '60px',
   borderRadius: '50%',
-  background: '#fffbeb',
+  background: 'var(--c-tint-amber, #fffbeb)',
   color: '#d97706',
   display: 'flex',
   alignItems: 'center',
@@ -220,8 +220,8 @@ const errorIconStyle = {
   width: '60px',
   height: '60px',
   borderRadius: '50%',
-  background: '#fef2f2',
-  color: '#dc2626',
+  background: 'var(--c-tint-red, #fef2f2)',
+  color: 'var(--c-red, #dc2626)',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

@@ -324,11 +324,11 @@ const PrivateSectorOpportunities = () => {
       </div>
 
       {!profileCompleted && (
-        <Card padding="md" style={{ marginBottom: '1.5rem', background: '#fff8f0', border: '1px solid #f3d9a8' }}>
-          <strong style={{ display: 'block', marginBottom: '0.3rem', color: '#7a5a1e' }}>
+        <Card padding="md" style={{ marginBottom: '1.5rem', background: 'var(--c-tint-amber, #fff8f0)', border: '1px solid #f3d9a8' }}>
+          <strong style={{ display: 'block', marginBottom: '0.3rem', color: 'var(--c-amber, #7a5a1e)' }}>
             Complete your military profile first
           </strong>
-          <p style={{ margin: '0 0 0.75rem', fontSize: '0.85rem', color: '#7a5a1e' }}>
+          <p style={{ margin: '0 0 0.75rem', fontSize: '0.85rem', color: 'var(--c-amber, #7a5a1e)' }}>
             To express interest, match with corporate recruiters, and receive direct introduction invitations, set your Tri-Service credentials and logged duties.
           </p>
           <Button size="sm" onClick={() => navigate('/private-sector/profile?returnTo=/private-sector/opportunities')}>
@@ -368,8 +368,8 @@ const PrivateSectorOpportunities = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div
             style={{
-              background: '#f8fafc',
-              border: '1px solid #e2e8f0',
+              background: 'var(--c-bg-1, #f8fafc)',
+              border: '1px solid var(--c-line-2, #e2e8f0)',
               borderRadius: '16px',
               padding: '1.25rem',
               display: 'flex',
@@ -378,16 +378,16 @@ const PrivateSectorOpportunities = () => {
             }}
           >
             <ShieldCheck size={22} color="var(--ios-olive, #4b6b32)" style={{ flexShrink: 0, marginTop: '0.1rem' }} />
-            <div style={{ fontSize: '0.85rem', color: '#475569', lineHeight: 1.5 }}>
-              <strong style={{ color: '#0f172a' }}>Protected Introduction Workflow:</strong> Employers evaluated your verified trade skills and supervisory experience.
+            <div style={{ fontSize: '0.85rem', color: 'var(--c-ink-3, #475569)', lineHeight: 1.5 }}>
+              <strong style={{ color: 'var(--c-ink-1, #0f172a)' }}>Protected Introduction Workflow:</strong> Employers evaluated your verified trade skills and supervisory experience.
               Your mobile number and email address remain <strong>strictly masked</strong> until you click "Accept Introduction".
             </div>
           </div>
 
           {inboundRequests.length === 0 ? (
-            <Card padding="lg" className="ps-card" style={{ textAlign: 'center', color: '#64748b', padding: '3.5rem 1.5rem' }}>
+            <Card padding="lg" className="ps-card" style={{ textAlign: 'center', color: 'var(--c-ink-4, #64748b)', padding: '3.5rem 1.5rem' }}>
               <Bell size={36} color="#94a3b8" style={{ margin: '0 auto 0.75rem', opacity: 0.4 }} />
-              <h3 style={{ margin: '0 0 0.35rem', color: '#0f172a', fontSize: '1.1rem' }}>No Inbound Employer Requests Yet</h3>
+              <h3 style={{ margin: '0 0 0.35rem', color: 'var(--c-ink-1, #0f172a)', fontSize: '1.1rem' }}>No Inbound Employer Requests Yet</h3>
               <p style={{ fontSize: '0.88rem', maxWidth: '480px', margin: '0 auto 1.25rem' }}>
                 Corporate recruiters search VeerNXT for military talent daily. Complete your profile with all logged duties to increase visibility.
               </p>
@@ -402,11 +402,11 @@ const PrivateSectorOpportunities = () => {
               const isDeclined = req.status === 'declined';
 
               return (
-                <Card key={req.id} padding="lg" className="ps-card" style={{ border: isPending ? '1.5px solid #d7e6d0' : '1px solid #e2e8f0', background: isPending ? '#fbfdf9' : 'white' }}>
+                <Card key={req.id} padding="lg" className="ps-card" style={{ border: isPending ? '1.5px solid #d7e6d0' : '1px solid var(--c-line-2, #e2e8f0)', background: isPending ? '#fbfdf9' : 'var(--c-bg-0, white)' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
                     <div style={{ minWidth: 0, flex: '1 1 0' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.4rem' }}>
-                        <span style={{ fontSize: '0.76rem', background: '#eef4ea', color: '#2d5a27', padding: '0.2rem 0.55rem', borderRadius: '4px', fontWeight: 800 }}>
+                        <span style={{ fontSize: '0.76rem', background: 'var(--c-tint-green, #eef4ea)', color: 'var(--c-green, #2d5a27)', padding: '0.2rem 0.55rem', borderRadius: '4px', fontWeight: 800 }}>
                           Direct Corporate Invitation
                         </span>
                         {req.fit_score && (
@@ -414,20 +414,20 @@ const PrivateSectorOpportunities = () => {
                             {req.fit_score}% Capability Match
                           </span>
                         )}
-                        <span style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)' }}>
                           Received on {new Date(req.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                         </span>
                       </div>
 
-                      <h3 className="ps-card-title" style={{ margin: '0 0 0.35rem', fontSize: '1.25rem', fontWeight: 850, color: '#0f172a' }}>
+                      <h3 className="ps-card-title" style={{ margin: '0 0 0.35rem', fontSize: '1.25rem', fontWeight: 850, color: 'var(--c-ink-1, #0f172a)' }}>
                         {(job.role_titles || []).join(' / ') || 'Position'}
                       </h3>
 
-                      <p style={{ margin: 0, fontSize: '0.92rem', color: '#334155', fontWeight: 700 }}>
+                      <p style={{ margin: 0, fontSize: '0.92rem', color: 'var(--c-ink-2, #334155)', fontWeight: 700 }}>
                         {employer.company_name || 'Corporate Hiring Partner'} {employer.industry ? `• ${employer.industry}` : ''}
                       </p>
 
-                      <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', fontSize: '0.85rem', color: '#64748b', marginTop: '0.65rem' }}>
+                      <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', fontSize: '0.85rem', color: 'var(--c-ink-4, #64748b)', marginTop: '0.65rem' }}>
                         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
                           <MapPin size={14} /> {(job.locations || []).join(', ') || 'Multiple Locations'}
                         </span>
@@ -444,7 +444,7 @@ const PrivateSectorOpportunities = () => {
                       </div>
 
                       {job.description && (
-                        <p style={{ margin: '0.75rem 0 0', fontSize: '0.88rem', color: '#475569', lineHeight: 1.45 }}>
+                        <p style={{ margin: '0.75rem 0 0', fontSize: '0.88rem', color: 'var(--c-ink-3, #475569)', lineHeight: 1.45 }}>
                           {job.description}
                         </p>
                       )}
@@ -452,10 +452,10 @@ const PrivateSectorOpportunities = () => {
                   </div>
 
                   {/* Decision status bar */}
-                  <div className="ps-decision" style={{ marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+                  <div className="ps-decision" style={{ marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid var(--c-line-2, #e2e8f0)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
                     {isPending ? (
                       <>
-                        <div style={{ fontSize: '0.82rem', color: '#64748b', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+                        <div style={{ fontSize: '0.82rem', color: 'var(--c-ink-4, #64748b)', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
                           <Lock size={13} /> Your phone & email remain private until you accept.
                         </div>
                         <div className="ps-decision-actions" style={{ display: 'flex', gap: '0.65rem' }}>
@@ -472,18 +472,18 @@ const PrivateSectorOpportunities = () => {
                             variant="secondary"
                             onClick={() => handleRespondRequest(req.id, 'declined')}
                             disabled={respondingId === req.id}
-                            style={{ borderColor: '#cbd5e1', color: '#64748b' }}
+                            style={{ borderColor: 'var(--c-line-3, #cbd5e1)', color: 'var(--c-ink-4, #64748b)' }}
                           >
                             Decline
                           </Button>
                         </div>
                       </>
                     ) : isAccepted ? (
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#15803d', fontSize: '0.88rem', fontWeight: 700 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--c-green, #15803d)', fontSize: '0.88rem', fontWeight: 700 }}>
                         <CheckCircle2 size={18} /> Introduction Accepted — {employer.company_name || 'The employer'} has received your profile and will contact you directly.
                       </div>
                     ) : (
-                      <div style={{ color: '#64748b', fontSize: '0.85rem' }}>
+                      <div style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.85rem' }}>
                         You declined this introduction.
                       </div>
                     )}
@@ -533,7 +533,7 @@ const PrivateSectorOpportunities = () => {
                   width: '100%',
                   padding: '0.7rem 1rem 0.7rem 2.4rem',
                   borderRadius: '10px',
-                  border: '1px solid #cbd5e1',
+                  border: '1px solid var(--c-line-3, #cbd5e1)',
                   fontSize: '0.88rem',
                   outline: 'none',
                   boxSizing: 'border-box',
@@ -630,8 +630,8 @@ const PrivateSectorOpportunities = () => {
                                 gap: '0.25rem',
                                 padding: '0.2rem 0.55rem',
                                 borderRadius: '4px',
-                                background: '#eff6ff',
-                                color: '#1d4ed8',
+                                background: 'var(--c-tint-blue, #eff6ff)',
+                                color: 'var(--c-blue, #1d4ed8)',
                                 fontSize: '0.75rem',
                                 fontWeight: 700,
                               }}
@@ -660,11 +660,11 @@ const PrivateSectorOpportunities = () => {
                           )}
                         </div>
 
-                        <h3 className="ps-card-title" style={{ margin: '0 0 0.5rem', fontSize: '1.15rem', fontWeight: 800, color: '#0f172a' }}>
+                        <h3 className="ps-card-title" style={{ margin: '0 0 0.5rem', fontSize: '1.15rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)' }}>
                           {(opp.role_titles || []).join(' / ')}
                         </h3>
 
-                        <div className="ps-meta" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.85rem', color: '#64748b', marginBottom: '0.75rem' }}>
+                        <div className="ps-meta" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.85rem', color: 'var(--c-ink-4, #64748b)', marginBottom: '0.75rem' }}>
                           <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
                             <Users size={14} /> {opp.quantity} positions
                           </span>
@@ -679,13 +679,13 @@ const PrivateSectorOpportunities = () => {
                         </div>
 
                         {opp.description && (
-                          <p style={{ margin: '0 0 0.6rem', fontSize: '0.9rem', color: '#334155', lineHeight: 1.5 }}>
+                          <p style={{ margin: '0 0 0.6rem', fontSize: '0.9rem', color: 'var(--c-ink-2, #334155)', lineHeight: 1.5 }}>
                             {opp.description}
                           </p>
                         )}
 
                         {opp.requirements_text && (
-                          <p style={{ margin: '0 0 0.75rem', fontSize: '0.84rem', color: '#64748b' }}>
+                          <p style={{ margin: '0 0 0.75rem', fontSize: '0.84rem', color: 'var(--c-ink-4, #64748b)' }}>
                             <strong>Requirements:</strong> {opp.requirements_text}
                           </p>
                         )}
@@ -701,12 +701,12 @@ const PrivateSectorOpportunities = () => {
                                   alignItems: 'center',
                                   gap: '0.2rem',
                                   padding: '0.2rem 0.5rem',
-                                  background: '#f1f5f9',
-                                  border: '1px solid #e2e8f0',
+                                  background: 'var(--c-bg-2, #f1f5f9)',
+                                  border: '1px solid var(--c-line-2, #e2e8f0)',
                                   borderRadius: '999px',
                                   fontSize: '0.76rem',
                                   fontWeight: 600,
-                                  color: '#475569',
+                                  color: 'var(--c-ink-3, #475569)',
                                 }}
                               >
                                 <Tag size={10} />
@@ -718,13 +718,13 @@ const PrivateSectorOpportunities = () => {
                       </div>
                     </div>
 
-                    <div className="ps-opp-actions" style={{ display: 'flex', gap: '0.6rem', marginTop: '1.1rem', paddingTop: '1rem', borderTop: '1px solid #e2e8f0' }}>
+                    <div className="ps-opp-actions" style={{ display: 'flex', gap: '0.6rem', marginTop: '1.1rem', paddingTop: '1rem', borderTop: '1px solid var(--c-line-2, #e2e8f0)' }}>
                       {dismissingId === opp.id ? (
                         <span style={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--text-secondary, #64748b)' }}>
                           Got it.
                         </span>
                       ) : isInterested ? (
-                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.88rem', fontWeight: 700, color: '#15803d' }}>
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.88rem', fontWeight: 700, color: 'var(--c-green, #15803d)' }}>
                           <CheckCircle2 size={16} /> Interest expressed — VeerNXT HR will be in touch
                         </span>
                       ) : (
@@ -757,7 +757,7 @@ const PrivateSectorOpportunities = () => {
           font-size: 1.75rem;
           font-weight: 850;
           margin: 0 0 0.35rem;
-          color: #0f172a;
+          color: var(--c-ink-1, #0f172a);
           letter-spacing: -0.02em;
         }
         .ps-opps-sub {
@@ -771,7 +771,7 @@ const PrivateSectorOpportunities = () => {
           display: flex;
           gap: 0.75rem;
           margin-bottom: 1.5rem;
-          border-bottom: 1.5px solid #e2e8f0;
+          border-bottom: 1.5px solid var(--c-line-2, #e2e8f0);
           padding-bottom: 0.75rem;
         }
         .ps-tab {
@@ -781,7 +781,7 @@ const PrivateSectorOpportunities = () => {
           font-size: 0.95rem;
           font-weight: 800;
           cursor: pointer;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           display: inline-flex;
           align-items: center;
           gap: 0.4rem;
@@ -814,9 +814,9 @@ const PrivateSectorOpportunities = () => {
         .ps-chip {
           padding: 0.45rem 0.9rem;
           border-radius: 999px;
-          border: 1px solid #cbd5e1;
-          background: #ffffff;
-          color: #334155;
+          border: 1px solid var(--c-line-3, #cbd5e1);
+          background: var(--c-bg-0, #ffffff);
+          color: var(--c-ink-2, #334155);
           font-size: 0.82rem;
           font-weight: 600;
           cursor: pointer;
@@ -825,7 +825,7 @@ const PrivateSectorOpportunities = () => {
         }
         .ps-chip.selected {
           border: 1.5px solid var(--ios-olive, #4b6b32);
-          background: var(--ios-olive, #4b6b32);
+          background: var(--ios-olive-fill, var(--ios-olive, #4b6b32));
           color: #ffffff;
         }
 
@@ -845,14 +845,14 @@ const PrivateSectorOpportunities = () => {
         .ps-tags-label {
           font-size: 0.8rem;
           font-weight: 700;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
         }
         .ps-tag {
           padding: 0.25rem 0.6rem;
           border-radius: 999px;
-          border: 1px solid #e2e8f0;
-          background: #f8fafc;
-          color: #475569;
+          border: 1px solid var(--c-line-2, #e2e8f0);
+          background: var(--c-bg-1, #f8fafc);
+          color: var(--c-ink-3, #475569);
           font-size: 0.78rem;
           font-weight: 600;
           cursor: pointer;
@@ -864,8 +864,8 @@ const PrivateSectorOpportunities = () => {
         }
         .ps-tag-clear {
           border-color: #94a3b8;
-          background: #e2e8f0;
-          color: #334155;
+          background: var(--c-bg-3, #e2e8f0);
+          color: var(--c-ink-2, #334155);
         }
         .ps-toolbar {
           display: flex;
@@ -879,10 +879,10 @@ const PrivateSectorOpportunities = () => {
           gap: 0.45rem;
           min-height: 44px;
           padding: 0 1rem;
-          border: 1px solid #cbd5e1;
+          border: 1px solid var(--c-line-3, #cbd5e1);
           border-radius: 12px;
-          background: #ffffff;
-          color: #0f172a;
+          background: var(--c-bg-0, #ffffff);
+          color: var(--c-ink-1, #0f172a);
           font-size: 0.92rem;
           font-weight: 700;
           cursor: pointer;
@@ -906,10 +906,10 @@ const PrivateSectorOpportunities = () => {
           gap: 0.4rem;
           min-height: 40px;
           padding: 0 0.7rem;
-          border: 1px solid #cbd5e1;
+          border: 1px solid var(--c-line-3, #cbd5e1);
           border-radius: 10px;
-          background: #ffffff;
-          color: #0f172a;
+          background: var(--c-bg-0, #ffffff);
+          color: var(--c-ink-1, #0f172a);
           font-size: 0.85rem;
           font-weight: 700;
         }
@@ -918,7 +918,7 @@ const PrivateSectorOpportunities = () => {
           background: transparent;
           font: inherit;
           font-weight: 600;
-          color: #334155;
+          color: var(--c-ink-2, #334155);
           cursor: pointer;
           padding: 4px 0;
           outline: none;
@@ -938,7 +938,7 @@ const PrivateSectorOpportunities = () => {
           justify-content: space-between;
           gap: 0.75rem;
           font-size: 0.85rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           font-weight: 600;
         }
         .ps-clear {
@@ -992,9 +992,9 @@ const PrivateSectorOpportunities = () => {
             align-items: center;
             justify-content: space-between;
             padding: 0.9rem 1rem;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid var(--c-line-2, #e2e8f0);
           }
-          .ps-sheet-head h2 { margin: 0; font-size: 1.1rem; font-weight: 800; color: #0f172a; }
+          .ps-sheet-head h2 { margin: 0; font-size: 1.1rem; font-weight: 800; color: var(--c-ink-1, #0f172a); }
           .ps-sheet-close {
             width: 44px;
             height: 44px;
@@ -1004,7 +1004,7 @@ const PrivateSectorOpportunities = () => {
             justify-content: center;
             background: none;
             border: none;
-            color: #475569;
+            color: var(--c-ink-3, #475569);
             cursor: pointer;
           }
           .ps-sheet-body {
@@ -1022,7 +1022,7 @@ const PrivateSectorOpportunities = () => {
             grid-template-columns: 1fr 1.6fr;
             gap: 0.6rem;
             padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid var(--c-line-2, #e2e8f0);
             background: var(--surface, #fff);
           }
           .ps-sheet-foot button {
@@ -1032,7 +1032,7 @@ const PrivateSectorOpportunities = () => {
             font-weight: 700;
             cursor: pointer;
           }
-          .ps-sheet-reset { background: #ffffff; border: 1px solid #cbd5e1; color: #334155; }
+          .ps-sheet-reset { background: var(--c-bg-0, #ffffff); border: 1px solid var(--c-line-3, #cbd5e1); color: var(--c-ink-2, #334155); }
           .ps-sheet-apply { background: var(--ios-olive, #4b6b32); border: 1px solid var(--ios-olive, #4b6b32); color: #fff; }
           body.ps-sheet-open .chatbot-fab { display: none !important; }
         }

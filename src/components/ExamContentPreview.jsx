@@ -34,16 +34,16 @@ const SUBJECT_CATEGORY_ORDER = ['Intro', 'Guide', 'Precis', 'PYQ'];
 const SUBJECT_CATEGORY_LABELS = { Intro: 'Intro', Guide: 'Guide', Precis: 'Précis', PYQ: 'PYQ' };
 
 const CATEGORY_BADGES = {
-  Guide: { label: 'Guidebook', bg: '#eff6ff', color: '#1d4ed8', border: '#bfdbfe' },
-  Precis: { label: 'Précis', bg: '#faf5ff', color: '#7e22ce', border: '#e9d5ff' },
-  PYQ: { label: 'PYQ', bg: '#f0fdf4', color: '#15803d', border: '#bbf7d0' },
-  Intro: { label: 'Introduction', bg: '#fffbeb', color: '#b45309', border: '#fde68a' },
-  Mock: { label: 'Mock Test', bg: '#f0fdf4', color: '#15803d', border: '#bbf7d0' },
+  Guide: { label: 'Guidebook', bg: 'var(--c-tint-blue, #eff6ff)', color: 'var(--c-blue, #1d4ed8)', border: '#bfdbfe' },
+  Precis: { label: 'Précis', bg: 'var(--c-tint-purple, #faf5ff)', color: 'var(--c-purple, #7e22ce)', border: '#e9d5ff' },
+  PYQ: { label: 'PYQ', bg: 'var(--c-tint-green, #f0fdf4)', color: 'var(--c-green, #15803d)', border: '#bbf7d0' },
+  Intro: { label: 'Introduction', bg: 'var(--c-tint-amber, #fffbeb)', color: 'var(--c-amber, #b45309)', border: '#fde68a' },
+  Mock: { label: 'Mock Test', bg: 'var(--c-tint-green, #f0fdf4)', color: 'var(--c-green, #15803d)', border: '#bbf7d0' },
 };
 
 function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete, backTo, badgeLabel, examId }) {
   const cat = badgeLabel || resource.category || 'Guide';
-  const badgeConfig = CATEGORY_BADGES[cat] || { label: cat, bg: '#f1f5f9', color: '#475569', border: '#e2e8f0' };
+  const badgeConfig = CATEGORY_BADGES[cat] || { label: cat, bg: 'var(--c-bg-2, #f1f5f9)', color: 'var(--c-ink-3, #475569)', border: 'var(--c-line-2, #e2e8f0)' };
   const isPyq = cat === 'PYQ' || resource.category === 'PYQ';
   const targetLink = isPyq
     ? (resource.link || `/pyq-center?exam=${encodeURIComponent(examId || examName || '')}`)
@@ -55,7 +55,7 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
         display: 'flex', alignItems: 'center', gap: '0.65rem', padding: '0.65rem 0.9rem',
         borderRadius: 'var(--radius-sm, 10px)',
         border: (isCompleted && !isPyq) ? '1px solid #bbf7d0' : '1px solid var(--border, #e2e8f0)',
-        marginBottom: '0.5rem', background: (isCompleted && !isPyq) ? '#f0fdf4' : '#fff',
+        marginBottom: '0.5rem', background: (isCompleted && !isPyq) ? 'var(--c-tint-green, #f0fdf4)' : 'var(--c-bg-0, #fff)',
         minWidth: 0,
         boxSizing: 'border-box',
       }}
@@ -70,7 +70,7 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
           title={isCompleted ? "Marked as Complete — click to undo" : "Mark as Complete"}
           style={{
             background: isCompleted ? '#16a34a' : 'transparent',
-            border: isCompleted ? 'none' : '2px solid #cbd5e1',
+            border: isCompleted ? 'none' : '2px solid var(--c-line-3, #cbd5e1)',
             borderRadius: '50%',
             width: '22px',
             height: '22px',
@@ -119,7 +119,7 @@ function ResourceRow({ resource, examName, locked, isCompleted, onToggleComplete
       >
         {cleanContentTitle(resource.title, examName)}
       </Link>
-      {isCompleted && !isPyq && <span style={{ fontSize: '0.7rem', color: '#16a34a', fontWeight: 700, background: '#dcfce7', padding: '0.15rem 0.5rem', borderRadius: '999px', flexShrink: 0 }}>Done</span>}
+      {isCompleted && !isPyq && <span style={{ fontSize: '0.7rem', color: 'var(--c-green, #16a34a)', fontWeight: 700, background: 'var(--c-tint-green, #dcfce7)', padding: '0.15rem 0.5rem', borderRadius: '999px', flexShrink: 0 }}>Done</span>}
       {locked ? <Lock size={13} color="#ef4444" style={{ flexShrink: 0 }} /> : <Unlock size={13} color="#16a34a" style={{ flexShrink: 0 }} />}
     </div>
   );
@@ -189,7 +189,7 @@ export function ResourceTile({ resource, examName, locked, isCompleted, onToggle
             {/* Top header: VeerNXT emblem + Lock Pill */}
             <div className="vn-book-cover-header">
               <div className="vn-book-cover-crest-badge">
-                <Shield size={10} style={{ color: '#b45309' }} />
+                <Shield size={10} style={{ color: 'var(--c-amber, #b45309)' }} />
                 <span className="vn-book-cover-crest-text">VEERNXT</span>
               </div>
               <div className={`vn-book-lock-pill ${locked ? 'locked' : 'unlocked'}`}>
@@ -277,7 +277,7 @@ export function IntroManualTile({ intro, locked, onOpen }) {
 
               <div className="vn-book-cover-header">
                 <div className="vn-book-cover-crest-badge">
-                  <Shield size={10} style={{ color: '#b45309' }} />
+                  <Shield size={10} style={{ color: 'var(--c-amber, #b45309)' }} />
                   <span className="vn-book-cover-crest-text">VEERNXT</span>
                 </div>
                 <div className={`vn-book-lock-pill ${locked ? 'locked' : 'unlocked'}`}>
@@ -305,7 +305,7 @@ export function IntroManualTile({ intro, locked, onOpen }) {
             style={{
               width: '16px',
               height: '16px',
-              border: '1.5px solid #cbd5e1',
+              border: '1.5px solid var(--c-line-3, #cbd5e1)',
               borderRadius: '4px',
               display: 'inline-block',
               flexShrink: 0,
@@ -327,7 +327,7 @@ export function IntroManualTile({ intro, locked, onOpen }) {
             <div onClick={(e) => e.stopPropagation()}>
               <button
                 onClick={() => setOpen(false)}
-                style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'transparent', border: 'none', cursor: 'pointer', color: '#64748b' }}
+                style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--c-ink-4, #64748b)' }}
               >
                 <X size={20} />
               </button>
@@ -358,7 +358,7 @@ function QuizRow({ quiz, examName, locked, examId }) {
       style={{
         display: 'flex', alignItems: 'center', gap: '0.65rem', padding: '0.65rem 0.9rem',
         borderRadius: 'var(--radius-sm, 10px)', textDecoration: 'none', color: 'inherit',
-        border: '1px solid var(--border, #e2e8f0)', marginBottom: '0.5rem', background: '#fff',
+        border: '1px solid var(--border, #e2e8f0)', marginBottom: '0.5rem', background: 'var(--c-bg-0, #fff)',
         minWidth: 0,
         boxSizing: 'border-box',
       }}
@@ -370,8 +370,8 @@ function QuizRow({ quiz, examName, locked, examId }) {
           fontWeight: 700,
           padding: '0.15rem 0.45rem',
           borderRadius: '4px',
-          background: '#f0fdf4',
-          color: '#15803d',
+          background: 'var(--c-tint-green, #f0fdf4)',
+          color: 'var(--c-green, #15803d)',
           border: '1px solid #bbf7d0',
           textTransform: 'uppercase',
           letterSpacing: '0.02em',
@@ -425,14 +425,14 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
 
   if (loading) {
     return (
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 0', color: '#94a3b8', fontSize: '0.85rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 0', color: 'var(--c-ink-5, #94a3b8)', fontSize: '0.85rem' }}>
         <RefreshCw className="animate-spin" size={16} /> Loading content…
       </div>
     );
   }
 
   if (error) {
-    return <p style={{ color: '#94a3b8', fontSize: '0.85rem', padding: '0.5rem 0' }}>{error}</p>;
+    return <p style={{ color: 'var(--c-ink-5, #94a3b8)', fontSize: '0.85rem', padding: '0.5rem 0' }}>{error}</p>;
   }
 
   if (variant === 'list') {
@@ -460,7 +460,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
           if (items.length === 0) return null;
           return (
             <div key={key} style={{ marginBottom: '1.1rem' }}>
-              <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>{label}</h4>
+              <h4 style={{ fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>{label}</h4>
               {items.map((res) => (
                 <ResourceRow
                   key={res.id || res.resource_id}
@@ -478,8 +478,8 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
                   to={`/pyq-center?exam=${encodeURIComponent(examId || examName || '')}`}
                   style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.5rem 0.9rem',
-                    borderRadius: '8px', textDecoration: 'none', color: '#166534',
-                    border: '1px dashed #86efac', marginTop: '0.4rem', background: '#f0fdf4',
+                    borderRadius: '8px', textDecoration: 'none', color: 'var(--c-green, #166534)',
+                    border: '1px dashed #86efac', marginTop: '0.4rem', background: 'var(--c-tint-green, #f0fdf4)',
                     fontSize: '0.8rem', fontWeight: 700
                   }}
                 >
@@ -493,7 +493,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
 
         {showMockTests && mockTestList.length > 0 && (
           <div style={{ marginBottom: '1.1rem' }}>
-            <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Mock Tests</h4>
+            <h4 style={{ fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Mock Tests</h4>
             {mockTestList.map((quiz) => (
               <QuizRow
                 key={quiz.id}
@@ -507,8 +507,8 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
               to={`/quiz-center?exam=${examId || examName}`}
               style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.5rem 0.9rem',
-                borderRadius: '8px', textDecoration: 'none', color: '#166534',
-                border: '1px dashed #86efac', marginTop: '0.4rem', background: '#f0fdf4',
+                borderRadius: '8px', textDecoration: 'none', color: 'var(--c-green, #166534)',
+                border: '1px dashed #86efac', marginTop: '0.4rem', background: 'var(--c-tint-green, #f0fdf4)',
                 fontSize: '0.8rem', fontWeight: 700
               }}
             >
@@ -542,7 +542,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
               height: '38px',
               borderRadius: '10px',
               background: '#bbf7d0',
-              color: '#15803d',
+              color: 'var(--c-green, #15803d)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -552,10 +552,10 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
             <Crown size={20} />
           </div>
           <div style={{ flex: 1, zIndex: 1 }}>
-            <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#14532d', marginBottom: '0.15rem' }}>
+            <div style={{ fontSize: '0.88rem', fontWeight: 800, color: 'var(--c-green, #14532d)', marginBottom: '0.15rem' }}>
               Unlock the full library
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#166534', lineHeight: 1.35 }}>
+            <div style={{ fontSize: '0.75rem', color: 'var(--c-green, #166534)', lineHeight: 1.35 }}>
               Get access to PRÉCIS, PYQs, and unlimited mock tests for every exam.
             </div>
           </div>
@@ -566,7 +566,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
               position: 'absolute',
               right: '-10px',
               bottom: '-12px',
-              color: '#16a34a',
+              color: 'var(--c-green, #16a34a)',
               opacity: 0.12,
               pointerEvents: 'none',
             }}
@@ -580,14 +580,14 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
     const hasAnything = SUBJECT_CATEGORY_ORDER.some((c) => (byCategory[c]?.length || 0) > 0) || quizzes.length > 0 || !!intro;
 
     if (!hasAnything) {
-      return <p style={{ color: '#94a3b8', fontSize: '0.85rem', padding: '0.5rem 0' }}>No preparation materials found for this exam yet.</p>;
+      return <p style={{ color: 'var(--c-ink-5, #94a3b8)', fontSize: '0.85rem', padding: '0.5rem 0' }}>No preparation materials found for this exam yet.</p>;
     }
 
     return (
       <div style={{ padding: '0.5rem 0 0' }}>
         {intro && (
           <div id="section-intro" style={{ marginBottom: '1.5rem', scrollMarginTop: '1.5rem' }}>
-            <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.75rem', textTransform: 'uppercase' }}>Introduction</h4>
+            <h4 style={{ fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 700, marginBottom: '0.75rem', textTransform: 'uppercase' }}>Introduction</h4>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: '0.85rem' }}>
               {intro.source === 'auto' ? (
                 <ResourceTile
@@ -610,7 +610,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
           if (items.length === 0) return null;
           return (
             <div key={catKey} style={{ marginBottom: '1.5rem' }}>
-              <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.75rem', textTransform: 'uppercase' }}>{SUBJECT_CATEGORY_LABELS[catKey]}</h4>
+              <h4 style={{ fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 700, marginBottom: '0.75rem', textTransform: 'uppercase' }}>{SUBJECT_CATEGORY_LABELS[catKey]}</h4>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: '0.85rem' }}>
                 {items.map((res) => (
                   <ResourceTile
@@ -630,13 +630,13 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
 
         {quizzes.length > 0 && (
           <div style={{ marginBottom: '1.1rem' }}>
-            <h4 style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Mock Tests</h4>
+            <h4 style={{ fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 700, marginBottom: '0.5rem', textTransform: 'uppercase' }}>Mock Tests</h4>
             <Link
               to="/quiz-center"
               style={{
                 display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.65rem 0.9rem',
                 borderRadius: 0, textDecoration: 'none', color: 'inherit',
-                border: '1px solid var(--border, #e2e8f0)', marginBottom: '0.5rem', background: '#fff',
+                border: '1px solid var(--border, #e2e8f0)', marginBottom: '0.5rem', background: 'var(--c-bg-0, #fff)',
                 fontSize: '0.85rem', fontWeight: 'bold'
               }}
             >
@@ -679,7 +679,7 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
   const visibleCards = showEmptyCategories ? cards : cards.filter((c) => c.count > 0);
 
   if (visibleCards.length === 0) {
-    return <p style={{ color: '#94a3b8', fontSize: '0.85rem', padding: '0.5rem 0' }}>No preparation materials found for this exam yet.</p>;
+    return <p style={{ color: 'var(--c-ink-5, #94a3b8)', fontSize: '0.85rem', padding: '0.5rem 0' }}>No preparation materials found for this exam yet.</p>;
   }
 
   return (
@@ -692,8 +692,8 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
             to={`/exam/${examId}#${anchor}`}
             style={{
               display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem',
-              padding: '1rem 0.5rem', borderRadius: 'var(--radius-md)', border: '1px solid #e2e8f0',
-              textDecoration: 'none', color: 'inherit', position: 'relative', background: empty ? '#f8fafc' : '#fff',
+              padding: '1rem 0.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--c-line-2, #e2e8f0)',
+              textDecoration: 'none', color: 'inherit', position: 'relative', background: empty ? 'var(--c-bg-1, #f8fafc)' : 'var(--c-bg-0, #fff)',
               opacity: empty ? 0.6 : 1,
             }}
           >
@@ -707,8 +707,8 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
               </span>
             )}
             <Icon size={26} color={empty ? '#94a3b8' : 'var(--ios-olive)'} />
-            <span style={{ fontSize: '0.8rem', fontWeight: 700, textAlign: 'center', color: empty ? '#94a3b8' : '#0f172a' }}>{label}</span>
-            <span style={{ fontSize: '0.7rem', color: '#94a3b8' }}>{empty ? 'Not available yet' : `${count} ${count === 1 ? 'item' : 'items'}`}</span>
+            <span style={{ fontSize: '0.8rem', fontWeight: 700, textAlign: 'center', color: empty ? 'var(--c-ink-5, #94a3b8)' : 'var(--c-ink-1, #0f172a)' }}>{label}</span>
+            <span style={{ fontSize: '0.7rem', color: 'var(--c-ink-5, #94a3b8)' }}>{empty ? 'Not available yet' : `${count} ${count === 1 ? 'item' : 'items'}`}</span>
           </Link>
         );
       })}

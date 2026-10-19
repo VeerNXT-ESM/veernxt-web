@@ -108,7 +108,7 @@ const reactSelectStyles = {
     backgroundColor: 'transparent',
     '::-webkit-scrollbar': { width: '6px' },
     '::-webkit-scrollbar-track': { background: 'transparent' },
-    '::-webkit-scrollbar-thumb': { background: '#ddd', borderRadius: '3px' },
+    '::-webkit-scrollbar-thumb': { background: 'var(--c-bg-2, #ddd)', borderRadius: '3px' },
   }),
   option: (provided, state) => ({
     ...provided,
@@ -119,8 +119,8 @@ const reactSelectStyles = {
     cursor: 'pointer',
     fontSize: '0.85rem',
     marginBottom: '2px',
-    '&:active': { backgroundColor: 'var(--ios-olive)', color: 'white' },
+    '&:active': { backgroundColor: 'var(--ios-olive-fill, var(--ios-olive))', color: 'white' },
   }),
   indicatorSeparator: () => ({ display: 'none' }),
-  dropdownIndicator: (provided) => ({ ...provided, padding: '0 0.5rem', color: '#999' }),
+  dropdownIndicator: (provided) => ({ ...provided, padding: '0 0.5rem', color: 'var(--c-ink-5, #999)' }),
 };

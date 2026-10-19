@@ -24,18 +24,18 @@ const customStyles = {
     ...provided,
     margin: '0',
     padding: '0',
-    color: '#333',
+    color: 'var(--c-ink-2, #333)',
     fontFamily: 'inherit',
     fontSize: '0.95rem',
   }),
   placeholder: (provided) => ({
     ...provided,
-    color: '#999',
+    color: 'var(--c-ink-5, #999)',
     fontSize: '0.95rem',
   }),
   singleValue: (provided) => ({
     ...provided,
-    color: '#333',
+    color: 'var(--c-ink-2, #333)',
     fontSize: '0.95rem',
   }),
   menu: (provided) => ({
@@ -57,7 +57,7 @@ const customStyles = {
       background: 'transparent',
     },
     '::-webkit-scrollbar-thumb': {
-      background: '#ddd',
+      background: 'var(--c-bg-2, #ddd)',
       borderRadius: '3px',
     },
   }),
@@ -68,7 +68,7 @@ const customStyles = {
       : state.isFocused 
         ? 'rgba(75, 107, 50, 0.1)' 
         : 'transparent',
-    color: state.isSelected ? 'white' : '#333',
+    color: state.isSelected ? 'white' : 'var(--c-ink-2, #333)',
     padding: '0.6rem 1rem',
     borderRadius: '8px',
     cursor: 'pointer',
@@ -85,7 +85,7 @@ const customStyles = {
   dropdownIndicator: (provided) => ({
     ...provided,
     padding: '0 0.5rem',
-    color: '#999',
+    color: 'var(--c-ink-5, #999)',
   }),
 };
 

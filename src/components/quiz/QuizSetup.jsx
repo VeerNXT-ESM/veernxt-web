@@ -42,13 +42,13 @@ export const QuizSetup = ({
   };
 
   return (
-    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem', fontFamily: "'Inter', sans-serif", color: '#18181b' }}>
+    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem', fontFamily: "'Inter', sans-serif", color: 'var(--c-ink-1, #18181b)' }}>
       
       {/* Resume Banner if In-Progress Quiz Found */}
       {savedQuiz && (
         <div style={{
-          border: '1px solid #e2e8f0',
-          background: '#f8fafc',
+          border: '1px solid var(--c-line-2, #e2e8f0)',
+          background: 'var(--c-bg-1, #f8fafc)',
           padding: '1.25rem',
           borderRadius: 0,
           marginBottom: '2rem',
@@ -61,7 +61,7 @@ export const QuizSetup = ({
         }}>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             <div style={{
-              width: '40px', height: '40px', background: '#f1f5f9',
+              width: '40px', height: '40px', background: 'var(--c-bg-2, #f1f5f9)',
               display: 'flex', alignItems: 'center', justifyContent: 'center'
             }}>
               <RotateCcw size={18} color="#64748b" />
@@ -70,7 +70,7 @@ export const QuizSetup = ({
               <h4 style={{ margin: 0, fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                 Saved Arena Session Detected
               </h4>
-              <p style={{ margin: '0.15rem 0 0 0', fontSize: '0.75rem', color: '#64748b' }}>
+              <p style={{ margin: '0.15rem 0 0 0', fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)' }}>
                 Question: <strong>{savedQuiz.currentIndex + 1}</strong> of <strong>{savedQuiz.questions.length}</strong> • Current Score: <strong>{savedQuiz.score} pts</strong>
               </p>
             </div>
@@ -90,7 +90,7 @@ export const QuizSetup = ({
             <button
               onClick={onDiscardSavedQuiz}
               style={{
-                background: 'white', color: '#ef4444', border: '1px solid #fecaca',
+                background: 'var(--c-bg-0, white)', color: '#ef4444', border: '1px solid #fecaca',
                 padding: '0.5rem 1rem', fontSize: '0.75rem', fontWeight: 700,
                 textTransform: 'uppercase', letterSpacing: '0.5px', cursor: 'pointer'
               }}
@@ -102,14 +102,14 @@ export const QuizSetup = ({
       )}
 
       {/* Configuration Form */}
-      <form onSubmit={handleStart} style={{ background: 'white', border: '1px solid #e2e8f0', padding: '2.5rem' }}>
+      <form onSubmit={handleStart} style={{ background: 'var(--c-bg-0, white)', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '2.5rem' }}>
         
         {/* Title Block */}
-        <div style={{ borderBottom: '1px solid #e2e8f0', paddingBottom: '1.5rem', marginBottom: '2rem' }}>
-          <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '1px' }}>
+        <div style={{ borderBottom: '1px solid var(--c-line-2, #e2e8f0)', paddingBottom: '1.5rem', marginBottom: '2rem' }}>
+          <span style={{ fontSize: '0.7rem', fontWeight: 800, color: 'var(--c-ink-4, #64748b)', textTransform: 'uppercase', letterSpacing: '1px' }}>
             Round Configuration
           </span>
-          <h1 style={{ fontSize: '2.2rem', fontWeight: 300, margin: '0.25rem 0 0.5rem 0', color: '#09090b', letterSpacing: '-0.5px' }}>
+          <h1 style={{ fontSize: '2.2rem', fontWeight: 300, margin: '0.25rem 0 0.5rem 0', color: 'var(--c-ink-1, #09090b)', letterSpacing: '-0.5px' }}>
             Configure Competition Arena
           </h1>
           <p style={{ margin: 0, fontSize: '0.9rem', color: '#71717a' }}>
@@ -126,12 +126,12 @@ export const QuizSetup = ({
             
             {/* General Knowledge */}
             <div style={{
-              border: '2px solid #18181b', padding: '1.25rem', background: '#fff',
+              border: '2px solid #18181b', padding: '1.25rem', background: 'var(--c-bg-0, #fff)',
               position: 'relative', display: 'flex', flexDirection: 'column', gap: '0.5rem'
             }}>
               <span style={{
                 position: 'absolute', top: '0.75rem', right: '0.75rem', fontSize: '0.65rem',
-                fontWeight: 700, background: '#f4f4f5', padding: '0.15rem 0.4rem', fontFamily: 'monospace'
+                fontWeight: 700, background: 'var(--c-bg-2, #f4f4f5)', padding: '0.15rem 0.4rem', fontFamily: 'monospace'
               }}>
                 {totalQuestions} Qs
               </span>
@@ -148,7 +148,7 @@ export const QuizSetup = ({
 
             {/* Math/Reasoning placeholder */}
             <div style={{
-              border: '1px solid #e4e4e7', padding: '1.25rem', background: '#fff',
+              border: '1px solid #e4e4e7', padding: '1.25rem', background: 'var(--c-bg-0, #fff)',
               opacity: 0.5, display: 'flex', flexDirection: 'column', gap: '0.5rem'
             }}>
               <Calculator size={22} color="#71717a" />
@@ -164,7 +164,7 @@ export const QuizSetup = ({
 
             {/* Mixed Arena */}
             <div style={{
-              border: '1px solid #e4e4e7', padding: '1.25rem', background: '#fff',
+              border: '1px solid #e4e4e7', padding: '1.25rem', background: 'var(--c-bg-0, #fff)',
               opacity: 0.5, display: 'flex', flexDirection: 'column', gap: '0.5rem'
             }}>
               <Shuffle size={22} color="#71717a" />
@@ -204,8 +204,8 @@ export const QuizSetup = ({
                   onClick={() => setSelectedCount(count)}
                   style={{
                     flex: 1, padding: '0.9rem 0', border: 'none', borderRight: '1px solid #e4e4e7',
-                    background: active ? '#18181b' : 'white',
-                    color: active ? 'white' : available ? '#18181b' : '#a1a1aa',
+                    background: active ? '#18181b' : 'var(--c-bg-0, white)',
+                    color: active ? 'white' : available ? 'var(--c-ink-1, #18181b)' : '#a1a1aa',
                     fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.5px',
                     cursor: available ? 'pointer' : 'not-allowed', transition: 'all 0.15s',
                     minWidth: '100px'
@@ -220,8 +220,8 @@ export const QuizSetup = ({
               onClick={() => setSelectedCount(totalQuestions)}
               style={{
                 flex: 1, padding: '0.9rem 0', border: 'none',
-                background: selectedCount === totalQuestions ? '#18181b' : 'white',
-                color: selectedCount === totalQuestions ? 'white' : '#18181b',
+                background: selectedCount === totalQuestions ? '#18181b' : 'var(--c-bg-0, white)',
+                color: selectedCount === totalQuestions ? 'white' : 'var(--c-ink-1, #18181b)',
                 fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.5px',
                 cursor: 'pointer', minWidth: '100px'
               }}
@@ -243,8 +243,8 @@ export const QuizSetup = ({
               onClick={() => setDifficulty('all')}
               style={{
                 border: difficulty === 'all' ? '2px solid #18181b' : '1px solid #e4e4e7',
-                background: difficulty === 'all' ? '#18181b' : 'white',
-                color: difficulty === 'all' ? 'white' : '#18181b',
+                background: difficulty === 'all' ? '#18181b' : 'var(--c-bg-0, white)',
+                color: difficulty === 'all' ? 'white' : 'var(--c-ink-1, #18181b)',
                 padding: '0.8rem', textAlign: 'left', cursor: 'pointer'
               }}
             >
@@ -257,8 +257,8 @@ export const QuizSetup = ({
               onClick={() => setDifficulty('easy')}
               style={{
                 border: difficulty === 'easy' ? '2px solid #18181b' : '1px solid #e4e4e7',
-                background: difficulty === 'easy' ? '#18181b' : 'white',
-                color: difficulty === 'easy' ? 'white' : '#18181b',
+                background: difficulty === 'easy' ? '#18181b' : 'var(--c-bg-0, white)',
+                color: difficulty === 'easy' ? 'white' : 'var(--c-ink-1, #18181b)',
                 padding: '0.8rem', textAlign: 'left', cursor: 'pointer'
               }}
             >
@@ -271,8 +271,8 @@ export const QuizSetup = ({
               onClick={() => setDifficulty('medium')}
               style={{
                 border: difficulty === 'medium' ? '2px solid #18181b' : '1px solid #e4e4e7',
-                background: difficulty === 'medium' ? '#18181b' : 'white',
-                color: difficulty === 'medium' ? 'white' : '#18181b',
+                background: difficulty === 'medium' ? '#18181b' : 'var(--c-bg-0, white)',
+                color: difficulty === 'medium' ? 'white' : 'var(--c-ink-1, #18181b)',
                 padding: '0.8rem', textAlign: 'left', cursor: 'pointer'
               }}
             >
@@ -285,8 +285,8 @@ export const QuizSetup = ({
               onClick={() => setDifficulty('hard')}
               style={{
                 border: difficulty === 'hard' ? '2px solid #18181b' : '1px solid #e4e4e7',
-                background: difficulty === 'hard' ? '#18181b' : 'white',
-                color: difficulty === 'hard' ? 'white' : '#18181b',
+                background: difficulty === 'hard' ? '#18181b' : 'var(--c-bg-0, white)',
+                color: difficulty === 'hard' ? 'white' : 'var(--c-ink-1, #18181b)',
                 padding: '0.8rem', textAlign: 'left', cursor: 'pointer'
               }}
             >
@@ -312,8 +312,8 @@ export const QuizSetup = ({
                 onClick={() => setMode('competitive')}
                 style={{
                   border: mode === 'competitive' ? '2px solid #18181b' : '1px solid #e4e4e7',
-                  background: mode === 'competitive' ? '#18181b' : 'white',
-                  color: mode === 'competitive' ? 'white' : '#18181b',
+                  background: mode === 'competitive' ? '#18181b' : 'var(--c-bg-0, white)',
+                  color: mode === 'competitive' ? 'white' : 'var(--c-ink-1, #18181b)',
                   padding: '0.9rem 1.25rem', textAlign: 'left', cursor: 'pointer', width: '100%'
                 }}
               >
@@ -326,8 +326,8 @@ export const QuizSetup = ({
                 onClick={() => setMode('learning')}
                 style={{
                   border: mode === 'learning' ? '2px solid #18181b' : '1px solid #e4e4e7',
-                  background: mode === 'learning' ? '#18181b' : 'white',
-                  color: mode === 'learning' ? 'white' : '#18181b',
+                  background: mode === 'learning' ? '#18181b' : 'var(--c-bg-0, white)',
+                  color: mode === 'learning' ? 'white' : 'var(--c-ink-1, #18181b)',
                   padding: '0.9rem 1.25rem', textAlign: 'left', cursor: 'pointer', width: '100%'
                 }}
               >
@@ -353,8 +353,8 @@ export const QuizSetup = ({
                   onClick={() => setTimeLimitSeconds(sec)}
                   style={{
                     padding: '1rem 0', border: 'none', borderRight: '1px solid #e4e4e7',
-                    background: mode === 'learning' ? '#f4f4f5' : (timeLimitSeconds === sec ? '#18181b' : 'white'),
-                    color: mode === 'learning' ? '#a1a1aa' : (timeLimitSeconds === sec ? 'white' : '#18181b'),
+                    background: mode === 'learning' ? '#f4f4f5' : (timeLimitSeconds === sec ? '#18181b' : 'var(--c-bg-0, white)'),
+                    color: mode === 'learning' ? '#a1a1aa' : (timeLimitSeconds === sec ? 'white' : 'var(--c-ink-1, #18181b)'),
                     fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.5px',
                     cursor: mode === 'learning' ? 'not-allowed' : 'pointer'
                   }}
@@ -371,8 +371,8 @@ export const QuizSetup = ({
                 onClick={() => setTimeLimitSeconds(0)}
                 style={{
                   padding: '1rem 0', border: 'none',
-                  background: mode === 'learning' ? '#f4f4f5' : (timeLimitSeconds === 0 ? '#18181b' : 'white'),
-                  color: mode === 'learning' ? '#a1a1aa' : (timeLimitSeconds === 0 ? 'white' : '#18181b'),
+                  background: mode === 'learning' ? '#f4f4f5' : (timeLimitSeconds === 0 ? '#18181b' : 'var(--c-bg-0, white)'),
+                  color: mode === 'learning' ? '#a1a1aa' : (timeLimitSeconds === 0 ? 'white' : 'var(--c-ink-1, #18181b)'),
                   fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.5px',
                   cursor: mode === 'learning' ? 'not-allowed' : 'pointer'
                 }}

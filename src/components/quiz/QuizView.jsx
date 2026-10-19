@@ -147,11 +147,11 @@ export const QuizView = ({
   const answeredCount = Object.keys(state.answers).length;
 
   return (
-    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem', fontFamily: "'Inter', sans-serif", color: '#18181b' }}>
+    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem', fontFamily: "'Inter', sans-serif", color: 'var(--c-ink-1, #18181b)' }}>
       
       {/* 1. Status Bar Panel */}
       <div style={{
-        background: '#fff', border: '1px solid #e4e4e7', padding: '1.25rem 1.5rem', marginBottom: '1.5rem',
+        background: 'var(--c-bg-0, #fff)', border: '1px solid #e4e4e7', padding: '1.25rem 1.5rem', marginBottom: '1.5rem',
         display: 'flex', flexDirection: 'column', gap: '0.75rem'
       }}>
         {/* Top line */}
@@ -187,7 +187,7 @@ export const QuizView = ({
               type="button"
               onClick={() => onToggleBookmark(currentQ.id)}
               style={{
-                background: 'white', border: '1px solid #e4e4e7', width: '36px', height: '36px',
+                background: 'var(--c-bg-0, white)', border: '1px solid #e4e4e7', width: '36px', height: '36px',
                 display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer',
                 color: isBookmarked ? '#eab308' : '#71717a'
               }}
@@ -200,7 +200,7 @@ export const QuizView = ({
               type="button"
               onClick={() => setShowExitConfirm(true)}
               style={{
-                background: 'white', border: '1px solid #e4e4e7', height: '36px', padding: '0 0.85rem',
+                background: 'var(--c-bg-0, white)', border: '1px solid #e4e4e7', height: '36px', padding: '0 0.85rem',
                 display: 'flex', alignItems: 'center', gap: '0.4rem', cursor: 'pointer',
                 fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', color: '#71717a'
               }}
@@ -212,7 +212,7 @@ export const QuizView = ({
         </div>
 
         {/* Flat Linear Progress Bar */}
-        <div style={{ height: '3px', background: '#e4e4e7', width: '100%', position: 'relative' }}>
+        <div style={{ height: '3px', background: 'var(--c-bg-2, #e4e4e7)', width: '100%', position: 'relative' }}>
           <div style={{
             height: '100%', background: '#18181b',
             width: `${((state.currentIndex + (isAnswered ? 1 : 0)) / state.questions.length) * 100}%`,
@@ -223,7 +223,7 @@ export const QuizView = ({
         {/* Sub-row (Timer & Mode Indicator) */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.75rem' }}>
           {timeLimit > 0 ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', color: timeLeft <= 5 ? '#ef4444' : '#18181b', fontWeight: 800 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', color: timeLeft <= 5 ? '#ef4444' : 'var(--c-ink-1, #18181b)', fontWeight: 800 }}>
               <Clock size={13} />
               <span>Time Remaining: <strong style={{ fontFamily: 'monospace', fontSize: '0.8rem' }}>{timeLeft}s</strong></span>
             </div>
@@ -240,7 +240,7 @@ export const QuizView = ({
 
       {/* 2. Main Question Card Panel */}
       <div style={{
-        background: '#fff', border: '1px solid #e4e4e7', padding: '3rem 2.5rem 2.5rem 2.5rem',
+        background: 'var(--c-bg-0, #fff)', border: '1px solid #e4e4e7', padding: '3rem 2.5rem 2.5rem 2.5rem',
         marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.75rem'
       }}>
         {/* Category tags */}
@@ -250,7 +250,7 @@ export const QuizView = ({
           </span>
           <span style={{
             fontSize: '0.6rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px',
-            border: '1px solid #eab308', color: '#ca8a04', padding: '0.15rem 0.4rem',
+            border: '1px solid #eab308', color: 'var(--c-amber, #ca8a04)', padding: '0.15rem 0.4rem',
             fontFamily: 'monospace'
           }}>
             {currentQ.difficulty.toUpperCase()}
@@ -260,7 +260,7 @@ export const QuizView = ({
         {/* Question Text */}
         <div style={{ textAlign: 'left' }}>
           <h2 
-            style={{ fontSize: '1.6rem', fontWeight: 300, color: '#09090b', margin: 0, lineHeight: 1.4, letterSpacing: '-0.5px' }}
+            style={{ fontSize: '1.6rem', fontWeight: 300, color: 'var(--c-ink-1, #09090b)', margin: 0, lineHeight: 1.4, letterSpacing: '-0.5px' }}
             dangerouslySetInnerHTML={{ __html: currentQ.question }}
           />
         </div>
@@ -321,7 +321,7 @@ export const QuizView = ({
                 </div>
 
                 {/* Option Text cell */}
-                <div style={{ flex: 1, padding: '1rem 1.25rem', fontSize: '0.9rem', fontWeight: 500, color: '#27272a' }}>
+                <div style={{ flex: 1, padding: '1rem 1.25rem', fontSize: '0.9rem', fontWeight: 500, color: 'var(--c-ink-1, #27272a)' }}>
                   <div dangerouslySetInnerHTML={{ __html: opt }} />
                 </div>
               </button>
@@ -340,7 +340,7 @@ export const QuizView = ({
               style={{
                 background: 'none', border: 'none', cursor: state.currentIndex === 0 ? 'not-allowed' : 'pointer',
                 display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.75rem', fontWeight: 800,
-                color: state.currentIndex === 0 ? '#d1d1d6' : '#18181b', textTransform: 'uppercase', letterSpacing: '0.5px'
+                color: state.currentIndex === 0 ? '#d1d1d6' : 'var(--c-ink-1, #18181b)', textTransform: 'uppercase', letterSpacing: '0.5px'
               }}
             >
               ← Previous
@@ -357,14 +357,14 @@ export const QuizView = ({
         {/* Solution Explanation for Learning Mode */}
         {showExplanation && currentQ.explanation && (
           <div style={{
-            background: '#f8fafc', border: '1px solid #e2e8f0', padding: '1.5rem',
+            background: 'var(--c-bg-1, #f8fafc)', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '1.5rem',
             textAlign: 'left', marginTop: '0.5rem'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', color: 'var(--ios-olive)', fontWeight: 800, fontSize: '0.8rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               <Lightbulb size={15} /> Insight & Explanation
             </div>
             <div 
-              style={{ fontSize: '0.8rem', color: '#475569', lineHeight: 1.6 }}
+              style={{ fontSize: '0.8rem', color: 'var(--c-ink-3, #475569)', lineHeight: 1.6 }}
               dangerouslySetInnerHTML={{ __html: currentQ.explanation }}
             />
           </div>
@@ -379,7 +379,7 @@ export const QuizView = ({
         const canJump = state.config.mode === 'learning';
         return (
           <div style={{
-            background: '#fff', border: '1px solid #e4e4e7', padding: '1rem 1.5rem',
+            background: 'var(--c-bg-0, #fff)', border: '1px solid #e4e4e7', padding: '1rem 1.5rem',
             display: 'flex', flexDirection: 'column', gap: '0.75rem', minWidth: 0
           }}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem 1.5rem', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', color: '#71717a' }}>
@@ -424,7 +424,7 @@ export const QuizView = ({
                     title={`Question ${idx + 1}${hasFigure ? ' (has a figure)' : ''}`}
                     aria-label={`Question ${idx + 1}${hasFigure ? ', has a figure' : ''}`}
                   >
-                    {hasFigure && <span style={{ width: 5, height: 5, borderRadius: '50%', background: ans ? '#fff' : '#f97316' }} />}
+                    {hasFigure && <span style={{ width: 5, height: 5, borderRadius: '50%', background: ans ? 'var(--c-bg-0, #fff)' : '#f97316' }} />}
                   </button>
                 );
               })}
@@ -452,10 +452,10 @@ export const QuizView = ({
           zIndex: 100, padding: '1rem'
         }}>
           <div style={{
-            background: 'white', border: '1px solid #e4e4e7', padding: '2.5rem 2rem',
+            background: 'var(--c-bg-0, white)', border: '1px solid #e4e4e7', padding: '2.5rem 2rem',
             maxWidth: '420px', width: '100%', textAlign: 'center'
           }}>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#09090b', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--c-ink-1, #09090b)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '-0.5px' }}>
               Abandon Current Session?
             </h3>
             <p style={{ fontSize: '0.85rem', color: '#71717a', lineHeight: 1.5, marginBottom: '2rem' }}>
@@ -474,7 +474,7 @@ export const QuizView = ({
               <button
                 onClick={() => setShowExitConfirm(false)}
                 style={{
-                  background: 'white', color: '#18181b', border: '1px solid #e4e4e7',
+                  background: 'var(--c-bg-0, white)', color: 'var(--c-ink-1, #18181b)', border: '1px solid #e4e4e7',
                   padding: '0.8rem', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px', cursor: 'pointer'
                 }}
               >

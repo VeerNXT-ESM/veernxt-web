@@ -93,14 +93,14 @@ export default function PyqCenter() {
   const examFilterZeroedOut = !!targetExam && papers.length > 0 && !papers.some(matchesExamFilter);
 
   return (
-    <div style={{ minHeight: '100vh', background: '#F4F4F8', padding: '2rem 1.5rem', fontFamily: "'Inter', sans-serif" }}>
+    <div style={{ minHeight: '100vh', background: 'var(--ios-bg, #F4F4F8)', padding: '2rem 1.5rem', fontFamily: "'Inter', sans-serif" }}>
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
 
         <Link
           to={location.state?.from || "/learning-center"}
           style={{
             display: 'inline-flex', alignItems: 'center', gap: '0.4rem', textDecoration: 'none',
-            color: '#64748b', fontSize: '0.85rem', fontWeight: 700, marginBottom: '1.5rem',
+            color: 'var(--c-ink-4, #64748b)', fontSize: '0.85rem', fontWeight: 700, marginBottom: '1.5rem',
             textTransform: 'uppercase', letterSpacing: '0.5px'
           }}
         >
@@ -119,7 +119,7 @@ export default function PyqCenter() {
               PYQ Center
             </h1>
           </div>
-          <p style={{ margin: 0, fontSize: '0.9rem', color: '#64748b', fontWeight: 500 }}>
+          <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 500 }}>
             Practice with real questions from previous examinations, with answers and explanations.
           </p>
 
@@ -129,7 +129,7 @@ export default function PyqCenter() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.75rem',
-              background: '#eef2e6',
+              background: 'var(--c-tint-green, #eef2e6)',
               border: '1px solid var(--ios-olive, #4b6b32)',
               borderRadius: '999px',
               padding: '0.4rem 1rem',
@@ -145,7 +145,7 @@ export default function PyqCenter() {
                   style={{
                     background: 'none',
                     border: 'none',
-                    color: '#64748b',
+                    color: 'var(--c-ink-4, #64748b)',
                     cursor: 'pointer',
                     fontSize: '0.75rem',
                     fontWeight: 700,
@@ -162,9 +162,9 @@ export default function PyqCenter() {
 
         <div style={{
           display: 'flex', flexDirection: 'column', mdDirection: 'row', gap: '1rem',
-          background: 'white', border: '1px solid #e2e8f0', padding: '1.25rem', marginBottom: '2rem'
+          background: 'var(--c-bg-0, white)', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '1.25rem', marginBottom: '2rem'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', border: '1px solid #e2e8f0', padding: '0.5rem 0.75rem', flex: 1 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '0.5rem 0.75rem', flex: 1 }}>
             <Search size={16} color="#94a3b8" />
             <input
               type="text"
@@ -182,7 +182,7 @@ export default function PyqCenter() {
                 onClick={() => setSelectedSubject(sub)}
                 style={{
                   background: selectedSubject === sub ? 'var(--ios-olive)' : '#f8fafc',
-                  color: selectedSubject === sub ? 'white' : '#64748b',
+                  color: selectedSubject === sub ? 'white' : 'var(--c-ink-4, #64748b)',
                   border: `1px solid ${selectedSubject === sub ? 'var(--ios-olive)' : '#e2e8f0'}`,
                   padding: '0.4rem 1rem', fontSize: '0.8rem', fontWeight: 700, cursor: 'pointer',
                   textTransform: 'uppercase', letterSpacing: '0.5px', whiteSpace: 'nowrap'
@@ -199,15 +199,15 @@ export default function PyqCenter() {
             <RefreshCw className="animate-spin" size={24} color="var(--ios-olive)" />
           </div>
         ) : filteredPapers.length === 0 && examFilterZeroedOut ? (
-          <div style={{ textAlign: 'center', padding: '4rem 2rem', background: 'white', border: '1px solid #e2e8f0' }}>
+          <div style={{ textAlign: 'center', padding: '4rem 2rem', background: 'var(--c-bg-0, white)', border: '1px solid var(--c-line-2, #e2e8f0)' }}>
             <ScrollText size={48} color="#cbd5e1" style={{ marginBottom: '1rem' }} />
             <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--ios-text)' }}>No PYQs matched to {targetExam.name} yet</h3>
-            <p style={{ color: '#64748b', fontSize: '0.85rem', margin: '0 0 1rem' }}>We haven't tagged past papers for this exact exam yet — the library has papers for other exams though.</p>
+            <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.85rem', margin: '0 0 1rem' }}>We haven't tagged past papers for this exact exam yet — the library has papers for other exams though.</p>
             <button
               type="button"
               onClick={() => setSearchParams({})}
               style={{
-                background: 'var(--ios-olive)', color: 'white', border: 'none',
+                background: 'var(--ios-olive-fill, var(--ios-olive))', color: 'white', border: 'none',
                 padding: '0.6rem 1.25rem', fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer',
                 textTransform: 'uppercase', letterSpacing: '0.5px',
               }}
@@ -216,10 +216,10 @@ export default function PyqCenter() {
             </button>
           </div>
         ) : filteredPapers.length === 0 ? (
-          <div style={{ textAlign: 'center', padding: '4rem 2rem', background: 'white', border: '1px solid #e2e8f0' }}>
+          <div style={{ textAlign: 'center', padding: '4rem 2rem', background: 'var(--c-bg-0, white)', border: '1px solid var(--c-line-2, #e2e8f0)' }}>
             <ScrollText size={48} color="#cbd5e1" style={{ marginBottom: '1rem' }} />
             <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--ios-text)' }}>No PYQs Found</h3>
-            <p style={{ color: '#64748b', fontSize: '0.85rem', margin: 0 }}>Try clearing filters or checking back later.</p>
+            <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.85rem', margin: 0 }}>Try clearing filters or checking back later.</p>
           </div>
         ) : (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
@@ -229,15 +229,15 @@ export default function PyqCenter() {
                 <div
                   key={paper.id}
                   style={{
-                    background: 'white', border: '1px solid #e2e8f0', padding: '1.5rem',
+                    background: 'var(--c-bg-0, white)', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '1.5rem',
                     display: 'flex', flexDirection: 'column', gap: '1rem', position: 'relative'
                   }}
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span style={{
                       fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase',
-                      letterSpacing: '0.5px', color: '#64748b', background: '#f8fafc',
-                      padding: '0.2rem 0.5rem', border: '1px solid #e2e8f0'
+                      letterSpacing: '0.5px', color: 'var(--c-ink-4, #64748b)', background: 'var(--c-bg-1, #f8fafc)',
+                      padding: '0.2rem 0.5rem', border: '1px solid var(--c-line-2, #e2e8f0)'
                     }}>
                       {paper.subject || 'GENERAL'}
                     </span>
@@ -252,7 +252,7 @@ export default function PyqCenter() {
                     <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.05rem', fontWeight: 800, color: 'var(--ios-text)', lineHeight: 1.3 }}>
                       {paper.title}
                     </h3>
-                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#64748b', lineHeight: 1.4 }}>
+                    <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)', lineHeight: 1.4 }}>
                       {paper.exam_name || 'Previous year question paper'} {paper.total_questions ? `· ${paper.total_questions} Qs` : ''}
                     </p>
                   </div>
@@ -260,7 +260,7 @@ export default function PyqCenter() {
                   <Link
                     to={`/pyq-reader/${paper.id}`}
                     style={{
-                      textDecoration: 'none', background: 'var(--ios-olive)', color: 'white',
+                      textDecoration: 'none', background: 'var(--ios-olive-fill, var(--ios-olive))', color: 'white',
                       textAlign: 'center', padding: '0.75rem', fontWeight: 800, fontSize: '0.85rem',
                       textTransform: 'uppercase', letterSpacing: '0.5px',
                       display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem',

@@ -257,7 +257,7 @@ const EmployerDashboard = () => {
               <span className="emp-subtitle">{designation} at <strong>{companyName}</strong></span>
             </div>
             <div className="emp-actions">
-              <Link to="/find-candidates" className="btn-secondary ios-pill" style={{ textDecoration: 'none', background: 'white', color: '#1F3A2E', fontWeight: 700, padding: '0.65rem 1.25rem' }}>
+              <Link to="/find-candidates" className="btn-secondary ios-pill emp-search-btn" style={{ textDecoration: 'none', background: 'var(--c-bg-0, white)', color: 'var(--c-green, #1F3A2E)', fontWeight: 700, padding: '0.65rem 1.25rem' }}>
                 Search Military Talent
               </Link>
               <Button variant="ghost" onClick={handleOpenEditModal} style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }}>
@@ -294,22 +294,22 @@ const EmployerDashboard = () => {
         </div>
 
         {/* Recruiter Talent Pipeline & Introductions Section */}
-        <div className="ios-card" style={{ padding: '2rem', background: 'white', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)', marginBottom: '1.5rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
+        <div className="ios-card emp-card" style={{ padding: '2rem', background: 'var(--c-bg-0, white)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)', marginBottom: '1.5rem' }}>
+          <div className="emp-sec-head" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <Sparkles size={18} color="var(--ios-olive)" />
-                <h2 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
+                <h2 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', letterSpacing: '-0.02em', margin: 0 }}>
                   Candidate Pipeline & Introductions
                 </h2>
               </div>
-              <p style={{ color: '#64748b', fontSize: '0.86rem', margin: '0.2rem 0 0' }}>
+              <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.86rem', margin: '0.2rem 0 0' }}>
                 Veterans you have invited for introductions. Contact details unlock immediately upon candidate acceptance.
               </p>
             </div>
 
             {/* Pipeline status filter tabs */}
-            <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
+            <div className="emp-filter-tabs" role="group" aria-label="Filter candidates by status" style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
               {[
                 { id: 'all', label: `All (${pipelineRequests.length})` },
                 { id: 'pending', label: `Pending Consent (${pendingCount})` },
@@ -319,6 +319,7 @@ const EmployerDashboard = () => {
               ].map(tab => (
                 <button
                   key={tab.id}
+                  aria-pressed={pipelineFilter === tab.id}
                   onClick={() => setPipelineFilter(tab.id)}
                   style={{
                     padding: '0.35rem 0.75rem',
@@ -338,16 +339,16 @@ const EmployerDashboard = () => {
           </div>
 
           {pipelineRequests.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '2.5rem 1rem', background: '#f8fafc', borderRadius: '16px', border: '1px dashed #cbd5e1' }}>
+            <div style={{ textAlign: 'center', padding: '2.5rem 1rem', background: 'var(--c-bg-1, #f8fafc)', borderRadius: '16px', border: '1px dashed var(--c-line-3, #cbd5e1)' }}>
               <Users size={32} color="#94a3b8" style={{ margin: '0 auto 0.5rem' }} />
-              <h4 style={{ margin: '0 0 0.35rem', color: '#0f172a' }}>Your Talent Pipeline is Empty</h4>
-              <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '0 0 1rem', maxWidth: '480px', marginLeft: 'auto', marginRight: 'auto' }}>
+              <h4 style={{ margin: '0 0 0.35rem', color: 'var(--c-ink-1, #0f172a)' }}>Your Talent Pipeline is Empty</h4>
+              <p style={{ fontSize: '0.85rem', color: 'var(--c-ink-4, #64748b)', margin: '0 0 1rem', maxWidth: '480px', marginLeft: 'auto', marginRight: 'auto' }}>
                 Search through verified military profiles and send introduction requests. Candidates will be notified on WhatsApp.
               </p>
               <Button size="sm" onClick={() => navigate('/find-candidates')}>Search Candidate Profiles</Button>
             </div>
           ) : filteredPipeline.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '2rem', color: '#64748b', fontSize: '0.88rem' }}>
+            <div style={{ textAlign: 'center', padding: '2rem', color: 'var(--c-ink-4, #64748b)', fontSize: '0.88rem' }}>
               No candidate requests in the "{pipelineFilter}" tab.
             </div>
           ) : (
@@ -360,9 +361,10 @@ const EmployerDashboard = () => {
                 return (
                   <div 
                     key={item.id}
+                    className="emp-pipe-item"
                     style={{
-                      background: isUnlocked ? '#fcfdfa' : '#ffffff',
-                      border: isUnlocked ? '1.5px solid #cce5c4' : '1px solid #e2e8f0',
+                      background: isUnlocked ? 'var(--c-tint-green, #fcfdfa)' : 'var(--c-bg-0, #ffffff)',
+                      border: isUnlocked ? '1.5px solid #cce5c4' : '1px solid var(--c-line-2, #e2e8f0)',
                       borderRadius: '16px',
                       padding: '1.15rem 1.35rem',
                       display: 'flex',
@@ -372,13 +374,14 @@ const EmployerDashboard = () => {
                       gap: '1rem'
                     }}
                   >
-                    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                    <div className="emp-pipe-main" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                       <div style={{
+                        flexShrink: 0,
                         width: '44px',
                         height: '44px',
                         borderRadius: '12px',
-                        background: isUnlocked ? '#eef4ea' : '#f1f5f9',
-                        color: isUnlocked ? '#2d5a27' : '#64748b',
+                        background: isUnlocked ? 'var(--c-tint-green, #eef4ea)' : 'var(--c-bg-2, #f1f5f9)',
+                        color: isUnlocked ? 'var(--c-green, #2d5a27)' : 'var(--c-ink-4, #64748b)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -388,34 +391,34 @@ const EmployerDashboard = () => {
                         {isUnlocked ? (c.name || 'VN').slice(0, 2).toUpperCase() : (c.maskedCode || 'VN').slice(3)}
                       </div>
 
-                      <div>
+                      <div style={{ minWidth: 0 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                          <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 800, color: '#0f172a' }}>
+                          <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)' }}>
                             {c.name || `Candidate ${c.maskedCode}`}
                           </h4>
                           {isUnlocked ? (
-                            <span style={{ fontSize: '0.72rem', background: '#dcfce7', color: '#15803d', padding: '0.15rem 0.5rem', borderRadius: '999px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                            <span style={{ fontSize: '0.72rem', background: 'var(--c-tint-green, #dcfce7)', color: 'var(--c-green, #15803d)', padding: '0.15rem 0.5rem', borderRadius: '999px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
                               <Unlock size={11} /> Contact Unlocked
                             </span>
                           ) : (
-                            <span style={{ fontSize: '0.72rem', background: '#fef3c7', color: '#92400e', padding: '0.15rem 0.5rem', borderRadius: '999px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                            <span style={{ fontSize: '0.72rem', background: 'var(--c-tint-amber, #fef3c7)', color: 'var(--c-amber, #92400e)', padding: '0.15rem 0.5rem', borderRadius: '999px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
                               <Clock size={11} /> Awaiting Veteran Consent
                             </span>
                           )}
                           {item.fit_score && (
-                            <span style={{ fontSize: '0.72rem', background: '#eef4ea', color: '#2d5a27', padding: '0.15rem 0.5rem', borderRadius: '999px', fontWeight: 800 }}>
+                            <span style={{ fontSize: '0.72rem', background: 'var(--c-tint-green, #eef4ea)', color: 'var(--c-green, #2d5a27)', padding: '0.15rem 0.5rem', borderRadius: '999px', fontWeight: 800 }}>
                               {item.fit_score}% Fit
                             </span>
                           )}
                         </div>
 
-                        <p style={{ margin: '0.2rem 0 0', fontSize: '0.82rem', color: '#475569' }}>
+                        <p style={{ margin: '0.2rem 0 0', fontSize: '0.82rem', color: 'var(--c-ink-3, #475569)' }}>
                           Role: <strong>{reqTitle}</strong> • {c.service || 'Armed Forces'} • {c.rank || 'Veteran'} ({c.trade || 'Specialist'})
                         </p>
 
                         {/* Unmasked Contact info */}
                         {isUnlocked && (c.mobile || c.email) && (
-                          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '0.4rem', fontSize: '0.82rem', color: '#15803d' }}>
+                          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '0.4rem', fontSize: '0.82rem', color: 'var(--c-green, #15803d)' }}>
                             {c.mobile && (
                               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', fontWeight: 700 }}>
                                 <Phone size={13} /> {c.mobile}
@@ -432,7 +435,7 @@ const EmployerDashboard = () => {
                     </div>
 
                     {/* Pipeline Actions */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+                    <div className="emp-pipe-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
                       {isUnlocked ? (
                         <>
                           {c.mobile && (
@@ -466,13 +469,13 @@ const EmployerDashboard = () => {
                             </Button>
                           )}
                           {item.status === 'hired' && (
-                            <span style={{ fontSize: '0.82rem', fontWeight: 800, color: '#15803d', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                            <span style={{ fontSize: '0.82rem', fontWeight: 800, color: 'var(--c-green, #15803d)', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
                               <CheckCircle2 size={16} /> Hired via VeerNXT
                             </span>
                           )}
                         </>
                       ) : (
-                        <span style={{ fontSize: '0.78rem', color: '#64748b' }}>
+                        <span style={{ fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)' }}>
                           Notified via WhatsApp
                         </span>
                       )}
@@ -485,18 +488,18 @@ const EmployerDashboard = () => {
         </div>
 
         {/* Active Requirements Card */}
-        <div className="ios-card" style={{ padding: '2rem', background: 'white', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)', marginBottom: '1.5rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
-            <h2 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>Active Job Requirements</h2>
+        <div className="ios-card emp-card" style={{ padding: '2rem', background: 'var(--c-bg-0, white)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)', marginBottom: '1.5rem' }}>
+          <div className="emp-sec-head emp-sec-head-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
+            <h2 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', letterSpacing: '-0.02em', margin: 0 }}>Active Job Requirements</h2>
             <Button size="sm" icon={Plus} onClick={() => navigate('/employer/post-job')}>Post Another Job</Button>
           </div>
           {requirements.length === 0 ? (
-            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>No requirements posted yet — tell us who you're hiring for and our HR team will get started.</p>
+            <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.9rem', margin: 0 }}>No requirements posted yet — tell us who you're hiring for and our HR team will get started.</p>
           ) : (
-            <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
+            <div className="emp-req-wrap" style={{ overflowX: 'auto' }}>
+              <table className="emp-req-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
                 <thead>
-                  <tr style={{ textAlign: 'left', color: '#64748b', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.03em' }}>
+                  <tr style={{ textAlign: 'left', color: 'var(--c-ink-4, #64748b)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.03em' }}>
                     <th style={{ padding: '0.5rem 0.75rem 0.5rem 0' }}>Role & Sector</th>
                     <th style={{ padding: '0.5rem 0.75rem' }}>Tags</th>
                     <th style={{ padding: '0.5rem 0.75rem', textAlign: 'right' }}>Positions</th>
@@ -506,8 +509,8 @@ const EmployerDashboard = () => {
                 </thead>
                 <tbody>
                   {requirements.map((r) => (
-                    <tr key={r.id} style={{ borderTop: '1px solid #f1f5f9' }}>
-                      <td style={{ padding: '0.65rem 0.75rem 0.65rem 0', color: '#0f172a' }}>
+                    <tr key={r.id} style={{ borderTop: '1px solid var(--c-line-1, #f1f5f9)' }}>
+                      <td data-cell="role" style={{ padding: '0.65rem 0.75rem 0.65rem 0', color: 'var(--c-ink-1, #0f172a)' }}>
                         <div style={{ fontWeight: 700 }}>{Array.isArray(r.role_titles) ? r.role_titles.map(rt => typeof rt === 'string' ? rt : (rt?.title || '')).filter(Boolean).join(' / ') : (typeof r.role_titles === 'string' ? r.role_titles : 'Role')}</div>
                         {r.sector && typeof r.sector === 'string' && (
                           <div style={{ fontSize: '0.75rem', color: 'var(--ios-olive)', fontWeight: 600, marginTop: '0.15rem' }}>
@@ -515,32 +518,32 @@ const EmployerDashboard = () => {
                           </div>
                         )}
                       </td>
-                      <td style={{ padding: '0.65rem 0.75rem' }}>
+                      <td data-cell="tags" style={{ padding: '0.65rem 0.75rem' }}>
                         {Array.isArray(r.tags) && r.tags.length > 0 ? (
                           <div style={{ display: 'flex', gap: '0.25rem', flexWrap: 'wrap' }}>
                             {r.tags.slice(0, 3).map((t, tIdx) => {
                               const label = typeof t === 'string' ? t : (t?.label || t?.name || '');
                               return label ? (
-                                <span key={tIdx} style={{ fontSize: '0.7rem', background: '#f1f5f9', border: '1px solid #e2e8f0', padding: '0.15rem 0.4rem', borderRadius: '4px', color: '#475569' }}>
+                                <span key={tIdx} style={{ fontSize: '0.7rem', background: 'var(--c-bg-2, #f1f5f9)', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '0.15rem 0.4rem', borderRadius: '4px', color: 'var(--c-ink-3, #475569)' }}>
                                   #{label}
                                 </span>
                               ) : null;
                             })}
-                            {r.tags.length > 3 && <span style={{ fontSize: '0.7rem', color: '#94a3b8' }}>+{r.tags.length - 3}</span>}
+                            {r.tags.length > 3 && <span style={{ fontSize: '0.7rem', color: 'var(--c-ink-5, #94a3b8)' }}>+{r.tags.length - 3}</span>}
                           </div>
                         ) : (
-                          <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>—</span>
+                          <span style={{ fontSize: '0.75rem', color: 'var(--c-ink-5, #94a3b8)' }}>—</span>
                         )}
                       </td>
-                      <td style={{ padding: '0.65rem 0.75rem', textAlign: 'right', fontWeight: 600 }}>{r.quantity}</td>
-                      <td style={{ padding: '0.65rem 0.75rem', textAlign: 'center' }}>
+                      <td data-cell="positions" style={{ padding: '0.65rem 0.75rem', textAlign: 'right', fontWeight: 600 }}>{r.quantity}<span className="emp-pos-word"> {Number(r.quantity) === 1 ? 'position' : 'positions'}</span></td>
+                      <td data-cell="status" style={{ padding: '0.65rem 0.75rem', textAlign: 'center' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, padding: '0.2rem 0.6rem', borderRadius: 999, background: 'rgba(75,107,50,0.1)', color: 'var(--ios-olive)' }}>
                           {REQUIREMENT_STATUS_LABEL[r.status] || r.status}
                         </span>
                       </td>
-                      <td style={{ padding: '0.65rem 0 0.65rem 0.75rem', textAlign: 'right' }}>
-                        <Button 
-                          size="sm" 
+                      <td data-cell="action" style={{ padding: '0.65rem 0 0.65rem 0.75rem', textAlign: 'right' }}>
+                        <Button
+                          size="sm"
                           variant="secondary"
                           onClick={() => navigate(`/find-candidates?requirementId=${r.id}`)}
                           style={{ fontSize: '0.78rem', padding: '0.25rem 0.6rem' }}
@@ -557,38 +560,38 @@ const EmployerDashboard = () => {
         </div>
 
         {/* Veteran Talent Spotlight Card */}
-        <div className="ios-card" style={{ padding: '2rem', background: 'white', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '0.75rem' }}>
+        <div className="ios-card emp-card" style={{ padding: '2rem', background: 'var(--c-bg-0, white)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2)', border: '1px solid rgba(0,0,0,0.02)' }}>
+          <div className="emp-sec-head emp-sec-head-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '0.75rem' }}>
             <div style={{ textAlign: 'left' }}>
-              <h2 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>Veteran Talent Spotlight</h2>
-              <p style={{ color: '#64748b', fontSize: '0.88rem', margin: '0.2rem 0 0' }}>Top transitioning military candidates matching corporate requisites</p>
+              <h2 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', letterSpacing: '-0.02em', margin: 0 }}>Veteran Talent Spotlight</h2>
+              <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.88rem', margin: '0.2rem 0 0' }}>Top transitioning military candidates matching corporate requisites</p>
             </div>
             <Link to="/find-candidates" style={{ color: 'var(--ios-olive)', fontWeight: 700, fontSize: '0.88rem', textDecoration: 'none' }}>View All Candidates →</Link>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
             {candidatesToRender.map((candidate, idx) => (
-              <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem', padding: '1.1rem 1.35rem', borderRadius: 'var(--radius-md)', border: '1px solid #f1f5f9', background: '#f8fafc' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div key={idx} className="emp-spot-item" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem', padding: '1.1rem 1.35rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--c-line-1, #f1f5f9)', background: 'var(--c-bg-1, #f8fafc)' }}>
+                <div className="emp-spot-id" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'rgba(75, 107, 50, 0.1)', color: 'var(--ios-olive)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.95rem', flexShrink: 0 }}>
                     {candidate.name.substring(0, 2).toUpperCase()}
                   </div>
-                  <div style={{ textAlign: 'left' }}>
-                    <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>{candidate.name}</h4>
+                  <div style={{ textAlign: 'left', minWidth: 0 }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--c-ink-1, #0f172a)', margin: 0 }}>{candidate.name}</h4>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.3rem', flexWrap: 'wrap' }}>
                       <BranchTag branch={candidate.branch} />
-                      <span style={{ color: '#64748b', fontSize: '0.78rem' }}>Trade: {candidate.trade}</span>
+                      <span style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.78rem' }}>Trade: {candidate.trade}</span>
                     </div>
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
-                  <div style={{ display: 'flex', gap: '0.25rem', flexWrap: 'wrap' }}>
+                <div className="emp-spot-meta" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
+                  <div className="emp-spot-skills" style={{ display: 'flex', gap: '0.25rem', flexWrap: 'wrap' }}>
                     {candidate.skills.map((skill, sIdx) => (
-                      <span key={sIdx} style={{ fontSize: '0.68rem', background: 'white', border: '1px solid #e2e8f0', padding: '0.22rem 0.5rem', borderRadius: 'var(--radius-sm)', color: '#475569', fontWeight: 600 }}>{skill}</span>
+                      <span key={sIdx} style={{ fontSize: '0.68rem', background: 'var(--c-bg-0, white)', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '0.22rem 0.5rem', borderRadius: 'var(--radius-sm)', color: 'var(--c-ink-3, #475569)', fontWeight: 600 }}>{skill}</span>
                     ))}
                   </div>
-                  <span style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--ios-olive)', minWidth: '80px', textAlign: 'right' }}>{candidate.score}% Match</span>
+                  <span className="emp-spot-score" style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--ios-olive)', minWidth: '80px', textAlign: 'right' }}>{candidate.score}% Match</span>
                   <Button variant="secondary" size="sm" onClick={() => navigate('/find-candidates')} style={{ fontWeight: 700 }}>View Profile</Button>
                 </div>
               </div>
@@ -599,22 +602,22 @@ const EmployerDashboard = () => {
 
       {showEditModal && (
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(8px)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 9999, padding: '1rem', overflowY: 'auto' }}>
-          <div className="ios-card" style={{ background: 'white', borderRadius: 'var(--radius-lg)', width: '100%', maxWidth: '550px', boxShadow: 'var(--shadow-3)', maxHeight: '90vh', overflowY: 'auto', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.5rem 1.75rem', borderBottom: '1px solid #f1f5f9' }}>
-              <h3 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 800, color: '#0f172a' }}>Edit Company Profile</h3>
-              <button onClick={() => setShowEditModal(false)} style={{ background: 'none', border: 'none', fontSize: '1.5rem', fontWeight: 700, color: '#64748b', cursor: 'pointer' }}>&times;</button>
+          <div className="ios-card" style={{ background: 'var(--c-bg-0, white)', borderRadius: 'var(--radius-lg)', width: '100%', maxWidth: '550px', boxShadow: 'var(--shadow-3)', maxHeight: '90vh', overflowY: 'auto', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.5rem 1.75rem', borderBottom: '1px solid var(--c-line-1, #f1f5f9)' }}>
+              <h3 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)' }}>Edit Company Profile</h3>
+              <button onClick={() => setShowEditModal(false)} style={{ background: 'none', border: 'none', fontSize: '1.5rem', fontWeight: 700, color: 'var(--c-ink-4, #64748b)', cursor: 'pointer' }}>&times;</button>
             </div>
 
             <form onSubmit={handleSaveProfile} style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: '#f8fafc', padding: '1rem', borderRadius: 'var(--radius-md)', border: '1px solid #e2e8f0' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: 'var(--c-bg-1, #f8fafc)', padding: '1rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--c-line-2, #e2e8f0)' }}>
                 <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: '#cbd5e1', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid var(--ios-olive)' }}>
                   {avatarPreview ? <img src={avatarPreview} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : <User size={30} color="white" />}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', alignItems: 'flex-start' }}>
-                  <Button type="button" variant="secondary" size="sm" onClick={() => avatarInputRef.current?.click()} disabled={avatarUploading} style={{ borderColor: '#cbd5e1', color: '#0f172a' }}>
+                  <Button type="button" variant="secondary" size="sm" onClick={() => avatarInputRef.current?.click()} disabled={avatarUploading} style={{ borderColor: 'var(--c-line-3, #cbd5e1)', color: 'var(--c-ink-1, #0f172a)' }}>
                     {avatarUploading ? 'Uploading...' : 'Upload Logo'}
                   </Button>
-                  <span style={{ fontSize: '0.7rem', color: '#64748b' }}>JPG, PNG or WEBP. Max 2MB.</span>
+                  <span style={{ fontSize: '0.7rem', color: 'var(--c-ink-4, #64748b)' }}>JPG, PNG or WEBP. Max 2MB.</span>
                   <input type="file" ref={avatarInputRef} onChange={handleAvatarUpload} accept="image/*" style={{ display: 'none' }} />
                 </div>
               </div>
@@ -627,21 +630,21 @@ const EmployerDashboard = () => {
                 ['location', 'Location', 'text', false],
               ].map(([field, label, type, required]) => (
                 <div key={field} style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
-                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>{label}</label>
+                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--c-ink-3, #475569)', textTransform: 'uppercase' }}>{label}</label>
                   <input type={type} required={required} value={editFormData[field] || ''} onChange={(e) => setEditFormData((prev) => ({ ...prev, [field]: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }} />
+                    style={{ border: '1px solid var(--c-line-2, #e2e8f0)', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }} />
                 </div>
               ))}
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
-                <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>Company Description</label>
+                <label style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--c-ink-3, #475569)', textTransform: 'uppercase' }}>Company Description</label>
                 <textarea value={editFormData.about || ''} onChange={(e) => setEditFormData((prev) => ({ ...prev, about: e.target.value }))} rows="3"
-                  style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem', fontFamily: 'inherit' }} />
+                  style={{ border: '1px solid var(--c-line-2, #e2e8f0)', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem', fontFamily: 'inherit' }} />
               </div>
 
               <div style={{ display: 'flex', gap: '1rem', marginTop: '1.25rem' }}>
                 <Button type="submit" style={{ flex: 1, padding: '0.75rem', fontSize: '0.95rem' }}>Save Changes</Button>
-                <Button type="button" variant="secondary" onClick={() => setShowEditModal(false)} style={{ flex: 1, padding: '0.75rem', borderColor: '#cbd5e1', color: '#0f172a', fontSize: '0.95rem' }}>Cancel</Button>
+                <Button type="button" variant="secondary" onClick={() => setShowEditModal(false)} style={{ flex: 1, padding: '0.75rem', borderColor: 'var(--c-line-3, #cbd5e1)', color: 'var(--c-ink-1, #0f172a)', fontSize: '0.95rem' }}>Cancel</Button>
               </div>
             </form>
           </div>
@@ -676,6 +679,86 @@ const EmployerDashboard = () => {
         .emp-stat { display: flex; flex-direction: column; gap: 0.2rem; }
         .emp-stat-value { font-size: 1.7rem; font-weight: 800; color: #fff; line-height: 1; letter-spacing: -0.03em; }
         .emp-stat-label { font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .emp-pos-word { display: none; }
+        .emp-req-table td[data-cell="action"] button, .emp-req-table td[data-cell="status"] span { white-space: nowrap; }
+        .emp-hero-row, .emp-actions, .emp-identity { min-width: 0; }
+        .dashboard-wrapper a:focus-visible, .dashboard-wrapper button:focus-visible { outline: 3px solid var(--accent-gold, #fbbf24); outline-offset: 2px; }
+
+        /* Tablet: tighter padding; filter chips scroll inside their own row */
+        @media (max-width: 900px) {
+          .emp-hero { padding: 1.5rem; }
+          .emp-card { padding: 1.5rem !important; }
+          .emp-stat-row { gap: 1rem 1.75rem; }
+          .emp-filter-tabs { flex-wrap: nowrap !important; overflow-x: auto; max-width: 100%; padding-bottom: 2px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+          .emp-filter-tabs::-webkit-scrollbar { display: none; }
+          .emp-filter-tabs button { flex: 0 0 auto; white-space: nowrap; }
+        }
+
+        /* Job requirements become stacked cards below 640px (the table is kept above that) */
+        @media (max-width: 640px) {
+          .emp-req-wrap { overflow-x: visible !important; }
+          .emp-req-table, .emp-req-table tbody { display: block; width: 100%; }
+          .emp-req-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } /* headings stay for screen readers */
+          .emp-req-table tr {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            grid-template-areas: "role role" "tags tags" "positions status" "action action";
+            gap: 0.5rem 0.75rem;
+            align-items: center;
+            padding: 0.85rem 0;
+            border-top: 1px solid var(--c-line-1, #f1f5f9);
+          }
+          .emp-req-table td { display: block; padding: 0 !important; text-align: left !important; min-width: 0; }
+          .emp-req-table td[data-cell="role"] { grid-area: role; overflow-wrap: anywhere; }
+          .emp-req-table td[data-cell="tags"] { grid-area: tags; }
+          .emp-req-table td[data-cell="positions"] { grid-area: positions; font-size: 0.85rem; color: var(--c-ink-3, #475569); }
+          .emp-req-table td[data-cell="status"] { grid-area: status; justify-self: end; }
+          .emp-req-table td[data-cell="action"] { grid-area: action; }
+          .emp-pos-word { display: inline; }
+          .emp-req-table td[data-cell="action"] button { width: 100%; min-height: 44px; font-size: 0.88rem !important; justify-content: center; }
+        }
+
+        /* Phone */
+        @media (max-width: 600px) {
+          .dashboard-wrapper { padding: 0.75rem 12px 1.5rem; }
+          .emp-card { padding: 1rem !important; border-radius: 16px !important; margin-bottom: 1rem !important; }
+          .emp-sec-head { flex-direction: column; flex-wrap: nowrap !important; align-items: stretch !important; gap: 0.6rem !important; margin-bottom: 0.9rem !important; min-width: 0; }
+          .emp-sec-head > * { min-width: 0; max-width: 100%; }
+          .emp-sec-head h2 { font-size: 1.1rem !important; }
+          .emp-sec-head-row { flex-direction: row; flex-wrap: wrap !important; align-items: center !important; }
+          .emp-sec-head-row > a, .emp-sec-head-row > button { flex-shrink: 0; }
+          .emp-filter-tabs { margin: 0 -1rem; padding: 2px 1rem 4px; max-width: none; }
+          .emp-filter-tabs button { min-height: 40px; }
+
+          /* Hero: identity, stats (2 across), then Search Military Talent and the two secondary actions */
+          .emp-hero { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 0.9rem 0.85rem; padding: 1.1rem 1rem; margin-bottom: 1rem; border-radius: 18px; }
+          .emp-hero-row { display: contents; }
+          .emp-avatar { grid-area: 1 / 1; width: 56px; height: 56px; border-width: 2px; }
+          .emp-identity { grid-area: 1 / 2; align-self: center; margin-right: 0; }
+          .emp-name { font-size: 1.3rem; overflow-wrap: anywhere; }
+          .emp-subtitle { overflow-wrap: anywhere; }
+          .emp-stat-row { grid-area: 2 / 1 / 3 / 3; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem 0.75rem; padding-top: 0.9rem; }
+          .emp-stat:last-child { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: flex-start; gap: 0.75rem; }
+          .emp-stat-value { font-size: 1.45rem; }
+          .emp-actions { grid-area: 3 / 1 / 4 / 3; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+          .emp-actions > :first-child { grid-column: 1 / -1; }
+          .emp-actions a, .emp-actions button { width: 100%; min-height: 44px; justify-content: center; text-align: center; box-sizing: border-box; display: inline-flex; align-items: center; padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+
+          /* Candidate pipeline rows */
+          .emp-pipe-item { padding: 0.9rem !important; gap: 0.75rem !important; }
+          .emp-pipe-main { align-items: flex-start !important; gap: 0.75rem !important; flex: 1 1 100%; min-width: 0; }
+          .emp-pipe-main p, .emp-pipe-main h4, .emp-pipe-main span { overflow-wrap: anywhere; }
+          .emp-pipe-actions { flex: 1 1 100%; display: grid !important; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.5rem !important; }
+          .emp-pipe-actions a, .emp-pipe-actions button { min-height: 44px; justify-content: center; width: 100%; box-sizing: border-box; }
+
+          /* Veteran Talent Spotlight rows */
+          .emp-spot-item { flex-direction: column; align-items: stretch !important; padding: 0.9rem !important; }
+          .emp-spot-id { min-width: 0; gap: 0.75rem !important; }
+          .emp-spot-meta { display: flex; flex-wrap: wrap; gap: 0.6rem 0.75rem !important; align-items: center; }
+          .emp-spot-skills { flex: 1 1 100%; }
+          .emp-spot-score { flex: 1 1 auto; text-align: left !important; min-width: 0 !important; }
+          .emp-spot-meta > button { min-height: 44px; flex: 0 0 auto; }
+        }
       `}} />
     </div>
   );

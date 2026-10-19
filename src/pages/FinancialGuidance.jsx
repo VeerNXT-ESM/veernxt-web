@@ -325,7 +325,7 @@ const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => (
         <img src="/logo.png" alt="VeerNXT Logo" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
       </div>
       <ul className="nav-links">
-        <li><a href="/" style={{ color: 'var(--g)', fontWeight: 700 }}>← Main Site</a></li>
+        <li><a href="/" style={{ color: 'var(--g-tx)', fontWeight: 700 }}>← Main Site</a></li>
         <li><a href="#pillars" onClick={onGoLanding}>What We Offer</a></li>
         <li><a href="#tools" onClick={onGoLanding}>Tools</a></li>
         <li><a href="#quiz-section" onClick={onGoLanding}>Quiz</a></li>
@@ -341,7 +341,7 @@ const ClientNavbar = ({ onGoPortal, onGoLanding, isPortalView }) => (
         </li>
       </ul>
       <div className="nav-right" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-        <span className="nav-amfi" aria-label="AMFI Registration" style={{ fontSize: '11px', color: '#777', fontWeight: 500, letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
+        <span className="nav-amfi" aria-label="AMFI Registration" style={{ fontSize: '11px', color: 'var(--c-ink-4, #777)', fontWeight: 500, letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
           AMFI ARN - 362619
         </span>
         <img src="/finance/AOG%20logo.jpeg" alt="AOG Logo" style={{ height: '54px', width: 'auto', objectFit: 'contain', borderRadius: '4px' }} />
@@ -735,7 +735,7 @@ const EmbeddedQuizSection = ({
   // 3. QUIZ VIEW (DEFAULT: PHASE.LANDING or PHASE.QUIZ)
   if (!currentQuestion) return null;
   return (
-    <div className="fg-quiz-container animate-fade-in" style={{ margin: '0 auto', maxWidth: '760px', background: '#fff', padding: '36px', borderRadius: '16px', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+    <div className="fg-quiz-container animate-fade-in" style={{ margin: '0 auto', maxWidth: '760px', background: 'var(--c-bg-0, #fff)', padding: '36px', borderRadius: '16px', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
       {/* Progress Bar */}
       <div className="fg-progress-header">
         <div className="fg-progress-bar">
@@ -1007,8 +1007,8 @@ const ClientLandingPage = ({
 
           {/* ── ETHOS CARDS (One Uniform, Only One, Built for You, Gratitude Card) ── */}
           <div style={{ marginTop: '48px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1rem))', gap: '20px' }}>
-            <div className="ethos-card" style={{ background: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid var(--warm)', borderTop: '4px solid var(--g)' }}>
-              <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--g)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>CORE VALUE</div>
+            <div className="ethos-card" style={{ background: 'var(--c-bg-0, #fff)', padding: '24px', borderRadius: '16px', border: '1px solid var(--warm)', borderTop: '4px solid var(--g)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--g-tx)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>CORE VALUE</div>
               <h3 style={{ fontSize: '20px', margin: '8px 0 12px', color: 'var(--ink)' }}>One Uniform</h3>
               <ul style={{ paddingLeft: '18px', margin: 0, fontSize: '14px', color: 'var(--mid)', lineHeight: '1.8' }}>
                 <li>Trained.</li>
@@ -1018,7 +1018,7 @@ const ClientLandingPage = ({
               </ul>
             </div>
 
-            <div className="ethos-card" style={{ background: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid var(--warm)', borderTop: '4px solid var(--gold)' }}>
+            <div className="ethos-card" style={{ background: 'var(--c-bg-0, #fff)', padding: '24px', borderRadius: '16px', border: '1px solid var(--warm)', borderTop: '4px solid var(--gold)' }}>
               <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>STANDBY ORDER</div>
               <h3 style={{ fontSize: '20px', margin: '8px 0 12px', color: 'var(--ink)' }}>Only One</h3>
               <ul style={{ paddingLeft: '18px', margin: 0, fontSize: '14px', color: 'var(--mid)', lineHeight: '1.8' }}>
@@ -1028,8 +1028,8 @@ const ClientLandingPage = ({
               </ul>
             </div>
 
-            <div className="ethos-card" style={{ background: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid var(--warm)', borderTop: '4px solid var(--g-dk)' }}>
-              <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--g-dk)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>PURPOSE</div>
+            <div className="ethos-card" style={{ background: 'var(--c-bg-0, #fff)', padding: '24px', borderRadius: '16px', border: '1px solid var(--warm)', borderTop: '4px solid var(--g-dk)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--g-tx)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>PURPOSE</div>
               <h3 style={{ fontSize: '20px', margin: '8px 0 12px', color: 'var(--ink)' }}>Built for You</h3>
               <ul style={{ paddingLeft: '18px', margin: 0, fontSize: '14px', color: 'var(--mid)', lineHeight: '1.8' }}>
                 <li>Not for an institution.</li>
@@ -1155,7 +1155,7 @@ const ClientLandingPage = ({
       {/* ── EMBEDDED GUIDANCE QUIZ & RESULTS ─────────────────────── */}
       <section className="section section-alt" id="quiz-section" aria-labelledby="quiz-headline">
         <div className="container">
-          <div className="section-eyebrow" style={{ color: 'var(--g)' }}>Interactive Financial Guidance</div>
+          <div className="section-eyebrow" style={{ color: 'var(--g-tx)' }}>Interactive Financial Guidance</div>
           <h2 className="section-headline" id="quiz-headline">
             {phase === PHASE.RESULT && "Your Personalised Allocation Plan"}
             {phase === PHASE.SUBMITTED && "Profile Submitted Successfully"}
@@ -1359,16 +1359,16 @@ const ClientLandingPage = ({
       </section>
 
       {/* ── VETERAN ADVISORY DESK & CONTACT MAP ─────────────────── */}
-      <section className="section" id="contact-section" aria-labelledby="contact-headline" style={{ background: '#F7F5F0', padding: '80px 0', borderTop: '1px solid rgba(197, 160, 89, 0.3)' }}>
+      <section className="section" id="contact-section" aria-labelledby="contact-headline" style={{ background: 'var(--c-tint-amber, #F7F5F0)', padding: '80px 0', borderTop: '1px solid rgba(197, 160, 89, 0.3)' }}>
         <div id="contact" className="container">
           <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 48px' }}>
-            <div className="section-eyebrow" style={{ justifyContent: 'center', color: '#0F3A1A' }}>
+            <div className="section-eyebrow" style={{ justifyContent: 'center', color: 'var(--c-green, #0F3A1A)' }}>
               <Award className="w-4 h-4 mr-1.5 text-[#C9A84C]" /> VEERNXT VETERAN ADVISORY DESK
             </div>
-            <h2 className="section-headline" id="contact-headline" style={{ color: '#0F3A1A', marginBottom: '14px' }}>
+            <h2 className="section-headline" id="contact-headline" style={{ color: 'var(--c-green, #0F3A1A)', marginBottom: '14px' }}>
               Connect with our Veteran Advisory Team
             </h2>
-            <p className="section-sub" style={{ color: '#4A5D4E' }}>
+            <p className="section-sub" style={{ color: 'var(--c-ink-3, #4A5D4E)' }}>
               Army-veteran SEBI-registered mentors &amp; financial counselors available for one-on-one guidance.
               Drop by our Company Operating Base (COB) or reach out across any channel.
             </p>
@@ -1376,12 +1376,12 @@ const ClientLandingPage = ({
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px', alignItems: 'stretch' }}>
             {/* Contact Details Card */}
-            <div style={{ background: '#FFFFFF', borderRadius: '24px', padding: '36px', border: '1px solid rgba(197, 160, 89, 0.4)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div style={{ background: 'var(--c-bg-0, #FFFFFF)', borderRadius: '24px', padding: '36px', border: '1px solid rgba(197, 160, 89, 0.4)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <h3 style={{ fontSize: '22px', fontWeight: 800, color: '#0F3A1A', marginBottom: '8px' }}>
+                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--c-green, #0F3A1A)', marginBottom: '8px' }}>
                   Company Operating Base (COB) #227
                 </h3>
-                <p style={{ fontSize: '14px', color: '#666', marginBottom: '28px' }}>
+                <p style={{ fontSize: '14px', color: 'var(--c-ink-4, #666)', marginBottom: '28px' }}>
                   Dedicated financial transition mentorship for Agniveers, ESM, and Armed Forces Personnel.
                 </p>
 
@@ -1391,8 +1391,8 @@ const ClientLandingPage = ({
                       <MapPin className="w-5 h-5 text-emerald-600" />
                     </div>
                     <div>
-                      <div style={{ fontWeight: 700, color: '#0F3A1A', fontSize: '15px' }}>Headquarters &amp; Advisory Center</div>
-                      <div style={{ color: '#555', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
+                      <div style={{ fontWeight: 700, color: 'var(--c-green, #0F3A1A)', fontSize: '15px' }}>Headquarters &amp; Advisory Center</div>
+                      <div style={{ color: 'var(--c-ink-3, #555)', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
                         225, 3rd C Cross Rd, Block 2, 3rd Stage, Basaveshwar Nagar, Bengaluru, Karnataka 560079
                       </div>
                     </div>
@@ -1403,8 +1403,8 @@ const ClientLandingPage = ({
                       <Phone className="w-5 h-5 text-[#C5A059]" />
                     </div>
                     <div>
-                      <div style={{ fontWeight: 700, color: '#0F3A1A', fontSize: '15px' }}>24/7 Helpline &amp; WhatsApp</div>
-                      <div style={{ color: '#555', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
+                      <div style={{ fontWeight: 700, color: 'var(--c-green, #0F3A1A)', fontSize: '15px' }}>24/7 Helpline &amp; WhatsApp</div>
+                      <div style={{ color: 'var(--c-ink-3, #555)', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
                         <a href="tel:+917889530025" style={{ color: 'inherit', textDecoration: 'none' }}>+91 788 953 0025</a> • Toll-free ESM Desk: 1800-VEER-NXT
                       </div>
                     </div>
@@ -1415,8 +1415,8 @@ const ClientLandingPage = ({
                       <Mail className="w-5 h-5 text-emerald-600" />
                     </div>
                     <div>
-                      <div style={{ fontWeight: 700, color: '#0F3A1A', fontSize: '15px' }}>Official Dispatch</div>
-                      <div style={{ color: '#555', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
+                      <div style={{ fontWeight: 700, color: 'var(--c-green, #0F3A1A)', fontSize: '15px' }}>Official Dispatch</div>
+                      <div style={{ color: 'var(--c-ink-3, #555)', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
                         <a href="mailto:support@veernxt.in" style={{ color: 'inherit', textDecoration: 'none' }}>support@veernxt.in</a>
                       </div>
                     </div>
@@ -1427,8 +1427,8 @@ const ClientLandingPage = ({
                       <Shield className="w-5 h-5 text-[#C5A059]" />
                     </div>
                     <div>
-                      <div style={{ fontWeight: 700, color: '#0F3A1A', fontSize: '15px' }}>AMFI &amp; SEBI Regulated</div>
-                      <div style={{ color: '#555', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
+                      <div style={{ fontWeight: 700, color: 'var(--c-green, #0F3A1A)', fontSize: '15px' }}>AMFI &amp; SEBI Regulated</div>
+                      <div style={{ color: 'var(--c-ink-3, #555)', fontSize: '13px', lineHeight: 1.5, marginTop: '2px' }}>
                         AMFI ARN - 362619 • Execution via Prudent Corporate Advisory Services Ltd
                       </div>
                     </div>
@@ -1457,7 +1457,7 @@ const ClientLandingPage = ({
             </div>
 
             {/* Interactive Map Card */}
-            <div style={{ background: '#FFFFFF', borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(197, 160, 89, 0.4)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', minHeight: '420px' }}>
+            <div style={{ background: 'var(--c-bg-0, #FFFFFF)', borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(197, 160, 89, 0.4)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', minHeight: '420px' }}>
               <div style={{ padding: '20px 24px', background: 'linear-gradient(135deg, #0F3A1A 0%, #162B1C 100%)', color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <Map className="w-5 h-5 text-[#C5A059]" />
@@ -1466,11 +1466,11 @@ const ClientLandingPage = ({
                     <div style={{ fontSize: '11px', color: '#C5A059' }}>Basaveshwar Nagar, Bengaluru &amp; Karnataka Reach</div>
                   </div>
                 </div>
-                <span style={{ background: 'rgba(16, 185, 129, 0.2)', color: '#10B981', border: '1px solid rgba(16, 185, 129, 0.4)', padding: '4px 10px', borderRadius: '20px', fontSize: '11px', fontWeight: 700 }}>
+                <span style={{ background: 'rgba(16, 185, 129, 0.2)', color: 'var(--c-green, #10B981)', border: '1px solid rgba(16, 185, 129, 0.4)', padding: '4px 10px', borderRadius: '20px', fontSize: '11px', fontWeight: 700 }}>
                   ACTIVE 24/7
                 </span>
               </div>
-              <div style={{ flex: '1 1 auto', width: '100%', position: 'relative', minHeight: '340px', background: '#e5e3df' }}>
+              <div style={{ flex: '1 1 auto', width: '100%', position: 'relative', minHeight: '340px', background: 'var(--c-bg-2, #e5e3df)' }}>
                 <iframe
                   title="VeerNXT Headquarters Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.809565576136!2d77.536128!3d12.983981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ddbc71a8123%3A0x8e82c595085d3419!2sBasaveshwar%20Nagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1714567890123!5m2!1sen!2sin"
@@ -1568,7 +1568,7 @@ const FinancialGuidanceStyles = () => (
       line-height: 1.1;
       margin-bottom: 1.25rem;
       color: white;
-      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+      background: linear-gradient(135deg, var(--c-bg-0, #ffffff) 0%, var(--c-bg-3, #e2e8f0) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -1576,7 +1576,7 @@ const FinancialGuidanceStyles = () => (
 
     .fg-hero-sub {
       font-size: 1.15rem;
-      color: #94a3b8;
+      color: var(--c-ink-5, #94a3b8);
       line-height: 1.7;
       max-width: 540px;
       margin: 0 auto 2.5rem;
@@ -1606,7 +1606,7 @@ const FinancialGuidanceStyles = () => (
 
     .fg-stat-label {
       font-size: 0.78rem;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.06em;
@@ -1616,7 +1616,7 @@ const FinancialGuidanceStyles = () => (
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      background: linear-gradient(135deg, var(--ios-olive) 0%, #3d5a28 100%);
+      background: linear-gradient(135deg, var(--ios-olive-fill, var(--ios-olive-fill, var(--ios-olive))) 0%, #3d5a28 100%);
       color: white;
       padding: 1rem 2.25rem;
       border-radius: 100px;
@@ -1642,7 +1642,7 @@ const FinancialGuidanceStyles = () => (
     }
 
     .fg-cta-outline:hover {
-      background: var(--ios-olive);
+      background: var(--ios-olive-fill, var(--ios-olive));
       color: white;
     }
 
@@ -1658,7 +1658,7 @@ const FinancialGuidanceStyles = () => (
 
     /* ─── TRUST BANNER ─────────────────────────────────────── */
     .fg-trust-banner {
-      background: white;
+      background: var(--c-bg-0, white);
       border-radius: 16px;
       padding: 1.25rem 1.75rem;
       display: flex;
@@ -1666,7 +1666,7 @@ const FinancialGuidanceStyles = () => (
       gap: 1.25rem;
       box-shadow: 0 4px 20px rgba(0,0,0,0.04);
       margin-bottom: 2.5rem;
-      border: 1px solid #f1f5f9;
+      border: 1px solid var(--c-line-1, #f1f5f9);
     }
 
     .fg-trust-text {
@@ -1676,12 +1676,12 @@ const FinancialGuidanceStyles = () => (
     }
 
     .fg-trust-text strong {
-      color: #0f172a;
+      color: var(--c-ink-1, #0f172a);
       font-size: 1rem;
     }
 
     .fg-trust-text span {
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       font-size: 0.9rem;
       line-height: 1.5;
     }
@@ -1706,7 +1706,7 @@ const FinancialGuidanceStyles = () => (
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       margin-bottom: 1rem;
     }
 
@@ -1721,7 +1721,7 @@ const FinancialGuidanceStyles = () => (
       display: flex;
       align-items: flex-start;
       gap: 1rem;
-      background: white;
+      background: var(--c-bg-0, white);
       padding: 1.25rem 1.5rem;
       border-radius: 14px;
       border: 1px solid #FEE2E2;
@@ -1736,7 +1736,7 @@ const FinancialGuidanceStyles = () => (
       width: 36px;
       height: 36px;
       border-radius: 10px;
-      background: #FEF2F2;
+      background: var(--c-tint-red, #FEF2F2);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1747,21 +1747,21 @@ const FinancialGuidanceStyles = () => (
     .fg-rule-title {
       font-size: 0.95rem;
       font-weight: 700;
-      color: #991B1B;
+      color: var(--c-red, #991B1B);
       margin-bottom: 0.2rem;
     }
 
     .fg-rule-desc {
       font-size: 0.85rem;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       line-height: 1.5;
     }
 
     /* ─── 5 LAWS ───────────────────────────────────────────── */
     .fg-laws-list {
-      background: white;
+      background: var(--c-bg-0, white);
       border-radius: 16px;
-      border: 1px solid #f1f5f9;
+      border: 1px solid var(--c-line-1, #f1f5f9);
       overflow: hidden;
     }
 
@@ -1782,14 +1782,14 @@ const FinancialGuidanceStyles = () => (
     }
 
     .fg-law-item:hover {
-      background: #f8fafc;
+      background: var(--c-bg-1, #f8fafc);
     }
 
     .fg-law-num {
       width: 28px;
       height: 28px;
       border-radius: 50%;
-      background: var(--ios-olive);
+      background: var(--ios-olive-fill, var(--ios-olive));
       color: white;
       font-size: 0.75rem;
       font-weight: 700;
@@ -1803,9 +1803,9 @@ const FinancialGuidanceStyles = () => (
     .fg-bottom-cta {
       text-align: center;
       padding: 3rem 2rem;
-      background: white;
+      background: var(--c-bg-0, white);
       border-radius: 20px;
-      border: 1px solid #f1f5f9;
+      border: 1px solid var(--c-line-1, #f1f5f9);
       box-shadow: 0 4px 20px rgba(0,0,0,0.03);
     }
 
@@ -1816,7 +1816,7 @@ const FinancialGuidanceStyles = () => (
     }
 
     .fg-bottom-cta p {
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       margin-bottom: 1.75rem;
       font-size: 1rem;
     }
@@ -1847,7 +1847,7 @@ const FinancialGuidanceStyles = () => (
       height: 4px;
       flex: 1;
       border-radius: 2px;
-      background: #e2e8f0;
+      background: var(--c-bg-3, #e2e8f0);
       transition: background 0.4s;
     }
 
@@ -1862,16 +1862,16 @@ const FinancialGuidanceStyles = () => (
     .fg-progress-label {
       font-size: 0.78rem;
       font-weight: 700;
-      color: #94a3b8;
+      color: var(--c-ink-5, #94a3b8);
       white-space: nowrap;
     }
 
     .fg-question-card {
-      background: white;
+      background: var(--c-bg-0, white);
       border-radius: 20px;
       padding: 2.5rem 2rem;
       box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-      border: 1px solid #f1f5f9;
+      border: 1px solid var(--c-line-1, #f1f5f9);
     }
 
     .fg-q-label {
@@ -1893,7 +1893,7 @@ const FinancialGuidanceStyles = () => (
 
     .fg-q-sub {
       font-size: 0.88rem;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       line-height: 1.5;
       margin-bottom: 2rem;
     }
@@ -1910,21 +1910,21 @@ const FinancialGuidanceStyles = () => (
       align-items: center;
       gap: 0.9rem;
       padding: 1rem 1.25rem;
-      border: 1.5px solid #e2e8f0;
+      border: 1.5px solid var(--c-line-2, #e2e8f0);
       border-radius: 14px;
       cursor: pointer;
       transition: all 0.2s;
-      background: white;
+      background: var(--c-bg-0, white);
     }
 
     .fg-option:hover {
       border-color: #1D9E75;
-      background: #f8fdf9;
+      background: var(--c-tint-green, #f8fdf9);
     }
 
     .fg-option.selected {
       border-color: #1D9E75;
-      background: #E1F5EE;
+      background: var(--c-tint-green, #E1F5EE);
       box-shadow: 0 0 0 1px #1D9E75;
     }
 
@@ -1932,14 +1932,14 @@ const FinancialGuidanceStyles = () => (
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: #f1f5f9;
-      border: 1.5px solid #e2e8f0;
+      background: var(--c-bg-2, #f1f5f9);
+      border: 1.5px solid var(--c-line-2, #e2e8f0);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.8rem;
       font-weight: 700;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       flex-shrink: 0;
       transition: all 0.2s;
     }
@@ -1962,7 +1962,7 @@ const FinancialGuidanceStyles = () => (
 
     .fg-opt-sub {
       font-size: 0.8rem;
-      color: #94a3b8;
+      color: var(--c-ink-5, #94a3b8);
       margin-top: 0.15rem;
       line-height: 1.4;
     }
@@ -1975,23 +1975,23 @@ const FinancialGuidanceStyles = () => (
     }
 
     .fg-amt-card {
-      border: 1.5px solid #e2e8f0;
+      border: 1.5px solid var(--c-line-2, #e2e8f0);
       border-radius: 14px;
       padding: 1.15rem 1rem;
       text-align: center;
       cursor: pointer;
       transition: all 0.2s;
-      background: white;
+      background: var(--c-bg-0, white);
     }
 
     .fg-amt-card:hover {
       border-color: #1D9E75;
-      background: #f8fdf9;
+      background: var(--c-tint-green, #f8fdf9);
     }
 
     .fg-amt-card.selected {
       border-color: #1D9E75;
-      background: #E1F5EE;
+      background: var(--c-tint-green, #E1F5EE);
       box-shadow: 0 0 0 1px #1D9E75;
     }
 
@@ -2002,12 +2002,12 @@ const FinancialGuidanceStyles = () => (
     }
 
     .fg-amt-card.selected .fg-amt-main {
-      color: #085041;
+      color: var(--c-green, #085041);
     }
 
     .fg-amt-sub {
       font-size: 0.72rem;
-      color: #94a3b8;
+      color: var(--c-ink-5, #94a3b8);
       margin-top: 0.25rem;
     }
 
@@ -2029,18 +2029,18 @@ const FinancialGuidanceStyles = () => (
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s;
-      border: 1.5px solid #e2e8f0;
-      background: white;
+      border: 1.5px solid var(--c-line-2, #e2e8f0);
+      background: var(--c-bg-0, white);
       color: var(--ios-text);
       font-family: 'Quicksand', sans-serif;
     }
 
     .fg-nav-back:hover {
-      background: #f8fafc;
+      background: var(--c-bg-1, #f8fafc);
     }
 
     .fg-nav-primary {
-      background: var(--ios-olive);
+      background: var(--ios-olive-fill, var(--ios-olive));
       border-color: var(--ios-olive);
       color: white;
       box-shadow: 0 4px 12px rgba(75, 107, 50, 0.2);
@@ -2097,7 +2097,7 @@ const FinancialGuidanceStyles = () => (
 
     .fg-profile-desc {
       font-size: 0.95rem;
-      color: #334155;
+      color: var(--c-ink-2, #334155);
       line-height: 1.7;
       max-width: 580px;
       margin: 0 auto 1.25rem;
@@ -2133,26 +2133,26 @@ const FinancialGuidanceStyles = () => (
     }
 
     .fg-urgency-pill.critical {
-      background: #FEF2F2;
+      background: var(--c-tint-red, #FEF2F2);
       border-color: #FECACA;
-      color: #991B1B;
+      color: var(--c-red, #991B1B);
     }
 
     .fg-urgency-pill.high {
-      background: #FEF3C7;
+      background: var(--c-tint-amber, #FEF3C7);
       border-color: #FDE68A;
-      color: #92400E;
+      color: var(--c-amber, #92400E);
     }
 
     .fg-urgency-pill.medium {
-      background: #E1F5EE;
+      background: var(--c-tint-green, #E1F5EE);
       border-color: #A7F3D0;
-      color: #065F46;
+      color: var(--c-green, #065F46);
     }
 
     /* ─── SIP BOX ──────────────────────────────────────────── */
     .fg-sip-box {
-      background: #f8fdf9;
+      background: var(--c-tint-green, #f8fdf9);
       border-left: 4px solid #1D9E75;
       border-radius: 0 14px 14px 0;
       padding: 1.5rem 1.75rem;
@@ -2162,7 +2162,7 @@ const FinancialGuidanceStyles = () => (
     .fg-sip-label {
       font-size: 0.78rem;
       font-weight: 600;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 0.4rem;
@@ -2171,13 +2171,13 @@ const FinancialGuidanceStyles = () => (
     .fg-sip-val {
       font-size: 1.75rem;
       font-weight: 800;
-      color: #085041;
+      color: var(--c-green, #085041);
       font-family: 'Quicksand', sans-serif;
     }
 
     .fg-sip-sub {
       font-size: 0.82rem;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       margin-top: 0.4rem;
       line-height: 1.5;
     }
@@ -2190,10 +2190,10 @@ const FinancialGuidanceStyles = () => (
     }
 
     .fg-alloc-card {
-      border: 1px solid #f1f5f9;
+      border: 1px solid var(--c-line-1, #f1f5f9);
       border-radius: 14px;
       padding: 1.25rem;
-      background: white;
+      background: var(--c-bg-0, white);
       transition: transform 0.15s, box-shadow 0.15s;
     }
 
@@ -2219,13 +2219,13 @@ const FinancialGuidanceStyles = () => (
     .fg-alloc-amt {
       font-size: 0.82rem;
       font-weight: 700;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       margin-bottom: 0.5rem;
     }
 
     .fg-alloc-why {
       font-size: 0.78rem;
-      color: #94a3b8;
+      color: var(--c-ink-5, #94a3b8);
       line-height: 1.5;
     }
 
@@ -2258,7 +2258,7 @@ const FinancialGuidanceStyles = () => (
       align-items: center;
       gap: 0.35rem;
       font-size: 0.72rem;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
     }
 
     .fg-bar-dot {
@@ -2282,7 +2282,7 @@ const FinancialGuidanceStyles = () => (
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-bottom: 1rem;
-      color: #334155;
+      color: var(--c-ink-2, #334155);
     }
 
     .fg-pillar-row {
@@ -2292,7 +2292,7 @@ const FinancialGuidanceStyles = () => (
       margin-bottom: 0.6rem;
       font-size: 0.88rem;
       font-weight: 500;
-      color: #334155;
+      color: var(--c-ink-2, #334155);
     }
 
     .fg-pillar-row:last-child {
@@ -2341,7 +2341,7 @@ const FinancialGuidanceStyles = () => (
     }
 
     .fg-consultant-cta > p {
-      color: #94a3b8;
+      color: var(--c-ink-5, #94a3b8);
       font-size: 0.95rem;
       line-height: 1.6;
       margin-bottom: 2rem;
@@ -2374,7 +2374,7 @@ const FinancialGuidanceStyles = () => (
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
     }
 
     .fg-user-value {
@@ -2412,7 +2412,7 @@ const FinancialGuidanceStyles = () => (
 
     .fg-wa-note {
       font-size: 0.78rem;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       margin-top: 1rem;
       line-height: 1.5;
     }
@@ -2434,15 +2434,15 @@ const FinancialGuidanceStyles = () => (
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
-      border: 1.5px solid #e2e8f0;
-      background: white;
+      border: 1.5px solid var(--c-line-2, #e2e8f0);
+      background: var(--c-bg-0, white);
       color: var(--ios-text);
       font-family: 'Quicksand', sans-serif;
     }
 
     .fg-action-btn:hover {
-      background: #f8fafc;
-      border-color: #cbd5e1;
+      background: var(--c-bg-1, #f8fafc);
+      border-color: var(--c-line-3, #cbd5e1);
     }
 
     .fg-action-restart {
@@ -2451,7 +2451,7 @@ const FinancialGuidanceStyles = () => (
     }
 
     .fg-action-restart:hover {
-      background: var(--ios-olive);
+      background: var(--ios-olive-fill, var(--ios-olive));
       color: white;
     }
 
@@ -2484,16 +2484,16 @@ const FinancialGuidanceStyles = () => (
 
     .fg-success-sub {
       font-size: 1.05rem;
-      color: #64748b;
+      color: var(--c-ink-4, #64748b);
       line-height: 1.7;
       margin-bottom: 2.5rem;
     }
 
     .fg-success-card {
-      background: white;
+      background: var(--c-bg-0, white);
       border-radius: 16px;
       padding: 1.5rem;
-      border: 1px solid #f1f5f9;
+      border: 1px solid var(--c-line-1, #f1f5f9);
       box-shadow: 0 4px 12px rgba(0,0,0,0.03);
       margin-bottom: 2.5rem;
       text-align: left;
@@ -2513,7 +2513,7 @@ const FinancialGuidanceStyles = () => (
 
     .fg-success-label {
       font-size: 0.85rem;
-      color: #94a3b8;
+      color: var(--c-ink-5, #94a3b8);
       font-weight: 500;
     }
 
@@ -2534,7 +2534,7 @@ const FinancialGuidanceStyles = () => (
     @media print {
       .fg-consultant-cta, .fg-action-row, .fg-wa-btn, .fg-nav-row,
       .fg-hero, .fg-trust-banner, .fg-bottom-cta, header, footer { display: none !important; }
-      .fg-wrapper { background: white !important; }
+      .fg-wrapper { background: var(--c-bg-0, white) !important; }
       .fg-result-container { padding: 1rem !important; }
     }
 

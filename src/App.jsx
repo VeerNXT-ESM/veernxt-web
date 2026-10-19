@@ -76,6 +76,8 @@ import V2Layout from './v2/V2Layout';
 import UniversalLanding from './v2/UniversalLanding';
 import LearningHome from './v2/LearningHome';
 import LearningBrowse from './v2/LearningBrowse';
+import './v2/tactical-messages.css';
+import V2Messages from './v2/V2Messages';
 import { ThemeProvider } from './context/ThemeContext';
 import './index.css';
 
@@ -219,7 +221,7 @@ function App() {
           <Route path="/v2/learning" element={<LearningHome />} />
           <Route path="/v2/learning/:level" element={<LearningBrowse />} />
           <Route path="/v2/me" element={<Dashboard />} />
-          <Route path="/v2/messages" element={<MessagingWorkspace />} />
+          <Route path="/v2/messages" element={<V2Messages />} />
         </Route>
 
         {/* Full-screen reader — no global Header/Footer/BottomNav chrome,

@@ -434,15 +434,15 @@ const PrivateSectorProfile = () => {
   }
 
   return (
-    <div className="psp" style={{ minHeight: '100vh', background: '#f8fafc', paddingBottom: '4rem' }}>
+    <div className="psp" style={{ minHeight: '100vh', background: 'var(--c-bg-1, #f8fafc)', paddingBottom: '4rem' }}>
       {/* OpSec Information Discipline Banner */}
       <div
         style={{
-          background: '#fef3c7',
+          background: 'var(--c-tint-amber, #fef3c7)',
           borderBottom: '1px solid #fde68a',
           padding: '0.65rem 1.25rem',
           fontSize: '0.82rem',
-          color: '#92400e',
+          color: 'var(--c-amber, #92400e)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -473,10 +473,10 @@ const PrivateSectorProfile = () => {
           >
             VeerNXT Tri-Service Capability Bridge
           </span>
-          <h1 className="psp-title" style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.4rem' }}>
+          <h1 className="psp-title" style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.4rem' }}>
             Build Your Civilian Capability Profile
           </h1>
-          <p style={{ fontSize: '0.92rem', color: '#64748b', maxWidth: '640px', margin: '0 auto' }}>
+          <p style={{ fontSize: '0.92rem', color: 'var(--c-ink-4, #64748b)', maxWidth: '640px', margin: '0 auto' }}>
             Answer in your familiar military terms. VeerNXT translates your service evidence into corporate employability
             while keeping your personal identity and contact details protected.
           </p>
@@ -516,8 +516,8 @@ const PrivateSectorProfile = () => {
                       width: '20px',
                       height: '20px',
                       borderRadius: '50%',
-                      background: isDone ? 'var(--ios-olive, #4b6b32)' : isActive ? 'var(--ios-olive, #4b6b32)' : '#e2e8f0',
-                      color: isDone || isActive ? '#fff' : '#64748b',
+                      background: isDone || isActive ? 'var(--ios-olive-fill, var(--ios-olive, #4b6b32))' : 'var(--c-bg-3, #e2e8f0)',
+                      color: isDone || isActive ? '#fff' : 'var(--c-ink-4, #64748b)',
                       display: 'inline-flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -534,15 +534,15 @@ const PrivateSectorProfile = () => {
         )}
 
         {/* Form Container */}
-        <Card className="psp-card" style={{ padding: '2rem', background: '#fff', borderRadius: '16px', border: '1px solid #e2e8f0', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}>
+        <Card className="psp-card" style={{ padding: '2rem', background: 'var(--c-bg-0, #fff)', borderRadius: '16px', border: '1px solid var(--c-line-2, #e2e8f0)', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}>
           {/* STEP 1: SERVICE RECORD */}
           {currentStepId === 'service' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem' }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.25rem' }}>
                   1. Confirm Your Service Background
                 </h2>
-                <p style={{ fontSize: '0.86rem', color: '#64748b', margin: 0 }}>
+                <p style={{ fontSize: '0.86rem', color: 'var(--c-ink-4, #64748b)', margin: 0 }}>
                   Select the branch, trade, and rank of your service.
                 </p>
               </div>
@@ -575,13 +575,13 @@ const PrivateSectorProfile = () => {
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                     Arm, Corps or Branch
                   </label>
                   <select
                     value={formData.branch}
                     onChange={(e) => handleBranchChange(e.target.value)}
-                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     {currentBranchOptions.map((b) => (
                       <option key={b} value={b}>{b}</option>
@@ -590,13 +590,13 @@ const PrivateSectorProfile = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                     Trade / Specialisation
                   </label>
                   <select
                     value={formData.trade}
                     onChange={(e) => handleTradeChange(e.target.value)}
-                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     {currentTradeOptions.map((t) => (
                       <option key={t} value={t}>{t}</option>
@@ -605,13 +605,13 @@ const PrivateSectorProfile = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                     Rank at Release
                   </label>
                   <select
                     value={formData.rank}
                     onChange={(e) => setField('rank', e.target.value)}
-                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     {(RANK_OPTIONS[formData.service] || []).map((r) => (
                       <option key={r} value={r}>{r}</option>
@@ -620,13 +620,13 @@ const PrivateSectorProfile = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                     Total Service Duration
                   </label>
                   <select
                     value={formData.service_years}
                     onChange={(e) => setField('service_years', e.target.value)}
-                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     <option>Up to 4 years (Agniveer)</option>
                     <option>5 to 9 years</option>
@@ -643,15 +643,15 @@ const PrivateSectorProfile = () => {
           {currentStepId === 'duties' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem' }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.25rem' }}>
                   2. Duty Evidence: What Work Did You Actually Perform?
                 </h2>
-                <p style={{ fontSize: '0.86rem', color: '#64748b', margin: 0 }}>
+                <p style={{ fontSize: '0.86rem', color: 'var(--c-ink-4, #64748b)', margin: 0 }}>
                   Select all duty areas you have hands-on experience in. Recruiters match capability evidence, not just trade titles.
                 </p>
               </div>
 
-              <div style={{ padding: '0.75rem 1rem', background: '#f1f5f9', borderRadius: '8px', fontSize: '0.82rem', color: '#334155' }}>
+              <div style={{ padding: '0.75rem 1rem', background: 'var(--c-bg-2, #f1f5f9)', borderRadius: '8px', fontSize: '0.82rem', color: 'var(--c-ink-2, #334155)' }}>
                 Selected Trade: <strong>{formData.trade}</strong> ({formData.service}, {formData.branch}).
                 Confirm duties below.
               </div>
@@ -665,10 +665,10 @@ const PrivateSectorProfile = () => {
                     <div
                       key={capKey}
                       style={{
-                        border: '1px solid #cbd5e1',
+                        border: '1px solid var(--c-line-3, #cbd5e1)',
                         borderRadius: '10px',
                         overflow: 'hidden',
-                        background: '#fff',
+                        background: 'var(--c-bg-0, #fff)',
                       }}
                     >
                       <button
@@ -680,15 +680,15 @@ const PrivateSectorProfile = () => {
                           alignItems: 'center',
                           justifyContent: 'space-between',
                           padding: '0.85rem 1.15rem',
-                          background: isOpen ? '#f8fafc' : '#fff',
+                          background: isOpen ? 'var(--c-bg-1, #f8fafc)' : 'var(--c-bg-0, #fff)',
                           border: 'none',
                           cursor: 'pointer',
                           textAlign: 'left',
                         }}
                       >
                         <div>
-                          <strong style={{ fontSize: '0.92rem', color: '#0f172a' }}>{group.title}</strong>
-                          <span style={{ fontSize: '0.78rem', color: '#64748b', display: 'block' }}>{group.civil}</span>
+                          <strong style={{ fontSize: '0.92rem', color: 'var(--c-ink-1, #0f172a)' }}>{group.title}</strong>
+                          <span style={{ fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)', display: 'block' }}>{group.civil}</span>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                           {selectedInGroup.length > 0 && (
@@ -701,7 +701,7 @@ const PrivateSectorProfile = () => {
                       </button>
 
                       {isOpen && (
-                        <div style={{ padding: '1rem 1.15rem', borderTop: '1px solid #f1f5f9', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                        <div style={{ padding: '1rem 1.15rem', borderTop: '1px solid var(--c-line-1, #f1f5f9)', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                           {group.items.map((item) => {
                             const isChecked = formData.duties.includes(`${capKey}|${item}`);
                             return (
@@ -715,7 +715,7 @@ const PrivateSectorProfile = () => {
                                   fontSize: '0.8rem',
                                   border: isChecked ? '1.5px solid var(--ios-olive, #4b6b32)' : '1px solid #cbd5e1',
                                   background: isChecked ? 'var(--ios-olive, #4b6b32)' : '#f8fafc',
-                                  color: isChecked ? '#fff' : '#334155',
+                                  color: isChecked ? '#fff' : 'var(--c-ink-2, #334155)',
                                   fontWeight: isChecked ? 700 : 500,
                                   cursor: 'pointer',
                                   transition: 'all 0.15s ease',
@@ -738,23 +738,23 @@ const PrivateSectorProfile = () => {
           {currentStepId === 'responsibility' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem' }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.25rem' }}>
                   3. What Scale of Responsibility Did You Carry?
                 </h2>
-                <p style={{ fontSize: '0.86rem', color: '#64748b', margin: 0 }}>
+                <p style={{ fontSize: '0.86rem', color: 'var(--c-ink-4, #64748b)', margin: 0 }}>
                   Agniveers and NCOs often supervise teams, vehicles, or expensive military equipment.
                 </p>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                     Largest Team / Crew Supervised
                   </label>
                   <select
                     value={formData.team_size_supervised}
                     onChange={(e) => setField('team_size_supervised', Number(e.target.value))}
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     <option value={0}>Individual operator (No formal supervision)</option>
                     <option value={4}>Small team / Buddy pair (2 to 5 personnel)</option>
@@ -765,13 +765,13 @@ const PrivateSectorProfile = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                     Highest Working Level
                   </label>
                   <select
                     value={formData.highest_working_level}
                     onChange={(e) => setField('highest_working_level', e.target.value)}
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     <option>Worked under supervision</option>
                     <option>Worked independently</option>
@@ -783,7 +783,7 @@ const PrivateSectorProfile = () => {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                   Brief Operational Duty Example (Without classified details)
                 </label>
                 <textarea
@@ -791,7 +791,7 @@ const PrivateSectorProfile = () => {
                   onChange={(e) => setField('other_preferences', e.target.value)}
                   placeholder="e.g. Supervised eight drivers and fleet vehicle readiness, maintained shift logs, inspected safety gear."
                   rows={3}
-                  style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1', fontFamily: 'inherit' }}
+                  style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', fontFamily: 'inherit' }}
                 />
               </div>
             </div>
@@ -801,18 +801,18 @@ const PrivateSectorProfile = () => {
           {currentStepId === 'qualifications' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem' }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.25rem' }}>
                   4. Qualifications, Licences & Certifications
                 </h2>
-                <p style={{ fontSize: '0.86rem', color: '#64748b', margin: 0 }}>
+                <p style={{ fontSize: '0.86rem', color: 'var(--c-ink-4, #64748b)', margin: 0 }}>
                   Select all valid civil licences and recognized service qualifications you hold.
                 </p>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {Object.entries(QUALIFICATION_AREAS).map(([groupName, items]) => (
-                  <div key={groupName} style={{ border: '1px solid #cbd5e1', borderRadius: '10px', padding: '1rem', background: '#fff' }}>
-                    <strong style={{ fontSize: '0.9rem', color: '#0f172a', display: 'block', marginBottom: '0.65rem' }}>
+                  <div key={groupName} style={{ border: '1px solid var(--c-line-3, #cbd5e1)', borderRadius: '10px', padding: '1rem', background: 'var(--c-bg-0, #fff)' }}>
+                    <strong style={{ fontSize: '0.9rem', color: 'var(--c-ink-1, #0f172a)', display: 'block', marginBottom: '0.65rem' }}>
                       {groupName}
                     </strong>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -827,9 +827,9 @@ const PrivateSectorProfile = () => {
                               padding: '0.45rem 0.85rem',
                               borderRadius: '20px',
                               fontSize: '0.8rem',
-                              border: isChecked ? '1.5px solid #9C7A2E' : '1px solid #cbd5e1',
-                              background: isChecked ? '#F2E9D3' : '#f8fafc',
-                              color: isChecked ? '#5c4b20' : '#334155',
+                              border: isChecked ? '1.5px solid #9C7A2E' : '1px solid var(--c-line-3, #cbd5e1)',
+                              background: isChecked ? '#F2E9D3' : 'var(--c-bg-1, #f8fafc)',
+                              color: isChecked ? '#5c4b20' : 'var(--c-ink-2, #334155)',
                               fontWeight: isChecked ? 700 : 500,
                               cursor: 'pointer',
                             }}
@@ -849,10 +849,10 @@ const PrivateSectorProfile = () => {
           {currentStepId === 'preferences' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem' }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.25rem' }}>
                   5. Work Preferences & Availability
                 </h2>
-                <p style={{ fontSize: '0.86rem', color: '#64748b', margin: 0 }}>
+                <p style={{ fontSize: '0.86rem', color: 'var(--c-ink-4, #64748b)', margin: 0 }}>
                   Specify where you want to work and when you can join.
                 </p>
               </div>
@@ -871,10 +871,10 @@ const PrivateSectorProfile = () => {
                     cursor: 'pointer',
                   }}
                 >
-                  <strong style={{ display: 'block', fontSize: '0.95rem', color: '#0f172a', marginBottom: '0.25rem' }}>
+                  <strong style={{ display: 'block', fontSize: '0.95rem', color: 'var(--c-ink-1, #0f172a)', marginBottom: '0.25rem' }}>
                     Field & Operational Roles
                   </strong>
-                  <span style={{ fontSize: '0.8rem', color: '#64748b' }}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)' }}>
                     Hands-on driving, technician, security, plant, logistics, warehouse operations.
                   </span>
                 </button>
@@ -891,10 +891,10 @@ const PrivateSectorProfile = () => {
                     cursor: 'pointer',
                   }}
                 >
-                  <strong style={{ display: 'block', fontSize: '0.95rem', color: '#0f172a', marginBottom: '0.25rem' }}>
+                  <strong style={{ display: 'block', fontSize: '0.95rem', color: 'var(--c-ink-1, #0f172a)', marginBottom: '0.25rem' }}>
                     Supervisory & Management
                   </strong>
-                  <span style={{ fontSize: '0.8rem', color: '#64748b' }}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)' }}>
                     Frontline supervision, facility in-charge, technical training, admin coordination.
                   </span>
                 </button>
@@ -903,7 +903,7 @@ const PrivateSectorProfile = () => {
               {/* Location & Availability */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                     Preferred State
                   </label>
                   <select
@@ -912,7 +912,7 @@ const PrivateSectorProfile = () => {
                       setField('locationState', e.target.value);
                       setField('locationCity', '');
                     }}
-                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     <option value="">Anywhere in India</option>
                     {Object.keys(STATE_DISTRICTS).map((s) => (
@@ -922,14 +922,14 @@ const PrivateSectorProfile = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                     Preferred District
                   </label>
                   <select
                     value={formData.locationCity}
                     onChange={(e) => setField('locationCity', e.target.value)}
                     disabled={!formData.locationState}
-                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     <option value="">All districts in state</option>
                     {(STATE_DISTRICTS[formData.locationState] || []).map((d) => (
@@ -939,13 +939,13 @@ const PrivateSectorProfile = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                     When Can You Start?
                   </label>
                   <select
                     value={formData.availability}
                     onChange={(e) => setField('availability', e.target.value)}
-                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     <option value="Immediately">Immediately</option>
                     <option value="Within 30 days">Within 30 days</option>
@@ -961,18 +961,18 @@ const PrivateSectorProfile = () => {
           {currentStepId === 'translation' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem' }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.25rem' }}>
                   6. Your Civilian Capability Translation
                 </h2>
-                <p style={{ fontSize: '0.86rem', color: '#64748b', margin: 0 }}>
+                <p style={{ fontSize: '0.86rem', color: 'var(--c-ink-4, #64748b)', margin: 0 }}>
                   This is how your verified service evidence will read to corporate employers and recruiters.
                 </p>
               </div>
 
               {/* Translation Summary Box */}
-              <div style={{ border: '1px solid #cbd5e1', borderRadius: '12px', overflow: 'hidden' }}>
-                <div style={{ padding: '0.85rem 1.15rem', background: '#f1f5f9', borderBottom: '1px solid #cbd5e1', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <strong style={{ fontSize: '0.9rem', color: '#0f172a' }}>Military Evidence → Civilian Capability</strong>
+              <div style={{ border: '1px solid var(--c-line-3, #cbd5e1)', borderRadius: '12px', overflow: 'hidden' }}>
+                <div style={{ padding: '0.85rem 1.15rem', background: 'var(--c-bg-2, #f1f5f9)', borderBottom: '1px solid var(--c-line-3, #cbd5e1)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <strong style={{ fontSize: '0.9rem', color: 'var(--c-ink-1, #0f172a)' }}>Military Evidence → Civilian Capability</strong>
                   <span style={{ fontSize: '0.78rem', color: 'var(--ios-olive, #4b6b32)', fontWeight: 700 }}>
                     {translatedCapabilities.length} Capability Areas
                   </span>
@@ -989,19 +989,19 @@ const PrivateSectorProfile = () => {
                         alignItems: 'center',
                         gap: '0.75rem',
                         paddingBottom: '0.75rem',
-                        borderBottom: '1px solid #f1f5f9',
+                        borderBottom: '1px solid var(--c-line-1, #f1f5f9)',
                       }}
                     >
                       <div>
-                        <strong style={{ fontSize: '0.85rem', color: '#1e293b' }}>{cap.title}</strong>
-                        <span style={{ fontSize: '0.75rem', color: '#64748b', display: 'block' }}>
+                        <strong style={{ fontSize: '0.85rem', color: 'var(--c-ink-1, #1e293b)' }}>{cap.title}</strong>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)', display: 'block' }}>
                           {cap.dutyCount} duty item{cap.dutyCount > 1 ? 's' : ''} confirmed
                         </span>
                       </div>
-                      <div className="psp-arrow" style={{ textAlign: 'center', color: '#9C7A2E', fontWeight: 700 }}>→</div>
+                      <div className="psp-arrow" style={{ textAlign: 'center', color: 'var(--c-amber, #9C7A2E)', fontWeight: 700 }}>→</div>
                       <div>
                         <strong style={{ fontSize: '0.85rem', color: 'var(--ios-olive, #4b6b32)' }}>{cap.civil}</strong>
-                        <span style={{ fontSize: '0.75rem', color: '#64748b', display: 'block' }}>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)', display: 'block' }}>
                           Evidence backed by {formData.service} ({formData.branch})
                         </span>
                       </div>
@@ -1011,14 +1011,14 @@ const PrivateSectorProfile = () => {
               </div>
 
               {/* Privacy & Consent Protocol */}
-              <div style={{ background: '#f8fafc', borderRadius: '12px', padding: '1.25rem', border: '1px solid #e2e8f0' }}>
+              <div style={{ background: 'var(--c-bg-1, #f8fafc)', borderRadius: '12px', padding: '1.25rem', border: '1px solid var(--c-line-2, #e2e8f0)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
                   <Lock size={18} color="var(--ios-olive, #4b6b32)" />
-                  <strong style={{ fontSize: '0.92rem', color: '#0f172a' }}>Candidate Privacy & Consent Protocol</strong>
+                  <strong style={{ fontSize: '0.92rem', color: 'var(--c-ink-1, #0f172a)' }}>Candidate Privacy & Consent Protocol</strong>
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: '#334155', cursor: 'pointer' }}>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', cursor: 'pointer' }}>
                     <input
                       type="checkbox"
                       checked={formData.consent_masked}
@@ -1030,7 +1030,7 @@ const PrivateSectorProfile = () => {
                     </span>
                   </label>
 
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: '#334155', cursor: 'pointer' }}>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', cursor: 'pointer' }}>
                     <input
                       type="checkbox"
                       checked={formData.consent_contact}
@@ -1050,10 +1050,10 @@ const PrivateSectorProfile = () => {
           {currentStepId === 'verification' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem' }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.25rem' }}>
                   7. Service Document Verification
                 </h2>
-                <p style={{ fontSize: '0.86rem', color: '#64748b', margin: 0 }}>
+                <p style={{ fontSize: '0.86rem', color: 'var(--c-ink-4, #64748b)', margin: 0 }}>
                   Upload your Release Certificate, Discharge Book, or Agniveer Card to earn the Verified Veteran badge.
                 </p>
               </div>
@@ -1062,8 +1062,8 @@ const PrivateSectorProfile = () => {
                 <div style={{ padding: '1.25rem', borderRadius: '10px', background: 'rgba(75,107,50,0.08)', border: '1px solid var(--ios-olive, #4b6b32)', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <ShieldCheck size={24} color="var(--ios-olive, #4b6b32)" />
                   <div>
-                    <strong style={{ fontSize: '0.95rem', color: '#0f172a' }}>Verification Document Submitted</strong>
-                    <span style={{ fontSize: '0.82rem', color: '#64748b', display: 'block' }}>
+                    <strong style={{ fontSize: '0.95rem', color: 'var(--c-ink-1, #0f172a)' }}>Verification Document Submitted</strong>
+                    <span style={{ fontSize: '0.82rem', color: 'var(--c-ink-4, #64748b)', display: 'block' }}>
                       Status: <strong>{existingVerification.status?.toUpperCase()}</strong> ({existingVerification.service_number})
                     </span>
                   </div>
@@ -1071,7 +1071,7 @@ const PrivateSectorProfile = () => {
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                    <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                       Army / Navy / Air Force Service Number
                     </label>
                     <input
@@ -1079,12 +1079,12 @@ const PrivateSectorProfile = () => {
                       value={verification.service_number}
                       onChange={(e) => setVerification((v) => ({ ...v, service_number: e.target.value }))}
                       placeholder="e.g. 15689452X"
-                      style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                      style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)' }}
                     />
                   </div>
 
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.35rem' }}>
+                    <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.35rem' }}>
                       Discharge Book / Release Certificate (PDF or Image)
                     </label>
                     <input
@@ -1094,7 +1094,7 @@ const PrivateSectorProfile = () => {
                         const file = e.target.files?.[0];
                         if (file) setVerification((v) => ({ ...v, file, fileName: file.name }));
                       }}
-                      style={{ width: '100%', padding: '0.65rem', borderRadius: '8px', border: '1px dashed #cbd5e1' }}
+                      style={{ width: '100%', padding: '0.65rem', borderRadius: '8px', border: '1px dashed var(--c-line-3, #cbd5e1)' }}
                     />
                   </div>
                 </div>
@@ -1120,10 +1120,10 @@ const PrivateSectorProfile = () => {
               >
                 <CheckCircle2 size={36} />
               </div>
-              <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.4rem' }}>
+              <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.4rem' }}>
                 Your Civilian Profile Is Live
               </h2>
-              <p style={{ fontSize: '0.9rem', color: '#64748b', maxWidth: '520px', margin: '0 auto 1.5rem' }}>
+              <p style={{ fontSize: '0.9rem', color: 'var(--c-ink-4, #64748b)', maxWidth: '520px', margin: '0 auto 1.5rem' }}>
                 Corporate partners can now match against your verified capabilities. Your contact information remains
                 strictly protected until you accept an employer's introduction request.
               </p>
@@ -1146,7 +1146,7 @@ const PrivateSectorProfile = () => {
                 alignItems: 'center',
                 marginTop: '2rem',
                 paddingTop: '1.25rem',
-                borderTop: '1px solid #e2e8f0',
+                borderTop: '1px solid var(--c-line-2, #e2e8f0)',
               }}
             >
               <button
@@ -1157,7 +1157,7 @@ const PrivateSectorProfile = () => {
                 style={{
                   background: 'none',
                   border: 'none',
-                  color: step === 0 ? '#cbd5e1' : '#64748b',
+                  color: step === 0 ? '#cbd5e1' : 'var(--c-ink-4, #64748b)',
                   cursor: step === 0 ? 'not-allowed' : 'pointer',
                   fontWeight: 600,
                   fontSize: '0.88rem',

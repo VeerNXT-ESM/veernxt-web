@@ -107,6 +107,26 @@
   --glass-bg: rgba(22, 27, 34, 0.85);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-shadow: var(--shadow-3);
+
+  /* Neutral palette tokens. Components write var(--c-xxx, <original light colour>), so light mode keeps its
+     exact original colours (no light-mode values needed here) and dark mode gets these. */
+  --c-ink-1: #f0f6fc; /* was #0f172a / #111 / #1e293b … (headings, strong text) */
+  --c-ink-2: #d0d7de; /* was #334155 / #333 … */
+  --c-ink-3: #b1bac4; /* was #475569 / #4b5563 / #444 … */
+  --c-ink-4: #9da7b3; /* was #64748b / #6b7280 / #777 … (muted) */
+  --c-ink-5: #8b949e; /* was #94a3b8 / #9ca3af / #999 … (faint) */
+  --c-bg-0: #161b22;  /* was #fff / white (cards, panels) */
+  --c-bg-1: #1c2128;  /* was #f8fafc / #f9fafb (soft panels) */
+  --c-bg-2: #21262d;  /* was #f1f5f9 / #f3f4f6 (chips, wells) */
+  --c-bg-3: #30363d;  /* was #e2e8f0 / #e5e7eb used as a fill */
+  --c-line-1: rgba(255, 255, 255, 0.08);
+  --c-line-2: rgba(255, 255, 255, 0.12);
+  --c-line-3: rgba(255, 255, 255, 0.2);
+  /* Bright emerald is for text/borders on dark surfaces; filled buttons with white text need a deeper green */
+  --ios-olive-fill: #0b7a56;
+  --c-green:#6ee7b7; --c-amber:#fcd34d; --c-blue:#93c5fd; --c-red:#fca5a5; --c-purple:#d8b4fe;
+  --c-tint-green:rgba(16,185,129,.16); --c-tint-amber:rgba(245,158,11,.16); --c-tint-blue:rgba(59,130,246,.18);
+  --c-tint-red:rgba(239,68,68,.16); --c-tint-purple:rgba(168,85,247,.18);
 }
 
 @layer base {
@@ -195,7 +215,7 @@
   }
 
   .btn-primary {
-    background: var(--ios-olive);
+    background: var(--ios-olive-fill, var(--ios-olive));
     color: white;
     padding: 0.75rem 1.5rem;
     box-shadow: 0 4px 12px rgba(75, 107, 50, 0.2);
@@ -219,7 +239,7 @@
   }
 
   .ios-btn-primary {
-    background-color: var(--ios-olive);
+    background-color: var(--ios-olive-fill, var(--ios-olive));
     color: #ffffff;
     font-weight: 700;
     transition: all 0.2s ease;

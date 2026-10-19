@@ -8,7 +8,11 @@ import {
   MoreHorizontal, ChevronDown, ChevronRight, ExternalLink, FileText, Briefcase
 } from 'lucide-react';
 
-const MessagingWorkspace = ({ initialRecipient = null }) => {
+const MessagingWorkspace = ({ initialRecipient = null, showInvites = false }) => {
+  const [pendingInvites, setPendingInvites] = useState([]);
+  const [inviteBusy, setInviteBusy] = useState({});
+  const [invitesOpen, setInvitesOpen] = useState(false);
+  const [acceptingAll, setAcceptingAll] = useState(false);
   const [conversations, setConversations] = useState([]);
   const [selectedRecipient, setSelectedRecipient] = useState(null);
   const [messages, setMessages] = useState([]);
@@ -111,6 +115,19 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           });
         }
 
+        if (showInvites) {
+          const { data: pending } = await supabase
+            .from('connections')
+            .select('id, sender_id')
+            .eq('status', 'pending')
+            .eq('receiver_id', user.id);
+          setPendingInvites((pending || []).map(p => ({
+            connectionId: p.id,
+            userId: p.sender_id,
+            profile: lookup[p.sender_id] || { id: p.sender_id, full_name: 'VeerNXT Member', headline: 'Member', role: 'unknown', initials: 'VM' },
+          })));
+        }
+
         if (idsArray.length > 0) {
           resolvedRecipients = idsArray.map(id => {
             return lookup[id] || {
@@ -141,6 +158,45 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
     };
     initializeChat();
   }, [initialRecipient]);
+
+  const respondToInvite = async (invite, accept) => {
+    setInviteBusy(prev => ({ ...prev, [invite.connectionId]: true }));
+    try {
+      const { error } = accept
+        ? await supabase.from('connections').update({ status: 'accepted' }).eq('id', invite.connectionId)
+        : await supabase.from('connections').delete().eq('id', invite.connectionId);
+      if (error) throw error;
+      setPendingInvites(prev => prev.filter(i => i.connectionId !== invite.connectionId));
+      if (accept) {
+        setConversations(prev => (prev.some(c => c.id === invite.userId) ? prev : [...prev, invite.profile]));
+      }
+    } catch (err) {
+      console.error('Error responding to invitation:', err);
+      alert('Could not update the invitation: ' + err.message);
+    } finally {
+      setInviteBusy(prev => ({ ...prev, [invite.connectionId]: false }));
+    }
+  };
+
+  const acceptAllInvites = async () => {
+    setAcceptingAll(true);
+    try {
+      const ids = pendingInvites.map(i => i.connectionId);
+      const { error } = await supabase.from('connections').update({ status: 'accepted' }).in('id', ids);
+      if (error) throw error;
+      setConversations(prev => {
+        const have = new Set(prev.map(c => c.id));
+        return [...prev, ...pendingInvites.filter(i => !have.has(i.userId)).map(i => i.profile)];
+      });
+      setPendingInvites([]);
+      setInvitesOpen(false);
+    } catch (err) {
+      console.error('Error accepting invitations:', err);
+      alert('Could not accept the invitations: ' + err.message);
+    } finally {
+      setAcceptingAll(false);
+    }
+  };
 
   // 2. Check Connection Limit Guard for Selected Recipient
   useEffect(() => {
@@ -348,15 +404,15 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
 
     return (
       <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'block', marginTop: '0.5rem' }}>
-        <div style={{ display: 'flex', gap: '0.75rem', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '0.75rem', transition: 'all 0.2s ease', cursor: 'pointer' }}>
-          <div style={{ width: '40px', height: '40px', borderRadius: '8px', background: '#eef2f6', color: 'var(--ios-olive)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', gap: '0.75rem', background: 'var(--c-bg-1, #f8fafc)', border: '1px solid var(--c-line-2, #e2e8f0)', borderRadius: '12px', padding: '0.75rem', transition: 'all 0.2s ease', cursor: 'pointer' }}>
+          <div style={{ width: '40px', height: '40px', borderRadius: '8px', background: 'var(--c-tint-blue, #eef2f6)', color: 'var(--ios-olive)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <ExternalLink size={20} />
           </div>
           <div style={{ flex: 1, minWidth: 0, textAlign: 'left' }}>
-            <h4 style={{ margin: 0, fontSize: '0.85rem', fontWeight: 700, color: '#0f172a', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            <h4 style={{ margin: 0, fontSize: '0.85rem', fontWeight: 700, color: 'var(--c-ink-1, #0f172a)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               Visit {domain}
             </h4>
-            <p style={{ margin: '0.15rem 0 0 0', fontSize: '0.75rem', color: '#64748b', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            <p style={{ margin: '0.15rem 0 0 0', fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               {url}
             </p>
           </div>
@@ -377,6 +433,47 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
             <button className="small-action-btn"><Edit3 size={16} /></button>
           </div>
         </div>
+
+        {showInvites && pendingInvites.length > 0 && (
+          <section className="msg-invites-card" aria-label="Network invitations">
+            <div className="msg-invites-top">
+              <span className="msg-invites-icon" aria-hidden="true"><Users size={18} /></span>
+              <span className="msg-invites-eyebrow">Network</span>
+              <span className="msg-invites-count">{pendingInvites.length} new</span>
+            </div>
+            <h4 className="msg-invites-heading">
+              {pendingInvites.length === 1
+                ? `${pendingInvites[0].profile.full_name} wants to connect`
+                : `${pendingInvites.length} peers want to connect`}
+            </h4>
+            <p className="msg-invites-sub">{pendingInvites[0].profile.headline}</p>
+            <div className="msg-invites-actions">
+              <button type="button" className="msg-invite-accept" disabled={acceptingAll} onClick={acceptAllInvites}>
+                {acceptingAll ? 'Accepting…' : pendingInvites.length === 1 ? 'Accept' : 'Accept All'}
+              </button>
+              <button type="button" className="msg-invite-review" aria-expanded={invitesOpen} onClick={() => setInvitesOpen(o => !o)}>
+                {invitesOpen ? 'Hide' : 'Review'}
+              </button>
+            </div>
+            {invitesOpen && (
+              <ul className="msg-invites-list">
+                {pendingInvites.map(inv => (
+                  <li key={inv.connectionId} className="msg-invite-row">
+                    <div className="msg-invite-avatar">{getInitials(inv.profile.full_name)}</div>
+                    <div className="msg-invite-text">
+                      <strong>{inv.profile.full_name}</strong>
+                      <span>{inv.profile.headline}</span>
+                    </div>
+                    <div className="msg-invite-actions">
+                      <button type="button" className="msg-invite-accept" disabled={inviteBusy[inv.connectionId]} onClick={() => respondToInvite(inv, true)}>Accept</button>
+                      <button type="button" className="msg-invite-ignore" disabled={inviteBusy[inv.connectionId]} onClick={() => respondToInvite(inv, false)} aria-label={`Ignore ${inv.profile.full_name}`}>Ignore</button>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        )}
 
         <div className="sidebar-search-box">
           <Search size={16} className="search-icon-inside" />
@@ -479,7 +576,7 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
                       {msg.file_url && msg.file_type?.startsWith('image/') && (
                         <div style={{ marginTop: '0.5rem', maxWidth: '250px' }}>
                           <a href={msg.file_url} target="_blank" rel="noopener noreferrer">
-                            <img src={msg.file_url} alt="Attachment" style={{ width: '100%', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }} />
+                            <img src={msg.file_url} alt="Attachment" style={{ width: '100%', borderRadius: '12px', border: '1px solid var(--c-line-2, #e2e8f0)', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }} />
                           </a>
                         </div>
                       )}
@@ -487,7 +584,7 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
                       {/* Display PDF attachments */}
                       {msg.file_url && msg.file_type === 'application/pdf' && (
                         <div style={{ marginTop: '0.5rem' }}>
-                          <a href={msg.file_url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#f8fafc', border: '1px solid #e2e8f0', padding: '0.5rem 0.75rem', borderRadius: '8px', textDecoration: 'none', color: '#0f172a', width: 'fit-content' }}>
+                          <a href={msg.file_url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--c-bg-1, #f8fafc)', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '0.5rem 0.75rem', borderRadius: '8px', textDecoration: 'none', color: 'var(--c-ink-1, #0f172a)', width: 'fit-content' }}>
                             <FileText size={16} color="var(--ios-olive)" />
                             <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>{msg.file_name || 'View PDF document'}</span>
                             <ExternalLink size={12} color="#64748b" />
@@ -498,7 +595,7 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
                       {/* Display other attachments */}
                       {msg.file_url && !msg.file_type?.startsWith('image/') && msg.file_type !== 'application/pdf' && (
                         <div style={{ marginTop: '0.5rem' }}>
-                          <a href={msg.file_url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#f8fafc', border: '1px solid #e2e8f0', padding: '0.5rem 0.75rem', borderRadius: '8px', textDecoration: 'none', color: '#0f172a', width: 'fit-content' }}>
+                          <a href={msg.file_url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--c-bg-1, #f8fafc)', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '0.5rem 0.75rem', borderRadius: '8px', textDecoration: 'none', color: 'var(--c-ink-1, #0f172a)', width: 'fit-content' }}>
                             <Paperclip size={16} color="#64748b" />
                             <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>{msg.file_name || 'Download file'}</span>
                             <ExternalLink size={12} color="#64748b" />
@@ -530,13 +627,13 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
 
             {/* Attachment preview panel */}
             {attachedFile && (
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.5rem 1rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.5rem 1rem', background: 'var(--c-bg-1, #f8fafc)', borderTop: '1px solid var(--c-line-2, #e2e8f0)', borderBottom: '1px solid var(--c-line-2, #e2e8f0)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <Paperclip size={16} color="var(--ios-olive)" />
-                  <span style={{ fontSize: '0.85rem', color: '#0f172a', fontWeight: 600 }}>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--c-ink-1, #0f172a)', fontWeight: 600 }}>
                     {attachedFile.name}
                   </span>
-                  <span style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)' }}>
                     (Ready to send)
                   </span>
                 </div>
@@ -547,9 +644,9 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
             )}
 
             {uploadingFile && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', background: 'var(--c-bg-1, #f8fafc)', borderTop: '1px solid var(--c-line-2, #e2e8f0)', borderBottom: '1px solid var(--c-line-2, #e2e8f0)' }}>
                 <RefreshCw size={14} className="animate-spin" color="var(--ios-olive)" />
-                <span style={{ fontSize: '0.8rem', color: '#64748b' }}>Uploading file attachment...</span>
+                <span style={{ fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)' }}>Uploading file attachment...</span>
               </div>
             )}
 
@@ -569,10 +666,10 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
             />
 
             {!canMessage ? (
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '2rem 1.5rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', textAlign: 'center' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '2rem 1.5rem', background: 'var(--c-bg-1, #f8fafc)', borderTop: '1px solid var(--c-line-2, #e2e8f0)', textAlign: 'center' }}>
                 <ShieldCheck size={36} color="var(--ios-olive)" style={{ marginBottom: '0.5rem', opacity: 0.8 }} />
-                <h4 style={{ margin: 0, fontSize: '0.95rem', fontWeight: 800, color: '#1F3A2E' }}>Connection Request Required</h4>
-                <p style={{ margin: '0.25rem 0 1.25rem 0', fontSize: '0.8rem', color: '#64748b', maxWidth: '400px', lineHeight: 1.4 }}>
+                <h4 style={{ margin: 0, fontSize: '0.95rem', fontWeight: 800, color: 'var(--c-green, #1F3A2E)' }}>Connection Request Required</h4>
+                <p style={{ margin: '0.25rem 0 1.25rem 0', fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)', maxWidth: '400px', lineHeight: 1.4 }}>
                   You are not connected with {selectedRecipient.full_name} yet. You can only send 1 introductory message before they accept your connection request.
                 </p>
                 <Link to="/network" className="btn-primary ios-pill" style={{ textDecoration: 'none', padding: '0.55rem 1.5rem', fontSize: '0.85rem' }}>
@@ -668,17 +765,17 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           width: calc(100% - clamp(2.5rem, 6vw, 5rem));
           max-width: 1800px;
           margin: 2rem auto;
-          background: #ffffff;
+          background: var(--c-bg-0, #ffffff);
           border-radius: 14px;
-          border: 1px solid #e2e8f0;
+          border: 1px solid var(--c-line-2, #e2e8f0);
           overflow: hidden;
           box-shadow: var(--shadow-ios);
         }
         .conversations-sidebar-panel {
-          border-right: 1px solid #e2e8f0;
+          border-right: 1px solid var(--c-line-2, #e2e8f0);
           display: flex;
           flex-direction: column;
-          background: white;
+          background: var(--c-bg-0, white);
           overflow: hidden;
         }
         .sidebar-top-branding {
@@ -690,20 +787,43 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
         .brand-title {
           font-size: 1.1rem;
           font-weight: 850;
-          color: #0f172a;
+          color: var(--c-ink-1, #0f172a);
         }
         .small-action-btn {
           background: none;
           border: none;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           cursor: pointer;
           padding: 4px;
           border-radius: 6px;
           transition: background 0.2s;
         }
         .small-action-btn:hover {
-          background: #f1f5f9;
+          background: var(--c-bg-2, #f1f5f9);
         }
+        .msg-invites-card { margin: 0.5rem 1rem 0.25rem; padding: 0.85rem; border-radius: 12px; background: var(--c-tint-amber, #fffbeb); border: 1px solid var(--c-line-2, #fde68a); }
+        .msg-invites-top { display: flex; align-items: center; gap: 0.55rem; margin-bottom: 0.55rem; }
+        .msg-invites-icon { width: 34px; height: 34px; border-radius: 8px; background: var(--c-bg-0, #fff); color: var(--c-amber, #d97706); border: 1px solid var(--c-line-2, #fde68a); display: inline-flex; align-items: center; justify-content: center; }
+        .msg-invites-eyebrow { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-amber, #b45309); margin-right: auto; }
+        .msg-invites-count { padding: 0.15rem 0.5rem; border-radius: 6px; background: #f59e0b; color: #1c1917; font-size: 0.68rem; font-weight: 800; }
+        .msg-invites-heading { margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--c-ink-1, #0f172a); line-height: 1.3; }
+        .msg-invites-sub { margin: 0.2rem 0 0.7rem; font-size: 0.78rem; color: var(--c-ink-4, #64748b); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .msg-invites-actions { display: flex; gap: 0.5rem; }
+        .msg-invites-actions button { min-height: 38px; border-radius: 8px; font-size: 0.82rem; font-weight: 700; cursor: pointer; font-family: inherit; }
+        .msg-invites-actions .msg-invite-accept { flex: 1; }
+        .msg-invite-review { padding: 0 1rem; background: var(--c-bg-0, #fff); color: var(--c-ink-2, #334155); border: 1px solid var(--c-line-3, #cbd5e1); }
+        .msg-invites-actions button:disabled { opacity: 0.6; cursor: default; }
+        .msg-invites-list { list-style: none; margin: 0.7rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; max-height: 220px; overflow-y: auto; }
+        .msg-invite-row { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 0.2rem 0.6rem; align-items: center; background: var(--c-bg-0, #fff); border: 1px solid var(--c-line-2, #e2e8f0); border-radius: 10px; padding: 0.55rem; }
+        .msg-invite-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--c-bg-2, #f1f5f9); color: var(--c-green, #1f3a2e); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; border: 1px solid var(--c-line-3, #cbd5e1); }
+        .msg-invite-text { display: flex; flex-direction: column; min-width: 0; }
+        .msg-invite-text strong { font-size: 0.82rem; color: var(--c-ink-1, #0f172a); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .msg-invite-text span { font-size: 0.72rem; color: var(--c-ink-4, #64748b); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .msg-invite-actions { grid-column: 1 / -1; display: flex; gap: 0.4rem; }
+        .msg-invite-actions button { flex: 1; min-height: 34px; border-radius: 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; font-family: inherit; }
+        .msg-invite-accept { background: var(--ios-olive-fill, #1f3a2e); color: #fff; border: none; }
+        .msg-invite-ignore { background: var(--c-bg-0, #fff); color: var(--c-ink-3, #475569); border: 1px solid var(--c-line-3, #cbd5e1); }
+        .msg-invite-actions button:disabled { opacity: 0.6; cursor: default; }
         .sidebar-search-box {
           padding: 0.5rem 1.25rem;
           position: relative;
@@ -713,11 +833,11 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           left: 2rem;
           top: 50%;
           transform: translateY(-50%);
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
         }
         .sidebar-search-input {
           width: 100%;
-          background: #edf3f8;
+          background: var(--c-tint-blue, #edf3f8);
           border: none;
           padding: 0.55rem 1rem 0.55rem 2.5rem;
           border-radius: 6px;
@@ -732,16 +852,16 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           gap: 0.35rem;
           overflow-x: auto;
           padding: 0.75rem 1.25rem;
-          border-bottom: 1px solid #f1f5f9;
+          border-bottom: 1px solid var(--c-line-1, #f1f5f9);
           scrollbar-width: none;
         }
         .category-toggles-bar::-webkit-scrollbar {
           display: none;
         }
         .category-toggle-chip {
-          background: white;
-          border: 1px solid #cbd5e1;
-          color: #475569;
+          background: var(--c-bg-0, white);
+          border: 1px solid var(--c-line-3, #cbd5e1);
+          color: var(--c-ink-3, #475569);
           font-weight: 700;
           font-size: 0.75rem;
           padding: 0.3rem 0.75rem;
@@ -767,16 +887,16 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           gap: 0.75rem;
           padding: 1rem 1.25rem;
           cursor: pointer;
-          border-bottom: 1px solid #f1f5f9;
+          border-bottom: 1px solid var(--c-line-1, #f1f5f9);
           transition: all 0.2s;
           position: relative;
           text-align: left;
         }
         .conversation-partner-item:hover {
-          background: #f8fafc;
+          background: var(--c-bg-1, #f8fafc);
         }
         .conversation-partner-item.active {
-          background: #eef2eb;
+          background: var(--c-tint-green, #eef2eb);
           border-left: 4px solid #1F3A2E;
         }
         .partner-avatar-wrapper {
@@ -787,14 +907,14 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           width: 44px;
           height: 44px;
           border-radius: 50%;
-          background: #f1f5f9;
-          color: #1F3A2E;
+          background: var(--c-bg-2, #f1f5f9);
+          color: var(--c-green, #1F3A2E);
           display: flex;
           align-items: center;
           justify-content: center;
           font-weight: 800;
           font-size: 0.95rem;
-          border: 1px solid #cbd5e1;
+          border: 1px solid var(--c-line-3, #cbd5e1);
         }
         .partner-details {
           flex: 1;
@@ -803,16 +923,16 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
         .partner-name {
           font-weight: 750;
           font-size: 0.88rem;
-          color: #0f172a;
+          color: var(--c-ink-1, #0f172a);
         }
         .partner-date-tag {
           font-size: 0.72rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           font-weight: 550;
         }
         .partner-snippet {
           font-size: 0.78rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -824,7 +944,7 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           flex: 1;
           display: flex;
           flex-direction: column;
-          background: white;
+          background: var(--c-bg-0, white);
           overflow: hidden;
         }
         .chat-header-bar {
@@ -832,21 +952,21 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           justify-content: space-between;
           align-items: center;
           padding: 1rem 1.5rem;
-          border-bottom: 1px solid #e2e8f0;
-          background: white;
+          border-bottom: 1px solid var(--c-line-2, #e2e8f0);
+          background: var(--c-bg-0, white);
           z-index: 10;
         }
         .partner-header-title {
           font-size: 0.95rem;
           margin: 0;
           font-weight: 850;
-          color: #0f172a;
+          color: var(--c-ink-1, #0f172a);
         }
         .back-to-list-btn {
           display: none;
           background: none;
           border: none;
-          color: #0f172a;
+          color: var(--c-ink-1, #0f172a);
           cursor: pointer;
           padding: 0.4rem;
           margin: -0.4rem;
@@ -855,11 +975,11 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           justify-content: center;
         }
         .back-to-list-btn:hover {
-          background: #f1f5f9;
+          background: var(--c-bg-2, #f1f5f9);
         }
         .partner-header-subtitle {
           font-size: 0.72rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
         }
         .header-actions-row {
           display: flex;
@@ -868,21 +988,21 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
         .icon-action-btn {
           background: none;
           border: none;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           padding: 0.4rem;
           cursor: pointer;
           border-radius: 8px;
         }
         .icon-action-btn:hover {
-          background: #f1f5f9;
-          color: #0f172a;
+          background: var(--c-bg-2, #f1f5f9);
+          color: var(--c-ink-1, #0f172a);
         }
         
         .chat-history-container {
           flex: 1;
           overflow-y: auto;
           padding: 1.5rem;
-          background: white;
+          background: var(--c-bg-0, white);
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
@@ -902,15 +1022,15 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           width: 34px;
           height: 34px;
           border-radius: 50%;
-          background: #f1f5f9;
-          color: #1F3A2E;
+          background: var(--c-bg-2, #f1f5f9);
+          color: var(--c-green, #1F3A2E);
           display: flex;
           align-items: center;
           justify-content: center;
           font-size: 0.78rem;
           font-weight: 800;
           flex-shrink: 0;
-          border: 1px solid #cbd5e1;
+          border: 1px solid var(--c-line-3, #cbd5e1);
         }
         .message-content-block {
           flex: 1;
@@ -924,16 +1044,16 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
         .sender-name-bold {
           font-size: 0.85rem;
           font-weight: 800;
-          color: #0f172a;
+          color: var(--c-ink-1, #0f172a);
         }
         .msg-time-stamp {
           font-size: 0.72rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           font-weight: 550;
         }
         .msg-text-paragraph {
           font-size: 0.88rem;
-          color: #334155;
+          color: var(--c-ink-2, #334155);
           line-height: 1.5;
         }
         
@@ -941,13 +1061,13 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           display: flex;
           gap: 0.5rem;
           padding: 0.75rem 1.5rem;
-          border-top: 1px solid #f1f5f9;
+          border-top: 1px solid var(--c-line-1, #f1f5f9);
           flex-wrap: wrap;
         }
         .suggestion-reply-chip {
-          background: white;
+          background: var(--c-bg-0, white);
           border: 1px solid #1F3A2E;
-          color: #1F3A2E;
+          color: var(--c-green, #1F3A2E);
           font-weight: 700;
           font-size: 0.8rem;
           padding: 0.4rem 1.25rem;
@@ -962,8 +1082,8 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
         .chat-input-form-bar {
           display: flex;
           flex-direction: column;
-          background: white;
-          border-top: 1px solid #e2e8f0;
+          background: var(--c-bg-0, white);
+          border-top: 1px solid var(--c-line-2, #e2e8f0);
           padding: 1rem;
         }
         .input-textarea-wrapper {
@@ -985,13 +1105,13 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           justify-content: space-between;
           align-items: center;
           margin-top: 0.5rem;
-          border-top: 1px solid #f1f5f9;
+          border-top: 1px solid var(--c-line-1, #f1f5f9);
           padding-top: 0.75rem;
         }
         .toolbar-btn {
           background: none;
           border: none;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           cursor: pointer;
           padding: 4px;
           border-radius: 6px;
@@ -1000,12 +1120,12 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           transition: background 0.2s, color 0.2s;
         }
         .toolbar-btn:hover {
-          background: #f1f5f9;
-          color: #0f172a;
+          background: var(--c-bg-2, #f1f5f9);
+          color: var(--c-ink-1, #0f172a);
         }
         .press-enter-hint {
           font-size: 0.72rem;
-          color: #94a3b8;
+          color: var(--c-ink-5, #94a3b8);
           font-weight: 550;
         }
         
@@ -1015,19 +1135,19 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           align-items: center;
           justify-content: center;
           flex: 1;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
         }
         .plain-message-empty-state {
           padding: 2rem;
           text-align: center;
-          background: #ffffff;
+          background: var(--c-bg-0, #ffffff);
         }
         .plain-empty-icon {
           width: 54px; height: 54px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
-          color: #466931; background: #edf4e9; margin-bottom: 0.9rem;
+          color: var(--c-green, #466931); background: var(--c-tint-green, #edf4e9); margin-bottom: 0.9rem;
         }
         .plain-empty-eyebrow { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #65805a; }
-        .plain-message-empty-state h3 { margin: 0.35rem 0; color: #0f172a; font-size: 1.35rem; }
+        .plain-message-empty-state h3 { margin: 0.35rem 0; color: var(--c-ink-1, #0f172a); font-size: 1.35rem; }
         .plain-message-empty-state p { max-width: 380px; margin: 0 0 1rem; font-size: 0.86rem; line-height: 1.5; }
         .plain-empty-cta {
           display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.7rem 1rem; border-radius: 8px;
@@ -1041,13 +1161,13 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
           text-align: center;
           gap: 0.5rem;
           padding: 3rem 1.5rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
         }
         .no-contacts-empty-state h4 {
           margin: 0.25rem 0 0;
           font-size: 0.95rem;
           font-weight: 800;
-          color: #0f172a;
+          color: var(--c-ink-1, #0f172a);
         }
         .no-contacts-empty-state p {
           margin: 0;
@@ -1107,22 +1227,22 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
             border: none;
             box-shadow: none;
             max-width: 100%;
-            background: #fff;
+            background: var(--c-bg-0, #fff);
           }
           .conversations-sidebar-panel,
           .dialogue-chat-panel { min-height: 0; }
           .messaging-insights-panel { display: none; }
-          .conversations-sidebar-panel { border-right: none; width: 100%; background: #fff; }
+          .conversations-sidebar-panel { border-right: none; width: 100%; background: var(--c-bg-0, #fff); }
           .sidebar-top-branding { padding: 0.9rem 1rem 0.45rem; }
           .brand-title { font-size: 1.05rem; }
           .sidebar-search-box { padding: 0.45rem 1rem; }
           .search-icon-inside { left: 1.7rem; }
           .sidebar-search-input { padding-block: 0.7rem; border-radius: 10px; }
-          .category-toggles-bar { padding: 0.65rem 1rem; gap: 0.45rem; background: #fff; }
+          .category-toggles-bar { padding: 0.65rem 1rem; gap: 0.45rem; background: var(--c-bg-0, #fff); }
           .conversation-partner-item {
             padding: 0.8rem 1rem;
             gap: 0.65rem;
-            background: #fff;
+            background: var(--c-bg-0, #fff);
           }
           .conversation-partner-item.active { border-left-width: 3px; }
           .partner-avatar { width: 42px; height: 42px; }
@@ -1137,7 +1257,7 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
             white-space: nowrap;
           }
           .header-actions-row { gap: 0.1rem; }
-          .chat-history-container { padding: 1rem; gap: 0.9rem; background: #f8fafc; }
+          .chat-history-container { padding: 1rem; gap: 0.9rem; background: var(--c-bg-1, #f8fafc); }
           .message-bubble-wrapper { max-width: 94%; gap: 0.45rem; }
           .bubble-avatar-small { width: 28px; height: 28px; font-size: 0.68rem; }
           .message-meta-row { flex-wrap: wrap; margin-bottom: 0.15rem; }
@@ -1147,14 +1267,14 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
             margin: 0;
             padding: 0.7rem 0.8rem;
             border-radius: 12px;
-            background: #fff;
-            border: 1px solid #e2e8f0;
+            background: var(--c-bg-0, #fff);
+            border: 1px solid var(--c-line-2, #e2e8f0);
             font-size: 0.84rem;
             line-height: 1.45;
             overflow-wrap: anywhere;
           }
           .message-bubble-wrapper.sent .msg-text-paragraph {
-            background: #e8f0e4;
+            background: var(--c-tint-green, #e8f0e4);
             border-color: #d4e2cd;
           }
           .suggestion-chips-row {
@@ -1163,7 +1283,7 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
             padding: 0.6rem 1rem;
             gap: 0.45rem;
             scrollbar-width: none;
-            background: #fff;
+            background: var(--c-bg-0, #fff);
           }
           .suggestion-chips-row::-webkit-scrollbar { display: none; }
           .suggestion-reply-chip { flex: 0 0 auto; padding: 0.38rem 0.75rem; font-size: 0.74rem; }
@@ -1198,45 +1318,45 @@ const MessagingWorkspace = ({ initialRecipient = null }) => {
         }
         .messaging-insights-panel {
           padding: 0.9rem;
-          border-left: 1px solid #e2e8f0;
-          background: #fbfcfb;
+          border-left: 1px solid var(--c-line-2, #e2e8f0);
+          background: var(--c-bg-1, #fbfcfb);
           overflow-y: auto;
         }
         .message-contact-card,
         .message-action-card,
         .message-tips-card {
-          background: #fff;
-          border: 1px solid #e2e8f0;
+          background: var(--c-bg-0, #fff);
+          border: 1px solid var(--c-line-2, #e2e8f0);
           border-radius: 12px;
           padding: 1rem;
           margin-bottom: 0.75rem;
         }
-        .insights-heading-row { display: flex; align-items: center; justify-content: space-between; color: #64748b; }
+        .insights-heading-row { display: flex; align-items: center; justify-content: space-between; color: var(--c-ink-4, #64748b); }
         .insights-heading-row h3,
         .message-action-card h3,
-        .message-tips-card h3 { margin: 0; font-size: 0.88rem; color: #0f172a; font-weight: 800; }
+        .message-tips-card h3 { margin: 0; font-size: 0.88rem; color: var(--c-ink-1, #0f172a); font-weight: 800; }
         .insights-contact-avatar {
           width: 56px; height: 56px; border-radius: 50%; margin: 1rem auto 0.65rem;
-          display: flex; align-items: center; justify-content: center; background: #edf4e9;
-          border: 1px solid #d5e5cc; color: #315e27; font-weight: 800;
+          display: flex; align-items: center; justify-content: center; background: var(--c-tint-green, #edf4e9);
+          border: 1px solid #d5e5cc; color: var(--c-green, #315e27); font-weight: 800;
         }
-        .message-contact-card h4 { margin: 0; font-size: 0.9rem; text-align: center; color: #0f172a; }
-        .message-contact-card p { margin: 0.3rem 0 0.65rem; font-size: 0.75rem; text-align: center; color: #64748b; line-height: 1.4; }
-        .insights-role-label { display: block; text-align: center; font-size: 0.68rem; color: #466931; font-weight: 800; text-transform: uppercase; }
+        .message-contact-card h4 { margin: 0; font-size: 0.9rem; text-align: center; color: var(--c-ink-1, #0f172a); }
+        .message-contact-card p { margin: 0.3rem 0 0.65rem; font-size: 0.75rem; text-align: center; color: var(--c-ink-4, #64748b); line-height: 1.4; }
+        .insights-role-label { display: block; text-align: center; font-size: 0.68rem; color: var(--c-green, #466931); font-weight: 800; text-transform: uppercase; }
         .insights-primary-link {
           display: flex; align-items: center; justify-content: center; gap: 0.35rem; margin-top: 0.9rem;
           padding: 0.6rem; border-radius: 8px; background: #315e27; color: #fff; font-size: 0.78rem; font-weight: 700; text-decoration: none;
         }
         .message-action-card { display: flex; flex-direction: column; gap: 0.15rem; }
         .message-action-card h3 { margin-bottom: 0.45rem; }
-        .message-action-card p, .message-tips-card p { margin: 0 0 0.55rem; font-size: 0.76rem; line-height: 1.45; color: #64748b; }
+        .message-action-card p, .message-tips-card p { margin: 0 0 0.55rem; font-size: 0.76rem; line-height: 1.45; color: var(--c-ink-4, #64748b); }
         .message-action-card a {
           display: flex; align-items: center; gap: 0.55rem; padding: 0.6rem 0; text-decoration: none;
-          color: #334155; font-size: 0.78rem; font-weight: 650; border-top: 1px solid #f1f5f9;
+          color: var(--c-ink-2, #334155); font-size: 0.78rem; font-weight: 650; border-top: 1px solid var(--c-line-1, #f1f5f9);
         }
         .message-action-card a svg:last-child { margin-left: auto; }
-        .message-action-card a svg:first-child, .message-tips-card h3 svg { color: #466931; }
-        .message-tips-card { background: #f7faf5; border-color: #dce8d7; }
+        .message-action-card a svg:first-child, .message-tips-card h3 svg { color: var(--c-green, #466931); }
+        .message-tips-card { background: var(--c-tint-green, #f7faf5); border-color: #dce8d7; }
         .message-tips-card h3 { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.5rem; }
         @media (max-width: 380px) {
           .messaging-workspace-container { height: calc(100dvh - 154px); min-height: 360px; }

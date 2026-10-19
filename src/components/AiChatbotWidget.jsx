@@ -1637,8 +1637,8 @@ function synthesizeIntelligentResponse(query, profile) {
         }
 
         .msg-bubble.user {
-          background: #e8efe5 !important;
-          color: #1f3928 !important;
+          background: var(--c-tint-green, #e8efe5) !important;
+          color: var(--c-green, #1f3928) !important;
           border-top-right-radius: 4px !important;
         }
 
@@ -1829,12 +1829,12 @@ function synthesizeIntelligentResponse(query, profile) {
           justify-content: center;
         }
 
-        .chat-action-icon.color-green { background: rgba(26, 156, 94, 0.12); color: #1a7a4a; }
-        .chat-action-icon.color-gold { background: rgba(217, 166, 42, 0.16); color: #a3760f; }
+        .chat-action-icon.color-green { background: rgba(26, 156, 94, 0.12); color: var(--c-green, #1a7a4a); }
+        .chat-action-icon.color-gold { background: rgba(217, 166, 42, 0.16); color: var(--c-amber, #a3760f); }
         .chat-action-icon.color-blue { background: rgba(37, 99, 235, 0.12); color: #2054c4; }
-        .chat-action-icon.color-purple { background: rgba(147, 51, 234, 0.12); color: #7e22ce; }
-        .chat-action-icon.color-red { background: rgba(220, 38, 38, 0.1); color: #dc2626; }
-        .chat-action-icon.color-teal { background: rgba(13, 148, 136, 0.12); color: #0d9488; }
+        .chat-action-icon.color-purple { background: rgba(147, 51, 234, 0.12); color: var(--c-purple, #7e22ce); }
+        .chat-action-icon.color-red { background: rgba(220, 38, 38, 0.1); color: var(--c-red, #dc2626); }
+        .chat-action-icon.color-teal { background: rgba(13, 148, 136, 0.12); color: var(--c-green, #0d9488); }
 
         .chat-action-body {
           flex: 1;
@@ -2075,7 +2075,7 @@ function synthesizeIntelligentResponse(query, profile) {
 
         .btn-send:disabled {
           background: var(--border-strong) !important;
-          color: #9CA3AF !important;
+          color: var(--c-ink-5, #9CA3AF) !important;
           cursor: not-allowed;
         }
       `}} />

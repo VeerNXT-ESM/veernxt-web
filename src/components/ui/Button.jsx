@@ -2,7 +2,7 @@ import React from 'react';
 
 const VARIANT_STYLES = {
   primary: {
-    background: 'var(--ios-olive)',
+    background: 'var(--ios-olive-fill, var(--ios-olive))',
     color: '#ffffff',
     border: '1px solid transparent',
     boxShadow: 'var(--shadow-1)',

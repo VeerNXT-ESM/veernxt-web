@@ -367,12 +367,12 @@ const RewardsCenter = () => {
           margin-bottom: 2rem;
         }
         .rewards-hero h1 { font-size: 2rem; margin-bottom: 0.35rem; }
-        .rewards-hero p { color: #777; font-size: 1rem; }
+        .rewards-hero p { color: var(--c-ink-4, #777); font-size: 1rem; }
         .rewards-balance-card {
           display: flex;
           align-items: center;
           gap: 0.75rem;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           color: white;
           padding: 1rem 1.5rem;
           border-radius: var(--radius-md);
@@ -418,7 +418,7 @@ const RewardsCenter = () => {
         .rewards-catalog-card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
         .rewards-catalog-desc {
           font-size: 0.85rem;
-          color: #777;
+          color: var(--c-ink-4, #777);
           flex: 1;
           margin-bottom: 1rem;
           line-height: 1.5;
@@ -437,7 +437,7 @@ const RewardsCenter = () => {
           font-size: 0.85rem;
           color: var(--ios-olive);
         }
-        .rewards-empty { color: #999; grid-column: 1 / -1; text-align: center; padding: 2rem; }
+        .rewards-empty { color: var(--c-ink-5, #999); grid-column: 1 / -1; text-align: center; padding: 2rem; }
         .rewards-history-card {}
         .rewards-history-title { font-size: 1.1rem; margin: 0; }
         .card-top {
@@ -462,7 +462,7 @@ const RewardsCenter = () => {
           font-size: 0.85rem;
         }
         .rewards-history-name { font-weight: 600; flex: 1; }
-        .rewards-history-date { color: #999; font-size: 0.78rem; }
+        .rewards-history-date { color: var(--c-ink-5, #999); font-size: 0.78rem; }
         .rewards-status-badge {
           font-size: 0.7rem;
           font-weight: 700;
@@ -485,7 +485,7 @@ const RewardsCenter = () => {
           display: block;
           font-size: 0.75rem;
           font-weight: 700;
-          color: #475569;
+          color: var(--c-ink-3, #475569);
           margin-bottom: 0.35rem;
         }
         .rewards-field-row {

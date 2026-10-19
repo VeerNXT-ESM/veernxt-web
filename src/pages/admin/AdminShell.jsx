@@ -3,14 +3,14 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { ADMIN_NAV } from './adminNavConfig';
 import { useTheme } from '../../context/ThemeContext';
 import {
-  GraduationCap, Users, Shield,
-  HelpCircle, Briefcase, Gift, Landmark, LogOut, ChevronsLeft, ChevronsRight, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen, Sun, Moon,
+  GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen, Images, Sun, Moon,
+  Menu, X, LogOut, ChevronsLeft, ChevronsRight,
 } from 'lucide-react';
 import './AdminCMS.css';
 
 import FirstLoginModal from '../../components/admin/FirstLoginModal';
 
-const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen };
+const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen, Images };
 
 // Horizontal section nav, directly under the top header — required by the
 // CMS mockup ("Do NOT remove this horizontal navigation") even though it
@@ -52,6 +52,7 @@ const AdminShell = () => {
   const { theme, toggleTheme } = useTheme();
   const [session, setSession] = useState(null);
   const [collapsed, setCollapsed] = useState(() => localStorage.getItem('admin_sidebar_collapsed') === 'true');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const raw = localStorage.getItem('admin_session');
@@ -65,6 +66,10 @@ const AdminShell = () => {
       localStorage.setItem('admin_sidebar_collapsed', String(next));
       return next;
     });
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
   };
 
   const handleLogout = () => {
@@ -135,6 +140,9 @@ const AdminShell = () => {
           <div className="admin-topbar-user">
             <button className="admin-theme-toggle" title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={toggleTheme}>
               {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+            <button className="admin-mobile-menu-btn" onClick={toggleMobileMenu} title="Open menu">
+              {isMobileMenuOpen ? <X size={16} /> : <Menu size={16} />}
             </button>
             <div 
               className="admin-topbar-user-clickable" 

@@ -30,11 +30,11 @@ export const QuizResults = ({
   const tier = getRankTier(accuracy, state.score, totalQ);
 
   return (
-    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem', fontFamily: "'Inter', sans-serif", color: '#18181b' }}>
+    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem', fontFamily: "'Inter', sans-serif", color: 'var(--c-ink-1, #18181b)' }}>
       
       {/* 1. Results Summary Header Panel */}
       <div style={{
-        background: 'white', border: '1px solid #e4e4e7', padding: '3rem 2.5rem', textAlign: 'center',
+        background: 'var(--c-bg-0, white)', border: '1px solid #e4e4e7', padding: '3rem 2.5rem', textAlign: 'center',
         position: 'relative'
       }}>
         <div style={{
@@ -45,10 +45,10 @@ export const QuizResults = ({
           <Trophy size={36} color="#f59e0b" />
         </div>
 
-        <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '1.5px' }}>
+        <span style={{ fontSize: '0.7rem', fontWeight: 800, color: 'var(--c-ink-4, #64748b)', textTransform: 'uppercase', letterSpacing: '1.5px' }}>
           Assessment Final Report
         </span>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: 300, margin: '0.25rem 0 0.5rem 0', color: '#09090b', letterSpacing: '-0.5px' }}>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 300, margin: '0.25rem 0 0.5rem 0', color: 'var(--c-ink-1, #09090b)', letterSpacing: '-0.5px' }}>
           Mock Assessment Completed
         </h2>
         <p style={{ margin: 0, fontSize: '0.9rem', color: '#71717a' }}>
@@ -57,7 +57,7 @@ export const QuizResults = ({
 
         {/* Tier Rank Display Box */}
         <div style={{
-          margin: '2rem auto 0 auto', padding: '1.25rem', background: '#f8fafc',
+          margin: '2rem auto 0 auto', padding: '1.25rem', background: 'var(--c-bg-1, #f8fafc)',
           border: '1px solid #e4e4e7', maxWidth: '440px',
           display: 'flex', alignItems: 'center', gap: '1.25rem', textAlign: 'left'
         }}>
@@ -69,7 +69,7 @@ export const QuizResults = ({
             {tier.badge}
           </div>
           <div>
-            <h4 style={{ margin: 0, fontSize: '0.9rem', fontWeight: 800, textTransform: 'uppercase', color: '#18181b', letterSpacing: '0.5px' }}>
+            <h4 style={{ margin: 0, fontSize: '0.9rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--c-ink-1, #18181b)', letterSpacing: '0.5px' }}>
               Rank Tier: {tier.title}
             </h4>
             <p style={{ margin: '0.2rem 0 0 0', fontSize: '0.75rem', color: '#71717a', lineHeight: 1.3 }}>
@@ -85,11 +85,11 @@ export const QuizResults = ({
       }}>
         
         {/* Accuracy */}
-        <div style={{ background: 'white', border: '1px solid #e4e4e7', padding: '1.5rem', textAlign: 'left' }}>
+        <div style={{ background: 'var(--c-bg-0, white)', border: '1px solid #e4e4e7', padding: '1.5rem', textAlign: 'left' }}>
           <span style={{ display: 'block', fontSize: '0.7rem', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.5rem' }}>
             Score Accuracy
           </span>
-          <strong style={{ fontSize: '2.2rem', fontWeight: 800, color: '#18181b', fontFamily: 'monospace' }}>
+          <strong style={{ fontSize: '2.2rem', fontWeight: 800, color: 'var(--c-ink-1, #18181b)', fontFamily: 'monospace' }}>
             {accuracy}%
           </strong>
           <span style={{ display: 'block', fontSize: '0.7rem', color: '#71717a', marginTop: '0.25rem' }}>
@@ -98,11 +98,11 @@ export const QuizResults = ({
         </div>
 
         {/* Points */}
-        <div style={{ background: 'white', border: '1px solid #e4e4e7', padding: '1.5rem', textAlign: 'left' }}>
+        <div style={{ background: 'var(--c-bg-0, white)', border: '1px solid #e4e4e7', padding: '1.5rem', textAlign: 'left' }}>
           <span style={{ display: 'block', fontSize: '0.7rem', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.5rem' }}>
             Points Earned
           </span>
-          <strong style={{ fontSize: '2.2rem', fontWeight: 800, color: '#18181b', fontFamily: 'monospace' }}>
+          <strong style={{ fontSize: '2.2rem', fontWeight: 800, color: 'var(--c-ink-1, #18181b)', fontFamily: 'monospace' }}>
             {String(state.score).padStart(5, '0')}
           </strong>
           <span style={{ display: 'block', fontSize: '0.7rem', color: '#71717a', marginTop: '0.25rem' }}>
@@ -111,11 +111,11 @@ export const QuizResults = ({
         </div>
 
         {/* Avg Pace */}
-        <div style={{ background: 'white', border: '1px solid #e4e4e7', padding: '1.5rem', textAlign: 'left' }}>
+        <div style={{ background: 'var(--c-bg-0, white)', border: '1px solid #e4e4e7', padding: '1.5rem', textAlign: 'left' }}>
           <span style={{ display: 'block', fontSize: '0.7rem', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.5rem' }}>
             Average Pace / Q
           </span>
-          <strong style={{ fontSize: '2.2rem', fontWeight: 800, color: '#18181b', fontFamily: 'monospace' }}>
+          <strong style={{ fontSize: '2.2rem', fontWeight: 800, color: 'var(--c-ink-1, #18181b)', fontFamily: 'monospace' }}>
             {avgTime}s
           </strong>
           <span style={{ display: 'block', fontSize: '0.7rem', color: '#71717a', marginTop: '0.25rem' }}>
@@ -124,7 +124,7 @@ export const QuizResults = ({
         </div>
 
         {/* Max Streak */}
-        <div style={{ background: 'white', border: '1px solid #e4e4e7', padding: '1.5rem', textAlign: 'left' }}>
+        <div style={{ background: 'var(--c-bg-0, white)', border: '1px solid #e4e4e7', padding: '1.5rem', textAlign: 'left' }}>
           <span style={{ display: 'block', fontSize: '0.7rem', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.5rem' }}>
             Max Answer Streak
           </span>
@@ -140,9 +140,9 @@ export const QuizResults = ({
 
       {/* 3. Question Solutions & Review Panel */}
       <div style={{
-        background: 'white', border: '1px solid #e4e4e7', padding: '2.5rem', marginTop: '1.5rem'
+        background: 'var(--c-bg-0, white)', border: '1px solid #e4e4e7', padding: '2.5rem', marginTop: '1.5rem'
       }}>
-        <h3 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#18181b', textTransform: 'uppercase', letterSpacing: '1px', borderBottom: '1px solid #e4e4e7', paddingBottom: '0.75rem', marginBottom: '1.5rem', margin: 0 }}>
+        <h3 style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--c-ink-1, #18181b)', textTransform: 'uppercase', letterSpacing: '1px', borderBottom: '1px solid #e4e4e7', paddingBottom: '0.75rem', marginBottom: '1.5rem', margin: 0 }}>
           Question Review & Solutions
         </h3>
 
@@ -168,7 +168,7 @@ export const QuizResults = ({
                 <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start', marginBottom: '1rem' }}>
                   <span style={{ fontWeight: 800, color: '#71717a', fontSize: '0.85rem', fontFamily: 'monospace' }}>Q{idx + 1}.</span>
                   <div 
-                    style={{ fontWeight: 700, fontSize: '0.95rem', color: '#18181b', textAlign: 'left', lineHeight: 1.4 }}
+                    style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--c-ink-1, #18181b)', textAlign: 'left', lineHeight: 1.4 }}
                     dangerouslySetInnerHTML={{ __html: q.question }}
                   />
                 </div>
@@ -180,13 +180,13 @@ export const QuizResults = ({
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                     <span style={{ color: '#71717a' }}>Your Answer:</span>
                     <strong style={{
-                      color: isCorrect ? '#16a34a' : '#dc2626', background: isCorrect ? '#f0fdf4' : '#fef2f2',
+                      color: isCorrect ? '#16a34a' : 'var(--c-red, #dc2626)', background: isCorrect ? 'var(--c-tint-green, #f0fdf4)' : 'var(--c-tint-red, #fef2f2)',
                       padding: '0.1rem 0.4rem', border: `1px solid ${isCorrect ? '#bcf0da' : '#fecaca'}`,
                       fontFamily: 'monospace'
                     }}>
                       [{userLetter}]
                     </strong>
-                    <span style={{ color: isCorrect ? '#15803d' : '#b91c1c' }} dangerouslySetInnerHTML={{ __html: selectedText }} />
+                    <span style={{ color: isCorrect ? 'var(--c-green, #15803d)' : 'var(--c-red, #b91c1c)' }} dangerouslySetInnerHTML={{ __html: selectedText }} />
                     {isCorrect ? <CheckCircle size={14} color="#22c55e" /> : <XCircle size={14} color="#ef4444" />}
                   </div>
 
@@ -195,13 +195,13 @@ export const QuizResults = ({
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                       <span style={{ color: '#71717a' }}>Correct Answer:</span>
                       <strong style={{
-                        color: '#16a34a', background: '#f0fdf4',
+                        color: 'var(--c-green, #16a34a)', background: 'var(--c-tint-green, #f0fdf4)',
                         padding: '0.1rem 0.4rem', border: '1px solid #bcf0da',
                         fontFamily: 'monospace'
                       }}>
                         [{correctLetter}]
                       </strong>
-                      <span style={{ color: '#15803d' }} dangerouslySetInnerHTML={{ __html: correctText }} />
+                      <span style={{ color: 'var(--c-green, #15803d)' }} dangerouslySetInnerHTML={{ __html: correctText }} />
                     </div>
                   )}
 
@@ -210,14 +210,14 @@ export const QuizResults = ({
                 {/* Solution Explanation */}
                 {q.explanation && (
                   <div style={{
-                    background: '#f8fafc', border: '1px solid #e2e8f0', padding: '1rem 1.25rem',
+                    background: 'var(--c-bg-1, #f8fafc)', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '1rem 1.25rem',
                     textAlign: 'left'
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'var(--ios-olive)', fontWeight: 800, fontSize: '0.75rem', marginBottom: '0.25rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                       <Lightbulb size={13} /> Explanation
                     </div>
                     <div 
-                      style={{ fontSize: '0.8rem', color: '#64748b', lineHeight: 1.5 }}
+                      style={{ fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)', lineHeight: 1.5 }}
                       dangerouslySetInnerHTML={{ __html: q.explanation }}
                     />
                   </div>
@@ -246,7 +246,7 @@ export const QuizResults = ({
         <button
           onClick={onExit}
           style={{
-            background: 'white', color: '#71717a', border: '1px solid #e4e4e7',
+            background: 'var(--c-bg-0, white)', color: '#71717a', border: '1px solid #e4e4e7',
             padding: '0.9rem', fontSize: '0.8rem', fontWeight: 700,
             textTransform: 'uppercase', letterSpacing: '1px', cursor: 'pointer'
           }}

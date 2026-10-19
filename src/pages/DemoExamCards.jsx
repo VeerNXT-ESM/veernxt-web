@@ -143,17 +143,17 @@ const DEMO_CARDS_DATA = [
 export default function DemoExamCards() {
   const navigate = useNavigate();
   return (
-    <div style={{ minHeight: '100vh', background: '#f8fafc', padding: '36px 40px' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--c-bg-1, #f8fafc)', padding: '36px 40px' }}>
       <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
         <div style={{ marginBottom: '28px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 14px', background: '#ecfdf5', borderRadius: '100px', border: '1px solid #a7f3d0', color: '#065f46', fontSize: '12.5px', fontWeight: 600, marginBottom: '12px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 14px', background: 'var(--c-tint-green, #ecfdf5)', borderRadius: '100px', border: '1px solid #a7f3d0', color: 'var(--c-green, #065f46)', fontSize: '12.5px', fontWeight: 600, marginBottom: '12px' }}>
             <Sparkles size={14} />
             <span>AI Image Generation & Cloudflare R2 WebP Pipeline</span>
           </div>
-          <h1 style={{ fontSize: '28px', fontWeight: 800, color: '#0f172a', margin: '0 0 8px', letterSpacing: '-0.02em' }}>
+          <h1 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 8px', letterSpacing: '-0.02em' }}>
             Exam Catalog — Live Demo Layout
           </h1>
-          <p style={{ color: '#64748b', fontSize: '15px', margin: 0 }}>
+          <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '15px', margin: 0 }}>
             Generated via OpenRouter with custom context-tailored prompts, compressed with Sharp to ultra-lightweight WebP (avg ~24 KB), and served globally from Cloudflare R2 CDN.
           </p>
         </div>

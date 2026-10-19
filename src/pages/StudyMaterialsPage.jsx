@@ -571,14 +571,14 @@ export default function StudyMaterialsPage() {
         <div className="smp-trust-bar">
           <div className="smp-trust-items">
             <div className="smp-trust-item">
-              <div className="smp-trust-icon" style={{ color: '#059669' }}>
+              <div className="smp-trust-icon" style={{ color: 'var(--c-green, #059669)' }}>
                 <BookOpen size={17} />
               </div>
               <span>{booksWithCombinations.length} {pageTypeTitle} for {currentExamFullName}</span>
             </div>
 
             <div className="smp-trust-item">
-              <div className="smp-trust-icon" style={{ color: '#0284c7' }}>
+              <div className="smp-trust-icon" style={{ color: 'var(--c-blue, #0284c7)' }}>
                 <Users size={17} />
               </div>
               <span>50,000+ Happy Learners</span>
@@ -592,14 +592,14 @@ export default function StudyMaterialsPage() {
             </div>
 
             <div className="smp-trust-item">
-              <div className="smp-trust-icon" style={{ color: '#059669' }}>
+              <div className="smp-trust-icon" style={{ color: 'var(--c-green, #059669)' }}>
                 <Shield size={17} />
               </div>
               <span>Exam-Oriented & Updated</span>
             </div>
 
             <div className="smp-trust-item">
-              <div className="smp-trust-icon" style={{ color: '#16a34a' }}>
+              <div className="smp-trust-icon" style={{ color: 'var(--c-green, #16a34a)' }}>
                 <Calendar size={17} />
               </div>
               <span>Based on Latest Exam Pattern</span>
@@ -771,7 +771,7 @@ export default function StudyMaterialsPage() {
                                   {/* Top header: VeerNXT emblem + Lock Pill */}
                                   <div className="vn-book-cover-header">
                                     <div className="vn-book-cover-crest-badge">
-                                      <Shield size={10} style={{ color: '#b45309' }} />
+                                      <Shield size={10} style={{ color: 'var(--c-amber, #b45309)' }} />
                                       <span className="vn-book-cover-crest-text">VEERNXT</span>
                                     </div>
                                     <div className="vn-book-lock-pill unlocked">
@@ -1091,7 +1091,7 @@ export default function StudyMaterialsPage() {
                 </button>
               </div>
               <div className="smp-modal-body">
-                <p style={{ fontSize: '14px', color: '#475569', lineHeight: '1.6', marginBottom: '18px' }}>
+                <p style={{ fontSize: '14px', color: 'var(--c-ink-3, #475569)', lineHeight: '1.6', marginBottom: '18px' }}>
                   {activeDetailsBook.combo.description}
                 </p>
 

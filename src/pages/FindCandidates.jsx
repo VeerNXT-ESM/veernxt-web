@@ -7,7 +7,7 @@ import {
   ShieldCheck, Lock, Unlock, Send, Users, Phone, Mail,
   FileText, Sparkles, AlertCircle, RefreshCw, Star, Clock,
   Filter, Check, Layers, Compass, Building, Wrench, Shield,
-  Truck, Radio, Plane, AlertTriangle, Eye, ArrowRight, RotateCcw
+  Truck, Radio, Plane, AlertTriangle, Eye, ArrowRight, RotateCcw, ChevronDown, ArrowDownUp
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -388,6 +388,7 @@ const FindCandidates = () => {
   const [selectedLocation, setSelectedLocation] = useState('All');
   const [minScore, setMinScore] = useState(45);
   const [searchQuery, setSearchQuery] = useState('');
+  const [advOpen, setAdvOpen] = useState(false);
 
   // Candidates & Selection
   const [candidates, setCandidates] = useState([]);
@@ -795,21 +796,39 @@ const FindCandidates = () => {
     }
   };
 
+  const activeFilterCount =
+    (selectedBranch !== 'All' ? 1 : 0) + (minSupervised !== 0 ? 1 : 0) + (selectedLocation !== 'All' ? 1 : 0) + (minScore !== 45 ? 1 : 0) + (searchQuery.trim() ? 1 : 0);
+  const handleResetFilters = () => {
+    setSearchQuery('');
+    setSelectedBranch('All');
+    setMinSupervised(0);
+    setSelectedLocation('All');
+    setMinScore(45);
+  };
+
+  // On stacked (tablet/phone) layouts the detail pane sits below the list, so bring it into view on select.
+  const selectCandidateCard = (cand) => {
+    setSelectedCandidate(cand);
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 900px)').matches) {
+      requestAnimationFrame(() => document.querySelector('.talent-detail-column')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+    }
+  };
+
   const getServiceColor = (service) => {
-    if (!service) return { bg: '#f1f5f9', text: '#475569', border: '#e2e8f0' };
+    if (!service) return { bg: 'var(--c-bg-2, #f1f5f9)', text: '#475569', border: 'var(--c-line-2, #e2e8f0)' };
     const s = service.toLowerCase();
-    if (s.includes('army')) return { bg: '#eef4ea', text: '#2d5a27', border: '#c3ddbc' };
-    if (s.includes('navy')) return { bg: '#e8f0fe', text: '#1a56db', border: '#b8d2fc' };
-    if (s.includes('air')) return { bg: '#e6f7ff', text: '#0070ba', border: '#b3e5fc' };
-    return { bg: '#f1f5f9', text: '#475569', border: '#e2e8f0' };
+    if (s.includes('army')) return { bg: 'var(--c-tint-green, #eef4ea)', text: '#2d5a27', border: '#c3ddbc' };
+    if (s.includes('navy')) return { bg: 'var(--c-tint-blue, #e8f0fe)', text: '#1a56db', border: '#b8d2fc' };
+    if (s.includes('air')) return { bg: 'var(--c-tint-blue, #e6f7ff)', text: '#0070ba', border: '#b3e5fc' };
+    return { bg: 'var(--c-bg-2, #f1f5f9)', text: '#475569', border: 'var(--c-line-2, #e2e8f0)' };
   };
 
   return (
     <div className="talent-search-page animate-fade-in">
       {/* Top Header Card */}
       <div className="talent-header-card">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1.25rem' }}>
-          <div>
+        <div className="talent-header-top">
+          <div style={{ minWidth: 0 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
               <span style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ios-olive)' }}>
                 Corporate Talent Acquisition & Transition Cell
@@ -818,10 +837,10 @@ const FindCandidates = () => {
                 Privacy Protected
               </span>
             </div>
-            <h1 style={{ fontSize: '1.9rem', fontWeight: 850, color: '#0f172a', margin: '0 0 0.35rem', letterSpacing: '-0.02em' }}>
+            <h1 style={{ fontSize: '1.9rem', fontWeight: 850, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.35rem', letterSpacing: '-0.02em' }}>
               Find Military Talent by Dynamic Preferences
             </h1>
-            <p style={{ color: '#64748b', fontSize: '0.92rem', margin: 0, maxWidth: '780px', lineHeight: 1.45 }}>
+            <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.92rem', margin: 0, maxWidth: '780px', lineHeight: 1.45 }}>
               Filter ex-servicemen and Agniveers by custom sector requirements, leadership scale, and military competencies.
               Candidate names and direct contact details remain strictly masked under the VeerNXT Veteran Privacy Charter until mutual introduction.
             </p>
@@ -829,52 +848,75 @@ const FindCandidates = () => {
 
           <Button 
             variant="secondary" 
+            className="talent-post-btn"
             onClick={() => navigate('/employer/post-job')}
-            style={{ fontWeight: 700, borderColor: '#cbd5e1' }}
+            style={{ fontWeight: 700, borderColor: 'var(--c-line-3, #cbd5e1)' }}
           >
             + Post Formal Hiring Requirement
           </Button>
         </div>
 
         {/* Mode Switcher Tabs */}
-        <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1.5rem', borderBottom: '1px solid #e2e8f0', paddingBottom: '0.75rem' }}>
+        <div className="pref-mode-tabs" role="tablist" aria-label="Search mode">
           <button
             type="button"
             onClick={() => setSearchMode('dynamic')}
-            className={`pref-mode-tab ${searchMode === 'dynamic' ? 'active' : ''}`}
+            className={`pref-mode-tab ${searchMode === 'dynamic' ? 'active' : ''}`} role="tab" aria-selected={searchMode === 'dynamic'}
           >
             <Sliders size={16} /> Dynamic Role & Capability Matching (Recommended)
           </button>
           <button
             type="button"
             onClick={() => setSearchMode('posted')}
-            className={`pref-mode-tab ${searchMode === 'posted' ? 'active' : ''}`}
+            className={`pref-mode-tab ${searchMode === 'posted' ? 'active' : ''}`} role="tab" aria-selected={searchMode === 'posted'}
           >
             <Briefcase size={16} /> Match Against Posted Requirement ({employerRequirements.length})
           </button>
         </div>
 
+      </div>
+
+      {/* Search Criteria card */}
+      <section className="sc-card" aria-labelledby="sc-title">
+        <div className="sc-head">
+          <h2 id="sc-title" className="sc-title"><Filter size={18} /> Search Criteria</h2>
+          <div className="sc-head-actions">
+            <button type="button" className="sc-link-btn" onClick={handleResetFilters} disabled={activeFilterCount === 0}>
+              <RotateCcw size={14} /> Reset All
+            </button>
+            <button
+              type="button"
+              className="sc-link-btn sc-adv-toggle"
+              aria-expanded={advOpen}
+              aria-controls="sc-advanced"
+              onClick={() => setAdvOpen(o => !o)}
+            >
+              <Sliders size={14} /> {advOpen ? 'Hide' : 'Show'} Advanced Filters{activeFilterCount > 0 ? ` (${activeFilterCount})` : ''}
+              <ChevronDown size={14} className={`sc-chev ${advOpen ? 'open' : ''}`} />
+            </button>
+          </div>
+        </div>
+
         {/* Dynamic Preferences Builder */}
         {searchMode === 'dynamic' ? (
-          <div style={{ marginTop: '1.25rem', background: '#f8fafc', padding: '1.25rem', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '1rem' }}>
+          <div className="sc-fields">
               {/* Sector Selector */}
-              <div>
-                <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#475569', marginBottom: '0.35rem' }}>
+              <div className="sc-sector">
+                <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--c-ink-3, #475569)', marginBottom: '0.35rem' }}>
                   Industry Sector:
                 </label>
                 <select
                   value={dynamicSector}
                   onChange={(e) => handleSectorChange(e.target.value)}
-                  style={{ width: '100%', padding: '0.55rem 0.75rem', borderRadius: '10px', border: '1.5px solid #cbd5e1', fontSize: '0.88rem', fontWeight: 600, background: 'white' }}
+                  style={{ width: '100%', padding: '0.55rem 0.75rem', borderRadius: '10px', border: '1.5px solid var(--c-line-3, #cbd5e1)', fontSize: '0.88rem', fontWeight: 600, background: 'var(--c-bg-0, white)' }}
                 >
                   {SECTORS.map(s => <option key={s} value={s}>{s}</option>)}
                 </select>
               </div>
 
               {/* Target Role Title */}
-              <div>
-                <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#475569', marginBottom: '0.35rem' }}>
+              <div className="sc-role">
+                <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--c-ink-3, #475569)', marginBottom: '0.35rem' }}>
                   Target Role Title:
                 </label>
                 <input
@@ -882,10 +924,9 @@ const FindCandidates = () => {
                   value={dynamicRoleTitle}
                   onChange={(e) => setDynamicRoleTitle(e.target.value)}
                   placeholder="e.g. Network Administrator, Security Lead..."
-                  style={{ width: '100%', padding: '0.55rem 0.75rem', borderRadius: '10px', border: '1.5px solid #cbd5e1', fontSize: '0.88rem', fontWeight: 600, background: 'white' }}
+                  style={{ width: '100%', padding: '0.55rem 0.75rem', borderRadius: '10px', border: '1.5px solid var(--c-line-3, #cbd5e1)', fontSize: '0.88rem', fontWeight: 600, background: 'var(--c-bg-0, white)' }}
                 />
               </div>
-            </div>
 
             {/* Quick Role Suggestions */}
             {(() => {
@@ -894,8 +935,9 @@ const FindCandidates = () => {
               const rolesList = cfg.popularRoles || [];
               if (rolesList.length === 0) return null;
               return (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap', marginBottom: '0.9rem' }}>
-                  <span style={{ fontSize: '0.74rem', color: '#64748b', fontWeight: 700 }}>Popular {cfg.sectorLabel} Roles:</span>
+                <div className="sc-popular">
+                  <span className="sc-popular-label">Popular Roles for {cfg.sectorLabel}</span>
+                  <div className="sc-chip-row">
                   {rolesList.map(tag => (
                     <button
                       key={tag}
@@ -907,7 +949,7 @@ const FindCandidates = () => {
                         fontSize: '0.75rem',
                         fontWeight: 600,
                         background: dynamicRoleTitle === tag ? 'var(--ios-olive)' : 'white',
-                        color: dynamicRoleTitle === tag ? 'white' : '#475569',
+                        color: dynamicRoleTitle === tag ? 'white' : 'var(--c-ink-3, #475569)',
                         border: dynamicRoleTitle === tag ? '1px solid var(--ios-olive)' : '1px solid #cbd5e1',
                         cursor: 'pointer',
                         transition: 'all 0.15s ease'
@@ -916,19 +958,20 @@ const FindCandidates = () => {
                       {tag}
                     </button>
                   ))}
+                  </div>
                 </div>
               );
             })()}
 
             {/* Role Responsibilities & Requirements Banner */}
             {activeRoleSpec && (
-              <div style={{ background: 'white', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '0.85rem 1rem', marginBottom: '1.1rem' }}>
+              <div className="sc-scope">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.45rem', flexWrap: 'wrap', gap: '0.4rem' }}>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#1e293b', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--c-ink-1, #1e293b)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                     <Briefcase size={14} color="var(--ios-olive)" /> Domain Scope: {activeRoleSpec.role}
                   </span>
                   {activeRoleSpec.recommendedLicences?.length > 0 && (
-                    <span style={{ fontSize: '0.72rem', color: '#475569', background: '#f1f5f9', padding: '0.15rem 0.5rem', borderRadius: '6px', fontWeight: 600 }}>
+                    <span style={{ fontSize: '0.72rem', color: 'var(--c-ink-3, #475569)', background: 'var(--c-bg-2, #f1f5f9)', padding: '0.15rem 0.5rem', borderRadius: '6px', fontWeight: 600 }}>
                       Recommended: {activeRoleSpec.recommendedLicences.join(', ')}
                     </span>
                   )}
@@ -937,8 +980,8 @@ const FindCandidates = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '0.75rem', fontSize: '0.78rem' }}>
                   {activeRoleSpec.responsibilities?.length > 0 && (
                     <div>
-                      <strong style={{ color: '#334155', display: 'block', marginBottom: '0.2rem', fontSize: '0.72rem', textTransform: 'uppercase' }}>Key Responsibilities:</strong>
-                      <ul style={{ margin: 0, paddingLeft: '1.1rem', color: '#475569', lineHeight: 1.35 }}>
+                      <strong style={{ color: 'var(--c-ink-2, #334155)', display: 'block', marginBottom: '0.2rem', fontSize: '0.72rem', textTransform: 'uppercase' }}>Key Responsibilities:</strong>
+                      <ul style={{ margin: 0, paddingLeft: '1.1rem', color: 'var(--c-ink-3, #475569)', lineHeight: 1.35 }}>
                         {activeRoleSpec.responsibilities.slice(0, 2).map((r, i) => (
                           <li key={i}>{r}</li>
                         ))}
@@ -948,8 +991,8 @@ const FindCandidates = () => {
 
                   {activeRoleSpec.requirements?.length > 0 && (
                     <div>
-                      <strong style={{ color: '#334155', display: 'block', marginBottom: '0.2rem', fontSize: '0.72rem', textTransform: 'uppercase' }}>Military / Trade Requirements:</strong>
-                      <ul style={{ margin: 0, paddingLeft: '1.1rem', color: '#475569', lineHeight: 1.35 }}>
+                      <strong style={{ color: 'var(--c-ink-2, #334155)', display: 'block', marginBottom: '0.2rem', fontSize: '0.72rem', textTransform: 'uppercase' }}>Military / Trade Requirements:</strong>
+                      <ul style={{ margin: 0, paddingLeft: '1.1rem', color: 'var(--c-ink-3, #475569)', lineHeight: 1.35 }}>
                         {activeRoleSpec.requirements.slice(0, 2).map((req, i) => (
                           <li key={i}>{req}</li>
                         ))}
@@ -967,13 +1010,13 @@ const FindCandidates = () => {
               const capabilitiesList = showAllCaps ? ALL_CAPABILITIES_LIST : cfg.capabilities;
 
               return (
-                <div>
+                <div className={`sc-caps ${activeRoleSpec ? '' : 'full'}`}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '0.5rem' }}>
                     <div>
-                      <span style={{ fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#1e293b' }}>
+                      <span style={{ fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--c-ink-1, #1e293b)' }}>
                         Target Military Competencies & Capabilities ({dynamicCapabilities.length} selected):
                       </span>
-                      <span style={{ display: 'block', fontSize: '0.72rem', color: '#64748b', fontWeight: 600, marginTop: '2px' }}>
+                      <span style={{ display: 'block', fontSize: '0.72rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 600, marginTop: '2px' }}>
                         {showAllCaps ? 'Showing all military capability areas across services' : `Curated specifically for ${cfg.sectorLabel} domain`}
                       </span>
                     </div>
@@ -990,11 +1033,11 @@ const FindCandidates = () => {
                         type="button"
                         onClick={() => setShowAllCaps(prev => !prev)}
                         style={{
-                          background: showAllCaps ? '#e2e8f0' : 'white',
-                          border: '1px solid #cbd5e1',
+                          background: showAllCaps ? 'var(--c-bg-3, #e2e8f0)' : 'var(--c-bg-0, white)',
+                          border: '1px solid var(--c-line-3, #cbd5e1)',
                           borderRadius: '8px',
                           padding: '0.25rem 0.6rem',
-                          color: '#334155',
+                          color: 'var(--c-ink-2, #334155)',
                           fontSize: '0.72rem',
                           fontWeight: 700,
                           cursor: 'pointer'
@@ -1041,9 +1084,9 @@ const FindCandidates = () => {
           </div>
         ) : (
           /* Match against posted job requirement */
-          <div style={{ marginTop: '1.25rem', background: '#f8fafc', padding: '1rem 1.25rem', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+          <div className="sc-builder">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-              <strong style={{ fontSize: '0.88rem', color: '#1e293b', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <strong style={{ fontSize: '0.88rem', color: 'var(--c-ink-1, #1e293b)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                 <Briefcase size={16} color="var(--ios-olive)" /> Select Requirement:
               </strong>
               <select
@@ -1061,7 +1104,7 @@ const FindCandidates = () => {
                   border: '1.5px solid var(--ios-olive)',
                   fontSize: '0.88rem',
                   fontWeight: 600,
-                  background: 'white',
+                  background: 'var(--c-bg-0, white)',
                 }}
               >
                 {employerRequirements.map(r => (
@@ -1080,11 +1123,12 @@ const FindCandidates = () => {
         )}
 
         {/* Global Filter Toolbar */}
-        <div className="filters-grid-bar">
+        <div className="filters-grid-bar" id="sc-advanced" data-open={advOpen ? 'true' : 'false'}>
           <div style={{ position: 'relative', flex: 2, minWidth: '220px' }}>
             <Search size={16} color="#94a3b8" style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)' }} />
             <input 
               type="text" 
+              aria-label="Search candidates"
               placeholder="Search by code (e.g. VN-4091), trade, skill, licence..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -1092,7 +1136,7 @@ const FindCandidates = () => {
                 width: '100%',
                 padding: '0.55rem 0.75rem 0.55rem 2.4rem',
                 borderRadius: '10px',
-                border: '1px solid #cbd5e1',
+                border: '1px solid var(--c-line-3, #cbd5e1)',
                 fontSize: '0.88rem'
               }}
             />
@@ -1102,7 +1146,7 @@ const FindCandidates = () => {
             <select
               value={selectedBranch}
               onChange={(e) => setSelectedBranch(e.target.value)}
-              style={{ width: '100%', padding: '0.55rem', borderRadius: '10px', border: '1px solid #cbd5e1', fontSize: '0.88rem', background: 'white' }}
+              style={{ width: '100%', padding: '0.55rem', borderRadius: '10px', border: '1px solid var(--c-line-3, #cbd5e1)', fontSize: '0.88rem', background: 'var(--c-bg-0, white)' }}
             >
               <option value="All">All Armed Forces</option>
               <option value="Indian Army">Indian Army</option>
@@ -1115,7 +1159,7 @@ const FindCandidates = () => {
             <select
               value={minSupervised}
               onChange={(e) => setMinSupervised(Number(e.target.value))}
-              style={{ width: '100%', padding: '0.55rem', borderRadius: '10px', border: '1px solid #cbd5e1', fontSize: '0.88rem', background: 'white' }}
+              style={{ width: '100%', padding: '0.55rem', borderRadius: '10px', border: '1px solid var(--c-line-3, #cbd5e1)', fontSize: '0.88rem', background: 'var(--c-bg-0, white)' }}
             >
               <option value={0}>Any Supervisory Span</option>
               <option value={5}>Supervised 5+ Personnel</option>
@@ -1128,7 +1172,7 @@ const FindCandidates = () => {
             <select
               value={selectedLocation}
               onChange={(e) => setSelectedLocation(e.target.value)}
-              style={{ width: '100%', padding: '0.55rem', borderRadius: '10px', border: '1px solid #cbd5e1', fontSize: '0.88rem', background: 'white' }}
+              style={{ width: '100%', padding: '0.55rem', borderRadius: '10px', border: '1px solid var(--c-line-3, #cbd5e1)', fontSize: '0.88rem', background: 'var(--c-bg-0, white)' }}
             >
               <option value="All">Any Location</option>
               <option value="Delhi">Delhi NCR</option>
@@ -1141,7 +1185,7 @@ const FindCandidates = () => {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flex: 1, minWidth: '170px' }}>
-            <span style={{ fontSize: '0.74rem', fontWeight: 700, color: '#64748b', whiteSpace: 'nowrap' }}>
+            <span style={{ fontSize: '0.74rem', fontWeight: 700, color: 'var(--c-ink-4, #64748b)', whiteSpace: 'nowrap' }}>
               Min Fit: {minScore}%
             </span>
             <input 
@@ -1155,31 +1199,29 @@ const FindCandidates = () => {
             />
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Directory Workspace: Left Master List / Right Detail Evidence Pane */}
       <div className="talent-workspace-layout">
         {/* Left Side: Candidate Master List */}
         <div className="talent-list-column">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem', padding: '0 0.25rem' }}>
-            <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#64748b' }}>
+            <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-4, #64748b)' }}>
               <strong>{filteredCandidates.length}</strong> Military Candidates Available
             </span>
-            <span style={{ fontSize: '0.72rem', color: 'var(--ios-olive)', fontWeight: 700 }}>
-              Sorted by Fit %
-            </span>
+            <span className="sc-sort"><ArrowDownUp size={13} /> Sort by: Fit %</span>
           </div>
 
           {loading ? (
-            <div style={{ textAlign: 'center', padding: '3rem 1rem', background: 'white', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+            <div style={{ textAlign: 'center', padding: '3rem 1rem', background: 'var(--c-bg-0, white)', borderRadius: '16px', border: '1px solid var(--c-line-2, #e2e8f0)' }}>
               <RefreshCw className="aps-spin" size={24} color="var(--ios-olive)" style={{ margin: '0 auto 0.5rem' }} />
-              <p style={{ margin: 0, fontSize: '0.85rem', color: '#64748b' }}>Evaluating candidate crosswalks...</p>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--c-ink-4, #64748b)' }}>Evaluating candidate crosswalks...</p>
             </div>
           ) : filteredCandidates.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '3rem 1.5rem', background: 'white', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+            <div style={{ textAlign: 'center', padding: '3rem 1.5rem', background: 'var(--c-bg-0, white)', borderRadius: '16px', border: '1px solid var(--c-line-2, #e2e8f0)' }}>
               <Users size={32} color="#94a3b8" style={{ margin: '0 auto 0.5rem' }} />
-              <p style={{ margin: '0 0 0.25rem', fontWeight: 700, color: '#1e293b' }}>No Matches Found</p>
-              <p style={{ margin: 0, fontSize: '0.8rem', color: '#64748b' }}>
+              <p style={{ margin: '0 0 0.25rem', fontWeight: 700, color: 'var(--c-ink-1, #1e293b)' }}>No Matches Found</p>
+              <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)' }}>
                 Adjust your search keywords or lower the minimum fit threshold slider above.
               </p>
             </div>
@@ -1194,7 +1236,11 @@ const FindCandidates = () => {
                   <div 
                     key={cand.user_id}
                     className={`talent-card-item ${isSelected ? 'active' : ''}`}
-                    onClick={() => setSelectedCandidate(cand)}
+                    role="button"
+                    tabIndex={0}
+                    aria-pressed={isSelected}
+                    onClick={() => selectCandidateCard(cand)}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectCandidateCard(cand); } }}
                   >
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem' }}>
                       <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
@@ -1216,14 +1262,14 @@ const FindCandidates = () => {
 
                         <div>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                            <strong style={{ fontSize: '0.92rem', color: '#0f172a' }}>
+                            <strong style={{ fontSize: '0.92rem', color: 'var(--c-ink-1, #0f172a)' }}>
                               Candidate {cand.maskedCode}
                             </strong>
-                            <span title="Masked Candidate for Privacy" style={{ color: '#94a3b8' }}>
+                            <span title="Masked Candidate for Privacy" style={{ color: 'var(--c-ink-5, #94a3b8)' }}>
                               <Lock size={12} />
                             </span>
                           </div>
-                          <p style={{ margin: '0.15rem 0 0', fontSize: '0.75rem', color: '#64748b' }}>
+                          <p style={{ margin: '0.15rem 0 0', fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)' }}>
                             {cand.rank} • {cand.trade}
                           </p>
                         </div>
@@ -1235,8 +1281,8 @@ const FindCandidates = () => {
                         borderRadius: '999px',
                         fontSize: '0.75rem',
                         fontWeight: 800,
-                        background: cand.fitScore >= 80 ? '#eef4ea' : cand.fitScore >= 65 ? '#fef3c7' : '#f1f5f9',
-                        color: cand.fitScore >= 80 ? '#2d5a27' : cand.fitScore >= 65 ? '#92400e' : '#475569'
+                        background: cand.fitScore >= 80 ? 'var(--c-tint-green, #eef4ea)' : cand.fitScore >= 65 ? 'var(--c-tint-amber, #fef3c7)' : 'var(--c-bg-2, #f1f5f9)',
+                        color: cand.fitScore >= 80 ? 'var(--c-green, #2d5a27)' : cand.fitScore >= 65 ? 'var(--c-amber, #92400e)' : 'var(--c-ink-3, #475569)'
                       }}>
                         {cand.fitScore}% Fit
                       </div>
@@ -1246,11 +1292,11 @@ const FindCandidates = () => {
                       <span style={{ fontSize: '0.68rem', padding: '0.15rem 0.45rem', borderRadius: '4px', background: sColor.bg, color: sColor.text, fontWeight: 700 }}>
                         {cand.service}
                       </span>
-                      <span style={{ fontSize: '0.68rem', padding: '0.15rem 0.45rem', borderRadius: '4px', background: '#f1f5f9', color: '#475569', fontWeight: 600 }}>
+                      <span style={{ fontSize: '0.68rem', padding: '0.15rem 0.45rem', borderRadius: '4px', background: 'var(--c-bg-2, #f1f5f9)', color: 'var(--c-ink-3, #475569)', fontWeight: 600 }}>
                         {cand.service_years}
                       </span>
                       {cand.team_size_supervised > 0 && (
-                        <span style={{ fontSize: '0.68rem', padding: '0.15rem 0.45rem', borderRadius: '4px', background: '#f8fafc', border: '1px solid #e2e8f0', color: '#334155', fontWeight: 600 }}>
+                        <span style={{ fontSize: '0.68rem', padding: '0.15rem 0.45rem', borderRadius: '4px', background: 'var(--c-bg-1, #f8fafc)', border: '1px solid var(--c-line-2, #e2e8f0)', color: 'var(--c-ink-2, #334155)', fontWeight: 600 }}>
                           Supervised {cand.team_size_supervised}
                         </span>
                       )}
@@ -1258,15 +1304,15 @@ const FindCandidates = () => {
 
                     {/* Request Status Pill */}
                     {reqStatus && (
-                      <div style={{ marginTop: '0.5rem', paddingTop: '0.45rem', borderTop: '1px dashed #e2e8f0', display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.72rem', fontWeight: 700 }}>
+                      <div style={{ marginTop: '0.5rem', paddingTop: '0.45rem', borderTop: '1px dashed var(--c-line-2, #e2e8f0)', display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.72rem', fontWeight: 700 }}>
                         {reqStatus === 'interest_sent' && (
                           <span style={{ color: '#d97706' }}>⏳ Interest Expressed • Pending Review</span>
                         )}
                         {reqStatus === 'accepted' && (
-                          <span style={{ color: '#16a34a' }}>✓ Introduction Accepted</span>
+                          <span style={{ color: 'var(--c-green, #16a34a)' }}>✓ Introduction Accepted</span>
                         )}
                         {reqStatus === 'declined' && (
-                          <span style={{ color: '#64748b' }}>✕ Declined</span>
+                          <span style={{ color: 'var(--c-ink-4, #64748b)' }}>✕ Declined</span>
                         )}
                       </div>
                     )}
@@ -1278,11 +1324,11 @@ const FindCandidates = () => {
         </div>
 
         {/* Right Side: Candidate Full Capability Profile Pane (NO Name, NO Contacts) */}
-        <div className="talent-detail-column">
+        <div className="talent-detail-column" aria-live="polite">
           {selectedCandidate ? (
             <div className="candidate-full-view">
               {/* Header Hero */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', borderBottom: '1px solid #f1f5f9', paddingBottom: '1.25rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', borderBottom: '1px solid var(--c-line-1, #f1f5f9)', paddingBottom: '1.25rem' }}>
                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                   <div style={{
                     width: '60px',
@@ -1302,7 +1348,7 @@ const FindCandidates = () => {
 
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                      <h2 style={{ margin: 0, fontSize: '1.35rem', fontWeight: 850, color: '#0f172a' }}>
+                      <h2 style={{ margin: 0, fontSize: '1.35rem', fontWeight: 850, color: 'var(--c-ink-1, #0f172a)' }}>
                         Candidate {selectedCandidate.maskedCode}
                       </h2>
                       <span style={{
@@ -1313,15 +1359,15 @@ const FindCandidates = () => {
                         fontWeight: 700,
                         padding: '0.2rem 0.6rem',
                         borderRadius: '999px',
-                        background: '#f8fafc',
-                        color: '#64748b',
-                        border: '1px solid #e2e8f0'
+                        background: 'var(--c-bg-1, #f8fafc)',
+                        color: 'var(--c-ink-4, #64748b)',
+                        border: '1px solid var(--c-line-2, #e2e8f0)'
                       }}>
                         <Lock size={11} /> Masked for Veteran Privacy
                       </span>
                     </div>
 
-                    <p style={{ margin: '0.25rem 0 0', color: '#475569', fontSize: '0.88rem', fontWeight: 600 }}>
+                    <p style={{ margin: '0.25rem 0 0', color: 'var(--c-ink-3, #475569)', fontSize: '0.88rem', fontWeight: 600 }}>
                       {selectedCandidate.service} • {selectedCandidate.rank} • {selectedCandidate.trade}
                     </p>
                   </div>
@@ -1331,12 +1377,12 @@ const FindCandidates = () => {
                 <div>
                   {recruiterRequests[selectedCandidate.user_id] ? (
                     <div style={{
-                      background: '#fffbeb',
+                      background: 'var(--c-tint-amber, #fffbeb)',
                       border: '1px solid #fde68a',
                       padding: '0.55rem 0.95rem',
                       borderRadius: '10px',
                       fontSize: '0.82rem',
-                      color: '#92400e',
+                      color: 'var(--c-amber, #92400e)',
                       fontWeight: 700,
                       display: 'flex',
                       alignItems: 'center',
@@ -1348,7 +1394,7 @@ const FindCandidates = () => {
                     <Button 
                       size="sm"
                       onClick={() => handleOpenInterestModal(selectedCandidate)}
-                      style={{ fontWeight: 700, background: 'var(--ios-olive)', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
+                      style={{ fontWeight: 700, background: 'var(--ios-olive-fill, var(--ios-olive))', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
                     >
                       <Send size={14} /> Show Interest in Candidate
                     </Button>
@@ -1357,28 +1403,28 @@ const FindCandidates = () => {
               </div>
 
               {/* Privacy Notice Card */}
-              <div style={{ marginTop: '1.25rem', background: '#fbfcf9', border: '1px solid #e6eedb', padding: '0.9rem 1.1rem', borderRadius: '12px', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+              <div style={{ marginTop: '1.25rem', background: 'var(--c-tint-green, #fbfcf9)', border: '1px solid #e6eedb', padding: '0.9rem 1.1rem', borderRadius: '12px', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                 <ShieldCheck size={18} color="var(--ios-olive)" style={{ flexShrink: 0, marginTop: '0.15rem' }} />
-                <div style={{ fontSize: '0.8rem', color: '#475569', lineHeight: 1.45 }}>
-                  <strong style={{ color: '#1f3a2e' }}>VeerNXT Veteran Privacy Charter:</strong> Candidate contact coordinates (verified phone, personal email, and full legal name) are strictly guarded.
+                <div style={{ fontSize: '0.8rem', color: 'var(--c-ink-3, #475569)', lineHeight: 1.45 }}>
+                  <strong style={{ color: 'var(--c-green, #1f3a2e)' }}>VeerNXT Veteran Privacy Charter:</strong> Candidate contact coordinates (verified phone, personal email, and full legal name) are strictly guarded.
                   When you click <strong>Show Interest</strong>, this role request is routed directly to the VeerNXT Operations Desk for candidate briefing and introduction.
                 </div>
               </div>
 
               {/* Requirement Fit Assessment Box */}
-              <div style={{ marginTop: '1.25rem', background: '#f8fafc', borderRadius: '16px', border: '1px solid #e2e8f0', padding: '1.25rem' }}>
+              <div style={{ marginTop: '1.25rem', background: 'var(--c-bg-1, #f8fafc)', borderRadius: '16px', border: '1px solid var(--c-line-2, #e2e8f0)', padding: '1.25rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <Sparkles size={16} color="var(--ios-olive)" />
-                    <strong style={{ fontSize: '0.92rem', color: '#0f172a' }}>
+                    <strong style={{ fontSize: '0.92rem', color: 'var(--c-ink-1, #0f172a)' }}>
                       Fit Assessment for: {activeCriteria.role_titles?.[0] || 'Selected Preferences'}
                     </strong>
                   </div>
                   <span style={{
                     fontSize: '0.95rem',
                     fontWeight: 900,
-                    color: selectedCandidate.fitScore >= 80 ? '#2d5a27' : '#92400e',
-                    background: selectedCandidate.fitScore >= 80 ? '#eef4ea' : '#fef3c7',
+                    color: selectedCandidate.fitScore >= 80 ? 'var(--c-green, #2d5a27)' : 'var(--c-amber, #92400e)',
+                    background: selectedCandidate.fitScore >= 80 ? 'var(--c-tint-green, #eef4ea)' : 'var(--c-tint-amber, #fef3c7)',
                     padding: '0.25rem 0.65rem',
                     borderRadius: '8px'
                   }}>
@@ -1389,7 +1435,7 @@ const FindCandidates = () => {
                 {/* Match reasons */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', marginBottom: '0.85rem' }}>
                   {(selectedCandidate.fit?.matchReasons || []).map((reason, idx) => (
-                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: '#334155' }}>
+                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.82rem', color: 'var(--c-ink-2, #334155)' }}>
                       <CheckCircle2 size={14} color="#16a34a" />
                       <span>{reason}</span>
                     </div>
@@ -1400,12 +1446,12 @@ const FindCandidates = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   {selectedCandidate.fit?.reqHit?.length > 0 && (
                     <div>
-                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#166534', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--c-green, #166534)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                         Verified Target Capabilities:
                       </span>
                       <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap', marginTop: '0.25rem' }}>
                         {selectedCandidate.fit.reqHit.map(c => (
-                          <span key={c} style={{ fontSize: '0.75rem', background: '#eef4ea', color: '#2d5a27', padding: '0.2rem 0.55rem', borderRadius: '6px', fontWeight: 600, border: '1px solid #c3ddbc' }}>
+                          <span key={c} style={{ fontSize: '0.75rem', background: 'var(--c-tint-green, #eef4ea)', color: 'var(--c-green, #2d5a27)', padding: '0.2rem 0.55rem', borderRadius: '6px', fontWeight: 600, border: '1px solid #c3ddbc' }}>
                             ✓ {c}
                           </span>
                         ))}
@@ -1415,12 +1461,12 @@ const FindCandidates = () => {
 
                   {selectedCandidate.fit?.gaps?.length > 0 && (
                     <div style={{ marginTop: '0.35rem' }}>
-                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--c-ink-4, #64748b)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                         Complementary Capabilities / Bridge Areas:
                       </span>
                       <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap', marginTop: '0.25rem' }}>
                         {selectedCandidate.fit.gaps.map(g => (
-                          <span key={g} style={{ fontSize: '0.75rem', background: '#f1f5f9', color: '#64748b', padding: '0.2rem 0.55rem', borderRadius: '6px', fontWeight: 500 }}>
+                          <span key={g} style={{ fontSize: '0.75rem', background: 'var(--c-bg-2, #f1f5f9)', color: 'var(--c-ink-4, #64748b)', padding: '0.2rem 0.55rem', borderRadius: '6px', fontWeight: 500 }}>
                             + {g}
                           </span>
                         ))}
@@ -1432,41 +1478,41 @@ const FindCandidates = () => {
 
               {/* Service & Operational Experience Specs */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '1.25rem' }}>
-                <div style={{ background: 'white', border: '1px solid #f1f5f9', padding: '1rem', borderRadius: '12px' }}>
-                  <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase' }}>Supervisory Span</span>
+                <div style={{ background: 'var(--c-bg-0, white)', border: '1px solid var(--c-line-1, #f1f5f9)', padding: '1rem', borderRadius: '12px' }}>
+                  <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--c-ink-4, #64748b)', textTransform: 'uppercase' }}>Supervisory Span</span>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.25rem' }}>
                     <Users size={18} color="var(--ios-olive)" />
-                    <strong style={{ fontSize: '1.05rem', color: '#0f172a' }}>
+                    <strong style={{ fontSize: '1.05rem', color: 'var(--c-ink-1, #0f172a)' }}>
                       {selectedCandidate.team_size_supervised > 0 ? `${selectedCandidate.team_size_supervised} Personnel Supervised` : 'Individual Specialist'}
                     </strong>
                   </div>
-                  <p style={{ margin: '0.2rem 0 0', fontSize: '0.75rem', color: '#64748b' }}>
+                  <p style={{ margin: '0.2rem 0 0', fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)' }}>
                     {selectedCandidate.highest_working_level}
                   </p>
                 </div>
 
-                <div style={{ background: 'white', border: '1px solid #f1f5f9', padding: '1rem', borderRadius: '12px' }}>
-                  <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase' }}>Proficiency Class</span>
+                <div style={{ background: 'var(--c-bg-0, white)', border: '1px solid var(--c-line-1, #f1f5f9)', padding: '1rem', borderRadius: '12px' }}>
+                  <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--c-ink-4, #64748b)', textTransform: 'uppercase' }}>Proficiency Class</span>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.25rem' }}>
                     <Award size={18} color="var(--ios-olive)" />
-                    <strong style={{ fontSize: '1.05rem', color: '#0f172a' }}>
+                    <strong style={{ fontSize: '1.05rem', color: 'var(--c-ink-1, #0f172a)' }}>
                       {selectedCandidate.trade_proficiency}
                     </strong>
                   </div>
-                  <p style={{ margin: '0.2rem 0 0', fontSize: '0.75rem', color: '#64748b' }}>
+                  <p style={{ margin: '0.2rem 0 0', fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)' }}>
                     Armed Forces Certified Trade Class
                   </p>
                 </div>
 
-                <div style={{ background: 'white', border: '1px solid #f1f5f9', padding: '1rem', borderRadius: '12px' }}>
-                  <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase' }}>Service Duration</span>
+                <div style={{ background: 'var(--c-bg-0, white)', border: '1px solid var(--c-line-1, #f1f5f9)', padding: '1rem', borderRadius: '12px' }}>
+                  <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--c-ink-4, #64748b)', textTransform: 'uppercase' }}>Service Duration</span>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.25rem' }}>
                     <ShieldCheck size={18} color="var(--ios-olive)" />
-                    <strong style={{ fontSize: '1.05rem', color: '#0f172a' }}>
+                    <strong style={{ fontSize: '1.05rem', color: 'var(--c-ink-1, #0f172a)' }}>
                       {selectedCandidate.service_years}
                     </strong>
                   </div>
-                  <p style={{ margin: '0.2rem 0 0', fontSize: '0.75rem', color: '#64748b' }}>
+                  <p style={{ margin: '0.2rem 0 0', fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)' }}>
                     Honourable Military Service
                   </p>
                 </div>
@@ -1474,14 +1520,14 @@ const FindCandidates = () => {
 
               {/* Preferred Locations */}
               {selectedCandidate.preferred_locations?.length > 0 && (
-                <div style={{ marginTop: '1.25rem', background: '#f8fafc', padding: '0.85rem 1rem', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                <div style={{ marginTop: '1.25rem', background: 'var(--c-bg-1, #f8fafc)', padding: '0.85rem 1rem', borderRadius: '12px', border: '1px solid var(--c-line-2, #e2e8f0)', display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                   <MapPin size={16} color="var(--ios-olive)" />
-                  <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#1e293b' }}>
+                  <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-1, #1e293b)' }}>
                     Preferred Work Locations:
                   </span>
                   <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
                     {selectedCandidate.preferred_locations.map(loc => (
-                      <span key={loc} style={{ fontSize: '0.78rem', background: 'white', border: '1px solid #cbd5e1', padding: '0.15rem 0.5rem', borderRadius: '6px', color: '#334155' }}>
+                      <span key={loc} style={{ fontSize: '0.78rem', background: 'var(--c-bg-0, white)', border: '1px solid var(--c-line-3, #cbd5e1)', padding: '0.15rem 0.5rem', borderRadius: '6px', color: 'var(--c-ink-2, #334155)' }}>
                         {loc}
                       </span>
                     ))}
@@ -1492,7 +1538,7 @@ const FindCandidates = () => {
               {/* Verified Civil Licences & Certifications */}
               {selectedCandidate.civil_licences?.length > 0 && (
                 <div style={{ marginTop: '1.25rem' }}>
-                  <h4 style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem' }}>
+                  <h4 style={{ fontSize: '0.88rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', marginBottom: '0.5rem' }}>
                     Verified Civil Licences & Government Endorsements
                   </h4>
                   <div style={{ display: 'flex', gap: '0.45rem', flexWrap: 'wrap' }}>
@@ -1501,8 +1547,8 @@ const FindCandidates = () => {
                         display: 'inline-flex',
                         alignItems: 'center',
                         gap: '0.35rem',
-                        background: '#eff6ff',
-                        color: '#1d4ed8',
+                        background: 'var(--c-tint-blue, #eff6ff)',
+                        color: 'var(--c-blue, #1d4ed8)',
                         padding: '0.35rem 0.7rem',
                         borderRadius: '8px',
                         fontSize: '0.8rem',
@@ -1518,18 +1564,18 @@ const FindCandidates = () => {
 
               {/* Verified Military Duties & Equipment Handled */}
               <div style={{ marginTop: '1.5rem' }}>
-                <h4 style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem' }}>
+                <h4 style={{ fontSize: '0.88rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', marginBottom: '0.5rem' }}>
                   Logged Military Duties & Operational Responsibilities
                 </h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   {(selectedCandidate.duties || []).map((duty, idx) => (
                     <div key={idx} style={{
                       padding: '0.75rem 1rem',
-                      background: '#f8fafc',
+                      background: 'var(--c-bg-1, #f8fafc)',
                       borderRadius: '10px',
-                      border: '1px solid #e2e8f0',
+                      border: '1px solid var(--c-line-2, #e2e8f0)',
                       fontSize: '0.84rem',
-                      color: '#334155',
+                      color: 'var(--c-ink-2, #334155)',
                       lineHeight: 1.45
                     }}>
                       {duty.text || duty}
@@ -1541,19 +1587,19 @@ const FindCandidates = () => {
               {/* Technical & Military Skills */}
               {selectedCandidate.skills?.length > 0 && (
                 <div style={{ marginTop: '1.5rem' }}>
-                  <h4 style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem' }}>
+                  <h4 style={{ fontSize: '0.88rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', marginBottom: '0.5rem' }}>
                     Technical & Specialised Operational Skills
                   </h4>
                   <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
                     {selectedCandidate.skills.map((skill, idx) => (
                       <span key={idx} style={{
                         fontSize: '0.78rem',
-                        background: '#f1f5f9',
-                        color: '#334155',
+                        background: 'var(--c-bg-2, #f1f5f9)',
+                        color: 'var(--c-ink-2, #334155)',
                         padding: '0.3rem 0.65rem',
                         borderRadius: '6px',
                         fontWeight: 600,
-                        border: '1px solid #e2e8f0'
+                        border: '1px solid var(--c-line-2, #e2e8f0)'
                       }}>
                         {skill}
                       </span>
@@ -1565,7 +1611,7 @@ const FindCandidates = () => {
               {/* Cross-Service Work Types Translated */}
               {selectedCandidate.work_types?.length > 0 && (
                 <div style={{ marginTop: '1.5rem' }}>
-                  <h4 style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem' }}>
+                  <h4 style={{ fontSize: '0.88rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', marginBottom: '0.5rem' }}>
                     Civilian Capability Crosswalks
                   </h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
@@ -1575,12 +1621,12 @@ const FindCandidates = () => {
                         alignItems: 'center',
                         gap: '0.5rem',
                         padding: '0.55rem 0.85rem',
-                        background: 'white',
-                        border: '1px solid #e2e8f0',
+                        background: 'var(--c-bg-0, white)',
+                        border: '1px solid var(--c-line-2, #e2e8f0)',
                         borderRadius: '8px',
                         fontSize: '0.82rem',
                         fontWeight: 600,
-                        color: '#1e293b'
+                        color: 'var(--c-ink-1, #1e293b)'
                       }}>
                         <CheckCircle2 size={14} color="var(--ios-olive)" />
                         {wt}
@@ -1591,7 +1637,7 @@ const FindCandidates = () => {
               )}
             </div>
           ) : (
-            <div style={{ textAlign: 'center', padding: '4rem 2rem', background: 'white', borderRadius: '24px', border: '1px solid #e2e8f0', color: '#64748b' }}>
+            <div style={{ textAlign: 'center', padding: '4rem 2rem', background: 'var(--c-bg-0, white)', borderRadius: '24px', border: '1px solid var(--c-line-2, #e2e8f0)', color: 'var(--c-ink-4, #64748b)' }}>
               <Info size={36} color="#94a3b8" style={{ margin: '0 auto 0.75rem' }} />
               <h3>Select a Military Candidate</h3>
               <p style={{ fontSize: '0.88rem' }}>Choose any candidate from the list on the left to review their complete capability dossier and operational background.</p>
@@ -1614,33 +1660,33 @@ const FindCandidates = () => {
           padding: '1rem'
         }}>
           <div style={{
-            background: 'white',
+            background: 'var(--c-bg-0, white)',
             borderRadius: '20px',
             width: '100%',
             maxWidth: '540px',
             boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
             overflow: 'hidden'
           }}>
-            <div style={{ padding: '1.5rem', borderBottom: '1px solid #f1f5f9' }}>
+            <div style={{ padding: '1.5rem', borderBottom: '1px solid var(--c-line-1, #f1f5f9)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
                 <Send size={18} color="var(--ios-olive)" />
-                <h3 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 800, color: '#0f172a' }}>
+                <h3 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)' }}>
                   Show Interest in Candidate {selectedCandidate.maskedCode}
                 </h3>
               </div>
-              <p style={{ margin: '0.25rem 0 0', fontSize: '0.85rem', color: '#64748b' }}>
+              <p style={{ margin: '0.25rem 0 0', fontSize: '0.85rem', color: 'var(--c-ink-4, #64748b)' }}>
                 {selectedCandidate.service} • {selectedCandidate.rank} • {selectedCandidate.trade}
               </p>
             </div>
 
             <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <div style={{ background: '#f8fafc', padding: '0.85rem', borderRadius: '10px', border: '1px solid #e2e8f0', fontSize: '0.82rem', color: '#475569', lineHeight: 1.45 }}>
+              <div style={{ background: 'var(--c-bg-1, #f8fafc)', padding: '0.85rem', borderRadius: '10px', border: '1px solid var(--c-line-2, #e2e8f0)', fontSize: '0.82rem', color: 'var(--c-ink-3, #475569)', lineHeight: 1.45 }}>
                 Submitting interest logs this requirement directly with the <strong>VeerNXT Operations Desk</strong> and initiates contact with the veteran.
                 Candidate name and contact details remain masked until the introduction is confirmed.
               </div>
 
               <div>
-                <label style={{ fontSize: '0.78rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase', display: 'block', marginBottom: '0.35rem' }}>
+                <label style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--c-ink-3, #475569)', textTransform: 'uppercase', display: 'block', marginBottom: '0.35rem' }}>
                   Target Role Title:
                 </label>
                 <input
@@ -1652,7 +1698,7 @@ const FindCandidates = () => {
                     width: '100%',
                     padding: '0.65rem 0.75rem',
                     borderRadius: '10px',
-                    border: '1.5px solid #cbd5e1',
+                    border: '1.5px solid var(--c-line-3, #cbd5e1)',
                     fontSize: '0.88rem',
                     fontWeight: 600,
                   }}
@@ -1660,7 +1706,7 @@ const FindCandidates = () => {
               </div>
 
               <div>
-                <label style={{ fontSize: '0.78rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase', display: 'block', marginBottom: '0.35rem' }}>
+                <label style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--c-ink-3, #475569)', textTransform: 'uppercase', display: 'block', marginBottom: '0.35rem' }}>
                   Industry Sector:
                 </label>
                 <input
@@ -1672,14 +1718,14 @@ const FindCandidates = () => {
                     width: '100%',
                     padding: '0.65rem 0.75rem',
                     borderRadius: '10px',
-                    border: '1.5px solid #cbd5e1',
+                    border: '1.5px solid var(--c-line-3, #cbd5e1)',
                     fontSize: '0.88rem',
                   }}
                 />
               </div>
 
               <div>
-                <label style={{ fontSize: '0.78rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase', display: 'block', marginBottom: '0.35rem' }}>
+                <label style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--c-ink-3, #475569)', textTransform: 'uppercase', display: 'block', marginBottom: '0.35rem' }}>
                   Introductory Note from Employer (Optional):
                 </label>
                 <textarea
@@ -1691,7 +1737,7 @@ const FindCandidates = () => {
                     width: '100%',
                     padding: '0.7rem',
                     borderRadius: '10px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid var(--c-line-3, #cbd5e1)',
                     fontSize: '0.88rem',
                     fontFamily: 'inherit'
                   }}
@@ -1702,14 +1748,14 @@ const FindCandidates = () => {
                 <Button 
                   onClick={handleSubmitInterest}
                   disabled={submittingInterest}
-                  style={{ flex: 1, padding: '0.75rem', fontWeight: 800, background: 'var(--ios-olive)' }}
+                  style={{ flex: 1, padding: '0.75rem', fontWeight: 800, background: 'var(--ios-olive-fill, var(--ios-olive))' }}
                 >
                   {submittingInterest ? 'Submitting...' : 'Confirm & Show Interest'}
                 </Button>
                 <Button 
                   variant="secondary"
                   onClick={() => setShowInterestModal(false)}
-                  style={{ padding: '0.75rem', borderColor: '#cbd5e1' }}
+                  style={{ padding: '0.75rem', borderColor: 'var(--c-line-3, #cbd5e1)' }}
                 >
                   Cancel
                 </Button>
@@ -1726,14 +1772,48 @@ const FindCandidates = () => {
           margin: 0 auto;
           padding: 2rem 1.5rem 4rem;
         }
-        .talent-header-card {
-          background: white;
-          border-radius: 24px;
-          border: 1px solid rgba(0,0,0,0.05);
-          padding: 1.75rem;
+        .talent-header-card { padding: 0.25rem 0.25rem 0; margin-bottom: 1rem; }
+        .talent-header-card p { max-width: 820px; }
+        .sc-card {
+          background: var(--c-bg-0, white);
+          border-radius: 20px;
+          border: 1px solid var(--c-line-2, rgba(0,0,0,0.06));
+          padding: 1.25rem 1.5rem 1.5rem;
           box-shadow: var(--shadow-ios);
-          margin-bottom: 1.75rem;
+          margin-bottom: 1.5rem;
         }
+        .sc-head { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
+        .sc-title { display: flex; align-items: center; gap: 0.6rem; margin: 0; font-size: 1.15rem; font-weight: 800; color: var(--c-ink-1, #0f172a); }
+        .sc-title svg { color: var(--ios-olive); }
+        .sc-head-actions { display: flex; align-items: center; gap: 1.1rem; }
+        .sc-link-btn {
+          display: inline-flex; align-items: center; gap: 0.35rem; background: none; border: none; cursor: pointer;
+          font-size: 0.82rem; font-weight: 600; color: var(--c-ink-3, #475569); padding: 0.4rem 0.25rem; border-radius: 8px;
+        }
+        .sc-link-btn:hover:not(:disabled) { color: var(--ios-olive); }
+        .sc-link-btn:disabled { opacity: 0.45; cursor: default; }
+        .sc-link-btn:focus-visible { outline: 2px solid var(--ios-olive); outline-offset: 2px; }
+        .sc-chev { transition: transform 0.15s ease; }
+        .sc-chev.open { transform: rotate(180deg); }
+        .sc-adv-toggle .sc-chev { display: none; }
+        .sc-builder { display: block; }
+        .sc-fields {
+          display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1rem 1.25rem; align-items: start;
+        }
+        .sc-sector, .sc-role { grid-column: span 3; min-width: 0; }
+        .sc-popular { grid-column: span 6; min-width: 0; }
+        .sc-popular-label { display: block; font-size: 0.78rem; font-weight: 800; color: var(--c-ink-2, #334155); margin-bottom: 0.45rem; }
+        .sc-chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .sc-scope {
+          grid-column: span 5; min-width: 0; background: var(--c-bg-1, #f8fafc); border: 1px solid var(--c-line-2, #e2e8f0);
+          border-radius: 14px; padding: 0.95rem 1.1rem;
+        }
+        .sc-caps {
+          grid-column: span 7; min-width: 0; border: 1px solid var(--c-line-2, #e2e8f0); border-radius: 14px; padding: 0.95rem 1.1rem;
+        }
+        .sc-caps.full { grid-column: 1 / -1; }
+        .sc-sort { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; font-weight: 700; color: var(--c-ink-3, #475569); }
+        .sc-card select, .sc-card input[type="text"] { border-radius: 10px; }
         .pref-mode-tab {
           display: inline-flex;
           align-items: center;
@@ -1743,27 +1823,39 @@ const FindCandidates = () => {
           background: none;
           font-size: 0.85rem;
           font-weight: 700;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           cursor: pointer;
           border-bottom: 2.5px solid transparent;
           transition: all 0.15s ease;
         }
         .pref-mode-tab:hover {
-          color: #1e293b;
+          color: var(--c-ink-1, #1e293b);
         }
         .pref-mode-tab.active {
           color: var(--ios-olive);
           border-bottom-color: var(--ios-olive);
         }
+        .talent-header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.25rem; }
+        .pref-mode-tabs {
+          display: flex; gap: 0.5rem; margin-top: 1.5rem; padding-bottom: 0.75rem;
+          border-bottom: 1px solid var(--c-line-2, #e2e8f0);
+          overflow-x: auto; scrollbar-width: none;
+        }
+        .pref-mode-tabs::-webkit-scrollbar { display: none; }
+        .pref-mode-tab { white-space: nowrap; flex: 0 0 auto; border-radius: 8px 8px 0 0; }
+        .pref-mode-tab.active { background: var(--c-tint-green, rgba(75,107,50,0.08)); }
+        .pref-mode-tab:focus-visible, .talent-card-item:focus-visible { outline: 2px solid var(--ios-olive); outline-offset: 2px; }
+        .talent-search-page select, .talent-search-page input[type="text"] { min-height: 40px; box-sizing: border-box; }
         .filters-grid-bar {
           display: flex;
           gap: 0.75rem;
           margin-top: 1.25rem;
           flex-wrap: wrap;
+          align-items: center;
         }
         .talent-workspace-layout {
           display: grid;
-          grid-template-columns: 360px 1fr;
+          grid-template-columns: minmax(300px, 380px) minmax(0, 1fr);
           gap: 1.5rem;
           align-items: start;
         }
@@ -1780,25 +1872,25 @@ const FindCandidates = () => {
           padding-right: 0.25rem;
         }
         .talent-card-item {
-          background: white;
+          background: var(--c-bg-0, white);
           border-radius: 16px;
-          border: 1px solid #e2e8f0;
+          border: 1px solid var(--c-line-2, #e2e8f0);
           padding: 1rem;
           cursor: pointer;
           transition: all 0.18s ease;
         }
         .talent-card-item:hover {
-          border-color: #cbd5e1;
-          background: #fcfdfc;
+          border-color: var(--c-line-3, #cbd5e1);
+          background: var(--c-tint-green, #fcfdfc);
           transform: translateY(-1px);
         }
         .talent-card-item.active {
-          background: #fbfdf9;
+          background: var(--c-tint-green, #fbfdf9);
           border: 1.8px solid var(--ios-olive);
           box-shadow: 0 4px 12px rgba(75, 107, 50, 0.08);
         }
         .talent-detail-column {
-          background: white;
+          background: var(--c-bg-0, white);
           border-radius: 24px;
           border: 1px solid rgba(0,0,0,0.05);
           padding: 1.75rem;
@@ -1810,8 +1902,26 @@ const FindCandidates = () => {
             grid-template-columns: 1fr;
           }
           .talent-scroll-pane {
-            max-height: 380px;
+            max-height: 420px;
           }
+          .talent-detail-column { scroll-margin-top: 72px; }
+          .sc-sector, .sc-role { grid-column: span 6; }
+          .sc-popular, .sc-scope, .sc-caps { grid-column: 1 / -1; }
+        }
+        @media (max-width: 600px) {
+          .sc-card { padding: 1rem; border-radius: 16px; }
+          .sc-sector, .sc-role { grid-column: 1 / -1; }
+          .sc-adv-toggle .sc-chev { display: inline-block; }
+          .filters-grid-bar[data-open="false"] > div:not(:first-child) { display: none; }
+          .sc-head-actions { gap: 0.5rem; }
+          .talent-search-page { padding: 1rem 0.75rem calc(5rem + env(safe-area-inset-bottom)); }
+          .talent-header-card { padding: 0; margin-bottom: 0.9rem; }
+          .talent-header-card h1 { font-size: 1.4rem !important; }
+          .talent-header-top > button, .talent-post-btn { width: 100%; justify-content: center; }
+          .filters-grid-bar > div { flex: 1 1 100% !important; min-width: 0 !important; }
+          .talent-search-page select, .talent-search-page input[type="text"] { min-height: 44px; font-size: 16px !important; }
+          .talent-scroll-pane { max-height: none; overflow: visible; padding-right: 0; }
+          .talent-detail-column { padding: 1.1rem; border-radius: 18px; overflow-wrap: anywhere; }
         }
       `}} />
     </div>

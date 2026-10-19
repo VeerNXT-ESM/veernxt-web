@@ -358,16 +358,16 @@ const InteractiveQuiz = () => {
         }}>
           <div style={{
             width: '60px', height: '60px', borderRadius: '50%',
-            background: '#f0fdf4', display: 'flex',
+            background: 'var(--c-tint-green, #f0fdf4)', display: 'flex',
             alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem',
-            color: '#16a34a'
+            color: 'var(--c-green, #16a34a)'
           }}>
             <PlayCircle size={32} />
           </div>
-          <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', marginBottom: '0.75rem' }}>
             Explore All Mock Tests
           </h3>
-          <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.5 }}>
+          <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.5 }}>
             This specific mock test is currently being updated. You can access hundreds of full-length mock tests and sectional practice sets in the Quiz Center.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
@@ -395,7 +395,7 @@ const InteractiveQuiz = () => {
               style={{
                 background: 'none',
                 border: 'none',
-                color: '#64748b',
+                color: 'var(--c-ink-4, #64748b)',
                 fontSize: '0.85rem',
                 fontWeight: 600,
                 marginTop: '0.5rem',
@@ -437,10 +437,10 @@ const InteractiveQuiz = () => {
           }}>
             <Lock size={30} color="#ef4444" />
           </div>
-          <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>
+          <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', marginBottom: '0.75rem' }}>
             Mock Test Locked
           </h3>
-          <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.5 }}>
+          <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.5 }}>
             {access.reason || "You have already used your 1 free mock test. Upgrade to access all exams, practice resources, and unlimited mock tests."}
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
@@ -454,7 +454,7 @@ const InteractiveQuiz = () => {
             <button 
               onClick={() => navigate('/learning-center')} 
               style={{
-                background: 'none', border: 'none', color: '#64748b', fontSize: '0.85rem', fontWeight: 600,
+                background: 'none', border: 'none', color: 'var(--c-ink-4, #64748b)', fontSize: '0.85rem', fontWeight: 600,
                 marginTop: '0.5rem', cursor: 'pointer'
               }}
             >
@@ -471,9 +471,9 @@ const InteractiveQuiz = () => {
   if (quizPhase === 'setup' && questions.length === 0 && !savedQuiz) {
     return (
       <div style={{ minHeight: '100vh', background: 'var(--ios-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem 1.5rem' }}>
-        <div style={{ background: '#fff', borderRadius: '24px', padding: '2.5rem 2rem', maxWidth: '440px', width: '100%', textAlign: 'center', boxShadow: '0 12px 32px rgba(0,0,0,0.12)' }}>
-          <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>{quiz.title}</h3>
-          <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '1.75rem', lineHeight: 1.5 }}>
+        <div style={{ background: 'var(--c-bg-0, #fff)', borderRadius: '24px', padding: '2.5rem 2rem', maxWidth: '440px', width: '100%', textAlign: 'center', boxShadow: '0 12px 32px rgba(0,0,0,0.12)' }}>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', marginBottom: '0.75rem' }}>{quiz.title}</h3>
+          <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.95rem', marginBottom: '1.75rem', lineHeight: 1.5 }}>
             This mock test is being prepared. Its questions are still being reviewed, so it can't be attempted yet. Please check back soon.
           </p>
           <button onClick={() => navigate('/learning-center')} className="btn-primary ios-pill" style={{ border: 'none', padding: '0.85rem 2rem', fontSize: '0.95rem', color: 'white', cursor: 'pointer' }}>

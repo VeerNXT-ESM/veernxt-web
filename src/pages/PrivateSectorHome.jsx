@@ -133,8 +133,8 @@ const PrivateSectorHome = () => {
           font-size: 0.85rem;
           font-weight: 700;
         }
-        .ps-verified-ok { color: #15803d; }
-        .ps-verified-pending { color: #b45309; }
+        .ps-verified-ok { color: var(--c-green, #15803d); }
+        .ps-verified-pending { color: var(--c-amber, #b45309); }
         .ps-verified-none {
           font-size: 0.85rem;
           color: var(--text-secondary);

@@ -24,12 +24,14 @@ const VETERAN_FRIENDLY_TRACKS = ['DEFENCE', 'PSU', 'RAILWAYS', 'POLICE_CAPF'];
 const isVeteranFriendly = (job) => VETERAN_FRIENDLY_TRACKS.includes(job?.careerTrack);
 
 const CategoryTag = ({ track, style }) => {
+  const { isDark } = useTheme();
   const meta = CAREER_TRACK_META[track];
   if (!meta) return null;
+  const hue = isDark ? meta.hueDark : meta.hue;
   return (
     <span
       className="category-tag"
-      style={{ background: hexToRgba(meta.hue, 0.08), color: meta.hue, borderColor: hexToRgba(meta.hue, 0.2), ...style }}
+      style={{ background: hexToRgba(hue, isDark ? 0.16 : 0.08), color: hue, borderColor: hexToRgba(hue, isDark ? 0.35 : 0.2), ...style }}
     >
       {meta.label}
     </span>
@@ -1174,7 +1176,7 @@ const JobBoard = () => {
           cursor: pointer;
         }
         .jobs-result-tabs button.active {
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           border-color: var(--ios-olive);
           color: #fff;
         }
@@ -1320,8 +1322,8 @@ const JobBoard = () => {
           font-size: 0.68rem;
           padding: 0.15rem 0.5rem;
           border-radius: 4px;
-          background: #f0fdf4;
-          color: #166534;
+          background: var(--c-tint-green, #f0fdf4);
+          color: var(--c-green, #166534);
           border: 1px solid #bbf7d0;
           font-weight: 600;
         }
@@ -1881,7 +1883,7 @@ const JobBoard = () => {
           padding: 0 6px;
           margin-left: 0.15rem;
           border-radius: 999px;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           color: #fff;
           font-size: 0.72rem;
           font-weight: 800;
@@ -2139,7 +2141,7 @@ const JobBoard = () => {
             flex: 1 1 calc(100% - 9rem);
             min-width: 0;
             min-height: 48px;
-            background: #ffffff;
+            background: var(--c-bg-0, #ffffff);
             border-radius: 12px;
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
             padding-left: 0.85rem;

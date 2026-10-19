@@ -55,6 +55,10 @@ import {
 import examCardImages from '../lib/examCardImages.json';
 import './CategoryExplorerPortal.css';
 
+// "Expanded" is the sidebar's normal resting state, except on laptop-width screens (1101-1199px)
+// where it rests as the icon rail so the content keeps enough width for three columns.
+const laptopRailDefault = () => typeof window !== 'undefined' && window.innerWidth > 1100 && window.innerWidth < 1200;
+
 let jobsV2Cache = null;
 let jobsV2FetchPromise = null;
 
@@ -632,6 +636,19 @@ export default function CategoryExplorerPortal({
 
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  // Phones: About / Top Exams / Related Exams / Why Choose become accordions (state is
+  // ignored on larger screens, where every section is always open).
+  const [isPhone, setIsPhone] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
+  );
+  const [openSections, setOpenSections] = useState({ about: true, top: true, related: false, why: true });
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)');
+    const onChange = () => setIsPhone(mq.matches);
+    mq.addEventListener?.('change', onChange);
+    return () => mq.removeEventListener?.('change', onChange);
+  }, []);
   const [viewTransitioning, setViewTransitioning] = useState(false);
   const [showAllExams, setShowAllExams] = useState(urlViewParam === 'all');
   const [currentPage, setCurrentPage] = useState(1);
@@ -741,7 +758,7 @@ export default function CategoryExplorerPortal({
       } else {
         setShowAllExams(false);
         updatePortalParams({ view: undefined }, { replace: true });
-        onSetSidebarCollapsed?.(false);
+        onSetSidebarCollapsed?.(laptopRailDefault());
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
       const rail = document.querySelector('.lc-content-rail');
@@ -759,7 +776,7 @@ export default function CategoryExplorerPortal({
       } else {
         setSelectedExam(null);
         updatePortalParams({ exam: undefined }, { replace: true });
-        if (urlViewParam !== 'all') onSetSidebarCollapsed?.(false);
+        if (urlViewParam !== 'all') onSetSidebarCollapsed?.(laptopRailDefault());
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
       const rail = document.querySelector('.lc-content-rail');
@@ -799,7 +816,7 @@ export default function CategoryExplorerPortal({
     setActiveResourceTab('intro');
     if (!urlViewParam) {
       setShowAllExams(false);
-      onSetSidebarCollapsed?.(false);
+      onSetSidebarCollapsed?.(laptopRailDefault());
     }
     const rail = document.querySelector('.lc-content-rail');
     if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
@@ -992,7 +1009,7 @@ export default function CategoryExplorerPortal({
       if (selectedExam !== null) {
         setSelectedExam(null);
         if (urlViewParam !== 'all') {
-          onSetSidebarCollapsed?.(false);
+          onSetSidebarCollapsed?.(laptopRailDefault());
         }
       }
       return;
@@ -1390,12 +1407,12 @@ export default function CategoryExplorerPortal({
               <p><strong>Conducting Body:</strong> ${selectedExam?.conducting_body?.name || selectedExam?.conductingBody || 'Government Selection Board'}</p>
               <p><strong>Category:</strong> ${selectedExam?.category || profile?.category_name || 'Competitive Examination'}</p>
               <p><strong>Recruitment Level:</strong> ${selectedExam?.region?.level || selectedExam?.level || 'Central / State'}</p>
-              <hr style="margin: 20px 0; border: none; border-top: 1px solid #e2e8f0;" />
-              <h3 style="color: #065f46; font-size: 19px; margin-bottom: 8px;">Examination Overview</h3>
+              <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--c-line-2, #e2e8f0);" />
+              <h3 style="color: var(--c-green, #065f46); font-size: 19px; margin-bottom: 8px;">Examination Overview</h3>
               <p>${selectedExam?.description || profile?.about_text || 'Comprehensive exam preparation syllabus provided by Veer Next.'}</p>
-              <h3 style="color: #065f46; font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Selection Process & Pattern</h3>
+              <h3 style="color: var(--c-green, #065f46); font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Selection Process & Pattern</h3>
               <p>The recruitment process comprises multi-stage evaluations including Computer-Based Written Tests (CBT), skill assessments, and document verification. Structured module notes and previous year papers are compiled below.</p>
-              <h3 style="color: #065f46; font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Recommended Preparation Strategy</h3>
+              <h3 style="color: var(--c-green, #065f46); font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Recommended Preparation Strategy</h3>
               <p>1. Complete the core topic chapters in the Guidebooks.<br/>2. Revise key formulae and summary points via Préci.<br/>3. Benchmark timing using full-length Mock Tests.</p>
             </div>
           `,
@@ -1457,8 +1474,8 @@ export default function CategoryExplorerPortal({
               <span>Back to {selectedExam.name} Overview</span>
             </button>
             <div className="cep-reader-title-badge">
-              <BookOpen size={17} style={{ color: '#065f46' }} />
-              <span style={{ fontWeight: 700, color: '#0f172a' }}>
+              <BookOpen size={17} style={{ color: 'var(--c-green, #065f46)' }} />
+              <span style={{ fontWeight: 700, color: 'var(--c-ink-1, #0f172a)' }}>
                 {activeReadingResource.title || 'Study Material'}
               </span>
               <span className="cep-reader-cat-pill">
@@ -1925,7 +1942,7 @@ export default function CategoryExplorerPortal({
             </div>
 
             {jobsLoading ? (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '24px 0', color: '#64748b' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '24px 0', color: 'var(--c-ink-4, #64748b)' }}>
                 <RefreshCw size={18} className="animate-spin" />
                 <span>Searching active recruitment openings…</span>
               </div>
@@ -1959,12 +1976,12 @@ export default function CategoryExplorerPortal({
 
                       <div className="cep-job-card-tags">
                         {job.vacancies && (
-                          <span className="cep-job-tag cep-job-tag-vacancies" style={{ background: '#ecfdf5', color: '#065f46', fontWeight: 700 }}>
+                          <span className="cep-job-tag cep-job-tag-vacancies" style={{ background: 'var(--c-tint-green, #ecfdf5)', color: 'var(--c-green, #065f46)', fontWeight: 700 }}>
                             {job.vacancies} {typeof job.vacancies === 'number' ? 'Posts' : ''}
                           </span>
                         )}
                         {(job.careerTrack || job.career_track) && (
-                          <span className="cep-job-tag cep-job-tag-track" style={{ background: '#eff6ff', color: '#1d4ed8', fontWeight: 600 }}>
+                          <span className="cep-job-tag cep-job-tag-track" style={{ background: 'var(--c-tint-blue, #eff6ff)', color: 'var(--c-blue, #1d4ed8)', fontWeight: 600 }}>
                             {String(job.careerTrack || job.career_track).replace(/_/g, ' ')}
                           </span>
                         )}
@@ -2002,11 +2019,11 @@ export default function CategoryExplorerPortal({
               </div>
             ) : (
               <div className="cep-jobs-empty">
-                <Briefcase size={32} style={{ color: '#059669', marginBottom: '8px' }} />
-                <p style={{ fontWeight: 600, color: '#0f172a', margin: '0 0 4px' }}>
+                <Briefcase size={32} style={{ color: 'var(--c-green, #059669)', marginBottom: '8px' }} />
+                <p style={{ fontWeight: 600, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 4px' }}>
                   No active recruitment notifications for {selectedExam.name} right now.
                 </p>
-                <p style={{ color: '#64748b', fontSize: '12.5px', margin: '0 0 14px' }}>
+                <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '12.5px', margin: '0 0 14px' }}>
                   New notices are aggregated regularly. You can also browse the full Jobs board.
                 </p>
                 <button
@@ -2028,6 +2045,33 @@ export default function CategoryExplorerPortal({
   // ══════════════════════════════════════════════════════════════════════════
   // LEVEL 1: DEFAULT CATEGORY PORTAL & ALL EXAMINATIONS LIST
   // ══════════════════════════════════════════════════════════════════════════
+  const renderColHeader = (key, title) => {
+    if (!isPhone) {
+      return (
+        <div className="cep-col-header">
+          <span className="cep-header-bar green-bar" />
+          <h3 className="cep-col-title">{title}</h3>
+        </div>
+      );
+    }
+    const open = openSections[key];
+    return (
+      <h3 className="cep-col-title cep-acc-h">
+        <button
+          type="button"
+          className="cep-acc-toggle"
+          aria-expanded={open}
+          aria-controls={`cep-acc-${key}`}
+          onClick={() => setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }))}
+        >
+          <span className="cep-header-bar green-bar" aria-hidden="true" />
+          <span className="cep-acc-title">{title}</span>
+          <ChevronDown size={18} className="cep-acc-chev" aria-hidden="true" />
+        </button>
+      </h3>
+    );
+  };
+
   return (
     <div className="cep-container" aria-label={`${profile.category_name} Exam Preparation Portal`}>
       {/* ── Breadcrumb Bar ── */}
@@ -2155,6 +2199,7 @@ export default function CategoryExplorerPortal({
 
       {/* ── Conditional: Full Width All Exams View OR 3-Column Overview ── */}
       {showAllExams ? (
+        <div className="cep-q">
         <section className="cep-all-exams-card" aria-label={`All ${profile.category_name} Examinations`}>
           <div className="cep-all-exams-header">
             <div className="cep-all-exams-header-left">
@@ -2206,8 +2251,8 @@ export default function CategoryExplorerPortal({
 
           {/* ── Multi-Facet Filter & Sort Toolbar for All Exams ── */}
           <div className="cep-all-exams-filter-bar">
-            <div className="cep-filter-chips-group">
-              <span className="cep-filter-label"><Filter size={13} /> Qualification:</span>
+            <div className="cep-filter-chips-group" role="group" aria-label="Filter by qualification">
+              <span className="cep-filter-label"><Filter size={13} /> <span className="cep-filter-label-text">Qualification:</span></span>
               {[
                 { id: 'all', label: 'All Roles' },
                 { id: 'graduate', label: 'Graduate' },
@@ -2219,6 +2264,7 @@ export default function CategoryExplorerPortal({
                   key={q.id}
                   type="button"
                   className={`cep-filter-chip ${qualFilter === q.id ? 'active' : ''}`}
+                  aria-pressed={qualFilter === q.id}
                   onClick={() => {
                     setQualFilter(q.id);
                     setCurrentPage(1);
@@ -2408,6 +2454,7 @@ export default function CategoryExplorerPortal({
             </div>
           )}
         </section>
+        </div>
       ) : (
         <>
           {/* Quick Overview Search & Filter Toolbar */}
@@ -2493,14 +2540,13 @@ export default function CategoryExplorerPortal({
             </div>
           </div>
 
+          <div className="cep-q">
           <section className="cep-details-card" aria-label={`${profile.category_name} Overview`}>
           {/* Column 1: About Category */}
           <div className="cep-about-col">
-            <div className="cep-col-header">
-              <span className="cep-header-bar green-bar" />
-              <h3 className="cep-col-title">About {profile.category_name}</h3>
-            </div>
+            {renderColHeader('about', `About ${profile.category_name}`)}
 
+            <div className="cep-acc-body" id="cep-acc-about" hidden={isPhone && !openSections.about}>
             <p className="cep-about-text">{profile.about_text}</p>
 
             <div className="cep-meta-grid">
@@ -2555,15 +2601,14 @@ export default function CategoryExplorerPortal({
               <span>View all {allCategoryExams.length} examinations</span>
               <ArrowRight size={15} />
             </button>
+            </div>
           </div>
 
           {/* Column 2: Top Exams */}
           <div className="cep-top-exams-col">
-            <div className="cep-col-header">
-              <span className="cep-header-bar green-bar" />
-              <h3 className="cep-col-title">Top Exams</h3>
-            </div>
+            {renderColHeader('top', 'Top Exams')}
 
+            <div className="cep-acc-body" id="cep-acc-top" hidden={isPhone && !openSections.top}>
             <div className="cep-exams-list">
               {topExams.map((exam, idx) => (
                 <div
@@ -2588,15 +2633,14 @@ export default function CategoryExplorerPortal({
                 </div>
               ))}
             </div>
+            </div>
           </div>
 
           {/* Column 3: Related Exams */}
           <div className="cep-related-exams-col">
-            <div className="cep-col-header">
-              <span className="cep-header-bar green-bar" />
-              <h3 className="cep-col-title">Related Exams</h3>
-            </div>
+            {renderColHeader('related', 'Related Exams')}
 
+            <div className="cep-acc-body" id="cep-acc-related" hidden={isPhone && !openSections.related}>
             <div className="cep-exams-list">
               {relatedExams.map((rel, idx) => (
                 <div
@@ -2621,22 +2665,22 @@ export default function CategoryExplorerPortal({
                 </div>
               ))}
             </div>
+            </div>
           </div>
           </section>
+          </div>
         </>
       )}
 
       {/* ── Bottom Section: Why Choose Veer Next ── */}
+      <div className="cep-q">
       <section className="cep-why-choose-card">
         <div className="cep-why-header">
-          <div className="cep-col-header">
-            <span className="cep-header-bar green-bar" />
-            <h3 className="cep-col-title">Why Choose Veer Next for {profile.category_name}?</h3>
-          </div>
-          <p className="cep-why-subtitle">Everything you need for your preparation — at one place.</p>
+          {renderColHeader('why', `Why Choose Veer Next for ${profile.category_name}?`)}
+          <p className="cep-why-subtitle" hidden={isPhone && !openSections.why}>Everything you need for your preparation — at one place.</p>
         </div>
 
-        <div className="cep-why-pillars-grid">
+        <div className="cep-why-pillars-grid" id="cep-acc-why" hidden={isPhone && !openSections.why}>
           {whyChooseList.map((item, idx) => {
             const IconComponent = item.icon;
             return (
@@ -2653,6 +2697,7 @@ export default function CategoryExplorerPortal({
           })}
         </div>
       </section>
+      </div>
 
       {/* ── Section 10: Promotional Banner (brought below Why Choose Veer Next) ── */}
       <section className="lc-promo-banner" aria-label="VeerNXT Career Progression">

@@ -562,14 +562,14 @@ const CVBuilder = () => {
             {selectedTemplate === 'modern' && (
               <>
                 <div style={{ borderBottom: `3px solid ${accentColor}`, paddingBottom: '1rem', marginBottom: '1.25rem' }}>
-                  <h1 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#1e293b', margin: 0, textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+                  <h1 style={{ fontSize: '2.2rem', fontWeight: 800, color: 'var(--c-ink-1, #1e293b)', margin: 0, textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                     {personalDetails.fullName || 'YOUR NAME'}
                   </h1>
                   <p style={{ color: accentColor, fontWeight: 700, fontSize: '0.95rem', marginTop: '0.25rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                     {serviceHistory.rank ? `${serviceHistory.rank} (${serviceHistory.branch})` : 'Transitioning Defense Professional'}
                   </p>
                   
-                  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '0.75rem', fontSize: '0.8rem', color: '#64748b' }}>
+                  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '0.75rem', fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)' }}>
                     {personalDetails.email && <span><Mail size={12} style={iconMini} /> {personalDetails.email}</span>}
                     {personalDetails.phone && <span><Phone size={12} style={iconMini} /> {personalDetails.phone}</span>}
                     {personalDetails.city && <span><MapPin size={12} style={iconMini} /> {personalDetails.city}, {personalDetails.state}</span>}
@@ -578,52 +578,52 @@ const CVBuilder = () => {
                 </div>
 
                 <div style={sectionSpacing}>
-                  <p style={{ fontSize: '0.88rem', color: '#334155', lineHeight: 1.6, margin: 0 }}>
+                  <p style={{ fontSize: '0.88rem', color: 'var(--c-ink-2, #334155)', lineHeight: 1.6, margin: 0 }}>
                     {personalDetails.summary}
                   </p>
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: '7fr 3fr', gap: '2rem' }}>
                   <div>
-                    <h2 style={{ ...sectionTitleStyle, color: '#0f172a', borderBottom: `1px solid #e2e8f0` }}>Experience</h2>
+                    <h2 style={{ ...sectionTitleStyle, color: 'var(--c-ink-1, #0f172a)', borderBottom: `1px solid var(--c-line-2, #e2e8f0)` }}>Experience</h2>
                     {experience.map((exp, idx) => (
                       <div key={idx} style={{ marginBottom: '1rem' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                          <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#1e293b', margin: 0 }}>{exp.title}</h4>
-                          <span style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 600 }}>{exp.start} – {exp.end}</span>
+                          <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--c-ink-1, #1e293b)', margin: 0 }}>{exp.title}</h4>
+                          <span style={{ fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 600 }}>{exp.start} – {exp.end}</span>
                         </div>
                         <p style={{ fontSize: '0.82rem', color: accentColor, fontWeight: 700, margin: '0.1rem 0 0.4rem' }}>{exp.org} • {exp.location}</p>
-                        <p style={{ fontSize: '0.82rem', color: '#475569', lineHeight: 1.5, margin: 0 }}>{exp.bullets}</p>
+                        <p style={{ fontSize: '0.82rem', color: 'var(--c-ink-3, #475569)', lineHeight: 1.5, margin: 0 }}>{exp.bullets}</p>
                       </div>
                     ))}
                   </div>
 
                   <div>
-                    <h2 style={{ ...sectionTitleStyle, color: '#0f172a', borderBottom: `1px solid #e2e8f0` }}>Key Competencies</h2>
+                    <h2 style={{ ...sectionTitleStyle, color: 'var(--c-ink-1, #0f172a)', borderBottom: `1px solid var(--c-line-2, #e2e8f0)` }}>Key Competencies</h2>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1.5rem' }}>
                       {skills.map(s => (
-                        <span key={s} style={{ background: '#f1f5f9', color: '#334155', fontSize: '0.75rem', padding: '0.25rem 0.5rem', borderRadius: '4px', fontWeight: 600 }}>
+                        <span key={s} style={{ background: 'var(--c-bg-2, #f1f5f9)', color: 'var(--c-ink-2, #334155)', fontSize: '0.75rem', padding: '0.25rem 0.5rem', borderRadius: '4px', fontWeight: 600 }}>
                           {s}
                         </span>
                       ))}
                     </div>
 
-                    <h2 style={{ ...sectionTitleStyle, color: '#0f172a', borderBottom: `1px solid #e2e8f0` }}>Education</h2>
+                    <h2 style={{ ...sectionTitleStyle, color: 'var(--c-ink-1, #0f172a)', borderBottom: `1px solid var(--c-line-2, #e2e8f0)` }}>Education</h2>
                     {education.map((edu, idx) => (
                       <div key={idx} style={{ marginBottom: '0.75rem' }}>
-                        <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1e293b', margin: 0 }}>{edu.degree}</h4>
-                        <p style={{ fontSize: '0.78rem', color: '#475569', margin: '0.1rem 0 0.15rem' }}>{edu.school}</p>
-                        <p style={{ fontSize: '0.75rem', color: '#94a3b8', margin: 0 }}>Passed {edu.year} • Marks: {edu.score}</p>
+                        <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--c-ink-1, #1e293b)', margin: 0 }}>{edu.degree}</h4>
+                        <p style={{ fontSize: '0.78rem', color: 'var(--c-ink-3, #475569)', margin: '0.1rem 0 0.15rem' }}>{edu.school}</p>
+                        <p style={{ fontSize: '0.75rem', color: 'var(--c-ink-5, #94a3b8)', margin: 0 }}>Passed {edu.year} • Marks: {edu.score}</p>
                       </div>
                     ))}
 
                     {certifications.length > 0 && (
                       <>
-                        <h2 style={{ ...sectionTitleStyle, color: '#0f172a', borderBottom: `1px solid #e2e8f0`, marginTop: '1.25rem' }}>Certifications</h2>
+                        <h2 style={{ ...sectionTitleStyle, color: 'var(--c-ink-1, #0f172a)', borderBottom: `1px solid var(--c-line-2, #e2e8f0)`, marginTop: '1.25rem' }}>Certifications</h2>
                         {certifications.map((cert, idx) => (
                           <div key={idx} style={{ marginBottom: '0.65rem' }}>
-                            <h4 style={{ fontSize: '0.8rem', fontWeight: 700, color: '#1e293b', margin: 0 }}>{cert.title}</h4>
-                            <p style={{ fontSize: '0.75rem', color: '#64748b', margin: 0 }}>{cert.body} ({cert.year})</p>
+                            <h4 style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--c-ink-1, #1e293b)', margin: 0 }}>{cert.title}</h4>
+                            <p style={{ fontSize: '0.75rem', color: 'var(--c-ink-4, #64748b)', margin: 0 }}>{cert.body} ({cert.year})</p>
                           </div>
                         ))}
                       </>
@@ -638,32 +638,32 @@ const CVBuilder = () => {
               <>
                 <div style={{ display: 'grid', gridTemplateColumns: '3fr 7fr', gap: '2rem' }}>
                   {/* Left Column (Sidebar) */}
-                  <div style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '12px', borderLeft: `4px solid ${accentColor}` }}>
-                    <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem', letterSpacing: '-0.02em', textTransform: 'uppercase' }}>
+                  <div style={{ background: 'var(--c-bg-1, #f8fafc)', padding: '1.5rem', borderRadius: '12px', borderLeft: `4px solid ${accentColor}` }}>
+                    <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.25rem', letterSpacing: '-0.02em', textTransform: 'uppercase' }}>
                       {personalDetails.fullName || 'YOUR NAME'}
                     </h1>
                     <p style={{ color: accentColor, fontWeight: 700, fontSize: '0.85rem', marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                       {serviceHistory.rank || 'Transitioning Officer'}
                     </p>
 
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.78rem', color: '#475569', marginBottom: '1.5rem' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.78rem', color: 'var(--c-ink-3, #475569)', marginBottom: '1.5rem' }}>
                       {personalDetails.email && <div style={sideInfoBlock}><Mail size={12} style={{ color: accentColor }} /> {personalDetails.email}</div>}
                       {personalDetails.phone && <div style={sideInfoBlock}><Phone size={12} style={{ color: accentColor }} /> {personalDetails.phone}</div>}
                       {personalDetails.city && <div style={sideInfoBlock}><MapPin size={12} style={{ color: accentColor }} /> {personalDetails.city}, {personalDetails.state}</div>}
                       {personalDetails.linkedin && <div style={sideInfoBlock}><LinkIcon size={12} style={{ color: accentColor }} /> {personalDetails.linkedin}</div>}
                     </div>
 
-                    <h3 style={{ fontSize: '0.85rem', fontWeight: 800, color: '#0f172a', textTransform: 'uppercase', borderBottom: `2px solid ${accentColor}`, paddingBottom: '0.2rem', marginBottom: '0.5rem' }}>Competencies</h3>
+                    <h3 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', textTransform: 'uppercase', borderBottom: `2px solid ${accentColor}`, paddingBottom: '0.2rem', marginBottom: '0.5rem' }}>Competencies</h3>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', marginBottom: '1.5rem' }}>
                       {skills.map(s => (
-                        <span key={s} style={{ fontSize: '0.78rem', color: '#334155', fontWeight: 500 }}>
+                        <span key={s} style={{ fontSize: '0.78rem', color: 'var(--c-ink-2, #334155)', fontWeight: 500 }}>
                           • {s}
                         </span>
                       ))}
                     </div>
 
-                    <h3 style={{ fontSize: '0.85rem', fontWeight: 800, color: '#0f172a', textTransform: 'uppercase', borderBottom: `2px solid ${accentColor}`, paddingBottom: '0.2rem', marginBottom: '0.5rem' }}>Military Credentials</h3>
-                    <div style={{ fontSize: '0.75rem', color: '#475569', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                    <h3 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', textTransform: 'uppercase', borderBottom: `2px solid ${accentColor}`, paddingBottom: '0.2rem', marginBottom: '0.5rem' }}>Military Credentials</h3>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--c-ink-3, #475569)', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                       <div><strong>Branch:</strong> {serviceHistory.branch}</div>
                       <div><strong>Regiment:</strong> {serviceHistory.regiment}</div>
                       <div><strong>Trade:</strong> {serviceHistory.trade}</div>
@@ -675,7 +675,7 @@ const CVBuilder = () => {
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                     <div>
                       <h2 style={{ ...sectionTitleStyle, color: accentColor }}>Executive Summary</h2>
-                      <p style={{ fontSize: '0.85rem', color: '#334155', lineHeight: 1.6, margin: 0 }}>
+                      <p style={{ fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', lineHeight: 1.6, margin: 0 }}>
                         {personalDetails.summary}
                       </p>
                     </div>
@@ -685,13 +685,13 @@ const CVBuilder = () => {
                       {experience.map((exp, idx) => (
                         <div key={idx} style={{ marginBottom: '1.25rem' }}>
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                            <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#1e293b', margin: 0 }}>{exp.title}</h4>
-                            <span style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 600 }}>{exp.start} – {exp.end}</span>
+                            <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--c-ink-1, #1e293b)', margin: 0 }}>{exp.title}</h4>
+                            <span style={{ fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 600 }}>{exp.start} – {exp.end}</span>
                           </div>
-                          <p style={{ fontSize: '0.82rem', color: '#64748b', fontWeight: 700, margin: '0.15rem 0 0.4rem' }}>
+                          <p style={{ fontSize: '0.82rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 700, margin: '0.15rem 0 0.4rem' }}>
                             {exp.org} • <span style={{ color: accentColor }}>{exp.location}</span>
                           </p>
-                          <p style={{ fontSize: '0.82rem', color: '#475569', lineHeight: 1.5, margin: 0 }}>{exp.bullets}</p>
+                          <p style={{ fontSize: '0.82rem', color: 'var(--c-ink-3, #475569)', lineHeight: 1.5, margin: 0 }}>{exp.bullets}</p>
                         </div>
                       ))}
                     </div>
@@ -701,9 +701,9 @@ const CVBuilder = () => {
                       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                         {education.map((edu, idx) => (
                           <div key={idx}>
-                            <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1e293b', margin: 0 }}>{edu.degree}</h4>
-                            <p style={{ fontSize: '0.78rem', color: '#475569', margin: '0.1rem 0' }}>{edu.school}</p>
-                            <p style={{ fontSize: '0.75rem', color: '#94a3b8', margin: 0 }}>Passed {edu.year} • Marks: {edu.score}</p>
+                            <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--c-ink-1, #1e293b)', margin: 0 }}>{edu.degree}</h4>
+                            <p style={{ fontSize: '0.78rem', color: 'var(--c-ink-3, #475569)', margin: '0.1rem 0' }}>{edu.school}</p>
+                            <p style={{ fontSize: '0.75rem', color: 'var(--c-ink-5, #94a3b8)', margin: 0 }}>Passed {edu.year} • Marks: {edu.score}</p>
                           </div>
                         ))}
                       </div>
@@ -718,14 +718,14 @@ const CVBuilder = () => {
               <>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', borderBottom: `2px solid ${accentColor}`, paddingBottom: '1rem', marginBottom: '1.5rem' }}>
                   <div>
-                    <h1 style={{ fontSize: '2rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
+                    <h1 style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: 0 }}>
                       {personalDetails.fullName || 'YOUR NAME'}
                     </h1>
                     <p style={{ color: accentColor, fontWeight: 700, fontSize: '0.9rem', marginTop: '0.2rem' }}>
                       {serviceHistory.trade || 'Systems Analyst / Specialist'}
                     </p>
                   </div>
-                  <div style={{ textAlign: 'right', fontSize: '0.78rem', color: '#64748b', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                  <div style={{ textAlign: 'right', fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
                     {personalDetails.email && <span>{personalDetails.email}</span>}
                     {personalDetails.phone && <span>{personalDetails.phone}</span>}
                     {personalDetails.city && <span>{personalDetails.city}, {personalDetails.state}</span>}
@@ -734,13 +734,13 @@ const CVBuilder = () => {
                 </div>
 
                 <div style={sectionSpacing}>
-                  <p style={{ fontSize: '0.85rem', color: '#334155', lineHeight: 1.6, margin: 0 }}>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', lineHeight: 1.6, margin: 0 }}>
                     {personalDetails.summary}
                   </p>
                 </div>
 
                 <div style={sectionSpacing}>
-                  <h2 style={{ ...sectionTitleStyle, color: accentColor, textTransform: 'uppercase', fontSize: '0.9rem', borderBottom: '1px solid #f1f5f9' }}>Technical Skills & Tools</h2>
+                  <h2 style={{ ...sectionTitleStyle, color: accentColor, textTransform: 'uppercase', fontSize: '0.9rem', borderBottom: '1px solid var(--c-line-1, #f1f5f9)' }}>Technical Skills & Tools</h2>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
                     {skills.map(s => (
                       <span key={s} style={{ background: '#0f172a', color: 'white', fontSize: '0.72rem', padding: '0.3rem 0.6rem', borderRadius: '4px', fontWeight: 600 }}>
@@ -751,37 +751,37 @@ const CVBuilder = () => {
                 </div>
 
                 <div style={sectionSpacing}>
-                  <h2 style={{ ...sectionTitleStyle, color: accentColor, textTransform: 'uppercase', fontSize: '0.9rem', borderBottom: '1px solid #f1f5f9' }}>Operational Experience</h2>
+                  <h2 style={{ ...sectionTitleStyle, color: accentColor, textTransform: 'uppercase', fontSize: '0.9rem', borderBottom: '1px solid var(--c-line-1, #f1f5f9)' }}>Operational Experience</h2>
                   {experience.map((exp, idx) => (
                     <div key={idx} style={{ marginBottom: '1.25rem' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                        <h4 style={{ fontSize: '0.9' + 'rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>
-                          {exp.title} <span style={{ color: '#64748b', fontWeight: 500 }}>at {exp.org}</span>
+                        <h4 style={{ fontSize: '0.9' + 'rem', fontWeight: 700, color: 'var(--c-ink-1, #0f172a)', margin: 0 }}>
+                          {exp.title} <span style={{ color: 'var(--c-ink-4, #64748b)', fontWeight: 500 }}>at {exp.org}</span>
                         </h4>
-                        <span style={{ fontSize: '0.78rem', color: '#64748b', fontWeight: 600 }}>{exp.start} – {exp.end}</span>
+                        <span style={{ fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)', fontWeight: 600 }}>{exp.start} – {exp.end}</span>
                       </div>
-                      <p style={{ fontSize: '0.8rem', color: '#475569', margin: '0.4rem 0 0', lineHeight: 1.5 }}>{exp.bullets}</p>
+                      <p style={{ fontSize: '0.8rem', color: 'var(--c-ink-3, #475569)', margin: '0.4rem 0 0', lineHeight: 1.5 }}>{exp.bullets}</p>
                     </div>
                   ))}
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                   <div>
-                    <h2 style={{ ...sectionTitleStyle, color: accentColor, textTransform: 'uppercase', fontSize: '0.9rem', borderBottom: '1px solid #f1f5f9' }}>Education</h2>
+                    <h2 style={{ ...sectionTitleStyle, color: accentColor, textTransform: 'uppercase', fontSize: '0.9rem', borderBottom: '1px solid var(--c-line-1, #f1f5f9)' }}>Education</h2>
                     {education.map((edu, idx) => (
                       <div key={idx} style={{ marginBottom: '0.5rem' }}>
-                        <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>{edu.degree}</h4>
-                        <p style={{ fontSize: '0.78rem', color: '#475569', margin: '0.1rem 0' }}>{edu.school} ({edu.year}) • {edu.score}</p>
+                        <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--c-ink-1, #0f172a)', margin: 0 }}>{edu.degree}</h4>
+                        <p style={{ fontSize: '0.78rem', color: 'var(--c-ink-3, #475569)', margin: '0.1rem 0' }}>{edu.school} ({edu.year}) • {edu.score}</p>
                       </div>
                     ))}
                   </div>
 
                   <div>
-                    <h2 style={{ ...sectionTitleStyle, color: accentColor, textTransform: 'uppercase', fontSize: '0.9rem', borderBottom: '1px solid #f1f5f9' }}>Certifications</h2>
+                    <h2 style={{ ...sectionTitleStyle, color: accentColor, textTransform: 'uppercase', fontSize: '0.9rem', borderBottom: '1px solid var(--c-line-1, #f1f5f9)' }}>Certifications</h2>
                     {certifications.map((cert, idx) => (
                       <div key={idx} style={{ marginBottom: '0.5rem' }}>
-                        <h4 style={{ fontSize: '0.82rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>{cert.title}</h4>
-                        <p style={{ fontSize: '0.75rem', color: '#475569', margin: 0 }}>{cert.body} • {cert.year}</p>
+                        <h4 style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-1, #0f172a)', margin: 0 }}>{cert.title}</h4>
+                        <p style={{ fontSize: '0.75rem', color: 'var(--c-ink-3, #475569)', margin: 0 }}>{cert.body} • {cert.year}</p>
                       </div>
                     ))}
                   </div>
@@ -793,14 +793,14 @@ const CVBuilder = () => {
             {selectedTemplate === 'military' && (
               <>
                 <div style={{ borderLeft: `6px solid ${accentColor}`, paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
-                  <h1 style={{ fontSize: '2.1rem', fontWeight: 900, color: '#111827', margin: 0, textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+                  <h1 style={{ fontSize: '2.1rem', fontWeight: 900, color: 'var(--c-ink-1, #111827)', margin: 0, textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                     {personalDetails.fullName || 'YOUR NAME'}
                   </h1>
-                  <p style={{ color: '#4b5563', fontWeight: 700, fontSize: '0.95rem', marginTop: '0.2rem' }}>
+                  <p style={{ color: 'var(--c-ink-3, #4b5563)', fontWeight: 700, fontSize: '0.95rem', marginTop: '0.2rem' }}>
                     Transitioning Operations Leader • {serviceHistory.rank || 'Armed Forces'}
                   </p>
                   
-                  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '0.5rem', fontSize: '0.78rem', color: '#6b7280' }}>
+                  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '0.5rem', fontSize: '0.78rem', color: 'var(--c-ink-4, #6b7280)' }}>
                     {personalDetails.email && <span>Email: {personalDetails.email}</span>}
                     {personalDetails.phone && <span>Mob: {personalDetails.phone}</span>}
                     {personalDetails.city && <span>Location: {personalDetails.city}, {personalDetails.state}</span>}
@@ -810,7 +810,7 @@ const CVBuilder = () => {
 
                 <div style={sectionSpacing}>
                   <h2 style={{ ...sectionTitleStyle, color: accentColor, borderBottom: `2px solid ${accentColor}`, paddingBottom: '0.25rem' }}>Professional Profile Summary</h2>
-                  <p style={{ fontSize: '0.85rem', color: '#374151', lineHeight: 1.6, margin: 0 }}>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--c-ink-2, #374151)', lineHeight: 1.6, margin: 0 }}>
                     {personalDetails.summary}
                   </p>
                 </div>
@@ -818,22 +818,22 @@ const CVBuilder = () => {
                 {/* Military Service & Leadership Table */}
                 <div style={sectionSpacing}>
                   <h2 style={{ ...sectionTitleStyle, color: accentColor, borderBottom: `2px solid ${accentColor}`, paddingBottom: '0.25rem' }}>Service Overview</h2>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '1rem', background: '#f9fafb', padding: '1rem', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '1rem', background: 'var(--c-bg-1, #f9fafb)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--c-line-1, #f3f4f6)' }}>
                     <div>
-                      <span style={{ fontSize: '0.7rem', color: '#9ca3af', fontWeight: 700, textTransform: 'uppercase' }}>Branch</span>
-                      <p style={{ fontSize: '0.82rem', fontWeight: 700, color: '#111827', margin: '0.15rem 0 0' }}>{serviceHistory.branch}</p>
+                      <span style={{ fontSize: '0.7rem', color: 'var(--c-ink-5, #9ca3af)', fontWeight: 700, textTransform: 'uppercase' }}>Branch</span>
+                      <p style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-1, #111827)', margin: '0.15rem 0 0' }}>{serviceHistory.branch}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '0.7rem', color: '#9ca3af', fontWeight: 700, textTransform: 'uppercase' }}>Regiment / Unit</span>
-                      <p style={{ fontSize: '0.82rem', fontWeight: 700, color: '#111827', margin: '0.15rem 0 0' }}>{serviceHistory.regiment}</p>
+                      <span style={{ fontSize: '0.7rem', color: 'var(--c-ink-5, #9ca3af)', fontWeight: 700, textTransform: 'uppercase' }}>Regiment / Unit</span>
+                      <p style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-1, #111827)', margin: '0.15rem 0 0' }}>{serviceHistory.regiment}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '0.7rem', color: '#9ca3af', fontWeight: 700, textTransform: 'uppercase' }}>Trade Skill</span>
-                      <p style={{ fontSize: '0.82rem', fontWeight: 700, color: '#111827', margin: '0.15rem 0 0' }}>{serviceHistory.trade}</p>
+                      <span style={{ fontSize: '0.7rem', color: 'var(--c-ink-5, #9ca3af)', fontWeight: 700, textTransform: 'uppercase' }}>Trade Skill</span>
+                      <p style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-1, #111827)', margin: '0.15rem 0 0' }}>{serviceHistory.trade}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '0.7rem', color: '#9ca3af', fontWeight: 700, textTransform: 'uppercase' }}>Decorations</span>
-                      <p style={{ fontSize: '0.82rem', fontWeight: 700, color: '#111827', margin: '0.15rem 0 0' }}>{serviceHistory.medals || 'None Listed'}</p>
+                      <span style={{ fontSize: '0.7rem', color: 'var(--c-ink-5, #9ca3af)', fontWeight: 700, textTransform: 'uppercase' }}>Decorations</span>
+                      <p style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-1, #111827)', margin: '0.15rem 0 0' }}>{serviceHistory.medals || 'None Listed'}</p>
                     </div>
                   </div>
                 </div>
@@ -842,7 +842,7 @@ const CVBuilder = () => {
                   <h2 style={{ ...sectionTitleStyle, color: accentColor, borderBottom: `2px solid ${accentColor}`, paddingBottom: '0.25rem' }}>Core Value-Add Skills (ATS Aligned)</h2>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
                     {skills.map(s => (
-                      <span key={s} style={{ background: '#f3f4f6', border: '1px solid #e5e7eb', color: '#1f2937', fontSize: '0.75rem', padding: '0.25rem 0.5rem', borderRadius: '6px', fontWeight: 600 }}>
+                      <span key={s} style={{ background: 'var(--c-bg-2, #f3f4f6)', border: '1px solid var(--c-line-2, #e5e7eb)', color: 'var(--c-ink-1, #1f2937)', fontSize: '0.75rem', padding: '0.25rem 0.5rem', borderRadius: '6px', fontWeight: 600 }}>
                         {s}
                       </span>
                     ))}
@@ -854,13 +854,13 @@ const CVBuilder = () => {
                   {experience.map((exp, idx) => (
                     <div key={idx} style={{ marginBottom: '1.25rem' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                        <h4 style={{ fontSize: '0.95rem', fontWeight: 800, color: '#111827', margin: 0 }}>{exp.title}</h4>
-                        <span style={{ fontSize: '0.8rem', color: '#4b5563', fontWeight: 600 }}>{exp.start} – {exp.end}</span>
+                        <h4 style={{ fontSize: '0.95rem', fontWeight: 800, color: 'var(--c-ink-1, #111827)', margin: 0 }}>{exp.title}</h4>
+                        <span style={{ fontSize: '0.8rem', color: 'var(--c-ink-3, #4b5563)', fontWeight: 600 }}>{exp.start} – {exp.end}</span>
                       </div>
                       <p style={{ fontSize: '0.82rem', color: accentColor, fontWeight: 700, margin: '0.15rem 0' }}>
                         {exp.org} • {exp.location}
                       </p>
-                      <p style={{ fontSize: '0.82rem', color: '#374151', lineHeight: 1.5, margin: 0 }}>{exp.bullets}</p>
+                      <p style={{ fontSize: '0.82rem', color: 'var(--c-ink-2, #374151)', lineHeight: 1.5, margin: 0 }}>{exp.bullets}</p>
                     </div>
                   ))}
                 </div>
@@ -870,8 +870,8 @@ const CVBuilder = () => {
                     <h2 style={{ ...sectionTitleStyle, color: accentColor, borderBottom: `2px solid ${accentColor}`, paddingBottom: '0.25rem' }}>Education</h2>
                     {education.map((edu, idx) => (
                       <div key={idx} style={{ marginBottom: '0.5rem' }}>
-                        <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: '#111827', margin: 0 }}>{edu.degree}</h4>
-                        <p style={{ fontSize: '0.78rem', color: '#475569', margin: '0.1rem 0' }}>{edu.school} ({edu.year}) • {edu.score}</p>
+                        <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--c-ink-1, #111827)', margin: 0 }}>{edu.degree}</h4>
+                        <p style={{ fontSize: '0.78rem', color: 'var(--c-ink-3, #475569)', margin: '0.1rem 0' }}>{edu.school} ({edu.year}) • {edu.score}</p>
                       </div>
                     ))}
                   </div>
@@ -880,8 +880,8 @@ const CVBuilder = () => {
                     <h2 style={{ ...sectionTitleStyle, color: accentColor, borderBottom: `2px solid ${accentColor}`, paddingBottom: '0.25rem' }}>Professional Certifications</h2>
                     {certifications.map((cert, idx) => (
                       <div key={idx} style={{ marginBottom: '0.5rem' }}>
-                        <h4 style={{ fontSize: '0.82rem', fontWeight: 700, color: '#111827', margin: 0 }}>{cert.title}</h4>
-                        <p style={{ fontSize: '0.75rem', color: '#475569', margin: 0 }}>{cert.body} ({cert.year})</p>
+                        <h4 style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-1, #111827)', margin: 0 }}>{cert.title}</h4>
+                        <p style={{ fontSize: '0.75rem', color: 'var(--c-ink-3, #475569)', margin: 0 }}>{cert.body} ({cert.year})</p>
                       </div>
                     ))}
                   </div>
@@ -896,7 +896,7 @@ const CVBuilder = () => {
                   <h1 style={{ fontSize: '2rem', fontFamily: 'Georgia, serif', fontWeight: 'normal', color: '#000', margin: '0 0 0.5rem' }}>
                     {personalDetails.fullName || 'YOUR NAME'}
                   </h1>
-                  <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', fontSize: '0.8rem', color: '#475569' }}>
+                  <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', fontSize: '0.8rem', color: 'var(--c-ink-3, #475569)' }}>
                     {personalDetails.email && <span>{personalDetails.email}</span>}
                     {personalDetails.phone && <span>· {personalDetails.phone}</span>}
                     {personalDetails.city && <span>· {personalDetails.city}, {personalDetails.state}</span>}
@@ -910,7 +910,7 @@ const CVBuilder = () => {
                 </div>
 
                 <div style={sectionSpacing}>
-                  <p style={{ fontSize: '0.85rem', color: '#334155', lineHeight: 1.6, textAlign: 'justify', margin: 0 }}>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', lineHeight: 1.6, textAlign: 'justify', margin: 0 }}>
                     {personalDetails.summary}
                   </p>
                 </div>
@@ -921,10 +921,10 @@ const CVBuilder = () => {
                     <div key={idx} style={{ marginBottom: '1.25rem' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                         <h4 style={{ fontSize: '0.9rem', fontWeight: 700, color: '#000', margin: 0 }}>{exp.title}</h4>
-                        <span style={{ fontSize: '0.8rem', color: '#475569', fontStyle: 'italic' }}>{exp.start} – {exp.end}</span>
+                        <span style={{ fontSize: '0.8rem', color: 'var(--c-ink-3, #475569)', fontStyle: 'italic' }}>{exp.start} – {exp.end}</span>
                       </div>
                       <p style={{ fontSize: '0.8rem', fontWeight: 600, color: accentColor, margin: '0.15rem 0 0.35rem' }}>{exp.org} – {exp.location}</p>
-                      <p style={{ fontSize: '0.82rem', color: '#334155', lineHeight: 1.5, textAlign: 'justify', margin: 0 }}>{exp.bullets}</p>
+                      <p style={{ fontSize: '0.82rem', color: 'var(--c-ink-2, #334155)', lineHeight: 1.5, textAlign: 'justify', margin: 0 }}>{exp.bullets}</p>
                     </div>
                   ))}
                 </div>
@@ -935,9 +935,9 @@ const CVBuilder = () => {
                     <div key={idx} style={{ marginBottom: '0.65rem' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                         <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: '#000', margin: 0 }}>{edu.degree}</h4>
-                        <span style={{ fontSize: '0.8rem', color: '#475569' }}>Class of {edu.year}</span>
+                        <span style={{ fontSize: '0.8rem', color: 'var(--c-ink-3, #475569)' }}>Class of {edu.year}</span>
                       </div>
-                      <p style={{ fontSize: '0.8rem', color: '#475569', margin: '0.1rem 0' }}>{edu.school} • Grade / Score: {edu.score}</p>
+                      <p style={{ fontSize: '0.8rem', color: 'var(--c-ink-3, #475569)', margin: '0.1rem 0' }}>{edu.school} • Grade / Score: {edu.score}</p>
                     </div>
                   ))}
                 </div>
@@ -945,7 +945,7 @@ const CVBuilder = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                   <div>
                     <h2 style={{ ...sectionTitleStyle, color: '#000', fontFamily: 'Georgia, serif', borderBottom: '1px solid #94a3b8', textTransform: 'uppercase', fontSize: '0.9rem' }}>Core Skills</h2>
-                    <ul style={{ paddingLeft: '1.25rem', fontSize: '0.8rem', color: '#334155', margin: 0 }}>
+                    <ul style={{ paddingLeft: '1.25rem', fontSize: '0.8rem', color: 'var(--c-ink-2, #334155)', margin: 0 }}>
                       {skills.map(s => <li key={s} style={{ marginBottom: '0.25rem' }}>{s}</li>)}
                     </ul>
                   </div>
@@ -955,7 +955,7 @@ const CVBuilder = () => {
                     {certifications.map((cert, idx) => (
                       <div key={idx} style={{ marginBottom: '0.5rem', fontSize: '0.8rem' }}>
                         <strong>{cert.title}</strong>
-                        <div style={{ color: '#475569', fontSize: '0.75rem' }}>{cert.body} ({cert.year})</div>
+                        <div style={{ color: 'var(--c-ink-3, #475569)', fontSize: '0.75rem' }}>{cert.body} ({cert.year})</div>
                       </div>
                     ))}
                   </div>
@@ -1006,7 +1006,7 @@ const CVBuilder = () => {
               </span>
               <button
                 onClick={() => setRunTour(false)}
-                style={{ background: 'none', border: 'none', color: '#94a3b8', fontSize: '0.75rem', cursor: 'pointer', fontWeight: 600 }}
+                style={{ background: 'none', border: 'none', color: 'var(--c-ink-5, #94a3b8)', fontSize: '0.75rem', cursor: 'pointer', fontWeight: 600 }}
               >
                 Skip Tour
               </button>
@@ -1015,7 +1015,7 @@ const CVBuilder = () => {
             <h4 style={{ fontSize: '0.95rem', fontWeight: 700, margin: '0 0 0.5rem', color: 'var(--ios-text)' }}>
               {tourSteps[currentStep].title}
             </h4>
-            <p style={{ fontSize: '0.8rem', color: '#64748b', lineHeight: 1.4, margin: '0 0 1rem' }}>
+            <p style={{ fontSize: '0.8rem', color: 'var(--c-ink-4, #64748b)', lineHeight: 1.4, margin: '0 0 1rem' }}>
               {tourSteps[currentStep].desc}
             </p>
 
@@ -1036,7 +1036,7 @@ const CVBuilder = () => {
               <button
                 onClick={handleTourNext}
                 style={{
-                  background: 'var(--ios-olive)', border: 'none',
+                  background: 'var(--ios-olive-fill, var(--ios-olive))', border: 'none',
                   color: 'white', padding: '0.4rem 1rem', borderRadius: 'var(--radius-sm)', fontSize: '0.75rem',
                   cursor: 'pointer', fontWeight: 700, boxShadow: 'var(--shadow-1)'
                 }}
@@ -1116,7 +1116,7 @@ const CVBuilder = () => {
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.05em;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           margin-bottom: 0.75rem;
         }
         .form-grid-inner {
@@ -1162,8 +1162,8 @@ const CVBuilder = () => {
           align-items: flex-start;
         }
         .cv-paper-sheet {
-          background: white;
-          color: #1e293b;
+          background: var(--c-bg-0, white);
+          color: var(--c-ink-1, #1e293b);
           width: 210mm; /* A4 standard width */
           min-height: 297mm; /* A4 standard height */
           box-shadow: 0 10px 40px rgba(0,0,0,0.25);
@@ -1178,7 +1178,7 @@ const CVBuilder = () => {
             margin: 0;
           }
           body {
-            background: white;
+            background: var(--c-bg-0, white);
             color: black;
           }
           .linkedin-header {
@@ -1189,7 +1189,7 @@ const CVBuilder = () => {
           }
           .cv-builder-wrapper {
             padding-top: 0 !important;
-            background: white !important;
+            background: var(--c-bg-0, white) !important;
           }
           .builder-workspace {
             display: block !important;
@@ -1198,7 +1198,7 @@ const CVBuilder = () => {
           }
           .builder-preview-canvas {
             padding: 0 !important;
-            background: white !important;
+            background: var(--c-bg-0, white) !important;
             overflow: visible !important;
           }
           .cv-paper-sheet {
@@ -1220,7 +1220,7 @@ const labelHeaderStyle = {
   fontSize: '0.68rem',
   fontWeight: 700,
   textTransform: 'uppercase',
-  color: '#64748b',
+  color: 'var(--c-ink-4, #64748b)',
   marginBottom: '0.2rem',
   letterSpacing: '0.05em'
 };
@@ -1263,7 +1263,7 @@ const textareaFieldStyle = {
 };
 
 const addBtnStyle = {
-  background: 'var(--ios-olive)',
+  background: 'var(--ios-olive-fill, var(--ios-olive))',
   border: 'none',
   color: 'white',
   borderRadius: '8px',
@@ -1306,7 +1306,7 @@ const iconMini = {
   display: 'inline-block',
   verticalAlign: 'middle',
   marginRight: '2px',
-  color: '#94a3b8'
+  color: 'var(--c-ink-5, #94a3b8)'
 };
 
 const sideInfoBlock = {

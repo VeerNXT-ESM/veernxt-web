@@ -16,7 +16,7 @@ const TodayObjectiveCard = ({ examId, examName, objective, compact = false }) =>
         boxShadow: '0 4px 12px rgba(27, 46, 27, 0.15)',
         marginBottom: '1.5rem',
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#94a3b8', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--c-ink-5, #94a3b8)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
           <Target size={16} color="#84cc16" />
           <span>Today's Mission Objective</span>
         </div>
@@ -34,7 +34,7 @@ const TodayObjectiveCard = ({ examId, examName, objective, compact = false }) =>
               alignItems: 'center',
               gap: '0.5rem',
               background: '#fbbf24',
-              color: '#0f172a',
+              color: 'var(--c-ink-1, #0f172a)',
               padding: '0.5rem 1rem',
               borderRadius: '999px',
               fontWeight: 700,

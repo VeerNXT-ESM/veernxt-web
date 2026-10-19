@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Home, Target, Briefcase, Search, MessageSquare, Landmark, UserCheck } from 'lucide-react';
+import { Home, Target, Briefcase, Search, MessageSquare, Landmark, UserCheck, Users } from 'lucide-react';
 import { useAccountSummary } from '../../lib/useAccountSummary';
 
 /**
@@ -17,7 +17,8 @@ export default function BottomNav() {
   const { isEmployer } = useAccountSummary();
 
   const items = [
-    { key: 'home', label: 'Home', icon: Home, to: '/dashboard' },
+    { key: 'home', label: 'Home', icon: Home, to: isEmployer ? '/employer/dashboard' : '/dashboard' },
+    isEmployer && { key: 'network', label: 'Network', icon: Users, to: '/network' },
     !isEmployer && { key: 'learning', label: 'Learning', icon: Target, to: '/learning-center' },
     isEmployer
       ? { key: 'find', label: 'Find', icon: Search, to: '/find-candidates' }

@@ -672,7 +672,7 @@ const Network = () => {
         }
         .network-search button {
           border: none;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           color: #fff;
           padding: 0.75rem 1.3rem;
           font-weight: 700;
@@ -815,7 +815,7 @@ const Network = () => {
         .network-nav button:hover { background: var(--surface-alt); }
         .network-nav button.active { background: var(--surface-alt); color: var(--ios-olive); font-weight: 700; }
         .network-nav-badge {
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           color: #fff;
           font-size: 0.68rem;
           font-weight: 800;
@@ -850,7 +850,7 @@ const Network = () => {
           cursor: pointer;
           text-decoration: none;
         }
-        .network-btn-primary { background: var(--ios-olive); color: #fff; border: none; }
+        .network-btn-primary { background: var(--ios-olive-fill, var(--ios-olive)); color: #fff; border: none; }
         .network-btn-secondary { background: var(--surface, #fff); color: var(--ios-text); border: 1px solid var(--border-strong); }
         .network-btn-accent { background: var(--accent-gold, #fbbf24); color: #1c281f; border: none; }
         .network-btn-primary:disabled, .network-btn-secondary:disabled { opacity: 0.6; cursor: not-allowed; }
@@ -1014,7 +1014,7 @@ const Network = () => {
         .network-overview-stat strong { display: block; font-size: 1.3rem; font-weight: 800; color: var(--ios-text); }
         .network-overview-stat span { font-size: 0.7rem; color: var(--text-secondary); font-weight: 600; }
         .network-cta-card {
-          background: linear-gradient(135deg, var(--ios-olive) 0%, #14210f 100%);
+          background: linear-gradient(135deg, var(--ios-olive-fill, var(--ios-olive)) 0%, #14210f 100%);
           color: #fff;
           padding: 1.25rem;
           margin-bottom: 1.25rem;
@@ -1037,7 +1037,7 @@ const Network = () => {
         .network-quick-actions strong { display: block; font-size: 0.82rem; color: var(--ios-text); }
         .network-quick-actions span { font-size: 0.72rem; color: var(--text-secondary); }
         .network-tips-card {
-          background: #fdf8ec;
+          background: var(--c-tint-amber, #fdf8ec);
           border: 1px solid var(--accent-gold, #fbbf24);
           padding: 1.1rem;
         }
@@ -1050,7 +1050,7 @@ const Network = () => {
           font-weight: 800;
           text-transform: uppercase;
           letter-spacing: 0.03em;
-          color: #92640a;
+          color: var(--c-amber, #92640a);
         }
         .network-tips-card svg { color: #d9a62a; }
         .network-tips-card ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }

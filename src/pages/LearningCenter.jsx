@@ -68,39 +68,39 @@ const CONTENT_COVERAGE_LABEL = 'Syllabus • Notes • Mock Test + PYQ';
 
 // Dynamic color palette fallback for any newly added categories
 const DYNAMIC_PALETTE = [
-  { color: '#0284c7', bg: '#e0f2fe' },
-  { color: '#15803d', bg: '#dcfce7' },
-  { color: '#7c3aed', bg: '#ede9fe' },
-  { color: '#d97706', bg: '#fef3c7' },
-  { color: '#e11d48', bg: '#ffe4e6' },
-  { color: '#0891b2', bg: '#cffafe' },
-  { color: '#4338ca', bg: '#e0e7ff' },
-  { color: '#0d9488', bg: '#ccfbf1' },
-  { color: '#b45309', bg: '#fef3c7' },
-  { color: '#475569', bg: '#f1f5f9' },
+  { color: 'var(--c-blue, #0284c7)', bg: 'var(--c-tint-blue, #e0f2fe)' },
+  { color: 'var(--c-green, #15803d)', bg: 'var(--c-tint-green, #dcfce7)' },
+  { color: 'var(--c-purple, #7c3aed)', bg: 'var(--c-tint-purple, #ede9fe)' },
+  { color: 'var(--c-amber, #d97706)', bg: 'var(--c-tint-amber, #fef3c7)' },
+  { color: 'var(--c-red, #e11d48)', bg: 'var(--c-tint-red, #ffe4e6)' },
+  { color: 'var(--c-blue, #0891b2)', bg: 'var(--c-tint-blue, #cffafe)' },
+  { color: 'var(--c-blue, #4338ca)', bg: 'var(--c-tint-blue, #e0e7ff)' },
+  { color: 'var(--c-green, #0d9488)', bg: 'var(--c-tint-green, #ccfbf1)' },
+  { color: 'var(--c-amber, #b45309)', bg: 'var(--c-tint-amber, #fef3c7)' },
+  { color: 'var(--c-ink-3, #475569)', bg: 'var(--c-bg-2, #f1f5f9)' },
 ];
 
 // Comprehensive icon and styling mapper for ALL categories in the left panel
 function getCategoryIconMeta(cat) {
   const c = (cat || '').toLowerCase();
-  if (c.includes('ssc')) return { icon: ShieldCheck, color: '#d97706', bg: '#fef3c7' };
-  if (c.includes('civil') || c.includes('upsc')) return { icon: Landmark, color: '#1e3a8a', bg: '#dbeafe' };
-  if (c.includes('psc') || c.includes('state')) return { icon: Building, color: '#047857', bg: '#d1fae5' };
-  if (c.includes('bank') || c.includes('finance') || c.includes('commerce') || c.includes('account')) return { icon: Landmark, color: '#0284c7', bg: '#e0f2fe' };
-  if (c.includes('railway') || c.includes('metro') || c.includes('train')) return { icon: Train, color: '#4338ca', bg: '#e0e7ff' };
-  if (c.includes('defence') || c.includes('army') || c.includes('navy') || c.includes('air') || c.includes('armed')) return { icon: Shield, color: '#15803d', bg: '#dcfce7' };
-  if (c.includes('police') || c.includes('cpo') || c.includes('si') || c.includes('constable') || c.includes('guard') || c.includes('intel')) return { icon: ShieldAlert, color: '#1d4ed8', bg: '#dbeafe' };
-  if (c.includes('teach') || c.includes('educat') || c.includes('lectur') || c.includes('master') || c.includes('ugc') || c.includes('net')) return { icon: GraduationCap, color: '#7c3aed', bg: '#ede9fe' };
-  if (c.includes('nurs') || c.includes('medic') || c.includes('health') || c.includes('pharma') || c.includes('cho') || c.includes('hospital')) return { icon: HeartPulse, color: '#e11d48', bg: '#ffe4e6' };
-  if (c.includes('engin') || c.includes('je') || c.includes('technic') || c.includes(' it')) return { icon: Cog, color: '#475569', bg: '#f1f5f9' };
-  if (c.includes('barc') || c.includes('drdo') || c.includes('isro') || c.includes('atom') || c.includes('research')) return { icon: Atom, color: '#0284c7', bg: '#e0f2fe' };
-  if (c.includes('nic') || c.includes('computer') || c.includes('software')) return { icon: Cpu, color: '#0369a1', bg: '#e0f2fe' };
-  if (c.includes('post') || c.includes('mail')) return { icon: Mail, color: '#b45309', bg: '#fef3c7' };
-  if (c.includes('psu') || c.includes('maharatna') || c.includes('navratna')) return { icon: Building, color: '#0d9488', bg: '#ccfbf1' };
-  if (c.includes('insur') || c.includes('lic') || c.includes('gic')) return { icon: Umbrella, color: '#0891b2', bg: '#cffafe' };
-  if (c.includes('judic') || c.includes('court') || c.includes('law') || c.includes('legal')) return { icon: Scale, color: '#b45309', bg: '#fef3c7' };
-  if (c.includes('forest') || c.includes('agri') || c.includes('hortic') || c.includes('fisher') || c.includes('icar') || c.includes('iari')) return { icon: Compass, color: '#059669', bg: '#d1fae5' };
-  if (c.includes('panchayat') || c.includes('rural') || c.includes('admin')) return { icon: Building, color: '#0284c7', bg: '#e0f2fe' };
+  if (c.includes('ssc')) return { icon: ShieldCheck, color: 'var(--c-amber, #d97706)', bg: 'var(--c-tint-amber, #fef3c7)' };
+  if (c.includes('civil') || c.includes('upsc')) return { icon: Landmark, color: 'var(--c-blue, #1e3a8a)', bg: 'var(--c-tint-blue, #dbeafe)' };
+  if (c.includes('psc') || c.includes('state')) return { icon: Building, color: 'var(--c-green, #047857)', bg: 'var(--c-tint-green, #d1fae5)' };
+  if (c.includes('bank') || c.includes('finance') || c.includes('commerce') || c.includes('account')) return { icon: Landmark, color: 'var(--c-blue, #0284c7)', bg: 'var(--c-tint-blue, #e0f2fe)' };
+  if (c.includes('railway') || c.includes('metro') || c.includes('train')) return { icon: Train, color: 'var(--c-blue, #4338ca)', bg: 'var(--c-tint-blue, #e0e7ff)' };
+  if (c.includes('defence') || c.includes('army') || c.includes('navy') || c.includes('air') || c.includes('armed')) return { icon: Shield, color: 'var(--c-green, #15803d)', bg: 'var(--c-tint-green, #dcfce7)' };
+  if (c.includes('police') || c.includes('cpo') || c.includes('si') || c.includes('constable') || c.includes('guard') || c.includes('intel')) return { icon: ShieldAlert, color: 'var(--c-blue, #1d4ed8)', bg: 'var(--c-tint-blue, #dbeafe)' };
+  if (c.includes('teach') || c.includes('educat') || c.includes('lectur') || c.includes('master') || c.includes('ugc') || c.includes('net')) return { icon: GraduationCap, color: 'var(--c-purple, #7c3aed)', bg: 'var(--c-tint-purple, #ede9fe)' };
+  if (c.includes('nurs') || c.includes('medic') || c.includes('health') || c.includes('pharma') || c.includes('cho') || c.includes('hospital')) return { icon: HeartPulse, color: 'var(--c-red, #e11d48)', bg: 'var(--c-tint-red, #ffe4e6)' };
+  if (c.includes('engin') || c.includes('je') || c.includes('technic') || c.includes(' it')) return { icon: Cog, color: 'var(--c-ink-3, #475569)', bg: 'var(--c-bg-2, #f1f5f9)' };
+  if (c.includes('barc') || c.includes('drdo') || c.includes('isro') || c.includes('atom') || c.includes('research')) return { icon: Atom, color: 'var(--c-blue, #0284c7)', bg: 'var(--c-tint-blue, #e0f2fe)' };
+  if (c.includes('nic') || c.includes('computer') || c.includes('software')) return { icon: Cpu, color: 'var(--c-blue, #0369a1)', bg: 'var(--c-tint-blue, #e0f2fe)' };
+  if (c.includes('post') || c.includes('mail')) return { icon: Mail, color: 'var(--c-amber, #b45309)', bg: 'var(--c-tint-amber, #fef3c7)' };
+  if (c.includes('psu') || c.includes('maharatna') || c.includes('navratna')) return { icon: Building, color: 'var(--c-green, #0d9488)', bg: 'var(--c-tint-green, #ccfbf1)' };
+  if (c.includes('insur') || c.includes('lic') || c.includes('gic')) return { icon: Umbrella, color: 'var(--c-blue, #0891b2)', bg: 'var(--c-tint-blue, #cffafe)' };
+  if (c.includes('judic') || c.includes('court') || c.includes('law') || c.includes('legal')) return { icon: Scale, color: 'var(--c-amber, #b45309)', bg: 'var(--c-tint-amber, #fef3c7)' };
+  if (c.includes('forest') || c.includes('agri') || c.includes('hortic') || c.includes('fisher') || c.includes('icar') || c.includes('iari')) return { icon: Compass, color: 'var(--c-green, #059669)', bg: 'var(--c-tint-green, #d1fae5)' };
+  if (c.includes('panchayat') || c.includes('rural') || c.includes('admin')) return { icon: Building, color: 'var(--c-blue, #0284c7)', bg: 'var(--c-tint-blue, #e0f2fe)' };
 
   // Dynamic hashing fallback for any newly added category
   let hash = 0;
@@ -111,43 +111,43 @@ function getCategoryIconMeta(cat) {
 
 // Rich state branding metadata for monogram badges, commission names and zone filters
 const STATE_META = {
-  'Rajasthan': { code: 'RJ', body: 'RPSC · RSMSSB', color: '#b45309', bg: '#fef3c7', zone: 'central_west' },
-  'Uttar Pradesh': { code: 'UP', body: 'UPPSC · UPSSSC', color: '#1d4ed8', bg: '#dbeafe', zone: 'north' },
-  'Bihar': { code: 'BR', body: 'BPSC · BSSC', color: '#15803d', bg: '#dcfce7', zone: 'east' },
-  'Maharashtra': { code: 'MH', body: 'MPSC', color: '#0284c7', bg: '#e0f2fe', zone: 'central_west' },
-  'Madhya Pradesh': { code: 'MP', body: 'MPPSC · MPESB', color: '#0d9488', bg: '#ccfbf1', zone: 'central_west' },
-  'Tamil Nadu': { code: 'TN', body: 'TNPSC · TNUSRB', color: '#be123c', bg: '#ffe4e6', zone: 'south' },
-  'Karnataka': { code: 'KA', body: 'KPSC · KSP', color: '#6d28d9', bg: '#ede9fe', zone: 'south' },
-  'West Bengal': { code: 'WB', body: 'WBPSC · WBP', color: '#0891b2', bg: '#cffafe', zone: 'east' },
-  'Gujarat': { code: 'GJ', body: 'GPSC · GSSSB', color: '#c2410c', bg: '#ffedd5', zone: 'central_west' },
-  'Punjab': { code: 'PB', body: 'PPSC · PSSSB', color: '#b45309', bg: '#fef3c7', zone: 'north' },
-  'Haryana': { code: 'HR', body: 'HPSC · HSSC', color: '#4338ca', bg: '#e0e7ff', zone: 'north' },
-  'Kerala': { code: 'KL', body: 'Kerala PSC', color: '#047857', bg: '#d1fae5', zone: 'south' },
-  'Andhra Pradesh': { code: 'AP', body: 'APPSC · SLPRB', color: '#0369a1', bg: '#e0f2fe', zone: 'south' },
-  'Telangana': { code: 'TS', body: 'TSPSC · TSLPRB', color: '#7c3aed', bg: '#ede9fe', zone: 'south' },
-  'Odisha': { code: 'OD', body: 'OPSC · OSSSC', color: '#0f766e', bg: '#ccfbf1', zone: 'east' },
-  'Jharkhand': { code: 'JH', body: 'JPSC · JSSC', color: '#166534', bg: '#dcfce7', zone: 'east' },
-  'Chhattisgarh': { code: 'CG', body: 'CGPSC · CG Vyapam', color: '#b45309', bg: '#fef3c7', zone: 'central_west' },
-  'Assam': { code: 'AS', body: 'APSC · SLPRB', color: '#059669', bg: '#d1fae5', zone: 'northeast' },
-  'Himachal Pradesh': { code: 'HP', body: 'HPPSC · HPSSC', color: '#0284c7', bg: '#e0f2fe', zone: 'north' },
-  'Uttarakhand': { code: 'UK', body: 'UKPSC · UKSSSC', color: '#0369a1', bg: '#e0f2fe', zone: 'north' },
-  'Goa': { code: 'GA', body: 'GPSC', color: '#0d9488', bg: '#ccfbf1', zone: 'central_west' },
-  'Tripura': { code: 'TR', body: 'TPSC', color: '#7c3aed', bg: '#ede9fe', zone: 'northeast' },
-  'Meghalaya': { code: 'ML', body: 'MPSC', color: '#047857', bg: '#d1fae5', zone: 'northeast' },
-  'Manipur': { code: 'MN', body: 'MPSC', color: '#0891b2', bg: '#cffafe', zone: 'northeast' },
-  'Nagaland': { code: 'NL', body: 'NPSC', color: '#b45309', bg: '#fef3c7', zone: 'northeast' },
-  'Mizoram': { code: 'MZ', body: 'MPSC', color: '#15803d', bg: '#dcfce7', zone: 'northeast' },
-  'Arunachal Pradesh': { code: 'AR', body: 'APPSC', color: '#0f766e', bg: '#ccfbf1', zone: 'northeast' },
-  'Sikkim': { code: 'SK', body: 'SPSC', color: '#0284c7', bg: '#e0f2fe', zone: 'northeast' },
+  'Rajasthan': { code: 'RJ', body: 'RPSC · RSMSSB', color: 'var(--c-amber, #b45309)', bg: 'var(--c-tint-amber, #fef3c7)', zone: 'central_west' },
+  'Uttar Pradesh': { code: 'UP', body: 'UPPSC · UPSSSC', color: 'var(--c-blue, #1d4ed8)', bg: 'var(--c-tint-blue, #dbeafe)', zone: 'north' },
+  'Bihar': { code: 'BR', body: 'BPSC · BSSC', color: 'var(--c-green, #15803d)', bg: 'var(--c-tint-green, #dcfce7)', zone: 'east' },
+  'Maharashtra': { code: 'MH', body: 'MPSC', color: 'var(--c-blue, #0284c7)', bg: 'var(--c-tint-blue, #e0f2fe)', zone: 'central_west' },
+  'Madhya Pradesh': { code: 'MP', body: 'MPPSC · MPESB', color: 'var(--c-green, #0d9488)', bg: 'var(--c-tint-green, #ccfbf1)', zone: 'central_west' },
+  'Tamil Nadu': { code: 'TN', body: 'TNPSC · TNUSRB', color: 'var(--c-red, #be123c)', bg: 'var(--c-tint-red, #ffe4e6)', zone: 'south' },
+  'Karnataka': { code: 'KA', body: 'KPSC · KSP', color: 'var(--c-purple, #6d28d9)', bg: 'var(--c-tint-purple, #ede9fe)', zone: 'south' },
+  'West Bengal': { code: 'WB', body: 'WBPSC · WBP', color: 'var(--c-blue, #0891b2)', bg: 'var(--c-tint-blue, #cffafe)', zone: 'east' },
+  'Gujarat': { code: 'GJ', body: 'GPSC · GSSSB', color: 'var(--c-amber, #c2410c)', bg: 'var(--c-tint-amber, #ffedd5)', zone: 'central_west' },
+  'Punjab': { code: 'PB', body: 'PPSC · PSSSB', color: 'var(--c-amber, #b45309)', bg: 'var(--c-tint-amber, #fef3c7)', zone: 'north' },
+  'Haryana': { code: 'HR', body: 'HPSC · HSSC', color: 'var(--c-blue, #4338ca)', bg: 'var(--c-tint-blue, #e0e7ff)', zone: 'north' },
+  'Kerala': { code: 'KL', body: 'Kerala PSC', color: 'var(--c-green, #047857)', bg: 'var(--c-tint-green, #d1fae5)', zone: 'south' },
+  'Andhra Pradesh': { code: 'AP', body: 'APPSC · SLPRB', color: 'var(--c-blue, #0369a1)', bg: 'var(--c-tint-blue, #e0f2fe)', zone: 'south' },
+  'Telangana': { code: 'TS', body: 'TSPSC · TSLPRB', color: 'var(--c-purple, #7c3aed)', bg: 'var(--c-tint-purple, #ede9fe)', zone: 'south' },
+  'Odisha': { code: 'OD', body: 'OPSC · OSSSC', color: 'var(--c-green, #0f766e)', bg: 'var(--c-tint-green, #ccfbf1)', zone: 'east' },
+  'Jharkhand': { code: 'JH', body: 'JPSC · JSSC', color: 'var(--c-green, #166534)', bg: 'var(--c-tint-green, #dcfce7)', zone: 'east' },
+  'Chhattisgarh': { code: 'CG', body: 'CGPSC · CG Vyapam', color: 'var(--c-amber, #b45309)', bg: 'var(--c-tint-amber, #fef3c7)', zone: 'central_west' },
+  'Assam': { code: 'AS', body: 'APSC · SLPRB', color: 'var(--c-green, #059669)', bg: 'var(--c-tint-green, #d1fae5)', zone: 'northeast' },
+  'Himachal Pradesh': { code: 'HP', body: 'HPPSC · HPSSC', color: 'var(--c-blue, #0284c7)', bg: 'var(--c-tint-blue, #e0f2fe)', zone: 'north' },
+  'Uttarakhand': { code: 'UK', body: 'UKPSC · UKSSSC', color: 'var(--c-blue, #0369a1)', bg: 'var(--c-tint-blue, #e0f2fe)', zone: 'north' },
+  'Goa': { code: 'GA', body: 'GPSC', color: 'var(--c-green, #0d9488)', bg: 'var(--c-tint-green, #ccfbf1)', zone: 'central_west' },
+  'Tripura': { code: 'TR', body: 'TPSC', color: 'var(--c-purple, #7c3aed)', bg: 'var(--c-tint-purple, #ede9fe)', zone: 'northeast' },
+  'Meghalaya': { code: 'ML', body: 'MPSC', color: 'var(--c-green, #047857)', bg: 'var(--c-tint-green, #d1fae5)', zone: 'northeast' },
+  'Manipur': { code: 'MN', body: 'MPSC', color: 'var(--c-blue, #0891b2)', bg: 'var(--c-tint-blue, #cffafe)', zone: 'northeast' },
+  'Nagaland': { code: 'NL', body: 'NPSC', color: 'var(--c-amber, #b45309)', bg: 'var(--c-tint-amber, #fef3c7)', zone: 'northeast' },
+  'Mizoram': { code: 'MZ', body: 'MPSC', color: 'var(--c-green, #15803d)', bg: 'var(--c-tint-green, #dcfce7)', zone: 'northeast' },
+  'Arunachal Pradesh': { code: 'AR', body: 'APPSC', color: 'var(--c-green, #0f766e)', bg: 'var(--c-tint-green, #ccfbf1)', zone: 'northeast' },
+  'Sikkim': { code: 'SK', body: 'SPSC', color: 'var(--c-blue, #0284c7)', bg: 'var(--c-tint-blue, #e0f2fe)', zone: 'northeast' },
   // UTs
-  'Delhi': { code: 'DL', body: 'DSSSB', color: '#b91c1c', bg: '#fee2e2', zone: 'north' },
-  'Jammu & Kashmir': { code: 'JK', body: 'JKPSC · JKSSB', color: '#0284c7', bg: '#e0f2fe', zone: 'north' },
-  'Ladakh': { code: 'LA', body: 'LAHD-SSRB', color: '#0369a1', bg: '#e0f2fe', zone: 'north' },
-  'Chandigarh': { code: 'CH', body: 'Chandigarh Admin', color: '#4338ca', bg: '#e0e7ff', zone: 'north' },
-  'Puducherry': { code: 'PY', body: 'Puducherry PSC', color: '#7c3aed', bg: '#ede9fe', zone: 'south' },
-  'Andaman and Nicobar Islands': { code: 'AN', body: 'A&N Administration', color: '#0d9488', bg: '#ccfbf1', zone: 'south' },
-  'Dadra & Nagar Haveli and Daman & Diu': { code: 'DN', body: 'DD Administration', color: '#b45309', bg: '#fef3c7', zone: 'central_west' },
-  'Lakshadweep': { code: 'LD', body: 'Lakshadweep Admin', color: '#0891b2', bg: '#cffafe', zone: 'south' },
+  'Delhi': { code: 'DL', body: 'DSSSB', color: 'var(--c-red, #b91c1c)', bg: 'var(--c-tint-red, #fee2e2)', zone: 'north' },
+  'Jammu & Kashmir': { code: 'JK', body: 'JKPSC · JKSSB', color: 'var(--c-blue, #0284c7)', bg: 'var(--c-tint-blue, #e0f2fe)', zone: 'north' },
+  'Ladakh': { code: 'LA', body: 'LAHD-SSRB', color: 'var(--c-blue, #0369a1)', bg: 'var(--c-tint-blue, #e0f2fe)', zone: 'north' },
+  'Chandigarh': { code: 'CH', body: 'Chandigarh Admin', color: 'var(--c-blue, #4338ca)', bg: 'var(--c-tint-blue, #e0e7ff)', zone: 'north' },
+  'Puducherry': { code: 'PY', body: 'Puducherry PSC', color: 'var(--c-purple, #7c3aed)', bg: 'var(--c-tint-purple, #ede9fe)', zone: 'south' },
+  'Andaman and Nicobar Islands': { code: 'AN', body: 'A&N Administration', color: 'var(--c-green, #0d9488)', bg: 'var(--c-tint-green, #ccfbf1)', zone: 'south' },
+  'Dadra & Nagar Haveli and Daman & Diu': { code: 'DN', body: 'DD Administration', color: 'var(--c-amber, #b45309)', bg: 'var(--c-tint-amber, #fef3c7)', zone: 'central_west' },
+  'Lakshadweep': { code: 'LD', body: 'Lakshadweep Admin', color: 'var(--c-blue, #0891b2)', bg: 'var(--c-tint-blue, #cffafe)', zone: 'south' },
 };
 
 function getStateMeta(name) {
@@ -704,12 +704,19 @@ const LearningCenter = () => {
   const [regionFilterId, setRegionFilterId] = useState(paramState);
   const [categoryFilter, setCategoryFilter] = useState(paramCategory);
   const [rightTab, setRightTab] = useState(paramTab); // 'explorer' | 'recommended'
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  // On laptop-width screens (1101-1199px) Explorer mode starts with the sidebar collapsed to its
+  // icon rail so the content keeps enough width for three columns; users can expand it.
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(
+    () => paramTab === 'explorer' && typeof window !== 'undefined' && window.innerWidth > 1100 && window.innerWidth < 1200
+  );
   // Below 1100px the explorer category sidebar becomes a drawer opened by "Browse categories".
   const [explorerNavOpen, setExplorerNavOpen] = useState(false);
   // Display order for "Recommended for you" — 'recommended' keeps the ranking as computed.
   const [recommendedSort, setRecommendedSort] = useState('recommended');
   const explorerNavToggleRef = useRef(null);
+  // State / UT mode before a state is picked: the sidebar lists the states (not categories).
+  const isStateListView = (regionMode === 'state' || regionMode === 'ut') && !regionFilterId;
+  const browseLabel = isStateListView ? (regionMode === 'ut' ? 'Browse UTs' : 'Browse states') : 'Browse categories';
   const [isPageTransitioning, setIsPageTransitioning] = useState(false);
   // Per-division filter & search store to guarantee Central, State, and UT do not bleed into each other
   const [divisionFilters, setDivisionFilters] = useState({
@@ -2013,20 +2020,20 @@ const LearningCenter = () => {
             </section>
           )}
 
-          <div className={`lc-main-grid ${isSidebarCollapsed ? 'sidebar-collapsed' : ''} ${rightTab === 'explorer' ? 'lc-main-grid-explorer' : ''}`}>
+          <div className={`lc-main-grid ${isSidebarCollapsed && rightTab === 'explorer' ? 'sidebar-collapsed' : ''} ${rightTab === 'explorer' ? 'lc-main-grid-explorer' : ''}`}>
             {/* Left Column: Sidebar — Explorer Nav in explorer mode, Filter Sidebar in recommended mode */}
             {rightTab === 'explorer' && explorerNavOpen && (
               <div className="lc-explorer-drawer-backdrop" onClick={() => setExplorerNavOpen(false)} aria-hidden="true" />
             )}
             <aside
               id={rightTab === 'explorer' ? 'lc-explorer-categories' : undefined}
-              className={`lc-filter-sidebar ${rightTab === 'explorer' ? 'lc-explorer-sidebar' : ''} ${isSidebarCollapsed ? 'lc-explorer-sidebar-collapsed' : ''} ${rightTab === 'explorer' && explorerNavOpen ? 'is-drawer-open' : ''}`}
+              className={`lc-filter-sidebar ${rightTab === 'explorer' ? 'lc-explorer-sidebar' : ''} ${isSidebarCollapsed && rightTab === 'explorer' ? 'lc-explorer-sidebar-collapsed' : ''} ${rightTab === 'explorer' && explorerNavOpen ? 'is-drawer-open' : ''}`}
               aria-label={rightTab === 'explorer' ? 'Exam Categories' : 'Filter Results'}
             >
               {rightTab === 'explorer' && (
                 <div className="lc-explorer-drawer-head">
-                  <span>Browse categories</span>
-                  <button type="button" className="lc-explorer-drawer-close" onClick={() => setExplorerNavOpen(false)} aria-label="Close categories">
+                  <span>{browseLabel}</span>
+                  <button type="button" className="lc-explorer-drawer-close" onClick={() => setExplorerNavOpen(false)} aria-label={`Close ${browseLabel.toLowerCase()}`}>
                     <X size={18} />
                   </button>
                 </div>
@@ -2259,8 +2266,8 @@ const LearningCenter = () => {
                               <span
                                 className="lc-explorer-nav-icon-wrap"
                                 style={{
-                                  backgroundColor: isActive ? '#fef3c7' : item.bg || '#f1f5f9',
-                                  color: isActive ? '#b45309' : item.color || '#475569',
+                                  backgroundColor: isActive ? 'var(--c-tint-amber, #fef3c7)' : item.bg || 'var(--c-bg-2, #f1f5f9)',
+                                  color: isActive ? 'var(--c-amber, #b45309)' : item.color || 'var(--c-ink-3, #475569)',
                                 }}
                               >
                                 <IconComponent size={17} strokeWidth={2.2} />
@@ -2524,7 +2531,7 @@ const LearningCenter = () => {
 
                 {/* Tablet/phone: opens the category sidebar as a drawer (hidden on desktop via CSS).
                     Not needed on the State/UT directory, which lists the states in the page itself. */}
-                {rightTab === 'explorer' && !((regionMode === 'state' || regionMode === 'ut') && !regionFilterId) && (
+                {rightTab === 'explorer' && (
                   <button
                     type="button"
                     ref={explorerNavToggleRef}
@@ -2534,8 +2541,8 @@ const LearningCenter = () => {
                     aria-controls="lc-explorer-categories"
                   >
                     <Layers size={16} aria-hidden="true" />
-                    <span>Browse categories</span>
-                    {(categoryFilter || activeCategoryForExplorer) && (
+                    <span>{browseLabel}</span>
+                    {!isStateListView && (categoryFilter || activeCategoryForExplorer) && (
                       <span className="lc-explorer-browse-current">{categoryFilter || activeCategoryForExplorer}</span>
                     )}
                     <ChevronRight size={16} aria-hidden="true" className="lc-explorer-browse-chevron" />

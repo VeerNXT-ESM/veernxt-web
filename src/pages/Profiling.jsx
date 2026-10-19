@@ -615,8 +615,8 @@ const Profiling = () => {
           padding: 0.85rem 1rem;
           border-radius: var(--radius-sm);
           border: 1px solid var(--vx-border, #64748b);
-          background: white;
-          color: #0f172a;
+          background: var(--c-bg-0, white);
+          color: var(--c-ink-1, #0f172a);
           outline: none;
           font-family: inherit;
           font-size: 16px;
@@ -631,7 +631,7 @@ const Profiling = () => {
         @media (max-width: 480px) { .pf-inline-3 { grid-template-columns: 1fr; } }
 
         .pf-vitals-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        .pf-vitals-field label { display: block; font-size: 0.8rem; font-weight: 600; color: #334155; margin-bottom: 0.35rem; }
+        .pf-vitals-field label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--c-ink-2, #334155); margin-bottom: 0.35rem; }
 
         .pf-summary-card { background: var(--surface-alt); border-radius: var(--radius-sm); padding: 1.25rem; margin-bottom: 1rem; }
         .pf-summary-card p { margin: 0 0 0.4rem; font-size: 0.9rem; }
@@ -716,8 +716,8 @@ function ApplicationSummarySection({ title, rows }) {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.85rem' }}>
         {rows.map(([label, value]) => (
           <div key={label}>
-            <div style={{ fontSize: '0.68rem', fontWeight: 600, color: '#64748b', textTransform: 'uppercase' }}>{label}</div>
-            <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#0f172a' }}>{value || '—'}</div>
+            <div style={{ fontSize: '0.68rem', fontWeight: 600, color: 'var(--c-ink-4, #64748b)', textTransform: 'uppercase' }}>{label}</div>
+            <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--c-ink-1, #0f172a)' }}>{value || '—'}</div>
           </div>
         ))}
       </div>

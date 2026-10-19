@@ -374,10 +374,10 @@ const PostJobRequirement = () => {
           >
             <CheckCircle2 size={36} />
           </div>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.5rem' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.5rem' }}>
             Hiring Mission Submitted
           </h2>
-          <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: 1.5, marginBottom: '2rem' }}>
+          <p style={{ color: 'var(--c-ink-4, #64748b)', fontSize: '0.95rem', lineHeight: 1.5, marginBottom: '2rem' }}>
             Your requirement is now in review with our veteran matching team. Once approved, you can search anonymized
             talent, evaluate explainable fit scores, and send introduction requests.
           </p>
@@ -395,7 +395,7 @@ const PostJobRequirement = () => {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f8fafc', padding: '2rem 1rem 4rem' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--c-bg-1, #f8fafc)', padding: '2rem 1rem 4rem' }}>
       <div style={{ maxWidth: '840px', margin: '0 auto' }}>
         {/* Step Rail */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginBottom: '1.75rem', flexWrap: 'wrap' }}>
@@ -423,7 +423,7 @@ const PostJobRequirement = () => {
                     height: '20px',
                     borderRadius: '50%',
                     background: isDone ? 'var(--ios-olive, #4b6b32)' : isActive ? 'var(--ios-olive, #4b6b32)' : '#e2e8f0',
-                    color: isDone || isActive ? '#fff' : '#64748b',
+                    color: isDone || isActive ? '#fff' : 'var(--c-ink-4, #64748b)',
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -439,12 +439,12 @@ const PostJobRequirement = () => {
         </div>
 
         {/* Form Card */}
-        <Card style={{ padding: '2rem', background: '#fff', borderRadius: '16px', border: '1px solid #e2e8f0', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}>
+        <Card style={{ padding: '2rem', background: 'var(--c-bg-0, #fff)', borderRadius: '16px', border: '1px solid var(--c-line-2, #e2e8f0)', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}>
           <div style={{ marginBottom: '1.5rem' }}>
-            <h1 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.35rem' }}>
+            <h1 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--c-ink-1, #0f172a)', margin: '0 0 0.35rem' }}>
               {TITLES[step]}
             </h1>
-            <p style={{ fontSize: '0.88rem', color: '#64748b', margin: 0 }}>
+            <p style={{ fontSize: '0.88rem', color: 'var(--c-ink-4, #64748b)', margin: 0 }}>
               {HELP[step]}
             </p>
           </div>
@@ -453,13 +453,13 @@ const PostJobRequirement = () => {
           {step === 0 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                   Industry / Sector
                 </label>
                 <select
                   value={formData.sector}
                   onChange={(e) => handleSectorChange(e.target.value)}
-                  style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                  style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                 >
                   {SECTOR_OPTIONS.map((sec) => (
                     <option key={sec} value={sec}>{sec}</option>
@@ -468,7 +468,7 @@ const PostJobRequirement = () => {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                   Target Civilian Role(s)
                 </label>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.75rem' }}>
@@ -485,7 +485,7 @@ const PostJobRequirement = () => {
                           fontSize: '0.82rem',
                           border: isSel ? '1.5px solid var(--ios-olive, #4b6b32)' : '1px solid #cbd5e1',
                           background: isSel ? 'var(--ios-olive, #4b6b32)' : '#f8fafc',
-                          color: isSel ? '#fff' : '#334155',
+                          color: isSel ? '#fff' : 'var(--c-ink-2, #334155)',
                           fontWeight: isSel ? 700 : 500,
                           cursor: 'pointer',
                         }}
@@ -501,13 +501,13 @@ const PostJobRequirement = () => {
                   placeholder="Need a specific custom role title? (e.g. Senior Regional Fleet Manager)"
                   value={formData.customRole}
                   onChange={(e) => setField('customRole', e.target.value)}
-                  style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                  style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)' }}
                 />
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                     Number of Open Positions
                   </label>
                   <input
@@ -515,12 +515,12 @@ const PostJobRequirement = () => {
                     min="1"
                     value={formData.quantity}
                     onChange={(e) => setField('quantity', e.target.value)}
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)' }}
                   />
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                     Primary Work Location
                   </label>
                   <input
@@ -528,7 +528,7 @@ const PostJobRequirement = () => {
                     value={formData.locations[0] || ''}
                     onChange={(e) => setField('locations', [e.target.value])}
                     placeholder="e.g. Pune, NCR, or Across India"
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)' }}
                   />
                 </div>
               </div>
@@ -555,7 +555,7 @@ const PostJobRequirement = () => {
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
                     <Sparkles size={16} color="var(--ios-olive, #4b6b32)" />
-                    <strong style={{ fontSize: '0.88rem', color: '#0f172a' }}>
+                    <strong style={{ fontSize: '0.88rem', color: 'var(--c-ink-1, #0f172a)' }}>
                       Filtered for: {formData.sector}
                     </strong>
                     <span
@@ -571,7 +571,7 @@ const PostJobRequirement = () => {
                       Smart Relevance Active
                     </span>
                   </div>
-                  <p style={{ margin: '0.25rem 0 0', fontSize: '0.78rem', color: '#475569' }}>
+                  <p style={{ margin: '0.25rem 0 0', fontSize: '0.78rem', color: 'var(--c-ink-3, #475569)' }}>
                     Irrelevant capabilities (such as weapons or heavy vehicle handling) are filtered out for this sector. Mark at least 1 Essential capability.
                   </p>
                 </div>
@@ -585,10 +585,10 @@ const PostJobRequirement = () => {
                   alignItems: 'center',
                   flexWrap: 'wrap',
                   gap: '0.75rem',
-                  background: '#f8fafc',
+                  background: 'var(--c-bg-1, #f8fafc)',
                   padding: '0.65rem 0.85rem',
                   borderRadius: '10px',
-                  border: '1px solid #e2e8f0',
+                  border: '1px solid var(--c-line-2, #e2e8f0)',
                 }}
               >
                 {/* Mode Pills */}
@@ -603,7 +603,7 @@ const PostJobRequirement = () => {
                       fontWeight: capFilterTab === 'recommended' ? 700 : 500,
                       border: capFilterTab === 'recommended' ? '1.5px solid var(--ios-olive, #4b6b32)' : '1px solid #cbd5e1',
                       background: capFilterTab === 'recommended' ? 'var(--ios-olive, #4b6b32)' : '#fff',
-                      color: capFilterTab === 'recommended' ? '#fff' : '#334155',
+                      color: capFilterTab === 'recommended' ? '#fff' : 'var(--c-ink-2, #334155)',
                       cursor: 'pointer',
                       transition: 'all 0.15s ease',
                     }}
@@ -621,7 +621,7 @@ const PostJobRequirement = () => {
                       fontWeight: capFilterTab === 'all' ? 700 : 500,
                       border: capFilterTab === 'all' ? '1.5px solid var(--ios-olive, #4b6b32)' : '1px solid #cbd5e1',
                       background: capFilterTab === 'all' ? 'var(--ios-olive, #4b6b32)' : '#fff',
-                      color: capFilterTab === 'all' ? '#fff' : '#334155',
+                      color: capFilterTab === 'all' ? '#fff' : 'var(--c-ink-2, #334155)',
                       cursor: 'pointer',
                       transition: 'all 0.15s ease',
                     }}
@@ -639,7 +639,7 @@ const PostJobRequirement = () => {
                       fontWeight: capFilterTab === 'selected' ? 700 : 500,
                       border: capFilterTab === 'selected' ? '1.5px solid var(--ios-olive, #4b6b32)' : '1px solid #cbd5e1',
                       background: capFilterTab === 'selected' ? 'var(--ios-olive, #4b6b32)' : '#fff',
-                      color: capFilterTab === 'selected' ? '#fff' : '#334155',
+                      color: capFilterTab === 'selected' ? '#fff' : 'var(--c-ink-2, #334155)',
                       cursor: 'pointer',
                       transition: 'all 0.15s ease',
                     }}
@@ -652,7 +652,7 @@ const PostJobRequirement = () => {
                 <div style={{ position: 'relative', width: '260px', maxWidth: '100%' }}>
                   <Search
                     size={14}
-                    style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }}
+                    style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: 'var(--c-ink-5, #94a3b8)' }}
                   />
                   <input
                     type="text"
@@ -663,9 +663,9 @@ const PostJobRequirement = () => {
                       width: '100%',
                       padding: '0.4rem 1.8rem 0.4rem 2rem',
                       borderRadius: '20px',
-                      border: '1px solid #cbd5e1',
+                      border: '1px solid var(--c-line-3, #cbd5e1)',
                       fontSize: '0.78rem',
-                      background: '#fff',
+                      background: 'var(--c-bg-0, #fff)',
                       outline: 'none',
                     }}
                   />
@@ -680,7 +680,7 @@ const PostJobRequirement = () => {
                         transform: 'translateY(-50%)',
                         background: 'none',
                         border: 'none',
-                        color: '#94a3b8',
+                        color: 'var(--c-ink-5, #94a3b8)',
                         cursor: 'pointer',
                         padding: 0,
                         fontSize: '0.8rem',
@@ -694,14 +694,14 @@ const PostJobRequirement = () => {
 
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.65rem' }}>
-                  <strong style={{ fontSize: '0.9rem', color: '#0f172a' }}>
+                  <strong style={{ fontSize: '0.9rem', color: 'var(--c-ink-1, #0f172a)' }}>
                     {capFilterTab === 'recommended'
                       ? `Recommended Capabilities for ${formData.sector}`
                       : capFilterTab === 'selected'
                       ? `Your Selected Capabilities (${selectedCount})`
                       : 'All 21 Tri-Service Capability Areas'}
                   </strong>
-                  <span style={{ fontSize: '0.76rem', color: '#64748b' }}>
+                  <span style={{ fontSize: '0.76rem', color: 'var(--c-ink-4, #64748b)' }}>
                     Showing {displayedWorkTypes.length} result{displayedWorkTypes.length === 1 ? '' : 's'}
                   </span>
                 </div>
@@ -712,12 +712,12 @@ const PostJobRequirement = () => {
                     style={{
                       textAlign: 'center',
                       padding: '2rem 1rem',
-                      background: '#f8fafc',
+                      background: 'var(--c-bg-1, #f8fafc)',
                       borderRadius: '10px',
-                      border: '1px dashed #cbd5e1',
+                      border: '1px dashed var(--c-line-3, #cbd5e1)',
                     }}
                   >
-                    <p style={{ margin: '0 0 0.5rem', color: '#475569', fontSize: '0.85rem' }}>
+                    <p style={{ margin: '0 0 0.5rem', color: 'var(--c-ink-3, #475569)', fontSize: '0.85rem' }}>
                       {capFilterTab === 'selected'
                         ? 'No capabilities marked yet. Click "Recommended" or "All Military Capabilities" to select required skills.'
                         : `No capabilities matching "${capSearchQuery}".`}
@@ -730,7 +730,7 @@ const PostJobRequirement = () => {
                           style={{
                             padding: '0.35rem 0.75rem',
                             borderRadius: '6px',
-                            background: '#e2e8f0',
+                            background: 'var(--c-bg-3, #e2e8f0)',
                             border: 'none',
                             fontSize: '0.78rem',
                             cursor: 'pointer',
@@ -795,7 +795,7 @@ const PostJobRequirement = () => {
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.75rem' }}>
                           <div style={{ flex: 1 }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', flexWrap: 'wrap' }}>
-                              <strong style={{ fontSize: '0.92rem', color: '#0f172a' }}>{w.civil}</strong>
+                              <strong style={{ fontSize: '0.92rem', color: 'var(--c-ink-1, #0f172a)' }}>{w.civil}</strong>
                               {isRecommended && capFilterTab === 'all' && (
                                 <span
                                   style={{
@@ -830,8 +830,8 @@ const PostJobRequirement = () => {
                                     fontSize: '0.68rem',
                                     padding: '0.1rem 0.45rem',
                                     borderRadius: '10px',
-                                    background: '#F2E9D3',
-                                    color: '#5c4b20',
+                                    background: 'var(--c-tint-amber, #F2E9D3)',
+                                    color: 'var(--c-amber, #5c4b20)',
                                     fontWeight: 700,
                                   }}
                                 >
@@ -839,7 +839,7 @@ const PostJobRequirement = () => {
                                 </span>
                               )}
                             </div>
-                            <p style={{ fontSize: '0.78rem', color: '#64748b', margin: '0.25rem 0 0' }}>{w.civilDesc}</p>
+                            <p style={{ fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)', margin: '0.25rem 0 0' }}>{w.civilDesc}</p>
                           </div>
 
                           <div style={{ display: 'flex', gap: '0.35rem', flexShrink: 0 }}>
@@ -852,7 +852,7 @@ const PostJobRequirement = () => {
                                 fontSize: '0.75rem',
                                 border: isEssential ? '1px solid var(--ios-olive, #4b6b32)' : '1px solid #cbd5e1',
                                 background: isEssential ? 'var(--ios-olive, #4b6b32)' : '#f8fafc',
-                                color: isEssential ? '#fff' : '#334155',
+                                color: isEssential ? '#fff' : 'var(--c-ink-2, #334155)',
                                 fontWeight: isEssential ? 700 : 500,
                                 cursor: 'pointer',
                               }}
@@ -867,9 +867,9 @@ const PostJobRequirement = () => {
                                 padding: '0.35rem 0.65rem',
                                 borderRadius: '6px',
                                 fontSize: '0.75rem',
-                                border: isDesired ? '1px solid #9C7A2E' : '1px solid #cbd5e1',
-                                background: isDesired ? '#F2E9D3' : '#f8fafc',
-                                color: isDesired ? '#5c4b20' : '#334155',
+                                border: isDesired ? '1px solid #9C7A2E' : '1px solid var(--c-line-3, #cbd5e1)',
+                                background: isDesired ? '#F2E9D3' : 'var(--c-bg-1, #f8fafc)',
+                                color: isDesired ? '#5c4b20' : 'var(--c-ink-2, #334155)',
                                 fontWeight: isDesired ? 700 : 500,
                                 cursor: 'pointer',
                               }}
@@ -880,17 +880,17 @@ const PostJobRequirement = () => {
                         </div>
 
                         {/* Military background cross-reference toggle */}
-                        <div style={{ marginTop: '0.5rem', borderTop: '1px solid #f1f5f9', paddingTop: '0.4rem' }}>
+                        <div style={{ marginTop: '0.5rem', borderTop: '1px solid var(--c-line-1, #f1f5f9)', paddingTop: '0.4rem' }}>
                           <button
                             type="button"
                             onClick={() => toggleMilDetail(w.id)}
-                            style={{ background: 'none', border: 'none', color: '#2563eb', fontSize: '0.74rem', cursor: 'pointer', padding: 0 }}
+                            style={{ background: 'none', border: 'none', color: 'var(--c-blue, #2563eb)', fontSize: '0.74rem', cursor: 'pointer', padding: 0 }}
                           >
                             {isExpanded ? 'Hide verified military background ▲' : 'View verified military background ▼'}
                           </button>
 
                           {isExpanded && (
-                            <div style={{ marginTop: '0.4rem', padding: '0.5rem 0.75rem', background: '#f8fafc', borderRadius: '6px', fontSize: '0.74rem', color: '#475569' }}>
+                            <div style={{ marginTop: '0.4rem', padding: '0.5rem 0.75rem', background: 'var(--c-bg-1, #f8fafc)', borderRadius: '6px', fontSize: '0.74rem', color: 'var(--c-ink-3, #475569)' }}>
                               {w.mil.army && <div><strong>Army:</strong> {w.mil.army.label} ({w.mil.army.covers})</div>}
                               {w.mil.navy && <div><strong>Navy:</strong> {w.mil.navy.label} ({w.mil.navy.covers})</div>}
                               {w.mil.airforce && <div><strong>Air Force:</strong> {w.mil.airforce.label} ({w.mil.airforce.covers})</div>}
@@ -908,13 +908,13 @@ const PostJobRequirement = () => {
                     style={{
                       textAlign: 'center',
                       padding: '0.9rem',
-                      background: '#f8fafc',
+                      background: 'var(--c-bg-1, #f8fafc)',
                       borderRadius: '8px',
-                      border: '1px dashed #cbd5e1',
+                      border: '1px dashed var(--c-line-3, #cbd5e1)',
                       marginTop: '0.75rem',
                     }}
                   >
-                    <span style={{ fontSize: '0.78rem', color: '#64748b' }}>
+                    <span style={{ fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)' }}>
                       Looking for cross-functional or technical capabilities outside {formData.sector}?
                     </span>
                     <div>
@@ -946,13 +946,13 @@ const PostJobRequirement = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                     Minimum Team Supervised
                   </label>
                   <select
                     value={formData.min_team_supervised}
                     onChange={(e) => setField('min_team_supervised', Number(e.target.value))}
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     <option value={0}>No team supervision required (Individual contributor)</option>
                     <option value={4}>Small team (2 to 5 personnel)</option>
@@ -963,13 +963,13 @@ const PostJobRequirement = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                     Experience Band
                   </label>
                   <select
                     value={formData.experience_band}
                     onChange={(e) => setField('experience_band', e.target.value)}
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     <option value="0-4">0 to 4 years (Agniveer)</option>
                     <option value="3-8">3 to 8 years (Experienced soldier / Junior NCO)</option>
@@ -979,13 +979,13 @@ const PostJobRequirement = () => {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                   Mandatory Civil Licence or Qualification
                 </label>
                 <select
                   value={formData.required_licences[0] || 'No mandatory licence'}
                   onChange={(e) => setField('required_licences', [e.target.value])}
-                  style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                  style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                 >
                   <option value="No mandatory licence">No mandatory civil licence</option>
                   <option value="Civil HMV (Heavy Motor Vehicle)">Civil HMV (Heavy Motor Vehicle)</option>
@@ -1000,13 +1000,13 @@ const PostJobRequirement = () => {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                     Shift Pattern
                   </label>
                   <select
                     value={formData.shift_pattern}
                     onChange={(e) => setField('shift_pattern', e.target.value)}
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     <option>Day shift only</option>
                     <option>Rotational shifts</option>
@@ -1016,13 +1016,13 @@ const PostJobRequirement = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                     Service Preference
                   </label>
                   <select
                     value={formData.service_preference}
                     onChange={(e) => setField('service_preference', e.target.value)}
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1', background: '#fff' }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
                     <option value="All">All three Services (Match capability)</option>
                     <option value="Indian Army">Indian Army</option>
@@ -1033,7 +1033,7 @@ const PostJobRequirement = () => {
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', marginTop: '0.5rem' }}>
-                <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: '#334155', cursor: 'pointer' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', cursor: 'pointer' }}>
                   <input
                     type="checkbox"
                     checked={formData.bridge_training_available}
@@ -1043,7 +1043,7 @@ const PostJobRequirement = () => {
                   <span>Employer-funded technical bridge training available</span>
                 </label>
 
-                <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: '#334155', cursor: 'pointer' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', cursor: 'pointer' }}>
                   <input
                     type="checkbox"
                     checked={formData.relocation_support}
@@ -1061,7 +1061,7 @@ const PostJobRequirement = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                     Min Monthly Fixed Salary (₹)
                   </label>
                   <input
@@ -1069,12 +1069,12 @@ const PostJobRequirement = () => {
                     value={formData.salaryMin}
                     onChange={(e) => setField('salaryMin', e.target.value)}
                     placeholder="35000"
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)' }}
                   />
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                     Max Monthly Fixed Salary (₹)
                   </label>
                   <input
@@ -1082,13 +1082,13 @@ const PostJobRequirement = () => {
                     value={formData.salaryMax}
                     onChange={(e) => setField('salaryMax', e.target.value)}
                     placeholder="45000"
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid #cbd5e1' }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)' }}
                   />
                 </div>
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: '0.4rem' }}>
+                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--c-ink-2, #334155)', marginBottom: '0.4rem' }}>
                   Attach Detailed Job Description Document (Optional)
                 </label>
                 <input
@@ -1098,18 +1098,18 @@ const PostJobRequirement = () => {
                     const file = e.target.files?.[0];
                     if (file) setFormData((prev) => ({ ...prev, jdFile: file, jdFileName: file.name }));
                   }}
-                  style={{ width: '100%', padding: '0.65rem', borderRadius: '8px', border: '1px dashed #cbd5e1' }}
+                  style={{ width: '100%', padding: '0.65rem', borderRadius: '8px', border: '1px dashed var(--c-line-3, #cbd5e1)' }}
                 />
               </div>
 
               {/* Fair Hiring Code of Ethics */}
-              <div style={{ background: '#f8fafc', borderRadius: '12px', padding: '1.25rem', border: '1px solid #cbd5e1' }}>
-                <strong style={{ fontSize: '0.92rem', color: '#0f172a', display: 'block', marginBottom: '0.75rem' }}>
+              <div style={{ background: 'var(--c-bg-1, #f8fafc)', borderRadius: '12px', padding: '1.25rem', border: '1px solid var(--c-line-3, #cbd5e1)' }}>
+                <strong style={{ fontSize: '0.92rem', color: 'var(--c-ink-1, #0f172a)', display: 'block', marginBottom: '0.75rem' }}>
                   VeerNXT Fair Hiring Code of Ethics (Mandatory)
                 </strong>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: '#334155', cursor: 'pointer' }}>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', cursor: 'pointer' }}>
                     <input
                       type="checkbox"
                       checked={formData.fair_no_fee}
@@ -1119,7 +1119,7 @@ const PostJobRequirement = () => {
                     <span>No fee will be charged to candidates at any stage of hiring</span>
                   </label>
 
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: '#334155', cursor: 'pointer' }}>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', cursor: 'pointer' }}>
                     <input
                       type="checkbox"
                       checked={formData.fair_disclose}
@@ -1129,7 +1129,7 @@ const PostJobRequirement = () => {
                     <span>Compensation and shift conditions will be clearly disclosed in the introduction</span>
                   </label>
 
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: '#334155', cursor: 'pointer' }}>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', cursor: 'pointer' }}>
                     <input
                       type="checkbox"
                       checked={formData.fair_consent}
@@ -1139,7 +1139,7 @@ const PostJobRequirement = () => {
                     <span>Candidate contact details will only be unmasked upon candidate consent</span>
                   </label>
 
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: '#334155', cursor: 'pointer' }}>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.85rem', color: 'var(--c-ink-2, #334155)', cursor: 'pointer' }}>
                     <input
                       type="checkbox"
                       checked={formData.fair_no_rank_bias}
@@ -1156,30 +1156,30 @@ const PostJobRequirement = () => {
           {/* STEP 4: REVIEW & CONFIRM */}
           {step === 4 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              <div style={{ border: '1px solid #cbd5e1', borderRadius: '12px', padding: '1.25rem', background: '#fff' }}>
+              <div style={{ border: '1px solid var(--c-line-3, #cbd5e1)', borderRadius: '12px', padding: '1.25rem', background: 'var(--c-bg-0, #fff)' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
                   <div>
-                    <span style={{ fontSize: '0.78rem', color: '#64748b', display: 'block' }}>Target Role</span>
-                    <strong style={{ fontSize: '1rem', color: '#0f172a' }}>{formData.roleTitles.join(', ')}</strong>
+                    <span style={{ fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)', display: 'block' }}>Target Role</span>
+                    <strong style={{ fontSize: '1rem', color: 'var(--c-ink-1, #0f172a)' }}>{formData.roleTitles.join(', ')}</strong>
                   </div>
                   <div>
-                    <span style={{ fontSize: '0.78rem', color: '#64748b', display: 'block' }}>Open Positions</span>
-                    <strong style={{ fontSize: '1rem', color: '#0f172a' }}>{formData.quantity} Openings</strong>
+                    <span style={{ fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)', display: 'block' }}>Open Positions</span>
+                    <strong style={{ fontSize: '1rem', color: 'var(--c-ink-1, #0f172a)' }}>{formData.quantity} Openings</strong>
                   </div>
                   <div>
-                    <span style={{ fontSize: '0.78rem', color: '#64748b', display: 'block' }}>Location</span>
-                    <strong style={{ fontSize: '1rem', color: '#0f172a' }}>{formData.locations.join(', ')}</strong>
+                    <span style={{ fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)', display: 'block' }}>Location</span>
+                    <strong style={{ fontSize: '1rem', color: 'var(--c-ink-1, #0f172a)' }}>{formData.locations.join(', ')}</strong>
                   </div>
                   <div>
-                    <span style={{ fontSize: '0.78rem', color: '#64748b', display: 'block' }}>Fixed Compensation</span>
-                    <strong style={{ fontSize: '1rem', color: '#0f172a' }}>
+                    <span style={{ fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)', display: 'block' }}>Fixed Compensation</span>
+                    <strong style={{ fontSize: '1rem', color: 'var(--c-ink-1, #0f172a)' }}>
                       ₹{Number(formData.salaryMin || 0).toLocaleString('en-IN')} to ₹{Number(formData.salaryMax || 0).toLocaleString('en-IN')} / mo
                     </strong>
                   </div>
                 </div>
 
-                <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: '0.85rem' }}>
-                  <span style={{ fontSize: '0.78rem', color: '#64748b', display: 'block', marginBottom: '0.35rem' }}>
+                <div style={{ borderTop: '1px solid var(--c-line-1, #f1f5f9)', paddingTop: '0.85rem' }}>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--c-ink-4, #64748b)', display: 'block', marginBottom: '0.35rem' }}>
                     Essential Capabilities Matched
                   </span>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
@@ -1205,7 +1205,7 @@ const PostJobRequirement = () => {
               alignItems: 'center',
               marginTop: '2rem',
               paddingTop: '1.25rem',
-              borderTop: '1px solid #e2e8f0',
+              borderTop: '1px solid var(--c-line-2, #e2e8f0)',
             }}
           >
             <button
@@ -1215,7 +1215,7 @@ const PostJobRequirement = () => {
               style={{
                 background: 'none',
                 border: 'none',
-                color: step === 0 ? '#cbd5e1' : '#64748b',
+                color: step === 0 ? '#cbd5e1' : 'var(--c-ink-4, #64748b)',
                 cursor: step === 0 ? 'not-allowed' : 'pointer',
                 fontWeight: 600,
                 fontSize: '0.88rem',

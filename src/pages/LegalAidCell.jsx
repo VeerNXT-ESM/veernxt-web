@@ -454,7 +454,7 @@ const LegalAidCell = () => {
                       </article>
                     </div>
                   </div>
-                  <div className="notice" style={{ background: '#fffaf0', borderColor: '#eed9ad', color: '#695a38' }}>
+                  <div className="notice" style={{ background: 'var(--c-tint-amber, #fffaf0)', borderColor: '#eed9ad', color: 'var(--c-amber, #695a38)' }}>
                     <strong>Important:</strong> Your answers suggest that this matter may require review by a qualified professional. Time limits may apply for appeals and representations — please do not delay professional review.
                   </div>
                 </div>
@@ -524,20 +524,20 @@ const Screen8 = ({ state, go, exitAssistance }) => {
       <div className="content">
         <div className="body" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
           <div style={{ fontSize: 64, marginBottom: 16 }}>✅</div>
-          <p className="eyebrow" style={{ color: '#4b6b32', justifyContent: 'center', display: 'flex' }}>Request Submitted</p>
+          <p className="eyebrow" style={{ color: 'var(--c-green, #4b6b32)', justifyContent: 'center', display: 'flex' }}>Request Submitted</p>
           <h1 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>Your case has been registered.</h1>
           <p className="intro" style={{ maxWidth: 480, margin: '0 auto 1.5rem' }}>
             Your Case Reference is <strong>{state.caseRef}</strong>. A VeerNXT Legal Support Desk coordinator will reach out to you shortly via your preferred contact method.
           </p>
-          <div style={{ background: '#f0f7ea', border: '1.5px solid #b6d9a0', borderRadius: 14, padding: '1.25rem 1.5rem', maxWidth: 400, margin: '0 auto 2rem', textAlign: 'left' }}>
-            <p style={{ margin: 0, fontSize: 13, color: '#2d5a27', fontWeight: 700, marginBottom: 6 }}>What happens next?</p>
-            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, color: '#3d6b33', lineHeight: 1.8 }}>
+          <div style={{ background: 'var(--c-tint-green, #f0f7ea)', border: '1.5px solid #b6d9a0', borderRadius: 14, padding: '1.25rem 1.5rem', maxWidth: 400, margin: '0 auto 2rem', textAlign: 'left' }}>
+            <p style={{ margin: 0, fontSize: 13, color: 'var(--c-green, #2d5a27)', fontWeight: 700, marginBottom: 6 }}>What happens next?</p>
+            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, color: 'var(--c-green, #3d6b33)', lineHeight: 1.8 }}>
               <li>Our coordinator reviews your case summary</li>
               <li>They contact you via {contactMethod === 'phone' ? 'phone call' : 'WhatsApp'}</li>
               <li>You're connected with the right legal professional</li>
             </ul>
           </div>
-          <p style={{ fontSize: 11, color: '#94a3b8', margin: '1rem auto 0', maxWidth: 400 }}>
+          <p style={{ fontSize: 11, color: 'var(--c-ink-5, #94a3b8)', margin: '1rem auto 0', maxWidth: 400 }}>
             🔒 Your information is private and shared only with authorised VeerNXT support personnel.
           </p>
         </div>
@@ -574,7 +574,7 @@ const Screen8 = ({ state, go, exitAssistance }) => {
             />
           </label>
           <label className="field">
-            Email address <span style={{ fontWeight: 400, color: '#94a3b8', fontSize: 12 }}>(so we can send you case updates)</span>
+            Email address <span style={{ fontWeight: 400, color: 'var(--c-ink-5, #94a3b8)', fontSize: 12 }}>(so we can send you case updates)</span>
             <input
               type="email"
               placeholder="your@email.com"
@@ -588,7 +588,7 @@ const Screen8 = ({ state, go, exitAssistance }) => {
           I consent to VeerNXT contacting me and sharing this case summary only with authorised support personnel or the legal professional assigned to me.
         </label>
         {error && (
-          <div className="notice" style={{ background: '#fff0f0', borderColor: '#f5c6cb', color: '#7b2230', marginTop: 12 }}>
+          <div className="notice" style={{ background: 'var(--c-tint-red, #fff0f0)', borderColor: '#f5c6cb', color: 'var(--c-red, #7b2230)', marginTop: 12 }}>
             {error}
           </div>
         )}

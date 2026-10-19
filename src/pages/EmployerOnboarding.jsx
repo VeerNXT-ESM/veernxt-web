@@ -277,7 +277,7 @@ const EmployerOnboarding = () => {
         return (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
             {d.industry && (
-              <div style={{ padding: '0.6rem 0.85rem', background: '#f8fafc', borderRadius: '6px', fontSize: '0.82rem', color: '#475569', border: '1px solid #e2e8f0' }}>
+              <div style={{ padding: '0.6rem 0.85rem', background: 'var(--c-bg-1, #f8fafc)', borderRadius: '6px', fontSize: '0.82rem', color: 'var(--c-ink-3, #475569)', border: '1px solid var(--c-line-2, #e2e8f0)' }}>
                 Showing roles for <strong>{d.industry}</strong>
               </div>
             )}
@@ -294,7 +294,7 @@ const EmployerOnboarding = () => {
         return (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
             {d.industry && (
-              <div style={{ padding: '0.6rem 0.85rem', background: '#f8fafc', borderRadius: '6px', fontSize: '0.82rem', color: '#475569', border: '1px solid #e2e8f0' }}>
+              <div style={{ padding: '0.6rem 0.85rem', background: 'var(--c-bg-1, #f8fafc)', borderRadius: '6px', fontSize: '0.82rem', color: 'var(--c-ink-3, #475569)', border: '1px solid var(--c-line-2, #e2e8f0)' }}>
                 Showing recommended skills for <strong>{d.industry}</strong>
               </div>
             )}
@@ -420,8 +420,8 @@ const EmployerOnboarding = () => {
           padding: 0.85rem 1rem;
           border-radius: var(--radius-sm);
           border: 1px solid var(--vx-border, #64748b);
-          background: white;
-          color: #0f172a;
+          background: var(--c-bg-0, white);
+          color: var(--c-ink-1, #0f172a);
           outline: none;
           font-family: inherit;
           font-size: 16px;

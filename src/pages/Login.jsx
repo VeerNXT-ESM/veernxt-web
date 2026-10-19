@@ -298,7 +298,7 @@ const Login = () => {
           // deep link to /learning-center) instead of always landing on
           // /dashboard — AuthGuard already sets this via `state: { from }`.
           const from = location.state?.from;
-          const redirectPath = from ? `${from.pathname}${from.search || ''}` : '/dashboard';
+          const redirectPath = from ? `${from.pathname}${from.search || ''}` : '/v2/me';
           navigate(redirectPath);
         } else {
           navigate('/profiling');
@@ -393,8 +393,8 @@ const Login = () => {
     // plain `border` in an inline style outranks any class selector, focus
     // state or not, so a stylesheet rule alone could never win here.
     border: `1px solid var(--vx-border, ${borderColor})`,
-    background: 'white',
-    color: '#0f172a',
+    background: 'var(--c-bg-0, white)',
+    color: 'var(--c-ink-1, #0f172a)',
     outline: 'none',
     fontFamily: 'inherit',
     fontSize: '1rem',
@@ -405,7 +405,7 @@ const Login = () => {
   const labelStyle = {
     fontSize: '0.875rem',
     fontWeight: '600',
-    color: '#334155',
+    color: 'var(--c-ink-2, #334155)',
     marginBottom: '0.4rem',
     display: 'block',
   };
@@ -427,7 +427,7 @@ const Login = () => {
                 style={{ ...inputStyle, fontFamily: 'monospace', fontSize: '1.5rem', letterSpacing: '0.3em', textAlign: 'center' }}
               />
               {isDevMode && (
-                <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#475569', textAlign: 'center', background: '#f8fafc', padding: '0.5rem', borderRadius: 'var(--radius-sm)', border: `1px dashed ${borderColor}` }}>
+                <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'var(--c-ink-3, #475569)', textAlign: 'center', background: 'var(--c-bg-1, #f8fafc)', padding: '0.5rem', borderRadius: 'var(--radius-sm)', border: `1px dashed ${borderColor}` }}>
                   <span style={{ fontWeight: '700', color: 'var(--ios-olive)' }}>TEST MODE:</span> enter <strong style={{ letterSpacing: '1px' }}>123456</strong>
                 </div>
               )}
@@ -480,7 +480,7 @@ const Login = () => {
                 />
                 <button type="button" className="vx-icon-btn" onClick={() => setShowPassword(!showPassword)}
                   aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword}
-                  style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#475569', cursor: 'pointer' }}>
+                  style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--c-ink-3, #475569)', cursor: 'pointer' }}>
                   {showPassword ? <EyeOff size={19} /> : <Eye size={19} />}
                 </button>
               </div>
@@ -508,7 +508,7 @@ const Login = () => {
             <div style={{ textAlign: 'left' }}>
               <label style={labelStyle} htmlFor="cand-reg-mobile">Mobile number</label>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
+                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: 'var(--c-bg-1, #f8fafc)', color: 'var(--c-ink-1, #0f172a)', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
                 <input id="cand-reg-mobile" className="vx-field" type="tel" inputMode="tel" autoComplete="tel-national" placeholder="e.g. 9876543210" value={phone}
                   onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
                   style={{ ...inputStyle, flex: 1 }}
@@ -519,7 +519,7 @@ const Login = () => {
               {loading ? 'Sending code…' : 'Verify mobile & register'}
             </Button>
           </form>
-          <div style={{ marginTop: '1.25rem', textAlign: 'center', fontSize: '0.9rem', color: '#475569' }}>
+          <div style={{ marginTop: '1.25rem', textAlign: 'center', fontSize: '0.9rem', color: 'var(--c-ink-3, #475569)' }}>
             Already have an account?{' '}
             <button className="vx-link" onClick={() => { setAuthMode('login'); resetFlow(); }}
               style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontWeight: 700, fontSize: '0.9rem', cursor: 'pointer', padding: '0.5rem', textDecoration: 'underline' }}>
@@ -541,7 +541,7 @@ const Login = () => {
             <div style={{ textAlign: 'left' }}>
               <label style={labelStyle} htmlFor="cand-forgot-mobile">Registered mobile number</label>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
+                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: 'var(--c-bg-1, #f8fafc)', color: 'var(--c-ink-1, #0f172a)', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
                 <input id="cand-forgot-mobile" className="vx-field" type="tel" inputMode="tel" autoComplete="tel-national" placeholder="e.g. 9876543210" value={phone}
                   onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
                   style={{ ...inputStyle, flex: 1 }}
@@ -580,7 +580,7 @@ const Login = () => {
               />
               <button type="button" className="vx-icon-btn" onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword}
-                style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#475569', cursor: 'pointer' }}>
+                style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--c-ink-3, #475569)', cursor: 'pointer' }}>
                 {showPassword ? <EyeOff size={19} /> : <Eye size={19} />}
               </button>
             </div>
@@ -597,7 +597,7 @@ const Login = () => {
 
         <div style={{ textAlign: 'center', marginTop: '0.85rem' }}>
           <button className="vx-link" onClick={() => { setAuthMode('forgot'); resetFlow(); }}
-            style={{ background: 'none', border: 'none', color: '#475569', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer', padding: '0.6rem 0.75rem', minHeight: '44px', textDecoration: 'underline', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+            style={{ background: 'none', border: 'none', color: 'var(--c-ink-3, #475569)', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer', padding: '0.6rem 0.75rem', minHeight: '44px', textDecoration: 'underline', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
             <KeyRound size={14} />
             Forgot password?
           </button>
@@ -623,7 +623,7 @@ const Login = () => {
                 style={{ ...inputStyle, fontFamily: 'monospace', fontSize: '1.5rem', letterSpacing: '0.3em', textAlign: 'center' }}
               />
               {isDevMode && (
-                <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#475569', textAlign: 'center', background: '#f8fafc', padding: '0.5rem', borderRadius: 'var(--radius-sm)', border: `1px dashed ${borderColor}` }}>
+                <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'var(--c-ink-3, #475569)', textAlign: 'center', background: 'var(--c-bg-1, #f8fafc)', padding: '0.5rem', borderRadius: 'var(--radius-sm)', border: `1px dashed ${borderColor}` }}>
                   <span style={{ fontWeight: '700', color: 'var(--ios-olive)' }}>TEST MODE:</span> enter <strong style={{ letterSpacing: '1px' }}>123456</strong>
                 </div>
               )}
@@ -676,7 +676,7 @@ const Login = () => {
                 />
                 <button type="button" className="vx-icon-btn" onClick={() => setShowPassword(!showPassword)}
                   aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword}
-                  style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#475569', cursor: 'pointer' }}>
+                  style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--c-ink-3, #475569)', cursor: 'pointer' }}>
                   {showPassword ? <EyeOff size={19} /> : <Eye size={19} />}
                 </button>
               </div>
@@ -704,7 +704,7 @@ const Login = () => {
             <div style={{ textAlign: 'left' }}>
               <label style={labelStyle} htmlFor="emp-reg-mobile">Recruiter / corporate mobile</label>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
+                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: 'var(--c-bg-1, #f8fafc)', color: 'var(--c-ink-1, #0f172a)', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
                 <input id="emp-reg-mobile" className="vx-field" type="tel" inputMode="tel" autoComplete="tel-national" placeholder="e.g. 9876543210" value={phone}
                   onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
                   style={{ ...inputStyle, flex: 1 }}
@@ -715,7 +715,7 @@ const Login = () => {
               {loading ? 'Sending code…' : 'Verify mobile & register company'}
             </Button>
           </form>
-          <div style={{ marginTop: '1.25rem', textAlign: 'center', fontSize: '0.9rem', color: '#475569' }}>
+          <div style={{ marginTop: '1.25rem', textAlign: 'center', fontSize: '0.9rem', color: 'var(--c-ink-3, #475569)' }}>
             Already have a recruiter account?{' '}
             <button className="vx-link" onClick={() => { setAuthMode('login'); resetFlow(); }}
               style={{ background: 'none', border: 'none', color: 'var(--ios-olive)', fontWeight: 700, fontSize: '0.9rem', cursor: 'pointer', padding: '0.5rem', textDecoration: 'underline' }}>
@@ -737,7 +737,7 @@ const Login = () => {
             <div style={{ textAlign: 'left' }}>
               <label style={labelStyle} htmlFor="emp-forgot-mobile">Registered recruiter mobile number</label>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: '#f8fafc', color: '#0f172a', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
+                <div aria-hidden="true" style={{ padding: '0.85rem 0.75rem', borderRadius: 'var(--radius-sm)', border: `1px solid ${borderColor}`, background: 'var(--c-bg-1, #f8fafc)', color: 'var(--c-ink-1, #0f172a)', fontWeight: '700', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>+91</div>
                 <input id="emp-forgot-mobile" className="vx-field" type="tel" inputMode="tel" autoComplete="tel-national" placeholder="e.g. 9876543210" value={phone}
                   onChange={(e) => setPhone(sanitizePhoneNumber(e.target.value))} required
                   style={{ ...inputStyle, flex: 1 }}
@@ -781,7 +781,7 @@ const Login = () => {
               />
               <button type="button" className="vx-icon-btn" onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword}
-                style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#475569', cursor: 'pointer' }}>
+                style={{ position: 'absolute', right: '0.15rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--c-ink-3, #475569)', cursor: 'pointer' }}>
                 {showPassword ? <EyeOff size={19} /> : <Eye size={19} />}
               </button>
             </div>
@@ -798,7 +798,7 @@ const Login = () => {
 
         <div style={{ textAlign: 'center', marginTop: '0.85rem' }}>
           <button className="vx-link" onClick={() => { setAuthMode('forgot'); resetFlow(); }}
-            style={{ background: 'none', border: 'none', color: '#475569', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer', padding: '0.6rem 0.75rem', minHeight: '44px', textDecoration: 'underline', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+            style={{ background: 'none', border: 'none', color: 'var(--c-ink-3, #475569)', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer', padding: '0.6rem 0.75rem', minHeight: '44px', textDecoration: 'underline', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
             <KeyRound size={14} />
             Forgot password?
           </button>
@@ -886,7 +886,7 @@ const Login = () => {
         )}
 
         {/* Footer */}
-        <div style={{ marginTop: '2rem', borderTop: '1px solid #e2e8f0', paddingTop: '1.1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', color: '#475569' }}>
+        <div style={{ marginTop: '2rem', borderTop: '1px solid var(--c-line-2, #e2e8f0)', paddingTop: '1.1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', color: 'var(--c-ink-3, #475569)' }}>
           <ShieldCheck size={15} aria-hidden="true" />
           <span style={{ fontSize: '0.8rem', fontWeight: '600' }}>Secure connection</span>
         </div>
@@ -913,7 +913,7 @@ const Login = () => {
           border-radius: var(--radius-sm);
         }
         .vx-icon-btn:hover {
-          background: #f1f5f9;
+          background: var(--c-bg-2, #f1f5f9);
         }
         .vx-icon-btn:focus-visible,
         .vx-link:focus-visible,

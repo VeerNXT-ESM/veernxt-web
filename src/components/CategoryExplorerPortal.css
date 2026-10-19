@@ -27,29 +27,29 @@
   gap: 8px;
   font-size: 13px;
   font-weight: 500;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   padding: 0 2px;
   margin-top: -2px;
   margin-bottom: -2px;
 }
 
 .cep-bc-link {
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   cursor: pointer;
   transition: color 0.15s ease;
 }
 
 .cep-bc-link:hover {
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
 }
 
 .cep-bc-sep {
-  color: #94a3b8;
+  color: var(--c-ink-5, #94a3b8);
   flex-shrink: 0;
 }
 
 .cep-bc-current {
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   font-weight: 700;
 }
 
@@ -318,7 +318,7 @@
   font-style: normal;
   font-size: 13.5px;
   font-weight: 800;
-  color: #059669;
+  color: var(--c-green, #059669);
   margin-top: 3px;
   text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
 }
@@ -383,14 +383,14 @@
 .cep-action-title {
   font-size: 15px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0 0 6px 0;
   line-height: 1.25;
 }
 
 .cep-action-desc {
   font-size: 11.5px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   line-height: 1.45;
   margin: 0;
   flex: 1;
@@ -421,11 +421,11 @@
 /* Exact Pastel Colors from Reference Image */
 /* 1. Introduction: Warm Peach */
 .cep-card-peach {
-  background: #fff8ed;
+  background: var(--c-tint-amber, #fff8ed);
   border-color: #fed7aa;
 }
 .icon-peach {
-  background: #ffedd5;
+  background: var(--c-tint-amber, #ffedd5);
   color: #ea580c;
 }
 .btn-peach {
@@ -434,24 +434,24 @@
 
 /* 2. Guidebooks: Mint Green */
 .cep-card-mint {
-  background: #ecfdf5;
+  background: var(--c-tint-green, #ecfdf5);
   border-color: #a7f3d0;
 }
 .icon-mint {
-  background: #d1fae5;
-  color: #059669;
+  background: var(--c-tint-green, #d1fae5);
+  color: var(--c-green, #059669);
 }
 .btn-mint {
-  background: #10b981;
+  background: var(--ios-olive-fill, #10b981);
 }
 
 /* 3. Preci: Rose Blush */
 .cep-card-rose {
-  background: #fff1f2;
+  background: var(--c-tint-red, #fff1f2);
   border-color: #fecdd3;
 }
 .icon-rose {
-  background: #ffe4e6;
+  background: var(--c-tint-red, #ffe4e6);
   color: #e11d48;
 }
 .btn-rose {
@@ -460,12 +460,12 @@
 
 /* 4. PYQs: Soft Sky Blue */
 .cep-card-sky {
-  background: #eff6ff;
+  background: var(--c-tint-blue, #eff6ff);
   border-color: #bfdbfe;
 }
 .icon-sky {
-  background: #dbeafe;
-  color: #2563eb;
+  background: var(--c-tint-blue, #dbeafe);
+  color: var(--c-blue, #2563eb);
 }
 .btn-sky {
   background: #3b82f6;
@@ -473,11 +473,11 @@
 
 /* 5. Mock Tests: Lavender */
 .cep-card-lavender {
-  background: #faf5ff;
+  background: var(--c-tint-purple, #faf5ff);
   border-color: #e9d5ff;
 }
 .icon-lavender {
-  background: #f3e8ff;
+  background: var(--c-tint-purple, #f3e8ff);
   color: #9333ea;
 }
 .btn-lavender {
@@ -489,8 +489,8 @@
   display: grid;
   grid-template-columns: 1.35fr 1fr 0.95fr;
   gap: 0;
-  background: #ffffff;
-  border: 1px solid #edf2f7;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-1, #edf2f7);
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
@@ -500,14 +500,14 @@
   display: flex;
   flex-direction: column;
   padding: 26px 28px;
-  border-right: 1px solid #edf2f7;
+  border-right: 1px solid var(--c-line-1, #edf2f7);
 }
 
 .cep-top-exams-col {
   display: flex;
   flex-direction: column;
   padding: 26px 24px;
-  border-right: 1px solid #edf2f7;
+  border-right: 1px solid var(--c-line-1, #edf2f7);
 }
 
 .cep-related-exams-col {
@@ -538,7 +538,7 @@
 .cep-col-title {
   font-size: 16.5px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0;
 }
 
@@ -546,7 +546,7 @@
 .cep-about-paragraph {
   font-size: 13px;
   line-height: 1.6;
-  color: #475569;
+  color: var(--c-ink-3, #475569);
   margin: 0 0 18px 0;
 }
 
@@ -563,16 +563,16 @@
   align-items: center;
   gap: 11px;
   padding: 12px 14px;
-  background: #f8fafc;
-  border: 1px solid #edf2f7;
+  background: var(--c-bg-1, #f8fafc);
+  border: 1px solid var(--c-line-1, #edf2f7);
   border-radius: 16px;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.02);
   transition: all 0.15s ease;
 }
 
 .cep-meta-box:hover {
-  background: #ffffff;
-  border-color: #e2e8f0;
+  background: var(--c-bg-0, #ffffff);
+  border-color: var(--c-line-2, #e2e8f0);
   box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
 }
 
@@ -581,17 +581,17 @@
 }
 
 .cep-meta-box-highlight {
-  background: #f0fdf4;
+  background: var(--c-tint-green, #f0fdf4);
   border-color: #bbf7d0;
 }
 
 .cep-meta-box-highlight:hover {
-  background: #ecfdf5;
+  background: var(--c-tint-green, #ecfdf5);
   border-color: #86efac;
 }
 
 .cep-meta-value.highlight-value {
-  color: #065f46;
+  color: var(--c-green, #065f46);
   font-size: 13.5px;
   font-weight: 800;
 }
@@ -600,8 +600,8 @@
   width: 36px;
   height: 36px;
   border-radius: 11px;
-  background: #ecfdf5;
-  color: #059669;
+  background: var(--c-tint-green, #ecfdf5);
+  color: var(--c-green, #059669);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -617,14 +617,14 @@
 .cep-meta-label {
   font-size: 11px;
   font-weight: 500;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   line-height: 1.2;
 }
 
 .cep-meta-value {
   font-size: 12px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   line-height: 1.3;
   white-space: nowrap;
   overflow: hidden;
@@ -667,21 +667,21 @@
   align-items: center;
   gap: 11px;
   padding: 11px 14px;
-  background: #ffffff;
-  border: 1px solid #f1f5f9;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-1, #f1f5f9);
   border-radius: 14px;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .cep-exam-item-row:hover {
-  background: #f8fafc;
-  border-color: #e2e8f0;
+  background: var(--c-bg-1, #f8fafc);
+  border-color: var(--c-line-2, #e2e8f0);
   transform: translateX(2px);
 }
 
 .cep-check-icon-wrap {
-  color: #10b981;
+  color: var(--c-green, #10b981);
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -714,7 +714,7 @@
 .cep-exam-row-title {
   font-size: 13px;
   font-weight: 600;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -723,7 +723,7 @@
 
 .cep-exam-row-subtitle {
   font-size: 11px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   margin-top: 1px;
   white-space: nowrap;
   overflow: hidden;
@@ -732,18 +732,18 @@
 
 .cep-exam-level-sub {
   font-size: 11px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   margin-top: 1px;
 }
 
 .cep-row-chevron {
-  color: #94a3b8;
+  color: var(--c-ink-5, #94a3b8);
   flex-shrink: 0;
   transition: all 0.15s ease;
 }
 
 .cep-exam-item-row:hover .cep-row-chevron {
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   transform: translateX(2px);
 }
 
@@ -774,8 +774,8 @@
 
 /* ── Full Width All Exams Card (Replaces .cep-details-card on click) ── */
 .cep-all-exams-card {
-  background: #ffffff;
-  border: 1px solid #edf2f7;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-1, #edf2f7);
   border-radius: 24px;
   padding: 28px 32px;
   box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
@@ -803,7 +803,7 @@
   gap: 16px;
   flex-wrap: wrap;
   padding-bottom: 18px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--c-line-1, #f1f5f9);
 }
 
 .cep-all-exams-header-left {
@@ -816,9 +816,9 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #f8fafc;
-  color: #475569;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-1, #f8fafc);
+  color: var(--c-ink-3, #475569);
+  border: 1px solid var(--c-line-2, #e2e8f0);
   border-radius: 10px;
   padding: 6px 14px;
   font-size: 12.5px;
@@ -829,8 +829,8 @@
 }
 
 .cep-back-to-overview-btn:hover {
-  background: #ecfdf5;
-  color: #065f46;
+  background: var(--c-tint-green, #ecfdf5);
+  color: var(--c-green, #065f46);
   border-color: #a7f3d0;
 }
 
@@ -841,8 +841,8 @@
 }
 
 .cep-all-exams-count-badge {
-  background: #ecfdf5;
-  color: #059669;
+  background: var(--c-tint-green, #ecfdf5);
+  color: var(--c-green, #059669);
   font-size: 12px;
   font-weight: 700;
   padding: 3px 10px;
@@ -859,8 +859,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
+  background: var(--c-bg-1, #f8fafc);
+  border: 1.5px solid var(--c-line-2, #e2e8f0);
   border-radius: 9999px;
   padding: 4px 12px 4px 6px;
   min-width: 300px;
@@ -869,12 +869,12 @@
 }
 
 .cep-all-exams-search-box:hover {
-  background: #ffffff;
-  border-color: #cbd5e1;
+  background: var(--c-bg-0, #ffffff);
+  border-color: var(--c-line-3, #cbd5e1);
 }
 
 .cep-all-exams-search-box:focus-within {
-  background: #ffffff;
+  background: var(--c-bg-0, #ffffff);
   border-color: #062819;
   box-shadow: 0 0 0 3px rgba(6, 40, 25, 0.08), 0 3px 10px rgba(6, 40, 25, 0.04);
 }
@@ -886,7 +886,7 @@
 }
 
 .cep-search-icon {
-  color: #94a3b8;
+  color: var(--c-ink-5, #94a3b8);
   flex-shrink: 0;
 }
 
@@ -896,19 +896,19 @@
   outline: none;
   font-size: 13.5px;
   font-weight: 500;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   width: 100%;
 }
 
 .cep-search-input::placeholder {
-  color: #94a3b8;
+  color: var(--c-ink-5, #94a3b8);
   font-weight: 400;
 }
 
 .cep-search-clear-btn {
   border: none;
-  background: #f1f5f9;
-  color: #64748b;
+  background: var(--c-bg-2, #f1f5f9);
+  color: var(--c-ink-4, #64748b);
   cursor: pointer;
   padding: 4px;
   border-radius: 50%;
@@ -919,8 +919,8 @@
 }
 
 .cep-search-clear-btn:hover {
-  background: #e2e8f0;
-  color: #0f172a;
+  background: var(--c-bg-3, #e2e8f0);
+  color: var(--c-ink-1, #0f172a);
 }
 
 /* ── Modern 4-Column Responsive Exam Card Grid (Matching Reference Design) ── */
@@ -953,8 +953,8 @@
 }
 
 .cep-exam-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-2, #e2e8f0);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -967,8 +967,8 @@
 }
 
 .cep-exam-card:hover {
-  background: #ffffff;
-  border-color: #cbd5e1;
+  background: var(--c-bg-0, #ffffff);
+  border-color: var(--c-line-3, #cbd5e1);
   transform: translateY(-4px);
   box-shadow: 0 14px 28px -6px rgba(15, 23, 42, 0.1), 0 8px 12px -6px rgba(15, 23, 42, 0.04);
 }
@@ -1042,7 +1042,7 @@
 .cep-card-title {
   font-size: 16.5px;
   font-weight: 700;
-  color: #111827;
+  color: var(--c-ink-1, #111827);
   margin: 0 0 5px 0;
   line-height: 1.25;
   letter-spacing: -0.01em;
@@ -1050,7 +1050,7 @@
 
 .cep-card-desc {
   font-size: 13px;
-  color: #4b5563;
+  color: var(--c-ink-3, #4b5563);
   line-height: 1.45;
   margin: 0 0 12px 0;
   display: -webkit-box;
@@ -1079,38 +1079,38 @@
 }
 
 .cep-pill.qual-green {
-  background: #dcfce7;
-  color: #15803d;
+  background: var(--c-tint-green, #dcfce7);
+  color: var(--c-green, #15803d);
   border: 1px solid #bbf7d0;
 }
 
 .cep-pill.qual-orange {
-  background: #ffedd5;
-  color: #c2410c;
+  background: var(--c-tint-amber, #ffedd5);
+  color: var(--c-amber, #c2410c);
   border: 1px solid #fed7aa;
 }
 
 .cep-pill.qual-purple {
-  background: #f3e8ff;
-  color: #7e22ce;
+  background: var(--c-tint-purple, #f3e8ff);
+  color: var(--c-purple, #7e22ce);
   border: 1px solid #e9d5ff;
 }
 
 .cep-pill.qual-blue {
-  background: #dbeafe;
-  color: #1d4ed8;
+  background: var(--c-tint-blue, #dbeafe);
+  color: var(--c-blue, #1d4ed8);
   border: 1px solid #bfdbfe;
 }
 
 .cep-pill.qual-teal {
-  background: #ccfbf1;
-  color: #0f766e;
+  background: var(--c-tint-green, #ccfbf1);
+  color: var(--c-green, #0f766e);
   border: 1px solid #99f6e4;
 }
 
 .cep-pill.cep-pill-level {
-  background: #eff6ff;
-  color: #2563eb;
+  background: var(--c-tint-blue, #eff6ff);
+  color: var(--c-blue, #2563eb);
   border: 1px solid #dbeafe;
 }
 
@@ -1119,7 +1119,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 14px;
-  border-top: 1px solid #f3f4f6;
+  border-top: 1px solid var(--c-line-1, #f3f4f6);
   margin-top: auto;
 }
 
@@ -1128,7 +1128,7 @@
   align-items: center;
   gap: 8px;
   font-size: 12.5px;
-  color: #4b5563;
+  color: var(--c-ink-3, #4b5563);
   font-weight: 500;
 }
 
@@ -1139,7 +1139,7 @@
 }
 
 .cep-meta-icon {
-  color: #6b7280;
+  color: var(--c-ink-4, #6b7280);
   flex-shrink: 0;
 }
 
@@ -1152,11 +1152,11 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #f3f4f6;
+  background: var(--c-bg-2, #f3f4f6);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1f2937;
+  color: var(--c-ink-1, #1f2937);
   border: none;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1177,14 +1177,14 @@
   justify-content: space-between;
   margin-top: 24px;
   padding-top: 18px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid var(--c-line-1, #f1f5f9);
   flex-wrap: wrap;
   gap: 12px;
 }
 
 .cep-pagination-info {
   font-size: 13.5px;
-  color: #475569;
+  color: var(--c-ink-3, #475569);
   font-weight: 500;
 }
 
@@ -1206,14 +1206,14 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.15s ease;
-  background: #ffffff;
-  color: #334155;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-0, #ffffff);
+  color: var(--c-ink-2, #334155);
+  border: 1px solid var(--c-line-2, #e2e8f0);
 }
 
 .cep-page-num-btn:hover:not(.active) {
-  background: #f8fafc;
-  border-color: #cbd5e1;
+  background: var(--c-bg-1, #f8fafc);
+  border-color: var(--c-line-3, #cbd5e1);
 }
 
 .cep-page-num-btn.active {
@@ -1231,16 +1231,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  color: #334155;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-0, #ffffff);
+  color: var(--c-ink-2, #334155);
+  border: 1px solid var(--c-line-2, #e2e8f0);
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .cep-page-nav-btn:hover:not(:disabled) {
-  background: #f8fafc;
-  border-color: #cbd5e1;
+  background: var(--c-bg-1, #f8fafc);
+  border-color: var(--c-line-3, #cbd5e1);
 }
 
 .cep-page-nav-btn:disabled {
@@ -1250,7 +1250,7 @@
 
 .cep-page-dots {
   padding: 0 4px;
-  color: #94a3b8;
+  color: var(--c-ink-5, #94a3b8);
   font-size: 13px;
 }
 
@@ -1271,7 +1271,7 @@
   border-radius: 9999px;
 }
 .cep-all-exams-list::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: var(--c-bg-1, #f8fafc);
 }
 
 .cep-full-exam-row {
@@ -1279,8 +1279,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  background: #ffffff;
-  border: 1px solid #f1f5f9;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-1, #f1f5f9);
   border-radius: 16px;
   padding: 16px 20px;
   cursor: pointer;
@@ -1288,8 +1288,8 @@
 }
 
 .cep-full-exam-row:hover {
-  background: #f8fafc;
-  border-color: #cbd5e1;
+  background: var(--c-bg-1, #f8fafc);
+  border-color: var(--c-line-3, #cbd5e1);
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
 }
@@ -1298,8 +1298,8 @@
   width: 44px;
   height: 44px;
   border-radius: 13px;
-  background: #ecfdf5;
-  color: #059669;
+  background: var(--c-tint-green, #ecfdf5);
+  color: var(--c-green, #059669);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1331,7 +1331,7 @@
 .cep-full-exam-title {
   font-size: 15.5px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0;
   line-height: 1.3;
 }
@@ -1339,8 +1339,8 @@
 .cep-full-exam-subtitle-tag {
   font-size: 11.5px;
   font-weight: 500;
-  color: #64748b;
-  background: #f1f5f9;
+  color: var(--c-ink-4, #64748b);
+  background: var(--c-bg-2, #f1f5f9);
   padding: 2px 8px;
   border-radius: 6px;
 }
@@ -1363,20 +1363,20 @@
 }
 
 .cep-full-exam-tag.conducting-tag {
-  background: #f0fdf4;
-  color: #166534;
+  background: var(--c-tint-green, #f0fdf4);
+  color: var(--c-green, #166534);
   border: 1px solid #bbf7d0;
 }
 
 .cep-full-exam-tag.category-tag {
-  background: #f8fafc;
-  color: #475569;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-1, #f8fafc);
+  color: var(--c-ink-3, #475569);
+  border: 1px solid var(--c-line-2, #e2e8f0);
 }
 
 .cep-full-exam-tag.region-tag {
-  background: #eff6ff;
-  color: #1e40af;
+  background: var(--c-tint-blue, #eff6ff);
+  color: var(--c-blue, #1e40af);
   border: 1px solid #bfdbfe;
 }
 
@@ -1415,27 +1415,27 @@
 }
 
 .cep-empty-icon {
-  color: #94a3b8;
+  color: var(--c-ink-5, #94a3b8);
   margin-bottom: 12px;
 }
 
 .cep-empty-title {
   font-size: 16px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0 0 6px 0;
 }
 
 .cep-empty-desc {
   font-size: 13px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   margin: 0 0 16px 0;
 }
 
 .cep-reset-search-btn {
-  background: #f1f5f9;
-  color: #0f172a;
-  border: 1px solid #cbd5e1;
+  background: var(--c-bg-2, #f1f5f9);
+  color: var(--c-ink-1, #0f172a);
+  border: 1px solid var(--c-line-3, #cbd5e1);
   border-radius: 10px;
   padding: 8px 18px;
   font-size: 13px;
@@ -1444,13 +1444,13 @@
 }
 
 .cep-reset-search-btn:hover {
-  background: #e2e8f0;
+  background: var(--c-bg-3, #e2e8f0);
 }
 
 /* ── Bottom Section: Why Choose Veer Next (Clean Rounded White Card + 4 Pillars) ── */
 .cep-why-choose-card {
-  background: #ffffff;
-  border: 1px solid #edf2f7;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-1, #edf2f7);
   border-radius: 24px;
   padding: 24px 28px;
   box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
@@ -1469,7 +1469,7 @@
 
 .cep-why-subtitle {
   font-size: 12.5px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   margin: 0;
   margin-left: 12px;
 }
@@ -1485,15 +1485,15 @@
   align-items: flex-start;
   gap: 12px;
   padding: 16px 16px;
-  background: #f8fafc;
-  border: 1px solid #edf2f7;
+  background: var(--c-bg-1, #f8fafc);
+  border: 1px solid var(--c-line-1, #edf2f7);
   border-radius: 18px;
   transition: all 0.15s ease;
 }
 
 .cep-why-pillar-item:hover {
-  background: #f1f5f9;
-  border-color: #e2e8f0;
+  background: var(--c-bg-2, #f1f5f9);
+  border-color: var(--c-line-2, #e2e8f0);
   transform: translateY(-2px);
 }
 
@@ -1508,22 +1508,22 @@
 }
 
 .bubble-green {
-  background: #dcfce7;
-  color: #16a34a;
+  background: var(--c-tint-green, #dcfce7);
+  color: var(--c-green, #16a34a);
 }
 
 .bubble-blue {
-  background: #e0f2fe;
-  color: #0284c7;
+  background: var(--c-tint-blue, #e0f2fe);
+  color: var(--c-blue, #0284c7);
 }
 
 .bubble-indigo {
-  background: #e0e7ff;
+  background: var(--c-tint-blue, #e0e7ff);
   color: #4f46e5;
 }
 
 .bubble-purple {
-  background: #f3e8ff;
+  background: var(--c-tint-purple, #f3e8ff);
   color: #9333ea;
 }
 
@@ -1535,22 +1535,22 @@
 .cep-why-item-title {
   font-size: 13px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0 0 3px 0;
   line-height: 1.25;
 }
 
 .cep-why-item-desc {
   font-size: 11.5px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   margin: 0;
   line-height: 1.35;
 }
 
 /* ── Loading Spinner ── */
 .cep-loading-box {
-  background: #ffffff;
-  border: 1px solid #edf2f7;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-1, #edf2f7);
   border-radius: 24px;
   padding: 60px 20px;
   display: flex;
@@ -1558,14 +1558,14 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   font-size: 14px;
 }
 
 .cep-spinner {
   width: 36px;
   height: 36px;
-  border: 3px solid #e2e8f0;
+  border: 3px solid var(--c-line-2, #e2e8f0);
   border-top-color: #059669;
   border-radius: 50%;
   animation: cepSpin 0.7s linear infinite;
@@ -1586,7 +1586,7 @@
   .cep-about-col,
   .cep-top-exams-col {
     border-right: none;
-    border-bottom: 1px solid #edf2f7;
+    border-bottom: 1px solid var(--c-line-1, #edf2f7);
   }
   .cep-why-pillars-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1625,8 +1625,8 @@
 
 /* ── Level 2: In-Place Selected Exam Preview & Hub ── */
 .cep-exam-hub-card {
-  background: #ffffff;
-  border: 1px solid #edf2f7;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-1, #edf2f7);
   border-radius: 24px;
   padding: 28px 32px;
   box-shadow: 0 4px 24px -2px rgba(15, 23, 42, 0.04);
@@ -1642,7 +1642,7 @@
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--c-line-1, #f1f5f9);
   flex-wrap: wrap;
 }
 
@@ -1658,8 +1658,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #f8fafc;
-  color: #065f46;
+  background: var(--c-bg-1, #f8fafc);
+  color: var(--c-green, #065f46);
   border: 1px solid #d1fae5;
   border-radius: 10px;
   padding: 7px 14px;
@@ -1670,7 +1670,7 @@
 }
 
 .cep-exam-back-btn:hover {
-  background: #ecfdf5;
+  background: var(--c-tint-green, #ecfdf5);
   border-color: #059669;
   transform: translateX(-2px);
 }
@@ -1681,12 +1681,12 @@
 }
 
 .cep-crumb-trail {
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   font-weight: 500;
 }
 
 .cep-crumb-active {
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   font-weight: 800;
 }
 
@@ -1856,21 +1856,21 @@
   align-items: center;
   text-align: center;
   padding: 12px;
-  border-left: 1px dashed #cbd5e1;
+  border-left: 1px dashed var(--c-line-3, #cbd5e1);
 }
 
 .cep-side-art-script {
   font-family: 'Caveat', cursive;
   font-size: 26px;
   font-weight: 700;
-  color: #065f46;
+  color: var(--c-green, #065f46);
   line-height: 1.15;
 }
 
 .cep-side-art-brand {
   font-size: 11px;
   font-weight: 700;
-  color: #059669;
+  color: var(--c-green, #059669);
   margin-top: 6px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1903,19 +1903,19 @@
   width: fit-content;
 }
 
-.badge-peach { background: #ffedd5; color: #9a3412; }
-.badge-mint { background: #dcfce7; color: #166534; }
-.badge-rose { background: #ffe4e6; color: #9f1239; }
-.badge-sky { background: #e0f2fe; color: #075985; }
-.badge-lavender { background: #f3e8ff; color: #6b21a8; }
+.badge-peach { background: var(--c-tint-amber, #ffedd5); color: var(--c-amber, #9a3412); }
+.badge-mint { background: var(--c-tint-green, #dcfce7); color: var(--c-green, #166534); }
+.badge-rose { background: var(--c-tint-red, #ffe4e6); color: var(--c-red, #9f1239); }
+.badge-sky { background: var(--c-tint-blue, #e0f2fe); color: var(--c-blue, #075985); }
+.badge-lavender { background: var(--c-tint-purple, #f3e8ff); color: var(--c-purple, #6b21a8); }
 
 /* Study Materials Showcase */
 .cep-materials-section {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: #f8fafc;
-  border: 1px solid #f1f5f9;
+  background: var(--c-bg-1, #f8fafc);
+  border: 1px solid var(--c-line-1, #f1f5f9);
   border-radius: 20px;
   padding: 22px 24px;
 }
@@ -1937,7 +1937,7 @@
 .cep-materials-title {
   font-size: 17px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0;
 }
 
@@ -1951,9 +1951,9 @@
 .cep-material-tab-btn {
   padding: 6px 14px;
   border-radius: 9999px;
-  border: 1px solid #e2e8f0;
-  background: #ffffff;
-  color: #475569;
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  background: var(--c-bg-0, #ffffff);
+  color: var(--c-ink-3, #475569);
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
@@ -1961,8 +1961,8 @@
 }
 
 .cep-material-tab-btn:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: var(--c-bg-2, #f1f5f9);
+  color: var(--c-ink-1, #0f172a);
 }
 
 .cep-material-tab-btn.active {
@@ -1981,11 +1981,11 @@
 .cep-materials-empty {
   padding: 28px;
   text-align: center;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   font-size: 13.5px;
-  background: #ffffff;
+  background: var(--c-bg-0, #ffffff);
   border-radius: 14px;
-  border: 1px dashed #cbd5e1;
+  border: 1px dashed var(--c-line-3, #cbd5e1);
 }
 
 /* ── Jobs Matching Section ── */
@@ -2014,8 +2014,8 @@
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: #ecfdf5;
-  color: #059669;
+  background: var(--c-tint-green, #ecfdf5);
+  color: var(--c-green, #059669);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2025,19 +2025,19 @@
 .cep-jobs-title {
   font-size: 18px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0;
 }
 
 .cep-jobs-sub {
   font-size: 12.5px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   margin: 2px 0 0;
 }
 
 .cep-jobs-count-tag {
-  background: #ecfdf5;
-  color: #059669;
+  background: var(--c-tint-green, #ecfdf5);
+  color: var(--c-green, #059669);
   font-size: 12px;
   font-weight: 700;
   padding: 4px 12px;
@@ -2052,8 +2052,8 @@
 }
 
 .cep-job-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-2, #e2e8f0);
   border-radius: 16px;
   padding: 18px 20px;
   display: flex;
@@ -2064,7 +2064,7 @@
 }
 
 .cep-job-card:hover {
-  border-color: #cbd5e1;
+  border-color: var(--c-line-3, #cbd5e1);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
 }
@@ -2079,7 +2079,7 @@
 .cep-job-card-title {
   font-size: 14.5px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0;
   line-height: 1.35;
   display: -webkit-box;
@@ -2091,7 +2091,7 @@
 .cep-job-card-dept {
   font-size: 12px;
   font-weight: 600;
-  color: #059669;
+  color: var(--c-green, #059669);
   margin-top: 2px;
 }
 
@@ -2107,8 +2107,8 @@
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 6px;
-  background: #f1f5f9;
-  color: #475569;
+  background: var(--c-bg-2, #f1f5f9);
+  color: var(--c-ink-3, #475569);
 }
 
 .cep-job-card-footer {
@@ -2118,12 +2118,12 @@
   gap: 12px;
   margin-top: auto;
   padding-top: 12px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid var(--c-line-1, #f1f5f9);
 }
 
 .cep-job-date {
   font-size: 11.5px;
-  color: #94a3b8;
+  color: var(--c-ink-5, #94a3b8);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -2152,10 +2152,10 @@
 .cep-jobs-empty {
   padding: 32px 20px;
   text-align: center;
-  background: #f8fafc;
-  border: 1px dashed #cbd5e1;
+  background: var(--c-bg-1, #f8fafc);
+  border: 1px dashed var(--c-line-3, #cbd5e1);
   border-radius: 16px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   font-size: 13.5px;
 }
 
@@ -2164,8 +2164,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: #ffffff;
-  border: 1px solid #edf2f7;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-1, #edf2f7);
   border-radius: 24px;
   padding: 24px 28px;
   box-shadow: 0 4px 24px -2px rgba(15, 23, 42, 0.04);
@@ -2178,7 +2178,7 @@
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 14px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--c-line-1, #f1f5f9);
   flex-wrap: wrap;
 }
 
@@ -2186,8 +2186,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #ecfdf5;
-  color: #065f46;
+  background: var(--c-tint-green, #ecfdf5);
+  color: var(--c-green, #065f46);
   border: 1px solid #a7f3d0;
   border-radius: 10px;
   padding: 8px 16px;
@@ -2208,12 +2208,12 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
 }
 
 .cep-reader-cat-pill {
-  background: #f1f5f9;
-  color: #475569;
+  background: var(--c-bg-2, #f1f5f9);
+  color: var(--c-ink-3, #475569);
   font-size: 11px;
   font-weight: 700;
   padding: 2px 8px;
@@ -2225,8 +2225,8 @@
   width: 100%;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid #e2e8f0;
-  background: #ffffff;
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  background: var(--c-bg-0, #ffffff);
 }
 
 .reader-container-embedded {
@@ -2245,7 +2245,7 @@
 }
 
 .cep-manual-reader-header {
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--c-line-2, #e2e8f0);
   padding-bottom: 16px;
   margin-bottom: 24px;
 }
@@ -2254,7 +2254,7 @@
   font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
   font-size: 24px;
   font-weight: 800;
-  color: #064e3b;
+  color: var(--c-green, #064e3b);
   margin: 0 0 6px;
 }
 
@@ -2263,19 +2263,19 @@
   align-items: center;
   gap: 8px;
   font-size: 12.5px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   font-weight: 500;
 }
 
 .cep-manual-content {
   font-size: 15px;
   line-height: 1.75;
-  color: #334155;
+  color: var(--c-ink-2, #334155);
 }
 
 .cep-manual-content h2,
 .cep-manual-content h3 {
-  color: #065f46;
+  color: var(--c-green, #065f46);
   margin-top: 24px;
   margin-bottom: 10px;
 }
@@ -2288,19 +2288,19 @@
 
 .cep-manual-content th,
 .cep-manual-content td {
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--c-line-2, #e2e8f0);
   padding: 8px 12px;
 }
 
 .cep-manual-content th {
-  background: #f8fafc;
+  background: var(--c-bg-1, #f8fafc);
   font-weight: 700;
 }
 
 /* ── Category Explorer Overview Search & Filter Toolbar ── */
 .cep-overview-search-toolbar {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-2, #e2e8f0);
   border-radius: 20px;
   padding: 16px 20px;
   margin-bottom: 24px;
@@ -2322,8 +2322,8 @@
   display: flex;
   align-items: center;
   position: relative;
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
+  background: var(--c-bg-1, #f8fafc);
+  border: 1.5px solid var(--c-line-2, #e2e8f0);
   border-radius: 9999px;
   padding: 5px 14px 5px 8px;
   height: 52px;
@@ -2333,12 +2333,12 @@
 }
 
 .cep-overview-search-box:hover {
-  background: #ffffff;
-  border-color: #cbd5e1;
+  background: var(--c-bg-0, #ffffff);
+  border-color: var(--c-line-3, #cbd5e1);
 }
 
 .cep-overview-search-box:focus-within {
-  background: #ffffff;
+  background: var(--c-bg-0, #ffffff);
   border-color: #062819;
   box-shadow: 0 0 0 4px rgba(6, 40, 25, 0.08), 0 6px 16px -2px rgba(6, 40, 25, 0.06);
 }
@@ -2348,7 +2348,7 @@
   height: 38px;
   border-radius: 50%;
   background: rgba(6, 40, 25, 0.07);
-  color: #062819;
+  color: var(--c-green, #062819);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2363,21 +2363,21 @@
   outline: none;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   width: 100%;
   letter-spacing: -0.01em;
 }
 
 .cep-overview-search-input::placeholder {
-  color: #94a3b8;
+  color: var(--c-ink-5, #94a3b8);
   font-weight: 400;
 }
 
 .cep-overview-search-clear {
   border: none;
-  background: #f1f5f9;
+  background: var(--c-bg-2, #f1f5f9);
   cursor: pointer;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2387,8 +2387,8 @@
 }
 
 .cep-overview-search-clear:hover {
-  background: #e2e8f0;
-  color: #0f172a;
+  background: var(--c-bg-3, #e2e8f0);
+  color: var(--c-ink-1, #0f172a);
 }
 
 .cep-overview-filter-row {
@@ -2413,16 +2413,16 @@
   gap: 5px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-right: 2px;
 }
 
 .cep-overview-filter-chip {
-  border: 1px solid #e2e8f0;
-  background: #f8fafc;
-  color: #475569;
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  background: var(--c-bg-1, #f8fafc);
+  color: var(--c-ink-3, #475569);
   font-size: 0.8rem;
   font-weight: 600;
   padding: 6px 14px;
@@ -2432,9 +2432,9 @@
 }
 
 .cep-overview-filter-chip:hover {
-  background: #ffffff;
-  color: #0f172a;
-  border-color: #cbd5e1;
+  background: var(--c-bg-0, #ffffff);
+  color: var(--c-ink-1, #0f172a);
+  border-color: var(--c-line-3, #cbd5e1);
   transform: translateY(-1px);
   box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
 }
@@ -2455,7 +2455,7 @@
 
 .cep-filtered-count-badge {
   background: rgba(6, 40, 25, 0.08);
-  color: #062819;
+  color: var(--c-green, #062819);
   font-size: 0.78rem;
   font-weight: 700;
   padding: 5px 12px;
@@ -2486,9 +2486,9 @@
 }
 
 .cep-filter-clear-all {
-  border: 1px solid #e2e8f0;
-  background: #ffffff;
-  color: #64748b;
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  background: var(--c-bg-0, #ffffff);
+  color: var(--c-ink-4, #64748b);
   font-size: 0.78rem;
   font-weight: 600;
   padding: 5px 12px;
@@ -2498,9 +2498,9 @@
 }
 
 .cep-filter-clear-all:hover {
-  background: #fee2e2;
+  background: var(--c-tint-red, #fee2e2);
   border-color: #ef4444;
-  color: #b91c1c;
+  color: var(--c-red, #b91c1c);
 }
 
 /* ── All Exams Grid Filter Bar ── */
@@ -2509,8 +2509,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-2, #e2e8f0);
   border-radius: 14px;
   padding: 10px 14px;
   margin-bottom: 20px;
@@ -2530,9 +2530,9 @@
 }
 
 .cep-filter-chip {
-  border: 1px solid #e2e8f0;
-  background: #f8fafc;
-  color: #475569;
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  background: var(--c-bg-1, #f8fafc);
+  color: var(--c-ink-3, #475569);
   font-size: 0.78rem;
   font-weight: 600;
   padding: 5px 12px;
@@ -2543,8 +2543,8 @@
 }
 
 .cep-filter-chip:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: var(--c-bg-2, #f1f5f9);
+  color: var(--c-ink-1, #0f172a);
 }
 
 .cep-filter-chip.active {
@@ -2561,9 +2561,9 @@
 }
 
 .cep-filter-select {
-  border: 1px solid #cbd5e1;
-  background: #ffffff;
-  color: #334155;
+  border: 1px solid var(--c-line-3, #cbd5e1);
+  background: var(--c-bg-0, #ffffff);
+  color: var(--c-ink-2, #334155);
   font-size: 0.8rem;
   font-weight: 600;
   padding: 5px 10px;
@@ -2578,9 +2578,9 @@
 }
 
 .cep-filter-clear-btn {
-  border: 1px dashed #cbd5e1;
-  background: #f8fafc;
-  color: #64748b;
+  border: 1px dashed var(--c-line-3, #cbd5e1);
+  background: var(--c-bg-1, #f8fafc);
+  color: var(--c-ink-4, #64748b);
   font-size: 0.76rem;
   font-weight: 600;
   padding: 5px 10px;
@@ -2590,9 +2590,9 @@
 }
 
 .cep-filter-clear-btn:hover {
-  background: #fee2e2;
+  background: var(--c-tint-red, #fee2e2);
   border-color: #ef4444;
-  color: #b91c1c;
+  color: var(--c-red, #b91c1c);
 }
 
 /* ── Materials & Jobs Search Boxes inside Exam View ── */
@@ -2601,8 +2601,8 @@
   display: flex;
   align-items: center;
   position: relative;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-1, #f8fafc);
+  border: 1px solid var(--c-line-2, #e2e8f0);
   border-radius: 8px;
   padding: 0 10px;
   height: 36px;
@@ -2614,7 +2614,7 @@
 .cep-materials-search-box:focus-within,
 .cep-jobs-search-box:focus-within {
   border-color: #062819;
-  background: #ffffff;
+  background: var(--c-bg-0, #ffffff);
   box-shadow: 0 0 0 2px rgba(6, 40, 25, 0.08);
 }
 
@@ -2624,20 +2624,20 @@
   background: transparent;
   outline: none;
   font-size: 0.82rem;
-  color: #1e293b;
+  color: var(--c-ink-1, #1e293b);
   width: 100%;
 }
 
 .cep-materials-search-input::placeholder,
 .cep-jobs-search-input::placeholder {
-  color: #94a3b8;
+  color: var(--c-ink-5, #94a3b8);
 }
 
 .cep-jobs-search-clear {
   border: none;
   background: none;
   cursor: pointer;
-  color: #94a3b8;
+  color: var(--c-ink-5, #94a3b8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2646,7 +2646,7 @@
 }
 
 .cep-jobs-search-clear:hover {
-  color: #1e293b;
+  color: var(--c-ink-1, #1e293b);
 }
 
 /* ── Polished Shimmer Skeleton Loading State ── */
@@ -2722,20 +2722,20 @@
   max-width: 440px;
   height: 44px;
   border-radius: 9999px;
-  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background: linear-gradient(90deg, var(--c-bg-2, #f1f5f9) 25%, var(--c-bg-3, #e2e8f0) 50%, var(--c-bg-2, #f1f5f9) 75%);
   background-size: 200% 100%;
   animation: cepShimmer 1.5s infinite ease-in-out;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--c-line-2, #e2e8f0);
 }
 
 .cep-skeleton-chip {
   width: 96px;
   height: 38px;
   border-radius: 9999px;
-  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background: linear-gradient(90deg, var(--c-bg-2, #f1f5f9) 25%, var(--c-bg-3, #e2e8f0) 50%, var(--c-bg-2, #f1f5f9) 75%);
   background-size: 200% 100%;
   animation: cepShimmer 1.5s infinite ease-in-out;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--c-line-2, #e2e8f0);
 }
 
 .cep-skeleton-grid {
@@ -2748,10 +2748,10 @@
 .cep-skeleton-card {
   min-height: 200px;
   border-radius: 16px;
-  background: linear-gradient(90deg, #ffffff 0%, #f8fafc 40%, #f1f5f9 50%, #f8fafc 60%, #ffffff 100%);
+  background: linear-gradient(90deg, var(--c-bg-0, #ffffff) 0%, var(--c-bg-1, #f8fafc) 40%, var(--c-bg-2, #f1f5f9) 50%, var(--c-bg-1, #f8fafc) 60%, var(--c-bg-0, #ffffff) 100%);
   background-size: 200% 100%;
   animation: cepShimmer 1.5s infinite ease-in-out;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--c-line-2, #e2e8f0);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
   padding: 22px;
   display: flex;
@@ -2763,27 +2763,27 @@
   width: 74px;
   height: 22px;
   border-radius: 9999px;
-  background: #e2e8f0;
+  background: var(--c-bg-3, #e2e8f0);
 }
 
 .cep-skeleton-card-title {
   width: 65%;
   height: 20px;
   border-radius: 6px;
-  background: #e2e8f0;
+  background: var(--c-bg-3, #e2e8f0);
 }
 
 .cep-skeleton-card-line {
   width: 90%;
   height: 14px;
   border-radius: 4px;
-  background: #f1f5f9;
+  background: var(--c-bg-2, #f1f5f9);
 }
 
 /* ── Collapsible Examination Introduction Section ── */
 .cep-intro-collapsible-section {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-2, #e2e8f0);
   border-radius: 20px;
   box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
   overflow: hidden;
@@ -2792,7 +2792,7 @@
 }
 
 .cep-intro-collapsible-section:hover {
-  border-color: #cbd5e1;
+  border-color: var(--c-line-3, #cbd5e1);
   box-shadow: 0 8px 30px -4px rgba(15, 23, 42, 0.07);
 }
 
@@ -2802,20 +2802,20 @@
   justify-content: space-between;
   padding: 20px 24px;
   cursor: pointer;
-  background: #f8fafc;
+  background: var(--c-bg-1, #f8fafc);
   border-bottom: 1px solid transparent;
   transition: background-color 0.2s ease, border-color 0.2s ease;
   user-select: none;
 }
 
 .cep-intro-collapsible-header:hover {
-  background: #f1f5f9;
+  background: var(--c-bg-2, #f1f5f9);
 }
 
 .cep-intro-collapsible-section[aria-expanded="true"] .cep-intro-collapsible-header,
 .cep-intro-collapsible-header[aria-expanded="true"] {
-  border-bottom: 1px solid #e2e8f0;
-  background: #f8fafc;
+  border-bottom: 1px solid var(--c-line-2, #e2e8f0);
+  background: var(--c-bg-1, #f8fafc);
 }
 
 .cep-intro-header-left {
@@ -2829,8 +2829,8 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-  color: #059669;
+  background: linear-gradient(135deg, var(--c-tint-green, #ecfdf5) 0%, var(--c-tint-green, #d1fae5) 100%);
+  color: var(--c-green, #059669);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2850,7 +2850,7 @@
 .cep-intro-header-title {
   font-size: 18px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0;
   letter-spacing: -0.01em;
   font-family: 'Outfit', sans-serif;
@@ -2863,14 +2863,14 @@
   letter-spacing: 0.05em;
   padding: 3px 10px;
   border-radius: 9999px;
-  background: #e6f4ea;
-  color: #0f766e;
+  background: var(--c-tint-green, #e6f4ea);
+  color: var(--c-green, #0f766e);
   border: 1px solid #bbf7d0;
 }
 
 .cep-intro-header-desc {
   font-size: 13.5px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   margin: 0;
   line-height: 1.45;
 }
@@ -2886,19 +2886,19 @@
 .cep-intro-toggle-text {
   font-size: 13px;
   font-weight: 600;
-  color: #0f766e;
+  color: var(--c-green, #0f766e);
 }
 
 .cep-intro-toggle-arrow {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
+  background: var(--c-bg-0, #ffffff);
+  border: 1px solid var(--c-line-3, #cbd5e1);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #475569;
+  color: var(--c-ink-3, #475569);
   transition: transform 0.25s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -2911,7 +2911,7 @@
 
 .cep-intro-collapsible-body {
   padding: 24px;
-  background: #ffffff;
+  background: var(--c-bg-0, #ffffff);
 }
 
 .cep-intro-loading {
@@ -2920,7 +2920,7 @@
   justify-content: center;
   gap: 12px;
   padding: 48px 16px;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
   font-size: 14px;
   font-weight: 500;
 }
@@ -2932,13 +2932,13 @@
 .intro-manual-body.cep-manual-content {
   font-size: 14.5px;
   line-height: 1.7;
-  color: #334155;
+  color: var(--c-ink-2, #334155);
 }
 
 .intro-manual-body.cep-manual-content h1,
 .intro-manual-body.cep-manual-content h2,
 .intro-manual-body.cep-manual-content h3 {
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin-top: 1.25em;
   margin-bottom: 0.5em;
   font-family: 'Outfit', sans-serif;
@@ -2971,7 +2971,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f7fee7 100%);
+  background: linear-gradient(135deg, var(--c-tint-green, #f0fdf4) 0%, var(--c-tint-green, #ecfdf5) 50%, var(--c-tint-green, #f7fee7) 100%);
   border: 1px solid #bbf7d0;
   border-radius: 16px;
   padding: 24px;
@@ -2988,7 +2988,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #059669;
+  color: var(--c-green, #059669);
   display: block;
   margin-bottom: 6px;
 }
@@ -2996,14 +2996,14 @@
 .cep-intro-auto-title {
   font-size: 20px;
   font-weight: 700;
-  color: #064e3b;
+  color: var(--c-green, #064e3b);
   margin: 0 0 8px;
   font-family: 'Outfit', sans-serif;
 }
 
 .cep-intro-auto-desc {
   font-size: 13.5px;
-  color: #374151;
+  color: var(--c-ink-2, #374151);
   margin: 0;
   line-height: 1.5;
   max-width: 680px;
@@ -3040,8 +3040,8 @@
 }
 
 .cep-intro-highlight-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-1, #f8fafc);
+  border: 1px solid var(--c-line-2, #e2e8f0);
   border-radius: 12px;
   padding: 14px 18px;
   display: flex;
@@ -3051,8 +3051,8 @@
 }
 
 .cep-intro-highlight-card:hover {
-  border-color: #cbd5e1;
-  background: #ffffff;
+  border-color: var(--c-line-3, #cbd5e1);
+  background: var(--c-bg-0, #ffffff);
 }
 
 .cep-highlight-label {
@@ -3060,13 +3060,13 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #64748b;
+  color: var(--c-ink-4, #64748b);
 }
 
 .cep-highlight-value {
   font-size: 14px;
   font-weight: 600;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   line-height: 1.35;
 }
 
@@ -3081,14 +3081,14 @@
 .cep-prose-title {
   font-size: 17px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--c-ink-1, #0f172a);
   margin: 0;
   font-family: 'Outfit', sans-serif;
 }
 
 .cep-intro-overview-prose p {
   font-size: 14px;
-  color: #475569;
+  color: var(--c-ink-3, #475569);
   line-height: 1.6;
   margin: 0;
 }
@@ -3101,8 +3101,8 @@
 }
 
 .cep-prose-box {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: var(--c-bg-1, #f8fafc);
+  border: 1px solid var(--c-line-2, #e2e8f0);
   border-radius: 14px;
   padding: 18px 20px;
 }
@@ -3110,7 +3110,7 @@
 .cep-prose-box h5 {
   font-size: 14px;
   font-weight: 700;
-  color: #043e35;
+  color: var(--c-green, #043e35);
   margin: 0 0 10px;
   font-family: 'Outfit', sans-serif;
 }
@@ -3126,7 +3126,7 @@
 
 .cep-prose-box li {
   font-size: 13px;
-  color: #334155;
+  color: var(--c-ink-2, #334155);
   line-height: 1.5;
   position: relative;
   padding-left: 18px;
@@ -3137,7 +3137,7 @@
   position: absolute;
   left: 4px;
   top: -1px;
-  color: #059669;
+  color: var(--c-green, #059669);
   font-size: 16px;
 }
 
@@ -3190,7 +3190,7 @@
   }
   .cep-top-exams-col {
     border-bottom: none;
-    border-right: 1px solid #edf2f7;
+    border-right: 1px solid var(--c-line-1, #edf2f7);
   }
 }
 
@@ -3285,4 +3285,560 @@
 
 @media (prefers-reduced-motion: reduce) {
   .cep-hero-card:hover .cep-hero-img { transform: none; }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Responsive overview + benefits (SSC / category portal)
+   Layout follows the width actually available to the content (container
+   queries), so a visible sidebar vs. the icon rail vs. no sidebar all get a
+   sensible number of columns:
+     >=880px  About | Top Exams | Related Exams     (benefits: 4 across from 900px)
+     560-879  About on top, then Top | Related       (benefits: 2 x 2)
+     <560     one column                             (benefits: 1)
+   Phones (<768px viewport) additionally turn the four sections into accordions.
+   ══════════════════════════════════════════════════════════════════ */
+.cep-q {
+  container-type: inline-size;
+  container-name: cep;
+  min-width: 0;
+}
+
+.cep-container [hidden] {
+  display: none !important;
+}
+
+.cep-q .cep-details-card {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+.cep-q .cep-about-col,
+.cep-q .cep-top-exams-col {
+  grid-column: auto; /* undo the older full-row About rule when there is room for three columns */
+  border-right: 1px solid var(--c-line-1, #edf2f7);
+  border-bottom: none;
+}
+.cep-q .cep-why-pillars-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.cep-q .cep-why-pillar-item {
+  min-width: 0;
+}
+
+/* (selectors carry the same .cep-q prefix as the defaults above so these narrower-width rules win) */
+@container cep (max-width: 899px) {
+  .cep-q .cep-why-pillars-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container cep (max-width: 879px) {
+  .cep-q .cep-details-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cep-q .cep-about-col {
+    grid-column: 1 / -1;
+    border-right: none;
+    border-bottom: 1px solid var(--c-line-1, #edf2f7);
+  }
+}
+
+@container cep (max-width: 559px) {
+  .cep-q .cep-details-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cep-q .cep-top-exams-col {
+    border-right: none;
+    border-bottom: 1px solid var(--c-line-1, #edf2f7);
+  }
+  .cep-q .cep-why-pillars-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Long exam names wrap instead of being cut off next to the arrow */
+.cep-q .cep-exam-row-title,
+.cep-q .cep-exam-row-subtitle,
+.cep-q .cep-exam-level-sub {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Accordion headers (phones) */
+.cep-acc-h {
+  margin: 0;
+  font-size: inherit;
+}
+.cep-acc-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  font-size: 16.5px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+.cep-acc-title {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.cep-acc-chev {
+  flex-shrink: 0;
+  color: var(--c-ink-4, #64748b);
+  transition: transform 0.2s ease;
+}
+.cep-acc-toggle[aria-expanded="true"] .cep-acc-chev {
+  transform: rotate(180deg);
+}
+.cep-acc-toggle:focus-visible {
+  outline: 2px solid #466931;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+.cep-acc-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .cep-acc-h + .cep-acc-body {
+    margin-top: 4px;
+  }
+  .cep-why-header {
+    gap: 0;
+  }
+  .cep-why-subtitle {
+    margin: 0 0 12px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cep-acc-chev {
+    transition: none;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   All-examinations listing — responsive
+   Card columns follow the width the listing actually has (container
+   queries), so the sidebar rail / full sidebar / drawer states all work:
+     >=1240px 4 columns · 860-1239 3 · 560-859 2 · <560 compact list rows
+   ══════════════════════════════════════════════════════════════════ */
+.cep-q .cep-exams-card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.cep-q .cep-exam-card,
+.cep-q .cep-card-content,
+.cep-q .cep-card-title,
+.cep-q .cep-card-desc {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@container cep (max-width: 1239px) {
+  .cep-q .cep-exams-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@container cep (max-width: 859px) {
+  .cep-q .cep-exams-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+/* Phones: two image-top cards per row (matches the phone design) */
+@container cep (max-width: 559px) {
+  .cep-q .cep-exams-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .cep-q .cep-exam-card {
+    border-radius: 12px;
+  }
+  .cep-q .cep-card-image-wrap {
+    aspect-ratio: 16 / 10;
+  }
+  .cep-q .cep-card-image-quote {
+    top: 6px;
+    right: 8px;
+    max-width: 72%;
+    font-size: 9.5px;
+  }
+  .cep-q .cep-card-content {
+    padding: 10px 10px 10px;
+  }
+  .cep-q .cep-card-title {
+    font-size: 14px;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+  .cep-q .cep-card-desc {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    min-height: 0;
+    -webkit-line-clamp: 3;
+  }
+  .cep-q .cep-card-pills-row {
+    gap: 5px;
+    margin-bottom: 8px;
+  }
+  .cep-q .cep-pill {
+    padding: 3px 7px;
+    font-size: 10.5px;
+    gap: 4px;
+  }
+  .cep-q .cep-card-footer-row {
+    gap: 6px;
+    padding-top: 8px;
+  }
+  .cep-q .cep-card-meta-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    min-width: 0;
+    font-size: 11px;
+  }
+  .cep-q .cep-meta-divider {
+    display: none;
+  }
+  .cep-q .cep-card-circle-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* Very narrow phones (<320px of content): fall back to one compact row per exam — thumbnail left, details right */
+@container cep (max-width: 319px) {
+  .cep-q .cep-exams-card-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .cep-q .cep-exam-card {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    border-radius: 14px;
+  }
+  .cep-q .cep-card-image-wrap {
+    flex: 0 0 104px;
+    width: 104px;
+    aspect-ratio: auto;
+    min-height: 140px;
+  }
+  .cep-q .cep-card-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .cep-q .cep-card-image-quote {
+    display: none; /* decorative quote doesn't fit on a thumbnail */
+  }
+  .cep-q .cep-card-content {
+    flex: 1 1 0;
+    padding: 12px 12px 10px;
+  }
+  .cep-q .cep-card-title {
+    font-size: 15.5px;
+    margin-bottom: 4px;
+  }
+  .cep-q .cep-card-desc {
+    font-size: 13px;
+    margin-bottom: 8px;
+    min-height: 0;
+  }
+  .cep-q .cep-card-pills-row {
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .cep-q .cep-card-footer-row {
+    gap: 8px;
+    padding-top: 8px;
+  }
+  .cep-q .cep-card-meta-left {
+    flex-wrap: wrap;
+    min-width: 0;
+    gap: 4px 8px;
+  }
+  .cep-q .cep-card-circle-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Header, search, filters and pagination on phones/tablets */
+@media (max-width: 767px) {
+  .cep-all-exams-card {
+    padding: 16px 14px;
+    gap: 14px;
+    border-radius: 18px;
+  }
+  .cep-all-exams-header {
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+  .cep-all-exams-header-left,
+  .cep-all-exams-header-right {
+    width: 100%;
+    min-width: 0;
+  }
+  .cep-all-exams-search-box {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    height: 48px;
+  }
+  .cep-all-exams-search-box .cep-search-input {
+    min-width: 0;
+    font-size: 16px; /* no iOS zoom on focus */
+  }
+  .cep-back-to-overview-btn {
+    min-height: 44px;
+  }
+
+  /* Qualification chips: one swipeable row inside the filter card, sort on its own row */
+  .cep-all-exams-filter-bar {
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+  .cep-filter-chips-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: calc(100% + 20px);
+    margin: 0 -10px;
+    padding: 2px 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cep-filter-chips-group::-webkit-scrollbar {
+    display: none;
+  }
+  .cep-filter-chips-group > * {
+    flex: 0 0 auto;
+  }
+  .cep-filter-chip {
+    min-height: 40px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+  .cep-sort-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+  .cep-sort-select {
+    flex: 1;
+    min-height: 44px;
+    max-width: 62%;
+    font-size: 1rem;
+  }
+  .cep-filter-clear-all {
+    min-height: 40px;
+  }
+
+  /* Pagination: info on its own line, big prev/next + page buttons */
+  .cep-pagination-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 14px;
+  }
+  .cep-pagination-info {
+    text-align: center;
+  }
+  .cep-pagination-controls {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cep-page-nav-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Phone hero: the four links as a 2x2 grid, icon beside label + subtitle */
+@media (max-width: 767px) {
+  .cep-hero-pills-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .cep-hero-pill {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 8px;
+    padding: 8px 10px;
+    min-height: 52px;
+  }
+  .cep-hero-pill-texts {
+    align-items: flex-start;
+    min-width: 0;
+  }
+  .cep-hero-pill-title {
+    font-size: 11.5px;
+    line-height: 1.2;
+    white-space: normal;
+  }
+  .cep-hero-pill-sub {
+    display: block;
+    font-size: 10px;
+    white-space: normal;
+  }
+  /* Filters: funnel icon + chips only; the word stays available to screen readers */
+  .cep-filter-label-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Exam detail view (hero, five resource cards, handbook, jobs) — responsive
+   ══════════════════════════════════════════════════════════════════ */
+.cep-actions-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.cep-action-card,
+.cep-job-card,
+.cep-intro-highlight-card {
+  min-width: 0;
+}
+.cep-action-title,
+.cep-action-desc,
+.cep-job-card-title,
+.cep-job-card-dept,
+.cep-highlight-value {
+  overflow-wrap: anywhere;
+}
+.cep-jobs-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+}
+.cep-jobs-head-left,
+.cep-intro-header-left {
+  min-width: 0;
+}
+
+/* Laptop: three resource cards per row (five only when there is real room) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .cep-actions-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Tablet: roomier padding stays, two resource columns, handbook facts in 2 columns */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cep-actions-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cep-intro-highlights-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cep-jobs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 767px) {
+  .cep-exam-hub-card {
+    padding: 14px 12px;
+    gap: 14px;
+    border-radius: 18px;
+  }
+
+  /* Back link + breadcrumb trail wrap onto their own line */
+  .cep-exam-hub-crumbs {
+    flex-wrap: wrap;
+    gap: 6px 8px;
+    min-width: 0;
+  }
+  .cep-exam-back-btn { min-height: 44px; }
+  .cep-crumb-pipe { display: none; }
+  .cep-crumb-active { overflow-wrap: anywhere; min-width: 0; }
+
+  /* Hero */
+  .cep-exam-showcase-banner { min-height: 0; border-radius: 16px; }
+  .cep-exam-showcase-left-wrap { padding: 16px 14px; gap: 12px; }
+  .cep-exam-showcase-title { font-size: clamp(1.25rem, 6vw, 1.6rem); overflow-wrap: anywhere; }
+  .cep-exam-meta-pills-row { gap: 6px; }
+  .cep-meta-pill-item { font-size: 11.5px; padding: 4px 9px; }
+  .cep-exam-showcase-desc {
+    font-size: 13px;
+    max-width: none;
+    -webkit-line-clamp: 4;
+  }
+
+  /* Resource cards: two across (as in the phone design), the last one full width */
+  .cep-actions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .cep-actions-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .cep-action-card {
+    min-height: 0;
+    padding: 14px 12px 46px;
+    border-radius: 16px;
+  }
+  .cep-action-icon-wrap { transform: scale(0.85); transform-origin: left top; margin-bottom: 0; }
+  .cep-action-title { font-size: 14.5px; line-height: 1.25; }
+  .cep-action-desc { font-size: 12px; line-height: 1.4; }
+  .cep-action-card-badge { font-size: 11px; max-width: calc(100% - 44px); }
+
+  /* Official introduction: heading no longer squeezed beside the toggle */
+  .cep-intro-collapsible-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 14px 12px;
+  }
+  .cep-intro-header-title-row { flex-wrap: wrap; gap: 6px 8px; }
+  .cep-intro-header-title { font-size: 15px; line-height: 1.3; }
+  .cep-intro-header-desc { font-size: 12.5px; }
+  .cep-intro-toggle-wrap { align-self: flex-end; min-height: 44px; }
+  .cep-intro-highlights-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .cep-intro-read-btn { width: 100%; justify-content: center; min-height: 48px; }
+  .cep-manual-reader-header { flex-wrap: wrap; gap: 10px; }
+  .cep-intro-auto-banner { padding: 16px 14px; gap: 12px; }
+  .cep-intro-auto-info { flex: 1 1 100%; min-width: 0; }
+
+  /* Jobs */
+  .cep-jobs-head { flex-direction: column; align-items: stretch; gap: 10px; }
+  .cep-jobs-head-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+  .cep-jobs-search-box {
+    flex: 1 1 100%;
+    min-width: 0;
+    max-width: none;
+    height: 44px;
+  }
+  .cep-jobs-search-input { min-width: 0; font-size: 16px; }
+  .cep-jobs-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .cep-job-card { padding: 14px 12px; }
+  .cep-job-card-footer { flex-direction: column; align-items: stretch; gap: 10px; }
+  .cep-job-apply-btn { width: 100%; min-height: 46px; justify-content: center; }
 }

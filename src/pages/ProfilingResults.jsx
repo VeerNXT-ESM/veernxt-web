@@ -464,7 +464,7 @@ const ProfilingResults = () => {
                         <div className="results-matched-jobs-panel">
                           <div className="results-matched-jobs-header">
                             <span className="results-matched-jobs-title">
-                              <Zap size={13} style={{ color: '#16a34a' }} /> Active Openings from jobs_v2 ({rec.matchedJobsV2.length})
+                              <Zap size={13} style={{ color: 'var(--c-green, #16a34a)' }} /> Active Openings from jobs_v2 ({rec.matchedJobsV2.length})
                             </span>
                             <span className="results-matched-jobs-sub">Live Database Matches</span>
                           </div>
@@ -493,7 +493,7 @@ const ProfilingResults = () => {
                                     className="results-job-desc-btn"
                                     onClick={() => setSelectedJobModal(j)}
                                   >
-                                    <FileText size={12} style={{ color: '#16a34a' }} /> Description
+                                    <FileText size={12} style={{ color: 'var(--c-green, #16a34a)' }} /> Description
                                   </button>
                                   {j.url && (
                                     <a
@@ -602,7 +602,7 @@ const ProfilingResults = () => {
                       className="results-job-desc-btn"
                       onClick={() => setSelectedJobModal(job)}
                     >
-                      <FileText size={12} style={{ color: '#16a34a' }} /> Description
+                      <FileText size={12} style={{ color: 'var(--c-green, #16a34a)' }} /> Description
                     </button>
                     {job.url && (
                       <a
@@ -660,7 +660,7 @@ const ProfilingResults = () => {
             </div>
             <ArrowRight size={18} className="results-cta-arrow" />
           </Card>
-          <Card as={Link} to="/dashboard" interactive className="results-cta-card">
+          <Card as={Link} to="/v2/me" interactive className="results-cta-card">
             <Target size={22} color="var(--ios-olive)" />
             <div>
               <h4>Go to Dashboard</h4>
@@ -705,7 +705,7 @@ const ProfilingResults = () => {
         }
         .results-hero {
           margin-bottom: 2rem;
-          background: linear-gradient(135deg, var(--ios-olive) 0%, #2f4a1f 100%);
+          background: linear-gradient(135deg, var(--ios-olive-fill, var(--ios-olive)) 0%, #2f4a1f 100%);
           padding: 3.5rem 3rem;
           border-radius: var(--radius-lg);
           text-align: center;
@@ -753,7 +753,7 @@ const ProfilingResults = () => {
           margin: 0;
           padding-left: 1.1rem;
           font-size: 0.82rem;
-          color: #555;
+          color: var(--c-ink-3, #555);
           line-height: 1.5;
           display: flex;
           flex-direction: column;
@@ -781,7 +781,7 @@ const ProfilingResults = () => {
           margin-bottom: 1.25rem;
         }
         .card-desc {
-          color: #777;
+          color: var(--c-ink-4, #777);
           font-size: 0.95rem;
           line-height: 1.5;
         }
@@ -809,7 +809,7 @@ const ProfilingResults = () => {
           align-items: center;
           gap: 0.4rem;
           color: white;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           font-family: "Quicksand", sans-serif;
           font-weight: 700;
           font-size: 0.85rem;
@@ -820,7 +820,7 @@ const ProfilingResults = () => {
         }
         .results-btn-link:hover { opacity: 0.9; transform: translateY(-1px); }
         .results-btn-light {
-          background: white;
+          background: var(--c-bg-0, white);
           color: var(--ios-olive);
         }
         .results-rec-list {
@@ -857,14 +857,14 @@ const ProfilingResults = () => {
         .results-matched-jobs-title {
           font-size: 11px;
           font-weight: 700;
-          color: #166534;
+          color: var(--c-green, #166534);
           display: flex;
           align-items: center;
           gap: 4px;
         }
         .results-matched-jobs-sub {
           font-size: 10px;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
         }
         .results-matched-jobs-list {
           display: flex;
@@ -872,8 +872,8 @@ const ProfilingResults = () => {
           gap: 0.4rem;
         }
         .results-matched-job-row {
-          background: white;
-          border: 1px solid #e2e8f0;
+          background: var(--c-bg-0, white);
+          border: 1px solid var(--c-line-2, #e2e8f0);
           border-radius: 6px;
           padding: 0.45rem 0.65rem;
           display: flex;
@@ -888,7 +888,7 @@ const ProfilingResults = () => {
         .results-matched-job-name {
           font-size: 12px;
           font-weight: 600;
-          color: #0f172a;
+          color: var(--c-ink-1, #0f172a);
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -898,19 +898,19 @@ const ProfilingResults = () => {
           align-items: center;
           gap: 0.5rem;
           font-size: 10px;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           margin-top: 2px;
           flex-wrap: wrap;
         }
         .results-job-vacancies {
-          color: #15803d;
+          color: var(--c-green, #15803d);
           font-weight: 700;
-          background: #dcfce7;
+          background: var(--c-tint-green, #dcfce7);
           padding: 1px 5px;
           border-radius: 3px;
         }
         .results-job-score {
-          color: #0284c7;
+          color: var(--c-blue, #0284c7);
           font-weight: 600;
         }
         .results-matched-job-actions {
@@ -922,9 +922,9 @@ const ProfilingResults = () => {
         .results-job-desc-btn {
           font-size: 11px;
           font-weight: 600;
-          color: #0f172a;
-          background: #FFFFFF;
-          border: 1px solid #cbd5e1;
+          color: var(--c-ink-1, #0f172a);
+          background: var(--c-bg-0, #FFFFFF);
+          border: 1px solid var(--c-line-3, #cbd5e1);
           border-radius: 4px;
           padding: 4px 8px;
           cursor: pointer;
@@ -934,13 +934,13 @@ const ProfilingResults = () => {
           transition: background 0.15s ease;
         }
         .results-job-desc-btn:hover {
-          background: #f8fafc;
+          background: var(--c-bg-1, #f8fafc);
         }
         .results-job-notice-btn {
           font-size: 11px;
           font-weight: 700;
-          color: #1a472a;
-          background: #f0fdf4;
+          color: var(--c-green, #1a472a);
+          background: var(--c-tint-green, #f0fdf4);
           border: 1px solid #bbf7d0;
           border-radius: 4px;
           padding: 4px 8px;
@@ -951,7 +951,7 @@ const ProfilingResults = () => {
           transition: background 0.15s ease;
         }
         .results-job-notice-btn:hover {
-          background: #dcfce7;
+          background: var(--c-tint-green, #dcfce7);
         }
 
         /* Live Jobs Grid Section */
@@ -972,8 +972,8 @@ const ProfilingResults = () => {
         .results-live-jobs-badge {
           font-size: 11px;
           font-weight: 600;
-          color: #166534;
-          background: #f0fdf4;
+          color: var(--c-green, #166534);
+          background: var(--c-tint-green, #f0fdf4);
           padding: 3px 8px;
           border-radius: 6px;
           border: 1px solid #bbf7d0;
@@ -984,10 +984,10 @@ const ProfilingResults = () => {
           gap: 0.85rem;
         }
         .results-live-job-item {
-          background: #ffffff;
+          background: var(--c-bg-0, #ffffff);
           padding: 1rem;
           border-radius: 9px;
-          border: 1px solid #e2e8f0;
+          border: 1px solid var(--c-line-2, #e2e8f0);
           box-shadow: 0 1px 3px rgba(0,0,0,0.04);
           display: flex;
           flex-direction: column;
@@ -1008,23 +1008,23 @@ const ProfilingResults = () => {
           font-size: 10px;
           padding: 1px 5px;
           border-radius: 3px;
-          background: #f1f5f9;
-          color: #475569;
+          background: var(--c-bg-2, #f1f5f9);
+          color: var(--c-ink-3, #475569);
           font-weight: 600;
         }
         .results-job-v2-chip {
           font-size: 9px;
           padding: 1px 4px;
           border-radius: 3px;
-          background: #e0e7ff;
-          color: #3730a3;
+          background: var(--c-tint-blue, #e0e7ff);
+          color: var(--c-blue, #3730a3);
           font-weight: 700;
         }
         .results-job-match-badge {
           font-size: 11px;
           font-weight: 800;
-          color: #1a472a;
-          background: #f0fdf4;
+          color: var(--c-green, #1a472a);
+          background: var(--c-tint-green, #f0fdf4);
           padding: 1px 6px;
           border-radius: 3px;
           border: 1px solid #bbf7d0;
@@ -1033,12 +1033,12 @@ const ProfilingResults = () => {
           font-size: 13.5px;
           font-weight: 700;
           margin: 0 0 0.3rem 0;
-          color: #0f172a;
+          color: var(--c-ink-1, #0f172a);
           line-height: 1.35;
         }
         .results-live-job-aligned {
           font-size: 11px;
-          color: #166534;
+          color: var(--c-green, #166534);
           font-weight: 600;
           margin-bottom: 0.35rem;
         }
@@ -1047,12 +1047,12 @@ const ProfilingResults = () => {
           flex-wrap: wrap;
           gap: 8px;
           font-size: 11px;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           margin-bottom: 0.45rem;
         }
         .results-live-job-desc {
           font-size: 11.5px;
-          color: #475569;
+          color: var(--c-ink-3, #475569);
           margin: 0 0 0.5rem 0;
           line-height: 1.45;
           display: -webkit-box;
@@ -1070,8 +1070,8 @@ const ProfilingResults = () => {
           font-size: 10px;
           padding: 1px 5px;
           border-radius: 3px;
-          background: #e0f2fe;
-          color: #0369a1;
+          background: var(--c-tint-blue, #e0f2fe);
+          color: var(--c-blue, #0369a1);
           font-weight: 600;
         }
         .results-live-job-actions {
@@ -1088,7 +1088,7 @@ const ProfilingResults = () => {
         .results-rec-rank {
           width: 32px;
           height: 32px;
-          background: white;
+          background: var(--c-bg-0, white);
           border-radius: var(--radius-sm);
           display: flex;
           align-items: center;
@@ -1136,7 +1136,7 @@ const ProfilingResults = () => {
         }
         .results-score-bar-fill {
           height: 100%;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           border-radius: 3px;
         }
         .results-rec-score span {
@@ -1157,7 +1157,7 @@ const ProfilingResults = () => {
           display: inline-flex;
           align-items: center;
           gap: 0.4rem;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           color: white;
           border: none;
           border-radius: var(--radius-pill);
@@ -1182,7 +1182,7 @@ const ProfilingResults = () => {
         .results-prep-loading, .results-prep-empty {
           padding: 1rem;
           text-align: center;
-          color: #999;
+          color: var(--c-ink-5, #999);
           font-size: 0.85rem;
         }
         .results-empty { text-align: center; padding: 2rem; }
@@ -1204,7 +1204,7 @@ const ProfilingResults = () => {
           border-radius: var(--radius-sm);
         }
         .results-gap-item strong { font-size: 0.85rem; color: var(--warning); }
-        .results-gap-item p { margin: 0.25rem 0 0; font-size: 0.82rem; color: #666; line-height: 1.5; }
+        .results-gap-item p { margin: 0.25rem 0 0; font-size: 0.82rem; color: var(--c-ink-4, #666); line-height: 1.5; }
         .results-cta-row {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -1224,7 +1224,7 @@ const ProfilingResults = () => {
           display: flex;
           align-items: center;
           gap: 1.5rem;
-          background: linear-gradient(135deg, var(--ios-olive) 0%, #2f4a1f 100%);
+          background: linear-gradient(135deg, var(--ios-olive-fill, var(--ios-olive)) 0%, #2f4a1f 100%);
           color: white;
         }
         .results-subscribe-card h3 { color: white; font-size: 1.1rem; margin: 0 0 0.4rem; }

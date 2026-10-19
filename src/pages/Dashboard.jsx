@@ -104,6 +104,46 @@ const Dashboard = () => {
   const [avatarUploading, setAvatarUploading] = useState(false);
   const [avatarPreview, setAvatarPreview] = useState(null);
   const avatarInputRef = useRef(null);
+  const editModalRef = useRef(null);
+
+  // Edit Profile dialog: focus moves in, Tab stays inside, Escape closes, the page behind
+  // doesn't scroll, and focus returns to whatever opened it. All undone on close.
+  useEffect(() => {
+    if (!showEditProfileModal) return undefined;
+    const opener = document.activeElement;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const dialog = editModalRef.current;
+    const focusable = () => Array.from(dialog?.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled])'
+    ) || []).filter((el) => el.offsetParent !== null);
+    (dialog?.querySelector('.epm-input') || dialog)?.focus();
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        e.stopPropagation();
+        setShowEditProfileModal(false);
+        return;
+      }
+      if (e.key !== 'Tab' || !dialog) return;
+      const items = focusable();
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+      opener?.focus?.();
+    };
+  }, [showEditProfileModal]);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -296,125 +336,99 @@ const Dashboard = () => {
 
   const renderEditProfileModal = () => {
     if (!showEditProfileModal) return null;
+    const closeModal = () => setShowEditProfileModal(false);
     return (
-      <div style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: 'rgba(15, 23, 42, 0.6)',
-        backdropFilter: 'blur(8px)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        zIndex: 9999,
-        padding: '1rem',
-        overflowY: 'auto'
-      }}>
-        <div className="ios-card" style={{
-          background: 'white',
-          borderRadius: 'var(--radius-lg, 16px)',
-          width: 'min(550px, calc(100vw - 24px))',
-          boxShadow: 'var(--shadow-3)',
-          maxHeight: '90dvh',
-          overflowY: 'auto',
-          display: 'flex',
-          flexDirection: 'column'
-        }}>
+      <div className="epm-overlay">
+        <div
+          ref={editModalRef}
+          className="epm-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="epm-title"
+          tabIndex={-1}
+        >
           {/* Modal Header */}
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '1.25rem 1.5rem',
-            borderBottom: '1px solid #f1f5f9'
-          }}>
-            <h3 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 800, color: '#0f172a' }}>
-              Edit Profile Details
-            </h3>
-            <button 
-              onClick={() => setShowEditProfileModal(false)}
-              style={{
-                background: 'none',
-                border: 'none',
-                fontSize: '1.5rem',
-                fontWeight: 700,
-                color: '#64748b',
-                cursor: 'pointer'
-              }}
-            >
+          <div className="epm-head">
+            <h3 id="epm-title" className="epm-title">Edit Profile Details</h3>
+            <button type="button" className="epm-close" onClick={closeModal} aria-label="Close edit profile">
               &times;
             </button>
           </div>
 
-          {/* Modal Form Content */}
-          <form onSubmit={handleSaveProfile} style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-            
-            {!isEmployer && (
-              <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 'var(--radius-md)', padding: '1rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
-                  <ShieldCheck size={18} color="var(--ios-olive)" style={{ marginTop: '2px', flexShrink: 0 }} />
-                  <p style={{ margin: 0, fontSize: '0.85rem', color: '#475569', lineHeight: 1.5 }}>
-                    Only basic identity details can be updated here. To update your physical standards, career preferences, or service details, you must recalculate your profile.
-                  </p>
-                </div>
-                <Button type="button" variant="secondary" onClick={() => navigate('/profiling')} style={{ width: '100%' }}>
-                  Recalculate Full Profile
-                </Button>
-              </div>
-            )}
-            
-            {/* Avatar Upload block */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', background: '#f8fafc', padding: '1rem', borderRadius: 'var(--radius-md)', border: '1px solid #e2e8f0' }}>
-              <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: '#cbd5e1', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid var(--ios-olive)', position: 'relative' }}>
-                {avatarPreview ? (
-                  <img src={avatarPreview} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                ) : (
-                  <User size={30} color="white" />
-                )}
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', alignItems: 'flex-start' }}>
-                <Button
-                  type="button"
-                  variant="secondary"
-                  size="sm"
-                  onClick={() => avatarInputRef.current?.click()}
-                  disabled={avatarUploading}
-                  style={{ borderColor: '#cbd5e1', color: '#0f172a' }}
-                >
-                  {avatarUploading ? 'Uploading...' : 'Upload Profile Picture'}
-                </Button>
-                <span style={{ fontSize: '0.7rem', color: '#64748b' }}>JPG, PNG or WEBP. Max 2MB.</span>
-                <input 
-                  type="file"
-                  ref={avatarInputRef}
-                  onChange={handleAvatarUpload}
-                  accept="image/*"
-                  style={{ display: 'none' }}
-                />
-              </div>
-            </div>
+          {/* Modal Form: scrolling body + pinned action footer */}
+          <form className="epm-form" onSubmit={handleSaveProfile}>
+            <div className="epm-body">
 
-            {/* Conditional Inputs */}
-            <>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
-                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>Full Name</label>
-                  <input 
+              {!isEmployer && (
+                <div className="epm-notice">
+                  <div className="epm-notice-text">
+                    <ShieldCheck size={18} color="var(--ios-olive)" style={{ marginTop: '2px', flexShrink: 0 }} aria-hidden="true" />
+                    <p>
+                      Only basic identity details can be updated here. To update your physical standards, career preferences, or service details, you must recalculate your profile.
+                    </p>
+                  </div>
+                  <Button type="button" variant="secondary" className="epm-recalc" onClick={() => navigate('/profiling')}>
+                    Recalculate Full Profile
+                  </Button>
+                </div>
+              )}
+
+              {/* Avatar Upload block */}
+              <div className="epm-avatar-row">
+                <div className="epm-avatar">
+                  {avatarPreview ? (
+                    <img src={avatarPreview} alt="Your profile picture" />
+                  ) : (
+                    <User size={30} color="white" aria-hidden="true" />
+                  )}
+                </div>
+                <div className="epm-avatar-actions">
+                  <Button
+                    type="button"
+                    variant="secondary"
+                    size="sm"
+                    className="epm-upload"
+                    onClick={() => avatarInputRef.current?.click()}
+                    disabled={avatarUploading}
+                    style={{ borderColor: 'var(--c-line-3, #cbd5e1)', color: 'var(--c-ink-1, #0f172a)' }}
+                  >
+                    {avatarUploading ? 'Uploading...' : 'Upload Profile Picture'}
+                  </Button>
+                  <span className="epm-hint">JPG, PNG or WEBP. Max 2MB.</span>
+                  <input
+                    type="file"
+                    ref={avatarInputRef}
+                    onChange={handleAvatarUpload}
+                    accept="image/*"
+                    aria-label="Choose a profile picture file"
+                    tabIndex={-1}
+                    style={{ display: 'none' }}
+                  />
+                </div>
+              </div>
+
+              {/* Conditional Inputs */}
+              <div className="epm-grid">
+                <div className="epm-field">
+                  <label className="epm-label" htmlFor="epm-full-name">Full Name</label>
+                  <input
+                    id="epm-full-name"
+                    className="epm-input"
                     type="text"
                     required
+                    autoComplete="name"
                     value={editFormData.full_name || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, full_name: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
-                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>Service Branch</label>
-                  <select 
+                <div className="epm-field">
+                  <label className="epm-label" htmlFor="epm-service-branch">Service Branch</label>
+                  <select
+                    id="epm-service-branch"
+                    className="epm-input"
                     value={editFormData.service_branch || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, service_branch: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem', background: 'white' }}
                   >
                     <option value="Indian Army">Indian Army</option>
                     <option value="Indian Navy">Indian Navy</option>
@@ -422,34 +436,38 @@ const Dashboard = () => {
                   </select>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
-                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>Rank</label>
-                  <input 
+                <div className="epm-field">
+                  <label className="epm-label" htmlFor="epm-rank">Rank</label>
+                  <input
+                    id="epm-rank"
+                    className="epm-input"
                     type="text"
                     value={editFormData.rank || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, rank: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
-                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>Years of Service</label>
-                  <input 
+                <div className="epm-field">
+                  <label className="epm-label" htmlFor="epm-years">Years of Service</label>
+                  <input
+                    id="epm-years"
+                    className="epm-input"
                     type="number"
                     required
                     min="0"
+                    inputMode="numeric"
                     value={editFormData.years_of_service || 0}
                     onChange={e => setEditFormData(prev => ({ ...prev, years_of_service: parseInt(e.target.value) || 0 }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
-                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>Education Level</label>
-                  <select 
+                <div className="epm-field epm-full">
+                  <label className="epm-label" htmlFor="epm-education">Education Level</label>
+                  <select
+                    id="epm-education"
+                    className="epm-input"
                     value={editFormData.education_level || ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, education_level: e.target.value }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem', background: 'white' }}
                   >
                     <option value="Class 10">Class 10</option>
                     <option value="Class 12">Class 12</option>
@@ -458,45 +476,39 @@ const Dashboard = () => {
                   </select>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
-                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>Preferred States (comma-separated)</label>
-                  <input 
+                <div className="epm-field epm-full">
+                  <label className="epm-label" htmlFor="epm-states">Preferred States (comma-separated)</label>
+                  <input
+                    id="epm-states"
+                    className="epm-input"
                     type="text"
                     value={Array.isArray(editFormData.preferred_states) ? editFormData.preferred_states.join(', ') : ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, preferred_states: e.target.value.split(',').map(s => s.trim()).filter(Boolean) }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', textAlign: 'left' }}>
-                  <label style={{ fontSize: '0.75rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase' }}>Skills (comma-separated)</label>
-                  <input 
+                <div className="epm-field epm-full">
+                  <label className="epm-label" htmlFor="epm-skills">Skills (comma-separated)</label>
+                  <input
+                    id="epm-skills"
+                    className="epm-input"
                     type="text"
                     value={Array.isArray(editFormData.skills) ? editFormData.skills.join(', ') : ''}
                     onChange={e => setEditFormData(prev => ({ ...prev, skills: e.target.value.split(',').map(s => s.trim()).filter(Boolean) }))}
-                    style={{ border: '1px solid #e2e8f0', borderRadius: 'var(--radius-sm)', padding: '0.6rem 0.75rem', fontSize: '0.9rem' }}
                   />
                 </div>
-              </>
+              </div>
+            </div>
 
-            {/* Submit Buttons */}
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '1.25rem' }}>
-              <Button
-                type="submit"
-                style={{ flex: 1, padding: '0.75rem', fontSize: '0.95rem' }}
-              >
+            {/* Submit Buttons — pinned below the scrolling body */}
+            <div className="epm-foot">
+              <Button type="submit" className="epm-save">
                 Save Changes
               </Button>
-              <Button
-                type="button"
-                variant="secondary"
-                onClick={() => setShowEditProfileModal(false)}
-                style={{ flex: 1, padding: '0.75rem', borderColor: '#cbd5e1', color: '#0f172a', fontSize: '0.95rem' }}
-              >
+              <Button type="button" variant="secondary" className="epm-cancel" onClick={closeModal}>
                 Cancel
               </Button>
             </div>
-
           </form>
         </div>
       </div>
@@ -1202,7 +1214,7 @@ const Dashboard = () => {
         }
         .rail-card-desc {
           font-size: 0.8rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           line-height: 1.5;
           margin: 0 0 1rem;
         }
@@ -1228,7 +1240,7 @@ const Dashboard = () => {
         }
         .rail-quote-sub {
           font-size: 0.78rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           margin: 0;
           line-height: 1.4;
         }
@@ -1341,7 +1353,7 @@ const Dashboard = () => {
         }
         .match-ring-label span {
           font-size: 0.6rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           font-weight: 600;
         }
 
@@ -1363,7 +1375,7 @@ const Dashboard = () => {
         }
         .section-header-plain p {
           font-size: 0.85rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           margin: 0;
         }
 
@@ -1418,7 +1430,7 @@ const Dashboard = () => {
           display: flex;
           align-items: center;
           gap: 0.35rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           font-size: 0.85rem;
           margin: 0.3rem 0 0;
         }
@@ -1429,7 +1441,7 @@ const Dashboard = () => {
         }
         .next-step-progress span {
           font-size: 0.78rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           font-weight: 600;
         }
         .next-step-subjects {
@@ -1529,7 +1541,7 @@ const Dashboard = () => {
         }
         .category-card-content p {
           font-size: 0.8rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           margin: 0 0 0.5rem;
           line-height: 1.35;
         }
@@ -1549,7 +1561,7 @@ const Dashboard = () => {
           color: var(--ios-olive);
         }
         .card-desc {
-          color: #777;
+          color: var(--c-ink-4, #777);
           font-size: 0.95rem;
           line-height: 1.5;
         }
@@ -1590,7 +1602,7 @@ const Dashboard = () => {
         .rec-rank {
           width: 32px;
           height: 32px;
-          background: white;
+          background: var(--c-bg-0, white);
           border-radius: var(--radius-sm, 8px);
           display: flex;
           align-items: center;
@@ -1615,7 +1627,7 @@ const Dashboard = () => {
           display: flex;
           gap: 0.85rem;
           font-size: 0.75rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           flex-wrap: wrap;
         }
         .rec-meta span {
@@ -1638,7 +1650,7 @@ const Dashboard = () => {
         }
         .score-bar-fill {
           height: 100%;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           border-radius: 999px;
         }
         .score-text {
@@ -1675,7 +1687,7 @@ const Dashboard = () => {
           transition: all 0.2s;
         }
         .rec-explore-lc-badge:hover {
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           color: white;
         }
         .recommendations-guidance-card {
@@ -1700,7 +1712,7 @@ const Dashboard = () => {
           width: 42px;
           height: 42px;
           border-radius: 50%;
-          background: #ffffff;
+          background: var(--c-bg-0, #ffffff);
           border: 1px solid rgba(75, 107, 50, 0.25);
           display: flex;
           align-items: center;
@@ -1716,13 +1728,13 @@ const Dashboard = () => {
         }
         .guidance-text p {
           font-size: 0.84rem;
-          color: #475569;
+          color: var(--c-ink-3, #475569);
           margin: 0 0 0.35rem;
           line-height: 1.45;
         }
         .guidance-secondary-note {
           font-size: 0.81rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           margin: 0;
           line-height: 1.45;
         }
@@ -1738,7 +1750,7 @@ const Dashboard = () => {
           display: inline-flex;
           align-items: center;
           gap: 0.45rem;
-          background: var(--ios-olive);
+          background: var(--ios-olive-fill, var(--ios-olive));
           color: #ffffff;
           padding: 0.65rem 1.15rem;
           border-radius: 999px;
@@ -1765,7 +1777,7 @@ const Dashboard = () => {
         }
         .rec-cat-tag {
           background: rgba(0, 0, 0, 0.05);
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           font-size: 0.7rem;
           font-weight: 600;
           padding: 0.15rem 0.45rem;
@@ -1791,7 +1803,7 @@ const Dashboard = () => {
         }
         .footer-cta-sub {
           font-size: 0.8rem;
-          color: #64748b;
+          color: var(--c-ink-4, #64748b);
           margin: 0.2rem 0 0;
         }
 
@@ -2141,6 +2153,225 @@ const Dashboard = () => {
             align-items: center;
             min-height: 48px;
           }
+        }
+
+        /* ── Edit Profile dialog ──
+           >=1024 desktop: centred ~520px dialog; 768-1023 tablet: ~660px, short fields share rows;
+           <768 phone: full-screen sheet, single column, pinned stacked actions. */
+        .epm-overlay {
+          position: fixed;
+          inset: 0;
+          z-index: 9999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px;
+          box-sizing: border-box;
+          background: rgba(15, 23, 42, 0.6);
+          -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+          overscroll-behavior: contain;
+        }
+        .epm-dialog {
+          display: flex;
+          flex-direction: column;
+          width: min(520px, calc(100vw - 24px));
+          max-height: calc(100dvh - 24px);
+          box-sizing: border-box;
+          background: var(--c-bg-0, #ffffff);
+          border-radius: var(--radius-lg, 16px);
+          box-shadow: var(--shadow-3);
+          overflow: hidden;
+          outline: none;
+          animation: epmIn 0.2s ease-out;
+        }
+        .epm-head {
+          flex: 0 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.75rem;
+          padding: 1.25rem 1.5rem;
+          border-bottom: 1px solid var(--c-line-1, #f1f5f9);
+        }
+        .epm-title {
+          margin: 0;
+          min-width: 0;
+          font-size: 1.25rem;
+          font-weight: 800;
+          color: var(--c-ink-1, #0f172a);
+          overflow-wrap: anywhere;
+        }
+        .epm-close {
+          flex-shrink: 0;
+          width: 44px;
+          height: 44px;
+          margin: -8px -10px -8px 0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background: none;
+          border: none;
+          border-radius: 10px;
+          font-size: 1.75rem;
+          line-height: 1;
+          font-weight: 700;
+          color: var(--c-ink-4, #64748b);
+          cursor: pointer;
+        }
+        .epm-close:hover { background: var(--c-bg-2, #f1f5f9); color: var(--c-ink-1, #0f172a); }
+        .epm-form {
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 auto;
+          min-height: 0;
+        }
+        .epm-body {
+          flex: 1 1 auto;
+          min-height: 0;
+          overflow-y: auto;
+          overscroll-behavior: contain;
+          -webkit-overflow-scrolling: touch;
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+        }
+        .epm-foot {
+          flex: 0 0 auto;
+          display: flex;
+          gap: 1rem;
+          padding: 1rem 1.5rem;
+          border-top: 1px solid var(--c-line-1, #f1f5f9);
+          background: var(--c-bg-0, #ffffff);
+        }
+        .epm-foot button {
+          flex: 1;
+          min-width: 0;
+          padding: 0.75rem !important;
+          font-size: 0.95rem !important;
+        }
+        .epm-cancel { border-color: var(--c-line-3, #cbd5e1) !important; color: var(--c-ink-1, #0f172a) !important; }
+        .epm-notice {
+          background: var(--c-bg-1, #f8fafc);
+          border: 1px solid var(--c-line-2, #e2e8f0);
+          border-radius: var(--radius-md);
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+        .epm-notice-text { display: flex; gap: 0.5rem; align-items: flex-start; }
+        .epm-notice-text p { margin: 0; font-size: 0.85rem; color: var(--c-ink-3, #475569); line-height: 1.5; }
+        .epm-recalc { width: 100%; }
+        .epm-avatar-row {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 1rem 1.25rem;
+          background: var(--c-bg-1, #f8fafc);
+          padding: 1rem;
+          border-radius: var(--radius-md);
+          border: 1px solid var(--c-line-2, #e2e8f0);
+        }
+        .epm-avatar {
+          width: 64px;
+          height: 64px;
+          flex: none;
+          border-radius: 50%;
+          background: #cbd5e1;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid var(--ios-olive);
+        }
+        .epm-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .epm-avatar-actions {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.35rem;
+          min-width: 0;
+          flex: 1 1 180px;
+        }
+        .epm-hint { font-size: 0.75rem; color: var(--c-ink-4, #64748b); line-height: 1.4; }
+        .epm-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr);
+          gap: 1.25rem;
+        }
+        .epm-field {
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+          min-width: 0;
+          text-align: left;
+        }
+        .epm-label {
+          font-size: 0.75rem;
+          font-weight: 800;
+          color: var(--c-ink-3, #475569);
+          text-transform: uppercase;
+          line-height: 1.3;
+        }
+        .epm-input {
+          width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
+          border: 1px solid var(--c-line-2, #e2e8f0);
+          border-radius: var(--radius-sm);
+          padding: 0.6rem 0.75rem;
+          font-size: 0.9rem;
+          background: var(--c-bg-0, #ffffff);
+        }
+        .epm-dialog button:focus-visible,
+        .epm-dialog input:focus-visible,
+        .epm-dialog select:focus-visible {
+          outline: 2px solid var(--ios-olive);
+          outline-offset: 2px;
+        }
+        @keyframes epmIn {
+          from { opacity: 0; transform: translateY(10px) scale(0.985); }
+          to { opacity: 1; transform: none; }
+        }
+        @keyframes epmUp {
+          from { transform: translateY(24px); opacity: 0; }
+          to { transform: none; opacity: 1; }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .epm-dialog { width: min(660px, calc(100vw - 48px)); }
+          .epm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+          .epm-full { grid-column: 1 / -1; }
+          .epm-input { min-height: 44px; }
+        }
+        @media (max-width: 767px) {
+          .epm-overlay { padding: 0; align-items: stretch; }
+          .epm-dialog {
+            width: 100%;
+            max-height: none;
+            height: 100dvh;
+            border-radius: 0;
+            animation: epmUp 0.24s ease-out;
+          }
+          .epm-head { padding: calc(0.85rem + env(safe-area-inset-top, 0px)) 1rem 0.85rem; }
+          .epm-body { padding: 1rem; gap: 1rem; }
+          .epm-grid { gap: 1rem; }
+          .epm-input { min-height: 48px; font-size: 1rem; } /* 16px: iOS won't zoom on focus */
+          .epm-label { font-size: 0.78rem; }
+          .epm-foot {
+            flex-direction: column;
+            gap: 0.6rem;
+            padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+            box-shadow: 0 -6px 16px rgba(15, 23, 42, 0.06);
+          }
+          .epm-foot button { flex: 0 0 auto; width: 100%; min-height: 48px; font-size: 1rem !important; }
+          .epm-recalc, .epm-upload { min-height: 44px; }
+          .epm-hint { font-size: 0.8rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .epm-dialog { animation: none; }
         }
       `}} />
     </div>
