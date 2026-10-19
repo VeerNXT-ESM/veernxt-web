@@ -3,9 +3,8 @@
 // natural acoustic variations and organic micro-pitch variations.
 
 const SOUND_FILES = [
-  '/sounds/page-flip-1.mp3',
-  '/sounds/page-flip-2.mp3',
-  '/sounds/page-flip-3.mp3',
+  '/page%20flip%20sound.mp3',
+  '/page-flip-sound.mp3',
 ];
 
 let audioCtx = null;
@@ -31,17 +30,29 @@ async function loadAudioBuffers() {
   const ctx = getAudioContext();
   if (!ctx || audioBuffers.length > 0) return;
 
-  SOUND_FILES.forEach(async (url, idx) => {
+  for (let idx = 0; idx < SOUND_FILES.length; idx++) {
+    const url = SOUND_FILES[idx];
     try {
       const res = await fetch(url);
+      if (!res.ok) continue;
       const arrayBuffer = await res.arrayBuffer();
-      ctx.decodeAudioData(arrayBuffer, (decoded) => {
+      const decoded = await new Promise((resolve, reject) => {
+        try {
+          const p = ctx.decodeAudioData(arrayBuffer, resolve, reject);
+          if (p && typeof p.then === 'function') {
+            p.then(resolve).catch(reject);
+          }
+        } catch (e) {
+          reject(e);
+        }
+      });
+      if (decoded) {
         audioBuffers[idx] = decoded;
-      }, () => {});
+      }
     } catch {
       // Fallback handled by audioPool
     }
-  });
+  }
 }
 
 function buildAudioPool() {
@@ -71,30 +82,26 @@ export function unlockAudio() {
     }
     loadAudioBuffers();
     buildAudioPool();
-
-    // Trigger zero-volume playback to unblock mobile Safari audio autoplay
-    if (audioPool.length > 0) {
-      const first = audioPool[0].audio;
-      first.volume = 0.001;
-      const p = first.play();
-      if (p && typeof p.then === 'function') {
-        p.then(() => {
-          first.pause();
-          first.currentTime = 0;
-        }).catch(() => {});
-      }
-    }
   } catch {
     /* ignore */
   }
+}
+
+// Auto-warm up audio on the very first user interaction anywhere
+if (typeof window !== 'undefined') {
+  const warmUp = () => {
+    unlockAudio();
+  };
+  window.addEventListener('pointerdown', warmUp, { once: true, passive: true });
+  window.addEventListener('keydown', warmUp, { once: true, passive: true });
 }
 
 /** Plays an authentic, crisp physical book page turn sound */
 export function playFlipSound(volume = 0.85) {
   try {
     const now = performance.now();
-    // Strict debounce: a page turn takes ~400ms, prevent double-firing
-    if (now - lastPlayTime < 340) return;
+    // Strict debounce: a page turn takes ~400-700ms, prevent double-firing
+    if (now - lastPlayTime < 320) return;
     lastPlayTime = now;
 
     const ctx = getAudioContext();
@@ -106,13 +113,13 @@ export function playFlipSound(volume = 0.85) {
     currentVariation = (currentVariation + 1) % SOUND_FILES.length;
 
     // Prefer high-fidelity Web Audio API buffer with instant zero-delay playback
-    const buffer = audioBuffers[varIdx];
-    if (ctx && buffer && ctx.state === 'running') {
+    const buffer = audioBuffers[varIdx] || audioBuffers[0];
+    if (ctx && buffer) {
       const source = ctx.createBufferSource();
       source.buffer = buffer;
 
-      // Subtle organic pitch shift (+/- 3%) so consecutive flips feel physical & unique
-      const microPitch = 0.97 + Math.random() * 0.06;
+      // Subtle organic pitch shift (+/- 2.5%) so consecutive flips feel physical & unique
+      const microPitch = 0.975 + Math.random() * 0.05;
       source.playbackRate.setValueAtTime(microPitch, ctx.currentTime);
 
       const gain = ctx.createGain();

@@ -121,19 +121,28 @@ export default function PaginatedReader({
   const total = pages.length;
 
   const soundRef = useRef(soundOn);
+  soundRef.current = soundOn;
   useEffect(() => { soundRef.current = soundOn; }, [soundOn]);
 
   useEffect(() => {
     const unlock = () => unlockAudio();
     const evs = ['pointerdown', 'keydown', 'touchstart'];
-    evs.forEach((e) => window.addEventListener(e, unlock, { passive: true }));
-    unlockAudio();
+    evs.forEach((e) => window.addEventListener(e, unlock, { passive: true, once: true }));
     return () => evs.forEach((e) => window.removeEventListener(e, unlock));
   }, []);
 
   const sound = useCallback(() => {
     if (soundRef.current) playFlipSound();
   }, []);
+
+  const flipSoundPlayed = useRef(false);
+  const playTurnSound = useCallback(() => {
+    flipSoundPlayed.current = true;
+    sound();
+    setTimeout(() => {
+      flipSoundPlayed.current = false;
+    }, 1200);
+  }, [sound]);
 
   useEffect(() => {
     if (!total) return;
@@ -157,22 +166,22 @@ export default function PaginatedReader({
   const atEnd = pageIndex >= maxSpreadIndex;
 
   const handleAdvanceChapter = useCallback(() => {
-    sound();
+    playTurnSound();
     setIsChapterTransitioning(true);
     setTimeout(() => {
       onChapterStep?.(1);
       setIsChapterTransitioning(false);
     }, 420);
-  }, [sound, onChapterStep]);
+  }, [playTurnSound, onChapterStep]);
 
   const handlePreviousChapter = useCallback(() => {
-    sound();
+    playTurnSound();
     setIsChapterTransitioning(true);
     setTimeout(() => {
       onChapterStep?.(-1);
       setIsChapterTransitioning(false);
     }, 420);
-  }, [sound, onChapterStep]);
+  }, [playTurnSound, onChapterStep]);
 
   const next = useCallback(() => {
     if (!total || isChapterTransitioning) return;
@@ -183,6 +192,7 @@ export default function PaginatedReader({
         // Try flipping the physical leaf forward
         const pf = flipRef.current?.pageFlip();
         if (pf && pf.getCurrentPageIndex() < total - 1) {
+          playTurnSound();
           pf.flipNext();
           return;
         }
@@ -192,6 +202,7 @@ export default function PaginatedReader({
 
       // Normal flip within chapter
       if (pageIndex < maxSpreadIndex) {
+        playTurnSound();
         flipRef.current?.pageFlip()?.flipNext();
         return;
       }
@@ -209,10 +220,10 @@ export default function PaginatedReader({
       }
       return;
     }
-    sound();
+    playTurnSound();
     setDir('next');
     setPageIndex((p) => Math.min(total - 1, p + 1));
-  }, [total, isChapterTransitioning, isBook, canNextChapter, pageIndex, conclusionPageIndex, isSpread, maxSpreadIndex, handleAdvanceChapter, sound]);
+  }, [total, isChapterTransitioning, isBook, canNextChapter, pageIndex, conclusionPageIndex, isSpread, maxSpreadIndex, handleAdvanceChapter, playTurnSound]);
 
   const prev = useCallback(() => {
     if (!total || isChapterTransitioning) return;
@@ -223,24 +234,26 @@ export default function PaginatedReader({
       return;
     }
     if (isBook) {
+      playTurnSound();
       flipRef.current?.pageFlip()?.flipPrev();
       return;
     }
-    sound();
+    playTurnSound();
     setDir('prev');
     setPageIndex((p) => Math.max(0, p - 1));
-  }, [total, atStart, canPrevChapter, isBook, isChapterTransitioning, handlePreviousChapter, sound]);
+  }, [total, atStart, canPrevChapter, isBook, isChapterTransitioning, handlePreviousChapter, playTurnSound]);
 
   const goTo = useCallback((n) => {
     const t = clamp(n, 0, Math.max(0, total - 1));
     if (isBook) {
+      playTurnSound();
       flipRef.current?.pageFlip()?.flip(t);
       return;
     }
-    sound();
+    playTurnSound();
     setDir(t >= pageIndex ? 'next' : 'prev');
     setPageIndex(t);
-  }, [total, isBook, pageIndex, sound]);
+  }, [total, isBook, pageIndex, playTurnSound]);
 
   // Auto-flip page when TTS advances to a block on a different page
   useEffect(() => {
@@ -480,6 +493,10 @@ export default function PaginatedReader({
                 clickEventForward={false}
                 onFlip={(e) => {
                   const newPage = e.data;
+                  if (!flipSoundPlayed.current) {
+                    sound();
+                  }
+                  flipSoundPlayed.current = false;
                   setPageIndex(newPage);
                   // If user flipped onto the next-chapter transition spread, advance to next chapter
                   if (canNextChapter && newPage >= total - (isSpread ? 2 : 1)) {
@@ -487,8 +504,8 @@ export default function PaginatedReader({
                   }
                 }}
                 onChangeState={(e) => {
-                  if (e.data === 'flipping') {
-                    sound();
+                  if (e.data === 'flipping' || e.data === 'user_fold') {
+                    playTurnSound();
                   }
                 }}
                 className="pr-flipbook"

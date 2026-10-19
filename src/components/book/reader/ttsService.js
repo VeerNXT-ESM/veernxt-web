@@ -210,13 +210,32 @@ export function extractSpeechSegments(blocks, chapterTitle = '') {
         break;
       }
 
-      case 'table': {
-        const rows = Array.isArray(block.rows) ? block.rows : [];
-        if (rows.length > 0) {
-          const headers = rows[0] || [];
-          rows.slice(1).forEach((row, rIdx) => {
-            const cellParts = row.map((cell, cIdx) => {
-              const h = headers[cIdx] ? `${headers[cIdx]}: ` : '';
+      case 'table':
+      case 'comparisonTable': {
+        const rawRows = Array.isArray(block.rows) ? block.rows : [];
+        if (rawRows.length > 0) {
+          const getCells = (row) => {
+            if (!row) return [];
+            if (Array.isArray(row)) return row.map((c) => String(c ?? ''));
+            if (typeof row === 'object') {
+              if (Array.isArray(row.cells)) return row.cells.map((c) => String(c ?? ''));
+              return Object.values(row).map((c) => String(c ?? ''));
+            }
+            return [String(row)];
+          };
+
+          const rawHeaders = Array.isArray(block.headers)
+            ? block.headers
+            : (block.type !== 'comparisonTable' ? getCells(rawRows[0]) : []);
+          const dataRows = Array.isArray(block.headers)
+            ? rawRows
+            : (block.type !== 'comparisonTable' ? rawRows.slice(1) : rawRows);
+
+          dataRows.forEach((row, rIdx) => {
+            const cells = getCells(row);
+            if (!cells || cells.length === 0) return;
+            const cellParts = cells.map((cell, cIdx) => {
+              const h = rawHeaders[cIdx] ? `${rawHeaders[cIdx]}: ` : '';
               return `${h}${cell}`;
             });
             const rowText = cleanTextForSpeech(cellParts.join('. '));
@@ -226,12 +245,53 @@ export function extractSpeechSegments(blocks, chapterTitle = '') {
                 blockId: bId,
                 type: 'table-row',
                 text: rowText,
-                display: row.join(' | '),
+                display: cells.join(' | '),
                 holdMs: 420,
               });
             }
           });
         }
+        break;
+      }
+
+      case 'keyFacts':
+      case 'examAlert': {
+        const items = Array.isArray(block.items) ? block.items : [];
+        const prefix = block.type === 'keyFacts' ? 'Key fact: ' : 'Exam alert: ';
+        items.forEach((item, idx) => {
+          const rawItem = typeof item === 'string' ? item : (item?.text || item?.content || '');
+          const itemText = cleanTextForSpeech(rawItem);
+          if (itemText) {
+            segments.push({
+              id: `${bId}-${block.type}-${idx}`,
+              blockId: bId,
+              type: 'callout',
+              text: `${prefix}${itemText}`,
+              display: rawItem,
+              holdMs: 400,
+            });
+          }
+        });
+        break;
+      }
+
+      case 'statStrip': {
+        const stats = Array.isArray(block.stats) ? block.stats : [];
+        stats.forEach((st, idx) => {
+          const label = st?.label || '';
+          const value = st?.value || '';
+          const text = cleanTextForSpeech(`${label}: ${value}`);
+          if (text) {
+            segments.push({
+              id: `${bId}-stat-${idx}`,
+              blockId: bId,
+              type: 'badge',
+              text,
+              display: `${label}: ${value}`,
+              holdMs: 350,
+            });
+          }
+        });
         break;
       }
 
