@@ -9,6 +9,7 @@ import { getEffectiveTier, TIERS, isResourceLockedForUser } from '../lib/subscri
 import { useExamContent, countProgress } from '../hooks/useExamContent';
 import { ResourceTile, IntroManualTile } from '../components/ExamContentPreview';
 import { getCategoryBannerImage } from '../lib/categoryBannerHelper';
+import ExamThumbnail from './admin/ExamThumbnail';
 import './ExamSyllabus.css';
 
 const ExamSyllabus = () => {
@@ -167,6 +168,7 @@ const ExamSyllabus = () => {
             <div className="exam-banner-thumb">
               <ExamThumbnail
                 label={exam.name}
+                conductingBodyName={exam.conductingBody}
                 thumbnailSubject={exam.thumbnailSubject}
                 categoryName={exam.category}
                 level={exam.level}
