@@ -5789,3 +5789,131 @@
 }
 
 [data-theme="dark"] .lc-state-code-badge, .dark .lc-state-code-badge { background: rgba(22, 27, 34, 0.92); }
+
+/* ── Active Filter Removable Chips Bar (Issue 6) ── */
+.lc-active-filter-chips-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--c-bg-1, #f8fafc);
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  border-radius: 10px;
+}
+
+.lc-active-filter-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--c-ink-4, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: 0.25rem;
+}
+
+.lc-active-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  background: var(--c-surface, #ffffff);
+  border: 1px solid var(--c-line-2, #cbd5e1);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-ink-1, #0f172a);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.lc-active-chip button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--c-ink-4, #64748b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s;
+}
+
+.lc-active-chip button:hover {
+  color: var(--c-red, #ef4444);
+}
+
+.lc-clear-all-chips-btn {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--c-green, #466931);
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  margin-left: auto;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lc-clear-all-chips-btn:hover {
+  color: var(--c-green-dark, #2e4720);
+}
+
+/* ── State Exams Quick Selection Bar (Issue 2) ── */
+.lc-state-quick-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.35rem 0 0.85rem;
+  margin-bottom: 0.85rem;
+  scrollbar-width: thin;
+}
+
+.lc-state-quick-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--c-ink-3, #475569);
+  white-space: nowrap;
+  margin-right: 0.25rem;
+}
+
+.lc-state-quick-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--c-surface, #ffffff);
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-ink-2, #334155);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.lc-state-quick-pill:hover {
+  border-color: var(--c-green, #466931);
+  color: var(--c-green, #466931);
+}
+
+.lc-state-quick-pill.active {
+  background: var(--c-green, #466931);
+  border-color: var(--c-green, #466931);
+  color: #ffffff;
+}
+
+.lc-state-select-dropdown {
+  padding: 0.35rem 0.65rem;
+  background: var(--c-surface, #ffffff);
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-ink-2, #334155);
+  outline: none;
+  cursor: pointer;
+}
+

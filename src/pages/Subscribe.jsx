@@ -327,7 +327,11 @@ const Subscribe = () => {
                   >
                     {isOwned
                       ? (currentTier === plan.id ? 'Current Plan ✓' : 'Included ✓')
-                      : (loading && selectedPlan === plan.id ? 'Processing...' : <>Subscribe <ArrowRight size={16} /></>)
+                      : (loading && selectedPlan === plan.id
+                          ? 'Processing...'
+                          : currentTier !== 'FREE'
+                            ? <>Upgrade Plan <ArrowRight size={16} /></>
+                            : <>Subscribe <ArrowRight size={16} /></>)
                     }
                   </button>
                 </div>

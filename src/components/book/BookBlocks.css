@@ -135,10 +135,13 @@
   color: var(--reader-text-muted);
 }
 
-/* Images */
+/* Images & Diagrams */
 :where(.reader-theme-container) .bk-image-block {
-  margin: var(--reader-space-lg) 0;
+  margin: var(--reader-space-xl) auto;
   text-align: center;
+  max-width: 100%;
+  display: block;
+  clear: both;
 }
 
 :where(.reader-theme-container) .bk-image-block img {
@@ -146,6 +149,10 @@
   height: auto;
   border-radius: var(--reader-radius-md);
   box-shadow: var(--reader-shadow-md);
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  clear: both;
 }
 
 :where(.reader-theme-container) .bk-image-block figcaption {
@@ -153,6 +160,7 @@
   font-size: 0.9rem;
   color: var(--reader-text-muted);
   font-style: italic;
+  text-align: center;
 }
 
 /* Callouts */

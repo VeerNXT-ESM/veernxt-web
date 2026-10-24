@@ -18,6 +18,8 @@ import { resolvePoints, buildIdempotencyKey } from '../../backend/points/pointsC
 export const profileSchema = Joi.object({
   fullName: Joi.string().min(2).required(),
   dateOfBirth: Joi.date().iso().required(),
+  gender: Joi.string().valid('Male', 'Female', 'Other').allow('', null).default('Male'),
+  servicePhase: Joi.string().allow('', null).default('Agniveer'),
   category: Joi.string().valid('General', 'OBC', 'SC', 'ST', 'EWS').required(),
   disabilityStatus: Joi.string().valid('No', 'Yes').default('No').allow('', null),
   disabilityType: Joi.string().valid('Locomotor', 'Visual', 'Hearing', 'Intellectual', 'Multiple', 'Other').allow('', null).default(null),
@@ -28,13 +30,14 @@ export const profileSchema = Joi.object({
   email: Joi.string().email().required(),
   mobile: Joi.string().pattern(/^[0-9+\-\s]{7,15}$/).required(),
 
-  serviceBranch: Joi.string().valid('Indian Army', 'Indian Navy', 'Indian Air Force').required(),
+  serviceBranch: Joi.string().allow('', null).required(),
   armCorpsTrade: Joi.string().required(),
   roleAppointment: Joi.string().required(),
   totalServiceDuration: Joi.string().required(),
   militaryCourses: Joi.array().items(Joi.string()).default([]),
   characterOnDischarge: Joi.string().valid('Exemplary', 'Very Good', 'Good').required(),
   specificSkills: Joi.array().items(Joi.string()).default([]),
+  otherSkill: Joi.string().allow('', null).default(''),
 
   highestQualification: Joi.string().valid('Class 10', 'Class 12', 'Graduate', 'Post-Graduate').required(),
   completedDuringService: Joi.boolean().default(false),
@@ -52,9 +55,10 @@ export const profileSchema = Joi.object({
   physicalProficiency: Joi.string().valid('Excellent', 'Good', 'Satisfactory').default('Good'),
 
   careerPreferences: Joi.array().items(Joi.string()).min(1).required(),
-  relocation: Joi.string().valid('Home District', 'Home State', 'Anywhere in India').default('Home State'),
+  relocation: Joi.string().valid('Home District', 'Home State', 'Home State & Neighbors', 'Anywhere in India').default('Home State'),
   englishComfort: Joi.string().valid('Basic', 'Intermediate', 'Fluent').default('Basic'),
 
+  financialGoals: Joi.array().items(Joi.string()).default([]),
   sewaNidhiInterests: Joi.array().items(Joi.string()).default([]),
   consent: Joi.boolean().default(true),
 });
@@ -249,18 +253,22 @@ function summariseSkillGaps(rejected, userQualification) {
   return gaps.sort((a, b) => b.blockedCount - a.blockedCount).slice(0, 3);
 }
 
-function diversify(scored, topN, capPerTrack) {
+function diversify(scored, topN, capPerTrack, preferredTracks = []) {
   const out = [];
   const trackCounts = {};
   // Secondary: cap state-level vs central-level so results are balanced.
-  // Allow at most ceil(topN * 0.6) from either level so neither dominates.
-  const levelCap = Math.ceil(topN * 0.6);
+  // Allow at most ceil(topN * 0.7) from either level so neither dominates.
+  const levelCap = Math.ceil(topN * 0.7);
   const levelCounts = {};
 
   for (const row of scored) {
     const t = row.exam.career_track;
     const lvl = row.exam.level || 'central';
-    if ((trackCounts[t] || 0) >= capPerTrack) continue;
+    // If track is in candidate's preferred tracks, allow higher cap
+    const isPreferred = Array.isArray(preferredTracks) && preferredTracks.includes(t);
+    const effectiveCap = isPreferred ? Math.max(capPerTrack, Math.min(topN - 2, 6)) : capPerTrack;
+
+    if ((trackCounts[t] || 0) >= effectiveCap) continue;
     if ((levelCounts[lvl] || 0) >= levelCap) continue;
     out.push(row);
     trackCounts[t] = (trackCounts[t] || 0) + 1;
@@ -340,8 +348,11 @@ export default async function handler(req, res) {
     let topN = req.query?.topN ? parseInt(req.query.topN) : 10;
     // Bound topN to prevent memory/payload exhaustion attack vectors
     topN = Math.min(Math.max(1, topN), 50);
-    const priorityTracks = req.body.priorityTracks ||
-      ['POLICE_CAPF', 'SSC', 'BANKING', 'RAILWAYS', 'ENGINEERING', 'PSU'];
+    const priorityTracks = (req.body.priorityTracks && req.body.priorityTracks.length > 0)
+      ? req.body.priorityTracks
+      : (profile.careerPreferences && profile.careerPreferences.length > 0)
+        ? profile.careerPreferences
+        : ['POLICE_CAPF', 'SSC', 'BANKING', 'RAILWAYS', 'ENGINEERING', 'PSU'];
 
     // Pre-filter in JS using fast checks (qual rank, physical, domicile).
     // This replaces the blind for...of loop over all exams with a much smaller
@@ -364,8 +375,15 @@ export default async function handler(req, res) {
       return { exam, score, breakdown };
     });
 
-    // 3. Rank
-    scored.sort((a, b) => b.score - a.score);
+    // 3. Rank with preference-priority tie-breaking
+    scored.sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      const bPref = priorityTracks.includes(b.exam.career_track);
+      const aPref = priorityTracks.includes(a.exam.career_track);
+      if (bPref && !aPref) return 1;
+      if (aPref && !bPref) return -1;
+      return 0;
+    });
 
     // Calculate overall readiness (Veer Score) as average of top 3 matches
     let overall_match_score = 0;
@@ -375,7 +393,7 @@ export default async function handler(req, res) {
     }
 
     // 4. Diversify
-    const diversified = diversify(scored, topN, 4);
+    const diversified = diversify(scored, topN, 4, priorityTracks);
 
     // 5. Resolve lc_exam_id for each recommendation via lc_exam_legacy_map.
     // This allows the frontend to navigate to the correct Learning Center exam

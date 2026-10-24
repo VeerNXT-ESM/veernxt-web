@@ -175,15 +175,29 @@ async function handleVerifyPayment(req, res) {
           return res.status(409).json({ ok: false, error: 'This payment has already been credited to another account.' });
         }
 
+        // Fetch existing subscription to carry forward active days on upgrade
+        const { data: userCurrent } = await supabase
+          .from('user_profiles')
+          .select('subscription_expires_at')
+          .eq('id', verifiedUserId)
+          .maybeSingle();
+
+        let baseDate = new Date();
+        if (userCurrent?.subscription_expires_at) {
+          const currentExpiry = new Date(userCurrent.subscription_expires_at);
+          if (currentExpiry > baseDate) {
+            baseDate = currentExpiry;
+          }
+        }
+
         // Calculate subscription expiry
         let expiresAt = null;
-        const now = new Date();
         if (verifiedPlanId === 'MONTHLY') {
-          expiresAt = new Date(now.setMonth(now.getMonth() + 1)).toISOString();
+          expiresAt = new Date(baseDate.setMonth(baseDate.getMonth() + 1)).toISOString();
         } else if (verifiedPlanId === 'ANNUAL') {
-          expiresAt = new Date(now.setFullYear(now.getFullYear() + 1)).toISOString();
+          expiresAt = new Date(baseDate.setFullYear(baseDate.getFullYear() + 1)).toISOString();
         } else if (verifiedPlanId === 'BIENNIAL' || verifiedPlanId === 'PREMIUM') {
-          expiresAt = new Date(now.setFullYear(now.getFullYear() + 2)).toISOString();
+          expiresAt = new Date(baseDate.setFullYear(baseDate.getFullYear() + 2)).toISOString();
         }
 
         const updatePayload = {

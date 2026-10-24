@@ -90,14 +90,13 @@ export const QUESTIONS = [
 
 // ─── Amount Grid Options ────────────────────────────────────────
 export const AMOUNT_OPTIONS = [
-  { value: 50000,  label: '₹50,000',    sub: 'Conservative start' },
-  { value: 100000, label: '₹1,00,000',  sub: 'Balanced start' },
-  { value: 150000, label: '₹1,50,000',  sub: 'Moderate deployment' },
-  { value: 200000, label: '₹2,00,000',  sub: 'Confident deployment' },
-  { value: 300000, label: '₹3,00,000',  sub: 'Growth-focused' },
-  { value: 400000, label: '₹4,00,000',  sub: 'High deployment' },
-  { value: 500000, label: '₹5,00,000',  sub: 'Full corpus deployment' },
-  { value: 600000, label: '₹6,00,000+', sub: 'Full Seva Nidhi +' },
+  { value: 200000,  label: '₹2,00,000',  sub: 'Emergency start' },
+  { value: 500000,  label: '₹5,00,000',  sub: 'Conservative start' },
+  { value: 800000,  label: '₹8,00,000',  sub: 'Major portion' },
+  { value: 1171000, label: '₹11.71 Lakh', sub: 'Full Seva Nidhi Package' },
+  { value: 1500000, label: '₹15,00,000', sub: 'ESM Gratuity / Pension' },
+  { value: 2000000, label: '₹20,00,000', sub: 'Comprehensive Corpus' },
+  { value: 2500000, label: '₹25,00,000+', sub: 'High Corpus Deployment' },
 ];
 
 // ─── 8 Agniveer Investor Profiles ───────────────────────────────
@@ -370,16 +369,61 @@ export function getProfile(answers) {
 }
 
 /**
- * Returns allocation breakdown for a profile and corpus amount.
+ * Returns personalized allocation breakdown for a profile and corpus amount,
+ * customized to the candidate's exact answers and financial situation.
  */
-export function getAllocation(profileKey, amount) {
-  const plan = ALLOCATION_PLANS[profileKey] || ALLOCATION_PLANS.P1;
+export function getAllocation(profileKey, amount, answers = {}) {
+  const basePlan = ALLOCATION_PLANS[profileKey] || ALLOCATION_PLANS.P1;
+  const numAmount = Number(amount) || 1171000;
+  let items = basePlan.items.map(item => ({ ...item }));
+
+  // 1. Dynamic Tranche: Family Protection for candidates with dependents
+  if ((answers.q3 === 'C' || answers.q3 === 'D') && !items.some(i => i.product.includes('Term Insurance'))) {
+    items = items.map(i => ({ ...i, pct: Math.round(i.pct * 0.8) }));
+    items.unshift({
+      pct: 20,
+      product: 'Term Insurance & Family Shield',
+      why: 'Top priority for family dependents — ₹1 Crore cover with zero investment risk'
+    });
+  }
+
+  // 2. Dynamic Tranche: Business Launchpad if entrepreneurship is indicated
+  if (answers.q1 === 'B' && !items.some(i => i.product.includes('Business'))) {
+    items = items.map(i => ({ ...i, pct: Math.round(i.pct * 0.75) }));
+    items.splice(1, 0, {
+      pct: 25,
+      product: 'Business Seed Capital Tranche',
+      why: 'Dedicated working capital reserve kept safe in short-term liquid instruments'
+    });
+  }
+
+  // 3. Dynamic Tranche: Equity growth boost for aggressive/long-term horizon
+  if (answers.q5 === 'D' && answers.q6 === 'D') {
+    const equityItem = items.find(i => i.product.includes('SIP') || i.product.includes('Equity') || i.product.includes('Index'));
+    if (equityItem) {
+      equityItem.pct = Math.min(50, equityItem.pct + 15);
+      equityItem.why = 'Enhanced equity tranche to maximize compounding over your 7+ year horizon';
+    }
+  }
+
+  // Normalize percentages to exactly 100% and calculate rupee amounts
+  const totalPct = items.reduce((sum, i) => sum + i.pct, 0);
+  if (totalPct > 0) {
+    items = items.map((item, idx) => {
+      const normalizedPct = idx === items.length - 1
+        ? 100 - items.slice(0, -1).reduce((acc, curr) => acc + Math.round((curr.pct / totalPct) * 100), 0)
+        : Math.round((item.pct / totalPct) * 100);
+      return {
+        ...item,
+        pct: normalizedPct,
+        amount: Math.round((numAmount * normalizedPct) / 100),
+      };
+    });
+  }
+
   return {
-    label: plan.label,
-    items: plan.items.map(item => ({
-      ...item,
-      amount: Math.round(amount * item.pct / 100),
-    })),
+    label: basePlan.label,
+    items,
   };
 }
 

@@ -50,6 +50,60 @@ const QUESTION_STAGE = [
 ];
 const TOTAL_STEPS = QUESTION_STAGE.length;
 
+const TRI_SERVICE_SKILLS = [
+  { value: 'Security, Weapons and Operational Duties', label: '1. Security, Weapons and Operational Duties' },
+  { value: 'Leadership and Team Supervision', label: '2. Leadership and Team Supervision' },
+  { value: 'Driving, Transport and Fleet Operations', label: '3. Driving, Transport and Fleet Operations' },
+  { value: 'Logistics, Stores and Supply Management', label: '4. Logistics, Stores and Supply Management' },
+  { value: 'Office Administration, HR and Accounts', label: '5. Office Administration, HR and Accounts' },
+  { value: 'Computers, IT, Networks and Cyber', label: '6. Computers, IT, Networks and Cyber' },
+  { value: 'Radio, Signals and Communications', label: '7. Radio, Signals and Communications' },
+  { value: 'Electrical, Electronics and Instrumentation', label: '8. Electrical, Electronics and Instrumentation' },
+  { value: 'Mechanical, Vehicle and Machinery Maintenance', label: '9. Mechanical, Vehicle and Machinery Maintenance' },
+  { value: 'Radar, Sonar, Navigation and Surveillance', label: '10. Radar, Sonar, Navigation and Surveillance' },
+  { value: 'Aviation and Airfield Support', label: '11. Aviation and Airfield Support' },
+  { value: 'Marine and Shipboard Operations', label: '12. Marine and Shipboard Operations' },
+  { value: 'Engineering Works, Construction and Utilities', label: '13. Engineering Works, Construction and Utilities' },
+  { value: 'Firefighting, Safety and Emergency Response', label: '14. Firefighting, Safety and Emergency Response' },
+  { value: 'Medical, Nursing and First Aid', label: '15. Medical, Nursing and First Aid' },
+  { value: 'Training and Instruction', label: '16. Training and Instruction' },
+  { value: 'Catering, Hospitality and Facility Services', label: '17. Catering, Hospitality and Facility Services' },
+  { value: 'Other', label: '18. Other Skills (Please specify)' },
+];
+
+const CAREER_TRACK_OPTIONS = [
+  { value: 'POLICE_CAPF', label: 'Police & CAPF' },
+  { value: 'SSC', label: 'Staff Selection Commission (SSC)' },
+  { value: 'BANKING', label: 'Banking & Financial Institutions' },
+  { value: 'RAILWAYS', label: 'Indian Railways' },
+  { value: 'CIVIL_SERVICES', label: 'Civil Services & State PSC' },
+  { value: 'DEFENCE', label: 'Defence & Security Forces' },
+  { value: 'PSU', label: 'Public Sector Undertakings (PSU)' },
+  { value: 'ENGINEERING', label: 'Engineering & Technical Services' },
+  { value: 'TEACHING', label: 'Teaching & Education' },
+  { value: 'NURSING', label: 'Healthcare & Medical' },
+  { value: 'GROUP_C', label: 'State Govt Services (Group C & D)' },
+  { value: 'AGRICULTURE', label: 'Agriculture & Forest Services' },
+  { value: 'PRIVATE', label: 'Corporate & Private Sector' },
+  { value: 'ENTREPRENEURSHIP', label: 'Business & Entrepreneurship' },
+];
+
+const FINANCIAL_GOALS_OPTIONS = [
+  { value: 'Keep My Money Safe', label: '1. Keep My Money Safe' },
+  { value: 'Build an Emergency Fund', label: '2. Build an Emergency Fund' },
+  { value: 'Generate Regular Monthly Income', label: '3. Generate Regular Monthly Income' },
+  { value: 'Grow My Money for the Long Term', label: '4. Grow My Money for the Long Term' },
+  { value: 'Plan My Retirement and Pension', label: '5. Plan My Retirement and Pension' },
+  { value: 'Children’s Education or Family Goals', label: '6. Children’s Education or Family Goals' },
+  { value: 'Buy, Build or Improve a Home', label: '7. Buy, Build or Improve a Home' },
+  { value: 'Start or Expand a Business', label: '8. Start or Expand a Business' },
+  { value: 'Agriculture or Allied Livelihood', label: '9. Agriculture or Allied Livelihood' },
+  { value: 'Education, Reskilling or Certification', label: '10. Education, Reskilling or Certification' },
+  { value: 'Manage or Repay Loans', label: '11. Manage or Repay Loans' },
+  { value: 'Health and Family Protection', label: '12. Health and Family Protection' },
+  { value: 'I Am Not Sure, Guide Me', label: '13. I Am Not Sure, Guide Me' },
+];
+
 const DRAFT_KEY = 'veernxt_profiling_draft_v1';
 
 const Profiling = () => {
@@ -65,6 +119,7 @@ const Profiling = () => {
     dobDay: '',
     dobMonth: '',
     dobYear: '',
+    gender: 'Male',
     category: '',
     disabilityStatus: '',
     disabilityType: '',
@@ -74,6 +129,7 @@ const Profiling = () => {
     maritalStatus: '',
     email: '',
     mobile: '',
+    servicePhase: 'Agniveer',
     serviceBranch: '',
     armCorpsTrade: '',
     roleAppointment: '',
@@ -83,6 +139,7 @@ const Profiling = () => {
     militaryCourses: [],
     characterOnDischarge: '',
     specificSkills: [],
+    otherSkill: '',
     highestQualification: '',
     completedDuringService: false,
     nccCertification: 'None',
@@ -99,6 +156,7 @@ const Profiling = () => {
     careerPreferences: [],
     relocation: 'Home State',
     englishComfort: 'Basic',
+    financialGoals: [],
     sewaNidhiInterests: [],
     consent: false,
   });
@@ -200,12 +258,12 @@ const Profiling = () => {
       case 1: return !!(d.dobDay && d.dobMonth && d.dobYear);
       case 2: return !!d.category;
       case 3: return !!d.disabilityStatus && (d.disabilityStatus === 'No' || (!!d.disabilityType && !!d.disabilityPercentage));
-      case 4: return !!d.maritalStatus;
+      case 4: return !!d.maritalStatus && !!d.gender;
       case 5: return !!d.stateOfDomicile;
       case 6: return true; // district — optional
       case 7: return !!d.email;
       case 8: return !!d.mobile;
-      case 9: return !!d.serviceBranch;
+      case 9: return !!d.serviceBranch && !!d.servicePhase;
       case 10: return !!d.armCorpsTrade;
       case 11: return !!d.roleAppointment;
       case 12: return d.serviceYears !== '' && d.serviceMonths !== '';
@@ -343,8 +401,18 @@ const Profiling = () => {
 
       case 4:
         return (
-          <ChoiceGroup columns={2} value={d.maritalStatus} onChange={(v) => setField('maritalStatus', v)}
-            options={['Single', 'Married'].map(m => ({ value: m, label: m }))} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div>
+              <p style={{ margin: '0 0 0.5rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.03em' }}>Gender</p>
+              <ChoiceGroup columns={3} value={d.gender} onChange={(v) => setField('gender', v)}
+                options={['Male', 'Female', 'Other'].map(g => ({ value: g, label: g }))} />
+            </div>
+            <div>
+              <p style={{ margin: '0 0 0.5rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.03em' }}>Marital Status</p>
+              <ChoiceGroup columns={2} value={d.maritalStatus} onChange={(v) => setField('maritalStatus', v)}
+                options={['Single', 'Married'].map(m => ({ value: m, label: m }))} />
+            </div>
+          </div>
         );
 
       case 5:
@@ -375,8 +443,23 @@ const Profiling = () => {
 
       case 9:
         return (
-          <ChoiceGroup columns={1} value={d.serviceBranch} onChange={(v) => setField('serviceBranch', v)}
-            options={['Indian Army', 'Indian Navy', 'Indian Air Force'].map(s => ({ value: s, label: s }))} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div>
+              <p style={{ margin: '0 0 0.5rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.03em' }}>Service Status / Phase</p>
+              <ChoiceGroup columns={2} value={d.servicePhase} onChange={(v) => setField('servicePhase', v)}
+                options={[
+                  { value: 'Agniveer', label: 'Agniveer' },
+                  { value: 'Ex-Servicemen (ESM)', label: 'Ex-Servicemen (ESM)' },
+                  { value: 'Paramilitary / CAPF', label: 'Paramilitary / CAPF' },
+                  { value: 'Serving Personnel', label: 'Serving Armed Forces' },
+                ]} />
+            </div>
+            <div>
+              <p style={{ margin: '0 0 0.5rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.03em' }}>Service Branch</p>
+              <ChoiceGroup columns={2} value={d.serviceBranch} onChange={(v) => setField('serviceBranch', v)}
+                options={['Indian Army', 'Indian Navy', 'Indian Air Force', 'Paramilitary / CAPF'].map(s => ({ value: s, label: s }))} />
+            </div>
+          </div>
         );
 
       case 10: {
@@ -417,15 +500,24 @@ const Profiling = () => {
 
       case 14:
         return (
-          <MultiChoiceGroup columns={2} values={d.specificSkills} onToggle={(v) => handleMultiSelect('specificSkills', v)}
-            options={[
-              { value: 'Weapons Handling', label: 'Weapons Handling' },
-              { value: 'Driving (LMV/HMV)', label: 'Driving (LMV/HMV)' },
-              { value: 'Office Admin/Computer Work', label: 'Office / Computer' },
-              { value: 'Technical Repair/Maintenance', label: 'Technical Repair' },
-              { value: 'Inventory/Store Management', label: 'Store Management' },
-              { value: 'Instruction/Training', label: 'Training / Instruction' },
-            ]} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <MultiChoiceGroup columns={1} values={d.specificSkills} onToggle={(v) => handleMultiSelect('specificSkills', v)}
+              options={TRI_SERVICE_SKILLS} />
+            {d.specificSkills.includes('Other') && (
+              <div>
+                <p style={{ margin: '0.5rem 0 0.35rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase' }}>Specify Other Skills</p>
+                <input
+                  className="vx-field"
+                  type="text"
+                  name="otherSkill"
+                  value={d.otherSkill || ''}
+                  onChange={handleChange}
+                  placeholder="Enter your additional trade/skills..."
+                  autoFocus
+                />
+              </div>
+            )}
+          </div>
         );
 
       case 15:
@@ -492,16 +584,16 @@ const Profiling = () => {
       case 20:
         return (
           <MultiChoiceGroup columns={2} values={d.careerPreferences} onToggle={(v) => handleMultiSelect('careerPreferences', v)}
-            options={['POLICE_CAPF', 'SSC', 'BANKING', 'RAILWAYS', 'TEACHING', 'ENGINEERING', 'NURSING'].map(p => ({ value: p, label: p.replace('_', ' ') }))} />
+            options={CAREER_TRACK_OPTIONS} />
         );
 
       case 21:
         return (
           <ChoiceGroup columns={1} value={d.relocation} onChange={(v) => setField('relocation', v)}
             options={[
-              { value: 'Home State', label: 'Home state only — I want to stay close to family' },
-              { value: 'Home District', label: 'My district only — I prefer to stay very local' },
-              { value: 'Anywhere in India', label: 'Anywhere in India — open to all locations' },
+              { value: 'Home State', label: 'Home state only — I want to stay within my home state' },
+              { value: 'Home State & Neighbors', label: 'Home state & neighboring states' },
+              { value: 'Anywhere in India', label: 'Anywhere in India — open to all national opportunities' },
             ]} />
         );
 
@@ -517,8 +609,11 @@ const Profiling = () => {
 
       case 23:
         return (
-          <MultiChoiceGroup columns={2} values={d.sewaNidhiInterests} onToggle={(v) => handleMultiSelect('sewaNidhiInterests', v)}
-            options={['Agriculture', 'Small Business', 'Security Agency', 'Transport', 'Skill Training', 'Tourism'].map(i => ({ value: i, label: i }))} />
+          <MultiChoiceGroup columns={1} values={d.financialGoals?.length ? d.financialGoals : d.sewaNidhiInterests} onToggle={(v) => {
+            handleMultiSelect('financialGoals', v);
+            handleMultiSelect('sewaNidhiInterests', v);
+          }}
+            options={FINANCIAL_GOALS_OPTIONS} />
         );
 
       case 24:
@@ -658,26 +753,26 @@ const QUESTION_TITLES = [
   'When were you born?',                            // 1
   'Which reservation category do you belong to?',  // 2
   'Do you have a disability (PwD)?',               // 3
-  "What's your marital status?",                   // 4
+  "What's your gender and marital status?",        // 4
   "What's your state of domicile?",                // 5
   'Which district?',                               // 6
   "What's your email address?",                    // 7
   "What's your mobile number?",                    // 8
-  'Which service branch did you serve in?',        // 9
+  'Service status and branch of service',          // 9
   'Which arm or corps were you part of?',          // 10
   'What was your role or appointment?',            // 11
   'How long did you serve?',                       // 12
   'What was your character on discharge?',         // 13
-  'Any key skills from your service?',             // 14
+  'Which skills did you use during your service?', // 14 (Q15)
   "What's your highest qualification?",            // 15
   'Do you hold an NCC certification?',             // 16
   'Did you study Maths or Computer Science in Class 12?', // 17 (NEW)
   'Did you represent in sports?',                  // 18
   'A few physical fitness details',                // 19
-  'Which career tracks interest you most?',        // 20
+  'Which career tracks attract you most?',         // 20
   'Where are you open to relocating for a job?',   // 21
   'How comfortable are you in English?',           // 22 (NEW)
-  'Interested in Sewa Nidhi opportunities?',       // 23
+  'What do you plan to do with your post-service funds and what are your financial goals?', // 23 (Q24)
   'Review and confirm',                            // 24
 ];
 
@@ -686,26 +781,26 @@ const QUESTION_HELP = [
   undefined,
   'Used only to check eligibility for reservation-based exam quotas.',
   'PwD candidates get benefits like relaxed age/physical limits and reserved vacancies on many exams — this is used only to check that eligibility.',
-  undefined,
+  'Used to determine eligibility criteria and physical standard requirements for uniformed and civilian posts.',
   "We'll flag exams that give preference to your home state.",
   'Optional — helps narrow domicile-based eligibility further.',
   "We'll use this to keep you updated on your matches.",
   'Used for OTP-based account recovery and updates.',
-  undefined,
+  'Select whether you are an Agniveer, regular Ex-Serviceman (ESM), Paramilitary veteran, or serving personnel.',
   'This narrows down to the arms/corps that exist within your branch.',
   'This is filtered to roles that exist within your arm/corps.',
   'Total time in service — a strong signal on many exams.',
   undefined,
-  'Optional — select all that apply. These help us match you to civilian roles aligned with your military trade.',
+  'Select all that apply. If you have skills not listed here, select Other and specify.',
   undefined,
   'Optional — NCC certification is a small scoring bonus on many exams.',
   'Optional — having Maths or Computer Science in Class 12 opens certain technical and banking exams and can improve your score.',
   'Optional — sports representation is a meaningful bonus for police, defence, and railways exams.',
   'These map against physical eligibility standards for specific exams.',
   'Select every track you would seriously consider — the more, the better we can match you.',
-  "This controls which state-level exams we show you. Selecting 'Anywhere in India' opens the full national pool.",
+  "Select your geographical preference. We no longer limit results by district so you see all eligible state and national opportunities.",
   'This affects your score on banking exams (Officer vs Clerk track), civil services, and any English-intensive role — be honest for the most accurate match.',
-  'Optional — entrepreneurship and reintegration support programmes.',
+  'Select all that apply — your answers will personalize your financial guidance and corpus allocation plan.',
   "Take one last look before we calculate your VeerScore and matches.",
 ];
 
@@ -726,11 +821,16 @@ function ApplicationSummarySection({ title, rows }) {
 }
 
 function ApplicationSummary({ d }) {
+  const allSkills = [...(d.specificSkills || [])];
+  if (d.otherSkill) allSkills.push(`Other: ${d.otherSkill}`);
+  const goals = (d.financialGoals?.length ? d.financialGoals : d.sewaNidhiInterests) || [];
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
       <ApplicationSummarySection title="Identity" rows={[
         ['Full name', d.fullName],
         ['Date of birth', d.dobDay && d.dobMonth && d.dobYear ? `${d.dobDay}-${d.dobMonth}-${d.dobYear}` : ''],
+        ['Gender', d.gender],
         ['Category', d.category],
         ['Disability (PwD)', d.disabilityStatus === 'Yes' ? `${d.disabilityType || '—'}, ${d.disabilityPercentage || '—'}` : d.disabilityStatus],
         ['Marital status', d.maritalStatus],
@@ -740,6 +840,7 @@ function ApplicationSummary({ d }) {
         ['Mobile', d.mobile],
       ]} />
       <ApplicationSummarySection title="Service record" rows={[
+        ['Service status / phase', d.servicePhase],
         ['Service branch', d.serviceBranch],
         ['Arm / Corps / Trade', d.armCorpsTrade],
         ['Role / Appointment', d.roleAppointment],
@@ -752,7 +853,7 @@ function ApplicationSummary({ d }) {
         ['Sports achievement', d.sportsAchievement !== 'None' ? d.sportsAchievement : 'None'],
       ]} />
       <ApplicationSummarySection title="Skills" rows={[
-        ['Specific skills', d.specificSkills?.length ? d.specificSkills.join(', ') : 'None selected'],
+        ['Specific skills', allSkills.length ? allSkills.join(', ') : 'None selected'],
       ]} />
       <ApplicationSummarySection title="Physical" rows={[
         ['Height', d.heightCm ? `${d.heightCm} cm` : ''],
@@ -762,7 +863,7 @@ function ApplicationSummary({ d }) {
       <ApplicationSummarySection title="Career & interests" rows={[
         ['Career preferences', d.careerPreferences?.length ? d.careerPreferences.join(', ') : ''],
         ['Relocation preference', d.relocation],
-        ['Sewa Nidhi interests', d.sewaNidhiInterests?.length ? d.sewaNidhiInterests.join(', ') : ''],
+        ['Post-service goals', goals.length ? goals.join(', ') : 'None selected'],
       ]} />
     </div>
   );
