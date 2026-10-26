@@ -1340,3 +1340,346 @@
 .smp-compare-table td {
   color: var(--c-ink-3, #475569);
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Tablet + phone layouts for the Guidebooks / Préci page
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (601–1023px) ── */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .smp-page-wrapper { padding: 20px 22px 48px; }
+  .smp-hero-card { border-radius: 20px; min-height: 0; }
+  .smp-hero-content { flex: 1 1 62%; padding: 28px 28px; min-width: 0; }
+  .smp-hero-visual { flex: 1 1 38%; }
+  .smp-hero-title { font-size: clamp(24px, 4.4vw, 32px); }
+  .smp-hero-tagline { font-size: 14px; margin-bottom: 14px; }
+  .smp-hero-pills { gap: 8px; }
+  .smp-hero-pill { padding: 6px 11px; font-size: 12px; }
+  .smp-hero-script-text { font-size: 24px; }
+  .smp-hero-script-arc { width: 96px; }
+  .smp-hero-sticky-note { font-size: 15px; right: 16px; top: 22px; padding: 8px 10px; }
+
+  .smp-trust-bar { padding: 12px 16px; margin-bottom: 20px; }
+  .smp-trust-items { gap: 10px 22px; }
+  .smp-trust-item { font-size: 12.5px; }
+
+  /* Guidebook cards: cover on the left, details on the right, scroll sideways */
+  .smp-book-card { flex: 0 0 86%; min-width: 0; max-width: 86%; padding: 22px 18px; }
+  .smp-book-card-body { flex-direction: row; gap: 16px; align-items: flex-start; }
+  .smp-book-cover-wrap { width: 150px; padding-top: 22px; }
+  .smp-book-title { font-size: 16.5px; }
+  .smp-book-desc { font-size: 12.5px; }
+
+  /* Sidebar blocks side by side under the books */
+  .smp-sidebar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+  .smp-sidebar-card { padding: 18px; border-radius: 18px; }
+
+  .smp-resources-row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+}
+
+/* ── Phone (≤600px) ── */
+@media (max-width: 600px) {
+  .smp-page-wrapper { padding: 12px 12px 40px; }
+  .smp-breadcrumbs { flex-wrap: wrap; gap: 4px 6px; font-size: 11.5px; margin-bottom: 12px; }
+  .smp-bc-current { overflow-wrap: anywhere; }
+
+  /* Hero: text on the left, picture fading in on the right */
+  .smp-hero-card { border-radius: 18px; min-height: 0; margin-bottom: 12px; display: block; }
+  .smp-hero-content { padding: 16px 14px 14px; min-width: 0; width: 100%; box-sizing: border-box; }
+  .smp-hero-kicker-row { gap: 6px; margin-bottom: 8px; }
+  .smp-hero-kicker-cat { font-size: 10px; padding: 3px 8px; }
+  .smp-hero-kicker-exam { font-size: 10.5px; padding: 3px 8px; max-width: 100%; }
+  .smp-hero-title { font-size: 20px; line-height: 1.18; gap: 6px; margin-bottom: 6px; }
+  .smp-hero-tagline { font-size: 11.5px; margin-bottom: 10px; max-width: 52%; line-height: 1.4; }
+  .smp-hero-visual { position: absolute; top: 0; right: 0; bottom: 0; width: 52%; z-index: 1; }
+  .smp-hero-script-tag { left: 8px; top: 62%; }
+  .smp-hero-script-text { font-size: 18px; }
+  .smp-hero-script-arc { width: 70px; height: 3px; margin-top: 3px; }
+  .smp-hero-sticky-note { right: 10px; top: 12px; font-size: 11px; padding: 5px 8px; border-radius: 6px; }
+  .smp-hero-sticky-crown { font-size: 11px; }
+
+  .smp-hero-controls-bar { gap: 8px; margin-bottom: 10px; }
+  .smp-hero-pills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; position: relative; z-index: 3; }
+  .smp-hero-pill { padding: 6px 8px; font-size: 11px; gap: 6px; border-radius: 10px; min-width: 0; }
+  .smp-hero-pill-icon { width: 18px; height: 18px; }
+
+  /* Metrics strip */
+  .smp-trust-bar { padding: 10px 12px; border-radius: 14px; margin-bottom: 14px; gap: 8px; }
+  .smp-trust-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 10px; width: 100%; }
+  .smp-trust-item { font-size: 11px; gap: 6px; align-items: flex-start; }
+  .smp-trust-badge { font-size: 11px; padding: 4px 10px; }
+
+  /* Section headings */
+  .smp-section-head { gap: 8px; margin-bottom: 12px; }
+  .smp-section-title { font-size: 16px; line-height: 1.25; }
+  .smp-section-sub { font-size: 11.5px; }
+
+  /* Guidebook cards: small cover on the left, details on the right */
+  .smp-book-card { flex: 0 0 100%; min-width: 0; max-width: 100%; padding: 14px 12px; border-radius: 16px; }
+  .smp-book-card-body { flex-direction: row; align-items: flex-start; gap: 12px; }
+  .smp-book-cover-wrap { width: 92px; padding-top: 22px; }
+  .smp-bestseller-badge { top: 10px; left: 12px; font-size: 10px; padding: 2px 7px; }
+  .smp-book-title { font-size: 14px; line-height: 1.25; }
+  .smp-book-desc { font-size: 11.5px; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .smp-book-bullets { display: none; }
+  .smp-book-stats-row { gap: 6px; flex-wrap: wrap; }
+  .smp-book-stat-chip { font-size: 10px; padding: 4px 7px; }
+  .smp-book-actions-row { gap: 8px; margin-top: 10px; }
+  .smp-btn-details, .smp-btn-explore { min-height: 36px; font-size: 12px; padding: 0 12px; flex: 1 1 0; justify-content: center; }
+
+  /* Sidebar cards */
+  .smp-sidebar { gap: 14px; }
+  .smp-sidebar-card { padding: 16px; border-radius: 16px; }
+
+  /* More learning resources: swipeable row of compact cards */
+  .smp-resources-row { display: flex; overflow-x: auto; gap: 10px; scrollbar-width: none; padding-bottom: 4px; margin-top: 12px; }
+  .smp-resources-row::-webkit-scrollbar { display: none; }
+  .smp-resource-card { flex: 0 0 132px; min-height: 110px; padding: 12px; border-radius: 14px; }
+  .smp-res-title { font-size: 12.5px; }
+  .smp-res-desc { font-size: 10.5px; }
+}
+
+/* Scale the 3D book cover (fixed 298x355) down to fit the narrower cover column */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .smp-book-cover-wrap { width: 150px; height: 182px; padding-top: 0; flex: 0 0 150px; align-items: flex-start; }
+  .smp-book-cover-wrap .vn-book-3d-scene { transform: scale(.5); transform-origin: top left; flex: 0 0 auto; }
+}
+@media (max-width: 600px) {
+  .smp-book-cover-wrap { width: 96px; height: 120px; padding-top: 0; flex: 0 0 96px; margin-top: 18px; align-items: flex-start; }
+  .smp-book-cover-wrap .vn-book-3d-scene { transform: scale(.32); transform-origin: top left; flex: 0 0 auto; }
+}
+@media (max-width: 600px) {
+  .smp-resource-card { flex: 0 0 148px; }
+  .smp-res-card-top { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+/* ── Phone: peeking carousel with dots, "why choose" as an icon grid ── */
+.smp-books-dots { display: none; }
+@media (max-width: 600px) {
+  .smp-books-scroll-track { gap: 12px; scroll-snap-type: x mandatory; padding-bottom: 4px; }
+  .smp-book-card { flex: 0 0 88%; max-width: 88%; scroll-snap-align: start; }
+  .smp-books-dots { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
+  .smp-books-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c-line-3, #cbd5e1); transition: width .2s, background .2s; }
+  .smp-books-dot.active { width: 18px; border-radius: 99px; background: var(--c-green, #064e3b); }
+
+  .smp-why-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .smp-why-item { flex-direction: column; align-items: flex-start; gap: 8px; padding: 10px; border: 1px solid var(--c-line-2, #e2e8f0); border-radius: 12px; background: var(--c-bg-1, #f8fafc); font-size: 11px; line-height: 1.3; }
+  .smp-why-icon-wrap { width: 26px; height: 26px; }
+}
+@media (max-width: 600px) {
+  .smp-book-stats-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .smp-book-stat-chip { min-width: 0; font-size: 9.5px; padding: 4px 6px; gap: 4px; }
+  .smp-book-actions-row { flex-wrap: nowrap; }
+  .smp-btn-details, .smp-btn-explore { white-space: nowrap; font-size: 11.5px; padding: 0 8px; gap: 4px; }
+}
+@media (max-width: 600px) {
+  .smp-book-card-info { min-width: 0; flex: 1 1 0; }
+  .smp-book-actions-row { min-width: 0; }
+  .smp-btn-details, .smp-btn-explore { min-width: 0; font-size: 11px; padding: 0 6px; overflow: hidden; }
+}
+
+/* ── Hero feature cards + metrics (extra copy only shows on phones) ── */
+.smp-pill-sub, .smp-pill-arrow, .smp-trust-sub, .smp-hero-pills-phone { display: none; }
+.smp-trust-main { font-weight: inherit; }
+.smp-pill-text { display: block; }
+
+@media (max-width: 600px) {
+  /* feature cards sit under the hero instead of inside it */
+  .smp-hero-pills-in { display: none; }
+  .smp-hero-pills-phone { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0 0 12px; }
+  .smp-hero-pills-phone .smp-hero-pill {
+    position: relative; align-items: center; gap: 10px; padding: 12px 10px; border-radius: 16px; min-width: 0;
+    border: 1px solid var(--c-line-2, #e2e8f0); box-shadow: 0 2px 8px rgba(0,0,0,.03);
+  }
+  .smp-hero-pills-phone .smp-pill-green { background: var(--c-tint-green, #f0fdf4); }
+  .smp-hero-pills-phone .smp-pill-orange { background: var(--c-tint-amber, #fff7ed); }
+  .smp-hero-pills-phone .smp-pill-teal { background: var(--c-tint-blue, #eff6ff); }
+  .smp-hero-pills-phone .smp-pill-gold { background: var(--c-tint-purple, #f5f3ff); }
+  .smp-hero-pills-phone .smp-hero-pill-icon { width: 34px; height: 34px; border-radius: 50%; }
+  .smp-hero-pills-phone .smp-hero-pill-icon svg { width: 16px; height: 16px; }
+  .smp-hero-pills-phone .smp-pill-teal .smp-hero-pill-icon { background: rgba(59,130,246,.15); color: var(--c-blue, #2563eb); }
+  .smp-hero-pills-phone .smp-pill-gold .smp-hero-pill-icon { background: rgba(139,92,246,.15); color: var(--c-purple, #7c3aed); }
+  .smp-hero-pills-phone .smp-pill-text { flex: 1 1 auto; min-width: 0; font-size: 12px; font-weight: 700; line-height: 1.25; color: var(--c-ink-1, #0f172a); }
+  .smp-hero-pills-phone .smp-pill-sub { display: block; margin-top: 3px; font-size: 10px; font-weight: 500; line-height: 1.3; color: var(--c-ink-4, #64748b); }
+  .smp-hero-pills-phone .smp-pill-arrow { display: block; flex: 0 0 auto; width: 22px; height: 22px; padding: 4px; border-radius: 50%; background: rgba(15,23,42,.06); color: var(--c-ink-3, #475569); }
+
+  /* metrics: three tiles, then Exam-Oriented + the Trusted badge */
+  .smp-trust-bar { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px 8px; padding: 12px; align-items: center; }
+  .smp-trust-items { display: contents; }
+  .smp-trust-item { grid-column: span 2; gap: 8px; align-items: center; min-width: 0; }
+  .smp-trust-item:nth-child(4) { grid-column: span 2; }
+  .smp-trust-item-extra { display: none; }
+  .smp-trust-item > span:last-child { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+  .smp-trust-main { font-size: 11.5px; font-weight: 700; color: var(--c-ink-1, #0f172a); }
+  .smp-trust-opt { display: none; }
+  .smp-trust-sub { display: block; font-size: 10px; font-weight: 500; color: var(--c-ink-4, #64748b); }
+  .smp-trust-badge { grid-column: span 4; justify-content: flex-start; font-size: 11px; padding: 8px 12px; border-radius: 12px; }
+}
+@media (max-width: 600px) {
+  .smp-hero-pills-phone .smp-hero-pill { padding: 10px 9px; gap: 8px; }
+  .smp-hero-pills-phone .smp-hero-pill-icon { width: 30px; height: 30px; flex: 0 0 30px; }
+  .smp-hero-pills-phone .smp-pill-text { font-size: 11.5px; }
+  .smp-hero-pills-phone .smp-pill-sub { font-size: 9.5px; }
+  .smp-hero-pills-phone .smp-pill-arrow { width: 18px; height: 18px; padding: 3px; }
+}
+
+/* ── Compare modal: phone card layout (bottom sheet), table stays on larger screens ── */
+.smp-cmp-cards, .smp-cmp-sub, .smp-sheet-handle { display: none; }
+.smp-cmp-icon { display: inline-flex; }
+@media (max-width: 600px) {
+  .smp-modal-backdrop:has(.smp-cmp-box) { align-items: flex-end; padding: 0; }
+  .smp-cmp-box { max-width: 100% !important; border-radius: 20px 20px 0 0; max-height: 92vh; position: relative; }
+  .smp-sheet-handle { display: block; width: 40px; height: 4px; border-radius: 99px; background: var(--c-line-3, #cbd5e1); margin: 8px auto 0; flex: 0 0 auto; }
+  .smp-cmp-box .smp-modal-head { padding: 10px 14px 12px; border-bottom: none; align-items: flex-start; gap: 10px; }
+  .smp-cmp-head-left { align-items: flex-start !important; gap: 10px !important; min-width: 0; }
+  .smp-cmp-icon { width: 36px; height: 36px; flex: 0 0 36px; border-radius: 12px; background: var(--c-tint-green, #e7f6ee); align-items: center; justify-content: center; }
+  .smp-cmp-icon svg { width: 17px; height: 17px; }
+  .smp-cmp-box .smp-modal-title { font-size: 15px; line-height: 1.25; }
+  .smp-cmp-sub { display: block; margin: 3px 0 0; font-size: 11px; line-height: 1.4; color: var(--c-ink-4, #64748b); }
+  .smp-cmp-box .smp-modal-close-btn { width: 28px; height: 28px; border-radius: 50%; flex: 0 0 28px; }
+  .smp-cmp-box .smp-modal-body { padding: 0 12px 14px; }
+  .smp-cmp-desc, .smp-cmp-table-view { display: none; }
+
+  .smp-cmp-cards { display: flex; flex-direction: column; gap: 10px; }
+  .smp-cmp-features { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; padding: 10px 6px; border: 1px solid var(--c-line-2, #e2e8f0); border-radius: 14px; }
+  .smp-cmp-feature { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; min-width: 0; }
+  .smp-cmp-feature b { font-size: 10px; font-weight: 700; color: var(--c-ink-1, #0f172a); line-height: 1.2; }
+  .smp-cmp-feature small { font-size: 9px; color: var(--c-ink-4, #64748b); line-height: 1.25; }
+  .smp-cmp-feature-icon { width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 2px; }
+  .smp-cmp-feature.green .smp-cmp-feature-icon { background: var(--c-tint-green, #dcfce7); color: var(--c-green, #059669); }
+  .smp-cmp-feature.orange .smp-cmp-feature-icon { background: var(--c-tint-amber, #ffedd5); color: var(--c-amber, #ea580c); }
+  .smp-cmp-feature.blue .smp-cmp-feature-icon { background: var(--c-tint-blue, #dbeafe); color: var(--c-blue, #2563eb); }
+  .smp-cmp-feature.teal .smp-cmp-feature-icon { background: var(--c-tint-green, #ccfbf1); color: var(--c-green, #0d9488); }
+
+  .smp-cmp-card { border: 1px solid var(--c-line-2, #e2e8f0); border-radius: 14px; padding: 10px; background: var(--c-bg-0, #fff); }
+  .smp-cmp-card.best { background: var(--c-tint-green, #f0fdf4); border-color: var(--c-line-2, #bbf7d0); }
+  .smp-cmp-card-top { display: flex; gap: 10px; align-items: flex-start; }
+  .smp-cmp-cover { width: 58px; height: 80px; object-fit: cover; border-radius: 6px; flex: 0 0 58px; box-shadow: 0 3px 8px rgba(0,0,0,.2); }
+  .smp-cmp-card-info { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+  .smp-cmp-best { display: inline-flex; align-items: center; gap: 3px; font-size: 9px; font-weight: 800; padding: 2px 6px; border-radius: 6px; background: var(--c-tint-amber, #fef3c7); color: var(--c-amber, #92400e); }
+  .smp-cmp-card-title { margin: 0; font-size: 12.5px; line-height: 1.25; font-weight: 800; color: var(--c-ink-1, #0f172a); }
+  .smp-cmp-tag { font-size: 9.5px; font-weight: 700; padding: 2px 7px; border-radius: 6px; }
+  .smp-cmp-card-desc { margin: 2px 0 0; font-size: 10.5px; line-height: 1.4; color: var(--c-ink-3, #475569); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .smp-cmp-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; margin-top: 8px; }
+  .smp-cmp-stat { font-size: 9.5px; font-weight: 600; padding: 4px 7px; border-radius: 7px; background: var(--c-bg-2, #f1f5f9); color: var(--c-ink-2, #334155); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .smp-cmp-actions { display: flex; gap: 8px; margin-top: 8px; }
+  .smp-cmp-btn-outline, .smp-cmp-btn-fill { flex: 1 1 0; min-width: 0; min-height: 34px; border-radius: 9px; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; gap: 4px; cursor: pointer; text-decoration: none; font-family: inherit; white-space: nowrap; }
+  .smp-cmp-btn-outline { background: var(--c-bg-0, #fff); border: 1px solid var(--c-line-3, #cbd5e1); color: var(--c-ink-1, #0f172a); }
+  .smp-cmp-btn-fill { color: #fff; border: 1px solid transparent; }
+}
+
+/* Phones: the four feature cards under the hero are omitted */
+@media (max-width: 600px) {
+  .smp-hero-pills-phone { display: none; }
+}
+
+/* ── Phone hero (reference): clean banner, then selector card and a segmented switch ── */
+.smp-controls-phone { display: none; }
+@media (max-width: 600px) {
+  .smp-controls-in { display: none; }
+  .smp-controls-phone { display: flex; flex-direction: column; gap: 10px; margin: 0 0 12px; }
+  .smp-controls-phone .smp-exam-selector-card { width: 100%; box-sizing: border-box; padding: 12px 14px; border-radius: 16px; }
+  .smp-controls-phone .smp-select-container, .smp-controls-phone .smp-exam-select { width: 100%; }
+  .smp-controls-phone .smp-type-switcher {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; box-sizing: border-box;
+    padding: 5px; border-radius: 16px; background: var(--c-bg-0, #fff); border: 1px solid var(--c-line-2, #e2e8f0); box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  }
+  .smp-controls-phone .smp-type-btn { justify-content: center; min-height: 42px; font-size: 13px; border-radius: 12px; }
+
+  /* hero: only the SSC tag, bigger title, clean photo on the right (no script/sticky note) */
+  .smp-hero-kicker-exam, .smp-hero-script-tag, .smp-hero-sticky-note { display: none; }
+  .smp-hero-content { padding: 18px 14px 20px; }
+  .smp-hero-title { font-size: 24px; line-height: 1.15; }
+  .smp-hero-title-main { display: block; max-width: 62%; }
+  .smp-hero-title-accent { font-size: 24px; }
+  .smp-hero-tagline { max-width: 56%; font-size: 12px; margin-bottom: 14px; }
+  .smp-hero-tagline::after { content: ''; display: block; width: 52px; height: 3px; margin-top: 12px; border-radius: 99px; background: #f59e0b; }
+  .smp-hero-visual { width: 46%; }
+  .smp-hero-card { min-height: 230px; }
+}
+
+/* ── Phones: a plain two-per-row grid of books (cover + title); tapping a book opens its notes ── */
+.smp-title-short { display: none; }
+@media (max-width: 600px) {
+  .smp-title-full, .smp-section-sub { display: none; }
+  .smp-title-short { display: inline; }
+  .smp-scroll-nav-group, .smp-books-dots { display: none !important; }
+
+  .smp-books-scroll-wrap { overflow: visible; }
+  .smp-books-scroll-track {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; overflow: visible;
+    scroll-snap-type: none; padding-bottom: 0;
+  }
+  .smp-book-card { flex: none; max-width: none; min-width: 0; padding: 12px 8px 12px; cursor: pointer; align-items: center; }
+  .smp-book-card:hover { transform: none; }
+  .smp-book-card-body { flex-direction: column; align-items: center; gap: 8px; }
+  .smp-book-cover-wrap { width: 100%; height: 182px; flex: 0 0 auto; margin-top: 4px; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; }
+  .smp-book-cover-wrap .vn-book-3d-scene { transform: scale(.5); transform-origin: top center; margin: 0 -74px; flex: 0 0 auto; }
+  .smp-book-title { font-size: 13px; text-align: center; margin: 0; line-height: 1.3; }
+  .smp-book-desc, .smp-book-bullets, .smp-book-stats-row, .smp-book-actions-row { display: none; }
+  .smp-book-card-info { width: 100%; }
+  .smp-bestseller-badge { top: 8px; left: 8px; font-size: 9px; padding: 2px 6px; }
+}
+
+/* ── Phones: a little motion and polish for the book grid ── */
+@keyframes smp-book-rise { from { opacity: 0; transform: translateY(18px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes smp-book-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes smp-book-shine { 0% { transform: translateX(-120%); } 60%, 100% { transform: translateX(260%); } }
+@media (max-width: 600px) {
+  .smp-book-card {
+    position: relative; overflow: hidden;
+    background: linear-gradient(180deg, var(--c-bg-0, #fff) 0%, var(--c-tint-amber, #fbf7ee) 100%);
+    border: 1px solid var(--c-line-2, #ece6d6);
+    box-shadow: 0 6px 18px -8px rgba(60, 40, 10, .25);
+    animation: smp-book-rise .55s cubic-bezier(.16, 1, .3, 1) both;
+    transition: transform .18s ease, box-shadow .18s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .smp-book-card:nth-child(1) { animation-delay: .05s; }
+  .smp-book-card:nth-child(2) { animation-delay: .15s; }
+  .smp-book-card:nth-child(3) { animation-delay: .25s; }
+  .smp-book-card:nth-child(4) { animation-delay: .35s; }
+  .smp-book-card:nth-child(n+5) { animation-delay: .45s; }
+  .smp-book-card:active { transform: scale(.97); box-shadow: 0 2px 8px -4px rgba(60, 40, 10, .3); }
+
+  /* the covers gently float, each on its own rhythm */
+  .smp-book-cover-wrap { animation: smp-book-float 4.2s ease-in-out infinite; }
+  .smp-book-card:nth-child(2) .smp-book-cover-wrap { animation-delay: -1.2s; animation-duration: 4.8s; }
+  .smp-book-card:nth-child(3) .smp-book-cover-wrap { animation-delay: -2.1s; animation-duration: 4.5s; }
+  .smp-book-card:nth-child(4) .smp-book-cover-wrap { animation-delay: -3s; animation-duration: 5s; }
+
+  /* a soft light sweep across each card, once in a while */
+  .smp-book-card::before {
+    content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 38%; pointer-events: none; z-index: 4;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .55), transparent);
+    transform: translateX(-120%); animation: smp-book-shine 6s ease-in-out 1.2s infinite;
+  }
+  .smp-book-card:nth-child(2)::before { animation-delay: 2.2s; }
+  .smp-book-card:nth-child(3)::before { animation-delay: 3.2s; }
+  .smp-book-card:nth-child(4)::before { animation-delay: 4.2s; }
+
+  /* tap hint under the title */
+  .smp-book-card-info::after {
+    content: 'Read notes \2192'; display: block; width: fit-content; margin: 8px auto 0; padding: 4px 12px; border-radius: 999px;
+    font-size: 10.5px; font-weight: 700; color: var(--c-green, #064e3b); background: var(--c-tint-green, #e7f6ee);
+  }
+}
+@media (max-width: 600px) and (prefers-reduced-motion: reduce) {
+  .smp-book-card, .smp-book-cover-wrap, .smp-book-card::before { animation: none !important; }
+}
+
+/* Phones: no breadcrumb row and no Compare Books button */
+@media (max-width: 600px) {
+  .smp-breadcrumbs, .smp-compare-books-btn { display: none; }
+}
+
+/* Phones: Back button above the hero; keep the accent word on its own line, clear of the photo */
+.smp-back-btn { display: none; }
+@media (max-width: 600px) {
+  .smp-back-btn {
+    display: inline-flex; align-items: center; gap: 6px; margin: 0 0 10px; padding: 7px 14px; border-radius: 999px;
+    background: var(--c-bg-0, #fff); border: 1px solid var(--c-line-2, #e2e8f0); color: var(--c-green, #064e3b);
+    font-size: 12.5px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.04);
+  }
+  .smp-hero-title-accent { display: block; }
+}

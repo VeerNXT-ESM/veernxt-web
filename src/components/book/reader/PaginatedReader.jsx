@@ -53,10 +53,11 @@ export default function PaginatedReader({
   const isBook = mode === 'book';
   const isSpread = isBook && vp.w >= 1000;
 
-  const pageH = clamp(vp.h - 170, 520, 920);
+  const phone = vp.w < 600; // phones: near full-width page, controls float as a bottom dock
+  const pageH = clamp(vp.h - (phone ? 250 : 170), phone ? 400 : 520, 920);
   const pageW = isBook
-    ? (isSpread ? clamp((vp.w - 180) / 2, 380, 580) : clamp(vp.w - 48, 300, 560))
-    : clamp(vp.w - 48, 300, 780);
+    ? (isSpread ? clamp((vp.w - 180) / 2, 380, 580) : clamp(vp.w - (phone ? 28 : 48), 300, 560))
+    : clamp(vp.w - (phone ? 28 : 48), 300, 780);
   const contentW = pageW - PAD_X * 2;
   const contentH = pageH - PAD_TOP - PAD_BOTTOM;
 

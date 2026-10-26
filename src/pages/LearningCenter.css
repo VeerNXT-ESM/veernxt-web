@@ -5789,3 +5789,132 @@
 }
 
 [data-theme="dark"] .lc-state-code-badge, .dark .lc-state-code-badge { background: rgba(22, 27, 34, 0.92); }
+
+/* ── Explorer top controls ──
+   Larger screens keep the original flow (the wrapper is transparent); phones get one swipeable pill row. */
+.lc-pill-row { display: contents; }
+@media (min-width: 601px) {
+  .lc-top-tabs-bar { order: 1; }
+  .lc-top-search-wrap { order: 2; }
+  .lc-explorer-region-chips { order: 3; }
+  .lc-explorer-browse-btn { order: 4; }
+}
+@media (max-width: 600px) {
+  /* Two clean rows: mode switch (2 equal buttons) and region switch (3 equal buttons) */
+  .lc-pill-row {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+    gap: 8px;
+  }
+  .lc-pill-row .lc-top-tabs-bar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 14px;
+  }
+  .lc-pill-row .lc-top-tab-btn {
+    min-height: 42px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 13.5px;
+  }
+  .lc-pill-row .lc-top-tab-pill { display: none; }
+  .lc-pill-row .lc-explorer-region-chips {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    gap: 6px;
+    overflow: visible;
+  }
+  .lc-pill-row .lc-region-chip {
+    min-height: 40px;
+    padding: 8px 4px;
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .lc-top-search-wrap { min-height: 44px; }
+  .lc-explorer-browse-btn { min-height: 44px; }
+}
+
+/* Phone search boxes: use the same typeface as the neighbouring tabs/chips (inputs don't inherit it by default).
+   16px keeps iOS from zooming in on focus. */
+@media (max-width: 600px) {
+  .lc-top-search-input,
+  .cep-search-input,
+  .lc-state-search-input,
+  .lc-explorer-search-input {
+    font-family: 'Quicksand', 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  .lc-top-search-input::placeholder,
+  .cep-search-input::placeholder,
+  .lc-state-search-input::placeholder,
+  .lc-explorer-search-input::placeholder {
+    color: var(--c-ink-4, #64748b);
+    font-weight: 500;
+    opacity: 1;
+  }
+}
+
+/* Phones: slightly smaller search text (14px) in the exam list header */
+@media (max-width: 600px) {
+  .cep-all-exams-search-box .cep-search-input { font-size: 14px; }
+}
+
+/* Phones: slimmer top controls (mode switch, region switch, global search, Browse categories) */
+@media (max-width: 600px) {
+  .lc-pill-row { gap: 6px; }
+  .lc-pill-row .lc-top-tabs-bar { padding: 3px; gap: 3px; border-radius: 12px; }
+  .lc-pill-row .lc-top-tab-btn { min-height: 34px; padding: 6px 8px; font-size: 12.5px; border-radius: 9px; }
+  .lc-pill-row .lc-explorer-region-chips { gap: 5px; }
+  .lc-pill-row .lc-region-chip { min-height: 34px; padding: 6px 4px; font-size: 12px; }
+  .lc-top-search-wrap { min-height: 38px; border-radius: 12px; }
+  .lc-top-search-icon { width: 14px; height: 14px; }
+  .lc-top-search-input { font-size: 14px; padding-top: 7px; padding-bottom: 7px; }
+  .lc-explorer-browse-btn { min-height: 38px; padding: 6px 12px; font-size: 13px; border-radius: 12px; gap: 8px; }
+  .lc-explorer-browse-btn svg { width: 15px; height: 15px; }
+  .lc-explorer-browse-current { font-size: 11px; padding: 2px 9px; }
+  .lc-explorer-top-bar { gap: 6px; }
+}
+
+/* Phones: smaller type in the "Discipline built you" promo banner */
+@media (max-width: 600px) {
+  .lc-promo-content { padding: 1.1rem 0.95rem; }
+  .lc-promo-eyebrow { font-size: 0.64rem; margin-bottom: 0.65rem; padding: 0.3rem 0.65rem; }
+  .lc-promo-eyebrow-icon { width: 13px; height: 13px; }
+  .lc-promo-title { font-size: clamp(1.05rem, 4.8vw, 1.3rem); margin-bottom: 0.55rem; line-height: 1.25; }
+  .lc-promo-desc { font-size: 0.76rem; line-height: 1.5; margin-bottom: 0.8rem; }
+  .lc-promo-stats { gap: 0.3rem 0.7rem; margin-bottom: 0.9rem; }
+  .lc-promo-stat-item { font-size: 0.72rem; gap: 0.3rem; }
+  .lc-promo-stat-icon { width: 13px; height: 13px; }
+  .lc-promo-cta-btn { font-size: 0.8rem; padding: 0.6rem 1.1rem; min-height: 40px; }
+  .lc-promo-cta-btn svg { width: 15px; height: 15px; }
+}
+
+/* Phones: smaller type for the State / UT directory (hero, search, zone chips, state cards) */
+@media (max-width: 600px) {
+  .lc-state-directory-hero { border-radius: 16px; }
+  .lc-state-hero-content { padding: 18px 14px; gap: 10px; }
+  .lc-state-hero-badge { font-size: 11px; padding: 6px 11px; gap: 6px; }
+  .lc-state-hero-badge svg { width: 12px; height: 12px; }
+  .lc-state-directory-title { font-size: 1.15rem; line-height: 1.25; }
+  .lc-state-directory-subtitle { font-size: 0.74rem; line-height: 1.5; }
+  .lc-state-search-box { min-height: 40px; border-radius: 12px; }
+  .lc-state-search-icon { width: 15px; height: 15px; }
+  .lc-state-search-input { font-size: 14px; }
+  .lc-state-zone-chip { font-size: 12px; padding: 6px 14px; min-height: 32px; }
+  .lc-state-card-name { font-size: 0.92rem; }
+  .lc-state-card-count-badge { font-size: 10px; padding: 3px 8px; }
+  .lc-state-card-body { padding: 10px 12px 12px; }
+}

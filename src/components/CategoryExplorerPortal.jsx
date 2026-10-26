@@ -643,6 +643,7 @@ export default function CategoryExplorerPortal({
     () => typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
   );
   const [openSections, setOpenSections] = useState({ about: true, top: true, related: false, why: true });
+  const [aboutExpanded, setAboutExpanded] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 767px)');
     const onChange = () => setIsPhone(mq.matches);
@@ -1535,7 +1536,7 @@ export default function CategoryExplorerPortal({
     return (
       <div className="cep-container">
         {/* Breadcrumb Navigation */}
-        <nav className="cep-breadcrumbs" aria-label="Breadcrumb">
+        <nav className="cep-breadcrumbs cep-breadcrumbs-exam" aria-label="Breadcrumb">
           <span className="cep-bc-link" onClick={handleBackToOverview}>
             Home
           </span>
@@ -1621,6 +1622,7 @@ export default function CategoryExplorerPortal({
           </div>
 
           {/* ── The 5 Action Cards Row (Visual Showcase with Real Working Links) ── */}
+          <div className="cep-modules-head"><span>Study Resource Modules</span><span>5 Sections</span></div>
           <div className="cep-actions-grid" aria-label="Exam Preparation Modules">
             {/* 1. Introduction -> Expands and scrolls to collapsible introduction section */}
             <div
@@ -2251,8 +2253,24 @@ export default function CategoryExplorerPortal({
 
           {/* ── Multi-Facet Filter & Sort Toolbar for All Exams ── */}
           <div className="cep-all-exams-filter-bar">
-            <div className="cep-filter-chips-group" role="group" aria-label="Filter by qualification">
+            <div className="cep-filter-head">
               <span className="cep-filter-label"><Filter size={13} /> <span className="cep-filter-label-text">Qualification:</span></span>
+              <div className="cep-sort-group">
+                <label htmlFor="cep-sort-select" className="cep-filter-label">Sort:</label>
+                <select
+                  id="cep-sort-select"
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="cep-sort-select"
+                >
+                  <option value="relevance">Default Order</option>
+                  <option value="az">Name: A to Z</option>
+                  <option value="za">Name: Z to A</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="cep-filter-chips-group" role="group" aria-label="Filter by qualification">
               {[
                 { id: 'all', label: 'All Roles' },
                 { id: 'graduate', label: 'Graduate' },
@@ -2273,20 +2291,6 @@ export default function CategoryExplorerPortal({
                   {q.label}
                 </button>
               ))}
-            </div>
-
-            <div className="cep-sort-group">
-              <label htmlFor="cep-sort-select" className="cep-filter-label">Sort:</label>
-              <select
-                id="cep-sort-select"
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="cep-sort-select"
-              >
-                <option value="relevance">Default Order</option>
-                <option value="az">Name: A to Z</option>
-                <option value="za">Name: Z to A</option>
-              </select>
             </div>
 
             {(examSearch || qualFilter !== 'all') && (
@@ -2547,7 +2551,11 @@ export default function CategoryExplorerPortal({
             {renderColHeader('about', `About ${profile.category_name}`)}
 
             <div className="cep-acc-body" id="cep-acc-about" hidden={isPhone && !openSections.about}>
-            <p className="cep-about-text">{profile.about_text}</p>
+            <p className={`cep-about-text ${aboutExpanded ? 'expanded' : ''}`}>{profile.about_text}</p>
+            <button type="button" className="cep-about-more-btn" aria-expanded={aboutExpanded} onClick={() => setAboutExpanded(v => !v)}>
+              <span>{aboutExpanded ? 'Show less' : 'Read more'}</span>
+              <ArrowRight size={13} />
+            </button>
 
             <div className="cep-meta-grid">
               <div className="cep-meta-cell">

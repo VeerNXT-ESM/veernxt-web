@@ -23,6 +23,7 @@ export default function LearningBrowse() {
   const { catalog, loading, error } = useExamCatalog();
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [visible, setVisible] = useState(PAGE_SIZE);
+  const [sortDir, setSortDir] = useState('az');
 
   const isAll = level === 'all';
   const meta = LEVELS[level];
@@ -61,8 +62,9 @@ export default function LearningBrowse() {
         (e.category || '').toLowerCase().includes(text) ||
         (e.region?.name || '').toLowerCase().includes(text));
     }
-    return pool.slice().sort((a, b) => a.name.localeCompare(b.name));
-  }, [levelExams, level, category, regionId, q]);
+    const sorted = pool.slice().sort((a, b) => a.name.localeCompare(b.name));
+    return sortDir === 'za' ? sorted.reverse() : sorted;
+  }, [levelExams, level, category, regionId, q, sortDir]);
 
   if (!isAll && !meta) return <Navigate to="/v2/learning" replace />;
 
@@ -132,6 +134,15 @@ export default function LearningBrowse() {
         {filtersOpen && <div className="v2-side-scrim" onClick={() => setFiltersOpen(false)} role="presentation" />}
 
         <div className="v2-results">
+          {/* Phones: category / state chips replace the side drawer */}
+          {!isAll && (
+            <div className="v2-chip-row" role="group" aria-label={sideTitle}>
+              <button type="button" className={!selectedId ? 'active' : ''} onClick={() => setParam(filterParam, '')}>All</button>
+              {sideItems.map((i) => (
+                <button key={i.id} type="button" className={selectedId === i.id ? 'active' : ''} onClick={() => setParam(filterParam, i.id)}>{i.name}</button>
+              ))}
+            </div>
+          )}
           <div className="v2-results-bar">
             <button type="button" className="v2-filter-btn" onClick={() => setFiltersOpen(true)}>
               <SlidersHorizontal size={16} /> Filters
@@ -147,6 +158,13 @@ export default function LearningBrowse() {
               />
             </div>
             <span className="v2-count">{loading ? 'Loading…' : `${results.length} ${results.length === 1 ? 'exam' : 'exams'}`}</span>
+            <label className="v2-sort">
+              Sort:
+              <select value={sortDir} onChange={(e) => setSortDir(e.target.value)} aria-label="Sort exams">
+                <option value="az">A to Z</option>
+                <option value="za">Z to A</option>
+              </select>
+            </label>
           </div>
 
           {error && <p className="v2-error" role="alert">{error}</p>}

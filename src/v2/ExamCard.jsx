@@ -46,6 +46,7 @@ export function ExamCard({ exam, from }) {
         <h3>{exam.name}</h3>
         <p>{exam.conducting_body?.name || exam.region?.name || ''}</p>
         {exam.category && <span className="v2-chip">{exam.category}</span>}
+        <ArrowRight size={16} className="v2-exam-arrow" aria-hidden="true" />
       </div>
     </Link>
   );

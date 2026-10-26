@@ -15,6 +15,7 @@ const FEATURES = [
 
 function Row({ level, items, loading, buildTo, imageCategory }) {
   const trackRef = useRef(null);
+  const [dot, setDot] = useState(0);
   const scroll = (dir) => trackRef.current?.scrollBy({ left: dir * 320, behavior: 'smooth' });
   const meta = LEVELS[level];
 
@@ -28,13 +29,18 @@ function Row({ level, items, loading, buildTo, imageCategory }) {
           <button type="button" className="v2-arrow" onClick={() => scroll(1)} aria-label={`Scroll ${meta.label} right`}><ChevronRight size={18} /></button>
         </div>
       </div>
-      <div className="v2-row-track" ref={trackRef}>
+      <div className="v2-row-track" ref={trackRef} onScroll={(e) => { const t = e.currentTarget; const first = t.firstElementChild; if (first) setDot(Math.round(t.scrollLeft / (first.offsetWidth + 12))); }}>
         {loading && Array.from({ length: 6 }).map((_, i) => <div key={i} className="v2-tile v2-skeleton" />)}
         {!loading && items.length === 0 && <p className="v2-empty">No exams listed yet.</p>}
         {!loading && items.map((it) => (
           <GroupTile key={it.key} to={buildTo(it)} name={it.name} count={it.count} imageCategory={imageCategory ? it.name : null} />
         ))}
       </div>
+      {!loading && items.length > 1 && (
+        <div className="v2-row-dots" aria-hidden="true">
+          {items.slice(0, 6).map((it, i) => <span key={it.key} className={i === Math.min(dot, 5) ? 'on' : ''} />)}
+        </div>
+      )}
     </section>
   );
 }

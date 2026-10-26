@@ -1,3 +1,4 @@
+import './privateSectorPhone.css';
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
@@ -679,20 +680,20 @@ const PrivateSectorOpportunities = () => {
                         </div>
 
                         {opp.description && (
-                          <p style={{ margin: '0 0 0.6rem', fontSize: '0.9rem', color: 'var(--c-ink-2, #334155)', lineHeight: 1.5 }}>
+                          <p className="ps-opp-desc" style={{ margin: '0 0 0.6rem', fontSize: '0.9rem', color: 'var(--c-ink-2, #334155)', lineHeight: 1.5 }}>
                             {opp.description}
                           </p>
                         )}
 
                         {opp.requirements_text && (
-                          <p style={{ margin: '0 0 0.75rem', fontSize: '0.84rem', color: 'var(--c-ink-4, #64748b)' }}>
+                          <p className="ps-opp-req" style={{ margin: '0 0 0.75rem', fontSize: '0.84rem', color: 'var(--c-ink-4, #64748b)' }}>
                             <strong>Requirements:</strong> {opp.requirements_text}
                           </p>
                         )}
 
                         {/* Render Tags */}
                         {opp.tags && opp.tags.length > 0 && (
-                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginTop: '0.4rem' }}>
+                          <div className="ps-opp-tags" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginTop: '0.4rem' }}>
                             {opp.tags.map((tag) => (
                               <span
                                 key={tag}

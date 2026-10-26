@@ -3475,18 +3475,18 @@
     top: 6px;
     right: 8px;
     max-width: 72%;
-    font-size: 9.5px;
+    font-size: 9px;
   }
   .cep-q .cep-card-content {
-    padding: 10px 10px 10px;
+    padding: 8px 9px 9px;
   }
   .cep-q .cep-card-title {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.25;
     margin-bottom: 4px;
   }
   .cep-q .cep-card-desc {
-    font-size: 12px;
+    font-size: 11.5px;
     line-height: 1.4;
     margin-bottom: 8px;
     min-height: 0;
@@ -3494,11 +3494,11 @@
   }
   .cep-q .cep-card-pills-row {
     gap: 5px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   .cep-q .cep-pill {
-    padding: 3px 7px;
-    font-size: 10.5px;
+    padding: 2px 6px;
+    font-size: 10px;
     gap: 4px;
   }
   .cep-q .cep-card-footer-row {
@@ -3510,14 +3510,14 @@
     align-items: flex-start;
     gap: 3px;
     min-width: 0;
-    font-size: 11px;
+    font-size: 10.5px;
   }
   .cep-q .cep-meta-divider {
     display: none;
   }
   .cep-q .cep-card-circle-btn {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -3841,4 +3841,265 @@
   .cep-job-card { padding: 14px 12px; }
   .cep-job-card-footer { flex-direction: column; align-items: stretch; gap: 10px; }
   .cep-job-apply-btn { width: 100%; min-height: 46px; justify-content: center; }
+}
+
+/* ── Filter bar: label + sort head row, qualification chips beneath ── */
+/* Larger screens: the head is transparent so label, chips and sort sit in one row as before */
+.cep-filter-head { display: contents; }
+.cep-all-exams-filter-bar { justify-content: flex-start; }
+.cep-filter-head .cep-filter-label { order: 1; }
+.cep-all-exams-filter-bar .cep-filter-chips-group { order: 2; }
+.cep-filter-head .cep-sort-group { order: 3; margin-left: auto; }
+
+@media (max-width: 767px) {
+  /* Flat on phones: no card around the controls; label left / sort right, then swipeable chips */
+  .cep-all-exams-filter-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 14px;
+  }
+  .cep-filter-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    order: 1;
+  }
+  .cep-filter-head .cep-filter-label,
+  .cep-filter-head .cep-sort-group { order: 0; margin-left: 0; }
+  .cep-filter-head .cep-filter-label { font-size: 0.78rem; margin: 0; }
+  .cep-all-exams-filter-bar .cep-filter-chips-group { order: 2; width: calc(100% + 28px); margin: 0 -14px; padding: 2px 14px; }
+  /* show the word "Qualification" again next to the funnel icon */
+  .cep-filter-head .cep-filter-label-text {
+    position: static; width: auto; height: auto; margin: 0; padding: 0; overflow: visible; clip: auto; white-space: nowrap;
+  }
+  .cep-filter-head .cep-sort-group { width: auto; flex: 0 1 auto; gap: 6px; }
+  .cep-filter-head .cep-sort-select {
+    flex: 0 1 auto; max-width: none; min-height: 36px; padding: 4px 6px;
+    border: none; background-color: transparent; font-size: 0.85rem; font-weight: 700; color: var(--c-ink-1, #0f172a);
+  }
+}
+
+/* Phones: the "Why Choose Veer Next" block is omitted */
+@media (max-width: 767px) {
+  .cep-why-choose-card { display: none; }
+}
+
+/* Phones: slimmer header block above the exam grid (back button, title, search, filters) */
+@media (max-width: 600px) {
+  .cep-all-exams-card { padding: 12px 12px; gap: 10px; }
+  .cep-all-exams-header { gap: 8px; padding-bottom: 8px; }
+  .cep-back-to-overview-btn { min-height: 34px; padding: 6px 12px; font-size: 12px; border-radius: 10px; }
+  .cep-all-exams-title-row { gap: 8px; }
+  .cep-all-exams-title-row .cep-col-title { font-size: 14.5px; }
+  .cep-all-exams-count-badge { font-size: 11px; padding: 3px 9px; }
+  .cep-all-exams-search-box { height: 40px; }
+  .cep-all-exams-search-box .cep-search-icon-pill { width: 28px; height: 28px; }
+  .cep-all-exams-search-box .cep-search-icon-pill svg { width: 14px; height: 14px; }
+  .cep-all-exams-search-box .cep-search-input { font-size: 14px; }
+  .cep-all-exams-filter-bar { gap: 8px; margin-bottom: 10px; }
+  .cep-filter-head .cep-filter-label { font-size: 0.68rem; }
+  .cep-filter-head .cep-filter-label svg { width: 12px; height: 12px; }
+  .cep-filter-head .cep-sort-select { min-height: 30px; font-size: 0.76rem; }
+  .cep-filter-head .cep-sort-group .cep-filter-label { font-size: 0.68rem; }
+  .cep-filter-chip { min-height: 32px; padding: 4px 12px; font-size: 0.76rem; }
+  .cep-all-exams-filter-bar .cep-filter-chips-group { gap: 6px; }
+}
+
+/* ── Exam detail on phones: compact hero, resource cards, handbook and job cards ── */
+@media (max-width: 600px) {
+  /* Hero */
+  .cep-exam-showcase-banner { border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(6,78,59,.3), 0 8px 10px -6px rgba(6,78,59,.2); }
+  .cep-exam-showcase-left-wrap { padding: 18px 16px; gap: 10px; }
+  .cep-exam-showcase-title { font-size: 17.5px; line-height: 1.3; font-weight: 700; }
+  .cep-exam-meta-pills-row { gap: 6px; }
+  .cep-meta-pill-item { font-size: 10.5px; padding: 3px 9px; }
+  .cep-exam-showcase-desc { font-size: 11.5px; line-height: 1.5; }
+
+  /* Resource cards (2-up grid + full-width Mock Tests) */
+  .cep-actions-grid { gap: 12px; }
+  .cep-action-card { padding: 14px 12px; border-radius: 16px; box-shadow: 0 4px 14px -2px rgba(0,0,0,.04); }
+  .cep-action-title { font-size: 13px; }
+  .cep-action-desc { font-size: 10.5px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .cep-action-card-badge { font-size: 9.5px; padding: 3px 8px; }
+  .cep-action-arrow-circle { width: 26px; height: 26px; }
+  .cep-action-arrow-circle svg { width: 13px; height: 13px; }
+
+  /* Handbook card */
+  .cep-intro-collapsible-section { border-radius: 18px; }
+  .cep-intro-header-title { font-size: 13.5px; }
+  .cep-intro-header-badge { font-size: 9.5px; }
+  .cep-intro-header-desc { font-size: 11px; }
+  .cep-intro-toggle-wrap { min-height: 32px; }
+  .cep-intro-auto-title { font-size: 14px; }
+  .cep-intro-auto-desc { font-size: 11.5px; }
+  .cep-intro-read-btn { min-height: 40px; font-size: 12.5px; border-radius: 10px; }
+  .cep-intro-highlights-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .cep-intro-highlight-card { padding: 10px 12px; border-radius: 12px; }
+  .cep-highlight-label { font-size: 9px; }
+  .cep-highlight-value { font-size: 11.5px; }
+
+  /* Jobs */
+  .cep-jobs-title { font-size: 15px; }
+  .cep-jobs-sub { font-size: 11px; }
+  .cep-jobs-count-tag { font-size: 10.5px; }
+  .cep-jobs-search-box { min-height: 42px; border-radius: 12px; }
+  .cep-jobs-search-input { font-size: 13px; }
+  .cep-job-card { padding: 14px; border-radius: 16px; box-shadow: 0 4px 16px -2px rgba(0,0,0,.05), 0 2px 6px -1px rgba(0,0,0,.03); }
+  .cep-job-card-title { font-size: 13px; line-height: 1.35; font-weight: 700; }
+  .cep-job-card-dept { font-size: 11.5px; font-weight: 600; }
+  .cep-job-tag { font-size: 10.5px; }
+  /* Status / deadline on the left, compact Apply button on the right */
+  .cep-job-card-footer { flex-direction: row; align-items: center; justify-content: space-between; gap: 10px; }
+  .cep-job-apply-btn { width: auto; min-height: 32px; padding: 0 12px; font-size: 11.5px; border-radius: 8px; flex: 0 0 auto; }
+}
+
+/* ══ Exam detail on phones — "archive" look: mono labels, horizontal module cards, compact job rows ══ */
+.cep-modules-head { display: none; }
+@media (max-width: 600px) {
+  .cep-exam-hub-card {
+    --cep-navy: #0b1730;
+  }
+  /* Hero: status pill above the title, outlined mono chips */
+  .cep-exam-showcase-title-row { display: flex; flex-direction: column-reverse; align-items: flex-start; gap: 10px; }
+  .cep-exam-primary-pill {
+    font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 6px; background: rgba(16,185,129,.12); border: 1px solid rgba(110,231,183,.45); color: #a7f3d0;
+  }
+  .cep-exam-showcase-title { font-size: 19px; line-height: 1.3; font-weight: 700; }
+  .cep-meta-pill-item {
+    font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+    background: transparent; border: 1px solid rgba(110,231,183,.5); border-radius: 6px; padding: 5px 10px; color: #ecfdf5;
+  }
+
+  /* Section label above the modules */
+  .cep-modules-head {
+    display: flex; justify-content: space-between; align-items: center; margin: 14px 2px 8px;
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--c-ink-3, #475569);
+  }
+  .cep-modules-head span:last-child { color: var(--c-green, #047857); font-weight: 700; }
+
+  /* Module cards: icon left, text right, footer row with label + dark arrow */
+  .cep-action-card {
+    display: grid; grid-template-columns: 38px minmax(0, 1fr); grid-template-rows: auto auto;
+    column-gap: 10px; row-gap: 2px; align-items: start; padding: 12px 12px 46px; min-height: 0;
+  }
+  .cep-action-icon-wrap { grid-column: 1; grid-row: 1 / span 2; width: 38px; height: 38px; border-radius: 12px; margin: 0; transform: none; }
+  .cep-action-icon-wrap svg { width: 18px; height: 18px; }
+  .cep-action-title { grid-column: 2; grid-row: 1; font-size: 13px; margin: 0; }
+  .cep-action-desc { grid-column: 2; grid-row: 2; font-size: 10.5px; margin: 0; }
+  .cep-action-card::after { content: ''; position: absolute; left: 12px; right: 12px; bottom: 38px; border-top: 1px solid var(--c-line-2, #e2e8f0); }
+  .cep-action-card-badge {
+    position: absolute; left: 12px; bottom: 12px; margin: 0; padding: 0; background: transparent !important;
+    color: var(--c-ink-1, #0f172a) !important; font-size: 11px; font-weight: 600; max-width: calc(100% - 56px);
+  }
+  .cep-action-arrow-circle { bottom: 8px; right: 10px; width: 28px; height: 28px; min-width: 28px; min-height: 28px; background: var(--cep-navy) !important; color: #fff; }
+  .cep-actions-grid > :last-child:nth-child(odd) { border-left: 4px solid #a855f7; }
+
+  /* Handbook card */
+  .cep-intro-auto-kicker { font-size: 10px; letter-spacing: .08em; }
+  .cep-intro-header-badge { font-size: 9px; letter-spacing: .08em; background: transparent; border: none; padding: 0; color: var(--c-ink-4, #64748b); }
+  .cep-intro-read-btn { background: var(--cep-navy) !important; border-radius: 8px; }
+  .cep-highlight-label { text-transform: none; letter-spacing: 0; font-size: 11px; font-weight: 500; color: var(--c-ink-4, #64748b); }
+  .cep-highlight-value { font-size: 12.5px; font-weight: 700; }
+
+  /* Jobs: title block left, compact action button right */
+  .cep-jobs-title { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; }
+  .cep-jobs-count-tag { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+  .cep-job-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "top top" "tags btn" "date btn"; column-gap: 10px; row-gap: 6px; align-items: center; padding: 12px; }
+  .cep-job-card-top { grid-area: top; }
+  .cep-job-card-tags { grid-area: tags; margin: 0; }
+  .cep-job-card-footer { display: contents; }
+  .cep-job-date { grid-area: date; font-size: 10px; }
+  .cep-job-apply-btn { grid-area: btn; align-self: end; background: var(--cep-navy) !important; border-radius: 6px; min-height: 30px; }
+}
+@media (max-width: 600px) {
+  .cep-action-card-badge { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 10.5px; }
+}
+
+/* ── SSC overview on phones: shorter, easier to scan ── */
+.cep-about-more-btn { display: none; }
+@media (max-width: 600px) {
+  /* Banner */
+  .cep-category-hero-title, .cep-hero-banner h1 { font-size: 1.6rem; }
+
+  /* Search + filter card: compact, chips in one swipeable row */
+  .cep-overview-search-toolbar { padding: 10px 12px; gap: 8px; border-radius: 16px; }
+  .cep-overview-search-box { min-height: 40px; }
+  .cep-overview-search-input { font-size: 14px; }
+  .cep-overview-filter-row { gap: 6px; }
+  .cep-overview-qual-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: 6px; padding-bottom: 2px; }
+  .cep-overview-qual-chips::-webkit-scrollbar { display: none; }
+  .cep-overview-qual-chips > * { flex: 0 0 auto; white-space: nowrap; }
+  .cep-overview-qual-chips .cep-filter-chip { min-height: 32px; padding: 4px 12px; font-size: 0.76rem; }
+
+  /* About: short intro + Read more, four compact facts */
+  .cep-about-text { font-size: 13px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 4px; }
+  .cep-about-text.expanded { display: block; -webkit-line-clamp: unset; }
+  .cep-about-more-btn {
+    display: inline-flex; align-items: center; gap: 4px; margin: 0 0 12px; padding: 4px 0; min-height: 32px;
+    background: none; border: none; color: var(--c-green, #047857); font-weight: 700; font-size: 13px; cursor: pointer;
+  }
+  .cep-meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .cep-meta-cell { padding: 8px 10px; border-radius: 12px; background: var(--c-bg-1, #f8fafc); border: 1px solid var(--c-line-2, #e2e8f0); gap: 8px; align-items: center; }
+  .cep-meta-icon-box { width: 30px; height: 30px; flex: 0 0 30px; border-radius: 9px; }
+  .cep-meta-icon-box svg { width: 15px; height: 15px; }
+  .cep-meta-label { font-size: 10.5px; }
+  .cep-meta-value { font-size: 11.5px; line-height: 1.3; }
+  .cep-see-all-exams-btn { width: 100%; justify-content: center; min-height: 44px; margin-top: 12px; }
+
+  /* Top Exams: flat list rows (check icon, name, chevron) instead of bordered cards */
+  .cep-exams-list { gap: 0; }
+  .cep-exam-item-row { border: none; border-bottom: 1px solid var(--c-line-1, #f1f5f9); border-radius: 0; background: transparent; box-shadow: none; padding: 10px 2px; min-height: 52px; }
+  .cep-exam-item-row:last-child { border-bottom: none; }
+  .cep-check-icon-wrap { background: var(--c-tint-green, #e7f6ee); border-radius: 50%; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 32px; }
+  .cep-exam-row-title { font-size: 13px; }
+  .cep-exam-row-subtitle { font-size: 11px; }
+}
+
+/* ── Phone polish: overview search, pagination, exam crumbs, jobs header ── */
+@media (max-width: 600px) {
+  /* 1) Overview search: slimmer, smaller text */
+  .cep-overview-search-box { min-height: 36px; height: 36px; padding: 0 10px; gap: 8px; }
+  .cep-overview-search-box .cep-search-icon-pill { width: 24px; height: 24px; }
+  .cep-overview-search-box svg { width: 13px; height: 13px; }
+  .cep-overview-search-input { font-size: 12.5px; }
+
+  /* 2) Pagination numbers */
+  .cep-pagination-info { font-size: 12px; }
+  .cep-pagination-controls { gap: 6px; }
+  .cep-page-nav-btn, .cep-page-num-btn { min-width: 32px; min-height: 32px; width: auto; height: 32px; padding: 0 8px; font-size: 12.5px; border-radius: 8px; }
+  .cep-page-nav-btn svg { width: 14px; height: 14px; }
+
+  /* 3) Exam detail crumbs: Back button on its own row, trail underneath */
+  .cep-exam-hub-crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 6px; }
+  .cep-exam-back-btn { flex: 1 1 100%; justify-content: flex-start; min-height: 36px; padding: 6px 12px; font-size: 12.5px; border-radius: 10px; }
+  .cep-crumb-trail, .cep-crumb-active { font-size: 12px; }
+  .cep-crumb-active { flex: 1 1 0; min-width: 0; font-weight: 700; }
+
+  /* 4) Jobs header: icon + sentence-case title, clean filter box */
+  .cep-jobs-head-left { gap: 10px; align-items: flex-start; }
+  .cep-jobs-icon-badge { width: 34px; height: 34px; border-radius: 10px; }
+  .cep-jobs-icon-badge svg { width: 17px; height: 17px; }
+  .cep-jobs-title { font-size: 14px; letter-spacing: 0; text-transform: none; line-height: 1.3; font-weight: 700; }
+  .cep-jobs-sub { font-size: 11px; line-height: 1.4; margin-top: 2px; }
+  .cep-jobs-search-box { height: 38px; padding: 0 12px; gap: 8px; }
+  .cep-jobs-search-input { font-size: 13px; }
+  .cep-jobs-search-box .cep-search-icon { width: 14px; height: 14px; }
+  .cep-jobs-count-tag { align-self: flex-start; font-size: 10px; letter-spacing: .04em; text-transform: none; padding: 3px 9px; }
+}
+
+/* Phones: exam page shows only the Back button — the breadcrumb trails are omitted */
+@media (max-width: 600px) {
+  .cep-breadcrumbs-exam { display: none; }
+  .cep-exam-hub-crumbs .cep-crumb-pipe,
+  .cep-exam-hub-crumbs .cep-crumb-trail,
+  .cep-exam-hub-crumbs .cep-bc-sep,
+  .cep-exam-hub-crumbs .cep-crumb-active { display: none; }
 }

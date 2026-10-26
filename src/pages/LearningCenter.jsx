@@ -2448,6 +2448,8 @@ const LearningCenter = () => {
             <section className="lc-content-rail">
               {/* ── Top Bar: Mode Tabs + Region Selector Pills ── */}
               <div className="lc-explorer-top-bar">
+                {/* Phones: mode tabs + region chips share one swipeable row (display: contents on larger screens) */}
+                <div className="lc-pill-row">
                 <div className="lc-top-tabs-bar" role="tablist" aria-label="Learning View Mode">
                   <button
                     type="button"
@@ -2472,29 +2474,6 @@ const LearningCenter = () => {
                     <Sparkles size={16} className="lc-top-tab-icon" />
                     <span>Recommended Exams</span>
                   </button>
-                </div>
-
-                {/* Live Top Search across all exams */}
-                <div className="lc-top-search-wrap">
-                  <Search size={14} className="lc-top-search-icon" />
-                  <input
-                    type="text"
-                    placeholder="Search any exam, syllabus or role..."
-                    value={topSearchText}
-                    onChange={(e) => setTopSearchText(e.target.value)}
-                    className="lc-top-search-input"
-                    aria-label="Search all exams and syllabi"
-                  />
-                  {topSearchText && (
-                    <button
-                      type="button"
-                      className="lc-top-search-clear"
-                      onClick={() => setTopSearchText('')}
-                      aria-label="Clear top search"
-                    >
-                      <X size={13} />
-                    </button>
-                  )}
                 </div>
 
                 {rightTab === 'explorer' && (
@@ -2528,6 +2507,31 @@ const LearningCenter = () => {
                     </button>
                   </div>
                 )}
+                </div>
+
+                {/* Live Top Search across all exams (sits under the pill row on phones) */}
+                <div className="lc-top-search-wrap">
+                  <Search size={14} className="lc-top-search-icon" />
+                  <input
+                    type="text"
+                    placeholder="Search any exam, syllabus or role..."
+                    value={topSearchText}
+                    onChange={(e) => setTopSearchText(e.target.value)}
+                    className="lc-top-search-input"
+                    aria-label="Search all exams and syllabi"
+                  />
+                  {topSearchText && (
+                    <button
+                      type="button"
+                      className="lc-top-search-clear"
+                      onClick={() => setTopSearchText('')}
+                      aria-label="Clear top search"
+                    >
+                      <X size={13} />
+                    </button>
+                  )}
+                </div>
+
 
                 {/* Tablet/phone: opens the category sidebar as a drawer (hidden on desktop via CSS).
                     Not needed on the State/UT directory, which lists the states in the page itself. */}

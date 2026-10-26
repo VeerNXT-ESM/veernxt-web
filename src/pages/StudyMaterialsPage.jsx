@@ -12,6 +12,7 @@ import {
   Award,
   ChevronLeft,
   ChevronRight,
+  ArrowLeft,
   ChevronDown,
   ArrowRight,
   CheckCircle2,
@@ -210,6 +211,26 @@ const CATALOG_BOOKS = [
   },
 ];
 
+const HERO_PILLS = [
+  { cls: 'smp-pill-green', Icon: BookOpen, title: 'Latest Syllabus Coverage', sub: 'Updated syllabus with topic-wise details' },
+  { cls: 'smp-pill-orange', Icon: FileText, title: 'Exam-Oriented Content', sub: 'Chapter-wise theory & important topics' },
+  { cls: 'smp-pill-teal', Icon: Target, title: 'Concept Clarity with Examples', sub: 'Easy explanations with solved examples' },
+  { cls: 'smp-pill-gold', Icon: FileQuestion, title: 'Practice Questions & PYQs', sub: 'Chapter-wise practice and previous year papers' },
+];
+
+// Rendered twice: inside the hero card (desktop/tablet) and as cards under it (phones); CSS shows one of them.
+const HeroPills = ({ className }) => (
+  <div className={className} role="list">
+    {HERO_PILLS.map(({ cls, Icon, title, sub }) => (
+      <div key={title} className={`smp-hero-pill ${cls}`} role="listitem">
+        <div className="smp-hero-pill-icon"><Icon size={13} /></div>
+        <span className="smp-pill-text">{title}<small className="smp-pill-sub">{sub}</small></span>
+        <ChevronRight size={14} className="smp-pill-arrow" aria-hidden="true" />
+      </div>
+    ))}
+  </div>
+);
+
 export default function StudyMaterialsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -232,12 +253,15 @@ export default function StudyMaterialsPage() {
   const booksScrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [activeBookIdx, setActiveBookIdx] = useState(0);
 
   const checkScroll = () => {
     if (booksScrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = booksScrollRef.current;
       setCanScrollLeft(scrollLeft > 10);
       setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+      const first = booksScrollRef.current.firstElementChild;
+      if (first) setActiveBookIdx(Math.round(scrollLeft / (first.offsetWidth + 14)));
     }
   };
 
@@ -421,6 +445,60 @@ export default function StudyMaterialsPage() {
     return () => window.removeEventListener('resize', checkScroll);
   }, [booksWithCombinations]);
 
+  // Exam selector + Guidebooks/Préci switch: inside the hero on larger screens, as separate cards on phones
+  const renderControls = (variant) => (
+    <div className={`smp-hero-controls-bar smp-controls-${variant}`}>
+      <div className="smp-exam-selector-card">
+        <div className="smp-selector-icon-wrap">
+          <GraduationCap size={18} />
+        </div>
+        <div className="smp-selector-body">
+          <label className="smp-selector-label" htmlFor={`smp-exam-select-${variant}`}>
+            TARGET EXAMINATION
+          </label>
+          <div className="smp-select-container">
+            <select
+              id={`smp-exam-select-${variant}`}
+              className="smp-exam-select"
+              value={selectedExam?.id || ''}
+              onChange={(e) => handleExamChange(e.target.value)}
+            >
+              {categoryExams.length === 0 && selectedExam && (
+                <option value={selectedExam.id}>{selectedExam.name}</option>
+              )}
+              {categoryExams.map((ex) => (
+                <option key={ex.id} value={ex.id}>
+                  {ex.name}
+                </option>
+              ))}
+            </select>
+            <ChevronDown size={16} className="smp-select-arrow" />
+          </div>
+        </div>
+      </div>
+
+      {/* Guidebooks / Préci Switcher Pills */}
+      <div className="smp-type-switcher">
+        <button
+          type="button"
+          className={`smp-type-btn ${isGuide ? 'active' : ''}`}
+          onClick={() => handleTypeChange('guide')}
+        >
+          <BookOpen size={15} />
+          <span>Guidebooks</span>
+        </button>
+        <button
+          type="button"
+          className={`smp-type-btn ${!isGuide ? 'active' : ''}`}
+          onClick={() => handleTypeChange('precis')}
+        >
+          <Target size={15} />
+          <span>Préci Notes</span>
+        </button>
+      </div>
+    </div>
+  );
+
   return (
     <div className="smp-page-wrapper">
       <div className="smp-container">
@@ -444,6 +522,15 @@ export default function StudyMaterialsPage() {
           <span className="smp-bc-current">{pageTypeTitle}</span>
         </nav>
 
+        {/* Phones: back to the exam page (the breadcrumb row is hidden there) */}
+        <Link
+          to={`/learning-center?category=${encodeURIComponent(categoryParam)}&exam=${encodeURIComponent(selectedExam?.id || examParam || '')}`}
+          className="smp-back-btn"
+        >
+          <ArrowLeft size={15} />
+          <span>Back</span>
+        </Link>
+
         {/* ── Hero Banner Section (Warm Editorial Layout with Full Exam Name & Selector) ── */}
         <section className="smp-hero-card" aria-label={`${currentExamFullName} ${pageTypeTitle} Overview`}>
           <div className="smp-hero-content">
@@ -464,75 +551,9 @@ export default function StudyMaterialsPage() {
             </p>
 
             {/* ── Interactive Target Exam Selector & Type Switcher ── */}
-            <div className="smp-hero-controls-bar">
-              <div className="smp-exam-selector-card">
-                <div className="smp-selector-icon-wrap">
-                  <GraduationCap size={18} />
-                </div>
-                <div className="smp-selector-body">
-                  <label className="smp-selector-label" htmlFor="smp-exam-select">
-                    TARGET EXAMINATION
-                  </label>
-                  <div className="smp-select-container">
-                    <select
-                      id="smp-exam-select"
-                      className="smp-exam-select"
-                      value={selectedExam?.id || ''}
-                      onChange={(e) => handleExamChange(e.target.value)}
-                    >
-                      {categoryExams.length === 0 && selectedExam && (
-                        <option value={selectedExam.id}>{selectedExam.name}</option>
-                      )}
-                      {categoryExams.map((ex) => (
-                        <option key={ex.id} value={ex.id}>
-                          {ex.name}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown size={16} className="smp-select-arrow" />
-                  </div>
-                </div>
-              </div>
+            {renderControls('in')}
 
-              {/* Guidebooks / Préci Switcher Pills */}
-              <div className="smp-type-switcher">
-                <button
-                  type="button"
-                  className={`smp-type-btn ${isGuide ? 'active' : ''}`}
-                  onClick={() => handleTypeChange('guide')}
-                >
-                  <BookOpen size={15} />
-                  <span>Guidebooks</span>
-                </button>
-                <button
-                  type="button"
-                  className={`smp-type-btn ${!isGuide ? 'active' : ''}`}
-                  onClick={() => handleTypeChange('precis')}
-                >
-                  <Target size={15} />
-                  <span>Préci Notes</span>
-                </button>
-              </div>
-            </div>
-
-            <div className="smp-hero-pills" role="list">
-              <div className="smp-hero-pill smp-pill-green" role="listitem">
-                <div className="smp-hero-pill-icon"><BookOpen size={13} /></div>
-                <span>Latest Syllabus Coverage</span>
-              </div>
-              <div className="smp-hero-pill smp-pill-orange" role="listitem">
-                <div className="smp-hero-pill-icon"><FileText size={13} /></div>
-                <span>Exam-Oriented Content</span>
-              </div>
-              <div className="smp-hero-pill smp-pill-teal" role="listitem">
-                <div className="smp-hero-pill-icon"><Target size={13} /></div>
-                <span>Concept Clarity with Examples</span>
-              </div>
-              <div className="smp-hero-pill smp-pill-gold" role="listitem">
-                <div className="smp-hero-pill-icon"><FileQuestion size={13} /></div>
-                <span>Practice Questions & PYQs</span>
-              </div>
-            </div>
+            <HeroPills className="smp-hero-pills smp-hero-pills-in" />
           </div>
 
           {/* Right Visual with Photographic Books & Script Overlay */}
@@ -567,6 +588,10 @@ export default function StudyMaterialsPage() {
           </div>
         </section>
 
+        {renderControls('phone')}
+
+        <HeroPills className="smp-hero-pills smp-hero-pills-phone" />
+
         {/* ── Trust / Metric Bar ── */}
         <div className="smp-trust-bar">
           <div className="smp-trust-items">
@@ -574,31 +599,31 @@ export default function StudyMaterialsPage() {
               <div className="smp-trust-icon" style={{ color: 'var(--c-green, #059669)' }}>
                 <BookOpen size={17} />
               </div>
-              <span>{booksWithCombinations.length} {pageTypeTitle} for {currentExamFullName}</span>
+              <span><b className="smp-trust-main">{booksWithCombinations.length} {pageTypeTitle}</b><span className="smp-trust-opt"> for {currentExamFullName}</span><small className="smp-trust-sub">Complete coverage</small></span>
             </div>
 
             <div className="smp-trust-item">
               <div className="smp-trust-icon" style={{ color: 'var(--c-blue, #0284c7)' }}>
                 <Users size={17} />
               </div>
-              <span>50,000+ Happy Learners</span>
+              <span><b className="smp-trust-main">50,000+ <span className="smp-trust-opt">Happy </span>Learners</b><small className="smp-trust-sub">Trusted by aspirants</small></span>
             </div>
 
             <div className="smp-trust-item">
               <div className="smp-trust-icon" style={{ color: '#eab308' }}>
                 <Star size={17} fill="#eab308" />
               </div>
-              <span>4.8/5 Student Rating</span>
+              <span><b className="smp-trust-main">4.8/5 <span className="smp-trust-opt">Student </span>Rating</b><small className="smp-trust-sub">Student satisfaction</small></span>
             </div>
 
             <div className="smp-trust-item">
               <div className="smp-trust-icon" style={{ color: 'var(--c-green, #059669)' }}>
                 <Shield size={17} />
               </div>
-              <span>Exam-Oriented & Updated</span>
+              <span><b className="smp-trust-main">Exam-Oriented<span className="smp-trust-opt"> & Updated</span></b><small className="smp-trust-sub">Always updated</small></span>
             </div>
 
-            <div className="smp-trust-item">
+            <div className="smp-trust-item smp-trust-item-extra">
               <div className="smp-trust-icon" style={{ color: 'var(--c-green, #16a34a)' }}>
                 <Calendar size={17} />
               </div>
@@ -621,7 +646,8 @@ export default function StudyMaterialsPage() {
                 <div className="smp-section-bar" />
                 <div>
                   <h2 className="smp-section-title">
-                    Our {pageTypeTitle} for {currentExamFullName}
+                    <span className="smp-title-full">Our {pageTypeTitle} for {currentExamFullName}</span>
+                    <span className="smp-title-short">{currentExamShortName} {pageTypeTitle}</span>
                   </h2>
                   <p className="smp-section-sub">
                     Well-structured, exam-focused and easy-to-understand study material.
@@ -708,7 +734,16 @@ export default function StudyMaterialsPage() {
                 }
 
                 return (
-                  <div key={book.id} className="smp-book-card">
+                  <div
+                    key={book.id}
+                    className="smp-book-card"
+                    onClick={() => {
+                      // Phones: tapping the book opens its notes directly (the buttons are hidden there)
+                      if (typeof window !== 'undefined' && window.matchMedia('(max-width: 600px)').matches) {
+                        navigate(`/reader/${book.resourceId || book.slug || 'sample'}`);
+                      }
+                    }}
+                  >
                     {book.isBestSeller && (
                       <div className="smp-bestseller-badge">
                         <Star size={11} fill="#92400e" />
@@ -865,6 +900,11 @@ export default function StudyMaterialsPage() {
                   </div>
                 );
               })}
+              </div>
+              <div className="smp-books-dots" aria-hidden="true">
+                {booksWithCombinations.map((b, i) => (
+                  <span key={i} className={`smp-books-dot ${i === activeBookIdx ? 'active' : ''}`} />
+                ))}
               </div>
             </div>
           </div>
@@ -1141,11 +1181,15 @@ export default function StudyMaterialsPage() {
         {/* ── Compare Books Modal ── */}
         {isCompareOpen && (
           <div className="smp-modal-backdrop" onClick={() => setIsCompareOpen(false)}>
-            <div className="smp-modal-box" style={{ maxWidth: '880px' }} onClick={(e) => e.stopPropagation()}>
+            <div className="smp-modal-box smp-cmp-box" style={{ maxWidth: '880px' }} onClick={(e) => e.stopPropagation()}>
+              <span className="smp-sheet-handle" aria-hidden="true" />
               <div className="smp-modal-head">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <Scale size={20} color="#064e3b" />
-                  <h3 className="smp-modal-title">Compare {currentExamShortName} {pageTypeTitle}</h3>
+                <div className="smp-cmp-head-left" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <span className="smp-cmp-icon"><Scale size={20} color="#064e3b" /></span>
+                  <div className="smp-cmp-head-text">
+                    <h3 className="smp-modal-title">Compare {currentExamShortName} {pageTypeTitle}</h3>
+                    <p className="smp-cmp-sub">Find the right guidebook based on syllabus coverage, key features and practice resources.</p>
+                  </div>
                 </div>
                 <button
                   type="button"
@@ -1156,10 +1200,57 @@ export default function StudyMaterialsPage() {
                 </button>
               </div>
               <div className="smp-modal-body">
-                <p style={{ fontSize: '13.5px', color: '#64748b', marginBottom: '16px' }}>
+                <p className="smp-cmp-desc" style={{ fontSize: '13.5px', color: '#64748b', marginBottom: '16px' }}>
                   Quick side-by-side comparison of syllabus focus, coverage depth, and practice material across our {currentExamShortName} series.
                 </p>
-                <div style={{ overflowX: 'auto' }}>
+
+                {/* Phones: feature strip + one card per book (the table below is for larger screens) */}
+                <div className="smp-cmp-cards">
+                  <div className="smp-cmp-features">
+                    {[
+                      { Icon: BookOpen, t: 'Syllabus-wise', d: 'Complete coverage', cls: 'green' },
+                      { Icon: Target, t: 'Practice Ready', d: 'Mock tests & PYQs', cls: 'orange' },
+                      { Icon: CheckSquare, t: 'Easy Comparison', d: 'Find the best fit', cls: 'blue' },
+                      { Icon: Shield, t: 'Trusted Content', d: 'Curated by experts', cls: 'teal' },
+                    ].map(({ Icon, t, d, cls }) => (
+                      <div key={t} className={`smp-cmp-feature ${cls}`}>
+                        <span className="smp-cmp-feature-icon"><Icon size={15} /></span>
+                        <b>{t}</b>
+                        <small>{d}</small>
+                      </div>
+                    ))}
+                  </div>
+
+                  {booksWithCombinations.map((b) => {
+                    const subj = resolveSubjectForTitle(b.displayTitle, isGuide ? 'Guide' : 'Precis');
+                    const cover = getBookCoverUrl(b.slug) || getBookCoverUrl(b.displayTitle) || subjectUrl(subj.key) || b.thumbnail;
+                    const accent = b.combo.accentColor || '#064e3b';
+                    return (
+                      <article key={b.id} className={`smp-cmp-card ${b.isBestSeller ? 'best' : ''}`}>
+                        <div className="smp-cmp-card-top">
+                          {cover && <img src={cover} alt="" className="smp-cmp-cover" loading="lazy" />}
+                          <div className="smp-cmp-card-info">
+                            {b.isBestSeller && <span className="smp-cmp-best"><Star size={10} fill="currentColor" /> Best Seller</span>}
+                            <h4 className="smp-cmp-card-title">{b.displayTitle}</h4>
+                            {subj.label && <span className="smp-cmp-tag" style={{ background: b.combo.badgeBg, color: b.combo.checkColor }}>{subj.label}</span>}
+                            <p className="smp-cmp-card-desc">{b.combo.description}</p>
+                          </div>
+                        </div>
+                        <div className="smp-cmp-stats">
+                          {b.combo.stats.map((st, i) => (<span key={i} className="smp-cmp-stat">{st.label}</span>))}
+                        </div>
+                        <div className="smp-cmp-actions">
+                          <button type="button" className="smp-cmp-btn-outline" onClick={() => { setIsCompareOpen(false); setActiveDetailsBook(b); }}>View Details</button>
+                          <Link to={`/reader/${b.resourceId || b.slug || 'sample'}`} className="smp-cmp-btn-fill" style={{ background: accent, borderColor: accent }}>
+                            <BookOpen size={13} /><span>Read Sample</span><ArrowRight size={13} />
+                          </Link>
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+
+                <div className="smp-cmp-table-view" style={{ overflowX: 'auto' }}>
                   <table className="smp-compare-table">
                     <thead>
                       <tr>

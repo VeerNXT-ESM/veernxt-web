@@ -71,6 +71,7 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
   const [loading, setLoading] = useState(true);
   const [isRead, setIsRead] = useState(false);
   const [chapters, setChapters] = useState(null);
+  const [tocOpen, setTocOpen] = useState(false); // chapter list drawer (phones/tablets)
   const [activeChapterIndex, setActiveChapterIndex] = useState(() => {
     if (lsGet(LS_MODE, 'scroll') === 'scroll') return 0;
     const pos = readPos(resourceId || params?.id);
@@ -378,6 +379,7 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
   }, [activeBlocks, currentContent, activeChapter?.title]);
 
   const goToChapter = (index) => {
+    setTocOpen(false);
     setActiveChapterIndex(index);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -551,7 +553,10 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
                 {cleanContentTitle(resource?.title, resource?.exam_name)}
               </span>
               {chapters && chapters.length > 1 && (
-                <span className="nav-chapter-badge">Chapter {activeChapterIndex + 1} of {chapters.length}</span>
+                <button type="button" className="nav-chapter-badge" onClick={() => setTocOpen(true)} aria-haspopup="dialog" aria-label="Open chapter list">
+                  <span className="nb-long">Chapter {activeChapterIndex + 1} of {chapters.length}</span>
+                  <span className="nb-short">Ch {activeChapterIndex + 1}/{chapters.length}</span>
+                </button>
               )}
             </div>
           </div>
@@ -628,7 +633,8 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         </div>
       ) : isBlocksFormat ? (
         <div className="bk-reader-layout" style={{ minHeight: 'auto' }}>
-          <aside className="bk-sidebar" style={{ position: 'sticky', top: '80px', height: 'calc(100vh - 80px)', maxHeight: 'calc(100vh - 80px)', overflowY: 'auto', alignSelf: 'flex-start' }}>
+          {tocOpen && <div className="bk-toc-scrim" onClick={() => setTocOpen(false)} aria-hidden="true" />}
+          <aside className={`bk-sidebar ${tocOpen ? 'open' : ''}`} style={{ position: 'sticky', top: '80px', height: 'calc(100vh - 80px)', maxHeight: 'calc(100vh - 80px)', overflowY: 'auto', alignSelf: 'flex-start' }}>
             <div className="bk-sidebar-header">
               <BookOpen size={20} style={{ color: '#0f766e', flexShrink: 0 }} />
               <h3>{cleanContentTitle(resource.title, resource.exam_name)}</h3>
@@ -1437,6 +1443,102 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         .btn-paginate:hover { background: var(--reader-background, #f8fafc); color: var(--reader-primary, var(--ios-olive)); }
         .btn-paginate.primary { background: var(--reader-primary, var(--ios-olive)); color: white; border: none; box-shadow: var(--reader-shadow-sm); }
         .btn-paginate.primary:hover { transform: translateY(-2px); box-shadow: var(--reader-shadow-md); color: white; }
+
+        /* Chapter badge is a button now; the long/short label swaps on phones */
+        .nav-chapter-badge { border: none; font-family: inherit; cursor: default; }
+        .nav-chapter-badge .nb-short { display: none; }
+        .bk-toc-scrim { display: none; }
+
+        /* Tablets and phones: the chapter list becomes a drawer opened from the chapter pill */
+        @media (max-width: 900px) {
+          .nav-chapter-badge { cursor: pointer; }
+          .bk-reader-layout { display: block; }
+          .reader-body-root .bk-sidebar {
+            position: fixed !important; top: 0 !important; left: 0 !important; bottom: 0;
+            width: min(320px, 86vw); height: 100% !important; max-height: none !important;
+            z-index: 210; transform: translateX(-105%); transition: transform .22s ease; box-shadow: 0 0 40px rgba(0,0,0,.25);
+          }
+          .reader-body-root .bk-sidebar.open { transform: translateX(0); }
+          .bk-toc-scrim { display: block; position: fixed; inset: 0; background: rgba(15,23,42,.45); z-index: 200; }
+          .bk-main-content { padding-top: 0 !important; }
+          .bk-article { padding: 1.25rem 1rem 2.5rem !important; }
+        }
+
+        /* Phones: two-row toolbar — [Back / chapter pill / Listen / share] then [theme / A- A+ / mode] */
+        @media (max-width: 600px) {
+          .reader-nav { padding: 0.5rem 0; }
+          .nav-inner { padding: 0 0.6rem; gap: 0.4rem; flex-wrap: wrap; justify-content: flex-start; }
+          .nav-left-group { order: 1; flex: 1 1 auto; min-width: 0; gap: 0.5rem; }
+          .nav-title-group { min-width: 0; }
+          .nav-book-title { display: none; }
+          .nav-chapter-badge { font-size: 0.74rem; padding: 0.38rem 0.75rem; background: var(--reader-primary-soft, color-mix(in srgb, var(--reader-primary, #e11d48) 12%, transparent)); color: var(--reader-primary, #e11d48); border: 1px solid color-mix(in srgb, var(--reader-primary, #e11d48) 35%, transparent); }
+          .nav-chapter-badge .nb-long { display: none; }
+          .nav-chapter-badge .nb-short { display: inline; }
+          .back-link { padding: 0.38rem 0.7rem; font-size: 0.8rem; }
+          .nav-actions { display: contents; }
+          .nav-listen-btn { order: 2; padding: 0.4rem 0.7rem; font-size: 0.78rem; }
+          .nav-actions > .nav-icon-btn[aria-label="Share"] { order: 3; }
+          .nav-actions > .nav-icon-btn[aria-label="Print"], .nav-actions > .nav-icon-btn[aria-label*="ullscreen"], .nav-action-separator { display: none; }
+          .nav-inner::after { content: ''; order: 4; flex: 0 0 100%; height: 0; }
+          .nav-actions > .rts-root { order: 5; }
+          .nav-actions > .reader-fontsize-group { order: 6; }
+          .nav-actions > .reader-mode-toggle { order: 7; margin-left: auto; }
+          .reader-mode-btn { padding: 0.34rem 0.6rem; font-size: 0.74rem; }
+          .reader-mode-btn svg { display: none; }
+          .nav-actions > .rts-root .rts-trigger { padding: 0.36rem 0.6rem; font-size: 0.74rem; }
+          .nav-actions > .reader-fontsize-group .nav-icon-btn { padding: 0.34rem 0.45rem; font-size: 0.74rem; }
+          .nav-actions > .reader-mode-toggle { margin-left: 0; padding: 2px; }
+          .reader-mode-btn { padding: 0.3rem 0.4rem; font-size: 0.68rem; }
+
+          /* Chapter header + key takeaways, matching the phone design */
+          .bk-chapter-header { text-align: center; padding-bottom: 0.9rem; }
+          .bk-chapter-eyebrow {
+            display: inline-block; padding: 0.3rem 0.9rem; border-radius: 999px; font-size: 0.7rem; letter-spacing: 0.14em;
+            background: color-mix(in srgb, var(--reader-primary, #e11d48) 10%, transparent);
+            border: 1px solid color-mix(in srgb, var(--reader-primary, #e11d48) 35%, transparent);
+            color: var(--reader-primary, #e11d48); margin-bottom: 0.7rem;
+          }
+          .bk-chapter-title-wrapper { display: flex; flex-direction: column; align-items: center; }
+          .bk-chapter-eyebrow { align-self: center; width: auto; }
+          .bk-chapter-title { font-family: 'Merriweather', Georgia, 'Times New Roman', serif; font-size: 1.6rem; line-height: 1.25; text-transform: uppercase; text-align: center; }
+          .bk-keyfacts {
+            border: 1.5px solid color-mix(in srgb, var(--reader-primary, #e11d48) 30%, transparent) !important;
+            border-radius: 16px !important; background: color-mix(in srgb, var(--reader-primary, #e11d48) 6%, transparent); padding: 1rem 1rem 0.6rem;
+          }
+          .bk-keyfacts-header { gap: 0.55rem; font-size: 0.82rem; letter-spacing: 0.08em; color: var(--reader-primary, #be123c); }
+          .bk-keyfacts-header svg { width: 24px; height: 24px; padding: 5px; border-radius: 50%; background: var(--reader-primary, #e11d48); color: #fff; fill: #fff; flex: 0 0 24px; }
+          .bk-keyfacts-list li { gap: 0.6rem; font-size: 0.92rem; line-height: 1.55; }
+          .bk-keyfacts-bullet { font-size: 0 !important; width: 6px; height: 6px; min-width: 6px; padding: 0 !important; border-radius: 50%; background: var(--reader-primary, #e11d48) !important; margin-top: 0.6em; }
+        }
+
+        /* Phones, Normal/Book modes: the controls become a floating bottom dock (modes · Listen · A-/A+ · theme) */
+        @media (max-width: 600px) {
+          .reader-nav.reader-nav-paged { backdrop-filter: none; -webkit-backdrop-filter: none; }
+          .reader-nav-paged .nav-inner { flex-wrap: nowrap; justify-content: flex-start; }
+          .reader-nav-paged .nav-inner::after { display: none; }
+          .reader-nav-paged .nav-left-group { flex: 1 1 auto; }
+          .reader-nav-paged .nav-book-title { display: inline-block; max-width: 110px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.04em; }
+          .reader-nav-paged .back-link span { display: none; }
+          .reader-nav-paged .back-link { padding: 0.45rem 0.55rem; }
+          .reader-nav-paged .nav-actions {
+            display: flex; position: fixed; left: 10px; right: 10px; bottom: calc(66px + env(safe-area-inset-bottom, 0px)); z-index: 60;
+            align-items: center; justify-content: space-between; gap: 0.25rem; padding: 0.45rem 0.5rem; border-radius: 20px;
+            background: rgba(20, 16, 12, 0.94); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+          }
+          .reader-nav-paged .nav-actions > .reader-mode-toggle { order: 1; margin: 0; background: transparent; border: none; padding: 0; gap: 2px; }
+          .reader-nav-paged .nav-actions > .nav-action-separator { display: block; order: 2; height: 34px; }
+          .reader-nav-paged .nav-actions > .nav-listen-btn { order: 3; flex-direction: column; gap: 2px; font-size: 0.66rem; padding: 0.4rem 0.55rem; border-radius: 12px; }
+          .reader-nav-paged .nav-actions > .reader-fontsize-group { order: 4; }
+          .reader-nav-paged .nav-actions > .rts-root { order: 5; }
+          .reader-nav-paged .nav-actions > .nav-icon-btn { display: none; }
+          .reader-nav-paged .reader-mode-btn { flex-direction: column; gap: 2px; font-size: 0.66rem; padding: 0.4rem 0.55rem; border-radius: 12px; }
+          .reader-nav-paged .reader-mode-btn svg { display: block; width: 18px; height: 18px; }
+          .reader-nav-paged .nav-actions > .rts-root { flex: 0 0 auto; }
+          .reader-nav-paged .nav-actions > .rts-root .rts-trigger { padding: 0.45rem 0.5rem; font-size: 0; gap: 0; min-width: 0; }
+          .reader-nav-paged .nav-actions > .rts-root .rts-trigger > :not(.rts-swatch):not(svg:first-child) { display: none; }
+          .reader-nav-paged .nav-actions > .reader-mode-toggle .reader-mode-btn { padding: 0.4rem 0.4rem; }
+          .reader-nav-paged .nav-actions > .nav-listen-btn { padding: 0.4rem 0.45rem; }
+        }
 
         @media (max-width: 600px) {
           .reader-card { padding: 2rem 1.5rem; }

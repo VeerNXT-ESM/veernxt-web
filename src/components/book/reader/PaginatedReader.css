@@ -987,3 +987,23 @@
 @media print {
   .pr-controls, .pr-arrow { display: none; }
 }
+
+/* ── Phones: arrows float over the page edges; progress is a pill pinned to the bottom ── */
+@media (max-width: 600px) {
+  .pr-desk { padding: 0.6rem 0 150px; gap: 0.5rem; }
+  .pr-stage { position: relative; gap: 0; }
+  .pr-arrow {
+    display: flex; position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px;
+    background: rgba(18, 14, 10, 0.88); border-color: rgba(255, 245, 225, 0.25); z-index: 20;
+  }
+  .pr-arrow svg { width: 22px; height: 22px; }
+  .pr-arrow-l { left: 4px; }
+  .pr-arrow-r { right: 4px; }
+  .pr-arrow:hover:not(:disabled) { transform: translateY(-50%) scale(1.06); }
+  .pr-controls {
+    position: fixed; left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); width: auto; box-sizing: border-box;
+    padding: 0.6rem 1rem; gap: 0.6rem; border-radius: 999px; background: rgba(20, 16, 12, 0.94); z-index: 60;
+  }
+  .pr-controls .pr-chapsel, .pr-controls .pr-ctl, .pr-controls .pr-speed { display: none; }
+  .pr-controls .pr-progress { flex: 1 1 auto; min-width: 0; }
+}
