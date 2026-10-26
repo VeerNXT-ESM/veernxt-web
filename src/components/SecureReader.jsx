@@ -1266,15 +1266,49 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
           color: var(--reader-danger, #ef4444);
         }
 
-        /* Image Styling - Natural layout */
+        /* Image & Diagram Styling - Word document aligned layout */
         .reader-content img {
           max-width: 100%;
-          width: auto;
           height: auto;
           margin: 2rem auto;
           border-radius: var(--reader-radius-md, 8px);
           box-shadow: var(--reader-shadow-md, 0 4px 15px rgba(0, 0, 0, 0.08));
-          display: inline-block;
+          display: block;
+          object-fit: contain;
+          clear: both;
+        }
+
+        .reader-content figure {
+          margin: 2.2rem auto;
+          text-align: center;
+          max-width: 100%;
+          display: block;
+          clear: both;
+        }
+
+        .reader-content figure img {
+          margin: 0 auto;
+          display: block;
+        }
+
+        .reader-content svg {
+          max-width: 100%;
+          height: auto;
+          display: block;
+          margin: 1.5rem auto;
+          clear: both;
+        }
+
+        /* Prevent text justification from disrupting paragraphs containing figures/images */
+        .reader-content p:has(img) {
+          text-align: center;
+          margin: 1.8rem auto;
+          clear: both;
+        }
+
+        .reader-content p img {
+          display: block;
+          margin: 1.5rem auto;
         }
 
         @media (min-width: 768px) {
@@ -1288,13 +1322,15 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         }
 
         /* Image Captions (if italic text follows image) */
-        .reader-content img + p > em {
+        .reader-content img + p > em,
+        .reader-content figure figcaption {
           display: block;
           text-align: center;
           font-size: 0.9rem;
           color: var(--reader-text-muted, #64748b);
-          margin-top: -1.5rem;
-          margin-bottom: 2.5rem;
+          margin-top: 0.75rem;
+          margin-bottom: 2rem;
+          font-style: italic;
         }
 
         .reader-content pre {

@@ -182,7 +182,7 @@ const FinancialGuidance = () => {
   const finishQuiz = () => {
     if (!corpusAmount) return;
     const pKey = getProfile(answers);
-    const alloc = getAllocation(pKey, corpusAmount);
+    const alloc = getAllocation(pKey, corpusAmount, answers);
     setProfileKey(pKey);
     setAllocation(alloc);
     setPhase(PHASE.RESULT);
@@ -757,17 +757,55 @@ const EmbeddedQuizSection = ({
 
         {/* Amount selector */}
         {currentQuestion.isAmount ? (
-          <div className="fg-amount-grid">
-            {AMOUNT_OPTIONS.map(a => (
-              <div
-                key={a.value}
-                className={`fg-amt-card ${corpusAmount === a.value ? 'selected' : ''}`}
-                onClick={() => selectAmount(a.value)}
-              >
-                <div className="fg-amt-main">{a.label}</div>
-                <div className="fg-amt-sub">{a.sub}</div>
+          <div>
+            <div className="fg-amount-grid">
+              {AMOUNT_OPTIONS.map(a => (
+                <div
+                  key={a.value}
+                  className={`fg-amt-card ${corpusAmount === a.value ? 'selected' : ''}`}
+                  onClick={() => selectAmount(a.value)}
+                >
+                  <div className="fg-amt-main">{a.label}</div>
+                  <div className="fg-amt-sub">{a.sub}</div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ marginTop: '1.5rem', background: '#f8fafc', padding: '1rem 1.25rem', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+              <label htmlFor="custom-corpus-input" style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#475569', marginBottom: '0.4rem' }}>
+                Or enter custom corpus amount (₹):
+              </label>
+              <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                <span style={{ position: 'absolute', left: '12px', fontWeight: 700, color: '#64748b' }}>₹</span>
+                <input
+                  id="custom-corpus-input"
+                  type="number"
+                  min="10000"
+                  step="5000"
+                  placeholder="e.g. 1171000 for full Seva Nidhi"
+                  value={corpusAmount || ''}
+                  onChange={(e) => {
+                    const val = parseInt(e.target.value, 10);
+                    selectAmount(isNaN(val) ? null : val);
+                  }}
+                  style={{
+                    width: '100%',
+                    padding: '0.65rem 1rem 0.65rem 2rem',
+                    borderRadius: '8px',
+                    border: '1px solid #cbd5e1',
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    outline: 'none',
+                    boxSizing: 'border-box',
+                  }}
+                />
               </div>
-            ))}
+              {corpusAmount > 0 && (
+                <span style={{ display: 'block', marginTop: '0.35rem', fontSize: '0.8rem', color: '#16a34a', fontWeight: 600 }}>
+                  Selected corpus: {formatINR(corpusAmount)}
+                </span>
+              )}
+            </div>
           </div>
         ) : (
           /* Option selector */

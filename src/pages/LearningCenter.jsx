@@ -109,6 +109,117 @@ function getCategoryIconMeta(cat) {
   return { icon: ClipboardList, color: palette.color, bg: palette.bg };
 }
 
+// Broad category clusters to organize 94+ raw categories into clean groups (Issue 6)
+const CATEGORY_CLUSTERS = [
+  {
+    id: 'banking_finance',
+    name: 'Banking & Financial Services',
+    icon: Landmark,
+    color: 'var(--c-blue, #0284c7)',
+    bg: 'var(--c-tint-blue, #e0f2fe)',
+    keywords: ['bank', 'finance', 'commerce', 'account', 'insur', 'lic', 'gic', 'rbi', 'nabard', 'sebi', 'ibps', 'sbi'],
+  },
+  {
+    id: 'ssc',
+    name: 'Staff Selection Commission (SSC)',
+    icon: ShieldCheck,
+    color: 'var(--c-amber, #d97706)',
+    bg: 'var(--c-tint-amber, #fef3c7)',
+    keywords: ['ssc', 'cgl', 'chsl', 'mts', 'cpo', 'stenographer', 'gd', 'selection post'],
+  },
+  {
+    id: 'railways',
+    name: 'Railways & Metro',
+    icon: Train,
+    color: 'var(--c-blue, #4338ca)',
+    bg: 'var(--c-tint-blue, #e0e7ff)',
+    keywords: ['railway', 'metro', 'train', 'rrb', 'ntpc', 'group d', 'alp', 'dmrc', 'kmrl'],
+  },
+  {
+    id: 'defence',
+    name: 'Defence & Armed Forces',
+    icon: Shield,
+    color: 'var(--c-green, #15803d)',
+    bg: 'var(--c-tint-green, #dcfce7)',
+    keywords: ['defence', 'defense', 'army', 'navy', 'air', 'armed', 'afcat', 'cds', 'nda', 'coast guard', 'territorial'],
+  },
+  {
+    id: 'police',
+    name: 'Police & Paramilitary',
+    icon: ShieldAlert,
+    color: 'var(--c-blue, #1d4ed8)',
+    bg: 'var(--c-tint-blue, #dbeafe)',
+    keywords: ['police', 'cpo', 'si', 'constable', 'guard', 'intel', 'capf', 'crpf', 'bsf', 'cisf', 'itbp', 'ssb', 'sub inspector'],
+  },
+  {
+    id: 'civil_services',
+    name: 'Civil Services & State PSC',
+    icon: Building,
+    color: 'var(--c-green, #047857)',
+    bg: 'var(--c-tint-green, #d1fae5)',
+    keywords: ['civil', 'upsc', 'psc', 'administrative', 'state service', 'public service', 'bpsc', 'uppsc', 'rpsc', 'mpsc', 'kpsc', 'tnpsc'],
+  },
+  {
+    id: 'teaching',
+    name: 'Teaching & Education',
+    icon: GraduationCap,
+    color: 'var(--c-purple, #7c3aed)',
+    bg: 'var(--c-tint-purple, #ede9fe)',
+    keywords: ['teach', 'educat', 'lectur', 'master', 'ugc', 'net', 'tet', 'ctet', 'prt', 'tgt', 'pgt', 'professor', 'school'],
+  },
+  {
+    id: 'engineering',
+    name: 'Engineering & Technical',
+    icon: Cog,
+    color: 'var(--c-ink-3, #475569)',
+    bg: 'var(--c-bg-2, #f1f5f9)',
+    keywords: ['engin', 'je', 'ae', 'technic', 'barc', 'drdo', 'isro', 'computer', ' it', 'nic', 'software', 'scientific', 'junior engineer'],
+  },
+  {
+    id: 'agriculture',
+    name: 'Agriculture, Forest & Rural',
+    icon: Compass,
+    color: 'var(--c-green, #059669)',
+    bg: 'var(--c-tint-green, #d1fae5)',
+    keywords: ['forest', 'agri', 'hortic', 'fisher', 'icar', 'iari', 'panchayat', 'rural', 'gram', 'soil', 'wildlife'],
+  },
+  {
+    id: 'medical',
+    name: 'Medical & Healthcare',
+    icon: HeartPulse,
+    color: 'var(--c-red, #e11d48)',
+    bg: 'var(--c-tint-red, #ffe4e6)',
+    keywords: ['nurs', 'medic', 'health', 'pharma', 'cho', 'hospital', 'doctor', 'ayush', 'paramedical'],
+  },
+  {
+    id: 'others',
+    name: 'Other State & Central Services',
+    icon: ClipboardList,
+    color: 'var(--c-ink-3, #64748b)',
+    bg: 'var(--c-bg-2, #f1f5f9)',
+    keywords: [],
+  },
+];
+
+function examMatchesCategory(exam, filter) {
+  if (!filter) return true;
+  const examCat = (exam.category || '').trim().toLowerCase();
+  const filterLower = filter.trim().toLowerCase();
+  if (examCat === filterLower) return true;
+  const cluster = CATEGORY_CLUSTERS.find((cl) => cl.name.toLowerCase() === filterLower);
+  if (cluster) {
+    if (cluster.id === 'others') {
+      const isKnown = CATEGORY_CLUSTERS.filter((c) => c.id !== 'others').some((c) =>
+        c.keywords.some((k) => examCat.includes(k))
+      );
+      return !isKnown;
+    }
+    return cluster.keywords.some((k) => examCat.includes(k));
+  }
+  return false;
+}
+
+
 // Rich state branding metadata for monogram badges, commission names and zone filters
 const STATE_META = {
   'Rajasthan': { code: 'RJ', body: 'RPSC · RSMSSB', color: 'var(--c-amber, #b45309)', bg: 'var(--c-tint-amber, #fef3c7)', zone: 'central_west' },
@@ -628,6 +739,7 @@ const LearningCenter = () => {
 
   // Sidebar accordions open state
   const [openFilters, setOpenFilters] = useState({
+    state: true,
     category: true,
     body: true,
   });
@@ -635,9 +747,13 @@ const LearningCenter = () => {
   // Mobile side-drawer filter state (mobile/tablet <1100px only)
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
   const [openDrawerFilters, setOpenDrawerFilters] = useState({
+    state: true,
     category: true,
     body: false,
   });
+
+  const [categorySearch, setCategorySearch] = useState('');
+  const [stateFilterSearch, setStateFilterSearch] = useState('');
 
   // Active learning courses (courses/exams the candidate has started learning)
   const [activeLearningCourses, setActiveLearningCourses] = useState(getInitialActiveLearning);
@@ -1017,6 +1133,12 @@ const LearningCenter = () => {
       setRegionFilterId('');
       setCategoryFilter('');
       setSelectedBodyId('');
+      setCategorySearch('');
+      setStateFilterSearch('');
+      if (mode === 'state' || mode === 'ut') {
+        setOpenFilters((prev) => ({ ...prev, state: true }));
+        setOpenDrawerFilters((prev) => ({ ...prev, state: true }));
+      }
       updateSearchParams({
         mode: mode === 'central' ? undefined : mode,
         state: undefined,
@@ -1088,6 +1210,8 @@ const LearningCenter = () => {
     setCategoryFilter('');
     setSelectedBodyId('');
     setSearchText('');
+    setCategorySearch('');
+    setStateFilterSearch('');
     setBodySearch('');
     setRightTab('recommended');
     updateSearchParams({
@@ -1338,9 +1462,62 @@ const LearningCenter = () => {
     });
   }, [explorerCategoryList, sidebarSearch, sidebarFilterTab, levelExams]);
 
+  const filteredStatesForAccordion = useMemo(() => {
+    const q = stateFilterSearch.trim().toLowerCase();
+    if (!q) return stateList;
+    return stateList.filter((s) => s.name.toLowerCase().includes(q));
+  }, [stateList, stateFilterSearch]);
+
+  const clusteredCategoryData = useMemo(() => {
+    const clusterCounts = {};
+    const clusterSubcats = {};
+    CATEGORY_CLUSTERS.forEach((cl) => {
+      clusterCounts[cl.id] = 0;
+      clusterSubcats[cl.id] = new Map();
+    });
+
+    for (const exam of levelExams) {
+      const cat = (exam.category || 'Other Services').trim();
+      const lower = cat.toLowerCase();
+      let matched = false;
+      for (const cl of CATEGORY_CLUSTERS) {
+        if (cl.id !== 'others' && cl.keywords.some((k) => lower.includes(k))) {
+          clusterCounts[cl.id] = (clusterCounts[cl.id] || 0) + 1;
+          const curr = clusterSubcats[cl.id].get(cat) || 0;
+          clusterSubcats[cl.id].set(cat, curr + 1);
+          matched = true;
+          break;
+        }
+      }
+      if (!matched) {
+        clusterCounts['others'] = (clusterCounts['others'] || 0) + 1;
+        const curr = clusterSubcats['others'].get(cat) || 0;
+        clusterSubcats['others'].set(cat, curr + 1);
+      }
+    }
+
+    return CATEGORY_CLUSTERS.map((cl) => ({
+      ...cl,
+      count: clusterCounts[cl.id] || 0,
+      subcategories: Array.from(clusterSubcats[cl.id].entries())
+        .map(([name, count]) => ({ name, count }))
+        .sort((a, b) => b.count - a.count),
+    })).filter((cl) => cl.count > 0);
+  }, [levelExams]);
+
+  const filteredClusters = useMemo(() => {
+    const q = categorySearch.trim().toLowerCase();
+    if (!q) return clusteredCategoryData;
+    return clusteredCategoryData.filter(
+      (cl) =>
+        cl.name.toLowerCase().includes(q) ||
+        cl.subcategories.some((sub) => sub.name.toLowerCase().includes(q))
+    );
+  }, [clusteredCategoryData, categorySearch]);
+
   const bodyOptions = useMemo(() => {
     const pool = categoryFilter
-      ? levelExams.filter((exam) => (exam.category || '').trim() === categoryFilter)
+      ? levelExams.filter((exam) => examMatchesCategory(exam, categoryFilter))
       : levelExams;
     const seen = new Map();
     for (const exam of pool) {
@@ -1358,7 +1535,7 @@ const LearningCenter = () => {
   // The single result list driving "Search Results"
   const searchResults = useMemo(() => {
     let pool = categoryFilter
-      ? levelExams.filter((exam) => (exam.category || '').trim() === categoryFilter)
+      ? levelExams.filter((exam) => examMatchesCategory(exam, categoryFilter))
       : levelExams;
     if (selectedBodyId) pool = pool.filter((exam) => exam.conducting_body_id === selectedBodyId);
     const q = searchText.trim().toLowerCase();
@@ -1395,7 +1572,12 @@ const LearningCenter = () => {
   // always showing the same five cards — so it switches to real catalog
   // matches and doubles as the page's search results, rather than showing a
   // separate "Search Results" section underneath.
-  const recommendedFiltersActive = Boolean(categoryFilter) || Boolean(selectedBodyId) || Boolean(searchText.trim());
+  const recommendedFiltersActive =
+    Boolean(categoryFilter) ||
+    Boolean(selectedBodyId) ||
+    Boolean(searchText.trim()) ||
+    Boolean(regionFilterId) ||
+    regionMode !== 'central';
 
   const examToRecommendedCard = useCallback((exam) => {
     const subject = getSubjectByKey(exam.thumbnail_subject);
@@ -2320,7 +2502,83 @@ const LearningCenter = () => {
                     )}
                   </div>
 
-                  {/* Accordion 1: Category */}
+                  {/* Accordion: State / Union Territory (Issue 2) */}
+                  {(regionMode === 'state' || regionMode === 'ut') && (
+                    <div className="lc-filter-accordion">
+                      <button
+                        type="button"
+                        className="lc-accordion-btn"
+                        onClick={() => toggleFilterGroup('state')}
+                        aria-expanded={openFilters.state}
+                      >
+                        <span>{regionMode === 'ut' ? 'Union Territory' : 'State'}</span>
+                        {openFilters.state ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      </button>
+                      {openFilters.state && (
+                        <div className="lc-accordion-content">
+                          <div className="lc-filter-search-box">
+                            <Search size={14} className="lc-filter-search-icon" />
+                            <input
+                              type="text"
+                              placeholder={`Search ${regionMode === 'ut' ? 'UT' : 'state'}...`}
+                              value={stateFilterSearch}
+                              onChange={(e) => setStateFilterSearch(e.target.value)}
+                              className="lc-filter-search-input"
+                              aria-label={`Search ${regionMode === 'ut' ? 'UT' : 'state'}`}
+                            />
+                            {stateFilterSearch && (
+                              <button
+                                type="button"
+                                className="lc-sidebar-search-clear"
+                                onClick={() => setStateFilterSearch('')}
+                                aria-label="Clear state search"
+                              >
+                                <X size={12} />
+                              </button>
+                            )}
+                          </div>
+                          <div className="lc-filter-scroll-list">
+                            <label className={`lc-checkbox-item ${!regionFilterId ? 'active-cat-item' : ''}`}>
+                              <input
+                                type="checkbox"
+                                checked={!regionFilterId}
+                                onChange={() => {
+                                  setRegionFilterId('');
+                                  updateSearchParams({ state: undefined });
+                                }}
+                              />
+                              <span className="lc-checkbox-box" />
+                              <span className="lc-checkbox-text">All {regionMode === 'ut' ? 'UTs' : 'States'}</span>
+                              <span className="lc-filter-count">
+                                ({catalog.filter((e) => e.region?.level === regionMode).length})
+                              </span>
+                            </label>
+                            {filteredStatesForAccordion.map((st) => (
+                              <label
+                                key={st.id}
+                                className={`lc-checkbox-item ${regionFilterId === st.id ? 'active-cat-item' : ''}`}
+                              >
+                                <input
+                                  type="checkbox"
+                                  checked={regionFilterId === st.id}
+                                  onChange={() => {
+                                    const next = regionFilterId === st.id ? '' : st.id;
+                                    setRegionFilterId(next);
+                                    updateSearchParams({ state: next || undefined });
+                                  }}
+                                />
+                                <span className="lc-checkbox-box" />
+                                <span className="lc-checkbox-text">{st.name}</span>
+                                <span className="lc-filter-count">({st.count})</span>
+                              </label>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Accordion 1: Category (Clustered & Searchable, Issue 6) */}
                   <div className="lc-filter-accordion">
                     <button
                       type="button"
@@ -2333,6 +2591,28 @@ const LearningCenter = () => {
                     </button>
                     {openFilters.category && (
                       <div className="lc-accordion-content">
+                        <div className="lc-filter-search-box">
+                          <Search size={14} className="lc-filter-search-icon" />
+                          <input
+                            type="text"
+                            placeholder="Search categories..."
+                            value={categorySearch}
+                            onChange={(e) => setCategorySearch(e.target.value)}
+                            className="lc-filter-search-input"
+                            aria-label="Search categories"
+                          />
+                          {categorySearch && (
+                            <button
+                              type="button"
+                              className="lc-sidebar-search-clear"
+                              onClick={() => setCategorySearch('')}
+                              aria-label="Clear category search"
+                            >
+                              <X size={12} />
+                            </button>
+                          )}
+                        </div>
+
                         <label className={`lc-checkbox-item ${!categoryFilter ? 'active-cat-item' : ''}`}>
                           <input
                             type="checkbox"
@@ -2345,42 +2625,74 @@ const LearningCenter = () => {
                           <span className="lc-checkbox-text">All categories</span>
                           <span className="lc-filter-count">({levelExams.length})</span>
                         </label>
-                        {(showAllCategories ? categoryOptions : categoryOptions.slice(0, 10)).map((cat) => {
-                          const meta = getCategoryIconMeta(cat);
-                          const IconCmp = meta.icon || ClipboardList;
+
+                        {(showAllCategories || categorySearch ? filteredClusters : filteredClusters.slice(0, 8)).map((cluster) => {
+                          const IconCmp = cluster.icon || ClipboardList;
+                          const isClusterActive =
+                            categoryFilter &&
+                            (categoryFilter.toLowerCase() === cluster.name.toLowerCase() ||
+                              cluster.subcategories.some((sub) => sub.name.toLowerCase() === categoryFilter.toLowerCase()));
+
                           return (
-                            <label
-                              key={cat}
-                              className={`lc-checkbox-item ${categoryFilter === cat ? 'active-cat-item' : ''}`}
-                            >
-                              <input
-                                type="checkbox"
-                                checked={categoryFilter === cat}
-                                onChange={() => {
-                                  const next = categoryFilter === cat ? '' : cat;
-                                  handleCategoryFilterChange(next);
-                                }}
-                              />
-                              <span className="lc-checkbox-box" />
-                              <span
-                                className="lc-filter-cat-icon-badge"
-                                style={{ color: meta.color, backgroundColor: meta.bg }}
+                            <div key={cluster.id} className="lc-cluster-group">
+                              <label
+                                className={`lc-checkbox-item ${isClusterActive ? 'active-cat-item' : ''}`}
                               >
-                                <IconCmp size={13} strokeWidth={2.2} />
-                              </span>
-                              <span className="lc-checkbox-text">{cat}</span>
-                              <span className="lc-filter-count">({categoryCounts[cat] || 0})</span>
-                              {categoryFilter === cat && <ChevronRight size={14} className="lc-cat-active-chevron" />}
-                            </label>
+                                <input
+                                  type="checkbox"
+                                  checked={categoryFilter === cluster.name}
+                                  onChange={() => {
+                                    const next = categoryFilter === cluster.name ? '' : cluster.name;
+                                    handleCategoryFilterChange(next);
+                                  }}
+                                />
+                                <span className="lc-checkbox-box" />
+                                <span
+                                  className="lc-filter-cat-icon-badge"
+                                  style={{ color: cluster.color, backgroundColor: cluster.bg }}
+                                >
+                                  <IconCmp size={13} strokeWidth={2.2} />
+                                </span>
+                                <span className="lc-checkbox-text">{cluster.name}</span>
+                                <span className="lc-filter-count">({cluster.count})</span>
+                                {categoryFilter === cluster.name && <ChevronRight size={14} className="lc-cat-active-chevron" />}
+                              </label>
+
+                              {/* Indented subcategories when search is active or cluster is selected */}
+                              {(categorySearch || categoryFilter === cluster.name) && cluster.subcategories.length > 1 && (
+                                <div style={{ paddingLeft: '1.75rem', display: 'flex', flexDirection: 'column', gap: '0.35rem', marginTop: '0.25rem' }}>
+                                  {cluster.subcategories.slice(0, 5).map((sub) => (
+                                    <label
+                                      key={sub.name}
+                                      className={`lc-checkbox-item ${categoryFilter === sub.name ? 'active-cat-item' : ''}`}
+                                      style={{ fontSize: '0.78rem' }}
+                                    >
+                                      <input
+                                        type="checkbox"
+                                        checked={categoryFilter === sub.name}
+                                        onChange={() => {
+                                          const next = categoryFilter === sub.name ? '' : sub.name;
+                                          handleCategoryFilterChange(next);
+                                        }}
+                                      />
+                                      <span className="lc-checkbox-box" style={{ width: 14, height: 14 }} />
+                                      <span className="lc-checkbox-text" style={{ fontSize: '0.78rem' }}>{sub.name}</span>
+                                      <span className="lc-filter-count">({sub.count})</span>
+                                    </label>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
                           );
                         })}
-                        {categoryOptions.length > 10 && (
+
+                        {!categorySearch && filteredClusters.length > 8 && (
                           <button
                             type="button"
                             className="lc-show-more-btn"
                             onClick={() => setShowAllCategories(!showAllCategories)}
                           >
-                            {showAllCategories ? 'Show less' : `Show more (${categoryOptions.length - 10})`}
+                            {showAllCategories ? 'Show less' : `Show more (${filteredClusters.length - 8} categories)`}
                             {showAllCategories ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
                           </button>
                         )}
@@ -2944,6 +3256,134 @@ const LearningCenter = () => {
                   </div>
                 </div>
 
+                {/* Quick State Selector Bar when viewing State/UT Exams (Issue 2) */}
+                {(regionMode === 'state' || regionMode === 'ut') && (
+                  <div className="lc-state-quick-bar" role="toolbar" aria-label="Select State or Union Territory">
+                    <span className="lc-state-quick-label">{regionMode === 'ut' ? 'Select UT:' : 'Select State:'}</span>
+                    <button
+                      type="button"
+                      className={`lc-state-quick-pill ${!regionFilterId ? 'active' : ''}`}
+                      onClick={() => {
+                        setRegionFilterId('');
+                        updateSearchParams({ state: undefined });
+                      }}
+                    >
+                      All {regionMode === 'ut' ? 'UTs' : 'States'}
+                    </button>
+                    {stateList.slice(0, 7).map((st) => (
+                      <button
+                        key={st.id}
+                        type="button"
+                        className={`lc-state-quick-pill ${regionFilterId === st.id ? 'active' : ''}`}
+                        onClick={() => {
+                          const next = regionFilterId === st.id ? '' : st.id;
+                          setRegionFilterId(next);
+                          updateSearchParams({ state: next || undefined });
+                        }}
+                      >
+                        <span>{st.name}</span>
+                        <small>({st.count})</small>
+                      </button>
+                    ))}
+                    {stateList.length > 7 && (
+                      <select
+                        className="lc-state-select-dropdown"
+                        value={regionFilterId || ''}
+                        onChange={(e) => {
+                          const next = e.target.value;
+                          setRegionFilterId(next);
+                          updateSearchParams({ state: next || undefined });
+                        }}
+                        aria-label={`All ${regionMode === 'ut' ? 'Union Territories' : 'States'}`}
+                      >
+                        <option value="">More {regionMode === 'ut' ? 'UTs' : 'States'}...</option>
+                        {stateList.slice(7).map((st) => (
+                          <option key={st.id} value={st.id}>
+                            {st.name} ({st.count})
+                          </option>
+                        ))}
+                      </select>
+                    )}
+                  </div>
+                )}
+
+                {/* Active Filter Removable Chips Bar (Issue 6) */}
+                {filtersActive && (
+                  <div className="lc-active-filter-chips-bar" aria-label="Applied Filters">
+                    <span className="lc-active-filter-label">Active filters:</span>
+                    {regionMode !== 'central' && !regionFilterId && (
+                      <span className="lc-active-chip">
+                        <span>Level: {regionMode === 'ut' ? 'UT Exams' : 'State Exams'}</span>
+                        <button
+                          type="button"
+                          onClick={() => handleRegionModeChange('central')}
+                          aria-label="Reset to central exams"
+                        >
+                          <X size={12} />
+                        </button>
+                      </span>
+                    )}
+                    {regionFilterId && (
+                      <span className="lc-active-chip">
+                        <span>State: {activeState?.name || regionFilterId}</span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setRegionFilterId('');
+                            updateSearchParams({ state: undefined });
+                          }}
+                          aria-label="Remove state filter"
+                        >
+                          <X size={12} />
+                        </button>
+                      </span>
+                    )}
+                    {categoryFilter && (
+                      <span className="lc-active-chip">
+                        <span>Category: {categoryFilter}</span>
+                        <button
+                          type="button"
+                          onClick={() => handleCategoryFilterChange('')}
+                          aria-label="Remove category filter"
+                        >
+                          <X size={12} />
+                        </button>
+                      </span>
+                    )}
+                    {selectedBodyId && (
+                      <span className="lc-active-chip">
+                        <span>Body: {bodyOptions.find((b) => b.id === selectedBodyId)?.name || selectedBodyId}</span>
+                        <button
+                          type="button"
+                          onClick={() => setSelectedBodyId('')}
+                          aria-label="Remove body filter"
+                        >
+                          <X size={12} />
+                        </button>
+                      </span>
+                    )}
+                    {searchText.trim() && (
+                      <span className="lc-active-chip">
+                        <span>Search: &ldquo;{searchText.trim()}&rdquo;</span>
+                        <button
+                          type="button"
+                          onClick={() => setSearchText('')}
+                          aria-label="Clear search text"
+                        >
+                          <X size={12} />
+                        </button>
+                      </span>
+                    )}
+                    <button
+                      type="button"
+                      className="lc-clear-all-chips-btn"
+                      onClick={handleClearFilters}
+                    >
+                      Clear all
+                    </button>
+                  </div>
+                )}
+
                 {recommendedFiltersActive && recommendedCards.length === 0 ? (
                   <div className="filter-empty-note">
                     No exams match your search or filters. Try a different combination or{' '}
@@ -3410,7 +3850,71 @@ const LearningCenter = () => {
 
             {/* Drawer Body */}
             <div className="lc-mobile-drawer-body">
-              {/* Category Accordion */}
+              {/* State Accordion for Mobile (Issue 2) */}
+              {(regionMode === 'state' || regionMode === 'ut') && (
+                <div className="lc-mobile-drawer-accordion">
+                  <button
+                    type="button"
+                    className="lc-mobile-accordion-header"
+                    onClick={() => setOpenDrawerFilters((prev) => ({ ...prev, state: !prev.state }))}
+                    aria-expanded={openDrawerFilters.state}
+                  >
+                    <span className="lc-mobile-accordion-title">{regionMode === 'ut' ? 'Union Territory' : 'State'}</span>
+                    {openDrawerFilters.state ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                  </button>
+
+                  {openDrawerFilters.state && (
+                    <div className="lc-mobile-accordion-list">
+                      <div className="lc-mobile-drawer-search-box">
+                        <Search size={14} className="lc-mobile-drawer-search-icon" />
+                        <input
+                          type="text"
+                          placeholder={`Search ${regionMode === 'ut' ? 'UT' : 'state'}...`}
+                          value={stateFilterSearch}
+                          onChange={(e) => setStateFilterSearch(e.target.value)}
+                          className="lc-mobile-drawer-search-input"
+                        />
+                      </div>
+                      <label className="lc-mobile-checkbox-item">
+                        <input
+                          type="checkbox"
+                          checked={!regionFilterId}
+                          onChange={() => {
+                            setRegionFilterId('');
+                            updateSearchParams({ state: undefined });
+                            setMobileDrawerOpen(false);
+                          }}
+                        />
+                        <span className="lc-mobile-checkbox-box" />
+                        <span className="lc-mobile-checkbox-text">All {regionMode === 'ut' ? 'UTs' : 'States'}</span>
+                        <span className="lc-mobile-checkbox-count">
+                          {catalog.filter((e) => e.region?.level === regionMode).length}
+                        </span>
+                      </label>
+
+                      {filteredStatesForAccordion.map((st) => (
+                        <label key={st.id} className="lc-mobile-checkbox-item">
+                          <input
+                            type="checkbox"
+                            checked={regionFilterId === st.id}
+                            onChange={() => {
+                              const next = regionFilterId === st.id ? '' : st.id;
+                              setRegionFilterId(next);
+                              updateSearchParams({ state: next || undefined });
+                              setMobileDrawerOpen(false);
+                            }}
+                          />
+                          <span className="lc-mobile-checkbox-box" />
+                          <span className="lc-mobile-checkbox-text">{st.name}</span>
+                          <span className="lc-mobile-checkbox-count">{st.count}</span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Category Accordion (Clustered, Issue 6) */}
               <div className="lc-mobile-drawer-accordion">
                 <button
                   type="button"
@@ -3424,6 +3928,17 @@ const LearningCenter = () => {
 
                 {openDrawerFilters.category && (
                   <div className="lc-mobile-accordion-list">
+                    <div className="lc-mobile-drawer-search-box">
+                      <Search size={14} className="lc-mobile-drawer-search-icon" />
+                      <input
+                        type="text"
+                        placeholder="Search categories..."
+                        value={categorySearch}
+                        onChange={(e) => setCategorySearch(e.target.value)}
+                        className="lc-mobile-drawer-search-input"
+                      />
+                    </div>
+
                     <label className="lc-mobile-checkbox-item">
                       <input
                         type="checkbox"
@@ -3438,22 +3953,31 @@ const LearningCenter = () => {
                       <span className="lc-mobile-checkbox-count">{levelExams.length}</span>
                     </label>
 
-                    {categoryOptions.map((cat) => (
-                      <label key={cat} className="lc-mobile-checkbox-item">
-                        <input
-                          type="checkbox"
-                          checked={categoryFilter === cat}
-                          onChange={() => {
-                            const next = categoryFilter === cat ? '' : cat;
-                            handleCategoryFilterChange(next);
-                            setMobileDrawerOpen(false);
-                          }}
-                        />
-                        <span className="lc-mobile-checkbox-box" />
-                        <span className="lc-mobile-checkbox-text">{cat}</span>
-                        <span className="lc-mobile-checkbox-count">{categoryCounts[cat] || 0}</span>
-                      </label>
-                    ))}
+                    {filteredClusters.map((cluster) => {
+                      const isClusterActive =
+                        categoryFilter &&
+                        (categoryFilter.toLowerCase() === cluster.name.toLowerCase() ||
+                          cluster.subcategories.some((sub) => sub.name.toLowerCase() === categoryFilter.toLowerCase()));
+
+                      return (
+                        <div key={cluster.id} style={{ marginBottom: '0.4rem' }}>
+                          <label className={`lc-mobile-checkbox-item ${isClusterActive ? 'active' : ''}`}>
+                            <input
+                              type="checkbox"
+                              checked={categoryFilter === cluster.name}
+                              onChange={() => {
+                                const next = categoryFilter === cluster.name ? '' : cluster.name;
+                                handleCategoryFilterChange(next);
+                                setMobileDrawerOpen(false);
+                              }}
+                            />
+                            <span className="lc-mobile-checkbox-box" />
+                            <span className="lc-mobile-checkbox-text">{cluster.name}</span>
+                            <span className="lc-mobile-checkbox-count">{cluster.count}</span>
+                          </label>
+                        </div>
+                      );
+                    })}
                   </div>
                 )}
               </div>

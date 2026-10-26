@@ -27,10 +27,10 @@ export const TIER_RANK = {
   SCORE_UNLOCK: 1,
   SCORE_CV: 2,
   MONTHLY: 3,
-  ANNUAL: 3,
-  BIENNIAL: 3,
-  PREMIUM: 4,
-  TESTER: 5,
+  ANNUAL: 4,
+  BIENNIAL: 5,
+  PREMIUM: 6,
+  TESTER: 7,
 };
 
 // ═══════════════════════════════════════════

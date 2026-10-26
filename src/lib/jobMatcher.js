@@ -190,7 +190,9 @@ function safeArray(val) {
     try {
       const parsed = JSON.parse(val);
       if (Array.isArray(parsed)) return parsed;
-    } catch (_) {}
+    } catch (_) {
+      // not JSON, fallback to comma/pipe separation
+    }
     return val.split(/[,|]/).map(s => s.trim()).filter(Boolean);
   }
   return [];
@@ -423,10 +425,10 @@ export function matchJobsV2ForExam(allJobs, exam) {
   const careerTrack = (exam.career_track || exam.careerTrack || '').toUpperCase();
 
   const bodyWords = conductingBody
-    .split(/[\s,./()\-]+/)
+    .split(/[\s,./()-]+/)
     .filter(w => w.length > 2 && !['the', 'and', 'for', 'board', 'commission', 'govt', 'india', 'state', 'department', 'recruitment'].includes(w));
   const examWords = examName
-    .split(/[\s,./()\-]+/)
+    .split(/[\s,./()-]+/)
     .filter(w => w.length > 2 && !['recruitment', 'exam', 'examination', 'level', 'post', 'posts', 'online', 'form', 'various'].includes(w));
 
   return allJobs
@@ -559,5 +561,118 @@ export function matchJobsV2ForRecommendations(allJobs, recommendations, profile)
     .sort((a, b) => b._matchScore - a._matchScore);
 
   return [...collected, ...supplement].slice(0, 6);
+}
+
+/**
+ * Returns trade-aligned civilian job recommendations for candidates,
+ * ensuring high-value career roles are always displayed post-profiling.
+ */
+export function getRecommendedCivilianRoles(profile = {}) {
+  const _branch = (profile.serviceBranch || '').toLowerCase();
+  const trade = (profile.armCorpsTrade || profile.trade || '').toLowerCase();
+  const skills = (profile.specificSkills || []).map(s => String(s).toLowerCase());
+
+  const roles = [];
+
+  if (trade.includes('signal') || skills.some(s => s.includes('computer') || s.includes('radio') || s.includes('network'))) {
+    roles.push({
+      title: 'Telecom & Network Operations Supervisor',
+      company: 'Infrastructure & Telecom Providers',
+      location: profile.stateOfDomicile || 'All India',
+      salary: '₹4.5L – ₹7.2L / year',
+      matchScore: 94,
+      reason: 'Direct match for your Signals & Communications technical background',
+    });
+    roles.push({
+      title: 'Data Center & Systems Specialist',
+      company: 'Corporate IT & Cloud Facilities',
+      location: 'Metro & Tier-1 Hubs',
+      salary: '₹5.0L – ₹8.5L / year',
+      matchScore: 91,
+      reason: 'Aligned with IT, cyber, and electronics maintenance skills',
+    });
+  }
+
+  if (trade.includes('infantry') || trade.includes('armoured') || skills.some(s => s.includes('weapon') || s.includes('security'))) {
+    roles.push({
+      title: 'Security Operations & Executive Protection Lead',
+      company: 'Corporate Parks & Multinational Facilities',
+      location: profile.stateOfDomicile || 'All India',
+      salary: '₹4.2L – ₹6.8L / year',
+      matchScore: 96,
+      reason: 'Direct match for your military operational duties and combat arm leadership',
+    });
+    roles.push({
+      title: 'Industrial Safety & Crisis Management Officer',
+      company: 'Manufacturing, Ports & Infrastructure',
+      location: profile.stateOfDomicile || 'State Industrial Zones',
+      salary: '₹4.0L – ₹6.5L / year',
+      matchScore: 89,
+      reason: 'Leverages discipline, emergency protocol execution, and physical vigilance',
+    });
+  }
+
+  if (trade.includes('asc') || trade.includes('aoc') || trade.includes('store') || trade.includes('logistics') || skills.some(s => s.includes('store') || s.includes('logistics') || s.includes('fleet'))) {
+    roles.push({
+      title: 'Warehouse & Logistics Operations Incharge',
+      company: 'E-Commerce & Supply Chain Hubs',
+      location: profile.stateOfDomicile || 'Regional Hubs',
+      salary: '₹3.8L – ₹6.0L / year',
+      matchScore: 92,
+      reason: 'Direct match for your military stores, inventory, and supply chain experience',
+    });
+  }
+
+  if (trade.includes('clerk') || trade.includes('admin') || skills.some(s => s.includes('office') || s.includes('admin') || s.includes('hr'))) {
+    roles.push({
+      title: 'Office Administration & Facilities Executive',
+      company: 'Banking & Financial Corporates',
+      location: profile.stateOfDomicile || 'Home State',
+      salary: '₹3.6L – ₹5.5L / year',
+      matchScore: 90,
+      reason: 'Aligned with your documentation, HR records, and administrative trade',
+    });
+  }
+
+  if (trade.includes('eme') || trade.includes('engineer') || skills.some(s => s.includes('mechanical') || s.includes('electrical') || s.includes('repair'))) {
+    roles.push({
+      title: 'Plant Maintenance & Machinery Supervisor',
+      company: 'Automotive & Heavy Engineering Units',
+      location: 'Industrial Corridors',
+      salary: '₹4.5L – ₹7.0L / year',
+      matchScore: 93,
+      reason: 'Direct match for your technical engineering and equipment maintenance expertise',
+    });
+  }
+
+  // Universal baseline roles if trade-specific match was sparse
+  if (roles.length < 3) {
+    roles.push({
+      title: 'Corporate Security & Asset Protection Manager',
+      company: 'Private Sector Enterprises',
+      location: profile.stateOfDomicile || 'All India',
+      salary: '₹4.0L – ₹6.5L / year',
+      matchScore: 88,
+      reason: 'Ideal for military veterans with proven leadership and operational integrity',
+    });
+    roles.push({
+      title: 'Operations & Facilities Supervisor',
+      company: 'Commercial Properties & Hospitality',
+      location: profile.stateOfDomicile || 'State Capital',
+      salary: '₹3.5L – ₹5.5L / year',
+      matchScore: 85,
+      reason: 'Leverages structured task execution and team supervision skills',
+    });
+    roles.push({
+      title: 'Fleet & Transportation Controller',
+      company: 'Logistics & Transit Services',
+      location: 'Regional Hubs',
+      salary: '₹3.8L – ₹5.8L / year',
+      matchScore: 84,
+      reason: 'Strong demand for disciplined transport and convoy management experience',
+    });
+  }
+
+  return roles.slice(0, 4);
 }
 

@@ -11,7 +11,7 @@ import {
   Zap, Calendar, Users,
 } from 'lucide-react';
 import { getProfilingInsights, getTransferableSkills } from '../lib/profilingInsights';
-import { matchJobsV2ForExam, matchJobsV2ForRecommendations } from '../lib/jobMatcher';
+import { matchJobsV2ForExam, matchJobsV2ForRecommendations, getRecommendedCivilianRoles } from '../lib/jobMatcher';
 import { JobDescriptionModal } from '../components/JobDescriptionModal';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -525,29 +525,33 @@ const ProfilingResults = () => {
         </motion.div>
       </div>
 
-      {/* Dynamic Live Job Matches from jobs_v2 */}
-      {matchedJobs.length > 0 && (
-        <motion.div
-          className="results-live-jobs-container"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, delay: 0.2, ease: 'easeOut' }}
-        >
-          <Card className="results-live-jobs-card">
-            <div className="results-live-jobs-header">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-                <Briefcase size={22} color="var(--ios-olive)" />
-                <h2 className="results-matches-title" style={{ margin: 0 }}>
-                  Live Job Matches from jobs_v2 ({matchedJobs.length})
-                </h2>
-              </div>
-              <span className="results-live-jobs-badge">
-                Filtered by Recommended Exams &amp; Trade Profiles
-              </span>
+      {/* Job Recommendations Section */}
+      <motion.div
+        className="results-live-jobs-container"
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35, delay: 0.2, ease: 'easeOut' }}
+      >
+        <Card className="results-live-jobs-card">
+          <div className="results-live-jobs-header">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+              <Briefcase size={22} color="var(--ios-olive)" />
+              <h2 className="results-matches-title" style={{ margin: 0 }}>
+                {matchedJobs.length > 0
+                  ? `Live Job Openings for Your Profile (${matchedJobs.length})`
+                  : 'Recommended Career & Job Roles for Your Military Trade'}
+              </h2>
             </div>
+            <span className="results-live-jobs-badge">
+              {matchedJobs.length > 0
+                ? 'Filtered by Recommended Exams & Trade Profiles'
+                : 'Mapped from Your Branch, Arm & Operational Skills'}
+            </span>
+          </div>
 
-            <div className="results-live-jobs-grid">
-              {matchedJobs.map((job) => (
+          <div className="results-live-jobs-grid">
+            {matchedJobs.length > 0 ? (
+              matchedJobs.map((job) => (
                 <div key={job.job_id || job.id || job.url} className="results-live-job-item">
                   <div>
                     <div className="results-live-job-top">
@@ -616,11 +620,35 @@ const ProfilingResults = () => {
                     )}
                   </div>
                 </div>
-              ))}
-            </div>
-          </Card>
-        </motion.div>
-      )}
+              ))
+            ) : (
+              getRecommendedCivilianRoles(rawProfile || location.state?.profileSummary || {}).map((role, idx) => (
+                <div key={idx} className="results-live-job-item">
+                  <div>
+                    <div className="results-live-job-top">
+                      <span className="results-job-track-chip">CORPORATE &amp; DEFENCE</span>
+                      <span className="results-job-match-badge">{role.matchScore}% Match</span>
+                    </div>
+                    <h4 className="results-live-job-title">{role.title}</h4>
+                    <div className="results-live-job-aligned">
+                      🏢 {role.company} · 📍 {role.location}
+                    </div>
+                    <div className="results-live-job-stats" style={{ color: 'var(--ios-olive)', fontWeight: 700 }}>
+                      💰 Expected CTC: {role.salary}
+                    </div>
+                    <p className="results-live-job-desc">{role.reason}</p>
+                  </div>
+                  <div className="results-live-job-actions">
+                    <Link to="/private-sector/opportunities" className="results-job-notice-btn" style={{ textDecoration: 'none', textAlign: 'center' }}>
+                      Explore Roles <ArrowRight size={11} />
+                    </Link>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        </Card>
+      </motion.div>
 
       {/* Career Opportunities reveal — skill gaps, CV, subscription */}
       <motion.div

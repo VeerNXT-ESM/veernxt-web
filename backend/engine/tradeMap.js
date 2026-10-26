@@ -65,13 +65,32 @@ export const TRADE_MAP = {
   'IAF(Y) Group':          { strong: ['ADMINISTRATIVE','SSC'], soft: ['BANKING','POSTAL'] },
   'Weapons Fitter':        { strong: ['ENGINEERING','POLICE_CAPF'], soft: ['SSC'] },
 
-  // ---- Skill-based (from questionnaire "Specific Skills Handled") ----
-  'Weapons Handling':        { strong: ['POLICE_CAPF'],   soft: ['DEFENCE','FIRE'] },
-  'Inventory/Store Management': { strong: ['ACCOUNTING','ADMINISTRATIVE','POSTAL'], soft: ['SSC','BANKING'] },
-  'Technical Repair/Maintenance': { strong: ['ENGINEERING','RAILWAYS','PSU'], soft: ['SSC'] },
-  'Driving (LMV/HMV)':       { strong: ['TRANSPORT','RAILWAYS','POLICE_CAPF'], soft: ['SSC'] },
-  'Office Admin/Computer Work': { strong: ['SSC','BANKING','ADMINISTRATIVE','SECRETARIAT','ACCOUNTING'], soft: ['INSURANCE','RAILWAYS'] },
-  'Instruction/Training':    { strong: ['TEACHING','ADMINISTRATIVE'], soft: ['SSC'] },
+  // ---- Skill-based (17 Tri-Service Skills from Client) ----
+  'Security, Weapons and Operational Duties': { strong: ['POLICE_CAPF', 'DEFENCE'], soft: ['FIRE', 'SECURITY'] },
+  'Leadership and Team Supervision':         { strong: ['ADMINISTRATIVE', 'POLICE_CAPF'], soft: ['SSC', 'BANKING', 'PSU'] },
+  'Driving, Transport and Fleet Operations': { strong: ['TRANSPORT', 'RAILWAYS', 'POLICE_CAPF'], soft: ['SSC', 'PSU'] },
+  'Logistics, Stores and Supply Management': { strong: ['POSTAL', 'ACCOUNTING', 'ADMINISTRATIVE', 'RAILWAYS'], soft: ['SSC', 'BANKING'] },
+  'Office Administration, HR and Accounts':  { strong: ['SSC', 'BANKING', 'ACCOUNTING', 'ADMINISTRATIVE', 'SECRETARIAT'], soft: ['INSURANCE', 'POSTAL'] },
+  'Computers, IT, Networks and Cyber':       { strong: ['ENGINEERING', 'BANKING', 'SSC', 'PSU'], soft: ['RAILWAYS', 'SECRETARIAT'] },
+  'Radio, Signals and Communications':       { strong: ['ENGINEERING', 'RAILWAYS', 'POLICE_CAPF', 'PSU'], soft: ['SSC'] },
+  'Electrical, Electronics and Instrumentation': { strong: ['ENGINEERING', 'PSU', 'RAILWAYS'], soft: ['SSC', 'METRO'] },
+  'Mechanical, Vehicle and Machinery Maintenance': { strong: ['ENGINEERING', 'RAILWAYS', 'PSU', 'TRANSPORT'], soft: ['SSC'] },
+  'Radar, Sonar, Navigation and Surveillance': { strong: ['ENGINEERING', 'POLICE_CAPF', 'DEFENCE', 'PSU'], soft: ['RAILWAYS'] },
+  'Aviation and Airfield Support':           { strong: ['ENGINEERING', 'TRANSPORT', 'PSU'], soft: ['DEFENCE', 'SSC'] },
+  'Marine and Shipboard Operations':         { strong: ['TRANSPORT', 'POLICE_CAPF', 'DEFENCE'], soft: ['ENGINEERING', 'PSU'] },
+  'Engineering Works, Construction and Utilities': { strong: ['ENGINEERING', 'PSU', 'RAILWAYS', 'MUNICIPAL'], soft: ['SSC'] },
+  'Firefighting, Safety and Emergency Response': { strong: ['FIRE', 'POLICE_CAPF', 'MUNICIPAL'], soft: ['DEFENCE', 'PSU'] },
+  'Medical, Nursing and First Aid':          { strong: ['HEALTH', 'NURSING'], soft: ['SSC', 'POLICE_CAPF'] },
+  'Training and Instruction':                { strong: ['TEACHING', 'ADMINISTRATIVE'], soft: ['SSC', 'POLICE_CAPF'] },
+  'Catering, Hospitality and Facility Services': { strong: ['TOURISM', 'RAILWAYS'], soft: ['MUNICIPAL', 'HEALTH'] },
+
+  // Legacy skill names for backwards compatibility
+  'Weapons Handling':              { strong: ['POLICE_CAPF'],   soft: ['DEFENCE','FIRE'] },
+  'Inventory/Store Management':    { strong: ['ACCOUNTING','ADMINISTRATIVE','POSTAL'], soft: ['SSC','BANKING'] },
+  'Technical Repair/Maintenance':  { strong: ['ENGINEERING','RAILWAYS','PSU'], soft: ['SSC'] },
+  'Driving (LMV/HMV)':             { strong: ['TRANSPORT','RAILWAYS','POLICE_CAPF'], soft: ['SSC'] },
+  'Office Admin/Computer Work':    { strong: ['SSC','BANKING','ADMINISTRATIVE','SECRETARIAT','ACCOUNTING'], soft: ['INSURANCE','RAILWAYS'] },
+  'Instruction/Training':          { strong: ['TEACHING','ADMINISTRATIVE'], soft: ['SSC'] },
 };
 
 // Map the raw Arm/Corps names from Service_Detail.csv to standard TRADE_MAP keys
