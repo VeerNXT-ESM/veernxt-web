@@ -46,6 +46,7 @@ import {
 import { getTransferableSkills } from '../lib/profilingInsights';
 import { getSubjectByKey, getFamilyHex } from '../lib/thumbnailTaxonomy';
 import { useThumbnails } from '../lib/thumbnailStore';
+import { useBanner, bannerImageStyle } from '../lib/bannerStore';
 import { getEffectiveTier } from '../lib/subscriptionAccess';
 import { ReaderThemeProvider } from '../components/book/theme/ReaderThemeProvider';
 import ExamContentPreview from '../components/ExamContentPreview';
@@ -719,6 +720,10 @@ const LearningCenter = () => {
   // Exam thumbnails come from the category's thumbnail (admin > Categories).
   const { categoryUrl } = useThumbnails();
   const cardImage = (card) => card.image || categoryUrl(card.category) || '';
+  // CMS-managed banners (admin > Banners); fall back to the built-in image/text.
+  const heroBanner = useBanner('lc.hero');
+  const promoBanner = useBanner('lc.promo');
+  const stateDirBanner = useBanner('lc.state_directory');
   const navigate = useNavigate();
   const recommendedScrollRef = useRef(null);
   const continueScrollRef = useRef(null);
@@ -2130,7 +2135,12 @@ const LearningCenter = () => {
         <main className="main-content">
           {/* Hero: Your Learning Center (Only shown in Recommended mode so Explorer mode is flush at top) */}
           {rightTab === 'recommended' && (
-            <section className="lc-hero-banner" aria-label="Learning Center Hero">
+            <section
+              className="lc-hero-banner"
+              aria-label="Learning Center Hero"
+              // The default photo is mirrored in CSS; an uploaded banner is shown as uploaded.
+              style={bannerImageStyle(heroBanner, '--lc-hero-img', { '--lc-hero-flip': 'none' })}
+            >
               <div className="lc-hero-bg-layer" />
               <div className="lc-hero-overlay" />
               <div className="lc-hero-watermark">
@@ -2139,11 +2149,9 @@ const LearningCenter = () => {
               </div>
 
               <div className="lc-hero-content">
-                <h1 className="lc-hero-title">Your Learning Center</h1>
-                <p className="lc-hero-tagline">Prepare. Learn. Grow. Serve Beyond.</p>
-                <p className="lc-hero-description">
-                  Find exams, study material and skills training tailored to your profile.
-                </p>
+                <h1 className="lc-hero-title">{heroBanner.title}</h1>
+                <p className="lc-hero-tagline">{heroBanner.subtitle}</p>
+                <p className="lc-hero-description">{heroBanner.description}</p>
 
                 <form
                   className="lc-hero-search-bar"
@@ -2990,7 +2998,7 @@ const LearningCenter = () => {
                 ) : (regionMode === 'state' || regionMode === 'ut') && !regionFilterId ? (
                   /* State/UT Directory Landing Grid when user is on State mode and hasn't picked a state yet */
                   <div className="lc-state-directory-container">
-                    <div className="lc-state-directory-hero">
+                    <div className="lc-state-directory-hero" style={bannerImageStyle(stateDirBanner, '--lc-state-hero-img')}>
                       <div className="lc-state-hero-overlay" />
                       <div className="lc-state-hero-content">
                         <div className="lc-state-hero-badge">
@@ -3766,22 +3774,23 @@ const LearningCenter = () => {
 
           {/* ── Section 10: Full-Width Promotional Banner (Only in Recommended Mode, since Explorer Mode has it inside portal below Why Choose Veer Next) ── */}
           {rightTab === 'recommended' && (
-            <section className="lc-promo-banner" aria-label="VeerNXT Career Progression">
+            <section
+              className="lc-promo-banner"
+              aria-label="VeerNXT Career Progression"
+              style={bannerImageStyle(promoBanner, '--lc-promo-img')}
+            >
               <div className="lc-promo-bg-layer" />
               <div className="lc-promo-overlay" />
               <div className="lc-promo-content">
                 <div className="lc-promo-left">
                   <span className="lc-promo-eyebrow">
-                    <ShieldCheck size={16} className="lc-promo-eyebrow-icon" /> VeerNXT Career Transition
+                    <ShieldCheck size={16} className="lc-promo-eyebrow-icon" /> {promoBanner.eyebrow}
                   </span>
                   <h2 className="lc-promo-title">
-                    Discipline built you.
-                    <span className="lc-promo-highlight"> Learning takes you further.</span>
+                    {promoBanner.title}
+                    <span className="lc-promo-highlight"> {promoBanner.title_highlight}</span>
                   </h2>
-                  <p className="lc-promo-desc">
-                    Access structured courses, practice tests and expert content to achieve your next career goal.
-                    Built specifically for armed forces personnel transitioning into civilian leadership and public service.
-                  </p>
+                  <p className="lc-promo-desc">{promoBanner.description}</p>
 
                   <div className="lc-promo-stats">
                     <div className="lc-promo-stat-item">
@@ -3804,7 +3813,7 @@ const LearningCenter = () => {
                       className="lc-promo-cta-btn"
                       onClick={handleExploreAllCourses}
                     >
-                      Explore All Courses <ArrowRight size={17} />
+                      {promoBanner.cta_label} <ArrowRight size={17} />
                     </button>
                   </div>
                 </div>

@@ -34,6 +34,7 @@ const PAGE_META = {
   '/admin/conducting-bodies': { title: 'Conducting Bodies', description: 'Manage exam conducting organizations and their logos.' },
   '/admin/categories': { title: 'Categories', description: 'The sector classification used on every exam — add, rename, or delete categories here.' },
   '/admin/subjects': { title: 'Subjects', description: 'Manage subjects and the portrait thumbnails used on study materials.' },
+  '/admin/banners': { title: 'Banners', description: 'Replace the banner images and text shown on the signed-in pages. Empty fields use the built-in default.' },
   '/admin/publish-content': { title: 'Publish Content', description: 'Upload a .docx, pick Intro/Guide/Precis, preview the conversion, attach it to exam(s), and publish it live.' },
   '/admin/users': { title: 'Users', description: 'Registered service personnel and platform accounts.' },
   '/admin/roles': { title: 'Roles & Permissions', description: 'Assign roles and curate access control lists.' },

@@ -10,8 +10,12 @@ import { useExamContent, countProgress } from '../hooks/useExamContent';
 import { resolveSubjectForTitle } from '../lib/thumbnailTaxonomy';
 import TodayObjectiveCard from '../components/learning/TodayObjectiveCard';
 import ExamThumbnail from './admin/ExamThumbnail';
+import { useBanner, bannerImageStyle } from '../lib/bannerStore';
 
 const Dashboard = () => {
+  // CMS-managed banners (admin > Banners); fall back to the built-in image/text.
+  const welcomeBanner = useBanner('dashboard.welcome');
+  const learningPromoBanner = useBanner('dashboard.learning_promo');
   const navigate = useNavigate();
   const location = useLocation();
   const [profile, setProfile] = useState(null);
@@ -585,7 +589,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-wrapper">
       <div className="dashboard-content animate-fade-in">
-        <div className="welcome-hero animate-fade-in">
+        <div className="welcome-hero animate-fade-in" style={bannerImageStyle(welcomeBanner, '--dash-welcome-img')}>
           <div className="welcome-profile-row">
             <div className="welcome-avatar">
               {profile?.avatar_url ? (
@@ -977,10 +981,10 @@ const Dashboard = () => {
             </Card>
           )}
 
-          <Link to="/learning-center" className="rail-card rail-promo">
-            <h3>Keep Learning.<br />Keep Moving Forward.</h3>
-            <p>Every small step builds a bigger future.</p>
-            <span className="rail-promo-cta">Explore Learning Center <ArrowRight size={14} /></span>
+          <Link to="/learning-center" className="rail-card rail-promo" style={bannerImageStyle(learningPromoBanner, '--dash-learning-promo-img')}>
+            <h3>{learningPromoBanner.title}<br />{learningPromoBanner.title_highlight}</h3>
+            <p>{learningPromoBanner.subtitle}</p>
+            <span className="rail-promo-cta">{learningPromoBanner.cta_label} <ArrowRight size={14} /></span>
           </Link>
 
           {!isEmployer && (

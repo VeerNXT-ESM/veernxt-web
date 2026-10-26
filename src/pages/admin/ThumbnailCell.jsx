@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react';
-import { Upload, RefreshCw, CheckCircle2, XCircle, Image as ImageIcon } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Upload, RefreshCw, CheckCircle2, XCircle, Image as ImageIcon, X } from 'lucide-react';
 import { uploadFilesToR2 } from '../../lib/r2Uploader';
 import { resizeToWebp } from '../../lib/imageResize';
 
@@ -11,7 +11,14 @@ import { resizeToWebp } from '../../lib/imageResize';
  */
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
-export default function ThumbnailCell({ url, name, keyPrefix, width, height, previewWidth, onSave }) {
+export default function ThumbnailCell({ url, name, keyPrefix, width, height, previewWidth, onSave, enablePreview = false }) {
+  const [showBig, setShowBig] = useState(false);
+  useEffect(() => {
+    if (!showBig) return undefined;
+    const onKey = (e) => { if (e.key === 'Escape') setShowBig(false); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [showBig]);
   const [uploading, setUploading] = useState(false);
   const [feedback, setFeedback] = useState(null);
   const [errorMsg, setErrorMsg] = useState('');
@@ -47,8 +54,27 @@ export default function ThumbnailCell({ url, name, keyPrefix, width, height, pre
           display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}
       >
-        {url ? <img src={url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : <ImageIcon size={20} color="#cbd5e1" />}
+        {url ? (
+          enablePreview ? (
+            <button type="button" onClick={() => setShowBig(true)} title="Click to view the banner in full size" aria-label="View banner preview" style={{ all: 'unset', cursor: 'zoom-in', display: 'block', width: '100%', height: '100%' }}>
+              <img src={url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </button>
+          ) : (
+            <img src={url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          )
+        ) : <ImageIcon size={20} color="#cbd5e1" />}
       </div>
+      {showBig && url && (
+        <div role="dialog" aria-modal="true" aria-label="Banner preview" onClick={() => setShowBig(false)}
+          style={{ position: 'fixed', inset: 0, zIndex: 3000, background: 'rgba(2,6,23,.82)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out' }}>
+          <button type="button" onClick={() => setShowBig(false)} aria-label="Close preview"
+            style={{ position: 'absolute', top: 16, right: 16, width: 40, height: 40, borderRadius: '50%', border: 'none', cursor: 'pointer', background: 'rgba(255,255,255,.15)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <X size={20} />
+          </button>
+          <img src={url} alt="Banner preview" onClick={(e) => e.stopPropagation()}
+            style={{ maxWidth: 'min(1400px, 100%)', maxHeight: '100%', borderRadius: 12, boxShadow: '0 20px 60px rgba(0,0,0,.5)', cursor: 'default' }} />
+        </div>
+      )}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', alignItems: 'flex-start' }}>
         <input ref={inputRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleFileChange} />
         <button

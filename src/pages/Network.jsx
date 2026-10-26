@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
+import { useBanner, bannerImageStyle } from '../lib/bannerStore';
 import { Link, useNavigate } from 'react-router-dom';
 import {
   Users, UserPlus, MessageSquare, Search, Briefcase, Award, ArrowRight,
@@ -79,6 +80,8 @@ const ConnectionCard = ({ conn, menuOpen, onToggleMenu, onMessage, onRemove }) =
 );
 
 const Network = () => {
+  // CMS-managed hero banner (admin > Banners); falls back to the built-in image/text.
+  const heroBanner = useBanner('network.hero');
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -342,13 +345,11 @@ const Network = () => {
 
   return (
     <div className="network-page">
-      <section className="network-hero">
+      <section className="network-hero" style={bannerImageStyle(heroBanner, '--network-hero-img')}>
         <div className="network-hero-content">
-          <span className="network-eyebrow">Network</span>
-          <h1 className="network-hero-title">Connect. Collaborate. <span>Grow Together.</span></h1>
-          <p className="network-hero-copy">
-            Build meaningful professional relationships with fellow veterans, government professionals and industry partners.
-          </p>
+          <span className="network-eyebrow">{heroBanner.eyebrow}</span>
+          <h1 className="network-hero-title">{heroBanner.title} <span>{heroBanner.title_highlight}</span></h1>
+          <p className="network-hero-copy">{heroBanner.description}</p>
           <div className="network-search">
             <Search size={18} />
             <input

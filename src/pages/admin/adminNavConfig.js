@@ -17,6 +17,12 @@ export const ADMIN_NAV = [
     ],
   },
   {
+    group: 'SITE',
+    items: [
+      { key: 'banners', label: 'Banners', path: '/admin/banners', icon: 'Images' },
+    ],
+  },
+  {
     group: 'SYSTEM',
     items: [
       { key: 'users', label: 'Users', path: '/admin/users', icon: 'Users' },

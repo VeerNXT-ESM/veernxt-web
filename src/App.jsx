@@ -52,6 +52,7 @@ import ExamsPage from './pages/admin/ExamsPage';
 import ConductingBodiesPage from './pages/admin/ConductingBodiesPage';
 import CategoriesPage from './pages/admin/CategoriesPage';
 import SubjectsPage from './pages/admin/SubjectsPage';
+import BannersPage from './pages/admin/BannersPage';
 import PublishContentPage from './pages/admin/PublishContentPage';
 import UsersPage from './pages/admin/UsersPage';
 import RolesPermissionsPage from './pages/admin/RolesPermissionsPage';
@@ -244,6 +245,7 @@ function App() {
           <Route path="/admin/conducting-bodies" element={<ConductingBodiesPage />} />
           <Route path="/admin/categories" element={<CategoriesPage />} />
           <Route path="/admin/subjects" element={<SubjectsPage />} />
+          <Route path="/admin/banners" element={<BannersPage />} />
           <Route path="/admin/publish-content" element={<PublishContentPage />} />
           <Route path="/admin/users" element={<UsersPage />} />
           <Route path="/admin/roles" element={<RolesPermissionsPage />} />

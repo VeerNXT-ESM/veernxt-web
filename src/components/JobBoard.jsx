@@ -15,6 +15,7 @@ import remarkGfm from 'remark-gfm';
 import { CAREER_TRACK_META, CAREER_TRACK_ORDER, hexToRgba } from '../lib/careerTrack';
 import { scoreJobsForProfile, isPersonalizationActive } from '../lib/jobMatcher';
 import { useTheme } from '../context/ThemeContext';
+import { useBanner, bannerImageStyle } from '../lib/bannerStore';
 
 const RESULTS_PER_PAGE = 10;
 
@@ -363,6 +364,8 @@ const JobDetailPanel = ({
 };
 
 const JobBoard = () => {
+  // CMS-managed hero banner (admin > Banners); falls back to the built-in image/text.
+  const heroBanner = useBanner('jobs.hero');
   const navigate = useNavigate();
   const [jobSource, setJobSource] = useState('v2'); // 'legacy' | 'v2'
   const [jobs, setJobs] = useState([]);
@@ -639,13 +642,11 @@ const JobBoard = () => {
 
   return (
     <div className={`jobs-page ${mobileDetailOpen ? 'mobile-job-detail-open' : ''}`}>
-      <section className="jobs-hero">
+      <section className="jobs-hero" style={bannerImageStyle(heroBanner, '--jobs-hero-img')}>
         <div className="jobs-hero-content">
-          <span className="jobs-hero-eyebrow">Careers for Veterans</span>
-          <h1 className="jobs-hero-title">Discover Your Next Mission</h1>
-          <p className="jobs-hero-subtitle">
-            Explore government, PSU and veteran-friendly opportunities that value your service, skills and leadership.
-          </p>
+          <span className="jobs-hero-eyebrow">{heroBanner.eyebrow}</span>
+          <h1 className="jobs-hero-title">{heroBanner.title}</h1>
+          <p className="jobs-hero-subtitle">{heroBanner.description}</p>
 
           <div className="jobs-search-panel">
             <div className="jobs-search-field">
