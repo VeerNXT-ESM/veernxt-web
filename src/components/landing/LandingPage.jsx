@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useLandingVideoId } from '../../lib/videoStore';
 import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { useSeo } from '../../lib/useSeo';
@@ -28,13 +29,13 @@ const NavBar = () => {
   const currentLang = languages.find(l => l.code === i18n.language) || languages[0];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/5">
+    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-gray-200">
       <nav className="w-full py-4 md:py-6 flex justify-between items-center px-6 max-w-7xl mx-auto">
         <img src="/logo.png" alt="VeerNXT" className="h-10 md:h-14 w-auto object-contain" style={{ maxHeight: '56px', width: 'auto' }} />
         
         <div className="flex items-center gap-4">
           <div className="relative" onMouseEnter={() => setIsLangOpen(true)} onMouseLeave={() => setIsLangOpen(false)}>
-            <button className={`text-sm font-medium hover:text-ios-olive transition-colors flex items-center gap-1 text-white h-10 ${isLangOpen ? 'text-ios-olive' : ''}`}>
+            <button className={`text-sm font-medium hover:text-ios-olive transition-colors flex items-center gap-1 text-gray-900 h-10 ${isLangOpen ? 'text-ios-olive' : ''}`}>
               <Languages className="w-4 h-4" />
               <span className="hidden sm:inline uppercase">{currentLang.code}</span>
               <ChevronDown className={`w-3 h-3 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
@@ -46,7 +47,7 @@ const NavBar = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full right-0 mt-0 w-48 bg-[#1a1a1a] rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2 z-50"
+                  className="absolute top-full right-0 mt-0 w-48 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden py-2 z-50"
                 >
                   {languages.map((lang) => (
                     <button
@@ -55,9 +56,9 @@ const NavBar = () => {
                         i18n.changeLanguage(lang.code);
                         setIsLangOpen(false);
                       }}
-                      className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-white/10 transition-colors text-left group ${i18n.language === lang.code ? 'text-ios-olive bg-white/5' : 'text-gray-300'}`}
+                      className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors text-left group ${i18n.language === lang.code ? 'text-ios-olive bg-gray-50' : 'text-gray-700'}`}
                     >
-                      <span className={`text-xs font-bold tracking-tight ${i18n.language === lang.code ? 'text-ios-olive' : 'text-gray-300'}`}>{lang.name}</span>
+                      <span className={`text-xs font-bold tracking-tight ${i18n.language === lang.code ? 'text-ios-olive' : 'text-gray-700'}`}>{lang.name}</span>
                       {i18n.language === lang.code && <Check className="w-3 h-3 text-ios-olive ml-auto" />}
                     </button>
                   ))}
@@ -144,17 +145,10 @@ const Hero = () => {
 // ─── WHAT IS VEERNXT? ────────────────────────────────────────────────────────
 const WhatIsVeerNXT = () => {
   const { t, i18n } = useTranslation();
-  const videoIds = {
-    hi: 'wG--TwXf6yI',
-    mr: 'VXhSDvpQOPk',
-    te: 'LMnM9SU5rAM',
-    ta: 'OdeYjGGomXY',
-    kn: 'mgT1G9y8J3E',
-  };
-  const videoId = videoIds[i18n.language] || '3HBSfoM2Sls';
+  const videoId = useLandingVideoId(i18n.language);
 
   return (
-    <section className="py-24 bg-[#0d0d0d] text-white">
+    <section className="py-24 bg-white text-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -169,11 +163,11 @@ const WhatIsVeerNXT = () => {
           <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-8">
             {t('landing.whatIs.title_1')} <span className="text-ios-olive">{t('landing.whatIs.title_2')}</span>
           </h2>
-          <p className="text-gray-300 text-lg md:text-2xl leading-relaxed font-light max-w-4xl mx-auto mb-12">
+          <p className="text-gray-600 text-lg md:text-2xl leading-relaxed font-light max-w-4xl mx-auto mb-12">
             {t('landing.whatIs.desc')}
           </p>
 
-          <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative aspect-video bg-black">
+          <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-gray-200 relative aspect-video bg-black">
             <iframe
               className="w-full h-full"
               src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=0&mute=1&rel=0&modestbranding=1`}
@@ -184,17 +178,17 @@ const WhatIsVeerNXT = () => {
             ></iframe>
           </div>
 
-          <div className="inline-flex flex-wrap justify-center gap-8 md:gap-16 mt-16 p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl">
+          <div className="inline-flex flex-wrap justify-center gap-8 md:gap-16 mt-16 p-8 bg-gray-50 rounded-3xl border border-gray-200 shadow-2xl">
             <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-white">{t('landing.whatIs.stat_1_val')}</p>
+              <p className="text-4xl md:text-5xl font-black text-gray-900">{t('landing.whatIs.stat_1_val')}</p>
               <p className="text-xs md:text-sm text-ios-olive font-bold uppercase tracking-widest mt-2">{t('landing.whatIs.stat_1_label')}</p>
             </div>
             <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-white">{t('landing.whatIs.stat_2_val')}</p>
+              <p className="text-4xl md:text-5xl font-black text-gray-900">{t('landing.whatIs.stat_2_val')}</p>
               <p className="text-xs md:text-sm text-ios-olive font-bold uppercase tracking-widest mt-2">{t('landing.whatIs.stat_2_label')}</p>
             </div>
             <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-white">{t('landing.whatIs.stat_3_val')}</p>
+              <p className="text-4xl md:text-5xl font-black text-gray-900">{t('landing.whatIs.stat_3_val')}</p>
               <p className="text-xs md:text-sm text-ios-olive font-bold uppercase tracking-widest mt-2">{t('landing.whatIs.stat_3_label')}</p>
             </div>
           </div>
@@ -313,7 +307,7 @@ const OnboardingProcess = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-[#111] text-white">
+    <section id="how-it-works" className="py-24 bg-gray-50 text-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -340,7 +334,7 @@ const OnboardingProcess = () => {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="relative"
             >
-              <div className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 hover:border-ios-olive/30 transition-all group h-full flex flex-col">
+              <div className="bg-white border border-gray-200 shadow-sm rounded-3xl p-6 hover:shadow-lg hover:border-ios-olive/30 transition-all group h-full flex flex-col">
                 {step.image && (
                   <div className="w-full h-40 rounded-2xl overflow-hidden mb-6 shadow-2xl relative">
                     <img src={step.image} alt={step.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -350,8 +344,8 @@ const OnboardingProcess = () => {
                 <div className="text-2xl font-black text-ios-olive/40 mb-4 tracking-tighter group-hover:text-ios-olive transition-colors">
                   {step.num}
                 </div>
-                <h3 className="text-lg font-bold tracking-tight mb-3 text-white group-hover:text-ios-olive transition-colors">{step.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed font-medium flex-grow">{step.desc}</p>
+                <h3 className="text-lg font-bold tracking-tight mb-3 text-gray-900 group-hover:text-ios-olive transition-colors">{step.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed font-medium flex-grow">{step.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -435,7 +429,7 @@ const RegulatoryCompliance = () => {
 const EmployerPortal = () => {
   const { t } = useTranslation();
   return (
-    <section className="py-24 bg-[#0a0a0a] text-white border-t border-white/5">
+    <section className="py-24 bg-white text-gray-900 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <motion.div 
@@ -450,7 +444,7 @@ const EmployerPortal = () => {
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter leading-tight">
               {t('landing.employer.title_1')} <span className="text-ios-olive">{t('landing.employer.title_2')}</span>
             </h2>
-            <p className="text-gray-300 font-light leading-relaxed text-lg max-w-xl">
+            <p className="text-gray-600 font-light leading-relaxed text-lg max-w-xl">
               {t('landing.employer.desc')}
             </p>
             <div className="pt-4">
@@ -469,7 +463,7 @@ const EmployerPortal = () => {
             viewport={{ once: true }}
             className="flex-1 w-full relative"
           >
-            <div className="aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
+            <div className="aspect-video rounded-3xl overflow-hidden border border-gray-200 shadow-2xl relative">
               <img src="/homepage/emplyer portal.png" alt="Employer Portal" className="w-full h-full object-cover" />
             </div>
           </motion.div>
@@ -482,12 +476,12 @@ const EmployerPortal = () => {
 const CTASection = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative py-32 overflow-hidden border-t border-white/5">
+    <section className="relative py-32 overflow-hidden border-t border-gray-200">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-ios-olive/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-ios-olive/15" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-white">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-gray-900">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -498,15 +492,15 @@ const CTASection = () => {
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 leading-tight">
               {t('landing.cta.title_1')} <span className="text-ios-olive">{t('landing.cta.title_2')}</span>
             </h2>
-            <p className="text-gray-300 text-lg font-light max-w-4xl mx-auto leading-relaxed">
+            <p className="text-gray-600 text-lg font-light max-w-4xl mx-auto leading-relaxed">
               {t('landing.cta.desc')}
             </p>
           </div>
           
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-12 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 backdrop-blur-md">
+          <div className="bg-white border border-gray-200 shadow-sm rounded-3xl p-8 lg:p-12 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 backdrop-blur-md">
             <div className="flex-1">
-              <h3 className="text-2xl font-bold text-white mb-6">{t('landing.cta.steps_title')}</h3>
-              <ol className="space-y-4 text-base text-gray-300 font-light list-decimal pl-5">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('landing.cta.steps_title')}</h3>
+              <ol className="space-y-4 text-base text-gray-600 font-light list-decimal pl-5">
                 <li>{t('landing.cta.step_1')}</li>
                 <li>{t('landing.cta.step_2')}</li>
                 <li>{t('landing.cta.step_3')}</li>
@@ -514,18 +508,18 @@ const CTASection = () => {
               
               <div className="flex flex-wrap gap-4 mt-8">
                 <div
-                  className="bg-white/5 text-white/60 border border-white/10 ios-pill px-6 py-3 text-sm font-bold tracking-widest uppercase inline-flex items-center gap-3 select-none"
+                  className="bg-gray-50 text-gray-500 border border-gray-200 ios-pill px-6 py-3 text-sm font-bold tracking-widest uppercase inline-flex items-center gap-3 select-none"
                 >
                   {t('landing.cta.coming_apple')} <Apple className="w-5 h-5" />
                 </div>
                 <div
-                  className="bg-white/5 text-white/60 border border-white/10 ios-pill px-6 py-3 text-sm font-bold tracking-widest uppercase inline-flex items-center gap-3 select-none"
+                  className="bg-gray-50 text-gray-500 border border-gray-200 ios-pill px-6 py-3 text-sm font-bold tracking-widest uppercase inline-flex items-center gap-3 select-none"
                 >
                   {t('landing.cta.coming_play')} <PlaySquare className="w-5 h-5" />
                 </div>
               </div>
               
-              <div className="mt-8 pt-8 border-t border-white/10 flex justify-center w-full">
+              <div className="mt-8 pt-8 border-t border-gray-200 flex justify-center w-full">
                 <Link
                   to="/login"
                   className="ios-btn-primary ios-pill px-10 py-5 text-sm font-black tracking-widest uppercase inline-flex items-center gap-3 group shadow-2xl shadow-ios-olive/30 w-full justify-center md:w-auto hover:scale-105 transition-transform"
@@ -535,7 +529,7 @@ const CTASection = () => {
               </div>
             </div>
             
-            <div className="flex flex-col items-center justify-center md:border-l md:border-white/10 md:pl-12 w-full mt-12 md:mt-0">
+            <div className="flex flex-col items-center justify-center md:border-l md:border-gray-200 md:pl-12 w-full mt-12 md:mt-0">
               <img src="/homepage/F6_Phone.png" alt="VeerNXT App Preview" className="h-auto md:h-[768px] max-h-[60vh] md:max-h-none w-full max-w-[280px] md:max-w-none object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform mx-auto" />
             </div>
           </div>
@@ -550,7 +544,7 @@ const CTASection = () => {
 const LandingFooter = () => {
   const { t } = useTranslation();
   return (
-    <footer className="bg-[#0a0a0a] text-white pt-16 pb-8 border-t border-white/5">
+    <footer className="bg-gray-50 text-gray-900 pt-16 pb-8 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div className="space-y-4">
@@ -558,14 +552,14 @@ const LandingFooter = () => {
               <img src="/logo.png" alt="VeerNXT" className="w-8 h-8 object-contain" />
               <span className="text-xl font-black tracking-tight">VeerNXT</span>
             </div>
-            <p className="text-gray-400 text-sm font-light leading-relaxed max-w-xs">
+            <p className="text-gray-600 text-sm font-light leading-relaxed max-w-xs">
               {t('landing.footer.desc')}
             </p>
           </div>
 
           <div>
-            <h4 className="text-xs font-black uppercase tracking-widest text-gray-400 mb-6">{t('landing.footer.contact')}</h4>
-            <ul className="space-y-4 text-sm text-gray-400">
+            <h4 className="text-xs font-black uppercase tracking-widest text-gray-600 mb-6">{t('landing.footer.contact')}</h4>
+            <ul className="space-y-4 text-sm text-gray-600">
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-ios-olive mt-0.5 flex-shrink-0" />
                 <a href="mailto:support@veernxt.in" className="hover:text-ios-olive transition-colors">support@veernxt.in</a>
@@ -582,20 +576,20 @@ const LandingFooter = () => {
           </div>
 
           <div>
-            <h4 className="text-xs font-black uppercase tracking-widest text-gray-400 mb-6">{t('landing.footer.legal')}</h4>
+            <h4 className="text-xs font-black uppercase tracking-widest text-gray-600 mb-6">{t('landing.footer.legal')}</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/privacy" className="text-gray-400 hover:text-ios-olive transition-colors">{t('landing.footer.privacy')}</Link></li>
-              <li><Link to="/support" className="text-gray-400 hover:text-ios-olive transition-colors">{t('landing.footer.support')}</Link></li>
-              <li><Link to="/legal" className="text-gray-400 hover:text-ios-olive transition-colors">{t('landing.footer.terms')}</Link></li>
+              <li><Link to="/privacy" className="text-gray-600 hover:text-ios-olive transition-colors">{t('landing.footer.privacy')}</Link></li>
+              <li><Link to="/support" className="text-gray-600 hover:text-ios-olive transition-colors">{t('landing.footer.support')}</Link></li>
+              <li><Link to="/legal" className="text-gray-600 hover:text-ios-olive transition-colors">{t('landing.footer.terms')}</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-500">
             {t('landing.footer.copy')}
           </p>
-          <div className="text-xs font-bold tracking-widest text-white/40 uppercase mb-4 md:mb-0">
+          <div className="text-xs font-bold tracking-widest text-gray-500 uppercase mb-4 md:mb-0">
             {t('landing.footer.builtBy')}
           </div>
         </div>
@@ -614,7 +608,7 @@ export const LandingPage = () => {
   });
 
   return (
-    <div className="bg-[#0a0a0a]">
+    <div className="bg-white">
       <NavBar />
       <Hero />
       <WhatIsVeerNXT />

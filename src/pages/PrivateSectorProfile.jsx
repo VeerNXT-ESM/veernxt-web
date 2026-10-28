@@ -57,7 +57,7 @@ const STEP_IDS = [
   'done',
 ];
 
-const PrivateSectorProfile = () => {
+const PrivateSectorProfile = ({ onDone = null }) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const returnTo = searchParams.get('returnTo');
@@ -421,7 +421,8 @@ const PrivateSectorProfile = () => {
   };
 
   const finish = () => {
-    if (returnTo) navigate(returnTo, { replace: true });
+    if (onDone) onDone();
+    else if (returnTo) navigate(returnTo, { replace: true });
     else navigate('/private-sector/opportunities', { replace: true });
   };
 

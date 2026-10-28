@@ -3,14 +3,14 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { ADMIN_NAV } from './adminNavConfig';
 import { useTheme } from '../../context/ThemeContext';
 import {
-  GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen, Images, Sun, Moon,
+  GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen, Images, Video, Sun, Moon,
   Menu, X, LogOut, ChevronsLeft, ChevronsRight,
 } from 'lucide-react';
 import './AdminCMS.css';
 
 import FirstLoginModal from '../../components/admin/FirstLoginModal';
 
-const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen, Images };
+const ICONS = { GraduationCap, Users, Shield, HelpCircle, Briefcase, Gift, Landmark, ScrollText, UserCheck, BookMarked, FileUp, Tags, Scale, Palette, BookOpen, Images, Video };
 
 // Horizontal section nav, directly under the top header — required by the
 // CMS mockup ("Do NOT remove this horizontal navigation") even though it
@@ -34,6 +34,7 @@ const PAGE_META = {
   '/admin/conducting-bodies': { title: 'Conducting Bodies', description: 'Manage exam conducting organizations and their logos.' },
   '/admin/categories': { title: 'Categories', description: 'The sector classification used on every exam — add, rename, or delete categories here.' },
   '/admin/subjects': { title: 'Subjects', description: 'Manage subjects and the portrait thumbnails used on study materials.' },
+  '/admin/videos': { title: 'Videos', description: 'Replace the YouTube intro video shown on the website landing page, for each language. Languages without a custom video use the original.' },
   '/admin/banners': { title: 'Banners', description: 'Replace the banner images and text shown on the signed-in pages. Empty fields use the built-in default.' },
   '/admin/publish-content': { title: 'Publish Content', description: 'Upload a .docx, pick Intro/Guide/Precis, preview the conversion, attach it to exam(s), and publish it live.' },
   '/admin/users': { title: 'Users', description: 'Registered service personnel and platform accounts.' },

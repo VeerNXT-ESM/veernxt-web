@@ -46,3 +46,18 @@
   .jobs-sort { display: flex; align-items: center; gap: 8px; }
   .jobs-sort select { min-height: 36px !important; font-size: 13px !important; padding: 0 10px !important; }
 }
+
+/* Private Sector tab: the opportunities screen is embedded under the Jobs tabs */
+.jobs-private-embed { width: 100%; }
+.jobs-private-embed > div { margin-top: 0; }
+@media (max-width: 600px) {
+  .jobs-source-tabs { overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; }
+  .jobs-source-tabs::-webkit-scrollbar { display: none; }
+  .jobs-source-tab { flex: 0 0 auto; white-space: nowrap; }
+}
+
+/* The hero job search does not apply to the embedded Private Sector tab */
+.jobs-src-private .jobs-search-panel { display: none !important; }
+
+.jobs-private-back { display: inline-flex; align-items: center; gap: 6px; margin: 14px 0 0; padding: 7px 14px; border-radius: 999px; background: var(--c-bg-0, #fff); border: 1px solid var(--c-line-2, #e2e8f0); color: var(--ios-olive, #4b6b32); font-size: 13px; font-weight: 700; cursor: pointer; }
+.jobs-private-embed { max-width: 1100px; margin: 0 auto; }

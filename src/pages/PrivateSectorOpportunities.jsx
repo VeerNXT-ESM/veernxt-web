@@ -28,7 +28,7 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { SECTOR_OPTIONS } from '../lib/privateSectorTaxonomy';
 
-const PrivateSectorOpportunities = () => {
+const PrivateSectorOpportunities = ({ onEditProfile = null }) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [session, setSession] = useState(null);
@@ -186,7 +186,7 @@ const PrivateSectorOpportunities = () => {
 
   const expressInterest = async (requirementId) => {
     if (!profileCompleted) {
-      navigate(`/private-sector/profile?returnTo=/private-sector/opportunities`);
+      if (onEditProfile) onEditProfile(); else navigate(`/private-sector/profile?returnTo=/private-sector/opportunities`);
       return;
     }
     setBusyId(requirementId);
@@ -332,7 +332,7 @@ const PrivateSectorOpportunities = () => {
           <p style={{ margin: '0 0 0.75rem', fontSize: '0.85rem', color: 'var(--c-amber, #7a5a1e)' }}>
             To express interest, match with corporate recruiters, and receive direct introduction invitations, set your Tri-Service credentials and logged duties.
           </p>
-          <Button size="sm" onClick={() => navigate('/private-sector/profile?returnTo=/private-sector/opportunities')}>
+          <Button size="sm" onClick={() => (onEditProfile ? onEditProfile() : navigate('/private-sector/profile?returnTo=/private-sector/opportunities'))}>
             Build Tri-Service Profile →
           </Button>
         </Card>
@@ -392,7 +392,7 @@ const PrivateSectorOpportunities = () => {
               <p style={{ fontSize: '0.88rem', maxWidth: '480px', margin: '0 auto 1.25rem' }}>
                 Corporate recruiters search VeerNXT for military talent daily. Complete your profile with all logged duties to increase visibility.
               </p>
-              <Button size="sm" onClick={() => navigate('/private-sector/profile')}>Update Service Profile</Button>
+              <Button size="sm" onClick={() => (onEditProfile ? onEditProfile() : navigate('/private-sector/profile'))}>Update Service Profile</Button>
             </Card>
           ) : (
             inboundRequests.map((req) => {

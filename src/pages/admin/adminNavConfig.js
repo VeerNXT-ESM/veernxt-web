@@ -20,6 +20,7 @@ export const ADMIN_NAV = [
     group: 'SITE',
     items: [
       { key: 'banners', label: 'Banners', path: '/admin/banners', icon: 'Images' },
+      { key: 'videos', label: 'Videos', path: '/admin/videos', icon: 'Video' },
     ],
   },
   {

@@ -8,7 +8,7 @@ import Button from '../components/ui/Button';
 
 // Candidate entry point for the Private Sector module — two states per
 // docs/VeerNXT_Private_Sector_Implementation_Improvements.md §17.
-const PrivateSectorHome = () => {
+const PrivateSectorHome = ({ embedded = false, onViewOpportunities = null, onEditProfile = null }) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
@@ -43,7 +43,7 @@ const PrivateSectorHome = () => {
   const completed = !!profile?.profile_completed;
 
   return (
-    <div className="ps-home">
+    <div className={`ps-home ${embedded ? 'ps-home-embedded' : ''}`}>
       <Card padding="lg" className="ps-home-card">
         {/* On phones this block becomes the dark hero banner; on larger screens it is just the card's content. */}
         <div className="ps-home-hero">
@@ -55,7 +55,7 @@ const PrivateSectorHome = () => {
                 Complete your Private Sector Profile to discover opportunities that match your skills and experience.
               </p>
               <div className="ps-home-actions">
-                <Button size="lg" onClick={() => navigate('/private-sector/profile')}>Complete Profile →</Button>
+                <Button size="lg" onClick={() => (onEditProfile ? onEditProfile() : navigate('/private-sector/profile'))}>Complete Profile →</Button>
               </div>
             </>
           ) : (
@@ -66,8 +66,10 @@ const PrivateSectorHome = () => {
                 Opportunities matched to your skills, experience and preferences.
               </p>
               <div className="ps-home-actions">
-                <Button size="lg" onClick={() => navigate('/private-sector/opportunities')}>View Opportunities →</Button>
-                <Link to="/private-sector/profile" className="ps-home-edit">Edit profile</Link>
+                <Button size="lg" onClick={() => (onViewOpportunities ? onViewOpportunities() : navigate('/private-sector/opportunities'))}>View Opportunities →</Button>
+                {onEditProfile
+                  ? <button type="button" className="ps-home-edit" onClick={onEditProfile}>Edit profile</button>
+                  : <Link to="/private-sector/profile" className="ps-home-edit">Edit profile</Link>}
               </div>
             </>
           )}
@@ -89,6 +91,7 @@ const PrivateSectorHome = () => {
       </Card>
 
       <style dangerouslySetInnerHTML={{ __html: `
+        .ps-home-embedded { max-width: 720px; margin: 0 auto; padding: 1.25rem 1.25rem 0; }
         .ps-home {
           max-width: 720px;
           margin: 0 auto;

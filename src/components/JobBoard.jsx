@@ -4,7 +4,7 @@ import axios from 'axios';
 import {
   Briefcase, ExternalLink, RefreshCw, Search, AlertCircle, Clock,
   MapPin, X, Sliders, Award, ChevronDown, ChevronUp, Sparkles, BookOpen,
-  Building2, ShieldCheck, ArrowLeft, Tag, Zap
+  Building2, ShieldCheck, ArrowLeft, Tag, Zap, Landmark
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
@@ -15,6 +15,9 @@ import remarkGfm from 'remark-gfm';
 import { CAREER_TRACK_META, CAREER_TRACK_ORDER, hexToRgba } from '../lib/careerTrack';
 import { scoreJobsForProfile, isPersonalizationActive } from '../lib/jobMatcher';
 import { useTheme } from '../context/ThemeContext';
+import PrivateSectorOpportunities from '../pages/PrivateSectorOpportunities';
+import PrivateSectorHome from '../pages/PrivateSectorHome';
+import PrivateSectorProfile from '../pages/PrivateSectorProfile';
 import { useBanner, bannerImageStyle } from '../lib/bannerStore';
 
 const RESULTS_PER_PAGE = 10;
@@ -367,7 +370,8 @@ const JobBoard = () => {
   // CMS-managed hero banner (admin > Banners); falls back to the built-in image/text.
   const heroBanner = useBanner('jobs.hero');
   const navigate = useNavigate();
-  const [jobSource, setJobSource] = useState('v2'); // 'legacy' | 'v2'
+  const [jobSource, setJobSource] = useState('v2'); // 'legacy' | 'v2' | 'private'
+  const [psView, setPsView] = useState('home'); // Private Sector tab: 'home' | 'opportunities' | 'profile'
   const [jobs, setJobs] = useState([]);
   const [jobsV2, setJobsV2] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -641,7 +645,7 @@ const JobBoard = () => {
   };
 
   return (
-    <div className={`jobs-page ${mobileDetailOpen ? 'mobile-job-detail-open' : ''}`}>
+    <div className={`jobs-page ${mobileDetailOpen ? 'mobile-job-detail-open' : ''} ${jobSource === 'private' ? 'jobs-src-private' : ''}`}>
       <section className="jobs-hero" style={bannerImageStyle(heroBanner, '--jobs-hero-img')}>
         <div className="jobs-hero-content">
           <span className="jobs-hero-eyebrow">{heroBanner.eyebrow}</span>
@@ -689,9 +693,31 @@ const JobBoard = () => {
           Legacy Jobs
           {loading ? <span className="jobs-source-count">…</span> : <span className="jobs-source-count">{jobs.length}</span>}
         </button>
+        <button
+          className={`jobs-source-tab ${jobSource === 'private' ? 'active' : ''}`}
+          onClick={() => setJobSource('private')}
+        >
+          <Landmark size={14} />
+          Private Sector
+        </button>
       </div>
 
-      {isLoading ? (
+      {jobSource === 'private' && (
+        <div className="jobs-private-embed">
+          {psView === 'home' && (
+            <PrivateSectorHome embedded onViewOpportunities={() => setPsView('opportunities')} onEditProfile={() => setPsView('profile')} />
+          )}
+          {psView !== 'home' && (
+            <button type="button" className="jobs-private-back" onClick={() => setPsView('home')}>
+              <ArrowLeft size={15} /> Back to Private Sector
+            </button>
+          )}
+          {psView === 'opportunities' && <PrivateSectorOpportunities onEditProfile={() => setPsView('profile')} />}
+          {psView === 'profile' && <PrivateSectorProfile onDone={() => setPsView('opportunities')} />}
+        </div>
+      )}
+
+      {jobSource !== 'private' && (isLoading ? (
         <div className="jobs-skeleton-wrap">
           {[0, 1, 2, 3].map(i => (
             <div key={i} className="jobs-skeleton-card">
@@ -880,7 +906,7 @@ const JobBoard = () => {
             />
           </div>
         </>
-      )}
+      ))}
 
       <style dangerouslySetInnerHTML={{ __html: `
         .jobs-page {

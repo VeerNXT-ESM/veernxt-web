@@ -310,6 +310,7 @@ const WRITABLE_TABLES = [
   'lc_conducting_bodies', 'lc_exam_categories', 'lc_exam_intro', 'lc_exam_quiz_map', 'lc_exam_resource_map',
   'lc_exam_tags', 'lc_exams', 'lc_reader_themes', 'lc_regions', 'lc_tags', 'lc_thumbnail_templates', 'pyq_papers',
   'site_banners', // CMS banner overrides (sql/site_banners.sql), edited from Admin -> Banners
+  'site_videos', // CMS landing-page videos per language (sql/site_videos.sql), edited from Admin -> Videos
 ];
 const IDENT = /^[a-z_][a-z0-9_]*$/;
 const tableWriteSchema = Joi.object({
